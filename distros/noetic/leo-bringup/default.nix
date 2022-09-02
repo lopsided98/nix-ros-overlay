@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, leo-description, leo-fw, robot-state-publisher, rosapi, rosbridge-server, rosserial-python, sensor-msgs, web-video-server, xacro }:
 buildRosPackage {
   pname = "ros-noetic-leo-bringup";
-  version = "2.2.0-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_robot-release/archive/release/noetic/leo_bringup/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "c2b65e355f442839c47bc9ca49a83eeda7b47241552261818422f428707d32b8";
+    url = "https://github.com/fictionlab-gbp/leo_robot-release/archive/release/noetic/leo_bringup/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "0a554fd104fa5af59540f8fb510f1285d13b8f8a177ec6131bda309bccd37d32";
   };
 
   buildType = "catkin";

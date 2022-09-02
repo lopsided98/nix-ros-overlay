@@ -2178,6 +2178,8 @@ self: super: {
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
+ mocap-nokov = self.callPackage ./mocap-nokov {};
+
  mocap-optitrack = self.callPackage ./mocap-optitrack {};
 
  mongodb-log = self.callPackage ./mongodb-log {};
@@ -3061,8 +3063,6 @@ self: super: {
  qb-device-description = self.callPackage ./qb-device-description {};
 
  qb-device-driver = self.callPackage ./qb-device-driver {};
-
- qb-device-gazebo = self.callPackage ./qb-device-gazebo {};
 
  qb-device-hardware-interface = self.callPackage ./qb-device-hardware-interface {};
 

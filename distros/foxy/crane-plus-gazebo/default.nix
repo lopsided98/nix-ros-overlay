@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, crane-plus-description, crane-plus-moveit-config, gazebo-ros-pkgs }:
 buildRosPackage {
   pname = "ros-foxy-crane-plus-gazebo";
-  version = "1.0.0-r5";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/rt-net-gbp/crane_plus-release/archive/release/foxy/crane_plus_gazebo/1.0.0-5.tar.gz";
-    name = "1.0.0-5.tar.gz";
-    sha256 = "98f37c57f24200ccd4ae3d01e9ec57c1b30a4507fa78f2fc6a0e2757ec744916";
+    url = "https://github.com/ros2-gbp/crane_plus-release/archive/release/foxy/crane_plus_gazebo/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "133cbb139c0c36997ad77064355c8775b65600f60f1ad01698a422345413eb68";
   };
 
   buildType = "ament_cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''CRANE+V2 gazebo simulation package'';
+    description = ''CRANE+ V2 gazebo simulation package'';
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -2,18 +2,19 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, xacro }:
+{ lib, buildRosPackage, fetchurl, catkin, rosunit, xacro }:
 buildRosPackage {
   pname = "ros-noetic-franka-description";
-  version = "0.9.0-r1";
+  version = "0.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_description/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "0eb74a8ab64bd4432f7deaea3e2de639d1ec19a6d40529b3bc3b49886fcb421a";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_description/0.9.1-1.tar.gz";
+    name = "0.9.1-1.tar.gz";
+    sha256 = "c704110dcc354c33fdab5e26198fad37b5ba4fb41f6a19c95dca53ed493c97ea";
   };
 
   buildType = "catkin";
+  checkInputs = [ rosunit ];
   propagatedBuildInputs = [ xacro ];
   nativeBuildInputs = [ catkin ];
 

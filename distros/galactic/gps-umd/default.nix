@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gps-msgs, gps-tools, gpsd-client }:
 buildRosPackage {
   pname = "ros-galactic-gps-umd";
-  version = "1.0.4-r2";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/galactic/gps_umd/1.0.4-2.tar.gz";
-    name = "1.0.4-2.tar.gz";
-    sha256 = "d7b9b44b6f1efa3dc98e031a80ac5f19823c9d15acaedb9bd9020150f84863b6";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/galactic/gps_umd/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "352c0ee472661fd1088e7c3d965609ed95db1ae0ee1273f46fbfc9ecadd278d1";
   };
 
   buildType = "catkin";

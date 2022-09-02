@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, rosunit, urdf }:
 buildRosPackage {
   pname = "ros-noetic-industrial-utils";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/noetic/industrial_utils/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "1965c307f351ec1c4df257c92e7d36c6937f2a4b8f279c10155f5bc3cd66308b";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/noetic/industrial_utils/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "2925a8dd626167ea1bbefa502065157afffebebf3cb9a8cd4ff59de477537f8a";
   };
 
   buildType = "catkin";

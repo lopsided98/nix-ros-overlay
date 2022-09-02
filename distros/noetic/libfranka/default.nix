@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, eigen, poco }:
 buildRosPackage {
   pname = "ros-noetic-libfranka";
-  version = "0.9.0-r2";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/libfranka-release/archive/release/noetic/libfranka/0.9.0-2.tar.gz";
-    name = "0.9.0-2.tar.gz";
-    sha256 = "50343f955f431915e488370fd0b278abf24d92db907ff3eb36ed11feda2f6b2a";
+    url = "https://github.com/frankaemika/libfranka-release/archive/release/noetic/libfranka/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
+    sha256 = "cdd15f0f3a4e032cb93c156240c122bea496a96e25a4ee434c9ca6c70da36fa3";
   };
 
   buildType = "cmake";

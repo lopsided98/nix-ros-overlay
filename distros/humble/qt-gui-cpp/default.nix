@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, pkg-config, pluginlib, python-qt-binding, qt-gui, qt5, rcpputils, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-humble-qt-gui-cpp";
-  version = "2.2.1-r2";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/humble/qt_gui_cpp/2.2.1-2.tar.gz";
-    name = "2.2.1-2.tar.gz";
-    sha256 = "7938555784eea4ae74fa54751362ba47cf57b46b991f312a200db3a0b04893a2";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/humble/qt_gui_cpp/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "3c8eb0beeea6bd18163938803a37b8a0b27a302612ddc6bd5e979f7a99284b7b";
   };
 
   buildType = "ament_cmake";

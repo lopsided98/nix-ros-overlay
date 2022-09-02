@@ -8,9 +8,9 @@ buildRosPackage {
   version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_desktop-ros2-release/archive/release/foxy/leo_desktop/1.0.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/leo_desktop-release/archive/release/foxy/leo_desktop/1.0.0-1.tar.gz";
     name = "1.0.0-1.tar.gz";
-    sha256 = "4f34333148bab9701d44586849abe7bab78b12c3207345c37fd82f492587467a";
+    sha256 = "1496c86b10fea2bc29c9100b328e002245457934e130cfa0a753993474f0b41f";
   };
 
   buildType = "ament_cmake";

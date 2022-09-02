@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-graceful-controller";
-  version = "0.4.3-r1";
+  version = "0.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/mikeferguson/graceful_controller-gbp/archive/release/melodic/graceful_controller/0.4.3-1.tar.gz";
-    name = "0.4.3-1.tar.gz";
-    sha256 = "44a363a6561d7b3c8a02c94964a19214f508eff1bcbfa07e5fa0bf71642696b9";
+    url = "https://github.com/mikeferguson/graceful_controller-gbp/archive/release/melodic/graceful_controller/0.4.4-1.tar.gz";
+    name = "0.4.4-1.tar.gz";
+    sha256 = "3aa23114c250b8d019a6a45accf839fdb43796d552872ae37f26cf32ba19abd4";
   };
 
   buildType = "catkin";

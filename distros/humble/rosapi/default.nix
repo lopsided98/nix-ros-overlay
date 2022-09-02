@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-cmake-ros, builtin-interfaces, geometry-msgs, rcl-interfaces, rclpy, rmw-dds-common, ros2node, ros2param, ros2pkg, ros2service, ros2topic, rosapi-msgs, rosbridge-library, sensor-msgs, shape-msgs }:
 buildRosPackage {
   pname = "ros-humble-rosapi";
-  version = "1.2.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/humble/rosapi/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "8a38cc78fff9c7a1c1fd7a4048d9e2bc093259e8d80aafb096f25dc347ea5717";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/humble/rosapi/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "a0de3a97d6f471b10a768a0d1cc7ee86721c3f241c36c5f1f4a27fc9bd772565";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-lint-auto, ament-lint-common, git }:
 buildRosPackage {
   pname = "ros-humble-mcap-vendor";
-  version = "0.1.6-r1";
+  version = "0.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2_storage_mcap-release/archive/release/humble/mcap_vendor/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "fcbc3cc2f71546583a7f0aa80b3728a8fa6a719a43d337ec3750d37c312ad605";
+    url = "https://github.com/ros2-gbp/rosbag2_storage_mcap-release/archive/release/humble/mcap_vendor/0.1.7-1.tar.gz";
+    name = "0.1.7-1.tar.gz";
+    sha256 = "73384861e91e5e69fd1c05ecc86168467ae0db3872d28019646ca7319c69d27f";
   };
 
   buildType = "ament_cmake";

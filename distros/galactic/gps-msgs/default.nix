@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-gps-msgs";
-  version = "1.0.4-r2";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/galactic/gps_msgs/1.0.4-2.tar.gz";
-    name = "1.0.4-2.tar.gz";
-    sha256 = "e478714aa1490b645a21cb2fa9a9f4aa3ee8016266fe425cd13333d666aa010b";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/galactic/gps_msgs/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "fc917e0a56a0704a851f765c48794122a5b1b8ba1fe8ad03eb90b1de95322d2a";
   };
 
   buildType = "ament_cmake";

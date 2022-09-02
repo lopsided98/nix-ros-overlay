@@ -4,6 +4,8 @@
 
 self: super: {
 
+ abb-driver = self.callPackage ./abb-driver {};
+
  abb-egm-msgs = self.callPackage ./abb-egm-msgs {};
 
  abb-rapid-msgs = self.callPackage ./abb-rapid-msgs {};
@@ -1514,6 +1516,8 @@ self: super: {
 
  lanelet2-validation = self.callPackage ./lanelet2-validation {};
 
+ laptop-battery-monitor = self.callPackage ./laptop-battery-monitor {};
+
  laser-assembler = self.callPackage ./laser-assembler {};
 
  laser-cb-detector = self.callPackage ./laser-cb-detector {};
@@ -1608,11 +1612,15 @@ self: super: {
 
  librviz-tutorial = self.callPackage ./librviz-tutorial {};
 
+ libsensors-monitor = self.callPackage ./libsensors-monitor {};
+
  libsiftfast = self.callPackage ./libsiftfast {};
 
  libuvc-camera = self.callPackage ./libuvc-camera {};
 
  libuvc-ros = self.callPackage ./libuvc-ros {};
+
+ linux-peripheral-interfaces = self.callPackage ./linux-peripheral-interfaces {};
 
  lms1xx = self.callPackage ./lms1xx {};
 
@@ -2690,6 +2698,8 @@ self: super: {
 
  ros-realtime = self.callPackage ./ros-realtime {};
 
+ ros-system-fingerprint = self.callPackage ./ros-system-fingerprint {};
+
  ros-tutorials = self.callPackage ./ros-tutorials {};
 
  ros-type-introspection = self.callPackage ./ros-type-introspection {};
@@ -3163,6 +3173,8 @@ self: super: {
  stereo-image-proc = self.callPackage ./stereo-image-proc {};
 
  stereo-msgs = self.callPackage ./stereo-msgs {};
+
+ swri-cli-tools = self.callPackage ./swri-cli-tools {};
 
  swri-console = self.callPackage ./swri-console {};
 

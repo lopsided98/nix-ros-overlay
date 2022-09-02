@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pkg-config, tinyxml }:
 buildRosPackage {
   pname = "ros-humble-menge-vendor";
-  version = "1.0.0-r3";
+  version = "1.0.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/menge_vendor-release/archive/release/humble/menge_vendor/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "1a493234413178d9563413fbf8d5a564b472c280ae51b3a0aa15f939c4731e3b";
+    url = "https://github.com/ros2-gbp/menge_vendor-release/archive/release/humble/menge_vendor/1.0.0-4.tar.gz";
+    name = "1.0.0-4.tar.gz";
+    sha256 = "95fceaf5a214d236fb7d1f46761cf4a512689e5737d4a5a85aedcf6073702220";
   };
 
   buildType = "catkin";

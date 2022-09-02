@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-qt-dotgraph";
-  version = "2.2.1-r2";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/humble/qt_dotgraph/2.2.1-2.tar.gz";
-    name = "2.2.1-2.tar.gz";
-    sha256 = "a4d9200bda38eb24a35192e86a803928d963735b3a80cb36d5790e2b8423bf04";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/humble/qt_dotgraph/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "753fc64a982b8b34eee6cb986cbfcd10080630079b8613b0afd9e686d0d59908";
   };
 
   buildType = "ament_cmake";

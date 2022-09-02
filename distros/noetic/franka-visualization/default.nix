@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, franka-description, libfranka, roscpp, sensor-msgs, xacro }:
 buildRosPackage {
   pname = "ros-noetic-franka-visualization";
-  version = "0.9.0-r1";
+  version = "0.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_visualization/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "a1da047e01bad191f935c70794cbad86971b5f134b26be18da9aa3253696fa7f";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_visualization/0.9.1-1.tar.gz";
+    name = "0.9.1-1.tar.gz";
+    sha256 = "c97af62d4fab69a917f496433489f7fe4250e6dd1eefd9be0e056273cfe19c12";
   };
 
   buildType = "catkin";

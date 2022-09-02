@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, industrial-deprecated, industrial-msgs, industrial-robot-client, industrial-robot-simulator, industrial-trajectory-filters, industrial-utils, simple-message }:
 buildRosPackage {
   pname = "ros-noetic-industrial-core";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/noetic/industrial_core/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "b7fa93283d893e726a85796b29eec043d65708a23e06d8e2012c05d6454ab6a4";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/noetic/industrial_core/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "60aab3d3952f68fddc9185ae536eda925de829d5d996ee40c5a3c7f84f059979";
   };
 
   buildType = "catkin";

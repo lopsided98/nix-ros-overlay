@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-2d, nav-core, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-goal-passer";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/noetic/goal_passer/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "c35af8ad4759e84af61025a9d15d5b8c121d95a26df65a6910533e142109a6ad";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/noetic/goal_passer/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "3eaf495a78b86279c105d8bef4dd6af74ae3878289f2cc025762acc02444149d";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-index-python, ament-lint-auto, ament-lint-common, builtin-interfaces, python-cmake-module, pythonPackages, rcl, rcl-action, rcl-interfaces, rcl-yaml-param-parser, rcutils, rmw-implementation, rmw-implementation-cmake, rosgraph-msgs, rosidl-generator-py, rpyutils, test-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-foxy-rclpy";
-  version = "1.0.8-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclpy-release/archive/release/foxy/rclpy/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "d2b0e477d702d9fba4f2d9f7b32a1bc283f3023923c4d12c44856e5201142b02";
+    url = "https://github.com/ros2-gbp/rclpy-release/archive/release/foxy/rclpy/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "28081e04c7a01c4e7341f3c33d72211611b26cf965f2296533f7626ef7cb403e";
   };
 
   buildType = "ament_cmake";

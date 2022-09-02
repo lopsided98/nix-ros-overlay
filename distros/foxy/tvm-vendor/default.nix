@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, git, libxml2, openblas, ros-environment, spirv-headers, spirv-tools, vulkan-loader }:
 buildRosPackage {
   pname = "ros-foxy-tvm-vendor";
-  version = "0.8.2-r1";
+  version = "0.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tvm_vendor-release/archive/release/foxy/tvm_vendor/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "30010442950003af8ce886741a95af0734f9fd23b055d39bc7ba4e5c0c662257";
+    url = "https://github.com/ros2-gbp/tvm_vendor-release/archive/release/foxy/tvm_vendor/0.9.0-1.tar.gz";
+    name = "0.9.0-1.tar.gz";
+    sha256 = "c3ab420263c5a232cf13ebb14ad9e0b2cd80791f374635764914ceb6eba195ff";
   };
 
   buildType = "ament_cmake";

@@ -1222,7 +1222,13 @@ self: super: {
 
  raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
 
+ raspimouse-navigation = self.callPackage ./raspimouse-navigation {};
+
  raspimouse-ros2-examples = self.callPackage ./raspimouse-ros2-examples {};
+
+ raspimouse-slam = self.callPackage ./raspimouse-slam {};
+
+ raspimouse-slam-navigation = self.callPackage ./raspimouse-slam-navigation {};
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
@@ -1987,6 +1993,8 @@ self: super: {
  visualization-msgs = self.callPackage ./visualization-msgs {};
 
  vrpn = self.callPackage ./vrpn {};
+
+ vrpn-mocap = self.callPackage ./vrpn-mocap {};
 
  vrxperience-bridge = self.callPackage ./vrxperience-bridge {};
 

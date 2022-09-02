@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, rclcpp, rclcpp-components, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-rplidar-ros";
-  version = "2.0.2-r3";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rplidar_ros-release/archive/release/humble/rplidar_ros/2.0.2-3.tar.gz";
-    name = "2.0.2-3.tar.gz";
-    sha256 = "cb1ea13a6c09e85de043c3114902c6ddfdee9fba9631825effab892184ebfd88";
+    url = "https://github.com/ros2-gbp/rplidar_ros-release/archive/release/humble/rplidar_ros/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "365e14223e415715cdbaf3340e03c5dc784153c591daf762db326f05a265b1b6";
   };
 
   buildType = "ament_cmake";
