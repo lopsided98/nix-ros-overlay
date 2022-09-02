@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, industrial-msgs, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-simple-message";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/noetic/simple_message/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "fc93caccf7044efa6ece2d0bddc9b12d067b3cfee6ed63560a3635aae887829f";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/noetic/simple_message/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "5479552dd7252d441288fdf0cd59aeee88dfda365388dd3f0aa2844e279a78e0";
   };
 
   buildType = "catkin";

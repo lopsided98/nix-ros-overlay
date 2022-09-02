@@ -782,6 +782,8 @@ self: super: {
 
  nav2-bt-navigator = self.callPackage ./nav2-bt-navigator {};
 
+ nav2-collision-monitor = self.callPackage ./nav2-collision-monitor {};
+
  nav2-common = self.callPackage ./nav2-common {};
 
  nav2-constrained-smoother = self.callPackage ./nav2-constrained-smoother {};
@@ -821,6 +823,8 @@ self: super: {
  nav2-theta-star-planner = self.callPackage ./nav2-theta-star-planner {};
 
  nav2-util = self.callPackage ./nav2-util {};
+
+ nav2-velocity-smoother = self.callPackage ./nav2-velocity-smoother {};
 
  nav2-voxel-grid = self.callPackage ./nav2-voxel-grid {};
 
@@ -939,6 +943,8 @@ self: super: {
  pilz-industrial-motion-planner = self.callPackage ./pilz-industrial-motion-planner {};
 
  pilz-industrial-motion-planner-testutils = self.callPackage ./pilz-industrial-motion-planner-testutils {};
+
+ pinocchio = self.callPackage ./pinocchio {};
 
  plansys2-bringup = self.callPackage ./plansys2-bringup {};
 
@@ -1432,6 +1438,8 @@ self: super: {
 
  rqt-srv = self.callPackage ./rqt-srv {};
 
+ rqt-tf-tree = self.callPackage ./rqt-tf-tree {};
+
  rqt-topic = self.callPackage ./rqt-topic {};
 
  rt-manipulators-cpp = self.callPackage ./rt-manipulators-cpp {};
@@ -1487,6 +1495,8 @@ self: super: {
  sick-safetyscanners2-interfaces = self.callPackage ./sick-safetyscanners2-interfaces {};
 
  sick-safetyscanners-base = self.callPackage ./sick-safetyscanners-base {};
+
+ simple-actions = self.callPackage ./simple-actions {};
 
  simple-launch = self.callPackage ./simple-launch {};
 
@@ -1593,8 +1603,6 @@ self: super: {
  tensorrt-cmake-module = self.callPackage ./tensorrt-cmake-module {};
 
  test-apex-test-tools = self.callPackage ./test-apex-test-tools {};
-
- test-bond = self.callPackage ./test-bond {};
 
  test-interface-files = self.callPackage ./test-interface-files {};
 
@@ -1785,6 +1793,8 @@ self: super: {
  visp = self.callPackage ./visp {};
 
  visualization-msgs = self.callPackage ./visualization-msgs {};
+
+ vrpn = self.callPackage ./vrpn {};
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, pythonPackages, roslib, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-inorbit-republisher";
-  version = "0.2.4-r1";
+  version = "0.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/inorbit-ai/ros_inorbit_samples-release/archive/release/melodic/inorbit_republisher/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "018b3ac2250983f171e4b6f577e9a40ee1b8c56c8e7ffc33df8ae3a05ce603f6";
+    url = "https://github.com/inorbit-ai/ros_inorbit_samples-release/archive/release/melodic/inorbit_republisher/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
+    sha256 = "11a7868e1e1b7cfd8c209179e0bce11a9339230d9afbf994ac72f0d4c7fe496c";
   };
 
   buildType = "catkin";

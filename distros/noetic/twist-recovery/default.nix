@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, geometry-msgs, nav-core, pluginlib, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-twist-recovery";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/noetic/twist_recovery/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "efaf93a0fdec9670c8c0703c607b31d137d7d383a5d563257f78d3404f7634b5";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/noetic/twist_recovery/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "d13f9a52e05f8bd2a504d76a1147695378622cf1f3b0eaff84fe6607f6f36f4e";
   };
 
   buildType = "catkin";

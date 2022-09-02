@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, boost, catkin, cmake, doxygen, eigen, eigenpy, git, octomap, python, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-hpp-fcl";
-  version = "2.1.2-r1";
+  version = "1.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/humanoid-path-planner/hpp-fcl-ros-release/archive/release/melodic/hpp-fcl/2.1.2-1.tar.gz";
-    name = "2.1.2-1.tar.gz";
-    sha256 = "a7e3aa9e0d272bc7af7229b9036d1417ec49ec51469b8a718d910f9f1928bda1";
+    url = "https://github.com/humanoid-path-planner/hpp-fcl-ros-release/archive/release/melodic/hpp-fcl/1.8.1-1.tar.gz";
+    name = "1.8.1-1.tar.gz";
+    sha256 = "594d688b680ff946d06f8ddd0ccebd41ea887af0ad261efc5a097b10b4a97e8b";
   };
 
   buildType = "cmake";

@@ -8,9 +8,9 @@ buildRosPackage {
   version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_common-ros2-release/archive/release/foxy/leo/1.0.3-1.tar.gz";
+    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/foxy/leo/1.0.3-1.tar.gz";
     name = "1.0.3-1.tar.gz";
-    sha256 = "00b01002e0b0e01b78fde719446482fbbedca0879b8be77eb67171fc4dabfb40";
+    sha256 = "264b22427c0218bfe9af26a03ef5c585a457e6b58d3f30ffa03533a3d0731b45";
   };
 
   buildType = "ament_cmake";

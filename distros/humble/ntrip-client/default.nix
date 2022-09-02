@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, mavros-msgs, nmea-msgs, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-ntrip-client";
-  version = "1.0.2-r2";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ntrip_client-release/archive/release/humble/ntrip_client/1.0.2-2.tar.gz";
-    name = "1.0.2-2.tar.gz";
-    sha256 = "2c04e04e206989bb7e5970fb590570feb5844971948ef07258535c7ebd7b5eb7";
+    url = "https://github.com/ros2-gbp/ntrip_client-release/archive/release/humble/ntrip_client/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "7516989ca6c25bdc5db576845a4156554a32076b2ca71f0455e22502eedd2232";
   };
 
   buildType = "ament_python";

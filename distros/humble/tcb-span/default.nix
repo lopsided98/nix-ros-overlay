@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-humble-tcb-span";
-  version = "0.2.3-r1";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/PickNikRobotics/generate_parameter_library-release/archive/release/humble/tcb_span/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "4006169b3a8c62d99150568aa3b4a29d9267349378bf4117dffd2c66ea4c331e";
+    url = "https://github.com/PickNikRobotics/generate_parameter_library-release/archive/release/humble/tcb_span/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "0158977df984d0b3ed6fb873178994545393550fe9127d5ac927d0cb9bef6202";
   };
 
   buildType = "ament_cmake";

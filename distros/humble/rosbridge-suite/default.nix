@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, rosapi, rosbridge-library, rosbridge-server }:
 buildRosPackage {
   pname = "ros-humble-rosbridge-suite";
-  version = "1.2.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/humble/rosbridge_suite/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "176ab51c324359e19abbd60468da3c09db0d10126790d524312bd53e10eedee7";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/humble/rosbridge_suite/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "9e67eb6944ae03c7a9b2d2722b6284d9b4152f95beff7e8f3579c42baeff484d";
   };
 
   buildType = "ament_cmake";

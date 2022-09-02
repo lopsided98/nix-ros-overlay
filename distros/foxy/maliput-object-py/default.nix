@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-flake8, ament-cmake-pytest, maliput-object, python3, pythonPackages }:
 buildRosPackage {
   pname = "ros-foxy-maliput-object-py";
-  version = "0.1.1-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/maliput_object_py-release/archive/release/foxy/maliput_object_py/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "ea15fa26b9356f0634a11133d38b71c877ee6c147a0d30861a8df91ec005e5c8";
+    url = "https://github.com/ros2-gbp/maliput_object_py-release/archive/release/foxy/maliput_object_py/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "eddd031f0f260c2e51ded66c6c1d42d0cd63e54efb13685076c18ba0bd071844";
   };
 
   buildType = "ament_cmake";

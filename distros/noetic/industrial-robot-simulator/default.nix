@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, control-msgs, industrial-msgs, industrial-robot-client, python3Packages, roslaunch, rospy, sensor-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-noetic-industrial-robot-simulator";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/noetic/industrial_robot_simulator/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "9b42aed833f10a4293af407e24802a1bac6509abc115b20a2ef25ec7f89ead19";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/noetic/industrial_robot_simulator/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "daf1437c8dce7a3064c9ac78c7a29b89e0ba36623b2c1105743305029244545c";
   };
 
   buildType = "catkin";

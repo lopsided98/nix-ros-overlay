@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cpplint, ament-cmake-gtest, angles, control-msgs, geometry-msgs, kdl-parser, nav-msgs, orocos-kdl, pluginlib, rclcpp, rclcpp-action, robot-controllers-interface, sensor-msgs, std-msgs, tf2-geometry-msgs, tf2-ros, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-humble-robot-controllers";
-  version = "0.9.2-r1";
+  version = "0.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/robot_controllers-ros2-release/archive/release/humble/robot_controllers/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "a7889ac9763f3584fb5f992761432247ae72ede182c24083d59223e49a703e43";
+    url = "https://github.com/fetchrobotics-gbp/robot_controllers-ros2-release/archive/release/humble/robot_controllers/0.9.3-1.tar.gz";
+    name = "0.9.3-1.tar.gz";
+    sha256 = "801b0e3177664043f852d61324299b4ec592510b7d0059830446c4b5cb7c649a";
   };
 
   buildType = "ament_cmake";

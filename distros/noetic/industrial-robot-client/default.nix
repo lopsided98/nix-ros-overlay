@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, control-msgs, industrial-msgs, industrial-utils, robot-state-publisher, roscpp, roslaunch, rosunit, sensor-msgs, simple-message, std-msgs, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-noetic-industrial-robot-client";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/noetic/industrial_robot_client/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "fa50889ec2478a27063557fd79b478bbca8346b55daa8a1998d82423aeb365c7";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/noetic/industrial_robot_client/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "92cd1be0741c338c15d72fa151dfc868dcd477efa6e3fd85dece98d1d726f4e6";
   };
 
   buildType = "catkin";

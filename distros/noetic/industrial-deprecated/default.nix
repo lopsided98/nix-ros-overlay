@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-industrial-deprecated";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/noetic/industrial_deprecated/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "ab476be2bd0e900ec9c70ef67bae63ce78345d7479ef99a113e49f7195cd7708";
+    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/noetic/industrial_deprecated/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "4345c60f457f58884c90b82ea6c79c4b3995e4ae38f45dad45cf7a6b3b3ad754";
   };
 
   buildType = "catkin";

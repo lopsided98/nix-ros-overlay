@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, python3Packages, rclpy, rosapi, rosbridge-library, rosbridge-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-foxy-rosbridge-server";
-  version = "1.2.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/foxy/rosbridge_server/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "cf2f3295bf850ea26712b1c6b0f3354730171f33f5ddb0aa9c07199a2e37a887";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/foxy/rosbridge_server/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "81187798d4f0dabc0317a5116f14d35bba0b60b5a724debd3b9c6a6615034758";
   };
 
   buildType = "ament_cmake";

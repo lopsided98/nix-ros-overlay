@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, bond, bondcpp, smclib }:
 buildRosPackage {
   pname = "ros-humble-bond-core";
-  version = "3.0.2-r2";
+  version = "3.0.2-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/humble/bond_core/3.0.2-2.tar.gz";
-    name = "3.0.2-2.tar.gz";
-    sha256 = "6da43215297629ee4a4567982a5c3be7725dd2bfb3214654d5e45de493aed7dc";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/humble/bond_core/3.0.2-3.tar.gz";
+    name = "3.0.2-3.tar.gz";
+    sha256 = "2bb1b178c64e46c3edced0368bb54ec256f1947ffa5748265a0ad0379515b329";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, base-local-planner, catkin, costmap-2d, dynamic-reconfigure, nav-core, nav-msgs, pluginlib, roscpp, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-pose-follower";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/noetic/pose_follower/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "d37380604adbf15365d7e93126512fb0710e993c8c35fd03d5a2cd8167e2d57a";
+    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/noetic/pose_follower/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "4125ce1012b62fd5713fd179a6de088aaa89009b6b7bc6c346be828004c43971";
   };
 
   buildType = "catkin";

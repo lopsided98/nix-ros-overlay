@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rostest }:
 buildRosPackage {
   pname = "ros-noetic-swri-string-util";
-  version = "2.14.2-r1";
+  version = "2.15.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_string_util/2.14.2-1.tar.gz";
-    name = "2.14.2-1.tar.gz";
-    sha256 = "b08a5616c2ff1444288ebeb57de6a9e3171b168128d7d6fdba2824b10b47d624";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_string_util/2.15.2-1.tar.gz";
+    name = "2.15.2-1.tar.gz";
+    sha256 = "e6a8cea407bfe527a0eca5c37b759a4d2d74d55eb6c784a57cdacae8f3219b3a";
   };
 
   buildType = "catkin";

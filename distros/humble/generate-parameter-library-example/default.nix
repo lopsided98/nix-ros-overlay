@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-core, ament-lint-auto, ament-lint-common, generate-parameter-library, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-generate-parameter-library-example";
-  version = "0.2.3-r1";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/PickNikRobotics/generate_parameter_library-release/archive/release/humble/generate_parameter_library_example/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "abff6cae0538471850a56d0b0a7bd5f90630add97cdafe018de011be78f101a1";
+    url = "https://github.com/PickNikRobotics/generate_parameter_library-release/archive/release/humble/generate_parameter_library_example/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "538e0e00f18c9e0c1be0232b7cb8c6307a6aa3c4ba621e66e36574c08d515111";
   };
 
   buildType = "ament_cmake";
