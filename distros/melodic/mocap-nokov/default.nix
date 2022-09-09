@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, nav-msgs, roscpp, roslaunch, roslint, tf }:
 buildRosPackage {
   pname = "ros-melodic-mocap-nokov";
-  version = "0.0.2-r2";
+  version = "0.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/NOKOV-MOCAP/mocap_nokov_release/archive/release/melodic/mocap_nokov/0.0.2-2.tar.gz";
-    name = "0.0.2-2.tar.gz";
-    sha256 = "ddceda5c625d35fb10c8602945ad88f434de467009754fb9c1a8c841445fc333";
+    url = "https://github.com/NOKOV-MOCAP/mocap_nokov_release/archive/release/melodic/mocap_nokov/0.0.3-1.tar.gz";
+    name = "0.0.3-1.tar.gz";
+    sha256 = "6ea0354ae9034d59f279a27bd066d453480ca565034f520cdc192447bbbb54b0";
   };
 
   buildType = "catkin";

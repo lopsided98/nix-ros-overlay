@@ -890,6 +890,10 @@ self: super: {
 
  ouxt-lint-common = self.callPackage ./ouxt-lint-common {};
 
+ pal-statistics = self.callPackage ./pal-statistics {};
+
+ pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
+
  parameter-traits = self.callPackage ./parameter-traits {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};

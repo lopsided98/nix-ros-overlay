@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, franka-description, franka-gripper, franka-hw, franka-msgs, geometry-msgs, joint-state-publisher, joint-trajectory-controller, libfranka, pluginlib, realtime-tools, robot-state-publisher, roscpp, sensor-msgs, std-srvs, tf, tf2-msgs }:
 buildRosPackage {
   pname = "ros-melodic-franka-control";
-  version = "0.9.0-r1";
+  version = "0.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_control/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "7738232b7ebcef907cd344e07e74803c74710ae5a2ab62539719a890a1761205";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_control/0.10.0-1.tar.gz";
+    name = "0.10.0-1.tar.gz";
+    sha256 = "653ce0772a06be174820884b4746795de093b8e4315c53746f6fc84d62740e50";
   };
 
   buildType = "catkin";

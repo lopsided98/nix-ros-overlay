@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-franka-msgs";
-  version = "0.9.0-r1";
+  version = "0.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_msgs/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "beaeedd4a028ea5e03b4abc05b6c2b06ee4c93967cb38ee18414fda4866037be";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_msgs/0.10.0-1.tar.gz";
+    name = "0.10.0-1.tar.gz";
+    sha256 = "e1760cb6389465aeae5faf0b4f47b49bff5510395a3efbfa89563bb4bac14af8";
   };
 
   buildType = "catkin";

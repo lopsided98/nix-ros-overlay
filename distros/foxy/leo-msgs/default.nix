@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-leo-msgs";
-  version = "1.0.3-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/foxy/leo_msgs/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "55d794cf544413a9eaa98f5482893c5d3550452dc730fc09c7bc3ace15e29a43";
+    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/foxy/leo_msgs/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "2ffd7fa4e43e30f0586fa9ae73ea15ef9fbc702b44d15f18b9697e71cd482a93";
   };
 
   buildType = "ament_cmake";

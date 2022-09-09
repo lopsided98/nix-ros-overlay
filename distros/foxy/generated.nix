@@ -942,6 +942,8 @@ self: super: {
 
  multires-image = self.callPackage ./multires-image {};
 
+ naoqi-libqi = self.callPackage ./naoqi-libqi {};
+
  nav2-amcl = self.callPackage ./nav2-amcl {};
 
  nav2-behavior-tree = self.callPackage ./nav2-behavior-tree {};

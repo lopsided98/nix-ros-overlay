@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-foxy-leo-description";
-  version = "1.0.3-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/foxy/leo_description/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "26987b31d9c8ac94af1b1aedf1ad0be1678d7e6faa7ddd207792f9ad146fbefb";
+    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/foxy/leo_description/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "6da57acb9f9cdcf5e6f3e4ce2cef4cb6959f2dc1d401c6748287bb7ee07b89ab";
   };
 
   buildType = "ament_cmake";
