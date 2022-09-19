@@ -142,12 +142,12 @@ let
     };
 
     # This is a newer version than the build system tries to download, but this
-    # version doesn't try to download tons of random files during build.
+    # version doesn't try run host platform binaries on the build platform.
     foonathan-memory-vendor = patchVendorGit rosSuper.foonathan-memory-vendor {
       url = "https://github.com/foonathan/memory.git";
       fetchgitArgs = {
-        rev = "293f88d3a7cc49b25ffd4e9f27b1e4a8e14ee0d7";
-        sha256 = "0nr74xv1ajvblvnl070l83zsr69nc1ws7fl2fvfjdq90kvwrz7in";
+        rev = "v0.7-2";
+        sha256 = "sha256-5nJNW0xwjSCc0Egq1zv0tIsGvAh1Xbnu8190A1ZP+VA=";
       };
     };
 
