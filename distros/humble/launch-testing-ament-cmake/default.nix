@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-copyright launch-testing python-cmake-module ];
   propagatedBuildInputs = [ ament-cmake-test launch-testing python-cmake-module ];
   nativeBuildInputs = [ ament-cmake ];

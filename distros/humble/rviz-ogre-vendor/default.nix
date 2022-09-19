@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, freetype, git, libGL, libGLU, pkg-config, xorg }:
 buildRosPackage {
   pname = "ros-humble-rviz-ogre-vendor";
-  version = "11.2.2-r1";
+  version = "11.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/humble/rviz_ogre_vendor/11.2.2-1.tar.gz";
-    name = "11.2.2-1.tar.gz";
-    sha256 = "76046fcc85efdfdcea3bd408d91db83faa4cd500a5eb0ad0131b43042fe57288";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/humble/rviz_ogre_vendor/11.2.3-1.tar.gz";
+    name = "11.2.3-1.tar.gz";
+    sha256 = "ef212c9abda314353571e6a068094316af3eaea0403f2b769543e8014832e773";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ git pkg-config ];
+  buildInputs = [ ament-cmake git pkg-config ];
   checkInputs = [ ament-cmake-xmllint ament-lint-auto ];
   propagatedBuildInputs = [ freetype libGL libGLU xorg.libX11 xorg.libXaw xorg.libXrandr ];
   nativeBuildInputs = [ ament-cmake ];

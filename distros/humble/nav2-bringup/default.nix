@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing ];
   propagatedBuildInputs = [ launch-ros nav2-common navigation2 slam-toolbox ];
   nativeBuildInputs = [ ament-cmake ];

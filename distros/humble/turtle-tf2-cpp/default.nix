@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, launch, launch-ros, message-filters, rclcpp, tf2, tf2-geometry-msgs, tf2-ros, turtlesim }:
 buildRosPackage {
   pname = "ros-humble-turtle-tf2-cpp";
-  version = "0.3.4-r3";
+  version = "0.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/humble/turtle_tf2_cpp/0.3.4-3.tar.gz";
-    name = "0.3.4-3.tar.gz";
-    sha256 = "813174dd0953999ec30d830212da460596d10c2a73a0253bd1e6bd35e0f8c569";
+    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/humble/turtle_tf2_cpp/0.3.6-1.tar.gz";
+    name = "0.3.6-1.tar.gz";
+    sha256 = "7e6780b17f099f7fdc2169506b4474df31949054e73fc8bc3f70604e81452969";
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ geometry-msgs launch launch-ros message-filters rclcpp tf2 tf2-geometry-msgs tf2-ros turtlesim ];
   nativeBuildInputs = [ ament-cmake ];

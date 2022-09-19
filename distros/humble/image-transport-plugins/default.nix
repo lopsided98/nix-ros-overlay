@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ compressed-depth-image-transport compressed-image-transport theora-image-transport ];
   nativeBuildInputs = [ ament-cmake ];
 

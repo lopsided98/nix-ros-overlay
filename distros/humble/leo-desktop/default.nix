@@ -10,10 +10,11 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ros2-gbp/leo_desktop-release/archive/release/humble/leo_desktop/1.0.0-1.tar.gz";
     name = "1.0.0-1.tar.gz";
-    sha256 = "0f6f08b54c504342b3a4a2e42fe081ba30ccdaa4e39bc515b3d9649d8f1bedac";
+    sha256 = "63334298c3f89973c53a81b343d3f07193e79fd2ee2d443aaeb27107f3f0f86e";
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ leo leo-viz ];
   nativeBuildInputs = [ ament-cmake ];
 

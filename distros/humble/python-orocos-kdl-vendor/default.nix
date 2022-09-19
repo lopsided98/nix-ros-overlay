@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ament-cmake-python python-cmake-module ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ orocos-kdl-vendor pybind11-vendor python3Packages.pykdl ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python python-cmake-module ];

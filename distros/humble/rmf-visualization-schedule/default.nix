@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common rmf-cmake-uncrustify ];
   propagatedBuildInputs = [ boost builtin-interfaces eigen geometry-msgs nav-msgs opencv openssl rclcpp rmf-building-map-msgs rmf-traffic rmf-traffic-msgs rmf-traffic-ros2 rmf-visualization-msgs rosidl-default-generators visualization-msgs websocketpp ];
   nativeBuildInputs = [ ament-cmake ];

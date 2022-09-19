@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ eigen qt5.qtbase qt5.qtdeclarative rclcpp rmf-building-map-msgs rmf-fleet-msgs rmf-robot-sim-common ];
   nativeBuildInputs = [ ament-cmake ];
 

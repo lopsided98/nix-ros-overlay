@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ velodyne-description velodyne-gazebo-plugins ];
   nativeBuildInputs = [ ament-cmake ];
 

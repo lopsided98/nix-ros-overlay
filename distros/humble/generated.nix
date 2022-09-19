@@ -444,6 +444,36 @@ self: super: {
 
  grbl-ros = self.callPackage ./grbl-ros {};
 
+ grid-map = self.callPackage ./grid-map {};
+
+ grid-map-cmake-helpers = self.callPackage ./grid-map-cmake-helpers {};
+
+ grid-map-core = self.callPackage ./grid-map-core {};
+
+ grid-map-costmap-2d = self.callPackage ./grid-map-costmap-2d {};
+
+ grid-map-cv = self.callPackage ./grid-map-cv {};
+
+ grid-map-demos = self.callPackage ./grid-map-demos {};
+
+ grid-map-filters = self.callPackage ./grid-map-filters {};
+
+ grid-map-loader = self.callPackage ./grid-map-loader {};
+
+ grid-map-msgs = self.callPackage ./grid-map-msgs {};
+
+ grid-map-octomap = self.callPackage ./grid-map-octomap {};
+
+ grid-map-pcl = self.callPackage ./grid-map-pcl {};
+
+ grid-map-ros = self.callPackage ./grid-map-ros {};
+
+ grid-map-rviz-plugin = self.callPackage ./grid-map-rviz-plugin {};
+
+ grid-map-sdf = self.callPackage ./grid-map-sdf {};
+
+ grid-map-visualization = self.callPackage ./grid-map-visualization {};
+
  gripper-controllers = self.callPackage ./gripper-controllers {};
 
  gscam = self.callPackage ./gscam {};
@@ -503,6 +533,8 @@ self: super: {
  intra-process-demo = self.callPackage ./intra-process-demo {};
 
  io-context = self.callPackage ./io-context {};
+
+ irobot-create-msgs = self.callPackage ./irobot-create-msgs {};
 
  joint-limits = self.callPackage ./joint-limits {};
 
@@ -605,6 +637,8 @@ self: super: {
  libphidget22 = self.callPackage ./libphidget22 {};
 
  libpointmatcher = self.callPackage ./libpointmatcher {};
+
+ librealsense2 = self.callPackage ./librealsense2 {};
 
  libstatistics-collector = self.callPackage ./libstatistics-collector {};
 
@@ -890,6 +924,10 @@ self: super: {
 
  ouxt-lint-common = self.callPackage ./ouxt-lint-common {};
 
+ pal-statistics = self.callPackage ./pal-statistics {};
+
+ pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
+
  parameter-traits = self.callPackage ./parameter-traits {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
@@ -1081,6 +1119,10 @@ self: super: {
  rclcpp-lifecycle = self.callPackage ./rclcpp-lifecycle {};
 
  rclpy = self.callPackage ./rclpy {};
+
+ rclpy-message-converter = self.callPackage ./rclpy-message-converter {};
+
+ rclpy-message-converter-msgs = self.callPackage ./rclpy-message-converter-msgs {};
 
  rcpputils = self.callPackage ./rcpputils {};
 
@@ -1284,7 +1326,19 @@ self: super: {
 
  ros-environment = self.callPackage ./ros-environment {};
 
+ ros-gz = self.callPackage ./ros-gz {};
+
+ ros-gz-interfaces = self.callPackage ./ros-gz-interfaces {};
+
  ros-ign = self.callPackage ./ros-ign {};
+
+ ros-ign-bridge = self.callPackage ./ros-ign-bridge {};
+
+ ros-ign-gazebo = self.callPackage ./ros-ign-gazebo {};
+
+ ros-ign-gazebo-demos = self.callPackage ./ros-ign-gazebo-demos {};
+
+ ros-ign-image = self.callPackage ./ros-ign-image {};
 
  ros-ign-interfaces = self.callPackage ./ros-ign-interfaces {};
 
@@ -1445,6 +1499,8 @@ self: super: {
  rt-manipulators-cpp = self.callPackage ./rt-manipulators-cpp {};
 
  rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
+
+ rtcm-msgs = self.callPackage ./rtcm-msgs {};
 
  rti-connext-dds-cmake-module = self.callPackage ./rti-connext-dds-cmake-module {};
 
@@ -1701,6 +1757,8 @@ self: super: {
  tvm-vendor = self.callPackage ./tvm-vendor {};
 
  twist-mux = self.callPackage ./twist-mux {};
+
+ twist-stamper = self.callPackage ./twist-stamper {};
 
  ublox = self.callPackage ./ublox {};
 

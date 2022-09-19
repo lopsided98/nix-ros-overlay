@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rosidl-typesupport-introspection-c ];
+  buildInputs = [ ament-cmake-ros rosidl-typesupport-introspection-c ];
   checkInputs = [ ament-lint-auto ament-lint-common mimick-vendor performance-test-fixture ];
   propagatedBuildInputs = [ ament-cmake-core ament-index-python python3 rcpputils rcutils rosidl-cli rosidl-runtime-c rosidl-typesupport-interface ];
   nativeBuildInputs = [ ament-cmake-ros ];

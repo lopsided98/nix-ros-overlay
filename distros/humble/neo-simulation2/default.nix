@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
   nativeBuildInputs = [ ament-cmake ];
 

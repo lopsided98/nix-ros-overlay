@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-geometry-tutorials";
-  version = "0.3.4-r3";
+  version = "0.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/humble/geometry_tutorials/0.3.4-3.tar.gz";
-    name = "0.3.4-3.tar.gz";
-    sha256 = "ae5ff25e002dadcb5badf30401776a27e749c2b11ca696c4fad560dc6a7b1662";
+    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/humble/geometry_tutorials/0.3.6-1.tar.gz";
+    name = "0.3.6-1.tar.gz";
+    sha256 = "09423fd05f389e83e2a31289ae39b4488e83e08d7a523259ad3f3eb0b5ab3b0b";
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

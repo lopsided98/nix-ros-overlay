@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ gps-msgs gps-tools gpsd-client ];
   nativeBuildInputs = [ ament-cmake ];
 
