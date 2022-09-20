@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ];
+  nativeBuildInputs = [ cmake ];
   propagatedBuildInputs = [ gtest-vendor ];
 
   meta = {

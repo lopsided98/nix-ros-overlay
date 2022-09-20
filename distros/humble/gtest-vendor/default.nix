@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = ''The package provides GoogleTest.'';
