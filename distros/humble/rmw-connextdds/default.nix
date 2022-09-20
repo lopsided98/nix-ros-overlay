@@ -17,7 +17,7 @@ buildRosPackage {
   buildInputs = [ ament-cmake-ros ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ ament-cmake rmw-connextdds-common ];
-  nativeBuildInputs = [ ament-cmake-ros ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-ros ];
 
   meta = {
     description = ''A ROS2 RMW implementation built with RTI Connext DDS Professional.'';

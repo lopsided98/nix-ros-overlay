@@ -17,7 +17,7 @@ buildRosPackage {
   buildInputs = [ ament-cmake-ros rosidl-typesupport-introspection-c ];
   checkInputs = [ ament-lint-auto ament-lint-common mimick-vendor performance-test-fixture ];
   propagatedBuildInputs = [ ament-cmake-core ament-index-python python3 rcpputils rcutils rosidl-cli rosidl-runtime-c rosidl-typesupport-interface ];
-  nativeBuildInputs = [ ament-cmake-ros ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-ros python3 ];
 
   meta = {
     description = ''Generate the type support for C messages.'';

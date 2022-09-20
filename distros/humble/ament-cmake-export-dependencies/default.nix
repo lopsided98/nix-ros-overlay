@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   propagatedBuildInputs = [ ament-cmake-core ament-cmake-libraries ];
-  nativeBuildInputs = [ ament-cmake-core ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-libraries ];
 
   meta = {
     description = ''The ability to export dependencies to downstream packages in the ament buildsystem in CMake.'';
