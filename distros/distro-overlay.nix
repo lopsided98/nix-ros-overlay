@@ -491,7 +491,7 @@ let
       sha256 = "1g45f71mk4gyca550177qf70v5cvavlsalmg7x8bi59j6z6f0mgz";
     };
   };
-in self.lib.makeExtensible (rosSelf: self.rosPackages.lib.mergeOverlays [
+in self.lib.makeExtensible (rosSelf: self.lib.composeManyExtensions [
   base
   (import (./. + "/${distro}/generated.nix"))
   overrides

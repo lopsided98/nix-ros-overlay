@@ -3,10 +3,8 @@
 , rosSelf ? null }:
 with lib;
 {
-  mergeOverlays = foldr composeExtensions (_: _: {});
-
   mkOverlay = overlays: let
-    s = mergeOverlays overlays s {};
+    s = composeManyExtensions overlays s {};
   in s;
 
   patchVendorUrl = pkg: {
