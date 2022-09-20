@@ -101,7 +101,7 @@ let
     cv-bridge = patchBoostPython rosSuper.cv-bridge;
 
     cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
-      cmakeFlags ? [], preConfigure ? "", ...
+      cmakeFlags ? [], ...
     }: {
       cmakeFlags = cmakeFlags ++ [
         # Tries to download something with maven
@@ -109,12 +109,6 @@ let
         # src/tools/ddsperf/CMakeFiles/ddsperf_types_generate.dir/build.make:74: *** target pattern contains no '%'.  Stop.
         "-DBUILD_DDSPERF=OFF"
       ];
-
-      # Fix running ddsconf from within the build directory (probably an RPATH
-      # issue)
-      preConfigure = preConfigure + ''
-        export LD_LIBRARY_PATH="$(pwd)/build/lib"
-      '';
     });
 
     dynamic-reconfigure = rosSuper.dynamic-reconfigure.overrideAttrs ({
