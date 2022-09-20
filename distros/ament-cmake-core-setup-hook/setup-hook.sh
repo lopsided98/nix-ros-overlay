@@ -20,12 +20,14 @@ _findAmentPackages() {
   fi
   _amentPackagesSeen["$pkg"]=1
 }
-addEnvHooks "$hostOffset" _findAmentPackages
+addEnvHooks "$targetOffset" _findAmentPackages
 
 _amentCmakeCorePreConfigureHook() {
   # Don't create share/ament_index/resource_index/parent_prefix_path resource
   # that contains references to all dependencies. This file isn't used with Nix
   # and just bloats the closure.
-  cmakeFlags+=" -DAMENT_CMAKE_ENVIRONMENT_PARENT_PREFIX_PATH_GENERATION=OFF"
+  cmakeFlags+=" -DAMENT_CMAKE_ENVIRONMENT_PARENT_PREFIX_PATH_GENERATION:BOOL=OFF"
+  # Point CMake at build platform Python so it can run it at build time
+  cmakeFlags+=" -DPython@python_major@_EXECUTABLE:FILEPATH=@python_executable@"
 }
 preConfigureHooks+=(_amentCmakeCorePreConfigureHook)

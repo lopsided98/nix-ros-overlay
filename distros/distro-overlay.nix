@@ -51,8 +51,14 @@ let
       }) ];
     });
 
-    ament-cmake-core = rosSuper.ament-cmake-core.overrideAttrs ({ ... }: {
-      setupHook = ./ament-cmake-core-setup-hook.sh;
+    ament-cmake-core = rosSuper.ament-cmake-core.overrideAttrs ({
+      propagatedBuildInputs ? [],
+      nativeBuildInputs ? [], ...
+    }: let
+      setupHook = rosSelf.callPackage ./ament-cmake-core-setup-hook { };
+    in {
+      propagatedBuildInputs = [ setupHook ] ++ propagatedBuildInputs;
+      nativeBuildInputs = [ setupHook ] ++ nativeBuildInputs;
     });
 
     camera-calibration-parsers = patchBoostPython rosSuper.camera-calibration-parsers;
