@@ -61,6 +61,19 @@ let
       nativeBuildInputs = [ setupHook ] ++ nativeBuildInputs;
     });
 
+    ament-cmake-export-targets = rosSuper.ament-cmake-export-targets.overrideAttrs ({
+      patches ? [], ...
+    }: {
+      patches = patches ++ [
+        # Support new target export template introduced with CMake 3.24
+        (self.fetchpatch {
+          url = "https://github.com/ament/ament_cmake/commit/ca8c26ea3c89e69c0c636b7cd0c088674c689f5f.patch";
+          stripLen = 1;
+          sha256 = "sha256-ATdzHaD+3R3rhplaNzkEQBRqpkQDHVJLiB2oNlzIjm4=";
+        })
+      ];
+    });
+
     camera-calibration-parsers = patchBoostPython rosSuper.camera-calibration-parsers;
 
     catkin = rosSuper.catkin.overrideAttrs ({
