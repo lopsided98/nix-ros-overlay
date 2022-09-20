@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ geometry-msgs python-qt-binding python3Packages.catkin-pkg qt-gui-py-common rclpy rqt-gui rqt-gui-py rqt-py-common std-srvs ];
   nativeBuildInputs = [ ament-cmake ];

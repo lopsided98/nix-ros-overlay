@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ igvc-self-drive-description igvc-self-drive-gazebo igvc-self-drive-gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 

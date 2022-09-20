@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ actionlib ddynamic-reconfigure libsndfile libyamlcpp picovoice-msgs roscpp roslib ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.catkin-pkg roslint rostest ];
+  buildInputs = [ catkin pythonPackages.catkin-pkg roslint rostest ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ genpy pythonPackages.rospkg rocon-app-manager-msgs rocon-bubble-icons rocon-console rocon-icons rocon-interaction-msgs rocon-python-comms rocon-python-utils rocon-std-msgs rocon-uri rospy std-msgs unique-id ];
   nativeBuildInputs = [ catkin ];

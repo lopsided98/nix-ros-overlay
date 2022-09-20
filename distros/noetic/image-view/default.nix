@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation sensor-msgs stereo-msgs ];
+  buildInputs = [ catkin message-generation sensor-msgs stereo-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ camera-calibration-parsers cv-bridge dynamic-reconfigure image-transport message-filters nodelet rosconsole roscpp std-srvs ];
   nativeBuildInputs = [ catkin ];

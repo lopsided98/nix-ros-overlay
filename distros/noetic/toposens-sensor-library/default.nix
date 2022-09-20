@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ python3Packages.cffi ];
+  buildInputs = [ cmake python3Packages.cffi ];
   propagatedBuildInputs = [ boost catkin ];
   nativeBuildInputs = [ cmake ];
 

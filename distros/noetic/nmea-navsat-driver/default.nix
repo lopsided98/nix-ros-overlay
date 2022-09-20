@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ python3Packages.catkin-pkg ];
+  buildInputs = [ catkin python3Packages.catkin-pkg ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ geometry-msgs nmea-msgs python3Packages.pyserial rospy sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];

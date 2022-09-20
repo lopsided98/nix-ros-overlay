@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ actionlib pr2-controllers-msgs roscpp trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 

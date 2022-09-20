@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ angles coreutils message-generation mk rosbuild rostopic ];
+  buildInputs = [ angles catkin coreutils message-generation mk rosbuild rostopic ];
   checkInputs = [ xorg.xorgserver ];
   propagatedBuildInputs = [ actionlib actionlib-msgs actionlib-tutorials dynamic-reconfigure euslisp geneus geometry-msgs jskeus message-runtime rosbash roscpp roslang rosmsg rosnode rospack rostest sensor-msgs shape-msgs std-msgs std-srvs tf tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];

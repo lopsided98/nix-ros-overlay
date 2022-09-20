@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ joint-state-publisher-gui kdl-parser libyamlcpp message-runtime moveit-ros-planning-interface muparser roscpp rosee-msg rospy srdfdom ];
   nativeBuildInputs = [ catkin ];

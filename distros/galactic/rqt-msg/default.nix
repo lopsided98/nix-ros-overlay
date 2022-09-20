@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python-qt-binding, python3Packages, rclpy, rqt-console, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-galactic-rqt-msg";
-  version = "1.0.5-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_msg-release/archive/release/galactic/rqt_msg/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "eee318f85b396ff53e49a341dc3672d4e41e252d1c18653bff3a7dd4e102e0b8";
+    url = "https://github.com/ros2-gbp/rqt_msg-release/archive/release/galactic/rqt_msg/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "30247626de271eaeb5bb5269eff0cfa3b652738ea9a41adb2310eb8532a14e51";
   };
 
   buildType = "ament_python";

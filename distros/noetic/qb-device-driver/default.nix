@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, qb-device-srvs, qb-device-utils, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-qb-device-driver";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/noetic/qb_device_driver/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "41e7f2059c6e63c28ff45d24bc0c14ef505ec2d13ab15db4e5016f59f97b5589";
+    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/noetic/qb_device_driver/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "b8890294f705082ae2de41ea0516e5e44d3edb55ea3a7b9f88c93011cdeb0fe3";
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ qb-device-srvs qb-device-utils roscpp ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ control-msgs diagnostics executive-smach filters geometry joint-state-publisher kdl-parser kdl-parser-py robot-state-publisher ros-base urdf urdf-parser-plugin xacro ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
+  buildInputs = [ cmake ];
   propagatedBuildInputs = [ boost catkin openscenegraph uwsim-bullet uwsim-osgworks ];
   nativeBuildInputs = [ cmake ];
 

@@ -2,19 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, control-toolbox, controller-interface, dynamic-reconfigure, effort-controllers, forward-command-controller, hardware-interface, pluginlib, realtime-tools, rm-common, rm-msgs, roscpp, roslint }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, effort-controllers, rm-common, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-rm-shooter-controllers";
-  version = "0.1.5-r1";
+  version = "0.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/rm_shooter_controllers/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "d540be1f264d25d78c0af5ad5144ccdb046f340ba2acc22804efdee4afa3e903";
+    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/rm_shooter_controllers/0.1.7-1.tar.gz";
+    name = "0.1.7-1.tar.gz";
+    sha256 = "f32ac29822c62086ac88915f2e4d197b55e4314c1787eaa5132712d7505aeb15";
   };
 
   buildType = "catkin";
-  propagatedBuildInputs = [ control-toolbox controller-interface dynamic-reconfigure effort-controllers forward-command-controller hardware-interface pluginlib realtime-tools rm-common rm-msgs roscpp roslint ];
+  buildInputs = [ catkin ];
+  propagatedBuildInputs = [ dynamic-reconfigure effort-controllers rm-common roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

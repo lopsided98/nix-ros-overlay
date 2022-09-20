@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ tf2-eigen tf2-eigen-kdl ];
+  buildInputs = [ ament-cmake tf2-eigen tf2-eigen-kdl ];
   propagatedBuildInputs = [ moveit-core pluginlib rclcpp tf2-geometry-msgs tf2-kdl ];
   nativeBuildInputs = [ ament-cmake ];
 

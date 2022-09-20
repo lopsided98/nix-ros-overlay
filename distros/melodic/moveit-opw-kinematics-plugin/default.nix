@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen-conversions ];
+  buildInputs = [ catkin eigen-conversions ];
   checkInputs = [ moveit-resources moveit-ros-planning rostest ];
   propagatedBuildInputs = [ moveit-core pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];

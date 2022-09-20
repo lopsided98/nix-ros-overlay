@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ actionlib-msgs copernicus-msgs geometry-msgs roscpp sensor-msgs teleop-twist-joy teleop-twist-keyboard ];
   nativeBuildInputs = [ catkin ];
 

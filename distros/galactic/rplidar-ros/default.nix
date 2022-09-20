@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, rclcpp, rclcpp-components, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-galactic-rplidar-ros";
-  version = "2.0.3-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/allenh1/rplidar_ros-release/archive/release/galactic/rplidar_ros/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "0b9e41d23195ec90a01bd2018bad7a5858667fe8b068f26ec1fcdf43cf7a34af";
+    url = "https://github.com/ros2-gbp/rplidar_ros-release/archive/release/galactic/rplidar_ros/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "a83f7de32de30d21483e7fb12f51404c7bfaf5ab54c32e4c11a9be47bec6e323";
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-auto ament-cmake-ros ];
   propagatedBuildInputs = [ rclcpp rclcpp-components sensor-msgs std-srvs ];
   nativeBuildInputs = [ ament-cmake-auto ament-cmake-ros ];
 

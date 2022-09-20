@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation python3Packages.grpcio-tools ];
+  buildInputs = [ catkin message-generation python3Packages.grpcio-tools ];
   propagatedBuildInputs = [ message-runtime std-msgs ];
   nativeBuildInputs = [ catkin ];
 

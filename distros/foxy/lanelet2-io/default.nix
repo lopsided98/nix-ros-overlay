@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-core ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ boost lanelet2-core mrt-cmake-modules pugixml ];
   nativeBuildInputs = [ ament-cmake-core mrt-cmake-modules ];

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ doxygen genmsg python3Packages.catkin-pkg python3Packages.kitchen python3Packages.pyyaml python3Packages.rospkg python3Packages.sphinx ];
   nativeBuildInputs = [ catkin ];
 

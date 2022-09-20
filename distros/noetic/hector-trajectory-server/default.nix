@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ hector-map-tools hector-nav-msgs nav-msgs roscpp tf ];
   nativeBuildInputs = [ catkin ];
 

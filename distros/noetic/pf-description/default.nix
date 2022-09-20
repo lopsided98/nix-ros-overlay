@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ robot-state-publisher rviz urdf xacro ];
   nativeBuildInputs = [ catkin ];

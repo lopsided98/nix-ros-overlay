@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-ros python-cmake-module ];
   checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common python3Packages.opencv3 ];
   propagatedBuildInputs = [ ament-index-python boost opencv python3Packages.numpy sensor-msgs ];
   nativeBuildInputs = [ ament-cmake-ros python-cmake-module ];

@@ -14,9 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-core ];
   checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ];
   propagatedBuildInputs = [ ament-cmake-test ament-uncrustify ];
-  nativeBuildInputs = [ ament-cmake-core ament-cmake-test ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-uncrustify ];
 
   meta = {
     description = ''ament_cmake_uncrustify with support for parsing a config file.'';

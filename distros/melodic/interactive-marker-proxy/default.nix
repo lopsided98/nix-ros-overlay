@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   propagatedBuildInputs = [ interactive-markers message-runtime roscpp visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

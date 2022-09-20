@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ python3Packages.pyqt5 qt5.qtbase ];
+  buildInputs = [ ament-cmake python3Packages.pyqt5 qt5.qtbase ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ ament-index-python python-qt-binding python3Packages.catkin-pkg tango-icons-vendor ];
   nativeBuildInputs = [ ament-cmake ];

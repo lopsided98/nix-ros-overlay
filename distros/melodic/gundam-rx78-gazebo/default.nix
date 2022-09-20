@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ roslaunch roslint rostest ];
   propagatedBuildInputs = [ fake-localization gazebo-plugins gazebo-ros gazebo-ros-control gundam-rx78-control gundam-rx78-description ];
   nativeBuildInputs = [ catkin ];

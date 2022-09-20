@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ pluginlib qt5.qtbase rviz trajectory-tracker-msgs ];
   nativeBuildInputs = [ catkin ];
 

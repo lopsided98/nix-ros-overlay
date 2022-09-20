@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, moveit-commander, moveit-core, moveit-planners, moveit-plugins, moveit-ros, moveit-setup-assistant }:
 buildRosPackage {
   pname = "ros-melodic-moveit";
-  version = "1.0.10-r1";
+  version = "1.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit/1.0.10-1.tar.gz";
-    name = "1.0.10-1.tar.gz";
-    sha256 = "3d44545c045db2065f3a32d6e4787f3ba9eca78bbb535be0a386819412d3fee7";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit/1.0.11-1.tar.gz";
+    name = "1.0.11-1.tar.gz";
+    sha256 = "71b08dd184090589f782e542738570caacdfadf7521c1867a1232150be353fe4";
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ moveit-commander moveit-core moveit-planners moveit-plugins moveit-ros moveit-setup-assistant ];
   nativeBuildInputs = [ catkin ];
 

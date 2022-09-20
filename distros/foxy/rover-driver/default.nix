@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ diagnostic-updater eigen nav-msgs rclcpp rover-msgs std-msgs tf2-geometry-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

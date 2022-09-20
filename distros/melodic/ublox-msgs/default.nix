@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin message-generation ];
   propagatedBuildInputs = [ message-runtime sensor-msgs std-msgs ublox-serialization ];
   nativeBuildInputs = [ catkin message-generation ];
 

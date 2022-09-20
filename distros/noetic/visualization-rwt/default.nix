@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ rwt-app-chooser rwt-image-view rwt-plot rwt-speech-recognition rwt-utils-3rdparty ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin python3Packages.setuptools ];
   propagatedBuildInputs = [ robot-calibration ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 

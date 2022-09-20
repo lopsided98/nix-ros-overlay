@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ joint-state-publisher joint-state-publisher-gui kdl-parser libyamlcpp moveit-ros-planning-interface muparser pluginlib rclcpp rclcpp-action rclpy rosee-msg srdfdom ];
   nativeBuildInputs = [ ament-cmake ];

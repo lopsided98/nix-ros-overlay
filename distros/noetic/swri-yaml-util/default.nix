@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin pkg-config ];
   propagatedBuildInputs = [ boost libyamlcpp roscpp ];
   nativeBuildInputs = [ catkin pkg-config ];
 

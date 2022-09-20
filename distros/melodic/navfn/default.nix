@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules message-generation netpbm ];
+  buildInputs = [ catkin cmake-modules message-generation netpbm ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ costmap-2d geometry-msgs message-runtime nav-core nav-msgs pluginlib rosconsole roscpp sensor-msgs tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];

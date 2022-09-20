@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ pr2-machine pr2-teleop topic-tools ];
   nativeBuildInputs = [ catkin ];
 

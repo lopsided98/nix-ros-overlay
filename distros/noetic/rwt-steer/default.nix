@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ image-publisher rostest rviz ];
   propagatedBuildInputs = [ rosbridge-server roswww rwt-utils-3rdparty web-video-server ];
   nativeBuildInputs = [ catkin ];

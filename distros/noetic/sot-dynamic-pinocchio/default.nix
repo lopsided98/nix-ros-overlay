@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, doxygen, dynamic-graph-python, git, gtest, liblapack, openblas, pinocchio, sot-core, sot-tools }:
 buildRosPackage {
   pname = "ros-noetic-sot-dynamic-pinocchio";
-  version = "3.6.3-r1";
+  version = "3.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/sot-dynamic-pinocchio-ros-release/archive/release/noetic/sot-dynamic-pinocchio/3.6.3-1.tar.gz";
-    name = "3.6.3-1.tar.gz";
-    sha256 = "50447cd2030f4dda6a737ffb9ecc4ab297b2803ff311c81718fac790a957679f";
+    url = "https://github.com/stack-of-tasks/sot-dynamic-pinocchio-ros-release/archive/release/noetic/sot-dynamic-pinocchio/3.6.5-1.tar.gz";
+    name = "3.6.5-1.tar.gz";
+    sha256 = "05a4c7c1768fbb3674a8eed9f75c2770ef2e65cc68a065835d79f2a2826b1581";
   };
 
   buildType = "cmake";
-  buildInputs = [ doxygen git ];
+  buildInputs = [ cmake doxygen git ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ catkin dynamic-graph-python liblapack openblas pinocchio sot-core sot-tools ];
   nativeBuildInputs = [ cmake ];

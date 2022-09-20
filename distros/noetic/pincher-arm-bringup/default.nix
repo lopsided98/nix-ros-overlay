@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ actionlib arbotix-controllers arbotix-python control-msgs pincher-arm-description robot-state-publisher rospy sensor-msgs std-msgs xacro ];
   nativeBuildInputs = [ catkin ];
 

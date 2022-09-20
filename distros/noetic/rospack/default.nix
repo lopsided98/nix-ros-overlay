@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules gtest ];
+  buildInputs = [ catkin cmake-modules gtest ];
   checkInputs = [ python3Packages.coverage ];
   propagatedBuildInputs = [ boost pkg-config python3 python3Packages.catkin-pkg python3Packages.rosdep ros-environment tinyxml-2 ];
   nativeBuildInputs = [ catkin ];

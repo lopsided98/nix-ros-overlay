@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-auto ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ controller-manager diff-drive-controller imu-sensor-broadcaster joint-state-controller ];
   nativeBuildInputs = [ ament-cmake-auto ];

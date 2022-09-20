@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules geometry-msgs ];
+  buildInputs = [ catkin cmake-modules geometry-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ cv-bridge dynamic-reconfigure image-transport nodelet roscpp tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];

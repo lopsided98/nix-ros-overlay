@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin pythonPackages.setuptools ];
   propagatedBuildInputs = [ cv-bridge rospy rostopic ];
   nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 

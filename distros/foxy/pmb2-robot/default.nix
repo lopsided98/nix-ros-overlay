@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ pmb2-bringup pmb2-controller-configuration pmb2-description ];
   nativeBuildInputs = [ ament-cmake ];
 

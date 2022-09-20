@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen urdfdom-headers ];
+  buildInputs = [ catkin eigen urdfdom-headers ];
   checkInputs = [ rosbag rostest ];
   propagatedBuildInputs = [ kdl-parser orocos-kdl rosconsole roscpp rostime sensor-msgs tf tf2-kdl tf2-ros ];
   nativeBuildInputs = [ catkin ];

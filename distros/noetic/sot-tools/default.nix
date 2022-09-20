@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, doxygen, dynamic-graph-python, git, sot-core }:
 buildRosPackage {
   pname = "ros-noetic-sot-tools";
-  version = "2.3.4-r1";
+  version = "2.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/sot-tools-ros-release/archive/release/noetic/sot-tools/2.3.4-1.tar.gz";
-    name = "2.3.4-1.tar.gz";
-    sha256 = "d54e689070390d5ffe5606f2131f31848e71c83e3d1100435ed7fdceae8ef117";
+    url = "https://github.com/stack-of-tasks/sot-tools-ros-release/archive/release/noetic/sot-tools/2.3.5-1.tar.gz";
+    name = "2.3.5-1.tar.gz";
+    sha256 = "8a0424691bdf6c5700eb43384c78e2bc869d888a0a0bc525c8ec88c8829a710c";
   };
 
   buildType = "cmake";
-  buildInputs = [ doxygen git ];
+  buildInputs = [ cmake doxygen git ];
   propagatedBuildInputs = [ catkin dynamic-graph-python sot-core ];
   nativeBuildInputs = [ cmake ];
 

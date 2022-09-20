@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ warthog-msgs warthog-viz ];
   nativeBuildInputs = [ catkin ];
 

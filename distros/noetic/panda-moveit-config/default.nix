@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, franka-description, joint-state-publisher, joint-state-publisher-gui, moveit-fake-controller-manager, moveit-kinematics, moveit-planners-ompl, moveit-ros-move-group, moveit-ros-visualization, moveit-setup-assistant, moveit-simple-controller-manager, robot-state-publisher, rviz, tf2-ros, xacro }:
 buildRosPackage {
   pname = "ros-noetic-panda-moveit-config";
-  version = "0.8.0-r1";
+  version = "0.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/panda_moveit_config-release/archive/release/noetic/panda_moveit_config/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "00b81cde940e1913f9e7895fff73fa2397abcb513a2ecae2404f3359e04857c9";
+    url = "https://github.com/ros-gbp/panda_moveit_config-release/archive/release/noetic/panda_moveit_config/0.8.1-1.tar.gz";
+    name = "0.8.1-1.tar.gz";
+    sha256 = "f16260452267dd147765d981ca44ccd4843f70b222198870d2031a6f593ebbd8";
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ franka-description joint-state-publisher joint-state-publisher-gui moveit-fake-controller-manager moveit-kinematics moveit-planners-ompl moveit-ros-move-group moveit-ros-visualization moveit-setup-assistant moveit-simple-controller-manager robot-state-publisher rviz tf2-ros xacro ];
   nativeBuildInputs = [ catkin ];
 

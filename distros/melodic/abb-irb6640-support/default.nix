@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslaunch ];
+  buildInputs = [ catkin roslaunch ];
   propagatedBuildInputs = [ abb-driver joint-state-publisher robot-state-publisher rviz xacro ];
   nativeBuildInputs = [ catkin ];
 

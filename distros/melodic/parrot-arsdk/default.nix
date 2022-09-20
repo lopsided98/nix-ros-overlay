@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ autoconf automake avahi curl ffmpeg libtool nasm ncurses unzip yasm zlib ];
+  buildInputs = [ autoconf automake avahi catkin curl ffmpeg libtool nasm ncurses unzip yasm zlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

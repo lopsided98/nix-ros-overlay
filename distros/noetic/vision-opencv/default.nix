@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, image-geometry }:
 buildRosPackage {
   pname = "ros-noetic-vision-opencv";
-  version = "1.16.0-r1";
+  version = "1.16.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/vision_opencv-release/archive/release/noetic/vision_opencv/1.16.0-1.tar.gz";
-    name = "1.16.0-1.tar.gz";
-    sha256 = "d981b709aa5f94a2464ffc0f1c2974ac064380ebd62d2a29a8a61d81958b1032";
+    url = "https://github.com/ros-gbp/vision_opencv-release/archive/release/noetic/vision_opencv/1.16.1-1.tar.gz";
+    name = "1.16.1-1.tar.gz";
+    sha256 = "ac2d8c16461688079c1b59608e917d65743477f1e0810ad18350b5998427b403";
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cv-bridge image-geometry ];
   nativeBuildInputs = [ catkin ];
 

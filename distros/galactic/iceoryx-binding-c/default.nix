@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ iceoryx-posh iceoryx-utils ];
+  buildInputs = [ cmake iceoryx-posh iceoryx-utils ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

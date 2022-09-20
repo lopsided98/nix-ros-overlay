@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb1, nlohmann_json, opencv, ros-environment }:
 buildRosPackage {
   pname = "ros-galactic-depthai";
-  version = "2.17.0-r1";
+  version = "2.17.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-core-release/archive/release/galactic/depthai/2.17.0-1.tar.gz";
-    name = "2.17.0-1.tar.gz";
-    sha256 = "4115e30bead9e68dd945ad2444fdcd2ad48ee7b0fa688e920f838f3ec46c456a";
+    url = "https://github.com/luxonis/depthai-core-release/archive/release/galactic/depthai/2.17.3-1.tar.gz";
+    name = "2.17.3-1.tar.gz";
+    sha256 = "4139e0955cf07dd92f115bfa141c1ff0080d263c059c0ec1a6fddc62cd666a1e";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ros-environment ];
+  buildInputs = [ ament-cmake ros-environment ];
   propagatedBuildInputs = [ libusb1 nlohmann_json opencv ];
   nativeBuildInputs = [ ament-cmake ];
 

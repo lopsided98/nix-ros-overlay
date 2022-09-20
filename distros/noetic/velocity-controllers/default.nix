@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ angles pluginlib ];
+  buildInputs = [ angles catkin pluginlib ];
   propagatedBuildInputs = [ control-msgs control-toolbox controller-interface forward-command-controller hardware-interface realtime-tools roscpp std-msgs urdf ];
   nativeBuildInputs = [ catkin ];
 

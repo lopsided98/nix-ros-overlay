@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-flake8 ament-cmake-lint-cmake ament-cmake-pep257 ament-cmake-uncrustify ament-cmake-xmllint ament-lint-auto ];
   propagatedBuildInputs = [ irobot-create-control irobot-create-description joint-state-publisher robot-state-publisher ros2launch rviz2 urdf xacro ];
   nativeBuildInputs = [ ament-cmake ];

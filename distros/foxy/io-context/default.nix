@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-auto asio-cmake-module ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ asio example-interfaces rclcpp std-msgs udp-msgs ];
   nativeBuildInputs = [ ament-cmake-auto asio-cmake-module ];

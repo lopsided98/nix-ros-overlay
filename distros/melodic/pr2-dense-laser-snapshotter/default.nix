@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ dense-laser-assembler pr2-msgs ];
   nativeBuildInputs = [ catkin ];
 

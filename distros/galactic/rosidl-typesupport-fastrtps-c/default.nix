@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common osrf-testing-tools-cpp performance-test-fixture ];
   propagatedBuildInputs = [ ament-cmake-ros ament-index-python fastcdr fastrtps fastrtps-cmake-module rmw rosidl-cli rosidl-cmake rosidl-parser rosidl-runtime-c rosidl-typesupport-fastrtps-cpp rosidl-typesupport-interface ];
-  nativeBuildInputs = [ ament-cmake-ros fastcdr fastrtps fastrtps-cmake-module rosidl-cmake rosidl-runtime-c rosidl-typesupport-fastrtps-cpp ];
+  nativeBuildInputs = [ ament-cmake-ros fastcdr fastrtps fastrtps-cmake-module rosidl-cmake rosidl-parser rosidl-runtime-c rosidl-typesupport-fastrtps-cpp ];
 
   meta = {
     description = ''Generate the C interfaces for eProsima FastRTPS.'';

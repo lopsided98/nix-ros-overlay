@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ filters pluginlib pr2-msgs roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

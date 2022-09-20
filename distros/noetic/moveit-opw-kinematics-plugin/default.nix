@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen-conversions opw-kinematics ];
+  buildInputs = [ catkin eigen-conversions opw-kinematics ];
   checkInputs = [ moveit-resources-fanuc-moveit-config moveit-ros-planning rostest ];
   propagatedBuildInputs = [ moveit-core pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];

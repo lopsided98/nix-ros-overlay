@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ graphviz tf2 tf2-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 

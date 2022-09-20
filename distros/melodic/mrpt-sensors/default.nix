@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ mrpt-generic-sensor mrpt-sensorlib ];
   nativeBuildInputs = [ catkin ];
 

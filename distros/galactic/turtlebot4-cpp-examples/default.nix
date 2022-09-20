@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ camera-info-manager cv-bridge depthai-bridge depthai-ros-msgs image-transport opencv rclcpp sensor-msgs std-msgs stereo-msgs vision-msgs ];
   nativeBuildInputs = [ ament-cmake ];

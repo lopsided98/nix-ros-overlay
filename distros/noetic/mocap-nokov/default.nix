@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, nav-msgs, roscpp, roslaunch, roslint, tf }:
 buildRosPackage {
   pname = "ros-noetic-mocap-nokov";
-  version = "0.0.2-r1";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/NOKOV-MOCAP/mocap_nokov_release/archive/release/noetic/mocap_nokov/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "63a3a439a048a0d9a09bad81fb283cb4697e552709be63b13b1b4dd3e6f0c6ab";
+    url = "https://github.com/NOKOV-MOCAP/mocap_nokov_release/archive/release/noetic/mocap_nokov/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "5c4aa056767f0ad442a0a21c6a4e9a471dac06b7e03bcedccddc2a372f6b4792";
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ roslaunch roslint ];
   propagatedBuildInputs = [ dynamic-reconfigure geometry-msgs nav-msgs roscpp tf ];
   nativeBuildInputs = [ catkin ];

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ rospy rostest ];
   propagatedBuildInputs = [ audibot-description gazebo-ros gazebo-ros-pkgs robot-state-publisher roscpp rviz tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];

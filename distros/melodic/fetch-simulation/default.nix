@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ fetch-gazebo fetch-gazebo-demo fetchit-challenge ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation roslint ];
+  buildInputs = [ catkin message-generation roslint ];
   checkInputs = [ gbenchmark rostest ];
   propagatedBuildInputs = [ boost ceres-solver eigen fuse-constraints fuse-core fuse-graphs fuse-msgs fuse-publishers fuse-variables geometry-msgs message-runtime nav-msgs pluginlib roscpp sensor-msgs std-srvs tf2 tf2-2d tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];

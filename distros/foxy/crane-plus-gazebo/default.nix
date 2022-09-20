@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ crane-plus-description crane-plus-moveit-config gazebo-ros-pkgs ];
   nativeBuildInputs = [ ament-cmake ];

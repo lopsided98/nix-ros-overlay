@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ boost cv-bridge swri-math-util ];
   nativeBuildInputs = [ ament-cmake ];
 

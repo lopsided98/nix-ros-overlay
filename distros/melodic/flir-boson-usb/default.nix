@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint ];
+  buildInputs = [ catkin roslint ];
   propagatedBuildInputs = [ camera-info-manager cv-bridge image-transport nodelet roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

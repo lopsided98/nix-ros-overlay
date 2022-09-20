@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-melodic-swri-system-util";
-  version = "2.14.2-r1";
+  version = "2.15.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_system_util/2.14.2-1.tar.gz";
-    name = "2.14.2-1.tar.gz";
-    sha256 = "3609b6434039f2585e58ed08775f58509f72c1fbb8a46a58a2916a09a47fafc9";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_system_util/2.15.2-1.tar.gz";
+    name = "2.15.2-1.tar.gz";
+    sha256 = "7ff8cdc3bf6831e6ed4988ca42b12e0578661504f53f4a49f4b4df3fb875879a";
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ boost roscpp ];
   nativeBuildInputs = [ catkin ];

@@ -60,6 +60,8 @@ self: super: {
 
  aruco-opencv = self.callPackage ./aruco-opencv {};
 
+ aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
+
  aruco-ros = self.callPackage ./aruco-ros {};
 
  assimp-devel = self.callPackage ./assimp-devel {};
@@ -1968,6 +1970,16 @@ self: super: {
 
  multisense-ros = self.callPackage ./multisense-ros {};
 
+ nao-meshes = self.callPackage ./nao-meshes {};
+
+ naoqi-bridge-msgs = self.callPackage ./naoqi-bridge-msgs {};
+
+ naoqi-driver = self.callPackage ./naoqi-driver {};
+
+ naoqi-libqi = self.callPackage ./naoqi-libqi {};
+
+ naoqi-libqicore = self.callPackage ./naoqi-libqicore {};
+
  nav2d = self.callPackage ./nav2d {};
 
  nav2d-exploration = self.callPackage ./nav2d-exploration {};
@@ -2163,6 +2175,8 @@ self: super: {
  people-msgs = self.callPackage ./people-msgs {};
 
  people-velocity-tracker = self.callPackage ./people-velocity-tracker {};
+
+ pepper-meshes = self.callPackage ./pepper-meshes {};
 
  perception = self.callPackage ./perception {};
 
@@ -3302,7 +3316,7 @@ self: super: {
 
  timestamp-tools = self.callPackage ./timestamp-tools {};
 
- tof-sensor-controller = self.callPackage ./tof-sensor-controller {};
+ tof-radar-controller = self.callPackage ./tof-radar-controller {};
 
  topic-tools = self.callPackage ./topic-tools {};
 

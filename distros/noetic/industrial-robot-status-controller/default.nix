@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ industrial-robot-status-interface ];
+  buildInputs = [ catkin industrial-robot-status-interface ];
   propagatedBuildInputs = [ controller-interface hardware-interface industrial-msgs pluginlib realtime-tools ];
   nativeBuildInputs = [ catkin ];
 

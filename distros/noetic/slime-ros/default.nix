@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ rosemacs roslisp sbcl slime-wrapper ];
   nativeBuildInputs = [ catkin ];
 

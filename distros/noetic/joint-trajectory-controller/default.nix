@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib ];
+  buildInputs = [ catkin pluginlib ];
   checkInputs = [ code-coverage controller-manager rostest std-msgs xacro ];
   propagatedBuildInputs = [ actionlib angles boost control-msgs control-toolbox controller-interface hardware-interface realtime-tools roscpp trajectory-msgs urdf ];
   nativeBuildInputs = [ catkin ];

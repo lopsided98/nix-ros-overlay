@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, camera-info-manager, image-transport, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-foxy-v4l2-camera";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_v4l2_camera-release/archive/release/foxy/v4l2_camera/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "08d6b00b59353d626745974898c115a49160396fd4282e50881d8fe9b528c330";
+    url = "https://github.com/ros2-gbp/ros2_v4l2_camera-release/archive/release/foxy/v4l2_camera/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "5113f32aaad8130e696901bed09af6b4a5b927733803281ddacbe4943e68f3b4";
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-ros ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ camera-info-manager image-transport rclcpp rclcpp-components sensor-msgs ];
   nativeBuildInputs = [ ament-cmake-ros ];

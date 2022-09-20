@@ -14,8 +14,9 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ lcov pythonPackages.catkin-pkg pythonPackages.pyyaml pythonPackages.rospkg pythonPackages.setuptools ros-environment ];
-  nativeBuildInputs = [ catkin pythonPackages.catkin-pkg pythonPackages.pyyaml pythonPackages.rospkg pythonPackages.setuptools ros-environment ];
+  nativeBuildInputs = [ catkin lcov pythonPackages.catkin-pkg pythonPackages.pyyaml pythonPackages.rospkg pythonPackages.setuptools ros-environment ];
 
   meta = {
     description = ''CMake Functions and Modules for automating CMake'';

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gtest protobuf pythonPackages.sphinx ];
+  buildInputs = [ catkin gtest protobuf pythonPackages.sphinx ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ cartographer cartographer-ros-msgs eigen-conversions geometry-msgs gflags glog message-runtime nav-msgs pcl pcl-conversions robot-state-publisher rosbag roscpp roslaunch roslib sensor-msgs std-msgs tf2 tf2-eigen tf2-ros urdf visualization-msgs ];
   nativeBuildInputs = [ catkin ];

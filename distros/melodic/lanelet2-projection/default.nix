@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ geographiclib lanelet2-io mrt-cmake-modules ];
   nativeBuildInputs = [ catkin mrt-cmake-modules ];

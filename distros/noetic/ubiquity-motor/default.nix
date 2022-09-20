@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation roscpp ];
+  buildInputs = [ catkin message-generation roscpp ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ controller-manager diagnostic-updater diff-drive-controller dynamic-reconfigure geometry-msgs hardware-interface joint-state-controller message-runtime nav-msgs python3Packages.requests std-msgs tf ];
   nativeBuildInputs = [ catkin ];

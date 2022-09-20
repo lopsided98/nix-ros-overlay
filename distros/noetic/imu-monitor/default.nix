@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ diagnostic-msgs pr2-mechanism-controllers python3Packages.pykdl rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

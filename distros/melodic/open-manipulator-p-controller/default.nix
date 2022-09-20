@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ boost cmake-modules geometry-msgs open-manipulator-msgs open-manipulator-p-libs robotis-manipulator roscpp sensor-msgs std-msgs trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 

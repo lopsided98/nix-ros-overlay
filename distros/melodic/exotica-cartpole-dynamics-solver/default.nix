@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ exotica-python ];
   propagatedBuildInputs = [ exotica-core roscpp ];
   nativeBuildInputs = [ catkin ];

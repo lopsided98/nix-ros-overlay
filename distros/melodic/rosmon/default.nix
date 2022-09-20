@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ rosmon-core rqt-rosmon ];
   nativeBuildInputs = [ catkin ];
 

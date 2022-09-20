@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake pkg-config ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common launch-ros launch-testing launch-testing-ament-cmake ];
   propagatedBuildInputs = [ geometry-msgs ignition.msgs5 ignition.transport8 nav-msgs rclcpp rosgraph-msgs sensor-msgs std-msgs tf2-msgs trajectory-msgs ];
   nativeBuildInputs = [ ament-cmake pkg-config ];

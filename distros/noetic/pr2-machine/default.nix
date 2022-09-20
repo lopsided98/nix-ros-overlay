@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-pr2-machine";
-  version = "1.13.0-r1";
+  version = "1.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_common-release/archive/release/noetic/pr2_machine/1.13.0-1.tar.gz";
-    name = "1.13.0-1.tar.gz";
-    sha256 = "98517069d84d60a45902a9452feb77c1814b4440063232696cc31b248ff58607";
+    url = "https://github.com/pr2-gbp/pr2_common-release/archive/release/noetic/pr2_machine/1.13.1-1.tar.gz";
+    name = "1.13.1-1.tar.gz";
+    sha256 = "1586780480d4ec1a797838f87265ef2c273be2455777f94b6742d1195a9481b2";
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

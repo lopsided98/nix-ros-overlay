@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ openssl ];
+  buildInputs = [ ament-cmake-ros openssl rosidl-default-generators ];
   checkInputs = [ ament-cmake-gtest launch-testing ];
   propagatedBuildInputs = [ rclcpp rosidl-default-runtime ];
   nativeBuildInputs = [ ament-cmake-ros rosidl-default-generators ];

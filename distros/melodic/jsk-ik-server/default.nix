@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cmake-modules mk moveit-msgs roseus rostest tf ];
   nativeBuildInputs = [ catkin ];
 

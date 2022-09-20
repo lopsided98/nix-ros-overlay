@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cv-bridge, diagnostic-msgs, diagnostic-updater, geometry-msgs, image-transport, kdl-parser, naoqi-bridge-msgs, naoqi-libqi, naoqi-libqicore, orocos-kdl, robot-state-publisher, rosbag-storage, rosconsole, rosgraph-msgs, sensor-msgs, tf2-geometry-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-naoqi-driver";
-  version = "0.5.11";
+  version = "0.5.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-naoqi/naoqi_driver-release/archive/release/melodic/naoqi_driver/0.5.11-0.tar.gz";
-    name = "0.5.11-0.tar.gz";
-    sha256 = "5992b46e789dece988fb22504472f7dc543f0785e0407119993a277ee8473895";
+    url = "https://github.com/ros-naoqi/naoqi_driver-release/archive/release/melodic/naoqi_driver/0.5.12-1.tar.gz";
+    name = "0.5.12-1.tar.gz";
+    sha256 = "1517ffa176b401ddd678425f053560707dd214d0371ed5d93472fad5f51ec665";
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-msgs diagnostic-updater geometry-msgs rosgraph-msgs sensor-msgs tf2-geometry-msgs tf2-msgs ];
+  buildInputs = [ catkin diagnostic-msgs diagnostic-updater geometry-msgs rosgraph-msgs sensor-msgs tf2-geometry-msgs tf2-msgs ];
   propagatedBuildInputs = [ boost cv-bridge image-transport kdl-parser naoqi-bridge-msgs naoqi-libqi naoqi-libqicore orocos-kdl robot-state-publisher rosbag-storage rosconsole tf2-ros ];
   nativeBuildInputs = [ catkin ];
 

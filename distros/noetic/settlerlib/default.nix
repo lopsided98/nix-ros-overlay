@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ boost calibration-msgs rosconsole rostime ];
   nativeBuildInputs = [ catkin ];
 

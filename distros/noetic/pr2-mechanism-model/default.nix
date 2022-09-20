@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules rostest rosunit ];
+  buildInputs = [ catkin cmake-modules rostest rosunit ];
   propagatedBuildInputs = [ angles hardware-interface kdl-parser pluginlib pr2-hardware-interface roscpp urdf urdfdom ];
   nativeBuildInputs = [ catkin ];
 

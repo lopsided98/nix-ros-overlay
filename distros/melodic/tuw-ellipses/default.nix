@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules eigen ];
+  buildInputs = [ catkin cmake-modules eigen ];
   propagatedBuildInputs = [ cv-bridge dynamic-reconfigure image-geometry image-transport marker-msgs nodelet roscpp rospy tf ];
   nativeBuildInputs = [ catkin ];
 

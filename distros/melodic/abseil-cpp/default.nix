@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rsync ];
+  buildInputs = [ catkin rsync ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

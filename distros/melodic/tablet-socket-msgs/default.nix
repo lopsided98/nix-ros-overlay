@@ -10,11 +10,11 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/autoware-ai/messages-release/archive/release/melodic/tablet_socket_msgs/1.14.0-1.tar.gz";
     name = "1.14.0-1.tar.gz";
-    sha256 = "46866d3f0916a650ea03de6f93ad4f7488b1c2d79c48bd87112d8c6b04573e1d";
+    sha256 = "c9de9912c721e5d0440d175016ffe402f207fd0f4347aaa2d85a4359d0f40327";
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   propagatedBuildInputs = [ message-runtime std-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ ecl-config ecl-errors ecl-license ];
   nativeBuildInputs = [ catkin ];
 

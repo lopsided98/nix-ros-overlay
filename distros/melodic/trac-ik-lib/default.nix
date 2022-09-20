@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules eigen pkg-config ];
+  buildInputs = [ catkin cmake-modules eigen pkg-config ];
   propagatedBuildInputs = [ boost kdl-parser nlopt roscpp urdf ];
   nativeBuildInputs = [ catkin ];
 

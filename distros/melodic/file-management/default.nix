@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
+  buildInputs = [ cmake ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ aws-common dataflow-lite ];
   nativeBuildInputs = [ cmake ];

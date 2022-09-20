@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ dynamic-reconfigure pr2-msgs roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 

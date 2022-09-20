@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ global-planner-tests roslint rostest ];
   propagatedBuildInputs = [ dlux-global-planner nav-core2 nav-grid pluginlib ];
   nativeBuildInputs = [ catkin ];

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ actionlib-msgs cl-utils message-runtime roslisp ];
   nativeBuildInputs = [ catkin ];
 

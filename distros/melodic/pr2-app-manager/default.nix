@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ app-manager willow-maps ];
   nativeBuildInputs = [ catkin ];
 

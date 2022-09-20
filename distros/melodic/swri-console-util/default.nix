@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, swri-math-util }:
 buildRosPackage {
   pname = "ros-melodic-swri-console-util";
-  version = "2.14.2-r1";
+  version = "2.15.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_console_util/2.14.2-1.tar.gz";
-    name = "2.14.2-1.tar.gz";
-    sha256 = "433ec56e17dbb56b281ce4829c434c9e34e52bfea9830ddcccace64e112e4dff";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_console_util/2.15.2-1.tar.gz";
+    name = "2.15.2-1.tar.gz";
+    sha256 = "e2892f1a73322c575fcc2f54bbfa875c94859f9b052e20e56c9c6bac6800bf13";
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ roscpp swri-math-util ];
   nativeBuildInputs = [ catkin ];
 

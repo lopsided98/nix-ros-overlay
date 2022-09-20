@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pkg-config ];
+  buildInputs = [ catkin pkg-config ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ assimp boost console-bridge eigen eigen-stl-containers octomap qhull random-numbers resource-retriever shape-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];

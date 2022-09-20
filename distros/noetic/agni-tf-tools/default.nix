@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen qt5.qtbase ];
+  buildInputs = [ catkin eigen qt5.qtbase ];
   propagatedBuildInputs = [ roscpp rviz tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ blas cmake-modules liblapack message-generation message-runtime omniorb openrtm-aist openrtm-aist-python pkg-config rostest std-msgs ];
   nativeBuildInputs = [ catkin ];
 

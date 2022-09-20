@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rosidl-default-generators ];
+  buildInputs = [ ament-cmake rosidl-default-generators ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common class-loader lifecycle-msgs python3Packages.retrying rclpy ros2launch ros2lifecycle ros2topic ];
   propagatedBuildInputs = [ demo-nodes-cpp libstatistics-collector message-filters rcl rclcpp rclcpp-components rclcpp-lifecycle rcpputils rcutils rosidl-default-runtime statistics-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake ];

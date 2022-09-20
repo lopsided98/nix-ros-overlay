@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   propagatedBuildInputs = [ interactive-marker-proxy kdl-parser message-runtime moveit-msgs orocos-kdl robot-state-publisher rosbridge-server rospy roswww rwt-utils-3rdparty sensor-msgs std-msgs tf tf2-web-republisher visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

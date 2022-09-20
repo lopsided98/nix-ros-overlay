@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ pddl-planner roseus-smach smach-viewer ];
   nativeBuildInputs = [ catkin ];

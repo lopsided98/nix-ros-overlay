@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rosgraph-msgs ];
+  buildInputs = [ catkin rosgraph-msgs ];
   checkInputs = [ pr2-gazebo robot-state-publisher rostest ];
   propagatedBuildInputs = [ control-msgs dynamic-reconfigure euscollada move-base-msgs nav-msgs pr2-controllers-msgs pr2-description pr2-mechanism-msgs pr2-msgs roseus sound-play ];
   nativeBuildInputs = [ catkin ];

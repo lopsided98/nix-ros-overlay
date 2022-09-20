@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ pkg-config python-qt-binding qt5.qtbase ];
+  buildInputs = [ ament-cmake pkg-config python-qt-binding qt5.qtbase ];
   checkInputs = [ ament-cmake-pytest ];
   propagatedBuildInputs = [ pluginlib qt-gui rcpputils tinyxml2-vendor ];
   nativeBuildInputs = [ ament-cmake ];

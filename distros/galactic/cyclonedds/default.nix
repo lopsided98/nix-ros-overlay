@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ bison ];
+  buildInputs = [ bison cmake ];
   checkInputs = [ cunit ];
   propagatedBuildInputs = [ iceoryx-binding-c iceoryx-posh iceoryx-utils openssl ];
   nativeBuildInputs = [ cmake ];

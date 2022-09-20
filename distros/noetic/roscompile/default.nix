@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ python3Packages.setuptools ];
   checkInputs = [ geometry-msgs pluginlib pluginlib-tutorials roslint stereo-msgs tf ];
   propagatedBuildInputs = [ catkin python3Packages.click python3Packages.pyyaml python3Packages.rospkg ros-introspection ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ libdlib libntcan libpcan libphidgets opengm ];
   nativeBuildInputs = [ catkin ];
 

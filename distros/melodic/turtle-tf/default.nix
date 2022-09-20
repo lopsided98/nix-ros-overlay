@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ geometry-msgs roscpp rospy std-msgs tf turtlesim ];
   nativeBuildInputs = [ catkin ];
 

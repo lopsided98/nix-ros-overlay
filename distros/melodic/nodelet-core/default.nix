@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ nodelet nodelet-topic-tools ];
   nativeBuildInputs = [ catkin ];
 

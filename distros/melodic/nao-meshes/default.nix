@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ openjdk ];
+  buildInputs = [ catkin openjdk ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ osrf-testing-tools-cpp ];
+  buildInputs = [ ament-cmake osrf-testing-tools-cpp rosidl-default-generators ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common launch launch-testing rmw-implementation-cmake ];
   propagatedBuildInputs = [ rclcpp rmw-implementation rosidl-default-runtime ];
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];

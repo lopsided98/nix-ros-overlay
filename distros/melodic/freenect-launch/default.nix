@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ freenect-camera image-proc nodelet rgbd-launch tf ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ rslidar-driver rslidar-msgs rslidar-pointcloud ];
   nativeBuildInputs = [ catkin ];
 

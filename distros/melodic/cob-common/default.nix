@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cob-actions cob-description cob-msgs cob-srvs raw-description ];
   nativeBuildInputs = [ catkin ];
 

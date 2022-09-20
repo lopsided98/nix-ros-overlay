@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
+  buildInputs = [ cmake ];
   checkInputs = [ clang cppcheck gtest include-what-you-use lcov ];
   nativeBuildInputs = [ cmake ];
 

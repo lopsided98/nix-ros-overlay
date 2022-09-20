@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   propagatedBuildInputs = [ calibration-estimation calibration-launch calibration-msgs geometry-msgs image-cb-detector image-view kdl-parser laser-cb-detector laser-joint-processor laser-joint-projector message-runtime monocam-settler pr2-dense-laser-snapshotter pr2-teleop python-orocos-kdl robot-mechanism-controllers rospy rostest sensor-msgs stereo-image-proc ];
   nativeBuildInputs = [ catkin ];
 

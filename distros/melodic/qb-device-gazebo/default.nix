@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, gazebo-ros-control, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-qb-device-gazebo";
-  version = "3.0.4-r3";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device_gazebo/3.0.4-3.tar.gz";
-    name = "3.0.4-3.tar.gz";
-    sha256 = "02b73c3b0ed2d31485b622f5bcaa2db7633752da7e366d2ffb1c47aab67a9388";
+    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device_gazebo/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "a45cbe6a017aeb024ff0c019e5bd6d39979e3545cadd8e71eec07cf1036f3804";
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ controller-manager gazebo-ros-control roscpp ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ gtest rostest ];
   propagatedBuildInputs = [ boost geometry-msgs pluginlib roscpp rostime std-msgs tf ];
   nativeBuildInputs = [ catkin ];

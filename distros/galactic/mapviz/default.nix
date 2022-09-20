@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake pkg-config ];
   propagatedBuildInputs = [ cv-bridge freeglut geometry-msgs glew image-transport launch-xml libyamlcpp mapviz-interfaces marti-common-msgs pluginlib qt5.qtbase rclcpp rqt-gui rqt-gui-cpp std-srvs swri-math-util swri-transform-util tf2 tf2-geometry-msgs tf2-ros xorg.libXi xorg.libXmu ];
   nativeBuildInputs = [ ament-cmake pkg-config qt5.qtbase ];
 

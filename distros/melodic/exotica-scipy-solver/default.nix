@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ exotica-core pythonPackages.numpy pythonPackages.scipy ];
   nativeBuildInputs = [ catkin ];
 

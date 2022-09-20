@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ canopen-402 pluginlib socketcan-interface ];
   nativeBuildInputs = [ catkin ];
 

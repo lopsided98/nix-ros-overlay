@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ boost eigen libyamlcpp roscpp ];
   nativeBuildInputs = [ catkin ];
 

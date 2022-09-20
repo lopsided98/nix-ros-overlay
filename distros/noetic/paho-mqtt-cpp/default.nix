@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
+  buildInputs = [ cmake ];
   propagatedBuildInputs = [ openssl paho-mqtt-c ];
   nativeBuildInputs = [ cmake ];
 

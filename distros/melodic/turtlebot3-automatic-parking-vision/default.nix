@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ ar-track-alvar ar-track-alvar-msgs geometry-msgs joint-state-publisher nav-msgs robot-state-publisher rospy rviz sensor-msgs std-msgs turtlebot3-bringup ];
   nativeBuildInputs = [ catkin ];
 

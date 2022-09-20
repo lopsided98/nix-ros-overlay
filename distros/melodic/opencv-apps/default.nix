@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   checkInputs = [ compressed-image-transport image-proc image-view rosbag roslaunch rosservice rostest rostopic topic-tools ];
   propagatedBuildInputs = [ cv-bridge dynamic-reconfigure image-transport message-runtime nodelet roscpp sensor-msgs std-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];

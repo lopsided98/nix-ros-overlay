@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   checkInputs = [ geometry-msgs joint-state-publisher pythonPackages.numpy robot-state-publisher rostest rosunit uuv-assistants xacro ];
   propagatedBuildInputs = [ geometry-msgs message-runtime pythonPackages.pyyaml rospy std-msgs tf uuv-assistants uuv-gazebo-ros-plugins-msgs ];
   nativeBuildInputs = [ catkin ];

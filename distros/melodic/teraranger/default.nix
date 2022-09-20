@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ dynamic-reconfigure roscpp sensor-msgs serial std-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ kobuki-dock-drive kobuki-driver kobuki-ftdi ];
   nativeBuildInputs = [ catkin ];
 

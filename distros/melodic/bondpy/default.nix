@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ bond ];
+  buildInputs = [ bond catkin pythonPackages.setuptools ];
   propagatedBuildInputs = [ rospy smclib util-linux ];
   nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 

@@ -14,8 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-core ];
   propagatedBuildInputs = [ ament-cmake-test gtest gtest-vendor ];
-  nativeBuildInputs = [ ament-cmake-core ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-test gtest gtest-vendor ];
 
   meta = {
     description = ''The ability to add gtest-based tests in the ament buildsystem in CMake.'';

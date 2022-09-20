@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs urdfdom-headers ];
+  buildInputs = [ catkin geometry-msgs urdfdom-headers ];
   propagatedBuildInputs = [ tf2 tf2-geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 

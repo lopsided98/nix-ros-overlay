@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ angles message-generation rostime ];
+  buildInputs = [ angles catkin message-generation rostime ];
   checkInputs = [ rostest rosunit ];
   propagatedBuildInputs = [ geometry-msgs graphviz message-filters message-runtime rosconsole roscpp roswtf sensor-msgs std-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];

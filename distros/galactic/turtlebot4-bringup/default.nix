@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, depthai-bridge, depthai-examples, depthai-ros-msgs, joy-linux, rplidar-ros, teleop-twist-joy, tf2-ros, turtlebot4-description, turtlebot4-diagnostics, turtlebot4-node }:
 buildRosPackage {
   pname = "ros-galactic-turtlebot4-bringup";
-  version = "0.1.2-r1";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4_robot-release/archive/release/galactic/turtlebot4_bringup/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "a9dbe6210696e5aa1ab41e9700a449640f2e35cf8c4a4500620e4b3a08dbb03f";
+    url = "https://github.com/ros2-gbp/turtlebot4_robot-release/archive/release/galactic/turtlebot4_bringup/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "94d3d72b810e5d6d7ff6e5e9c856db02a92d8a8717d647ff212390a7a153b31b";
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ depthai-bridge depthai-examples depthai-ros-msgs joy-linux rplidar-ros teleop-twist-joy tf2-ros turtlebot4-description turtlebot4-diagnostics turtlebot4-node ];
   nativeBuildInputs = [ ament-cmake ];

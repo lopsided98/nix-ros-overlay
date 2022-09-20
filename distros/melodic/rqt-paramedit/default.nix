@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ qt-paramedit qt5.qtbase roscpp rqt-gui rqt-gui-cpp ];
   nativeBuildInputs = [ catkin ];
 

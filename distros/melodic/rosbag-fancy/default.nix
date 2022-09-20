@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ boost ncurses rosbag-storage roscpp rosfmt tf2-ros topic-tools ];
   nativeBuildInputs = [ catkin ];
 

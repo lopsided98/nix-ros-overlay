@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, irobot-create-msgs, python3Packages, pythonPackages, sensor-msgs, std-msgs, turtlebot4-msgs }:
 buildRosPackage {
   pname = "ros-galactic-turtlebot4-tests";
-  version = "0.1.2-r1";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4_robot-release/archive/release/galactic/turtlebot4_tests/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "1d95216f0b9fb1ac9b0234d2dbeae9404bd5f22d914d3d1cd4f4d7e5ca396068";
+    url = "https://github.com/ros2-gbp/turtlebot4_robot-release/archive/release/galactic/turtlebot4_tests/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "f4551bada82e536d5145d43be77cc5dfb0533b0278f487f1de637d0a56465bb9";
   };
 
   buildType = "ament_python";

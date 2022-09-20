@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, dynamic-reconfigure, eigen, moveit-core, moveit-msgs, moveit-ros-move-group, moveit-ros-planning, pluginlib, rosconsole, roscpp, tf2-eigen }:
 buildRosPackage {
   pname = "ros-noetic-moveit-ros-manipulation";
-  version = "1.1.9-r1";
+  version = "1.1.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_manipulation/1.1.9-1.tar.gz";
-    name = "1.1.9-1.tar.gz";
-    sha256 = "acce2bae20bc0a62578bbd938f0ec28aab38cec558cde7436d3a62088482a84d";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_manipulation/1.1.10-1.tar.gz";
+    name = "1.1.10-1.tar.gz";
+    sha256 = "1929807bcb010e84fb755cbcca197a4de91755d4685cea36da4f77dd9a97da9e";
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen ];
+  buildInputs = [ catkin eigen ];
   propagatedBuildInputs = [ actionlib dynamic-reconfigure moveit-core moveit-msgs moveit-ros-move-group moveit-ros-planning pluginlib rosconsole roscpp tf2-eigen ];
   nativeBuildInputs = [ catkin ];
 

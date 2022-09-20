@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ hector-sensors-description hector-xacro-tools xacro ];
   nativeBuildInputs = [ catkin ];
 

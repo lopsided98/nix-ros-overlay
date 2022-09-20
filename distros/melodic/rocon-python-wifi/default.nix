@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pythonPackages.catkin-pkg ];
+  buildInputs = [ catkin pythonPackages.catkin-pkg ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

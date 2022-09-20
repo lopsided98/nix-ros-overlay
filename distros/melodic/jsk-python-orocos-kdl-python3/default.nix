@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ python3Packages.sip_4 ];
+  buildInputs = [ python3Packages.catkin-pkg python3Packages.sip_4 ];
   propagatedBuildInputs = [ catkin orocos-kdl python3 ];
   nativeBuildInputs = [ catkin python3Packages.catkin-pkg ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ class-loader message-filters ];
+  buildInputs = [ ament-cmake-auto class-loader message-filters ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ cv-bridge image-geometry image-transport rclcpp rclcpp-components sensor-msgs stereo-msgs tf2 tf2-eigen tf2-ros ];
   nativeBuildInputs = [ ament-cmake-auto ];

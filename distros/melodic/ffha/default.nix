@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ bison flex gawk mk rosbuild roslib rospack ];
+  buildInputs = [ bison catkin flex gawk mk rosbuild roslib rospack ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

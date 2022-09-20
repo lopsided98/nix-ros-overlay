@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cob-bringup-sim cob-manipulation cob-navigation ];
   nativeBuildInputs = [ catkin ];
 

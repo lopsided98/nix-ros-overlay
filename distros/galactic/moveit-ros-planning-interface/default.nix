@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ eigen moveit-common ];
+  buildInputs = [ ament-cmake eigen eigen3-cmake-module moveit-common ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto moveit-configs-utils moveit-planners-ompl moveit-resources-fanuc-moveit-config moveit-resources-panda-moveit-config moveit-simple-controller-manager ros-testing rviz2 ];
   propagatedBuildInputs = [ geometry-msgs moveit-core moveit-msgs moveit-ros-move-group moveit-ros-planning moveit-ros-warehouse python3 rclcpp rclcpp-action rclpy tf2 tf2-eigen tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];

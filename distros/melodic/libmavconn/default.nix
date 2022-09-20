@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ gtest rosunit ];
   propagatedBuildInputs = [ boost console-bridge mavlink ];
   nativeBuildInputs = [ catkin ];

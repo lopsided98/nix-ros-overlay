@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ roslaunch rostest ];
   propagatedBuildInputs = [ moveit-commander moveit-simple-controller-manager rviz rviz-plugin-tutorials seed-r7-bringup seed-r7-moveit-config seed-r7-navigation seed-r7-robot-interface seed-r7-ros-controller seed-r7-typef-moveit-config smach-ros smach-viewer ];
   nativeBuildInputs = [ catkin ];

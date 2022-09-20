@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rdl-cmake ];
+  buildInputs = [ catkin rdl-cmake ];
   propagatedBuildInputs = [ geometry-msgs message-runtime nav-msgs sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ leo-description leo-msgs leo-teleop ];
   nativeBuildInputs = [ catkin ];
 

@@ -3064,6 +3064,8 @@ self: super: {
 
  qb-device-driver = self.callPackage ./qb-device-driver {};
 
+ qb-device-gazebo = self.callPackage ./qb-device-gazebo {};
+
  qb-device-hardware-interface = self.callPackage ./qb-device-hardware-interface {};
 
  qb-device-msgs = self.callPackage ./qb-device-msgs {};
@@ -4015,6 +4017,8 @@ self: super: {
  stereo-msgs = self.callPackage ./stereo-msgs {};
 
  switchbot-ros = self.callPackage ./switchbot-ros {};
+
+ swri-cli-tools = self.callPackage ./swri-cli-tools {};
 
  swri-console = self.callPackage ./swri-console {};
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ moveit-common ];
+  buildInputs = [ ament-cmake moveit-common ];
   checkInputs = [ ament-cmake-gmock ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ eigen eigen3-cmake-module geometric-shapes moveit-core moveit-msgs octomap pluginlib rclcpp tf2-ros ];
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];

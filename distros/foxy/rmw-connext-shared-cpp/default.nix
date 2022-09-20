@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rcpputils rcutils rmw ];
+  buildInputs = [ ament-cmake-ros rcpputils rcutils rmw rosidl-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ ament-cmake connext-cmake-module ];
-  nativeBuildInputs = [ ament-cmake-ros rosidl-cmake ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-ros rosidl-cmake ];
 
   meta = {
     description = ''C++ types and functions shared by the ROS middleware interface to RTI Connext Static and RTI Connext Dynamic.'';

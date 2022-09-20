@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs nav-msgs sensor-msgs tf2 visualization-msgs ];
+  buildInputs = [ catkin geometry-msgs nav-msgs sensor-msgs tf2 visualization-msgs ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ armadillo map-server roscpp rviz tf2-ros ];
   nativeBuildInputs = [ catkin ];

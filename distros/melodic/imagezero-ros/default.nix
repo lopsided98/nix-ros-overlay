@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp ];
+  buildInputs = [ catkin roscpp ];
   propagatedBuildInputs = [ cv-bridge imagezero message-runtime sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

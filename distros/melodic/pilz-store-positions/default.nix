@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint std-msgs ];
+  buildInputs = [ catkin roslint std-msgs ];
   checkInputs = [ code-coverage pythonPackages.mock pythonPackages.pytestcov ros-pytest rostest visualization-msgs ];
   propagatedBuildInputs = [ geometry-msgs libyaml rospy tf2-ros ];
   nativeBuildInputs = [ catkin ];

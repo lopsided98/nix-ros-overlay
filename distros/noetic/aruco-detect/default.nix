@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ compressed-depth-image-transport compressed-image-transport cv-bridge dynamic-reconfigure fiducial-msgs image-transport python3Packages.cairosvg python3Packages.joblib roscpp sensor-msgs tf2 tf2-geometry-msgs tf2-ros theora-image-transport vision-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

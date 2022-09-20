@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
+  buildInputs = [ cmake ];
   propagatedBuildInputs = [ libsForQt5.libqglviewer octomap qt5.qtbase ];
   nativeBuildInputs = [ cmake ];
 

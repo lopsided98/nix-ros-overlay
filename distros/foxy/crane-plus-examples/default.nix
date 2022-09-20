@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ crane-plus-control crane-plus-description crane-plus-moveit-config geometry-msgs moveit-ros-planning-interface rclcpp tf2-geometry-msgs ];
   nativeBuildInputs = [ ament-cmake ];

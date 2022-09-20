@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dataspeed-can-msg-filters ];
+  buildInputs = [ catkin dataspeed-can-msg-filters ];
   checkInputs = [ roslaunch rostest ];
   propagatedBuildInputs = [ can-msgs dataspeed-can-usb dataspeed-pds-msgs message-filters nodelet roscpp roslaunch ];
   nativeBuildInputs = [ catkin ];

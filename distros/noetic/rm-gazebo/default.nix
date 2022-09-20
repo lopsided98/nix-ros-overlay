@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo, gazebo-ros, gazebo-ros-control, rm-common, rm-description, roboticsgroup-upatras-gazebo-plugins, roscpp, roslint }:
 buildRosPackage {
   pname = "ros-noetic-rm-gazebo";
-  version = "0.1.13-r1";
+  version = "0.1.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_gazebo/0.1.13-1.tar.gz";
-    name = "0.1.13-1.tar.gz";
-    sha256 = "fadc636dbb602f42d78a0ef14b86d3eaebf1b375dedd3ffc98896fb2071e8ec0";
+    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_gazebo/0.1.15-1.tar.gz";
+    name = "0.1.15-1.tar.gz";
+    sha256 = "e03de15c8cafe40eb076e07720da1c7c041d6f830af60ca26a033c623de212a9";
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ gazebo gazebo-ros gazebo-ros-control rm-common rm-description roboticsgroup-upatras-gazebo-plugins roscpp roslint ];
   nativeBuildInputs = [ catkin ];
 

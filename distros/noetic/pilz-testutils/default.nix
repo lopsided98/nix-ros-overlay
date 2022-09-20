@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pilz-utils roscpp sensor-msgs ];
+  buildInputs = [ catkin pilz-utils roscpp sensor-msgs ];
   checkInputs = [ code-coverage rostest ];
   nativeBuildInputs = [ catkin ];
 

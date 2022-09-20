@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ python ];
+  buildInputs = [ catkin python ];
   checkInputs = [ catch-ros pythonPackages.rospkg rostest ];
   propagatedBuildInputs = [ boost cmake-modules diagnostic-msgs libyamlcpp ncurses rosbash roscpp rosfmt roslib rosmon-msgs rospack std-msgs tinyxml ];
   nativeBuildInputs = [ catkin ];

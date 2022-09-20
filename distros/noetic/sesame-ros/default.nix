@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin-virtualenv libffi message-generation openssl ];
+  buildInputs = [ catkin catkin-virtualenv libffi message-generation openssl ];
   propagatedBuildInputs = [ message-runtime ];
   nativeBuildInputs = [ catkin ];
 

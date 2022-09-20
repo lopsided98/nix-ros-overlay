@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common osrf-testing-tools-cpp rcutils rmw rmw-dds-common rmw-implementation rmw-implementation-cmake test-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

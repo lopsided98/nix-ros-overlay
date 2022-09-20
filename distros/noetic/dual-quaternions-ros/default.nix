@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ dual-quaternions geometry-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ laptop-battery-monitor libsensors-monitor ];
   nativeBuildInputs = [ catkin ];
 

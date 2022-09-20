@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ rosidl-default-generators ];
   propagatedBuildInputs = [ geometry-msgs std-msgs ];
   nativeBuildInputs = [ rosidl-default-generators ];
 

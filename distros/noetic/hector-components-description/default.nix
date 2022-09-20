@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ gazebo-ros-control-select-joints hector-gazebo-thermal-camera hector-sensors-description hector-xacro-tools xacro ];
   nativeBuildInputs = [ catkin ];
 

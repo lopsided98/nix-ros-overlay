@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint ];
+  buildInputs = [ catkin roslint ];
   propagatedBuildInputs = [ geometry-msgs libspnav roscpp sensor-msgs xorg.libX11 ];
   nativeBuildInputs = [ catkin ];
 

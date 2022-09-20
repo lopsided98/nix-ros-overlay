@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ mk rosboost-cfg roslib rospack subversion ];
+  buildInputs = [ catkin mk rosboost-cfg roslib rospack subversion ];
   propagatedBuildInputs = [ boost pythonPackages.numpy ];
   nativeBuildInputs = [ catkin ];
 

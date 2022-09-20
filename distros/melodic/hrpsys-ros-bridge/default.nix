@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ angles euscollada git hostname message-generation mk nettools pkg-config procps pythonPackages.rosdep rosbuild roslang subversion ];
+  buildInputs = [ angles catkin euscollada git hostname message-generation mk nettools pkg-config procps pythonPackages.rosdep rosbuild roslang subversion ];
   propagatedBuildInputs = [ actionlib camera-info-manager collada-urdf control-msgs diagnostic-aggregator diagnostic-msgs dynamic-reconfigure geometry-msgs hrpsys hrpsys-tools image-transport nav-msgs pr2-controllers-msgs pr2-msgs pythonPackages.ipython pythonPackages.psutil robot-pose-ekf robot-state-publisher roscpp rosnode rostest rqt-gui rqt-gui-py rqt-robot-dashboard rqt-robot-monitor rtmbuild sensor-msgs tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

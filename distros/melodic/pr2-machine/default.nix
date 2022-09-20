@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-pr2-machine";
-  version = "1.12.4-r1";
+  version = "1.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_common-release/archive/release/melodic/pr2_machine/1.12.4-1.tar.gz";
-    name = "1.12.4-1.tar.gz";
-    sha256 = "57a14290871112df082f51820a8adbd11dbacb0a38440c11968ec0ca80104ef4";
+    url = "https://github.com/pr2-gbp/pr2_common-release/archive/release/melodic/pr2_machine/1.13.1-1.tar.gz";
+    name = "1.13.1-1.tar.gz";
+    sha256 = "9833870b936c19b4a17be04b1220e7106f5f81463737c5d68690ed0b3e05471f";
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

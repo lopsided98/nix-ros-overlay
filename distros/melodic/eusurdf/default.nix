@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roseus ];
+  buildInputs = [ catkin roseus ];
   propagatedBuildInputs = [ collada-urdf-jsk-patch gazebo-ros pythonPackages.lxml rostest ];
   nativeBuildInputs = [ catkin ];
 

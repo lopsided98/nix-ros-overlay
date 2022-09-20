@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules ];
+  buildInputs = [ catkin cmake-modules ];
   checkInputs = [ resource-retriever ];
   propagatedBuildInputs = [ hardware-interface pluginlib roscpp tinyxml ];
   nativeBuildInputs = [ catkin ];

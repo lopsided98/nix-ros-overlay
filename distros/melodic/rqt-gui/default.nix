@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ python-qt-binding pythonPackages.rospkg qt-gui rospy ];
   nativeBuildInputs = [ catkin ];
 

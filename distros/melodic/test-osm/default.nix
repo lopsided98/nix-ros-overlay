@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ geodesy geographic-msgs osm-cartography route-network ];
   nativeBuildInputs = [ catkin ];
 

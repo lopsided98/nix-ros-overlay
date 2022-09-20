@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, launch-ros, rclcpp, rclcpp-components, realsense2-camera-msgs, xacro }:
 buildRosPackage {
   pname = "ros-galactic-realsense2-description";
-  version = "4.0.4-r1";
+  version = "4.51.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/galactic/realsense2_description/4.0.4-1.tar.gz";
-    name = "4.0.4-1.tar.gz";
-    sha256 = "254818d0883d8d32747a1d178af05f9da1a7aed8fddef846fec6f24ef5ef1612";
+    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/galactic/realsense2_description/4.51.1-1.tar.gz";
+    name = "4.51.1-1.tar.gz";
+    sha256 = "7eb5ccfbf38877b767ab4e11d20eb8eb5e548ad8314546611ae942d63b5c354a";
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ launch-ros rclcpp rclcpp-components realsense2-camera-msgs xacro ];
   nativeBuildInputs = [ ament-cmake ];

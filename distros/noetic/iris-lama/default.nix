@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen }:
 buildRosPackage {
   pname = "ros-noetic-iris-lama";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/eupedrosa/iris_lama-release/archive/release/noetic/iris_lama/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "52cf3a1c63f9c978519569624a45504d703b683b2ce52f11ec1fb42f2562b4be";
+    url = "https://github.com/eupedrosa/iris_lama-release/archive/release/noetic/iris_lama/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "470baf458114fc416eb0ac0462b223845394c2557408dcd75aa82105625da860";
   };
 
   buildType = "cmake";
-  buildInputs = [ eigen ];
+  buildInputs = [ cmake eigen ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

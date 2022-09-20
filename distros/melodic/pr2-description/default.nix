@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, convex-decomposition, gtest, ivcon, rosbash, urdfdom, xacro }:
 buildRosPackage {
   pname = "ros-melodic-pr2-description";
-  version = "1.12.4-r1";
+  version = "1.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_common-release/archive/release/melodic/pr2_description/1.12.4-1.tar.gz";
-    name = "1.12.4-1.tar.gz";
-    sha256 = "8614f27c6963296dfcd6091bb406ac8cb85b3d3ddc240ad390b6da44363d341e";
+    url = "https://github.com/pr2-gbp/pr2_common-release/archive/release/melodic/pr2_description/1.13.1-1.tar.gz";
+    name = "1.13.1-1.tar.gz";
+    sha256 = "a7c187585634cc2b1ed1fc61e1466def6ec89254d5795f570b45617c06db0e48";
   };
 
   buildType = "catkin";
-  buildInputs = [ convex-decomposition ivcon ];
+  buildInputs = [ catkin convex-decomposition ivcon ];
   checkInputs = [ gtest rosbash urdfdom ];
   propagatedBuildInputs = [ xacro ];
   nativeBuildInputs = [ catkin ];

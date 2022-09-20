@@ -14,9 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-ros ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common osrf-testing-tools-cpp test-msgs ];
   propagatedBuildInputs = [ ament-cmake fastcdr fastrtps fastrtps-cmake-module rcpputils rcutils rmw rmw-dds-common rmw-fastrtps-shared-cpp rosidl-cmake rosidl-runtime-c rosidl-runtime-cpp rosidl-typesupport-fastrtps-c rosidl-typesupport-fastrtps-cpp ];
-  nativeBuildInputs = [ ament-cmake-ros fastrtps-cmake-module rosidl-cmake ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-ros fastrtps-cmake-module rosidl-cmake ];
 
   meta = {
     description = ''Implement the ROS middleware interface using eProsima FastRTPS static code generation in C++.'';

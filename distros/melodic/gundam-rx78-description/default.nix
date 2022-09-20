@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint ];
+  buildInputs = [ catkin roslint ];
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ joint-state-publisher robot-state-publisher rviz ];
   nativeBuildInputs = [ catkin ];

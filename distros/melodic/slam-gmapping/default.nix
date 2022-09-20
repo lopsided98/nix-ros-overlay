@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ gmapping openslam-gmapping ];
   nativeBuildInputs = [ catkin ];
 

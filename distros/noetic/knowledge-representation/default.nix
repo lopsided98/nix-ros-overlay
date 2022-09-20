@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint ];
+  buildInputs = [ catkin python3Packages.setuptools roslint ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ boost libpqxx postgresql python3 python3Packages.pillow ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];

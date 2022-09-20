@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ cv-bridge image-geometry ];
   nativeBuildInputs = [ ament-cmake ];
 

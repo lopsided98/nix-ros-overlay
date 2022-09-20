@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ gazebo-plugins gazebo-ros gazebo-ros2-control husky-control husky-description ros2launch urdf xacro ];
   nativeBuildInputs = [ ament-cmake ];

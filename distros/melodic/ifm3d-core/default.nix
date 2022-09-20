@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ boost ];
+  buildInputs = [ boost cmake ];
   propagatedBuildInputs = [ curl cv-bridge glog pcl xmlrpc_c ];
   nativeBuildInputs = [ cmake ];
 

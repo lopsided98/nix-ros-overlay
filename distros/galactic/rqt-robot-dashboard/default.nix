@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
+  buildInputs = [ python3Packages.setuptools ];
   propagatedBuildInputs = [ diagnostic-msgs python-qt-binding qt-gui rclpy rqt-console rqt-gui rqt-gui-py rqt-robot-monitor ];
   nativeBuildInputs = [ python3Packages.setuptools ];
 

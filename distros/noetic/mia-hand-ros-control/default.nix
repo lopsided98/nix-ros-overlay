@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ actionlib control-msgs control-toolbox controller-manager hardware-interface joint-limits-interface mia-hand-description mia-hand-driver pluginlib ros-controllers roscpp rqt-joint-trajectory-controller trajectory-msgs transmission-interface urdf ];
   nativeBuildInputs = [ catkin ];
 

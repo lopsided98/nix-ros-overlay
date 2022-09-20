@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ easy-markers joy-listener kalman-filter rosbaglive ];
   nativeBuildInputs = [ catkin ];
 

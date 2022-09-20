@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ mk rosbuild roslint unzip ];
+  buildInputs = [ catkin mk rosbuild roslint unzip ];
   propagatedBuildInputs = [ control-msgs gnuplot hrpsys-ros-bridge moveit-commander openni2-launch rosbash roslang roslib rospy tf ];
   nativeBuildInputs = [ catkin ];
 

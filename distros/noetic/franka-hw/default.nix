@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, combined-robot-hw, controller-interface, franka-description, franka-msgs, gtest, hardware-interface, joint-limits-interface, libfranka, message-generation, pluginlib, roscpp, rostest, std-srvs, urdf }:
 buildRosPackage {
   pname = "ros-noetic-franka-hw";
-  version = "0.9.1-r1";
+  version = "0.10.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_hw/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "5cbbc021cc60a020412910083ff3c5f719916b2118c59a3864b29ca6788cb309";
+    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_hw/0.10.1-1.tar.gz";
+    name = "0.10.1-1.tar.gz";
+    sha256 = "af9907ad5f1ce890a3efa658829355be9e19aefc8e9bf936d922250d5bfefce6";
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   checkInputs = [ franka-description gtest rostest ];
   propagatedBuildInputs = [ actionlib actionlib-msgs combined-robot-hw controller-interface franka-msgs hardware-interface joint-limits-interface libfranka pluginlib roscpp std-srvs urdf ];
   nativeBuildInputs = [ catkin ];

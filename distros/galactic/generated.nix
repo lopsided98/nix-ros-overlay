@@ -812,6 +812,14 @@ self: super: {
 
  nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
 
+ naoqi-bridge-msgs = self.callPackage ./naoqi-bridge-msgs {};
+
+ naoqi-driver = self.callPackage ./naoqi-driver {};
+
+ naoqi-libqi = self.callPackage ./naoqi-libqi {};
+
+ naoqi-libqicore = self.callPackage ./naoqi-libqicore {};
+
  nav2-amcl = self.callPackage ./nav2-amcl {};
 
  nav2-behavior-tree = self.callPackage ./nav2-behavior-tree {};
@@ -943,6 +951,8 @@ self: super: {
  pendulum-control = self.callPackage ./pendulum-control {};
 
  pendulum-msgs = self.callPackage ./pendulum-msgs {};
+
+ pepper-meshes = self.callPackage ./pepper-meshes {};
 
  perception-pcl = self.callPackage ./perception-pcl {};
 
@@ -1121,6 +1131,10 @@ self: super: {
  rclcpp-lifecycle = self.callPackage ./rclcpp-lifecycle {};
 
  rclpy = self.callPackage ./rclpy {};
+
+ rclpy-message-converter = self.callPackage ./rclpy-message-converter {};
+
+ rclpy-message-converter-msgs = self.callPackage ./rclpy-message-converter-msgs {};
 
  rcpputils = self.callPackage ./rcpputils {};
 
@@ -1483,6 +1497,8 @@ self: super: {
  rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
 
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
+
+ rtcm-msgs = self.callPackage ./rtcm-msgs {};
 
  rti-connext-dds-cmake-module = self.callPackage ./rti-connext-dds-cmake-module {};
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ git pkg-config ];
+  buildInputs = [ ament-cmake git pkg-config ];
   checkInputs = [ ament-cmake-xmllint ament-lint-auto ];
   propagatedBuildInputs = [ freetype libGL libGLU xorg.libX11 xorg.libXaw xorg.libXrandr ];
   nativeBuildInputs = [ ament-cmake ];

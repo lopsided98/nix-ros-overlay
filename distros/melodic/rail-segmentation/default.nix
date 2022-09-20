@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation pkg-config ];
+  buildInputs = [ catkin message-generation pkg-config ];
   propagatedBuildInputs = [ boost libyamlcpp message-runtime pcl-conversions pcl-ros rail-manipulation-msgs roscpp roslib sensor-msgs std-srvs tf tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];
 

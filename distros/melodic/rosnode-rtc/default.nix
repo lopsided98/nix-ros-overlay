@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roscpp-tutorials rospy rostopic ];
+  buildInputs = [ catkin roscpp-tutorials rospy rostopic ];
   propagatedBuildInputs = [ openrtm-tools ];
   nativeBuildInputs = [ catkin ];
 

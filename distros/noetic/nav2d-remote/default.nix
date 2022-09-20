@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ nav2d-navigator nav2d-operator roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

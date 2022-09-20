@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-ros ];
   propagatedBuildInputs = [ urdfdom-headers ];
   nativeBuildInputs = [ ament-cmake-ros ];
 

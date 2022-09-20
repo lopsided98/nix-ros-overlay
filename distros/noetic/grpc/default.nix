@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ autoconf git libtool zlib ];
+  buildInputs = [ autoconf catkin git libtool zlib ];
   propagatedBuildInputs = [ rsync ];
   nativeBuildInputs = [ catkin ];
 

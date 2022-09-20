@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ geometry-msgs nav-msgs sensor-msgs std-msgs ];
+  buildInputs = [ catkin geometry-msgs nav-msgs sensor-msgs std-msgs ];
   propagatedBuildInputs = [ message-runtime rospy rosserial-client rosserial-msgs ];
   nativeBuildInputs = [ catkin ];
 

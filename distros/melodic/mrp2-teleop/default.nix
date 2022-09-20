@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ controller-manager diff-drive-controller interactive-marker-twist-server joint-state-controller joy joy-teleop robot-localization robot-state-publisher twist-mux ];
   nativeBuildInputs = [ catkin ];
 

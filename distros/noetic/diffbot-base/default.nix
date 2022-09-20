@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ control-toolbox controller-manager diagnostic-updater diff-drive-controller diffbot-msgs dynamic-reconfigure hardware-interface roscpp rosparam-shortcuts rosserial sensor-msgs urdf ];
   nativeBuildInputs = [ catkin ];
 

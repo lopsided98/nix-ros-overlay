@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ exotica-core fcl-catkin geometric-shapes ];
   nativeBuildInputs = [ catkin ];
 

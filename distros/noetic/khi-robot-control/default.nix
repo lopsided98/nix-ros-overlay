@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ realtime-tools ];
+  buildInputs = [ catkin realtime-tools ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ controller-manager diagnostic-updater hardware-interface joint-limits-interface joint-state-controller joint-trajectory-controller khi-robot-msgs position-controllers trajectory-msgs transmission-interface ];
   nativeBuildInputs = [ catkin ];

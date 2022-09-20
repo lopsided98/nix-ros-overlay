@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ asio ];
+  buildInputs = [ asio cmake ];
   propagatedBuildInputs = [ fastcdr foonathan-memory-vendor openssl tinyxml-2 ];
   nativeBuildInputs = [ cmake ];
 

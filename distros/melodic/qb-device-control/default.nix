@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, combined-robot-hw, control-msgs, controller-manager, qb-device-hardware-interface, qb-device-utils, roscpp }:
 buildRosPackage {
   pname = "ros-melodic-qb-device-control";
-  version = "2.0.1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device_control/2.0.1-0.tar.gz";
-    name = "2.0.1-0.tar.gz";
-    sha256 = "aa15f86f450ad62174010eae97ce5ba325a52e62a638a01ae3b7a100ec406a6b";
+    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device_control/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "53058139b5ef7a9a5fc3c2235a1253cffc710f5fa883bba47d1df38c8521ff29";
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ actionlib combined-robot-hw control-msgs controller-manager qb-device-hardware-interface qb-device-utils roscpp ];
   nativeBuildInputs = [ catkin ];
 

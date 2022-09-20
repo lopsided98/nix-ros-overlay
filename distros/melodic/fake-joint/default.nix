@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ fake-joint-driver fake-joint-launch ];
   nativeBuildInputs = [ catkin ];
 

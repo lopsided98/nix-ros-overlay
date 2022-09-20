@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ husky-msgs husky-viz ];
   nativeBuildInputs = [ ament-cmake ];
 

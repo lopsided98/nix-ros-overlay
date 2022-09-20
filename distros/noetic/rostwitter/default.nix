@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ git mk ];
+  buildInputs = [ catkin git mk ];
   propagatedBuildInputs = [ python3Packages.requests python3Packages.requests_oauthlib python3Packages.simplejson rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ desistek-saga-control desistek-saga-description ];
   nativeBuildInputs = [ catkin ];
 

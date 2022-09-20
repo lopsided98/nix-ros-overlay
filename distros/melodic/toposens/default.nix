@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ toposens-bringup toposens-description toposens-driver toposens-echo-driver toposens-markers toposens-msgs toposens-pointcloud toposens-sync ];
   nativeBuildInputs = [ catkin ];
 

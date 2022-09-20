@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ diagnostic-msgs geometry-msgs pythonPackages.pyserial rospy sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 

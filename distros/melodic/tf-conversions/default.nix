@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ eigen geometry-msgs kdl-conversions orocos-kdl python-orocos-kdl tf ];
   nativeBuildInputs = [ catkin ];
 

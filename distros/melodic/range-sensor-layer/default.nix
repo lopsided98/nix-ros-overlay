@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ angles costmap-2d dynamic-reconfigure geometry-msgs pluginlib roscpp rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];

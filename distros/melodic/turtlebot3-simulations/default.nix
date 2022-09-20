@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ turtlebot3-fake turtlebot3-gazebo ];
   nativeBuildInputs = [ catkin ];
 

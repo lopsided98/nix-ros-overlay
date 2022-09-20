@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ uuv-assistants uuv-auv-control-allocator uuv-control-cascaded-pid uuv-control-msgs uuv-control-utils uuv-descriptions uuv-gazebo uuv-gazebo-plugins uuv-gazebo-ros-plugins uuv-gazebo-ros-plugins-msgs uuv-gazebo-worlds uuv-sensor-ros-plugins uuv-sensor-ros-plugins-msgs uuv-teleop uuv-thruster-manager uuv-trajectory-control uuv-world-plugins uuv-world-ros-plugins uuv-world-ros-plugins-msgs ];
   nativeBuildInputs = [ catkin ];
 

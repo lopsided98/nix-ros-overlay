@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules pkg-config python-qt-binding qt5.qtbase ];
+  buildInputs = [ catkin cmake-modules pkg-config python-qt-binding pythonPackages.setuptools qt5.qtbase ];
   propagatedBuildInputs = [ pluginlib qt-gui tinyxml ];
   nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 
