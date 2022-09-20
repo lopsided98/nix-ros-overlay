@@ -226,7 +226,7 @@ let
       postPatch ? "", ...
     }: {
       postPatch = postPatch + ''
-        substituteInPlace CMakeLists.txt --replace /usr/bin/env '${self.coreutils}/bin/env'
+        substituteInPlace CMakeLists.txt --replace /usr/bin/env '${self.buildPackages.coreutils}/bin/env'
         patchShebangs pymavlink/tools/mavgen.py
       '';
       ROS_PYTHON_VERSION = if rosSelf.python.isPy3k then 3 else 2;
