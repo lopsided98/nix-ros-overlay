@@ -2,6 +2,16 @@
 self:
 # Distro package set
 rosSelf: rosSuper: with rosSelf.lib; {
+  cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
+    preConfigure ? "", ...
+  }: {
+    # Fix running ddsconf from within the build directory (probably an RPATH
+    # issue)
+    preConfigure = preConfigure + ''
+      export LD_LIBRARY_PATH="$(pwd)/build/lib"
+    '';
+  });
+
   gazebo = self.gazebo_11;
 
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
