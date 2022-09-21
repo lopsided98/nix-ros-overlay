@@ -510,9 +510,27 @@ let
       sha256 = "1g45f71mk4gyca550177qf70v5cvavlsalmg7x8bi59j6z6f0mgz";
     };
   };
-in self.lib.makeExtensible (rosSelf: self.lib.composeManyExtensions [
-  base
-  (import (./. + "/${distro}/generated.nix"))
-  overrides
-  (import (./. + "/${distro}/overrides.nix") self)
-] rosSelf {})
+
+  otherSplices = {
+    selfBuildBuild = self.pkgsBuildBuild.rosPackages.${distro};
+    selfBuildHost = self.pkgsBuildHost.rosPackages.${distro};
+    selfBuildTarget = self.pkgsBuildTarget.rosPackages.${distro};
+    selfHostHost = self.pkgsHostHost.rosPackages.${distro};
+    selfTargetTarget = self.pkgsTargetTarget.rosPackages.${distro} or {};
+  };
+
+  keep = rosSelf: {
+    inherit (rosSelf) lib buildRosPackage;
+  };
+in self.lib.makeScopeWithSplicing
+  self.splicePackages
+  self.newScope
+  otherSplices
+  keep
+  (_: {})
+  (rosSelf: self.lib.composeManyExtensions [
+    base
+    (import (./. + "/${distro}/generated.nix"))
+    overrides
+    (import (./. + "/${distro}/overrides.nix") self)
+  ] rosSelf {})
