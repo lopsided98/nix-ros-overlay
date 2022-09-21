@@ -26,7 +26,7 @@ _findCatkinEnvHooks() {
   fi
   _catkinPackagesSeen["$pkg"]=1
 }
-addEnvHooks "$hostOffset" _findCatkinEnvHooks
+addEnvHooks "$targetOffset" _findCatkinEnvHooks
 
 _runCatkinEnvHook() {
   [ -n "$1" ] || return 0
