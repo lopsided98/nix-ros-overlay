@@ -39,7 +39,7 @@ in {
     overlays = mkOption {
       type = types.listOf overlayType;
       default = [];
-      apply = foldr composeExtensions (_: _: {});
+      apply = composeManyExtensions;
       description = ''
         Set of package overlays to apply to ROS package set for the configured
         distro.
@@ -83,7 +83,7 @@ in {
     nixpkgs.overlays = mkAfter (singleton (import ../overlay.nix));
 
     services.ros = {
-      pkgs = mkDefault (pkgs.rosPackages."${cfg.distro}".extend cfg.overlays);
+      pkgs = mkDefault (pkgs.rosPackages."${cfg.distro}".overrideScope cfg.overlays);
 
       hostname = mkDefault config.networking.hostName;
       masterUri = mkDefault "http://${cfg.hostname}:11311/";
