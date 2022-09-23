@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ exotica-core ompl ];
   nativeBuildInputs = [ catkin ];
 

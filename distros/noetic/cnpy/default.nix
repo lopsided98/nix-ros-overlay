@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin zlib ];
+  buildInputs = [ zlib ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

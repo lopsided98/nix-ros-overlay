@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ];
   checkInputs = [ cppunit ];
   propagatedBuildInputs = [ eigen eigen3-cmake-module pkg-config ];
   nativeBuildInputs = [ cmake eigen3-cmake-module ];

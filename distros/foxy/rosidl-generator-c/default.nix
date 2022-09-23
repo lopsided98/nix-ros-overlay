@@ -2,22 +2,21 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-gtest, ament-cmake-python, ament-cmake-ros, ament-lint-auto, ament-lint-common, rosidl-cmake, rosidl-parser, rosidl-runtime-c, rosidl-typesupport-interface, test-interface-files }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-gtest, ament-cmake-python, ament-cmake-ros, ament-lint-auto, ament-lint-common, rcutils, rosidl-cmake, rosidl-parser, rosidl-runtime-c, rosidl-typesupport-interface, test-interface-files }:
 buildRosPackage {
   pname = "ros-foxy-rosidl-generator-c";
-  version = "1.2.1-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/foxy/rosidl_generator_c/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "541f816199fd7bcfcf0dda7d58145b942d3060d62994c7e50085b3773b3813fb";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/foxy/rosidl_generator_c/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "333bbf1e9d414841db1a74ddb7ad3cc1cd0979c9f20380c0ecdfc2e38e233b8b";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-python ament-cmake-ros ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common rosidl-cmake rosidl-runtime-c test-interface-files ];
-  propagatedBuildInputs = [ ament-cmake-core rosidl-cmake rosidl-parser rosidl-typesupport-interface ];
-  nativeBuildInputs = [ ament-cmake-core ament-cmake-python ament-cmake-ros rosidl-cmake ];
+  propagatedBuildInputs = [ ament-cmake-core rcutils rosidl-cmake rosidl-parser rosidl-typesupport-interface ];
+  nativeBuildInputs = [ ament-cmake-python ament-cmake-ros ];
 
   meta = {
     description = ''Generate the ROS interfaces in C.'';

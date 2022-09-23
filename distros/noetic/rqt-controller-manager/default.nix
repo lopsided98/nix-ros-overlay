@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin python3Packages.setuptools ];
   propagatedBuildInputs = [ controller-manager-msgs rospy rqt-gui rqt-gui-py ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 

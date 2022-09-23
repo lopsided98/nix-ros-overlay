@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ros-environment ];
   checkInputs = [ geometry-msgs rosunit ];
   propagatedBuildInputs = [ cpp-common message-runtime python3 roslib ];
   nativeBuildInputs = [ catkin ros-environment ];

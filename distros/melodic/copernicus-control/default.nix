@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ controller-manager copernicus-msgs diff-drive-controller dynamic-reconfigure gazebo-ros-control joint-state-controller roscpp std-msgs twist-mux ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin qt5.qtbase ];
+  buildInputs = [ qt5.qtbase ];
   propagatedBuildInputs = [ roscpp rviz sensor-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 

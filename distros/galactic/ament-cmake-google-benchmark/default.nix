@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-core ament-cmake-export-dependencies ament-cmake-python ];
   propagatedBuildInputs = [ ament-cmake-test google-benchmark-vendor ];
   nativeBuildInputs = [ ament-cmake-core ament-cmake-export-dependencies ament-cmake-python ];
 

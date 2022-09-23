@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-core ];
   checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ];
   propagatedBuildInputs = [ ament-cmake-test ament-pclint ];
-  nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-pclint ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-test ];
 
   meta = {
     description = ''The CMake API for ament_pclint to perform static code analysis on C/C++

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cmake-modules ];
+  buildInputs = [ cmake-modules ];
   propagatedBuildInputs = [ boost console-bridge poco ];
   nativeBuildInputs = [ catkin ];
 

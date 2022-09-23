@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ naoqi-libqi ];
   nativeBuildInputs = [ ament-cmake ];
 

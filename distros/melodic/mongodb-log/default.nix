@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin openssl ];
+  buildInputs = [ openssl ];
   propagatedBuildInputs = [ mongodb-store pythonPackages.pymongo rosgraph roslib rospy rostopic sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 

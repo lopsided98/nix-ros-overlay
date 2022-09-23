@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ effort-controllers rm-common robot-localization roscpp tf2-geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 

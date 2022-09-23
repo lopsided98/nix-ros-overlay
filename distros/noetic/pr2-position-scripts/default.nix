@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ roslaunch rostest ];
   propagatedBuildInputs = [ actionlib pr2-controllers-msgs rospy tf ];
   nativeBuildInputs = [ catkin ];

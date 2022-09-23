@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin python3Packages.setuptools ];
   propagatedBuildInputs = [ cob-msgs cob-script-server python3Packages.pygobject3 roslib rospy ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 

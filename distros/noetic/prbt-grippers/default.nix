@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ prbt-pg70-support ];
   nativeBuildInputs = [ catkin ];
 

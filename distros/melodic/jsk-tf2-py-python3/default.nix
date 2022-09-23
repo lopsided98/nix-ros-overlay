@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin python3Packages.catkin-pkg ];
   propagatedBuildInputs = [ python3Packages.rospkg rospy tf2 ];
   nativeBuildInputs = [ catkin python3Packages.catkin-pkg ];
 

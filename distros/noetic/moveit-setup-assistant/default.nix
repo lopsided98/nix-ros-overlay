@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ogre1_9 ompl qt5.qtbase ];
+  buildInputs = [ ogre1_9 ompl qt5.qtbase ];
   checkInputs = [ moveit-resources-panda-moveit-config rosunit ];
   propagatedBuildInputs = [ libyamlcpp moveit-core moveit-ros-planning moveit-ros-visualization rosconsole roscpp rviz srdfdom urdf xacro ];
   nativeBuildInputs = [ catkin ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin subversion ];
+  buildInputs = [ subversion ];
   propagatedBuildInputs = [ euslisp rostest ];
   nativeBuildInputs = [ catkin ];
 

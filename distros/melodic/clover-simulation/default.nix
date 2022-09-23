@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ gazebo-plugins gazebo-ros led-msgs rospy xacro ];
   nativeBuildInputs = [ catkin ];
 

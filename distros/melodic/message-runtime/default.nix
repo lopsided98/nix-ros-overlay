@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cpp-common genpy roscpp-serialization roscpp-traits rostime ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ angles catkin cmake-modules ];
+  buildInputs = [ angles cmake-modules ];
   propagatedBuildInputs = [ control-toolbox eigen eigen-conversions geometry-msgs mavros mavros-extras roscpp std-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 

@@ -3080,6 +3080,8 @@ self: super: {
 
  qb-hand-description = self.callPackage ./qb-hand-description {};
 
+ qb-hand-gazebo = self.callPackage ./qb-hand-gazebo {};
+
  qb-hand-hardware-interface = self.callPackage ./qb-hand-hardware-interface {};
 
  qb-move = self.callPackage ./qb-move {};

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ fmi-adapter launch launch-ros ];
   nativeBuildInputs = [ ament-cmake ];
 

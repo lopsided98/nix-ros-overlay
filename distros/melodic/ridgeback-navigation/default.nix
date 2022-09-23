@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ amcl gmapping map-server move-base urdf xacro ];
   nativeBuildInputs = [ catkin ];

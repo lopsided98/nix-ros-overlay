@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-ros rosidl-default-generators ];
+  buildInputs = [ rosidl-default-generators ];
   propagatedBuildInputs = [ sensor-msgs std-msgs ublox-serialization ];
   nativeBuildInputs = [ ament-cmake-ros ];
 

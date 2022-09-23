@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-clang-format ament-cmake-gmock ament-cmake-gtest ];
   propagatedBuildInputs = [ fmt gflags libyamlcpp maliput ];
   nativeBuildInputs = [ ament-cmake ];

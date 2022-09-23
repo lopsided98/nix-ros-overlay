@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ python3Packages.matplotlib python3Packages.numpy python3Packages.pandas rosbag roslib rospy-message-converter ];
   nativeBuildInputs = [ catkin ];
 

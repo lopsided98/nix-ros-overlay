@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ leo leo-bringup leo-fw ];
   nativeBuildInputs = [ catkin ];
 

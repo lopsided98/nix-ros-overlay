@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin roslaunch roslint rostest ];
+  buildInputs = [ roslaunch roslint rostest ];
   propagatedBuildInputs = [ control-msgs moveit-msgs rospy rqt-gui rqt-gui-py trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 

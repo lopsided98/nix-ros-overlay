@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ gencpp geneus genlisp genmsg gennodejs genpy ];
   nativeBuildInputs = [ catkin ];
 

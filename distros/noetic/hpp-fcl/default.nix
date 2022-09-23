@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake doxygen git python3Packages.lxml ];
+  buildInputs = [ doxygen git python3Packages.lxml ];
   propagatedBuildInputs = [ assimp boost catkin eigen eigenpy octomap python3 python3Packages.numpy ];
   nativeBuildInputs = [ cmake ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake moveit-common ];
+  buildInputs = [ moveit-common ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ moveit-core rclcpp trajectory-msgs ];
   nativeBuildInputs = [ ament-cmake ];

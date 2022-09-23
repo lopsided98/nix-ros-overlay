@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin python3Packages.catkin-pkg python3Packages.setuptools ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ python3Packages.pykdl urdfdom-py ];
   nativeBuildInputs = [ catkin python3Packages.catkin-pkg python3Packages.setuptools ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin genmsg std-msgs ];
+  buildInputs = [ genmsg std-msgs ];
   propagatedBuildInputs = [ actionlib genpy python-qt-binding qt-gui rosbag roslib rospy rostopic ];
   nativeBuildInputs = [ catkin ];
 

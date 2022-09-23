@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cmake-modules rostest ];
+  buildInputs = [ cmake-modules rostest ];
   checkInputs = [ eus-qpoases ];
   propagatedBuildInputs = [ eigen euslisp ];
   nativeBuildInputs = [ catkin ];

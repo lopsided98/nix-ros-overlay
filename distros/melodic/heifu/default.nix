@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ heifu-bringup heifu-description heifu-mavros heifu-msgs heifu-safety heifu-simple-waypoint heifu-tools ];
   nativeBuildInputs = [ catkin ];
 

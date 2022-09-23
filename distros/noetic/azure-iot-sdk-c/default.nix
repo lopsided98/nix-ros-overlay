@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ];
   propagatedBuildInputs = [ curl openssl util-linux ];
   nativeBuildInputs = [ cmake ];
 

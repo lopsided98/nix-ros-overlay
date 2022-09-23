@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, opencv, sensor-msgs }:
 buildRosPackage {
   pname = "ros-galactic-image-geometry";
-  version = "2.2.1-r2";
+  version = "3.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/galactic/image_geometry/2.2.1-2.tar.gz";
-    name = "2.2.1-2.tar.gz";
-    sha256 = "9b942ac269d654a8428b8431ba01935dad7eb7059d569533e51b913be4219277";
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/galactic/image_geometry/3.1.2-1.tar.gz";
+    name = "3.1.2-1.tar.gz";
+    sha256 = "502d0e4f279d69ba3f8399e880cfddcd62a325ace3cc76bf123eb1c3732668cd";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-python ament-cmake-ros ];
   checkInputs = [ ament-cmake-gtest ament-cmake-pytest ];
   propagatedBuildInputs = [ opencv sensor-msgs ];
   nativeBuildInputs = [ ament-cmake-python ament-cmake-ros ];
@@ -24,6 +23,6 @@ buildRosPackage {
     geometrically. It interfaces the calibration parameters in sensor_msgs/CameraInfo
     messages with OpenCV functions such as image rectification, much as cv_bridge
     interfaces ROS sensor_msgs/Image with OpenCV data types.'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ asl20 bsdOriginal ];
   };
 }

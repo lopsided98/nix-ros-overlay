@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ gazebo-plugins hector-gazebo-plugins hector-sensors-description ];
   nativeBuildInputs = [ catkin ];
 

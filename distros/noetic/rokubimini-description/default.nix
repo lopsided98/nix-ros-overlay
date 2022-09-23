@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ sensor-msgs std-msgs xacro ];
   nativeBuildInputs = [ catkin ];
 

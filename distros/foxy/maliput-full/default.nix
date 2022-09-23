@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ maliput maliput-dragway maliput-drake maliput-integration maliput-malidrive maliput-multilane maliput-object maliput-object-py maliput-py ];
   nativeBuildInputs = [ ament-cmake ];
 

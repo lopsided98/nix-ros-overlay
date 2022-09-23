@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-auto class-loader ];
+  buildInputs = [ class-loader ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ cv-bridge image-transport rclcpp rclcpp-components tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake-auto ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin jsk-tools pythonPackages.pillow pythonPackages.pyyaml rosmake ];
+  buildInputs = [ jsk-tools pythonPackages.pillow pythonPackages.pyyaml rosmake ];
   propagatedBuildInputs = [ SDL_image libyamlcpp map-server nav-msgs rosconsole roscpp rospy tf ];
   nativeBuildInputs = [ catkin ];
 

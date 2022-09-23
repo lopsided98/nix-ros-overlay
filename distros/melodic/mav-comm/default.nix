@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ mav-msgs mav-planning-msgs ];
   nativeBuildInputs = [ catkin ];
 

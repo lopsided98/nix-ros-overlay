@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ rqt-robot-monitor rviz2 turtlebot4-description ];
   nativeBuildInputs = [ ament-cmake ];

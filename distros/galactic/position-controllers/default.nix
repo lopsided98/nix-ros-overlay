@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake pluginlib ];
+  buildInputs = [ pluginlib ];
   checkInputs = [ ament-cmake-gmock controller-manager ros2-control-test-assets ];
   propagatedBuildInputs = [ forward-command-controller rclcpp ];
   nativeBuildInputs = [ ament-cmake ];

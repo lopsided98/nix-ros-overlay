@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ joy message-filters radial-menu-backend radial-menu-model radial-menu-msgs radial-menu-rviz roscpp roslaunch rviz sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

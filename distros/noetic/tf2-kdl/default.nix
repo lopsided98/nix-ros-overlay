@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cmake-modules ];
+  buildInputs = [ cmake-modules ];
   checkInputs = [ ros-environment rostest ];
   propagatedBuildInputs = [ eigen orocos-kdl tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];

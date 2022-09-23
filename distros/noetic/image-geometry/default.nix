@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ opencv sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, image-geometry }:
 buildRosPackage {
   pname = "ros-humble-vision-opencv";
-  version = "3.2.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/humble/vision_opencv/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "bb5af5cdf96c7f649020922af7e8cb3dd16eb43b518f327aacf0669d4f90184d";
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/humble/vision_opencv/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "f5b4ac334b2b9cf1e6fe9ca81db359137edae8b86d9fbeaf8ea450cce7859bf4";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ cv-bridge image-geometry ];
   nativeBuildInputs = [ ament-cmake ];
 

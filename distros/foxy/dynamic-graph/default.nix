@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake doxygen git ];
+  buildInputs = [ doxygen git ];
   propagatedBuildInputs = [ ament-cmake boost eigen graphviz ];
   nativeBuildInputs = [ cmake ];
 

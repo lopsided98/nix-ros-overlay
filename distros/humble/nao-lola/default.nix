@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ boost nao-command-msgs nao-sensor-msgs rclcpp ];
   nativeBuildInputs = [ ament-cmake ];

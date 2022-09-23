@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake moveit-common ];
+  buildInputs = [ moveit-common ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ chomp-motion-planner moveit-core pluginlib ];
   nativeBuildInputs = [ ament-cmake ];

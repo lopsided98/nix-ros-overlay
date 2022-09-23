@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin rosdoc-lite ];
+  buildInputs = [ rosdoc-lite ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

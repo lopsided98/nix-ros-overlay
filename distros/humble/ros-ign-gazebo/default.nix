@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-index-cpp ];
   propagatedBuildInputs = [ ros-gz-sim ];
   nativeBuildInputs = [ ament-cmake ament-index-cpp ];
 

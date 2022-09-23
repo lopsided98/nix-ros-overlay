@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ros-environment ];
+  buildInputs = [ ros-environment ];
   propagatedBuildInputs = [ libusb1 nlohmann_json opencv ];
   nativeBuildInputs = [ ament-cmake ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake ];
   propagatedBuildInputs = [ catkin gsl ];
   nativeBuildInputs = [ cmake ];
 

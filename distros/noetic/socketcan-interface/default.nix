@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ rosunit xmlrpcpp ];
   propagatedBuildInputs = [ boost class-loader console-bridge linuxHeaders ];
   nativeBuildInputs = [ catkin ];

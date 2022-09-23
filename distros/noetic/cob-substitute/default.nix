@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cob-docker-control cob-reflector-referencing cob-safety-controller ];
   nativeBuildInputs = [ catkin ];
 

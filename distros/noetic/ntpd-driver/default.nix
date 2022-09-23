@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cmake-modules message-generation message-runtime poco roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common pythonPackages.pytest ];
   propagatedBuildInputs = [ python3Packages.lark rosidl-adapter ];
   nativeBuildInputs = [ ament-cmake ];

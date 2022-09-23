@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-core ];
   propagatedBuildInputs = [ rosapi rosbridge-library rosbridge-server ];
   nativeBuildInputs = [ ament-cmake-core ];
 

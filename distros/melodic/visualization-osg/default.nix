@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ osg-interactive-markers osg-markers osg-utils ];
   nativeBuildInputs = [ catkin ];
 

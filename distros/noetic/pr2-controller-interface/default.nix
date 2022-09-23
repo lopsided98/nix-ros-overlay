@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ controller-interface pr2-mechanism-model roscpp ];
   nativeBuildInputs = [ catkin ];
 

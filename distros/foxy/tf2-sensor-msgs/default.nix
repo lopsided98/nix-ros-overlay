@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-auto ];
   checkInputs = [ ament-cmake-gtest ];
   propagatedBuildInputs = [ eigen eigen3-cmake-module sensor-msgs tf2 tf2-ros ];
   nativeBuildInputs = [ ament-cmake-auto eigen3-cmake-module ];

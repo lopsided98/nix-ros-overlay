@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ launch-ros librealsense2 rclcpp rclcpp-components realsense-msgs realsense-node realsense-ros ];
   nativeBuildInputs = [ ament-cmake ];

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ freenect-camera freenect-launch ];
   nativeBuildInputs = [ catkin ];
 

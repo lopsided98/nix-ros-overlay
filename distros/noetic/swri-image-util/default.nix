@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin pkg-config swri-nodelet ];
+  buildInputs = [ swri-nodelet ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ boost camera-calibration-parsers cv-bridge eigen geometry-msgs image-geometry image-transport message-filters nav-msgs nodelet roscpp rospy std-msgs swri-geometry-util swri-math-util swri-opencv-util swri-roscpp tf ];
   nativeBuildInputs = [ catkin pkg-config ];

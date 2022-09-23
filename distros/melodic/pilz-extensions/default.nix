@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin roscpp ];
+  buildInputs = [ roscpp ];
   checkInputs = [ code-coverage rostest ];
   propagatedBuildInputs = [ joint-limits-interface ];
   nativeBuildInputs = [ catkin ];

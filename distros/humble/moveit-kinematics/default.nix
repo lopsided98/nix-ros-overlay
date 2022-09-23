@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common launch-param-builder moveit-configs-utils moveit-resources-fanuc-description moveit-resources-fanuc-moveit-config moveit-resources-panda-description moveit-resources-panda-moveit-config moveit-ros-planning ros-testing ];
   propagatedBuildInputs = [ class-loader eigen moveit-common moveit-core moveit-msgs orocos-kdl-vendor pluginlib python3Packages.lxml tf2 tf2-kdl urdfdom ];
   nativeBuildInputs = [ ament-cmake ];

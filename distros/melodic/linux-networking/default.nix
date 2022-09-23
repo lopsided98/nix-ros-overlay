@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ access-point-control asmach asmach-tutorials ddwrt-access-point hostapd-access-point ieee80211-channels linksys-access-point multi-interface-roam network-control-tests network-detector network-monitor-udp network-traffic-control ];
   nativeBuildInputs = [ catkin ];
 

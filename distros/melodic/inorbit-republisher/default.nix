@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ geometry-msgs pythonPackages.pyyaml pythonPackages.rospkg roslib rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 

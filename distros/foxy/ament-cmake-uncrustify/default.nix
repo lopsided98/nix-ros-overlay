@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-core ];
   checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ];
   propagatedBuildInputs = [ ament-cmake-test ament-uncrustify ];
-  nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-uncrustify ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-test ];
 
   meta = {
     description = ''The CMake API for ament_uncrustify to check code against styleconventions
