@@ -28,6 +28,6 @@ _amentCmakeCorePreConfigureHook() {
   # and just bloats the closure.
   cmakeFlags+=" -DAMENT_CMAKE_ENVIRONMENT_PARENT_PREFIX_PATH_GENERATION:BOOL=OFF"
   # Point CMake at build platform Python so it can run it at build time
-  cmakeFlags+=" -DPython@python_major@_EXECUTABLE:FILEPATH=@python_executable@"
+  cmakeFlags+=" -DPython3_EXECUTABLE:FILEPATH=@python_executable@"
 }
 preConfigureHooks+=(_amentCmakeCorePreConfigureHook)

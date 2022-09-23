@@ -267,6 +267,15 @@ let
 
     pr2-tilt-laser-interface = patchBoostSignals rosSuper.pr2-tilt-laser-interface;
 
+    python-cmake-module = rosSuper.python-cmake-module.overrideAttrs ({ ... }: let
+      python = rosSelf.python;
+    in {
+      pythonExecutable = python.pythonForBuild.interpreter;
+      pythonLibrary = "${python}/lib/lib${python.libPrefix}.so";
+      pythonIncludeDir = "${python}/include/${python.libPrefix}";
+      setupHook = ./python-cmake-module-setup-hook.sh;
+    });
+
     python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
       propagatedNativeBuildInputs ? [],
       postPatch ? "", ...
@@ -290,6 +299,30 @@ let
     });
 
     roscpp = patchBoostSignals rosSuper.roscpp;
+
+    rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
+      postPatch ? "",
+      patches ? [], ...
+    }: let
+      python = rosSelf.python;
+    in {
+      patches = patches ++ [
+        # Remove stray numpy import in template
+        # https://github.com/ros2/rosidl_python/pull/185
+        (self.fetchpatch {
+          url = "https://github.com/ros2/rosidl_python/commit/bf866089baeb918834d9d16e05668d9f28887b87.patch";
+          hash = "sha256-tOb0t50TbV29+agDupm5XUZJJErfaujgIRtmb2vZxWo=";
+          stripLen = 1;
+        })
+      ];
+      # Fix finding NumPy headers
+      postPatch = postPatch + ''
+        substituteInPlace cmake/rosidl_generator_py_generate_interfaces.cmake \
+         --replace '"import numpy"' "" \
+         --replace 'numpy.get_include()' "'${python.pkgs.numpy}/${python.sitePackages}/numpy/core/include'"
+      '';
+      setupHook = ./rosidl-generator-py-setup-hook.sh;
+    });
 
     rmw-implementation = rosSuper.rmw-implementation.overrideAttrs ({
       propagatedBuildInputs ? [], ...
