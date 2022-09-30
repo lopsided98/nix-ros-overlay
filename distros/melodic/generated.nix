@@ -2404,6 +2404,8 @@ self: super: {
 
  multisense-ros = self.callPackage ./multisense-ros {};
 
+ mvsim = self.callPackage ./mvsim {};
+
  nanomsg = self.callPackage ./nanomsg {};
 
  nao-meshes = self.callPackage ./nao-meshes {};
@@ -3079,6 +3081,8 @@ self: super: {
  qb-hand-control = self.callPackage ./qb-hand-control {};
 
  qb-hand-description = self.callPackage ./qb-hand-description {};
+
+ qb-hand-gazebo = self.callPackage ./qb-hand-gazebo {};
 
  qb-hand-hardware-interface = self.callPackage ./qb-hand-hardware-interface {};
 

@@ -1134,6 +1134,12 @@ self: super: {
 
  rcutils = self.callPackage ./rcutils {};
 
+ realsense2-camera = self.callPackage ./realsense2-camera {};
+
+ realsense2-camera-msgs = self.callPackage ./realsense2-camera-msgs {};
+
+ realsense2-description = self.callPackage ./realsense2-description {};
+
  realtime-tools = self.callPackage ./realtime-tools {};
 
  resource-retriever = self.callPackage ./resource-retriever {};
@@ -1638,6 +1644,8 @@ self: super: {
 
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
+ system-fingerprint = self.callPackage ./system-fingerprint {};
+
  system-modes = self.callPackage ./system-modes {};
 
  system-modes-examples = self.callPackage ./system-modes-examples {};
@@ -1693,6 +1701,8 @@ self: super: {
  tinyxml2-vendor = self.callPackage ./tinyxml2-vendor {};
 
  tinyxml-vendor = self.callPackage ./tinyxml-vendor {};
+
+ tl-expected = self.callPackage ./tl-expected {};
 
  tlsf = self.callPackage ./tlsf {};
 
@@ -1863,8 +1873,6 @@ self: super: {
  webots-ros2-control = self.callPackage ./webots-ros2-control {};
 
  webots-ros2-core = self.callPackage ./webots-ros2-core {};
-
- webots-ros2-driver = self.callPackage ./webots-ros2-driver {};
 
  webots-ros2-epuck = self.callPackage ./webots-ros2-epuck {};
 

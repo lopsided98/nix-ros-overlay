@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ fake-localization map-server move-base stage-ros ];
   nativeBuildInputs = [ catkin ];
 

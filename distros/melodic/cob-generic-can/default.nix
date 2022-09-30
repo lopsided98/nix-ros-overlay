@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cob-utilities libntcan libpcan socketcan-interface ];
   nativeBuildInputs = [ catkin ];
 

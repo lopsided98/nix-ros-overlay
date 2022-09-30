@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin rostest ];
+  buildInputs = [ rostest ];
   checkInputs = [ geometry-msgs ];
   propagatedBuildInputs = [ flexbe-core flexbe-msgs flexbe-testing rosbag rospy ];
   nativeBuildInputs = [ catkin ];

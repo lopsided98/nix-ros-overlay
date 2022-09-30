@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, sqlite }:
 buildRosPackage {
   pname = "ros-galactic-sqlite3-vendor";
-  version = "0.9.1-r3";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/galactic/sqlite3_vendor/0.9.1-3.tar.gz";
-    name = "0.9.1-3.tar.gz";
-    sha256 = "c22e6164716c8eb44383f4fa9040927ede18bf5d9a966bcc6644f17c1a4eb84b";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/galactic/sqlite3_vendor/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
+    sha256 = "466e66f9afc211057ad6234db1ac4a77e5481fce48244a73a94c1529f16a263c";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ sqlite ];
   nativeBuildInputs = [ ament-cmake ];
 

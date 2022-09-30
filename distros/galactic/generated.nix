@@ -1634,6 +1634,8 @@ self: super: {
 
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
+ system-fingerprint = self.callPackage ./system-fingerprint {};
+
  system-modes = self.callPackage ./system-modes {};
 
  system-modes-examples = self.callPackage ./system-modes-examples {};
@@ -1893,8 +1895,6 @@ self: super: {
  webots-ros2-control = self.callPackage ./webots-ros2-control {};
 
  webots-ros2-core = self.callPackage ./webots-ros2-core {};
-
- webots-ros2-driver = self.callPackage ./webots-ros2-driver {};
 
  webots-ros2-epuck = self.callPackage ./webots-ros2-epuck {};
 

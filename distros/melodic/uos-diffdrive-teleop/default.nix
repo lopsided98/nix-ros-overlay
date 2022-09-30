@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ geometry-msgs ps3joy roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

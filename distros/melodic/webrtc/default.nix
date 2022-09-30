@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake git wget ];
   propagatedBuildInputs = [ alsaLib glib gtk2 gtk3 pulseaudio ];
   nativeBuildInputs = [ cmake git wget ];
 

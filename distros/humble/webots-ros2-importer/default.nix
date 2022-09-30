@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, python3Packages, pythonPackages, xacro }:
 buildRosPackage {
   pname = "ros-humble-webots-ros2-importer";
-  version = "1.2.3-r1";
+  version = "2022.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/humble/webots_ros2_importer/1.2.3-1.tar.gz";
-    name = "1.2.3-1.tar.gz";
-    sha256 = "ad78a59ba1d2a953b1475f07f1ba7da5f25201192bdc4081850624af2a619bea";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/humble/webots_ros2_importer/2022.1.0-1.tar.gz";
+    name = "2022.1.0-1.tar.gz";
+    sha256 = "1a056915da9cdd7faa983f66e78d34cee8473eafdfc31557e374a1babb6037d3";
   };
 
   buildType = "ament_python";

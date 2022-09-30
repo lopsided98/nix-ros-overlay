@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin message-generation ];
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ dynamixel-sdk message-runtime roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 

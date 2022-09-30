@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ cob-supported-robots roslaunch ];
   propagatedBuildInputs = [ cob-mapping-slam cob-navigation-config cob-navigation-global rviz ];
   nativeBuildInputs = [ catkin ];

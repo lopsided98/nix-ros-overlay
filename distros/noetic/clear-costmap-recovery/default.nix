@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cmake-modules ];
+  buildInputs = [ cmake-modules ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ costmap-2d eigen nav-core pluginlib roscpp tf2-ros ];
   nativeBuildInputs = [ catkin ];

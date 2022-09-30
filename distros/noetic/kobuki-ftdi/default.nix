@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin pkg-config ];
+  buildInputs = [ pkg-config ];
   propagatedBuildInputs = [ ecl-command-line libftdi libusb1 ];
   nativeBuildInputs = [ catkin ];
 

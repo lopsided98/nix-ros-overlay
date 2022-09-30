@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ];
   checkInputs = [ opencv ];
   nativeBuildInputs = [ cmake ];
 

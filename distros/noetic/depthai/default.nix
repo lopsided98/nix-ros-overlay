@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, libusb1, nlohmann_json, opencv, ros-environment }:
 buildRosPackage {
   pname = "ros-noetic-depthai";
-  version = "2.17.3-r2";
+  version = "2.17.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-core-release/archive/release/noetic/depthai/2.17.3-2.tar.gz";
-    name = "2.17.3-2.tar.gz";
-    sha256 = "abc55619ae8daed9c52fb41fd410beab97b3168238a8c8ebdb575a7d6e83512f";
+    url = "https://github.com/luxonis/depthai-core-release/archive/release/noetic/depthai/2.17.4-1.tar.gz";
+    name = "2.17.4-1.tar.gz";
+    sha256 = "249891ccaadf2e32a68f5451c762d4762f8b13a11b0d98e70f98c5ecc30240e8";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ros-environment ];
+  buildInputs = [ ros-environment ];
   propagatedBuildInputs = [ catkin libusb1 nlohmann_json opencv ];
   nativeBuildInputs = [ cmake ];
 

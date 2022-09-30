@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ boost cmake ];
+  buildInputs = [ boost ];
   propagatedBuildInputs = [ catkin ];
   nativeBuildInputs = [ cmake ];
 

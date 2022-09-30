@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake qt5.qtbase ];
+  buildInputs = [ qt5.qtbase ];
   checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-gmock ament-cmake-gtest ament-cmake-lint-cmake ament-cmake-uncrustify ament-index-cpp ];
   propagatedBuildInputs = [ resource-retriever rviz-rendering ];
   nativeBuildInputs = [ ament-cmake ];

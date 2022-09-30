@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake libtool pkg-config ];
+  buildInputs = [ libtool ];
   propagatedBuildInputs = [ catkin fltk gtk2 libGL libGLU libjpeg ];
   nativeBuildInputs = [ cmake pkg-config ];
 

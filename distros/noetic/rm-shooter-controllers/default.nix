@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ dynamic-reconfigure effort-controllers rm-common roscpp ];
   nativeBuildInputs = [ catkin ];
 

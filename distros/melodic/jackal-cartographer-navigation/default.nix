@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin roslaunch ];
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ cartographer-ros map-server move-base urdf xacro ];
   nativeBuildInputs = [ catkin ];
 

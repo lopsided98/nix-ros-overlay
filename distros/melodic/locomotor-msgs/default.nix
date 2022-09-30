@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin message-generation ];
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ actionlib-msgs message-runtime nav-2d-msgs ];
   nativeBuildInputs = [ catkin ];
 

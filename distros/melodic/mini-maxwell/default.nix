@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cmake-modules roslib ];
+  buildInputs = [ cmake-modules roslib ];
   propagatedBuildInputs = [ dynamic-reconfigure ];
   nativeBuildInputs = [ catkin ];
 

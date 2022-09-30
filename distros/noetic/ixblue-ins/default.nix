@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ ixblue-ins-driver ixblue-ins-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ raspimouse-navigation raspimouse-slam ];
   nativeBuildInputs = [ ament-cmake ];
 

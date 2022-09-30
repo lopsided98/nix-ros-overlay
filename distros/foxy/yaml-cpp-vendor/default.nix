@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-foxy-yaml-cpp-vendor";
-  version = "7.0.2-r1";
+  version = "7.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yaml_cpp_vendor-release/archive/release/foxy/yaml_cpp_vendor/7.0.2-1.tar.gz";
-    name = "7.0.2-1.tar.gz";
-    sha256 = "0f60d587d418978fc9e2dde4021c8d2ce7e1cce6fb7f302a249fada8c0782e34";
+    url = "https://github.com/ros2-gbp/yaml_cpp_vendor-release/archive/release/foxy/yaml_cpp_vendor/7.0.3-1.tar.gz";
+    name = "7.0.3-1.tar.gz";
+    sha256 = "dd8ad6666daa137958a46d5a679eb1d58c918ce9cc3c2c98d00c9f162803f9a9";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

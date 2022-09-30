@@ -672,6 +672,14 @@ self: super: {
 
  io-context = self.callPackage ./io-context {};
 
+ jackal-control = self.callPackage ./jackal-control {};
+
+ jackal-description = self.callPackage ./jackal-description {};
+
+ jackal-msgs = self.callPackage ./jackal-msgs {};
+
+ jackal-navigation = self.callPackage ./jackal-navigation {};
+
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
 
  joint-state-controller = self.callPackage ./joint-state-controller {};

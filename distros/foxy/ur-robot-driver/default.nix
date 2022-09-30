@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ launch-testing-ament-cmake rclpy ur-bringup ];
   propagatedBuildInputs = [ controller-manager controller-manager-msgs geometry-msgs hardware-interface pluginlib rclcpp rclcpp-lifecycle std-msgs std-srvs ur-bringup ur-client-library ur-controllers ur-dashboard-msgs ur-description ur-msgs ];
   nativeBuildInputs = [ ament-cmake ];

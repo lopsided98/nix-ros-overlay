@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cmake-modules git laser-geometry mk ];
+  buildInputs = [ cmake-modules git laser-geometry mk ];
   propagatedBuildInputs = [ filters laser-filters ];
   nativeBuildInputs = [ catkin ];
 

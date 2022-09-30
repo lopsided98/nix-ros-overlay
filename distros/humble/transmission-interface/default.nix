@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gmock ];
   propagatedBuildInputs = [ hardware-interface pluginlib ];
   nativeBuildInputs = [ ament-cmake ];

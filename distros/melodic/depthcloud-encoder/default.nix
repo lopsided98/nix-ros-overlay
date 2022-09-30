@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cv-bridge dynamic-reconfigure image-transport message-filters pcl-conversions pcl-ros roscpp sensor-msgs tf-conversions ];
   nativeBuildInputs = [ catkin ];
 

@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rcutils }:
 buildRosPackage {
   pname = "ros-galactic-rosbag2-test-common";
-  version = "0.9.1-r3";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/galactic/rosbag2_test_common/0.9.1-3.tar.gz";
-    name = "0.9.1-3.tar.gz";
-    sha256 = "51e874be18cacd0b6fd8634382a2dfdd9ac207b24ef04b661e33230b5ae0b616";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/galactic/rosbag2_test_common/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
+    sha256 = "775d5f1b13e32494f184d7b6ed472213c839690d0b82c04609ce7ec8113e3aa3";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ rclcpp rcutils ];
   nativeBuildInputs = [ ament-cmake ];

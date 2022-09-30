@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ qt-build qt-create qt-tutorials ];
   nativeBuildInputs = [ catkin ];
 

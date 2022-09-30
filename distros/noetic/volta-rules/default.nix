@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ python3Packages.pyusb ];
   nativeBuildInputs = [ catkin ];
 

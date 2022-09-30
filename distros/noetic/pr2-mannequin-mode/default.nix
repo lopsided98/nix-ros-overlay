@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ roslaunch rostest ];
   propagatedBuildInputs = [ pr2-controller-manager pr2-controllers-msgs trajectory-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ dataspeed-ulc-can dataspeed-ulc-msgs ];
   nativeBuildInputs = [ catkin ];
 

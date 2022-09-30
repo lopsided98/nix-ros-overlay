@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin python3Packages.setuptools ];
   checkInputs = [ cob-sound cob-srvs control-msgs geometry-msgs ];
   propagatedBuildInputs = [ actionlib move-base-msgs rospy std-msgs std-srvs tf ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];

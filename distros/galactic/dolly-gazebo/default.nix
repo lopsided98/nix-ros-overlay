@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ dolly-follow gazebo-ros-pkgs ros2launch rviz2 ];
   nativeBuildInputs = [ ament-cmake ];

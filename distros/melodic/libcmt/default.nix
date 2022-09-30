@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cacert cmake git openssl ];
+  buildInputs = [ cacert git openssl ];
   propagatedBuildInputs = [ cv-bridge ];
   nativeBuildInputs = [ cmake ];
 

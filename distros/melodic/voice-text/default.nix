@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin message-generation roscpp ];
+  buildInputs = [ message-generation roscpp ];
   propagatedBuildInputs = [ dynamic-reconfigure message-runtime nkf sound-play ];
   nativeBuildInputs = [ catkin ];
 

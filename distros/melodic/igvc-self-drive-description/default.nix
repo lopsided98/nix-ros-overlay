@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ hector-gazebo-plugins urdf xacro ];
   nativeBuildInputs = [ catkin ];
 

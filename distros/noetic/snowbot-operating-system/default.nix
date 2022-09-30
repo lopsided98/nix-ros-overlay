@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ geometry-msgs pluginlib qt5.qtbase rviz ];
   nativeBuildInputs = [ catkin ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ros-industrial-cmake-boilerplate ];
+  buildInputs = [ ros-industrial-cmake-boilerplate ];
   checkInputs = [ clang gtest lcov ];
   propagatedBuildInputs = [ boost console-bridge eigen libyamlcpp tinyxml-2 ];
   nativeBuildInputs = [ cmake ];

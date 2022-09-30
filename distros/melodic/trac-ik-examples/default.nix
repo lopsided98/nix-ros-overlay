@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ boost orocos-kdl trac-ik-lib xacro ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ ros-ign-bridge ros-ign-gazebo-demos ros-ign-image ];
   nativeBuildInputs = [ catkin ];
 

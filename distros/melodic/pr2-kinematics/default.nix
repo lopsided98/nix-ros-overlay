@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ pr2-arm-kinematics ];
   nativeBuildInputs = [ catkin ];
 

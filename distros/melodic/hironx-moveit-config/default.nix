@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin collada-urdf moveit-ros-move-group ];
+  buildInputs = [ collada-urdf moveit-ros-move-group ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ hironx-ros-bridge moveit-planners moveit-ros moveit-simple-controller-manager ];
   nativeBuildInputs = [ catkin ];

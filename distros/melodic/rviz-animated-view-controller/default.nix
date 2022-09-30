@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cmake-modules cv-bridge eigen geometry-msgs image-transport libGL libGLU pluginlib qt5.qtbase rviz std-msgs view-controller-msgs ];
   nativeBuildInputs = [ catkin ];
 

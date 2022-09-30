@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ ncurses roscpp xclip ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin mk roslib rospack ];
+  buildInputs = [ mk roslib rospack ];
   propagatedBuildInputs = [ rsync unzip wget ];
   nativeBuildInputs = [ catkin ];
 

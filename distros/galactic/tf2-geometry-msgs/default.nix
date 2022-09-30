@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-auto ];
   checkInputs = [ ament-cmake-gtest rclcpp ];
   propagatedBuildInputs = [ geometry-msgs orocos-kdl tf2 tf2-ros tf2-ros-py ];
   nativeBuildInputs = [ ament-cmake-auto ];

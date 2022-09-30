@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin eigen pythonPackages.catkin-pkg ];
+  buildInputs = [ eigen ];
   checkInputs = [ eigen-conversions moveit-resources-fanuc-moveit-config moveit-resources-panda-moveit-config rostest ];
   propagatedBuildInputs = [ actionlib eigenpy geometry-msgs moveit-msgs moveit-ros-manipulation moveit-ros-move-group moveit-ros-planning moveit-ros-warehouse python rosconsole roscpp rospy tf2 tf2-eigen tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ catkin pythonPackages.catkin-pkg ];

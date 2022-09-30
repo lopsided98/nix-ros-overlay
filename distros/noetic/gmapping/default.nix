@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin rostest ];
+  buildInputs = [ rostest ];
   propagatedBuildInputs = [ nav-msgs nodelet openslam-gmapping roscpp tf ];
   nativeBuildInputs = [ catkin ];
 

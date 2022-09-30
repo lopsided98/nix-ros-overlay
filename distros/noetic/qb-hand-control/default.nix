@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-qb-hand-control";
-  version = "2.2.2-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbhand-ros-release/get/release/noetic/qb_hand_control/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "b678ae92b568be03e034fa24c9258c869cb4ffdd885d64c01dcbc4e093e0a8bb";
+    url = "https://bitbucket.org/qbrobotics/qbhand-ros-release/get/release/noetic/qb_hand_control/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "98835f987ad007fa4bc682d1c8db4e6c7b1f1808893c6d2a4b9e04138816a676";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

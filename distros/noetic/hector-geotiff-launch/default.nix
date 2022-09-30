@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ hector-geotiff hector-geotiff-plugins hector-trajectory-server ];
   nativeBuildInputs = [ catkin ];
 

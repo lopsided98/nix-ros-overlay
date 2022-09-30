@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common rosidl-cmake rosidl-runtime-c rosidl-runtime-cpp test-interface-files ];
   propagatedBuildInputs = [ ament-cmake-core ament-index-python rosidl-cli rosidl-cmake rosidl-generator-c rosidl-parser ];
-  nativeBuildInputs = [ ament-cmake ament-cmake-core rosidl-cmake ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = ''Generate the ROS interfaces in C++.'';

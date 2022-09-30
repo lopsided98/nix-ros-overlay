@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ calibration-estimation calibration-launch hironx-moveit-config kdl-parser openni2-launch orocos-kdl ];
   nativeBuildInputs = [ catkin ];
 

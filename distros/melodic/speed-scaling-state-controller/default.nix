@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ controller-interface pluginlib realtime-tools speed-scaling-interface std-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ joy joy-teleop mrp2-description robot-state-publisher twist-mux urg-node ];
   nativeBuildInputs = [ catkin ];
 

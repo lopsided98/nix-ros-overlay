@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin pkg-config ];
   checkInputs = [ gtest message-generation message-runtime rostest rosunit ];
   propagatedBuildInputs = [ boost diagnostic-updater dynamic-reconfigure libyamlcpp marti-common-msgs marti-introspection-msgs nav-msgs roscpp std-msgs std-srvs ];
   nativeBuildInputs = [ catkin pkg-config ];

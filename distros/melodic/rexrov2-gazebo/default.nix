@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ rexrov2-control rexrov2-description ];
   nativeBuildInputs = [ catkin ];
 

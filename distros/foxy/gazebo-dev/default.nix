@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ gazebo_11 ];
   nativeBuildInputs = [ ament-cmake ];
 

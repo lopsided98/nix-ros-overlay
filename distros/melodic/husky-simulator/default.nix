@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ husky-gazebo ];
   nativeBuildInputs = [ catkin ];
 

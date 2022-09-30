@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ calibration-msgs python3Packages.matplotlib python3Packages.pykdl python3Packages.scipy rospy rostest sensor-msgs urdfdom-py visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin python3Packages.setuptools ];
   propagatedBuildInputs = [ cob-android-msgs cob-script-server rospy ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 

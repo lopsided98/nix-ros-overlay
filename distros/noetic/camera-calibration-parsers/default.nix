@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin pkg-config rosconsole ];
+  buildInputs = [ pkg-config rosconsole ];
   checkInputs = [ rosbash rosunit ];
   propagatedBuildInputs = [ boost libyamlcpp roscpp roscpp-serialization sensor-msgs ];
   nativeBuildInputs = [ catkin ];

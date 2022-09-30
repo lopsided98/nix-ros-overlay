@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ bond bondcpp bondpy smclib ];
   nativeBuildInputs = [ catkin ];
 

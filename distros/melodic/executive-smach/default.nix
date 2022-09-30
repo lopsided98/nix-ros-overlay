@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ smach smach-msgs smach-ros ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ lanelet2-core mrt-cmake-modules ];
   nativeBuildInputs = [ catkin mrt-cmake-modules ];

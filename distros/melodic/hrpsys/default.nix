@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake doxygen git glew graphviz mk pkg-config ];
+  buildInputs = [ doxygen git glew graphviz mk ];
   propagatedBuildInputs = [ SDL freeglut irrlicht libxml2 opencv openhrp3 pythonPackages.tkinter qhull xorg.libXmu ];
   nativeBuildInputs = [ cmake pkg-config ];
 

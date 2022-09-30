@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ turtlebot3-fake-node turtlebot3-gazebo ];
   nativeBuildInputs = [ ament-cmake ];
 
