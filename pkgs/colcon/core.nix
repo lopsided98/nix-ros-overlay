@@ -1,5 +1,5 @@
 { lib, buildPythonApplication, buildPythonPackage, makeWrapper, fetchPypi
-, isPy27, python, distlib, empy, pytest, pytestcov, pytest-repeat
+, isPy27, python, distlib, empy, pytest, pytest-cov, pytest-repeat
 , pytest-rerunfailures, pytestrunner }:
 
 let
@@ -33,7 +33,7 @@ let
       distlib
       empy
       pytest
-      pytestcov
+      pytest-cov
       pytest-repeat
       pytest-rerunfailures
       pytestrunner
