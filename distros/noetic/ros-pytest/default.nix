@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ catkin ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ python3Packages.pytestcov pythonPackages.pytest rospy ];
+  propagatedBuildInputs = [ python3Packages.pytest-cov pythonPackages.pytest rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
