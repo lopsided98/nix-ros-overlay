@@ -6,7 +6,12 @@ let
   withExtensions = extensions: buildPythonApplication {
     pname = "colcon";
     inherit (package) version;
-    phases = [ "installPhase" "fixupPhase" ];
+    format = "other";
+
+    dontUnpack = true;
+    dontBuild = true;
+    doCheck = false;
+
     nativeBuildInputs = [ makeWrapper ];
     buildInputs = [ package ] ++ extensions;
 
