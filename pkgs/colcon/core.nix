@@ -1,6 +1,6 @@
 { lib, buildPythonApplication, buildPythonPackage, makeWrapper, fetchPypi
 , isPy27, python, distlib, empy, pytest, pytest-cov, pytest-repeat
-, pytest-rerunfailures, pytestrunner }:
+, pytest-rerunfailures, pytest-runner }:
 
 let
   withExtensions = extensions: buildPythonApplication {
@@ -36,7 +36,7 @@ let
       pytest-cov
       pytest-repeat
       pytest-rerunfailures
-      pytestrunner
+      pytest-runner
     ];
 
     # Requires unpackaged dependencies
