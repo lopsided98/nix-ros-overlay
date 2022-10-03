@@ -284,14 +284,6 @@ let
       '' + postPatch;
 
       dontWrapQtApps = true;
-
-      setupHook = self.writeText "python-qt-binding-setup-hook" ''
-        _pythonQtBindingPreFixupHook() {
-          # Prevent /build RPATH references
-          rm -rf devel/lib
-        }
-        preFixupHooks+=(_pythonQtBindingPreFixupHook)
-      '';
     });
 
     rcutils = rosSuper.rcutils.overrideAttrs ({
