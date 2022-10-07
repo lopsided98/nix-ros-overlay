@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ bond bondcpp smclib test-bond ];
   nativeBuildInputs = [ ament-cmake ];
 

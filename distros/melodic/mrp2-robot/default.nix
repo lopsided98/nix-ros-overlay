@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ mrp2-bringup mrp2-display mrp2-hardware ];
   nativeBuildInputs = [ catkin ];
 

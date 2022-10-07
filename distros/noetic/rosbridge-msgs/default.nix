@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rosbridge-msgs";
-  version = "0.11.14-r1";
+  version = "0.11.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/noetic/rosbridge_msgs/0.11.14-1.tar.gz";
-    name = "0.11.14-1.tar.gz";
-    sha256 = "def6afc928622244bb2572c7c3ffdfb25c910c54c02a37377e96225dd74f5a74";
+    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/noetic/rosbridge_msgs/0.11.15-1.tar.gz";
+    name = "0.11.15-1.tar.gz";
+    sha256 = "15636d52730de040b7d84308ced99199015ce9e1c88e13da318b89ab372b497e";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin message-generation ];
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime std-msgs ];
   nativeBuildInputs = [ catkin ];
 

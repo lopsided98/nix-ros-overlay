@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ joy pr2-teleop safe-teleop-base ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ pythonPackages.rospkg rocon-console rocon-ebnf rocon-python-utils rospy ];
   nativeBuildInputs = [ catkin ];

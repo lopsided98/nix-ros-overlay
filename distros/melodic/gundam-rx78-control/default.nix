@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin roslint ];
+  buildInputs = [ roslint ];
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ controller-interface controller-manager joint-trajectory-controller pluginlib robot-state-publisher ros-control ros-controllers ];
   nativeBuildInputs = [ catkin ];

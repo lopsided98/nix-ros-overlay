@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin pythonPackages.catkin-pkg ];
+  buildInputs = [ pythonPackages.catkin-pkg ];
   checkInputs = [ pythonPackages.selenium rostest ];
   propagatedBuildInputs = [ rosbridge-server rosgraph rospack ];
   nativeBuildInputs = [ catkin ];

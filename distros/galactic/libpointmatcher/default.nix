@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ];
   propagatedBuildInputs = [ boost eigen libnabo ];
   nativeBuildInputs = [ cmake ];
 

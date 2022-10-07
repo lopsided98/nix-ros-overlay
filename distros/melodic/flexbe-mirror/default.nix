@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ flexbe-core flexbe-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ actionlib downward ff ffha lpg-planner pddl-msgs rospy time ];
   nativeBuildInputs = [ catkin ];
 

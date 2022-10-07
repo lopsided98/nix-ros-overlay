@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ controller-manager diff-drive-controller hardware-interface joint-state-controller robot-state-publisher roscpp rosparam-shortcuts sensor-msgs transmission-interface ];
   nativeBuildInputs = [ catkin ];
 

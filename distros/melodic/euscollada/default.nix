@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cmake-modules mk rosboost-cfg rosbuild ];
+  buildInputs = [ cmake-modules mk rosboost-cfg rosbuild ];
   checkInputs = [ openhrp3 pr2-description roseus ];
   propagatedBuildInputs = [ assimp-devel collada-dom collada-parser collada-urdf libyamlcpp qhull resource-retriever roscpp rospack rostest tf urdf urdfdom ];
   nativeBuildInputs = [ catkin ];

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ abb-irb2400-support controller-manager fake-joint-driver pr2-description robot-state-publisher roslaunch rostest rviz ];
   nativeBuildInputs = [ catkin ];
 

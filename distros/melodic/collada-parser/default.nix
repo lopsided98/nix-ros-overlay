@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin urdfdom-headers ];
+  buildInputs = [ urdfdom-headers ];
   propagatedBuildInputs = [ class-loader collada-dom rosconsole urdf urdf-parser-plugin ];
   nativeBuildInputs = [ catkin ];
 

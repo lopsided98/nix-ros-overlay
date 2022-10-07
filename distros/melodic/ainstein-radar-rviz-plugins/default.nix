@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ ainstein-radar-msgs pcl qt5.qtbase rviz ];
   nativeBuildInputs = [ catkin ];
 

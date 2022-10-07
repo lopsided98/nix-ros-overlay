@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin pkg-config ];
+  buildInputs = [ pkg-config ];
   propagatedBuildInputs = [ curl eigen jsoncpp lvr2 roscpp ];
   nativeBuildInputs = [ catkin ];
 

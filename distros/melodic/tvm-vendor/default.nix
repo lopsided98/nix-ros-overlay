@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ros-environment ];
+  buildInputs = [ ros-environment ];
   propagatedBuildInputs = [ git libxml2 openblas ];
   nativeBuildInputs = [ catkin ];
 

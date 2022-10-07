@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ gtest rosunit ];
   propagatedBuildInputs = [ bota-signal-handler bota-worker roscpp ];
   nativeBuildInputs = [ catkin ];

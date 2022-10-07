@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, python3Packages, pythonPackages, rclpy, std-msgs, vision-msgs, webots-ros2-msgs }:
 buildRosPackage {
   pname = "ros-galactic-webots-ros2-core";
-  version = "1.2.3-r1";
+  version = "2022.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/galactic/webots_ros2_core/1.2.3-1.tar.gz";
-    name = "1.2.3-1.tar.gz";
-    sha256 = "844843d063b63963ffbc93ddcf0ea618f7a3e077d6fdca21df5009bf199a2249";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/galactic/webots_ros2_core/2022.1.0-2.tar.gz";
+    name = "2022.1.0-2.tar.gz";
+    sha256 = "3d03e3b2479aee6c8ecb7004204ad3ade2d86d86df7801d17089c9ea988ff2dc";
   };
 
   buildType = "ament_python";

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cacert catkin git mk openssl rosboost-cfg rosbuild unzip ];
+  buildInputs = [ cacert git mk openssl rosboost-cfg rosbuild unzip ];
   propagatedBuildInputs = [ boost zlib ];
   nativeBuildInputs = [ catkin ];
 

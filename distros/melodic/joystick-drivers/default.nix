@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ joy ps3joy spacenav-node wiimote ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ python3Packages.pyqt5 ];
   nativeBuildInputs = [ catkin ];
 

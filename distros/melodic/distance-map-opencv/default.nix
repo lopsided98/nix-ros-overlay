@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ distance-map-core image-geometry ];
   nativeBuildInputs = [ catkin ];
 

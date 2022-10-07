@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ joint-state-publisher robot-state-publisher rqt-gui rqt-reconfigure rviz socketcan-bridge toposens-description toposens-driver toposens-echo-driver toposens-markers toposens-pointcloud turtlebot3-bringup turtlebot3-teleop xacro ];
   nativeBuildInputs = [ catkin ];
 

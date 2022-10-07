@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ automake cmake doxygen libtool pkg-config python ];
+  buildInputs = [ doxygen python ];
   propagatedBuildInputs = [ catkin omniorb util-linux ];
   nativeBuildInputs = [ automake cmake libtool pkg-config ];
 

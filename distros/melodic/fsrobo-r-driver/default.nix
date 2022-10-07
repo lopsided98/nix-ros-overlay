@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ roslaunch rostest ];
   propagatedBuildInputs = [ fsrobo-r-msgs industrial-robot-client urdf ];
   nativeBuildInputs = [ catkin ];

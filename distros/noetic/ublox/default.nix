@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ ublox-gps ublox-msgs ublox-serialization ];
   nativeBuildInputs = [ catkin ];
 

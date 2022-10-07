@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-rmf-demos-assets";
-  version = "1.3.1-r3";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/humble/rmf_demos_assets/1.3.1-3.tar.gz";
-    name = "1.3.1-3.tar.gz";
-    sha256 = "f7b04dd69323f83d041aef0777c3d33414ee177b598a841b48292660321f7799";
+    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/humble/rmf_demos_assets/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "4631c037e5d60102a6359a2505f03125ef3dd77b147250569b4afbe93e126042";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

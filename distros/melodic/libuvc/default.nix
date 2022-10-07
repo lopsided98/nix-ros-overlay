@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake pkg-config ];
+  buildInputs = [ pkg-config ];
   propagatedBuildInputs = [ catkin libjpeg libusb1 ];
   nativeBuildInputs = [ cmake ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ robot-state-publisher xacro ];
   nativeBuildInputs = [ ament-cmake ];
 

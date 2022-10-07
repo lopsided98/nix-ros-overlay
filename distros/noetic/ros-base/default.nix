@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ actionlib bond-core dynamic-reconfigure nodelet-core ros-core ];
   nativeBuildInputs = [ catkin ];
 

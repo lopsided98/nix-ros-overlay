@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ velodyne-description velodyne-gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 

@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin, opencv, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-image-geometry";
-  version = "1.13.0";
+  version = "1.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/vision_opencv-release/archive/release/melodic/image_geometry/1.13.0-0.tar.gz";
-    name = "1.13.0-0.tar.gz";
-    sha256 = "f1f06fc227662b34743a3391431538326fa3c8833c7ab47b6b1eeeeb631082e2";
+    url = "https://github.com/ros-gbp/vision_opencv-release/archive/release/melodic/image_geometry/1.13.1-1.tar.gz";
+    name = "1.13.1-1.tar.gz";
+    sha256 = "e18a65c66349b9788c70e620cc8f08f3e9c80f2ba2efc2912b164216e91d0ed8";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ opencv sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

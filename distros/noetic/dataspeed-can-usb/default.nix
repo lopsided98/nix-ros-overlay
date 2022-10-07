@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin roslib ];
+  buildInputs = [ roslib ];
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ can-msgs lusb nodelet roscpp roslaunch std-msgs ];
   nativeBuildInputs = [ catkin ];

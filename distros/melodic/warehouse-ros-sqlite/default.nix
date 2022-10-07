@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ class-loader roscpp rostime sqlite warehouse-ros ];
   nativeBuildInputs = [ catkin ];

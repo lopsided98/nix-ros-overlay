@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rmf-dispenser-msgs, rmf-fleet-msgs, rmf-lift-msgs, rmf-task-msgs }:
 buildRosPackage {
   pname = "ros-humble-rmf-demos-tasks";
-  version = "1.3.1-r3";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/humble/rmf_demos_tasks/1.3.1-3.tar.gz";
-    name = "1.3.1-3.tar.gz";
-    sha256 = "ea8bcbd9041a9e85fccca51b328b8df1d4f67e3f3f1a1c9fc6ba6a28bba5dbf5";
+    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/humble/rmf_demos_tasks/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "f6cbbfe5f203f75e881cfddcbfd68440901acc3f13a9ed2bd1232cb6469272bb";
   };
 
   buildType = "ament_python";

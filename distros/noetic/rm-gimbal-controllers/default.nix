@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ angles dynamic-reconfigure effort-controllers rm-common roscpp tf2-eigen tf2-geometry-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

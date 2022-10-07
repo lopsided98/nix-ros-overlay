@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ backward-ros distance-map-core interactive-markers visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

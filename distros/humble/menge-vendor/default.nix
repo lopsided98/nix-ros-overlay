@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ament-cmake pkg-config ];
+  buildInputs = [ pkg-config ];
   propagatedBuildInputs = [ tinyxml ];
   nativeBuildInputs = [ ament-cmake ];
 

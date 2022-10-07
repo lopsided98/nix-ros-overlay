@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin simple-message ];
+  buildInputs = [ simple-message ];
   propagatedBuildInputs = [ industrial-robot-client ];
   nativeBuildInputs = [ catkin ];
 

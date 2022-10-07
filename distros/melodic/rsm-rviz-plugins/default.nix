@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin qt5.qtbase ];
+  buildInputs = [ qt5.qtbase ];
   propagatedBuildInputs = [ cmake-modules interactive-markers pluginlib roscpp rsm-msgs rviz std-msgs std-srvs tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

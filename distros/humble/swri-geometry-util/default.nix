@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake pkg-config ];
   checkInputs = [ ament-cmake-gtest ];
   propagatedBuildInputs = [ cv-bridge eigen geos rclcpp tf2 ];
   nativeBuildInputs = [ ament-cmake pkg-config ];

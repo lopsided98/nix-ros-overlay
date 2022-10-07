@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ qt5.qtbase rviz slam-toolbox-msgs ];
   nativeBuildInputs = [ catkin ];
 

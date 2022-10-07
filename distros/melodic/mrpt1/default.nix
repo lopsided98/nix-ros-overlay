@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ];
   propagatedBuildInputs = [ assimp boost catkin eigen ffmpeg freeglut libjpeg libpcap libusb1 octomap opencv python pythonPackages.numpy suitesparse udev wxGTK zlib ];
   nativeBuildInputs = [ cmake ];
 

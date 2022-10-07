@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-index-cpp ];
   propagatedBuildInputs = [ boost rclcpp ];
   nativeBuildInputs = [ ament-cmake ];

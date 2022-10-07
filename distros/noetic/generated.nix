@@ -1800,6 +1800,10 @@ self: super: {
 
  mocap-optitrack = self.callPackage ./mocap-optitrack {};
 
+ mongodb-log = self.callPackage ./mongodb-log {};
+
+ mongodb-store-msgs = self.callPackage ./mongodb-store-msgs {};
+
  monkeywrench = self.callPackage ./monkeywrench {};
 
  monocam-settler = self.callPackage ./monocam-settler {};
@@ -1969,6 +1973,8 @@ self: super: {
  multisense-lib = self.callPackage ./multisense-lib {};
 
  multisense-ros = self.callPackage ./multisense-ros {};
+
+ mvsim = self.callPackage ./mvsim {};
 
  nao-meshes = self.callPackage ./nao-meshes {};
 
@@ -2712,8 +2718,6 @@ self: super: {
 
  ros-realtime = self.callPackage ./ros-realtime {};
 
- ros-system-fingerprint = self.callPackage ./ros-system-fingerprint {};
-
  ros-tutorials = self.callPackage ./ros-tutorials {};
 
  ros-type-introspection = self.callPackage ./ros-type-introspection {};
@@ -3229,6 +3233,8 @@ self: super: {
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
  swri-yaml-util = self.callPackage ./swri-yaml-util {};
+
+ system-fingerprint = self.callPackage ./system-fingerprint {};
 
  tablet-socket-msgs = self.callPackage ./tablet-socket-msgs {};
 

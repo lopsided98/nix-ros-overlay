@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ octomap octomap-msgs sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 

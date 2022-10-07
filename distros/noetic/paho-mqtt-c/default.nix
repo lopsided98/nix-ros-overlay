@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, cmake, openssl }:
 buildRosPackage {
   pname = "ros-noetic-paho-mqtt-c";
-  version = "1.3.10-r1";
+  version = "1.3.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/paho.mqtt.c-release/archive/release/noetic/paho-mqtt-c/1.3.10-1.tar.gz";
-    name = "1.3.10-1.tar.gz";
-    sha256 = "5574da546a6aca7a06e1f094fad9b9916795e98f9c1f8c93ea9c8ded6afc0976";
+    url = "https://github.com/nobleo/paho.mqtt.c-release/archive/release/noetic/paho-mqtt-c/1.3.11-1.tar.gz";
+    name = "1.3.11-1.tar.gz";
+    sha256 = "ac047afc17c08dcab54263ec0206bc379e1abe564eab1ac859fe2debb66128ac";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ];
   propagatedBuildInputs = [ openssl ];
   nativeBuildInputs = [ cmake ];
 

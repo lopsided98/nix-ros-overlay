@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ mbf-abstract-core mesh-map ];
   nativeBuildInputs = [ catkin ];
 

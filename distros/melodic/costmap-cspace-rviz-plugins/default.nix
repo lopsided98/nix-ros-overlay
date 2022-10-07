@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ costmap-cspace-msgs qt5.qtbase roscpp rviz ];
   nativeBuildInputs = [ catkin ];

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ pcl-ros quanergy-client roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

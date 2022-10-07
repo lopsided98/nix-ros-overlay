@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ arbotix-python tf trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 

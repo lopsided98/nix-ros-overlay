@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-clang-format ament-cmake-gtest ];
   propagatedBuildInputs = [ fmt maliput maliput-drake tinyxml-2 ];
   nativeBuildInputs = [ ament-cmake ];

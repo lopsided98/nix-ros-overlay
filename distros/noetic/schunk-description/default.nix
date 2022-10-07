@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ xacro ];
   nativeBuildInputs = [ catkin ];

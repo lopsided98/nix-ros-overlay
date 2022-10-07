@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin python3Packages.setuptools ];
   propagatedBuildInputs = [ effort-controllers ign-ros-control joint-state-controller joint-state-publisher position-controllers ros-ign-gazebo velocity-controllers xacro ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 

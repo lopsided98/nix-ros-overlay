@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cl-utils sbcl ];
   nativeBuildInputs = [ catkin ];
 

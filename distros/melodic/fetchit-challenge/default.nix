@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ actionlib actionlib-msgs controller-manager effort-controllers fetch-gazebo gazebo-ros gazebo-ros-control robot-state-publisher rospy ];
   nativeBuildInputs = [ catkin ];
 

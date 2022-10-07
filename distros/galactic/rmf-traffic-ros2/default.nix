@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake eigen ];
+  buildInputs = [ eigen ];
   checkInputs = [ ament-cmake-catch2 rmf-cmake-uncrustify ];
   propagatedBuildInputs = [ libyamlcpp rclcpp rmf-fleet-msgs rmf-traffic rmf-traffic-msgs rmf-utils ];
   nativeBuildInputs = [ ament-cmake ];

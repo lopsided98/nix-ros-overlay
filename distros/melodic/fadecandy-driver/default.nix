@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ rospy ];
   propagatedBuildInputs = [ diagnostic-updater fadecandy-msgs libusb1 roscpp ];
   nativeBuildInputs = [ catkin ];

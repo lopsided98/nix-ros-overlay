@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ joy-teleop key-teleop teleop-tools-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

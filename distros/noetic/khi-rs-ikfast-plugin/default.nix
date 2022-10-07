@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ liblapack moveit-core pluginlib roscpp tf-conversions ];
   nativeBuildInputs = [ catkin ];
 

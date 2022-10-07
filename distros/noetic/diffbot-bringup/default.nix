@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ teleop-twist-keyboard ];
   nativeBuildInputs = [ catkin ];
 

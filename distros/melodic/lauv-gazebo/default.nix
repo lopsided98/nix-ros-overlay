@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ lauv-control lauv-description rosbag uuv-control-utils ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin pkg-config ];
   propagatedBuildInputs = [ bullet geometry-msgs tf2 ];
   nativeBuildInputs = [ catkin pkg-config ];
 

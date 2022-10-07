@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, cmake-modules, control-toolbox, eigen, eigen-conversions, geometry-msgs, mavros, mavros-extras, roscpp, std-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-test-mavros";
-  version = "1.13.0-r1";
+  version = "1.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/test_mavros/1.13.0-1.tar.gz";
-    name = "1.13.0-1.tar.gz";
-    sha256 = "500b2a80deee89499aa6b894b4b96224422d28fd7cac5e9dc0d2200a3e1f1989";
+    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/test_mavros/1.14.0-1.tar.gz";
+    name = "1.14.0-1.tar.gz";
+    sha256 = "709f79de9b3ddd2396feb569d3bea1132111e38207c3caad5852d463fc0dc6cf";
   };
 
   buildType = "catkin";
-  buildInputs = [ angles catkin cmake-modules ];
+  buildInputs = [ angles cmake-modules ];
   propagatedBuildInputs = [ control-toolbox eigen eigen-conversions geometry-msgs mavros mavros-extras roscpp std-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 

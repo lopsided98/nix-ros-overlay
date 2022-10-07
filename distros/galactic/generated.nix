@@ -588,6 +588,8 @@ self: super: {
 
  key-teleop = self.callPackage ./key-teleop {};
 
+ kobuki-velocity-smoother = self.callPackage ./kobuki-velocity-smoother {};
+
  lanelet2 = self.callPackage ./lanelet2 {};
 
  lanelet2-core = self.callPackage ./lanelet2-core {};
@@ -1366,6 +1368,8 @@ self: super: {
 
  rosbag2-storage-mcap = self.callPackage ./rosbag2-storage-mcap {};
 
+ rosbag2-storage-mcap-test-fixture-interfaces = self.callPackage ./rosbag2-storage-mcap-test-fixture-interfaces {};
+
  rosbag2-test-common = self.callPackage ./rosbag2-test-common {};
 
  rosbag2-tests = self.callPackage ./rosbag2-tests {};
@@ -1633,6 +1637,8 @@ self: super: {
  swri-system-util = self.callPackage ./swri-system-util {};
 
  swri-transform-util = self.callPackage ./swri-transform-util {};
+
+ system-fingerprint = self.callPackage ./system-fingerprint {};
 
  system-modes = self.callPackage ./system-modes {};
 

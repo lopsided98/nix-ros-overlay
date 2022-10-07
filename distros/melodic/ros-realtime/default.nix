@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ allocators lockfree rosatomic rosrt ];
   nativeBuildInputs = [ catkin ];
 

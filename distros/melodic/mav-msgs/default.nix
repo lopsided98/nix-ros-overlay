@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cmake-modules message-generation ];
+  buildInputs = [ cmake-modules message-generation ];
   propagatedBuildInputs = [ eigen geometry-msgs message-runtime std-msgs trajectory-msgs ];
   nativeBuildInputs = [ catkin ];
 

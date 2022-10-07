@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin rostest ];
+  buildInputs = [ rostest ];
   propagatedBuildInputs = [ openrtm-aist openrtm-aist-python rosbash rtshell ];
   nativeBuildInputs = [ catkin ];
 

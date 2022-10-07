@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ roslint rosunit ];
   propagatedBuildInputs = [ daemontools nettools roslaunch util-linux xacro ];
   nativeBuildInputs = [ catkin ];

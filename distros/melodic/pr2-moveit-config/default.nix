@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ joint-state-publisher moveit-ros-move-group pr2-description robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 

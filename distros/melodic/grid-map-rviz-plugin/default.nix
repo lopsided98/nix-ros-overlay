@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ grid-map-msgs grid-map-ros qt5.qtbase rviz ];
   nativeBuildInputs = [ catkin ];

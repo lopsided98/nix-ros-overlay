@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ variant-msgs variant-topic-tools ];
   nativeBuildInputs = [ catkin ];
 

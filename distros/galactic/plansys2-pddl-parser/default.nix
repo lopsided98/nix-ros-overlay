@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-index-cpp ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ plansys2-msgs rclcpp std-msgs ];
   nativeBuildInputs = [ ament-cmake ];

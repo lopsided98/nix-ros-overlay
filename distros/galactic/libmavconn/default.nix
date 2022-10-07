@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, asio, console-bridge, mavlink, python3Packages }:
 buildRosPackage {
   pname = "ros-galactic-libmavconn";
-  version = "2.1.1-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/galactic/libmavconn/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "c17308a631d480dbd39e2e08e740a867bf2c48b2b892e156c1c352cbf9bb67bb";
+    url = "https://github.com/mavlink/mavros-release/archive/release/galactic/libmavconn/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "9b36825a5fb6e2e26b878858ef636bb3f90607c0197b84fa35a15ca6a2377678";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake python3Packages.empy ];
+  buildInputs = [ python3Packages.empy ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ asio console-bridge mavlink ];
   nativeBuildInputs = [ ament-cmake ];

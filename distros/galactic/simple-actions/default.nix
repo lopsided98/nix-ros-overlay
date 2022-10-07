@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-python ];
   checkInputs = [ ament-cmake-clang-format ament-cmake-cppcheck ament-cmake-flake8 ament-cmake-lint-cmake ament-cmake-pep257 ];
   propagatedBuildInputs = [ action-msgs rclcpp rclcpp-action rclpy ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];

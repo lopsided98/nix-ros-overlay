@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ geometry-msgs joy joy-teleop pythonPackages.numpy rospy sensor-msgs std-msgs tf uuv-gazebo-ros-plugins-msgs uuv-thruster-manager ];
   nativeBuildInputs = [ catkin ];
 

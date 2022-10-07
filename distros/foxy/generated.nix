@@ -672,6 +672,18 @@ self: super: {
 
  io-context = self.callPackage ./io-context {};
 
+ jackal-control = self.callPackage ./jackal-control {};
+
+ jackal-description = self.callPackage ./jackal-description {};
+
+ jackal-gazebo = self.callPackage ./jackal-gazebo {};
+
+ jackal-msgs = self.callPackage ./jackal-msgs {};
+
+ jackal-navigation = self.callPackage ./jackal-navigation {};
+
+ jackal-simulator = self.callPackage ./jackal-simulator {};
+
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
 
  joint-state-controller = self.callPackage ./joint-state-controller {};
@@ -699,6 +711,8 @@ self: super: {
  kobuki-firmware = self.callPackage ./kobuki-firmware {};
 
  kobuki-ftdi = self.callPackage ./kobuki-ftdi {};
+
+ kobuki-velocity-smoother = self.callPackage ./kobuki-velocity-smoother {};
 
  lanelet2 = self.callPackage ./lanelet2 {};
 
@@ -941,6 +955,8 @@ self: super: {
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
  multires-image = self.callPackage ./multires-image {};
+
+ mvsim = self.callPackage ./mvsim {};
 
  naoqi-bridge-msgs = self.callPackage ./naoqi-bridge-msgs {};
 
@@ -1531,6 +1547,8 @@ self: super: {
  rosbag2-storage-default-plugins = self.callPackage ./rosbag2-storage-default-plugins {};
 
  rosbag2-storage-mcap = self.callPackage ./rosbag2-storage-mcap {};
+
+ rosbag2-storage-mcap-test-fixture-interfaces = self.callPackage ./rosbag2-storage-mcap-test-fixture-interfaces {};
 
  rosbag2-test-common = self.callPackage ./rosbag2-test-common {};
 

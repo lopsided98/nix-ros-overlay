@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ filters grid-map-core grid-map-msgs grid-map-ros opencv tbb ];
   nativeBuildInputs = [ catkin ];

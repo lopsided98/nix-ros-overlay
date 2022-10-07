@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin python3Packages.pyqt5 python3Packages.setuptools qt5.qtbase ];
+  buildInputs = [ python3Packages.pyqt5 qt5.qtbase ];
   propagatedBuildInputs = [ python-qt-binding python3Packages.rospkg tango-icon-theme ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 

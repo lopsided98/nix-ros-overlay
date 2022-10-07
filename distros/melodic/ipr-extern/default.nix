@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ libmodbus libreflexxestype2 ros-reflexxes ];
   nativeBuildInputs = [ catkin ];
 

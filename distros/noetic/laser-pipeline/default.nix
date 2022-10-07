@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ laser-assembler laser-filters laser-geometry ];
   nativeBuildInputs = [ catkin ];
 

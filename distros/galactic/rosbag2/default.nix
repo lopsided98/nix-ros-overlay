@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros2bag, rosbag2-compression, rosbag2-compression-zstd, rosbag2-cpp, rosbag2-py, rosbag2-storage, rosbag2-storage-default-plugins, rosbag2-test-common, rosbag2-tests, rosbag2-transport, shared-queues-vendor, sqlite3-vendor }:
 buildRosPackage {
   pname = "ros-galactic-rosbag2";
-  version = "0.9.1-r3";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/galactic/rosbag2/0.9.1-3.tar.gz";
-    name = "0.9.1-3.tar.gz";
-    sha256 = "7769aa273049cfefb80e9b03c0470a86e2583c8f1a3d8aef8b4e0bb901665a5e";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/galactic/rosbag2/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
+    sha256 = "aeccbb456b97ea1c58bd09fc7e57e3c67ce438aa03c8f2820a0ea9d9184bcac3";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ rosbag2-test-common rosbag2-tests ];
   propagatedBuildInputs = [ ros2bag rosbag2-compression rosbag2-compression-zstd rosbag2-cpp rosbag2-py rosbag2-storage rosbag2-storage-default-plugins rosbag2-transport shared-queues-vendor sqlite3-vendor ];
   nativeBuildInputs = [ ament-cmake ];
