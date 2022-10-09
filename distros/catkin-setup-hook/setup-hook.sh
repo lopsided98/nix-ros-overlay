@@ -2,10 +2,6 @@
 if [ -n "${_catkin_setup_hook_loaded:-}" ]; then return; fi
 _catkin_setup_hook_loaded=1
 
-isCatkinPackage() {
-  [ -f "$1/.catkin" ]
-}
-
 # Load catkin environment hooks. This mimics the behavior of _setup_util.py.
 
 declare -gA _catkinPackagesSeen
@@ -16,7 +12,7 @@ _findCatkinEnvHooks() {
   local pkg="$1"
   local pkgEnvHookDir="$pkg/etc/catkin/profile.d"
   # Deduplicate the packages
-  if [ -z "${_catkinPackagesSeen["$pkg"]:-}" ] && isCatkinPackage "$pkg" && [ -d "$pkgEnvHookDir" ]; then
+  if [ -z "${_catkinPackagesSeen["$pkg"]:-}" ] && [ -d "$pkgEnvHookDir" ]; then
     while IFS= read -rd '' hook; do
       case "$hook" in
         *.sh) _catkinGenericEnvHooks["$(basename "$hook")"]="$hook" ;;
@@ -73,16 +69,18 @@ _catkinPreConfigureHook() {
   cmakeFlags+=" -DCATKIN_ENABLE_TESTING=${doCheck:-OFF}"
   # Don't try to detect Debian/Ubuntu when sandbox is disabled
   cmakeFlags+=" -DSETUPTOOLS_DEB_LAYOUT=OFF"
+  # Don't install setup scripts or .catkin workspace marker. Unfortunately,
+  # we still need the marker for the environment hooks, so it is created
+  # manually.
+  cmakeFlags+=" -DCATKIN_BUILD_BINARY_PACKAGE=ON"
 }
 preConfigureHooks+=(_catkinPreConfigureHook)
 
-_catkinPostInstallHook() {
-  pushd $out
-  rm -f *setup.*sh
-  rm -f _setup_util.py env.sh .rosinstall
-  popd
+_catkinMarkerHook() {
+  # The ROS_PACKAGE_PATH hook needs the .catkin marker
+  touch "$out/.catkin"
 }
-postInstallHooks+=(_catkinPostInstallHook)
+postInstallHooks+=(_catkinMarkerHook)
 
 _catkinWrapperHook() {
   wrapPythonPrograms
