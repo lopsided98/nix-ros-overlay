@@ -5,11 +5,6 @@ self: super: {
     recurseForDerivations = true;
     lib = super.lib // import ../lib { inherit lib self; };
 
-    melodic = import ./distro-overlay.nix {
-      distro = "melodic";
-      python = self.python2;
-    } self super;
-
     melodicPython3 = import ./distro-overlay.nix {
       distro = "melodic";
       python = self.python3;
