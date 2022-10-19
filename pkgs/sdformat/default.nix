@@ -1,8 +1,8 @@
-{ lib, stdenv, fetchurl, cmake, pkg-config, ruby, boost, ignition
+{ lib, stdenv, fetchurl, fetchpatch, cmake, pkg-config, ruby, boost, ignition
 , ignition-math ? ignition.math, tinyxml, urdfdom, urdfdom-headers
 , console-bridge
-, version ? "9.8.0"
-, srcHash ? "sha256-kJz6qlxbmIrWOwvhLbb12ZCLbajMJ0p9Opzj6lzDtPs="
+, version ? "9.9.0"
+, srcHash ? "sha256-/Vf7xkWfehJzLcAS6JDTk5HuC4tL0p3ImGfq7/OutZw="
 , ...
   }:
 
@@ -15,10 +15,12 @@ stdenv.mkDerivation rec {
     hash = srcHash;
   };
 
-  prePatch = ''
-    substituteInPlace cmake/sdf_config.cmake.in \
-      --replace "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@" "@LIB_INSTALL_DIR@"
-  '';
+  # Fix asssumptions that CMAKE_INSTALL_*DIR variables are relative
+  # https://github.com/gazebosim/sdformat/pull/1190
+  patches = lib.optional (lib.versionAtLeast version "9") (fetchpatch {
+    url = "https://github.com/gazebosim/sdformat/commit/71ed3f96869fb3efe7d956a8bebb9e90ab4968cf.patch";
+    hash = "sha256-J1U+GHdELizwZnrqgAQSwL5sVJ592n71NH5RwtZmBMc=";
+  });
 
   enableParallelBuilding = true;
 
