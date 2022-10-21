@@ -1,16 +1,16 @@
-{ lib, buildPythonPackage, fetchPypi, setuptools, catkin-pkg, osrf-pycommon
-, pyyaml }:
+{ lib, buildPythonPackage, fetchPypi, setuptools, osrf-pycommon, pyyaml
+, catkin-pkg }:
 
 buildPythonPackage rec {
   pname = "catkin_tools";
-  version = "0.7.2";
+  version = "0.9.0";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "1zspp8sgpg1chjzcshkyq7y7ah41si1ssh3ik3xwsrmmn4dnnk40";
+    hash = "sha256-JlOjtDMAxkglzWb+Ou3+hnadQn9F6mTxDPqJc2yh/Lc=";
   };
 
-  propagatedBuildInputs = [ setuptools catkin-pkg osrf-pycommon pyyaml ];
+  propagatedBuildInputs = [ setuptools osrf-pycommon pyyaml catkin-pkg ];
 
   # No tests in PyPi tarball
   doCheck = false;
