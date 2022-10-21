@@ -1,25 +1,30 @@
 { lib, stdenv, fetchurl, cmake }:
 
 let
-  fetchData = { subdir, file, sha256 }: fetchurl {
+  fetchData = { subdir, file, hash }: fetchurl {
     url = "mirror://sourceforge/geographiclib/${subdir}-distrib/${file}.tar.bz2";
-    inherit sha256;
+    inherit hash;
   };
 in stdenv.mkDerivation rec {
   pname = "geographiclib";
-  version = "1.52";
+  version = "2.1.1";
 
   src = fetchurl {
     url = "mirror://sourceforge/${pname}/GeographicLib-${version}.tar.gz";
-    sha256 = "0axcx3040a2b1qazsp0n678qf1rl18rl94kwz4pimxgb2v6lahax";
+    hash = "sha256-KAgPxI4cdlYOsvjDBkBN6AwT01aH9nb/R6UWlVBuSgo=";
   };
 
   nativeBuildInputs = [ cmake ];
 
-  cmakeFlags = [ "-DGEOGRAPHICLIB_DATA=${placeholder "out"}/share/GeographicLib" ];
+  cmakeFlags = [
+    # Build script has lots of custom path variables that all assume relative
+    # paths, requiring major changes to fix.
+    "-DCMAKE_INSTALL_LIBDIR=lib"
+    "-DGEOGRAPHICLIB_DATA=${placeholder "out"}/share/GeographicLib"
+  ];
 
   data = [
-    (fetchData { subdir = "geoids"; file = "egm96-5"; sha256 = "05762fnsmv7hzvc2rf725xs6r3d9h0alx7qpjxfr3p13yzw28qn4"; })
+    (fetchData { subdir = "geoids"; file = "egm96-5"; hash = "sha256-xGIk+Pcj3JFdlxefThWAqY1sdC/iuCzY/vDsqq0T5hQ="; })
   ];
 
   postInstall = ''
