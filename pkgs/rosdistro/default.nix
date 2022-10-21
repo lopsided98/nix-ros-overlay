@@ -1,19 +1,20 @@
-{ lib, buildPythonPackage, fetchPypi, rospkg, catkin-pkg, pyyaml }:
+{ lib, buildPythonPackage, fetchPypi, pyyaml, setuptools, catkin-pkg, rospkg }:
 
 buildPythonPackage rec {
   pname = "rosdistro";
-  version = "0.7.5";
+  version = "0.9.0";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "1rkg3q0fqfqi8cc4nzrkv14l132p9ibx3hla3g20x4vabksqv445";
+    sha256 = "sha256-5+aSdOwhlaLWeCa4MxMNmjC9DYg3oUqHZsrAzmC/pZs=";
   };
 
-  propagatedBuildInputs = [ rospkg catkin-pkg pyyaml ];
+  propagatedBuildInputs = [ pyyaml setuptools catkin-pkg rospkg ];
 
   meta = with lib; {
     description = "A tool to work with rosdistro files";
-    homepage = http://wiki.ros.org/rosdistro;
+    homepage = "https://wiki.ros.org/rosdistro";
     license = licenses.bsd3;
+    maintainers = with maintainers; [ lopsided98 ];
   };
 }
