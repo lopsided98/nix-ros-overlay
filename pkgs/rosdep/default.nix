@@ -1,21 +1,24 @@
-{ buildPythonPackage, fetchPypi, catkin-pkg, rospkg, pyyaml, rosdistro, setuptools }:
+{ lib, buildPythonPackage, fetchPypi, pyyaml, setuptools, catkin-pkg, rospkg
+, rosdistro }:
 
 buildPythonPackage rec {
   pname = "rosdep";
-  version = "0.17.1";
+  version = "0.22.1";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "1vxbjfj60lkg8b9m8kcv0v1bvi355xs53np27pdjlil27j53sxm9";
+    hash = "sha256-4zwINrBPHkP1QpEQTNBlRyw7z2ENcoysElNSiou+iGM=";
   };
 
   # Tries to download files
   doCheck = false;
 
-  propagatedBuildInputs = [ catkin-pkg rospkg pyyaml rosdistro setuptools ];
+  propagatedBuildInputs = [ pyyaml setuptools catkin-pkg rospkg rosdistro ];
 
-  meta = {
+  meta = with lib; {
     description = "Package manager abstraction tool for ROS";
-    homepage = http://wiki.ros.org/rosdep;
+    homepage = "https://wiki.ros.org/rosdep";
+    license = licenses.bsd3;
+    maintainers = with maintainers; [ lopsided98 ];
   };
 }
