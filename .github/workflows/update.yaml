@@ -7,11 +7,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: staging
-      - uses: cachix/install-nix-action@v13
-      - uses: cachix/cachix-action@v9
+      - uses: cachix/install-nix-action@v18
+      - uses: cachix/cachix-action@v11
         with:
           name: ros
           signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
