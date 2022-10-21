@@ -2,11 +2,11 @@
 
 buildPythonPackage rec {
   pname = "osrf_pycommon";
-  version = "1.0.0";
+  version = "2.0.2";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "01qi6m7frc6g2pyy2wmy29c3xdpbgxmwn11ax48qy3fav4mq5ky3";
+    hash = "sha256-kSMGaW5ZqtNGmOKfS4MjJwRjBjRJmcMfGQB/wouZrfA=";
   };
 
   # No tests in PyPi tarball
