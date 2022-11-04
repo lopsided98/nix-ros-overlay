@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake pkg-config ];
+  buildInputs = [ pkg-config ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ bond rclcpp rclcpp-lifecycle smclib util-linux ];
   nativeBuildInputs = [ ament-cmake ];

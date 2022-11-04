@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ leuze-msgs roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ robosense-description robosense-gazebo-plugins ];
   nativeBuildInputs = [ catkin ];
 

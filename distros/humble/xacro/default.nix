@@ -2,22 +2,21 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-index-python, ament-lint-auto, python3Packages }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, ament-index-python, ament-lint-auto, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-xacro";
-  version = "2.0.7-r3";
+  version = "2.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/xacro-release/archive/release/humble/xacro/2.0.7-3.tar.gz";
-    name = "2.0.7-3.tar.gz";
-    sha256 = "c89380c24aa4c6fcb40695af92af7ed2f04527af561d1ba7331e9c411fa54194";
+    url = "https://github.com/ros2-gbp/xacro-release/archive/release/humble/xacro/2.0.8-1.tar.gz";
+    name = "2.0.8-1.tar.gz";
+    sha256 = "c22d190f937583558590106b7047cd1207b7a38b7b09032e3598c230bed5fc00";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-pytest ament-lint-auto ];
   propagatedBuildInputs = [ ament-index-python python3Packages.pyyaml ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
     description = ''Xacro (XML Macros)

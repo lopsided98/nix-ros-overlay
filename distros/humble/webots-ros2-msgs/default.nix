@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, vision-msgs }:
 buildRosPackage {
   pname = "ros-humble-webots-ros2-msgs";
-  version = "1.2.3-r1";
+  version = "2022.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/humble/webots_ros2_msgs/1.2.3-1.tar.gz";
-    name = "1.2.3-1.tar.gz";
-    sha256 = "88abcf2005575eb01f8a43a6b9a4b23e37c995da20bdb757a17b9cb7b450c38c";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/humble/webots_ros2_msgs/2022.1.3-1.tar.gz";
+    name = "2022.1.3-1.tar.gz";
+    sha256 = "ffa30d1ce400af2b4a86602b3d71dbfa30a5ea518551ab0784534523ff10624c";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake rosidl-default-generators ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ builtin-interfaces geometry-msgs rosidl-default-runtime std-msgs vision-msgs ];
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];

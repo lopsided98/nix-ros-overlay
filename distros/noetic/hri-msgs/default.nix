@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-hri-msgs";
-  version = "0.7.1-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros4hri/hri_msgs-release/archive/release/noetic/hri_msgs/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "012eff5f101838a4d45b5a899479e36cca55f2a971e10d9c16b9ffbb0ddcb026";
+    url = "https://github.com/ros4hri/hri_msgs-release/archive/release/noetic/hri_msgs/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "fb8abe9538673adf4cb4cd01ef5e85e3403a6dbfbc6104987aef0c3c1ce5eb2a";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin message-generation ];
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

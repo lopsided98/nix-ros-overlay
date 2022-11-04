@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ bota-node rokubimini ];
   nativeBuildInputs = [ catkin ];
 

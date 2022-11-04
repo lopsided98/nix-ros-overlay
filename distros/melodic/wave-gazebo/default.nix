@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ruby ];
+  buildInputs = [ ruby ];
   propagatedBuildInputs = [ gazebo-ros wave-gazebo-plugins xacro ];
   nativeBuildInputs = [ catkin ];
 

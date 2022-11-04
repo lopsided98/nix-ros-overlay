@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, geometry-msgs, roscpp, rospy, rostest, rostopic, std-msgs, twist-mux-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-twist-mux";
-  version = "3.1.2-r1";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/twist_mux-release/archive/release/noetic/twist_mux/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "47ddfc5486f4b5f3a1e2465be818860e8427b00a7dd483945cb55ba8eab08f6c";
+    url = "https://github.com/ros-gbp/twist_mux-release/archive/release/noetic/twist_mux/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "71e3e5b1d10125f0fed59a044ff37eddc799ed27c0a944fe319dbe0cece79844";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin rostest ];
+  buildInputs = [ rostest ];
   checkInputs = [ rospy rostopic ];
   propagatedBuildInputs = [ diagnostic-updater geometry-msgs roscpp std-msgs twist-mux-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];

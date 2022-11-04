@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ effort-controllers geometry-msgs joint-state-controller joint-trajectory-controller position-controllers roscpp rospy std-msgs velocity-controllers ];
   nativeBuildInputs = [ catkin ];
 

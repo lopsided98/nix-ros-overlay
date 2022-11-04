@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ catkin libusb1 openssl pkg-config udev ];
+  buildInputs = [ libusb1 openssl pkg-config udev ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

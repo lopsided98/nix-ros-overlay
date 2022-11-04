@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ gtest lcov rdl-cmake ];
   propagatedBuildInputs = [ doxygen eigen graphviz ];
   nativeBuildInputs = [ catkin ];

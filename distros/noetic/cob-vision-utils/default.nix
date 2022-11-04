@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cv-bridge roscpp visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

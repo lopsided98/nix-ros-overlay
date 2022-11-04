@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ hector-pose-estimation hector-pose-estimation-core message-to-tf ];
   nativeBuildInputs = [ catkin ];
 

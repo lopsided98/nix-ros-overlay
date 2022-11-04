@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ gazebo-video-monitor-msgs gazebo-video-monitor-plugins ];
   nativeBuildInputs = [ catkin ];
 

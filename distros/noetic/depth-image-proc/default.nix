@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, cv-bridge, eigen-conversions, image-geometry, image-transport, message-filters, nodelet, rostest, sensor-msgs, stereo-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-depth-image-proc";
-  version = "1.16.0-r1";
+  version = "1.17.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/depth_image_proc/1.16.0-1.tar.gz";
-    name = "1.16.0-1.tar.gz";
-    sha256 = "e128d95349edb03074707f85d3a5d2eb46cf00e24c3c8dff1d6c0e44a316ca8a";
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/depth_image_proc/1.17.0-1.tar.gz";
+    name = "1.17.0-1.tar.gz";
+    sha256 = "7c544ac45766a57cb9375a00c56156ecec07133c4ebf1166b7325712df69020f";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cmake-modules message-filters sensor-msgs stereo-msgs ];
+  buildInputs = [ cmake-modules message-filters stereo-msgs ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ boost cv-bridge eigen-conversions image-geometry image-transport nodelet tf2 tf2-ros ];
+  propagatedBuildInputs = [ boost cv-bridge eigen-conversions image-geometry image-transport nodelet sensor-msgs tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

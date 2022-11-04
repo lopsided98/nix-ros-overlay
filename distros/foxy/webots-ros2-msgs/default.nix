@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, vision-msgs }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-msgs";
-  version = "1.2.3-r2";
+  version = "2022.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_msgs/1.2.3-2.tar.gz";
-    name = "1.2.3-2.tar.gz";
-    sha256 = "936e1c8e676c5964c5ec75c81c2c9ce0d398b12015932b10f0e7784410155335";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_msgs/2022.1.3-1.tar.gz";
+    name = "2022.1.3-1.tar.gz";
+    sha256 = "a946ab675bad0a7ff371c536750c6e1d41f2fd3d63b7a35e4ea902bdd7422df7";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake rosidl-default-generators ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ builtin-interfaces geometry-msgs rosidl-default-runtime std-msgs vision-msgs ];
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];

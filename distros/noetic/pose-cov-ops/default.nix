@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cmake ros-environment ];
+  buildInputs = [ ros-environment ];
   checkInputs = [ gtest rosunit ];
   propagatedBuildInputs = [ geometry-msgs mrpt2 roscpp tf2 ];
   nativeBuildInputs = [ catkin cmake ];

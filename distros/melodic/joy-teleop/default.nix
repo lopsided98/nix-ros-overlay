@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ actionlib rospy rostopic sensor-msgs teleop-tools-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ naoqi-libqi ];
   nativeBuildInputs = [ catkin ];
 

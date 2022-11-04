@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
 buildRosPackage {
   pname = "ros-noetic-audibot-description";
-  version = "0.2.1-r1";
+  version = "0.2.2-r5";
 
   src = fetchurl {
-    url = "https://github.com/robustify/audibot-release/archive/release/noetic/audibot_description/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "21dabbcc305e4cf3baf8294ed177bab0eca6f205cbe74321e51459d646b3a9a8";
+    url = "https://github.com/robustify/audibot-release/archive/release/noetic/audibot_description/0.2.2-5.tar.gz";
+    name = "0.2.2-5.tar.gz";
+    sha256 = "331949031776854babd340f7e4628a1adf80a5aab2c55addc8dea91e843be816";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ urdf xacro ];
   nativeBuildInputs = [ catkin ];
 

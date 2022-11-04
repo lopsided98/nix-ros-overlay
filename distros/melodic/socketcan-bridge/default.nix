@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ roslint rostest rosunit ];
   propagatedBuildInputs = [ can-msgs rosconsole-bridge roscpp socketcan-interface ];
   nativeBuildInputs = [ catkin ];

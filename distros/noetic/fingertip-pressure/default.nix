@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin message-generation rostest ];
+  buildInputs = [ message-generation rostest ];
   propagatedBuildInputs = [ geometry-msgs message-runtime pr2-msgs rospy std-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

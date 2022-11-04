@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cl-transforms cl-transforms-stamped roslisp tf ];
   nativeBuildInputs = [ catkin ];
 

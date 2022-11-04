@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin convex-decomposition ivcon ];
+  buildInputs = [ convex-decomposition ivcon ];
   checkInputs = [ gtest rosbash urdfdom ];
   propagatedBuildInputs = [ xacro ];
   nativeBuildInputs = [ catkin ];

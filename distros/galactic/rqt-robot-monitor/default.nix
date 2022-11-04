@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  buildInputs = [ rosidl-default-generators ];
   propagatedBuildInputs = [ diagnostic-msgs python-qt-binding python3Packages.rospkg qt-gui qt-gui-py-common rclpy rqt-gui rqt-gui-py rqt-py-common ];
   nativeBuildInputs = [ rosidl-default-generators ];
 

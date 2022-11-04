@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ pincher-arm-bringup pincher-arm-description pincher-arm-ikfast-plugin pincher-arm-moveit-config pincher-arm-moveit-demos ];
   nativeBuildInputs = [ catkin ];
 

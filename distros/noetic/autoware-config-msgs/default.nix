@@ -10,11 +10,11 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/autoware-ai/messages-release/archive/release/noetic/autoware_config_msgs/1.14.0-1.tar.gz";
     name = "1.14.0-1.tar.gz";
-    sha256 = "eafaea3c8e37f57ddb46a1f4b9cb3152ba49dec22a3cf4b13e538c70c2947ccf";
+    sha256 = "6ed8afd9b570d46d1957fd3aa581d9cc0fc16ada8f3d826c5c488d60957b39a7";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin message-generation ];
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ message-runtime std-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ];
   propagatedBuildInputs = [ libpng libusb1 ];
   nativeBuildInputs = [ cmake ];
 

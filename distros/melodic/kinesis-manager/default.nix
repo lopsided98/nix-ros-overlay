@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ catkin cmake pkg-config ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ aws-common boost curl log4cplus openssl ];
   nativeBuildInputs = [ catkin cmake pkg-config ];

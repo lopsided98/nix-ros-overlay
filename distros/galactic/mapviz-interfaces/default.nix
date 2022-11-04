@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ builtin-interfaces marti-common-msgs rosidl-default-generators ];
+  buildInputs = [ builtin-interfaces marti-common-msgs ];
   propagatedBuildInputs = [ rosidl-default-runtime ];
   nativeBuildInputs = [ rosidl-default-generators ];
 

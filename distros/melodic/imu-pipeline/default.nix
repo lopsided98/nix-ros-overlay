@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ imu-processors imu-transformer ];
   nativeBuildInputs = [ catkin ];
 

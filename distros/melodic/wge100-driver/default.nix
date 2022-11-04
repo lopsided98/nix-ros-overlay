@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ wge100-camera wge100-camera-firmware ];
   nativeBuildInputs = [ catkin ];
 

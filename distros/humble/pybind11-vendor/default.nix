@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ pythonPackages.pybind11 ];
   nativeBuildInputs = [ ament-cmake ];
 

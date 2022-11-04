@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ gazebo-ros roscpp sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 

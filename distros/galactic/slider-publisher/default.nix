@@ -2,22 +2,23 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rqt-gui-py }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, python3Packages, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-galactic-slider-publisher";
-  version = "2.1.1-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/oKermorgant/slider_publisher-release/archive/release/galactic/slider_publisher/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "422dac2ae3a2d53b0314e99bf19996c72e7e1f6733dcfa4c87b894407a3a1b38";
+    url = "https://github.com/ros2-gbp/slider_publisher-release/archive/release/galactic/slider_publisher/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "7b23455d5145544c37b342f6174892fc12794eef2d9deded4575f2c2d9b87865";
   };
 
-  buildType = "ament_python";
-  propagatedBuildInputs = [ rqt-gui-py ];
+  buildType = "ament_cmake";
+  propagatedBuildInputs = [ python3Packages.numpy python3Packages.scipy rqt-gui-py ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''This packages proposes a slider-based publisher node similar to the joint_state_publisher, but that can publish any type of message.'';
+    description = ''This packages proposes a slider-based publisher node similar to the joint_state_publisher, but that can publish any type of message or call services.'';
     license = with lib.licenses; [ mit ];
   };
 }

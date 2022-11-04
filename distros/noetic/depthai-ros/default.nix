@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ depthai depthai-bridge depthai-examples depthai-ros-msgs ];
   nativeBuildInputs = [ catkin ];
 

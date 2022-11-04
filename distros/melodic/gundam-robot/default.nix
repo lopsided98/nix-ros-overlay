@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ gundam-rx78-control gundam-rx78-description gundam-rx78-gazebo ];
   nativeBuildInputs = [ catkin ];
 

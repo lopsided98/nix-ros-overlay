@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ libpcap libyamlcpp pcl pcl-conversions rclcpp rslidar-msg sensor-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

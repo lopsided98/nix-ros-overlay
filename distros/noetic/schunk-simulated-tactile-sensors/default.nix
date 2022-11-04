@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ gazebo-msgs rospy schunk-sdh ];
   nativeBuildInputs = [ catkin ];
 

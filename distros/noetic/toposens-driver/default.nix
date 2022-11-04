@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ roslaunch rostest ];
   propagatedBuildInputs = [ dynamic-reconfigure message-runtime roscpp toposens-msgs ];
   nativeBuildInputs = [ catkin ];

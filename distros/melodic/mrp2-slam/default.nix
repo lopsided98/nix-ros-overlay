@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin tf ];
+  buildInputs = [ tf ];
   propagatedBuildInputs = [ amcl gmapping map-server move-base urdf xacro ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ irobot-create-gazebo-bringup irobot-create-gazebo-plugins ];
   nativeBuildInputs = [ ament-cmake ];
 

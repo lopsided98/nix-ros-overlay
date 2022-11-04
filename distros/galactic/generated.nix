@@ -148,6 +148,8 @@ self: super: {
 
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
 
+ async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
+
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -291,6 +293,8 @@ self: super: {
  dynamixel-sdk-custom-interfaces = self.callPackage ./dynamixel-sdk-custom-interfaces {};
 
  dynamixel-sdk-examples = self.callPackage ./dynamixel-sdk-examples {};
+
+ dynamixel-workbench-msgs = self.callPackage ./dynamixel-workbench-msgs {};
 
  ecl-build = self.callPackage ./ecl-build {};
 
@@ -588,6 +592,12 @@ self: super: {
 
  key-teleop = self.callPackage ./key-teleop {};
 
+ kobuki-core = self.callPackage ./kobuki-core {};
+
+ kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
+
+ kobuki-velocity-smoother = self.callPackage ./kobuki-velocity-smoother {};
+
  lanelet2 = self.callPackage ./lanelet2 {};
 
  lanelet2-core = self.callPackage ./lanelet2-core {};
@@ -689,6 +699,8 @@ self: super: {
  marti-status-msgs = self.callPackage ./marti-status-msgs {};
 
  marti-visualization-msgs = self.callPackage ./marti-visualization-msgs {};
+
+ massrobotics-amr-sender = self.callPackage ./massrobotics-amr-sender {};
 
  mavlink = self.callPackage ./mavlink {};
 
@@ -1180,6 +1192,8 @@ self: super: {
 
  rmf-demos-maps = self.callPackage ./rmf-demos-maps {};
 
+ rmf-demos-panel = self.callPackage ./rmf-demos-panel {};
+
  rmf-demos-tasks = self.callPackage ./rmf-demos-tasks {};
 
  rmf-dispenser-msgs = self.callPackage ./rmf-dispenser-msgs {};
@@ -1365,6 +1379,8 @@ self: super: {
  rosbag2-storage-default-plugins = self.callPackage ./rosbag2-storage-default-plugins {};
 
  rosbag2-storage-mcap = self.callPackage ./rosbag2-storage-mcap {};
+
+ rosbag2-storage-mcap-testdata = self.callPackage ./rosbag2-storage-mcap-testdata {};
 
  rosbag2-test-common = self.callPackage ./rosbag2-test-common {};
 
@@ -1610,6 +1626,8 @@ self: super: {
 
  stubborn-buddies-msgs = self.callPackage ./stubborn-buddies-msgs {};
 
+ swri-console = self.callPackage ./swri-console {};
+
  swri-console-util = self.callPackage ./swri-console-util {};
 
  swri-dbw-interface = self.callPackage ./swri-dbw-interface {};
@@ -1633,6 +1651,8 @@ self: super: {
  swri-system-util = self.callPackage ./swri-system-util {};
 
  swri-transform-util = self.callPackage ./swri-transform-util {};
+
+ system-fingerprint = self.callPackage ./system-fingerprint {};
 
  system-modes = self.callPackage ./system-modes {};
 
@@ -1858,6 +1878,10 @@ self: super: {
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
 
+ vda5050-msgs = self.callPackage ./vda5050-msgs {};
+
+ vda5050-serializer = self.callPackage ./vda5050-serializer {};
+
  velocity-controllers = self.callPackage ./velocity-controllers {};
 
  velodyne = self.callPackage ./velodyne {};
@@ -1877,6 +1901,8 @@ self: super: {
  velodyne-simulator = self.callPackage ./velodyne-simulator {};
 
  vision-msgs = self.callPackage ./vision-msgs {};
+
+ vision-msgs-layers = self.callPackage ./vision-msgs-layers {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
 

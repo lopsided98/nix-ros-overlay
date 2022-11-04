@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ moose-msgs moose-viz ];
   nativeBuildInputs = [ catkin ];
 

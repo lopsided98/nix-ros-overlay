@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ avahi multimaster-msgs-fkie pythonPackages.avahi rosgraph roslib rospy std-srvs ];
   nativeBuildInputs = [ catkin ];
 

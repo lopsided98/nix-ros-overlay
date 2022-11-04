@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin, console-bridge, geometry-msgs, rostime, tf2-msgs }:
 buildRosPackage {
   pname = "ros-noetic-tf2";
-  version = "0.7.5-r1";
+  version = "0.7.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2/0.7.5-1.tar.gz";
-    name = "0.7.5-1.tar.gz";
-    sha256 = "3eae43c35b160aacc9eb89b3e8e78f8c781d80bdab58a170142f1e6254ee6fe4";
+    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2/0.7.6-1.tar.gz";
+    name = "0.7.6-1.tar.gz";
+    sha256 = "1c195dcff3720e85819e47b753ce85e26cee5da9fb7c41533cc03782333fafe5";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ console-bridge geometry-msgs rostime tf2-msgs ];
   nativeBuildInputs = [ catkin ];
 

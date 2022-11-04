@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, controller-manager, diff-drive-controller, joint-state-broadcaster, pythonPackages, rclpy, robot-state-publisher, rviz2, tf2-ros, webots-ros2-control, webots-ros2-driver }:
 buildRosPackage {
   pname = "ros-galactic-webots-ros2-turtlebot";
-  version = "1.2.3-r1";
+  version = "2022.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/galactic/webots_ros2_turtlebot/1.2.3-1.tar.gz";
-    name = "1.2.3-1.tar.gz";
-    sha256 = "fddc441acdf77079928f87ffe5b0d7502694a36487315eebc00801177db6a904";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/galactic/webots_ros2_turtlebot/2022.1.3-1.tar.gz";
+    name = "2022.1.3-1.tar.gz";
+    sha256 = "d64baf8eb25dd02fe4a6ffac1f13f1c0c6b8d2ec03115a905e8e01fedc81713b";
   };
 
   buildType = "ament_python";

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ access-point-control dynamic-reconfigure ieee80211-channels rospy ];
   nativeBuildInputs = [ catkin ];
 

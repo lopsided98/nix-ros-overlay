@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, cmake, openssl }:
 buildRosPackage {
   pname = "ros-foxy-paho-mqtt-c";
-  version = "1.3.9-r4";
+  version = "1.3.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/paho.mqtt.c-release/archive/release/foxy/paho-mqtt-c/1.3.9-4.tar.gz";
-    name = "1.3.9-4.tar.gz";
-    sha256 = "f90130ac18196616adc1a44fc5a611de0e7229714c4f4436b97cc62a45e9bb1d";
+    url = "https://github.com/nobleo/paho.mqtt.c-release/archive/release/foxy/paho-mqtt-c/1.3.11-1.tar.gz";
+    name = "1.3.11-1.tar.gz";
+    sha256 = "dfa91d1d2890fa10378f9fe24f53212b29e574d4113ad191eb91c1cbe0afb2e0";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ];
   propagatedBuildInputs = [ openssl ];
   nativeBuildInputs = [ cmake ];
 

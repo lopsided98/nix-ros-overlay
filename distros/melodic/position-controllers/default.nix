@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ controller-interface forward-command-controller pluginlib ];
   nativeBuildInputs = [ catkin ];
 

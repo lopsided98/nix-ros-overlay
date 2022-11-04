@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cmake-modules python3Packages.setuptools ];
+  buildInputs = [ cmake-modules ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ cv-bridge image-transport jsk-recognition-utils jsk-topic-tools libsiftfast nodelet posedetection-msgs roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];

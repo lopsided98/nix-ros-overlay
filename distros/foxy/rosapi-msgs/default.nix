@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, builtin-interfaces, rcl-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-rosapi-msgs";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/foxy/rosapi_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "7fdec377d59827130155d2fecfd6cf24c21c72dfea20a31e5afef33fe4864b3d";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/foxy/rosapi_msgs/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "a26a27d80a6793d7a3d18ff938cd6ed9ed0d398790578a5096fd2940c7b0742c";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-ros rosidl-default-generators ];
   propagatedBuildInputs = [ builtin-interfaces rcl-interfaces rosidl-default-runtime ];
   nativeBuildInputs = [ ament-cmake-ros rosidl-default-generators ];
 

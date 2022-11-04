@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ amcl dwa-local-planner global-planner gmapping map-server move-base ];
   nativeBuildInputs = [ catkin ];
 

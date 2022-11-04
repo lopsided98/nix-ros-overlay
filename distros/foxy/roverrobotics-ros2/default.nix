@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ rover-bringup rover-description rover-driver rover-msgs rover-navigation rover-teleop ];
   nativeBuildInputs = [ ament-cmake ];
 

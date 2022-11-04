@@ -14,9 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ curl pkg-config ];
-  nativeBuildInputs = [ ament-cmake pkg-config ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = ''Wrapper around libcurl, it provides a fixed CMake module and an ExternalProject build of it.'';

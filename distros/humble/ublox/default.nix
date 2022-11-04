@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ ublox-gps ublox-msgs ublox-serialization ];
   nativeBuildInputs = [ ament-cmake ];
 

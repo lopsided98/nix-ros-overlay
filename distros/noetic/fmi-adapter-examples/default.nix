@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ fmi-adapter roscpp rqt-plot ];
   nativeBuildInputs = [ catkin ];
 

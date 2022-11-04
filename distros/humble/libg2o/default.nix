@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ eigen libGL libGLU suitesparse ];
   nativeBuildInputs = [ ament-cmake ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ console-bridge geometry-msgs rostime tf2-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin eigen ];
+  buildInputs = [ eigen ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ baldor criutils handeye jsoncpp pluginlib rosconsole roscpp sensor-msgs tf2 tf2-eigen tf2-geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ angles forward-command-controller pluginlib rm-common roscpp sensor-msgs tf2-geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 

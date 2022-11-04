@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cmake-modules eigen open-manipulator-msgs qt5.qtbase robotis-manipulator roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -2,19 +2,19 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, gazebo-dev, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-dev, gazebo-ros, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-leo-gazebo-plugins";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_simulator-release/archive/release/noetic/leo_gazebo_plugins/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "43b9fe66780c1dc7ecb1fc3058e46100d64d4cff5bd80de8ee2ca8712332b2ba";
+    url = "https://github.com/fictionlab-gbp/leo_simulator-release/archive/release/noetic/leo_gazebo_plugins/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "b3cbb9d2f429a1bb41bbe819cc8e3bba898f48a03efb63618720ad6aa9dbef79";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin gazebo-dev roscpp ];
+  buildInputs = [ gazebo-dev gazebo-ros roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

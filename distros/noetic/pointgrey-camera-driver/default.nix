@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin curl dpkg ];
+  buildInputs = [ curl dpkg ];
   checkInputs = [ roslaunch roslint ];
   propagatedBuildInputs = [ camera-info-manager diagnostic-updater dynamic-reconfigure image-exposure-msgs image-proc image-transport libraw1394 libusb1 nodelet roscpp sensor-msgs stereo-image-proc wfov-camera-msgs ];
   nativeBuildInputs = [ catkin ];

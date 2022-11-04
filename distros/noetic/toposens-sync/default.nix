@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ code-coverage roslaunch rostest ];
   propagatedBuildInputs = [ message-runtime roscpp toposens-driver toposens-msgs ];
   nativeBuildInputs = [ catkin ];
