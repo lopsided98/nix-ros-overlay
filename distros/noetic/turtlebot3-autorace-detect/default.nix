@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cv-bridge dynamic-reconfigure geometry-msgs move-base-msgs nav-msgs python3Packages.opencv3 pythonPackages.enum34 pythonPackages.numpy rospy sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 

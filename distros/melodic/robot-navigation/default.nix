@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ costmap-queue dlux-global-planner dlux-plugins dwb-critics dwb-local-planner dwb-msgs dwb-plugins global-planner-tests locomotor locomotor-msgs locomove-base nav-2d-msgs nav-2d-utils nav-core-adapter nav-core2 nav-grid nav-grid-iterators nav-grid-pub-sub nav-grid-server ];
   nativeBuildInputs = [ catkin ];
 

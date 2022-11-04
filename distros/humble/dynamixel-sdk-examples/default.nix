@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ dynamixel-sdk dynamixel-sdk-custom-interfaces rclcpp ];
   nativeBuildInputs = [ ament-cmake ];

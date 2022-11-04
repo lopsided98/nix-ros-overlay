@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ gtest lcov ];
   propagatedBuildInputs = [ rdl-cmake rdl-dynamics roscpp roslib urdf ];
   nativeBuildInputs = [ catkin ];

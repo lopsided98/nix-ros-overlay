@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ rokubimini rokubimini-bus-manager rokubimini-ethercat rokubimini-msgs rokubimini-serial ];
   nativeBuildInputs = [ catkin ];
 

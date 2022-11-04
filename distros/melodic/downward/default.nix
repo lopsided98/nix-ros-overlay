@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ bison cacert flex python rostest ];
+  buildInputs = [ bison cacert catkin flex python rostest ];
   propagatedBuildInputs = [ gawk time ];
   nativeBuildInputs = [ catkin ];
 

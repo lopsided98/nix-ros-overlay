@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake-modules mk ];
+  buildInputs = [ catkin cmake-modules mk ];
   propagatedBuildInputs = [ libGL libGLU libjpeg libpng postgresql xorg.fontadobe100dpi xorg.fontadobe75dpi xorg.fontbh100dpi xorg.fontbh75dpi xorg.fontbhlucidatypewriter100dpi xorg.fontbhlucidatypewriter75dpi xorg.fontbitstream100dpi xorg.fontbitstream75dpi xorg.libX11 xorg.libXext ];
   nativeBuildInputs = [ catkin ];
 

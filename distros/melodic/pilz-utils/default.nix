@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ clang roscpp ];
+  buildInputs = [ catkin clang roscpp ];
   checkInputs = [ cmake-modules code-coverage rostest rosunit ];
   nativeBuildInputs = [ catkin ];
 

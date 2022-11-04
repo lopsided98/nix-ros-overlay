@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ controller-interface hardware-interface joint-trajectory-controller pluginlib realtime-tools std-msgs ];
   nativeBuildInputs = [ catkin ];
 

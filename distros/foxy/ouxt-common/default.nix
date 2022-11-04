@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ ouxt-lint-common ];
   nativeBuildInputs = [ ament-cmake ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ joint-limits-interface joint-state-publisher joint-state-publisher-gui robot-state-publisher roscpp rostime rviz sensor-msgs std-msgs urdf ];
   nativeBuildInputs = [ catkin ];
 

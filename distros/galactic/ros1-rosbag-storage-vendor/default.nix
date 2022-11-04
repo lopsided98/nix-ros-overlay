@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ boost bzip2 console-bridge gpgme openssl pkg-config pluginlib ros1-bridge ];
+  buildInputs = [ ament-cmake boost bzip2 console-bridge git gpgme openssl pkg-config pluginlib ros1-bridge ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   nativeBuildInputs = [ ament-cmake git ];
 

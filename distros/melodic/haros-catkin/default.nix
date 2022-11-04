@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin-virtualenv ];
+  buildInputs = [ catkin catkin-virtualenv ];
   propagatedBuildInputs = [ cccc cppcheck ];
   nativeBuildInputs = [ catkin ];
 

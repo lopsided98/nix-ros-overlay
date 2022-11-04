@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ color-util robot-nav-rviz-plugins robot-nav-viz-demos ];
   nativeBuildInputs = [ catkin ];
 

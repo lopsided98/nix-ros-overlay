@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ nlopt rospy swig tf tf-conversions trac-ik-lib ];
   nativeBuildInputs = [ catkin ];
 

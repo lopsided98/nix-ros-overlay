@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ uos-common-urdf uos-diffdrive-teleop uos-freespace uos-gazebo-worlds uos-maps ];
   nativeBuildInputs = [ catkin ];
 

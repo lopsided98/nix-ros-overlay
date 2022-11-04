@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ ecl-mobile-robot ];
   nativeBuildInputs = [ catkin ];
 

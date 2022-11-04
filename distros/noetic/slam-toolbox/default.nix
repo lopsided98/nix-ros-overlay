@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules ];
+  buildInputs = [ catkin cmake-modules ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ ceres-solver eigen interactive-markers libg2o liblapack map-server message-filters message-runtime nav-msgs pluginlib qt5.qtbase rosconsole roscpp sensor-msgs slam-toolbox-msgs sparse-bundle-adjustment std-msgs std-srvs suitesparse tbb tf tf2 tf2-geometry-msgs tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];

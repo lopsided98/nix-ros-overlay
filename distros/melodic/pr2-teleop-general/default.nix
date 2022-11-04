@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ actionlib actionlib-msgs angles geometry-msgs moveit-msgs polled-camera pr2-arm-kinematics pr2-common-action-msgs pr2-controller-manager pr2-controllers-msgs pr2-mannequin-mode pr2-mechanism-msgs pr2-msgs pr2-tuck-arms-action ps3joy roscpp sensor-msgs tf urdf ];
   nativeBuildInputs = [ catkin ];
 

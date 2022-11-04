@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ compressed-depth-image-transport compressed-image-transport theora-image-transport ];
   nativeBuildInputs = [ catkin ];
 

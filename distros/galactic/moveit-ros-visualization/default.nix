@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ class-loader eigen moveit-common ogre1_9 qt5.qtbase ];
+  buildInputs = [ ament-cmake class-loader eigen moveit-common ogre1_9 pkg-config qt5.qtbase ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ geometric-shapes interactive-markers moveit-ros-planning-interface moveit-ros-robot-interaction moveit-ros-warehouse object-recognition-msgs pluginlib rclcpp rclpy rviz2 tf2-eigen ];
   nativeBuildInputs = [ ament-cmake pkg-config ];

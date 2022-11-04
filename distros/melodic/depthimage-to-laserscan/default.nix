@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gtest ];
+  buildInputs = [ catkin gtest ];
   propagatedBuildInputs = [ dynamic-reconfigure image-geometry image-transport nodelet roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

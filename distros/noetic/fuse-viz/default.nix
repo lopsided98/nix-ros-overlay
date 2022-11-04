@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ qt5.qtbase ];
+  buildInputs = [ catkin qt5.qtbase ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ eigen fuse-constraints fuse-core fuse-msgs fuse-variables geometry-msgs rviz tf2-geometry-msgs ];
   nativeBuildInputs = [ catkin ];

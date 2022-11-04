@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
+  buildInputs = [ cmake ];
   propagatedBuildInputs = [ rmf-traffic ];
   nativeBuildInputs = [ cmake ];
 

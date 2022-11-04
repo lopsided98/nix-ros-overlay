@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ base-local-planner costmap-2d roscpp ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,9 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ fmt generate-parameter-library-py parameter-traits rclcpp rclcpp-lifecycle tcb-span ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake generate-parameter-library-py ];
 
   meta = {
     description = ''CMake to generate ROS parameter library.'';

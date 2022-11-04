@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ khi-duaro-moveit-config khi-robot-bringup khi-robot-control khi-robot-msgs khi-rs007l-moveit-config khi-rs007n-moveit-config khi-rs080n-moveit-config moveit-commander rostest ];
   propagatedBuildInputs = [ khi-robot-msgs rospy ];
   nativeBuildInputs = [ catkin ];

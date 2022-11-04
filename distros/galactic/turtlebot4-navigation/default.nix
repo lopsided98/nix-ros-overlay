@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ament-cmake-python ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ nav2-bringup nav2-simple-commander slam-toolbox ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];

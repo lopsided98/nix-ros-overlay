@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules message-generation tf2-geometry-msgs ];
+  buildInputs = [ catkin cmake-modules message-generation tf2-geometry-msgs ];
   propagatedBuildInputs = [ actionlib base-local-planner clear-costmap-recovery costmap-2d dynamic-reconfigure geometry-msgs message-runtime move-base-msgs nav-core nav-msgs navfn pluginlib roscpp rospy rotate-recovery std-srvs tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

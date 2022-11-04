@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rostest ];
+  buildInputs = [ catkin rostest ];
   propagatedBuildInputs = [ rosgraph rostopic ];
   nativeBuildInputs = [ catkin ];
 

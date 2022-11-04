@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ mk rosbuild ];
+  buildInputs = [ catkin mk rosbuild ];
   propagatedBuildInputs = [ jsk-interactive jsk-interactive-marker rospy rviz visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

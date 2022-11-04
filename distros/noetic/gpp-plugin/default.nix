@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ global-planner mbf-costmap-nav move-base rostest ];
   propagatedBuildInputs = [ costmap-2d gpp-interface mbf-costmap-core mbf-msgs nav-core pluginlib xmlrpcpp ];
   nativeBuildInputs = [ catkin ];

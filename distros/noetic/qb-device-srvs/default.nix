@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   propagatedBuildInputs = [ message-runtime qb-device-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];
 

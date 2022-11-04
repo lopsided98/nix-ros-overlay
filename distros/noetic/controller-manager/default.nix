@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin python3Packages.setuptools ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ controller-interface controller-manager-msgs hardware-interface pluginlib roscpp rosparam rospy std-msgs ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];

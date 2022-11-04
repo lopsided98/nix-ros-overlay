@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   propagatedBuildInputs = [ libgphoto2 message-runtime opencv roscpp self-test sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslaunch ];
+  buildInputs = [ catkin roslaunch ];
   propagatedBuildInputs = [ nodelet openni-camera rgbd-launch ];
   nativeBuildInputs = [ catkin ];
 

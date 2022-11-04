@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ eigen pcl-conversions tf2-eigen urdfdom-headers ];
+  buildInputs = [ ament-cmake eigen pcl-conversions tf2-eigen urdfdom-headers ];
   propagatedBuildInputs = [ cartographer cartographer-ros-msgs libyamlcpp lua5 nav-msgs pcl rclcpp sensor-msgs tf2 tf2-msgs tf2-ros visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

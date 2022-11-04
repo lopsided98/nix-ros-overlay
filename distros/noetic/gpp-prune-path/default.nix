@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ gpp-interface pluginlib ];
   nativeBuildInputs = [ catkin ];

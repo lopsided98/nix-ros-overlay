@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ gazebo gazebo-plugins roscpp ];
   nativeBuildInputs = [ catkin ];
 

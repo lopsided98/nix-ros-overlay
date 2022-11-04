@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ gps-common gpsd-client ];
   nativeBuildInputs = [ catkin ];
 

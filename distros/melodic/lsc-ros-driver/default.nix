@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ diagnostic-updater self-test ];
+  buildInputs = [ catkin diagnostic-updater self-test ];
   propagatedBuildInputs = [ roscpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 

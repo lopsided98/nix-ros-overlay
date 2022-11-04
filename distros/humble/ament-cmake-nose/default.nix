@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   propagatedBuildInputs = [ ament-cmake-core ament-cmake-test python3Packages.nose ];
-  nativeBuildInputs = [ ament-cmake-core ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-test python3Packages.nose ];
 
   meta = {
     description = ''The ability to add nose-based tests in the ament buildsystem in CMake.'';

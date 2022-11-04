@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ pddl-msgs pddl-planner pddl-planner-viewer task-compiler ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pkg-config ];
+  buildInputs = [ catkin pkg-config ];
   propagatedBuildInputs = [ gst_all_1.gst-plugins-base nettools networkmanager procps unixtools.ping ];
   nativeBuildInputs = [ catkin ];
 

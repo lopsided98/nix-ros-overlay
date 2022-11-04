@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-auto ];
+  buildInputs = [ ament-cmake ament-cmake-auto ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   nativeBuildInputs = [ ament-cmake ];
 

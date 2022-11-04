@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-cpplint ];
   propagatedBuildInputs = [ pluginlib rclcpp rclcpp-action robot-controllers-msgs ];
   nativeBuildInputs = [ ament-cmake ];

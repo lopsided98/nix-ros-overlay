@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ ffmpeg image-transport pluginlib roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

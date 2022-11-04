@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-ros ament-cmake-version ];
   checkInputs = [ ament-cmake-gmock ament-lint-auto ament-lint-common osrf-testing-tools-cpp ];
   propagatedBuildInputs = [ rcutils rosidl-runtime-c ];
   nativeBuildInputs = [ ament-cmake-ros ament-cmake-version ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ angles ];
+  buildInputs = [ angles catkin ];
   propagatedBuildInputs = [ roscpp ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ geometry-msgs message-filters nodelet roscpp roslaunch sensor-msgs tf tf2 tf2-ros tf2-sensor-msgs topic-tools ];
   nativeBuildInputs = [ catkin ];
 

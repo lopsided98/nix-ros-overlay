@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ std-srvs ];
+  buildInputs = [ catkin std-srvs ];
   propagatedBuildInputs = [ angles cv-bridge diagnostic-msgs diagnostic-updater gazebo-msgs gazebo-plugins gazebo-ros geometry-msgs image-transport message-generation message-runtime nav-msgs orocos-kdl polled-camera pr2-controller-manager pr2-hardware-interface pr2-mechanism-model pr2-msgs roscpp rospy sensor-msgs std-msgs tf urdf ];
   nativeBuildInputs = [ catkin ];
 

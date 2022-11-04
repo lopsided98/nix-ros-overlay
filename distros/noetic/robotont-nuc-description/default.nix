@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ realsense2-description robotont-description rviz urdf xacro ];
   nativeBuildInputs = [ catkin ];
 

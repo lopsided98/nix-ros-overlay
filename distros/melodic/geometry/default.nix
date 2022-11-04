@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ angles eigen-conversions kdl-conversions tf tf-conversions ];
   nativeBuildInputs = [ catkin ];
 

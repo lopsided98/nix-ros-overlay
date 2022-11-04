@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ros-environment ];
+  buildInputs = [ ament-cmake ros-environment ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ controller-manager hardware-interface pluginlib rclcpp rclcpp-lifecycle webots-ros2-driver ];
   nativeBuildInputs = [ ament-cmake ];

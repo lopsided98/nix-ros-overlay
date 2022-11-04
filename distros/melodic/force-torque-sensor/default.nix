@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cmake-modules dynamic-reconfigure geometry-msgs hardware-interface iirob-filters message-runtime pluginlib realtime-tools roscpp rosparam-handler rospy std-msgs std-srvs tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 

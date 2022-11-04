@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ pr2-moveit-config pr2-moveit-plugins ];
   nativeBuildInputs = [ catkin ];
 

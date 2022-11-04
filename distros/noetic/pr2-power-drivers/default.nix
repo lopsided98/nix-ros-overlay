@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ ocean-battery-driver power-monitor pr2-power-board ];
   nativeBuildInputs = [ catkin ];
 

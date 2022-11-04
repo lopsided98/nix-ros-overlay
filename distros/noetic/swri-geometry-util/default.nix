@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin pkg-config ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ cmake-modules cv-bridge eigen geos roscpp tf ];
   nativeBuildInputs = [ catkin pkg-config ];

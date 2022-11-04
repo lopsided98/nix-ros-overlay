@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ros-environment ];
+  buildInputs = [ catkin cmake ros-environment ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ boost box2d cppzmq dynamic-reconfigure mrpt2 nav-msgs protobuf python3 pythonPackages.pybind11 roscpp sensor-msgs tf2 tf2-geometry-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin cmake ];

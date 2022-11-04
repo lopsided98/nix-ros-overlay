@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ eigen geometry-msgs quaternion-operation roscpp rosdoc-lite tf2 tf2-geometry-msgs tf2-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ bzip2 doxygen ];
+  buildInputs = [ bzip2 cmake doxygen ];
   propagatedBuildInputs = [ eigen libjpeg liblapack libpng libv4l libxml2 opencv xorg.libX11 ];
   nativeBuildInputs = [ cmake ];
 

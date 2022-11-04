@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen-conversions ];
+  buildInputs = [ catkin eigen-conversions ];
   checkInputs = [ exotica-collision-scene-fcl-latest rosunit ];
   propagatedBuildInputs = [ exotica-core exotica-python geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ python pythonPackages.future pythonPackages.lxml ];
+  buildInputs = [ cmake python pythonPackages.future pythonPackages.lxml ];
   propagatedBuildInputs = [ catkin ];
   nativeBuildInputs = [ cmake ];
 

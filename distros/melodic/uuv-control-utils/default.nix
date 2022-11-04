@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ gazebo-msgs geometry-msgs nav-msgs pythonPackages.numpy pythonPackages.pyyaml rospy std-msgs uuv-control-msgs uuv-gazebo-ros-plugins-msgs uuv-trajectory-control uuv-world-ros-plugins-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

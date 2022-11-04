@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ diagnostic-msgs pluginlib rclcpp std-msgs ];
+  buildInputs = [ ament-cmake ament-cmake-python diagnostic-msgs pluginlib rclcpp std-msgs ];
   checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch-testing-ament-cmake launch-testing-ros ];
   propagatedBuildInputs = [ rclpy ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];

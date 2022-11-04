@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost eigen ];
+  buildInputs = [ boost catkin eigen ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ cv-bridge roscpp rospy std-msgs ];
   nativeBuildInputs = [ catkin ];

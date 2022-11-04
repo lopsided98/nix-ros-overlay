@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ rostest tf ];
   propagatedBuildInputs = [ roscpp tf2-msgs xmlrpcpp ];
   nativeBuildInputs = [ catkin ];

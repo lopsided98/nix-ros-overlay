@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gps-common gpsd pkg-config roscpp sensor-msgs ];
+  buildInputs = [ catkin gps-common gpsd pkg-config roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

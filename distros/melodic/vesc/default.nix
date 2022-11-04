@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ vesc-ackermann vesc-driver vesc-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ amcl map-server move-base stage-ros teb-local-planner ];
   nativeBuildInputs = [ catkin ];
 

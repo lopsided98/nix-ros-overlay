@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation rostest ];
+  buildInputs = [ catkin message-generation rostest ];
   checkInputs = [ geometry-msgs python3Packages.coverage python3Packages.mock python3Packages.pep8 rosservice ];
   propagatedBuildInputs = [ bondpy message-runtime nodelet python3Packages.pyyaml roslaunch rospy std-msgs std-srvs ];
   nativeBuildInputs = [ catkin ];

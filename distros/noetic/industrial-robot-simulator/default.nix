@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ control-msgs industrial-msgs industrial-robot-client python3Packages.rospkg rospy sensor-msgs trajectory-msgs ];
   nativeBuildInputs = [ catkin ];

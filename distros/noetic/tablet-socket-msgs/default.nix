@@ -10,11 +10,11 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/autoware-ai/messages-release/archive/release/noetic/tablet_socket_msgs/1.14.0-1.tar.gz";
     name = "1.14.0-1.tar.gz";
-    sha256 = "65f6bd52a23f56ee5ff3e096b3d56feb572123ab4e9961e3616df395ba59e949";
+    sha256 = "6bf111b0e4f1332a69414b38dbed9f61247e048b4018e882997ad99a93fd90f8";
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   propagatedBuildInputs = [ message-runtime std-msgs ];
   nativeBuildInputs = [ catkin ];
 

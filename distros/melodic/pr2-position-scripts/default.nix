@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ actionlib pr2-controllers-msgs rospy tf ];
   nativeBuildInputs = [ catkin ];
 

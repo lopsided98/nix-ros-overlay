@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ python3 ];
+  buildInputs = [ ament-cmake python3 ];
   checkInputs = [ ament-cmake-clang-format ament-cmake-flake8 ament-cmake-pytest ];
   propagatedBuildInputs = [ maliput pythonPackages.pybind11 ];
   nativeBuildInputs = [ ament-cmake ];

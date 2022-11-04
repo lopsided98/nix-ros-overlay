@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ doxygen ];
+  buildInputs = [ cmake doxygen ];
   propagatedBuildInputs = [ boost catkin dynamic-graph dynamic-graph-python pinocchio ];
   nativeBuildInputs = [ cmake ];
 

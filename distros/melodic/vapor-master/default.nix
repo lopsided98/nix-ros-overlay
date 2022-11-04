@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin nodePackages.npm ];
   propagatedBuildInputs = [ nodejs rospack ];
   nativeBuildInputs = [ catkin nodePackages.npm nodejs ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ diagnostic-updater lm_sensors roscpp ];
   nativeBuildInputs = [ catkin ];
 

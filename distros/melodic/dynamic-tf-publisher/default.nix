@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamic-reconfigure message-generation ];
+  buildInputs = [ catkin dynamic-reconfigure message-generation ];
   propagatedBuildInputs = [ geometry-msgs message-runtime rospy tf ];
   nativeBuildInputs = [ catkin ];
 

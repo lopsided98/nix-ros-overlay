@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ default-cfg-fkie diagnostic-msgs dynamic-reconfigure master-discovery-fkie master-sync-fkie multimaster-msgs-fkie python-qt-binding pythonPackages.docutils pythonPackages.paramiko rosgraph roslaunch roslib rosmsg rospy rosservice rqt-gui rqt-reconfigure screen xterm ];
   nativeBuildInputs = [ catkin ];
 

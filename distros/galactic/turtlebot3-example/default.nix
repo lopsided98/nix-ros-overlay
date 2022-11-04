@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ geometry-msgs nav-msgs rclpy sensor-msgs turtlebot3-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

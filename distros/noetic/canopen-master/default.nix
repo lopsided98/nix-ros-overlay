@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ boost class-loader socketcan-interface ];
   nativeBuildInputs = [ catkin ];

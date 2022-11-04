@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-clang-format ament-cmake-copyright ament-cmake-flake8 ament-cmake-gtest ament-cmake-lint-cmake ament-cmake-pep257 ament-cmake-xmllint ament-lint-auto ];
   propagatedBuildInputs = [ boost controller-interface diagnostic-msgs diagnostic-updater dynamixel-sdk hardware-interface pluginlib rclcpp realtime-tools robot-state-publisher ros2-control xacro ];
   nativeBuildInputs = [ ament-cmake ];

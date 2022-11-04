@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ dynamic-reconfigure geometry-msgs message-runtime roscpp rospy sensor-msgs serial std-msgs ];
   nativeBuildInputs = [ catkin ];

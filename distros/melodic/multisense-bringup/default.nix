@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ multisense-description multisense-ros ];
   nativeBuildInputs = [ catkin ];
 

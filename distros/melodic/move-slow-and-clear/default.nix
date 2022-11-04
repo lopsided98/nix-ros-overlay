@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules ];
+  buildInputs = [ catkin cmake-modules ];
   propagatedBuildInputs = [ costmap-2d geometry-msgs nav-core pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];
 

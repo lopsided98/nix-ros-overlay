@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ leo leo-bringup leo-fw ];
   nativeBuildInputs = [ ament-cmake ];
 

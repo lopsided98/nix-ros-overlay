@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ qb-device-bringup qb-device-control qb-device-description qb-device-driver qb-device-hardware-interface qb-device-msgs qb-device-srvs ];
   nativeBuildInputs = [ catkin ];
 

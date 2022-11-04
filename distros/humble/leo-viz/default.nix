@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ joint-state-publisher joint-state-publisher-gui leo-description rviz2 ];
   nativeBuildInputs = [ ament-cmake ];
 

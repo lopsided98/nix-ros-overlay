@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules message-generation ];
+  buildInputs = [ catkin cmake-modules message-generation ];
   checkInputs = [ rosbag rostest ];
   propagatedBuildInputs = [ ar-track-alvar-msgs cv-bridge dynamic-reconfigure geometry-msgs image-transport message-runtime pcl-conversions pcl-ros resource-retriever roscpp rospy sensor-msgs std-msgs tf tf2 tinyxml visualization-msgs ];
   nativeBuildInputs = [ catkin ];

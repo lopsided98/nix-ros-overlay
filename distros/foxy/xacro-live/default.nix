@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint launch-testing pythonPackages.pytest ];
   propagatedBuildInputs = [ joint-state-publisher-gui launch launch-ros python3Packages.watchdog rcl-interfaces rclpy robot-state-publisher rviz2 xacro ];
   nativeBuildInputs = [ ament-cmake ];

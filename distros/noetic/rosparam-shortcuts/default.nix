@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules eigen roslint ];
+  buildInputs = [ catkin cmake-modules eigen roslint ];
   propagatedBuildInputs = [ eigen-conversions roscpp ];
   nativeBuildInputs = [ catkin ];
 

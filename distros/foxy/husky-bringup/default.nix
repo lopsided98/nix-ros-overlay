@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ husky-base husky-control husky-description microstrain-inertial-driver robot-upstart urg-node velodyne-driver velodyne-pointcloud ];
   nativeBuildInputs = [ ament-cmake ];
 

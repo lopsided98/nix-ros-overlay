@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ pythonPackages.setuptools ];
   checkInputs = [ pythonPackages.mock pythonPackages.nose ];
   propagatedBuildInputs = [ cmake gtest python pythonPackages.catkin-pkg pythonPackages.empy pythonPackages.nose ];
   nativeBuildInputs = [ cmake pythonPackages.setuptools ];

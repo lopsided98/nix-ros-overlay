@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ pcl-conversions pcl-msgs pcl-ros ];
   nativeBuildInputs = [ ament-cmake ];
 

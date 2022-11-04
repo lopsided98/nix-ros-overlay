@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules message-filters sensor-msgs stereo-msgs ];
+  buildInputs = [ catkin cmake-modules message-filters sensor-msgs stereo-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ boost cv-bridge eigen-conversions image-geometry image-transport nodelet tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];

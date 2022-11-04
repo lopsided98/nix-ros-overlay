@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen ];
+  buildInputs = [ catkin eigen ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ geometric-shapes moveit-core moveit-msgs octomap pluginlib tf2-ros ];
   nativeBuildInputs = [ catkin ];

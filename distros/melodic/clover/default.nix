@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin-virtualenv ];
+  buildInputs = [ catkin catkin-virtualenv ];
   checkInputs = [ ros-pytest ];
   propagatedBuildInputs = [ cv-bridge cv-camera geographiclib geometry-msgs led-msgs mavros mavros-extras message-generation nodelet pythonPackages.lxml rosbridge-server roscpp rospy sensor-msgs std-msgs std-srvs tf tf2 tf2-geometry-msgs tf2-ros tf2-web-republisher visualization-msgs web-video-server ];
   nativeBuildInputs = [ catkin ];

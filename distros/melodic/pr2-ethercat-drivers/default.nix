@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ ethercat-hardware fingertip-pressure ];
   nativeBuildInputs = [ catkin ];
 

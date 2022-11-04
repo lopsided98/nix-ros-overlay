@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint ];
+  buildInputs = [ catkin python3Packages.setuptools roslint ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ dynamic-reconfigure python-qt-binding python3Packages.pyyaml rospy rqt-console rqt-gui rqt-gui-py rqt-py-common ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];

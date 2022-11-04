@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ python3Packages.setuptools ];
+  buildInputs = [ catkin python3Packages.setuptools ];
   propagatedBuildInputs = [ python3Packages.pydot ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cob-supported-robots ];
+  buildInputs = [ catkin cob-supported-robots ];
   propagatedBuildInputs = [ xacro ];
   nativeBuildInputs = [ catkin ];
 

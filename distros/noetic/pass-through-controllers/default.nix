@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ actionlib actionlib-msgs cartesian-trajectory-controller control-msgs controller-manager-msgs rostest xacro ];
   propagatedBuildInputs = [ actionlib cartesian-control-msgs cartesian-interface controller-interface controller-manager dynamic-reconfigure geometry-msgs hardware-interface roscpp speed-scaling-interface trajectory-msgs ];
   nativeBuildInputs = [ catkin ];

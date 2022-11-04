@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ range-sensor-layer social-navigation-layers ];
   nativeBuildInputs = [ catkin ];
 

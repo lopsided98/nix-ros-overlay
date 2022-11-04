@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ dingo-msgs dingo-viz ];
   nativeBuildInputs = [ catkin ];
 

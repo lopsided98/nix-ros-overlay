@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ grid-map-core octomap ];
   nativeBuildInputs = [ catkin ];

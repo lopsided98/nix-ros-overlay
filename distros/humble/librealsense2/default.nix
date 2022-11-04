@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ libusb1 openssl pkg-config udev ];
+  buildInputs = [ ament-cmake libusb1 openssl pkg-config udev ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

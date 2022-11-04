@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   checkInputs = [ gtest rostest ];
   propagatedBuildInputs = [ aws-ros1-common h264-encoder-core image-transport image-transport-plugins kinesis-video-msgs message-runtime sensor-msgs ];
   nativeBuildInputs = [ catkin ];

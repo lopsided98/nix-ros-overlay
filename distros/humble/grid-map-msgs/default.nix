@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ grid-map-cmake-helpers ];
+  buildInputs = [ ament-cmake grid-map-cmake-helpers ];
   propagatedBuildInputs = [ geometry-msgs rclcpp rosidl-default-generators std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ecl-build pkg-config ];
+  buildInputs = [ ament-cmake-ros ecl-build pkg-config ];
   propagatedBuildInputs = [ ecl-command-line libftdi libusb1 ];
   nativeBuildInputs = [ ament-cmake-ros ];
 

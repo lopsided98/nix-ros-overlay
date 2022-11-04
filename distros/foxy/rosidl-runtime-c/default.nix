@@ -14,9 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-ros ];
   checkInputs = [ ament-lint-auto ament-lint-common performance-test-fixture ];
   propagatedBuildInputs = [ ament-cmake rcutils rosidl-typesupport-interface ];
-  nativeBuildInputs = [ ament-cmake-ros ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-ros ];
 
   meta = {
     description = ''Generate the ROS interfaces in C.'';

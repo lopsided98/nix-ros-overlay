@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake pkg-config ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ ignition.msgs5 ignition.transport8 image-transport rclcpp ros-ign-bridge sensor-msgs ];
   nativeBuildInputs = [ ament-cmake pkg-config ];

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cob-generic-can cob-utilities roscpp ];
   nativeBuildInputs = [ catkin ];
 

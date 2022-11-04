@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ curl jq ros-environment ];
+  buildInputs = [ curl jq ros-environment rosidl-default-generators ];
   checkInputs = [ ament-cmake-gtest ament-cpplint ];
   propagatedBuildInputs = [ diagnostic-aggregator diagnostic-updater geometry-msgs lifecycle-msgs mavros-msgs microstrain-inertial-msgs nav-msgs nmea-msgs rclcpp-lifecycle rosidl-default-runtime sensor-msgs std-msgs std-srvs tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ rosidl-default-generators ];

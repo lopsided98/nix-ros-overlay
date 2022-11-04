@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ p2os-driver p2os-msgs p2os-teleop p2os-urdf ];
   nativeBuildInputs = [ catkin ];
 

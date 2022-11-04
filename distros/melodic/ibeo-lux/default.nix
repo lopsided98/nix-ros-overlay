@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ geometry-msgs ibeo-core ibeo-msgs network-interface pcl-ros roscpp std-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

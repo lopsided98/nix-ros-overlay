@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules ];
+  buildInputs = [ catkin cmake-modules ];
   propagatedBuildInputs = [ bond boost roscpp smclib util-linux ];
   nativeBuildInputs = [ catkin ];
 

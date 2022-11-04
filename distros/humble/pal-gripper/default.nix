@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ pal-gripper-controller-configuration pal-gripper-description ];
   nativeBuildInputs = [ ament-cmake ];
 

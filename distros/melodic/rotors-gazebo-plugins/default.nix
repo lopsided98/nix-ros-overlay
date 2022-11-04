@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cmake-modules cv-bridge gazebo gazebo-plugins gazebo-ros geometry-msgs glog libyamlcpp mav-msgs mavros octomap octomap-msgs octomap-ros protobuf rosbag roscpp rotors-comm rotors-control std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 

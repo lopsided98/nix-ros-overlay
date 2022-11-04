@@ -14,7 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common builtin-interfaces launch-ros launch-testing-ament-cmake ];
+  buildInputs = [ ament-cmake builtin-interfaces rosidl-default-generators ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common launch-ros launch-testing-ament-cmake ];
   propagatedBuildInputs = [ boost diagnostic-msgs diagnostic-updater eigen geographic-msgs geographiclib geometry-msgs message-filters nav-msgs rclcpp rmw-implementation rosidl-default-runtime sensor-msgs std-msgs std-srvs tf2 tf2-eigen tf2-geometry-msgs tf2-ros yaml-cpp-vendor ];
   nativeBuildInputs = [ ament-cmake builtin-interfaces rosidl-default-generators ];
 

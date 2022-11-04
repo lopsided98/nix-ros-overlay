@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ eus-assimp euscollada ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ autoconf gfortran git ];
+  buildInputs = [ autoconf catkin gfortran git ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ urdfdom-headers ];
   nativeBuildInputs = [ catkin ];
 

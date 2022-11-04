@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ qt-build ];
+  buildInputs = [ catkin qt-build ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

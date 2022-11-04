@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gst_all_1.gst-plugins-base gst_all_1.gstreamer ];
+  buildInputs = [ catkin gst_all_1.gst-plugins-base gst_all_1.gstreamer ];
   propagatedBuildInputs = [ camera-calibration-parsers camera-info-manager cv-bridge image-transport nodelet roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

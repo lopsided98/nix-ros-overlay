@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-xmllint ros-environment ];
+  buildInputs = [ ament-cmake ament-cmake-gmock ament-cmake-gtest ament-cmake-xmllint cmake ros-environment ];
   checkInputs = [ ament-lint-auto ament-lint-common gtest ];
   propagatedBuildInputs = [ geometry-msgs mrpt2 tf2 ];
   nativeBuildInputs = [ ament-cmake ament-cmake-gmock ament-cmake-gtest cmake ];

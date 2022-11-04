@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ roscpp-tutorials rospy-tutorials turtlesim ];
   nativeBuildInputs = [ catkin ];
 

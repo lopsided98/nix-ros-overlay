@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ class-loader eigen image-geometry qt5.qtbase ];
+  buildInputs = [ catkin class-loader eigen image-geometry pkg-config qt5.qtbase ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ cv-bridge geometric-shapes moveit-calibration-plugins moveit-core moveit-ros-perception moveit-ros-planning moveit-ros-planning-interface moveit-ros-visualization moveit-visual-tools pluginlib rosconsole roscpp rviz rviz-visual-tools tf2-eigen ];
   nativeBuildInputs = [ catkin pkg-config ];

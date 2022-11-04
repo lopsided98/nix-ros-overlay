@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules ];
+  buildInputs = [ catkin cmake-modules ];
   propagatedBuildInputs = [ boost class-loader rosconsole roslib tinyxml-2 ];
   nativeBuildInputs = [ catkin ];
 

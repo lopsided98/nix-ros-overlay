@@ -148,8 +148,6 @@ self: super: {
 
  astuff-sensor-msgs = self.callPackage ./astuff-sensor-msgs {};
 
- async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
-
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -396,7 +394,11 @@ self: super: {
 
  dynamixel-sdk-examples = self.callPackage ./dynamixel-sdk-examples {};
 
+ dynamixel-workbench = self.callPackage ./dynamixel-workbench {};
+
  dynamixel-workbench-msgs = self.callPackage ./dynamixel-workbench-msgs {};
+
+ dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
  ecl-build = self.callPackage ./ecl-build {};
 
@@ -1371,8 +1373,6 @@ self: super: {
  rmf-demos-gz = self.callPackage ./rmf-demos-gz {};
 
  rmf-demos-maps = self.callPackage ./rmf-demos-maps {};
-
- rmf-demos-panel = self.callPackage ./rmf-demos-panel {};
 
  rmf-demos-tasks = self.callPackage ./rmf-demos-tasks {};
 

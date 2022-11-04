@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake rmf-building-map-tools ros2run ];
   nativeBuildInputs = [ ament-cmake rmf-building-map-tools ros2run ];
 
   meta = {

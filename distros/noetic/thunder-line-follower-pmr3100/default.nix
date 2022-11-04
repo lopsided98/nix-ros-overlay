@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ controller-manager gazebo gazebo-plugins gazebo-ros geometry-msgs joint-state-publisher pythonPackages.pygame robot-state-publisher roscpp roslaunch rospy velocity-controllers xacro ];
   nativeBuildInputs = [ catkin ];
 

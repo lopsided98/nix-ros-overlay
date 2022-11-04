@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ qb-device-srvs qb-device-utils roscpp ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ python3 python3Packages.future python3Packages.lxml ];
+  buildInputs = [ ament-cmake cmake python3 python3Packages.future python3Packages.lxml ros-environment ];
   nativeBuildInputs = [ ament-cmake cmake ros-environment ];
 
   meta = {

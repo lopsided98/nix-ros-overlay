@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ class-loader qt5.qtbase ];
+  buildInputs = [ catkin class-loader qt5.qtbase ];
   propagatedBuildInputs = [ boost pluginlib rqt-gui rqt-gui-cpp rviz ];
   nativeBuildInputs = [ catkin ];
 

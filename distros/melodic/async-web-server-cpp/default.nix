@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ openssl ];
+  buildInputs = [ catkin openssl ];
   checkInputs = [ pythonPackages.websocket_client roslib rospy rostest ];
   propagatedBuildInputs = [ boost ];
   nativeBuildInputs = [ catkin ];

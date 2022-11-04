@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-auto ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ joy joy-teleop launch-pal pmb2-controller-configuration pmb2-description robot-state-publisher twist-mux ];
   nativeBuildInputs = [ ament-cmake-auto ];

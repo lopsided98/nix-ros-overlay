@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ geometry-msgs python-qt-binding pythonPackages.rospkg rostopic rqt-gui rqt-gui-py ];
   nativeBuildInputs = [ catkin ];
 

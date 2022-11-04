@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ open-manipulator-p-control-gui open-manipulator-p-controller open-manipulator-p-description open-manipulator-p-libs open-manipulator-p-teleop ];
   nativeBuildInputs = [ catkin ];
 

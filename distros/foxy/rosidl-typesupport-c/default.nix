@@ -14,10 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rosidl-typesupport-connext-c rosidl-typesupport-introspection-c ];
+  buildInputs = [ ament-cmake-ros rosidl-typesupport-connext-c rosidl-typesupport-introspection-c ];
   checkInputs = [ ament-lint-auto ament-lint-common mimick-vendor performance-test-fixture ];
   propagatedBuildInputs = [ ament-cmake-core rcpputils rcutils rosidl-runtime-c rosidl-typesupport-interface ];
-  nativeBuildInputs = [ ament-cmake-ros ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-ros ];
 
   meta = {
     description = ''Generate the type support for C messages.'';

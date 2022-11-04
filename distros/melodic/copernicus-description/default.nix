@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslaunch velodyne-description ];
+  buildInputs = [ catkin roslaunch velodyne-description ];
   propagatedBuildInputs = [ urdf xacro ];
   nativeBuildInputs = [ catkin ];
 

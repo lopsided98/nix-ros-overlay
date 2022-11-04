@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ros-environment ];
+  buildInputs = [ catkin ros-environment ];
   propagatedBuildInputs = [ boost cppzmq ncurses roslib ];
   nativeBuildInputs = [ catkin ];
 

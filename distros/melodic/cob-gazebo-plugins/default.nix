@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cob-gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];
 

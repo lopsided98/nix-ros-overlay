@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf2-eigen ];
+  buildInputs = [ catkin tf2-eigen ];
   propagatedBuildInputs = [ moveit-commander moveit-core moveit-msgs ];
   nativeBuildInputs = [ catkin ];
 

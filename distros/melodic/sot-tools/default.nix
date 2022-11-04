@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ doxygen git ];
+  buildInputs = [ cmake doxygen git ];
   propagatedBuildInputs = [ catkin dynamic-graph-python sot-core ];
   nativeBuildInputs = [ cmake ];
 

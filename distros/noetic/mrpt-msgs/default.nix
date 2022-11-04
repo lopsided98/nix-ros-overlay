@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ros-environment ];
+  buildInputs = [ catkin message-generation ros-environment ];
   propagatedBuildInputs = [ geometry-msgs message-runtime sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 

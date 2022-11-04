@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ tf2-geometry-msgs ];
+  buildInputs = [ catkin tf2-geometry-msgs ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ angles boost eigen pythonPackages.numpy roscpp sensor-msgs tf tf2 ];
   nativeBuildInputs = [ catkin ];

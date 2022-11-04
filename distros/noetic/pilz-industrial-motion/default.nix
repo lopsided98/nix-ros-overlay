@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ pilz-industrial-motion-planner pilz-msgs pilz-robot-programming ];
   nativeBuildInputs = [ catkin ];
 

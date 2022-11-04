@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ cob-supported-robots roslaunch ];
   propagatedBuildInputs = [ canopen-chain-node canopen-motor-node cob-android-script-server cob-base-controller-utils cob-base-velocity-smoother cob-bms-driver cob-calibration-data cob-cam3d-throttle cob-collision-monitor cob-collision-velocity-filter cob-command-gui cob-control-mode-adapter cob-dashboard cob-default-env-config cob-default-robot-behavior cob-default-robot-config cob-docker-control cob-frame-tracker cob-hand-bridge cob-hardware-config cob-helper-tools cob-image-flip cob-light cob-linear-nav cob-mecanum-controller cob-mimic cob-monitoring cob-moveit-config cob-obstacle-distance cob-omni-drive-controller cob-phidget-em-state cob-phidget-power-state cob-phidgets cob-reflector-referencing cob-safety-controller cob-scan-unifier cob-script-server cob-sick-lms1xx cob-sick-s300 cob-sound cob-teleop cob-twist-controller cob-voltage-control compressed-depth-image-transport compressed-image-transport controller-manager costmap-2d diagnostic-aggregator generic-throttle image-proc joint-state-controller joint-state-publisher joint-trajectory-controller joy laser-filters nodelet openni2-launch position-controllers realsense2-camera rgbd-launch robot-state-publisher rosserial-python rosserial-server rostopic rviz spacenav-node tf2-ros theora-image-transport topic-tools twist-mux usb-cam velocity-controllers ];
   nativeBuildInputs = [ catkin ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ ros-environment ];
+  buildInputs = [ catkin cmake ros-environment ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ curl openssl util-linux zlib ];
   nativeBuildInputs = [ catkin cmake ];

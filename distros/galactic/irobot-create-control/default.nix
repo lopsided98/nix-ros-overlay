@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-flake8 ament-cmake-lint-cmake ament-cmake-pep257 ament-cmake-xmllint ament-lint-auto ];
   propagatedBuildInputs = [ joint-state-broadcaster ros2-controllers ros2launch ];
   nativeBuildInputs = [ ament-cmake ];

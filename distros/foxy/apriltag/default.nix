@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ python3Packages.numpy ];
+  buildInputs = [ cmake python3Packages.numpy ];
   checkInputs = [ opencv ];
   nativeBuildInputs = [ cmake ];
 

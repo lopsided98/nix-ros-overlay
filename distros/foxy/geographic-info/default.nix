@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ geodesy geographic-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

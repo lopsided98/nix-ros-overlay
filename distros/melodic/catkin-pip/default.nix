@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ git ];
   propagatedBuildInputs = [ python pythonPackages.pip ];
   nativeBuildInputs = [ catkin ];

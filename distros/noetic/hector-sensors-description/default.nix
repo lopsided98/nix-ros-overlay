@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ hector-gazebo-thermal-camera tf tf2-ros velodyne-gazebo-plugins xacro ];
   nativeBuildInputs = [ catkin ];
 

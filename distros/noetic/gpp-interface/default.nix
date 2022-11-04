@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ costmap-2d geometry-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ boost dccomms-ros fftw fftwSinglePrec geographiclib geometry-msgs image-transport interactive-markers kdl-parser libGL libGLU libxmlxx muparser nav-msgs openscenegraph osg-interactive-markers osg-markers osg-utils pcl-ros pluginlib resource-retriever robot-state-publisher roscpp sensor-msgs tf underwater-sensor-msgs urdf uwsim-bullet uwsim-osgbullet uwsim-osgocean uwsim-osgworks xacro ];
   nativeBuildInputs = [ catkin ];
 

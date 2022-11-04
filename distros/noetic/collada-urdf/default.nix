@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ angles cmake-modules eigen ];
+  buildInputs = [ angles catkin cmake-modules eigen ];
   propagatedBuildInputs = [ assimp collada-dom collada-parser geometric-shapes resource-retriever rosconsole urdf urdfdom urdfdom-headers ];
   nativeBuildInputs = [ catkin ];
 

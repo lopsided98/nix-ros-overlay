@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ rospy wireless-msgs ];
   nativeBuildInputs = [ catkin ];
 

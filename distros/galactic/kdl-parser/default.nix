@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-ros ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ orocos-kdl urdf urdfdom-headers ];
   nativeBuildInputs = [ ament-cmake-ros ];

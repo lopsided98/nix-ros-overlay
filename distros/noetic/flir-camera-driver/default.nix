@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ flir-camera-description spinnaker-camera-driver ];
   nativeBuildInputs = [ catkin ];
 

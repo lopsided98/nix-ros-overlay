@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ dataspeed-can-msg-filters ];
+  buildInputs = [ ament-cmake dataspeed-can-msg-filters ];
   propagatedBuildInputs = [ can-msgs dataspeed-can-usb dataspeed-dbw-common dataspeed-dbw-gateway dataspeed-ulc-can dbw-fca-description dbw-fca-msgs geometry-msgs rclcpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ uuv-teleop uuv-trajectory-control ];
   nativeBuildInputs = [ catkin ];
 

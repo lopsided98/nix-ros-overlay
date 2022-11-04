@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ angles control-msgs control-toolbox controller-manager geometry-msgs hardware-interface joint-limits-interface joint-state-controller joint-trajectory-controller message-generation move-base-msgs nav-msgs pluginlib realtime-tools roscpp rostest seed-r7-description seed-smartactuator-sdk sensor-msgs std-msgs tf trajectory-msgs transmission-interface urdf ];
   nativeBuildInputs = [ catkin ];
 

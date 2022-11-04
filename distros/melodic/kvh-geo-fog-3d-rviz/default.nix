@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ qt5.qtbase qt5.qtdeclarative qt5.qtmultimedia qt5.qtsvg roslint ];
+  buildInputs = [ catkin qt5.qtbase qt5.qtdeclarative qt5.qtmultimedia qt5.qtsvg roslint ];
   propagatedBuildInputs = [ diagnostic-msgs kvh-geo-fog-3d-msgs rviz ];
   nativeBuildInputs = [ catkin ];
 

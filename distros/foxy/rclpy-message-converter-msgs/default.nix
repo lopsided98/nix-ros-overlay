@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ builtin-interfaces rosidl-default-generators ];
+  buildInputs = [ ament-cmake builtin-interfaces rosidl-default-generators ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

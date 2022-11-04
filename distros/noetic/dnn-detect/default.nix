@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cv-bridge dynamic-reconfigure image-transport image-transport-plugins roscpp sensor-msgs tf2 tf2-geometry-msgs tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ rosapi rosbridge-library rosbridge-server ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules message-generation ];
+  buildInputs = [ catkin cmake-modules message-generation ];
   checkInputs = [ roslaunch ];
   propagatedBuildInputs = [ cob-generic-can filters force-torque-sensor gazebo-ros geometry-msgs hardware-interface iirob-filters libmodbus message-runtime pluginlib realtime-tools robot-state-publisher roscpp roslaunch rosparam-handler rospy rostopic std-msgs std-srvs teleop-twist-joy tf2 tf2-geometry-msgs tf2-ros trajectory-msgs visualization-msgs xacro ];
   nativeBuildInputs = [ catkin ];

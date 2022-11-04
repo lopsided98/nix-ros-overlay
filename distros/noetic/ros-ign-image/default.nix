@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ ignition.msgs5 ignition.transport8 image-transport ros-ign-bridge roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];

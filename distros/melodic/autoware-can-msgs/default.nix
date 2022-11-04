@@ -10,11 +10,11 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/autoware-ai/messages-release/archive/release/melodic/autoware_can_msgs/1.14.0-1.tar.gz";
     name = "1.14.0-1.tar.gz";
-    sha256 = "1e50f649b44dc8ad43ccada6bec907f06e81e1568b12ae5141f2e0ff3967f8e6";
+    sha256 = "073221a49f18b6ec6f8c9212fbb04e741c50df80a186cc35844a16d15d99fb41";
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   propagatedBuildInputs = [ message-runtime std-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ bcap-core denso-robot-core ];
+  buildInputs = [ bcap-core catkin denso-robot-core ];
   propagatedBuildInputs = [ actionlib roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
 

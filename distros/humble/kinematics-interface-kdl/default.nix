@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake eigen3-cmake-module ];
   checkInputs = [ ament-cmake-gmock ros2-control-test-assets ];
   propagatedBuildInputs = [ eigen kdl-parser kinematics-interface pluginlib tf2-eigen-kdl ];
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];

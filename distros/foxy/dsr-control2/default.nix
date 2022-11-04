@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ controller-manager dsr-msgs2 hardware-interface rclcpp sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

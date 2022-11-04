@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ leo-description leo-msgs leo-teleop ];
   nativeBuildInputs = [ ament-cmake ];
 

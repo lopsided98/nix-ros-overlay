@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cartographer cartographer-ros cartographer-ros-msgs eigen-conversions message-runtime qt5.qtbase roscpp roslib rviz ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ robomaker-simulation-msgs ];
   nativeBuildInputs = [ catkin ];
 

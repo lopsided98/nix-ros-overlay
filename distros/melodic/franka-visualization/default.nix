@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ franka-description libfranka roscpp sensor-msgs xacro ];
   nativeBuildInputs = [ catkin ];
 

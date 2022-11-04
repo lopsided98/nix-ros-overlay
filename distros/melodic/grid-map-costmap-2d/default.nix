@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ costmap-2d grid-map-core tf ];
   nativeBuildInputs = [ catkin ];

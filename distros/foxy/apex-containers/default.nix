@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ament-cmake-auto ];
   checkInputs = [ ament-lint-auto ament-lint-common apex-test-tools ];
   propagatedBuildInputs = [ foonathan-memory-vendor ];
   nativeBuildInputs = [ ament-cmake ament-cmake-auto ];

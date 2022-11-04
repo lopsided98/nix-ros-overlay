@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ moveit-planners-ompl pr2-gazebo pr2-moveit-config pr2-moveit-plugins rostest ];
   propagatedBuildInputs = [ control-msgs moveit-msgs pr2eus roseus ];
   nativeBuildInputs = [ catkin ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ecl-build ];
+  buildInputs = [ catkin ecl-build ];
   propagatedBuildInputs = [ ecl-geometry ecl-linear-algebra ecl-threads ];
   nativeBuildInputs = [ catkin ];
 

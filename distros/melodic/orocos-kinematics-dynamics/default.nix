@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ orocos-kdl python-orocos-kdl ];
   nativeBuildInputs = [ catkin ];
 

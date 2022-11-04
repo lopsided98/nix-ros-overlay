@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pluginlib urdf-geometry-parser ];
+  buildInputs = [ catkin pluginlib urdf-geometry-parser ];
   checkInputs = [ controller-manager geometry-msgs rosgraph-msgs rostest std-msgs std-srvs xacro ];
   propagatedBuildInputs = [ boost controller-interface four-wheel-steering-msgs hardware-interface nav-msgs realtime-tools roscpp tf ];
   nativeBuildInputs = [ catkin ];

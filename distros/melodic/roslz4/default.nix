@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cpp-common ];
+  buildInputs = [ catkin cpp-common ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ lz4 ];
   nativeBuildInputs = [ catkin ];

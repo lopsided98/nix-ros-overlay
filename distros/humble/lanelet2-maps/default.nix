@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-core ];
   propagatedBuildInputs = [ lanelet2-core mrt-cmake-modules ];
   nativeBuildInputs = [ ament-cmake-core mrt-cmake-modules ];
 

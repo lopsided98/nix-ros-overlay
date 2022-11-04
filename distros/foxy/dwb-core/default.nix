@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ nav-2d-msgs nav2-common sensor-msgs visualization-msgs ];
+  buildInputs = [ ament-cmake nav-2d-msgs nav2-common sensor-msgs visualization-msgs ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ dwb-msgs geometry-msgs nav-2d-utils nav-msgs nav2-core nav2-costmap-2d nav2-util pluginlib rclcpp std-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];

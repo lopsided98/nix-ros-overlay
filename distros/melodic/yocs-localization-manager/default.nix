@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint ];
+  buildInputs = [ catkin roslint ];
   propagatedBuildInputs = [ actionlib ar-track-alvar ar-track-alvar-msgs dynamic-reconfigure geometry-msgs rospy std-msgs tf yocs-msgs ];
   nativeBuildInputs = [ catkin ];
 

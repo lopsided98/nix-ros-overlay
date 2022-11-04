@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ class-loader qt5.qtbase ];
+  buildInputs = [ catkin class-loader qt5.qtbase ];
   propagatedBuildInputs = [ actionlib play-motion-builder play-motion-builder-msgs play-motion-msgs roscpp rqt-gui rqt-gui-cpp sensor-msgs urdf ];
   nativeBuildInputs = [ catkin ];
 

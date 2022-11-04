@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ baldor cv-bridge geometry-msgs image-geometry python3Packages.numpy python3Packages.termcolor resource-retriever rostopic sensor-msgs std-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

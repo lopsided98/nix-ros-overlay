@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ image-publisher ros-pytest ];
   propagatedBuildInputs = [ cv-bridge dynamic-reconfigure geometry-msgs image-transport message-generation message-runtime nodelet roscpp rostest sensor-msgs std-msgs tf tf2 tf2-geometry-msgs tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin ];

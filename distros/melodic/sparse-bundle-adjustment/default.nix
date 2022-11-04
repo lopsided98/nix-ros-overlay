@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ blas eigen liblapack roscpp suitesparse ];
   nativeBuildInputs = [ catkin ];
 

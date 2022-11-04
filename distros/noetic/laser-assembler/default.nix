@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation rostest ];
+  buildInputs = [ catkin message-generation rostest ];
   propagatedBuildInputs = [ filters laser-geometry message-filters message-runtime pluginlib roscpp sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 

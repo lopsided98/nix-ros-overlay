@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ament-cmake-python ];
   checkInputs = [ launch-testing-ament-cmake ];
   propagatedBuildInputs = [ controller-manager controller-manager-msgs geometry-msgs hardware-interface pluginlib rclcpp rclcpp-lifecycle rclpy std-msgs std-srvs tf2-geometry-msgs ur-bringup ur-client-library ur-controllers ur-dashboard-msgs ur-description ur-msgs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ boost urdfdom-headers ];
+  buildInputs = [ ament-cmake ament-cmake-python boost urdfdom-headers ];
   checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-cmake ];
   propagatedBuildInputs = [ console-bridge console-bridge-vendor tinyxml2-vendor urdf urdfdom-py ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];

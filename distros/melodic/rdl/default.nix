@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ rdl-benchmark rdl-cmake rdl-dynamics rdl-msgs rdl-ros-tools rdl-urdfreader ];
   nativeBuildInputs = [ catkin ];
 

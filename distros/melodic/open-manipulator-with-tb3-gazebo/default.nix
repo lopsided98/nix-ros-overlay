@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ controller-manager gazebo-ros gazebo-ros-control urdf xacro ];
   nativeBuildInputs = [ catkin ];
 

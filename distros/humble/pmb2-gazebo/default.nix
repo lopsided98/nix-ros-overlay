@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-auto ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ gazebo-ros gazebo-ros2-control launch-pal pal-gazebo-worlds pmb2-bringup pmb2-description ];
   nativeBuildInputs = [ ament-cmake-auto ];

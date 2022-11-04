@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-clang-format ];
   propagatedBuildInputs = [ geometry-msgs pluginlib rviz-common rviz-rendering ];
   nativeBuildInputs = [ ament-cmake ];

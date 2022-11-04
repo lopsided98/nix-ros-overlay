@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ eigen geometry-msgs roscpp rostest ];
   nativeBuildInputs = [ catkin ];
 

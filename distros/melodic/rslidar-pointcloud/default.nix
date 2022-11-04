@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ pcl-conversions roslaunch rostest tf2-ros ];
+  buildInputs = [ catkin pcl-conversions roslaunch rostest tf2-ros ];
   propagatedBuildInputs = [ angles dynamic-reconfigure nodelet pcl-ros pluginlib roscpp roslib rslidar-driver rslidar-msgs sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 

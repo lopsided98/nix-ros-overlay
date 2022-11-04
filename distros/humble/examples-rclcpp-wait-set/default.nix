@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ example-interfaces rclcpp rclcpp-components std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

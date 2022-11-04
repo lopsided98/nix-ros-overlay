@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ diffbot-base diffbot-bringup diffbot-control diffbot-description diffbot-gazebo diffbot-navigation ];
   nativeBuildInputs = [ catkin ];
 

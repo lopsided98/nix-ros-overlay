@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ros-environment ];
+  buildInputs = [ ament-cmake ros-environment ];
   propagatedBuildInputs = [ git libxml2 openblas spirv-headers spirv-tools vulkan-loader ];
   nativeBuildInputs = [ ament-cmake ];
 

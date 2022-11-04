@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ open-manipulator-with-tb3-description open-manipulator-with-tb3-tools open-manipulator-with-tb3-waffle-moveit open-manipulator-with-tb3-waffle-pi-moveit ];
   nativeBuildInputs = [ catkin ];
 

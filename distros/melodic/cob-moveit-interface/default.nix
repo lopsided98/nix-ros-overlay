@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin pythonPackages.setuptools ];
   propagatedBuildInputs = [ cob-script-server geometry-msgs moveit-commander pythonPackages.six rospy tf ];
   nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 

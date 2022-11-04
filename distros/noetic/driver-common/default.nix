@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ driver-base timestamp-tools ];
   nativeBuildInputs = [ catkin ];
 

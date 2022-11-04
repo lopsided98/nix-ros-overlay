@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ dynamic-reconfigure message-generation pythonPackages.cython qt5.qtbase ];
+  buildInputs = [ catkin dynamic-reconfigure message-generation pythonPackages.cython pythonPackages.setuptools qt5.qtbase ];
   checkInputs = [ jsk-tools ];
   propagatedBuildInputs = [ eigen-conversions geometry-msgs image-geometry image-view jsk-recognition-msgs jsk-topic-tools libyamlcpp message-runtime pcl-msgs pcl-ros pythonPackages.chainer pythonPackages.scikitimage sensor-msgs std-msgs tf tf-conversions tf2-ros visualization-msgs ];
   nativeBuildInputs = [ catkin pythonPackages.setuptools ];

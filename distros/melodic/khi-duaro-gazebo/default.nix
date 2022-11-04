@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazebo-ros-control ];
+  buildInputs = [ catkin gazebo-ros-control ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

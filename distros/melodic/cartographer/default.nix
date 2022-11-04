@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ gtest pythonPackages.sphinx ];
+  buildInputs = [ catkin gtest pythonPackages.sphinx ];
   propagatedBuildInputs = [ boost cairo ceres-solver eigen gflags glog lua5 protobuf ];
   nativeBuildInputs = [ catkin ];
 

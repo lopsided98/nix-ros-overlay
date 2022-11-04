@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ ddynamic-reconfigure-python message-runtime pythonPackages.requests rc-reason-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 

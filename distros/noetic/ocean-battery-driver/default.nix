@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost ];
+  buildInputs = [ boost catkin ];
   propagatedBuildInputs = [ diagnostic-msgs diagnostic-updater log4cxx pr2-msgs roscpp ];
   nativeBuildInputs = [ catkin ];
 

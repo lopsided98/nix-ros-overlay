@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake rclcpp-lifecycle ];
+  buildInputs = [ ament-cmake rclcpp-lifecycle rosidl-default-generators ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common bond bondcpp pkg-config rclcpp util-linux ];
   propagatedBuildInputs = [ builtin-interfaces rosidl-default-runtime std-msgs ];
   nativeBuildInputs = [ rosidl-default-generators ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ angles ];
+  buildInputs = [ angles catkin ];
   propagatedBuildInputs = [ actionlib eigen fetch-auto-dock-msgs fetch-driver-msgs geometry-msgs nav-msgs roscpp roslib rospy sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 

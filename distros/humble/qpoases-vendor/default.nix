@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-auto ];
   propagatedBuildInputs = [ subversion ];
   nativeBuildInputs = [ ament-cmake-auto ];
 

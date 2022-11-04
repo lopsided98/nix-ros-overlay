@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint ];
+  buildInputs = [ catkin roslint ];
   checkInputs = [ code-coverage pilz-industrial-motion-testutils prbt-hardware-support prbt-moveit-config prbt-pg70-support python3Packages.coverage python3Packages.docopt python3Packages.mock rostest rosunit ];
   propagatedBuildInputs = [ moveit-commander pilz-industrial-motion-planner pilz-msgs python3Packages.psutil rospy tf-conversions tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];

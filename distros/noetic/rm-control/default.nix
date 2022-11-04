@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ rm-common rm-dbus rm-description rm-hw rm-msgs ];
   nativeBuildInputs = [ catkin ];
 

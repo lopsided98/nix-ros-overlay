@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
+  buildInputs = [ git ];
   checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ament-cmake-test ament-cmake-xmllint ];
   propagatedBuildInputs = [ cmake ];
   nativeBuildInputs = [ cmake git ];

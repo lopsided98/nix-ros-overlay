@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ ros-environment ];
+  buildInputs = [ catkin git ros-environment ];
   nativeBuildInputs = [ catkin git ];
 
   meta = {

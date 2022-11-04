@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ drone-assets drone-circuit-assets drone-wrapper rqt-drone-teleop rqt-ground-robot-teleop tello-driver ];
   nativeBuildInputs = [ catkin ];
 

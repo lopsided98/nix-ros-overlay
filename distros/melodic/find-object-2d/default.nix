@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   propagatedBuildInputs = [ cv-bridge image-transport message-filters message-runtime qt5.qtbase roscpp rospy sensor-msgs std-msgs std-srvs tf ];
   nativeBuildInputs = [ catkin ];
 

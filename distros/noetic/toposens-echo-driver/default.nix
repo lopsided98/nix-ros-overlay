@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cmake-modules dynamic-reconfigure genmsg message-generation message-runtime roscpp std-msgs tf tf2-ros toposens-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ amcl map-server move-base turtlebot3-bringup ];
   nativeBuildInputs = [ catkin ];
 

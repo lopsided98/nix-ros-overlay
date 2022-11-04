@@ -14,9 +14,10 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ ament-cmake-core generate-parameter-library rclcpp rclcpp-components ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-core ];
 
   meta = {
     description = ''Example usage of generate_parameter_library.'';

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ roslaunch rostest rosunit tf2-ros ];
   propagatedBuildInputs = [ angles dynamic-reconfigure libyamlcpp nodelet pcl-conversions pcl-ros pluginlib roscpp roslib sensor-msgs tf velodyne-driver velodyne-laserscan velodyne-msgs ];
   nativeBuildInputs = [ catkin ];

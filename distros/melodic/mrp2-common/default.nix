@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ mrp2-description mrp2-navigation mrp2-teleop ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rostest ];
+  buildInputs = [ catkin rostest ];
   propagatedBuildInputs = [ diagnostic-updater hddtemp lm_sensors python3Packages.psutil rospy tf ];
   nativeBuildInputs = [ catkin ];
 

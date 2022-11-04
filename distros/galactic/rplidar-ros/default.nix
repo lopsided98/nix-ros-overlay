@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-auto ament-cmake-ros ];
   propagatedBuildInputs = [ rclcpp rclcpp-components sensor-msgs std-srvs ];
   nativeBuildInputs = [ ament-cmake-auto ament-cmake-ros ];
 

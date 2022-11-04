@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation pythonPackages.catkin-pkg roslint ];
+  buildInputs = [ catkin message-generation pythonPackages.catkin-pkg roslint ];
   checkInputs = [ rosbag rostest rosunit ];
   propagatedBuildInputs = [ cmake-modules diagnostic-msgs diagnostic-updater eigen eigen-conversions geographic-msgs geographiclib geometry-msgs libyamlcpp message-filters message-runtime nav-msgs nodelet roscpp sensor-msgs std-msgs std-srvs tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];

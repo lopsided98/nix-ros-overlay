@@ -10,11 +10,11 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/autoware-ai/messages-release/archive/release/melodic/autoware_lanelet2_msgs/1.14.0-1.tar.gz";
     name = "1.14.0-1.tar.gz";
-    sha256 = "499647b4641b7b3894314e2b1855809983b2c25787db20187b41cdb0d2cd5c12";
+    sha256 = "a7a1ac35c328f23be34a4c3a48dbd7fcf0398469fdef47e0e5e778e0fb5b81ac";
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   propagatedBuildInputs = [ message-runtime std-msgs ];
   nativeBuildInputs = [ catkin ];
 

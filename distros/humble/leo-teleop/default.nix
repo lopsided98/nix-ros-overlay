@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ joy teleop-twist-joy teleop-twist-keyboard ];
   nativeBuildInputs = [ ament-cmake ];
 

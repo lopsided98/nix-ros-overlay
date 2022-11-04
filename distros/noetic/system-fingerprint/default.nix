@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ python3Packages.GitPython roslib rosnode rospy rosservice ];
   nativeBuildInputs = [ catkin ];

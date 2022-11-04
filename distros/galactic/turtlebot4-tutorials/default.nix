@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ turtlebot4-cpp-tutorials turtlebot4-python-tutorials ];
   nativeBuildInputs = [ ament-cmake ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ moveit-core roscpp ];
+  buildInputs = [ catkin moveit-core roscpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

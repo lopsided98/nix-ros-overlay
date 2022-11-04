@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rmw rmw-connext-cpp rmw-cyclonedds-cpp rmw-fastrtps-cpp ];
+  buildInputs = [ ament-cmake rmw rmw-connext-cpp rmw-cyclonedds-cpp rmw-fastrtps-cpp ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common performance-test-fixture ];
   propagatedBuildInputs = [ rcpputils rcutils rmw-implementation-cmake ];
   nativeBuildInputs = [ ament-cmake rmw-implementation-cmake ];

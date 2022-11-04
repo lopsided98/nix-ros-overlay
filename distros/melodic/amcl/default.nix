@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-filters tf2-geometry-msgs ];
+  buildInputs = [ catkin message-filters tf2-geometry-msgs ];
   checkInputs = [ map-server python-orocos-kdl rostest ];
   propagatedBuildInputs = [ diagnostic-updater dynamic-reconfigure geometry-msgs nav-msgs rosbag roscpp sensor-msgs std-srvs tf2 tf2-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];

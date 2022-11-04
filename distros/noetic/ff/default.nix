@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ bison cacert flex mk openssl rosbash rosbuild roslib rospack unzip ];
+  buildInputs = [ bison cacert catkin flex mk openssl rosbash rosbuild roslib rospack unzip ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

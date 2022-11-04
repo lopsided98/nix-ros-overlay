@@ -10,10 +10,11 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/autoware-ai/messages-release/archive/release/melodic/autoware_external_msgs/1.14.0-1.tar.gz";
     name = "1.14.0-1.tar.gz";
-    sha256 = "7c79c2c05eccebce61b3be3fd3c13d440c9014b5e1425d752732ff557e402543";
+    sha256 = "5c63a69ac01afaf5e14e3bafd269dd84cc39da498ec765a90c3c87868a5a4f1a";
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ lgsvl-msgs ];
   nativeBuildInputs = [ catkin ];
 

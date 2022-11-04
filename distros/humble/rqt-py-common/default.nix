@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-pytest python-cmake-module rosidl-default-generators rosidl-default-runtime ];
   propagatedBuildInputs = [ python-qt-binding qt-gui qt5.qtbase rclpy ];
   nativeBuildInputs = [ ament-cmake ];

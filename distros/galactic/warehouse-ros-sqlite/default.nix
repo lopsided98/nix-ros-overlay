@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ boost sqlite3-vendor ];
+  buildInputs = [ ament-cmake boost sqlite3-vendor ];
   checkInputs = [ ament-cmake-copyright ament-cmake-gtest ament-lint-auto ament-lint-common geometry-msgs ];
   propagatedBuildInputs = [ class-loader rclcpp sqlite warehouse-ros ];
   nativeBuildInputs = [ ament-cmake ];

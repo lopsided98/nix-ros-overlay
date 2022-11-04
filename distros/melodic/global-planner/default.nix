@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ angles tf2-geometry-msgs ];
+  buildInputs = [ angles catkin tf2-geometry-msgs ];
   propagatedBuildInputs = [ costmap-2d dynamic-reconfigure geometry-msgs nav-core nav-msgs navfn pluginlib roscpp tf2-ros ];
   nativeBuildInputs = [ catkin ];
 

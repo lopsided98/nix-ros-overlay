@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ xpp-examples xpp-hyq xpp-msgs xpp-quadrotor xpp-states xpp-vis ];
   nativeBuildInputs = [ catkin ];
 

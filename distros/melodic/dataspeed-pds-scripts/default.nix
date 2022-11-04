@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ dataspeed-pds-msgs rospy ];
   nativeBuildInputs = [ catkin ];
 

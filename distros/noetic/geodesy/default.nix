@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ angles python3Packages.catkin-pkg ];
+  buildInputs = [ angles catkin python3Packages.catkin-pkg python3Packages.setuptools ];
   checkInputs = [ rosunit ];
   propagatedBuildInputs = [ geographic-msgs geometry-msgs python3Packages.pyproj sensor-msgs tf unique-id uuid-msgs ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];

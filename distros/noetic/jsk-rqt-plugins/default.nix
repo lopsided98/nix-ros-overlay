@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation mk rosbuild ];
+  buildInputs = [ catkin message-generation mk rosbuild ];
   checkInputs = [ roslaunch rostest ];
   propagatedBuildInputs = [ cv-bridge image-publisher image-view2 jsk-gui-msgs message-runtime python3Packages.scikitlearn qt-gui-py-common resource-retriever rqt-gui rqt-gui-py rqt-image-view rqt-plot ];
   nativeBuildInputs = [ catkin ];

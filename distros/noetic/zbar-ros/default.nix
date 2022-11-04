@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint ];
+  buildInputs = [ catkin roslint ];
   propagatedBuildInputs = [ cv-bridge nodelet roscpp zbar ];
   nativeBuildInputs = [ catkin ];
 

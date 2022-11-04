@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-python ];
   propagatedBuildInputs = [ ament-index-python launch launch-ros xacro ];
   nativeBuildInputs = [ ament-cmake-python ];
 

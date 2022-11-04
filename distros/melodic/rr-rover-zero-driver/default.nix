@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ diagnostic-msgs geometry-msgs nav-msgs python-orocos-kdl pythonPackages.pyserial rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 

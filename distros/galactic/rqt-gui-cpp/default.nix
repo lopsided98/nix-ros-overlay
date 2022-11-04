@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ qt5.qtbase ];
+  buildInputs = [ ament-cmake qt5.qtbase ];
   propagatedBuildInputs = [ pluginlib qt-gui qt-gui-cpp rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 

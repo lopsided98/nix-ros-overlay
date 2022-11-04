@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
+  buildInputs = [ catkin cmake ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ aws-common ffmpeg ];
   nativeBuildInputs = [ catkin cmake ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ eigen ];
+  buildInputs = [ catkin eigen ];
   propagatedBuildInputs = [ gazebo-ros ];
   nativeBuildInputs = [ catkin ];
 

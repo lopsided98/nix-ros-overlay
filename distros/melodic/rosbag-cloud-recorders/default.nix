@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint ];
+  buildInputs = [ catkin roslint ];
   checkInputs = [ gtest rostest ];
   propagatedBuildInputs = [ actionlib actionlib-msgs aws-common aws-ros1-common boost file-uploader-msgs recorder-msgs rosbag-storage roscpp topic-tools xmlrpcpp ];
   nativeBuildInputs = [ catkin ];

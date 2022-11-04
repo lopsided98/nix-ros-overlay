@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ rmw-implementation-cmake ];
+  buildInputs = [ ament-cmake rmw-implementation-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common launch launch-testing ];
   propagatedBuildInputs = [ example-interfaces launch-ros rclcpp rclcpp-components rcutils rmw sensor-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake ];

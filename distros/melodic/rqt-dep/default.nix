@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ pythonPackages.mock ];
   propagatedBuildInputs = [ python-qt-binding pythonPackages.rospkg qt-dotgraph qt-gui qt-gui-py-common rqt-graph rqt-gui-py ];
   nativeBuildInputs = [ catkin ];

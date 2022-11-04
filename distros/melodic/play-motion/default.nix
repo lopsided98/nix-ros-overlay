@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ controller-manager hardware-interface joint-state-controller joint-trajectory-controller position-controllers robot-state-publisher rostest xacro ];
   propagatedBuildInputs = [ actionlib control-msgs controller-manager-msgs diagnostic-msgs diagnostic-updater moveit-ros-planning-interface play-motion-msgs roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ moveit-common ];
+  buildInputs = [ ament-cmake moveit-common ];
   checkInputs = [ ament-lint-auto ament-lint-common moveit-resources-fanuc-moveit-config ];
   propagatedBuildInputs = [ moveit-core moveit-kinematics moveit-ros-occupancy-map-monitor moveit-ros-planning pluginlib rclcpp rclcpp-action std-srvs tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];

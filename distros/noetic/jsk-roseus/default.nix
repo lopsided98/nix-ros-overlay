@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ euslisp geneus roseus ];
   nativeBuildInputs = [ catkin ];
 

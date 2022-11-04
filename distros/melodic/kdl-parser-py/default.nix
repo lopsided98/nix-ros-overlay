@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin pythonPackages.catkin-pkg pythonPackages.setuptools ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ python-orocos-kdl urdfdom-py ];
   nativeBuildInputs = [ catkin pythonPackages.catkin-pkg pythonPackages.setuptools ];

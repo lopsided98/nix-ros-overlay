@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ecl-build ];
+  buildInputs = [ ament-cmake-ros ecl-build ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ ecl-config ecl-license ecl-threads ];
   nativeBuildInputs = [ ament-cmake-ros ];

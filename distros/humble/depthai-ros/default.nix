@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ depthai depthai-bridge depthai-examples depthai-ros-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

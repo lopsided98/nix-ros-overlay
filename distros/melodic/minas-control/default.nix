@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ soem ];
+  buildInputs = [ catkin soem ];
   checkInputs = [ roslaunch rostest ];
   propagatedBuildInputs = [ controller-manager diagnostic-updater ethercat-manager hardware-interface joint-limits-interface realtime-tools sensor-msgs tinyxml trajectory-msgs transmission-interface ];
   nativeBuildInputs = [ catkin ];

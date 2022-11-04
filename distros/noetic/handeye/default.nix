@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ baldor criutils geometry-msgs message-runtime python3Packages.matplotlib python3Packages.numpy python3Packages.scipy std-msgs ];
   nativeBuildInputs = [ catkin ];

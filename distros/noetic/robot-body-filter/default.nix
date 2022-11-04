@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation pkg-config tf2-eigen tf2-sensor-msgs ];
+  buildInputs = [ catkin message-generation pkg-config tf2-eigen tf2-sensor-msgs ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ dynamic-reconfigure fcl filters geometric-shapes geometry-msgs laser-geometry message-runtime moveit-core moveit-ros-perception pcl pcl-conversions roscpp sensor-msgs std-msgs tf2 tf2-ros urdf visualization-msgs ];
   nativeBuildInputs = [ catkin ];

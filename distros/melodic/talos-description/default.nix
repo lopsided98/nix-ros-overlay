@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ rostest urdf-test ];
   propagatedBuildInputs = [ talos-description-calibration talos-description-inertial ];
   nativeBuildInputs = [ catkin ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ diagnostic-msgs diagnostic-updater geometry-msgs sensor-msgs tf2-geometry-msgs tf2-msgs ];
+  buildInputs = [ ament-cmake diagnostic-msgs diagnostic-updater geometry-msgs sensor-msgs tf2-geometry-msgs tf2-msgs ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ boost cv-bridge image-transport kdl-parser naoqi-bridge-msgs naoqi-libqi naoqi-libqicore orocos-kdl rclcpp robot-state-publisher tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];

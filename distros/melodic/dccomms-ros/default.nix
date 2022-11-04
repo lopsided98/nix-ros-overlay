@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ message-generation ];
+  buildInputs = [ catkin message-generation ];
   propagatedBuildInputs = [ actionlib actionlib-msgs dccomms-ros-msgs git message-runtime roscpp rospy std-msgs tf ];
   nativeBuildInputs = [ catkin git ];
 

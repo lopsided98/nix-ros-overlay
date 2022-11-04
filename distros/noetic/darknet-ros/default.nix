@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ rostest wget ];
   propagatedBuildInputs = [ actionlib boost cv-bridge darknet-ros-msgs image-transport message-generation nodelet opencv roscpp rospy sensor-msgs std-msgs xorg.libX11 xorg.libXext xorg.libXtst ];
   nativeBuildInputs = [ catkin ];

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ eigen nav-msgs ];
   nativeBuildInputs = [ catkin ];
 

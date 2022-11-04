@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ rostest rosunit ];
   propagatedBuildInputs = [ geometry-msgs nav-msgs pythonPackages.matplotlib pythonPackages.numpy pythonPackages.pyyaml pythonPackages.scipy roslib rospy std-msgs tf uuv-assistants uuv-control-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];

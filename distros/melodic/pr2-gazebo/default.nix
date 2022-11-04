@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ pr2-machine pr2-tuckarm rostest ];
   propagatedBuildInputs = [ diagnostic-aggregator fingertip-pressure gazebo gazebo-plugins gazebo-ros geometry-msgs image-proc joint-trajectory-action pr2-controller-configuration-gazebo pr2-controller-manager pr2-dashboard-aggregator pr2-description pr2-gazebo-plugins pr2-gripper-action pr2-head-action pr2-mechanism-controllers pr2-msgs robot-mechanism-controllers robot-pose-ekf robot-state-publisher rospy rostopic single-joint-position-action std-msgs stereo-image-proc tf2-ros topic-tools xacro ];
   nativeBuildInputs = [ catkin ];

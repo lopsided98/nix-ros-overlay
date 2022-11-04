@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ radial-menu-backend radial-menu-model radial-menu-msgs radial-menu-rviz ];
   nativeBuildInputs = [ catkin ];
 

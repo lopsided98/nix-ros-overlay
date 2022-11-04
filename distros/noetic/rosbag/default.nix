@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cpp-common python3Packages.pillow roscpp-serialization ];
+  buildInputs = [ catkin cpp-common python3Packages.pillow roscpp-serialization ];
   propagatedBuildInputs = [ boost genmsg genpy python3Packages.pycryptodomex python3Packages.python-gnupg python3Packages.rospkg rosbag-storage rosconsole roscpp roslib rospy std-srvs topic-tools xmlrpcpp ];
   nativeBuildInputs = [ catkin ];
 

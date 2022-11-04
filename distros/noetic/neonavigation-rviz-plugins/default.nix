@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ trajectory-tracker-rviz-plugins ];
   nativeBuildInputs = [ catkin ];
 

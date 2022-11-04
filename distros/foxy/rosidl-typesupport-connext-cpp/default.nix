@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ ament-cmake connext-cmake-module rcutils rmw rosidl-cmake rosidl-generator-dds-idl rosidl-parser rosidl-runtime-c rosidl-runtime-cpp rosidl-typesupport-interface ];
-  nativeBuildInputs = [ ament-cmake connext-cmake-module rosidl-cmake ];
+  nativeBuildInputs = [ ament-cmake connext-cmake-module rcutils rosidl-cmake rosidl-generator-dds-idl rosidl-runtime-c rosidl-runtime-cpp ];
 
   meta = {
     description = ''Generate the C++ interfaces for RTI Connext.'';

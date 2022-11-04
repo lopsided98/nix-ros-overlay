@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ dense-laser-assembler laser-joint-processor laser-joint-projector pr2-calibration-launch pr2-dense-laser-snapshotter pr2-se-calibration-launch ];
   nativeBuildInputs = [ catkin ];
 

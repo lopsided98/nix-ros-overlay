@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ angles common-tutorials geometry-tutorials joint-state-publisher-gui robot ros-tutorials roslint urdf-tutorial visualization-tutorials viz ];
   nativeBuildInputs = [ catkin ];
 

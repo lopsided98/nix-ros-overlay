@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ angles gazebo-dev ];
+  buildInputs = [ angles catkin gazebo-dev ];
   propagatedBuildInputs = [ actionlib boost control-msgs control-toolbox depth-image-proc fetch-description gazebo gazebo-plugins gazebo-ros image-proc nodelet rgbd-launch robot-controllers robot-controllers-interface sensor-msgs trajectory-msgs xacro ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ cmake-modules console-bridge ];
+  buildInputs = [ catkin cmake-modules console-bridge ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ boost tinyxml urdf urdfdom-py ];
   nativeBuildInputs = [ catkin ];

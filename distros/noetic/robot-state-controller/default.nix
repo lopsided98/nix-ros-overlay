@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ controller-interface kdl-parser realtime-tools rm-common roscpp tf2-kdl ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ libsForQt5.qwt qt5.qtbase roslint ];
   propagatedBuildInputs = [ ceres-solver fuse-core pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];

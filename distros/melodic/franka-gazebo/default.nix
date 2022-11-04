@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ gazebo-dev ];
+  buildInputs = [ catkin gazebo-dev ];
   checkInputs = [ geometry-msgs gtest rostest sensor-msgs ];
   propagatedBuildInputs = [ angles boost-sml control-msgs control-toolbox controller-interface controller-manager eigen-conversions franka-example-controllers franka-gripper franka-hw franka-msgs gazebo-ros gazebo-ros-control hardware-interface joint-limits-interface kdl-parser pluginlib roscpp roslaunch rospy std-msgs transmission-interface urdf ];
   nativeBuildInputs = [ catkin ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rostest ];
+  buildInputs = [ catkin rostest ];
   propagatedBuildInputs = [ mongodb-store mongodb-store-msgs roseus ];
   nativeBuildInputs = [ catkin ];
 

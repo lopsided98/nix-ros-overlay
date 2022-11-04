@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ pkg-config ];
+  buildInputs = [ ament-cmake pkg-config ];
   propagatedBuildInputs = [ libusb1 ];
   nativeBuildInputs = [ ament-cmake ];
 

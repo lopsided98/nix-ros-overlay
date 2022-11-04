@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ eigen ];
+  buildInputs = [ eigen eigen3-cmake-module ];
   checkInputs = [ ament-cmake-catch2 ament-cmake-uncrustify ];
   propagatedBuildInputs = [ rmf-traffic rmf-utils ];
   nativeBuildInputs = [ eigen3-cmake-module ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ qt5.qtbase ];
+  buildInputs = [ catkin qt5.qtbase ];
   propagatedBuildInputs = [ cv-bridge geometry-msgs image-transport rqt-gui rqt-gui-cpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

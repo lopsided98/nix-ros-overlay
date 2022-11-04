@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ nav2-common ];
+  buildInputs = [ ament-cmake nav2-common ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ angles nav-2d-msgs nav-2d-utils nav2-core nav2-msgs nav2-util pluginlib rclcpp rclcpp-action std-msgs ];
   nativeBuildInputs = [ ament-cmake ];

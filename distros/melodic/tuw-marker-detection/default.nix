@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ tuw-aruco tuw-checkerboard tuw-ellipses tuw-marker-pose-estimation ];
   nativeBuildInputs = [ catkin ];
 

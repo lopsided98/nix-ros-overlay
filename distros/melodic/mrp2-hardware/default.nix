@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ controller-interface controller-manager dynamic-reconfigure hardware-interface libusb1 nav-msgs realtime-tools roscpp rospy sensor-msgs std-msgs std-srvs tf urdf ];
   nativeBuildInputs = [ catkin ];
 

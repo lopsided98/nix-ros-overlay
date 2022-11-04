@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ moveit-common ];
+  buildInputs = [ ament-cmake moveit-common ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ controller-manager moveit-resources-panda-moveit-config moveit-ros-planning-interface robot-state-publisher rviz2 tf2-ros warehouse-ros-mongo ];
   nativeBuildInputs = [ ament-cmake ];

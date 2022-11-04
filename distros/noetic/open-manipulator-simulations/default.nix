@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ open-manipulator-gazebo ];
   nativeBuildInputs = [ catkin ];
 

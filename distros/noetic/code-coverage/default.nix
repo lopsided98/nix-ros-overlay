@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ lcov python3Packages.coverage ];
   nativeBuildInputs = [ catkin ];
 

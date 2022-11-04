@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ roslint ];
+  buildInputs = [ catkin roslint ];
   propagatedBuildInputs = [ bluez diagnostic-msgs libusb1 linuxConsoleTools pythonPackages.pybluez rosgraph rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

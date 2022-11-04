@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cv-bridge dynamic-reconfigure image-geometry marker-msgs roscpp rospy std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 

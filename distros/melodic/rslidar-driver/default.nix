@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ libpcap message-generation roslaunch rostest tf2-ros ];
+  buildInputs = [ catkin libpcap message-generation roslaunch rostest tf2-ros ];
   propagatedBuildInputs = [ angles diagnostic-updater dynamic-reconfigure message-runtime nodelet pcl pcl-conversions pcl-ros pluginlib roscpp roslib rospy rslidar-msgs sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 

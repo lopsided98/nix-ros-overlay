@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ qt5.qtbase roscpp std-msgs swri-profiler-msgs ];
   nativeBuildInputs = [ catkin qt5.qtbase ];
 

@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ camera-calibration-parsers camera-info-manager image-transport polled-camera ];
   nativeBuildInputs = [ catkin ];
 

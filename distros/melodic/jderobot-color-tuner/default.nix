@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   propagatedBuildInputs = [ cv-bridge image-transport pythonPackages.rospkg roslib rospy sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 

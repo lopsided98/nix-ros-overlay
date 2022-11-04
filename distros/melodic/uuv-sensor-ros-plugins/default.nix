@@ -14,6 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
+  buildInputs = [ catkin ];
   checkInputs = [ rostest rosunit xacro ];
   propagatedBuildInputs = [ gazebo-dev gazebo-plugins geometry-msgs image-transport laser-geometry message-filters roscpp sensor-msgs std-msgs tf tf2 tf2-ros uuv-gazebo-plugins uuv-sensor-ros-plugins-msgs ];
   nativeBuildInputs = [ catkin ];
