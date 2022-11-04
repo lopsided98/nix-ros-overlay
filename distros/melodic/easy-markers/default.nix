@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ geometry-msgs interactive-markers rospy tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];

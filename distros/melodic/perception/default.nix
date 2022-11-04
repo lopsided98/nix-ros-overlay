@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ image-common image-pipeline image-transport-plugins laser-pipeline perception-pcl ros-base vision-opencv ];
   nativeBuildInputs = [ catkin ];
 

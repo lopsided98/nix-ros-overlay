@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ actionlib cob-light cob-msgs cob-script-server diagnostic-msgs diagnostic-updater ifstat-legacy ipmitool ntp pythonPackages.mechanize pythonPackages.paramiko pythonPackages.psutil pythonPackages.requests roscpp rospy rostopic sensor-msgs std-msgs sysstat topic-tools ];
   nativeBuildInputs = [ catkin ];
 

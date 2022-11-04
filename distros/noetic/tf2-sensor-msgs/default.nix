@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, geometry-msgs, python3Packages, rospy, rostest, sensor-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-tf2-sensor-msgs";
-  version = "0.7.5-r1";
+  version = "0.7.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_sensor_msgs/0.7.5-1.tar.gz";
-    name = "0.7.5-1.tar.gz";
-    sha256 = "5ef0bd9792b53931ea38a7312e8822e9e4284947e6814476beb52baf9bcbd980";
+    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_sensor_msgs/0.7.6-1.tar.gz";
+    name = "0.7.6-1.tar.gz";
+    sha256 = "67977cf9d6c45ce1ddcd0959beafc53858075c35d7ff4b54af24c744cd84ad2c";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cmake-modules ];
+  buildInputs = [ cmake-modules ];
   checkInputs = [ geometry-msgs rostest ];
   propagatedBuildInputs = [ eigen python3Packages.pykdl rospy sensor-msgs tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];

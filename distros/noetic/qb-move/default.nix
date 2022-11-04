@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ qb-move-control qb-move-description qb-move-gazebo qb-move-hardware-interface ];
   nativeBuildInputs = [ catkin ];
 

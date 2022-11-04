@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ costmap-2d dynamic-reconfigure pluginlib roscpp rospy tf2-geometry-msgs ];
   nativeBuildInputs = [ catkin ];

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin message-generation ];
+  buildInputs = [ message-generation ];
   checkInputs = [ pythonPackages.numpy rosunit std-srvs ];
   propagatedBuildInputs = [ message-runtime roslib rospy std-msgs ];
   nativeBuildInputs = [ catkin ];

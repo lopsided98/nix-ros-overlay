@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin python3Packages.pip python3Packages.setuptools ];
+  buildInputs = [ python3Packages.pip ];
   propagatedBuildInputs = [ python3Packages.msgpack python3Packages.pymongo rosbridge-library rospy std-msgs ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 

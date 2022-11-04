@@ -2,23 +2,24 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-index-python, rclpy, rmf-building-map-msgs, rmf-fleet-msgs, rmf-traffic-msgs, rmf-visualization-msgs, std-msgs, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components, rmf-fleet-msgs, rmf-utils, rmf-visualization-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-rmf-visualization-fleet-states";
-  version = "1.2.1-r3";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/humble/rmf_visualization_fleet_states/1.2.1-3.tar.gz";
-    name = "1.2.1-3.tar.gz";
-    sha256 = "ecd3d1a273bcb3c9baea31d056cc36e85c6d5a2918c53fbdbfd3b7d0c1cf293f";
+    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/humble/rmf_visualization_fleet_states/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "73f0edf6f0f08a8bde0ad4bdc1c6f937bc97540fd1659702650bd9e1343078c9";
   };
 
-  buildType = "ament_python";
-  buildInputs = [ rmf-fleet-msgs ];
-  propagatedBuildInputs = [ ament-index-python rclpy rmf-building-map-msgs rmf-traffic-msgs rmf-visualization-msgs std-msgs visualization-msgs ];
+  buildType = "ament_cmake";
+  checkInputs = [ ament-lint-auto ament-lint-common rmf-utils ];
+  propagatedBuildInputs = [ rclcpp rclcpp-components rmf-fleet-msgs rmf-visualization-msgs visualization-msgs ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Fleet state visualizer'';
+    description = ''A package to visualize positions of robots from different fleets in the a building'';
     license = with lib.licenses; [ asl20 ];
   };
 }

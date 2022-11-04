@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ roslint ];
   propagatedBuildInputs = [ eigen roscpp tf2 tf2-geometry-msgs ];
   nativeBuildInputs = [ catkin ];

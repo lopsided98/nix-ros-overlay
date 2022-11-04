@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ access-point-control ddwrt-access-point dynamic-reconfigure hostapd-access-point linksys-access-point network-monitor-udp network-traffic-control rostest ];
   nativeBuildInputs = [ catkin ];
 

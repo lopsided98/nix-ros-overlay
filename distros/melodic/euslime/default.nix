@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin catkin-virtualenv ];
+  buildInputs = [ catkin-virtualenv ];
   propagatedBuildInputs = [ roseus slime-ros ];
   nativeBuildInputs = [ catkin ];
 

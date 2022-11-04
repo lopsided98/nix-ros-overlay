@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ python3 ];
-  nativeBuildInputs = [ ament-cmake python3 ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = ''Provide CMake module with extra functionality for Python.'';

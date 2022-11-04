@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ catkin cmake ros-environment ];
+  buildInputs = [ catkin ros-environment ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ aws-common ];
   nativeBuildInputs = [ cmake ];

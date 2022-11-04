@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake eigen ];
+  buildInputs = [ eigen ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

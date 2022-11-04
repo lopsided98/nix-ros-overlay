@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ costmap-2d dynamic-reconfigure pluginlib ];
   nativeBuildInputs = [ catkin ];
 

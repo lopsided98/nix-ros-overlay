@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin rosserial-client ];
+  buildInputs = [ rosserial-client ];
   propagatedBuildInputs = [ rospy rosserial-msgs ];
   nativeBuildInputs = [ catkin ];
 

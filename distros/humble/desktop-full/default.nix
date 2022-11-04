@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ desktop perception ros-ign-gazebo-demos simulation ];
   nativeBuildInputs = [ ament-cmake ];
 

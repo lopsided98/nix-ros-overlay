@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-auto ament-cmake-python ];
   checkInputs = [ ament-lint-auto ament-lint-common launch-testing-ament-cmake urdf-test ];
   propagatedBuildInputs = [ joint-state-publisher-gui launch launch-pal launch-ros pmb2-controller-configuration xacro ];
   nativeBuildInputs = [ ament-cmake-auto ament-cmake-python ];

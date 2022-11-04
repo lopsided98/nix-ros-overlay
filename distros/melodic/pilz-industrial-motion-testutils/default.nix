@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin eigen-conversions ];
+  buildInputs = [ eigen-conversions ];
   propagatedBuildInputs = [ moveit-commander moveit-core moveit-msgs pilz-msgs ];
   nativeBuildInputs = [ catkin ];
 

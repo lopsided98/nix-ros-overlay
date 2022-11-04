@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake git ];
   propagatedBuildInputs = [ zstd ];
   nativeBuildInputs = [ ament-cmake git ];
 

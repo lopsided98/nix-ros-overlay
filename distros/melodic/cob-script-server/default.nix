@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin message-generation pythonPackages.setuptools ];
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ actionlib actionlib-msgs cob-actions cob-light cob-mimic cob-sound control-msgs geometry-msgs message-runtime move-base-msgs pythonPackages.ipython pythonPackages.pygraphviz pythonPackages.six rospy rostest std-msgs std-srvs tf trajectory-msgs urdfdom-py ];
   nativeBuildInputs = [ catkin pythonPackages.setuptools ];
 

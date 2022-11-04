@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ eca-a9-control eca-a9-description ];
   nativeBuildInputs = [ catkin ];
 

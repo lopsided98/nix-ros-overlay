@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin mk rosbuild ];
+  buildInputs = [ mk rosbuild ];
   propagatedBuildInputs = [ actionlib dynamic-tf-publisher geometry-msgs jsk-interactive-marker rospy visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

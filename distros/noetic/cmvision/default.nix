@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin message-generation ];
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ cv-bridge fltk message-runtime roscpp sensor-msgs std-msgs wxGTK ];
   nativeBuildInputs = [ catkin ];
 

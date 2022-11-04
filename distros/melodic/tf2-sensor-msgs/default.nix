@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cmake-modules ];
+  buildInputs = [ cmake-modules ];
   checkInputs = [ geometry-msgs rostest ];
   propagatedBuildInputs = [ eigen python-orocos-kdl rospy sensor-msgs tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ code-coverage pilz-testutils roslaunch rostest rosunit ];
   propagatedBuildInputs = [ roscpp roslaunch rviz sensor-msgs ];
   nativeBuildInputs = [ catkin ];

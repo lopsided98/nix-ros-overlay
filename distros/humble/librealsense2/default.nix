@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb1, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-humble-librealsense2";
-  version = "2.51.1-r1";
+  version = "2.51.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/humble/librealsense2/2.51.1-1.tar.gz";
-    name = "2.51.1-1.tar.gz";
-    sha256 = "e6970ca7544d90a7f9c7a65e90f051de94cef50eac31550d973f82f8544bb6e5";
+    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/humble/librealsense2/2.51.1-2.tar.gz";
+    name = "2.51.1-2.tar.gz";
+    sha256 = "32dc72f786c742dd110357cda1d3fb8b60841a53fe63b3aba4d9560f025494c2";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake libusb1 openssl pkg-config udev ];
+  buildInputs = [ libusb1 openssl pkg-config udev ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

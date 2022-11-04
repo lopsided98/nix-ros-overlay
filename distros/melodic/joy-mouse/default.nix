@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-joy-mouse";
-  version = "0.1.15-r1";
+  version = "0.1.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/melodic/joy_mouse/0.1.15-1.tar.gz";
-    name = "0.1.15-1.tar.gz";
-    sha256 = "8e7eba70145bec09fab24a6a6f14d29cc555390924b154ceb8fb2b0a62540fd2";
+    url = "https://github.com/tork-a/jsk_control-release/archive/release/melodic/joy_mouse/0.1.16-1.tar.gz";
+    name = "0.1.16-1.tar.gz";
+    sha256 = "84854fafbddce5196ff24be375d857dabea63062d3a973f6f2ce7b3c4636b6fc";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ pythonPackages.pyudev rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

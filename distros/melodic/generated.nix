@@ -2404,6 +2404,8 @@ self: super: {
 
  multisense-ros = self.callPackage ./multisense-ros {};
 
+ mvsim = self.callPackage ./mvsim {};
+
  nanomsg = self.callPackage ./nanomsg {};
 
  nao-meshes = self.callPackage ./nao-meshes {};
@@ -3063,8 +3065,6 @@ self: super: {
  qb-device-description = self.callPackage ./qb-device-description {};
 
  qb-device-driver = self.callPackage ./qb-device-driver {};
-
- qb-device-gazebo = self.callPackage ./qb-device-gazebo {};
 
  qb-device-hardware-interface = self.callPackage ./qb-device-hardware-interface {};
 
@@ -3955,6 +3955,8 @@ self: super: {
  smach-msgs = self.callPackage ./smach-msgs {};
 
  smach-ros = self.callPackage ./smach-ros {};
+
+ smach-viewer = self.callPackage ./smach-viewer {};
 
  smclib = self.callPackage ./smclib {};
 

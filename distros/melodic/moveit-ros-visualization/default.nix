@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin class-loader eigen ogre1_9 pkg-config qt5.qtbase ];
+  buildInputs = [ class-loader eigen ogre1_9 qt5.qtbase ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ geometric-shapes interactive-markers moveit-ros-perception moveit-ros-planning-interface moveit-ros-robot-interaction moveit-ros-warehouse object-recognition-msgs pluginlib rosconsole roscpp rospy rviz tf2-eigen ];
   nativeBuildInputs = [ catkin pkg-config ];

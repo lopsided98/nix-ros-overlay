@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-python ament-cmake-ros builtin-interfaces python-cmake-module rclcpp rclpy ];
+  buildInputs = [ builtin-interfaces rclcpp rclpy ];
   checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto sensor-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake-python ament-cmake-ros python-cmake-module ];
 

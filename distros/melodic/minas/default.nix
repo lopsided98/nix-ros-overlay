@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ ethercat-manager minas-control tra1-bringup tra1-description tra1-moveit-config ];
   nativeBuildInputs = [ catkin ];
 

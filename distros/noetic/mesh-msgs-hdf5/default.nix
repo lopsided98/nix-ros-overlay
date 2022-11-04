@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ hdf5-map-io label-manager mesh-msgs ];
   nativeBuildInputs = [ catkin ];
 

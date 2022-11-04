@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ cv-bridge rclcpp sensor-msgs std-msgs zbar ];
   nativeBuildInputs = [ ament-cmake ];

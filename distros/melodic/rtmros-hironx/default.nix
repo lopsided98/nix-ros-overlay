@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ hironx-calibration hironx-moveit-config hironx-ros-bridge ];
   nativeBuildInputs = [ catkin ];
 

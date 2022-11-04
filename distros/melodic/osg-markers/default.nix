@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ openscenegraph roscpp roslib tf visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 

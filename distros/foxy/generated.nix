@@ -148,6 +148,8 @@ self: super: {
 
  astuff-sensor-msgs = self.callPackage ./astuff-sensor-msgs {};
 
+ async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
+
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -393,6 +395,8 @@ self: super: {
  dynamixel-sdk-custom-interfaces = self.callPackage ./dynamixel-sdk-custom-interfaces {};
 
  dynamixel-sdk-examples = self.callPackage ./dynamixel-sdk-examples {};
+
+ dynamixel-workbench-msgs = self.callPackage ./dynamixel-workbench-msgs {};
 
  ecl-build = self.callPackage ./ecl-build {};
 
@@ -672,6 +676,18 @@ self: super: {
 
  io-context = self.callPackage ./io-context {};
 
+ jackal-control = self.callPackage ./jackal-control {};
+
+ jackal-description = self.callPackage ./jackal-description {};
+
+ jackal-gazebo = self.callPackage ./jackal-gazebo {};
+
+ jackal-msgs = self.callPackage ./jackal-msgs {};
+
+ jackal-navigation = self.callPackage ./jackal-navigation {};
+
+ jackal-simulator = self.callPackage ./jackal-simulator {};
+
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
 
  joint-state-controller = self.callPackage ./joint-state-controller {};
@@ -699,6 +715,10 @@ self: super: {
  kobuki-firmware = self.callPackage ./kobuki-firmware {};
 
  kobuki-ftdi = self.callPackage ./kobuki-ftdi {};
+
+ kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
+
+ kobuki-velocity-smoother = self.callPackage ./kobuki-velocity-smoother {};
 
  lanelet2 = self.callPackage ./lanelet2 {};
 
@@ -941,6 +961,8 @@ self: super: {
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
  multires-image = self.callPackage ./multires-image {};
+
+ mvsim = self.callPackage ./mvsim {};
 
  naoqi-bridge-msgs = self.callPackage ./naoqi-bridge-msgs {};
 
@@ -1350,6 +1372,8 @@ self: super: {
 
  rmf-demos-maps = self.callPackage ./rmf-demos-maps {};
 
+ rmf-demos-panel = self.callPackage ./rmf-demos-panel {};
+
  rmf-demos-tasks = self.callPackage ./rmf-demos-tasks {};
 
  rmf-dispenser-msgs = self.callPackage ./rmf-dispenser-msgs {};
@@ -1531,6 +1555,8 @@ self: super: {
  rosbag2-storage-default-plugins = self.callPackage ./rosbag2-storage-default-plugins {};
 
  rosbag2-storage-mcap = self.callPackage ./rosbag2-storage-mcap {};
+
+ rosbag2-storage-mcap-testdata = self.callPackage ./rosbag2-storage-mcap-testdata {};
 
  rosbag2-test-common = self.callPackage ./rosbag2-test-common {};
 
@@ -1789,6 +1815,8 @@ self: super: {
  stubborn-buddies = self.callPackage ./stubborn-buddies {};
 
  stubborn-buddies-msgs = self.callPackage ./stubborn-buddies-msgs {};
+
+ swri-console = self.callPackage ./swri-console {};
 
  swri-console-util = self.callPackage ./swri-console-util {};
 
@@ -2051,6 +2079,10 @@ self: super: {
  wiimote = self.callPackage ./wiimote {};
 
  wiimote-msgs = self.callPackage ./wiimote-msgs {};
+
+ wireless-msgs = self.callPackage ./wireless-msgs {};
+
+ wireless-watcher = self.callPackage ./wireless-watcher {};
 
  xacro = self.callPackage ./xacro {};
 

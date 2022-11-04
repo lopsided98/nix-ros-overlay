@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-ros ];
   propagatedBuildInputs = [ eigen ];
   nativeBuildInputs = [ ament-cmake-ros ];
 

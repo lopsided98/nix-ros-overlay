@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ app-manager rosbridge-server roswww sound-play ];
   nativeBuildInputs = [ catkin ];
 

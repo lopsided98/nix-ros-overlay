@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin euslisp pkg-config ];
+  buildInputs = [ euslisp pkg-config ];
   propagatedBuildInputs = [ assimp-devel roseus ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake eigen eigen3-cmake-module ];
+  buildInputs = [ eigen ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ geometry-msgs rclcpp std-msgs tf2 vrpn ];
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];

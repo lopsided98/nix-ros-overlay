@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake grid-map-cmake-helpers ];
+  buildInputs = [ grid-map-cmake-helpers ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ filters grid-map-core grid-map-msgs grid-map-ros pluginlib tbb ];
   nativeBuildInputs = [ ament-cmake ];

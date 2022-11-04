@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost catkin pkg-config ];
+  buildInputs = [ boost ];
   checkInputs = [ rosbash ];
   nativeBuildInputs = [ catkin pkg-config ];
 

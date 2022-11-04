@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, camera-info-manager, catkin, cv-bridge, dynamic-reconfigure, image-transport, nodelet, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-image-publisher";
-  version = "1.16.0-r1";
+  version = "1.17.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/image_publisher/1.16.0-1.tar.gz";
-    name = "1.16.0-1.tar.gz";
-    sha256 = "04cdb1afadfb60be9f09d024cdd364c76c5a2d3719809e9bf7d78fb83a7fa93e";
+    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/image_publisher/1.17.0-1.tar.gz";
+    name = "1.17.0-1.tar.gz";
+    sha256 = "15be9b1351cefc1273f612e713fb90710162aacf49e78d6afe61c9cc6bcf9877";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ camera-info-manager cv-bridge dynamic-reconfigure image-transport nodelet roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

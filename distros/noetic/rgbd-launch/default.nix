@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ depth-image-proc image-proc nodelet tf2-ros ];
   nativeBuildInputs = [ catkin ];

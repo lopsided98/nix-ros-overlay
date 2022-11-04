@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin message-generation python3Packages.setuptools ];
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ cob-msgs cob-script-server diagnostic-msgs dynamic-reconfigure message-runtime rospy std-srvs tf visualization-msgs ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 

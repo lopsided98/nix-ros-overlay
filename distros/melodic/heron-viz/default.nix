@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin roslaunch ];
+  buildInputs = [ roslaunch ];
   propagatedBuildInputs = [ heron-description joint-state-publisher rviz ];
   nativeBuildInputs = [ catkin ];
 

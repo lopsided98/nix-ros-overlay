@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ epos2-motor-controller geometry-msgs nav-msgs roscpp sensor-msgs tf ];
   nativeBuildInputs = [ catkin ];
 

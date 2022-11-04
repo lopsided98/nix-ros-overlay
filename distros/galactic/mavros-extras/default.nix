@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-python, ament-lint-auto, ament-lint-common, angles, diagnostic-msgs, diagnostic-updater, eigen, eigen-stl-containers, eigen3-cmake-module, geographic-msgs, geographiclib, geometry-msgs, gtest, libmavconn, libyamlcpp, mavlink, mavros, mavros-msgs, message-filters, nav-msgs, pluginlib, rclcpp, rclcpp-components, rcpputils, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2-eigen, tf2-ros, trajectory-msgs, urdf, visualization-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-galactic-mavros-extras";
-  version = "2.1.1-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/galactic/mavros_extras/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "fd4331b72778a697b9dad1154050f5f8b11f09c50ffde306a482fd4b613f2c54";
+    url = "https://github.com/mavlink/mavros-release/archive/release/galactic/mavros_extras/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "f92473c558cf06fd15762b1c3614cc749717b0fcb54814e45d503a4843d1a461";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-python angles ];
+  buildInputs = [ angles ];
   checkInputs = [ ament-cmake-gmock ament-cmake-gtest ament-lint-auto ament-lint-common gtest ];
   propagatedBuildInputs = [ diagnostic-msgs diagnostic-updater eigen eigen-stl-containers eigen3-cmake-module geographic-msgs geographiclib geometry-msgs libmavconn libyamlcpp mavlink mavros mavros-msgs message-filters nav-msgs pluginlib rclcpp rclcpp-components rcpputils rosidl-default-runtime sensor-msgs std-msgs std-srvs tf2-eigen tf2-ros trajectory-msgs urdf visualization-msgs yaml-cpp-vendor ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python eigen3-cmake-module ];

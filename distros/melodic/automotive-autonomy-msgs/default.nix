@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ros-environment ];
+  buildInputs = [ ros-environment ];
   propagatedBuildInputs = [ automotive-navigation-msgs automotive-platform-msgs ];
   nativeBuildInputs = [ catkin ];
 

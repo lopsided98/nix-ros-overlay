@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ actionlib libyamlcpp play-motion-builder-msgs play-motion-msgs roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];

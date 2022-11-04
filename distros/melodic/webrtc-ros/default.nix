@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin message-generation ];
+  buildInputs = [ message-generation ];
   propagatedBuildInputs = [ async-web-server-cpp cv-bridge image-transport message-runtime nodelet roscpp std-msgs webrtc ];
   nativeBuildInputs = [ catkin ];
 

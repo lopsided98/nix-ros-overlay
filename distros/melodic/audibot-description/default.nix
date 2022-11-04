@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-audibot-description";
-  version = "0.1.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/robustify/audibot-release/archive/release/melodic/audibot_description/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "82109a5c1507f56a4ebdf56aa3c731973abdad68c2539ae365300f5f68229325";
+    url = "https://github.com/robustify/audibot-release/archive/release/melodic/audibot_description/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "4327222ddf9b627ef6b9463c32cb15b769d25bcf0f54a4375910f6f6fab541de";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ urdf xacro ];
   nativeBuildInputs = [ catkin ];
 

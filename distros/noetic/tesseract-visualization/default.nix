@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ros-industrial-cmake-boilerplate ];
+  buildInputs = [ ros-industrial-cmake-boilerplate ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ console-bridge eigen tesseract-collision tesseract-common tesseract-environment tesseract-scene-graph tesseract-state-solver ];
   nativeBuildInputs = [ cmake ];

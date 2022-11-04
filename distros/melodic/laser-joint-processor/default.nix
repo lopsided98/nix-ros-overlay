@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ geometry-msgs image-geometry joint-states-settler message-filters settlerlib ];
   nativeBuildInputs = [ catkin ];
 

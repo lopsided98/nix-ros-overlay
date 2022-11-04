@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, eigen, git, graphviz }:
 buildRosPackage {
   pname = "ros-noetic-eiquadprog";
-  version = "1.2.4-r1";
+  version = "1.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/eiquadprog-ros-release/archive/release/noetic/eiquadprog/1.2.4-1.tar.gz";
-    name = "1.2.4-1.tar.gz";
-    sha256 = "fc608b62a4c3e86830aa0861fd835a6ff5818f387b896d14664243dbea6c5d89";
+    url = "https://github.com/stack-of-tasks/eiquadprog-ros-release/archive/release/noetic/eiquadprog/1.2.5-1.tar.gz";
+    name = "1.2.5-1.tar.gz";
+    sha256 = "345aec2ab0fb04454100d4d7a75b9e30b91355efe9b8796be2a584a61debae3e";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake doxygen git ];
+  buildInputs = [ doxygen git ];
   propagatedBuildInputs = [ boost catkin eigen graphviz ];
   nativeBuildInputs = [ cmake ];
 

@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, euslisp, nlopt }:
 buildRosPackage {
   pname = "ros-melodic-eus-nlopt";
-  version = "0.1.15-r1";
+  version = "0.1.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/melodic/eus_nlopt/0.1.15-1.tar.gz";
-    name = "0.1.15-1.tar.gz";
-    sha256 = "3f71d652a4f2779134b95542fc5c2618ea625f609d854c8f9f9d7e8a7d4e89aa";
+    url = "https://github.com/tork-a/jsk_control-release/archive/release/melodic/eus_nlopt/0.1.16-1.tar.gz";
+    name = "0.1.16-1.tar.gz";
+    sha256 = "2879249973022d828e30dc71b3481387661578ba4927068829d56d9ea4628e79";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cmake-modules ];
+  buildInputs = [ cmake-modules ];
   propagatedBuildInputs = [ euslisp nlopt ];
   nativeBuildInputs = [ catkin ];
 

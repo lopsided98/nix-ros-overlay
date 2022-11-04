@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ distance-map-msgs qt5.qtbase rviz ];
   nativeBuildInputs = [ catkin ];
 

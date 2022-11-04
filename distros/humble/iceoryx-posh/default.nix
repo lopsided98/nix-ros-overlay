@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake git ];
   propagatedBuildInputs = [ iceoryx-hoofs ];
   nativeBuildInputs = [ cmake git ];
 

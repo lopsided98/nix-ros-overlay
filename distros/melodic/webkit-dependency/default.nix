@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ pythonPackages.pyqt5_with_qtwebkit ];
   nativeBuildInputs = [ catkin ];
 

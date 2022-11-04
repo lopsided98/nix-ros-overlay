@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin, opencv, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-image-geometry";
-  version = "1.16.1-r1";
+  version = "1.16.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/vision_opencv-release/archive/release/noetic/image_geometry/1.16.1-1.tar.gz";
-    name = "1.16.1-1.tar.gz";
-    sha256 = "36c3f0c717a2648c81f8916c7f84565ce319e4c0c9161f14b6c01c9df9b32fa9";
+    url = "https://github.com/ros-gbp/vision_opencv-release/archive/release/noetic/image_geometry/1.16.2-1.tar.gz";
+    name = "1.16.2-1.tar.gz";
+    sha256 = "634b35652d7dd4664d03b4e095502946350a1038b2171be6e739d1efdc1e22d8";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ opencv sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin roslint ];
+  buildInputs = [ roslint ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ ar-track-alvar hironx-ros-bridge nextage-description stereo-image-proc ];
   nativeBuildInputs = [ catkin ];

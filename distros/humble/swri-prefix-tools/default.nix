@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-swri-prefix-tools";
-  version = "3.4.0-r3";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_prefix_tools/3.4.0-3.tar.gz";
-    name = "3.4.0-3.tar.gz";
-    sha256 = "845501678954dcada75c0b72eb8b2d328e82a97051e92b207da733027b01ac7b";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_prefix_tools/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "3666674b60ba2d79bca6d3a6959a68436b2ac819d94d81ea28ee9371f2f5a656";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ python3Packages.psutil ];
   nativeBuildInputs = [ ament-cmake ];
 

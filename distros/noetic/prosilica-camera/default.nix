@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin rosconsole ];
+  buildInputs = [ rosconsole ];
   propagatedBuildInputs = [ camera-calibration-parsers diagnostic-msgs diagnostic-updater dynamic-reconfigure image-transport nodelet nodelet-topic-tools polled-camera prosilica-gige-sdk roscpp self-test sensor-msgs std-msgs ];
   nativeBuildInputs = [ catkin ];
 

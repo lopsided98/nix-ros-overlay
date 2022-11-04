@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ yocs-velocity-smoother ];
   nativeBuildInputs = [ catkin ];
 

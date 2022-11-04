@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-clang-format ament-clang-tidy ament-cmake-copyright ament-cmake-gtest ament-cmake-lint-cmake ament-lint-auto ];
   propagatedBuildInputs = [ geometry-msgs tf2-eigen ];
   nativeBuildInputs = [ ament-cmake ];

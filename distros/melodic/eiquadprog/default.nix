@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, eigen, git, graphviz }:
 buildRosPackage {
   pname = "ros-melodic-eiquadprog";
-  version = "1.2.4-r1";
+  version = "1.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/eiquadprog-ros-release/archive/release/melodic/eiquadprog/1.2.4-1.tar.gz";
-    name = "1.2.4-1.tar.gz";
-    sha256 = "794c00af2e41e4656ce5bc539672653bf30515a12c514a510dcc7e9ef92c8b38";
+    url = "https://github.com/stack-of-tasks/eiquadprog-ros-release/archive/release/melodic/eiquadprog/1.2.5-1.tar.gz";
+    name = "1.2.5-1.tar.gz";
+    sha256 = "5a08fefa36a061d8221bad3128fd630bcc371d8c89778a2cde7597291606a488";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake doxygen git ];
+  buildInputs = [ doxygen git ];
   propagatedBuildInputs = [ boost catkin eigen graphviz ];
   nativeBuildInputs = [ cmake ];
 

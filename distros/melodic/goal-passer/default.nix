@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ costmap-2d nav-core pluginlib roscpp ];
   nativeBuildInputs = [ catkin ];
 

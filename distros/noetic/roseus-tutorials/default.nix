@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin roseus ];
+  buildInputs = [ roseus ];
   checkInputs = [ jsk-pcl-ros rostest ];
   propagatedBuildInputs = [ checkerboard-detector image-proc image-view2 jsk-recognition-msgs opencv-apps posedetection-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];

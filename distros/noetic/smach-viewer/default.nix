@@ -2,20 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, graphviz, gtk3, pythonPackages, rostest, smach-msgs, smach-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, graphviz, gtk3, python3Packages, rostest, smach-msgs, smach-ros, xdot }:
 buildRosPackage {
   pname = "ros-noetic-smach-viewer";
-  version = "4.0.0-r1";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/jbohren/executive_smach_visualization-release/archive/release/noetic/smach_viewer/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "9278df7babf2e3ccb008f0dd7e3bbfc858dc5891441be80136932a34e37e388e";
+    url = "https://github.com/jbohren/executive_smach_visualization-release/archive/release/noetic/smach_viewer/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "71891f3197da569f747a513c39a0024d6a70a3abb66da479986960e529b15599";
   };
 
   buildType = "catkin";
   buildInputs = [ rostest ];
-  propagatedBuildInputs = [ graphviz gtk3 pythonPackages.pygobject3 pythonPackages.wxPython smach-msgs smach-ros ];
+  propagatedBuildInputs = [ cv-bridge graphviz gtk3 python3Packages.pygobject3 python3Packages.pyqt5 python3Packages.rospkg python3Packages.wxPython_4_0 smach-msgs smach-ros xdot ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

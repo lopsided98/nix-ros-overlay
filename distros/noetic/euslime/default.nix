@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, catkin-virtualenv, roseus, slime-ros }:
 buildRosPackage {
   pname = "ros-noetic-euslime";
-  version = "1.1.2-r1";
+  version = "1.1.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/jsk-ros-pkg/euslime-release/archive/release/noetic/euslime/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "9253cf2007e79c6abd81333fca4e042c8a2aad24075d3942cb2c4f993ad84897";
+    url = "https://github.com/jsk-ros-pkg/euslime-release/archive/release/noetic/euslime/1.1.4-2.tar.gz";
+    name = "1.1.4-2.tar.gz";
+    sha256 = "07dcb0c097b61eef4a4a614ba24ea40ef5efff4eae965a6299719e8f3862b83e";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin catkin-virtualenv ];
+  buildInputs = [ catkin-virtualenv ];
   propagatedBuildInputs = [ roseus slime-ros ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,10 +14,9 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-core ];
   checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ];
   propagatedBuildInputs = [ ament-cmake-test ament-mypy ];
-  nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-mypy ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-test ];
 
   meta = {
     description = ''The CMake API for ament_mypy to perform static type analysis on python code

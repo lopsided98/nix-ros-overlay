@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ jpeg-streamer uvc-camera ];
   nativeBuildInputs = [ catkin ];
 

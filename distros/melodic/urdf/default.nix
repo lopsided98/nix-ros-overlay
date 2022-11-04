@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cmake-modules urdf-parser-plugin ];
+  buildInputs = [ cmake-modules urdf-parser-plugin ];
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ pluginlib rosconsole-bridge roscpp tinyxml tinyxml-2 urdfdom urdfdom-headers ];
   nativeBuildInputs = [ catkin ];

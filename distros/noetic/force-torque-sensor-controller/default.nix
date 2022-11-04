@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, geometry-msgs, hardware-interface, pluginlib, realtime-tools, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-force-torque-sensor-controller";
-  version = "0.20.0-r1";
+  version = "0.21.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/force_torque_sensor_controller/0.20.0-1.tar.gz";
-    name = "0.20.0-1.tar.gz";
-    sha256 = "4f323c720b5d6cc09278570b7b135d3ae06a33b04a8c31a2c0f6050d432e335d";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/force_torque_sensor_controller/0.21.0-1.tar.gz";
+    name = "0.21.0-1.tar.gz";
+    sha256 = "32b266e7c3060f15c4c905f845dc61e3001a1088ffe0a0d74d3f5e8a0332dcd8";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin pluginlib ];
+  buildInputs = [ pluginlib ];
   propagatedBuildInputs = [ controller-interface controller-manager geometry-msgs hardware-interface realtime-tools roscpp ];
   nativeBuildInputs = [ catkin ];
 

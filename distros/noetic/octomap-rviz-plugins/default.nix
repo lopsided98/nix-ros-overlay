@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ octomap octomap-msgs qt5.qtbase roscpp rviz ];
   nativeBuildInputs = [ catkin ];
 

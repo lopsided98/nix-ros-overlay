@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ eigen geodesy geographic-msgs glog nmea-msgs quaternion-operation roscpp ];
   nativeBuildInputs = [ catkin ];
 

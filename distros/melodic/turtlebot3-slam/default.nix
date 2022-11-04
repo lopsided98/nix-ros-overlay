@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ roscpp sensor-msgs turtlebot3-bringup ];
   nativeBuildInputs = [ catkin ];
 

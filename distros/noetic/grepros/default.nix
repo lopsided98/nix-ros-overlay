@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin, genpy, python3Packages, rosbag, roslib, rospy, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-grepros";
-  version = "0.4.7-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/suurjaak/grepros-release/archive/release/noetic/grepros/0.4.7-1.tar.gz";
-    name = "0.4.7-1.tar.gz";
-    sha256 = "6d40147184d6eaff7b1912ca40cfed946127325c81c5cb00769e0619b5abc04d";
+    url = "https://github.com/suurjaak/grepros-release/archive/release/noetic/grepros/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "1bfab99d92cabcf9cc7d650bb305af8b359317e980b04d500e27f45b3c15d093";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   checkInputs = [ rostest std-msgs ];
   propagatedBuildInputs = [ genpy python3Packages.pyyaml rosbag roslib rospy ];
   nativeBuildInputs = [ catkin ];

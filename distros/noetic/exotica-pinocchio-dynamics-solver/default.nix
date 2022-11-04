@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ clang exotica-core pinocchio roscpp ];
   nativeBuildInputs = [ catkin ];
 

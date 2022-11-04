@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ boost catkin roslaunch roslint ];
+  buildInputs = [ boost roslaunch roslint ];
   propagatedBuildInputs = [ actionlib diagnostic-updater flir-ptu-description robot-state-publisher roscpp rospy sensor-msgs serial tf ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ kakasi nkf sound-play ];
   nativeBuildInputs = [ catkin ];
 

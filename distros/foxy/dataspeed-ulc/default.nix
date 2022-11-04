@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ dataspeed-ulc-can dataspeed-ulc-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

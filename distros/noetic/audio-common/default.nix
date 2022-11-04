@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ audio-capture audio-common-msgs audio-play sound-play ];
   nativeBuildInputs = [ catkin ];
 

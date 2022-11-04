@@ -70,6 +70,8 @@ self: super: {
 
  async-comm = self.callPackage ./async-comm {};
 
+ async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
+
  audibot = self.callPackage ./audibot {};
 
  audibot-description = self.callPackage ./audibot-description {};
@@ -230,7 +232,15 @@ self: super: {
 
  clober-msgs = self.callPackage ./clober-msgs {};
 
+ clpe = self.callPackage ./clpe {};
+
+ clpe-ros = self.callPackage ./clpe-ros {};
+
+ clpe-ros-msgs = self.callPackage ./clpe-ros-msgs {};
+
  cmake-modules = self.callPackage ./cmake-modules {};
+
+ cmd-vel-smoother = self.callPackage ./cmd-vel-smoother {};
 
  cmvision = self.callPackage ./cmvision {};
 
@@ -463,6 +473,8 @@ self: super: {
  compressed-image-transport = self.callPackage ./compressed-image-transport {};
 
  computer-status-msgs = self.callPackage ./computer-status-msgs {};
+
+ contact-states-observer = self.callPackage ./contact-states-observer {};
 
  control-msgs = self.callPackage ./control-msgs {};
 
@@ -803,6 +815,12 @@ self: super: {
  ethercat-trigger-controllers = self.callPackage ./ethercat-trigger-controllers {};
 
  eus-assimp = self.callPackage ./eus-assimp {};
+
+ eus-nlopt = self.callPackage ./eus-nlopt {};
+
+ eus-qp = self.callPackage ./eus-qp {};
+
+ eus-qpoases = self.callPackage ./eus-qpoases {};
 
  euscollada = self.callPackage ./euscollada {};
 
@@ -1388,19 +1406,31 @@ self: super: {
 
  joy-listener = self.callPackage ./joy-listener {};
 
+ joy-mouse = self.callPackage ./joy-mouse {};
+
  joy-teleop = self.callPackage ./joy-teleop {};
 
  joystick-interrupt = self.callPackage ./joystick-interrupt {};
+
+ jsk-calibration = self.callPackage ./jsk-calibration {};
 
  jsk-common = self.callPackage ./jsk-common {};
 
  jsk-common-msgs = self.callPackage ./jsk-common-msgs {};
 
+ jsk-control = self.callPackage ./jsk-control {};
+
+ jsk-footstep-controller = self.callPackage ./jsk-footstep-controller {};
+
  jsk-footstep-msgs = self.callPackage ./jsk-footstep-msgs {};
+
+ jsk-footstep-planner = self.callPackage ./jsk-footstep-planner {};
 
  jsk-gui-msgs = self.callPackage ./jsk-gui-msgs {};
 
  jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
+
+ jsk-ik-server = self.callPackage ./jsk-ik-server {};
 
  jsk-interactive = self.callPackage ./jsk-interactive {};
 
@@ -1780,6 +1810,8 @@ self: super: {
 
  mir-description = self.callPackage ./mir-description {};
 
+ mir-driver = self.callPackage ./mir-driver {};
+
  mir-dwb-critics = self.callPackage ./mir-dwb-critics {};
 
  mir-gazebo = self.callPackage ./mir-gazebo {};
@@ -1799,6 +1831,10 @@ self: super: {
  mocap-nokov = self.callPackage ./mocap-nokov {};
 
  mocap-optitrack = self.callPackage ./mocap-optitrack {};
+
+ mongodb-log = self.callPackage ./mongodb-log {};
+
+ mongodb-store-msgs = self.callPackage ./mongodb-store-msgs {};
 
  monkeywrench = self.callPackage ./monkeywrench {};
 
@@ -1969,6 +2005,8 @@ self: super: {
  multisense-lib = self.callPackage ./multisense-lib {};
 
  multisense-ros = self.callPackage ./multisense-ros {};
+
+ mvsim = self.callPackage ./mvsim {};
 
  nao-meshes = self.callPackage ./nao-meshes {};
 
@@ -2350,6 +2388,14 @@ self: super: {
 
  pr2-gripper-action = self.callPackage ./pr2-gripper-action {};
 
+ pr2-gripper-sensor = self.callPackage ./pr2-gripper-sensor {};
+
+ pr2-gripper-sensor-action = self.callPackage ./pr2-gripper-sensor-action {};
+
+ pr2-gripper-sensor-controller = self.callPackage ./pr2-gripper-sensor-controller {};
+
+ pr2-gripper-sensor-msgs = self.callPackage ./pr2-gripper-sensor-msgs {};
+
  pr2-hardware-interface = self.callPackage ./pr2-hardware-interface {};
 
  pr2-head-action = self.callPackage ./pr2-head-action {};
@@ -2654,6 +2700,10 @@ self: super: {
 
  robotis-manipulator = self.callPackage ./robotis-manipulator {};
 
+ robotont-description = self.callPackage ./robotont-description {};
+
+ robotont-nuc-description = self.callPackage ./robotont-nuc-description {};
+
  robotraconteur = self.callPackage ./robotraconteur {};
 
  rokubimini = self.callPackage ./rokubimini {};
@@ -2711,8 +2761,6 @@ self: super: {
  ros-pytest = self.callPackage ./ros-pytest {};
 
  ros-realtime = self.callPackage ./ros-realtime {};
-
- ros-system-fingerprint = self.callPackage ./ros-system-fingerprint {};
 
  ros-tutorials = self.callPackage ./ros-tutorials {};
 
@@ -3130,7 +3178,11 @@ self: super: {
 
  smach-ros = self.callPackage ./smach-ros {};
 
+ smach-viewer = self.callPackage ./smach-viewer {};
+
  smclib = self.callPackage ./smclib {};
+
+ snmp-ros = self.callPackage ./snmp-ros {};
 
  snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
 
@@ -3229,6 +3281,8 @@ self: super: {
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
  swri-yaml-util = self.callPackage ./swri-yaml-util {};
+
+ system-fingerprint = self.callPackage ./system-fingerprint {};
 
  tablet-socket-msgs = self.callPackage ./tablet-socket-msgs {};
 

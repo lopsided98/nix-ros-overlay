@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ qb-hand-control qb-hand-description qb-hand-hardware-interface ];
   nativeBuildInputs = [ catkin ];
 

@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, diagnostic-msgs, geometry-msgs, message-generation, message-runtime, nav-msgs, pythonPackages, roscpp, rosgraph, rospy, rospy-tutorials, rosservice, rostest, rostopic, rosunit, sensor-msgs, std-msgs, std-srvs, stereo-msgs, tf2-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rosbridge-library";
-  version = "0.11.14-r1";
+  version = "0.11.16-r2";
 
   src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/melodic/rosbridge_library/0.11.14-1.tar.gz";
-    name = "0.11.14-1.tar.gz";
-    sha256 = "b7ae2c4e2b41d4252bb47d57064a9e0f4067609f723d75845b06fd7691845481";
+    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/melodic/rosbridge_library/0.11.16-2.tar.gz";
+    name = "0.11.16-2.tar.gz";
+    sha256 = "a707fa37febd58803c65498b56779a6ff38a62cc3e10c44e1d0ff2289f152bf3";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin message-generation pythonPackages.setuptools ];
+  buildInputs = [ message-generation ];
   checkInputs = [ actionlib-msgs diagnostic-msgs nav-msgs rospy-tutorials rostest rosunit sensor-msgs std-srvs stereo-msgs tf2-msgs trajectory-msgs visualization-msgs ];
   propagatedBuildInputs = [ geometry-msgs message-runtime pythonPackages.bson pythonPackages.future pythonPackages.pillow roscpp rosgraph rospy rosservice rostopic std-msgs ];
   nativeBuildInputs = [ catkin pythonPackages.setuptools ];

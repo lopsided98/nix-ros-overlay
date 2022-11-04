@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-ros }:
 buildRosPackage {
   pname = "ros-noetic-leo-gazebo-worlds";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_simulator-release/archive/release/noetic/leo_gazebo_worlds/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "237c568012cf16c14eb896bfefc889ab164ee0b444eb8b8f6b3824ee4867acd9";
+    url = "https://github.com/fictionlab-gbp/leo_simulator-release/archive/release/noetic/leo_gazebo_worlds/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "21b32578fe4cde8d82c93691a6269cd2fba29b8b5b7ad27b77a0b7e2732e70fd";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ gazebo-ros ];
   nativeBuildInputs = [ catkin ];
 

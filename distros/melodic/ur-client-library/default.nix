@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake }:
 buildRosPackage {
   pname = "ros-melodic-ur-client-library";
-  version = "0.3.2-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_Client_Library-release/archive/release/melodic/ur_client_library/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "814891aa75084347e1e8d47794988b399236ddcda021e2e2629de5702e2eae4f";
+    url = "https://github.com/UniversalRobots/Universal_Robots_Client_Library-release/archive/release/melodic/ur_client_library/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "29497a3ff70d55204b766fe83f554492429979273e168e6e73b8a85bd9c1f4d1";
   };
 
   buildType = "cmake";
-  buildInputs = [ boost cmake ];
+  buildInputs = [ boost ];
   propagatedBuildInputs = [ catkin ];
   nativeBuildInputs = [ cmake ];
 

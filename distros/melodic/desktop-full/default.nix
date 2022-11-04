@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ desktop perception simulators urdf-sim-tutorial ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake maven openjdk ];
   checkInputs = [ cunit ];
   propagatedBuildInputs = [ openssl ];
   nativeBuildInputs = [ cmake maven openjdk ];

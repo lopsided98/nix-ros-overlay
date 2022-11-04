@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin jsoncpp ];
+  buildInputs = [ jsoncpp ];
   propagatedBuildInputs = [ boost media-export qt5.qtbase rviz ];
   nativeBuildInputs = [ catkin ];
 

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-auto openjdk ];
+  buildInputs = [ openjdk ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ cyclonedds launch-xml rclcpp rclcpp-components tf2 vrxperience-msgs ];
   nativeBuildInputs = [ ament-cmake-auto ];

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   propagatedBuildInputs = [ gazebo-ros urdf xacro ];
   nativeBuildInputs = [ ament-cmake ];
 

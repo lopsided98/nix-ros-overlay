@@ -5,16 +5,15 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, boost, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-swri-system-util";
-  version = "3.4.0-r3";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_system_util/3.4.0-3.tar.gz";
-    name = "3.4.0-3.tar.gz";
-    sha256 = "2f0d16401c7ea0ab7a2595ce79c3102160472ee83c4f4a6593ffa47e331d1063";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_system_util/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "d6bbd6c32d85ac4aa6ea8c940114ea7bf2523680b33adc6bd52d6e5584cfb999";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-index-cpp ];
   propagatedBuildInputs = [ boost rclcpp ];
   nativeBuildInputs = [ ament-cmake ];

@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ leo-example-follow-ar-tag leo-example-line-follower leo-example-object-detection ];
   nativeBuildInputs = [ catkin ];
 

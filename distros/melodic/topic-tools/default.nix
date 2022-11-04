@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin cpp-common message-generation rostest rosunit ];
+  buildInputs = [ cpp-common message-generation rostest rosunit ];
   checkInputs = [ rosbash ];
   propagatedBuildInputs = [ message-runtime rosconsole roscpp rostime std-msgs xmlrpcpp ];
   nativeBuildInputs = [ catkin ];

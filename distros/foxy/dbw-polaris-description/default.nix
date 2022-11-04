@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
   checkInputs = [ rviz2 ];
   propagatedBuildInputs = [ robot-state-publisher urdf xacro ];
   nativeBuildInputs = [ ament-cmake ];

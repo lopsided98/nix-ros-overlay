@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ nodelet pluginlib radial-menu-model radial-menu-msgs roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 

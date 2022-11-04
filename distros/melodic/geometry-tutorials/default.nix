@@ -14,7 +14,6 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
   propagatedBuildInputs = [ turtle-tf turtle-tf2 ];
   nativeBuildInputs = [ catkin ];
 
