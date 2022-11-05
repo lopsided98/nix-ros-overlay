@@ -3956,6 +3956,8 @@ self: super: {
 
  smach-ros = self.callPackage ./smach-ros {};
 
+ smach-viewer = self.callPackage ./smach-viewer {};
+
  smclib = self.callPackage ./smclib {};
 
  snowbot-operating-system = self.callPackage ./snowbot-operating-system {};

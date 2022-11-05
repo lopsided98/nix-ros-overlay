@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ openssl ];
+  buildInputs = [ ament-cmake-ros openssl ];
   checkInputs = [ launch-testing python3Packages.websocket-client ];
   propagatedBuildInputs = [ boost ];
   nativeBuildInputs = [ ament-cmake-ros ];

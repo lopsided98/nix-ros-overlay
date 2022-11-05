@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ rostest ];
+  buildInputs = [ catkin rostest ];
   propagatedBuildInputs = [ cv-bridge graphviz gtk3 pythonPackages.pygobject3 pythonPackages.pyqt5 pythonPackages.rospkg pythonPackages.wxPython smach-msgs smach-ros xdot ];
   nativeBuildInputs = [ catkin ];
 

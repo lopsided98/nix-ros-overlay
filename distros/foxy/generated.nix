@@ -148,6 +148,8 @@ self: super: {
 
  astuff-sensor-msgs = self.callPackage ./astuff-sensor-msgs {};
 
+ async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
+
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -1373,6 +1375,8 @@ self: super: {
  rmf-demos-gz = self.callPackage ./rmf-demos-gz {};
 
  rmf-demos-maps = self.callPackage ./rmf-demos-maps {};
+
+ rmf-demos-panel = self.callPackage ./rmf-demos-panel {};
 
  rmf-demos-tasks = self.callPackage ./rmf-demos-tasks {};
 

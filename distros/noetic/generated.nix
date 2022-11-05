@@ -70,6 +70,8 @@ self: super: {
 
  async-comm = self.callPackage ./async-comm {};
 
+ async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
+
  audibot = self.callPackage ./audibot {};
 
  audibot-description = self.callPackage ./audibot-description {};
@@ -1808,6 +1810,8 @@ self: super: {
 
  mir-description = self.callPackage ./mir-description {};
 
+ mir-driver = self.callPackage ./mir-driver {};
+
  mir-dwb-critics = self.callPackage ./mir-dwb-critics {};
 
  mir-gazebo = self.callPackage ./mir-gazebo {};
@@ -3174,7 +3178,11 @@ self: super: {
 
  smach-ros = self.callPackage ./smach-ros {};
 
+ smach-viewer = self.callPackage ./smach-viewer {};
+
  smclib = self.callPackage ./smclib {};
+
+ snmp-ros = self.callPackage ./snmp-ros {};
 
  snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
 

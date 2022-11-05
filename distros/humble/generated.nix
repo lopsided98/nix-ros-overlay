@@ -156,6 +156,8 @@ self: super: {
 
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
 
+ async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
+
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -390,6 +392,8 @@ self: super: {
 
  fmilibrary-vendor = self.callPackage ./fmilibrary-vendor {};
 
+ fogros2 = self.callPackage ./fogros2 {};
+
  fogros2-examples = self.callPackage ./fogros2-examples {};
 
  foonathan-memory-vendor = self.callPackage ./foonathan-memory-vendor {};
@@ -421,6 +425,8 @@ self: super: {
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
  generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
+
+ generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
 
  geodesy = self.callPackage ./geodesy {};
 
