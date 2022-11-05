@@ -1,4 +1,4 @@
-{ distro, python }:
+{ version, distro, python }:
 self: super:
 let
   pythonOverridesFor = with self.lib; superPython: fix (python: superPython.override ({
@@ -51,81 +51,11 @@ let
       }) ];
     });
 
-    ament-cmake-core = rosSuper.ament-cmake-core.overrideAttrs ({
-      propagatedBuildInputs ? [],
-      nativeBuildInputs ? [], ...
-    }: let
-      setupHook = rosSelf.callPackage ./ament-cmake-core-setup-hook { };
-    in {
-      propagatedBuildInputs = [ setupHook ] ++ propagatedBuildInputs;
-      nativeBuildInputs = [ setupHook ] ++ nativeBuildInputs;
-    });
-
     camera-calibration-parsers = patchBoostPython rosSuper.camera-calibration-parsers;
-
-    catkin = rosSuper.catkin.overrideAttrs ({
-      propagatedBuildInputs ? [],
-      patches ? [],
-      postPatch ? "", ...
-    }: let
-      setupHook = rosSelf.callPackage ./catkin-setup-hook { };
-    in {
-      propagatedBuildInputs = [ self.cmake setupHook ] ++ propagatedBuildInputs;
-
-      patches = [
-        # Fix compatibility with setuptools 61
-        # https://github.com/ros/catkin/pull/1176
-        (self.fetchpatch {
-          url = "https://github.com/ros/catkin/commit/e082348c4992e1850ba5e2bd02bbd7bd0c4c4b82.patch";
-          hash = "sha256-NNdV30gNWBf7p8IjyCmnvz9MnU4zFkd4aaXNjs411MA=";
-        })
-      ];
-
-      postPatch = postPatch + ''
-        patchShebangs cmake
-        substituteInPlace cmake/templates/python_distutils_install.sh.in \
-          --replace /usr/bin/env "${self.coreutils}/bin/env"
-      '';
-    });
-
-    # Packages that depend on catkin-pip still fail because they try to
-    # download from the internet, but it should work outside of Nix builds.
-    catkin-pip = rosSuper.catkin-pip.overrideAttrs ({
-      postPatch ? "", ...
-    }: {
-      postPatch = postPatch + ''
-        patchShebangs cmake
-        substituteInPlace cmake/scripts/path_prepend.sh \
-          --replace /bin/sed "${self.gnused}/bin/sed"
-        substituteInPlace cmake/catkin-pip-prefix.cmake.in \
-          --replace NO_SYSTEM_ENVIRONMENT_PATH ""
-      '';
-    });
 
     cob-light = patchBoostSignals rosSuper.cob-light;
 
     cv-bridge = patchBoostPython rosSuper.cv-bridge;
-
-    cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
-      patches ? [],
-      cmakeFlags ? [], ...
-    }: {
-      patches = [
-        # Fix paths in pkg-config file
-        # https://github.com/eclipse-cyclonedds/cyclonedds/pull/1453
-        (self.fetchpatch {
-          url = "https://github.com/eclipse-cyclonedds/cyclonedds/commit/3ff967e32b8078d497a8b9c70735849c04eaebf6.patch";
-          hash = "sha256-F5zofoO0YbYfqLrb6s30un9k9+R8rQazLHw+uND1UxE=";
-        })
-      ];
-
-      cmakeFlags = cmakeFlags ++ [
-        # Tries to download something with maven
-        "-DBUILD_IDLC=OFF"
-        # src/tools/ddsperf/CMakeFiles/ddsperf_types_generate.dir/build.make:74: *** target pattern contains no '%'.  Stop.
-        "-DBUILD_DDSPERF=OFF"
-      ];
-    });
 
     dynamic-reconfigure = rosSuper.dynamic-reconfigure.overrideAttrs ({
       postPatch ? "", ...
@@ -137,29 +67,6 @@ let
     });
 
     fake-localization = patchBoostSignals rosSuper.fake-localization;
-
-    fcl-catkin = patchVendorUrl rosSuper.fcl-catkin {
-      url = "https://github.com/flexible-collision-library/fcl/archive/v0.6.1.zip";
-      sha256 = "0nryr4hg3lha1aaz35wbqr42lb6l8alfcy6slj2yn2dgb5syrmn2";
-    };
-
-    fmilibrary-vendor = patchVendorGit rosSuper.fmilibrary-vendor {
-      url = "https://github.com/modelon-community/fmi-library.git";
-      fetchgitArgs = {
-        rev = "2.1";
-        sha256 = "177rlw1ba1y0ahi8qfpg0sflh8mjdl6fmffwjg2a5vxyxwdwrjvh";
-      };
-    };
-
-    # This is a newer version than the build system tries to download, but this
-    # version doesn't try run host platform binaries on the build platform.
-    foonathan-memory-vendor = patchVendorGit rosSuper.foonathan-memory-vendor {
-      url = "https://github.com/foonathan/memory.git";
-      fetchgitArgs = {
-        rev = "v0.7-2";
-        sha256 = "sha256-5nJNW0xwjSCc0Egq1zv0tIsGvAh1Xbnu8190A1ZP+VA=";
-      };
-    };
 
     gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({ ... }:{
       setupHook = ./gazebo-ros-setup-hook.sh;
@@ -244,6 +151,10 @@ let
       ROS_PYTHON_VERSION = if rosSelf.python.isPy3k then 3 else 2;
     });
 
+    mavros = rosSuper.mavros.overrideAttrs ({ ... }: {
+      outputs = [ "out" "dev" ];
+    });
+
     message-filters = patchBoostSignals rosSuper.message-filters;
 
     message-relay = rosSuper.message-relay.overrideAttrs ({
@@ -273,15 +184,6 @@ let
 
     pr2-tilt-laser-interface = patchBoostSignals rosSuper.pr2-tilt-laser-interface;
 
-    python-cmake-module = rosSuper.python-cmake-module.overrideAttrs ({ ... }: let
-      python = rosSelf.python;
-    in {
-      pythonExecutable = python.pythonForBuild.interpreter;
-      pythonLibrary = "${python}/lib/lib${python.libPrefix}.so";
-      pythonIncludeDir = "${python}/include/${python.libPrefix}";
-      setupHook = ./python-cmake-module-setup-hook.sh;
-    });
-
     python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
       propagatedNativeBuildInputs ? [],
       postPatch ? "", ...
@@ -302,55 +204,6 @@ let
         }
         preFixupHooks+=(_pythonQtBindingPreFixupHook)
       '';
-    });
-
-    rcutils = rosSuper.rcutils.overrideAttrs ({
-      patches ? [], ...
-    }: {
-      patches = patches ++ [
-        # Fix linking to libatomic
-        # https://github.com/ros2/rcutils/pull/384
-        (self.fetchpatch {
-          url = "https://github.com/ros2/rcutils/commit/05e7336b2160739915be0e2c4a81710806fd2f9c.patch";
-          hash = "sha256-EiO1AJnhvOk81TzFMP4E8NhB+9ymef2oA7l26FZFb1M=";
-        })
-      ];
-    });
-
-    roscpp = patchBoostSignals rosSuper.roscpp;
-
-    rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
-      postPatch ? "",
-      patches ? [], ...
-    }: let
-      python = rosSelf.python;
-    in {
-      patches = patches ++ [
-        # Remove stray numpy import in template
-        # https://github.com/ros2/rosidl_python/pull/185
-        (self.fetchpatch {
-          url = "https://github.com/ros2/rosidl_python/commit/bf866089baeb918834d9d16e05668d9f28887b87.patch";
-          hash = "sha256-tOb0t50TbV29+agDupm5XUZJJErfaujgIRtmb2vZxWo=";
-          stripLen = 1;
-        })
-      ];
-      # Fix finding NumPy headers
-      postPatch = postPatch + ''
-        substituteInPlace cmake/rosidl_generator_py_generate_interfaces.cmake \
-         --replace '"import numpy"' "" \
-         --replace 'numpy.get_include()' "'${python.pkgs.numpy}/${python.sitePackages}/numpy/core/include'"
-      '';
-      setupHook = ./rosidl-generator-py-setup-hook.sh;
-    });
-
-    rmw-implementation = rosSuper.rmw-implementation.overrideAttrs ({
-      propagatedBuildInputs ? [], ...
-    }: {
-      # The default implementation must be available to all dependent packages
-      # at build time.
-      propagatedBuildInputs = with rosSelf; [
-        rmw-fastrtps-cpp
-      ] ++ propagatedBuildInputs;
     });
 
     rqt-graph = rosSuper.rqt-graph.overrideAttrs ({
@@ -543,20 +396,6 @@ let
     };
 
     urdf = patchBoostPython rosSuper.urdf;
-
-    # The build hangs forever while running CMake, causing problems with CI
-    visp = rosSuper.visp.overrideAttrs ({
-      meta ? {}, ...
-    }: {
-      meta = meta // {
-        broken = true;
-      };
-    });
-
-    yaml-cpp-vendor = patchVendorUrl rosSuper.yaml-cpp-vendor {
-      url = "https://github.com/jbeder/yaml-cpp/archive/0f9a586ca1dc29c2ecb8dd715a315b93e3f40f79.zip";
-      sha256 = "1g45f71mk4gyca550177qf70v5cvavlsalmg7x8bi59j6z6f0mgz";
-    };
   };
 
   otherSplices = {
@@ -576,9 +415,13 @@ in self.lib.makeScopeWithSplicing
   otherSplices
   keep
   (_: {})
-  (rosSelf: self.lib.composeManyExtensions [
+  (rosSelf: self.lib.composeManyExtensions ([
     base
     (import (./. + "/${distro}/generated.nix"))
     overrides
+  ]
+  ++ self.lib.optional (version == 1) (import ./ros1-overlay.nix self)
+  ++ self.lib.optional (version == 2) (import ./ros2-overlay.nix self)
+  ++ [
     (import (./. + "/${distro}/overrides.nix") self)
-  ] rosSelf {})
+  ]) rosSelf {})
