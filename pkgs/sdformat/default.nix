@@ -18,8 +18,8 @@ stdenv.mkDerivation rec {
   # Fix asssumptions that CMAKE_INSTALL_*DIR variables are relative
   # https://github.com/gazebosim/sdformat/pull/1190
   patches = lib.optional (lib.versionAtLeast version "9") (fetchpatch {
-    url = "https://github.com/gazebosim/sdformat/commit/71ed3f96869fb3efe7d956a8bebb9e90ab4968cf.patch";
-    hash = "sha256-J1U+GHdELizwZnrqgAQSwL5sVJ592n71NH5RwtZmBMc=";
+    url = "https://github.com/gazebosim/sdformat/commit/e8286cd012623173f40536c7fbea780bb65e7f0b.patch";
+    hash = "sha256-WHpbN2n3JDV98SzWpPRtFE4xRB/jdlwMZagTsIZ1ixk=";
   });
 
   enableParallelBuilding = true;
