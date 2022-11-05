@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, dateutil }:
+{ lib, buildPythonPackage, fetchPypi, python-dateutil }:
 
 buildPythonPackage rec {
   pname = "bson";
@@ -9,7 +9,7 @@ buildPythonPackage rec {
     sha256 = "14355m3dchz446fl54ym78bn4wi20hddx1614f8rl4sin0m1nlfn";
   };
 
-  propagatedBuildInputs = [ dateutil ];
+  propagatedBuildInputs = [ python-dateutil ];
 
   meta = with lib; {
     description = "Independent BSON codec for Python that doesn't depend on MongoDB.";
