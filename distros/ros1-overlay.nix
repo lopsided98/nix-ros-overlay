@@ -40,10 +40,10 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
-    fcl-catkin = patchVendorUrl rosSuper.fcl-catkin {
-      url = "https://github.com/flexible-collision-library/fcl/archive/v0.6.1.zip";
-      sha256 = "0nryr4hg3lha1aaz35wbqr42lb6l8alfcy6slj2yn2dgb5syrmn2";
-    };
+  fcl-catkin = patchVendorUrl rosSuper.fcl-catkin {
+    url = "https://github.com/flexible-collision-library/fcl/archive/v0.6.1.zip";
+    sha256 = "0nryr4hg3lha1aaz35wbqr42lb6l8alfcy6slj2yn2dgb5syrmn2";
+  };
 
-    roscpp = patchBoostSignals rosSuper.roscpp;
+  roscpp = patchBoostSignals rosSuper.roscpp;
 }
