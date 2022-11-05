@@ -124,12 +124,6 @@ let
       '';
     });
 
-    map-server = rosSuper.map-server.overrideAttrs ({
-      nativeBuildInputs ? [], ...
-    }: {
-      nativeBuildInputs = nativeBuildInputs ++ [ self.pkgconfig ];
-    });
-
     mapviz = rosSuper.mapviz.overrideAttrs ({
       nativeBuildInputs ? [],
       postFixup ? "", ...

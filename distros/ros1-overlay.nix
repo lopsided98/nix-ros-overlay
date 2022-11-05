@@ -45,5 +45,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "0nryr4hg3lha1aaz35wbqr42lb6l8alfcy6slj2yn2dgb5syrmn2";
   };
 
+  map-server = rosSuper.map-server.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+  });
+
   roscpp = patchBoostSignals rosSuper.roscpp;
 }
