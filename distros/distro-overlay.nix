@@ -145,10 +145,6 @@ let
       ROS_PYTHON_VERSION = if rosSelf.python.isPy3k then 3 else 2;
     });
 
-    mavros = rosSuper.mavros.overrideAttrs ({ ... }: {
-      outputs = [ "out" "dev" ];
-    });
-
     message-filters = patchBoostSignals rosSuper.message-filters;
 
     message-relay = rosSuper.message-relay.overrideAttrs ({
