@@ -10,7 +10,7 @@
 #
 # By default, all binaries in the environment are wrapped, setting the relevant
 # ROS environment variables, allowing use outside of nix-shell.
-{ lib, stdenv, buildPackages, writeText, buildEnv, makeWrapper }:
+{ lib, stdenv, buildPackages, writeText, buildEnv, makeWrapper, python }:
 { paths ? [], wrapPrograms ? true, ... }@args:
 
 with lib;
@@ -58,6 +58,7 @@ let
 
           makeWrapper "$file" "$link" \
             --prefix PATH : "$out/bin" \
+            --prefix PYTHONPATH : "$out/${python.sitePackages}" \
             --prefix CMAKE_PREFIX_PATH : "$out" \
             --prefix AMENT_PREFIX_PATH : "$out" \
             --prefix ROS_PACKAGE_PATH : "$out/share"
