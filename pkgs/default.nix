@@ -54,6 +54,8 @@ self: super: with self.lib; let
   }));
 
 in {
+  cargo-ament-build = self.callPackage ./cargo-ament-build { };
+
   colcon = with self.python3Packages; colcon-core.withExtensions [
     colcon-cmake
     colcon-core
