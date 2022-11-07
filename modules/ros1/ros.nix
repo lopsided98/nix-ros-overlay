@@ -80,18 +80,13 @@ in {
     # FIXME: mkAfter is used to make sure the Python overlay is applied. That
     # means all other user configured Python overlays are ignored. This needs a
     # fix in nixpkgs: https://github.com/NixOS/nixpkgs/issues/44426
-    nixpkgs.overlays = mkAfter (singleton (import ../overlay.nix));
+    nixpkgs.overlays = mkAfter (singleton (import ../../overlay.nix));
 
     services.ros = {
       pkgs = mkDefault (pkgs.rosPackages."${cfg.distro}".overrideScope cfg.overlays);
 
       hostname = mkDefault config.networking.hostName;
       masterUri = mkDefault "http://${cfg.hostname}:11311/";
-    };
-
-    environment.etc."ros/rosdep/sources.list.d/20-default.list".source = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/ros/rosdistro/225c14be89fdf7ecf028b4cf85fa82032f7728e1/rosdep/sources.list.d/20-default.list";
-      sha256 = "0kxknc42y01pci8fxzhg84ybhgqyxqimycck27vb4b282lqfkzj7";
     };
 
     environment.variables = {
@@ -106,13 +101,5 @@ in {
       inherit paths;
       extraOutputsToInstall = optional config.environment.enableDebugInfo "debug";
     }) ];
-
-    users = {
-      users.ros = {
-        group = "ros";
-        isSystemUser = true;
-      };
-      groups.ros = { };
-    };
   };
 }
