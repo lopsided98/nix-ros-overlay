@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, clang, cmake, doxygen, eigen, eigenpy, git, hpp-fcl, python3, python3Packages, urdfdom }:
 buildRosPackage {
   pname = "ros-galactic-pinocchio";
-  version = "2.6.11-r1";
+  version = "2.6.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pinocchio-release/archive/release/galactic/pinocchio/2.6.11-1.tar.gz";
-    name = "2.6.11-1.tar.gz";
-    sha256 = "929135eba2e22f64341374de43f0bc6ea749d07dbc5b74c9166d06deba43c93f";
+    url = "https://github.com/ros2-gbp/pinocchio-release/archive/release/galactic/pinocchio/2.6.12-1.tar.gz";
+    name = "2.6.12-1.tar.gz";
+    sha256 = "76ce9d909565cc96d76396fdfe979b82002b7429aa3c96eb42c6aa5360cf508e";
   };
 
   buildType = "cmake";

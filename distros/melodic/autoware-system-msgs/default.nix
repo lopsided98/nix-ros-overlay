@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/autoware-ai/messages-release/archive/release/melodic/autoware_system_msgs/1.14.0-1.tar.gz";
     name = "1.14.0-1.tar.gz";
-    sha256 = "38acd44d460adf08104f65df50ca6b1f25ee7d1a09bb9f482700e74e862f2e20";
+    sha256 = "45baf85696feee43e02e8d82ddc2ee9e75199c6996b7635f68c78074be0b25f1";
   };
 
   buildType = "catkin";

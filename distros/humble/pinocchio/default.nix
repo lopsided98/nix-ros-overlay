@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, clang, cmake, doxygen, eigen, eigenpy, git, hpp-fcl, python3, python3Packages, urdfdom }:
 buildRosPackage {
   pname = "ros-humble-pinocchio";
-  version = "2.6.11-r1";
+  version = "2.6.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pinocchio-release/archive/release/humble/pinocchio/2.6.11-1.tar.gz";
-    name = "2.6.11-1.tar.gz";
-    sha256 = "ceabb5edafc3d0b7fbee25ba445de4183ab8b0690fac2eae024c6f57823ec3a5";
+    url = "https://github.com/ros2-gbp/pinocchio-release/archive/release/humble/pinocchio/2.6.12-1.tar.gz";
+    name = "2.6.12-1.tar.gz";
+    sha256 = "60895ad18c9fd75085963ec4c0f3571311c922b0ace8cece0ee7d7d8fb868af8";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, clang, cmake, doxygen, eigen, eigenpy, git, hpp-fcl, python3, python3Packages, urdfdom }:
 buildRosPackage {
   pname = "ros-noetic-pinocchio";
-  version = "2.6.11-r1";
+  version = "2.6.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/pinocchio-ros-release/archive/release/noetic/pinocchio/2.6.11-1.tar.gz";
-    name = "2.6.11-1.tar.gz";
-    sha256 = "171a20ac7e6c8b9771918349d24376b488b4c36a9e783eca8c3809c4afdd501a";
+    url = "https://github.com/stack-of-tasks/pinocchio-ros-release/archive/release/noetic/pinocchio/2.6.12-1.tar.gz";
+    name = "2.6.12-1.tar.gz";
+    sha256 = "ea185d9ec0bfb00ae4d306500d8856c4fe593f7301349b5e89e6ca88e47bd6fd";
   };
 
   buildType = "cmake";
