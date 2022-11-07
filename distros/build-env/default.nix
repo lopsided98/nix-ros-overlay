@@ -3,10 +3,10 @@
 # otherwise cause ROS_PACKAGE_PATH or other environment variables to become too
 # long.
 #
-# All ROS packages in the 'paths' closure are added to the environment, while
-# other packages are propagated. This makes it usable in nix-shell, while
-# preventing ROS_PACKAGE_PATH and CMAKE_PREFIX_PATH from becoming too large due
-# to a huge number of ROS packages.
+# All ROS and Python packages in the 'paths' closure are added to the
+# environment, while other packages are propagated. This makes it usable in
+# nix-shell, while preventing ROS_PACKAGE_PATH and CMAKE_PREFIX_PATH from
+# becoming too large due to a huge number of ROS packages.
 #
 # By default, all binaries in the environment are wrapped, setting the relevant
 # ROS environment variables, allowing use outside of nix-shell.
@@ -18,7 +18,7 @@ with lib;
 let
   propagatePackages = packages: let
     validPackages = filter (d: d != null) packages;
-    partitionedPackages = partition (d: d.rosPackage or false) validPackages;
+    partitionedPackages = partition (d: (d.rosPackage or false) || (hasAttr "pythonModule" d)) validPackages;
     rosPackages = partitionedPackages.right;
     otherPackages = partitionedPackages.wrong;
     rosPropagatedPackages = unique (concatLists (catAttrs "propagatedBuildInputs" rosPackages));
@@ -58,6 +58,7 @@ let
 
           makeWrapper "$file" "$link" \
             --prefix PATH : "$out/bin" \
+            --prefix LD_LIBRARY_PATH : "$out/lib" \
             --prefix PYTHONPATH : "$out/${python.sitePackages}" \
             --prefix CMAKE_PREFIX_PATH : "$out" \
             --prefix AMENT_PREFIX_PATH : "$out" \
