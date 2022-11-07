@@ -55,14 +55,14 @@ rosSelf: rosSuper: with rosSelf.lib; {
     nativeBuildInputs ? [], ...
   }: {
     buildInputs = [];
-    nativeBuildInputs = nativeBuildInputs ++ [ self.cmake ];
+    nativeBuildInputs = nativeBuildInputs ++ [ self.buildPackages.cmake ];
   });
 
   gtest-vendor = rosSuper.gtest-vendor.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
     buildInputs = [];
-    nativeBuildInputs = nativeBuildInputs ++ [ self.cmake ];
+    nativeBuildInputs = nativeBuildInputs ++ [ self.buildPackages.cmake ];
   });
 
   python-cmake-module = rosSuper.python-cmake-module.overrideAttrs ({ ... }: let
