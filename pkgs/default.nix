@@ -11,6 +11,8 @@ self: super: with self.lib; let
 
       catkin-tools = pySelf.callPackage ./catkin-tools { };
 
+      colcon-cargo = pySelf.callPackage ./colcon/cargo.nix { };
+
       colcon-cmake = pySelf.callPackage ./colcon/cmake.nix { };
 
       colcon-core = pySelf.callPackage ./colcon/core.nix { };
@@ -34,6 +36,8 @@ self: super: with self.lib; let
       colcon-recursive-crawl = pySelf.callPackage ./colcon/recursive-crawl.nix { };
 
       colcon-ros = pySelf.callPackage ./colcon/ros.nix { };
+
+      colcon-ros-cargo = pySelf.callPackage ./colcon/ros-cargo.nix { };
 
       colcon-test-result = pySelf.callPackage ./colcon/test-result.nix { };
 
