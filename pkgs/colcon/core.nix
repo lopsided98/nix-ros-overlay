@@ -1,6 +1,8 @@
 { lib, buildPythonApplication, buildPythonPackage, makeWrapper, fetchPypi
 , isPy27, python, distlib, empy, pytest, pytest-cov, pytest-repeat
-, pytest-rerunfailures, pytest-runner }:
+, pytest-rerunfailures, setuptools, pytestCheckHook, flake8, flake8-blind-except
+, flake8-docstrings, flake8-import-order, pep8-naming, pylint
+}:
 
 let
   withExtensions = extensions: buildPythonApplication {
@@ -27,11 +29,11 @@ let
 
   package = buildPythonPackage rec {
     pname = "colcon-core";
-    version = "0.6.1";
+    version = "0.10.0";
 
     src = fetchPypi {
       inherit pname version;
-      sha256 = "1sfvkq5ppyqw8ywibnhmkkbdai9yvw6vph5g6b1zqig75i5m657w";
+      hash = "sha256-VOlHWEUdLYgdrF5ILDdE9dJzP71FmBwkwIQOuz56SqM=";
     };
 
     propagatedBuildInputs = [
@@ -41,13 +43,27 @@ let
       pytest-cov
       pytest-repeat
       pytest-rerunfailures
-      pytest-runner
+      setuptools
+    ];
+
+    checkInputs = [
+      pytestCheckHook
+      flake8
+      flake8-blind-except
+      # flake8-builtins
+      # flake8-class-newline
+      # flake8-comprehensions
+      # flake8-deprecated
+      flake8-docstrings
+      flake8-import-order
+      # flake8-quotes
+      pep8-naming
+      pylint
+      # scspell3k
     ];
 
     # Requires unpackaged dependencies
     doCheck = false;
-
-    disabled = isPy27;
 
     passthru = {
       inherit withExtensions;
