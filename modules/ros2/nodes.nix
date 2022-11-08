@@ -103,7 +103,7 @@ in {
           (commonServiceConfig args)
           { 
             paths = [ cfg.pkgs.ros2run ];
-            rosArgs = concatMap (k: v: [ "--param" "${k}:=${v}" ]) cfg.params;
+            rosArgs = flatten (mapAttrsToList (k: v: [ "--param" "${k}:=${v}" ]) config.params);
           }
         ];
       }));
