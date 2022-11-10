@@ -23,7 +23,7 @@ let
     '';
 
     passthru = package.passthru // {
-      withPlugins = moreExtensions: withExtensions (moreExtensions ++ extensions);
+      withExtensions = moreExtensions: withExtensions (moreExtensions ++ extensions);
     };
   };
 
