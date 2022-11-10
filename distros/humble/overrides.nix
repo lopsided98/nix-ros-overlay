@@ -15,6 +15,19 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
+  cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = [
+      # Fix paths in pkg-config file
+      # https://github.com/eclipse-cyclonedds/cyclonedds/pull/1453
+      (self.fetchpatch {
+        url = "https://github.com/eclipse-cyclonedds/cyclonedds/commit/3ff967e32b8078d497a8b9c70735849c04eaebf6.patch";
+        hash = "sha256-F5zofoO0YbYfqLrb6s30un9k9+R8rQazLHw+uND1UxE=";
+      })
+    ];
+  });
+
   gazebo = self.gazebo_11;
 
   iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
