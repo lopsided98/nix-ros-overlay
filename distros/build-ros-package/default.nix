@@ -1,4 +1,4 @@
-{ stdenv, lib, pythonPackages }:
+{ stdenv, lib, pythonPackages, rosDistro, rosVersion }:
 { buildType ? "catkin"
   # Too difficult to fix all the problems with the tests in each package
 , doCheck ? false
@@ -24,6 +24,7 @@ else stdenv.mkDerivation) (args // {
 
   passthru = passthru // {
     rosPackage = true;
+    inherit rosDistro rosVersion;
   };
 } // lib.optionalAttrs (buildType == "ament_python") {
   dontUseCmakeConfigure = true;

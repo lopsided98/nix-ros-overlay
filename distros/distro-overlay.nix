@@ -17,7 +17,10 @@ let
 
     callPackage = self.newScope rosSelf;
 
-    buildRosPackage = rosSelf.callPackage ./build-ros-package { };
+    buildRosPackage = rosSelf.callPackage ./build-ros-package {
+      rosVersion = version;
+      rosDistro = distro;
+    };
 
     buildEnv = rosSelf.callPackage ./build-env {
       inherit (self) buildEnv;
