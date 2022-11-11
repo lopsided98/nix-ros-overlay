@@ -22,9 +22,32 @@ rosSelf: rosSuper: with rosSelf.lib; {
     file = "cmake/cpptoml/cpptoml.cmake.in";
     fetchgitArgs = {
       rev = "v0.1.1";
-      sha256 = "0gxzzi4xbjszzlvmzaniayrd190kag1pmkn1h384s80cvqphbr00";
+      hash = "sha256-mt2iIrkE/5K2kyOCIhsD6PoxKzobOTNNNr4FMEUx79A=";
+      # Fix build with GCC 11
+      # https://github.com/skystrife/cpptoml/pull/123
+      postFetch = ''
+        cd "$out"
+        patch -p1 < '${self.fetchpatch {
+          url = "https://github.com/skystrife/cpptoml/commit/c55a516e90133d89d67285429c6474241346d27a.patch";
+          hash = "sha256-p1M5O9+FtG+w2FdJjxecGpRaBV4LSlSVNiRGYMjeMUQ=";
+        }}'
+      '';
     };
   };
+
+  iceoryx-utils = rosSuper.iceoryx-utils.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix build with GCC 11
+      (self.fetchpatch {
+        url = "https://github.com/eclipse-iceoryx/iceoryx/commit/fdfad99d593fd96cf47a0091837b324f2cc2df6b.patch";
+        stripLen = 1;
+        includes = [ "include/*" ];
+        hash = "sha256-naXO/T0Mh7ke4XIL5wzkQRkSwL1h7gONmhcqGNYeUoc=";
+      })
+    ];
+  });
 
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
     url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.7.20210816.tar.gz";
