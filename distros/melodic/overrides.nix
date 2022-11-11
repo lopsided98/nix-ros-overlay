@@ -66,40 +66,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   opencv = self.opencv3;
 
-  pcl-ros = rosSuper.pcl-ros.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Fix build with PCL >=1.11
-      (self.fetchpatch {
-        url = "https://github.com/ros-perception/perception_pcl/commit/e812d3cf1b67cc73841b41e690d53c74e5077a05.patch";
-        sha256 = "0savdifw90ql34zh6rff53hx3cy6rlmrwqzw80fsihkirls84b3w";
-        stripLen = 1;
-      })
-      (self.fetchpatch {
-        url = "https://github.com/ros-perception/perception_pcl/commit/ba0792cdf378f6faf0e12f517c80bd0dd5405d02.patch";
-        sha256 = "1b6vdipj6g0kah74fjkq598b0fr7z8857w9iw1hcv5hinwdypryk";
-        stripLen = 1;
-      })
-      # Fix build with PCL >=1.12
-      (self.fetchpatch {
-        url = "https://github.com/ros-perception/perception_pcl/commit/25a073a3509e068734ba0edf1e991d1c01c04e68.patch";
-        sha256 = "0ylh7zcbs16q830bfs91mmzzdx7w1zxjr14n0l34i73swvhfikqi";
-        stripLen = 1;
-      })
-      (self.fetchpatch {
-        url = "https://github.com/ros-perception/perception_pcl/commit/1d1e1a05d97cdbf93e67c153f1100fc14c26e31c.patch";
-        sha256 = "1pk365g33fpns3h3v0ldjpfv1530ppg1q3pgv4z8z9pi2n4h2rmm";
-        stripLen = 1;
-      })
-      (self.fetchpatch {
-        url = "https://github.com/ros-perception/perception_pcl/commit/1887ba26ff71db41655691e5ad4d83c7baaed3b9.patch";
-        sha256 = "06snxln3q1ywydcx2fq6vhm8fi3wkl8kc7cz3qxim750h35nmvs4";
-        stripLen = 1;
-      })
-    ];
-  });
-
   pybind11-catkin = patchVendorUrl rosSuper.pybind11-catkin {
     url = "https://github.com/pybind/pybind11/archive/v2.4.3.zip";
     sha256 = "0r6kj10g774s94krnxcc0r8swnm5h0r6mxysxwx8gy9n52f1xk7i";
