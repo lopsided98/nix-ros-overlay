@@ -86,8 +86,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
       # Fix CMake relative install dir assumptions
       # https://github.com/ros/urdfdom/pull/142
       (self.fetchpatch {
-        url = "https://github.com/ros/urdfdom/commit/a627bd366e5fcabd814fb5b88ac55986374e46c9.patch";
-        hash = "sha256-pUpS9lBgwuFDejvRXrLPe+FRm0Gjh7H2URS/bic9ys0=";
+        url = "https://github.com/ros/urdfdom/commit/cbe6884d267779463bb444be851f6404e692cc0a.patch";
+        hash = "sha256-1gTRKIGqiSRion76bGecSfFJSBskYUJguUIa6ePIiX4=";
       })
     ];
   });
