@@ -25,6 +25,8 @@ self: super: with self.lib; let
 
       colcon-output = pySelf.callPackage ./colcon/output.nix { };
 
+      colcon-package-information = pySelf.callPackage ./colcon/package-information.nix { };
+
       colcon-package-selection = pySelf.callPackage ./colcon/package-selection.nix { };
 
       colcon-parallel-executor = pySelf.callPackage ./colcon/parallel-executor.nix { };
@@ -61,6 +63,7 @@ in {
     colcon-core
     colcon-library-path
     colcon-metadata
+    colcon-package-information
     colcon-package-selection
     colcon-python-setup-py
     colcon-recursive-crawl
