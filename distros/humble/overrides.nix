@@ -79,11 +79,25 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
   };
 
+  urdfdom = rosSuper.urdfdom.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix CMake relative install dir assumptions
+      # https://github.com/ros/urdfdom/pull/142
+      (self.fetchpatch {
+        url = "https://github.com/ros/urdfdom/commit/a627bd366e5fcabd814fb5b88ac55986374e46c9.patch";
+        hash = "sha256-pUpS9lBgwuFDejvRXrLPe+FRm0Gjh7H2URS/bic9ys0=";
+      })
+    ];
+  });
+
   urdfdom-headers = rosSuper.urdfdom-headers.overrideAttrs ({
     patches ? [], ...
   }: {
     patches = patches ++ [
-      # Fix CMake relative install dir assumptions (https://github.com/ros/urdfdom_headers/pull/66)
+      # Fix CMake relative install dir assumptions
+      # https://github.com/ros/urdfdom_headers/pull/66
       (self.fetchpatch {
         url = "https://github.com/ros/urdfdom_headers/commit/c9c993147bbf18d5ec83bae684c5780281e529b4.patch";
         hash = "sha256-BnYPdcetYSim2O1R38N0d1tY0Id++AgKNic8+dlM6Vg=";
