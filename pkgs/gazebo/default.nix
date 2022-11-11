@@ -36,6 +36,11 @@ mkDerivation rec {
     lib.optional (lib.versionOlder version "11.0.0") (fetchpatch {
       url = "https://github.com/osrf/gazebo/commit/b4429a242c43e01c367bc02afa2c4a0e6b59dddd.patch";
       hash = "sha256-Q2wj9VcGc+zBvMXztPLMroEnOskFHU6QtsU+kC+5rRA=";
+    }) ++
+    # Fix compatibility with Protobuf 3.20
+    lib.optional (lib.versionOlder version "9.20.0") (fetchpatch {
+      url = "https://github.com/osrf/gazebo/commit/f37fd3cc7d4d71835ce952c2bf3b068d2c409b37.patch";
+      hash = "sha256-3KOmhylw+6VNloamo1rQTcRXA+J5Y1niacQDW2VyzAo=";
     });
 
   enableParallelBuilding = true;
