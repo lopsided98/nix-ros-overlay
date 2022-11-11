@@ -15,14 +15,14 @@ jobs:
           - x86_64-linux
           - aarch64-linux
     steps:
-    - uses: actions/checkout@v2
-    - uses: cachix/install-nix-action@v13
+    - uses: actions/checkout@v3
+    - uses: cachix/install-nix-action@v18
       with:
         extra_nix_config: |
           max-jobs = 1
           extra-platforms = aarch64-linux
-    - uses: docker/setup-qemu-action@v1
-    - uses: cachix/cachix-action@v9
+    - uses: docker/setup-qemu-action@v2
+    - uses: cachix/cachix-action@v12
       with:
         name: ros
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'

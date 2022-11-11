@@ -11,7 +11,7 @@ jobs:
         with:
           ref: staging
       - uses: cachix/install-nix-action@v18
-      - uses: cachix/cachix-action@v11
+      - uses: cachix/cachix-action@v12
         with:
           name: ros
           signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
