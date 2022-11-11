@@ -82,4 +82,17 @@ rosSelf: rosSuper: with rosSelf.lib; {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
   };
+
+  urdfdom = rosSuper.urdfdom.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix CMake relative install dir assumptions
+      # https://github.com/ros/urdfdom/pull/142 (backported to 2.3)
+      (self.fetchpatch {
+        url = "https://github.com/ros/urdfdom/commit/f44a382984269d4a4cc4006673e16dfd74e8b4f8.patch";
+        hash = "sha256-ykBw9DEBraYHzgrCa1JkDhWTYXBQL1MmfelC5j5ibrs=";
+      })
+    ];
+  });
 }
