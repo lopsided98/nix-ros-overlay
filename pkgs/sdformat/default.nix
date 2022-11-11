@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
   patches =
     # Fix asssumptions that CMAKE_INSTALL_*DIR variables are relative
     # https://github.com/gazebosim/sdformat/pull/1190
-    lib.singleton (if (lib.versionAtLeast version "9") then {
+    lib.singleton (if lib.versionAtLeast version "9" then fetchpatch {
       url = "https://github.com/gazebosim/sdformat/commit/e8286cd012623173f40536c7fbea780bb65e7f0b.patch";
       hash = "sha256-WHpbN2n3JDV98SzWpPRtFE4xRB/jdlwMZagTsIZ1ixk=";
     } else fetchpatch {
