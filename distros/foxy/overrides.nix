@@ -36,19 +36,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ] ++ patches;
   });
 
-  # Fix compatibility with assimp 5.1
-  # https://github.com/ros2/rviz/pull/827
-  rviz-assimp-vendor = rosSuper.rviz-assimp-vendor.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [ (self.fetchpatch {
-      url = "https://github.com/ros2/rviz/commit/95ddcea7459cc4faf9954ba018491d1eea8d4280.patch";
-      sha256 = "sha256-JW3GgSukrWR19je35crNeQNSDR6ZRoFRzpR/MBcwMws=";
-      stripLen = 1;
-      includes = [ "rviz_assimp_vendor-extras.cmake.in" ];
-    }) ];
-  });
-
   rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
