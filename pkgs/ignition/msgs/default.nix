@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchFromGitHub, cmake, tinyxml-2, ignition
+{ lib, stdenv, fetchFromGitHub, fetchpatch, cmake, tinyxml-2, ignition
 , ignition-cmake ? ignition.cmake, protobuf, ignition-math ? ignition.math
 , majorVersion ? "8"
 , version ? "8.6.0"
@@ -16,6 +16,13 @@ stdenv.mkDerivation rec {
     rev = "${pname}_${version}";
     hash = srcHash;
   };
+
+  patches =
+    # Fix compatibility with Protobuf 3.20
+    lib.optional (majorVersion == "" /* 1 */) (fetchpatch {
+      url = "https://github.com/gazebosim/gz-msgs/commit/faaf25d5ef991798b301b0c8b7a4c15904016695.patch";
+      hash = "sha256-jVZCKGDTEdgHiEKItv+rbcLW0L2cs2EryoJe5qcoOsU=";
+    });
 
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];
