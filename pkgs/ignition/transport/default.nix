@@ -1,6 +1,6 @@
 { lib, stdenv, fetchFromGitHub, cmake, ignition, ignition-cmake ? ignition.cmake
 , ignition-math ? ignition.math, ignition-msgs ? ignition.msgs
-, ignition-utils ? ignition.utils, protobuf, libuuid, sqlite, cppzmq, zeromq
+, ignition-utils ? ignition.utils, protobuf, libuuid, sqlite, libsodium, cppzmq, zeromq
 , majorVersion ? "11"
 , version ? "11.1.0"
 , srcHash ? "sha256-bOsulr8O5sRJ3XAQOP9xWCgoXqEH6M+IEFa0Sx6vze0="
@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];
-  buildInputs = [ ignition-math sqlite ]
+  buildInputs = [ ignition-math sqlite libsodium ]
     ++ lib.optional (lib.versionAtLeast version "5") ignition-utils;
   propagatedBuildInputs = [ protobuf cppzmq zeromq libuuid ignition-msgs ];
 
