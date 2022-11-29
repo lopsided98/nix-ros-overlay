@@ -102,6 +102,15 @@ rosSelf: rosSuper: with rosSelf.lib; {
     setupHook = ./rosidl-generator-py-setup-hook.sh;
   });
 
+  rosidl-default-generators = rosSuper.rosidl-default-generators.overrideAttrs ({
+    propagatedBuildInputs ? [], ...
+  }: {
+    # Add Rust support to all packages
+    propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.rosidl-generator-rs ];
+  });
+
+  rosidl-generator-rs = rosSelf.callPackage ../pkgs/rosidl-generator-rs { };
+
   rmw-implementation = rosSuper.rmw-implementation.overrideAttrs ({
     propagatedBuildInputs ? [], ...
   }: {
