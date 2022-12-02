@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-utilities, libntcan, libpcan, socketcan-interface }:
 buildRosPackage {
   pname = "ros-noetic-cob-generic-can";
-  version = "0.7.13-r1";
+  version = "0.7.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_generic_can/0.7.13-1.tar.gz";
-    name = "0.7.13-1.tar.gz";
-    sha256 = "87c0e9cdd291d716b53455db892a3118d4db98b0c4f71e5929dee31aa7fedd3e";
+    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_generic_can/0.7.14-1.tar.gz";
+    name = "0.7.14-1.tar.gz";
+    sha256 = "5f7ecd3c637e6db0dc36805b2025cb5c229c1270abc17cee5a6445e310f593f9";
   };
 
   buildType = "catkin";

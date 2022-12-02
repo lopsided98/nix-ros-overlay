@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, rostime }:
 buildRosPackage {
   pname = "ros-noetic-xmlrpcpp";
-  version = "1.15.14-r1";
+  version = "1.15.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/xmlrpcpp/1.15.14-1.tar.gz";
-    name = "1.15.14-1.tar.gz";
-    sha256 = "85c7cb435af0e41f5bf2d756afda7ad7cf95478e5d3a2538076a79c380b64a2b";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/xmlrpcpp/1.15.15-1.tar.gz";
+    name = "1.15.15-1.tar.gz";
+    sha256 = "09db3eca369508843cdc060d5212d15257b02d752631a0ea594bbcde0804d285";
   };
 
   buildType = "catkin";

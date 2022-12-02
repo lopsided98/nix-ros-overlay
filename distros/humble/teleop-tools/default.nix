@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joy-teleop, key-teleop, teleop-tools-msgs }:
 buildRosPackage {
   pname = "ros-humble-teleop-tools";
-  version = "1.2.1-r3";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/humble/teleop_tools/1.2.1-3.tar.gz";
-    name = "1.2.1-3.tar.gz";
-    sha256 = "13f5f46e9a03c5604fe3e324dbfc2eb0d515b962ba4854309c6c6e6cbcb708f0";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/humble/teleop_tools/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "506610ea71b4046aa2b77fd9c2d3d4f6c79d1d55da7e428afab1f370d90c17dd";
   };
 
   buildType = "ament_cmake";

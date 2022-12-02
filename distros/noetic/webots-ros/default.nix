@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, moveit-ros-planning-interface, moveit-simple-controller-manager, robot-state-publisher, ros-control, ros-controllers, roscpp, rospy, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-webots-ros";
-  version = "2022.1.0-r1";
+  version = "2023.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/cyberbotics/webots_ros-release/archive/release/noetic/webots_ros/2022.1.0-1.tar.gz";
-    name = "2022.1.0-1.tar.gz";
-    sha256 = "e885b4632f0932d69daec1f98813e0738f1ecd012510aa048a61cc398b90786d";
+    url = "https://github.com/cyberbotics/webots_ros-release/archive/release/noetic/webots_ros/2023.0.0-1.tar.gz";
+    name = "2023.0.0-1.tar.gz";
+    sha256 = "05ebb7d96c29c12d054743870411fe330a77e5f48373baab922a9e4dbbd05a22";
   };
 
   buildType = "catkin";

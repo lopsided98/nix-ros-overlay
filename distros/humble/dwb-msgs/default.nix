@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, nav-2d-msgs, nav-msgs, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-dwb-msgs";
-  version = "1.1.2-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/dwb_msgs/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "dcafc52c977d1bf87e61b8c3e489bf9e27091367b3a4b8c5be868cbb3dbda627";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/dwb_msgs/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "bb7fcd749fd3b12dbc44f4b5ddffba7c681cac7f51c95e56ec1b1c7cfa159791";
   };
 
   buildType = "ament_cmake";

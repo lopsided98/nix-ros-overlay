@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, microstrain-inertial-msgs, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-microstrain-inertial-examples";
-  version = "2.7.0-r1";
+  version = "2.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/galactic/microstrain_inertial_examples/2.7.0-1.tar.gz";
-    name = "2.7.0-1.tar.gz";
-    sha256 = "637dfd45609a7cfcdcfe392d4a1b96a3325148f4e797d4967d80af763ee6fe29";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/galactic/microstrain_inertial_examples/2.7.1-1.tar.gz";
+    name = "2.7.1-1.tar.gz";
+    sha256 = "d73fcc0ea76b5b3055f4d1b921f3115632efbb29e7059405a6013471917438f1";
   };
 
   buildType = "ament_cmake";

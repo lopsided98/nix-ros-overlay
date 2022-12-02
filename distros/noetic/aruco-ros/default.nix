@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, aruco, aruco-msgs, catkin, cv-bridge, dynamic-reconfigure, geometry-msgs, image-transport, roscpp, sensor-msgs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-aruco-ros";
-  version = "3.0.1-r3";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/aruco_ros-release/archive/release/noetic/aruco_ros/3.0.1-3.tar.gz";
-    name = "3.0.1-3.tar.gz";
-    sha256 = "894fb18c3cc48440a8762f55394a688a18295ae22f393e1579ddc1651e700696";
+    url = "https://github.com/pal-gbp/aruco_ros-release/archive/release/noetic/aruco_ros/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "a06dc78e52d1b342a5ce09c5d8ec98100fd26c4afbfc0c3c7a0a5b2efdbb3529";
   };
 
   buildType = "catkin";
@@ -21,6 +21,6 @@ buildRosPackage {
   meta = {
     description = ''The ARUCO Library has been developed by the Ava group of the Univeristy of Cordoba(Spain).
     It provides real-time marker based 3D pose estimation using AR markers.'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ mit ];
   };
 }

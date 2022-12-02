@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rclcpp, rcpputils, sensor-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-galactic-camera-calibration-parsers";
-  version = "2.5.0-r1";
+  version = "2.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/galactic/camera_calibration_parsers/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "62001acece6e528bd548dc91a801201ea85abb1f28b47440355b6e4c98112c88";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/galactic/camera_calibration_parsers/2.5.1-1.tar.gz";
+    name = "2.5.1-1.tar.gz";
+    sha256 = "373a0b7c1184da89a93caca9cf03e37a2d4d88de4e339fc3ef05298efd64d553";
   };
 
   buildType = "ament_cmake";

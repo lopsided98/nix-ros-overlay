@@ -2,21 +2,21 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, fmt, generate-parameter-library-py, parameter-traits, rclcpp, rclcpp-lifecycle, tcb-span }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, fmt, generate-parameter-library-py, parameter-traits, rclcpp, rclcpp-lifecycle, rsl, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-humble-generate-parameter-library";
-  version = "0.2.8-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/PickNikRobotics/generate_parameter_library-release/archive/release/humble/generate_parameter_library/0.2.8-1.tar.gz";
-    name = "0.2.8-1.tar.gz";
-    sha256 = "ebc1b5ce7624aa95a129a99ddbe0e51171cc3ee20d899b06ee16a5761489b9d7";
+    url = "https://github.com/PickNikRobotics/generate_parameter_library-release/archive/release/humble/generate_parameter_library/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "37b3eb2c34b600416eb0a1965f7a3c9197327e7ec4089a60beab743782b221f9";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ fmt generate-parameter-library-py parameter-traits rclcpp rclcpp-lifecycle tcb-span ];
+  propagatedBuildInputs = [ fmt generate-parameter-library-py parameter-traits rclcpp rclcpp-lifecycle rsl tcb-span tl-expected ];
   nativeBuildInputs = [ ament-cmake generate-parameter-library-py ];
 
   meta = {

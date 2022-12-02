@@ -2,19 +2,19 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-rtcm-msgs";
-  version = "1.1.4-r1";
+  version = "1.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/rtcm_msgs-release/archive/release/humble/rtcm_msgs/1.1.4-1.tar.gz";
-    name = "1.1.4-1.tar.gz";
-    sha256 = "6862119128ae895cfe0085fca50450cdcb8711b57bfee1bbf5aff1c23915c9be";
+    url = "https://github.com/nobleo/rtcm_msgs-release/archive/release/humble/rtcm_msgs/1.1.6-1.tar.gz";
+    name = "1.1.6-1.tar.gz";
+    sha256 = "60b96f5d72593b069caf9d273b191c69baa7bc25d43cde8d63d5615d769d3ccf";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake builtin-interfaces rosidl-default-generators ];
+  buildInputs = [ ament-cmake builtin-interfaces ros-environment rosidl-default-generators ];
   checkInputs = [ ament-lint-common ];
   propagatedBuildInputs = [ rosidl-default-runtime std-msgs ];
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];

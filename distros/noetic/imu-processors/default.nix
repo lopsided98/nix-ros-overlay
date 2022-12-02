@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, nav-msgs, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-imu-processors";
-  version = "0.3.0-r2";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/imu_pipeline-release/archive/release/noetic/imu_processors/0.3.0-2.tar.gz";
-    name = "0.3.0-2.tar.gz";
-    sha256 = "2414b4f4622a5e70115bfe13eaec88df83bfa0de8289cebcc2336128dae8a8e0";
+    url = "https://github.com/ros-gbp/imu_pipeline-release/archive/release/noetic/imu_processors/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "4704e54be92f4d86e9a024e96ac88d333a57636b4187f9f7f65f0af4ea045cf5";
   };
 
   buildType = "catkin";

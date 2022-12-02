@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-shared-queues-vendor";
-  version = "0.15.2-r1";
+  version = "0.15.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/shared_queues_vendor/0.15.2-1.tar.gz";
-    name = "0.15.2-1.tar.gz";
-    sha256 = "495a811ef9d0418c9ce2143a0f41190a631a5f151acb8dbbbec4260d624a6646";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/shared_queues_vendor/0.15.3-1.tar.gz";
+    name = "0.15.3-1.tar.gz";
+    sha256 = "cbc389c6492bc6ed2a35a14fe43d31ed23f475797edc5ba15335be7e3d2e9c5f";
   };
 
   buildType = "ament_cmake";

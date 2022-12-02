@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joy-teleop, key-teleop, teleop-tools-msgs }:
 buildRosPackage {
   pname = "ros-galactic-teleop-tools";
-  version = "1.2.1-r2";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/galactic/teleop_tools/1.2.1-2.tar.gz";
-    name = "1.2.1-2.tar.gz";
-    sha256 = "904687d4dd7bd2d3401031d14cb35dd98fc9e57d362fe9b5a73e45cfb2472b80";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/galactic/teleop_tools/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "88247005755eee6738bb0efcb633b676d087faf2e009b92b6b30009a2ae2607a";
   };
 
   buildType = "ament_cmake";

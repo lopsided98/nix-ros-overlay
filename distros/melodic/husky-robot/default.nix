@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, husky-base, husky-bringup }:
 buildRosPackage {
   pname = "ros-melodic-husky-robot";
-  version = "0.4.12-r1";
+  version = "0.4.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_robot/0.4.12-1.tar.gz";
-    name = "0.4.12-1.tar.gz";
-    sha256 = "cdf96a1bacd675ad790c0a14e3ac121e208a721c298e3da351604b8ba207f9fc";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_robot/0.4.13-1.tar.gz";
+    name = "0.4.13-1.tar.gz";
+    sha256 = "61d45341d98e1d62810c87140606eb2e35cce5e69797c3618bc33621ca542567";
   };
 
   buildType = "catkin";

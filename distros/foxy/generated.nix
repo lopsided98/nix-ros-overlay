@@ -830,7 +830,11 @@ self: super: {
 
  maliput-object-py = self.callPackage ./maliput-object-py {};
 
+ maliput-osm = self.callPackage ./maliput-osm {};
+
  maliput-py = self.callPackage ./maliput-py {};
+
+ maliput-sparse = self.callPackage ./maliput-sparse {};
 
  map-msgs = self.callPackage ./map-msgs {};
 
@@ -1958,8 +1962,6 @@ self: super: {
 
  turtlesim = self.callPackage ./turtlesim {};
 
- tvm-vendor = self.callPackage ./tvm-vendor {};
-
  twist-mux = self.callPackage ./twist-mux {};
 
  twist-stamper = self.callPackage ./twist-stamper {};
@@ -2057,8 +2059,6 @@ self: super: {
  webots-ros2 = self.callPackage ./webots-ros2 {};
 
  webots-ros2-control = self.callPackage ./webots-ros2-control {};
-
- webots-ros2-core = self.callPackage ./webots-ros2-core {};
 
  webots-ros2-driver = self.callPackage ./webots-ros2-driver {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, rosbag-migration-rule, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-dbw-polaris-msgs";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/noetic/dbw_polaris_msgs/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "11baff27365fc74f0e6405218ab40d6fc79ea30d02db1463688bea2bce19af5b";
+    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/noetic/dbw_polaris_msgs/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "b5648764cef4109d45d9adf4dc432beaa6170b372d596ec7d47dabed1eddf06f";
   };
 
   buildType = "catkin";

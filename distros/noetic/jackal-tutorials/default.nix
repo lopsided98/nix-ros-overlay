@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosdoc-lite }:
 buildRosPackage {
   pname = "ros-noetic-jackal-tutorials";
-  version = "0.8.4-r1";
+  version = "0.8.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/noetic/jackal_tutorials/0.8.4-1.tar.gz";
-    name = "0.8.4-1.tar.gz";
-    sha256 = "de3bf47b83262b81d62a543987bb9cefc43f558dd836a28212fd8043f4c29784";
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/noetic/jackal_tutorials/0.8.6-1.tar.gz";
+    name = "0.8.6-1.tar.gz";
+    sha256 = "7b0811f58982a4478b5f7156109c88a7a6b986a3db16304d004a54d3bc63fde9";
   };
 
   buildType = "catkin";

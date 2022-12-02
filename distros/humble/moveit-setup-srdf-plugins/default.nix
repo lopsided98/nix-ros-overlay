@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-clang-format, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, moveit-resources-fanuc-description, moveit-setup-framework, pluginlib }:
 buildRosPackage {
   pname = "ros-humble-moveit-setup-srdf-plugins";
-  version = "2.5.3-r1";
+  version = "2.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_setup_srdf_plugins/2.5.3-1.tar.gz";
-    name = "2.5.3-1.tar.gz";
-    sha256 = "b959f2e6e4862da8e9644bec81ac2879752c7b5a91276c8ad5a5bdfd1f00d94d";
+    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_setup_srdf_plugins/2.5.4-1.tar.gz";
+    name = "2.5.4-1.tar.gz";
+    sha256 = "b9f9abf660c183aa427342ce7c22e052a2efd06d22c241c47ebad22a440a4a0c";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake }:
 buildRosPackage {
   pname = "ros-humble-ur-client-library";
-  version = "1.2.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/humble/ur_client_library/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "089f6f9d5bc0b3951d212e980a2cb90fb2a0027f715988ba437d5da31997b21e";
+    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/humble/ur_client_library/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "8ba1486cb7439abba2290242b5d67264947c579afd46830d3faca65bfc0fe57b";
   };
 
   buildType = "cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Standalone C++ library for accessing Universal Robots interfaces. This has been forked off the ur_robot_driver.'';
-    license = with lib.licenses; [ asl20 "BSD-2-Clause" "Zlib" mit ];
+    license = with lib.licenses; [ asl20 "BSD-2-Clause" "Zlib" ];
   };
 }

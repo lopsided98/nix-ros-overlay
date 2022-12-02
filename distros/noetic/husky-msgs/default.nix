@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-husky-msgs";
-  version = "0.6.4-r2";
+  version = "0.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/noetic/husky_msgs/0.6.4-2.tar.gz";
-    name = "0.6.4-2.tar.gz";
-    sha256 = "f9a8be02d8b0aa7ca89e320b12cb68a41c1b739b899dafe723567133c48c09ad";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/noetic/husky_msgs/0.6.5-1.tar.gz";
+    name = "0.6.5-1.tar.gz";
+    sha256 = "2338dd5bdab729f9faeba52e951e1bbe227c598f74703ca779d0a858e2c348c9";
   };
 
   buildType = "catkin";

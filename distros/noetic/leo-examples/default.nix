@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, leo-example-follow-ar-tag, leo-example-line-follower, leo-example-object-detection }:
 buildRosPackage {
   pname = "ros-noetic-leo-examples";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_examples-release/archive/release/noetic/leo_examples/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "47b98cd6a2369a9dab4023729d894bbb300608b9ad49dc2b7b8ee4d6a028a38d";
+    url = "https://github.com/fictionlab-gbp/leo_examples-release/archive/release/noetic/leo_examples/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "b1900c84ab421a366dc2f9b53753118a3b3c4d22ae4cef2ae34bc3e21d2d0d6b";
   };
 
   buildType = "catkin";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A collection of ROS packages that show example usage of functionalities on stock Leo Rover.'';
+    description = ''A collection of ROS packages that show an example usage of functionalities on a stock Leo Rover.'';
     license = with lib.licenses; [ mit ];
   };
 }

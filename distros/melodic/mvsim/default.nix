@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, box2d, catkin, cmake, cppzmq, dynamic-reconfigure, gtest, mrpt2, nav-msgs, protobuf, python3, pythonPackages, ros-environment, roscpp, sensor-msgs, tf2, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-mvsim";
-  version = "0.4.2-r1";
+  version = "0.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ual-arm-ros-pkg-release/mvsim-release/archive/release/melodic/mvsim/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "04b4f8f6c78c90abe013a159a224a69ee46a3c32bd422f740613ea612148b8c6";
+    url = "https://github.com/ual-arm-ros-pkg-release/mvsim-release/archive/release/melodic/mvsim/0.4.3-1.tar.gz";
+    name = "0.4.3-1.tar.gz";
+    sha256 = "36802ac8526aca1a0def4607296e0e32a652cd2fe90df954a1a3f6ff20f7c86d";
   };
 
   buildType = "catkin";

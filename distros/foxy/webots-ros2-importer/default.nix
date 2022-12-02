@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, python3Packages, pythonPackages, xacro }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-importer";
-  version = "2022.1.3-r1";
+  version = "2023.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_importer/2022.1.3-1.tar.gz";
-    name = "2022.1.3-1.tar.gz";
-    sha256 = "bfd0b96e4d5b3b896c68672589f5644598dc4a06d5b102bb540700113970c070";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_importer/2023.0.0-1.tar.gz";
+    name = "2023.0.0-1.tar.gz";
+    sha256 = "3eaa84c421cb59827f7c77d2b7636e3cef8def1fdc7be17032950040f13cc55e";
   };
 
   buildType = "ament_python";

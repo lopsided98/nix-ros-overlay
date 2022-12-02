@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rospy, rosservice }:
 buildRosPackage {
   pname = "ros-noetic-service-tools";
-  version = "0.6.29-r1";
+  version = "0.6.30-r2";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/noetic/service_tools/0.6.29-1.tar.gz";
-    name = "0.6.29-1.tar.gz";
-    sha256 = "d7331f9f3ba86ff6e63ec9fd7a6a1448151fb042f45e68873718293c0cf4e3f5";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/noetic/service_tools/0.6.30-2.tar.gz";
+    name = "0.6.30-2.tar.gz";
+    sha256 = "dcc3f3e70d087d07828ff5c61f374967a58a8301541ef8cef3811305533f73f5";
   };
 
   buildType = "catkin";

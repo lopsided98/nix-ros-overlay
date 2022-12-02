@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-statistics-msgs";
-  version = "1.2.0-r2";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/humble/statistics_msgs/1.2.0-2.tar.gz";
-    name = "1.2.0-2.tar.gz";
-    sha256 = "392dff3583fd003def6381944c3db34c954956eeec5e99d957e00aec1192b473";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/humble/statistics_msgs/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "c9ca305cb65ec980921e59ce5d035d2c360ee75264efd0a84c578de2f6423fbd";
   };
 
   buildType = "ament_cmake";

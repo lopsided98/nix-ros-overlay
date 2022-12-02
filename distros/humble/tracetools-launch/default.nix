@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-mypy, ament-pep257, ament-xmllint, launch, launch-ros, pythonPackages, tracetools-trace }:
 buildRosPackage {
   pname = "ros-humble-tracetools-launch";
-  version = "4.1.0-r2";
+  version = "4.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/humble/tracetools_launch/4.1.0-2.tar.gz";
-    name = "4.1.0-2.tar.gz";
-    sha256 = "ad3f8dfa25420937c84b431b8951fe74eb7ad30c1c05c43264987bdb257ed2da";
+    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/humble/tracetools_launch/4.1.1-1.tar.gz";
+    name = "4.1.1-1.tar.gz";
+    sha256 = "4112ff73186f86ffd03f8f0ae8d388a54afc279215633c4525bbf84a0b79eb06";
   };
 
   buildType = "ament_python";

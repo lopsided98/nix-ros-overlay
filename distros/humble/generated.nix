@@ -20,9 +20,13 @@ self: super: {
 
  adaptive-component = self.callPackage ./adaptive-component {};
 
+ admittance-controller = self.callPackage ./admittance-controller {};
+
  affordance-primitives = self.callPackage ./affordance-primitives {};
 
  ament-acceleration = self.callPackage ./ament-acceleration {};
+
+ ament-black = self.callPackage ./ament-black {};
 
  ament-clang-format = self.callPackage ./ament-clang-format {};
 
@@ -31,6 +35,8 @@ self: super: {
  ament-cmake = self.callPackage ./ament-cmake {};
 
  ament-cmake-auto = self.callPackage ./ament-cmake-auto {};
+
+ ament-cmake-black = self.callPackage ./ament-cmake-black {};
 
  ament-cmake-catch2 = self.callPackage ./ament-cmake-catch2 {};
 
@@ -400,9 +406,19 @@ self: super: {
 
  force-torque-sensor-broadcaster = self.callPackage ./force-torque-sensor-broadcaster {};
 
+ foros = self.callPackage ./foros {};
+
+ foros-examples = self.callPackage ./foros-examples {};
+
+ foros-inspector = self.callPackage ./foros-inspector {};
+
+ foros-msgs = self.callPackage ./foros-msgs {};
+
  forward-command-controller = self.callPackage ./forward-command-controller {};
 
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
+
+ foxglove-bridge = self.callPackage ./foxglove-bridge {};
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
@@ -681,6 +697,10 @@ self: super: {
  lifecycle-py = self.callPackage ./lifecycle-py {};
 
  logging-demo = self.callPackage ./logging-demo {};
+
+ lusb = self.callPackage ./lusb {};
+
+ magic-enum = self.callPackage ./magic-enum {};
 
  map-msgs = self.callPackage ./map-msgs {};
 
@@ -1062,8 +1082,6 @@ self: super: {
 
  pmb2-2dnav = self.callPackage ./pmb2-2dnav {};
 
- pmb2-2dnav-gazebo = self.callPackage ./pmb2-2dnav-gazebo {};
-
  pmb2-bringup = self.callPackage ./pmb2-bringup {};
 
  pmb2-controller-configuration = self.callPackage ./pmb2-controller-configuration {};
@@ -1324,6 +1342,8 @@ self: super: {
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
 
+ robot-upstart = self.callPackage ./robot-upstart {};
+
  ros2-control = self.callPackage ./ros2-control {};
 
  ros2-control-test-assets = self.callPackage ./ros2-control-test-assets {};
@@ -1515,6 +1535,8 @@ self: super: {
  rqt-common-plugins = self.callPackage ./rqt-common-plugins {};
 
  rqt-console = self.callPackage ./rqt-console {};
+
+ rqt-controller-manager = self.callPackage ./rqt-controller-manager {};
 
  rqt-graph = self.callPackage ./rqt-graph {};
 
@@ -1770,6 +1792,24 @@ self: super: {
 
  tf-transformations = self.callPackage ./tf-transformations {};
 
+ tiago-2dnav = self.callPackage ./tiago-2dnav {};
+
+ tiago-bringup = self.callPackage ./tiago-bringup {};
+
+ tiago-controller-configuration = self.callPackage ./tiago-controller-configuration {};
+
+ tiago-description = self.callPackage ./tiago-description {};
+
+ tiago-gazebo = self.callPackage ./tiago-gazebo {};
+
+ tiago-moveit-config = self.callPackage ./tiago-moveit-config {};
+
+ tiago-navigation = self.callPackage ./tiago-navigation {};
+
+ tiago-robot = self.callPackage ./tiago-robot {};
+
+ tiago-simulation = self.callPackage ./tiago-simulation {};
+
  tinyxml2-vendor = self.callPackage ./tinyxml2-vendor {};
 
  tinyxml-vendor = self.callPackage ./tinyxml-vendor {};
@@ -1835,8 +1875,6 @@ self: super: {
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
  turtlesim = self.callPackage ./turtlesim {};
-
- tvm-vendor = self.callPackage ./tvm-vendor {};
 
  twist-mux = self.callPackage ./twist-mux {};
 
@@ -1947,8 +1985,6 @@ self: super: {
  webots-ros2 = self.callPackage ./webots-ros2 {};
 
  webots-ros2-control = self.callPackage ./webots-ros2-control {};
-
- webots-ros2-core = self.callPackage ./webots-ros2-core {};
 
  webots-ros2-driver = self.callPackage ./webots-ros2-driver {};
 

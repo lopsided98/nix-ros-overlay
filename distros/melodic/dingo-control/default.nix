@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, diff-drive-controller, interactive-marker-twist-server, joint-state-controller, joy, ridgeback-control, robot-localization, roslaunch, teleop-twist-joy, topic-tools, twist-mux }:
 buildRosPackage {
   pname = "ros-melodic-dingo-control";
-  version = "0.1.11-r1";
+  version = "0.1.12-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/melodic/dingo_control/0.1.11-1.tar.gz";
-    name = "0.1.11-1.tar.gz";
-    sha256 = "3f25e8c54a57cefba0cb7fb12968f553d4b307b93749694d948ac5df789b406e";
+    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/melodic/dingo_control/0.1.12-2.tar.gz";
+    name = "0.1.12-2.tar.gz";
+    sha256 = "5c1d0f0b180e99178dc7b9b588c6891dcda9c47821d5c4cae2f254867940d78e";
   };
 
   buildType = "catkin";

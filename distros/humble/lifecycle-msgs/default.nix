@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-lifecycle-msgs";
-  version = "1.2.0-r2";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/humble/lifecycle_msgs/1.2.0-2.tar.gz";
-    name = "1.2.0-2.tar.gz";
-    sha256 = "1b1ca7586746a208fe157ae096b865e2d2e16826a4933615e8640047ca1dff6b";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/humble/lifecycle_msgs/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "c351b99f0e26fb70b42457dc53b626bfbc208eb662ab497a4eb7061b82d04731";
   };
 
   buildType = "ament_cmake";

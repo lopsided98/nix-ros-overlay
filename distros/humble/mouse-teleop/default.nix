@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, geometry-msgs, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-humble-mouse-teleop";
-  version = "1.2.1-r3";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/humble/mouse_teleop/1.2.1-3.tar.gz";
-    name = "1.2.1-3.tar.gz";
-    sha256 = "74496b7a9028ef55aae1f9ecbde2cf44185cac5623916bda1fbe8d85d6788f8f";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/humble/mouse_teleop/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "1c2fcbd526d9c6329ec2e987be1a9258d3ccbe5460c40a36076e734d7aae6e50";
   };
 
   buildType = "ament_python";

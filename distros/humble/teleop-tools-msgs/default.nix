@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-teleop-tools-msgs";
-  version = "1.2.1-r3";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/humble/teleop_tools_msgs/1.2.1-3.tar.gz";
-    name = "1.2.1-3.tar.gz";
-    sha256 = "08fb37a49ff3c24e5d203245a71b9395907b97b7e917f753001b5689d6354b29";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/humble/teleop_tools_msgs/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "b07ab2bc1877ba5074813f6434a832ab84ba43df14fb0a51c27db8e1cf4a6261";
   };
 
   buildType = "ament_cmake";

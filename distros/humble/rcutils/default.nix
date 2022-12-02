@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, mimick-vendor, osrf-testing-tools-cpp, performance-test-fixture, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-rcutils";
-  version = "5.1.1-r2";
+  version = "5.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcutils-release/archive/release/humble/rcutils/5.1.1-2.tar.gz";
-    name = "5.1.1-2.tar.gz";
-    sha256 = "cd67e8e810dafe93040368fd9b25a844bc80a4cd158d828fab94edaa9482cd29";
+    url = "https://github.com/ros2-gbp/rcutils-release/archive/release/humble/rcutils/5.1.2-1.tar.gz";
+    name = "5.1.2-1.tar.gz";
+    sha256 = "bac0449f77f38e8228c2fb3cb2e2c113d4e3f1315a5e1e76e3fa26598a1fbac7";
   };
 
   buildType = "ament_cmake";

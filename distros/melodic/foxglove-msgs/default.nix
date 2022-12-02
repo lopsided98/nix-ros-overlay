@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, ros-environment, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-foxglove-msgs";
-  version = "2.0.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/foxglove/ros_foxglove_msgs-release/archive/release/melodic/foxglove_msgs/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "35a8abe8b7f56b02eedbccb37c5b9c264c34c0d628f4b2084c543d0357a7271d";
+    url = "https://github.com/foxglove/ros_foxglove_msgs-release/archive/release/melodic/foxglove_msgs/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "af943480902232e649fc6ffdc27c77c7e2e706a1eaf9ca3e134a14b0ef84dfce";
   };
 
   buildType = "catkin";

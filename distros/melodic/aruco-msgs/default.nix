@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-aruco-msgs";
-  version = "2.1.1-r1";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/aruco_ros-release/archive/release/melodic/aruco_msgs/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "57c04ab066abb37761908071f24d8d7d7d9329d47f3da13c2e00d9201fa8e616";
+    url = "https://github.com/pal-gbp/aruco_ros-release/archive/release/melodic/aruco_msgs/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "6656c736a9ae940515cf11eb01f4050ad369b4aff892f215bab02008a65912eb";
   };
 
   buildType = "catkin";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The aruco_msgs package'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ mit ];
   };
 }

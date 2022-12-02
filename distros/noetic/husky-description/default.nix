@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, fath-pivot-mount-description, flir-camera-description, lms1xx, realsense2-description, roslaunch, urdf, velodyne-description, xacro }:
 buildRosPackage {
   pname = "ros-noetic-husky-description";
-  version = "0.6.4-r2";
+  version = "0.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/noetic/husky_description/0.6.4-2.tar.gz";
-    name = "0.6.4-2.tar.gz";
-    sha256 = "56955e5ac78346b7457af21dc026a3a0062d97cd17cc4a115653374e1846d69d";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/noetic/husky_description/0.6.5-1.tar.gz";
+    name = "0.6.5-1.tar.gz";
+    sha256 = "733c1173dea098f71749c6619798e6d41479e030431f31953a90a0007f100244";
   };
 
   buildType = "catkin";

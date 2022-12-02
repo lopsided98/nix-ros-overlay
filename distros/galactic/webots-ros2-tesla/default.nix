@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-msgs, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, python3Packages, pythonPackages, rclpy, webots-ros2-driver }:
 buildRosPackage {
   pname = "ros-galactic-webots-ros2-tesla";
-  version = "2022.1.3-r1";
+  version = "2022.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/galactic/webots_ros2_tesla/2022.1.3-1.tar.gz";
-    name = "2022.1.3-1.tar.gz";
-    sha256 = "01179324820a52426fcd4ea02bd2298211486533f114dc78c9124da77e2ec270";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/galactic/webots_ros2_tesla/2022.1.4-1.tar.gz";
+    name = "2022.1.4-1.tar.gz";
+    sha256 = "269af34c69fd2058586ee43bb4d83641cf3ca342a9f8d53f2cbbf8cd7e8a0e4f";
   };
 
   buildType = "ament_python";

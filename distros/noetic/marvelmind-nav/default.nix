@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, roscpp, rospy, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-marvelmind-nav";
-  version = "1.0.11-r1";
+  version = "1.0.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/MarvelmindRobotics/marvelmind_nav-release/archive/release/noetic/marvelmind_nav/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "748200b168add3d97206337a2b9a6b434e050c24b6127253bd355918794153e5";
+    url = "https://github.com/MarvelmindRobotics/marvelmind_nav-release/archive/release/noetic/marvelmind_nav/1.0.13-1.tar.gz";
+    name = "1.0.13-1.tar.gz";
+    sha256 = "3f9ace8cf37ec2f21c90d2ed3f5ab15db82f4ff2d7f0d5cb0da27b7dcec5e2cd";
   };
 
   buildType = "catkin";

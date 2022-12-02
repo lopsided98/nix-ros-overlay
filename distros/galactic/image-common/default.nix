@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, camera-calibration-parsers, camera-info-manager, image-transport }:
 buildRosPackage {
   pname = "ros-galactic-image-common";
-  version = "2.5.0-r1";
+  version = "2.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/galactic/image_common/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "47330b6d8403c509ec0b882b339b6e0387923897229d91e152a941bff9bbe436";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/galactic/image_common/2.5.1-1.tar.gz";
+    name = "2.5.1-1.tar.gz";
+    sha256 = "4d2fc4fcc62e16e20239e83e1b3c7ce2e588cdb504b0234c4a0e1ee6119ca9c6";
   };
 
   buildType = "ament_cmake";
