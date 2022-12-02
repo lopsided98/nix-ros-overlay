@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gps-common, gpsd-client }:
 buildRosPackage {
   pname = "ros-noetic-gps-umd";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/noetic/gps_umd/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "ca6c1d82ea1f9ac94136000f14477f0e71c6db70e568ba42113d6e89255a30aa";
+    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/noetic/gps_umd/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "d558c65ce8b83fb5235b7165b3662eefba2126b23685b623b087d44a4a00fed1";
   };
 
   buildType = "catkin";

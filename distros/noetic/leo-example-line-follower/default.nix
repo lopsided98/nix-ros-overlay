@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, geometry-msgs, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-leo-example-line-follower";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_examples-release/archive/release/noetic/leo_example_line_follower/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "c4c08fe56a46b18d205f2ce8e88ca50ee6a3a21913d4ae6cb2446789fd2647b7";
+    url = "https://github.com/fictionlab-gbp/leo_examples-release/archive/release/noetic/leo_example_line_follower/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "a7f28d6e6d9ae99c4e3a572de169874f79094fd275d6f92f647c4e684932e545";
   };
 
   buildType = "catkin";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Neural Network model for line track following Example for Leo Rover.'';
+    description = ''A neural Network model for line track following Example for Leo Rover.'';
     license = with lib.licenses; [ mit ];
   };
 }

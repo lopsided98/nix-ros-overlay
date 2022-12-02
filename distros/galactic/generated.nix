@@ -442,9 +442,19 @@ self: super: {
 
  force-torque-sensor-broadcaster = self.callPackage ./force-torque-sensor-broadcaster {};
 
+ foros = self.callPackage ./foros {};
+
+ foros-examples = self.callPackage ./foros-examples {};
+
+ foros-inspector = self.callPackage ./foros-inspector {};
+
+ foros-msgs = self.callPackage ./foros-msgs {};
+
  forward-command-controller = self.callPackage ./forward-command-controller {};
 
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
+
+ foxglove-bridge = self.callPackage ./foxglove-bridge {};
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
@@ -547,6 +557,8 @@ self: super: {
  imu-sensor-broadcaster = self.callPackage ./imu-sensor-broadcaster {};
 
  imu-tools = self.callPackage ./imu-tools {};
+
+ interactive-marker-twist-server = self.callPackage ./interactive-marker-twist-server {};
 
  interactive-markers = self.callPackage ./interactive-markers {};
 
@@ -1811,8 +1823,6 @@ self: super: {
  turtlebot4-viz = self.callPackage ./turtlebot4-viz {};
 
  turtlesim = self.callPackage ./turtlesim {};
-
- tvm-vendor = self.callPackage ./tvm-vendor {};
 
  twist-mux = self.callPackage ./twist-mux {};
 

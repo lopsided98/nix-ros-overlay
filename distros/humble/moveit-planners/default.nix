@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-planners-ompl, pilz-industrial-motion-planner }:
 buildRosPackage {
   pname = "ros-humble-moveit-planners";
-  version = "2.5.3-r1";
+  version = "2.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_planners/2.5.3-1.tar.gz";
-    name = "2.5.3-1.tar.gz";
-    sha256 = "27a08125628f76b617546c1aa3b7a623ffd1e655b971cf74bf146a60f3eb88ea";
+    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_planners/2.5.4-1.tar.gz";
+    name = "2.5.4-1.tar.gz";
+    sha256 = "342c063471efabe1937c7f59e734c6135df256d44edd24a1ef1fa017a8925587";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, pythonPackages, rclpy, ros2bag, rosbag2-storage-default-plugins, sensor-msgs, std-msgs, std-srvs, tf2-ros, webots-ros2-driver, webots-ros2-epuck, webots-ros2-mavic, webots-ros2-tesla, webots-ros2-tiago, webots-ros2-turtlebot, webots-ros2-universal-robot }:
 buildRosPackage {
   pname = "ros-humble-webots-ros2-tests";
-  version = "2022.1.3-r1";
+  version = "2023.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/humble/webots_ros2_tests/2022.1.3-1.tar.gz";
-    name = "2022.1.3-1.tar.gz";
-    sha256 = "750cc764564cd610fc50442df635b95783d3cc3ed097aef4590bc37d732e7bf0";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/humble/webots_ros2_tests/2023.0.0-1.tar.gz";
+    name = "2023.0.0-1.tar.gz";
+    sha256 = "52d88de8719d4e34cec66d3ea309c81b6910ef2a11bb329a4affd341ca1feaaf";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-galactic-key-teleop";
-  version = "1.2.1-r2";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/galactic/key_teleop/1.2.1-2.tar.gz";
-    name = "1.2.1-2.tar.gz";
-    sha256 = "b36d2d75e01ce60938caecfedb5cad60be34e00839e8ad5e502eb7a5b5c9db4d";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/galactic/key_teleop/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "bda57bc39ba604027a1fd39eb47393aaa495facfc8098fa80e2c47be1ea6145e";
   };
 
   buildType = "ament_python";

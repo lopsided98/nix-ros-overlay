@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, controller-manager, diff-drive-controller, geometry-msgs, joint-state-broadcaster, nav-msgs, pythonPackages, rclpy, robot-state-publisher, rviz2, sensor-msgs, std-msgs, tf2-ros, webots-ros2-control, webots-ros2-driver, webots-ros2-msgs }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-epuck";
-  version = "2022.1.3-r1";
+  version = "2023.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_epuck/2022.1.3-1.tar.gz";
-    name = "2022.1.3-1.tar.gz";
-    sha256 = "9b5eceba91a51d81ce8d90f95c3f22f187de4e65db9f2c6efcb639defedd1f90";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_epuck/2023.0.0-1.tar.gz";
+    name = "2023.0.0-1.tar.gz";
+    sha256 = "4164bca9824d80bf8d0674782bea83759d6fa86224eae039476f2c4568930d27";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-leo-example-object-detection";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_examples-release/archive/release/noetic/leo_example_object_detection/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "4bb5f696f991125cc1587710676ae0b06beed74bc8271926cd0fabeeeb87c578";
+    url = "https://github.com/fictionlab-gbp/leo_examples-release/archive/release/noetic/leo_example_object_detection/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "2f4ee0324414397600d37ae209348b50c574fa2a812152400ef08bb4d02a2742";
   };
 
   buildType = "catkin";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Object Detection Example for Leo Rover.'';
+    description = ''An object Detection Example for Leo Rover.'';
     license = with lib.licenses; [ mit ];
   };
 }

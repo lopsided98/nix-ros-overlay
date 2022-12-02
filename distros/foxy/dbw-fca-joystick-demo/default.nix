@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, dataspeed-dbw-common, dbw-fca-can, dbw-fca-msgs, joy, rclcpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-dbw-fca-joystick-demo";
-  version = "2.0.1-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/foxy/dbw_fca_joystick_demo/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "ebc7e6156617614c8dd0f7b4f5c255f2b409583b39d97cc8a207187f0cf9c5f6";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/foxy/dbw_fca_joystick_demo/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "85ec226b5265ed54b946369aa7c4651ebc81701c2155728834d99e92eb9ea940";
   };
 
   buildType = "ament_cmake";

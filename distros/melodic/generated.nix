@@ -1150,6 +1150,8 @@ self: super: {
 
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
 
+ foxglove-bridge = self.callPackage ./foxglove-bridge {};
+
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
  frame-editor = self.callPackage ./frame-editor {};
@@ -3950,6 +3952,10 @@ self: super: {
 
  slime-wrapper = self.callPackage ./slime-wrapper {};
 
+ smacc = self.callPackage ./smacc {};
+
+ smacc-msgs = self.callPackage ./smacc-msgs {};
+
  smach = self.callPackage ./smach {};
 
  smach-msgs = self.callPackage ./smach-msgs {};
@@ -4328,6 +4334,8 @@ self: super: {
 
  unique-identifier = self.callPackage ./unique-identifier {};
 
+ universal-robots = self.callPackage ./universal-robots {};
+
  uos-common-urdf = self.callPackage ./uos-common-urdf {};
 
  uos-diffdrive-teleop = self.callPackage ./uos-diffdrive-teleop {};
@@ -4340,7 +4348,25 @@ self: super: {
 
  uos-tools = self.callPackage ./uos-tools {};
 
+ ur10-moveit-config = self.callPackage ./ur10-moveit-config {};
+
+ ur10e-moveit-config = self.callPackage ./ur10e-moveit-config {};
+
+ ur16e-moveit-config = self.callPackage ./ur16e-moveit-config {};
+
+ ur3-moveit-config = self.callPackage ./ur3-moveit-config {};
+
+ ur3e-moveit-config = self.callPackage ./ur3e-moveit-config {};
+
+ ur5-moveit-config = self.callPackage ./ur5-moveit-config {};
+
+ ur5e-moveit-config = self.callPackage ./ur5e-moveit-config {};
+
  ur-client-library = self.callPackage ./ur-client-library {};
+
+ ur-description = self.callPackage ./ur-description {};
+
+ ur-gazebo = self.callPackage ./ur-gazebo {};
 
  ur-msgs = self.callPackage ./ur-msgs {};
 

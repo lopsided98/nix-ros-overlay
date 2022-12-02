@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, robot-state-publisher, rviz2, urdf, xacro }:
 buildRosPackage {
   pname = "ros-foxy-dbw-ford-description";
-  version = "2.0.1-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/foxy/dbw_ford_description/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "6db7ad2d53ed29158b5b108bc2770fa6ff21adc617626c3be6d799b3d4cbe745";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/foxy/dbw_ford_description/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "1bec7434eb484a4a2cde6997d6d88328949e1a99cda199ca45fc590788c0abe3";
   };
 
   buildType = "ament_cmake";

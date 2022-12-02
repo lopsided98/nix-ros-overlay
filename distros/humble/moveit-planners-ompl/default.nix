@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, llvmPackages, moveit-common, moveit-core, moveit-msgs, moveit-resources-fanuc-moveit-config, moveit-resources-panda-moveit-config, moveit-resources-pr2-description, moveit-ros-planning, ompl, pluginlib, rclcpp, tf2-eigen, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-moveit-planners-ompl";
-  version = "2.5.3-r1";
+  version = "2.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_planners_ompl/2.5.3-1.tar.gz";
-    name = "2.5.3-1.tar.gz";
-    sha256 = "37dcf4899f10959c4a77208d5257f0d67c3c27d94181ffc66954b9983831d3cd";
+    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_planners_ompl/2.5.4-1.tar.gz";
+    name = "2.5.4-1.tar.gz";
+    sha256 = "aa5b679b1198fe4924bf51a12db0d87fea39152915d5c1af8f1e9259564573eb";
   };
 
   buildType = "ament_cmake";

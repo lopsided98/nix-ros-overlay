@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-examples-rclcpp-minimal-subscriber";
-  version = "0.15.0-r2";
+  version = "0.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/humble/examples_rclcpp_minimal_subscriber/0.15.0-2.tar.gz";
-    name = "0.15.0-2.tar.gz";
-    sha256 = "6f5de28325fc61bff13a475841632eb057cfd15a7d63107ac3a038b41b548a00";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/humble/examples_rclcpp_minimal_subscriber/0.15.1-1.tar.gz";
+    name = "0.15.1-1.tar.gz";
+    sha256 = "ade2413d7ba7b7f850047be47af5ff05133928358eb278d9bc75ce9c8bbd8fe2";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, camera-calibration-parsers, rclcpp, rcpputils, sensor-msgs }:
 buildRosPackage {
   pname = "ros-galactic-camera-info-manager";
-  version = "2.5.0-r1";
+  version = "2.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/galactic/camera_info_manager/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "2462a605ffd15667c92532ee1d3e6c70ac85a71dd8e552d9f14af637d1870004";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/galactic/camera_info_manager/2.5.1-1.tar.gz";
+    name = "2.5.1-1.tar.gz";
+    sha256 = "2779e78ed64d7717b08123acd2bcc842f2c991e810b75dac6ccbafc7860103fb";
   };
 
   buildType = "ament_cmake";

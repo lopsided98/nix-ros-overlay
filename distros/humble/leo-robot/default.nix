@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, leo, leo-bringup, leo-fw }:
 buildRosPackage {
   pname = "ros-humble-leo-robot";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/humble/leo_robot/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "9d396d412fff85ea506a76aac3ea01e713679c5a7a1f17d1f737049586c7c0c2";
+    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/humble/leo_robot/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "cee1b44d5eee9cc531dc9ce98d75520c805e260d6e601804dad9e26158799760";
   };
 
   buildType = "ament_cmake";

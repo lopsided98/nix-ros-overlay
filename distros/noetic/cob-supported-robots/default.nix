@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-cob-supported-robots";
-  version = "0.6.16-r1";
+  version = "0.6.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_supported_robots-release/archive/release/noetic/cob_supported_robots/0.6.16-1.tar.gz";
-    name = "0.6.16-1.tar.gz";
-    sha256 = "e276d79787be46fd66f33af637b8e4a28050b98d6e02cbd9a4e2073f0f68bdd2";
+    url = "https://github.com/ipa320/cob_supported_robots-release/archive/release/noetic/cob_supported_robots/0.6.17-1.tar.gz";
+    name = "0.6.17-1.tar.gz";
+    sha256 = "759491f7332143a68c6f8b74311f2f62fb06ebed5f091f3fd29625517328f217";
   };
 
   buildType = "catkin";

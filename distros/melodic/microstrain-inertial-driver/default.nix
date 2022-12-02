@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, curl, diagnostic-aggregator, diagnostic-updater, geometry-msgs, jq, mavros-msgs, message-generation, message-runtime, microstrain-inertial-msgs, nav-msgs, nmea-msgs, roscpp, roslint, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-microstrain-inertial-driver";
-  version = "2.7.0-r1";
+  version = "2.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/melodic/microstrain_inertial_driver/2.7.0-1.tar.gz";
-    name = "2.7.0-1.tar.gz";
-    sha256 = "7a6af80c607e04322d7cb649bcd3caf49251a4a20e7467d52fe7e818efde19a9";
+    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/melodic/microstrain_inertial_driver/2.7.1-1.tar.gz";
+    name = "2.7.1-1.tar.gz";
+    sha256 = "d7cf511864eb1c74a2fe2249c25f2c937740db4cb5ba2852283722d249af8a73";
   };
 
   buildType = "catkin";

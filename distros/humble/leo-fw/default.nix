@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-index-python, geometry-msgs, leo-msgs, libyamlcpp, nav-msgs, python3Packages, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-leo-fw";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/humble/leo_fw/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "9e714a0810839507dc29f29e95695db79943985ef1fde649f194c0e5e0faa13c";
+    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/humble/leo_fw/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "4b6230313b3a3b76e7aa92b197ad5fd47c8749faf735ef1977fa71fbb7c5a041";
   };
 
   buildType = "ament_cmake";

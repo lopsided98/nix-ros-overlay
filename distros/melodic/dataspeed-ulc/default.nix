@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dataspeed-ulc-can, dataspeed-ulc-msgs }:
 buildRosPackage {
   pname = "ros-melodic-dataspeed-ulc";
-  version = "0.0.5-r1";
+  version = "0.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release/archive/release/melodic/dataspeed_ulc/0.0.5-1.tar.gz";
-    name = "0.0.5-1.tar.gz";
-    sha256 = "c306396d1f0cfc3d287c5c1f468e43385b6c26eaedfcb34cead9022563b308fa";
+    url = "https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release/archive/release/melodic/dataspeed_ulc/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
+    sha256 = "ab201e51b4e51c39b4e6db04e2a65ab377e091091086cb1cf121e6a757b3ee80";
   };
 
   buildType = "catkin";

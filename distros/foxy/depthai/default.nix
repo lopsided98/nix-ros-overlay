@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb1, nlohmann_json, opencv, ros-environment }:
 buildRosPackage {
   pname = "ros-foxy-depthai";
-  version = "2.19.0-r1";
+  version = "2.19.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-core-release/archive/release/foxy/depthai/2.19.0-1.tar.gz";
-    name = "2.19.0-1.tar.gz";
-    sha256 = "dc05c23a92ef244c1348bd74e7f9865ea5501b280f7c66dfff24e8bfb3aea841";
+    url = "https://github.com/luxonis/depthai-core-release/archive/release/foxy/depthai/2.19.1-1.tar.gz";
+    name = "2.19.1-1.tar.gz";
+    sha256 = "eb803428dab9d961ae454a3ef4721da6488260c79eb5b83dbd21cefd5da243c6";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-gmock, ament-index-cpp, ament-lint-auto, ament-lint-common, mcap-vendor, pluginlib, rcpputils, rcutils, rosbag2-cpp, rosbag2-storage, rosbag2-storage-mcap-testdata, rosbag2-test-common, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-rosbag2-storage-mcap";
-  version = "0.5.0-r1";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2_storage_mcap-release/archive/release/humble/rosbag2_storage_mcap/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "514c03cde8b3c09d05a2fe80d17d8a807e5384fdd5b10af76ddb6c02c6e6fa06";
+    url = "https://github.com/ros2-gbp/rosbag2_storage_mcap-release/archive/release/humble/rosbag2_storage_mcap/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "8f8f48cd3a3e2b3f0b71420794b9c8bf769663ff7adf391a5a4157f335822b39";
   };
 
   buildType = "ament_cmake";

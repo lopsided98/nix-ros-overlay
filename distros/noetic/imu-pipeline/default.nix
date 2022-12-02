@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, imu-processors, imu-transformer }:
 buildRosPackage {
   pname = "ros-noetic-imu-pipeline";
-  version = "0.3.0-r2";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/imu_pipeline-release/archive/release/noetic/imu_pipeline/0.3.0-2.tar.gz";
-    name = "0.3.0-2.tar.gz";
-    sha256 = "946eec181c53278eb6e6dd0763beb3e9a654b76f825affe873dcb7afaf509242";
+    url = "https://github.com/ros-gbp/imu_pipeline-release/archive/release/noetic/imu_pipeline/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "3a8f6074735f46cdd3d4953a6673b3351e998a88b63b642433429ae4f24560a1";
   };
 
   buildType = "catkin";

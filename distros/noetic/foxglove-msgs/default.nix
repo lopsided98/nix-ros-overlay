@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, ros-environment, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-foxglove-msgs";
-  version = "2.0.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/foxglove/ros_foxglove_msgs-release/archive/release/noetic/foxglove_msgs/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "d9ad610609da0ebecb8b5d7b216bc9c7e6fa20c0c24a2e8e843d0cf7dca7cb87";
+    url = "https://github.com/foxglove/ros_foxglove_msgs-release/archive/release/noetic/foxglove_msgs/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "bc1f40409bf7589dc2d894001df400ffd1d12f40e7b6df34491f711719a4eecd";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nav-2d-msgs, nav-msgs, nav2-common, nav2-msgs, nav2-util, std-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-humble-nav-2d-utils";
-  version = "1.1.2-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav_2d_utils/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "e6802d8ba726c4e3c9820b8047e8887974026e0a569c1606b160e9dd92d540f7";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav_2d_utils/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "5d353c27721e6b5d77055601267501221e19b5006deef10b7f4308610d29da2c";
   };
 
   buildType = "ament_cmake";

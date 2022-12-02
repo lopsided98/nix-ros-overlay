@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-aruco-msgs";
-  version = "3.0.1-r3";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/aruco_ros-release/archive/release/noetic/aruco_msgs/3.0.1-3.tar.gz";
-    name = "3.0.1-3.tar.gz";
-    sha256 = "8cc41f88a983ea32a2cc48288dc5e2ea2edba95b6c85911f7c20ebbf3ca48a39";
+    url = "https://github.com/pal-gbp/aruco_ros-release/archive/release/noetic/aruco_msgs/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "5594a1b779c90a433dad84313dc629112e7acb124c8ba90854e7345c8d917172";
   };
 
   buildType = "catkin";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The aruco_msgs package'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ mit ];
   };
 }

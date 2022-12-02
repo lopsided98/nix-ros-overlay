@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dbw-mkz-can, dbw-mkz-description, dbw-mkz-joystick-demo, dbw-mkz-msgs }:
 buildRosPackage {
   pname = "ros-noetic-dbw-mkz";
-  version = "1.4.1-r1";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/noetic/dbw_mkz/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "fc65c579bfe0aedec995127a4098202a9f28da6bcc4aed3d00892a9edcb1e698";
+    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/noetic/dbw_mkz/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "d7c670c10032cde9de5179ebcfc445a54abf4a68568625c059660f77a16fad6b";
   };
 
   buildType = "catkin";

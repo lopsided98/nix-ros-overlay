@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, xacro }:
 buildRosPackage {
   pname = "ros-humble-hey5-description";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/hey5_description-release/archive/release/humble/hey5_description/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "4a6009b987437bb57b48fec8f9fea3d3f784fa485ad9bf732587e971b969dcda";
+    url = "https://github.com/pal-gbp/hey5_description-release/archive/release/humble/hey5_description/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "8aa1a9ddef46f5b3e25e4447ffec02cacedc89b1efe0f15a175945d131929846";
   };
 
   buildType = "ament_cmake";

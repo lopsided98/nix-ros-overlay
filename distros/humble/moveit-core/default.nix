@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, angles, assimp, boost, bullet, common-interfaces, eigen, eigen-stl-containers, eigen3-cmake-module, fcl, geometric-shapes, geometry-msgs, kdl-parser, moveit-common, moveit-msgs, moveit-resources-panda-moveit-config, moveit-resources-pr2-description, octomap, octomap-msgs, orocos-kdl-vendor, pkg-config, pluginlib, pybind11-vendor, random-numbers, rclcpp, ruckig, sensor-msgs, shape-msgs, srdfdom, std-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-kdl, trajectory-msgs, urdf, urdfdom, urdfdom-headers, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-moveit-core";
-  version = "2.5.3-r1";
+  version = "2.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_core/2.5.3-1.tar.gz";
-    name = "2.5.3-1.tar.gz";
-    sha256 = "46a802842a450a62c6522c5ebbb0d047132e9f5507028a351e06f59e4c68e587";
+    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_core/2.5.4-1.tar.gz";
+    name = "2.5.4-1.tar.gz";
+    sha256 = "7b8381cc6d4cba4443e6fd0571ca97a5b99cb645c596c24b85c6e67177628934";
   };
 
   buildType = "ament_cmake";

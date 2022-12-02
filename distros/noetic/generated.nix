@@ -990,6 +990,8 @@ self: super: {
 
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
 
+ foxglove-bridge = self.callPackage ./foxglove-bridge {};
+
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
  frame-editor = self.callPackage ./frame-editor {};
@@ -2660,6 +2662,8 @@ self: super: {
 
  rm-orientation-controller = self.callPackage ./rm-orientation-controller {};
 
+ rm-referee = self.callPackage ./rm-referee {};
+
  rm-shooter-controllers = self.callPackage ./rm-shooter-controllers {};
 
  robot = self.callPackage ./robot {};
@@ -2701,6 +2705,10 @@ self: super: {
  robotis-manipulator = self.callPackage ./robotis-manipulator {};
 
  robotont-description = self.callPackage ./robotont-description {};
+
+ robotont-gazebo = self.callPackage ./robotont-gazebo {};
+
+ robotont-msgs = self.callPackage ./robotont-msgs {};
 
  robotont-nuc-description = self.callPackage ./robotont-nuc-description {};
 
@@ -2978,6 +2986,8 @@ self: super: {
 
  rqt-gui-py = self.callPackage ./rqt-gui-py {};
 
+ rqt-human-radar = self.callPackage ./rqt-human-radar {};
+
  rqt-image-view = self.callPackage ./rqt-image-view {};
 
  rqt-joint-trajectory-controller = self.callPackage ./rqt-joint-trajectory-controller {};
@@ -3171,6 +3181,10 @@ self: super: {
  slime-ros = self.callPackage ./slime-ros {};
 
  slime-wrapper = self.callPackage ./slime-wrapper {};
+
+ smacc = self.callPackage ./smacc {};
+
+ smacc-msgs = self.callPackage ./smacc-msgs {};
 
  smach = self.callPackage ./smach {};
 
@@ -3492,7 +3506,27 @@ self: super: {
 
  unique-identifier = self.callPackage ./unique-identifier {};
 
+ universal-robots = self.callPackage ./universal-robots {};
+
+ ur10-moveit-config = self.callPackage ./ur10-moveit-config {};
+
+ ur10e-moveit-config = self.callPackage ./ur10e-moveit-config {};
+
+ ur16e-moveit-config = self.callPackage ./ur16e-moveit-config {};
+
+ ur3-moveit-config = self.callPackage ./ur3-moveit-config {};
+
+ ur3e-moveit-config = self.callPackage ./ur3e-moveit-config {};
+
+ ur5-moveit-config = self.callPackage ./ur5-moveit-config {};
+
+ ur5e-moveit-config = self.callPackage ./ur5e-moveit-config {};
+
  ur-client-library = self.callPackage ./ur-client-library {};
+
+ ur-description = self.callPackage ./ur-description {};
+
+ ur-gazebo = self.callPackage ./ur-gazebo {};
 
  ur-msgs = self.callPackage ./ur-msgs {};
 

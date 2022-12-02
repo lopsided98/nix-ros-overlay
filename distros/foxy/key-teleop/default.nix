@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-foxy-key-teleop";
-  version = "1.2.1-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/foxy/key_teleop/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "9b5f7789667d6c49591811a8f3ff2d8e90396a0d8256751b370593cfc0de67c2";
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/foxy/key_teleop/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "b4ac6357b734c50c591b8b5a9b783b26c29f82e7a1d1cb01dc60ccfff1e07130";
   };
 
   buildType = "ament_python";

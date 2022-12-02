@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joy-teleop, key-teleop, teleop-tools-msgs }:
 buildRosPackage {
   pname = "ros-foxy-teleop-tools";
-  version = "1.2.1-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/foxy/teleop_tools/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "a0c54c9ed6f818e8b5c0e12856ad1d74916be73a943e14be8b9e941e2b933a57";
+    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/foxy/teleop_tools/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "b1a7d8e209c3cdb7bcb116a40bbc572ce257dd3a372b3558a63dee120d320580";
   };
 
   buildType = "ament_cmake";
