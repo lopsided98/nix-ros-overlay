@@ -1,4 +1,4 @@
-{ lib, buildRosPackage, fetchFromGitHub, fetchpatch, ament-cmake-core
+{ lib, buildRosPackage, fetchFromGitHub, fetchpatch, cmake, ament-cmake-core
 , ament-cmake-python, rosidl-typesupport-introspection-c, rmw, rosidl-cmake
 , rosidl-generator-c, rosidl-parser, rosidl-runtime-c, rosidl-typesupport-c
 , rosidl-typesupport-interface }:
@@ -24,6 +24,9 @@ buildRosPackage rec {
   ];
 
   buildType = "ament_cmake";
+
+  strictDeps = true;
+  nativeBuildInputs = [ cmake ];
   buildInputs = [
     ament-cmake-core ament-cmake-python rosidl-typesupport-introspection-c
   ];
