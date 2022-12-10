@@ -106,7 +106,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
     propagatedBuildInputs ? [], ...
   }: {
     # Add Rust support to all packages
-    propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.rosidl-generator-rs ];
+    # FIXME: seems to break nav2-msgs
+    # propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.rosidl-generator-rs ];
   });
 
   rosidl-generator-rs = rosSelf.callPackage ../pkgs/rosidl-generator-rs { };
