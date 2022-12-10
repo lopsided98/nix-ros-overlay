@@ -88,6 +88,20 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ] ++ patches;
   });
 
+  rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Remove stray numpy import in template
+      # https://github.com/ros2/rosidl_python/pull/185
+      (self.fetchpatch {
+        url = "https://github.com/ros2/rosidl_python/commit/bf866089baeb918834d9d16e05668d9f28887b87.patch";
+        hash = "sha256-tOb0t50TbV29+agDupm5XUZJJErfaujgIRtmb2vZxWo=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";

@@ -23,6 +23,16 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
+  fastrtps = rosSuper.fastrtps.overrideAttrs ({
+    cmakeFlags ? [], ...
+  }: {
+    cmakeFlags = cmakeFlags ++ optionals (!self.stdenv.buildPlatform.canExecute self.stdenv.hostPlatform) (
+      [ "-DSM_RUN_RESULT=0" ] ++
+      optional (self.stdenv.isLinux || self.stdenv.isDarwin)
+        "-DSM_RUN_RESULT__TRYRUN_OUTPUT=PTHREAD_RWLOCK_PREFER_READER_NP"
+    );
+  });
+
   fmilibrary-vendor = patchVendorGit rosSuper.fmilibrary-vendor {
     url = "https://github.com/modelon-community/fmi-library.git";
     fetchgitArgs = {
@@ -79,20 +89,10 @@ rosSelf: rosSuper: with rosSelf.lib; {
   });
 
   rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
-    postPatch ? "",
-    patches ? [], ...
+    postPatch ? "", ...
   }: let
     python = rosSelf.python;
   in {
-    patches = patches ++ [
-      # Remove stray numpy import in template
-      # https://github.com/ros2/rosidl_python/pull/185
-      (self.fetchpatch {
-        url = "https://github.com/ros2/rosidl_python/commit/bf866089baeb918834d9d16e05668d9f28887b87.patch";
-        hash = "sha256-tOb0t50TbV29+agDupm5XUZJJErfaujgIRtmb2vZxWo=";
-        stripLen = 1;
-      })
-    ];
     # Fix finding NumPy headers
     postPatch = postPatch + ''
       substituteInPlace cmake/rosidl_generator_py_generate_interfaces.cmake \
