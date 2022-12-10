@@ -34,5 +34,11 @@ self: super: {
       distro = "humble";
       python = self.python3;
     } self super;
+
+    rolling = import ./distro-overlay.nix {
+      version = 2;
+      distro = "rolling";
+      python = self.python3;
+    } self super;
   };
 }

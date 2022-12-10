@@ -11,6 +11,8 @@ jobs:
           - noetic
           - foxy
           - galactic
+          - humble
+          - rolling
         system:
           - x86_64-linux
           - aarch64-linux

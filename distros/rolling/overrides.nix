@@ -53,17 +53,9 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "sha256-CJ1ZC7ydrZzEsZChrKuWg4/d20r6szFWeQCctiKFLgY=";
   };
 
-  libyaml-vendor = patchVendorGit rosSuper.libyaml-vendor {
-    url = "https://github.com/yaml/libyaml.git";
-    fetchgitArgs = {
-      rev = "2c891fc7a770e8ba2fec34fc6b545c672beb37e6";
-      hash = "sha256-S7PnooyfyAsIiRAlEPGYkgkVACGaBaCItuqOwrq2+qM=";
-    };
-  };
-
   rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
-    url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
-    sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
+    url = "https://github.com/OGRECave/ogre/archive/v1.12.10.zip";
+    sha256 = "sha256-lZDLywgShlWeWah7oTnyKBTqzN505LJKbQbgXRfJXlk=";
   };
 
   urdfdom = rosSuper.urdfdom.overrideAttrs ({
