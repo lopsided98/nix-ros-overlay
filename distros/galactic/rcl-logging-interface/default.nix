@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, rcpputils, rcutils }:
 buildRosPackage {
   pname = "ros-galactic-rcl-logging-interface";
-  version = "2.1.4-r1";
+  version = "2.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/galactic/rcl_logging_interface/2.1.4-1.tar.gz";
-    name = "2.1.4-1.tar.gz";
-    sha256 = "bf5cae9873a7eab2261a331102da5f8e25137e0deb15f14038a3a11550de903f";
+    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/galactic/rcl_logging_interface/2.1.5-1.tar.gz";
+    name = "2.1.5-1.tar.gz";
+    sha256 = "a0dbe0017532d6c51062bb949a4e7d3a512d562ee67446c4bf32d3484873d33a";
   };
 
   buildType = "ament_cmake";

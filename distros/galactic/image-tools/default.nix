@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, opencv, rclcpp, rclcpp-components, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-image-tools";
-  version = "0.14.3-r1";
+  version = "0.14.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/galactic/image_tools/0.14.3-1.tar.gz";
-    name = "0.14.3-1.tar.gz";
-    sha256 = "a4795b47d385c38f71e1a22003a4261270e6b1bd7c78909077e7994bd993caef";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/galactic/image_tools/0.14.4-1.tar.gz";
+    name = "0.14.4-1.tar.gz";
+    sha256 = "352b36df202869ad32dc882a12bbec09e49425d567f2c667e51f3090d83d21fe";
   };
 
   buildType = "ament_cmake";

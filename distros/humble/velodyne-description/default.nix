@@ -2,20 +2,20 @@
 # Copyright 2022 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, gazebo-ros, urdf, xacro }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, urdf, xacro }:
 buildRosPackage {
   pname = "ros-humble-velodyne-description";
-  version = "2.0.2-r3";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/velodyne_simulator-release/archive/release/humble/velodyne_description/2.0.2-3.tar.gz";
-    name = "2.0.2-3.tar.gz";
-    sha256 = "ba1f847ecfa9d640cb5890ac0de368cd47f0176d93c8b9d9da7de4983fbc98bd";
+    url = "https://github.com/ros2-gbp/velodyne_simulator-release/archive/release/humble/velodyne_description/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "c6657575746a060883eb32ddd93cd27d5d65f7fc853b811037b70883c4ea5224";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ gazebo-ros urdf xacro ];
+  propagatedBuildInputs = [ urdf xacro ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

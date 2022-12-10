@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-galactic-ros-environment";
-  version = "3.1.0-r1";
+  version = "3.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_environment-release/archive/release/galactic/ros_environment/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "3ae807bb1c10aff553d93ba31581e6cc314dabaac1880e59ef54b6a3807563c3";
+    url = "https://github.com/ros2-gbp/ros_environment-release/archive/release/galactic/ros_environment/3.1.1-1.tar.gz";
+    name = "3.1.1-1.tar.gz";
+    sha256 = "c546cda40844bfd60cf6063ee8e52e43b4bab1db7be18c0ca8b114b2b4d1ab95";
   };
 
   buildType = "ament_cmake";

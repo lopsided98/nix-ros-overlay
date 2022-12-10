@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rcutils }:
 buildRosPackage {
   pname = "ros-galactic-rcpputils";
-  version = "2.2.1-r1";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcpputils-release/archive/release/galactic/rcpputils/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "6b173721a8cdb5dcc321bc25074045c7b10155b63b9d6337b3284be15c8f867f";
+    url = "https://github.com/ros2-gbp/rcpputils-release/archive/release/galactic/rcpputils/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "14d981495628ded58fff0d91039fb22e94dfa555a5db42bccd134eb640fd2160";
   };
 
   buildType = "ament_cmake";

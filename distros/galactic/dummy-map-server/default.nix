@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-galactic-dummy-map-server";
-  version = "0.14.3-r1";
+  version = "0.14.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/galactic/dummy_map_server/0.14.3-1.tar.gz";
-    name = "0.14.3-1.tar.gz";
-    sha256 = "c13986bdd181b748cfe2e3191d5eb148aba5f976ae7330c5c2b2511554c4d31f";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/galactic/dummy_map_server/0.14.4-1.tar.gz";
+    name = "0.14.4-1.tar.gz";
+    sha256 = "03cf57c7d92555c1a40ecca5941c70ca8cb8e9cef1d67bdb885c716b60b11cb2";
   };
 
   buildType = "ament_cmake";

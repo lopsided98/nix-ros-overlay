@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-index-python, ament-lint-auto, ament-lint-common, builtin-interfaces, pybind11-vendor, python-cmake-module, pythonPackages, rcl, rcl-action, rcl-interfaces, rcl-logging-interface, rcl-yaml-param-parser, rcpputils, rcutils, rmw-implementation, rmw-implementation-cmake, rosgraph-msgs, rosidl-generator-py, rpyutils, test-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-galactic-rclpy";
-  version = "1.9.2-r1";
+  version = "1.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclpy-release/archive/release/galactic/rclpy/1.9.2-1.tar.gz";
-    name = "1.9.2-1.tar.gz";
-    sha256 = "ee9ae4aed61fa4486c1d585464a25b059fff049ddd0267b751d6b89d8f3d5cf2";
+    url = "https://github.com/ros2-gbp/rclpy-release/archive/release/galactic/rclpy/1.9.3-1.tar.gz";
+    name = "1.9.3-1.tar.gz";
+    sha256 = "2d920bfcc5f0796be5048f70ea304de19af4b09dbd65c96cdde104b0435a1945";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-ros, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-velodyne-gazebo-plugins";
-  version = "1.0.12-r2";
+  version = "1.0.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/noetic/velodyne_gazebo_plugins/1.0.12-2.tar.gz";
-    name = "1.0.12-2.tar.gz";
-    sha256 = "596cc5dfcb6057361b67eeb9204f142bd149329d5c0751adc34904f85eb888af";
+    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/noetic/velodyne_gazebo_plugins/1.0.13-1.tar.gz";
+    name = "1.0.13-1.tar.gz";
+    sha256 = "0f5d1abda7b2692281380e50b0446399718898b4ac4f49ec35253f411eafb812";
   };
 
   buildType = "catkin";

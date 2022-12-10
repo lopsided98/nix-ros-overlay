@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, boost, camera-calibration-parsers, cv-bridge, eigen, geometry-msgs, image-geometry, image-transport, message-filters, nav-msgs, pkg-config, rclcpp, rclcpp-components, rclpy, std-msgs, swri-geometry-util, swri-math-util, swri-opencv-util, swri-roscpp, tf2 }:
 buildRosPackage {
   pname = "ros-galactic-swri-image-util";
-  version = "3.4.1-r1";
+  version = "3.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/galactic/swri_image_util/3.4.1-1.tar.gz";
-    name = "3.4.1-1.tar.gz";
-    sha256 = "db3f839a52e81a267f0d6dfebed5f03685a848298dc375102b6f8d76ef51d66b";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/galactic/swri_image_util/3.5.1-1.tar.gz";
+    name = "3.5.1-1.tar.gz";
+    sha256 = "7717b016b146f6159d8cab3327f4462aad83b112029c9e605b3413d891292bce";
   };
 
   buildType = "ament_cmake";

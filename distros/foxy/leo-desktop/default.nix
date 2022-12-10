@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ros2-gbp/leo_desktop-release/archive/release/foxy/leo_desktop/1.0.0-1.tar.gz";
     name = "1.0.0-1.tar.gz";
-    sha256 = "1496c86b10fea2bc29c9100b328e002245457934e130cfa0a753993474f0b41f";
+    sha256 = "4f34333148bab9701d44586849abe7bab78b12c3207345c37fd82f492587467a";
   };
 
   buildType = "ament_cmake";

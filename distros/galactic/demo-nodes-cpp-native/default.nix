@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-components, rmw-fastrtps-cpp, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-demo-nodes-cpp-native";
-  version = "0.14.3-r1";
+  version = "0.14.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/galactic/demo_nodes_cpp_native/0.14.3-1.tar.gz";
-    name = "0.14.3-1.tar.gz";
-    sha256 = "3dedc2d51bb77ebb45af01f731d174eff7a65a35397ec3fb80b317e3b7c9b387";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/galactic/demo_nodes_cpp_native/0.14.4-1.tar.gz";
+    name = "0.14.4-1.tar.gz";
+    sha256 = "780e11bbddac5453996cccfef43df35fa1903fdac81277b4b00b543cee13aa5e";
   };
 
   buildType = "ament_cmake";

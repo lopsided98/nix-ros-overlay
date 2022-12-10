@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, python3Packages }:
 buildRosPackage {
   pname = "ros-galactic-swri-prefix-tools";
-  version = "3.4.1-r1";
+  version = "3.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/galactic/swri_prefix_tools/3.4.1-1.tar.gz";
-    name = "3.4.1-1.tar.gz";
-    sha256 = "0cf820b4e5bce0239a5cfe0f7b785289ecd1eab3fc072682a7cf2c40f21e23aa";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/galactic/swri_prefix_tools/3.5.1-1.tar.gz";
+    name = "3.5.1-1.tar.gz";
+    sha256 = "afde85a189d559f2ad98270508c0068a095126a5a2cfda666e3e4786c3a0572f";
   };
 
   buildType = "ament_cmake";

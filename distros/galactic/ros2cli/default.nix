@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, pythonPackages, rclpy, test-msgs }:
 buildRosPackage {
   pname = "ros-galactic-ros2cli";
-  version = "0.13.4-r1";
+  version = "0.13.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/galactic/ros2cli/0.13.4-1.tar.gz";
-    name = "0.13.4-1.tar.gz";
-    sha256 = "748f1ee571ea245c84691dbc405838aa518acf1f5ceb8ccdb24b934414c0ba96";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/galactic/ros2cli/0.13.5-1.tar.gz";
+    name = "0.13.5-1.tar.gz";
+    sha256 = "f4c8514705e5367a2bfc75f784f68ea1d43d3e2d6a957f2e536efea630d96b1e";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, python3Packages, rosbridge-library, rosgraph, rosnode, rospy }:
 buildRosPackage {
   pname = "ros-noetic-rosapi";
-  version = "0.11.16-r1";
+  version = "0.11.16-r2";
 
   src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/noetic/rosapi/0.11.16-1.tar.gz";
-    name = "0.11.16-1.tar.gz";
-    sha256 = "39bd7a461501e1298f877672c1f52c41dee4eb7c452533950227017fe4e294fa";
+    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/noetic/rosapi/0.11.16-2.tar.gz";
+    name = "0.11.16-2.tar.gz";
+    sha256 = "bf9ce72d57cbb66cb7eb52ed5fe4cdb54e39c1d46418880efbbc2afd75d9c054";
   };
 
   buildType = "catkin";

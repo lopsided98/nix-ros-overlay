@@ -1,0 +1,27 @@
+
+# Copyright 2022 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-index-python, ament-lint-auto, ament-lint-common, boost, opencv, python-cmake-module, python3Packages, rclcpp, rcpputils, sensor-msgs }:
+buildRosPackage {
+  pname = "ros-rolling-cv-bridge";
+  version = "3.4.0-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/rolling/cv_bridge/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "e908845b688ccfd5e433d78b2bd3791d30778b0cc1bd6e9ed5dad3622c8f0af7";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-ros python-cmake-module ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ ament-index-python boost opencv python3Packages.numpy python3Packages.opencv3 rclcpp rcpputils sensor-msgs ];
+  nativeBuildInputs = [ ament-cmake-ros python-cmake-module ];
+
+  meta = {
+    description = ''This contains CvBridge, which converts between ROS2
+    Image messages and OpenCV images.'';
+    license = with lib.licenses; [ asl20 bsdOriginal ];
+  };
+}

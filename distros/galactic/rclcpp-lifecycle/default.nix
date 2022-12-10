@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, lifecycle-msgs, mimick-vendor, performance-test-fixture, rcl-lifecycle, rclcpp, rcutils, rmw, rosidl-typesupport-cpp, test-msgs }:
 buildRosPackage {
   pname = "ros-galactic-rclcpp-lifecycle";
-  version = "9.2.1-r1";
+  version = "9.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/galactic/rclcpp_lifecycle/9.2.1-1.tar.gz";
-    name = "9.2.1-1.tar.gz";
-    sha256 = "9d44cdda3d6977744cb050688211067064bcc2c526c09523c64d583da10cd143";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/galactic/rclcpp_lifecycle/9.2.2-1.tar.gz";
+    name = "9.2.2-1.tar.gz";
+    sha256 = "f44de5ff0ae716a8d5a6449a3d80578a8f88b9ead551b781db136e8bf89bfda8";
   };
 
   buildType = "ament_cmake";

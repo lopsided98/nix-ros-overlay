@@ -1052,6 +1052,8 @@ self: super: {
 
  ntrip-client = self.callPackage ./ntrip-client {};
 
+ object-msgs = self.callPackage ./object-msgs {};
+
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
 
  octomap = self.callPackage ./octomap {};
@@ -1923,6 +1925,8 @@ self: super: {
  tracetools = self.callPackage ./tracetools {};
 
  tracetools-analysis = self.callPackage ./tracetools-analysis {};
+
+ tracetools-image-pipeline = self.callPackage ./tracetools-image-pipeline {};
 
  tracetools-launch = self.callPackage ./tracetools-launch {};
 

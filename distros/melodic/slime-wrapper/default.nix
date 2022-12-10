@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''ROS wrapper for slime'';
-    license = with lib.licenses; [ "PD" ];
+    license = with lib.licenses; [ publicDomain ];
   };
 }

@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, pythonPackages, rclpy, sensor-msgs, std-msgs, tf2-msgs, tf2-py }:
 buildRosPackage {
   pname = "ros-galactic-tf2-ros-py";
-  version = "0.17.4-r1";
+  version = "0.17.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/galactic/tf2_ros_py/0.17.4-1.tar.gz";
-    name = "0.17.4-1.tar.gz";
-    sha256 = "31ba1feb43eaf63c62591812dfc0af758ca50de65bf9b07d1670ca1dd6fe234d";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/galactic/tf2_ros_py/0.17.5-1.tar.gz";
+    name = "0.17.5-1.tar.gz";
+    sha256 = "53431a7353a39f6e9bc6c961fff37322ee5cb6df72d1ebd5e5a93b67bf84738e";
   };
 
   buildType = "ament_python";
   checkInputs = [ pythonPackages.pytest sensor-msgs ];
-  propagatedBuildInputs = [ geometry-msgs rclpy std-msgs tf2-msgs tf2-py ];
+  propagatedBuildInputs = [ geometry-msgs rclpy sensor-msgs std-msgs tf2-msgs tf2-py ];
 
   meta = {
     description = ''This package contains the ROS Python bindings for the tf2 library'';

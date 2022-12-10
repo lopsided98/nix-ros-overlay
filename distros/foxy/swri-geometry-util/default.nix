@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cv-bridge, eigen, geos, pkg-config, rclcpp, tf2 }:
 buildRosPackage {
   pname = "ros-foxy-swri-geometry-util";
-  version = "3.4.1-r1";
+  version = "3.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_geometry_util/3.4.1-1.tar.gz";
-    name = "3.4.1-1.tar.gz";
-    sha256 = "9b48fe757848a5158966c1bf3d11f2c0d41a4be92d5396d9fa23dea8f4bd9fb6";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/foxy/swri_geometry_util/3.5.1-1.tar.gz";
+    name = "3.5.1-1.tar.gz";
+    sha256 = "6ed5d4d9d7df4f81333dd9c09b46d2709b3ef7ef21233600932eed0765d97bab";
   };
 
   buildType = "ament_cmake";

@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = ''tango_icons_vendor provides the public domain Tango icons for non-linux systems (<a href="http://tango-project.org/Tango_Icon_Library/">Tango Icon Library</a>) from the <a href="http://tango-project.org/Tango_Desktop_Project/">Tango Desktop Project</a>'';
-    license = with lib.licenses; [ asl20 "PD" ];
+    license = with lib.licenses; [ asl20 publicDomain ];
   };
 }

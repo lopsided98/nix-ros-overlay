@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''The Epson IMU Driver using UART interface for ROS package'';
-    license = with lib.licenses; [ bsdOriginal "PD" ];
+    license = with lib.licenses; [ bsdOriginal publicDomain ];
   };
 }

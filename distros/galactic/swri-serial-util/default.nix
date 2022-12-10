@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost }:
 buildRosPackage {
   pname = "ros-galactic-swri-serial-util";
-  version = "3.4.1-r1";
+  version = "3.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/galactic/swri_serial_util/3.4.1-1.tar.gz";
-    name = "3.4.1-1.tar.gz";
-    sha256 = "ff31c383859f027252ee34826f321db785ff4c2a451631c6d306c5eb0c0ad61b";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/galactic/swri_serial_util/3.5.1-1.tar.gz";
+    name = "3.5.1-1.tar.gz";
+    sha256 = "e6766e573a0a6f14afd48beb5af84ae1d90a1f83a9f225b638ec3ab74e6fc0b8";
   };
 
   buildType = "ament_cmake";

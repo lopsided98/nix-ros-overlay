@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, camera-calibration, depth-image-proc, image-proc, image-publisher, image-rotate, image-view, stereo-image-proc }:
 buildRosPackage {
   pname = "ros-foxy-image-pipeline";
-  version = "2.2.1-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/image_pipeline/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "1002187b1cf134e6d0c1ee263bd53b5af9875479d0d34e098d4d20ec90983077";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/image_pipeline/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "72b65d8f093f79ce492d5c4daf5df33896eb02622fc7b6066d23d7095ce6332f";
   };
 
   buildType = "ament_cmake";

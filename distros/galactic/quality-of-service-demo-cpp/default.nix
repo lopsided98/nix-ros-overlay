@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-ros, launch-testing, rclcpp, rclcpp-components, rcutils, rmw, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-quality-of-service-demo-cpp";
-  version = "0.14.3-r1";
+  version = "0.14.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/galactic/quality_of_service_demo_cpp/0.14.3-1.tar.gz";
-    name = "0.14.3-1.tar.gz";
-    sha256 = "d8ab2d783c6673ff79ccd7387f1d00e49b900be1d78b9a67a78745c333979948";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/galactic/quality_of_service_demo_cpp/0.14.4-1.tar.gz";
+    name = "0.14.4-1.tar.gz";
+    sha256 = "3b73a2e69cd20aa4779bfcf9e828c9d78c00f0c1a8fcd7a8d792572eecac7943";
   };
 
   buildType = "ament_cmake";

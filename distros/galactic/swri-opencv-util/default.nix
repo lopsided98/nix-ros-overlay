@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cv-bridge, swri-math-util }:
 buildRosPackage {
   pname = "ros-galactic-swri-opencv-util";
-  version = "3.4.1-r1";
+  version = "3.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/galactic/swri_opencv_util/3.4.1-1.tar.gz";
-    name = "3.4.1-1.tar.gz";
-    sha256 = "03f0037a97a720c39e9843c8ac52a89e7aa36226b3e8a9c799788e3ef102b7cc";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/galactic/swri_opencv_util/3.5.1-1.tar.gz";
+    name = "3.5.1-1.tar.gz";
+    sha256 = "3bb5d719b476e9a62ba2754dbb6f7301d175a28cd19887ff2b2e029883b96d22";
   };
 
   buildType = "ament_cmake";

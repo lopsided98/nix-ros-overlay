@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, velodyne-description, velodyne-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-galactic-velodyne-simulator";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/velodyne_simulator-release/archive/release/galactic/velodyne_simulator/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "f309a0d58b685d49a22aaf4cb536bcf44abea570d2d7734bfee532589c65de30";
+    url = "https://github.com/ros2-gbp/velodyne_simulator-release/archive/release/galactic/velodyne_simulator/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "4c5e5fbad9b7be9352d875ba713dfea63dcd6793ffcdab1188b28bf4e80bd09b";
   };
 
   buildType = "ament_cmake";

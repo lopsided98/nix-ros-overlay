@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, lifecycle-msgs, rclcpp-lifecycle, ros-testing, std-msgs }:
 buildRosPackage {
   pname = "ros-galactic-lifecycle";
-  version = "0.14.3-r1";
+  version = "0.14.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/galactic/lifecycle/0.14.3-1.tar.gz";
-    name = "0.14.3-1.tar.gz";
-    sha256 = "fe20964a3da45184a16cec56f8611a24d08ab2546e4f2db5fa486c831dd57047";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/galactic/lifecycle/0.14.4-1.tar.gz";
+    name = "0.14.4-1.tar.gz";
+    sha256 = "a40c348fbe04a8492236d8b11921467483efa7978040193334f3ad6dd726bb69";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, doxygen, eigen, git, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-foxy-eigenpy";
-  version = "2.7.14-r1";
+  version = "2.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/stack-of-tasks/eigenpy-ros-release/archive/release/foxy/eigenpy/2.7.14-1.tar.gz";
-    name = "2.7.14-1.tar.gz";
-    sha256 = "c6838bf6283987e01bafbdd80a11166e228b8b2b62437607980b6eb4e12b0b40";
+    url = "https://github.com/stack-of-tasks/eigenpy-ros-release/archive/release/foxy/eigenpy/2.8.1-1.tar.gz";
+    name = "2.8.1-1.tar.gz";
+    sha256 = "812c011647a31c00cb088b51c13043454e5cb2c0e01741804f37b9e2711212d1";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-galactic-dummy-sensors";
-  version = "0.14.3-r1";
+  version = "0.14.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/galactic/dummy_sensors/0.14.3-1.tar.gz";
-    name = "0.14.3-1.tar.gz";
-    sha256 = "3493fe20b2a309854393013f5611f4cf348a7715413b26c8abdd5ee5b00f5bcf";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/galactic/dummy_sensors/0.14.4-1.tar.gz";
+    name = "0.14.4-1.tar.gz";
+    sha256 = "4170a45977b0fd8db9c9652bd2b73f939afc089c12c0a7321f9bbf79a1436cab";
   };
 
   buildType = "ament_cmake";

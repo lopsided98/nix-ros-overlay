@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-foxy-swri-console-util";
-  version = "3.4.1-r1";
+  version = "3.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/foxy/swri_console_util/3.4.1-1.tar.gz";
-    name = "3.4.1-1.tar.gz";
-    sha256 = "51560cf7c94d1d87566a7e9583cb41193bf7bcc913f2008d04d625fd7fb3c95d";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/foxy/swri_console_util/3.5.1-1.tar.gz";
+    name = "3.5.1-1.tar.gz";
+    sha256 = "609f6581c3a64c478dc2bdba7e29911b85ab8da2487c67392e13bfd42aa57068";
   };
 
   buildType = "ament_cmake";

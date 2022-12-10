@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-cmake-xmllint, ament-index-cpp, ament-lint-auto, eigen, eigen3-cmake-module, qt5, resource-retriever, rviz-assimp-vendor, rviz-ogre-vendor }:
 buildRosPackage {
   pname = "ros-galactic-rviz-rendering";
-  version = "8.5.1-r1";
+  version = "8.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/galactic/rviz_rendering/8.5.1-1.tar.gz";
-    name = "8.5.1-1.tar.gz";
-    sha256 = "d8b12eb8cf07ab9e0d00719eb4ad22d603cfad914053362c376177a19aa58268";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/galactic/rviz_rendering/8.5.2-1.tar.gz";
+    name = "8.5.2-1.tar.gz";
+    sha256 = "ba00e19ab25b3ca99d353fe3e402cba9411163d2279a04d6260cb6c077be28d8";
   };
 
   buildType = "ament_cmake";

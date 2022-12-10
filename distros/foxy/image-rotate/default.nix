@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, image-transport, rclcpp, rclcpp-components, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-foxy-image-rotate";
-  version = "2.2.1-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/image_rotate/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "74584400f00adfe197fc1bc3beb19a2653f6898233e0341c343eedaacfe443e5";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/image_rotate/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "820b7792e1659c53e9f079848f8bd3009701796419e4aeffe3fc792a0797737c";
   };
 
   buildType = "ament_cmake";

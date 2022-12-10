@@ -22,6 +22,6 @@ buildRosPackage {
     description = ''This package provides a script that launches Emacs with Slime (the
     Superior Lisp Interaction Mode) ready for Lisp development and
     roslisp.'';
-    license = with lib.licenses; [ "PD" ];
+    license = with lib.licenses; [ publicDomain ];
   };
 }

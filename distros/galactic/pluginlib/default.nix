@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, class-loader, rcpputils, rcutils, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-galactic-pluginlib";
-  version = "5.0.0-r2";
+  version = "5.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/galactic/pluginlib/5.0.0-2.tar.gz";
-    name = "5.0.0-2.tar.gz";
-    sha256 = "b912aebaa12b077ab04ae69412e3f0ef8d112bea30d7b1b909e7b1b5a8b9f4f1";
+    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/galactic/pluginlib/5.0.1-1.tar.gz";
+    name = "5.0.1-1.tar.gz";
+    sha256 = "4b6f8c8662d1cd8922442459b4ba050cf2a06275c43e3a1b6c11ffe82cf3628f";
   };
 
   buildType = "ament_cmake";
