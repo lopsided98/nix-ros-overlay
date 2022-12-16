@@ -144,6 +144,10 @@ self: super: {
 
  apriltag = self.callPackage ./apriltag {};
 
+ aruco-opencv = self.callPackage ./aruco-opencv {};
+
+ aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
+
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
 
  astuff-sensor-msgs = self.callPackage ./astuff-sensor-msgs {};
@@ -535,6 +539,8 @@ self: super: {
  fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
 
  filters = self.callPackage ./filters {};
+
+ find-object-2d = self.callPackage ./find-object-2d {};
 
  fluent-rviz = self.callPackage ./fluent-rviz {};
 
@@ -1987,6 +1993,8 @@ self: super: {
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
 
  ur-bringup = self.callPackage ./ur-bringup {};
+
+ ur-calibration = self.callPackage ./ur-calibration {};
 
  ur-client-library = self.callPackage ./ur-client-library {};
 

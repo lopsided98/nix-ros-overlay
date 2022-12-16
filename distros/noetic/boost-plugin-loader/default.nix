@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, gtest, ros-industrial-cmake-boilerplate }:
 buildRosPackage {
   pname = "ros-noetic-boost-plugin-loader";
-  version = "0.2.0-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/tesseract-robotics-release/boost_plugin_loader-release/archive/release/noetic/boost_plugin_loader/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "304122a4b9423b6512662cadb878f0ad355a5574b77b81715302f4349a59018c";
+    url = "https://github.com/tesseract-robotics-release/boost_plugin_loader-release/archive/release/noetic/boost_plugin_loader/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "5b25d104c423656c625823667d299ab922c345f0aacdd9de0f1c4e16381e3951";
   };
 
   buildType = "cmake";

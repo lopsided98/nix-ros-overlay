@@ -154,6 +154,10 @@ self: super: {
 
  apriltag = self.callPackage ./apriltag {};
 
+ aruco-opencv = self.callPackage ./aruco-opencv {};
+
+ aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
+
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
 
  async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
@@ -1653,6 +1657,8 @@ self: super: {
  transmission-interface = self.callPackage ./transmission-interface {};
 
  tricycle-controller = self.callPackage ./tricycle-controller {};
+
+ turbojpeg-compressed-image-transport = self.callPackage ./turbojpeg-compressed-image-transport {};
 
  turtle-tf2-cpp = self.callPackage ./turtle-tf2-cpp {};
 
