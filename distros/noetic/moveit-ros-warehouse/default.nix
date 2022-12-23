@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, moveit-ros-planning, rosconsole, roscpp, tf2-eigen, tf2-ros, warehouse-ros }:
 buildRosPackage {
   pname = "ros-noetic-moveit-ros-warehouse";
-  version = "1.1.10-r1";
+  version = "1.1.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_warehouse/1.1.10-1.tar.gz";
-    name = "1.1.10-1.tar.gz";
-    sha256 = "3cd42347f3f4c04b6b249c14035507b2f213abcb33e957db59eef180e561910d";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_warehouse/1.1.11-1.tar.gz";
+    name = "1.1.11-1.tar.gz";
+    sha256 = "0cc161324d2f1e41f1ef9f111ad3ffc4b8f4acc0bfdcad5f09c495a8ed27783e";
   };
 
   buildType = "catkin";

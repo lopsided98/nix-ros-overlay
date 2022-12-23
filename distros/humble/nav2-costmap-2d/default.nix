@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, geometry-msgs, laser-geometry, launch, launch-testing, map-msgs, message-filters, nav-msgs, nav2-common, nav2-lifecycle-manager, nav2-map-server, nav2-msgs, nav2-util, nav2-voxel-grid, pluginlib, rclcpp, rclcpp-lifecycle, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-nav2-costmap-2d";
-  version = "1.1.3-r1";
+  version = "1.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_costmap_2d/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "370b7e3d91365dc554684ce182877c530b7f958fa512a314ec7a5a55c615fc7c";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_costmap_2d/1.1.4-1.tar.gz";
+    name = "1.1.4-1.tar.gz";
+    sha256 = "8b8a72b5113584ec2ac499ef8ea65e3924b43624460dfc4d92c0a0ab8ee845f8";
   };
 
   buildType = "ament_cmake";
