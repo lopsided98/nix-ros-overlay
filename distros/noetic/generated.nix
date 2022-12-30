@@ -2662,8 +2662,6 @@ self: super: {
 
  rm-orientation-controller = self.callPackage ./rm-orientation-controller {};
 
- rm-referee = self.callPackage ./rm-referee {};
-
  rm-shooter-controllers = self.callPackage ./rm-shooter-controllers {};
 
  robot = self.callPackage ./robot {};
@@ -3125,6 +3123,8 @@ self: super: {
  schunk-sdh = self.callPackage ./schunk-sdh {};
 
  schunk-simulated-tactile-sensors = self.callPackage ./schunk-simulated-tactile-sensors {};
+
+ schunk-svh-library = self.callPackage ./schunk-svh-library {};
 
  sdc21x0 = self.callPackage ./sdc21x0 {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, controller-manager, joint-trajectory-controller, position-controllers }:
 buildRosPackage {
   pname = "ros-humble-pal-gripper-controller-configuration";
-  version = "3.0.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_gripper-release/archive/release/humble/pal_gripper_controller_configuration/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "e092a9f85c3279d267912151e15179cbf3ddae54fdd5dd0ea1f198d29ce654a5";
+    url = "https://github.com/pal-gbp/pal_gripper-release/archive/release/humble/pal_gripper_controller_configuration/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "6145d044628ea3f1f3139f7b2b4a5dc9030669ef1ed5d8d945985ef149d55ddd";
   };
 
   buildType = "ament_cmake";
