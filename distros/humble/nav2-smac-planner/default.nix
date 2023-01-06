@@ -1,16 +1,16 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, angles, builtin-interfaces, eigen, eigen3-cmake-module, geometry-msgs, nav-msgs, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, nlohmann_json, ompl, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-nav2-smac-planner";
-  version = "1.1.3-r1";
+  version = "1.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_smac_planner/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "3fc11f5136f0f9f65f05d7cb5394fc39886e61591c37568c64ba80240b1417fa";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_smac_planner/1.1.5-1.tar.gz";
+    name = "1.1.5-1.tar.gz";
+    sha256 = "03d3beb0de5a0bf9578c4c79ce04bab6fe6de7b31693591ee66dae8b51a401b1";
   };
 
   buildType = "ament_cmake";

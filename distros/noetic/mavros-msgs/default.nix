@@ -1,16 +1,16 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, geographic-msgs, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mavros-msgs";
-  version = "1.14.0-r1";
+  version = "1.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/mavros_msgs/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "ea67d0dc3a28bfa83be6d47f38c560f34dc6554789763b6f52193eefb0b9a34a";
+    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/mavros_msgs/1.15.0-1.tar.gz";
+    name = "1.15.0-1.tar.gz";
+    sha256 = "dff2c1f66e32982b5114eae56449a36876ed606387afa6667cc04388e9e2cc52";
   };
 
   buildType = "catkin";

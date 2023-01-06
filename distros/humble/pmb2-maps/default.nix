@@ -1,16 +1,16 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-auto }:
 buildRosPackage {
   pname = "ros-humble-pmb2-maps";
-  version = "3.0.2-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_maps/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "8ed9b8bf2ee08c78c83f067e3f54b5ba6dab499384bea0899228be863b0b720a";
+    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_maps/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "5283001e4b86d5c4301c5605284b8456dbdea6e8b6bee5ebbe1e5be76e112b0e";
   };
 
   buildType = "ament_cmake";

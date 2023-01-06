@@ -1,5 +1,5 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, dynamic-reconfigure, hardware-interface, libusb1, nav-msgs, realtime-tools, roscpp, rospy, sensor-msgs, std-msgs, std-srvs, tf, urdf }:

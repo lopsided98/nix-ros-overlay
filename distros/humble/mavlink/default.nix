@@ -1,16 +1,16 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake, python3, python3Packages, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-mavlink";
-  version = "2022.8.8-r1";
+  version = "2022.12.30-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavlink-gbp-release/archive/release/humble/mavlink/2022.8.8-1.tar.gz";
-    name = "2022.8.8-1.tar.gz";
-    sha256 = "a03cd42db382fde7d5334d4001484e911337ef3c3c443c338201863fd4336ee9";
+    url = "https://github.com/ros2-gbp/mavlink-gbp-release/archive/release/humble/mavlink/2022.12.30-1.tar.gz";
+    name = "2022.12.30-1.tar.gz";
+    sha256 = "d2d3eefa190474d211155b79ea380bcc147acd5bcbc5fb76230501727898f49f";
   };
 
   buildType = "cmake";

@@ -1,16 +1,16 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, assimp, boost, cmake, doxygen, eigen, eigenpy, git, octomap, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-foxy-hpp-fcl";
-  version = "2.1.3-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hpp_fcl-release/archive/release/foxy/hpp-fcl/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "71cb9ea7481453088cb4c805be8fac78599b6ea96a606845b83c7c9b6c4d87d1";
+    url = "https://github.com/ros2-gbp/hpp_fcl-release/archive/release/foxy/hpp-fcl/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "b4296473da19156f008e0de41bee793a9f140b146752b1ea3167e2e822842d09";
   };
 
   buildType = "cmake";

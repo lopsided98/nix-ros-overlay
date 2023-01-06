@@ -1,16 +1,16 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, behaviortree-cpp-v3, builtin-interfaces, geometry-msgs, lifecycle-msgs, nav-msgs, nav2-common, nav2-msgs, nav2-util, rclcpp, rclcpp-action, rclcpp-lifecycle, sensor-msgs, std-msgs, std-srvs, test-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-nav2-behavior-tree";
-  version = "1.1.3-r1";
+  version = "1.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_behavior_tree/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "728bb8457aa37e8c13da8b0d10f44c92d09833c0773578516de8deba34da152c";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_behavior_tree/1.1.5-1.tar.gz";
+    name = "1.1.5-1.tar.gz";
+    sha256 = "c2986ed6fa48dbd02dd70ad001e7cd3579a3c068078f1c068a1602a0a8ecea37";
   };
 
   buildType = "ament_cmake";

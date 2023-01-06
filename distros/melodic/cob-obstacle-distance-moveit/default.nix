@@ -1,5 +1,5 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, boost, catkin, cob-control-msgs, cob-moveit-bringup, cob-moveit-config, cob-srvs, eigen-conversions, fcl, geometric-shapes, geometry-msgs, moveit-core, moveit-msgs, moveit-ros-perception, moveit-ros-planning-interface, pkg-config, roscpp, rospy, tf, tf-conversions, tf2-ros }:
