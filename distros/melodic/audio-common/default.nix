@@ -1,16 +1,16 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, audio-capture, audio-common-msgs, audio-play, catkin, sound-play }:
 buildRosPackage {
   pname = "ros-melodic-audio-common";
-  version = "0.3.15-r1";
+  version = "0.3.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/audio_common-release/archive/release/melodic/audio_common/0.3.15-1.tar.gz";
-    name = "0.3.15-1.tar.gz";
-    sha256 = "25fbdc3b8b59ed6301d87b55e4cf249fab4972dcf67eece12c71d8331bd0cb57";
+    url = "https://github.com/ros-gbp/audio_common-release/archive/release/melodic/audio_common/0.3.16-1.tar.gz";
+    name = "0.3.16-1.tar.gz";
+    sha256 = "1a2ab0b4192ce074b57f4a7ee13ce82bb7a865d680d27bf942f6f1a59ba8ce6b";
   };
 
   buildType = "catkin";

@@ -1,5 +1,5 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -2662,8 +2662,6 @@ self: super: {
 
  rm-orientation-controller = self.callPackage ./rm-orientation-controller {};
 
- rm-referee = self.callPackage ./rm-referee {};
-
  rm-shooter-controllers = self.callPackage ./rm-shooter-controllers {};
 
  robot = self.callPackage ./robot {};
@@ -3125,6 +3123,18 @@ self: super: {
  schunk-sdh = self.callPackage ./schunk-sdh {};
 
  schunk-simulated-tactile-sensors = self.callPackage ./schunk-simulated-tactile-sensors {};
+
+ schunk-svh = self.callPackage ./schunk-svh {};
+
+ schunk-svh-description = self.callPackage ./schunk-svh-description {};
+
+ schunk-svh-driver = self.callPackage ./schunk-svh-driver {};
+
+ schunk-svh-library = self.callPackage ./schunk-svh-library {};
+
+ schunk-svh-msgs = self.callPackage ./schunk-svh-msgs {};
+
+ schunk-svh-simulation = self.callPackage ./schunk-svh-simulation {};
 
  sdc21x0 = self.callPackage ./sdc21x0 {};
 

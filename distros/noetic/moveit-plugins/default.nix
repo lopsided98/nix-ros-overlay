@@ -1,16 +1,16 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, moveit-fake-controller-manager, moveit-ros-control-interface, moveit-simple-controller-manager }:
 buildRosPackage {
   pname = "ros-noetic-moveit-plugins";
-  version = "1.1.10-r1";
+  version = "1.1.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_plugins/1.1.10-1.tar.gz";
-    name = "1.1.10-1.tar.gz";
-    sha256 = "cd885e4ac1ba0ce7e07c71a2f292a7558bc04b5c27c5ca049081272957142a5d";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_plugins/1.1.11-1.tar.gz";
+    name = "1.1.11-1.tar.gz";
+    sha256 = "45cd855778073e02f5560af0b9113d69efda56a8e81ce215b1a630bc508791e2";
   };
 
   buildType = "catkin";

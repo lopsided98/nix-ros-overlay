@@ -1,16 +1,16 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, cv-bridge, image-transport, nav-msgs, nav2-common, nav2-core, nav2-msgs, nav2-util, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-nav2-waypoint-follower";
-  version = "1.1.3-r1";
+  version = "1.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_waypoint_follower/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "2caf7e58c2f00e31c7945ac33db07593206b61d9d6d34b1108423b94822ff7ca";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_waypoint_follower/1.1.5-1.tar.gz";
+    name = "1.1.5-1.tar.gz";
+    sha256 = "43bd3b77aee0a33e74b8cd1c89ab45a2068e5f8cfc7a93285f653374a01e3e48";
   };
 
   buildType = "ament_cmake";

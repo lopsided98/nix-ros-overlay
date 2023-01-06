@@ -1,16 +1,16 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, tiago-2dnav }:
 buildRosPackage {
   pname = "ros-humble-tiago-navigation";
-  version = "4.0.1-r1";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_navigation-release/archive/release/humble/tiago_navigation/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "410405d5ff7911eea1642fcf1ecac5b033c8bdc579e7aa9ca535517403b3ecc5";
+    url = "https://github.com/pal-gbp/tiago_navigation-release/archive/release/humble/tiago_navigation/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "fcd59cbb3c58ea337123bcf32c029179f05d16ce44e9c598bec3cc31f54582d7";
   };
 
   buildType = "ament_cmake";

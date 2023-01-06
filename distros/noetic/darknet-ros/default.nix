@@ -1,5 +1,5 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, actionlib, boost, catkin, cv-bridge, darknet-ros-msgs, image-transport, message-generation, nodelet, opencv, roscpp, rospy, rostest, sensor-msgs, std-msgs, wget, xorg }:

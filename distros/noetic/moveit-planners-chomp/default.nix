@@ -1,16 +1,16 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, chomp-motion-planner, moveit-core, moveit-ros-planning-interface, pluginlib, roscpp, rostest }:
 buildRosPackage {
   pname = "ros-noetic-moveit-planners-chomp";
-  version = "1.1.10-r1";
+  version = "1.1.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_planners_chomp/1.1.10-1.tar.gz";
-    name = "1.1.10-1.tar.gz";
-    sha256 = "6f4de7f92fce6c815eddc9c3cf49d39efc8e3703ded7dc83fe00b54d47c1e171";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_planners_chomp/1.1.11-1.tar.gz";
+    name = "1.1.11-1.tar.gz";
+    sha256 = "b3bf0b98e9da1cfa7352742ef0afeaf9cd0bd44be36a99610544ac09b9d4b97d";
   };
 
   buildType = "catkin";

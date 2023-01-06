@@ -1,16 +1,16 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cmake, python, pythonPackages }:
 buildRosPackage {
   pname = "ros-melodic-mavlink";
-  version = "2022.8.8-r1";
+  version = "2022.12.30-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/melodic/mavlink/2022.8.8-1.tar.gz";
-    name = "2022.8.8-1.tar.gz";
-    sha256 = "cbc013107000bf682f9fe98750668ad8ff7a402859d6f8c84d049323a10ebb43";
+    url = "https://github.com/mavlink/mavlink-gbp-release/archive/release/melodic/mavlink/2022.12.30-1.tar.gz";
+    name = "2022.12.30-1.tar.gz";
+    sha256 = "cf7f3eac4a2f1fff34b43f17d7d606b3ba3e085145a25bea82fe9a9f8eecfb3b";
   };
 
   buildType = "cmake";

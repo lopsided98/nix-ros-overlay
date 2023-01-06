@@ -1,16 +1,16 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, lifecycle-msgs, rclcpp, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-humble-cascade-lifecycle-msgs";
-  version = "1.0.1-r3";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/fmrico/cascade_lifecycle-release/archive/release/humble/cascade_lifecycle_msgs/1.0.1-3.tar.gz";
-    name = "1.0.1-3.tar.gz";
-    sha256 = "b880a321e622aa2c1e1b21d05b67c91ac49553d09c5a8a0e12d925767033e8c4";
+    url = "https://github.com/fmrico/cascade_lifecycle-release/archive/release/humble/cascade_lifecycle_msgs/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "0cdf0631d890e4532fbe613b0d61018ebf841a3f8fac225f43775e899e98ad0e";
   };
 
   buildType = "ament_cmake";

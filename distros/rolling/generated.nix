@@ -1,5 +1,5 @@
 
-# Copyright 2022 Open Source Robotics Foundation
+# Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -153,6 +153,10 @@ self: super: {
  apex-test-tools = self.callPackage ./apex-test-tools {};
 
  apriltag = self.callPackage ./apriltag {};
+
+ aruco-opencv = self.callPackage ./aruco-opencv {};
+
+ aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
 
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
 
@@ -429,6 +433,8 @@ self: super: {
  fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
 
  filters = self.callPackage ./filters {};
+
+ find-object-2d = self.callPackage ./find-object-2d {};
 
  fluent-rviz = self.callPackage ./fluent-rviz {};
 
@@ -1653,6 +1659,8 @@ self: super: {
  transmission-interface = self.callPackage ./transmission-interface {};
 
  tricycle-controller = self.callPackage ./tricycle-controller {};
+
+ turbojpeg-compressed-image-transport = self.callPackage ./turbojpeg-compressed-image-transport {};
 
  turtle-tf2-cpp = self.callPackage ./turtle-tf2-cpp {};
 
