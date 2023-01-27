@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, schunk-svh-description }:
 buildRosPackage {
   pname = "ros-melodic-schunk-svh-simulation";
-  version = "0.1.1-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/schunk_svh_ros_driver-release/archive/release/melodic/schunk_svh_simulation/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "4b6ef368ee0629ee9bc7ef74455fb9a9f1c12d85cc3c0540ff6e2ad2f7858665";
+    url = "https://github.com/fzi-forschungszentrum-informatik/schunk_svh_ros_driver-release/archive/release/melodic/schunk_svh_simulation/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "03edc761c0f13d6aa3225d35c625d3e55e816425de96cf273dcbf722c9403ea8";
   };
 
   buildType = "catkin";

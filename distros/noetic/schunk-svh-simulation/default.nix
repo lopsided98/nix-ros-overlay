@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, schunk-svh-description }:
 buildRosPackage {
   pname = "ros-noetic-schunk-svh-simulation";
-  version = "0.1.1-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/schunk_svh_ros_driver-release/archive/release/noetic/schunk_svh_simulation/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "a53eedb734132bca34bce7138bc5957a52dfc9ded76b592c498e11180366731a";
+    url = "https://github.com/fzi-forschungszentrum-informatik/schunk_svh_ros_driver-release/archive/release/noetic/schunk_svh_simulation/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "ca6c113ddf1630d988c2d573135d83bdc155161fdbc7bbc2147e68fe13ba0132";
   };
 
   buildType = "catkin";

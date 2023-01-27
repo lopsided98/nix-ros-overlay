@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, clang, cmake, doxygen, eigen, eigenpy, git, hpp-fcl, python3, python3Packages, urdfdom }:
 buildRosPackage {
   pname = "ros-rolling-pinocchio";
-  version = "2.6.12-r1";
+  version = "2.6.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pinocchio-release/archive/release/rolling/pinocchio/2.6.12-1.tar.gz";
-    name = "2.6.12-1.tar.gz";
-    sha256 = "8ae4c41ab9004b08fc0896ddae8268be204a8105635ce4dea8d549fe51d76f97";
+    url = "https://github.com/ros2-gbp/pinocchio-release/archive/release/rolling/pinocchio/2.6.14-1.tar.gz";
+    name = "2.6.14-1.tar.gz";
+    sha256 = "b81701710743b4b7bade11d9e0be973aa04716e2caa59a21768120220bff9484";
   };
 
   buildType = "cmake";

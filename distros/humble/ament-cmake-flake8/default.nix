@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-flake8 }:
 buildRosPackage {
   pname = "ros-humble-ament-cmake-flake8";
-  version = "0.12.4-r1";
+  version = "0.12.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_cmake_flake8/0.12.4-1.tar.gz";
-    name = "0.12.4-1.tar.gz";
-    sha256 = "e81b08b2b214a56f74bd0b16606eca0ca3ccdb372958969f3473d5419449e9a5";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_cmake_flake8/0.12.5-1.tar.gz";
+    name = "0.12.5-1.tar.gz";
+    sha256 = "3b04205951f4fe90cb06343fe192ae8138ca737e076a3ca208bb5cb33a9dc899";
   };
 
   buildType = "ament_cmake";

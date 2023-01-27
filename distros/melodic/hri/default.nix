@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cv-bridge, geometry-msgs, hri-msgs, rosconsole, roscpp, sensor-msgs, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-hri";
-  version = "0.5.0-r1";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros4hri/libhri-release/archive/release/melodic/hri/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "f1855981d95343c53912ee8fcbfabc4526465636ed127fce75f14ef89698ad89";
+    url = "https://github.com/ros4hri/libhri-release/archive/release/melodic/hri/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "52ca083419f46049a42ef57183a4a99b20cbf408c5059e9a60c329a7b6d22de6";
   };
 
   buildType = "catkin";

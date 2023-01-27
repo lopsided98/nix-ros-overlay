@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, combined-robot-hw, controller-manager, dynamic-reconfigure, hardware-interface, joint-limits-interface, joint-state-controller, joint-state-publisher, joint-trajectory-controller, pluginlib, python-qt-binding, pythonPackages, qt-gui, robot-state-publisher, roscpp, rospy, rqt-gui, rqt-gui-py, schunk-svh-description, schunk-svh-library, schunk-svh-msgs, sensor-msgs, std-msgs, urdf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-schunk-svh-driver";
-  version = "0.1.1-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/schunk_svh_ros_driver-release/archive/release/melodic/schunk_svh_driver/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "be2b5d3df09d0ecee66aa0f0f031c94466b71ce6cb631a00da572792a7c17ae9";
+    url = "https://github.com/fzi-forschungszentrum-informatik/schunk_svh_ros_driver-release/archive/release/melodic/schunk_svh_driver/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "54dcb28214b7f1f666488da1d3dc995b14d5942e8c01195b5ad5a9aa55e92898";
   };
 
   buildType = "catkin";

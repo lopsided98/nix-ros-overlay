@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/PickNikRobotics/generate_parameter_library-release/archive/release/rolling/parameter_traits/0.3.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/rolling/parameter_traits/0.3.0-1.tar.gz";
     name = "0.3.0-1.tar.gz";
     sha256 = "9abb0f7275b3a4a05645b572fb47b2100b96d73f6825d5a85d351e5ddc78c87c";
   };

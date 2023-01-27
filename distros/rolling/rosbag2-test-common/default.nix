@@ -2,22 +2,22 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rcutils }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, python-cmake-module, rclcpp, rcutils }:
 buildRosPackage {
   pname = "ros-rolling-rosbag2-test-common";
-  version = "0.18.0-r3";
+  version = "0.19.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_test_common/0.18.0-3.tar.gz";
-    name = "0.18.0-3.tar.gz";
-    sha256 = "76e921aa4950b3e4bf055e73b3b31694272fd481f036a7cc05524dbbde75d524";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_test_common/0.19.0-1.tar.gz";
+    name = "0.19.0-1.tar.gz";
+    sha256 = "108d0895366941b357cf2192a96a74827c18b4206b5d23e861416a5165f8ba08";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
+  buildInputs = [ ament-cmake ament-cmake-python python-cmake-module ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ rclcpp rcutils ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-python python-cmake-module ];
 
   meta = {
     description = ''Commonly used test helper classes and fixtures for rosbag2'';

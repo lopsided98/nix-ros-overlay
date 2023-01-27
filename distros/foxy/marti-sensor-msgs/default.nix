@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-marti-sensor-msgs";
-  version = "1.3.0-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/foxy/marti_sensor_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "d2c4a05d7186475c3a9c8bc3a33d36c45450ff528814a9f5f6e0e8ad919f9327";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/foxy/marti_sensor_msgs/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "57298c42f2d90504ad641f3d97d4c7337d62a3254ed5a4ffe3e35564321f8483";
   };
 
   buildType = "ament_cmake";

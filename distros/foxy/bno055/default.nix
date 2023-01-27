@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, example-interfaces, python3Packages, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-bno055";
-  version = "0.3.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/flynneva/bno055-release/archive/release/foxy/bno055/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "2fa11534723964ea51cb8f3ecff54480fc62241b367feb845d4630926cd6226c";
+    url = "https://github.com/flynneva/bno055-release/archive/release/foxy/bno055/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "0557d062e71ccbd395f3bb8f734d01c59fb23b6e8d053b90aa5382d5c8725f74";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, base-local-planner, catkin, clear-costmap-recovery, cmake-modules, costmap-2d, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, move-base-msgs, nav-core, nav-msgs, navfn, pluginlib, roscpp, rospy, rotate-recovery, std-srvs, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-move-base";
-  version = "1.17.2-r1";
+  version = "1.17.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/move_base/1.17.2-1.tar.gz";
-    name = "1.17.2-1.tar.gz";
-    sha256 = "9d46fc421767d28c64b66649fb743fb371d371d54f4678aa4309dca75c8dd453";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/move_base/1.17.3-1.tar.gz";
+    name = "1.17.3-1.tar.gz";
+    sha256 = "75b4b8c9187d2756125e6cdd1c98352d66aeb5a913e2f17dd0373fe54f228b0c";
   };
 
   buildType = "catkin";

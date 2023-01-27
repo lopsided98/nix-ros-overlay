@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-gmock, ament-cmake-gtest, maliput }:
 buildRosPackage {
   pname = "ros-foxy-maliput-sparse";
-  version = "0.2.0-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/maliput_sparse-release/archive/release/foxy/maliput_sparse/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "dc5726126f02af283be9ac58cfe10a4810a2b9cf9a30de783a20ef4bf75cac5a";
+    url = "https://github.com/ros2-gbp/maliput_sparse-release/archive/release/foxy/maliput_sparse/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "9a5a6b33c97e453da8701e0dbd3779fb7ae3317c35d00b89bafe3f084fbb791e";
   };
 
   buildType = "ament_cmake";

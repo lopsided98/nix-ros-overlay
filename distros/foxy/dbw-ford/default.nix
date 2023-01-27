@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, dbw-ford-can, dbw-ford-description, dbw-ford-joystick-demo, dbw-ford-msgs }:
 buildRosPackage {
   pname = "ros-foxy-dbw-ford";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/foxy/dbw_ford/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "435616e2cffbd08840b125d35a0433a5f2d167bf7d707553a43a20ff89d55de1";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/foxy/dbw_ford/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "10d661867b5564d28a841727b65b50fe1c61991a6312ca35da37359a604c6c35";
   };
 
   buildType = "ament_cmake";

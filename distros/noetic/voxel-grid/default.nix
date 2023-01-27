@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-voxel-grid";
-  version = "1.17.2-r1";
+  version = "1.17.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/voxel_grid/1.17.2-1.tar.gz";
-    name = "1.17.2-1.tar.gz";
-    sha256 = "e7c58b56a3b31f78d302aaeeaeba39d9e03a505f053d550b9e3253c8d344aff9";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/voxel_grid/1.17.3-1.tar.gz";
+    name = "1.17.3-1.tar.gz";
+    sha256 = "86069ba9c96c545643e675a73ac130105a82bce9c6ce3454ccde56f44bac857d";
   };
 
   buildType = "catkin";

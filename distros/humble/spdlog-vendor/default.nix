@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, spdlog }:
 buildRosPackage {
   pname = "ros-humble-spdlog-vendor";
-  version = "1.3.0-r3";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/spdlog_vendor-release/archive/release/humble/spdlog_vendor/1.3.0-3.tar.gz";
-    name = "1.3.0-3.tar.gz";
-    sha256 = "73e5d2f61ec5607e7904cd2407fa016971e0d5658d062e636e65b43ff7023696";
+    url = "https://github.com/ros2-gbp/spdlog_vendor-release/archive/release/humble/spdlog_vendor/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "57bcbc3bfef2ea7406d20835765fe583ecc62f0df82ddfeb640f3765a1336c0b";
   };
 
   buildType = "ament_cmake";

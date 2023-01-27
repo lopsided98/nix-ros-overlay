@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, costmap-2d, geometry-msgs, message-generation, message-runtime, nav-core, nav-msgs, netpbm, pluginlib, rosconsole, roscpp, rosunit, sensor-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-navfn";
-  version = "1.17.2-r1";
+  version = "1.17.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/navfn/1.17.2-1.tar.gz";
-    name = "1.17.2-1.tar.gz";
-    sha256 = "fcc0b0ec8831039cf46378d4bbace12deada0099b5e158904a2055bdeebf7b9b";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/navfn/1.17.3-1.tar.gz";
+    name = "1.17.3-1.tar.gz";
+    sha256 = "40735830609fcba121f42952055e9ac69ce52bd095c19279c389401f26e9ab64";
   };
 
   buildType = "catkin";

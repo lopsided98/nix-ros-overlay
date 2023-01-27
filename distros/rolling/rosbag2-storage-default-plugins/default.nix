@@ -2,20 +2,20 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rosbag2-storage-sqlite3 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, rosbag2-storage-mcap, rosbag2-storage-sqlite3 }:
 buildRosPackage {
   pname = "ros-rolling-rosbag2-storage-default-plugins";
-  version = "0.18.0-r3";
+  version = "0.19.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_storage_default_plugins/0.18.0-3.tar.gz";
-    name = "0.18.0-3.tar.gz";
-    sha256 = "d19c69c578eba935f707b11b682a03ec19627bf21fc4b0429071fd5f01216776";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_storage_default_plugins/0.19.0-1.tar.gz";
+    name = "0.19.0-1.tar.gz";
+    sha256 = "fb17c318c533a7d7f8bd3cefb82f98b4009980085792f4cc6bcf8014cfe27d3b";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ rosbag2-storage-sqlite3 ];
+  propagatedBuildInputs = [ rosbag2-storage-mcap rosbag2-storage-sqlite3 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

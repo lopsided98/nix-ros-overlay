@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, launch, launch-ros, launch-testing, launch-testing-ros, python3Packages, pythonPackages, rclpy, ros-environment, ros2cli, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros2doctor";
-  version = "0.18.4-r1";
+  version = "0.18.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/humble/ros2doctor/0.18.4-1.tar.gz";
-    name = "0.18.4-1.tar.gz";
-    sha256 = "12d67146324613fc9a5ef89a7cf93d2d5d912483da07deb581bd808d52e86768";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/humble/ros2doctor/0.18.5-1.tar.gz";
+    name = "0.18.5-1.tar.gz";
+    sha256 = "c165f600c17ac979e954627105bc15417806ad5f4bda95d2a57f5e8cfb318675";
   };
 
   buildType = "ament_python";

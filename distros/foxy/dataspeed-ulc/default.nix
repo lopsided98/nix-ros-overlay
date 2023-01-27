@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, dataspeed-ulc-can, dataspeed-ulc-msgs }:
 buildRosPackage {
   pname = "ros-foxy-dataspeed-ulc";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/foxy/dataspeed_ulc/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "86c742b5eaa252fe72708e33c4552758a7241d68bb5ffef3a505a58800d19a19";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/foxy/dataspeed_ulc/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "f0dac9854c60f7e21c3a3e48196bed46827870469a649a8b343bdc1182b118ea";
   };
 
   buildType = "ament_cmake";

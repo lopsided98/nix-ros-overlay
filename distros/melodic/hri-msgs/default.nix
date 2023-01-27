@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, sensor-msgs }:
 buildRosPackage {
   pname = "ros-melodic-hri-msgs";
-  version = "0.7.1-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros4hri/hri_msgs-release/archive/release/melodic/hri_msgs/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "38e6797d23d882d009dba699e06459a65efe381cebba9f18d619a92f1a8f26ef";
+    url = "https://github.com/ros4hri/hri_msgs-release/archive/release/melodic/hri_msgs/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "552cfe799402fdb0192243957a3a05a09493acaeaba9f4bc2638dcf64ca468a7";
   };
 
   buildType = "catkin";
