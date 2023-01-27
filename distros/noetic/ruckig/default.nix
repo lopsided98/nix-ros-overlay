@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-noetic-ruckig";
-  version = "0.6.3-r1";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pantor/ruckig-release/archive/release/noetic/ruckig/0.6.3-1.tar.gz";
-    name = "0.6.3-1.tar.gz";
-    sha256 = "4a2c3b585dc2ec8d9af8c6ae46197e4344f214771c7d55c7c7fb3faca8690329";
+    url = "https://github.com/pantor/ruckig-release/archive/release/noetic/ruckig/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
+    sha256 = "eae85078de5937183224cdb31e7db66630269e1bc7efe19b0d597825573a11bd";
   };
 
   buildType = "cmake";

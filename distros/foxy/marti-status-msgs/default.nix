@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-marti-status-msgs";
-  version = "1.3.0-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/foxy/marti_status_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "e5f409447bec9e82e53b6d1b40c0a8a207b27dcc856e789ef408e74115bd8af7";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/foxy/marti_status_msgs/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "0b42fc968311aee958286a2e29d11b3f11700cfddd9b396d00e4a6b0991b6435";
   };
 
   buildType = "ament_cmake";

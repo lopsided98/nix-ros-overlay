@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-shape-msgs";
-  version = "4.2.2-r1";
+  version = "4.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/shape_msgs/4.2.2-1.tar.gz";
-    name = "4.2.2-1.tar.gz";
-    sha256 = "43f3b9856264e4c2b7755fd416f0e18c9b220a0a78a11945099df4cbbab0e6d7";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/shape_msgs/4.2.3-1.tar.gz";
+    name = "4.2.3-1.tar.gz";
+    sha256 = "96e8add144635570fbddbc3034ea9c00328329c58378e6ce1b0b31c1e8e2dc31";
   };
 
   buildType = "ament_cmake";

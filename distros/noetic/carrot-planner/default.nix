@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, base-local-planner, catkin, costmap-2d, eigen, nav-core, pluginlib, roscpp, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-carrot-planner";
-  version = "1.17.2-r1";
+  version = "1.17.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/carrot_planner/1.17.2-1.tar.gz";
-    name = "1.17.2-1.tar.gz";
-    sha256 = "4b97d1b64c80686f5e27d0bc312f2cdc1cc158bc6cf25b15c4d8489fdb7b7f73";
+    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/carrot_planner/1.17.3-1.tar.gz";
+    name = "1.17.3-1.tar.gz";
+    sha256 = "50b110e1d1ce7bfee9bf417b8b53b122723b584658bb1ea9df282e725197ac86";
   };
 
   buildType = "catkin";

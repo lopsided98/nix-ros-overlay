@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-nerian-stereo";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/nerian-vision/nerian_stereo_ros2-release/archive/release/humble/nerian_stereo/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "52fe766f6f1a4802a71645820e77e2e536840498ebb64acf2086af3a94de2e2f";
+    url = "https://github.com/nerian-vision/nerian_stereo_ros2-release/archive/release/humble/nerian_stereo/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "aff21d99f0d810ad60a12229fd9377f48ad61bf2f6711d3f44d7b532b5cc7140";
   };
 
   buildType = "ament_cmake";

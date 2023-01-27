@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, diff-drive-controller, interactive-marker-twist-server, joint-state-controller, joy, robot-localization, roslaunch, teleop-twist-joy, topic-tools, twist-mux }:
 buildRosPackage {
   pname = "ros-noetic-warthog-control";
-  version = "0.1.5-r1";
+  version = "0.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/warthog-release/archive/release/noetic/warthog_control/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "a66851ba35de067f79cb3ac0cdc0d944ea22e6eaf5cacd5169310c83ef297767";
+    url = "https://github.com/clearpath-gbp/warthog-release/archive/release/noetic/warthog_control/0.1.6-1.tar.gz";
+    name = "0.1.6-1.tar.gz";
+    sha256 = "8d523f1f791b9f718e8a4e187cf6718376dbf7cb1daf59a66b4f18aa107e504c";
   };
 
   buildType = "catkin";

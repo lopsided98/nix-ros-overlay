@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-dataspeed-dbw-msgs";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/foxy/dataspeed_dbw_msgs/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "b2df61a8a99619432486052b4932e4e87f9dba6faded76ba47c0bdd6df52ba68";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/foxy/dataspeed_dbw_msgs/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "1a0d77be13795bda875121bbaf8e713bb14b6d375c6ce41a826311f600ded15f";
   };
 
   buildType = "ament_cmake";

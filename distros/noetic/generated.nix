@@ -3532,13 +3532,19 @@ self: super: {
 
  ur5e-moveit-config = self.callPackage ./ur5e-moveit-config {};
 
+ ur-calibration = self.callPackage ./ur-calibration {};
+
  ur-client-library = self.callPackage ./ur-client-library {};
+
+ ur-dashboard-msgs = self.callPackage ./ur-dashboard-msgs {};
 
  ur-description = self.callPackage ./ur-description {};
 
  ur-gazebo = self.callPackage ./ur-gazebo {};
 
  ur-msgs = self.callPackage ./ur-msgs {};
+
+ ur-robot-driver = self.callPackage ./ur-robot-driver {};
 
  urdf = self.callPackage ./urdf {};
 

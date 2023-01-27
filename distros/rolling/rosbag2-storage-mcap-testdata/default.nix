@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-rolling-rosbag2-storage-mcap-testdata";
-  version = "0.5.0-r1";
+  version = "0.19.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2_storage_mcap-release/archive/release/rolling/rosbag2_storage_mcap_testdata/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "77a89df48d44b2e02806de8573a127dbecfbf50c68bc4afedff17ea8ff6f8c6b";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_storage_mcap_testdata/0.19.0-1.tar.gz";
+    name = "0.19.0-1.tar.gz";
+    sha256 = "fcee5d50a81994b7a6eeda5deab8f310a5b617b99b42bf9f2d254d8f614ffbd5";
   };
 
   buildType = "ament_cmake";

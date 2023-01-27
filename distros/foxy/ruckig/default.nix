@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-foxy-ruckig";
-  version = "0.6.3-r1";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pantor/ruckig-release/archive/release/foxy/ruckig/0.6.3-1.tar.gz";
-    name = "0.6.3-1.tar.gz";
-    sha256 = "cff3d3db056f7026f298f4b87c843781ceeec72947f706d1f861d69a96aed9a4";
+    url = "https://github.com/pantor/ruckig-release/archive/release/foxy/ruckig/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
+    sha256 = "e4136424ccdd76574d89664e8fea7d1fe07059852064505c491cdc2bdbc48226";
   };
 
   buildType = "cmake";

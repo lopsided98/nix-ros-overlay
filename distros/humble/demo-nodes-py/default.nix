@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, example-interfaces, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-demo-nodes-py";
-  version = "0.20.2-r1";
+  version = "0.20.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/demo_nodes_py/0.20.2-1.tar.gz";
-    name = "0.20.2-1.tar.gz";
-    sha256 = "15e2be42652587644ca4a7ce33031e17070dbb0e40abe979cc5be2cc2bb33afb";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/demo_nodes_py/0.20.3-1.tar.gz";
+    name = "0.20.3-1.tar.gz";
+    sha256 = "6b8bb86bcddc2873c67ac2d5fce239dafe513c807380b6df72c028c3bc576d73";
   };
 
   buildType = "ament_python";

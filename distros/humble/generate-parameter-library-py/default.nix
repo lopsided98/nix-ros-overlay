@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/PickNikRobotics/generate_parameter_library-release/archive/release/humble/generate_parameter_library_py/0.3.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/humble/generate_parameter_library_py/0.3.0-1.tar.gz";
     name = "0.3.0-1.tar.gz";
     sha256 = "97f208d77c12c7d6b061f786901e023ec90de8a06b61fbc9edea7cea76407f98";
   };

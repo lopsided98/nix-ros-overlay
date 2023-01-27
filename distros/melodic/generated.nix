@@ -3068,6 +3068,8 @@ self: super: {
 
  qb-device-driver = self.callPackage ./qb-device-driver {};
 
+ qb-device-gazebo = self.callPackage ./qb-device-gazebo {};
+
  qb-device-hardware-interface = self.callPackage ./qb-device-hardware-interface {};
 
  qb-device-msgs = self.callPackage ./qb-device-msgs {};
@@ -3082,6 +3084,8 @@ self: super: {
 
  qb-hand-description = self.callPackage ./qb-hand-description {};
 
+ qb-hand-gazebo = self.callPackage ./qb-hand-gazebo {};
+
  qb-hand-hardware-interface = self.callPackage ./qb-hand-hardware-interface {};
 
  qb-move = self.callPackage ./qb-move {};
@@ -3089,6 +3093,8 @@ self: super: {
  qb-move-control = self.callPackage ./qb-move-control {};
 
  qb-move-description = self.callPackage ./qb-move-description {};
+
+ qb-move-gazebo = self.callPackage ./qb-move-gazebo {};
 
  qb-move-hardware-interface = self.callPackage ./qb-move-hardware-interface {};
 
@@ -4374,13 +4380,19 @@ self: super: {
 
  ur5e-moveit-config = self.callPackage ./ur5e-moveit-config {};
 
+ ur-calibration = self.callPackage ./ur-calibration {};
+
  ur-client-library = self.callPackage ./ur-client-library {};
+
+ ur-dashboard-msgs = self.callPackage ./ur-dashboard-msgs {};
 
  ur-description = self.callPackage ./ur-description {};
 
  ur-gazebo = self.callPackage ./ur-gazebo {};
 
  ur-msgs = self.callPackage ./ur-msgs {};
+
+ ur-robot-driver = self.callPackage ./ur-robot-driver {};
 
  urdf = self.callPackage ./urdf {};
 

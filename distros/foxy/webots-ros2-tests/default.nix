@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, pythonPackages, rclpy, ros2bag, rosbag2-storage-default-plugins, sensor-msgs, std-msgs, std-srvs, tf2-ros, webots-ros2-driver, webots-ros2-epuck, webots-ros2-mavic, webots-ros2-tesla, webots-ros2-tiago, webots-ros2-turtlebot, webots-ros2-universal-robot }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-tests";
-  version = "2023.0.0-r3";
+  version = "2023.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_tests/2023.0.0-3.tar.gz";
-    name = "2023.0.0-3.tar.gz";
-    sha256 = "e6531a2293996011b842f354613fd6d3e9184655b69a1977cffc4decf0d46731";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_tests/2023.0.1-1.tar.gz";
+    name = "2023.0.1-1.tar.gz";
+    sha256 = "eba8f4c721ae3f73c089a239f70b599f4d50df094c3440535ad69580be3a879b";
   };
 
   buildType = "ament_python";

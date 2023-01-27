@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libyamlcpp }:
 buildRosPackage {
   pname = "ros-humble-yaml-cpp-vendor";
-  version = "8.0.1-r2";
+  version = "8.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yaml_cpp_vendor-release/archive/release/humble/yaml_cpp_vendor/8.0.1-2.tar.gz";
-    name = "8.0.1-2.tar.gz";
-    sha256 = "95c715d7a2445fd1a582367fc1678a7ec40a8ab8931288849800991246b2bd40";
+    url = "https://github.com/ros2-gbp/yaml_cpp_vendor-release/archive/release/humble/yaml_cpp_vendor/8.0.2-1.tar.gz";
+    name = "8.0.2-1.tar.gz";
+    sha256 = "a17c516df1cc8f63c34597c351bfba22a75d69440b5e30a69c5bb112a37d65c5";
   };
 
   buildType = "ament_cmake";

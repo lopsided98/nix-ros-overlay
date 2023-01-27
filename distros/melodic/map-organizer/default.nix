@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, geometry-msgs, map-organizer-msgs, map-server, nav-msgs, neonavigation-common, pcl, pcl-conversions, roscpp, roslint, rostest, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-map-organizer";
-  version = "0.11.7-r1";
+  version = "0.11.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/map_organizer/0.11.7-1.tar.gz";
-    name = "0.11.7-1.tar.gz";
-    sha256 = "b14f11a6d730610d0fc2ca2d77fd5da482285b5f315e4fb770edc009c3c87686";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/melodic/map_organizer/0.11.8-1.tar.gz";
+    name = "0.11.8-1.tar.gz";
+    sha256 = "6599738c32d6b026d12bd2e495c0b5335cb77ab8cca4b4426d0f7fd925a1b738";
   };
 
   buildType = "catkin";

@@ -154,6 +154,10 @@ self: super: {
 
  apriltag = self.callPackage ./apriltag {};
 
+ apriltag-msgs = self.callPackage ./apriltag-msgs {};
+
+ apriltag-ros = self.callPackage ./apriltag-ros {};
+
  aruco-opencv = self.callPackage ./aruco-opencv {};
 
  aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
@@ -209,6 +213,8 @@ self: super: {
  cartographer-ros-msgs = self.callPackage ./cartographer-ros-msgs {};
 
  cartographer-rviz = self.callPackage ./cartographer-rviz {};
+
+ cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
 
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
 
@@ -1046,6 +1052,8 @@ self: super: {
 
  rclcpp-action = self.callPackage ./rclcpp-action {};
 
+ rclcpp-cascade-lifecycle = self.callPackage ./rclcpp-cascade-lifecycle {};
+
  rclcpp-components = self.callPackage ./rclcpp-components {};
 
  rclcpp-lifecycle = self.callPackage ./rclcpp-lifecycle {};
@@ -1281,6 +1289,8 @@ self: super: {
  rosbag2-interfaces = self.callPackage ./rosbag2-interfaces {};
 
  rosbag2-performance-benchmarking = self.callPackage ./rosbag2-performance-benchmarking {};
+
+ rosbag2-performance-benchmarking-msgs = self.callPackage ./rosbag2-performance-benchmarking-msgs {};
 
  rosbag2-py = self.callPackage ./rosbag2-py {};
 

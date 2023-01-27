@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, boost, cv-bridge, diagnostic-msgs, diagnostic-updater, geographic-msgs, geometry-msgs, geos, gps-msgs, launch-xml, libyamlcpp, marti-nav-msgs, pkg-config, proj, python3Packages, rcl-interfaces, rclcpp, rclcpp-components, rclpy, sensor-msgs, swri-math-util, swri-roscpp, tf2, tf2-geometry-msgs, tf2-py, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-swri-transform-util";
-  version = "3.5.0-r1";
+  version = "3.5.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_transform_util/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "0d4bcbb07ce015b36b0b356c880ad03c235c11c6ce7e5a08bc8d8d6d182422e4";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_transform_util/3.5.1-2.tar.gz";
+    name = "3.5.1-2.tar.gz";
+    sha256 = "3e19573ff232e62438e1928c6cabee699700c346252dce565732f6f4933d9efd";
   };
 
   buildType = "ament_cmake";

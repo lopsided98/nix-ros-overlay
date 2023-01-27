@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-description, gazebo-ros }:
 buildRosPackage {
   pname = "ros-noetic-cob-gazebo-objects";
-  version = "0.7.6-r1";
+  version = "0.7.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_simulation-release/archive/release/noetic/cob_gazebo_objects/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "8ae54baf00927db2c1bc5c8aee5670c6ebb7af9232b8f296db5b5257b3c69ce9";
+    url = "https://github.com/ipa320/cob_simulation-release/archive/release/noetic/cob_gazebo_objects/0.7.7-1.tar.gz";
+    name = "0.7.7-1.tar.gz";
+    sha256 = "cc14a28cbd5d56aa628ae28ca01828721c627cbe8bcb6a6e9918fdd0fef3b840";
   };
 
   buildType = "catkin";

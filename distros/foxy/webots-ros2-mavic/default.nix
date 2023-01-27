@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, pythonPackages, rclpy, webots-ros2-driver }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-mavic";
-  version = "2023.0.0-r3";
+  version = "2023.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_mavic/2023.0.0-3.tar.gz";
-    name = "2023.0.0-3.tar.gz";
-    sha256 = "0573b4cd2a1f269ac4bce9fa3441363b67356a857eee969066fae91ec7cbf688";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_mavic/2023.0.1-1.tar.gz";
+    name = "2023.0.1-1.tar.gz";
+    sha256 = "3549337790d4717a741203f04e448d4dd143f44c6d91c8aff2a0ac2a08b00d08";
   };
 
   buildType = "ament_python";

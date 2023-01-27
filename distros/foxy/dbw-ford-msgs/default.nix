@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-dbw-ford-msgs";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/foxy/dbw_ford_msgs/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "55e6a7dd38ace924d897e2dea3684a06ff6244d4ba41faaf61c53a2c857c9fe4";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/foxy/dbw_ford_msgs/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "ac24d96450d99cd7fb93f467af7ed2edaba8a439e509463e03246cc5006c20cb";
   };
 
   buildType = "ament_cmake";

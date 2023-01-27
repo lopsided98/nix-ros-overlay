@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geographic-msgs, geometry-msgs, marti-common-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-marti-nav-msgs";
-  version = "1.3.0-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/foxy/marti_nav_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "51768a9a78ddf9166ab41cbe785971b2361d807b9902a6c021c1b61685d4bb84";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/foxy/marti_nav_msgs/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "98124a259549fbe7a470e5a2b8f4e5eab646e9cdb63aa8b55ea2ae36d00244f6";
   };
 
   buildType = "ament_cmake";
