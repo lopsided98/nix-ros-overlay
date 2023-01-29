@@ -88,6 +88,16 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
+  rmw-implementation = rosSuper.rmw-implementation.overrideAttrs ({
+    propagatedBuildInputs ? [], ...
+  }: {
+    # The default implementation must be available to all dependent packages
+    # at build time.
+    propagatedBuildInputs = with rosSelf; [
+      rmw-fastrtps-cpp
+    ] ++ propagatedBuildInputs;
+  });
+
   rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
     postPatch ? "", ...
   }: let
@@ -112,14 +122,12 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   rosidl-generator-rs = rosSelf.callPackage ../pkgs/rosidl-generator-rs { };
 
-  rmw-implementation = rosSuper.rmw-implementation.overrideAttrs ({
-    propagatedBuildInputs ? [], ...
+  rqt-robot-monitor = rosSuper.rqt-robot-monitor.overrideAttrs ({
+    postFixup ? "", ...
   }: {
-    # The default implementation must be available to all dependent packages
-    # at build time.
-    propagatedBuildInputs = with rosSelf; [
-      rmw-fastrtps-cpp
-    ] ++ propagatedBuildInputs;
+    postFixup = postFixup + ''
+      wrapQtApp "$out/bin/rqt_robot_monitor"
+    '';
   });
 
   # The build gets stuck in an infinite loop with absolute CMAKE_INSTALL_LIBDIR:

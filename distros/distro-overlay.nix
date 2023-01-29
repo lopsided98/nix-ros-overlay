@@ -275,6 +275,13 @@ let
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
     });
 
+    rqt-robot-monitor = rosSuper.rqt-robot-monitor.overrideAttrs ({
+      nativeBuildInputs ? [], ...
+    }: {
+      dontWrapQtApps = false;
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+    });
+
     rqt-service-caller = rosSuper.rqt-service-caller.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
