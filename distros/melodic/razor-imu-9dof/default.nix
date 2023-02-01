@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-razor-imu-9dof";
   version = "1.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ENSTABretagneRobotics/razor_imu_9dof-release/archive/release/melodic/razor_imu_9dof/1.3.0-2.tar.gz";
-    name = "1.3.0-2.tar.gz";
-    sha256 = "7b9cf9527dede1fa4eecc2da794eee2ce4acfdff994b5f3416b7870e6751a224";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ENSTABretagneRobotics";
+        repo = "razor_imu_9dof-release";
+        rev = "release/melodic/razor_imu_9dof/1.3.0-2";
+        sha256 = "sha256-Rw43NOBQa8g1j28eWJtP1kpR8oEEMBxehjwTafyOkTg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.catkin-pkg ];

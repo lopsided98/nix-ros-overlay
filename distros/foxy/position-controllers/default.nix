@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-position-controllers";
   version = "0.8.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/position_controllers/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "3e6f97847639bf7feb20b45aa02bbd3ec9d81d98e30ab5500004386d5c4e8f9f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_controllers-release";
+        rev = "release/foxy/position_controllers/0.8.2-1";
+        sha256 = "sha256-GB72361fKLAGvIWbpyJUtPtLvxm3p9u5Tt/gftlzmjs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pluginlib ];

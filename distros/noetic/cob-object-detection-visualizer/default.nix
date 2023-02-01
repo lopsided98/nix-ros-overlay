@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-object-detection-visualizer";
   version = "0.6.19-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/noetic/cob_object_detection_visualizer/0.6.19-1.tar.gz";
-    name = "0.6.19-1.tar.gz";
-    sha256 = "70c64219bb8f8f7bd3316550733227c9defcdbace1172268308370caf34bc925";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_perception_common-release";
+        rev = "release/noetic/cob_object_detection_visualizer/0.6.19-1";
+        sha256 = "sha256-kVjrVeuefnnSMhngiLLH/Rgona7WK6bUSNVUk3J/9KU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

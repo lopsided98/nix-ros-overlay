@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rqt-rotors";
   version = "2.2.3";
 
-  src = fetchurl {
-    url = "https://github.com/ethz-asl/rotors_simulator-release/archive/release/melodic/rqt_rotors/2.2.3-0.tar.gz";
-    name = "2.2.3-0.tar.gz";
-    sha256 = "fd26afa06f8f7acd5dcc50aeab04521d73b266f1b921150cdd675cdf62a9c840";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ethz-asl";
+        repo = "rotors_simulator-release";
+        rev = "release/melodic/rqt_rotors/2.2.3-0";
+        sha256 = "sha256-eTHhHTIHRjkwnmSJd73i8Nlbf2hP0uK1XkfQ8WnsneU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

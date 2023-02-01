@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-spatio-temporal-voxel-layer";
   version = "1.3.5-r2";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/spatio_temporal_voxel_layer-release/archive/release/melodic/spatio_temporal_voxel_layer/1.3.5-2.tar.gz";
-    name = "1.3.5-2.tar.gz";
-    sha256 = "c4f1a275ab85e04a11a2a5a3a300ec41375da9877b087036ddc5f50b381546fd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "spatio_temporal_voxel_layer-release";
+        rev = "release/melodic/spatio_temporal_voxel_layer/1.3.5-2";
+        sha256 = "sha256-OVS6L/lwFv8hVPoonk+ruWFYk0hHa61ERfTBxtuiVys=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

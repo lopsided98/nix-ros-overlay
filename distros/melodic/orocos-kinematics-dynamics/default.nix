@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-orocos-kinematics-dynamics";
   version = "1.4.0";
 
-  src = fetchurl {
-    url = "https://github.com/orocos/orocos-kdl-release/archive/release/melodic/orocos_kinematics_dynamics/1.4.0-0.tar.gz";
-    name = "1.4.0-0.tar.gz";
-    sha256 = "2ba6018b3fbbced816694fafd40bf7a9eea586ee7955ec91e4de7864493a2150";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "orocos";
+        repo = "orocos-kdl-release";
+        rev = "release/melodic/orocos_kinematics_dynamics/1.4.0-0";
+        sha256 = "sha256-Clvpb2zR9IeHpa/jY4Zi5+mw6TyA44iJ2xU1WMo4L3Y=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

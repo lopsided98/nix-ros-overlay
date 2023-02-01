@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-smach";
   version = "2.0.1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/executive_smach-release/archive/release/melodic/smach/2.0.1-0.tar.gz";
-    name = "2.0.1-0.tar.gz";
-    sha256 = "37de5727c98e7aa222670ad40229cfe239e2907f25ec0d7133b4ec2c29eb6c7c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "executive_smach-release";
+        rev = "release/melodic/smach/2.0.1-0";
+        sha256 = "sha256-UlcJEfWez74lJKboyFcN4CrONfR/RELrgt5EpypP4iU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

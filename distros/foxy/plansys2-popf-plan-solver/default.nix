@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-plansys2-popf-plan-solver";
   version = "1.0.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/foxy/plansys2_popf_plan_solver/1.0.10-1.tar.gz";
-    name = "1.0.10-1.tar.gz";
-    sha256 = "264a5c29013274fc364393da3812d9358fcefcd9334dbd4d4fefea008c434ecd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "IntelligentRoboticsLabs";
+        repo = "ros2_planning_system-release";
+        rev = "release/foxy/plansys2_popf_plan_solver/1.0.10-1";
+        sha256 = "sha256-2nL0wfWSroHJfHp1fVRbvDKnkC1a5yPCX/+cYqI3lC0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

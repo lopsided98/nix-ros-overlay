@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-stereo-image-proc";
   version = "3.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/stereo_image_proc/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "10b2e7033f2115baf648425f65b4fece946cd7fa46465d9908615aabd791dc97";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/rolling/stereo_image_proc/3.0.1-1";
+        sha256 = "sha256-XrzzM40qgmzxEn2ziJiUiBFzXTBso2p/imQzDNl1ja8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rmf-visualization-rviz2-plugins";
   version = "2.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/rolling/rmf_visualization_rviz2_plugins/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "86f2f52de2e84b85d48c7988ff1b9a0be0b332f2e5aa8fda26b2f86b80ecdc60";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_visualization-release";
+        rev = "release/rolling/rmf_visualization_rviz2_plugins/2.0.1-1";
+        sha256 = "sha256-ac6iguQpxf37LJDaePtiCM2jX1hB43uWZuiblf+ZYmg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake eigen ];

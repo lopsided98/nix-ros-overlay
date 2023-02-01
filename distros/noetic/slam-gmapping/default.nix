@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-slam-gmapping";
   version = "1.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/slam_gmapping-release/archive/release/noetic/slam_gmapping/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "f630ba8630dc41063e8ad975fa03c709592592a115ebaf857d0541343721c49c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "slam_gmapping-release";
+        rev = "release/noetic/slam_gmapping/1.4.2-1";
+        sha256 = "sha256-4YLypSEaqdDk+RLuRs2KTHo3ItSVm18ttlg+jYhPx0M=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

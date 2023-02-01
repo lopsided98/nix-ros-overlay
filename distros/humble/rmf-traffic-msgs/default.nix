@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rmf-traffic-msgs";
   version = "3.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/humble/rmf_traffic_msgs/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "71ab4ea9d3ea59984a7cd5605cc03c7278f231fe88408034c43fd1bf4504874a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_internal_msgs-release";
+        rev = "release/humble/rmf_traffic_msgs/3.0.2-1";
+        sha256 = "sha256-Mpro9J9umfpGkfpGplbSA5ht3fMZWfkV57m4D3EOwkU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

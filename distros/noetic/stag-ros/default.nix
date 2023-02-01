@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-stag-ros";
   version = "0.3.9-r3";
 
-  src = fetchurl {
-    url = "https://github.com/usrl-uofsc/stag_ros-release/archive/release/noetic/stag_ros/0.3.9-3.tar.gz";
-    name = "0.3.9-3.tar.gz";
-    sha256 = "5829fb232d80c8e092afc90f5ec25b6d912bf08674703e6288cbd59d58eb39b3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "usrl-uofsc";
+        repo = "stag_ros-release";
+        rev = "release/noetic/stag_ros/0.3.9-3";
+        sha256 = "sha256-X4HySzTU+463mekd2MhZKaPZc7jk5jiejYX9ZQ4YEpQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

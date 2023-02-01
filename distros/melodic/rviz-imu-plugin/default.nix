@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rviz-imu-plugin";
   version = "1.2.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/melodic/rviz_imu_plugin/1.2.5-1.tar.gz";
-    name = "1.2.5-1.tar.gz";
-    sha256 = "5f05c06594a77f466543b305c493267af7366f3ac2c3f6b6aaf46eeb44ead605";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "imu_tools-release";
+        rev = "release/melodic/rviz_imu_plugin/1.2.5-1";
+        sha256 = "sha256-x3MyWvIgNSMw0++PQ3gxYa5ZNrzi/Om/5D9vJxtckR4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

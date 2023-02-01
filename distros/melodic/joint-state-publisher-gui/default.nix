@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-joint-state-publisher-gui";
   version = "1.12.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/joint_state_publisher-release/archive/release/melodic/joint_state_publisher_gui/1.12.15-1.tar.gz";
-    name = "1.12.15-1.tar.gz";
-    sha256 = "f728911eb7f886ce99289fc18cd27528c91cb630c84a29d76d406f970ed775b0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "joint_state_publisher-release";
+        rev = "release/melodic/joint_state_publisher_gui/1.12.15-1";
+        sha256 = "sha256-+O9tHLwqz64Sbqbk9Ctmp7nQ0Ygb7tlo6ZueED2hNDA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

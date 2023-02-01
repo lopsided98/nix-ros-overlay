@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-moveit-ros-visualization";
   version = "1.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_visualization/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "e713239304d9b982ec4e8a5266881da0517145723c9a989587c73ac069af57d6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/melodic/moveit_ros_visualization/1.0.11-1";
+        sha256 = "sha256-D6bREP4taz0HYjUZqfQQBrsRUEDnYkqLgIEQ7DcBX18=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin class-loader eigen ogre1_9 pkg-config qt5.qtbase ];

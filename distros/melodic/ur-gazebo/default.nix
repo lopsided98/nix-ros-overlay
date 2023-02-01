@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ur-gazebo";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/melodic/ur_gazebo/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "3928c72b9df055ed5445b4d0ff0118fd9cdc99feb0eb9b472dbe7a348817cf19";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "universal_robot-release";
+        rev = "release/melodic/ur_gazebo/1.3.1-1";
+        sha256 = "sha256-Vu37y39DoI9TCxE0DAIUkgZBSShKb+uw3glc/7TKZlw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -8,9 +8,8 @@ buildRosPackage {
   version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/galactic/velocity_controllers/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "bd17d70844f6b028bf3457ffad2d8d2ba67b7fec3dce15eb66585ce84e541a16";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/1a4c17af215cc4b2084d177840ad2e4c6b059e62.tar.gz";
+    sha256 = "sha256-KzMFydDmdDLuz20+qp/TYJMNshJ2NL4Eti1pH257OvE=";
   };
 
   buildType = "ament_cmake";

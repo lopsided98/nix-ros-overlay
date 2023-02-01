@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-domain-coordinator";
   version = "0.9.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/foxy/domain_coordinator/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "515283f770b058bacaad143ba983c1e560ab22a601779b6e97c84facca818d5e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_cmake_ros-release";
+        rev = "release/foxy/domain_coordinator/0.9.2-1";
+        sha256 = "sha256-KsoDZfHbqVDIEtXAmeR3Zb+vvEtYVCPpTwFkq6weOEo=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

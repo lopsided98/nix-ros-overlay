@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ament-cmake-catch2";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake_catch2-release/archive/release/foxy/ament_cmake_catch2/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "4c435817be2c972b6f062c6dc0cb0bbaeca09abb8c6cd37b185d9153df544e74";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_cmake_catch2-release";
+        rev = "release/foxy/ament_cmake_catch2/1.2.0-1";
+        sha256 = "sha256-tO+yhq78V4z0Tiq3cso46p8Nv2iIiy1GtgvMFrerMPI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-core ];

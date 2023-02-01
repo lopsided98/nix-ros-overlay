@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ros-introspection";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/wu-robotics/roscompile-release/archive/release/melodic/ros_introspection/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "6c9df1bb401d4d3f2f564502df7e1ab10bf7b8e623bfe1aef63c5e7deac5bb55";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wu-robotics";
+        repo = "roscompile-release";
+        rev = "release/melodic/ros_introspection/1.2.1-1";
+        sha256 = "sha256-9ytXGNds/guHnN2+qEvZi8TaE4Va58o8rV1/rEJ1eKQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-mppic";
   version = "0.2.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/artofnothingness/mppic-release/archive/release/foxy/mppic/0.2.1-2.tar.gz";
-    name = "0.2.1-2.tar.gz";
-    sha256 = "1ba13c06c16a18b1c830205f64406fe6f5df722e841e1fca42488044bf3558c8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "artofnothingness";
+        repo = "mppic-release";
+        rev = "release/foxy/mppic/0.2.1-2";
+        sha256 = "sha256-KSZDHAVRckwJAUOjgUaZ+bgclvest8CyXu9+57/2hnQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

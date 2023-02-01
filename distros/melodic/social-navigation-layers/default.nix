@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-social-navigation-layers";
   version = "0.5.0";
 
-  src = fetchurl {
-    url = "https://github.com/wu-robotics/navigation_layers_release/archive/release/melodic/social_navigation_layers/0.5.0-0.tar.gz";
-    name = "0.5.0-0.tar.gz";
-    sha256 = "106139809be8e491881b20b8510ca74eb2b73109bef94c30f1c58be452e2e4cd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wu-robotics";
+        repo = "navigation_layers_release";
+        rev = "release/melodic/social_navigation_layers/0.5.0-0";
+        sha256 = "sha256-cPw/WJlilXxs2p/H8soPv/RAnTAzWoOt9k0nOnSQzaA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

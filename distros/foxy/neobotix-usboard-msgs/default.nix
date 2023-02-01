@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-neobotix-usboard-msgs";
   version = "3.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/foxy/neobotix_usboard_msgs/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "7daaa6ad2392569bb26cb3c35030db44ff13477b38216d222f19f3f7e3150037";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "astuff_sensor_msgs-release";
+        rev = "release/foxy/neobotix_usboard_msgs/3.1.0-1";
+        sha256 = "sha256-zD7LBugkWjlww5RsCcD0ng7drVyFRrY6UjI8+LMfwTA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment rosidl-default-generators ];

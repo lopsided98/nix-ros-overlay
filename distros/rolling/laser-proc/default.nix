@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-laser-proc";
   version = "1.0.2-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/laser_proc-release/archive/release/rolling/laser_proc/1.0.2-4.tar.gz";
-    name = "1.0.2-4.tar.gz";
-    sha256 = "992243cd2ba28d5fb6e8507800dd3f41f4fc5b6928086769132db125a8d00592";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "laser_proc-release";
+        rev = "release/rolling/laser_proc/1.0.2-4";
+        sha256 = "sha256-h2lPjaJimCF/20eVEH3+ZS7CDqoML9voXq2B0x32NSY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

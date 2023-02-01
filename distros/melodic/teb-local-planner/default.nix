@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-teb-local-planner";
   version = "0.8.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rst-tu-dortmund/teb_local_planner-release/archive/release/melodic/teb_local_planner/0.8.4-1.tar.gz";
-    name = "0.8.4-1.tar.gz";
-    sha256 = "a1052cfa296cd74da059953a01bf0d5cfea8c24f7ef910117ba998fa12f44ff8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rst-tu-dortmund";
+        repo = "teb_local_planner-release";
+        rev = "release/melodic/teb_local_planner/0.8.4-1";
+        sha256 = "sha256-1jmnZEVmUwsAYvFINyhVLGTiCiqh7t7i6Dt9SPNs1N4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules message-generation tf2-eigen tf2-geometry-msgs ];

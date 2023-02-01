@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dynamic-graph-tutorial";
   version = "1.3.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/stack-of-tasks/dynamic-graph-tutorial-ros-release/archive/release/melodic/dynamic-graph-tutorial/1.3.5-1.tar.gz";
-    name = "1.3.5-1.tar.gz";
-    sha256 = "d85ac43d800e7d74f365de3cf8d176bba7fbb47390ee7cffa0f540ccd2a8e327";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "stack-of-tasks";
+        repo = "dynamic-graph-tutorial-ros-release";
+        rev = "release/melodic/dynamic-graph-tutorial/1.3.5-1";
+        sha256 = "sha256-ELnfC/MTzDXBwxQsoY5Lmi/vhD8Kgs7SUqGPGJa0Efo=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen dynamic-graph dynamic-graph-python git ];

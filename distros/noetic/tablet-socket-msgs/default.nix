@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-tablet-socket-msgs";
   version = "1.14.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/autoware-ai/messages-release/archive/release/noetic/tablet_socket_msgs/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "65f6bd52a23f56ee5ff3e096b3d56feb572123ab4e9961e3616df395ba59e949";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "autoware-ai";
+        repo = "messages-release";
+        rev = "release/noetic/tablet_socket_msgs/1.14.0-1";
+        sha256 = "sha256-K81PQWc5f4ipaEOUnZgJcmABZiUzdI1Jg96O6a9fVkA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

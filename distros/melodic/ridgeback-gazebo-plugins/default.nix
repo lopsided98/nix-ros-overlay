@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ridgeback-gazebo-plugins";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/melodic/ridgeback_gazebo_plugins/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "bf4b3d2bcb95826a3070b8483a2eca8402086da9b69401cfc5dccf11866ad75a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "ridgeback_simulator-release";
+        rev = "release/melodic/ridgeback_gazebo_plugins/0.1.1-1";
+        sha256 = "sha256-8+B/k0GLnKlkCYtQZQTCZcGtukY83l2MagxdYwPvht8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin gazebo_9 std-srvs ];

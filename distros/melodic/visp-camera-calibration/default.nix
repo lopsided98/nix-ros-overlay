@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-visp-camera-calibration";
   version = "0.13.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/lagadic/vision_visp-release/archive/release/melodic/visp_camera_calibration/0.13.0-1.tar.gz";
-    name = "0.13.0-1.tar.gz";
-    sha256 = "ef2de16ff7312fb6a866e490631f1b50858ec645d39f778cf3c2752a8b20cbf9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "lagadic";
+        repo = "vision_visp-release";
+        rev = "release/melodic/visp_camera_calibration/0.13.0-1";
+        sha256 = "sha256-ddC64899+b5KmMFXInvkkF0tgfXQbN5YCot7OqI4NQQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

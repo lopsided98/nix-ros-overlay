@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-uwsim";
   version = "1.4.2-r3";
 
-  src = fetchurl {
-    url = "https://github.com/uji-ros-pkg/underwater_simulation-release/archive/release/melodic/uwsim/1.4.2-3.tar.gz";
-    name = "1.4.2-3.tar.gz";
-    sha256 = "c1ca2ee772888d4cc33f58ee5399ad49b0b9fb36362c009236bebd82ecf091ac";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uji-ros-pkg";
+        repo = "underwater_simulation-release";
+        rev = "release/melodic/uwsim/1.4.2-3";
+        sha256 = "sha256-dG7WN7SpOjjgzixDSf5sSi3qfxn1udcKcTvsOP71zO4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

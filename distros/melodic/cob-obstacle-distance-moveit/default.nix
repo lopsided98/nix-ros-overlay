@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-obstacle-distance-moveit";
   version = "0.7.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/melodic/cob_obstacle_distance_moveit/0.7.5-1.tar.gz";
-    name = "0.7.5-1.tar.gz";
-    sha256 = "0b60c877eb05d3a1e1e22d33a456688a018bef984bdcb3d4ca173f4850730a3d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_manipulation-release";
+        rev = "release/melodic/cob_obstacle_distance_moveit/0.7.5-1";
+        sha256 = "sha256-ZCpIqsFnjwQ02Yi2zKbF8LN34Kgkj6phCISJdYze+78=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

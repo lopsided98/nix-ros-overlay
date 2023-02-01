@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-trajectory-tracker-rviz-plugins";
   version = "0.11.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_rviz_plugins-release/archive/release/noetic/trajectory_tracker_rviz_plugins/0.11.6-1.tar.gz";
-    name = "0.11.6-1.tar.gz";
-    sha256 = "74cefaa38f778b4300bc792456ff65dfc5741afa6a8a6d5aee8d56a75591107b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "at-wat";
+        repo = "neonavigation_rviz_plugins-release";
+        rev = "release/noetic/trajectory_tracker_rviz_plugins/0.11.6-1";
+        sha256 = "sha256-B82uDHEztq8cpGy2+hlPDaV++lB0T2p2BJZwgVI70q8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

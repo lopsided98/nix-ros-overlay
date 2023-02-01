@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-iirob-filters";
   version = "0.9.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/KITrobotics/iirob_filters-release/archive/release/melodic/iirob_filters/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "9ba0c2617ca283652577baa67f0a379974488d85fa5bf89ae1331ac9d917ebe0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "KITrobotics";
+        repo = "iirob_filters-release";
+        rev = "release/melodic/iirob_filters/0.9.2-1";
+        sha256 = "sha256-hYWW0UZrfxhC2cnV0a+xCngOscqiqtRnUx5yc9cPyxM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

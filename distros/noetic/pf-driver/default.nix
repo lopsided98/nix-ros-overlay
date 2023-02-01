@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pf-driver";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PepperlFuchs/pf_lidar_ros_driver-release/archive/release/noetic/pf_driver/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "5cf437f193925c44f47c36c345ad605e4e6161d016ff9778ed89c8f21a5dcae0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PepperlFuchs";
+        repo = "pf_lidar_ros_driver-release";
+        rev = "release/noetic/pf_driver/1.2.0-1";
+        sha256 = "sha256-YIEJh7jpfsYOQ8jkmhSeJRFuBwjg6bYUTEVhcrs/YXM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation roslint ];

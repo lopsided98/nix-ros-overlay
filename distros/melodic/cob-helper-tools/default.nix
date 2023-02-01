@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-helper-tools";
   version = "0.6.19-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_helper_tools/0.6.19-1.tar.gz";
-    name = "0.6.19-1.tar.gz";
-    sha256 = "d48b5faa1b1aee73e0895f2db42161713b77fcd770b316c6d423297c6d2db24f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_command_tools-release";
+        rev = "release/melodic/cob_helper_tools/0.6.19-1";
+        sha256 = "sha256-EvyHQndqUeo5+S0KDNn3CH9rEDvYAFwPJw5G7Ow/Axk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

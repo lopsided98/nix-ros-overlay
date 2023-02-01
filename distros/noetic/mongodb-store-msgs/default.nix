@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mongodb-store-msgs";
   version = "0.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/strands-project-releases/mongodb_store/archive/release/noetic/mongodb_store_msgs/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "0074332d35316904b5cd14dd86efbabc5285a3a1a07907b87244f1d05536832a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "strands-project-releases";
+        repo = "mongodb_store";
+        rev = "release/noetic/mongodb_store_msgs/0.6.0-1";
+        sha256 = "sha256-qTOwaiL4j1OAGXSL+EV+djhaD8ga/6Q72IJO4l+wlpE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

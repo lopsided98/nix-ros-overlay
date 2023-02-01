@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-um6";
   version = "1.1.3-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/um6-release/archive/release/noetic/um6/1.1.3-4.tar.gz";
-    name = "1.1.3-4.tar.gz";
-    sha256 = "1545b3debade76db6e2955bc6769c6e1eb23c8f4f1d2f6e0a28aee3dbbb97c2b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "um6-release";
+        rev = "release/noetic/um6/1.1.3-4";
+        sha256 = "sha256-Jq7xl6e/7pAf8wyE+Ykf3vGDB2nDYEyc3Z2zV8tYeBE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation roslint ];

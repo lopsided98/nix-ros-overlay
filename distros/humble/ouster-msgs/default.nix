@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-ouster-msgs";
   version = "0.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_ouster_drivers-release/archive/release/humble/ouster_msgs/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "2acc1982c15fbceab282e8e9aeed024b811fd38316e23316918479a6cbbe65e4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_ouster_drivers-release";
+        rev = "release/humble/ouster_msgs/0.4.1-1";
+        sha256 = "sha256-3qpjUFSE0WEq3HoBFiCxaCCGGg6xfZ4VoQcfTCNUagQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

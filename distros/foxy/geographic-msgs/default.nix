@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-geographic-msgs";
   version = "1.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-geographic-info/geographic_info-release/archive/release/foxy/geographic_msgs/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "6b23c76410b89089b3407a155a2516b1035e5ac3ac489fe83b02cbf01cdb49d1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-geographic-info";
+        repo = "geographic_info-release";
+        rev = "release/foxy/geographic_msgs/1.0.4-1";
+        sha256 = "sha256-hbbW+QtNX3HdOdRx5JgV/D7VzcaZoXAPuiFiOWfvpQI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

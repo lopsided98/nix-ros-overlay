@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-moose-viz";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/moose_desktop-release/archive/release/melodic/moose_viz/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "cefa5a0b9eb0d80c77df8bfa401189d41c2db797467e57e5ac77886760716829";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "moose_desktop-release";
+        rev = "release/melodic/moose_viz/0.1.1-1";
+        sha256 = "sha256-mKK59ny3ifwGDoGevT7wDNIS+POnauddLTHvL72QLD8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robot-activity-msgs";
   version = "0.1.1";
 
-  src = fetchurl {
-    url = "https://github.com/snt-robotics/robot_activity-release/archive/release/melodic/robot_activity_msgs/0.1.1-0.tar.gz";
-    name = "0.1.1-0.tar.gz";
-    sha256 = "c7047f132a865f58489413a1bb4e9c08ffe2014f3d404b4874f399eefeb9872e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "snt-robotics";
+        repo = "robot_activity-release";
+        rev = "release/melodic/robot_activity_msgs/0.1.1-0";
+        sha256 = "sha256-sBgY9FBXZ6gUi/VqwgLf5unTPcJ10Uq7UPUXa8Mc3iE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

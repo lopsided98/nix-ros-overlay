@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rosidl-runtime-cpp";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/foxy/rosidl_runtime_cpp/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "4e124b5bab7b8c0485d62976f0e674aecc24b2886a057e6a8c568bb73252291f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl-release";
+        rev = "release/foxy/rosidl_runtime_cpp/1.3.0-1";
+        sha256 = "sha256-lYYQ3IjyQ9+sRT0Ye4pb+liofmKCGyCdDPhL2VkG3PI=";
+      };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common performance-test-fixture ];

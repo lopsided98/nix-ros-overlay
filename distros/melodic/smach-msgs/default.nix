@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-smach-msgs";
   version = "2.0.1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/executive_smach-release/archive/release/melodic/smach_msgs/2.0.1-0.tar.gz";
-    name = "2.0.1-0.tar.gz";
-    sha256 = "b42e7a31e5e9ee3fcec7388566ca1a78d2af773c2e0bc7428d4f2d62ed732bcf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "executive_smach-release";
+        rev = "release/melodic/smach_msgs/2.0.1-0";
+        sha256 = "sha256-LneIBPdeEBqt6aniWFy5Mhk5ao27VBfFWXGhQ/5r5kM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

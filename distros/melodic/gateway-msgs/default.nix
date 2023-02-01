@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-gateway-msgs";
   version = "0.9.0";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/rocon_msgs-release/archive/release/melodic/gateway_msgs/0.9.0-0.tar.gz";
-    name = "0.9.0-0.tar.gz";
-    sha256 = "a9b6276a77498772c62e18a0f864bb657ab32a661cc4d7c150910462a4d97bc4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "rocon_msgs-release";
+        rev = "release/melodic/gateway_msgs/0.9.0-0";
+        sha256 = "sha256-GZdJHAM8Vl5rsGGMKB/vAlcSEqCwD8cvrZcupDSMhoM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

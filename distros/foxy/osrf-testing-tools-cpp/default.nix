@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-osrf-testing-tools-cpp";
   version = "1.3.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/osrf_testing_tools_cpp-release/archive/release/foxy/osrf_testing_tools_cpp/1.3.4-1.tar.gz";
-    name = "1.3.4-1.tar.gz";
-    sha256 = "98f3344389c89ad4266310729ed091cc523b3bd3827760aa36e55b2eacf071f8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "osrf_testing_tools_cpp-release";
+        rev = "release/foxy/osrf_testing_tools_cpp/1.3.4-1";
+        sha256 = "sha256-ytnit3gdJ5NLEyG9QvEsrANMyBG5X3mDn8z4JZ98uzU=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

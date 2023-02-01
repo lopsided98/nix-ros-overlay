@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-teleop";
   version = "0.6.19-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_teleop/0.6.19-1.tar.gz";
-    name = "0.6.19-1.tar.gz";
-    sha256 = "5d1b2c1290e9cfc36f5a80d965d50557754de1c773e7f4f346bc9ed7e63b48d0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_command_tools-release";
+        rev = "release/melodic/cob_teleop/0.6.19-1";
+        sha256 = "sha256-Vge0fVi4UAmbDAbqB5n+ng0GhChBKba99R9mm4RNweM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

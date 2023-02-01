@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-image-publisher";
   version = "2.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/foxy/image_publisher/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "e1d3dd1b5a9baa89d37fbe4abf91cb6d01ec1d76be25adbeb71970b1c156d81e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/foxy/image_publisher/2.3.0-1";
+        sha256 = "sha256-1ufwWXuE3vDpriJophyDEWFpRlPw38ULIcw+gHm3FYc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

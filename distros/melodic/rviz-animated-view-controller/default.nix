@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rviz-animated-view-controller";
   version = "0.2.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rviz_animated_view_controller-release/archive/release/melodic/rviz_animated_view_controller/0.2.0-2.tar.gz";
-    name = "0.2.0-2.tar.gz";
-    sha256 = "2528e6708151c41f229ca409f625c143ad8ee2db43fc65ba12e4216df54e0a59";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rviz_animated_view_controller-release";
+        rev = "release/melodic/rviz_animated_view_controller/0.2.0-2";
+        sha256 = "sha256-oqcLyN8xVxsRPPHmsFMY8KPUdI/mhY1Fkf4/VJXbcok=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

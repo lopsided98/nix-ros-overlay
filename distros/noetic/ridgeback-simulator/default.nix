@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ridgeback-simulator";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/noetic/ridgeback_simulator/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "3648e6f3dd54de136f714ca4cb018ecfddd68ed0e99c70d4bba38d8c8f47d4db";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "ridgeback_simulator-release";
+        rev = "release/noetic/ridgeback_simulator/0.2.0-1";
+        sha256 = "sha256-ANMl+apHXAevhD6t8csD5lR6hPxof8n3hghzQ+pjq+U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

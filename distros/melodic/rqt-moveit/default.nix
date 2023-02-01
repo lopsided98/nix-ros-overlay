@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rqt-moveit";
   version = "0.5.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_moveit-release/archive/release/melodic/rqt_moveit/0.5.10-1.tar.gz";
-    name = "0.5.10-1.tar.gz";
-    sha256 = "06495252cf3f0a50d89f1e79000067fc0d50feac5c2104065adabbcf52c26aa3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_moveit-release";
+        rev = "release/melodic/rqt_moveit/0.5.10-1";
+        sha256 = "sha256-zv684ywE1qfK6bcCDcHiNNkC1u18EpLfbC+LxBp2T8Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools ];

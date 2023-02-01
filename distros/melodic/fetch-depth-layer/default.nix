@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fetch-depth-layer";
   version = "0.8.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_depth_layer/0.8.3-1.tar.gz";
-    name = "0.8.3-1.tar.gz";
-    sha256 = "490e0726b5855cdb1b1d6185c3d7960b6898854b580c19b44405af2f9c089439";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "fetch_ros-release";
+        rev = "release/melodic/fetch_depth_layer/0.8.3-1";
+        sha256 = "sha256-d2fgKLdQ2MJ1/gjKpg2UxenbNnpQGFXXwZVicufndLs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

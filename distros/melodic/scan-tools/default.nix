@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-scan-tools";
   version = "0.3.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/melodic/scan_tools/0.3.3-2.tar.gz";
-    name = "0.3.3-2.tar.gz";
-    sha256 = "b2848d7623a75866185fa47d415fbcb05bbabcfdbfc7bc11f40fdfd704c698f6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "scan_tools-release";
+        rev = "release/melodic/scan_tools/0.3.3-2";
+        sha256 = "sha256-srfyjN+cxm9kXrXUE7QtjRqaF7Ehi8SQ0rmaa04TDZg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

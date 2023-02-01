@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-phidgets-api";
   version = "0.7.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/melodic/phidgets_api/0.7.11-1.tar.gz";
-    name = "0.7.11-1.tar.gz";
-    sha256 = "9d4a754230661ad607e621d6cfc94ef56549e1b9e3f0772937b1ba023195e189";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "phidgets_drivers-release";
+        rev = "release/melodic/phidgets_api/0.7.11-1";
+        sha256 = "sha256-xOaIcUTjuL+f/wPhj+IY6szBK4vXT7+J7fJ13e+1VJY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

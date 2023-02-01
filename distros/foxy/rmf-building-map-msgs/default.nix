@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmf-building-map-msgs";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_building_map_msgs-release/archive/release/foxy/rmf_building_map_msgs/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "2b1a4311a35385da0020e6417583feca52c4a97b00fdd4db1b39a6e3b51abf2e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_building_map_msgs-release";
+        rev = "release/foxy/rmf_building_map_msgs/1.2.0-1";
+        sha256 = "sha256-snyMuXdNPfPqMZ8hpU/Lno8b23lqgRLHWYygxrKe3tQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

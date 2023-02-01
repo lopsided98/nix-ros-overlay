@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pal-statistics";
   version = "1.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_statistics-release/archive/release/melodic/pal_statistics/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "e5fd44e5ee34381c90c5beadf22ea46cdab7332b0e168cc1bd802012f34c0cda";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "pal_statistics-release";
+        rev = "release/melodic/pal_statistics/1.4.1-1";
+        sha256 = "sha256-U9zQQ1sbKAp/qCGddx3/y0JG0z2hHbHyMr0af0Wj1dM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-libcurl-vendor";
   version = "2.3.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/foxy/libcurl_vendor/2.3.4-1.tar.gz";
-    name = "2.3.4-1.tar.gz";
-    sha256 = "ff8636e6fce5807a762436f02ebc04a08784e18645cbdf8da1917438e321345b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "resource_retriever-release";
+        rev = "release/foxy/libcurl_vendor/2.3.4-1";
+        sha256 = "sha256-/FZnsxsglIPtlbeH3y+sCnx+xd5SqCwbDSkvEy72ir0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

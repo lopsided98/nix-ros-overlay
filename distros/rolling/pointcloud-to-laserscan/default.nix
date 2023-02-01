@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-pointcloud-to-laserscan";
   version = "2.0.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/pointcloud_to_laserscan-release/archive/release/rolling/pointcloud_to_laserscan/2.0.1-2.tar.gz";
-    name = "2.0.1-2.tar.gz";
-    sha256 = "78beaa6308a0952ccb13df1c8a9e1ca22dc03536beb6527a3ce7f815da20a957";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "pointcloud_to_laserscan-release";
+        rev = "release/rolling/pointcloud_to_laserscan/2.0.1-2";
+        sha256 = "sha256-JPlIFeKS6DMGh6xSWvg9EPxL1diI2e9udRprTb9LzZE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

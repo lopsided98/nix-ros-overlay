@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-laser-filters-jsk-patch";
   version = "2.1.21-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/laser_filters_jsk_patch/2.1.21-2.tar.gz";
-    name = "2.1.21-2.tar.gz";
-    sha256 = "ca31c4a5e7524d96d3caa2cf9e92945a59a6cd448a8f9771ea74fedde4569ec1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_3rdparty-release";
+        rev = "release/noetic/laser_filters_jsk_patch/2.1.21-2";
+        sha256 = "sha256-5QTm8sHZ3DxH0dJ0LB3hn9P2Qtms43hJJW+PftT+SjU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules git laser-geometry mk ];

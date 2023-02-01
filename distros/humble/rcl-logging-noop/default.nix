@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rcl-logging-noop";
   version = "2.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/humble/rcl_logging_noop/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "b951b25701c5de7185f892a7ada35599e0c9fed75389ab78dd00e69c12e20107";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcl_logging-release";
+        rev = "release/humble/rcl_logging_noop/2.3.1-1";
+        sha256 = "sha256-d65yR48B4ECdv2QS+sMPj/PVQoBGdVjVtgGNo54ybuA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros python3Packages.empy ];

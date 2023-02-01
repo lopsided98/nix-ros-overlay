@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-swri-route-util";
   version = "2.15.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_route_util/2.15.2-1.tar.gz";
-    name = "2.15.2-1.tar.gz";
-    sha256 = "8d3b7bb7e6356611a443e919aca5be5159ab4f1f5254bdd1e4e482a50474ae40";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "marti_common-release";
+        rev = "release/noetic/swri_route_util/2.15.2-1";
+        sha256 = "sha256-lrQIIIUIuVjLP6gk1VxgIA8xBP5Js+mP4aBo0ibaSxo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

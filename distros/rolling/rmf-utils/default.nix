@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rmf-utils";
   version = "1.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_utils-release/archive/release/rolling/rmf_utils/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "e51b54a8af36aa2c61f2c7152e44b8935e23b9bfdbb864cc45309775f73c9865";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_utils-release";
+        rev = "release/rolling/rmf_utils/1.4.0-1";
+        sha256 = "sha256-0J61gdqsqdGIb+/2E3zFOq/Z3qjwXkncR96hBB8a8S0=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

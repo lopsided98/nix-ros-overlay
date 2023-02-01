@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-franka-msgs";
   version = "0.10.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_msgs/0.10.1-1.tar.gz";
-    name = "0.10.1-1.tar.gz";
-    sha256 = "96bef59a748cc62328fc4dbd73d32020cf3e6196b7a316aa321dddbf4c35a60c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "frankaemika";
+        repo = "franka_ros-release";
+        rev = "release/melodic/franka_msgs/0.10.1-1";
+        sha256 = "sha256-rYMpm72ymxQ8x9fJCmMULdHdVB9C1G10ZyqN4C3PAHI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-fastrtps-cmake-module";
   version = "1.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/foxy/fastrtps_cmake_module/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "af9ed13934b1fb4cf80fe45cbce8575e072e6d70001ff980301abe69b6b24e82";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl_typesupport_fastrtps-release";
+        rev = "release/foxy/fastrtps_cmake_module/1.0.4-1";
+        sha256 = "sha256-5HyCJuy8rj2KUhM7JQNToNMvqvNOTT7joJUqw3B82Xw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

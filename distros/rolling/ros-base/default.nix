@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ros-base";
   version = "0.10.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/variants-release/archive/release/rolling/ros_base/0.10.0-1.tar.gz";
-    name = "0.10.0-1.tar.gz";
-    sha256 = "d48eb81e4163c748bd57fcb390bf86d93e4056d81d9cd18eb412ae9d5695fb79";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "variants-release";
+        rev = "release/rolling/ros_base/0.10.0-1";
+        sha256 = "sha256-qTPrFPcFntKAifYcXqjryFyhWK0SgTD9g57SPOb7S9U=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

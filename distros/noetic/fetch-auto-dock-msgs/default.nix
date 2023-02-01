@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fetch-auto-dock-msgs";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_msgs-release/archive/release/noetic/fetch_auto_dock_msgs/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "07d675e227e9e0a6143af6c101cfc62d0bb4b0907e07f8143bba2fa148a67cb2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "fetch_msgs-release";
+        rev = "release/noetic/fetch_auto_dock_msgs/1.2.0-1";
+        sha256 = "sha256-QAiBpSPEz1IwilgM9jt81x2YKV8T20Aax/C9ik4erec=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fsrobo-r-trajectory-filters";
   version = "0.7.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/FUJISOFT-Robotics/fsrobo_r-release/archive/release/melodic/fsrobo_r_trajectory_filters/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "14571dee2b64290f8c11e654994b76408a7485a0c9889a1b8506e4d6402c6aae";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "FUJISOFT-Robotics";
+        repo = "fsrobo_r-release";
+        rev = "release/melodic/fsrobo_r_trajectory_filters/0.7.1-1";
+        sha256 = "sha256-WlQQIzbzL3X6iEeGsY09Ll7X4AZvmpdU7bY4tl4xlwc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

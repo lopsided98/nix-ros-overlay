@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-naoqi-libqi";
   version = "2.9.7-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-naoqi/libqi-release/archive/release/foxy/naoqi_libqi/2.9.7-2.tar.gz";
-    name = "2.9.7-2.tar.gz";
-    sha256 = "cd053401f821e95692d9aeccfeeb3718018b9758638402f9666a488f7b986383";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-naoqi";
+        repo = "libqi-release";
+        rev = "release/foxy/naoqi_libqi/2.9.7-2";
+        sha256 = "sha256-7bI4I10C1knEQwAgRkHL6FJyY7UWSBhvuLFTmYlgNmU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

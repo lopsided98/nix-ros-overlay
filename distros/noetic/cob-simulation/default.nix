@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-bringup-sim, cob-gazebo, cob-gazebo-objects, cob-gazebo-tools, cob-gazebo-worlds }:
 buildRosPackage {
   pname = "ros-noetic-cob-simulation";
-  version = "0.7.6-r1";
+  version = "0.7.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_simulation-release/archive/release/noetic/cob_simulation/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "c99f3a562752d04de2a51d85ccb2ef9417111d556dc3c9492935e5ed11124b2b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_simulation-release";
+        rev = "release/noetic/cob_simulation/0.7.7-1";
+        sha256 = "sha256-9DWwCMbB/WNurTKGJWr9ivALtcgwbkATFtu478d/1UU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-warthog-gazebo";
   version = "0.2.2-r2";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/warthog_simulator-release/archive/release/melodic/warthog_gazebo/0.2.2-2.tar.gz";
-    name = "0.2.2-2.tar.gz";
-    sha256 = "8440194957dc342739f264bfc6c722aade6e49bcadc6d2e64506b2378e9bab59";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "warthog_simulator-release";
+        rev = "release/melodic/warthog_gazebo/0.2.2-2";
+        sha256 = "sha256-yob3+P6Bg5MlFISzlyS6k0lgJDoN+Zq59JdAdEjRsDQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

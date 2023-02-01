@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robot";
   version = "1.4.1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/metapackages-release/archive/release/melodic/robot/1.4.1-0.tar.gz";
-    name = "1.4.1-0.tar.gz";
-    sha256 = "4f0efd47cf90e8a1f56602612d73ba032fbb231dec3091f53b795a7d67cbe02b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "metapackages-release";
+        rev = "release/melodic/robot/1.4.1-0";
+        sha256 = "sha256-BsE2fdWFopj9YpUR57iR+hUbHav6Ic0o17eTDdbuN2o=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

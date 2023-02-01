@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-kvh-geo-fog-3d-driver";
   version = "1.5.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/MITRE/kvh_geo_fog_3d-release/archive/release/noetic/kvh_geo_fog_3d_driver/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "a4b21fb5cea577af79ef19fd9feb96625daba8af93b5c10fd57158f9d50ed6b2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "MITRE";
+        repo = "kvh_geo_fog_3d-release";
+        rev = "release/noetic/kvh_geo_fog_3d_driver/1.5.1-1";
+        sha256 = "sha256-NzHPOtfKvXWFJK+MMYhpqaJb6qCx+61cdVpz66j12mw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

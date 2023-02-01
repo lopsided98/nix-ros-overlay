@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ublox-gps";
   version = "1.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/KumarRobotics/ublox-release/archive/release/melodic/ublox_gps/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "ac19d9ba729337ae2b8bc7c3466c2042c3e26d960f4ea6862b6a362d7a5cec4d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "KumarRobotics";
+        repo = "ublox-release";
+        rev = "release/melodic/ublox_gps/1.5.0-1";
+        sha256 = "sha256-cOV6LUh53kzyrwCUI63aDm9zqHfMlGgG8Fo4NIqWEHk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

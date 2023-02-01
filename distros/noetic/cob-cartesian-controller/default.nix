@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, boost, catkin, cob-frame-tracker, cob-script-server, cob-srvs, cob-twist-controller, geometry-msgs, message-generation, message-runtime, python3Packages, robot-state-publisher, roscpp, roslint, rospy, rviz, std-msgs, std-srvs, tf, topic-tools, visualization-msgs, xacro }:
 buildRosPackage {
   pname = "ros-noetic-cob-cartesian-controller";
-  version = "0.8.20-r1";
+  version = "0.8.21-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_cartesian_controller/0.8.20-1.tar.gz";
-    name = "0.8.20-1.tar.gz";
-    sha256 = "c51605793d6202f07088b484dbb759bb9547cb946eef451edd232cf1da384cff";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_control-release";
+        rev = "release/noetic/cob_cartesian_controller/0.8.21-1";
+        sha256 = "sha256-ojOs53/8yeMBWXP3SYX1Vuqa/7uOm2X4xP/F/UjL9/U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation python3Packages.setuptools roslint ];

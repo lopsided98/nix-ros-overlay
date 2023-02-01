@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-iceoryx-hoofs";
   version = "2.0.2-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/iceoryx-release/archive/release/humble/iceoryx_hoofs/2.0.2-3.tar.gz";
-    name = "2.0.2-3.tar.gz";
-    sha256 = "5bf45b5391d460f0c9895ef39cbe49f12390a16eaee26a70c2ca2d13b3a99722";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "iceoryx-release";
+        rev = "release/humble/iceoryx_hoofs/2.0.2-3";
+        sha256 = "sha256-Rp1PfAjOoTn1F97oI/pkwePNPqZ2GOmbh/M5RwIgHvU=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

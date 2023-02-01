@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmf-building-sim-common";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/foxy/rmf_building_sim_common/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "8d75d5fea3ac65eb0edab9fbbaeaa367ecbb7ac31b6a173b56e6326a163ab668";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_simulation-release";
+        rev = "release/foxy/rmf_building_sim_common/1.3.1-1";
+        sha256 = "sha256-PxX2yuXj1HZ3Y3vfOesQLYdg2KnT4/wM78T274bPlhM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

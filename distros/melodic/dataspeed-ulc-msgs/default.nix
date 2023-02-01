@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dataspeed-ulc-msgs";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release/archive/release/melodic/dataspeed_ulc_msgs/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "c9dec9c3c11878e1e6e9aa732f2920a484f1ee6dbcc8ca28c5f73e10861223fb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dataspeed_ulc_ros-release";
+        rev = "release/melodic/dataspeed_ulc_msgs/0.1.0-1";
+        sha256 = "sha256-8+SpCh3N5uZOC687Ac50FnELyyOpzTa+2tnL8TyQf8A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

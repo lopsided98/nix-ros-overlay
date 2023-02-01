@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fetch-gazebo-demo";
   version = "0.9.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_gazebo-release/archive/release/melodic/fetch_gazebo_demo/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "05bdd08b42eef924bb22fe4761ce314019a5192c9c4905c65cecb83aa42de1e3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "fetch_gazebo-release";
+        rev = "release/melodic/fetch_gazebo_demo/0.9.2-1";
+        sha256 = "sha256-Dtr618grubtY9ceXwj14DkMroDjbC0wtg8BKoDYH06k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

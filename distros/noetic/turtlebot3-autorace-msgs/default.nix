@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-turtlebot3-autorace-msgs";
   version = "1.1.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace_2020_release/archive/release/noetic/turtlebot3_autorace_msgs/1.1.1-2.tar.gz";
-    name = "1.1.1-2.tar.gz";
-    sha256 = "0be60a38d898e2c517a0ce6fba2360255125adbaf9593d1abf76382dcb63bc21";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "turtlebot3_autorace_2020_release";
+        rev = "release/noetic/turtlebot3_autorace_msgs/1.1.1-2";
+        sha256 = "sha256-juuWuMtg5/KzKvogbVfVrStuCVlGZ0F/3yM9AbOF/Dc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

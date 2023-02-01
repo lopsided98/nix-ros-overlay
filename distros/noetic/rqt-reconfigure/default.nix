@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-reconfigure";
   version = "0.5.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_reconfigure-release/archive/release/noetic/rqt_reconfigure/0.5.5-1.tar.gz";
-    name = "0.5.5-1.tar.gz";
-    sha256 = "95c072cfd3f2b997083601645e510482b268af1aabb4b0163e697a3cc15a4d94";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_reconfigure-release";
+        rev = "release/noetic/rqt_reconfigure/0.5.5-1";
+        sha256 = "sha256-LVm8RIrhE42jJbfXVhCP3Lz1aGO6J2JaUcNNXZGWGjE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools roslint ];

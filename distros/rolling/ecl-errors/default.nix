@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ecl-errors";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_lite-release/archive/release/rolling/ecl_errors/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "fdec700af29b881339c71540e1338deb3acea918efa1b04c00d62647ecc0d752";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "ecl_lite-release";
+        rev = "release/rolling/ecl_errors/1.2.0-1";
+        sha256 = "sha256-tMZvRB3bre8Dk+0YS+OqnkCGKff09J6PKWHytWxelmk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ecl-build ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-libsensors-monitor";
   version = "0.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/linux_peripheral_interfaces-release/archive/release/noetic/libsensors_monitor/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "ecec8c4a61494b5d1682b34ce0e452a003156d73b9c41a0100e3ad10728b771e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "linux_peripheral_interfaces-release";
+        rev = "release/noetic/libsensors_monitor/0.2.2-1";
+        sha256 = "sha256-FMqPGAlzgDVBRnHXPQHfu4gdHvdJHTwg4UoZueMDSxY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

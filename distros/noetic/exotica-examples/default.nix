@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-exotica-examples";
   version = "6.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_examples/6.2.0-1.tar.gz";
-    name = "6.2.0-1.tar.gz";
-    sha256 = "253c541a3cb1eb6215226dd062360c131ef478065abdcde75455d25b8213d262";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipab-slmc";
+        repo = "exotica-release";
+        rev = "release/noetic/exotica_examples/6.2.0-1";
+        sha256 = "sha256-H/l9Zf9VWnl8LWdeQvS8o5r2td/JbFPQMwYXGTAGwsc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

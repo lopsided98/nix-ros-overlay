@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rqt-topic";
   version = "1.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_topic-release/archive/release/humble/rqt_topic/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "28a47feaae4c3f19d7813cfaab866df02918dbb46803cd7cb72b077f47be2e70";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_topic-release";
+        rev = "release/humble/rqt_topic/1.5.0-1";
+        sha256 = "sha256-AjYYpTRSF3CLhU/5RnqU2KzpJa09q5YbUTnA5oruE94=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-flake8 ament-xmllint ];

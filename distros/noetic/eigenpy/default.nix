@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, doxygen, eigen, git, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-eigenpy";
-  version = "2.8.1-r1";
+  version = "2.9.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/stack-of-tasks/eigenpy-ros-release/archive/release/noetic/eigenpy/2.8.1-1.tar.gz";
-    name = "2.8.1-1.tar.gz";
-    sha256 = "cbb7dfd91f3547c084258489d96f85520b8c6dd89fd71a3c5ec9376ac93fc486";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "stack-of-tasks";
+        repo = "eigenpy-ros-release";
+        rev = "release/noetic/eigenpy/2.9.1-1";
+        sha256 = "sha256-2kbEvQjNSxspLn00KGPFkYXcn1y8bugXKmYPxYvq07Y=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen git ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-webkit-dependency";
   version = "1.1.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/webkit_dependency-release/archive/release/noetic/webkit_dependency/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "09e635d456e54c6b42660c88062afe706b9d2bad7810d59b031eaf5cd701a7f0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "webkit_dependency-release";
+        rev = "release/noetic/webkit_dependency/1.1.2-1";
+        sha256 = "sha256-EQorv4sv/h7CBEYdsR+bw1fHoJX8Nhk0yyMxOct57cU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

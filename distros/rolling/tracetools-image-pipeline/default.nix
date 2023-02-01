@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-tracetools-image-pipeline";
   version = "3.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/tracetools_image_pipeline/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "7cf3dc79a8704ce41aa69f938dd6cd1d4d48bd4d62fb622755277f07c595c1ac";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/rolling/tracetools_image_pipeline/3.0.1-1";
+        sha256 = "sha256-wyhAnGA7HenH6HHnJ9FcPHXSRF+JySpYmGnjE0R3foM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros pkg-config ];

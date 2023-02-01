@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-elmo-homing";
   version = "0.7.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_elmo_homing/0.7.14-1.tar.gz";
-    name = "0.7.14-1.tar.gz";
-    sha256 = "7a87cbfc820d91e4530bb0e3e362b02424df4233210d67587639041a24bbe0a3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/noetic/cob_elmo_homing/0.7.14-1";
+        sha256 = "sha256-0iTKTOoWdMfWAhNSTCMRqu4ruOziX8VcPpZ+OaoC1vc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

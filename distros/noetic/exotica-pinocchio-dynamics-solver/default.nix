@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-exotica-pinocchio-dynamics-solver";
   version = "6.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_pinocchio_dynamics_solver/6.2.0-1.tar.gz";
-    name = "6.2.0-1.tar.gz";
-    sha256 = "f4d67d2e53282319f64a1cafb9d9077180a7dec2c5e5b2dac253ff0b922456aa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipab-slmc";
+        repo = "exotica-release";
+        rev = "release/noetic/exotica_pinocchio_dynamics_solver/6.2.0-1";
+        sha256 = "sha256-jS0hrEhAiEYYKq6wJK2vg+HYbbC/iSoQJ+BpiPIdToI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

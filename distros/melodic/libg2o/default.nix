@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-libg2o";
   version = "2018.3.25";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/libg2o-release/archive/release/melodic/libg2o/2018.3.25-0.tar.gz";
-    name = "2018.3.25-0.tar.gz";
-    sha256 = "b904a96dd4edffa57b21856d75d7d0bf9b064921e330012922c67a545ee54f6a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "libg2o-release";
+        rev = "release/melodic/libg2o/2018.3.25-0";
+        sha256 = "sha256-2gxC3lg9FrSJs333NGrt4UDtIEyX4ZtUqfIwd2o5E9w=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

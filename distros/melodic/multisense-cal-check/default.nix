@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-multisense-cal-check";
   version = "4.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/melodic/multisense_cal_check/4.0.4-1.tar.gz";
-    name = "4.0.4-1.tar.gz";
-    sha256 = "0723fc6f404b8f4a9c77ea7423a4ed157be19979ba334d03b96a1a4a1f531429";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "carnegieroboticsllc";
+        repo = "multisense_ros-release";
+        rev = "release/melodic/multisense_cal_check/4.0.4-1";
+        sha256 = "sha256-eVrmxWJ9fB3mqvw/RJBLRv5FbHx2YYqOgpTk4nXT9y8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

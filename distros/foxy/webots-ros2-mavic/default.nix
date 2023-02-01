@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, pythonPackages, rclpy, webots-ros2-driver }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-mavic";
-  version = "2023.0.0-r3";
+  version = "2023.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_mavic/2023.0.0-3.tar.gz";
-    name = "2023.0.0-3.tar.gz";
-    sha256 = "0573b4cd2a1f269ac4bce9fa3441363b67356a857eee969066fae91ec7cbf688";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "webots_ros2-release";
+        rev = "release/foxy/webots_ros2_mavic/2023.0.1-1";
+        sha256 = "sha256-7yYbTKp0l3xBdOTQ507AzzgUdMeAXb9IqUsJrzmMi6g=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

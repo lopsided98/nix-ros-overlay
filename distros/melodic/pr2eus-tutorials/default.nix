@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2eus-tutorials";
   version = "0.3.14-r3";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_pr2eus-release/archive/release/melodic/pr2eus_tutorials/0.3.14-3.tar.gz";
-    name = "0.3.14-3.tar.gz";
-    sha256 = "0c93d0988fc81f1157defca391eb97fa1df1b0534fa85bd524053964f06b30ef";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_pr2eus-release";
+        rev = "release/melodic/pr2eus_tutorials/0.3.14-3";
+        sha256 = "sha256-CWuDwOQuod+AbJwVizq2SmlOmIppTC7W33RPsvVRfl0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

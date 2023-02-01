@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rosbag2-bag-v2-plugins";
   version = "0.0.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2_bag_v2-release/archive/release/foxy/rosbag2_bag_v2_plugins/0.0.10-1.tar.gz";
-    name = "0.0.10-1.tar.gz";
-    sha256 = "0af1ade39d4ed3e5fdc742eeebcc29351ac49666a9f470ecb658aa45cf118e1d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosbag2_bag_v2-release";
+        rev = "release/foxy/rosbag2_bag_v2_plugins/0.0.10-1";
+        sha256 = "sha256-KN0T03pV9V1GrMjmTmEFNdm5itUwY2FEJhNWoGaZsaA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

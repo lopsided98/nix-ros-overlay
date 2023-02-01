@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rqt-play-motion-builder";
   version = "1.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-robotics/play_motion_builder-release/archive/release/melodic/rqt_play_motion_builder/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "36b45498a7420ef0806a1bf10d23e5b76b401e2486b33e5f6d504050999066f3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-robotics";
+        repo = "play_motion_builder-release";
+        rev = "release/melodic/rqt_play_motion_builder/1.0.2-1";
+        sha256 = "sha256-4hjKfNzI6s/5Dm5zTJL8MIN+e4tWq3M4J8Uq2X8b4DA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin class-loader qt5.qtbase ];

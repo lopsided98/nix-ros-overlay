@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-safety-controller";
   version = "0.6.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_substitute-release/archive/release/melodic/cob_safety_controller/0.6.10-1.tar.gz";
-    name = "0.6.10-1.tar.gz";
-    sha256 = "872949bbd94f84f82e69b83d52faed8dc58fec7732e85e846a39e7a1f14ddb13";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_substitute-release";
+        rev = "release/melodic/cob_safety_controller/0.6.10-1";
+        sha256 = "sha256-BENKD4B+fD1zTAQ4SomDu0tORxYxlVYv2DKwjB0gQYk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

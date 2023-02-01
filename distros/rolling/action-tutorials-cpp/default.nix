@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-action-tutorials-cpp";
   version = "0.23.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/action_tutorials_cpp/0.23.0-1.tar.gz";
-    name = "0.23.0-1.tar.gz";
-    sha256 = "a2145af647d2b67d19a8e837027113906c8173a74edeb62546294d3d48e2c408";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/rolling/action_tutorials_cpp/0.23.0-1";
+        sha256 = "sha256-v5bDx+a9hqDFJUL/NOCa5mAgFtRR/h0qJYoKAw1WfTM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmf-traffic";
   version = "1.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic-release/archive/release/foxy/rmf_traffic/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "70669dca18b82e6143c0c5d7602403a252dbf7cdac01104ede221b5cf4960f32";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_traffic-release";
+        rev = "release/foxy/rmf_traffic/1.4.0-1";
+        sha256 = "sha256-RuTAkrEF7VPPlx0KggMEtfzek8MnOVGr7200Rx91zu4=";
+      };
 
   buildType = "cmake";
   checkInputs = [ ament-cmake-catch2 rmf-cmake-uncrustify ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-moveit-ros-move-group";
   version = "1.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_move_group/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "1685b88f790758cb9cda652a26d0d750c98eb2c202e5d8c81b8a06f1ade9773f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/melodic/moveit_ros_move_group/1.0.11-1";
+        sha256 = "sha256-KgG7JVTTB5TawaK0G8OCCHMc0qB0f1kE2cdCsRAHisA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

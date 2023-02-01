@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen, flann, ode, pkg-config }:
 buildRosPackage {
   pname = "ros-noetic-ompl";
-  version = "1.5.2-r1";
+  version = "1.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ompl-release/archive/release/noetic/ompl/1.5.2-1.tar.gz";
-    name = "1.5.2-1.tar.gz";
-    sha256 = "1f45c6363e62424015aa5efdb27a7b0412dd9018676149f23200126241b6715a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ompl-release";
+        rev = "release/noetic/ompl/1.6.0-1";
+        sha256 = "sha256-Dst2FtQsK0+EzvSm7GEESWOU8QfMPzhSNNYEIlTNfc0=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake pkg-config ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-robot-calibration";
   version = "0.7.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/robot_calibration-release/archive/release/noetic/robot_calibration/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "774948a55ecaceee2cf1036ad3088b6766f48b339a713b2eaaea3ed5b200c5f4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "robot_calibration-release";
+        rev = "release/noetic/robot_calibration/0.7.2-1";
+        sha256 = "sha256-WDMgwHYSuq8ngMl5Xlb0QJk1O3fwiqa8pwFmK9CW/+w=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin eigen ];

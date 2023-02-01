@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-utilities";
   version = "0.7.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_utilities/0.7.14-1.tar.gz";
-    name = "0.7.14-1.tar.gz";
-    sha256 = "37d06a8c88254f4b1b18cf6b7b02fb9802434381f034d7b61be073c4f74869ca";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/noetic/cob_utilities/0.7.14-1";
+        sha256 = "sha256-BvY+twjH9kT+JZ3pQbMf90agvjw1wwUNM3qNWM1wj7g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

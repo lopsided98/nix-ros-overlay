@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-iris-lama-ros";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/eupedrosa/iris_lama_ros-release/archive/release/melodic/iris_lama_ros/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "2107bf075df0ee097ce884a08d919b5bf659d293ac4b5409025f8d3931655b2f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "eupedrosa";
+        repo = "iris_lama_ros-release";
+        rev = "release/melodic/iris_lama_ros/1.2.0-1";
+        sha256 = "sha256-pJoxqHpdaq8ApZU7oGHs0KwmJ53yve0LfsmJAP1ftuU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

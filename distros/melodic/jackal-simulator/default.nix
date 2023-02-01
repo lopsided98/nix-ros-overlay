@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jackal-simulator";
   version = "0.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal_simulator-release/archive/release/melodic/jackal_simulator/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "adf0d04519d339a355293cb30113435a4a4575adc65b4690681977ed1e4b900f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "jackal_simulator-release";
+        rev = "release/melodic/jackal_simulator/0.4.0-1";
+        sha256 = "sha256-XS3UbgAnUqZXLJkaAlp+N6AMNlPetcCqCdHusgrNEB0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

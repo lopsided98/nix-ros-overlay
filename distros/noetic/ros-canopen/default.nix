@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ros-canopen";
   version = "0.8.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/noetic/ros_canopen/0.8.5-1.tar.gz";
-    name = "0.8.5-1.tar.gz";
-    sha256 = "c7a0d3494c60a140418396cd2a4bb190c3496ee9492f8dd3d3af2ac0df172458";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "ros_canopen-release";
+        rev = "release/noetic/ros_canopen/0.8.5-1";
+        sha256 = "sha256-kQMfJsVFsKgnXM9FheiRVd//HZJVC6rSyzs8sndkBKE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

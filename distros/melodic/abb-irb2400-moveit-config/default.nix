@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-abb-irb2400-moveit-config";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/abb-release/archive/release/melodic/abb_irb2400_moveit_config/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "cb059c41a63c0ed80fc4cdc039db24a661e627cef5ea0ff97b060896f8fcd8f2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "abb-release";
+        rev = "release/melodic/abb_irb2400_moveit_config/1.3.1-1";
+        sha256 = "sha256-lUNU0ivQwUdW5xRizDGtDdl1kj6XH4AcwH4I3m0Vwj4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

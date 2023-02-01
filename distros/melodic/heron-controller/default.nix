@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-heron-controller";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/heron_controller-release/archive/release/melodic/heron_controller/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "fb128ac4dec46641368bc6fe28a399f18af9eb26da359d1e7c4edaf47e62bd61";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "heron_controller-release";
+        rev = "release/melodic/heron_controller/0.2.0-1";
+        sha256 = "sha256-F4Y1c854HODlkb39Lfw9mmg5mFxgrb6yZSHogKqesjQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

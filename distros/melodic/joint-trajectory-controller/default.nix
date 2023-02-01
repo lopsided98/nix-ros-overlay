@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-joint-trajectory-controller";
   version = "0.17.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/joint_trajectory_controller/0.17.2-1.tar.gz";
-    name = "0.17.2-1.tar.gz";
-    sha256 = "4c8b612ce523760bd97ef16961d516adbe64ee44f9c035da71277466c05586d2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_controllers-release";
+        rev = "release/melodic/joint_trajectory_controller/0.17.2-1";
+        sha256 = "sha256-5eX1sjnm+BRAKvtgAgexRMi1T1bPn7kgXJYksJKbgsI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

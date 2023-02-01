@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-mrt-cmake-modules";
   version = "1.0.9-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrt_cmake_modules-release/archive/release/humble/mrt_cmake_modules/1.0.9-3.tar.gz";
-    name = "1.0.9-3.tar.gz";
-    sha256 = "67fae5d9e5a4cb31235807dba74b4c061bde0e2deab633339c121f18638076fc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "mrt_cmake_modules-release";
+        rev = "release/humble/mrt_cmake_modules/1.0.9-3";
+        sha256 = "sha256-PCqR+osiiGlHN0JWW6C/bhSD9H7GuzuQ4Lo8fExnOk0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ ament-cmake-core ];

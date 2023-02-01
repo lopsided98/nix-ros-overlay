@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-moveit-simple-controller-manager";
   version = "2.5.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_simple_controller_manager/2.5.4-1.tar.gz";
-    name = "2.5.4-1.tar.gz";
-    sha256 = "ae6e6c39c7ee9741a4b44152ad8d1e14bf789d14df47455195c3bb881dda7889";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "moveit2-release";
+        rev = "release/humble/moveit_simple_controller_manager/2.5.4-1";
+        sha256 = "sha256-wzSTh2uM4KZMmSnWWLdvxqqTDAnt0TfIGhKPYpT92xA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

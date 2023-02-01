@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mesh-msgs-conversions";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh-tools/archive/release/melodic/mesh_msgs_conversions/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "50b2422e61e2b03c92fc2a1d3e2c77921f4c23a4d7c1859ec56ec6b604f8eb08";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mesh-tools";
+        rev = "release/melodic/mesh_msgs_conversions/1.1.0-1";
+        sha256 = "sha256-QcWLafcS/hIPlcSTItRswYYpQlIgUr75HmrrFSrJZ0g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-srdfdom";
   version = "2.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/srdfdom-release/archive/release/rolling/srdfdom/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "8bf953f5999f5612ef8d93eb3930263e1f97de837801ab36a80bac8f057462cf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "srdfdom-release";
+        rev = "release/rolling/srdfdom/2.0.4-1";
+        sha256 = "sha256-4SrjgL5tauV2LvLisilSnXwyD2qTdhVdYDtH8D/69yg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python boost urdfdom-headers ];

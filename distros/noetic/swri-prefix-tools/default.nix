@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-swri-prefix-tools";
   version = "2.15.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_prefix_tools/2.15.2-1.tar.gz";
-    name = "2.15.2-1.tar.gz";
-    sha256 = "48a69316dd816101ba5a6303d6505f665d94745d126727c27d6a2deef163e818";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "marti_common-release";
+        rev = "release/noetic/swri_prefix_tools/2.15.2-1";
+        sha256 = "sha256-ECnNCSdWXUqA2/lfsR/Y9wKpWyK9AjwLi00GNnwpufc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

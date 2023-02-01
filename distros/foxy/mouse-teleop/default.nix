@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-mouse-teleop";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/foxy/mouse_teleop/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "f573f2e4c707e9f7d0765ffdb3ad3348fbfcbafe2e4fdc80c2be1ecb3b697434";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "teleop_tools-release";
+        rev = "release/foxy/mouse_teleop/1.3.0-1";
+        sha256 = "sha256-e7Z2ycDQ6c5iskftouMX5osIQ17YJ6aS1Jn6tEPTs3w=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint ];

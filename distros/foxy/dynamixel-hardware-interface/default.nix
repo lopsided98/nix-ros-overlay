@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-dynamixel-hardware-interface";
   version = "0.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/OUXT-Polaris/dynamixel_hardware_interface-release/archive/release/foxy/dynamixel_hardware_interface/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "a835274fbe7593d11dcafda4d68104ee0c7d290fb6d911f35df0196b7ee6bb49";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "OUXT-Polaris";
+        repo = "dynamixel_hardware_interface-release";
+        rev = "release/foxy/dynamixel_hardware_interface/0.0.3-1";
+        sha256 = "sha256-TZaD24csWqVynyvlonxW6ke5n5VIn4uXo+YQDcbal4A=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cartesian-trajectory-controller";
   version = "0.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/melodic/cartesian_trajectory_controller/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "3a184907ecc3236d3bd4fe482503eecd78d764c2071ad79bdca58b0a3f9ba9fb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UniversalRobots";
+        repo = "Universal_Robots_ROS_controllers_cartesian-release";
+        rev = "release/melodic/cartesian_trajectory_controller/0.1.5-1";
+        sha256 = "sha256-KziRZFtLlZqRl2iEHIxDap2ARaDjT/HzNz7E11n4QJc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

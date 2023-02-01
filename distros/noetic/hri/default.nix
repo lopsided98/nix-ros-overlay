@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cv-bridge, geometry-msgs, hri-msgs, rosconsole, roscpp, sensor-msgs, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-hri";
-  version = "0.5.3-r1";
+  version = "0.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros4hri/libhri-release/archive/release/noetic/hri/0.5.3-1.tar.gz";
-    name = "0.5.3-1.tar.gz";
-    sha256 = "ccef099e06f279a1db1b99e535aa00bfafaa5dc5f444e8c999a41ff38c6c4ba2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros4hri";
+        repo = "libhri-release";
+        rev = "release/noetic/hri/0.6.0-1";
+        sha256 = "sha256-807gfglQNhis5UM7Aaj7O9sR9An8jaTUNb3ghAgv/Wk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ boost catkin ];

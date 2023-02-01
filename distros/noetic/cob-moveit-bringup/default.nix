@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-hardware-config, cob-moveit-config, joint-state-publisher, moveit-planners-ompl, moveit-plugins, moveit-ros-move-group, moveit-ros-perception, moveit-ros-visualization, moveit-setup-assistant, robot-state-publisher, rviz, tf, warehouse-ros }:
 buildRosPackage {
   pname = "ros-noetic-cob-moveit-bringup";
-  version = "0.7.7-r1";
+  version = "0.7.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/noetic/cob_moveit_bringup/0.7.7-1.tar.gz";
-    name = "0.7.7-1.tar.gz";
-    sha256 = "3661f3fac58130b8c00172d3be7c1be4292e46d1cee7d775bf36b2fcee974e1f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_manipulation-release";
+        rev = "release/noetic/cob_moveit_bringup/0.7.8-1";
+        sha256 = "sha256-LyueyEvnkv462ora9DNMVZmWWfuOdwjH5GfY2HpPUkc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

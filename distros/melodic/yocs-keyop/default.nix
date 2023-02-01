@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-yocs-keyop";
   version = "0.8.2";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_keyop/0.8.2-0.tar.gz";
-    name = "0.8.2-0.tar.gz";
-    sha256 = "9b6de8d0572c1d3c31cca79bf6ad19f484cc7f0bbb4c6af27012f6eaf010f26d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "yujin_ocs-release";
+        rev = "release/melodic/yocs_keyop/0.8.2-0";
+        sha256 = "sha256-Oh5zWu9f9fgFLXVO+M4O0q+s0yjFyZWQaAcY6Lg/PfU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

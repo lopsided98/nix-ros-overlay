@@ -8,9 +8,8 @@ buildRosPackage {
   version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/galactic/marti_visualization_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "7c813003517abb0225b01f3211d16fa6256dab4d9982c44092790c9531b80746";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/5fadd636c91b09d6b1c66fb0a18c095a9eeddfb9.tar.gz";
+    sha256 = "sha256-ln8TB7XB3itqW2qSG4noDxLwjdTJMrccgDELU/7sm+A=";
   };
 
   buildType = "ament_cmake";

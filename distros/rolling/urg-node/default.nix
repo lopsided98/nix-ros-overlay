@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-urg-node";
   version = "1.1.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/urg_node-release/archive/release/rolling/urg_node/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "920ebf6f719357d93a0224c9a582ad2c4bf3b127b845f0a61fd3f6820ab508c9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "urg_node-release";
+        rev = "release/rolling/urg_node/1.1.0-2";
+        sha256 = "sha256-5I3MgR4LgAZZ1J5KC5KZBkdkC3dIOB3B+0br1tfGtTc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

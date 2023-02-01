@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tf-remapper-cpp";
   version = "1.1.1";
 
-  src = fetchurl {
-    url = "https://github.com/peci1/tf_remapper_cpp-release/archive/release/melodic/tf_remapper_cpp/1.1.1-0.tar.gz";
-    name = "1.1.1-0.tar.gz";
-    sha256 = "e212a7354d6e6f6eb42f9f8a90551b26cc4ffd427324bfe6f82ccbcd4603f77a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "peci1";
+        repo = "tf_remapper_cpp-release";
+        rev = "release/melodic/tf_remapper_cpp/1.1.1-0";
+        sha256 = "sha256-gPTx/WRgemtvKvNrCviawV3/lxdKSGSZADICFHMss9k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

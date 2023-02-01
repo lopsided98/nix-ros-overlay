@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-test-diagnostic-aggregator";
   version = "1.9.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/melodic/test_diagnostic_aggregator/1.9.7-1.tar.gz";
-    name = "1.9.7-1.tar.gz";
-    sha256 = "201eab0e2c91bc2bd05f59b91f9a21d4e9076f361d980c56fec5c5fca4634109";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "diagnostics-release";
+        rev = "release/melodic/test_diagnostic_aggregator/1.9.7-1";
+        sha256 = "sha256-SGgKtgOXi5R4Dz07qKTDjJYyQNKRAlbj6SJzHJ0W2QA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

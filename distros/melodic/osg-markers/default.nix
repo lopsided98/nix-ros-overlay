@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-osg-markers";
   version = "1.0.2-r2";
 
-  src = fetchurl {
-    url = "https://github.com/uji-ros-pkg/visualization_osg-release/archive/release/melodic/osg_markers/1.0.2-2.tar.gz";
-    name = "1.0.2-2.tar.gz";
-    sha256 = "173f82925c40381484abd5d53668fd56033792b15e66c5323a19f7c9ec3dc89d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uji-ros-pkg";
+        repo = "visualization_osg-release";
+        rev = "release/melodic/osg_markers/1.0.2-2";
+        sha256 = "sha256-8vVUb3rFlJW7kyNMO6XyEKwwg+7M1syDvN36B929OAM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

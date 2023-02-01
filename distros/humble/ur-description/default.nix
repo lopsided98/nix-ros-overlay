@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-ur-description";
   version = "2.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ur_description-release/archive/release/humble/ur_description/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "815cdd2721d37d9d4749645170b00707a64e6bcc78ddabce6c411a75dcaff948";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ur_description-release";
+        rev = "release/humble/ur_description/2.0.1-1";
+        sha256 = "sha256-HwCYUYhBBqglRndb1m6f+bgCzr6kJDUZRw43YvYOhMA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-depthimage-to-laserscan";
   version = "1.0.8";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/depthimage_to_laserscan-release/archive/release/melodic/depthimage_to_laserscan/1.0.8-0.tar.gz";
-    name = "1.0.8-0.tar.gz";
-    sha256 = "0620a9a74ab3a0601a55d1cbe593abe68bbc838ea3fb6a1dfa57ac7e6e3c10ca";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "depthimage_to_laserscan-release";
+        rev = "release/melodic/depthimage_to_laserscan/1.0.8-0";
+        sha256 = "sha256-zklPnFlu3CesAV/Nn4VBxDh6s1nsRgshyE9r46A2ZA0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin gtest ];

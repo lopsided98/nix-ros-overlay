@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rt-manipulators-examples";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rt-net-gbp/rt_manipulators_cpp-release/archive/release/rolling/rt_manipulators_examples/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "64314c4f4fc407e563dcbd9f6c5cb563f088add33c064d8b2da966b66e4dbee8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rt-net-gbp";
+        repo = "rt_manipulators_cpp-release";
+        rev = "release/rolling/rt_manipulators_examples/1.0.0-1";
+        sha256 = "sha256-dHVhmshZaD7z/hfD5tLkvXw6mehXEQSlivgKwLZ4YZM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

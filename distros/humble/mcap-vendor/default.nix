@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, git, zstd-vendor }:
 buildRosPackage {
   pname = "ros-humble-mcap-vendor";
-  version = "0.6.0-r1";
+  version = "0.15.4-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2_storage_mcap-release/archive/release/humble/mcap_vendor/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "8836f2fce201ba25c1a35303631b8aa38754392750ee1dd4832525f1ea62eb00";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosbag2-release";
+        rev = "release/humble/mcap_vendor/0.15.4-2";
+        sha256 = "sha256-DqVTrQlVGivOFM9UrzR5uwnDRtD+4ZLTh/t3gtg6UDA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake git ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-eus-nlopt";
   version = "0.1.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/melodic/eus_nlopt/0.1.16-1.tar.gz";
-    name = "0.1.16-1.tar.gz";
-    sha256 = "2879249973022d828e30dc71b3481387661578ba4927068829d56d9ea4628e79";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_control-release";
+        rev = "release/melodic/eus_nlopt/0.1.16-1";
+        sha256 = "sha256-Jz08rmBtorxg68B90T8vak4XpnL2izQOYuf4/Pe+MWY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

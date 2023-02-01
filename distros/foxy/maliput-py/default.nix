@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-maliput-py";
   version = "0.1.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/maliput_py-release/archive/release/foxy/maliput_py/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "5991d3f0c949a3470a7cc4861bda6dd186c37b51c92a15ceab00c2246d9b645c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "maliput_py-release";
+        rev = "release/foxy/maliput_py/0.1.4-1";
+        sha256 = "sha256-y0KrRQ0yCLLy5tX2Rv0H2iTa9ZqB2ElRWqV9sfPDUcs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake python3 ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-tf2-bullet";
   version = "0.7.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_bullet/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "f47f0a21eccf4d95cfad04a7e26b6641c7ad9278751e57e1f751124a357d3318";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry2-release";
+        rev = "release/noetic/tf2_bullet/0.7.6-1";
+        sha256 = "sha256-/4t69kkZ7FTEPyqHQguSp063/HZM/gt1kaUrije0jEA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pkg-config ];

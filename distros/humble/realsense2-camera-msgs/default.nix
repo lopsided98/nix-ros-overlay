@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-realsense2-camera-msgs";
   version = "4.51.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/humble/realsense2_camera_msgs/4.51.1-1.tar.gz";
-    name = "4.51.1-1.tar.gz";
-    sha256 = "0a1b7df957dd5d3ea827c9233cf2dfbd779818c318cf26ea31f6adb60fcfee9c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "IntelRealSense";
+        repo = "realsense-ros-release";
+        rev = "release/humble/realsense2_camera_msgs/4.51.1-1";
+        sha256 = "sha256-n/1oSiCcxvKQEDde1zImo44mSgOwaFXd2GchxlVUexI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

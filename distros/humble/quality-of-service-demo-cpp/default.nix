@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-ros, launch-testing, rclcpp, rclcpp-components, rcutils, rmw, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-quality-of-service-demo-cpp";
-  version = "0.20.2-r1";
+  version = "0.20.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/quality_of_service_demo_cpp/0.20.2-1.tar.gz";
-    name = "0.20.2-1.tar.gz";
-    sha256 = "93310552ec1b97a1c44e26afdb366477163f1c1b48d3f3a085834f51190b374b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/humble/quality_of_service_demo_cpp/0.20.3-1";
+        sha256 = "sha256-bUcFYNmK7CW9JiOGL0CgM7qXGkBQaxQ4a4YErEJ4/to=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rmw-implementation-cmake ];

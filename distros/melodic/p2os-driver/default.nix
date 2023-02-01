@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-p2os-driver";
   version = "2.1.1-r3";
 
-  src = fetchurl {
-    url = "https://github.com/allenh1/p2os-release/archive/release/melodic/p2os_driver/2.1.1-3.tar.gz";
-    name = "2.1.1-3.tar.gz";
-    sha256 = "6964b9f9c333b2290f586f8ea5bb23cd9bf6d3eb0e774dd33d2498624bae978d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "allenh1";
+        repo = "p2os-release";
+        rev = "release/melodic/p2os_driver/2.1.1-3";
+        sha256 = "sha256-6hfWqT4b6VNEu+Tne1UNDfu0DJ/L28REDzJco8aI0+s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

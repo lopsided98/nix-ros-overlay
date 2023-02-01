@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-omnibase-gazebo";
   version = "1.0.2-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ERC-BPGC/omnibase-release/archive/release/melodic/omnibase_gazebo/1.0.2-2.tar.gz";
-    name = "1.0.2-2.tar.gz";
-    sha256 = "6acc71a06fd1ab2fb25b723825be7a258682f8b9dc3cfe9eccdff57f4ddd65c2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ERC-BPGC";
+        repo = "omnibase-release";
+        rev = "release/melodic/omnibase_gazebo/1.0.2-2";
+        sha256 = "sha256-5Jq22C9ciOs5fIQsd4U/Mxmxvn3gkQh6/+7ya9k9jxE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

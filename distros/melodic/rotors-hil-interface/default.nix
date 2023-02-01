@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rotors-hil-interface";
   version = "2.2.3";
 
-  src = fetchurl {
-    url = "https://github.com/ethz-asl/rotors_simulator-release/archive/release/melodic/rotors_hil_interface/2.2.3-0.tar.gz";
-    name = "2.2.3-0.tar.gz";
-    sha256 = "ee4f035b44afcf982354c3740f05087f5dc9c8f2fffee6816a5e9dc435d46fc5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ethz-asl";
+        repo = "rotors_simulator-release";
+        rev = "release/melodic/rotors_hil_interface/2.2.3-0";
+        sha256 = "sha256-dEYclVn4DtkWi48EcsQl2Kdm5NswREjN/Qm6JhJdxw8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-system-modes";
   version = "0.9.0-r6";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/system_modes-release/archive/release/humble/system_modes/0.9.0-6.tar.gz";
-    name = "0.9.0-6.tar.gz";
-    sha256 = "cfcabeb98f57f4ff39667000f4652a482d0bd0fe0049874a1d4429a3fe355504";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "system_modes-release";
+        rev = "release/humble/system_modes/0.9.0-6";
+        sha256 = "sha256-0KjnR6c32kc4yM0vwAGYI1LgRZn4tLfIZSO+UE2llbM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

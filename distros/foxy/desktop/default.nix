@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-desktop";
   version = "0.9.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/variants-release/archive/release/foxy/desktop/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "d9a3e5eb1b3e87409a9850e420ec7667a539120808c5696292a6540ac2788b9a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "variants-release";
+        rev = "release/foxy/desktop/0.9.2-1";
+        sha256 = "sha256-tyUBJ2HcdrjmTScLvlFjsOD1Vw8Il3I/1s4lAXRJ89Q=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

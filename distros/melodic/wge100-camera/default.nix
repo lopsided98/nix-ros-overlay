@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-wge100-camera";
   version = "1.8.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/wge100_driver-release/archive/release/melodic/wge100_camera/1.8.2-1.tar.gz";
-    name = "1.8.2-1.tar.gz";
-    sha256 = "555d7b0249e43457e5ce245fb1c7fe895a0510b8a142197717e046e7cc1e18fe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "wge100_driver-release";
+        rev = "release/melodic/wge100_camera/1.8.2-1";
+        sha256 = "sha256-xBn8w/h38GhE+1Ccq0PTT3DncrPDmO19B+QCVv50sg8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation rostest ];

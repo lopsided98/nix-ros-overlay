@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-cv-bridge";
   version = "3.0.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/foxy/cv_bridge/3.0.7-1.tar.gz";
-    name = "3.0.7-1.tar.gz";
-    sha256 = "d4f0782dd74d6346dfeaab6067ba71aeb1754c5016b7f4d68a5ccbf100781dde";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "vision_opencv-release";
+        rev = "release/foxy/cv_bridge/3.0.7-1";
+        sha256 = "sha256-nIIfGz5CgxR4T7uYHJV/j53Beh08c2vJ53gRz7nPXk0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros python-cmake-module ];

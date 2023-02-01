@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-simple-actions";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/simple_actions-release/archive/release/rolling/simple_actions/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "62e3d348b705bfc026779ff95bbc1ba8668c3f08dd82fdc7b58a0f053f16c339";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "simple_actions-release";
+        rev = "release/rolling/simple_actions/0.2.1-1";
+        sha256 = "sha256-NwJn4jspMkn8bZdj3z4bwQmkm017B0FXkjiGFfIl+cY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];

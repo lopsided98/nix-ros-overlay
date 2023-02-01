@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, rclcpp, ros2-socketcan }:
 buildRosPackage {
   pname = "ros-humble-dataspeed-dbw-common";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dataspeed_dbw_common/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "6f2b51f5ee9e6ed31940325b9f5e9b50e7b52768f1f49579ce547cf79f7faaed";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dbw_ros-release";
+        rev = "release/humble/dataspeed_dbw_common/2.1.1-1";
+        sha256 = "sha256-Z4/KJ3bNlIn2nsZ9lgY14Mmv7rjApkIBwytt83JDNUM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

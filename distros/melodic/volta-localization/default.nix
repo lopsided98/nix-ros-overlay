@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-volta-localization";
   version = "1.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/botsync-gbp/volta-release/archive/release/melodic/volta_localization/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "8b63b7df42d7f42a6d313fabb4b7d48babcde31c73cc33600b7c1ff99a7a2db2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "botsync-gbp";
+        repo = "volta-release";
+        rev = "release/melodic/volta_localization/1.1.1-1";
+        sha256 = "sha256-pwIlcwiQ9m3tcFCSr0vNDGh4xksfOjdNvi64hRuhR8k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

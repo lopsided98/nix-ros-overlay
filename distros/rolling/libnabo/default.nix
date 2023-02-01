@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-libnabo";
   version = "1.0.7-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/libnabo-release/archive/release/rolling/libnabo/1.0.7-2.tar.gz";
-    name = "1.0.7-2.tar.gz";
-    sha256 = "93bc05da30dcbe2b0e638d1ca40d5809b928f86d61d3b908ad7c1b6855852389";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "libnabo-release";
+        rev = "release/rolling/libnabo/1.0.7-2";
+        sha256 = "sha256-Mgrzbissrz6FpDhNnycTc06xxw2+MpwzohUg4wBKVmI=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

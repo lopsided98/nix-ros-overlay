@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mqtt-client";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/mqtt_client-release/archive/release/noetic/mqtt_client/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "e43c7965db804290c24eeea06cac90f64a0ec07e60de8a74e721cd560c995fb8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ika-rwth-aachen";
+        repo = "mqtt_client-release";
+        rev = "release/noetic/mqtt_client/1.1.0-1";
+        sha256 = "sha256-F8VqcdSY7UR/5vOYba+xaam6fiRb7TvbPoodZVLwtSg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

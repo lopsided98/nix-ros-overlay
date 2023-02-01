@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-lanelet2-traffic-rules";
   version = "1.1.1-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/rolling/lanelet2_traffic_rules/1.1.1-3.tar.gz";
-    name = "1.1.1-3.tar.gz";
-    sha256 = "5d655613cb78d42844f302c336e3421f2b2d9a6c71bc0f687905ee1e9f24c47f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "lanelet2-release";
+        rev = "release/rolling/lanelet2_traffic_rules/1.1.1-3";
+        sha256 = "sha256-f8lvg45yjWovjMCmp3Pdmr6KFejBnczY67qkvP5uFWw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-core ];

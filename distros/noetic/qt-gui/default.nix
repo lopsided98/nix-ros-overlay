@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-qt-gui";
   version = "0.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/noetic/qt_gui/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "b565d65a2049bb96f1ce7cd81aa9e95f510e36ab8fede8a8ca4e959bfe84d10a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "qt_gui_core-release";
+        rev = "release/noetic/qt_gui/0.4.2-1";
+        sha256 = "sha256-CRyxDJ4uVKMNBcNOtvz1V3hvGeo58xmfjOk7GyINgSU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.pyqt5 python3Packages.setuptools qt5.qtbase ];

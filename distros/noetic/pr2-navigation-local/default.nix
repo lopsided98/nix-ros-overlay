@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pr2-navigation-local";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_navigation-release/archive/release/noetic/pr2_navigation_local/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "ce2e8ccda502ac1b7396baa5c530da99d172d76f2fc6f675d9a62c4a0f6ed595";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_navigation-release";
+        rev = "release/noetic/pr2_navigation_local/0.2.0-1";
+        sha256 = "sha256-OItduuMDGSOKK9dbdU8ndy0z8uHZ2Lz/AfS8QHQH8mU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

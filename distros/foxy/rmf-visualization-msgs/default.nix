@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmf-visualization-msgs";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization_msgs-release/archive/release/foxy/rmf_visualization_msgs/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "df2912d73cbd6526c1edddf4f126709663e1a95f532e2b6b2502caf67d7dd850";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_visualization_msgs-release";
+        rev = "release/foxy/rmf_visualization_msgs/1.2.0-1";
+        sha256 = "sha256-f0qmm88R8ojtHtOAJxyMJRQyfj2ycFGIOQVZfRMWkyE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

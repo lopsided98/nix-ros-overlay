@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ixblue-ins-driver";
   version = "0.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ixblue/ixblue_ins_stdbin_driver-release/archive/release/noetic/ixblue_ins_driver/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "e01d4b7c09ead8bde1bf548923c5a2c39991dd8a04dfba6c152b541cb0cd12d8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ixblue";
+        repo = "ixblue_ins_stdbin_driver-release";
+        rev = "release/noetic/ixblue_ins_driver/0.1.5-1";
+        sha256 = "sha256-NtYgVa3xwzyAPkZyJUJApX8wlF6tynzpQ7HprRa2JrA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

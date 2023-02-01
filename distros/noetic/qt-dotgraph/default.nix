@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-qt-dotgraph";
   version = "0.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/noetic/qt_dotgraph/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "a879051a9279d88ee26a6468b3ce27816868bb3c56c1b80a6eadaa8e2745630a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "qt_gui_core-release";
+        rev = "release/noetic/qt_dotgraph/0.4.2-1";
+        sha256 = "sha256-dkAg/cFhTaG/z2BBkDeDk117Si29jRwrPt/iA+F0h14=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools ];

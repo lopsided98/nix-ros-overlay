@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mavros-extras";
   version = "1.15.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/mavros_extras/1.15.0-1.tar.gz";
-    name = "1.15.0-1.tar.gz";
-    sha256 = "37376b3a39c1cbf34c9d2de279af35a358fc931fa5fa9a9a27827c029a912328";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mavlink";
+        repo = "mavros-release";
+        rev = "release/noetic/mavros_extras/1.15.0-1";
+        sha256 = "sha256-B6IFLJzmCcU6+Zh0tR4xSMbSPVPdNnYuOGJlVtyea7Y=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

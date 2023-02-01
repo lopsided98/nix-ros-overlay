@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-mavros-extras";
   version = "2.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavros-release/archive/release/rolling/mavros_extras/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "23cfb158e77c59828d2175d7c8fcc145ba4a503d6b423c355fc70d557d53e054";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "mavros-release";
+        rev = "release/rolling/mavros_extras/2.4.0-1";
+        sha256 = "sha256-PtIYTIYjcVKAIS0pP0hq1LdX+rB++3XRmqDHaZif8jM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python angles ];

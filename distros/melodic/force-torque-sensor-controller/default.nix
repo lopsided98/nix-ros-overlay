@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-force-torque-sensor-controller";
   version = "0.17.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/force_torque_sensor_controller/0.17.2-1.tar.gz";
-    name = "0.17.2-1.tar.gz";
-    sha256 = "9c66710f29ce9b5f15b89d26d2945071f891e947157c9ee6bc62305a061301d3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_controllers-release";
+        rev = "release/melodic/force_torque_sensor_controller/0.17.2-1";
+        sha256 = "sha256-/M4b9YqbjBvrv7Xi04rv3Mc4njXLEcGtA+bmV+KofFM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

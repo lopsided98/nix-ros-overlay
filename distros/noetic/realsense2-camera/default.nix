@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-realsense2-camera";
   version = "2.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/noetic/realsense2_camera/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "a03a1817362e6cdb2634429010226be1b64b64371a0622b588e65ec8bc4fb1e3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "IntelRealSense";
+        repo = "realsense-ros-release";
+        rev = "release/noetic/realsense2_camera/2.3.2-1";
+        sha256 = "sha256-My96v7R1TsuqQAkUC7ZyVCcfGG1OmhuJGnHJESXvwqY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

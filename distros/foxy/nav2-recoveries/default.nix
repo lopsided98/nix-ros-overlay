@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-nav2-recoveries";
   version = "0.4.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_recoveries/0.4.7-1.tar.gz";
-    name = "0.4.7-1.tar.gz";
-    sha256 = "55ea8ff904409ce6a6b3a68ff011117ddce0327aa563eccb680da14db1ada718";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/foxy/nav2_recoveries/0.4.7-1";
+        sha256 = "sha256-pNYLvHfcLU9HZRrHsVGUZ6BT45giMxYoAiUPVptrlsk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake nav2-common tf2 tf2-geometry-msgs ];

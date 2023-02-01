@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-flir-ptu-viz";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/flir_ptu-release/archive/release/melodic/flir_ptu_viz/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "9664de1e3ea742650e24879c7efc5a54c89105249209645362c87b4b2c5952c6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "flir_ptu-release";
+        rev = "release/melodic/flir_ptu_viz/0.2.1-1";
+        sha256 = "sha256-a/jScuyFZGhvDjglRQdwIZGvzODz5tMlVQ5sPO2QfGI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-lms1xx";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/lms1xx-release/archive/release/melodic/lms1xx/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "9a9ff8a7991afb1c4a8d05f8b4518fd5a944da3dba605db67a4f55ea6c049f76";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "lms1xx-release";
+        rev = "release/melodic/lms1xx/0.2.0-1";
+        sha256 = "sha256-RoVS+LmbbntTHC9E8JpczFQvDkhUsv/K2qWJ9EUZ0nQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

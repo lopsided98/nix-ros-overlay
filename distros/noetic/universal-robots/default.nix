@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-universal-robots";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/noetic/universal_robots/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "4cc451e00668ff15d6ed79e99ff8ecc123d81d2c1cd2d0886fb78902a83f1546";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "universal_robot-release";
+        rev = "release/noetic/universal_robots/1.3.1-1";
+        sha256 = "sha256-IpROXEJ8yu4Nv8+ARV6bxFwZMcfwK+8bxsMdebHa9DI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

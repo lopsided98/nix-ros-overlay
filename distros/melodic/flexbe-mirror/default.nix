@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-flexbe-mirror";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_mirror/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "1a4db16ce0e35303a163e75a4cd99dae334892e83ce2a190b77044acc61c3569";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "FlexBE";
+        repo = "flexbe_behavior_engine-release";
+        rev = "release/melodic/flexbe_mirror/1.3.1-1";
+        sha256 = "sha256-cR7e7+J7x56JXLhtdTu6yk2mT4jI8FPxnCkifA1U41c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

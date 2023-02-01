@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-open-manipulator-p-simulations";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator_p_simulations-release/archive/release/noetic/open_manipulator_p_simulations/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "6fb11bddc91d991ff81ee705f6ff757641d93eb76343c0ba16e7f176c01b646f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "open_manipulator_p_simulations-release";
+        rev = "release/noetic/open_manipulator_p_simulations/1.0.1-1";
+        sha256 = "sha256-+jZcd6g+V9uZ0HAQEtXXDcdOhyEhKjQxWeIt6O5pQSs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

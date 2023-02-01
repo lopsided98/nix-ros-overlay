@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-geometric-shapes";
   version = "2.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometric_shapes-release/archive/release/rolling/geometric_shapes/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "a73718985a665eb751d4a94d3ef2a9bffae29b59437ed70fe5d75fd643da425f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "geometric_shapes-release";
+        rev = "release/rolling/geometric_shapes/2.1.3-1";
+        sha256 = "sha256-Z8bt1wMFIfgQRfYat6fCd9hEKtS2qf8Wzbz+0hA+xzo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pkg-config rosidl-default-generators ];

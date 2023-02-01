@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ros2launch-security";
   version = "1.0.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2launch_security-release/archive/release/rolling/ros2launch_security/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "663e3ab054092002cc88ccd8aad644da8abee7f0abdba4d9e6b6a7aba3127b80";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2launch_security-release";
+        rev = "release/rolling/ros2launch_security/1.0.0-2";
+        sha256 = "sha256-MM1mvGLVBpSePXEUKQScahRPpulucGxMTaTp+jSKbNo=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 demo-nodes-py launch-ros pythonPackages.pytest ros2launch sros2 ];

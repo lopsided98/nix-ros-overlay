@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ubiquity-motor";
   version = "0.10.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UbiquityRobotics-release/ubiquity_motor-release/archive/release/melodic/ubiquity_motor/0.10.0-1.tar.gz";
-    name = "0.10.0-1.tar.gz";
-    sha256 = "fc7f93bc91f0b0839504df0bcec459794df081b9dfb9fe6bad99c747bb55f0bb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UbiquityRobotics-release";
+        repo = "ubiquity_motor-release";
+        rev = "release/melodic/ubiquity_motor/0.10.0-1";
+        sha256 = "sha256-qmjXLV46sVDYH2z0fsUTfwmF1hHpUFSI0BaaL+UBpuc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roscpp ];

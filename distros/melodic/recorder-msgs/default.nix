@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-recorder-msgs";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/aws-gbp/rosbag_uploader-release/archive/release/melodic/recorder_msgs/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "f5a741c359bf9420a8bdb479bc65c235a72e3af4f510eb8a8f3716f832019246";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "aws-gbp";
+        repo = "rosbag_uploader-release";
+        rev = "release/melodic/recorder_msgs/1.0.1-1";
+        sha256 = "sha256-5e75LWx06gTpJ329aFVG+JYTTm2UMIu35uVfslahwz0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation std-msgs ];

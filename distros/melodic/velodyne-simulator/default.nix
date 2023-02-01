@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-velodyne-simulator";
   version = "1.0.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/melodic/velodyne_simulator/1.0.13-1.tar.gz";
-    name = "1.0.13-1.tar.gz";
-    sha256 = "7574ca6fbb50b4be06b3a8a582fbe2724b87115f020189b90096eba7fe3ef165";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "velodyne_simulator-release";
+        rev = "release/melodic/velodyne_simulator/1.0.13-1";
+        sha256 = "sha256-oF1JWozzAYqx/fbMitOq7lpOTvKoDs8dNvxuCFaFxc8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

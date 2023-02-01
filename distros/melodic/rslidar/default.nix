@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rslidar";
   version = "1.0.2";
 
-  src = fetchurl {
-    url = "https://github.com/CPFL/robosense-release/archive/release/melodic/rslidar/1.0.2-0.tar.gz";
-    name = "1.0.2-0.tar.gz";
-    sha256 = "afc1683d73695c2460bccb0db0b1ecf4907ddff91506e6c4c33ac34ecf91a5f6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "CPFL";
+        repo = "robosense-release";
+        rev = "release/melodic/rslidar/1.0.2-0";
+        sha256 = "sha256-RYxAMRkGX8Ddf6Ymik1nAKy08Cy3N1f4iQW0nCYRoRI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-exotica-core-task-maps";
   version = "6.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_core_task_maps/6.2.0-1.tar.gz";
-    name = "6.2.0-1.tar.gz";
-    sha256 = "4610912d61cec611e4bd7f438d605168f5fa0ac976ff1f7aacbfb6ca92daf20b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipab-slmc";
+        repo = "exotica-release";
+        rev = "release/melodic/exotica_core_task_maps/6.2.0-1";
+        sha256 = "sha256-m8KH231s/FWOrD0gsM166x4VlyOxRPlIn7jCpYROvzY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin eigen-conversions ];

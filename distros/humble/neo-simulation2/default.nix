@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-neo-simulation2";
   version = "1.0.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/neo_simulation2-release/archive/release/humble/neo_simulation2/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "fba9c54be52a71f5f3ebdc8fd739a5736e0ad27be1f0191d9f5878d5512b43fe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "neo_simulation2-release";
+        rev = "release/humble/neo_simulation2/1.0.0-3";
+        sha256 = "sha256-AEgFzFZfgKi6yp6aeHAETABt5PXW2Ugz993IleDbO9k=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

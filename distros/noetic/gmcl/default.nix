@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-gmcl";
   version = "1.0.1-r3";
 
-  src = fetchurl {
-    url = "https://github.com/adler-1994/gmcl-release/archive/release/noetic/gmcl/1.0.1-3.tar.gz";
-    name = "1.0.1-3.tar.gz";
-    sha256 = "46c797852514b8f68fdfed022818e139bc7384323891013e3fee1deb9c7428c2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "adler-1994";
+        repo = "gmcl-release";
+        rev = "release/noetic/gmcl/1.0.1-3";
+        sha256 = "sha256-0eHw0NHier7DtVx54FH6itFQQVW1/uZmWmwXU/b6/JQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-filters tf2-geometry-msgs ];

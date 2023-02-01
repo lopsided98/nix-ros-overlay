@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rtcm-msgs";
   version = "1.1.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/nobleo/rtcm_msgs-release/archive/release/noetic/rtcm_msgs/1.1.6-1.tar.gz";
-    name = "1.1.6-1.tar.gz";
-    sha256 = "e9ba81f5b0d57666b7deaaabe82eec4959267c38725577a603453d5ee9a6e466";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "nobleo";
+        repo = "rtcm_msgs-release";
+        rev = "release/noetic/rtcm_msgs/1.1.6-1";
+        sha256 = "sha256-5yTtIdGostlOwChSlKKL4JivCyK284g0KYZxB6GBtBY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ros-environment ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-crane-plus-description";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/crane_plus-release/archive/release/foxy/crane_plus_description/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "7a17ffb77043cdd9e7468c6b215b35c43d29e434e4fe1768be9ac481b1d136a7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "crane_plus-release";
+        rev = "release/foxy/crane_plus_description/1.1.0-1";
+        sha256 = "sha256-VJNjb6UaRvMh4k2/l4GfvniaugUN7sJv8j9lQzmGang=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];

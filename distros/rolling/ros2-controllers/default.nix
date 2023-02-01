@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, admittance-controller, ament-cmake, diff-drive-controller, effort-controllers, force-torque-sensor-broadcaster, forward-command-controller, imu-sensor-broadcaster, joint-state-broadcaster, joint-trajectory-controller, position-controllers, tricycle-controller, velocity-controllers }:
 buildRosPackage {
   pname = "ros-rolling-ros2-controllers";
-  version = "2.15.0-r1";
+  version = "3.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/ros2_controllers/2.15.0-1.tar.gz";
-    name = "2.15.0-1.tar.gz";
-    sha256 = "8ba6c71dafebdeb0a8dcdd254c4f6318bf14b982648b6671f4c3d0bbb7e5e35e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_controllers-release";
+        rev = "release/rolling/ros2_controllers/3.1.0-1";
+        sha256 = "sha256-Q8FreNM/0dclRuVJ++WyNrNJJe9nvuxm1oCJkTDy0tc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

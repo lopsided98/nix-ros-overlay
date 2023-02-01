@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-smclib";
   version = "3.0.2-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/humble/smclib/3.0.2-3.tar.gz";
-    name = "3.0.2-3.tar.gz";
-    sha256 = "b0caf26c1e49a1c1dae37f382723b283006a8fadb584f89e88953e88ae4adde1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "bond_core-release";
+        rev = "release/humble/smclib/3.0.2-3";
+        sha256 = "sha256-6jstxd7gq/43o7r44ZhV7FknaUqCjiBvrckicrj2Xl8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];

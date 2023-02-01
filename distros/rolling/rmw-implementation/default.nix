@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rmw-implementation";
   version = "2.10.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_implementation-release/archive/release/rolling/rmw_implementation/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "589d6d92a968832928c01d6c90cf07b9bed4ceb0fbc6bdd1d925f9b3e5c8c9e8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmw_implementation-release";
+        rev = "release/rolling/rmw_implementation/2.10.0-1";
+        sha256 = "sha256-2OdD8fO/P6IHuUU8PoL0rCdJEo5pg6UlyJ8GPQHXvPg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rmw rmw-connextdds rmw-cyclonedds-cpp rmw-fastrtps-cpp rmw-fastrtps-dynamic-cpp ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cis-camera";
   version = "0.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/cis_camera-release/archive/release/melodic/cis_camera/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "5f4a44afefb77a6887cd8531b450cf19f18d5e9159d2a3b4a1ad272c6b678841";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "cis_camera-release";
+        rev = "release/melodic/cis_camera/0.0.4-1";
+        sha256 = "sha256-eqxJ/bCY3Z4nFQcrsrLtvVZIHpjiJTqccmdE21+U6Fk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint rostest ];

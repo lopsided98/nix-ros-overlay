@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosparam-shortcuts";
   version = "0.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/rosparam_shortcuts-release/archive/release/melodic/rosparam_shortcuts/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "e98b3641823b5ebc202bf41a8c62202f8c26fd7d898c9c9a32fb1812771b9554";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PickNikRobotics";
+        repo = "rosparam_shortcuts-release";
+        rev = "release/melodic/rosparam_shortcuts/0.3.3-1";
+        sha256 = "sha256-5XLWPuIIWqE+BqmEtwWcdtAiNlsiGb93STaUMg4KQsc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules eigen roslint ];

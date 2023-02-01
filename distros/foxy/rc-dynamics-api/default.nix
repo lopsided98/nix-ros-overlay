@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rc-dynamics-api";
   version = "0.10.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_dynamics_api-release/archive/release/foxy/rc_dynamics_api/0.10.2-1.tar.gz";
-    name = "0.10.2-1.tar.gz";
-    sha256 = "dd99a64758059fa9e249f63f3532d620850826bc51ad2d674fcfa9409ea0040c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "roboception-gbp";
+        repo = "rc_dynamics_api-release";
+        rev = "release/foxy/rc_dynamics_api/0.10.2-1";
+        sha256 = "sha256-c2u2BXZrlHXLWvsgXvehhEMwU2jtwybKUBsqyTzQ0Ig=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

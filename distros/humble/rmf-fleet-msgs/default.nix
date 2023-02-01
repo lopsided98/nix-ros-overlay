@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rmf-fleet-msgs";
   version = "3.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/humble/rmf_fleet_msgs/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "dfb2d07ac460fe8bc5e54910defe8c80f7f9ea67b9383405e44086d3edf7dbad";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_internal_msgs-release";
+        rev = "release/humble/rmf_fleet_msgs/3.0.2-1";
+        sha256 = "sha256-CFa6/eKQMXbJdvmpAowO/8qQ/D1y5uvy9ovOQweVJt0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

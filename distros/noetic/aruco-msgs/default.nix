@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-aruco-msgs";
   version = "3.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/aruco_ros-release/archive/release/noetic/aruco_msgs/3.1.3-1.tar.gz";
-    name = "3.1.3-1.tar.gz";
-    sha256 = "5594a1b779c90a433dad84313dc629112e7acb124c8ba90854e7345c8d917172";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "aruco_ros-release";
+        rev = "release/noetic/aruco_msgs/3.1.3-1";
+        sha256 = "sha256-wW4fxxG/oWsMsl6fVcHDQ2F7fGyaQzQmWsO6dd5gOO0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

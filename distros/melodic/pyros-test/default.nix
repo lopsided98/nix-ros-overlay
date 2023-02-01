@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pyros-test";
   version = "0.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pyros-dev/pyros-test-release/archive/release/melodic/pyros_test/0.0.6-1.tar.gz";
-    name = "0.0.6-1.tar.gz";
-    sha256 = "9f1c355999d96debda08aa9cc999dade80d4c8ba9de137fabd122eb9050c35ea";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pyros-dev";
+        repo = "pyros-test-release";
+        rev = "release/melodic/pyros_test/0.0.6-1";
+        sha256 = "sha256-12Wn1ZrTcwE+CDqJNMOR8WTf9XFGDE/JuJDYkgQ3O2g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation roslint ];

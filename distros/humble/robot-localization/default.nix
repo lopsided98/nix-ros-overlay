@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-robot-localization";
   version = "3.3.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/robot_localization-release/archive/release/humble/robot_localization/3.3.1-2.tar.gz";
-    name = "3.3.1-2.tar.gz";
-    sha256 = "2fe8d19d83c176e6cc4e9a8cf0dc5bdb1f1fea2d08c2aa8fd8f4443e0192cc96";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "robot_localization-release";
+        rev = "release/humble/robot_localization/3.3.1-2";
+        sha256 = "sha256-B90LdMnt4IqfGJ9CkuOZdILf28ssmz15az1nsgizX8U=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake builtin-interfaces rosidl-default-generators ];

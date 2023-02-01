@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pepper-meshes";
   version = "0.2.4-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros-naoqi/pepper_meshes-release/archive/release/melodic/pepper_meshes/0.2.4-3.tar.gz";
-    name = "0.2.4-3.tar.gz";
-    sha256 = "3780fdd3757c5aff60a4c894f3ad2b390630c92ee6931b6ca561d97513d5d199";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-naoqi";
+        repo = "pepper_meshes-release";
+        rev = "release/melodic/pepper_meshes/0.2.4-3";
+        sha256 = "sha256-bzHZA+HCCsFwhoxm+huqu82gGWm06qoLcizhJcZ3gCg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin openjdk ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-supported-robots";
   version = "0.6.17-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_supported_robots-release/archive/release/noetic/cob_supported_robots/0.6.17-1.tar.gz";
-    name = "0.6.17-1.tar.gz";
-    sha256 = "759491f7332143a68c6f8b74311f2f62fb06ebed5f091f3fd29625517328f217";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_supported_robots-release";
+        rev = "release/noetic/cob_supported_robots/0.6.17-1";
+        sha256 = "sha256-SWZKKedYtdzoGw7M4nyCLXwdArI/fkaaDs0I63wdafo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

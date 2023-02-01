@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mongodb-log";
   version = "0.5.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/strands-project-releases/mongodb_store/archive/release/melodic/mongodb_log/0.5.2-1.tar.gz";
-    name = "0.5.2-1.tar.gz";
-    sha256 = "0482630592871557d4d9d9dff8bcd61a3c8801c840cc2477f51f4a3806a7453e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "strands-project-releases";
+        repo = "mongodb_store";
+        rev = "release/melodic/mongodb_log/0.5.2-1";
+        sha256 = "sha256-RN2xbRCcG6/UsbgYxW7XTJg9cpgyqgiKVxaBppWzzLM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin openssl ];

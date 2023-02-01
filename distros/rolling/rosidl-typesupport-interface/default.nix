@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rosidl-typesupport-interface";
   version = "3.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_typesupport_interface/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "4bd5e3ee07825a13ec8d4c3c094de0357579fc95d8e3c0d490245fcf63adb648";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl-release";
+        rev = "release/rolling/rosidl_typesupport_interface/3.3.1-1";
+        sha256 = "sha256-61lc6/2G8//xP51P4LB5RnOAeaZQDyiR6MjcvnF5B5M=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-calibration-plugins";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/JStech/moveit_calibration-release/archive/release/noetic/moveit_calibration_plugins/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "56adbbdc424c1c5cb95d8274a4dd5b475d71b08994b2cedaed56976dd64106e8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "JStech";
+        repo = "moveit_calibration-release";
+        rev = "release/noetic/moveit_calibration_plugins/0.1.0-1";
+        sha256 = "sha256-nIC1LxgXook6P52XMEWQ3f37MkRLJKmBBHuFFeIsqQM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin eigen ];

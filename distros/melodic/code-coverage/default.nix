@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-code-coverage";
   version = "0.4.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mikeferguson/code_coverage-gbp/archive/release/melodic/code_coverage/0.4.3-1.tar.gz";
-    name = "0.4.3-1.tar.gz";
-    sha256 = "a8e6b0962b8cfef29afa011cb598103589c5806e704124d1ed0f4484317412de";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mikeferguson";
+        repo = "code_coverage-gbp";
+        rev = "release/melodic/code_coverage/0.4.3-1";
+        sha256 = "sha256-tuHXMWMwV9LKW6amsHtyAwFUGtRItqzC3r5jCiLJsk4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

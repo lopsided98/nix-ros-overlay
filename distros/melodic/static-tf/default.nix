@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-static-tf";
   version = "0.0.2";
 
-  src = fetchurl {
-    url = "https://github.com/wu-robotics/static_tf_release/archive/release/melodic/static_tf/0.0.2-0.tar.gz";
-    name = "0.0.2-0.tar.gz";
-    sha256 = "0c372214894f09c32cf9f0e8364ee57db00a1a906ba997b8767c027bf835e1f8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wu-robotics";
+        repo = "static_tf_release";
+        rev = "release/melodic/static_tf/0.0.2-0";
+        sha256 = "sha256-f5W54xK/nY2dSjkQWeTOKOD7km8ZKja9H1sLnJKdIR0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

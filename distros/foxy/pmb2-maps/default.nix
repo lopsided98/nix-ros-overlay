@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-pmb2-maps";
   version = "3.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/foxy/pmb2_maps/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "ab3f6a6caacdb46babc92db0d073b4e7055474b1c9830f341cc013ec678a304a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "pmb2_navigation-gbp";
+        rev = "release/foxy/pmb2_maps/3.0.1-1";
+        sha256 = "sha256-GmpfTOe2YhYRhPMoNnBx781cUXXpEXrFR1egI1xetWM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

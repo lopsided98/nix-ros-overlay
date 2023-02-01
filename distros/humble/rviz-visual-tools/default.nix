@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-python, ament-lint-auto, ament-lint-common, eigen, eigen-stl-containers, eigen3-cmake-module, geometry-msgs, interactive-markers, launch, launch-ros, pluginlib, qt5, rclcpp, rclcpp-components, rviz-common, rviz-default-plugins, rviz-ogre-vendor, rviz-rendering, rviz2, sensor-msgs, shape-msgs, std-msgs, tf2, tf2-eigen, tf2-geometry-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-rviz-visual-tools";
-  version = "4.1.3-r1";
+  version = "4.1.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz_visual_tools-release/archive/release/humble/rviz_visual_tools/4.1.3-1.tar.gz";
-    name = "4.1.3-1.tar.gz";
-    sha256 = "49e3607f5fd4c62155d1b9522c53a1eb2103359ec19ee0ed41840fb44b0dd51b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rviz_visual_tools-release";
+        rev = "release/humble/rviz_visual_tools/4.1.4-1";
+        sha256 = "sha256-tVfPKQNpM962nm3D4nPbalanEed98pZ6A4v4ySC79yI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

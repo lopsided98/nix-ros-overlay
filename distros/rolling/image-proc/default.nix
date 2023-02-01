@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-image-proc";
   version = "3.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/image_proc/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "f8408ae8ff2ff93fe5c9b36c7cec37e4b01a8afdacc343e4dac44104f12d0aa6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/rolling/image_proc/3.0.1-1";
+        sha256 = "sha256-LF+CUjTJxxZEw/JjwgwxJ7RWfM3Yf5DqZb/YOcuS2TM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

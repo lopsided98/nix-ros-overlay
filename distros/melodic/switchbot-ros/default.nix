@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-switchbot-ros";
   version = "2.1.24-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/switchbot_ros/2.1.24-2.tar.gz";
-    name = "2.1.24-2.tar.gz";
-    sha256 = "4395f8e6fa9575450e9fbdae009e49c674c1cf7d4c1420129b256b4031f73dd9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_3rdparty-release";
+        rev = "release/melodic/switchbot_ros/2.1.24-2";
+        sha256 = "sha256-VCGEu8uuMAbyV8sqgSUEeqlzjbm4+sGkANPqYZBqsIw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

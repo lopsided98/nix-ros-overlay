@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-move-base-msgs";
   version = "1.14.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_msgs-release/archive/release/noetic/move_base_msgs/1.14.1-1.tar.gz";
-    name = "1.14.1-1.tar.gz";
-    sha256 = "a3cfcbeed9a83959c3a7b12abf8737062bee94c627d1a961be4ff589a4c4ad7a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation_msgs-release";
+        rev = "release/noetic/move_base_msgs/1.14.1-1";
+        sha256 = "sha256-M04IFEmWhE3/U8wT5cMz1LjWX9Vgfkc1FP0R54QQoKg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-sparse-bundle-adjustment";
   version = "0.4.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/sparse_bundle_adjustment-release/archive/release/melodic/sparse_bundle_adjustment/0.4.4-1.tar.gz";
-    name = "0.4.4-1.tar.gz";
-    sha256 = "e6425dad1b8dff51a83846a5e7ae5fd70477183c6acfd5c952fb39f006168837";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "sparse_bundle_adjustment-release";
+        rev = "release/melodic/sparse_bundle_adjustment/0.4.4-1";
+        sha256 = "sha256-875J1dmacTFSy9Vsc5exd/cQL747NpnDqFiz+zdnezI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

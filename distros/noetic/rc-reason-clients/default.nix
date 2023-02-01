@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rc-reason-clients";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_reason_clients_ros-release/archive/release/noetic/rc_reason_clients/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "ec48963acb27603b1a8c263587f51a6d75d5043afcfcdfad004c61939a9bb9d8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "roboception-gbp";
+        repo = "rc_reason_clients_ros-release";
+        rev = "release/noetic/rc_reason_clients/0.3.0-1";
+        sha256 = "sha256-Xi3fJ4LQil6Zd0rsZ1cuocX4lrcmUJkhaShsNL+zYII=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

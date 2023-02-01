@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cppcheck }:
 buildRosPackage {
   pname = "ros-humble-ament-cmake-cppcheck";
-  version = "0.12.4-r1";
+  version = "0.12.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_cmake_cppcheck/0.12.4-1.tar.gz";
-    name = "0.12.4-1.tar.gz";
-    sha256 = "db5210f90bd76a9d4aab17535c2ccbf653b8508af6f5202e0ba72ada2581c911";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_lint-release";
+        rev = "release/humble/ament_cmake_cppcheck/0.12.5-1";
+        sha256 = "sha256-gLcXaMQm52CF5RnIYDbYuHcOHX30+gmCAEF27Q/fGC4=";
+      };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ];

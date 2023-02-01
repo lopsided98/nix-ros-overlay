@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-roswww";
   version = "0.1.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/roswww-release/archive/release/noetic/roswww/0.1.13-1.tar.gz";
-    name = "0.1.13-1.tar.gz";
-    sha256 = "21b7ab479ab18b0a1fb19faee08f5391785ffd27fd60bf15dc9d117b8d755b9e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "roswww-release";
+        rev = "release/noetic/roswww/0.1.13-1";
+        sha256 = "sha256-/es7Z0mr7Rhsj4ZaOk8lBfQQvO/Stc4cc4Ros3Or/Rs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.catkin-pkg ];

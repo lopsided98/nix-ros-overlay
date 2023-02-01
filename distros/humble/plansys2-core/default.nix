@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-plansys2-core";
   version = "2.0.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/humble/plansys2_core/2.0.9-1.tar.gz";
-    name = "2.0.9-1.tar.gz";
-    sha256 = "fbe5b993e5bc29baae502543f7a9c3771bf458ba2522b3c4856725959f07b34c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "IntelligentRoboticsLabs";
+        repo = "ros2_planning_system-release";
+        rev = "release/humble/plansys2_core/2.0.9-1";
+        sha256 = "sha256-oy9zs0MjcQ6svbFOZgZNi7HHX5YbMy9PC0TikcBITtM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-urg-c";
   version = "1.0.405";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/urg_c-release/archive/release/melodic/urg_c/1.0.405-0.tar.gz";
-    name = "1.0.405-0.tar.gz";
-    sha256 = "f747da6d3ab437c8a455194bbd9cf64f84798700d7458584c77916f9c479691a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "urg_c-release";
+        rev = "release/melodic/urg_c/1.0.405-0";
+        sha256 = "sha256-wEtV8auslEcnhmACa0SvoVopTV4FKwss35VKw95wxP0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-system-modes-examples";
   version = "0.9.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/microROS/system_modes-release/archive/release/foxy/system_modes_examples/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "a74870f22ec802c61895f8330ef7b6a10cb6697dc5629c2bc75abc3a4bef4d13";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "microROS";
+        repo = "system_modes-release";
+        rev = "release/foxy/system_modes_examples/0.9.0-1";
+        sha256 = "sha256-0kfAi8ExAnUicuzTFtWKNQwRZP8qipcdbz4XUrg7EQM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

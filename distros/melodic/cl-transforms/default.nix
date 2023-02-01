@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cl-transforms";
   version = "0.2.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/cl_transforms/0.2.13-1.tar.gz";
-    name = "0.2.13-1.tar.gz";
-    sha256 = "2644bf9a6b816b70ca216290676f58e6d0b7d49c9b0d5f182928936f3aca9bd6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "roslisp_common-release";
+        rev = "release/melodic/cl_transforms/0.2.13-1";
+        sha256 = "sha256-n3LLEOkCC3WqL1qUBSgzqVkmxdlOx8SRuhMjaFLBGvE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

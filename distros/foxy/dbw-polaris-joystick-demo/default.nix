@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, dataspeed-dbw-common, dbw-polaris-can, dbw-polaris-msgs, joy, rclcpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-dbw-polaris-joystick-demo";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/foxy/dbw_polaris_joystick_demo/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "6ca901e83678ad41e3be8f963452b5abb93e728f4a046abb12c8b58aee7304e7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dbw_ros-release";
+        rev = "release/foxy/dbw_polaris_joystick_demo/2.1.1-1";
+        sha256 = "sha256-MXOVGT7yWAGFYPDBEDkXFzxb9/4PY7DjfqGrBoVhxzE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

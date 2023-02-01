@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mia-hand-ros-pkgs";
   version = "1.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/Prensilia-srl/mia_hand_ros_pkgs-release/archive/release/noetic/mia_hand_ros_pkgs/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "e068a990866f6332cca52d145391755c07bab1f8205373d82c8fc2469ca539d8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Prensilia-srl";
+        repo = "mia_hand_ros_pkgs-release";
+        rev = "release/noetic/mia_hand_ros_pkgs/1.0.2-1";
+        sha256 = "sha256-4OEkDHp6Ip4BYd6uGMrLvQ0fLe/qN17Wus/hEvvg+8o=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

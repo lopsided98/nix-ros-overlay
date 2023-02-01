@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-tuck-arms-action";
   version = "0.0.11";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/melodic/pr2_tuck_arms_action/0.0.11-0.tar.gz";
-    name = "0.0.11-0.tar.gz";
-    sha256 = "12d791a5cb70ca8bce9093e6dddc5cd0fc718b1d440f62c6006071bd736629e7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_common_actions-release";
+        rev = "release/melodic/pr2_tuck_arms_action/0.0.11-0";
+        sha256 = "sha256-tqYIHCCWRBGw30zWG71SpPaHp4evybIyvG1Nc0qXIc4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

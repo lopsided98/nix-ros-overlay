@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dbw-polaris-msgs";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/noetic/dbw_polaris_msgs/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "b5648764cef4109d45d9adf4dc432beaa6170b372d596ec7d47dabed1eddf06f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dbw_polaris_ros-release";
+        rev = "release/noetic/dbw_polaris_msgs/1.1.0-1";
+        sha256 = "sha256-pu+jBW6Q7vx0i6N2NEix+YPJqTF1uA/er0lHTgI/8l4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-qwt-dependency";
   version = "1.1.0";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/qwt_dependency-release/archive/release/melodic/qwt_dependency/1.1.0-0.tar.gz";
-    name = "1.1.0-0.tar.gz";
-    sha256 = "7d171d5a7bb5226de322e8146262b5ca73461ec9c71afc3675c5b353e90e42f5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "qwt_dependency-release";
+        rev = "release/melodic/qwt_dependency/1.1.0-0";
+        sha256 = "sha256-OzFpC/loWAcTp/b3j7ZyNR90mZIItFWQnuJGEAZWraw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

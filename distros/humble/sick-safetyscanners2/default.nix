@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-sick-safetyscanners2";
   version = "1.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SICKAG/sick_safetyscanners2-release/archive/release/humble/sick_safetyscanners2/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "067552406896f93c603177816048db9d818e84bd2d81880e2ba42b1ddbdfb40c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SICKAG";
+        repo = "sick_safetyscanners2-release";
+        rev = "release/humble/sick_safetyscanners2/1.0.3-1";
+        sha256 = "sha256-i4ny7pd9nYqJwSKfiQE8KX/oMcPBPmXtcxUGiw3cx6g=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-demo-nodes-py";
   version = "0.9.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/demo_nodes_py/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "1fa2326b06f4efb8548b6476d2cefa65902e78000e1ab13e21c50867a1c58fc6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/foxy/demo_nodes_py/0.9.4-1";
+        sha256 = "sha256-6dUCaJ+rOd7E/VpK7tLR2Do6A0JWK/y0Jf9ccotMuOA=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

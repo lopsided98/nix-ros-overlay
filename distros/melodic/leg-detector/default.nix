@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-leg-detector";
   version = "1.4.0-r4";
 
-  src = fetchurl {
-    url = "https://github.com/OSUrobotics/people-release/archive/release/melodic/leg_detector/1.4.0-4.tar.gz";
-    name = "1.4.0-4.tar.gz";
-    sha256 = "44076e4c01655df0b855678ab2f2012a6ca559b527b4c258fb382a6df739f07f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "OSUrobotics";
+        repo = "people-release";
+        rev = "release/melodic/leg_detector/1.4.0-4";
+        sha256 = "sha256-n1DBRrwRvzl8Ze+pusHO/CNpL0MfFWiulK04iGE1hVQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-jskeus";
   version = "1.2.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jskeus-release/archive/release/noetic/jskeus/1.2.5-1.tar.gz";
-    name = "1.2.5-1.tar.gz";
-    sha256 = "bb43fd1f54ff95c468ea7bda7cc7063013b11c15b7430eb88dcc7880b8f2257e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jskeus-release";
+        rev = "release/noetic/jskeus/1.2.5-1";
+        sha256 = "sha256-uvYrbSlxEtlpPztESHzDI7PDMmqu/rc2Z9epqlb2yI0=";
+      };
 
   buildType = "cmake";
   buildInputs = [ catkin ];

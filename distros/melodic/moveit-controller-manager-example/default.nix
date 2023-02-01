@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-moveit-controller-manager-example";
   version = "1.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_controller_manager_example/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "94bfc82d84a00f37e49bf31a20dc34440eaa2d74e29674d510d20eb3e1c70766";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/melodic/moveit_controller_manager_example/1.0.11-1";
+        sha256 = "sha256-oVcn4hZioh0VTzwQMz9r4Bpgi/kba5Kjz0ABNSQjbw4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

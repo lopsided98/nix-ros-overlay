@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-boost-geometry-util";
   version = "0.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/OUXT-Polaris/boost_geometry_util-release/archive/release/foxy/boost_geometry_util/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "d7ad6dcb6393aec4180fde2d45138d4f7d73798d1eccdb57973e116311b2e8a5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "OUXT-Polaris";
+        repo = "boost_geometry_util-release";
+        rev = "release/foxy/boost_geometry_util/0.0.1-1";
+        sha256 = "sha256-5P2YMX4buwUYt7NAF7FiWJguryH/I8GC2y+vIK5KI0w=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-auto ];

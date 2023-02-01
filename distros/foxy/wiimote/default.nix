@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-wiimote";
   version = "3.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/foxy/wiimote/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "1cde95d93447b9dc6b7212460b8d4675637e47ea31e7dd5ce4745fc799a5fd70";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "joystick_drivers-release";
+        rev = "release/foxy/wiimote/3.0.1-1";
+        sha256 = "sha256-i/WGBYOoL0AbC0vUuodbMQTAcRjJiYDuD2mli7QFcWk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-auto ];

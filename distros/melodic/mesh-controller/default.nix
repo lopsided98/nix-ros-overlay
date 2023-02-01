@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mesh-controller";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/melodic/mesh_controller/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "6c14f1e1ed563f97d86cf7c10acdb45f67e76cd646965e71651bbaa3a1c7fb12";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mesh_navigation-release";
+        rev = "release/melodic/mesh_controller/1.0.1-1";
+        sha256 = "sha256-pkomKNKQWYeAlMfi9aDmJCw3172/AOsXGzTpgy6jyz0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

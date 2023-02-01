@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dataspeed-ulc";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release/archive/release/melodic/dataspeed_ulc/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "ab201e51b4e51c39b4e6db04e2a65ab377e091091086cb1cf121e6a757b3ee80";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dataspeed_ulc_ros-release";
+        rev = "release/melodic/dataspeed_ulc/0.1.0-1";
+        sha256 = "sha256-8ZYV6yz2+tK5L61CPzhTjbosO9Ga23y35Dw2dRiMY3Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

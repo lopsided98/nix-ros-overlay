@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-performance-test";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/performance_test-release/archive/release/foxy/performance_test/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "525cfade4a96984b86c41f451b3f15cf7617c346952e1a48139c437fd94513f5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "performance_test-release";
+        rev = "release/foxy/performance_test/1.2.1-1";
+        sha256 = "sha256-u4mAwbA+JRMXmY53Z0E6Uz7BQJcVZkDovcmnVCK1KxU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake osrf-testing-tools-cpp rosidl-default-generators ];

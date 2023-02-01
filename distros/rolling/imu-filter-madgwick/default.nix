@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-imu-filter-madgwick";
   version = "2.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/rolling/imu_filter_madgwick/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "b858b5eff23b3ae5428dd3a938e47e32a0d9a07c3fa63f367fb7321e547a859d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "imu_tools-release";
+        rev = "release/rolling/imu_filter_madgwick/2.1.3-1";
+        sha256 = "sha256-w1yVzPSVadsRmFRs1oZ8HEZ6DXYiezID3dunE9J6VUY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

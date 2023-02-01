@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-velodyne-gazebo-plugins";
   version = "1.0.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/noetic/velodyne_gazebo_plugins/1.0.13-1.tar.gz";
-    name = "1.0.13-1.tar.gz";
-    sha256 = "0f5d1abda7b2692281380e50b0446399718898b4ac4f49ec35253f411eafb812";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "velodyne_simulator-release";
+        rev = "release/noetic/velodyne_gazebo_plugins/1.0.13-1";
+        sha256 = "sha256-L5IN+BvQ38y1lX91dD7v8We1MonA9i21PQRAj+zv7C8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

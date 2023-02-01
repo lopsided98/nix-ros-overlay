@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-goal-passer";
   version = "0.3.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/goal_passer/0.3.6-1.tar.gz";
-    name = "0.3.6-1.tar.gz";
-    sha256 = "d68d61e5b36ed2c75022cb13f54ce924c91d187cc4d052eab864cdcf64844fb8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation_experimental-release";
+        rev = "release/melodic/goal_passer/0.3.6-1";
+        sha256 = "sha256-yFz90bEkJP+uXtnIeOOL8WHzbhDtkb//GqD7y1SIFA0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

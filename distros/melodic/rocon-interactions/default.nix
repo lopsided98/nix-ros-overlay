@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rocon-interactions";
   version = "0.3.2";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/rocon_tools-release/archive/release/melodic/rocon_interactions/0.3.2-0.tar.gz";
-    name = "0.3.2-0.tar.gz";
-    sha256 = "bbfd5de04fbedd3259af8cc8d03812de838a6a9cc3d38c48772640218cfbe1b7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "rocon_tools-release";
+        rev = "release/melodic/rocon_interactions/0.3.2-0";
+        sha256 = "sha256-i3ZJuqBhEcZjmzaA8VHlWyxiJBcCFjFi3axSByPIGY0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.catkin-pkg roslint rostest ];

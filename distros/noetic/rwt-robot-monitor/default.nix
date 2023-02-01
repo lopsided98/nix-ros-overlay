@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rwt-robot-monitor";
   version = "0.1.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/noetic/rwt_robot_monitor/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "b7c64d784969afd1de6a4a4061f6f32d620a9eece985773e8c5dfbb7d67b215c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "visualization_rwt-release";
+        rev = "release/noetic/rwt_robot_monitor/0.1.1-2";
+        sha256 = "sha256-xl0AxSjKUZXMad+NyE67gjp1XScSYoorn826yWpGBds=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

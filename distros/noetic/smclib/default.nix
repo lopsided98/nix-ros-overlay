@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-smclib";
   version = "1.8.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/bond_core-release/archive/release/noetic/smclib/1.8.6-1.tar.gz";
-    name = "1.8.6-1.tar.gz";
-    sha256 = "7a0fe1a46821a1fc84021ad2592661cfc9a4bfe0179a5d896558b7c1a7a00cde";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "bond_core-release";
+        rev = "release/noetic/smclib/1.8.6-1";
+        sha256 = "sha256-ro5DUUBXMblrINdzD7SjeQDlfnVQYLP/lQV1PRabvIs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools ];

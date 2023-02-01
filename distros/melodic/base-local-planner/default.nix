@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-base-local-planner";
   version = "1.16.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/base_local_planner/1.16.7-1.tar.gz";
-    name = "1.16.7-1.tar.gz";
-    sha256 = "51ee2f7a40c5041648f1bb6735562a801b986e7f01f6a0fd7a600aa73c56c6b6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation-release";
+        rev = "release/melodic/base_local_planner/1.16.7-1";
+        sha256 = "sha256-sqq7Roc0Sa7wHLs0gHW3rfqUp4q3E6a+1OehbXHNVQg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules message-generation tf2-geometry-msgs ];

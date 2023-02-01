@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rqt-robot-dashboard";
   version = "0.5.7";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_robot_dashboard-release/archive/release/melodic/rqt_robot_dashboard/0.5.7-0.tar.gz";
-    name = "0.5.7-0.tar.gz";
-    sha256 = "19eb8bffb5697ef7e7d7bc23cf7cda4e3446e6415a40e53987095b85bb9b8568";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_robot_dashboard-release";
+        rev = "release/melodic/rqt_robot_dashboard/0.5.7-0";
+        sha256 = "sha256-K7snpxSWSzpE7y/UdF80x0dctTTyuhJY/MyNMeBTmEQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

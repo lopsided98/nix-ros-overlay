@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pr2-controllers";
   version = "1.10.18-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/noetic/pr2_controllers/1.10.18-1.tar.gz";
-    name = "1.10.18-1.tar.gz";
-    sha256 = "27537dbc0e3aecc450ba1a232140e147f2a9958178ac29abdda9aa57926d2f34";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_controllers-release";
+        rev = "release/noetic/pr2_controllers/1.10.18-1";
+        sha256 = "sha256-Aw8qP+xXxJgYjR4BZQrAAIe/0o/k8Vl2MyoYkH2vTiY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-mechanism-diagnostics";
   version = "1.8.21-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_mechanism_diagnostics/1.8.21-1.tar.gz";
-    name = "1.8.21-1.tar.gz";
-    sha256 = "3badb0392210f96cb78d66bbc1b3e6fd5f1d4b07d162612225c02529d66ad395";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_mechanism-release";
+        rev = "release/melodic/pr2_mechanism_diagnostics/1.8.21-1";
+        sha256 = "sha256-hCyfSKsZj4bNbqfLN+Ri7mX7c8mUfu2cSRu7RIXaDYM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

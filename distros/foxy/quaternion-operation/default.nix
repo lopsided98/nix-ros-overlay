@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-quaternion-operation";
   version = "0.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/OUXT-Polaris/quaternion_operation-release/archive/release/foxy/quaternion_operation/0.0.11-1.tar.gz";
-    name = "0.0.11-1.tar.gz";
-    sha256 = "8ce497e6156de01072993ba627ce8916bec87bd00b1d9b181dee6ef7c3091699";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "OUXT-Polaris";
+        repo = "quaternion_operation-release";
+        rev = "release/foxy/quaternion_operation/0.0.11-1";
+        sha256 = "sha256-XFIOq/J1ybBjdR5TFUumOgHlYUH5o2Mcm9zh1zPijKo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

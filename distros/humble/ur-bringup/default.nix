@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-ur-bringup";
   version = "2.2.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/humble/ur_bringup/2.2.6-1.tar.gz";
-    name = "2.2.6-1.tar.gz";
-    sha256 = "255296aad45bf6486fb62afc5ec47665c739691763e2a7e898b5d66c6f921845";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "Universal_Robots_ROS2_Driver-release";
+        rev = "release/humble/ur_bringup/2.2.6-1";
+        sha256 = "sha256-KP0OKseEWwnfj5o0zoi7vyI6jAuIq2dEa6w+m20fxH0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];

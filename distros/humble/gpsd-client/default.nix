@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-gpsd-client";
   version = "1.0.4-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/humble/gpsd_client/1.0.4-3.tar.gz";
-    name = "1.0.4-3.tar.gz";
-    sha256 = "d6e86a3dfca6590300e385348b7bee223cb4482ed75c23121d54fede32a6d6cf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "gps_umd-release";
+        rev = "release/humble/gpsd_client/1.0.4-3";
+        sha256 = "sha256-P4dlJySWrBf26c3Bmchjgh5ln3A6p76PsN3uGpwh9L0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

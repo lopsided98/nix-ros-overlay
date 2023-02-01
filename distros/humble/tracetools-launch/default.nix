@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-tracetools-launch";
   version = "4.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/humble/tracetools_launch/4.1.1-1.tar.gz";
-    name = "4.1.1-1.tar.gz";
-    sha256 = "4112ff73186f86ffd03f8f0ae8d388a54afc279215633c4525bbf84a0b79eb06";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_tracing-release";
+        rev = "release/humble/tracetools_launch/4.1.1-1";
+        sha256 = "sha256-Bdbc+UqCjEUnzO3oI+u7Wf0bRpxuaoGVSIhpl5mgw20=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-mypy ament-pep257 ament-xmllint pythonPackages.pytest ];

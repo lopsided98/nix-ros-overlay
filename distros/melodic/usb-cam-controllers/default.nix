@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-usb-cam-controllers";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yoshito-n-students/usb_cam_hardware-release/archive/release/melodic/usb_cam_controllers/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "1f3b3500161706be6f2420612ecfff387942aa71cd1cc755da4c40267c707891";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yoshito-n-students";
+        repo = "usb_cam_hardware-release";
+        rev = "release/melodic/usb_cam_controllers/0.1.1-1";
+        sha256 = "sha256-uszQgBOk7T8I+2/fBNac/VAiUPOn0179I8GE5kchOkE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

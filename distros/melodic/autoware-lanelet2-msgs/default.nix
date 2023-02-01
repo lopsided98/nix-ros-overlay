@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-autoware-lanelet2-msgs";
   version = "1.14.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/autoware-ai/messages-release/archive/release/melodic/autoware_lanelet2_msgs/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "499647b4641b7b3894314e2b1855809983b2c25787db20187b41cdb0d2cd5c12";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "autoware-ai";
+        repo = "messages-release";
+        rev = "release/melodic/autoware_lanelet2_msgs/1.14.0-1";
+        sha256 = "sha256-TE9EkqOEUSUa7lmZRTxUGB1jF5iToF7To+fqLBCMiL4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

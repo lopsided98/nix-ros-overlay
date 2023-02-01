@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-image-proc";
   version = "1.17.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/image_proc/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "0bc7a81cc77ecef2be8605ee6d9b064015e01d8c050f4cc90b7d1c8333725d07";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/noetic/image_proc/1.17.0-1";
+        sha256 = "sha256-bAfDVCk+o/IKITQ2GVF4eeAtMoi3Ar42JCe/T9Jk3Nc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ boost catkin ];

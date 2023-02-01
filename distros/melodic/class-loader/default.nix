@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-class-loader";
   version = "0.4.1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/class_loader-release/archive/release/melodic/class_loader/0.4.1-0.tar.gz";
-    name = "0.4.1-0.tar.gz";
-    sha256 = "09c3d35e5afb806c612e843ef15078b97a0a6051174a45712d38c38345eae4a5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "class_loader-release";
+        rev = "release/melodic/class_loader/0.4.1-0";
+        sha256 = "sha256-RtmKBbuwxZzyMoCCZmblQdfDYUWSjnVaVAdWF1H/gFc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

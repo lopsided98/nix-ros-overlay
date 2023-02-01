@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ws281x";
   version = "0.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/CopterExpress/ros_led-release/archive/release/noetic/ws281x/0.0.11-1.tar.gz";
-    name = "0.0.11-1.tar.gz";
-    sha256 = "0071b29514f6c0f6ccc254eda7e8ccf2e5f853124cab97bf156f92bcd07a6318";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "CopterExpress";
+        repo = "ros_led-release";
+        rev = "release/noetic/ws281x/0.0.11-1";
+        sha256 = "sha256-izc3WIENufDJGluuKyE19SEX0vEez8E5kP2svi5yL/I=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ros-environment ];

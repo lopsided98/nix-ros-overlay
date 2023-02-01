@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-novatel-oem7-msgs";
   version = "4.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/noetic/novatel_oem7_msgs/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "635f364bd43680cdbb48e578ab79bccfee1920781a8cb9ac1e86516d92a0ba81";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "novatel-gbp";
+        repo = "novatel_oem7_driver-release";
+        rev = "release/noetic/novatel_oem7_msgs/4.0.0-1";
+        sha256 = "sha256-tGroV/CWSJ0SuA30QZx0IneLcerfyBVSbHJJAH4aceA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

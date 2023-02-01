@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fiducials";
   version = "0.12.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UbiquityRobotics-release/fiducials-release/archive/release/noetic/fiducials/0.12.0-1.tar.gz";
-    name = "0.12.0-1.tar.gz";
-    sha256 = "d9836b134f19867e917a042e35177206a6e63cb4563605ef11dcaa3410714cc9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UbiquityRobotics-release";
+        repo = "fiducials-release";
+        rev = "release/noetic/fiducials/0.12.0-1";
+        sha256 = "sha256-lygkBaUnpPKgoopTvLGqUxvlbUig3MTi9MOoSTTs38o=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

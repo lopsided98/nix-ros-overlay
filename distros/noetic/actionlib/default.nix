@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-actionlib";
   version = "1.14.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/actionlib-release/archive/release/noetic/actionlib/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "cc2f1a34e4fc117f845a8ee44102ac3e2bfeb7d9de2a448d741641f6923cb203";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "actionlib-release";
+        rev = "release/noetic/actionlib/1.14.0-1";
+        sha256 = "sha256-Ohz6+/L4BU4JE8QzhjFDqXhEqKPKfNB0A2+zphAyyag=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

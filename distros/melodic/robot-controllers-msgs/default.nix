@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robot-controllers-msgs";
   version = "0.6.0";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/robot_controllers-release/archive/release/melodic/robot_controllers_msgs/0.6.0-0.tar.gz";
-    name = "0.6.0-0.tar.gz";
-    sha256 = "e4e27516f3adeed4b5e046e2660975a999082fd1d0322b5c1f5ca0c9c2f0759b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "robot_controllers-release";
+        rev = "release/melodic/robot_controllers_msgs/0.6.0-0";
+        sha256 = "sha256-IP5hDGdnR9cDKPD7JkrfRUU2SBJr1k1JME70y4j+tYc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

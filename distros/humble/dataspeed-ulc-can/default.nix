@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, can-msgs, dataspeed-dbw-common, dataspeed-ulc-msgs, geometry-msgs, rclcpp, rclpy, ros-testing, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-dataspeed-ulc-can";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dataspeed_ulc_can/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "e71fda64b95b74c8fc9f38875ada6203f1fe1e9d954218bfa69cb9389498bd4a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dbw_ros-release";
+        rev = "release/humble/dataspeed_ulc_can/2.1.1-1";
+        sha256 = "sha256-YKbXPFHFAlOT2shKvtsTqSUNVW4KkioMLDy78iU6h4c=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

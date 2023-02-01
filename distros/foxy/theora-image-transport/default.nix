@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-theora-image-transport";
   version = "2.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/foxy/theora_image_transport/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "2435aebaff4096dce6b1d3478a56b8474ecddb768f51aaed54f97fb6ee6af1ac";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "image_transport_plugins-release";
+        rev = "release/foxy/theora_image_transport/2.3.3-1";
+        sha256 = "sha256-BacWyDd8H7Wnc41HAg9LI8Pk1SzwMVkQKJeBP8pGdf0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

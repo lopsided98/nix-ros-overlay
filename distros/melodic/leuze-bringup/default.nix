@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-leuze-bringup";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa-led/leuze_ros_drivers-release/archive/release/melodic/leuze_bringup/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "3ce11e52a670ce5b051f04f45d90d7eb9a1a05207a0c60733cb6d5ec8d8e2c29";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa-led";
+        repo = "leuze_ros_drivers-release";
+        rev = "release/melodic/leuze_bringup/1.0.1-1";
+        sha256 = "sha256-28ZrRc4n4BSB1ZYazjhDjqUpaXx1AlrRNL2+Wn+S07A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

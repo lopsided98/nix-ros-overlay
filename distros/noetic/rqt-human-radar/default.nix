@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-human-radar";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros4hri/rqt_human_radar-release/archive/release/noetic/rqt_human_radar/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "6a0e5059377c856f35ce5eeb0fb1338ea03e1b31c1ff47fbbaffe843f0df913a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros4hri";
+        repo = "rqt_human_radar-release";
+        rev = "release/noetic/rqt_human_radar/0.2.1-1";
+        sha256 = "sha256-5u+Sf9AsOhFqY5yX9XvyugIk/Ap36wrPgfvK5MkXK58=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roscpp ];

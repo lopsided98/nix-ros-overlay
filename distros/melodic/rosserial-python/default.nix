@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosserial-python";
   version = "0.8.0";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rosserial-release/archive/release/melodic/rosserial_python/0.8.0-0.tar.gz";
-    name = "0.8.0-0.tar.gz";
-    sha256 = "dc7ee1151a0b5b2dea4b0987e98c0296b67bfc4addb31ae70e14f33e18dd02c2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rosserial-release";
+        rev = "release/melodic/rosserial_python/0.8.0-0";
+        sha256 = "sha256-eIw+IZ0hUx6QHU0gHBz9OCmgO7QgZ+VfCEa6C6GWfg0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

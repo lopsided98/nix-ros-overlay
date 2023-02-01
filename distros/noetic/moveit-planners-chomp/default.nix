@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-planners-chomp";
   version = "1.1.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_planners_chomp/1.1.11-1.tar.gz";
-    name = "1.1.11-1.tar.gz";
-    sha256 = "b3bf0b98e9da1cfa7352742ef0afeaf9cd0bd44be36a99610544ac09b9d4b97d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/noetic/moveit_planners_chomp/1.1.11-1";
+        sha256 = "sha256-AJt1cv4d3WQfCErh17nKlJwluB5ZagnmFHo+xnBrPtw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

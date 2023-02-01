@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-uuv-world-ros-plugins-msgs";
   version = "0.6.13";
 
-  src = fetchurl {
-    url = "https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_world_ros_plugins_msgs/0.6.13-0.tar.gz";
-    name = "0.6.13-0.tar.gz";
-    sha256 = "ba13fec3c313d07c75b858d904461d4edbec745a2f8ceed0d3e7142c6edd8184";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uuvsimulator";
+        repo = "uuv_simulator-release";
+        rev = "release/melodic/uuv_world_ros_plugins_msgs/0.6.13-0";
+        sha256 = "sha256-F6m/mgCU8ogMsN36dAfHHYJ0x4pqA05JF3cqCrpsbhg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

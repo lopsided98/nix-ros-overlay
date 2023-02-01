@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-unique-identifier-msgs";
   version = "2.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/unique_identifier_msgs-release/archive/release/foxy/unique_identifier_msgs/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "7390b7af2ebe08a8f9f6d4f844ee36a7de0bdda6394abb636970e26d930d2ed5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "unique_identifier_msgs-release";
+        rev = "release/foxy/unique_identifier_msgs/2.1.3-1";
+        sha256 = "sha256-eY1F1KUy12A0gHWbric9mKwVbB6V3CIcYzC6uzDNv5M=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

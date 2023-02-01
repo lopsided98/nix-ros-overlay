@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-turtlebot3-gazebo";
   version = "1.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release/archive/release/melodic/turtlebot3_gazebo/1.3.2-1.tar.gz";
-    name = "1.3.2-1.tar.gz";
-    sha256 = "6c2fcf64534c1bf2c45e1525b6ace892fecb354cc998985f969a55755b6e7857";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "turtlebot3_simulations-release";
+        rev = "release/melodic/turtlebot3_gazebo/1.3.2-1";
+        sha256 = "sha256-eyDNkPH3zZEUUCqFCy0/hQW/ufKcgF7C8rVTyMNMWuY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

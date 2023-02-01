@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rmf-task";
   version = "2.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_task-release/archive/release/humble/rmf_task/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "4b3146af040070f44d93f2854cdc919d7d57472815abd05f9f3eb3962714cd04";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_task-release";
+        rev = "release/humble/rmf_task/2.1.1-1";
+        sha256 = "sha256-xbIuHYU+88cnbBGP7NcZP4tomgLWxNGSJuRqyE3kHRM=";
+      };
 
   buildType = "cmake";
   checkInputs = [ ament-cmake-catch2 ament-cmake-uncrustify ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ml-classifiers";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/ml_classifiers-release/archive/release/melodic/ml_classifiers/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "77588596b459e29cb22098164289c3b74e0a6326d372c99ce6025a422a21c564";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "ml_classifiers-release";
+        rev = "release/melodic/ml_classifiers/1.0.1-1";
+        sha256 = "sha256-sjoxMsPaYl6KicCS/VPN/NwLV8LX0nZ5IMat6Iuk3cc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ros-environment ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mesh-client";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/melodic/mesh_client/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "48261f214dab66360d39ceb3d8ba5091f8c552600b3a484866489fa7ddce98f8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mesh_navigation-release";
+        rev = "release/melodic/mesh_client/1.0.1-1";
+        sha256 = "sha256-ivpJEfNTKMdvaeUo5BALd3xWgS0VqU91/yt6q924w3U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pkg-config ];

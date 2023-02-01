@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ecl-geometry";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/foxy/ecl_geometry/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "83b5cf1c8c4720710c6d85c2985dbb6b95a9afde299679ff1a5dcbe77b910ba5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "ecl_core-release";
+        rev = "release/foxy/ecl_geometry/1.2.0-1";
+        sha256 = "sha256-xItaixp9jAdB2ftbKSsjR0x5qfN19QCHzsx8iwehtto=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

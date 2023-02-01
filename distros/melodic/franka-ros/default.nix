@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-franka-ros";
   version = "0.10.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_ros/0.10.1-1.tar.gz";
-    name = "0.10.1-1.tar.gz";
-    sha256 = "2c2bca9bd599d357d5c1658000a4f08d1359da3bfa0e1d9672cebb2c3337255a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "frankaemika";
+        repo = "franka_ros-release";
+        rev = "release/melodic/franka_ros/0.10.1-1";
+        sha256 = "sha256-s0tJdQWTFKOVc0iTFu4iNLBkczyooC+JgTM0YFm8Weo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rmf-fleet-adapter";
   version = "2.1.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/humble/rmf_fleet_adapter/2.1.2-1.tar.gz";
-    name = "2.1.2-1.tar.gz";
-    sha256 = "a921eb4efc348842adeccb006e900bc5b84d55e78e26e6101959915d4baccd4f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_ros2-release";
+        rev = "release/humble/rmf_fleet_adapter/2.1.2-1";
+        sha256 = "sha256-nhu7m0bf0ORhJStcjxrdpmVXf0oRVIdm8C2QDRcy+zQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake eigen libyamlcpp ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robot-calibration-msgs";
   version = "0.7.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/robot_calibration-release/archive/release/melodic/robot_calibration_msgs/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "b4dd12056bdc00277601ac794c2c95da87c269ae1457634029dc22fda28b3092";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "robot_calibration-release";
+        rev = "release/melodic/robot_calibration_msgs/0.7.2-1";
+        sha256 = "sha256-TcMd42tEe9LOT+m4e9F0iC+SoNpLt+YYrfn3fj//p04=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

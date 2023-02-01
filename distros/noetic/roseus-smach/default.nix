@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-roseus-smach";
   version = "1.7.5-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_roseus-release/archive/release/noetic/roseus_smach/1.7.5-2.tar.gz";
-    name = "1.7.5-2.tar.gz";
-    sha256 = "3653ba3552f0c9ed994fe7615e914131a9c3d7d586b8c8a1cef7dea81df42ddc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_roseus-release";
+        rev = "release/noetic/roseus_smach/1.7.5-2";
+        sha256 = "sha256-oMBE1hwOzAalZJlTz9GMSdxrlUUBMWaeNuxL5rBzQhI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

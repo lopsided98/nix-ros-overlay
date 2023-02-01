@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-franka-example-controllers";
   version = "0.10.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_example_controllers/0.10.1-1.tar.gz";
-    name = "0.10.1-1.tar.gz";
-    sha256 = "4c7b7d9b253dad24bd1b7709892ea28aae91f821f3679bb2e8f46dcdd776b10e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "frankaemika";
+        repo = "franka_ros-release";
+        rev = "release/melodic/franka_example_controllers/0.10.1-1";
+        sha256 = "sha256-8p7Gw20DddL8YvDbOFecVs3VYEhU+2mALEOjNJY3pdA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin eigen message-generation ];

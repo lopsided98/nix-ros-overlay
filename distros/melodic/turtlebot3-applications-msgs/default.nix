@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-turtlebot3-applications-msgs";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_applications_msgs-release/archive/release/melodic/turtlebot3_applications_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "1dc86e6606109d67a3f28c9bb18934265196c0d3b1338722bc8bc4f9454112cf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "turtlebot3_applications_msgs-release";
+        rev = "release/melodic/turtlebot3_applications_msgs/1.0.0-1";
+        sha256 = "sha256-ySfkXnUDVO8iWYDy2YaAk2TFidpSKZOiPBBtER9cszU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

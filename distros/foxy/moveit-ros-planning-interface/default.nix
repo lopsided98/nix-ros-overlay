@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-moveit-ros-planning-interface";
   version = "2.2.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_ros_planning_interface/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "ca37188371f43c950d16d706337959fa067539f8114613605fff60a2cf043a69";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "moveit2-release";
+        rev = "release/foxy/moveit_ros_planning_interface/2.2.3-1";
+        sha256 = "sha256-xa5vk62MUNG3CgkkKGvVShCu+/s9iQN6ujfoCD7nZJ8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake eigen eigen3-cmake-module moveit-common ];

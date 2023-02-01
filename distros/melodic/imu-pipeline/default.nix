@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-imu-pipeline";
   version = "0.2.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/imu_pipeline-release/archive/release/melodic/imu_pipeline/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "3a0c3f1b2c077f581a50e83d9d44575e2f927bbb780feedc7f0a309454e9517b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "imu_pipeline-release";
+        rev = "release/melodic/imu_pipeline/0.2.4-1";
+        sha256 = "sha256-awKeMQEfTzkS6edp4EaTzjmCHNbNWUcbanXOe5x13GY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

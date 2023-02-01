@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosbag-snapshot-msgs";
   version = "1.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rosbag_snapshot-release/archive/release/noetic/rosbag_snapshot_msgs/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "753504bb1f1d792be57ea96c9b060f32508b1005d6d7f18311b93e59d8ebca1c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rosbag_snapshot-release";
+        rev = "release/noetic/rosbag_snapshot_msgs/1.0.4-1";
+        sha256 = "sha256-SHHdVyr5zYyIyNnHyeJ+/GM8ohYgljDREbpKQAaxz3g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

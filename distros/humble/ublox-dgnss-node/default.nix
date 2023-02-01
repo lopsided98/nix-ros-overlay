@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-ublox-dgnss-node";
   version = "0.3.5-r4";
 
-  src = fetchurl {
-    url = "https://github.com/aussierobots/ublox_dgnss-release/archive/release/humble/ublox_dgnss_node/0.3.5-4.tar.gz";
-    name = "0.3.5-4.tar.gz";
-    sha256 = "633667e4147582fb9fce8f11a1baed9ce39ad4cead4598c4b7bcbd1b8cc98614";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "aussierobots";
+        repo = "ublox_dgnss-release";
+        rev = "release/humble/ublox_dgnss_node/0.3.5-4";
+        sha256 = "sha256-dgX6n6jvaBL2uHtDfImzoDMIddLnQMleaf0VMdCrpTk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pkg-config ];

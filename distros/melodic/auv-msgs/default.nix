@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-auv-msgs";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/oceansystemslab/auv_msgs-release/archive/release/melodic/auv_msgs/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "773b034a505af916981ca2116c387d65004a1cbe4a55296cf81ac9517a75f21d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "oceansystemslab";
+        repo = "auv_msgs-release";
+        rev = "release/melodic/auv_msgs/0.1.1-1";
+        sha256 = "sha256-cs5oRlyiuV6Es/pjqEwJdiKfwE83/1Ii28Cw1RU5pMg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

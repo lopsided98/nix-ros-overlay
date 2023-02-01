@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-generic-can";
   version = "0.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_generic_can/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "4c51b85c313eb57e34959a02a67669cdbdc8d173d6d924758aee89cf0fe0d769";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/melodic/cob_generic_can/0.7.4-1";
+        sha256 = "sha256-b/85kJwXUocbHjdxuw45b3elIHmEIg0WYAQfSCD9blo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

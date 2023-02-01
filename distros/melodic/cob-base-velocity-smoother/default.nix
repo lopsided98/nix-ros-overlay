@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-base-velocity-smoother";
   version = "0.8.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_base_velocity_smoother/0.8.12-1.tar.gz";
-    name = "0.8.12-1.tar.gz";
-    sha256 = "13be84692b2b926f21237c439e0ed560779daa14bd6d239b3e9ea681b1873b27";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_control-release";
+        rev = "release/melodic/cob_base_velocity_smoother/0.8.12-1";
+        sha256 = "sha256-q9NYH5Z9vWs02pVu3JN3NrX3HnXKhX0tv+VDXwCAliE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

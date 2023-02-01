@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hector-gazebo-thermal-camera";
   version = "0.5.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/melodic/hector_gazebo_thermal_camera/0.5.4-1.tar.gz";
-    name = "0.5.4-1.tar.gz";
-    sha256 = "dcd0abbdd0b1bf98a7b10e37e08f6822214a4c088f3068ff6f4fed38d928ea39";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_gazebo-release";
+        rev = "release/melodic/hector_gazebo_thermal_camera/0.5.4-1";
+        sha256 = "sha256-6h4wPMO/Rda03LKTTNKb35YD/xj0BKpHeKTj+F/tG74=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

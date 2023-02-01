@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rc-genicam-api";
   version = "2.5.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/melodic/rc_genicam_api/2.5.12-1.tar.gz";
-    name = "2.5.12-1.tar.gz";
-    sha256 = "8c9d0a6bf77ddb0dc4f00a375d8aab35d4c60d0cb43fb4a12c71c320e80a0953";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "roboception-gbp";
+        repo = "rc_genicam_api-release";
+        rev = "release/melodic/rc_genicam_api/2.5.12-1";
+        sha256 = "sha256-YkKXiMMUXT+aUMsQJFQ3PcRm8kWdFZTFd4NM5JLRheA=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

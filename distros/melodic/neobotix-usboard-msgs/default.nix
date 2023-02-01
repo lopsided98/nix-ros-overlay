@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-neobotix-usboard-msgs";
   version = "3.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/neobotix_usboard_msgs/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "8e3808b58c3ad9838b1305e754baab380f6c8e95b6dd9be062f2bd9563f080d5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "astuff_sensor_msgs-release";
+        rev = "release/melodic/neobotix_usboard_msgs/3.0.2-1";
+        sha256 = "sha256-FkLfNEhyjDgYfmaDBmx0zqL8Cln3la2d2JqGz8c1ZJ8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ros-environment ];

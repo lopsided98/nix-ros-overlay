@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-phidgets-digital-outputs";
   version = "2.1.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/foxy/phidgets_digital_outputs/2.1.2-1.tar.gz";
-    name = "2.1.2-1.tar.gz";
-    sha256 = "af3cf33c950347d0b22e70200ba8892438a45eb561c17a4e13c4bf740bea0d71";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "phidgets_drivers-release";
+        rev = "release/foxy/phidgets_digital_outputs/2.1.2-1";
+        sha256 = "sha256-c1B9DcHHYsoio8fPtZAaN91r6RTWPgyBM4E6kkgDxVw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

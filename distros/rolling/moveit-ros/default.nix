@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-moveit-ros";
   version = "2.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/rolling/moveit_ros/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "0373ab417f6608a3b241248548d890892369b25fba9b43fead2a4691bc47a625";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "moveit2-release";
+        rev = "release/rolling/moveit_ros/2.6.0-1";
+        sha256 = "sha256-CiXDR1puB1i3EcPhmFDWtu1mO3WtFDUzgsQeAw8iRy8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

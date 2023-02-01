@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-cascade-lifecycle-msgs";
   version = "0.0.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fmrico/cascade_lifecycle-release/archive/release/foxy/cascade_lifecycle_msgs/0.0.8-1.tar.gz";
-    name = "0.0.8-1.tar.gz";
-    sha256 = "f0e734ab6805379d32d941c7358bcbdc82d1774c192a0201be5c7f8fb0168081";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fmrico";
+        repo = "cascade_lifecycle-release";
+        rev = "release/foxy/cascade_lifecycle_msgs/0.0.8-1";
+        sha256 = "sha256-fvZjg2KWhJNs9BZJ6KrY9zSlYiPrRGXW/GPrftC0z60=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

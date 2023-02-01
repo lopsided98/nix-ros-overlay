@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-undercarriage-ctrl";
   version = "0.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_undercarriage_ctrl/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "49d269b1a9fd3828f89f52d1bacf8ec3738a034f943b51a60b424a2725dd1312";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/melodic/cob_undercarriage_ctrl/0.7.4-1";
+        sha256 = "sha256-UmfZcvp1cJ2ZZW0jRa90G49TofwGA/bg9K9TAwa82oo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rmf-building-sim-gz-classic-plugins";
   version = "2.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/rolling/rmf_building_sim_gz_classic_plugins/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "1eafb20a8b02c1420325bd9b8f17f42b37b7ff46cc7a2be5c519a5cbf2d06f6b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_simulation-release";
+        rev = "release/rolling/rmf_building_sim_gz_classic_plugins/2.0.0-1";
+        sha256 = "sha256-Mg2m6ogUnJjTr5g0leCh5gggCHw5ZKS/X+zhWhTyyHs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

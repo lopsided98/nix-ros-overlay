@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-turtlebot3-fake-node";
   version = "2.2.5-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_simulations-release/archive/release/humble/turtlebot3_fake_node/2.2.5-3.tar.gz";
-    name = "2.2.5-3.tar.gz";
-    sha256 = "24a1b429e5aa4b9a506665fa696a16cb88ba9426e6c301ada28d2ded1196561c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "turtlebot3_simulations-release";
+        rev = "release/humble/turtlebot3_fake_node/2.2.5-3";
+        sha256 = "sha256-RC56Xh4EBNwDvXTRDOIw1kV2Q9fZB4veFuXoOZI3KZA=";
+      };
 
   buildType = "ament_cmake";
   propagatedBuildInputs = [ ament-cmake geometry-msgs nav-msgs rclcpp robot-state-publisher sensor-msgs tf2 tf2-msgs turtlebot3-msgs ];

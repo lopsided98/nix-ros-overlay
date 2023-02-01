@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fetch-moveit-config";
   version = "0.9.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/noetic/fetch_moveit_config/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "9dc3b097e595365fa0262b98d1c77dbd4cd3c592e23a2bad6da000f1940ce8dc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "fetch_ros-release";
+        rev = "release/noetic/fetch_moveit_config/0.9.1-1";
+        sha256 = "sha256-oX1eF+OwQpu6ju9N9kH0oASegqesALkuwUs355Wr3Mk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

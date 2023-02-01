@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-dynamixel-hardware";
   version = "0.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_hardware-release/archive/release/rolling/dynamixel_hardware/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "3de9166f8edf8dfa5c09a66c877574b810a2603c140ac3e813c7db5b17881389";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "dynamixel_hardware-release";
+        rev = "release/rolling/dynamixel_hardware/0.3.1-1";
+        sha256 = "sha256-GRh4SkC1vL7YCPrxbatVCu6rWYODn9zVp2z+PRc4L9Q=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-resource-retriever";
   version = "3.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/rolling/resource_retriever/3.2.2-1.tar.gz";
-    name = "3.2.2-1.tar.gz";
-    sha256 = "ebded33ec2aef9e2cd39648ef0a4f4d1402a9b153544ccb539717c27f50aa5b6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "resource_retriever-release";
+        rev = "release/rolling/resource_retriever/3.2.2-1";
+        sha256 = "sha256-rkBYfjdQoGFm1+1wwXiodEPbQUInVehpNe1Y2ua6h/8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

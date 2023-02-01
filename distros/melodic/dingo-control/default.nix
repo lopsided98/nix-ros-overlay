@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dingo-control";
   version = "0.1.12-r2";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/melodic/dingo_control/0.1.12-2.tar.gz";
-    name = "0.1.12-2.tar.gz";
-    sha256 = "5c1d0f0b180e99178dc7b9b588c6891dcda9c47821d5c4cae2f254867940d78e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "dingo-release";
+        rev = "release/melodic/dingo_control/0.1.12-2";
+        sha256 = "sha256-39cBJ5XCP5VqtUZlrzAIMpvBzeu7tBkSU/39sNOiafk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

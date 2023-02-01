@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tf2-kdl";
   version = "0.6.5";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_kdl/0.6.5-0.tar.gz";
-    name = "0.6.5-0.tar.gz";
-    sha256 = "af0a21267f7ff0d435f5b54a3b55575e399daaf75ed8e01f09906e1b9af018cf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry2-release";
+        rev = "release/melodic/tf2_kdl/0.6.5-0";
+        sha256 = "sha256-ym2F2xDtQaAQvkFv4wBDrmXtXZ3Kcz0ENNb+cL8qQBg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

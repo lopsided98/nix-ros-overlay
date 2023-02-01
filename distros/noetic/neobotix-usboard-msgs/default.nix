@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-neobotix-usboard-msgs";
   version = "3.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/noetic/neobotix_usboard_msgs/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "caefc604c5d3ad50449839b1d48d05cc3d2c0f3695abb2c89ac1411d9e5f1500";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "astuff_sensor_msgs-release";
+        rev = "release/noetic/neobotix_usboard_msgs/3.3.0-1";
+        sha256 = "sha256-yNEAYOH1z1KchvD2r2t1D5ZZshbuDVnRF8wewizXRMA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ros-environment ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cpu-temperature-diagnostics";
   version = "0.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yotabits/cpu_temperature_diagnostics-release/archive/release/melodic/cpu_temperature_diagnostics/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "8d3218594e5c1ffcff59e590550b892ad1192987698156b748d5b344876daebc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yotabits";
+        repo = "cpu_temperature_diagnostics-release";
+        rev = "release/melodic/cpu_temperature_diagnostics/0.0.1-1";
+        sha256 = "sha256-eDNECUYEyqoAmtQ7dqRgTQAV15XPfVgUmWg5tsfFRw4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

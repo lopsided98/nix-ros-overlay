@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-lms1xx";
   version = "0.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/lms1xx-release/archive/release/noetic/lms1xx/0.3.0-2.tar.gz";
-    name = "0.3.0-2.tar.gz";
-    sha256 = "542f79a2e70c555941a560b801052355adfc58fb791078a6da4d28d7e01a6ffe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "lms1xx-release";
+        rev = "release/noetic/lms1xx/0.3.0-2";
+        sha256 = "sha256-3L+mj7WIM7ZasReF+lKT07BZb0+TLo41dgASpnCEq60=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

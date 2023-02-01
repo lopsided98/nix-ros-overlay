@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rqt-reconfigure";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_reconfigure-release/archive/release/rolling/rqt_reconfigure/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "ccfafba30324330e7f6f9e7417a8b697803daf0445f64a3b9ce50f3e46d3c70c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_reconfigure-release";
+        rev = "release/rolling/rqt_reconfigure/1.3.0-1";
+        sha256 = "sha256-imyCM9Mvm/eGzYdTLUH0yhaKTw/+vyKTGdQ0AyPpHjo=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-xmllint ];

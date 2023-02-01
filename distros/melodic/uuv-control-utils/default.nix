@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-uuv-control-utils";
   version = "0.6.13";
 
-  src = fetchurl {
-    url = "https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_control_utils/0.6.13-0.tar.gz";
-    name = "0.6.13-0.tar.gz";
-    sha256 = "7b4acaefcbd1899b5a4d5c3b9e4a24617317b65a86ca79322bdf871fadf69e74";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uuvsimulator";
+        repo = "uuv_simulator-release";
+        rev = "release/melodic/uuv_control_utils/0.6.13-0";
+        sha256 = "sha256-r7Ia+Du5nQrEtLF9D89K7LhbarorvcLd7d3vgAsgQTU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

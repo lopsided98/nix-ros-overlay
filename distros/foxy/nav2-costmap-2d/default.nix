@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-nav2-costmap-2d";
   version = "0.4.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_costmap_2d/0.4.7-1.tar.gz";
-    name = "0.4.7-1.tar.gz";
-    sha256 = "a0547f62e47d8436f04fa72473c690c922b1cea6132aece7709e14ab1f26914f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/foxy/nav2_costmap_2d/0.4.7-1";
+        sha256 = "sha256-db3nzuU97qjtn4HGD0JymGgQ+RfyL58ATeUoTul44Ls=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake nav2-common ];

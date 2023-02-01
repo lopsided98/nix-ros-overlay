@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-boost-geometry-util";
   version = "0.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/OUXT-Polaris/boost_geometry_util-release/archive/release/humble/boost_geometry_util/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "3054977c41c7664c8e4c412abaaf49933b4ce3bf732691fa81e83e60378888a7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "OUXT-Polaris";
+        repo = "boost_geometry_util-release";
+        rev = "release/humble/boost_geometry_util/0.0.1-1";
+        sha256 = "sha256-5P2YMX4buwUYt7NAF7FiWJguryH/I8GC2y+vIK5KI0w=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-auto ];

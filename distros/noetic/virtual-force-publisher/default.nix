@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-virtual-force-publisher";
   version = "2.2.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/virtual_force_publisher/2.2.12-1.tar.gz";
-    name = "2.2.12-1.tar.gz";
-    sha256 = "5dacad62f81a05fffab95f19dd5ebf306902d484eae537467c45ec348267ce64";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_common-release";
+        rev = "release/noetic/virtual_force_publisher/2.2.12-1";
+        sha256 = "sha256-dG82XAJu9RwjPifnBPv4urgsJdnqiQd1UCWssNU5oXY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

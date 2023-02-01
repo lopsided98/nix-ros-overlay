@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-uwsim-osgworks";
   version = "3.0.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/uji-ros-pkg/uwsim_osgworks-release/archive/release/melodic/uwsim_osgworks/3.0.3-2.tar.gz";
-    name = "3.0.3-2.tar.gz";
-    sha256 = "c1c8871ee6ee12995a6964a45f8a46d2a347e8c9871bec8d1e573850576e01d9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uji-ros-pkg";
+        repo = "uwsim_osgworks-release";
+        rev = "release/melodic/uwsim_osgworks/3.0.3-2";
+        sha256 = "sha256-haOgU4DIs56qzCLTmqkgQ7RhoFlLFUIFclA5hT2pjz4=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-resource-retriever";
   version = "2.3.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/foxy/resource_retriever/2.3.4-1.tar.gz";
-    name = "2.3.4-1.tar.gz";
-    sha256 = "268fa444bd603eb6879698154fecdeb0b29b76e2e03c4fe52b44433b61a90c06";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "resource_retriever-release";
+        rev = "release/foxy/resource_retriever/2.3.4-1";
+        sha256 = "sha256-olGvFzLQMH9UJmwBvrLSRGVQ2RW3QrJKDiRDp2a4a+s=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

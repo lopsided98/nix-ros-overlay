@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-head-action";
   version = "1.10.17-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/pr2_head_action/1.10.17-1.tar.gz";
-    name = "1.10.17-1.tar.gz";
-    sha256 = "424a5a18ed18b42bcde7b0f810213435066b8250169b2ff65886802760c7421d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_controllers-release";
+        rev = "release/melodic/pr2_head_action/1.10.17-1";
+        sha256 = "sha256-yR5x7fEeubJI8gc/0JavBXsiE1qpXaInmutGYWBouT0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

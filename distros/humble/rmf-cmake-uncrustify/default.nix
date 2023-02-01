@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rmf-cmake-uncrustify";
   version = "1.2.0-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_cmake_uncrustify-release/archive/release/humble/rmf_cmake_uncrustify/1.2.0-4.tar.gz";
-    name = "1.2.0-4.tar.gz";
-    sha256 = "f2c3d4532958095a5a10fef5b73027da5a3fdcf215cd17bebe9cc907735d1598";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_cmake_uncrustify-release";
+        rev = "release/humble/rmf_cmake_uncrustify/1.2.0-4";
+        sha256 = "sha256-YwXGjK9Uaj03Os5oVwylNtS6dDmirgOgm6bY+0K+8Ic=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-core ];

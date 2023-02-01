@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-robotraconteur";
   version = "0.15.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/robotraconteur-packaging/robotraconteur-ros-release/archive/release/noetic/robotraconteur/0.15.5-1.tar.gz";
-    name = "0.15.5-1.tar.gz";
-    sha256 = "db9915e61c7d083039943fbab37e24d53709b8237ac97f026b55b3e4ce84a30d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "robotraconteur-packaging";
+        repo = "robotraconteur-ros-release";
+        rev = "release/noetic/robotraconteur/0.15.5-1";
+        sha256 = "sha256-jizu6zEKGpXLk8jRm0bXbqV0DbOS+bFHBFQy41rFMuU=";
+      };
 
   buildType = "cmake";
   buildInputs = [ catkin ];

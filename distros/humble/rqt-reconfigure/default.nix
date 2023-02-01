@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rqt-reconfigure";
   version = "1.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_reconfigure-release/archive/release/humble/rqt_reconfigure/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "802dd23f447a9046b0dabd35ecf312f76d6a79183c07be905a56b3f6dcfa4e4c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_reconfigure-release";
+        rev = "release/humble/rqt_reconfigure/1.1.1-1";
+        sha256 = "sha256-PFDoCfUOEV6QDxl+KWTOyMjsNDRlAgRM1+8SXP68teQ=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-xmllint ];

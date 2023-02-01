@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rcgcrd-spl-4-conversion";
   version = "0.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/foxy/rcgcrd_spl_4_conversion/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "b0b528744b54bf9aa53ce17f70f00cc2e11e7e0b8b355fb032ad52f75fcf9275";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "gc_spl-release";
+        rev = "release/foxy/rcgcrd_spl_4_conversion/0.0.1-1";
+        sha256 = "sha256-KYbdLGy1OPZpqYnm+cu3tEgde7VN4r8E4NgrTd6L12Y=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

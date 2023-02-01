@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rqt-joint-trajectory-plot";
   version = "0.0.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/rqt_joint_trajectory_plot-release/archive/release/melodic/rqt_joint_trajectory_plot/0.0.5-1.tar.gz";
-    name = "0.0.5-1.tar.gz";
-    sha256 = "8ed2a8dd2ebbbaf91dceb82134c324f5efb676ddc2767175967f96361357c77e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "rqt_joint_trajectory_plot-release";
+        rev = "release/melodic/rqt_joint_trajectory_plot/0.0.5-1";
+        sha256 = "sha256-1xK5N1zbHJu8kG3TdTAJarNHkDSGrDF8W8ij1PLz6uE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch roslint rostest ];

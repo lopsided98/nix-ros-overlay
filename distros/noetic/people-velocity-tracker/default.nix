@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-people-velocity-tracker";
   version = "1.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/OSUrobotics/people-release/archive/release/noetic/people_velocity_tracker/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "74f53f59f4d27e127b40e908bc6dddc8459ffd2799a54ee69331e136c77a34ed";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "OSUrobotics";
+        repo = "people-release";
+        rev = "release/noetic/people_velocity_tracker/1.4.2-1";
+        sha256 = "sha256-XWtQPrQ9iU+nUy4kgWbjxyxME7P9n2dT5WqsdSLp9qI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

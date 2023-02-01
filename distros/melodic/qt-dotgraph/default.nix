@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-qt-dotgraph";
   version = "0.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_dotgraph/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "b79f1f8cc31a3161e9adeb92baa0f9dcef8c42688eb095352d846455bc96c55e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "qt_gui_core-release";
+        rev = "release/melodic/qt_dotgraph/0.4.2-1";
+        sha256 = "sha256-dkAg/cFhTaG/z2BBkDeDk117Si29jRwrPt/iA+F0h14=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools ];

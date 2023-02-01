@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, python3Packages, rospy, rostopic }:
 buildRosPackage {
   pname = "ros-noetic-generic-throttle";
-  version = "0.6.30-r2";
+  version = "0.6.31-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/noetic/generic_throttle/0.6.30-2.tar.gz";
-    name = "0.6.30-2.tar.gz";
-    sha256 = "e1d9831a6935d4114245b8c6ea3f3c08ef6c2467bc9563e01e4544a790af8109";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_command_tools-release";
+        rev = "release/noetic/generic_throttle/0.6.31-1";
+        sha256 = "sha256-9I5F2bac6HLI3pkC+EtmKznywR+XcBc8ofUJrWP9fhs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools ];

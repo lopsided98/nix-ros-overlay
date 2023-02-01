@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-multi-map-server";
   version = "2.2.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/multi_map_server/2.2.12-1.tar.gz";
-    name = "2.2.12-1.tar.gz";
-    sha256 = "48e09df586a52fb77cc5f1f9eae7e36d1087c5e2bb62a98006950e9cacc393c8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_common-release";
+        rev = "release/melodic/multi_map_server/2.2.12-1";
+        sha256 = "sha256-e0aYLRc1kI+gHkjBn9uy+l6RrVim+ePXD+pJDLdDYNU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin jsk-tools pythonPackages.pillow pythonPackages.pyyaml rosmake ];

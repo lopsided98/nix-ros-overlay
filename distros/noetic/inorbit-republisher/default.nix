@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-inorbit-republisher";
   version = "0.2.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/inorbit-ai/ros_inorbit_samples-release/archive/release/noetic/inorbit_republisher/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "ab97b01aeeb56aeb52012f4a293f300fe793e250a9355ce211e50ec94312ed7f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "inorbit-ai";
+        repo = "ros_inorbit_samples-release";
+        rev = "release/noetic/inorbit_republisher/0.2.5-1";
+        sha256 = "sha256-Bv0QQ3O6DuPCm+5E4cCDRiU+Wc4GuVMtS/BCP879aYk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

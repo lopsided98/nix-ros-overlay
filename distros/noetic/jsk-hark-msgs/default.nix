@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-jsk-hark-msgs";
   version = "4.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/noetic/jsk_hark_msgs/4.3.2-1.tar.gz";
-    name = "4.3.2-1.tar.gz";
-    sha256 = "a3716e37532d49d5ca8565c09e68e01b88ca2f25da26a4b0f4360b473df6c2e1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_common_msgs-release";
+        rev = "release/noetic/jsk_hark_msgs/4.3.2-1";
+        sha256 = "sha256-+A7rktLXqq4ygxJQExrx043pmh0dGRNRZbtzr+BgPbk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

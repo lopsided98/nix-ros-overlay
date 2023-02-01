@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rwt-utils-3rdparty";
   version = "0.1.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/noetic/rwt_utils_3rdparty/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "f3ec7faa0955de68a7bd6bf197af4ff6ff680a69591bcba13617b380ca8b7056";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "visualization_rwt-release";
+        rev = "release/noetic/rwt_utils_3rdparty/0.1.1-2";
+        sha256 = "sha256-PlVplDJ/EAKAUxhoxQRs3L8sbc+XIB3zLS14qk6DZzM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

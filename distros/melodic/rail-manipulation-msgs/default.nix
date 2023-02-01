@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rail-manipulation-msgs";
   version = "0.0.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/gt-rail-release/rail_manipulation_msgs-release/archive/release/melodic/rail_manipulation_msgs/0.0.14-1.tar.gz";
-    name = "0.0.14-1.tar.gz";
-    sha256 = "37dfdcee92e63c8bdb5f83315c2d96936813f40d158a3afbd68e35fceb6e2965";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "gt-rail-release";
+        repo = "rail_manipulation_msgs-release";
+        rev = "release/melodic/rail_manipulation_msgs/0.0.14-1";
+        sha256 = "sha256-0/2RbRMbmLw91NWYti/DDjH5BjYOM1TiqGZPEra31FY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

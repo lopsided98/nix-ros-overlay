@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-node-manager-fkie";
   version = "0.8.12";
 
-  src = fetchurl {
-    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/melodic/node_manager_fkie/0.8.12-0.tar.gz";
-    name = "0.8.12-0.tar.gz";
-    sha256 = "6b4d7ed02437aa8bb4675c90822d4215267b78598d7125b49bf6b0f1b584cef0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fkie-release";
+        repo = "multimaster_fkie-release";
+        rev = "release/melodic/node_manager_fkie/0.8.12-0";
+        sha256 = "sha256-F+OaFhYu1rHziJbhFT8LmvfVR85qhKWD2W4NyngIpko=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

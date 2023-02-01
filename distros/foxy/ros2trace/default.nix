@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ros2trace";
   version = "1.0.5-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/foxy/ros2trace/1.0.5-2.tar.gz";
-    name = "1.0.5-2.tar.gz";
-    sha256 = "9cd998d905f4d740bf63d06a6713efb94e58344f75eaafea34a604c8becf6904";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_tracing-release";
+        rev = "release/foxy/ros2trace/1.0.5-2";
+        sha256 = "sha256-CgBKgBGhao/LTNw/4UXmK0cTI0HyMYufrg+ebI3reTI=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-mypy ament-pep257 ament-xmllint pythonPackages.pytest ];

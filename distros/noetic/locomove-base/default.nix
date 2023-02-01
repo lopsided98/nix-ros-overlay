@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-locomove-base";
   version = "0.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/locomove_base/0.3.0-2.tar.gz";
-    name = "0.3.0-2.tar.gz";
-    sha256 = "adc38904239987e62831c4fc0ce28d392d817e3266eb8e03fe1b01ba6b4e8a79";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/noetic/locomove_base/0.3.0-2";
+        sha256 = "sha256-2Ri7zaCF0qhInUk7qMDo4+7PUZ057974rXvgFwG8cvE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, pluginlib, rclcpp, rcpputils, rcutils, rosbag2-compression, rosbag2-test-common, zstd-vendor }:
 buildRosPackage {
   pname = "ros-rolling-rosbag2-compression-zstd";
-  version = "0.18.0-r3";
+  version = "0.19.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_compression_zstd/0.18.0-3.tar.gz";
-    name = "0.18.0-3.tar.gz";
-    sha256 = "6ac8ade1433939e652fdbcffc6cdb1f2fd703cf5c7a6cb32617eeda715ca7e60";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosbag2-release";
+        rev = "release/rolling/rosbag2_compression_zstd/0.19.0-1";
+        sha256 = "sha256-LKctObrk06fWrF38w3S6gACeHlApN7pfbf5LEL+56V4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

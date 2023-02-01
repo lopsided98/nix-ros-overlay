@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-single-joint-position-action";
   version = "1.10.17-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/single_joint_position_action/1.10.17-1.tar.gz";
-    name = "1.10.17-1.tar.gz";
-    sha256 = "f7761a78b2539d7cc7f01ad00d85cb426c9b57b8b696cf41d8a98e00192fb1bc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_controllers-release";
+        rev = "release/melodic/single_joint_position_action/1.10.17-1";
+        sha256 = "sha256-6Fq+JbW5CRRduXsiPwNVI3F37QWLphjiaJSOVFFee+Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

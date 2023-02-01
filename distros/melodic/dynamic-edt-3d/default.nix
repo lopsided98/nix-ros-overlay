@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dynamic-edt-3d";
   version = "1.9.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap-release/archive/release/melodic/dynamic_edt_3d/1.9.8-1.tar.gz";
-    name = "1.9.8-1.tar.gz";
-    sha256 = "03b45d87c83b117ff3202a82849b1f7cc07c2d0a4624c2b001abb92539330a55";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "octomap-release";
+        rev = "release/melodic/dynamic_edt_3d/1.9.8-1";
+        sha256 = "sha256-522JD7zQBjHhrle/McBU6igMD2aGFVJvyheYkpGEJ3g=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

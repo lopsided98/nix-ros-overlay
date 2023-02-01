@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ecl-command-line";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/foxy/ecl_command_line/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "604b5c066bb33505bf009cf2bb4ceb39af86e86a1a1fd9185661e4fd0d94c6bd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "ecl_core-release";
+        rev = "release/foxy/ecl_command_line/1.2.0-1";
+        sha256 = "sha256-OJqjljzcxcgIc4ddIIPO4LkpmLtja1iz8TgUAW00g/w=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ecl-build ];

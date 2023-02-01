@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-sophus";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/sophus-release/archive/release/foxy/sophus/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "99781189c8556ca3e7e369b588103964bc1866e55a875b26aac9efb311f1b880";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "sophus-release";
+        rev = "release/foxy/sophus/1.2.1-1";
+        sha256 = "sha256-/fr0tgRRgBcz7eJIMTxzab4H3swd8AtsTXDhkUUPPDo=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

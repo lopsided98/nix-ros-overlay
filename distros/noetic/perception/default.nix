@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-perception";
   version = "1.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/metapackages-release/archive/release/noetic/perception/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "13be696a9b374687d002e1b040ddc16f33931c1b5dc9c2f8e802bc510cb1a541";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "metapackages-release";
+        rev = "release/noetic/perception/1.5.0-1";
+        sha256 = "sha256-01jTD7u8J1hJ6oocF/YZW+dG8aTm1NqKNMAZDsT9onA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

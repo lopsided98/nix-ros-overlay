@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, boost, cppzmq, ncurses, rclcpp, ros-environment }:
 buildRosPackage {
   pname = "ros-foxy-behaviortree-cpp-v3";
-  version = "3.8.0-r1";
+  version = "3.8.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/BehaviorTree/behaviortree_cpp-release/archive/release/foxy/behaviortree_cpp_v3/3.8.0-1.tar.gz";
-    name = "3.8.0-1.tar.gz";
-    sha256 = "cc9f077d023e9bc01723c53ba0f50fe797e0af985e3f37620ac648ff8b9b891d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "BehaviorTree";
+        repo = "behaviortree_cpp_v3-release";
+        rev = "release/foxy/behaviortree_cpp_v3/3.8.2-1";
+        sha256 = "sha256-KuS/C9quRgq4cnqiu7BeZt1GD2vayxHHdnFZtvQBnck=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment ];

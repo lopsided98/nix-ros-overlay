@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-abb-irb4400-support";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/abb-release/archive/release/melodic/abb_irb4400_support/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "49a2d88c75c80ea8234b1e32f6d0307a2a1c4f6d570255c1eb66f8945314ab6a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "abb-release";
+        rev = "release/melodic/abb_irb4400_support/1.3.1-1";
+        sha256 = "sha256-o1q1Q3Dwd1Qm1w/EbLjYdaR2jEZnhJl1ylYI7d1LpGM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

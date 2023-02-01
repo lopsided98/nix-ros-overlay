@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-lanelet2-examples";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/melodic/lanelet2_examples/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "9f93b536ff1bc3af4626a20119bbcf166d0468f0b3ddd108ac6a484ca7e67ffc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fzi-forschungszentrum-informatik";
+        repo = "lanelet2-release";
+        rev = "release/melodic/lanelet2_examples/1.0.1-1";
+        sha256 = "sha256-rq0B8gzC9cG7IVN3QBPKpTmL/HxYog5JtFFOx2C41X4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

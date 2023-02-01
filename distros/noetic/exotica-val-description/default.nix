@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-exotica-val-description";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/wxmerkt/exotica_val_description-release/archive/release/noetic/exotica_val_description/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "bef122656f23a0a64ed34867b445ee7e3ce6cbfec5bec7472fd8823bf8f08a73";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wxmerkt";
+        repo = "exotica_val_description-release";
+        rev = "release/noetic/exotica_val_description/1.0.0-1";
+        sha256 = "sha256-3tIPzhzHqVjh09fL/JcRv/CCVyzqgM5xiuOyAFYSYZg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

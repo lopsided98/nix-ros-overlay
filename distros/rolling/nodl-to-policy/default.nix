@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-nodl-to-policy";
   version = "1.0.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/nodl_to_policy-release/archive/release/rolling/nodl_to_policy/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "f7b37c75966366663ef843e1593782fee11d5162878c282405ef8e450f5ccd16";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "nodl_to_policy-release";
+        rev = "release/rolling/nodl_to_policy/1.0.0-2";
+        sha256 = "sha256-e3+aKkyGXpBFCwulLKU8Tv8PSYEtqUTsp6iL1bE5W9g=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-lint-auto ament-mypy ament-pep257 ament-pycodestyle python3Packages.pytest-mock pythonPackages.pytest ros-testing test-msgs ];

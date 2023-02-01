@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-orocos-kdl";
   version = "3.3.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/orocos_kinematics_dynamics-release/archive/release/foxy/orocos_kdl/3.3.4-1.tar.gz";
-    name = "3.3.4-1.tar.gz";
-    sha256 = "833a045a938048afc42fc7f73466b686961d98d5763a8a2a05d0df29fa6dd704";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "orocos_kinematics_dynamics-release";
+        rev = "release/foxy/orocos_kdl/3.3.4-1";
+        sha256 = "sha256-OGJTX9wdGxUeopm3ThD1jhLJoYEQuTqZnMZSrdQiZO8=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

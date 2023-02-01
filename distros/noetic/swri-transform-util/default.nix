@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-swri-transform-util";
   version = "2.15.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_transform_util/2.15.2-1.tar.gz";
-    name = "2.15.2-1.tar.gz";
-    sha256 = "b13f9b412a95b3f02362ff166edbb3dcb90ddc1582d49de1962b1de983b526ee";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "marti_common-release";
+        rev = "release/noetic/swri_transform_util/2.15.2-1";
+        sha256 = "sha256-2p3MOalmCs2ZG8zRynSO91R1iscd+UTfXl3D3yMGJdM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pkg-config python3Packages.setuptools ];

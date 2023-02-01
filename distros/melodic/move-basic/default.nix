@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-move-basic";
   version = "0.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UbiquityRobotics-release/move_basic-release/archive/release/melodic/move_basic/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "e7aa6c6ce08b3a9f4fd248dfa9a8763cbd58f5f11ea6fca68e631b6a5c41b372";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UbiquityRobotics-release";
+        repo = "move_basic-release";
+        rev = "release/melodic/move_basic/0.4.1-1";
+        sha256 = "sha256-dJNWbtCqjd8Dz9r3wFWL914lKbDmURmxmuQeVX3yRY4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

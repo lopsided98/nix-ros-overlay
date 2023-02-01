@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rtabmap-ros";
   version = "0.20.22-r1";
 
-  src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_ros/0.20.22-1.tar.gz";
-    name = "0.20.22-1.tar.gz";
-    sha256 = "862a4619a3f25e8d7abd8b817a9172ea1fd8384dd042db0d59f0198d6a17ba9b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "introlab";
+        repo = "rtabmap_ros-release";
+        rev = "release/humble/rtabmap_ros/0.20.22-1";
+        sha256 = "sha256-ASf2TsLhTW+nWZfOMxsgZ0mGwkJbxrPhb3aguTbu28c=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python pcl ros-environment rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-kobuki-firmware";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/stonier/kobuki_firmware-release/archive/release/foxy/kobuki_firmware/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "7b0b378354b311045a6970f362e6bd0f6d9e58bc58343573bd732845b6297ebd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "stonier";
+        repo = "kobuki_firmware-release";
+        rev = "release/foxy/kobuki_firmware/1.2.0-1";
+        sha256 = "sha256-bieNP7SYmjrth3ney7LQlvhZ6M4DEkOpP5L8VXtpI3U=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

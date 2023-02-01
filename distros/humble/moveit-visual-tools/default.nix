@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-moveit-visual-tools";
   version = "4.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_visual_tools-release/archive/release/humble/moveit_visual_tools/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "d0684935949157d40acbd7f24b91ac6d230925b3d996b998428aaa71f95f006a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "moveit_visual_tools-release";
+        rev = "release/humble/moveit_visual_tools/4.1.0-1";
+        sha256 = "sha256-OsgJs0kV7m3GzRlDL1x8i5hG03piwA+9f+Mbpx+dOmw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

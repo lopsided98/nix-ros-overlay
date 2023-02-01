@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dbw-fca-joystick-demo";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/melodic/dbw_fca_joystick_demo/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "8978b799a0c317d5c98f696753ad3a60643917c7143e4f8bdce7ba3120bed68d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dbw_fca_ros-release";
+        rev = "release/melodic/dbw_fca_joystick_demo/1.3.0-1";
+        sha256 = "sha256-Fn8+InBX58ewDJm9AyqUOEIDpxZ7KuOgK9en71GBakU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

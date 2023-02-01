@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-pcl-msgs";
   version = "1.0.0-r7";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/pcl_msgs-release/archive/release/humble/pcl_msgs/1.0.0-7.tar.gz";
-    name = "1.0.0-7.tar.gz";
-    sha256 = "5510338bcc3a5a0eebb0790e0d4352901b7a7c01018bc66614cedc8885b793ee";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "pcl_msgs-release";
+        rev = "release/humble/pcl_msgs/1.0.0-7";
+        sha256 = "sha256-YdspDlpwU8CIVBKEa3kLCnDsR3MsuehC9zuvXtAnt4w=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

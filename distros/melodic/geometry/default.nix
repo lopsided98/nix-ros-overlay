@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-geometry";
   version = "1.12.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry-release/archive/release/melodic/geometry/1.12.1-1.tar.gz";
-    name = "1.12.1-1.tar.gz";
-    sha256 = "6c8b032a8095842fb79e21e2c07aa440e71193130702a637dd46ea02e34166a4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry-release";
+        rev = "release/melodic/geometry/1.12.1-1";
+        sha256 = "sha256-rPe1b8eic+/XG6//88KNV+G4uLzlfidDYdu4Mr6WAqs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

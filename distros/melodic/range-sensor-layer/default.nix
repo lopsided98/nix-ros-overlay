@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-range-sensor-layer";
   version = "0.5.0";
 
-  src = fetchurl {
-    url = "https://github.com/wu-robotics/navigation_layers_release/archive/release/melodic/range_sensor_layer/0.5.0-0.tar.gz";
-    name = "0.5.0-0.tar.gz";
-    sha256 = "8e94872327b9579a9ca65c6aefe659bfffb7544a61ddca67580e8707af85d2e7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wu-robotics";
+        repo = "navigation_layers_release";
+        rev = "release/melodic/range_sensor_layer/0.5.0-0";
+        sha256 = "sha256-8SiulEXW0dKWiBN9w64+zEtibfr1LHau3juuhKAx3nw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

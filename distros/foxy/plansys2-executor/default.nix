@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-plansys2-executor";
   version = "1.0.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/foxy/plansys2_executor/1.0.10-1.tar.gz";
-    name = "1.0.10-1.tar.gz";
-    sha256 = "b9aa39e244b2aa96a088355a3506168e62aabf420007eb2f6dfaf92a4b8f975d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "IntelligentRoboticsLabs";
+        repo = "ros2_planning_system-release";
+        rev = "release/foxy/plansys2_executor/1.0.10-1";
+        sha256 = "sha256-MhwdLeWJ+sNb8qwLo3VjyVV8gH40bKgnjORNgNueuao=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

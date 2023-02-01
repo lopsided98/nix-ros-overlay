@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dbw-mkz-msgs";
   version = "1.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/melodic/dbw_mkz_msgs/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "ae6836add104248771d4cea931272882283c7c524f3a18e19fa890bb28d63f61";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dbw_mkz_ros-release";
+        rev = "release/melodic/dbw_mkz_msgs/1.6.0-1";
+        sha256 = "sha256-yPKRzKr33qeNpT5S8q4jiaWwOSYJiUajsXZ99c/rEXA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

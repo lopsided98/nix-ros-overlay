@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-bond";
   version = "4.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/rolling/bond/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "42f779351935aabc09e1ad12c0eb674a811c93c048332cbea18d3d28549ecc8e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "bond_core-release";
+        rev = "release/rolling/bond/4.0.0-1";
+        sha256 = "sha256-c8CNFiNhffaL6ikNaC25RLYzu6olhlMYnXu9X6CoK+U=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

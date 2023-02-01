@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ar-track-alvar-msgs";
   version = "0.7.1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ar_track_alvar-release/archive/release/melodic/ar_track_alvar_msgs/0.7.1-0.tar.gz";
-    name = "0.7.1-0.tar.gz";
-    sha256 = "0c39c3c9732ca3712a78f43bcc2545f90b846aff2559de8a5fc7a9b4a6efb27f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ar_track_alvar-release";
+        rev = "release/melodic/ar_track_alvar_msgs/0.7.1-0";
+        sha256 = "sha256-nriMXkCoZIyzCSRxmRIZmUSrBuilV5HkxbQsH0UfQPM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

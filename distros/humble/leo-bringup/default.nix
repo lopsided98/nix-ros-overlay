@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, image-proc, leo-description, leo-fw, robot-state-publisher, rosapi, rosbridge-server, sensor-msgs, v4l2-camera, xacro }:
 buildRosPackage {
   pname = "ros-humble-leo-bringup";
-  version = "1.2.1-r1";
+  version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/humble/leo_bringup/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "bd8435ced84926f83669db9c567a5ded8be43fd1701860efa560617737b1a593";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "leo_robot-release";
+        rev = "release/humble/leo_bringup/1.3.0-1";
+        sha256 = "sha256-vmrWA/EPZOCWoQ7Q4HEn8XK/zZkthaDpV5X5MUrlaRs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

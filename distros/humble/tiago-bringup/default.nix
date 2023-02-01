@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-tiago-bringup";
   version = "4.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_robot-release/archive/release/humble/tiago_bringup/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "75481da17bcd49b6cec9c4574ddc3e04b415de5230889be65803dd02c2ccddf4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "tiago_robot-release";
+        rev = "release/humble/tiago_bringup/4.0.1-1";
+        sha256 = "sha256-VqAjgBteNjH4NqYWBQwwl3wljc5/d4Cnb/n3fLTIRjc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

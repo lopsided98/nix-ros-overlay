@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-autoware-lanelet2-msgs";
   version = "1.14.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/autoware-ai/messages-release/archive/release/noetic/autoware_lanelet2_msgs/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "3c187aaea630f63cb1c0988407ffd065bd2fc5c393e4ca0d27acbad5f2bd8c75";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "autoware-ai";
+        repo = "messages-release";
+        rev = "release/noetic/autoware_lanelet2_msgs/1.14.0-1";
+        sha256 = "sha256-TE9EkqOEUSUa7lmZRTxUGB1jF5iToF7To+fqLBCMiL4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

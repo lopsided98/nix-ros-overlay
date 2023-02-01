@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rwt-steer";
   version = "0.1.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/noetic/rwt_steer/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "ef01c5f7b4513522cfaaa9a29a46804879659b020c16643a624e9b6a254bd751";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "visualization_rwt-release";
+        rev = "release/noetic/rwt_steer/0.1.1-2";
+        sha256 = "sha256-ZBqPWxC1EzA1fHOJQwAn5/WWVxjVHYWqeuIiAul0iKg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

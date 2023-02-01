@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ibeo-msgs";
   version = "3.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/ibeo_msgs/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "0e7dc35d20626bbd58866e4dbbcc1bd00b8bdd1b09d5487629311d0fa91c04e2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "astuff_sensor_msgs-release";
+        rev = "release/melodic/ibeo_msgs/3.0.2-1";
+        sha256 = "sha256-Zh5gYrXDgrnHZX6dZoe1VJcu+l6u0vzlJm8JAuAL4tU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ros-environment ];

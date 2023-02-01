@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-python-cmake-module";
   version = "0.8.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/python_cmake_module-release/archive/release/foxy/python_cmake_module/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "8693f665b38570b167804d0bb681fd8ffcccc1b0d634a13dcaa67750bd9cceeb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "python_cmake_module-release";
+        rev = "release/foxy/python_cmake_module/0.8.1-1";
+        sha256 = "sha256-LOULK9QVVH9h2gJosDy87LqzQEpxSTeIW1aXg9DGKVI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

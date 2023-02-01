@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-openrtm-aist";
   version = "1.1.2-r7";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/openrtm_aist-release/archive/release/melodic/openrtm_aist/1.1.2-7.tar.gz";
-    name = "1.1.2-7.tar.gz";
-    sha256 = "8de78280affbdc5fdf3537a0be8de962d0743e3674a89f879526c614f8c78acc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "openrtm_aist-release";
+        rev = "release/melodic/openrtm_aist/1.1.2-7";
+        sha256 = "sha256-6SKhRKgW8NBQoaSAp/NMq+1idlrxPOd+/HT/Ys6uQ9k=";
+      };
 
   buildType = "cmake";
   buildInputs = [ automake cmake doxygen libtool pkg-config python ];

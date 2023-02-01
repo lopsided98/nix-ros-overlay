@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-controller-manager";
   version = "0.11.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/controller_manager/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "0add7e3275e2a73878493d6ec1cf2c85aa92669018ddfdee29b03665d3509ebd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_control-release";
+        rev = "release/foxy/controller_manager/0.11.0-1";
+        sha256 = "sha256-l/P2+pK4qGhac/TWdfqtlrCfrrZh2+3DBNKmMk/+wZE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

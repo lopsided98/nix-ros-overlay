@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-tlsf";
   version = "0.8.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/tlsf-release/archive/release/rolling/tlsf/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "630646dacfdc23ca3289df562f57adb46da49b7209eb463785c2b1acb4c9c2bb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "tlsf-release";
+        rev = "release/rolling/tlsf/0.8.1-1";
+        sha256 = "sha256-J3uDqguM6UDt7W7TOtGgqhQzGzuPTqZkX5b7Tt1Fdfg=";
+      };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-lint-auto ament-lint-common ];

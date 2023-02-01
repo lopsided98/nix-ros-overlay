@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-voice-text";
   version = "2.1.24-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/voice_text/2.1.24-2.tar.gz";
-    name = "2.1.24-2.tar.gz";
-    sha256 = "be625a2d0c79a132c7f14afdaa7c31051f581c974fb414a9dbefed7b36ac7892";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_3rdparty-release";
+        rev = "release/melodic/voice_text/2.1.24-2";
+        sha256 = "sha256-hkOtOua6/snq3kx6v2TJHl6iEPsXsCU4lJEsSlwHstQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation roscpp ];

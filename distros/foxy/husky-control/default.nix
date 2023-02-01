@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-husky-control";
   version = "1.0.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/foxy/husky_control/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "885573fcb0d1e63219747c38757d1965669f205e2f490b12c84cb8b46b01e175";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "husky-release";
+        rev = "release/foxy/husky_control/1.0.7-1";
+        sha256 = "sha256-2iKOmjG2XtmMCdrJuSBOP7H+KEv0QQDwO7ddup2DWfc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

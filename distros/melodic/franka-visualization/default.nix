@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-franka-visualization";
   version = "0.10.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_visualization/0.10.1-1.tar.gz";
-    name = "0.10.1-1.tar.gz";
-    sha256 = "dc1eff2c1031962f07c4f39d595d238c9e0e233ea2e93b9925d72ddd87b43cdd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "frankaemika";
+        repo = "franka_ros-release";
+        rev = "release/melodic/franka_visualization/0.10.1-1";
+        sha256 = "sha256-sr9NeGx2mzy79LTkzszTHIdYAOPl/9mMKEMAo1laTIM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

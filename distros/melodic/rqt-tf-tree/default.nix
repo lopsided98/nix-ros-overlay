@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rqt-tf-tree";
   version = "0.6.0";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_tf_tree-release/archive/release/melodic/rqt_tf_tree/0.6.0-0.tar.gz";
-    name = "0.6.0-0.tar.gz";
-    sha256 = "c52046ad978eb9ae418a866706d9b909646dee0f8b76deed4fa501e0894c3ee4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_tf_tree-release";
+        rev = "release/melodic/rqt_tf_tree/0.6.0-0";
+        sha256 = "sha256-jd6rCCqHIt2BU9tygcvV/SkrvS5b4bRgYkTKzEQb0k8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

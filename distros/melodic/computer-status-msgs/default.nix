@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-computer-status-msgs";
   version = "2.1.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/130s/computer_status_msgs-release/archive/release/melodic/computer_status_msgs/2.1.0-2.tar.gz";
-    name = "2.1.0-2.tar.gz";
-    sha256 = "ec7f20dd506aa760527208fe2765288f0362145aae7a9f1f2355ad7152618327";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "130s";
+        repo = "computer_status_msgs-release";
+        rev = "release/melodic/computer_status_msgs/2.1.0-2";
+        sha256 = "sha256-FgVw4PNwtA2MUSIEBO2nWBt19mEMJ/1oGYnaf0BZfWw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

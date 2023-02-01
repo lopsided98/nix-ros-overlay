@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cl-tf2";
   version = "0.2.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/cl_tf2/0.2.13-1.tar.gz";
-    name = "0.2.13-1.tar.gz";
-    sha256 = "79a0f1f28598841bfb2d752b6229cee11aa0edb6e379f7e20607a3a682533ba3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "roslisp_common-release";
+        rev = "release/melodic/cl_tf2/0.2.13-1";
+        sha256 = "sha256-yKI5YR5knDQbcsJI0KR4OWzkcaqNgyMnBO2J0dkoBiA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

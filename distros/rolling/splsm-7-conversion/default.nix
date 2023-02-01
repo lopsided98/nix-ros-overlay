@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-splsm-7-conversion";
   version = "3.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/r2r_spl-release/archive/release/rolling/splsm_7_conversion/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "38e30d3ef0fffac0af0c445703df95e8608b02f6f3781dbe9904c5334612ead4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "r2r_spl-release";
+        rev = "release/rolling/splsm_7_conversion/3.0.1-1";
+        sha256 = "sha256-hot8TlsdjVjgyVkdoUFaIy47vVP67OUYUwJHsdfSm0M=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

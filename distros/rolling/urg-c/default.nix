@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-urg-c";
   version = "1.0.4001-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/urg_c-release/archive/release/rolling/urg_c/1.0.4001-3.tar.gz";
-    name = "1.0.4001-3.tar.gz";
-    sha256 = "26741360e399f73202bac31bacd0ee0f2b9ac531c22ee1c8eed8a8c528efe4b5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "urg_c-release";
+        rev = "release/rolling/urg_c/1.0.4001-3";
+        sha256 = "sha256-mLPyvykduwQfjJnXdqEjfbvuc4jn37BwcetdxOLxEGQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

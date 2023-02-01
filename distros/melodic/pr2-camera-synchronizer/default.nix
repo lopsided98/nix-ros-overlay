@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-camera-synchronizer";
   version = "1.6.31-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_robot-release/archive/release/melodic/pr2_camera_synchronizer/1.6.31-1.tar.gz";
-    name = "1.6.31-1.tar.gz";
-    sha256 = "8f46811d2e5f2730cb58f1da99382bb709d97cea3ee13bd3337788e34ebc1594";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_robot-release";
+        rev = "release/melodic/pr2_camera_synchronizer/1.6.31-1";
+        sha256 = "sha256-R3+Z39SKLoHHXkJGFhCKmK+MKPMEIag8YNU+v+c6uWE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

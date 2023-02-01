@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fcl-catkin";
   version = "0.6.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/wxmerkt/fcl_catkin-release/archive/release/noetic/fcl_catkin/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "7c598aae4e97df1ac798a8966162a5a3dadf27e307ea4883d9c01ac0a15a4929";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wxmerkt";
+        repo = "fcl_catkin-release";
+        rev = "release/noetic/fcl_catkin/0.6.1-1";
+        sha256 = "sha256-WcsDCNzbxl+69WQ6m1ctq7rgXfwPDQ88VqXiRPC8rpU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

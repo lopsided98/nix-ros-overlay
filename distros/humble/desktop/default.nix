@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-desktop";
   version = "0.10.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/variants-release/archive/release/humble/desktop/0.10.0-1.tar.gz";
-    name = "0.10.0-1.tar.gz";
-    sha256 = "f23e7461292916b93a2ee8847d2b359d69b2bcf9ef5dd2f152020ac8ca19c066";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "variants-release";
+        rev = "release/humble/desktop/0.10.0-1";
+        sha256 = "sha256-Oe0Gi0EAbvTGmyy7KyrLQqqS5ZVrp2Tdkdx4F82uVqw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

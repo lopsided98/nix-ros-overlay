@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rclc-lifecycle";
   version = "3.0.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclc-release/archive/release/rolling/rclc_lifecycle/3.0.8-1.tar.gz";
-    name = "3.0.8-1.tar.gz";
-    sha256 = "52bc873b1c2bb39618e17c944a2a938fcc8f66b70c4bece390891b8737500b33";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rclc-release";
+        rev = "release/rolling/rclc_lifecycle/3.0.8-1";
+        sha256 = "sha256-dSm6/KSiXqDkR5lYLwETmQ/J87xexs1BugD7b6Zu1Sg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

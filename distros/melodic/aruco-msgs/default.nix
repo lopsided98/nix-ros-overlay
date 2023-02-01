@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-aruco-msgs";
   version = "2.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/aruco_ros-release/archive/release/melodic/aruco_msgs/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "6656c736a9ae940515cf11eb01f4050ad369b4aff892f215bab02008a65912eb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "aruco_ros-release";
+        rev = "release/melodic/aruco_msgs/2.2.2-1";
+        sha256 = "sha256-wIVki0ZvgCi2re4l6/4vXcq7IM6MStVbgoJ9u41cysg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

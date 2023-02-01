@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-joy-listener";
   version = "0.2.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/wu-robotics/wu_ros_tools/archive/release/melodic/joy_listener/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "c3a314410863c09fdf904cae518744a981c5290d9db85848d99f16df301d4351";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wu-robotics";
+        repo = "wu_ros_tools";
+        rev = "release/melodic/joy_listener/0.2.6-1";
+        sha256 = "sha256-c93REbjUAhrp1YfHOpbVOmhCu0HBqh/5lm8waHpTw7A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

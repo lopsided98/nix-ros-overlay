@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robot-self-filter";
   version = "0.1.31";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/robot_self_filter-gbp/archive/release/melodic/robot_self_filter/0.1.31-0.tar.gz";
-    name = "0.1.31-0.tar.gz";
-    sha256 = "8a6538dd30770242d25476003332f8ac072fbb0837e50cdde55600dc7d063150";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "robot_self_filter-gbp";
+        rev = "release/melodic/robot_self_filter/0.1.31-0";
+        sha256 = "sha256-fSOJ641jMpQY0E3vOqszw4Sp6GUk8N9otjtEjp/AwVs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

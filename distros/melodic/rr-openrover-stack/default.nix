@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rr-openrover-stack";
   version = "1.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/RoverRobotics-release/rr_openrover_stack-release/archive/release/melodic/rr_openrover_stack/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "b8c6b289d8b66c77cd4d55ce405038ea9ee68c772aca5d35d1f90eae916b5b38";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "RoverRobotics-release";
+        repo = "rr_openrover_stack-release";
+        rev = "release/melodic/rr_openrover_stack/1.1.1-1";
+        sha256 = "sha256-n5TVxSbBX3K415By96nXHStFhCPbOE2c6XEtzOZ76lE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

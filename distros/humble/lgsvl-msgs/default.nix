@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-lgsvl-msgs";
   version = "0.0.4-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/lgsvl_msgs-release/archive/release/humble/lgsvl_msgs/0.0.4-3.tar.gz";
-    name = "0.0.4-3.tar.gz";
-    sha256 = "0cacb1bdf9448391eafbe75a1076838f44c83e6676180b7ad82bdfe700097e87";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "lgsvl_msgs-release";
+        rev = "release/humble/lgsvl_msgs/0.0.4-3";
+        sha256 = "sha256-Pd5TP0wLuUr0/m+WvLpkvURpB0d0hbik3SOPkifg8YU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ros-environment rosidl-default-generators ];

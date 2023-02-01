@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ati-force-torque";
   version = "1.1.1-r3";
 
-  src = fetchurl {
-    url = "https://github.com/KITrobotics/ati_force_torque-release/archive/release/melodic/ati_force_torque/1.1.1-3.tar.gz";
-    name = "1.1.1-3.tar.gz";
-    sha256 = "ab56ef07e73679565c0e42290e449c0c3fd2531b8c77eb99e290c8b88c65717d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "KITrobotics";
+        repo = "ati_force_torque-release";
+        rev = "release/melodic/ati_force_torque/1.1.1-3";
+        sha256 = "sha256-/FA6D2V/hyrWdD7gyLDxm7T0jK8DVDA3K2X0aDU4PwU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules message-generation ];

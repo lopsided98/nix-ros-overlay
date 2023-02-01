@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-slime-wrapper";
   version = "0.4.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/melodic/slime_wrapper/0.4.16-1.tar.gz";
-    name = "0.4.16-1.tar.gz";
-    sha256 = "e7e2a818ac01d6b941f20940051f9656a0be07afac18f76adf66ff761569575b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "code-iai-release";
+        repo = "ros_emacs_utils-release";
+        rev = "release/melodic/slime_wrapper/0.4.16-1";
+        sha256 = "sha256-7O9ReKaQ2FNpX4XtyjPGDKtDq98D4Rf89AAu8L4jzik=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

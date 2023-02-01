@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rwt-image-view";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/melodic/rwt_image_view/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "4636e54ee0c17a57480aeb4114e5c0686504da5eec5b8ffb1c44f237f1c8241a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "visualization_rwt-release";
+        rev = "release/melodic/rwt_image_view/0.1.1-1";
+        sha256 = "sha256-Acfcnlp8FhvFUgoTH3qeYFvDWi0kpPNoUSkZo7Gbrts=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

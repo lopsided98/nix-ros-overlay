@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nextage-moveit-config";
   version = "0.8.6-r3";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/rtmros_nextage-release/archive/release/melodic/nextage_moveit_config/0.8.6-3.tar.gz";
-    name = "0.8.6-3.tar.gz";
-    sha256 = "f788c840073dd3e24b8bd1fe72976ff35ae5885b88439ece7c649af799f4ee80";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "rtmros_nextage-release";
+        rev = "release/melodic/nextage_moveit_config/0.8.6-3";
+        sha256 = "sha256-T+yz7UBjk0q5yt+1rxMEIo0D6G3Y+EFmBjImRAvBZoo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

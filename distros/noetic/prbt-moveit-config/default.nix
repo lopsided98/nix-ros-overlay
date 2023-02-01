@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-prbt-moveit-config";
   version = "0.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/noetic/prbt_moveit_config/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "430c360df9a9c17698dd9c114f73ff1b4aa200027bbd8f01cbf6211b0b41d13a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_robots-release";
+        rev = "release/noetic/prbt_moveit_config/0.6.0-1";
+        sha256 = "sha256-uMTTKOOOp6ywG+smOT/07fju3NPZyk7JVPiQKErJE+U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

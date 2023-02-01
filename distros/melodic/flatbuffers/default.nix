@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-flatbuffers";
   version = "1.1.0";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/flatbuffers-release/archive/release/melodic/flatbuffers/1.1.0-0.tar.gz";
-    name = "1.1.0-0.tar.gz";
-    sha256 = "5795283a62da224d9cf76e21ea581f48ce9e1bc37be751aaf547cfbba77a1bf8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "flatbuffers-release";
+        rev = "release/melodic/flatbuffers/1.1.0-0";
+        sha256 = "sha256-2PV4s67rvz8Vq6OlGA/IhNZiUq3eJ+p+bD7I1GCevls=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

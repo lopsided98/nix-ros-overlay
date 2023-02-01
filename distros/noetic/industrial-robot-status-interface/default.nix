@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-industrial-robot-status-interface";
   version = "0.1.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/gavanderhoorn/industrial_robot_status_controller-release/archive/release/noetic/industrial_robot_status_interface/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "c1b73b8150bcb01b2bee3263026aa99571d1dcbdd4237e30ec9bafbed2938bcf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "gavanderhoorn";
+        repo = "industrial_robot_status_controller-release";
+        rev = "release/noetic/industrial_robot_status_interface/0.1.2-1";
+        sha256 = "sha256-J1PiBH1lTC2sKh1Dc3IxXux9JyByOJNeXzxjdVkbU5c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

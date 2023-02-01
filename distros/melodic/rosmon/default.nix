@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosmon";
   version = "2.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/xqms/rosmon-release/archive/release/melodic/rosmon/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "a27ecc9867d2130a7fedc83d531bc182cae7ad0e88b6fe34a2a2fc5bb05fa39d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "xqms";
+        repo = "rosmon-release";
+        rev = "release/melodic/rosmon/2.3.2-1";
+        sha256 = "sha256-94/KUGh9QR8/bii6CE9eyqmuhAtlDzmbhp0+pReFI+o=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

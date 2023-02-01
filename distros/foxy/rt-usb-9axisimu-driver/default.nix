@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rt-usb-9axisimu-driver";
   version = "2.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rt-net-gbp/rt_usb_9axisimu_driver-release/archive/release/foxy/rt_usb_9axisimu_driver/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "15b06d3e00389385bd7281cadc150770c7bb3b1da73349030b5a15163bf30536";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rt-net-gbp";
+        repo = "rt_usb_9axisimu_driver-release";
+        rev = "release/foxy/rt_usb_9axisimu_driver/2.0.1-1";
+        sha256 = "sha256-TkEWfWO53W9C6ZMN+GqZsVS52PXPSQpGuxicolcAYjw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

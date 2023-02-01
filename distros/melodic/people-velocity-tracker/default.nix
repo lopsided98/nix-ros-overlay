@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-people-velocity-tracker";
   version = "1.4.0-r4";
 
-  src = fetchurl {
-    url = "https://github.com/OSUrobotics/people-release/archive/release/melodic/people_velocity_tracker/1.4.0-4.tar.gz";
-    name = "1.4.0-4.tar.gz";
-    sha256 = "dacb341d242868f85f245a5bb14821c4eeeb205b300ed187a78d9577bf052861";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "OSUrobotics";
+        repo = "people-release";
+        rev = "release/melodic/people_velocity_tracker/1.4.0-4";
+        sha256 = "sha256-43swuu1bQpHs+5nQk+SW9QqY7xmcoY+377nYDSOYp7M=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

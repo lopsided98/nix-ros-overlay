@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosmake";
   version = "1.14.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/rosmake/1.14.9-1.tar.gz";
-    name = "1.14.9-1.tar.gz";
-    sha256 = "a67c86505fa7edb380511dfb3e9021f6bbab44a11835af67117aa980af88e35a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros-release";
+        rev = "release/melodic/rosmake/1.14.9-1";
+        sha256 = "sha256-PxD7GIPJ954/wCCykY4NfAQUstJ1Im6agRC1QL8Fifo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ pythonPackages.setuptools ];

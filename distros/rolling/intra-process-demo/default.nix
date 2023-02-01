@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-intra-process-demo";
   version = "0.23.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/intra_process_demo/0.23.0-1.tar.gz";
-    name = "0.23.0-1.tar.gz";
-    sha256 = "2dc030e2c49944e053966eeed62da9bc3bdec86c23e3c28f4b4d189fd16678fd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/rolling/intra_process_demo/0.23.0-1";
+        sha256 = "sha256-GO7twzLlSocs7Nw2nwbptUg/4OF1Rb4+e447yIs0yrE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake std-msgs ];

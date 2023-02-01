@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rmf-visualization-schedule";
   version = "2.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/rolling/rmf_visualization_schedule/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "fd136396fa91e3c93bd61e0113c0d5cd0d0dd71f562e1dd8cc43dcf7f0514aa5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_visualization-release";
+        rev = "release/rolling/rmf_visualization_schedule/2.0.1-1";
+        sha256 = "sha256-R2q8DUCMH2rXcmK8n01D8agp9VHhIpGVI52W3+7i4mQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

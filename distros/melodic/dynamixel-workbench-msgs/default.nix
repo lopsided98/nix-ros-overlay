@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dynamixel-workbench-msgs";
   version = "2.0.1";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-msgs-release/archive/release/melodic/dynamixel_workbench_msgs/2.0.1-0.tar.gz";
-    name = "2.0.1-0.tar.gz";
-    sha256 = "28cc9426aa876bb8a64ed009d5683a61c547ff9b4926c68556e1a434065a8b18";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "dynamixel-workbench-msgs-release";
+        rev = "release/melodic/dynamixel_workbench_msgs/2.0.1-0";
+        sha256 = "sha256-U6Mv9XdTnO0prCwU7Bg8uadBljqtqM2uZp7wHC7pSvU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

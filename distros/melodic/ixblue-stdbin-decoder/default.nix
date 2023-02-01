@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ixblue-stdbin-decoder";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ixblue/ixblue_stdbin_decoder-release/archive/release/melodic/ixblue_stdbin_decoder/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "7e0f3d91ae4c3d9349e4cf450439284061c27f00c84ee94069daaf12e26c8988";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ixblue";
+        repo = "ixblue_stdbin_decoder-release";
+        rev = "release/melodic/ixblue_stdbin_decoder/0.2.0-1";
+        sha256 = "sha256-fjucNh530wldQfBOf7SINGGp0e2XJKOhjMCw3aiWI2w=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

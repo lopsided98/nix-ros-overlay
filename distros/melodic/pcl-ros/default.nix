@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pcl-ros";
   version = "1.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/perception_pcl-release/archive/release/melodic/pcl_ros/1.7.4-1.tar.gz";
-    name = "1.7.4-1.tar.gz";
-    sha256 = "81c8f34db4e676394e91982470aaf3e88b0e23f955a4f5b49efbddbe812dada8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "perception_pcl-release";
+        rev = "release/melodic/pcl_ros/1.7.4-1";
+        sha256 = "sha256-wd5tKEGYlmrmK72ZMh7L9VHXF+gej2e5w47cNai0wO0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rosconsole roslib ];

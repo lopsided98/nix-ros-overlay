@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-hand";
   version = "0.6.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_hand-release/archive/release/melodic/cob_hand/0.6.9-1.tar.gz";
-    name = "0.6.9-1.tar.gz";
-    sha256 = "2a8a2a1e8f89cdc66ba4d91edd7384208ec45f145fbc4d3ddc71f4e25b900cef";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_hand-release";
+        rev = "release/melodic/cob_hand/0.6.9-1";
+        sha256 = "sha256-pPNYD0te7Tnzwfqxx07NyXbTZccIZSOuiBHfQxliHV8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

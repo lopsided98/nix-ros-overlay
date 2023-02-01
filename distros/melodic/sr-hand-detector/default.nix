@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-sr-hand-detector";
   version = "0.0.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/shadow-robot/sr_hand_detector-release/archive/release/melodic/sr_hand_detector/0.0.3-2.tar.gz";
-    name = "0.0.3-2.tar.gz";
-    sha256 = "542a25bb3b2df53eb8477962b57471d8d1fb080e74d0d182c58a5f86b05037b8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "shadow-robot";
+        repo = "sr_hand_detector-release";
+        rev = "release/melodic/sr_hand_detector/0.0.3-2";
+        sha256 = "sha256-MseTsSlRiRX4vL7s59AtkbPsC+GCGxYc96o+K7nZWCA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

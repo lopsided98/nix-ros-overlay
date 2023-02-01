@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosmon-core";
   version = "2.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/xqms/rosmon-release/archive/release/noetic/rosmon_core/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "de8c15525cefb38d9727a49a66f71f2da3b4bf31de94bd7057d6a80ab5ec8806";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "xqms";
+        repo = "rosmon-release";
+        rev = "release/noetic/rosmon_core/2.4.0-1";
+        sha256 = "sha256-4yeYCphNEYE+LF7Wjair0JG5DkEzo1XjchpuRRTsEsw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3 ];

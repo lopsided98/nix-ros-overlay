@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tuw-geometry";
   version = "0.0.3";
 
-  src = fetchurl {
-    url = "https://github.com/tuw-robotics/tuw_geometry-release/archive/release/melodic/tuw_geometry/0.0.3-0.tar.gz";
-    name = "0.0.3-0.tar.gz";
-    sha256 = "96df80626ab8ecd101acb1f972c815be0d105e9e5539e73d691ea3b2ef5d3e84";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tuw-robotics";
+        repo = "tuw_geometry-release";
+        rev = "release/melodic/tuw_geometry/0.0.3-0";
+        sha256 = "sha256-1VyEdZJbBU90yTHVYzBuK41YB+MHIZ92xkui7EykPTE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ boost catkin eigen ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-graph-msgs";
   version = "0.1.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/graph_msgs-release/archive/release/noetic/graph_msgs/0.1.0-2.tar.gz";
-    name = "0.1.0-2.tar.gz";
-    sha256 = "ce7125a86592674cfafa8ae3ba856c85fdf5359b0207a7537841f532679f0b25";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PickNikRobotics";
+        repo = "graph_msgs-release";
+        rev = "release/noetic/graph_msgs/0.1.0-2";
+        sha256 = "sha256-t7ggPFTWsw+cJsxTPHhEsAqpkSTa1ruf06UeSuI2Yhg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

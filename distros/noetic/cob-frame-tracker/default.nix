@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, boost, catkin, cob-srvs, control-toolbox, dynamic-reconfigure, geometry-msgs, interactive-markers, kdl-conversions, kdl-parser, message-generation, message-runtime, orocos-kdl, roscpp, roslint, rospy, sensor-msgs, std-msgs, std-srvs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-frame-tracker";
-  version = "0.8.20-r1";
+  version = "0.8.21-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_frame_tracker/0.8.20-1.tar.gz";
-    name = "0.8.20-1.tar.gz";
-    sha256 = "3b34c54bf48dfab2c12e6cfc46395fe30b6cb62071d1bb3afe0188eca2c69b38";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_control-release";
+        rev = "release/noetic/cob_frame_tracker/0.8.21-1";
+        sha256 = "sha256-CUt7vg6cmfpjK+ybjwQKLbK31wRuC160cSbR/XsPYP4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

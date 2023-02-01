@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-log-view";
   version = "0.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/hatchbed/log_view-release/archive/release/noetic/log_view/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "ae83c301379e194490f5aa2a392d6a2b20986be11b5a36ff1d8bfff993c24e1d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "hatchbed";
+        repo = "log_view-release";
+        rev = "release/noetic/log_view/0.1.3-1";
+        sha256 = "sha256-aCxYKgynCd7OZqWNJNIBW9TZk5jcCewfyQUTEc1nBP8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

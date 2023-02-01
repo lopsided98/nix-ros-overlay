@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rviz";
   version = "1.13.29-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rviz-release/archive/release/melodic/rviz/1.13.29-1.tar.gz";
-    name = "1.13.29-1.tar.gz";
-    sha256 = "355e851ad2bcf6e28e189c56e312b38039e7929a77ba33f007c412765b9e14f1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rviz-release";
+        rev = "release/melodic/rviz/1.13.29-1";
+        sha256 = "sha256-+AIOGuOovqqb+xw8HM5FmSJrgD+RCYKiEsRVfti3t40=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules eigen message-generation urdfdom urdfdom-headers ];

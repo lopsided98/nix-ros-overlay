@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, pythonPackages, rclpy, sensor-msgs, std-msgs, tf2-msgs, tf2-py }:
 buildRosPackage {
   pname = "ros-humble-tf2-ros-py";
-  version = "0.25.1-r1";
+  version = "0.25.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2_ros_py/0.25.1-1.tar.gz";
-    name = "0.25.1-1.tar.gz";
-    sha256 = "c846e18c1ce00bebf875f2c450687541f8e017d008c44f4d00b09d3054ddfbc0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "geometry2-release";
+        rev = "release/humble/tf2_ros_py/0.25.2-1";
+        sha256 = "sha256-/VrEqCQJiYcb4ubhPzRTAJthEd313aB8AeBQyOtZSQo=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ pythonPackages.pytest sensor-msgs ];

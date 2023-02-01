@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ros-ign-bridge";
   version = "0.221.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/foxy/ros_ign_bridge/0.221.2-1.tar.gz";
-    name = "0.221.2-1.tar.gz";
-    sha256 = "ec186272bbfc483e9ef0d1d12767e7f1e6fa8a246da048bfc38866779da54b74";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros_ign-release";
+        rev = "release/foxy/ros_ign_bridge/0.221.2-1";
+        sha256 = "sha256-7cn94z7LBUgCxNdq8TrKu4dHI46cnLKC69DVe5UiM0o=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pkg-config ];

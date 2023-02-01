@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-position-controllers";
   version = "0.17.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/position_controllers/0.17.2-1.tar.gz";
-    name = "0.17.2-1.tar.gz";
-    sha256 = "ff766d80dd25382f0cb374a6d861fe529df1e78616bff2f7c67055b54278e6d5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_controllers-release";
+        rev = "release/melodic/position_controllers/0.17.2-1";
+        sha256 = "sha256-MdA3pEsvthXOZ+05EsL7+DDgSR3o5rsG6blKGD6N7q4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

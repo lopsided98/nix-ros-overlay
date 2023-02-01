@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-humble-ruckig";
-  version = "0.6.3-r7";
+  version = "0.9.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ruckig-release/archive/release/humble/ruckig/0.6.3-7.tar.gz";
-    name = "0.6.3-7.tar.gz";
-    sha256 = "6d01590694ffad000dfeb3c85c90453d725a23d3b58ff3fdf95087455c8e7cdf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ruckig-release";
+        rev = "release/humble/ruckig/0.9.2-1";
+        sha256 = "sha256-xzv0PejVB2frTXtd7fnF72E49MOQaARx6boGHYzyVnQ=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

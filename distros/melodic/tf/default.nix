@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tf";
   version = "1.12.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry-release/archive/release/melodic/tf/1.12.1-1.tar.gz";
-    name = "1.12.1-1.tar.gz";
-    sha256 = "49b7cc26908b03a7d035a88b238b11a86d31648559e488fbfae09d3a0696efbe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry-release";
+        rev = "release/melodic/tf/1.12.1-1";
+        sha256 = "sha256-zzjQqwlZnGfgDP9WfXfwpVlI1M/uyrxCCpuo5rhmDxM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ angles catkin message-generation rostime ];

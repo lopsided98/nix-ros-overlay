@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-xacro";
   version = "2.0.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/xacro-release/archive/release/foxy/xacro/2.0.7-1.tar.gz";
-    name = "2.0.7-1.tar.gz";
-    sha256 = "a824cb5f545d8c9146ee835d0020db083b1f0edbc3d280bdc8c24198328a34fa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "xacro-release";
+        rev = "release/foxy/xacro/2.0.7-1";
+        sha256 = "sha256-5jQLrEuz1WWJIJnpqyLBXOKVwC2psfhlPCPOOaFXjf4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

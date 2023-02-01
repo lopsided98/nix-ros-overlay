@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-global-planner-tests";
   version = "0.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/global_planner_tests/0.3.0-2.tar.gz";
-    name = "0.3.0-2.tar.gz";
-    sha256 = "8f6ec1166452f3886e8ea39c541347398e1e7f97afb218cb01271e19bea16ee8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/noetic/global_planner_tests/0.3.0-2";
+        sha256 = "sha256-bu8nN916bT4jt2TZVoILR2c/qG4MLmKv99f/7ClgbzI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

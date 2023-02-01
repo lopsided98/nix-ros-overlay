@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-calibration-data";
   version = "0.6.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_calibration_data-release/archive/release/melodic/cob_calibration_data/0.6.15-1.tar.gz";
-    name = "0.6.15-1.tar.gz";
-    sha256 = "f925041939348aab3ac92d230694d07168cbdbea95b193ba6856b8dc57c4bbb7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_calibration_data-release";
+        rev = "release/melodic/cob_calibration_data/0.6.15-1";
+        sha256 = "sha256-NIWh8akvDbL1gnTHx/PlH3Ma8FDJ45NO96SWzccE9SI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cob-supported-robots ];

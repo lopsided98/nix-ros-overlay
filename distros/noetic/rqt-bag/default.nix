@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-bag";
   version = "0.5.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_bag-release/archive/release/noetic/rqt_bag/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "864c0851f8c2a470246555831630a5d7108ad76bde6e9fd5775113b35e722e8d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_bag-release";
+        rev = "release/noetic/rqt_bag/0.5.1-1";
+        sha256 = "sha256-UZBQhAxdSV6nqNrefZSu8ESMB7yXUqmLxEhfN+O2II0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

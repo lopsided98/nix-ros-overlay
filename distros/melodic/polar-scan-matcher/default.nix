@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-polar-scan-matcher";
   version = "0.3.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/melodic/polar_scan_matcher/0.3.3-2.tar.gz";
-    name = "0.3.3-2.tar.gz";
-    sha256 = "20762e0309884c1cfc3cc2370939cbb4493238a13ba62af0c6a6748c9ee4d19a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "scan_tools-release";
+        rev = "release/melodic/polar_scan_matcher/0.3.3-2";
+        sha256 = "sha256-Yp0SMPPD1m1o279HCJSTygOmAdVd+QDgf93Fg9Y+6gc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

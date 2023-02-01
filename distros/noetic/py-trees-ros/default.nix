@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-py-trees-ros";
   version = "0.6.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/stonier/py_trees_ros-release/archive/release/noetic/py_trees_ros/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "7f6488f258163a4693f30ec99f789ffab6d59b97981949f5b7ce7d700c085319";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "stonier";
+        repo = "py_trees_ros-release";
+        rev = "release/noetic/py_trees_ros/0.6.1-1";
+        sha256 = "sha256-cgSfHSU1D6tMO84W8bK9PfkUOvSuwNM89WR3nl+QVMU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-turtlebot3-automatic-parking-vision";
   version = "1.1.0";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_applications-release/archive/release/melodic/turtlebot3_automatic_parking_vision/1.1.0-0.tar.gz";
-    name = "1.1.0-0.tar.gz";
-    sha256 = "6e10d535cf4f41ac732ed8cc54edc197c35c8cf6969c2bf9b0649e37c97809ea";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "turtlebot3_applications-release";
+        rev = "release/melodic/turtlebot3_automatic_parking_vision/1.1.0-0";
+        sha256 = "sha256-ysLE57I2Wn3wpdzlboI/+UT6LHyCEzl7lMou39SyxbE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

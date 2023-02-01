@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, controller-manager, diff-drive-controller, geometry-msgs, joint-state-broadcaster, nav-msgs, pythonPackages, rclpy, robot-state-publisher, rviz2, sensor-msgs, std-msgs, tf2-ros, webots-ros2-control, webots-ros2-driver, webots-ros2-msgs }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-epuck";
-  version = "2023.0.0-r3";
+  version = "2023.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_epuck/2023.0.0-3.tar.gz";
-    name = "2023.0.0-3.tar.gz";
-    sha256 = "5c44cade24cc2ef166e39eebd96bea707dc8d953bb884f76028f1ed8ee764b0b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "webots_ros2-release";
+        rev = "release/foxy/webots_ros2_epuck/2023.0.1-1";
+        sha256 = "sha256-BjZSzpiGfYr8DnNk9Vsqbf1kSB2Yu1uLi+BozXj9esM=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-velodyne-msgs";
   version = "2.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/velodyne-release/archive/release/foxy/velodyne_msgs/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "0e1988c6ca72a6ba237845af37bfbd41d46f10a0404ebf2c68202524d46ef857";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "velodyne-release";
+        rev = "release/foxy/velodyne_msgs/2.1.1-1";
+        sha256 = "sha256-eXqrYnunRtHBjCDWr+xVUoqduNVBpXYe92JlGJnEvJ8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

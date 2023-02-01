@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosconsole";
   version = "1.13.18-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rosconsole-release/archive/release/melodic/rosconsole/1.13.18-1.tar.gz";
-    name = "1.13.18-1.tar.gz";
-    sha256 = "9b544ea97f1e97680d2474a4cedb3c9c2a0b19c3ad70f5d11fd7c886bd4fe4c0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rosconsole-release";
+        rev = "release/melodic/rosconsole/1.13.18-1";
+        sha256 = "sha256-CZiOS61WSQLcTdd1CkvAlqDy++D3DtAYUkibsan1qgg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rosunit ];

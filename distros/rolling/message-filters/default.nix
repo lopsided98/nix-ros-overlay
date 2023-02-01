@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-message-filters";
   version = "4.6.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/rolling/message_filters/4.6.1-1.tar.gz";
-    name = "4.6.1-1.tar.gz";
-    sha256 = "62628c5580474b6e65cbe5c61f7685042139a8de073456de714176cbe418a0ed";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_message_filters-release";
+        rev = "release/rolling/message_filters/4.6.1-1";
+        sha256 = "sha256-H2gW8/YlGFRpTfkH0+2QDxsVGS/bqwEJmEe50QW316k=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-python ament-cmake-ros python-cmake-module ];

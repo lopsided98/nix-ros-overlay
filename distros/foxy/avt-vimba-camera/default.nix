@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-avt-vimba-camera";
   version = "2001.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/avt_vimba_camera-release/archive/release/foxy/avt_vimba_camera/2001.1.0-1.tar.gz";
-    name = "2001.1.0-1.tar.gz";
-    sha256 = "78af7ea4ae8548664db0e401394f4f9a090bbf04b9c556f3be808fcb5fd96e30";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "avt_vimba_camera-release";
+        rev = "release/foxy/avt_vimba_camera/2001.1.0-1";
+        sha256 = "sha256-b1YFGg6j0b9K0ewtxAKbcnT1um/8yTIj7XIIbEChDbY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-checkerboard-detector";
   version = "1.2.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/checkerboard_detector/1.2.15-1.tar.gz";
-    name = "1.2.15-1.tar.gz";
-    sha256 = "34c7c73bb0c67ecd93858903b15f0aed4e3e40788ef4b6e6a6b763b094370eef";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_recognition-release";
+        rev = "release/melodic/checkerboard_detector/1.2.15-1";
+        sha256 = "sha256-iX6S82etL1rz97KfvrS8FJhqcF4VEEPY4NiXZRWNUUA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-xpp";
   version = "1.0.10";
 
-  src = fetchurl {
-    url = "https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp/1.0.10-0.tar.gz";
-    name = "1.0.10-0.tar.gz";
-    sha256 = "b5df600ccf29b0c24148d6eac7312ddd566f19024c48a49779a9f6905cef89ee";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "leggedrobotics";
+        repo = "xpp-release";
+        rev = "release/melodic/xpp/1.0.10-0";
+        sha256 = "sha256-o7pRgC0V4tObF34zu4ZKDWHct3z5D7NrnySs9PjnyYE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

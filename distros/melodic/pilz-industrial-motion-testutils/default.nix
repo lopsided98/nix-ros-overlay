@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pilz-industrial-motion-testutils";
   version = "0.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_common-release/archive/release/melodic/pilz_industrial_motion_testutils/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "68e505b56ef064d3714e5ad8a5a63321b6dc1fcc49230e218f6a656fba70cd10";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_common-release";
+        rev = "release/melodic/pilz_industrial_motion_testutils/0.6.0-1";
+        sha256 = "sha256-6EvswiecJFtXLpqcZBH0MOuozgz7gSCT8xNZUqDbC1w=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin eigen-conversions ];

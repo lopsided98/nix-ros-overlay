@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-calibration-data";
   version = "0.6.18-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_calibration_data-release/archive/release/noetic/cob_calibration_data/0.6.18-1.tar.gz";
-    name = "0.6.18-1.tar.gz";
-    sha256 = "c0a110318bf61e339d863b480e66599205a518185054e0796dfc90bf7f3d61cc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_calibration_data-release";
+        rev = "release/noetic/cob_calibration_data/0.6.18-1";
+        sha256 = "sha256-gBb+CDfr7ZsrfItMjvODMkEZKfy7W1CZ8rbxtCikQPE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cob-supported-robots ];

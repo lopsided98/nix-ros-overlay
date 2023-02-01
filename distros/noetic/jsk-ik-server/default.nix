@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-jsk-ik-server";
   version = "0.1.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/jsk_ik_server/0.1.16-1.tar.gz";
-    name = "0.1.16-1.tar.gz";
-    sha256 = "80eb52f7cfdba38a0a7d6f5754488a36c21d694edff326988a0546fdd5883364";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_control-release";
+        rev = "release/noetic/jsk_ik_server/0.1.16-1";
+        sha256 = "sha256-J0+SCpwcTHtm/MTGzy9k9Ch4qKmAtkoOXeKJabCwSKg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

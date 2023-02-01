@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-point-cloud-publisher-tutorial";
   version = "0.2.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_tutorials-release/archive/release/melodic/point_cloud_publisher_tutorial/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "f7cacd1a860ecf30ebb011da43d04f9992cf1cfed04b8ff1e5b6d1ccb55f0680";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation_tutorials-release";
+        rev = "release/melodic/point_cloud_publisher_tutorial/0.2.4-1";
+        sha256 = "sha256-JyrIyt8qDQu56k/gY/J0UB+zjivZS2qYA2nDt5JCTy8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

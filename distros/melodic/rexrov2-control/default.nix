@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rexrov2-control";
   version = "0.1.3";
 
-  src = fetchurl {
-    url = "https://github.com/uuvsimulator/rexrov2-release/archive/release/melodic/rexrov2_control/0.1.3-0.tar.gz";
-    name = "0.1.3-0.tar.gz";
-    sha256 = "9a67201f385a31d026e498160846d97db310a798104f41aa97173e6827211ae6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uuvsimulator";
+        repo = "rexrov2-release";
+        rev = "release/melodic/rexrov2_control/0.1.3-0";
+        sha256 = "sha256-Dfz5UO60mxqUjCya0WB9SC0mtX3Gw9nXTt+tzxCa2aE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

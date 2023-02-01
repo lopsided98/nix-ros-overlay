@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-gps-umd";
   version = "1.0.4-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/humble/gps_umd/1.0.4-3.tar.gz";
-    name = "1.0.4-3.tar.gz";
-    sha256 = "d7ead7500f944ad1964110540571ef5220b12a8f8c3b0ff21e5899798b6e8e7e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "gps_umd-release";
+        rev = "release/humble/gps_umd/1.0.4-3";
+        sha256 = "sha256-Pxfv1FZznAbN+lK9n7uoMEItczKj//qS+sjed3Xte4s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ ament-cmake ];

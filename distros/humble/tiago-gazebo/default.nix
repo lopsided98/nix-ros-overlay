@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-tiago-gazebo";
   version = "4.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_simulation-release/archive/release/humble/tiago_gazebo/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "dc24fd9202946c91d8733cc60727a2bbc0445f272923417ac40c7f44d23e2ee5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "tiago_simulation-release";
+        rev = "release/humble/tiago_gazebo/4.0.0-1";
+        sha256 = "sha256-l621c0DbnjnZh63X5f1KaVrcw5oT1fahRxPHrE3mEDk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-marti-sensor-msgs";
   version = "0.11.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/noetic/marti_sensor_msgs/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "7b78aebe19a212b2e6d22dd7181dd376173adb82b8f74f6a228d658c3d91f290";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "marti_messages-release";
+        rev = "release/noetic/marti_sensor_msgs/0.11.0-1";
+        sha256 = "sha256-eJV9Q5YsLGE4R3+bKfBRlyCsbaa4n97hANLD2o4F3AI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

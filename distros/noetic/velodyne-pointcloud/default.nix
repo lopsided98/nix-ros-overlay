@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-velodyne-pointcloud";
   version = "1.7.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_pointcloud/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "b8425f2244f94b610459ede15bdb228eb842e4cd84a6ae10aed6dd67962b6de7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "velodyne-release";
+        rev = "release/noetic/velodyne_pointcloud/1.7.0-1";
+        sha256 = "sha256-/qMBykOXNewqBLR/+1JFoMN+NLbkP6XwPinxyV5zOGI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

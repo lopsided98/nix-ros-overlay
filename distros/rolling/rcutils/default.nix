@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rcutils";
   version = "6.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcutils-release/archive/release/rolling/rcutils/6.0.1-1.tar.gz";
-    name = "6.0.1-1.tar.gz";
-    sha256 = "31a9937d5517d1144e881bfa16594281544596e48fbdcff88147429c911a49f6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcutils-release";
+        rev = "release/rolling/rcutils/6.0.1-1";
+        sha256 = "sha256-PokWB3yFhoqcUaZHLaOZN/baxDVIdqH3btnNyNd+pXk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros python3Packages.empy ];

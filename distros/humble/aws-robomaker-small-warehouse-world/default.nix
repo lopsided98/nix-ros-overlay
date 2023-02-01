@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-aws-robomaker-small-warehouse-world";
   version = "1.0.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/aws_robomaker_small_warehouse_world-release/archive/release/humble/aws_robomaker_small_warehouse_world/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "65dfe041bacd9e53224fef4ea1c98b594c9d6e78e2c88e018b5fca1982292de1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "aws_robomaker_small_warehouse_world-release";
+        rev = "release/humble/aws_robomaker_small_warehouse_world/1.0.5-1";
+        sha256 = "sha256-bMYgLcTRb5UvNDZS4HmtCbd1SRpRfQypQmT4SJPbONY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

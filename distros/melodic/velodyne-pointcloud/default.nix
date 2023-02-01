@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-velodyne-pointcloud";
   version = "1.5.2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/melodic/velodyne_pointcloud/1.5.2-0.tar.gz";
-    name = "1.5.2-0.tar.gz";
-    sha256 = "4ba277761a8c63407bf615e2aae6edf06f70f5c0349717afa3fc8be4d828dc76";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "velodyne-release";
+        rev = "release/melodic/velodyne_pointcloud/1.5.2-0";
+        sha256 = "sha256-7H3+glfK5vpInojgopVHvxc/QhfnnDOEP1EXWb+dp7A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

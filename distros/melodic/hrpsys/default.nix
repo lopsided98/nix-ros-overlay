@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hrpsys";
   version = "315.15.0-r8";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/hrpsys-release/archive/release/melodic/hrpsys/315.15.0-8.tar.gz";
-    name = "315.15.0-8.tar.gz";
-    sha256 = "c7041e257756bd66cf745714ba92fc1b9e34342a68687d812a0495e716180f9c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "hrpsys-release";
+        rev = "release/melodic/hrpsys/315.15.0-8";
+        sha256 = "sha256-E266Bh+jOlroIyrHPLSAKlGMXOY1X0L4EVZ9fcSESQU=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen git glew graphviz mk pkg-config ];

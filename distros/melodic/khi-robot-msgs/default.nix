@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-khi-robot-msgs";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/melodic/khi_robot_msgs/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "63a2b5f4a4a75efd865b78c631ea2fb778ebe0fdf6a3a31d3c64849e64b583db";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Kawasaki-Robotics";
+        repo = "khi_robot-release";
+        rev = "release/melodic/khi_robot_msgs/1.2.0-1";
+        sha256 = "sha256-762AUGeu0zDP0OmV1eKk0S43hFYa6PosHRZ8bRUgNyc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-sick-s300";
   version = "0.7.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_sick_s300/0.7.14-1.tar.gz";
-    name = "0.7.14-1.tar.gz";
-    sha256 = "88a77ecaa55d61e9745ce8575b5b42b8913d841ab124c74f3d1e32a10c697519";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/noetic/cob_sick_s300/0.7.14-1";
+        sha256 = "sha256-heopCH0VTTy+aKMtB1QeNbHrFVIr+zM7yIQPLVIw5cY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

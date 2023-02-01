@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-linux-networking";
   version = "1.0.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/linux_networking/1.0.16-1.tar.gz";
-    name = "1.0.16-1.tar.gz";
-    sha256 = "3b4d9bab93c93ee4c779b53662fb2674d7fa926cf3c19caa3d3d49fffe2dc132";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "linux_networking-release";
+        rev = "release/melodic/linux_networking/1.0.16-1";
+        sha256 = "sha256-PNSC3GT725wY6mEFM1guX0AklXOupX28D2fZQfEIpR8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

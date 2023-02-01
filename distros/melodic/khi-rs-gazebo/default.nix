@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-khi-rs-gazebo";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/melodic/khi_rs_gazebo/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "5f8d1aca50da477a7b8f95fbc542d51f37acf6c9bd6df5e090e1f994554cd00a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Kawasaki-Robotics";
+        repo = "khi_robot-release";
+        rev = "release/melodic/khi_rs_gazebo/1.2.0-1";
+        sha256 = "sha256-XmEl580cE9mxZsgPl2vPR55jwBufMBog16iWqnZROag=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-septentrio-gnss-driver";
   version = "1.2.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/septentrio-users/septentrio_gnss_driver-release/archive/release/noetic/septentrio_gnss_driver/1.2.3-1.tar.gz";
-    name = "1.2.3-1.tar.gz";
-    sha256 = "39bf69095947dc7bb56e516115125e080aa568fbb5b65009f23df2b44c981dc1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "septentrio-users";
+        repo = "septentrio_gnss_driver-release";
+        rev = "release/noetic/septentrio_gnss_driver/1.2.3-1";
+        sha256 = "sha256-l8gWw/6QWUgcxGhCFwHKBpRwASdfyI5E+lHNGAUvPNY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

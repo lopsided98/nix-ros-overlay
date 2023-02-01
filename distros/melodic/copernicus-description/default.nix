@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-copernicus-description";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/botsync-gbp/copernicus-release/archive/release/melodic/copernicus_description/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "45755a8f02a7d84af410f684521f622839193ad68ca03a009c29c8df44d36182";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "botsync-gbp";
+        repo = "copernicus-release";
+        rev = "release/melodic/copernicus_description/1.1.0-1";
+        sha256 = "sha256-Lh+JOgQSrgeowRHU27p3UCJ2L8JyLBYZ6B3/xywbVTw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch velodyne-description ];

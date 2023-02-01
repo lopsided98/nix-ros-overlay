@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jsk-visualization";
   version = "2.1.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/melodic/jsk_visualization/2.1.8-1.tar.gz";
-    name = "2.1.8-1.tar.gz";
-    sha256 = "7493abb6f57c227f4b59d2d26e592a0424c0a66a587fdaa85cbb441588344260";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_visualization-release";
+        rev = "release/melodic/jsk_visualization/2.1.8-1";
+        sha256 = "sha256-sR2bHaoN3KTK1cAi9+Maizm3PFbNpLjALHa3FNCXjAc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

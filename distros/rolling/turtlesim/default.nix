@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-turtlesim";
   version = "1.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_tutorials-release/archive/release/rolling/turtlesim/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "53ffcb39d35d2a0147ff076ff8d8470102af7fb08ca3af8c8da33be8fdb4e903";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros_tutorials-release";
+        rev = "release/rolling/turtlesim/1.5.0-1";
+        sha256 = "sha256-QSpCdO40Vz2iZ0bmwtzikSPQdurC/h7YDtDS3LZdP/8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

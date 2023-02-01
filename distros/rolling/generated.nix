@@ -154,6 +154,10 @@ self: super: {
 
  apriltag = self.callPackage ./apriltag {};
 
+ apriltag-msgs = self.callPackage ./apriltag-msgs {};
+
+ apriltag-ros = self.callPackage ./apriltag-ros {};
+
  aruco-opencv = self.callPackage ./aruco-opencv {};
 
  aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
@@ -210,6 +214,8 @@ self: super: {
 
  cartographer-rviz = self.callPackage ./cartographer-rviz {};
 
+ cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
+
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
 
  class-loader = self.callPackage ./class-loader {};
@@ -260,9 +266,13 @@ self: super: {
 
  diagnostic-aggregator = self.callPackage ./diagnostic-aggregator {};
 
+ diagnostic-common-diagnostics = self.callPackage ./diagnostic-common-diagnostics {};
+
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
  diagnostic-updater = self.callPackage ./diagnostic-updater {};
+
+ diagnostics = self.callPackage ./diagnostics {};
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
@@ -587,6 +597,8 @@ self: super: {
  joy-linux = self.callPackage ./joy-linux {};
 
  joy-teleop = self.callPackage ./joy-teleop {};
+
+ joy-tester = self.callPackage ./joy-tester {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
 
@@ -958,6 +970,8 @@ self: super: {
 
  position-controllers = self.callPackage ./position-controllers {};
 
+ py-trees = self.callPackage ./py-trees {};
+
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
 
  pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
@@ -1045,6 +1059,8 @@ self: super: {
  rclcpp = self.callPackage ./rclcpp {};
 
  rclcpp-action = self.callPackage ./rclcpp-action {};
+
+ rclcpp-cascade-lifecycle = self.callPackage ./rclcpp-cascade-lifecycle {};
 
  rclcpp-components = self.callPackage ./rclcpp-components {};
 
@@ -1281,6 +1297,8 @@ self: super: {
  rosbag2-interfaces = self.callPackage ./rosbag2-interfaces {};
 
  rosbag2-performance-benchmarking = self.callPackage ./rosbag2-performance-benchmarking {};
+
+ rosbag2-performance-benchmarking-msgs = self.callPackage ./rosbag2-performance-benchmarking-msgs {};
 
  rosbag2-py = self.callPackage ./rosbag2-py {};
 

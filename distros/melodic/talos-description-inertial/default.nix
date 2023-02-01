@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-talos-description-inertial";
   version = "1.0.45";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/talos_robot-release/archive/release/melodic/talos_description_inertial/1.0.45-0.tar.gz";
-    name = "1.0.45-0.tar.gz";
-    sha256 = "03af558efe948f9f6e0babd3a08d1f83819ad86011e25edca8402a9e2bcd8a3a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "talos_robot-release";
+        rev = "release/melodic/talos_description_inertial/1.0.45-0";
+        sha256 = "sha256-jxGRbqqCGU33XF5r/0J7tnXLsvaX9J3k6afA3Gkcur8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

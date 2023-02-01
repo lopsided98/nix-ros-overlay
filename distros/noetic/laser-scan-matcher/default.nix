@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-laser-scan-matcher";
   version = "0.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/laser_scan_matcher/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "6000f160af9d500dc98962fe003cc963573abbcec0bc7d7a0b6092896c49d285";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "scan_tools-release";
+        rev = "release/noetic/laser_scan_matcher/0.3.3-1";
+        sha256 = "sha256-0DoaU2d17cy0hZBh3U4GIMZzt7o00lAH+ktCY0JDrxo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mesh-controller";
   version = "1.0.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/mesh_controller/1.0.1-2.tar.gz";
-    name = "1.0.1-2.tar.gz";
-    sha256 = "8c64d5a719a38d06e048510a3c88497f83063c872c4e849e40f67c9769f5f880";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mesh_navigation-release";
+        rev = "release/noetic/mesh_controller/1.0.1-2";
+        sha256 = "sha256-pkomKNKQWYeAlMfi9aDmJCw3172/AOsXGzTpgy6jyz0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

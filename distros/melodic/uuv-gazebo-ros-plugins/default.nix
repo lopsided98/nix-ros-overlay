@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-uuv-gazebo-ros-plugins";
   version = "0.6.13";
 
-  src = fetchurl {
-    url = "https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_gazebo_ros_plugins/0.6.13-0.tar.gz";
-    name = "0.6.13-0.tar.gz";
-    sha256 = "061cc787ee014cb7729eed0a28bdbb52967c821a3fb8bd7ead255b38909a2a3e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uuvsimulator";
+        repo = "uuv_simulator-release";
+        rev = "release/melodic/uuv_gazebo_ros_plugins/0.6.13-0";
+        sha256 = "sha256-zjDY5gS7Cgmze7bGRUlpywyPO98QRfyA7o4VzWAkI4E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

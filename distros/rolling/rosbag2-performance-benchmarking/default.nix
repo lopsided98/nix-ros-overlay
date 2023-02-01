@@ -2,21 +2,25 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rmw, rosbag2-compression, rosbag2-cpp, rosbag2-storage, std-msgs, yaml-cpp-vendor }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rmw, rosbag2-compression, rosbag2-cpp, rosbag2-performance-benchmarking-msgs, rosbag2-storage, sensor-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-rolling-rosbag2-performance-benchmarking";
-  version = "0.18.0-r3";
+  version = "0.19.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_performance_benchmarking/0.18.0-3.tar.gz";
-    name = "0.18.0-3.tar.gz";
-    sha256 = "ff33383a7bf2a6680de933e01d243eb84a95df3f58a8d7d6446e8f3f974677b1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosbag2-release";
+        rev = "release/rolling/rosbag2_performance_benchmarking/0.19.0-1";
+        sha256 = "sha256-9sjlL+HiBSeMBp45paQuxLNg1hRHkLH7M0Ywe2yO5O4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ rclcpp rmw rosbag2-compression rosbag2-cpp rosbag2-storage std-msgs yaml-cpp-vendor ];
+  propagatedBuildInputs = [ rclcpp rmw rosbag2-compression rosbag2-cpp rosbag2-performance-benchmarking-msgs rosbag2-storage sensor-msgs yaml-cpp-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

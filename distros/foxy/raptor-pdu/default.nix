@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-raptor-pdu";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/NewEagleRaptor/raptor-dbw-ros2-release/archive/release/foxy/raptor_pdu/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "4aed095d2b28abed7b9581a53b55dedbeb2b01006b16bc968e8373f1c0d3021f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "NewEagleRaptor";
+        repo = "raptor-dbw-ros2-release";
+        rev = "release/foxy/raptor_pdu/1.2.0-1";
+        sha256 = "sha256-ALysAodsOryqZ/sy7pzKeJkBs+diuNL31aj3ysV0VoI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

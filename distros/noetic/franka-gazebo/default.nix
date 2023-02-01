@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-franka-gazebo";
   version = "0.10.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_gazebo/0.10.1-1.tar.gz";
-    name = "0.10.1-1.tar.gz";
-    sha256 = "fd370f8b9b212873bf0ed4af20377dad6e8a67959d447ff19d00c97d219f1274";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "frankaemika";
+        repo = "franka_ros-release";
+        rev = "release/noetic/franka_gazebo/0.10.1-1";
+        sha256 = "sha256-k+tSmXZZuPT/sdvNLNfR3TPRUgf7LXFvjHsZpz8Ktm4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin gazebo-dev ];

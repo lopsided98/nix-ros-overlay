@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ecl";
   version = "0.60.3";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_manipulation-release/archive/release/melodic/ecl/0.60.3-0.tar.gz";
-    name = "0.60.3-0.tar.gz";
-    sha256 = "bbcf9a596091fbf4158e2593c652fe8329338bcf39ab3258abc93f4ac42289ae";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "ecl_manipulation-release";
+        rev = "release/melodic/ecl/0.60.3-0";
+        sha256 = "sha256-wImPsGnMNl1+3vx8K9dnH9LNaGYKChHtOEMmVgL9FSY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

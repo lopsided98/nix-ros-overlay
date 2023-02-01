@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-floam";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/flynneva/floam-release/archive/release/noetic/floam/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "305b0761f138eba420f2f8c1c028fc3146099954a1a7d2854bf59437cd6784b5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "flynneva";
+        repo = "floam-release";
+        rev = "release/noetic/floam/0.1.0-1";
+        sha256 = "sha256-SA+takXbqkSJibyAiw43/eYnsDSb2bN9Lid7Wn87OtU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

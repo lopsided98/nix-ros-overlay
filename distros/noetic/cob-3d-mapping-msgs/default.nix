@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-3d-mapping-msgs";
   version = "0.6.19-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/noetic/cob_3d_mapping_msgs/0.6.19-1.tar.gz";
-    name = "0.6.19-1.tar.gz";
-    sha256 = "8b92297cbf0b9b29fe7ab6ab41dec0971d2982eafaf994131d64a23d760b81e2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_perception_common-release";
+        rev = "release/noetic/cob_3d_mapping_msgs/0.6.19-1";
+        sha256 = "sha256-VNl0KZI+JnjsyjxQtVNs2RygkNIPQtA/bh048jJ+UYM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

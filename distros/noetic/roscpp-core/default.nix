@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-roscpp-core";
   version = "0.7.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/noetic/roscpp_core/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "d40d836804305c723cddab20b673c74bcdae047064a5f342b266b162830474e7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "roscpp_core-release";
+        rev = "release/noetic/roscpp_core/0.7.2-1";
+        sha256 = "sha256-sEN+Hayh83dL3MCMD+Z9YCxhD3XlS2F5+rpZGLWiRQo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

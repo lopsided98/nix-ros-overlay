@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-wge100-driver";
   version = "1.8.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/wge100_driver-release/archive/release/melodic/wge100_driver/1.8.2-1.tar.gz";
-    name = "1.8.2-1.tar.gz";
-    sha256 = "1ad42f5a276e3238007f5c28d16536288c3cccb009e4a0822eaf86304d2ec153";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "wge100_driver-release";
+        rev = "release/melodic/wge100_driver/1.8.2-1";
+        sha256 = "sha256-EFJUGPTmqPyFov3teHkzNwbYVD7kKin11ifNXO9RUkI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

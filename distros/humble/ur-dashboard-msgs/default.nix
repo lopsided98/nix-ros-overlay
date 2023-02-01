@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-ur-dashboard-msgs";
   version = "2.2.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/humble/ur_dashboard_msgs/2.2.6-1.tar.gz";
-    name = "2.2.6-1.tar.gz";
-    sha256 = "31a5898f0ce072a55959b6b571f251386acb1facf9183e7a17393ca0f1f02b41";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "Universal_Robots_ROS2_Driver-release";
+        rev = "release/humble/ur_dashboard_msgs/2.2.6-1";
+        sha256 = "sha256-S/ps9CEFmAipT5YPn2T4VqvbYcWQ/hVQGxj+E4bVeaA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jpeg-streamer";
   version = "0.2.7";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/camera_umd-release/archive/release/melodic/jpeg_streamer/0.2.7-0.tar.gz";
-    name = "0.2.7-0.tar.gz";
-    sha256 = "2f2d7e91f8743383d48353d1fc7fbbcd47ad1438a9029949cdd499ce3885e221";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "camera_umd-release";
+        rev = "release/melodic/jpeg_streamer/0.2.7-0";
+        sha256 = "sha256-3nfLie2HFYdIPZOtKR7aSKRvm528kp3HaZZcA0U2b+4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

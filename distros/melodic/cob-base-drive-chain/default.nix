@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-base-drive-chain";
   version = "0.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_base_drive_chain/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "1d5a3b1bbd6a839847b365076bbaf0d24f03c19c20f35d6eb9b1619e6ec3f661";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/melodic/cob_base_drive_chain/0.7.4-1";
+        sha256 = "sha256-GFgik5G1Uq3rlopiOZZQpbYlKwTAXgurA/u96ZmiGCc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

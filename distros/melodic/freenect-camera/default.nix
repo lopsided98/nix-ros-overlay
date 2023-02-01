@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-freenect-camera";
   version = "0.4.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/freenect_stack-release/archive/release/melodic/freenect_camera/0.4.3-2.tar.gz";
-    name = "0.4.3-2.tar.gz";
-    sha256 = "86588c3b8cb5a41bc7ffabe05ccd0347248d6714997a888d662996b2a1db152f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "freenect_stack-release";
+        rev = "release/melodic/freenect_camera/0.4.3-2";
+        sha256 = "sha256-DM1/kZnkx+ilstVN+ZH9ssAuUxvo10/Y9GYnSUo+8Hg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

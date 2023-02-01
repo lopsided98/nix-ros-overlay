@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-phidgets-analog-inputs";
   version = "1.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_analog_inputs/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "6d587f979b0ed686c13f6f99f21ccee96ab24680ac35d129592f8e598578d918";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "phidgets_drivers-release";
+        rev = "release/noetic/phidgets_analog_inputs/1.0.6-1";
+        sha256 = "sha256-PS8b8MEI2sDz8bEnnPsE/syGV4eWz48uJYshrNMk7KE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

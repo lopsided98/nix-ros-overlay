@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-launch-ros";
   version = "0.11.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch_ros-release/archive/release/foxy/launch_ros/0.11.7-1.tar.gz";
-    name = "0.11.7-1.tar.gz";
-    sha256 = "0e975c2ab68d4e6a7871120e27f757f27869c3f034c7e62b2cec6b79a52b459c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "launch_ros-release";
+        rev = "release/foxy/launch_ros/0.11.7-1";
+        sha256 = "sha256-9wtX7FSoXNx6kp9l/3ozs2kjnCrStIl1H+/aNTK88o8=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-multisense-lib";
   version = "4.0.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/noetic/multisense_lib/4.0.5-1.tar.gz";
-    name = "4.0.5-1.tar.gz";
-    sha256 = "071544f8344d81e4194c353a6674846bd6967990980c4f3d6fc7954b7c303514";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "carnegieroboticsllc";
+        repo = "multisense_ros-release";
+        rev = "release/noetic/multisense_lib/4.0.5-1";
+        sha256 = "sha256-QNxkWpR9lnfVEiXF3vfdN21fdqEQhSMQB+TnMmN98JU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

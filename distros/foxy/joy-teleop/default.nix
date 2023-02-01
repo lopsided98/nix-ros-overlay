@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-joy-teleop";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/foxy/joy_teleop/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "08b854eb78d0aee1f7c66c7418972db13e82ab7972355f4b55bd3be2bb12c128";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "teleop_tools-release";
+        rev = "release/foxy/joy_teleop/1.3.0-1";
+        sha256 = "sha256-pOO81abXuYpWTZZ3XcPdFNVRBA04FYijCK3alScPZJ8=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ action-tutorials-interfaces ament-copyright ament-flake8 ament-pep257 ament-xmllint example-interfaces geometry-msgs launch-ros launch-testing std-msgs std-srvs test-msgs ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dataspeed-pds-rqt";
   version = "1.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/noetic/dataspeed_pds_rqt/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "bbb99a9aa319880f7f8f23a2c835d61025249f938e9a7cd9d10e9272f3f2ac7a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dataspeed_pds-release";
+        rev = "release/noetic/dataspeed_pds_rqt/1.0.6-1";
+        sha256 = "sha256-9J0rmj2Ilzm9sDZE3BRuvft3ZFzdtmO303XBMLePAHs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools ];

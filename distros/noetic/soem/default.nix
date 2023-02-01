@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-soem";
   version = "1.4.1003-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mgruhler/soem-gbp/archive/release/noetic/soem/1.4.1003-1.tar.gz";
-    name = "1.4.1003-1.tar.gz";
-    sha256 = "f16d0ecd3ce7b6739fb573459214670abcd5f101454fc1225369aa7fe86b2806";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mgruhler";
+        repo = "soem-gbp";
+        rev = "release/noetic/soem/1.4.1003-1";
+        sha256 = "sha256-kz+EHVji3/7AgG21sBsyFBuZ/fh+avgpi+LVvIDpJjs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

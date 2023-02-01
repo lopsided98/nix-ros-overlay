@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-fmilibrary-vendor";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/fmilibrary_vendor-release/archive/release/humble/fmilibrary_vendor/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "0bc5d037129c0b35b6758ee235a046fc1b64838a0e6e89b83f0510475a83bf71";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "fmilibrary_vendor-release";
+        rev = "release/humble/fmilibrary_vendor/1.0.1-1";
+        sha256 = "sha256-RwFS1j6Bue1ac96cXWL4i1A+KcMFWctqGRc0ZGeTR70=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake git ];

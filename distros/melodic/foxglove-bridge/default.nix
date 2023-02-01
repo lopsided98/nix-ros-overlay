@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, asio, catkin, gtest, nlohmann_json, nodelet, openssl, ros-babel-fish, ros-environment, roscpp, rosgraph-msgs, roslib, rostest, rosunit, std-msgs, websocketpp }:
 buildRosPackage {
   pname = "ros-melodic-foxglove-bridge";
-  version = "0.2.2-r1";
+  version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/foxglove/ros_foxglove_bridge-release/archive/release/melodic/foxglove_bridge/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "bff9c1a2651cacd73e4020a5412bf4cb7dd6043d0c3b2de84862a6c635f15028";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "foxglove";
+        repo = "ros_foxglove_bridge-release";
+        rev = "release/melodic/foxglove_bridge/0.3.0-1";
+        sha256 = "sha256-wRnMOoLOn6E7TrYny2wfwmQuOqnYt2T/ru+L/9ua1Tk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ asio catkin nlohmann_json ros-environment websocketpp ];

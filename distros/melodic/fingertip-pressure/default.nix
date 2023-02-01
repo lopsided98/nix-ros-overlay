@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fingertip-pressure";
   version = "1.8.19-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/melodic/fingertip_pressure/1.8.19-1.tar.gz";
-    name = "1.8.19-1.tar.gz";
-    sha256 = "24a090d31a677615de660c07ec0bc95bb80e2896d95455b806f3116c1ceb5c23";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_ethercat_drivers-release";
+        rev = "release/melodic/fingertip_pressure/1.8.19-1";
+        sha256 = "sha256-LFYy3JX5gmlINj5Ymj/D6zv92UADHOPgHgLrJhUk16s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation rostest ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rqt-tf-tree";
   version = "1.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_tf_tree-release/archive/release/foxy/rqt_tf_tree/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "46bba17833ddafac6af4a99df252632907b7087c38c4943bb59c325baaf0612e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_tf_tree-release";
+        rev = "release/foxy/rqt_tf_tree/1.0.3-1";
+        sha256 = "sha256-Iem5taVGzW7fx5/Jhe0p8NW94l/fccrko/HIhAf+/QA=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ python3Packages.mock ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-novatel-msgs";
   version = "1.1.0";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/novatel_span_driver-release/archive/release/melodic/novatel_msgs/1.1.0-0.tar.gz";
-    name = "1.1.0-0.tar.gz";
-    sha256 = "a72561b3f85654b4e209dc7ac5738010ee49bb976023b1a014f4e345a2206797";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "novatel_span_driver-release";
+        rev = "release/melodic/novatel_msgs/1.1.0-0";
+        sha256 = "sha256-9ls/xG2crJZqGTQY4zIbFGzrrmzfIFHnHr7wIUnf/rE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

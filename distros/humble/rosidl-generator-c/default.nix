@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rosidl-generator-c";
   version = "3.1.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/humble/rosidl_generator_c/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "11ce9241c8c8c9303b47ae050cd8d994aeca93a4dd759cc0116ec75f14952825";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl-release";
+        rev = "release/humble/rosidl_generator_c/3.1.4-1";
+        sha256 = "sha256-4bGynla3wv6QFs1B2EnNSZTCwad1mhxveqKJXBSFDi0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-python ament-cmake-ros ];

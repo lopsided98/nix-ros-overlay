@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-tracetools-image-pipeline";
   version = "3.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/tracetools_image_pipeline/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "3f88211d7b02bd6cf6fd2f23701efa92e5f49851ac8ba568b7942700e4501aaf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/humble/tracetools_image_pipeline/3.0.0-1";
+        sha256 = "sha256-k1CdLEhMoCf1hmBuWQjjcBoSWyhwPf6etpFrr8zNqQA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros pkg-config ];

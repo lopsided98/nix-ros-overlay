@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-menge-vendor";
   version = "1.0.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/menge_vendor-release/archive/release/rolling/menge_vendor/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "63dbee9c587c70444a0533de42585c8359a0846a45a9146cab423a1f9d60a454";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "menge_vendor-release";
+        rev = "release/rolling/menge_vendor/1.0.0-2";
+        sha256 = "sha256-pwDvm+FUMHbvtumRly3aV2QEDQ0UxPN8GlgjCe8TOZE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ ament-cmake pkg-config ];

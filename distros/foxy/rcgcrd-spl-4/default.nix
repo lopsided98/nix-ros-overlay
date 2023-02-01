@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rcgcrd-spl-4";
   version = "0.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/foxy/rcgcrd_spl_4/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "aa5453ef8ed730eb4eea66c67ac3a374f1e713d5d69f5fcbdb15b37a9fa29a51";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "gc_spl-release";
+        rev = "release/foxy/rcgcrd_spl_4/0.0.1-1";
+        sha256 = "sha256-tcycfvVue0ZJjmjf4Hw9QnqB/pl/FwLOUHroOFr6H+E=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-kdl-conversions";
   version = "1.13.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry-release/archive/release/noetic/kdl_conversions/1.13.2-1.tar.gz";
-    name = "1.13.2-1.tar.gz";
-    sha256 = "8bf8790de2b08b6274348c68c23337dc16e4ca2b4a1ca4028d5555cb53094a5f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry-release";
+        rev = "release/noetic/kdl_conversions/1.13.2-1";
+        sha256 = "sha256-jiTjkWyWzb78RXDQ4YlpWIxB7IJ9Td+BqLiPkWOKCUs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

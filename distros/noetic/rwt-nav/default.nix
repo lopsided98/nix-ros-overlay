@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rwt-nav";
   version = "0.1.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/noetic/rwt_nav/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "f534ff93678ed6450b339fa932c4742d22ea852275bee69dd4f71e872f0a5492";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "visualization_rwt-release";
+        rev = "release/noetic/rwt_nav/0.1.1-2";
+        sha256 = "sha256-k9qDFDmF82YPdc12pyl6h/38aiqrpnfSkVAKCprsZGk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

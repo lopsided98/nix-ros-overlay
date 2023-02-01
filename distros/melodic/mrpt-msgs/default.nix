@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mrpt-msgs";
   version = "0.4.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_msgs-release/archive/release/melodic/mrpt_msgs/0.4.4-1.tar.gz";
-    name = "0.4.4-1.tar.gz";
-    sha256 = "71c42945e7dc24d7a6600f9d069f1657fa5b04ed5e1a7d23c7054e5dc742eb4c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mrpt-ros-pkg-release";
+        repo = "mrpt_msgs-release";
+        rev = "release/melodic/mrpt_msgs/0.4.4-1";
+        sha256 = "sha256-FSw//54G9jpJoibViHkmDUI+/IqcjDC67ZxH4JOk4qk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ros-environment ];

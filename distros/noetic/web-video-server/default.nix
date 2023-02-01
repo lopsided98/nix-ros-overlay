@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-web-video-server";
   version = "0.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/web_video_server-release/archive/release/noetic/web_video_server/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "7ae5dbf920030dd13a5d7d6010ba398db9efad78a6b382630f7095db0467e467";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "RobotWebTools-release";
+        repo = "web_video_server-release";
+        rev = "release/noetic/web_video_server/0.2.2-1";
+        sha256 = "sha256-Y3UgRPY8mOWOn5x573wnsZxJXI9EXrOC55HCJKztwVY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

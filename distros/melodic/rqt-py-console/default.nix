@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rqt-py-console";
   version = "0.4.8";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_py_console-release/archive/release/melodic/rqt_py_console/0.4.8-0.tar.gz";
-    name = "0.4.8-0.tar.gz";
-    sha256 = "0c5714fce4f464fa175e42a7c8fc0ced483fdcfbd90cf4c8584f40b3cf208242";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_py_console-release";
+        rev = "release/melodic/rqt_py_console/0.4.8-0";
+        sha256 = "sha256-H9nwjD085SFDhxTM37Vhusf7uc508NmolONVmJbq7hM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

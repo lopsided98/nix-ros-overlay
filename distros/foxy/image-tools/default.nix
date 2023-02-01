@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-image-tools";
   version = "0.9.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/image_tools/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "fec375d02308d9ee1ae15cf7a4389b8959df276217fb7edd56f026b3ee7308b9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/foxy/image_tools/0.9.4-1";
+        sha256 = "sha256-+Mpxve/ub1LVWJjLG5jceEKOyfprKpXQB45akDY/31s=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rcdiscover";
   version = "1.1.4-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcdiscover-release/archive/release/humble/rcdiscover/1.1.4-3.tar.gz";
-    name = "1.1.4-3.tar.gz";
-    sha256 = "3981ea0a06581bca5350a8f4011a1cbaf06b1a5d753f5d7331db7931dc022af1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcdiscover-release";
+        rev = "release/humble/rcdiscover/1.1.4-3";
+        sha256 = "sha256-cnj4q4wuS4aANACKRMw8qEocJqlpuA0nGXqxywYAn14=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

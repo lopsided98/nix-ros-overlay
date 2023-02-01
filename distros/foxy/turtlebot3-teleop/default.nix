@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-turtlebot3-teleop";
   version = "2.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/foxy/turtlebot3_teleop/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "79c4d0d4666114f01713a56cb5a30a1e57febbdfb58ca1a6ae00a1c97c3e80fa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "robotis-ros2-release";
+        repo = "turtlebot3-release";
+        rev = "release/foxy/turtlebot3_teleop/2.1.1-1";
+        sha256 = "sha256-jM3sJj2wrZN7KTJ4NbNwMZUw+dHf6tliDWVOx33yr78=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ geometry-msgs rclpy ];

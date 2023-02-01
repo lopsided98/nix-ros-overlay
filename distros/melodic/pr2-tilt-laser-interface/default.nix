@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-tilt-laser-interface";
   version = "0.0.11";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/melodic/pr2_tilt_laser_interface/0.0.11-0.tar.gz";
-    name = "0.0.11-0.tar.gz";
-    sha256 = "8d25bddf370f8550b5ddac3e38c98c17d4880893c20bc601f8fd8b86c5bc4c2c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_common_actions-release";
+        rev = "release/melodic/pr2_tilt_laser_interface/0.0.11-0";
+        sha256 = "sha256-YWW1bsD8R7akWfzuBfJQTdI3VXJS4kXDW8Kgcry7AIQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

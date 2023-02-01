@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmf-traffic-msgs";
   version = "1.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/foxy/rmf_traffic_msgs/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "c2ef9e63a73c1b47f02488054a1fe7bc5df0be7589419b08b831f11c312e4b1d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_internal_msgs-release";
+        rev = "release/foxy/rmf_traffic_msgs/1.4.0-1";
+        sha256 = "sha256-Mv9su5WqnC+8E6S3zo9RVB3xFLreOZ+I7jStDiw9dd4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

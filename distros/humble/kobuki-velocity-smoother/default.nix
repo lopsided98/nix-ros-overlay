@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-kobuki-velocity-smoother";
   version = "0.15.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/kobuki_velocity_smoother-release/archive/release/humble/kobuki_velocity_smoother/0.15.0-1.tar.gz";
-    name = "0.15.0-1.tar.gz";
-    sha256 = "d067c03d40f137ff4ab5ecbe6864ef77a6a4319bb0bb404b8a60d2ec4603d5f0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "kobuki_velocity_smoother-release";
+        rev = "release/humble/kobuki_velocity_smoother/0.15.0-1";
+        sha256 = "sha256-kZmyem+NJit8xtwuRz5Zx8AkdojVm7/pxgSOR63CkcM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ecl-build ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-kinesis-video-streamer";
   version = "2.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/aws-gbp/kinesis_video_streamer-release/archive/release/melodic/kinesis_video_streamer/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "c9d21edf29f27e1896e428ecabe75be86a821ecb7caa07ff4fd3ffd45c4c1385";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "aws-gbp";
+        repo = "kinesis_video_streamer-release";
+        rev = "release/melodic/kinesis_video_streamer/2.0.3-1";
+        sha256 = "sha256-vkA4+UztYasIaN/twFWYskiAmkTJQQ9qt9BXVVcX/0w=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

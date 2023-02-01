@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-velodyne-description";
   version = "1.0.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/velodyne_simulator-release/archive/release/noetic/velodyne_description/1.0.13-1.tar.gz";
-    name = "1.0.13-1.tar.gz";
-    sha256 = "8339606e5fe26361eaff3b11de9a3573053ec589a80b56235d448c9d5f28eee2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "velodyne_simulator-release";
+        rev = "release/noetic/velodyne_description/1.0.13-1";
+        sha256 = "sha256-DEoikvGnQRius0OoSSdXyDcU8Rm6tCHA+ByDiijt0+M=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

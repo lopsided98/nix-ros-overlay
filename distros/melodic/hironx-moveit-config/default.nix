@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hironx-moveit-config";
   version = "2.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/rtmros_hironx-release/archive/release/melodic/hironx_moveit_config/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "25a9b7c9dabea8e03d2f0e08544d7285c8920c7542d52eba6064f912b503962b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "rtmros_hironx-release";
+        rev = "release/melodic/hironx_moveit_config/2.2.0-1";
+        sha256 = "sha256-KuqqmllptppX8YewbjR+b6nX9JYjorKTi10mioalWD8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin collada-urdf moveit-ros-move-group ];

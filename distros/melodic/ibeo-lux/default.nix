@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ibeo-lux";
   version = "2.0.1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/ibeo_lux-release/archive/release/melodic/ibeo_lux/2.0.1-0.tar.gz";
-    name = "2.0.1-0.tar.gz";
-    sha256 = "0aa9797cbee3936a930074405e44de2f604c0eaf99b7b4e6b60d3773243a0fb3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "ibeo_lux-release";
+        rev = "release/melodic/ibeo_lux/2.0.1-0";
+        sha256 = "sha256-dUIQxcUON4deem4TwBKoYmCRgpk2xkF73iln3qkN1MM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

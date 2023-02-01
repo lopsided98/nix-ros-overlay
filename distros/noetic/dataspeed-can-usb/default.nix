@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dataspeed-can-usb";
   version = "1.0.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/noetic/dataspeed_can_usb/1.0.16-1.tar.gz";
-    name = "1.0.16-1.tar.gz";
-    sha256 = "9bff56a17cd8dcad256c71383b56a1058a209e2ec090b234fb20f8f4fc838c75";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dataspeed_can-release";
+        rev = "release/noetic/dataspeed_can_usb/1.0.16-1";
+        sha256 = "sha256-qDYokEGVgyvE1BoMRu80KFyjkZniJCpOysGOzLnaosk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslib ];

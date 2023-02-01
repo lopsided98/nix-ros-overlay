@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-object-detection-msgs";
   version = "0.6.17-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/melodic/cob_object_detection_msgs/0.6.17-1.tar.gz";
-    name = "0.6.17-1.tar.gz";
-    sha256 = "ea7db215b747fe3a14e99c761c40dfbf084cf4df381fa4ec9da18f5c9f803285";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_perception_common-release";
+        rev = "release/melodic/cob_object_detection_msgs/0.6.17-1";
+        sha256 = "sha256-XvJTXHrWpUK9449KccniebE1V8gpwmC2G2DaC65c1q0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

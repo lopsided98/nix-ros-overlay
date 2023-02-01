@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-roslisp";
   version = "1.9.24-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/roslisp-release/archive/release/melodic/roslisp/1.9.24-1.tar.gz";
-    name = "1.9.24-1.tar.gz";
-    sha256 = "86906499473238efd1de66d1cb4749973e1b5fc2965b3d6b6096fabc0bc601b7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "roslisp-release";
+        rev = "release/melodic/roslisp/1.9.24-1";
+        sha256 = "sha256-IDP0xaGdzWf3vimDdWw6utA3oVzIH/AmuVH+boFX+NE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

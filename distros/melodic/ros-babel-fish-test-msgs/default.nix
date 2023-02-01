@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ros-babel-fish-test-msgs";
   version = "0.9.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/StefanFabian/ros_babel_fish-release/archive/release/melodic/ros_babel_fish_test_msgs/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "7f7108fb6abb6252ecbcd985fad242d85b8b61a18626cbed814d93cd363bdf9a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "StefanFabian";
+        repo = "ros_babel_fish-release";
+        rev = "release/melodic/ros_babel_fish_test_msgs/0.9.3-1";
+        sha256 = "sha256-+IMs/suyQngfY9u5HXc+MuV9+iFMljF0rfMuTlobT5g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

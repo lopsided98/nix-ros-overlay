@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-libnabo";
   version = "1.0.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/nobleo/libnabo-release/archive/release/melodic/libnabo/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "f23830669052f20e65709863bd84f355267c114f62e9982f6316fdfe5ce12731";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "nobleo";
+        repo = "libnabo-release";
+        rev = "release/melodic/libnabo/1.0.7-1";
+        sha256 = "sha256-Jw5AWmdPvBZQlJgcl9gIvuvYSe/MxzFT8npWLQtu1i4=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

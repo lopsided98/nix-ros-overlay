@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-roseus";
   version = "1.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_roseus-release/archive/release/melodic/roseus/1.7.4-1.tar.gz";
-    name = "1.7.4-1.tar.gz";
-    sha256 = "02ba052b195e8a7bc3f83807425b5293a11b32283f7d8f5673ad742bc41e8c20";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_roseus-release";
+        rev = "release/melodic/roseus/1.7.4-1";
+        sha256 = "sha256-zOq9bIchRpzK+pNdojywghqKiiwCYEwqgcxiLopZK98=";
+      };
 
   buildType = "catkin";
   buildInputs = [ angles catkin coreutils message-generation mk rosbuild rostopic ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-gundam-robot";
   version = "0.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/gundam-global-challenge/gundam_robot-release/archive/release/melodic/gundam_robot/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "104242639f58d31d81f2635f9a84db3e777dd60c82912fb774aff076719d8db9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "gundam-global-challenge";
+        repo = "gundam_robot-release";
+        rev = "release/melodic/gundam_robot/0.0.3-1";
+        sha256 = "sha256-agYnxYX+BnWxZ4PdMDncV0JV/p+EOBkq+oJZkXbnTLY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

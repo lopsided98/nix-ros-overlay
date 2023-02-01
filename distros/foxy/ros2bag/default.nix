@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ros2bag";
   version = "0.3.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/ros2bag/0.3.9-1.tar.gz";
-    name = "0.3.9-1.tar.gz";
-    sha256 = "da2c068ff21189869581513abe6724ea4fe7ba914a2f1b595c060d94fc19c423";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosbag2-release";
+        rev = "release/foxy/ros2bag/0.3.9-1";
+        sha256 = "sha256-dSkAG1ghaj9t3OnFof+eCMU2SOjqRsHr7qNrHwFJv8g=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 launch-testing launch-testing-ros pythonPackages.pytest ];

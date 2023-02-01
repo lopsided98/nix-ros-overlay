@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mrpt-ekf-slam-3d";
   version = "0.1.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/noetic/mrpt_ekf_slam_3d/0.1.11-1.tar.gz";
-    name = "0.1.11-1.tar.gz";
-    sha256 = "efd46ed9041241ca4160234c4db70bd95488f0564c4ed8c1a8806e45deef4aef";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mrpt-ros-pkg-release";
+        repo = "mrpt_slam-release";
+        rev = "release/noetic/mrpt_ekf_slam_3d/0.1.11-1";
+        sha256 = "sha256-GHj9o/sPAHNzsB3MpWMzZ6z93HP6aaS2BGiQGkSSBfc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

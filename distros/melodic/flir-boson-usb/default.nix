@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-flir-boson-usb";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/flir_boson_usb-release/archive/release/melodic/flir_boson_usb/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "8c1bec8b2961607d526d51d6ab068534865aee4f71a1a66c326f6bd552bbdedb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "flir_boson_usb-release";
+        rev = "release/melodic/flir_boson_usb/1.2.1-1";
+        sha256 = "sha256-2LR9jENM+HA7ryCFBuEAzj/K65UKDxGOiW9zHTzsL/E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

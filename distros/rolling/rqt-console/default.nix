@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rqt-console";
   version = "2.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_console-release/archive/release/rolling/rqt_console/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "b8bc6bc1cb81caa1bc9c1f9e3f474684b6f9355bebb1257b171f7798703ee64e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_console-release";
+        rev = "release/rolling/rqt_console/2.1.0-1";
+        sha256 = "sha256-Sb1l2gSeaASN3+9YzIDC3VEc8xncvr0gCxDUXLhs6QY=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ ament-index-python python-qt-binding rcl-interfaces rclpy rqt-gui rqt-gui-py rqt-py-common ];

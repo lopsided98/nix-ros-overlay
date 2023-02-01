@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jackal-desktop";
   version = "0.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal_desktop-release/archive/release/melodic/jackal_desktop/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "72c94376d4b6d0af285c61998eee8da28ca5e08e172f3a9826a7e8f2b4ed7dee";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "jackal_desktop-release";
+        rev = "release/melodic/jackal_desktop/0.4.1-1";
+        sha256 = "sha256-UTbnSaowc6pL+Sbu5kMVVi1z4H1V//xVarSrKogm5zo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

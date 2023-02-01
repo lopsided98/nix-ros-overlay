@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ackermann-msgs, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, python3Packages, pythonPackages, rclpy, webots-ros2-driver }:
 buildRosPackage {
   pname = "ros-humble-webots-ros2-tesla";
-  version = "2023.0.0-r3";
+  version = "2023.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/humble/webots_ros2_tesla/2023.0.0-3.tar.gz";
-    name = "2023.0.0-3.tar.gz";
-    sha256 = "6045ccefcc4428651c163ebf8e15072625b6ba936f77695cc1739a1cce4e4c02";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "webots_ros2-release";
+        rev = "release/humble/webots_ros2_tesla/2023.0.1-1";
+        sha256 = "sha256-ExnlF/FXLh6KhkMekyuMXzd6+Xj+Umqh/KgcWZEb4Fg=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

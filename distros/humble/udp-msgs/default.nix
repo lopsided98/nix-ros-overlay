@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-udp-msgs";
   version = "0.0.3-r5";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/udp_msgs-release/archive/release/humble/udp_msgs/0.0.3-5.tar.gz";
-    name = "0.0.3-5.tar.gz";
-    sha256 = "ccecdb5df2ee885e2e3c2968edda71db4f3d3729be201a4be9c00061152a43ef";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "udp_msgs-release";
+        rev = "release/humble/udp_msgs/0.0.3-5";
+        sha256 = "sha256-g0Gi+BMs9cMS5t5Fh+epx+fKUhebhUczapOPMz9Bg5A=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

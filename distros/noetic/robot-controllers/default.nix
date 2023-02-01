@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-robot-controllers";
   version = "0.7.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/robot_controllers-release/archive/release/noetic/robot_controllers/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "cd13b537617dbdb7619f16bb991be69f9106df73970c9429dede5db6430ce1ae";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "robot_controllers-release";
+        rev = "release/noetic/robot_controllers/0.7.0-1";
+        sha256 = "sha256-5nzlD8HXfSOZxRf5rsmQAJ9K29EXFtJ9c/5u+C591ck=";
+      };
 
   buildType = "catkin";
   buildInputs = [ angles catkin ];

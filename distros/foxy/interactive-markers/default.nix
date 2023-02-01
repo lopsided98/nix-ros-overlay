@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-interactive-markers";
   version = "2.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/interactive_markers-release/archive/release/foxy/interactive_markers/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "c02fd70c1e236a319bd846e8d73b16aafd967a998caf0c25981571abfcbb96eb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "interactive_markers-release";
+        rev = "release/foxy/interactive_markers/2.1.3-1";
+        sha256 = "sha256-nL2sGALBXYM5P4WN1xhn6vjVsXJAsi5B7MC4jR/u9kc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];

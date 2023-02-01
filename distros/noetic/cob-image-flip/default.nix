@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-image-flip";
   version = "0.6.19-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/noetic/cob_image_flip/0.6.19-1.tar.gz";
-    name = "0.6.19-1.tar.gz";
-    sha256 = "c99621835873ca678c8ae4e5311c5667f66c9f142a97f310d058604319a09ac8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_perception_common-release";
+        rev = "release/noetic/cob_image_flip/0.6.19-1";
+        sha256 = "sha256-C/4MI9wfllMHF0HYW4KVswjJQT0xbfxh7/J6brGtuG0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

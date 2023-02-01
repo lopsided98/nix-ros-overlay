@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-calibration-controllers";
   version = "1.10.17-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/pr2_calibration_controllers/1.10.17-1.tar.gz";
-    name = "1.10.17-1.tar.gz";
-    sha256 = "70bf36f81db6cb6ce2ca9a2a1f6517b05e1355a6423287ae8f5d114a7ef21d3b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_controllers-release";
+        rev = "release/melodic/pr2_calibration_controllers/1.10.17-1";
+        sha256 = "sha256-vKF69zTU+VufuvR0ggyt/3mzhJhCK7At35w7bcgv3CU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

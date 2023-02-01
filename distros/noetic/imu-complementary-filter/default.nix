@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-imu-complementary-filter";
   version = "1.2.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/noetic/imu_complementary_filter/1.2.5-1.tar.gz";
-    name = "1.2.5-1.tar.gz";
-    sha256 = "a97788fe8767198ec5d00ca5d110ae90f43efa644f4fea5d70b20f6f27a265f4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "imu_tools-release";
+        rev = "release/noetic/imu_complementary_filter/1.2.5-1";
+        sha256 = "sha256-ZPGg9wHoe+X6Yn0HUz7py7u+iuTQ4DZvSFbnLddrgr4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

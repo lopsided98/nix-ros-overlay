@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-sick-lms1xx";
   version = "0.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_sick_lms1xx/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "cb563dc4bd92e5eb48a853b39c20fd700e3f8a0f1f8059cb6eb58a39ea8d500a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/melodic/cob_sick_lms1xx/0.7.4-1";
+        sha256 = "sha256-Yg8qi8c9ghGkTEs1mghH6AWzY5t7Vmrh2ylSkN1bsmU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

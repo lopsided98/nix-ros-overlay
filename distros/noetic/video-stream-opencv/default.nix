@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-video-stream-opencv";
   version = "1.1.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers/video_stream_opencv-release/archive/release/noetic/video_stream_opencv/1.1.6-1.tar.gz";
-    name = "1.1.6-1.tar.gz";
-    sha256 = "10cb5b891a17f5305a8e1f2e6706eec0da6b7c15cfbed31ccfcb35074583be9b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers";
+        repo = "video_stream_opencv-release";
+        rev = "release/noetic/video_stream_opencv/1.1.6-1";
+        sha256 = "sha256-mmYU4wI52SzjtL5nXKOY5jdySp1hq1esfqPUm8h1fPY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

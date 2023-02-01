@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ifm3d";
   version = "0.6.2-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ifm/ifm3d-ros-release/archive/release/noetic/ifm3d/0.6.2-3.tar.gz";
-    name = "0.6.2-3.tar.gz";
-    sha256 = "491b816559556b3274cd25f3c926ca00335f646f9016cd39c1950f62a3ed9984";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ifm";
+        repo = "ifm3d-ros-release";
+        rev = "release/noetic/ifm3d/0.6.2-3";
+        sha256 = "sha256-hCfT4PKk3DEEntLQeolnlvCKzWLY68gfE/TaSz64R7M=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

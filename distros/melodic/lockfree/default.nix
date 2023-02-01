@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-lockfree";
   version = "1.0.25";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_realtime-release/archive/release/melodic/lockfree/1.0.25-0.tar.gz";
-    name = "1.0.25-0.tar.gz";
-    sha256 = "659c8d7707b844cc4c8c9eeab40e3e33fdd65f1ca0e07f71b471dd4dad633e4f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_realtime-release";
+        rev = "release/melodic/lockfree/1.0.25-0";
+        sha256 = "sha256-/CwUQED0MsIv35TlfO0WPspHfG0BOg1NMCOoC+HKSH0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-dsr-description2";
   version = "0.1.1-r4";
 
-  src = fetchurl {
-    url = "https://github.com/doosan-robotics/doosan-robot2-release/archive/release/foxy/dsr_description2/0.1.1-4.tar.gz";
-    name = "0.1.1-4.tar.gz";
-    sha256 = "7776c814f0cfabf18ca111f5ca111216c0d69ab7a74e73f1ce14d785d1659037";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "doosan-robotics";
+        repo = "doosan-robot2-release";
+        rev = "release/foxy/dsr_description2/0.1.1-4";
+        sha256 = "sha256-Uzofn4VletQuTxBOe1h3uwsJDvc2uq7Gj5CzmancL8Y=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

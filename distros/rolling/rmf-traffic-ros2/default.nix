@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rmf-traffic-ros2";
   version = "2.1.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/rolling/rmf_traffic_ros2/2.1.2-1.tar.gz";
-    name = "2.1.2-1.tar.gz";
-    sha256 = "4205a113502356dd73c88c6ff2171a86a37f777ac30251468048f182960a4c0e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_ros2-release";
+        rev = "release/rolling/rmf_traffic_ros2/2.1.2-1";
+        sha256 = "sha256-VVLTJbIr4nL8EkVB97IQMBwMhYnsyWlI6itaK51Xg0U=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake eigen ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-camera-calibration";
   version = "1.17.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/camera_calibration/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "994c197fa74fcc8d8506e314e6fe5f42fc6f7be99855058e7c2457128d0a06f5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/noetic/camera_calibration/1.17.0-1";
+        sha256 = "sha256-7PVkzkbFtWYyUD1L3m4IOJ9ABqVeRtasU0LTsnp+PPc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

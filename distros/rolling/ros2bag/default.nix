@@ -2,19 +2,23 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, launch-testing, launch-testing-ros, pythonPackages, ros2cli, rosbag2-py, rosbag2-transport }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, launch-testing, launch-testing-ros, pythonPackages, ros2cli, rosbag2-py, rosbag2-storage-default-plugins, rosbag2-test-common, rosbag2-transport }:
 buildRosPackage {
   pname = "ros-rolling-ros2bag";
-  version = "0.18.0-r3";
+  version = "0.19.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/ros2bag/0.18.0-3.tar.gz";
-    name = "0.18.0-3.tar.gz";
-    sha256 = "958cd8f0766d39e9be0e284ac3f5da0b691fef0fb0052976caccfc282ef6f121";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosbag2-release";
+        rev = "release/rolling/ros2bag/0.19.0-1";
+        sha256 = "sha256-g2tsiaHGMxDYLe856AdZdi+2JcTnkdJlNHvD1Y9HJ7I=";
+      };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 launch-testing launch-testing-ros pythonPackages.pytest ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 launch-testing launch-testing-ros pythonPackages.pytest rosbag2-storage-default-plugins rosbag2-test-common ];
   propagatedBuildInputs = [ ros2cli rosbag2-py rosbag2-transport ];
 
   meta = {

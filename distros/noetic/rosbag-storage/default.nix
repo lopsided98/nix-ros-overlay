@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosbag-storage";
   version = "1.15.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rosbag_storage/1.15.15-1.tar.gz";
-    name = "1.15.15-1.tar.gz";
-    sha256 = "5731be7afe941055d31c69d38f3a9d94a2db09f5908fb52c9f0c971b6ab0e5f3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm-release";
+        rev = "release/noetic/rosbag_storage/1.15.15-1";
+        sha256 = "sha256-X8grKbAuEPh8GQgF7ib2JZnWMb2ieKqDhfu+vOb+2UA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest std-msgs ];

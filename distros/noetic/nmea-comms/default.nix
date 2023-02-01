@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-nmea-comms";
   version = "1.2.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/nmea_comms-release/archive/release/noetic/nmea_comms/1.2.0-3.tar.gz";
-    name = "1.2.0-3.tar.gz";
-    sha256 = "043ce2fedd2173e5d9fa7004aff8911555efeccb0a04150e737e149a6cdb7241";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "nmea_comms-release";
+        rev = "release/noetic/nmea_comms/1.2.0-3";
+        sha256 = "sha256-9vpACLn+DEJ/FvjqANRAnOPnY/OqUbmBIxzKguC+Vok=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch roslint rostest ];

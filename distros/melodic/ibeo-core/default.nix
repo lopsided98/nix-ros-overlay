@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ibeo-core";
   version = "2.0.2";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/ibeo_core-release/archive/release/melodic/ibeo_core/2.0.2-0.tar.gz";
-    name = "2.0.2-0.tar.gz";
-    sha256 = "c2ee7a2ea9424ee0c40e44d9cf22ab00bface29f418167a42451c6fae071071b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "ibeo_core-release";
+        rev = "release/melodic/ibeo_core/2.0.2-0";
+        sha256 = "sha256-EeoNy61hClwo2+0CkVkiR8sttoWOmXHQpo1WXfIURRg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

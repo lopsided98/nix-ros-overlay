@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rosidl-runtime-cpp";
   version = "3.1.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/humble/rosidl_runtime_cpp/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "32440b5fdfd8df90e002bccc3a9d1bd4ec5a0ea2dacb4a85d1bcb73024883fc1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl-release";
+        rev = "release/humble/rosidl_runtime_cpp/3.1.4-1";
+        sha256 = "sha256-J5Dv2T1mMflVM+fTpK1eGrrGV4UQVWd/YuaKWiIQJfs=";
+      };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common performance-test-fixture ];

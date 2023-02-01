@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, osrf-pycommon, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-humble-launch";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch-release/archive/release/humble/launch/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "f7ba4d4206725e8f47c51863b0cab9fe5d839fdffea1e7d3184add544c87c558";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "launch-release";
+        rev = "release/humble/launch/1.0.4-1";
+        sha256 = "sha256-tI4pwebTpp6kSB33hk+D/RBmMByv9EbhTU/B+El0Tlw=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-turtlebot3-follower";
   version = "1.1.0";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_applications-release/archive/release/melodic/turtlebot3_follower/1.1.0-0.tar.gz";
-    name = "1.1.0-0.tar.gz";
-    sha256 = "f2059a2728165ba5974739c04cabd2e782f3c06bff35299c149836c98bc6a429";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "turtlebot3_applications-release";
+        rev = "release/melodic/turtlebot3_follower/1.1.0-0";
+        sha256 = "sha256-SyB+Z4JwR1xAIgNR59Tq2pAWnznQIwbB22BL1OT3ZLc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

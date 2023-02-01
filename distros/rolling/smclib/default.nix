@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-smclib";
   version = "4.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/rolling/smclib/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "7e31f4211d5d2632cb8de1adc2811cfd7e259c7409809a23cd2c263dab3cb45b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "bond_core-release";
+        rev = "release/rolling/smclib/4.0.0-1";
+        sha256 = "sha256-F73Murx7nsDKLtgPHJ5EAjpH67fZ7LZMHDas6Up4fk0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];

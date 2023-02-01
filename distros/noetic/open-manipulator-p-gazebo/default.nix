@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-open-manipulator-p-gazebo";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator_p_simulations-release/archive/release/noetic/open_manipulator_p_gazebo/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "3acbf35cfbf201c8008cea6a70e4444a03c8f0f12bbae911a5f601cee074a62e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "open_manipulator_p_simulations-release";
+        rev = "release/noetic/open_manipulator_p_gazebo/1.0.1-1";
+        sha256 = "sha256-blrO2czuv7I36iBCDdn4KHn0PFykPczic1aNxdP+dIg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

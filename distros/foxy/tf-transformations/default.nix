@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-tf-transformations";
   version = "1.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/tf_transformations_release/archive/release/foxy/tf_transformations/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "3121c9c3a744914be0069131884e86bcd0bbb1bc1bde0c517b895f15c3843235";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "tf_transformations_release";
+        rev = "release/foxy/tf_transformations/1.0.2-1";
+        sha256 = "sha256-F2TIhZSc35QZmOpEFI5ROWicRY4QTJ5einfCDJ8d6ks=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-flake8 ament-pep257 pythonPackages.pytest ];

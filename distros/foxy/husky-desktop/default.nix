@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-husky-desktop";
   version = "1.0.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/foxy/husky_desktop/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "21560266da1399025db0d84dc90a708c4208dddf47d5d01419759e82fae8b5c5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "husky-release";
+        rev = "release/foxy/husky_desktop/1.0.7-1";
+        sha256 = "sha256-lI0oT6+Z7VURHQy7WYMAM0pbI19SNby4DAMy0jVRI18=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

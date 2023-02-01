@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-topic-tools";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/rolling/topic_tools/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "85f47a054aa1965e91a1da22c9d675720c104c0b8854ca910f603234348a11d4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "topic_tools-release";
+        rev = "release/rolling/topic_tools/1.0.0-1";
+        sha256 = "sha256-FKDmeNP+ucx8c0/wK+m+jHfA3Z/uF5ea6w7yeYPbJMo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ament-cmake-python rosidl-default-generators ];

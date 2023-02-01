@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-gripper-controllers";
   version = "0.8.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/gripper_controllers/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "9597cbf68eb73f7a985c1acfa6ec8d51e49f03a500e70bcbd2711f4cc48644cf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_controllers-release";
+        rev = "release/foxy/gripper_controllers/0.8.2-1";
+        sha256 = "sha256-WhY+vkHVER6xgV420L820o1FrllmGeg8dM5BZeKvTpk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pluginlib ];

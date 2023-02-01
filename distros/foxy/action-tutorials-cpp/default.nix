@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-action-tutorials-cpp";
   version = "0.9.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/action_tutorials_cpp/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "ece75ba361659c1f67b03a5066848efbc3e512aa17bc368bd1698b0b0d6c463f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/foxy/action_tutorials_cpp/0.9.4-1";
+        sha256 = "sha256-D3Qk0Db/q+4v9SDYQjbzfgTHfFTa5BHLLWaEFYeFVuw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

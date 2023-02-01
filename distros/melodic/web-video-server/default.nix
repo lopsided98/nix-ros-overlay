@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-web-video-server";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/web_video_server-release/archive/release/melodic/web_video_server/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "6280be50271f4d288665701715b2053fd31bc2fc0032a26956aad9cd17fc761b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "RobotWebTools-release";
+        repo = "web_video_server-release";
+        rev = "release/melodic/web_video_server/0.2.1-1";
+        sha256 = "sha256-w++hr6hEgw4PzjhdA6grjz/yv2dbndwSVdw8EqiUf94=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

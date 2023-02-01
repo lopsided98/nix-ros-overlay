@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-mapping-slam, cob-navigation-config, cob-navigation-global, cob-supported-robots, roslaunch, rviz }:
 buildRosPackage {
   pname = "ros-noetic-cob-navigation-slam";
-  version = "0.6.13-r1";
+  version = "0.6.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_navigation-release/archive/release/noetic/cob_navigation_slam/0.6.13-1.tar.gz";
-    name = "0.6.13-1.tar.gz";
-    sha256 = "1454b5ece53c1d29e516e8b47c13b3242edbc4d1912cb0f34b14e62644244e3e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_navigation-release";
+        rev = "release/noetic/cob_navigation_slam/0.6.14-1";
+        sha256 = "sha256-f1hPgVa2gg9/f0iLP4rCNnFk0X8xFhHt6/kHHeJzr/0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

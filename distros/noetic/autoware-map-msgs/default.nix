@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-autoware-map-msgs";
   version = "1.14.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/autoware-ai/messages-release/archive/release/noetic/autoware_map_msgs/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "766ca0323e7e168b4ff3bf6f748df6ebb1dcd55f9e2f76c05138492fa3a59af6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "autoware-ai";
+        repo = "messages-release";
+        rev = "release/noetic/autoware_map_msgs/1.14.0-1";
+        sha256 = "sha256-RZDcJO2vJJLEolC+3+XSRwT5Snm7bjNGSsAoE0do4xY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

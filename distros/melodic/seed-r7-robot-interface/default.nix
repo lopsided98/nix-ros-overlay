@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-seed-r7-robot-interface";
   version = "0.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/seed-solutions/seed_r7_ros_pkg-release/archive/release/melodic/seed_r7_robot_interface/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "f9a852559d704824b420e67f085064b434b29fe9c7bb9d7a24be71d97f2dfafb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "seed-solutions";
+        repo = "seed_r7_ros_pkg-release";
+        rev = "release/melodic/seed_r7_robot_interface/0.3.3-1";
+        sha256 = "sha256-qYm2F+/VypdLCkmhs9TlIiitasv+ehN6G9ARQbTgN7Y=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

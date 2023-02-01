@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosmsg";
   version = "1.15.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rosmsg/1.15.15-1.tar.gz";
-    name = "1.15.15-1.tar.gz";
-    sha256 = "8a2ab48765aca62967f0846984d30384be97288d99db9450b876ed4400839616";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm-release";
+        rev = "release/noetic/rosmsg/1.15.15-1";
+        sha256 = "sha256-HHU35TIPf25C69P3a78BtNzIe2bzCvb781jNzZCQ3E8=";
+      };
 
   buildType = "catkin";
   checkInputs = [ diagnostic-msgs rostest std-msgs std-srvs ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-dwb-msgs";
   version = "1.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/dwb_msgs/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "210f48d7ff36744b67004c14b1fbd27437fb3d9ed1e9ecbf64154ed236bcead6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/humble/dwb_msgs/1.1.5-1";
+        sha256 = "sha256-dSMujnvEkkzkuQtkEUb+oOTyjT39QS9LmZv0hsPrAxw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

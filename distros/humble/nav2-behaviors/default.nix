@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-nav2-behaviors";
   version = "1.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_behaviors/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "06fe07b579c024fb48df9ec3ff9e9a0eda152d4dbead5876adaaf2d4fadb0be5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/humble/nav2_behaviors/1.1.5-1";
+        sha256 = "sha256-O7sM+hluHI1SMfQNSXTfDywkZ1Nw1qEiHes/f647iQ8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake nav2-common tf2 tf2-geometry-msgs ];

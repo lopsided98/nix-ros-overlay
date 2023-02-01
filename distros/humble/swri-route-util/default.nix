@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, marti-common-msgs, marti-nav-msgs, rclcpp, swri-geometry-util, swri-math-util, swri-roscpp, swri-transform-util, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-swri-route-util";
-  version = "3.5.0-r1";
+  version = "3.5.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_route_util/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "64d8597fc4b67b81a8aa4cadfa2b0555998756c5f519d9e36aab6d742590c492";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "marti_common-release";
+        rev = "release/humble/swri_route_util/3.5.1-2";
+        sha256 = "sha256-cOdL5x9OxxwwKnc4v2c91ZTknuJipZli6KXzQf3eJWE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosbag-cloud-recorders";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/aws-gbp/rosbag_uploader-release/archive/release/melodic/rosbag_cloud_recorders/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "7558cdb87a1dc7a56a0dc4eaeedc550724cdb293a0b56a7e5a44a707adcb8e9a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "aws-gbp";
+        repo = "rosbag_uploader-release";
+        rev = "release/melodic/rosbag_cloud_recorders/1.0.1-1";
+        sha256 = "sha256-CJsXGvthcbLrBJbEwJliBY0Ck0Yo3qr50BYMHDK0an4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

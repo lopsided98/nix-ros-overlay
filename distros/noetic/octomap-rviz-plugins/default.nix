@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-octomap-rviz-plugins";
   version = "0.2.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap_rviz_plugins-release/archive/release/noetic/octomap_rviz_plugins/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "a4df6a9a9bc37d5722c20b8e4da89ed1c14891c825f705b43e9fb26e2dcdc7f8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "octomap_rviz_plugins-release";
+        rev = "release/noetic/octomap_rviz_plugins/0.2.4-1";
+        sha256 = "sha256-816alBU6FnAemoH9ar0U3cQIdUAZD0Ele8421wzdO7c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

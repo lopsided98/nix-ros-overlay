@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-moveit-resources-fanuc-moveit-config";
   version = "2.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/humble/moveit_resources_fanuc_moveit_config/2.0.6-1.tar.gz";
-    name = "2.0.6-1.tar.gz";
-    sha256 = "90c0fa7a63c84f2058a11ada4a09396ede328d13143c1668197e0fd341e28e4f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "moveit_resources-release";
+        rev = "release/humble/moveit_resources_fanuc_moveit_config/2.0.6-1";
+        sha256 = "sha256-cJ3DCFtICWq9luUEgd9v2OoVJXMLFgFmrFeLKU6C69s=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

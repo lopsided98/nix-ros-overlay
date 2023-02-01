@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cmvision";
   version = "0.5.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/teshanshanuka/cmvision-release/archive/release/noetic/cmvision/0.5.0-2.tar.gz";
-    name = "0.5.0-2.tar.gz";
-    sha256 = "edbbbcac9c23621ab1408052274744ddbd47e972d2d6c3db1657baa893fec78c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "teshanshanuka";
+        repo = "cmvision-release";
+        rev = "release/noetic/cmvision/0.5.0-2";
+        sha256 = "sha256-rjJdq5kNcBuZhW/A8C0WcEIqaAigj7A/GqsTmfD2t2k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-actionlib";
   version = "1.12.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/actionlib-release/archive/release/melodic/actionlib/1.12.1-1.tar.gz";
-    name = "1.12.1-1.tar.gz";
-    sha256 = "1c564f0186928a554d30a74c1bdffcbc52292ff93d7a5c8140ec4bce342ae020";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "actionlib-release";
+        rev = "release/melodic/actionlib/1.12.1-1";
+        sha256 = "sha256-jsP7NCNDo2VR3KCIwBhWyY5/7o0Xw82P0N2Cy6a8lyc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

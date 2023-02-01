@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rqt-service-caller";
   version = "1.0.5-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_service_caller-release/archive/release/humble/rqt_service_caller/1.0.5-3.tar.gz";
-    name = "1.0.5-3.tar.gz";
-    sha256 = "2b6452bbaefe8194e87be8624ffefd4869e70c552dcd7bd6ffe93573cae790c2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_service_caller-release";
+        rev = "release/humble/rqt_service_caller/1.0.5-3";
+        sha256 = "sha256-ZIAMenPCiVlqoXUvFI0pukwPJC43v4GOkQH7JEHO9W4=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ rqt-gui rqt-gui-py rqt-py-common ];

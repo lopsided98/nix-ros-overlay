@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fetch-navigation";
   version = "0.8.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_navigation/0.8.3-1.tar.gz";
-    name = "0.8.3-1.tar.gz";
-    sha256 = "95caf008d946b5af25d11443d21a5cbb791185b54f91825b928894e27706ecdb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "fetch_ros-release";
+        rev = "release/melodic/fetch_navigation/0.8.3-1";
+        sha256 = "sha256-TdiAD44HjspL3FssiV42/BoXF16GrNAdq1vBzZGgvcs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

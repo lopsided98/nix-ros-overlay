@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rqt-bag";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_bag-release/archive/release/rolling/rqt_bag/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "506a270f305d406c7419cf0b4e04707655fa8403612f53d7939772529586fef2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_bag-release";
+        rev = "release/rolling/rqt_bag/1.2.1-1";
+        sha256 = "sha256-5Wjy2g40XKxG61Vp+bC+GmXTaXeofb7qeJz8j32Ynks=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ python-qt-binding rclpy rosbag2-py rqt-gui rqt-gui-py ];

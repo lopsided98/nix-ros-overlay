@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, python3Packages, pythonPackages, xacro }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-importer";
-  version = "2023.0.0-r3";
+  version = "2023.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_importer/2023.0.0-3.tar.gz";
-    name = "2023.0.0-3.tar.gz";
-    sha256 = "3b2ac4689a01a9d3eb9cdb75e65fbe2b1c0ffae978ec7c4c6fedd1a997b33a91";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "webots_ros2-release";
+        rev = "release/foxy/webots_ros2_importer/2023.0.1-1";
+        sha256 = "sha256-IBlBrHZwPwyVdg6JNxe62ePHR18YugJysO0Tj1IpF54=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.numpy python3Packages.pillow python3Packages.pycodestyle pythonPackages.pytest ];

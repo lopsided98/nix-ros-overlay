@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-moveit-ros-occupancy-map-monitor";
   version = "1.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_occupancy_map_monitor/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "a620367fc90e687799a48b55d358b03b3ee070d94432ead0fbedd88f4ffa0782";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/melodic/moveit_ros_occupancy_map_monitor/1.0.11-1";
+        sha256 = "sha256-061YTbHLoWAEgUkvU404aeI/z8gRFxNTlQbyaYkmGzY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin eigen ];

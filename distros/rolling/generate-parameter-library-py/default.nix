@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-generate-parameter-library-py";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/generate_parameter_library-release/archive/release/rolling/generate_parameter_library_py/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "56ffaab075a10bf55863dac1a0039c3155fe5ee02dac06ec1d9d125fff3094cd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "generate_parameter_library-release";
+        rev = "release/rolling/generate_parameter_library_py/0.3.0-1";
+        sha256 = "sha256-5bTniyP8on8ZMXyGUkFKS2AT7IyI8yGgeOnw8WflxMM=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright pythonPackages.pytest ];

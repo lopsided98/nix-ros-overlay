@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ros-ign-bridge";
   version = "0.111.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_ign-release/archive/release/noetic/ros_ign_bridge/0.111.2-1.tar.gz";
-    name = "0.111.2-1.tar.gz";
-    sha256 = "e6eb7f2b2aec26fdcd2b60161ce7d7363d533b16fda2fea3358f81703dde7bc5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_ign-release";
+        rev = "release/noetic/ros_ign_bridge/0.111.2-1";
+        sha256 = "sha256-GgoZQJl6+74xorE92RUNnU90FK6fLulublZuWxoN3/0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

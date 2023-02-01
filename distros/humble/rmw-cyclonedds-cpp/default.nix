@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rmw-cyclonedds-cpp";
   version = "1.3.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_cyclonedds-release/archive/release/humble/rmw_cyclonedds_cpp/1.3.4-1.tar.gz";
-    name = "1.3.4-1.tar.gz";
-    sha256 = "c12f9488236054acec2221195bcde772869945fa9302360f7c23e6281ac9b8d6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmw_cyclonedds-release";
+        rev = "release/humble/rmw_cyclonedds_cpp/1.3.4-1";
+        sha256 = "sha256-YmAUomFUBIQyg6htBkT6gJiF3m65hoEzp/IO/1iFKts=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

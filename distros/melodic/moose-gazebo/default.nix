@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-moose-gazebo";
   version = "0.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/moose_simulator-release/archive/release/melodic/moose_gazebo/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "96224ec31a33af8058f47fc9343d99355692fed711835d8b18c1b87cb6ecfc6b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "moose_simulator-release";
+        rev = "release/melodic/moose_gazebo/0.1.3-1";
+        sha256 = "sha256-rwxalOjXIqFdyYcr5WNTkXPe6kQLNamCJ3i+FeIAyXQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

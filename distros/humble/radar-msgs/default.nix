@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-radar-msgs";
   version = "0.2.1-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/radar_msgs-release/archive/release/humble/radar_msgs/0.2.1-3.tar.gz";
-    name = "0.2.1-3.tar.gz";
-    sha256 = "d45ab12ca8e1d52d0dadccc5a88db3cbaf8ef9dacd7e2f466e2e2f6c26fedbae";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "radar_msgs-release";
+        rev = "release/humble/radar_msgs/0.2.1-3";
+        sha256 = "sha256-09etKgWuUL3tN+uERho/rQvfxovMzjJUK+2J9fg5Sa4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

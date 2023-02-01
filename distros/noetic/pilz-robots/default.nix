@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pilz-robots";
   version = "0.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/noetic/pilz_robots/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "fcc2acb4d679e4c28ca857adbbe15548f9430af9f16fa98e9c258d902eed0d80";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_robots-release";
+        rev = "release/noetic/pilz_robots/0.6.0-1";
+        sha256 = "sha256-NcU9CqJA8++QM7fAN7RnJLAGUcJMuY2Dv9UdaYxu14s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -216,16 +216,6 @@ self: super: {
 
  boost-sml = self.callPackage ./boost-sml {};
 
- bota-driver = self.callPackage ./bota-driver {};
-
- bota-driver-testing = self.callPackage ./bota-driver-testing {};
-
- bota-node = self.callPackage ./bota-node {};
-
- bota-signal-handler = self.callPackage ./bota-signal-handler {};
-
- bota-worker = self.callPackage ./bota-worker {};
-
  brics-actuator = self.callPackage ./brics-actuator {};
 
  calibration = self.callPackage ./calibration {};
@@ -2034,28 +2024,6 @@ self: super: {
 
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
 
- marti-common-msgs = self.callPackage ./marti-common-msgs {};
-
- marti-data-structures = self.callPackage ./marti-data-structures {};
-
- marti-dbw-msgs = self.callPackage ./marti-dbw-msgs {};
-
- marti-introspection-msgs = self.callPackage ./marti-introspection-msgs {};
-
- marti-nav-msgs = self.callPackage ./marti-nav-msgs {};
-
- marti-perception-msgs = self.callPackage ./marti-perception-msgs {};
-
- marti-sensor-msgs = self.callPackage ./marti-sensor-msgs {};
-
- marti-status-msgs = self.callPackage ./marti-status-msgs {};
-
- marti-visualization-msgs = self.callPackage ./marti-visualization-msgs {};
-
- marvelmind-nav = self.callPackage ./marvelmind-nav {};
-
- master-discovery-fkie = self.callPackage ./master-discovery-fkie {};
-
  master-sync-fkie = self.callPackage ./master-sync-fkie {};
 
  mav-comm = self.callPackage ./mav-comm {};
@@ -2063,32 +2031,6 @@ self: super: {
  mav-msgs = self.callPackage ./mav-msgs {};
 
  mav-planning-msgs = self.callPackage ./mav-planning-msgs {};
-
- mavlink = self.callPackage ./mavlink {};
-
- mavros = self.callPackage ./mavros {};
-
- mavros-extras = self.callPackage ./mavros-extras {};
-
- mavros-msgs = self.callPackage ./mavros-msgs {};
-
- mbf-abstract-core = self.callPackage ./mbf-abstract-core {};
-
- mbf-abstract-nav = self.callPackage ./mbf-abstract-nav {};
-
- mbf-costmap-core = self.callPackage ./mbf-costmap-core {};
-
- mbf-costmap-nav = self.callPackage ./mbf-costmap-nav {};
-
- mbf-mesh-core = self.callPackage ./mbf-mesh-core {};
-
- mbf-mesh-nav = self.callPackage ./mbf-mesh-nav {};
-
- mbf-msgs = self.callPackage ./mbf-msgs {};
-
- mbf-recovery-behaviors = self.callPackage ./mbf-recovery-behaviors {};
-
- mbf-simple-nav = self.callPackage ./mbf-simple-nav {};
 
  mbf-utility = self.callPackage ./mbf-utility {};
 
@@ -3068,6 +3010,8 @@ self: super: {
 
  qb-device-driver = self.callPackage ./qb-device-driver {};
 
+ qb-device-gazebo = self.callPackage ./qb-device-gazebo {};
+
  qb-device-hardware-interface = self.callPackage ./qb-device-hardware-interface {};
 
  qb-device-msgs = self.callPackage ./qb-device-msgs {};
@@ -3082,6 +3026,8 @@ self: super: {
 
  qb-hand-description = self.callPackage ./qb-hand-description {};
 
+ qb-hand-gazebo = self.callPackage ./qb-hand-gazebo {};
+
  qb-hand-hardware-interface = self.callPackage ./qb-hand-hardware-interface {};
 
  qb-move = self.callPackage ./qb-move {};
@@ -3089,6 +3035,8 @@ self: super: {
  qb-move-control = self.callPackage ./qb-move-control {};
 
  qb-move-description = self.callPackage ./qb-move-description {};
+
+ qb-move-gazebo = self.callPackage ./qb-move-gazebo {};
 
  qb-move-hardware-interface = self.callPackage ./qb-move-hardware-interface {};
 
@@ -3189,20 +3137,6 @@ self: super: {
  rc-visard-driver = self.callPackage ./rc-visard-driver {};
 
  rcdiscover = self.callPackage ./rcdiscover {};
-
- rdl = self.callPackage ./rdl {};
-
- rdl-benchmark = self.callPackage ./rdl-benchmark {};
-
- rdl-cmake = self.callPackage ./rdl-cmake {};
-
- rdl-dynamics = self.callPackage ./rdl-dynamics {};
-
- rdl-msgs = self.callPackage ./rdl-msgs {};
-
- rdl-ros-tools = self.callPackage ./rdl-ros-tools {};
-
- rdl-urdfreader = self.callPackage ./rdl-urdfreader {};
 
  realsense2-camera = self.callPackage ./realsense2-camera {};
 
@@ -3353,18 +3287,6 @@ self: super: {
  rocon-tutorial-msgs = self.callPackage ./rocon-tutorial-msgs {};
 
  rocon-uri = self.callPackage ./rocon-uri {};
-
- rokubimini = self.callPackage ./rokubimini {};
-
- rokubimini-bus-manager = self.callPackage ./rokubimini-bus-manager {};
-
- rokubimini-description = self.callPackage ./rokubimini-description {};
-
- rokubimini-ethercat = self.callPackage ./rokubimini-ethercat {};
-
- rokubimini-msgs = self.callPackage ./rokubimini-msgs {};
-
- rokubimini-serial = self.callPackage ./rokubimini-serial {};
 
  roomba-stage = self.callPackage ./roomba-stage {};
 
@@ -4162,26 +4084,6 @@ self: super: {
 
  topic-tools = self.callPackage ./topic-tools {};
 
- toposens = self.callPackage ./toposens {};
-
- toposens-sensor-library = self.callPackage ./toposens-sensor-library {};
-
- toposens-bringup = self.callPackage ./toposens-bringup {};
-
- toposens-description = self.callPackage ./toposens-description {};
-
- toposens-driver = self.callPackage ./toposens-driver {};
-
- toposens-echo-driver = self.callPackage ./toposens-echo-driver {};
-
- toposens-markers = self.callPackage ./toposens-markers {};
-
- toposens-msgs = self.callPackage ./toposens-msgs {};
-
- toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
-
- toposens-sync = self.callPackage ./toposens-sync {};
-
  tork-moveit-tutorial = self.callPackage ./tork-moveit-tutorial {};
 
  towr = self.callPackage ./towr {};
@@ -4374,13 +4276,19 @@ self: super: {
 
  ur5e-moveit-config = self.callPackage ./ur5e-moveit-config {};
 
+ ur-calibration = self.callPackage ./ur-calibration {};
+
  ur-client-library = self.callPackage ./ur-client-library {};
+
+ ur-dashboard-msgs = self.callPackage ./ur-dashboard-msgs {};
 
  ur-description = self.callPackage ./ur-description {};
 
  ur-gazebo = self.callPackage ./ur-gazebo {};
 
  ur-msgs = self.callPackage ./ur-msgs {};
+
+ ur-robot-driver = self.callPackage ./ur-robot-driver {};
 
  urdf = self.callPackage ./urdf {};
 

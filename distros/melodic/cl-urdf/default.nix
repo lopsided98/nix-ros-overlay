@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cl-urdf";
   version = "0.2.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/cl_urdf/0.2.13-1.tar.gz";
-    name = "0.2.13-1.tar.gz";
-    sha256 = "e674017e0a9183139ef8f5de07c0e5464116b3c85b8b3dba21b0c514a46682d0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "roslisp_common-release";
+        rev = "release/melodic/cl_urdf/0.2.13-1";
+        sha256 = "sha256-Dpci9nI0ytAW4qOwrdNYcjQ4kyk/dWY8BvoXy6oT/sk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

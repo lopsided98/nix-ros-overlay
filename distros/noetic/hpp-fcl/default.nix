@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-hpp-fcl";
   version = "2.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/humanoid-path-planner/hpp-fcl-ros-release/archive/release/noetic/hpp-fcl/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "66aaa2fb542f7619cfa86943f41c932deb3bd479d956ef877313411c4a71b1c8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "humanoid-path-planner";
+        repo = "hpp-fcl-ros-release";
+        rev = "release/noetic/hpp-fcl/2.2.0-1";
+        sha256 = "sha256-Jg/himo9KLlbAM9hVexTrYyJ/m9rxp3+R5fhfXgRbJM=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen git python3Packages.lxml ];

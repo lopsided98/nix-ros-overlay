@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-interactive-marker-twist-server";
   version = "1.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/interactive_marker_twist_server-release/archive/release/noetic/interactive_marker_twist_server/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "58d695193fe358cddaabae164f677da27b3908503207c3ca1fcdedbbae922a0c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "interactive_marker_twist_server-release";
+        rev = "release/noetic/interactive_marker_twist_server/1.2.2-1";
+        sha256 = "sha256-JncKemRQ5Bt6lURZB0oSoC57We2g9/ciwhx/PeIXq/U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

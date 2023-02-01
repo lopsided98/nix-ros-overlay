@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-command-gui";
   version = "0.6.19-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/cob_command_gui/0.6.19-1.tar.gz";
-    name = "0.6.19-1.tar.gz";
-    sha256 = "1701a98d3b1a973455546a20f86ece15cb2ef964f1f8a98c49fea4675f1d69a5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_command_tools-release";
+        rev = "release/melodic/cob_command_gui/0.6.19-1";
+        sha256 = "sha256-ADmeqfH8Lpqv9PKvGmoaShVWS9oWF2TVKa02750d3hQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools ];

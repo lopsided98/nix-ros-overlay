@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jsk-ik-server";
   version = "0.1.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/melodic/jsk_ik_server/0.1.16-1.tar.gz";
-    name = "0.1.16-1.tar.gz";
-    sha256 = "9db6bcdbf9dac42d1442ddae80b22d02832be8f96570f8170b171c5e984c4c92";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_control-release";
+        rev = "release/melodic/jsk_ik_server/0.1.16-1";
+        sha256 = "sha256-J0+SCpwcTHtm/MTGzy9k9Ch4qKmAtkoOXeKJabCwSKg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

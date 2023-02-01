@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mocap-nokov";
   version = "0.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/NOKOV-MOCAP/mocap_nokov_release/archive/release/noetic/mocap_nokov/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "5c4aa056767f0ad442a0a21c6a4e9a471dac06b7e03bcedccddc2a372f6b4792";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "NOKOV-MOCAP";
+        repo = "mocap_nokov_release";
+        rev = "release/noetic/mocap_nokov/0.0.4-1";
+        sha256 = "sha256-SYWnhkBXRFs20zmKslIpEo+dOHwbWwFDO6+TrFBPyd8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

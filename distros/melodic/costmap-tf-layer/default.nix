@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-costmap-tf-layer";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/igorbanfi/costmap_tf_layer-release/archive/release/melodic/costmap_tf_layer/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "7b82e925dfd3d74c26f302a7fc3c213e33078aa9b670f7a68f6627d105f14c0c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "igorbanfi";
+        repo = "costmap_tf_layer-release";
+        rev = "release/melodic/costmap_tf_layer/1.0.1-1";
+        sha256 = "sha256-W1J+2viT+QDPxmoXP7wZ1N3BrxUZfgqYrqnbdco2p4s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

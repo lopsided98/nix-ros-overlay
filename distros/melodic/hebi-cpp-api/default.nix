@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hebi-cpp-api";
   version = "3.2.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/HebiRobotics/hebi_cpp_api_ros-release/archive/release/melodic/hebi_cpp_api/3.2.0-2.tar.gz";
-    name = "3.2.0-2.tar.gz";
-    sha256 = "8bf76ffbba3dc13648069d8d9b293c791dd0c03ccc6ba6ebb51604691e6a2276";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "HebiRobotics";
+        repo = "hebi_cpp_api_ros-release";
+        rev = "release/melodic/hebi_cpp_api/3.2.0-2";
+        sha256 = "sha256-QSAEabtAQlkrQTpDECGciMGUtGZzgFgFzK5D+IHf/O8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules eigen ];

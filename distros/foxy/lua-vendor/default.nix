@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-lua-vendor";
   version = "0.0.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/OUXT-Polaris/lua_vendor-release/archive/release/foxy/lua_vendor/0.0.1-2.tar.gz";
-    name = "0.0.1-2.tar.gz";
-    sha256 = "7708341794178f26d71ce7b6605ba4fc8c37ed4199413ebb85754cf5309ddad0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "OUXT-Polaris";
+        repo = "lua_vendor-release";
+        rev = "release/foxy/lua_vendor/0.0.1-2";
+        sha256 = "sha256-c1qwqTfSwEHxneEQGoW9jl1aZqUYyl2vHBy7EM0CGNQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

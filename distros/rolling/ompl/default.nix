@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ompl";
   version = "1.5.2-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ompl-release/archive/release/rolling/ompl/1.5.2-2.tar.gz";
-    name = "1.5.2-2.tar.gz";
-    sha256 = "fd6f7eca75d22aae6fd64709ef9d8bffe4a76e67b1fa53de42d93c789828088b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ompl-release";
+        rev = "release/rolling/ompl/1.5.2-2";
+        sha256 = "sha256-S/r7lhDzSeFwxL4OMv2qlVAqTQ0Ew5NoFBdUqZFY43I=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake pkg-config ];

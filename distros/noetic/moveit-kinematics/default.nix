@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-kinematics";
   version = "1.1.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_kinematics/1.1.11-1.tar.gz";
-    name = "1.1.11-1.tar.gz";
-    sha256 = "420326e567e66e956e7b05f6851cad2c3c21baab6ff699676cd5882d528ad7b6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/noetic/moveit_kinematics/1.1.11-1";
+        sha256 = "sha256-LpVGq53VHQBP1jp4HODdBUjTX089EOr7/XLvPnFvbi4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

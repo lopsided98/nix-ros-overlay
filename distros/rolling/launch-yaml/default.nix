@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-launch-yaml";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch-release/archive/release/rolling/launch_yaml/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "1b04f4a90afd08c39762d0eb039ea6a1107aa9b58cd45215cf4a0605cb18ea30";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "launch-release";
+        rev = "release/rolling/launch_yaml/1.3.0-1";
+        sha256 = "sha256-wWTNkbYIaw2AmVV2CP4CakS1btqAoOk2eJlb10QFCKo=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

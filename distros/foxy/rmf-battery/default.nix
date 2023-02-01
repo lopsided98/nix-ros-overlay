@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmf-battery";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_battery-release/archive/release/foxy/rmf_battery/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "42a984a1d6ffc379b7bd0189ca390074c821d2a5957d691b833c320da9e6a150";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_battery-release";
+        rev = "release/foxy/rmf_battery/0.1.1-1";
+        sha256 = "sha256-B5Ind7cMPaFPCNu651gqUr7i8w7o0AmryaNgkET75k4=";
+      };
 
   buildType = "cmake";
   checkInputs = [ ament-cmake-catch2 rmf-cmake-uncrustify ];

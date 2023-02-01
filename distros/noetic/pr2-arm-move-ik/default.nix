@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pr2-arm-move-ik";
   version = "0.0.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/noetic/pr2_arm_move_ik/0.0.12-1.tar.gz";
-    name = "0.0.12-1.tar.gz";
-    sha256 = "581d5308dc0fb1202eeb529ab4b9dd0b0228afa1f7a0fde9267631992aeb5a98";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_common_actions-release";
+        rev = "release/noetic/pr2_arm_move_ik/0.0.12-1";
+        sha256 = "sha256-Ng8jHLj4k2RJYoymCBHaxzSyOkjekphAB4lmbpEfqtM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

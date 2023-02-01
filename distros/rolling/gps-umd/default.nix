@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-gps-umd";
   version = "1.0.4-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/rolling/gps_umd/1.0.4-2.tar.gz";
-    name = "1.0.4-2.tar.gz";
-    sha256 = "b4b12686aff3f62942d3884d4b4d9980ce9193751350f902abe5f8b84998d3bd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "gps_umd-release";
+        rev = "release/rolling/gps_umd/1.0.4-2";
+        sha256 = "sha256-Pxfv1FZznAbN+lK9n7uoMEItczKj//qS+sjed3Xte4s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ ament-cmake ];

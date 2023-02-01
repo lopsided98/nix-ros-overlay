@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-open-manipulator-gazebo";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator_simulations-release/archive/release/melodic/open_manipulator_gazebo/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "1c5055d46fc7e08fce26a98cef9ca8bd79496f0e56aa44de49ff0c3e8675be84";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "open_manipulator_simulations-release";
+        rev = "release/melodic/open_manipulator_gazebo/1.1.0-1";
+        sha256 = "sha256-rwOrymK46Ji6k2Irn9aVq/poyNSXs0tq0qUEzFowsyo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

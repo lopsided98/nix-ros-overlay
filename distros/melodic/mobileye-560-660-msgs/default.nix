@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mobileye-560-660-msgs";
   version = "3.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/mobileye_560_660_msgs/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "952c7980abc7d35a66fec1e791bcc1c78cc80ce737ca1db50d10664c2f011301";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "astuff_sensor_msgs-release";
+        rev = "release/melodic/mobileye_560_660_msgs/3.0.2-1";
+        sha256 = "sha256-apV2k4uZvCpjohJgOeKGgit6qAViR0LMTVzCeaXk1gk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ros-environment ];

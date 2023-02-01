@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-topic-monitor";
   version = "0.9.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/topic_monitor/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "ab7b36f2d05bb919fa146660186e9abf3696e01e3bb2d156138ed6e950ec60f2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/foxy/topic_monitor/0.9.4-1";
+        sha256 = "sha256-6Qb1VFdpXSPQwDizEiLO3MVl+wKCD1WpLKEs3Vul8sA=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-flake8 ament-pep257 pythonPackages.pytest ];

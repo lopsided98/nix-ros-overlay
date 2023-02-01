@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-robot-localization";
   version = "3.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/robot_localization-release/archive/release/rolling/robot_localization/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "da700e625dc433d51ce964ff61e05d8cc25af701481ae3731270467adf3b877e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "robot_localization-release";
+        rev = "release/rolling/robot_localization/3.5.0-1";
+        sha256 = "sha256-W1A5rT+Bny3ncng0MhAIgSlK6YSS09vb7Pu/kPOsdpI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake builtin-interfaces rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-nao-lola";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/nao_lola-release/archive/release/rolling/nao_lola/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "6842d05776bf62fb0b6172e042e96b2c737661c2fae6da7ea588772f54ba5fb9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "nao_lola-release";
+        rev = "release/rolling/nao_lola/0.2.0-1";
+        sha256 = "sha256-0hakIRpfMEClzpS1jht5/hiG6D+zU1MWUSexnzDhoDQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

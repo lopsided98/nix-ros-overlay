@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-desktop-full";
   version = "1.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/metapackages-release/archive/release/noetic/desktop_full/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "a464f2b0bc587ebc77fc1ac28c80f0f53945a21810c6f6d9002d1e47e71fc97a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "metapackages-release";
+        rev = "release/noetic/desktop_full/1.5.0-1";
+        sha256 = "sha256-AGWIFkHAQ0EvTeZBj8VbLPcqCHnNcvzgy6bvPi+pYlc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

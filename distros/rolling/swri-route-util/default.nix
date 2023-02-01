@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-swri-route-util";
   version = "3.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_route_util/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "9fff9daa045b39b6cc6cb79b048c05e14c95b09d35361dc6b897c3b8ef2d94be";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "marti_common-release";
+        rev = "release/rolling/swri_route_util/3.5.0-1";
+        sha256 = "sha256-WnSzpqSIo5T1gBQEoQnK4M5AS/BIdjR9P+EN7S82TkU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-usb-cam-hardware";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yoshito-n-students/usb_cam_hardware-release/archive/release/noetic/usb_cam_hardware/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "fe91fb847b79fe425a444a31d35f306c884e5cfbe20c2be3a661a6b6ce75d339";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yoshito-n-students";
+        repo = "usb_cam_hardware-release";
+        rev = "release/noetic/usb_cam_hardware/0.2.1-1";
+        sha256 = "sha256-OgHMPUZ00xYb/H3T0Xb2uJyi5MlwbJ5+HoqBNkM4ug0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-performance-test";
   version = "1.2.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/performance_test-release/archive/release/rolling/performance_test/1.2.1-2.tar.gz";
-    name = "1.2.1-2.tar.gz";
-    sha256 = "b4071d74cda85348dfed0f509e42d9c3379d0989abb5a1f8c76c077ba19ad203";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "performance_test-release";
+        rev = "release/rolling/performance_test/1.2.1-2";
+        sha256 = "sha256-u4mAwbA+JRMXmY53Z0E6Uz7BQJcVZkDovcmnVCK1KxU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake osrf-testing-tools-cpp rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-marti-perception-msgs";
   version = "0.11.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/noetic/marti_perception_msgs/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "8b4d5f2e4791ee54f675c83203deb0df09fd6b2c70729f334e78480c82461961";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "marti_messages-release";
+        rev = "release/noetic/marti_perception_msgs/0.11.0-1";
+        sha256 = "sha256-FRJDo+QsX1dQsncDtoCqByBOfhQUTXOnqSnReh5icJk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

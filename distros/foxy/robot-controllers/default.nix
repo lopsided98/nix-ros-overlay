@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-robot-controllers";
   version = "0.8.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/robot_controllers-ros2-release/archive/release/foxy/robot_controllers/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "28e3d71e94b70d65834bdfa0d821238ae24756c558815ad32ddbbd60dd9538e6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "robot_controllers-ros2-release";
+        rev = "release/foxy/robot_controllers/0.8.1-1";
+        sha256 = "sha256-xJ44OPEE6h3FTBroQiASQyRD0DFJJf2XanEvnmm1NFQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

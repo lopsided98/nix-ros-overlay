@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-libuvc-camera";
   version = "0.0.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/libuvc_ros-release/archive/release/melodic/libuvc_camera/0.0.10-1.tar.gz";
-    name = "0.0.10-1.tar.gz";
-    sha256 = "2ea19c5821e70fe6c63da750b35c6ae0dfff43faadca9f951c0137e5701834b0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "libuvc_ros-release";
+        rev = "release/melodic/libuvc_camera/0.0.10-1";
+        sha256 = "sha256-CkgVxB2IqKp4/xDRQV4gJ+LOcba2Xw66STDLO4eITxg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

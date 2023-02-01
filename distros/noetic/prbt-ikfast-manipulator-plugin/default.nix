@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-prbt-ikfast-manipulator-plugin";
   version = "0.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/noetic/prbt_ikfast_manipulator_plugin/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "9597d21902753ce2451b608d2c16bc6647a38a6070e6e4873fc860a6fc285061";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_robots-release";
+        rev = "release/noetic/prbt_ikfast_manipulator_plugin/0.6.0-1";
+        sha256 = "sha256-lggwhiJxLmvlKU11L7XGiPRXBKXp8GKD4vKa/74sm/Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin tf2-eigen ];

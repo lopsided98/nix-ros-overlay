@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-roswww";
   version = "0.1.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/roswww-release/archive/release/melodic/roswww/0.1.13-1.tar.gz";
-    name = "0.1.13-1.tar.gz";
-    sha256 = "eb82a974660ca3170ed06eebb74536569c53d935861cb6d44fc791f0657f8245";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "roswww-release";
+        rev = "release/melodic/roswww/0.1.13-1";
+        sha256 = "sha256-/es7Z0mr7Rhsj4ZaOk8lBfQQvO/Stc4cc4Ros3Or/Rs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.catkin-pkg ];

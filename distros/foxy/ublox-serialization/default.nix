@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ublox-serialization";
   version = "2.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox-release/archive/release/foxy/ublox_serialization/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "4f42a93a500feac28525a5908300e3e19baf80334170c560bc1e522b0b1e5921";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ublox-release";
+        rev = "release/foxy/ublox_serialization/2.1.0-1";
+        sha256 = "sha256-Uw/5BdvSN54TvW0V2PRxs495eGsRS3UCFk4dagg+VjY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

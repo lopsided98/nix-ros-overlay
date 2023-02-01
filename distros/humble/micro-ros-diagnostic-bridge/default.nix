@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-micro-ros-diagnostic-bridge";
   version = "0.3.0-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/micro_ros_diagnostics-release/archive/release/humble/micro_ros_diagnostic_bridge/0.3.0-4.tar.gz";
-    name = "0.3.0-4.tar.gz";
-    sha256 = "3201e5a54cd365d9f1f591cd40f96a04ee5aaf5fe6123a0aa5b8581651a0eb67";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "micro_ros_diagnostics-release";
+        rev = "release/humble/micro_ros_diagnostic_bridge/0.3.0-4";
+        sha256 = "sha256-mBsQdSKOPVQJVBc/FxvaxH5NOtAJy3M+bYciq7eHg+c=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

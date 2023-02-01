@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-novatel-gps-driver";
   version = "3.9.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/novatel_gps_driver-release/archive/release/melodic/novatel_gps_driver/3.9.0-1.tar.gz";
-    name = "3.9.0-1.tar.gz";
-    sha256 = "6ef15030ebde3bece473d8bbddc617d7e58b972e4de490e48e63b1e885ad06f8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "novatel_gps_driver-release";
+        rev = "release/melodic/novatel_gps_driver/3.9.0-1";
+        sha256 = "sha256-L8vDk9aHMXH/KBT6V1EJTvDrkppgG30LjqbvtsfwNyo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

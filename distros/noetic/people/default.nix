@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-people";
   version = "1.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/OSUrobotics/people-release/archive/release/noetic/people/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "d0a5fb8cdee62113702c3ee9b1174435999684165c08751c91afa57a7e107d8c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "OSUrobotics";
+        repo = "people-release";
+        rev = "release/noetic/people/1.4.2-1";
+        sha256 = "sha256-sUs7wabv+MGxLofdN/OULCF2IIfkksl+hLeIH8DBE+c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

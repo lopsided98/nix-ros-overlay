@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dense-laser-assembler";
   version = "1.0.11-r3";
 
-  src = fetchurl {
-    url = "https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release/archive/release/melodic/dense_laser_assembler/1.0.11-3.tar.gz";
-    name = "1.0.11-3.tar.gz";
-    sha256 = "ae8c468360cf2e64738f25ca2722920008eff02f43806e5b4ac0009639ebe5ec";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UNR-RoboticsResearchLab";
+        repo = "pr2_calibration-release";
+        rev = "release/melodic/dense_laser_assembler/1.0.11-3";
+        sha256 = "sha256-iOEfcBv0S4NAGJFf4UtLdT0uwbmUzShYkxYXRehQNFU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

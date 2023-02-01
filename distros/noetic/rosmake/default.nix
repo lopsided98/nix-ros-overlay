@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosmake";
   version = "1.15.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros-release/archive/release/noetic/rosmake/1.15.8-1.tar.gz";
-    name = "1.15.8-1.tar.gz";
-    sha256 = "03ed121f2231478045cdb983ccbca247f214322acf67d9553d78f78a558c3ffb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros-release";
+        rev = "release/noetic/rosmake/1.15.8-1";
+        sha256 = "sha256-2IUCC/gQH2T5lHpiErzVXDhOcOBWjNdp6f6+SNKy6iA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ python3Packages.setuptools ];

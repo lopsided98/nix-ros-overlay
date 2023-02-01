@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-libuvc-ros";
   version = "0.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/libuvc_ros-release/archive/release/noetic/libuvc_ros/0.0.11-1.tar.gz";
-    name = "0.0.11-1.tar.gz";
-    sha256 = "b2da80d64e704f65aa4833edcc0c34868326d9cae3a32ededd99a3202ac9a790";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "libuvc_ros-release";
+        rev = "release/noetic/libuvc_ros/0.0.11-1";
+        sha256 = "sha256-+VLUKncrHQ1v4JxMM672o3c/D2dKkJAMeuJcbNw0xzA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robot-setup-tf-tutorial";
   version = "0.2.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_tutorials-release/archive/release/melodic/robot_setup_tf_tutorial/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "fed0dd85c06de7584585f1940e91a5f591c8c2d33375aae4d83beaee5725ad65";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation_tutorials-release";
+        rev = "release/melodic/robot_setup_tf_tutorial/0.2.4-1";
+        sha256 = "sha256-QaYglsQNDJYMXThFFbPway7lRq+RkQ/nWG18mWbGhSo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

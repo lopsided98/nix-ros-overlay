@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-leuze-phidget-driver";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa-led/leuze_ros_drivers-release/archive/release/melodic/leuze_phidget_driver/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "9daae2e7e6f3a21ae1d5c9e0313e6da614eb4752541292755543c55a2e7c12f3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa-led";
+        repo = "leuze_ros_drivers-release";
+        rev = "release/melodic/leuze_phidget_driver/1.0.1-1";
+        sha256 = "sha256-PHS/mScTa5E8V+pwrPeqJUBbol/wdWmjxttGxXdiZuw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-parameter-pa";
   version = "1.2.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/TUC-ProAut/ros_parameter-release/archive/release/melodic/parameter_pa/1.2.3-2.tar.gz";
-    name = "1.2.3-2.tar.gz";
-    sha256 = "ecf0983ae4dfc9bcb99e83c332bda449ffa5ee778c8e17e9a1b2c667d0544aa9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "TUC-ProAut";
+        repo = "ros_parameter-release";
+        rev = "release/melodic/parameter_pa/1.2.3-2";
+        sha256 = "sha256-UdbuPA4pBgqHS9lkFd5d5E3khQw6fDibj40vHZiThAM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

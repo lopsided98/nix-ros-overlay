@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ibeo-msgs";
   version = "3.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/noetic/ibeo_msgs/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "f0e57dc58d1148f5c8bb9dc5723f9c5b5cc3a4e86d02ab110b5e03f595c659e4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "astuff_sensor_msgs-release";
+        rev = "release/noetic/ibeo_msgs/3.3.0-1";
+        sha256 = "sha256-uCL2CzOlSDnmJDihLQbhy1TSONVmymbokGVMOp92si0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ros-environment ];

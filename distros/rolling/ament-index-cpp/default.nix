@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ament-index-cpp";
   version = "1.5.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/rolling/ament_index_cpp/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "afd42192b947610d3d92a173c21fa552bc8657a09d6499cb7af57fa3036cd0ca";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_index-release";
+        rev = "release/rolling/ament_index_cpp/1.5.1-1";
+        sha256 = "sha256-f2gIzUoNJrxUg3iXIuMX4rTdXp6mvMhc8YyKAkTyiSg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

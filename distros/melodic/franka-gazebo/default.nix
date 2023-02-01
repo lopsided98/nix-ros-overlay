@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-franka-gazebo";
   version = "0.10.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/melodic/franka_gazebo/0.10.1-1.tar.gz";
-    name = "0.10.1-1.tar.gz";
-    sha256 = "f5ef11afca656489bb5b4dc9934757bf17e3f546c3d84b8fc2ee233af58b3499";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "frankaemika";
+        repo = "franka_ros-release";
+        rev = "release/melodic/franka_gazebo/0.10.1-1";
+        sha256 = "sha256-k+tSmXZZuPT/sdvNLNfR3TPRUgf7LXFvjHsZpz8Ktm4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin gazebo-dev ];

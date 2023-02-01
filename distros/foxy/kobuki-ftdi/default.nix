@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-kobuki-ftdi";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/stonier/kobuki_ftdi-release/archive/release/foxy/kobuki_ftdi/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "cda5ab2f72ec067de9755cea8f98e7c596690c3ddb65eb4e9a3d3a472df34cfa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "stonier";
+        repo = "kobuki_ftdi-release";
+        rev = "release/foxy/kobuki_ftdi/1.0.0-1";
+        sha256 = "sha256-xtx3VhcIxSg/UoHQ64Hfo8Z0D8zZwiB0xWd2zsrG178=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ecl-build pkg-config ];

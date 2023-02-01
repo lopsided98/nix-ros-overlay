@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-theora-image-transport";
   version = "1.14.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/image_transport_plugins-release/archive/release/noetic/theora_image_transport/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "0118b37d2c05543c66294cb79f2065613fc1b6f869f3284de12420b701bd1b08";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "image_transport_plugins-release";
+        rev = "release/noetic/theora_image_transport/1.14.0-1";
+        sha256 = "sha256-hqhP4uGkoPiGxJ5gmvMtICK8g2ijJMnbA1tO2+j3Xew=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

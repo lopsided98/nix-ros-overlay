@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-joint-state-publisher";
   version = "2.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/joint_state_publisher-release/archive/release/humble/joint_state_publisher/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "f07ad473af6619aaafbdc59348da557ed6498cfbdb9a26e65a1987dbcbb270ee";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "joint_state_publisher-release";
+        rev = "release/humble/joint_state_publisher/2.3.0-1";
+        sha256 = "sha256-JA4xQ4bvMon+tXWHg/JOBSFOkDPo6TGZcqjsZn08hyk=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-xmllint launch-testing launch-testing-ros pythonPackages.pytest ros2topic ];

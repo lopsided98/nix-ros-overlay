@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-urg-c";
   version = "1.0.4001-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/urg_c-release/archive/release/foxy/urg_c/1.0.4001-1.tar.gz";
-    name = "1.0.4001-1.tar.gz";
-    sha256 = "0088bd027433808c53a2674cbca027e71f1dab18fe33f61dabb7db6d586634eb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "urg_c-release";
+        rev = "release/foxy/urg_c/1.0.4001-1";
+        sha256 = "sha256-d1sMppxyaGt43L2i5Eplkfen4tHz1t6hkC42mCbg0EM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

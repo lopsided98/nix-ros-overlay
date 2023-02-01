@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-jsk-interactive-marker";
   version = "2.1.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/noetic/jsk_interactive_marker/2.1.8-1.tar.gz";
-    name = "2.1.8-1.tar.gz";
-    sha256 = "9e07b602208265e5bb46357a019f215995e3f3ebe2adb30a6ecf2223d494f4cd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_visualization-release";
+        rev = "release/noetic/jsk_interactive_marker/2.1.8-1";
+        sha256 = "sha256-yJkdd5hoJTVP8AyHwwSO5PEOH8BXnROUR2F1Q6dPfJ8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules message-generation mk rosbuild ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-libg2o";
   version = "2020.5.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/libg2o-release/archive/release/noetic/libg2o/2020.5.3-1.tar.gz";
-    name = "2020.5.3-1.tar.gz";
-    sha256 = "115c41cdce39bc27adf6522557b97749db1624a0692316486a855689b345dcb4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "libg2o-release";
+        rev = "release/noetic/libg2o/2020.5.3-1";
+        sha256 = "sha256-j6LaiZyrX8D37hsRiSJ//h5u3XYVWwBUigmkNiydWXU=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

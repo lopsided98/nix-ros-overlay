@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, lifecycle-msgs, rclcpp-lifecycle, ros-testing, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-lifecycle";
-  version = "0.20.2-r1";
+  version = "0.20.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/lifecycle/0.20.2-1.tar.gz";
-    name = "0.20.2-1.tar.gz";
-    sha256 = "f07d3a60cf616c69451eba2f3ca396d5a28327fd567a8c61531425c9e6ef6df2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/humble/lifecycle/0.20.3-1";
+        sha256 = "sha256-8dnzIFiuY3S82Ha4MzSKNEJmYWzcO9uaQXK/W902gPs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

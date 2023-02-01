@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pcl-ros";
   version = "1.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/perception_pcl-release/archive/release/noetic/pcl_ros/1.7.4-1.tar.gz";
-    name = "1.7.4-1.tar.gz";
-    sha256 = "98c1f6dc4248b1bb110c904cae66c7e17c6d04b6117ace3bc4ea1fe515ad5138";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "perception_pcl-release";
+        rev = "release/noetic/pcl_ros/1.7.4-1";
+        sha256 = "sha256-wd5tKEGYlmrmK72ZMh7L9VHXF+gej2e5w47cNai0wO0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rosconsole roslib ];

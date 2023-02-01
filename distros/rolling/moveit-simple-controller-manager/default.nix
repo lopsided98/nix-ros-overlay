@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-moveit-simple-controller-manager";
   version = "2.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/rolling/moveit_simple_controller_manager/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "73b3b7aa2fe25311cb5951112e8e413b7ba55efe2afdb13a35a437db79b8e303";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "moveit2-release";
+        rev = "release/rolling/moveit_simple_controller_manager/2.6.0-1";
+        sha256 = "sha256-o7JlhYYW6slhM6ic6d2RhVxt0We4YhXaPbMqOS8L/lc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

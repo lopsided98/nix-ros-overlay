@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-vision-msgs-layers";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_msgs_layers-release/archive/release/humble/vision_msgs_layers/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "a5fc25c03b5a3fa1565c6c3446500327d45f79d9c49e2df418d7762389f45810";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "vision_msgs_layers-release";
+        rev = "release/humble/vision_msgs_layers/0.1.0-1";
+        sha256 = "sha256-9W1+3cqmKRRcPA7B/3CZRu9TEpO7FvqXZdO/pL9M79o=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

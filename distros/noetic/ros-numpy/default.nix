@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ros-numpy";
   version = "0.0.5-r2";
 
-  src = fetchurl {
-    url = "https://github.com/eric-wieser/ros_numpy-release/archive/release/noetic/ros_numpy/0.0.5-2.tar.gz";
-    name = "0.0.5-2.tar.gz";
-    sha256 = "c5153716c9d662840ff0473a9cc0cae3c23586f5cea8ef7b152f11fe0a51d51d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "eric-wieser";
+        repo = "ros_numpy-release";
+        rev = "release/noetic/ros_numpy/0.0.5-2";
+        sha256 = "sha256-BnA80iEZqTv7HX3WuH6tJyEsoNHGOjqt+6RZBp4485c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

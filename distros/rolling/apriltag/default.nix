@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-apriltag";
   version = "3.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/apriltag-release/archive/release/rolling/apriltag/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "d6a56291f6c7dc11ddfca6f86011f6cf6dc31cbdd9a8c3306d9faa347cb347eb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "apriltag-release";
+        rev = "release/rolling/apriltag/3.2.0-1";
+        sha256 = "sha256-6kUYVWACrNDZBeDwDanrR3mgspXi5sPGKoy4chT7IrM=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake python3Packages.numpy ];

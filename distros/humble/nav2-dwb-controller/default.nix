@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-nav2-dwb-controller";
   version = "1.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_dwb_controller/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "1414b9d923d95bdc6257e5b1ac0ac8045e3fd01fa639cd854f18fc0c0591c2db";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/humble/nav2_dwb_controller/1.1.5-1";
+        sha256 = "sha256-nh++wAIFST48TWtPMDJkFvAL3oIhZ2EFLLd5mIoYhSs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

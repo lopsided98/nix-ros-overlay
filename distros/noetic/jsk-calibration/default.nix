@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-jsk-calibration";
   version = "0.1.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/jsk_calibration/0.1.16-1.tar.gz";
-    name = "0.1.16-1.tar.gz";
-    sha256 = "5a0517ce201c7c293df300b22f12c1d265253dfd73f93db9f25db33c148a713a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_control-release";
+        rev = "release/noetic/jsk_calibration/0.1.16-1";
+        sha256 = "sha256-C0ViUnTsZ1bs8/mhCdlS34UmBr88sgfEPIHtxDmwOEY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

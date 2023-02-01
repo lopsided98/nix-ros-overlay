@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ouster-msgs";
   version = "0.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_ouster_drivers-release/archive/release/rolling/ouster_msgs/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "b79f905dbe0a0f641147cf8c2a05ce18876a862476f1c591523731a1de1f952f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_ouster_drivers-release";
+        rev = "release/rolling/ouster_msgs/0.4.0-1";
+        sha256 = "sha256-oylHsdjvwrFqsBGe0Ge/z8sd3v6XRA8lMhlzdlXLPyM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

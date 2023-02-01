@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-plotjuggler";
   version = "3.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/foxy/plotjuggler/3.6.0-1.tar.gz";
-    name = "3.6.0-1.tar.gz";
-    sha256 = "8a96a76749e2e5617ff5d095a2752ed3b53682b1f642da97101ee276b233cef9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "facontidavide";
+        repo = "plotjuggler-release";
+        rev = "release/foxy/plotjuggler/3.6.0-1";
+        sha256 = "sha256-nHSTE9bbmkR6byd/ACSbE16oscBg2pMgQIEUMdXFpg0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

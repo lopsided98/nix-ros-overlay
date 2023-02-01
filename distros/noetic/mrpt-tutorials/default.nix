@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mrpt-tutorials";
   version = "1.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_tutorials/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "b6a8337039fdf84f0c3d01e4e65c26fc7f8feaab900e75511dbc15c70a652b21";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mrpt-ros-pkg-release";
+        repo = "mrpt_navigation-release";
+        rev = "release/noetic/mrpt_tutorials/1.0.3-1";
+        sha256 = "sha256-aDAE+hDZ5XU1ELITVpiKAnXbhV+H9FWx3euVqFjfXVo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

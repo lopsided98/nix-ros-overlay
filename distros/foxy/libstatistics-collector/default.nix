@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-libstatistics-collector";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-tooling/libstatistics_collector-release/archive/release/foxy/libstatistics_collector/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "4c2c522acb68d2d0bab19dccbf33d40b878725d32b818911d172b0a9b7500174";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-tooling";
+        repo = "libstatistics_collector-release";
+        rev = "release/foxy/libstatistics_collector/1.0.1-1";
+        sha256 = "sha256-Ot7fBUdW0/aoEDg0TFl8iBrguk31RS1qXCXROGz57Ks=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-ros rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-moveit-runtime";
   version = "2.5.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_runtime/2.5.4-1.tar.gz";
-    name = "2.5.4-1.tar.gz";
-    sha256 = "9732a5b3a254d89398f1da2774aa0e51a9682460f67fb7d3ea0572a4e69237cc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "moveit2-release";
+        rev = "release/humble/moveit_runtime/2.5.4-1";
+        sha256 = "sha256-YWtkEUbWIXLhunMOeO2xG3MCgNtFDjrIYcNiNRupaOw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

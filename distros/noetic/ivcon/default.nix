@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ivcon";
   version = "0.1.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ivcon-release/archive/release/noetic/ivcon/0.1.7-1.tar.gz";
-    name = "0.1.7-1.tar.gz";
-    sha256 = "5d5b97eb47311712f506d691bb1b15040782d752d70d8f022220731ffabd9aab";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ivcon-release";
+        rev = "release/noetic/ivcon/0.1.7-1";
+        sha256 = "sha256-/AREyVRZcOgZ6unXhnDRXXjgs270+ZhbsaVnzE7IBtQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

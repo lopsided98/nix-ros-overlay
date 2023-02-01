@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-laser-ortho-projector";
   version = "0.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/laser_ortho_projector/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "9f40b03eae8a2194ec41a9a803ca9305d0ee905be908d2ebac11ba6dcfb80349";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "scan_tools-release";
+        rev = "release/noetic/laser_ortho_projector/0.3.3-1";
+        sha256 = "sha256-eEe1oaKKiuLndzhIBwMWpgmpOe8cmZMgYWNthK26c0g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

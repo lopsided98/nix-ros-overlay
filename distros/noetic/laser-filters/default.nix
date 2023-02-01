@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-laser-filters";
   version = "1.9.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/laser_filters-release/archive/release/noetic/laser_filters/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "e802be9bc80e6352906e628b86cbfdbcce37b45da5890146d21893095514b6b3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "laser_filters-release";
+        rev = "release/noetic/laser_filters/1.9.0-1";
+        sha256 = "sha256-DCXxPVbarjpHVg/EmzAhaM1UloU0Gaa0YkqRwxrPlks=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

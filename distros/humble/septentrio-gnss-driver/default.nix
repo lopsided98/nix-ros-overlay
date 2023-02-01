@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-septentrio-gnss-driver";
   version = "1.2.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/septentrio-users/septentrio_gnss_driver_ros2-release/archive/release/humble/septentrio_gnss_driver/1.2.3-1.tar.gz";
-    name = "1.2.3-1.tar.gz";
-    sha256 = "e9491556e95a5479e791883ce8487055c38ccd9c19fdda56c3fd8fc1d25d5404";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "septentrio-users";
+        repo = "septentrio_gnss_driver_ros2-release";
+        rev = "release/humble/septentrio_gnss_driver/1.2.3-1";
+        sha256 = "sha256-kCTbqq1KzuGhmwyJcXz5kKbZ7+9maCG6AATdtFnvZ8Y=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ur-client-library";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/rolling/ur_client_library/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "09587958067de85f779c5d34d5bea6e3609c0dd54bd80756c219773446fbf4b6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "Universal_Robots_Client_Library-release";
+        rev = "release/rolling/ur_client_library/1.3.1-1";
+        sha256 = "sha256-AYfd94IM+Etv+B7ZUeZWVMNr98mHHmGlCi5CUh8hhWo=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

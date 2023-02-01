@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-gps-tools";
   version = "1.0.4-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/rolling/gps_tools/1.0.4-2.tar.gz";
-    name = "1.0.4-2.tar.gz";
-    sha256 = "55c51a6fac8c67e59c3e5bb4952ecc34d0574d0688361ca9435caf077af1bfe1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "gps_umd-release";
+        rev = "release/rolling/gps_tools/1.0.4-2";
+        sha256 = "sha256-a5M/+7i+icLvBEIote2loEZnOP3/xdJ1+xo8RteS8Xg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];

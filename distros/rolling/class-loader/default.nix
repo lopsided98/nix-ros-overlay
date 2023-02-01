@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-class-loader";
   version = "2.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/rolling/class_loader/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "48afd68c22ff69c5d034330dc18884469deafd07d7912f2b0b2cc6bbb6012c6d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "class_loader-release";
+        rev = "release/rolling/class_loader/2.4.0-1";
+        sha256 = "sha256-CU8Q6OeHMzsT1s3PPfN6AyzUqaK8Yf2AYURz/Ysm+1M=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-ros ];

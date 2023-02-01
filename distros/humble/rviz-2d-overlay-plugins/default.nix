@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rviz-2d-overlay-plugins";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz_2d_overlay_plugins-release/archive/release/humble/rviz_2d_overlay_plugins/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "e6aa2b8ea14c4213588b9436dbcd9b40423bcba27ff50c7ef2c0b7384e9d763b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rviz_2d_overlay_plugins-release";
+        rev = "release/humble/rviz_2d_overlay_plugins/1.2.1-1";
+        sha256 = "sha256-rIew6GpO1eY12AZkzSr3GYbOYianUUp0PzJeDzXQg2U=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

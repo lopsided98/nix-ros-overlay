@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rosbag2-storage-mcap-testdata";
   version = "0.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2_storage_mcap-release/archive/release/foxy/rosbag2_storage_mcap_testdata/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "9f13c826b493d30288ff49fe6863680161e37037b9e6f77113719aa9d5d9b12e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosbag2_storage_mcap-release";
+        rev = "release/foxy/rosbag2_storage_mcap_testdata/0.6.0-1";
+        sha256 = "sha256-49Y2YKzW2WMB+JDp0r1cUQMUjNYz+ggwnrnTQL6DDwc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

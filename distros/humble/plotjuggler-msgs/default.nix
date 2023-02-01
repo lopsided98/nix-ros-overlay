@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-plotjuggler-msgs";
   version = "0.2.3-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/plotjuggler_msgs-release/archive/release/humble/plotjuggler_msgs/0.2.3-3.tar.gz";
-    name = "0.2.3-3.tar.gz";
-    sha256 = "16dfb632d8a0b7a03987cc581ffe9d05213c45e30c056f2676db1b17f502c51f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "plotjuggler_msgs-release";
+        rev = "release/humble/plotjuggler_msgs/0.2.3-3";
+        sha256 = "sha256-Lu4ZRsDpvbS2QzbjWOL23H8lsKRSTPGe6MgiCaUedO4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

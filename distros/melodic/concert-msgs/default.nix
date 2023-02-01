@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-concert-msgs";
   version = "0.9.0";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/rocon_msgs-release/archive/release/melodic/concert_msgs/0.9.0-0.tar.gz";
-    name = "0.9.0-0.tar.gz";
-    sha256 = "2b90b553b2fc831b783dda1382fddbd81c507f33988189768ac44fc0106afac2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "rocon_msgs-release";
+        rev = "release/melodic/concert_msgs/0.9.0-0";
+        sha256 = "sha256-rVzgj8uhOJL2z8S2GwRtpXKd5aM3mbieGKvN0WacScE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

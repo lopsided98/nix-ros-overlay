@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mrp2-gazebo";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/milvusrobotics/mrp2_simulator-release/archive/release/melodic/mrp2_gazebo/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "f77fb0195ade42964f6a031678a1e7e2cff25fb9bf9b9322f9501d73bf09daa6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "milvusrobotics";
+        repo = "mrp2_simulator-release";
+        rev = "release/melodic/mrp2_gazebo/1.0.1-1";
+        sha256 = "sha256-KBUDPHLz5iDtJG7+au2AIPT5gXZ9cUVQgitKD5elFMc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

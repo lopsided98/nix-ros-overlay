@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rviz-2d-overlay-msgs";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz_2d_overlay_plugins-release/archive/release/rolling/rviz_2d_overlay_msgs/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "f8b7d47c19dc44949768aeec5516048728c73d6cf823c0b823c140b39f39238b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rviz_2d_overlay_plugins-release";
+        rev = "release/rolling/rviz_2d_overlay_msgs/1.2.1-1";
+        sha256 = "sha256-C7S+lCIduBpuVmNNB6nFZ7LkOw2X/TQKq5tqZAkMElk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

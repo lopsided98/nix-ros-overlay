@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-catch-ros";
   version = "0.5.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/AIS-Bonn/catch_ros-release/archive/release/noetic/catch_ros/0.5.0-2.tar.gz";
-    name = "0.5.0-2.tar.gz";
-    sha256 = "27b522f2d7b6237b97deae26ce18b14d3e1d65af14ba1ff1fd3fab1822f657e5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "AIS-Bonn";
+        repo = "catch_ros-release";
+        rev = "release/noetic/catch_ros/0.5.0-2";
+        sha256 = "sha256-xpObhUYqMm+iVvSJgkHdqkm94zq3JVB0kYn0Ud9ioiA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

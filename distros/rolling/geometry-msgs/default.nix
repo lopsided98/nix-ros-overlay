@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-geometry-msgs";
   version = "4.6.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/geometry_msgs/4.6.1-1.tar.gz";
-    name = "4.6.1-1.tar.gz";
-    sha256 = "e92170c52c9ddf9a0bce4c03a10243dd1570fbcee8b7fb9728b784463b9f10cb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "common_interfaces-release";
+        rev = "release/rolling/geometry_msgs/4.6.1-1";
+        sha256 = "sha256-7b2Iqd+YCLyQVDUsY4opDv2TJzHvu+VWKETt5POoBsg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-warehouse-ros";
   version = "0.9.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/warehouse_ros-release/archive/release/melodic/warehouse_ros/0.9.5-1.tar.gz";
-    name = "0.9.5-1.tar.gz";
-    sha256 = "5ca7ab01596b0a016cd246426d942d88e503ebbcf407e379589560459a64f88d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "warehouse_ros-release";
+        rev = "release/melodic/warehouse_ros/0.9.5-1";
+        sha256 = "sha256-8aBMYtKJlumdTSjtOsEop3STuiCIgk6UZGICrWG2zJg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

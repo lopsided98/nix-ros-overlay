@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-navigation-stage";
   version = "0.2.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_tutorials-release/archive/release/melodic/navigation_stage/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "7b69a708535f1a2a6fb5afa0c6cb62c8ca229a04e0d9a979b2cd3f5e65ca35a9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation_tutorials-release";
+        rev = "release/melodic/navigation_stage/0.2.4-1";
+        sha256 = "sha256-KUwKY+5l7EZ4Z+B+AtM1yE6m9PbTFiDGUk4dedhEC+s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

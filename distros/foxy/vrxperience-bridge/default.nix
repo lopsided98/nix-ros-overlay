@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-vrxperience-bridge";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/autowarefoundation/ansys-vrxperience-ros2-release/archive/release/foxy/vrxperience_bridge/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "530a932a806d51335c1437b0a47fa3534c4ea786f8025c3cdbea4fce018df7c6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "autowarefoundation";
+        repo = "ansys-vrxperience-ros2-release";
+        rev = "release/foxy/vrxperience_bridge/1.0.0-1";
+        sha256 = "sha256-PrqKCR6ItXT98llw8r0auWbSikqQchwfGBtZ4Ghseg0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto openjdk ];

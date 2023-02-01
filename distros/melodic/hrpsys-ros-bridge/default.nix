@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hrpsys-ros-bridge";
   version = "1.4.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/rtmros_common-release/archive/release/melodic/hrpsys_ros_bridge/1.4.3-1.tar.gz";
-    name = "1.4.3-1.tar.gz";
-    sha256 = "6952e7f4b1edeb8a7a51d03a8c1e082775257a5ed9e6a79ab3a7e8da680fb7bc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "rtmros_common-release";
+        rev = "release/melodic/hrpsys_ros_bridge/1.4.3-1";
+        sha256 = "sha256-biH7RPenq/Ew2ip/Oy2fm+lCl14PtG/rbruVsNz7LeI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ angles catkin euscollada git hostname message-generation mk nettools pkg-config procps pythonPackages.rosdep rosbuild roslang subversion ];

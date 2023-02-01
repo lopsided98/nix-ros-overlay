@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-khi-robot";
   version = "1.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/noetic/khi_robot/1.3.0-2.tar.gz";
-    name = "1.3.0-2.tar.gz";
-    sha256 = "38402ef00c78324a9a31b42d3d8962b81edbbdb6fa8e14fa9e01f2bdc868a439";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Kawasaki-Robotics";
+        repo = "khi_robot-release";
+        rev = "release/noetic/khi_robot/1.3.0-2";
+        sha256 = "sha256-TJLbIX/JAn1w5z5i83jyjHAr91s9k5fH+5ntPr8Et7s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

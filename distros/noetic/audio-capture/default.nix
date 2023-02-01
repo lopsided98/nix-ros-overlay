@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-audio-capture";
   version = "0.3.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/audio_common-release/archive/release/noetic/audio_capture/0.3.16-1.tar.gz";
-    name = "0.3.16-1.tar.gz";
-    sha256 = "626d795fb98a6998b9f26fff333c78a9d0d901a9f35a4306a6ca5bda8ae3b25f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "audio_common-release";
+        rev = "release/noetic/audio_capture/0.3.16-1";
+        sha256 = "sha256-cGFx7OG950YwKE6O5tEKDxSCpfI2ituNXsRJ588n9n0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

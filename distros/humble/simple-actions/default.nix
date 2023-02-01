@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-simple-actions";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/simple_actions-release/archive/release/humble/simple_actions/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "e2aa0228b96ceba99435d31820f0802cd986ff6bb06e8bc53cd27abc92b349ab";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "simple_actions-release";
+        rev = "release/humble/simple_actions/0.2.1-1";
+        sha256 = "sha256-NwJn4jspMkn8bZdj3z4bwQmkm017B0FXkjiGFfIl+cY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];

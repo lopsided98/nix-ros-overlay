@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-py-trees-ros";
   version = "2.1.1-r3";
 
-  src = fetchurl {
-    url = "https://github.com/stonier/py_trees_ros-release/archive/release/foxy/py_trees_ros/2.1.1-3.tar.gz";
-    name = "2.1.1-3.tar.gz";
-    sha256 = "1c6cbab03fd44a3c03dd7e5901f4d3e9aa0cfacf756cd923d44ecc43be847c03";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "stonier";
+        repo = "py_trees_ros-release";
+        rev = "release/foxy/py_trees_ros/2.1.1-3";
+        sha256 = "sha256-fvmmsLbxEeId3Jb2PQYnhcgzdIAJOZZ7QcMEodtaf1c=";
+      };
 
   buildType = "ament_python";
   buildInputs = [ python3Packages.setuptools ];

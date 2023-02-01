@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-four-wheel-steering-controller";
   version = "0.17.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/four_wheel_steering_controller/0.17.2-1.tar.gz";
-    name = "0.17.2-1.tar.gz";
-    sha256 = "fc0688411a344b201c2f046fcbfc3519022d0d6b31ed6b00ef2c6a2550ff2807";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_controllers-release";
+        rev = "release/melodic/four_wheel_steering_controller/0.17.2-1";
+        sha256 = "sha256-l15hhapGAMeNRXk1bmgaVsAW9orwZH3xol+jBlKtaSw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

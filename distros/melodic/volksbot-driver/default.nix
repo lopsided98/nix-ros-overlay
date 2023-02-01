@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-volksbot-driver";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/volksbot_driver-release/archive/release/melodic/volksbot_driver/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "e6e0fa49a8ba75f9f7f8e784d53250f53779337d0fd4bda5274433bb54dfc271";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "volksbot_driver-release";
+        rev = "release/melodic/volksbot_driver/1.0.1-1";
+        sha256 = "sha256-Eh4mmCS8/6Of9G/G1Pn3DOXI7L5EO5teEY5pdjpPJL0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-test-msgs";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/foxy/test_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "815db8351fd3e6af9e1efd322437b4b503dd466097c95dce9f8170f79c4db756";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcl_interfaces-release";
+        rev = "release/foxy/test_msgs/1.0.0-1";
+        sha256 = "sha256-zc9j5LQOsE3Ka9Fwx1+zFF8owkg8psy07fjPJY+DHjA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators test-interface-files ];

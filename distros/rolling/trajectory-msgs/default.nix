@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-trajectory-msgs";
   version = "4.6.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/trajectory_msgs/4.6.1-1.tar.gz";
-    name = "4.6.1-1.tar.gz";
-    sha256 = "1382d82197e3c7bb52a50cfc520a9e865e887f059c5da558f0a9a21e64697f50";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "common_interfaces-release";
+        rev = "release/rolling/trajectory_msgs/4.6.1-1";
+        sha256 = "sha256-wm1BYhiMrky7Klbuqe9V9g+px/RwqYe/YKf00d50h2o=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

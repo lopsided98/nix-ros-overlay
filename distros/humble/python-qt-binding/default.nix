@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-python-qt-binding";
   version = "1.1.1-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/python_qt_binding-release/archive/release/humble/python_qt_binding/1.1.1-3.tar.gz";
-    name = "1.1.1-3.tar.gz";
-    sha256 = "749f466ebe43e85f8719858eecdac211b682163899711ecf97acd6aaa2818636";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "python_qt_binding-release";
+        rev = "release/humble/python_qt_binding/1.1.1-3";
+        sha256 = "sha256-/tBDvBZ+x9t5O6ABd7Wpf0ZvoV+Q8jpA2xz3r/UZNGc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake qt5.qtbase ];

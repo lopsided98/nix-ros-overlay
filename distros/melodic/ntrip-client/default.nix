@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ntrip-client";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/ntrip_client-release/archive/release/melodic/ntrip_client/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "46f7a64d03163ae022bfee817e0400668b25902071e87b30740b921396da3ea9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "LORD-MicroStrain";
+        repo = "ntrip_client-release";
+        rev = "release/melodic/ntrip_client/1.2.0-1";
+        sha256 = "sha256-0ZTMxpzhLHRnwI8xJbUmaFtR0wqsmCHtmboU7eTRNLw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ros-workspace";
   version = "1.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_workspace-release/archive/release/foxy/ros_workspace/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "e3797244bf456109aa2752c797d1f45d2875c576631cfa6291bc66a29abcc652";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros_workspace-release";
+        rev = "release/foxy/ros_workspace/1.0.2-1";
+        sha256 = "sha256-FXiyjTZx5N94wlqTFY6bxysv+eiH6noKxFlYXOwcV2M=";
+      };
 
   buildType = "cmake";
   buildInputs = [ ament-cmake-core ament-package cmake ];

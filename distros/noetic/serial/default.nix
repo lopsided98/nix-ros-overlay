@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-serial";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/wjwwood/serial-release/archive/release/noetic/serial/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "9dded001cf674418e67b3c69ad0df7105ca299f5b368a9e8ec6894c7324a5ec2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wjwwood";
+        repo = "serial-release";
+        rev = "release/noetic/serial/1.2.1-1";
+        sha256 = "sha256-/FAxK2r1ZPZM1fLmXmpgiYBEX+n8be3bqKfNxHtXmEE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

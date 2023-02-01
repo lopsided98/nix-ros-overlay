@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-foxglove-msgs";
   version = "2.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_foxglove_msgs-release/archive/release/humble/foxglove_msgs/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "a852888a228df145fb9bc69ced01987b66d2525fe5cfd76a1746fb7db7452dde";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros_foxglove_msgs-release";
+        rev = "release/humble/foxglove_msgs/2.1.1-1";
+        sha256 = "sha256-WVd87BSDwF+o7s/HMSXhpwvIBHYpp6J263sCn635ILE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-visp-hand2eye-calibration";
   version = "0.13.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/lagadic/vision_visp-release/archive/release/melodic/visp_hand2eye_calibration/0.13.0-1.tar.gz";
-    name = "0.13.0-1.tar.gz";
-    sha256 = "62d20eef830a222518bb722659edc62b25275ba714fed9385dc57795fd75ce35";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "lagadic";
+        repo = "vision_visp-release";
+        rev = "release/melodic/visp_hand2eye_calibration/0.13.0-1";
+        sha256 = "sha256-MgjDG9pn2HzhNZVVTooZCJohzy9ZcvGUA/q3Pq7VKb8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

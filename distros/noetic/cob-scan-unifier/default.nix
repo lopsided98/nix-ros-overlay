@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-scan-unifier";
   version = "0.7.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_scan_unifier/0.7.14-1.tar.gz";
-    name = "0.7.14-1.tar.gz";
-    sha256 = "153771a870182ea0984850ae5ae3c7a620cf269d3694a988494a7004c07b4f00";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/noetic/cob_scan_unifier/0.7.14-1";
+        sha256 = "sha256-Ip+9OSiVSPaayu/LwCdFbvqay8oIAx97ZfK4Z6I6nxE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

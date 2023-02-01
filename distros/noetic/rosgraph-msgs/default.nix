@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosgraph-msgs";
   version = "1.11.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm_msgs-release/archive/release/noetic/rosgraph_msgs/1.11.3-1.tar.gz";
-    name = "1.11.3-1.tar.gz";
-    sha256 = "770d46f9bf622ba92bdc426ba49d80229c0324500aea8f50f8a1b947eba42997";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm_msgs-release";
+        rev = "release/noetic/rosgraph_msgs/1.11.3-1";
+        sha256 = "sha256-Ded1hlfVTDypiQ6NjmeeIOjd1jYQVkLLMN3zv3wx3Vk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

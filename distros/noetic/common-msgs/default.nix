@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-common-msgs";
   version = "1.13.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/noetic/common_msgs/1.13.1-1.tar.gz";
-    name = "1.13.1-1.tar.gz";
-    sha256 = "a07ae973d983a954f643671a79287bbc2249b080fd6a517e1b128e380cc75a1c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "common_msgs-release";
+        rev = "release/noetic/common_msgs/1.13.1-1";
+        sha256 = "sha256-HvNfpqwdQR3pa5AsmemiVQ8ryoo/4Zq9pW4H82Tswsk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-gmapping";
   version = "1.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/slam_gmapping-release/archive/release/melodic/gmapping/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "2296a00ee0763992b9b67cff969f3e7c8021e14df878d351406104a4c321e4af";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "slam_gmapping-release";
+        rev = "release/melodic/gmapping/1.4.1-1";
+        sha256 = "sha256-F6RgxeEU3GejHxb/nPx1nzO3xjmvq6J13Bqs5N5vRrI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

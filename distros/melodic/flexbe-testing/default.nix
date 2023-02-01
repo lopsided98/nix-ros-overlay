@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-flexbe-testing";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_testing/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "3b56376d79de37442e202a668e2284a42719f3483b355e228b7b679f7656d6d1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "FlexBE";
+        repo = "flexbe_behavior_engine-release";
+        rev = "release/melodic/flexbe_testing/1.3.1-1";
+        sha256 = "sha256-neird5Imdab1x1RdDbJrMD0iUfR/x2PNkQ29tfRG6Bs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

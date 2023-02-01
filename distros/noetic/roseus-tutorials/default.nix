@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-roseus-tutorials";
   version = "1.7.5-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_roseus-release/archive/release/noetic/roseus_tutorials/1.7.5-2.tar.gz";
-    name = "1.7.5-2.tar.gz";
-    sha256 = "97d658794d311e0d4812d8d0a302b62a76935982fac9af9ca65ce1520e0b8981";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_roseus-release";
+        rev = "release/noetic/roseus_tutorials/1.7.5-2";
+        sha256 = "sha256-QLtF5/GIAS/bEDXOGuvyQL1s7nY8E1P66yobu1Ul6s8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roseus ];

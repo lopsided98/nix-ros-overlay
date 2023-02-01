@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ur-description";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/melodic/ur_description/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "54424cf0c2c6bcb0bb46c36b30f2a639bdcd6202feacd3b578bc3c1fd198a2b5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "universal_robot-release";
+        rev = "release/melodic/ur_description/1.3.1-1";
+        sha256 = "sha256-oBfwM4xdLzEP2wgCWkIfMCPQDILmVaxIayQJOLucr5I=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

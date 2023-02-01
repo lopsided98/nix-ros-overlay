@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-husky-description";
   version = "0.4.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_description/0.4.13-1.tar.gz";
-    name = "0.4.13-1.tar.gz";
-    sha256 = "7617e67398d4cd36901d205f027c4756d53c6f3e2e4c55fb474e02b456eefd12";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "husky-release";
+        rev = "release/melodic/husky_description/0.4.13-1";
+        sha256 = "sha256-Kd2O7njsE2qZMPAD825h7IQQZi9RQsrhNLJJ6Etc8Rk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-sros2-cmake";
   version = "0.11.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/sros2-release/archive/release/rolling/sros2_cmake/0.11.1-1.tar.gz";
-    name = "0.11.1-1.tar.gz";
-    sha256 = "909f0de466a00d24966143b626337044814a2808c2365774744f3df82d556403";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "sros2-release";
+        rev = "release/rolling/sros2_cmake/0.11.1-1";
+        sha256 = "sha256-AAXL8nDTsYxXxBec37xSCSO29W1CdfCOftJTQJ3Byws=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-test ];

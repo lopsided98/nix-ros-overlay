@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-prbt-support";
   version = "0.5.23-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_support/0.5.23-1.tar.gz";
-    name = "0.5.23-1.tar.gz";
-    sha256 = "ab99d8c017856a4e336cf0ee323f428b148400317422ae3c1ec3e33cd4156a5c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_robots-release";
+        rev = "release/melodic/prbt_support/0.5.23-1";
+        sha256 = "sha256-2p2wj6yyAihn/Ue4We7XOOnDKphPC5WBdJV+TKEBIiE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ canopen-chain-node catkin pilz-utils roslint sensor-msgs ];

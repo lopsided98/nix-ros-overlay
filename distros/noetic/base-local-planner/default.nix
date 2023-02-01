@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, cmake-modules, costmap-2d, dynamic-reconfigure, eigen, geometry-msgs, message-generation, message-runtime, nav-core, nav-msgs, pluginlib, rosconsole, roscpp, rospy, rosunit, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs, voxel-grid }:
 buildRosPackage {
   pname = "ros-noetic-base-local-planner";
-  version = "1.17.2-r1";
+  version = "1.17.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/base_local_planner/1.17.2-1.tar.gz";
-    name = "1.17.2-1.tar.gz";
-    sha256 = "b3c85eea5390620d3a05541e22652a1458925d9adbbbcb5e5cea8edd9251e18e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation-release";
+        rev = "release/noetic/base_local_planner/1.17.3-1";
+        sha256 = "sha256-jcSmuZvxgNIH/wf5wBzkHfBrQ9o2iI6tMtf40IDtKNs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules message-generation tf2-geometry-msgs ];

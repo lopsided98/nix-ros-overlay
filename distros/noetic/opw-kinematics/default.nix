@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-opw-kinematics";
   version = "0.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/opw_kinematics-release/archive/release/noetic/opw_kinematics/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "076f8b32d2e15749226cf1e5f41fc999b7345b2beec597905692a8515dfcf2f6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "opw_kinematics-release";
+        rev = "release/noetic/opw_kinematics/0.5.0-1";
+        sha256 = "sha256-G2Lj2UvjoqAHRVoajJeE+nwExpIcXlNcajM3nLIBPh4=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ros-industrial-cmake-boilerplate ];

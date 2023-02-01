@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-smach-viewer";
   version = "4.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/jbohren/executive_smach_visualization-release/archive/release/noetic/smach_viewer/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "71891f3197da569f747a513c39a0024d6a70a3abb66da479986960e529b15599";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "jbohren";
+        repo = "executive_smach_visualization-release";
+        rev = "release/noetic/smach_viewer/4.0.1-1";
+        sha256 = "sha256-m5J2XvHQJtRmsIpME/SdYR4YrVQ+xpd2o9gbLmUx2TI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

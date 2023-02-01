@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-exotica-ilqg-solver";
   version = "6.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_ilqg_solver/6.2.0-1.tar.gz";
-    name = "6.2.0-1.tar.gz";
-    sha256 = "628e317c178e94728ee4d18fcc75ec83b68c2f0c9429773d69ff0040be3a6868";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipab-slmc";
+        repo = "exotica-release";
+        rev = "release/melodic/exotica_ilqg_solver/6.2.0-1";
+        sha256 = "sha256-UHz/UyAupE+yMN1vXsLt7eAgFfdP3KlxhNkA/dZ0728=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-hector-pose-estimation-core";
   version = "0.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_localization-release/archive/release/noetic/hector_pose_estimation_core/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "82bcb640addfa021a8bd61913060f27e9e2827ddef0f6c9d41fe6664c1ce96ed";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_localization-release";
+        rev = "release/noetic/hector_pose_estimation_core/0.4.0-1";
+        sha256 = "sha256-W/OBbXGfv1m1uztpze9o825cWzTp1vrui2B8sQ8RXCA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

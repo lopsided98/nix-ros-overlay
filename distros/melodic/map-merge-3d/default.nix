@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-map-merge-3d";
   version = "0.1.1";
 
-  src = fetchurl {
-    url = "https://github.com/hrnr/map-merge-release/archive/release/melodic/map_merge_3d/0.1.1-0.tar.gz";
-    name = "0.1.1-0.tar.gz";
-    sha256 = "7413dc94e5c7e8b52bf48c1b7be92e7b7381fac6cd5db59b93e5b9fdf5a4d163";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "hrnr";
+        repo = "map-merge-release";
+        rev = "release/melodic/map_merge_3d/0.1.1-0";
+        sha256 = "sha256-0xb0lWqzgX/pqN10nFMcp8y3il+eewU8+EOgSlzRJ+Y=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

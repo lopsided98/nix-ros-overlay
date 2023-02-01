@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dlux-global-planner";
   version = "0.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/dlux_global_planner/0.3.0-2.tar.gz";
-    name = "0.3.0-2.tar.gz";
-    sha256 = "0a7711a3efcb134f7051b4f785d07104bafe68db9c3e56e1a6f2f305a910fb77";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/noetic/dlux_global_planner/0.3.0-2";
+        sha256 = "sha256-1VFV9n14wCm5VbSr5LnwMlHT6V2XqhUwjhVh4J0f0y4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-lpg-planner";
   version = "2.1.24-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/lpg_planner/2.1.24-2.tar.gz";
-    name = "2.1.24-2.tar.gz";
-    sha256 = "03da06db41df77b0f6d5537e2af8be4ef6895858dc32b1cc375d9c5bbdf8bd16";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_3rdparty-release";
+        rev = "release/melodic/lpg_planner/2.1.24-2";
+        sha256 = "sha256-r8Bb48kJVWOPCz7BFPnn5HkjzUoMYJUdlFNqLSnXOS0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

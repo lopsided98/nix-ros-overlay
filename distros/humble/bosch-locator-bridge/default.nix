@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-bosch-locator-bridge";
   version = "2.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/locator_ros_bridge-release/archive/release/humble/bosch_locator_bridge/2.1.5-1.tar.gz";
-    name = "2.1.5-1.tar.gz";
-    sha256 = "6943a059e8f98294f6edfd2e70e4a31d72b5884bbfe035cbd392934d24b7ae0a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "locator_ros_bridge-release";
+        rev = "release/humble/bosch_locator_bridge/2.1.5-1";
+        sha256 = "sha256-i7xoWnp2deZwflIM/dWViDKSAe0lck2TbH+3nH9EFTU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

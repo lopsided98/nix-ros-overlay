@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rover-msgs";
   version = "0.1.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/RoverRobotics-release/roverrobotics_ros2-release/archive/release/foxy/rover_msgs/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "fd622b49ee4cab060a1e50dc73ae99de1f66f0605db240c2cf9f83fc8a525285";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "RoverRobotics-release";
+        repo = "roverrobotics_ros2-release";
+        rev = "release/foxy/rover_msgs/0.1.1-2";
+        sha256 = "sha256-Z4AtoiiR7om6ktKbQ0H2yJNeWxR16Fyfj8dr0EHNxhc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ros2-socketcan";
   version = "1.1.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_socketcan-release/archive/release/rolling/ros2_socketcan/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "6f1dd16c7e8e8ca39049a65df16f1e8e468467a19378750f94a6863eac652bb8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_socketcan-release";
+        rev = "release/rolling/ros2_socketcan/1.1.0-2";
+        sha256 = "sha256-5X1Zt8nQDN5Bp9dZgz8CzQW6gMNhDsjMt0D6P1X/JSg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

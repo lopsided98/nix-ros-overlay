@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-moveit-kinematics";
   version = "1.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_kinematics/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "6dad1b258113cbc71f71c740d62b36f0fe3902b0740b168879b86a44d26f4ba5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/melodic/moveit_kinematics/1.0.11-1";
+        sha256 = "sha256-BQpZHYD5UIgaaQoK/B23Sw21ua0KDDWTvHupG2dJsFs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-sesame-ros";
   version = "2.1.21-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/sesame_ros/2.1.21-2.tar.gz";
-    name = "2.1.21-2.tar.gz";
-    sha256 = "265fe6c7e55e6aa36a0fd730df7a9d701f86338c97eec080d7d30c454f7ca3cd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_3rdparty-release";
+        rev = "release/noetic/sesame_ros/2.1.21-2";
+        sha256 = "sha256-EpspKr9VI2xV8itzAFXYY591j7qkkybGfvvnHuIbch0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin catkin-virtualenv libffi message-generation openssl ];

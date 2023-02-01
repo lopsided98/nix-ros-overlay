@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-zeroconf-msgs";
   version = "0.2.1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/zeroconf_msgs-release/archive/release/melodic/zeroconf_msgs/0.2.1-0.tar.gz";
-    name = "0.2.1-0.tar.gz";
-    sha256 = "2e5d7e5adc4153b4b1f9e166a13cd4ed2fdcb0944d966dfaaf6811e63b89cdef";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "zeroconf_msgs-release";
+        rev = "release/melodic/zeroconf_msgs/0.2.1-0";
+        sha256 = "sha256-Ou+MZahdKRl+1Hrioz5APrlWl5j71AeiLFPgR2KqFZo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

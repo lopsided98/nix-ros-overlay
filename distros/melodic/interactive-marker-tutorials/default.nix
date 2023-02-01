@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-interactive-marker-tutorials";
   version = "0.10.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/melodic/interactive_marker_tutorials/0.10.5-1.tar.gz";
-    name = "0.10.5-1.tar.gz";
-    sha256 = "fdc4a18af48d2edfa19927dd14db6a268edbe35652d1625d3e708f1bb7b0874b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "visualization_tutorials-release";
+        rev = "release/melodic/interactive_marker_tutorials/0.10.5-1";
+        sha256 = "sha256-cSANn9R73MUTSmy+BFcyg4GItyQJeo+oNLgYR/p1S48=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

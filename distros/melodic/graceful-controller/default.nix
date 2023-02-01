@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-graceful-controller";
   version = "0.4.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mikeferguson/graceful_controller-gbp/archive/release/melodic/graceful_controller/0.4.5-1.tar.gz";
-    name = "0.4.5-1.tar.gz";
-    sha256 = "cbe4f3daeb5be8bc16d6a1b5910070b0067fa654ec9341717e64309f8ad6662c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mikeferguson";
+        repo = "graceful_controller-gbp";
+        rev = "release/melodic/graceful_controller/0.4.5-1";
+        sha256 = "sha256-exxlqw+4aBd75Tp9vtNvqCs8P+97KEAMex94M8R1gzQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ angles catkin ];

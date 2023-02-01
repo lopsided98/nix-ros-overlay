@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-exotica-time-indexed-rrt-connect-solver";
   version = "6.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_time_indexed_rrt_connect_solver/6.2.0-1.tar.gz";
-    name = "6.2.0-1.tar.gz";
-    sha256 = "5cc72e41ed448ea01febaf17af48dcffe19d498e3fda230c16b83263491069f7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipab-slmc";
+        repo = "exotica-release";
+        rev = "release/noetic/exotica_time_indexed_rrt_connect_solver/6.2.0-1";
+        sha256 = "sha256-Z88gG1hdAR/R6WNgnu/lsFZ+ZKEAa7Y1jfvtJzpt6Wc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

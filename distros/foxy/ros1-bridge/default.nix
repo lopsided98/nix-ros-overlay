@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ros1-bridge";
   version = "0.9.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros1_bridge-release/archive/release/foxy/ros1_bridge/0.9.6-1.tar.gz";
-    name = "0.9.6-1.tar.gz";
-    sha256 = "451d0c9556a59abfc130778943d7d358abcb8bc8df542af8b279e10c4a18f952";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros1_bridge-release";
+        rev = "release/foxy/ros1_bridge/0.9.6-1";
+        sha256 = "sha256-c/C49cUXHPC+bHxPx03pTDcyZ8NDPnc3GdSulDUdA9U=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-index-python python3Packages.catkin-pkg rmw-implementation-cmake rosidl-cmake rosidl-parser ];

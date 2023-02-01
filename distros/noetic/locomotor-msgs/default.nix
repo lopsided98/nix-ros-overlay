@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-locomotor-msgs";
   version = "0.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/locomotor_msgs/0.3.0-2.tar.gz";
-    name = "0.3.0-2.tar.gz";
-    sha256 = "090e71c23ac44da88b614d2cd37c5daab2bacfb1a69a3a62e109d7abc7d1e46a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/noetic/locomotor_msgs/0.3.0-2";
+        sha256 = "sha256-8wd+GkOEiZVqiKbiPlW6w46GlIpukjGUmKaFONH6NhM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-gennodejs";
   version = "2.0.1";
 
-  src = fetchurl {
-    url = "https://github.com/RethinkRobotics-release/gennodejs-release/archive/release/melodic/gennodejs/2.0.1-0.tar.gz";
-    name = "2.0.1-0.tar.gz";
-    sha256 = "09d5f9ee001d83dd19c111dc8c2d995b9e9a90e21df2a379b882ac555b9bc9b1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "RethinkRobotics-release";
+        repo = "gennodejs-release";
+        rev = "release/melodic/gennodejs/2.0.1-0";
+        sha256 = "sha256-UJ76t3rPxaMOnKzT+qyyoBbUT+yQvF+saiJgtzIT9Bw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

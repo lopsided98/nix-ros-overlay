@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-map-msgs";
   version = "2.1.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation_msgs-release/archive/release/humble/map_msgs/2.1.0-3.tar.gz";
-    name = "2.1.0-3.tar.gz";
-    sha256 = "bea46ad2b1e2e137b542936df8465739de77a72ed7d0eb9a8c5afdf17e509ca5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "navigation_msgs-release";
+        rev = "release/humble/map_msgs/2.1.0-3";
+        sha256 = "sha256-cSeyqhHbFCEKh+19DvBtK0jHQGhHk3P6eAgwkY7+Bls=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

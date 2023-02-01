@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-yocs-virtual-sensor";
   version = "0.8.2";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_virtual_sensor/0.8.2-0.tar.gz";
-    name = "0.8.2-0.tar.gz";
-    sha256 = "4505ba05080e444b2000591f1628a4e204e1efb9e9e45be6a8ccb19506193631";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "yujin_ocs-release";
+        rev = "release/melodic/yocs_virtual_sensor/0.8.2-0";
+        sha256 = "sha256-8YASngwB+B3BxDtmvtw/6PxtVscVerFmMy/aOgCW5tE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-tinyxml2-vendor";
   version = "0.7.5-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/tinyxml2_vendor-release/archive/release/humble/tinyxml2_vendor/0.7.5-2.tar.gz";
-    name = "0.7.5-2.tar.gz";
-    sha256 = "6ff5abce57a08bacbc4852b9a593e6be2e2bbd3ae23a5cba1a0ed61c97da883f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "tinyxml2_vendor-release";
+        rev = "release/humble/tinyxml2_vendor/0.7.5-2";
+        sha256 = "sha256-P4ml9KbmfmMhanthISA933YwSgwGROeKGEB5j2vuRKM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nodelet";
   version = "1.9.16";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/nodelet_core-release/archive/release/melodic/nodelet/1.9.16-0.tar.gz";
-    name = "1.9.16-0.tar.gz";
-    sha256 = "3a9e9701df570659d70f871eb7e1970dacd3b89c02513c456f8f0ea1a446d15a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "nodelet_core-release";
+        rev = "release/melodic/nodelet/1.9.16-0";
+        sha256 = "sha256-RywGQlaweMiwycZ2KwzlrRmMgDRkEZwr6+mjDqaYVjY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules message-generation ];

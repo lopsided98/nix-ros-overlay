@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-eigen-stl-containers";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/eigen_stl_containers-release/archive/release/foxy/eigen_stl_containers/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "5c00e7ae634ca8497711010a991e817f42e0ae75a244101e1defb177662e23cd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "eigen_stl_containers-release";
+        rev = "release/foxy/eigen_stl_containers/1.0.0-1";
+        sha256 = "sha256-Zjjaom5lCGLMKC33kq6er1Ji54XUj/3hkSIWcBnXI+E=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

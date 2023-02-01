@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-tinyxml-vendor";
   version = "0.9.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/tinyxml_vendor-release/archive/release/rolling/tinyxml_vendor/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "d5ede0887a3eec472759424a80b91e944ba7098e3800199ed5deb1564528edbf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "tinyxml_vendor-release";
+        rev = "release/rolling/tinyxml_vendor/0.9.1-1";
+        sha256 = "sha256-Nu4qfaOy6X+DDo9qaDyc2LftGnnBxK/EJnqym/RW6FI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

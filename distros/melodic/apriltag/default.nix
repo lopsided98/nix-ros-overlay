@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-apriltag";
   version = "3.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/AprilRobotics/apriltag-release/archive/release/melodic/apriltag/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "178768b9e7b4523d3c4bd5b6974618fcdad4948cd1653264a0cfe90e4f114f9c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "AprilRobotics";
+        repo = "apriltag-release";
+        rev = "release/melodic/apriltag/3.2.0-1";
+        sha256 = "sha256-6kUYVWACrNDZBeDwDanrR3mgspXi5sPGKoy4chT7IrM=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

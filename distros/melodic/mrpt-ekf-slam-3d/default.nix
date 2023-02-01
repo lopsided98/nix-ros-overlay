@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mrpt-ekf-slam-3d";
   version = "0.1.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/melodic/mrpt_ekf_slam_3d/0.1.12-1.tar.gz";
-    name = "0.1.12-1.tar.gz";
-    sha256 = "8415b192c8681e63926e8b73938931b29d762b8b32fae88139fd01fb5d13f7de";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mrpt-ros-pkg-release";
+        repo = "mrpt_slam-release";
+        rev = "release/melodic/mrpt_ekf_slam_3d/0.1.12-1";
+        sha256 = "sha256-HOmEg7ke/YWibFUo1Ku/X/fTOyC4Sorq3IzFmPCHVBg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

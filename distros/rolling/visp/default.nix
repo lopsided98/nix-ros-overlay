@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-visp";
   version = "3.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/visp-release/archive/release/rolling/visp/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "0998d6d4f7510b9af4b7f665ce6848bff094fb8889079c6e5467e00e74aade22";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "visp-release";
+        rev = "release/rolling/visp/3.5.0-1";
+        sha256 = "sha256-nMrdYB+RessgluLVeY69cP1jA4ucoAfcxyaNk1gyiSQ=";
+      };
 
   buildType = "cmake";
   buildInputs = [ bzip2 cmake doxygen ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tf2-eigen";
   version = "0.6.5";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_eigen/0.6.5-0.tar.gz";
-    name = "0.6.5-0.tar.gz";
-    sha256 = "0097c690bd551d83154cc551b7d50439d86e8acda2bc4ebc307d1157cdf8c24d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry2-release";
+        rev = "release/melodic/tf2_eigen/0.6.5-0";
+        sha256 = "sha256-2prM7fcAHXpt0B1pzBaPQsUGu3T23ATrJzMDQCycbNY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

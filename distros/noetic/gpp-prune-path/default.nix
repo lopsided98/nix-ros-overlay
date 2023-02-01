@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-gpp-prune-path";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/dorezyuk/gpp-release/archive/release/noetic/gpp_prune_path/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "0b3763073ad4c87a271cdc52bf8e10d0b10210512cd6b073f093afab74fbc390";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "dorezyuk";
+        repo = "gpp-release";
+        rev = "release/noetic/gpp_prune_path/0.1.0-1";
+        sha256 = "sha256-bti9wqUY0hejSF4my61lcZzeZYX0tPOci2C3ONqQlms=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-graph-msgs";
   version = "0.2.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/graph_msgs-release/archive/release/rolling/graph_msgs/0.2.0-2.tar.gz";
-    name = "0.2.0-2.tar.gz";
-    sha256 = "e7c4aa1ee31fbb2acaad5a1cbef09ab401054e78635865d95359e985964ddb56";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "graph_msgs-release";
+        rev = "release/rolling/graph_msgs/0.2.0-2";
+        sha256 = "sha256-Zs/vEflqm3Ft6PVC5rmE7JAj2pPFja8QAhBxSsH93dg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

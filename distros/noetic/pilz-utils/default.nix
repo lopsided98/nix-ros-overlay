@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pilz-utils";
   version = "0.7.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_common-release/archive/release/noetic/pilz_utils/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "90a7aaec8293d761ba0e226e730c49c5ca6bf7fe337318c857de368f10387176";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_common-release";
+        rev = "release/noetic/pilz_utils/0.7.2-1";
+        sha256 = "sha256-1vnKARE1ohxkoVD6pXWGszW4SQePAsY1H6aJAsIbRUU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin clang roscpp ];

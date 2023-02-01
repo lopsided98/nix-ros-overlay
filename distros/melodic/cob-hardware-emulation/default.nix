@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-hardware-emulation";
   version = "0.8.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_hardware_emulation/0.8.12-1.tar.gz";
-    name = "0.8.12-1.tar.gz";
-    sha256 = "dc242894bd6d8ddc0faa8fef2b87dbc326b68ed75580893f15c89e716e963dee";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_control-release";
+        rev = "release/melodic/cob_hardware_emulation/0.8.12-1";
+        sha256 = "sha256-UzDi9hhYKDeF2akHsYaBP1Oiw631ZnXxmIF4Zxb9zXA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

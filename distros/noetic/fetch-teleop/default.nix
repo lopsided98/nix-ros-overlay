@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fetch-teleop";
   version = "0.9.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/noetic/fetch_teleop/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "dc4741dbb66f037b5e75769730a6b35dc40dd5b53a8b5a456f053b23e9e62a0e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "fetch_ros-release";
+        rev = "release/noetic/fetch_teleop/0.9.1-1";
+        sha256 = "sha256-pHIDLwZOnf7g5z+sJ3gIG26YfJoEnwDvnJOb1a3n6AE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

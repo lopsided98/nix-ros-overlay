@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pilz-control";
   version = "0.5.23-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/pilz_control/0.5.23-1.tar.gz";
-    name = "0.5.23-1.tar.gz";
-    sha256 = "f686fe3565c832940c04e14e35771028368963b4a88857ebeefc524b6d7f1b09";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_robots-release";
+        rev = "release/melodic/pilz_control/0.5.23-1";
+        sha256 = "sha256-5M4hwwtNn2kXxaqeNxnZW/r78obeYry1u/EHifaA+Po=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules roslint ];

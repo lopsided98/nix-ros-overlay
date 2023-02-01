@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rviz-visual-tools";
   version = "4.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/rviz_visual_tools-release/archive/release/foxy/rviz_visual_tools/4.0.3-1.tar.gz";
-    name = "4.0.3-1.tar.gz";
-    sha256 = "6b42f0ff533c2ca3a28de57cebfdc9fb1951cf4780fd6d094a8eab9d623f4215";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PickNikRobotics";
+        repo = "rviz_visual_tools-release";
+        rev = "release/foxy/rviz_visual_tools/4.0.3-1";
+        sha256 = "sha256-dCdOjFnc7q8H0jN0g6h1bgDpqsenojP9Ypr3xKnFC60=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-qt-gui-py-common";
   version = "2.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui_py_common/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "49ac59cb8cfe4a60feb5d88d3d75a3ca61c25ffd893033fd93dcd820218c5982";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "qt_gui_core-release";
+        rev = "release/rolling/qt_gui_py_common/2.3.2-1";
+        sha256 = "sha256-svvD2Ai0Q6V5UYl09MHdM1ZdXoO/XeAjfAp9/knZcTI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-video-stream-opencv";
   version = "1.1.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers/video_stream_opencv-release/archive/release/melodic/video_stream_opencv/1.1.6-1.tar.gz";
-    name = "1.1.6-1.tar.gz";
-    sha256 = "a2fbecdf05b636214d3559aeffcee22617506d2924fde4b1d7ad3d9e527d1321";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers";
+        repo = "video_stream_opencv-release";
+        rev = "release/melodic/video_stream_opencv/1.1.6-1";
+        sha256 = "sha256-mmYU4wI52SzjtL5nXKOY5jdySp1hq1esfqPUm8h1fPY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pyhri";
   version = "0.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros4hri/pyhri-release/archive/release/noetic/pyhri/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "f7a5250dded3710394e8406ab8e69076803e25489fa9ba3443c1ac2517e679fe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros4hri";
+        repo = "pyhri-release";
+        rev = "release/noetic/pyhri/0.3.2-1";
+        sha256 = "sha256-WkS5r0qez63PD15iO/Ls/7wJmYuhZQDn8uGBfnqjxAI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

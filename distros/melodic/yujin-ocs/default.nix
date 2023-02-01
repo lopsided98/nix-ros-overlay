@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-yujin-ocs";
   version = "0.8.2";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yujin_ocs/0.8.2-0.tar.gz";
-    name = "0.8.2-0.tar.gz";
-    sha256 = "fda374e1eaa08d31770f20eb374a2f781cf7a284403323c7d197f31428d9b1e5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "yujin_ocs-release";
+        rev = "release/melodic/yujin_ocs/0.8.2-0";
+        sha256 = "sha256-jDHGad1lvfDZjFKHdotf6xIF9NoiedxbG9GdGkl+5ZQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

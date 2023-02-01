@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-freenect-launch";
   version = "0.4.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/freenect_stack-release/archive/release/melodic/freenect_launch/0.4.3-2.tar.gz";
-    name = "0.4.3-2.tar.gz";
-    sha256 = "d4041676b145d7a7ec352e261fc9565580f8b70db614675b7ce5246b03a563bc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "freenect_stack-release";
+        rev = "release/melodic/freenect_launch/0.4.3-2";
+        sha256 = "sha256-LQ9HkSoWAC1T+Fc6vKXuFpstl5KJnIIXBCcklm6ee4A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

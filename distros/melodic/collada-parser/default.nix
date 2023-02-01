@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-collada-parser";
   version = "1.12.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/collada_urdf-release/archive/release/melodic/collada_parser/1.12.13-1.tar.gz";
-    name = "1.12.13-1.tar.gz";
-    sha256 = "bdcdbf33d3121ac98b74357a573fbb75dec755f579a341aa1ddeaa9bdcd625c9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "collada_urdf-release";
+        rev = "release/melodic/collada_parser/1.12.13-1";
+        sha256 = "sha256-7NP/MTNf2aRw5QAwXjBXPaJHgmeNi8hjqUBoHt6xK2w=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin urdfdom-headers ];

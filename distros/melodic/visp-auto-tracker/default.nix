@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-visp-auto-tracker";
   version = "0.13.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/lagadic/vision_visp-release/archive/release/melodic/visp_auto_tracker/0.13.0-1.tar.gz";
-    name = "0.13.0-1.tar.gz";
-    sha256 = "b948414716d7f747a63aeeaf042eddf7065551773c8ffccaa836ea1ebdde6839";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "lagadic";
+        repo = "vision_visp-release";
+        rev = "release/melodic/visp_auto_tracker/0.13.0-1";
+        sha256 = "sha256-LFwahnrejxUc6nENzhxJxCNFBmCZocO6sYA5BdH/h7A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hector-models";
   version = "0.5.0";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_models-release/archive/release/melodic/hector_models/0.5.0-0.tar.gz";
-    name = "0.5.0-0.tar.gz";
-    sha256 = "aea206089e02162e6f34440dd82a3c9f0c66f4030e8dc4738838c77a9afc6701";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_models-release";
+        rev = "release/melodic/hector_models/0.5.0-0";
+        sha256 = "sha256-BasPZjbK9TJNu7bTiYOY9L/VegUcajnfQaHmF/MZ6C4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

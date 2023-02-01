@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fuse-viz";
   version = "0.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/locusrobotics/fuse-release/archive/release/melodic/fuse_viz/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "344e5b335b0d41ae4b1eef9e3a7e0d26efefdbd1e9db412d9a41106673fa1d23";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "locusrobotics";
+        repo = "fuse-release";
+        rev = "release/melodic/fuse_viz/0.4.2-1";
+        sha256 = "sha256-xEwnt5HUd7AakfWEBitDW41HU5Dr6pxp2juUzfoyPiw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin qt5.qtbase ];

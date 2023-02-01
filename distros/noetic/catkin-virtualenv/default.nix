@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-catkin-virtualenv";
   version = "0.6.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/locusrobotics/catkin_virtualenv-release/archive/release/noetic/catkin_virtualenv/0.6.1-2.tar.gz";
-    name = "0.6.1-2.tar.gz";
-    sha256 = "a64e2bee1b82cb22c0ff35aea995ade6e9ab4b4f65a56bea61e928bd27acc608";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "locusrobotics";
+        repo = "catkin_virtualenv-release";
+        rev = "release/noetic/catkin_virtualenv/0.6.1-2";
+        sha256 = "sha256-nu9aKuMCPIrm23vZshhs2WHT41X7QgkgqHgwsxxpXvk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

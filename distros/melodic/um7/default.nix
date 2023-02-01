@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-um7";
   version = "0.0.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/um7-release/archive/release/melodic/um7/0.0.7-1.tar.gz";
-    name = "0.0.7-1.tar.gz";
-    sha256 = "2c3e906d3ea464379b5d44ae8834da5e8136d03b7ac108bc50d2f0116318a914";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "um7-release";
+        rev = "release/melodic/um7/0.0.7-1";
+        sha256 = "sha256-YWxUBWOI1Vn2U184XPqCVLb0y4wDmZD1bqxjIKouXbE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

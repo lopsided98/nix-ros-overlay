@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-delphi-mrr-msgs";
   version = "3.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/foxy/delphi_mrr_msgs/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "b5394667d1ff96e8a0736138e9f59c10c887473bb8c9d769ad8b7d076f4a3bd5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "astuff_sensor_msgs-release";
+        rev = "release/foxy/delphi_mrr_msgs/3.1.0-1";
+        sha256 = "sha256-aRYPbU7PTBJ9h5RzAotHLRZunDO3Hm6wc86HeHGpMek=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment rosidl-default-generators ];

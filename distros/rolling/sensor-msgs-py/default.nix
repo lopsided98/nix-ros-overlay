@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-sensor-msgs-py";
   version = "4.6.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/sensor_msgs_py/4.6.1-1.tar.gz";
-    name = "4.6.1-1.tar.gz";
-    sha256 = "37793a2ec34c3f62240f2055b967e52606c86b69cce1bcfaffd816c53872ac7f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "common_interfaces-release";
+        rev = "release/rolling/sensor_msgs_py/4.6.1-1";
+        sha256 = "sha256-etgqRp/QIwYymDTE9HvIEPAZbfdrtp0SsTJs31lIke0=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

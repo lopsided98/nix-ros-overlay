@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-hardware-interface";
   version = "0.19.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/hardware_interface/0.19.6-1.tar.gz";
-    name = "0.19.6-1.tar.gz";
-    sha256 = "51b5289fa25d6acc0f913e683bacb910120071dd6561b540ff90173bf2751519";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_control-release";
+        rev = "release/noetic/hardware_interface/0.19.6-1";
+        sha256 = "sha256-+bwtqDHm2umvi79Xrv9Sn2yTXeT40/i62Xv7rTgwfO4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

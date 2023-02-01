@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-py-trees-ros";
   version = "0.5.21-r1";
 
-  src = fetchurl {
-    url = "https://github.com/stonier/py_trees_ros-release/archive/release/melodic/py_trees_ros/0.5.21-1.tar.gz";
-    name = "0.5.21-1.tar.gz";
-    sha256 = "d74455aaa4da3ca549de5950044da474e75293c666a3bc0c89bf3f00d2484a54";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "stonier";
+        repo = "py_trees_ros-release";
+        rev = "release/melodic/py_trees_ros/0.5.21-1";
+        sha256 = "sha256-NzN7FigW2Rx516FP1NhCVitVmiO042cEllEEsU8dX2k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools ];

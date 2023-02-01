@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-canopen-motor";
   version = "0.7.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_canopen_motor/0.7.14-1.tar.gz";
-    name = "0.7.14-1.tar.gz";
-    sha256 = "0219fd0b3a685455a1a1ed460ead00d5a3a56bf7dcd4bf3ed1f4acd889802444";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/noetic/cob_canopen_motor/0.7.14-1";
+        sha256 = "sha256-NXJfuJ8WyU8x+RuNHAW6vp9cAzo7ih5et+d6J43dShg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

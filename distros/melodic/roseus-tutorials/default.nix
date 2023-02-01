@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-roseus-tutorials";
   version = "1.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_roseus-release/archive/release/melodic/roseus_tutorials/1.7.4-1.tar.gz";
-    name = "1.7.4-1.tar.gz";
-    sha256 = "636febaa5696e25a61c0a8ecb98ecff1de97646c6d8b255956b3013758fd6be8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_roseus-release";
+        rev = "release/melodic/roseus_tutorials/1.7.4-1";
+        sha256 = "sha256-d4YRj9NPIZWTA6VqpyNefpJeva9LraVwK/KqD/l4q98=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roseus ];

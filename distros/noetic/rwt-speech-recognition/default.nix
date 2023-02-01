@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rwt-speech-recognition";
   version = "0.1.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/noetic/rwt_speech_recognition/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "b5fdcff1cf76090761045ed4a5321835c0dea1a51fd1ac54e3a48ef71f480e0b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "visualization_rwt-release";
+        rev = "release/noetic/rwt_speech_recognition/0.1.1-2";
+        sha256 = "sha256-1AJnTg63O6+0ZwC6Ulw02490i1FYqBbs8aKv1zGO5cs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

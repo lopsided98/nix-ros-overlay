@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dccomms-ros";
   version = "0.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/dcentelles/dccomms_ros_pkgs-release/archive/release/melodic/dccomms_ros/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "9c82b3dcef96d0211f6267f3c6f9bdc87c0d127a2607240f102c17cd65f5a010";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "dcentelles";
+        repo = "dccomms_ros_pkgs-release";
+        rev = "release/melodic/dccomms_ros/0.0.3-1";
+        sha256 = "sha256-13ZyB5dpDO4l9llFApKe3yKxIv4yYef6XI7QNb2dZWc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

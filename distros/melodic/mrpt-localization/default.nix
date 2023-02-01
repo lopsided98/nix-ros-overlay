@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mrpt-localization";
   version = "1.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_localization/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "b4aa12aa07af68af304861ea58caf7efd1062ba46fea2d37f69e6554dd00623e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mrpt-ros-pkg-release";
+        repo = "mrpt_navigation-release";
+        rev = "release/melodic/mrpt_localization/1.0.3-1";
+        sha256 = "sha256-WK/jEAj5/7TRKeD8CYbsiRu8Ml899vp6vHzBBeyX1+M=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

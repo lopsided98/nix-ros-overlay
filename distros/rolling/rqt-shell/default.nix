@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rqt-shell";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_shell-release/archive/release/rolling/rqt_shell/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "8b98cf07cbabe5ddb1bc2cd344934b26a9ecc19d13632ad9dda57636cf7cf443";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_shell-release";
+        rev = "release/rolling/rqt_shell/1.1.0-1";
+        sha256 = "sha256-sRyNFwX7PDl+hxv1KAbOS9A74mIiGi5gob9r68lzsDo=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ python-qt-binding python3Packages.catkin-pkg qt-gui qt-gui-py-common rqt-gui rqt-gui-py ];

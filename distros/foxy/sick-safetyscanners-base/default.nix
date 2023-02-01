@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-sick-safetyscanners-base";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SICKAG/sick_safetyscanners_base-release/archive/release/foxy/sick_safetyscanners_base/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "5135b0b92898039b9f24f62c96a117cf698e65df9e81d11e151a7edea81896ef";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SICKAG";
+        repo = "sick_safetyscanners_base-release";
+        rev = "release/foxy/sick_safetyscanners_base/1.0.1-1";
+        sha256 = "sha256-v8e+QEXAyHT4/Cv6Qi6+2q+uqItCAru3gjWlN+vnUQY=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

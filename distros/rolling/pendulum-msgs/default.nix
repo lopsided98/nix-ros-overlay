@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-pendulum-msgs";
   version = "0.23.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/pendulum_msgs/0.23.0-1.tar.gz";
-    name = "0.23.0-1.tar.gz";
-    sha256 = "65314bd1117be8471cc3efa895d93ece8b7e19a6178b224e500d6cc3072064fe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/rolling/pendulum_msgs/0.23.0-1";
+        sha256 = "sha256-eUsQdjfOA0iFOttdAN2/z71hZ8ys0Qz6jHPQz+kL6Og=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

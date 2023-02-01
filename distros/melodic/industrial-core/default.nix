@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-industrial-core";
   version = "0.7.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_core/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "b37cab9d1669956c8a3d7314314cb3b54e0e4b1a4ac9a231416e89f5b1bfa266";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "industrial_core-release";
+        rev = "release/melodic/industrial_core/0.7.3-1";
+        sha256 = "sha256-ZaZnIom8Fvoem61kUwEJL/xy/b8U8ZAxJoZV6J+zOkE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

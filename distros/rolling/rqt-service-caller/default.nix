@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rqt-service-caller";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_service_caller-release/archive/release/rolling/rqt_service_caller/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "51fcb295753d6aee52ed745294e01dd0a3851c2e659b2f3a70d77163e6a8e141";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_service_caller-release";
+        rev = "release/rolling/rqt_service_caller/1.1.0-1";
+        sha256 = "sha256-2XhRmFJ8b7jagZ0zf8uEnSlqm84xUSQfJ0HmZuAz7YY=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ rqt-gui rqt-gui-py rqt-py-common ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ieee80211-channels";
   version = "1.0.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/ieee80211_channels/1.0.16-1.tar.gz";
-    name = "1.0.16-1.tar.gz";
-    sha256 = "0fdd1c65ca9d698ae50345ae73904b34161753ada49f53ddceec13066f9bd355";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "linux_networking-release";
+        rev = "release/melodic/ieee80211_channels/1.0.16-1";
+        sha256 = "sha256-bHk/M/QsOKp44WbPGrSUQ1xh5aoYyg6dvtc/JKmb7N4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

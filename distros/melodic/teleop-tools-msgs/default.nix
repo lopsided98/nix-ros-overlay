@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-teleop-tools-msgs";
   version = "0.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/melodic/teleop_tools_msgs/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "8e09cf4ead3f0f1f98917472c6c2286a6fc33b2b707978d8919132a70cb3244c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "teleop_tools-release";
+        rev = "release/melodic/teleop_tools_msgs/0.3.1-1";
+        sha256 = "sha256-R+1LEVlkEw8CwAm6gqS/etycEZLK4WgZneQHFBgBfbs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-urg-node";
   version = "0.1.18-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/urg_node-release/archive/release/melodic/urg_node/0.1.18-1.tar.gz";
-    name = "0.1.18-1.tar.gz";
-    sha256 = "8006441873ecfa6f2da638d0c569fabaf39213fb54703615b8ea7f685fd7d09a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "urg_node-release";
+        rev = "release/melodic/urg_node/0.1.18-1";
+        sha256 = "sha256-sGUjNvOfcAt2vDn73QWWnr97ccvyARR7PUAyl25Gty8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-pose-cov-ops";
   version = "0.3.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/pose_cov_ops-release/archive/release/foxy/pose_cov_ops/0.3.8-1.tar.gz";
-    name = "0.3.8-1.tar.gz";
-    sha256 = "0fbc07f70b9b3afa4e5f3f585a985c45fbfb769b2b242456fd8905abb26534e7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "pose_cov_ops-release";
+        rev = "release/foxy/pose_cov_ops/0.3.8-1";
+        sha256 = "sha256-PedCn7b0uRpfsVpaUyJ5yPWogpyzEvsBI6xR2g6O7RE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-gmock ament-cmake-gtest ament-cmake-xmllint cmake ros-environment ];

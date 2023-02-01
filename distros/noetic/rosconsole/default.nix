@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosconsole";
   version = "1.14.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rosconsole-release/archive/release/noetic/rosconsole/1.14.3-1.tar.gz";
-    name = "1.14.3-1.tar.gz";
-    sha256 = "8b0e2f4ebe5f8ca194b7a5ced20ff304746c6041800b891ae88f9a76a898a0eb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rosconsole-release";
+        rev = "release/noetic/rosconsole/1.14.3-1";
+        sha256 = "sha256-8d4OczeGu7/mtgPi8/09mjV8kvvj9bdlidF5wOqpewM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rosunit ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-safety-controller";
   version = "0.6.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_substitute-release/archive/release/noetic/cob_safety_controller/0.6.12-1.tar.gz";
-    name = "0.6.12-1.tar.gz";
-    sha256 = "747c9afba9892dabb5d2be7cf75d8c48294badb4125098fd6304a6dae434838a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_substitute-release";
+        rev = "release/noetic/cob_safety_controller/0.6.12-1";
+        sha256 = "sha256-4DQpKAGIZLFF4T174vCXNIOBzWZd4eerpizmDHqU2a0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

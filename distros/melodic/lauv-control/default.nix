@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-lauv-control";
   version = "0.1.6";
 
-  src = fetchurl {
-    url = "https://github.com/uuvsimulator/lauv_gazebo-release/archive/release/melodic/lauv_control/0.1.6-0.tar.gz";
-    name = "0.1.6-0.tar.gz";
-    sha256 = "2a5dafaa1dbc26fc3c4d0b91fc39a6a9f822b8ed8c164e5001189c881cac011d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uuvsimulator";
+        repo = "lauv_gazebo-release";
+        rev = "release/melodic/lauv_control/0.1.6-0";
+        sha256 = "sha256-UzkAxY8WnWmD6mDdbZv2GyleNJ47Zb8zUhe4srNC850=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

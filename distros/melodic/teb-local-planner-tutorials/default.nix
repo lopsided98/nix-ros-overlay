@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-teb-local-planner-tutorials";
   version = "0.2.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rst-tu-dortmund/teb_local_planner_tutorials-release/archive/release/melodic/teb_local_planner_tutorials/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "844e431b24ee4635946618da536b22f2571196f298e74b7715ee6a4f4cd42d1a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rst-tu-dortmund";
+        repo = "teb_local_planner_tutorials-release";
+        rev = "release/melodic/teb_local_planner_tutorials/0.2.4-1";
+        sha256 = "sha256-YT/10QNfUpXEzpyOqioa1CQ2IhIyesO+M2kh5gYDct8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

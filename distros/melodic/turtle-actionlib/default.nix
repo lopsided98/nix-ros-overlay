@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-turtle-actionlib";
   version = "0.1.11";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/common_tutorials-release/archive/release/melodic/turtle_actionlib/0.1.11-0.tar.gz";
-    name = "0.1.11-0.tar.gz";
-    sha256 = "692d2a6946d45017346aa4165b4331314b1fde5f0067717ce33bf7ebbce1bc94";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "common_tutorials-release";
+        rev = "release/melodic/turtle_actionlib/0.1.11-0";
+        sha256 = "sha256-F0DuxqGMCMOVNcjMezQUCivMsuBywpAETRHsMmGbVvY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

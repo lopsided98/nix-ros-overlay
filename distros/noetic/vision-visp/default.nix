@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-vision-visp";
   version = "0.13.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/lagadic/vision_visp-release/archive/release/noetic/vision_visp/0.13.1-1.tar.gz";
-    name = "0.13.1-1.tar.gz";
-    sha256 = "71f50138e21889a4baefa0522297f16ac8a680cce8dd6106d57a619530f09184";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "lagadic";
+        repo = "vision_visp-release";
+        rev = "release/noetic/vision_visp/0.13.1-1";
+        sha256 = "sha256-CaWh0OhA24QRCQKMuyMUR6orqxMJhoBh7lROTYRvtcg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

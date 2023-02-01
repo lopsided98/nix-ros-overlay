@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-clover-blocks";
   version = "0.21.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/CopterExpress/clover-release/archive/release/melodic/clover_blocks/0.21.2-1.tar.gz";
-    name = "0.21.2-1.tar.gz";
-    sha256 = "e239ebc11090127ed61030db7fa8c71e9218c00dadfb86328d0204ee0412a651";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "CopterExpress";
+        repo = "clover-release";
+        rev = "release/melodic/clover_blocks/0.21.2-1";
+        sha256 = "sha256-rPEyRO2L63MwHbWadw8T6iEM8Gc0SDpiV+ac79H+iGU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

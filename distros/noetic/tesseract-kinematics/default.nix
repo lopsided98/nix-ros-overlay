@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-tesseract-kinematics";
   version = "0.13.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_kinematics/0.13.1-1.tar.gz";
-    name = "0.13.1-1.tar.gz";
-    sha256 = "df2694129a3f671504011d8de2a6ee0544027aff42289ea9e880d084763f56aa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "tesseract-release";
+        rev = "release/noetic/tesseract_kinematics/0.13.1-1";
+        sha256 = "sha256-lmK3sOynl4xIpYuDQlESvpTwZTbTh5KTOnFAYJZuRRg=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ros-industrial-cmake-boilerplate ];

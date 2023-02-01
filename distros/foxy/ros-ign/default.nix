@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ros-ign";
   version = "0.221.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/foxy/ros_ign/0.221.2-1.tar.gz";
-    name = "0.221.2-1.tar.gz";
-    sha256 = "e16c78fd9bf2039ea9a3b36b5c7dca8154894910bc4423ce8d82cfddc311279e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros_ign-release";
+        rev = "release/foxy/ros_ign/0.221.2-1";
+        sha256 = "sha256-1nZNU5qFx7TdDkJ7/L6/+PNIoRzOvzGcLFNmUcL17T0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

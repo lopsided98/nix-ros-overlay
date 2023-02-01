@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-tlsf-cpp";
   version = "0.13.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/realtime_support-release/archive/release/humble/tlsf_cpp/0.13.0-2.tar.gz";
-    name = "0.13.0-2.tar.gz";
-    sha256 = "015d2c8320af94d7a05954ff7b3de18d98791f774b0654e902d4117a555e5e19";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "realtime_support-release";
+        rev = "release/humble/tlsf_cpp/0.13.0-2";
+        sha256 = "sha256-hFBDZgnV3zbkfn2UU+rDhfvVOEVwnA+uEZzeSaxBjY4=";
+      };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common rmw-implementation-cmake ];

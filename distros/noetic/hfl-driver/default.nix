@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-hfl-driver";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/flynneva/hfl_driver-release/archive/release/noetic/hfl_driver/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "5d6effed58de83e6d5301c53bdf49d4ffbf926f5d0553b3e3e3a6e0fba73ff18";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "flynneva";
+        repo = "hfl_driver-release";
+        rev = "release/noetic/hfl_driver/0.1.0-1";
+        sha256 = "sha256-8dygZmk/hyGSEKHvlXVMM511HxluBHQZz14zSoFNhkE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ipa-3d-fov-visualization";
   version = "0.6.17-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/melodic/ipa_3d_fov_visualization/0.6.17-1.tar.gz";
-    name = "0.6.17-1.tar.gz";
-    sha256 = "4a41d4d5b8188500255a594b9f8ed89274c1619d55af61c5bc1a03e67c7f504d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_perception_common-release";
+        rev = "release/melodic/ipa_3d_fov_visualization/0.6.17-1";
+        sha256 = "sha256-eXU/7LzhP83Fn21YbfaxwPhwCjIFL5QTwOkETlxiSds=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

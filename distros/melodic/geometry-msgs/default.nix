@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-geometry-msgs";
   version = "1.12.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/geometry_msgs/1.12.8-1.tar.gz";
-    name = "1.12.8-1.tar.gz";
-    sha256 = "cbac8c272635cd628ac4ea51b1bbfcba1070c018d84c27da08af484512870d1c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "common_msgs-release";
+        rev = "release/melodic/geometry_msgs/1.12.8-1";
+        sha256 = "sha256-hxAv9bj235l/nR6Ik9eeZ4iWsa6r9f1dhXI0L5sny3o=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

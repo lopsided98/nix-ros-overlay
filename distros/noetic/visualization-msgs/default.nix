@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-visualization-msgs";
   version = "1.13.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/noetic/visualization_msgs/1.13.1-1.tar.gz";
-    name = "1.13.1-1.tar.gz";
-    sha256 = "8b797706ed360a8918380e718f3b05702bcb85fd55d6cdec6ad4721e75dc84a6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "common_msgs-release";
+        rev = "release/noetic/visualization_msgs/1.13.1-1";
+        sha256 = "sha256-pHC77YKKSGZr5ltf1aSuhMvmRU4dDnftx7R1XlfBlGA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

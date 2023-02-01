@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pyquaternion";
   version = "0.9.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/Achllle/pyquaternion-release/archive/release/noetic/pyquaternion/0.9.6-1.tar.gz";
-    name = "0.9.6-1.tar.gz";
-    sha256 = "2e9df0ec02c91f4962b915bf34a8513e8f05556f8bc7d279bcc0e5d536c606a1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Achllle";
+        repo = "pyquaternion-release";
+        rev = "release/noetic/pyquaternion/0.9.6-1";
+        sha256 = "sha256-2pwJN5emYqg2sC+069bxaRTnievK0P8fFGZFBOGGteo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

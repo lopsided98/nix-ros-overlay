@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-camera-calibration";
   version = "3.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/camera_calibration/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "10160d8c2dbe5074c7cd9fb503aefe905222e8b353f26d8be7b44351cd43e6ae";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/rolling/camera_calibration/3.0.1-1";
+        sha256 = "sha256-fQvzJJwJ6e27j8/v0Ld2OmMTGc6je8EkCNHowz8XBcY=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.requests pythonPackages.pytest ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-urg-c";
   version = "1.0.4001-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/urg_c-release/archive/release/humble/urg_c/1.0.4001-4.tar.gz";
-    name = "1.0.4001-4.tar.gz";
-    sha256 = "b1a02cbbf09cd596d6fbf16f9bd691cf600cbe1e8ee613005b48d8d914ac1bfa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "urg_c-release";
+        rev = "release/humble/urg_c/1.0.4001-4";
+        sha256 = "sha256-d1sMppxyaGt43L2i5Eplkfen4tHz1t6hkC42mCbg0EM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

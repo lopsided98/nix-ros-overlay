@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-turbojpeg-compressed-image-transport";
   version = "0.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/turbojpeg_compressed_image_transport-release/archive/release/humble/turbojpeg_compressed_image_transport/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "556f7afedd8d86dd7d21bba16a7bb2b2c8ba2b6623a7fab87c44cd09ae5ab881";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "turbojpeg_compressed_image_transport-release";
+        rev = "release/humble/turbojpeg_compressed_image_transport/0.1.3-1";
+        sha256 = "sha256-wQ29hHJAn0G7oYS1sPqomyz/MYlPqvthqiK9e0hLN6o=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

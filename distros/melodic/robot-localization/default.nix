@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robot-localization";
   version = "2.6.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/cra-ros-pkg/robot_localization-release/archive/release/melodic/robot_localization/2.6.12-1.tar.gz";
-    name = "2.6.12-1.tar.gz";
-    sha256 = "9335cdc8055565d1d2011eca64a358b37d97bd7eac74f53396e45a9f27a9c30f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "cra-ros-pkg";
+        repo = "robot_localization-release";
+        rev = "release/melodic/robot_localization/2.6.12-1";
+        sha256 = "sha256-MbtYf1QvNOAyc/stqBFaUhRuSdaHKuiDKi/9Pd7iiPM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation pythonPackages.catkin-pkg roslint ];

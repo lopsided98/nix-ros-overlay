@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tf2-web-republisher";
   version = "0.3.2";
 
-  src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/tf2_web_republisher-release/archive/release/melodic/tf2_web_republisher/0.3.2-0.tar.gz";
-    name = "0.3.2-0.tar.gz";
-    sha256 = "401fcc79bf11e5071e8304b1053bf8afed6f3e91d3df30c0823c87c82b741420";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "RobotWebTools-release";
+        repo = "tf2_web_republisher-release";
+        rev = "release/melodic/tf2_web_republisher/0.3.2-0";
+        sha256 = "sha256-SWlALJIr/iyDp2Qh1Vw6fk7oq1AHzE3I3b2ysTWrbWU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-color-util";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/color_util/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "9a1ea5d2c51cbc78a4e9eddc30a0385eb31ca834638c3ad6a3423057f1adf27c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/melodic/color_util/0.3.0-1";
+        sha256 = "sha256-/KNetcsaFZ+yC9UBoDkeDAM4O5/ja/xGduN2dKaPrVs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

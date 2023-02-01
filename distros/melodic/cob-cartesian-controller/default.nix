@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-cartesian-controller";
   version = "0.8.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_cartesian_controller/0.8.12-1.tar.gz";
-    name = "0.8.12-1.tar.gz";
-    sha256 = "1a5c70f3dea95b302d3c3b2e53348c8a38e01f76495dd8aa0d8593a43b366b6a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_control-release";
+        rev = "release/melodic/cob_cartesian_controller/0.8.12-1";
+        sha256 = "sha256-fBbWfw9qK2sDCtwKXEPARBKjKLIb0RNuJYdv4iG6caU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation pythonPackages.setuptools roslint ];

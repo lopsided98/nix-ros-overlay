@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-android-msgs";
   version = "0.1.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_android-release/archive/release/melodic/cob_android_msgs/0.1.8-1.tar.gz";
-    name = "0.1.8-1.tar.gz";
-    sha256 = "eee9619f0b8b8b5bf17fc8f9058b608dd3fb3f3fd3a389f14369c65f38389017";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_android-release";
+        rev = "release/melodic/cob_android_msgs/0.1.8-1";
+        sha256 = "sha256-HhtbxW22D9iGr9ZZjgrq7RFmzvA/5f15I12uTN+l0dQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -160,6 +160,10 @@ self: super: {
 
  apriltag = self.callPackage ./apriltag {};
 
+ apriltag-msgs = self.callPackage ./apriltag-msgs {};
+
+ apriltag-ros = self.callPackage ./apriltag-ros {};
+
  aruco-opencv = self.callPackage ./aruco-opencv {};
 
  aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
@@ -318,6 +322,8 @@ self: super: {
 
  depthai-examples = self.callPackage ./depthai-examples {};
 
+ depthai-ros-driver = self.callPackage ./depthai-ros-driver {};
+
  depthai-ros-msgs = self.callPackage ./depthai-ros-msgs {};
 
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
@@ -328,9 +334,13 @@ self: super: {
 
  diagnostic-aggregator = self.callPackage ./diagnostic-aggregator {};
 
+ diagnostic-common-diagnostics = self.callPackage ./diagnostic-common-diagnostics {};
+
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
  diagnostic-updater = self.callPackage ./diagnostic-updater {};
+
+ diagnostics = self.callPackage ./diagnostics {};
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
@@ -624,7 +634,29 @@ self: super: {
 
  io-context = self.callPackage ./io-context {};
 
+ irobot-create-common-bringup = self.callPackage ./irobot-create-common-bringup {};
+
+ irobot-create-control = self.callPackage ./irobot-create-control {};
+
+ irobot-create-description = self.callPackage ./irobot-create-description {};
+
+ irobot-create-gazebo-bringup = self.callPackage ./irobot-create-gazebo-bringup {};
+
+ irobot-create-gazebo-plugins = self.callPackage ./irobot-create-gazebo-plugins {};
+
+ irobot-create-gazebo-sim = self.callPackage ./irobot-create-gazebo-sim {};
+
+ irobot-create-ignition-bringup = self.callPackage ./irobot-create-ignition-bringup {};
+
+ irobot-create-ignition-sim = self.callPackage ./irobot-create-ignition-sim {};
+
+ irobot-create-ignition-toolbox = self.callPackage ./irobot-create-ignition-toolbox {};
+
  irobot-create-msgs = self.callPackage ./irobot-create-msgs {};
+
+ irobot-create-nodes = self.callPackage ./irobot-create-nodes {};
+
+ irobot-create-toolbox = self.callPackage ./irobot-create-toolbox {};
 
  joint-limits = self.callPackage ./joint-limits {};
 
@@ -641,6 +673,8 @@ self: super: {
  joy-linux = self.callPackage ./joy-linux {};
 
  joy-teleop = self.callPackage ./joy-teleop {};
+
+ joy-tester = self.callPackage ./joy-tester {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
 
@@ -760,6 +794,12 @@ self: super: {
 
  map-msgs = self.callPackage ./map-msgs {};
 
+ mapviz = self.callPackage ./mapviz {};
+
+ mapviz-interfaces = self.callPackage ./mapviz-interfaces {};
+
+ mapviz-plugins = self.callPackage ./mapviz-plugins {};
+
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
 
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
@@ -811,6 +851,8 @@ self: super: {
  microstrain-inertial-rqt = self.callPackage ./microstrain-inertial-rqt {};
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
+
+ mod = self.callPackage ./mod {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
@@ -903,6 +945,8 @@ self: super: {
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ multires-image = self.callPackage ./multires-image {};
 
  mvsim = self.callPackage ./mvsim {};
 
@@ -1162,6 +1206,8 @@ self: super: {
 
  position-controllers = self.callPackage ./position-controllers {};
 
+ py-trees = self.callPackage ./py-trees {};
+
  pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
 
  pybind11-vendor = self.callPackage ./pybind11-vendor {};
@@ -1197,6 +1243,10 @@ self: super: {
  radar-msgs = self.callPackage ./radar-msgs {};
 
  random-numbers = self.callPackage ./random-numbers {};
+
+ raspimouse = self.callPackage ./raspimouse {};
+
+ raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
@@ -1646,6 +1696,8 @@ self: super: {
 
  rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
 
+ rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
+
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
 
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
@@ -1728,64 +1780,6 @@ self: super: {
 
  soccer-marker-generation = self.callPackage ./soccer-marker-generation {};
 
- soccer-object-msgs = self.callPackage ./soccer-object-msgs {};
-
- soccer-vision-2d-msgs = self.callPackage ./soccer-vision-2d-msgs {};
-
- soccer-vision-3d-msgs = self.callPackage ./soccer-vision-3d-msgs {};
-
- soccer-vision-attribute-msgs = self.callPackage ./soccer-vision-attribute-msgs {};
-
- sol-vendor = self.callPackage ./sol-vendor {};
-
- sophus = self.callPackage ./sophus {};
-
- spacenav = self.callPackage ./spacenav {};
-
- spdlog-vendor = self.callPackage ./spdlog-vendor {};
-
- splsm-7 = self.callPackage ./splsm-7 {};
-
- splsm-7-conversion = self.callPackage ./splsm-7-conversion {};
-
- sqlite3-vendor = self.callPackage ./sqlite3-vendor {};
-
- srdfdom = self.callPackage ./srdfdom {};
-
- sros2 = self.callPackage ./sros2 {};
-
- sros2-cmake = self.callPackage ./sros2-cmake {};
-
- statistics-msgs = self.callPackage ./statistics-msgs {};
-
- std-msgs = self.callPackage ./std-msgs {};
-
- std-srvs = self.callPackage ./std-srvs {};
-
- stereo-image-proc = self.callPackage ./stereo-image-proc {};
-
- stereo-msgs = self.callPackage ./stereo-msgs {};
-
- stubborn-buddies = self.callPackage ./stubborn-buddies {};
-
- stubborn-buddies-msgs = self.callPackage ./stubborn-buddies-msgs {};
-
- swri-console = self.callPackage ./swri-console {};
-
- swri-console-util = self.callPackage ./swri-console-util {};
-
- swri-dbw-interface = self.callPackage ./swri-dbw-interface {};
-
- swri-geometry-util = self.callPackage ./swri-geometry-util {};
-
- swri-image-util = self.callPackage ./swri-image-util {};
-
- swri-math-util = self.callPackage ./swri-math-util {};
-
- swri-opencv-util = self.callPackage ./swri-opencv-util {};
-
- swri-prefix-tools = self.callPackage ./swri-prefix-tools {};
-
  swri-roscpp = self.callPackage ./swri-roscpp {};
 
  swri-route-util = self.callPackage ./swri-route-util {};
@@ -1867,6 +1861,8 @@ self: super: {
  tiago-robot = self.callPackage ./tiago-robot {};
 
  tiago-simulation = self.callPackage ./tiago-simulation {};
+
+ tile-map = self.callPackage ./tile-map {};
 
  tinyxml2-vendor = self.callPackage ./tinyxml2-vendor {};
 

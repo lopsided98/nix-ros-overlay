@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-turtlebot3-gazebo";
   version = "2.2.5-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_simulations-release/archive/release/humble/turtlebot3_gazebo/2.2.5-3.tar.gz";
-    name = "2.2.5-3.tar.gz";
-    sha256 = "b4bc672bfbd384f46db90b999ea87a120a4104929eab564348d13e40fde0701f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "turtlebot3_simulations-release";
+        rev = "release/humble/turtlebot3_gazebo/2.2.5-3";
+        sha256 = "sha256-v6xnRm6M8asU/HVNlinmuyhrm7cTaIuA3aSHJzPeX6c=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -4,8 +4,6 @@
 
 self: super: {
 
- acado-vendor = self.callPackage ./acado-vendor {};
-
  ackermann-msgs = self.callPackage ./ackermann-msgs {};
 
  action-msgs = self.callPackage ./action-msgs {};
@@ -138,10 +136,6 @@ self: super: {
 
  angles = self.callPackage ./angles {};
 
- apex-containers = self.callPackage ./apex-containers {};
-
- apex-test-tools = self.callPackage ./apex-test-tools {};
-
  apriltag = self.callPackage ./apriltag {};
 
  aruco-opencv = self.callPackage ./aruco-opencv {};
@@ -159,8 +153,6 @@ self: super: {
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
-
- autoware-auto-msgs = self.callPackage ./autoware-auto-msgs {};
 
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
 
@@ -352,9 +344,13 @@ self: super: {
 
  diagnostic-aggregator = self.callPackage ./diagnostic-aggregator {};
 
+ diagnostic-common-diagnostics = self.callPackage ./diagnostic-common-diagnostics {};
+
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
  diagnostic-updater = self.callPackage ./diagnostic-updater {};
+
+ diagnostics = self.callPackage ./diagnostics {};
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
@@ -491,10 +487,6 @@ self: super: {
  embree-vendor = self.callPackage ./embree-vendor {};
 
  end-effector = self.callPackage ./end-effector {};
-
- espeak-interfaces = self.callPackage ./espeak-interfaces {};
-
- espeak-ros = self.callPackage ./espeak-ros {};
 
  example-interfaces = self.callPackage ./example-interfaces {};
 
@@ -713,6 +705,8 @@ self: super: {
  joy-linux = self.callPackage ./joy-linux {};
 
  joy-teleop = self.callPackage ./joy-teleop {};
+
+ joy-tester = self.callPackage ./joy-tester {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
@@ -1100,8 +1094,6 @@ self: super: {
 
  pacmod-msgs = self.callPackage ./pacmod-msgs {};
 
- paho-mqtt-c = self.callPackage ./paho-mqtt-c {};
-
  pal-gazebo-worlds = self.callPackage ./pal-gazebo-worlds {};
 
  pal-statistics = self.callPackage ./pal-statistics {};
@@ -1209,8 +1201,6 @@ self: super: {
  pmb2-robot = self.callPackage ./pmb2-robot {};
 
  pmb2-simulation = self.callPackage ./pmb2-simulation {};
-
- point-cloud-msg-wrapper = self.callPackage ./point-cloud-msg-wrapper {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
@@ -1531,8 +1521,6 @@ self: super: {
  ros2topic = self.callPackage ./ros2topic {};
 
  ros2trace = self.callPackage ./ros2trace {};
-
- ros2trace-analysis = self.callPackage ./ros2trace-analysis {};
 
  ros-base = self.callPackage ./ros-base {};
 
@@ -1880,8 +1868,6 @@ self: super: {
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
 
- test-apex-test-tools = self.callPackage ./test-apex-test-tools {};
-
  test-bond = self.callPackage ./test-bond {};
 
  test-interface-files = self.callPackage ./test-interface-files {};
@@ -1931,8 +1917,6 @@ self: super: {
  topic-monitor = self.callPackage ./topic-monitor {};
 
  tracetools = self.callPackage ./tracetools {};
-
- tracetools-analysis = self.callPackage ./tracetools-analysis {};
 
  tracetools-image-pipeline = self.callPackage ./tracetools-image-pipeline {};
 

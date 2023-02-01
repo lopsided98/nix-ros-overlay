@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-catkin";
   version = "0.8.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/catkin-release/archive/release/noetic/catkin/0.8.10-1.tar.gz";
-    name = "0.8.10-1.tar.gz";
-    sha256 = "08401b37f85d0a6b153e00408b6e51fdf7b0fd0d485da6ccb808aba401a5518f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "catkin-release";
+        rev = "release/noetic/catkin/0.8.10-1";
+        sha256 = "sha256-/lfjWvuKyVXYA/YNaEI9ec44evTOnPZ4rqZQ1Zz0YIw=";
+      };
 
   buildType = "catkin";
   checkInputs = [ python3Packages.mock python3Packages.nose ];

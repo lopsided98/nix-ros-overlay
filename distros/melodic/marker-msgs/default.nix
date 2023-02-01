@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-marker-msgs";
   version = "0.0.6";
 
-  src = fetchurl {
-    url = "https://github.com/tuw-robotics/marker_msgs-release/archive/release/melodic/marker_msgs/0.0.6-0.tar.gz";
-    name = "0.0.6-0.tar.gz";
-    sha256 = "97c6b32ffed3602939b7decce5e38a880e7e64a3d1dd22217512ddf2779e48c5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tuw-robotics";
+        repo = "marker_msgs-release";
+        rev = "release/melodic/marker_msgs/0.0.6-0";
+        sha256 = "sha256-KFmVAhnAs7l2wJqmM4VODUrE8DpKORIt9npqoLYCApo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

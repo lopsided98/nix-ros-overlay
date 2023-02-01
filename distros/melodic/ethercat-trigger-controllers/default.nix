@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ethercat-trigger-controllers";
   version = "1.10.17-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/ethercat_trigger_controllers/1.10.17-1.tar.gz";
-    name = "1.10.17-1.tar.gz";
-    sha256 = "d3630e54d263a3f14802f4b62710e4da4f21e78b6415d70fbd3b6a0b16b0ca5c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_controllers-release";
+        rev = "release/melodic/ethercat_trigger_controllers/1.10.17-1";
+        sha256 = "sha256-WdHFWr2kAcJpbhhwx0ocFLpA6wdM7iekUqsSzOzCApQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

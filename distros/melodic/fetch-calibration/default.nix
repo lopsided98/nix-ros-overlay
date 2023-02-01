@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fetch-calibration";
   version = "0.8.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/melodic/fetch_calibration/0.8.3-1.tar.gz";
-    name = "0.8.3-1.tar.gz";
-    sha256 = "3e2fafdcabe870e9a85de7e96582f8d42371e6cd23354f8f3da19f2331598178";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "fetch_ros-release";
+        rev = "release/melodic/fetch_calibration/0.8.3-1";
+        sha256 = "sha256-wztLZvs91TQpcYRI4FIlB7v76XBQc3G6mzZuqlbusrc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

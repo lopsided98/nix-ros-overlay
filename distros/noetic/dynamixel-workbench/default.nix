@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dynamixel-workbench";
   version = "2.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/noetic/dynamixel_workbench/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "d9ab814b23da7f58a8ef012d3c93c3c225340c5dd19d810b67a2093d6aac0b54";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "dynamixel-workbench-release";
+        rev = "release/noetic/dynamixel_workbench/2.2.1-1";
+        sha256 = "sha256-q61GkQtwb4+B5LBS7NrjpZynQj0xUDqXPR2zJXVNKH0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

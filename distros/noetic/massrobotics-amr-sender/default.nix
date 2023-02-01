@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-massrobotics-amr-sender";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/inorbit-ai/ros_amr_interop-release/archive/release/noetic/massrobotics_amr_sender/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "8dcdb3482f774de4774b744a03d8fbe17f8325d8f4412d4da254d81f425f7611";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "inorbit-ai";
+        repo = "ros_amr_interop-release";
+        rev = "release/noetic/massrobotics_amr_sender/1.0.1-1";
+        sha256 = "sha256-BSkPvfJhIPM4gnwZ3UA6ZaCngG0n7th6VilOI+TKh4w=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

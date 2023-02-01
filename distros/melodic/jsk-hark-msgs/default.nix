@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jsk-hark-msgs";
   version = "4.3.1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/melodic/jsk_hark_msgs/4.3.1-0.tar.gz";
-    name = "4.3.1-0.tar.gz";
-    sha256 = "f9bcc221412c9950f156dc4c57c6dd8ca9aa4eff1201c12a412a05211fcd07ea";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_common_msgs-release";
+        rev = "release/melodic/jsk_hark_msgs/4.3.1-0";
+        sha256 = "sha256-GzodngcsOe8P2cftsnGyytj33IdfsHbQLsjeYJAFUEw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-gazebo-msgs";
   version = "3.5.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/foxy/gazebo_msgs/3.5.3-1.tar.gz";
-    name = "3.5.3-1.tar.gz";
-    sha256 = "1fafbcae164048e2c9cb475c6ac907efde4fea957531f872ece4e5894cf65b7f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "gazebo_ros_pkgs-release";
+        rev = "release/foxy/gazebo_msgs/3.5.3-1";
+        sha256 = "sha256-Ui/fOeCh9eaRVr73r0+PfVFXqd0qEuKh1Wujp6n0zwY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

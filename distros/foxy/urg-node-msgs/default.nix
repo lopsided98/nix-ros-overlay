@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-urg-node-msgs";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/urg_node_msgs-release/archive/release/foxy/urg_node_msgs/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "546489e0d53b57b20c5211592fb8505624cc9f3fba93b2b46fd5cec13b0a0ae0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "urg_node_msgs-release";
+        rev = "release/foxy/urg_node_msgs/1.0.1-1";
+        sha256 = "sha256-IBl7J8akPgn5ni5/8kPGDOh4Fklto+RggWCIxGald/w=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-franka-gripper";
   version = "0.10.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_gripper/0.10.1-1.tar.gz";
-    name = "0.10.1-1.tar.gz";
-    sha256 = "4cb65f2e329b50330bb153df7189470c0a476e1a741fefc72e6d5b5282b56fc5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "frankaemika";
+        repo = "franka_ros-release";
+        rev = "release/noetic/franka_gripper/0.10.1-1";
+        sha256 = "sha256-0+LWjt71ty6lIcgby7jtYDAGWWyxV5w68nV4+9xxaIg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-laser-pipeline";
   version = "1.6.3";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/laser_pipeline-release/archive/release/melodic/laser_pipeline/1.6.3-0.tar.gz";
-    name = "1.6.3-0.tar.gz";
-    sha256 = "5d831b4e5ff12088b034f71202b7202c5d4fff9717d4a58acd5843e279f242d7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "laser_pipeline-release";
+        rev = "release/melodic/laser_pipeline/1.6.3-0";
+        sha256 = "sha256-6TdVR5VckqOjqi8OplCfDT58uDkR+GRhJvz0tUP5rR4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

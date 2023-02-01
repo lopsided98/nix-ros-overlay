@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-voltage-control";
   version = "0.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_voltage_control/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "a3614687544a37eda6433f6b38c1afb75c509c85bd751391323b70f1ef61e326";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/melodic/cob_voltage_control/0.7.4-1";
+        sha256 = "sha256-aCByjPz1Nij2BGLl0ip14QrHTCh7SkstXFQVCYuvmA0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

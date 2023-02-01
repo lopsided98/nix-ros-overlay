@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rc-genicam-driver";
   version = "0.6.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_genicam_driver_ros-release/archive/release/melodic/rc_genicam_driver/0.6.3-1.tar.gz";
-    name = "0.6.3-1.tar.gz";
-    sha256 = "4d65f8a833a5ca220b564c5c663951e571bc7f969f3d27ead05be5d49982d747";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "roboception-gbp";
+        repo = "rc_genicam_driver_ros-release";
+        rev = "release/melodic/rc_genicam_driver/0.6.3-1";
+        sha256 = "sha256-+juoW7DS6unNyDU13+ZMIxiHdrBy1aUAJ78xL1PmDzs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

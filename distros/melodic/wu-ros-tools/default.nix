@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-wu-ros-tools";
   version = "0.2.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/wu-robotics/wu_ros_tools/archive/release/melodic/wu_ros_tools/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "557457c728d9cafede598ef48db73051845b4d377959a8b5ccd9b7a2847e14a8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wu-robotics";
+        repo = "wu_ros_tools";
+        rev = "release/melodic/wu_ros_tools/0.2.6-1";
+        sha256 = "sha256-H4WLdrpPaYQU1S4NueNh8WAI9bhdlDRfqlaAtzgnPlA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

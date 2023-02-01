@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-clpe-ros";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/canlab-co/clpe_ros-ros-release/archive/release/noetic/clpe_ros/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "f2d304c94819912ddf2cfeea13bf551744e6d4ec71a3016b59f2342698ffc5c0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "canlab-co";
+        repo = "clpe_ros-ros-release";
+        rev = "release/noetic/clpe_ros/0.1.1-1";
+        sha256 = "sha256-cY1Z0D9WVOsePJQ2qUB0VZUZJ/lCyGocFUJmRhEMevw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

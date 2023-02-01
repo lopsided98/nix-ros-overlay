@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rcss3d-agent";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcss3d_agent-release/archive/release/humble/rcss3d_agent/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "d42fe79013b25837e8955923aed1079cfce2426c321df6ba011ed8e68c388045";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcss3d_agent-release";
+        rev = "release/humble/rcss3d_agent/0.2.1-1";
+        sha256 = "sha256-RvUiVgKOMTlAyvsAtAdslsPg3GWfft47DcuWAR3U7fs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

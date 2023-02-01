@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-zbar-ros";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/zbar_ros-release/archive/release/noetic/zbar_ros/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "75e34b3033a0ff405b0a6e1c306813e89f0e2cb2351c754c4dd6206fd2540f55";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "zbar_ros-release";
+        rev = "release/noetic/zbar_ros/0.3.0-1";
+        sha256 = "sha256-J0VRvJf2Gp1KWe/TUJ3mZzLw/N8chmXsA3anbPO6hlQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

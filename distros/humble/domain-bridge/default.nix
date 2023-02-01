@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-domain-bridge";
   version = "0.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/domain_bridge-release/archive/release/humble/domain_bridge/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "736dc2624e03566225d53f7b42fa831051de38256f3d8c5295637f02bcf68625";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "domain_bridge-release";
+        rev = "release/humble/domain_bridge/0.5.0-1";
+        sha256 = "sha256-eajUFSE7L+45VSlUvbXcvd6RjjdERKimvpFjuXVbCO8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

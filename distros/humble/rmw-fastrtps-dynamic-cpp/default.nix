@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rmw-fastrtps-dynamic-cpp";
   version = "6.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_fastrtps-release/archive/release/humble/rmw_fastrtps_dynamic_cpp/6.2.2-1.tar.gz";
-    name = "6.2.2-1.tar.gz";
-    sha256 = "c86d46653ee0312f4d91f7de7564d8cb1d28a2f7b488bf2822af0971acc91758";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmw_fastrtps-release";
+        rev = "release/humble/rmw_fastrtps_dynamic_cpp/6.2.2-1";
+        sha256 = "sha256-OnGF5+5k/4rmKtoKBB1Xoug/hj0h+QAnjqNTsxXCHo4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

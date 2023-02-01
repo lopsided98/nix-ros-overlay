@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pose-base-controller";
   version = "0.3.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/pose_base_controller/0.3.6-1.tar.gz";
-    name = "0.3.6-1.tar.gz";
-    sha256 = "c4b91b8662f7e704d08a4a4a18f11464df444907d10299a2883cd35b5f40552b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation_experimental-release";
+        rev = "release/melodic/pose_base_controller/0.3.6-1";
+        sha256 = "sha256-zUB5cFXfPNsBBeq0FVF5ehvNSU8Z3/+fxOwuHDpwMG0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

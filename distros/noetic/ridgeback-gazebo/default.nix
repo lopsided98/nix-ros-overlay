@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ridgeback-gazebo";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/noetic/ridgeback_gazebo/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "e5259ab3274609715402262563a5a0f5b39994ed94582bd103f898ab4106ea09";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "ridgeback_simulator-release";
+        rev = "release/noetic/ridgeback_gazebo/0.2.0-1";
+        sha256 = "sha256-Qj7scBLf09DK/zdJZOx1lEYPn+ajhtwt348L3fiXs+Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

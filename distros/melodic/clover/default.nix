@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-clover";
   version = "0.21.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/CopterExpress/clover-release/archive/release/melodic/clover/0.21.2-1.tar.gz";
-    name = "0.21.2-1.tar.gz";
-    sha256 = "778f01196b1c57d7b4b622146a5e72757fc97d1dda17fbc0bca67c2b11a6465b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "CopterExpress";
+        repo = "clover-release";
+        rev = "release/melodic/clover/0.21.2-1";
+        sha256 = "sha256-2aVGAaeH3hoXp44Yq9uSGE2VRhGp1gcK0Arz5eZjIj8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin catkin-virtualenv ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-libqt-opengl";
   version = "1.0.1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/qt_metapackages-release/archive/release/melodic/libqt_opengl/1.0.1-0.tar.gz";
-    name = "1.0.1-0.tar.gz";
-    sha256 = "864a495c5dbc587baac58d0cbc2b936fbd18cdae8123e1c34bf005c881a29ca6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "qt_metapackages-release";
+        rev = "release/melodic/libqt_opengl/1.0.1-0";
+        sha256 = "sha256-ZbvcXAwqLlrBNYR9nS8RA1j3T76Fjr1GSxRYPfArUpg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-parameter-pa";
   version = "1.2.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/TUC-ProAut/ros_parameter-release/archive/release/noetic/parameter_pa/1.2.3-2.tar.gz";
-    name = "1.2.3-2.tar.gz";
-    sha256 = "f1a8023e6acd9cb328bb3a75167ea023470f21eac302b5f58ab966b9b01065ce";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "TUC-ProAut";
+        repo = "ros_parameter-release";
+        rev = "release/noetic/parameter_pa/1.2.3-2";
+        sha256 = "sha256-UdbuPA4pBgqHS9lkFd5d5E3khQw6fDibj40vHZiThAM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

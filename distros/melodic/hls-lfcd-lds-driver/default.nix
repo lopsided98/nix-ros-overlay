@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hls-lfcd-lds-driver";
   version = "1.1.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/hls-lfcd-lds-driver-release/archive/release/melodic/hls_lfcd_lds_driver/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "818186f69f514fea41023eefdeef1721c8817b0a57a7f113c4f8ae887f1147a2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "hls-lfcd-lds-driver-release";
+        rev = "release/melodic/hls_lfcd_lds_driver/1.1.2-1";
+        sha256 = "sha256-qFZn3c0vWo+U036jfgy8NlQFsGt1Vbf2dD8o5ke22uE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

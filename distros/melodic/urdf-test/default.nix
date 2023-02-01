@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-urdf-test";
   version = "1.0.4";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/urdf_test-release/archive/release/melodic/urdf_test/1.0.4-0.tar.gz";
-    name = "1.0.4-0.tar.gz";
-    sha256 = "0c218b7644479fe4c625fd32883d1e45d945f3662f73152e60e45bbf3cabc8b0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "urdf_test-release";
+        rev = "release/melodic/urdf_test/1.0.4-0";
+        sha256 = "sha256-ylxLRwWS+kAio+elyt4ZAqXS4pZ3oUsl5rp5+h7pns8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

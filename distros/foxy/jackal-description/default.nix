@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-jackal-description";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/foxy/jackal_description/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "800ded481161714cba87cb0c7b95275647c314743db4ce9bca6670bd600cf2de";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "jackal-release";
+        rev = "release/foxy/jackal_description/1.0.1-1";
+        sha256 = "sha256-rdzox8uj5f2CyrhFhZ0mDff8m+EzGYz6D25di0M/bEE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-qt-gui-py-common";
   version = "1.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/foxy/qt_gui_py_common/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "2ad6a653a25b88d458f7a654ef9f0a122f321f656aac220e703fb135ee455a2a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "qt_gui_core-release";
+        rev = "release/foxy/qt_gui_py_common/1.1.3-1";
+        sha256 = "sha256-QriMiVG1DlnmYXZzo2W2TQL5qiNDcML7s3qW3lW1L8I=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

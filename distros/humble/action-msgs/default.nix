@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-action-msgs";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/humble/action_msgs/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "dbea032efe7fdd74415f1f6fefd2eb1c1f891cd27025ea54684992833ff9d4c6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcl_interfaces-release";
+        rev = "release/humble/action_msgs/1.2.1-1";
+        sha256 = "sha256-2ECLCT/VB0k48HVTOrmHkx3hEQftEjtYszess8KxctU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

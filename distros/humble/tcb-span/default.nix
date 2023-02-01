@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-tcb-span";
   version = "1.0.2-r2";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/cpp_polyfills-release/archive/release/humble/tcb_span/1.0.2-2.tar.gz";
-    name = "1.0.2-2.tar.gz";
-    sha256 = "2a506d5ed3e043fcd5e81ae931a53553c7583137cb5ca0de9fe63e3c5f85b5b1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PickNikRobotics";
+        repo = "cpp_polyfills-release";
+        rev = "release/humble/tcb_span/1.0.2-2";
+        sha256 = "sha256-61JrUYgWw+LJJmryzDfZte0H+hhzDbHqOY1wEyk996Q=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

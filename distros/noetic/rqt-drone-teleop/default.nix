@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-drone-teleop";
   version = "1.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/JdeRobot/drones-release/archive/release/noetic/rqt_drone_teleop/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "e52d610e8f680a7e23c9193ec5324db85da8414de03da0a79bf5ce34666d327f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "JdeRobot";
+        repo = "drones-release";
+        rev = "release/noetic/rqt_drone_teleop/1.4.2-1";
+        sha256 = "sha256-GHlc9pKt0zJ2k/jv0BDD1O+45qtf8GJnP5yBOYfcX/4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-realsense2-description";
   version = "2.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/melodic/realsense2_description/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "a759b19b2843ec5eba48734b1f30c1be35691d41f040f6622d33ef62adea20b7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "IntelRealSense";
+        repo = "realsense-ros-release";
+        rev = "release/melodic/realsense2_description/2.3.2-1";
+        sha256 = "sha256-XMrc90iRdG8V56ZFQS8RDqPLXBLjAR33LQXCxkuQo6Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

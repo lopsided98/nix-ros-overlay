@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-tiago-controller-configuration";
   version = "4.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_robot-release/archive/release/humble/tiago_controller_configuration/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "b03dccd2268a99bc75b899a171c1d3e661e3757114cd76211cef831b8cbda68d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "tiago_robot-release";
+        rev = "release/humble/tiago_controller_configuration/4.0.1-1";
+        sha256 = "sha256-etmuuy/z14V1jEFDX3anB+WGPsiEv+ajNxKui+cXZOk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

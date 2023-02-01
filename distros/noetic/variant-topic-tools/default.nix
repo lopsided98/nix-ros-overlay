@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-variant-topic-tools";
   version = "0.1.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/anybotics/variant-release/archive/release/noetic/variant_topic_tools/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "cddba6c96739c4a1dbe1459d3c4848312f103b6ab6aeca8fc4e1933dd3dbbc7e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "anybotics";
+        repo = "variant-release";
+        rev = "release/noetic/variant_topic_tools/0.1.6-1";
+        sha256 = "sha256-aXS5Fb1EdHRYRVJoyxvJJH5PFfvjfPPlo24AgSwYjeY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rcdiscover";
   version = "1.1.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/roboception-gbp/rcdiscover-release/archive/release/melodic/rcdiscover/1.1.4-1.tar.gz";
-    name = "1.1.4-1.tar.gz";
-    sha256 = "ea2fa0724a29e95475715069e2e149ed146fa7f9c6b60b15ed8a578c89ba7ee8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "roboception-gbp";
+        repo = "rcdiscover-release";
+        rev = "release/melodic/rcdiscover/1.1.4-1";
+        sha256 = "sha256-IzHfwuLyT18CS/9Qj/yMlO3ghLUflM1FesXkbpqXruE=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

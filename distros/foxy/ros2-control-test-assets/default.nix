@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ros2-control-test-assets";
   version = "0.11.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/foxy/ros2_control_test_assets/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "dd351b46efaf5ef394378704c9a16e77e27b3bff5a8c76018793b663536286ca";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_control-release";
+        rev = "release/foxy/ros2_control_test_assets/0.11.0-1";
+        sha256 = "sha256-e3NXrwx/ysnpJ2/mdYf1VMnkfRW5cCpUikE+8FTXZR0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

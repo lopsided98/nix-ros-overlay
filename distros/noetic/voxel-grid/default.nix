@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-voxel-grid";
-  version = "1.17.2-r1";
+  version = "1.17.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/voxel_grid/1.17.2-1.tar.gz";
-    name = "1.17.2-1.tar.gz";
-    sha256 = "e7c58b56a3b31f78d302aaeeaeba39d9e03a505f053d550b9e3253c8d344aff9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation-release";
+        rev = "release/noetic/voxel_grid/1.17.3-1";
+        sha256 = "sha256-KTOn6ZJOHrFntFaxiPJXe6mRjWTun6JAXEMVcLBfres=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

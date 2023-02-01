@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rti-connext-dds-cmake-module";
   version = "0.13.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_connextdds-release/archive/release/rolling/rti_connext_dds_cmake_module/0.13.0-1.tar.gz";
-    name = "0.13.0-1.tar.gz";
-    sha256 = "8b62e18e24690914305c21cec6b8981f5bc35b8080c39750f033b9d93b607f22";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmw_connextdds-release";
+        rev = "release/rolling/rti_connext_dds_cmake_module/0.13.0-1";
+        sha256 = "sha256-571J0ZzgTscO3/qC9SCYh3GCiWNd9iauupnXda6CkB8=";
+      };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-lint-auto ament-lint-common ];

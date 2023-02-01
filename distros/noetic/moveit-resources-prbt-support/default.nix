@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-resources-prbt-support";
   version = "0.8.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_prbt_support/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "ea64280d527970b6d0740709f21d84e8e2333c5f1eb2519ea51bbb6658a78d9f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit_resources-release";
+        rev = "release/noetic/moveit_resources_prbt_support/0.8.2-1";
+        sha256 = "sha256-d6yfXC8JVjp5keCYXz+vg77ZNiLFVU6VSCRc4tS58Q8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -2,21 +2,25 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, orocos-kdl-vendor, urdf, urdfdom-headers }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, orocos-kdl-vendor, rcutils, urdf, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-humble-kdl-parser";
-  version = "2.6.3-r1";
+  version = "2.6.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/kdl_parser-release/archive/release/humble/kdl_parser/2.6.3-1.tar.gz";
-    name = "2.6.3-1.tar.gz";
-    sha256 = "d87acdd7d4ad38d2525bfec1f7e0a91f558e8a97d7f4aa915899e46e47ae23ba";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "kdl_parser-release";
+        rev = "release/humble/kdl_parser/2.6.4-1";
+        sha256 = "sha256-JlyZxZY3C7AYQawxE/f0lwcAO0a15WccwufPv76ONOY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ orocos-kdl-vendor urdf urdfdom-headers ];
+  propagatedBuildInputs = [ orocos-kdl-vendor rcutils urdf urdfdom-headers ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

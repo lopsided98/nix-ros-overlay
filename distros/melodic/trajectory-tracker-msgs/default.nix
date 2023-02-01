@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, nav-msgs, roscpp, roslint, rosunit, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-trajectory-tracker-msgs";
-  version = "0.8.0-r1";
+  version = "0.12.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/melodic/trajectory_tracker_msgs/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "2086e554a50e2b029b0c610edfdbd0d88ce9cb00fb283309acfc501e60b02ac5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "at-wat";
+        repo = "neonavigation_msgs-release";
+        rev = "release/melodic/trajectory_tracker_msgs/0.12.0-1";
+        sha256 = "sha256-CSySzmjxiIBKd3AmpwkHd2xHu5eURVuUnXSwHm95taY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

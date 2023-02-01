@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-raptor-dbw-msgs";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/NewEagleRaptor/raptor-dbw-ros2-release/archive/release/foxy/raptor_dbw_msgs/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "e547e972516b2602a0678d4b7e7f39f02c71867f2c86665020185bd92d9cbde8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "NewEagleRaptor";
+        repo = "raptor-dbw-ros2-release";
+        rev = "release/foxy/raptor_dbw_msgs/1.2.0-1";
+        sha256 = "sha256-gsew4aJwtwTOOXB/2+L/tnLNo0qj5xhbHPzyRNsT4Uc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-auto rosidl-default-generators ];

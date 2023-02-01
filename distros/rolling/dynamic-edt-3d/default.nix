@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-dynamic-edt-3d";
   version = "1.9.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap-release/archive/release/rolling/dynamic_edt_3d/1.9.8-1.tar.gz";
-    name = "1.9.8-1.tar.gz";
-    sha256 = "89c40e04e2168de03a796ba102bb2ba1c11c7588e249c068b9ee377db0c37736";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "octomap-release";
+        rev = "release/rolling/dynamic_edt_3d/1.9.8-1";
+        sha256 = "sha256-522JD7zQBjHhrle/McBU6igMD2aGFVJvyheYkpGEJ3g=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

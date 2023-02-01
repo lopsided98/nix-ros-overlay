@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-warthog-simulator";
   version = "0.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/warthog_simulator-release/archive/release/noetic/warthog_simulator/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "3fde1ac9ee9f62b32da70e40a5afffa77382bb8b2471083f91e69ed9d1566189";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "warthog_simulator-release";
+        rev = "release/noetic/warthog_simulator/0.2.2-1";
+        sha256 = "sha256-EInTf4WSk6cmFaouzRRac4kX4vUhFIXU2r5gvT4iQ+c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

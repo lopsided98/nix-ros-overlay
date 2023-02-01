@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-turtlebot3-panorama";
   version = "1.1.0";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_applications-release/archive/release/melodic/turtlebot3_panorama/1.1.0-0.tar.gz";
-    name = "1.1.0-0.tar.gz";
-    sha256 = "1ea012a9fb7e79c68cb54f5e608739f79f378ab6867bad8d1aeee3d7e5039c3e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "turtlebot3_applications-release";
+        rev = "release/melodic/turtlebot3_panorama/1.1.0-0";
+        sha256 = "sha256-w2cbDSS9R4jMnxbOFPuNfHLGrKkSosQ+6m1e/vzk7Xg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

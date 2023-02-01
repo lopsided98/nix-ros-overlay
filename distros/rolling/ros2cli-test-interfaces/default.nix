@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ros2cli-test-interfaces";
   version = "0.21.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/rolling/ros2cli_test_interfaces/0.21.0-1.tar.gz";
-    name = "0.21.0-1.tar.gz";
-    sha256 = "8fad452f68707e09791314b715a2dc3658d901338ed38193da4e45d083ec2dd7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2cli-release";
+        rev = "release/rolling/ros2cli_test_interfaces/0.21.0-1";
+        sha256 = "sha256-QnfceNOcEYoIcJdajYKzOmJ8de2svPF8laYJ9AeKk/Q=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

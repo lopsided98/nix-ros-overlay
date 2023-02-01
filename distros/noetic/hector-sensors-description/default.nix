@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-hector-sensors-description";
   version = "0.5.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_models-release/archive/release/noetic/hector_sensors_description/0.5.2-1.tar.gz";
-    name = "0.5.2-1.tar.gz";
-    sha256 = "df26c218168a217bee936dc0f3b18bede77d28963cce86a8aadfdaeb0681424d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_models-release";
+        rev = "release/noetic/hector_sensors_description/0.5.2-1";
+        sha256 = "sha256-2t8SsE9+KS6arTqx3g7Rcz25jvAkSSTxPEE3g7ti4/g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

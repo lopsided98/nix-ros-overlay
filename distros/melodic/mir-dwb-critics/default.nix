@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mir-dwb-critics";
   version = "1.0.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_dwb_critics/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "248243c2b1066676650f91074be1912df017c0a3579a0d5db76c672a8f5406c4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mir_robot-release";
+        rev = "release/melodic/mir_dwb_critics/1.0.8-1";
+        sha256 = "sha256-BtdeiXz4DTW087taISI1TUkd62PM/vicgAqK8QxLBco=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

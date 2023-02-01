@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-libpointmatcher";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/nobleo/libpointmatcher-release/archive/release/noetic/libpointmatcher/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "858e42e3cbc55c43c5dae2166c9f40a6577af8fa1b0c1b03336ba8029ad99a78";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "nobleo";
+        repo = "libpointmatcher-release";
+        rev = "release/noetic/libpointmatcher/1.3.1-1";
+        sha256 = "sha256-96czxG0jg3fhdnnpfunDXT5SeulBTS0I2wHxgBhzunA=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

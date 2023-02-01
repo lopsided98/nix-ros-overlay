@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-easy-markers";
   version = "0.2.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/wu-robotics/wu_ros_tools/archive/release/melodic/easy_markers/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "813965652574355bf8c57995dfcd7c70da0f96b78fdf1c75df4e7c51f3454b42";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wu-robotics";
+        repo = "wu_ros_tools";
+        rev = "release/melodic/easy_markers/0.2.6-1";
+        sha256 = "sha256-zg9NVElCKsMvSn6ymWj4DY/8Id+B30ZFqOGDKT8uG7o=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ainstein-radar-rviz-plugins";
   version = "2.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/melodic/ainstein_radar_rviz_plugins/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "e55ca73701363e257bdd186d2d355076015b7e3832ec9b1ac4a49088774b4a8a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "AinsteinAI";
+        repo = "ainstein_radar-release";
+        rev = "release/melodic/ainstein_radar_rviz_plugins/2.0.2-1";
+        sha256 = "sha256-fBQazkhloznCkdQvhFgGq1FvveGVvYUfah0aNcewuDo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

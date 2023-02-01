@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ros-pytest";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/machinekoder/ros_pytest-release/archive/release/noetic/ros_pytest/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "3a2e581bb9e205709f0613e58d93c6b0400f29e2359f058e81d1f18be5e5f643";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "machinekoder";
+        repo = "ros_pytest-release";
+        rev = "release/noetic/ros_pytest/0.2.1-1";
+        sha256 = "sha256-122nS1CRNw5SrY9isa2Wst3BSJUw/Pw27dtmM/ZX/BE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-catkin-pip";
   version = "0.2.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pyros-dev/catkin_pip-release/archive/release/melodic/catkin_pip/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "195b4747147d7d36eea1f1c5398e532289984d6d690dd58e04acf556462deda4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pyros-dev";
+        repo = "catkin_pip-release";
+        rev = "release/melodic/catkin_pip/0.2.3-1";
+        sha256 = "sha256-iVgRZSsaLIm6kSZekQ+DJI4+x4DfJ9p9TayNQ1BZJ28=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

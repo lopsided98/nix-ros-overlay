@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-aruco-detect";
   version = "0.11.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UbiquityRobotics-release/fiducials-release/archive/release/melodic/aruco_detect/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "850fff672ee87b14935c5dc431a7a77ce2e5cf8cf71e7f8dc326d224862a0abe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UbiquityRobotics-release";
+        repo = "fiducials-release";
+        rev = "release/melodic/aruco_detect/0.11.0-1";
+        sha256 = "sha256-J+hYNgtw+PNrJbmHuBJRT+bictsIyCSEHIh38y1Yu+A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-opw-kinematics-plugin";
   version = "0.4.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/JeroenDM/moveit_opw_kinematics_plugin-release/archive/release/noetic/moveit_opw_kinematics_plugin/0.4.0-3.tar.gz";
-    name = "0.4.0-3.tar.gz";
-    sha256 = "4ea47a42e607c52c82470fb1dff8e901368c18071eeb331592803c9322d20d3f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "JeroenDM";
+        repo = "moveit_opw_kinematics_plugin-release";
+        rev = "release/noetic/moveit_opw_kinematics_plugin/0.4.0-3";
+        sha256 = "sha256-oEvrtKS47oJXPycA2LIPRAwiO0+pF/LU/jQ7h+x5Cok=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin eigen-conversions opw-kinematics ];

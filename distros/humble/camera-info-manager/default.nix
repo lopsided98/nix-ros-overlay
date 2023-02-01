@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-camera-info-manager";
   version = "3.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/humble/camera_info_manager/3.1.5-1.tar.gz";
-    name = "3.1.5-1.tar.gz";
-    sha256 = "9b05e22d64c48e0d4362f2a8e8680dc42d7a348aa9a6f980b937e7e2a3fb571c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "image_common-release";
+        rev = "release/humble/camera_info_manager/3.1.5-1";
+        sha256 = "sha256-hDBcARSriRp7p2BNXLypt8dhPu8c5OvsE7hNX1u8WxI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

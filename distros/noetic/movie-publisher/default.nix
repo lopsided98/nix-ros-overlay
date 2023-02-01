@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-movie-publisher";
   version = "1.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/peci1/movie_publisher-release/archive/release/noetic/movie_publisher/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "6edca14980b83ae2e65e9b7e7a630d5a1c342391ada74da7bbc0cf3be35ff51d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "peci1";
+        repo = "movie_publisher-release";
+        rev = "release/noetic/movie_publisher/1.4.0-1";
+        sha256 = "sha256-tSfS7N3J1x/CtxS8uk8NcQxbKjkj17nk14q7hfj5+Fs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

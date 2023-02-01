@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-grpc";
   version = "0.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/CogRobRelease/catkin_grpc-release/archive/release/noetic/grpc/0.0.11-1.tar.gz";
-    name = "0.0.11-1.tar.gz";
-    sha256 = "5afcb6a7099876e45af084052b7aa7383f80bdc407d82fb15da46124a7e39c43";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "CogRobRelease";
+        repo = "catkin_grpc-release";
+        rev = "release/noetic/grpc/0.0.11-1";
+        sha256 = "sha256-h4npK4/Op3K2aEDjjThObTIozwcIh9htvPBS+IsrRWM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ autoconf catkin git libtool zlib ];

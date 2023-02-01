@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-joy-linux";
   version = "3.1.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/humble/joy_linux/3.1.0-3.tar.gz";
-    name = "3.1.0-3.tar.gz";
-    sha256 = "db3542c66747f1d33c2d9aedea8b1008f875c056a6a51ca2528559b20b1af6dc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "joystick_drivers-release";
+        rev = "release/humble/joy_linux/3.1.0-3";
+        sha256 = "sha256-Ud7B/decJ0vqf/8LrcWatgTku5IS5sZ34MW8VWp23vE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

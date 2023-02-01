@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-exotica-ompl-solver";
   version = "6.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_ompl_solver/6.2.0-1.tar.gz";
-    name = "6.2.0-1.tar.gz";
-    sha256 = "38782932d1b6e6107f2bbafbd10c63357e23a9e771b1a208eb6372130c2aa67c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipab-slmc";
+        repo = "exotica-release";
+        rev = "release/melodic/exotica_ompl_solver/6.2.0-1";
+        sha256 = "sha256-BrN3uQZeM3poSMIHnyO8y4jytCNS+IedYq6umGmSV2o=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

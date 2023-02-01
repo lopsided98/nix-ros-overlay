@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-urdf";
   version = "1.13.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/urdf-release/archive/release/melodic/urdf/1.13.2-1.tar.gz";
-    name = "1.13.2-1.tar.gz";
-    sha256 = "476b4598a2a6d84da0a60fe3436d7f0b7fc8270c977b70eca24201f37529dbc3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "urdf-release";
+        rev = "release/melodic/urdf/1.13.2-1";
+        sha256 = "sha256-IWaVoJMDw+51StqYwMxLLFa+l1d/X1CbQoHPi5crAso=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules urdf-parser-plugin ];

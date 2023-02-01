@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-moveit-opw-kinematics-plugin";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/JeroenDM/moveit_opw_kinematics_plugin-release/archive/release/melodic/moveit_opw_kinematics_plugin/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "be8f4501932be19f3ca9c59fa427b4a40188a1cd7b4e541c598f2ba4e791e786";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "JeroenDM";
+        repo = "moveit_opw_kinematics_plugin-release";
+        rev = "release/melodic/moveit_opw_kinematics_plugin/0.2.1-1";
+        sha256 = "sha256-g4GrjZH+QWCJmZ8epOpjAeMDbH/7Kv+xrej+myzRlBw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin eigen-conversions ];

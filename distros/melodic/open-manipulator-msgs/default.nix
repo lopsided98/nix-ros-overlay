@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-open-manipulator-msgs";
   version = "1.0.0";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator_msgs-release/archive/release/melodic/open_manipulator_msgs/1.0.0-0.tar.gz";
-    name = "1.0.0-0.tar.gz";
-    sha256 = "8a499c54924fdc7b81c8315d5e720e3b2179757fc5ef98e524dfef53ac9bd300";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "open_manipulator_msgs-release";
+        rev = "release/melodic/open_manipulator_msgs/1.0.0-0";
+        sha256 = "sha256-dT86EXn3FDKlK3Mi/fSFhwYzgprY4eCU8Dy2XNqN3KM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

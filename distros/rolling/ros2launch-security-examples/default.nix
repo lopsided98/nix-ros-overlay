@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ros2launch-security-examples";
   version = "1.0.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2launch_security-release/archive/release/rolling/ros2launch_security_examples/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "5ae3b3f59596f3594ca745b45e97626cbb562aeabe31119f367d944bd9b32ebf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2launch_security-release";
+        rev = "release/rolling/ros2launch_security_examples/1.0.0-2";
+        sha256 = "sha256-NWaQ/UIv5e//ahvk4u8zBHDsw6po6o9VLTnHTmXsQR8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

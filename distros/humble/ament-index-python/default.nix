@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-ament-index-python";
   version = "1.4.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/humble/ament_index_python/1.4.0-2.tar.gz";
-    name = "1.4.0-2.tar.gz";
-    sha256 = "90ec6fd306f83cf1955ff016f0c1eb02d81f43697280b87f93f748a748bcb825";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_index-release";
+        rev = "release/humble/ament_index_python/1.4.0-2";
+        sha256 = "sha256-Eluo22bK4KuPUMkCjalwbcwiyKqjEnAixb1Roz2Rb1I=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fetch-drivers";
   version = "0.8.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_robots-release/archive/release/melodic/fetch_drivers/0.8.9-1.tar.gz";
-    name = "0.8.9-1.tar.gz";
-    sha256 = "21476cf4eb010a51179a0700644ac8a15f5aaa5ccb4d704e9d1d7ab102048f80";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "fetch_robots-release";
+        rev = "release/melodic/fetch_drivers/0.8.9-1";
+        sha256 = "sha256-uUCcW6VzK70otO4WyCBAn29Szx+ytnoTclwZGVpM3Qg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin mk rospack ];

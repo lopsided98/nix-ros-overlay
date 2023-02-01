@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-end-effector";
   version = "1.0.6-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ADVRHumanoids/ROSEndEffector-release/archive/release/noetic/end_effector/1.0.6-2.tar.gz";
-    name = "1.0.6-2.tar.gz";
-    sha256 = "c6716d446907ced796b669ebde7b12103cb5c532035c329b40d36f611d9c5edc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ADVRHumanoids";
+        repo = "ROSEndEffector-release";
+        rev = "release/noetic/end_effector/1.0.6-2";
+        sha256 = "sha256-qNG84bFQrv2nJhG77gjKzIBSk4te/eT9PabjE6tA06c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

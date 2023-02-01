@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-turtle-tf2-cpp";
   version = "0.3.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/humble/turtle_tf2_cpp/0.3.6-1.tar.gz";
-    name = "0.3.6-1.tar.gz";
-    sha256 = "7e6780b17f099f7fdc2169506b4474df31949054e73fc8bc3f70604e81452969";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "geometry_tutorials-release";
+        rev = "release/humble/turtle_tf2_cpp/0.3.6-1";
+        sha256 = "sha256-/+vZZp6tpMuKd5xAZHma9sMN5Q0aWVwbu5ZnKW6t2nQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

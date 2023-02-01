@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-eus-qp";
   version = "0.1.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/eus_qp/0.1.16-1.tar.gz";
-    name = "0.1.16-1.tar.gz";
-    sha256 = "8a78331785cdceaceeff24a7f2eadff219ec60dd87f2c5ccadac5965e2114a69";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_control-release";
+        rev = "release/noetic/eus_qp/0.1.16-1";
+        sha256 = "sha256-rkmWhz1+yp5vrD7NOzfB5KmIRD1HIv7MG2ZmKR6N3y8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules rostest ];

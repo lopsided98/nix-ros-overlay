@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosbash-params";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/peci1/rosbash_params-release/archive/release/noetic/rosbash_params/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "6f6a607b2eb9988b213149b16ded7ed2832c834e9ba8541ebd498d0b1a996397";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "peci1";
+        repo = "rosbash_params-release";
+        rev = "release/noetic/rosbash_params/1.1.0-1";
+        sha256 = "sha256-UceAkhRQ6CagMVDQ5BbZWHKSEdneE2VI3B5FnnmEkLM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

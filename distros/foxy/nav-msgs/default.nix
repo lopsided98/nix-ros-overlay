@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-nav-msgs";
   version = "2.0.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/foxy/nav_msgs/2.0.5-1.tar.gz";
-    name = "2.0.5-1.tar.gz";
-    sha256 = "3370ca9aeb5d136d71f1a5055714df946985a728fd51b2fe2bfc37035b11b526";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "common_interfaces-release";
+        rev = "release/foxy/nav_msgs/2.0.5-1";
+        sha256 = "sha256-wY7FHObTiuKyqfjMoSnQRagRN1cEsS7YhZ5ibUyfd4Y=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

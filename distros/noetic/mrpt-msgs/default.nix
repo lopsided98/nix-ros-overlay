@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mrpt-msgs";
   version = "0.4.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_msgs-release/archive/release/noetic/mrpt_msgs/0.4.4-1.tar.gz";
-    name = "0.4.4-1.tar.gz";
-    sha256 = "28ed29f25f7680e838c0d3066e6e3a3ed0c673e1efa590eba163e380299a125b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mrpt-ros-pkg-release";
+        repo = "mrpt_msgs-release";
+        rev = "release/noetic/mrpt_msgs/0.4.4-1";
+        sha256 = "sha256-FSw//54G9jpJoibViHkmDUI+/IqcjDC67ZxH4JOk4qk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ros-environment ];

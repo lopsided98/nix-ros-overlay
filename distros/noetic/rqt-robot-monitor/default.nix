@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-robot-monitor";
   version = "0.5.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_robot_monitor-release/archive/release/noetic/rqt_robot_monitor/0.5.14-1.tar.gz";
-    name = "0.5.14-1.tar.gz";
-    sha256 = "2b6ea56c5b17fae4955f5ea8061adc9991715efe202a8dcb347442aad4bab6b8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_robot_monitor-release";
+        rev = "release/noetic/rqt_robot_monitor/0.5.14-1";
+        sha256 = "sha256-o8UcpdECMCBChTb200sHsZlrF6SZPkZOZPyqcllFVq4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools ];

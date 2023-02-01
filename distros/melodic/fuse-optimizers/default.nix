@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fuse-optimizers";
   version = "0.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/locusrobotics/fuse-release/archive/release/melodic/fuse_optimizers/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "19db2d9a282a84189f9ad5ce940c4079f5d6bda5a93864fb128a4f5a41caa459";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "locusrobotics";
+        repo = "fuse-release";
+        rev = "release/melodic/fuse_optimizers/0.4.2-1";
+        sha256 = "sha256-sfdo5rzV2QTNUShw+q/DusxeUu0W+1AEHGZtEhPuFuU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

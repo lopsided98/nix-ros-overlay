@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-console-bridge-vendor";
   version = "1.5.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/console_bridge_vendor-release/archive/release/rolling/console_bridge_vendor/1.5.2-1.tar.gz";
-    name = "1.5.2-1.tar.gz";
-    sha256 = "b81cb4d51d65a0d8ca1c1735c8a09415771f90e83e06377706c24e7bc6e2a845";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "console_bridge_vendor-release";
+        rev = "release/rolling/console_bridge_vendor/1.5.2-1";
+        sha256 = "sha256-LB/wxdFo1K8D5mSehtYEscBnx/KhfoJNy6u1LfQ0JhY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

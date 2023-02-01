@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rclpy-message-converter";
   version = "2.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rospy_message_converter-release/archive/release/foxy/rclpy_message_converter/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "80bbc050357bf214780b8b72756aa6f50121cb2d4a73f04155de66537c1af3ce";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rospy_message_converter-release";
+        rev = "release/foxy/rclpy_message_converter/2.0.1-1";
+        sha256 = "sha256-4HeOI1VnkkBwlxa0SlJMAGbmV5bMUIvxslRecDwZm04=";
+      };
 
   buildType = "ament_python";
   buildInputs = [ builtin-interfaces rosidl-default-generators ];

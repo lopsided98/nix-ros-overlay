@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-roslang";
   version = "1.14.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/roslang/1.14.9-1.tar.gz";
-    name = "1.14.9-1.tar.gz";
-    sha256 = "320b5d85852833da8a3aa3bcd48125aed8e9354cb4785ce760084a0cab84b48f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros-release";
+        rev = "release/melodic/roslang/1.14.9-1";
+        sha256 = "sha256-7JKOxQBI3Cz7rw4tWkzPzrn0U/fpmYnlV5aD59aSxRc=";
+      };
 
   buildType = "catkin";
   propagatedBuildInputs = [ catkin genmsg ];

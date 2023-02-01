@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-point-cloud-msg-wrapper";
   version = "1.0.7-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_msg_wrapper-release/archive/release/humble/point_cloud_msg_wrapper/1.0.7-3.tar.gz";
-    name = "1.0.7-3.tar.gz";
-    sha256 = "71bb7c1fb11d01afceb6500137678ed6330d29a43c14db3efd50274f62b5a313";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "point_cloud_msg_wrapper-release";
+        rev = "release/humble/point_cloud_msg_wrapper/1.0.7-3";
+        sha256 = "sha256-LiHXg+Jj7fMDItxqFAz8F5On1mitqVf18p4luIzXtWk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-auto ];

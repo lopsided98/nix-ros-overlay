@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-roscpp";
   version = "1.15.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/roscpp/1.15.15-1.tar.gz";
-    name = "1.15.15-1.tar.gz";
-    sha256 = "901468fbfe45da9a8c1cb139e3871ac96c5dd9077682cabe7acc31b8bf367b5c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm-release";
+        rev = "release/noetic/roscpp/1.15.15-1";
+        sha256 = "sha256-5UR8Qkfs5AlnBhEJVfEsSI0GJfLub7baH8cOZRR0mZM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation pkg-config roslang ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rviz2";
   version = "8.2.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/foxy/rviz2/8.2.7-1.tar.gz";
-    name = "8.2.7-1.tar.gz";
-    sha256 = "acdbb592645381fb14333971fca022eb352a9d6d71b918971e8afa34d1ea3a59";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rviz-release";
+        rev = "release/foxy/rviz2/8.2.7-1";
+        sha256 = "sha256-fLJGV3nyg/UpcGjIoj9bgOkV2SFeY1GYbVXSTYkm3J0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake qt5.qtbase ];

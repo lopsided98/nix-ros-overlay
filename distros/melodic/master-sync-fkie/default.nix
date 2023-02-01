@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-master-sync-fkie";
   version = "0.8.12";
 
-  src = fetchurl {
-    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/melodic/master_sync_fkie/0.8.12-0.tar.gz";
-    name = "0.8.12-0.tar.gz";
-    sha256 = "14b81d9024f42cd1ad4eb7e35af79cdddc3682c38bbc867fea109156368b4814";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fkie-release";
+        repo = "multimaster_fkie-release";
+        rev = "release/melodic/master_sync_fkie/0.8.12-0";
+        sha256 = "sha256-BBoxMgsoejYitsKn90XvVswe32GFZak+wujwY7Lapc0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

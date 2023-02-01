@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-dataspeed-can-msg-filters";
   version = "2.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/foxy/dataspeed_can_msg_filters/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "82eea65813f5f8033f7d1a42c88e43610e05f080622300a1427987fbd9ae5a61";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dataspeed_can-release";
+        rev = "release/foxy/dataspeed_can_msg_filters/2.0.1-1";
+        sha256 = "sha256-dC1Ryzzvx7M9aQYxxBfXB4xFCa9nQHy8dO/Us9z+94c=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

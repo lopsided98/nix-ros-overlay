@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dwb-plugins";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/dwb_plugins/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "e9326875f9630b6e0b1cdc3a465656c025bace6c19f912f48f5d9b014e378831";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/melodic/dwb_plugins/0.3.0-1";
+        sha256 = "sha256-g+lpZ8y1bUhBsuLA62dzlb/nr+ejIQyTg3wGkMn7B9c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rospatlite";
   version = "2.1.21-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/rospatlite/2.1.21-2.tar.gz";
-    name = "2.1.21-2.tar.gz";
-    sha256 = "f52f6aa6146511a5551db4f2b648bcd0ebe7908093dfb2a7a431297f380400e0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_3rdparty-release";
+        rev = "release/noetic/rospatlite/2.1.21-2";
+        sha256 = "sha256-lJ0Bc/iuWngq61cHws7vKIDwQeNfCHy9QkeuR+M0j6c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

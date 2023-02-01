@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-leo-example-follow-ar-tag";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_examples-release/archive/release/noetic/leo_example_follow_ar_tag/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "acda595805f0ccc2af37bdaa22b3b587ca82ced2242b7fd93587d8587583f0f1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fictionlab-gbp";
+        repo = "leo_examples-release";
+        rev = "release/noetic/leo_example_follow_ar_tag/0.1.1-1";
+        sha256 = "sha256-kmjPTufeVHd1ZKPq0vObOwNjFXi+xvHhygqjM1MOdWQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

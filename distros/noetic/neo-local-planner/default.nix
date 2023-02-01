@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-neo-local-planner";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/neobotix/neo_local_planner-release/archive/release/noetic/neo_local_planner/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "40b93b3cde461c30dd909faa95aca65cf4619191b3e4178cc9c3fa65bb4891ca";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "neobotix";
+        repo = "neo_local_planner-release";
+        rev = "release/noetic/neo_local_planner/1.0.1-1";
+        sha256 = "sha256-UL6cUuL1JgJQRqmpHVdhX6g2eqAI13KHE3Si8nxF/Y0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jsk-planning";
   version = "0.1.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_planning-release/archive/release/melodic/jsk_planning/0.1.12-1.tar.gz";
-    name = "0.1.12-1.tar.gz";
-    sha256 = "8182d06f0742a80fa8b31184bfd8f1fd385b69d660e0716a0091e5d4b248137d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_planning-release";
+        rev = "release/melodic/jsk_planning/0.1.12-1";
+        sha256 = "sha256-1Zq7qaiJuRy2s1mQsHTp8rz2Fzja4edJlb6M7lHcyhc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

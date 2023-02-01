@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, console-bridge, performance-test-fixture }:
 buildRosPackage {
   pname = "ros-humble-console-bridge-vendor";
-  version = "1.4.0-r2";
+  version = "1.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/console_bridge_vendor-release/archive/release/humble/console_bridge_vendor/1.4.0-2.tar.gz";
-    name = "1.4.0-2.tar.gz";
-    sha256 = "1fffbc5c06fb893a4eabd0e2b59fb049e5b97c6d1c33f8415b97b28271151863";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "console_bridge_vendor-release";
+        rev = "release/humble/console_bridge_vendor/1.4.1-1";
+        sha256 = "sha256-lgsqEU/ZyaZfte3s7Mz+RKYl2uUUl4DmbGxEih952r8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

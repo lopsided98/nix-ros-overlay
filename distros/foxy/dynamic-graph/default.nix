@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-dynamic-graph";
   version = "4.4.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/stack-of-tasks/dynamic-graph-ros-release/archive/release/foxy/dynamic-graph/4.4.3-2.tar.gz";
-    name = "4.4.3-2.tar.gz";
-    sha256 = "062cdbb24d7111dac5a149ce85438967a5019f9c478cdda33da9e862de89670c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "stack-of-tasks";
+        repo = "dynamic-graph-ros-release";
+        rev = "release/foxy/dynamic-graph/4.4.3-2";
+        sha256 = "sha256-ZjYVYmbMDjUMw0P7+KODSEEm94FSWSkq9bG/x6JNFYY=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen git ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ros-type-introspection";
   version = "2.1.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/facontidavide/ros_type_introspection-release/archive/release/melodic/ros_type_introspection/2.1.0-2.tar.gz";
-    name = "2.1.0-2.tar.gz";
-    sha256 = "81cd82a8df36832ba0f7d8d385a4b32858bdeb120a93d76991cfcdedd4f592e0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "facontidavide";
+        repo = "ros_type_introspection-release";
+        rev = "release/melodic/ros_type_introspection/2.1.0-2";
+        sha256 = "sha256-sZBFF00eC6WRh+jtaRw+Ci9LYlu6IIq9k8FnAcylIa8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jderobot-drones";
   version = "1.3.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/jderobot_drones/1.3.10-1.tar.gz";
-    name = "1.3.10-1.tar.gz";
-    sha256 = "cdc5ddad637cbac4972c70e3bfbc209705abf6568259ee94688c82414264aaf8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "JdeRobot";
+        repo = "drones-release";
+        rev = "release/melodic/jderobot_drones/1.3.10-1";
+        sha256 = "sha256-iUwBwy36sprBXZo2GA+RhRJwySqGVxqm34bZEZ2AniE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

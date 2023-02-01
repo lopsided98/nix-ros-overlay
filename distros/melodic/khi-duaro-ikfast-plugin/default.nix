@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-khi-duaro-ikfast-plugin";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/melodic/khi_duaro_ikfast_plugin/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "3eda3984c7adabaa70f7d83c4d63a58e147049ef64d09d61569e99d143e13d2e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Kawasaki-Robotics";
+        repo = "khi_robot-release";
+        rev = "release/melodic/khi_duaro_ikfast_plugin/1.2.0-1";
+        sha256 = "sha256-R5jeevyIsFuxUmmnNTDS2FwkiCw4tMQkqCxdFZpWPFY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

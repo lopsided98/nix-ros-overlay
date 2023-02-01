@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dataspeed-ulc-msgs";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release/archive/release/noetic/dataspeed_ulc_msgs/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "b71cf208e820acf4b90a516d69e662fb6b1a8b6423f1db816bd40c46be1196df";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dataspeed_ulc_ros-release";
+        rev = "release/noetic/dataspeed_ulc_msgs/0.1.0-1";
+        sha256 = "sha256-8+SpCh3N5uZOC687Ac50FnELyyOpzTa+2tnL8TyQf8A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

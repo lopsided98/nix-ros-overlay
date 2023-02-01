@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-tf2-msgs";
   version = "0.7.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_msgs/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "eee7164069d9f5950cc1196f5dfc26c455cdccbe84980a1a43fbccb4b383f723";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry2-release";
+        rev = "release/noetic/tf2_msgs/0.7.6-1";
+        sha256 = "sha256-vM04W6xWq802JCrG1Aiiah+ufLrL7R54nzwV2BDbzi4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

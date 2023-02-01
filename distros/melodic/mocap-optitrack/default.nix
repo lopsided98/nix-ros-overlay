@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mocap-optitrack";
   version = "0.1.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/mocap_optitrack-release/archive/release/melodic/mocap_optitrack/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "7b2f61f2be3055952bd3d33826704a4fe6cd3e34188a98926d23fd91c23ecf07";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "mocap_optitrack-release";
+        rev = "release/melodic/mocap_optitrack/0.1.4-1";
+        sha256 = "sha256-IsRKzaxlPl8k1LmQ6TLQ742SWX1J/ZpiUrWWFxwYSQ0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ff";
   version = "2.1.24-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/ff/2.1.24-2.tar.gz";
-    name = "2.1.24-2.tar.gz";
-    sha256 = "13dfc86b59d80bef612a14e95788d35e583bd0f6caec9a61ec443ca57ef03fc4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_3rdparty-release";
+        rev = "release/melodic/ff/2.1.24-2";
+        sha256 = "sha256-s2zHWYRKqy8BetmOOkbRhMgL2CFUQT7+XEUtBzeqKb8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ bison cacert catkin flex mk openssl rosbash rosbuild roslib rospack unzip ];

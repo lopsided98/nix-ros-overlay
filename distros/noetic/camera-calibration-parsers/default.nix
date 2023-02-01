@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-camera-calibration-parsers";
   version = "1.12.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/image_common-release/archive/release/noetic/camera_calibration_parsers/1.12.0-1.tar.gz";
-    name = "1.12.0-1.tar.gz";
-    sha256 = "9a61cdd6c7c363a7edb9e58315680826f1fccd4ed43418b4a3ff02c5fad30503";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "image_common-release";
+        rev = "release/noetic/camera_calibration_parsers/1.12.0-1";
+        sha256 = "sha256-DPbEY0vEuZJ98NqlibpJh7fy81kdRbeuYw7Lp1ofRso=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pkg-config rosconsole ];

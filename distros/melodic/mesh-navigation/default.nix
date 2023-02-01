@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mesh-navigation";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/melodic/mesh_navigation/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "6c561702fb3a4b4209818b4c2511463461925bd42acfb31f125c0fbca07a57ba";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mesh_navigation-release";
+        rev = "release/melodic/mesh_navigation/1.0.1-1";
+        sha256 = "sha256-iqJC/Re6269IJFptqE3UVfIoCy89JawCt6u0MnVqy7A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

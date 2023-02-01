@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-message-runtime";
   version = "0.4.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/message_runtime-release/archive/release/noetic/message_runtime/0.4.13-1.tar.gz";
-    name = "0.4.13-1.tar.gz";
-    sha256 = "ed3ea8f62850d371e9f44aa764896b429b4016d3b278a760b9214bfb9d57dc35";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "message_runtime-release";
+        rev = "release/noetic/message_runtime/0.4.13-1";
+        sha256 = "sha256-jmepqaIACOIFGe4WQSG9um733v9hB6okBr4zfxcpQZI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

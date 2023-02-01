@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pointgrey-camera-driver";
   version = "0.14.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/melodic/pointgrey_camera_driver/0.14.2-1.tar.gz";
-    name = "0.14.2-1.tar.gz";
-    sha256 = "8430fc5a117b73fad6f2bf228d3d892879b3c1cb0b1f731ee755b116c07d09d5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "pointgrey_camera_driver-release";
+        rev = "release/melodic/pointgrey_camera_driver/0.14.2-1";
+        sha256 = "sha256-oHEsmyCGWDZL0XJAxk5uVmN3jI/gp+4ZbHswoPWbsHE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin curl dpkg ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-wifi-ddwrt";
   version = "0.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/wifi_ddwrt-release/archive/release/noetic/wifi_ddwrt/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "067188231f50e4d113d92c4993b57981f8b065e914d3f3bd44da8bcd976c4ef6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "wifi_ddwrt-release";
+        rev = "release/noetic/wifi_ddwrt/0.2.2-1";
+        sha256 = "sha256-1N3MARRADUBUnj9lkJoMhxLMbc/qXOH5TbNni9c3mFk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rt-manipulators-examples";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rt-net-gbp/rt_manipulators_cpp-release/archive/release/humble/rt_manipulators_examples/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "20c93e6ae62c7089a508a37243b60017ff27c403f1dc1791499b81d6a2aaa3af";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rt-net-gbp";
+        repo = "rt_manipulators_cpp-release";
+        rev = "release/humble/rt_manipulators_examples/1.0.0-1";
+        sha256 = "sha256-dHVhmshZaD7z/hfD5tLkvXw6mehXEQSlivgKwLZ4YZM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

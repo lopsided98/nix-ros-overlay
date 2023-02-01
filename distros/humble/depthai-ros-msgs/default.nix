@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rclcpp, rosidl-default-generators, sensor-msgs, std-msgs, vision-msgs }:
 buildRosPackage {
   pname = "ros-humble-depthai-ros-msgs";
-  version = "2.5.3-r1";
+  version = "2.6.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/humble/depthai_ros_msgs/2.5.3-1.tar.gz";
-    name = "2.5.3-1.tar.gz";
-    sha256 = "34ac0f32360dd9d1e135c77bca00e6f4925dad9debf71dc474968eb371df3803";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "luxonis";
+        repo = "depthai-ros-release";
+        rev = "release/humble/depthai_ros_msgs/2.6.1-1";
+        sha256 = "sha256-FziK5SS3pHD8o+q2eO9xze1NDQM+JqojNLYftv/deOM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

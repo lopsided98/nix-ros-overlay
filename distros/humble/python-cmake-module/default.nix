@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-python-cmake-module";
   version = "0.10.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/python_cmake_module-release/archive/release/humble/python_cmake_module/0.10.0-2.tar.gz";
-    name = "0.10.0-2.tar.gz";
-    sha256 = "fdd5599d222a9ec0a6fa6c4e71e8bce394acf2e0b965bc97fec2c11fc1facc85";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "python_cmake_module-release";
+        rev = "release/humble/python_cmake_module/0.10.0-2";
+        sha256 = "sha256-q4W1DWKOd7QWWbr0OQrkiC+TBZptN74ufvEGNY/qtN8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

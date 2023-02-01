@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-sim-controller";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/moveit_sim_controller-release/archive/release/noetic/moveit_sim_controller/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "e14d41295815c0152a42a74bddf9c18e49b5d89a361de3555f50ba5459e9eed9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PickNikRobotics";
+        repo = "moveit_sim_controller-release";
+        rev = "release/noetic/moveit_sim_controller/0.3.0-1";
+        sha256 = "sha256-sQUHt7VDNG+g8QVKrjRA11/vvomM7IvNCHu3xxUGOuI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

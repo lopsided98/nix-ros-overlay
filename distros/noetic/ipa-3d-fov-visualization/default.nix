@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ipa-3d-fov-visualization";
   version = "0.6.19-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/noetic/ipa_3d_fov_visualization/0.6.19-1.tar.gz";
-    name = "0.6.19-1.tar.gz";
-    sha256 = "e4baf608248141a7a93ec5f72b1316a6e2a37ab884126be6754b1c425c060136";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_perception_common-release";
+        rev = "release/noetic/ipa_3d_fov_visualization/0.6.19-1";
+        sha256 = "sha256-eA7qNPdeLPQ+4DlsfiJqDMztlpyM0SwglBmTiTU2sCw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

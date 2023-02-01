@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-psen-scan-v2";
   version = "0.20.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/psen_scan_v2-ros2-release/archive/release/foxy/psen_scan_v2/0.20.0-1.tar.gz";
-    name = "0.20.0-1.tar.gz";
-    sha256 = "1ef11d8b0abcbfdde06f130e65f3b25edd253b1f4b8c6621aab7a2330882a95b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "psen_scan_v2-ros2-release";
+        rev = "release/foxy/psen_scan_v2/0.20.0-1";
+        sha256 = "sha256-P38ofVB478q7cBJPA6jWBGY+7s6ce1MlQIj7Zaat17I=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-gazebo-video-monitor-utils";
   version = "0.7.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/nlamprian/gazebo_video_monitors-release/archive/release/noetic/gazebo_video_monitor_utils/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "6bde91c72bbd0a92a53a00ca2108ea313523e78789c0b989e35a1709dfbcf604";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "nlamprian";
+        repo = "gazebo_video_monitors-release";
+        rev = "release/noetic/gazebo_video_monitor_utils/0.7.0-1";
+        sha256 = "sha256-J9W2dP1gGkvTYbmGm4EpQGVjggSKfZL/ove1tBiPWt4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

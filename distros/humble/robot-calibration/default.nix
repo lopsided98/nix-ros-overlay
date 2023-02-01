@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-robot-calibration";
   version = "0.8.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/robot_calibration-release/archive/release/humble/robot_calibration/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "61615283317eda03d7dd8cb7955576b5ff1904f58617c476c82610acfa70822d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "robot_calibration-release";
+        rev = "release/humble/robot_calibration/0.8.0-1";
+        sha256 = "sha256-VOm9ljE353W1G3t2bZ1BzjYsZi0oM0ln7GnGjKtwT1M=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake boost eigen ];

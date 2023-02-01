@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-moveit-msgs";
   version = "2.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/moveit_msgs-release/archive/release/foxy/moveit_msgs/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "507d19e081f64a7f4dcae9a50663f67c424e5884e4a3a024f284e7ffb6b9fc80";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "moveit_msgs-release";
+        rev = "release/foxy/moveit_msgs/2.1.0-1";
+        sha256 = "sha256-LE2vjdXycX3iBDuQhEFb2Mm/g/a/s1qOg+3K6EUppmA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

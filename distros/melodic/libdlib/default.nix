@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-libdlib";
   version = "0.6.17-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/libdlib/0.6.17-1.tar.gz";
-    name = "0.6.17-1.tar.gz";
-    sha256 = "3c2cecdfae9dd0e4ae09e63cfcd50964d29f2949591f2f9f58e9fe6bbe3049e2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_extern-release";
+        rev = "release/melodic/libdlib/0.6.17-1";
+        sha256 = "sha256-a0CIIa2/NUHi6Fxm0FQfi3V7GMkaK1Quo2VUCpXfFwc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

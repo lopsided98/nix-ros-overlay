@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-octomap-msgs";
   version = "0.3.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap_msgs-release/archive/release/noetic/octomap_msgs/0.3.5-1.tar.gz";
-    name = "0.3.5-1.tar.gz";
-    sha256 = "3547dfabcaef35b1f13dc0094abbd6dde8e390387440786ebe13f0a493caa930";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "octomap_msgs-release";
+        rev = "release/noetic/octomap_msgs/0.3.5-1";
+        sha256 = "sha256-XBb//PZ07P6FEL1E8wNjH94EWn/NQMoxkJyppXazT7Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

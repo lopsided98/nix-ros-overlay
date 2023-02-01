@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-julius";
   version = "2.1.21-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/julius/2.1.21-2.tar.gz";
-    name = "2.1.21-2.tar.gz";
-    sha256 = "014823789ce21da94f4a4338eb1a967c378ce71107a0bf578befe17b79584387";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_3rdparty-release";
+        rev = "release/noetic/julius/2.1.21-2";
+        sha256 = "sha256-DoeIPtQf3KXyx/DlW13I8UDg6ipLHcVYC2tYHl8UWWE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin mk roslib rospack ];

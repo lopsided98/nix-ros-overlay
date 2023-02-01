@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-baldor";
   version = "0.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/crigroup/baldor-release/archive/release/noetic/baldor/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "8972681a0bed3dd77a9ec679b4d7b22a957ab14eb9e62e1acbe29a343b8ed35d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "crigroup";
+        repo = "baldor-release";
+        rev = "release/noetic/baldor/0.1.3-1";
+        sha256 = "sha256-w0bigdJyTMcuTczFOKblQIlTzRB8UMg/XRZcQlV1Gmo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mbf-simple-nav";
   version = "0.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/noetic/mbf_simple_nav/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "7c6fed059c024b49aa57d66b5c0568bfd3058e6d94f5a16fd48cdcc93c1f046f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "move_base_flex-release";
+        rev = "release/noetic/mbf_simple_nav/0.4.0-1";
+        sha256 = "sha256-lkt7Z5n5X3msZDshAhOQdAcM234uCHTV/CVb7gcmphI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

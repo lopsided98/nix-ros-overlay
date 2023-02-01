@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-sot-core";
   version = "4.11.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/stack-of-tasks/sot-core-ros-release/archive/release/melodic/sot-core/4.11.8-1.tar.gz";
-    name = "4.11.8-1.tar.gz";
-    sha256 = "72bcd76b77f5ddb4dba9aabf97967f637e0055b9f9e73e3dfe586727ecc53383";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "stack-of-tasks";
+        repo = "sot-core-ros-release";
+        rev = "release/melodic/sot-core/4.11.8-1";
+        sha256 = "sha256-RoSn5VvD331uV4bz3XkozgcfkIBtLhrzwvvCueyL/Fo=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen ];

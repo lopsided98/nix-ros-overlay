@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tts";
   version = "1.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/aws-gbp/tts-release/archive/release/melodic/tts/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "ff9513ecc2e040bc38e882badee1407e351c9c1abb6cd8c75ec1ac81dcfe5cd1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "aws-gbp";
+        repo = "tts-release";
+        rev = "release/melodic/tts/1.0.2-1";
+        sha256 = "sha256-oQY/oPRXNEc+n26XiKt9skrskbBFj6kpQrtsm1M6Q/Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation rostest rosunit ];

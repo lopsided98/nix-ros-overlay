@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-phidget-em-state";
   version = "0.7.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_phidget_em_state/0.7.14-1.tar.gz";
-    name = "0.7.14-1.tar.gz";
-    sha256 = "7d9e3689ea439dffdfd0131286d75baf6c19d70d7e627eca986873ae84b9f975";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/noetic/cob_phidget_em_state/0.7.14-1";
+        sha256 = "sha256-emDLRsItKLKFdv9xyFRtKaUmz5/IvuSld9ykG9PqGNQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

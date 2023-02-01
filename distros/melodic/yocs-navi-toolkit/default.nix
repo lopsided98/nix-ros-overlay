@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-yocs-navi-toolkit";
   version = "0.8.2";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/yujin_ocs-release/archive/release/melodic/yocs_navi_toolkit/0.8.2-0.tar.gz";
-    name = "0.8.2-0.tar.gz";
-    sha256 = "fbf635ac9b081ac52ced067b1d5b6ffdb7c17a320ba7d229e92d53538a44ac5f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "yujin_ocs-release";
+        rev = "release/melodic/yocs_navi_toolkit/0.8.2-0";
+        sha256 = "sha256-f+kkI0Ox4iSb/M9NkqXQjzn0jOa1KeiP3uwkEI+Dxc0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

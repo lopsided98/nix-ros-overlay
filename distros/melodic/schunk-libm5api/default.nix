@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-schunk-libm5api";
   version = "0.6.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_libm5api/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "b5ff483ea55dee762a82ae1a43b607a331ac9c40b7c88e3c5d8e24552c95052a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "schunk_modular_robotics-release";
+        rev = "release/melodic/schunk_libm5api/0.6.14-1";
+        sha256 = "sha256-eQ+DYSbflkN+8LXihVVjqF9boMNqKhB8p1T69P5R7Do=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

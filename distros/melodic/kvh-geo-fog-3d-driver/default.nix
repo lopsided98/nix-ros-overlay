@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-kvh-geo-fog-3d-driver";
   version = "1.5.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/MITRE/kvh_geo_fog_3d-release/archive/release/melodic/kvh_geo_fog_3d_driver/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "c2556efa67c6dfa7ad60406fc08a3d8a618f1838a25259dd9f32794ee6792ebd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "MITRE";
+        repo = "kvh_geo_fog_3d-release";
+        rev = "release/melodic/kvh_geo_fog_3d_driver/1.5.1-1";
+        sha256 = "sha256-NzHPOtfKvXWFJK+MMYhpqaJb6qCx+61cdVpz66j12mw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

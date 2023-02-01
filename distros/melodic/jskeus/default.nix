@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jskeus";
   version = "1.2.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jskeus-release/archive/release/melodic/jskeus/1.2.5-1.tar.gz";
-    name = "1.2.5-1.tar.gz";
-    sha256 = "09ad2aa44249d07cecf8ebb717ca99194f310e93a836dc4ec4107d2a057e313f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jskeus-release";
+        rev = "release/melodic/jskeus/1.2.5-1";
+        sha256 = "sha256-7ACJxMQgaYXe2vXheCjCqfITRQhGBZUTve9QqgtTj4M=";
+      };
 
   buildType = "cmake";
   buildInputs = [ catkin ];

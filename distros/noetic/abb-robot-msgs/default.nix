@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-abb-robot-msgs";
   version = "0.5.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/abb_robot_driver_interfaces-release/archive/release/noetic/abb_robot_msgs/0.5.2-1.tar.gz";
-    name = "0.5.2-1.tar.gz";
-    sha256 = "e870f1171c052b5f9975e6e6ad87c264d795c77c8f057504361f2330d200d4ac";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "abb_robot_driver_interfaces-release";
+        rev = "release/noetic/abb_robot_msgs/0.5.2-1";
+        sha256 = "sha256-DWW0KNFYO80EHowJZF5XABykmf2ksQ/Z22fvPSSPaGQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

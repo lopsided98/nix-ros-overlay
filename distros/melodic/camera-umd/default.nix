@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-camera-umd";
   version = "0.2.7";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/camera_umd-release/archive/release/melodic/camera_umd/0.2.7-0.tar.gz";
-    name = "0.2.7-0.tar.gz";
-    sha256 = "fb6705f080d0f3add72ec01a70dfb7e3efd9f264c9294a4a2ced40f9415597ee";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "camera_umd-release";
+        rev = "release/melodic/camera_umd/0.2.7-0";
+        sha256 = "sha256-U4PFLyVXtuURGMK6J1rOuBHm67pqkFbzVsEW11d9DHM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rgbd-launch";
   version = "2.2.2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rgbd_launch-release/archive/release/melodic/rgbd_launch/2.2.2-0.tar.gz";
-    name = "2.2.2-0.tar.gz";
-    sha256 = "973d8f054d8b7447e8951b5dc8dc65d860a3ce48431789fee0f582d8d56d7f68";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rgbd_launch-release";
+        rev = "release/melodic/rgbd_launch/2.2.2-0";
+        sha256 = "sha256-bqV2wiSh8gxQysp0d7u40EWt+ei/8YOqZwF1w2evFwE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

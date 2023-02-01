@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosmsg-cpp";
   version = "1.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ctu-vras/rosmsg_cpp-release/archive/release/melodic/rosmsg_cpp/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "0e6da8054fc8e85204a8c0a58a68e516a18d994bfe94ae19748a791586a5d834";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ctu-vras";
+        repo = "rosmsg_cpp-release";
+        rev = "release/melodic/rosmsg_cpp/1.0.2-1";
+        sha256 = "sha256-78DbURdOPEKrEXwGtg/MUxsbNesIKpCn1DjqSh4q8No=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.python ros-environment ];

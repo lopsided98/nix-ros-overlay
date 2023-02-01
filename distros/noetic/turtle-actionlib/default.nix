@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-turtle-actionlib";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/common_tutorials-release/archive/release/noetic/turtle_actionlib/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "80636aed6293e6c3fc13678ebf58bce00b1b8f2f7f067d9252e2e1f227bb4781";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "common_tutorials-release";
+        rev = "release/noetic/turtle_actionlib/0.2.0-1";
+        sha256 = "sha256-6hC8H1Ulk1quLoBloDa1cY87X6j+z4hCwRQkrN8xxjk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

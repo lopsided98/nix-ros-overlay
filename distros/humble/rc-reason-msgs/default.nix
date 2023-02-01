@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rc-reason-msgs";
   version = "0.2.1-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_reason_clients-release/archive/release/humble/rc_reason_msgs/0.2.1-4.tar.gz";
-    name = "0.2.1-4.tar.gz";
-    sha256 = "91bd598780ee3942782184cb2c66061591c3e3db00fa9a8da0e46f78c5cf195b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rc_reason_clients-release";
+        rev = "release/humble/rc_reason_msgs/0.2.1-4";
+        sha256 = "sha256-/5aKBHyw2TFvQb2O/UJaDxIJJ9vbLwTMAz77XMRKEww=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

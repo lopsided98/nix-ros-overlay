@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pcl-msgs";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/pcl_msgs-release/archive/release/noetic/pcl_msgs/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "592fc28263e1d8bf6cd3ebe1d601bc5772c0058c0116f826adda975fb8a3c9cf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "pcl_msgs-release";
+        rev = "release/noetic/pcl_msgs/0.3.0-1";
+        sha256 = "sha256-yizofZG+hOjqubj3y8fxNf5YbEogCXVFhvreSQCD3ts=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

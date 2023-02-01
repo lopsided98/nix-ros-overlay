@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ros-reflexxes";
   version = "0.8.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/KITrobotics/ipr_extern-release/archive/release/melodic/ros_reflexxes/0.8.8-1.tar.gz";
-    name = "0.8.8-1.tar.gz";
-    sha256 = "76626c036fcf97fd86efb214887ddffe715d343b660a6117eddd0f833ef11fda";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "KITrobotics";
+        repo = "ipr_extern-release";
+        rev = "release/melodic/ros_reflexxes/0.8.8-1";
+        sha256 = "sha256-wYms2OhjSbdBrHQwTe3qis9h2Hhuyrj+qZCBKnDO5j0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

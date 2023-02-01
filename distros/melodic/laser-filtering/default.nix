@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-laser-filtering";
   version = "0.0.4";
 
-  src = fetchurl {
-    url = "https://github.com/wu-robotics/laser_filtering_release/archive/release/melodic/laser_filtering/0.0.4-0.tar.gz";
-    name = "0.0.4-0.tar.gz";
-    sha256 = "d5aed79a7f8e17e1ffc7f9e88fa741a3d7d3a6134b822428cb8e0eab2326be62";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wu-robotics";
+        repo = "laser_filtering_release";
+        rev = "release/melodic/laser_filtering/0.0.4-0";
+        sha256 = "sha256-JbElAsvmHdt/aNqsThNNdR2RYuVEoAwwKlnIMR3zTGo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

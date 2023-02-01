@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, hardware-interface, pluginlib, realtime-tools, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-imu-sensor-controller";
-  version = "0.21.0-r1";
+  version = "0.21.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/imu_sensor_controller/0.21.0-1.tar.gz";
-    name = "0.21.0-1.tar.gz";
-    sha256 = "21d541fed9acd9edff448e77232612f5f0e961f8bb0290fbb7c88517f863223b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_controllers-release";
+        rev = "release/noetic/imu_sensor_controller/0.21.1-1";
+        sha256 = "sha256-KU8j70xjlakBd6SqJ9y53QOBLVP2bv2w1tqB5hVHoS0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pluginlib ];

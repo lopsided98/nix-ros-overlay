@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-mrpt-msgs";
   version = "0.4.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_msgs-release/archive/release/humble/mrpt_msgs/0.4.4-1.tar.gz";
-    name = "0.4.4-1.tar.gz";
-    sha256 = "2212ce3dea3407855e05d7c4f1b405abe5a245850796abc01b926d8db4f084d3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "mrpt_msgs-release";
+        rev = "release/humble/mrpt_msgs/0.4.4-1";
+        sha256 = "sha256-FSw//54G9jpJoibViHkmDUI+/IqcjDC67ZxH4JOk4qk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment rosidl-default-generators ];

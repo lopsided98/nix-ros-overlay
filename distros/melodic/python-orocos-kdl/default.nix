@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-python-orocos-kdl";
   version = "1.4.0";
 
-  src = fetchurl {
-    url = "https://github.com/orocos/orocos-kdl-release/archive/release/melodic/python_orocos_kdl/1.4.0-0.tar.gz";
-    name = "1.4.0-0.tar.gz";
-    sha256 = "e2f7f6fafccaf26d88863ac50b826301c14db71f61e4caff757a482e304a62a0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "orocos";
+        repo = "orocos-kdl-release";
+        rev = "release/melodic/python_orocos_kdl/1.4.0-0";
+        sha256 = "sha256-e69GqpbNlxwewDvXFOxVS7bPTuM5vzIrFvfarEXH4bs=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

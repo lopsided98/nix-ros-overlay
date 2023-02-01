@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-nav2-behavior-tree";
   version = "1.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_behavior_tree/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "c2986ed6fa48dbd02dd70ad001e7cd3579a3c068078f1c068a1602a0a8ecea37";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/humble/nav2_behavior_tree/1.1.5-1";
+        sha256 = "sha256-mkZbc80ribWjiUGEmPZbyIV7o8J4bEn55gAPvrX1gqk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake nav2-common ];

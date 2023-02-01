@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rqt-plot";
   version = "1.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/foxy/rqt_plot/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "8a275cdec0aa6e699be6052bea5d877ac1256877c54e2fc61c1329ea50ca3c69";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_plot-release";
+        rev = "release/foxy/rqt_plot/1.1.1-1";
+        sha256 = "sha256-GUdgXDUmLAebny0V5AFQLeQiEIjWrYOpvRFgsz2FIAE=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ python-qt-binding python3Packages.catkin-pkg python3Packages.matplotlib python3Packages.numpy qt-gui-py-common rclpy rqt-gui rqt-gui-py rqt-py-common std-msgs ];

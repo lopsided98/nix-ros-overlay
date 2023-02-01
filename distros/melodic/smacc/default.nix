@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-smacc";
   version = "1.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/robosoft-ai/smacc-release/archive/release/melodic/smacc/1.3.2-1.tar.gz";
-    name = "1.3.2-1.tar.gz";
-    sha256 = "082945c5f579e5fca9e49aabe32b966fa5d8e9b53a0e94b384a8f302d217dcee";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "robosoft-ai";
+        repo = "smacc-release";
+        rev = "release/melodic/smacc/1.3.2-1";
+        sha256 = "sha256-b7vz8ibak9pBXwm67l+t+gBxtGPQps0HHnQQN+5DphY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

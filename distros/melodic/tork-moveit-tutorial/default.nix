@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tork-moveit-tutorial";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/tork_moveit_tutorial-release/archive/release/melodic/tork_moveit_tutorial/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "b559d39011e7c16f709e376dc1892eb9d2bfc489388218ce37d77eadfce596d3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "tork_moveit_tutorial-release";
+        rev = "release/melodic/tork_moveit_tutorial/0.1.1-1";
+        sha256 = "sha256-VuK7H8hRe6l7w5M5eOhuN2OD6P652pEkyrkhQSAJsZs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

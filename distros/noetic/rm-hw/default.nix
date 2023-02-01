@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rm-hw";
   version = "0.1.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_hw/0.1.15-1.tar.gz";
-    name = "0.1.15-1.tar.gz";
-    sha256 = "16717af03af980d47f5e6be6b72ba1344f5f02784bb6036612b78c597ce6c46d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rm-controls";
+        repo = "rm_control-release";
+        rev = "release/noetic/rm_hw/0.1.15-1";
+        sha256 = "sha256-Bnpd1F3/KeL0uWUjCL9v/f5t2Md4Y9l6KtzJX4vGmMA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

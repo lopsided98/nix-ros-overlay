@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-async-web-server-cpp";
   version = "2.0.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/async_web_server_cpp-release/archive/release/humble/async_web_server_cpp/2.0.0-3.tar.gz";
-    name = "2.0.0-3.tar.gz";
-    sha256 = "c9f5968c670996bfd9d697b4630791573042044433f5fd9aaef7d8cf280cd60d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "async_web_server_cpp-release";
+        rev = "release/humble/async_web_server_cpp/2.0.0-3";
+        sha256 = "sha256-bz0je03yD60CjR08T++F1rGD5GhfXZJWAbL6L5rINbo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ ament-cmake-ros openssl ];

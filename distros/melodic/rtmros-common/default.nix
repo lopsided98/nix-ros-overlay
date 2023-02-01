@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rtmros-common";
   version = "1.4.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/rtmros_common-release/archive/release/melodic/rtmros_common/1.4.3-1.tar.gz";
-    name = "1.4.3-1.tar.gz";
-    sha256 = "0af1052d8862dc6e92b5ea1c656d311b32b1a55ad6127972c6c7be977f324cbc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "rtmros_common-release";
+        rev = "release/melodic/rtmros_common/1.4.3-1";
+        sha256 = "sha256-FlSHKHIw1YYNTrz+0Mz5fyeFV/FtMhrBq4VKudMHX48=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

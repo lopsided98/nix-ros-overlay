@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-force-torque-sensor";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/KITrobotics/force_torque_sensor-release/archive/release/melodic/force_torque_sensor/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "187d9649a0604ed6f13a57c41bd0893c659ac73908c925c4a8eba7ef50837770";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "KITrobotics";
+        repo = "force_torque_sensor-release";
+        rev = "release/melodic/force_torque_sensor/1.0.0-1";
+        sha256 = "sha256-FKNgFAQNtPEb/dMBLvfge0hFGHDOhhly31Cp7n3UAwo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

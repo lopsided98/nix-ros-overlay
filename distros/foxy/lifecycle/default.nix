@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-lifecycle";
   version = "0.9.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/lifecycle/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "6f82541ef6be771e6b2bd7bcd950e803b66f5e8dc78a77fff8104516d45b45bb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/foxy/lifecycle/0.9.4-1";
+        sha256 = "sha256-Wv5Ph7Jdc2lv/qSs2JJIejP9sPNRFQHtAQP8SWRvvqw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

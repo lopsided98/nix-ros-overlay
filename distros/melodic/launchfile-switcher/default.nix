@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-launchfile-switcher";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rb-sapiens/launchfile_switcher-release/archive/release/melodic/launchfile_switcher/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "a34d408afad6fbd78fdf48082e7506b1deb91f05619f4f658319f1a5cb9e9132";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rb-sapiens";
+        repo = "launchfile_switcher-release";
+        rev = "release/melodic/launchfile_switcher/0.1.0-1";
+        sha256 = "sha256-iUNtcQpbBVRplc/Azz6hYtj3t9j7tHf6N5VzEvhf0Qs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

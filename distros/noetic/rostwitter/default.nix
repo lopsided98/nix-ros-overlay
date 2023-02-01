@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rostwitter";
   version = "2.1.21-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/rostwitter/2.1.21-2.tar.gz";
-    name = "2.1.21-2.tar.gz";
-    sha256 = "227fc2677c3b13e7cb28d480ddc7b236f844154fc59d4c34901344566cd51df5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_3rdparty-release";
+        rev = "release/noetic/rostwitter/2.1.21-2";
+        sha256 = "sha256-1VqnqAsa4r8TWoUtXSRyVrruIdYtpEExo3yLfOwWwoY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin git mk ];

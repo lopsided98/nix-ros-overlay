@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rqt";
   version = "1.1.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/foxy/rqt/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "19eb2e617f89eb90e8f1bb10f322c6312198cd14b848c7a1396e7f7d259a44db";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt-release";
+        rev = "release/foxy/rqt/1.1.2-1";
+        sha256 = "sha256-J8El/vniT1uDWylxUepdNdebNWHnpfidcikjKYhyacQ=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ rqt-gui rqt-gui-cpp rqt-gui-py rqt-py-common ];

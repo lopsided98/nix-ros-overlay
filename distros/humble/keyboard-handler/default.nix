@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-keyboard-handler";
   version = "0.0.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/keyboard_handler-release/archive/release/humble/keyboard_handler/0.0.5-1.tar.gz";
-    name = "0.0.5-1.tar.gz";
-    sha256 = "37785dce342482068575a9d9c39960ab1711df0262f2cdd2d8e0b0872f182faf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "keyboard_handler-release";
+        rev = "release/humble/keyboard_handler/0.0.5-1";
+        sha256 = "sha256-YkqOrcqMX8vmBZm2llfopDtrE75rah4TxGZCAiDfWpo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

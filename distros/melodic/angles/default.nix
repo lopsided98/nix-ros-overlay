@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-angles";
   version = "1.9.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry_angles_utils-release/archive/release/melodic/angles/1.9.12-1.tar.gz";
-    name = "1.9.12-1.tar.gz";
-    sha256 = "db7a41b9e761db8f81c749170e1b949366a0a125b50d37617a7bac34058a1a58";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry_angles_utils-release";
+        rev = "release/melodic/angles/1.9.12-1";
+        sha256 = "sha256-0R/ls1VpdHmebP8T7v6F2vnC7G7ZjvFu1oGVYuRM9t0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

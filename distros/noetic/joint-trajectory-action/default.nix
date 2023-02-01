@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-joint-trajectory-action";
   version = "1.10.18-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/noetic/joint_trajectory_action/1.10.18-1.tar.gz";
-    name = "1.10.18-1.tar.gz";
-    sha256 = "420aea15c157faddb4abd0abda90f3b701d3549ca642c6a0435bc06d7db07136";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_controllers-release";
+        rev = "release/noetic/joint_trajectory_action/1.10.18-1";
+        sha256 = "sha256-lT+aP3Vj/QKlHnkH1lSeyO9w3oglb0UpW1InwMD5g0A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

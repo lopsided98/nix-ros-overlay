@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-control-msgs";
   version = "2.5.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/control_msgs-release/archive/release/foxy/control_msgs/2.5.1-1.tar.gz";
-    name = "2.5.1-1.tar.gz";
-    sha256 = "f9f6c29baacb967fb269637f6254dc0e5bbfedb69ffa325dd80f07203b4e0621";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "control_msgs-release";
+        rev = "release/foxy/control_msgs/2.5.1-1";
+        sha256 = "sha256-bbKgnz7+bvAMNGNeVlmKuwsWuPKfZG3qHXNxxFFEhxU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

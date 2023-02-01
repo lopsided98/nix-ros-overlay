@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-urdf-tutorial";
   version = "1.0.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/urdf_tutorial-release/archive/release/humble/urdf_tutorial/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "fe14125ca9decf3111e771750242b1fc0bb7a7b51adff32896bce34a4258b2b2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "urdf_tutorial-release";
+        rev = "release/humble/urdf_tutorial/1.0.0-3";
+        sha256 = "sha256-dhLNYIbCsYEAiIdUFEka1ZMyW/sJOgJ3xw1t8xI4rhw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

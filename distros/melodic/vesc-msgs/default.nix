@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-vesc-msgs";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/f1tenth/vesc-release/archive/release/melodic/vesc_msgs/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "c27b9c954ea768983a2c50138c508b083af5d46d7e8d4907b7c0441037c5eb94";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "f1tenth";
+        repo = "vesc-release";
+        rev = "release/melodic/vesc_msgs/1.1.0-1";
+        sha256 = "sha256-o3gYx9SO+Y0hJa4smg9nHEhcziTw8GNsqbgQ+oNdars=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-sob-layer";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/dorezyuk/sob_layer-release/archive/release/noetic/sob_layer/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "299f36006f303aaadc08ae0c47f92ccb4890517ae524e3290939dd1035cdf68b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "dorezyuk";
+        repo = "sob_layer-release";
+        rev = "release/noetic/sob_layer/0.1.1-1";
+        sha256 = "sha256-RyEeDSKqEXCdoc/gnkGJi/tmtx890I+15K7zxfrpRIU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

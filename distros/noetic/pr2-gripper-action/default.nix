@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pr2-gripper-action";
   version = "1.10.18-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/noetic/pr2_gripper_action/1.10.18-1.tar.gz";
-    name = "1.10.18-1.tar.gz";
-    sha256 = "7f56e298697eca4aa4844f5aba01a82984f78cbdaf180aa269bfad3b08cfad11";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_controllers-release";
+        rev = "release/noetic/pr2_gripper_action/1.10.18-1";
+        sha256 = "sha256-Ss20bLptdYLLDU0L8UPwn3RodUz6qgOy3Yp6PWSWw3E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nanomsg";
   version = "0.4.1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/nanomsg-release/archive/release/melodic/nanomsg/0.4.1-0.tar.gz";
-    name = "0.4.1-0.tar.gz";
-    sha256 = "0b9f6215f091598eac4c7c958693a5b4c8cb09838e18a5b18bc9feb7bf97dfff";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "nanomsg-release";
+        rev = "release/melodic/nanomsg/0.4.1-0";
+        sha256 = "sha256-v4bzLgjcwbgA25MDz6rNdXKErt1ZGo/T0QitDhzBwVQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

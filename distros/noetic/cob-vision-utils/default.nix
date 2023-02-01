@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-vision-utils";
   version = "0.6.19-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/noetic/cob_vision_utils/0.6.19-1.tar.gz";
-    name = "0.6.19-1.tar.gz";
-    sha256 = "48ed5233202433f45c6c541e46a0cad2f5ae1c352498fcd9584300050d8897bf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_perception_common-release";
+        rev = "release/noetic/cob_vision_utils/0.6.19-1";
+        sha256 = "sha256-k4iI/vawfZyk/Om1/lCfXgSGPogdgyTUfIhuYZ4wct4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-script-server, geometry-msgs, moveit-commander, python3Packages, rospy, tf }:
 buildRosPackage {
   pname = "ros-noetic-cob-moveit-interface";
-  version = "0.7.7-r1";
+  version = "0.7.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/noetic/cob_moveit_interface/0.7.7-1.tar.gz";
-    name = "0.7.7-1.tar.gz";
-    sha256 = "38d484d7b5c2eb4916448b15d3ff49c81cda6d6e8190bc8b16a659f54f9a3d05";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_manipulation-release";
+        rev = "release/noetic/cob_moveit_interface/0.7.8-1";
+        sha256 = "sha256-DrqKzKlNDkWv4LwT4eJEVLqdVrN0Sxh54KsrEYbPM/Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools ];

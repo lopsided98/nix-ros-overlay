@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-catkin";
   version = "0.7.29-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/catkin-release/archive/release/melodic/catkin/0.7.29-1.tar.gz";
-    name = "0.7.29-1.tar.gz";
-    sha256 = "cf21bd28d21965b04fc86c969c8558371b29e4e89bae08b193fa6f90902399ca";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "catkin-release";
+        rev = "release/melodic/catkin/0.7.29-1";
+        sha256 = "sha256-lgEIfXBmb8x4v83Cwx1C1svTXoq+eIM34kQ3vQajX2A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ pythonPackages.setuptools ];

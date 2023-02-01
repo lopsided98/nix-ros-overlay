@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pr2-bringup";
   version = "1.6.32-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_robot-release/archive/release/noetic/pr2_bringup/1.6.32-1.tar.gz";
-    name = "1.6.32-1.tar.gz";
-    sha256 = "d8e565fe9a2b5543b7dfe5482ed17712db223d3b668998df9678f5a2295482cd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_robot-release";
+        rev = "release/noetic/pr2_bringup/1.6.32-1";
+        sha256 = "sha256-Li+vd9Lr/fTAIs7HLqj4goP1TVYdl51ocTWEGgq+T94=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch rostest ];

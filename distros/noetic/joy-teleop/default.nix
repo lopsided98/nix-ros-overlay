@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-joy-teleop";
   version = "0.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_tools-release/archive/release/noetic/joy_teleop/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "8824c105187a12a47186db7ff08706673316d2aca3dae67ffa987eeaeb74d475";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "teleop_tools-release";
+        rev = "release/noetic/joy_teleop/0.4.0-1";
+        sha256 = "sha256-Zg9siLvtC3jaPqI0EO64Kg1lNwI/4TCpd7ICdSQ4p+k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

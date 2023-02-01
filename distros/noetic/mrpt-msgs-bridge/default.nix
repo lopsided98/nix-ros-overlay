@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mrpt-msgs-bridge";
   version = "1.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_msgs_bridge/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "f6c355b4d13d3b99100526b9d29a85e7be079b0c09b8620c5da2911844a77b05";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mrpt-ros-pkg-release";
+        repo = "mrpt_navigation-release";
+        rev = "release/noetic/mrpt_msgs_bridge/1.0.3-1";
+        sha256 = "sha256-dVjKauDC+Ln4glEsjm6Ecq5I6DjaKqn+Lavuj+rh7F4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ros-environment ];

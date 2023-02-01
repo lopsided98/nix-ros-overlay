@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-json-msgs";
   version = "0.0.3";
 
-  src = fetchurl {
-    url = "https://github.com/locusrobotics/json_transport-release/archive/release/melodic/json_msgs/0.0.3-0.tar.gz";
-    name = "0.0.3-0.tar.gz";
-    sha256 = "bf40e01a92a86cd7c5f7c56e26b160dd8425c7bdcaee3d407ceac8f6dfc115f8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "locusrobotics";
+        repo = "json_transport-release";
+        rev = "release/melodic/json_msgs/0.0.3-0";
+        sha256 = "sha256-zOGVlXbUqmInpvvXZOttxLfAvzL3zRdjWD+Rqh5rmjI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

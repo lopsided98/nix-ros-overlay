@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-nmea-hardware-interface";
   version = "0.0.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/nmea_hardware_interface-release/archive/release/rolling/nmea_hardware_interface/0.0.1-2.tar.gz";
-    name = "0.0.1-2.tar.gz";
-    sha256 = "38a7b906bb141425b7108334b7002e0449506b0777ae1c60d8323ae84f1c3fde";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "nmea_hardware_interface-release";
+        rev = "release/rolling/nmea_hardware_interface/0.0.1-2";
+        sha256 = "sha256-YibMQpu2E/mEdOx3OB8wbxnUVH/AukvJlND3wu5+oeE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

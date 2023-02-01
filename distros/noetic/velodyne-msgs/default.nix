@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-velodyne-msgs";
   version = "1.7.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_msgs/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "508ef5d08d4d2168dae0e7adf55eeae4f6090c01c05280d0bf1d9f2f31a1ee0f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "velodyne-release";
+        rev = "release/noetic/velodyne_msgs/1.7.0-1";
+        sha256 = "sha256-y5yYjCecg58/npbTLJ5nri+Svd9LssEhlSm3Jp8Lz2Y=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-swri-roscpp";
   version = "3.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_roscpp/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "a128f247e8bb7917c4cb97f9acb6c0ee3430805a79d40484fafe83acf1dd498c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "marti_common-release";
+        rev = "release/rolling/swri_roscpp/3.5.0-1";
+        sha256 = "sha256-nWJX9PpGrByxGVM3yK8l5QAN6H1Kpdbny7/gkXQMuv4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-cmake rosidl-default-generators ];

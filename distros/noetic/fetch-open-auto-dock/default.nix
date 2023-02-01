@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fetch-open-auto-dock";
   version = "0.1.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_open_auto_dock-gbp/archive/release/noetic/fetch_open_auto_dock/0.1.3-2.tar.gz";
-    name = "0.1.3-2.tar.gz";
-    sha256 = "ec396187a30b9ef904c934d7f3bdbf625980138227e511927ada69c8b61fbd6b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "fetch_open_auto_dock-gbp";
+        rev = "release/noetic/fetch_open_auto_dock/0.1.3-2";
+        sha256 = "sha256-1Rpt2gONlcKAuEP+0QpBHsUdnoI3fCAGrBzbt+u5t6o=";
+      };
 
   buildType = "catkin";
   buildInputs = [ angles catkin ];

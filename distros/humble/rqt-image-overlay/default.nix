@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rqt-image-overlay";
   version = "0.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_image_overlay-release/archive/release/humble/rqt_image_overlay/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "ad0d97e88c490b06bd486c480f65ddc6686bb6eb5e8883c3fcfee9e3415c3930";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_image_overlay-release";
+        rev = "release/humble/rqt_image_overlay/0.1.3-1";
+        sha256 = "sha256-rPS2F9QZ5QONO3jPFhyrtwhELpio617S9fbPeCfkqYk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

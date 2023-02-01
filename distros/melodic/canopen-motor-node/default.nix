@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-canopen-motor-node";
   version = "0.8.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/canopen_motor_node/0.8.5-1.tar.gz";
-    name = "0.8.5-1.tar.gz";
-    sha256 = "136e40e5bb384756d447943ef6e7924dd3cc12da8a2847fcfc2d29b3e83cbffa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "ros_canopen-release";
+        rev = "release/melodic/canopen_motor_node/0.8.5-1";
+        sha256 = "sha256-Ixrnh1WkXt2VF0R2Ffc4IMemiq+eMXCE+x6z8OwEIWg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

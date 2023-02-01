@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-compressed-image-transport";
   version = "1.9.5";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/image_transport_plugins-release/archive/release/melodic/compressed_image_transport/1.9.5-0.tar.gz";
-    name = "1.9.5-0.tar.gz";
-    sha256 = "b3f07ada5ec4f1e8335c95ded17dc75ba399b98d21c1a043fde96c3f974ba64d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "image_transport_plugins-release";
+        rev = "release/melodic/compressed_image_transport/1.9.5-0";
+        sha256 = "sha256-CovfRoFEM/65lbLDWBQ1aJVDwD7lPWFGtRTuONN2qxE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-msgs";
   version = "0.11.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_msgs-release/archive/release/noetic/moveit_msgs/0.11.4-1.tar.gz";
-    name = "0.11.4-1.tar.gz";
-    sha256 = "ee9b010332c606a8c0853cdcce502134fefca02e9e8fa8a7d91b8bc7011ea3a3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit_msgs-release";
+        rev = "release/noetic/moveit_msgs/0.11.4-1";
+        sha256 = "sha256-3MpaYwxyZigiLEVRJhLb90FfkfV/E+tufEYt78m+s7I=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

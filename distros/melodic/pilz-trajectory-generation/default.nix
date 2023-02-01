@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pilz-trajectory-generation";
   version = "0.4.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_industrial_motion-release/archive/release/melodic/pilz_trajectory_generation/0.4.14-1.tar.gz";
-    name = "0.4.14-1.tar.gz";
-    sha256 = "55c630f7cee97d09abb77f22ef40b4aebdebcccf56fa6bcc93363bbc9bfc4c97";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_industrial_motion-release";
+        rev = "release/melodic/pilz_trajectory_generation/0.4.14-1";
+        sha256 = "sha256-6NN8PF071q8OZAaNeV2gih4oXJmoyx6Mm4NmBfW0E70=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

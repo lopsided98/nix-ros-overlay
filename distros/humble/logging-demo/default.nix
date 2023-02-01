@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-components, rcutils, rmw-implementation-cmake, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-logging-demo";
-  version = "0.20.2-r1";
+  version = "0.20.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/logging_demo/0.20.2-1.tar.gz";
-    name = "0.20.2-1.tar.gz";
-    sha256 = "2cb879b0ffefe7698b62cdae7a324252165c83678d142d7a98b45917747dbf5e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/humble/logging_demo/0.20.3-1";
+        sha256 = "sha256-EgLepCfAbGA0stkRjzhxekP5iEft5dZZWySUNsoshRU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-cmake rosidl-default-generators ];

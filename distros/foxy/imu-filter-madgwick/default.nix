@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-imu-filter-madgwick";
   version = "2.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/foxy/imu_filter_madgwick/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "ecd44aacd384ec18eb9da3f7ae576fc1632331a279bcacb61cb69172534ed363";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "imu_tools-release";
+        rev = "release/foxy/imu_filter_madgwick/2.0.3-1";
+        sha256 = "sha256-aaLrz8xqFlebBD49O1mm/KPegN86bxS+vqG2RG3xFKY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

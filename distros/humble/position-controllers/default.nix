@@ -2,21 +2,25 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-manager, forward-command-controller, pluginlib, rclcpp, ros2-control-test-assets }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-manager, forward-command-controller, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-humble-position-controllers";
-  version = "2.15.0-r1";
+  version = "2.16.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/position_controllers/2.15.0-1.tar.gz";
-    name = "2.15.0-1.tar.gz";
-    sha256 = "3624b66794bd247a74d1f5ae37b41811caed76ff617d8cd9ea096baa28331813";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_controllers-release";
+        rev = "release/humble/position_controllers/2.16.0-1";
+        sha256 = "sha256-tJumiecXQoJA8eR2wlntzpnzJ+lDhSmdAFPoaID4xms=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pluginlib ];
   checkInputs = [ ament-cmake-gmock controller-manager ros2-control-test-assets ];
-  propagatedBuildInputs = [ forward-command-controller rclcpp ];
+  propagatedBuildInputs = [ backward-ros forward-command-controller rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

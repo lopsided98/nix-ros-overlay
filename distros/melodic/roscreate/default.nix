@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-roscreate";
   version = "1.14.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/roscreate/1.14.9-1.tar.gz";
-    name = "1.14.9-1.tar.gz";
-    sha256 = "5be3e124f93f53ad14096e6ae8d58bea596b7fe9850ed94e33295604a4987b26";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros-release";
+        rev = "release/melodic/roscreate/1.14.9-1";
+        sha256 = "sha256-E8dHCs6VCiDshGzYdo3AkRcHOFyUyoKSnm8y72raw+U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-speech-recognition-msgs";
   version = "4.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/noetic/speech_recognition_msgs/4.3.2-1.tar.gz";
-    name = "4.3.2-1.tar.gz";
-    sha256 = "4f1067d8b1b1cc7cf174a5b917e532c83fe65b55efa809a4f4bf6eb42abd7e1a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_common_msgs-release";
+        rev = "release/noetic/speech_recognition_msgs/4.3.2-1";
+        sha256 = "sha256-WNuuQYGPvzHOlLCdSn9WNNEygxfJGFEbXa8bTDBAH5M=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-cartographer-ros";
   version = "1.0.9003-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/cartographer_ros-release/archive/release/foxy/cartographer_ros/1.0.9003-1.tar.gz";
-    name = "1.0.9003-1.tar.gz";
-    sha256 = "5df4a0442de6bba62724fd2b1bcf9e0d11fd98c448240af3b9b52c1dffce932a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "cartographer_ros-release";
+        rev = "release/foxy/cartographer_ros/1.0.9003-1";
+        sha256 = "sha256-bmWPvRd3or0c6ZlgCfBfJgHxF3/VmHMgFHt2Fx+Wa3M=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake eigen pcl-conversions tf2-eigen urdfdom-headers ];

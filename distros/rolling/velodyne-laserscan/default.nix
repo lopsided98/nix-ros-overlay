@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-velodyne-laserscan";
   version = "2.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/velodyne-release/archive/release/rolling/velodyne_laserscan/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "8d80b21878b861daeac62b827dcbeb2df427d3aba44056c539e3564b4748c856";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "velodyne-release";
+        rev = "release/rolling/velodyne_laserscan/2.3.0-1";
+        sha256 = "sha256-rSKlfJVrsBMOdfguEVxqRmL3bNJiRLJsyy6iTcxdfKY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

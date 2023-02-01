@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ackermann-steering-controller";
   version = "0.17.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/ackermann_steering_controller/0.17.2-1.tar.gz";
-    name = "0.17.2-1.tar.gz";
-    sha256 = "ef28b520da2cd4076e270ecf5d77c4d6672ad6fea02314fdf818134b24313c68";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_controllers-release";
+        rev = "release/melodic/ackermann_steering_controller/0.17.2-1";
+        sha256 = "sha256-jUL+gwu9iYVkNWKMXaI3E5rVWo1CjcGAoe3QenJ8u5c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

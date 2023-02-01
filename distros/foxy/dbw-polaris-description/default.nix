@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, robot-state-publisher, rviz2, urdf, xacro }:
 buildRosPackage {
   pname = "ros-foxy-dbw-polaris-description";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/foxy/dbw_polaris_description/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "89832f1c94b32c6c3616915ee98ccf3f9b2fae1638cd5725af8f6de364767b57";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dbw_ros-release";
+        rev = "release/foxy/dbw_polaris_description/2.1.1-1";
+        sha256 = "sha256-idklZI8YJ6EM6ZTyaU0tJCR7PUVfpV/ngHpM8OMu2sA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

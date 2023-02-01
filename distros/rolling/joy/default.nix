@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-joy";
   version = "3.1.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/rolling/joy/3.1.0-2.tar.gz";
-    name = "3.1.0-2.tar.gz";
-    sha256 = "1bc2d9131c6afe8f1c9c396ae6c2a7a2de08aa4f29c8ee31b62997438eebc8c3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "joystick_drivers-release";
+        rev = "release/rolling/joy/3.1.0-2";
+        sha256 = "sha256-LVq01bvfmA7TdJQjbrFwa17MdoQoTZj+fMTxjgRHsHY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

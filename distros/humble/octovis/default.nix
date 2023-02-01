@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-octovis";
   version = "1.9.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap-release/archive/release/humble/octovis/1.9.8-1.tar.gz";
-    name = "1.9.8-1.tar.gz";
-    sha256 = "0fc7d234141ccfe21aeeecfa1c9863f1c52f0b38301865edf7562061689051e3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "octomap-release";
+        rev = "release/humble/octovis/1.9.8-1";
+        sha256 = "sha256-B3o5qIG2TXL7n4EG8EOfFE/k4yEj6kdYAtRPXbUfB6s=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

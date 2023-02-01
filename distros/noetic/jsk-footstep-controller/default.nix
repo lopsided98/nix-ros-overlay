@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-jsk-footstep-controller";
   version = "0.1.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/jsk_footstep_controller/0.1.16-1.tar.gz";
-    name = "0.1.16-1.tar.gz";
-    sha256 = "08d7383c10f7e79aa872ec7fc3fc1e1a00b66572f4498278cc55d5815e822913";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_control-release";
+        rev = "release/noetic/jsk_footstep_controller/0.1.16-1";
+        sha256 = "sha256-gTfi5vl9Dpj0P0BeGeeWUaLPHFhnlZrNgxwwQ671Y9I=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robot-one";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/AlexanderSilvaB/robot-one-ros-release/archive/release/melodic/robot_one/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "8577070c2981b950d02c6e8353edea64dc1724952a8981d82d980a7de21109d4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "AlexanderSilvaB";
+        repo = "robot-one-ros-release";
+        rev = "release/melodic/robot_one/0.1.1-1";
+        sha256 = "sha256-gZwiT4F/JzsV5GptmidK8jcWD0E3yAaM6E591ddQ1F0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

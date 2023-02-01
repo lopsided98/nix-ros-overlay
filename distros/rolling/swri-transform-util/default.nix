@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-swri-transform-util";
   version = "3.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_transform_util/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "d8de7ae29965683adc62c9c571dbb2b28496bab14946ec596816ce466e9dc1ba";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "marti_common-release";
+        rev = "release/rolling/swri_transform_util/3.5.0-1";
+        sha256 = "sha256-mHPtcyvnfeH8fmbssk2y7165KvtP55qdfYHwM6z173I=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python pkg-config ];

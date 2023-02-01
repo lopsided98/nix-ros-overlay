@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rm-msgs";
   version = "0.1.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_msgs/0.1.15-1.tar.gz";
-    name = "0.1.15-1.tar.gz";
-    sha256 = "7d7cbbe87911ad07336c5787b5ee11e37e796ea05cf4b55a627469eb4c5757b5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rm-controls";
+        repo = "rm_control-release";
+        rev = "release/noetic/rm_msgs/0.1.15-1";
+        sha256 = "sha256-hHyDSPfPmLi48Ewnre+tJUx3pl0XwzzevXhmDdUeeaE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

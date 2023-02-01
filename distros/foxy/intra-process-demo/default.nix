@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-intra-process-demo";
   version = "0.9.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/intra_process_demo/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "2e58b507a97b578570ea24fed0698f547f0dc40e9e30864cf8f667da2e32c58c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/foxy/intra_process_demo/0.9.4-1";
+        sha256 = "sha256-2SNA+8LB2+oXXOhXRKBuDwDBxo2r4/Cfpxuj/ZzDugw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake std-msgs ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-iceoryx-posh";
   version = "2.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/iceoryx-release/archive/release/rolling/iceoryx_posh/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "58c382b5cfe4dad232bece0416a18ae847bbd876d0e2c5b3904e232bb0858a43";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "iceoryx-release";
+        rev = "release/rolling/iceoryx_posh/2.0.2-1";
+        sha256 = "sha256-P4HeIkdRap//axiH0seXCvNf5vCYpd2eImkztWl275M=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake git ];

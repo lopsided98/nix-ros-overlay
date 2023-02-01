@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rmf-visualization-floorplans";
   version = "2.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/rolling/rmf_visualization_floorplans/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "ae457032b6db60b2dfe03afd357e2874f133360b795bfedbc9ceb277c0e5a10b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_visualization-release";
+        rev = "release/rolling/rmf_visualization_floorplans/2.0.1-1";
+        sha256 = "sha256-Wfa+U3d8n/ltb0ETtQhGCwPqWX4JDLFS4axmsKGPdWQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake eigen3-cmake-module ];

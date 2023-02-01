@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, pythonPackages, ros2cli, ros2pkg }:
 buildRosPackage {
   pname = "ros-humble-ros2run";
-  version = "0.18.4-r1";
+  version = "0.18.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/humble/ros2run/0.18.4-1.tar.gz";
-    name = "0.18.4-1.tar.gz";
-    sha256 = "40a6c7dc5e0f674d9856391321ab2fc7c849917682f8c883705be3a8a3bf4bd5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2cli-release";
+        rev = "release/humble/ros2run/0.18.5-1";
+        sha256 = "sha256-1FZaR8IRQ7x6khhLCXBgMQRD0JqkEna3005JYLo1jWI=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint python3Packages.pytest-timeout pythonPackages.pytest ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-md49-serialport";
   version = "0.1.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/Scheik/md49_base_controller-release/archive/release/melodic/md49_serialport/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "fa9045a3f94fdde980a537997f23ae3d74accc8f0019fa18172c007862865408";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Scheik";
+        repo = "md49_base_controller-release";
+        rev = "release/melodic/md49_serialport/0.1.4-1";
+        sha256 = "sha256-I6/eAk0eDu8hJ672JB9L8dWxCP0RRHkUsQr6v1G4hhI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

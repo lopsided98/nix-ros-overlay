@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-swri-math-util";
   version = "3.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_math_util/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "4bb71450bc91edf080b24d3630e298a7ea61999034fac4313f1147ebad177834";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "marti_common-release";
+        rev = "release/rolling/swri_math_util/3.5.0-1";
+        sha256 = "sha256-LMN/kFCh+IzKuiqfJ62WGlQH5iXamdyX0abZVtuEZf0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-tf2-kdl";
   version = "0.7.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_kdl/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "78bda9fac5cf7f76b53b4058cba45ee2ba714cedc6ada646049d1bee0df1dd67";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry2-release";
+        rev = "release/noetic/tf2_kdl/0.7.6-1";
+        sha256 = "sha256-hBpeiPyelBr8j/B7H9w8JN4aCfPQVKLVqp3RYDCQcBo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

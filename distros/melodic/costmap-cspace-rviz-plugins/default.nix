@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-costmap-cspace-rviz-plugins";
   version = "0.11.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_rviz_plugins-release/archive/release/melodic/costmap_cspace_rviz_plugins/0.11.6-1.tar.gz";
-    name = "0.11.6-1.tar.gz";
-    sha256 = "bcd73822b9dd77d03b425ddad5918adea6d64ac3e9b7bbe8f4605ef9048af760";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "at-wat";
+        repo = "neonavigation_rviz_plugins-release";
+        rev = "release/melodic/costmap_cspace_rviz_plugins/0.11.6-1";
+        sha256 = "sha256-AZXjHbkeKfD4qwfQ4109dCTQVvKOpA6QfPkrNsvaiOc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

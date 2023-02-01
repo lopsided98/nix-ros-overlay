@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-prbt-gazebo";
   version = "0.5.23-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_gazebo/0.5.23-1.tar.gz";
-    name = "0.5.23-1.tar.gz";
-    sha256 = "fd6264498b55c274405e379cb95641be0598b418512a6311012e69d5060b02a2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_robots-release";
+        rev = "release/melodic/prbt_gazebo/0.5.23-1";
+        sha256 = "sha256-UfI1WxRWoxu78Q2ywZiG+DQZuhaGQQ/taLZ48OBadXA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

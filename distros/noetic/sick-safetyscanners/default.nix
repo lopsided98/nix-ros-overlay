@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-sick-safetyscanners";
   version = "1.0.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SICKAG/sick_safetyscanners-release/archive/release/noetic/sick_safetyscanners/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "df3f4bb715a9a522000f0d6a238afddd63781cae0d8046319ecc5c2b170d2ef0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SICKAG";
+        repo = "sick_safetyscanners-release";
+        rev = "release/noetic/sick_safetyscanners/1.0.8-1";
+        sha256 = "sha256-PTS57R5b3reGqfNwKbRXVGH8m5lygAwU9eTkdKtH3Y0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

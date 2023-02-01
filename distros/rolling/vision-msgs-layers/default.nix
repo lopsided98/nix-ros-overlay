@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-vision-msgs-layers";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_msgs_layers-release/archive/release/rolling/vision_msgs_layers/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "8b483e937d93f61877b6b8e62b9a23d828bd5ea0cfde19d689d43786dc3db8b4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "vision_msgs_layers-release";
+        rev = "release/rolling/vision_msgs_layers/0.2.0-1";
+        sha256 = "sha256-/AF+whPTfuXAf3vP/iP6XQf4SZFSuJjxb7oQ61JEiGs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

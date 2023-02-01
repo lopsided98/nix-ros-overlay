@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robot-controllers";
   version = "0.6.0";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/robot_controllers-release/archive/release/melodic/robot_controllers/0.6.0-0.tar.gz";
-    name = "0.6.0-0.tar.gz";
-    sha256 = "8b8bbd122bf7977a8b16518c7eb79ad915969f5d69fed23f85100fb33f58865f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "robot_controllers-release";
+        rev = "release/melodic/robot_controllers/0.6.0-0";
+        sha256 = "sha256-iwNAfwlet6nGMGb7KxMITui8+gSYlXVsKML48EiS1ds=";
+      };
 
   buildType = "catkin";
   buildInputs = [ angles catkin ];

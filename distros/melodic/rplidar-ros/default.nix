@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rplidar-ros";
   version = "1.7.0";
 
-  src = fetchurl {
-    url = "https://github.com/Slamtec/rplidar_ros-release/archive/release/melodic/rplidar_ros/1.7.0-0.tar.gz";
-    name = "1.7.0-0.tar.gz";
-    sha256 = "548d65fb0fba265d22e0ad2e2fdb4d522f97a751b62bf01fb7dfbac36e9899d4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Slamtec";
+        repo = "rplidar_ros-release";
+        rev = "release/melodic/rplidar_ros/1.7.0-0";
+        sha256 = "sha256-e0knDCrcluTcwjne/xebbhNeVmVFGkQu+Q99hRD+4Ms=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

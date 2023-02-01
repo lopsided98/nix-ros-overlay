@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-grepros";
   version = "0.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/suurjaak/grepros-release/archive/release/foxy/grepros/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "458099985a6b8f212940f6cb4cfa52d116589d68f746373b65576a171f8d06e9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "suurjaak";
+        repo = "grepros-release";
+        rev = "release/foxy/grepros/0.5.0-1";
+        sha256 = "sha256-xNIkYkH5iGMMZWXABQF8VH5UPVyLZIyYW7MsG1MZG4E=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-cmake-pytest pythonPackages.pytest std-msgs ];

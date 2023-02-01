@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-runtime-monitor";
   version = "0.5.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_runtime_monitor-release/archive/release/noetic/rqt_runtime_monitor/0.5.9-1.tar.gz";
-    name = "0.5.9-1.tar.gz";
-    sha256 = "237206b6bdd8850ce375e7900125b5864646556a68acb107989624cefc5c0d33";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_runtime_monitor-release";
+        rev = "release/noetic/rqt_runtime_monitor/0.5.9-1";
+        sha256 = "sha256-ZlrGaqhPj+H1umIfpqqoYNgsribVuXm5r9TS0Sk1t8s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

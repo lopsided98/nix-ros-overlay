@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rqt-bag";
   version = "0.5.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_bag-release/archive/release/melodic/rqt_bag/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "182a0246366034f55abc0285d2f018819c1b455ce54cbf526d4880395be4396e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_bag-release";
+        rev = "release/melodic/rqt_bag/0.5.1-1";
+        sha256 = "sha256-UZBQhAxdSV6nqNrefZSu8ESMB7yXUqmLxEhfN+O2II0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

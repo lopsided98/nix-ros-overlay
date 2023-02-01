@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-lgsvl-msgs";
   version = "0.0.4-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/lgsvl_msgs-release/archive/release/rolling/lgsvl_msgs/0.0.4-2.tar.gz";
-    name = "0.0.4-2.tar.gz";
-    sha256 = "5fa65a21d231edbf4bb40fd9d70810e053d0bbadd5b976fbe28ea7a761ac0054";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "lgsvl_msgs-release";
+        rev = "release/rolling/lgsvl_msgs/0.0.4-2";
+        sha256 = "sha256-Pd5TP0wLuUr0/m+WvLpkvURpB0d0hbik3SOPkifg8YU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ros-environment rosidl-default-generators ];

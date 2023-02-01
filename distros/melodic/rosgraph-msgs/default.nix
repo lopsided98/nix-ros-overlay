@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosgraph-msgs";
   version = "1.11.2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm_msgs-release/archive/release/melodic/rosgraph_msgs/1.11.2-0.tar.gz";
-    name = "1.11.2-0.tar.gz";
-    sha256 = "5aa9e1b1adbf5e86931e771b1a154384485803a73e50804e0c739f83767270c9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm_msgs-release";
+        rev = "release/melodic/rosgraph_msgs/1.11.2-0";
+        sha256 = "sha256-6ufZzyutE+irt/QY8lnA0G5p1d1KZ/GGmDDlqananqk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

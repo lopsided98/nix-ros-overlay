@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tra1-moveit-config";
   version = "1.0.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/minas-release/archive/release/melodic/tra1_moveit_config/1.0.10-1.tar.gz";
-    name = "1.0.10-1.tar.gz";
-    sha256 = "aae9958445d523413c744f069ca4e973b137a0c3f1c4f8472902c3e6a2467572";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "minas-release";
+        rev = "release/melodic/tra1_moveit_config/1.0.10-1";
+        sha256 = "sha256-MtrQqMdCgAW5NxedmSGXIq4eOg9RGYpcqzlhjPKebAI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

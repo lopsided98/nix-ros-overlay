@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ar-track-alvar";
   version = "0.7.1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ar_track_alvar-release/archive/release/melodic/ar_track_alvar/0.7.1-0.tar.gz";
-    name = "0.7.1-0.tar.gz";
-    sha256 = "7b822678ef7330b5a3ecf5fd63547162178335534caf6bf4a739ad35c73d91ca";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ar_track_alvar-release";
+        rev = "release/melodic/ar_track_alvar/0.7.1-0";
+        sha256 = "sha256-7bD2j66pf4POAYagS0g7nyE7R6klOWQTCgRd9sFCfsc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules message-generation ];

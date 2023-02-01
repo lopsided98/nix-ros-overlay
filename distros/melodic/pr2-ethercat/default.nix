@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-ethercat";
   version = "1.6.31-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_robot-release/archive/release/melodic/pr2_ethercat/1.6.31-1.tar.gz";
-    name = "1.6.31-1.tar.gz";
-    sha256 = "3be50304622a7ea7154af500078e617541a8dcccdd7673d45e6cb525bdd5e1d1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_robot-release";
+        rev = "release/melodic/pr2_ethercat/1.6.31-1";
+        sha256 = "sha256-ThDBv+47NEp9Yk0BfFgD2YvS128CCGfjyh7kO1N56M4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

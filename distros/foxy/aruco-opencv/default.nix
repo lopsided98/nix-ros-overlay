@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-aruco-opencv";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/aruco_opencv-release/archive/release/foxy/aruco_opencv/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "45cddb72580326049122896e65ebd9e16c82ee351413acc80a76cb6bf5a0f9cc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "aruco_opencv-release";
+        rev = "release/foxy/aruco_opencv/1.0.1-1";
+        sha256 = "sha256-fhsub+GQyZR3LNpD0ofVO5Df+MeSASUE8nTjk8rcyNI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

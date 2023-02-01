@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rqt-gui";
   version = "1.1.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/foxy/rqt_gui/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "fa8ac31e554aec867a54cf524e79a17a90e6a14727b349351d3ce599c4dcd783";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt-release";
+        rev = "release/foxy/rqt_gui/1.1.2-1";
+        sha256 = "sha256-az4J0I6MA3LIr5nL5BnWXR2cr+6eGgPnO9V5h/nsSTs=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-lint-auto ament-lint-common ];

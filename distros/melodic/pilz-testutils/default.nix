@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pilz-testutils";
   version = "0.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_common-release/archive/release/melodic/pilz_testutils/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "852c503a5de03f9fd4985710ea0b0526d89baa6dea09e0c967cdeea783372005";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_common-release";
+        rev = "release/melodic/pilz_testutils/0.6.0-1";
+        sha256 = "sha256-caHeVKahvbuTXgAf+LamGOh9hAHd+WyGnY2fhoQDmWE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pilz-utils roscpp sensor-msgs ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-heifu-safety";
   version = "0.7.7-r2";
 
-  src = fetchurl {
-    url = "https://github.com/BV-OpenSource/heifu-release/archive/release/melodic/heifu_safety/0.7.7-2.tar.gz";
-    name = "0.7.7-2.tar.gz";
-    sha256 = "237643936466dc423019b216b87cfb67708a74490a7aeb44f070c2fbacfb4bef";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "BV-OpenSource";
+        repo = "heifu-release";
+        rev = "release/melodic/heifu_safety/0.7.7-2";
+        sha256 = "sha256-RKwKQmkUyEKQsFptkuMfBRoJvFskFfBzp32OLSxCJxA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

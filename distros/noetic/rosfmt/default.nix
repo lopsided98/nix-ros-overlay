@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosfmt";
   version = "7.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/xqms/rosfmt-release/archive/release/noetic/rosfmt/7.0.0-1.tar.gz";
-    name = "7.0.0-1.tar.gz";
-    sha256 = "b2c2c4f2436a5a0215d932e2cc308cfa91dde43404cba0af8986624a907b1def";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "xqms";
+        repo = "rosfmt-release";
+        rev = "release/noetic/rosfmt/7.0.0-1";
+        sha256 = "sha256-32W7hu//XsloTL1Yx5yZX05+13QL4sPbKni7WtRyQJo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

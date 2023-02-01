@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rqt-action";
   version = "0.4.9";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_action-release/archive/release/melodic/rqt_action/0.4.9-0.tar.gz";
-    name = "0.4.9-0.tar.gz";
-    sha256 = "5ac33f2d857d43c2c79f82f73070f6dec9bf326ea6bc0b3bce4e49c3d5b8c7d8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_action-release";
+        rev = "release/melodic/rqt_action/0.4.9-0";
+        sha256 = "sha256-N5GFkG2yNzCE4tWc23uFMGwFk8D7TEUoLddfyC3UxmQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

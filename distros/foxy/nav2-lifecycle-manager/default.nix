@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-nav2-lifecycle-manager";
   version = "0.4.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_lifecycle_manager/0.4.7-1.tar.gz";
-    name = "0.4.7-1.tar.gz";
-    sha256 = "2e21b20760c53422d70fea1d01bf4dbefaf28be302736f2eb0aa25405ff0addd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/foxy/nav2_lifecycle_manager/0.4.7-1";
+        sha256 = "sha256-j3OLzby4H9MPPNN3lybIFRJ6U/WpwzkZK+JIVuX3PTk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake nav2-common ];

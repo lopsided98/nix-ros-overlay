@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-leo-example-object-detection";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_examples-release/archive/release/noetic/leo_example_object_detection/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "2f4ee0324414397600d37ae209348b50c574fa2a812152400ef08bb4d02a2742";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fictionlab-gbp";
+        repo = "leo_examples-release";
+        rev = "release/noetic/leo_example_object_detection/0.1.1-1";
+        sha256 = "sha256-oQ9LdtpwIn77iT78upM3aYJH9i/1wfC+z8x9Fy18j+o=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

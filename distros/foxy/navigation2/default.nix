@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-navigation2";
   version = "0.4.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/navigation2/0.4.7-1.tar.gz";
-    name = "0.4.7-1.tar.gz";
-    sha256 = "833940d28f8f346624ee4e7672ed60038b51799459666458344aa16a7c7f83e4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/foxy/navigation2/0.4.7-1";
+        sha256 = "sha256-qJ2zzy1M2NP0s0r/cAgDE4DZhhEdaShovSUf7YAdcJc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

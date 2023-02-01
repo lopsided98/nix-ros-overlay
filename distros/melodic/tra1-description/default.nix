@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tra1-description";
   version = "1.0.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/minas-release/archive/release/melodic/tra1_description/1.0.10-1.tar.gz";
-    name = "1.0.10-1.tar.gz";
-    sha256 = "cecc2bf7664b6d24ccf9783e0955499ca1a7e21b38f7a0ea38b718fe10bf6f1d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "minas-release";
+        rev = "release/melodic/tra1_description/1.0.10-1";
+        sha256 = "sha256-nzu//p4QJ8jdi6VNavImGxeTM4A5exJHuGpm3nXHyhw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

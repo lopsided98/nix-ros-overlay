@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rqt-service-caller";
   version = "1.0.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_service_caller-release/archive/release/foxy/rqt_service_caller/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "345c29256ee1c7ccd34aa936bd089ee543db38079bade04366ed876641b98afb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_service_caller-release";
+        rev = "release/foxy/rqt_service_caller/1.0.5-1";
+        sha256 = "sha256-ZIAMenPCiVlqoXUvFI0pukwPJC43v4GOkQH7JEHO9W4=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ rqt-gui rqt-gui-py rqt-py-common ];

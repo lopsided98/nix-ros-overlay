@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ament-cmake-clang-tidy";
   version = "0.13.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_cmake_clang_tidy/0.13.2-1.tar.gz";
-    name = "0.13.2-1.tar.gz";
-    sha256 = "9914b3ca7d7350c5dfd92e317e301ee0092c42c882b2a74a6f185008c2553f2b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_lint-release";
+        rev = "release/rolling/ament_cmake_clang_tidy/0.13.2-1";
+        sha256 = "sha256-PpxXw4cMhNta0Ft9WGXvvovtZ1FC9YLlSuRuXzpAg1U=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-core ];

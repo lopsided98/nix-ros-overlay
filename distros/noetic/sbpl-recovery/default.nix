@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-sbpl-recovery";
   version = "0.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/noetic/sbpl_recovery/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "bf115900248cdd509016fd0b15199fb39053ad16859e2d5d1b8156d1d7a2712c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation_experimental-release";
+        rev = "release/noetic/sbpl_recovery/0.4.1-1";
+        sha256 = "sha256-Ac8w2QX3CHY+2sqXFhnQRcmCYAVgKJIc62mllFFwdno=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

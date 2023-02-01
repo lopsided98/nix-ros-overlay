@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-joint-trajectory-action";
   version = "1.10.17-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/melodic/joint_trajectory_action/1.10.17-1.tar.gz";
-    name = "1.10.17-1.tar.gz";
-    sha256 = "eaf127a1c131ce422b9bba23fad9a20d278360d80d23ae389a021c15e962f053";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_controllers-release";
+        rev = "release/melodic/joint_trajectory_action/1.10.17-1";
+        sha256 = "sha256-TaQU68mxE5G8LDX0nHdWP1eVqjWXt37C8LR8+LQ0w3E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

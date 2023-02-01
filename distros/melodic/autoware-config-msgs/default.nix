@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-autoware-config-msgs";
   version = "1.14.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/autoware-ai/messages-release/archive/release/melodic/autoware_config_msgs/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "d60ba3433659548c626d654074c19395ac5ec153efc98ae862fdd521170a950a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "autoware-ai";
+        repo = "messages-release";
+        rev = "release/melodic/autoware_config_msgs/1.14.0-1";
+        sha256 = "sha256-LnjiFHp8RAOybuiYvaB7dQNLh6hWlsNqj5EXRHZEcHk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

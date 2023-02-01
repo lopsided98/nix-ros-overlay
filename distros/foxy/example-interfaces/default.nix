@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-example-interfaces";
   version = "0.9.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/example_interfaces-release/archive/release/foxy/example_interfaces/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "74a5cd21a531a90d5117d482943d18ad44f0b5b3679ec28a3331f32f660aa77d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "example_interfaces-release";
+        rev = "release/foxy/example_interfaces/0.9.1-1";
+        sha256 = "sha256-1y7LlCTk5Sg7s4HFKI8x4b4zNuA0/2d3+/rMtb9RbNQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

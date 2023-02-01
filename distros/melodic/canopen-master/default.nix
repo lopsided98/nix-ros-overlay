@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-canopen-master";
   version = "0.8.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/melodic/canopen_master/0.8.5-1.tar.gz";
-    name = "0.8.5-1.tar.gz";
-    sha256 = "83ce5c79c6a4f19aa0b594aad47879846831f8afa357845e732f7999b37aba1f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "ros_canopen-release";
+        rev = "release/melodic/canopen_master/0.8.5-1";
+        sha256 = "sha256-89qyDBshOPfP6Bi0UJD0BxOCW6t4dIzEPuOutk6AOJQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

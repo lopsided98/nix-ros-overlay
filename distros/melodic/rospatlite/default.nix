@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rospatlite";
   version = "2.1.24-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/rospatlite/2.1.24-2.tar.gz";
-    name = "2.1.24-2.tar.gz";
-    sha256 = "9f38ca446c4aaaaa6fc430c796304b3040ad049416e28857e2622bbafbfeffb4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_3rdparty-release";
+        rev = "release/melodic/rospatlite/2.1.24-2";
+        sha256 = "sha256-N8w8vDlwaGP/jJRn5FzU9PkWMyap/6RCSz/B8VxNuZI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

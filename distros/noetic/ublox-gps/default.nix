@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ublox-gps";
   version = "1.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/KumarRobotics/ublox-release/archive/release/noetic/ublox_gps/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "b71af92497d916723093c3d7b5d12427d6907df0b7615a0c4462922fe4090853";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "KumarRobotics";
+        repo = "ublox-release";
+        rev = "release/noetic/ublox_gps/1.5.0-1";
+        sha256 = "sha256-cOV6LUh53kzyrwCUI63aDm9zqHfMlGgG8Fo4NIqWEHk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

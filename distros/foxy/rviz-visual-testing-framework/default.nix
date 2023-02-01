@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rviz-visual-testing-framework";
   version = "8.2.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/foxy/rviz_visual_testing_framework/8.2.7-1.tar.gz";
-    name = "8.2.7-1.tar.gz";
-    sha256 = "5bd9bc7e35b73324af5c73887bc14f79834e1070c50de679842b0c3ed0254526";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rviz-release";
+        rev = "release/foxy/rviz_visual_testing_framework/8.2.7-1";
+        sha256 = "sha256-zrcGoJHpzaIA6IrpcGnM8SSEt5zHGkwaIh8L1k2L/OU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake qt5.qtbase ];

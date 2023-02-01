@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-tf";
   version = "1.13.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry-release/archive/release/noetic/tf/1.13.2-1.tar.gz";
-    name = "1.13.2-1.tar.gz";
-    sha256 = "e80444520026246b20a25f86f897cac53af73b3019b478d0abacaae5c46f480d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry-release";
+        rev = "release/noetic/tf/1.13.2-1";
+        sha256 = "sha256-0wsoGfnxEeQ1vv1xZBs0QsqhEXsOdmZvOvfcH677XU0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ angles catkin message-generation rostime ];

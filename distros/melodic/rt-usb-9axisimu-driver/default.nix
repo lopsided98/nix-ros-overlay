@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rt-usb-9axisimu-driver";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rt-net-gbp/rt_usb_9axisimu_driver-release/archive/release/melodic/rt_usb_9axisimu_driver/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "d5601c729db3cede96fa28086a40d6bc7ec8346d5dc88ebabc7e856ec68f7989";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rt-net-gbp";
+        repo = "rt_usb_9axisimu_driver-release";
+        rev = "release/melodic/rt_usb_9axisimu_driver/1.0.1-1";
+        sha256 = "sha256-Mq8KbH32cTlyZtFtTyi+RLSQXhupXHtrsjeItyRVA+8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

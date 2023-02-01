@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-global-planner-tests";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/global_planner_tests/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "1efd62a2479f2356edb5ade328ea03f1ce3e1b14b7d20d00b90063dec919bc24";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/melodic/global_planner_tests/0.3.0-1";
+        sha256 = "sha256-KYuVFQT7UB5CQhx8UHiKd0TXJxPicUr4MoKaNVW0/i4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

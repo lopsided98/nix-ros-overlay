@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-bond";
   version = "1.8.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/bond_core-release/archive/release/melodic/bond/1.8.5-1.tar.gz";
-    name = "1.8.5-1.tar.gz";
-    sha256 = "00cca5d8b5846117fbee1ea21357699472208d690f6acbb1510500c7a4980af7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "bond_core-release";
+        rev = "release/melodic/bond/1.8.5-1";
+        sha256 = "sha256-lNkm0wR4bKzS/p4ZuV1+g2h2F+MiH0a91oPiVv3Rf1w=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-moveit-ros-perception";
   version = "2.2.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_ros_perception/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "ba1884f8bfe96a25754f32f33082f945b721c28ed8d707f1d66eb7b2dee82ef1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "moveit2-release";
+        rev = "release/foxy/moveit_ros_perception/2.2.3-1";
+        sha256 = "sha256-dRfSf+euoYj/U313JbkpGFLMdylHY1Gwu9BMuHCQeQs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake eigen moveit-common ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rc-reason-msgs";
   version = "0.2.1-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_reason_clients-release/archive/release/rolling/rc_reason_msgs/0.2.1-3.tar.gz";
-    name = "0.2.1-3.tar.gz";
-    sha256 = "b6ab735ee4abfc86fe4071d6f95b19d4c9f5356ad0c95699f1dd5e588a3acf81";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rc_reason_clients-release";
+        rev = "release/rolling/rc_reason_msgs/0.2.1-3";
+        sha256 = "sha256-/5aKBHyw2TFvQb2O/UJaDxIJJ9vbLwTMAz77XMRKEww=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

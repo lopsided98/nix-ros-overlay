@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-odometry-publisher-tutorial";
   version = "0.2.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_tutorials-release/archive/release/melodic/odometry_publisher_tutorial/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "527ce0ada618e0e9a3109b743ceb896dd43f53e32acbe8bd948bf5cd82b23748";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation_tutorials-release";
+        rev = "release/melodic/odometry_publisher_tutorial/0.2.4-1";
+        sha256 = "sha256-ni3mdnTCL+KQ5sCxHZ4ClJy9wYwpVomDRicHVCSb4ZY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

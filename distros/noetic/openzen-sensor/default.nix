@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-openzen-sensor";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/lp-research/openzen_sensor-release/archive/release/noetic/openzen_sensor/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "d2a6931e13d2e6ddb0623a71397a4e9408335ec109831f0aeff988b46414f85c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "lp-research";
+        repo = "openzen_sensor-release";
+        rev = "release/noetic/openzen_sensor/1.2.0-1";
+        sha256 = "sha256-cywFqPpxCyoovfWUGDFODjiWMGbey98y3cAlR4U9jTA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

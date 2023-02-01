@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb1, nlohmann_json, opencv, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-depthai";
-  version = "2.19.1-r1";
+  version = "2.20.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/luxonis/depthai-core-release/archive/release/humble/depthai/2.19.1-1.tar.gz";
-    name = "2.19.1-1.tar.gz";
-    sha256 = "fa76fab7cfc432b13de859ec597a9abf28a3b3be4b766f1493122166648d9ea0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "luxonis";
+        repo = "depthai-core-release";
+        rev = "release/humble/depthai/2.20.1-1";
+        sha256 = "sha256-D6DnHY97UeGjzvx/NpYhNdvl92DNmrtjBeDmttX099E=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment ];

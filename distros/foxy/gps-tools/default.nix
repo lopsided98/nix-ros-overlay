@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-gps-tools";
   version = "1.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/foxy/gps_tools/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "3223365ce0c5438a0b785159b7b257e81c35dfb8ec96190e27c1285bbd8888d0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "gps_umd-release";
+        rev = "release/foxy/gps_tools/1.0.6-1";
+        sha256 = "sha256-Q1+2FD0R1L6kO3uZJ34rigFlSnvbzBK+/l4vBCL4b3c=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];

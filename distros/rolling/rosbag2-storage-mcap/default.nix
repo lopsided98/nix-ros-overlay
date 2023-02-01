@@ -2,20 +2,24 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-gmock, ament-index-cpp, ament-lint-auto, ament-lint-common, mcap-vendor, pluginlib, rcpputils, rcutils, rosbag2-cpp, rosbag2-storage, rosbag2-storage-mcap-testdata, rosbag2-test-common, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-gmock, ament-index-cpp, ament-lint-auto, ament-lint-common, mcap-vendor, pluginlib, rcpputils, rcutils, rosbag2-storage, rosbag2-storage-mcap-testdata, rosbag2-test-common, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rosbag2-storage-mcap";
-  version = "0.5.0-r1";
+  version = "0.19.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2_storage_mcap-release/archive/release/rolling/rosbag2_storage_mcap/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "6e4fd52ea6952bb629eb6945144b48f7c142e5f54ec222ee0c8fab6d5a648251";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosbag2-release";
+        rev = "release/rolling/rosbag2_storage_mcap/0.19.0-1";
+        sha256 = "sha256-/FjivKPu6H7WwCv7HHPHsk91Gp6RWoqiT4ZrPAjCVl0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-clang-format ament-cmake-gmock ament-lint-auto ament-lint-common rcpputils rosbag2-cpp rosbag2-storage-mcap-testdata rosbag2-test-common std-msgs ];
+  checkInputs = [ ament-cmake-clang-format ament-cmake-gmock ament-lint-auto ament-lint-common rcpputils rosbag2-storage-mcap-testdata rosbag2-test-common std-msgs ];
   propagatedBuildInputs = [ ament-index-cpp mcap-vendor pluginlib rcutils rosbag2-storage ];
   nativeBuildInputs = [ ament-cmake ];
 

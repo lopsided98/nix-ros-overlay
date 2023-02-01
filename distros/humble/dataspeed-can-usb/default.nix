@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-dataspeed-can-usb";
   version = "2.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/humble/dataspeed_can_usb/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "c334aa91fe85651e5dca8946159ac45c98804847799f598ac1a4fbd95dd4975d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dataspeed_can-release";
+        rev = "release/humble/dataspeed_can_usb/2.0.1-1";
+        sha256 = "sha256-ydTwDeP2cNM8nLY8vHK6lkU+AoPQElN7C3xc7yaOoqc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

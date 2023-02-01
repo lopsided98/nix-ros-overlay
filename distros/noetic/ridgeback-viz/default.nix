@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ridgeback-viz";
   version = "0.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback_desktop-release/archive/release/noetic/ridgeback_viz/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "f40b89e9929355928dfa35189b5091ed9eedcdb0aee40dc95a912ba35db2bc37";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "ridgeback_desktop-release";
+        rev = "release/noetic/ridgeback_viz/0.1.3-1";
+        sha256 = "sha256-AvOgkIebvPzXU78zKHIewcdgm3AAee2vpGI86zL6RV8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmw-connext-cpp";
   version = "1.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_connext-release/archive/release/foxy/rmw_connext_cpp/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "e8f2d56f11d3530a8561d48b2af64a26763d26c5712c114bca9628b214fd180a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmw_connext-release";
+        rev = "release/foxy/rmw_connext_cpp/1.0.3-1";
+        sha256 = "sha256-J0s/U3f69GIa3K10zfUkVDcwmKHaYHILO3KZptvOjXQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ rosidl-generator-dds-idl ];

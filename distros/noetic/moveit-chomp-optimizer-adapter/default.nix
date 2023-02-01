@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-chomp-optimizer-adapter";
   version = "1.1.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_chomp_optimizer_adapter/1.1.11-1.tar.gz";
-    name = "1.1.11-1.tar.gz";
-    sha256 = "e0d9989e14a21150f9261e1f75827ea74f86e7341a70cfa5da6f7da8e257b038";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/noetic/moveit_chomp_optimizer_adapter/1.1.11-1";
+        sha256 = "sha256-1/aElHNnaGWwkxF4GoZQrHkpf5AfRv3w6j+XbESDB/Y=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

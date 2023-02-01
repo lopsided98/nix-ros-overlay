@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-bcap-service";
   version = "3.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/bcap_service/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "efe083be1456bd1c3ac217153fbdffe51dae85a3927497d7d59691595e996ae6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DENSORobot";
+        repo = "denso_robot_ros-release";
+        rev = "release/melodic/bcap_service/3.2.0-1";
+        sha256 = "sha256-iQz7RYpfb1ele/vf5atJLtOnSZZs9LrkF5UyAK1Q00A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

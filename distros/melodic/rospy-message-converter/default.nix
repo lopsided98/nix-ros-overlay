@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rospy-message-converter";
   version = "0.5.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/rospy_message_converter-release/archive/release/melodic/rospy_message_converter/0.5.9-1.tar.gz";
-    name = "0.5.9-1.tar.gz";
-    sha256 = "87f060cdd07e2216fbda60ba3f5c3a55b8e4d202a4faeedb6dc9ea71caf546c9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "rospy_message_converter-release";
+        rev = "release/melodic/rospy_message_converter/0.5.9-1";
+        sha256 = "sha256-/QmKoz7Y/DE3g/dz535r6vkFH/k92V6DebqapX0gqeU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

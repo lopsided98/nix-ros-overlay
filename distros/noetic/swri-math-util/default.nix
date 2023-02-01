@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-swri-math-util";
   version = "2.15.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_math_util/2.15.2-1.tar.gz";
-    name = "2.15.2-1.tar.gz";
-    sha256 = "a4e5b19bcae98a22ea9d831b53b25c3ec7978b25a6594cf781e6eecdb58d8687";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "marti_common-release";
+        rev = "release/noetic/swri_math_util/2.15.2-1";
+        sha256 = "sha256-Vz20syGZfrKA+Ib0b8BJM/nTaOfN6CxtEVArXkT8dwE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

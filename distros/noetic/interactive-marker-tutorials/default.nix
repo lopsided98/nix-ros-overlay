@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-interactive-marker-tutorials";
   version = "0.11.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/noetic/interactive_marker_tutorials/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "aeb1dd43c1cc86c20755d73500ee277b9bbe9355d6a5cae09427bbbbc47f5dcb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "visualization_tutorials-release";
+        rev = "release/noetic/interactive_marker_tutorials/0.11.0-1";
+        sha256 = "sha256-bi/qAOq07zSTf3W+JoQEozv0o2S+54fPw/HLhJ/Vvs8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

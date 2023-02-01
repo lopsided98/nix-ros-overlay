@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-spacenav-node";
   version = "1.15.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/joystick_drivers-release/archive/release/noetic/spacenav_node/1.15.1-1.tar.gz";
-    name = "1.15.1-1.tar.gz";
-    sha256 = "8ef279005e45b2f083cf23b15ccf1ab440e601f7bf2ae194deda441c20396a9e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "joystick_drivers-release";
+        rev = "release/noetic/spacenav_node/1.15.1-1";
+        sha256 = "sha256-yOi02IrhCc33VsQX0QO4nm0HAZnDJoaOTNWIsVezA0k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

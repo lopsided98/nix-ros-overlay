@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-qpmad";
   version = "1.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/asherikov/qpmad-release/archive/release/melodic/qpmad/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "1be4d73c57ea15ec2c65241d783e2f93f881083138da4b1982e9a6c730743683";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "asherikov";
+        repo = "qpmad-release";
+        rev = "release/melodic/qpmad/1.0.2-1";
+        sha256 = "sha256-E+0gbE4lyVwlvDoGnPsuYtOv2ZdWZ+3W/MRMByasR1s=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

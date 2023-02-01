@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rm-gazebo";
   version = "0.1.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rm-controls/rm_control-release/archive/release/noetic/rm_gazebo/0.1.15-1.tar.gz";
-    name = "0.1.15-1.tar.gz";
-    sha256 = "e03de15c8cafe40eb076e07720da1c7c041d6f830af60ca26a033c623de212a9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rm-controls";
+        repo = "rm_control-release";
+        rev = "release/noetic/rm_gazebo/0.1.15-1";
+        sha256 = "sha256-jbEHSGzoN6OXTj+HriD6VHvDqZa/RIDgTl4l7yGUfTg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robot-body-filter";
   version = "1.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/peci1/robot_body_filter-release/archive/release/melodic/robot_body_filter/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "8522c45afb9acfc59b1f6a247d3d458dba2a2ff1fd6d0bcf70c48868abd33915";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "peci1";
+        repo = "robot_body_filter-release";
+        rev = "release/melodic/robot_body_filter/1.2.2-1";
+        sha256 = "sha256-FOKTaqcAj+/wnxtKFX6UbIEfvQRFz+2iIVBTJBml7m4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation pkg-config tf2-eigen tf2-sensor-msgs ];

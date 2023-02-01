@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mir-driver";
   version = "1.0.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_driver/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "784746070a1109b8fe6506717d4d9d79731c6a00ca358924b4ab400a3aaa47b1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mir_robot-release";
+        rev = "release/melodic/mir_driver/1.0.8-1";
+        sha256 = "sha256-fezVezsRzj1EsW9u8g28l7V/7+it6yJ1out3b/Zm5XA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

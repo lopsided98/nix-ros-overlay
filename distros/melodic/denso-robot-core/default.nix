@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-denso-robot-core";
   version = "3.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/denso_robot_core/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "c2823db29c7191e68ed73cd9e44f134dd0bed78fcbe2e5f0ad5a47ded3292b1d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DENSORobot";
+        repo = "denso_robot_ros-release";
+        rev = "release/melodic/denso_robot_core/3.2.0-1";
+        sha256 = "sha256-DmKLgvuGgu+y3/nL2XJioUK9qmugv5JdMnek9TwYt2s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rmw-dds-common";
   version = "1.6.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_dds_common-release/archive/release/humble/rmw_dds_common/1.6.0-2.tar.gz";
-    name = "1.6.0-2.tar.gz";
-    sha256 = "d2ae60d3c4751a03a868b3b0635c96ef12b4b7354db751a91c26666993e5e450";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmw_dds_common-release";
+        rev = "release/humble/rmw_dds_common/1.6.0-2";
+        sha256 = "sha256-Q4i60TiYXYrxyZG2wPLEOe4KNP6iZSgL2Ygnv54zwTM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-py-console";
   version = "0.4.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_py_console-release/archive/release/noetic/rqt_py_console/0.4.10-1.tar.gz";
-    name = "0.4.10-1.tar.gz";
-    sha256 = "daf9be587966164b916b8a33de9d10d4e78db010228c6fc50ee63f511190874c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_py_console-release";
+        rev = "release/noetic/rqt_py_console/0.4.10-1";
+        sha256 = "sha256-RdwBBkLlvONSWAyUNQ3qC4/qbu4bEy4shUM7Pie9qUc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

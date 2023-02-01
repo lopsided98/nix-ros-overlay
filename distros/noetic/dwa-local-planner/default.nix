@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, angles, base-local-planner, catkin, cmake-modules, costmap-2d, dynamic-reconfigure, eigen, nav-core, nav-msgs, pluginlib, roscpp, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-dwa-local-planner";
-  version = "1.17.2-r1";
+  version = "1.17.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/dwa_local_planner/1.17.2-1.tar.gz";
-    name = "1.17.2-1.tar.gz";
-    sha256 = "7a33aea335a10418c1df4816fbfc210c423151784bec50aad9c749d580b8d737";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation-release";
+        rev = "release/noetic/dwa_local_planner/1.17.3-1";
+        sha256 = "sha256-P3o42x7I5xpja/gYopUkRMpOApvK7pXe4bmvtonLhow=";
+      };
 
   buildType = "catkin";
   buildInputs = [ angles catkin cmake-modules ];

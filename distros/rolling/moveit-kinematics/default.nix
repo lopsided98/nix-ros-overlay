@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-moveit-kinematics";
   version = "2.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/rolling/moveit_kinematics/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "2fc2e92c1b283802525a5e5ec4b47ed6301b978eeddf071378f8ec00c8d7b55a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "moveit2-release";
+        rev = "release/rolling/moveit_kinematics/2.6.0-1";
+        sha256 = "sha256-lGeOClCZQ6w8pprggEgAL0Atrct5Rdow89hopD0Tt5o=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

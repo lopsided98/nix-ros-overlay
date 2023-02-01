@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mrpt-sensorlib";
   version = "0.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_sensors-release/archive/release/noetic/mrpt_sensorlib/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "c70391dffc776e5b5cdac8106d8829aaa22d1b62c3a73c60027e348f3e828d7a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mrpt-ros-pkg-release";
+        repo = "mrpt_sensors-release";
+        rev = "release/noetic/mrpt_sensorlib/0.0.2-1";
+        sha256 = "sha256-qSgppjhZk98hlF7X1tscTHmd6lnIQTJkpO9MpADFCx4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

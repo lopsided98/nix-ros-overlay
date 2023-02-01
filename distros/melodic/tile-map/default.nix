@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tile-map";
   version = "1.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/melodic/tile_map/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "b8dff88df9fe3838b14c477a6d9ac3ae00085e8deb0b7d58ddd37130e32582f4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "mapviz-release";
+        rev = "release/melodic/tile_map/1.4.2-1";
+        sha256 = "sha256-avDvm2BvpzVJJJ88DPTJesFdIznBLyQRyZ12ycmBt7A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

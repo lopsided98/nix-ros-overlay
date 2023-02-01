@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-eigen3-cmake-module";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/eigen3_cmake_module-release/archive/release/rolling/eigen3_cmake_module/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "e927a8bb63420ea16ccc83cf84a3153cee3f40a56390d251d8e093d67cadf26a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "eigen3_cmake_module-release";
+        rev = "release/rolling/eigen3_cmake_module/0.2.1-1";
+        sha256 = "sha256-HYzm0DrBm9AT+4eYJ6+turdRGtO4umPzTYfi/s/x3g4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

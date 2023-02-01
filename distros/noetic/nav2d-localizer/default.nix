@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-nav2d-localizer";
   version = "0.4.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/skasperski/navigation_2d-release/archive/release/noetic/nav2d_localizer/0.4.3-1.tar.gz";
-    name = "0.4.3-1.tar.gz";
-    sha256 = "aba652974782ebc680b0a5d18ecee1a85de899cc0983c5078957febae191a32c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "skasperski";
+        repo = "navigation_2d-release";
+        rev = "release/noetic/nav2d_localizer/0.4.3-1";
+        sha256 = "sha256-VwXUv3GG7RwYQxcRtQJUzdkNpOTpaEtsxyGuv3OBoWo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rqt-rviz";
   version = "0.7.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_rviz-release/archive/release/melodic/rqt_rviz/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "b9fcb50156f163d73e52c3128524dfac04c4bfecfe76562926aa7780e9adf6b3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_rviz-release";
+        rev = "release/melodic/rqt_rviz/0.7.0-1";
+        sha256 = "sha256-cLQ60gEfaxRNz4XGfHoKBMRaEmfD13y6zMBL7bUv84c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin class-loader qt5.qtbase ];

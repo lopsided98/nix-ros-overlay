@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-map-server";
   version = "1.16.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/map_server/1.16.7-1.tar.gz";
-    name = "1.16.7-1.tar.gz";
-    sha256 = "57c651e27c64c1edab5808e206dbc0e16c702161f73ee895da6efd96288e7234";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation-release";
+        rev = "release/melodic/map_server/1.16.7-1";
+        sha256 = "sha256-NKlENVIFRWA+C7P9xDYTruzg4qAigj3B/+1aVEIFtY0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

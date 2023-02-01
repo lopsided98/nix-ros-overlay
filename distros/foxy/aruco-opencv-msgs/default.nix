@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-aruco-opencv-msgs";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/aruco_opencv-release/archive/release/foxy/aruco_opencv_msgs/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "a2fff398ce13fb4cda9164896779dc49981baa1b2226ac1d60d80170667e1433";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "aruco_opencv-release";
+        rev = "release/foxy/aruco_opencv_msgs/1.0.1-1";
+        sha256 = "sha256-2Nxmq4K3Q0wikPLbsJYcIL+v6kk1pAPlRdLaM5XH/+c=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

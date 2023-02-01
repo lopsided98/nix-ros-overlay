@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-velodyne-laserscan";
   version = "1.5.2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/melodic/velodyne_laserscan/1.5.2-0.tar.gz";
-    name = "1.5.2-0.tar.gz";
-    sha256 = "7a79ee1a1f2efe7e9e20695fea816a595f442ad661d13a345a918df1a9e39fa3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "velodyne-release";
+        rev = "release/melodic/velodyne_laserscan/1.5.2-0";
+        sha256 = "sha256-LISO6VfJLss9S8piAk63retsVjwjvcvCcZUByz+sf4g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

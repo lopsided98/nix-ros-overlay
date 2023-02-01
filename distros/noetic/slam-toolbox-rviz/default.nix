@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-slam-toolbox-rviz";
   version = "1.5.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/slam_toolbox-release/archive/release/noetic/slam_toolbox_rviz/1.5.7-1.tar.gz";
-    name = "1.5.7-1.tar.gz";
-    sha256 = "6e386f21987e672b991209e1be7a2e87e9c7c129abc9266f9d9b051f2bfaa723";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "slam_toolbox-release";
+        rev = "release/noetic/slam_toolbox_rviz/1.5.7-1";
+        sha256 = "sha256-/WUb/nswpJv8P+5dtYOd8F0l5PoUKqOCp3yF53Mk+Mc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

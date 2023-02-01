@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rm-orientation-controller";
   version = "0.1.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/rm_orientation_controller/0.1.7-1.tar.gz";
-    name = "0.1.7-1.tar.gz";
-    sha256 = "3e68a608f0bfb6b249c99e22f4aa185a2080f18583925526e5f67cea4198ae1e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rm-controls";
+        repo = "rm_controllers-release";
+        rev = "release/noetic/rm_orientation_controller/0.1.7-1";
+        sha256 = "sha256-z7w7B7LTxs3dJhAiuEMX2BAl/un979mJwh8zJtMD2gA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

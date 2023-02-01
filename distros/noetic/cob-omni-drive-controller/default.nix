@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, angles, boost, catkin, cob-base-controller-utils, controller-interface, dynamic-reconfigure, geometry-msgs, hardware-interface, nav-msgs, pluginlib, realtime-tools, roscpp, sensor-msgs, std-msgs, std-srvs, tf, tf2, urdf }:
 buildRosPackage {
   pname = "ros-noetic-cob-omni-drive-controller";
-  version = "0.8.20-r1";
+  version = "0.8.21-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_omni_drive_controller/0.8.20-1.tar.gz";
-    name = "0.8.20-1.tar.gz";
-    sha256 = "2f7215f82edf7f0047e61f0ffd212cc92ec419e128611424b736ec44dc842917";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_control-release";
+        rev = "release/noetic/cob_omni_drive_controller/0.8.21-1";
+        sha256 = "sha256-gGbEaCHwe4xdwKMzGgQWeCZ+9C3RHTWvmP0iaDC7jGM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

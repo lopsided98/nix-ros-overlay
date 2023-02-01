@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-gazebo-plugins";
   version = "2.8.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/gazebo_plugins/2.8.7-1.tar.gz";
-    name = "2.8.7-1.tar.gz";
-    sha256 = "625b943a9b31c39631b7af384aff458903170b38a252424ea1f259228d0114f8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "gazebo_ros_pkgs-release";
+        rev = "release/melodic/gazebo_plugins/2.8.7-1";
+        sha256 = "sha256-5TTme8cZcaczl+zlQeVLslrD118UuLwBMMSJV9ED6sU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

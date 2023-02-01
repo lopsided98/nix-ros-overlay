@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-move-base-sequence";
   version = "0.0.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/MarkNaeem/move_base_sequence-release/archive/release/melodic/move_base_sequence/0.0.1-2.tar.gz";
-    name = "0.0.1-2.tar.gz";
-    sha256 = "0dd3d48f276425cf5c51be52e9845c7732e9a988a5c07456e3e63ca8e8e91f99";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "MarkNaeem";
+        repo = "move_base_sequence-release";
+        rev = "release/melodic/move_base_sequence/0.0.1-2";
+        sha256 = "sha256-oqxbZ5bmLpaSRgmTv/7TyipOXVPQgGUxoqsJpVR2hs0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

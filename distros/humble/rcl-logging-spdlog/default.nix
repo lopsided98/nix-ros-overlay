@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rcl-logging-spdlog";
   version = "2.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/humble/rcl_logging_spdlog/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "688f354b2b4dee1b7c00123a4a61c3eeb02c95e2cc020213efc6bb8f7f474170";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcl_logging-release";
+        rev = "release/humble/rcl_logging_spdlog/2.3.1-1";
+        sha256 = "sha256-mdIICS8v4njC0+FRKpzz93HaVZmfalZCUoIdUnGbgJ8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

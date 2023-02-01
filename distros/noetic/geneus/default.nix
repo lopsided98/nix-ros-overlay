@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-geneus";
   version = "3.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/geneus-release/archive/release/noetic/geneus/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "ff5b138e338c71c9be13e2a426b76e274bf9eb28b3a7f9c3e48d1019816b6ba8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "geneus-release";
+        rev = "release/noetic/geneus/3.0.0-1";
+        sha256 = "sha256-p/HgY3tR98Dq1bbT6ipQdZJgUhXQcfVAlDLp3QxHUko=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-xpp-vis";
   version = "1.0.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/leggedrobotics/xpp-release/archive/release/noetic/xpp_vis/1.0.10-1.tar.gz";
-    name = "1.0.10-1.tar.gz";
-    sha256 = "b421fcd1fc81fd9db475406fcf042fc59f6de51bdac34b282e46c430926bd37f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "leggedrobotics";
+        repo = "xpp-release";
+        rev = "release/noetic/xpp_vis/1.0.10-1";
+        sha256 = "sha256-AHVyk9igM9Bt87Es87HfMaDs530HGaX05Obv1uehiJg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

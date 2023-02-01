@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-mannequin-mode";
   version = "0.6.1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_apps-release/archive/release/melodic/pr2_mannequin_mode/0.6.1-0.tar.gz";
-    name = "0.6.1-0.tar.gz";
-    sha256 = "bd942a926267442a2232ac55b6019f8aa0e6494879ca4030ab18837c93e1f37f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_apps-release";
+        rev = "release/melodic/pr2_mannequin_mode/0.6.1-0";
+        sha256 = "sha256-eRgSygOIIIMOASynRFFFyBPMDVyEhYtBPQ1C9IruVVs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

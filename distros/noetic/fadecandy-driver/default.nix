@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fadecandy-driver";
   version = "0.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/iron-ox/fadecandy_ros-release/archive/release/noetic/fadecandy_driver/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "5c394c5199a5bbb0fc45a5229d0cd16629438feec207996af14d0c57a114f2f4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "iron-ox";
+        repo = "fadecandy_ros-release";
+        rev = "release/noetic/fadecandy_driver/0.2.2-1";
+        sha256 = "sha256-KjXoanwjRLMiPl78FpQ3TzhmW5ET2emuUs6IDKvYA+Y=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

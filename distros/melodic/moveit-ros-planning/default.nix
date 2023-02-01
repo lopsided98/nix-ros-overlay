@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-moveit-ros-planning";
   version = "1.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_planning/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "5ebd50c9121fb9f374206223ccd44c532d41144e98a663369ccd514bca7f3564";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/melodic/moveit_ros_planning/1.0.11-1";
+        sha256 = "sha256-xBCaCQr15dFFeWSqboulXD1Y9+hjtskAx1IIghFw9Vk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin eigen ];

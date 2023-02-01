@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-topic-tools-interfaces";
   version = "1.0.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/humble/topic_tools_interfaces/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "6e68d8fee9e39482da8aa56ba90086f41f79500ab073bc260216f5b6afb38676";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "topic_tools-release";
+        rev = "release/humble/topic_tools_interfaces/1.0.0-2";
+        sha256 = "sha256-jgnfd+kmIaH/wQmVa5MUEaJ9j+SDBphMz9LbGAr2uIA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto rosidl-default-generators ];

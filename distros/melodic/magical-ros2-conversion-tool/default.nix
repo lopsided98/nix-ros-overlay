@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-magical-ros2-conversion-tool";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/wu-robotics/roscompile-release/archive/release/melodic/magical_ros2_conversion_tool/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "64f1110ed8827dd7a8bf2d5336683dde212b891b2bc023e09cc424125e147dcc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wu-robotics";
+        repo = "roscompile-release";
+        rev = "release/melodic/magical_ros2_conversion_tool/1.2.1-1";
+        sha256 = "sha256-KXRVv6k4iuuI5LLTLHu4uA4foaVsYWfJQ/2RtcPD8RE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-kobuki-dock-drive";
   version = "0.7.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/noetic/kobuki_dock_drive/0.7.12-1.tar.gz";
-    name = "0.7.12-1.tar.gz";
-    sha256 = "09bfee1de3dd1c0c372a4148546db5ec2b1750513c6f6fef419ee0e39288983f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "kobuki_core-release";
+        rev = "release/noetic/kobuki_dock_drive/0.7.12-1";
+        sha256 = "sha256-hv4seL1TnWeg/AzXHsXU6avtUCMupu0l9zvKZHZzlgM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ecl-build ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ecl-time-lite";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_lite-release/archive/release/foxy/ecl_time_lite/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "f6e53e5fdcb6ae15de797a288c812aa5dc9dbca043696488ed2f992256a1819b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "ecl_lite-release";
+        rev = "release/foxy/ecl_time_lite/1.1.0-1";
+        sha256 = "sha256-F7hnvoqFjhxfBRPDfxL4eEIuJbjRYwbug7duZli7tis=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-freight-bringup";
   version = "0.8.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_robots-release/archive/release/melodic/freight_bringup/0.8.9-1.tar.gz";
-    name = "0.8.9-1.tar.gz";
-    sha256 = "7b06775c7543e57a19625778ee7165df819dcf336947f32b751772a841c6cc78";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "fetch_robots-release";
+        rev = "release/melodic/freight_bringup/0.8.9-1";
+        sha256 = "sha256-P/Khu8Gaxe+8qG1r2Mdt0SfXWEYoBjwBYkfK6D3v+5s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

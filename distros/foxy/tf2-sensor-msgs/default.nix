@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-tf2-sensor-msgs";
   version = "0.13.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/foxy/tf2_sensor_msgs/0.13.13-1.tar.gz";
-    name = "0.13.13-1.tar.gz";
-    sha256 = "72fcb7a89cc8886efa3e07ec8f8093a10ea4563bb20bd909d170ecc990fe5469";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "geometry2-release";
+        rev = "release/foxy/tf2_sensor_msgs/0.13.13-1";
+        sha256 = "sha256-OpJuZS11fg+eKkt72N5vI5l5n+Km6571GdbT2nBdbeA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-quanergy-client-ros";
   version = "4.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/QuanergySystems/quanergy_client_ros-release/archive/release/melodic/quanergy_client_ros/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "e93e0ae57bbbc6819454155c86e139d73706ea44e0f1ef9af6cb39416fe8e9b4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "QuanergySystems";
+        repo = "quanergy_client_ros-release";
+        rev = "release/melodic/quanergy_client_ros/4.0.1-1";
+        sha256 = "sha256-PWFYfKcMTOwDw7g5rHruzrBcX5EFJEsNr5zD+x2IisU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

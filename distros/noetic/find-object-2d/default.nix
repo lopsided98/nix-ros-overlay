@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-find-object-2d";
   version = "0.7.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/introlab/find_object_2d-release/archive/release/noetic/find_object_2d/0.7.0-2.tar.gz";
-    name = "0.7.0-2.tar.gz";
-    sha256 = "704099801e897cec9bb812ca9e1ec89ab4d586ee8adb8427a07caa4a318be6b4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "introlab";
+        repo = "find_object_2d-release";
+        rev = "release/noetic/find_object_2d/0.7.0-2";
+        sha256 = "sha256-SaO74TFbaUB9XOb29ldwM0tRjIS2S+otZ3fsB2mO++s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-schunk-modular-robotics";
   version = "0.6.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/melodic/schunk_modular_robotics/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "5ff696b3e27fafc12fd26ae1f0f013306d65382a9b463a6b7c4c6d9ad9755f03";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "schunk_modular_robotics-release";
+        rev = "release/melodic/schunk_modular_robotics/0.6.14-1";
+        sha256 = "sha256-Z+6LdOA56MdhIkPLmMNsNbeiQ3LYvICqOiwFj7fQdn4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

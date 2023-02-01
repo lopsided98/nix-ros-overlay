@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dynamic-robot-state-publisher";
   version = "1.1.1";
 
-  src = fetchurl {
-    url = "https://github.com/peci1/dynamic_robot_state_publisher-release/archive/release/melodic/dynamic_robot_state_publisher/1.1.1-0.tar.gz";
-    name = "1.1.1-0.tar.gz";
-    sha256 = "d31428da9f939d33337bd61e9cefca16a4d820d208c3d75637999dc912d6629e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "peci1";
+        repo = "dynamic_robot_state_publisher-release";
+        rev = "release/melodic/dynamic_robot_state_publisher/1.1.1-0";
+        sha256 = "sha256-EmDpoWBb6zz4LdPdP3HWXsKRRfIVf8mo+439mgi/Cxc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

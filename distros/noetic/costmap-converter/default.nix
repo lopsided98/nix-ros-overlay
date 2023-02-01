@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-costmap-converter";
   version = "0.0.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rst-tu-dortmund/costmap_converter-release/archive/release/noetic/costmap_converter/0.0.13-1.tar.gz";
-    name = "0.0.13-1.tar.gz";
-    sha256 = "1fc08ca45b83e4fc557b9b34b5f3fb1684af9a87dabd655fc72a1f3106f26d1d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rst-tu-dortmund";
+        repo = "costmap_converter-release";
+        rev = "release/noetic/costmap_converter/0.0.13-1";
+        sha256 = "sha256-0ks1nT5DMSkuhdq8Y37kdFLSp2gwatQDCjlCnRPJnwI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ros-numpy";
   version = "0.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/eric-wieser/ros_numpy-release/archive/release/melodic/ros_numpy/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "2db40c8a7b9a22d6549cddf49c74ab88285ea20b1c9afecbad3e3f2d53a8b451";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "eric-wieser";
+        repo = "ros_numpy-release";
+        rev = "release/melodic/ros_numpy/0.0.3-1";
+        sha256 = "sha256-+QchJ7zFWfZIrnc6LG3CKmuJ0jd125PL9E+yKn8cO0c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

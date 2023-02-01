@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-launch-pytest";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch-release/archive/release/rolling/launch_pytest/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "f5c38da07d4bb2b526ad42735a37ffea1ff2d64d7eb2003a51577de7a6642c90";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "launch-release";
+        rev = "release/rolling/launch_pytest/1.3.0-1";
+        sha256 = "sha256-dIBgct0wFQtysqy8O3qZoDJ/ZEaocsIAvRiIHhW0DgM=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 launch ];

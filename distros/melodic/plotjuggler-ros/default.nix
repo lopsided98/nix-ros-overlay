@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-plotjuggler-ros";
   version = "1.7.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PlotJuggler/plotjuggler-ros-plugins-release/archive/release/melodic/plotjuggler_ros/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "fe397262c02adcf66c4d02cb76fb1711c26d52ec54f7d376594da403cbf5e3cd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PlotJuggler";
+        repo = "plotjuggler-ros-plugins-release";
+        rev = "release/melodic/plotjuggler_ros/1.7.0-1";
+        sha256 = "sha256-kL86S4hw8+vC32Dh0EgrWHXUQPY2iPGT3vVRD9EN3PI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

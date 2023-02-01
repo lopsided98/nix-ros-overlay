@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosserial-vex-v5";
   version = "0.8.0";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rosserial-release/archive/release/melodic/rosserial_vex_v5/0.8.0-0.tar.gz";
-    name = "0.8.0-0.tar.gz";
-    sha256 = "4f28ad67afe3ee95fc74913159fcf5c1121049490b7ab7cb95721ccd04122c80";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rosserial-release";
+        rev = "release/melodic/rosserial_vex_v5/0.8.0-0";
+        sha256 = "sha256-bZhVaHmZIwxC3Q6XNnnZI2eWZ9cWSYFXRH6c0hz2R8g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-behaviortree-cpp";
   version = "2.5.1";
 
-  src = fetchurl {
-    url = "https://github.com/BehaviorTree/behaviortree_cpp-release/archive/release/melodic/behaviortree_cpp/2.5.1-0.tar.gz";
-    name = "2.5.1-0.tar.gz";
-    sha256 = "cd1af27ccb2e5763fa4e9f02e23edf77fca7d1894d013a0d932e7f5ad05d337c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "BehaviorTree";
+        repo = "behaviortree_cpp-release";
+        rev = "release/melodic/behaviortree_cpp/2.5.1-0";
+        sha256 = "sha256-0zmtXVWficoB3G4ZPBijEZPgzWqPtCNIH7CCLS3z/90=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

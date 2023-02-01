@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-bondcpp";
   version = "4.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/rolling/bondcpp/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "2132660acbb1b55b3ca00b33f211d669f2d3568e66c3687183fbcea344283360";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "bond_core-release";
+        rev = "release/rolling/bondcpp/4.0.0-1";
+        sha256 = "sha256-wy3kCL86JrjYj9NSdQSoElNk2Av00ERKHmxi5+16hNU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pkg-config ];

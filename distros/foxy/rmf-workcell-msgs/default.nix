@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmf-workcell-msgs";
   version = "1.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/foxy/rmf_workcell_msgs/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "20ef7de00f04af76311a4b12f1f03a3e12ef93533c364f4a26e59cf3a1953e54";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_internal_msgs-release";
+        rev = "release/foxy/rmf_workcell_msgs/1.4.0-1";
+        sha256 = "sha256-7ceVkXdVeIlNXF8DxmxSVAMdCARgDbbT1HtRXg5EP24=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

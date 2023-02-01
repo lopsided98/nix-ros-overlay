@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ros2lifecycle-test-fixtures";
   version = "0.9.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/foxy/ros2lifecycle_test_fixtures/0.9.12-1.tar.gz";
-    name = "0.9.12-1.tar.gz";
-    sha256 = "9351e2888e10b7e6b2ce4c3e1aee0ddcfbd8f62d4b77882de4a8c8b1e9f4cc1e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2cli-release";
+        rev = "release/foxy/ros2lifecycle_test_fixtures/0.9.12-1";
+        sha256 = "sha256-F8AjY4VN9HMFGmfJkZhlIg2Jf/xICWpZVi8zLCMJM84=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rosidl-runtime-py";
   version = "0.9.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_runtime_py-release/archive/release/humble/rosidl_runtime_py/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "74a677584c14e7f248efeef51889047be931de4ecfefab3b22897903f7a6b6f8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl_runtime_py-release";
+        rev = "release/humble/rosidl_runtime_py/0.9.3-1";
+        sha256 = "sha256-MUYbiVx360VWn/HJ8UHL02+QwvfOKxMZj+B+NvOLdHk=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint pythonPackages.pytest std-msgs std-srvs test-msgs ];

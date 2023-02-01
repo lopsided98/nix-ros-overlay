@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-euslisp";
   version = "9.29.0-r6";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/euslisp-release/archive/release/melodic/euslisp/9.29.0-6.tar.gz";
-    name = "9.29.0-6.tar.gz";
-    sha256 = "efe3908a6cc4183a28bcb0df8480fa00e08a3aa356d81e52c0d60ae84a744e33";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "euslisp-release";
+        rev = "release/melodic/euslisp/9.29.0-6";
+        sha256 = "sha256-ZD3x+K0Ua8kZhz45zxMaqU0A9DtR0RPZHEw3AsoyOsg=";
+      };
 
   buildType = "cmake";
   buildInputs = [ catkin cmake-modules mk ];

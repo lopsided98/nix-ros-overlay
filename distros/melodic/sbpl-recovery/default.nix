@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-sbpl-recovery";
   version = "0.3.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/melodic/sbpl_recovery/0.3.6-1.tar.gz";
-    name = "0.3.6-1.tar.gz";
-    sha256 = "2d38cd509a685ec31df2517ca2c45c79a424fb45ae76a29736f86168a4137ed6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation_experimental-release";
+        rev = "release/melodic/sbpl_recovery/0.3.6-1";
+        sha256 = "sha256-dx97MaDv5cWqDaPBd18pDrM1sWg/32CJB09bqdcvuDM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

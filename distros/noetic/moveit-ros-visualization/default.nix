@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-ros-visualization";
   version = "1.1.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_visualization/1.1.11-1.tar.gz";
-    name = "1.1.11-1.tar.gz";
-    sha256 = "b79088f0c19e546d2fa1f658d64a2071f96344b2630e63930066f6bba88e6d07";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/noetic/moveit_ros_visualization/1.1.11-1";
+        sha256 = "sha256-bGQiBlhpBw7hf8XmHfELNXbmk6V3jSOwDYYiXxXbHms=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin class-loader eigen ogre1_9 pkg-config qt5.qtbase ];

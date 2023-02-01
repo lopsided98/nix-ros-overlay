@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-nav2-system-tests";
   version = "0.4.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_system_tests/0.4.7-1.tar.gz";
-    name = "0.4.7-1.tar.gz";
-    sha256 = "988d32cb78d232496cba3f947c9ebaf9ed3e5a2cfbc431dd8a798e1df135aa69";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/foxy/nav2_system_tests/0.4.7-1";
+        sha256 = "sha256-3/T876RI7oyb3xbfMajT52jONyyK2SLbCgBAAIZJj/w=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake nav2-common ];

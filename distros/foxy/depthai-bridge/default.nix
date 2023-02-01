@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-depthai-bridge";
   version = "2.5.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/foxy/depthai_bridge/2.5.3-1.tar.gz";
-    name = "2.5.3-1.tar.gz";
-    sha256 = "6d064df6b638fcf2f0c0aa97221f2fd778656c5d50ad55695f4963ea2376bb0e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "luxonis";
+        repo = "depthai-ros-release";
+        rev = "release/foxy/depthai_bridge/2.5.3-1";
+        sha256 = "sha256-XrIGeRQUvCJEfBsQxcRwfkbocEEesqLGwDZ8LBkH0WY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

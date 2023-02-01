@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rostate-machine";
   version = "0.0.2-r3";
 
-  src = fetchurl {
-    url = "https://github.com/OUXT-Polaris/rostate_machine-release/archive/release/melodic/rostate_machine/0.0.2-3.tar.gz";
-    name = "0.0.2-3.tar.gz";
-    sha256 = "a7eae9ee6371319fc4b598f00322101431141a52b07ed6ef2c0ee5588a050253";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "OUXT-Polaris";
+        repo = "rostate_machine-release";
+        rev = "release/melodic/rostate_machine/0.0.2-3";
+        sha256 = "sha256-KN9F+u0MnkKKZreZNT7KaFkTrDi8f3NhLbmd5wMVrd4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

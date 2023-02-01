@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dnn-detect";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UbiquityRobotics-release/dnn_detect-release/archive/release/noetic/dnn_detect/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "d19a621cdb0b368a4f90b5bb7d8f0b85b6efbf70c64aa1dd52503a60a85de8c1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UbiquityRobotics-release";
+        repo = "dnn_detect-release";
+        rev = "release/noetic/dnn_detect/0.1.0-1";
+        sha256 = "sha256-ds47SUDZMjvdYPyA1eUrCQmY3sJf1+g9JZyQJYDQqa4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

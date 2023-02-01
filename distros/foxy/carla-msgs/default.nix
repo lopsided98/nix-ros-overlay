@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-carla-msgs";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/carla-simulator/ros-carla-msgs-release/archive/release/foxy/carla_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "7ac2b7863a08277506c55af3df35054cb441623002173e5b619155e44d05d97c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "carla-simulator";
+        repo = "ros-carla-msgs-release";
+        rev = "release/foxy/carla_msgs/1.3.0-1";
+        sha256 = "sha256-NTgm6pRu+Vv0vfOcZJd3y+UUP4VS3rzyU+ZdNre+prE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment rosidl-default-generators ];

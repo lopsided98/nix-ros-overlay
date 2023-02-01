@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-husky-msgs";
   version = "0.4.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_msgs/0.4.13-1.tar.gz";
-    name = "0.4.13-1.tar.gz";
-    sha256 = "92c90d180c3feb55f8631e019e58b38929ae867e0024d3938f4b8a806784069b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "husky-release";
+        rev = "release/melodic/husky_msgs/0.4.13-1";
+        sha256 = "sha256-LO6pW52tiTq8n0VJr5smMXhQJeEkcZN9JYwWwn6+nrk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

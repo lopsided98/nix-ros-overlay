@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rqt-drone-teleop";
   version = "1.3.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/JdeRobot/drones-release/archive/release/melodic/rqt_drone_teleop/1.3.10-1.tar.gz";
-    name = "1.3.10-1.tar.gz";
-    sha256 = "000740452eca47b8a6adc8b41ed7ccddd59b8f5572a2a8ee84cc0d906ad10a70";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "JdeRobot";
+        repo = "drones-release";
+        rev = "release/melodic/rqt_drone_teleop/1.3.10-1";
+        sha256 = "sha256-XL7a000o++IYGW/bFKPxCLZnMP/lGXwoGq/hlGzJyWc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

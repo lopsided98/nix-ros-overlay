@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-scaled-controllers";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_scaled_controllers-release/archive/release/noetic/scaled_controllers/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "1add0c6dc6c3eb45c4479cd4bc0ee0abf9c73fb7a0e6a2091abf1a046deb1e6b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UniversalRobots";
+        repo = "Universal_Robots_ROS_scaled_controllers-release";
+        rev = "release/noetic/scaled_controllers/0.1.0-1";
+        sha256 = "sha256-aMcK8c5WS85vYboHV04KmtAEM3bx0yExlt73qAmWd38=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

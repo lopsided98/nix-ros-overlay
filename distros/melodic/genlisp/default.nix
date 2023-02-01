@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-genlisp";
   version = "0.4.16";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/genlisp-release/archive/release/melodic/genlisp/0.4.16-0.tar.gz";
-    name = "0.4.16-0.tar.gz";
-    sha256 = "0da61ebbb633656062ce030fc94b5931bf3cdf3b5cf896116895608a739a520a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "genlisp-release";
+        rev = "release/melodic/genlisp/0.4.16-0";
+        sha256 = "sha256-rgb3lhBFBIDQIg6NuajQYdKy7o3KNa+rMv5AFAL1zWI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

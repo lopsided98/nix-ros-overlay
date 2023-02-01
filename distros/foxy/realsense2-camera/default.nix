@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-realsense2-camera";
   version = "4.51.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/foxy/realsense2_camera/4.51.1-1.tar.gz";
-    name = "4.51.1-1.tar.gz";
-    sha256 = "274547710bcf03a6c4f19816e0024426d76d29580ce5c3aab5e66d27edf77963";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "IntelRealSense";
+        repo = "realsense-ros-release";
+        rev = "release/foxy/realsense2_camera/4.51.1-1";
+        sha256 = "sha256-O/ta/1y9TxZ4fnhsBw20dq7eCrtG+nuRaN35kbJx2dc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment ];

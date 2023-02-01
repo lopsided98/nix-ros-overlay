@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dynamic-reconfigure";
   version = "1.7.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/noetic/dynamic_reconfigure/1.7.3-1.tar.gz";
-    name = "1.7.3-1.tar.gz";
-    sha256 = "bb4e9834fe4b0da8a503c8060a5f4780ac29f4192b0f889a07be6362176b41f4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "dynamic_reconfigure-release";
+        rev = "release/noetic/dynamic_reconfigure/1.7.3-1";
+        sha256 = "sha256-dSEvzNwGm4UZEPQSi167vFpb8CKnNDLVEF0K6417IFg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cpp-common message-generation roscpp-serialization rostest ];

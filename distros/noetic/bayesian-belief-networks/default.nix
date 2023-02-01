@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-bayesian-belief-networks";
   version = "2.1.21-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/bayesian_belief_networks/2.1.21-2.tar.gz";
-    name = "2.1.21-2.tar.gz";
-    sha256 = "d1d29e63bcd7143dda22e3de735cb375146b274c9c2e3c34859759f091665ed9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_3rdparty-release";
+        rev = "release/noetic/bayesian_belief_networks/2.1.21-2";
+        sha256 = "sha256-6z4DG6mWh71EnXx+qgDvPbpH89eYvn3PrVxOnTHYkSs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin git message-generation mk unzip ];

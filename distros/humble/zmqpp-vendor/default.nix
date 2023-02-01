@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-zmqpp-vendor";
   version = "0.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tier4/zmqpp_vendor-release/archive/release/humble/zmqpp_vendor/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "f77068948950a7d57ba92fc60aa661493ecbce98be5dd20ac28fc7e8fd3fb550";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tier4";
+        repo = "zmqpp_vendor-release";
+        rev = "release/humble/zmqpp_vendor/0.0.2-1";
+        sha256 = "sha256-OHJpSJAua016kXvKxcD1ay55wprlXnqSL19uzz/el6w=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake git ];

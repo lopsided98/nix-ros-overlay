@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-librealsense2";
   version = "2.50.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/noetic/librealsense2/2.50.0-1.tar.gz";
-    name = "2.50.0-1.tar.gz";
-    sha256 = "309e30be33aaf0a794f4ee3291356806ea6d238c0798f70f0388d2cec9a08ba0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "IntelRealSense";
+        repo = "librealsense2-release";
+        rev = "release/noetic/librealsense2/2.50.0-1";
+        sha256 = "sha256-MSWX2NYm0g8fEdQTuEXSmSHcuwChBdOTemt/bD/zrX0=";
+      };
 
   buildType = "cmake";
   buildInputs = [ catkin libusb1 openssl pkg-config udev ];

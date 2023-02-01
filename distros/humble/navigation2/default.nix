@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-navigation2";
   version = "1.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/navigation2/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "72667e3215f1b51a557f6e9b2c520ac2f27fd4865c5ec1904f38554512a1e7cc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/humble/navigation2/1.1.5-1";
+        sha256 = "sha256-UUMG8PWTqSQIHO7VY2pKjWndjwoo/ozQWPRSeXmhOt8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

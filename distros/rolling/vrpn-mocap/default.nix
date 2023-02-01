@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-vrpn-mocap";
   version = "1.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/vrpn_mocap-release/archive/release/rolling/vrpn_mocap/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "8a1397427621f3cfd5726641852ca87eeb312d74c6fe4101bc461f3a16393a95";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "vrpn_mocap-release";
+        rev = "release/rolling/vrpn_mocap/1.0.3-1";
+        sha256 = "sha256-yghDg5y4lcHd2MvyCvl/reTksyFDaIp0sHv/j9nlSSQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake eigen eigen3-cmake-module ];

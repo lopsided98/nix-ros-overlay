@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-arbotix-controllers";
   version = "0.10.0";
 
-  src = fetchurl {
-    url = "https://github.com/vanadiumlabs/arbotix_ros-release/archive/release/melodic/arbotix_controllers/0.10.0-0.tar.gz";
-    name = "0.10.0-0.tar.gz";
-    sha256 = "32d41d26b0bddb10e801e02195bd604400fddb7aef4bddde8c917a62cecc6028";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "vanadiumlabs";
+        repo = "arbotix_ros-release";
+        rev = "release/melodic/arbotix_controllers/0.10.0-0";
+        sha256 = "sha256-5XJtEPpN251GvOjtQhUsozjyiqja9VfHxLzRIEVmEIw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

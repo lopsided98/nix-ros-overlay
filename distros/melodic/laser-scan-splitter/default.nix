@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-laser-scan-splitter";
   version = "0.3.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/melodic/laser_scan_splitter/0.3.3-2.tar.gz";
-    name = "0.3.3-2.tar.gz";
-    sha256 = "9cc0f57c8712d129c8181e2a03c950c39d0199cc8838dd98493815d5b430ce2e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "scan_tools-release";
+        rev = "release/melodic/laser_scan_splitter/0.3.3-2";
+        sha256 = "sha256-f6tHTbi0RfnnhWtSJ9pHStElYS5HkBH/Csoz0BKs/2c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

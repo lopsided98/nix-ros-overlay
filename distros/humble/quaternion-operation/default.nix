@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-quaternion-operation";
   version = "0.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/quaternion_operation-release/archive/release/humble/quaternion_operation/0.0.11-1.tar.gz";
-    name = "0.0.11-1.tar.gz";
-    sha256 = "67c5e5d58668db3b853787dd024012458056721ac58af2339dd3d353e2ec84f4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "quaternion_operation-release";
+        rev = "release/humble/quaternion_operation/0.0.11-1";
+        sha256 = "sha256-XFIOq/J1ybBjdR5TFUumOgHlYUH5o2Mcm9zh1zPijKo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

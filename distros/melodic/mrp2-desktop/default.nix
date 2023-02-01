@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mrp2-desktop";
   version = "0.2.2-r2";
 
-  src = fetchurl {
-    url = "https://github.com/milvusrobotics/mrp2_desktop-release/archive/release/melodic/mrp2_desktop/0.2.2-2.tar.gz";
-    name = "0.2.2-2.tar.gz";
-    sha256 = "5b88ab03947833528ff30c2794bf2539665b1a7e156e01837ad567f8ae1b93af";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "milvusrobotics";
+        repo = "mrp2_desktop-release";
+        rev = "release/melodic/mrp2_desktop/0.2.2-2";
+        sha256 = "sha256-FXK+yytZp9pAD3/+9XWlCXsXWD5W6AwbDvAbDzN8sX8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

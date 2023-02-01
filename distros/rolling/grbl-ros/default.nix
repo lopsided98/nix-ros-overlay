@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-grbl-ros";
   version = "0.0.16-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/grbl_ros-release/archive/release/rolling/grbl_ros/0.0.16-3.tar.gz";
-    name = "0.0.16-3.tar.gz";
-    sha256 = "18d5caf2661ca669134deed089c334919f520ca3cd0dafa1f531c1894b531f95";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "grbl_ros-release";
+        rev = "release/rolling/grbl_ros/0.0.16-3";
+        sha256 = "sha256-uOD7K0XcDuU2nIY8KOYAsZRn0oQDjKcQzC+O4TjR3pE=";
+      };
 
   buildType = "ament_python";
   buildInputs = [ python3Packages.pyserial ];

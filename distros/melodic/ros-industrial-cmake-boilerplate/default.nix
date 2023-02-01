@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ros-industrial-cmake-boilerplate";
   version = "0.2.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_industrial_cmake_boilerplate-release/archive/release/melodic/ros_industrial_cmake_boilerplate/0.2.15-1.tar.gz";
-    name = "0.2.15-1.tar.gz";
-    sha256 = "c1fd60526708c9dc43dd084f70c339615ce93cea4861bc291a7735966eeb0c2c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "ros_industrial_cmake_boilerplate-release";
+        rev = "release/melodic/ros_industrial_cmake_boilerplate/0.2.15-1";
+        sha256 = "sha256-rTJLeyQ5OOI2Coj1bz1/087xo5l9J//K0UQDWsoMFRg=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

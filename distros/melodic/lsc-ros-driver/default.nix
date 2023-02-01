@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-lsc-ros-driver";
   version = "1.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/AutonicsLiDAR-release/lsc_ros_driver-release/archive/release/melodic/lsc_ros_driver/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "32a1896f2074ea84a3cd92299deabc1e3303ec42744cd6a2c6064c857ed52e12";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "AutonicsLiDAR-release";
+        repo = "lsc_ros_driver-release";
+        rev = "release/melodic/lsc_ros_driver/1.0.2-1";
+        sha256 = "sha256-xYpSqVbtrXn/3u/Xxe7aYYJnOGgMohZ2Chgf/aTFFZo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin diagnostic-updater self-test ];

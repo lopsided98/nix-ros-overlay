@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-openni-launch";
   version = "1.11.1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/openni_camera-release/archive/release/melodic/openni_launch/1.11.1-0.tar.gz";
-    name = "1.11.1-0.tar.gz";
-    sha256 = "0c4aa79a977973fc48b0c8a829358367a3ef095a8d93323eeee1972c5c8d3806";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "openni_camera-release";
+        rev = "release/melodic/openni_launch/1.11.1-0";
+        sha256 = "sha256-UPmDcE5p6y1cZm960uo5+Pg3krFN3mKExu/uG4Hhvrw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

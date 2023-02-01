@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-lauv-gazebo";
   version = "0.1.6";
 
-  src = fetchurl {
-    url = "https://github.com/uuvsimulator/lauv_gazebo-release/archive/release/melodic/lauv_gazebo/0.1.6-0.tar.gz";
-    name = "0.1.6-0.tar.gz";
-    sha256 = "ba4a2d4a1567b183be8c500d5dc714ebbec6802532da93eaab20cc7cdb6a266c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uuvsimulator";
+        repo = "lauv_gazebo-release";
+        rev = "release/melodic/lauv_gazebo/0.1.6-0";
+        sha256 = "sha256-gC6cqSli0pHr2r8KBo05Z9K0xdOUy3bwz1fpWIpNsHo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

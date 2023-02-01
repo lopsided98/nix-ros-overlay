@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-nerian-stereo";
   version = "1.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/nerian-vision/nerian_stereo_ros2-release/archive/release/foxy/nerian_stereo/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "33f56cf27bfb2363f02ad66a3ef9ad6ad162fb055a4916f9435e3f59dd58ed10";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "nerian-vision";
+        repo = "nerian_stereo_ros2-release";
+        rev = "release/foxy/nerian_stereo/1.1.1-1";
+        sha256 = "sha256-6CoVp+bNN3DR6PXmHMBsHHQjSlUDErcEe1MsKNvOF04=";
+      };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-lint-auto ament-lint-common ];

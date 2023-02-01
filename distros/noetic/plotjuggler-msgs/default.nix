@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-plotjuggler-msgs";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/facontidavide/plotjuggler_msgs-release/archive/release/noetic/plotjuggler_msgs/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "2af067089b7ea6584191410dd4bf8eda374b2d67fbc75f57e42b7581ff4928b9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "facontidavide";
+        repo = "plotjuggler_msgs-release";
+        rev = "release/noetic/plotjuggler_msgs/0.2.1-1";
+        sha256 = "sha256-LOj/zO/kVp+PLBNkVl/UyunkoA3npudzqmvzwcH5E9Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

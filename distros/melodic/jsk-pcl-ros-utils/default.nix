@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jsk-pcl-ros-utils";
   version = "1.2.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/jsk_pcl_ros_utils/1.2.15-1.tar.gz";
-    name = "1.2.15-1.tar.gz";
-    sha256 = "a64d6abbe000e2c333ce92f318abf94be30dedfe06d21ef4f2361c2b9b695f07";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_recognition-release";
+        rev = "release/melodic/jsk_pcl_ros_utils/1.2.15-1";
+        sha256 = "sha256-wLSyOZzssle1nKkzBLbPPBWLzbIgh/gQb5/+OuIa3r8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation pythonPackages.pyyaml ];

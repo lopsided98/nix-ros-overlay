@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-teleop-general";
   version = "0.6.1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_apps-release/archive/release/melodic/pr2_teleop_general/0.6.1-0.tar.gz";
-    name = "0.6.1-0.tar.gz";
-    sha256 = "e3ae1cbc8602721113121e1546387c770995bf51dda293c8d593919c38ba9863";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_apps-release";
+        rev = "release/melodic/pr2_teleop_general/0.6.1-0";
+        sha256 = "sha256-kFE3Kg5Z0lHfnY8h7gEvEC27xFQ0Wq6gS/24/9PFpSU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

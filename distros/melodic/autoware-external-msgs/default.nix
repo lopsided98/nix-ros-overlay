@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-autoware-external-msgs";
   version = "1.14.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/autoware-ai/messages-release/archive/release/melodic/autoware_external_msgs/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "7c79c2c05eccebce61b3be3fd3c13d440c9014b5e1425d752732ff557e402543";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "autoware-ai";
+        repo = "messages-release";
+        rev = "release/melodic/autoware_external_msgs/1.14.0-1";
+        sha256 = "sha256-oA7G2JChxlLR6VtW3innvM4XLOtdyfy6c7j7zZUJrCU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

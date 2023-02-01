@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-executive-smach-visualization";
   version = "4.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/jbohren/executive_smach_visualization-release/archive/release/melodic/executive_smach_visualization/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "247e6d778d9108aa3ba0c47233c603d8c0e2cf17badbbebb519894ee3672135d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "jbohren";
+        repo = "executive_smach_visualization-release";
+        rev = "release/melodic/executive_smach_visualization/4.0.1-1";
+        sha256 = "sha256-+AYysjmP/ZwZNvlVe2q+B8ObyGXp1JlyZbwGo3ccswY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

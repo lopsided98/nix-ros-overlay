@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-stage-ros";
   version = "1.8.0";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/stage_ros-release/archive/release/melodic/stage_ros/1.8.0-0.tar.gz";
-    name = "1.8.0-0.tar.gz";
-    sha256 = "5762c477b0401c12f43573895f7a94ec3bdfddc4aa9fe3a127d3acc1ce2960d8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "stage_ros-release";
+        rev = "release/melodic/stage_ros/1.8.0-0";
+        sha256 = "sha256-8N+wPzN7yC0rVdaTnq/17aCyQfsbCgLafRrgfPjgous=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

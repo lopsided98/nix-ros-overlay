@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-microstrain-mips";
   version = "0.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/microstrain_mips-release/archive/release/melodic/microstrain_mips/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "e2515dc2da635d80ae7b579480bdd99af254238a034528dea3deb3248c806ffd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "microstrain_mips-release";
+        rev = "release/melodic/microstrain_mips/0.0.3-1";
+        sha256 = "sha256-QLirxUUu5CVufiyU0cW0U1p11kJp6dq6kLP/F0T+WNQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation roslint ];

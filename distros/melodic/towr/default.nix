@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-towr";
   version = "1.4.1";
 
-  src = fetchurl {
-    url = "https://github.com/ethz-adrl/towr-release/archive/release/melodic/towr/1.4.1-0.tar.gz";
-    name = "1.4.1-0.tar.gz";
-    sha256 = "62df4c4444a14ce7bfb5bef8fbcd602942cb97a36b24ed7a7413575568b9a50f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ethz-adrl";
+        repo = "towr-release";
+        rev = "release/melodic/towr/1.4.1-0";
+        sha256 = "sha256-35o/tjNwKi7irLCOFb6opc1XwRdVILWDcXE8lmr9ED8=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

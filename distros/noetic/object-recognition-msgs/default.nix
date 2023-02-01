@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-object-recognition-msgs";
   version = "0.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/object_recognition_msgs-release/archive/release/noetic/object_recognition_msgs/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "4f78239509f037433d3b8dbc38dca2b452d693889a46c6f898168c20ff62aa32";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "object_recognition_msgs-release";
+        rev = "release/noetic/object_recognition_msgs/0.4.2-1";
+        sha256 = "sha256-jUA6eKqXbSLJ3PPk9i1cBj3EKHZ6zDSQmLDnBQJX+r8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

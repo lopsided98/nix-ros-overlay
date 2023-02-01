@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ainstein-radar";
   version = "2.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/AinsteinAI/ainstein_radar-release/archive/release/melodic/ainstein_radar/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "8f47d68abd970c72ed9de890d8e1dc78cc89a6403493420ebd102fa18a577d11";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "AinsteinAI";
+        repo = "ainstein_radar-release";
+        rev = "release/melodic/ainstein_radar/2.0.2-1";
+        sha256 = "sha256-el4EKN6SijPFh0qnPEjh+GKSaR92fEC/OATN6gmIMSY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

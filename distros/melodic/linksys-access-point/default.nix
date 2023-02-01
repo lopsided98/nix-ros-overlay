@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-linksys-access-point";
   version = "1.0.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/linksys_access_point/1.0.16-1.tar.gz";
-    name = "1.0.16-1.tar.gz";
-    sha256 = "d9072a9e264d9aaf55aaaf24e4f0a40032a5d836770cd6541ae7da0f9745982e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "linux_networking-release";
+        rev = "release/melodic/linksys_access_point/1.0.16-1";
+        sha256 = "sha256-37Y5dUQJTRdFk0F02whGWIcMUtLvkbSA0SMv1zudTM4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

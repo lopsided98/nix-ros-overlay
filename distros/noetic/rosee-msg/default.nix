@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosee-msg";
   version = "1.0.2-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ADVRHumanoids/rosee_msg-release/archive/release/noetic/rosee_msg/1.0.2-2.tar.gz";
-    name = "1.0.2-2.tar.gz";
-    sha256 = "e0eda55eb27e429b6473555f2c3b714a58533e6885dbe982da26bfa342ad6818";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ADVRHumanoids";
+        repo = "rosee_msg-release";
+        rev = "release/noetic/rosee_msg/1.0.2-2";
+        sha256 = "sha256-MiMLAVJ6lOeT0ntJritd6RydPoQLD70gNZt6UVZb/7U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin geometry-msgs std-msgs std-srvs ];

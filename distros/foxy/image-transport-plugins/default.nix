@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-image-transport-plugins";
   version = "2.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/foxy/image_transport_plugins/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "7b19313282785c7640029f68db7a3c4cfab2f46ce2781574fa64451ffac8ee4c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "image_transport_plugins-release";
+        rev = "release/foxy/image_transport_plugins/2.3.3-1";
+        sha256 = "sha256-Esd/BRDYc11jq/jXjx1GUruC29Yzs4KBKsDVV6fd2Dk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

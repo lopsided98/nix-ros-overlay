@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ignition-cmake2-vendor";
   version = "0.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ignition_cmake2_vendor-release/archive/release/rolling/ignition_cmake2_vendor/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "0d57fe9bdc1c2328c2c4f7020a11575464f39cd8c4d172bd885659b2ab31adf5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ignition_cmake2_vendor-release";
+        rev = "release/rolling/ignition_cmake2_vendor/0.0.2-1";
+        sha256 = "sha256-bZxidfrsqkCbbKbqdgbiC7SuwHBPMfR+/87ZeJpKzZY=";
+      };
 
   buildType = "cmake";
   buildInputs = [ ament-cmake-test cmake doxygen git ];

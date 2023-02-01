@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ament-package";
   version = "0.15.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_package-release/archive/release/rolling/ament_package/0.15.1-1.tar.gz";
-    name = "0.15.1-1.tar.gz";
-    sha256 = "faaa3454bd1cc63d29ab038b1d7a71bbca923762e5d8b61929ebf0b8a2be0925";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_package-release";
+        rev = "release/rolling/ament_package/0.15.1-1";
+        sha256 = "sha256-/8pwhj0/b78qVjm7PToe+UzNvJzs0t7QpU3AxlfIEhs=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ python3Packages.flake8 pythonPackages.pytest ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rmf-visualization-fleet-states";
   version = "2.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/humble/rmf_visualization_fleet_states/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "73f0edf6f0f08a8bde0ad4bdc1c6f937bc97540fd1659702650bd9e1343078c9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_visualization-release";
+        rev = "release/humble/rmf_visualization_fleet_states/2.0.0-1";
+        sha256 = "sha256-KmCFYyRi3OC+Y7Srk9Yu2LUtY67kLkoNIN6wOTcA4J8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

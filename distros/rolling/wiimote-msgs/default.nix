@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-wiimote-msgs";
   version = "3.1.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/rolling/wiimote_msgs/3.1.0-2.tar.gz";
-    name = "3.1.0-2.tar.gz";
-    sha256 = "b5e8949a83c8873eb26e80e5c4e32755e86b1d0e56b8613494bff75b6cb20383";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "joystick_drivers-release";
+        rev = "release/rolling/wiimote_msgs/3.1.0-2";
+        sha256 = "sha256-KavdFBcL1SCgiOn8dA8NfytenhAUvYfbx6ij02ufZyE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-auto rosidl-default-generators ];

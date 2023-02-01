@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pacmod3";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/pacmod3-release/archive/release/melodic/pacmod3/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "5a48a3e0b845272836125c8065b81e777bc10bf088dbd2013431168ceda276be";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "pacmod3-release";
+        rev = "release/melodic/pacmod3/1.3.0-1";
+        sha256 = "sha256-312Ztkq2Mw8iMtvDrGmzBHKVNNcM6Amxc0j6udOmzdg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

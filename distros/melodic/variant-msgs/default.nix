@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-variant-msgs";
   version = "0.1.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/anybotics/variant-release/archive/release/melodic/variant_msgs/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "ae614a42d4d601049053d44911ab4ed4d97deaa47e2ea608f05b7826a450b5ac";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "anybotics";
+        repo = "variant-release";
+        rev = "release/melodic/variant_msgs/0.1.6-1";
+        sha256 = "sha256-o1hU5/p2HzoYGy8ZR6skvbO7Qv7tRgQ5+X30RkVS4kw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

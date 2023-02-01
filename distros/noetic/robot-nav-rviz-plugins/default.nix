@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-robot-nav-rviz-plugins";
   version = "0.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/robot_nav_rviz_plugins/0.3.0-2.tar.gz";
-    name = "0.3.0-2.tar.gz";
-    sha256 = "44bd38be8166789fba741d1249b9c768a8ffd8647dd1b8b522c833163ce207a5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/noetic/robot_nav_rviz_plugins/0.3.0-2";
+        sha256 = "sha256-mys+GOTnvNshjsTMKCjQzUqU93GQYfrAhENku9u3wU8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

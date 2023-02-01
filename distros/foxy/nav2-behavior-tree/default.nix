@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-nav2-behavior-tree";
   version = "0.4.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_behavior_tree/0.4.7-1.tar.gz";
-    name = "0.4.7-1.tar.gz";
-    sha256 = "1f5a789b9870488fa4e9370b61d08ec2a7871e2c5843d3e2ba9d814b04355dd9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/foxy/nav2_behavior_tree/0.4.7-1";
+        sha256 = "sha256-D5VOQjV2dKsJo2g6n7d7Of0Usz5YZ4NVhzSGMwAd7pc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake nav2-common ];

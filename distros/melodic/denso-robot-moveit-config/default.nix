@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-denso-robot-moveit-config";
   version = "3.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/denso_robot_moveit_config/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "399a482bbaf6ef0aa129e0607ebec00e9167e0b9230f0b94d271fdbae2fea7d6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DENSORobot";
+        repo = "denso_robot_ros-release";
+        rev = "release/melodic/denso_robot_moveit_config/3.2.0-1";
+        sha256 = "sha256-mKoyHhKKMSM1/2nLjr6SWotdtdSUw2g51LemqqhIUKQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

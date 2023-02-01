@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-libuvc";
   version = "0.0.6";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/libuvc-release/archive/release/melodic/libuvc/0.0.6-0.tar.gz";
-    name = "0.0.6-0.tar.gz";
-    sha256 = "06a553e6d043735a10fff606d5f71a20661fc9b6be392b69a06c35b8aca8d3f6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "libuvc-release";
+        rev = "release/melodic/libuvc/0.0.6-0";
+        sha256 = "sha256-iqz5CDravbnxCPIZbnRPq+BQAfriKYYm5nmppVg/bc8=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake pkg-config ];

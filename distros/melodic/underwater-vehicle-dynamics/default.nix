@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-underwater-vehicle-dynamics";
   version = "1.4.2-r3";
 
-  src = fetchurl {
-    url = "https://github.com/uji-ros-pkg/underwater_simulation-release/archive/release/melodic/underwater_vehicle_dynamics/1.4.2-3.tar.gz";
-    name = "1.4.2-3.tar.gz";
-    sha256 = "614c6318a07c0fb3a1db67f93c96e24feb3cadeabe2f5d77a31954d88926e57d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uji-ros-pkg";
+        repo = "underwater_simulation-release";
+        rev = "release/melodic/underwater_vehicle_dynamics/1.4.2-3";
+        sha256 = "sha256-n9eIj2/lZMNvqrp9pJcQceeS0m1rkM5sindXZHrFEEY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

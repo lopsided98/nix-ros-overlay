@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jsk-topic-tools";
   version = "2.2.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/jsk_topic_tools/2.2.12-1.tar.gz";
-    name = "2.2.12-1.tar.gz";
-    sha256 = "2f7cb216f61223ced93c39253049e49baa9fd4878decdd5d94c80a6ca5f09280";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_common-release";
+        rev = "release/melodic/jsk_topic_tools/2.2.12-1";
+        sha256 = "sha256-dSPXQ06+0SIVrSfTQvpFc1zYYuZ09sjqpQdlGRUO5Fo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation rostest ];

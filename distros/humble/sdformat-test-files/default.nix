@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-sdformat-test-files";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/sdformat_urdf-release/archive/release/humble/sdformat_test_files/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "864a5bcab04762e47305d3e33b7feb6437e8b79443aad0077fc0ee813350b559";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "sdformat_urdf-release";
+        rev = "release/humble/sdformat_test_files/1.0.1-1";
+        sha256 = "sha256-+3nL+Njboe0apHQrf0wM7r53YuOAoG8MjCOOoyhCG1c=";
+      };
 
   buildType = "cmake";
   propagatedBuildInputs = [ cmake ];

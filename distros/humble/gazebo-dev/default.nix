@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-gazebo-dev";
   version = "3.7.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/humble/gazebo_dev/3.7.0-1.tar.gz";
-    name = "3.7.0-1.tar.gz";
-    sha256 = "b88bb4ca62bab49d30260b178c01b46dd9cfcfea1684a12ec691dbaec33c0ade";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "gazebo_ros_pkgs-release";
+        rev = "release/humble/gazebo_dev/3.7.0-1";
+        sha256 = "sha256-mrueslrQTjk6YEdaHeKosgUwED/y28Lamkk7Xu2FW8Q=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

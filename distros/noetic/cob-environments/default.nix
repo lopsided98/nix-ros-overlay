@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-environments";
   version = "0.6.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_environments-release/archive/release/noetic/cob_environments/0.6.13-1.tar.gz";
-    name = "0.6.13-1.tar.gz";
-    sha256 = "f6056d5196ddb7a95f096a3fa54a62bf18614e51b30a3e185df9bfb60fa36498";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_environments-release";
+        rev = "release/noetic/cob_environments/0.6.13-1";
+        sha256 = "sha256-gRBKpUiT1RWHji/bzUwFSqDeiuC8YS1FG0ocmBtCiBA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

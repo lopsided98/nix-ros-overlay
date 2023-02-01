@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-ifm3d-core";
   version = "0.18.0-r7";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ifm3d-release/archive/release/humble/ifm3d_core/0.18.0-7.tar.gz";
-    name = "0.18.0-7.tar.gz";
-    sha256 = "2e79cc115e1aaa9ef85f827a421a320df50492e43b661b5e24a430448d87735e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ifm3d-release";
+        rev = "release/humble/ifm3d_core/0.18.0-7";
+        sha256 = "sha256-uR93fGa2he8/x1p8bZM2xobrFhbm7cnUGAw341qYlOE=";
+      };
 
   buildType = "cmake";
   buildInputs = [ boost cmake ];

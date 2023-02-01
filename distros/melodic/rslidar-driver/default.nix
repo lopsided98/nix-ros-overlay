@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rslidar-driver";
   version = "1.0.2";
 
-  src = fetchurl {
-    url = "https://github.com/CPFL/robosense-release/archive/release/melodic/rslidar_driver/1.0.2-0.tar.gz";
-    name = "1.0.2-0.tar.gz";
-    sha256 = "7f1ae8931ebeb64b13cf0b1976fb269a63257de51d8de79c6cebbd716a307661";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "CPFL";
+        repo = "robosense-release";
+        rev = "release/melodic/rslidar_driver/1.0.2-0";
+        sha256 = "sha256-R1q9PNbKUkteIRQYm8ECqufqsNNYEyNJnyuAI8IaKVw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin libpcap message-generation roslaunch rostest tf2-ros ];

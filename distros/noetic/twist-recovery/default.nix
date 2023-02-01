@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-twist-recovery";
   version = "0.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/noetic/twist_recovery/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "d13f9a52e05f8bd2a504d76a1147695378622cf1f3b0eaff84fe6607f6f36f4e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation_experimental-release";
+        rev = "release/noetic/twist_recovery/0.4.1-1";
+        sha256 = "sha256-EMYjWtNdy2B0Bi+/9gPUIt83b4S9KaysbmcxGWoffOI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

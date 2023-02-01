@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-object-recognition-msgs";
   version = "2.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/object_recognition_msgs-release/archive/release/foxy/object_recognition_msgs/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "16ab384e99d3e6f75d017588c69f6d944cc0942c9f37efcf703db45d1f38a639";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "object_recognition_msgs-release";
+        rev = "release/foxy/object_recognition_msgs/2.0.0-1";
+        sha256 = "sha256-51GLrMSSWkdlTz5SBW9ImQilU5Rojo8emRiwZZtZtS0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

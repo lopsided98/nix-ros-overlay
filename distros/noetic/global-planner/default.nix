@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, costmap-2d, dynamic-reconfigure, geometry-msgs, nav-core, nav-msgs, navfn, pluginlib, roscpp, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-global-planner";
-  version = "1.17.2-r1";
+  version = "1.17.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/global_planner/1.17.2-1.tar.gz";
-    name = "1.17.2-1.tar.gz";
-    sha256 = "feb8a04bb141d5f90d4e2e0985845b15fcbbe9c66c122c85deeb07a1535f827e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation-release";
+        rev = "release/noetic/global_planner/1.17.3-1";
+        sha256 = "sha256-pPCY1GQPozsPoRdRXrCwJEyKeixFJqs3/egU1JIbJzg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ angles catkin tf2-geometry-msgs ];

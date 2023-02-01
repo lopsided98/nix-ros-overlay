@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-teraranger";
   version = "2.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/Terabee/teraranger-release/archive/release/melodic/teraranger/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "7a46f25a882f135c1261b889e11462660d26f4b6e6d288d8b2026dfda5f4bc0a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Terabee";
+        repo = "teraranger-release";
+        rev = "release/melodic/teraranger/2.1.0-1";
+        sha256 = "sha256-2XehN9YWYY+jDfbj7EWiu7ZnnzxjJ2PiJ7aHq/Wsc3Y=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-visp-hand2eye-calibration";
   version = "0.13.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/lagadic/vision_visp-release/archive/release/noetic/visp_hand2eye_calibration/0.13.1-1.tar.gz";
-    name = "0.13.1-1.tar.gz";
-    sha256 = "3cbffcd182369a51b8133ef457d5847f9631e652ef6aeb25f616ab149bddc710";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "lagadic";
+        repo = "vision_visp-release";
+        rev = "release/noetic/visp_hand2eye_calibration/0.13.1-1";
+        sha256 = "sha256-6ygPdFBekWOK2KeJM/NfT9nv2XrEn08MtTKDqk4Wd3Y=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

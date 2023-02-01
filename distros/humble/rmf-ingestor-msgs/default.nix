@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rmf-ingestor-msgs";
   version = "3.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/humble/rmf_ingestor_msgs/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "72f943e9f491ee15f899c239921d33ee5aef14465bb07ea2510996943f3c15a0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_internal_msgs-release";
+        rev = "release/humble/rmf_ingestor_msgs/3.0.2-1";
+        sha256 = "sha256-tL6Cp59t7ulNQnu7hDBs86RQ1SQ1TIzJYcVF7roRjlQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

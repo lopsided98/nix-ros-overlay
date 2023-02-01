@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-lgsvl-bridge";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/lgsvl/ros2-lgsvl-bridge-release/archive/release/foxy/lgsvl_bridge/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "ec0bd4e77269a675434081b4ffcb3f807f2852136fd515672676e134c908d9ab";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "lgsvl";
+        repo = "ros2-lgsvl-bridge-release";
+        rev = "release/foxy/lgsvl_bridge/0.2.1-1";
+        sha256 = "sha256-PHh3ZRhcvdGEnYp6vBdFOgz0g0W49FVAlWOboKtMoC8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

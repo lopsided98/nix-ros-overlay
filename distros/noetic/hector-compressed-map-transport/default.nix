@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-hector-compressed-map-transport";
   version = "0.5.2-r4";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_compressed_map_transport/0.5.2-4.tar.gz";
-    name = "0.5.2-4.tar.gz";
-    sha256 = "13434ed757d7aa27414ba2495d0a296b6c4100cd21c4f513be3d6ca93cbbad9f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_slam-release";
+        rev = "release/noetic/hector_compressed_map_transport/0.5.2-4";
+        sha256 = "sha256-mrIO22M/bPwDW/opU8KKXPq+TR5/+o9nBGNFFxUqI6A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-velodyne-description";
   version = "2.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/velodyne_simulator-release/archive/release/rolling/velodyne_description/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "da8478663e6a15130d1a4ebe103098d6f48362e2fcc02d7f401e39f4f410341e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "velodyne_simulator-release";
+        rev = "release/rolling/velodyne_description/2.0.3-1";
+        sha256 = "sha256-vYig3j3DqPeSuEmGlDfvaH64IGdK8x/Yxx40R/Sv5j4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-teleop-tools-msgs";
   version = "1.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/rolling/teleop_tools_msgs/1.3.0-2.tar.gz";
-    name = "1.3.0-2.tar.gz";
-    sha256 = "50e72ddd17c50388d18fa5a6e6de8cf2677fc497d2970ec58a82c0a496cea707";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "teleop_tools-release";
+        rev = "release/rolling/teleop_tools_msgs/1.3.0-2";
+        sha256 = "sha256-aJPfIXQj3fiXkpH0V5nGEywzdRvtnKtp2K1qWb/fw30=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

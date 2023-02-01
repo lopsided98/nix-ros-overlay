@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-phidgets-digital-outputs";
   version = "2.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/humble/phidgets_digital_outputs/2.3.0-2.tar.gz";
-    name = "2.3.0-2.tar.gz";
-    sha256 = "2f5d4c17773ee35d0cf8305b185aabc95b9854539ba2ac42f053116fcdc96c5e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "phidgets_drivers-release";
+        rev = "release/humble/phidgets_digital_outputs/2.3.0-2";
+        sha256 = "sha256-zOFyZkgcW26GCITyhA5OlHtMEp2iOOtVV3tVFdq6fNg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

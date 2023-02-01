@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-moveit-resources-panda-moveit-config";
   version = "2.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/moveit_resources-release/archive/release/foxy/moveit_resources_panda_moveit_config/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "efc1f80d1ec1f053b2798eaeb2fc3d12d0269ced4aa927aab51574df3d037c24";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "moveit_resources-release";
+        rev = "release/foxy/moveit_resources_panda_moveit_config/2.0.3-1";
+        sha256 = "sha256-sFikFur4DBbqIa1wH6+teVtmzNselPFLfCtkyYH3a3Q=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

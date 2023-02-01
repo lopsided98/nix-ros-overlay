@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rviz-plugin-tutorials";
   version = "0.11.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/noetic/rviz_plugin_tutorials/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "2a8d6d52961928fd5da2cf8203bfbf658ec2df5df6f9ec3c0f055a4358f05e0e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "visualization_tutorials-release";
+        rev = "release/noetic/rviz_plugin_tutorials/0.11.0-1";
+        sha256 = "sha256-Vrel7RKeq38VGos5sDdb9GG/Gf5kFFBgWwcD9h9P9PQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

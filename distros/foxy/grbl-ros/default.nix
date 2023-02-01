@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-grbl-ros";
   version = "0.0.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/flynneva/grbl_ros-release/archive/release/foxy/grbl_ros/0.0.15-1.tar.gz";
-    name = "0.0.15-1.tar.gz";
-    sha256 = "9b54ba04a2d8f07c6957fb8ec0c634ecd6cf49799f315f354f3641e5e114dfeb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "flynneva";
+        repo = "grbl_ros-release";
+        rev = "release/foxy/grbl_ros/0.0.15-1";
+        sha256 = "sha256-EizNk8GSbyTqKN5y4qXMT5yFRe5Yx0yqJHYirUXrnWk=";
+      };
 
   buildType = "ament_python";
   buildInputs = [ python3Packages.pyserial ];

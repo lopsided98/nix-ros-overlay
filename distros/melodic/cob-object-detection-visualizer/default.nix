@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-object-detection-visualizer";
   version = "0.6.17-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/melodic/cob_object_detection_visualizer/0.6.17-1.tar.gz";
-    name = "0.6.17-1.tar.gz";
-    sha256 = "b616a544cbaabd629714203815df751738be745aa3196887288e2a9e4396fa48";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_perception_common-release";
+        rev = "release/melodic/cob_object_detection_visualizer/0.6.17-1";
+        sha256 = "sha256-/Jy4M83WIX8c0PuRXgtnG/tNUWQadzH4n4GU5+vrpyU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

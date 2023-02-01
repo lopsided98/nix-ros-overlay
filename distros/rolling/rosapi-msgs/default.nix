@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rosapi-msgs";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/rolling/rosapi_msgs/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "ad15c7a45af499b7b601a2fb8ec0f7ac6dc24bf2c761ac3a1e926858cd1c612f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosbridge_suite-release";
+        rev = "release/rolling/rosapi_msgs/1.3.1-1";
+        sha256 = "sha256-Q4dTs68oi8RWGF2fto9PtQNCnoH23yoHPnNZkMLJBRE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros rosidl-default-generators ];

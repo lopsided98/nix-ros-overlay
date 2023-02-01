@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-v4l2-camera";
   version = "0.6.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_v4l2_camera-release/archive/release/rolling/v4l2_camera/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "f5779d7281836abaabbd40b779be732b4d38b273c50c778d0165c7487886746d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_v4l2_camera-release";
+        rev = "release/rolling/v4l2_camera/0.6.1-1";
+        sha256 = "sha256-6S98n6I3/xURpJWEnmj4IbQ1MRqpVmM45olPZget7ac=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

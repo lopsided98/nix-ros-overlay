@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rtcm-msgs";
   version = "1.1.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/nobleo/rtcm_msgs-release/archive/release/rolling/rtcm_msgs/1.1.6-1.tar.gz";
-    name = "1.1.6-1.tar.gz";
-    sha256 = "89bd1036e6ef01479ed4f7b8b29dda34ecc71c5bb6b3e51f191fb2f05136f07f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "nobleo";
+        repo = "rtcm_msgs-release";
+        rev = "release/rolling/rtcm_msgs/1.1.6-1";
+        sha256 = "sha256-5yTtIdGostlOwChSlKKL4JivCyK284g0KYZxB6GBtBY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake builtin-interfaces ros-environment rosidl-default-generators ];

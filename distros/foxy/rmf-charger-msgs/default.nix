@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmf-charger-msgs";
   version = "1.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/foxy/rmf_charger_msgs/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "2c6506fcab77988525c9a2de397fa44d449f697e19c81b496a7eb6fa68a58d76";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_internal_msgs-release";
+        rev = "release/foxy/rmf_charger_msgs/1.4.0-1";
+        sha256 = "sha256-Rp0ddy46iLVFboZH/62cfXKt70ETYqErTy0PCh/+rzc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

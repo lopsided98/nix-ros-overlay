@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-oled-display-node";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UbiquityRobotics-release/oled_display_node-release/archive/release/noetic/oled_display_node/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "750524faffbef4380b8a808d522c70a6a5b6949bb44af667260c33047aa25d81";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UbiquityRobotics-release";
+        repo = "oled_display_node-release";
+        rev = "release/noetic/oled_display_node/1.0.0-1";
+        sha256 = "sha256-n3Ie1ny0PQKwqweV1Sfcdki7pCUeu5FIBtR823kIdvI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

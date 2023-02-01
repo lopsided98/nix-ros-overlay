@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-realsense-examples";
   version = "2.0.8-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_intel_realsense-release/archive/release/foxy/realsense_examples/2.0.8-2.tar.gz";
-    name = "2.0.8-2.tar.gz";
-    sha256 = "c10a486b28d2da5619c45f25f418ab82c1aeda507659b3ea5df488054c01bbe8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_intel_realsense-release";
+        rev = "release/foxy/realsense_examples/2.0.8-2";
+        sha256 = "sha256-SwkeUGciJkH9Ig8kmMl3xL0v0OVmJxTwTSFPFV5AG9A=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

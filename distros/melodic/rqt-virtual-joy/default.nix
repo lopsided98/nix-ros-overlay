@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rqt-virtual-joy";
   version = "0.1.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/aquahika/rqt_virtual_joystick-release/archive/release/melodic/rqt_virtual_joy/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "493513036a5a34f777bce227efa92908ea7e93392d784f7e427a0950f2a3c4d3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "aquahika";
+        repo = "rqt_virtual_joystick-release";
+        rev = "release/melodic/rqt_virtual_joy/0.1.2-1";
+        sha256 = "sha256-oZ+qprSY4weP4utYHXHqzdF9NMHLwatZfx+85jWBwaE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

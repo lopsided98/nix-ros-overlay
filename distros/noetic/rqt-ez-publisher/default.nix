@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-ez-publisher";
   version = "0.6.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/OTL/rqt_ez_publisher-release/archive/release/noetic/rqt_ez_publisher/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "98dc5d29814595ff0c787d0de226df7a6a5e28ffb818669c8b8b550cd67252a9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "OTL";
+        repo = "rqt_ez_publisher-release";
+        rev = "release/noetic/rqt_ez_publisher/0.6.1-1";
+        sha256 = "sha256-tbgrKNx4TSqsqSMM0pC2XeE0vr5TXzxs9cjdCY17FWk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.catkin-pkg rostest ];

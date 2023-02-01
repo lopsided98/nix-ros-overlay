@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rtmros-hironx";
   version = "2.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/rtmros_hironx-release/archive/release/melodic/rtmros_hironx/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "51824e75419c9acc1c538fc32ee9e387bd0e90a2519ddfe59680665b3146f149";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "rtmros_hironx-release";
+        rev = "release/melodic/rtmros_hironx/2.2.0-1";
+        sha256 = "sha256-ixA1EUT35aNEg5mCWmxYFGdJ8VjGsRP9E35kRB2zts4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];
