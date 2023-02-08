@@ -22,13 +22,9 @@ buildRosPackage {
   propagatedBuildInputs = [ boost eigen flann ode ];
   nativeBuildInputs = [ cmake ];
   
-  postFixupHooks = [
-    # This bodge is necessary so that the file that the generated -config.cmake file
-    # points to an existing directory.
-    ''
-      ${sd}/bin/sd --string-mode '$${"{prefix}//nix/store"}' '/nix/store' **/*.pc
-    ''
-  ];
+  installPhase =  ''
+    ${sd}/bin/sd --string-mode '$${"{prefix}//nix/store"}' '/nix/store' **/*.pc
+  '';
   
   meta = {
     description = ''OMPL is a free sampling-based motion planning library.'';
