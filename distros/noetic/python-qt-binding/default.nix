@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, python3Packages, qt5, rosbuild, sd, tree }:
+{ lib, buildRosPackage, fetchurl, catkin, python3Packages, python3, qt5, rosbuild, sd, tree }:
 buildRosPackage {
   pname = "ros-noetic-python-qt-binding";
   version = "0.4.4-r1";
@@ -19,15 +19,22 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ qt5.qtbase rosbuild ];
-  propagatedBuildInputs = [ catkin python3Packages.pyqt5 ];
+  propagatedBuildInputs = [
+    catkin
+    python3Packages.pyqt5.overridePythonAttrs (
+        old: {
+            dontConfigure = true;
+            dontWrapQtApps = true;
+            nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [
+                python3Packages.pyqt-builder
+                python3Packages.sip
+                qt5.full
+            ];
+        }
+    )
+  ];
   nativeBuildInputs = [ catkin ];
   
-  buildPhase = ''
-    # patch in the sip bindings
-    ${sd}/bin/sd --string-mode "sipconfig._pkg_config['default_mod_dir']" '"${python3Packages.pyqt5}/lib/python3.10/site-packages/PyQt5/bindings"'  **/sip_configure.py
-    ${tree}/bin/tree .
-    exit 1
-  '';
 
   meta = {
     description = ''This stack provides Python bindings for Qt.
