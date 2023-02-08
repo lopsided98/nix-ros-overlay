@@ -1821,6 +1821,8 @@ self: super: {
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
 
  moveit = self.callPackage ./moveit {};
+ 
+ moveit-commander = self.callPackage ./moveit-commander {};
 
  moveit-calibration-gui = self.callPackage ./moveit-calibration-gui {};
 

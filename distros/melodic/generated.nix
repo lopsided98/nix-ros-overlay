@@ -2163,8 +2163,6 @@ self: super: {
  moveback-recovery = self.callPackage ./moveback-recovery {};
 
  moveit = self.callPackage ./moveit {};
-
- moveit-commander = self.callPackage ./moveit-commander {};
  
  moveit-chomp-optimizer-adapter = self.callPackage ./moveit-chomp-optimizer-adapter {};
 
