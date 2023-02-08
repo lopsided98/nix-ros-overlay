@@ -21,7 +21,7 @@ buildRosPackage {
   buildInputs = [ qt5.qtbase rosbuild ];
   propagatedBuildInputs = [
     catkin
-    python3Packages.pyqt5.overridePythonAttrs (
+    (python3Packages.pyqt5.overridePythonAttrs (
         old: {
             dontConfigure = true;
             dontWrapQtApps = true;
@@ -31,7 +31,7 @@ buildRosPackage {
                 qt5.full
             ];
         }
-    )
+    ) {})
   ];
   nativeBuildInputs = [ catkin ];
   
