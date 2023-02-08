@@ -25,13 +25,13 @@ buildRosPackage {
         old: {
             dontConfigure = true;
             dontWrapQtApps = true;
-            nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [
+            nativeBuildInputs = [
                 python3Packages.pyqt-builder
                 python3Packages.sip
                 qt5.full
             ];
         }
-    ) {})
+    ))
   ];
   nativeBuildInputs = [ catkin ];
   
