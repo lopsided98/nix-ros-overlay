@@ -6,6 +6,7 @@
 let 
     python = python3.withPackages(python3Packages: [
         python3Packages.sip_4
+        python3Packages.pyqt5
     ]);
 in
   buildRosPackage {
