@@ -26,7 +26,7 @@ buildRosPackage {
     # This bodge is necessary so that the file that the generated -config.cmake file
     # points to an existing directory.
     ''
-      ${sd}/bin/sd '$${"{prefix}//nix/store"}' '/nix/store' **/*.pc
+      ${sd}/bin/sd --string-mode '$${"{prefix}//nix/store"}' '/nix/store' **/*.pc
     ''
   ];
   
