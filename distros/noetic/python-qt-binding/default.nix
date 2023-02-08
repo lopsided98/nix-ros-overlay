@@ -22,7 +22,7 @@ buildRosPackage {
   propagatedBuildInputs = [ catkin python3Packages.pyqt5 ];
   nativeBuildInputs = [ catkin ];
   
-  postFixup = ''
+  buildPhase = ''
     # patch in the sip bindings
     ${sd}/bin/sd --string-mode "sipconfig._pkg_config['default_mod_dir']" '"${python3Packages.pyqt5}/lib/python3.10/site-packages/PyQt5/bindings"'  **/sip_configure.py
     ${tree}/bin/tree .
