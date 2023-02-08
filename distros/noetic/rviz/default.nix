@@ -20,7 +20,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules eigen message-generation urdfdom urdfdom-headers ];
   checkInputs = [ rostest rosunit ];
-  propagatedBuildInputs = [ assimp geometry-msgs image-transport interactive-markers laser-geometry libGL libGLU libyamlcpp map-msgs media-export message-filters message-runtime nav-msgs ogre1_9 pluginlib python-qt-binding qt5.qtbase resource-retriever rosconsole roscpp roslib rospy sensor-msgs std-msgs std-srvs tf2-geometry-msgs tf2-ros tinyxml-2 urdf visualization-msgs sip python3Packages.sip_4 ];
+  propagatedBuildInputs = [ assimp geometry-msgs image-transport interactive-markers laser-geometry libGL libGLU libyamlcpp map-msgs media-export message-filters message-runtime nav-msgs ogre1_9 pluginlib python-qt-binding qt5.qtbase resource-retriever rosconsole roscpp roslib rospy sensor-msgs std-msgs std-srvs tf2-geometry-msgs tf2-ros tinyxml-2 urdf visualization-msgs python3Packages.sip ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

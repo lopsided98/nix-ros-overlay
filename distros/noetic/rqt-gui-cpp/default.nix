@@ -19,7 +19,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin qt5.qtbase ];
-  propagatedBuildInputs = [ nodelet qt-gui qt-gui-cpp roscpp sip python3Packages.sip_4 ];
+  propagatedBuildInputs = [ nodelet qt-gui qt-gui-cpp roscpp python3Packages.sip_4 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
