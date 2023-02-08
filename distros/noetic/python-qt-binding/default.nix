@@ -22,9 +22,17 @@ buildRosPackage {
   propagatedBuildInputs = [ catkin python3Packages.pyqt5 ];
   nativeBuildInputs = [ catkin ];
   
-  installPhase = ''
+  postFixup = ''
     # patch in the sip bindings
+    ${sd}/bin/sd --string-mode "sipconfig._pkg_config['default_mod_dir']" '"${python3Packages.pyqt5}/lib/python3.9/site-packages/PyQt5/bindings"'  */python_qt_binding/cmake/sip_configure.py
     ${sd}/bin/sd --string-mode "sipconfig._pkg_config['default_mod_dir']" '"${python3Packages.pyqt5}/lib/python3.10/site-packages/PyQt5/bindings"'  */python_qt_binding/cmake/sip_configure.py
+    ${sd}/bin/sd --string-mode "sipconfig._pkg_config['default_mod_dir']" '"${python3Packages.pyqt5}/lib/python3.11/site-packages/PyQt5/bindings"'  */python_qt_binding/cmake/sip_configure.py
+    ${sd}/bin/sd --string-mode "sipconfig._pkg_config['default_mod_dir']" '"${python3Packages.pyqt5}/lib/python3.12/site-packages/PyQt5/bindings"'  */python_qt_binding/cmake/sip_configure.py
+    ${sd}/bin/sd --string-mode "sipconfig._pkg_config['default_mod_dir']" '"${python3Packages.pyqt5}/lib/python3.13/site-packages/PyQt5/bindings"'  */python_qt_binding/cmake/sip_configure.py
+    ${sd}/bin/sd --string-mode "sipconfig._pkg_config['default_mod_dir']" '"${python3Packages.pyqt5}/lib/python3.14/site-packages/PyQt5/bindings"'  */python_qt_binding/cmake/sip_configure.py
+    ${sd}/bin/sd --string-mode "sipconfig._pkg_config['default_mod_dir']" '"${python3Packages.pyqt5}/lib/python3.15/site-packages/PyQt5/bindings"'  */python_qt_binding/cmake/sip_configure.py
+    ${sd}/bin/sd --string-mode "sipconfig._pkg_config['default_mod_dir']" '"${python3Packages.pyqt5}/lib/python3.16/site-packages/PyQt5/bindings"'  */python_qt_binding/cmake/sip_configure.py
+    ${sd}/bin/sd --string-mode "sipconfig._pkg_config['default_mod_dir']" '"${python3Packages.pyqt5}/lib/python3.17/site-packages/PyQt5/bindings"'  */python_qt_binding/cmake/sip_configure.py
   '';
 
   meta = {
