@@ -14,7 +14,7 @@ buildRosPackage {
         owner = "ros-gbp";
         repo = "moveit-release";
         rev = "release/noetic/moveit_commander/1.1.11-1";
-        sha256 = "7b87f1713cb058c492b10c498426c329e26d9ae2014942623bff40ee59c2b0c1";
+        sha256 = "sha256-ZqtaeCEGY3fQp9iBo285DgJp+jnaBoD97myycuyD7Cs=";
       };
 
   buildType = "catkin";
