@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-sensor-msgs";
   version = "1.13.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/noetic/sensor_msgs/1.13.1-1.tar.gz";
-    name = "1.13.1-1.tar.gz";
-    sha256 = "25dfebaba7e08b4eab9bb670d3d9884a2bdd94e3976cd65ccbb8fc948c22b058";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "common_msgs-release";
+        rev = "release/noetic/sensor_msgs/1.13.1-1";
+        sha256 = "sha256-K49LddL5s/6G2jWccadDmNeqEBO0iqYLZV69azAP+FU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation python3Packages.setuptools ];

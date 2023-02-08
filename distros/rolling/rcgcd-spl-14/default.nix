@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rcgcd-spl-14";
   version = "3.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/rolling/rcgcd_spl_14/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "4f59197d691a0a5c171e0e1b954e419e2eaa28d4f8e6333127cd788929484d55";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "gc_spl-release";
+        rev = "release/rolling/rcgcd_spl_14/3.0.0-1";
+        sha256 = "sha256-7tC3rNdCVqicAQlZa0ZGgvZzWmHJUiqp/fuorBKtIGc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

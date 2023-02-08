@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pepperl-fuchs-r2000";
   version = "0.1.3";
 
-  src = fetchurl {
-    url = "https://github.com/dillenberger/pepperl_fuchs-release/archive/release/melodic/pepperl_fuchs_r2000/0.1.3-0.tar.gz";
-    name = "0.1.3-0.tar.gz";
-    sha256 = "833c1e411a45ec3640a3b9711241ef46c5ba36ceaa0ee0496d183f4fbb246c1f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "dillenberger";
+        repo = "pepperl_fuchs-release";
+        rev = "release/melodic/pepperl_fuchs_r2000/0.1.3-0";
+        sha256 = "sha256-18sfMasHRxV4c33pYtWlcRkfpiqdh0kYuxbuM7hRV9U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

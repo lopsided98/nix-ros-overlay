@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fetch-navigation";
   version = "0.9.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/noetic/fetch_navigation/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "9e4ea90921f157347f53637387de35f39d9143820a8ceb15436cc51397513906";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "fetch_ros-release";
+        rev = "release/noetic/fetch_navigation/0.9.1-1";
+        sha256 = "sha256-DitF4yuoFStq+ol9Sawm+i0rpbFgr3wycfwd05xHi8E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-mavros-msgs";
   version = "2.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/foxy/mavros_msgs/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "0096509a3062bd4451307bb998ac9ef57643773b2dcabd6cb235aa5dce421640";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mavlink";
+        repo = "mavros-release";
+        rev = "release/foxy/mavros_msgs/2.4.0-1";
+        sha256 = "sha256-wDx+TrJOa9Fy2q/W1rGM/YvHumOu3oiWQgQroVg0H1A=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rmf-visualization-obstacles";
   version = "2.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/humble/rmf_visualization_obstacles/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "b6c5d77a5004de6d5c436cd57c90a55e1248e0ea88250ce6cb241d2c89676039";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_visualization-release";
+        rev = "release/humble/rmf_visualization_obstacles/2.0.0-1";
+        sha256 = "sha256-nwTw+bnDvsAQlD3fKyZOY1sPW0shxpGl8/ls4yKTaYA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

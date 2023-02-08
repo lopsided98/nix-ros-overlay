@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-multisense-ros";
   version = "4.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/carnegieroboticsllc/multisense_ros-release/archive/release/melodic/multisense_ros/4.0.4-1.tar.gz";
-    name = "4.0.4-1.tar.gz";
-    sha256 = "a88588e4550c6e557b1bb0aac32e25760bc9e0eb185662cda3c00ede3d42210f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "carnegieroboticsllc";
+        repo = "multisense_ros-release";
+        rev = "release/melodic/multisense_ros/4.0.4-1";
+        sha256 = "sha256-J9JGrFWZmLhh6HFPGocH6YM2nJZU/SHhiB82gbJ0u9k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin libyamlcpp ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-qt-gui-app";
   version = "0.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/qt_gui_core-release/archive/release/melodic/qt_gui_app/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "1a3688850927819c2149581859f6a053358d99f8ffe836da25013a45feacf093";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "qt_gui_core-release";
+        rev = "release/melodic/qt_gui_app/0.4.2-1";
+        sha256 = "sha256-LnJNTjtCbVpIhggFL/rUzrhonYEVKUjb1Qtr/DdcYAg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools ];

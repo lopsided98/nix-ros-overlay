@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-towr-ros";
   version = "1.4.1";
 
-  src = fetchurl {
-    url = "https://github.com/ethz-adrl/towr-release/archive/release/melodic/towr_ros/1.4.1-0.tar.gz";
-    name = "1.4.1-0.tar.gz";
-    sha256 = "fd30887f7c1a5dcd841ed043da22a724bc30cc47f3db12593a0da5d7a99ae854";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ethz-adrl";
+        repo = "towr-release";
+        rev = "release/melodic/towr_ros/1.4.1-0";
+        sha256 = "sha256-Iv9lpP9rDSkWURdw+VMSTj0uCRY3JD3LlgpA9Pp5YaY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

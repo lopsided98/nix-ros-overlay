@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, cppcheck }:
 buildRosPackage {
   pname = "ros-humble-ament-cppcheck";
-  version = "0.12.4-r1";
+  version = "0.12.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_cppcheck/0.12.4-1.tar.gz";
-    name = "0.12.4-1.tar.gz";
-    sha256 = "e823c45592e9224b5ad693f36b160328b0394b85ab9408237a1c884c63eccf05";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_lint-release";
+        rev = "release/humble/ament_cppcheck/0.12.5-1";
+        sha256 = "sha256-kl5+OqxIAxvUYlqE33xy0zyhxVYVdwcYJxZ1+bkOe40=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ cppcheck ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ifm3d-core";
   version = "0.18.0-r5";
 
-  src = fetchurl {
-    url = "https://github.com/ifm/ifm3d-release/archive/release/noetic/ifm3d_core/0.18.0-5.tar.gz";
-    name = "0.18.0-5.tar.gz";
-    sha256 = "f47b95f7f05e7bf5ffb163f50200112b0cf3f13a2c270bf3895e034252c1a4cc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ifm";
+        repo = "ifm3d-release";
+        rev = "release/noetic/ifm3d_core/0.18.0-5";
+        sha256 = "sha256-N47JbOLEUxLYyLW3neBeDPGPyzXxyfrtCk3ZWiC0l28=";
+      };
 
   buildType = "cmake";
   buildInputs = [ boost cmake ];

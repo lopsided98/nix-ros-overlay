@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-actionlib-lisp";
   version = "0.2.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/noetic/actionlib_lisp/0.2.14-1.tar.gz";
-    name = "0.2.14-1.tar.gz";
-    sha256 = "483db5278fc49c4382e7a0c7a9d162ddae25f87df598778dd921b42660b0d177";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "roslisp_common-release";
+        rev = "release/noetic/actionlib_lisp/0.2.14-1";
+        sha256 = "sha256-SWRJeH7iYurQCzUdSE7d4xvZKpybsGxHM5s5B7+0TY8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

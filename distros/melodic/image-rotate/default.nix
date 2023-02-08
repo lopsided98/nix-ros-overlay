@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-image-rotate";
   version = "1.15.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_rotate/1.15.2-1.tar.gz";
-    name = "1.15.2-1.tar.gz";
-    sha256 = "a8e9c585ede1f4c11f7bb189064ec13f2b01321b1bf1725a335b1f7d051d0994";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/melodic/image_rotate/1.15.2-1";
+        sha256 = "sha256-2szAXUnSbT/gYj03xjrAyFSrBlhE6O4DorAvJLv+y4k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules geometry-msgs ];

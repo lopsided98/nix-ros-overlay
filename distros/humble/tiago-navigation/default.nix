@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-tiago-navigation";
   version = "4.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_navigation-release/archive/release/humble/tiago_navigation/4.0.2-1.tar.gz";
-    name = "4.0.2-1.tar.gz";
-    sha256 = "fcd59cbb3c58ea337123bcf32c029179f05d16ce44e9c598bec3cc31f54582d7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "tiago_navigation-release";
+        rev = "release/humble/tiago_navigation/4.0.2-1";
+        sha256 = "sha256-pxhRA39eZM3HlGeM490qFiNo1YZ3QBrD8HWli7ssP3Q=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

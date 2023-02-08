@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-resource-retriever";
   version = "1.12.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/resource_retriever-release/archive/release/melodic/resource_retriever/1.12.7-1.tar.gz";
-    name = "1.12.7-1.tar.gz";
-    sha256 = "ec0e86be440fb9dc95054a7d1257b19be7753b60fa1165de8988c6804ad5e255";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "resource_retriever-release";
+        rev = "release/melodic/resource_retriever/1.12.7-1";
+        sha256 = "sha256-3lgELVCPlXE3y8t2/h247oO8rwiqJ+AR3HG0gHgpNN8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

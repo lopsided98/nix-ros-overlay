@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-maliput-multilane";
   version = "0.1.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/maliput_multilane-release/archive/release/foxy/maliput_multilane/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "3424358c4da51208c068e5e67155ca33cd2f7ffdad75ba973d7b9ad8dd1b3934";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "maliput_multilane-release";
+        rev = "release/foxy/maliput_multilane/0.1.4-1";
+        sha256 = "sha256-T0buTlxWJ9e9e5edq40TBU1WbnhsFK1VXnzdOuS1/GE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

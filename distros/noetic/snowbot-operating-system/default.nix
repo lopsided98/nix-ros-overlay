@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-snowbot-operating-system";
   version = "0.0.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/snowbot_release/archive/release/noetic/snowbot_operating_system/0.0.5-1.tar.gz";
-    name = "0.0.5-1.tar.gz";
-    sha256 = "e8927e8d01db9f934bb23f1ccb99d19b0ff796bab8855ff23b8c643c0bf58e29";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PickNikRobotics";
+        repo = "snowbot_release";
+        rev = "release/noetic/snowbot_operating_system/0.0.5-1";
+        sha256 = "sha256-GLIthTAuyBcsrH/jceuFso5nD1MDyhQh9EvmsSH6dpY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

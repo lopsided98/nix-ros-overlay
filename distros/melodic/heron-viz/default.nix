@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-heron-viz";
   version = "0.0.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/heron_desktop-release/archive/release/melodic/heron_viz/0.0.3-2.tar.gz";
-    name = "0.0.3-2.tar.gz";
-    sha256 = "d884b05c99242ce6154dd63a8bbe69bafa8d85dc5efdd640cf7ab524f96600f9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "heron_desktop-release";
+        rev = "release/melodic/heron_viz/0.0.3-2";
+        sha256 = "sha256-p036aZOiJdrUk13Jv0gRZC54XWUGwbw3K7TLY/8iN48=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

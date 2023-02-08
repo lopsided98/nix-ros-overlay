@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosconsole-bridge";
   version = "0.5.3";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rosconsole_bridge-release/archive/release/melodic/rosconsole_bridge/0.5.3-0.tar.gz";
-    name = "0.5.3-0.tar.gz";
-    sha256 = "d47fadd37a04d4f165bef5173d536190baa3006dac2fa0235a14527d32169afc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rosconsole_bridge-release";
+        rev = "release/melodic/rosconsole_bridge/0.5.3-0";
+        sha256 = "sha256-Fp4Axd/6P0pkKc7jw5+PC7fj0FTQHmzQgZqckkA7aD0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

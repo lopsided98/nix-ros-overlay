@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-eus-qp";
   version = "0.1.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/melodic/eus_qp/0.1.16-1.tar.gz";
-    name = "0.1.16-1.tar.gz";
-    sha256 = "7e066b267b55b2c98d6b8c9cdf8b988f7c2aab464027045627fc00ea41699309";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_control-release";
+        rev = "release/melodic/eus_qp/0.1.16-1";
+        sha256 = "sha256-rkmWhz1+yp5vrD7NOzfB5KmIRD1HIv7MG2ZmKR6N3y8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules rostest ];

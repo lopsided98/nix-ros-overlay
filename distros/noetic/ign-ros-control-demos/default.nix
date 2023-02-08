@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ign-ros-control-demos";
   version = "0.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ign_ros_control-release/archive/release/noetic/ign_ros_control_demos/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "34e65328c8fd74ad40ba8e29b8ce4a4c0ba91a40b8768707f479b95aec5fe3fc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ign_ros_control-release";
+        rev = "release/noetic/ign_ros_control_demos/0.0.1-1";
+        sha256 = "sha256-27lDC8Xd9aMHtWckQlYwgWYwyyQQ9MBvOo2pnhiBcFQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools ];

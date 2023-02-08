@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ackermann-msgs";
   version = "1.0.1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/ackermann_msgs-release/archive/release/melodic/ackermann_msgs/1.0.1-0.tar.gz";
-    name = "1.0.1-0.tar.gz";
-    sha256 = "2696633432ef72489b77e8ff6b0d4782e2e526a62fda01c92d984348b4b0e13b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "ackermann_msgs-release";
+        rev = "release/melodic/ackermann_msgs/1.0.1-0";
+        sha256 = "sha256-tefTnCEdaCyYC5/ICUZRq8um+9tyzDlSCiifxQzPBoc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

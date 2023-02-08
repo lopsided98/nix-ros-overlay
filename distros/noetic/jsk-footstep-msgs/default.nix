@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-jsk-footstep-msgs";
   version = "4.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/noetic/jsk_footstep_msgs/4.3.2-1.tar.gz";
-    name = "4.3.2-1.tar.gz";
-    sha256 = "b2b7a43c4d6575bac585650d2ae849299248c3ae676e80ad068eebcd193b31c6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_common_msgs-release";
+        rev = "release/noetic/jsk_footstep_msgs/4.3.2-1";
+        sha256 = "sha256-XD4hiHTiNsg6vBFZu3sSQ6osI0CGq57fJxF6C0pfEUU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

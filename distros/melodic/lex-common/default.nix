@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-lex-common";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/aws-gbp/lex_common-release/archive/release/melodic/lex_common/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "69a222e4226dfcaf24a2a5c923b70f37b411c95a51ae870b97a6734178cd8536";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "aws-gbp";
+        repo = "lex_common-release";
+        rev = "release/melodic/lex_common/1.0.0-1";
+        sha256 = "sha256-JowK+DVAl6wDcmiUYaNyFvck5B3QzUbKFyEROQ8VwvA=";
+      };
 
   buildType = "cmake";
   buildInputs = [ catkin cmake ros-environment ];

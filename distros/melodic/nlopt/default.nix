@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nlopt";
   version = "2.1.24-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/nlopt/2.1.24-2.tar.gz";
-    name = "2.1.24-2.tar.gz";
-    sha256 = "f9128eae806b05a44d01a1e3ce57cf0e9690a0fa14a810dad22877a49383da0c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_3rdparty-release";
+        rev = "release/melodic/nlopt/2.1.24-2";
+        sha256 = "sha256-7lcOTwpUtX4rgS9LfIovUp+EuJ0soZ+J262T5OHQWcc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules libtool mk rosbuild rospack ];

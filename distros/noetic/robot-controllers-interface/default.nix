@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-robot-controllers-interface";
   version = "0.7.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/robot_controllers-release/archive/release/noetic/robot_controllers_interface/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "2aefb653301e9f46d2d82c4a26dd10a4d8c9e28342899429c90490e854122c7a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "robot_controllers-release";
+        rev = "release/noetic/robot_controllers_interface/0.7.0-1";
+        sha256 = "sha256-cuYCU0ujvKPSM6Em8bnELqXTMDL5aDKAzlaOu4vTaIY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

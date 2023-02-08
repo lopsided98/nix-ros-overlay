@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-imu-sensor-broadcaster";
   version = "0.8.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/imu_sensor_broadcaster/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "0211069ba6285d48660324f5d51a9167f37b3d769b9b3cde6e4f2ef0d23bbf60";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_controllers-release";
+        rev = "release/foxy/imu_sensor_broadcaster/0.8.2-1";
+        sha256 = "sha256-NlwRYrabjKT7kVhZttCAW0l6WfBP4L/xWiNa16MXqwo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

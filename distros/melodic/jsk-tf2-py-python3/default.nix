@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jsk-tf2-py-python3";
   version = "0.6.9-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/geometry2_python3-release/archive/release/melodic/jsk_tf2_py_python3/0.6.9-2.tar.gz";
-    name = "0.6.9-2.tar.gz";
-    sha256 = "b9dcbe07c5e9e519cbb81170f910d4ccc865bee3d180db3862ab4a6fe6398cf6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "geometry2_python3-release";
+        rev = "release/melodic/jsk_tf2_py_python3/0.6.9-2";
+        sha256 = "sha256-nrFC8Czn5n5iZLRvPaDbFTVDY3payeFM7CH4CiiBvlk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.catkin-pkg ];

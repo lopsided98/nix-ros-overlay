@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-depthai-ros-msgs";
   version = "2.5.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/foxy/depthai_ros_msgs/2.5.3-1.tar.gz";
-    name = "2.5.3-1.tar.gz";
-    sha256 = "3065ad1a95530c35f2be8b5fb471b06c4f3fbad88fa8c8faf51440880036f62e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "luxonis";
+        repo = "depthai-ros-release";
+        rev = "release/foxy/depthai_ros_msgs/2.5.3-1";
+        sha256 = "sha256-l8V7kaXNFQtgazo6zWSHDa62NrxTB1aKfKpR21pIgrU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

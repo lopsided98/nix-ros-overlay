@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-husky-navigation";
   version = "0.4.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/melodic/husky_navigation/0.4.13-1.tar.gz";
-    name = "0.4.13-1.tar.gz";
-    sha256 = "d1a435498e9fbd96c6881ee861ef4994a923bed7bbd450f082bd288ecab8f895";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "husky-release";
+        rev = "release/melodic/husky_navigation/0.4.13-1";
+        sha256 = "sha256-IQGXn8y9GPEd5oppYJH4X/zHqTaOzhaN6wBtSGAQRvI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

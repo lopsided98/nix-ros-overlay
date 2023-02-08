@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-micro-ros-msgs";
   version = "1.0.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/micro_ros_msgs-release/archive/release/humble/micro_ros_msgs/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "49cdc5a739a613584c15e44d4d9ceb8669b7991af3be8a5672565725310417a0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "micro_ros_msgs-release";
+        rev = "release/humble/micro_ros_msgs/1.0.0-3";
+        sha256 = "sha256-kuDv7e3C0BCXolx6ePv0TLEpK9E3OfLGFAh0K/9Wb8o=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

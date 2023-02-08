@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-play-motion";
   version = "0.4.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/play_motion-release2/archive/release/melodic/play_motion/0.4.8-1.tar.gz";
-    name = "0.4.8-1.tar.gz";
-    sha256 = "bc3bb1a2030e2aa9213c26556c1fd012399c58cdc5f1dc592ec4b1786c8267aa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "play_motion-release2";
+        rev = "release/melodic/play_motion/0.4.8-1";
+        sha256 = "sha256-4/ACaqXD+i1NjMQNV9c/s8w+KpD6audHA7Wd8iNBNOU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

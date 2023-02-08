@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-composition-interfaces";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/composition_interfaces/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "1cbded5f8e2875aceb5a04260c67c0e069afc8c2f6494683b980777c88d6d983";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcl_interfaces-release";
+        rev = "release/rolling/composition_interfaces/1.3.1-1";
+        sha256 = "sha256-ZaQm8aIhN3JVSPF5Zo4PxnGyOVv6yJMrT2PVM+/+xbI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

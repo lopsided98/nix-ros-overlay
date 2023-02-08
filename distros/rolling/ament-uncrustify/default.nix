@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ament-uncrustify";
   version = "0.13.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_uncrustify/0.13.2-1.tar.gz";
-    name = "0.13.2-1.tar.gz";
-    sha256 = "bbfe218f30bbb2c8c98b0df37fde24af469891e0d6ec74cd3358660b46d27a9a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_lint-release";
+        rev = "release/rolling/ament_uncrustify/0.13.2-1";
+        sha256 = "sha256-Saoz9+u73OHSC4daIuXV7DPjkrHnGh1BwB6xAnnwW/4=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-pycodestyle pythonPackages.pytest ];

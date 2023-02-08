@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fake-joint-launch";
   version = "0.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/fake_joint-release/archive/release/melodic/fake_joint_launch/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "f15ae2e5630c3ef5ce5ca60149d8719fef5f75303d6dd03967461f3db3e3b4e0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "fake_joint-release";
+        rev = "release/melodic/fake_joint_launch/0.0.4-1";
+        sha256 = "sha256-CqacIJEYJcEA/j6yylhUyGqq+iVIuOS3SugFi+ZBzvM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

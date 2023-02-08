@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-google-benchmark-vendor";
   version = "0.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/google_benchmark_vendor-release/archive/release/foxy/google_benchmark_vendor/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "6f2e2e257bb774b9d6746c39f86fc8b32a24f4edd27773939110f9b32e9705f4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "google_benchmark_vendor-release";
+        rev = "release/foxy/google_benchmark_vendor/0.0.3-1";
+        sha256 = "sha256-RSqaND91QeTX2POtkVIGwJAy9evjeiVItx/yllJSEqM=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

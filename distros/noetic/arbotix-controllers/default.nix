@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-arbotix-controllers";
   version = "0.11.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/vanadiumlabs/arbotix_ros-release/archive/release/noetic/arbotix_controllers/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "ce77c261a63367fadaf8e22ee1d5106c290bf60644fdf50788804092fc259b24";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "vanadiumlabs";
+        repo = "arbotix_ros-release";
+        rev = "release/noetic/arbotix_controllers/0.11.0-1";
+        sha256 = "sha256-K4G8gOvOSIUWfkf9bAZEvvBPkA92GKV2OXZy8d985kg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

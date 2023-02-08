@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-interval-intersection";
   version = "0.10.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/calibration-release/archive/release/noetic/interval_intersection/0.10.15-1.tar.gz";
-    name = "0.10.15-1.tar.gz";
-    sha256 = "4f89e1d18704edfe0222cc81b58b40ed3ea8edfc49c342c14499f6de0fef4387";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "calibration-release";
+        rev = "release/noetic/interval_intersection/0.10.15-1";
+        sha256 = "sha256-rkLBelaRrHWD0oIoMeggODEwtaw4OKZJK0FaqsYs7Lc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

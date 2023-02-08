@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-robot-localization";
   version = "2.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/cra-ros-pkg/robot_localization-release/archive/release/noetic/robot_localization/2.7.4-1.tar.gz";
-    name = "2.7.4-1.tar.gz";
-    sha256 = "6518a9a73a1c4e5046366b74aa9c0f586089535676b4a644085c633ec6447431";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "cra-ros-pkg";
+        repo = "robot_localization-release";
+        rev = "release/noetic/robot_localization/2.7.4-1";
+        sha256 = "sha256-QiK90IIgaNFBQE9mqog3Q6dm8/pTjF09NikDBEPM7ic=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation python3Packages.catkin-pkg roslint ];

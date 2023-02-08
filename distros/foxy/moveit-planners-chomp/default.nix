@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-moveit-planners-chomp";
   version = "2.2.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_planners_chomp/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "4612da44d93816c551a95e295abbb1fe7115ef18acdeffbeecee8382ebae3f23";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "moveit2-release";
+        rev = "release/foxy/moveit_planners_chomp/2.2.3-1";
+        sha256 = "sha256-aiC24huzu4YvtiHyhlbttK3CgEc4FDynVUDWvaLQD2k=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake moveit-common ];

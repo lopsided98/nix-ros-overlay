@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-xsens-driver";
   version = "2.2.2";
 
-  src = fetchurl {
-    url = "https://github.com/ethz-asl/ethzasl_xsens_driver-release/archive/release/melodic/xsens_driver/2.2.2-0.tar.gz";
-    name = "2.2.2-0.tar.gz";
-    sha256 = "bf0a13bb4fd0e2891ca1f6b18c1d8bb071f8eb2446a07ee31abb850d821da693";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ethz-asl";
+        repo = "ethzasl_xsens_driver-release";
+        rev = "release/melodic/xsens_driver/2.2.2-0";
+        sha256 = "sha256-52xvkHyI7IVas3jJqDU17vE+FDEJWlj086OeLYey/lg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

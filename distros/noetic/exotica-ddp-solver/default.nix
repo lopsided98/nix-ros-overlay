@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-exotica-ddp-solver";
   version = "6.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/noetic/exotica_ddp_solver/6.2.0-1.tar.gz";
-    name = "6.2.0-1.tar.gz";
-    sha256 = "a77f9751667bcd8e6acdb7b058fd64a05fbf34d02ede8af7076ddafb18a980cb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipab-slmc";
+        repo = "exotica-release";
+        rev = "release/noetic/exotica_ddp_solver/6.2.0-1";
+        sha256 = "sha256-BkUusXl/YxioP2YDdwN4gPBjfpcpAcnQSn7CrsurawQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

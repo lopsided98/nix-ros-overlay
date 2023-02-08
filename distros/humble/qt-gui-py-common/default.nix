@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-qt-gui-py-common";
   version = "2.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/humble/qt_gui_py_common/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "37deb0d66736b9ae1c1f29205e054765c0446bddd84574ca7eeacd9852d8d0e8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "qt_gui_core-release";
+        rev = "release/humble/qt_gui_py_common/2.2.2-1";
+        sha256 = "sha256-+parlOa4l6vPnPPs6EskQDBnHzX4tv3z5/Kmg2MwpQA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

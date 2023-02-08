@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rqt-runtime-monitor";
   version = "1.0.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_runtime_monitor-release/archive/release/humble/rqt_runtime_monitor/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "ae351146e14f6bc95b76fb4992c5e57d9033c0f9d9807263e1fd2cb61acf8f82";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_runtime_monitor-release";
+        rev = "release/humble/rqt_runtime_monitor/1.0.0-3";
+        sha256 = "sha256-7LyebmhKcj1ltMsj4LbDUxXX5v9ejuW4g4lIKitP28Q=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

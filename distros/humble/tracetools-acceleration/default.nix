@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-tracetools-acceleration";
   version = "0.4.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/tracetools_acceleration-release/archive/release/humble/tracetools_acceleration/0.4.1-2.tar.gz";
-    name = "0.4.1-2.tar.gz";
-    sha256 = "b69b9fd608fcfff8501d1432eb19cc99501b2984763eafeb2e5d6a566d7d403f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "tracetools_acceleration-release";
+        rev = "release/humble/tracetools_acceleration/0.4.1-2";
+        sha256 = "sha256-8S7qrZQ1ohJoEVhAiMPHVKAD4lCTHCfRb1CD5hu4VWg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros pkg-config ];

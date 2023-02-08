@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-examples-rclpy-pointcloud-publisher";
   version = "0.15.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/humble/examples_rclpy_pointcloud_publisher/0.15.1-1.tar.gz";
-    name = "0.15.1-1.tar.gz";
-    sha256 = "f105c56892a928d70e00ead663c8255adcd0ebd37593387b0a2ec571b3cc650b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "examples-release";
+        rev = "release/humble/examples_rclpy_pointcloud_publisher/0.15.1-1";
+        sha256 = "sha256-yDfHzS6cjHXFaBoVDoAsdpQTnVppoDcNKZ04Jny1e20=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

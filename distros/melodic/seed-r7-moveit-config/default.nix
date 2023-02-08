@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-seed-r7-moveit-config";
   version = "0.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/seed-solutions/seed_r7_ros_pkg-release/archive/release/melodic/seed_r7_moveit_config/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "fe05d8eb712ff6eccd2f079fbecf10e3b9defec16d0d7bdc6c214d577c6a65cf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "seed-solutions";
+        repo = "seed_r7_ros_pkg-release";
+        rev = "release/melodic/seed_r7_moveit_config/0.3.3-1";
+        sha256 = "sha256-xBGGLuqhNBW2Tovr3MTmyRr7EThEuLhirDglA61Rz3E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosout";
   version = "1.14.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosout/1.14.13-1.tar.gz";
-    name = "1.14.13-1.tar.gz";
-    sha256 = "44b692ed3292419961cf7a78d8df3bd8b5e0958e620bebd778e0249d0a9a230f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm-release";
+        rev = "release/melodic/rosout/1.14.13-1";
+        sha256 = "sha256-bfSBP1CcTXN2WD5eJ9V5aNU1eN1m5BQI+iEgrqOGEAA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

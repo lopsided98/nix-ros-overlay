@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-lanelet2-traffic-rules";
   version = "1.1.1-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/humble/lanelet2_traffic_rules/1.1.1-4.tar.gz";
-    name = "1.1.1-4.tar.gz";
-    sha256 = "ffbaf785eb5919e0ff8a320f528e1651e501d2b0704f89eb0187df59024755ac";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "lanelet2-release";
+        rev = "release/humble/lanelet2_traffic_rules/1.1.1-4";
+        sha256 = "sha256-f8lvg45yjWovjMCmp3Pdmr6KFejBnczY67qkvP5uFWw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-core ];

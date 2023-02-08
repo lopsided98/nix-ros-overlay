@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ur-gazebo";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/noetic/ur_gazebo/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "78eead524cf56d0c372c723c91219a95ad2fe1fa672f611d0740c17d2acd305f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "universal_robot-release";
+        rev = "release/noetic/ur_gazebo/1.3.1-1";
+        sha256 = "sha256-Vu37y39DoI9TCxE0DAIUkgZBSShKb+uw3glc/7TKZlw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-turtlesim";
   version = "1.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_tutorials-release/archive/release/humble/turtlesim/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "e259c12d06533fe5943d8b5c5606cb215d2b2cfb309e0aaae263f51f5147d6f3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros_tutorials-release";
+        rev = "release/humble/turtlesim/1.4.2-1";
+        sha256 = "sha256-aasLRqKCjuLL2lV4bWgYs/teS/UyiGhEVpy5P+fKXt4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

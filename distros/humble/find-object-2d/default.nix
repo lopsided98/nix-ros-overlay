@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-find-object-2d";
   version = "0.7.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/introlab/find_object_2d-release/archive/release/humble/find_object_2d/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "01e262c4209580ebb7b339b6b2f9333e592eb8dd1b00fb0881eae099eda14bc8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "introlab";
+        repo = "find_object_2d-release";
+        rev = "release/humble/find_object_2d/0.7.0-1";
+        sha256 = "sha256-KtLe1v52K9gb/p4t0Yqdkc99Hgi67wNcFpmguOilOnA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment rosidl-default-generators ];

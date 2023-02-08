@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pilz-utils";
   version = "0.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_common-release/archive/release/melodic/pilz_utils/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "1d9c69d9031b3672f7eba222b81ed50fef31a7c8188e310e476889ee1d3131c9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_common-release";
+        rev = "release/melodic/pilz_utils/0.6.0-1";
+        sha256 = "sha256-h8lKL5VQv5Dbr2Xbczbs+8GeFe3KDIiZiH72b0hA8D4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin clang roscpp ];

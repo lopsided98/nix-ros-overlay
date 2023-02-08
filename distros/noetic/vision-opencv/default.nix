@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-vision-opencv";
   version = "1.16.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/vision_opencv-release/archive/release/noetic/vision_opencv/1.16.2-1.tar.gz";
-    name = "1.16.2-1.tar.gz";
-    sha256 = "2f6b0d514c98c13cc41c36e833d26423379efe0a035a7390589b0c13c6d4c2e2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "vision_opencv-release";
+        rev = "release/noetic/vision_opencv/1.16.2-1";
+        sha256 = "sha256-/AFXYFsm63KZL9Sbyp0kIWCeuUBqitKeTY+hLpkrJAY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

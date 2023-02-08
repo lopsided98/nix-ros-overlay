@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-scan-to-cloud-converter";
   version = "0.3.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/melodic/scan_to_cloud_converter/0.3.3-2.tar.gz";
-    name = "0.3.3-2.tar.gz";
-    sha256 = "3ec240f339589c404db018ccf98fda92f2dc33e740678a6246ffa248f2dab533";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "scan_tools-release";
+        rev = "release/melodic/scan_to_cloud_converter/0.3.3-2";
+        sha256 = "sha256-PbqPH8KR7i6Einlcettf0P73PN7E67K96puohcJPUn4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-resources-panda-moveit-config";
   version = "0.8.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_panda_moveit_config/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "e5b5da7f3f30a6e0ddd98c802432f99fa526c623d00780c1c4e66759c3813164";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit_resources-release";
+        rev = "release/noetic/moveit_resources_panda_moveit_config/0.8.2-1";
+        sha256 = "sha256-Xn+vBeaUEWIjh8acZevbK9ecXZXN9vit7x/uPdbfK4Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

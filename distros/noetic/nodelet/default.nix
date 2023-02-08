@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-nodelet";
   version = "1.10.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/nodelet_core-release/archive/release/noetic/nodelet/1.10.2-1.tar.gz";
-    name = "1.10.2-1.tar.gz";
-    sha256 = "71cd76bda95fa2bcb3938a4b1700faa2dcbaf741e0ba2494934e560b4c5ee92c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "nodelet_core-release";
+        rev = "release/noetic/nodelet/1.10.2-1";
+        sha256 = "sha256-aT4ZMxfTvxPs694VNjv0FTO/JPEy2dpk/GsxDE569r8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-multiplot";
   version = "0.0.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/anybotics/rqt_multiplot_plugin-release/archive/release/noetic/rqt_multiplot/0.0.12-1.tar.gz";
-    name = "0.0.12-1.tar.gz";
-    sha256 = "586639723a44f5e5665a45b7acdf77ffbffff04a89256364a67668ed626430ac";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "anybotics";
+        repo = "rqt_multiplot_plugin-release";
+        rev = "release/noetic/rqt_multiplot/0.0.12-1";
+        sha256 = "sha256-mFfm63RJfKH7mtT9+C+r55pnjFjLulsU81aBQS6Tfe4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

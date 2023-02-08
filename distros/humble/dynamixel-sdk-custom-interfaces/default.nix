@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-dynamixel-sdk-custom-interfaces";
   version = "3.7.60-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/humble/dynamixel_sdk_custom_interfaces/3.7.60-1.tar.gz";
-    name = "3.7.60-1.tar.gz";
-    sha256 = "75841255d97010335e1c6aaccabef9d292338b6613c6c53c20331c69e1d19e10";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "dynamixel_sdk-release";
+        rev = "release/humble/dynamixel_sdk_custom_interfaces/3.7.60-1";
+        sha256 = "sha256-0ULRyYvvOb1009hbk089LlDrLoGyLZOEloGTCjs66/8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

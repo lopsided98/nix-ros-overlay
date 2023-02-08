@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rqt-robot-dashboard";
   version = "0.6.1-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_robot_dashboard-release/archive/release/humble/rqt_robot_dashboard/0.6.1-3.tar.gz";
-    name = "0.6.1-3.tar.gz";
-    sha256 = "b38454be3d745cbae51f3ac169ea7ab0089a09e39f2a621ba7fc41bf2ebddc4b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_robot_dashboard-release";
+        rev = "release/humble/rqt_robot_dashboard/0.6.1-3";
+        sha256 = "sha256-o2FskVGSpDLTcYD8PlfRgHpBlDa3UId/Xq+IlAvaZGY=";
+      };
 
   buildType = "ament_python";
   buildInputs = [ python3Packages.setuptools ];

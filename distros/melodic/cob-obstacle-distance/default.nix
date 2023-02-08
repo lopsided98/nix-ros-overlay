@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-obstacle-distance";
   version = "0.8.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_obstacle_distance/0.8.12-1.tar.gz";
-    name = "0.8.12-1.tar.gz";
-    sha256 = "43d7557c2aebc1f283ca06f26b4f53a8631489927921c56e317416c295f48936";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_control-release";
+        rev = "release/melodic/cob_obstacle_distance/0.8.12-1";
+        sha256 = "sha256-7K8cGlW0ipd++Mn8Z64Z7s2PikNQd+PVc3JYNdu5kgE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-grid-map";
   version = "1.6.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/anybotics/grid_map-release/archive/release/noetic/grid_map/1.6.4-1.tar.gz";
-    name = "1.6.4-1.tar.gz";
-    sha256 = "02600ba8a898cef1635dccbe7e10c61fe2bf8522bbbe62c94f3884b7d64d5992";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "anybotics";
+        repo = "grid_map-release";
+        rev = "release/noetic/grid_map/1.6.4-1";
+        sha256 = "sha256-rrfUsMhqdhUx8AqDkPK9fW4PtjKfcBmCYMIDUp+cChw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

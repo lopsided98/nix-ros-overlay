@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-moveit-resources";
   version = "2.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/rolling/moveit_resources/2.0.6-1.tar.gz";
-    name = "2.0.6-1.tar.gz";
-    sha256 = "f7be0be0dec030e12e51fc5c94a1a490694836e22950db293f5740548fc3a5f6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "moveit_resources-release";
+        rev = "release/rolling/moveit_resources/2.0.6-1";
+        sha256 = "sha256-6SeNklZ6FV3leAPoweE7scYHip2GWoiT6Wl6A5NywNI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

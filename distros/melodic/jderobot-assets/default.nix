@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jderobot-assets";
   version = "1.0.4-r3";
 
-  src = fetchurl {
-    url = "https://github.com/JdeRobot/assets-release/archive/release/melodic/jderobot_assets/1.0.4-3.tar.gz";
-    name = "1.0.4-3.tar.gz";
-    sha256 = "5a9b5d2b0f99b289689b9c3974f01ae01f653e0c662865c902f2722cd2f1311c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "JdeRobot";
+        repo = "assets-release";
+        rev = "release/melodic/jderobot_assets/1.0.4-3";
+        sha256 = "sha256-eWhRxjn5YapadUxzYpqpZg+egltRYbGrPutzPeiyPLk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-khi-rs080n-moveit-config";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/melodic/khi_rs080n_moveit_config/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "6719e7ec11326619aeba4b3289f06be44a33e87baec9fb28c7a6fe271d17a37e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Kawasaki-Robotics";
+        repo = "khi_robot-release";
+        rev = "release/melodic/khi_rs080n_moveit_config/1.2.0-1";
+        sha256 = "sha256-ZHZXe4L4VAURfKVcJYxySd/pLPN4EK+VBM+gX+hM7+w=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

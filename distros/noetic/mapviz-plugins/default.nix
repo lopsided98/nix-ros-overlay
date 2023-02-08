@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mapviz-plugins";
   version = "1.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/noetic/mapviz_plugins/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "4c2972160dc7a5fd7858760b98b68f0a87c185d6c1926be7983162d83d447129";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "mapviz-release";
+        rev = "release/noetic/mapviz_plugins/1.4.2-1";
+        sha256 = "sha256-yMfiAoI1u2L5wdxkm25ZI9zoNwhOmOt0M+xrDq7c57w=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

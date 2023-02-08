@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-gscam";
   version = "2.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/gscam-release/archive/release/foxy/gscam/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "f2539ee337ae0b3a0ae099b825ec4db091154beb68c118a9f3df53cba7d8d1f4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "gscam-release";
+        rev = "release/foxy/gscam/2.0.2-1";
+        sha256 = "sha256-CKQzdZxZ6OZeWkirhmcrfJhb0hNN0vSimKIRHSUDT3k=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

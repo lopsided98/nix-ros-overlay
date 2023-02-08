@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mav-planning-msgs";
   version = "3.3.2";
 
-  src = fetchurl {
-    url = "https://github.com/ethz-asl/mav_comm-release/archive/release/melodic/mav_planning_msgs/3.3.2-0.tar.gz";
-    name = "3.3.2-0.tar.gz";
-    sha256 = "54bf3cce82bd9924dc58e2cd95da0314127ef73818f625b56fb687ff0fe694d0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ethz-asl";
+        repo = "mav_comm-release";
+        rev = "release/melodic/mav_planning_msgs/3.3.2-0";
+        sha256 = "54bf3cce82bd9924dc58e2cd95da0314127ef73818f625b56fb687ff0fe694d0";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

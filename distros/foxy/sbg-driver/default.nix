@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-sbg-driver";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SBG-Systems/sbg_ros2-release/archive/release/foxy/sbg_driver/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "ada708074bdf3f3972ea2e8db9e496cffbae3bf3a485ebc0418eb0a8b5926461";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SBG-Systems";
+        repo = "sbg_ros2-release";
+        rev = "release/foxy/sbg_driver/1.0.1-1";
+        sha256 = "sha256-xon2as6QtEJR4VD9BxquN8SRK5jJWJpPp4U0yVvUb6A=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

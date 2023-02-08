@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-codec-image-transport";
   version = "0.0.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yoshito-n-students/codec_image_transport-release/archive/release/noetic/codec_image_transport/0.0.5-1.tar.gz";
-    name = "0.0.5-1.tar.gz";
-    sha256 = "23b6eb7c711c21a9d58cbfb8b6e10d19b47429e40bd6035a405f3eaa05ae448b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yoshito-n-students";
+        repo = "codec_image_transport-release";
+        rev = "release/noetic/codec_image_transport/0.0.5-1";
+        sha256 = "sha256-D/MNtMRUoxFZ65mnLHNCTWBtVxBlAiR8fLg79fSI0WM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hector-imu-attitude-to-tf";
   version = "0.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/melodic/hector_imu_attitude_to_tf/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "2e186eb4656f497c7dc1438e672cc0990b11120a0bf41aab78c08ceed40bc35e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_slam-release";
+        rev = "release/melodic/hector_imu_attitude_to_tf/0.4.1-1";
+        sha256 = "sha256-yJp/jswi/78/Nyx4QXUZp2QkxhBkyA34BwMi+QwHv0s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

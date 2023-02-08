@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ros-controllers";
   version = "0.17.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/ros_controllers/0.17.2-1.tar.gz";
-    name = "0.17.2-1.tar.gz";
-    sha256 = "a7b4e753197be0734e0703db5b7254c6fed1661d1df9653bb3083d6e378e0069";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_controllers-release";
+        rev = "release/melodic/ros_controllers/0.17.2-1";
+        sha256 = "sha256-Jfjf0HZ4e8AMiU9rJ9ZLheI7EAHDPT6pqfqaNew+llA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

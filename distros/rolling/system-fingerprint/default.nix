@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-system-fingerprint";
   version = "0.7.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/MetroRobots/ros_system_fingerprint-release/archive/release/rolling/system_fingerprint/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "ebb0db783c2b5bce842577ba9ead1c06f7391863d9990c74e0a3447936605950";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "MetroRobots";
+        repo = "ros_system_fingerprint-release";
+        rev = "release/rolling/system_fingerprint/0.7.0-1";
+        sha256 = "sha256-swG8fwjiFc0LXSlbA6Lml0jlh/VyNS//insRqM01fr0=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ python3Packages.GitPython rcl-interfaces rclpy ros2action ros2cli ros2node ros2param ros2topic ];

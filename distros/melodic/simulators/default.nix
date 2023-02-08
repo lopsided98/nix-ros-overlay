@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-simulators";
   version = "1.4.1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/metapackages-release/archive/release/melodic/simulators/1.4.1-0.tar.gz";
-    name = "1.4.1-0.tar.gz";
-    sha256 = "5a6ddc7bfbe78170db5541bdab3f2ab031abcd787b4d087e41d010acb6de2455";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "metapackages-release";
+        rev = "release/melodic/simulators/1.4.1-0";
+        sha256 = "sha256-E3InUeOtmFrmdIK7VnAkf6mPq9esMIWKWQAo8vovNx8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

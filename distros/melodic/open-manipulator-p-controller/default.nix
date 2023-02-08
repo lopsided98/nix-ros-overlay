@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-open-manipulator-p-controller";
   version = "1.0.0-r5";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator_p-release/archive/release/melodic/open_manipulator_p_controller/1.0.0-5.tar.gz";
-    name = "1.0.0-5.tar.gz";
-    sha256 = "1f363bde35481b1c259a2d7c92667a6dd5dfe6f2f8794537ce7c76560f55092c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "open_manipulator_p-release";
+        rev = "release/melodic/open_manipulator_p_controller/1.0.0-5";
+        sha256 = "sha256-tUJXIzHLQ2IQPJZ8ZaRQDKxq9qkE7h/ZwZ8AH0x1uxo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

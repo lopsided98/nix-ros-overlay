@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-navigation-local";
   version = "0.6.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_navigation-release/archive/release/melodic/cob_navigation_local/0.6.11-1.tar.gz";
-    name = "0.6.11-1.tar.gz";
-    sha256 = "0997db3825bcdc36ceed01868d5f491b77eaf5597f47142db292ff8d0058b4a1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_navigation-release";
+        rev = "release/melodic/cob_navigation_local/0.6.11-1";
+        sha256 = "sha256-gI1u8c5V7J54VzXXxtvIDz6RTqw+mQTGqkkiMgwizbo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

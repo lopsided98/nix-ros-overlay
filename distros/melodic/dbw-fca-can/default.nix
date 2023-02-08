@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dbw-fca-can";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/melodic/dbw_fca_can/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "1926b5951ef4f0fa66cfb5085515bfcd0bb5cf39ef67f65cf269e99b139dcd80";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dbw_fca_ros-release";
+        rev = "release/melodic/dbw_fca_can/1.3.0-1";
+        sha256 = "sha256-3oae3i+Le894UArl9843cH/mIt5LJqFMbI4eG9a8z3I=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin dataspeed-can-msg-filters ];

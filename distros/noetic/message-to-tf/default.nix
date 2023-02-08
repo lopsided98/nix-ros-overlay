@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-message-to-tf";
   version = "0.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_localization-release/archive/release/noetic/message_to_tf/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "fedfa6c5ab7ac1807512c9cbe4047d165fada0658fbf612b4fcef8397d3d4c11";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_localization-release";
+        rev = "release/noetic/message_to_tf/0.4.0-1";
+        sha256 = "sha256-4OaET2k/pzb4Uo/uOdcjg6AjOJeF9XKvW1F6kt5BL8E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

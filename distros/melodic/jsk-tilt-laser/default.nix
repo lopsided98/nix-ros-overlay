@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jsk-tilt-laser";
   version = "2.2.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/jsk_tilt_laser/2.2.12-1.tar.gz";
-    name = "2.2.12-1.tar.gz";
-    sha256 = "64f7242e53af8b5e6aee3da001f1fe6d60056dbe9d2ee8b582ad185839f66eeb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_common-release";
+        rev = "release/melodic/jsk_tilt_laser/2.2.12-1";
+        sha256 = "sha256-0g9YIl+KFy/5BRAu3Z83tXgP//WdTN6Ivy9XwTw1i84=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

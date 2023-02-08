@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-view-controller-msgs";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/view_controller_msgs-release/archive/release/noetic/view_controller_msgs/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "2157172387b8868d01b73a0cf00fb1425748b9707b54b40f97eb1ef40505aadf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "view_controller_msgs-release";
+        rev = "release/noetic/view_controller_msgs/0.2.0-1";
+        sha256 = "sha256-HVswly+YiZAEVU8VXD/fq/u/HBI7ZG71PHm4e3OD1vM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin genmsg message-generation ];

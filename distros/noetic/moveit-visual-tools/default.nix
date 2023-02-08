@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-visual-tools";
   version = "3.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_visual_tools-release/archive/release/noetic/moveit_visual_tools/3.6.0-1.tar.gz";
-    name = "3.6.0-1.tar.gz";
-    sha256 = "f6df4a22012e3f8aa930d07e68fdb21239ab8addabd48872bcecbd62b382af03";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit_visual_tools-release";
+        rev = "release/noetic/moveit_visual_tools/3.6.0-1";
+        sha256 = "sha256-XYpuwFclrYDONvVrcoue+VIRTPw/d6s/C9ztD7D5qPQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

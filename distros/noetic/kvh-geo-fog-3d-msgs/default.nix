@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-kvh-geo-fog-3d-msgs";
   version = "1.5.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/MITRE/kvh_geo_fog_3d-release/archive/release/noetic/kvh_geo_fog_3d_msgs/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "20eb1568add8a3edfefaea64ad4675cf00511945ae10cad9c6ff5dcf2aaf4477";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "MITRE";
+        repo = "kvh_geo_fog_3d-release";
+        rev = "release/noetic/kvh_geo_fog_3d_msgs/1.5.1-1";
+        sha256 = "sha256-3Iif23aBXpZVarMlripUtWjO6saS/vSwInZruF6HDps=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

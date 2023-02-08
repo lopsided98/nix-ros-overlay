@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-roslz4";
   version = "1.15.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/roslz4/1.15.15-1.tar.gz";
-    name = "1.15.15-1.tar.gz";
-    sha256 = "f33d669bd8015db9035539db684e61381e8797dfc668224761ad9c8d35a2b91a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm-release";
+        rev = "release/noetic/roslz4/1.15.15-1";
+        sha256 = "sha256-GTlKTjjd7t5li7p2x+uraeOzGBt5ZyEc4fmv78W+4/Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cpp-common ];

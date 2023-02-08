@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rot-conv";
   version = "1.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rot_conv_lib-release/archive/release/rolling/rot_conv/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "4ab0513c64b78ab832f4e3750d764cbec73b7af6fb6d76db07a44957eaec45f0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rot_conv_lib-release";
+        rev = "release/rolling/rot_conv/1.0.11-1";
+        sha256 = "sha256-6/6mfqRarCEYQCMc18m5vFDCS0UjiBqGWsoHUEB7LiU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

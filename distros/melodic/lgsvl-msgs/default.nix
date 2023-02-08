@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-lgsvl-msgs";
   version = "0.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/lgsvl/lgsvl_msgs-release/archive/release/melodic/lgsvl_msgs/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "eb60036c61861db1e32eeebd107b1aac889dd4b31c898ab2871aa17ea2cf9513";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "lgsvl";
+        repo = "lgsvl_msgs-release";
+        rev = "release/melodic/lgsvl_msgs/0.0.4-1";
+        sha256 = "sha256-Pd5TP0wLuUr0/m+WvLpkvURpB0d0hbik3SOPkifg8YU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ message-generation ros-environment ];

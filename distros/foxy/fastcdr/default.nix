@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-fastcdr";
   version = "1.0.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastcdr-release/archive/release/foxy/fastcdr/1.0.13-1.tar.gz";
-    name = "1.0.13-1.tar.gz";
-    sha256 = "7bfa6843defd50ed19c9c08ca7d13959b60be5aff12ffc40edd5b7e50daf411c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "fastcdr-release";
+        rev = "release/foxy/fastcdr/1.0.13-1";
+        sha256 = "sha256-UmT5a7TRl4k178Ubc3FO6cWCbP6PIgchpHeCDibIRVk=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

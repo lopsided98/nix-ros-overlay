@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dbw-polaris-joystick-demo";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/noetic/dbw_polaris_joystick_demo/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "2dd9a9f970cd893988278d0be424ec92f468a3f7e830cee43be686dd092f2e97";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dbw_polaris_ros-release";
+        rev = "release/noetic/dbw_polaris_joystick_demo/1.1.0-1";
+        sha256 = "sha256-IScNwPCoynOnNCzpFxHEM2mRUhyOE6p1ECD0THPCZQs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

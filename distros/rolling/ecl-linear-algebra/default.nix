@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ecl-linear-algebra";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/rolling/ecl_linear_algebra/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "880b035dec854d3da5628edcc771bbc7e8d6fbf1c897c22728a20fbf9b8c9bc4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "ecl_core-release";
+        rev = "release/rolling/ecl_linear_algebra/1.2.1-1";
+        sha256 = "sha256-2Mofxug8ckLfTnStaTQtx69z6SvToiY8incBV3OMXJo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

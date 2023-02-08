@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rc-silhouettematch-client";
   version = "3.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_silhouettematch_client/3.3.2-1.tar.gz";
-    name = "3.3.2-1.tar.gz";
-    sha256 = "4f31e5a42f44da9901d820e17448ee41e39d607b16b5492753f3f2b6811c66d1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "roboception-gbp";
+        repo = "rc_visard-release";
+        rev = "release/melodic/rc_silhouettematch_client/3.3.2-1";
+        sha256 = "sha256-qbXXttEhKp/my4mMmsa5YNssUJoNHOJOqWgMY3oD4FM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

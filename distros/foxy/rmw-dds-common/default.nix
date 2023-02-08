@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmw-dds-common";
   version = "1.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_dds_common-release/archive/release/foxy/rmw_dds_common/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "96d728be0c1a0a4253d95c8db028523adf8754476e51e353ea005f8c409e0cc3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmw_dds_common-release";
+        rev = "release/foxy/rmw_dds_common/1.0.3-1";
+        sha256 = "sha256-On8z2oAmI9DDWiQNwMLdnK38kQRjZ8GwvzFVPrCOGDU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

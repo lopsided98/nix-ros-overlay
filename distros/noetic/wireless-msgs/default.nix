@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-wireless-msgs";
   version = "0.1.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/noetic/wireless_msgs/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "cd789f90673d73feda7f30fe6af06aa73459e4a6a7a6dff711fb6f493481b6f0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "wireless-release";
+        rev = "release/noetic/wireless_msgs/0.1.1-2";
+        sha256 = "sha256-TZJIhudGUEey1U/FfWaRu/ON7O4eZY8zACqCPRJNeYk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

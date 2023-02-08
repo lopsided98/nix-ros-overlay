@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-robot-controllers-interface";
   version = "0.9.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/robot_controllers-ros2-release/archive/release/humble/robot_controllers_interface/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "0dabadd61f4c4577879d53502fb1ae826285e755bf08a03756c653f28da2d5da";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "robot_controllers-ros2-release";
+        rev = "release/humble/robot_controllers_interface/0.9.3-1";
+        sha256 = "sha256-RnV2xz0xdp3ejwJr9rHTKXhBc3FzfCEHIJwGwqrNZ7o=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

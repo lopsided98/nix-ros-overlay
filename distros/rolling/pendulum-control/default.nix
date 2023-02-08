@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-pendulum-control";
   version = "0.23.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/pendulum_control/0.23.0-1.tar.gz";
-    name = "0.23.0-1.tar.gz";
-    sha256 = "6eb609679b10d21fa557ff79d630124cc121473409c553a40101c3bddf454b53";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/rolling/pendulum_control/0.23.0-1";
+        sha256 = "sha256-QYP3BztMJbGwuB9j/RG4KoZysVghSt4LDi2/iH5+690=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

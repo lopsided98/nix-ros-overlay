@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-supported-robots";
   version = "0.6.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_supported_robots-release/archive/release/melodic/cob_supported_robots/0.6.15-1.tar.gz";
-    name = "0.6.15-1.tar.gz";
-    sha256 = "ed78423a62385277880ea1d93f3adde5e1652422ebfefbd6352af188e12b2322";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_supported_robots-release";
+        rev = "release/melodic/cob_supported_robots/0.6.15-1";
+        sha256 = "sha256-NEOfbZeVn6UgG/vjagSnFUYRhB4hyxj+YgsFBuwBy28=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

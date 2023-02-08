@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-prbt-pg70-support";
   version = "0.0.5-r2";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/prbt_grippers-release/archive/release/noetic/prbt_pg70_support/0.0.5-2.tar.gz";
-    name = "0.0.5-2.tar.gz";
-    sha256 = "9b31e3222c15a3ef66fcbab83046465d7884e253ed7e827ac3a99f8690cdccd5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "prbt_grippers-release";
+        rev = "release/noetic/prbt_pg70_support/0.0.5-2";
+        sha256 = "sha256-zLVcjlgy5yM7XETklBaRdnyZsXgocUz4x+yboDEBL34=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

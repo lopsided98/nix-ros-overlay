@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-heifu-msgs";
   version = "0.7.7-r2";
 
-  src = fetchurl {
-    url = "https://github.com/BV-OpenSource/heifu-release/archive/release/melodic/heifu_msgs/0.7.7-2.tar.gz";
-    name = "0.7.7-2.tar.gz";
-    sha256 = "59ead4d32ce7668d215daac5aa4616f7a03c5e56e4940c671435da114d3df871";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "BV-OpenSource";
+        repo = "heifu-release";
+        rev = "release/melodic/heifu_msgs/0.7.7-2";
+        sha256 = "sha256-0JBoJnJSVZBTy1F/ZORsdoBO5sgePm/v5iQP4Rw75VI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-avt-vimba-camera";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/avt_vimba_camera-release/archive/release/noetic/avt_vimba_camera/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "f8050c08a4f1699866f490cb04fd69deee510a24bd6a4ddfd0e537b0e8488320";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "avt_vimba_camera-release";
+        rev = "release/noetic/avt_vimba_camera/1.2.0-1";
+        sha256 = "sha256-Ykrkl50T1YM/nw8eIdpcqvFcdKnNh828nL+np0TlbEA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

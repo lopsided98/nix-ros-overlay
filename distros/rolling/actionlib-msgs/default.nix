@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-actionlib-msgs";
   version = "4.6.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/actionlib_msgs/4.6.1-1.tar.gz";
-    name = "4.6.1-1.tar.gz";
-    sha256 = "4714dec45a8dfe7a81518893ccb68fbc6f3d20309bdb683019be52405c1ef987";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "common_interfaces-release";
+        rev = "release/rolling/actionlib_msgs/4.6.1-1";
+        sha256 = "sha256-1oxpFxv1ehjbkiXfXah58J41CEvK5gs5K+y8oeXqCGM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

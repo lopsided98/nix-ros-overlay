@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pacmod-msgs";
   version = "3.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/pacmod_msgs/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "4778add999c3cc09f4961506e49e9a8d4b1d6fcfde80033e27944ee722824fcb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "astuff_sensor_msgs-release";
+        rev = "release/melodic/pacmod_msgs/3.0.2-1";
+        sha256 = "sha256-gwxBoxmi0MLsrOBZ4aUc1pyf3UrTOiWKVe0X0ESOWus=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ros-environment ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-stage";
   version = "4.3.0";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/stage-release/archive/release/melodic/stage/4.3.0-0.tar.gz";
-    name = "4.3.0-0.tar.gz";
-    sha256 = "3c72bba7242ecd98b26f177e4227aef06ec85915f196ee88ec6103be4dfb492d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "stage-release";
+        rev = "release/melodic/stage/4.3.0-0";
+        sha256 = "sha256-I4psU8+xrEh2p3KAHkSjbhAYz+hzq7GOzqJ2/D6qwEE=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake libtool pkg-config ];

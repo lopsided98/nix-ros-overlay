@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-robot-dashboard";
   version = "0.5.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_robot_dashboard-release/archive/release/noetic/rqt_robot_dashboard/0.5.8-1.tar.gz";
-    name = "0.5.8-1.tar.gz";
-    sha256 = "0f6a57bad9cf5b6fdbbbe7d44fe44dbaf76f8bee2fa096853e029d5a44eba462";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_robot_dashboard-release";
+        rev = "release/noetic/rqt_robot_dashboard/0.5.8-1";
+        sha256 = "sha256-7ODq7+DY24KZx+EHjrLT1m9eDaiaaN1cFpIMUk5tjnY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools ];

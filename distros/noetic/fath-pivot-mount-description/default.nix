@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fath-pivot-mount-description";
   version = "0.1.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/fath_pivot_mount_description-release/archive/release/noetic/fath_pivot_mount_description/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "dfa286a7988dce4a8466f53ccb233e3d4055b649f3874466a681342cee84c77f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "fath_pivot_mount_description-release";
+        rev = "release/noetic/fath_pivot_mount_description/0.1.1-2";
+        sha256 = "sha256-T330klYUS78AFQDqpq/GZy2o49n2tf/5iq7fI5nq8OE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

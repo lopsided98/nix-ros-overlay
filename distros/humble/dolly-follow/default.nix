@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-dolly-follow";
   version = "0.4.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/dolly-release/archive/release/humble/dolly_follow/0.4.0-3.tar.gz";
-    name = "0.4.0-3.tar.gz";
-    sha256 = "278db5ad8cfaaed64b6efb340ff120953b5ef7f2ffcb92d97ac3d958785de395";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "dolly-release";
+        rev = "release/humble/dolly_follow/0.4.0-3";
+        sha256 = "sha256-Udj2U+dWE5+JIz9GOSB6X4C9y3g/g30Jp3+BTuiiRX0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-stereo-msgs";
   version = "4.6.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/stereo_msgs/4.6.1-1.tar.gz";
-    name = "4.6.1-1.tar.gz";
-    sha256 = "d816280ad30a940b487b0a30f4676fcce96552c3376a225f7bb26307bd77dd07";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "common_interfaces-release";
+        rev = "release/rolling/stereo_msgs/4.6.1-1";
+        sha256 = "sha256-yjrkYKt5sMK6hTRRJM8IxF737hSY84bZr+Ni5Mn33/I=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

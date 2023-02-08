@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-picovoice-msgs";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/reinzor/picovoice_ros-release/archive/release/noetic/picovoice_msgs/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "d63ee582eba6b4e8fe24de8e2b6289cbabcc4fbea585966e10f7605cda05975a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "reinzor";
+        repo = "picovoice_ros-release";
+        rev = "release/noetic/picovoice_msgs/1.0.1-1";
+        sha256 = "sha256-BHv+7kGeQRMDE5FA6/WaaOYEz13odWOSHA65R0v4bjI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ur3-moveit-config";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/noetic/ur3_moveit_config/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "f0a364d80079493419f1ddba701d1721aefdec55a33895fecf5f6aca4606feb4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "universal_robot-release";
+        rev = "release/noetic/ur3_moveit_config/1.3.1-1";
+        sha256 = "sha256-dKboWdVHZC8TgG3dunucIICDNcZE5AoIbtiwBoiot+k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-capabilities";
   version = "0.2.0";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/capabilities-release/archive/release/melodic/capabilities/0.2.0-0.tar.gz";
-    name = "0.2.0-0.tar.gz";
-    sha256 = "adfb1e8a3002fcfc90f654c8def944f6cd7a8753b3e908b5760eca786b1546ef";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "capabilities-release";
+        rev = "release/melodic/capabilities/0.2.0-0";
+        sha256 = "sha256-gsQu49rMCXcnnxjiResH//6LKotvU0/C0e037Htp5H0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation rostest ];

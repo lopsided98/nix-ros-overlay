@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rc-genicam-camera";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_genicam_camera-release/archive/release/noetic/rc_genicam_camera/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "7c69ed776b4a4c8bb7a46ddd4e4b69cfe0b02824af7d89675ff78500917f0d75";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "roboception-gbp";
+        repo = "rc_genicam_camera-release";
+        rev = "release/noetic/rc_genicam_camera/1.3.0-1";
+        sha256 = "sha256-SvadPZn8p/Ps2Akqw6I1dVQ4eBQu4+3gm/07jpDGriw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-multi-interface-roam";
   version = "1.0.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/multi_interface_roam/1.0.16-1.tar.gz";
-    name = "1.0.16-1.tar.gz";
-    sha256 = "63d583ac95a415fdd60c63c5056a5e1b11c9ec3f643028304d381bce18a3fb79";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "linux_networking-release";
+        rev = "release/melodic/multi_interface_roam/1.0.16-1";
+        sha256 = "sha256-1L6cTx+JWhWGuKNKSSrhUiAdhyaryrdeZSTwtb810bI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

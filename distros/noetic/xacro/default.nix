@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-xacro";
   version = "1.14.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/xacro-release/archive/release/noetic/xacro/1.14.14-1.tar.gz";
-    name = "1.14.14-1.tar.gz";
-    sha256 = "84db0afd7ffb8014545b42729cc0691bf09d9a285b2a71f52a1221149b63e2fa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "xacro-release";
+        rev = "release/noetic/xacro/1.14.14-1";
+        sha256 = "sha256-vNWKb22Tgy7WOQLkr0ZH3jbGSA5Qrm80b2pnLzc4fLI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

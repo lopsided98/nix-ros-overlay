@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-unique-id";
   version = "1.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-geographic-info/unique_identifier-release/archive/release/noetic/unique_id/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "3bc1d8eace40dc0a1346ca7740c67962aba40ad3d6dabc095370e5b97b33d88f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-geographic-info";
+        repo = "unique_identifier-release";
+        rev = "release/noetic/unique_id/1.0.6-1";
+        sha256 = "sha256-Utf63NtbxEw1gmgIlpLsrswjQvw973ZfBGJ2cbCPYd8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

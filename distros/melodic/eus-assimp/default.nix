@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-eus-assimp";
   version = "0.4.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_model_tools-release/archive/release/melodic/eus_assimp/0.4.4-1.tar.gz";
-    name = "0.4.4-1.tar.gz";
-    sha256 = "d94c8c3950538e07a3d17c344f0d25aa7ce89081991c80b3200fcd90b6077e06";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_model_tools-release";
+        rev = "release/melodic/eus_assimp/0.4.4-1";
+        sha256 = "sha256-CMHByMDzOib51C2dAVuQsUGaq2BxiaO9DrscI6qlhgo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin euslisp pkg-config ];

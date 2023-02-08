@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-demo-nodes-cpp";
   version = "0.23.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/demo_nodes_cpp/0.23.0-1.tar.gz";
-    name = "0.23.0-1.tar.gz";
-    sha256 = "cd5ef8d9f4979011b03df73b0bdff65e564fc1436096ae16b0d218c95e088d31";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/rolling/demo_nodes_cpp/0.23.0-1";
+        sha256 = "sha256-RP+Tn9r+u0hq7rM4YWNXKEgUjWvDkSt0fm8q+vHcEtk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rmw-implementation-cmake ];

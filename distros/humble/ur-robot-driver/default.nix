@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-ur-robot-driver";
   version = "2.2.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/humble/ur_robot_driver/2.2.6-1.tar.gz";
-    name = "2.2.6-1.tar.gz";
-    sha256 = "5209a28a6e88d08e42edd8121ae2f470597272075aa3d62adeaae036f2521de7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "Universal_Robots_ROS2_Driver-release";
+        rev = "release/humble/ur_robot_driver/2.2.6-1";
+        sha256 = "sha256-ZCTA/VzHxhiSRkitrPdoJQE0itfAQdIv3Yd+tniZYtE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];

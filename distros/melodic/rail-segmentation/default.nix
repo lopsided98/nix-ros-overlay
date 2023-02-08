@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rail-segmentation";
   version = "0.1.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/gt-rail-release/rail_segmentation/archive/release/melodic/rail_segmentation/0.1.15-1.tar.gz";
-    name = "0.1.15-1.tar.gz";
-    sha256 = "90dbf547d486e651a658a8c6819f15b03c6a0d48cf217a559bd772689a768ed6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "gt-rail-release";
+        repo = "rail_segmentation";
+        rev = "release/melodic/rail_segmentation/0.1.15-1";
+        sha256 = "sha256-lMh+bogc6kaORTZ6K9WGeJKwfPI/kwfXuU8f4u+IrE0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation pkg-config ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ur-controllers";
   version = "2.2.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/rolling/ur_controllers/2.2.4-1.tar.gz";
-    name = "2.2.4-1.tar.gz";
-    sha256 = "3d3bf9102c06ef93e90e6f137ed70c277ab92d74f0b44a263a536216e31c1dd7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "Universal_Robots_ROS2_Driver-release";
+        rev = "release/rolling/ur_controllers/2.2.4-1";
+        sha256 = "sha256-bexL780riJoMtifn5ZhRN6EgZADCdmVWkzkrJLYwppo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-xv-11-laser-driver";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rohbotics/xv_11_laser_driver-release/archive/release/noetic/xv_11_laser_driver/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "50a7aa9f11a48f38be60f8fc05c4a8496de0f7df8488816cb89ca4712f829924";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rohbotics";
+        repo = "xv_11_laser_driver-release";
+        rev = "release/noetic/xv_11_laser_driver/0.3.0-1";
+        sha256 = "sha256-xd8dH35fK1pMgD4JhX69dVG7ofLih5D/yYoha5A2M4M=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roscpp sensor-msgs ];

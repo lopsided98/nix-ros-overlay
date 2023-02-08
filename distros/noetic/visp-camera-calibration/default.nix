@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-visp-camera-calibration";
   version = "0.13.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/lagadic/vision_visp-release/archive/release/noetic/visp_camera_calibration/0.13.1-1.tar.gz";
-    name = "0.13.1-1.tar.gz";
-    sha256 = "b97dd9ee9c9b87ce05f1f44fa28501c9c473851f452b8efdea0c8c70911e8fcd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "lagadic";
+        repo = "vision_visp-release";
+        rev = "release/noetic/visp_camera_calibration/0.13.1-1";
+        sha256 = "sha256-Y6p4CmBsnWXP6u7pfQymLdNg4+g+K62eRIM1xmt+Mnc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

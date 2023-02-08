@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-common-actions";
   version = "0.0.11";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/melodic/pr2_common_actions/0.0.11-0.tar.gz";
-    name = "0.0.11-0.tar.gz";
-    sha256 = "80fd608e81e3b4797e06188ddba9351c1cd1937e04985ff61c6c4d72e8a546ea";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_common_actions-release";
+        rev = "release/melodic/pr2_common_actions/0.0.11-0";
+        sha256 = "sha256-BssSJZlFQb+mBwD4rlZepULoWBqOkywCoqVjlHE+Gtk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

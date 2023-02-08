@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-combined-robot-hw";
   version = "0.18.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/combined_robot_hw/0.18.4-1.tar.gz";
-    name = "0.18.4-1.tar.gz";
-    sha256 = "d09031bea3b3d2d8d5b496f3856e4ea059a585bd2be9cb2f6703750c999560ab";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_control-release";
+        rev = "release/melodic/combined_robot_hw/0.18.4-1";
+        sha256 = "sha256-g++6yJnKfHcPep1hpApsLbkbpVANCLblXAYUTYzXw2I=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fuse-optimizers";
   version = "0.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/locusrobotics/fuse-release/archive/release/noetic/fuse_optimizers/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "7327fd3bd1de8a049b782e839bf4c0878467ed38693e249c845a9d004e6bb5a9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "locusrobotics";
+        repo = "fuse-release";
+        rev = "release/noetic/fuse_optimizers/0.4.2-1";
+        sha256 = "sha256-sfdo5rzV2QTNUShw+q/DusxeUu0W+1AEHGZtEhPuFuU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

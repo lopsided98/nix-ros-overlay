@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rviz-visual-tools";
   version = "3.8.0-r4";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/rviz_visual_tools-release/archive/release/melodic/rviz_visual_tools/3.8.0-4.tar.gz";
-    name = "3.8.0-4.tar.gz";
-    sha256 = "4b4eb5dcac945413442686e3c37cb0f383c40fd7cb491044ca7e0505fffb2976";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PickNikRobotics";
+        repo = "rviz_visual_tools-release";
+        rev = "release/melodic/rviz_visual_tools/3.8.0-4";
+        sha256 = "sha256-JUAImO9LR4eNZtlODe/HeOIusD8caQw6Q0LEp+CpA00=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

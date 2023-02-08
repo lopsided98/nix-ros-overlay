@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-imagezero-image-transport";
   version = "0.2.4";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/imagezero_transport-release/archive/release/melodic/imagezero_image_transport/0.2.4-0.tar.gz";
-    name = "0.2.4-0.tar.gz";
-    sha256 = "4c9fbc7c319b30bb24174343cc8e901e9908725890f11cdca4866fbd4f4550ed";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "imagezero_transport-release";
+        rev = "release/melodic/imagezero_image_transport/0.2.4-0";
+        sha256 = "sha256-BENMAIdW1ulOJr0Sh9YeVc7N2+HzuyMjWvzDZI4GN8Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

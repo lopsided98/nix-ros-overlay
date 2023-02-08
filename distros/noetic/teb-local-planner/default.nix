@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-teb-local-planner";
   version = "0.9.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rst-tu-dortmund/teb_local_planner-release/archive/release/noetic/teb_local_planner/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "c435f9715885fbe7e9ae79250d8fd829949c76818d2a10c7a3182bf69656ef31";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rst-tu-dortmund";
+        repo = "teb_local_planner-release";
+        rev = "release/noetic/teb_local_planner/0.9.1-1";
+        sha256 = "sha256-BVX39bC/UcEh0JzuSYVRLGLiAThrxtb+btawCdgQwjU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules message-generation tf2-eigen tf2-geometry-msgs ];

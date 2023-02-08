@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rpyutils";
   version = "0.2.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rpyutils-release/archive/release/humble/rpyutils/0.2.1-2.tar.gz";
-    name = "0.2.1-2.tar.gz";
-    sha256 = "d35a40fddeb91bd9d436fffbf8081b71fec4a60934be2f05555519f62cccb81c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rpyutils-release";
+        rev = "release/humble/rpyutils/0.2.1-2";
+        sha256 = "sha256-SLFZqnfQmfF/5Mf3+hq8ePwMaE+e44rkrYJ62KU6+aU=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint pythonPackages.pytest ];

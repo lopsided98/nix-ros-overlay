@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-mechanism-model";
   version = "1.8.21-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_mechanism_model/1.8.21-1.tar.gz";
-    name = "1.8.21-1.tar.gz";
-    sha256 = "b84afbaecefda7be65c217c9af6c759906caf111538828d363877659854903d2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_mechanism-release";
+        rev = "release/melodic/pr2_mechanism_model/1.8.21-1";
+        sha256 = "sha256-6tOfLbR3ePlkXuPq6m1fg9oasGlrvLgUZYZ0Goj87ws=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules rostest rosunit ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosbag-editor";
   version = "0.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/facontidavide/rosbag_editor-release/archive/release/melodic/rosbag_editor/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "a14354ca2721cf4793619775a5ab3fe46348104f6436f33bfa52779f56406e70";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "facontidavide";
+        repo = "rosbag_editor-release";
+        rev = "release/melodic/rosbag_editor/0.4.2-1";
+        sha256 = "sha256-3CzFYNDWE6F29Yw3MCGuWeH2zNDSZT0TN1wUbfoVLCA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fingertip-pressure";
   version = "1.9.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/noetic/fingertip_pressure/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "b381fcb28a88b68e16de43e618c341be01483c918815793cbf81e98b392fbe73";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_ethercat_drivers-release";
+        rev = "release/noetic/fingertip_pressure/1.9.0-1";
+        sha256 = "sha256-/8O7K/ErNQM3nz0bY2oDzmTd/qLk/zp2j0V6RpVF6mw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation rostest ];

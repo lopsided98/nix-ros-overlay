@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rcl";
   version = "5.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/rolling/rcl/5.6.0-1.tar.gz";
-    name = "5.6.0-1.tar.gz";
-    sha256 = "36ab6da0c037cdafde16bd5c8fc514731da2b1ab03b7b3a1c99cf9c3d9e3ff6a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcl-release";
+        rev = "release/rolling/rcl/5.6.0-1";
+        sha256 = "sha256-wdqxJDxdrGr6ATP24YSNAGz03BXOd+46WDT5zEpLT4M=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

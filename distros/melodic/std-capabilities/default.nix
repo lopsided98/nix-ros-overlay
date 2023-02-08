@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-std-capabilities";
   version = "0.1.0";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/std_capabilities-release/archive/release/melodic/std_capabilities/0.1.0-0.tar.gz";
-    name = "0.1.0-0.tar.gz";
-    sha256 = "56846414a12f4f667aec42eaef1c602c355854fdaa729692117961e54d94a9b6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "std_capabilities-release";
+        rev = "release/melodic/std_capabilities/0.1.0-0";
+        sha256 = "sha256-B5MCD1Q5n4GbXIIzgcAgzEbPuCIBdSB+BLsRwGx8v40=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

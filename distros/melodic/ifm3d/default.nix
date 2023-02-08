@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ifm3d";
   version = "0.6.2-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ifm/ifm3d-ros-release/archive/release/melodic/ifm3d/0.6.2-2.tar.gz";
-    name = "0.6.2-2.tar.gz";
-    sha256 = "71bf4886c74200afc466308abfadec6ff8c44a22c77f7d82603642e613d74b23";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ifm";
+        repo = "ifm3d-ros-release";
+        rev = "release/melodic/ifm3d/0.6.2-2";
+        sha256 = "sha256-hCfT4PKk3DEEntLQeolnlvCKzWLY68gfE/TaSz64R7M=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

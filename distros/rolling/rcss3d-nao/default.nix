@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rcss3d-nao";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcss3d_nao-release/archive/release/rolling/rcss3d_nao/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "438571fa12e46dc4e3fd3da364541e9ca1d229a453439a46d62e158dc65dd76b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcss3d_nao-release";
+        rev = "release/rolling/rcss3d_nao/0.1.1-1";
+        sha256 = "sha256-kiydlR35nLodRNpS+Qbo+TMTCXy8cFfUK4qSPpTk0NA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

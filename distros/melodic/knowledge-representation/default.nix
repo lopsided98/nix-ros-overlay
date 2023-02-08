@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-knowledge-representation";
   version = "0.9.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/utexas-bwi-gbp/knowledge_representation-release/archive/release/melodic/knowledge_representation/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "9d78c86fd031e08f16d5c2592b9f6d24a4d91f97a8c894752727c37ea292820d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "utexas-bwi-gbp";
+        repo = "knowledge_representation-release";
+        rev = "release/melodic/knowledge_representation/0.9.4-1";
+        sha256 = "sha256-gnLg1NF27HVgu0h2vR88yG01B1RxwFzYu9GLoz6HHDM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools roslint ];

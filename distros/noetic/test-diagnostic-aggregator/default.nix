@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-test-diagnostic-aggregator";
   version = "1.11.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/noetic/test_diagnostic_aggregator/1.11.0-1.tar.gz";
-    name = "1.11.0-1.tar.gz";
-    sha256 = "58d23a932e321247efdb4ee7634e6b6eeeca0d9b9340b7c70411060caba63d84";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "diagnostics-release";
+        rev = "release/noetic/test_diagnostic_aggregator/1.11.0-1";
+        sha256 = "sha256-Z/OK9qETXGCXXBRcWNzZNJoqPW525QvDStU3i3GLCU8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

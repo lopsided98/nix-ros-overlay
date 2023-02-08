@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-robotont-gazebo";
   version = "0.0.2-r2";
 
-  src = fetchurl {
-    url = "https://github.com/robotont-release/robotont_gazebo-release/archive/release/noetic/robotont_gazebo/0.0.2-2.tar.gz";
-    name = "0.0.2-2.tar.gz";
-    sha256 = "6284e77228389def9dc22b96a2adcd1b549c9e4f7218a8c8c037db1a442ea03f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "robotont-release";
+        repo = "robotont_gazebo-release";
+        rev = "release/noetic/robotont_gazebo/0.0.2-2";
+        sha256 = "sha256-LXgQ3IOlTBrylr12nOhSNdAmYD5+ENGePJ1LA79v+A0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

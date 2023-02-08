@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jsk-model-tools";
   version = "0.4.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_model_tools-release/archive/release/melodic/jsk_model_tools/0.4.4-1.tar.gz";
-    name = "0.4.4-1.tar.gz";
-    sha256 = "7d67e14898a9a2dc4d8c0db7b9cb584f5f541de477f336ed63bbf74c7c76a1bf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_model_tools-release";
+        rev = "release/melodic/jsk_model_tools/0.4.4-1";
+        sha256 = "sha256-zvzP7mUCPf61EnF41GEPxJ3kB6VrI1gLE+HEhG1Q0jM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

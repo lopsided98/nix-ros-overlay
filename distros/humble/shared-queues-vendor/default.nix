@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-shared-queues-vendor";
-  version = "0.15.3-r1";
+  version = "0.15.4-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/shared_queues_vendor/0.15.3-1.tar.gz";
-    name = "0.15.3-1.tar.gz";
-    sha256 = "cbc389c6492bc6ed2a35a14fe43d31ed23f475797edc5ba15335be7e3d2e9c5f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosbag2-release";
+        rev = "release/humble/shared_queues_vendor/0.15.4-2";
+        sha256 = "sha256-8sZMUBQEsRzKah5K32umNOAy2ZOcup2XJ8aQN7VJHaY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

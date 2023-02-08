@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-leuze-rsl-driver";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa-led/leuze_ros_drivers-release/archive/release/melodic/leuze_rsl_driver/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "1c43607eabb2a22a598777455812a596854a52f79eaf5d2fc585e19b8970e84c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa-led";
+        repo = "leuze_ros_drivers-release";
+        rev = "release/melodic/leuze_rsl_driver/1.0.1-1";
+        sha256 = "sha256-14Nqmz92Bm3Quwl2rGGPX9dp8/C2/YYYvDgrg9mBfng=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

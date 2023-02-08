@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dockeros";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ct2034/dockeros-release/archive/release/melodic/dockeros/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "5c2e6a8bcf8bf6db553a1d597f143037da1ee614a3ef62d633ccf602de779c74";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ct2034";
+        repo = "dockeros-release";
+        rev = "release/melodic/dockeros/1.1.0-1";
+        sha256 = "sha256-IYlgDWUE3f+cVo9D61AQmcwLtD1gaUjwWf/YduCyi+A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-libpointmatcher";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/nobleo/libpointmatcher-release/archive/release/foxy/libpointmatcher/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "6ce722319db4c641a59403efa34f3ecb50e88877703659db8e561be52bb3f952";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "nobleo";
+        repo = "libpointmatcher-release";
+        rev = "release/foxy/libpointmatcher/1.3.1-1";
+        sha256 = "sha256-96czxG0jg3fhdnnpfunDXT5SeulBTS0I2wHxgBhzunA=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

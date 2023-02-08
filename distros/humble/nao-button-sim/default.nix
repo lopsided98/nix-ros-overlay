@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-nao-button-sim";
   version = "0.1.1-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/nao_button_sim-release/archive/release/humble/nao_button_sim/0.1.1-4.tar.gz";
-    name = "0.1.1-4.tar.gz";
-    sha256 = "9bc9e8864b6cc26cb6cab39180f3a4becc38902e72cfe3f2da735d610c058f12";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "nao_button_sim-release";
+        rev = "release/humble/nao_button_sim/0.1.1-4";
+        sha256 = "sha256-kSAZ/BDlwmj/kpJek7GBfiEO1RBUa8Lmld+ZbxmlAX0=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

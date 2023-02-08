@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-willow-maps";
   version = "1.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/willow_maps-release/archive/release/noetic/willow_maps/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "da7a3de20a1d6b8bc738f90a7fbc63a821cc607ab52b4f3d8dc0083a14e0e58e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "willow_maps-release";
+        rev = "release/noetic/willow_maps/1.0.3-1";
+        sha256 = "sha256-IIn8UQEUNVNd+OCgqtSbqflAXMrQItZZjwiSGzuJKd4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

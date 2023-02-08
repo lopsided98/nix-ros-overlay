@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-launch-testing-examples";
   version = "0.16.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/rolling/launch_testing_examples/0.16.2-1.tar.gz";
-    name = "0.16.2-1.tar.gz";
-    sha256 = "33619e42d285a77f06b686215f6a5a1f51d4e694b87e14b1acbbf8df784fdc32";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "examples-release";
+        rev = "release/rolling/launch_testing_examples/0.16.2-1";
+        sha256 = "sha256-SJbwrSwG92XX0UAl+8+XzycvrXb3WU+z9Dbc1tw5BS0=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 demo-nodes-cpp launch launch-ros launch-testing launch-testing-ros pythonPackages.pytest rclpy ros2bag rosbag2-transport std-msgs ];

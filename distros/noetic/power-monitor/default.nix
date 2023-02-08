@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-power-monitor";
   version = "1.1.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/noetic/power_monitor/1.1.10-1.tar.gz";
-    name = "1.1.10-1.tar.gz";
-    sha256 = "379ca3049bcd3d48bba2379b85a1b37cdd391196e55adc3d2276656940b9387c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_power_drivers-release";
+        rev = "release/noetic/power_monitor/1.1.10-1";
+        sha256 = "sha256-4JqY6AFxg3fz+ah+zoiMDPylpsdSFxVwgwEhK48Jsig=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

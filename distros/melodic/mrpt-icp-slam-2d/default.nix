@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mrpt-icp-slam-2d";
   version = "0.1.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/melodic/mrpt_icp_slam_2d/0.1.12-1.tar.gz";
-    name = "0.1.12-1.tar.gz";
-    sha256 = "184bccb5b6188df6fe089f0312c22b7ba313e91bec80ef27d878942786d4cb1e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mrpt-ros-pkg-release";
+        repo = "mrpt_slam-release";
+        rev = "release/melodic/mrpt_icp_slam_2d/0.1.12-1";
+        sha256 = "sha256-YH+fZTUPIOgBDszuxf98cRdtP7A5x6KBbq4gzbn5UbU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

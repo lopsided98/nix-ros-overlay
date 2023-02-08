@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rcl-yaml-param-parser";
   version = "5.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/rolling/rcl_yaml_param_parser/5.6.0-1.tar.gz";
-    name = "5.6.0-1.tar.gz";
-    sha256 = "0384a625d8ca2a58a533b8da34b033e4b613816de7021269693df0debd0ee732";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcl-release";
+        rev = "release/rolling/rcl_yaml_param_parser/5.6.0-1";
+        sha256 = "sha256-bsPJQtioI5dRMhSY0PZ+oe2gy9o8FpKjOjzkufzZwn4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros rcutils ];

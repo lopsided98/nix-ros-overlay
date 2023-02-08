@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dataspeed-can";
   version = "1.0.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/noetic/dataspeed_can/1.0.16-1.tar.gz";
-    name = "1.0.16-1.tar.gz";
-    sha256 = "38e1ac834ec961a5b75345f4cfd413a1279ca1d89d09adeb00794e270d771e54";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dataspeed_can-release";
+        rev = "release/noetic/dataspeed_can/1.0.16-1";
+        sha256 = "sha256-GvbRVesJOGrwL3+VbE61M7y4gwE8DBFTqb59LzdwXxA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

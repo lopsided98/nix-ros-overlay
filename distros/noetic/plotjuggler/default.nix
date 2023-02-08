@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-plotjuggler";
   version = "3.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/facontidavide/plotjuggler-release/archive/release/noetic/plotjuggler/3.6.0-1.tar.gz";
-    name = "3.6.0-1.tar.gz";
-    sha256 = "d8bf1819254a0f6a6d505791548c87658f7238ec2d3a68e8c27809d4d6b32c65";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "facontidavide";
+        repo = "plotjuggler-release";
+        rev = "release/noetic/plotjuggler/3.6.0-1";
+        sha256 = "sha256-nHSTE9bbmkR6byd/ACSbE16oscBg2pMgQIEUMdXFpg0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

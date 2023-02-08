@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fake-joint-driver";
   version = "0.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/fake_joint-release/archive/release/melodic/fake_joint_driver/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "fe4cc169633ac8e081d1ad84a6a594ce832751b07ad862516568fc9f834b7083";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "fake_joint-release";
+        rev = "release/melodic/fake_joint_driver/0.0.4-1";
+        sha256 = "sha256-hdFyMkt1M2s5xUqbMl/m4xZ8V50kSKIkCOvGsHK0ebc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

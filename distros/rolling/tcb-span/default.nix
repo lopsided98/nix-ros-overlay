@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-tcb-span";
   version = "1.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/cpp_polyfills-release/archive/release/rolling/tcb_span/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "a3b5dc73bf67232ba81e762ab2a20e323da48b4ceb75666df1970d5962bf4c64";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PickNikRobotics";
+        repo = "cpp_polyfills-release";
+        rev = "release/rolling/tcb_span/1.0.2-1";
+        sha256 = "sha256-61JrUYgWw+LJJmryzDfZte0H+hhzDbHqOY1wEyk996Q=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

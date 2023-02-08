@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-network-interface";
   version = "2.1.0";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/network_interface-release/archive/release/melodic/network_interface/2.1.0-0.tar.gz";
-    name = "2.1.0-0.tar.gz";
-    sha256 = "5998b4fc5c5a96474d6a2ab83d3c55f7f5e847af5f909f00176deda4f6612ccf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "network_interface-release";
+        rev = "release/melodic/network_interface/2.1.0-0";
+        sha256 = "sha256-IOievWM1ctUQGDtBnjvxLeDP2AwBeqvrV3XWlSUNq84=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation roslint ];

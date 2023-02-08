@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ros2pkg";
   version = "0.21.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/rolling/ros2pkg/0.21.0-1.tar.gz";
-    name = "0.21.0-1.tar.gz";
-    sha256 = "bb8467fa2b6ab5e5f8c5a6b86edd833b0995091703c4de6a8dd574c235c0cbcf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2cli-release";
+        rev = "release/rolling/ros2pkg/0.21.0-1";
+        sha256 = "sha256-7c7UYQYketS+zVFzroWuiKW//Q4q1vx7zIrus0zWUao=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-flake8 ament-pep257 ament-xmllint launch launch-testing launch-testing-ros python3Packages.pytest-timeout pythonPackages.pytest ];

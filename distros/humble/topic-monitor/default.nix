@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, ament-pep257, launch, launch-ros, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-topic-monitor";
-  version = "0.20.2-r1";
+  version = "0.20.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/topic_monitor/0.20.2-1.tar.gz";
-    name = "0.20.2-1.tar.gz";
-    sha256 = "3c1b6d734e0602c443d99f3356a4965cace4d9b491eaa4933f03879cd42fe463";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/humble/topic_monitor/0.20.3-1";
+        sha256 = "sha256-z1Ks2T3sjDMOmjP9upOr1d5fZ4QB3aTgc5sIS4o3Sos=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-flake8 ament-pep257 pythonPackages.pytest ];

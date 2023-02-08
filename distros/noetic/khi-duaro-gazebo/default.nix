@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-khi-duaro-gazebo";
   version = "1.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/noetic/khi_duaro_gazebo/1.3.0-2.tar.gz";
-    name = "1.3.0-2.tar.gz";
-    sha256 = "3b9c35cc2850ce1f3b7b7686ddc507688b73c7f1555d17aa9fadc7c859b4657d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Kawasaki-Robotics";
+        repo = "khi_robot-release";
+        rev = "release/noetic/khi_duaro_gazebo/1.3.0-2";
+        sha256 = "sha256-WQmZ/EPwuZL5RBhxOzD8I3/tjURyDBOUZ8GUJg6lFa8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin gazebo-ros-control ];

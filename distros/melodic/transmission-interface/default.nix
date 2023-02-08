@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-transmission-interface";
   version = "0.18.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/transmission_interface/0.18.4-1.tar.gz";
-    name = "0.18.4-1.tar.gz";
-    sha256 = "29a214b71892ff82b0e71f07b2d8fa98487ac97e2936dc3ad82d0801792f405c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_control-release";
+        rev = "release/melodic/transmission_interface/0.18.4-1";
+        sha256 = "sha256-tYGGVL/OjY2A0rjn7Ob/bzqnW/E+IAI9Gu0j1jl2i5o=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

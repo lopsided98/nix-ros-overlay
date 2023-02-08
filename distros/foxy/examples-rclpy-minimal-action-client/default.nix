@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-examples-rclpy-minimal-action-client";
   version = "0.9.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/foxy/examples_rclpy_minimal_action_client/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "fd4758fc8546ecd3c73015b56e68fd175a0d9d98554fd896508b0f593749ebe3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "examples-release";
+        rev = "release/foxy/examples_rclpy_minimal_action_client/0.9.4-1";
+        sha256 = "sha256-doXEGYB6RTZKtIrIP1/OuDPAHWLiO2dFie8CAwefHn4=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

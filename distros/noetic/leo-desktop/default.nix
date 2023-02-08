@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-leo-desktop";
   version = "0.2.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_desktop-release/archive/release/noetic/leo_desktop/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "55ac702284d3099a5989caed3caf43508e17de27a8dc1a58334df1e394144391";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fictionlab-gbp";
+        repo = "leo_desktop-release";
+        rev = "release/noetic/leo_desktop/0.2.3-1";
+        sha256 = "sha256-GBIA8oy/0NvsPVdCdDI3/fme7gfNQoWVZqp+zzX/aMY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

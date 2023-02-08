@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rexrov2-gazebo";
   version = "0.1.3";
 
-  src = fetchurl {
-    url = "https://github.com/uuvsimulator/rexrov2-release/archive/release/melodic/rexrov2_gazebo/0.1.3-0.tar.gz";
-    name = "0.1.3-0.tar.gz";
-    sha256 = "ae244517e996486264c129ef22354f23c9e84f3e32be10a5fd7fa193bd0b15d9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uuvsimulator";
+        repo = "rexrov2-release";
+        rev = "release/melodic/rexrov2_gazebo/0.1.3-0";
+        sha256 = "sha256-LL3g2owe7Qw8QCwneZAGf73vgu5JO/KynBWRbmRBOs0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

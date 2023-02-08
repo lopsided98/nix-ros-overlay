@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-velodyne-laserscan";
   version = "1.7.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_laserscan/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "341bf6a4773deb0266a8afb12db34c069c9d03e2ebc34fdd269c367d2064a35c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "velodyne-release";
+        rev = "release/noetic/velodyne_laserscan/1.7.0-1";
+        sha256 = "sha256-ONEJiugJYB5jylkNY0IAN96pzvHduV+dHZa+UE3eD2E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

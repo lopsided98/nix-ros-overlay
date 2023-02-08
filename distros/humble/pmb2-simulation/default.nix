@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-pmb2-simulation";
   version = "4.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_simulation-release/archive/release/humble/pmb2_simulation/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "24325125b77e410e23f8a7c0f2c9d85c4fe10cbdfa42bf57b05996e37e5165fa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "pmb2_simulation-release";
+        rev = "release/humble/pmb2_simulation/4.0.1-1";
+        sha256 = "sha256-jrzwoX9AYiQJtCbWd37ymF3v6T1qMqD9JWesoSYgm7I=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

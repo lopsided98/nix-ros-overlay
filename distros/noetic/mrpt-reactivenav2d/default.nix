@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mrpt-reactivenav2d";
   version = "1.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_reactivenav2d/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "234c6fae02512b5a0dfe33fc3e89ec70284294ea12d0388590e206a32d584e19";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mrpt-ros-pkg-release";
+        repo = "mrpt_navigation-release";
+        rev = "release/noetic/mrpt_reactivenav2d/1.0.3-1";
+        sha256 = "sha256-dUdn7k6NmRqU+epcTmEkWezxr1pqlq9LjxiNQgNnhoY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

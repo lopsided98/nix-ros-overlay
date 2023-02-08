@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-async-web-server-cpp";
   version = "2.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fkie-release/async_web_server_cpp-release/archive/release/foxy/async_web_server_cpp/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "7ca550df59d0277041dee7475aeb724829374083e9abeaf0f2ba834e6393dc21";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fkie-release";
+        repo = "async_web_server_cpp-release";
+        rev = "release/foxy/async_web_server_cpp/2.0.0-1";
+        sha256 = "sha256-bz0je03yD60CjR08T++F1rGD5GhfXZJWAbL6L5rINbo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ ament-cmake-ros openssl ];

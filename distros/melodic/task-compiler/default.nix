@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-task-compiler";
   version = "0.1.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_planning-release/archive/release/melodic/task_compiler/0.1.12-1.tar.gz";
-    name = "0.1.12-1.tar.gz";
-    sha256 = "0d42aa893bab08122853cd293c293b1b3099bbf0dde19872b5d0d21d4d205aba";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_planning-release";
+        rev = "release/melodic/task_compiler/0.1.12-1";
+        sha256 = "sha256-MmG0p9lAqbDuTuNQ9TIRoLZnADIn5onAbUyDkFs4yV4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-moveit-resources-prbt-pg70-support";
   version = "2.5.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_resources_prbt_pg70_support/2.5.4-1.tar.gz";
-    name = "2.5.4-1.tar.gz";
-    sha256 = "6cddc50396824bff772407e67307e29ec48d4aab68f088013fdbf264e48b55fb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "moveit2-release";
+        rev = "release/humble/moveit_resources_prbt_pg70_support/2.5.4-1";
+        sha256 = "sha256-oz/+gaPPNicYLjolAAsM/5XLb22ngCm0A7CpkoLG9Bg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-safe-teleop-base";
   version = "0.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/shared_autonomy_manipulation-release/archive/release/melodic/safe_teleop_base/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "5ac007d2e99c8152a67a16dcfaea3ec11535b8e94ec591bf5fd2cbdd87f46450";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "shared_autonomy_manipulation-release";
+        rev = "release/melodic/safe_teleop_base/0.0.3-1";
+        sha256 = "sha256-PWojSi99sdRQ3VRURPU2A14cMUNO/wIhx5IWGtDd5Fc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

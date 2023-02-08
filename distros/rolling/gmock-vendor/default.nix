@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-gmock-vendor";
   version = "1.10.9004-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/googletest-release/archive/release/rolling/gmock_vendor/1.10.9004-3.tar.gz";
-    name = "1.10.9004-3.tar.gz";
-    sha256 = "60bf125799482d3491d56c10a279a59511ff0e213fdef62edc4935a8b65272d4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "googletest-release";
+        rev = "release/rolling/gmock_vendor/1.10.9004-3";
+        sha256 = "sha256-9a2mzifX5WZ65XB00MXj/2Sx29pzlnH/SsUHvRc/n8g=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

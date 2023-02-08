@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-slam-karto";
   version = "0.8.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/slam_karto-release/archive/release/noetic/slam_karto/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "2b4eeea947a52bb8535d381a64e896efe9f954f22c3c69ae99f3f9abf2d94a31";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "slam_karto-release";
+        rev = "release/noetic/slam_karto/0.8.1-1";
+        sha256 = "sha256-fbQW4B9N+XFFFGgd7nOSL5K1j7WZmvf95ame1KdBmuQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

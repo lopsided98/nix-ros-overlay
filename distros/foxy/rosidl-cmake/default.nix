@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rosidl-cmake";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/foxy/rosidl_cmake/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "750bb42d4e07d3befb23a568b061f3a28f226113e2d723232ed29443a4f3d719";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl-release";
+        rev = "release/foxy/rosidl_cmake/1.3.0-1";
+        sha256 = "sha256-migHggNQhmWN1kjL1mHoQ5bRDWVH4/ZYxfqpH6HJX/0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-python ];

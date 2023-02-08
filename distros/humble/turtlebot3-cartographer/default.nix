@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-turtlebot3-cartographer";
   version = "2.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/humble/turtlebot3_cartographer/2.1.5-1.tar.gz";
-    name = "2.1.5-1.tar.gz";
-    sha256 = "e4c91424a42e773b3f6bf41c56cb43bd4e975ca039cc7a72ae4ea64ab431ef35";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "robotis-ros2-release";
+        repo = "turtlebot3-release";
+        rev = "release/humble/turtlebot3_cartographer/2.1.5-1";
+        sha256 = "sha256-PofMNoCLZpgvcxyB7i4wWaFlRC4VMzsOMK+L97MmVVU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

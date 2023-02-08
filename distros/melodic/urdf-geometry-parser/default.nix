@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-urdf-geometry-parser";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/urdf_geometry_parser-release/archive/release/melodic/urdf_geometry_parser/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "9b68c05013b435ece6b738f89fc436fea59ec3895b15af4e13f9986d89351569";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "urdf_geometry_parser-release";
+        rev = "release/melodic/urdf_geometry_parser/0.1.0-1";
+        sha256 = "sha256-l2eoHl6UawX0I4fffoKC1lmzTpiArHETSfqpwcaYBgs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

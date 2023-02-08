@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-libnabo";
   version = "1.0.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/nobleo/libnabo-release/archive/release/noetic/libnabo/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "26fe2ba879222857c58137774f0f8dc608adc75093fbdd45c8d03c7890508cf2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "nobleo";
+        repo = "libnabo-release";
+        rev = "release/noetic/libnabo/1.0.7-1";
+        sha256 = "sha256-5DH360YkpI9MAjPZh229CprgVvqjpLpLJ1svEWfgei0=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

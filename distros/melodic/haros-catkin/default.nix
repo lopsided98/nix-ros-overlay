@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-haros-catkin";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rosin-project/haros_catkin-release/archive/release/melodic/haros_catkin/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "b8b53adbf7f2de24566dc6990f033e9d7c397e37dbcc0c54f19b7e03a601371d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rosin-project";
+        repo = "haros_catkin-release";
+        rev = "release/melodic/haros_catkin/0.1.1-1";
+        sha256 = "sha256-ocjmh768L+OhM9Gj87YiLFCLBCswOwLBdTwLk9Ff4gg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin catkin-virtualenv ];

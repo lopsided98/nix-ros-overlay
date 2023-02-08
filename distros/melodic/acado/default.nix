@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-acado";
   version = "1.2.3";
 
-  src = fetchurl {
-    url = "https://github.com/tud-cor/acado-release/archive/release/melodic/acado/1.2.3-0.tar.gz";
-    name = "1.2.3-0.tar.gz";
-    sha256 = "2d84945378a8f8b6c9d8667b4e1aa02a0001130853e6bb04e29dc1906582598e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tud-cor";
+        repo = "acado-release";
+        rev = "release/melodic/acado/1.2.3-0";
+        sha256 = "sha256-wloIaH1LRfaOdPNfmFwwmC+R/bv+8E47YQn7h1LJcJg=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

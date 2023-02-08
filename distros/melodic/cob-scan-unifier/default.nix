@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-scan-unifier";
   version = "0.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_scan_unifier/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "41bca060537e0874148a4b2b195f8575cfa80c19ed0f5be0e3fed816c5bcf956";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/melodic/cob_scan_unifier/0.7.4-1";
+        sha256 = "sha256-vNtsxF7d0akCrRjlLdiGXsQ1pQU5sLQhwa938eO3QYc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

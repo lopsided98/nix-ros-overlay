@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-dynamixel-sdk";
   version = "3.7.40-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/rolling/dynamixel_sdk/3.7.40-2.tar.gz";
-    name = "3.7.40-2.tar.gz";
-    sha256 = "db50c8112b5c4a7d888b6fb923a2bbe898c24385f55e6b2380caf52795754e7e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "dynamixel_sdk-release";
+        rev = "release/rolling/dynamixel_sdk/3.7.40-2";
+        sha256 = "sha256-oqGB9nx57Y1CMx1pbn81xSZbN9xXdKhJmj0SvIXyaNY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

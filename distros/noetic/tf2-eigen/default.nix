@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-tf2-eigen";
   version = "0.7.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_eigen/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "541e32b2e1d4f1bd17a59974fda4bd38d007b4f4c82cfa022bf0b0972cb45606";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry2-release";
+        rev = "release/noetic/tf2_eigen/0.7.6-1";
+        sha256 = "sha256-mnj+R28+Wpu9orbD6Z9nIpBjeJ8uA9KQo1/8A11rlxM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

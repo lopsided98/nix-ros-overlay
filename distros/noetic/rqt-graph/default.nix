@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-graph";
   version = "0.4.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_graph-release/archive/release/noetic/rqt_graph/0.4.14-1.tar.gz";
-    name = "0.4.14-1.tar.gz";
-    sha256 = "f9aaccd3cd5c2fced10194e48880281ada1f61ad9bea14db7e7fa1c5c85ed8c9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_graph-release";
+        rev = "release/noetic/rqt_graph/0.4.14-1";
+        sha256 = "sha256-7QjtUKqIpOg+b/IkeGKzwNUDpldBI+8NK44wNJqZAG8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-demo-nodes-cpp-native";
   version = "0.9.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/demo_nodes_cpp_native/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "4311884b4f0a75a4045e26a64e4a95c49f3937eb199aba59a50d9124670bcff7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/foxy/demo_nodes_cpp_native/0.9.4-1";
+        sha256 = "sha256-VZ8rO1OYmccDBxlBT3ObgoNk4yKLmJp9ouVB86Fg0zY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

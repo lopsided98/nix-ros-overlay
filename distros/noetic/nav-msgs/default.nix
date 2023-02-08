@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-nav-msgs";
   version = "1.13.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/noetic/nav_msgs/1.13.1-1.tar.gz";
-    name = "1.13.1-1.tar.gz";
-    sha256 = "32c2b9aa8f94a20f4718675c655e8f6d1ec0c00fa3b753bc2a0f9c0abcbec06a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "common_msgs-release";
+        rev = "release/noetic/nav_msgs/1.13.1-1";
+        sha256 = "sha256-4h6OxOdmcmUCXyyEtWvansDk8HFvDgj2rs74jgX1ms4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

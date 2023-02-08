@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-soccer-vision-3d-msgs";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/soccer_interfaces-release/archive/release/rolling/soccer_vision_3d_msgs/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "cb052be006a3d564cb6d8b2a1aca13c3328721183b3d4962bfc208d94f43e055";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "soccer_interfaces-release";
+        rev = "release/rolling/soccer_vision_3d_msgs/0.2.0-1";
+        sha256 = "sha256-BmHEqbMOIzeghp7fm/Yonck3resi4rrIM/DnBsSkKvo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

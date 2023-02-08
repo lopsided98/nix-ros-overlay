@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-calibration-launch";
   version = "0.10.14";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/calibration-release/archive/release/melodic/calibration_launch/0.10.14-0.tar.gz";
-    name = "0.10.14-0.tar.gz";
-    sha256 = "eaf7a65341c7be0665741f2d6f22d3e9d6a5a50deb004ffd402434fc2ae715b7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "calibration-release";
+        rev = "release/melodic/calibration_launch/0.10.14-0";
+        sha256 = "sha256-Vzs6YSu1MGKAAHWQNV+6ccC6o+Zr6J4/oSxlG3YT1zQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

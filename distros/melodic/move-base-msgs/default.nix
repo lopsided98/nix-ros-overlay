@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-move-base-msgs";
   version = "1.14.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_msgs-release/archive/release/melodic/move_base_msgs/1.14.1-1.tar.gz";
-    name = "1.14.1-1.tar.gz";
-    sha256 = "f221272c2819180557e5c21b79dd30f34d9ac83503595c6132f9fecc7b48cfcc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation_msgs-release";
+        rev = "release/melodic/move_base_msgs/1.14.1-1";
+        sha256 = "sha256-M04IFEmWhE3/U8wT5cMz1LjWX9Vgfkc1FP0R54QQoKg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

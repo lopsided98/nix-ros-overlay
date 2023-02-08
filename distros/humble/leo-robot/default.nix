@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, leo, leo-bringup, leo-fw }:
 buildRosPackage {
   pname = "ros-humble-leo-robot";
-  version = "1.2.1-r1";
+  version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/humble/leo_robot/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "cee1b44d5eee9cc531dc9ce98d75520c805e260d6e601804dad9e26158799760";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "leo_robot-release";
+        rev = "release/humble/leo_robot/1.3.0-1";
+        sha256 = "sha256-zl/ezi59HnOq6OeqCYGjGekvdtwtc8SGGLxqp8lbKdM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

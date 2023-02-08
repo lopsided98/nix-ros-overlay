@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-geographic-info";
   version = "0.5.3";
 
-  src = fetchurl {
-    url = "https://github.com/ros-geographic-info/geographic_info-release/archive/release/melodic/geographic_info/0.5.3-0.tar.gz";
-    name = "0.5.3-0.tar.gz";
-    sha256 = "fa023c42d3d879c61e6052534eb94de0ab79635946e10f0039f7daeb80f92bf1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-geographic-info";
+        repo = "geographic_info-release";
+        rev = "release/melodic/geographic_info/0.5.3-0";
+        sha256 = "sha256-9PlyZydnmuj1cEcW0q24rTt5auRwJ2mBJmoTr0u5yD0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

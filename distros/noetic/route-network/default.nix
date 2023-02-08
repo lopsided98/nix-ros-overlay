@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-route-network";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-geographic-info/open_street_map-release/archive/release/noetic/route_network/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "aa4bfa6f99b672ea11f480299a2f4d6b35fa70958e6c883f0a2ee7dabe1e4154";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-geographic-info";
+        repo = "open_street_map-release";
+        rev = "release/noetic/route_network/0.3.0-1";
+        sha256 = "sha256-FM0tk26TWaow2CbwP15QmRuB1uTZ3AtchBgADR8skbQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

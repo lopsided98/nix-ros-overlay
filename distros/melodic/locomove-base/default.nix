@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-locomove-base";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/locomove_base/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "2059b2a14cbe6c59d3ae2e27c1781c5b824d354f2446fb3ccdff1cfefa9345e0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/melodic/locomove_base/0.3.0-1";
+        sha256 = "sha256-AaSbQzZtSxsxpLyK+unC7Sg8360Mariir5MQViLbIgk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, controller-manager, controller-manager-msgs, python3Packages, rclpy, ros2cli, ros2node, ros2param, rosidl-runtime-py }:
 buildRosPackage {
   pname = "ros-humble-ros2controlcli";
-  version = "2.18.0-r1";
+  version = "2.21.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/ros2controlcli/2.18.0-1.tar.gz";
-    name = "2.18.0-1.tar.gz";
-    sha256 = "b6daff70a1acc11affcfd2f0ee68162003d5a0491c4d1384bcca044b4dbbcf88";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_control-release";
+        rev = "release/humble/ros2controlcli/2.21.0-1";
+        sha256 = "sha256-cqdIXRpFVTvspiLf1qEbe/ZhnJ9lf69vDjASk4HV3Fg=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint ];

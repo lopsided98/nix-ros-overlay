@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cartographer-ros";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/cartographer_ros-release/archive/release/melodic/cartographer_ros/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "9e734459067f4d18a9458ad47b0b647c937521e650865a9d68380d4adca57c3b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "cartographer_ros-release";
+        rev = "release/melodic/cartographer_ros/1.0.0-1";
+        sha256 = "sha256-jFiotq9OvKbCC15VSEauYoE0SFVLS1+lDX5yzAQ3qdU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin gtest protobuf pythonPackages.sphinx ];

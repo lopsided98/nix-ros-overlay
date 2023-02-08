@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-voltage-control";
   version = "0.7.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_voltage_control/0.7.14-1.tar.gz";
-    name = "0.7.14-1.tar.gz";
-    sha256 = "23444630337c05279f657b9295693b7f565d3887af09056b6ee60633b0607ac0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/noetic/cob_voltage_control/0.7.14-1";
+        sha256 = "sha256-ER12b2Il7mA1rH5BOjyh1dnos5z0ptTbmBs59KsxNAQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

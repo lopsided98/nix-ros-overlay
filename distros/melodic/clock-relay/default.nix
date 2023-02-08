@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-clock-relay";
   version = "0.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/melodic/clock_relay/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "a140af11ea9143aa079d55b89c5513c147715041e024fa1cf6f35cd43b1a6fff";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "cpr_multimaster_tools-release";
+        rev = "release/melodic/clock_relay/0.0.2-1";
+        sha256 = "sha256-6J8QQkdKB5ouMar70htnIfX3BjT0/M7U+JGnqxD7zZw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-lanelet2-io";
   version = "1.1.1-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/rolling/lanelet2_io/1.1.1-3.tar.gz";
-    name = "1.1.1-3.tar.gz";
-    sha256 = "29f00113c05b3e2346d0e42ab0471a3cb955f8ca87812098326691798e99e3c6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "lanelet2-release";
+        rev = "release/rolling/lanelet2_io/1.1.1-3";
+        sha256 = "sha256-mW8p1j9qBuv8wPpmUu1kWNNJb7+pngf70mRvO8NciSc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-core ];

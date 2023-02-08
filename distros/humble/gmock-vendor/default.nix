@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-gmock-vendor";
   version = "1.10.9004-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/googletest-release/archive/release/humble/gmock_vendor/1.10.9004-4.tar.gz";
-    name = "1.10.9004-4.tar.gz";
-    sha256 = "efe60aaf74a6119bea8bacd12ca53ec5d4f4b7fb1e2e21f5785071385afed28a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "googletest-release";
+        rev = "release/humble/gmock_vendor/1.10.9004-4";
+        sha256 = "sha256-9a2mzifX5WZ65XB00MXj/2Sx29pzlnH/SsUHvRc/n8g=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

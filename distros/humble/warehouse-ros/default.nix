@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-warehouse-ros";
   version = "2.0.4-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/warehouse_ros-release/archive/release/humble/warehouse_ros/2.0.4-3.tar.gz";
-    name = "2.0.4-3.tar.gz";
-    sha256 = "72418e8ec9e688e179d88454bdd13cb7b8c0439bb67ae4fa331401d56d4cd5fc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "warehouse_ros-release";
+        rev = "release/humble/warehouse_ros/2.0.4-3";
+        sha256 = "sha256-89Ku8Zth68EgdS2DXIeyBjbm75ZItsbMZ0ZbKGlw6Fw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

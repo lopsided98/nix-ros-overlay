@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-imu-transformer";
   version = "0.2.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/imu_pipeline-release/archive/release/melodic/imu_transformer/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "ea366e28b07fd5ebef132e1c41f2c6f56c89cfc22c966145c0823d7efa63967a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "imu_pipeline-release";
+        rev = "release/melodic/imu_transformer/0.2.4-1";
+        sha256 = "sha256-26grohttwVTU27kakuVEWI8lMToXXoDgpdsGkKWkpB4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

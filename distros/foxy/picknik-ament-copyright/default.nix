@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-picknik-ament-copyright";
   version = "0.0.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/picknik_ament_copyright-release/archive/release/foxy/picknik_ament_copyright/0.0.1-2.tar.gz";
-    name = "0.0.1-2.tar.gz";
-    sha256 = "c5d8bd85234f3480de334143c6f4248d5ed2fa1959561e3103b39f1bdc9914a5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PickNikRobotics";
+        repo = "picknik_ament_copyright-release";
+        rev = "release/foxy/picknik_ament_copyright/0.0.1-2";
+        sha256 = "sha256-Ks8KCascZrVj5c37J19tr+dJpViLiWCzinDYOIRrAIo=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-flake8 ament-pep257 pythonPackages.pytest ];

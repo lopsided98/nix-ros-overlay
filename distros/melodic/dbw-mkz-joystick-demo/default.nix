@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dbw-mkz-joystick-demo";
   version = "1.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/melodic/dbw_mkz_joystick_demo/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "d7a98bc384c30267c187079815526914effa649fd670bdb13e309e6793930f44";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dbw_mkz_ros-release";
+        rev = "release/melodic/dbw_mkz_joystick_demo/1.6.0-1";
+        sha256 = "sha256-rwm6KNrm3whiLIq07anS6H5tS7pY8G/vEorJYmCFPVE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

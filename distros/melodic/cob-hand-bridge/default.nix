@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-hand-bridge";
   version = "0.6.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_hand-release/archive/release/melodic/cob_hand_bridge/0.6.9-1.tar.gz";
-    name = "0.6.9-1.tar.gz";
-    sha256 = "8cb176ebb7ab1009ba7c56332b74c2e5d09b01aed47696935d908262ba06f0dc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_hand-release";
+        rev = "release/melodic/cob_hand_bridge/0.6.9-1";
+        sha256 = "sha256-1Hx1LBeorDSBil3X9EkWg+4w75npadxtZl0wGBfM9kY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

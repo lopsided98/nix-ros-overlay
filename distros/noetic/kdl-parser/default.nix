@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-kdl-parser";
   version = "1.14.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/kdl_parser-release/archive/release/noetic/kdl_parser/1.14.2-1.tar.gz";
-    name = "1.14.2-1.tar.gz";
-    sha256 = "a7236d3f21524007defe5bfc596e71b2b6febaebda9c991bbb79a8a7d348865d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "kdl_parser-release";
+        rev = "release/noetic/kdl_parser/1.14.2-1";
+        sha256 = "sha256-r3WrYeWFNA8mzLDmVCU7mgtvthz5b7EgQcNsVY/5s5s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

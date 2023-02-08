@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rosidl-typesupport-introspection-c";
   version = "3.1.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/humble/rosidl_typesupport_introspection_c/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "5c3cac9854c9139b602417c7f565867eb25f3cf4e1a5f80c9fc615dff1664c74";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl-release";
+        rev = "release/humble/rosidl_typesupport_introspection_c/3.1.4-1";
+        sha256 = "sha256-fnYFWQ0pJdQh0S+NN+rMG4+8l3DohpBPLY2OO7/Gqrs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

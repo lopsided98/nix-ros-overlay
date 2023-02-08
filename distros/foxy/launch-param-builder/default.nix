@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-launch-param-builder";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/launch_param_builder-release/archive/release/foxy/launch_param_builder/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "8c427e92d6cd8ff40edfa0d78462b0f8f84ac1068309fc1c82d59a4fe3cb4075";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PickNikRobotics";
+        repo = "launch_param_builder-release";
+        rev = "release/foxy/launch_param_builder/0.1.1-1";
+        sha256 = "sha256-5wzPO7Vg6sA7heEmRxiLcDbilS5YyieLi8fBrtcJe/g=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright pythonPackages.pytest ];

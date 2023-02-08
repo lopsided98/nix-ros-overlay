@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-novatel-gps-driver";
   version = "4.1.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/novatel_gps_driver-release/archive/release/rolling/novatel_gps_driver/4.1.0-2.tar.gz";
-    name = "4.1.0-2.tar.gz";
-    sha256 = "86350caffeac52f4cf991deea5bff0481a1effff3586184f30265acbd7d34e18";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "novatel_gps_driver-release";
+        rev = "release/rolling/novatel_gps_driver/4.1.0-2";
+        sha256 = "sha256-cZjlG6dRNZFhbj3Ss7eoWxudyZjsuebtPzpvz4watQA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

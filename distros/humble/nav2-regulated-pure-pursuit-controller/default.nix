@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-nav2-regulated-pure-pursuit-controller";
   version = "1.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_regulated_pure_pursuit_controller/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "49f4168270be88e43e539977dad48c5a9d3eb244d93071d2ea438931532085b7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/humble/nav2_regulated_pure_pursuit_controller/1.1.5-1";
+        sha256 = "sha256-bqKOOCBD9hOf3YRy1rqlaTcb4rh0YHCvBeCsXdhcCak=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

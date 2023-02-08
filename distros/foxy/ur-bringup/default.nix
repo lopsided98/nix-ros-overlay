@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ur-bringup";
   version = "2.0.2-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/foxy/ur_bringup/2.0.2-2.tar.gz";
-    name = "2.0.2-2.tar.gz";
-    sha256 = "7dafb1e9059c5e11be824334c7011c00d3552204ac5a3f502ea5d6591a9a1d46";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "Universal_Robots_ROS2_Driver-release";
+        rev = "release/foxy/ur_bringup/2.0.2-2";
+        sha256 = "sha256-6P2WaORWyCJe/Ff/unau9m62bdLxQrBCATFRvL7pop4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

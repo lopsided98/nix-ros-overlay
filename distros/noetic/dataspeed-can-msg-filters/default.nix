@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dataspeed-can-msg-filters";
   version = "1.0.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/noetic/dataspeed_can_msg_filters/1.0.16-1.tar.gz";
-    name = "1.0.16-1.tar.gz";
-    sha256 = "39fc3a83ca608df4e078cc17f8e95a9993f60c4391f09e89a88235447e0f4001";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dataspeed_can-release";
+        rev = "release/noetic/dataspeed_can_msg_filters/1.0.16-1";
+        sha256 = "sha256-ICPML442r6xLfVXCkHbtWQGBE3R+AFoblo0W9AoIKNc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

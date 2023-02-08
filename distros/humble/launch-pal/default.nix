@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-launch-pal";
   version = "0.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/launch_pal-release/archive/release/humble/launch_pal/0.0.6-1.tar.gz";
-    name = "0.0.6-1.tar.gz";
-    sha256 = "d656b3c0dccfa66635a99631daeda073ace0ee90a975171766b28eb0df01941f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "launch_pal-release";
+        rev = "release/humble/launch_pal/0.0.6-1";
+        sha256 = "sha256-e2Yu6U2SOd0HuhcED4mybymwCdoCRKrZaLdne5dRw7A=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

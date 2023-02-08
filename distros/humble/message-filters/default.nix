@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-message-filters";
   version = "4.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/humble/message_filters/4.3.2-1.tar.gz";
-    name = "4.3.2-1.tar.gz";
-    sha256 = "a741780b7aff3cab204e82c1fe6a13cd366ba6d6936b96c8f6ae6e921fdba3ee";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_message_filters-release";
+        rev = "release/humble/message_filters/4.3.2-1";
+        sha256 = "sha256-Vm4bLP2o9eFmF2OwHfOyZrJJ6gHG81nHMUx2HIbtuEo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-python ament-cmake-ros python-cmake-module ];

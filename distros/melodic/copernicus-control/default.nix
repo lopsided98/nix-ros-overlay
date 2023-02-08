@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-copernicus-control";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/botsync-gbp/copernicus-release/archive/release/melodic/copernicus_control/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "2784e62785f7ccc852a56b863c0be8a9f6c458afd8b7f619d7874e062ce68074";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "botsync-gbp";
+        repo = "copernicus-release";
+        rev = "release/melodic/copernicus_control/1.1.0-1";
+        sha256 = "sha256-hnFwAM+JOTIw/v9SL+ZEwcnL5W0VqBS7vG8fT8EgG3o=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

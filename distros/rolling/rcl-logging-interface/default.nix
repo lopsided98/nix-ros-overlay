@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rcl-logging-interface";
   version = "2.4.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/rolling/rcl_logging_interface/2.4.3-1.tar.gz";
-    name = "2.4.3-1.tar.gz";
-    sha256 = "7a7e7d3ca93883894e16b63d194716e7ba53e4e9f841f0e1c63581f40618b436";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcl_logging-release";
+        rev = "release/rolling/rcl_logging_interface/2.4.3-1";
+        sha256 = "sha256-geAxtZBujPCDhVh9jtpCZRdwMTh2qcHpoNVBQwnXaGc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

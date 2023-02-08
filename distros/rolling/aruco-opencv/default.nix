@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-aruco-opencv";
   version = "4.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/aruco_opencv-release/archive/release/rolling/aruco_opencv/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "91a2d2635c9d22069b85a6c14220d8124ee94eb1e94701ed81828407425b19bc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "aruco_opencv-release";
+        rev = "release/rolling/aruco_opencv/4.0.1-1";
+        sha256 = "sha256-NpkBb+NHOlpPrg9njwOgxukgMVvq2kXA3b0fSR/bWnY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

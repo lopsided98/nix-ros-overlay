@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pal-statistics-msgs";
   version = "1.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_statistics-release/archive/release/melodic/pal_statistics_msgs/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "ede295cc48b9ffa94006a5b58b768cb20b698d0d37580e927a05052a9b065a10";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "pal_statistics-release";
+        rev = "release/melodic/pal_statistics_msgs/1.4.1-1";
+        sha256 = "sha256-B4nZB4bzw3qLNpEuXB6Gs3oqAmOG4PSwjrgHzDfMdE0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

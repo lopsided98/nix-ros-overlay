@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-geometry-tutorials";
   version = "0.2.2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/melodic/geometry_tutorials/0.2.2-0.tar.gz";
-    name = "0.2.2-0.tar.gz";
-    sha256 = "681b5bd03623bc5832921eeb3d314a4f8d9dfbf05f7f48fb48adf327bfc4e2ea";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry_tutorials-release";
+        rev = "release/melodic/geometry_tutorials/0.2.2-0";
+        sha256 = "sha256-8TFVqx9XsM4p3sUBQ+KfvPXNtVHeccdETErbdvmt/UQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

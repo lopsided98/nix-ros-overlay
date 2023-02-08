@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-shape-msgs";
   version = "1.13.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/noetic/shape_msgs/1.13.1-1.tar.gz";
-    name = "1.13.1-1.tar.gz";
-    sha256 = "19b5b1b4c54b987382ffd74d4538de2c81c32f1d59469244f9addae3575cdfdd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "common_msgs-release";
+        rev = "release/noetic/shape_msgs/1.13.1-1";
+        sha256 = "sha256-3QwXpk3G6lgX+i636Izg3jZd/h+4xanyvi3+hWOyZ90=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

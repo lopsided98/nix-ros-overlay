@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rmf-traffic-editor";
   version = "1.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/rolling/rmf_traffic_editor/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "0b8029a0cee076e91c238d19d3d953a991d82c812b8c2d35a63c1efc096b3ab5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_traffic_editor-release";
+        rev = "release/rolling/rmf_traffic_editor/1.6.0-1";
+        sha256 = "sha256-dHrJ7FHaRCA+Oa8rqL6u6Okzlr1dWvUZcQqxW5cTb9A=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-index-cpp eigen libyamlcpp qt5.qtbase rmf-utils ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-py-trees-ros-interfaces";
   version = "2.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/stonier/py_trees_ros_interfaces-release/archive/release/foxy/py_trees_ros_interfaces/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "b06839cd575506d3cfcde376f52f1211d2e11ad13f6f07b20a6446cf00f621fa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "stonier";
+        repo = "py_trees_ros_interfaces-release";
+        rev = "release/foxy/py_trees_ros_interfaces/2.0.3-1";
+        sha256 = "sha256-/YAn9axu8hgAg09ST4zfeqgKuT03Ar4oCl3A9wNUdWg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

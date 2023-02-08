@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-slider-publisher";
   version = "2.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/slider_publisher-release/archive/release/humble/slider_publisher/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "81dd7d7a0e224143cb3c2019e4999b448ca41c96becc69183ee1f0df066fda51";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "slider_publisher-release";
+        rev = "release/humble/slider_publisher/2.2.1-1";
+        sha256 = "sha256-szAUkWe0eQFk40CMBvoSKEw/Ut9x17ULIwx90BhW/TY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

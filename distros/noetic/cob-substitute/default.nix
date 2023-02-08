@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-substitute";
   version = "0.6.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_substitute-release/archive/release/noetic/cob_substitute/0.6.12-1.tar.gz";
-    name = "0.6.12-1.tar.gz";
-    sha256 = "a14002b4ff9ddf10ae68616f6c2b9bc23d5c390f987e902332cb9d5d7bc68fde";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_substitute-release";
+        rev = "release/noetic/cob_substitute/0.6.12-1";
+        sha256 = "sha256-7XkdS4/kC4sPJN+dp2jY9gi4yibOm0NtLaXx0JJdviE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

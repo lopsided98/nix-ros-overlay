@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dbw-mkz-can";
   version = "1.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/noetic/dbw_mkz_can/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "40e72e11a91c42f4118be832870e68198ad787d1fd04fe8e7aaf24cc086848b4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dbw_mkz_ros-release";
+        rev = "release/noetic/dbw_mkz_can/1.6.0-1";
+        sha256 = "sha256-P6BE6AEmLOFi4LDM7Zwm6Ghvk0/7tg1MmpeZ7Icjz+8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin dataspeed-can-msg-filters ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-dummy-map-server";
   version = "0.23.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/dummy_map_server/0.23.0-1.tar.gz";
-    name = "0.23.0-1.tar.gz";
-    sha256 = "42663944fbfc05f91cf3dd66c773bdc5ee653c7b36b66a1a70d7c2ab800f1358";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/rolling/dummy_map_server/0.23.0-1";
+        sha256 = "sha256-/gg6AXvkIPGT/5p+ECqLk8paYBbPpSTmWB8K4d0oYTs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

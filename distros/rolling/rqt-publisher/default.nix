@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rqt-publisher";
   version = "1.6.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_publisher-release/archive/release/rolling/rqt_publisher/1.6.1-1.tar.gz";
-    name = "1.6.1-1.tar.gz";
-    sha256 = "37ca0229639dc923f77d11277b61227d5a41c940cce6be6b02b1e4e8d28582c6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_publisher-release";
+        rev = "release/rolling/rqt_publisher/1.6.1-1";
+        sha256 = "sha256-L0ob+7Oo6fpYbaLusInknnH0RKzQg1tzH8UvRByYBXo=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ ament-index-python python-qt-binding python3Packages.numpy qt-gui-py-common rclpy rosidl-runtime-py rqt-gui rqt-gui-py rqt-py-common ];

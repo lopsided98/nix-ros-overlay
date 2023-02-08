@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-exotica-aico-solver";
   version = "6.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipab-slmc/exotica-release/archive/release/melodic/exotica_aico_solver/6.2.0-1.tar.gz";
-    name = "6.2.0-1.tar.gz";
-    sha256 = "511627d7c2c811f3a189c91ffd4b33f37f368dd6be00d2522332ed1a7cd6455d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipab-slmc";
+        repo = "exotica-release";
+        rev = "release/melodic/exotica_aico_solver/6.2.0-1";
+        sha256 = "sha256-XGMugHnBgoMkIp3U3Jn9dsn5l14AMAFBiigygbodZsQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

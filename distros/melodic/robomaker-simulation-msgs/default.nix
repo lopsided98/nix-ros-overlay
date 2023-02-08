@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robomaker-simulation-msgs";
   version = "1.1.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/aws-gbp/aws_robomaker_simulation_ros_pkgs-release/archive/release/melodic/robomaker_simulation_msgs/1.1.1-2.tar.gz";
-    name = "1.1.1-2.tar.gz";
-    sha256 = "51c3f5d70c599369c912d428ae4a12cfbc97930e27714f041c58fb0c47449233";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "aws-gbp";
+        repo = "aws_robomaker_simulation_ros_pkgs-release";
+        rev = "release/melodic/robomaker_simulation_msgs/1.1.1-2";
+        sha256 = "sha256-o2IfM6mCs02fJrJyGZ4IUIxkb/JcLHgnCviwI6pP3zg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

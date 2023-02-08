@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, husky-description, joint-state-publisher, joint-state-publisher-gui, robot-state-publisher, roslaunch, rqt-console, rqt-gui, rqt-robot-monitor, rviz, rviz-imu-plugin }:
 buildRosPackage {
   pname = "ros-noetic-husky-viz";
-  version = "0.6.5-r1";
+  version = "0.6.6-r3";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/noetic/husky_viz/0.6.5-1.tar.gz";
-    name = "0.6.5-1.tar.gz";
-    sha256 = "b25b681e96fa3ea7569c3f161e4d93786f06059e343244f277f48803687d4894";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "husky-release";
+        rev = "release/noetic/husky_viz/0.6.6-3";
+        sha256 = "sha256-7k9xsJTFCHmbKmBrOAfTBega2R2aNd8b15h9vWVJIJI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

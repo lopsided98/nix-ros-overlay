@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-laser-scan-splitter";
   version = "0.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/laser_scan_splitter/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "e2232be64fc25cc003de31a38c986fe4104262f07fabe7de66f33e676463404c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "scan_tools-release";
+        rev = "release/noetic/laser_scan_splitter/0.3.3-1";
+        sha256 = "sha256-f6tHTbi0RfnnhWtSJ9pHStElYS5HkBH/Csoz0BKs/2c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

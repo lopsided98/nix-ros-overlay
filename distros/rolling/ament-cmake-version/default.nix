@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ament-cmake-version";
   version = "1.5.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/rolling/ament_cmake_version/1.5.2-1.tar.gz";
-    name = "1.5.2-1.tar.gz";
-    sha256 = "976f1e813b61db317ffdd5bbd5755ede267f5843409668f85800408d26962526";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_cmake-release";
+        rev = "release/rolling/ament_cmake_version/1.5.2-1";
+        sha256 = "sha256-bXmzjV0wbjrbihNoq8TsT9ueAaUjpDJipClg2K8UUCE=";
+      };
 
   buildType = "ament_cmake";
   propagatedBuildInputs = [ ament-cmake-core ];

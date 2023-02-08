@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosservice";
   version = "1.15.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rosservice/1.15.15-1.tar.gz";
-    name = "1.15.15-1.tar.gz";
-    sha256 = "d206130bf69ed3bbbafa0f2e3a73ad06a9e40c10dba3ccb14a5e5bc1acec1b96";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm-release";
+        rev = "release/noetic/rosservice/1.15.15-1";
+        sha256 = "sha256-GXfxUnNxQqn/JS05pHr4BPVRAwxiPbaiwuMjCgogLo4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

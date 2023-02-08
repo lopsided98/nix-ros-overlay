@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-geometry-msgs";
   version = "2.0.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/foxy/geometry_msgs/2.0.5-1.tar.gz";
-    name = "2.0.5-1.tar.gz";
-    sha256 = "e705e7f6da6f08ecfb2e0cde468584b15e6e2c7a39db754561d88bfcc2bd8e31";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "common_interfaces-release";
+        rev = "release/foxy/geometry_msgs/2.0.5-1";
+        sha256 = "sha256-qTGq3sEqCbOsLKes1AvwWmsNF9nwrgPbmtD1gOAo2bE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-diff-drive-controller";
   version = "0.17.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/diff_drive_controller/0.17.2-1.tar.gz";
-    name = "0.17.2-1.tar.gz";
-    sha256 = "ffc17987a71bd6bee3e0224ff9f04d6fdffd5909cdf6e9cf4510902768929710";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_controllers-release";
+        rev = "release/melodic/diff_drive_controller/0.17.2-1";
+        sha256 = "sha256-n+Sc2ejqX0kkjVeQCYA0CShdbFPizuCnsjqOcRRyf7s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pr2-dashboard-aggregator";
   version = "1.13.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_common-release/archive/release/noetic/pr2_dashboard_aggregator/1.13.1-1.tar.gz";
-    name = "1.13.1-1.tar.gz";
-    sha256 = "cffbc94a2f17facbf3596353782a182d7304eac3b43d26af9f00fbad24a3347d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_common-release";
+        rev = "release/noetic/pr2_dashboard_aggregator/1.13.1-1";
+        sha256 = "sha256-jwWX2KShYOMNLypUEOTNTRjyzyyXfem8J+jop6mcoHs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

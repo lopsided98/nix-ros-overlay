@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-xv-11-laser-driver";
   version = "0.3.0";
 
-  src = fetchurl {
-    url = "https://github.com/rohbotics/xv_11_laser_driver-release/archive/release/melodic/xv_11_laser_driver/0.3.0-0.tar.gz";
-    name = "0.3.0-0.tar.gz";
-    sha256 = "7c6485e8b062b95fd61b2eceb47f042f5d069f1c6aad947f5c237f8968ec595c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rohbotics";
+        repo = "xv_11_laser_driver-release";
+        rev = "release/melodic/xv_11_laser_driver/0.3.0-0";
+        sha256 = "sha256-xd8dH35fK1pMgD4JhX69dVG7ofLih5D/yYoha5A2M4M=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roscpp sensor-msgs ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-nonpersistent-voxel-layer";
   version = "1.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/nonpersistent_voxel_layer-release/archive/release/noetic/nonpersistent_voxel_layer/1.3.0-2.tar.gz";
-    name = "1.3.0-2.tar.gz";
-    sha256 = "873ea35875641ee32e4bfd53dd41ff0425e742cc6dcb75309e9094caa8b37c37";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "nonpersistent_voxel_layer-release";
+        rev = "release/noetic/nonpersistent_voxel_layer/1.3.0-2";
+        sha256 = "sha256-FSJKE5MWw/O7p2Fk8fohCmlQuUXFUb4RazGZQ6R1Rj4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules message-generation ];

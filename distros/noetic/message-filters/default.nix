@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-message-filters";
   version = "1.15.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/message_filters/1.15.15-1.tar.gz";
-    name = "1.15.15-1.tar.gz";
-    sha256 = "7ebb2d1ab3243cc02cf341ea4fc89a532c59dc3c84cb1ebdfc8e23d80f4a4a0c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm-release";
+        rev = "release/noetic/message_filters/1.15.15-1";
+        sha256 = "sha256-m8r1wlXVobHzAa1EWTMyUTkYo08kiKrIZzflhBVNLQ0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest rosunit ];

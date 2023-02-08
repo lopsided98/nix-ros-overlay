@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-zstd-vendor";
   version = "0.3.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/zstd_vendor/0.3.9-1.tar.gz";
-    name = "0.3.9-1.tar.gz";
-    sha256 = "188b22156f065f15c39e25d30b11b002ab5c01396a6819965dfe14ebb29db13e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosbag2-release";
+        rev = "release/foxy/zstd_vendor/0.3.9-1";
+        sha256 = "sha256-urB5lzEvZlwKrno8d6pK7//olyDV7krUHZDkb1jPhYY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

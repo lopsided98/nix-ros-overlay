@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-sdl2-vendor";
   version = "3.1.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/humble/sdl2_vendor/3.1.0-3.tar.gz";
-    name = "3.1.0-3.tar.gz";
-    sha256 = "9ce70b671242ae4b9b05b1d4e1a2a832dcfa360eaa27d0a0428ad4b80152abf6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "joystick_drivers-release";
+        rev = "release/humble/sdl2_vendor/3.1.0-3";
+        sha256 = "sha256-yK9/I8H81uj13ica+FzxQlDpD4xNsbe3+OtP4FWAv1M=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

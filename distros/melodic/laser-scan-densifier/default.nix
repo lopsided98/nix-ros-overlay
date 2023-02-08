@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-laser-scan-densifier";
   version = "0.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/laser_scan_densifier/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "70d2de52acc0044289d74977f753415e06f93fc1e6607450849441bf034dc359";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/melodic/laser_scan_densifier/0.7.4-1";
+        sha256 = "sha256-Ke0iY+fL0QKK/5WORxN6+DiAa8wP/ahyZg1mKp3OrNw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

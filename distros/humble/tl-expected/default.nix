@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-tl-expected";
   version = "1.0.2-r2";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/cpp_polyfills-release/archive/release/humble/tl_expected/1.0.2-2.tar.gz";
-    name = "1.0.2-2.tar.gz";
-    sha256 = "c7ee1c7e16aea04c2da0c93bf41f9a2570f0d2ff987b2a25ea423f0d702821f7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PickNikRobotics";
+        repo = "cpp_polyfills-release";
+        rev = "release/humble/tl_expected/1.0.2-2";
+        sha256 = "sha256-MRDjBU0WqHHPomrtLuNox0zVGvy6aMGTGO8WBV04bF8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

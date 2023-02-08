@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rr-openrover-driver";
   version = "1.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/RoverRobotics-release/rr_openrover_stack-release/archive/release/melodic/rr_openrover_driver/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "d44e90740c1301be2451d7a739f42711563236f17e04e027363ed2c8140e4be8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "RoverRobotics-release";
+        repo = "rr_openrover_stack-release";
+        rev = "release/melodic/rr_openrover_driver/1.1.1-1";
+        sha256 = "sha256-N8bVuJSBivrnWlEJTOjp+9vLY7PbkElgUpK2WD2IE4I=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation tf2-geometry-msgs ];

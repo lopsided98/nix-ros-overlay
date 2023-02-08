@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-object-recognition-msgs";
   version = "2.0.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/object_recognition_msgs-release/archive/release/humble/object_recognition_msgs/2.0.0-3.tar.gz";
-    name = "2.0.0-3.tar.gz";
-    sha256 = "f9c2a34911446d60f060b81e793fedb99a5791d80f14f3863a014eb91a7e2f4b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "object_recognition_msgs-release";
+        rev = "release/humble/object_recognition_msgs/2.0.0-3";
+        sha256 = "sha256-51GLrMSSWkdlTz5SBW9ImQilU5Rojo8emRiwZZtZtS0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

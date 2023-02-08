@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-opencv-apps";
   version = "2.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-perception/opencv_apps-release/archive/release/melodic/opencv_apps/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "11489debf5d3b3dc194472f483d67857db62f76665f6785ad4f55882c4e4d3dc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-perception";
+        repo = "opencv_apps-release";
+        rev = "release/melodic/opencv_apps/2.0.1-1";
+        sha256 = "sha256-WcbhbZCCU+cJ20X9czIOrqnNWNfAPb9NyUdTYRMxbq4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

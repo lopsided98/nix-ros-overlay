@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ament-nodl";
   version = "0.1.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_nodl-release/archive/release/rolling/ament_nodl/0.1.0-3.tar.gz";
-    name = "0.1.0-3.tar.gz";
-    sha256 = "318ff03dd2b45122e81c92c2f5557ba17b0de51b437daadaeeebea449d738b36";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_nodl-release";
+        rev = "release/rolling/ament_nodl/0.1.0-3";
+        sha256 = "sha256-9azhFZrnSaHJiIRFdPiDTiDO3j2v3eKxQBNdAEFwd5A=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

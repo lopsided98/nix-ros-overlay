@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-osrf-pycommon";
   version = "2.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/osrf_pycommon-release/archive/release/rolling/osrf_pycommon/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "eafee255e0db354c281db4743751ac231aa0ccbfe8a7f398ef1ee774116f957a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "osrf_pycommon-release";
+        rev = "release/rolling/osrf_pycommon/2.1.0-1";
+        sha256 = "sha256-Jagi5o6y6ob8H7noMWMF79xB0q806Lyxnqb7Zb4Ov/g=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ python3Packages.importlib-metadata ];

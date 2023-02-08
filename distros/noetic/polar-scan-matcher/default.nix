@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-polar-scan-matcher";
   version = "0.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/polar_scan_matcher/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "3e7d8367dfee2ad64dade2bb79db331c814c1a4f594c09eb41fc3f1263cf9833";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "scan_tools-release";
+        rev = "release/noetic/polar_scan_matcher/0.3.3-1";
+        sha256 = "sha256-Yp0SMPPD1m1o279HCJSTygOmAdVd+QDgf93Fg9Y+6gc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-audio-play";
   version = "0.3.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/audio_common-release/archive/release/noetic/audio_play/0.3.16-1.tar.gz";
-    name = "0.3.16-1.tar.gz";
-    sha256 = "e78f77eba5770ccb841f30c3eba0ec9b214d78e0f5de51707bcce224f3b5486c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "audio_common-release";
+        rev = "release/noetic/audio_play/0.3.16-1";
+        sha256 = "sha256-KGvZAZzm90e0WEboyJcRVI4XaGeJ6yg8BxrCsvxBhzM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

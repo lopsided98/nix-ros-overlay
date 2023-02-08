@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmf-task";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_task-release/archive/release/foxy/rmf_task/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "9f2405d882be71c169b3735d07fb1a80c9614c031e6d5cb0df927e360ab17ef5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_task-release";
+        rev = "release/foxy/rmf_task/1.0.0-1";
+        sha256 = "sha256-At3ymxuK3gLiTpAVhq6igu0xldP+G2bzoGzefU1J8fc=";
+      };
 
   buildType = "cmake";
   checkInputs = [ ament-cmake-catch2 rmf-cmake-uncrustify ];

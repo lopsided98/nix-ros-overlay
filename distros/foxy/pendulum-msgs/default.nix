@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-pendulum-msgs";
   version = "0.9.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/pendulum_msgs/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "fe5d0b6af44b9323879d8588c354ed7539fb986462669b95b9d7623a84abecc9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/foxy/pendulum_msgs/0.9.4-1";
+        sha256 = "sha256-lOkkDnlYnpOGeky2DuNE7KcHjO7zPO9h/wbS8wOg9tY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-environments";
   version = "0.6.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_environments-release/archive/release/melodic/cob_environments/0.6.12-1.tar.gz";
-    name = "0.6.12-1.tar.gz";
-    sha256 = "ba9245a590fe7f3804ca97a203c4c23ab1ad46064c6f382f1f0d0cee72766e2a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_environments-release";
+        rev = "release/melodic/cob_environments/0.6.12-1";
+        sha256 = "sha256-Eemou2FKSPMpPJnEcKx+h7DiVal7JtxS0yfVvIwJnlc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

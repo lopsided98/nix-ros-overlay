@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-wfov-camera-msgs";
   version = "0.15.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/pointgrey_camera_driver-release/archive/release/noetic/wfov_camera_msgs/0.15.1-1.tar.gz";
-    name = "0.15.1-1.tar.gz";
-    sha256 = "15a433e1d9cd61751a4e471c109f2fc7ecb9bcf803ab4a7ed2e1b61d01153f1a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "pointgrey_camera_driver-release";
+        rev = "release/noetic/wfov_camera_msgs/0.15.1-1";
+        sha256 = "sha256-OLtmNzJao1aW/eJYTo86X5P1MwAxJLbEpTEylvNx8do=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-moveit-setup-assistant";
   version = "1.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_setup_assistant/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "c4dfdb799048aee9bbc45cc017aed193f0140028c7d90725e4aeb82008b0360a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/melodic/moveit_setup_assistant/1.0.11-1";
+        sha256 = "sha256-Q+sKqo/01GXj7yuAxDas5sXgk/+GIT3QlSuvx8uhuDQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ogre1_9 qt5.qtbase ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-nav2-waypoint-follower";
   version = "0.4.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_waypoint_follower/0.4.7-1.tar.gz";
-    name = "0.4.7-1.tar.gz";
-    sha256 = "bd04ec41c0e017aa118ba14d276a7b49ba868302b19b9d3676d715a86a6e73ed";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/foxy/nav2_waypoint_follower/0.4.7-1";
+        sha256 = "sha256-/ZXZJSQKJhyeu789HACoMQnX9ZcIjsDt14UVY7SK6xs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rqt-robot-plugins";
   version = "0.5.7";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_robot_plugins-release/archive/release/melodic/rqt_robot_plugins/0.5.7-0.tar.gz";
-    name = "0.5.7-0.tar.gz";
-    sha256 = "2fa30a70d1eed9ff4724c1b9d1ef8303066b373bae9abcbf2b8a715a89e515ba";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_robot_plugins-release";
+        rev = "release/melodic/rqt_robot_plugins/0.5.7-0";
+        sha256 = "sha256-GFbhbrQp2W1Deg8osppxkRND3v1mBxFy5Eudsxbyfbk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

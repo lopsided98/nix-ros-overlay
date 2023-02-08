@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-open-manipulator-simulations";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator_simulations-release/archive/release/melodic/open_manipulator_simulations/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "5e55fe725d7a194014a7ba81ec9ba3436209a0076a05799156ccf09bceb657b4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "open_manipulator_simulations-release";
+        rev = "release/melodic/open_manipulator_simulations/1.1.0-1";
+        sha256 = "sha256-MurZ4QjNfbFP4FYpDtHMJQaKpvLhdM63ki4QcH/H/LU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

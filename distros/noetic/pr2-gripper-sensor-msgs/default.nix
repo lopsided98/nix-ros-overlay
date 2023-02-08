@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pr2-gripper-sensor-msgs";
   version = "1.0.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_gripper_sensor-release/archive/release/noetic/pr2_gripper_sensor_msgs/1.0.12-1.tar.gz";
-    name = "1.0.12-1.tar.gz";
-    sha256 = "4261bca54de1e531466fa524fca7686284d200b7a6d08f8db0171c5d0832d761";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_gripper_sensor-release";
+        rev = "release/noetic/pr2_gripper_sensor_msgs/1.0.12-1";
+        sha256 = "sha256-3oVif0Urt8H9lfK2eUb1CrIx+TviBUEGv/YN4Oz+7fs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

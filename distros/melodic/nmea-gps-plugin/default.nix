@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nmea-gps-plugin";
   version = "0.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/OUXT-Polaris/nmea_gps_plugin-release/archive/release/melodic/nmea_gps_plugin/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "bf0ecd5604699384b818ed34494c93bc8faee1e3645a8e3d9bd58e4e17256f8d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "OUXT-Polaris";
+        repo = "nmea_gps_plugin-release";
+        rev = "release/melodic/nmea_gps_plugin/0.0.2-1";
+        sha256 = "sha256-3cQxjbSmyUeikEphG+FvO/8v3p0Bzj5hrW555uv1avU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

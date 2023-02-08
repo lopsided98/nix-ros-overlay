@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-robot-plugins";
   version = "0.5.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_robot_plugins-release/archive/release/noetic/rqt_robot_plugins/0.5.8-1.tar.gz";
-    name = "0.5.8-1.tar.gz";
-    sha256 = "fc3aca0bc6a83c2a629f63f455560aa30b042ffec05c85f273fc24ce3fbb0af2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_robot_plugins-release";
+        rev = "release/noetic/rqt_robot_plugins/0.5.8-1";
+        sha256 = "sha256-vNlRRUEoWL6SyMJAKWHEdfJxljAwun79XpffeOa5XZs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

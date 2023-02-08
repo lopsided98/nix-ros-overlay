@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosatomic";
   version = "1.0.25-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_realtime-release/archive/release/noetic/rosatomic/1.0.25-1.tar.gz";
-    name = "1.0.25-1.tar.gz";
-    sha256 = "9ccf553073556f61a80da3937f7832a28a0fa6296dea0cf7e2df86e0d3f42806";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_realtime-release";
+        rev = "release/noetic/rosatomic/1.0.25-1";
+        sha256 = "sha256-+xjGLnELF3OhXp1TesY/exuwe42otRu/u1+letSQUnU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

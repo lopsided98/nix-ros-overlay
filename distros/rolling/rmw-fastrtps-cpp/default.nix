@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rmw-fastrtps-cpp";
   version = "6.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_fastrtps-release/archive/release/rolling/rmw_fastrtps_cpp/6.5.0-1.tar.gz";
-    name = "6.5.0-1.tar.gz";
-    sha256 = "3d764626907ff86578ccca7ccc04a2ec4b1dfa214130ca480c664bcc0a6d591d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmw_fastrtps-release";
+        rev = "release/rolling/rmw_fastrtps_cpp/6.5.0-1";
+        sha256 = "sha256-TYWVQSsfeR2cbfOBLXsZnvK3ts2O+pwILUQ424cQqF8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

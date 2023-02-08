@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nav-core2";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/nav_core2/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "d786855deba37a64f5e5a6eaf8ed347911e6fb1e3f3970d2b50766abd6bd2408";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/melodic/nav_core2/0.3.0-1";
+        sha256 = "sha256-HtN1Qepc1Z/BArsAUomEproTHbeCZj5ijrc1/AVpv2E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

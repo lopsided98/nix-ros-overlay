@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-geographic-msgs";
   version = "0.5.3";
 
-  src = fetchurl {
-    url = "https://github.com/ros-geographic-info/geographic_info-release/archive/release/melodic/geographic_msgs/0.5.3-0.tar.gz";
-    name = "0.5.3-0.tar.gz";
-    sha256 = "68d46a359b8eec02f2ee60c6997f9bf3399925e9f93c453839a07125ce8f959f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-geographic-info";
+        repo = "geographic_info-release";
+        rev = "release/melodic/geographic_msgs/0.5.3-0";
+        sha256 = "sha256-8kr6S613mnsjH29obusj5kgf7XqW7ZvxtBXAXbfY2uk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

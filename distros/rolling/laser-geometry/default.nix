@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-laser-geometry";
   version = "2.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/laser_geometry-release/archive/release/rolling/laser_geometry/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "1acf94056e5779beb524cc46528bc7b79bc803d19c3ec4f84c8164d87804eb6c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "laser_geometry-release";
+        rev = "release/rolling/laser_geometry/2.4.0-1";
+        sha256 = "sha256-JH57bYK6eAzaANWyYK8v9l9W6MJBFNpKxSrjaFfmPDA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

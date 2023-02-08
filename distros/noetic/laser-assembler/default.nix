@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-laser-assembler";
   version = "1.7.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/laser_assembler-release/archive/release/noetic/laser_assembler/1.7.8-1.tar.gz";
-    name = "1.7.8-1.tar.gz";
-    sha256 = "4d50d7eb169caf53f5027b63c5165647834c3dddf82ba66ddcf40a5a8437fbc8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "laser_assembler-release";
+        rev = "release/noetic/laser_assembler/1.7.8-1";
+        sha256 = "sha256-WKfZxAD30xWxfSFcmsSbZkEBPiaumcAwi8/TRjNEQbE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation rostest ];

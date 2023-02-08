@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-odva-ethernetip";
   version = "0.1.4";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/odva_ethernetip-release/archive/release/melodic/odva_ethernetip/0.1.4-0.tar.gz";
-    name = "0.1.4-0.tar.gz";
-    sha256 = "5ab751b07939ccd1fb02691e6d370dcf721b38371208efe92e9ec7d507481c7a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "odva_ethernetip-release";
+        rev = "release/melodic/odva_ethernetip/0.1.4-0";
+        sha256 = "sha256-RAdaguGfKzdmcBt5chbirgqU+lVk1Kb5Ji6lQM8Vhig=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmw-implementation";
   version = "1.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_implementation-release/archive/release/foxy/rmw_implementation/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "8a14c62d365b504a7f41c66d59efe4db844a35d8b95890cccf8919020f9f4e49";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmw_implementation-release";
+        rev = "release/foxy/rmw_implementation/1.0.3-1";
+        sha256 = "sha256-JQotXyje8l24JO7w8k1dA/bYma+v7Z7JWHcGQCAltLw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rmw rmw-connext-cpp rmw-cyclonedds-cpp rmw-fastrtps-cpp ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-voice-text";
   version = "2.1.21-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/voice_text/2.1.21-2.tar.gz";
-    name = "2.1.21-2.tar.gz";
-    sha256 = "05ae739b61950cd2321e45c980c4308fa4f8c9d8cee4a7e8bea67256ace289cc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_3rdparty-release";
+        rev = "release/noetic/voice_text/2.1.21-2";
+        sha256 = "sha256-TubVoWptXJ3zWf0T4dptIwTpNFmkLhohbsozmajtsd0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation roscpp ];

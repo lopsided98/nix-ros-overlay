@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-smclib";
   version = "2.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/foxy/smclib/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "3d19b736f333c9bd9763144c5023dbd5a4d8921ad49e56501a8cfe68f02fd2a4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "bond_core-release";
+        rev = "release/foxy/smclib/2.1.0-1";
+        sha256 = "sha256-3WMZLT95hdhYYCfuTK2J1jxni0ovwiqcQZnn7jQAwoc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];

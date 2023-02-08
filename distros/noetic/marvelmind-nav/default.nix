@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-marvelmind-nav";
   version = "1.0.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/MarvelmindRobotics/marvelmind_nav-release/archive/release/noetic/marvelmind_nav/1.0.13-1.tar.gz";
-    name = "1.0.13-1.tar.gz";
-    sha256 = "3f9ace8cf37ec2f21c90d2ed3f5ab15db82f4ff2d7f0d5cb0da27b7dcec5e2cd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "MarvelmindRobotics";
+        repo = "marvelmind_nav-release";
+        rev = "release/noetic/marvelmind_nav/1.0.13-1";
+        sha256 = "sha256-YVnjKcqnRKWD01m3ehuVWBvKDQe3gpFydc9iH3onXy4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

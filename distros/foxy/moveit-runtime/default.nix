@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-moveit-runtime";
   version = "2.2.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/moveit_runtime/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "80e4048cdfc58e9334d82dd33c048100b5a7816f91701a84a6c01f650e9c4d2d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "moveit2-release";
+        rev = "release/foxy/moveit_runtime/2.2.3-1";
+        sha256 = "sha256-blpJPBlMm/0MJzueusYHoZOk79H1X7FXJNFYaijRxMM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

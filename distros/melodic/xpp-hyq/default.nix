@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-xpp-hyq";
   version = "1.0.10";
 
-  src = fetchurl {
-    url = "https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp_hyq/1.0.10-0.tar.gz";
-    name = "1.0.10-0.tar.gz";
-    sha256 = "92f200e4ca8f3bb5c9b5e4b9657aadd436267efeae2f74f235a682ad9c3fca62";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "leggedrobotics";
+        repo = "xpp-release";
+        rev = "release/melodic/xpp_hyq/1.0.10-0";
+        sha256 = "sha256-MlgPqAXIWfZ+S/1u17CCaqUkw3Yi6bsTVA86CTvdUaY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-nao-lola";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/nao_lola-release/archive/release/humble/nao_lola/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "efe25b61711696e649f69f3012a7c047646c8d6f95c03dfdc3b333093a7b5aa9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "nao_lola-release";
+        rev = "release/humble/nao_lola/0.1.0-1";
+        sha256 = "sha256-QrVYzmnxF5Xm4vVkGJwowRn5uJsVvmO8m+GxUm2/mGM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

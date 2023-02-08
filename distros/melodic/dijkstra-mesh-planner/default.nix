@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dijkstra-mesh-planner";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/melodic/dijkstra_mesh_planner/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "9b0df6ecfa43cd8dde6d68e8253170f015448b0d74338fe1214af831d4771d9e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mesh_navigation-release";
+        rev = "release/melodic/dijkstra_mesh_planner/1.0.1-1";
+        sha256 = "sha256-0jcTvJztBd30A7Qi+8EC432y/Kq2LavgyO4SVDU+nCY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

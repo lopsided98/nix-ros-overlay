@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rosbridge-suite";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/humble/rosbridge_suite/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "402a522e6405ddca4b00de5c4b776096485946df02792601b6e163d3582d66e6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosbridge_suite-release";
+        rev = "release/humble/rosbridge_suite/1.3.1-1";
+        sha256 = "sha256-GCCnTrZrj1fE7QXPG5N1kyb5GiaunUe6YsYLdnGRJJ8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-core ];

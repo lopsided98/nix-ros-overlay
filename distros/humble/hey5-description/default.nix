@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-hey5-description";
   version = "3.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/hey5_description-release/archive/release/humble/hey5_description/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "8aa1a9ddef46f5b3e25e4447ffec02cacedc89b1efe0f15a175945d131929846";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "hey5_description-release";
+        rev = "release/humble/hey5_description/3.0.2-1";
+        sha256 = "sha256-p0BTEE4n2qNbAvmcaKEfpnOGbNTcU4s7T8NfbNuIr+A=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

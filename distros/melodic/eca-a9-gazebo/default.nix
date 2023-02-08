@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-eca-a9-gazebo";
   version = "0.1.6";
 
-  src = fetchurl {
-    url = "https://github.com/uuvsimulator/eca_a9-release/archive/release/melodic/eca_a9_gazebo/0.1.6-0.tar.gz";
-    name = "0.1.6-0.tar.gz";
-    sha256 = "e2dce04036c923f6df2b176be5b73ffc2f2f7002fb0c2db7f54d2ea686499d9e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uuvsimulator";
+        repo = "eca_a9-release";
+        rev = "release/melodic/eca_a9_gazebo/0.1.6-0";
+        sha256 = "sha256-rP1bAPX+7GOkKLQnmv5xpUzoTieY4z3ST3LW7nb9DsY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

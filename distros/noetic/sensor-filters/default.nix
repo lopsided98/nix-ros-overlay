@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-sensor-filters";
   version = "1.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ctu-vras/sensor_filters-release/archive/release/noetic/sensor_filters/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "38cd48bd09b52a40608b6ed9cc01fa58b4bfef4c51d7a403539bae72e18e4c92";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ctu-vras";
+        repo = "sensor_filters-release";
+        rev = "release/noetic/sensor_filters/1.0.3-1";
+        sha256 = "sha256-7zG/cp/Skv0mGkPQfp/ZwSEfOe7pWa8mfIKmXBdmBTs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

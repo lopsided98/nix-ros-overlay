@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-people";
   version = "1.4.0-r4";
 
-  src = fetchurl {
-    url = "https://github.com/OSUrobotics/people-release/archive/release/melodic/people/1.4.0-4.tar.gz";
-    name = "1.4.0-4.tar.gz";
-    sha256 = "3257e4cec2b4985b1b8f0530bb4a37820ec2100a60f9694b36aff8c9df32c154";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "OSUrobotics";
+        repo = "people-release";
+        rev = "release/melodic/people/1.4.0-4";
+        sha256 = "sha256-51ctmHI5vqiw8kBDkFg/3A0tyeVdYXYHptIlXM1IegY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

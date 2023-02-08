@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-ethercat-drivers";
   version = "1.8.19-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/melodic/pr2_ethercat_drivers/1.8.19-1.tar.gz";
-    name = "1.8.19-1.tar.gz";
-    sha256 = "e28b1bb1eb08c709820f7a571ca092a5ccf5035f877019f105ef2f3f485ff049";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_ethercat_drivers-release";
+        rev = "release/melodic/pr2_ethercat_drivers/1.8.19-1";
+        sha256 = "sha256-r1MeAlPCfV4MoETZWjitUCHgX44l3PQL/tjAsuoHF6A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

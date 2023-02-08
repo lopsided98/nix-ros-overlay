@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosbag-pandas";
   version = "0.5.3";
 
-  src = fetchurl {
-    url = "https://github.com/eurogroep/rosbag_pandas-release/archive/release/melodic/rosbag_pandas/0.5.3-0.tar.gz";
-    name = "0.5.3-0.tar.gz";
-    sha256 = "a1e49a019fe7770b6a4de2ba9c8551c78e6288b2a32f7da4227f97d48e929a9f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "eurogroep";
+        repo = "rosbag_pandas-release";
+        rev = "release/melodic/rosbag_pandas/0.5.3-0";
+        sha256 = "sha256-Mf0gzn+eS8RrSOeCR7ZeQi9tebnS2dzzLTczYhK8dds=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

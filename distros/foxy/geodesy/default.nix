@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-geodesy";
   version = "1.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-geographic-info/geographic_info-release/archive/release/foxy/geodesy/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "9b6d0e18310a4aa8c3b43eb11c29c74440c13322fbc049d8eab7506cbfa53864";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-geographic-info";
+        repo = "geographic_info-release";
+        rev = "release/foxy/geodesy/1.0.4-1";
+        sha256 = "sha256-Mzm8AWuKEp7IOCpF3+LvcThDlbjh5/5D9ftJVe7R1AA=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake python3Packages.catkin-pkg ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jsk-interactive-test";
   version = "2.1.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/melodic/jsk_interactive_test/2.1.8-1.tar.gz";
-    name = "2.1.8-1.tar.gz";
-    sha256 = "5c4234901ba9b98bf6b8644c7829f4ab966aa7c797987e3eb7deb2b77f7ae782";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_visualization-release";
+        rev = "release/melodic/jsk_interactive_test/2.1.8-1";
+        sha256 = "sha256-TTsMi9XDN5YpqmHVT260wRbgrXgWd2QdxXhwI3qoanU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin mk rosbuild ];

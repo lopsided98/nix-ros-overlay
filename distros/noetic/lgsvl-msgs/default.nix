@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-lgsvl-msgs";
   version = "0.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/lgsvl/lgsvl_msgs-release/archive/release/noetic/lgsvl_msgs/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "fa83ef1c1fb1ac692d5a1d5b3c41d341642103660b778950574332514033e124";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "lgsvl";
+        repo = "lgsvl_msgs-release";
+        rev = "release/noetic/lgsvl_msgs/0.0.4-1";
+        sha256 = "sha256-Pd5TP0wLuUr0/m+WvLpkvURpB0d0hbik3SOPkifg8YU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ message-generation ros-environment ];

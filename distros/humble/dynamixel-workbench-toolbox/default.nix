@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-dynamixel-workbench-toolbox";
   version = "2.2.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_workbench-release/archive/release/humble/dynamixel_workbench_toolbox/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "15b2872e92f1e716935d0271fbdf935786659c71df9bcad54cee9236a9aa8a6e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "dynamixel_workbench-release";
+        rev = "release/humble/dynamixel_workbench_toolbox/2.2.3-1";
+        sha256 = "sha256-nOIZ6YHjctUbm0SxTewtbsAXlfG10kknrKhpsVPGR5k=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

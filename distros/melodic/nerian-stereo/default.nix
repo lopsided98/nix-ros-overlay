@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, curl, cv-bridge, dynamic-reconfigure, message-generation, message-runtime, nodelet, roscpp, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-melodic-nerian-stereo";
-  version = "3.10.0-r1";
+  version = "3.11.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/nerian-vision/nerian_stereo-release/archive/release/melodic/nerian_stereo/3.10.0-1.tar.gz";
-    name = "3.10.0-1.tar.gz";
-    sha256 = "5fe38746fbafe7c2c9a0d02f81184f9e7706b729ab3b244e99e41cceea49b8ae";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "nerian-vision";
+        repo = "nerian_stereo-release";
+        rev = "release/melodic/nerian_stereo/3.11.0-1";
+        sha256 = "sha256-m2ePuhLsm9GCIR91gLzZ6xJeu7fadpDeztkRS5p+06M=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

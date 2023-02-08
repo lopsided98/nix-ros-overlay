@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, apriltag-ros, catkin, class-loader, compressed-depth-image-transport, compressed-image-transport, costmap-2d, cv-bridge, dynamic-reconfigure, eigen-conversions, find-object-2d, genmsg, geometry-msgs, image-geometry, image-transport, laser-geometry, message-filters, message-generation, message-runtime, move-base-msgs, nav-msgs, nodelet, octomap-msgs, pcl, pcl-conversions, pcl-ros, pluginlib, roscpp, rosgraph-msgs, rospy, rtabmap, rviz, sensor-msgs, std-msgs, std-srvs, stereo-msgs, tf, tf-conversions, tf2-ros, theora-image-transport, visualization-msgs }:
 buildRosPackage {
   pname = "ros-melodic-rtabmap-ros";
-  version = "0.20.22-r1";
+  version = "0.20.23-r1";
 
-  src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/melodic/rtabmap_ros/0.20.22-1.tar.gz";
-    name = "0.20.22-1.tar.gz";
-    sha256 = "7b38d0cf63f57c6e08c12dc01439f1f2e28a95564c67cec9419bcb5fe2bc9f15";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "introlab";
+        repo = "rtabmap_ros-release";
+        rev = "release/melodic/rtabmap_ros/0.20.23-1";
+        sha256 = "sha256-skW9aDVspz9Qh/TpYw82zCOOhwDHLZdjvnjfTdL40xk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin genmsg message-generation pcl ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosservice";
   version = "1.14.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosservice/1.14.13-1.tar.gz";
-    name = "1.14.13-1.tar.gz";
-    sha256 = "47639ab9a30a872ddfd521b6af2b9766b49963ec646956667224088ff302d62b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm-release";
+        rev = "release/melodic/rosservice/1.14.13-1";
+        sha256 = "sha256-gXLjR6g4125PJQSfVB+ee4mzQ87+vu7qzAOUDJ6rpFI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-pmb2-navigation";
   version = "4.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_navigation/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "2b1b5c4af40c39cda2be525406bf2d481df3cc4b72d03a1a9206db042970d478";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "pmb2_navigation-gbp";
+        rev = "release/humble/pmb2_navigation/4.0.0-1";
+        sha256 = "sha256-L0pw9APBXHKaNF3ICTN/NecTcJJ8bc5EGScFARSTOZY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

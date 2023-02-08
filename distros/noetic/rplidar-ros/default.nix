@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rplidar-ros";
   version = "2.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/nobleo/rplidar_ros-release/archive/release/noetic/rplidar_ros/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "0101b1ac6fea66c77b67bffaeebbb6d03840bf25a7aa8262fa2b962d3314fdcb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "nobleo";
+        repo = "rplidar_ros-release";
+        rev = "release/noetic/rplidar_ros/2.0.0-1";
+        sha256 = "sha256-a9HQiQEE89UEN9uTuCEif9tix6S7xgbaYS7rx/k7ssw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

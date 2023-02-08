@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-libpcan";
   version = "0.6.18-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/noetic/libpcan/0.6.18-1.tar.gz";
-    name = "0.6.18-1.tar.gz";
-    sha256 = "634d7fe32f5cdda1a70fd01d76ec7538948cf891bf037594f8358eafbf9ea091";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_extern-release";
+        rev = "release/noetic/libpcan/0.6.18-1";
+        sha256 = "sha256-CRL7v02SKKXwJdlp2oT+81rSvVY482G6Sh5uhzG4Xk8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

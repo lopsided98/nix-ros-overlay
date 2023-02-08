@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nao-meshes";
   version = "0.1.12-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-naoqi/nao_meshes-release/archive/release/melodic/nao_meshes/0.1.12-2.tar.gz";
-    name = "0.1.12-2.tar.gz";
-    sha256 = "442942148bcf3a939a54415b7229b5785160d7e206402babd96adcab8cde90ad";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-naoqi";
+        repo = "nao_meshes-release";
+        rev = "release/melodic/nao_meshes/0.1.12-2";
+        sha256 = "sha256-5NYSxgnOQewQMYZYr+YPAzN7WzUjJMaD1ko7VadO6u8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin openjdk ];

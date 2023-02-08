@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pr2-tuck-arms-action";
   version = "0.0.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/noetic/pr2_tuck_arms_action/0.0.12-1.tar.gz";
-    name = "0.0.12-1.tar.gz";
-    sha256 = "6d220c5c9a5d796989de37b20bf5532a64eb4142693572be34ac96e70047e158";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_common_actions-release";
+        rev = "release/noetic/pr2_tuck_arms_action/0.0.12-1";
+        sha256 = "sha256-/aJFkNn5j4LgdJjabgchGIudhN8VydYXTpcRbCzOYyk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

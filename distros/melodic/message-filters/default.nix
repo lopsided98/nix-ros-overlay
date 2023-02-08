@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-message-filters";
   version = "1.14.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/message_filters/1.14.13-1.tar.gz";
-    name = "1.14.13-1.tar.gz";
-    sha256 = "240f188ace7c86f7a036d58b14b4214ee63b5c285ab008eea2dacf4f78b6e555";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm-release";
+        rev = "release/melodic/message_filters/1.14.13-1";
+        sha256 = "sha256-ZNOYaJdM6+ze2Y0IEm9oV4Vbt9utmFqrP1Nn3pKfjtk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ boost catkin rostest rosunit ];

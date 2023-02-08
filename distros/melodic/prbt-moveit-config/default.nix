@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-prbt-moveit-config";
   version = "0.5.23-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/prbt_moveit_config/0.5.23-1.tar.gz";
-    name = "0.5.23-1.tar.gz";
-    sha256 = "ac90dce368fc651dfcd6ae85eeddbba21c982e95ae556d85602d8322069d22ea";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_robots-release";
+        rev = "release/melodic/prbt_moveit_config/0.5.23-1";
+        sha256 = "sha256-bh8XEV7o/U48LTELZn8tODOXK0BwHinQh6z3+WLTW08=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

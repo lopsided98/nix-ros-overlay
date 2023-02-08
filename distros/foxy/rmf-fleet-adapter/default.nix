@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmf-fleet-adapter";
   version = "1.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/foxy/rmf_fleet_adapter/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "d4d19a9bd4f2a803cd06739e62d0457b46e10bc05490994c24d2a9001022d4b1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_ros2-release";
+        rev = "release/foxy/rmf_fleet_adapter/1.4.0-1";
+        sha256 = "sha256-rJiBXIiOhjSc3ZruX4Zq8QVgF7LzhEYkAMYH9XnxDXQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake eigen libyamlcpp ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-fogros2-examples";
   version = "0.1.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/fogros2-release/archive/release/humble/fogros2_examples/0.1.7-1.tar.gz";
-    name = "0.1.7-1.tar.gz";
-    sha256 = "de71035ee00fb2c2b280815d8b277cbb1d61a09be05d638ff8eba42243c7ac21";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "fogros2-release";
+        rev = "release/humble/fogros2_examples/0.1.7-1";
+        sha256 = "sha256-Q88Rh23VRS6EUyEY8/Bjj9Ov9QZTCl3Hd5zEGY1uIUk=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

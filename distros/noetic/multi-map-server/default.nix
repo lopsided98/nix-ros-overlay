@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-multi-map-server";
   version = "2.2.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/multi_map_server/2.2.12-1.tar.gz";
-    name = "2.2.12-1.tar.gz";
-    sha256 = "2c5ce65b15604abc1c9786f7a777931762d636f6d8198a7db495c89fa7843f3a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_common-release";
+        rev = "release/noetic/multi_map_server/2.2.12-1";
+        sha256 = "sha256-e0aYLRc1kI+gHkjBn9uy+l6RrVim+ePXD+pJDLdDYNU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin jsk-tools python3Packages.pyyaml pythonPackages.pillow rosmake ];

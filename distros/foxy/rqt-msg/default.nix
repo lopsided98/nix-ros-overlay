@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rqt-msg";
   version = "1.0.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_msg-release/archive/release/foxy/rqt_msg/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "99a54eeef627f2fcbd7c5a1ae133183c61145d321d21557381c52b7f9abfc1df";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_msg-release";
+        rev = "release/foxy/rqt_msg/1.0.5-1";
+        sha256 = "sha256-lgOSPganjlWw+KGVnKmhKMQve6hobmxKSHmGrO/KyTI=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ python-qt-binding python3Packages.catkin-pkg rclpy rqt-console rqt-gui rqt-gui-py rqt-py-common ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-depth-image-proc";
   version = "3.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/depth_image_proc/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "c740c0d382b7035b4f9984dbec27a5dc6d2e7a5525624b21f966a03b4825a84b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/rolling/depth_image_proc/3.0.1-1";
+        sha256 = "sha256-GzUdUhJMmjy/MLYKmeDWGalYn663OXvzJrdUYfU2JPs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto class-loader ];

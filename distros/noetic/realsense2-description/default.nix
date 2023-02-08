@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-realsense2-description";
   version = "2.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/IntelRealSense/realsense-ros-release/archive/release/noetic/realsense2_description/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "07386187411d8fbaa4fd63fdd7e00116f73bfa7c40105b7a5bb0199d4e9b3585";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "IntelRealSense";
+        repo = "realsense-ros-release";
+        rev = "release/noetic/realsense2_description/2.3.2-1";
+        sha256 = "sha256-XMrc90iRdG8V56ZFQS8RDqPLXBLjAR33LQXCxkuQo6Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

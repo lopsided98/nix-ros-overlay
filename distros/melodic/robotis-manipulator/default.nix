@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robotis-manipulator";
   version = "1.1.0";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/robotis_manipulator-release/archive/release/melodic/robotis_manipulator/1.1.0-0.tar.gz";
-    name = "1.1.0-0.tar.gz";
-    sha256 = "1319f6251991f69621cc96ddef7769430fae53fc8686db0fe10e92d6524e504f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "robotis_manipulator-release";
+        rev = "release/melodic/robotis_manipulator/1.1.0-0";
+        sha256 = "sha256-DeYk4rvo6ROntaSRCJUmbh0zI/zhBgHvVsiCYpHu3JY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

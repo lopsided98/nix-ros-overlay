@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-openrtm-ros-bridge";
   version = "1.4.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/rtmros_common-release/archive/release/melodic/openrtm_ros_bridge/1.4.3-1.tar.gz";
-    name = "1.4.3-1.tar.gz";
-    sha256 = "7ea540a376bea8c3571a05fa6a377fb08b527310ad3e2be525f32fe03d28f622";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "rtmros_common-release";
+        rev = "release/melodic/openrtm_ros_bridge/1.4.3-1";
+        sha256 = "sha256-c3d873WJBsJSpVjs9N57UVc+T8hmqSlDTVfVo1yk1zI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation rostest rtmbuild ];

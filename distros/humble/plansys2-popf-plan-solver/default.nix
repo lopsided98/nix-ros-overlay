@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-plansys2-popf-plan-solver";
   version = "2.0.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/humble/plansys2_popf_plan_solver/2.0.9-1.tar.gz";
-    name = "2.0.9-1.tar.gz";
-    sha256 = "f78c8cf57f4f6b58bba9fe65189ec71c484a368d0740c163750501f480999fc0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "IntelligentRoboticsLabs";
+        repo = "ros2_planning_system-release";
+        rev = "release/humble/plansys2_popf_plan_solver/2.0.9-1";
+        sha256 = "sha256-JNKrxUKjBX0T0F/FWBwomH8ZHSyZfCvo8iz3OTJ0nYw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

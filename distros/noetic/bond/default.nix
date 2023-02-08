@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-bond";
   version = "1.8.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/bond_core-release/archive/release/noetic/bond/1.8.6-1.tar.gz";
-    name = "1.8.6-1.tar.gz";
-    sha256 = "4d36aea04cde0bd1f8cc0e7a2136584a5ebe15ebbe6eb6a65637aa3e09918a5b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "bond_core-release";
+        rev = "release/noetic/bond/1.8.6-1";
+        sha256 = "sha256-Gj8R7gQHF1+mLunKHsobXFbEI94xmS9YOFcBUW1sbr0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

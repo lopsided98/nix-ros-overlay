@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-phidgets-temperature";
   version = "1.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_temperature/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "58429ce86878ab4f3ddf3499d5b38168f3d7a9bc5274ddf9839a9731f2080cd5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "phidgets_drivers-release";
+        rev = "release/noetic/phidgets_temperature/1.0.6-1";
+        sha256 = "sha256-xx5nMHDgD5pKRuqkU451ttK5TSX6PUVc6EuVHN01Csw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

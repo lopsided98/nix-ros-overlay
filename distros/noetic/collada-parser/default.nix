@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-collada-parser";
   version = "1.12.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/collada_urdf-release/archive/release/noetic/collada_parser/1.12.13-1.tar.gz";
-    name = "1.12.13-1.tar.gz";
-    sha256 = "a8f581653cdb7959042888e450bb0a814e1fe99cd3e1e9e608c35bddcce78712";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "collada_urdf-release";
+        rev = "release/noetic/collada_parser/1.12.13-1";
+        sha256 = "sha256-7NP/MTNf2aRw5QAwXjBXPaJHgmeNi8hjqUBoHt6xK2w=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin urdfdom-headers ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-moveit-ros-perception";
   version = "1.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_perception/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "6852547197cec873db55f22887fdae30cd87a3f253995ce81d8727713426f521";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/melodic/moveit_ros_perception/1.0.11-1";
+        sha256 = "sha256-zpbwrcIEdyGGzScPZwp1TFZSQkbPcbOlR3JfAZZ8AJg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin eigen ];

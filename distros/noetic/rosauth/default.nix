@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosauth";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/gt-rail-release/rosauth-release/archive/release/noetic/rosauth/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "f00e6e72af902207c80739d19befdd64aa11cfc6256e284507837d11e1c2ba1d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "gt-rail-release";
+        repo = "rosauth-release";
+        rev = "release/noetic/rosauth/1.0.1-1";
+        sha256 = "sha256-k6rlgHzOtIixFOZAXYcjZimrp6cFUKE1p7MCPhzpIME=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation openssl ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-osqp-vendor";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tier4/osqp_vendor-release/archive/release/noetic/osqp_vendor/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "e49b3bd538d8a93dc1f872bb3b52d6b2b27bfe14580ea7a6579337374d506d51";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tier4";
+        repo = "osqp_vendor-release";
+        rev = "release/noetic/osqp_vendor/0.2.0-1";
+        sha256 = "sha256-I6jhthmRppj6fiDd1M+bbW8W/bsR5/0ur5UWcf4/ZGQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin git ros-environment ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jsk-teleop-joy";
   version = "0.1.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/melodic/jsk_teleop_joy/0.1.16-1.tar.gz";
-    name = "0.1.16-1.tar.gz";
-    sha256 = "f5a9855281a3dce5f037a0e91f711dd9a90ef261abeffe0ef0dad8c9816a0941";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_control-release";
+        rev = "release/melodic/jsk_teleop_joy/0.1.16-1";
+        sha256 = "sha256-sAd5SxDGajZnov0ogNZs8kLunRLe20194aYbIgf7ykQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

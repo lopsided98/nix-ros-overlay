@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-zenoh-bridge-dds";
   version = "0.5.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/zenoh_bridge_dds-release/archive/release/rolling/zenoh_bridge_dds/0.5.0-2.tar.gz";
-    name = "0.5.0-2.tar.gz";
-    sha256 = "58389e40aca8f5c33e678f148fe803e34d6408c181623828325f5030920da993";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "zenoh_bridge_dds-release";
+        rev = "release/rolling/zenoh_bridge_dds/0.5.0-2";
+        sha256 = "sha256-f7l+qyV5vSYtTVBV57bVQUV49odL51NPVkvmo00gimY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake cargo clang ];

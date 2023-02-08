@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rqt-tf-tree";
   version = "1.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_tf_tree-release/archive/release/humble/rqt_tf_tree/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "e1c9088f325151b29ff3f3d5b7192fa2ed8cf6c0718d86d14716238c143c11e2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_tf_tree-release";
+        rev = "release/humble/rqt_tf_tree/1.0.4-1";
+        sha256 = "sha256-lSihCkueyTt2JXyG3jG9jZwxU5/m1zSimSfNldkQjiM=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ python3Packages.mock ];

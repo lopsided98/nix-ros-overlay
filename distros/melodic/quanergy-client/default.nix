@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-quanergy-client";
   version = "5.0.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/QuanergySystems/quanergy_client-release/archive/release/melodic/quanergy_client/5.0.0-2.tar.gz";
-    name = "5.0.0-2.tar.gz";
-    sha256 = "f9374cfdbfd688147cc1135673f55a7935a746ef8376123c3be4133c353d5c5d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "QuanergySystems";
+        repo = "quanergy_client-release";
+        rev = "release/melodic/quanergy_client/5.0.0-2";
+        sha256 = "sha256-AvobCVq5Du1Z7XFAEZNur9O/rxy6apcOoOCz1arYjcM=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

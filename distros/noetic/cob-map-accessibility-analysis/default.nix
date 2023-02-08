@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cob-3d-mapping-msgs, cv-bridge, geometry-msgs, image-transport, message-filters, message-generation, message-runtime, nav-msgs, opencv, pcl, pcl-ros, python3Packages, roscpp, rospy, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-cob-map-accessibility-analysis";
-  version = "0.6.13-r1";
+  version = "0.6.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_navigation-release/archive/release/noetic/cob_map_accessibility_analysis/0.6.13-1.tar.gz";
-    name = "0.6.13-1.tar.gz";
-    sha256 = "a35e3f416d74dde0074be244b44ca72dc7ebcec934d42cf22e71e08320963202";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_navigation-release";
+        rev = "release/noetic/cob_map_accessibility_analysis/0.6.14-1";
+        sha256 = "sha256-DzDJaCrCNwwGkmqQUPUsVdGWJoynbxh7OOtq1oPUQnM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation python3Packages.setuptools ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mrpt-sensors";
   version = "0.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_sensors-release/archive/release/melodic/mrpt_sensors/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "e85fc055d90365682b4d820a786ed4abb82e0e33550712670bb58de14c8ea252";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mrpt-ros-pkg-release";
+        repo = "mrpt_sensors-release";
+        rev = "release/melodic/mrpt_sensors/0.0.2-1";
+        sha256 = "sha256-+aiZEQzrirC1eOu5md/Rkrm2wNbNutYD11mpc2RwRCI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

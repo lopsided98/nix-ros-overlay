@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-std-srvs";
   version = "1.11.2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm_msgs-release/archive/release/melodic/std_srvs/1.11.2-0.tar.gz";
-    name = "1.11.2-0.tar.gz";
-    sha256 = "ecc565aebf13d5afbfaf42a1fb8a31de29af19331ca76239ced87c10f14fc363";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm_msgs-release";
+        rev = "release/melodic/std_srvs/1.11.2-0";
+        sha256 = "sha256-Rxvgnd+wVrrWDeABFUnr5bIN96c7qK4ky4pA2lcALNM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

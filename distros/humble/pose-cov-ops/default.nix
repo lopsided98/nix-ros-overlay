@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-pose-cov-ops";
   version = "0.3.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/pose_cov_ops-release/archive/release/humble/pose_cov_ops/0.3.8-1.tar.gz";
-    name = "0.3.8-1.tar.gz";
-    sha256 = "d49d54650d5d1fd528d06cc5d386ed661aa8a26f40fdc9c65d4b30fb1568b039";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "pose_cov_ops-release";
+        rev = "release/humble/pose_cov_ops/0.3.8-1";
+        sha256 = "sha256-PedCn7b0uRpfsVpaUyJ5yPWogpyzEvsBI6xR2g6O7RE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-gmock ament-cmake-gtest ament-cmake-xmllint cmake ros-environment ];

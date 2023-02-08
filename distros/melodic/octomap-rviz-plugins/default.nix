@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-octomap-rviz-plugins";
   version = "0.2.4-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap_rviz_plugins-release/archive/release/melodic/octomap_rviz_plugins/0.2.4-2.tar.gz";
-    name = "0.2.4-2.tar.gz";
-    sha256 = "8f5bf0f81a1734bd921fbb238890d39f32aad30f614d6b7437a42715ff8cb1b4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "octomap_rviz_plugins-release";
+        rev = "release/melodic/octomap_rviz_plugins/0.2.4-2";
+        sha256 = "sha256-816alBU6FnAemoH9ar0U3cQIdUAZD0Ele8421wzdO7c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

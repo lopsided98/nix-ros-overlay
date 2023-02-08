@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-opengm";
   version = "0.6.17-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/opengm/0.6.17-1.tar.gz";
-    name = "0.6.17-1.tar.gz";
-    sha256 = "e97abb94a52a22d31e3dc253e1e4865d414989200b861141ef481e28e7b60fce";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_extern-release";
+        rev = "release/melodic/opengm/0.6.17-1";
+        sha256 = "sha256-8IPE1w2ZIie/OU8CEcVkASISvA6ciEHt/ug8dTRlUKw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

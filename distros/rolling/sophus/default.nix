@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-sophus";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/sophus-release/archive/release/rolling/sophus/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "0b01bf06f4972347940e569569a0b064ca930e3536f89862a728a09286b4de29";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "sophus-release";
+        rev = "release/rolling/sophus/1.3.1-1";
+        sha256 = "sha256-sU6bD+gx60Z2gmHijXI86GiPbz64jCt6tMrNfxUwAHM=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

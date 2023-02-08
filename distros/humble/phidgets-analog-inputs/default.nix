@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-phidgets-analog-inputs";
   version = "2.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/humble/phidgets_analog_inputs/2.3.0-2.tar.gz";
-    name = "2.3.0-2.tar.gz";
-    sha256 = "ef305f9fc70c54c487ae6d4f7b29c692e9610234f0e2d3fb64eae3801332408a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "phidgets_drivers-release";
+        rev = "release/humble/phidgets_analog_inputs/2.3.0-2";
+        sha256 = "sha256-gL8HOdwoDA0GqMihsxhlj6gh6+u81FDWe5OHmNjkpWE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

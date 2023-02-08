@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-khi-rs-ikfast-plugin";
   version = "1.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/noetic/khi_rs_ikfast_plugin/1.3.0-2.tar.gz";
-    name = "1.3.0-2.tar.gz";
-    sha256 = "ba133fc7343e832ac36593564aa79567291e050d9c5a4a72fe197517da6827b1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Kawasaki-Robotics";
+        repo = "khi_robot-release";
+        rev = "release/noetic/khi_rs_ikfast_plugin/1.3.0-2";
+        sha256 = "sha256-/MbFHz8xTxZnoTl9EP7KPbylSSfGFyaz+yvIUqHtzCQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

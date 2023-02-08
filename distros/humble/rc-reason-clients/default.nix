@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rc-reason-clients";
   version = "0.2.1-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_reason_clients-release/archive/release/humble/rc_reason_clients/0.2.1-4.tar.gz";
-    name = "0.2.1-4.tar.gz";
-    sha256 = "f0f5e1113217ac1253e7179d8d2c5eaa858d5424c734dae59c8954405b5eb5d1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rc_reason_clients-release";
+        rev = "release/humble/rc_reason_clients/0.2.1-4";
+        sha256 = "sha256-0AzKL+C5f5BEGPSkQ+Tj53eFBF2C4KMC1hYhmGqCq94=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

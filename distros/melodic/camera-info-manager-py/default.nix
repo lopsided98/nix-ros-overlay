@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-camera-info-manager-py";
   version = "0.2.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/camera_info_manager_py-release/archive/release/melodic/camera_info_manager_py/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "6087f6e31da07de3fc73755de6dac341afdb28eaf48e375cd0519addefe2dce1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "camera_info_manager_py-release";
+        rev = "release/melodic/camera_info_manager_py/0.2.3-1";
+        sha256 = "sha256-H51Vb8gRMdJHThOQz8WW5sWbo8W2ABnu46tWJi1KR9U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

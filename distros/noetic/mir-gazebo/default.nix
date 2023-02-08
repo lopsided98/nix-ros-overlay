@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, fake-localization, gazebo-ros, joint-state-publisher, mir-description, mir-driver, robot-localization, robot-state-publisher, roslaunch, rostopic, rqt-robot-steering, topic-tools }:
 buildRosPackage {
   pname = "ros-noetic-mir-gazebo";
-  version = "1.1.6-r1";
+  version = "1.1.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_gazebo/1.1.6-1.tar.gz";
-    name = "1.1.6-1.tar.gz";
-    sha256 = "807f570cc0c61f6e362639997c8c8a0f0293225d8923f202f23c08f57a419993";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mir_robot-release";
+        rev = "release/noetic/mir_gazebo/1.1.7-1";
+        sha256 = "sha256-HzKmcsGuAA5qGl4vFIa2m5skAs526p+mQFuA7w6jefk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

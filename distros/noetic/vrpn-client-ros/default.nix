@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-vrpn-client-ros";
   version = "0.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/vrpn_client_ros-release/archive/release/noetic/vrpn_client_ros/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "5ddc73e572937b826c76963d36a8118b5670c45ff4f7324ef62d1c83205ab4e9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "vrpn_client_ros-release";
+        rev = "release/noetic/vrpn_client_ros/0.2.2-1";
+        sha256 = "sha256-ITmpgU8fS0E7LnQgj0wl+8RVyq4hydk+Keqm69lxG1U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

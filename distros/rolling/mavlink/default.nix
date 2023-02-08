@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-mavlink";
   version = "2022.12.30-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavlink-gbp-release/archive/release/rolling/mavlink/2022.12.30-1.tar.gz";
-    name = "2022.12.30-1.tar.gz";
-    sha256 = "d9f4ac40790463fca4d9680033964149667ffd64cb4625ce31d53f5f31f6023a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "mavlink-gbp-release";
+        rev = "release/rolling/mavlink/2022.12.30-1";
+        sha256 = "sha256-weCXfCMFBO/hfDHDLJs1Pc7lXxkWPFu9Ug1E0j4bbQI=";
+      };
 
   buildType = "cmake";
   buildInputs = [ ament-cmake cmake python3 python3Packages.future python3Packages.lxml ros-environment ];

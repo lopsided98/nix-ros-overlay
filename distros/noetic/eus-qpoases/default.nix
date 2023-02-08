@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-eus-qpoases";
   version = "0.1.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/eus_qpoases/0.1.16-1.tar.gz";
-    name = "0.1.16-1.tar.gz";
-    sha256 = "bd44cf3c675c6e7a99ba32de3ffe7c9f41750ec43b7ff6b2ee24550b9521f627";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_control-release";
+        rev = "release/noetic/eus_qpoases/0.1.16-1";
+        sha256 = "sha256-/6xrnKQ41J06L5LrKUh+c9qrOjMzXihJ4jwKpSfRUis=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin subversion ];

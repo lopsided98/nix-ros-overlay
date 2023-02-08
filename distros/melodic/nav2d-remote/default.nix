@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nav2d-remote";
   version = "0.4.2";
 
-  src = fetchurl {
-    url = "https://github.com/skasperski/navigation_2d-release/archive/release/melodic/nav2d_remote/0.4.2-0.tar.gz";
-    name = "0.4.2-0.tar.gz";
-    sha256 = "91aa99978a86691724e4b4079baa5825b7f19ec127b1ca8d349af55c22cd64fa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "skasperski";
+        repo = "navigation_2d-release";
+        rev = "release/melodic/nav2d_remote/0.4.2-0";
+        sha256 = "sha256-qVAIkaFQjMX5E7AD8uZEtOktELOoBXoSV8JwRvEdqvE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

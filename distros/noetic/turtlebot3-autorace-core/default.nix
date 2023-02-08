@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-turtlebot3-autorace-core";
   version = "1.1.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_autorace_2020_release/archive/release/noetic/turtlebot3_autorace_core/1.1.1-2.tar.gz";
-    name = "1.1.1-2.tar.gz";
-    sha256 = "d9bf36bac1fd76e308b7fd9f10c304d07ae8da5ba825d64cec0f631918b861bd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "turtlebot3_autorace_2020_release";
+        rev = "release/noetic/turtlebot3_autorace_core/1.1.1-2";
+        sha256 = "sha256-H2ftAP4BNYnDiqZuOCsw4V0VzsQ9+xGb5MyQE52NoQs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

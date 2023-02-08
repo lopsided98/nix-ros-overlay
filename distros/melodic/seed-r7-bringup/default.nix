@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-seed-r7-bringup";
   version = "0.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/seed-solutions/seed_r7_ros_pkg-release/archive/release/melodic/seed_r7_bringup/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "72c404e7e5759b24d61a7468cac8f8aecb59a70a399da74788599608db5b49dd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "seed-solutions";
+        repo = "seed_r7_ros_pkg-release";
+        rev = "release/melodic/seed_r7_bringup/0.3.3-1";
+        sha256 = "sha256-OZL7jmUgLkQr9TN02kPuyEN7F9shBIiSEU9lmcXMwNo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

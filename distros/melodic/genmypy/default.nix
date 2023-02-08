@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-genmypy";
   version = "0.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rospypi/genmypy-release/archive/release/melodic/genmypy/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "6a55a01f75fa0cb6ec6fb8eb55d3a89067016bb38f9c0a10c31427c97360573e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rospypi";
+        repo = "genmypy-release";
+        rev = "release/melodic/genmypy/0.3.1-1";
+        sha256 = "sha256-hf/egLXmmmwG/ST3AlI7ljjfjFcVTtTcGeRP2FiLBQA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools ];

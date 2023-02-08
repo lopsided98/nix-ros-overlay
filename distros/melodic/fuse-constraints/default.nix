@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fuse-constraints";
   version = "0.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/locusrobotics/fuse-release/archive/release/melodic/fuse_constraints/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "4b6e6cbc547f90366836d7421c18799d4ee57fb1c481968fc5d5be93f5778f0c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "locusrobotics";
+        repo = "fuse-release";
+        rev = "release/melodic/fuse_constraints/0.4.2-1";
+        sha256 = "sha256-HSYCPaQbLzg/fB/PQJ0qnN03lQIP0NKF9kdM78d+blU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

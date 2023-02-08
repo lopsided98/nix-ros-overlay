@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pass-through-controllers";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_passthrough_controllers-release/archive/release/noetic/pass_through_controllers/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "834c1e9209fde4334698a94439895dcc9656191010add47169c3a89f5be56cb8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UniversalRobots";
+        repo = "Universal_Robots_ROS_passthrough_controllers-release";
+        rev = "release/noetic/pass_through_controllers/0.1.0-1";
+        sha256 = "sha256-tTHapYRYN6T2c2/Ov7vNJOd10vjNRtfem1jjRImZWq4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

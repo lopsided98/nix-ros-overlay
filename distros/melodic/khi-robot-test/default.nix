@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-khi-robot-test";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/melodic/khi_robot_test/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "e04b6b83430e5d53a7700c7c4a2ca88c8f52129691fdf804606c2bf5b69f7dab";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Kawasaki-Robotics";
+        repo = "khi_robot-release";
+        rev = "release/melodic/khi_robot_test/1.2.0-1";
+        sha256 = "sha256-x21R3Nc4ipRuKmds5SGHYMvqHvdk5nax0rkpsm/E6V0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dbw-polaris-description";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/noetic/dbw_polaris_description/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "341a41bd0252c37c6bd74a3e640499a9ca67e5dbbd03f572dec947bd564155b6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dbw_polaris_ros-release";
+        rev = "release/noetic/dbw_polaris_description/1.1.0-1";
+        sha256 = "sha256-EQ5HHDM+LU/iSupxm5xlJ16nZkoK8DlZ6bABxtikN64=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

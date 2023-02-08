@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, doxygen, eigen, git, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-eigenpy";
-  version = "2.8.1-r1";
+  version = "2.9.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/eigenpy-release/archive/release/rolling/eigenpy/2.8.1-1.tar.gz";
-    name = "2.8.1-1.tar.gz";
-    sha256 = "e7923018e187d1cd43c8bdabe9af308c435dc43af36ffa46cebb7f4acf74fe76";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "eigenpy-release";
+        rev = "release/rolling/eigenpy/2.9.1-1";
+        sha256 = "sha256-juoSzSnrZce3goJK0Szhl+SMr5yPzy/AoDt1OghCvWg=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen git ];

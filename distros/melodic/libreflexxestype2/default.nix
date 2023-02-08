@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-libreflexxestype2";
   version = "0.8.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/KITrobotics/ipr_extern-release/archive/release/melodic/libreflexxestype2/0.8.8-1.tar.gz";
-    name = "0.8.8-1.tar.gz";
-    sha256 = "ff69ec96c35d48bc4b768dc25812ea2dbece052f25a8d3de96f5460296eb0ccf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "KITrobotics";
+        repo = "ipr_extern-release";
+        rev = "release/melodic/libreflexxestype2/0.8.8-1";
+        sha256 = "sha256-5S+b9O9WqVGkRQ19BvH+MW2/6aD/5aaG3jrnLTKe32I=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

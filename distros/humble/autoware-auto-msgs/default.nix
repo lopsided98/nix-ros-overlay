@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-autoware-auto-msgs";
   version = "1.0.0-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_auto_msgs-release/archive/release/humble/autoware_auto_msgs/1.0.0-4.tar.gz";
-    name = "1.0.0-4.tar.gz";
-    sha256 = "39c4a36a653ce67615b44d8a8dcdd1a71de1b1f73582112288bb615a6ad26719";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "autoware_auto_msgs-release";
+        rev = "release/humble/autoware_auto_msgs/1.0.0-4";
+        sha256 = "sha256-sPwNe2uGjV3WHz+htqZrzm5dUO1JvGJC9xQcn2d+LU0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto rosidl-default-generators ];

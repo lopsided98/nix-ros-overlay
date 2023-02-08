@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rostopic";
   version = "1.14.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rostopic/1.14.13-1.tar.gz";
-    name = "1.14.13-1.tar.gz";
-    sha256 = "b6000cb95b3a415e1429b20797524f7c74dbed2ce25d17b47ad9737bc5149a64";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm-release";
+        rev = "release/melodic/rostopic/1.14.13-1";
+        sha256 = "sha256-HZizpRgQveSrgj/iB9TMyyvNcIvsXJ2zgwE+03fg1T8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

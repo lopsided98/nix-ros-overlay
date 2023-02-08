@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-multimaster-launch";
   version = "0.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/melodic/multimaster_launch/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "c825dbbb0b8082547b430423181630c5fc96e45e2d60f0110f94bcbb873a43cc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "cpr_multimaster_tools-release";
+        rev = "release/melodic/multimaster_launch/0.0.2-1";
+        sha256 = "sha256-VcIcG8ter9vFA0diJf99sQD9c0ynFEeG5GkxB4yUNBU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

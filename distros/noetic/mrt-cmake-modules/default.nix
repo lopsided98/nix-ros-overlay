@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mrt-cmake-modules";
   version = "1.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/KIT-MRT/mrt_cmake_modules-release/archive/release/noetic/mrt_cmake_modules/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "a57151852aaea4af01ddd8037c45e191cdf38a2b3e4e402c14f87d0d8548385d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "KIT-MRT";
+        repo = "mrt_cmake_modules-release";
+        rev = "release/noetic/mrt_cmake_modules/1.0.4-1";
+        sha256 = "sha256-HsXMI+9eH6Suh9jIyPUkkwkOrPzB7vvm5fwmFO99V7s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-qt-dotgraph";
   version = "2.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/humble/qt_dotgraph/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "753fc64a982b8b34eee6cb986cbfcd10080630079b8613b0afd9e686d0d59908";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "qt_gui_core-release";
+        rev = "release/humble/qt_dotgraph/2.2.2-1";
+        sha256 = "sha256-CzS6yseQdbL+LKmXxJS23hm5uw08qZYKUFIcjopSGL0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

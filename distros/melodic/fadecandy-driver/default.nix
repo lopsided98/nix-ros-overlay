@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fadecandy-driver";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/iron-ox/fadecandy_ros-release/archive/release/melodic/fadecandy_driver/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "0deab9f6d9db619017f140288d2a31bcc6b462126440f2098340e2ec19882298";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "iron-ox";
+        repo = "fadecandy_ros-release";
+        rev = "release/melodic/fadecandy_driver/0.2.1-1";
+        sha256 = "sha256-hnro2O+OnfaIdf+wghsY5pNHufwMxF3e4POTSljDKO0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

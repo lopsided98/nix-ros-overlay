@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dynamic-graph-python";
   version = "4.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/stack-of-tasks/dynamic-graph-python-ros-release/archive/release/noetic/dynamic-graph-python/4.0.11-1.tar.gz";
-    name = "4.0.11-1.tar.gz";
-    sha256 = "d4e0d899e0c0507985c92f3d9c8dc253eb6ba71935c5f85cc4bc40276cc027e7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "stack-of-tasks";
+        repo = "dynamic-graph-python-ros-release";
+        rev = "release/noetic/dynamic-graph-python/4.0.11-1";
+        sha256 = "sha256-U7JPXNQmY2HZ3ts4GGNSg8Rzw99vdRZIJ2eqJfkWYOQ=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen git ];

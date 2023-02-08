@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-combined-robot-hw-tests";
   version = "0.19.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/combined_robot_hw_tests/0.19.6-1.tar.gz";
-    name = "0.19.6-1.tar.gz";
-    sha256 = "86d51969bc55aff67c18cf9016c5afeed7a780afb8003c27df7149732b80b794";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_control-release";
+        rev = "release/noetic/combined_robot_hw_tests/0.19.6-1";
+        sha256 = "sha256-xtzLEu1g8OCf1s8fNZ4Y5PWg6g2S5vKjcwGxXf8RbUs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

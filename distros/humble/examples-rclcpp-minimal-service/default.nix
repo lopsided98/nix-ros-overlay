@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-examples-rclcpp-minimal-service";
   version = "0.15.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/humble/examples_rclcpp_minimal_service/0.15.1-1.tar.gz";
-    name = "0.15.1-1.tar.gz";
-    sha256 = "097f96f2eaddab3d5fe34b8d9604ec49521e28707341d9699485ff76c97d5626";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "examples-release";
+        rev = "release/humble/examples_rclcpp_minimal_service/0.15.1-1";
+        sha256 = "sha256-1gGAQiifeizruWs0V57nobz2DQU3K0u7VQX+O/4FBow=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

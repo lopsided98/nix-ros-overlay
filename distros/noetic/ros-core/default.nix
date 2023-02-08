@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ros-core";
   version = "1.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/metapackages-release/archive/release/noetic/ros_core/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "3e4c5d3f2ad1a1ab46f6ba4fd788aa5b4d828e49b07f999789ebf632c5dac6a9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "metapackages-release";
+        rev = "release/noetic/ros_core/1.5.0-1";
+        sha256 = "sha256-Wf/o9p7GSY+ZkdR+bX7Cbhgc5iBIRdjW9usraDstcXY=";
+      };
 
   buildType = "catkin";
   propagatedBuildInputs = [ catkin class-loader cmake-modules common-msgs gencpp geneus genlisp genmsg gennodejs genpy message-generation message-runtime pluginlib ros ros-comm rosbag-migration-rule rosconsole rosconsole-bridge roscpp-core rosgraph-msgs roslisp rospack std-msgs std-srvs ];

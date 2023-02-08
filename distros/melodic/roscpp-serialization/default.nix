@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-roscpp-serialization";
   version = "0.6.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/melodic/roscpp_serialization/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "3e66fa241b33a6ee8745695bbcc1e159dbcfbd6be7c0dad64d5d503ae286cd0d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "roscpp_core-release";
+        rev = "release/melodic/roscpp_serialization/0.6.14-1";
+        sha256 = "sha256-gzlGxHQnA98J3ZU1vi35hhUnGJDK2H0Xd3JaXv8rzJw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

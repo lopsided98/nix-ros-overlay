@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dlux-global-planner";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/dlux_global_planner/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "a5b6a4db7296280ca5a7bc11e95f0b04e35debd2dc299049d8332a8686f1811c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/melodic/dlux_global_planner/0.3.0-1";
+        sha256 = "sha256-OSlXeQlZnJB759cHvzqTT/tV8nMf5orWfAQEtcTey2s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

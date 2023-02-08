@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-qwt-dependency";
   version = "1.1.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/qwt_dependency-release/archive/release/noetic/qwt_dependency/1.1.1-2.tar.gz";
-    name = "1.1.1-2.tar.gz";
-    sha256 = "23ee6a845be40f3e9c58aedf44210aa08ef1bcaa20d5b5c37968caa2a4aa03e3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "qwt_dependency-release";
+        rev = "release/noetic/qwt_dependency/1.1.1-2";
+        sha256 = "sha256-yHOJfPxvh4HX/X2tn0AZYfbo8TGSTtGXKOOSpNaapJY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

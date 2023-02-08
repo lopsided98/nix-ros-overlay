@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-underwater-sensor-msgs";
   version = "1.4.2-r3";
 
-  src = fetchurl {
-    url = "https://github.com/uji-ros-pkg/underwater_simulation-release/archive/release/melodic/underwater_sensor_msgs/1.4.2-3.tar.gz";
-    name = "1.4.2-3.tar.gz";
-    sha256 = "744d8c7ecf3b8262a69c7366f3263a6e2cb74b1277407de7a804862e4b34d033";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uji-ros-pkg";
+        repo = "underwater_simulation-release";
+        rev = "release/melodic/underwater_sensor_msgs/1.4.2-3";
+        sha256 = "sha256-6Hy/87ZPdAVSfrPIerkVVerC0PPd2+HMJ6Q/e/ViyGI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

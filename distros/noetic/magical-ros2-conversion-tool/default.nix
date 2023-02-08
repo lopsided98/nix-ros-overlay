@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-magical-ros2-conversion-tool";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/wu-robotics/roscompile-release/archive/release/noetic/magical_ros2_conversion_tool/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "ee4a496fc629420949f653293ac017c24c09981af81f9cc48cd1dc127708ae61";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wu-robotics";
+        repo = "roscompile-release";
+        rev = "release/noetic/magical_ros2_conversion_tool/1.2.1-1";
+        sha256 = "sha256-KXRVv6k4iuuI5LLTLHu4uA4foaVsYWfJQ/2RtcPD8RE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ethercat-grant";
   version = "0.2.5";
 
-  src = fetchurl {
-    url = "https://github.com/shadow-robot/ethercat_grant-release/archive/release/melodic/ethercat_grant/0.2.5-0.tar.gz";
-    name = "0.2.5-0.tar.gz";
-    sha256 = "3b5baa1b6b84b2538af53dcc410d980579cbfc932f002dcf3cc25071bb452a52";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "shadow-robot";
+        repo = "ethercat_grant-release";
+        rev = "release/melodic/ethercat_grant/0.2.5-0";
+        sha256 = "sha256-OkTSYTlJNRz+xx20lY+Cn5gfnhsXFwEhWEexXmII1JM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

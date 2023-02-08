@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-warthog-desktop";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/warthog_desktop-release/archive/release/noetic/warthog_desktop/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "fecbfe2eb0135fb7526514b54ca070cba8b283af47ee4615ba0cea9ad797a7ec";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "warthog_desktop-release";
+        rev = "release/noetic/warthog_desktop/0.1.1-1";
+        sha256 = "sha256-aajHMpN2BaXAgDcNV0Sfr5qRovXqZyZnY4wR2a9n4Nw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

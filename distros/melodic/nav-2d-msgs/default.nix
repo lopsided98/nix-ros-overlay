@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nav-2d-msgs";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/nav_2d_msgs/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "c23cf1eba45980b80b02ed35cb823d39cefeb8d03d2832bed92e2028ad8f9ea0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/melodic/nav_2d_msgs/0.3.0-1";
+        sha256 = "sha256-6wogATbnVAQIGGezE79TDqqMVpzEp85aYLAd2p6Q+cw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

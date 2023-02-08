@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-hardware-interface";
   version = "1.8.21-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/melodic/pr2_hardware_interface/1.8.21-1.tar.gz";
-    name = "1.8.21-1.tar.gz";
-    sha256 = "0c5975d128782c1c16eb7423855e0c17f4b317eb8faa67868e126170fdcb8d27";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_mechanism-release";
+        rev = "release/melodic/pr2_hardware_interface/1.8.21-1";
+        sha256 = "sha256-zZ3EFEwumyf5IxInahyPlMe5i9ZoYeNImb1dUvXV0MI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

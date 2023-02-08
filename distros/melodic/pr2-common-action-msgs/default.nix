@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-common-action-msgs";
   version = "0.0.11";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/melodic/pr2_common_action_msgs/0.0.11-0.tar.gz";
-    name = "0.0.11-0.tar.gz";
-    sha256 = "65824648cd967a5c46b6861c1d0e9c76920d68ee4e28aff2783962c87f21dc3f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_common_actions-release";
+        rev = "release/melodic/pr2_common_action_msgs/0.0.11-0";
+        sha256 = "sha256-8KktRsZbAEX1CQ+wWMiBGpxk2jIE/H4unymKIos7Pqg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

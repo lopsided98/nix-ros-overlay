@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-nav2-rviz-plugins";
   version = "0.4.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_rviz_plugins/0.4.7-1.tar.gz";
-    name = "0.4.7-1.tar.gz";
-    sha256 = "0323e28437cf16f0d7824b6d45e503de4fa61ec81f7e41b71d4c4415f0a46996";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/foxy/nav2_rviz_plugins/0.4.7-1";
+        sha256 = "sha256-NjryyFJGdj1ypiNFK4nss0DHuRb24agneMTHFFU8WKs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

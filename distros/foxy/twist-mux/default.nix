@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-twist-mux";
   version = "4.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/twist_mux-release/archive/release/foxy/twist_mux/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "18805bae9e5dadc57609fe8255a31ac157e2a0289a24d1c21c24b70cdda940af";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "twist_mux-release";
+        rev = "release/foxy/twist_mux/4.0.1-1";
+        sha256 = "sha256-T+FnegcZnhom09CNd6TJRq68KC26A8VXy62A8hN2QXE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

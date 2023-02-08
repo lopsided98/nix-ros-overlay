@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-leo-gazebo";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_simulator-release/archive/release/melodic/leo_gazebo/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "fd5f430b97e02757675f5c3520f25d52511891abe1864ba393bb9d72880b23d3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fictionlab-gbp";
+        repo = "leo_simulator-release";
+        rev = "release/melodic/leo_gazebo/0.2.0-1";
+        sha256 = "sha256-4XCHbYTztr/h67pmAeGWdFbiJ8FzL6vtZ7TIJ1PjH1k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

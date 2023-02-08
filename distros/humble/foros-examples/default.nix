@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-foros-examples";
   version = "0.4.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/foros-release/archive/release/humble/foros_examples/0.4.1-2.tar.gz";
-    name = "0.4.1-2.tar.gz";
-    sha256 = "69b5eba18238cf6b4156b0179d841eb11bbb8a0e9484a7af8ac9419b12e3d380";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "foros-release";
+        rev = "release/humble/foros_examples/0.4.1-2";
+        sha256 = "sha256-wLenaUPYkbTfpUgwP8XyuWRNs7BK+w8XocDjCmIAEZo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nextage-description";
   version = "0.8.6-r3";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/rtmros_nextage-release/archive/release/melodic/nextage_description/0.8.6-3.tar.gz";
-    name = "0.8.6-3.tar.gz";
-    sha256 = "fc5de78839960234d82b28541e497fba5ed8f85d81e6edaaeb6da0a4acb6db43";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "rtmros_nextage-release";
+        rev = "release/melodic/nextage_description/0.8.6-3";
+        sha256 = "sha256-0zAuSvnALA9A0XjrOu6pagJdwiKmu63XYqS6LT00FWw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-ros-ign";
   version = "0.244.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/humble/ros_ign/0.244.9-1.tar.gz";
-    name = "0.244.9-1.tar.gz";
-    sha256 = "046e5cddc8cb570afa3f8a250afd4563781ab1ba6f454cdde12aebf52286ab7b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros_ign-release";
+        rev = "release/humble/ros_ign/0.244.9-1";
+        sha256 = "sha256-vt585wZtcTrDDyq4ALdxXRrHHLg11+kK9uffHDqsrZU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

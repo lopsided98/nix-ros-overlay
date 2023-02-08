@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-dashboard-aggregator";
   version = "1.13.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_common-release/archive/release/melodic/pr2_dashboard_aggregator/1.13.1-1.tar.gz";
-    name = "1.13.1-1.tar.gz";
-    sha256 = "33e0d27029cd93024bf4ef3834a9d782f710206c87fd9e72e6b671618864df51";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_common-release";
+        rev = "release/melodic/pr2_dashboard_aggregator/1.13.1-1";
+        sha256 = "sha256-jwWX2KShYOMNLypUEOTNTRjyzyyXfem8J+jop6mcoHs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

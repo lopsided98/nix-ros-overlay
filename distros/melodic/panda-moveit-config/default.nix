@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-panda-moveit-config";
   version = "0.7.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/panda_moveit_config-release/archive/release/melodic/panda_moveit_config/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "5c566a9e10a372cfdeba2bb6e742096888d22c385e88ffe5486d413040b744a6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "panda_moveit_config-release";
+        rev = "release/melodic/panda_moveit_config/0.7.8-1";
+        sha256 = "sha256-nZYIiYXKznz9dmY65Nx8vczIVRn35XLN1nGrJgI1q0k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

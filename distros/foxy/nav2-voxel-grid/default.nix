@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-nav2-voxel-grid";
   version = "0.4.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/foxy/nav2_voxel_grid/0.4.7-1.tar.gz";
-    name = "0.4.7-1.tar.gz";
-    sha256 = "6cb15b7d90cecf330820221b3674f3076b113c9bd23b1327b0b3a8c977541f03";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/foxy/nav2_voxel_grid/0.4.7-1";
+        sha256 = "sha256-N/NGysTvtG/8LIw8r4afh/HLVc+vmGNkLLD27tfhvCo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake nav2-common ];

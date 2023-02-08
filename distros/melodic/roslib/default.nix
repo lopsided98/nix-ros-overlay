@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-roslib";
   version = "1.14.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros-release/archive/release/melodic/roslib/1.14.9-1.tar.gz";
-    name = "1.14.9-1.tar.gz";
-    sha256 = "5d88106ad4dc7cf82a698e7a7ff86afa17c87ba2d994ea6caf5248cca727d6eb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros-release";
+        rev = "release/melodic/roslib/1.14.9-1";
+        sha256 = "sha256-GS6IKaEXGJzZ2HU9YdGq3V602aIsn+SwrqiZJK//irQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ boost pythonPackages.setuptools ];

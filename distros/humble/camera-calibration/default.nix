@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-camera-calibration";
   version = "3.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/camera_calibration/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "f689effc0b89b8e55c429100b954d3a39122889a30d21b1e74b787e6c8aac96f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/humble/camera_calibration/3.0.0-1";
+        sha256 = "sha256-cSMO2gLNmIwhQKjeUA+fsz45P3tdT21ybQcjcW8+TP8=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.requests pythonPackages.pytest ];

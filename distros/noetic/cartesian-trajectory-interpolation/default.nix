@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cartesian-trajectory-interpolation";
   version = "0.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/noetic/cartesian_trajectory_interpolation/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "40b4294cc4e8a4072c862714ba343b6a00446c0e79e4d31c420028cd3fbba31d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UniversalRobots";
+        repo = "Universal_Robots_ROS_controllers_cartesian-release";
+        rev = "release/noetic/cartesian_trajectory_interpolation/0.1.5-1";
+        sha256 = "sha256-8ouZUJgN/V7WjqMEQjumV2Q8h11bF2/jF0V/Byz26cU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

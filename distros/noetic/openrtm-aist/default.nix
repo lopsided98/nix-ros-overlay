@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-openrtm-aist";
   version = "1.1.2-r4";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/openrtm_aist-release/archive/release/noetic/openrtm_aist/1.1.2-4.tar.gz";
-    name = "1.1.2-4.tar.gz";
-    sha256 = "61a7a22fbfbf87fff5685a08bde398fc1523e543865f24fe3bacc6f83afc341b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "openrtm_aist-release";
+        rev = "release/noetic/openrtm_aist/1.1.2-4";
+        sha256 = "sha256-5vAAUfnF6HB5ip3qznOxqk+BRCtiq+lyGjiVuCutRRs=";
+      };
 
   buildType = "cmake";
   buildInputs = [ automake cmake doxygen libtool pkg-config pythonPackages.python ];

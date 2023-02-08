@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-pcl-ros";
   version = "2.4.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/rolling/pcl_ros/2.4.0-3.tar.gz";
-    name = "2.4.0-3.tar.gz";
-    sha256 = "a976f6489ff84d06b07a31375357c6e59d4b7557228a91c5f5b158a029f398f5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "perception_pcl-release";
+        rev = "release/rolling/pcl_ros/2.4.0-3";
+        sha256 = "sha256-y37VynRX0MmG+KHoNnewCb8S6U4+GBY8nETGRMq+pY8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

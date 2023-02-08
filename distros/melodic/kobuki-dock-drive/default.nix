@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-kobuki-dock-drive";
   version = "0.7.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/melodic/kobuki_dock_drive/0.7.12-1.tar.gz";
-    name = "0.7.12-1.tar.gz";
-    sha256 = "29aad541dfcc801a6f5a9b615416d382e7804d1f59a803cb48012ca39384a2b3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "kobuki_core-release";
+        rev = "release/melodic/kobuki_dock_drive/0.7.12-1";
+        sha256 = "sha256-hv4seL1TnWeg/AzXHsXU6avtUCMupu0l9zvKZHZzlgM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ecl-build ];

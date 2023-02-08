@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2eus";
   version = "0.3.14-r3";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_pr2eus-release/archive/release/melodic/pr2eus/0.3.14-3.tar.gz";
-    name = "0.3.14-3.tar.gz";
-    sha256 = "893fd05c7b1c9fce063437fe74f2eae8c9fe750a2a85f5bac5413fafd88dd710";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_pr2eus-release";
+        rev = "release/melodic/pr2eus/0.3.14-3";
+        sha256 = "sha256-iXBm3aNSIwMIk7adqRCNrJ6EzW9PFE3BfBMmPHbaM+w=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rosgraph-msgs ];

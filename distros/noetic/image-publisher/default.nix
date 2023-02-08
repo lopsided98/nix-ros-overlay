@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-image-publisher";
   version = "1.17.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/image_publisher/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "15be9b1351cefc1273f612e713fb90710162aacf49e78d6afe61c9cc6bcf9877";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/noetic/image_publisher/1.17.0-1";
+        sha256 = "sha256-Pbck104gZImhzQgU8scOwuRNIKyeJVVBbojzdgga7uk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-timed-roslaunch";
   version = "0.1.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/MoriKen254/timed_roslaunch-release/archive/release/melodic/timed_roslaunch/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "bc837c15627dd4cbf4eef4543e75d3240948dcc6d0671941723ecece6ff3bdfd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "MoriKen254";
+        repo = "timed_roslaunch-release";
+        rev = "release/melodic/timed_roslaunch/0.1.4-1";
+        sha256 = "sha256-Htx5vTSxlnRyzkV6KJ8IOalIBPeNpG+F19gydUEWUqU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

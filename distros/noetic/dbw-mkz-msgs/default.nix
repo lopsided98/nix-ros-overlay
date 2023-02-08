@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dbw-mkz-msgs";
   version = "1.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/noetic/dbw_mkz_msgs/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "eccec84960b373eb380368373413d97fbbfa9ed94597d543e3901cf12351ed1f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dbw_mkz_ros-release";
+        rev = "release/noetic/dbw_mkz_msgs/1.6.0-1";
+        sha256 = "sha256-yPKRzKr33qeNpT5S8q4jiaWwOSYJiUajsXZ99c/rEXA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-control-msgs";
   version = "1.5.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/control_msgs-release/archive/release/melodic/control_msgs/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "08d66f777fdd78e114a05c5319648382a35a2205e870f57ac96d05b567e645bc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "control_msgs-release";
+        rev = "release/melodic/control_msgs/1.5.1-1";
+        sha256 = "sha256-pxsQYexh5u6aRww9kF/JNi6nJE445mMPdOYl/QS5AGI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

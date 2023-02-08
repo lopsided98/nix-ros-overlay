@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-urdf-sim-tutorial";
   version = "0.4.0";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/urdf_sim_tutorial-release/archive/release/melodic/urdf_sim_tutorial/0.4.0-0.tar.gz";
-    name = "0.4.0-0.tar.gz";
-    sha256 = "520f94f7fe52250069283fc7bdd40b734e9153bdcc11b76309fe9522972d8f77";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "urdf_sim_tutorial-release";
+        rev = "release/melodic/urdf_sim_tutorial/0.4.0-0";
+        sha256 = "sha256-gf4cZeErT+2tyH6OBFLPialZH1DnXEIalqhjG/tjErw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

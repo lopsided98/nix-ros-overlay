@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-jsk-recognition";
   version = "1.2.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/noetic/jsk_recognition/1.2.15-1.tar.gz";
-    name = "1.2.15-1.tar.gz";
-    sha256 = "eb418e1268b69ae5ac4dd14eaa396b081c86b6c02e7f64829e63fa7b3dc5ecc5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_recognition-release";
+        rev = "release/noetic/jsk_recognition/1.2.15-1";
+        sha256 = "sha256-/zGusMJaBzIsW3bOlA/A+3xI/ZB7QBCyZ+nYdRpUEiQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

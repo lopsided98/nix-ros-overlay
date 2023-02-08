@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-eiquadprog";
   version = "1.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/stack-of-tasks/eiquadprog-ros-release/archive/release/foxy/eiquadprog/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "883d7e58c56768f94a4951d2a18641a99ddabbc33d55f558ee3ab7a16beef1d6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "stack-of-tasks";
+        repo = "eiquadprog-ros-release";
+        rev = "release/foxy/eiquadprog/1.2.2-1";
+        sha256 = "sha256-G9h9hhzIb/HJgv+4opGT3nUwBYsHqPwoe8QvtmWeqwY=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen git ];

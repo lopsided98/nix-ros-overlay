@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-sick-lms1xx";
   version = "0.7.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_sick_lms1xx/0.7.14-1.tar.gz";
-    name = "0.7.14-1.tar.gz";
-    sha256 = "3a2a3faa3e57d2bbbd8fe63b9ec0a7f1b179f51cc324f76d7eae06e87cd5443a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/noetic/cob_sick_lms1xx/0.7.14-1";
+        sha256 = "sha256-cEVMkW0tPPSDTmFZqQfabcMH1te460NtTZPYUi2LCKA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

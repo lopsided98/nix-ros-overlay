@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-sdc21x0";
-  version = "1.1.6-r1";
+  version = "1.1.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/sdc21x0/1.1.6-1.tar.gz";
-    name = "1.1.6-1.tar.gz";
-    sha256 = "e4a6afed0cad7c3501694b7f34e4553539ad6043cd1751ae375eab477e46a2e5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mir_robot-release";
+        rev = "release/noetic/sdc21x0/1.1.7-1";
+        sha256 = "sha256-U257QqtRLphBz4ZEp3akKHTQZvxA5HOSJkzSrKI+Y+Y=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

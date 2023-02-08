@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-igvc-self-drive-gazebo";
   version = "0.1.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/robustify/igvc_self_drive_sim-release/archive/release/melodic/igvc_self_drive_gazebo/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "8b83406423a8bcc6de599c32df446a7165145353418a9c5e279c43a0b9f08e4e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "robustify";
+        repo = "igvc_self_drive_sim-release";
+        rev = "release/melodic/igvc_self_drive_gazebo/0.1.4-1";
+        sha256 = "sha256-0jsaVkta0fwi9nrz8N34MUQ+7wjrC1cphKrkZJ6o+wA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rr-rover-zero-driver";
   version = "1.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/RoverRobotics-release/rr_openrover_stack-release/archive/release/melodic/rr_rover_zero_driver/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "50d742a89bea79ea48fdf795a04d2ce825d3fa2f01efa92dc1dcd6b175c4ebed";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "RoverRobotics-release";
+        repo = "rr_openrover_stack-release";
+        rev = "release/melodic/rr_rover_zero_driver/1.1.1-1";
+        sha256 = "sha256-c0MbK23u32blWiF6vBkCKLX151fQ0ZPFyhFOrOowpns=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

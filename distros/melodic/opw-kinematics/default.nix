@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-opw-kinematics";
   version = "0.4.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/opw_kinematics-release/archive/release/melodic/opw_kinematics/0.4.5-1.tar.gz";
-    name = "0.4.5-1.tar.gz";
-    sha256 = "3708584322d44413993005850d470ca1c32ef10eab0c44d7efa9cc5d950cd7fe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "opw_kinematics-release";
+        rev = "release/melodic/opw_kinematics/0.4.5-1";
+        sha256 = "sha256-+NLXRM146ScqrZ/CdYjUm+il8hTRAnLt3Yw+LKHcXCQ=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ros-industrial-cmake-boilerplate ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-image-publisher";
   version = "1.15.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/melodic/image_publisher/1.15.2-1.tar.gz";
-    name = "1.15.2-1.tar.gz";
-    sha256 = "843271015b7a665270a06c1eaa430e1364462bbcc180be8e1fd04c9332532b69";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/melodic/image_publisher/1.15.2-1";
+        sha256 = "sha256-INm247Dr8J32Ib5rqixttvXNnkHP6fdaIcIs7bx3CwE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

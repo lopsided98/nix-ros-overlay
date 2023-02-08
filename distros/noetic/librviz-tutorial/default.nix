@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-librviz-tutorial";
   version = "0.11.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/noetic/librviz_tutorial/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "0a090780b1304627cff505805fafb7ed99b4ba1bb3e99fb1a40516be84bfa951";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "visualization_tutorials-release";
+        rev = "release/noetic/librviz_tutorial/0.11.0-1";
+        sha256 = "sha256-r4zj4UjajppVpGyGrVG/knn6XMJ/PPvhFz3y20qW68Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

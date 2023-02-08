@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rosidl-generator-py";
   version = "0.14.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_python-release/archive/release/humble/rosidl_generator_py/0.14.4-1.tar.gz";
-    name = "0.14.4-1.tar.gz";
-    sha256 = "c42bf0238f4f0c9d753d5ef6e28c8d75897d65b225277d9d47ad178752d3288e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl_python-release";
+        rev = "release/humble/rosidl_generator_py/0.14.4-1";
+        sha256 = "sha256-Jp9R01WPAydslbFGcZGc3bNj7fqZgTGvygwYkF7HUac=";
+      };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-pytest ament-index-python ament-lint-auto ament-lint-common python-cmake-module python3Packages.numpy pythonPackages.pytest rmw rosidl-cmake rosidl-generator-c rosidl-generator-cpp rosidl-parser rosidl-typesupport-c rosidl-typesupport-fastrtps-c rosidl-typesupport-introspection-c rpyutils test-interface-files ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dwb-critics";
   version = "0.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/dwb_critics/0.3.0-2.tar.gz";
-    name = "0.3.0-2.tar.gz";
-    sha256 = "72ca4fda86d9aa62fa0a422324a9e0cc065c7c2e587bf733d6d4b4e1beaa1667";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/noetic/dwb_critics/0.3.0-2";
+        sha256 = "sha256-Kq+aG2XrXt2Carc22YW2tRpUWJ4IDmBrPJ6HX/hoHec=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pr2-tilt-laser-interface";
   version = "0.0.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_common_actions-release/archive/release/noetic/pr2_tilt_laser_interface/0.0.12-1.tar.gz";
-    name = "0.0.12-1.tar.gz";
-    sha256 = "89a75cfac26b02cdaffe6a9ba9bd4c24cd3207cd0b8aea49eebf95e15af18f98";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_common_actions-release";
+        rev = "release/noetic/pr2_tilt_laser_interface/0.0.12-1";
+        sha256 = "sha256-aRcVuPhRWoPu5/vp/fh7HbfIhkGrwyeStXcfJfdmapU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

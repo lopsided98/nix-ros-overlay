@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-wiimote";
   version = "3.1.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/humble/wiimote/3.1.0-3.tar.gz";
-    name = "3.1.0-3.tar.gz";
-    sha256 = "b87130711f3b06a7725a553040595a98a0ac9ccbfc64a6a91cb6582c2e1c4797";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "joystick_drivers-release";
+        rev = "release/humble/wiimote/3.1.0-3";
+        sha256 = "sha256-tmTuJsuid0a70I48V0kdL+odWCPg4/C6sdR519Ur1LE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-auto ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-collision-velocity-filter";
   version = "0.8.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_collision_velocity_filter/0.8.12-1.tar.gz";
-    name = "0.8.12-1.tar.gz";
-    sha256 = "fc77a971c82992d0922169e348e563f09242860032d8981d67c42c3463d12fd6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_control-release";
+        rev = "release/melodic/cob_collision_velocity_filter/0.8.12-1";
+        sha256 = "sha256-9LocyhWleCd27Tw6tJGufevHk2OpegU8ZRVKlZ+E0kA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

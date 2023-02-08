@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-sick-tim";
   version = "0.0.17-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/sick_tim-release/archive/release/melodic/sick_tim/0.0.17-1.tar.gz";
-    name = "0.0.17-1.tar.gz";
-    sha256 = "876226df215f9fc5731e719a33b70dae58a197dfd11b48dbb2830dbdc23cc5b3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "sick_tim-release";
+        rev = "release/melodic/sick_tim/0.0.17-1";
+        sha256 = "sha256-BpL2J53RqWWL3YAhZxl99C0rj4RP5bRGbxp+RAPIoLA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

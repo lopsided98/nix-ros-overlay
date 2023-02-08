@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rqt-image-overlay";
   version = "0.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_image_overlay-release/archive/release/rolling/rqt_image_overlay/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "41da1a8fe1b28cec9699c44793822db1f21d84e1fdc592aed066fa9223bbdbdd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_image_overlay-release";
+        rev = "release/rolling/rqt_image_overlay/0.3.1-1";
+        sha256 = "sha256-rjv8Zxu7V4qDtMRcwMdiYByPpFiYIRJL8N+KK/Gte+E=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

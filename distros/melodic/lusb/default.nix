@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-lusb";
   version = "1.1.0";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/lusb-release/archive/release/melodic/lusb/1.1.0-0.tar.gz";
-    name = "1.1.0-0.tar.gz";
-    sha256 = "a2b403bcddedcfb51d9c51f29f2364cd8a82997ba8bdb801a40e84bea748daf6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "lusb-release";
+        rev = "release/melodic/lusb/1.1.0-0";
+        sha256 = "sha256-Sf21ok/Ni8XBxm5rUB5BMgEmA691DJsaWU9Al9Qklyc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

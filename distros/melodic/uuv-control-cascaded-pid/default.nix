@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-uuv-control-cascaded-pid";
   version = "0.6.13";
 
-  src = fetchurl {
-    url = "https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_control_cascaded_pid/0.6.13-0.tar.gz";
-    name = "0.6.13-0.tar.gz";
-    sha256 = "dbf283b84f3ab21206873ec6a4423873ae696cd5e00d9ced11568cef4d0930be";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uuvsimulator";
+        repo = "uuv_simulator-release";
+        rev = "release/melodic/uuv_control_cascaded_pid/0.6.13-0";
+        sha256 = "sha256-2vottzrptT1d96JdKu5qsCwQrUD+acRvF8T31a6gdKY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

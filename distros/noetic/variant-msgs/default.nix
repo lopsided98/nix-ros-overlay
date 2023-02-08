@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-variant-msgs";
   version = "0.1.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/anybotics/variant-release/archive/release/noetic/variant_msgs/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "c7de9af40e55b59fd26cae171cc0dbed26e6bf560188c6f5380c3a84890da468";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "anybotics";
+        repo = "variant-release";
+        rev = "release/noetic/variant_msgs/0.1.6-1";
+        sha256 = "sha256-o1hU5/p2HzoYGy8ZR6skvbO7Qv7tRgQ5+X30RkVS4kw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

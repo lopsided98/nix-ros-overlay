@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rosidl-core-runtime";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_core-release/archive/release/rolling/rosidl_core_runtime/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "71ff68f284ccb518f88de795a37fa77027a43a8f27822452d664332ff58ab1aa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl_core-release";
+        rev = "release/rolling/rosidl_core_runtime/0.1.0-1";
+        sha256 = "sha256-WuLJ0hdRr4AaJpzLZ17d9cyU4KpKEQ33Z8Y63PEFDEw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

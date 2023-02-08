@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ros-ign";
   version = "0.111.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_ign-release/archive/release/noetic/ros_ign/0.111.2-1.tar.gz";
-    name = "0.111.2-1.tar.gz";
-    sha256 = "6dd1335671168ec83292a4d4a936807fb2e3d90e831f879e921c8baffc341a4b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_ign-release";
+        rev = "release/noetic/ros_ign/0.111.2-1";
+        sha256 = "sha256-sv+7/BkrqVVA95p/7uqcLfoGxiT5tE/L/pnfFmAicF4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

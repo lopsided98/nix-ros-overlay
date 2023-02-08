@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-hash-library-vendor";
   version = "0.1.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/hash_library_vendor-release/archive/release/rolling/hash_library_vendor/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "c8d3148d35c93aa7848f312e6623267b3cd2801a81dc7b8c6e08b6672a66d965";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "hash_library_vendor-release";
+        rev = "release/rolling/hash_library_vendor/0.1.1-2";
+        sha256 = "sha256-/aXRAfmumq2WRfhcS24fzeg13YY+hDi9NQYpVUQNR6w=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto git ];

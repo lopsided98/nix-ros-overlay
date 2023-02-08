@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mrpt-icp-slam-2d";
   version = "0.1.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/noetic/mrpt_icp_slam_2d/0.1.11-1.tar.gz";
-    name = "0.1.11-1.tar.gz";
-    sha256 = "8027b57f93610518e7580e15912181a3b0d7b9329f750f268ff14a34d09780a8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mrpt-ros-pkg-release";
+        repo = "mrpt_slam-release";
+        rev = "release/noetic/mrpt_icp_slam_2d/0.1.11-1";
+        sha256 = "sha256-ngyM8EXisql4cgTp9otUHG1XmNkQhlpphuIrAVF3V2k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fetch-bringup";
   version = "0.8.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_robots-release/archive/release/melodic/fetch_bringup/0.8.9-1.tar.gz";
-    name = "0.8.9-1.tar.gz";
-    sha256 = "120c683bc11d44db7062a463603c0f9246e77c30ab72cb722ade4fb45cef81ef";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "fetch_robots-release";
+        rev = "release/melodic/fetch_bringup/0.8.9-1";
+        sha256 = "sha256-kByPzfhiGJ30/uABX/B5blzVaXIhnQKzLnYayNWEAcU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

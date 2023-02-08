@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-codec-image-transport";
   version = "0.0.4";
 
-  src = fetchurl {
-    url = "https://github.com/yoshito-n-students/codec_image_transport-release/archive/release/melodic/codec_image_transport/0.0.4-0.tar.gz";
-    name = "0.0.4-0.tar.gz";
-    sha256 = "13bb8181da621d6d7bff7f97900b2bc744a93a4e2c8f5e92030a3e50da2a578c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yoshito-n-students";
+        repo = "codec_image_transport-release";
+        rev = "release/melodic/codec_image_transport/0.0.4-0";
+        sha256 = "sha256-5+wOPFiWbYxwDeMxHxun513K5P2hddJuiR16C+5L8Bc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

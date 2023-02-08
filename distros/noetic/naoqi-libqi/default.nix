@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-naoqi-libqi";
   version = "2.9.7";
 
-  src = fetchurl {
-    url = "https://github.com/ros-naoqi/libqi-release/archive/release/noetic/naoqi_libqi/2.9.7-0.tar.gz";
-    name = "2.9.7-0.tar.gz";
-    sha256 = "76aecfaceb5619dfbd57fdfdd477746ab1ed3c925cc61ffaac927cb5c65a8331";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-naoqi";
+        repo = "libqi-release";
+        rev = "release/noetic/naoqi_libqi/2.9.7-0";
+        sha256 = "sha256-yPeM8IWwRJRQfnFPlJPBlmDzsSpv+VMLlba0tkBGpm0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

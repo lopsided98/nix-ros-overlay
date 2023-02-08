@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-oroca-rqt-command";
   version = "0.6.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/oroca-release/oroca_rqt_command-release/archive/release/foxy/oroca_rqt_command/0.6.0-3.tar.gz";
-    name = "0.6.0-3.tar.gz";
-    sha256 = "7d67ed103dcacb1276741c2fc154962bc0aa72a87f9c96ef18aa9cc5a8a46672";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "oroca-release";
+        repo = "oroca_rqt_command-release";
+        rev = "release/foxy/oroca_rqt_command/0.6.0-3";
+        sha256 = "sha256-oE4mJcND4qoRqL+5PmzNvEMHfQIeEV95MYlNRoqxVTc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

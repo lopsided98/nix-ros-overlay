@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mongodb-log";
   version = "0.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/strands-project-releases/mongodb_store/archive/release/noetic/mongodb_log/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "6b9fe0fa8c16ad44856c618367fa5fefd1911bf7a90d3f57ab8fff833e7ba75b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "strands-project-releases";
+        repo = "mongodb_store";
+        rev = "release/noetic/mongodb_log/0.6.0-1";
+        sha256 = "sha256-cZ/XWiyyPvvH9cE2yUKHtpLOLXuWr4gRaNxeOoZbnJk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin openssl ];

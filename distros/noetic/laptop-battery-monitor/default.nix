@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-laptop-battery-monitor";
   version = "0.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/linux_peripheral_interfaces-release/archive/release/noetic/laptop_battery_monitor/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "99f83a99cde03b74c19fc0ca4b6deb962001b6f2b2be34fb1e2ffbf6d4a905c3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "linux_peripheral_interfaces-release";
+        rev = "release/noetic/laptop_battery_monitor/0.2.2-1";
+        sha256 = "sha256-J+Y6ECaOzF6cjAacS2upk7NAYS5fltX2SYyXPxaqrUw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

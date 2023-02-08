@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-pcl-msgs";
   version = "1.0.0-r6";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/pcl_msgs-release/archive/release/rolling/pcl_msgs/1.0.0-6.tar.gz";
-    name = "1.0.0-6.tar.gz";
-    sha256 = "89e83496581fffa5d74ac6d4f8878bae740ec35493b9e07aedf4124a64eb3ee1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "pcl_msgs-release";
+        rev = "release/rolling/pcl_msgs/1.0.0-6";
+        sha256 = "sha256-YdspDlpwU8CIVBKEa3kLCnDsR3MsuehC9zuvXtAnt4w=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

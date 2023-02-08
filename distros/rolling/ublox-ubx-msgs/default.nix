@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ublox-ubx-msgs";
   version = "0.3.5-r3";
 
-  src = fetchurl {
-    url = "https://github.com/aussierobots/ublox_dgnss-release/archive/release/rolling/ublox_ubx_msgs/0.3.5-3.tar.gz";
-    name = "0.3.5-3.tar.gz";
-    sha256 = "bcf4dde70029b70274fee207a5ad71280eb2fa8f0c38e40db83dfd53abab4417";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "aussierobots";
+        repo = "ublox_dgnss-release";
+        rev = "release/rolling/ublox_ubx_msgs/0.3.5-3";
+        sha256 = "sha256-rPeG/k/7UAr25C9ghUPya7+ZwS9svz66lkGJCDlEi6w=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

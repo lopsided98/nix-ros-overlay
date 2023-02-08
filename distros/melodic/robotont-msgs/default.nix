@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robotont-msgs";
   version = "0.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/robotont-release/robotont_msgs-release/archive/release/melodic/robotont_msgs/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "d85d437992d72b72614b66241a1be1aafa7066e561a6539fbdf7b404838d00b5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "robotont-release";
+        repo = "robotont_msgs-release";
+        rev = "release/melodic/robotont_msgs/0.0.2-1";
+        sha256 = "sha256-A37dFaxRXwDBPU94C/LW59YNeZes/EZdUHOKQEr0n7E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

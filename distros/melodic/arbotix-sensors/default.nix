@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-arbotix-sensors";
   version = "0.10.0";
 
-  src = fetchurl {
-    url = "https://github.com/vanadiumlabs/arbotix_ros-release/archive/release/melodic/arbotix_sensors/0.10.0-0.tar.gz";
-    name = "0.10.0-0.tar.gz";
-    sha256 = "2c7dcfa8c133915b15eb77783282f2be0b01ac676239daefba4285885e58f722";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "vanadiumlabs";
+        repo = "arbotix_ros-release";
+        rev = "release/melodic/arbotix_sensors/0.10.0-0";
+        sha256 = "sha256-QB6Mvmoov4hFjIgRaHPuG0dDUgWVYInr8J9lPsLajNo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

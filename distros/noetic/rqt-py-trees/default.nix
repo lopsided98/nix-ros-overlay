@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-py-trees";
   version = "0.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/stonier/rqt_py_trees-release/archive/release/noetic/rqt_py_trees/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "4a243cfcf715beaf4d54717872166e67638d4da8530c1eeda1d78e6046619a79";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "stonier";
+        repo = "rqt_py_trees-release";
+        rev = "release/noetic/rqt_py_trees/0.4.1-1";
+        sha256 = "sha256-YiO1UCtrfRxzegZUahIeeRchXp4WSl0/K3JQihud3Yg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

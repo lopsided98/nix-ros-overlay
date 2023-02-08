@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ros2action";
   version = "0.9.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/foxy/ros2action/0.9.12-1.tar.gz";
-    name = "0.9.12-1.tar.gz";
-    sha256 = "92e1669af381c2be1eace5b05d30d21b8fed7d670781bc53aecc3502f0a6c876";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2cli-release";
+        rev = "release/foxy/ros2action/0.9.12-1";
+        sha256 = "sha256-LrrI5ajH6/cd9BOqGLraZo7rlRaQ5nMYBMXrHjdGbmk=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint pythonPackages.pytest ros-testing test-msgs ];

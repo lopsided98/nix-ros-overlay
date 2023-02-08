@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pose-cov-ops";
   version = "0.3.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/pose_cov_ops-release/archive/release/noetic/pose_cov_ops/0.3.8-1.tar.gz";
-    name = "0.3.8-1.tar.gz";
-    sha256 = "d29d619df4e434f38ca90e53882d01a1035d13ceadcfd13916dcad89ba7e45af";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mrpt-ros-pkg-release";
+        repo = "pose_cov_ops-release";
+        rev = "release/noetic/pose_cov_ops/0.3.8-1";
+        sha256 = "sha256-PedCn7b0uRpfsVpaUyJ5yPWogpyzEvsBI6xR2g6O7RE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake ros-environment ];

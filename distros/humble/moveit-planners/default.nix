@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-moveit-planners";
   version = "2.5.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_planners/2.5.4-1.tar.gz";
-    name = "2.5.4-1.tar.gz";
-    sha256 = "342c063471efabe1937c7f59e734c6135df256d44edd24a1ef1fa017a8925587";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "moveit2-release";
+        rev = "release/humble/moveit_planners/2.5.4-1";
+        sha256 = "sha256-xdXwYgEhXsLZAXiYbILdE0QbJ76cUvpuhZmOC1uVvLM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

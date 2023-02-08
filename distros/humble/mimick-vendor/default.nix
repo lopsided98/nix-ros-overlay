@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-mimick-vendor";
   version = "0.2.8-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/mimick_vendor-release/archive/release/humble/mimick_vendor/0.2.8-2.tar.gz";
-    name = "0.2.8-2.tar.gz";
-    sha256 = "e0158915d5577742060cd50071180827639d8b7bdf7caa2aaa78b5c4e59cc568";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "mimick_vendor-release";
+        rev = "release/humble/mimick_vendor/0.2.8-2";
+        sha256 = "sha256-sbNAgZZ3wA7YkE29bq92nb4sQVmKXyHozHQdf4kutK4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake git ];

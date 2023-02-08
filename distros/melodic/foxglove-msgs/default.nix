@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-foxglove-msgs";
   version = "2.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/foxglove/ros_foxglove_msgs-release/archive/release/melodic/foxglove_msgs/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "af943480902232e649fc6ffdc27c77c7e2e706a1eaf9ca3e134a14b0ef84dfce";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "foxglove";
+        repo = "ros_foxglove_msgs-release";
+        rev = "release/melodic/foxglove_msgs/2.1.1-1";
+        sha256 = "sha256-WVd87BSDwF+o7s/HMSXhpwvIBHYpp6J263sCn635ILE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ros-environment ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fiducial-slam";
   version = "0.11.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UbiquityRobotics-release/fiducials-release/archive/release/melodic/fiducial_slam/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "d7bb17f5b59c70f84500b9e64d53c3d254832b3a1b802f24649394cd687720e3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UbiquityRobotics-release";
+        repo = "fiducials-release";
+        rev = "release/melodic/fiducial_slam/0.11.0-1";
+        sha256 = "sha256-F4Ph4bXIXHKsDQnyQqv1u62Q1M5wp2v+OQv64aHfC00=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

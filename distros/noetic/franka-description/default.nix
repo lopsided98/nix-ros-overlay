@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-franka-description";
   version = "0.10.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/frankaemika/franka_ros-release/archive/release/noetic/franka_description/0.10.1-1.tar.gz";
-    name = "0.10.1-1.tar.gz";
-    sha256 = "0d2b8db69f7935f8bcbfeed662981c4542780106ba24121b13bc07702dd30a59";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "frankaemika";
+        repo = "franka_ros-release";
+        rev = "release/noetic/franka_description/0.10.1-1";
+        sha256 = "sha256-p8nbJN7KGlNFLGcvUeZo/ldjsPGAfgOiOEdIQ/qjH64=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

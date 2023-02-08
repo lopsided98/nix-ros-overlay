@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ros2cli-common-extensions";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli_common_extensions-release/archive/release/rolling/ros2cli_common_extensions/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "7a1178ca776bf466a3e3cc87c30b5565cd07a3191238694b317bb56d10064fe7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2cli_common_extensions-release";
+        rev = "release/rolling/ros2cli_common_extensions/0.2.1-1";
+        sha256 = "sha256-Os3/j/JAqt49PwJK5Rw08TvuKV4HqFDD8/7eI/bgoWc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

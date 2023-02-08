@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-tracetools-launch";
   version = "4.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/rolling/tracetools_launch/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "470e1940c4fcc6a849694b82a3dedbee9a978f26f57fae345e23532592d0e343";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_tracing-release";
+        rev = "release/rolling/tracetools_launch/4.1.0-1";
+        sha256 = "sha256-8a26JRc8MeDa195zozm0E+HQPOg6/ghnrua0du9vnfY=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-mypy ament-pep257 ament-xmllint pythonPackages.pytest ];

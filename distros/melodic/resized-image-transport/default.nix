@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-resized-image-transport";
   version = "1.2.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/resized_image_transport/1.2.15-1.tar.gz";
-    name = "1.2.15-1.tar.gz";
-    sha256 = "9d309c167c2b324d9603b0212fc3f4d0923f2c670d02f9ab3695a6721f4731d9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_recognition-release";
+        rev = "release/melodic/resized_image_transport/1.2.15-1";
+        sha256 = "sha256-RJV5zmMTKiygVxeQObnXK4bn4Iu2PoRrCwu58yVo9GE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rclc-examples";
   version = "4.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclc-release/archive/release/humble/rclc_examples/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "0251aef75cf428670e80610e95f664154e947e058e50672a6aba93ea667d381b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rclc-release";
+        rev = "release/humble/rclc_examples/4.0.1-1";
+        sha256 = "sha256-cMtxApcoMptppQ+ocs0+sf50LJpmLeBZvJfotmifSOU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

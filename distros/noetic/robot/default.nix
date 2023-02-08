@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-robot";
   version = "1.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/metapackages-release/archive/release/noetic/robot/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "3eeb14c57b97190d861e477f4563f6c0d2ae3fafb1e25e672e13a906dd8b12db";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "metapackages-release";
+        rev = "release/noetic/robot/1.5.0-1";
+        sha256 = "sha256-4j4eUhU10uecGbVJV4kfJ/dO/6BcEndgwOT1FtLvDrw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

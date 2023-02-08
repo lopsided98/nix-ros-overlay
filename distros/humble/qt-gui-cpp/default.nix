@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-qt-gui-cpp";
   version = "2.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/humble/qt_gui_cpp/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "3c8eb0beeea6bd18163938803a37b8a0b27a302612ddc6bd5e979f7a99284b7b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "qt_gui_core-release";
+        rev = "release/humble/qt_gui_cpp/2.2.2-1";
+        sha256 = "sha256-ffOm5jyml6tu6qM2ZvPZaGPPPy1RRhJqcaropeU0dT0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pkg-config python-qt-binding qt5.qtbase ];

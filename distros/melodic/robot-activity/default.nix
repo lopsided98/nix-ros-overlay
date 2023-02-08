@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robot-activity";
   version = "0.1.1";
 
-  src = fetchurl {
-    url = "https://github.com/snt-robotics/robot_activity-release/archive/release/melodic/robot_activity/0.1.1-0.tar.gz";
-    name = "0.1.1-0.tar.gz";
-    sha256 = "9aea7f4b03a74445c52faddfcd58ea086b7ad8af058a6a3749e9b992849a5361";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "snt-robotics";
+        repo = "robot_activity-release";
+        rev = "release/melodic/robot_activity/0.1.1-0";
+        sha256 = "sha256-6bBmJGz/ExLYYjrjRFs/mNin+WR4zrxkZvM3iUBQxlc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

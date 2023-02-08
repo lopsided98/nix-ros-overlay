@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jsk-common-msgs";
   version = "4.3.1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/melodic/jsk_common_msgs/4.3.1-0.tar.gz";
-    name = "4.3.1-0.tar.gz";
-    sha256 = "3b58085e4249a1b809d2e657158c595336460295578ba0cfe369f8006f0cfc85";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_common_msgs-release";
+        rev = "release/melodic/jsk_common_msgs/4.3.1-0";
+        sha256 = "sha256-HnBmI6iRtVfh8BdBSfGG8+8eHvaN6Z22uD00E2Zbb0w=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

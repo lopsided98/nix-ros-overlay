@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-examples-rclpy-minimal-publisher";
   version = "0.15.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/humble/examples_rclpy_minimal_publisher/0.15.1-1.tar.gz";
-    name = "0.15.1-1.tar.gz";
-    sha256 = "c46e281cfc1340197f440f0f7db6455ed921ae8499830c7e94f209b4f336c433";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "examples-release";
+        rev = "release/humble/examples_rclpy_minimal_publisher/0.15.1-1";
+        sha256 = "sha256-2L9B0HycSn1GBSSs6yFXZtxv0pqBzs98s/9BCKJrSsY=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

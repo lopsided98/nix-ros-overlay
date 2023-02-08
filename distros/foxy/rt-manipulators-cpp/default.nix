@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rt-manipulators-cpp";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rt-net-gbp/rt_manipulators_cpp-release/archive/release/foxy/rt_manipulators_cpp/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "e10b6a350ba61762f678f070614f15e70d1141684dffb02a3fadd00c7da519aa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rt-net-gbp";
+        repo = "rt_manipulators_cpp-release";
+        rev = "release/foxy/rt_manipulators_cpp/1.0.0-1";
+        sha256 = "sha256-YUJkRUHMLukwe5vyCr9kFhmmkkBb/ezgelg3SKIop3w=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

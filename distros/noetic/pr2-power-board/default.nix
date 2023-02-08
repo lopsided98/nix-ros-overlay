@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pr2-power-board";
   version = "1.1.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/noetic/pr2_power_board/1.1.10-1.tar.gz";
-    name = "1.1.10-1.tar.gz";
-    sha256 = "e7db741af1ca396c86b75584015c5688cf32d088d4c3be87792c4b3a879d8e31";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_power_drivers-release";
+        rev = "release/noetic/pr2_power_board/1.1.10-1";
+        sha256 = "sha256-GGL3dANBXvhWGk9Ez1uoPPysLrohUg3Tegg+PA7RChI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ boost catkin message-generation ];

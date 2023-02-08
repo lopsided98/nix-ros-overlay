@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-depthimage-to-laserscan";
   version = "2.5.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/depthimage_to_laserscan-release/archive/release/humble/depthimage_to_laserscan/2.5.0-3.tar.gz";
-    name = "2.5.0-3.tar.gz";
-    sha256 = "264167c62be2c48e22df9e97e206b3b0fa854b2377b11d54d0cdeb5dfc56bb3e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "depthimage_to_laserscan-release";
+        rev = "release/humble/depthimage_to_laserscan/2.5.0-3";
+        sha256 = "sha256-+JJjxrP2tOPo9ijQrlYZuhH85XbQgrxb4RJIFeNO38Y=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

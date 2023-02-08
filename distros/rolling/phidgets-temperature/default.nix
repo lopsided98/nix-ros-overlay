@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-phidgets-temperature";
   version = "2.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_temperature/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "bb13fd6e318c3e7665df4fb7a20ea1a87993e419686fb32984576da7de331640";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "phidgets_drivers-release";
+        rev = "release/rolling/phidgets_temperature/2.3.0-1";
+        sha256 = "sha256-ysJlA4vNbW2mfoCNFXJTIwEJO0N44VHIUqHeOAi0BL0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

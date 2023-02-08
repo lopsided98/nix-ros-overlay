@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-teleop-twist-keyboard";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/teleop_twist_keyboard-release/archive/release/melodic/teleop_twist_keyboard/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "bc9aa97ea8811e7dda293d3abeb9824fb0efb18236ef647fdf393cfc05c65181";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "teleop_twist_keyboard-release";
+        rev = "release/melodic/teleop_twist_keyboard/1.0.0-1";
+        sha256 = "sha256-HWSbDb6AaeUM+9e6kvAiT2Uh1NxEcd/2cEQjkseYn10=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

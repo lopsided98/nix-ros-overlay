@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fiducial-msgs";
   version = "0.12.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UbiquityRobotics-release/fiducials-release/archive/release/noetic/fiducial_msgs/0.12.0-1.tar.gz";
-    name = "0.12.0-1.tar.gz";
-    sha256 = "76793444bb22e7b5ccf9e3bef011af4da9cf7174c3abc800057c556090e578bd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UbiquityRobotics-release";
+        repo = "fiducials-release";
+        rev = "release/noetic/fiducial_msgs/0.12.0-1";
+        sha256 = "sha256-rAPrs5QWoxnN38TLnBlLSTYgJ9LHHX3LNI9KW1doq0U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

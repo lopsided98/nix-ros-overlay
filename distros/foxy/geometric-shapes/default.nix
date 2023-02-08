@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-geometric-shapes";
   version = "2.1.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/geometric_shapes-release/archive/release/foxy/geometric_shapes/2.1.2-1.tar.gz";
-    name = "2.1.2-1.tar.gz";
-    sha256 = "8e657ed648fe8eefb51479e6f2939938cf51e56bf2352bbaf15a9b220676b79a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "geometric_shapes-release";
+        rev = "release/foxy/geometric_shapes/2.1.2-1";
+        sha256 = "sha256-fKyq87F5dzlpnnoMG+LFuJyqkcGTPQeBgwnw5dEFigw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pkg-config rosidl-default-generators ];

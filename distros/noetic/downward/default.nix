@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-downward";
   version = "2.1.21-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/downward/2.1.21-2.tar.gz";
-    name = "2.1.21-2.tar.gz";
-    sha256 = "af167e3a93447efd3db9731aacadf13d6b554cb202743c05630892360766f16b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_3rdparty-release";
+        rev = "release/noetic/downward/2.1.21-2";
+        sha256 = "sha256-ONrwC/dFQhrEf2r7DIuw+pyOvdQnBixzdECItEMhhok=";
+      };
 
   buildType = "catkin";
   buildInputs = [ bison cacert catkin flex python3 rostest ];

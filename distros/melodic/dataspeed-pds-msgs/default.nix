@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dataspeed-pds-msgs";
   version = "1.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/melodic/dataspeed_pds_msgs/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "e2ad5cfa58bbe84eaef998882e1f513cd9d94096f20ab89fb49e51098a790891";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dataspeed_pds-release";
+        rev = "release/melodic/dataspeed_pds_msgs/1.0.6-1";
+        sha256 = "sha256-T6S2l2IuCi7rEupPJ3JZaLAqiNvD6+PRTUm+DOY3pjc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

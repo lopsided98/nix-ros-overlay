@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-convex-decomposition";
   version = "0.1.12";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/convex_decomposition-release/archive/release/melodic/convex_decomposition/0.1.12-0.tar.gz";
-    name = "0.1.12-0.tar.gz";
-    sha256 = "853e052839ccfe26f6ae8d94e157ad06cfa7c520c3fe12cf33783107caeee369";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "convex_decomposition-release";
+        rev = "release/melodic/convex_decomposition/0.1.12-0";
+        sha256 = "sha256-GzzlVqeAQWWsiZq7qhDDtVI8i7bh/4pomZnPYy7SWHw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

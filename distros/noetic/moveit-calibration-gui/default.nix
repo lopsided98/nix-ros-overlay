@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-calibration-gui";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/JStech/moveit_calibration-release/archive/release/noetic/moveit_calibration_gui/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "6578848f9cbc27af349c82a0e7dd87d5cbcc832441ed133d5c49df02314988fb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "JStech";
+        repo = "moveit_calibration-release";
+        rev = "release/noetic/moveit_calibration_gui/0.1.0-1";
+        sha256 = "sha256-HLD3BEIn+ZDHAKI2jibsNQ22D56SCcwfKIENt7eV1Fc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin class-loader eigen image-geometry pkg-config qt5.qtbase ];

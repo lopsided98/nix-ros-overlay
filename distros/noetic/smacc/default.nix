@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-smacc";
   version = "0.9.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/robosoft-ai/smacc-release/archive/release/noetic/smacc/0.9.7-1.tar.gz";
-    name = "0.9.7-1.tar.gz";
-    sha256 = "da4e51832b39e106ecbdcaf2d9713a4b98df60d64cd5af35dc482f65f5302701";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "robosoft-ai";
+        repo = "smacc-release";
+        rev = "release/noetic/smacc/0.9.7-1";
+        sha256 = "sha256-06jpVa+V/B0PCTSPOqiEyqIVfYymIjMZqp/Tcvo08s0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

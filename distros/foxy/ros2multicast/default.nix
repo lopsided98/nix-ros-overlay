@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ros2multicast";
   version = "0.9.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/foxy/ros2multicast/0.9.12-1.tar.gz";
-    name = "0.9.12-1.tar.gz";
-    sha256 = "0b4c2a5f05d0f917b22a53ddb6905a6b927dd194bc8d64c7d8a3284960a7c34b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2cli-release";
+        rev = "release/foxy/ros2multicast/0.9.12-1";
+        sha256 = "sha256-WE6ZD/GpSlkSGUFJAOO1a7jzyIAwYJ21ZhYmZSotvso=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint pythonPackages.pytest ];

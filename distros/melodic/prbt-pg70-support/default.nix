@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-prbt-pg70-support";
   version = "0.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/prbt_grippers-release/archive/release/melodic/prbt_pg70_support/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "71d12733360cd04b208ed6cf976217fcbaea7231298f5ad006b7dc10be3ab7b3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "prbt_grippers-release";
+        rev = "release/melodic/prbt_pg70_support/0.0.4-1";
+        sha256 = "sha256-CkNS7qydSKc7lkDUnlJ5iAgaQWAuVc2yqI6/Hi8Z0Js=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

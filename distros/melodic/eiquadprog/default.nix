@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-eiquadprog";
   version = "1.2.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/stack-of-tasks/eiquadprog-ros-release/archive/release/melodic/eiquadprog/1.2.5-1.tar.gz";
-    name = "1.2.5-1.tar.gz";
-    sha256 = "5a08fefa36a061d8221bad3128fd630bcc371d8c89778a2cde7597291606a488";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "stack-of-tasks";
+        repo = "eiquadprog-ros-release";
+        rev = "release/melodic/eiquadprog/1.2.5-1";
+        sha256 = "sha256-70Gnb9UgIVTLKdrPg8jJuHY+tS1xJTCfhNmQGXsAtZw=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen git ];

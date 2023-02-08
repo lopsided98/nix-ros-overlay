@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-run-move-group";
   version = "2.2.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/foxy/run_move_group/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "9c9283679849378a664eb793a45faa89507a1c6bace808ba1e1cc56215da2c54";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "moveit2-release";
+        rev = "release/foxy/run_move_group/2.2.3-1";
+        sha256 = "sha256-mdfpDoDKd8jeB9NhihDg1jRNqqS6d4L2/UbqxvYzeu4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake moveit-common ];

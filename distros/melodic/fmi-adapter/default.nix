@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fmi-adapter";
   version = "1.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/boschresearch/fmi_adapter-release/archive/release/melodic/fmi_adapter/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "0894a446abbe7f62af13d424e545bb3da0bb15e307f2b26ce2b4e30f2f062fe7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "boschresearch";
+        repo = "fmi_adapter-release";
+        rev = "release/melodic/fmi_adapter/1.0.4-1";
+        sha256 = "sha256-T/tOGSBZxproguefC+sHfBgs3Zl7GOieHXdo5n8jigM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin git ];

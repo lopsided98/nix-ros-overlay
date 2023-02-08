@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-canopen-motor";
   version = "0.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_canopen_motor/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "6ce9cd2b162e853b67b70b9ef1dece0b6586b026eaffb40e6704c1563dd0c027";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/melodic/cob_canopen_motor/0.7.4-1";
+        sha256 = "sha256-A4iNC9hRfqWAibWNNZY/E4jj2BW1nVMPjdJvZ45sqYQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

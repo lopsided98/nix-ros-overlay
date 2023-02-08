@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ecl-converters";
   version = "0.62.2";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/melodic/ecl_converters/0.62.2-0.tar.gz";
-    name = "0.62.2-0.tar.gz";
-    sha256 = "30286767e22011751173f3a7c3d063f26f675e6340cd56765e90853879058909";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "ecl_core-release";
+        rev = "release/melodic/ecl_converters/0.62.2-0";
+        sha256 = "sha256-LzIGSoDtAsE9Wnng7Ec0bHIibcCu+Fxfe5O4jGKl1NE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

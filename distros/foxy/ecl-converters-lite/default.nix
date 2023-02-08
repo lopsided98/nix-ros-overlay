@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ecl-converters-lite";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_lite-release/archive/release/foxy/ecl_converters_lite/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "8b15f002cb74ac11083660ef294160b0419875d0bbdc3d96ef5460b942fcaa19";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "ecl_lite-release";
+        rev = "release/foxy/ecl_converters_lite/1.1.0-1";
+        sha256 = "sha256-8nK40G6+Y6FTPf+3k8HW16oSG3+jxN+cWCA6h0bs17c=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

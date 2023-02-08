@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-gc-spl-2022";
   version = "0.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/foxy/gc_spl_2022/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "15a5f4197725b8a783b37e20e999b3e2f18b2f6aec7edef2c112465acc7ef175";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "gc_spl-release";
+        rev = "release/foxy/gc_spl_2022/0.0.1-1";
+        sha256 = "sha256-2iMrRZncDtB8aaBlY0JW0qKauCZBHk0rKjJUQIFgKyM=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

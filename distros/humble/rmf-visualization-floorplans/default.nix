@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rmf-visualization-floorplans";
   version = "2.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/humble/rmf_visualization_floorplans/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "d32bc40b05838deeb62717baf71b2dfbb1331a19af40e7452427e9c933568478";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_visualization-release";
+        rev = "release/humble/rmf_visualization_floorplans/2.0.0-1";
+        sha256 = "sha256-DatGmTaZ5kgA9hFL9neuZW+NQdnMbdzQtH6SY0vrDoQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-std-msgs";
   version = "0.5.12";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/std_msgs-release/archive/release/melodic/std_msgs/0.5.12-0.tar.gz";
-    name = "0.5.12-0.tar.gz";
-    sha256 = "4e8b6a65ca70e92bbc9044c99cde67b5859392f6489e3e2fd7fc74844cedce1c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "std_msgs-release";
+        rev = "release/melodic/std_msgs/0.5.12-0";
+        sha256 = "sha256-iSMHCWm/b/Wb48JnT++MdB1Uxk5cZjmj+DR3wEJgI34=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

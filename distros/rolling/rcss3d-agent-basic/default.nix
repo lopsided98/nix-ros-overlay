@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rcss3d-agent-basic";
   version = "0.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcss3d_agent-release/archive/release/rolling/rcss3d_agent_basic/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "148eb5547d7c49f6a8895d1d5071bc648f13dd55618e9828cbd10429007d2a96";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcss3d_agent-release";
+        rev = "release/rolling/rcss3d_agent_basic/0.4.1-1";
+        sha256 = "sha256-nDJGmIM8WHHjNPs3KRLNXOf8EM2VIwF9YZX1CVE662Q=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

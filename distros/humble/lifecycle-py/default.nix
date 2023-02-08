@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-lint-common, lifecycle, lifecycle-msgs, rclpy, ros-testing, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-lifecycle-py";
-  version = "0.20.2-r1";
+  version = "0.20.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/lifecycle_py/0.20.2-1.tar.gz";
-    name = "0.20.2-1.tar.gz";
-    sha256 = "0d9ab61e94a6a6218e2759d9522f47f16707eabd842440889d3cff5a05756191";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/humble/lifecycle_py/0.20.3-1";
+        sha256 = "sha256-qK8g2+B8AeB9dD6rgJnDw6v/+dxfm17xjO0AOJfLOPQ=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-lint-auto ament-lint-common lifecycle ros-testing ];

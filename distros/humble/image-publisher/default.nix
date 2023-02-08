@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-image-publisher";
   version = "3.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/image_publisher/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "f1144b58705ed2bb24ccae0e2d592cb963e82e8d43d0e5de9aa97e9b8b0943b5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/humble/image_publisher/3.0.0-1";
+        sha256 = "sha256-0t1nxC5kT6wIj+N9B/ONHOLOp0RheSGhPP5JRJYV1W8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

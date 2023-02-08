@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-grasping-msgs";
   version = "0.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mikeferguson/grasping_msgs-ros2-gbp/archive/release/foxy/grasping_msgs/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "9b3cfc44a96fbf4c0b0a59489d7693aa3d696006aa7f184ade66e2e5cde04b00";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mikeferguson";
+        repo = "grasping_msgs-ros2-gbp";
+        rev = "release/foxy/grasping_msgs/0.4.0-1";
+        sha256 = "sha256-7jkZuQAfwrBxZtca5lsT7W9diA/c+snR1FHkf4JjZoM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

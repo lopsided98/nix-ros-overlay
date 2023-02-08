@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-trac-ik-python";
   version = "1.6.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/traclabs/trac_ik-release/archive/release/noetic/trac_ik_python/1.6.6-1.tar.gz";
-    name = "1.6.6-1.tar.gz";
-    sha256 = "fc8d13dfbc13c7b9513a9edd3f4b552c75e5b72d702d4a8b9475af6617719773";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "traclabs";
+        repo = "trac_ik-release";
+        rev = "release/noetic/trac_ik_python/1.6.6-1";
+        sha256 = "sha256-MjZN/QZDjpxlSMbQ7FVi2xBKPBOoJ9xji49+BW4XWdU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

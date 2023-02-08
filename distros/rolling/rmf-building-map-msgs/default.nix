@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rmf-building-map-msgs";
   version = "1.2.0-r5";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_building_map_msgs-release/archive/release/rolling/rmf_building_map_msgs/1.2.0-5.tar.gz";
-    name = "1.2.0-5.tar.gz";
-    sha256 = "07c25dbb3063fbb8deacb63991e694a0c938e6eaaff0e316b19c2cd55fc95186";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_building_map_msgs-release";
+        rev = "release/rolling/rmf_building_map_msgs/1.2.0-5";
+        sha256 = "sha256-snyMuXdNPfPqMZ8hpU/Lno8b23lqgRLHWYygxrKe3tQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

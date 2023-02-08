@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-actionlib-lisp";
   version = "0.2.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/actionlib_lisp/0.2.13-1.tar.gz";
-    name = "0.2.13-1.tar.gz";
-    sha256 = "2a3d66692e70cd32ac8761c52744dcdfef0faa17f0ee8e8c1f49b985fc6e5f85";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "roslisp_common-release";
+        rev = "release/melodic/actionlib_lisp/0.2.13-1";
+        sha256 = "sha256-R75GiJU4j+LfOFC0uzJNOlg8tVW+AYaOlYgNbKHRlU4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

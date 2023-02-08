@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-bms-driver";
   version = "0.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_bms_driver/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "3003906b6a8e7225ecae4ae4ccfd47aee13252303f34f1c7fd7571def6f1a95a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/melodic/cob_bms_driver/0.7.4-1";
+        sha256 = "sha256-5IdDHIUMrtK9KY9lZww1M3hC5jA4Ex9mgaC3Wg0WdxA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

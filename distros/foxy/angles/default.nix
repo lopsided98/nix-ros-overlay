@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-angles";
   version = "1.12.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/angles-release/archive/release/foxy/angles/1.12.6-1.tar.gz";
-    name = "1.12.6-1.tar.gz";
-    sha256 = "a4f16d3854d340b4008e2cd556fe411cdf39c00764902264d2d6fa5dabe28e69";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "angles-release";
+        rev = "release/foxy/angles/1.12.6-1";
+        sha256 = "sha256-b4i8WE+oNbh7/yIYtyBYit4oIcDPTsJ8+um+3ful2NY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python python3Packages.setuptools ];

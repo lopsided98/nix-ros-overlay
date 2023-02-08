@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-examples-rclcpp-wait-set";
   version = "0.16.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/rolling/examples_rclcpp_wait_set/0.16.2-1.tar.gz";
-    name = "0.16.2-1.tar.gz";
-    sha256 = "1c20dc37ea3f683c6fcdcf05cd1f0ed8a0735914e01dc5f9b68994f70a6734ff";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "examples-release";
+        rev = "release/rolling/examples_rclcpp_wait_set/0.16.2-1";
+        sha256 = "sha256-peItFxyuhXk6d9dZStLOU+d4SXVEWh9SQlxcta+CiHM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

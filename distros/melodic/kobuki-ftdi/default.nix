@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-kobuki-ftdi";
   version = "0.7.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/kobuki_core-release/archive/release/melodic/kobuki_ftdi/0.7.12-1.tar.gz";
-    name = "0.7.12-1.tar.gz";
-    sha256 = "5e9dd769834fdfab45353add1cb5375000bff8fb98a65f9a39b3751967630baa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "kobuki_core-release";
+        rev = "release/melodic/kobuki_ftdi/0.7.12-1";
+        sha256 = "sha256-i2LlVZgPhygnQ1VayUu65PWLgt4CPqOSiL1X4jqq4IA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pkg-config ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-qt-paramedit";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/dornhege/rqt_paramedit-release/archive/release/melodic/qt_paramedit/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "5d12d8619f12fb8a6c4490bfdc556e0ba4d8a93458abf1f9950876288913164a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "dornhege";
+        repo = "rqt_paramedit-release";
+        rev = "release/melodic/qt_paramedit/1.0.1-1";
+        sha256 = "sha256-UuDP8EDx1pLkX0S+NWf3nL3v5JVF9Lx6j6VYQAtMoKI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

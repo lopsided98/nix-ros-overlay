@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-soccer-vision-attribute-msgs";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/soccer_interfaces-release/archive/release/rolling/soccer_vision_attribute_msgs/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "6cd60c51f198aa6c690ee9fd6a0be5d94aedd01f50142dba6e8f31970653182e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "soccer_interfaces-release";
+        rev = "release/rolling/soccer_vision_attribute_msgs/0.2.0-1";
+        sha256 = "sha256-kne9VeA5cVtLI1cd5i9nD338Z11EdYoA28JFBWwWUD4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

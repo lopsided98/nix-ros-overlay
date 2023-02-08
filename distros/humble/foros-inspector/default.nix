@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-foros-inspector";
   version = "0.4.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/foros-release/archive/release/humble/foros_inspector/0.4.1-2.tar.gz";
-    name = "0.4.1-2.tar.gz";
-    sha256 = "affa1521d17e45682a11a66e4abdd0bf6edb6aecefda5a5fdf7d5e74d923e2b0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "foros-release";
+        rev = "release/humble/foros_inspector/0.4.1-2";
+        sha256 = "sha256-WfePxLQcvtxpQxBIDPXuPTGMb87E/ySncvdid1KfFFk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

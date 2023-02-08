@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-jderobot-assets";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/JdeRobot/assets-release/archive/release/noetic/jderobot_assets/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "3c11d5065095615c276e2e67a4b940545a0a8e7faf1208f7f678a688c1242cca";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "JdeRobot";
+        repo = "assets-release";
+        rev = "release/noetic/jderobot_assets/1.1.0-1";
+        sha256 = "sha256-hJqE6OjpHzr6eoWmIkHIYfgoaNoyV57frxF56yy5G+I=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools ];

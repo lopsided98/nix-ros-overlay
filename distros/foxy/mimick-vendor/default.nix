@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-mimick-vendor";
   version = "0.2.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/mimick_vendor-release/archive/release/foxy/mimick_vendor/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "4dfca00a3bd3b7f4674dfed4db0604857bfe982207f6b9165ad02992afb64a60";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "mimick_vendor-release";
+        rev = "release/foxy/mimick_vendor/0.2.6-1";
+        sha256 = "sha256-mEPo4xEmZ8KPnbqY8EQIfViRXT8Bz7tMU0wMSIOZBAk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake git ];

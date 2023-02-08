@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rqt-common-plugins";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_common_plugins-release/archive/release/humble/rqt_common_plugins/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "4d949634b468347fc8a2949232bb6528e2af63d3e9efd2f02b0f78061458da34";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_common_plugins-release";
+        rev = "release/humble/rqt_common_plugins/1.2.0-1";
+        sha256 = "sha256-rSJ8tB78EOgjtaHw8wleVvW+Rx9+z5d0IAznXj0aKmg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

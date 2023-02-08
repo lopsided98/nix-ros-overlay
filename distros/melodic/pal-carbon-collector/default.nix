@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pal-carbon-collector";
   version = "1.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_statistics-release/archive/release/melodic/pal_carbon_collector/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "f8b1a9f99ca84937c402791de83cca7525b73fec5cf35238d0f49dc6eba42f94";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "pal_statistics-release";
+        rev = "release/melodic/pal_carbon_collector/1.4.1-1";
+        sha256 = "sha256-pSfPvr68E2VfYheK81CfVDUvxmBPn0Z6QAcYUa/BVMY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

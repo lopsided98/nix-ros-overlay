@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-simple-grasping";
   version = "0.3.1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/simple_grasping-release/archive/release/melodic/simple_grasping/0.3.1-0.tar.gz";
-    name = "0.3.1-0.tar.gz";
-    sha256 = "1dada4bbf81347bac9d7fee738e20246ec4f6f25a8983a7edda10894bd896a54";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "simple_grasping-release";
+        rev = "release/melodic/simple_grasping/0.3.1-0";
+        sha256 = "sha256-VdAej5oMWugDpx9ywZMvatIrwaEPQpPEFvu09pLpb7o=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules message-generation ];

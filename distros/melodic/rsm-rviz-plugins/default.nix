@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rsm-rviz-plugins";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/MarcoStb1993/robot_statemachine-release/archive/release/melodic/rsm_rviz_plugins/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "d3f94448ec9038c8da1be7d2290237e1db02cb482d5765abfb32fc687b338e05";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "MarcoStb1993";
+        repo = "robot_statemachine-release";
+        rev = "release/melodic/rsm_rviz_plugins/1.2.1-1";
+        sha256 = "sha256-ylO5ox3yuIDhQ0QJRk6DlWnkZtjuct7BNPUb20rw74A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin qt5.qtbase ];

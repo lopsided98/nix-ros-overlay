@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-tf2";
   version = "0.7.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "1c195dcff3720e85819e47b753ce85e26cee5da9fb7c41533cc03782333fafe5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry2-release";
+        rev = "release/noetic/tf2/0.7.6-1";
+        sha256 = "sha256-wxtpJcU7170GGkfCR06Qqh2am19oNAB2m7DWZFh8bKI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

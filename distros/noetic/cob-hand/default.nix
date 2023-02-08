@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-hand";
   version = "0.6.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_hand-release/archive/release/noetic/cob_hand/0.6.10-1.tar.gz";
-    name = "0.6.10-1.tar.gz";
-    sha256 = "def20ffe69e0af6e5d173018e5d5e7fdb287a80eecb71217dc8fb7ceaf721899";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_hand-release";
+        rev = "release/noetic/cob_hand/0.6.10-1";
+        sha256 = "sha256-hOzmRiVwc5D5CP7kUi6TOddMUplEr/wJxOGjC0MgLCI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

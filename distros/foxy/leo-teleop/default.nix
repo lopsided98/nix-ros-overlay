@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-leo-teleop";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/foxy/leo_teleop/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "0e6f486ff13ac9fe45396394fa905a4fbf15c87a6779b09ecfa50a30185ed352";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "leo_common-release";
+        rev = "release/foxy/leo_teleop/1.1.0-1";
+        sha256 = "sha256-b+43cpCbYIO6jZvix2hLEbOH6RocS5OU2T9INwE/BBk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

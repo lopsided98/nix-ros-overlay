@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-spacenav-node";
   version = "1.14.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/joystick_drivers-release/archive/release/melodic/spacenav_node/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "976cd504287d9e94e4bc514765dd351e1b46b9042d490c7f530993a673375315";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "joystick_drivers-release";
+        rev = "release/melodic/spacenav_node/1.14.0-1";
+        sha256 = "sha256-HujxkzCVr6HCoNGtZNd9xBXnAJ01xvHZ9bA60EAUMfI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

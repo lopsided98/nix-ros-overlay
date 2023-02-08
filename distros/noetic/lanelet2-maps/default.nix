@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, lanelet2-core, mrt-cmake-modules }:
 buildRosPackage {
   pname = "ros-noetic-lanelet2-maps";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/noetic/lanelet2_maps/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "606cfe35ab43bfeca8abb7213e030056dc3a4eb920f49c59f5add39ab04aa7ec";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fzi-forschungszentrum-informatik";
+        repo = "lanelet2-release";
+        rev = "release/noetic/lanelet2_maps/1.2.0-1";
+        sha256 = "sha256-YppHdL/MseGvfqUgxRjX7BErluhqvD1I7GeJeA8mNjE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

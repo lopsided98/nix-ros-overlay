@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-simple-actions";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/simple_actions-release/archive/release/foxy/simple_actions/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "c842b4e43dd1ecb1950292fab948ef022c182396a252eccd364907245dd19d93";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "simple_actions-release";
+        rev = "release/foxy/simple_actions/0.2.1-1";
+        sha256 = "sha256-NwJn4jspMkn8bZdj3z4bwQmkm017B0FXkjiGFfIl+cY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];

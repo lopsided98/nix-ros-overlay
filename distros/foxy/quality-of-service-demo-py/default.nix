@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-quality-of-service-demo-py";
   version = "0.9.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/quality_of_service_demo_py/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "5d359325990ef368ce4c95b4228a6ef58c720c6d770a156c703693c65d3c9be7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/foxy/quality_of_service_demo_py/0.9.4-1";
+        sha256 = "sha256-1lske0QMy6+2Xx7+/Fmtg5AloAhHws4tt/q/i2D4TIM=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

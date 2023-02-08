@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-genpy";
   version = "0.6.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/genpy-release/archive/release/noetic/genpy/0.6.15-1.tar.gz";
-    name = "0.6.15-1.tar.gz";
-    sha256 = "6ff427b4dba67d28eb6c39e3c43c3ab5a011e9fc0d3b5c4c39828476f5ea2746";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "genpy-release";
+        rev = "release/noetic/genpy/0.6.15-1";
+        sha256 = "sha256-dcNcHPvjQ+sZ1MM16gv+yLVWf0Cv70TarjipFtTrdnw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools ];

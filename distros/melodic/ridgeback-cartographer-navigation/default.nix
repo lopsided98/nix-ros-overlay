@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ridgeback-cartographer-navigation";
   version = "0.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback_cartographer_navigation-release/archive/release/melodic/ridgeback_cartographer_navigation/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "a5776efee86c57980a6469149c1ab30079b9fbc36e90cbcf7b0e9b4476d0ad10";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "ridgeback_cartographer_navigation-release";
+        rev = "release/melodic/ridgeback_cartographer_navigation/0.0.1-1";
+        sha256 = "sha256-KlVSyAKMKfIa6zfmTtwgXava2Vgl54QPAz+KLdLAgqM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

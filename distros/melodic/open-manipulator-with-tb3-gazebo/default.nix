@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-open-manipulator-with-tb3-gazebo";
   version = "1.1.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/open_manipulator_with_tb3_simulations-release/archive/release/melodic/open_manipulator_with_tb3_gazebo/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "b78cf601ef185042b96bd253b246286853ed1a7d47f76c58f733f02213e64c5c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "open_manipulator_with_tb3_simulations-release";
+        rev = "release/melodic/open_manipulator_with_tb3_gazebo/1.1.0-2";
+        sha256 = "sha256-qfaCkoRmASVKxpixynthfpzZCAmblNI2evP5rcBOgSk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

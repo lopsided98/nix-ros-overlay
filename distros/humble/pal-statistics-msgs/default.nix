@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-pal-statistics-msgs";
   version = "2.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_statistics-release/archive/release/humble/pal_statistics_msgs/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "b937f1bb1421b7398ae7ec381b667ad740196e675964e925d6c92a59ff0307c6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "pal_statistics-release";
+        rev = "release/humble/pal_statistics_msgs/2.1.3-1";
+        sha256 = "sha256-IqJpPrYKZlv1lypCXtoJgtyKlWPN9uNJBS1RRMCxBgg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

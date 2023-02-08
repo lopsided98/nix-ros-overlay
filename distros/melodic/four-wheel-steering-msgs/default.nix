@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-four-wheel-steering-msgs";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/four_wheel_steering_msgs-release/archive/release/melodic/four_wheel_steering_msgs/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "e1021982b9dfb4c4f80c680fda3349e9295561f9d8b52e28b63c501e0779684c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "four_wheel_steering_msgs-release";
+        rev = "release/melodic/four_wheel_steering_msgs/1.1.0-1";
+        sha256 = "sha256-zBrUcIQiRkNkn3KKHW1G7dP8nbPzITuVuIuEwGZjjQg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-automotive-autonomy-msgs";
   version = "3.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/automotive_autonomy_msgs-release/archive/release/melodic/automotive_autonomy_msgs/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "2899316eab20c57ab7bcc0d5d8bdb46da42c9a66d94200376ead64b7ca74d6b5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "automotive_autonomy_msgs-release";
+        rev = "release/melodic/automotive_autonomy_msgs/3.0.4-1";
+        sha256 = "sha256-R/GduU+VD3B9INpzOpa84Bl42xFAtGthn8PEt8iYmpw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ros-environment ];

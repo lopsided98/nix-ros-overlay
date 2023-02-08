@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-abb-resources";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/abb-release/archive/release/melodic/abb_resources/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "e21bc080006c798014a924a0974d6e6af9e375c76a336651316936af4231d825";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "abb-release";
+        rev = "release/melodic/abb_resources/1.3.1-1";
+        sha256 = "sha256-vFZefdbj4LjTmcpGSNDAi8bp+XMVyG2UyO0aEow3zsE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

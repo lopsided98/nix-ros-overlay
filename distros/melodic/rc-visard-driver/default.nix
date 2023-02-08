@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rc-visard-driver";
   version = "3.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/melodic/rc_visard_driver/3.3.2-1.tar.gz";
-    name = "3.3.2-1.tar.gz";
-    sha256 = "7cd237104d69a96c1cfd0a248d08639b23822a93755c7a73e1078734c7674b17";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "roboception-gbp";
+        repo = "rc_visard-release";
+        rev = "release/melodic/rc_visard_driver/3.3.2-1";
+        sha256 = "sha256-13pcUqqSU2rWlZCP2QywUfY/o/hHrG0WGrvmOWCFr9I=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

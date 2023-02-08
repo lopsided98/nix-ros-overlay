@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-gazebo-ros-control";
   version = "2.8.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/melodic/gazebo_ros_control/2.8.7-1.tar.gz";
-    name = "2.8.7-1.tar.gz";
-    sha256 = "ecdf8af43115ba2e33784fc929f2a3db6c686ab9b5536e6276939ba846fd6b3e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "gazebo_ros_pkgs-release";
+        rev = "release/melodic/gazebo_ros_control/2.8.7-1";
+        sha256 = "sha256-3n4P6ZZThOL78HZONjHa7X/pOU/R2t0FDEALC1/XsQI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin gazebo-dev ];

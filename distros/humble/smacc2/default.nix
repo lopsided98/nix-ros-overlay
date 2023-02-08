@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-smacc2";
   version = "0.4.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/SMACC2-release/archive/release/humble/smacc2/0.4.0-2.tar.gz";
-    name = "0.4.0-2.tar.gz";
-    sha256 = "4270c7884e70cd9c3f050da6959fd2f9eb87a416698b5ee910155ef5e6733afe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "SMACC2-release";
+        rev = "release/humble/smacc2/0.4.0-2";
+        sha256 = "sha256-yI0OXFGrQ42OcS1v1pv7VdeoqmflWYkFqHfGbacMe+Q=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

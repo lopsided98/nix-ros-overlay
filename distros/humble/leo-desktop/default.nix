@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-leo-desktop";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_desktop-release/archive/release/humble/leo_desktop/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "f73f5a7c14f8afb76de815112fe99b98b35c63dcd3d6b70f6ca302f2e49d18a5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "leo_desktop-release";
+        rev = "release/humble/leo_desktop/1.1.0-1";
+        sha256 = "sha256-YVpdlrpasTNSWYO4smQTr6VvaFBfuTFQn1snucaRQmw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

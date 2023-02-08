@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-tracetools-test";
   version = "1.0.5-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/foxy/tracetools_test/1.0.5-2.tar.gz";
-    name = "1.0.5-2.tar.gz";
-    sha256 = "066770fa01463a384c5118c2a6c3ce86bc8a5807da57eea8c6b82fe13a1d58a4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_tracing-release";
+        rev = "release/foxy/tracetools_test/1.0.5-2";
+        sha256 = "sha256-SBRgqFPuaa/H8CE571DhksMFYyGpG3tm/nlnq506Qe8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pkg-config ];

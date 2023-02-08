@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pass-through-controllers";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_passthrough_controllers-release/archive/release/melodic/pass_through_controllers/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "1e0d15cfe95e465317a70c03241a729dee9eb7eee7c737e156754a711f2d0959";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UniversalRobots";
+        repo = "Universal_Robots_ROS_passthrough_controllers-release";
+        rev = "release/melodic/pass_through_controllers/0.1.0-1";
+        sha256 = "sha256-tTHapYRYN6T2c2/Ov7vNJOd10vjNRtfem1jjRImZWq4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

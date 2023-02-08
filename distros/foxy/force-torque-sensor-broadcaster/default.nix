@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-force-torque-sensor-broadcaster";
   version = "0.8.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/force_torque_sensor_broadcaster/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "1c0d8d4c6604d69e299b38777942a2edeff10c3c546e1aebb46c4a05b6fd838f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_controllers-release";
+        rev = "release/foxy/force_torque_sensor_broadcaster/0.8.2-1";
+        sha256 = "sha256-8yKExrTAzS5Y/wOV4CBjtRYVNXrfG6Zzs1j0qYIj500=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

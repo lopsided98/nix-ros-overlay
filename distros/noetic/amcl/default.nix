@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, geometry-msgs, map-server, message-filters, nav-msgs, python3Packages, rosbag, roscpp, rostest, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-msgs, tf2-py, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-amcl";
-  version = "1.17.2-r1";
+  version = "1.17.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/amcl/1.17.2-1.tar.gz";
-    name = "1.17.2-1.tar.gz";
-    sha256 = "176626de453a712746fd4d999d87fec0529884168f63587fba32bdc9a3a27abb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation-release";
+        rev = "release/noetic/amcl/1.17.3-1";
+        sha256 = "sha256-1fClpkzFdKXhZKTU9hCJdSzR+T6md9sL+9eRWXuVCZY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-filters tf2-geometry-msgs ];

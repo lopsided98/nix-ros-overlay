@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-default-cfg-fkie";
   version = "0.8.12";
 
-  src = fetchurl {
-    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/melodic/default_cfg_fkie/0.8.12-0.tar.gz";
-    name = "0.8.12-0.tar.gz";
-    sha256 = "0b43fafcadef2aeff4fd5e7325daac4eeab711e5323c32fb37606bd318f5c7a1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fkie-release";
+        repo = "multimaster_fkie-release";
+        rev = "release/melodic/default_cfg_fkie/0.8.12-0";
+        sha256 = "sha256-gRaIRm7RCXbyZStSwysITFoKMpz768bwtt4icmsvivE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

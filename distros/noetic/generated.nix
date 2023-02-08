@@ -142,16 +142,6 @@ self: super: {
 
  bosch-locator-bridge = self.callPackage ./bosch-locator-bridge {};
 
- bota-driver = self.callPackage ./bota-driver {};
-
- bota-driver-testing = self.callPackage ./bota-driver-testing {};
-
- bota-node = self.callPackage ./bota-node {};
-
- bota-signal-handler = self.callPackage ./bota-signal-handler {};
-
- bota-worker = self.callPackage ./bota-worker {};
-
  calibration = self.callPackage ./calibration {};
 
  calibration-estimation = self.callPackage ./calibration-estimation {};
@@ -592,6 +582,8 @@ self: super: {
 
  depthai-examples = self.callPackage ./depthai-examples {};
 
+ depthai-ros-driver = self.callPackage ./depthai-ros-driver {};
+
  depthai-ros-msgs = self.callPackage ./depthai-ros-msgs {};
 
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
@@ -943,36 +935,6 @@ self: super: {
  fkie-master-sync = self.callPackage ./fkie-master-sync {};
 
  fkie-message-filters = self.callPackage ./fkie-message-filters {};
-
- fkie-multimaster = self.callPackage ./fkie-multimaster {};
-
- fkie-multimaster-msgs = self.callPackage ./fkie-multimaster-msgs {};
-
- fkie-node-manager = self.callPackage ./fkie-node-manager {};
-
- fkie-node-manager-daemon = self.callPackage ./fkie-node-manager-daemon {};
-
- fkie-potree-rviz-plugin = self.callPackage ./fkie-potree-rviz-plugin {};
-
- flexbe-behavior-engine = self.callPackage ./flexbe-behavior-engine {};
-
- flexbe-core = self.callPackage ./flexbe-core {};
-
- flexbe-input = self.callPackage ./flexbe-input {};
-
- flexbe-mirror = self.callPackage ./flexbe-mirror {};
-
- flexbe-msgs = self.callPackage ./flexbe-msgs {};
-
- flexbe-onboard = self.callPackage ./flexbe-onboard {};
-
- flexbe-states = self.callPackage ./flexbe-states {};
-
- flexbe-testing = self.callPackage ./flexbe-testing {};
-
- flexbe-widget = self.callPackage ./flexbe-widget {};
-
- flir-camera-description = self.callPackage ./flir-camera-description {};
 
  flir-camera-driver = self.callPackage ./flir-camera-driver {};
 
@@ -1540,6 +1502,8 @@ self: super: {
 
  lanelet2-maps = self.callPackage ./lanelet2-maps {};
 
+ lanelet2-matching = self.callPackage ./lanelet2-matching {};
+
  lanelet2-projection = self.callPackage ./lanelet2-projection {};
 
  lanelet2-python = self.callPackage ./lanelet2-python {};
@@ -1857,6 +1821,8 @@ self: super: {
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
 
  moveit = self.callPackage ./moveit {};
+ 
+ moveit-commander = self.callPackage ./moveit-commander {};
 
  moveit-calibration-gui = self.callPackage ./moveit-calibration-gui {};
 
@@ -2193,10 +2159,6 @@ self: super: {
  p2os-urdf = self.callPackage ./p2os-urdf {};
 
  pacmod-msgs = self.callPackage ./pacmod-msgs {};
-
- paho-mqtt-c = self.callPackage ./paho-mqtt-c {};
-
- paho-mqtt-cpp = self.callPackage ./paho-mqtt-cpp {};
 
  panda-moveit-config = self.callPackage ./panda-moveit-config {};
 
@@ -2712,18 +2674,6 @@ self: super: {
 
  robotraconteur = self.callPackage ./robotraconteur {};
 
- rokubimini = self.callPackage ./rokubimini {};
-
- rokubimini-bus-manager = self.callPackage ./rokubimini-bus-manager {};
-
- rokubimini-description = self.callPackage ./rokubimini-description {};
-
- rokubimini-ethercat = self.callPackage ./rokubimini-ethercat {};
-
- rokubimini-msgs = self.callPackage ./rokubimini-msgs {};
-
- rokubimini-serial = self.callPackage ./rokubimini-serial {};
-
  ros = self.callPackage ./ros {};
 
  ros-babel-fish = self.callPackage ./ros-babel-fish {};
@@ -3068,6 +3018,10 @@ self: super: {
 
  rviz-satellite = self.callPackage ./rviz-satellite {};
 
+ rviz-tool-cursor = self.callPackage ./rviz-tool-cursor {};
+
+ rviz-tool-path-display = self.callPackage ./rviz-tool-path-display {};
+
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
  rwt-app-chooser = self.callPackage ./rwt-app-chooser {};
@@ -3398,26 +3352,6 @@ self: super: {
 
  topic-tools = self.callPackage ./topic-tools {};
 
- toposens = self.callPackage ./toposens {};
-
- toposens-sensor-library = self.callPackage ./toposens-sensor-library {};
-
- toposens-bringup = self.callPackage ./toposens-bringup {};
-
- toposens-description = self.callPackage ./toposens-description {};
-
- toposens-driver = self.callPackage ./toposens-driver {};
-
- toposens-echo-driver = self.callPackage ./toposens-echo-driver {};
-
- toposens-markers = self.callPackage ./toposens-markers {};
-
- toposens-msgs = self.callPackage ./toposens-msgs {};
-
- toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
-
- toposens-sync = self.callPackage ./toposens-sync {};
-
  trac-ik = self.callPackage ./trac-ik {};
 
  trac-ik-examples = self.callPackage ./trac-ik-examples {};
@@ -3532,13 +3466,19 @@ self: super: {
 
  ur5e-moveit-config = self.callPackage ./ur5e-moveit-config {};
 
+ ur-calibration = self.callPackage ./ur-calibration {};
+
  ur-client-library = self.callPackage ./ur-client-library {};
+
+ ur-dashboard-msgs = self.callPackage ./ur-dashboard-msgs {};
 
  ur-description = self.callPackage ./ur-description {};
 
  ur-gazebo = self.callPackage ./ur-gazebo {};
 
  ur-msgs = self.callPackage ./ur-msgs {};
+
+ ur-robot-driver = self.callPackage ./ur-robot-driver {};
 
  urdf = self.callPackage ./urdf {};
 

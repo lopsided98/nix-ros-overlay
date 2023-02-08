@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-novatel-gps-msgs";
   version = "3.9.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/novatel_gps_driver-release/archive/release/noetic/novatel_gps_msgs/3.9.0-2.tar.gz";
-    name = "3.9.0-2.tar.gz";
-    sha256 = "385a28ccf1b1a41cae25d151638c9f75cee572ac0d5cd788a1c4f545a948abee";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "novatel_gps_driver-release";
+        rev = "release/noetic/novatel_gps_msgs/3.9.0-2";
+        sha256 = "sha256-6ffgh4V6qqiJA8vtqw7QQiiP94CvFrRD2kEk4Pe43KQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

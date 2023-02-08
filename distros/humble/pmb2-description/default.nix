@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-pmb2-description";
   version = "4.0.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_robot-gbp/archive/release/humble/pmb2_description/4.0.5-1.tar.gz";
-    name = "4.0.5-1.tar.gz";
-    sha256 = "c1cb5bdeed8f9802c748191934a15db4cb1f5f76c7ac288d84a57e2ca0d52ec9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "pmb2_robot-gbp";
+        rev = "release/humble/pmb2_description/4.0.5-1";
+        sha256 = "sha256-xxd30Jex9Y/NoNe3pCp7ya9SSm3ncOpO7jnGKWPDDjQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ament-cmake-python ];

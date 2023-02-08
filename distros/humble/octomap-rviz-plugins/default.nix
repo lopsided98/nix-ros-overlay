@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-octomap-rviz-plugins";
   version = "2.0.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap_rviz_plugins-release/archive/release/humble/octomap_rviz_plugins/2.0.0-3.tar.gz";
-    name = "2.0.0-3.tar.gz";
-    sha256 = "67553f3fe4c44b8d418c2284b3ef1cff8b09a53ceb0e36fb4127498ce5a2e49c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "octomap_rviz_plugins-release";
+        rev = "release/humble/octomap_rviz_plugins/2.0.0-3";
+        sha256 = "sha256-M9xdQSP9dc1bw2Jkn7tJ506Ah5/lABFrjFf03Ot8828=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

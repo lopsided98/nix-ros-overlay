@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-prbt-support";
   version = "0.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/noetic/prbt_support/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "66bdbbe527721dce392d9fa8449f0f857377f3a5b3f7e298595c478c9240444d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_robots-release";
+        rev = "release/noetic/prbt_support/0.6.0-1";
+        sha256 = "sha256-7M9+vHiwt11EX5Ch5o5N//JBlCgvqbm1Cly5BIjLRM4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ canopen-chain-node catkin pilz-utils roslint sensor-msgs ];

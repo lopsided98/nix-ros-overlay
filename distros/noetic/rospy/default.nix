@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rospy";
   version = "1.15.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rospy/1.15.15-1.tar.gz";
-    name = "1.15.15-1.tar.gz";
-    sha256 = "a04589f49ccadb8bb30ef5cf925a1d7c6344f5f96d9470b68c7749ff74477440";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm-release";
+        rev = "release/noetic/rospy/1.15.15-1";
+        sha256 = "sha256-uBkECYznXgesfEI1R7QpBsIrq0ia97OzzYOuZTyMUAs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

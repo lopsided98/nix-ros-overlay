@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-jsk-rqt-plugins";
   version = "2.1.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_visualization-release/archive/release/noetic/jsk_rqt_plugins/2.1.8-1.tar.gz";
-    name = "2.1.8-1.tar.gz";
-    sha256 = "1018fa78ab28b6366e768e7e368e4566dcf910079c9704119fda55433b414a25";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_visualization-release";
+        rev = "release/noetic/jsk_rqt_plugins/2.1.8-1";
+        sha256 = "sha256-jNSPwfw42DF7OqCFHzBzrID/8nHrgadV/KPxtI2UpFA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation mk rosbuild ];

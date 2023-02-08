@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-velodyne-pointcloud";
   version = "2.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/velodyne-release/archive/release/humble/velodyne_pointcloud/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "2a84eaaf7b0435550cc89b4e8624f63477a071ee82bd375b8d8b345e565280f7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "velodyne-release";
+        rev = "release/humble/velodyne_pointcloud/2.3.0-1";
+        sha256 = "sha256-hkvzuZw8cF8+XSVnSmlVOPLOTlg7vhtPoqd1gNK0mo8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

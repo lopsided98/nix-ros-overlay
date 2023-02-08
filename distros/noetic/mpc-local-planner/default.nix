@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mpc-local-planner";
   version = "0.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rst-tu-dortmund/mpc_local_planner-release/archive/release/noetic/mpc_local_planner/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "5ac9ee2b283c30626a85282071d60d083a1ec139e94ad4d6817359bcc1cb50d6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rst-tu-dortmund";
+        repo = "mpc_local_planner-release";
+        rev = "release/noetic/mpc_local_planner/0.0.3-1";
+        sha256 = "sha256-Jl0nXk5CrF/i/HLKUXfCvyGmxucRZz/zr25BiGihV9k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin tf2-eigen tf2-geometry-msgs ];

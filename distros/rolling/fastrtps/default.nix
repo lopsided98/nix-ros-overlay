@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, asio, cmake, fastcdr, foonathan-memory-vendor, openssl, python3, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-rolling-fastrtps";
-  version = "2.8.1-r1";
+  version = "2.9.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/rolling/fastrtps/2.8.1-1.tar.gz";
-    name = "2.8.1-1.tar.gz";
-    sha256 = "ebce9ce9badb2b94dff408ad83fab286d69f41f173ef01dd0a90af87d90581a6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "fastrtps-release";
+        rev = "release/rolling/fastrtps/2.9.1-1";
+        sha256 = "sha256-SLW0wC6aWAA+CfsNLaZ7wU2pAnPaDfVYPr5LB4R8zZ8=";
+      };
 
   buildType = "cmake";
   buildInputs = [ asio cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-swri-console";
   version = "1.1.0";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/swri_console-release/archive/release/melodic/swri_console/1.1.0-0.tar.gz";
-    name = "1.1.0-0.tar.gz";
-    sha256 = "3b316832e42c12ebf733b8f9f299ad56326bdeea281c36e1323dfe6c195a4cfe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "swri_console-release";
+        rev = "release/melodic/swri_console/1.1.0-0";
+        sha256 = "sha256-oF/7iUjp8cjtvWmnqqqXSRNn636RlQM7unl7lVMNVC4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

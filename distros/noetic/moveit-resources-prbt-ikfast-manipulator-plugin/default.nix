@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-resources-prbt-ikfast-manipulator-plugin";
   version = "0.8.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_prbt_ikfast_manipulator_plugin/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "7b9a978e377e94714f8f1a13e6ca778e300453ffdc7d98f4a869989b3fddac11";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit_resources-release";
+        rev = "release/noetic/moveit_resources_prbt_ikfast_manipulator_plugin/0.8.2-1";
+        sha256 = "sha256-asAIb4XxZsD3eXqiXs4CjRLLUp3Ly/Jp7YTCslAUAR0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin tf2-eigen ];

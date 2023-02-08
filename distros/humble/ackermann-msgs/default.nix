@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-ackermann-msgs";
   version = "2.0.2-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ackermann_msgs-release/archive/release/humble/ackermann_msgs/2.0.2-3.tar.gz";
-    name = "2.0.2-3.tar.gz";
-    sha256 = "c718834cdc18318cc85329d1fbaf14548eb9356f865c16bbbfed5d355870e690";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ackermann_msgs-release";
+        rev = "release/humble/ackermann_msgs/2.0.2-3";
+        sha256 = "sha256-zn0jbHQ6PrAlpzAwpr3Tu01dOE8TVcs0XYlTXL0x8wg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

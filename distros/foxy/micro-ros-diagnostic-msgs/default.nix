@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-micro-ros-diagnostic-msgs";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/micro_ros_diagnostics-release/archive/release/foxy/micro_ros_diagnostic_msgs/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "56db0f97346c8935919a71aa0149f39f032a811a1c927b1c58288ae3d0516845";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "micro_ros_diagnostics-release";
+        rev = "release/foxy/micro_ros_diagnostic_msgs/0.3.0-1";
+        sha256 = "sha256-SzsjLMKb42ISN6YTe6pUsmSDS9aBoczr3ayWBkrJAgU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

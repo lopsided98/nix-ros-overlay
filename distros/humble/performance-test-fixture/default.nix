@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-performance-test-fixture";
   version = "0.0.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/performance_test_fixture-release/archive/release/humble/performance_test_fixture/0.0.9-1.tar.gz";
-    name = "0.0.9-1.tar.gz";
-    sha256 = "ea1d573bd815dd78bfeade5ea6c7665cd7a3ce7d6f2c531c8f61abe0baf3db86";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "performance_test_fixture-release";
+        rev = "release/humble/performance_test_fixture/0.0.9-1";
+        sha256 = "sha256-AGkyb6QjietsUExtcqvwhnGy5Sd2EFBT8JkBAd4rb4o=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-core ament-cmake-export-dependencies ament-cmake-export-targets ament-cmake-test ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-velocity-controllers";
   version = "0.17.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/velocity_controllers/0.17.2-1.tar.gz";
-    name = "0.17.2-1.tar.gz";
-    sha256 = "08a54e78a180a7e56154d1860450a7c3c3f36158944b60cd584cfed0baf463f7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_controllers-release";
+        rev = "release/melodic/velocity_controllers/0.17.2-1";
+        sha256 = "sha256-cCn8khYU61nr8QNOPPaae369ID5p2y1g4EZKNvu7SJs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

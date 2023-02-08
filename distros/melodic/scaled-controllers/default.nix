@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-scaled-controllers";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_scaled_controllers-release/archive/release/melodic/scaled_controllers/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "326bb647af2998e8552761864179e37433d7b8902b36fbbb3232d1e7e452ac8d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UniversalRobots";
+        repo = "Universal_Robots_ROS_scaled_controllers-release";
+        rev = "release/melodic/scaled_controllers/0.1.0-1";
+        sha256 = "sha256-aMcK8c5WS85vYboHV04KmtAEM3bx0yExlt73qAmWd38=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

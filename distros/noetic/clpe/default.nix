@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-clpe";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/canlab-co/CLPE_G_NVP2650D_SDK-ros-release/archive/release/noetic/clpe/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "45810c0873214b49d02b4e810a2172b24931239eee4a53686c3afaad065a2277";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "canlab-co";
+        repo = "CLPE_G_NVP2650D_SDK-ros-release";
+        rev = "release/noetic/clpe/0.1.1-1";
+        sha256 = "sha256-lYeqbmx4YnEN/ZD3I/ufk2s0MgsloJ3usbGQ7GtSesc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pkg-config ];

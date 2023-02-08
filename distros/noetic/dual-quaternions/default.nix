@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dual-quaternions";
   version = "0.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/Achllle/dual_quaternions-release/archive/release/noetic/dual_quaternions/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "41c7d1914282dd7c9d27656d1a93088f30cefa8c95ec698b08c7d1a431230c28";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Achllle";
+        repo = "dual_quaternions-release";
+        rev = "release/noetic/dual_quaternions/0.3.2-1";
+        sha256 = "sha256-MqSy4w6xMyoGTBTkUhni7eHaHhByXTQ1FXJPUd3du2c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

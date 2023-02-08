@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ecl-exceptions";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/rolling/ecl_exceptions/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "717e0bf69e3eb4ac9504593bd28feb7a5175956eb529cc49ad0ce553991a239e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "ecl_core-release";
+        rev = "release/rolling/ecl_exceptions/1.2.1-1";
+        sha256 = "sha256-vSUx0IaohNthgxC/EHPPCyDY6YrVAcZUT4u5L099eA4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ecl-build ];

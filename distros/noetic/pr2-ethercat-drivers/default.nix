@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pr2-ethercat-drivers";
   version = "1.9.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_ethercat_drivers-release/archive/release/noetic/pr2_ethercat_drivers/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "a5f9b21836a44729c9c169a59601d14be248abd6ffee90716e770e362e0b88b5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_ethercat_drivers-release";
+        rev = "release/noetic/pr2_ethercat_drivers/1.9.0-1";
+        sha256 = "sha256-IhBzJTFc1lxIA+nah4mCi1iyAAEEm48tA2D6kbQH0m0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

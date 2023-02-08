@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-quaternion-operation";
   version = "0.0.7-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/quaternion_operation-release/archive/release/rolling/quaternion_operation/0.0.7-2.tar.gz";
-    name = "0.0.7-2.tar.gz";
-    sha256 = "533530cebee0024b00353383d614af363c190eb9d47c4dd04fb4660a7130b966";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "quaternion_operation-release";
+        rev = "release/rolling/quaternion_operation/0.0.7-2";
+        sha256 = "sha256-EOoZrowJNVGtJNutD+5WlSgVWbmOGlzSJyvsALmfji8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

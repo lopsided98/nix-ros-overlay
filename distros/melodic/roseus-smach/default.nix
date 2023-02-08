@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-roseus-smach";
   version = "1.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_roseus-release/archive/release/melodic/roseus_smach/1.7.4-1.tar.gz";
-    name = "1.7.4-1.tar.gz";
-    sha256 = "d174a427c36c766fcc47ceb18a95cc3dda75a74b04550a7b7d2b8de78af3edde";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_roseus-release";
+        rev = "release/melodic/roseus_smach/1.7.4-1";
+        sha256 = "sha256-JsSwAXxA64pUYiSc+UHIRV4NyzOmsEUAz44q1hb3E2I=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

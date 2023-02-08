@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-statistics-msgs";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/statistics_msgs/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "ac81a94c088aea74268cda9dadf1227a373a0674c9b322b1db71dc6b9071ff34";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcl_interfaces-release";
+        rev = "release/rolling/statistics_msgs/1.3.1-1";
+        sha256 = "sha256-cBADg0sJq27itEoY/MUbpPxjoo1kwRhxtYo1yCWN8G0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

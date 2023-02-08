@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-robot-steering";
   version = "0.5.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_robot_steering-release/archive/release/noetic/rqt_robot_steering/0.5.12-1.tar.gz";
-    name = "0.5.12-1.tar.gz";
-    sha256 = "6cb57401673fd0d5d16dcead9fc27e2820d55760883578afc4b7dccb857b5d1e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_robot_steering-release";
+        rev = "release/noetic/rqt_robot_steering/0.5.12-1";
+        sha256 = "sha256-NIDQg6taxI/BcxQUfxYJU/HgQqiKCW2iiVSRhURGd3k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

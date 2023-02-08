@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-backward-ros";
   version = "0.1.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/backward_ros-release/archive/release/noetic/backward_ros/0.1.7-1.tar.gz";
-    name = "0.1.7-1.tar.gz";
-    sha256 = "64789ad4703518a057483120d2df9ef2780f4f4436e1752311bd62e46368309c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "backward_ros-release";
+        rev = "release/noetic/backward_ros/0.1.7-1";
+        sha256 = "sha256-MolJFqHoajXdXEJBQR2LBa37fiXOh7IY1nSLt4/OMKw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

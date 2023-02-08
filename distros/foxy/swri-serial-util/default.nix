@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-swri-serial-util";
   version = "3.5.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/foxy/swri_serial_util/3.5.1-1.tar.gz";
-    name = "3.5.1-1.tar.gz";
-    sha256 = "417f60ca151d7a5218479b32c2b150c468cc8e06b3f75409e50d9bf50f38b7a6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "marti_common-release";
+        rev = "release/foxy/swri_serial_util/3.5.1-1";
+        sha256 = "sha256-5WYFkS8lxtzfkxt0i1LrHgDmTnBotcjfDZgOrpWLLP8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

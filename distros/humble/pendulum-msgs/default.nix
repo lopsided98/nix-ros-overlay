@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-pendulum-msgs";
-  version = "0.20.2-r1";
+  version = "0.20.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/pendulum_msgs/0.20.2-1.tar.gz";
-    name = "0.20.2-1.tar.gz";
-    sha256 = "e3d60c0ca93463b6adbb6187ad11c9fea51f6b88a07846a3c73ed2fddbbdc193";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/humble/pendulum_msgs/0.20.3-1";
+        sha256 = "sha256-Cy7MHwVyZHQOVkJ8PGJshgOeoDGPxUz7qiWbDExaEH0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

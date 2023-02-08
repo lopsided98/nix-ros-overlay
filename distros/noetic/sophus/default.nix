@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-sophus";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/sophus-release/archive/release/noetic/sophus/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "ef6951ab8dbffc56d6898d916e5421f44195bc7dce4fe4982f26796d790c72c0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "sophus-release";
+        rev = "release/noetic/sophus/1.2.1-1";
+        sha256 = "sha256-/fr0tgRRgBcz7eJIMTxzab4H3swd8AtsTXDhkUUPPDo=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

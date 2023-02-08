@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-asmach-tutorials";
   version = "1.0.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/asmach_tutorials/1.0.16-1.tar.gz";
-    name = "1.0.16-1.tar.gz";
-    sha256 = "d4a5d35e1424c9a9e17f9a66b1bbea3de63f71d037df9cc932cf28f62c00f69e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "linux_networking-release";
+        rev = "release/melodic/asmach_tutorials/1.0.16-1";
+        sha256 = "sha256-bnUU2cISKX229nx7qN1XY6rqxszIbDgNjNRiBfLDSZY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

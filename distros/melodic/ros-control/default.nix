@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ros-control";
   version = "0.18.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/ros_control/0.18.4-1.tar.gz";
-    name = "0.18.4-1.tar.gz";
-    sha256 = "3f1eedc90b71c32c00741cd89d1f597a3fa84916416fdf705171b9a775d5e2c1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_control-release";
+        rev = "release/melodic/ros_control/0.18.4-1";
+        sha256 = "sha256-H1J2oByuchf/kbUEKn+moZE020TCnf3be1/OpK1qM/g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

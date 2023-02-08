@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ecl-navigation";
   version = "0.60.3";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_navigation-release/archive/release/melodic/ecl_navigation/0.60.3-0.tar.gz";
-    name = "0.60.3-0.tar.gz";
-    sha256 = "1d3e834b6aa0b70617f25fc03c9c7f275e5280ed6a75570483b0db48ecd5b32d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "ecl_navigation-release";
+        rev = "release/melodic/ecl_navigation/0.60.3-0";
+        sha256 = "sha256-z63hJpfoyqhP8rI/Ri/3Kt+em5xuoOr0LSYOyW1LPVU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

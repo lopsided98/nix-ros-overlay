@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-imagesift";
   version = "1.2.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/imagesift/1.2.15-1.tar.gz";
-    name = "1.2.15-1.tar.gz";
-    sha256 = "0ebd264be9395ab7d14ca8daec8e98aa961cfa44134c02dad6e775c277486e53";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_recognition-release";
+        rev = "release/melodic/imagesift/1.2.15-1";
+        sha256 = "sha256-r9uhAIkmQer5PvqENwrrsezi1M+tIToO+CW4RBFPA8g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules pythonPackages.setuptools ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-turtlebot3-automatic-parking";
   version = "1.1.0";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/turtlebot3_applications-release/archive/release/melodic/turtlebot3_automatic_parking/1.1.0-0.tar.gz";
-    name = "1.1.0-0.tar.gz";
-    sha256 = "5ab127fe3a3ff9c1eb767058c423d2e7625925a482c808ddf35047daaa4852be";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "turtlebot3_applications-release";
+        rev = "release/melodic/turtlebot3_automatic_parking/1.1.0-0";
+        sha256 = "sha256-BUjJ/zuSMuI1m7DKWnA9gsN9DrdecdzWEg5m/Sms1uo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

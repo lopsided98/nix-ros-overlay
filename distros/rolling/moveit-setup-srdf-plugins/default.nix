@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-moveit-setup-srdf-plugins";
   version = "2.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/rolling/moveit_setup_srdf_plugins/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "3b117b4f95e3355b909fea58b8f4dd17cbe1c263fde0517754b8b6ba345e5132";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "moveit2-release";
+        rev = "release/rolling/moveit_setup_srdf_plugins/2.6.0-1";
+        sha256 = "sha256-9k1YD8qvhYQI9kVtxughuh35K73/3rjiIc10grWeFeY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

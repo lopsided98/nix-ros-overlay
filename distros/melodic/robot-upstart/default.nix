@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robot-upstart";
   version = "0.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/robot_upstart-release/archive/release/melodic/robot_upstart/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "5c691943bed1f9d4c20a817d902bd00460705f7836d6fc2f3142de8f1c4c8153";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "robot_upstart-release";
+        rev = "release/melodic/robot_upstart/0.3.3-1";
+        sha256 = "sha256-XXbKOeP6wvYrVsSzttEDEuknNURVX3iUvyRv/RjjjsM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

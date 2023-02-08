@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nav2d-tutorials";
   version = "0.4.2";
 
-  src = fetchurl {
-    url = "https://github.com/skasperski/navigation_2d-release/archive/release/melodic/nav2d_tutorials/0.4.2-0.tar.gz";
-    name = "0.4.2-0.tar.gz";
-    sha256 = "ae60ec866cca40ba8cd6f96181b3dfed1bde5cac12dd9813260a77837e078b3b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "skasperski";
+        repo = "navigation_2d-release";
+        rev = "release/melodic/nav2d_tutorials/0.4.2-0";
+        sha256 = "sha256-3I9iwsru+8hJGTgj6rQwR9pxg56t9QUJNNQTRQd9LD8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

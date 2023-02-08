@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-roscompile";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/wu-robotics/roscompile-release/archive/release/noetic/roscompile/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "1f4081ebd062fcc0ebe0bcb6054ba3e0673bc624a48518964dcccc5411587e82";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wu-robotics";
+        repo = "roscompile-release";
+        rev = "release/noetic/roscompile/1.2.1-1";
+        sha256 = "sha256-ByXxHE2jb+wWplB1Qo+vRu2V/NUnU2FH/sejPcjtEp0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ python3Packages.setuptools ];

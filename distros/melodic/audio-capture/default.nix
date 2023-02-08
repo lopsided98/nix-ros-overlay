@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-audio-capture";
   version = "0.3.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/audio_common-release/archive/release/melodic/audio_capture/0.3.16-1.tar.gz";
-    name = "0.3.16-1.tar.gz";
-    sha256 = "da958c6fce2f2d3cd9d8bc28220da9697e79199df8dd0b68ad44915ce8cf8a5c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "audio_common-release";
+        rev = "release/melodic/audio_capture/0.3.16-1";
+        sha256 = "sha256-cGFx7OG950YwKE6O5tEKDxSCpfI2ituNXsRJ588n9n0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

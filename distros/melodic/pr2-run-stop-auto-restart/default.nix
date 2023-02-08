@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-run-stop-auto-restart";
   version = "1.6.31-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_robot-release/archive/release/melodic/pr2_run_stop_auto_restart/1.6.31-1.tar.gz";
-    name = "1.6.31-1.tar.gz";
-    sha256 = "fa853451175edde8c733e2088e19c6cb7eede021117b6a65fbdf95b514db6a3e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_robot-release";
+        rev = "release/melodic/pr2_run_stop_auto_restart/1.6.31-1";
+        sha256 = "sha256-3lydsKmgnO0OHUmf9FC3IdD20gGWxRecA5/TAi12wXA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

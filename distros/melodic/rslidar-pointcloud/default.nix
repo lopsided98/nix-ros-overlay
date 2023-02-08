@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rslidar-pointcloud";
   version = "1.0.2";
 
-  src = fetchurl {
-    url = "https://github.com/CPFL/robosense-release/archive/release/melodic/rslidar_pointcloud/1.0.2-0.tar.gz";
-    name = "1.0.2-0.tar.gz";
-    sha256 = "a6c848ebbe5c69d8458345fbb9c5fd54012a1a96130c1587ccf0b251de64aa75";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "CPFL";
+        repo = "robosense-release";
+        rev = "release/melodic/rslidar_pointcloud/1.0.2-0";
+        sha256 = "sha256-9on+vcFAiCyYgYHRSthq63y73GUDaxERmq/if+PM4lA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pcl-conversions roslaunch rostest tf2-ros ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-control-toolbox";
   version = "1.19.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/control_toolbox-release/archive/release/noetic/control_toolbox/1.19.0-1.tar.gz";
-    name = "1.19.0-1.tar.gz";
-    sha256 = "64f03769fcf0512c51bca4e1cc1278d05dfee163887a851b48f83b5c30524cfe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "control_toolbox-release";
+        rev = "release/noetic/control_toolbox/1.19.0-1";
+        sha256 = "sha256-NqCiktyzf2fr20qocOQRAYRWDeHBjmB+vnXlPYU3INg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules message-generation ];

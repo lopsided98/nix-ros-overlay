@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ecl-converters-lite";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_lite-release/archive/release/rolling/ecl_converters_lite/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "0e7587fa673456a2ad755c8ff27d54287afd5823fd7016a9e47d799f48edb6b8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "ecl_lite-release";
+        rev = "release/rolling/ecl_converters_lite/1.2.0-1";
+        sha256 = "sha256-a8sm73bxxx6IYDP6tv76IbjyUHSAzx6QreCCBMQUePE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

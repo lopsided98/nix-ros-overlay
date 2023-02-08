@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-prosilica-gige-sdk";
   version = "1.26.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/prosilica_gige_sdk-release/archive/release/noetic/prosilica_gige_sdk/1.26.3-2.tar.gz";
-    name = "1.26.3-2.tar.gz";
-    sha256 = "9f6c2b87f379e186ffb2f156befd99157cad4c3532ff644ec84471fd3cd26bcc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "prosilica_gige_sdk-release";
+        rev = "release/noetic/prosilica_gige_sdk/1.26.3-2";
+        sha256 = "sha256-cX85yiPAgi7o6+4ejYv642BsMbesKjHlXtP3ZJ4bkQM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

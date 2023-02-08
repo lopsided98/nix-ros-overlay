@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-stage";
   version = "4.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/stage-release/archive/release/noetic/stage/4.3.0-1.tar.gz";
-    name = "4.3.0-1.tar.gz";
-    sha256 = "3fc7830e9adb6c52dec23b0836191f375d18a7b8943c42f63e8e4aa027b854c6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "stage-release";
+        rev = "release/noetic/stage/4.3.0-1";
+        sha256 = "sha256-I4psU8+xrEh2p3KAHkSjbhAYz+hzq7GOzqJ2/D6qwEE=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake libtool pkg-config ];

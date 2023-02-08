@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rqt-py-common";
   version = "1.1.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/humble/rqt_py_common/1.1.4-1.tar.gz";
-    name = "1.1.4-1.tar.gz";
-    sha256 = "d4fff9ad6dd1f6aba35873040e5681f6be38a01c58e858d1c43883c7dc041b2a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt-release";
+        rev = "release/humble/rqt_py_common/1.1.4-1";
+        sha256 = "sha256-GK7iIHH+KYNKNaQYBnyDAwk1UsxVwPfckqljxbheN4g=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

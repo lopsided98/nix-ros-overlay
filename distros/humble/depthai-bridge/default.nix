@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, camera-info-manager, cv-bridge, depthai, depthai-ros-msgs, image-transport, opencv, rclcpp, robot-state-publisher, ros-environment, sensor-msgs, std-msgs, stereo-msgs, vision-msgs, xacro }:
 buildRosPackage {
   pname = "ros-humble-depthai-bridge";
-  version = "2.5.3-r1";
+  version = "2.6.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/humble/depthai_bridge/2.5.3-1.tar.gz";
-    name = "2.5.3-1.tar.gz";
-    sha256 = "370db157b07fae810ea63f80e1afa92dafc86a4f2c640b02dd97b1c6f177fb6c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "luxonis";
+        repo = "depthai-ros-release";
+        rev = "release/humble/depthai_bridge/2.6.1-1";
+        sha256 = "sha256-6oOpmpcQEfVfPW7ERLuhxcA2e+MD1Dw0kwSFELtmcuM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

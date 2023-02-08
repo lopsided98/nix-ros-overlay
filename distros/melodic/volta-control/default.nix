@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-volta-control";
   version = "1.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/botsync-gbp/volta-release/archive/release/melodic/volta_control/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "cd9044f1c440c754dfd80735dfb69c93d12268a9aeb0d2fcc76928fee6bb9a70";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "botsync-gbp";
+        repo = "volta-release";
+        rev = "release/melodic/volta_control/1.1.1-1";
+        sha256 = "sha256-JE5iCjtFFv+eR/DNQcPY4GUAe7qAuvF/7+l08rP/ZKE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

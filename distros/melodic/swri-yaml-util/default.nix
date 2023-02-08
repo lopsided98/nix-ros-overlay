@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-swri-yaml-util";
   version = "2.15.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_yaml_util/2.15.2-1.tar.gz";
-    name = "2.15.2-1.tar.gz";
-    sha256 = "3c959e8d2d3fbab727fe55b10e3aa174a2ebffc79bce7e60e4df92dfa5460e8b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "marti_common-release";
+        rev = "release/melodic/swri_yaml_util/2.15.2-1";
+        sha256 = "sha256-3pfyGTUKsQ/+qxn6ekxKD007itkeaUMFKF25MfMpGjA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pkg-config ];

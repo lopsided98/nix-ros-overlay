@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, microstrain-inertial-msgs, nav-msgs, rclpy, rqt-gui, rqt-gui-py, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-microstrain-inertial-rqt";
-  version = "2.7.1-r1";
+  version = "3.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/rolling/microstrain_inertial_rqt/2.7.1-1.tar.gz";
-    name = "2.7.1-1.tar.gz";
-    sha256 = "9416b0106341833db9b5d220d6a918a6fa140ccb71b7340e55090b2d450542a1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "microstrain_inertial-release";
+        rev = "release/rolling/microstrain_inertial_rqt/3.0.0-1";
+        sha256 = "sha256-OvjYgtHC/5jU2RV8qNvN+c5ZV0rVScf1u1LaJwLt8BM=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ geometry-msgs microstrain-inertial-msgs nav-msgs rclpy rqt-gui rqt-gui-py std-msgs ];

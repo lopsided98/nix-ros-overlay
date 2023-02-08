@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-sbpl";
   version = "1.3.1-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/sbpl-release/archive/release/noetic/sbpl/1.3.1-3.tar.gz";
-    name = "1.3.1-3.tar.gz";
-    sha256 = "b9a0c52ebc5d5e5beace383c1fc2be3d1be1596135b3857c7812ebbffde9d706";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "sbpl-release";
+        rev = "release/noetic/sbpl/1.3.1-3";
+        sha256 = "sha256-cgcPFOXOMnw5oAxDkyMNOhxfemMesoM4xzpW+ZQlqAc=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ecl-sigslots";
   version = "0.62.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/noetic/ecl_sigslots/0.62.3-1.tar.gz";
-    name = "0.62.3-1.tar.gz";
-    sha256 = "38a1cccb17b81e055ae00a2e4c4fa1a4dfb990143209077d67553ceb5bf69873";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "ecl_core-release";
+        rev = "release/noetic/ecl_sigslots/0.62.3-1";
+        sha256 = "sha256-Eg5ThkPbDsDuHB3Zc9qU5Lm0b+cgq4G64BG+oK5xl34=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

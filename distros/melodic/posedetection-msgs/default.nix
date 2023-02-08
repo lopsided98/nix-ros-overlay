@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-posedetection-msgs";
   version = "4.3.1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/melodic/posedetection_msgs/4.3.1-0.tar.gz";
-    name = "4.3.1-0.tar.gz";
-    sha256 = "1538ca360bd31dcfa85392ba78374d072d64a3426425c64b08d8db149ea5cd3a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_common_msgs-release";
+        rev = "release/melodic/posedetection_msgs/4.3.1-0";
+        sha256 = "sha256-hkSlrRiTuLzKdNW/Qabk3wToXnaEkT9C6uZl/p7ydaw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

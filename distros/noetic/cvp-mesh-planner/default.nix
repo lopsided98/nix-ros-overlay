@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cvp-mesh-planner";
   version = "1.0.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/noetic/cvp_mesh_planner/1.0.1-2.tar.gz";
-    name = "1.0.1-2.tar.gz";
-    sha256 = "51975aa6b41005194eee9f02a08f7ca7dc6e490d18e354a989f161548e2fd2dc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mesh_navigation-release";
+        rev = "release/noetic/cvp_mesh_planner/1.0.1-2";
+        sha256 = "sha256-RbPYuvZiCDhgnFZuUBkYFtdpaiHRQcsby6m+UlFSoTs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

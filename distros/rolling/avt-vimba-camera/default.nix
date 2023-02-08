@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-avt-vimba-camera";
   version = "2001.1.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/avt_vimba_camera-release/archive/release/rolling/avt_vimba_camera/2001.1.0-2.tar.gz";
-    name = "2001.1.0-2.tar.gz";
-    sha256 = "3cfa1e5bbe3c22b6e4fb7d6b46e178882a1b85c67229906e03d122fd9bd771b9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "avt_vimba_camera-release";
+        rev = "release/rolling/avt_vimba_camera/2001.1.0-2";
+        sha256 = "sha256-Bm7dBh5ZYXxpxJm1eYCSgkKmcKEdGdGNbk/BO9A6rac=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

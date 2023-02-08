@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-libpointmatcher";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/nobleo/libpointmatcher-release/archive/release/melodic/libpointmatcher/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "26af003dfa5ec17281d65835377028672f83fe45b488c7923c078856fc0c3b99";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "nobleo";
+        repo = "libpointmatcher-release";
+        rev = "release/melodic/libpointmatcher/1.3.1-1";
+        sha256 = "sha256-96czxG0jg3fhdnnpfunDXT5SeulBTS0I2wHxgBhzunA=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

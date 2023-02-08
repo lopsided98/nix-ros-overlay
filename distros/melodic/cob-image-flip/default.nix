@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-image-flip";
   version = "0.6.17-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/melodic/cob_image_flip/0.6.17-1.tar.gz";
-    name = "0.6.17-1.tar.gz";
-    sha256 = "613810e32dc7aa20543979f92aeb6bfa7fc799c72b863b6dc344b992a5ee8d66";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_perception_common-release";
+        rev = "release/melodic/cob_image_flip/0.6.17-1";
+        sha256 = "sha256-uSxZ6joIcLQg9xHFmUTDeusvb6Wv46DqieQD/MCZ/mc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

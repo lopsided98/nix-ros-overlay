@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-hector-nav-msgs";
   version = "0.5.2-r4";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_nav_msgs/0.5.2-4.tar.gz";
-    name = "0.5.2-4.tar.gz";
-    sha256 = "e4d5333e218e78929a4f1da4e468c2876507dd9a3e0fd51bec0a1a544874f45b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_slam-release";
+        rev = "release/noetic/hector_nav_msgs/0.5.2-4";
+        sha256 = "sha256-vc5uhc6FhQv28vU5PQM4IsUNXV5S44J0y7KLVVvZ1p8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

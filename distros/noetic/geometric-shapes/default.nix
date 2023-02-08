@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-geometric-shapes";
   version = "0.7.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometric_shapes-release/archive/release/noetic/geometric_shapes/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "6f105fb610c996aabe52df57a2bed75ee9337a01f079495b78a1fa182ed66d63";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometric_shapes-release";
+        rev = "release/noetic/geometric_shapes/0.7.3-1";
+        sha256 = "sha256-JgnwXaLnJWc3+zFFDSHiahiKGZ2XtaZhhLZKo5YDY5o=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pkg-config ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-costmap-converter";
   version = "0.0.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rst-tu-dortmund/costmap_converter-release/archive/release/melodic/costmap_converter/0.0.12-1.tar.gz";
-    name = "0.0.12-1.tar.gz";
-    sha256 = "1dfcb76c15596a6db7a4f16430c1c23fc0c89efe416c7c6605f5e770b10616fc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rst-tu-dortmund";
+        repo = "costmap_converter-release";
+        rev = "release/melodic/costmap_converter/0.0.12-1";
+        sha256 = "sha256-Vcu18wLF3GIxbt0v4bEmWUesm37RR/wRqqFnwPLOAK4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

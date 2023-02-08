@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-action-tutorials-interfaces";
-  version = "0.20.2-r1";
+  version = "0.20.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/action_tutorials_interfaces/0.20.2-1.tar.gz";
-    name = "0.20.2-1.tar.gz";
-    sha256 = "63d4a00e7e06ef94ce93b99aef0495f9c549f8b4c83fe77d605fbe4b98f9b00c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/humble/action_tutorials_interfaces/0.20.3-1";
+        sha256 = "sha256-pMUQA3dcUvzxRPnPgHvmBBJFFkm73x1u1MJ980FhXy0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

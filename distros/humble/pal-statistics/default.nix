@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-pal-statistics";
   version = "2.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_statistics-release/archive/release/humble/pal_statistics/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "7a744e36c0e3010028c986fec1ad1f6b5f50dbc2dcc58ae26008dfa510aff267";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "pal_statistics-release";
+        rev = "release/humble/pal_statistics/2.1.3-1";
+        sha256 = "sha256-mkOWsUa6v2DuDZCpdZ4DiN1tsR4XH1Ip3RyqYmVTf5s=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

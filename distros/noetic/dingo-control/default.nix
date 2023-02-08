@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, diff-drive-controller, interactive-marker-twist-server, joint-state-controller, joy, ridgeback-control, robot-localization, roslaunch, teleop-twist-joy, topic-tools, twist-mux }:
 buildRosPackage {
   pname = "ros-noetic-dingo-control";
-  version = "0.2.0-r1";
+  version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/noetic/dingo_control/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "b3539f28b55abbe1e333a6c7fa90ec112638f2a7627fcdc527a3d4e9f132f671";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "dingo-release";
+        rev = "release/noetic/dingo_control/0.3.0-1";
+        sha256 = "sha256-gznY0FjobnA3VLBVt3Brk9pUsnNunnJVuEfzyrv5Sdk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-face-detector";
   version = "1.4.0-r4";
 
-  src = fetchurl {
-    url = "https://github.com/OSUrobotics/people-release/archive/release/melodic/face_detector/1.4.0-4.tar.gz";
-    name = "1.4.0-4.tar.gz";
-    sha256 = "3e1b62d50cd5401f37c4e8ad3e7af62c315905bc3aebe3681bc7333a07b2b57d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "OSUrobotics";
+        repo = "people-release";
+        rev = "release/melodic/face_detector/1.4.0-4";
+        sha256 = "sha256-RwDtOXcKxm5W7yFoIJ5GEblRTkrY45OVK2TotCX7lNU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

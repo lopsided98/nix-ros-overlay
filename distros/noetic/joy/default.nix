@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-joy";
   version = "1.15.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/joystick_drivers-release/archive/release/noetic/joy/1.15.1-1.tar.gz";
-    name = "1.15.1-1.tar.gz";
-    sha256 = "d09ea880713158e4a7455a892bd618e1c8d2b634cc9fa5d03b7cf9cf73e1ad0c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "joystick_drivers-release";
+        rev = "release/noetic/joy/1.15.1-1";
+        sha256 = "sha256-Ka+iGzT0MwLWj2DaC9TL/2pA45hwMk8CbG550GrZEBA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-ros-robot-interaction";
   version = "1.1.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_robot_interaction/1.1.11-1.tar.gz";
-    name = "1.1.11-1.tar.gz";
-    sha256 = "97d125f94e0f144be421f13edb125f89b3c1a7442fe34dd12ccbaaa472cd43f2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/noetic/moveit_ros_robot_interaction/1.1.11-1";
+        sha256 = "sha256-KrvgFBIPZzvIKSzRaOMotdQaZWZDNv90ejsNzIhjrOs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

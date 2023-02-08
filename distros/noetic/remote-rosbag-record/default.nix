@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-remote-rosbag-record";
   version = "0.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yoshito-n-students/remote_rosbag_record-release/archive/release/noetic/remote_rosbag_record/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "2368a9fc7e072bf4aced606034a3cc0fe54c94e6fb09f522ac242fe7fbadc271";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yoshito-n-students";
+        repo = "remote_rosbag_record-release";
+        rev = "release/noetic/remote_rosbag_record/0.0.4-1";
+        sha256 = "sha256-jBhblCeYMHjojhhvwM3zrV8yCnMBhHHMsD6MCqx7sOU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

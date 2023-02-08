@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rmf-battery";
   version = "0.1.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_battery-release/archive/release/humble/rmf_battery/0.1.3-2.tar.gz";
-    name = "0.1.3-2.tar.gz";
-    sha256 = "db1f2855e8691e4be28d9cc3fdd66bbf2318299ee97ca1454c3d347f56692609";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_battery-release";
+        rev = "release/humble/rmf_battery/0.1.3-2";
+        sha256 = "sha256-oGw9NxbR7XnmDLwVkWHPmJHRVwOZtCV59cLWq56hrUA=";
+      };
 
   buildType = "cmake";
   buildInputs = [ eigen eigen3-cmake-module ];

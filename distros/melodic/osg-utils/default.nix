@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-osg-utils";
   version = "1.0.2-r2";
 
-  src = fetchurl {
-    url = "https://github.com/uji-ros-pkg/visualization_osg-release/archive/release/melodic/osg_utils/1.0.2-2.tar.gz";
-    name = "1.0.2-2.tar.gz";
-    sha256 = "44b9e6940bfb07236c1f66596c82406b2ef5d9df2be508248d24b560d31ac7f5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uji-ros-pkg";
+        repo = "visualization_osg-release";
+        rev = "release/melodic/osg_utils/1.0.2-2";
+        sha256 = "sha256-AulpyytEOV8SvbxppmPReI3cLfsoAW3j2QDPNvVwMZo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

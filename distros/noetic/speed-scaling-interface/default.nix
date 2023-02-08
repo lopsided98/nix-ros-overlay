@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-speed-scaling-interface";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_scaled_controllers-release/archive/release/noetic/speed_scaling_interface/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "7aaf59e25c54244b9c6d30dd863fb9151bb011de66a47bc1baeb8836142d302b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UniversalRobots";
+        repo = "Universal_Robots_ROS_scaled_controllers-release";
+        rev = "release/noetic/speed_scaling_interface/0.1.0-1";
+        sha256 = "sha256-OfoHqjr37QumzWq8tBJgBPqbaA4yXDN/kI6JBfVCoS8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, curl, file, pkg-config }:
 buildRosPackage {
   pname = "ros-humble-libcurl-vendor";
-  version = "3.1.0-r2";
+  version = "3.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/humble/libcurl_vendor/3.1.0-2.tar.gz";
-    name = "3.1.0-2.tar.gz";
-    sha256 = "f9e630d70bf23cb9d439fc1e4e13585aa2597845db73c2757ca88fd8c9a58dc4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "resource_retriever-release";
+        rev = "release/humble/libcurl_vendor/3.1.1-1";
+        sha256 = "sha256-WD5lMiO/i8a9EVdER73DJVBBqnTr/n9bdO9tWpxKLEw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake file ];

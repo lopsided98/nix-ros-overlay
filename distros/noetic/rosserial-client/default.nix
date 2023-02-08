@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosserial-client";
   version = "0.9.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_client/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "4f932635d00221710295d78654ff6dcef7a160d09de9dec4a194045c899d9579";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rosserial-release";
+        rev = "release/noetic/rosserial_client/0.9.2-1";
+        sha256 = "sha256-yYy8NE5wzCo9oMDJBIVmciwrImmrUlgkPMlPFwtDmh8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

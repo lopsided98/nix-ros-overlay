@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-single-joint-position-action";
   version = "1.10.18-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/noetic/single_joint_position_action/1.10.18-1.tar.gz";
-    name = "1.10.18-1.tar.gz";
-    sha256 = "e69860f0edc1f6aad505b4d4796f59fe477d47193b329072b1f1c80fbe6f35ec";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_controllers-release";
+        rev = "release/noetic/single_joint_position_action/1.10.18-1";
+        sha256 = "sha256-xc68WcIBVKnNKoSx3fj2xDoHWxYJ0PAU9jLqxqzHp/0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

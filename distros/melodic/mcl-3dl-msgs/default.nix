@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mcl-3dl-msgs";
   version = "0.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/at-wat/mcl_3dl_msgs-release/archive/release/melodic/mcl_3dl_msgs/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "ad178c99d899d9f4b493afc8dbaf7f719c04af32bd853ac59bab90b85162a833";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "at-wat";
+        repo = "mcl_3dl_msgs-release";
+        rev = "release/melodic/mcl_3dl_msgs/0.6.0-1";
+        sha256 = "sha256-Kam+fpj0OxRpkAKZt4JmLryUm8CefE/1iDYgcQQZcHY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

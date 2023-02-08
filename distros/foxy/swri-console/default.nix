@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-swri-console";
   version = "2.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/swri_console-release/archive/release/foxy/swri_console/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "1aa0dc9dad687d04c57029b3dfc459c6c34a8690db0bf8d18143247ae9ef4d0b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "swri_console-release";
+        rev = "release/foxy/swri_console/2.0.1-1";
+        sha256 = "sha256-81wUEyKnQ8TVzIf9anWaDGhd2cYqDlFpAF+sJ7FgluQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

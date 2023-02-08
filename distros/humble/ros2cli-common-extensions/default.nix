@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-ros2cli-common-extensions";
   version = "0.1.1-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli_common_extensions-release/archive/release/humble/ros2cli_common_extensions/0.1.1-4.tar.gz";
-    name = "0.1.1-4.tar.gz";
-    sha256 = "2fefe07f49de32f9d463eba48bcd825b52cb91585084a633db0109b44f3e7c4f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2cli_common_extensions-release";
+        rev = "release/humble/ros2cli_common_extensions/0.1.1-4";
+        sha256 = "sha256-32uWObO3hDPv9L3mLpl5Vm3mz4eGpui9idqtKeQmQH0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

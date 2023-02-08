@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-json-transport";
   version = "0.0.3";
 
-  src = fetchurl {
-    url = "https://github.com/locusrobotics/json_transport-release/archive/release/melodic/json_transport/0.0.3-0.tar.gz";
-    name = "0.0.3-0.tar.gz";
-    sha256 = "c7077ff6fff4119b0383218c2426ac4629ee02485af8e569920149031f791b2c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "locusrobotics";
+        repo = "json_transport-release";
+        rev = "release/melodic/json_transport/0.0.3-0";
+        sha256 = "sha256-dcwwgJv0vTieJ/+pRe0gqqu/fsE6YL9KgeYWmoqvcHs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

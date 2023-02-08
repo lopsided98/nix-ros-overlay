@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-stubborn-buddies";
   version = "1.0.0-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/stubborn_buddies-release/archive/release/rolling/stubborn_buddies/1.0.0-4.tar.gz";
-    name = "1.0.0-4.tar.gz";
-    sha256 = "d6a4412dd8c0e698e83f27cb71f600256ab2337ae0a5dbe9a40b15df43b5333e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "stubborn_buddies-release";
+        rev = "release/rolling/stubborn_buddies/1.0.0-4";
+        sha256 = "sha256-gR08XIszXNwbw343ie74jForyMoXvqCbhynmzAN+Y/w=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-kobuki-msgs";
   version = "0.7.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/kobuki_msgs-release/archive/release/melodic/kobuki_msgs/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "11990d638a2cea62be1b3f6a33e17a6ac080ec52eda926bb69c173d7c14166ee";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "kobuki_msgs-release";
+        rev = "release/melodic/kobuki_msgs/0.7.0-1";
+        sha256 = "sha256-pPNOb/rCCyHVD5v9TWCWjYenDPJcoAmRDEn2BUsyG4o=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

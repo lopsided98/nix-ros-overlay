@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rqt-robot-steering";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_robot_steering-release/archive/release/foxy/rqt_robot_steering/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "7eea86618e3cca0ca733e5cc2248cb0d229f5f0fe64cf31cb3392ed6f63b88cf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_robot_steering-release";
+        rev = "release/foxy/rqt_robot_steering/1.0.0-1";
+        sha256 = "sha256-GQCdfFYxE/yR3Eostcf+T9VKwP2N45EzidAhXz5uVrw=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ ament-index-python geometry-msgs python-qt-binding rclpy rqt-gui rqt-gui-py ];

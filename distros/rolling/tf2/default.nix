@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-tf2";
   version = "0.29.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2/0.29.0-1.tar.gz";
-    name = "0.29.0-1.tar.gz";
-    sha256 = "415f7b12414cea936c20cf798729de24e2fbc5baa7219bfafbe7e1eba5e3daa8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "geometry2-release";
+        rev = "release/rolling/tf2/0.29.0-1";
+        sha256 = "sha256-eVyRohfZ5B3j7pGDRfyJ98sCVFpEx7o+z+mN/NMG2nE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

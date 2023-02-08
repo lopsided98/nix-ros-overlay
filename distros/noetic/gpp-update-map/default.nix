@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-gpp-update-map";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/dorezyuk/gpp-release/archive/release/noetic/gpp_update_map/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "a9bd9719af1b91957ad5dad8e531e18326e1f922d195c8be9795ad8c96d416c5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "dorezyuk";
+        repo = "gpp-release";
+        rev = "release/noetic/gpp_update_map/0.1.0-1";
+        sha256 = "sha256-0Ws09TZEAJLyIKvIkwiHV3FvR3jBfPhkCSfILbFyGJ8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rc-common-msgs";
   version = "0.5.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_common_msgs-release/archive/release/melodic/rc_common_msgs/0.5.3-1.tar.gz";
-    name = "0.5.3-1.tar.gz";
-    sha256 = "c8469fe24f36076591174b2e99a4a7a00077caa57c067d534c50295a243ee475";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "roboception-gbp";
+        repo = "rc_common_msgs-release";
+        rev = "release/melodic/rc_common_msgs/0.5.3-1";
+        sha256 = "sha256-G47WPj4ioKwiG3LBDBwvrWSQ3ESzCoOfIl70QuepuBs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

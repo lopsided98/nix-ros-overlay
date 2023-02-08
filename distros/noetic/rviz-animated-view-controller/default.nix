@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rviz-animated-view-controller";
   version = "0.2.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rviz_animated_view_controller-release/archive/release/noetic/rviz_animated_view_controller/0.2.0-2.tar.gz";
-    name = "0.2.0-2.tar.gz";
-    sha256 = "0e034b66239818b2e641e61653fa7b17ce61e191868b0c2e7fe4b84b917ebf9a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rviz_animated_view_controller-release";
+        rev = "release/noetic/rviz_animated_view_controller/0.2.0-2";
+        sha256 = "sha256-oqcLyN8xVxsRPPHmsFMY8KPUdI/mhY1Fkf4/VJXbcok=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

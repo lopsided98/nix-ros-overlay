@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-libntcan";
   version = "0.6.17-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/melodic/libntcan/0.6.17-1.tar.gz";
-    name = "0.6.17-1.tar.gz";
-    sha256 = "a54efc92a7411aaef217c0af73fa61b85d5a516c021912c383094236703b3e33";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_extern-release";
+        rev = "release/melodic/libntcan/0.6.17-1";
+        sha256 = "sha256-qxIZTpSke0QRV0FFRmuuG4Li0AMm1bIG7DszRFgKD4Y=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

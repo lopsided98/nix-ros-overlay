@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-common-msgs";
   version = "1.12.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/common_msgs/1.12.8-1.tar.gz";
-    name = "1.12.8-1.tar.gz";
-    sha256 = "3fb881e489b9ea887e468e37e6ddd2d7d23873819b021dc1e4a3b43735ded897";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "common_msgs-release";
+        rev = "release/melodic/common_msgs/1.12.8-1";
+        sha256 = "sha256-o/LXEbkfOodVSAkNbaY15VS1buIK80Aezq+0hUdH2tc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-twist-stamper";
   version = "0.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/twist_stamper-release/archive/release/rolling/twist_stamper/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "8e0dfc633bd1089c68ec3d2a92e58121af884cf1baf6ff44756dca04931f2040";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "twist_stamper-release";
+        rev = "release/rolling/twist_stamper/0.0.3-1";
+        sha256 = "sha256-AE3PKMNhcFfc7nbMllXSYBoKhQmRVHLCirRpDAEknEQ=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

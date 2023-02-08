@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-robot-self-filter";
   version = "0.1.32-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/robot_self_filter-gbp/archive/release/noetic/robot_self_filter/0.1.32-1.tar.gz";
-    name = "0.1.32-1.tar.gz";
-    sha256 = "e627c0eabb4fe4126ab68e4f6e392792669515ae1cc9ec0c6df2328bae93f09b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "robot_self_filter-gbp";
+        rev = "release/noetic/robot_self_filter/0.1.32-1";
+        sha256 = "sha256-I/yYxdaB9pYvjxt/txbSOreUWY9h8F02sj5QbG/enWg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

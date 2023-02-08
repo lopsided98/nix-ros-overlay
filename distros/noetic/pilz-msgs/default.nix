@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pilz-msgs";
   version = "0.7.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_common-release/archive/release/noetic/pilz_msgs/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "2b3d25c920f029fa70ce25f7189c24b933b9db2e901835fb0b6ef0618f519dbb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_common-release";
+        rev = "release/noetic/pilz_msgs/0.7.2-1";
+        sha256 = "sha256-W+oHv2aHEaybIric4kwM04YQ+xk6cc1X/nrQPQgxCSo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

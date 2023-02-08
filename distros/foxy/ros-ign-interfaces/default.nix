@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ros-ign-interfaces";
   version = "0.221.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/foxy/ros_ign_interfaces/0.221.2-1.tar.gz";
-    name = "0.221.2-1.tar.gz";
-    sha256 = "a7a55eb2c8bc0bca95d13563ffa43e77f86aa8984b0816bc12858153cf32aaa7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros_ign-release";
+        rev = "release/foxy/ros_ign_interfaces/0.221.2-1";
+        sha256 = "sha256-+3a+cFKppXUHVpA3FMX8hp65oiqKu8XFV7ZjthEB2Ng=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

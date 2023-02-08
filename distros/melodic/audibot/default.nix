@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-audibot";
   version = "0.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/robustify/audibot-release/archive/release/melodic/audibot/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "789a89794b7ff76ad7a76156d7c048a04ecf00d0c07f9cd17f4ff84df06463c8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "robustify";
+        repo = "audibot-release";
+        rev = "release/melodic/audibot/0.2.2-1";
+        sha256 = "sha256-yLsqwt2iM4LLdIvmxcEbaUB0qqS5FzpxGPi1qqwFT0E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

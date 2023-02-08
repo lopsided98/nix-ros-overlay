@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, pythonPackages, rclpy, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ros2-controllers-test-nodes";
-  version = "2.15.0-r1";
+  version = "3.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/ros2_controllers_test_nodes/2.15.0-1.tar.gz";
-    name = "2.15.0-1.tar.gz";
-    sha256 = "71d89b2bab0a45dc70eb2c8d79f935e351be076c40c380839d131d7f234ead6b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2_controllers-release";
+        rev = "release/rolling/ros2_controllers_test_nodes/3.1.0-1";
+        sha256 = "sha256-oEzQqZpqAKh81ADpiu5z8wnxD2KYlezXfUMrnlfybTI=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ pythonPackages.pytest ];

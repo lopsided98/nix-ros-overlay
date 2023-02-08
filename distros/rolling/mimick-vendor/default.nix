@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-mimick-vendor";
   version = "0.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/mimick_vendor-release/archive/release/rolling/mimick_vendor/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "cee31e9fe55575ca74c7ff1e156c070665b247baa5b730d212214df6b88758a7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "mimick_vendor-release";
+        rev = "release/rolling/mimick_vendor/0.3.1-1";
+        sha256 = "sha256-pXDH9PXGCN1qy5ANpLj7G0dJh8pwQhIVmqLc1ceayZ4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake git ];

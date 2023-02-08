@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-warehouse-ros-sqlite";
   version = "1.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/moveit/warehouse_ros_sqlite-release/archive/release/foxy/warehouse_ros_sqlite/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "d99bd59ef67f8480b45c7df251fc9f50c43c096b295f7bb6da2d752d3ee58ff4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "moveit";
+        repo = "warehouse_ros_sqlite-release";
+        rev = "release/foxy/warehouse_ros_sqlite/1.0.2-1";
+        sha256 = "sha256-KckVzhUqqKqj7UTOM7k8fxoQGkMoO2XselDZgY/mdwE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake boost sqlite3-vendor ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-cartographer";
   version = "1.0.9001-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/cartographer-release/archive/release/foxy/cartographer/1.0.9001-1.tar.gz";
-    name = "1.0.9001-1.tar.gz";
-    sha256 = "4bc1c5c13c3f150d839764d3ed7a1db6563f82316e8c32ebad686a512e7209c6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "cartographer-release";
+        rev = "release/foxy/cartographer/1.0.9001-1";
+        sha256 = "sha256-rxyicosQIdt8xA6pfNTFge/sZ210UDpfJDONaluNWjA=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake gtest python3Packages.sphinx ];

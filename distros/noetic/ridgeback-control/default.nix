@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ridgeback-control";
   version = "0.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/noetic/ridgeback_control/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "66527dfd93b88a9b621ff58a3f9206a7341c7fb104d7c008aacd8e3dcbe534f9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "ridgeback-release";
+        rev = "release/noetic/ridgeback_control/0.3.2-1";
+        sha256 = "sha256-ttPoxAvIEjMzVzXH07iiQ0NPgfkVvVCa62E1EBUS3Ww=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

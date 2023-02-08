@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-settlerlib";
   version = "0.10.14";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/calibration-release/archive/release/melodic/settlerlib/0.10.14-0.tar.gz";
-    name = "0.10.14-0.tar.gz";
-    sha256 = "795d9982aacaca98ad5750e40e707596f6a88b7f7f703ee664ebd98464d861b8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "calibration-release";
+        rev = "release/melodic/settlerlib/0.10.14-0";
+        sha256 = "sha256-QC+unnWPvccOT7yX2x7c/stwQ/CEabx7SLqoZsSaXwM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

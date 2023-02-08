@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cloudwatch-logger";
   version = "2.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/aws-gbp/cloudwatch_logger-release/archive/release/melodic/cloudwatch_logger/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "b76d61d2863ba0edb061c39e0b0722df5a54f62d0f215dc7f5152fe4850fc871";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "aws-gbp";
+        repo = "cloudwatch_logger-release";
+        rev = "release/melodic/cloudwatch_logger/2.3.1-1";
+        sha256 = "sha256-G2vK4ALqJTArJ7NClwecLNAMLuxv0WhOn94mOJeuCZ8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

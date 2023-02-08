@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-robot-controllers-msgs";
   version = "0.8.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/robot_controllers-ros2-release/archive/release/foxy/robot_controllers_msgs/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "7fd891740e919d7c0e3ac402b58d335ae1942038cf6b1c99600c56fd8b5a82ec";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "robot_controllers-ros2-release";
+        rev = "release/foxy/robot_controllers_msgs/0.8.1-1";
+        sha256 = "sha256-ISa5iW0hLsQwNqnCFYa9hQ7P8lyn76FSdkWq3wca0Wc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

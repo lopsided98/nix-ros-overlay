@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-eigen-stl-containers";
   version = "0.1.8";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/eigen_stl_containers-release/archive/release/melodic/eigen_stl_containers/0.1.8-0.tar.gz";
-    name = "0.1.8-0.tar.gz";
-    sha256 = "e10632b9c182ffc09170b5fc80bf0a0f3cb8ab1091c01b44953042ba71ad5843";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "eigen_stl_containers-release";
+        rev = "release/melodic/eigen_stl_containers/0.1.8-0";
+        sha256 = "sha256-2TsWKbxVYO7Di2JWs/jt9UEM6wHbIQJNuk0Vn8xAg2E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

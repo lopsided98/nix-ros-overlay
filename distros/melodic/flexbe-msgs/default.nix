@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-flexbe-msgs";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_msgs/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "b50c2b33386a9314ed984fe8fd9899940b45cede26ece3d7046054b5bb86cc48";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "FlexBE";
+        repo = "flexbe_behavior_engine-release";
+        rev = "release/melodic/flexbe_msgs/1.3.1-1";
+        sha256 = "sha256-5JTEXqvMK3xS1askj4ett71/LTxJn6XjnXYjHooNads=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-pendulum-control";
   version = "0.9.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/pendulum_control/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "863ce27f01834250fca91abc76fc448b716fc8c0c8c2882020509ea525e54e5e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/foxy/pendulum_control/0.9.4-1";
+        sha256 = "sha256-/ngkOTkHvEiMbdVwgI/yGy4pwQUtAGNnH3/Zpmqa954=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

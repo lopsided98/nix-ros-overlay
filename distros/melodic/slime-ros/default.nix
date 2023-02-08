@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-slime-ros";
   version = "0.4.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/melodic/slime_ros/0.4.16-1.tar.gz";
-    name = "0.4.16-1.tar.gz";
-    sha256 = "626705c68ddf409fb0990f686038f71cef98a8742cc1118cb0cc186fc7949f43";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "code-iai-release";
+        repo = "ros_emacs_utils-release";
+        rev = "release/melodic/slime_ros/0.4.16-1";
+        sha256 = "sha256-x/XiYUjq/0XF3nMVMpv2NZ56tfAXbqs4qswU9cLxlFQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-cudnn-cmake-module";
   version = "0.0.1-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/cudnn_cmake_module-release/archive/release/humble/cudnn_cmake_module/0.0.1-3.tar.gz";
-    name = "0.0.1-3.tar.gz";
-    sha256 = "a43dd7f405512974c4bf824296bf6b5cc70e2fb80c3d969c2ab24962be5d2fde";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "cudnn_cmake_module-release";
+        rev = "release/humble/cudnn_cmake_module/0.0.1-3";
+        sha256 = "sha256-J6BqQzZzZMC0MVQ5oJCXgXu5fzoPlV+JErISeIuss6I=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

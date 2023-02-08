@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cl-urdf";
   version = "0.2.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/noetic/cl_urdf/0.2.14-1.tar.gz";
-    name = "0.2.14-1.tar.gz";
-    sha256 = "41abfb6b2a67bb3c43034ef5fecd9d1a4a6e7f27f92455bf5519c0528c786415";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "roslisp_common-release";
+        rev = "release/noetic/cl_urdf/0.2.14-1";
+        sha256 = "sha256-XpWIw8X3Ohaso+DgAXQ5eov/m+092vup/jZov599ct0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

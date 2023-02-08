@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-power-drivers";
   version = "1.1.7";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_power_drivers-release/archive/release/melodic/pr2_power_drivers/1.1.7-0.tar.gz";
-    name = "1.1.7-0.tar.gz";
-    sha256 = "a9c7ac432f7b7adbc1d91393381847c11f2ef23301a4ed5213b661d8855ed12c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_power_drivers-release";
+        rev = "release/melodic/pr2_power_drivers/1.1.7-0";
+        sha256 = "sha256-yBMQ4CWfY5hQn29EWlHqSzkMqBnZjPlTm6D973NuRSg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

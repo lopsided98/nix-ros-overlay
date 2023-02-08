@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-gazebo-plugins";
   version = "2.0.14";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_simulator-release/archive/release/melodic/pr2_gazebo_plugins/2.0.14-0.tar.gz";
-    name = "2.0.14-0.tar.gz";
-    sha256 = "f13b8d70bb7029d167343772dc662a7aff687349c40ecb02e27020a36a8a784b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_simulator-release";
+        rev = "release/melodic/pr2_gazebo_plugins/2.0.14-0";
+        sha256 = "sha256-ZkPFuc76I1S7CTOXio9w/ICm6uQUJUSzBaKr7X/tOU4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin std-srvs ];

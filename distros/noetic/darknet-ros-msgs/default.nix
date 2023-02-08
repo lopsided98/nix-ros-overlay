@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-darknet-ros-msgs";
   version = "1.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/leggedrobotics/darknet_ros-release/archive/release/noetic/darknet_ros_msgs/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "ffb4a63ef48a67dc35cf7887b0c120951ad3b293bf4e0f259660ff7e3d26e29d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "leggedrobotics";
+        repo = "darknet_ros-release";
+        rev = "release/noetic/darknet_ros_msgs/1.1.5-1";
+        sha256 = "sha256-oPBJl0rzVAhQ6G51afRs+6RAcsn2ibDuVXkMZqZgNGM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

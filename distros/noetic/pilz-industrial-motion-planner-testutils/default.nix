@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pilz-industrial-motion-planner-testutils";
   version = "1.1.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/pilz_industrial_motion_planner_testutils/1.1.11-1.tar.gz";
-    name = "1.1.11-1.tar.gz";
-    sha256 = "de499881a05cdaa6f4f8bbf7ca232dec7f349931474c5cbd8928533a638d6ef7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/noetic/pilz_industrial_motion_planner_testutils/1.1.11-1";
+        sha256 = "sha256-8kHSm2Wts3LfNIipScpLtxkham8HFvPKTeMPqn/xde8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin tf2-eigen ];

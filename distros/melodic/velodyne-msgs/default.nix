@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-velodyne-msgs";
   version = "1.5.2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/melodic/velodyne_msgs/1.5.2-0.tar.gz";
-    name = "1.5.2-0.tar.gz";
-    sha256 = "59f623187d275f018300f623402c97eb9ce5dd06d0c95936d5d63916ccabb168";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "velodyne-release";
+        rev = "release/melodic/velodyne_msgs/1.5.2-0";
+        sha256 = "sha256-y0A5ArRLt5bcbr9ijj3GUuCpcqk2DFa0SkfyuvDkd4E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

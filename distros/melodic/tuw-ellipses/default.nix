@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tuw-ellipses";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tuw-robotics/tuw_marker_detection-release/archive/release/melodic/tuw_ellipses/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "6f40eb7c0d83f05f8dac8ce03ca8fd2c6a30876e06174e16d80d8909b84d8749";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tuw-robotics";
+        repo = "tuw_marker_detection-release";
+        rev = "release/melodic/tuw_ellipses/0.1.1-1";
+        sha256 = "sha256-ZhJXJoaT4bG7f0MKMsqhNIVIAXwiyzggRmLqxij867c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules eigen ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-septentrio-gnss-driver";
   version = "1.2.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/septentrio-users/septentrio_gnss_driver-release/archive/release/melodic/septentrio_gnss_driver/1.2.3-2.tar.gz";
-    name = "1.2.3-2.tar.gz";
-    sha256 = "06bad4f5068960ec8c7adb2133dd0fc7eff960e6fdae3c2401c577d80f09b701";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "septentrio-users";
+        repo = "septentrio_gnss_driver-release";
+        rev = "release/melodic/septentrio_gnss_driver/1.2.3-2";
+        sha256 = "sha256-l8gWw/6QWUgcxGhCFwHKBpRwASdfyI5E+lHNGAUvPNY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jackal-cartographer-navigation";
   version = "0.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal_cartographer_navigation-release/archive/release/melodic/jackal_cartographer_navigation/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "42f4aeabb0b51ed36a729a239531196c52a9e1ab1a0c6ae5d75d71fe0a7158b7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "jackal_cartographer_navigation-release";
+        rev = "release/melodic/jackal_cartographer_navigation/0.0.1-1";
+        sha256 = "sha256-fZlsnhhet4q1iln+1CyhUETIsTyVaTkcmCiwpmmvgcA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

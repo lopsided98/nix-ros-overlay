@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-android";
   version = "0.1.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_android-release/archive/release/melodic/cob_android/0.1.8-1.tar.gz";
-    name = "0.1.8-1.tar.gz";
-    sha256 = "997fbbb881d6d168f51a75a2f1444d9178b7b34f33e0d2276651cd3f9e744da7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_android-release";
+        rev = "release/melodic/cob_android/0.1.8-1";
+        sha256 = "sha256-xprUK3k4NcCNtWAMOqnVu5dZDiyNvnVLMcC1ee3GXX4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

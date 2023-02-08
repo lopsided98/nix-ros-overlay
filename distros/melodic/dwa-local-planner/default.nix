@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dwa-local-planner";
   version = "1.16.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/dwa_local_planner/1.16.7-1.tar.gz";
-    name = "1.16.7-1.tar.gz";
-    sha256 = "7c1f6b22e578a0f305d7bd3665ee3aacedace301264626fd773f77e21dd761fa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation-release";
+        rev = "release/melodic/dwa_local_planner/1.16.7-1";
+        sha256 = "sha256-AMKoNm9w6YyZo9wY4/kqtgcXSYa3Otma3J++ZWc/QPA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ angles catkin cmake-modules ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rc-dynamics-api";
   version = "0.10.3-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_dynamics_api-release/archive/release/humble/rc_dynamics_api/0.10.3-3.tar.gz";
-    name = "0.10.3-3.tar.gz";
-    sha256 = "86d3f4c2f77f0c71c4573db4fbbe81d54ed52189cc553c0bfb9f14d431669de0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rc_dynamics_api-release";
+        rev = "release/humble/rc_dynamics_api/0.10.3-3";
+        sha256 = "sha256-Q+zKUMZzx64cpjuiKG8bJOqmaBys1FlMixU8pXCBmvM=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-trajectory-controller";
   version = "0.8.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_trajectory_controller/0.8.12-1.tar.gz";
-    name = "0.8.12-1.tar.gz";
-    sha256 = "048ff51469f4331f28d37dda5522ef4fbafa2ae0a3c3c4014e82dab26aa3f2c0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_control-release";
+        rev = "release/melodic/cob_trajectory_controller/0.8.12-1";
+        sha256 = "sha256-dEoJrVN4uZUtUbWnpCe/BQrnGhhzKFFPNGJBCmXEEvY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

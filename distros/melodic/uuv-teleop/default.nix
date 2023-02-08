@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-uuv-teleop";
   version = "0.6.13";
 
-  src = fetchurl {
-    url = "https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_teleop/0.6.13-0.tar.gz";
-    name = "0.6.13-0.tar.gz";
-    sha256 = "f3bae248754ff04b19bfb6f9575218cc77f9a682426fd3716082098ea055ddfd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uuvsimulator";
+        repo = "uuv_simulator-release";
+        rev = "release/melodic/uuv_teleop/0.6.13-0";
+        sha256 = "sha256-yetX/cITyYx1GGFo57Bkz+oo0OWMPz39JqW9gEInR5w=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

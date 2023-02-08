@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-image-common";
   version = "1.12.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/image_common-release/archive/release/noetic/image_common/1.12.0-1.tar.gz";
-    name = "1.12.0-1.tar.gz";
-    sha256 = "697fe0a393f7b4d08c2dc1168a7479344b4997a1920d233138c07232d90f5d7a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "image_common-release";
+        rev = "release/noetic/image_common/1.12.0-1";
+        sha256 = "sha256-vhV5MHDhoV50CBbBYs8EYfpEhi6dR7RMQMRiaCKuyKE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

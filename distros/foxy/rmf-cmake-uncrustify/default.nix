@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmf-cmake-uncrustify";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_cmake_uncrustify-release/archive/release/foxy/rmf_cmake_uncrustify/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "9b944ee56be4a6dba660c38212522682ba9ac121e3352db10e9ff08ef5e415f7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_cmake_uncrustify-release";
+        rev = "release/foxy/rmf_cmake_uncrustify/1.2.0-1";
+        sha256 = "sha256-YwXGjK9Uaj03Os5oVwylNtS6dDmirgOgm6bY+0K+8Ic=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-core ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pepper-meshes";
   version = "0.2.5";
 
-  src = fetchurl {
-    url = "https://github.com/ros-naoqi/pepper_meshes-release/archive/release/noetic/pepper_meshes/0.2.5-0.tar.gz";
-    name = "0.2.5-0.tar.gz";
-    sha256 = "08a86a6b1f3ef1378c9a02ac74fe74013cd897b1288cabc4dbfd914974290b6c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-naoqi";
+        repo = "pepper_meshes-release";
+        rev = "release/noetic/pepper_meshes/0.2.5-0";
+        sha256 = "sha256-XiNn6TnTQgjYdsLENGC2ljpYUaI48UXJhtHdgz41F+o=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin openjdk ];

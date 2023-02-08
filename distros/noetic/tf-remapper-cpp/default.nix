@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-tf-remapper-cpp";
   version = "1.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/peci1/tf_remapper_cpp-release/archive/release/noetic/tf_remapper_cpp/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "ca712c9318d7ad39dbfa3f8c7736fe7e9600a399177a4a0b6e5c707bbe51e6c1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "peci1";
+        repo = "tf_remapper_cpp-release";
+        rev = "release/noetic/tf_remapper_cpp/1.1.1-1";
+        sha256 = "sha256-gPTx/WRgemtvKvNrCviawV3/lxdKSGSZADICFHMss9k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

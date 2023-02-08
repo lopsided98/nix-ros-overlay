@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tf2-server";
   version = "1.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/peci1/tf2_server-release/archive/release/melodic/tf2_server/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "c67256a38cfb77de988fe3a67334caf05eaab0b13108cf526d109c65e94dd63a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "peci1";
+        repo = "tf2_server-release";
+        rev = "release/melodic/tf2_server/1.0.6-1";
+        sha256 = "sha256-x/pWPJM9Etkzz1+wCI0ebN4a7FErlEC0EaGbYwMwABE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

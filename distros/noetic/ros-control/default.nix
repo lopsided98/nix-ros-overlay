@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ros-control";
   version = "0.19.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/ros_control/0.19.6-1.tar.gz";
-    name = "0.19.6-1.tar.gz";
-    sha256 = "0cc79d68db8a2eeec518498db0d6d806e0137c9984e5a4ecd297db5741871245";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_control-release";
+        rev = "release/noetic/ros_control/0.19.6-1";
+        sha256 = "sha256-xFB18rtMUQsbO0s2w8MHeS254KPmaThnBimDiUK4YK0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

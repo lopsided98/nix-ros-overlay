@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-geodesy";
   version = "0.5.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-geographic-info/geographic_info-release/archive/release/noetic/geodesy/0.5.6-1.tar.gz";
-    name = "0.5.6-1.tar.gz";
-    sha256 = "69da32daf80a20fd6bdf586d440a31a17afcadd46eb6999cacbcf4ce63bf3542";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-geographic-info";
+        repo = "geographic_info-release";
+        rev = "release/noetic/geodesy/0.5.6-1";
+        sha256 = "sha256-3NDENuO56mgQho0Y3nLmEuL/tz7pCcW159ZAQoeDpBE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ angles catkin python3Packages.catkin-pkg python3Packages.setuptools ];

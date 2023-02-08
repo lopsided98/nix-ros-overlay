@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-variant-topic-tools";
   version = "0.1.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/anybotics/variant-release/archive/release/melodic/variant_topic_tools/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "c22ec49ac6b15f1670b487212d1ff3c840c667c8f55f719f68ceddb02f2e317e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "anybotics";
+        repo = "variant-release";
+        rev = "release/melodic/variant_topic_tools/0.1.6-1";
+        sha256 = "sha256-aXS5Fb1EdHRYRVJoyxvJJH5PFfvjfPPlo24AgSwYjeY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

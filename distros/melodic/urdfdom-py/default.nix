@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-urdfdom-py";
   version = "0.4.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/urdfdom_py-release/archive/release/melodic/urdfdom_py/0.4.6-1.tar.gz";
-    name = "0.4.6-1.tar.gz";
-    sha256 = "4422ae385618443c9dd7c0e834cf457d73ddeffedc14c44f682fbd769ab913f7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "urdfdom_py-release";
+        rev = "release/melodic/urdfdom_py/0.4.6-1";
+        sha256 = "sha256-Q8wZfX5ll7vzWYT5TXEhnxu6RGf1//b6ZmUeOgapEKM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools ];

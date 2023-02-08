@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-gpsd-client";
   version = "0.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/melodic/gpsd_client/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "adf1eb7857e1de99693e8b0826b037bc3562caf6f21e015d0023146e21d47ecd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "gps_umd-release";
+        rev = "release/melodic/gpsd_client/0.3.3-1";
+        sha256 = "sha256-MiUnHvwdIX+rvfcj2Uaok4Jud6lyIakUHJBnMsr9Z1g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin gps-common gpsd pkg-config roscpp sensor-msgs ];

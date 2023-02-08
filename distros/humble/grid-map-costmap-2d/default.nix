@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-grid-map-costmap-2d";
   version = "2.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/grid_map-release/archive/release/humble/grid_map_costmap_2d/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "f50942c89f88c00c1c7b23b832ac682fee617579b9ba6353c160fdb487ce25c5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "grid_map-release";
+        rev = "release/humble/grid_map_costmap_2d/2.0.0-1";
+        sha256 = "sha256-OPRvprjYEWWeTe6Af3vvYKTs6kPDe8bVg45wS6nGmrk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake grid-map-cmake-helpers ];

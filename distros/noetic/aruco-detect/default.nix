@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-aruco-detect";
   version = "0.12.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UbiquityRobotics-release/fiducials-release/archive/release/noetic/aruco_detect/0.12.0-1.tar.gz";
-    name = "0.12.0-1.tar.gz";
-    sha256 = "5949eaf2d974b54630da131ff5727df18d49caa8ce66de5120b33bbdf9ff8548";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UbiquityRobotics-release";
+        repo = "fiducials-release";
+        rev = "release/noetic/aruco_detect/0.12.0-1";
+        sha256 = "sha256-QDMNoy3U9niXKbNEO7gWQRh7pYx044yX4Odb4B4oEZ0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

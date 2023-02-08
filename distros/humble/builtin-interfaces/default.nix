@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-builtin-interfaces";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/humble/builtin_interfaces/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "6a8740f732b02d53d95e25d7bf48881f4492021b4e69f0ef0558510ef2cb5399";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcl_interfaces-release";
+        rev = "release/humble/builtin_interfaces/1.2.1-1";
+        sha256 = "sha256-whOcCMxa6gQJM0o3BZYY9GpEzg7g2svk2+whrmFk8bg=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

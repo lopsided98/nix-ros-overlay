@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-angles";
   version = "1.9.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry_angles_utils-release/archive/release/noetic/angles/1.9.13-1.tar.gz";
-    name = "1.9.13-1.tar.gz";
-    sha256 = "bd33e903e57fce8b8cfc4444924e684088609475b61cdd8343e80be60a4861ea";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry_angles_utils-release";
+        rev = "release/noetic/angles/1.9.13-1";
+        sha256 = "sha256-NEcHC6sDSdM0c1Wgb7uui7vdwT+WxWiCmOZOhCTndgk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

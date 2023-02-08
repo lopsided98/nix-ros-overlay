@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-grasping-msgs";
   version = "0.3.1";
 
-  src = fetchurl {
-    url = "https://github.com/mikeferguson/grasping_msgs-gbp/archive/release/melodic/grasping_msgs/0.3.1-0.tar.gz";
-    name = "0.3.1-0.tar.gz";
-    sha256 = "1deeb71cb90294e0027a324105670add8ffd4dabbcd454cc4d2b9508f4fe89af";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mikeferguson";
+        repo = "grasping_msgs-gbp";
+        rev = "release/melodic/grasping_msgs/0.3.1-0";
+        sha256 = "sha256-6k890ogz0VZKvtTMcT8QQCf3sTND96p4bV7L9WA6AaM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

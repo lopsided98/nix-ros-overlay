@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-uos-common-urdf";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/uos-tools/archive/release/melodic/uos_common_urdf/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "649e62977084896ee211f71a8dfe3771d6a1e20846242c172a190539a27d25c3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "uos-tools";
+        rev = "release/melodic/uos_common_urdf/1.0.1-1";
+        sha256 = "sha256-gbshN8ogiDLAyUJN7zMjms+ZJrLsVMoBTGQQwPoUmMU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

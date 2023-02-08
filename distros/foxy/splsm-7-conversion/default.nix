@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-splsm-7-conversion";
   version = "0.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/r2r_spl-release/archive/release/foxy/splsm_7_conversion/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "1c64923a9353dec5e25355f67abeb5be4214aaa7aea09fd820a18aefff2a839e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "r2r_spl-release";
+        rev = "release/foxy/splsm_7_conversion/0.0.2-1";
+        sha256 = "sha256-kPqy85atS+k57IdQqO4Vgdk1npwjVGQ3RTdvIisZcec=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

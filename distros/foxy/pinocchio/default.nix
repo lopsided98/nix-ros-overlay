@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, boost, clang, cmake, doxygen, eigen, eigenpy, git, hpp-fcl, python3, python3Packages, urdfdom }:
 buildRosPackage {
   pname = "ros-foxy-pinocchio";
-  version = "2.6.12-r1";
+  version = "2.6.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/pinocchio-release/archive/release/foxy/pinocchio/2.6.12-1.tar.gz";
-    name = "2.6.12-1.tar.gz";
-    sha256 = "899f34b0aab5a35918a85eb1c5319db991ad4b0939241dc6873157126f0dee92";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "pinocchio-release";
+        rev = "release/foxy/pinocchio/2.6.14-1";
+        sha256 = "sha256-yft9ln4QMfdrybyACplCLY0BOPgaxeaDns6DkO7Q4b0=";
+      };
 
   buildType = "cmake";
   buildInputs = [ clang cmake doxygen git ];

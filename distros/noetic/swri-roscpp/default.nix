@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-swri-roscpp";
   version = "2.15.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_roscpp/2.15.2-1.tar.gz";
-    name = "2.15.2-1.tar.gz";
-    sha256 = "8249abbba7bcc983cc8cb7c527873080b7cd7c7e51499b30177c8dca65ca4da8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "marti_common-release";
+        rev = "release/noetic/swri_roscpp/2.15.2-1";
+        sha256 = "sha256-iYDok1TQuOKAmykFkMTedTrobmTiHAbtj+N12OeYUO4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pkg-config ];

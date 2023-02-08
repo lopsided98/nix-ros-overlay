@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-oxford-gps-eth";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/oxford_gps_eth-release/archive/release/melodic/oxford_gps_eth/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "01a2698e411ac5f0920817701cecbb4916a5c8b1dc89d8ef561befcb59f1c3cb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "oxford_gps_eth-release";
+        rev = "release/melodic/oxford_gps_eth/1.2.1-1";
+        sha256 = "sha256-gIoKuH1fq8Wid1D0zTEmhCX0a4OuVaw8ji7zKsEzkjc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools ];

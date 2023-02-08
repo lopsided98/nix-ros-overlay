@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ur-moveit-config";
   version = "2.2.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/rolling/ur_moveit_config/2.2.4-1.tar.gz";
-    name = "2.2.4-1.tar.gz";
-    sha256 = "0197108a01b800a45743810f559b187224305f6779db62465db2afc0a4b36e58";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "Universal_Robots_ROS2_Driver-release";
+        rev = "release/rolling/ur_moveit_config/2.2.4-1";
+        sha256 = "sha256-/51Umwvv5YpoaA+PZ9o2Q1EyVjXL0pzDNI1lPH6bgEk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];

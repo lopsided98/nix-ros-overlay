@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-octomap-ros";
   version = "0.4.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap_ros-release/archive/release/humble/octomap_ros/0.4.3-1.tar.gz";
-    name = "0.4.3-1.tar.gz";
-    sha256 = "7e1fdde257ada64db03b0df8031c3e41d79b88c345ba525b48911025482fd675";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "octomap_ros-release";
+        rev = "release/humble/octomap_ros/0.4.3-1";
+        sha256 = "sha256-RD+gwS31k6UPEKegLdv6kSOha4ju5W2T5EwCpMkZ5Lc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

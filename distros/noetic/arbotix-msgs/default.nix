@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-arbotix-msgs";
   version = "0.11.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/vanadiumlabs/arbotix_ros-release/archive/release/noetic/arbotix_msgs/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "03ff359d04aed70e2049aff70e16596e345af7808ce1d4c39ceaa8887b0cac08";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "vanadiumlabs";
+        repo = "arbotix_ros-release";
+        rev = "release/noetic/arbotix_msgs/0.11.0-1";
+        sha256 = "sha256-SE0mMZCdJfHPND1Z5SlCWqL9GV4//SvB5Zw0abfMpks=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

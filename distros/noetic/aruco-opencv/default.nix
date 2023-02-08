@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-aruco-opencv";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/aruco_opencv-release/archive/release/noetic/aruco_opencv/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "173ba86a5ab4ea37c1fd173609664cc459946fb22d54542d8fe0009eb49351aa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fictionlab-gbp";
+        repo = "aruco_opencv-release";
+        rev = "release/noetic/aruco_opencv/0.2.0-1";
+        sha256 = "sha256-Jeu8Pmk6oz03zZanWZPcJxqokU7EZYMWFPrgRkW6HLQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ aruco-opencv-msgs catkin ];

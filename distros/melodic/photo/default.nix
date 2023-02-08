@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-photo";
   version = "1.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/bosch-ros-pkg/photo-release/archive/release/melodic/photo/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "61ab67a9bc3909382c062c6c93be55830c71b889b35326014bf3966b88fb354f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "bosch-ros-pkg";
+        repo = "photo-release";
+        rev = "release/melodic/photo/1.0.3-1";
+        sha256 = "sha256-5E1FTiq5QT+FC5TsagoKJKGGX3PykZ7BoPnSHs9VOa0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

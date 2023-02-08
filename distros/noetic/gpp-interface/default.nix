@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-gpp-interface";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/dorezyuk/gpp-release/archive/release/noetic/gpp_interface/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "9c4f61513b1a2712e2fa2ba302cb4b62147b0c3547a728fd39032fbdd368fdaf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "dorezyuk";
+        repo = "gpp-release";
+        rev = "release/noetic/gpp_interface/0.1.0-1";
+        sha256 = "sha256-e5mF0Lz/FBR78HTAmtqT3LApj3O+V1szSQMVsH2VtEc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

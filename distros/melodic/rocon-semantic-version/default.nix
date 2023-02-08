@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rocon-semantic-version";
   version = "0.3.2";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/rocon_tools-release/archive/release/melodic/rocon_semantic_version/0.3.2-0.tar.gz";
-    name = "0.3.2-0.tar.gz";
-    sha256 = "ede22535e402aab843576c2189701ec11878f469e61d6f1055d6822779d2f4c2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "rocon_tools-release";
+        rev = "release/melodic/rocon_semantic_version/0.3.2-0";
+        sha256 = "sha256-/u25yYKPeHlkQvYvweEiNvaMtByrBY8TlYHZ9auT5SE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

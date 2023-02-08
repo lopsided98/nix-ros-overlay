@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-marti-visualization-msgs";
   version = "0.11.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/noetic/marti_visualization_msgs/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "729340251387b7c85d1e1143eb90c6978ad90202521033a6fd98403ff541d499";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "marti_messages-release";
+        rev = "release/noetic/marti_visualization_msgs/0.11.0-1";
+        sha256 = "sha256-d9GigcJGKb6uWYzGyUGq9R5cYF43Wj8ZNM1SHracDpY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

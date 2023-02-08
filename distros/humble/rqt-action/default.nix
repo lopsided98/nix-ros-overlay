@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rqt-action";
   version = "2.0.1-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_action-release/archive/release/humble/rqt_action/2.0.1-3.tar.gz";
-    name = "2.0.1-3.tar.gz";
-    sha256 = "12112e90139283eeecf37fd61d55dd7a1254eeb3c394271e9d5134b7dc8237fe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt_action-release";
+        rev = "release/humble/rqt_action/2.0.1-3";
+        sha256 = "sha256-YE20Hf//2FHYnbnCI5YOD9PWfHDi8xkZwtt5cRkz1io=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ python-qt-binding rclpy rqt-gui rqt-gui-py rqt-msg rqt-py-common ];

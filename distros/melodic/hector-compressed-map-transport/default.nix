@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hector-compressed-map-transport";
   version = "0.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/melodic/hector_compressed_map_transport/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "72b380538c9d4c4368b5631afa0a92e97a02d0cd20da07ee50723b65dd1b3a37";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_slam-release";
+        rev = "release/melodic/hector_compressed_map_transport/0.4.1-1";
+        sha256 = "sha256-IT3MKOme42THX+4W6QSoCUnYMfnbDiaAsbRROExCo7U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

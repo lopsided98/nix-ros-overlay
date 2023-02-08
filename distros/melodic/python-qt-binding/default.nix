@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-python-qt-binding";
   version = "0.4.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/python_qt_binding-release/archive/release/melodic/python_qt_binding/0.4.4-1.tar.gz";
-    name = "0.4.4-1.tar.gz";
-    sha256 = "81666239682642c2c08f0a507f113efe4df1cd7f2cb778d3d02d913bcfa68478";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "python_qt_binding-release";
+        rev = "release/melodic/python_qt_binding/0.4.4-1";
+        sha256 = "sha256-jshBly6YLRxj7Pz//RIsW77viz0Sbw2Lypm7P97Ox50=";
+      };
 
   buildType = "catkin";
   buildInputs = [ qt5.qtbase rosbuild ];

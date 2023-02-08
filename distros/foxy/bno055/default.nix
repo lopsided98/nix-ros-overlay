@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, example-interfaces, python3Packages, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-bno055";
-  version = "0.3.0-r1";
+  version = "0.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/flynneva/bno055-release/archive/release/foxy/bno055/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "2fa11534723964ea51cb8f3ecff54480fc62241b367feb845d4630926cd6226c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "flynneva";
+        repo = "bno055-release";
+        rev = "release/foxy/bno055/0.4.1-1";
+        sha256 = "sha256-4B7R/H6YgcMTqW90WunSaQCp7y/KJZpHFGHdpAQH+nY=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

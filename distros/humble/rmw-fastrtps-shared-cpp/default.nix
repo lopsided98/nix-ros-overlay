@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rmw-fastrtps-shared-cpp";
   version = "6.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_fastrtps-release/archive/release/humble/rmw_fastrtps_shared_cpp/6.2.2-1.tar.gz";
-    name = "6.2.2-1.tar.gz";
-    sha256 = "7714786f855c543ccd128a1b30039b2bf63b2931bcce0fa5e340fb87936876ac";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmw_fastrtps-release";
+        rev = "release/humble/rmw_fastrtps_shared_cpp/6.2.2-1";
+        sha256 = "sha256-NRSdhYa8L2s7DtKvWI7GjwXVhS0Yh29HmYrHRQC2QNM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

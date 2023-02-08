@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-joint-state-publisher";
   version = "1.15.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/joint_state_publisher-release/archive/release/noetic/joint_state_publisher/1.15.1-1.tar.gz";
-    name = "1.15.1-1.tar.gz";
-    sha256 = "e12c52894f255b6b5682d14ebe3a12c0d865a72d92455992987a31e51922115a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "joint_state_publisher-release";
+        rev = "release/noetic/joint_state_publisher/1.15.1-1";
+        sha256 = "sha256-vrLYB9dIaGetgfOshaHAQBuXOrRs3zusugjb1BUxDnI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

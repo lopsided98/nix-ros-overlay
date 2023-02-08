@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rotate-recovery";
   version = "1.16.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/rotate_recovery/1.16.7-1.tar.gz";
-    name = "1.16.7-1.tar.gz";
-    sha256 = "c5dd88b6687c235f1a7764d44adc91465bd0117da2afc12151b6d8798866041a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation-release";
+        rev = "release/melodic/rotate_recovery/1.16.7-1";
+        sha256 = "sha256-wWsK87QZPbZTjsdp9dO9dS524F6aMAALzkyt+sBdUfw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ angles base-local-planner catkin cmake-modules ];

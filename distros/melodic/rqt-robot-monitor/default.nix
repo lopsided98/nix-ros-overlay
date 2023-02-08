@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rqt-robot-monitor";
   version = "0.5.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_robot_monitor-release/archive/release/melodic/rqt_robot_monitor/0.5.14-1.tar.gz";
-    name = "0.5.14-1.tar.gz";
-    sha256 = "914de4f23e33719f90164020750d84e1445f37c7abfef9b477927235eae3b527";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_robot_monitor-release";
+        rev = "release/melodic/rqt_robot_monitor/0.5.14-1";
+        sha256 = "sha256-o8UcpdECMCBChTb200sHsZlrF6SZPkZOZPyqcllFVq4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools ];

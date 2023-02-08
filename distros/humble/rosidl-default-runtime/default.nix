@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rosidl-default-runtime";
   version = "1.2.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_defaults-release/archive/release/humble/rosidl_default_runtime/1.2.0-2.tar.gz";
-    name = "1.2.0-2.tar.gz";
-    sha256 = "878f2541e775ab1d1ac8bd616a667c762acd925699c33c89646d45988c61e60c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl_defaults-release";
+        rev = "release/humble/rosidl_default_runtime/1.2.0-2";
+        sha256 = "sha256-D8f8pyTUOE6fCgzufPRrcZ55sRlr69SdumuckOP+L9A=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

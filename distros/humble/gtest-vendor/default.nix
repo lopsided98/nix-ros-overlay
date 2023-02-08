@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-gtest-vendor";
   version = "1.10.9004-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/googletest-release/archive/release/humble/gtest_vendor/1.10.9004-4.tar.gz";
-    name = "1.10.9004-4.tar.gz";
-    sha256 = "ae16d684d1edfd58c42d6ae250d16d07c888c789a601ab56bb964d23f90990c4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "googletest-release";
+        rev = "release/humble/gtest_vendor/1.10.9004-4";
+        sha256 = "sha256-u2gx0IqMkxU6eLi5phF25OuU1T4HZuCuIhQBi48RXYM=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

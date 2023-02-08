@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-zmqpp-vendor";
   version = "0.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tier4/zmqpp_vendor-release/archive/release/rolling/zmqpp_vendor/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "f005cd5834c9d18366bca1285168e076040d46aa68f827042cb0ee3eac2b4310";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tier4";
+        repo = "zmqpp_vendor-release";
+        rev = "release/rolling/zmqpp_vendor/0.0.2-1";
+        sha256 = "sha256-OHJpSJAua016kXvKxcD1ay55wprlXnqSL19uzz/el6w=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake git ];

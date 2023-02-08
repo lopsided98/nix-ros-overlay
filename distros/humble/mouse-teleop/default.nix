@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-mouse-teleop";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/humble/mouse_teleop/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "1c2fcbd526d9c6329ec2e987be1a9258d3ccbe5460c40a36076e734d7aae6e50";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "teleop_tools-release";
+        rev = "release/humble/mouse_teleop/1.3.0-1";
+        sha256 = "sha256-e7Z2ycDQ6c5iskftouMX5osIQ17YJ6aS1Jn6tEPTs3w=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint ];

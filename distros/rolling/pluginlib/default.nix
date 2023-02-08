@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-pluginlib";
   version = "5.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/rolling/pluginlib/5.2.1-1.tar.gz";
-    name = "5.2.1-1.tar.gz";
-    sha256 = "e716b282ce049be7f68da54f9abb771c44903d2917128567fe565b86810adf56";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "pluginlib-release";
+        rev = "release/rolling/pluginlib/5.2.1-1";
+        sha256 = "sha256-GnQonedocJAzqRn6N+CRmPjNCOt66kpMpsgutiofqkw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

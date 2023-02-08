@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-scaled-joint-trajectory-controller";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_scaled_controllers-release/archive/release/melodic/scaled_joint_trajectory_controller/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "6dea8314c90b48ccb9e02a3877059d765b053bb285c9b4ef64b6601c3bf92439";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "UniversalRobots";
+        repo = "Universal_Robots_ROS_scaled_controllers-release";
+        rev = "release/melodic/scaled_joint_trajectory_controller/0.1.0-1";
+        sha256 = "sha256-YnCM6WrVoaKXHEQeg4iorgy5G+NPAFzOSIiUXPFZbvM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

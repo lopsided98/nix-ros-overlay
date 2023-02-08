@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-sot-tools";
   version = "2.3.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/stack-of-tasks/sot-tools-ros-release/archive/release/melodic/sot-tools/2.3.5-1.tar.gz";
-    name = "2.3.5-1.tar.gz";
-    sha256 = "fb18de16f9d6de4ac41e43509b1058c5f78553a1bcd5e13b2e35d6ca672b6880";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "stack-of-tasks";
+        repo = "sot-tools-ros-release";
+        rev = "release/melodic/sot-tools/2.3.5-1";
+        sha256 = "sha256-N/8HZvhmtQfqtXs82gGjbH5pfnr6+ODZCqcCL0aVVm0=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen git ];

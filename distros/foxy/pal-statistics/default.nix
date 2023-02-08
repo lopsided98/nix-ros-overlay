@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-pal-statistics";
   version = "2.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_statistics-release/archive/release/foxy/pal_statistics/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "22f68620ffac68d0877998071324eb5ec40ec2c8d608597aac548ed830beec1c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "pal_statistics-release";
+        rev = "release/foxy/pal_statistics/2.0.2-1";
+        sha256 = "sha256-2nH8s/QciTdjFCpFtVtxgFMqA/RuyIOquYSlovrkvAo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

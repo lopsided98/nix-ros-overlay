@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-wge100-camera";
   version = "1.8.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/wge100_driver-release/archive/release/noetic/wge100_camera/1.8.5-1.tar.gz";
-    name = "1.8.5-1.tar.gz";
-    sha256 = "6a3dd6522dd3395d1b917bfa9a6dc78c0a1653740f9f33b3247e0fed1e61b0b8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "wge100_driver-release";
+        rev = "release/noetic/wge100_camera/1.8.5-1";
+        sha256 = "sha256-x6F+lyigUl13PI82qkXW0LyUe9YB5zeJujpOU+wvEIc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation rostest ];

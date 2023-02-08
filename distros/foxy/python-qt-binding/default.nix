@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-python-qt-binding";
   version = "1.0.6-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/python_qt_binding-release/archive/release/foxy/python_qt_binding/1.0.6-2.tar.gz";
-    name = "1.0.6-2.tar.gz";
-    sha256 = "677afe0d5db221190285bf5a62827ce95442d3d2b2bdbeb296c3bd512748feab";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "python_qt_binding-release";
+        rev = "release/foxy/python_qt_binding/1.0.6-2";
+        sha256 = "sha256-QNcdyIUJBKp6y7uXEq33g11p9Nz6PTyMAEBj0K1I2SE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake qt5.qtbase ];

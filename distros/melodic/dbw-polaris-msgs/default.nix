@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dbw-polaris-msgs";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/melodic/dbw_polaris_msgs/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "a8ed7285a6f6fe7804235d9e14fdceedfe9ae4c8b75225f288fe7906b8a9a4b8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dbw_polaris_ros-release";
+        rev = "release/melodic/dbw_polaris_msgs/1.1.0-1";
+        sha256 = "sha256-pu+jBW6Q7vx0i6N2NEix+YPJqTF1uA/er0lHTgI/8l4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

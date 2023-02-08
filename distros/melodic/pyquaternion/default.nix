@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pyquaternion";
   version = "0.9.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/Achllle/pyquaternion-release/archive/release/melodic/pyquaternion/0.9.6-1.tar.gz";
-    name = "0.9.6-1.tar.gz";
-    sha256 = "951aa79d9675b3a3bcd33c6554bb52ebfd0364ab26765a5607b5f4802c3a4185";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Achllle";
+        repo = "pyquaternion-release";
+        rev = "release/melodic/pyquaternion/0.9.6-1";
+        sha256 = "sha256-B95hgJLtQ2OvbMzkzmKTUs+TNZilxXLqf73usJfThcI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mbf-costmap-nav";
   version = "0.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/move_base_flex-release/archive/release/noetic/mbf_costmap_nav/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "276f86ef47afaf98ea888f4983cca5a170da3eea3c04d9944f0772bc6899eac4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "move_base_flex-release";
+        rev = "release/noetic/mbf_costmap_nav/0.4.0-1";
+        sha256 = "sha256-q5tl9sG0jps/akYCjcU3kGNOs+dLovzt0GxCAHG43ew=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

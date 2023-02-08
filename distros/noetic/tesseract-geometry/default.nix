@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-tesseract-geometry";
   version = "0.13.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_geometry/0.13.1-1.tar.gz";
-    name = "0.13.1-1.tar.gz";
-    sha256 = "aeb1d3e2b62c507e96322c46b9199c4edcde6d9374cd3b4349a8c21112ac9ff9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "tesseract-release";
+        rev = "release/noetic/tesseract_geometry/0.13.1-1";
+        sha256 = "sha256-lJUS7+aNbbcKv1HI6CjNFlC4lKWiB7cwUMkZF+qItyM=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ros-industrial-cmake-boilerplate ];

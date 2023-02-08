@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-driver-base";
   version = "1.6.8";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/driver_common-release/archive/release/melodic/driver_base/1.6.8-0.tar.gz";
-    name = "1.6.8-0.tar.gz";
-    sha256 = "8f279b3f0297b7798e82dd8d88949507d9dfa4dc58641d6c8d7ec66f65a70c19";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "driver_common-release";
+        rev = "release/melodic/driver_base/1.6.8-0";
+        sha256 = "sha256-u/F3YIOJwHmgKN/hg9m5VF2KqH4dutfdi2VAbGy8R6g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

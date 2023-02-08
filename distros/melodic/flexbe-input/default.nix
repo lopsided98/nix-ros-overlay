@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-flexbe-input";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/melodic/flexbe_input/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "ff53abeb3fdff9cf84447db21f67da532c57366b46801c34348500e63c3bfbba";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "FlexBE";
+        repo = "flexbe_behavior_engine-release";
+        rev = "release/melodic/flexbe_input/1.3.1-1";
+        sha256 = "sha256-d7s3Rg5/scjED5UuXBN4+jbf08+qXoTcmYN0itVunFs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

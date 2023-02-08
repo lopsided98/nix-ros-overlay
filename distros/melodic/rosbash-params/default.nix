@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosbash-params";
   version = "1.0.2";
 
-  src = fetchurl {
-    url = "https://github.com/peci1/rosbash_params-release/archive/release/melodic/rosbash_params/1.0.2-0.tar.gz";
-    name = "1.0.2-0.tar.gz";
-    sha256 = "af9e6ee8c0ffae32824fbbfa2dfcbb6483e0ad1757282f347ca744db60dcb9a1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "peci1";
+        repo = "rosbash_params-release";
+        rev = "release/melodic/rosbash_params/1.0.2-0";
+        sha256 = "sha256-EkL/7jIZv0XMWSc/SHkmGnN9ta7d2ddWD1ah38LyCd8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

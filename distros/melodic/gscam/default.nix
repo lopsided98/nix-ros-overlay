@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-gscam";
   version = "1.0.1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/gscam-release/archive/release/melodic/gscam/1.0.1-0.tar.gz";
-    name = "1.0.1-0.tar.gz";
-    sha256 = "bbd838538ef852691f2de43b5b0a5541e0b8f4a8bd1c5ef7d0bb5c5387491996";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "gscam-release";
+        rev = "release/melodic/gscam/1.0.1-0";
+        sha256 = "sha256-xL+ss3/a5h2gqoOj5oMM8jNFIjHpuNHEEtjEhPtecSU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin gst_all_1.gst-plugins-base gst_all_1.gstreamer ];

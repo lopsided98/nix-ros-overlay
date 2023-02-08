@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pr2-gripper-sensor-controller";
   version = "1.0.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_gripper_sensor-release/archive/release/noetic/pr2_gripper_sensor_controller/1.0.12-1.tar.gz";
-    name = "1.0.12-1.tar.gz";
-    sha256 = "d733acc5d3fd5079f1cf1e7146d007d0c9adc907eb3371d9be2d3ba6c24acb47";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_gripper_sensor-release";
+        rev = "release/noetic/pr2_gripper_sensor_controller/1.0.12-1";
+        sha256 = "sha256-dySX5Nl4IcqDTUiI8IzPPhL/GZ8A+kv8fxZ/ROB3zxY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

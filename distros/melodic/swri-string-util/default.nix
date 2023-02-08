@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-swri-string-util";
   version = "2.15.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_string_util/2.15.2-1.tar.gz";
-    name = "2.15.2-1.tar.gz";
-    sha256 = "ea34be12aa11141705af1896728a59decfc1f4886b76b38af405f9c9c7d13345";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "marti_common-release";
+        rev = "release/melodic/swri_string_util/2.15.2-1";
+        sha256 = "sha256-sN8iZWwiqUE8TuvICjQ5xN89AEaml2Vhg7s/Igd1NQ4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

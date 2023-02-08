@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosparam-shortcuts";
   version = "0.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/rosparam_shortcuts-release/archive/release/noetic/rosparam_shortcuts/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "620eb7c2013dac4e8b2ebb9704e36e702482639ffa6af293058870c6001d8ab7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PickNikRobotics";
+        repo = "rosparam_shortcuts-release";
+        rev = "release/noetic/rosparam_shortcuts/0.4.0-1";
+        sha256 = "sha256-p4ZPcva4QcfB3N+ckPK+noos7vSqCC2Its/m29XKvKs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules eigen roslint ];

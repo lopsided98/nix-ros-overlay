@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-melodic-ruckig";
-  version = "0.6.3-r1";
+  version = "0.9.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pantor/ruckig-release/archive/release/melodic/ruckig/0.6.3-1.tar.gz";
-    name = "0.6.3-1.tar.gz";
-    sha256 = "2d91a730efc4c1c7452b085d98caadfabedd9da926c75b3f8a1cb8f3d430f268";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pantor";
+        repo = "ruckig-release";
+        rev = "release/melodic/ruckig/0.9.1-1";
+        sha256 = "sha256-IEDNR/6JMFG5xGwIQb+/cLOvSW1F7+iDvvSU4dsWkUM=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

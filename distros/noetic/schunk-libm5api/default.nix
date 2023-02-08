@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-schunk-libm5api";
   version = "0.6.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/schunk_modular_robotics-release/archive/release/noetic/schunk_libm5api/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "e3fad08c1926bc24a510f7801c58b823c8790f8114f06747bbb7b6f3f033ce28";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "schunk_modular_robotics-release";
+        rev = "release/noetic/schunk_libm5api/0.6.14-1";
+        sha256 = "sha256-eQ+DYSbflkN+8LXihVVjqF9boMNqKhB8p1T69P5R7Do=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

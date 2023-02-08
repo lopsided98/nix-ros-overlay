@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pointcloud-to-laserscan";
   version = "1.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/pointcloud_to_laserscan-release/archive/release/noetic/pointcloud_to_laserscan/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "acc561fc25b0b63f7eed1f56040bf2992e400e9bba6c22380d571c10478eeb40";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "pointcloud_to_laserscan-release";
+        rev = "release/noetic/pointcloud_to_laserscan/1.4.1-1";
+        sha256 = "sha256-nbLSYZaMRpvQ4Jp9vmiZXIq+J8Rjjh68l09lpekS/lM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

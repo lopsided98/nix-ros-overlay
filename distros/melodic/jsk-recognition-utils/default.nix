@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jsk-recognition-utils";
   version = "1.2.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/jsk_recognition_utils/1.2.15-1.tar.gz";
-    name = "1.2.15-1.tar.gz";
-    sha256 = "2075af1e8da7c8d4f0f559246274dd597cda4b7d4413700a285ca76ba54b4d2b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_recognition-release";
+        rev = "release/melodic/jsk_recognition_utils/1.2.15-1";
+        sha256 = "sha256-k3WWrIY2lKmJ0VvcGmxEsm91VbbLBxpDkjh/8aHCxs4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin dynamic-reconfigure message-generation pythonPackages.cython pythonPackages.setuptools qt5.qtbase ];

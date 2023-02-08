@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fuse-graphs";
   version = "0.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/locusrobotics/fuse-release/archive/release/melodic/fuse_graphs/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "b630f3416c052e14d727a00ffdce6c4cd853400048c39cccb7ae1bdf02d7f30f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "locusrobotics";
+        repo = "fuse-release";
+        rev = "release/melodic/fuse_graphs/0.4.2-1";
+        sha256 = "sha256-cvugc+QoTfpkErB/+qD3bGi0xT24rzvDPzbZT432F3k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

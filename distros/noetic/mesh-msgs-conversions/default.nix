@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mesh-msgs-conversions";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh-tools/archive/release/noetic/mesh_msgs_conversions/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "e69f5498f0167c7d5088658e961b247233b9a4048016d7b82427e05247f3501d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mesh-tools";
+        rev = "release/noetic/mesh_msgs_conversions/1.1.0-1";
+        sha256 = "sha256-QcWLafcS/hIPlcSTItRswYYpQlIgUr75HmrrFSrJZ0g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

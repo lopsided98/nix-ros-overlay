@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-teleop-twist-joy";
   version = "2.4.3-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_twist_joy-release/archive/release/humble/teleop_twist_joy/2.4.3-4.tar.gz";
-    name = "2.4.3-4.tar.gz";
-    sha256 = "94d0c3b58e74dffb249faea5f797e94128b917d81deec516e02e1f8cf621112c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "teleop_twist_joy-release";
+        rev = "release/humble/teleop_twist_joy/2.4.3-4";
+        sha256 = "sha256-dL2vcoGwprRfLIcvS2fa9spvG3HHSGWWI8YYjmC5MVo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

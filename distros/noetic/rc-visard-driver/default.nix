@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rc-visard-driver";
   version = "3.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/noetic/rc_visard_driver/3.3.2-1.tar.gz";
-    name = "3.3.2-1.tar.gz";
-    sha256 = "31fb020aa5cea7aa83940811b5ea52c940b59b8997b19e4fd713e6a7e0f33ec2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "roboception-gbp";
+        repo = "rc_visard-release";
+        rev = "release/noetic/rc_visard_driver/3.3.2-1";
+        sha256 = "sha256-13pcUqqSU2rWlZCP2QywUfY/o/hHrG0WGrvmOWCFr9I=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

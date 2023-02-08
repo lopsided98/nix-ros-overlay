@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-uos-freespace";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/uos-tools/archive/release/melodic/uos_freespace/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "3564c0d97b94ca9fba2a23a4f35d699d491bbd796883f11fa14cc07607f9933b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "uos-tools";
+        rev = "release/melodic/uos_freespace/1.0.1-1";
+        sha256 = "sha256-nv5OxGe04nrd2Cad+cAd30p+kRi89d/QZcS7MajMl5s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

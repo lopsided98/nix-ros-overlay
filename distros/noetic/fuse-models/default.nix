@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fuse-models";
   version = "0.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/locusrobotics/fuse-release/archive/release/noetic/fuse_models/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "e44698977ad88553aa308b36d12d9a4031eaa870a8f389833ad92e0eed2363fd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "locusrobotics";
+        repo = "fuse-release";
+        rev = "release/noetic/fuse_models/0.4.2-1";
+        sha256 = "sha256-XxiZYv0muI50mZkHc0ruzrfsdiAUXM4fh0GQxngf224=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation roslint ];

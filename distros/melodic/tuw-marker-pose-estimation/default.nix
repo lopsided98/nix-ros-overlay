@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tuw-marker-pose-estimation";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tuw-robotics/tuw_marker_detection-release/archive/release/melodic/tuw_marker_pose_estimation/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "58ea5472112e231d213667c8977c5910de7398b71471b12a8a9e55dab48defd2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tuw-robotics";
+        repo = "tuw_marker_detection-release";
+        rev = "release/melodic/tuw_marker_pose_estimation/0.1.1-1";
+        sha256 = "sha256-VZ6SJ6+8Y96vq9YsEucfLiU6IBq0tQyqRCo9eY/00do=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

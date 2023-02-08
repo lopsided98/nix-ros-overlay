@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-astuff-sensor-msgs";
   version = "3.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/astuff_sensor_msgs/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "a96b19f4f23210692d87fdc878b65082a2fab92235461559b586608338996dbe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "astuff_sensor_msgs-release";
+        rev = "release/melodic/astuff_sensor_msgs/3.0.2-1";
+        sha256 = "sha256-uXhgGVk+kYEkPn4WslTVHJrw8DigEKyFpPHBxhd8fz0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ros-environment ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-filters";
   version = "1.8.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/filters-release/archive/release/melodic/filters/1.8.3-1.tar.gz";
-    name = "1.8.3-1.tar.gz";
-    sha256 = "8cd183df34d0c9458e0a3f90d5a1d2885aa9363978347e3e3cfc3d01ec709261";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "filters-release";
+        rev = "release/melodic/filters/1.8.3-1";
+        sha256 = "sha256-5lhvxW7rZfQvb+6q9Sme7WFpWYSrFnpXeroX20jU+Jo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

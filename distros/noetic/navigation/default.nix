@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, amcl, base-local-planner, carrot-planner, catkin, clear-costmap-recovery, costmap-2d, dwa-local-planner, fake-localization, global-planner, map-server, move-base, move-base-msgs, move-slow-and-clear, nav-core, navfn, rotate-recovery, voxel-grid }:
 buildRosPackage {
   pname = "ros-noetic-navigation";
-  version = "1.17.2-r1";
+  version = "1.17.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/navigation/1.17.2-1.tar.gz";
-    name = "1.17.2-1.tar.gz";
-    sha256 = "f9ad7c4bf14a54f994acb35405495d488d3b38001e46c29c1674898d81d368d1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation-release";
+        rev = "release/noetic/navigation/1.17.3-1";
+        sha256 = "sha256-sPbvPsPuHJTDdtqghvfCTHaMy9E15MdFoXrdo8g3O/Y=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

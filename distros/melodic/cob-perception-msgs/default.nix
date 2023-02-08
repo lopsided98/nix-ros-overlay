@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-perception-msgs";
   version = "0.6.17-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/melodic/cob_perception_msgs/0.6.17-1.tar.gz";
-    name = "0.6.17-1.tar.gz";
-    sha256 = "8297efd9fe88077dd93c645e7d0076e40756ea4974911900be57631af8beb464";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_perception_common-release";
+        rev = "release/melodic/cob_perception_msgs/0.6.17-1";
+        sha256 = "sha256-pU4+cg74XtkbrxjjAzB8nrtMJ7yqg/mDRgxmZRIsBsI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

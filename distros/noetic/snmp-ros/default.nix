@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-snmp-ros";
   version = "1.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ctu-vras/snmp_ros-release/archive/release/noetic/snmp_ros/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "ddd3dda2ea56537f872a58d7334919e986055d73f764bb4f4c26faa9426a8489";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ctu-vras";
+        repo = "snmp_ros-release";
+        rev = "release/noetic/snmp_ros/1.0.2-1";
+        sha256 = "sha256-Pk40w3RXhaUM1qTP5wrbrn3BF0XCP3TWZUVR9PyEarc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

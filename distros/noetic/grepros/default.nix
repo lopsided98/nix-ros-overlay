@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-grepros";
   version = "0.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/suurjaak/grepros-release/archive/release/noetic/grepros/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "1bfab99d92cabcf9cc7d650bb305af8b359317e980b04d500e27f45b3c15d093";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "suurjaak";
+        repo = "grepros-release";
+        rev = "release/noetic/grepros/0.5.0-1";
+        sha256 = "sha256-xNIkYkH5iGMMZWXABQF8VH5UPVyLZIyYW7MsG1MZG4E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

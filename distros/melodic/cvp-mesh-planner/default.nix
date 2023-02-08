@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cvp-mesh-planner";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh_navigation-release/archive/release/melodic/cvp_mesh_planner/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "c9fddab14156e516e7f3006b6e2b97f5dd197ef85a0e2cf00f70434bde972708";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mesh_navigation-release";
+        rev = "release/melodic/cvp_mesh_planner/1.0.1-1";
+        sha256 = "sha256-RbPYuvZiCDhgnFZuUBkYFtdpaiHRQcsby6m+UlFSoTs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

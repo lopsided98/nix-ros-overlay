@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-urdf";
   version = "2.4.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/urdf-release/archive/release/foxy/urdf/2.4.0-2.tar.gz";
-    name = "2.4.0-2.tar.gz";
-    sha256 = "bf569f43cb821cad9d1bc0ef7d51ed9a00180ab67afe4d7b9e8ac64b82d3550d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "urdf-release";
+        rev = "release/foxy/urdf/2.4.0-2";
+        sha256 = "sha256-15LtyWVjZoEJGZS2mYyrCs4BChkj/aWR94me7VkmNnc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

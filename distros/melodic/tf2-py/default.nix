@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tf2-py";
   version = "0.6.5";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_py/0.6.5-0.tar.gz";
-    name = "0.6.5-0.tar.gz";
-    sha256 = "24fc32a89eb1f6714d2f05c138c5d85741aabe819fc18475e63564aa0e2c388b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry2-release";
+        rev = "release/melodic/tf2_py/0.6.5-0";
+        sha256 = "sha256-L31ZQ8mFws0nmSgIAicOp+uzEcyf0Amcc6llSEruTDQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-roswww-static";
   version = "0.21.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/CopterExpress/clover-release/archive/release/melodic/roswww_static/0.21.2-1.tar.gz";
-    name = "0.21.2-1.tar.gz";
-    sha256 = "d15218175c9d6ccaac2489434e083d4cac54ff6403af7b69e76560f3a9712cbd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "CopterExpress";
+        repo = "clover-release";
+        rev = "release/melodic/roswww_static/0.21.2-1";
+        sha256 = "sha256-uzdO4Yz6u/9yX+LUKfTA3g5l0zj1igy52adYo4b1YEE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

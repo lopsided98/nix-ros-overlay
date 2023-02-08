@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rocon-tutorial-msgs";
   version = "0.9.0";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/rocon_msgs-release/archive/release/melodic/rocon_tutorial_msgs/0.9.0-0.tar.gz";
-    name = "0.9.0-0.tar.gz";
-    sha256 = "dd66eaad5af5cbccfcd60f6d2fe5152c3b560f2aa87e471da4a195c4f1ba1870";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "rocon_msgs-release";
+        rev = "release/melodic/rocon_tutorial_msgs/0.9.0-0";
+        sha256 = "sha256-UsRzPfpfoU5mGzqztvGoLlNZ77nJe9Jkui6gABRNkYI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

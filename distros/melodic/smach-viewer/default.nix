@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-smach-viewer";
   version = "4.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/jbohren/executive_smach_visualization-release/archive/release/melodic/smach_viewer/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "9a5187a9b246fe0c1ecdf782fdd31c78902c28d5d041f84424b12eea8c954d26";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "jbohren";
+        repo = "executive_smach_visualization-release";
+        rev = "release/melodic/smach_viewer/4.0.1-1";
+        sha256 = "sha256-m5J2XvHQJtRmsIpME/SdYR4YrVQ+xpd2o9gbLmUx2TI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

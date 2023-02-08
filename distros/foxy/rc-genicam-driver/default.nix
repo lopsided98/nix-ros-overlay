@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rc-genicam-driver";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_genicam_driver_ros2-release/archive/release/foxy/rc_genicam_driver/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "a02d5980198bbce997671ee666873f397ef4687f093b0b8efda3734738a580d4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "roboception-gbp";
+        repo = "rc_genicam_driver_ros2-release";
+        rev = "release/foxy/rc_genicam_driver/0.2.1-1";
+        sha256 = "sha256-nRYR4RZ3PnqDi707KxIuq4SODUBru+GdMF+Ex296hEw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

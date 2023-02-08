@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-nav-2d-msgs";
   version = "1.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav_2d_msgs/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "41eca5c77c649f439452fb3ba4c05f96153e8d0264ac391cc1976198811a043b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "navigation2-release";
+        rev = "release/humble/nav_2d_msgs/1.1.5-1";
+        sha256 = "sha256-+yKF03xOQtHvHSaRRksEcDVDl6el1lhjvYi/UYj2/nE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

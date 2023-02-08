@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mir-msgs";
   version = "1.0.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/melodic/mir_msgs/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "ad1218540844d730530c01bddc7742de371e525bcc9e33345a2a4f1f15731d51";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mir_robot-release";
+        rev = "release/melodic/mir_msgs/1.0.8-1";
+        sha256 = "sha256-fIldqDnhn/SClK1BhC5MlQY15WPspjYTn9sxmkEDp/4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

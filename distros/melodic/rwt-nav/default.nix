@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rwt-nav";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/melodic/rwt_nav/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "b923c3c3f2e4c7a35710d91171ec49aa8ca4046ca24969fcac3b35169f389bd0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "visualization_rwt-release";
+        rev = "release/melodic/rwt_nav/0.1.1-1";
+        sha256 = "sha256-k9qDFDmF82YPdc12pyl6h/38aiqrpnfSkVAKCprsZGk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

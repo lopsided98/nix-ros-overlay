@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-multirobot-map-merge";
   version = "2.1.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/hrnr/m-explore-release/archive/release/noetic/multirobot_map_merge/2.1.4-1.tar.gz";
-    name = "2.1.4-1.tar.gz";
-    sha256 = "6e17c3b65acc6daa656045525b6dda26a0893326d7c1dc1a0952bc0f81f0aab6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "hrnr";
+        repo = "m-explore-release";
+        rev = "release/noetic/multirobot_map_merge/2.1.4-1";
+        sha256 = "sha256-y2/4j5S1DXEjv860XEhaPFk5KNqljNLeCYxbgkgL2XA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

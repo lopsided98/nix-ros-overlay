@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-qt-dotgraph";
   version = "1.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/foxy/qt_dotgraph/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "f9e446a5abb8ed7cd475e7ebc010f035c0bfb212a61f3da9d55ca55da87cc66e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "qt_gui_core-release";
+        rev = "release/foxy/qt_dotgraph/1.1.3-1";
+        sha256 = "sha256-GvNQc+38HXgqEHFLTYI4NorBC9FmDEBMBXrWUBFXKn8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

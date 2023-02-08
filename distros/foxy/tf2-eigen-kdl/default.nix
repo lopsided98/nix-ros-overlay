@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-tf2-eigen-kdl";
   version = "0.13.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/foxy/tf2_eigen_kdl/0.13.13-1.tar.gz";
-    name = "0.13.13-1.tar.gz";
-    sha256 = "5bb1329536a8126419ccc586eebbde1d336865605c58d0d9cb506023c7f70e30";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "geometry2-release";
+        rev = "release/foxy/tf2_eigen_kdl/0.13.13-1";
+        sha256 = "sha256-ZuInxS+UV+WCPQMzE3yLP6H96rrBvTCBjodlbZd6ywQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

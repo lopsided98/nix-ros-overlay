@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-librealsense2";
   version = "2.50.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/melodic/librealsense2/2.50.0-1.tar.gz";
-    name = "2.50.0-1.tar.gz";
-    sha256 = "2cf92cf8482e3621398b09dd66ae3dd96c01e34ff3e0906531b75ba71f2a5fc7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "IntelRealSense";
+        repo = "librealsense2-release";
+        rev = "release/melodic/librealsense2/2.50.0-1";
+        sha256 = "sha256-7NboSDWcddQDF01zp8dnBglLNIfg2tzpaZUo8rs9gPY=";
+      };
 
   buildType = "cmake";
   buildInputs = [ catkin libusb1 openssl pkg-config udev ];

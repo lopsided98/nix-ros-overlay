@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-criutils";
   version = "0.1.4-r2";
 
-  src = fetchurl {
-    url = "https://github.com/crigroup/criutils-release/archive/release/noetic/criutils/0.1.4-2.tar.gz";
-    name = "0.1.4-2.tar.gz";
-    sha256 = "04ebb642b895d176a9a777f4f2e0493a25a17a3f3e990e7617e21a7184fb4918";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "crigroup";
+        repo = "criutils-release";
+        rev = "release/noetic/criutils/0.1.4-2";
+        sha256 = "sha256-R3nSgzoaWF/s9Ra4I460RkOxU9n+TaCjMrPey/4QYQc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -2,25 +2,29 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, diagnostic-msgs, diagnostic-updater, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, diagnostic-msgs, diagnostic-updater, rclcpp, ros-environment }:
 buildRosPackage {
   pname = "ros-foxy-self-test";
-  version = "2.0.8-r2";
+  version = "3.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/foxy/self_test/2.0.8-2.tar.gz";
-    name = "2.0.8-2.tar.gz";
-    sha256 = "7a59d918b7b2ce03ad3496b1b8bcc79ac6eecbb35fed93a450fb7f5a6c56bcde";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "diagnostics-release";
+        rev = "release/foxy/self_test/3.1.0-1";
+        sha256 = "sha256-1wNulwlhDpJbtfsi74Fq0lbouCl5TKsL3+ynHZAxyew=";
+      };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
+  buildInputs = [ ament-cmake ros-environment ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ diagnostic-msgs diagnostic-updater rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = ''self_test'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

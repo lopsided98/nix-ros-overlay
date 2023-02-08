@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-libcreate";
   version = "2.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/AutonomyLab/libcreate-release/archive/release/melodic/libcreate/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "fe9eba0445a5ca618d3bc223351c7e5df5f12a1576fa671ba8c05dc0b823b35c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "AutonomyLab";
+        repo = "libcreate-release";
+        rev = "release/melodic/libcreate/2.0.0-1";
+        sha256 = "sha256-xMarg4WuO2CA8Vno3K1l6j/4sPNLQ9XTXcNHt6M8Zr8=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

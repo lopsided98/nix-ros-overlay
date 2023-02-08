@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-naoqi-driver";
   version = "0.5.13";
 
-  src = fetchurl {
-    url = "https://github.com/ros-naoqi/naoqi_driver-release/archive/release/noetic/naoqi_driver/0.5.13-0.tar.gz";
-    name = "0.5.13-0.tar.gz";
-    sha256 = "e7c9a6b41e27f1b7af037eb423b64134c6e345ec04bfcfd5a322e4d6407f71e2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-naoqi";
+        repo = "naoqi_driver-release";
+        rev = "release/noetic/naoqi_driver/0.5.13-0";
+        sha256 = "sha256-Lwc/27qwsnn4JG0kMgkiApPCiL511rSNTesP3/5Ia4k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin diagnostic-msgs diagnostic-updater geometry-msgs rosgraph-msgs sensor-msgs tf2-geometry-msgs tf2-msgs ];

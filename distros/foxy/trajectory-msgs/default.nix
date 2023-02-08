@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-trajectory-msgs";
   version = "2.0.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/foxy/trajectory_msgs/2.0.5-1.tar.gz";
-    name = "2.0.5-1.tar.gz";
-    sha256 = "ff1eef5fb5817998de660621cbe59a3c9403e31cfc05fb351131e1046d5aa383";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "common_interfaces-release";
+        rev = "release/foxy/trajectory_msgs/2.0.5-1";
+        sha256 = "sha256-ZXZ5sUmMDoPG7w1D7KVc3Wpht3rV8FuF/mULKowCTpU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

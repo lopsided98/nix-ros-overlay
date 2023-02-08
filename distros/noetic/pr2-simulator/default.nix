@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pr2-simulator";
   version = "2.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_simulator-release/archive/release/noetic/pr2_simulator/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "0763e5edcd2d1434193a0386d06a5d296e2d8bd11528523a8e6913828447ae8f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_simulator-release";
+        rev = "release/noetic/pr2_simulator/2.1.0-1";
+        sha256 = "sha256-Ama8YxKZJgRoLKpew8xX+D7bMBc5nx7Qo8VXMjqlhX8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

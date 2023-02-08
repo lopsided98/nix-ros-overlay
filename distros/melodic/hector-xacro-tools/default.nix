@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hector-xacro-tools";
   version = "0.5.0";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_models-release/archive/release/melodic/hector_xacro_tools/0.5.0-0.tar.gz";
-    name = "0.5.0-0.tar.gz";
-    sha256 = "c3fb08b2e43e363415754750c0208062b87686415088d2eaf191d1f9879c95f9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_models-release";
+        rev = "release/melodic/hector_xacro_tools/0.5.0-0";
+        sha256 = "sha256-Ur2naJbLA3e6hRudEMFWift7PcEXTw0bhoCsnR7Zjc4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

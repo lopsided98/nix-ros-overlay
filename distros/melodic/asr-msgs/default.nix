@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-asr-msgs";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/asr-ros/asr_msgs-release/archive/release/melodic/asr_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "ea5f3bfcc30e4036c5ae3a033262477d2f7f6998819a564a82137de15a9341d4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "asr-ros";
+        repo = "asr_msgs-release";
+        rev = "release/melodic/asr_msgs/1.0.0-1";
+        sha256 = "sha256-D028UaK630H8PEnRQs3Cilp1LxEemIF7ai1NTdfij3g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

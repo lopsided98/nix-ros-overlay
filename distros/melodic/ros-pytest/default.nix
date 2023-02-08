@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ros-pytest";
   version = "0.2.0";
 
-  src = fetchurl {
-    url = "https://github.com/machinekoder/ros_pytest-release/archive/release/melodic/ros_pytest/0.2.0-0.tar.gz";
-    name = "0.2.0-0.tar.gz";
-    sha256 = "ba602e2fda979ab6f3097bfdad4c9cc589a7f0781f784cd46a1462de3636dc84";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "machinekoder";
+        repo = "ros_pytest-release";
+        rev = "release/melodic/ros_pytest/0.2.0-0";
+        sha256 = "sha256-Yjf2MdwZSmbDvz0FTb2pmd3RYIC6Xwj5T9LHpVwrhcY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

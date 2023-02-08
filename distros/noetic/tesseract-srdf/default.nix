@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-tesseract-srdf";
   version = "0.13.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_srdf/0.13.1-1.tar.gz";
-    name = "0.13.1-1.tar.gz";
-    sha256 = "cd42b66672df6a8762b723cc1010edcadded1ff9501aceddab2b623693b357b2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "tesseract-release";
+        rev = "release/noetic/tesseract_srdf/0.13.1-1";
+        sha256 = "sha256-SQtgO465GMX00wn8qwAfiuo7Zygcw+lscjZ1TvE6J1k=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ros-industrial-cmake-boilerplate ];

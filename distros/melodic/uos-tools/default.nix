@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-uos-tools";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/uos-tools/archive/release/melodic/uos_tools/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "ab16981ee26882e551d9587b934b63e5eb7f255f726013d5b5f6bf3c6a3b0c0b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "uos-tools";
+        rev = "release/melodic/uos_tools/1.0.1-1";
+        sha256 = "sha256-JdU4UlOGCzbj8F2VQi8pWQfDsbeuVP+ou3lMmU4cYZM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

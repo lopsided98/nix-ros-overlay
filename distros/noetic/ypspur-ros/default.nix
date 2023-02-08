@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ypspur-ros";
   version = "0.3.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/openspur/ypspur_ros-release/archive/release/noetic/ypspur_ros/0.3.5-1.tar.gz";
-    name = "0.3.5-1.tar.gz";
-    sha256 = "ed60ad59fb73ba811bd1703436c47aab4cd43bd30d9233787f5bbca1442670f1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "openspur";
+        repo = "ypspur_ros-release";
+        rev = "release/noetic/ypspur_ros/0.3.5-1";
+        sha256 = "sha256-XiPZVLAKSJXxNRrJQnS+2VJu8ynlm5hRbAYYVWSj10U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

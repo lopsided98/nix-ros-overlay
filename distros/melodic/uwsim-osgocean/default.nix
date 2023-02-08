@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-uwsim-osgocean";
   version = "1.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uji-ros-pkg/uwsim_osgocean-release/archive/release/melodic/uwsim_osgocean/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "f1fa072efeefdae435dbad0e4e11364da90dd778018d0c83b5d183a0fe587cc4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uji-ros-pkg";
+        repo = "uwsim_osgocean-release";
+        rev = "release/melodic/uwsim_osgocean/1.0.4-1";
+        sha256 = "sha256-dYAw3dtxJFEpx/oNh6Vu/GvlEVWTdFjQ1ENRADz2cKU=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

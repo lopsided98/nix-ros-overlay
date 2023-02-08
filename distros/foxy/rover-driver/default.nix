@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rover-driver";
   version = "0.1.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/RoverRobotics-release/roverrobotics_ros2-release/archive/release/foxy/rover_driver/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "cbf419b12e82a4843f01e69555f2a7a609736d02769fb3e5b0d58852c4582b8e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "RoverRobotics-release";
+        repo = "roverrobotics_ros2-release";
+        rev = "release/foxy/rover_driver/0.1.1-2";
+        sha256 = "sha256-ytctUDFgd+AXTy3FciYDGwqj7GOJiwq6sERLhSuGZnI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

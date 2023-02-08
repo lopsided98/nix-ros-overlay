@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-kartech-linear-actuator-msgs";
   version = "3.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/foxy/kartech_linear_actuator_msgs/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "9468c167457b815de99636cab4fc1c1d82a8c20954563604458b48bec42f6901";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "astuff_sensor_msgs-release";
+        rev = "release/foxy/kartech_linear_actuator_msgs/3.1.0-1";
+        sha256 = "sha256-qcWXse4zcpCNZzdVcuzHhdmteeLzg7h47JI6ypHf4YY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment rosidl-default-generators ];

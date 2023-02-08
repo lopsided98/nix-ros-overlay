@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-er-public-msgs";
   version = "1.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/enabled-robotics/er_public_msgs-release/archive/release/melodic/er_public_msgs/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "99d548a04ceb0efb2eb1c6ee68d91041b90e466ff69d71b53e65ffa91b16f860";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "enabled-robotics";
+        repo = "er_public_msgs-release";
+        rev = "release/melodic/er_public_msgs/1.4.0-1";
+        sha256 = "sha256-i5RtfMdO7CyQSySWTit9z+oBmDbEHNTxst/L0qiVoDM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

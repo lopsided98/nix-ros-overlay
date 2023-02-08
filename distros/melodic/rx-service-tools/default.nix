@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rx-service-tools";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/nobleo/rx_service_tools-release/archive/release/melodic/rx_service_tools/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "68d0c57e7a8de53a6bfd718d6bbfef0871720a3b62113eda08506b6c7db6539b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "nobleo";
+        repo = "rx_service_tools-release";
+        rev = "release/melodic/rx_service_tools/1.0.1-1";
+        sha256 = "sha256-lWHlCm5e8l2tsFp1Fooeov8ZPG6YzZGfIvgjPEOKwDE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

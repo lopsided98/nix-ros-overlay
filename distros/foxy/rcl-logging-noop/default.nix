@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rcl-logging-noop";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/foxy/rcl_logging_noop/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "3fd52f9aea77dd82b1578d71bad2957664c4924d6546658f6b91d9d2153b41eb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rcl_logging-release";
+        rev = "release/foxy/rcl_logging_noop/1.1.0-1";
+        sha256 = "sha256-fLSTnlvbQEDikWo+2KcIAo/ucmvitBlWh7COLOwPdDs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros python3Packages.empy ];

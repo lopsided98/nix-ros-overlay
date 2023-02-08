@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rover-teleop";
   version = "0.1.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/RoverRobotics-release/roverrobotics_ros2-release/archive/release/foxy/rover_teleop/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "7ecc599c243f529056201046b6f8d520619e0abcc9bee1b497b5deb990a7876c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "RoverRobotics-release";
+        repo = "roverrobotics_ros2-release";
+        rev = "release/foxy/rover_teleop/0.1.1-2";
+        sha256 = "sha256-2K4NoCJz66NoypKd9KDJyZbg+WfuJ+ASrfPQ2Qdm5pw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-grpc";
   version = "0.0.10";
 
-  src = fetchurl {
-    url = "https://github.com/CogRobRelease/catkin_grpc-release/archive/release/melodic/grpc/0.0.10-0.tar.gz";
-    name = "0.0.10-0.tar.gz";
-    sha256 = "c68b25e98a58f726e6d9a86a1a16c943c468e8f1d426781f9086cd31c525e7b2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "CogRobRelease";
+        repo = "catkin_grpc-release";
+        rev = "release/melodic/grpc/0.0.10-0";
+        sha256 = "sha256-YlKwFJEngerjXnkZ3bVB7OZWGUIRFYNHiQ0em9GBb0Y=";
+      };
 
   buildType = "catkin";
   buildInputs = [ autoconf catkin git libtool rsync zlib ];

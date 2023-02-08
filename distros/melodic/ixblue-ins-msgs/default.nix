@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ixblue-ins-msgs";
   version = "0.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ixblue/ixblue_ins_stdbin_driver-release/archive/release/melodic/ixblue_ins_msgs/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "08c1cb7de51604655cffee31329002fe4064cda296ca35f165da2bc21bdca8a4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ixblue";
+        repo = "ixblue_ins_stdbin_driver-release";
+        rev = "release/melodic/ixblue_ins_msgs/0.1.5-1";
+        sha256 = "sha256-mGmykbgOqH5j2XSi0VVw6+MdufbCFUtLo5vYaMvbzJk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

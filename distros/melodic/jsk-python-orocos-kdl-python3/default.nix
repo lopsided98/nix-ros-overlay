@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jsk-python-orocos-kdl-python3";
   version = "1.4.2-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/orocos-kdl_python3-release/archive/release/melodic/jsk_python_orocos_kdl_python3/1.4.2-2.tar.gz";
-    name = "1.4.2-2.tar.gz";
-    sha256 = "519c3d3a7ce2739bfedf3b94d39b9b1351c38cfaa3aaddb1a865a23ca5f0b1fe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "orocos-kdl_python3-release";
+        rev = "release/melodic/jsk_python_orocos_kdl_python3/1.4.2-2";
+        sha256 = "sha256-TKMgRH2Sq9p7Epq1yzvmCCF3+ABYhwMy9BJsVCbE7xs=";
+      };
 
   buildType = "cmake";
   buildInputs = [ python3Packages.catkin-pkg python3Packages.sip_4 ];

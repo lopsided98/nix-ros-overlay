@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-controller-manager";
   version = "0.18.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/melodic/controller_manager/0.18.4-1.tar.gz";
-    name = "0.18.4-1.tar.gz";
-    sha256 = "9fb65b2d3430380e5cc1a7cae9b328af060cbfa5ec8d7ffc75128e3ec5b41bb6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_control-release";
+        rev = "release/melodic/controller_manager/0.18.4-1";
+        sha256 = "sha256-58S1jzZhJ3rB/wiO5DE5miTz71O5Yv5d00ct0A/4Psw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

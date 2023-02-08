@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-euslime";
   version = "1.1.4-r4";
 
-  src = fetchurl {
-    url = "https://github.com/jsk-ros-pkg/euslime-release/archive/release/melodic/euslime/1.1.4-4.tar.gz";
-    name = "1.1.4-4.tar.gz";
-    sha256 = "63d93b261b839e4bc4f0ed3c1816f7c3208ba48af6a63c554d33ecf3ebef047e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "jsk-ros-pkg";
+        repo = "euslime-release";
+        rev = "release/melodic/euslime/1.1.4-4";
+        sha256 = "sha256-THE3p1Yz+wOa5fYMaN+S4CZpjQFV/JtFrjXeX7A6jZk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin catkin-virtualenv ];

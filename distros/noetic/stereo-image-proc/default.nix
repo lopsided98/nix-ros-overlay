@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-stereo-image-proc";
   version = "1.17.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/stereo_image_proc/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "36398fab41a1537f4359f0ff615493a66c6b660bc8facbb4a3c9e2fd72ce9d9e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/noetic/stereo_image_proc/1.17.0-1";
+        sha256 = "sha256-P9fh2peVg7/E2+MbuzL1XZN+doUn0EapdQXf1PYwHEA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

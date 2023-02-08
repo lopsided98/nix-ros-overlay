@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rail-mesh-icp";
   version = "0.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/gt-rail-release/rail_mesh_icp-release/archive/release/melodic/rail_mesh_icp/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "eecb7c4d0910a7e240f7fa4da616ca4fc3306cea4e0bd2485f417dca3e5ba9a8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "gt-rail-release";
+        repo = "rail_mesh_icp-release";
+        rev = "release/melodic/rail_mesh_icp/0.0.4-1";
+        sha256 = "sha256-DlHOGtNxwFmOypGlx+MaJiEHg3FzMXvRF1SxrUnKNvg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

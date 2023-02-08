@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-urdfdom-headers";
   version = "1.0.6-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/urdfdom_headers-release/archive/release/humble/urdfdom_headers/1.0.6-2.tar.gz";
-    name = "1.0.6-2.tar.gz";
-    sha256 = "4a57a0e852a257a6fd54183e628b980e5a09db35926df8f8450e728e78f1f6b4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "urdfdom_headers-release";
+        rev = "release/humble/urdfdom_headers/1.0.6-2";
+        sha256 = "sha256-FwQz8cyzDFlLKwRPe2ouUp3T2Vbqq6xs8W4QokL1u9U=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

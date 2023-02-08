@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-hector-sensors-gazebo";
   version = "0.5.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/noetic/hector_sensors_gazebo/0.5.4-1.tar.gz";
-    name = "0.5.4-1.tar.gz";
-    sha256 = "bc0da9a58e2e5cb58449c13458bbe9863b1fbe1eb0a1f34f31c336c5fbb9c186";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_gazebo-release";
+        rev = "release/noetic/hector_sensors_gazebo/0.5.4-1";
+        sha256 = "sha256-kaMZztq+MoNUHRHp0FdIDD1V7jfDUa7dDBRrknkyNX0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

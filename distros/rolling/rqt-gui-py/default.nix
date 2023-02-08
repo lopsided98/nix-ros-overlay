@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rqt-gui-py";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/rolling/rqt_gui_py/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "8689fee8baed5913d49710f4918ec761a055fc3d84784d77bef9089a5ef32348";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rqt-release";
+        rev = "release/rolling/rqt_gui_py/1.2.0-1";
+        sha256 = "sha256-Zyh15ECVzj+Tww8tunzoUzjmvhmGrBm6CooNJgnv/gE=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-lint-auto ament-lint-common ];

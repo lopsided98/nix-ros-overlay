@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ecl-eigen";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/rolling/ecl_eigen/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "78dcbdf14768cc004b774c3b713418d99a795472d5ebd4cb20c5b6a0d4491482";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "ecl_core-release";
+        rev = "release/rolling/ecl_eigen/1.2.1-1";
+        sha256 = "sha256-tkEm2XgT3kJqdj/+L317KVB0SOyCjRKuLqsOWToPxbo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

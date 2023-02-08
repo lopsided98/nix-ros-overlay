@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-nao-meshes";
   version = "0.1.13";
 
-  src = fetchurl {
-    url = "https://github.com/ros-naoqi/nao_meshes-release/archive/release/noetic/nao_meshes/0.1.13-0.tar.gz";
-    name = "0.1.13-0.tar.gz";
-    sha256 = "45bbadfb32df9bb25b48560aa4fbe709082a8077ab6ef5a2dc0f239aad5b1c15";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-naoqi";
+        repo = "nao_meshes-release";
+        rev = "release/noetic/nao_meshes/0.1.13-0";
+        sha256 = "sha256-TMvN7BqtZgYcXbW5k3gE1lRXUKGXTpZiQvfbVKfsfQE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin openjdk ];

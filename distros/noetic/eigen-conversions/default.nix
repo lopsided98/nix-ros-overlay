@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-eigen-conversions";
   version = "1.13.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry-release/archive/release/noetic/eigen_conversions/1.13.2-1.tar.gz";
-    name = "1.13.2-1.tar.gz";
-    sha256 = "e6d86b7c9644726e18547a077a21715f90186140f3b9fd6dd11bc1baa4e0656f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry-release";
+        rev = "release/noetic/eigen_conversions/1.13.2-1";
+        sha256 = "sha256-y+VcjMNBeujPHPQyEIC9bYWlZjEwooFCuETTBloMwyE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

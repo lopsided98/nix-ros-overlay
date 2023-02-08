@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-slam-toolbox";
   version = "1.5.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/slam_toolbox-release/archive/release/noetic/slam_toolbox/1.5.7-1.tar.gz";
-    name = "1.5.7-1.tar.gz";
-    sha256 = "fcfc8ef223c1b4af185e100df124b08fdd1d6493ab72c3d1f26efbc041c11246";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "slam_toolbox-release";
+        rev = "release/noetic/slam_toolbox/1.5.7-1";
+        sha256 = "sha256-HDe7kv/a0PLZexCeR+J9EmAgQjP6zPqZZGPaRdo/Gro=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-mechanism-msgs";
   version = "1.8.2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/pr2_mechanism_msgs-release/archive/release/melodic/pr2_mechanism_msgs/1.8.2-0.tar.gz";
-    name = "1.8.2-0.tar.gz";
-    sha256 = "ed530def634447f8d6970857f1f33b8ddfadefc07cffd6e4ce01e71e179df4cf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "pr2_mechanism_msgs-release";
+        rev = "release/melodic/pr2_mechanism_msgs/1.8.2-0";
+        sha256 = "sha256-eKaRMpfyKkOAMpTlbgQIZFfrLdgbFGwnpWQxLqruhjY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

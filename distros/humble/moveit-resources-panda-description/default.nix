@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-moveit-resources-panda-description";
   version = "2.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/humble/moveit_resources_panda_description/2.0.6-1.tar.gz";
-    name = "2.0.6-1.tar.gz";
-    sha256 = "861423d0c6b90275e98ccb51cfadaed56abe997b42942cc1c636307ea8a52034";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "moveit_resources-release";
+        rev = "release/humble/moveit_resources_panda_description/2.0.6-1";
+        sha256 = "sha256-9T8wcYBgF1ulNpNXqhBZxswjqvzNOtlDJsno0T83VJ0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

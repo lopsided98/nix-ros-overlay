@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-nav-view";
   version = "0.5.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_nav_view-release/archive/release/noetic/rqt_nav_view/0.5.7-1.tar.gz";
-    name = "0.5.7-1.tar.gz";
-    sha256 = "3538b12e4b1b84a695aeb703b71b249ec02f42961c7d0eeb43399fce5defffcf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_nav_view-release";
+        rev = "release/noetic/rqt_nav_view/0.5.7-1";
+        sha256 = "sha256-EP33l2lVCEe3AF/jxTwus9WHpxFk1R3awJ02+OEjINo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

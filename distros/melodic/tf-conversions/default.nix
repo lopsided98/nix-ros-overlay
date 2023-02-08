@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tf-conversions";
   version = "1.12.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry-release/archive/release/melodic/tf_conversions/1.12.1-1.tar.gz";
-    name = "1.12.1-1.tar.gz";
-    sha256 = "e2e457c4d59951b3ed07f72d6e013905184e5de1458c3a57b9e3b35ee4355580";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "geometry-release";
+        rev = "release/melodic/tf_conversions/1.12.1-1";
+        sha256 = "sha256-vLIhSf92VZK9ee1Bt/2kRpvs/d/Ot20QGj2dZcxHhO8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

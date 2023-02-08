@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-turtlebot3-node";
   version = "2.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/humble/turtlebot3_node/2.1.5-1.tar.gz";
-    name = "2.1.5-1.tar.gz";
-    sha256 = "9269171788c34a5a8baa58bc9dc89845520d93da5a40274ef1eaffe263610bb3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "robotis-ros2-release";
+        repo = "turtlebot3-release";
+        rev = "release/humble/turtlebot3_node/2.1.5-1";
+        sha256 = "sha256-PAzdvdC18y6A9MZLdbE4GlHHg/3Nq4JUyC3NdimcKEk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

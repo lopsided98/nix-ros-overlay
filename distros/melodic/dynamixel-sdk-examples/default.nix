@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dynamixel-sdk-examples";
   version = "3.7.51-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/DynamixelSDK-release/archive/release/melodic/dynamixel_sdk_examples/3.7.51-4.tar.gz";
-    name = "3.7.51-4.tar.gz";
-    sha256 = "3a0fe8ed9053aaa5d2eae92dd76596a5d9d2917d8296733f5a3c4a842112ece2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "DynamixelSDK-release";
+        rev = "release/melodic/dynamixel_sdk_examples/3.7.51-4";
+        sha256 = "sha256-Qo9VFpdJf9QyrQ5wFCLCVNtszTR25Pnda+6EAe3Mo9Y=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

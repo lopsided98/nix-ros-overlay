@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-laser-scan-sparsifier";
   version = "0.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/laser_scan_sparsifier/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "5afafd970b7168c341b18704b5592f793957f9d08870509ab3e46922d6f79741";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "scan_tools-release";
+        rev = "release/noetic/laser_scan_sparsifier/0.3.3-1";
+        sha256 = "sha256-ZlPQsfW2+9xFA9xEaak6OSQnAAz57RTyKezMjVL/UN0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-leo-desktop";
   version = "0.2.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_desktop-release/archive/release/melodic/leo_desktop/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "828695ff682318fcd2fdf8a3228fa3ede6f04fd796a5fcff9183b750297c6aa3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fictionlab-gbp";
+        repo = "leo_desktop-release";
+        rev = "release/melodic/leo_desktop/0.2.3-1";
+        sha256 = "sha256-GBIA8oy/0NvsPVdCdDI3/fme7gfNQoWVZqp+zzX/aMY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

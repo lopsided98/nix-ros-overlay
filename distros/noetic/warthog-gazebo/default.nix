@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-warthog-gazebo";
   version = "0.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/warthog_simulator-release/archive/release/noetic/warthog_gazebo/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "2d0a7d1869c0d46e0c2a643211ac031ae61e713a3ebec5fd2a77da3b022f4946";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "warthog_simulator-release";
+        rev = "release/noetic/warthog_gazebo/0.2.2-1";
+        sha256 = "sha256-yob3+P6Bg5MlFISzlyS6k0lgJDoN+Zq59JdAdEjRsDQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-vapor-master";
   version = "0.3.0";
 
-  src = fetchurl {
-    url = "https://github.com/roshub/vapor_master-release/archive/release/melodic/vapor_master/0.3.0-0.tar.gz";
-    name = "0.3.0-0.tar.gz";
-    sha256 = "c6fc8a631a9237b71a58f298e1394f498f3374ba2698c365f0aae44e5a75ca32";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "roshub";
+        repo = "vapor_master-release";
+        rev = "release/melodic/vapor_master/0.3.0-0";
+        sha256 = "sha256-3tUQsEFC64rhgljsQ7QlvkEeEFUikm/Y85XXIGHyGeU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin nodePackages.npm ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-bondcpp";
   version = "1.8.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/bond_core-release/archive/release/noetic/bondcpp/1.8.6-1.tar.gz";
-    name = "1.8.6-1.tar.gz";
-    sha256 = "0757b8c5410ae008a9238d13371c374eef0843c208aeb6be4965061239a56afc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "bond_core-release";
+        rev = "release/noetic/bondcpp/1.8.6-1";
+        sha256 = "sha256-VySlSMYgK0CtDOaundap7bv6HoNSV0Nzmn4CJmXPY3s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

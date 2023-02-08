@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-pepper-meshes";
   version = "2.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-naoqi/pepper_meshes2-release/archive/release/foxy/pepper_meshes/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "0d9d785bf61c7ca313490ac86596fdac73e703a1f9d6e2b61de63ffea6ae428d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-naoqi";
+        repo = "pepper_meshes2-release";
+        rev = "release/foxy/pepper_meshes/2.0.1-1";
+        sha256 = "sha256-x7TfmyylvHyBpFrOUKQGtaZikgDGcbMTBbtX4knsxeE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake openjdk ];

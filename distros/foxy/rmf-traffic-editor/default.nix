@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmf-traffic-editor";
   version = "1.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/foxy/rmf_traffic_editor/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "e0cb039e8af01b6d098e8ebcca5bfbf50130049185b9818888aa2d912ef53d08";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_traffic_editor-release";
+        rev = "release/foxy/rmf_traffic_editor/1.4.0-1";
+        sha256 = "sha256-yaXIUvNrO2a75jn3X9IPfylvRqPElKm6NlK212o+p28=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-index-cpp eigen libyamlcpp qt5.qtbase ];

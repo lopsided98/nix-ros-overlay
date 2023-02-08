@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dwb-local-planner";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/dwb_local_planner/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "5048db7129b2998db07653a76f3d354e3fb60a0fe3ede6eecadc079893aa1ae6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/melodic/dwb_local_planner/0.3.0-1";
+        sha256 = "sha256-YCDNfEipWTd+F6LZgOzfAaYti0HSZN0iB9+ys2VMJeg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

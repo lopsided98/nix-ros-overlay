@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-sbpl-lattice-planner";
   version = "0.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_experimental-release/archive/release/noetic/sbpl_lattice_planner/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "418218d25809274f917a61e97ac8fedee565b61154fd28e76adb7301b57b4e13";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation_experimental-release";
+        rev = "release/noetic/sbpl_lattice_planner/0.4.1-1";
+        sha256 = "sha256-LCu/QPPISrsm6YOB2QZFlmlRckCldfWUyAvnQvf0wjw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

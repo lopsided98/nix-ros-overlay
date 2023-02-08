@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rxcpp-vendor";
   version = "4.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rosin-project/rxcpp_vendor-release/archive/release/melodic/rxcpp_vendor/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "a9489ead897a2615307dc749869cef1d17caddde0eda42a362f9d811cc34980b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rosin-project";
+        repo = "rxcpp_vendor-release";
+        rev = "release/melodic/rxcpp_vendor/4.1.0-1";
+        sha256 = "sha256-4ZiYFFuAkvXXE989SuJVKdnJP6oeD2yuORvWNX4ym6U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-socketcan-bridge";
   version = "0.8.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_canopen-release/archive/release/noetic/socketcan_bridge/0.8.5-1.tar.gz";
-    name = "0.8.5-1.tar.gz";
-    sha256 = "2cd955e1bc167097328167d7d7c82c47ef382feec380bfd483bd0910860e0dc7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "ros_canopen-release";
+        rev = "release/noetic/socketcan_bridge/0.8.5-1";
+        sha256 = "sha256-TROokf77eTUmXExRuRlqkfntVP7pHuGrmI6hqVLosnc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

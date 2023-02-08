@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ipr-extern";
   version = "0.8.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/KITrobotics/ipr_extern-release/archive/release/melodic/ipr_extern/0.8.8-1.tar.gz";
-    name = "0.8.8-1.tar.gz";
-    sha256 = "a117475704fac421bb5f283eb775ab4339944f6ea148c2c996c0fb7642bb0fe8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "KITrobotics";
+        repo = "ipr_extern-release";
+        rev = "release/melodic/ipr_extern/0.8.8-1";
+        sha256 = "sha256-GU8Xmk1SXG5m7msNUb1wJHvZsgrH8jLXTk3yxR/u3FU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

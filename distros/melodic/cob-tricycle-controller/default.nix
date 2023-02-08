@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-tricycle-controller";
   version = "0.8.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_tricycle_controller/0.8.12-1.tar.gz";
-    name = "0.8.12-1.tar.gz";
-    sha256 = "52c61e342f79f4570746b440ee02c64346066a01a9b31457826c2d026ad6674e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_control-release";
+        rev = "release/melodic/cob_tricycle_controller/0.8.12-1";
+        sha256 = "sha256-oNWBcrI+tbE9pcNSD2ki4MQpMP0jTvNpJkGeyofZkzk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robotont-description";
   version = "0.0.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/robotont-release/robotont_description-release/archive/release/melodic/robotont_description/0.0.8-1.tar.gz";
-    name = "0.0.8-1.tar.gz";
-    sha256 = "687044fd179f21de474782aa93b3e18f6619e3e9fd473c5d293e54396dedee5c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "robotont-release";
+        repo = "robotont_description-release";
+        rev = "release/melodic/robotont_description/0.0.8-1";
+        sha256 = "sha256-jT/rmUG7UA79Fx6nxn6Ky5GMlteOcZfwS/vHN6t+ogI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

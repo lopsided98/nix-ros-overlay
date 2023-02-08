@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-setup-assistant";
   version = "1.1.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_setup_assistant/1.1.11-1.tar.gz";
-    name = "1.1.11-1.tar.gz";
-    sha256 = "094f75f1559fcdf81d2ae5f4a6bb833f488345b5fbe4538fc557278b621be89a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/noetic/moveit_setup_assistant/1.1.11-1";
+        sha256 = "sha256-tprcRPzMSrBQPZMXn3mjQI52QaWUfCRA560Ua4IZZfI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ogre1_9 ompl qt5.qtbase ];

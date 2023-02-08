@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-vision-msgs";
   version = "4.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_msgs-release/archive/release/rolling/vision_msgs/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "866a8053e18846595c64fc071b11bd11e82a5757482b5cdc5852a16310bc7295";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "vision_msgs-release";
+        rev = "release/rolling/vision_msgs/4.0.0-1";
+        sha256 = "sha256-eow1ZEywd5gzzb1zifOk/GXuWnmCrFL4gM1Iq7qN7wo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

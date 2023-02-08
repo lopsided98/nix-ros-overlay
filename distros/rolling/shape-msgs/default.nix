@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-shape-msgs";
   version = "4.6.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/shape_msgs/4.6.1-1.tar.gz";
-    name = "4.6.1-1.tar.gz";
-    sha256 = "3594ac87cc260996d2c358c788f2f8b75d8e25d429d0a648796699993685d2dd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "common_interfaces-release";
+        rev = "release/rolling/shape_msgs/4.6.1-1";
+        sha256 = "sha256-cN4QzCzTvkQIURIR84PFjfU3BxfcHRT/Z646GdF53yE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-quality-of-service-demo-cpp";
   version = "0.23.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/quality_of_service_demo_cpp/0.23.0-1.tar.gz";
-    name = "0.23.0-1.tar.gz";
-    sha256 = "49afc5e10802919bdf65b684db9dd46b3b867f1af3417ff9b71cfcd03cab8970";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/rolling/quality_of_service_demo_cpp/0.23.0-1";
+        sha256 = "sha256-CdwVcEG2WhiEhDQ8ugklbuBfw7vTU6mIcK22D5j/khw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rmw-implementation-cmake ];

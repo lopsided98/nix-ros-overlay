@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-trac-ik-examples";
   version = "1.5.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/traclabs/trac_ik-release/archive/release/melodic/trac_ik_examples/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "c04e9f5a860f562ce0d1e044723198ffa560d2f3ac815bdc4da79a7da8a4e40f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "traclabs";
+        repo = "trac_ik-release";
+        rev = "release/melodic/trac_ik_examples/1.5.1-1";
+        sha256 = "sha256-EWR8rgCYY8h3qZ8DT7hcy9cDb8mbiTwrdUMPU1d3V1M=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

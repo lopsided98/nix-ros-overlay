@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mqtt-bridge";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/groove-x/mqtt_bridge-release/archive/release/noetic/mqtt_bridge/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "f35df5101540e03754e6d9a80d5e64babf9e7b4a16aeaa595c6235d82c91b8d0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "groove-x";
+        repo = "mqtt_bridge-release";
+        rev = "release/noetic/mqtt_bridge/0.2.1-1";
+        sha256 = "sha256-Ra3UUsr6DjknDqRwIHNpW8d9HPNgn6vSr0ZOKjOnzzY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.pip python3Packages.setuptools ];

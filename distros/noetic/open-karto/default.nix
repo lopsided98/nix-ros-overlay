@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-open-karto";
   version = "1.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/open_karto-release/archive/release/noetic/open_karto/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "10049b93fa17eadee4f7ef7ee4a4ecbaf6550e390a76417ebb4bbef161fd44f0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "open_karto-release";
+        rev = "release/noetic/open_karto/1.2.2-1";
+        sha256 = "sha256-9OdDpmRZo9L3oXXY7gXPFx/yREm/x7yba+QDj0QRqZI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

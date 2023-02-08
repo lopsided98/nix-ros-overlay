@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-robot-upstart";
   version = "1.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/robot_upstart-release/archive/release/humble/robot_upstart/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "310d5e60443ca37dce66b7240c80bd21ddd1e29ba8479b88468c7d64474432e9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "robot_upstart-release";
+        rev = "release/humble/robot_upstart/1.0.2-1";
+        sha256 = "sha256-kNE7THXKJblslBfs8CGEAhPHPw0sZ202Rrixj7X5L4g=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

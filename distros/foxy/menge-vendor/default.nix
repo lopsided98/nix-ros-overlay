@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-menge-vendor";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/menge_vendor-release/archive/release/foxy/menge_vendor/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "6e3c898f2741cfa032a497738943927dc6f8b144e6dd4427e0085541212dee88";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "menge_vendor-release";
+        rev = "release/foxy/menge_vendor/1.0.0-1";
+        sha256 = "sha256-pwDvm+FUMHbvtumRly3aV2QEDQ0UxPN8GlgjCe8TOZE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ ament-cmake pkg-config ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-audio-video-recorder";
   version = "2.2.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/audio_video_recorder/2.2.12-1.tar.gz";
-    name = "2.2.12-1.tar.gz";
-    sha256 = "e5d81483f8363b44f037d1bb399a315c5aab9a60e23a2c9815670c1ff1c67c43";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_common-release";
+        rev = "release/noetic/audio_video_recorder/2.2.12-1";
+        sha256 = "sha256-qUBSWrRNFP01zJz0aclbPO/bM7CITaupTR0eGuvwZJI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

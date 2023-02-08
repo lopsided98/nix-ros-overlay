@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-ecl-license";
   version = "1.0.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_tools-release/archive/release/humble/ecl_license/1.0.3-2.tar.gz";
-    name = "1.0.3-2.tar.gz";
-    sha256 = "ada441ed7cf511dc55ab117148887dbdbf0bb5365af55382e6e110d78f9e7b9f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "ecl_tools-release";
+        rev = "release/humble/ecl_license/1.0.3-2";
+        sha256 = "sha256-7IkZyQJw9go1s2je+YLPGemSTMtC8PNA66qCC6akU6w=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

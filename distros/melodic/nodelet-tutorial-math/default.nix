@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nodelet-tutorial-math";
   version = "0.1.11";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/common_tutorials-release/archive/release/melodic/nodelet_tutorial_math/0.1.11-0.tar.gz";
-    name = "0.1.11-0.tar.gz";
-    sha256 = "399778f44a140cd9fd5b0ed41b8c88408803791a64b0c3d006bca4b174b1669f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "common_tutorials-release";
+        rev = "release/melodic/nodelet_tutorial_math/0.1.11-0";
+        sha256 = "sha256-ACTT77cPGR8zIQa7LM4PahrLfNYx9/j8np+XlPR4JI0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

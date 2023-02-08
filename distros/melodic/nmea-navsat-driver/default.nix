@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nmea-navsat-driver";
   version = "0.5.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/nmea_navsat_driver-release/archive/release/melodic/nmea_navsat_driver/0.5.2-1.tar.gz";
-    name = "0.5.2-1.tar.gz";
-    sha256 = "4bb6d7fbaf5d6d3d334c0ce1b21997c6c303d10ded2bb87c72b9dd609fbc18ba";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "nmea_navsat_driver-release";
+        rev = "release/melodic/nmea_navsat_driver/0.5.2-1";
+        sha256 = "sha256-skkGxuATydghcccB13uqHr5ak9d6JTljnmNBO74SXpA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

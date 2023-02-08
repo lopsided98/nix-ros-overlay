@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-libg2o";
   version = "2020.5.29-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/libg2o-release/archive/release/rolling/libg2o/2020.5.29-3.tar.gz";
-    name = "2020.5.29-3.tar.gz";
-    sha256 = "d308e857ba2a3697d0b03f7fddc3ad0589423a44fb273d3e759c713ccf2dd5ff";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "libg2o-release";
+        rev = "release/rolling/libg2o/2020.5.29-3";
+        sha256 = "sha256-tzFuVFEfIVou0MpxLMIt10GCb/D5A83cc5BWKSNwSrY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

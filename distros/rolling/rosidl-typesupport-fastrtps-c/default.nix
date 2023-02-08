@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rosidl-typesupport-fastrtps-c";
   version = "2.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/rolling/rosidl_typesupport_fastrtps_c/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "a5ad8318e83e6e591ce8374ebbb62ccad5b5e77663fc5801fe86afeca6d62a2e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl_typesupport_fastrtps-release";
+        rev = "release/rolling/rosidl_typesupport_fastrtps_c/2.4.0-1";
+        sha256 = "sha256-SOMFUA92OmRPAR/DULfNdyZOTuC3taMvQ6QDlPwdpj0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-python ];

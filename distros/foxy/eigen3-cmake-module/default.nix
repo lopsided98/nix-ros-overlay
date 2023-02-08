@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-eigen3-cmake-module";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/eigen3_cmake_module-release/archive/release/foxy/eigen3_cmake_module/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "0f41b3b7ccb8094f1c74a0e357f50f1dc80fe6e6e685ae4dbdde83a93c6044fa";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "eigen3_cmake_module-release";
+        rev = "release/foxy/eigen3_cmake_module/0.1.1-1";
+        sha256 = "sha256-JYv6XaPTqspaLTKHbLNoNYx3ivXCTVAvRO3oNEhhxQ4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

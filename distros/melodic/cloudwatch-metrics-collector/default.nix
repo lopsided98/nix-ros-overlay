@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cloudwatch-metrics-collector";
   version = "2.2.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/aws-gbp/cloudwatch_metrics_collector-release/archive/release/melodic/cloudwatch_metrics_collector/2.2.1-2.tar.gz";
-    name = "2.2.1-2.tar.gz";
-    sha256 = "1c8d20e04ea8096f94cf510c3624385a2b1f8effc03276fe4a0fcd6f6b3fb3f8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "aws-gbp";
+        repo = "cloudwatch_metrics_collector-release";
+        rev = "release/melodic/cloudwatch_metrics_collector/2.2.1-2";
+        sha256 = "sha256-6uoWIOMxs3gAXwpdkaD4OQgE3jnisC9Ml/OGQnU/lpI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

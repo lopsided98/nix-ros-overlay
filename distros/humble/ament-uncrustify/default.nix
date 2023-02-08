@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-pycodestyle, pythonPackages, uncrustify-vendor }:
 buildRosPackage {
   pname = "ros-humble-ament-uncrustify";
-  version = "0.12.4-r1";
+  version = "0.12.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_uncrustify/0.12.4-1.tar.gz";
-    name = "0.12.4-1.tar.gz";
-    sha256 = "5e1900ba0de9fc763aa1bfe8f92a80e51093b0c85a4db26bde57108009b1eebd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_lint-release";
+        rev = "release/humble/ament_uncrustify/0.12.5-1";
+        sha256 = "sha256-gKY4q7CflGPtrT8N0n7b6Bw98NZ4m2tU1RN98KjoemQ=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-pycodestyle pythonPackages.pytest ];

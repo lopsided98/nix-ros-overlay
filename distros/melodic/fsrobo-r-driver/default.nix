@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fsrobo-r-driver";
   version = "0.7.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/FUJISOFT-Robotics/fsrobo_r-release/archive/release/melodic/fsrobo_r_driver/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "73f8370bc1e3f312b1addf1cb87ecef8ce8f98ffd9d98aebd7d7cb57ec7115da";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "FUJISOFT-Robotics";
+        repo = "fsrobo_r-release";
+        rev = "release/melodic/fsrobo_r_driver/0.7.1-1";
+        sha256 = "sha256-Z6HBsu50Xl5EpR6qE3coyqK8hDqAfrD7pUyliRlJH2A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

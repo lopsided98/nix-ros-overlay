@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-imu-tools";
   version = "1.2.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/melodic/imu_tools/1.2.5-1.tar.gz";
-    name = "1.2.5-1.tar.gz";
-    sha256 = "baf641b93e413076f3d7400da14630442a225ebb16c5f20c9a117f7b415f4784";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "imu_tools-release";
+        rev = "release/melodic/imu_tools/1.2.5-1";
+        sha256 = "sha256-TwnbHGZAeAzQkvQQPsiJom3etXNheKfJs6JmzqUn+6c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

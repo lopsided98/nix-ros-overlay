@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rosidl-pycommon";
   version = "3.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_pycommon/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "9386e7072b831377f49d495bc8ebab13d247fd97d7d604998b21167d7ca51ac2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl-release";
+        rev = "release/rolling/rosidl_pycommon/3.3.1-1";
+        sha256 = "sha256-6jHw7Rmf5klSDVgFTYeaGjllTNPgME8LeYRusARSLvA=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

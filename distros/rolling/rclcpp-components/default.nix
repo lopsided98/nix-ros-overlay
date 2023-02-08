@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-google-benchmark, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, class-loader, composition-interfaces, launch-testing, rclcpp, rcpputils, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rclcpp-components";
-  version = "18.0.0-r1";
+  version = "19.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/rolling/rclcpp_components/18.0.0-1.tar.gz";
-    name = "18.0.0-1.tar.gz";
-    sha256 = "f95f068ddd71c25523db404db717ead253fe39941938d749f0092c97748e8477";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rclcpp-release";
+        rev = "release/rolling/rclcpp_components/19.0.0-1";
+        sha256 = "sha256-IGkYVtUSOafdgEKvWSC6AQGmBYk8IwLMMQUhUuN7HiI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros rcpputils ];

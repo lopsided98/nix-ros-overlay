@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hironx-calibration";
   version = "2.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/rtmros_hironx-release/archive/release/melodic/hironx_calibration/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "13d0ab19563ad8f91a7091b091002e6eef15af25fcbb017575ed95e3bf19f749";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "rtmros_hironx-release";
+        rev = "release/melodic/hironx_calibration/2.2.0-1";
+        sha256 = "sha256-mQHYkzCJQm+3VyhdmWYXPC5fPNmc7J0Y3IYjCOwXfOo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

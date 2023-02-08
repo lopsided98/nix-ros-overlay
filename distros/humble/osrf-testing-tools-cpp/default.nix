@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-osrf-testing-tools-cpp";
   version = "1.5.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/osrf_testing_tools_cpp-release/archive/release/humble/osrf_testing_tools_cpp/1.5.2-1.tar.gz";
-    name = "1.5.2-1.tar.gz";
-    sha256 = "cf31473654d3e6e5e29d64354d01ff36375d1f8f7f5a084c5f95cd7e84da93f4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "osrf_testing_tools_cpp-release";
+        rev = "release/humble/osrf_testing_tools_cpp/1.5.2-1";
+        sha256 = "sha256-du4lfHqdmHOrL+pPJsvjMzkstRUrj//VqIabWR6SP2Y=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

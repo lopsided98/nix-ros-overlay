@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hector-imu-tools";
   version = "0.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/melodic/hector_imu_tools/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "e2a39e77a85688b2bb89ef2d07975ea71558c94037a77c1a9bd7b478ee84b99d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_slam-release";
+        rev = "release/melodic/hector_imu_tools/0.4.1-1";
+        sha256 = "sha256-NYOh5WtrIMZo13YuuzJHZ/mWZgaY4K6g07j2YraqIrA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

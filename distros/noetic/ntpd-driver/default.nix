@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ntpd-driver";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/vooon/ntpd_driver-release/archive/release/noetic/ntpd_driver/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "6b5438d9c2b27ba76eed22d9a797949977a55cdd149ede626b97697c9b596798";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "vooon";
+        repo = "ntpd_driver-release";
+        rev = "release/noetic/ntpd_driver/1.3.0-1";
+        sha256 = "sha256-g/hiQyI4OvE7y4IVAAaq2ct8CenRetNeunowJvkdAX8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-imu-transformer";
   version = "0.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/imu_pipeline-release/archive/release/noetic/imu_transformer/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "94ea4bd7deb0785b32b676a1acfa9d5c6b962c3f4ced0f6018d4c21e7ec10a8c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "imu_pipeline-release";
+        rev = "release/noetic/imu_transformer/0.3.1-1";
+        sha256 = "sha256-SWq4eCsn7El3e7rXdey3ueLXL2R7FHkkyedw5JwhbsI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

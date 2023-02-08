@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rmf-traffic";
   version = "3.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic-release/archive/release/humble/rmf_traffic/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "6f736e93bd5abe6583db69d5329fb43a421669e34dde2dae0400e1fd7fed7ec7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_traffic-release";
+        rev = "release/humble/rmf_traffic/3.0.0-1";
+        sha256 = "sha256-7ltO2BBCmnZ53l/P0JcbgduPk36d2Canzw7ZkWPeC4Q=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

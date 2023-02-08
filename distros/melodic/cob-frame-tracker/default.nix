@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-frame-tracker";
   version = "0.8.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/melodic/cob_frame_tracker/0.8.12-1.tar.gz";
-    name = "0.8.12-1.tar.gz";
-    sha256 = "8171d33f9bdc9c259664ec235b913a22b6c5efa3424360995cc0a1dbc2cfc45c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_control-release";
+        rev = "release/melodic/cob_frame_tracker/0.8.12-1";
+        sha256 = "sha256-TIkXuRBWwgu/eiOum4T2j5j1z5lF4XyMsZejJs5STVo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

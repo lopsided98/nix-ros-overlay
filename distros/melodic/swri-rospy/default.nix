@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-swri-rospy";
   version = "2.15.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/melodic/swri_rospy/2.15.2-1.tar.gz";
-    name = "2.15.2-1.tar.gz";
-    sha256 = "10011f7fd4f01422051fb0ccc2479f08e7298bdddb5f6477104c4b92aed3df4f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "marti_common-release";
+        rev = "release/melodic/swri_rospy/2.15.2-1";
+        sha256 = "sha256-hKaYVmqoLehCXumz+nQeu3Nz0BfOrNoo66viKbSYEVU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools ];

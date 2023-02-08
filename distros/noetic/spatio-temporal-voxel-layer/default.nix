@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-spatio-temporal-voxel-layer";
   version = "1.4.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SteveMacenski/spatio_temporal_voxel_layer-release/archive/release/noetic/spatio_temporal_voxel_layer/1.4.5-1.tar.gz";
-    name = "1.4.5-1.tar.gz";
-    sha256 = "5f3f5d2b3ccc4907ad9166531fc8a6acbe53ee3396b0cb3c1738ba13273091c5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SteveMacenski";
+        repo = "spatio_temporal_voxel_layer-release";
+        rev = "release/noetic/spatio_temporal_voxel_layer/1.4.5-1";
+        sha256 = "sha256-qsF/hMXSQEVDZT5/vkUi/11dQruckKZisTODMeXj094=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

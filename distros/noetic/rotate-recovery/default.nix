@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, angles, base-local-planner, catkin, cmake-modules, costmap-2d, eigen, geometry-msgs, nav-core, pluginlib, roscpp, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-rotate-recovery";
-  version = "1.17.2-r1";
+  version = "1.17.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/noetic/rotate_recovery/1.17.2-1.tar.gz";
-    name = "1.17.2-1.tar.gz";
-    sha256 = "87a081850938a83f23315d8a610537e35a6d45aa0278ca5d502e3b11bc3dba41";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation-release";
+        rev = "release/noetic/rotate_recovery/1.17.3-1";
+        sha256 = "sha256-ScDwL5S6AZRzW02sAAMMJPKllHpv8aRuqnlrJg0tcT4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ angles base-local-planner catkin cmake-modules ];

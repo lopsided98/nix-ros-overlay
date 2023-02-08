@@ -8,9 +8,8 @@ buildRosPackage {
   version = "2.2.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/galactic/mapviz_plugins/2.2.0-3.tar.gz";
-    name = "2.2.0-3.tar.gz";
-    sha256 = "6ab615be627a973e5b9f5d2a4701288ea0a87f2bab6f46f9c0eeb6d1ac5e0a63";
+    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/c45b7567928cd412f945dfe8d6169193392252dc.tar.gz";
+    sha256 = "sha256-SZpeFsWOQQbYrmkwQ40273ywZ7p1pOl55nRFgcvpuOY=";
   };
 
   buildType = "ament_cmake";

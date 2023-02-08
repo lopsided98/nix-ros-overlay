@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-costmap-2d";
   version = "1.16.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation-release/archive/release/melodic/costmap_2d/1.16.7-1.tar.gz";
-    name = "1.16.7-1.tar.gz";
-    sha256 = "f32520730c2e9e45aa53325293431ae9909245bf7531902355e2713f54199780";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation-release";
+        rev = "release/melodic/costmap_2d/1.16.7-1";
+        sha256 = "sha256-c0mPYsMXTQ0TG1YOK8JEdw8dn1DNvyu36jbIAboS1Hk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules message-generation tf2-geometry-msgs tf2-sensor-msgs ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rc-hand-eye-calibration-client";
   version = "3.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_visard-release/archive/release/noetic/rc_hand_eye_calibration_client/3.3.2-1.tar.gz";
-    name = "3.3.2-1.tar.gz";
-    sha256 = "cf366385eea8a1204c6997b1c18bdce707ed6a079e4a9e32b0c25eb2ae901c7a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "roboception-gbp";
+        repo = "rc_visard-release";
+        rev = "release/noetic/rc_hand_eye_calibration_client/3.3.2-1";
+        sha256 = "sha256-I+dC+lnTUq9qNVaKFlLKb0nWmRdo9sGmI9Ysy1EkVSw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

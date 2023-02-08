@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-route-network";
   version = "0.2.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-geographic-info/open_street_map-release/archive/release/melodic/route_network/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "4100ef3d698459819f6f5ce27ece00c7f361daa3a7fe69e64ad6d2725e173ec0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-geographic-info";
+        repo = "open_street_map-release";
+        rev = "release/melodic/route_network/0.2.5-1";
+        sha256 = "sha256-FHPpVgDf+lM/l8bcH1hUpjieW5UKqXkEPd4YL0kqar0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

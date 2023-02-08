@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-bagger";
   version = "0.1.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/squarerobot/bagger-release/archive/release/melodic/bagger/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "417cbd4e7a43e72355430d0608a328aa14091eb94650d4f28910ada5e68c664f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "squarerobot";
+        repo = "bagger-release";
+        rev = "release/melodic/bagger/0.1.4-1";
+        sha256 = "sha256-NgFl84O/lN157zxxPcg4scJK3+O0FnUe9W5+kyk6ACE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation roslint ];

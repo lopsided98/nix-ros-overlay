@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-fmi-adapter";
   version = "2.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/fmi_adapter-release/archive/release/foxy/fmi_adapter/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "6417b0dbdd611d744660ce2308c37a621900f35beaf2d79aafdf88481f5565e7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "fmi_adapter-release";
+        rev = "release/foxy/fmi_adapter/2.1.1-1";
+        sha256 = "sha256-pC2a5q3fbSAGFRlotIahHSzRm+tJOBSAjho9Q70/otU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake fmilibrary-vendor ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dbw-fca-can";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/noetic/dbw_fca_can/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "7ada7c56a985ff17631887059d277fa76134f3917937fd2f7758b89ac7edd797";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dbw_fca_ros-release";
+        rev = "release/noetic/dbw_fca_can/1.3.0-1";
+        sha256 = "sha256-3oae3i+Le894UArl9843cH/mIt5LJqFMbI4eG9a8z3I=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin dataspeed-can-msg-filters ];

@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen, flann, ode, pkg-config }:
 buildRosPackage {
   pname = "ros-humble-ompl";
-  version = "1.5.2-r1";
+  version = "1.6.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ompl-release/archive/release/humble/ompl/1.5.2-1.tar.gz";
-    name = "1.5.2-1.tar.gz";
-    sha256 = "d0464ab7df4d083205f181c2d7a6916a47f749bcdb962fb7b3d9ea82475845ba";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ompl-release";
+        rev = "release/humble/ompl/1.6.0-1";
+        sha256 = "sha256-Dst2FtQsK0+EzvSm7GEESWOU8QfMPzhSNNYEIlTNfc0=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake pkg-config ];

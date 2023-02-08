@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-tvm-vendor";
   version = "0.7.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/autowarefoundation/tvm_vendor-release/archive/release/melodic/tvm_vendor/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "511a053350273ffa7480269d5730915ca32972142ae9894be91b1690cfadd378";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "autowarefoundation";
+        repo = "tvm_vendor-release";
+        rev = "release/melodic/tvm_vendor/0.7.2-1";
+        sha256 = "sha256-j4nYJoBch1w/tq7IR1V0lQqjz/cj6+GPsgox3dKNtEU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ros-environment ];

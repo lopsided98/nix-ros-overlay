@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosbag";
   version = "1.14.13-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosbag/1.14.13-1.tar.gz";
-    name = "1.14.13-1.tar.gz";
-    sha256 = "708e10e44c85f701d83d4e7984d1df37602a2a75c33c389a98be28ec1752d0fe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm-release";
+        rev = "release/melodic/rosbag/1.14.13-1";
+        sha256 = "sha256-f/0lDF2WFUTfADtl1vczQY2ZaFon7qt8pZbL+ySd/Z0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cpp-common pythonPackages.pillow roscpp-serialization ];

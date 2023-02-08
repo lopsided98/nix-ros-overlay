@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-octomap-ros";
   version = "0.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap_ros-release/archive/release/noetic/octomap_ros/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "100e3f796c48ca1d15059bc3ae81ab4de01e997cfe1ce6222a5e514ea2b6dae1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "octomap_ros-release";
+        rev = "release/noetic/octomap_ros/0.4.1-1";
+        sha256 = "sha256-OV9ySmXTXJotxv7HsYuSxMSEarPpPzkXtXvA/1BNRHo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

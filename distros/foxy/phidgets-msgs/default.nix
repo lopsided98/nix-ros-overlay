@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-phidgets-msgs";
   version = "2.1.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/foxy/phidgets_msgs/2.1.2-1.tar.gz";
-    name = "2.1.2-1.tar.gz";
-    sha256 = "786b6b5ee0509a653e95000c25433c31ffbe4528b1defc04f6ff44f7c04fe226";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "phidgets_drivers-release";
+        rev = "release/foxy/phidgets_msgs/2.1.2-1";
+        sha256 = "sha256-NH+gZI+2DDEi+J/tE1Pwdd+68qQbAr4L1LKC3ARrS9Y=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

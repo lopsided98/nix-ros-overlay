@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-ur-client-library";
   version = "1.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/humble/ur_client_library/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "8ba1486cb7439abba2290242b5d67264947c579afd46830d3faca65bfc0fe57b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "Universal_Robots_Client_Library-release";
+        rev = "release/humble/ur_client_library/1.3.1-1";
+        sha256 = "sha256-AYfd94IM+Etv+B7ZUeZWVMNr98mHHmGlCi5CUh8hhWo=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

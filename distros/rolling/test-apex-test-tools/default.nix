@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-test-apex-test-tools";
   version = "0.0.2-r5";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/apex_test_tools-release/archive/release/rolling/test_apex_test_tools/0.0.2-5.tar.gz";
-    name = "0.0.2-5.tar.gz";
-    sha256 = "a5befaa9cd938deab9e04f345a492114884a5ba6a4cf399ea9d2c1dd7d9f51b6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "apex_test_tools-release";
+        rev = "release/rolling/test_apex_test_tools/0.0.2-5";
+        sha256 = "sha256-ZB2lhFknuQ+9fA1s+tCKrhHEUOnSLF2ogSsE0tVMrjE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

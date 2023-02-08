@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-robot-mechanism-controllers";
   version = "1.10.18-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_controllers-release/archive/release/noetic/robot_mechanism_controllers/1.10.18-1.tar.gz";
-    name = "1.10.18-1.tar.gz";
-    sha256 = "74305f5067b74273f7fd18d723134d8616b25231a2aa64db5e97cedd3582a847";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_controllers-release";
+        rev = "release/noetic/robot_mechanism_controllers/1.10.18-1";
+        sha256 = "sha256-RnXYk4DThTW3YkHJ5Eeq9NNe3Iz+Bjzk1l3dwFKupOU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

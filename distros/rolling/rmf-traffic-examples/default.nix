@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rmf-traffic-examples";
   version = "3.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic-release/archive/release/rolling/rmf_traffic_examples/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "33d3fc5174d24084a30d85ecf0ce046cb724da05c98a4f70e9148401e35b4999";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_traffic-release";
+        rev = "release/rolling/rmf_traffic_examples/3.0.0-1";
+        sha256 = "sha256-bBRDoknCyTKV2epwCF7WNWrDCGPK9bJJuydn6S9n7nU=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

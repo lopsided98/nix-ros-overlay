@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-pal-gripper-controller-configuration";
   version = "3.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_gripper-release/archive/release/humble/pal_gripper_controller_configuration/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "6145d044628ea3f1f3139f7b2b4a5dc9030669ef1ed5d8d945985ef149d55ddd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "pal_gripper-release";
+        rev = "release/humble/pal_gripper_controller_configuration/3.0.1-1";
+        sha256 = "sha256-gMlc/+AIWErNZK/B0zS8vFstArdW/tobPKCKKREGuug=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

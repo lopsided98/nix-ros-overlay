@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-kdl-parser-py";
   version = "1.13.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/kdl_parser-release/archive/release/melodic/kdl_parser_py/1.13.3-1.tar.gz";
-    name = "1.13.3-1.tar.gz";
-    sha256 = "5463332e38a5d3483f6dd76859eac55d39560a019eddb02709a04adbd98490b3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "kdl_parser-release";
+        rev = "release/melodic/kdl_parser_py/1.13.3-1";
+        sha256 = "sha256-KDV2+mx7xlP45jEWJctpCLN9dBS4F/Reo9lq8iMKtGA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.catkin-pkg pythonPackages.setuptools ];

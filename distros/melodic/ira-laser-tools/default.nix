@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ira-laser-tools";
   version = "1.0.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/iralabdisco/ira_laser_tools-release/archive/release/melodic/ira_laser_tools/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "6986f1a7ae2ad688a40edb8e0dc5687eca413a21631eaae2c608c6f84fa06541";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "iralabdisco";
+        repo = "ira_laser_tools-release";
+        rev = "release/melodic/ira_laser_tools/1.0.7-1";
+        sha256 = "sha256-gCrYhlVL1oo/v9DpUW25s+TllnpFFbWZoNCMpLE58lQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

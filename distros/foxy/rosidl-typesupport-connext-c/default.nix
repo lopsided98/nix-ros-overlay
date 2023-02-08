@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rosidl-typesupport-connext-c";
   version = "1.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_typesupport_connext-release/archive/release/foxy/rosidl_typesupport_connext_c/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "60b24753c51030c08d9cce34541a2ce02d528759da2eb0006fdf8ceff243a204";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl_typesupport_connext-release";
+        rev = "release/foxy/rosidl_typesupport_connext_c/1.0.3-1";
+        sha256 = "sha256-ONJZ6yzlJapK9NTw9Ej4/c/W3oYrAzGqKDXUaii74lU=";
+      };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-lint-auto ament-lint-common ];

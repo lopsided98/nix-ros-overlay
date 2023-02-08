@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-laser-cb-detector";
   version = "0.10.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/calibration-release/archive/release/noetic/laser_cb_detector/0.10.15-1.tar.gz";
-    name = "0.10.15-1.tar.gz";
-    sha256 = "d5647f95c0a0ad831cdd3c825063cb8cef0baedf204467db0ea72a4f1e035ca7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "calibration-release";
+        rev = "release/noetic/laser_cb_detector/0.10.15-1";
+        sha256 = "sha256-5zhA0YPuHP+ODUlVQWJXmkLGzUZTsUWQAU9RfJ9gSPU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

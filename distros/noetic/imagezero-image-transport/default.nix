@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-imagezero-image-transport";
   version = "0.2.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/imagezero_transport-release/archive/release/noetic/imagezero_image_transport/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "cb5d9bc2228f6cf412da2aa371a0b5bf02c4f9b0ecc4ba4bb69f7a8e644a820a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "imagezero_transport-release";
+        rev = "release/noetic/imagezero_image_transport/0.2.5-1";
+        sha256 = "sha256-a4BovGUmbIymckl2H0m2ZjNqd4xfEKbTpQ1Yl8ofOgk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

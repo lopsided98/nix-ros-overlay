@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-geographic-msgs";
   version = "0.5.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-geographic-info/geographic_info-release/archive/release/noetic/geographic_msgs/0.5.6-1.tar.gz";
-    name = "0.5.6-1.tar.gz";
-    sha256 = "0c19562199a4f9f813362ad87d4345bb8ae77c77c41f7fe332eb672ad19d2d79";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-geographic-info";
+        repo = "geographic_info-release";
+        rev = "release/noetic/geographic_msgs/0.5.6-1";
+        sha256 = "sha256-Rc1JujJAKJ6ya7NCZufQxFBrzYmIs66tMSL22/fDWTw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

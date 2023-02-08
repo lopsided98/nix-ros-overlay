@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-eca-a9-control";
   version = "0.1.6";
 
-  src = fetchurl {
-    url = "https://github.com/uuvsimulator/eca_a9-release/archive/release/melodic/eca_a9_control/0.1.6-0.tar.gz";
-    name = "0.1.6-0.tar.gz";
-    sha256 = "2c5e9d6e0a17f5cf7b07029ac6e1df1dbcb1d47b77737b8c1d5a1eefd3254c1e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uuvsimulator";
+        repo = "eca_a9-release";
+        rev = "release/melodic/eca_a9_control/0.1.6-0";
+        sha256 = "sha256-j9oxYwisAiXFf7B3iYZrX+YzBkct2dxYKfgq/NIaKGw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

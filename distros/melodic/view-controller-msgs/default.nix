@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-view-controller-msgs";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/view_controller_msgs-release/archive/release/melodic/view_controller_msgs/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "cec91dd973a711c951445740ee4d743fb4907de310411e62bbd9796d3fcf54fe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "view_controller_msgs-release";
+        rev = "release/melodic/view_controller_msgs/0.2.0-1";
+        sha256 = "sha256-HVswly+YiZAEVU8VXD/fq/u/HBI7ZG71PHm4e3OD1vM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin genmsg message-generation ];

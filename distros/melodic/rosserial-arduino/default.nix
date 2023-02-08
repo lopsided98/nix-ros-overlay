@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosserial-arduino";
   version = "0.8.0";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rosserial-release/archive/release/melodic/rosserial_arduino/0.8.0-0.tar.gz";
-    name = "0.8.0-0.tar.gz";
-    sha256 = "dd4574a7017d7e81ffdf3d68f443017a16946a2788c02daa2ba21cf9ca351da6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rosserial-release";
+        rev = "release/melodic/rosserial_arduino/0.8.0-0";
+        sha256 = "sha256-fyeVk8JguyiKQfRfyGHCK8pzRTbtIBMGM1ZzUewm0hw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

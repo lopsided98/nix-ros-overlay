@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rmf-demos-gz";
   version = "1.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/foxy/rmf_demos_gz/1.3.2-1.tar.gz";
-    name = "1.3.2-1.tar.gz";
-    sha256 = "c17d0b8bcf7adf37d167bd3fcc10feec306f1af12699510913ea64b8e222db35";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rmf_demos-release";
+        rev = "release/foxy/rmf_demos_gz/1.3.2-1";
+        sha256 = "sha256-hZtqugmqa19MNRCevrhYoLuy5BfAo1WUDSywCwmgNVo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

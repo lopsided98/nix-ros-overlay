@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-easy-markers";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/wu-robotics/wu_ros_tools/archive/release/noetic/easy_markers/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "6706cf26cb96afa9ee2aea827e3be776af427dd591d6cdfabbcc83f14cb6bc20";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wu-robotics";
+        repo = "wu_ros_tools";
+        rev = "release/noetic/easy_markers/0.3.0-1";
+        sha256 = "sha256-nEtiZ8GJns+g9bvQerxmJaM8SFzmthmI4Ss3DAoR5+s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

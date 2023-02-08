@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-delphi-srr-msgs";
   version = "3.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/delphi_srr_msgs/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "5e7b8a7119dcb32fcf621af3cdc777e08d09ee14778f1ea1c9c9cd9a983941df";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "astuff_sensor_msgs-release";
+        rev = "release/melodic/delphi_srr_msgs/3.0.2-1";
+        sha256 = "sha256-4AK6O4bZSuySXhwed95aRAC/CFlDIKAEo+N87Q94BjM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ros-environment ];

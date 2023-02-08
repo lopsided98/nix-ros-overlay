@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-cspace-msgs, map-organizer-msgs, planner-cspace-msgs, safety-limiter-msgs, trajectory-tracker-msgs }:
 buildRosPackage {
   pname = "ros-melodic-neonavigation-msgs";
-  version = "0.8.0-r1";
+  version = "0.12.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/melodic/neonavigation_msgs/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "45623c8fec17c42f7de1820ac84dc5a142216652e18744091d6b2920d878ae8c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "at-wat";
+        repo = "neonavigation_msgs-release";
+        rev = "release/melodic/neonavigation_msgs/0.12.0-1";
+        sha256 = "sha256-LSpTYJU8PPuzlU1IgaE6ayrbsAbHyjQFlcN1XeVh+04=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

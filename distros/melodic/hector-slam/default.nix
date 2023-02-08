@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hector-slam";
   version = "0.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/melodic/hector_slam/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "5de924ad2cd6d85d5b5ff4ea8762e2b9ea5e68139133e42a0dd7cb537503ee49";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_slam-release";
+        rev = "release/melodic/hector_slam/0.4.1-1";
+        sha256 = "sha256-wu0kJbTPKURt+uIetNr9MDq21/Z8tTBBkMC3JZdbxCI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

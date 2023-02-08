@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fetch-calibration";
   version = "0.9.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/noetic/fetch_calibration/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "c11144a32a9706f74aec372cde05591232580d7d20824eeabd270f8d8c03b79b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "fetch_ros-release";
+        rev = "release/noetic/fetch_calibration/0.9.1-1";
+        sha256 = "sha256-gJ07FB3Sd+igl7vg/QBDKCz1vSLrxJhR8EzeqRu46aE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools ];

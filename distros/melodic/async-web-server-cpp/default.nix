@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-async-web-server-cpp";
   version = "1.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fkie-release/async_web_server_cpp-release/archive/release/melodic/async_web_server_cpp/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "f1094d659202fb2ed57ef45efe72c8748e7086c122be0f064e3804657c14d630";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fkie-release";
+        repo = "async_web_server_cpp-release";
+        rev = "release/melodic/async_web_server_cpp/1.0.3-1";
+        sha256 = "sha256-S72a09saKwNEGbxvzKD79vbsvzC1mjhbHQU2YtkoKOw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin openssl ];

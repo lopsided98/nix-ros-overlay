@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosbag-snapshot-msgs";
   version = "1.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rosbag_snapshot-release/archive/release/melodic/rosbag_snapshot_msgs/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "39f0bb1c63f100662d2e0adb8a8f60dd498c164974c6febc848cccdea9b7414f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rosbag_snapshot-release";
+        rev = "release/melodic/rosbag_snapshot_msgs/1.0.4-1";
+        sha256 = "sha256-SHHdVyr5zYyIyNnHyeJ+/GM8ohYgljDREbpKQAaxz3g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

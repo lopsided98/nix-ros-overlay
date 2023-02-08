@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-gps-common";
   version = "0.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/noetic/gps_common/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "9f1698a8af546ffc0e466dfda956ef9e0ce7d733eeb2aa7fc17790472e644854";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "gps_umd-release";
+        rev = "release/noetic/gps_common/0.3.3-1";
+        sha256 = "sha256-QVIxTt/bEqxclSU4eZ+rqX2jKWcf/jZd1CMUKHxfTZQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

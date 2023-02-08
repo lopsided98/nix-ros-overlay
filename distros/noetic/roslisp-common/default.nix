@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-roslisp-common";
   version = "0.2.14-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/noetic/roslisp_common/0.2.14-1.tar.gz";
-    name = "0.2.14-1.tar.gz";
-    sha256 = "9d032a748c483285565390cdeb4a534ed9c660c93d65417bed5a52a918e34f5e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "roslisp_common-release";
+        rev = "release/noetic/roslisp_common/0.2.14-1";
+        sha256 = "sha256-miJA/miFnZekOvXqh4+fK+rgDTEwP7Uu899kgwjziqI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

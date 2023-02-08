@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-serial";
   version = "1.2.1";
 
-  src = fetchurl {
-    url = "https://github.com/wjwwood/serial-release/archive/release/melodic/serial/1.2.1-0.tar.gz";
-    name = "1.2.1-0.tar.gz";
-    sha256 = "2509a47393feef491a0876997beb0fd9af9ecc4e6ed6ceb533f3b8840471f1c2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wjwwood";
+        repo = "serial-release";
+        rev = "release/melodic/serial/1.2.1-0";
+        sha256 = "sha256-/FAxK2r1ZPZM1fLmXmpgiYBEX+n8be3bqKfNxHtXmEE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

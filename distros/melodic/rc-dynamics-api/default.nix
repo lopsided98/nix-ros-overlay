@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rc-dynamics-api";
   version = "0.10.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_dynamics_api-release/archive/release/melodic/rc_dynamics_api/0.10.0-1.tar.gz";
-    name = "0.10.0-1.tar.gz";
-    sha256 = "251805e98f63e6b31fcb8d7a56dbf855c366c52026cee71888d6181b1bfdfc34";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "roboception-gbp";
+        repo = "rc_dynamics_api-release";
+        rev = "release/melodic/rc_dynamics_api/0.10.0-1";
+        sha256 = "sha256-eK2OxT5XpS509Sbn1Yi7rfJnZmf0ShEgmcguVQFcF3Q=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

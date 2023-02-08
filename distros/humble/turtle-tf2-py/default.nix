@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-turtle-tf2-py";
   version = "0.3.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/humble/turtle_tf2_py/0.3.6-1.tar.gz";
-    name = "0.3.6-1.tar.gz";
-    sha256 = "f7d8d6a6c26c57053f89d4d98267ae10495da9f4370efdc7c6242e8d21896d9c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "geometry_tutorials-release";
+        rev = "release/humble/turtle_tf2_py/0.3.6-1";
+        sha256 = "sha256-KyrTt9hvh28k8MJ6EaD2AnuC3cH+nNMX5fYPjXkz6AA=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

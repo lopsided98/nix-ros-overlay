@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hfl-driver";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/flynneva/hfl_driver-release/archive/release/melodic/hfl_driver/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "0583fd59b8cff10160d9a76fa358e86972430114a59b8422a5bdc063f69e8772";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "flynneva";
+        repo = "hfl_driver-release";
+        rev = "release/melodic/hfl_driver/0.1.0-1";
+        sha256 = "sha256-8dygZmk/hyGSEKHvlXVMM511HxluBHQZz14zSoFNhkE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-lanelet2-routing";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/melodic/lanelet2_routing/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "1ff4e46e74b7f5317c986065bfe035031bec07318e49164256e7f2e7af308b16";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fzi-forschungszentrum-informatik";
+        repo = "lanelet2-release";
+        rev = "release/melodic/lanelet2_routing/1.0.1-1";
+        sha256 = "sha256-yZ2NseoQfyA7NlcDKOEM7ceKJ4xw/2IUfMynQuWTePQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-rcgcd-spl-14-conversion";
   version = "2.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/humble/rcgcd_spl_14_conversion/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "02c1b7e40b784a16574d9a44ba39ae006f5999f6e72d3bfe2855effc42a12424";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "gc_spl-release";
+        rev = "release/humble/rcgcd_spl_14_conversion/2.0.0-1";
+        sha256 = "sha256-ZohxznfsfNd8ZxH9ibvpLrw+q4bpyvD+lNegDPBRSLI=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

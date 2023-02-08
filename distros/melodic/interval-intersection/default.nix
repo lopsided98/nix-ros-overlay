@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-interval-intersection";
   version = "0.10.14";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/calibration-release/archive/release/melodic/interval_intersection/0.10.14-0.tar.gz";
-    name = "0.10.14-0.tar.gz";
-    sha256 = "4466aa2fd48b25d0fa963f756b1ed3c5bb4bcba29d9dc1fc6d392d2dfe4685a5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "calibration-release";
+        rev = "release/melodic/interval_intersection/0.10.14-0";
+        sha256 = "sha256-3gOrGGv/EgmleTUsgX7A6tJbe15Poi59NpWyHgNuF/E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

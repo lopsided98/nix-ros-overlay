@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-dummy-map-server";
   version = "0.9.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/dummy_map_server/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "4f3fddbf708f424f978c584430f0707a8243bbc4cc3226201ed6b4e8946ef32e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/foxy/dummy_map_server/0.9.4-1";
+        sha256 = "sha256-bdY27PpKnHxWRxeLpEIM/O7Xmh2qAsuLnZSPaJSOvpQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

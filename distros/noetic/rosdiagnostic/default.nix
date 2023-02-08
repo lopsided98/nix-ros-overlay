@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosdiagnostic";
   version = "1.11.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/diagnostics-release/archive/release/noetic/rosdiagnostic/1.11.0-1.tar.gz";
-    name = "1.11.0-1.tar.gz";
-    sha256 = "ceb8d907e7841abd95c14e9acba0e253f813187acc3d64e00c3ec821de008f8a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "diagnostics-release";
+        rev = "release/noetic/rosdiagnostic/1.11.0-1";
+        sha256 = "sha256-OBnSkIImT0cNmxuljUP0KmB3pOQGnruKDcLciM4eLZE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

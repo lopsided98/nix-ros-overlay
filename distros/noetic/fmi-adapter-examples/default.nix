@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fmi-adapter-examples";
   version = "1.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/boschresearch/fmi_adapter-release/archive/release/noetic/fmi_adapter_examples/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "e53713fb0614975272e12580508a1187b529ca80057a5cb166a56d95130c2ebb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "boschresearch";
+        repo = "fmi_adapter-release";
+        rev = "release/noetic/fmi_adapter_examples/1.0.4-1";
+        sha256 = "sha256-vMeNdWmjucn8ZM2ReMjUR9P3TI7KODdr0GgeJOYNQvg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

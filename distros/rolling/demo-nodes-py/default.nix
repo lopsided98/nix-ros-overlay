@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-demo-nodes-py";
   version = "0.23.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/demo_nodes_py/0.23.0-1.tar.gz";
-    name = "0.23.0-1.tar.gz";
-    sha256 = "b4e5d362d5ef6e7f2a1b0ef7fb1f80d4330791bab679199c3e2043b9ae89905c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/rolling/demo_nodes_py/0.23.0-1";
+        sha256 = "sha256-f0fxJDrWsaAQWfBeoHv7J0H1tVmoMM1iLrW8gL1b9no=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

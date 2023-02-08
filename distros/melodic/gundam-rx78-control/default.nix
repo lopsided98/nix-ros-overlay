@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-gundam-rx78-control";
   version = "0.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/gundam-global-challenge/gundam_robot-release/archive/release/melodic/gundam_rx78_control/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "aea11f0c98aced57ce60008763b2265d61130564f9a7be68085ea41662770f65";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "gundam-global-challenge";
+        repo = "gundam_robot-release";
+        rev = "release/melodic/gundam_rx78_control/0.0.3-1";
+        sha256 = "sha256-ZIOMMDiYB7Hwzryof/VWFvkvFe6hjAGDB4r6wuvewTA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

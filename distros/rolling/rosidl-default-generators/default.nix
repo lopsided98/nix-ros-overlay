@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rosidl-default-generators";
   version = "1.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_defaults-release/archive/release/rolling/rosidl_default_generators/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "f56d90894660e975ec4841a9b4d73480584c4848381ffc0b5929d457797bcadd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl_defaults-release";
+        rev = "release/rolling/rosidl_default_generators/1.4.0-1";
+        sha256 = "sha256-LLXS4Kmu4Mzu0Fksz4W/iTtiNeabFXAVgElRFi7yfBk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

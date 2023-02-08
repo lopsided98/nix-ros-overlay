@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-phidgets-spatial";
   version = "1.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_spatial/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "4b5ca55c76c2ad013a184daa7b436df316f07243c43f4fc63e42080563cd3c3b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "phidgets_drivers-release";
+        rev = "release/noetic/phidgets_spatial/1.0.6-1";
+        sha256 = "sha256-D9O69y9hvos+Cu0mnWDBOnxoK+Op1z7F9o0l9Tiv/rY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

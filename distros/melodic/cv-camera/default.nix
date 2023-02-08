@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cv-camera";
   version = "0.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/OTL/cv_camera-release/archive/release/melodic/cv_camera/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "7119fcb01b7e39953f38be82f00d3ddf63ce52c92732091df65239b7824044dd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "OTL";
+        repo = "cv_camera-release";
+        rev = "release/melodic/cv_camera/0.4.0-1";
+        sha256 = "sha256-dSm9FBiw5d9k5ZkLG5sbrAW5vWXuLIv2OyxwqSxxc6U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint rostest ];

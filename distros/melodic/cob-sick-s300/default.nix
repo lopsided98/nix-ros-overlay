@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-sick-s300";
   version = "0.7.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/melodic/cob_sick_s300/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "a43b43c4a04322af2449d415ac9a5ceaa7a05d4fcebafe66649222481a76ddfb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_driver-release";
+        rev = "release/melodic/cob_sick_s300/0.7.4-1";
+        sha256 = "sha256-JZQ+9yh1M9wuWwjD79mW/PH56tVMSC5BzVKxmX7P2vs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ros-image-to-qimage";
   version = "0.4.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_image_to_qimage-release/archive/release/rolling/ros_image_to_qimage/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "a527afc12c12b9e84cc7185f4d2b0925b82033bdded3bc373b3330413c2f49a3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros_image_to_qimage-release";
+        rev = "release/rolling/ros_image_to_qimage/0.4.1-1";
+        sha256 = "sha256-qxt94vxyKVhWR64DyvjU5D5xKcJcflZdDd/jA2e0d9U=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-pytest ament-cmake-python ];

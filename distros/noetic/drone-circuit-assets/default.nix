@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-drone-circuit-assets";
   version = "1.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/JdeRobot/drones-release/archive/release/noetic/drone_circuit_assets/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "1265679acee200442cbded215e33fc9b9e72734af75cd3b6b605becbf5eb8dc6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "JdeRobot";
+        repo = "drones-release";
+        rev = "release/noetic/drone_circuit_assets/1.4.2-1";
+        sha256 = "sha256-G5br8VoFvZnNBH3LKoScfsHiPyNdHP4N9o0iDAgLAGg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools ];

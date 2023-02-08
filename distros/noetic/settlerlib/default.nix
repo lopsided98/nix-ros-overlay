@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-settlerlib";
   version = "0.10.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/calibration-release/archive/release/noetic/settlerlib/0.10.15-1.tar.gz";
-    name = "0.10.15-1.tar.gz";
-    sha256 = "c33ad16a8254c5b646874efcedcc894821ca38121916a103b29d357101ba2810";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "calibration-release";
+        rev = "release/noetic/settlerlib/0.10.15-1";
+        sha256 = "sha256-IzwM4117RXEovzFCq3mnkGXIf4tsZBejilCBvy7eNdY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

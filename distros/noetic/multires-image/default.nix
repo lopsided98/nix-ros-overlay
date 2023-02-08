@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-multires-image";
   version = "1.4.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/noetic/multires_image/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "99f107b5e3dd220a36b74628fc7a29f16bd979dc94d28e4ad823a38f280768ae";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "mapviz-release";
+        rev = "release/noetic/multires_image/1.4.2-1";
+        sha256 = "sha256-aHgyyFOdYXhYq5wpO2N6SaGl5xFqZviBbhp8xYP8Ogg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

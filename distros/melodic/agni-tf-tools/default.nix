@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-agni-tf-tools";
   version = "0.1.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ubi-agni-gbp/agni_tf_tools-release/archive/release/melodic/agni_tf_tools/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "f5d19d9f1dc379c8c62bda3e4a624f18271250442ee76d32fb8d2fe9a9c0f2f9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ubi-agni-gbp";
+        repo = "agni_tf_tools-release";
+        rev = "release/melodic/agni_tf_tools/0.1.6-1";
+        sha256 = "sha256-ANse47fGab2q9ILqK5dUHib1zRpQOvNxAKBNsp6zy10=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin eigen qt5.qtbase ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-qt-tutorials";
   version = "0.2.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/qt_ros-release/archive/release/melodic/qt_tutorials/0.2.10-1.tar.gz";
-    name = "0.2.10-1.tar.gz";
-    sha256 = "95d2b5fca0298fc52e2c506d08e83c4a43b055058e2a9166ec1606c4058238be";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "qt_ros-release";
+        rev = "release/melodic/qt_tutorials/0.2.10-1";
+        sha256 = "sha256-sq6agqTgEWbREd5P4tN7bcNcLQ+kEVACMpgQdbr57Cs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

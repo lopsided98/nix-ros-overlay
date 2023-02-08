@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-label-manager";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh-tools/archive/release/noetic/label_manager/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "6858c277c528ea94ab7bc1efcd561ff4d9c94680761650220078d4e2f6affd9e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mesh-tools";
+        rev = "release/noetic/label_manager/1.1.0-1";
+        sha256 = "sha256-z4qdRuckd+O/q4Y3ibC6/Fyao0yGI+IZIWVGj2PK/Mk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mobile-robot-simulator";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/nobleo/mobile_robot_simulator-release/archive/release/melodic/mobile_robot_simulator/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "dfb06a08fdc913cfe76d014a149cfb5da9770cac4372ff88baa08e10ecbcac6f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "nobleo";
+        repo = "mobile_robot_simulator-release";
+        rev = "release/melodic/mobile_robot_simulator/1.0.1-1";
+        sha256 = "sha256-Oq0f6dDI4QyXSeXB4S3He1oni35peRzDBLchC0GpvME=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

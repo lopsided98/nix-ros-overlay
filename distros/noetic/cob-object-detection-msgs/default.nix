@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-object-detection-msgs";
   version = "0.6.19-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/noetic/cob_object_detection_msgs/0.6.19-1.tar.gz";
-    name = "0.6.19-1.tar.gz";
-    sha256 = "3545063cd63a307c29456b39f68ab1fcd842b90423e61da31d08942c5d093888";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_perception_common-release";
+        rev = "release/noetic/cob_object_detection_msgs/0.6.19-1";
+        sha256 = "sha256-fZb1Xh3sqmep1SfC6D+yq/pVJt/uIinh4ukapJNzYoY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

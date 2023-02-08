@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-hdf5-map-io";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mesh-tools/archive/release/noetic/hdf5_map_io/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "31ca04db6683ffac320887907022e7d8ae3bf6965eb11252d0bf1f6836f4b571";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mesh-tools";
+        rev = "release/noetic/hdf5_map_io/1.1.0-1";
+        sha256 = "sha256-uGfz9W97JDomrPLt7PKwlP4UGNdee8XJwzovBpzyra8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

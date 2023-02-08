@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-camera-info-manager";
   version = "1.12.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/image_common-release/archive/release/noetic/camera_info_manager/1.12.0-1.tar.gz";
-    name = "1.12.0-1.tar.gz";
-    sha256 = "665ff2dc8fd366d67b1fd535bbf3bae4eca13f43e622b8ec4232afc0b8844c51";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "image_common-release";
+        rev = "release/noetic/camera_info_manager/1.12.0-1";
+        sha256 = "sha256-UarjrjPCMzNdKZwY8Uxcnrp53jRf280wWXc/BGUasdk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mqtt-bridge";
   version = "0.1.8-r4";
 
-  src = fetchurl {
-    url = "https://github.com/groove-x/mqtt_bridge-release/archive/release/melodic/mqtt_bridge/0.1.8-4.tar.gz";
-    name = "0.1.8-4.tar.gz";
-    sha256 = "b6ee5c7ab85fd71dd76c4b8a59e74f17b12a6d593eff387183dc4d0d7e58dd4e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "groove-x";
+        repo = "mqtt_bridge-release";
+        rev = "release/melodic/mqtt_bridge/0.1.8-4";
+        sha256 = "sha256-dO/22C/MA8HHWA5ia6zOCoickqtOyHBBvG7GoKOLnYk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.pip pythonPackages.setuptools ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-ros-control-boilerplate";
   version = "0.6.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/ros_control_boilerplate-release/archive/release/noetic/ros_control_boilerplate/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "41db741a7cbc512777dc79ee4457457394989c4c367296f68fa4a79c0d9983ac";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PickNikRobotics";
+        repo = "ros_control_boilerplate-release";
+        rev = "release/noetic/ros_control_boilerplate/0.6.1-1";
+        sha256 = "sha256-tLRVrWiVrKkanmqGIEpK46aYyEkmMgOQiOv+D9mFLSk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules gflags ];

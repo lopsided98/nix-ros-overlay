@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-ur-bringup";
   version = "2.2.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/rolling/ur_bringup/2.2.4-1.tar.gz";
-    name = "2.2.4-1.tar.gz";
-    sha256 = "6eb1a5bc7f6b707dd7c79af01e776c3be4dfbf21e6a7ab4a19881ba6c9fee75c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "Universal_Robots_ROS2_Driver-release";
+        rev = "release/rolling/ur_bringup/2.2.4-1";
+        sha256 = "sha256-h6aj5ArlHEimZvvWpSUXLPCS7oqPOxCmhmm7DlF6VYs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];

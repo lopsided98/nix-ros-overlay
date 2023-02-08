@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fetch-ikfast-plugin";
   version = "0.9.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/fetch_ros-release/archive/release/noetic/fetch_ikfast_plugin/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "dd967690c06c97e3cb82db0bdd22bd8ef9d29e653308b324bf9904e964d32d48";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fetchrobotics-gbp";
+        repo = "fetch_ros-release";
+        rev = "release/noetic/fetch_ikfast_plugin/0.9.1-1";
+        sha256 = "sha256-GixA1WChN6MD05RJ+HialWmiDv1glyj/YG03WgaaQC4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin tf2-eigen tf2-kdl ];

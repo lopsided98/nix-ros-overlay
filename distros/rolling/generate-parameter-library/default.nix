@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-generate-parameter-library";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/generate_parameter_library-release/archive/release/rolling/generate_parameter_library/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "9f89dd2e285abb4d4762ad93d9711451b1c065adf32566a93195e8a5fe9491da";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "generate_parameter_library-release";
+        rev = "release/rolling/generate_parameter_library/0.3.0-1";
+        sha256 = "sha256-roGeZanzoZNM9V5/iae41ikNVpsMi924g9fPD48wflw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

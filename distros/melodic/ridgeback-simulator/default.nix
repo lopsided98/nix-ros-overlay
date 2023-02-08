@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ridgeback-simulator";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback_simulator-release/archive/release/melodic/ridgeback_simulator/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "243d1e99e7d210045a1673304ab5b250996854a3b1437ffc41def7ad5526463f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "ridgeback_simulator-release";
+        rev = "release/melodic/ridgeback_simulator/0.1.1-1";
+        sha256 = "sha256-Ljvvf3tFBaZks4686NSWZEe2NI3f5d5CgH3hHr8XWLA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosboost-cfg";
   version = "1.15.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros-release/archive/release/noetic/rosboost_cfg/1.15.8-1.tar.gz";
-    name = "1.15.8-1.tar.gz";
-    sha256 = "7560041d65a39dc786a1202318395c866af0b7b17a5eb8839e4c485f7679c7eb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros-release";
+        rev = "release/noetic/rosboost_cfg/1.15.8-1";
+        sha256 = "sha256-vLOHkdYoxXK128ar55W+/BIjNcUAoLoUoS6PzIF/f4U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin python3Packages.setuptools ];

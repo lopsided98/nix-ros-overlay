@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-cyclonedds";
   version = "0.9.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/cyclonedds-release/archive/release/humble/cyclonedds/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "35afc032b7b7eb01fe4b62d996ebb2d7697d39599ce1860e6e198a0b9a96dc40";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "cyclonedds-release";
+        rev = "release/humble/cyclonedds/0.9.1-1";
+        sha256 = "sha256-VGL8btSnRvNHXhGKhLQhNNBYh3iwzyHem8jbirjxbD8=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

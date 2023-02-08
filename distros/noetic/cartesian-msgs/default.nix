@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cartesian-msgs";
   version = "0.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PickNikRobotics/cartesian_msgs-release/archive/release/noetic/cartesian_msgs/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "427c2c1230df05e280ed460acc844e45c32f3cb64cc1d6b868d14d75848b7afe";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PickNikRobotics";
+        repo = "cartesian_msgs-release";
+        rev = "release/noetic/cartesian_msgs/0.0.3-1";
+        sha256 = "sha256-EsIPvtidY69PT/bIxbUcJNoD47MXWgg/pXQ+qfIvSEQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

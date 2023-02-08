@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-volta-navigation";
   version = "1.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/botsync-gbp/volta-release/archive/release/melodic/volta_navigation/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "9590f489e4b119ad2478dd4aeb7bfb538f145dc8e6d3e2710cb3e417cc92cabb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "botsync-gbp";
+        repo = "volta-release";
+        rev = "release/melodic/volta_navigation/1.1.1-1";
+        sha256 = "sha256-sOABG/HHWKON/KrHsvocsOq8abT2lFyB+tzwZKTVK/0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

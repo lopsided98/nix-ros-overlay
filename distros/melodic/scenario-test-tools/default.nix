@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-scenario-test-tools";
   version = "0.6.19-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/melodic/scenario_test_tools/0.6.19-1.tar.gz";
-    name = "0.6.19-1.tar.gz";
-    sha256 = "14e3f791241da2ccad0f94359f33eb914ad3ec26e8427639f370c85760ac39cb";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_command_tools-release";
+        rev = "release/melodic/scenario_test_tools/0.6.19-1";
+        sha256 = "sha256-1fAu8yoNw53SdVHcypbNZWMsqEhI6Z78J8V0m1qvDaU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools ];

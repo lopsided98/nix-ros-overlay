@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-diagnostic-msgs";
   version = "1.12.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/diagnostic_msgs/1.12.8-1.tar.gz";
-    name = "1.12.8-1.tar.gz";
-    sha256 = "060557501838ace8ebd510d1e606420cd0fa1c82c2212553d671aed0193a2fc0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "common_msgs-release";
+        rev = "release/melodic/diagnostic_msgs/1.12.8-1";
+        sha256 = "sha256-rK8YITG7K6I0khbM8h5LRSp7WP99fMbaWzeUKPDNep4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

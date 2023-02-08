@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-viz";
   version = "1.4.1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/metapackages-release/archive/release/melodic/viz/1.4.1-0.tar.gz";
-    name = "1.4.1-0.tar.gz";
-    sha256 = "c2cdc23508adf393957c192b8d62b0278260342d34dbcc58a3bac3abbd61dcf4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "metapackages-release";
+        rev = "release/melodic/viz/1.4.1-0";
+        sha256 = "sha256-vFyc+W6pF5nSt2YsWwV7SJlAaoWkyzsa0jmTGmMV76k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-joy-mouse";
   version = "0.1.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/joy_mouse/0.1.16-1.tar.gz";
-    name = "0.1.16-1.tar.gz";
-    sha256 = "4876131f722fa3039230dc0057afd48333a74da69cca0f665a250f2bc4fc97e8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_control-release";
+        rev = "release/noetic/joy_mouse/0.1.16-1";
+        sha256 = "sha256-MvD0OmrRF3bH9VZNfQGwdi0KjliMpZdKbmn+lBJkByc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-capabilities";
   version = "0.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/capabilities-release/archive/release/noetic/capabilities/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "1501424f9e0037067b6f14cc81563056d02b9d642f7a2cc6c7cc1af68aa98dbc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "capabilities-release";
+        rev = "release/noetic/capabilities/0.3.1-1";
+        sha256 = "sha256-oZaBTlkl2LxXaaHDGuQkAWZwJERUJ3RHLLMwgcnzgRs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation rostest ];

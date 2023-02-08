@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-libcurl-vendor";
   version = "3.2.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/rolling/libcurl_vendor/3.2.2-1.tar.gz";
-    name = "3.2.2-1.tar.gz";
-    sha256 = "9138c4772aa752b4bb4240cd1fc6e26e192b062c1ab8b1455bccb70cfaf4b20f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "resource_retriever-release";
+        rev = "release/rolling/libcurl_vendor/3.2.2-1";
+        sha256 = "sha256-rBKaXBI2vsbOUomT/7fu+yhC1Fgl8OU4RKve53M3SFM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake file ];

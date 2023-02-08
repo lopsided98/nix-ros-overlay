@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-copernicus-navigation";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/botsync-gbp/copernicus-release/archive/release/melodic/copernicus_navigation/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "aea86ea189044f29f15e382e225901e0dc38d7862b5f7aae0bcb17797f021698";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "botsync-gbp";
+        repo = "copernicus-release";
+        rev = "release/melodic/copernicus_navigation/1.1.0-1";
+        sha256 = "sha256-qOVq37k/4hI35J1mo2Vk3y/wnC675gkMXcDbVemUSoI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

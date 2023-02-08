@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-image-view";
   version = "0.4.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_image_view-release/archive/release/noetic/rqt_image_view/0.4.16-1.tar.gz";
-    name = "0.4.16-1.tar.gz";
-    sha256 = "2c977aaa2f825ace4f70b8514c6b581f9a5023256d9f72ae18ee97484fbdc20e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rqt_image_view-release";
+        rev = "release/noetic/rqt_image_view/0.4.16-1";
+        sha256 = "sha256-FKgLVFXZvlgp1PGBEGqCdSD3scc7Re70ViuSVMNBfbA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin qt5.qtbase ];

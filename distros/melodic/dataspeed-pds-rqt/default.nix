@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dataspeed-pds-rqt";
   version = "1.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_pds-release/archive/release/melodic/dataspeed_pds_rqt/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "45e42d4c5a45175fd962ada3e558210b104c34af8c6214bec8ad26230be40a40";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dataspeed_pds-release";
+        rev = "release/melodic/dataspeed_pds_rqt/1.0.6-1";
+        sha256 = "sha256-9J0rmj2Ilzm9sDZE3BRuvft3ZFzdtmO303XBMLePAHs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools ];

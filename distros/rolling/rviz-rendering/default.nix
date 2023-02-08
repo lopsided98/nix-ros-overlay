@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rviz-rendering";
   version = "12.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/rolling/rviz_rendering/12.2.0-1.tar.gz";
-    name = "12.2.0-1.tar.gz";
-    sha256 = "6c3e63818d5c199a68f0d40f2140339152cb1a9724abf266688d4f4a0d26e22d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rviz-release";
+        rev = "release/rolling/rviz_rendering/12.2.0-1";
+        sha256 = "sha256-ZdH5laEVHOFkIJeQpP6Vo4F8K9hP8gW+jUySa/bvsbs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

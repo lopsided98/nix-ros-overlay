@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-jderobot-color-tuner";
   version = "0.0.5-r2";
 
-  src = fetchurl {
-    url = "https://github.com/JdeRobot/ColorTuner-release/archive/release/melodic/jderobot_color_tuner/0.0.5-2.tar.gz";
-    name = "0.0.5-2.tar.gz";
-    sha256 = "fbd11a0183302b10796d47e4489c4da0709aeb176dc0d00af3770f06629ddb70";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "JdeRobot";
+        repo = "ColorTuner-release";
+        rev = "release/melodic/jderobot_color_tuner/0.0.5-2";
+        sha256 = "sha256-tdsWZFwUTsgpNiKbpIuUWCPHf6djVvl3dCXd/2PmGyA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

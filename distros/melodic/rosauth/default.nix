@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosauth";
   version = "1.0.1";
 
-  src = fetchurl {
-    url = "https://github.com/gt-rail-release/rosauth-release/archive/release/melodic/rosauth/1.0.1-0.tar.gz";
-    name = "1.0.1-0.tar.gz";
-    sha256 = "0ca3669ec558cc5222bad792320e30bb7e7d0321282b1abe49a0ff9b68fb5986";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "gt-rail-release";
+        repo = "rosauth-release";
+        rev = "release/melodic/rosauth/1.0.1-0";
+        sha256 = "sha256-k6rlgHzOtIixFOZAXYcjZimrp6cFUKE1p7MCPhzpIME=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation openssl ];

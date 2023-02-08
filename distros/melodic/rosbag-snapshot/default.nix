@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosbag-snapshot";
   version = "1.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rosbag_snapshot-release/archive/release/melodic/rosbag_snapshot/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "3e14fb72af8e6f077fd2c6982e9d4b6737d01fa361168e3130d27e1c3c74be33";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rosbag_snapshot-release";
+        rev = "release/melodic/rosbag_snapshot/1.0.4-1";
+        sha256 = "sha256-edqGPY5C+67t9+vfvrkVCx87Porq5nIAGIlU2aihRRM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

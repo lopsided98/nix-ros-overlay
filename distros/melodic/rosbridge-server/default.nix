@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosbridge-server";
   version = "0.11.16-r2";
 
-  src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/melodic/rosbridge_server/0.11.16-2.tar.gz";
-    name = "0.11.16-2.tar.gz";
-    sha256 = "3d6c126140f38d740d8fa69c8f6dfcf6c955965e2f9b9bb0c63f867ae0794697";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "RobotWebTools-release";
+        repo = "rosbridge_suite-release";
+        rev = "release/melodic/rosbridge_server/0.11.16-2";
+        sha256 = "sha256-6B6RomED+NHHu7I281ZFKd3CqVhE2XfmIAqziqRlj20=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools ];

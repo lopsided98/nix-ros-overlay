@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-p2os-doc";
   version = "2.2.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/allenh1/p2os-release/archive/release/noetic/p2os_doc/2.2.1-2.tar.gz";
-    name = "2.2.1-2.tar.gz";
-    sha256 = "af16e91552f917df1f6d9aeb4f37f718f3e2129f7c046564533829e7e85ea601";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "allenh1";
+        repo = "p2os-release";
+        rev = "release/noetic/p2os_doc/2.2.1-2";
+        sha256 = "sha256-bR5QihkZavtpmdUG7kAVKGf/AS1fO7mSMRrwHNXIO1k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

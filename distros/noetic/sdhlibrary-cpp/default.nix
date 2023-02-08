@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-sdhlibrary-cpp";
   version = "0.2.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipab-slmc/SDHLibrary-CPP-release/archive/release/noetic/sdhlibrary_cpp/0.2.10-1.tar.gz";
-    name = "0.2.10-1.tar.gz";
-    sha256 = "ffc04d5df500d974febd8575389ff9a96c149290190befe111345aa5fb08fe7f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipab-slmc";
+        repo = "SDHLibrary-CPP-release";
+        rev = "release/noetic/sdhlibrary_cpp/0.2.10-1";
+        sha256 = "sha256-4Fg1zDkpoUwidBGO5S2wWcxswKYv0F01dLW2eu9LdAY=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

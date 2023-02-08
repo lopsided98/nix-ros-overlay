@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-gpio-control";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/cst0/gpio_control-release/archive/release/melodic/gpio_control/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "36bb27fdd2f6a914db67bdd646795874b37a3f3a2b8def950ac1719b5bd0dbca";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "cst0";
+        repo = "gpio_control-release";
+        rev = "release/melodic/gpio_control/1.0.0-1";
+        sha256 = "sha256-vpJhG+yiOgyzrMSdffcQy6cAv24qQo0VciIuItxkdI0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

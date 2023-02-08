@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hironx-ros-bridge";
   version = "2.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/rtmros_hironx-release/archive/release/melodic/hironx_ros_bridge/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "0a91dd930c34df29ce651af41d878bdd9c463be2a5a7d1ef4f2cbeeb6c403524";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "rtmros_hironx-release";
+        rev = "release/melodic/hironx_ros_bridge/2.2.0-1";
+        sha256 = "sha256-gNcs10j43wAMbPPslIZGbaVJoVsDmBBENh+m49sWsKI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin mk rosbuild roslint unzip ];

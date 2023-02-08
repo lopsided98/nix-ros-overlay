@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-industrial-msgs";
   version = "0.7.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/industrial_msgs/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "ea2f9d7bed6e3bfd7c2a3fe74718d450c5b886f20904bc5b222f14848fb02110";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "industrial_core-release";
+        rev = "release/melodic/industrial_msgs/0.7.3-1";
+        sha256 = "sha256-tYfr1AQOZgUBX7+un6HBIe2YqG+SkpI4U0/lkeXZloM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

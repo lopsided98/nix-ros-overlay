@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-network-traffic-control";
   version = "1.0.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/network_traffic_control/1.0.16-1.tar.gz";
-    name = "1.0.16-1.tar.gz";
-    sha256 = "9d8832fc6ede4a2a054979e185c34e60452bb6757ed942bb907b622127d62dc7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "linux_networking-release";
+        rev = "release/melodic/network_traffic_control/1.0.16-1";
+        sha256 = "sha256-3HpB8YYPquv9UefVy91OQGtEKTzCDOmTTgR81s1lFEM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

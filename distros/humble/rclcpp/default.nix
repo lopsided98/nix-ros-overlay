@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gen-version-h, ament-cmake-gmock, ament-cmake-google-benchmark, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, builtin-interfaces, libstatistics-collector, mimick-vendor, performance-test-fixture, python3, rcl, rcl-interfaces, rcl-yaml-param-parser, rcpputils, rcutils, rmw, rmw-implementation-cmake, rosgraph-msgs, rosidl-default-generators, rosidl-runtime-cpp, rosidl-typesupport-c, rosidl-typesupport-cpp, statistics-msgs, test-msgs, tracetools }:
 buildRosPackage {
   pname = "ros-humble-rclcpp";
-  version = "16.0.2-r1";
+  version = "16.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/humble/rclcpp/16.0.2-1.tar.gz";
-    name = "16.0.2-1.tar.gz";
-    sha256 = "6ecc7943b78b4559db067649c24a1dce194bcbfd522f24c0c67a712683a04795";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rclcpp-release";
+        rev = "release/humble/rclcpp/16.0.3-1";
+        sha256 = "sha256-sSfsjaIgniQGKwJLdNoK5A4eB/HRXhSpS4Ny30UaLdU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-gen-version-h ament-cmake-ros python3 ];

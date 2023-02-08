@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, mir-actions, mir-description, mir-driver, mir-dwb-critics, mir-gazebo, mir-msgs, mir-navigation, sdc21x0 }:
 buildRosPackage {
   pname = "ros-noetic-mir-robot";
-  version = "1.1.6-r1";
+  version = "1.1.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_robot/1.1.6-1.tar.gz";
-    name = "1.1.6-1.tar.gz";
-    sha256 = "886dba0cd5d3e7aba779ef99b82251cff7047314c4f4d5d2e0248c3e9c5a3ef1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uos-gbp";
+        repo = "mir_robot-release";
+        rev = "release/noetic/mir_robot/1.1.7-1";
+        sha256 = "sha256-0wuXosEn1PGnwa0d8jumh9V/gVbLWe8JjfvVRQTITwE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

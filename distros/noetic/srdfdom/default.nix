@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-srdfdom";
   version = "0.6.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/srdfdom-release/archive/release/noetic/srdfdom/0.6.3-1.tar.gz";
-    name = "0.6.3-1.tar.gz";
-    sha256 = "f21aba31b1d90ee63d349ec7a681050a27ab611a86381bfec8794046440fe78e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "srdfdom-release";
+        rev = "release/noetic/srdfdom/0.6.3-1";
+        sha256 = "sha256-1KW8twq9SZrNP1tnatNhSSYcGgIduPY8wnaRYD7bShY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules console-bridge ];

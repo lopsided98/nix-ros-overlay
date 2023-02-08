@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fsrobo-r-moveit-config";
   version = "0.7.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/FUJISOFT-Robotics/fsrobo_r-release/archive/release/melodic/fsrobo_r_moveit_config/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "da7d237127402bc919fd00bc29f585a6d294143d95206c000326ebb3ef4e0a65";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "FUJISOFT-Robotics";
+        repo = "fsrobo_r-release";
+        rev = "release/melodic/fsrobo_r_moveit_config/0.7.1-1";
+        sha256 = "sha256-5sXl3iAzxptunerL/m9tlVVQdEuilFYO7YsClkAvatc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

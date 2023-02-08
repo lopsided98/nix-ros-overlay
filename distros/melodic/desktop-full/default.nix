@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-desktop-full";
   version = "1.4.1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/metapackages-release/archive/release/melodic/desktop_full/1.4.1-0.tar.gz";
-    name = "1.4.1-0.tar.gz";
-    sha256 = "236064fd3c4cccc5327f1ac4c951c70762a1f6c88e9faa521251f78e26ea987b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "metapackages-release";
+        rev = "release/melodic/desktop_full/1.4.1-0";
+        sha256 = "sha256-Um/GN6nZSPVdK56i9ovMDgBdSkBXNqBCcjygBiCGgeE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

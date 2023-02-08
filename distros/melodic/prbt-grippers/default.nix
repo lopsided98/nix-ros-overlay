@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-prbt-grippers";
   version = "0.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/prbt_grippers-release/archive/release/melodic/prbt_grippers/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "6765306ed7868e1f6005ffaacebc8a0161eb24cf8fcbfefff9f587ccc10a6e52";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "prbt_grippers-release";
+        rev = "release/melodic/prbt_grippers/0.0.4-1";
+        sha256 = "sha256-99AeTc1nkvQsCHDW4CAGiUUD6w1yRj9qvUuh2mg58dE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

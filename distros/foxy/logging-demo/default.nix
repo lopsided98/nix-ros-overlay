@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-logging-demo";
   version = "0.9.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/foxy/logging_demo/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "3e32f44fab474883a8ce8cc5ec94fb1d68c471119063248a27d110fe147ded0e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "demos-release";
+        rev = "release/foxy/logging_demo/0.9.4-1";
+        sha256 = "sha256-Oi4GtdVXQdRma6tt0e/vFsuKbc38yqaeF9zT3f+Vq94=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-cmake rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nextage-ros-bridge";
   version = "0.8.6-r3";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/rtmros_nextage-release/archive/release/melodic/nextage_ros_bridge/0.8.6-3.tar.gz";
-    name = "0.8.6-3.tar.gz";
-    sha256 = "f727161636ea80db90488a1fd7d46ace9735585285f3af2cd6a8dd4fdf846f2f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "rtmros_nextage-release";
+        rev = "release/melodic/nextage_ros_bridge/0.8.6-3";
+        sha256 = "sha256-D/1PXfeCoNScw3VJanjlXxhpLQtwcaWHYq9rpzjY010=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslint ];

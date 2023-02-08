@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-uuv-thruster-manager";
   version = "0.6.13";
 
-  src = fetchurl {
-    url = "https://github.com/uuvsimulator/uuv_simulator-release/archive/release/melodic/uuv_thruster_manager/0.6.13-0.tar.gz";
-    name = "0.6.13-0.tar.gz";
-    sha256 = "1ab65fc013e0365a7d680c40c82f7ed9a1d1ab91514376795bf5160f80f0cdea";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uuvsimulator";
+        repo = "uuv_simulator-release";
+        rev = "release/melodic/uuv_thruster_manager/0.6.13-0";
+        sha256 = "sha256-HSNR5X+O8JY5IoOHTHH8kUQeg8n4uYcP1Tv1X/mwodw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

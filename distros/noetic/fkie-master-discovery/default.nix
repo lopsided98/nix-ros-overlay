@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-fkie-master-discovery";
   version = "1.3.2-r2";
 
-  src = fetchurl {
-    url = "https://github.com/fkie-release/multimaster_fkie-release/archive/release/noetic/fkie_master_discovery/1.3.2-2.tar.gz";
-    name = "1.3.2-2.tar.gz";
-    sha256 = "de46fc8e8fd45b41af42317ce3c5e2f483b5c774549edd31036e4c21904a2866";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "fkie-release";
+        repo = "multimaster_fkie-release";
+        rev = "release/noetic/fkie_master_discovery/1.3.2-2";
+        sha256 = "sha256-FY+KufbEYAUo4HNCPu61sxYOH4bc77sWkaHLiXIZNJo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

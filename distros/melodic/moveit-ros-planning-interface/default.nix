@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-moveit-ros-planning-interface";
   version = "1.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/melodic/moveit_ros_planning_interface/1.0.11-1.tar.gz";
-    name = "1.0.11-1.tar.gz";
-    sha256 = "df1fec336274f651e43ae3792b81dfae30788edfff11163c52bf51d6ff3661d1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/melodic/moveit_ros_planning_interface/1.0.11-1";
+        sha256 = "sha256-iy/JtwP/gpl10Ktla9G8eDCdJqQvTSBElujU7+fRT6c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin eigen pythonPackages.catkin-pkg ];

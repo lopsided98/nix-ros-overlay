@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ament-cmake-pycodestyle";
   version = "0.9.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/foxy/ament_cmake_pycodestyle/0.9.7-1.tar.gz";
-    name = "0.9.7-1.tar.gz";
-    sha256 = "3b912b09480c98f23a0ae4ea0834154213bfa5cc95e36f8df30a34c2488bb8a8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_lint-release";
+        rev = "release/foxy/ament_cmake_pycodestyle/0.9.7-1";
+        sha256 = "sha256-WdJ4CP8/DaUSJueJntYDRml/rqvPrNamBMAlruE0X0g=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-core ];

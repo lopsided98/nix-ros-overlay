@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-abb-driver";
   version = "1.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/abb_driver-release/archive/release/noetic/abb_driver/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "c5f09291bfcb18a477d3150f0abdb955be52dd69140ac3e417b0256a6f4aaec5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "abb_driver-release";
+        rev = "release/noetic/abb_driver/1.4.0-1";
+        sha256 = "sha256-QCPnvlFdvkk7nnewpvTTdBl4WKl1+Ze5Vjz5oQ69ANk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin simple-message ];

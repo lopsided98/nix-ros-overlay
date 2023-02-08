@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ament-pclint";
   version = "0.9.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/foxy/ament_pclint/0.9.7-1.tar.gz";
-    name = "0.9.7-1.tar.gz";
-    sha256 = "2a1e0a247f7967924b513ee9fa60a42e7ddabecd34d8b9cb2b71c7db9d10ab46";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_lint-release";
+        rev = "release/foxy/ament_pclint/0.9.7-1";
+        sha256 = "sha256-VFU7ALdflGgW+TmNozMUYuF6sEP/ezALR43HB+J5Gfw=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ntrip-client";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ntrip_client-release/archive/release/foxy/ntrip_client/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "877f06e1439f249ffbb640401fb9f724173f1d2ed9efb520e182ae4d9f345a93";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ntrip_client-release";
+        rev = "release/foxy/ntrip_client/1.2.0-1";
+        sha256 = "sha256-D2B2lApA/XdsUVc6tMvHaZBKPMxKG+1deA3REcfJSS8=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ mavros-msgs nmea-msgs rclpy std-msgs ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-moveit-plugins";
   version = "0.7.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_pr2-release/archive/release/melodic/pr2_moveit_plugins/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "c780573ef3305b96d9ef18be3a5fb1e8024324808209728e840457c047ecdb78";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit_pr2-release";
+        rev = "release/melodic/pr2_moveit_plugins/0.7.3-1";
+        sha256 = "sha256-s9GhFS41PEPfyjcmiGCbrlMcu6GtcS/cjicDBTe9rZA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

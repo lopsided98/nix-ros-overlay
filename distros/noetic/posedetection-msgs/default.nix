@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-posedetection-msgs";
   version = "4.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/noetic/posedetection_msgs/4.3.2-1.tar.gz";
-    name = "4.3.2-1.tar.gz";
-    sha256 = "9b7873709badd4ba3d027944f28f7eb11e5f79d8a9bfde2bcb5f5dd663170938";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_common_msgs-release";
+        rev = "release/noetic/posedetection_msgs/4.3.2-1";
+        sha256 = "sha256-IP8Qz4xflNECPu+ZxJCGQCamVQQVG3CqZmhokN+fIZ4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

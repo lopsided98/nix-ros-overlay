@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-index-cpp, ament-index-python, ament-lint-auto, ament-lint-common, libcurl-vendor, python-cmake-module, pythonPackages }:
 buildRosPackage {
   pname = "ros-humble-resource-retriever";
-  version = "3.1.0-r2";
+  version = "3.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/humble/resource_retriever/3.1.0-2.tar.gz";
-    name = "3.1.0-2.tar.gz";
-    sha256 = "6008d843c9005885be677a1e1678b08425a2b2729d61e1dd19e876b5872a80ed";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "resource_retriever-release";
+        rev = "release/humble/resource_retriever/3.1.1-1";
+        sha256 = "sha256-eg/0unIGbPEsFz0d6Ol6XmavafOcY1abMJE7og89dzs=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

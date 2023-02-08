@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-costmap-queue";
   version = "0.3.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/noetic/costmap_queue/0.3.0-2.tar.gz";
-    name = "0.3.0-2.tar.gz";
-    sha256 = "7870f42776a61cf4b3e5b610ac897aadeb72a007c942e199df365d86184b1e5a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/noetic/costmap_queue/0.3.0-2";
+        sha256 = "sha256-2C0xeebRaXV/wQ4UFFo9my9nHzxAH51HS23MuiZtVb8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

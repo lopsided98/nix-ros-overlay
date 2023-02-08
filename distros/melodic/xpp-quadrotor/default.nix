@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-xpp-quadrotor";
   version = "1.0.10";
 
-  src = fetchurl {
-    url = "https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp_quadrotor/1.0.10-0.tar.gz";
-    name = "1.0.10-0.tar.gz";
-    sha256 = "8a3c7cbaa6def3250bf3825790f587b3626799b51dc7105917c20af6b8f5d3b4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "leggedrobotics";
+        repo = "xpp-release";
+        rev = "release/melodic/xpp_quadrotor/1.0.10-0";
+        sha256 = "sha256-IzqI3I16uhtlIMIfOrzGhD8+YdeJA5psofm0JmMrW9I=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

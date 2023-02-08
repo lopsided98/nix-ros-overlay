@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-turtlebot3-msgs";
   version = "2.2.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_msgs-release/archive/release/rolling/turtlebot3_msgs/2.2.1-2.tar.gz";
-    name = "2.2.1-2.tar.gz";
-    sha256 = "90c6aaa76a89ec9c300fef177cdcf7944fc92677ee77b74ba2f1610b251785c3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "turtlebot3_msgs-release";
+        rev = "release/rolling/turtlebot3_msgs/2.2.1-2";
+        sha256 = "sha256-AfTC3VY2EzfPdav7DvNaPrB+NM5laHjJRrpSaWfb2Cw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

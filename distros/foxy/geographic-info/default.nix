@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-geographic-info";
   version = "1.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-geographic-info/geographic_info-release/archive/release/foxy/geographic_info/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "73ed847171cb6611ee166d4c188d4c7fe9adc9b7e060ba494121534e31c6e502";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-geographic-info";
+        repo = "geographic_info-release";
+        rev = "release/foxy/geographic_info/1.0.4-1";
+        sha256 = "sha256-Fem5FLsZ+lxPuX8NgnKK7k543+bE3uOlVAPQ/5sMLJM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

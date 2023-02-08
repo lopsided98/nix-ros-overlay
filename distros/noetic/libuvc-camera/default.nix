@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-libuvc-camera";
   version = "0.0.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/libuvc_ros-release/archive/release/noetic/libuvc_camera/0.0.11-1.tar.gz";
-    name = "0.0.11-1.tar.gz";
-    sha256 = "b329b9e56923f8b9c6c8bb01985d470769cb57a54e08429b496615bd009dcb89";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "libuvc_ros-release";
+        rev = "release/noetic/libuvc_camera/0.0.11-1";
+        sha256 = "sha256-MhpnBPbU4cCd5UcRnNhfX6zYxgb1Ji3cHZjTKUmpsTI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

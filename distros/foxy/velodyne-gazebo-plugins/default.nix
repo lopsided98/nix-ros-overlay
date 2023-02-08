@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-velodyne-gazebo-plugins";
   version = "2.0.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/velodyne_simulator-release/archive/release/foxy/velodyne_gazebo_plugins/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "cab9041eda65ac7aa2ef5213658dc320582a807d3ad8ab7713051b95d5dfe6ce";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "velodyne_simulator-release";
+        rev = "release/foxy/velodyne_gazebo_plugins/2.0.3-1";
+        sha256 = "sha256-TFxh7d/7+m5z05amlR634rbaqZYAHs06SxUx3ZlM/NI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

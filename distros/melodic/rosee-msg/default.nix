@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosee-msg";
   version = "1.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ADVRHumanoids/rosee_msg-release/archive/release/melodic/rosee_msg/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "5a08f47967aa20234b992f8c945d4e05f1a6bc45f70ea76b923fabcb93c35818";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ADVRHumanoids";
+        repo = "rosee_msg-release";
+        rev = "release/melodic/rosee_msg/1.0.2-1";
+        sha256 = "sha256-MiMLAVJ6lOeT0ntJritd6RydPoQLD70gNZt6UVZb/7U=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin geometry-msgs std-msgs std-srvs ];

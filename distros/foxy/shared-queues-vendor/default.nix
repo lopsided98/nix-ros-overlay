@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-shared-queues-vendor";
   version = "0.3.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/shared_queues_vendor/0.3.9-1.tar.gz";
-    name = "0.3.9-1.tar.gz";
-    sha256 = "e1551c0c9907346a1bb4e1b06b08f9bfbddeb999d9b5839486a5393557f3c598";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosbag2-release";
+        rev = "release/foxy/shared_queues_vendor/0.3.9-1";
+        sha256 = "sha256-GZruMZDL2Uj30ppD+l9j5JnZ0rv4ELTlhL77AY1v4k4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

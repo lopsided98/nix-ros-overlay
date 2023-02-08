@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-dataspeed-can";
   version = "2.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/foxy/dataspeed_can/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "4b8d8aa8a6d9fe9be2390e844e49b3f136581d14eaf566a91286d1a115b5cdca";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DataspeedInc-release";
+        repo = "dataspeed_can-release";
+        rev = "release/foxy/dataspeed_can/2.0.1-1";
+        sha256 = "sha256-POBzwny/VrYoGfDkoXI7QH6BcAWKmKJgbN5omfz6JJI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

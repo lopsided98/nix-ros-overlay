@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-urdfdom-py";
   version = "1.2.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/urdfdom_py-release/archive/release/humble/urdfdom_py/1.2.0-2.tar.gz";
-    name = "1.2.0-2.tar.gz";
-    sha256 = "1c62c19081d02de1431c1375bb868008be69361f7b08e4580a9313c9fa2e06e2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "urdfdom_py-release";
+        rev = "release/humble/urdfdom_py/1.2.0-2";
+        sha256 = "sha256-Wqb94XN1fUWXLJ5rwzsmePzwagB+j2D66m2gHM+RIx4=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ python3Packages.mock ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robot-state-publisher";
   version = "1.14.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/robot_state_publisher-release/archive/release/melodic/robot_state_publisher/1.14.1-1.tar.gz";
-    name = "1.14.1-1.tar.gz";
-    sha256 = "76dca47e16db4a89542e6f14ecbb5a1211b8948acd00ae6554a2f6a4e100ce48";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "robot_state_publisher-release";
+        rev = "release/melodic/robot_state_publisher/1.14.1-1";
+        sha256 = "sha256-/s4kthynyA1m9ZLHBzVT2USw4RpOcyBAtGVL901g2EQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ urdfdom-headers ];

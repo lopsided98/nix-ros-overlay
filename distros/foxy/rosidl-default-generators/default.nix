@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rosidl-default-generators";
   version = "1.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_defaults-release/archive/release/foxy/rosidl_default_generators/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "7d4f2be5e2751c8dbe70344468a104f061879cf1d4759d2117d946659431600d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl_defaults-release";
+        rev = "release/foxy/rosidl_default_generators/1.0.1-1";
+        sha256 = "sha256-7weYP3HRQnH3O1sztjZw86tpbfkh4kMNNLB76NeB1O0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

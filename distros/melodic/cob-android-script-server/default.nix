@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cob-android-script-server";
   version = "0.1.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_android-release/archive/release/melodic/cob_android_script_server/0.1.8-1.tar.gz";
-    name = "0.1.8-1.tar.gz";
-    sha256 = "2942404063c08cb80590ee840c2b270a0c3df984770f795c364393c342ca5073";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_android-release";
+        rev = "release/melodic/cob_android_script_server/0.1.8-1";
+        sha256 = "sha256-wwXMp1KYUF5GdIxGOoeiHkpkA6u6XVWy5+Of5rNrA8g=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.setuptools ];

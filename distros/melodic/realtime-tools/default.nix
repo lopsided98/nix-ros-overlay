@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-realtime-tools";
   version = "1.15.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/realtime_tools-release/archive/release/melodic/realtime_tools/1.15.1-1.tar.gz";
-    name = "1.15.1-1.tar.gz";
-    sha256 = "acf2cb7827b85a846c7fb3f01879260c2eae38576856e0059ce983521eda99d3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "realtime_tools-release";
+        rev = "release/melodic/realtime_tools/1.15.1-1";
+        sha256 = "sha256-GtLhDRuH2C0t/aYseBkrs/M2RjklknwAfV78M8y40YM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

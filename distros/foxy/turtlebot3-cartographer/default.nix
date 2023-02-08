@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-turtlebot3-cartographer";
   version = "2.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/foxy/turtlebot3_cartographer/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "41434ea8cb23f4f6b0010affdfdc41261d5e4f0bab4f385ea61b94896717a4b5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "robotis-ros2-release";
+        repo = "turtlebot3-release";
+        rev = "release/foxy/turtlebot3_cartographer/2.1.1-1";
+        sha256 = "sha256-frLsUB6lfIjAmU/QMwa41jwj1FGwaQ3/Xdz1QZOn/U4=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-moveit-ros-benchmarks";
   version = "1.1.11-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_benchmarks/1.1.11-1.tar.gz";
-    name = "1.1.11-1.tar.gz";
-    sha256 = "9f9e7a7f3931fc1d3e36410e0589770edb04c8f60ae5bb219749436fbf0401b5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "moveit-release";
+        rev = "release/noetic/moveit_ros_benchmarks/1.1.11-1";
+        sha256 = "sha256-NtEJGlX55k8RV7wExl83rScfh7+ESxD+iqw5dIxWFjU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

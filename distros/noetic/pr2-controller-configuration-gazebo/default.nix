@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pr2-controller-configuration-gazebo";
   version = "2.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_simulator-release/archive/release/noetic/pr2_controller_configuration_gazebo/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "8f2ae6424d2d1db440118a8feabc55b9ed4369c3fb1fba8907203030cc412fa2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_simulator-release";
+        rev = "release/noetic/pr2_controller_configuration_gazebo/2.1.0-1";
+        sha256 = "sha256-MDlvzd4pdInfsZYrEbBCP/C4i5qrWNmv7P53fTUsAmc=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

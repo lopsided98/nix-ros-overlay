@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-urdf-test";
   version = "2.0.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/urdf_test-ros2-gbp/archive/release/foxy/urdf_test/2.0.0-2.tar.gz";
-    name = "2.0.0-2.tar.gz";
-    sha256 = "5021683ebf04a99d3c15ef5e16e824abebadb4347d77a9452c77fb9a6c6931dd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "urdf_test-ros2-gbp";
+        rev = "release/foxy/urdf_test/2.0.0-2";
+        sha256 = "sha256-S2fE06+KJ7DbPzRcxsfJLx/O3g8h/wEKPlGzJl+Ni58=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

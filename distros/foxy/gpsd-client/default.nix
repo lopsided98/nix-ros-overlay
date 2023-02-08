@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-gpsd-client";
   version = "1.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/foxy/gpsd_client/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "1ce0c161939546ec5c21658cb05ee9e9a0ae60a5fd11523d0cba4ce2da233fea";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "swri-robotics-gbp";
+        repo = "gps_umd-release";
+        rev = "release/foxy/gpsd_client/1.0.6-1";
+        sha256 = "sha256-YEl++f2CZp1YkEOrdT8NTt5sCDECcWhROFUyT+I1qV8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

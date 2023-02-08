@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-joy-listener";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/wu-robotics/wu_ros_tools/archive/release/noetic/joy_listener/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "ed8d02e94e400cbe16efce75d3b11c3474f9bf5b1e2cf4f1eae1202cb2deaa6b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wu-robotics";
+        repo = "wu_ros_tools";
+        rev = "release/noetic/joy_listener/0.3.0-1";
+        sha256 = "sha256-9tIrXl9pGLfxbU6qAPirNIMEkQv95fyz9092oC58Zjg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

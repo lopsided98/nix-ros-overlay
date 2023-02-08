@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-image-common";
   version = "1.11.13";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/image_common-release/archive/release/melodic/image_common/1.11.13-0.tar.gz";
-    name = "1.11.13-0.tar.gz";
-    sha256 = "987bdb08a0bf935d3c657331b79564a3e272f6c4538e5be5d893ab6a13865ede";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "image_common-release";
+        rev = "release/melodic/image_common/1.11.13-0";
+        sha256 = "sha256-QGpvmDBlHMOXfznlkGsVUFaV62wHa1+BFxs/+UDotSE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

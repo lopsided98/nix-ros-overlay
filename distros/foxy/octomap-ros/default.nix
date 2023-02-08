@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-octomap-ros";
   version = "0.4.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap_ros-release/archive/release/foxy/octomap_ros/0.4.3-1.tar.gz";
-    name = "0.4.3-1.tar.gz";
-    sha256 = "71a489c497eab3b8ebaa254356272247db3be9bb554fec5654b0cd1f0dcfc58c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "octomap_ros-release";
+        rev = "release/foxy/octomap_ros/0.4.3-1";
+        sha256 = "sha256-RD+gwS31k6UPEKegLdv6kSOha4ju5W2T5EwCpMkZ5Lc=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

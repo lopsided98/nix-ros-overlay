@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rm-shooter-controllers";
   version = "0.1.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/rm_shooter_controllers/0.1.7-1.tar.gz";
-    name = "0.1.7-1.tar.gz";
-    sha256 = "f32ac29822c62086ac88915f2e4d197b55e4314c1787eaa5132712d7505aeb15";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "rm-controls";
+        repo = "rm_controllers-release";
+        rev = "release/noetic/rm_shooter_controllers/0.1.7-1";
+        sha256 = "sha256-bpVf61ILAIWUhc5SU4uardry0tA4wOokhJ26L4Amk9Q=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

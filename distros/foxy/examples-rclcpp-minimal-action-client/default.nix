@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-examples-rclcpp-minimal-action-client";
   version = "0.9.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/foxy/examples_rclcpp_minimal_action_client/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "1866704f3f5e5e80aa41fe2a99b8f6998d64aef3b4de1a9f862691ffd486615d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "examples-release";
+        rev = "release/foxy/examples_rclcpp_minimal_action_client/0.9.4-1";
+        sha256 = "sha256-hdz/p7qDp4K5Too5Elt+6UVyN3czfOpSzTCwmVIMilE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

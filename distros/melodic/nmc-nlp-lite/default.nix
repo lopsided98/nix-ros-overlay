@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nmc-nlp-lite";
   version = "0.0.7-r2";
 
-  src = fetchurl {
-    url = "https://github.com/nmcbins/nmc_nlp_lite-release/archive/release/melodic/nmc_nlp_lite/0.0.7-2.tar.gz";
-    name = "0.0.7-2.tar.gz";
-    sha256 = "70672d64024f0d40ee9dc069dee925711a44a7ecbadb93b989cd25bf3bf9e306";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "nmcbins";
+        repo = "nmc_nlp_lite-release";
+        rev = "release/melodic/nmc_nlp_lite/0.0.7-2";
+        sha256 = "sha256-XK0tskFgoFaHT6WIsILbjYGX+9k++cs9MpWACi08GgY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

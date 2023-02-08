@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rqt-rosmon";
   version = "2.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/xqms/rosmon-release/archive/release/noetic/rqt_rosmon/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "a396f55c22efecbad5499a7feae65489435d1f093c364a6c577fde1fb34d768f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "xqms";
+        repo = "rosmon-release";
+        rev = "release/noetic/rqt_rosmon/2.4.0-1";
+        sha256 = "sha256-MtQbMc9qsOOZSyNO8sDq3Xl6yHnt/EiV+5wwP6L8Dvs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin qt5.qtbase ];

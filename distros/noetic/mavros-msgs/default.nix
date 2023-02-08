@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-mavros-msgs";
   version = "1.15.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/mavros_msgs/1.15.0-1.tar.gz";
-    name = "1.15.0-1.tar.gz";
-    sha256 = "dff2c1f66e32982b5114eae56449a36876ed606387afa6667cc04388e9e2cc52";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "mavlink";
+        repo = "mavros-release";
+        rev = "release/noetic/mavros_msgs/1.15.0-1";
+        sha256 = "sha256-TW4W7L/6pX5Iuf3JipHvqFE9t23Ur/GQUgzT+k2LIeY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

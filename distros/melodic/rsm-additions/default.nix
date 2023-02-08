@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rsm-additions";
   version = "1.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/MarcoStb1993/robot_statemachine-release/archive/release/melodic/rsm_additions/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "d0ab381d12932e014c6a1a9f698193eaf89e502b8ebd6bad0b8da54e3d45d327";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "MarcoStb1993";
+        repo = "robot_statemachine-release";
+        rev = "release/melodic/rsm_additions/1.2.1-1";
+        sha256 = "sha256-IaaPYwJ6+NH5G/igW/ckWf0ODAZjy35TVphkX+XCtwE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

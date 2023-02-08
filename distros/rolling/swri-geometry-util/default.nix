@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-swri-geometry-util";
   version = "3.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_geometry_util/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "836b15a363e31356113399f39d1cd287dec4037013e8c3de8d0bbe5073509ae7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "marti_common-release";
+        rev = "release/rolling/swri_geometry_util/3.5.0-1";
+        sha256 = "sha256-JAuTqdp0R5i+LbVJwPthq4mwI5kIBabdggi5d8IHS+g=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pkg-config ];

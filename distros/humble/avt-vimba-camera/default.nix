@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-avt-vimba-camera";
   version = "2001.1.0-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/avt_vimba_camera-release/archive/release/humble/avt_vimba_camera/2001.1.0-3.tar.gz";
-    name = "2001.1.0-3.tar.gz";
-    sha256 = "a38635ed3d00bdf9bb880034a95d048660804d0462e1d72eae3fecdc661d7056";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "avt_vimba_camera-release";
+        rev = "release/humble/avt_vimba_camera/2001.1.0-3";
+        sha256 = "sha256-b1YFGg6j0b9K0ewtxAKbcnT1um/8yTIj7XIIbEChDbY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

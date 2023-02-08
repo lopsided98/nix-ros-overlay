@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-imu-pipeline";
   version = "0.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/imu_pipeline-release/archive/release/noetic/imu_pipeline/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "3a8f6074735f46cdd3d4953a6673b3351e998a88b63b642433429ae4f24560a1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "imu_pipeline-release";
+        rev = "release/noetic/imu_pipeline/0.3.1-1";
+        sha256 = "sha256-5o0hwbxZYMzjESvRHbi3/xvc7poAWXWbK9TJNGYsBzM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

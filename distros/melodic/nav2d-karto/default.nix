@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-nav2d-karto";
   version = "0.4.2";
 
-  src = fetchurl {
-    url = "https://github.com/skasperski/navigation_2d-release/archive/release/melodic/nav2d_karto/0.4.2-0.tar.gz";
-    name = "0.4.2-0.tar.gz";
-    sha256 = "43cc5478e64f5499139be34e4cdc8015fa3ca70d03bd49134c85b83e6934b0a2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "skasperski";
+        repo = "navigation_2d-release";
+        rev = "release/melodic/nav2d_karto/0.4.2-0";
+        sha256 = "sha256-6u/GPxccelVGNSR10OmMHNXu6pQD5eMTDIMcRXU9K7E=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

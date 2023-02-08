@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ros-emacs-utils";
   version = "0.4.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/melodic/ros_emacs_utils/0.4.16-1.tar.gz";
-    name = "0.4.16-1.tar.gz";
-    sha256 = "89c647ad2f3cd9c745050bd6740fdf726a4de063970e3f18c7de93ac38b788a2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "code-iai-release";
+        repo = "ros_emacs_utils-release";
+        rev = "release/melodic/ros_emacs_utils/0.4.16-1";
+        sha256 = "sha256-yi9efXbmcNsPEpGcOQ3udsQuRJW8xIcPBgjEoNraAsI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

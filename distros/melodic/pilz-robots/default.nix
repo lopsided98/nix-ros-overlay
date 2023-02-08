@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pilz-robots";
   version = "0.5.23-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/pilz_robots/0.5.23-1.tar.gz";
-    name = "0.5.23-1.tar.gz";
-    sha256 = "ab98a25dedb5a104fecaaf4ed3631f09764186a5e1c5da9e87f32b8a7fb73e5a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_robots-release";
+        rev = "release/melodic/pilz_robots/0.5.23-1";
+        sha256 = "sha256-tylNnRltXTxWhsW897f5pHIZgvj8h8CcQhyEkrmyLkU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

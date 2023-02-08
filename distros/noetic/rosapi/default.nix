@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosapi";
   version = "0.11.16-r2";
 
-  src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/noetic/rosapi/0.11.16-2.tar.gz";
-    name = "0.11.16-2.tar.gz";
-    sha256 = "bf9ce72d57cbb66cb7eb52ed5fe4cdb54e39c1d46418880efbbc2afd75d9c054";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "RobotWebTools-release";
+        repo = "rosbridge_suite-release";
+        rev = "release/noetic/rosapi/0.11.16-2";
+        sha256 = "sha256-cIXAIsW+W39WHva0irEy7YWxlikWPs+d7W6V+jB9KTs=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation python3Packages.setuptools ];

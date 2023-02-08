@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-laser-scan-matcher";
   version = "0.3.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/melodic/laser_scan_matcher/0.3.3-2.tar.gz";
-    name = "0.3.3-2.tar.gz";
-    sha256 = "00b14d69b87fb6da8dbfd290beddf7c8f2b92adcce22fed066a5883adfe825c4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "scan_tools-release";
+        rev = "release/melodic/laser_scan_matcher/0.3.3-2";
+        sha256 = "sha256-0DoaU2d17cy0hZBh3U4GIMZzt7o00lAH+ktCY0JDrxo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

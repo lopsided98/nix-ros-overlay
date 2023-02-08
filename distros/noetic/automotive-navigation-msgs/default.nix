@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-automotive-navigation-msgs";
   version = "3.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/automotive_autonomy_msgs-release/archive/release/noetic/automotive_navigation_msgs/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "d3836627522b715e7afddf0f40cf980f2f1d53dda2c685fca3a2baabe2ac5186";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "automotive_autonomy_msgs-release";
+        rev = "release/noetic/automotive_navigation_msgs/3.0.4-1";
+        sha256 = "sha256-N+QDJUyFWyIto9hqSOYNMPTrVLJR+tIO2J4ExUZ27+0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ros-environment ];

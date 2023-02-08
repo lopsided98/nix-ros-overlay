@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosserial-msgs";
   version = "0.9.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_msgs/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "5fc6ee93f3dac1fdf6256e3db2a2a9db83918cc003fd9908657e1fc22551693a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rosserial-release";
+        rev = "release/noetic/rosserial_msgs/0.9.2-1";
+        sha256 = "sha256-e5iVBv7fW9309W/qsqh9RBQQ2p3cqUKEBoUYHL0Yja4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

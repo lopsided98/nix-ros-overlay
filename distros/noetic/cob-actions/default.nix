@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-actions";
   version = "0.7.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_common-release/archive/release/noetic/cob_actions/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "3b6e6a6d4a3ba976bcde2c76c69f24fcd752961e88550d912d0cdad0445abe06";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_common-release";
+        rev = "release/noetic/cob_actions/0.7.8-1";
+        sha256 = "sha256-29VW8YCFLet5ZaqZikDe49y5EquWynms24Rbt61s2iI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-unique-identifier-msgs";
   version = "2.3.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/unique_identifier_msgs-release/archive/release/rolling/unique_identifier_msgs/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "8ccd77c6fca634f4511eadeef45eb4d8e841af3b6da932fb67817127dd0aa4a6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "unique_identifier_msgs-release";
+        rev = "release/rolling/unique_identifier_msgs/2.3.1-1";
+        sha256 = "sha256-FqmSJTXKhYJNGFfYzan04aouvqn5hmHygfypePyo4JM=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-core-generators ];

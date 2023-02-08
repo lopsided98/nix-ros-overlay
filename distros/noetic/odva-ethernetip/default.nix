@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-odva-ethernetip";
   version = "0.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/odva_ethernetip-release/archive/release/noetic/odva_ethernetip/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "39e9f63175a38fe6ea8ff1e4953f9fbfbb9bcd616f6a7a962d7aa7d3471b8863";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "odva_ethernetip-release";
+        rev = "release/noetic/odva_ethernetip/0.1.5-1";
+        sha256 = "sha256-RiWFqkr6l+yaz79Fd3/9UULIMfvHluDerWACZwVU3vA=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

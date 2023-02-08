@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-leo-msgs";
   version = "1.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/foxy/leo_msgs/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "2ffd7fa4e43e30f0586fa9ae73ea15ef9fbc702b44d15f18b9697e71cd482a93";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "leo_common-release";
+        rev = "release/foxy/leo_msgs/1.1.0-1";
+        sha256 = "sha256-boOryphikqMMf8uP/1Xmin2asRfNUBPWsu6qmbsoOqQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

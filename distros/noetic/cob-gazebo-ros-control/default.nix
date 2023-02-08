@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-gazebo-ros-control";
   version = "0.7.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_gazebo_plugins-release/archive/release/noetic/cob_gazebo_ros_control/0.7.7-1.tar.gz";
-    name = "0.7.7-1.tar.gz";
-    sha256 = "fd49e81694642749589b62ad73957b9e4504ca1f3beb0b7350fb77e1440863db";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_gazebo_plugins-release";
+        rev = "release/noetic/cob_gazebo_ros_control/0.7.7-1";
+        sha256 = "sha256-V87qCMHQeeWDA9UnEuuj3Xa/JB5luk2lUh/xwhAPULU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

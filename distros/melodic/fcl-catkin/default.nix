@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-fcl-catkin";
   version = "0.6.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/wxmerkt/fcl_catkin-release/archive/release/melodic/fcl_catkin/0.6.1-2.tar.gz";
-    name = "0.6.1-2.tar.gz";
-    sha256 = "aa0d97c02a9b6ca22c02a263f2279ecefcc1570d1d79ef26fc5a1b15f6d5f5bc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wxmerkt";
+        repo = "fcl_catkin-release";
+        rev = "release/melodic/fcl_catkin/0.6.1-2";
+        sha256 = "sha256-WcsDCNzbxl+69WQ6m1ctq7rgXfwPDQ88VqXiRPC8rpU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

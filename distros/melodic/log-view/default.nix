@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-log-view";
   version = "0.1.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/hatchbed/log_view-release/archive/release/melodic/log_view/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "c1e9390e841e44f84c5a55bf2ff00596abb7bbb0a663bb86027f6d901645e71d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "hatchbed";
+        repo = "log_view-release";
+        rev = "release/melodic/log_view/0.1.3-1";
+        sha256 = "sha256-aCxYKgynCd7OZqWNJNIBW9TZk5jcCewfyQUTEc1nBP8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

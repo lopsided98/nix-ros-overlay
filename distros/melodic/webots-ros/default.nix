@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-webots-ros";
   version = "5.0.1-r2";
 
-  src = fetchurl {
-    url = "https://github.com/cyberbotics/webots_ros-release/archive/release/melodic/webots_ros/5.0.1-2.tar.gz";
-    name = "5.0.1-2.tar.gz";
-    sha256 = "eba56b3a93053246bbce5f7269abb99da3ee8d1ef5cce05a83f17651d7b66d89";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "cyberbotics";
+        repo = "webots_ros-release";
+        rev = "release/melodic/webots_ros/5.0.1-2";
+        sha256 = "sha256-G/jrBflGsmNt2UkOVf2y3/Wwf9wvarW+kWM2sROj0oI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-automotive-navigation-msgs";
   version = "3.0.4-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/automotive_autonomy_msgs-release/archive/release/humble/automotive_navigation_msgs/3.0.4-3.tar.gz";
-    name = "3.0.4-3.tar.gz";
-    sha256 = "a8b6436ce537a2ede9ba501f8b70bef3be78dbd140244d7ec07dd62a670ea6e1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "automotive_autonomy_msgs-release";
+        rev = "release/humble/automotive_navigation_msgs/3.0.4-3";
+        sha256 = "sha256-N+QDJUyFWyIto9hqSOYNMPTrVLJR+tIO2J4ExUZ27+0=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment rosidl-default-generators ];

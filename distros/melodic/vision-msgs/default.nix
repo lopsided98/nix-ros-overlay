@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-vision-msgs";
   version = "0.0.1";
 
-  src = fetchurl {
-    url = "https://github.com/Kukanani/vision_msgs-release/archive/release/melodic/vision_msgs/0.0.1-0.tar.gz";
-    name = "0.0.1-0.tar.gz";
-    sha256 = "aea7d0a539a76bbd0072f74bb3c7ebc0a7f3b3277963f8d696de42a5c4066e90";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Kukanani";
+        repo = "vision_msgs-release";
+        rev = "release/melodic/vision_msgs/0.0.1-0";
+        sha256 = "sha256-PdtZBRsXwV30z2ixuabHlNPix0ylWiNkasSoDFIp0sM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

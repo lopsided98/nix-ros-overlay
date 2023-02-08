@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-gmock-vendor";
   version = "1.8.9001-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/googletest-release/archive/release/foxy/gmock_vendor/1.8.9001-1.tar.gz";
-    name = "1.8.9001-1.tar.gz";
-    sha256 = "581615dd9b22b96edc37031e5198792b5166e9ad36bda361f72d748c20c1ef38";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "googletest-release";
+        rev = "release/foxy/gmock_vendor/1.8.9001-1";
+        sha256 = "sha256-5j1+2OErraTkKYg6aJ60Cd0w2yCe3a6o1Ou9//4WGGc=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

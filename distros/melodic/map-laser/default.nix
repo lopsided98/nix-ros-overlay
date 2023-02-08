@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-map-laser";
   version = "0.0.4";
 
-  src = fetchurl {
-    url = "https://github.com/wu-robotics/laser_filtering_release/archive/release/melodic/map_laser/0.0.4-0.tar.gz";
-    name = "0.0.4-0.tar.gz";
-    sha256 = "eea82c4a217ce37a62d9e6dc06c0a309cbe738b5da63ea573aea59d8efa25d67";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "wu-robotics";
+        repo = "laser_filtering_release";
+        rev = "release/melodic/map_laser/0.0.4-0";
+        sha256 = "sha256-KubzDze6BJooR49VMA6lY/0rgGywUeaKlXQPhyQB+7c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

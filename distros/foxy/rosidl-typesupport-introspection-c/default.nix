@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-rosidl-typesupport-introspection-c";
   version = "1.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/foxy/rosidl_typesupport_introspection_c/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "c51be493975ddd6e2fe39bff263c33c7b0b8ac27e9e0f1eccd21f483da95340b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosidl-release";
+        rev = "release/foxy/rosidl_typesupport_introspection_c/1.3.0-1";
+        sha256 = "sha256-UpgUauv8g4GVcQuGt3trzca+Hm1r3+cIZf9IENg2i5w=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];

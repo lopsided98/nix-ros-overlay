@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-udp-msgs";
   version = "0.0.3-r2";
 
-  src = fetchurl {
-    url = "https://github.com/flynneva/udp_msgs-release/archive/release/foxy/udp_msgs/0.0.3-2.tar.gz";
-    name = "0.0.3-2.tar.gz";
-    sha256 = "3640e6e621147b16d70326cc86f81e9a5a2c713321662c44fa599fdfd1202e4c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "flynneva";
+        repo = "udp_msgs-release";
+        rev = "release/foxy/udp_msgs/0.0.3-2";
+        sha256 = "sha256-g0Gi+BMs9cMS5t5Fh+epx+fKUhebhUczapOPMz9Bg5A=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

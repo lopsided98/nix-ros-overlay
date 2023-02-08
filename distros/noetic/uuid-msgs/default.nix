@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-uuid-msgs";
   version = "1.0.6-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-geographic-info/unique_identifier-release/archive/release/noetic/uuid_msgs/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "4299d106f055e2a4e80f4ae9c7e94acab1ea1ccf9c8efb041514ee115276cc98";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-geographic-info";
+        repo = "unique_identifier-release";
+        rev = "release/noetic/uuid_msgs/1.0.6-1";
+        sha256 = "sha256-I2wvd92JL9cbXsWyCd2Vnm0TXQQbqeTXJrTopF6F0rk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

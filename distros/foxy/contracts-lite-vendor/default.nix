@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-contracts-lite-vendor";
   version = "0.5.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-safety/contracts_lite_vendor-release/archive/release/foxy/contracts_lite_vendor/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "14ea41bbb384648b7195fb8adc8c2bc7e4883bc6ea9622f462790632c1e87e22";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-safety";
+        repo = "contracts_lite_vendor-release";
+        rev = "release/foxy/contracts_lite_vendor/0.5.0-1";
+        sha256 = "sha256-b59pq5UJ6e3vtngK1InKk+9bvvfO1GJ8KG1DVg4ucHU=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

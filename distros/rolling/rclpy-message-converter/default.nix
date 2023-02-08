@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-rclpy-message-converter";
   version = "2.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rospy_message_converter-release/archive/release/rolling/rclpy_message_converter/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "6e5a0d0795d186f6f81dca8121ab96a9329c49a988e82a2e5390a83a3db4638b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rospy_message_converter-release";
+        rev = "release/rolling/rclpy_message_converter/2.0.1-1";
+        sha256 = "sha256-4HeOI1VnkkBwlxa0SlJMAGbmV5bMUIvxslRecDwZm04=";
+      };
 
   buildType = "ament_python";
   buildInputs = [ builtin-interfaces rosidl-default-generators ];

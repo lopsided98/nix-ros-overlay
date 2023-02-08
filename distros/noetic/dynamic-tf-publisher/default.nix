@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-dynamic-tf-publisher";
   version = "2.2.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/dynamic_tf_publisher/2.2.12-1.tar.gz";
-    name = "2.2.12-1.tar.gz";
-    sha256 = "d86fbdd0d5b80c942ab48aa045fb81528da2cc0d5814c25545ea708230d36b52";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_common-release";
+        rev = "release/noetic/dynamic_tf_publisher/2.2.12-1";
+        sha256 = "sha256-SvIdIgTT5O7cGJNR73ecMOhdNOygMflMdawhghm2A+Y=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin dynamic-reconfigure message-generation ];

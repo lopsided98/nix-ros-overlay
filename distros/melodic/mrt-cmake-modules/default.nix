@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mrt-cmake-modules";
   version = "1.0.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/KIT-MRT/mrt_cmake_modules-release/archive/release/melodic/mrt_cmake_modules/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "72c884e7144bd8b900da5e1436fc28b2433ecbeaa8735ca7e7d16f1c9690b5c1";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "KIT-MRT";
+        repo = "mrt_cmake_modules-release";
+        rev = "release/melodic/mrt_cmake_modules/1.0.4-1";
+        sha256 = "sha256-HsXMI+9eH6Suh9jIyPUkkwkOrPzB7vvm5fwmFO99V7s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

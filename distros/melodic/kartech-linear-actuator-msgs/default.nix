@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-kartech-linear-actuator-msgs";
   version = "3.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/melodic/kartech_linear_actuator_msgs/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "3fa3af9c845b1d7844947dd1e7147d5cc00935a20733c740fca379d2b1069a1a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "astuff_sensor_msgs-release";
+        rev = "release/melodic/kartech_linear_actuator_msgs/3.0.2-1";
+        sha256 = "sha256-ZRQ9L/1RnQF276VFXXzt6+ru82cZBo4XSVP9aDBNGs4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ros-environment ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-pmb2-gazebo";
   version = "4.0.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_simulation-release/archive/release/humble/pmb2_gazebo/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "2290312e81004e766d6e5ea6f077529573487e3ddcdbb7e13d70d888561ff16a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pal-gbp";
+        repo = "pmb2_simulation-release";
+        rev = "release/humble/pmb2_gazebo/4.0.1-1";
+        sha256 = "sha256-6Ec/e6dY/KIVGx+FxfHXJ883FTevfVmn2dPW1/QQ/0A=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];

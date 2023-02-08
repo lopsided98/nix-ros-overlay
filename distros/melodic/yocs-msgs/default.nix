@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-yocs-msgs";
   version = "0.7.0";
 
-  src = fetchurl {
-    url = "https://github.com/yujinrobot-release/yocs_msgs-release/archive/release/melodic/yocs_msgs/0.7.0-0.tar.gz";
-    name = "0.7.0-0.tar.gz";
-    sha256 = "92aa5df09147dc1819de1d4415efe58d267744ca6cbf9ffe4dbb742d1713cdcc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "yujinrobot-release";
+        repo = "yocs_msgs-release";
+        rev = "release/melodic/yocs_msgs/0.7.0-0";
+        sha256 = "sha256-+BaetgJdswQoEXv4kOv0+M1Uz1sys5Ff3uVM7oQJZPM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

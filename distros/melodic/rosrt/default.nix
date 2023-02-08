@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosrt";
   version = "1.0.25";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_realtime-release/archive/release/melodic/rosrt/1.0.25-0.tar.gz";
-    name = "1.0.25-0.tar.gz";
-    sha256 = "ab1cb91949e270a78898a6d03547538b9c4da40d82d9da354cda672ba8585f11";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_realtime-release";
+        rev = "release/melodic/rosrt/1.0.25-0";
+        sha256 = "sha256-sa4sVy7EGPoChDqb9dHWoKXn8ioisLi/5c77xvpTtbQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

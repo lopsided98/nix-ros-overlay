@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pacmod-msgs";
   version = "3.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/noetic/pacmod_msgs/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "1c8266219b44c9c89d23c1f4d18e015d0a07493ca623625fc95010dd5c135bea";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "astuff_sensor_msgs-release";
+        rev = "release/noetic/pacmod_msgs/3.3.0-1";
+        sha256 = "sha256-q3ZCN9PsDjXX0gRReRZHS5u/ZRJ7EXgN907yNQudB1A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ros-environment ];

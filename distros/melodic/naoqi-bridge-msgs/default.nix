@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-naoqi-bridge-msgs";
   version = "0.0.8";
 
-  src = fetchurl {
-    url = "https://github.com/ros-naoqi/naoqi_bridge_msgs-release/archive/release/melodic/naoqi_bridge_msgs/0.0.8-0.tar.gz";
-    name = "0.0.8-0.tar.gz";
-    sha256 = "9b36db547dd06cc9c52eafddf00a9cbda189bda058671e977efdf22680d90ea8";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-naoqi";
+        repo = "naoqi_bridge_msgs-release";
+        rev = "release/melodic/naoqi_bridge_msgs/0.0.8-0";
+        sha256 = "sha256-CZQPLxbTD19VT0vOSapXaPuEOFJWqEGi9/KQSW0MjJE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-micro-ros-msgs";
   version = "1.0.0-r2";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/micro_ros_msgs-release/archive/release/rolling/micro_ros_msgs/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "8b9b66d98a9fb78e9b5db442c97ad9d70687675984a89d6340f30c9a5d9e10dd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "micro_ros_msgs-release";
+        rev = "release/rolling/micro_ros_msgs/1.0.0-2";
+        sha256 = "sha256-kuDv7e3C0BCXolx6ePv0TLEpK9E3OfLGFAh0K/9Wb8o=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

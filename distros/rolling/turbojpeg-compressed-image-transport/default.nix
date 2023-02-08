@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-turbojpeg-compressed-image-transport";
   version = "0.2.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/turbojpeg_compressed_image_transport-release/archive/release/rolling/turbojpeg_compressed_image_transport/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "9a7b57d259cdc07818c669af5de471b764d7f3f2828b84f0669cd05ce3c0f065";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "turbojpeg_compressed_image_transport-release";
+        rev = "release/rolling/turbojpeg_compressed_image_transport/0.2.1-1";
+        sha256 = "sha256-290O2WlZeS1IA0hOWZ0GYuYv0yt8SkAIxoz+P3YiVi8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

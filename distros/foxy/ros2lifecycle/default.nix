@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ros2lifecycle";
   version = "0.9.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/foxy/ros2lifecycle/0.9.12-1.tar.gz";
-    name = "0.9.12-1.tar.gz";
-    sha256 = "08cec578b06d54813f46e0e8083b363cff90c3f4135b1097e981436405b7115c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros2cli-release";
+        rev = "release/foxy/ros2lifecycle/0.9.12-1";
+        sha256 = "sha256-y5As+50l+3b4f0RnS0dtPiyXYKDS55cKsU0FB7WWFVk=";
+      };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint pythonPackages.pytest ros-testing ros2lifecycle-test-fixtures ];

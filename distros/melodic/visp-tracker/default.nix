@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-visp-tracker";
   version = "0.13.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/lagadic/vision_visp-release/archive/release/melodic/visp_tracker/0.13.0-1.tar.gz";
-    name = "0.13.0-1.tar.gz";
-    sha256 = "6edbf4ca9f56491dabadd0e3f68819feda1fda85f4d46ff95a02f6ee3eba6210";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "lagadic";
+        repo = "vision_visp-release";
+        rev = "release/melodic/visp_tracker/0.13.0-1";
+        sha256 = "sha256-toCy4cpwx9JtKe7F8EhX7xCkBObENHNnBZW0Rccih4c=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

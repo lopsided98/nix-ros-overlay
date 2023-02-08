@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-audio-to-spectrogram";
   version = "1.2.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/melodic/audio_to_spectrogram/1.2.15-1.tar.gz";
-    name = "1.2.15-1.tar.gz";
-    sha256 = "eb131626efa97d8fd7ad1c1cc3a6b071cac03f0e746aeae6b3b7b2bf4cf06e28";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_recognition-release";
+        rev = "release/melodic/audio_to_spectrogram/1.2.15-1";
+        sha256 = "sha256-3JZL2ciRG8aecL9sBrfEGNYlAcdP0xrezuHrdZKswMw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

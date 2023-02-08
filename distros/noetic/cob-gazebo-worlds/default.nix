@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-default-env-config, controller-manager, gazebo-msgs, gazebo-ros, gazebo-ros-control, joint-state-controller, joint-state-publisher, position-controllers, robot-state-publisher, roslaunch, rospy, rostest, std-msgs, tf, tf2-ros, velocity-controllers, xacro }:
 buildRosPackage {
   pname = "ros-noetic-cob-gazebo-worlds";
-  version = "0.7.6-r1";
+  version = "0.7.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_simulation-release/archive/release/noetic/cob_gazebo_worlds/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "3cdd4b11daf900c8536a5d186f129d5269defe1d8d532fe3117dc9460880541f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_simulation-release";
+        rev = "release/noetic/cob_gazebo_worlds/0.7.7-1";
+        sha256 = "sha256-3SP1xy8JA+o6sOJnERyKT6f2mS7GIA/SygndqvAqr7A=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

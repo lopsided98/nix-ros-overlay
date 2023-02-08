@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-axis-camera";
   version = "0.3.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/axis_camera-release/archive/release/melodic/axis_camera/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "e7dfcbd5f77efc2f9a132bd2b8cd35315c323cb4db3a160a70694873d90868be";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-drivers-gbp";
+        repo = "axis_camera-release";
+        rev = "release/melodic/axis_camera/0.3.2-1";
+        sha256 = "sha256-wamh90sv2PS7hR8+rlYiYvcPS89B8Cpi36YzsCTniEM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

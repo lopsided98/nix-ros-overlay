@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-ament-lint-auto";
   version = "0.9.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/foxy/ament_lint_auto/0.9.7-1.tar.gz";
-    name = "0.9.7-1.tar.gz";
-    sha256 = "0690f0cc33d831b61202e7e90818f382da20f47fc4cf75985659f2cfab85021c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_lint-release";
+        rev = "release/foxy/ament_lint_auto/0.9.7-1";
+        sha256 = "sha256-lEjHnP7JMP+sCI6PSq5jWeT1O+Eii0c+cOdFq0M6FJg=";
+      };
 
   buildType = "ament_cmake";
   propagatedBuildInputs = [ ament-cmake-core ament-cmake-test ];

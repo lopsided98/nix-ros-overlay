@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-network-monitor-udp";
   version = "1.0.16-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/linux_networking-release/archive/release/melodic/network_monitor_udp/1.0.16-1.tar.gz";
-    name = "1.0.16-1.tar.gz";
-    sha256 = "6d2e8f5054923d181f20ddee18fe669fefa9bafbc3e39edf2ed77d1b629a5ea4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "linux_networking-release";
+        rev = "release/melodic/network_monitor_udp/1.0.16-1";
+        sha256 = "sha256-j3swFHuhaK4HLZce0WY9kU+5S/PNMXYWf5IRnKDAiIU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

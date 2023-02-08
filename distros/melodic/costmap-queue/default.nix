@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-costmap-queue";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/costmap_queue/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "d2cff3966f985060ab8a5a3b23c271d265d105a5ea3511b59d5717409cb91eab";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/melodic/costmap_queue/0.3.0-1";
+        sha256 = "sha256-YOv75uVBReU0ZJ5oRlaEOdfVxJvLs7AvCodJboRQFZQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

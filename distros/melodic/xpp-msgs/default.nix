@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-xpp-msgs";
   version = "1.0.10";
 
-  src = fetchurl {
-    url = "https://github.com/leggedrobotics/xpp-release/archive/release/melodic/xpp_msgs/1.0.10-0.tar.gz";
-    name = "1.0.10-0.tar.gz";
-    sha256 = "0835118248689817293f9399f3c3a7ece360dc9b6ac866ba80fa8c0c74554cd5";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "leggedrobotics";
+        repo = "xpp-release";
+        rev = "release/melodic/xpp_msgs/1.0.10-0";
+        sha256 = "sha256-as6DQ6JwbUTT3pJpV7Uf0k6+mM2q0M+gjGsQShT+NNM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rostest-node-interface-validation";
   version = "0.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tecnalia-advancedmanufacturing-robotics/rostest_node_interface_validation-release/archive/release/melodic/rostest_node_interface_validation/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "04d36f1346f96b88c4bcbece65fa1917697ffc129132adf4a307e8bd44dc18dc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tecnalia-advancedmanufacturing-robotics";
+        repo = "rostest_node_interface_validation-release";
+        rev = "release/melodic/rostest_node_interface_validation/0.2.0-1";
+        sha256 = "sha256-K//RBrzpGit3JvXAwc8M8VfkoE6t1ssb6B4KR09clCg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

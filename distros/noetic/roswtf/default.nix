@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-roswtf";
   version = "1.15.15-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/roswtf/1.15.15-1.tar.gz";
-    name = "1.15.15-1.tar.gz";
-    sha256 = "68b0c0dae326caf7b051cfac0c5723a2f18c535ba9c4e2d14e123450506e2809";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "ros_comm-release";
+        rev = "release/noetic/roswtf/1.15.15-1";
+        sha256 = "sha256-B0dcKXwh6IHHfewK0dCRNaiER3FEanWeUquht2cmiVE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

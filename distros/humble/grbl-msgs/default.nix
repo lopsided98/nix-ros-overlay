@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-grbl-msgs";
   version = "0.0.2-r6";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/grbl_msgs-release/archive/release/humble/grbl_msgs/0.0.2-6.tar.gz";
-    name = "0.0.2-6.tar.gz";
-    sha256 = "7c1fc987a65ff3e66dd2e32d122afb2ea02a91be07ab189d1a3c0baf6d7e6b10";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "grbl_msgs-release";
+        rev = "release/humble/grbl_msgs/0.0.2-6";
+        sha256 = "sha256-cjvc4arr+Z92IcwzqZryuU4FC2MY+FNpA+6JBe0dhiE=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-soccer-marker-generation";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/soccer_visualization-release/archive/release/rolling/soccer_marker_generation/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "321771d411d49b84fb5ea75ab1fdfa5fad75d97040bf86b8ac7e7a814be3b2ff";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "soccer_visualization-release";
+        rev = "release/rolling/soccer_marker_generation/0.1.0-1";
+        sha256 = "sha256-j3rFXdz5u/W7Cp66bF6y4unx0IjnBPnIlO6J3N1M9yI=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

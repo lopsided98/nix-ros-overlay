@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-rosbridge-msgs";
   version = "0.11.16-r2";
 
-  src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/melodic/rosbridge_msgs/0.11.16-2.tar.gz";
-    name = "0.11.16-2.tar.gz";
-    sha256 = "7142ed3e666afae3424471a5ac779065406e691382d6b48705e2792443b81e35";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "RobotWebTools-release";
+        repo = "rosbridge_suite-release";
+        rev = "release/melodic/rosbridge_msgs/0.11.16-2";
+        sha256 = "sha256-xH6vLqsmuMRQDpoUQkxI8ewMPt5iFe3dyGzNgkWdlkI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-foonathan-memory-vendor";
   version = "1.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/foonathan_memory_vendor-release/archive/release/foxy/foonathan_memory_vendor/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "72237602a3dedee05aafe1ce726a97754debd386bada768617a3e6c90184f283";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "foonathan_memory_vendor-release";
+        rev = "release/foxy/foonathan_memory_vendor/1.2.0-1";
+        sha256 = "sha256-0DgqmgXZ9PpV/sf51//kHGZGB6L/VNySZf+o8dWcCE4=";
+      };
 
   buildType = "cmake";
   buildInputs = [ git ];

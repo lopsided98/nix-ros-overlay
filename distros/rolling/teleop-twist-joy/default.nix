@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-teleop-twist-joy";
   version = "2.4.3-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_twist_joy-release/archive/release/rolling/teleop_twist_joy/2.4.3-3.tar.gz";
-    name = "2.4.3-3.tar.gz";
-    sha256 = "f62850479c9b126e35b005294108c56f1f25e01b9fd97abbe9eb5753d129191e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "teleop_twist_joy-release";
+        rev = "release/rolling/teleop_twist_joy/2.4.3-3";
+        sha256 = "sha256-dL2vcoGwprRfLIcvS2fa9spvG3HHSGWWI8YYjmC5MVo=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

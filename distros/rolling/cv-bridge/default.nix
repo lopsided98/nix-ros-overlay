@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-cv-bridge";
   version = "3.4.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/rolling/cv_bridge/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "e908845b688ccfd5e433d78b2bd3791d30778b0cc1bd6e9ed5dad3622c8f0af7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "vision_opencv-release";
+        rev = "release/rolling/cv_bridge/3.4.0-1";
+        sha256 = "sha256-dBOx5erfHZujCeftGSpaPaPgMsum6y3E6ecMkllLPDQ=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros python-cmake-module ];

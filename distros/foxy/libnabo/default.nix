@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-libnabo";
   version = "1.0.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/nobleo/libnabo-release/archive/release/foxy/libnabo/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "4303b216d13fe042f0f9406e639296e699e134a6426afb05a6ab4cdf6f84ba8c";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "nobleo";
+        repo = "libnabo-release";
+        rev = "release/foxy/libnabo/1.0.7-1";
+        sha256 = "sha256-Jw5AWmdPvBZQlJgcl9gIvuvYSe/MxzFT8npWLQtu1i4=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

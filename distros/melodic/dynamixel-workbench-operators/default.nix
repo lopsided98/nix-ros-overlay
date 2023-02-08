@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dynamixel-workbench-operators";
   version = "2.2.0";
 
-  src = fetchurl {
-    url = "https://github.com/ROBOTIS-GIT-release/dynamixel-workbench-release/archive/release/melodic/dynamixel_workbench_operators/2.2.0-0.tar.gz";
-    name = "2.2.0-0.tar.gz";
-    sha256 = "7ee54432acff98b57a6111d496c3eb74fb34d0e324f2087c6c2d4cce29a3c47e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ROBOTIS-GIT-release";
+        repo = "dynamixel-workbench-release";
+        rev = "release/melodic/dynamixel_workbench_operators/2.2.0-0";
+        sha256 = "sha256-ZhdTeSc1rQZgLZSpzPGjGz6Q/EuqHhe5dWZY462X6MM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

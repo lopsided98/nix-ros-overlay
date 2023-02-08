@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-ros-ign-gazebo-demos";
   version = "0.244.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/humble/ros_ign_gazebo_demos/0.244.9-1.tar.gz";
-    name = "0.244.9-1.tar.gz";
-    sha256 = "89a1de4beee7da6ef1128f778b16aa4ba1c463a0e6c59cf2ea9d64cedd022318";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ros_ign-release";
+        rev = "release/humble/ros_ign_gazebo_demos/0.244.9-1";
+        sha256 = "sha256-DvI5AXWtS0eYwRjyzrnGCfnDvlQwdsECW6K4e+8G+To=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

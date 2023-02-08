@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-slam-karto";
   version = "0.8.1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/slam_karto-release/archive/release/melodic/slam_karto/0.8.1-0.tar.gz";
-    name = "0.8.1-0.tar.gz";
-    sha256 = "5a602df47e9778bf47a4e51c2e263c27188f949686e525bb8a446c2eb6637eea";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "slam_karto-release";
+        rev = "release/melodic/slam_karto/0.8.1-0";
+        sha256 = "sha256-fbQW4B9N+XFFFGgd7nOSL5K1j7WZmvf95ame1KdBmuQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];

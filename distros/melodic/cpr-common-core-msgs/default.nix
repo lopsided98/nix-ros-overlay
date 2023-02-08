@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-cpr-common-core-msgs";
   version = "0.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/cpr_common_core-release/archive/release/melodic/cpr_common_core_msgs/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "82eeb5aeef199ad8543b8d7f6fe8087caa6fb4ce68936cfa30d96a01c2c5d6fd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "cpr_common_core-release";
+        rev = "release/melodic/cpr_common_core_msgs/0.1.0-1";
+        sha256 = "sha256-yPOBs+VjDVMUls0Wlxta7cdW+eg48cY+38RoaRdvb8s=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

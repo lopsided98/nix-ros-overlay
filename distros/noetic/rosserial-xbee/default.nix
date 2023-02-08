@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosserial-xbee";
   version = "0.9.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_xbee/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "4678e4df53472749250a2ed93c06c2aa6c7128c025b20169c026924b100f5630";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rosserial-release";
+        rev = "release/noetic/rosserial_xbee/0.9.2-1";
+        sha256 = "sha256-b49wpKy2wPmdxibK0VXAJgvCqKvlGuA/+XHp9WTzGwI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

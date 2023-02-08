@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-image-transport-plugins";
   version = "1.9.5";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/image_transport_plugins-release/archive/release/melodic/image_transport_plugins/1.9.5-0.tar.gz";
-    name = "1.9.5-0.tar.gz";
-    sha256 = "1838bdad50e903b572a00fcb66935326e81c5e706af3356a64c0322927361ecd";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "image_transport_plugins-release";
+        rev = "release/melodic/image_transport_plugins/1.9.5-0";
+        sha256 = "sha256-e5P8DxGxfS1yYw9cwbFGATYEdrYPpzOW23bHd8IPTcQ=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

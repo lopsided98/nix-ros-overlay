@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-rosconsole-bridge";
   version = "0.5.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/rosconsole_bridge-release/archive/release/noetic/rosconsole_bridge/0.5.4-1.tar.gz";
-    name = "0.5.4-1.tar.gz";
-    sha256 = "5531266ba03ccb439a2191abdfa26ef735e7c58e647c4fc44f880b31a5d921ae";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "rosconsole_bridge-release";
+        rev = "release/noetic/rosconsole_bridge/0.5.4-1";
+        sha256 = "sha256-xRPmNzKQfDog0jI0CcyKI4BKAkiC/z7KvaPhCnW6X+4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

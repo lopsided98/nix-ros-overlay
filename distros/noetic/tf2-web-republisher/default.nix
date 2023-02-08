@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-tf2-web-republisher";
   version = "0.3.2-r3";
 
-  src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/tf2_web_republisher-release/archive/release/noetic/tf2_web_republisher/0.3.2-3.tar.gz";
-    name = "0.3.2-3.tar.gz";
-    sha256 = "30a3d8b8ec4d7c65ac4bb5cbffd2e9faf8c9b1d66ceaf9fd0aa1d175b320f93d";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "RobotWebTools-release";
+        repo = "tf2_web_republisher-release";
+        rev = "release/noetic/tf2_web_republisher/0.3.2-3";
+        sha256 = "sha256-SWlALJIr/iyDp2Qh1Vw6fk7oq1AHzE3I3b2ysTWrbWU=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-polled-camera";
   version = "1.12.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/image_common-release/archive/release/noetic/polled_camera/1.12.0-1.tar.gz";
-    name = "1.12.0-1.tar.gz";
-    sha256 = "ef7758bb4a5e8e9cde9fb84846474e2df5ed0051eb17913f901f7d7c7889973e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "image_common-release";
+        rev = "release/noetic/polled_camera/1.12.0-1";
+        sha256 = "sha256-DusqcNzkxC35pl7y7nImBt9k5dLSmsvgqXHKBmM7kMI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

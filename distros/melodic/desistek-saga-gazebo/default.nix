@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-desistek-saga-gazebo";
   version = "0.3.2";
 
-  src = fetchurl {
-    url = "https://github.com/uuvsimulator/desistek_saga-release/archive/release/melodic/desistek_saga_gazebo/0.3.2-0.tar.gz";
-    name = "0.3.2-0.tar.gz";
-    sha256 = "534d7e4e5fb0ab7d099d6e20561f3ac9275f98a06e13e59ca92b1b0114fb2911";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "uuvsimulator";
+        repo = "desistek_saga-release";
+        rev = "release/melodic/desistek_saga_gazebo/0.3.2-0";
+        sha256 = "sha256-Y6v5S5aXbkXqDWYUlBvZzl6A7cuZorWLey5jDq/D8ZI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-simple-message";
   version = "0.7.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/industrial_core-release/archive/release/melodic/simple_message/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "e3dcc3297fef3c238c0f9e63c80aa7be89329cc927c414de96bfca435db50075";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "industrial_core-release";
+        rev = "release/melodic/simple_message/0.7.3-1";
+        sha256 = "sha256-e3VzIL53EqPr6HAracyGAzAxkhG4qoQDU15xOYAE/64=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-vision-msgs";
   version = "0.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/Kukanani/vision_msgs-release/archive/release/noetic/vision_msgs/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "aa7c87e6b6bd88fe1f2f7626d97fe0940afee038a5c7bbd95d6d29c5859c0507";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "Kukanani";
+        repo = "vision_msgs-release";
+        rev = "release/noetic/vision_msgs/0.0.2-1";
+        sha256 = "sha256-8Tiv90snAIFQmaGAm4irOj0OgvduBdu0pMkZ5NpcnX4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

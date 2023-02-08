@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-iris-lama-ros";
   version = "1.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/eupedrosa/iris_lama_ros-release/archive/release/noetic/iris_lama_ros/1.3.3-1.tar.gz";
-    name = "1.3.3-1.tar.gz";
-    sha256 = "e99e79b003e294db1eaf51b0eb338e760f3138c031eab1dc1ab480afded49ea2";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "eupedrosa";
+        repo = "iris_lama_ros-release";
+        rev = "release/noetic/iris_lama_ros/1.3.3-1";
+        sha256 = "sha256-/2dF1s3byKL3ZlmRdRiLPIP1tM3LAgutMeMNKu4pvzI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

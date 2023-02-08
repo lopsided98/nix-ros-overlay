@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-bag-recorder-nodes";
   version = "0.3.9-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/bag_recorder_nodes/0.3.9-1.tar.gz";
-    name = "0.3.9-1.tar.gz";
-    sha256 = "f0632d4811553c36a304c5da7202b47c3f0c3c9caa69fc66b13a82ef873c4097";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "rosbag2-release";
+        rev = "release/foxy/bag_recorder_nodes/0.3.9-1";
+        sha256 = "sha256-FrotGNLnAQUjwTZWoonuaqjOdXXJzQBVizC0pLrbg2o=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-image-rotate";
   version = "1.17.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/image_pipeline-release/archive/release/noetic/image_rotate/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "6658413973c5bf391d66686d494df72d704a1db634beae1f5546e703e78cd586";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "image_pipeline-release";
+        rev = "release/noetic/image_rotate/1.17.0-1";
+        sha256 = "sha256-yLS6yWvx+eB0bjxdUxGGJxBXYOyFzGjC274yfy3E6d0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules geometry-msgs ];

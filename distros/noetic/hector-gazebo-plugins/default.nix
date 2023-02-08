@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-hector-gazebo-plugins";
   version = "0.5.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_gazebo-release/archive/release/noetic/hector_gazebo_plugins/0.5.4-1.tar.gz";
-    name = "0.5.4-1.tar.gz";
-    sha256 = "69f1b1d7f5c99497a402a1ac263605e80f820f1c9fc166c61ea4c7dca9af8da6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_gazebo-release";
+        rev = "release/noetic/hector_gazebo_plugins/0.5.4-1";
+        sha256 = "sha256-4c+jJP00hi1Xmns+loZX4THAkQ48w1x2ZanWxd22pIE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin gazebo-dev message-generation ];

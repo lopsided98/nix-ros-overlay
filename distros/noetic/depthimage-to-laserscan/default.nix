@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-depthimage-to-laserscan";
   version = "1.0.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/depthimage_to_laserscan-release/archive/release/noetic/depthimage_to_laserscan/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "033bbea0e5df9638816345ee7fd5e049af5431d21c74550937d1fc725fa946b0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "depthimage_to_laserscan-release";
+        rev = "release/noetic/depthimage_to_laserscan/1.0.8-1";
+        sha256 = "sha256-zklPnFlu3CesAV/Nn4VBxDh6s1nsRgshyE9r46A2ZA0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin gtest ];

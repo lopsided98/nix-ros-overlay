@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pr2-mechanism-diagnostics";
   version = "1.8.21-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_mechanism-release/archive/release/noetic/pr2_mechanism_diagnostics/1.8.21-1.tar.gz";
-    name = "1.8.21-1.tar.gz";
-    sha256 = "8ba0687a92fb5bf9db20ddf18f6a9fb7c0d14bbf6c5772e7237e1b1079facaa0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_mechanism-release";
+        rev = "release/noetic/pr2_mechanism_diagnostics/1.8.21-1";
+        sha256 = "sha256-hCyfSKsZj4bNbqfLN+Ri7mX7c8mUfu2cSRu7RIXaDYM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin rostest ];

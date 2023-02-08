@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-derived-object-msgs";
   version = "3.1.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/foxy/derived_object_msgs/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "1c8368fd5e5eca6a7dafa651489bb8569bc66a68cd0e8105a7885eb7f88a18bf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "astuff";
+        repo = "astuff_sensor_msgs-release";
+        rev = "release/foxy/derived_object_msgs/3.1.0-1";
+        sha256 = "sha256-jrkXLLg5mJhtIJtVTSC8z5MofI8S68uaDOiU+5+J7vw=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment rosidl-default-generators ];

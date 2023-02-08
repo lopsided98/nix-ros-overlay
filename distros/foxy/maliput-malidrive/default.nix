@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-maliput-malidrive";
   version = "0.1.4-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/maliput_malidrive-release/archive/release/foxy/maliput_malidrive/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "7db77cbb7a3ca75c56ebfd8eee378a7460e95f2cc215964fe23f2ad5908d2f9a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "maliput_malidrive-release";
+        rev = "release/foxy/maliput_malidrive/0.1.4-1";
+        sha256 = "sha256-33AWyr13E5StNrkmBtJjWdsjDdkKT0TsUQryjcY4dCk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

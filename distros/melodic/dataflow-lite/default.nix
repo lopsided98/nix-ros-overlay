@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-dataflow-lite";
   version = "1.1.5-r1";
 
-  src = fetchurl {
-    url = "https://github.com/aws-gbp/cloudwatch_common-release/archive/release/melodic/dataflow_lite/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "6bd3d571380bb06623afd09ae46e1a0d95368ccafe14416a323fd79ac84e2bed";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "aws-gbp";
+        repo = "cloudwatch_common-release";
+        rev = "release/melodic/dataflow_lite/1.1.5-1";
+        sha256 = "sha256-ukmR+DtC08qFCQFdiI8f04FiFNEV67HbX2rKe24sm4M=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

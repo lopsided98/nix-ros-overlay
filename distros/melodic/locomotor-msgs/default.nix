@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-locomotor-msgs";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/DLu/robot_navigation-release/archive/release/melodic/locomotor_msgs/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "1848d229f1ab534fb38f858f17885968a31ad7543a1abf1c76026b4efbc0ec60";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "DLu";
+        repo = "robot_navigation-release";
+        rev = "release/melodic/locomotor_msgs/0.3.0-1";
+        sha256 = "sha256-zfJ3LoxvyYOLQe+QC9n6SZmCdtSrBiyuSHYioZDsEt8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

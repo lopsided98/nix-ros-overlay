@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-cob-android-settings";
   version = "0.1.10-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ipa320/cob_android-release/archive/release/noetic/cob_android_settings/0.1.10-1.tar.gz";
-    name = "0.1.10-1.tar.gz";
-    sha256 = "e4038140c231cf067a0de76b46b2d902bf15f4aad761bd4b03422c0acd2b9214";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ipa320";
+        repo = "cob_android-release";
+        rev = "release/noetic/cob_android_settings/0.1.10-1";
+        sha256 = "sha256-SGR5OPgQL8OgJzFjPYdwPiXeYOYbuSebqXpauyjdYPE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

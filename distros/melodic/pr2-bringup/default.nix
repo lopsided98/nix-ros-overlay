@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pr2-bringup";
   version = "1.6.31-r1";
 
-  src = fetchurl {
-    url = "https://github.com/pr2-gbp/pr2_robot-release/archive/release/melodic/pr2_bringup/1.6.31-1.tar.gz";
-    name = "1.6.31-1.tar.gz";
-    sha256 = "dd9de187a87540c72a35f9250c1c8b617efbe79a02c025742f81998b9eeaf128";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "pr2-gbp";
+        repo = "pr2_robot-release";
+        rev = "release/melodic/pr2_bringup/1.6.31-1";
+        sha256 = "sha256-6jqCx91Bi5gFlyWsSRliXJtxD5/Ky/GcrOe4bl3rVKg=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin roslaunch rostest ];

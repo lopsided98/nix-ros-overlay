@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, nav-msgs }:
 buildRosPackage {
   pname = "ros-noetic-map-organizer-msgs";
-  version = "0.8.0-r1";
+  version = "0.12.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/noetic/map_organizer_msgs/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "1434e36726307ee6ed9b2a58934b286802700a685e8382c35af4b4aa200060ef";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "at-wat";
+        repo = "neonavigation_msgs-release";
+        rev = "release/noetic/map_organizer_msgs/0.12.0-1";
+        sha256 = "sha256-yt9sQC9Hbonqb5oVmE6buwC3iPWmxhXHK3Bs11eZYb8=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

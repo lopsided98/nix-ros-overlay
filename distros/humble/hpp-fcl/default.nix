@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-hpp-fcl";
   version = "2.2.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/hpp_fcl-release/archive/release/humble/hpp-fcl/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "4bb0dba653f59122623445b11a2c09cc6e96b63d21a570f6767be7ea665ae3d3";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "hpp_fcl-release";
+        rev = "release/humble/hpp-fcl/2.2.0-1";
+        sha256 = "sha256-qhSLoE/vV0hK4gPpF9GMI7r2l3o7uqNhQaSr+y00MiU=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen git python3Packages.lxml ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-foxy-slider-publisher";
   version = "2.2.1-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/slider_publisher-release/archive/release/foxy/slider_publisher/2.2.1-3.tar.gz";
-    name = "2.2.1-3.tar.gz";
-    sha256 = "8372f1621e5c216568059aead95a75f5c46b0944217d8675f8528f90637e2ee9";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "slider_publisher-release";
+        rev = "release/foxy/slider_publisher/2.2.1-3";
+        sha256 = "sha256-szAUkWe0eQFk40CMBvoSKEw/Ut9x17ULIwx90BhW/TY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

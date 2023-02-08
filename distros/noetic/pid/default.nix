@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-pid";
   version = "0.0.28-r1";
 
-  src = fetchurl {
-    url = "https://github.com/AndyZe/pid-release/archive/release/noetic/pid/0.0.28-1.tar.gz";
-    name = "0.0.28-1.tar.gz";
-    sha256 = "153a7267a1990b210abb2deec0531548ef9e98390bac86e7daaa3b44eca062fc";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "AndyZe";
+        repo = "pid-release";
+        rev = "release/noetic/pid/0.0.28-1";
+        sha256 = "sha256-0i+1ynL2y1kpMfcv5/pWgSAXShUvfAex25KGEzWkdWM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-hector-pose-estimation";
   version = "0.3.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_localization-release/archive/release/melodic/hector_pose_estimation/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "769e253c6396b165b40b40e75a06f48d5401ff474795308d249dfbf60ce21f67";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_localization-release";
+        rev = "release/melodic/hector_pose_estimation/0.3.0-1";
+        sha256 = "sha256-5pO7UF4/dj36Bjx+9qiclY7Q5tYWtHjvuDNimsGaxUo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

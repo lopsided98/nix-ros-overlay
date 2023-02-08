@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-hector-imu-attitude-to-tf";
   version = "0.5.2-r4";
 
-  src = fetchurl {
-    url = "https://github.com/tu-darmstadt-ros-pkg-gbp/hector_slam-release/archive/release/noetic/hector_imu_attitude_to_tf/0.5.2-4.tar.gz";
-    name = "0.5.2-4.tar.gz";
-    sha256 = "10731ab0d6e13ee76b8dca754ed32049e2a7ea518a9474d119996ea8c87373ca";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tu-darmstadt-ros-pkg-gbp";
+        repo = "hector_slam-release";
+        rev = "release/noetic/hector_imu_attitude_to_tf/0.5.2-4";
+        sha256 = "sha256-KpUpSqxix5PktXCW5nb7FSW4+PVD4WWmB1a8FxDglM0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

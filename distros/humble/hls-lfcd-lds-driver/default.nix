@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-hls-lfcd-lds-driver";
   version = "2.0.4-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/hls_lfcd_lds_driver-release/archive/release/humble/hls_lfcd_lds_driver/2.0.4-3.tar.gz";
-    name = "2.0.4-3.tar.gz";
-    sha256 = "4ccdcb3e3af90bcc365752b031aa9ae6770ecd63fbd56320a1a9accdc63fd779";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "hls_lfcd_lds_driver-release";
+        rev = "release/humble/hls_lfcd_lds_driver/2.0.4-3";
+        sha256 = "sha256-gFslT2HGpW6SzRM8frU8D/gistcJDw02YkcZTXZcfa8=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];

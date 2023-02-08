@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-lanelet2-routing";
   version = "1.1.1-r4";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/humble/lanelet2_routing/1.1.1-4.tar.gz";
-    name = "1.1.1-4.tar.gz";
-    sha256 = "c8ebf8e08380f6f5ac41ac629d429e80a4071b3228c92914fc348134dd396b6f";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "lanelet2-release";
+        rev = "release/humble/lanelet2_routing/1.1.1-4";
+        sha256 = "sha256-bcQwF0woqvqfOeIO7haHyco3dmf6CNAotcyEVFPHkGk=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-core ];

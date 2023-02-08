@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-ffha";
   version = "2.1.24-r2";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/melodic/ffha/2.1.24-2.tar.gz";
-    name = "2.1.24-2.tar.gz";
-    sha256 = "cf98d5edbe4df60e5c37270f7a830cdf00fcee43004e8d5f743adc5e6c717ab4";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_3rdparty-release";
+        rev = "release/melodic/ffha/2.1.24-2";
+        sha256 = "sha256-3wwXexE3RifMbXKIub7JO3c0XHmQWJ6pLCOfUthQi0M=";
+      };
 
   buildType = "catkin";
   buildInputs = [ bison catkin flex gawk mk rosbuild roslib rospack ];

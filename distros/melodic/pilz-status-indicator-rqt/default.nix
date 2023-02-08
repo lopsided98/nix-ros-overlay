@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-pilz-status-indicator-rqt";
   version = "0.5.23-r1";
 
-  src = fetchurl {
-    url = "https://github.com/PilzDE/pilz_robots-release/archive/release/melodic/pilz_status_indicator_rqt/0.5.23-1.tar.gz";
-    name = "0.5.23-1.tar.gz";
-    sha256 = "6665eb85e1a85d1e33bf9f3611435a209a21cc418c96d5fcae88c4faeb58970a";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "PilzDE";
+        repo = "pilz_robots-release";
+        rev = "release/melodic/pilz_status_indicator_rqt/0.5.23-1";
+        sha256 = "sha256-2Fs6ThSiMz4dcc8zubrCMbl8tl69E5AgHskNw88OQVY=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

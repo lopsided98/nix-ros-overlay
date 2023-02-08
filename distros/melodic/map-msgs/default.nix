@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-map-msgs";
   version = "1.14.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-gbp/navigation_msgs-release/archive/release/melodic/map_msgs/1.14.1-1.tar.gz";
-    name = "1.14.1-1.tar.gz";
-    sha256 = "f9258be961e164b60e94b10e2965dc703d8614d360645717d099b40c2ea71de0";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-gbp";
+        repo = "navigation_msgs-release";
+        rev = "release/melodic/map_msgs/1.14.1-1";
+        sha256 = "sha256-7IurC6RLbfmueYraUPE0560XMCKFL7Ld61V9DfOD5eE=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

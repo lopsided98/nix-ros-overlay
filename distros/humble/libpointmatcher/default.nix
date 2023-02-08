@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-libpointmatcher";
   version = "1.3.1-r3";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/libpointmatcher-release/archive/release/humble/libpointmatcher/1.3.1-3.tar.gz";
-    name = "1.3.1-3.tar.gz";
-    sha256 = "2b62f5d7134ec1460128f820665f8435f3b8cabc4a9139a6cd1bdb61f89e4be7";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "libpointmatcher-release";
+        rev = "release/humble/libpointmatcher/1.3.1-3";
+        sha256 = "sha256-kz4xW5jFlA5Or5PIY32iQ2JsKrbswAT7Lag8SQx/5dQ=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ];

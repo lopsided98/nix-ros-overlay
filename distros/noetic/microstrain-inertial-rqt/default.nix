@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, microstrain-inertial-msgs, nav-msgs, rospy, rqt-gui, rqt-gui-py, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-microstrain-inertial-rqt";
-  version = "2.7.1-r1";
+  version = "3.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/noetic/microstrain_inertial_rqt/2.7.1-1.tar.gz";
-    name = "2.7.1-1.tar.gz";
-    sha256 = "3386514273710a3e33909a664d18b0e40dd8ee91025e331b9e57d6ac39a7796e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "LORD-MicroStrain";
+        repo = "microstrain_inertial-release";
+        rev = "release/noetic/microstrain_inertial_rqt/3.0.0-1";
+        sha256 = "sha256-rEnFQo7RoQQv1o2DDcPqzTFNqTTjQftxD2/w1s8sUlM=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

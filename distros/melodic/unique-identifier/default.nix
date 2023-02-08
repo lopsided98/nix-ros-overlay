@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-unique-identifier";
   version = "1.0.6";
 
-  src = fetchurl {
-    url = "https://github.com/ros-geographic-info/unique_identifier-release/archive/release/melodic/unique_identifier/1.0.6-0.tar.gz";
-    name = "1.0.6-0.tar.gz";
-    sha256 = "d1e54e7f1f8f2d9a6e7d481ee0c300dc7440f3033915afba621257aac6ff7d8b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-geographic-info";
+        repo = "unique_identifier-release";
+        rev = "release/melodic/unique_identifier/1.0.6-0";
+        sha256 = "sha256-PxqzwB/Ek35RtgN1JvHsoYwcdlCUsfSpayNNJEjqqtk=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

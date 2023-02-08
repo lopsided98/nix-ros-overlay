@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-depthcloud-encoder";
   version = "0.1.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/depthcloud_encoder-release/archive/release/melodic/depthcloud_encoder/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "cd0303245ac1fcc135761ad4d18dda3ed256e4165cf4fbbd6a4182037cecece6";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "RobotWebTools-release";
+        repo = "depthcloud_encoder-release";
+        rev = "release/melodic/depthcloud_encoder/0.1.1-1";
+        sha256 = "sha256-3DoHDLnNEC3hOiOEpTqH8T/rcSvbzKcoZ58na41a5X4=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

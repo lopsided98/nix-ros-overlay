@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-robosense-simulator";
   version = "1.0.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tomlogan501/robosense_simulator_release/archive/release/melodic/robosense_simulator/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "c95c9480f493d51240fb78b6993fc5e36344da3768d3c13bf6ded4b438378b0e";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tomlogan501";
+        repo = "robosense_simulator_release";
+        rev = "release/melodic/robosense_simulator/1.0.0-1";
+        sha256 = "sha256-dq4zElzwHpOrx4PqJCSySdIaZ/xkP0Eekm6OvuAa0nw=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-rolling-tf2-geometry-msgs";
   version = "0.29.0-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_geometry_msgs/0.29.0-1.tar.gz";
-    name = "0.29.0-1.tar.gz";
-    sha256 = "e02df49fe08675b842f30f05a78e871b162c18a5f2139400c50ce7e4989b0044";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "geometry2-release";
+        rev = "release/rolling/tf2_geometry_msgs/0.29.0-1";
+        sha256 = "sha256-gSlFfkzd7KVeWtkYWVDq7XbhceeXZM7B8LBwZgMeGeY=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake python-cmake-module ];

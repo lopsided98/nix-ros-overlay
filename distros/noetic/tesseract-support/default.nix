@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-noetic-tesseract-support";
   version = "0.13.1-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_support/0.13.1-1.tar.gz";
-    name = "0.13.1-1.tar.gz";
-    sha256 = "0936264ac05cde9e7b6fe227800a102fa3c5081cc97419ceefbe67921a80f147";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros-industrial-release";
+        repo = "tesseract-release";
+        rev = "release/noetic/tesseract_support/0.13.1-1";
+        sha256 = "sha256-y1073V4r2h3V4isF/u5a1jui4F1L0Pck4t4B6jSqfLc=";
+      };
 
   buildType = "cmake";
   buildInputs = [ cmake ros-industrial-cmake-boilerplate tesseract-common ];

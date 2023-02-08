@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-ament-cmake-libraries";
   version = "1.3.3-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/humble/ament_cmake_libraries/1.3.3-1.tar.gz";
-    name = "1.3.3-1.tar.gz";
-    sha256 = "8ed69af0500f3ead82d816b5d20f5e1bbc75a0132fd35d1e798d58b4ef0e18be";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "ament_cmake-release";
+        rev = "release/humble/ament_cmake_libraries/1.3.3-1";
+        sha256 = "sha256-KRYSAFQ5QAY/GEty9Hhkb4aZ/h7lokvOdN6H0b1ZIeI=";
+      };
 
   buildType = "ament_cmake";
   propagatedBuildInputs = [ ament-cmake-core ];

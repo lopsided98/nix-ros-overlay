@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-sick-safetyscanners";
   version = "1.0.8-r1";
 
-  src = fetchurl {
-    url = "https://github.com/SICKAG/sick_safetyscanners-release/archive/release/melodic/sick_safetyscanners/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "ef1fa5f288d15b522ba62e41e5b6bb8d5f8f4d6618df50ed889016f9bff2fc3b";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "SICKAG";
+        repo = "sick_safetyscanners-release";
+        rev = "release/melodic/sick_safetyscanners/1.0.8-1";
+        sha256 = "sha256-PTS57R5b3reGqfNwKbRXVGH8m5lygAwU9eTkdKtH3Y0=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-mav-msgs";
   version = "3.3.2";
 
-  src = fetchurl {
-    url = "https://github.com/ethz-asl/mav_comm-release/archive/release/melodic/mav_msgs/3.3.2-0.tar.gz";
-    name = "3.3.2-0.tar.gz";
-    sha256 = "32087bfaf586c5c054af80c396360bbe6997998cec9f6ac44233020ce9ca4c43";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ethz-asl";
+        repo = "mav_comm-release";
+        rev = "release/melodic/mav_msgs/3.3.2-0";
+        sha256 = "sha256-+D3zeA8bwNYlARON67wxV6LKUCa2RSWDE+2xJZi+4wo=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules message-generation ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-audio-video-recorder";
   version = "2.2.12-r1";
 
-  src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/melodic/audio_video_recorder/2.2.12-1.tar.gz";
-    name = "2.2.12-1.tar.gz";
-    sha256 = "40d2a21e729bf8d97a9126d03e1120ffaf62f2053d48a9eaa4390f193c243ecf";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "tork-a";
+        repo = "jsk_common-release";
+        rev = "release/melodic/audio_video_recorder/2.2.12-1";
+        sha256 = "sha256-qUBSWrRNFP01zJz0aclbPO/bM7CITaupTR0eGuvwZJI=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin ];

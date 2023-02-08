@@ -5,13 +5,17 @@
 { lib, buildRosPackage, fetchurl, graphviz, python3Packages, rclpy, tf2-msgs, tf2-py, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-humble-tf2-tools";
-  version = "0.25.1-r1";
+  version = "0.25.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2_tools/0.25.1-1.tar.gz";
-    name = "0.25.1-1.tar.gz";
-    sha256 = "e78b6d8bc7892588e864fe1deedf38a550bb67867a1d82583da3c4f93d164168";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "ros2-gbp";
+        repo = "geometry2-release";
+        rev = "release/humble/tf2_tools/0.25.2-1";
+        sha256 = "sha256-gw2JhVFIgWfaqaUUCT0zM9tLkMUdojstG7lqf3LSGdk=";
+      };
 
   buildType = "ament_python";
   propagatedBuildInputs = [ graphviz python3Packages.pyyaml rclpy tf2-msgs tf2-py tf2-ros-py ];

@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-melodic-message-relay";
   version = "0.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/clearpath-gbp/cpr_multimaster_tools-release/archive/release/melodic/message_relay/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "1aa52fc974539d1900c9c31cab57960ae4461a2f07958187c1b9eae9b00d8877";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "clearpath-gbp";
+        repo = "cpr_multimaster_tools-release";
+        rev = "release/melodic/message_relay/0.0.2-1";
+        sha256 = "sha256-+GuTBfaE4ElXSBLajjtHcUEfgtlC0mpqbbVKQ7djq/k=";
+      };
 
   buildType = "catkin";
   buildInputs = [ catkin pythonPackages.cheetah ];

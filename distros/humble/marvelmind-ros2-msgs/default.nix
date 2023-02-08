@@ -7,11 +7,15 @@ buildRosPackage {
   pname = "ros-humble-marvelmind-ros2-msgs";
   version = "1.0.2-r1";
 
-  src = fetchurl {
-    url = "https://github.com/MarvelmindRobotics/marvelmind_ros2_msgs_release/archive/release/humble/marvelmind_ros2_msgs/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "0c0fd3f728b00a79ecc089b18f80b5bbd5d4ceb4bc3d96827121d15f70665517";
-  };
+  src = let
+      fetchFromGithub = (builtins.import (builtins.fetchTarball ({ url = "https://github.com/NixOS/nixpkgs/archive/aa0e8072a57e879073cee969a780e586dbe57997.tar.gz"; })) ({})).fetchFromGitHub;
+    in
+      fetchFromGithub {
+        owner = "MarvelmindRobotics";
+        repo = "marvelmind_ros2_msgs_release";
+        rev = "release/humble/marvelmind_ros2_msgs/1.0.2-1";
+        sha256 = "sha256-Ge2JCHAh80HBI0fCpNFjg9fJhcotvDi2auvD+pPFzig=";
+      };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];
