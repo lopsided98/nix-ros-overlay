@@ -2164,6 +2164,8 @@ self: super: {
 
  moveit = self.callPackage ./moveit {};
 
+ moveit-commander = self.callPackage ./moveit-commander {};
+ 
  moveit-chomp-optimizer-adapter = self.callPackage ./moveit-chomp-optimizer-adapter {};
 
  moveit-controller-manager-example = self.callPackage ./moveit-controller-manager-example {};
