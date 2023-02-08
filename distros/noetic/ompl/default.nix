@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cmake, eigen, flann, ode, pkg-config }:
+{ lib, buildRosPackage, fetchurl, boost, cmake, eigen, flann, ode, pkg-config, sd }:
 buildRosPackage {
   pname = "ros-noetic-ompl";
   version = "1.6.0-r1";
@@ -21,7 +21,15 @@ buildRosPackage {
   buildInputs = [ cmake pkg-config ];
   propagatedBuildInputs = [ boost eigen flann ode ];
   nativeBuildInputs = [ cmake ];
-
+  
+  postFixupHooks = [
+    # This bodge is necessary so that the file that the generated -config.cmake file
+    # points to an existing directory.
+    ''
+      ${sd}/bin/sd '$${"{prefix}//nix/store"}' '/nix/store' **/*.pc
+    ''
+  ];
+  
   meta = {
     description = ''OMPL is a free sampling-based motion planning library.'';
     license = with lib.licenses; [ bsdOriginal ];
