@@ -2,19 +2,19 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, pythonPackages, rclpy, webots-ros2-driver }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, builtin-interfaces, pythonPackages, rclpy, webots-ros2-driver }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-mavic";
-  version = "2023.0.1-r1";
+  version = "2023.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_mavic/2023.0.1-1.tar.gz";
-    name = "2023.0.1-1.tar.gz";
-    sha256 = "3549337790d4717a741203f04e448d4dd143f44c6d91c8aff2a0ac2a08b00d08";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_mavic/2023.0.2-1.tar.gz";
+    name = "2023.0.2-1.tar.gz";
+    sha256 = "89f46552c748957cb906d013d2c0e5367de16c966b8f98e2621060721cb37005";
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
+  checkInputs = [ ament-copyright pythonPackages.pytest ];
   propagatedBuildInputs = [ builtin-interfaces rclpy webots-ros2-driver ];
 
   meta = {

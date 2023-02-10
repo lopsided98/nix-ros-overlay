@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, robot-state-publisher, rviz2, urdf, xacro }:
 buildRosPackage {
   pname = "ros-humble-dbw-fca-description";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dbw_fca_description/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "29b11e585dfb21ba9a05cc832744fe68979e51c39cf03ea608d270ec53071029";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dbw_fca_description/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "04bc168ad69f14482530926af9f76815a836c00218452b92cef76ba0438ffd29";
   };
 
   buildType = "ament_cmake";

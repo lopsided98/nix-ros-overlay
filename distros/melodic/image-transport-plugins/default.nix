@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, compressed-depth-image-transport, compressed-image-transport, theora-image-transport }:
 buildRosPackage {
   pname = "ros-melodic-image-transport-plugins";
-  version = "1.9.5";
+  version = "1.9.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_transport_plugins-release/archive/release/melodic/image_transport_plugins/1.9.5-0.tar.gz";
-    name = "1.9.5-0.tar.gz";
-    sha256 = "1838bdad50e903b572a00fcb66935326e81c5e706af3356a64c0322927361ecd";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/melodic/image_transport_plugins/1.9.6-1.tar.gz";
+    name = "1.9.6-1.tar.gz";
+    sha256 = "d66eacafc8f1895620d6980b268e97f6ede7a21cccb5a60308daec4dd2ab4295";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, diagnostic-msgs, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-rolling-py-trees-ros-interfaces";
-  version = "2.0.3-r3";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/stonier/py_trees_ros_interfaces-release/archive/release/rolling/py_trees_ros_interfaces/2.0.3-3.tar.gz";
-    name = "2.0.3-3.tar.gz";
-    sha256 = "8e9685733ba7885de72beb4abf6f4978e2f30cfd1d8b3e0a16a34e4107dbbb80";
+    url = "https://github.com/ros2-gbp/py_trees_ros_interfaces-release/archive/release/rolling/py_trees_ros_interfaces/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "a9c5cf6aa609bd14b43784b3b43b5d49e0bed837935cd2c15248730ac6483eaf";
   };
 
   buildType = "ament_cmake";

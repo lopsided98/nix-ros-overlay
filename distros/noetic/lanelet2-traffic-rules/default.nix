@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gtest, lanelet2-core, mrt-cmake-modules }:
 buildRosPackage {
   pname = "ros-noetic-lanelet2-traffic-rules";
-  version = "1.1.1-r1";
+  version = "1.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/noetic/lanelet2_traffic_rules/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "85f85ce06f1e71e26bd5c8bea1fa08cbc32300547fa4d417cccec8b8231e970a";
+    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/noetic/lanelet2_traffic_rules/1.2.0-2.tar.gz";
+    name = "1.2.0-2.tar.gz";
+    sha256 = "e3b668ffb054dd6f86ba12d1b57994b5e97ad25f704784e6b3155a832f685164";
   };
 
   buildType = "catkin";

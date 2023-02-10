@@ -592,6 +592,8 @@ self: super: {
 
  depthai-examples = self.callPackage ./depthai-examples {};
 
+ depthai-ros-driver = self.callPackage ./depthai-ros-driver {};
+
  depthai-ros-msgs = self.callPackage ./depthai-ros-msgs {};
 
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
@@ -954,6 +956,16 @@ self: super: {
 
  fkie-potree-rviz-plugin = self.callPackage ./fkie-potree-rviz-plugin {};
 
+ flatland = self.callPackage ./flatland {};
+
+ flatland-msgs = self.callPackage ./flatland-msgs {};
+
+ flatland-plugins = self.callPackage ./flatland-plugins {};
+
+ flatland-server = self.callPackage ./flatland-server {};
+
+ flatland-viz = self.callPackage ./flatland-viz {};
+
  flexbe-behavior-engine = self.callPackage ./flexbe-behavior-engine {};
 
  flexbe-core = self.callPackage ./flexbe-core {};
@@ -1284,6 +1296,8 @@ self: super: {
 
  image-transport = self.callPackage ./image-transport {};
 
+ image-transport-codecs = self.callPackage ./image-transport-codecs {};
+
  image-transport-plugins = self.callPackage ./image-transport-plugins {};
 
  image-view = self.callPackage ./image-view {};
@@ -1539,6 +1553,8 @@ self: super: {
  lanelet2-io = self.callPackage ./lanelet2-io {};
 
  lanelet2-maps = self.callPackage ./lanelet2-maps {};
+
+ lanelet2-matching = self.callPackage ./lanelet2-matching {};
 
  lanelet2-projection = self.callPackage ./lanelet2-projection {};
 
@@ -1935,6 +1951,16 @@ self: super: {
  moveit-sim-controller = self.callPackage ./moveit-sim-controller {};
 
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
+
+ moveit-task-constructor-capabilities = self.callPackage ./moveit-task-constructor-capabilities {};
+
+ moveit-task-constructor-core = self.callPackage ./moveit-task-constructor-core {};
+
+ moveit-task-constructor-demo = self.callPackage ./moveit-task-constructor-demo {};
+
+ moveit-task-constructor-msgs = self.callPackage ./moveit-task-constructor-msgs {};
+
+ moveit-task-constructor-visualization = self.callPackage ./moveit-task-constructor-visualization {};
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
@@ -3062,11 +3088,17 @@ self: super: {
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
 
+ rviz-marker-tools = self.callPackage ./rviz-marker-tools {};
+
  rviz-plugin-tutorials = self.callPackage ./rviz-plugin-tutorials {};
 
  rviz-python-tutorial = self.callPackage ./rviz-python-tutorial {};
 
  rviz-satellite = self.callPackage ./rviz-satellite {};
+
+ rviz-tool-cursor = self.callPackage ./rviz-tool-cursor {};
+
+ rviz-tool-path-display = self.callPackage ./rviz-tool-path-display {};
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 

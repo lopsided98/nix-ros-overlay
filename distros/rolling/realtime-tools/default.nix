@@ -2,19 +2,19 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rclcpp, rclcpp-action, test-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, rclcpp, rclcpp-action, test-msgs }:
 buildRosPackage {
   pname = "ros-rolling-realtime-tools";
-  version = "2.4.0-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/rolling/realtime_tools/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "3cbfcf620ba7bb222a9289f097b172bb105c56c2078af6a8522416dfefb8f828";
+    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/rolling/realtime_tools/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "aea0f3317586e8a20c1ea2dd76691fc46d1d40425bc8b100ee2bb2611482bcbd";
   };
 
   buildType = "ament_cmake";
-  checkInputs = [ rclcpp-action test-msgs ];
+  checkInputs = [ ament-cmake-gmock test-msgs ];
   propagatedBuildInputs = [ ament-cmake rclcpp rclcpp-action ];
   nativeBuildInputs = [ ament-cmake ];
 

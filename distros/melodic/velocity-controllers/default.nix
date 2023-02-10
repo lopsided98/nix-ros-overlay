@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, control-msgs, control-toolbox, controller-interface, forward-command-controller, pluginlib, realtime-tools, urdf }:
 buildRosPackage {
   pname = "ros-melodic-velocity-controllers";
-  version = "0.17.2-r1";
+  version = "0.17.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/velocity_controllers/0.17.2-1.tar.gz";
-    name = "0.17.2-1.tar.gz";
-    sha256 = "08a54e78a180a7e56154d1860450a7c3c3f36158944b60cd584cfed0baf463f7";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/velocity_controllers/0.17.3-1.tar.gz";
+    name = "0.17.3-1.tar.gz";
+    sha256 = "279f930a09daff1581d120a5535709cc117f25ccfa0805b3e58da2a3463a00bf";
   };
 
   buildType = "catkin";

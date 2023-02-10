@@ -352,9 +352,13 @@ self: super: {
 
  diagnostic-aggregator = self.callPackage ./diagnostic-aggregator {};
 
+ diagnostic-common-diagnostics = self.callPackage ./diagnostic-common-diagnostics {};
+
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
  diagnostic-updater = self.callPackage ./diagnostic-updater {};
+
+ diagnostics = self.callPackage ./diagnostics {};
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
@@ -713,6 +717,8 @@ self: super: {
  joy-linux = self.callPackage ./joy-linux {};
 
  joy-teleop = self.callPackage ./joy-teleop {};
+
+ joy-tester = self.callPackage ./joy-tester {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 

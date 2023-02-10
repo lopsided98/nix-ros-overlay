@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, hardware-interface, realtime-tools, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-forward-command-controller";
-  version = "0.17.2-r1";
+  version = "0.17.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/forward_command_controller/0.17.2-1.tar.gz";
-    name = "0.17.2-1.tar.gz";
-    sha256 = "5f1e8cb2ea9ed8bb0d670f9780213bd09f87d12641ea59dae671d2787b3c79a9";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/forward_command_controller/0.17.3-1.tar.gz";
+    name = "0.17.3-1.tar.gz";
+    sha256 = "07e53744b75ecb941adf3741371e89d9eadf284dbdef9ac7bad99af6849daa38";
   };
 
   buildType = "catkin";

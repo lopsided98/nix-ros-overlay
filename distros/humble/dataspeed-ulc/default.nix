@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, dataspeed-ulc-can, dataspeed-ulc-msgs }:
 buildRosPackage {
   pname = "ros-humble-dataspeed-ulc";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dataspeed_ulc/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "f4999de01e59802740826963a4dcbbf40260e83a67ef997ca99b25ae9433ed54";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dataspeed_ulc/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "14eb7e0d0054222f4efc820b73eafd0182bbe943934e4ed7fa207650cde5cb47";
   };
 
   buildType = "ament_cmake";

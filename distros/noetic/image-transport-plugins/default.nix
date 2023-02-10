@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, compressed-depth-image-transport, compressed-image-transport, theora-image-transport }:
 buildRosPackage {
   pname = "ros-noetic-image-transport-plugins";
-  version = "1.14.0-r1";
+  version = "1.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_transport_plugins-release/archive/release/noetic/image_transport_plugins/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "ee12b60b2c6244a1af9754990a3e6ac315f8c28afdfdd186df47f0927ae36719";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/noetic/image_transport_plugins/1.15.0-1.tar.gz";
+    name = "1.15.0-1.tar.gz";
+    sha256 = "22c7cca0ba5aa490318456a28c2f475a2806acbdfe92fc4aa18c49db6a91f627";
   };
 
   buildType = "catkin";

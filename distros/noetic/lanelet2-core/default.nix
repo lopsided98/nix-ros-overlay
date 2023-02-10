@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, eigen, gtest, mrt-cmake-modules }:
 buildRosPackage {
   pname = "ros-noetic-lanelet2-core";
-  version = "1.1.1-r1";
+  version = "1.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/noetic/lanelet2_core/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "ddfea83676a4f5c5e963b8d2862b482ebdd7a59b67df52cfdb23f4bd43bfa7d1";
+    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/noetic/lanelet2_core/1.2.0-2.tar.gz";
+    name = "1.2.0-2.tar.gz";
+    sha256 = "e3b5c96e09004e05b427cd6e8fc737803f79e0b2b8537e324cad5dec0d0bfd03";
   };
 
   buildType = "catkin";

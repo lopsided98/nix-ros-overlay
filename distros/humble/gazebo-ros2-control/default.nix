@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, controller-manager, gazebo-dev, gazebo-ros, hardware-interface, pluginlib, rclcpp, std-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-humble-gazebo-ros2-control";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gazebo_ros2_control-release/archive/release/humble/gazebo_ros2_control/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "b549f9311a704006adf5ce23688fa1cf13850284ed19ea87f8a143af57ac8858";
+    url = "https://github.com/ros2-gbp/gazebo_ros2_control-release/archive/release/humble/gazebo_ros2_control/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "d4d419345e2087c67fbf651c64c6f317c901db3090a8fdc6d6f1500d6b4510cf";
   };
 
   buildType = "ament_cmake";
