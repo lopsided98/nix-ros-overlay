@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, doxygen, eigen, git, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-eigenpy";
-  version = "2.8.1-r1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/eigenpy-release/archive/release/rolling/eigenpy/2.8.1-1.tar.gz";
-    name = "2.8.1-1.tar.gz";
-    sha256 = "e7923018e187d1cd43c8bdabe9af308c435dc43af36ffa46cebb7f4acf74fe76";
+    url = "https://github.com/ros2-gbp/eigenpy-release/archive/release/rolling/eigenpy/2.9.2-1.tar.gz";
+    name = "2.9.2-1.tar.gz";
+    sha256 = "f647b3c2c8804a7ad15d7a474335f1ededb9b4d349d68c81071d6aeec2874e6d";
   };
 
   buildType = "cmake";

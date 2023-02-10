@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, dataspeed-dbw-common, dbw-polaris-can, dbw-polaris-msgs, joy, rclcpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-dbw-polaris-joystick-demo";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dbw_polaris_joystick_demo/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "3587f96390161860532e7df792c1428532c92f875c98a62ccad00ff3f2ffcc85";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dbw_polaris_joystick_demo/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "872301d1189de912ff60b840d299ecc041945bf6cbc0cfea305aef9573feef57";
   };
 
   buildType = "ament_cmake";

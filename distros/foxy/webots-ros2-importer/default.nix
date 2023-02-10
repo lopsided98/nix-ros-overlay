@@ -2,19 +2,19 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, python3Packages, pythonPackages, xacro }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, builtin-interfaces, python3Packages, pythonPackages, xacro }:
 buildRosPackage {
   pname = "ros-foxy-webots-ros2-importer";
-  version = "2023.0.1-r1";
+  version = "2023.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_importer/2023.0.1-1.tar.gz";
-    name = "2023.0.1-1.tar.gz";
-    sha256 = "e924b570509c1f07f28feb5fdfd6a7498b4b05cf1e6c59bd5c259abaae0c7d97";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/foxy/webots_ros2_importer/2023.0.2-1.tar.gz";
+    name = "2023.0.2-1.tar.gz";
+    sha256 = "911ab0cba29dfa7abf8201f19b5b71d9342219396058f610df6143bf290f07b4";
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.numpy python3Packages.pillow python3Packages.pycodestyle pythonPackages.pytest ];
+  checkInputs = [ ament-copyright python3Packages.numpy python3Packages.pillow python3Packages.pycodestyle pythonPackages.pytest ];
   propagatedBuildInputs = [ builtin-interfaces python3Packages.lark python3Packages.pycollada xacro ];
 
   meta = {

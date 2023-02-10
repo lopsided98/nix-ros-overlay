@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs, vision-msgs }:
 buildRosPackage {
   pname = "ros-noetic-depthai-ros-msgs";
-  version = "2.5.3-r1";
+  version = "2.6.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/noetic/depthai_ros_msgs/2.5.3-1.tar.gz";
-    name = "2.5.3-1.tar.gz";
-    sha256 = "4d78472bab64daf71294237e094ee6e8d8af86f0fa8b4894aef1ff0dd6d779d3";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/noetic/depthai_ros_msgs/2.6.1-2.tar.gz";
+    name = "2.6.1-2.tar.gz";
+    sha256 = "197f4203cb13cdc836e58c8e017c1786b109d767d0b579649d43209f1138dbed";
   };
 
   buildType = "catkin";

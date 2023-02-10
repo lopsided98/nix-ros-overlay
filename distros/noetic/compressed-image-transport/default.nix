@@ -2,20 +2,21 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, image-transport }:
+{ lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, image-transport, libjpeg_turbo, rostest }:
 buildRosPackage {
   pname = "ros-noetic-compressed-image-transport";
-  version = "1.14.0-r1";
+  version = "1.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_transport_plugins-release/archive/release/noetic/compressed_image_transport/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "e6e3ada1e7da3d37a2b3d73c9bad5c9c6acc1535ba0f24916f8de15fad7d85d1";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/noetic/compressed_image_transport/1.15.0-1.tar.gz";
+    name = "1.15.0-1.tar.gz";
+    sha256 = "f2ca94a705d508273d49daf18aad8d84f81f17af8b6006221b2c9c843ae24b6f";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ cv-bridge dynamic-reconfigure image-transport ];
+  checkInputs = [ rostest ];
+  propagatedBuildInputs = [ cv-bridge dynamic-reconfigure image-transport libjpeg_turbo ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

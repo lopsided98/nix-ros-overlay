@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-safety-limiter-msgs";
-  version = "0.8.0-r1";
+  version = "0.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/noetic/safety_limiter_msgs/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "c2d48a00e5386a9f6f6f867c8346fe87d1f738b9190e750c0eb85b2ab7160718";
+    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/noetic/safety_limiter_msgs/0.12.0-1.tar.gz";
+    name = "0.12.0-1.tar.gz";
+    sha256 = "e6bb0b7fc523be880b311cd46f858714f82b23c7320e5f71cea717b9d5b9be9f";
   };
 
   buildType = "catkin";

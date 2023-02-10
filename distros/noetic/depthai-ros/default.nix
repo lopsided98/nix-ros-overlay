@@ -2,20 +2,20 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, depthai, depthai-bridge, depthai-examples, depthai-ros-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, depthai, depthai-bridge, depthai-examples, depthai-ros-driver, depthai-ros-msgs }:
 buildRosPackage {
   pname = "ros-noetic-depthai-ros";
-  version = "2.5.3-r1";
+  version = "2.6.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/noetic/depthai-ros/2.5.3-1.tar.gz";
-    name = "2.5.3-1.tar.gz";
-    sha256 = "178efffc5af6e70fbe9387e1fc664ab280c6ec8e4318677b94042e32a39021b5";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/noetic/depthai-ros/2.6.1-2.tar.gz";
+    name = "2.6.1-2.tar.gz";
+    sha256 = "a4970edb501654b2d5edd10de9bb6d6cd8427a66c8c0b04ce4931c0364f45c4a";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ depthai depthai-bridge depthai-examples depthai-ros-msgs ];
+  propagatedBuildInputs = [ depthai depthai-bridge depthai-examples depthai-ros-driver depthai-ros-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

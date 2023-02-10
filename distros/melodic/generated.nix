@@ -1538,6 +1538,8 @@ self: super: {
 
  image-transport = self.callPackage ./image-transport {};
 
+ image-transport-codecs = self.callPackage ./image-transport-codecs {};
+
  image-transport-plugins = self.callPackage ./image-transport-plugins {};
 
  image-view = self.callPackage ./image-view {};

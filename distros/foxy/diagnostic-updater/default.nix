@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, diagnostic-msgs, rclcpp, rclcpp-lifecycle, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-diagnostic-updater";
-  version = "2.0.8-r2";
+  version = "3.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/foxy/diagnostic_updater/2.0.8-2.tar.gz";
-    name = "2.0.8-2.tar.gz";
-    sha256 = "08abc22cf49ec9740af6ee857e2491213aeb78ffac9f589e14ab1faaa9b0c3ee";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/foxy/diagnostic_updater/3.1.0-2.tar.gz";
+    name = "3.1.0-2.tar.gz";
+    sha256 = "16893d3b9eedee351280cae40e72ec7a8f714c66553758a6cff97a78b9bcddd3";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = ''diagnostic_updater contains tools for easily updating diagnostics. it is commonly used in device drivers to keep track of the status of output topics, device status, etc.'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

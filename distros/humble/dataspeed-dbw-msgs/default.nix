@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-dataspeed-dbw-msgs";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dataspeed_dbw_msgs/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "e2bcf7dcbd702723a46158414cc845d97de7b9d5d1f9599bf92bee9e9244d6d7";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dataspeed_dbw_msgs/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "e90290e1f3f731933040dd4b32054767adc259df2d43d1650892cd55647b1a1f";
   };
 
   buildType = "ament_cmake";
