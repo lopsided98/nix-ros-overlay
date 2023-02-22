@@ -65,6 +65,20 @@ rosSelf: rosSuper: with rosSelf.lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ self.buildPackages.cmake ];
   });
 
+  mavros = rosSuper.mavros.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix null pointer dereference in ftp plugin
+      # https://github.com/mavlink/mavros/pull/1833
+      (self.fetchpatch {
+        url = "https://github.com/mavlink/mavros/commit/a132cbd6d3cca6eb5dc6aeabe7ba48eaca3f4446.patch";
+        hash = "sha256-puDNdAwCy8eiO74jXtlRmK8UI7TfFQO+ZuO4CHjPXMY=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   python-cmake-module = rosSuper.python-cmake-module.overrideAttrs ({ ... }: let
     python = rosSelf.python;
   in {
