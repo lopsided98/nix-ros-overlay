@@ -69,9 +69,9 @@ in {
   # Implementation
 
   config = mkIf cfg.enable {
-    # FIXME: mkAfter is used to make sure the Python overlay is applied. That
-    # means all other user configured Python overlays are ignored. This needs a
-    # fix in nixpkgs: https://github.com/NixOS/nixpkgs/issues/44426
+    # mkAfter is used to make sure the Python overlay (which uses overrideScope)
+    # is applied after any user overlays that use packageOverrides, so that
+    # composition works.
     nixpkgs.overlays = mkAfter (singleton (import ../../overlay.nix));
 
     services.ros2.pkgs = mkDefault (pkgs.rosPackages."${cfg.distro}".overrideScope cfg.overlays);

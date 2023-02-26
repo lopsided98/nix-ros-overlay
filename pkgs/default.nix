@@ -1,60 +1,56 @@
 self: super: with self.lib; let
 
-  pythonOverridesFor = superPython: fix (python: superPython.override ({
-    packageOverrides ? _: _: {}, ...
-  }: {
-    self = python;
-    packageOverrides = composeExtensions packageOverrides (pySelf: pySuper: {
-      bson = pySelf.callPackage ./bson { };
+  pythonOverridesFor = prevPython: prevPython // {
+    pkgs = prevPython.pkgs.overrideScope (pyFinal: pyPrev: {
+      bson = pyFinal.callPackage ./bson { };
 
-      catkin-pkg = pySelf.callPackage ./catkin-pkg { };
+      catkin-pkg = pyFinal.callPackage ./catkin-pkg { };
 
-      catkin-tools = pySelf.callPackage ./catkin-tools { };
+      catkin-tools = pyFinal.callPackage ./catkin-tools { };
 
-      colcon-cargo = pySelf.callPackage ./colcon/cargo.nix { };
+      colcon-cargo = pyFinal.callPackage ./colcon/cargo.nix { };
 
-      colcon-cmake = pySelf.callPackage ./colcon/cmake.nix { };
+      colcon-cmake = pyFinal.callPackage ./colcon/cmake.nix { };
 
-      colcon-core = pySelf.callPackage ./colcon/core.nix { };
+      colcon-core = pyFinal.callPackage ./colcon/core.nix { };
 
-      colcon-library-path = pySelf.callPackage ./colcon/library-path.nix { };
+      colcon-library-path = pyFinal.callPackage ./colcon/library-path.nix { };
 
-      colcon-metadata = pySelf.callPackage ./colcon/metadata.nix { };
+      colcon-metadata = pyFinal.callPackage ./colcon/metadata.nix { };
 
-      colcon-notification = pySelf.callPackage ./colcon/notification.nix { };
+      colcon-notification = pyFinal.callPackage ./colcon/notification.nix { };
 
-      colcon-output = pySelf.callPackage ./colcon/output.nix { };
+      colcon-output = pyFinal.callPackage ./colcon/output.nix { };
 
-      colcon-package-information = pySelf.callPackage ./colcon/package-information.nix { };
+      colcon-package-information = pyFinal.callPackage ./colcon/package-information.nix { };
 
-      colcon-package-selection = pySelf.callPackage ./colcon/package-selection.nix { };
+      colcon-package-selection = pyFinal.callPackage ./colcon/package-selection.nix { };
 
-      colcon-parallel-executor = pySelf.callPackage ./colcon/parallel-executor.nix { };
+      colcon-parallel-executor = pyFinal.callPackage ./colcon/parallel-executor.nix { };
 
-      colcon-pkg-config = pySelf.callPackage ./colcon/pkg-config.nix { };
+      colcon-pkg-config = pyFinal.callPackage ./colcon/pkg-config.nix { };
 
-      colcon-python-setup-py = pySelf.callPackage ./colcon/python-setup-py.nix { };
+      colcon-python-setup-py = pyFinal.callPackage ./colcon/python-setup-py.nix { };
 
-      colcon-recursive-crawl = pySelf.callPackage ./colcon/recursive-crawl.nix { };
+      colcon-recursive-crawl = pyFinal.callPackage ./colcon/recursive-crawl.nix { };
 
-      colcon-ros = pySelf.callPackage ./colcon/ros.nix { };
+      colcon-ros = pyFinal.callPackage ./colcon/ros.nix { };
 
-      colcon-ros-cargo = pySelf.callPackage ./colcon/ros-cargo.nix { };
+      colcon-ros-cargo = pyFinal.callPackage ./colcon/ros-cargo.nix { };
 
-      colcon-test-result = pySelf.callPackage ./colcon/test-result.nix { };
+      colcon-test-result = pyFinal.callPackage ./colcon/test-result.nix { };
 
-      osrf-pycommon = pySelf.callPackage ./osrf-pycommon {};
+      osrf-pycommon = pyFinal.callPackage ./osrf-pycommon {};
 
-      rosdep = pySelf.callPackage ./rosdep { };
+      rosdep = pyFinal.callPackage ./rosdep { };
 
-      rosdistro = pySelf.callPackage ./rosdistro { };
+      rosdistro = pyFinal.callPackage ./rosdistro { };
 
-      rosinstall-generator = pySelf.callPackage ./rosinstall-generator { };
+      rosinstall-generator = pyFinal.callPackage ./rosinstall-generator { };
 
-      rospkg = pySelf.callPackage ./rospkg { };
+      rospkg = pyFinal.callPackage ./rospkg { };
     });
-  }));
-
+  };
 in {
   cargo-ament-build = self.callPackage ./cargo-ament-build { };
 

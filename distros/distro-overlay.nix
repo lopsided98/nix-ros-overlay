@@ -1,15 +1,11 @@
 { version, distro, python }:
 self: super:
 let
-  pythonOverridesFor = with self.lib; superPython: fix (python: superPython.override ({
-    packageOverrides ? _: _: {}, ...
-  }: {
-    self = python;
-    packageOverrides = composeExtensions packageOverrides
-      (pySelf: pySuper: optionalAttrs pySuper.isPy3k {
-        wxPython = pySelf.wxPython_4_0;
-      });
-  }));
+  pythonOverridesFor = with self.lib; prevPython: prevPython // {
+    pkgs = prevPython.pkgs.overrideScope (pyFinal: pyPrev: optionalAttrs pyPrev.isPy3k {
+      wxPython = pyFinal.wxPython_4_0;
+    });
+  };
 
   base = rosSelf: rosSuper: {
     recurseForDerivations = true;
