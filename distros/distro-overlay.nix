@@ -178,8 +178,7 @@ let
     pr2-tilt-laser-interface = patchBoostSignals rosSuper.pr2-tilt-laser-interface;
 
     python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
-      propagatedNativeBuildInputs ? [],
-      postPatch ? "", ...
+      propagatedNativeBuildInputs ? [], ...
     }: {
       propagatedNativeBuildInputs = propagatedNativeBuildInputs ++ (with rosSelf.pythonPackages; [
         shiboken2
