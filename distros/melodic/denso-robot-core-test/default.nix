@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, bcap-core, catkin, denso-robot-core, roscpp, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-denso-robot-core-test";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/denso_robot_core_test/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "b500a34855e62c572cb8b2590855e8398d10be29a7a729a168b86a3088cb36ad";
+    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/denso_robot_core_test/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "3631a6fe0be8f5f4d6f0852927c7af3866893256e696f82719e3d43d88260095";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, qt5, rcl-interfaces, rclcpp, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-swri-console";
-  version = "2.0.1-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/swri_console-release/archive/release/foxy/swri_console/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "1aa0dc9dad687d04c57029b3dfc459c6c34a8690db0bf8d18143247ae9ef4d0b";
+    url = "https://github.com/ros2-gbp/swri_console-release/archive/release/foxy/swri_console/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "11de016e49de00f30632e28a6e47ca78853b92ae999d160b61d5cc02d3baecd3";
   };
 
   buildType = "ament_cmake";

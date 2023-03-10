@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-core, ament-cmake-export-dependencies, launch-testing, launch-testing-ament-cmake, launch-testing-ros, ros2test }:
 buildRosPackage {
   pname = "ros-rolling-ros-testing";
-  version = "0.5.1-r1";
+  version = "0.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_testing-release/archive/release/rolling/ros_testing/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "1d7520271a26c66ce74e5c47e102b648abf61513e6bf1f98e1a4c7cc34f4cd40";
+    url = "https://github.com/ros2-gbp/ros_testing-release/archive/release/rolling/ros_testing/0.5.2-1.tar.gz";
+    name = "0.5.2-1.tar.gz";
+    sha256 = "d26db4da0e1e7a36627d08557ace99332d23c5c2958acf17c6e29f0a6c65d558";
   };
 
   buildType = "ament_cmake";

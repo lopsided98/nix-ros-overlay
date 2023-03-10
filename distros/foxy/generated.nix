@@ -204,6 +204,8 @@ self: super: {
 
  cartographer-ros-msgs = self.callPackage ./cartographer-ros-msgs {};
 
+ casadi-vendor = self.callPackage ./casadi-vendor {};
+
  cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
 
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
@@ -241,6 +243,8 @@ self: super: {
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
  contracts-lite-vendor = self.callPackage ./contracts-lite-vendor {};
+
+ control-box-rst = self.callPackage ./control-box-rst {};
 
  control-msgs = self.callPackage ./control-msgs {};
 
@@ -622,6 +626,8 @@ self: super: {
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
+ gtsam = self.callPackage ./gtsam {};
+
  hardware-interface = self.callPackage ./hardware-interface {};
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
@@ -651,6 +657,8 @@ self: super: {
  ibeo-msgs = self.callPackage ./ibeo-msgs {};
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
+
+ ifopt = self.callPackage ./ifopt {};
 
  ign-ros2-control-demos = self.callPackage ./ign-ros2-control-demos {};
 
@@ -1084,6 +1092,8 @@ self: super: {
 
  octovis = self.callPackage ./octovis {};
 
+ odom-to-tf-ros2 = self.callPackage ./odom-to-tf-ros2 {};
+
  ompl = self.callPackage ./ompl {};
 
  openzen-driver = self.callPackage ./openzen-driver {};
@@ -1219,6 +1229,8 @@ self: super: {
  point-cloud-msg-wrapper = self.callPackage ./point-cloud-msg-wrapper {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
+
+ popf = self.callPackage ./popf {};
 
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
@@ -1554,6 +1566,8 @@ self: super: {
 
  ros-ign-interfaces = self.callPackage ./ros-ign-interfaces {};
 
+ ros-industrial-cmake-boilerplate = self.callPackage ./ros-industrial-cmake-boilerplate {};
+
  ros-testing = self.callPackage ./ros-testing {};
 
  ros-workspace = self.callPackage ./ros-workspace {};
@@ -1760,6 +1774,8 @@ self: super: {
 
  sbg-driver = self.callPackage ./sbg-driver {};
 
+ schunk-svh-library = self.callPackage ./schunk-svh-library {};
+
  sdl2-vendor = self.callPackage ./sdl2-vendor {};
 
  self-test = self.callPackage ./self-test {};
@@ -1835,6 +1851,8 @@ self: super: {
  stereo-image-proc = self.callPackage ./stereo-image-proc {};
 
  stereo-msgs = self.callPackage ./stereo-msgs {};
+
+ stomp = self.callPackage ./stomp {};
 
  stubborn-buddies = self.callPackage ./stubborn-buddies {};
 
@@ -1949,6 +1967,8 @@ self: super: {
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 
  transmission-interface = self.callPackage ./transmission-interface {};
+
+ tricycle-controller = self.callPackage ./tricycle-controller {};
 
  turtle-tf2-cpp = self.callPackage ./turtle-tf2-cpp {};
 

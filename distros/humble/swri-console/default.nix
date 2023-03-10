@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, qt5, rcl-interfaces, rclcpp, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-swri-console";
-  version = "2.0.2-r1";
+  version = "2.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/swri_console-release/archive/release/humble/swri_console/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "cb5ba18c68078ce2fdd5d94de12100bf94ecacdac5c79a9abc3abd12306bc48a";
+    url = "https://github.com/ros2-gbp/swri_console-release/archive/release/humble/swri_console/2.0.3-2.tar.gz";
+    name = "2.0.3-2.tar.gz";
+    sha256 = "771ce61a17eaa23c6433c622383862f79ff317ca305936fc11fe61d287de88af";
   };
 
   buildType = "ament_cmake";

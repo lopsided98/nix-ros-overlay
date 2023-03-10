@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-polar-scan-matcher";
-  version = "0.3.3-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/polar_scan_matcher/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "3e7d8367dfee2ad64dade2bb79db331c814c1a4f594c09eb41fc3f1263cf9833";
+    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/polar_scan_matcher/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "bcc36faf9baa266ac3f9d80713b08ec51539f589e6e26aa5e2e4ce1fd384702a";
   };
 
   buildType = "catkin";

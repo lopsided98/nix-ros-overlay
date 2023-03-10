@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, bullet, cmake, console-bridge, eigen, fcl, gbenchmark, gtest, libyamlcpp, llvmPackages, ros-industrial-cmake-boilerplate, tesseract-common, tesseract-geometry, tesseract-scene-graph, tesseract-support }:
 buildRosPackage {
   pname = "ros-noetic-tesseract-collision";
-  version = "0.13.1-r1";
+  version = "0.15.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_collision/0.13.1-1.tar.gz";
-    name = "0.13.1-1.tar.gz";
-    sha256 = "7f85f240dd0ff1434db1bcf4d63ccc71afc0baa99fcfbcb862c3e6c599ec0337";
+    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_collision/0.15.0-2.tar.gz";
+    name = "0.15.0-2.tar.gz";
+    sha256 = "bb21781fedd539d23212a8afc3a8ca0f44b850513bdb4de70721b92cf1b97dda";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, smach-viewer }:
 buildRosPackage {
   pname = "ros-noetic-executive-smach-visualization";
-  version = "4.0.1-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/jbohren/executive_smach_visualization-release/archive/release/noetic/executive_smach_visualization/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "937ce2d673fa25af3af7ef9f7200827bedbefac86e3e347519e4c405c408ebff";
+    url = "https://github.com/jbohren/executive_smach_visualization-release/archive/release/noetic/executive_smach_visualization/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "8eaf4224dc83deabf96ba72763e85e6720e62ddd45fe3f67e8eac71091db12f7";
   };
 
   buildType = "catkin";

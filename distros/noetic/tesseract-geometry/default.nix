@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, console-bridge, eigen, gtest, octomap, ros-industrial-cmake-boilerplate, tesseract-common, tesseract-support }:
 buildRosPackage {
   pname = "ros-noetic-tesseract-geometry";
-  version = "0.13.1-r1";
+  version = "0.15.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_geometry/0.13.1-1.tar.gz";
-    name = "0.13.1-1.tar.gz";
-    sha256 = "aeb1d3e2b62c507e96322c46b9199c4edcde6d9374cd3b4349a8c21112ac9ff9";
+    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_geometry/0.15.0-2.tar.gz";
+    name = "0.15.0-2.tar.gz";
+    sha256 = "e9e9d316ace5b530c501864137414ad3962e3ff1217790c092e5bc2c251c3d03";
   };
 
   buildType = "cmake";

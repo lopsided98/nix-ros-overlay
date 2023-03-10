@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-msgs, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-test-assets, std-srvs, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-humble-tricycle-controller";
-  version = "2.16.1-r1";
+  version = "2.17.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/tricycle_controller/2.16.1-1.tar.gz";
-    name = "2.16.1-1.tar.gz";
-    sha256 = "a1a3873ce2af82dde5d1e9328a74d2fed9b30f58ff3814472e129ae5d33e2e81";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/tricycle_controller/2.17.2-1.tar.gz";
+    name = "2.17.2-1.tar.gz";
+    sha256 = "995ade15c6d1f57cfe1dc8587e5ecea0215cdc2af41eee0558cbd091212d9a99";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, laser-ortho-projector, laser-scan-matcher, laser-scan-sparsifier, laser-scan-splitter, ncd-parser, polar-scan-matcher, scan-to-cloud-converter }:
 buildRosPackage {
   pname = "ros-noetic-scan-tools";
-  version = "0.3.3-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/scan_tools/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "31cb07d1a7024f28b127689d2c323ff38b1293cc629dab21f068d706424e3bfa";
+    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/scan_tools/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "d5f61d45388d0bb440d0fa117b5a18586585573ab43360f557ac636921513ea2";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-nav2-theta-star-planner";
-  version = "1.1.5-r1";
+  version = "1.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_theta_star_planner/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "5d0b8aa66414e5ce7102b47947030dccb4635651d798b097248a2a36f3654052";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_theta_star_planner/1.1.6-1.tar.gz";
+    name = "1.1.6-1.tar.gz";
+    sha256 = "c14698c464d6440e6b22c860573c6132af013c63206faf0dd9924faf53097db5";
   };
 
   buildType = "ament_cmake";

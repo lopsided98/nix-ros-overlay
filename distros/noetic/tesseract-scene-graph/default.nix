@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, console-bridge, eigen, gtest, orocos-kdl, ros-industrial-cmake-boilerplate, tesseract-common, tesseract-geometry, tesseract-support }:
 buildRosPackage {
   pname = "ros-noetic-tesseract-scene-graph";
-  version = "0.13.1-r1";
+  version = "0.15.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_scene_graph/0.13.1-1.tar.gz";
-    name = "0.13.1-1.tar.gz";
-    sha256 = "de5d652a6b5f6dda855da0a8507b7424127f1e89630835ddef8fbc88329ef0db";
+    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_scene_graph/0.15.0-2.tar.gz";
+    name = "0.15.0-2.tar.gz";
+    sha256 = "e25f98a73199eaf3a182563bb654e64b20879e36a6ed1768191c64f2b60656bd";
   };
 
   buildType = "cmake";

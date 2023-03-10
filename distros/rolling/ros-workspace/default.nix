@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-package, cmake }:
 buildRosPackage {
   pname = "ros-rolling-ros-workspace";
-  version = "1.0.2-r5";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_workspace-release/archive/release/rolling/ros_workspace/1.0.2-5.tar.gz";
-    name = "1.0.2-5.tar.gz";
-    sha256 = "6bbc9429ee4b00bf29feeb73f2c123035fd1967cc2ac698fadd7fd6bd286af59";
+    url = "https://github.com/ros2-gbp/ros_workspace-release/archive/release/rolling/ros_workspace/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "0ce5803240a95262d847ad73a85c634fb498bb9168bf4542ce71eeb4e37b1a9e";
   };
 
   buildType = "cmake";

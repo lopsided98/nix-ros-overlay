@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages }:
 buildRosPackage {
   pname = "ros-rolling-domain-coordinator";
-  version = "0.11.1-r1";
+  version = "0.11.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/rolling/domain_coordinator/0.11.1-1.tar.gz";
-    name = "0.11.1-1.tar.gz";
-    sha256 = "9504ae93fc144cb0a688f3696c08705d869d4169e920a6dfa46baed8ca1ee184";
+    url = "https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/rolling/domain_coordinator/0.11.2-1.tar.gz";
+    name = "0.11.2-1.tar.gz";
+    sha256 = "ea31007afd2addc3d617435595d52f6830430567561152d66abc3bb0a803dda9";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, launch, phidgets-analog-inputs, phidgets-digital-inputs, phidgets-digital-outputs }:
 buildRosPackage {
   pname = "ros-humble-phidgets-ik";
-  version = "2.3.0-r2";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/humble/phidgets_ik/2.3.0-2.tar.gz";
-    name = "2.3.0-2.tar.gz";
-    sha256 = "0a0cf18f71d2c3eb7443db70cd9d0021112eab9995d743153e840099360efd93";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/humble/phidgets_ik/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "e003e630d4114cbf53e8056140e8f73dbada50548a39d3484ed5bd93334d4f3a";
   };
 
   buildType = "ament_cmake";

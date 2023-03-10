@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-bcap-core";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/bcap_core/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "1d0c1bb6201fd6f52a542770b9fa39ac14aa86dbaeebac2384afbeb8315ff940";
+    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/bcap_core/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "32ee2acfefb5650e5fd8c274e4aba365828c9b0f9cd1440a2e77545ea6821ecb";
   };
 
   buildType = "catkin";

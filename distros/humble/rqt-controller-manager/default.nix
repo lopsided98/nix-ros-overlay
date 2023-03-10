@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, controller-manager-msgs, rclpy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-humble-rqt-controller-manager";
-  version = "2.22.0-r1";
+  version = "2.24.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/rqt_controller_manager/2.22.0-1.tar.gz";
-    name = "2.22.0-1.tar.gz";
-    sha256 = "d4d2c8d1a1221b415f20a1021d77f27550863b6225710f996aea7f7ef4776ca5";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/rqt_controller_manager/2.24.1-1.tar.gz";
+    name = "2.24.1-1.tar.gz";
+    sha256 = "154e6cf8ce101160003ee6f2378f1a5ea095083e67d655d037f22652a39ecad7";
   };
 
   buildType = "ament_python";

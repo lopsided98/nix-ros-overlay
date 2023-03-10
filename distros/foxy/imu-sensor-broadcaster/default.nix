@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, controller-interface, controller-manager, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-foxy-imu-sensor-broadcaster";
-  version = "0.8.2-r1";
+  version = "0.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/imu_sensor_broadcaster/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "0211069ba6285d48660324f5d51a9167f37b3d769b9b3cde6e4f2ef0d23bbf60";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/imu_sensor_broadcaster/0.9.0-1.tar.gz";
+    name = "0.9.0-1.tar.gz";
+    sha256 = "236bd60fba1a743f7861af03bce365bb2c8f68ad5bb5adacebad7495c3238136";
   };
 
   buildType = "ament_cmake";

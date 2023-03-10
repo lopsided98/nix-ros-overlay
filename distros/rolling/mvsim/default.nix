@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, boost, box2d, cmake, cppzmq, mrpt2, nav-msgs, protobuf, python3, python3Packages, pythonPackages, ros-environment, ros2launch, sensor-msgs, tf2, tf2-geometry-msgs, unzip, visualization-msgs, wget }:
 buildRosPackage {
   pname = "ros-rolling-mvsim";
-  version = "0.5.1-r2";
+  version = "0.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/rolling/mvsim/0.5.1-2.tar.gz";
-    name = "0.5.1-2.tar.gz";
-    sha256 = "b3cc14b6ecaa4c9a002907cbe69be4c163a7fb9db20d590175de7ecdd0510114";
+    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/rolling/mvsim/0.6.1-1.tar.gz";
+    name = "0.6.1-1.tar.gz";
+    sha256 = "e81e599941a6e8e63763f39dbd960c5e9a1926e04a1b1e1380c375110e0667f2";
   };
 
   buildType = "ament_cmake";

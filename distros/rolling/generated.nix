@@ -234,6 +234,8 @@ self: super: {
 
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
+ control-box-rst = self.callPackage ./control-box-rst {};
+
  control-msgs = self.callPackage ./control-msgs {};
 
  control-toolbox = self.callPackage ./control-toolbox {};
@@ -525,6 +527,8 @@ self: super: {
  gscam = self.callPackage ./gscam {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
+
+ gtsam = self.callPackage ./gtsam {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
 
@@ -882,7 +886,11 @@ self: super: {
 
  octovis = self.callPackage ./octovis {};
 
+ odom-to-tf-ros2 = self.callPackage ./odom-to-tf-ros2 {};
+
  ompl = self.callPackage ./ompl {};
+
+ openni2-camera = self.callPackage ./openni2-camera {};
 
  orocos-kdl-vendor = self.callPackage ./orocos-kdl-vendor {};
 
@@ -921,6 +929,8 @@ self: super: {
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
 
  phidgets-analog-inputs = self.callPackage ./phidgets-analog-inputs {};
+
+ phidgets-analog-outputs = self.callPackage ./phidgets-analog-outputs {};
 
  phidgets-api = self.callPackage ./phidgets-api {};
 
@@ -971,6 +981,8 @@ self: super: {
  position-controllers = self.callPackage ./position-controllers {};
 
  py-trees = self.callPackage ./py-trees {};
+
+ py-trees-ros = self.callPackage ./py-trees-ros {};
 
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
 
@@ -1089,6 +1101,8 @@ self: super: {
  realtime-tools = self.callPackage ./realtime-tools {};
 
  resource-retriever = self.callPackage ./resource-retriever {};
+
+ rig-reconfigure = self.callPackage ./rig-reconfigure {};
 
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 
@@ -1275,6 +1289,8 @@ self: super: {
  ros-ign-interfaces = self.callPackage ./ros-ign-interfaces {};
 
  ros-image-to-qimage = self.callPackage ./ros-image-to-qimage {};
+
+ ros-industrial-cmake-boilerplate = self.callPackage ./ros-industrial-cmake-boilerplate {};
 
  ros-testing = self.callPackage ./ros-testing {};
 
@@ -1494,6 +1510,8 @@ self: super: {
 
  serial-driver = self.callPackage ./serial-driver {};
 
+ service-msgs = self.callPackage ./service-msgs {};
+
  shape-msgs = self.callPackage ./shape-msgs {};
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
@@ -1558,9 +1576,13 @@ self: super: {
 
  stereo-msgs = self.callPackage ./stereo-msgs {};
 
+ stomp = self.callPackage ./stomp {};
+
  stubborn-buddies = self.callPackage ./stubborn-buddies {};
 
  stubborn-buddies-msgs = self.callPackage ./stubborn-buddies-msgs {};
+
+ swri-console = self.callPackage ./swri-console {};
 
  swri-console-util = self.callPackage ./swri-console-util {};
 
@@ -1617,6 +1639,8 @@ self: super: {
  test-msgs = self.callPackage ./test-msgs {};
 
  tf2 = self.callPackage ./tf2 {};
+
+ tf2-2d = self.callPackage ./tf2-2d {};
 
  tf2-bullet = self.callPackage ./tf2-bullet {};
 
@@ -1740,8 +1764,6 @@ self: super: {
 
  ur-msgs = self.callPackage ./ur-msgs {};
 
- ur-robot-driver = self.callPackage ./ur-robot-driver {};
-
  urdf = self.callPackage ./urdf {};
 
  urdf-parser-plugin = self.callPackage ./urdf-parser-plugin {};
@@ -1785,6 +1807,8 @@ self: super: {
  vision-msgs = self.callPackage ./vision-msgs {};
 
  vision-msgs-layers = self.callPackage ./vision-msgs-layers {};
+
+ vision-msgs-rviz-plugins = self.callPackage ./vision-msgs-rviz-plugins {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
 

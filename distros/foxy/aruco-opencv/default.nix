@@ -2,20 +2,21 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, aruco-opencv-msgs, cv-bridge, image-transport, rclcpp, rclcpp-components, rclcpp-lifecycle, tf2-geometry-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, aruco-opencv-msgs, cv-bridge, image-transport, libyamlcpp, python39Packages, python3Packages, rclcpp, rclcpp-components, rclcpp-lifecycle, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-foxy-aruco-opencv";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aruco_opencv-release/archive/release/foxy/aruco_opencv/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "45cddb72580326049122896e65ebd9e16c82ee351413acc80a76cb6bf5a0f9cc";
+    url = "https://github.com/ros2-gbp/aruco_opencv-release/archive/release/foxy/aruco_opencv/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "cef255d188925fcb08b727ddb0c05a4e66e9279462215009a7e56d919f4511d7";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ aruco-opencv-msgs cv-bridge image-transport rclcpp rclcpp-components rclcpp-lifecycle tf2-geometry-msgs tf2-ros ];
+  checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ament-cmake-uncrustify ament-cmake-xmllint ament-lint-auto ];
+  propagatedBuildInputs = [ aruco-opencv-msgs cv-bridge image-transport libyamlcpp python39Packages.img2pdf python3Packages.numpy python3Packages.opencv3 rclcpp rclcpp-components rclcpp-lifecycle tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

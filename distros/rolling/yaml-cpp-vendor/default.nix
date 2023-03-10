@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libyamlcpp }:
 buildRosPackage {
   pname = "ros-rolling-yaml-cpp-vendor";
-  version = "8.1.1-r1";
+  version = "8.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yaml_cpp_vendor-release/archive/release/rolling/yaml_cpp_vendor/8.1.1-1.tar.gz";
-    name = "8.1.1-1.tar.gz";
-    sha256 = "0ba2a5db2f0068505303360ba14cea5c4a537e303679ec97aa4565b7a05a39a5";
+    url = "https://github.com/ros2-gbp/yaml_cpp_vendor-release/archive/release/rolling/yaml_cpp_vendor/8.1.2-1.tar.gz";
+    name = "8.1.2-1.tar.gz";
+    sha256 = "45ae866317d42064469aa84ac5cd6100e148bf98152217b8beca0d2013c63e4d";
   };
 
   buildType = "ament_cmake";

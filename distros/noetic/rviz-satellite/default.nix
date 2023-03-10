@@ -2,20 +2,20 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, qt5, roscpp, rviz, sensor-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, geographiclib, qt5, roscpp, rviz, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-rviz-satellite";
-  version = "3.0.3-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/rviz_satellite-release/archive/release/noetic/rviz_satellite/3.0.3-1.tar.gz";
-    name = "3.0.3-1.tar.gz";
-    sha256 = "2a3606866be36b75ef6412e20b4a552227d4b6afb4593f4f3d745f1611e41d20";
+    url = "https://github.com/nobleo/rviz_satellite-release/archive/release/noetic/rviz_satellite/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "0481897bc7c212a5f04a0421609fa4855c02654f129568f6749bd27f564eaf4b";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin qt5.qtbase ];
-  propagatedBuildInputs = [ roscpp rviz sensor-msgs tf2-ros ];
+  buildInputs = [ catkin qt5.qtbase tf2-geometry-msgs ];
+  propagatedBuildInputs = [ geographiclib roscpp rviz sensor-msgs tf2 tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

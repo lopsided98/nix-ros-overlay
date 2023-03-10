@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-ouster-msgs";
-  version = "0.4.1-r1";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_ouster_drivers-release/archive/release/humble/ouster_msgs/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "2acc1982c15fbceab282e8e9aeed024b811fd38316e23316918479a6cbbe65e4";
+    url = "https://github.com/ros2-gbp/ros2_ouster_drivers-release/archive/release/humble/ouster_msgs/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
+    sha256 = "1f8ccc891b9d5e1f11c155feb3c4f43e53e5d7c4c6a224c8639cb10291b65def";
   };
 
   buildType = "ament_cmake";
