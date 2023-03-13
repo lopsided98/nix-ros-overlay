@@ -144,6 +144,12 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
+  spacenav = rosSuper.spacenav.overrideAttrs ({
+    buildInputs ? [ ], ...
+  }: {
+    buildInputs = buildInputs ++ [ pkgs.xorg.libX11 ];
+  });
+
   # The build gets stuck in an infinite loop with absolute CMAKE_INSTALL_LIBDIR:
   # https://github.com/lagadic/visp/blob/9f1997ad17688c2d104cf2b29b57382c5d0af960/cmake/VISPGenerateConfig.cmake#L46
   # Also has the standard bad assumptions that CMAKE_INSTALL_*DIR is relative.
