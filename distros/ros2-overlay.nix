@@ -102,6 +102,17 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
+  rmw-cyclonedds-cpp = rosSuper.rmw-cyclonedds-cpp.overrideAttrs ({
+    version, patches ? [ ], ...
+  }: {
+    patches = patches ++ self.lib.optional (self.lib.versionOlder version "1.4.1")
+      (self.fetchpatch {
+        url = "https://github.com/ros2/rmw_cyclonedds/commit/f57732d15be53796d518e12352866124efcaa939.patch";
+        hash = "sha256-f/DnVoaQEWdy9xnb1fz8dcyFCnb9w9bLtEH5sy8LxTE=";
+      });
+    patchFlags = [ "-p2" ];
+  });
+
   rmw-implementation = rosSuper.rmw-implementation.overrideAttrs ({
     propagatedBuildInputs ? [], ...
   }: {
