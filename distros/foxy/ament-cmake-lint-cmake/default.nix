@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test, ament-lint-cmake }:
 buildRosPackage {
   pname = "ros-foxy-ament-cmake-lint-cmake";
-  version = "0.9.7-r1";
+  version = "0.9.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/foxy/ament_cmake_lint_cmake/0.9.7-1.tar.gz";
-    name = "0.9.7-1.tar.gz";
-    sha256 = "178f3389b715cdb5c4df353df3351d642e0ada38548592e17a3f572a98ae586c";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/foxy/ament_cmake_lint_cmake/0.9.8-1.tar.gz";
+    name = "0.9.8-1.tar.gz";
+    sha256 = "1a8a3a0cc7a469f1379f4b6db41a4ebcb554416fb811c0f353b290d27eda11d6";
   };
 
   buildType = "ament_cmake";

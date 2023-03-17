@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-humble-rcdiscover";
-  version = "1.1.4-r3";
+  version = "1.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcdiscover-release/archive/release/humble/rcdiscover/1.1.4-3.tar.gz";
-    name = "1.1.4-3.tar.gz";
-    sha256 = "3981ea0a06581bca5350a8f4011a1cbaf06b1a5d753f5d7331db7931dc022af1";
+    url = "https://github.com/ros2-gbp/rcdiscover-release/archive/release/humble/rcdiscover/1.1.6-1.tar.gz";
+    name = "1.1.6-1.tar.gz";
+    sha256 = "d2dbf7dd14da03a453e7d4fab55429a8fbe0f06f6da6b39ca54bfed5b2cb1842";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-melodic-rcdiscover";
-  version = "1.1.4-r1";
+  version = "1.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rcdiscover-release/archive/release/melodic/rcdiscover/1.1.4-1.tar.gz";
-    name = "1.1.4-1.tar.gz";
-    sha256 = "ea2fa0724a29e95475715069e2e149ed146fa7f9c6b60b15ed8a578c89ba7ee8";
+    url = "https://github.com/roboception-gbp/rcdiscover-release/archive/release/melodic/rcdiscover/1.1.6-1.tar.gz";
+    name = "1.1.6-1.tar.gz";
+    sha256 = "87a90e6a039c02c2400701a6ba2633ee0c4716ea87a80a2b3e9c03d3c568ed0d";
   };
 
   buildType = "cmake";

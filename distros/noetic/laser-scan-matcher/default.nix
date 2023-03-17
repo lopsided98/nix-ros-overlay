@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, csm, geometry-msgs, nav-msgs, nodelet, pcl, pcl-conversions, pcl-ros, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-laser-scan-matcher";
-  version = "0.3.3-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/laser_scan_matcher/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "6000f160af9d500dc98962fe003cc963573abbcec0bc7d7a0b6092896c49d285";
+    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/laser_scan_matcher/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "7948ef3e15cc0d298317ca9067983fedbe5881517b87cc81649d4f45a0d3dabc";
   };
 
   buildType = "catkin";

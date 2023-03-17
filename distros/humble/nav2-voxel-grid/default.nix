@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav2-common, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-nav2-voxel-grid";
-  version = "1.1.5-r1";
+  version = "1.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_voxel_grid/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "0bde1df4767895d73d5141593fb07309ed768cb5540f960c70b8158d871c5c4c";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_voxel_grid/1.1.6-1.tar.gz";
+    name = "1.1.6-1.tar.gz";
+    sha256 = "b971adcc75b767756ffb69d813576a06e33d78b63c29b26f9db88413a6083493";
   };
 
   buildType = "ament_cmake";

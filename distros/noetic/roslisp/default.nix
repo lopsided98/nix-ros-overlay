@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ros-environment, rosgraph-msgs, roslang, rospack, sbcl, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-roslisp";
-  version = "1.9.24-r1";
+  version = "1.9.25-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/roslisp-release/archive/release/noetic/roslisp/1.9.24-1.tar.gz";
-    name = "1.9.24-1.tar.gz";
-    sha256 = "492d41924b9264c0018534e86d7dce746a595410e01c27708fd1529931c9883b";
+    url = "https://github.com/ros-gbp/roslisp-release/archive/release/noetic/roslisp/1.9.25-1.tar.gz";
+    name = "1.9.25-1.tar.gz";
+    sha256 = "b451a7a128bff305054ccdd48bab22b79ce442db1181e7920644ba666973256a";
   };
 
   buildType = "catkin";

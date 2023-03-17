@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages, qt5, tango-icons-vendor }:
 buildRosPackage {
   pname = "ros-rolling-qt-gui";
-  version = "2.3.2-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "686272ba5c2d8f4eba7a34fe7648b7394aff772776abca31539de942bcb5dcc5";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "2656a9fd3e3ce173738487264ce58143103d3bfdb8c2d49bbe6ce1b4c2368d6d";
   };
 
   buildType = "ament_cmake";

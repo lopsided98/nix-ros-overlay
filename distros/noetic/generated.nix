@@ -476,6 +476,8 @@ self: super: {
 
  contact-states-observer = self.callPackage ./contact-states-observer {};
 
+ control-box-rst = self.callPackage ./control-box-rst {};
+
  control-msgs = self.callPackage ./control-msgs {};
 
  control-toolbox = self.callPackage ./control-toolbox {};
@@ -1276,6 +1278,8 @@ self: super: {
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
 
+ ifopt = self.callPackage ./ifopt {};
+
  ign-ros-control-demos = self.callPackage ./ign-ros-control-demos {};
 
  image-cb-detector = self.callPackage ./image-cb-detector {};
@@ -1384,6 +1388,8 @@ self: super: {
 
  jackal-description = self.callPackage ./jackal-description {};
 
+ jackal-desktop = self.callPackage ./jackal-desktop {};
+
  jackal-gazebo = self.callPackage ./jackal-gazebo {};
 
  jackal-msgs = self.callPackage ./jackal-msgs {};
@@ -1393,6 +1399,8 @@ self: super: {
  jackal-simulator = self.callPackage ./jackal-simulator {};
 
  jackal-tutorials = self.callPackage ./jackal-tutorials {};
+
+ jackal-viz = self.callPackage ./jackal-viz {};
 
  jderobot-assets = self.callPackage ./jderobot-assets {};
 
@@ -2687,6 +2695,8 @@ self: super: {
  rm-msgs = self.callPackage ./rm-msgs {};
 
  rm-orientation-controller = self.callPackage ./rm-orientation-controller {};
+
+ rm-referee = self.callPackage ./rm-referee {};
 
  rm-shooter-controllers = self.callPackage ./rm-shooter-controllers {};
 

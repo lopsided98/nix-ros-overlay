@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, depth-image-proc, image-proc, nodelet, rostest, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-rgbd-launch";
-  version = "2.3.0-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rgbd_launch-release/archive/release/noetic/rgbd_launch/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "3068bc034a4ccf0aa8810a9b825b43e4c300e7ed7bb9626ae1ea97ffcda41b40";
+    url = "https://github.com/ros-gbp/rgbd_launch-release/archive/release/noetic/rgbd_launch/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "9a1b14200ea87872c0f29983101b2594a821e61ec1c3210fbe49c94b8bc66bb1";
   };
 
   buildType = "catkin";

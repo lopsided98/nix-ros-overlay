@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cpp-common, message-generation, message-runtime, rosbash, rosconsole, roscpp, rostest, rostime, rosunit, std-msgs, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-noetic-topic-tools";
-  version = "1.15.15-r1";
+  version = "1.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/topic_tools/1.15.15-1.tar.gz";
-    name = "1.15.15-1.tar.gz";
-    sha256 = "26f4b99054bb27c00a260bea2dfab7f99f09f1daba977edb8a5df2e58609c7cf";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/topic_tools/1.16.0-1.tar.gz";
+    name = "1.16.0-1.tar.gz";
+    sha256 = "22423cc274b8e20d20be1aa6f91d088a5b9a335250ad6c8197e1d16017e3dfcc";
   };
 
   buildType = "catkin";

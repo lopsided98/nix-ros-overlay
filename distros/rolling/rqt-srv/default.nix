@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rclpy, rqt-gui, rqt-gui-py, rqt-msg }:
 buildRosPackage {
   pname = "ros-rolling-rqt-srv";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_srv-release/archive/release/rolling/rqt_srv/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "f10e11c6b2ef7777fe995e3937f57293412426f6c34bcb5819aea520c66702e1";
+    url = "https://github.com/ros2-gbp/rqt_srv-release/archive/release/rolling/rqt_srv/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "bd739bfe6c1b6e05321ff4c5a668ea7e02500cd5c5df0b81275f62e9e25b0596";
   };
 
   buildType = "ament_python";

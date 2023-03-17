@@ -2,20 +2,20 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, qb-device-bringup, qb-device-control, qb-device-description, qb-device-driver, qb-device-gazebo, qb-device-hardware-interface, qb-device-msgs, qb-device-srvs, qb-device-utils }:
+{ lib, buildRosPackage, fetchurl, catkin, qb-device-bringup, qb-device-control, qb-device-description, qb-device-driver, qb-device-hardware-interface, qb-device-msgs, qb-device-srvs }:
 buildRosPackage {
   pname = "ros-melodic-qb-device";
-  version = "3.0.5-r2";
+  version = "2.0.1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device/3.0.5-2.tar.gz";
-    name = "3.0.5-2.tar.gz";
-    sha256 = "e4150988f95ea6b51d8e809d652f413d601f2d4bfb225efd4a7e947b2b2ad47a";
+    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/melodic/qb_device/2.0.1-0.tar.gz";
+    name = "2.0.1-0.tar.gz";
+    sha256 = "732baae03ff35decece845d122f21d7b7b86d2c31f726cfce269be208c306724";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ qb-device-bringup qb-device-control qb-device-description qb-device-driver qb-device-gazebo qb-device-hardware-interface qb-device-msgs qb-device-srvs qb-device-utils ];
+  propagatedBuildInputs = [ qb-device-bringup qb-device-control qb-device-description qb-device-driver qb-device-hardware-interface qb-device-msgs qb-device-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

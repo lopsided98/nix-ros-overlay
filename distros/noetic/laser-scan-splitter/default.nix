@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nodelet, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-laser-scan-splitter";
-  version = "0.3.3-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/laser_scan_splitter/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "e2232be64fc25cc003de31a38c986fe4104262f07fabe7de66f33e676463404c";
+    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/laser_scan_splitter/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "8f946f26793bd6f1345e686ecb39df34a1648e2a09e70ffe782c027986d7725c";
   };
 
   buildType = "catkin";

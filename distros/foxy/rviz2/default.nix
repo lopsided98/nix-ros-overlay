@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-lint-cmake, ament-cmake-uncrustify, geometry-msgs, qt5, rclcpp, rviz-common, rviz-default-plugins, rviz-ogre-vendor, sensor-msgs }:
 buildRosPackage {
   pname = "ros-foxy-rviz2";
-  version = "8.2.7-r1";
+  version = "8.2.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/foxy/rviz2/8.2.7-1.tar.gz";
-    name = "8.2.7-1.tar.gz";
-    sha256 = "acdbb592645381fb14333971fca022eb352a9d6d71b918971e8afa34d1ea3a59";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/foxy/rviz2/8.2.8-1.tar.gz";
+    name = "8.2.8-1.tar.gz";
+    sha256 = "ddc3032ee05f5533ed5f480dd3e06330ea15662d67ae5b2708325a80a1927f5f";
   };
 
   buildType = "ament_cmake";

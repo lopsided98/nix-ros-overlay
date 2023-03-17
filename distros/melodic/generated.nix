@@ -564,6 +564,8 @@ self: super: {
 
  contact-states-observer = self.callPackage ./contact-states-observer {};
 
+ control-box-rst = self.callPackage ./control-box-rst {};
+
  control-msgs = self.callPackage ./control-msgs {};
 
  control-toolbox = self.callPackage ./control-toolbox {};
@@ -1509,6 +1511,8 @@ self: super: {
  ifm3d = self.callPackage ./ifm3d {};
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
+
+ ifopt = self.callPackage ./ifopt {};
 
  igvc-self-drive-description = self.callPackage ./igvc-self-drive-description {};
 
@@ -3070,8 +3074,6 @@ self: super: {
 
  qb-device-driver = self.callPackage ./qb-device-driver {};
 
- qb-device-gazebo = self.callPackage ./qb-device-gazebo {};
-
  qb-device-hardware-interface = self.callPackage ./qb-device-hardware-interface {};
 
  qb-device-msgs = self.callPackage ./qb-device-msgs {};
@@ -3086,8 +3088,6 @@ self: super: {
 
  qb-hand-description = self.callPackage ./qb-hand-description {};
 
- qb-hand-gazebo = self.callPackage ./qb-hand-gazebo {};
-
  qb-hand-hardware-interface = self.callPackage ./qb-hand-hardware-interface {};
 
  qb-move = self.callPackage ./qb-move {};
@@ -3095,8 +3095,6 @@ self: super: {
  qb-move-control = self.callPackage ./qb-move-control {};
 
  qb-move-description = self.callPackage ./qb-move-description {};
-
- qb-move-gazebo = self.callPackage ./qb-move-gazebo {};
 
  qb-move-hardware-interface = self.callPackage ./qb-move-hardware-interface {};
 

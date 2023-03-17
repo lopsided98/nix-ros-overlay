@@ -246,6 +246,8 @@ self: super: {
 
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
+ control-box-rst = self.callPackage ./control-box-rst {};
+
  control-msgs = self.callPackage ./control-msgs {};
 
  control-toolbox = self.callPackage ./control-toolbox {};
@@ -584,6 +586,8 @@ self: super: {
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
+ gtsam = self.callPackage ./gtsam {};
+
  hardware-interface = self.callPackage ./hardware-interface {};
 
  hash-library-vendor = self.callPackage ./hash-library-vendor {};
@@ -601,6 +605,8 @@ self: super: {
  iceoryx-posh = self.callPackage ./iceoryx-posh {};
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
+
+ ign-ros2-control-demos = self.callPackage ./ign-ros2-control-demos {};
 
  ignition-cmake2-vendor = self.callPackage ./ignition-cmake2-vendor {};
 
@@ -633,6 +639,8 @@ self: super: {
  imu-sensor-broadcaster = self.callPackage ./imu-sensor-broadcaster {};
 
  imu-tools = self.callPackage ./imu-tools {};
+
+ interactive-marker-twist-server = self.callPackage ./interactive-marker-twist-server {};
 
  interactive-markers = self.callPackage ./interactive-markers {};
 
@@ -1068,7 +1076,11 @@ self: super: {
 
  octovis = self.callPackage ./octovis {};
 
+ odom-to-tf-ros2 = self.callPackage ./odom-to-tf-ros2 {};
+
  ompl = self.callPackage ./ompl {};
+
+ openni2-camera = self.callPackage ./openni2-camera {};
 
  orocos-kdl-vendor = self.callPackage ./orocos-kdl-vendor {};
 
@@ -1083,6 +1095,8 @@ self: super: {
  ouxt-common = self.callPackage ./ouxt-common {};
 
  ouxt-lint-common = self.callPackage ./ouxt-lint-common {};
+
+ pal-gazebo-plugins = self.callPackage ./pal-gazebo-plugins {};
 
  pal-gazebo-worlds = self.callPackage ./pal-gazebo-worlds {};
 
@@ -1119,6 +1133,8 @@ self: super: {
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
 
  phidgets-analog-inputs = self.callPackage ./phidgets-analog-inputs {};
+
+ phidgets-analog-outputs = self.callPackage ./phidgets-analog-outputs {};
 
  phidgets-api = self.callPackage ./phidgets-api {};
 
@@ -1178,6 +1194,10 @@ self: super: {
 
  plansys2-tools = self.callPackage ./plansys2-tools {};
 
+ play-motion2 = self.callPackage ./play-motion2 {};
+
+ play-motion2-msgs = self.callPackage ./play-motion2-msgs {};
+
  plotjuggler = self.callPackage ./plotjuggler {};
 
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
@@ -1207,6 +1227,8 @@ self: super: {
  point-cloud-msg-wrapper = self.callPackage ./point-cloud-msg-wrapper {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
+
+ popf = self.callPackage ./popf {};
 
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
@@ -1341,6 +1363,8 @@ self: super: {
  realtime-tools = self.callPackage ./realtime-tools {};
 
  resource-retriever = self.callPackage ./resource-retriever {};
+
+ rig-reconfigure = self.callPackage ./rig-reconfigure {};
 
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 
@@ -1550,6 +1574,8 @@ self: super: {
 
  ros-image-to-qimage = self.callPackage ./ros-image-to-qimage {};
 
+ ros-industrial-cmake-boilerplate = self.callPackage ./ros-industrial-cmake-boilerplate {};
+
  ros-testing = self.callPackage ./ros-testing {};
 
  ros-workspace = self.callPackage ./ros-workspace {};
@@ -1742,9 +1768,19 @@ self: super: {
 
  rviz-rendering-tests = self.callPackage ./rviz-rendering-tests {};
 
+ rviz-satellite = self.callPackage ./rviz-satellite {};
+
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
+
+ schunk-svh-description = self.callPackage ./schunk-svh-description {};
+
+ schunk-svh-driver = self.callPackage ./schunk-svh-driver {};
+
+ schunk-svh-library = self.callPackage ./schunk-svh-library {};
+
+ schunk-svh-tests = self.callPackage ./schunk-svh-tests {};
 
  sdformat-test-files = self.callPackage ./sdformat-test-files {};
 
@@ -1831,6 +1867,8 @@ self: super: {
  stereo-image-proc = self.callPackage ./stereo-image-proc {};
 
  stereo-msgs = self.callPackage ./stereo-msgs {};
+
+ stomp = self.callPackage ./stomp {};
 
  stubborn-buddies = self.callPackage ./stubborn-buddies {};
 
@@ -1936,6 +1974,8 @@ self: super: {
 
  tile-map = self.callPackage ./tile-map {};
 
+ tinyspline-vendor = self.callPackage ./tinyspline-vendor {};
+
  tinyxml2-vendor = self.callPackage ./tinyxml2-vendor {};
 
  tinyxml-vendor = self.callPackage ./tinyxml-vendor {};
@@ -2001,6 +2041,36 @@ self: super: {
  turtlebot3-simulations = self.callPackage ./turtlebot3-simulations {};
 
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
+
+ turtlebot4-base = self.callPackage ./turtlebot4-base {};
+
+ turtlebot4-bringup = self.callPackage ./turtlebot4-bringup {};
+
+ turtlebot4-cpp-tutorials = self.callPackage ./turtlebot4-cpp-tutorials {};
+
+ turtlebot4-description = self.callPackage ./turtlebot4-description {};
+
+ turtlebot4-desktop = self.callPackage ./turtlebot4-desktop {};
+
+ turtlebot4-diagnostics = self.callPackage ./turtlebot4-diagnostics {};
+
+ turtlebot4-msgs = self.callPackage ./turtlebot4-msgs {};
+
+ turtlebot4-navigation = self.callPackage ./turtlebot4-navigation {};
+
+ turtlebot4-node = self.callPackage ./turtlebot4-node {};
+
+ turtlebot4-python-tutorials = self.callPackage ./turtlebot4-python-tutorials {};
+
+ turtlebot4-robot = self.callPackage ./turtlebot4-robot {};
+
+ turtlebot4-setup = self.callPackage ./turtlebot4-setup {};
+
+ turtlebot4-tests = self.callPackage ./turtlebot4-tests {};
+
+ turtlebot4-tutorials = self.callPackage ./turtlebot4-tutorials {};
+
+ turtlebot4-viz = self.callPackage ./turtlebot4-viz {};
 
  turtlesim = self.callPackage ./turtlesim {};
 
@@ -2097,6 +2167,8 @@ self: super: {
  vision-msgs = self.callPackage ./vision-msgs {};
 
  vision-msgs-layers = self.callPackage ./vision-msgs-layers {};
+
+ vision-msgs-rviz-plugins = self.callPackage ./vision-msgs-rviz-plugins {};
 
  vision-opencv = self.callPackage ./vision-opencv {};
 

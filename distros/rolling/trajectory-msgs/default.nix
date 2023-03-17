@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-trajectory-msgs";
-  version = "4.6.1-r1";
+  version = "4.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/trajectory_msgs/4.6.1-1.tar.gz";
-    name = "4.6.1-1.tar.gz";
-    sha256 = "1382d82197e3c7bb52a50cfc520a9e865e887f059c5da558f0a9a21e64697f50";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/trajectory_msgs/4.7.0-1.tar.gz";
+    name = "4.7.0-1.tar.gz";
+    sha256 = "e364b92dec4c140052a9b34870ef2a026cf31e86a37bf10c061912e29fd20260";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, flatland-msgs, flatland-server, libyamlcpp, nav-msgs, pluginlib, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-flatland-plugins";
-  version = "1.3.2-r1";
+  version = "1.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/avidbots/flatland-release/archive/release/noetic/flatland_plugins/1.3.2-1.tar.gz";
-    name = "1.3.2-1.tar.gz";
-    sha256 = "81efee9b1753084eb2df133d31e2e5ab5e8ab65ecf2d875e1849e834403f89b1";
+    url = "https://github.com/avidbots/flatland-release/archive/release/noetic/flatland_plugins/1.3.3-1.tar.gz";
+    name = "1.3.3-1.tar.gz";
+    sha256 = "9e4553382a4d1cbed1995407259c6fc5f56be4e8fad368a3fcc97cb3a9395925";
   };
 
   buildType = "catkin";

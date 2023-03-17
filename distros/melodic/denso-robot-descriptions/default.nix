@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-denso-robot-descriptions";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/denso_robot_descriptions/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "d33cc562bd9f958255926e19a3854aeda0b20a7e54347e96481f73adf2b50e2d";
+    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/denso_robot_descriptions/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "eecbd5532ec6809d1f98a878298fbf4e84a0a31f88152efdb9f8115a3698e5c1";
   };
 
   buildType = "catkin";

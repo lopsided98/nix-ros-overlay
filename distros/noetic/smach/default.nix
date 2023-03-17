@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-smach";
-  version = "2.5.0-r1";
+  version = "2.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/executive_smach-release/archive/release/noetic/smach/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "2f73fdda99db7352dc49494f238cf137c2c5803c52ed458ec3ef3fa02adb984b";
+    url = "https://github.com/ros-gbp/executive_smach-release/archive/release/noetic/smach/2.5.1-1.tar.gz";
+    name = "2.5.1-1.tar.gz";
+    sha256 = "ee2330d04fd4f3c737b8274e8cd9f167754adb7fcdf5cd7de7ce80635a285171";
   };
 
   buildType = "catkin";

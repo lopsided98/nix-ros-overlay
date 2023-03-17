@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake }:
 buildRosPackage {
   pname = "ros-noetic-taskflow";
-  version = "3.0.0-r3";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/taskflow-release/archive/release/noetic/taskflow/3.0.0-3.tar.gz";
-    name = "3.0.0-3.tar.gz";
-    sha256 = "bdf5cfccf688ea15ba7f65fb48f2e2ead80e9ba5e3df5014f50a2b445edf5d78";
+    url = "https://github.com/ros-industrial-release/taskflow-release/archive/release/noetic/taskflow/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "164a29de5d89110cdd10a9dcffcfa8791e2fc3b58449adcef806b3ee3705ab99";
   };
 
   buildType = "cmake";

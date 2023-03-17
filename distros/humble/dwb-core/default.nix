@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, dwb-msgs, geometry-msgs, nav-2d-msgs, nav-2d-utils, nav-msgs, nav2-common, nav2-core, nav2-costmap-2d, nav2-util, pluginlib, rclcpp, sensor-msgs, std-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-dwb-core";
-  version = "1.1.5-r1";
+  version = "1.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/dwb_core/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "8ea0afc837bc9accee4aa2e817c0a73ee835a84e7d68cff8ed5944187f9d0a4b";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/dwb_core/1.1.6-1.tar.gz";
+    name = "1.1.6-1.tar.gz";
+    sha256 = "df099b0702ad411af5e100a06edd4e3943bdb49840412526053bfc430f838e50";
   };
 
   buildType = "ament_cmake";

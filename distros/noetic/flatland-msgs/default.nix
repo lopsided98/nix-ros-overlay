@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-flatland-msgs";
-  version = "1.3.2-r1";
+  version = "1.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/avidbots/flatland-release/archive/release/noetic/flatland_msgs/1.3.2-1.tar.gz";
-    name = "1.3.2-1.tar.gz";
-    sha256 = "ee81482a4671679d2d09242f1c3906131aa05db641ea9c308723d3e8f7f3145e";
+    url = "https://github.com/avidbots/flatland-release/archive/release/noetic/flatland_msgs/1.3.3-1.tar.gz";
+    name = "1.3.3-1.tar.gz";
+    sha256 = "70e84afd28b1012ccad7d9ee1b06479884e6073deac7bf22dd99dc9943dc61c2";
   };
 
   buildType = "catkin";

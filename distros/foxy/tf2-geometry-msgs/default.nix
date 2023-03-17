@@ -2,21 +2,21 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, geometry-msgs, orocos-kdl, rclcpp, tf2, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, geometry-msgs, orocos-kdl, python3Packages, rclcpp, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-foxy-tf2-geometry-msgs";
-  version = "0.13.13-r1";
+  version = "0.13.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/foxy/tf2_geometry_msgs/0.13.13-1.tar.gz";
-    name = "0.13.13-1.tar.gz";
-    sha256 = "5a4ef0125f65f63c84439cfba4c18384dc97dab2ef05996a1f72c950141452a0";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/foxy/tf2_geometry_msgs/0.13.14-1.tar.gz";
+    name = "0.13.14-1.tar.gz";
+    sha256 = "70de76c1350510337e717e086061951f5cec0596d3840dd4e810fabb1652db33";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];
-  checkInputs = [ ament-cmake-gtest rclcpp ];
-  propagatedBuildInputs = [ geometry-msgs orocos-kdl tf2 tf2-ros ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common rclcpp ];
+  propagatedBuildInputs = [ geometry-msgs orocos-kdl python3Packages.numpy tf2 tf2-ros ];
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
