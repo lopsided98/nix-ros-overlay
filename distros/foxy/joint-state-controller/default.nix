@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-manager, hardware-interface, joint-state-broadcaster, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-foxy-joint-state-controller";
-  version = "0.8.2-r1";
+  version = "0.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/joint_state_controller/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "b3c9c06ee9fc16e1f0d9dac387af2cac7fcf5f0e0f2f2357c5e9eba9d71cda0d";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/joint_state_controller/0.9.0-1.tar.gz";
+    name = "0.9.0-1.tar.gz";
+    sha256 = "b7b8f823fff33f29d1bd00101a0b0f8b72554180e2cb68c798369649cfae2549";
   };
 
   buildType = "ament_cmake";

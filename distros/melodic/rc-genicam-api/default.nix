@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, libpng, libusb1 }:
 buildRosPackage {
   pname = "ros-melodic-rc-genicam-api";
-  version = "2.5.12-r1";
+  version = "2.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/melodic/rc_genicam_api/2.5.12-1.tar.gz";
-    name = "2.5.12-1.tar.gz";
-    sha256 = "8c9d0a6bf77ddb0dc4f00a375d8aab35d4c60d0cb43fb4a12c71c320e80a0953";
+    url = "https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/melodic/rc_genicam_api/2.6.1-1.tar.gz";
+    name = "2.6.1-1.tar.gz";
+    sha256 = "0e03b2e355bb8c13981544107f5868a0aa32e65088363ed5b7a5aa760de40189";
   };
 
   buildType = "cmake";

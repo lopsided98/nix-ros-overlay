@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-rosidl-typesupport-interface";
-  version = "3.3.1-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_typesupport_interface/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "4bd5e3ee07825a13ec8d4c3c094de0357579fc95d8e3c0d490245fcf63adb648";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_typesupport_interface/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "223e3ce435cb1a10086bb55d14bef9e82a28b0e8ad9bae5184f3783b5f4113fe";
   };
 
   buildType = "ament_cmake";

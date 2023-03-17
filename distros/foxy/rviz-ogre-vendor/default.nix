@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, freetype, git, libGL, libGLU, pkg-config, xorg }:
 buildRosPackage {
   pname = "ros-foxy-rviz-ogre-vendor";
-  version = "8.2.7-r1";
+  version = "8.2.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/foxy/rviz_ogre_vendor/8.2.7-1.tar.gz";
-    name = "8.2.7-1.tar.gz";
-    sha256 = "9c586a9e4a2991bada8017a034fd4674d0d3ce593fe19bd36f28b2cc60c37b74";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/foxy/rviz_ogre_vendor/8.2.8-1.tar.gz";
+    name = "8.2.8-1.tar.gz";
+    sha256 = "c230e894ed117141ea6c14159f3c923c1ac72ad77220807a88b4cc3de97db5a4";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, git, uncrustify }:
 buildRosPackage {
   pname = "ros-rolling-uncrustify-vendor";
-  version = "2.1.1-r1";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/uncrustify_vendor-release/archive/release/rolling/uncrustify_vendor/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "cba45b61094b592c842e31b2a257791c7b761d71a0e2e9bfa2ed58ffcd7af89f";
+    url = "https://github.com/ros2-gbp/uncrustify_vendor-release/archive/release/rolling/uncrustify_vendor/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "47650f6397dee98d438874d948e1f90c804ef58b31c717b31632d8323400c2f6";
   };
 
   buildType = "ament_cmake";

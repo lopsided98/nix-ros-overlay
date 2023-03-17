@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, boost, box2d, cmake, cppzmq, mrpt2, nav-msgs, protobuf, python3, python3Packages, pythonPackages, ros-environment, ros2launch, sensor-msgs, tf2, tf2-geometry-msgs, unzip, visualization-msgs, wget }:
 buildRosPackage {
   pname = "ros-foxy-mvsim";
-  version = "0.5.1-r2";
+  version = "0.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/foxy/mvsim/0.5.1-2.tar.gz";
-    name = "0.5.1-2.tar.gz";
-    sha256 = "0efc35cba6f5b3ce4b1ec14be3f3fe2b83cea7e2e71ee64da2dd499a2c7a8ea1";
+    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/foxy/mvsim/0.6.1-1.tar.gz";
+    name = "0.6.1-1.tar.gz";
+    sha256 = "aa2bea252cd12818e1fdc8f08f4d703dd4c9f5046723bd3a5f5972d8f9985af3";
   };
 
   buildType = "ament_cmake";

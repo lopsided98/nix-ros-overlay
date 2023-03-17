@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, flatland-msgs, flatland-server, ogre1_9, qt5, roscpp, rviz }:
 buildRosPackage {
   pname = "ros-noetic-flatland-viz";
-  version = "1.3.2-r1";
+  version = "1.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/avidbots/flatland-release/archive/release/noetic/flatland_viz/1.3.2-1.tar.gz";
-    name = "1.3.2-1.tar.gz";
-    sha256 = "2f705b2466ce163f42016b5f5aadaf2e15e7c849994b0e1a592b44cf6f0775b7";
+    url = "https://github.com/avidbots/flatland-release/archive/release/noetic/flatland_viz/1.3.3-1.tar.gz";
+    name = "1.3.3-1.tar.gz";
+    sha256 = "663099e3b81f9cbd6e1c2fbbb615240ea66927d666fc4196e65ff06178b94e01";
   };
 
   buildType = "catkin";

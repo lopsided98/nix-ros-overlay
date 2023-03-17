@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/130s/computer_status_msgs-release/archive/release/noetic/computer_status_msgs/2.1.0-1.tar.gz";
+    url = "https://github.com/kinu-garage/computer_status_msgs-release/archive/release/noetic/computer_status_msgs/2.1.0-1.tar.gz";
     name = "2.1.0-1.tar.gz";
     sha256 = "45c5641d25d2b6021629fcc253fd5e6d093dfc8b2603c842bf1beee24fb5f8b3";
   };

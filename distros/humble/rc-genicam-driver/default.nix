@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-xmllint, ament-lint-auto, diagnostic-updater, image-transport, rc-common-msgs, rc-genicam-api, rclcpp, rclcpp-components, sensor-msgs, stereo-msgs }:
 buildRosPackage {
   pname = "ros-humble-rc-genicam-driver";
-  version = "0.2.1-r3";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_genicam_driver_ros2-release/archive/release/humble/rc_genicam_driver/0.2.1-3.tar.gz";
-    name = "0.2.1-3.tar.gz";
-    sha256 = "5e17998fb1000e00dfa334bb1648def11d768cc8af72ddac0caaa70584ae4067";
+    url = "https://github.com/ros2-gbp/rc_genicam_driver_ros2-release/archive/release/humble/rc_genicam_driver/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "ccac29c7e6b53a6dd39e3d965074e39ba1fe0842fce4195e05e0ee532e0d7ea4";
   };
 
   buildType = "ament_cmake";

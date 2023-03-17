@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cppzmq, ncurses, ros-environment, roslib }:
 buildRosPackage {
   pname = "ros-melodic-behaviortree-cpp-v3";
-  version = "3.8.2-r1";
+  version = "3.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/BehaviorTree/behaviortree_cpp_v3-release/archive/release/melodic/behaviortree_cpp_v3/3.8.2-1.tar.gz";
-    name = "3.8.2-1.tar.gz";
-    sha256 = "a93160c7ade0778dad582868adca6e2e22316ec3565a6aec91af8a1dc7cd08be";
+    url = "https://github.com/BehaviorTree/behaviortree_cpp_v3-release/archive/release/melodic/behaviortree_cpp_v3/3.8.3-1.tar.gz";
+    name = "3.8.3-1.tar.gz";
+    sha256 = "0764958907506eb983cb65e6d1f177e6ed34fc07ebc1fcb5fcf73501750506d7";
   };
 
   buildType = "catkin";

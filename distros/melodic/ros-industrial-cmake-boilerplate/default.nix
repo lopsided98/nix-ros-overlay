@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, clang, cmake, cppcheck, gtest, include-what-you-use, lcov }:
 buildRosPackage {
   pname = "ros-melodic-ros-industrial-cmake-boilerplate";
-  version = "0.2.15-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_industrial_cmake_boilerplate-release/archive/release/melodic/ros_industrial_cmake_boilerplate/0.2.15-1.tar.gz";
-    name = "0.2.15-1.tar.gz";
-    sha256 = "c1fd60526708c9dc43dd084f70c339615ce93cea4861bc291a7735966eeb0c2c";
+    url = "https://github.com/ros-industrial-release/ros_industrial_cmake_boilerplate-release/archive/release/melodic/ros_industrial_cmake_boilerplate/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "a04e9ed7981ef1e454d4dc245d516174c3b2b16ea6889686083a526e97236412";
   };
 
   buildType = "cmake";

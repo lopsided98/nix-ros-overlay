@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, libpng, libusb1 }:
 buildRosPackage {
   pname = "ros-humble-rc-genicam-api";
-  version = "2.5.12-r3";
+  version = "2.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_genicam_api-release/archive/release/humble/rc_genicam_api/2.5.12-3.tar.gz";
-    name = "2.5.12-3.tar.gz";
-    sha256 = "68f98b062ee2e880b28c98cec35bbb5d3fd7ec3002ab953592341a5befd9ca6f";
+    url = "https://github.com/ros2-gbp/rc_genicam_api-release/archive/release/humble/rc_genicam_api/2.6.1-1.tar.gz";
+    name = "2.6.1-1.tar.gz";
+    sha256 = "4cdc2098ffb586101b7c130bda8073b5ffb7f71687ae4c7c4f7e09413458c609";
   };
 
   buildType = "cmake";

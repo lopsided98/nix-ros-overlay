@@ -2,20 +2,20 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, gazebo-ros-control, gazebo-ros-pkgs, joint-state-controller, joint-trajectory-controller }:
+{ lib, buildRosPackage, fetchurl, catkin, denso-robot-descriptions, gazebo-ros-control, gazebo-ros-pkgs, joint-state-controller, joint-trajectory-controller, robot-state-publisher }:
 buildRosPackage {
   pname = "ros-melodic-denso-robot-gazebo";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/denso_robot_gazebo/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "c7442f7cd0ba21a4ced665b742ba53c22d36ff9a03fa546d1415c969499aa65e";
+    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/denso_robot_gazebo/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "4c2912036f7f078cb9f716fd008e61c41d6e58885517f601e426928b46fcb5d1";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ gazebo-ros-control gazebo-ros-pkgs joint-state-controller joint-trajectory-controller ];
+  propagatedBuildInputs = [ denso-robot-descriptions gazebo-ros-control gazebo-ros-pkgs joint-state-controller joint-trajectory-controller robot-state-publisher ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

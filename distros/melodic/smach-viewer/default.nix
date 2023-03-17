@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, graphviz, gtk3, pythonPackages, rostest, smach-msgs, smach-ros, xdot }:
 buildRosPackage {
   pname = "ros-melodic-smach-viewer";
-  version = "4.0.1-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/jbohren/executive_smach_visualization-release/archive/release/melodic/smach_viewer/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "9a5187a9b246fe0c1ecdf782fdd31c78902c28d5d041f84424b12eea8c954d26";
+    url = "https://github.com/jbohren/executive_smach_visualization-release/archive/release/melodic/smach_viewer/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "81ee8ed7ad13a9a624716e3cf5fe5928f6468f809c797b02911184172869af32";
   };
 
   buildType = "catkin";

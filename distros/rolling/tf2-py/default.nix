@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, python-cmake-module, rclpy, rpyutils, tf2 }:
 buildRosPackage {
   pname = "ros-rolling-tf2-py";
-  version = "0.29.0-r1";
+  version = "0.30.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_py/0.29.0-1.tar.gz";
-    name = "0.29.0-1.tar.gz";
-    sha256 = "b16b2d2a0fc9dd745a3fafa555be5674c107bf4ad059bd8032f8023566d1ddde";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_py/0.30.0-1.tar.gz";
+    name = "0.30.0-1.tar.gz";
+    sha256 = "b7cefcf3cba2593a50473c0a6cdda42917fda2ce45f96b6079b5cd96da3f1498";
   };
 
   buildType = "ament_cmake";

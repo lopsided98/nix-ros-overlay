@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-melodic-qb-hand-description";
-  version = "3.0.2-r2";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbhand-ros-release/get/release/melodic/qb_hand_description/3.0.2-2.tar.gz";
-    name = "3.0.2-2.tar.gz";
-    sha256 = "f2a968984e49a8b094bec8b0da400ec63489182f830b705409f6b28b64d86bf2";
+    url = "https://bitbucket.org/qbrobotics/qbhand-ros-release/get/release/melodic/qb_hand_description/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "95d0fbcd6f6d04fdae88fb2e6087f57ba833fb10d788a396c21dbe04c731120a";
   };
 
   buildType = "catkin";

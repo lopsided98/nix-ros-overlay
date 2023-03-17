@@ -2,21 +2,21 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, gazebo-plugins, gazebo-ros, gazebo-ros2-control, launch, launch-pal, launch-ros, pal-gazebo-worlds, tiago-2dnav, tiago-bringup, tiago-description, tiago-moveit-config }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, gazebo-plugins, gazebo-ros, gazebo-ros2-control, launch, launch-pal, launch-ros, launch-testing-ament-cmake, pal-gazebo-plugins, pal-gazebo-worlds, play-motion2-msgs, rclcpp, sensor-msgs, tiago-2dnav, tiago-bringup, tiago-description, tiago-moveit-config }:
 buildRosPackage {
   pname = "ros-humble-tiago-gazebo";
-  version = "4.0.1-r1";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_simulation-release/archive/release/humble/tiago_gazebo/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "02c62ba6b9d38bb24528e002e24863561b03e8b5de14d9f61c29e5b94159e278";
+    url = "https://github.com/pal-gbp/tiago_simulation-release/archive/release/humble/tiago_gazebo/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "f198f2278ac1c8041604b51177675c112eac2563031e002e0bd034b9569146bd";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ gazebo-plugins gazebo-ros gazebo-ros2-control launch launch-pal launch-ros pal-gazebo-worlds tiago-2dnav tiago-bringup tiago-description tiago-moveit-config ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common launch-testing-ament-cmake play-motion2-msgs rclcpp sensor-msgs ];
+  propagatedBuildInputs = [ gazebo-plugins gazebo-ros gazebo-ros2-control launch launch-pal launch-ros pal-gazebo-plugins pal-gazebo-worlds play-motion2-msgs tiago-2dnav tiago-bringup tiago-description tiago-moveit-config ];
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {

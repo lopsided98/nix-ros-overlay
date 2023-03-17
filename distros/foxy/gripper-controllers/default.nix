@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, control-toolbox, controller-interface, controller-manager, hardware-interface, pluginlib, rclcpp, rclcpp-action, realtime-tools, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-foxy-gripper-controllers";
-  version = "0.8.2-r1";
+  version = "0.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/gripper_controllers/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "9597cbf68eb73f7a985c1acfa6ec8d51e49f03a500e70bcbd2711f4cc48644cf";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/foxy/gripper_controllers/0.9.0-1.tar.gz";
+    name = "0.9.0-1.tar.gz";
+    sha256 = "5db0b537d8033627d3e2e79f427405948cd79ce117394057fe34cd964d4b1538";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, sensor-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-ncd-parser";
-  version = "0.3.3-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/ncd_parser/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "b407bd8c0f11e9d1098373daaaaeca94fe2cddd7e05b0db427287a83ff880782";
+    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/ncd_parser/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "f2adcebf58786903f0bf1251b30ce4d4f64d015597ed211de50932e64366a350";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-dummy-map-server";
-  version = "0.23.0-r1";
+  version = "0.25.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/dummy_map_server/0.23.0-1.tar.gz";
-    name = "0.23.0-1.tar.gz";
-    sha256 = "42663944fbfc05f91cf3dd66c773bdc5ee653c7b36b66a1a70d7c2ab800f1358";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/dummy_map_server/0.25.0-1.tar.gz";
+    name = "0.25.0-1.tar.gz";
+    sha256 = "cebc279dab1452bcb289dd370d4d843c12ec3fcc34ad73328ca0f4d303d87355";
   };
 
   buildType = "ament_cmake";

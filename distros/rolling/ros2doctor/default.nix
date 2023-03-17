@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, launch, launch-ros, launch-testing, launch-testing-ros, python3Packages, pythonPackages, rclpy, ros-environment, ros2cli, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ros2doctor";
-  version = "0.21.0-r1";
+  version = "0.23.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/rolling/ros2doctor/0.21.0-1.tar.gz";
-    name = "0.21.0-1.tar.gz";
-    sha256 = "fee4266baa7128d92fae4c3e42631e5266e336fe8a64052b8cc6db2c9628ff03";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/rolling/ros2doctor/0.23.0-1.tar.gz";
+    name = "0.23.0-1.tar.gz";
+    sha256 = "8ae2afb95fb55774f4b8af980aeac0db4a16aee4c218c25a06174d916940ad2a";
   };
 
   buildType = "ament_python";

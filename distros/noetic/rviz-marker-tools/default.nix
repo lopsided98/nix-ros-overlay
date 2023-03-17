@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, roscpp, rviz, tf2-eigen, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rviz-marker-tools";
-  version = "0.1.0-r2";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_task_constructor-release/archive/release/noetic/rviz_marker_tools/0.1.0-2.tar.gz";
-    name = "0.1.0-2.tar.gz";
-    sha256 = "3ece254dce1783a6ddb5c2932201746cfca2f4b2814c4ecf6f79f72e91b0ae46";
+    url = "https://github.com/ros-gbp/moveit_task_constructor-release/archive/release/noetic/rviz_marker_tools/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "2a2d5caa9fb46b6492cde425370e98b4b00bf2df463ea64a7cb964c5490e740e";
   };
 
   buildType = "catkin";

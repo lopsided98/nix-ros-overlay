@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, flatland-msgs, flatland-plugins, flatland-server, flatland-viz }:
 buildRosPackage {
   pname = "ros-noetic-flatland";
-  version = "1.3.2-r1";
+  version = "1.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/avidbots/flatland-release/archive/release/noetic/flatland/1.3.2-1.tar.gz";
-    name = "1.3.2-1.tar.gz";
-    sha256 = "784ee615a40de0de7527e0d037447b3fce595206a49d1e4ab0b78bf677d64cd1";
+    url = "https://github.com/avidbots/flatland-release/archive/release/noetic/flatland/1.3.3-1.tar.gz";
+    name = "1.3.3-1.tar.gz";
+    sha256 = "1231b74cb6358df0c2fc2ffa3c419b764bd51d7bf3b2adef2962dd3103838887";
   };
 
   buildType = "catkin";

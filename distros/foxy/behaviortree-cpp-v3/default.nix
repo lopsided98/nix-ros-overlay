@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, boost, cppzmq, ncurses, rclcpp, ros-environment }:
 buildRosPackage {
   pname = "ros-foxy-behaviortree-cpp-v3";
-  version = "3.8.2-r1";
+  version = "3.8.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/BehaviorTree/behaviortree_cpp_v3-release/archive/release/foxy/behaviortree_cpp_v3/3.8.2-1.tar.gz";
-    name = "3.8.2-1.tar.gz";
-    sha256 = "d513faf9f0e23ed8892dcba3c48a0e8e1d8a12a6fe67fded9d625554a750d29d";
+    url = "https://github.com/BehaviorTree/behaviortree_cpp_v3-release/archive/release/foxy/behaviortree_cpp_v3/3.8.3-3.tar.gz";
+    name = "3.8.3-3.tar.gz";
+    sha256 = "8614027646c2655b8e414b7224c39dedd23de74a8e8b054199e0f8ca74c8a384";
   };
 
   buildType = "ament_cmake";

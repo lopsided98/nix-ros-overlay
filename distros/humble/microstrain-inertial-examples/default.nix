@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, microstrain-inertial-msgs, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-microstrain-inertial-examples";
-  version = "3.0.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/humble/microstrain_inertial_examples/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "c4081b4be0d3743eec7ffb0ad7b22a4ca8716716cdfac6795250a8a44f80a21f";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/humble/microstrain_inertial_examples/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "898190338926fe38d52a5f1613ce3a4de56da9d14f888f0fce8d19d62bf2bae2";
   };
 
   buildType = "ament_cmake";

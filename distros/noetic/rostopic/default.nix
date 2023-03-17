@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, genpy, rosbag, rospy, rostest }:
 buildRosPackage {
   pname = "ros-noetic-rostopic";
-  version = "1.15.15-r1";
+  version = "1.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rostopic/1.15.15-1.tar.gz";
-    name = "1.15.15-1.tar.gz";
-    sha256 = "21e5d88423c050419d19509d7333cf96c0253f36298330f7bd1b9e3622573aa3";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rostopic/1.16.0-1.tar.gz";
+    name = "1.16.0-1.tar.gz";
+    sha256 = "04bb2b1c560686e8957bf681e3aa33b6f2b362e3a4606ca528e27309d873e735";
   };
 
   buildType = "catkin";

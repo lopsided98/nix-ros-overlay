@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, rosgraph-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rosout";
-  version = "1.15.15-r1";
+  version = "1.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rosout/1.15.15-1.tar.gz";
-    name = "1.15.15-1.tar.gz";
-    sha256 = "f390276aa4c8b6adb30e72f5777d7a21f1bf4ff3d6743ad4a3f38046fc19ced3";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rosout/1.16.0-1.tar.gz";
+    name = "1.16.0-1.tar.gz";
+    sha256 = "f0d14643641a30cdc5802ffdfa88b9a62009d3ae42d41924aa166096916de067";
   };
 
   buildType = "catkin";

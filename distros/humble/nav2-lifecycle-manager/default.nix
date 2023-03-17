@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, bondcpp, diagnostic-updater, geometry-msgs, lifecycle-msgs, nav2-common, nav2-msgs, nav2-util, rclcpp-action, rclcpp-lifecycle, std-msgs, std-srvs, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-humble-nav2-lifecycle-manager";
-  version = "1.1.5-r1";
+  version = "1.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_lifecycle_manager/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "7483d9abf05c8f2c71e07143344185c2389053cca69fc7242caf3c520abb7733";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_lifecycle_manager/1.1.6-1.tar.gz";
+    name = "1.1.6-1.tar.gz";
+    sha256 = "f41a516888d96419d29c65bebaa56d10e0d934c885c8f2459e36636d53f24076";
   };
 
   buildType = "ament_cmake";

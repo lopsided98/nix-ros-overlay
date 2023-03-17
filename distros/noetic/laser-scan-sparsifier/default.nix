@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nodelet, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-laser-scan-sparsifier";
-  version = "0.3.3-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/laser_scan_sparsifier/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "5afafd970b7168c341b18704b5592f793957f9d08870509ab3e46922d6f79741";
+    url = "https://github.com/ros-gbp/scan_tools-release/archive/release/noetic/laser_scan_sparsifier/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "abcf8d1165bbc032cfb79b9f931007a583ec7823ce69131223ff9e3bfe6d0727";
   };
 
   buildType = "catkin";

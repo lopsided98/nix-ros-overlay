@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bcap-core, bcap-service, bcap-service-test, catkin, denso-robot-bringup, denso-robot-control, denso-robot-core, denso-robot-core-test, denso-robot-descriptions, denso-robot-gazebo, denso-robot-moveit-config }:
 buildRosPackage {
   pname = "ros-melodic-denso-robot-ros";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/denso_robot_ros/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "356d40c66bd94bd33f33913fd58789687500e1e653402b4f40b1c6799e33fd18";
+    url = "https://github.com/DENSORobot/denso_robot_ros-release/archive/release/melodic/denso_robot_ros/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "5231a314ab6d35a33e0f714dd39ab23781a0d31c4814f34b02f21f670fe6e314";
   };
 
   buildType = "catkin";

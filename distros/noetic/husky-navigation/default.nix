@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, base-local-planner, catkin, dwa-local-planner, gmapping, map-server, move-base, navfn, roslaunch }:
 buildRosPackage {
   pname = "ros-noetic-husky-navigation";
-  version = "0.6.6-r3";
+  version = "0.6.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/noetic/husky_navigation/0.6.6-3.tar.gz";
-    name = "0.6.6-3.tar.gz";
-    sha256 = "1461896611a41d039a422919016bd2b8b33f7c5ea9b2703d0a3c6fe8d258b7bb";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/noetic/husky_navigation/0.6.7-1.tar.gz";
+    name = "0.6.7-1.tar.gz";
+    sha256 = "7453cd1121d8ad2b433c82d4f80499b19755abcc1bb648d32336e5392ece5f28";
   };
 
   buildType = "catkin";
