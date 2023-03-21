@@ -12,6 +12,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
     outputs = [ "out" "dev" ];
   });
 
+  behaviortree-cpp-v3 = rosSuper.behaviortree-cpp-v3.overrideAttrs
+    ({ propagatedBuildInputs ? [ ], ... }: {
+      propagatedBuildInputs = propagatedBuildInputs ++ [ pkgs.zeromq ];
+    });
+
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
     cmakeFlags ? [], ...
   }: {

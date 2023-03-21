@@ -1,6 +1,11 @@
 self:
 rosSelf: rosSuper: with rosSelf.lib; {
 
+  behaviortree-cpp-v3 = rosSuper.behaviortree-cpp-v3.overrideAttrs
+    ({ propagatedBuildInputs ? [ ], ... }: {
+      propagatedBuildInputs = propagatedBuildInputs ++ [ pkgs.zeromq ];
+    });
+
   catkin = rosSuper.catkin.overrideAttrs ({
     propagatedBuildInputs ? [],
     patches ? [],
