@@ -14,6 +14,8 @@ self: super: with self.lib; let
 
       colcon-core = pyFinal.callPackage ./colcon/core.nix { };
 
+      colcon-defaults = pyFinal.callPackage ./colcon/defaults.nix { };
+
       colcon-library-path = pyFinal.callPackage ./colcon/library-path.nix { };
 
       colcon-metadata = pyFinal.callPackage ./colcon/metadata.nix { };
@@ -57,6 +59,7 @@ in {
   colcon = with self.python3Packages; colcon-core.withExtensions [
     colcon-cmake
     colcon-core
+    colcon-defaults
     colcon-library-path
     colcon-metadata
     colcon-package-information
