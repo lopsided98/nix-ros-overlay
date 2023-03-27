@@ -53,6 +53,17 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "sha256-CJ1ZC7ydrZzEsZChrKuWg4/d20r6szFWeQCctiKFLgY=";
   };
 
+  mcap-vendor = patchVendorGit (patchVendorUrl rosSuper.mcap-vendor {
+    url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v0.8.0.tar.gz";
+    sha256 = "sha256-KDP3I0QwjqWGOfOzY6DPF2aVgK56tDX0PzsQTP9u9Ug=";
+  }) {
+    url = "https://github.com/lz4/lz4.git";
+    fetchgitArgs = {
+      rev = "d44371841a2f1728a3f36839fd4b7e872d0927d3";
+      hash = "sha256-f7GZgOzUrkAfw1mqwlIKQQqDvkvIahGlHvq6AL+aAvA=";
+    };
+  };
+
   rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.10.zip";
     sha256 = "sha256-lZDLywgShlWeWah7oTnyKBTqzN505LJKbQbgXRfJXlk=";
