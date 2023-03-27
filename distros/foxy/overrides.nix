@@ -24,6 +24,20 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "0v6ks4hpxmakgymcfvafynla76gl3866grgwf4vjdsb4rsvr13vx";
   };
 
+  mcap-vendor = patchVendorGit (patchVendorGit rosSuper.mcap-vendor {
+    url = "https://github.com/foxglove/mcap.git";
+    fetchgitArgs = {
+      rev = "dc6561d9ba867901709e36526dcf7f7359861e9c";
+      hash = "sha256-cWBZgCgxssM3xZZPbZlU1yYlZUD7KJ/wiYSgPXNjwzU=";
+    };
+  }) {
+    url = "https://github.com/lz4/lz4.git";
+    fetchgitArgs = {
+      rev = "d44371841a2f1728a3f36839fd4b7e872d0927d3";
+      hash = "sha256-f7GZgOzUrkAfw1mqwlIKQQqDvkvIahGlHvq6AL+aAvA=";
+    };
+  };
+
   python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
     patches ? [], ...
   }: {
