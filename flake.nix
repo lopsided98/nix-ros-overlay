@@ -16,6 +16,11 @@
       };
     in {
       legacyPackages = pkgs.rosPackages;
+
+      devShells = {
+        example-turtlebot3-gazebo = import ./examples/turtlebot3-gazebo.nix { inherit pkgs; };
+        example-ros2-basic = import ./examples/ros2-basic.nix { inherit pkgs; };
+      };
     }) // {
       overlays.default = import ./overlay.nix;
       nixosModules.default = import ./modules;
