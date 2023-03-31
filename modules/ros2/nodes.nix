@@ -50,6 +50,7 @@ let
     serviceConfig = {
       Type = "exec";
       StateDirectory = "ros";
+      WorkingDirectory = "/var/lib/ros";
       User = "ros";
       Group = "ros";
       ExecStart = execStartFn config;
