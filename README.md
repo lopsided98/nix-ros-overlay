@@ -29,6 +29,14 @@ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 ```
 
+With [Flakes enabled][flake], the equivalent of the above is:
+```
+nix develop github:lopsided98/nix-ros-overlay#example-turtlebot3-gazebo
+# Then use roslaunch comamnds as above
+```
+
+[flake]: https://nixos.wiki/wiki/Flakes#Enable_flakes
+
 ## Current status
 
 What works:
