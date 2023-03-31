@@ -2,7 +2,8 @@
 # roslaunch turtlebot3_gazebo turtlebot3_world.launch
 # roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
-with import ../. {};
+{ pkgs ? import ../. {} }:
+with pkgs;
 with rosPackages.noetic;
 with pythonPackages;
 

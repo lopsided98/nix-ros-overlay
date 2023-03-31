@@ -1,6 +1,7 @@
 # Environment containing basic ROS2 tools
 
-with import ../. {};
+{ pkgs ? import ../. {} }:
+with pkgs;
 with rosPackages.humble;
 
 mkShell {
