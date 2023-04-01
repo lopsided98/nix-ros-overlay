@@ -171,6 +171,15 @@ let
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
     });
 
+    popf = rosSuper.popf.overrideAttrs ({
+      nativeBuildInputs ? [], ...
+    }: {
+      nativeBuildInputs = nativeBuildInputs ++ [ self.perl ];
+      postPatch = ''
+        patchShebangs --build src/VALfiles/parsing/fixyywrap
+      '';
+    });
+
     pr2-tilt-laser-interface = patchBoostSignals rosSuper.pr2-tilt-laser-interface;
 
     python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
