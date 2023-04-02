@@ -2,5 +2,5 @@
 
 makeSetupHook {
   name = "catkin-setup-hook";
-  deps = [ pythonPackages.wrapPython ];
+  propagatedBuildInputs = [ pythonPackages.wrapPython ];
 } ./setup-hook.sh
