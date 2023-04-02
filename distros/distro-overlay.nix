@@ -172,10 +172,10 @@ let
     });
 
     popf = rosSuper.popf.overrideAttrs ({
-      nativeBuildInputs ? [], ...
+      nativeBuildInputs ? [], postPatch ? "", ...
     }: {
       nativeBuildInputs = nativeBuildInputs ++ [ self.perl ];
-      postPatch = ''
+      postPatch = postPatch + ''
         patchShebangs --build src/VALfiles/parsing/fixyywrap
       '';
     });
