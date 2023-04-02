@@ -49,8 +49,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
   });
 
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
-    url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.9.20220203.tar.gz";
-    sha256 = "sha256-CJ1ZC7ydrZzEsZChrKuWg4/d20r6szFWeQCctiKFLgY=";
+    url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.13.20230224.tar.gz";
+    sha256 = "sha256-HQeVEQUX6xjIBkcoh8r8hh3QtqHBBFJGxVW8R/a9d+M=";
   };
 
   mcap-vendor = patchVendorGit (patchVendorUrl rosSuper.mcap-vendor {

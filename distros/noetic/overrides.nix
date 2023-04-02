@@ -11,8 +11,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
   gazebo = self.gazebo_11;
 
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
-    url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.7.20210816.tar.gz";
-    sha256 = "0ynyw672033psdy018sqzc6mv9yvfxyp43c5d6x1iqk9cz6p4hfk";
+    url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.13.20230224.tar.gz";
+    sha256 = "sha256-HQeVEQUX6xjIBkcoh8r8hh3QtqHBBFJGxVW8R/a9d+M=";
   };
 
   mapviz = rosSuper.mapviz.overrideAttrs ({
@@ -27,8 +27,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
   });
 
   pybind11-catkin = patchVendorUrl rosSuper.pybind11-catkin {
-    url = "https://github.com/pybind/pybind11/archive/v2.5.0.zip";
-    sha256 = "080mss10aadal8sk3bib2dr2ygx6hmxn2g92qsq42v3zhchz2n8q";
+    url = "https://github.com/pybind/pybind11/archive/v2.10.3.zip";
+    sha256 = "sha256-IBlmph3IJvGxh5okozF6HskhSpGMjrA1vi8ww+nPvcs=";
   };
 
   rosfmt = patchVendorUrl rosSuper.rosfmt {
