@@ -79,6 +79,15 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
+  popf = rosSuper.popf.overrideAttrs ({
+    nativeBuildInputs ? [], postPatch ? "", ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.perl ];
+    postPatch = postPatch + ''
+      patchShebangs --build src/VALfiles/parsing/fixyywrap
+    '';
+  });
+
   python-cmake-module = rosSuper.python-cmake-module.overrideAttrs ({ ... }: let
     python = rosSelf.python;
   in {
