@@ -1,5 +1,5 @@
-{ lib, buildPythonPackage, fetchPypi, isPy27, catkin-pkg, colcon-cmake
-, colcon-core, colcon-pkg-config, colcon-python-setup-py
+{ lib, buildPythonPackage, fetchPypi, catkin-pkg, colcon-cmake, colcon-core
+, colcon-pkg-config, colcon-python-setup-py
 , colcon-recursive-crawl }:
 
 buildPythonPackage rec {
@@ -22,8 +22,6 @@ buildPythonPackage rec {
 
   # Requires unpackaged dependencies
   doCheck = false;
-
-  disabled = isPy27;
 
   meta = with lib; {
     description = "An extension for colcon-core to support ROS packages.";

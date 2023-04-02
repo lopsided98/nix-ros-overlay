@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, isPy27, colcon-core }:
+{ lib, buildPythonPackage, fetchPypi, colcon-core }:
 
 buildPythonPackage rec {
   pname = "colcon-output";
@@ -12,8 +12,6 @@ buildPythonPackage rec {
   propagatedBuildInputs = [ colcon-core ];
 
   doCheck = false;
-
-  disabled = isPy27;
 
   meta = with lib; {
     description = "An extension for colcon-core to customize the output in various ways.";

@@ -1,5 +1,5 @@
 { lib, buildPythonApplication, buildPythonPackage, makeWrapper, fetchPypi
-, isPy27, python, distlib, empy, pytest, pytest-cov, pytest-repeat
+, python, distlib, empy, pytest, pytest-cov, pytest-repeat
 , pytest-rerunfailures, setuptools, pytestCheckHook, flake8, flake8-blind-except
 , flake8-docstrings, flake8-import-order, pep8-naming, pylint
 }:

@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, isPy27, colcon-core, notify2 }:
+{ lib, buildPythonPackage, fetchPypi, colcon-core, notify2 }:
 
 buildPythonPackage rec {
   pname = "colcon-notification";
@@ -12,8 +12,6 @@ buildPythonPackage rec {
   propagatedBuildInputs = [ colcon-core notify2 ];
 
   doCheck = false;
-
-  disabled = isPy27;
 
   meta = with lib; {
     description = "An extension for colcon-core to provide status notifications.";

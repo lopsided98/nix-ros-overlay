@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, isPy27, colcon-core }:
+{ lib, buildPythonPackage, fetchPypi, colcon-core }:
 
 buildPythonPackage rec {
   pname = "colcon-package-information";

@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, isPy27, colcon-core, pyyaml }:
+{ lib, buildPythonPackage, fetchPypi, colcon-core, pyyaml }:
 
 buildPythonPackage rec {
   pname = "colcon-metadata";
@@ -16,8 +16,6 @@ buildPythonPackage rec {
 
   # Requires unpackaged dependencies
   doCheck = false;
-
-  disabled = isPy27;
 
   meta = with lib; {
     description = "An extension for colcon-core to fetch and manage package metadata from repositories.";

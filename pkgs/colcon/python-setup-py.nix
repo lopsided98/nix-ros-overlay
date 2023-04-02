@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, isPy27, colcon-core, setuptools }:
+{ lib, buildPythonPackage, fetchPypi, colcon-core, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-python-setup-py";
@@ -13,8 +13,6 @@ buildPythonPackage rec {
 
   # Requires unpackaged dependencies
   doCheck = false;
-
-  disabled = isPy27;
 
   meta = with lib; {
     description = ''

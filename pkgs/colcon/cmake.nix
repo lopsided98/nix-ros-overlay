@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, isPy27, colcon-core, colcon-library-path
+{ lib, buildPythonPackage, fetchPypi, colcon-core, colcon-library-path
 , colcon-test-result, cmake }:
 
 buildPythonPackage rec {
@@ -23,8 +23,6 @@ buildPythonPackage rec {
 
   # Requires unpackaged dependencies
   doCheck = false;
-
-  disabled = isPy27;
 
   meta = with lib; {
     description = "An extension for colcon-core to support CMake projects.";

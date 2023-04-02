@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, isPy27, colcon-core, pyyaml }:
+{ lib, buildPythonPackage, fetchPypi, colcon-core, pyyaml }:
 
 buildPythonPackage rec {
   pname = "colcon-defaults";
@@ -16,8 +16,6 @@ buildPythonPackage rec {
 
   # Requires unpackaged dependencies
   doCheck = false;
-
-  disabled = isPy27;
 
   meta = with lib; {
     description = "An extension for colcon-core to provide custom default values for the command line arguments from a configuration file.";

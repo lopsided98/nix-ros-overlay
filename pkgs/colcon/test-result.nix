@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, isPy27, colcon-core }:
+{ lib, buildPythonPackage, fetchPypi, colcon-core }:
 
 buildPythonPackage rec {
   pname = "colcon-test-result";
@@ -13,8 +13,6 @@ buildPythonPackage rec {
 
   # Requires unpackaged dependencies
   doCheck = false;
-
-  disabled = isPy27;
 
   meta = with lib; {
     description = "An extension for colcon-core to provide information about the test results.";
