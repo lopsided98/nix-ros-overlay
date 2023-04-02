@@ -14,7 +14,7 @@ buildPythonPackage rec {
     pyyaml
   ];
 
-  # Requires unpackaged dependencies
+  # No tests
   doCheck = false;
 
   meta = with lib; {
