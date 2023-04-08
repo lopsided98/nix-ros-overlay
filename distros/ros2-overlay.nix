@@ -166,6 +166,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     postFixup = postFixup + ''
       wrapQtApp "$out/lib/rviz2/rviz2"
     '';
+    meta.mainProgram = "rviz2";
   });
 
   # The build gets stuck in an infinite loop with absolute CMAKE_INSTALL_LIBDIR:
