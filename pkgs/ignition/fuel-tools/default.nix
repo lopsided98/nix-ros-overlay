@@ -2,8 +2,8 @@
 , ignition-cmake ? ignition.cmake, ignition-common ? ignition.common
 , ignition-msgs ? ignition.msgs, tinyxml-2, curl, jsoncpp, libyaml, libzip
 , majorVersion ? "7"
-, version ? "7.0.0"
-, srcHash ? "sha256-yHiHfYjZuLOzly30nAE//r65ibzZ6DGoZSCQiWRXIHg="
+, version ? "7.2.2"
+, srcHash ? "sha256-SgU7OuD6OoSvC2UJyZUFjc6IOMY7tukGGg5Ef5pGCPY="
 , ... }:
 
 stdenv.mkDerivation rec {
@@ -12,8 +12,8 @@ stdenv.mkDerivation rec {
 
   src = fetchFromGitHub rec {
     name = "${rev}-source";
-    owner = "ignitionrobotics";
-    repo = "ign-fuel-tools";
+    owner = "gazebosim";
+    repo = "gz-fuel-tools";
     rev = "${pname}_${version}";
     hash = srcHash;
   };

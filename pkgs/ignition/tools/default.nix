@@ -6,8 +6,8 @@ stdenv.mkDerivation rec {
 
   src = fetchFromGitHub rec {
     name = "${rev}-source";
-    owner = "ignitionrobotics";
-    repo = "ign-tools";
+    owner = "gazebosim";
+    repo = "gz-tools";
     rev = "${pname}_${version}";
     sha256 = "sha256-HgYT7MARRnOdUuUllxRn9pl7tsWO5RDIFDObzJQgZpc=";
   };

@@ -2,6 +2,6 @@
 
 callPackage ./. ({
   majorVersion = "3";
-  version = "3.14.1";
-  srcHash = "sha256-UcXNt42CiqN//nfMSTjbGH8Imeey2HojojOw2t8csHw=";
+  version = "3.15.1";
+  srcHash = "sha256-WhgCwbRgw6y4+LWpjBTauvDLpFbUvA3SJIMF9m9pdPY=";
 } // args)

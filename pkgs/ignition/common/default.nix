@@ -1,9 +1,9 @@
-{ lib, stdenv, fetchFromGitHub, cmake, pkg-config, ignition
+{ lib, stdenv, fetchFromGitHub, fetchpatch, cmake, pkg-config, ignition
 , ignition-cmake ? ignition.cmake, ignition-math ? ignition.math
 , ignition-utils ? ignition.utils, libuuid, tinyxml-2, freeimage, gts, ffmpeg
 , majorVersion ? "4"
-, version ? "4.5.1"
-, srcHash ? "sha256-Ut5/pvcpCbZH2QGleXW2bfiVcWm5zBdt7r1Hx+4F924="
+, version ? "4.6.2"
+, srcHash ? "sha256-VyvpTeCCwX2WBJdVd6lZrN7QomdOQnxGZFXXnT3ct0s="
 , ... }:
 
 stdenv.mkDerivation rec {
@@ -12,11 +12,17 @@ stdenv.mkDerivation rec {
 
   src = fetchFromGitHub rec {
     name = "${rev}-source";
-    owner = "ignitionrobotics";
-    repo = "ign-common";
+    owner = "gazebosim";
+    repo = "gz-common";
     rev = "${pname}_${version}";
     hash = srcHash;
   };
+
+  patches =
+    lib.optional (majorVersion == "3") (fetchpatch {
+      url = "https://github.com/gazebosim/gz-common/commit/dedc51888e0af28267a87a2ce888aa4189efacf4.patch";
+      hash = "sha256-p+EEHIYaxQ0aZ7wMyz/TuDWUQmHfIB4vOPwrUSsZ+DE=";
+    });
 
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];

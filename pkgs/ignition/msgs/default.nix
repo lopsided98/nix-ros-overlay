@@ -1,8 +1,8 @@
 { lib, stdenv, fetchFromGitHub, fetchpatch, cmake, tinyxml-2, ignition
 , ignition-cmake ? ignition.cmake, protobuf, ignition-math ? ignition.math
 , majorVersion ? "8"
-, version ? "8.6.0"
-, srcHash ? "sha256-Rk9as7eQ6gmY2bYCHv4TnwBX5B+He+0SEEAQhCpfUaM="
+, version ? "8.7.0"
+, srcHash ? "sha256-hG4UJfcq6DsyMqTWIcUQ15UCQNfdzTzwvJBpR9kmu84="
 , ... }:
 
 stdenv.mkDerivation rec {
@@ -11,8 +11,8 @@ stdenv.mkDerivation rec {
 
   src = fetchFromGitHub rec {
     name = "${rev}-source";
-    owner = "ignitionrobotics";
-    repo = "ign-msgs";
+    owner = "gazebosim";
+    repo = "gz-msgs";
     rev = "${pname}_${version}";
     hash = srcHash;
   };

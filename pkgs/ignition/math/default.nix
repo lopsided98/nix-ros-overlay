@@ -1,7 +1,7 @@
 { lib, stdenv, fetchFromGitHub, cmake, ignition, ignition-cmake ? ignition.cmake
 , majorVersion ? "6"
-, version ? "6.12.0"
-, srcHash ? "sha256-tKVaRzxLzMfAyL6+xRmmTgFKxFXAjoNyf8pgwOkWb/Q="
+, version ? "6.13.0"
+, srcHash ? "sha256-4kWbHdsDCCEgXHy3Dv4oZKdVBY4eJLKovYu+HUgkSjE="
 , ... }:
 
 stdenv.mkDerivation rec {
@@ -10,8 +10,8 @@ stdenv.mkDerivation rec {
 
   src = fetchFromGitHub rec {
     name = "${rev}-source";
-    owner = "ignitionrobotics";
-    repo = "ign-math";
+    owner = "gazebosim";
+    repo = "gz-math";
     rev = "${pname}_${version}";
     hash = srcHash;
   };

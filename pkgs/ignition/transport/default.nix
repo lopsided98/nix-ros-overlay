@@ -2,8 +2,8 @@
 , ignition-math ? ignition.math, ignition-msgs ? ignition.msgs
 , ignition-utils ? ignition.utils, protobuf, libuuid, sqlite, libsodium, cppzmq, zeromq
 , majorVersion ? "11"
-, version ? "11.1.0"
-, srcHash ? "sha256-bOsulr8O5sRJ3XAQOP9xWCgoXqEH6M+IEFa0Sx6vze0="
+, version ? "11.4.0"
+, srcHash ? "sha256-dI/MwR0+Vvi/+AZg9dDeqIFdIuBuJ/N2VEsnvMHu780="
 , ... }:
 
 stdenv.mkDerivation rec {
@@ -12,8 +12,8 @@ stdenv.mkDerivation rec {
 
   src = fetchFromGitHub rec {
     name = "${rev}-source";
-    owner = "ignitionrobotics";
-    repo = "ign-transport";
+    owner = "gazebosim";
+    repo = "gz-transport";
     rev = "${pname}_${version}";
     hash = srcHash;
   };
