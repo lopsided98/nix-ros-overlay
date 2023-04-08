@@ -74,6 +74,12 @@ in {
   gazebo_11 = self.libsForQt5.callPackage ./gazebo { };
   gazebo = self.gazebo_11;
 
+  gz-cmake_3 = self.callPackage ./gazebo/gz-cmake/3.nix { };
+
+  gz-math_7 = self.callPackage ./gazebo/gz-math/7.nix { };
+
+  gz-utils_2 = self.callPackage ./gazebo/gz-utils/2.nix { };
+
   geographiclib = self.callPackage ./geographiclib { };
 
   ignition = {
@@ -123,7 +129,8 @@ in {
   python310 = pythonOverridesFor super.python310;
 
   sdformat_6 = self.callPackage ./sdformat/6.nix { };
-  sdformat_9 = self.callPackage ./sdformat { };
+  sdformat_9 = self.callPackage ./sdformat/9.nix { };
+  sdformat_13 = self.callPackage ./sdformat/13.nix { };
   sdformat = self.sdformat_9;
 
   superflore = self.python3Packages.callPackage ./superflore { };

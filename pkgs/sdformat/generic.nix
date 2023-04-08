@@ -1,10 +1,7 @@
-{ lib, stdenv, fetchurl, fetchpatch, cmake, pkg-config, ruby, boost, ignition
-, ignition-math ? ignition.math, tinyxml, urdfdom, urdfdom-headers
-, console-bridge
-, version ? "9.9.0"
-, srcHash ? "sha256-/Vf7xkWfehJzLcAS6JDTk5HuC4tL0p3ImGfq7/OutZw="
-, ...
-  }:
+{ lib, stdenv, fetchurl, fetchpatch, cmake, gz-cmake, ruby, boost
+, gz-math, gz-utils, tinyxml-2, tinyxml, urdfdom
+, version, srcHash
+, ... }:
 
 stdenv.mkDerivation rec {
   pname = "sdformat";
@@ -18,10 +15,7 @@ stdenv.mkDerivation rec {
   patches =
     # Fix asssumptions that CMAKE_INSTALL_*DIR variables are relative
     # https://github.com/gazebosim/sdformat/pull/1190
-    lib.singleton (if lib.versionAtLeast version "9" then fetchpatch {
-      url = "https://github.com/gazebosim/sdformat/commit/e8286cd012623173f40536c7fbea780bb65e7f0b.patch";
-      hash = "sha256-WHpbN2n3JDV98SzWpPRtFE4xRB/jdlwMZagTsIZ1ixk=";
-    } else fetchpatch {
+    lib.optional (lib.versionOlder version "9") (fetchpatch {
       url = "https://github.com/gazebosim/sdformat/commit/b37a28eefb4c06e1add5fa53d7a08cd5d2402f9b.patch";
       hash = "sha256-IZ5RIl3GlAY4LzcmOOpiWZkyjVnsislo5brwu+t5pZo=";
     }) ++
@@ -34,10 +28,11 @@ stdenv.mkDerivation rec {
 
   enableParallelBuilding = true;
 
-  nativeBuildInputs = [ cmake pkg-config ruby ];
-  buildInputs = [ urdfdom ];
-  propagatedBuildInputs = [ ignition-math tinyxml ]
-    ++ lib.optional (lib.versionOlder version "9") boost;
+  nativeBuildInputs = [ cmake gz-cmake ruby ];
+  buildInputs = [ gz-math gz-utils urdfdom ];
+  propagatedBuildInputs = [ gz-math ]
+    ++ lib.singleton (if lib.versionAtLeast version "10.0.0" then tinyxml-2 else tinyxml)
+    ++ lib.optional (lib.versionOlder version "8.0.0") boost;
 
   meta = with lib; {
     homepage = "http://sdformat.org/";
