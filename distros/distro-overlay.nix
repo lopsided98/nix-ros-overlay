@@ -319,16 +319,6 @@ let
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
     });
 
-    rviz = rosSuper.rviz.overrideAttrs ({
-      nativeBuildInputs ? [], postFixup ? "", ...
-    }: {
-      dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = postFixup + ''
-        wrapQtApp "$out/lib/rviz/rviz"
-      '';
-    });
-
     rviz-ogre-vendor = rosSuper.rviz-ogre-vendor.overrideAttrs ({
       preFixup ? "", ...
     }: {
