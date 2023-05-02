@@ -26,6 +26,19 @@ rosSelf: rosSuper: with rosSelf.lib; {
     }) ];
   });
 
+  pcl-ros = rosSuper.pcl-ros.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix compatibility with PCL 1.13
+      (self.fetchpatch {
+        url = "https://github.com/ros-perception/perception_pcl/commit/eb8f009ca519fc6b5651ba3a125fe5ae04f67bb8.patch";
+        hash = "sha256-tEp4/1loFpjHKpNYuDz32iSzXJdrXGWmfJuBkO8d95w=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   pybind11-catkin = patchVendorUrl rosSuper.pybind11-catkin {
     url = "https://github.com/pybind/pybind11/archive/v2.10.3.zip";
     sha256 = "sha256-IBlmph3IJvGxh5okozF6HskhSpGMjrA1vi8ww+nPvcs=";
