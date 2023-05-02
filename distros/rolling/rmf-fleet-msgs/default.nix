@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rmf-fleet-msgs";
-  version = "3.0.2-r1";
+  version = "3.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_fleet_msgs/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "7a4537cf8d705d608f2416be6b4d3f6db6180033843c6ccc20da39ad730b859b";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_fleet_msgs/3.0.2-2.tar.gz";
+    name = "3.0.2-2.tar.gz";
+    sha256 = "f9220641294ffaad5ba3dea512e0e3c4bb27eef13decbd401bfb6b6ee925feeb";
   };
 
   buildType = "ament_cmake";

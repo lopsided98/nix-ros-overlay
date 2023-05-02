@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-gtest, eigen, geometry-msgs, ouxt-lint-common, rclcpp, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-quaternion-operation";
-  version = "0.0.7-r2";
+  version = "0.0.7-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/quaternion_operation-release/archive/release/rolling/quaternion_operation/0.0.7-2.tar.gz";
-    name = "0.0.7-2.tar.gz";
-    sha256 = "533530cebee0024b00353383d614af363c190eb9d47c4dd04fb4660a7130b966";
+    url = "https://github.com/ros2-gbp/quaternion_operation-release/archive/release/rolling/quaternion_operation/0.0.7-3.tar.gz";
+    name = "0.0.7-3.tar.gz";
+    sha256 = "7a91dd7ef55ebeea376baa5a3d7fc1ff1d6668d92eb48be7bd991225e1b12c63";
   };
 
   buildType = "ament_cmake";

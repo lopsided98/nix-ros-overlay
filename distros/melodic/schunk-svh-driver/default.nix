@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/schunk_svh_ros_driver-release/archive/release/melodic/schunk_svh_driver/0.1.2-1.tar.gz";
+    url = "https://github.com/SCHUNK-GmbH-Co-KG/schunk_svh_ros_driver-release/archive/release/melodic/schunk_svh_driver/0.1.2-1.tar.gz";
     name = "0.1.2-1.tar.gz";
     sha256 = "54dcb28214b7f1f666488da1d3dc995b14d5942e8c01195b5ad5a9aa55e92898";
   };

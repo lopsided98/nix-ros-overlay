@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_resources_prbt_ikfast_manipulator_plugin/2.5.4-1.tar.gz";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_resources_prbt_ikfast_manipulator_plugin/2.5.4-1.tar.gz";
     name = "2.5.4-1.tar.gz";
     sha256 = "817bcc70f37624f259e33ae1fac33f72bfbcb51ddf4aa55241a3ecec1b608425";
   };

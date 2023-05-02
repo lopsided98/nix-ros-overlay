@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/tier4/zmqpp_vendor-release/archive/release/humble/zmqpp_vendor/0.0.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/zmqpp_vendor-release/archive/release/humble/zmqpp_vendor/0.0.2-1.tar.gz";
     name = "0.0.2-1.tar.gz";
     sha256 = "f77068948950a7d57ba92fc60aa661493ecbce98be5dd20ac28fc7e8fd3fb550";
   };

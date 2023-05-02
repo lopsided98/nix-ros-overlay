@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-moveit-resources-panda-description";
-  version = "2.0.6-r1";
+  version = "2.0.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/rolling/moveit_resources_panda_description/2.0.6-1.tar.gz";
-    name = "2.0.6-1.tar.gz";
-    sha256 = "2fc5f5807a626e084e6679fa5c2412f1dfa739e055092f60c4856260897c54d3";
+    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/rolling/moveit_resources_panda_description/2.0.6-2.tar.gz";
+    name = "2.0.6-2.tar.gz";
+    sha256 = "48151d0faeafabbd5761facef0764404994d2b8c9a6c88d8f5111d17a1dce433";
   };
 
   buildType = "ament_cmake";

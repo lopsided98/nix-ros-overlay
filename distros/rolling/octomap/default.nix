@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-rolling-octomap";
-  version = "1.9.8-r1";
+  version = "1.9.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap-release/archive/release/rolling/octomap/1.9.8-1.tar.gz";
-    name = "1.9.8-1.tar.gz";
-    sha256 = "c8ceb252810657d25e85dfef154406cea09166100a2c1cb2b803334179e49f23";
+    url = "https://github.com/ros2-gbp/octomap-release/archive/release/rolling/octomap/1.9.8-2.tar.gz";
+    name = "1.9.8-2.tar.gz";
+    sha256 = "82f58e25ac6ad1d9cd6743ae1ba273baf8d05e5d16c325f9960ffb755a50079a";
   };
 
   buildType = "cmake";

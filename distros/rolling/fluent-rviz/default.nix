@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, geometry-msgs, ouxt-lint-common, rclcpp, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-fluent-rviz";
-  version = "0.0.3-r1";
+  version = "0.0.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fluent_rviz-release/archive/release/rolling/fluent_rviz/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "cd05e1b0a15e8a5107fac33aa5a632e642ab458ca79a0c840a5773415fd611b9";
+    url = "https://github.com/ros2-gbp/fluent_rviz-release/archive/release/rolling/fluent_rviz/0.0.3-3.tar.gz";
+    name = "0.0.3-3.tar.gz";
+    sha256 = "4a8921fe6e1f7e711519475292f7f6403e17110b6481eaaec5fb99841d1673ba";
   };
 
   buildType = "ament_cmake";

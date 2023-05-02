@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-lisp, catkin, cl-tf, cl-tf2, cl-transforms, cl-transforms-stamped, cl-urdf, cl-utils, roslisp-utilities }:
 buildRosPackage {
   pname = "ros-noetic-roslisp-common";
-  version = "0.2.14-r1";
+  version = "0.2.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/noetic/roslisp_common/0.2.14-1.tar.gz";
-    name = "0.2.14-1.tar.gz";
-    sha256 = "9d032a748c483285565390cdeb4a534ed9c660c93d65417bed5a52a918e34f5e";
+    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/noetic/roslisp_common/0.2.15-1.tar.gz";
+    name = "0.2.15-1.tar.gz";
+    sha256 = "6cb78227af332341ef0f5a672b3f980fbf5052218cf62e8fccb785a308f59cfa";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, controller-manager-msgs, roscpp, roslint, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-control-mode-adapter";
-  version = "0.8.21-r1";
+  version = "0.8.22-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_control_mode_adapter/0.8.21-1.tar.gz";
-    name = "0.8.21-1.tar.gz";
-    sha256 = "5a9e187a50bb7626d86317023c4cf6cd6e6adb74523f01586655e4cd12d8b813";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_control_mode_adapter/0.8.22-1.tar.gz";
+    name = "0.8.22-1.tar.gz";
+    sha256 = "68b0020768e8c74cd85b200e624cf1bc458ecf764fbdd69a30de56daf8e67860";
   };
 
   buildType = "catkin";

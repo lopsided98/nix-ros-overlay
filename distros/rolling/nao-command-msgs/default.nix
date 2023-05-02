@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-nao-command-msgs";
-  version = "0.0.4-r2";
+  version = "0.0.4-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nao_interfaces-release/archive/release/rolling/nao_command_msgs/0.0.4-2.tar.gz";
-    name = "0.0.4-2.tar.gz";
-    sha256 = "789354af00dc2cd75a798d44fae83d3f5cb3599a6725eaa1f0626e813402943a";
+    url = "https://github.com/ros2-gbp/nao_interfaces-release/archive/release/rolling/nao_command_msgs/0.0.4-3.tar.gz";
+    name = "0.0.4-3.tar.gz";
+    sha256 = "5ed07e8b7e65364fd36fe9d9925a440e618d9c667ad087657824619b4bdb3346";
   };
 
   buildType = "ament_cmake";

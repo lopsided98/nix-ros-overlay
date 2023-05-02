@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/rtcm_msgs-release/archive/release/humble/rtcm_msgs/1.1.6-1.tar.gz";
+    url = "https://github.com/ros2-gbp/rtcm_msgs-release/archive/release/humble/rtcm_msgs/1.1.6-1.tar.gz";
     name = "1.1.6-1.tar.gz";
     sha256 = "60b96f5d72593b069caf9d273b191c69baa7bc25d43cde8d63d5615d769d3ccf";
   };

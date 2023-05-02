@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-common, moveit-core, moveit-ros-planning, rclcpp, tf2-eigen, tf2-ros, warehouse-ros }:
 buildRosPackage {
   pname = "ros-rolling-moveit-ros-warehouse";
-  version = "2.6.0-r1";
+  version = "2.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/rolling/moveit_ros_warehouse/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "2dc239553f0e46c991085cd7456b98f06180a9989e4ab00b68916d777ded8d25";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_ros_warehouse/2.7.3-1.tar.gz";
+    name = "2.7.3-1.tar.gz";
+    sha256 = "70a0c1cdffce265d50fe51533e46a60a0aecdd0e236447f92cdeaa155d1544c9";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = ''Components of MoveIt connecting to MongoDB'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

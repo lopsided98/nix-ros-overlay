@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, camera-info-manager, cv-bridge, gazebo-dev, gazebo-msgs, gazebo-ros, geometry-msgs, image-transport, nav-msgs, rclcpp, sensor-msgs, std-msgs, std-srvs, tf2-geometry-msgs, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-gazebo-plugins";
-  version = "3.7.0-r1";
+  version = "3.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/rolling/gazebo_plugins/3.7.0-1.tar.gz";
-    name = "3.7.0-1.tar.gz";
-    sha256 = "4a3d07df59810de337de12bd0c65fc5c576bd325c606fd31cac0e83eaebb6bd5";
+    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/rolling/gazebo_plugins/3.7.0-2.tar.gz";
+    name = "3.7.0-2.tar.gz";
+    sha256 = "da7c6d6a4ffee3b08dc9d6e7650c8e5e1eeca5c1c3b6a6ee3306526ddf1e5541";
   };
 
   buildType = "ament_cmake";

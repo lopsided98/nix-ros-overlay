@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, rclcpp, sensor-msgs, std-msgs, zbar }:
 buildRosPackage {
   pname = "ros-rolling-zbar-ros";
-  version = "0.4.0-r1";
+  version = "0.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/zbar_ros-release/archive/release/rolling/zbar_ros/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "c57f69f1e06ea8ecdae50b7c23775df7c92911170ec2cf23b798c47d350126ff";
+    url = "https://github.com/ros2-gbp/zbar_ros-release/archive/release/rolling/zbar_ros/0.4.0-2.tar.gz";
+    name = "0.4.0-2.tar.gz";
+    sha256 = "9486405866ce8b30b60f635a86b52c1d812a43ecde2ce0811956f035847e1903";
   };
 
   buildType = "ament_cmake";

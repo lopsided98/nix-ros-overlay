@@ -18,6 +18,8 @@ self: super: {
 
  actionlib-msgs = self.callPackage ./actionlib-msgs {};
 
+ actuator-msgs = self.callPackage ./actuator-msgs {};
+
  adaptive-component = self.callPackage ./adaptive-component {};
 
  admittance-controller = self.callPackage ./admittance-controller {};
@@ -78,8 +80,6 @@ self: super: {
 
  ament-cmake-mypy = self.callPackage ./ament-cmake-mypy {};
 
- ament-cmake-nose = self.callPackage ./ament-cmake-nose {};
-
  ament-cmake-pclint = self.callPackage ./ament-cmake-pclint {};
 
  ament-cmake-pep257 = self.callPackage ./ament-cmake-pep257 {};
@@ -99,6 +99,8 @@ self: super: {
  ament-cmake-test = self.callPackage ./ament-cmake-test {};
 
  ament-cmake-uncrustify = self.callPackage ./ament-cmake-uncrustify {};
+
+ ament-cmake-vendor-package = self.callPackage ./ament-cmake-vendor-package {};
 
  ament-cmake-version = self.callPackage ./ament-cmake-version {};
 
@@ -157,8 +159,6 @@ self: super: {
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
-
- aruco-opencv = self.callPackage ./aruco-opencv {};
 
  aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
 
@@ -222,6 +222,8 @@ self: super: {
 
  color-names = self.callPackage ./color-names {};
 
+ color-util = self.callPackage ./color-util {};
+
  common-interfaces = self.callPackage ./common-interfaces {};
 
  composition = self.callPackage ./composition {};
@@ -233,8 +235,6 @@ self: super: {
  compressed-image-transport = self.callPackage ./compressed-image-transport {};
 
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
-
- control-box-rst = self.callPackage ./control-box-rst {};
 
  control-msgs = self.callPackage ./control-msgs {};
 
@@ -267,8 +267,6 @@ self: super: {
  desktop-full = self.callPackage ./desktop-full {};
 
  diagnostic-aggregator = self.callPackage ./diagnostic-aggregator {};
-
- diagnostic-common-diagnostics = self.callPackage ./diagnostic-common-diagnostics {};
 
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
@@ -468,6 +466,32 @@ self: super: {
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
+ fuse = self.callPackage ./fuse {};
+
+ fuse-constraints = self.callPackage ./fuse-constraints {};
+
+ fuse-core = self.callPackage ./fuse-core {};
+
+ fuse-doc = self.callPackage ./fuse-doc {};
+
+ fuse-graphs = self.callPackage ./fuse-graphs {};
+
+ fuse-loss = self.callPackage ./fuse-loss {};
+
+ fuse-models = self.callPackage ./fuse-models {};
+
+ fuse-msgs = self.callPackage ./fuse-msgs {};
+
+ fuse-optimizers = self.callPackage ./fuse-optimizers {};
+
+ fuse-publishers = self.callPackage ./fuse-publishers {};
+
+ fuse-tutorials = self.callPackage ./fuse-tutorials {};
+
+ fuse-variables = self.callPackage ./fuse-variables {};
+
+ fuse-viz = self.callPackage ./fuse-viz {};
+
  gazebo-dev = self.callPackage ./gazebo-dev {};
 
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
@@ -585,6 +609,8 @@ self: super: {
  intra-process-demo = self.callPackage ./intra-process-demo {};
 
  io-context = self.callPackage ./io-context {};
+
+ irobot-create-msgs = self.callPackage ./irobot-create-msgs {};
 
  joint-limits = self.callPackage ./joint-limits {};
 
@@ -728,6 +754,8 @@ self: super: {
 
  message-filters = self.callPackage ./message-filters {};
 
+ message-tf-frame-transformer = self.callPackage ./message-tf-frame-transformer {};
+
  micro-ros-diagnostic-bridge = self.callPackage ./micro-ros-diagnostic-bridge {};
 
  micro-ros-diagnostic-msgs = self.callPackage ./micro-ros-diagnostic-msgs {};
@@ -769,6 +797,8 @@ self: super: {
  moveit-planners-ompl = self.callPackage ./moveit-planners-ompl {};
 
  moveit-plugins = self.callPackage ./moveit-plugins {};
+
+ moveit-py = self.callPackage ./moveit-py {};
 
  moveit-resources = self.callPackage ./moveit-resources {};
 
@@ -975,6 +1005,14 @@ self: super: {
  point-cloud-msg-wrapper = self.callPackage ./point-cloud-msg-wrapper {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
+
+ polygon-demos = self.callPackage ./polygon-demos {};
+
+ polygon-msgs = self.callPackage ./polygon-msgs {};
+
+ polygon-rviz-plugins = self.callPackage ./polygon-rviz-plugins {};
+
+ polygon-utils = self.callPackage ./polygon-utils {};
 
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
@@ -1310,6 +1348,8 @@ self: super: {
 
  rosbag2-examples-cpp = self.callPackage ./rosbag2-examples-cpp {};
 
+ rosbag2-examples-py = self.callPackage ./rosbag2-examples-py {};
+
  rosbag2-interfaces = self.callPackage ./rosbag2-interfaces {};
 
  rosbag2-performance-benchmarking = self.callPackage ./rosbag2-performance-benchmarking {};
@@ -1324,11 +1364,11 @@ self: super: {
 
  rosbag2-storage-mcap = self.callPackage ./rosbag2-storage-mcap {};
 
- rosbag2-storage-mcap-testdata = self.callPackage ./rosbag2-storage-mcap-testdata {};
-
  rosbag2-storage-sqlite3 = self.callPackage ./rosbag2-storage-sqlite3 {};
 
  rosbag2-test-common = self.callPackage ./rosbag2-test-common {};
+
+ rosbag2-test-msgdefs = self.callPackage ./rosbag2-test-msgdefs {};
 
  rosbag2-tests = self.callPackage ./rosbag2-tests {};
 
@@ -1360,6 +1400,10 @@ self: super: {
 
  rosidl-default-runtime = self.callPackage ./rosidl-default-runtime {};
 
+ rosidl-dynamic-typesupport = self.callPackage ./rosidl-dynamic-typesupport {};
+
+ rosidl-dynamic-typesupport-fastrtps = self.callPackage ./rosidl-dynamic-typesupport-fastrtps {};
+
  rosidl-generator-c = self.callPackage ./rosidl-generator-c {};
 
  rosidl-generator-cpp = self.callPackage ./rosidl-generator-cpp {};
@@ -1367,6 +1411,8 @@ self: super: {
  rosidl-generator-dds-idl = self.callPackage ./rosidl-generator-dds-idl {};
 
  rosidl-generator-py = self.callPackage ./rosidl-generator-py {};
+
+ rosidl-generator-type-description = self.callPackage ./rosidl-generator-type-description {};
 
  rosidl-parser = self.callPackage ./rosidl-parser {};
 
@@ -1666,6 +1712,8 @@ self: super: {
 
  tf-transformations = self.callPackage ./tf-transformations {};
 
+ tinyspline-vendor = self.callPackage ./tinyspline-vendor {};
+
  tinyxml2-vendor = self.callPackage ./tinyxml2-vendor {};
 
  tinyxml-vendor = self.callPackage ./tinyxml-vendor {};
@@ -1718,9 +1766,13 @@ self: super: {
 
  turtlesim = self.callPackage ./turtlesim {};
 
+ tuw-geometry = self.callPackage ./tuw-geometry {};
+
  twist-mux = self.callPackage ./twist-mux {};
 
  twist-stamper = self.callPackage ./twist-stamper {};
+
+ type-description-interfaces = self.callPackage ./type-description-interfaces {};
 
  ublox = self.callPackage ./ublox {};
 

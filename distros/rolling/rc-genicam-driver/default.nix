@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-xmllint, ament-lint-auto, diagnostic-updater, image-transport, rc-common-msgs, rc-genicam-api, rclcpp, rclcpp-components, sensor-msgs, stereo-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rc-genicam-driver";
-  version = "0.2.1-r2";
+  version = "0.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_genicam_driver_ros2-release/archive/release/rolling/rc_genicam_driver/0.2.1-2.tar.gz";
-    name = "0.2.1-2.tar.gz";
-    sha256 = "9eb1f27526093c74c82d3bd247b1fc9ab11959a6d122a3bc8276635399f67e6d";
+    url = "https://github.com/ros2-gbp/rc_genicam_driver_ros2-release/archive/release/rolling/rc_genicam_driver/0.3.0-2.tar.gz";
+    name = "0.3.0-2.tar.gz";
+    sha256 = "5bad87f67888627674e0e49d7e69426e4801d4eae6bb4adfee0bc0eaf4e0299d";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-base-controller-utils, cob-base-velocity-smoother, cob-cartesian-controller, cob-collision-velocity-filter, cob-control-mode-adapter, cob-control-msgs, cob-footprint-observer, cob-frame-tracker, cob-hardware-emulation, cob-mecanum-controller, cob-model-identifier, cob-obstacle-distance, cob-omni-drive-controller, cob-trajectory-controller, cob-tricycle-controller, cob-twist-controller }:
 buildRosPackage {
   pname = "ros-noetic-cob-control";
-  version = "0.8.21-r1";
+  version = "0.8.22-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_control/0.8.21-1.tar.gz";
-    name = "0.8.21-1.tar.gz";
-    sha256 = "cc7387f59bd3b290cbdc2f4e2a0895e7258e5078077459dc88e3443ef2e87193";
+    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_control/0.8.22-1.tar.gz";
+    name = "0.8.22-1.tar.gz";
+    sha256 = "bcfe8f90340456605bc1b71aea88a26faf0f677bef8624de3074cb566f8be946";
   };
 
   buildType = "catkin";

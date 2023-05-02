@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, opencv, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-image-geometry";
-  version = "3.4.0-r1";
+  version = "3.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/rolling/image_geometry/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "8c069e621f0782bd9f6f3a52c3f83cdd1648e7d374aec6808244e6ccd74d8a87";
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/rolling/image_geometry/3.4.0-2.tar.gz";
+    name = "3.4.0-2.tar.gz";
+    sha256 = "65f5ba78491537ec9c0286cf4cc11e03628a8cc5816745b9b94a00aa6b2b9512";
   };
 
   buildType = "ament_cmake";

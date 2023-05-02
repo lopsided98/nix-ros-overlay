@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, py-trees, py-trees-ros-interfaces, python3Packages, pythonPackages, rcl-interfaces, rclpy, ros2topic, sensor-msgs, std-msgs, tf2-ros-py, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-rolling-py-trees-ros";
-  version = "2.2.2-r1";
+  version = "2.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees_ros-release/archive/release/rolling/py_trees_ros/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "19c7d8dc7c7ceaafa59b983068d19e89be224f8bf2289f200e888aeeae52ce33";
+    url = "https://github.com/ros2-gbp/py_trees_ros-release/archive/release/rolling/py_trees_ros/2.2.2-2.tar.gz";
+    name = "2.2.2-2.tar.gz";
+    sha256 = "c63566f18be926a8edd92172cc0b554295205b93fc76135c7927c339c97986fe";
   };
 
   buildType = "ament_python";

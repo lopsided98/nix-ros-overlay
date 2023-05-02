@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, marker-msgs, mrpt-msgs, mrpt2, ros-environment, roscpp, tf2 }:
 buildRosPackage {
   pname = "ros-melodic-mrpt-msgs-bridge";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_msgs_bridge/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "35fe4314b5efcd7172fcad4750d00030e53020644233c9743953f7cb09541f0c";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_msgs_bridge/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "4c83b8fac78d141adef5224ecf941dd4b11fc6e0efec827c8a313a9a5f5e5845";
   };
 
   buildType = "catkin";

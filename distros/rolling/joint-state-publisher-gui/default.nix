@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, joint-state-publisher, python-qt-binding, rclpy }:
 buildRosPackage {
   pname = "ros-rolling-joint-state-publisher-gui";
-  version = "2.3.0-r1";
+  version = "2.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joint_state_publisher-release/archive/release/rolling/joint_state_publisher_gui/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "9c6c71a32544b1a9702c4267b17642c8d2e416143decd31b3301cfcaf740f53a";
+    url = "https://github.com/ros2-gbp/joint_state_publisher-release/archive/release/rolling/joint_state_publisher_gui/2.3.0-2.tar.gz";
+    name = "2.3.0-2.tar.gz";
+    sha256 = "255b331da0aec234a32fb38242469bb22dc62d04e57d255dfa8c2703ec61c8a6";
   };
 
   buildType = "ament_python";

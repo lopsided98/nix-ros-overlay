@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, qt5, rosbag-storage, roscpp, rosgraph-msgs }:
 buildRosPackage {
   pname = "ros-noetic-swri-console";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/swri_console-release/archive/release/noetic/swri_console/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "a4d06a2b1af47088c200a94adcc12a38c7108e63cacc3e354fac93782e983ff8";
+    url = "https://github.com/swri-robotics-gbp/swri_console-release/archive/release/noetic/swri_console/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "6d962fe253fdb21aa00af5eabadc5f6cfdc9385ac5ee4ac3814b959830886ec7";
   };
 
   buildType = "catkin";

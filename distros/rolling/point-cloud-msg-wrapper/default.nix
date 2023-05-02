@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-point-cloud-msg-wrapper";
-  version = "1.0.7-r2";
+  version = "1.0.7-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_msg_wrapper-release/archive/release/rolling/point_cloud_msg_wrapper/1.0.7-2.tar.gz";
-    name = "1.0.7-2.tar.gz";
-    sha256 = "2005089636bec115a9829eca64f8d8f625caea084295a045080ce71751d34807";
+    url = "https://github.com/ros2-gbp/point_cloud_msg_wrapper-release/archive/release/rolling/point_cloud_msg_wrapper/1.0.7-3.tar.gz";
+    name = "1.0.7-3.tar.gz";
+    sha256 = "bcebe3036099e87389110eac0d239fdf4cb1b901a94028342c208908f3c40784";
   };
 
   buildType = "ament_cmake";

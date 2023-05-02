@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, genmsg, genpy, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-genmypy";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/rospypi/genmypy-release/archive/release/noetic/genmypy/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "65630a5fe0762662abedd95c8193d9a0141e61511149f780b3d9bbfd69ef3aed";
+    url = "https://github.com/rospypi/genmypy-release/archive/release/noetic/genmypy/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "ae09ff42320b20a8f7364c198808c9991bf81508ab0085b9af99121b24c9c72b";
   };
 
   buildType = "catkin";

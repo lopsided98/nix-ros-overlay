@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-soccer-object-msgs";
-  version = "1.1.0-r1";
+  version = "1.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/soccer_object_msgs-release/archive/release/rolling/soccer_object_msgs/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "2a13b3bab5a6c5c1d50e24ff43d2012433a74d2cf798af74d5d7aa2d58878bda";
+    url = "https://github.com/ros2-gbp/soccer_object_msgs-release/archive/release/rolling/soccer_object_msgs/1.1.0-2.tar.gz";
+    name = "1.1.0-2.tar.gz";
+    sha256 = "ec6be3d8f328f128cc8aa295a00ab8ef00da662406edade2920215ff015f23e3";
   };
 
   buildType = "ament_cmake";

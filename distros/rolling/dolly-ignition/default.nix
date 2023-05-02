@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, dolly-follow, ros-ign-bridge, ros-ign-gazebo, ros2launch, rviz2 }:
 buildRosPackage {
   pname = "ros-rolling-dolly-ignition";
-  version = "0.4.0-r2";
+  version = "0.4.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dolly-release/archive/release/rolling/dolly_ignition/0.4.0-2.tar.gz";
-    name = "0.4.0-2.tar.gz";
-    sha256 = "5004cf823b7f1207abb652001d47b49d00aa4c3d22a3607d2defc5edb73c38ee";
+    url = "https://github.com/ros2-gbp/dolly-release/archive/release/rolling/dolly_ignition/0.4.0-4.tar.gz";
+    name = "0.4.0-4.tar.gz";
+    sha256 = "e5b383136c967f280ee92d8f3efb91a62f2384e4f79af89f58930f8f219741c3";
   };
 
   buildType = "ament_cmake";

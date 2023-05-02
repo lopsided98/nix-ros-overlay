@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, pythonPackages, rcgcrd-spl-4 }:
 buildRosPackage {
   pname = "ros-foxy-rcgcrd-spl-4-conversion";
-  version = "0.0.1-r1";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/foxy/rcgcrd_spl_4_conversion/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "b0b528744b54bf9aa53ce17f70f00cc2e11e7e0b8b355fb032ad52f75fcf9275";
+    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/foxy/rcgcrd_spl_4_conversion/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "34b82ddbba07b1aa40633bb252f58a1e8f03e54fcadee3be235098ea1419327c";
   };
 
   buildType = "ament_python";

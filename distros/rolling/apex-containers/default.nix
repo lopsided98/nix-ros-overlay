@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-lint-auto, ament-lint-common, apex-test-tools, foonathan-memory-vendor }:
 buildRosPackage {
   pname = "ros-rolling-apex-containers";
-  version = "0.0.4-r2";
+  version = "0.0.4-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/apex_containers-release/archive/release/rolling/apex_containers/0.0.4-2.tar.gz";
-    name = "0.0.4-2.tar.gz";
-    sha256 = "bf5a9d606df3a7d32e9081f3d7170572843c5498672f3d4075cc4b46f1ca3858";
+    url = "https://github.com/ros2-gbp/apex_containers-release/archive/release/rolling/apex_containers/0.0.4-4.tar.gz";
+    name = "0.0.4-4.tar.gz";
+    sha256 = "b04903264e0e077bb329ceb506b5ce349a59310a608b0d181358f2bc0914b1bb";
   };
 
   buildType = "ament_cmake";

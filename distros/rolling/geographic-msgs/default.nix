@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-rolling-geographic-msgs";
-  version = "1.0.4-r5";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geographic_info-release/archive/release/rolling/geographic_msgs/1.0.4-5.tar.gz";
-    name = "1.0.4-5.tar.gz";
-    sha256 = "220ee05d6bdb3c2317fdbe27d800a0cd4d4836c4517157474f02a663825a06f7";
+    url = "https://github.com/ros2-gbp/geographic_info-release/archive/release/rolling/geographic_msgs/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "019b3730107e71d37368e8bf6a252d29a97a00b9e0dda76a386662edace01f74";
   };
 
   buildType = "ament_cmake";

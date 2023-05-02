@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, husky-description, joint-state-publisher, joint-state-publisher-gui, launch-ros, robot-state-publisher, rviz2 }:
 buildRosPackage {
   pname = "ros-foxy-husky-viz";
-  version = "1.0.7-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/foxy/husky_viz/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "6fe27fd6224aacd509ac4357d84243c6c2306f3b724c8b4f883c3e1255cf39e7";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/foxy/husky_viz/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "1eef840b70f5aa4860f807918889b5d3bd10e61f4c67d0e5276cc65d8fcd8d4e";
   };
 
   buildType = "ament_cmake";

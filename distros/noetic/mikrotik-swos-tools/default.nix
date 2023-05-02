@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, python3Packages, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mikrotik-swos-tools";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/peci1/mikrotik_swos_tools-release/archive/release/noetic/mikrotik_swos_tools/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "de151d2c0d3828cb6f9888ce781c7d5f9f90c1b25b5dd06dbc74c4cc49073021";
+    url = "https://github.com/peci1/mikrotik_swos_tools-release/archive/release/noetic/mikrotik_swos_tools/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "f376ebfaa167a0ffdf9e171d94d02370bb84811371314f78b78a35b3960b6488";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];
-  propagatedBuildInputs = [ message-runtime python3Packages.requests rospy std-msgs ];
+  propagatedBuildInputs = [ message-runtime python3Packages.future python3Packages.requests rospy std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

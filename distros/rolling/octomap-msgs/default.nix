@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-octomap-msgs";
-  version = "2.0.0-r2";
+  version = "2.0.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap_msgs-release/archive/release/rolling/octomap_msgs/2.0.0-2.tar.gz";
-    name = "2.0.0-2.tar.gz";
-    sha256 = "6a592edc220ac9884d80193f35487e2e0c8d142002378e64be4002e529024e2a";
+    url = "https://github.com/ros2-gbp/octomap_msgs-release/archive/release/rolling/octomap_msgs/2.0.0-3.tar.gz";
+    name = "2.0.0-3.tar.gz";
+    sha256 = "93154a8682d2cb0fbc82a086b450a78d125a1c6f0dfc5395bb1f2e314dce6b8a";
   };
 
   buildType = "ament_cmake";

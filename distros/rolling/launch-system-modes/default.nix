@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, launch, osrf-pycommon, python3Packages, pythonPackages, rclpy, system-modes-msgs }:
 buildRosPackage {
   pname = "ros-rolling-launch-system-modes";
-  version = "0.9.0-r3";
+  version = "0.9.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/system_modes-release/archive/release/rolling/launch_system_modes/0.9.0-3.tar.gz";
-    name = "0.9.0-3.tar.gz";
-    sha256 = "ee0eceaf6bf5918dd4c78f3b914d64d5ca9aa806db06775eac91d2804630136f";
+    url = "https://github.com/ros2-gbp/system_modes-release/archive/release/rolling/launch_system_modes/0.9.0-4.tar.gz";
+    name = "0.9.0-4.tar.gz";
+    sha256 = "1a2ef5186e8983da9380edbfb4dd99d3fc348bbe331ee26df287cfc02812f606";
   };
 
   buildType = "ament_python";

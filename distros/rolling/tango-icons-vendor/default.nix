@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, tango-icon-theme }:
 buildRosPackage {
   pname = "ros-rolling-tango-icons-vendor";
-  version = "0.2.2-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tango_icons_vendor-release/archive/release/rolling/tango_icons_vendor/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "623d26597df9d5346858ea39ced484d6d266663ac26c711b3b8cd3a88c8936ff";
+    url = "https://github.com/ros2-gbp/tango_icons_vendor-release/archive/release/rolling/tango_icons_vendor/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "ac18880ad98bba2ebff9ef88e67f7837a49a62d18f90b7c10fc75d0e4d8aed26";
   };
 
   buildType = "ament_cmake";

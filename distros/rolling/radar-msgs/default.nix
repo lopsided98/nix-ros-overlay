@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, std-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-rolling-radar-msgs";
-  version = "0.2.2-r1";
+  version = "0.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/radar_msgs-release/archive/release/rolling/radar_msgs/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "cc91fbc52fa04881e7c6a10bf9beaa6db87c47540ec8ba2bbd6605bc76ddb65b";
+    url = "https://github.com/ros2-gbp/radar_msgs-release/archive/release/rolling/radar_msgs/0.2.2-2.tar.gz";
+    name = "0.2.2-2.tar.gz";
+    sha256 = "f0898e646ac3f5a3a4b21b62cd14d1f677c4f2e562f5cf933d4f301cb4e4d8cc";
   };
 
   buildType = "ament_cmake";

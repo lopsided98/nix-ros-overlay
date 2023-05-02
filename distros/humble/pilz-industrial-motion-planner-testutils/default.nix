@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/humble/pilz_industrial_motion_planner_testutils/2.5.4-1.tar.gz";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/pilz_industrial_motion_planner_testutils/2.5.4-1.tar.gz";
     name = "2.5.4-1.tar.gz";
     sha256 = "02539071e04afd0b8dd3e493563a6dd4553e58f35041b2c01ad1fd54ac618f01";
   };

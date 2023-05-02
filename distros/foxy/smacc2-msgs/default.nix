@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-smacc2-msgs";
-  version = "2.1.0-r1";
+  version = "2.1.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/robosoft-ai/SMACC2-release/archive/release/foxy/smacc2_msgs/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "83ac28e288930e69c6525ece85a83958747fe6a868c36d91485733ac411155ce";
+    url = "https://github.com/robosoft-ai/SMACC2-release/archive/release/foxy/smacc2_msgs/2.1.21-1.tar.gz";
+    name = "2.1.21-1.tar.gz";
+    sha256 = "0bdd0b201a11ae97066991d9b736beb053358f91a9d59eb8993472a11b7eedc6";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cppzmq, git }:
 buildRosPackage {
   pname = "ros-rolling-zmqpp-vendor";
-  version = "0.0.2-r1";
+  version = "0.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/tier4/zmqpp_vendor-release/archive/release/rolling/zmqpp_vendor/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "f005cd5834c9d18366bca1285168e076040d46aa68f827042cb0ee3eac2b4310";
+    url = "https://github.com/ros2-gbp/zmqpp_vendor-release/archive/release/rolling/zmqpp_vendor/0.0.2-2.tar.gz";
+    name = "0.0.2-2.tar.gz";
+    sha256 = "c12eeec11c30677aff2b8c7650e2f2bc0aad68192fe3c78eea7330267471ad25";
   };
 
   buildType = "ament_cmake";

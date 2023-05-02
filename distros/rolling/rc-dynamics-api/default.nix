@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, curl, protobuf }:
 buildRosPackage {
   pname = "ros-rolling-rc-dynamics-api";
-  version = "0.10.3-r2";
+  version = "0.10.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_dynamics_api-release/archive/release/rolling/rc_dynamics_api/0.10.3-2.tar.gz";
-    name = "0.10.3-2.tar.gz";
-    sha256 = "d6563e18d95431da14f080cf914b45531e24766526cdfe16711091699e64dba1";
+    url = "https://github.com/ros2-gbp/rc_dynamics_api-release/archive/release/rolling/rc_dynamics_api/0.10.3-3.tar.gz";
+    name = "0.10.3-3.tar.gz";
+    sha256 = "f9870a4378fafd10fb4edf173aefc4c2c1e9fe53e6dc189ed4cb33978af3c0d1";
   };
 
   buildType = "cmake";

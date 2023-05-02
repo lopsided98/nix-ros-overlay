@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, pluginlib, realtime-tools, rm-common, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-tof-radar-controller";
-  version = "0.1.7-r1";
+  version = "0.1.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/tof_radar_controller/0.1.7-1.tar.gz";
-    name = "0.1.7-1.tar.gz";
-    sha256 = "c9db3b3a51ce4383ee6b10e320fde6ed04f80403548803e789178705d63df505";
+    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/tof_radar_controller/0.1.10-1.tar.gz";
+    name = "0.1.10-1.tar.gz";
+    sha256 = "ad1fa1afa0569aac989392fb1a3bc69377920e82e944130798cad2b50d281cf9";
   };
 
   buildType = "catkin";

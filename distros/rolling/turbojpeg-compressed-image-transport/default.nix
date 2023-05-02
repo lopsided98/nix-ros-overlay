@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, image-transport, libjpeg_turbo }:
 buildRosPackage {
   pname = "ros-rolling-turbojpeg-compressed-image-transport";
-  version = "0.2.1-r1";
+  version = "0.2.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turbojpeg_compressed_image_transport-release/archive/release/rolling/turbojpeg_compressed_image_transport/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "9a7b57d259cdc07818c669af5de471b764d7f3f2828b84f0669cd05ce3c0f065";
+    url = "https://github.com/ros2-gbp/turbojpeg_compressed_image_transport-release/archive/release/rolling/turbojpeg_compressed_image_transport/0.2.1-3.tar.gz";
+    name = "0.2.1-3.tar.gz";
+    sha256 = "5afc9073dda0386f397f14b09ba5063bb65c57e8a2a7930756709cb599f8f982";
   };
 
   buildType = "ament_cmake";

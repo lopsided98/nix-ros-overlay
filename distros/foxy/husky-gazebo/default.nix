@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, gazebo-plugins, gazebo-ros, gazebo-ros2-control, husky-control, husky-description, ros2launch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-foxy-husky-gazebo";
-  version = "1.0.7-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/foxy/husky_gazebo/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "ad1860accae9114da1ed658e87dd300e18db34d585e2c8f02435d49f1d427914";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/foxy/husky_gazebo/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "4a182210b862fa53998429604e1c069ea005f429d7e77b45598d7cfbb536d1c8";
   };
 
   buildType = "ament_cmake";

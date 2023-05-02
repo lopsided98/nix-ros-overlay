@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-python, ament-lint-auto, ament-lint-common, control-msgs, diff-drive-controller, effort-controllers, gazebo-ros, gazebo-ros2-control, geometry-msgs, hardware-interface, joint-state-broadcaster, joint-trajectory-controller, launch, launch-ros, rclcpp, rclcpp-action, robot-state-publisher, ros2-control, ros2-controllers, std-msgs, tricycle-controller, velocity-controllers, xacro }:
 buildRosPackage {
   pname = "ros-rolling-gazebo-ros2-control-demos";
-  version = "0.5.1-r1";
+  version = "0.5.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gazebo_ros2_control-release/archive/release/rolling/gazebo_ros2_control_demos/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "0f907f50296329f661106669f887abb53acc7716dfe973647d11bb127a689718";
+    url = "https://github.com/ros2-gbp/gazebo_ros2_control-release/archive/release/rolling/gazebo_ros2_control_demos/0.5.1-3.tar.gz";
+    name = "0.5.1-3.tar.gz";
+    sha256 = "82f671307933103bc4be9fd1243ac159a54492a2825819c4cac625f7bd122be7";
   };
 
   buildType = "ament_cmake";

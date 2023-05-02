@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-stubborn-buddies-msgs";
-  version = "1.0.0-r4";
+  version = "1.0.0-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/stubborn_buddies-release/archive/release/rolling/stubborn_buddies_msgs/1.0.0-4.tar.gz";
-    name = "1.0.0-4.tar.gz";
-    sha256 = "611a221cacd9921f5badeaefa48facd2215a269d84fde871eac5c2c261d6c760";
+    url = "https://github.com/ros2-gbp/stubborn_buddies-release/archive/release/rolling/stubborn_buddies_msgs/1.0.0-5.tar.gz";
+    name = "1.0.0-5.tar.gz";
+    sha256 = "7c82b898877378748c46af4c93f803d007022396621a9b0574d66d62966b7df5";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, mrpt2, roscpp, sensor-msgs, tf2, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-local-obstacles";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_local_obstacles/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "9503be42ae3e96ae3b2a56ed3bedf01d1df1d039ca3fd9ccfae8f3793fbef07c";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_local_obstacles/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "7fc52ddb77541926e5d7a3672ad0798e0b92c813e3ccd67715fcb5b96e5eeb32";
   };
 
   buildType = "catkin";

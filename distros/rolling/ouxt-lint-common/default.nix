@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-copyright, ament-cmake-pep257, ament-cmake-xmllint }:
 buildRosPackage {
   pname = "ros-rolling-ouxt-lint-common";
-  version = "0.0.8-r2";
+  version = "0.0.8-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ouxt_common-release/archive/release/rolling/ouxt_lint_common/0.0.8-2.tar.gz";
-    name = "0.0.8-2.tar.gz";
-    sha256 = "2be2df274ad1432716eafb6e0fbcd476cd4ccf46ce58b195aacde1c35eb83911";
+    url = "https://github.com/ros2-gbp/ouxt_common-release/archive/release/rolling/ouxt_lint_common/0.0.8-3.tar.gz";
+    name = "0.0.8-3.tar.gz";
+    sha256 = "7d5db27cda9c76fc94d2179105e631065e973bc27c00bea6d043aeb8ddcd24f7";
   };
 
   buildType = "ament_cmake";

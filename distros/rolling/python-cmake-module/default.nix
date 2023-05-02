@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, python3 }:
 buildRosPackage {
   pname = "ros-rolling-python-cmake-module";
-  version = "0.10.2-r1";
+  version = "0.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/python_cmake_module-release/archive/release/rolling/python_cmake_module/0.10.2-1.tar.gz";
-    name = "0.10.2-1.tar.gz";
-    sha256 = "26e336d4909934c7e0124bdea4653f9356d782a8b77f2e2b36bbee07c2337519";
+    url = "https://github.com/ros2-gbp/python_cmake_module-release/archive/release/rolling/python_cmake_module/0.11.0-1.tar.gz";
+    name = "0.11.0-1.tar.gz";
+    sha256 = "ce32cc260a3702634aeba4d02fefb7c91363f1ad24181b7c3681dd83de490852";
   };
 
   buildType = "ament_cmake";

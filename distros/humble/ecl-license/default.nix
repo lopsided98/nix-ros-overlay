@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_tools-release/archive/release/humble/ecl_license/1.0.3-2.tar.gz";
+    url = "https://github.com/ros2-gbp/ecl_tools-release/archive/release/humble/ecl_license/1.0.3-2.tar.gz";
     name = "1.0.3-2.tar.gz";
     sha256 = "ada441ed7cf511dc55ab117148887dbdbf0bb5365af55382e6e110d78f9e7b9f";
   };

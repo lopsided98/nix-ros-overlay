@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages, rclpy, wireless-msgs, wirelesstools }:
 buildRosPackage {
   pname = "ros-foxy-wireless-watcher";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/foxy/wireless_watcher/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "0e0a76028b133b65ed851053a89815dc4466894e42820525700b44646f426987";
+    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/foxy/wireless_watcher/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "c32bd6f760489b952551ae26e8d70d03528058e5a441ba78d9164d3020ebdee2";
   };
 
   buildType = "ament_python";

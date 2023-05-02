@@ -58,8 +58,6 @@ self: super: {
 
  aruco-msgs = self.callPackage ./aruco-msgs {};
 
- aruco-opencv = self.callPackage ./aruco-opencv {};
-
  aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
 
  aruco-ros = self.callPackage ./aruco-ros {};
@@ -476,8 +474,6 @@ self: super: {
 
  contact-states-observer = self.callPackage ./contact-states-observer {};
 
- control-box-rst = self.callPackage ./control-box-rst {};
-
  control-msgs = self.callPackage ./control-msgs {};
 
  control-toolbox = self.callPackage ./control-toolbox {};
@@ -592,7 +588,11 @@ self: super: {
 
  depthai-bridge = self.callPackage ./depthai-bridge {};
 
+ depthai-descriptions = self.callPackage ./depthai-descriptions {};
+
  depthai-examples = self.callPackage ./depthai-examples {};
+
+ depthai-filters = self.callPackage ./depthai-filters {};
 
  depthai-ros-driver = self.callPackage ./depthai-ros-driver {};
 
@@ -1278,8 +1278,6 @@ self: super: {
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
 
- ifopt = self.callPackage ./ifopt {};
-
  ign-ros-control-demos = self.callPackage ./ign-ros-control-demos {};
 
  image-cb-detector = self.callPackage ./image-cb-detector {};
@@ -1466,6 +1464,8 @@ self: super: {
 
  jsk-network-tools = self.callPackage ./jsk-network-tools {};
 
+ jsk-pr2eus = self.callPackage ./jsk-pr2eus {};
+
  jsk-recognition = self.callPackage ./jsk-recognition {};
 
  jsk-recognition-msgs = self.callPackage ./jsk-recognition-msgs {};
@@ -1549,6 +1549,8 @@ self: super: {
  kvh-geo-fog-3d-msgs = self.callPackage ./kvh-geo-fog-3d-msgs {};
 
  kvh-geo-fog-3d-rviz = self.callPackage ./kvh-geo-fog-3d-rviz {};
+
+ l3cam-ros = self.callPackage ./l3cam-ros {};
 
  label-manager = self.callPackage ./label-manager {};
 
@@ -1799,6 +1801,8 @@ self: super: {
  message-generation = self.callPackage ./message-generation {};
 
  message-runtime = self.callPackage ./message-runtime {};
+
+ message-tf-frame-transformer = self.callPackage ./message-tf-frame-transformer {};
 
  message-to-tf = self.callPackage ./message-to-tf {};
 
@@ -2498,6 +2502,8 @@ self: super: {
 
  pr2-tuckarm = self.callPackage ./pr2-tuckarm {};
 
+ pr2eus = self.callPackage ./pr2eus {};
+
  prbt-gazebo = self.callPackage ./prbt-gazebo {};
 
  prbt-grippers = self.callPackage ./prbt-grippers {};
@@ -3086,7 +3092,35 @@ self: super: {
 
  rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
 
+ rtabmap-conversions = self.callPackage ./rtabmap-conversions {};
+
+ rtabmap-costmap-plugins = self.callPackage ./rtabmap-costmap-plugins {};
+
+ rtabmap-demos = self.callPackage ./rtabmap-demos {};
+
+ rtabmap-examples = self.callPackage ./rtabmap-examples {};
+
+ rtabmap-launch = self.callPackage ./rtabmap-launch {};
+
+ rtabmap-legacy = self.callPackage ./rtabmap-legacy {};
+
+ rtabmap-msgs = self.callPackage ./rtabmap-msgs {};
+
+ rtabmap-odom = self.callPackage ./rtabmap-odom {};
+
+ rtabmap-python = self.callPackage ./rtabmap-python {};
+
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
+
+ rtabmap-rviz-plugins = self.callPackage ./rtabmap-rviz-plugins {};
+
+ rtabmap-slam = self.callPackage ./rtabmap-slam {};
+
+ rtabmap-sync = self.callPackage ./rtabmap-sync {};
+
+ rtabmap-util = self.callPackage ./rtabmap-util {};
+
+ rtabmap-viz = self.callPackage ./rtabmap-viz {};
 
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
 
@@ -3215,6 +3249,8 @@ self: super: {
  simulators = self.callPackage ./simulators {};
 
  single-joint-position-action = self.callPackage ./single-joint-position-action {};
+
+ skyway = self.callPackage ./skyway {};
 
  slam-gmapping = self.callPackage ./slam-gmapping {};
 

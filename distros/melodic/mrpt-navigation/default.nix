@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mrpt-local-obstacles, mrpt-localization, mrpt-map, mrpt-rawlog, mrpt-reactivenav2d, mrpt-tutorials }:
 buildRosPackage {
   pname = "ros-melodic-mrpt-navigation";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_navigation/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "6d49ff754d1b5169fc887c9982d4619f39d863e48f320e33a1c639cef52cc24b";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/melodic/mrpt_navigation/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "9f6b41907c40992a29820650bae3d86901160c30737d0b1af636bf79b36d605e";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, geometry-msgs, python-qt-binding, rclpy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-rolling-rqt-robot-steering";
-  version = "1.0.0-r3";
+  version = "1.0.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_robot_steering-release/archive/release/rolling/rqt_robot_steering/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "f8ab4d820377fa702d814a0a72ef060087d1042f06e2dee1c3a2efce06978862";
+    url = "https://github.com/ros2-gbp/rqt_robot_steering-release/archive/release/rolling/rqt_robot_steering/1.0.0-4.tar.gz";
+    name = "1.0.0-4.tar.gz";
+    sha256 = "f2717556db6de95df4e376466514bf84b20abe42ad3e6d6987257152f253441f";
   };
 
   buildType = "ament_python";

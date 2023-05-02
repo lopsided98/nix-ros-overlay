@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/sophus-release/archive/release/humble/sophus/1.3.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/sophus-release/archive/release/humble/sophus/1.3.1-1.tar.gz";
     name = "1.3.1-1.tar.gz";
     sha256 = "be643cba4f75f64999979f3af952e7187925b671a46aeabeafabdeb3478ea17c";
   };

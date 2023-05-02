@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, libspnav, rclcpp, rclcpp-components, sensor-msgs, spacenavd }:
 buildRosPackage {
   pname = "ros-rolling-spacenav";
-  version = "3.1.0-r2";
+  version = "3.1.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/rolling/spacenav/3.1.0-2.tar.gz";
-    name = "3.1.0-2.tar.gz";
-    sha256 = "8fbf483adfd65b1074de189ae71c1be33e6d6ad81e578e166f96deca4dbb7b64";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/rolling/spacenav/3.1.0-3.tar.gz";
+    name = "3.1.0-3.tar.gz";
+    sha256 = "4b432074d19a265478687f6f0e15bef94679c18f5ce270da0f544f8b52e4f020";
   };
 
   buildType = "ament_cmake";

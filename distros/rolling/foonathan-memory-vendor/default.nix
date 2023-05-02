@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-xmllint, cmake, git }:
 buildRosPackage {
   pname = "ros-rolling-foonathan-memory-vendor";
-  version = "1.3.0-r1";
+  version = "1.3.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/foonathan_memory_vendor-release/archive/release/rolling/foonathan_memory_vendor/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "aade24135f1712b17f6e210efac8a3cd6c21650a1b769de422c73d44617ce7bf";
+    url = "https://github.com/ros2-gbp/foonathan_memory_vendor-release/archive/release/rolling/foonathan_memory_vendor/1.3.0-3.tar.gz";
+    name = "1.3.0-3.tar.gz";
+    sha256 = "b57a0e81b114896c353f2f6047675b32b9d693f67a3f002ab163092908d4ff9c";
   };
 
   buildType = "cmake";

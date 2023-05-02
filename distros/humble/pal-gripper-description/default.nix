@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, urdf-test, xacro }:
 buildRosPackage {
   pname = "ros-humble-pal-gripper-description";
-  version = "3.0.2-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_gripper-release/archive/release/humble/pal_gripper_description/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "6d6f58fe27df6772d428ee901ac54f9bc611ca06c8ebbecdf1f10c764d00ed2a";
+    url = "https://github.com/pal-gbp/pal_gripper-release/archive/release/humble/pal_gripper_description/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "aefa23a09b1c2e024e86e97b26959411a9afcc1a6fa3786c13f17121355a9d22";
   };
 
   buildType = "ament_cmake";

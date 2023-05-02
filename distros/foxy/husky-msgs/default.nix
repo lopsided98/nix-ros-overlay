@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-husky-msgs";
-  version = "1.0.7-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/foxy/husky_msgs/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "cf1c9adc08628160bd622271b3a89e37f7ae2e9ab011e86bc46be108317cd787";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/foxy/husky_msgs/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "08e2899d369b100ba512c8bae75abfc1bf8b5c5094d10846cd2655ab60c9b0ff";
   };
 
   buildType = "ament_cmake";

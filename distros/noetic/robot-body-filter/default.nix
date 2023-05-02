@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, fcl, filters, geometric-shapes, geometry-msgs, laser-geometry, message-generation, message-runtime, moveit-core, moveit-ros-perception, pcl, pcl-conversions, pkg-config, roscpp, rostest, sensor-msgs, std-msgs, tf2, tf2-eigen, tf2-ros, tf2-sensor-msgs, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-robot-body-filter";
-  version = "1.2.2-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/peci1/robot_body_filter-release/archive/release/noetic/robot_body_filter/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "ffe794904da49c0f07f1e535350c2c7d6fbb69b44263014ba337dd009878cea6";
+    url = "https://github.com/peci1/robot_body_filter-release/archive/release/noetic/robot_body_filter/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "6cdfb7d4ef7015f91a01b64482d7470612c5ed207f13244e64164b96c0e38d6a";
   };
 
   buildType = "catkin";

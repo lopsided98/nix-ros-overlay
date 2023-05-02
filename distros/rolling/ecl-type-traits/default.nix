@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ecl-build, ecl-config, ecl-license, ecl-mpl }:
 buildRosPackage {
   pname = "ros-rolling-ecl-type-traits";
-  version = "1.2.1-r1";
+  version = "1.2.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/rolling/ecl_type_traits/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "22500cb148f3e37fe5dda191a8dc8c80d1474687dd97625520189f6477f5ea01";
+    url = "https://github.com/ros2-gbp/ecl_core-release/archive/release/rolling/ecl_type_traits/1.2.1-3.tar.gz";
+    name = "1.2.1-3.tar.gz";
+    sha256 = "d4e8ae23473fce4d3ba02ff02e8c376c5dcc6584e5698a6489fa66f8cdb5398d";
   };
 
   buildType = "ament_cmake";

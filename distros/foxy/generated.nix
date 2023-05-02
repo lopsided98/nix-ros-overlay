@@ -144,8 +144,6 @@ self: super: {
 
  apriltag = self.callPackage ./apriltag {};
 
- aruco-opencv = self.callPackage ./aruco-opencv {};
-
  aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
 
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
@@ -204,8 +202,6 @@ self: super: {
 
  cartographer-ros-msgs = self.callPackage ./cartographer-ros-msgs {};
 
- casadi-vendor = self.callPackage ./casadi-vendor {};
-
  cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
 
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
@@ -228,6 +224,8 @@ self: super: {
 
  color-names = self.callPackage ./color-names {};
 
+ color-util = self.callPackage ./color-util {};
+
  common-interfaces = self.callPackage ./common-interfaces {};
 
  composition = self.callPackage ./composition {};
@@ -243,8 +241,6 @@ self: super: {
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
  contracts-lite-vendor = self.callPackage ./contracts-lite-vendor {};
-
- control-box-rst = self.callPackage ./control-box-rst {};
 
  control-msgs = self.callPackage ./control-msgs {};
 
@@ -344,7 +340,13 @@ self: super: {
 
  depthai-bridge = self.callPackage ./depthai-bridge {};
 
+ depthai-descriptions = self.callPackage ./depthai-descriptions {};
+
  depthai-examples = self.callPackage ./depthai-examples {};
+
+ depthai-filters = self.callPackage ./depthai-filters {};
+
+ depthai-ros-driver = self.callPackage ./depthai-ros-driver {};
 
  depthai-ros-msgs = self.callPackage ./depthai-ros-msgs {};
 
@@ -355,8 +357,6 @@ self: super: {
  desktop = self.callPackage ./desktop {};
 
  diagnostic-aggregator = self.callPackage ./diagnostic-aggregator {};
-
- diagnostic-common-diagnostics = self.callPackage ./diagnostic-common-diagnostics {};
 
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
@@ -658,8 +658,6 @@ self: super: {
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
 
- ifopt = self.callPackage ./ifopt {};
-
  ign-ros2-control-demos = self.callPackage ./ign-ros2-control-demos {};
 
  image-common = self.callPackage ./image-common {};
@@ -764,6 +762,8 @@ self: super: {
 
  lanelet2-validation = self.callPackage ./lanelet2-validation {};
 
+ laser-filters = self.callPackage ./laser-filters {};
+
  laser-geometry = self.callPackage ./laser-geometry {};
 
  laser-proc = self.callPackage ./laser-proc {};
@@ -856,6 +856,12 @@ self: super: {
 
  maliput-py = self.callPackage ./maliput-py {};
 
+ maliput-ros = self.callPackage ./maliput-ros {};
+
+ maliput-ros-interfaces = self.callPackage ./maliput-ros-interfaces {};
+
+ maliput-ros-translation = self.callPackage ./maliput-ros-translation {};
+
  maliput-sparse = self.callPackage ./maliput-sparse {};
 
  map-msgs = self.callPackage ./map-msgs {};
@@ -867,6 +873,8 @@ self: super: {
  mapviz-interfaces = self.callPackage ./mapviz-interfaces {};
 
  mapviz-plugins = self.callPackage ./mapviz-plugins {};
+
+ marker-msgs = self.callPackage ./marker-msgs {};
 
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
 
@@ -1230,7 +1238,13 @@ self: super: {
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
- popf = self.callPackage ./popf {};
+ polygon-demos = self.callPackage ./polygon-demos {};
+
+ polygon-msgs = self.callPackage ./polygon-msgs {};
+
+ polygon-rviz-plugins = self.callPackage ./polygon-rviz-plugins {};
+
+ polygon-utils = self.callPackage ./polygon-utils {};
 
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
@@ -1738,7 +1752,31 @@ self: super: {
 
  rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
 
+ rtabmap-conversions = self.callPackage ./rtabmap-conversions {};
+
+ rtabmap-demos = self.callPackage ./rtabmap-demos {};
+
+ rtabmap-examples = self.callPackage ./rtabmap-examples {};
+
+ rtabmap-launch = self.callPackage ./rtabmap-launch {};
+
+ rtabmap-msgs = self.callPackage ./rtabmap-msgs {};
+
+ rtabmap-odom = self.callPackage ./rtabmap-odom {};
+
+ rtabmap-python = self.callPackage ./rtabmap-python {};
+
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
+
+ rtabmap-rviz-plugins = self.callPackage ./rtabmap-rviz-plugins {};
+
+ rtabmap-slam = self.callPackage ./rtabmap-slam {};
+
+ rtabmap-sync = self.callPackage ./rtabmap-sync {};
+
+ rtabmap-util = self.callPackage ./rtabmap-util {};
+
+ rtabmap-viz = self.callPackage ./rtabmap-viz {};
 
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
 
@@ -1994,6 +2032,22 @@ self: super: {
 
  turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
 
+ turtlebot3-manipulation = self.callPackage ./turtlebot3-manipulation {};
+
+ turtlebot3-manipulation-bringup = self.callPackage ./turtlebot3-manipulation-bringup {};
+
+ turtlebot3-manipulation-cartographer = self.callPackage ./turtlebot3-manipulation-cartographer {};
+
+ turtlebot3-manipulation-description = self.callPackage ./turtlebot3-manipulation-description {};
+
+ turtlebot3-manipulation-hardware = self.callPackage ./turtlebot3-manipulation-hardware {};
+
+ turtlebot3-manipulation-moveit-config = self.callPackage ./turtlebot3-manipulation-moveit-config {};
+
+ turtlebot3-manipulation-navigation2 = self.callPackage ./turtlebot3-manipulation-navigation2 {};
+
+ turtlebot3-manipulation-teleop = self.callPackage ./turtlebot3-manipulation-teleop {};
+
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
  turtlebot3-navigation2 = self.callPackage ./turtlebot3-navigation2 {};
@@ -2005,6 +2059,20 @@ self: super: {
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
  turtlesim = self.callPackage ./turtlesim {};
+
+ tuw-airskin-msgs = self.callPackage ./tuw-airskin-msgs {};
+
+ tuw-geometry = self.callPackage ./tuw-geometry {};
+
+ tuw-geometry-msgs = self.callPackage ./tuw-geometry-msgs {};
+
+ tuw-msgs = self.callPackage ./tuw-msgs {};
+
+ tuw-multi-robot-msgs = self.callPackage ./tuw-multi-robot-msgs {};
+
+ tuw-nav-msgs = self.callPackage ./tuw-nav-msgs {};
+
+ tuw-object-msgs = self.callPackage ./tuw-object-msgs {};
 
  twist-mux = self.callPackage ./twist-mux {};
 
@@ -2083,6 +2151,14 @@ self: super: {
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
 
  velodyne-simulator = self.callPackage ./velodyne-simulator {};
+
+ vesc = self.callPackage ./vesc {};
+
+ vesc-ackermann = self.callPackage ./vesc-ackermann {};
+
+ vesc-driver = self.callPackage ./vesc-driver {};
+
+ vesc-msgs = self.callPackage ./vesc-msgs {};
 
  vision-msgs = self.callPackage ./vision-msgs {};
 

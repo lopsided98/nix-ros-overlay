@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-dolly-follow";
-  version = "0.4.0-r2";
+  version = "0.4.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dolly-release/archive/release/rolling/dolly_follow/0.4.0-2.tar.gz";
-    name = "0.4.0-2.tar.gz";
-    sha256 = "562f93892919b5530bed54f63741636d82bb6940149173b3f3e15f975d709c13";
+    url = "https://github.com/ros2-gbp/dolly-release/archive/release/rolling/dolly_follow/0.4.0-4.tar.gz";
+    name = "0.4.0-4.tar.gz";
+    sha256 = "2013d59c6127562a449ced53351f15359af688f96f775ced418878d4fc84b625";
   };
 
   buildType = "ament_cmake";

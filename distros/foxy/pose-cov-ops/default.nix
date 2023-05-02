@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, geometry-msgs, gtest, mrpt2, ros-environment, tf2 }:
 buildRosPackage {
   pname = "ros-foxy-pose-cov-ops";
-  version = "0.3.8-r1";
+  version = "0.3.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pose_cov_ops-release/archive/release/foxy/pose_cov_ops/0.3.8-1.tar.gz";
-    name = "0.3.8-1.tar.gz";
-    sha256 = "0fbc07f70b9b3afa4e5f3f585a985c45fbfb769b2b242456fd8905abb26534e7";
+    url = "https://github.com/ros2-gbp/pose_cov_ops-release/archive/release/foxy/pose_cov_ops/0.3.10-1.tar.gz";
+    name = "0.3.10-1.tar.gz";
+    sha256 = "d274cba0f2619c14f141c3a4ead5075e779b63728012f36b46e98a807487910c";
   };
 
   buildType = "ament_cmake";

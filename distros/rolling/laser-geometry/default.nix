@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-pytest, ament-cmake-uncrustify, eigen, eigen3-cmake-module, python-cmake-module, python3Packages, rclcpp, rclpy, sensor-msgs, sensor-msgs-py, tf2 }:
 buildRosPackage {
   pname = "ros-rolling-laser-geometry";
-  version = "2.5.0-r1";
+  version = "2.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/laser_geometry-release/archive/release/rolling/laser_geometry/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "71f79486b4abbe9760eb8b034fcb63afa1110ee1703e2c4e9c02c351b82031a0";
+    url = "https://github.com/ros2-gbp/laser_geometry-release/archive/release/rolling/laser_geometry/2.6.0-1.tar.gz";
+    name = "2.6.0-1.tar.gz";
+    sha256 = "b636f8bc34fc051937f96e4661ef3b6b55c5299a7d925f7998b079fea78bde7c";
   };
 
   buildType = "ament_cmake";

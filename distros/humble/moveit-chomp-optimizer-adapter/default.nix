@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_chomp_optimizer_adapter/2.5.4-1.tar.gz";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_chomp_optimizer_adapter/2.5.4-1.tar.gz";
     name = "2.5.4-1.tar.gz";
     sha256 = "bc93e6c7778a72bce58b8c3f13cef641e45a788bc27bc16f5fe82b0e342b3193";
   };

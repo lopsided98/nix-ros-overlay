@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, orocos-kdl-vendor, pybind11-vendor, python-cmake-module, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-python-orocos-kdl-vendor";
-  version = "0.3.4-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/orocos_kdl_vendor-release/archive/release/rolling/python_orocos_kdl_vendor/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "26d3205193deaed462ec00b651cf0be2f7033a5302b4ddd802f3548d67e5da1f";
+    url = "https://github.com/ros2-gbp/orocos_kdl_vendor-release/archive/release/rolling/python_orocos_kdl_vendor/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "d73cb78e0d89f821c808750ca5cac46666dfd3fc7e398a23dd0a85df241b6cf0";
   };
 
   buildType = "ament_cmake";

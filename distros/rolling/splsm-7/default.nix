@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-splsm-7";
-  version = "3.0.1-r1";
+  version = "3.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/r2r_spl-release/archive/release/rolling/splsm_7/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "e169bdbebd40b8501344f07469ec5238aa9da7a10381841e425c6c27fff22bf6";
+    url = "https://github.com/ros2-gbp/r2r_spl-release/archive/release/rolling/splsm_7/3.0.1-2.tar.gz";
+    name = "3.0.1-2.tar.gz";
+    sha256 = "10dabc95aa678d5cfd721bfb76cb0a1cde78b3c1014526413443a3f96e6535e5";
   };
 
   buildType = "ament_cmake";

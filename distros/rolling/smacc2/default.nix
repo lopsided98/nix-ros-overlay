@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, lttng-ust, rcl, rclcpp, rclcpp-action, smacc2-msgs, tracetools, tracetools-launch, tracetools-trace }:
 buildRosPackage {
   pname = "ros-rolling-smacc2";
-  version = "0.4.0-r1";
+  version = "0.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/SMACC2-release/archive/release/rolling/smacc2/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "4fe8371092104b0e61840ed60d99b5c0a21fbd77b1c75543f7471679470ea895";
+    url = "https://github.com/ros2-gbp/SMACC2-release/archive/release/rolling/smacc2/0.4.0-2.tar.gz";
+    name = "0.4.0-2.tar.gz";
+    sha256 = "3d462c514c55d9ecff79506285861b1f851c10bdc2f603e22490f821d2e086cf";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dingo-gazebo }:
 buildRosPackage {
   pname = "ros-noetic-dingo-simulator";
-  version = "0.1.1-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/dingo_simulator-release/archive/release/noetic/dingo_simulator/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "09094dfe9128e2ce280c7c62ba092c9ac08630d405ce6639df972304f50b5394";
+    url = "https://github.com/clearpath-gbp/dingo_simulator-release/archive/release/noetic/dingo_simulator/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "bb99c8c421dcc03d1f29ea34eec3bf4ac0eb0d62b0a69f30092618baa0591bf6";
   };
 
   buildType = "catkin";

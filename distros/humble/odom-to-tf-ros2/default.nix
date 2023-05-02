@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/gstavrinos/odom_to_tf_ros2-release/archive/release/humble/odom_to_tf_ros2/1.0.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/odom_to_tf_ros2-release/archive/release/humble/odom_to_tf_ros2/1.0.2-1.tar.gz";
     name = "1.0.2-1.tar.gz";
     sha256 = "55fb77df94f443ecdce53466364fd25afd3dc547bce365d831bb0910e5163b92";
   };

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, camera-info-manager, cv-bridge, image-transport, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-v4l2-camera";
-  version = "0.6.1-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_v4l2_camera-release/archive/release/rolling/v4l2_camera/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "f5779d7281836abaabbd40b779be732b4d38b273c50c778d0165c7487886746d";
+    url = "https://github.com/ros2-gbp/ros2_v4l2_camera-release/archive/release/rolling/v4l2_camera/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "759576fef6ef3d28160a81e5ea395baba401d5d7681252b74153142c6cb839fc";
   };
 
   buildType = "ament_cmake";

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/septentrio-users/septentrio_gnss_driver_ros2-release/archive/release/humble/septentrio_gnss_driver/1.2.3-1.tar.gz";
+    url = "https://github.com/ros2-gbp/septentrio_gnss_driver_ros2-release/archive/release/humble/septentrio_gnss_driver/1.2.3-1.tar.gz";
     name = "1.2.3-1.tar.gz";
     sha256 = "e9491556e95a5479e791883ce8487055c38ccd9c19fdda56c3fd8fc1d25d5404";
   };

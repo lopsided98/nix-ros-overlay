@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, irobot-create-msgs, libgpiod, rclcpp, rclcpp-action, rcutils, sensor-msgs, std-msgs, turtlebot4-msgs, turtlebot4-node }:
 buildRosPackage {
   pname = "ros-humble-turtlebot4-base";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4_robot-release/archive/release/humble/turtlebot4_base/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "75a225d63a4e193091357a8ecabc6c6e76596ece7918c9ae7f3a254714bd565f";
+    url = "https://github.com/ros2-gbp/turtlebot4_robot-release/archive/release/humble/turtlebot4_base/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "50feccadb6791bbab01d60f169314fcc4071a3659d975d76c8d65badf3c9d258";
   };
 
   buildType = "ament_cmake";

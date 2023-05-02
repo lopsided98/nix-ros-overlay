@@ -18,9 +18,13 @@ self: super: {
 
  actionlib-msgs = self.callPackage ./actionlib-msgs {};
 
+ actuator-msgs = self.callPackage ./actuator-msgs {};
+
  adaptive-component = self.callPackage ./adaptive-component {};
 
  admittance-controller = self.callPackage ./admittance-controller {};
+
+ aerostack2 = self.callPackage ./aerostack2 {};
 
  affordance-primitives = self.callPackage ./affordance-primitives {};
 
@@ -168,11 +172,53 @@ self: super: {
 
  aruco-msgs = self.callPackage ./aruco-msgs {};
 
- aruco-opencv = self.callPackage ./aruco-opencv {};
-
  aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
 
  aruco-ros = self.callPackage ./aruco-ros {};
+
+ as2-alphanumeric-viewer = self.callPackage ./as2-alphanumeric-viewer {};
+
+ as2-behavior = self.callPackage ./as2-behavior {};
+
+ as2-behavior-tree = self.callPackage ./as2-behavior-tree {};
+
+ as2-behaviors-motion = self.callPackage ./as2-behaviors-motion {};
+
+ as2-behaviors-perception = self.callPackage ./as2-behaviors-perception {};
+
+ as2-behaviors-platform = self.callPackage ./as2-behaviors-platform {};
+
+ as2-behaviors-trajectory-generation = self.callPackage ./as2-behaviors-trajectory-generation {};
+
+ as2-cli = self.callPackage ./as2-cli {};
+
+ as2-core = self.callPackage ./as2-core {};
+
+ as2-gazebo-classic-assets = self.callPackage ./as2-gazebo-classic-assets {};
+
+ as2-ign-gazebo-assets = self.callPackage ./as2-ign-gazebo-assets {};
+
+ as2-keyboard-teleoperation = self.callPackage ./as2-keyboard-teleoperation {};
+
+ as2-motion-controller = self.callPackage ./as2-motion-controller {};
+
+ as2-motion-reference-handlers = self.callPackage ./as2-motion-reference-handlers {};
+
+ as2-msgs = self.callPackage ./as2-msgs {};
+
+ as2-platform-crazyflie = self.callPackage ./as2-platform-crazyflie {};
+
+ as2-platform-dji-osdk = self.callPackage ./as2-platform-dji-osdk {};
+
+ as2-platform-ign-gazebo = self.callPackage ./as2-platform-ign-gazebo {};
+
+ as2-platform-tello = self.callPackage ./as2-platform-tello {};
+
+ as2-realsense-interface = self.callPackage ./as2-realsense-interface {};
+
+ as2-state-estimator = self.callPackage ./as2-state-estimator {};
+
+ as2-usb-camera-interface = self.callPackage ./as2-usb-camera-interface {};
 
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
 
@@ -216,6 +262,8 @@ self: super: {
 
  camera-info-manager = self.callPackage ./camera-info-manager {};
 
+ camera-ros = self.callPackage ./camera-ros {};
+
  can-msgs = self.callPackage ./can-msgs {};
 
  cartographer = self.callPackage ./cartographer {};
@@ -234,6 +282,8 @@ self: super: {
 
  color-names = self.callPackage ./color-names {};
 
+ color-util = self.callPackage ./color-util {};
+
  common-interfaces = self.callPackage ./common-interfaces {};
 
  composition = self.callPackage ./composition {};
@@ -245,8 +295,6 @@ self: super: {
  compressed-image-transport = self.callPackage ./compressed-image-transport {};
 
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
-
- control-box-rst = self.callPackage ./control-box-rst {};
 
  control-msgs = self.callPackage ./control-msgs {};
 
@@ -328,7 +376,11 @@ self: super: {
 
  depthai-bridge = self.callPackage ./depthai-bridge {};
 
+ depthai-descriptions = self.callPackage ./depthai-descriptions {};
+
  depthai-examples = self.callPackage ./depthai-examples {};
+
+ depthai-filters = self.callPackage ./depthai-filters {};
 
  depthai-ros-driver = self.callPackage ./depthai-ros-driver {};
 
@@ -341,8 +393,6 @@ self: super: {
  desktop-full = self.callPackage ./desktop-full {};
 
  diagnostic-aggregator = self.callPackage ./diagnostic-aggregator {};
-
- diagnostic-common-diagnostics = self.callPackage ./diagnostic-common-diagnostics {};
 
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
@@ -814,6 +864,8 @@ self: super: {
 
  mapviz-plugins = self.callPackage ./mapviz-plugins {};
 
+ marker-msgs = self.callPackage ./marker-msgs {};
+
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
 
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
@@ -849,6 +901,8 @@ self: super: {
  menge-vendor = self.callPackage ./menge-vendor {};
 
  message-filters = self.callPackage ./message-filters {};
+
+ message-tf-frame-transformer = self.callPackage ./message-tf-frame-transformer {};
 
  micro-ros-diagnostic-bridge = self.callPackage ./micro-ros-diagnostic-bridge {};
 
@@ -1056,6 +1110,10 @@ self: super: {
 
  novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
 
+ novatel-oem7-driver = self.callPackage ./novatel-oem7-driver {};
+
+ novatel-oem7-msgs = self.callPackage ./novatel-oem7-msgs {};
+
  ntpd-driver = self.callPackage ./ntpd-driver {};
 
  ntrip-client = self.callPackage ./ntrip-client {};
@@ -1105,6 +1163,12 @@ self: super: {
  pal-gripper-controller-configuration = self.callPackage ./pal-gripper-controller-configuration {};
 
  pal-gripper-description = self.callPackage ./pal-gripper-description {};
+
+ pal-navigation-cfg = self.callPackage ./pal-navigation-cfg {};
+
+ pal-navigation-cfg-bringup = self.callPackage ./pal-navigation-cfg-bringup {};
+
+ pal-navigation-cfg-params = self.callPackage ./pal-navigation-cfg-params {};
 
  pal-statistics = self.callPackage ./pal-statistics {};
 
@@ -1216,6 +1280,8 @@ self: super: {
 
  pmb2-gazebo = self.callPackage ./pmb2-gazebo {};
 
+ pmb2-laser-sensors = self.callPackage ./pmb2-laser-sensors {};
+
  pmb2-maps = self.callPackage ./pmb2-maps {};
 
  pmb2-navigation = self.callPackage ./pmb2-navigation {};
@@ -1228,7 +1294,13 @@ self: super: {
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
- popf = self.callPackage ./popf {};
+ polygon-demos = self.callPackage ./polygon-demos {};
+
+ polygon-msgs = self.callPackage ./polygon-msgs {};
+
+ polygon-rviz-plugins = self.callPackage ./polygon-rviz-plugins {};
+
+ polygon-utils = self.callPackage ./polygon-utils {};
 
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
@@ -1738,7 +1810,31 @@ self: super: {
 
  rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
 
+ rtabmap-conversions = self.callPackage ./rtabmap-conversions {};
+
+ rtabmap-demos = self.callPackage ./rtabmap-demos {};
+
+ rtabmap-examples = self.callPackage ./rtabmap-examples {};
+
+ rtabmap-launch = self.callPackage ./rtabmap-launch {};
+
+ rtabmap-msgs = self.callPackage ./rtabmap-msgs {};
+
+ rtabmap-odom = self.callPackage ./rtabmap-odom {};
+
+ rtabmap-python = self.callPackage ./rtabmap-python {};
+
  rtabmap-ros = self.callPackage ./rtabmap-ros {};
+
+ rtabmap-rviz-plugins = self.callPackage ./rtabmap-rviz-plugins {};
+
+ rtabmap-slam = self.callPackage ./rtabmap-slam {};
+
+ rtabmap-sync = self.callPackage ./rtabmap-sync {};
+
+ rtabmap-util = self.callPackage ./rtabmap-util {};
+
+ rtabmap-viz = self.callPackage ./rtabmap-viz {};
 
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
 
@@ -1964,6 +2060,8 @@ self: super: {
 
  tiago-gazebo = self.callPackage ./tiago-gazebo {};
 
+ tiago-laser-sensors = self.callPackage ./tiago-laser-sensors {};
+
  tiago-moveit-config = self.callPackage ./tiago-moveit-config {};
 
  tiago-navigation = self.callPackage ./tiago-navigation {};
@@ -2032,6 +2130,20 @@ self: super: {
 
  turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
 
+ turtlebot3-manipulation = self.callPackage ./turtlebot3-manipulation {};
+
+ turtlebot3-manipulation-bringup = self.callPackage ./turtlebot3-manipulation-bringup {};
+
+ turtlebot3-manipulation-cartographer = self.callPackage ./turtlebot3-manipulation-cartographer {};
+
+ turtlebot3-manipulation-description = self.callPackage ./turtlebot3-manipulation-description {};
+
+ turtlebot3-manipulation-hardware = self.callPackage ./turtlebot3-manipulation-hardware {};
+
+ turtlebot3-manipulation-navigation2 = self.callPackage ./turtlebot3-manipulation-navigation2 {};
+
+ turtlebot3-manipulation-teleop = self.callPackage ./turtlebot3-manipulation-teleop {};
+
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
  turtlebot3-navigation2 = self.callPackage ./turtlebot3-navigation2 {};
@@ -2073,6 +2185,20 @@ self: super: {
  turtlebot4-viz = self.callPackage ./turtlebot4-viz {};
 
  turtlesim = self.callPackage ./turtlesim {};
+
+ tuw-airskin-msgs = self.callPackage ./tuw-airskin-msgs {};
+
+ tuw-geometry = self.callPackage ./tuw-geometry {};
+
+ tuw-geometry-msgs = self.callPackage ./tuw-geometry-msgs {};
+
+ tuw-msgs = self.callPackage ./tuw-msgs {};
+
+ tuw-multi-robot-msgs = self.callPackage ./tuw-multi-robot-msgs {};
+
+ tuw-nav-msgs = self.callPackage ./tuw-nav-msgs {};
+
+ tuw-object-msgs = self.callPackage ./tuw-object-msgs {};
 
  twist-mux = self.callPackage ./twist-mux {};
 

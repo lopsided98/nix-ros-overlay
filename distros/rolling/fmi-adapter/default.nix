@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, fmilibrary-vendor, launch, launch-ros, launch-testing, rcl-interfaces, rclcpp, rclcpp-components, rclcpp-lifecycle, rcutils, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-fmi-adapter";
-  version = "2.1.1-r2";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fmi_adapter-release/archive/release/rolling/fmi_adapter/2.1.1-2.tar.gz";
-    name = "2.1.1-2.tar.gz";
-    sha256 = "6d78acb9a8142111da89acd32ec9bf1f7dd4924d084a951b5bc4d5ebd0aef7af";
+    url = "https://github.com/ros2-gbp/fmi_adapter-release/archive/release/rolling/fmi_adapter/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "c278d662210e6c0aa5e7d3df95163463e433cd864c33c902a6c0994ef4f9cb39";
   };
 
   buildType = "ament_cmake";

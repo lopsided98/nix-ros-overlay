@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mrpt-local-obstacles, mrpt-localization, mrpt-map, mrpt-rawlog, mrpt-reactivenav2d, mrpt-tutorials }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-navigation";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_navigation/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "dcdb033ee157f532cb51e3c945b9c8e23a7964a9f411495944dcf279c94d0ae9";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_navigation/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "7f613b9cd26f1817c0dc436f5964ce6ae79821e9ef84e04ae320bbb746f16715";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ublox-dgnss-node, ublox-ubx-interfaces, ublox-ubx-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ublox-dgnss";
-  version = "0.3.5-r3";
+  version = "0.3.5-r4";
 
   src = fetchurl {
-    url = "https://github.com/aussierobots/ublox_dgnss-release/archive/release/rolling/ublox_dgnss/0.3.5-3.tar.gz";
-    name = "0.3.5-3.tar.gz";
-    sha256 = "bc1705b81508739a893d9026d9d0fb2924f58e992cb7811566afbc4411442519";
+    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/rolling/ublox_dgnss/0.3.5-4.tar.gz";
+    name = "0.3.5-4.tar.gz";
+    sha256 = "e767f3422d7783d6e0d5c2e8909f41e2064615a49faa37f450d1768e5cc7e0c6";
   };
 
   buildType = "ament_cmake";

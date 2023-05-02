@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rclcpp, rclpy, rmw, tf2, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-interactive-markers";
-  version = "2.4.0-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/interactive_markers-release/archive/release/rolling/interactive_markers/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "db5af4cf024b60f03ed1d39abe58d33dfb54e3ea1e7de61ed13e6647319aa893";
+    url = "https://github.com/ros2-gbp/interactive_markers-release/archive/release/rolling/interactive_markers/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "f9363875742af87e93271013a8e6ba345e47ec1dae76d8d2868acbaf2c8179cc";
   };
 
   buildType = "ament_cmake";

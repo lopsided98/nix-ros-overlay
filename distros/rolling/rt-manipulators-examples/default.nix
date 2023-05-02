@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rt-manipulators-cpp }:
 buildRosPackage {
   pname = "ros-rolling-rt-manipulators-examples";
-  version = "1.0.0-r1";
+  version = "1.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/rt-net-gbp/rt_manipulators_cpp-release/archive/release/rolling/rt_manipulators_examples/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "64314c4f4fc407e563dcbd9f6c5cb563f088add33c064d8b2da966b66e4dbee8";
+    url = "https://github.com/ros2-gbp/rt_manipulators_cpp-release/archive/release/rolling/rt_manipulators_examples/1.0.0-2.tar.gz";
+    name = "1.0.0-2.tar.gz";
+    sha256 = "a2608caab8fc88275dacbce9b96bb85f053e8ab8282da088f7f47bb7144278ee";
   };
 
   buildType = "ament_cmake";

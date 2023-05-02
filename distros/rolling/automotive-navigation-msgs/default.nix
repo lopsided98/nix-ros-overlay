@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-automotive-navigation-msgs";
-  version = "3.0.4-r2";
+  version = "3.0.4-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/automotive_autonomy_msgs-release/archive/release/rolling/automotive_navigation_msgs/3.0.4-2.tar.gz";
-    name = "3.0.4-2.tar.gz";
-    sha256 = "5b63ed892c5de906dbd1f3732cdf2a42e910a03a016d975d8b9750051008e2af";
+    url = "https://github.com/ros2-gbp/automotive_autonomy_msgs-release/archive/release/rolling/automotive_navigation_msgs/3.0.4-4.tar.gz";
+    name = "3.0.4-4.tar.gz";
+    sha256 = "d060783545d19ee2072b6837f30f90b35726733e0d13c6ad2c5b00e62e2d31c4";
   };
 
   buildType = "ament_cmake";

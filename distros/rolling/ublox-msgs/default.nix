@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, rosidl-default-generators, sensor-msgs, std-msgs, ublox-serialization }:
 buildRosPackage {
   pname = "ros-rolling-ublox-msgs";
-  version = "2.3.0-r1";
+  version = "2.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox-release/archive/release/rolling/ublox_msgs/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "61219582db60f388d4058a1ad7729ed3a28681c4f603bf47dea2801025a885a8";
+    url = "https://github.com/ros2-gbp/ublox-release/archive/release/rolling/ublox_msgs/2.3.0-2.tar.gz";
+    name = "2.3.0-2.tar.gz";
+    sha256 = "06558bc9c1c301b42bef1737812fb0532f8aa49612ff3437994d5a59349e7304";
   };
 
   buildType = "ament_cmake";

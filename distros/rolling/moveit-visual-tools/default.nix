@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, graph-msgs, moveit-common, moveit-core, moveit-ros-planning, rclcpp, rviz-visual-tools, std-msgs, tf2-eigen, tf2-ros, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-moveit-visual-tools";
-  version = "4.1.0-r1";
+  version = "4.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_visual_tools-release/archive/release/rolling/moveit_visual_tools/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "40d9478303563259b02f8e5adde3c5a89d64c3ca302bbcba352a93370d85c115";
+    url = "https://github.com/ros2-gbp/moveit_visual_tools-release/archive/release/rolling/moveit_visual_tools/4.1.0-2.tar.gz";
+    name = "4.1.0-2.tar.gz";
+    sha256 = "9eb5979cba4f4997bed7c07c96760dfcd65c5005c71f4d764347309cef5d2336";
   };
 
   buildType = "ament_cmake";

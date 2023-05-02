@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, bond, bondcpp, builtin-interfaces, pkg-config, rclcpp, rclcpp-lifecycle, rosidl-default-generators, rosidl-default-runtime, std-msgs, util-linux }:
 buildRosPackage {
   pname = "ros-rolling-test-bond";
-  version = "4.0.0-r1";
+  version = "4.0.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/rolling/test_bond/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "2e284328b5de955acf505f9f5aab6ed59a764393912ac48ffd2fc44466e08eaf";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/rolling/test_bond/4.0.0-3.tar.gz";
+    name = "4.0.0-3.tar.gz";
+    sha256 = "3c15681510c2f27939ca5b2e6f01516cdc545258e8b8c8f64a073b90e10bba62";
   };
 
   buildType = "ament_cmake";

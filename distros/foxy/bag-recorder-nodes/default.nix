@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, rclcpp, rosbag2-cpp, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-bag-recorder-nodes";
-  version = "0.3.9-r1";
+  version = "0.3.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/bag_recorder_nodes/0.3.9-1.tar.gz";
-    name = "0.3.9-1.tar.gz";
-    sha256 = "f0632d4811553c36a304c5da7202b47c3f0c3c9caa69fc66b13a82ef873c4097";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/bag_recorder_nodes/0.3.10-1.tar.gz";
+    name = "0.3.10-1.tar.gz";
+    sha256 = "a6a4471ce036abe339274cbac5e46919a5a2b75201ef0b2c0b430b53872b98d1";
   };
 
   buildType = "ament_cmake";

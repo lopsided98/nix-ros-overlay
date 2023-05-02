@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, diagnostic-aggregator, diagnostic-msgs, diagnostic-updater, irobot-create-msgs, pythonPackages, rclpy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-turtlebot4-diagnostics";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4_robot-release/archive/release/humble/turtlebot4_diagnostics/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "b5c214dc7d50aad65248517799c0b7e2883badd5ae920c320db8057691fcdbd4";
+    url = "https://github.com/ros2-gbp/turtlebot4_robot-release/archive/release/humble/turtlebot4_diagnostics/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "3075aef4be6ca87548089e51f31b2f33dc58f4714be10d42da63e9dedc18a367";
   };
 
   buildType = "ament_python";

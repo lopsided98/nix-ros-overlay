@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-index-python, ament-lint-auto, ament-lint-common, boost, opencv, python-cmake-module, python3Packages, rclcpp, rcpputils, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-cv-bridge";
-  version = "3.4.0-r1";
+  version = "3.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/rolling/cv_bridge/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "e908845b688ccfd5e433d78b2bd3791d30778b0cc1bd6e9ed5dad3622c8f0af7";
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/rolling/cv_bridge/3.4.0-2.tar.gz";
+    name = "3.4.0-2.tar.gz";
+    sha256 = "756685bbe2edfa5b38d2b044c5b6b5db9010f513f2903b6ffb1e94361006814f";
   };
 
   buildType = "ament_cmake";

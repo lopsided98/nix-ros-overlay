@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, example-interfaces, lifecycle-msgs, rcl, rclc, rclc-lifecycle, rclc-parameter, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-rclc-examples";
-  version = "4.0.1-r1";
+  version = "4.0.2-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclc-release/archive/release/humble/rclc_examples/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "0251aef75cf428670e80610e95f664154e947e058e50672a6aba93ea667d381b";
+    url = "https://github.com/ros2-gbp/rclc-release/archive/release/humble/rclc_examples/4.0.2-3.tar.gz";
+    name = "4.0.2-3.tar.gz";
+    sha256 = "a8005eed673570fb6fcd3c8d55eaa377c53d7a5008da850106f0497c56e3f7d3";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-acceleration, ament-cmake-core, ament-cmake-ros }:
 buildRosPackage {
   pname = "ros-rolling-ament-vitis";
-  version = "0.10.1-r1";
+  version = "0.10.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_vitis-release/archive/release/rolling/ament_vitis/0.10.1-1.tar.gz";
-    name = "0.10.1-1.tar.gz";
-    sha256 = "7e4531b4c8539b2dfefef2c072500cd3c33961152037eec0a89eb9a137fd3dfd";
+    url = "https://github.com/ros2-gbp/ament_vitis-release/archive/release/rolling/ament_vitis/0.10.1-3.tar.gz";
+    name = "0.10.1-3.tar.gz";
+    sha256 = "39c30afce58c705c2c108b61321a5cceb01d35dbd9f5128792e00f2d94869417";
   };
 
   buildType = "ament_cmake";

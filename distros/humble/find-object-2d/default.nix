@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/find_object_2d-release/archive/release/humble/find_object_2d/0.7.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/find_object_2d-release/archive/release/humble/find_object_2d/0.7.0-1.tar.gz";
     name = "0.7.0-1.tar.gz";
     sha256 = "01e262c4209580ebb7b339b6b2f9333e592eb8dd1b00fb0881eae099eda14bc8";
   };

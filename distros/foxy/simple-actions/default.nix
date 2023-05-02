@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-python, rclcpp, rclcpp-action, rclpy }:
 buildRosPackage {
   pname = "ros-foxy-simple-actions";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/DLu/simple_actions-release/archive/release/foxy/simple_actions/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "c842b4e43dd1ecb1950292fab948ef022c182396a252eccd364907245dd19d93";
+    url = "https://github.com/DLu/simple_actions-release/archive/release/foxy/simple_actions/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "8e149b31905aeaedd5f08bf7fb5d7addc32884e0b7f47ada770fb988e8636909";
   };
 
   buildType = "ament_cmake";

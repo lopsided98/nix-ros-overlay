@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, dolly-follow, gazebo-ros-pkgs, ros2launch, rviz2 }:
 buildRosPackage {
   pname = "ros-rolling-dolly-gazebo";
-  version = "0.4.0-r2";
+  version = "0.4.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dolly-release/archive/release/rolling/dolly_gazebo/0.4.0-2.tar.gz";
-    name = "0.4.0-2.tar.gz";
-    sha256 = "ed2618c8a0b5aaf0446280f3a69bd1fee5b0ff69f9de0e984679fc5d9cce60ad";
+    url = "https://github.com/ros2-gbp/dolly-release/archive/release/rolling/dolly_gazebo/0.4.0-4.tar.gz";
+    name = "0.4.0-4.tar.gz";
+    sha256 = "6ea1596fcc8f70b0e3eccd8858e0a2bb504f17bd00467cad4e82218bdbbc1372";
   };
 
   buildType = "ament_cmake";

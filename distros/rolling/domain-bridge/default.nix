@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-testing, launch-testing-ament-cmake, libyamlcpp, rclcpp, rclcpp-components, rcutils, rmw-connextdds, rmw-cyclonedds-cpp, rmw-fastrtps-cpp, rmw-implementation-cmake, rosbag2-cpp, rosgraph-msgs, rosidl-default-generators, rosidl-default-runtime, rosidl-typesupport-cpp, test-msgs, zstd-vendor }:
 buildRosPackage {
   pname = "ros-rolling-domain-bridge";
-  version = "0.5.0-r1";
+  version = "0.5.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/domain_bridge-release/archive/release/rolling/domain_bridge/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "4c7bbb2b2fc4fbde815ce3015aed6125202d6f2ba9a0f58edfe91368cddc37ab";
+    url = "https://github.com/ros2-gbp/domain_bridge-release/archive/release/rolling/domain_bridge/0.5.0-3.tar.gz";
+    name = "0.5.0-3.tar.gz";
+    sha256 = "5272061ce965497f9e28b9341ef764c315d6e09b9a2296b810348c4d0e7e6126";
   };
 
   buildType = "ament_cmake";

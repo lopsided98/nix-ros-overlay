@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, dynamic-reconfigure, libusb1, robot-state-publisher, roscpp, roslaunch, sensor-msgs, xacro }:
 buildRosPackage {
   pname = "ros-noetic-sick-tim";
-  version = "0.0.17-r1";
+  version = "0.0.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/sick_tim-release/archive/release/noetic/sick_tim/0.0.17-1.tar.gz";
-    name = "0.0.17-1.tar.gz";
-    sha256 = "9bd217db019fea42671703198dc50adffe67b1ad94c7902244fea03e20de606a";
+    url = "https://github.com/uos-gbp/sick_tim-release/archive/release/noetic/sick_tim/0.0.18-1.tar.gz";
+    name = "0.0.18-1.tar.gz";
+    sha256 = "71305e0257c1d8c39788ae4e812ce7be881f0f993eaecd29d410aedd2440a067";
   };
 
   buildType = "catkin";

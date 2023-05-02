@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.3.5-r4";
 
   src = fetchurl {
-    url = "https://github.com/aussierobots/ublox_dgnss-release/archive/release/humble/ublox_dgnss_node/0.3.5-4.tar.gz";
+    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/humble/ublox_dgnss_node/0.3.5-4.tar.gz";
     name = "0.3.5-4.tar.gz";
     sha256 = "633667e4147582fb9fce8f11a1baed9ce39ad4cead4598c4b7bcbd1b8cc98614";
   };

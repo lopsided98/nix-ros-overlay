@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, pythonPackages, rmf-building-map-msgs, rmf-door-msgs, rmf-lift-msgs, rmf-visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rmf-visualization-building-systems";
-  version = "2.0.1-r1";
+  version = "2.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/rolling/rmf_visualization_building_systems/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "1c1797564a8462b4ceec34a891f897784c51790f1c1af2575e2940729ac88f92";
+    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/rolling/rmf_visualization_building_systems/2.0.1-2.tar.gz";
+    name = "2.0.1-2.tar.gz";
+    sha256 = "0f7b8ead31542f0bf98421b645747e72f6e6ddf6b1133556685ecefbb260f8bd";
   };
 
   buildType = "ament_python";

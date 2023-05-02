@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-core-generators, rosidl-core-runtime }:
 buildRosPackage {
   pname = "ros-rolling-service-msgs";
-  version = "1.4.0-r1";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/service_msgs/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "011f22f5bc816443d896bbbc195dff050789cfe64b2df71b349a38c266e70659";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/service_msgs/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "8b84a0461f3c8318e4648975acb65de07af63f4b3b702f38e6d9fb67a22a965d";
   };
 
   buildType = "ament_cmake";

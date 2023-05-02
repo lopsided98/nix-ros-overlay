@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, sbcl }:
 buildRosPackage {
   pname = "ros-noetic-cl-utils";
-  version = "0.2.14-r1";
+  version = "0.2.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/noetic/cl_utils/0.2.14-1.tar.gz";
-    name = "0.2.14-1.tar.gz";
-    sha256 = "9c25d5cbd6698016c63fa549b6a6079574ceb5a8f784ae80134232f7df0872fa";
+    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/noetic/cl_utils/0.2.15-1.tar.gz";
+    name = "0.2.15-1.tar.gz";
+    sha256 = "f143fbb695f2cc2015ed3a3d45b781eedef18fc8b3101ffd4ba0bdb1dd605380";
   };
 
   buildType = "catkin";

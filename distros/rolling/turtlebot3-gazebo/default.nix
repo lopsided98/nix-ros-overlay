@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gazebo-ros-pkgs, geometry-msgs, nav-msgs, rclcpp, sensor-msgs, tf2 }:
 buildRosPackage {
   pname = "ros-rolling-turtlebot3-gazebo";
-  version = "2.2.5-r2";
+  version = "2.2.5-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_simulations-release/archive/release/rolling/turtlebot3_gazebo/2.2.5-2.tar.gz";
-    name = "2.2.5-2.tar.gz";
-    sha256 = "5bcda560d52185893e52feaf9a5f4a00fd88960ee9da00901f28919b323af218";
+    url = "https://github.com/ros2-gbp/turtlebot3_simulations-release/archive/release/rolling/turtlebot3_gazebo/2.2.5-3.tar.gz";
+    name = "2.2.5-3.tar.gz";
+    sha256 = "b8dd28c2339291cd369e830549c9defd3592b1e7ad8158d5c7836c3d3a518ca8";
   };
 
   buildType = "ament_cmake";

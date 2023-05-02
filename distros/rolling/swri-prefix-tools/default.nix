@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-swri-prefix-tools";
-  version = "3.5.0-r1";
+  version = "3.5.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_prefix_tools/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "0291626f67ddc364a648103aac553d21dff885d05ec51ea7475bc757eca307e9";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_prefix_tools/3.5.0-2.tar.gz";
+    name = "3.5.0-2.tar.gz";
+    sha256 = "e98355c01c7e75e71436ae6622bbfdf818cf9f43b6e69eb5628004a80071e2a5";
   };
 
   buildType = "ament_cmake";

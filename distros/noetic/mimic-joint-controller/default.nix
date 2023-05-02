@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-mimic-joint-controller";
-  version = "0.1.7-r1";
+  version = "0.1.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/mimic_joint_controller/0.1.7-1.tar.gz";
-    name = "0.1.7-1.tar.gz";
-    sha256 = "583df314fc48f83c8bba3195a19519cb778810d1a268f76b3d129891d41aa513";
+    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/mimic_joint_controller/0.1.10-1.tar.gz";
+    name = "0.1.10-1.tar.gz";
+    sha256 = "54ef05843147ff4c0cad36335a55ca27a0959314a0239dd7bc581d1da0e2296a";
   };
 
   buildType = "catkin";

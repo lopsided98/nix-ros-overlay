@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-nao-sensor-msgs";
-  version = "0.0.4-r2";
+  version = "0.0.4-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nao_interfaces-release/archive/release/rolling/nao_sensor_msgs/0.0.4-2.tar.gz";
-    name = "0.0.4-2.tar.gz";
-    sha256 = "f973e97107df5ce3cb6d9b279a1eef8ace30484cb3006ecdfd4b3815fe20b010";
+    url = "https://github.com/ros2-gbp/nao_interfaces-release/archive/release/rolling/nao_sensor_msgs/0.0.4-3.tar.gz";
+    name = "0.0.4-3.tar.gz";
+    sha256 = "759b9727be6f8e3d75def5a3c5e52e55f44ab792f01ca4fe75b9e2dd77bc40d6";
   };
 
   buildType = "ament_cmake";

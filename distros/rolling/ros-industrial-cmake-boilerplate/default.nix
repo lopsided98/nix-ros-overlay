@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, clang, cmake, cppcheck, gtest, include-what-you-use, lcov }:
 buildRosPackage {
   pname = "ros-rolling-ros-industrial-cmake-boilerplate";
-  version = "0.4.0-r1";
+  version = "0.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/ros_industrial_cmake_boilerplate-release/archive/release/rolling/ros_industrial_cmake_boilerplate/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "402ee9e74bf4e78be5fc3eee3b37c7b0c677f1f59579f1099d18439a6ed2eac9";
+    url = "https://github.com/ros2-gbp/ros_industrial_cmake_boilerplate-release/archive/release/rolling/ros_industrial_cmake_boilerplate/0.4.0-2.tar.gz";
+    name = "0.4.0-2.tar.gz";
+    sha256 = "6e014a77a649487fa450e97a6d61fe76e6bcd5292f01ce9cbd2bdd38c33754e0";
   };
 
   buildType = "cmake";

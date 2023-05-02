@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-gps-msgs";
-  version = "1.0.6-r1";
+  version = "1.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/foxy/gps_msgs/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "4c700cee631e72df22f3e4312f1213da730f7c938e52715ea37bd9cddd55fb57";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/foxy/gps_msgs/1.0.8-1.tar.gz";
+    name = "1.0.8-1.tar.gz";
+    sha256 = "ccff4b4110cfca6b8af62a375c5cf6d4cfd982f8f8dd05d2a00d92e91638a39c";
   };
 
   buildType = "ament_cmake";

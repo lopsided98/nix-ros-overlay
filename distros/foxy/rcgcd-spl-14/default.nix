@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-rcgcd-spl-14";
-  version = "0.0.1-r1";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/foxy/rcgcd_spl_14/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "83e8aaf6e0f29ef91261e5ba11996ceae30ba80eab29065b00969a76d0245efa";
+    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/foxy/rcgcd_spl_14/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "af7bf2824fd7dc3c38214ec02cee7d00b469c2b1c45c6cc82485bf840ad882f8";
   };
 
   buildType = "ament_cmake";

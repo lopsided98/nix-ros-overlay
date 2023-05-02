@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.0.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/schunk_svh_library-release/archive/release/noetic/schunk_svh_library/1.0.1-4.tar.gz";
+    url = "https://github.com/SCHUNK-GmbH-Co-KG/schunk_svh_library-release/archive/release/noetic/schunk_svh_library/1.0.1-4.tar.gz";
     name = "1.0.1-4.tar.gz";
     sha256 = "32ac7237f3b5768e70d76f0c1621c5edc5d5f11c4a9864bfafcc991611581295";
   };

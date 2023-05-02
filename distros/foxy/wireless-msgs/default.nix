@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-wireless-msgs";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/foxy/wireless_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "4d6e0eb90a937d263b588edf958e823b9c9ea4a0a872c4402a19d968033d5e05";
+    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/foxy/wireless_msgs/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "c427bcad327672a5412ea0c05d8bc8d0e378b148e73b30e78c023c612cdf9f81";
   };
 
   buildType = "ament_cmake";

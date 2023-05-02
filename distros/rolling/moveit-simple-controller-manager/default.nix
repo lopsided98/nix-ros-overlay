@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, control-msgs, moveit-common, moveit-core, pluginlib, rclcpp, rclcpp-action }:
 buildRosPackage {
   pname = "ros-rolling-moveit-simple-controller-manager";
-  version = "2.6.0-r1";
+  version = "2.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/rolling/moveit_simple_controller_manager/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "73b3b7aa2fe25311cb5951112e8e413b7ba55efe2afdb13a35a437db79b8e303";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_simple_controller_manager/2.7.3-1.tar.gz";
+    name = "2.7.3-1.tar.gz";
+    sha256 = "eaffcb976b0e3138f29391d179e9f4cdf0551cdfce460f5f62fd462ce4e2c9f2";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = ''A generic, simple controller manager plugin for MoveIt.'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

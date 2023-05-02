@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, flir-camera-description, lms1xx, pointgrey-camera-description, robot-state-publisher, roslaunch, sick-tim, urdf, velodyne-description, xacro }:
 buildRosPackage {
   pname = "ros-noetic-jackal-description";
-  version = "0.8.6-r1";
+  version = "0.8.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/noetic/jackal_description/0.8.6-1.tar.gz";
-    name = "0.8.6-1.tar.gz";
-    sha256 = "361da61ffbf9bd686ffa5c336cde209df4aeb01be4ff0aeed37e32b8a43128ff";
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/noetic/jackal_description/0.8.7-1.tar.gz";
+    name = "0.8.7-1.tar.gz";
+    sha256 = "5f7a7eae1c81fa7590574e9eecfc5f56dc3ac2b9bc93a04a4b92470e033483de";
   };
 
   buildType = "catkin";

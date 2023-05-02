@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, dynamixel-sdk, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-dynamixel-workbench-toolbox";
-  version = "2.2.3-r1";
+  version = "2.2.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_workbench-release/archive/release/rolling/dynamixel_workbench_toolbox/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "7b9580eb5d194225c191c503071d32c6cb86122283561ff2908030b90203f0be";
+    url = "https://github.com/ros2-gbp/dynamixel_workbench-release/archive/release/rolling/dynamixel_workbench_toolbox/2.2.3-3.tar.gz";
+    name = "2.2.3-3.tar.gz";
+    sha256 = "b17e758b7b170e212d600dccee2c559f1a02a93375b689d7c6d3a013c1601636";
   };
 
   buildType = "ament_cmake";

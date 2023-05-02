@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, pkg-config }:
 buildRosPackage {
   pname = "ros-rolling-tracetools-acceleration";
-  version = "0.4.1-r1";
+  version = "0.4.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tracetools_acceleration-release/archive/release/rolling/tracetools_acceleration/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "79cae6147e1348fbe46ced09cb993e2ec6ae3f320e1ea7d5da5c3acd7f08197a";
+    url = "https://github.com/ros2-gbp/tracetools_acceleration-release/archive/release/rolling/tracetools_acceleration/0.4.1-2.tar.gz";
+    name = "0.4.1-2.tar.gz";
+    sha256 = "2be9b91b725c727537802cdd9846ca64726344046587fcfcf469f0e014afa474";
   };
 
   buildType = "ament_cmake";

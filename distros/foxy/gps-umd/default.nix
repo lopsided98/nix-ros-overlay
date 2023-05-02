@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gps-msgs, gps-tools, gpsd-client }:
 buildRosPackage {
   pname = "ros-foxy-gps-umd";
-  version = "1.0.6-r1";
+  version = "1.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/foxy/gps_umd/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "1350fe0c955d3906d4b0886a73b3248ccd03ed69fea708a0ef7f5cd493648389";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/foxy/gps_umd/1.0.8-1.tar.gz";
+    name = "1.0.8-1.tar.gz";
+    sha256 = "eadf581cc09b88bfb255cf13146113b8ca7bf756cb046df92f5d756c17ebbe14";
   };
 
   buildType = "catkin";

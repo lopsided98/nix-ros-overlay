@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, laser-geometry, launch, launch-ros, message-filters, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-ros, tf2-sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-pointcloud-to-laserscan";
-  version = "2.0.1-r2";
+  version = "2.0.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pointcloud_to_laserscan-release/archive/release/rolling/pointcloud_to_laserscan/2.0.1-2.tar.gz";
-    name = "2.0.1-2.tar.gz";
-    sha256 = "78beaa6308a0952ccb13df1c8a9e1ca22dc03536beb6527a3ce7f815da20a957";
+    url = "https://github.com/ros2-gbp/pointcloud_to_laserscan-release/archive/release/rolling/pointcloud_to_laserscan/2.0.1-3.tar.gz";
+    name = "2.0.1-3.tar.gz";
+    sha256 = "c71c6c25c68229a86991af070334e4ecd14bdf0f9b3d0648247421ebd1d6d3ee";
   };
 
   buildType = "ament_cmake";

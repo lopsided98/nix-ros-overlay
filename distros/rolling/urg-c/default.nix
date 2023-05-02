@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-urg-c";
-  version = "1.0.4001-r3";
+  version = "1.0.4001-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/urg_c-release/archive/release/rolling/urg_c/1.0.4001-3.tar.gz";
-    name = "1.0.4001-3.tar.gz";
-    sha256 = "26741360e399f73202bac31bacd0ee0f2b9ac531c22ee1c8eed8a8c528efe4b5";
+    url = "https://github.com/ros2-gbp/urg_c-release/archive/release/rolling/urg_c/1.0.4001-4.tar.gz";
+    name = "1.0.4001-4.tar.gz";
+    sha256 = "d67714f3125a8e580def469a2ef6e576a900d5c37ea5868d98a216f9bbeed4e1";
   };
 
   buildType = "ament_cmake";

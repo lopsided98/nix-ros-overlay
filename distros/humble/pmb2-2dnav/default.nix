@@ -2,21 +2,21 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, nav2-bringup, pmb2-maps, rviz2 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, pal-navigation-cfg-bringup, pmb2-laser-sensors, pmb2-maps, rviz2 }:
 buildRosPackage {
   pname = "ros-humble-pmb2-2dnav";
-  version = "4.0.0-r1";
+  version = "4.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_2dnav/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "f6d8beefed00991c12a63493632a060ac1e5f201f4eb4ea3f6ac9cf21407518d";
+    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_2dnav/4.0.3-1.tar.gz";
+    name = "4.0.3-1.tar.gz";
+    sha256 = "f928333ff21e422ec09de134e23af9e340e5161a7de3486a7fd47a146c15ecb7";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ nav2-bringup pmb2-maps rviz2 ];
+  propagatedBuildInputs = [ pal-navigation-cfg-bringup pmb2-laser-sensors pmb2-maps rviz2 ];
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {

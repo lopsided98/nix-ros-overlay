@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, pythonPackages }:
 buildRosPackage {
   pname = "ros-rolling-rpyutils";
-  version = "0.3.2-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rpyutils-release/archive/release/rolling/rpyutils/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "542acc46bb1b0c313323208bcd5ea0aceeb5891cc72feac4d6300e8e59e8cd42";
+    url = "https://github.com/ros2-gbp/rpyutils-release/archive/release/rolling/rpyutils/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "2a5d6e360679ab452391cfbcc8c2d6348f6e7b91e5d8b1629e112c957bf2cf3b";
   };
 
   buildType = "ament_python";

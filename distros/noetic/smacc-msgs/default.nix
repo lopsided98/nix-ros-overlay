@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-smacc-msgs";
-  version = "0.9.7-r1";
+  version = "1.4.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/robosoft-ai/smacc-release/archive/release/noetic/smacc_msgs/0.9.7-1.tar.gz";
-    name = "0.9.7-1.tar.gz";
-    sha256 = "79cd5d5de9e4efc08814cd8dd19e8fd8ae6c603d50ab01f1e35473e92cb0fa0b";
+    url = "https://github.com/robosoft-ai/smacc-release/archive/release/noetic/smacc_msgs/1.4.6-1.tar.gz";
+    name = "1.4.6-1.tar.gz";
+    sha256 = "8d96661d3990f909810695c831b4dac42a86af71d5f7a8b1ae6888cfed4c7608";
   };
 
   buildType = "catkin";

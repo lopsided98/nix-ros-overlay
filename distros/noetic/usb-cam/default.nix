@@ -2,20 +2,20 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, camera-info-manager, catkin, ffmpeg, image-transport, roscpp, sensor-msgs, std-msgs, std-srvs, v4l-utils }:
+{ lib, buildRosPackage, fetchurl, camera-info-manager, catkin, cv-bridge, ffmpeg, image-transport, roscpp, sensor-msgs, std-msgs, std-srvs, v4l-utils }:
 buildRosPackage {
   pname = "ros-noetic-usb-cam";
-  version = "0.3.6-r1";
+  version = "0.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/usb_cam-release/archive/release/noetic/usb_cam/0.3.6-1.tar.gz";
-    name = "0.3.6-1.tar.gz";
-    sha256 = "7b03e9cd278dce5cd3c97057c87beb4f13da3089055efab56cb8f7dac80397c2";
+    url = "https://github.com/ros-gbp/usb_cam-release/archive/release/noetic/usb_cam/0.3.7-1.tar.gz";
+    name = "0.3.7-1.tar.gz";
+    sha256 = "cfc1dbd0ef6c02804caea1dfba3d496792e63bac1a0cda962d21f1ad29d1482a";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ camera-info-manager ffmpeg image-transport roscpp sensor-msgs std-msgs std-srvs v4l-utils ];
+  propagatedBuildInputs = [ camera-info-manager cv-bridge ffmpeg image-transport roscpp sensor-msgs std-msgs std-srvs v4l-utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

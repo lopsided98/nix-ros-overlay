@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ackermann-msgs";
-  version = "2.0.2-r2";
+  version = "2.0.2-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ackermann_msgs-release/archive/release/rolling/ackermann_msgs/2.0.2-2.tar.gz";
-    name = "2.0.2-2.tar.gz";
-    sha256 = "990103ad9f6ff0976f7239c51a781ccdddf1b1d9b292635e0a1fd545d97f15fa";
+    url = "https://github.com/ros2-gbp/ackermann_msgs-release/archive/release/rolling/ackermann_msgs/2.0.2-4.tar.gz";
+    name = "2.0.2-4.tar.gz";
+    sha256 = "97fc006d50362e36377e56607646d9c36bff362b9e057107a18ac1bf5ca6bad7";
   };
 
   buildType = "ament_cmake";

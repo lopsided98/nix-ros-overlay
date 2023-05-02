@@ -2,25 +2,24 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, builtin-interfaces, class-loader, compressed-depth-image-transport, compressed-image-transport, cv-bridge, geometry-msgs, image-geometry, image-transport, laser-geometry, message-filters, nav-msgs, nav2-common, nav2-msgs, octomap, octomap-msgs, pcl, pcl-conversions, pluginlib, rclcpp, rclcpp-components, rclpy, ros-environment, rosgraph-msgs, rosidl-default-generators, rosidl-default-runtime, rtabmap, rviz-common, rviz-default-plugins, rviz-rendering, sensor-msgs, std-msgs, std-srvs, stereo-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, rtabmap-conversions, rtabmap-demos, rtabmap-examples, rtabmap-launch, rtabmap-msgs, rtabmap-odom, rtabmap-python, rtabmap-rviz-plugins, rtabmap-slam, rtabmap-sync, rtabmap-util, rtabmap-viz }:
 buildRosPackage {
   pname = "ros-foxy-rtabmap-ros";
-  version = "0.20.23-r1";
+  version = "0.21.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/foxy/rtabmap_ros/0.20.23-1.tar.gz";
-    name = "0.20.23-1.tar.gz";
-    sha256 = "81443bc9974a3c066b9cbe3a4f85290a65720130fd3b0402e6c98346b65cffe4";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/foxy/rtabmap_ros/0.21.1-1.tar.gz";
+    name = "0.21.1-1.tar.gz";
+    sha256 = "e63d3afa8ef3696d133c7f7af863ba023e3c0c32db71029db16e25967d4f5c8f";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-python pcl ros-environment rosidl-default-generators ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ builtin-interfaces class-loader compressed-depth-image-transport compressed-image-transport cv-bridge geometry-msgs image-geometry image-transport laser-geometry message-filters nav-msgs nav2-common nav2-msgs octomap octomap-msgs pcl-conversions pluginlib rclcpp rclcpp-components rclpy rosgraph-msgs rosidl-default-runtime rtabmap rviz-common rviz-default-plugins rviz-rendering sensor-msgs std-msgs std-srvs stereo-msgs tf2 tf2-eigen tf2-geometry-msgs tf2-ros visualization-msgs ];
-  nativeBuildInputs = [ ament-cmake ament-cmake-python ];
+  buildInputs = [ ament-cmake ];
+  propagatedBuildInputs = [ rtabmap-conversions rtabmap-demos rtabmap-examples rtabmap-launch rtabmap-msgs rtabmap-odom rtabmap-python rtabmap-rviz-plugins rtabmap-slam rtabmap-sync rtabmap-util rtabmap-viz ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''RTAB-Map's ros-pkg. RTAB-Map is a RGB-D SLAM approach with real-time constraints.'';
+    description = ''RTAB-Map Stack'';
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

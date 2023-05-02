@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, cob-sound, cob-srvs, control-msgs, geometry-msgs, move-base-msgs, python3Packages, rospy, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-noetic-scenario-test-tools";
-  version = "0.6.31-r1";
+  version = "0.6.32-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/noetic/scenario_test_tools/0.6.31-1.tar.gz";
-    name = "0.6.31-1.tar.gz";
-    sha256 = "1f5039005fa8ea020789fcfc604882b8b4a6056f8c5e9646f9a83f76e901d3db";
+    url = "https://github.com/ipa320/cob_command_tools-release/archive/release/noetic/scenario_test_tools/0.6.32-1.tar.gz";
+    name = "0.6.32-1.tar.gz";
+    sha256 = "92b65f440dccb2821552ad5dfb87da701657a6c9c5548dce99ca6cf7ee97b68b";
   };
 
   buildType = "catkin";

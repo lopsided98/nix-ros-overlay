@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, diagnostic-msgs, launch-testing-ament-cmake, launch-testing-ros, pluginlib, rclcpp, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-diagnostic-aggregator";
-  version = "3.1.0-r2";
+  version = "3.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/rolling/diagnostic_aggregator/3.1.0-2.tar.gz";
-    name = "3.1.0-2.tar.gz";
-    sha256 = "207e5646dc6c86ffa192035fcd19fbd606dd5c67e89d2ef5126c2d25714bb14c";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/rolling/diagnostic_aggregator/3.1.2-1.tar.gz";
+    name = "3.1.2-1.tar.gz";
+    sha256 = "7d77ea4d6c3995f8c14325e4012f946451c86ef89fc0dda7a585b563379c7966";
   };
 
   buildType = "ament_cmake";

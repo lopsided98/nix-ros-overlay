@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, diagnostic-aggregator, diagnostic-common-diagnostics, diagnostic-updater, self-test }:
 buildRosPackage {
   pname = "ros-foxy-diagnostics";
-  version = "3.1.0-r2";
+  version = "3.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/foxy/diagnostics/3.1.0-2.tar.gz";
-    name = "3.1.0-2.tar.gz";
-    sha256 = "062fdd7e68ab16ba10f7c8ad5a109ef5c7c77635881e910e4deda63e1672bbb8";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/foxy/diagnostics/3.1.2-1.tar.gz";
+    name = "3.1.2-1.tar.gz";
+    sha256 = "baf01395c406d8dc03ff097394808ea44e4384567653a69653d1ab397153e9f0";
   };
 
   buildType = "ament_cmake";

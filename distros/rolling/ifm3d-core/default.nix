@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, curl, cv-bridge, glog, pcl, xmlrpc_c }:
 buildRosPackage {
   pname = "ros-rolling-ifm3d-core";
-  version = "0.18.0-r6";
+  version = "0.18.0-r8";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ifm3d-release/archive/release/rolling/ifm3d_core/0.18.0-6.tar.gz";
-    name = "0.18.0-6.tar.gz";
-    sha256 = "d8c37c96f9cf13545977b65839b0bec9db17ca39320b5191c1530b025bec6b1a";
+    url = "https://github.com/ros2-gbp/ifm3d-release/archive/release/rolling/ifm3d_core/0.18.0-8.tar.gz";
+    name = "0.18.0-8.tar.gz";
+    sha256 = "bd7bb5c6ee4c801618285f7e1c44653b25f814f7103570a323f9dbd470594555";
   };
 
   buildType = "cmake";

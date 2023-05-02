@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager, interactive-marker-twist-server, joint-state-controller, joy, nav-msgs, realtime-tools, robot-localization, roslaunch, teleop-twist-joy, tf, topic-tools, twist-mux, urdf }:
 buildRosPackage {
   pname = "ros-noetic-ridgeback-control";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/noetic/ridgeback_control/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "66527dfd93b88a9b621ff58a3f9206a7341c7fb104d7c008aacd8e3dcbe534f9";
+    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/noetic/ridgeback_control/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "7ce9d191fa92dbe0a797e80a0fd9d3ccaf372875938e2b4bb5ac6add40c426a0";
   };
 
   buildType = "catkin";

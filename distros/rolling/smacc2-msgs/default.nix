@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-smacc2-msgs";
-  version = "0.4.0-r1";
+  version = "0.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/SMACC2-release/archive/release/rolling/smacc2_msgs/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "1922f017e26dfaa39ecc4a0465d78d434ee25d8997d084c68d44e62dd2e93e5c";
+    url = "https://github.com/ros2-gbp/SMACC2-release/archive/release/rolling/smacc2_msgs/0.4.0-2.tar.gz";
+    name = "0.4.0-2.tar.gz";
+    sha256 = "6222960f0091ac60b4af262eaa08ef6b761b90ac48ab52366bbae6840f91b870";
   };
 
   buildType = "ament_cmake";

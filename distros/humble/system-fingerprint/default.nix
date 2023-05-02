@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/MetroRobots/ros_system_fingerprint-release/archive/release/humble/system_fingerprint/0.7.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/ros_system_fingerprint-release/archive/release/humble/system_fingerprint/0.7.0-1.tar.gz";
     name = "0.7.0-1.tar.gz";
     sha256 = "70ee7502ad02e86f9a0282425e090f693f854e4eb0c408b9f59982d7b07f3751";
   };

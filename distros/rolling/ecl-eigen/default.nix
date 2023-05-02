@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, eigen }:
 buildRosPackage {
   pname = "ros-rolling-ecl-eigen";
-  version = "1.2.1-r1";
+  version = "1.2.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/yujinrobot-release/ecl_core-release/archive/release/rolling/ecl_eigen/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "78dcbdf14768cc004b774c3b713418d99a795472d5ebd4cb20c5b6a0d4491482";
+    url = "https://github.com/ros2-gbp/ecl_core-release/archive/release/rolling/ecl_eigen/1.2.1-3.tar.gz";
+    name = "1.2.1-3.tar.gz";
+    sha256 = "1bbb0623b6e9763602e6fc0dccbf7d1b83512249373bf01ba26178b35400a0c0";
   };
 
   buildType = "ament_cmake";

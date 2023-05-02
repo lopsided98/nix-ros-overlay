@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/humble/moveit_core/2.5.4-1.tar.gz";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_core/2.5.4-1.tar.gz";
     name = "2.5.4-1.tar.gz";
     sha256 = "7b8381cc6d4cba4443e6fd0571ca97a5b99cb645c596c24b85c6e67177628934";
   };

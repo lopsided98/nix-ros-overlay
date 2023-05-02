@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-planners-ompl, pilz-industrial-motion-planner }:
 buildRosPackage {
   pname = "ros-rolling-moveit-planners";
-  version = "2.6.0-r1";
+  version = "2.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/moveit/moveit2-release/archive/release/rolling/moveit_planners/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "729ae9c4cc5eb70418e152d15b9f8f8d463b2fe050a5658dae9a68ac3e35e90a";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_planners/2.7.3-1.tar.gz";
+    name = "2.7.3-1.tar.gz";
+    sha256 = "e373d0bcc36f2ad7660b58500be16d9f76ecdae9774d939c9a407148b282aa52";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = ''Meta package that installs all available planners for MoveIt'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

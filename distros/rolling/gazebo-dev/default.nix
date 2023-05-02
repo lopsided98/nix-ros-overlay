@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gazebo_11 }:
 buildRosPackage {
   pname = "ros-rolling-gazebo-dev";
-  version = "3.7.0-r1";
+  version = "3.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/rolling/gazebo_dev/3.7.0-1.tar.gz";
-    name = "3.7.0-1.tar.gz";
-    sha256 = "40a3c8d3dde74997d0e43e6aa9356c3f03e98ade66b04fd56856c31b4ec241dd";
+    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/rolling/gazebo_dev/3.7.0-2.tar.gz";
+    name = "3.7.0-2.tar.gz";
+    sha256 = "adae446826a0da0d270d59f6484a92ad8cfcc43b4f24c4483c1d9cb0fd696058";
   };
 
   buildType = "ament_cmake";

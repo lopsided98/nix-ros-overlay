@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-rolling-adaptive-component";
-  version = "0.2.1-r1";
+  version = "0.2.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/adaptive_component-release/archive/release/rolling/adaptive_component/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "b64cfa5f13820d57ede023be9f44179577ca83f73a2c70426de8c1480e2c8d22";
+    url = "https://github.com/ros2-gbp/adaptive_component-release/archive/release/rolling/adaptive_component/0.2.1-3.tar.gz";
+    name = "0.2.1-3.tar.gz";
+    sha256 = "f70b20afbf449794cd26b3c0c8220c6ba65b7f70dd59ec4112ca95812b3a06dc";
   };
 
   buildType = "ament_cmake";

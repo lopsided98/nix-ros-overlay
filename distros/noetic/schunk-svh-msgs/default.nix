@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/schunk_svh_ros_driver-release/archive/release/noetic/schunk_svh_msgs/0.1.2-1.tar.gz";
+    url = "https://github.com/SCHUNK-GmbH-Co-KG/schunk_svh_ros_driver-release/archive/release/noetic/schunk_svh_msgs/0.1.2-1.tar.gz";
     name = "0.1.2-1.tar.gz";
     sha256 = "a20ea4ff9e9de46c41b2ddde6e1ecbc3d95ab47e0bb4c9910036046b2ae4d929";
   };

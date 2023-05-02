@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/PickNikRobotics/cpp_polyfills-release/archive/release/humble/tcb_span/1.0.2-2.tar.gz";
+    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/humble/tcb_span/1.0.2-2.tar.gz";
     name = "1.0.2-2.tar.gz";
     sha256 = "2a506d5ed3e043fcd5e81ae931a53553c7583137cb5ca0de9fe63e3c5f85b5b1";
   };

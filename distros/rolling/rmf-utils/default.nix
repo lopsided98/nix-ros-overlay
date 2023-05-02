@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-catch2, ament-cmake-uncrustify, cmake }:
 buildRosPackage {
   pname = "ros-rolling-rmf-utils";
-  version = "1.4.0-r1";
+  version = "1.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_utils-release/archive/release/rolling/rmf_utils/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "e51b54a8af36aa2c61f2c7152e44b8935e23b9bfdbb864cc45309775f73c9865";
+    url = "https://github.com/ros2-gbp/rmf_utils-release/archive/release/rolling/rmf_utils/1.4.0-2.tar.gz";
+    name = "1.4.0-2.tar.gz";
+    sha256 = "a989a13a82b68cfbebecb5198d22db3c04ff5795b372abf59ee7483242bf226f";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-python, ament-index-cpp, backward-ros, controller-interface, controller-manager-msgs, diagnostic-updater, hardware-interface, launch, launch-ros, pluginlib, rclcpp, rcpputils, realtime-tools, ros2-control-test-assets, ros2param, ros2run }:
 buildRosPackage {
   pname = "ros-rolling-controller-manager";
-  version = "3.9.0-r2";
+  version = "3.12.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/controller_manager/3.9.0-2.tar.gz";
-    name = "3.9.0-2.tar.gz";
-    sha256 = "2d5534a56421e67d303595235cf3e7c70459f9b029152b381dde94394a431ff5";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/controller_manager/3.12.2-1.tar.gz";
+    name = "3.12.2-1.tar.gz";
+    sha256 = "9f3fca3a653b389f7d2b6ebd7de5744f8af9005720ef19760220f1e277e6cdad";
   };
 
   buildType = "ament_cmake";

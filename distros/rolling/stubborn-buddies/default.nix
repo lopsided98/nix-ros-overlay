@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp, rclcpp-components, rclcpp-lifecycle, rcutils, std-msgs, stubborn-buddies-msgs }:
 buildRosPackage {
   pname = "ros-rolling-stubborn-buddies";
-  version = "1.0.0-r4";
+  version = "1.0.0-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/stubborn_buddies-release/archive/release/rolling/stubborn_buddies/1.0.0-4.tar.gz";
-    name = "1.0.0-4.tar.gz";
-    sha256 = "d6a4412dd8c0e698e83f27cb71f600256ab2337ae0a5dbe9a40b15df43b5333e";
+    url = "https://github.com/ros2-gbp/stubborn_buddies-release/archive/release/rolling/stubborn_buddies/1.0.0-5.tar.gz";
+    name = "1.0.0-5.tar.gz";
+    sha256 = "26acbca3c643c68a4714619d8808dbe87a87b8a29a816a773cf8cc09d9793e4f";
   };
 
   buildType = "ament_cmake";

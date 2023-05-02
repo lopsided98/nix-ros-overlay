@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nao-command-msgs, nao-sensor-msgs, rclcpp-components, rcss3d-agent, rcss3d-agent-msgs-to-soccer-interfaces, soccer-vision-3d-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rcss3d-nao";
-  version = "0.1.1-r1";
+  version = "0.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcss3d_nao-release/archive/release/rolling/rcss3d_nao/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "438571fa12e46dc4e3fd3da364541e9ca1d229a453439a46d62e158dc65dd76b";
+    url = "https://github.com/ros2-gbp/rcss3d_nao-release/archive/release/rolling/rcss3d_nao/0.1.1-2.tar.gz";
+    name = "0.1.1-2.tar.gz";
+    sha256 = "15be650adc9f4a2f5acf3455517fb622f57928728ec105f8d46800f623c53775";
   };
 
   buildType = "ament_cmake";

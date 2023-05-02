@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, husky-msgs, husky-viz }:
 buildRosPackage {
   pname = "ros-foxy-husky-desktop";
-  version = "1.0.7-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/foxy/husky_desktop/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "21560266da1399025db0d84dc90a708c4208dddf47d5d01419759e82fae8b5c5";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/foxy/husky_desktop/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "5e1fe75b92b50e0373755fea98cde0987a69f3e55882264a759fecab34e7c237";
   };
 
   buildType = "ament_cmake";

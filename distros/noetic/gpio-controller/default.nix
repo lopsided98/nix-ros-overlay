@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, pluginlib, realtime-tools, rm-common, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-gpio-controller";
-  version = "0.1.7-r1";
+  version = "0.1.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/gpio_controller/0.1.7-1.tar.gz";
-    name = "0.1.7-1.tar.gz";
-    sha256 = "975510a3a726dcfdc2671a805327a54837451999c9826d5e6490ba352430fff8";
+    url = "https://github.com/rm-controls/rm_controllers-release/archive/release/noetic/gpio_controller/0.1.10-1.tar.gz";
+    name = "0.1.10-1.tar.gz";
+    sha256 = "90be855ab54bc16a1f89b6750da4e4b3faa224c7a5111f17fe15f9e2d1c95592";
   };
 
   buildType = "catkin";

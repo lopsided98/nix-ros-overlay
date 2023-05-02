@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, gtest-vendor, lcov, python3Packages, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-mrt-cmake-modules";
-  version = "1.0.9-r2";
+  version = "1.0.9-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrt_cmake_modules-release/archive/release/rolling/mrt_cmake_modules/1.0.9-2.tar.gz";
-    name = "1.0.9-2.tar.gz";
-    sha256 = "ab11795cb72423cf6660e9dd262b9b128016e3d6980f2c5b9c09dc527271d420";
+    url = "https://github.com/ros2-gbp/mrt_cmake_modules-release/archive/release/rolling/mrt_cmake_modules/1.0.9-3.tar.gz";
+    name = "1.0.9-3.tar.gz";
+    sha256 = "25447a369806245860471fb91ffa61f09d4604e7cc70b38ea07973756121f231";
   };
 
   buildType = "catkin";

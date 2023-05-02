@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-tutorials-cpp, action-tutorials-interfaces, action-tutorials-py, ament-cmake, angles, composition, demo-nodes-cpp, demo-nodes-cpp-native, demo-nodes-py, depthimage-to-laserscan, dummy-map-server, dummy-robot-bringup, dummy-sensors, examples-rclcpp-minimal-action-client, examples-rclcpp-minimal-action-server, examples-rclcpp-minimal-client, examples-rclcpp-minimal-composition, examples-rclcpp-minimal-publisher, examples-rclcpp-minimal-service, examples-rclcpp-minimal-subscriber, examples-rclcpp-minimal-timer, examples-rclcpp-multithreaded-executor, examples-rclpy-executors, examples-rclpy-minimal-action-client, examples-rclpy-minimal-action-server, examples-rclpy-minimal-client, examples-rclpy-minimal-publisher, examples-rclpy-minimal-service, examples-rclpy-minimal-subscriber, image-tools, intra-process-demo, joy, lifecycle, logging-demo, pcl-conversions, pendulum-control, pendulum-msgs, quality-of-service-demo-cpp, quality-of-service-demo-py, ros-base, rqt-common-plugins, rviz-default-plugins, rviz2, teleop-twist-joy, teleop-twist-keyboard, tlsf, tlsf-cpp, topic-monitor, turtlesim }:
 buildRosPackage {
   pname = "ros-rolling-desktop";
-  version = "0.10.0-r1";
+  version = "0.10.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/variants-release/archive/release/rolling/desktop/0.10.0-1.tar.gz";
-    name = "0.10.0-1.tar.gz";
-    sha256 = "97113dc7a109b9b97eb6f16f4fb0df81c27b14cdedf03e6d92e17647d695cdc4";
+    url = "https://github.com/ros2-gbp/variants-release/archive/release/rolling/desktop/0.10.0-2.tar.gz";
+    name = "0.10.0-2.tar.gz";
+    sha256 = "15ed6783f1e6696913a3b12fbde9e927aae3ca1e0c202eddc2f068adccc4c95a";
   };
 
   buildType = "ament_cmake";

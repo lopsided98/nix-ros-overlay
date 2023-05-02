@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, subversion }:
 buildRosPackage {
   pname = "ros-rolling-qpoases-vendor";
-  version = "3.2.3-r2";
+  version = "3.2.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qpoases_vendor-release/archive/release/rolling/qpoases_vendor/3.2.3-2.tar.gz";
-    name = "3.2.3-2.tar.gz";
-    sha256 = "35e308c6014bc2ddd5017a4f279b15d4a16343791fa1f93babbc9909e36091a1";
+    url = "https://github.com/ros2-gbp/qpoases_vendor-release/archive/release/rolling/qpoases_vendor/3.2.3-3.tar.gz";
+    name = "3.2.3-3.tar.gz";
+    sha256 = "a969129f4fce6ffd251ad9a89a0fc6c852b9212beae55c848e088728eb188ca9";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, octomap }:
 buildRosPackage {
   pname = "ros-rolling-dynamic-edt-3d";
-  version = "1.9.8-r1";
+  version = "1.9.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap-release/archive/release/rolling/dynamic_edt_3d/1.9.8-1.tar.gz";
-    name = "1.9.8-1.tar.gz";
-    sha256 = "89c40e04e2168de03a796ba102bb2ba1c11c7588e249c068b9ee377db0c37736";
+    url = "https://github.com/ros2-gbp/octomap-release/archive/release/rolling/dynamic_edt_3d/1.9.8-2.tar.gz";
+    name = "1.9.8-2.tar.gz";
+    sha256 = "8c2321a9b918d679f505ce602c6fa3791b85db3f7b1e084d5875af7cb3d764f0";
   };
 
   buildType = "cmake";

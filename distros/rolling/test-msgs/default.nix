@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, test-interface-files }:
 buildRosPackage {
   pname = "ros-rolling-test-msgs";
-  version = "1.4.0-r1";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/test_msgs/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "a4797a755fa0eff3f60a3d4cf2274aab29d4526d301b127331e560365a83c0af";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/test_msgs/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "1f721eea977730babd0b840cf3634616623304ab50decd6086c774bc6c831e3b";
   };
 
   buildType = "ament_cmake";

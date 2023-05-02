@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roslisp }:
 buildRosPackage {
   pname = "ros-melodic-roslisp-utilities";
-  version = "0.2.13-r1";
+  version = "0.2.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/roslisp_utilities/0.2.13-1.tar.gz";
-    name = "0.2.13-1.tar.gz";
-    sha256 = "d00d8ac04df0def12d8ff4a78bf4266bf0cc3b8c9259686f4d66a6368422e7cd";
+    url = "https://github.com/ros-gbp/roslisp_common-release/archive/release/melodic/roslisp_utilities/0.2.15-1.tar.gz";
+    name = "0.2.15-1.tar.gz";
+    sha256 = "cf2cf0fb46f3a543ca223257b967a60a58532f1830658be199dc959e81628e7c";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, angles, geographic-msgs, geometry-msgs, python3Packages, sensor-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-humble-geodesy";
-  version = "1.0.4-r6";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geographic_info-release/archive/release/humble/geodesy/1.0.4-6.tar.gz";
-    name = "1.0.4-6.tar.gz";
-    sha256 = "0027a5288b902da09cf9354cc9464bc27c8f1c350568adbe122b2ff92b275eec";
+    url = "https://github.com/ros2-gbp/geographic_info-release/archive/release/humble/geodesy/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "fa05af8d16df4be6cc8f6a71d9009933d293d9054c3177fae791cc998e3e70da";
   };
 
   buildType = "ament_cmake";

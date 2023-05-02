@@ -564,8 +564,6 @@ self: super: {
 
  contact-states-observer = self.callPackage ./contact-states-observer {};
 
- control-box-rst = self.callPackage ./control-box-rst {};
-
  control-msgs = self.callPackage ./control-msgs {};
 
  control-toolbox = self.callPackage ./control-toolbox {};
@@ -1511,8 +1509,6 @@ self: super: {
  ifm3d = self.callPackage ./ifm3d {};
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
-
- ifopt = self.callPackage ./ifopt {};
 
  igvc-self-drive-description = self.callPackage ./igvc-self-drive-description {};
 
@@ -3955,6 +3951,8 @@ self: super: {
  simulators = self.callPackage ./simulators {};
 
  single-joint-position-action = self.callPackage ./single-joint-position-action {};
+
+ skyway = self.callPackage ./skyway {};
 
  slam-gmapping = self.callPackage ./slam-gmapping {};
 

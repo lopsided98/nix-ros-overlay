@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dingo-msgs, dingo-viz }:
 buildRosPackage {
   pname = "ros-noetic-dingo-desktop";
-  version = "0.1.1-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/dingo_desktop-release/archive/release/noetic/dingo_desktop/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "c5fb29f0f394e512e4fd5b232ea7fb24a8f444cd235b8ec49b4944c7e276f572";
+    url = "https://github.com/clearpath-gbp/dingo_desktop-release/archive/release/noetic/dingo_desktop/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "3dddb3f00733090f01f5f1cac43ff8e59dabdbad721894f2f075a03f44eed25c";
   };
 
   buildType = "catkin";

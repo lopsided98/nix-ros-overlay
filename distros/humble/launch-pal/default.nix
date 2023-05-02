@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, launch, launch-ros, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-humble-launch-pal";
-  version = "0.0.6-r1";
+  version = "0.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/launch_pal-release/archive/release/humble/launch_pal/0.0.6-1.tar.gz";
-    name = "0.0.6-1.tar.gz";
-    sha256 = "d656b3c0dccfa66635a99631daeda073ace0ee90a975171766b28eb0df01941f";
+    url = "https://github.com/pal-gbp/launch_pal-release/archive/release/humble/launch_pal/0.0.7-1.tar.gz";
+    name = "0.0.7-1.tar.gz";
+    sha256 = "764916d7432a0d4755a2708874439c0ae5da95e2301dbb56d5334d32f31e56b5";
   };
 
   buildType = "ament_python";

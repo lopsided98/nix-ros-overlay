@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, poco, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ntpd-driver";
-  version = "2.2.0-r1";
+  version = "2.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ntpd_driver-release/archive/release/rolling/ntpd_driver/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "59cd40e8116ec8ac2e081a7266dbcbe2bfc97844b136f487c013f6b47840c260";
+    url = "https://github.com/ros2-gbp/ntpd_driver-release/archive/release/rolling/ntpd_driver/2.2.0-2.tar.gz";
+    name = "2.2.0-2.tar.gz";
+    sha256 = "f87b4fe996e8c2df24154d69a79bf8462a943c910be912188342e0267efb4b0c";
   };
 
   buildType = "ament_cmake";

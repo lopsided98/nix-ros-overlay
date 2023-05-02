@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, nav2-bringup, slam-toolbox }:
 buildRosPackage {
   pname = "ros-foxy-jackal-navigation";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/foxy/jackal_navigation/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "193cbac1fb85df49a57da294aacc4c917fe2a54141054c1c1bbc5a88f9c8d2c9";
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/foxy/jackal_navigation/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "461658529a443d7c9de40ab121f7e5a13dd318d4d761a7ecc05ddb127b1ec499";
   };
 
   buildType = "ament_cmake";

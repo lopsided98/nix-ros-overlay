@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen, libnabo }:
 buildRosPackage {
   pname = "ros-rolling-libpointmatcher";
-  version = "1.3.1-r2";
+  version = "1.3.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libpointmatcher-release/archive/release/rolling/libpointmatcher/1.3.1-2.tar.gz";
-    name = "1.3.1-2.tar.gz";
-    sha256 = "e6b852f80337c2faa7d5a452c9345a3d30fecd151930d283326a7cb14d335f95";
+    url = "https://github.com/ros2-gbp/libpointmatcher-release/archive/release/rolling/libpointmatcher/1.3.1-4.tar.gz";
+    name = "1.3.1-4.tar.gz";
+    sha256 = "70e3664ade8660c4d26fbdb557a74c9c576836c159ad778a19c36bb0cda82b99";
   };
 
   buildType = "cmake";

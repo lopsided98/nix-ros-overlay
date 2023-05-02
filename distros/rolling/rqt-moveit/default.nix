@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python-qt-binding, python3Packages, rclpy, rosidl-default-generators, rqt-gui, rqt-gui-py, rqt-py-common, rqt-topic, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rqt-moveit";
-  version = "1.0.1-r2";
+  version = "1.0.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_moveit-release/archive/release/rolling/rqt_moveit/1.0.1-2.tar.gz";
-    name = "1.0.1-2.tar.gz";
-    sha256 = "a4299d4407a782e35270aae512b768af1d1b7a0322ded10bc76600ba0f6e31b2";
+    url = "https://github.com/ros2-gbp/rqt_moveit-release/archive/release/rolling/rqt_moveit/1.0.1-3.tar.gz";
+    name = "1.0.1-3.tar.gz";
+    sha256 = "51e8428b8ca9fc15a45944f4e671eefe7dcaece5fe6746810def718cdb54deaf";
   };
 
   buildType = "ament_python";

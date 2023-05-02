@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, camera-info-manager, cv-bridge, depthai, depthai-ros-msgs, image-transport, opencv, rclcpp, robot-state-publisher, ros-environment, sensor-msgs, std-msgs, stereo-msgs, vision-msgs, xacro }:
 buildRosPackage {
   pname = "ros-foxy-depthai-bridge";
-  version = "2.5.3-r1";
+  version = "2.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/foxy/depthai_bridge/2.5.3-1.tar.gz";
-    name = "2.5.3-1.tar.gz";
-    sha256 = "6d064df6b638fcf2f0c0aa97221f2fd778656c5d50ad55695f4963ea2376bb0e";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/foxy/depthai_bridge/2.7.1-1.tar.gz";
+    name = "2.7.1-1.tar.gz";
+    sha256 = "c28f19bf02e361f1520c25f6ea03f804e09133f526d2763c9a2b67bcf9d17376";
   };
 
   buildType = "ament_cmake";

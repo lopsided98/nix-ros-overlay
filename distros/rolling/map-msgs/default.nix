@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, nav-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-map-msgs";
-  version = "2.2.0-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation_msgs-release/archive/release/rolling/map_msgs/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "208ed151a9d2c4ce4196ad1d2eaae1299e13cdd290af876f06330542491089c3";
+    url = "https://github.com/ros2-gbp/navigation_msgs-release/archive/release/rolling/map_msgs/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "53d71b6e2a4e546fde2aa666d8b5508fd2f42d190297e5cfc7478a5ae53642d1";
   };
 
   buildType = "ament_cmake";

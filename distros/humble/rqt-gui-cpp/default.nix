@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pluginlib, qt-gui, qt-gui-cpp, qt5, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-rqt-gui-cpp";
-  version = "1.1.4-r1";
+  version = "1.1.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/humble/rqt_gui_cpp/1.1.4-1.tar.gz";
-    name = "1.1.4-1.tar.gz";
-    sha256 = "8ebf87599693fbeab3ed3274d74410f1ea1babc174c8cba95f9e5f7c8d8187c8";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/humble/rqt_gui_cpp/1.1.5-2.tar.gz";
+    name = "1.1.5-2.tar.gz";
+    sha256 = "2c323ba012968a8bb39760f72bd14859335b680efbcf6c731f9a54eb9a2b8827";
   };
 
   buildType = "ament_cmake";

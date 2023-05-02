@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-xmllint, cmake, doxygen, git, ignition }:
 buildRosPackage {
   pname = "ros-rolling-ignition-cmake2-vendor";
-  version = "0.0.2-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ignition_cmake2_vendor-release/archive/release/rolling/ignition_cmake2_vendor/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "791b2e607469f32029c33f16a95be2ed0f05cccc214d65b7094d002c5f7d19db";
+    url = "https://github.com/ros2-gbp/ignition_cmake2_vendor-release/archive/release/rolling/ignition_cmake2_vendor/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "3aaaadd0e720a2585f5a63bafb513c6cc21bec5f8f6ca5716d27b13583a12fb6";
   };
 
   buildType = "cmake";

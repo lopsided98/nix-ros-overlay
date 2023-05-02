@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-python, rclcpp, rclcpp-action, rclpy }:
 buildRosPackage {
   pname = "ros-humble-simple-actions";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/DLu/simple_actions-release/archive/release/humble/simple_actions/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "e2aa0228b96ceba99435d31820f0802cd986ff6bb06e8bc53cd27abc92b349ab";
+    url = "https://github.com/ros2-gbp/simple_actions-release/archive/release/humble/simple_actions/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "7a075999fc87656abfef34749cb8ae4ef09a0d8b1f3f87978132f49c40a6f610";
   };
 
   buildType = "ament_cmake";

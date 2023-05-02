@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-cmake, boost, console-bridge, console-bridge-vendor, tinyxml2-vendor, urdf, urdfdom-headers, urdfdom-py }:
 buildRosPackage {
   pname = "ros-rolling-srdfdom";
-  version = "2.0.4-r1";
+  version = "2.0.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/srdfdom-release/archive/release/rolling/srdfdom/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "8bf953f5999f5612ef8d93eb3930263e1f97de837801ab36a80bac8f057462cf";
+    url = "https://github.com/ros2-gbp/srdfdom-release/archive/release/rolling/srdfdom/2.0.4-2.tar.gz";
+    name = "2.0.4-2.tar.gz";
+    sha256 = "fece16c7172c6e39decec08511e41955396ff98e64f6a979e1a0749b5351483c";
   };
 
   buildType = "ament_cmake";
