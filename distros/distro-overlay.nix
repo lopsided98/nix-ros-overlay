@@ -32,6 +32,10 @@ let
       python = rosSelf.python;
       enablePython = true;
     };
+
+    # Ogre 1.9 has been removed from nixpkgs, use Ogre 1.10
+    # TODO: make this change in rosdep if Ogre 1.10 works with most packages.
+    ogre1_9 = self.ogre1_10;
   };
 
   overrides = rosSelf: rosSuper: with rosSelf.lib; {
