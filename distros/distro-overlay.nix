@@ -3,7 +3,7 @@ self: super:
 let
   pythonOverridesFor = with self.lib; prevPython: prevPython // {
     pkgs = prevPython.pkgs.overrideScope (pyFinal: pyPrev: optionalAttrs pyPrev.isPy3k {
-      wxPython = pyFinal.wxPython_4_0;
+      wxPython = pyFinal.wxPython_4_2;
     });
   };
 
