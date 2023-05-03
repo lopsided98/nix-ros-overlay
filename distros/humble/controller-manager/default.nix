@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-python, ament-index-cpp, backward-ros, controller-interface, controller-manager-msgs, diagnostic-updater, hardware-interface, launch, launch-ros, pluginlib, rclcpp, rcpputils, realtime-tools, ros2-control-test-assets, ros2param, ros2run }:
 buildRosPackage {
   pname = "ros-humble-controller-manager";
-  version = "2.25.2-r1";
+  version = "2.25.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/controller_manager/2.25.2-1.tar.gz";
-    name = "2.25.2-1.tar.gz";
-    sha256 = "0974824545110499eeba3b5b5bb0b2022d9cc252f6f27f0b196ca17685d0d01c";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/controller_manager/2.25.3-1.tar.gz";
+    name = "2.25.3-1.tar.gz";
+    sha256 = "bdcbef28e3478f1ae8ca5338674337e4477b16840254410d2f1e7c6abe65e29a";
   };
 
   buildType = "ament_cmake";

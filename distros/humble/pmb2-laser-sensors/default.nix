@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, laser-filters }:
 buildRosPackage {
   pname = "ros-humble-pmb2-laser-sensors";
-  version = "4.0.3-r1";
+  version = "4.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_laser_sensors/4.0.3-1.tar.gz";
-    name = "4.0.3-1.tar.gz";
-    sha256 = "18b1a31cf62b815ea81a4db58adb011b2a203a1b2c02614b3bcd3b8bbdceb2f0";
+    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_laser_sensors/4.0.4-1.tar.gz";
+    name = "4.0.4-1.tar.gz";
+    sha256 = "18cc3463363cc01b4b82f066e011ad10bb28899fc514857894a2f6c4403d499b";
   };
 
   buildType = "ament_cmake";

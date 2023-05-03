@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-humble-pal-navigation-cfg-params";
-  version = "3.0.1-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_navigation_cfg_public-release/archive/release/humble/pal_navigation_cfg_params/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "96c1faaf0132b8ae499adcbeb00fc2a4a4e0e7459b395f09a9d3f2bf1f76cc68";
+    url = "https://github.com/pal-gbp/pal_navigation_cfg_public-release/archive/release/humble/pal_navigation_cfg_params/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "daa09954ede58fa13c8c2466d91589bef33242d81f1d41fef82cb83346043c14";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Central storage of navigation configuration parameters'';
-    license = with lib.licenses; [ "Proprietary" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

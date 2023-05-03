@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, camera-info-manager, cv-bridge, image-transport, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-v4l2-camera";
-  version = "0.6.0-r1";
+  version = "0.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_v4l2_camera-release/archive/release/humble/v4l2_camera/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "c551af6c9c6f8c2997942a2db02fe2745feb9b273beeebdd1736958c4e90d1bb";
+    url = "https://github.com/ros2-gbp/ros2_v4l2_camera-release/archive/release/humble/v4l2_camera/0.6.2-1.tar.gz";
+    name = "0.6.2-1.tar.gz";
+    sha256 = "2d1f269a76308688bb80a452791a721a8e2d48bc9a190439870ac7ab842eaad4";
   };
 
   buildType = "ament_cmake";

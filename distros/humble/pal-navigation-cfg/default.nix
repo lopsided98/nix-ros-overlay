@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, pal-navigation-cfg-bringup, pal-navigation-cfg-params }:
 buildRosPackage {
   pname = "ros-humble-pal-navigation-cfg";
-  version = "3.0.1-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_navigation_cfg_public-release/archive/release/humble/pal_navigation_cfg/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "343b327b1d8e5afa46c205ebd7e271ba054eedef9e3dcffddc4e89a04d9d082f";
+    url = "https://github.com/pal-gbp/pal_navigation_cfg_public-release/archive/release/humble/pal_navigation_cfg/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "f4d59355f3792a1cfdf11429906745cce258e18f6f194f301df901ca9b3724fe";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''PAL Navigation Configuration metapackage'';
-    license = with lib.licenses; [ "Proprietary" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

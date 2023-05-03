@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, nao-command-msgs, nao-sensor-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-nao-lola";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nao_lola-release/archive/release/humble/nao_lola/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "efe25b61711696e649f69f3012a7c047646c8d6f95c03dfdc3b333093a7b5aa9";
+    url = "https://github.com/ros2-gbp/nao_lola-release/archive/release/humble/nao_lola/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "f04f1160b4f27bedfaf2fc03c2d7b6cc04efb60c246fa9b36f55d89e6e58ba9f";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, hardware-interface, rclcpp-lifecycle, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-controller-interface";
-  version = "2.25.2-r1";
+  version = "2.25.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/controller_interface/2.25.2-1.tar.gz";
-    name = "2.25.2-1.tar.gz";
-    sha256 = "ea4ca03f76529381c2a19100275fd1515dfcdeed65529cfe8cf7a0092c993cee";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/controller_interface/2.25.3-1.tar.gz";
+    name = "2.25.3-1.tar.gz";
+    sha256 = "4cfb160b101bcb7046b99544d94a6fffa5c55cc5d809af98371f57dd774b560a";
   };
 
   buildType = "ament_cmake";
