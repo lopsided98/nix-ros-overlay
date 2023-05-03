@@ -23,13 +23,14 @@ rosSelf: rosSuper: with rosSelf.lib; {
       # Revert formatting changes that cause conflict with next patch
       (self.fetchpatch {
         url = "https://github.com/ros-planning/geometric_shapes/commit/12afa837202dcc6c96f96fc499ef25078f997b75.patch";
-        sha256 = "069yj33jj74i6ka98y4m8pwn64dl9bgmiapkmlwvyk5as2w9ndvx";
+        hash = "sha256-fTebuNCqTL85rfOqWN9KtBFj+UWVeJTUNJEcKceQPhk=";
         revert = true;
       })
       # Fix build with latest QHull
       (self.fetchpatch {
         url = "https://github.com/ros-planning/geometric_shapes/commit/22e5a02a06c36bfc0c49ce5cc636e7ab64d8b0be.patch";
-        sha256 = "015min5qdi8vkvbjbcvyrf41ycd2nk2d371x1jb0xpn30r8nhlin";
+        hash = "sha256-ZEpo1wKzG4qbG9JgJSfsFmp6u8+pFz8wNi2tm09vaCM=";
+        excludes = [ "CMakeLists.txt" ];
       })
     ];
   });
