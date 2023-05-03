@@ -44,6 +44,8 @@ self: super: with self.lib; let
 
       colcon-test-result = pyFinal.callPackage ./colcon/test-result.nix { };
 
+      colcon-zsh = pyFinal.callPackage ./colcon/zsh.nix { };
+
       osrf-pycommon = pyFinal.callPackage ./osrf-pycommon {};
 
       rosdep = pyFinal.callPackage ./rosdep { };
@@ -71,6 +73,7 @@ in {
     colcon-recursive-crawl
     colcon-ros
     colcon-test-result
+    colcon-zsh
   ];
 
   gazebo_9 = self.libsForQt5.callPackage ./gazebo/9.nix { };
