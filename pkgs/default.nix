@@ -8,6 +8,8 @@ self: super: with self.lib; let
 
       catkin-tools = pyFinal.callPackage ./catkin-tools { };
 
+      colcon-bash = pyFinal.callPackage ./colcon/bash.nix { };
+
       colcon-cargo = pyFinal.callPackage ./colcon/cargo.nix { };
 
       colcon-cmake = pyFinal.callPackage ./colcon/cmake.nix { };
@@ -57,6 +59,7 @@ in {
   cargo-ament-build = self.callPackage ./cargo-ament-build { };
 
   colcon = with self.python3Packages; colcon-core.withExtensions [
+    colcon-bash
     colcon-cmake
     colcon-core
     colcon-defaults
