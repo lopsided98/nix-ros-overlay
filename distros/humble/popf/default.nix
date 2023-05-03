@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, bison, cbc, clp, coin-utils, flex, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, bison, cbc, clp, flex, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-popf";
   version = "0.0.14-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ bison cbc clp coin-utils flex rclcpp ];
+  propagatedBuildInputs = [ bison cbc clp flex rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
