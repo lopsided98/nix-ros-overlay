@@ -73,8 +73,11 @@ in {
     colcon-devtools
     colcon-library-path
     colcon-metadata
+    colcon-notification
+    colcon-output
     colcon-package-information
     colcon-package-selection
+    colcon-parallel-executor
     colcon-python-setup-py
     colcon-recursive-crawl
     colcon-ros
