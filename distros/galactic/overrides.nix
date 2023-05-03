@@ -88,6 +88,18 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ] ++ patches;
   });
 
+  rmw-cyclonedds-cpp = rosSuper.rmw-cyclonedds-cpp.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = "https://github.com/ros2/rmw_cyclonedds/commit/f57732d15be53796d518e12352866124efcaa939.patch";
+        hash = "sha256-hfvYAAmRYKPkwHCnZTy8tudSPXRlhuQmaujs4cy0fCE=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
     patches ? [], ...
   }: {
