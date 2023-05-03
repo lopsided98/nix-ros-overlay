@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, ipopt }:
 buildRosPackage {
   pname = "ros-rolling-control-box-rst";
-  version = "0.0.7-r3";
+  version = "0.0.7-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/control_box_rst-release/archive/release/rolling/control_box_rst/0.0.7-3.tar.gz";
-    name = "0.0.7-3.tar.gz";
-    sha256 = "c9dcde87cbbf480ffa3ee8b7b2c180175f0b1d3eb4a21b1b067d707649c29dae";
+    url = "https://github.com/ros2-gbp/control_box_rst-release/archive/release/rolling/control_box_rst/0.0.7-4.tar.gz";
+    name = "0.0.7-4.tar.gz";
+    sha256 = "0c402cc409f715b5a60c383d795de643f7613ebb5e115f0a5d71555eb213c171";
   };
 
   buildType = "cmake";

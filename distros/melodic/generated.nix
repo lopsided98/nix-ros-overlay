@@ -564,6 +564,8 @@ self: super: {
 
  contact-states-observer = self.callPackage ./contact-states-observer {};
 
+ control-box-rst = self.callPackage ./control-box-rst {};
+
  control-msgs = self.callPackage ./control-msgs {};
 
  control-toolbox = self.callPackage ./control-toolbox {};
@@ -1510,6 +1512,8 @@ self: super: {
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
 
+ ifopt = self.callPackage ./ifopt {};
+
  igvc-self-drive-description = self.callPackage ./igvc-self-drive-description {};
 
  igvc-self-drive-gazebo = self.callPackage ./igvc-self-drive-gazebo {};
@@ -2341,6 +2345,8 @@ self: super: {
  mrp2-viz = self.callPackage ./mrp2-viz {};
 
  mrpt1 = self.callPackage ./mrpt1 {};
+
+ mrpt2 = self.callPackage ./mrpt2 {};
 
  mrpt-ekf-slam-2d = self.callPackage ./mrpt-ekf-slam-2d {};
 

@@ -144,6 +144,8 @@ self: super: {
 
  apriltag = self.callPackage ./apriltag {};
 
+ aruco-opencv = self.callPackage ./aruco-opencv {};
+
  aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
 
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
@@ -202,6 +204,8 @@ self: super: {
 
  cartographer-ros-msgs = self.callPackage ./cartographer-ros-msgs {};
 
+ casadi-vendor = self.callPackage ./casadi-vendor {};
+
  cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
 
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
@@ -241,6 +245,8 @@ self: super: {
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
  contracts-lite-vendor = self.callPackage ./contracts-lite-vendor {};
+
+ control-box-rst = self.callPackage ./control-box-rst {};
 
  control-msgs = self.callPackage ./control-msgs {};
 
@@ -357,6 +363,8 @@ self: super: {
  desktop = self.callPackage ./desktop {};
 
  diagnostic-aggregator = self.callPackage ./diagnostic-aggregator {};
+
+ diagnostic-common-diagnostics = self.callPackage ./diagnostic-common-diagnostics {};
 
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
@@ -657,6 +665,8 @@ self: super: {
  ibeo-msgs = self.callPackage ./ibeo-msgs {};
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
+
+ ifopt = self.callPackage ./ifopt {};
 
  ign-ros2-control-demos = self.callPackage ./ign-ros2-control-demos {};
 
@@ -994,6 +1004,8 @@ self: super: {
 
  mppic = self.callPackage ./mppic {};
 
+ mrpt2 = self.callPackage ./mrpt2 {};
+
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
@@ -1245,6 +1257,8 @@ self: super: {
  polygon-rviz-plugins = self.callPackage ./polygon-rviz-plugins {};
 
  polygon-utils = self.callPackage ./polygon-utils {};
+
+ popf = self.callPackage ./popf {};
 
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 

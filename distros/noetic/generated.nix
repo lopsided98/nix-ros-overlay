@@ -58,6 +58,8 @@ self: super: {
 
  aruco-msgs = self.callPackage ./aruco-msgs {};
 
+ aruco-opencv = self.callPackage ./aruco-opencv {};
+
  aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
 
  aruco-ros = self.callPackage ./aruco-ros {};
@@ -473,6 +475,8 @@ self: super: {
  computer-status-msgs = self.callPackage ./computer-status-msgs {};
 
  contact-states-observer = self.callPackage ./contact-states-observer {};
+
+ control-box-rst = self.callPackage ./control-box-rst {};
 
  control-msgs = self.callPackage ./control-msgs {};
 
@@ -1278,6 +1282,8 @@ self: super: {
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
 
+ ifopt = self.callPackage ./ifopt {};
+
  ign-ros-control-demos = self.callPackage ./ign-ros-control-demos {};
 
  image-cb-detector = self.callPackage ./image-cb-detector {};
@@ -1987,6 +1993,8 @@ self: super: {
  mqtt-bridge = self.callPackage ./mqtt-bridge {};
 
  mqtt-client = self.callPackage ./mqtt-client {};
+
+ mrpt2 = self.callPackage ./mrpt2 {};
 
  mrpt-ekf-slam-2d = self.callPackage ./mrpt-ekf-slam-2d {};
 

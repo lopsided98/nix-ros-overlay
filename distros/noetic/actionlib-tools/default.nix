@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ actionlib actionlib-msgs python3Packages.wxPython_4_0 roslib rospy rostopic ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs python3Packages.wxPython_4_2 roslib rospy rostopic ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -160,6 +160,8 @@ self: super: {
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
+ aruco-opencv = self.callPackage ./aruco-opencv {};
+
  aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
 
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
@@ -236,6 +238,8 @@ self: super: {
 
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
+ control-box-rst = self.callPackage ./control-box-rst {};
+
  control-msgs = self.callPackage ./control-msgs {};
 
  control-toolbox = self.callPackage ./control-toolbox {};
@@ -267,6 +271,8 @@ self: super: {
  desktop-full = self.callPackage ./desktop-full {};
 
  diagnostic-aggregator = self.callPackage ./diagnostic-aggregator {};
+
+ diagnostic-common-diagnostics = self.callPackage ./diagnostic-common-diagnostics {};
 
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
@@ -861,6 +867,8 @@ self: super: {
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
+
+ mrpt2 = self.callPackage ./mrpt2 {};
 
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 

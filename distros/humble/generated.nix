@@ -172,6 +172,8 @@ self: super: {
 
  aruco-msgs = self.callPackage ./aruco-msgs {};
 
+ aruco-opencv = self.callPackage ./aruco-opencv {};
+
  aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
 
  aruco-ros = self.callPackage ./aruco-ros {};
@@ -296,6 +298,8 @@ self: super: {
 
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
+ control-box-rst = self.callPackage ./control-box-rst {};
+
  control-msgs = self.callPackage ./control-msgs {};
 
  control-toolbox = self.callPackage ./control-toolbox {};
@@ -393,6 +397,8 @@ self: super: {
  desktop-full = self.callPackage ./desktop-full {};
 
  diagnostic-aggregator = self.callPackage ./diagnostic-aggregator {};
+
+ diagnostic-common-diagnostics = self.callPackage ./diagnostic-common-diagnostics {};
 
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
@@ -1010,6 +1016,8 @@ self: super: {
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
+ mrpt2 = self.callPackage ./mrpt2 {};
+
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
@@ -1301,6 +1309,8 @@ self: super: {
  polygon-rviz-plugins = self.callPackage ./polygon-rviz-plugins {};
 
  polygon-utils = self.callPackage ./polygon-utils {};
+
+ popf = self.callPackage ./popf {};
 
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
