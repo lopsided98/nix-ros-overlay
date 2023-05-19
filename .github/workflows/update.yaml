@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: staging
-      - uses: cachix/install-nix-action@v18
+      - uses: cachix/install-nix-action@v20
       - uses: cachix/cachix-action@v12
         with:
           name: ros
