@@ -8,9 +8,8 @@ mkShell {
   nativeBuildInputs = [
     (buildEnv {
       paths = [
-        ros-environment
-        ros2topic
-        ros2node
+        ros-core
+        colcon
         geometry-msgs
       ];
     })
