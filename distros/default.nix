@@ -23,12 +23,6 @@ self: super: {
       python = self.python3;
     } self super;
 
-    galactic = import ./distro-overlay.nix {
-      version = 2;
-      distro = "galactic";
-      python = self.python3;
-    } self super;
-
     humble = import ./distro-overlay.nix {
       version = 2;
       distro = "humble";
