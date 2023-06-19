@@ -8,6 +8,10 @@ self: super: with self.lib; let
 
       catkin-tools = pyFinal.callPackage ./catkin-tools { };
 
+      colcon-argcomplete = pyFinal.callPackage ./colcon/argcomplete.nix { };
+
+      colcon-bash = pyFinal.callPackage ./colcon/bash.nix { };
+
       colcon-cargo = pyFinal.callPackage ./colcon/cargo.nix { };
 
       colcon-cmake = pyFinal.callPackage ./colcon/cmake.nix { };
@@ -15,6 +19,8 @@ self: super: with self.lib; let
       colcon-core = pyFinal.callPackage ./colcon/core.nix { };
 
       colcon-defaults = pyFinal.callPackage ./colcon/defaults.nix { };
+
+      colcon-devtools = pyFinal.callPackage ./colcon/devtools.nix { };
 
       colcon-library-path = pyFinal.callPackage ./colcon/library-path.nix { };
 
@@ -42,6 +48,8 @@ self: super: with self.lib; let
 
       colcon-test-result = pyFinal.callPackage ./colcon/test-result.nix { };
 
+      colcon-zsh = pyFinal.callPackage ./colcon/zsh.nix { };
+
       osrf-pycommon = pyFinal.callPackage ./osrf-pycommon {};
 
       rosdep = pyFinal.callPackage ./rosdep { };
@@ -57,17 +65,24 @@ in {
   cargo-ament-build = self.callPackage ./cargo-ament-build { };
 
   colcon = with self.python3Packages; colcon-core.withExtensions [
+    colcon-argcomplete
+    colcon-bash
     colcon-cmake
     colcon-core
     colcon-defaults
+    colcon-devtools
     colcon-library-path
     colcon-metadata
+    colcon-notification
+    colcon-output
     colcon-package-information
     colcon-package-selection
+    colcon-parallel-executor
     colcon-python-setup-py
     colcon-recursive-crawl
     colcon-ros
     colcon-test-result
+    colcon-zsh
   ];
 
   gazebo_9 = self.libsForQt5.callPackage ./gazebo/9.nix { };
