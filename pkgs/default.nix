@@ -132,7 +132,7 @@ in {
     utils = self.ignition.utils1;
   };
 
-  ogre1_9 = self.callPackage ./ogre/1.9.x.nix { };
+  ogre1_9 = self.callPackage ./ogre/1.9.nix { };
 
   openni2 = self.callPackage ./openni2 { };
 

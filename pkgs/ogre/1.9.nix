@@ -78,16 +78,15 @@ stdenv.mkDerivation rec {
     libXxf86vm
     libICE
     libXrender
-  ]
-  ++ lib.optionals withNvidiaCg [
+  ] ++ lib.optionals withNvidiaCg [
     nvidia_cg_toolkit
   ];
 
-  meta = {
-    description = "A 3D engine";
+  meta = with lib; {
+    description = "3D Object-Oriented Graphics Rendering Engine";
     homepage = "https://www.ogre3d.org/";
-    maintainers = [ lib.maintainers.raskin ];
-    platforms = lib.platforms.linux;
-    license = lib.licenses.mit;
+    maintainers = with maintainers; [ lopsided98 ];
+    platforms = platforms.linux;
+    license = licenses.mit;
   };
 }
