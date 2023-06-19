@@ -44,6 +44,17 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "sha256-IBlmph3IJvGxh5okozF6HskhSpGMjrA1vi8ww+nPvcs=";
   };
 
+  rosconsole = rosSuper.rosconsole.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # Support liblog4cxx 0.13
+    # https://github.com/ros/rosconsole/pull/58
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/ros/rosconsole/pull/58.patch";
+      hash = "sha256-Rg+WCPak5sxBqdQ/QR9eboyX921PZTjk3/PuH5mz96U=";
+    }) ];
+  });
+
   rosfmt = patchVendorUrl rosSuper.rosfmt {
     url = "https://github.com/fmtlib/fmt/releases/download/7.1.2/fmt-7.1.2.zip";
     sha256 = "19qfd19mvzg4awqbh5x10m8riyyy0dbpadpidp3mrs81gjmnhsad";
