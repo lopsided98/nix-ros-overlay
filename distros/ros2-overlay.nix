@@ -159,14 +159,16 @@ rosSelf: rosSuper: with rosSelf.lib; {
   });
 
   rviz2 = rosSuper.rviz2.overrideAttrs ({
-    nativeBuildInputs ? [], postFixup ? "", ...
+    nativeBuildInputs ? [], postFixup ? "", meta ? {}, ...
   }: {
     dontWrapQtApps = false;
     nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
     postFixup = postFixup + ''
       wrapQtApp "$out/lib/rviz2/rviz2"
     '';
-    meta.mainProgram = "rviz2";
+    meta = meta // {
+      mainProgram = "rviz2";
+    };
   });
 
   # The build gets stuck in an infinite loop with absolute CMAKE_INSTALL_LIBDIR:
