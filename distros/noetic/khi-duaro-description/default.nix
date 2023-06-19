@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roslaunch }:
 buildRosPackage {
   pname = "ros-noetic-khi-duaro-description";
-  version = "1.3.0-r2";
+  version = "1.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/noetic/khi_duaro_description/1.3.0-2.tar.gz";
-    name = "1.3.0-2.tar.gz";
-    sha256 = "ec3d893121f8dea57c5a3bb3050a22ea785bf5a0bd7eb25ff81b7f4ecbb00f42";
+    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/noetic/khi_duaro_description/1.4.0-2.tar.gz";
+    name = "1.4.0-2.tar.gz";
+    sha256 = "6f8e1e49fc14aa0da419341d4416f22b76a1396474167b3996b072097c5ae949";
   };
 
   buildType = "catkin";

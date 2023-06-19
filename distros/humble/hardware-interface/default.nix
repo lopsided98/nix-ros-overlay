@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, lifecycle-msgs, pluginlib, rclcpp-lifecycle, rcpputils, rcutils, ros2-control-test-assets, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-humble-hardware-interface";
-  version = "2.25.3-r1";
+  version = "2.26.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/hardware_interface/2.25.3-1.tar.gz";
-    name = "2.25.3-1.tar.gz";
-    sha256 = "c9b1c4a549add1385dfde460d579bd3c87ea5c3b06567a044780462a49159558";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/hardware_interface/2.26.0-1.tar.gz";
+    name = "2.26.0-1.tar.gz";
+    sha256 = "2bbea1df93fb7ac02c080d4260a627d4a1964554892acf31bd1fa88a99d75d30";
   };
 
   buildType = "ament_cmake";

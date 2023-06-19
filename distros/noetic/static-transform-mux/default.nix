@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rospy, tf2-msgs }:
 buildRosPackage {
   pname = "ros-noetic-static-transform-mux";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/peci1/static_transform_mux-release/archive/release/noetic/static_transform_mux/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "f21262353f684f756a1f1ebb9e88e7d335f767843d908267d532fab94ce7e2f1";
+    url = "https://github.com/peci1/static_transform_mux-release/archive/release/noetic/static_transform_mux/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "87ab7e2def917975a8972fb4a1d38e9758b6116b5905c7168ade03de68ed6250";
   };
 
   buildType = "catkin";

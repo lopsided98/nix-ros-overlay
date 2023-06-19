@@ -150,8 +150,6 @@ self: super: {
 
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
 
- astuff-sensor-msgs = self.callPackage ./astuff-sensor-msgs {};
-
  async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
 
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
@@ -273,6 +271,16 @@ self: super: {
  crane-plus-ignition = self.callPackage ./crane-plus-ignition {};
 
  crane-plus-moveit-config = self.callPackage ./crane-plus-moveit-config {};
+
+ create-bringup = self.callPackage ./create-bringup {};
+
+ create-description = self.callPackage ./create-description {};
+
+ create-driver = self.callPackage ./create-driver {};
+
+ create-msgs = self.callPackage ./create-msgs {};
+
+ create-robot = self.callPackage ./create-robot {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
 
@@ -762,6 +770,8 @@ self: super: {
 
  lanelet2-maps = self.callPackage ./lanelet2-maps {};
 
+ lanelet2-matching = self.callPackage ./lanelet2-matching {};
+
  lanelet2-projection = self.callPackage ./lanelet2-projection {};
 
  lanelet2-python = self.callPackage ./lanelet2-python {};
@@ -813,6 +823,8 @@ self: super: {
  lgsvl-bridge = self.callPackage ./lgsvl-bridge {};
 
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
+
+ libcreate = self.callPackage ./libcreate {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
 
@@ -1133,8 +1145,6 @@ self: super: {
  ouxt-common = self.callPackage ./ouxt-common {};
 
  ouxt-lint-common = self.callPackage ./ouxt-lint-common {};
-
- pacmod-msgs = self.callPackage ./pacmod-msgs {};
 
  paho-mqtt-c = self.callPackage ./paho-mqtt-c {};
 
@@ -1915,6 +1925,8 @@ self: super: {
  stubborn-buddies = self.callPackage ./stubborn-buddies {};
 
  stubborn-buddies-msgs = self.callPackage ./stubborn-buddies-msgs {};
+
+ swri-cli-tools = self.callPackage ./swri-cli-tools {};
 
  swri-console = self.callPackage ./swri-console {};
 

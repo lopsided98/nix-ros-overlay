@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, lanelet2-core, mrt-cmake-modules }:
 buildRosPackage {
   pname = "ros-foxy-lanelet2-maps";
-  version = "1.1.1-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/foxy/lanelet2_maps/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "726c2de104e44915a022a29d52f7154effaed83958d5319df5418947ac08ed8b";
+    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/foxy/lanelet2_maps/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "3d2d045acf5a2818b4e701eeade3cc3817c213e170156f7161766458400fb1ba";
   };
 
   buildType = "ament_cmake";

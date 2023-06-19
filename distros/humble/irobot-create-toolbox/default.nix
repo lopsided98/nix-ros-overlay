@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, ignition, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-irobot-create-toolbox";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/humble/irobot_create_toolbox/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "90e9bceab4c14054f931172a3a90270ef1fd73bd56a8f1e09f62f27b74246026";
+    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/humble/irobot_create_toolbox/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "23e01d3f6cead1a921dffaa995df7e2cfd7c65383b21f7d8118548b50ce817b9";
   };
 
   buildType = "ament_cmake";

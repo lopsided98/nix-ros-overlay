@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, image-publisher, message-generation, message-runtime, rosbridge-server, rospy, rostest, roswww, rviz, rwt-utils-3rdparty, std-srvs, web-video-server }:
 buildRosPackage {
   pname = "ros-melodic-rwt-image-view";
-  version = "0.1.1-r1";
+  version = "0.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/melodic/rwt_image_view/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "4636e54ee0c17a57480aeb4114e5c0686504da5eec5b8ffb1c44f237f1c8241a";
+    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/melodic/rwt_image_view/0.1.2-2.tar.gz";
+    name = "0.1.2-2.tar.gz";
+    sha256 = "908ca9833f9e8561523ecdc8c6f5f499a3c8fef109f7aae9863679537ac2a811";
   };
 
   buildType = "catkin";

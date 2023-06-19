@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, gps-msgs, nav-msgs, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-gps-tools";
-  version = "1.0.8-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/foxy/gps_tools/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "81c90a475056cb9c2ea011b6cedae82900fb404d6786cd4f5ae33edf60e7bd83";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/foxy/gps_tools/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "ae506db44e698b4882077945a949b8554b49dd0cf58166aa46264ddb8df25975";
   };
 
   buildType = "ament_cmake";

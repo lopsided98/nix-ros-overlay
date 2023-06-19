@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, angles, boost, control-msgs, geometry-msgs, irobot-create-msgs, irobot-create-toolbox, nav-msgs, rclcpp, rclcpp-action, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-irobot-create-nodes";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/humble/irobot_create_nodes/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "3682a96746d82158c19926625e7a564cb994c57bc7d06dd9e1dc393a9b7aaf71";
+    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/humble/irobot_create_nodes/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "8d23aa74844b47362fe9743e7ade49d76f121f27563171ab6d29eea7f793fcf7";
   };
 
   buildType = "ament_cmake";

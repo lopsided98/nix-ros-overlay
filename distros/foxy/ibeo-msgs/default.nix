@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-ibeo-msgs";
-  version = "3.1.0-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/foxy/ibeo_msgs/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "dabef943871667ff41ec094c08509dd58f2447c49cc7cabe69411a301d25437e";
+    url = "https://github.com/ros2-gbp/astuff_sensor_msgs-release/archive/release/foxy/ibeo_msgs/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "07c35c771360ad3eacf46c15d556b130791958bc9a7e17748f7aef266240a18e";
   };
 
   buildType = "ament_cmake";

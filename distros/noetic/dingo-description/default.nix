@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, fath-pivot-mount-description, flir-camera-description, lms1xx, realsense2-description, robot-state-publisher, sick-tim, urdf, velodyne-description, xacro }:
 buildRosPackage {
   pname = "ros-noetic-dingo-description";
-  version = "0.3.1-r1";
+  version = "0.3.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/noetic/dingo_description/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "6c136d4c8ce8b13fa1f31f07b3b9a9f1bd088229c606b1a19712544bea2b166f";
+    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/noetic/dingo_description/0.3.1-2.tar.gz";
+    name = "0.3.1-2.tar.gz";
+    sha256 = "957f4fb1d130d726903ee70b898e4e9c0f1a673f95dd282c1d63f9c1c3f01907";
   };
 
   buildType = "catkin";

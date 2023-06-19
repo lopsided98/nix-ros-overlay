@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nlohmann_json, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-rmf-api-msgs";
-  version = "0.0.1-r5";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_api_msgs-release/archive/release/rolling/rmf_api_msgs/0.0.1-5.tar.gz";
-    name = "0.0.1-5.tar.gz";
-    sha256 = "476ea5590dabfa043e12cfaef14de7ada1e4f22a623ad6fa6ad7270f59c1cb1b";
+    url = "https://github.com/ros2-gbp/rmf_api_msgs-release/archive/release/rolling/rmf_api_msgs/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "5792f3e25beec46d574ff4fae3b2f77363dddfd58ee239536811c8bfede5051f";
   };
 
   buildType = "ament_cmake";

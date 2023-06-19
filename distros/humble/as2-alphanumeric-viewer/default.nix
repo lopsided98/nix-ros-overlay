@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-cpplint, ament-lint-auto, as2-core, as2-msgs, eigen, geometry-msgs, ncurses, rclcpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-as2-alphanumeric-viewer";
-  version = "1.0.0-r1";
+  version = "1.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_alphanumeric_viewer/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "21eb8f31a7fc17f5ba4b6585cc981fbcfcc8c041668304b45435bda1e4d6906e";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_alphanumeric_viewer/1.0.0-2.tar.gz";
+    name = "1.0.0-2.tar.gz";
+    sha256 = "33ddbf04989c022064eff2fec1f3fcc842c526bee3e6d5c2ef65164325d0d649";
   };
 
   buildType = "ament_cmake";

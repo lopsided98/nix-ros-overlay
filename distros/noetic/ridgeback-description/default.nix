@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lms1xx, robot-state-publisher, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-noetic-ridgeback-description";
-  version = "0.3.3-r1";
+  version = "0.3.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/noetic/ridgeback_description/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "73a9da48aea2df6f4f61c241ddc8441bf8099f441766a0add36bd0689bdd771c";
+    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/noetic/ridgeback_description/0.3.3-2.tar.gz";
+    name = "0.3.3-2.tar.gz";
+    sha256 = "00c742f64df089a27d09250b9f9e615889c2bf00d93c00ae640c3fa83376f22c";
   };
 
   buildType = "catkin";

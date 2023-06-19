@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rwt-app-chooser, rwt-image-view, rwt-moveit, rwt-plot, rwt-speech-recognition, rwt-utils-3rdparty }:
 buildRosPackage {
   pname = "ros-melodic-visualization-rwt";
-  version = "0.1.1-r1";
+  version = "0.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/melodic/visualization_rwt/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "8aa62e182a1ec6a2f54cd4701d81358c7de4c3e7d99272003243c2c5cead42dc";
+    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/melodic/visualization_rwt/0.1.2-2.tar.gz";
+    name = "0.1.2-2.tar.gz";
+    sha256 = "500bfc9c49b82ce213b7776f4c021c5956f8a7c27271951d8808b8848d36eb2d";
   };
 
   buildType = "catkin";

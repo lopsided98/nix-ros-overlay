@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, eus-qpoases, euslisp, rostest }:
 buildRosPackage {
   pname = "ros-noetic-eus-qp";
-  version = "0.1.16-r1";
+  version = "0.1.17-r2";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/eus_qp/0.1.16-1.tar.gz";
-    name = "0.1.16-1.tar.gz";
-    sha256 = "8a78331785cdceaceeff24a7f2eadff219ec60dd87f2c5ccadac5965e2114a69";
+    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/eus_qp/0.1.17-2.tar.gz";
+    name = "0.1.17-2.tar.gz";
+    sha256 = "7be4636c2862411cd18ae3079d835657e61142173a363f539f3fc3c444e3834e";
   };
 
   buildType = "catkin";

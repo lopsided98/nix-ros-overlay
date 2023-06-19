@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rcutils }:
 buildRosPackage {
   pname = "ros-foxy-rosbag2-test-common";
-  version = "0.3.10-r1";
+  version = "0.3.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/rosbag2_test_common/0.3.10-1.tar.gz";
-    name = "0.3.10-1.tar.gz";
-    sha256 = "8ea22434ca295379faf302abaa1f1b8db58419cb2592ca1ebef9b92af1732ca5";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/rosbag2_test_common/0.3.11-1.tar.gz";
+    name = "0.3.11-1.tar.gz";
+    sha256 = "c7da6b9dcd0a424957b7fea9c987baa10cddac178a292a69cf9169ed0a09d5dc";
   };
 
   buildType = "ament_cmake";

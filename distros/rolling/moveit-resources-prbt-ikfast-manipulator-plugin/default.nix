@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, generate-parameter-library, moveit-core, pluginlib, rclcpp, tf2-eigen, tf2-eigen-kdl, tf2-geometry-msgs, tf2-kdl }:
 buildRosPackage {
   pname = "ros-rolling-moveit-resources-prbt-ikfast-manipulator-plugin";
-  version = "2.7.3-r1";
+  version = "2.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_resources_prbt_ikfast_manipulator_plugin/2.7.3-1.tar.gz";
-    name = "2.7.3-1.tar.gz";
-    sha256 = "b329f82e255ad7c9581c3f34afa2fa9742ae892c6472b64b8681a8559ccc53e4";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_resources_prbt_ikfast_manipulator_plugin/2.7.4-1.tar.gz";
+    name = "2.7.4-1.tar.gz";
+    sha256 = "be05d4fd1587dcca5a01255d4d33a1937cf89ffadbeb488672528d7ec00e4822";
   };
 
   buildType = "ament_cmake";

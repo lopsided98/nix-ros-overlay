@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, catkin, gmapping, map-server, move-base, roslaunch }:
 buildRosPackage {
   pname = "ros-noetic-dingo-navigation";
-  version = "0.3.1-r1";
+  version = "0.3.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/noetic/dingo_navigation/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "1ab35365c0cfefd6de61943e0a1b6ecb8457e4126e4c6eb040bf9ff4ac119924";
+    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/noetic/dingo_navigation/0.3.1-2.tar.gz";
+    name = "0.3.1-2.tar.gz";
+    sha256 = "1fcd094f1e57714833d8b683b61a4d9a5d1c4d766b8e1abf1a9e1d7ad3e24b95";
   };
 
   buildType = "catkin";

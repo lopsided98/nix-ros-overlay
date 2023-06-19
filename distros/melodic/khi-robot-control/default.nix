@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, diagnostic-updater, hardware-interface, joint-limits-interface, joint-state-controller, joint-trajectory-controller, khi-robot-msgs, position-controllers, realtime-tools, rostest, trajectory-msgs, transmission-interface }:
 buildRosPackage {
   pname = "ros-melodic-khi-robot-control";
-  version = "1.2.0-r1";
+  version = "1.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/melodic/khi_robot_control/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "5b41dc0be0d2c297e2df384f877f5db6388398fef8e557eddcd2433e2216c68b";
+    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/melodic/khi_robot_control/1.4.0-2.tar.gz";
+    name = "1.4.0-2.tar.gz";
+    sha256 = "f8a38c2077445985415f1250ab1a87c2011249908fcffd8eff193b4b02dc29fe";
   };
 
   buildType = "catkin";

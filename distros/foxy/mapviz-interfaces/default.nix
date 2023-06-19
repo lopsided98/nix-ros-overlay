@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, builtin-interfaces, marti-common-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-foxy-mapviz-interfaces";
-  version = "2.1.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/foxy/mapviz_interfaces/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "872320c65cdca9b4e1f4aa2f0e35001deb126e0dfaaabe896da40b7bc878f4bb";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/foxy/mapviz_interfaces/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "c9695646008f92336bca137edca7ceca7b659359d4cb40f12845d39e5b1441bd";
   };
 
   buildType = "ament_cmake";

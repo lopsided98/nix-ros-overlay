@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, joint-state-publisher-gui, launch, launch-ros, launch-testing-ament-cmake, launch-testing-ros, robot-state-publisher, rviz2, urdf, urdfdom, xacro }:
 buildRosPackage {
   pname = "ros-humble-ur-description";
-  version = "2.0.1-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ur_description-release/archive/release/humble/ur_description/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "815cdd2721d37d9d4749645170b00707a64e6bcc78ddabce6c411a75dcaff948";
+    url = "https://github.com/ros2-gbp/ur_description-release/archive/release/humble/ur_description/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "539afcd063dfb1cf38cfddb8792c5ce79304ba247fa5841099b9264051ea69c3";
   };
 
   buildType = "ament_cmake";

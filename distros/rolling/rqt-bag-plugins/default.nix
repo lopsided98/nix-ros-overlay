@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, python3Packages, rclpy, rosbag2, rqt-bag, rqt-gui, rqt-gui-py, rqt-plot, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rqt-bag-plugins";
-  version = "1.4.0-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_bag-release/archive/release/rolling/rqt_bag_plugins/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "caf5f59a0c6336d3a09d1bf8cb37da0a44bebd04fedf070f4ad2a2a3edb7a499";
+    url = "https://github.com/ros2-gbp/rqt_bag-release/archive/release/rolling/rqt_bag_plugins/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "c3a40b916317e3afbf2ef0097f8a0940919a64d01f715b2ecfa3b79a9a4c716b";
   };
 
   buildType = "ament_python";

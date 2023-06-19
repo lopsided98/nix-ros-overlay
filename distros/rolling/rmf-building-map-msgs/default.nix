@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rmf-building-map-msgs";
-  version = "1.2.0-r6";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_building_map_msgs-release/archive/release/rolling/rmf_building_map_msgs/1.2.0-6.tar.gz";
-    name = "1.2.0-6.tar.gz";
-    sha256 = "9edefb1cce21d0d9f67d55a3a4400a91162c5446b5b228575ac8663cbd1a0271";
+    url = "https://github.com/ros2-gbp/rmf_building_map_msgs-release/archive/release/rolling/rmf_building_map_msgs/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "f20a8a0f45c379b9310437798e97fc7e87b9b8f0e8a2d0e1ddfe175d18cfa128";
   };
 
   buildType = "ament_cmake";

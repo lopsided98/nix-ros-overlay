@@ -242,6 +242,8 @@ self: super: {
 
  bag2-to-image = self.callPackage ./bag2-to-image {};
 
+ behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
+
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
  bno055 = self.callPackage ./bno055 {};
@@ -282,6 +284,10 @@ self: super: {
 
  class-loader = self.callPackage ./class-loader {};
 
+ clearpath-msgs = self.callPackage ./clearpath-msgs {};
+
+ clearpath-platform-msgs = self.callPackage ./clearpath-platform-msgs {};
+
  color-names = self.callPackage ./color-names {};
 
  color-util = self.callPackage ./color-util {};
@@ -311,6 +317,16 @@ self: super: {
  controller-manager-msgs = self.callPackage ./controller-manager-msgs {};
 
  costmap-queue = self.callPackage ./costmap-queue {};
+
+ create-bringup = self.callPackage ./create-bringup {};
+
+ create-description = self.callPackage ./create-description {};
+
+ create-driver = self.callPackage ./create-driver {};
+
+ create-msgs = self.callPackage ./create-msgs {};
+
+ create-robot = self.callPackage ./create-robot {};
 
  cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
 
@@ -366,6 +382,12 @@ self: super: {
 
  dbw-polaris-msgs = self.callPackage ./dbw-polaris-msgs {};
 
+ delphi-esr-msgs = self.callPackage ./delphi-esr-msgs {};
+
+ delphi-mrr-msgs = self.callPackage ./delphi-mrr-msgs {};
+
+ delphi-srr-msgs = self.callPackage ./delphi-srr-msgs {};
+
  demo-nodes-cpp = self.callPackage ./demo-nodes-cpp {};
 
  demo-nodes-cpp-native = self.callPackage ./demo-nodes-cpp-native {};
@@ -391,6 +413,8 @@ self: super: {
  depthai-ros-msgs = self.callPackage ./depthai-ros-msgs {};
 
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
+
+ derived-object-msgs = self.callPackage ./derived-object-msgs {};
 
  desktop = self.callPackage ./desktop {};
 
@@ -648,11 +672,15 @@ self: super: {
 
  hash-library-vendor = self.callPackage ./hash-library-vendor {};
 
+ heaphook = self.callPackage ./heaphook {};
+
  hey5-description = self.callPackage ./hey5-description {};
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
  hpp-fcl = self.callPackage ./hpp-fcl {};
+
+ ibeo-msgs = self.callPackage ./ibeo-msgs {};
 
  iceoryx-binding-c = self.callPackage ./iceoryx-binding-c {};
 
@@ -746,6 +774,8 @@ self: super: {
 
  joy-tester = self.callPackage ./joy-tester {};
 
+ kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
+
  kdl-parser = self.callPackage ./kdl-parser {};
 
  key-teleop = self.callPackage ./key-teleop {};
@@ -769,6 +799,8 @@ self: super: {
  lanelet2-io = self.callPackage ./lanelet2-io {};
 
  lanelet2-maps = self.callPackage ./lanelet2-maps {};
+
+ lanelet2-matching = self.callPackage ./lanelet2-matching {};
 
  lanelet2-projection = self.callPackage ./lanelet2-projection {};
 
@@ -829,6 +861,8 @@ self: super: {
  leo-viz = self.callPackage ./leo-viz {};
 
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
+
+ libcreate = self.callPackage ./libcreate {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
 
@@ -926,6 +960,8 @@ self: super: {
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
+ mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
+
  mod = self.callPackage ./mod {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
@@ -1016,6 +1052,8 @@ self: super: {
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
+ mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
+
  mrpt2 = self.callPackage ./mrpt2 {};
 
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
@@ -1102,6 +1140,8 @@ self: super: {
 
  neo-simulation2 = self.callPackage ./neo-simulation2 {};
 
+ neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
+
  nerian-stereo = self.callPackage ./nerian-stereo {};
 
  nlohmann-json-schema-validator-vendor = self.callPackage ./nlohmann-json-schema-validator-vendor {};
@@ -1125,6 +1165,8 @@ self: super: {
  ntpd-driver = self.callPackage ./ntpd-driver {};
 
  ntrip-client = self.callPackage ./ntrip-client {};
+
+ ntrip-client-node = self.callPackage ./ntrip-client-node {};
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
 
@@ -1461,6 +1503,8 @@ self: super: {
  rmf-charger-msgs = self.callPackage ./rmf-charger-msgs {};
 
  rmf-cmake-uncrustify = self.callPackage ./rmf-cmake-uncrustify {};
+
+ rmf-dev = self.callPackage ./rmf-dev {};
 
  rmf-dispenser-msgs = self.callPackage ./rmf-dispenser-msgs {};
 
@@ -1980,6 +2024,8 @@ self: super: {
 
  stubborn-buddies-msgs = self.callPackage ./stubborn-buddies-msgs {};
 
+ swri-cli-tools = self.callPackage ./swri-cli-tools {};
+
  swri-console = self.callPackage ./swri-console {};
 
  swri-console-util = self.callPackage ./swri-console-util {};
@@ -2094,6 +2140,8 @@ self: super: {
 
  tlsf-cpp = self.callPackage ./tlsf-cpp {};
 
+ topic-based-ros2-control = self.callPackage ./topic-based-ros2-control {};
+
  topic-monitor = self.callPackage ./topic-monitor {};
 
  topic-statistics-demo = self.callPackage ./topic-statistics-demo {};
@@ -2176,6 +2224,10 @@ self: super: {
 
  turtlebot4-diagnostics = self.callPackage ./turtlebot4-diagnostics {};
 
+ turtlebot4-ignition-bringup = self.callPackage ./turtlebot4-ignition-bringup {};
+
+ turtlebot4-ignition-toolbox = self.callPackage ./turtlebot4-ignition-toolbox {};
+
  turtlebot4-msgs = self.callPackage ./turtlebot4-msgs {};
 
  turtlebot4-navigation = self.callPackage ./turtlebot4-navigation {};
@@ -2187,6 +2239,8 @@ self: super: {
  turtlebot4-robot = self.callPackage ./turtlebot4-robot {};
 
  turtlebot4-setup = self.callPackage ./turtlebot4-setup {};
+
+ turtlebot4-simulator = self.callPackage ./turtlebot4-simulator {};
 
  turtlebot4-tests = self.callPackage ./turtlebot4-tests {};
 
@@ -2224,6 +2278,8 @@ self: super: {
 
  ublox-msgs = self.callPackage ./ublox-msgs {};
 
+ ublox-nav-sat-fix-hp-node = self.callPackage ./ublox-nav-sat-fix-hp-node {};
+
  ublox-serialization = self.callPackage ./ublox-serialization {};
 
  ublox-ubx-interfaces = self.callPackage ./ublox-ubx-interfaces {};
@@ -2255,8 +2311,6 @@ self: super: {
  ur-moveit-config = self.callPackage ./ur-moveit-config {};
 
  ur-msgs = self.callPackage ./ur-msgs {};
-
- ur-robot-driver = self.callPackage ./ur-robot-driver {};
 
  urdf = self.callPackage ./urdf {};
 
@@ -2314,6 +2368,8 @@ self: super: {
 
  vrpn = self.callPackage ./vrpn {};
 
+ vrpn-mocap = self.callPackage ./vrpn-mocap {};
+
  wall-follower-ros2 = self.callPackage ./wall-follower-ros2 {};
 
  warehouse-ros = self.callPackage ./warehouse-ros {};
@@ -2347,6 +2403,10 @@ self: super: {
  wiimote = self.callPackage ./wiimote {};
 
  wiimote-msgs = self.callPackage ./wiimote-msgs {};
+
+ wireless-msgs = self.callPackage ./wireless-msgs {};
+
+ wireless-watcher = self.callPackage ./wireless-watcher {};
 
  xacro = self.callPackage ./xacro {};
 

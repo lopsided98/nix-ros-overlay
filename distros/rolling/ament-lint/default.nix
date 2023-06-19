@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl,  }:
 buildRosPackage {
   pname = "ros-rolling-ament-lint";
-  version = "0.15.0-r1";
+  version = "0.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_lint/0.15.0-1.tar.gz";
-    name = "0.15.0-1.tar.gz";
-    sha256 = "c3f4b7cb66a99d0d0dcb15dfc8799cd67fe4a772bf0444620235cc11d3978500";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_lint/0.15.1-1.tar.gz";
+    name = "0.15.1-1.tar.gz";
+    sha256 = "6704bf98d182168de706a87b503de0ec5b025a25a280ded411de3c1170b0def2";
   };
 
   buildType = "ament_python";

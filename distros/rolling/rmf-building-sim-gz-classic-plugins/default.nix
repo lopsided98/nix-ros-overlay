@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gazebo-dev, gazebo-ros, menge-vendor, opencv, qt5, rclcpp, rmf-building-sim-common, rmf-fleet-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rmf-building-sim-gz-classic-plugins";
-  version = "2.0.0-r2";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/rolling/rmf_building_sim_gz_classic_plugins/2.0.0-2.tar.gz";
-    name = "2.0.0-2.tar.gz";
-    sha256 = "27301793360346bd7460258b840fa17cf4b8f7f77c6761ad86d7b82e74b6c17b";
+    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/rolling/rmf_building_sim_gz_classic_plugins/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "a1950cb65818248fc3f8d2a4c246d45092e0e03bfaac869f0a08ee12b2048f90";
   };
 
   buildType = "ament_cmake";

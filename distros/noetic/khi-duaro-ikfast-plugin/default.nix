@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, liblapack, moveit-core, pluginlib, roscpp, tf-conversions }:
 buildRosPackage {
   pname = "ros-noetic-khi-duaro-ikfast-plugin";
-  version = "1.3.0-r2";
+  version = "1.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/noetic/khi_duaro_ikfast_plugin/1.3.0-2.tar.gz";
-    name = "1.3.0-2.tar.gz";
-    sha256 = "8e04bf9a27110105da896f1bfc4a47241f7269c0faf124bb354355a1181c191a";
+    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/noetic/khi_duaro_ikfast_plugin/1.4.0-2.tar.gz";
+    name = "1.4.0-2.tar.gz";
+    sha256 = "075019956eef7be622fbb43f104ce41760bde721e49f6ca5c09d086fdac94d54";
   };
 
   buildType = "catkin";

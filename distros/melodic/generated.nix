@@ -618,6 +618,16 @@ self: super: {
 
  cpu-temperature-diagnostics = self.callPackage ./cpu-temperature-diagnostics {};
 
+ create-bringup = self.callPackage ./create-bringup {};
+
+ create-description = self.callPackage ./create-description {};
+
+ create-driver = self.callPackage ./create-driver {};
+
+ create-msgs = self.callPackage ./create-msgs {};
+
+ create-robot = self.callPackage ./create-robot {};
+
  criutils = self.callPackage ./criutils {};
 
  csm = self.callPackage ./csm {};
@@ -797,6 +807,8 @@ self: super: {
  dockeros = self.callPackage ./dockeros {};
 
  downward = self.callPackage ./downward {};
+
+ draco = self.callPackage ./draco {};
 
  driver-base = self.callPackage ./driver-base {};
 
@@ -1790,6 +1802,12 @@ self: super: {
 
  khi-rs007n-moveit-config = self.callPackage ./khi-rs007n-moveit-config {};
 
+ khi-rs013n-moveit-config = self.callPackage ./khi-rs013n-moveit-config {};
+
+ khi-rs020n-moveit-config = self.callPackage ./khi-rs020n-moveit-config {};
+
+ khi-rs025n-moveit-config = self.callPackage ./khi-rs025n-moveit-config {};
+
  khi-rs080n-moveit-config = self.callPackage ./khi-rs080n-moveit-config {};
 
  khi-rs-description = self.callPackage ./khi-rs-description {};
@@ -2490,6 +2508,8 @@ self: super: {
 
  neonavigation-launch = self.callPackage ./neonavigation-launch {};
 
+ neonavigation-metrics-msgs = self.callPackage ./neonavigation-metrics-msgs {};
+
  neonavigation-msgs = self.callPackage ./neonavigation-msgs {};
 
  neonavigation-rviz-plugins = self.callPackage ./neonavigation-rviz-plugins {};
@@ -2841,6 +2861,8 @@ self: super: {
  pluginlib-tutorials = self.callPackage ./pluginlib-tutorials {};
 
  point-cloud-publisher-tutorial = self.callPackage ./point-cloud-publisher-tutorial {};
+
+ point-cloud-transport-plugins = self.callPackage ./point-cloud-transport-plugins {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
@@ -3926,8 +3948,6 @@ self: super: {
 
  semantic-point-annotator = self.callPackage ./semantic-point-annotator {};
 
- sensor-filters = self.callPackage ./sensor-filters {};
-
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
  septentrio-gnss-driver = self.callPackage ./septentrio-gnss-driver {};
@@ -4134,6 +4154,8 @@ self: super: {
 
  tf2-bullet = self.callPackage ./tf2-bullet {};
 
+ tf2-client = self.callPackage ./tf2-client {};
+
  tf2-eigen = self.callPackage ./tf2-eigen {};
 
  tf2-geometry-msgs = self.callPackage ./tf2-geometry-msgs {};
@@ -4171,26 +4193,6 @@ self: super: {
  timestamp-tools = self.callPackage ./timestamp-tools {};
 
  topic-tools = self.callPackage ./topic-tools {};
-
- toposens = self.callPackage ./toposens {};
-
- toposens-sensor-library = self.callPackage ./toposens-sensor-library {};
-
- toposens-bringup = self.callPackage ./toposens-bringup {};
-
- toposens-description = self.callPackage ./toposens-description {};
-
- toposens-driver = self.callPackage ./toposens-driver {};
-
- toposens-echo-driver = self.callPackage ./toposens-echo-driver {};
-
- toposens-markers = self.callPackage ./toposens-markers {};
-
- toposens-msgs = self.callPackage ./toposens-msgs {};
-
- toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
-
- toposens-sync = self.callPackage ./toposens-sync {};
 
  tork-moveit-tutorial = self.callPackage ./tork-moveit-tutorial {};
 

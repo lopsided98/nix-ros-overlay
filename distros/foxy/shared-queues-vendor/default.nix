@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-foxy-shared-queues-vendor";
-  version = "0.3.10-r1";
+  version = "0.3.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/shared_queues_vendor/0.3.10-1.tar.gz";
-    name = "0.3.10-1.tar.gz";
-    sha256 = "080e57d76541d4286b46219a0c273690b1a28332f4a7ae846c23325e2d4d8bab";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/shared_queues_vendor/0.3.11-1.tar.gz";
+    name = "0.3.11-1.tar.gz";
+    sha256 = "433dd6ed962b32dc7406d813c36a4031b6acd395cf9ed41b5d9c98dc54934852";
   };
 
   buildType = "ament_cmake";

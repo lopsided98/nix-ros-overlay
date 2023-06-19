@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-velodyne-laserscan";
-  version = "2.3.0-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/velodyne-release/archive/release/humble/velodyne_laserscan/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "9aea61bf55a6472f5a4a00eef32030d629693578687b9142d75295461d261823";
+    url = "https://github.com/ros2-gbp/velodyne-release/archive/release/humble/velodyne_laserscan/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "a0d4dee22118ed7b35053fb1e2165b7cc4d47afdd3915028adb564b422e81f85";
   };
 
   buildType = "ament_cmake";

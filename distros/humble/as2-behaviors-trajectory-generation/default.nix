@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-cpplint, ament-lint-auto, as2-behavior, as2-core, as2-motion-reference-handlers, as2-msgs, eigen, geometry-msgs, rclcpp, std-msgs, std-srvs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-as2-behaviors-trajectory-generation";
-  version = "1.0.0-r1";
+  version = "1.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_behaviors_trajectory_generation/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "b68bfae76fca8d0c5004fcf8d79da08a71287c293db384fc94e0496413840d8b";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_behaviors_trajectory_generation/1.0.0-2.tar.gz";
+    name = "1.0.0-2.tar.gz";
+    sha256 = "713ada30066262876392f869220b0a4023993c6b0888171b15c3d1eb99f7163d";
   };
 
   buildType = "ament_cmake";

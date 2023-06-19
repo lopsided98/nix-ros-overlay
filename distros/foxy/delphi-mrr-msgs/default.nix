@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-delphi-mrr-msgs";
-  version = "3.1.0-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/foxy/delphi_mrr_msgs/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "b5394667d1ff96e8a0736138e9f59c10c887473bb8c9d769ad8b7d076f4a3bd5";
+    url = "https://github.com/ros2-gbp/astuff_sensor_msgs-release/archive/release/foxy/delphi_mrr_msgs/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "ce843a5289a9a94d4f0b297a716a938fb0f1ae0a8d8b4b2e9e4234c47530492e";
   };
 
   buildType = "ament_cmake";

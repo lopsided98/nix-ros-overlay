@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python3Packages }:
 buildRosPackage {
   pname = "ros-foxy-rosidl-adapter";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/foxy/rosidl_adapter/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "71d40ff1ab72b18a1579e5593fb8ff8aab64881be96538c507be652248b97d2b";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/foxy/rosidl_adapter/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "1df8b635268667e41d33046f47659ae5d9b456d8f14f75922ea357ea40b9a005";
   };
 
   buildType = "ament_cmake";

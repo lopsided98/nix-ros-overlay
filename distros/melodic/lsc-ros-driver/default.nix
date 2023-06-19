@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, roscpp, self-test, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-lsc-ros-driver";
-  version = "1.0.2-r1";
+  version = "1.0.3-r10";
 
   src = fetchurl {
-    url = "https://github.com/AutonicsLiDAR-release/lsc_ros_driver-release/archive/release/melodic/lsc_ros_driver/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "32a1896f2074ea84a3cd92299deabc1e3303ec42744cd6a2c6064c857ed52e12";
+    url = "https://github.com/AutonicsLiDAR-release/lsc_ros_driver-release/archive/release/melodic/lsc_ros_driver/1.0.3-10.tar.gz";
+    name = "1.0.3-10.tar.gz";
+    sha256 = "44ff07ff43a39ec772bab4552eb3fd999835ad3b36978f6dd1e943d90fa62943";
   };
 
   buildType = "catkin";

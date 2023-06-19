@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, flexbe-core, flexbe-input, flexbe-mirror, flexbe-msgs, flexbe-onboard, flexbe-states, flexbe-testing, flexbe-widget }:
 buildRosPackage {
   pname = "ros-noetic-flexbe-behavior-engine";
-  version = "1.3.1-r1";
+  version = "1.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/noetic/flexbe_behavior_engine/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "3fcb8b9336056227df3ddedca2e8af6acdb4aba8235afdc07379509866336312";
+    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/noetic/flexbe_behavior_engine/1.4.0-2.tar.gz";
+    name = "1.4.0-2.tar.gz";
+    sha256 = "8f4404d2bf6d50bf765d631a6b1435288eaa91238884126b00f05c8af1bd343d";
   };
 
   buildType = "catkin";

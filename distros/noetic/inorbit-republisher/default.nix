@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, python3Packages, roslib, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-inorbit-republisher";
-  version = "0.2.5-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/inorbit-ai/ros_inorbit_samples-release/archive/release/noetic/inorbit_republisher/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "ab97b01aeeb56aeb52012f4a293f300fe793e250a9355ce211e50ec94312ed7f";
+    url = "https://github.com/inorbit-ai/ros_inorbit_samples-release/archive/release/noetic/inorbit_republisher/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "b420da2301282b41147d5215ba8c3325acb09083f41cae41dcd8c4529c647197";
   };
 
   buildType = "catkin";

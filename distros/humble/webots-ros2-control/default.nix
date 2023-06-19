@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, controller-manager, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, ros-environment, webots-ros2-driver }:
 buildRosPackage {
   pname = "ros-humble-webots-ros2-control";
-  version = "2023.0.3-r1";
+  version = "2023.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/humble/webots_ros2_control/2023.0.3-1.tar.gz";
-    name = "2023.0.3-1.tar.gz";
-    sha256 = "f8f923df64a95f9e660e68f744074309e7c1e5ba8ab119eec52e0166f1844357";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/humble/webots_ros2_control/2023.0.4-1.tar.gz";
+    name = "2023.0.4-1.tar.gz";
+    sha256 = "4dc26d93060ce3d7a7d25fe9b47f120e0eff25bd97cf27f3af21bebd0a62b1a2";
   };
 
   buildType = "ament_cmake";

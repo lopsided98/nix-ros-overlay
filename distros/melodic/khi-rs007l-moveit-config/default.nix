@@ -2,21 +2,21 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, khi-rs-description, moveit-fake-controller-manager, moveit-kinematics, moveit-planners-ompl, moveit-ros-move-group, moveit-ros-visualization, robot-state-publisher, roslaunch, rostest, rviz, tf, xacro }:
+{ lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, khi-rs-description, khi-rs-ikfast-plugin, moveit-fake-controller-manager, moveit-kinematics, moveit-planners-ompl, moveit-ros-move-group, moveit-ros-visualization, robot-state-publisher, roslaunch, rostest, rviz, tf, xacro }:
 buildRosPackage {
   pname = "ros-melodic-khi-rs007l-moveit-config";
-  version = "1.2.0-r1";
+  version = "1.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/melodic/khi_rs007l_moveit_config/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "564e6223536c64aa0963d043a6a5ff3f8d819053acbdc2dec330a97da22e7a68";
+    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/melodic/khi_rs007l_moveit_config/1.4.0-2.tar.gz";
+    name = "1.4.0-2.tar.gz";
+    sha256 = "84839aba7504529a74a4c2ed25753f07a12a957861aed9ebb4eb2557f18096b0";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin ];
   checkInputs = [ roslaunch rostest ];
-  propagatedBuildInputs = [ joint-state-publisher khi-rs-description moveit-fake-controller-manager moveit-kinematics moveit-planners-ompl moveit-ros-move-group moveit-ros-visualization robot-state-publisher rviz tf xacro ];
+  propagatedBuildInputs = [ joint-state-publisher khi-rs-description khi-rs-ikfast-plugin moveit-fake-controller-manager moveit-kinematics moveit-planners-ompl moveit-ros-move-group moveit-ros-visualization robot-state-publisher rviz tf xacro ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

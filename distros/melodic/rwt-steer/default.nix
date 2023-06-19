@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, image-publisher, rosbridge-server, rostest, roswww, rviz, rwt-utils-3rdparty, web-video-server }:
 buildRosPackage {
   pname = "ros-melodic-rwt-steer";
-  version = "0.1.1-r1";
+  version = "0.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/melodic/rwt_steer/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "db2abd4a820bfb28b5bfa98bfaee23a0ac800040288ccd66049e21b75fd38871";
+    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/melodic/rwt_steer/0.1.2-2.tar.gz";
+    name = "0.1.2-2.tar.gz";
+    sha256 = "27b6ac546a9cacc27ec0734a3a8be26c34e28cec4f871d6060faba2f0a745320";
   };
 
   buildType = "catkin";

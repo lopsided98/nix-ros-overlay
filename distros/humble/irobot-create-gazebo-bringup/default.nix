@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, gazebo-plugins, gazebo-ros, gazebo-ros2-control, irobot-create-common-bringup, irobot-create-description, irobot-create-gazebo-plugins, ros2launch }:
 buildRosPackage {
   pname = "ros-humble-irobot-create-gazebo-bringup";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/humble/irobot_create_gazebo_bringup/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "ef85e982ecce4b7aa4f02fa6b6c690843356cf6e2af5b7a2f1f983a222ad90c8";
+    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/humble/irobot_create_gazebo_bringup/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "01ee694d1012a1e0f05da7109be17c0f1b6c505fc4e6107bc88307b79da36155";
   };
 
   buildType = "ament_cmake";

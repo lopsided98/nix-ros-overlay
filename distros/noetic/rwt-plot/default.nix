@@ -2,20 +2,20 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, rosbridge-server, rospy, rostest, roswww, rwt-utils-3rdparty, std-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, rosbridge-server, roslaunch, rospy, rostest, roswww, rwt-utils-3rdparty, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rwt-plot";
-  version = "0.1.1-r2";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/noetic/rwt_plot/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "9ad07f82adc4a449ddf4e898c31dc1196868c23cf5c47732b4d7418a85e78e64";
+    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/noetic/rwt_plot/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "12bd3e24043781e2d4d0b90db763ce4a2cc34ba897d743b51594916ed867b72b";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  checkInputs = [ rostest ];
+  checkInputs = [ roslaunch rostest ];
   propagatedBuildInputs = [ geometry-msgs rosbridge-server rospy roswww rwt-utils-3rdparty std-msgs ];
   nativeBuildInputs = [ catkin ];
 

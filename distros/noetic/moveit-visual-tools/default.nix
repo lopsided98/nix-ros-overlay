@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, graph-msgs, moveit-core, moveit-ros-planning, roscpp, roslint, rviz-visual-tools, std-msgs, tf2-eigen, tf2-ros, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-moveit-visual-tools";
-  version = "3.6.0-r1";
+  version = "3.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_visual_tools-release/archive/release/noetic/moveit_visual_tools/3.6.0-1.tar.gz";
-    name = "3.6.0-1.tar.gz";
-    sha256 = "f6df4a22012e3f8aa930d07e68fdb21239ab8addabd48872bcecbd62b382af03";
+    url = "https://github.com/ros-gbp/moveit_visual_tools-release/archive/release/noetic/moveit_visual_tools/3.6.1-1.tar.gz";
+    name = "3.6.1-1.tar.gz";
+    sha256 = "06950a22f93d8e03119717c66af4b73f4b7f7b2a4f955041819e26318322ede6";
   };
 
   buildType = "catkin";

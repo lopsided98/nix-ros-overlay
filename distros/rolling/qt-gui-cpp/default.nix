@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, pkg-config, pluginlib, python-qt-binding, qt-gui, qt5, rcpputils, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-rolling-qt-gui-cpp";
-  version = "2.5.0-r1";
+  version = "2.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui_cpp/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "6a36d15a64dad660461a962ec71d05e79b07e2db161cd2915712ee57e0f67069";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui_cpp/2.6.0-1.tar.gz";
+    name = "2.6.0-1.tar.gz";
+    sha256 = "bb396bd8221369fc90138883bd9506631df551f59199f6b813684a9f44431ab2";
   };
 
   buildType = "ament_cmake";

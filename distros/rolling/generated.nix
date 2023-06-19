@@ -8,6 +8,8 @@ self: super: {
 
  ackermann-msgs = self.callPackage ./ackermann-msgs {};
 
+ ackermann-steering-controller = self.callPackage ./ackermann-steering-controller {};
+
  action-msgs = self.callPackage ./action-msgs {};
 
  action-tutorials-cpp = self.callPackage ./action-tutorials-cpp {};
@@ -184,7 +186,11 @@ self: super: {
 
  bag2-to-image = self.callPackage ./bag2-to-image {};
 
+ behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
+
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
+
+ bicycle-steering-controller = self.callPackage ./bicycle-steering-controller {};
 
  bno055 = self.callPackage ./bno055 {};
 
@@ -256,6 +262,12 @@ self: super: {
 
  cyclonedds = self.callPackage ./cyclonedds {};
 
+ delphi-esr-msgs = self.callPackage ./delphi-esr-msgs {};
+
+ delphi-mrr-msgs = self.callPackage ./delphi-mrr-msgs {};
+
+ delphi-srr-msgs = self.callPackage ./delphi-srr-msgs {};
+
  demo-nodes-cpp = self.callPackage ./demo-nodes-cpp {};
 
  demo-nodes-cpp-native = self.callPackage ./demo-nodes-cpp-native {};
@@ -265,6 +277,8 @@ self: super: {
  depth-image-proc = self.callPackage ./depth-image-proc {};
 
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
+
+ derived-object-msgs = self.callPackage ./derived-object-msgs {};
 
  desktop = self.callPackage ./desktop {};
 
@@ -293,6 +307,8 @@ self: super: {
  domain-bridge = self.callPackage ./domain-bridge {};
 
  domain-coordinator = self.callPackage ./domain-coordinator {};
+
+ dual-arm-panda-moveit-config = self.callPackage ./dual-arm-panda-moveit-config {};
 
  dummy-map-server = self.callPackage ./dummy-map-server {};
 
@@ -564,9 +580,13 @@ self: super: {
 
  hash-library-vendor = self.callPackage ./hash-library-vendor {};
 
+ heaphook = self.callPackage ./heaphook {};
+
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
  hpp-fcl = self.callPackage ./hpp-fcl {};
+
+ ibeo-msgs = self.callPackage ./ibeo-msgs {};
 
  iceoryx-binding-c = self.callPackage ./iceoryx-binding-c {};
 
@@ -635,6 +655,8 @@ self: super: {
  joy-teleop = self.callPackage ./joy-teleop {};
 
  joy-tester = self.callPackage ./joy-tester {};
+
+ kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
 
@@ -726,6 +748,8 @@ self: super: {
 
  logging-demo = self.callPackage ./logging-demo {};
 
+ magic-enum = self.callPackage ./magic-enum {};
+
  map-msgs = self.callPackage ./map-msgs {};
 
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
@@ -778,6 +802,8 @@ self: super: {
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
+ mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
+
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
  moveit = self.callPackage ./moveit {};
@@ -801,6 +827,8 @@ self: super: {
  moveit-planners-chomp = self.callPackage ./moveit-planners-chomp {};
 
  moveit-planners-ompl = self.callPackage ./moveit-planners-ompl {};
+
+ moveit-planners-stomp = self.callPackage ./moveit-planners-stomp {};
 
  moveit-plugins = self.callPackage ./moveit-plugins {};
 
@@ -868,6 +896,8 @@ self: super: {
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
+ mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
+
  mrpt2 = self.callPackage ./mrpt2 {};
 
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
@@ -888,6 +918,8 @@ self: super: {
 
  neo-simulation2 = self.callPackage ./neo-simulation2 {};
 
+ neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
+
  nlohmann-json-schema-validator-vendor = self.callPackage ./nlohmann-json-schema-validator-vendor {};
 
  nmea-hardware-interface = self.callPackage ./nmea-hardware-interface {};
@@ -907,6 +939,8 @@ self: super: {
  ntpd-driver = self.callPackage ./ntpd-driver {};
 
  ntrip-client = self.callPackage ./ntrip-client {};
+
+ ntrip-client-node = self.callPackage ./ntrip-client-node {};
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
 
@@ -1164,6 +1198,8 @@ self: super: {
 
  rmf-cmake-uncrustify = self.callPackage ./rmf-cmake-uncrustify {};
 
+ rmf-dev = self.callPackage ./rmf-dev {};
+
  rmf-dispenser-msgs = self.callPackage ./rmf-dispenser-msgs {};
 
  rmf-door-msgs = self.callPackage ./rmf-door-msgs {};
@@ -1272,6 +1308,8 @@ self: super: {
 
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
 
+ ros2-socketcan-msgs = self.callPackage ./ros2-socketcan-msgs {};
+
  ros2acceleration = self.callPackage ./ros2acceleration {};
 
  ros2action = self.callPackage ./ros2action {};
@@ -1330,7 +1368,19 @@ self: super: {
 
  ros-environment = self.callPackage ./ros-environment {};
 
+ ros-gz = self.callPackage ./ros-gz {};
+
+ ros-gz-interfaces = self.callPackage ./ros-gz-interfaces {};
+
  ros-ign = self.callPackage ./ros-ign {};
+
+ ros-ign-bridge = self.callPackage ./ros-ign-bridge {};
+
+ ros-ign-gazebo = self.callPackage ./ros-ign-gazebo {};
+
+ ros-ign-gazebo-demos = self.callPackage ./ros-ign-gazebo-demos {};
+
+ ros-ign-image = self.callPackage ./ros-ign-image {};
 
  ros-ign-interfaces = self.callPackage ./ros-ign-interfaces {};
 
@@ -1534,8 +1584,6 @@ self: super: {
 
  rviz-assimp-vendor = self.callPackage ./rviz-assimp-vendor {};
 
- rviz-common = self.callPackage ./rviz-common {};
-
  rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
@@ -1625,6 +1673,8 @@ self: super: {
  std-msgs = self.callPackage ./std-msgs {};
 
  std-srvs = self.callPackage ./std-srvs {};
+
+ steering-controllers-library = self.callPackage ./steering-controllers-library {};
 
  stereo-image-proc = self.callPackage ./stereo-image-proc {};
 
@@ -1732,6 +1782,8 @@ self: super: {
 
  tlsf-cpp = self.callPackage ./tlsf-cpp {};
 
+ topic-based-ros2-control = self.callPackage ./topic-based-ros2-control {};
+
  topic-monitor = self.callPackage ./topic-monitor {};
 
  topic-statistics-demo = self.callPackage ./topic-statistics-demo {};
@@ -1757,6 +1809,8 @@ self: super: {
  transmission-interface = self.callPackage ./transmission-interface {};
 
  tricycle-controller = self.callPackage ./tricycle-controller {};
+
+ tricycle-steering-controller = self.callPackage ./tricycle-steering-controller {};
 
  turbojpeg-compressed-image-transport = self.callPackage ./turbojpeg-compressed-image-transport {};
 
@@ -1792,6 +1846,8 @@ self: super: {
 
  ublox-msgs = self.callPackage ./ublox-msgs {};
 
+ ublox-nav-sat-fix-hp-node = self.callPackage ./ublox-nav-sat-fix-hp-node {};
+
  ublox-serialization = self.callPackage ./ublox-serialization {};
 
  ublox-ubx-interfaces = self.callPackage ./ublox-ubx-interfaces {};
@@ -1807,8 +1863,6 @@ self: super: {
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
 
  ur = self.callPackage ./ur {};
-
- ur-bringup = self.callPackage ./ur-bringup {};
 
  ur-calibration = self.callPackage ./ur-calibration {};
 

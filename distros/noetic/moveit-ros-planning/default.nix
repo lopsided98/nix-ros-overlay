@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, dynamic-reconfigure, eigen, message-filters, moveit-core, moveit-msgs, moveit-resources-panda-moveit-config, moveit-ros-occupancy-map-monitor, pluginlib, rosconsole, roscpp, rostest, srdfdom, tf2, tf2-eigen, tf2-geometry-msgs, tf2-msgs, tf2-ros, urdf }:
 buildRosPackage {
   pname = "ros-noetic-moveit-ros-planning";
-  version = "1.1.11-r1";
+  version = "1.1.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_planning/1.1.11-1.tar.gz";
-    name = "1.1.11-1.tar.gz";
-    sha256 = "2add2fdda1af08d9400c16cd27d5182de36a4dbdeacb754093c3747ab581c65b";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_planning/1.1.12-1.tar.gz";
+    name = "1.1.12-1.tar.gz";
+    sha256 = "1bcd9e5258ecc13f6965dbd1ca53e3e058f42f8755db4f37101d3d1e4af3b973";
   };
 
   buildType = "catkin";

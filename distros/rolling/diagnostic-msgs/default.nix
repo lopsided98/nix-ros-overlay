@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-diagnostic-msgs";
-  version = "5.1.0-r1";
+  version = "5.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/diagnostic_msgs/5.1.0-1.tar.gz";
-    name = "5.1.0-1.tar.gz";
-    sha256 = "d6cbe9b10e14d9d52c54e9ec4632def5859c2fa66e81882af30b0a937bcba038";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/diagnostic_msgs/5.2.0-1.tar.gz";
+    name = "5.2.0-1.tar.gz";
+    sha256 = "622ef8a9077b19006ac5a0166947ee26dd53614b4c0ae43c9ba53aa7a3db308a";
   };
 
   buildType = "ament_cmake";

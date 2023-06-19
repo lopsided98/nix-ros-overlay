@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rmf-workcell-msgs";
-  version = "3.0.2-r2";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_workcell_msgs/3.0.2-2.tar.gz";
-    name = "3.0.2-2.tar.gz";
-    sha256 = "61ebbd8991c86938de29d24d27ef69546ec88f1434621744a90bd949ee2a0ae6";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_workcell_msgs/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "5495861fe2abce49cedc1f1ef71e1a6cf2de52476a18e316b58cf82dfc3ea37d";
   };
 
   buildType = "ament_cmake";

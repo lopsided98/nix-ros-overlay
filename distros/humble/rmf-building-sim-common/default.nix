@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, menge-vendor, rclcpp, rmf-building-map-msgs, rmf-door-msgs, rmf-lift-msgs }:
 buildRosPackage {
   pname = "ros-humble-rmf-building-sim-common";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/humble/rmf_building_sim_common/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "1d1a7d99ff349deee856b966eed8a402dad2d01c4f7baa83d6314fab04c9ecbb";
+    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/humble/rmf_building_sim_common/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "cdf032549d3685e54782502cf6554a197b55dc75bf12ba3bc1ea638965ad84e2";
   };
 
   buildType = "ament_cmake";

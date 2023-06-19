@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, sqlite }:
 buildRosPackage {
   pname = "ros-foxy-sqlite3-vendor";
-  version = "0.3.10-r1";
+  version = "0.3.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/sqlite3_vendor/0.3.10-1.tar.gz";
-    name = "0.3.10-1.tar.gz";
-    sha256 = "7b1cb56d0dedd59bd8eeea4bc7f2cf3e770b5a872ca5593298ebd0bd888fb84b";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/sqlite3_vendor/0.3.11-1.tar.gz";
+    name = "0.3.11-1.tar.gz";
+    sha256 = "f8b216fa65eb1e6a3c87af275b7e9a0814732c23d871ddab3e7bc7c967d16ae5";
   };
 
   buildType = "ament_cmake";

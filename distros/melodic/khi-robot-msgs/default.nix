@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-melodic-khi-robot-msgs";
-  version = "1.2.0-r1";
+  version = "1.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/melodic/khi_robot_msgs/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "63a2b5f4a4a75efd865b78c631ea2fb778ebe0fdf6a3a31d3c64849e64b583db";
+    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/melodic/khi_robot_msgs/1.4.0-2.tar.gz";
+    name = "1.4.0-2.tar.gz";
+    sha256 = "f01cac81b5aead5ecef09e15eda893e4b2cde18128715bc78ac4b5824924d708";
   };
 
   buildType = "catkin";

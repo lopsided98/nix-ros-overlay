@@ -126,6 +126,8 @@ self: super: {
 
  bayesian-belief-networks = self.callPackage ./bayesian-belief-networks {};
 
+ behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
+
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
  bond = self.callPackage ./bond {};
@@ -233,10 +235,6 @@ self: super: {
  clober-msgs = self.callPackage ./clober-msgs {};
 
  clpe = self.callPackage ./clpe {};
-
- clpe-ros = self.callPackage ./clpe-ros {};
-
- clpe-ros-msgs = self.callPackage ./clpe-ros-msgs {};
 
  cmake-modules = self.callPackage ./cmake-modules {};
 
@@ -506,6 +504,18 @@ self: super: {
 
  cpp-common = self.callPackage ./cpp-common {};
 
+ cpr-onav-description = self.callPackage ./cpr-onav-description {};
+
+ create-bringup = self.callPackage ./create-bringup {};
+
+ create-description = self.callPackage ./create-description {};
+
+ create-driver = self.callPackage ./create-driver {};
+
+ create-msgs = self.callPackage ./create-msgs {};
+
+ create-robot = self.callPackage ./create-robot {};
+
  criutils = self.callPackage ./criutils {};
 
  csm = self.callPackage ./csm {};
@@ -515,8 +525,6 @@ self: super: {
  cv-camera = self.callPackage ./cv-camera {};
 
  cvp-mesh-planner = self.callPackage ./cvp-mesh-planner {};
-
- darknet-ros = self.callPackage ./darknet-ros {};
 
  darknet-ros-msgs = self.callPackage ./darknet-ros-msgs {};
 
@@ -624,8 +632,6 @@ self: super: {
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
- diffbot-base = self.callPackage ./diffbot-base {};
-
  diffbot-bringup = self.callPackage ./diffbot-bringup {};
 
  diffbot-control = self.callPackage ./diffbot-control {};
@@ -639,8 +645,6 @@ self: super: {
  diffbot-msgs = self.callPackage ./diffbot-msgs {};
 
  diffbot-navigation = self.callPackage ./diffbot-navigation {};
-
- diffbot-robot = self.callPackage ./diffbot-robot {};
 
  diffbot-slam = self.callPackage ./diffbot-slam {};
 
@@ -669,6 +673,8 @@ self: super: {
  dnn-detect = self.callPackage ./dnn-detect {};
 
  downward = self.callPackage ./downward {};
+
+ draco = self.callPackage ./draco {};
 
  driver-base = self.callPackage ./driver-base {};
 
@@ -830,6 +836,8 @@ self: super: {
 
  eus-qpoases = self.callPackage ./eus-qpoases {};
 
+ eus-teleop = self.callPackage ./eus-teleop {};
+
  euscollada = self.callPackage ./euscollada {};
 
  euslime = self.callPackage ./euslime {};
@@ -971,6 +979,8 @@ self: super: {
  flatland-server = self.callPackage ./flatland-server {};
 
  flatland-viz = self.callPackage ./flatland-viz {};
+
+ flexbe-app = self.callPackage ./flexbe-app {};
 
  flexbe-behavior-engine = self.callPackage ./flexbe-behavior-engine {};
 
@@ -1244,8 +1254,6 @@ self: super: {
 
  hector-xacro-tools = self.callPackage ./hector-xacro-tools {};
 
- hfl-driver = self.callPackage ./hfl-driver {};
-
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
  hokuyo3d = self.callPackage ./hokuyo3d {};
@@ -1482,6 +1490,8 @@ self: super: {
 
  jsk-rqt-plugins = self.callPackage ./jsk-rqt-plugins {};
 
+ jsk-teleop-joy = self.callPackage ./jsk-teleop-joy {};
+
  jsk-tilt-laser = self.callPackage ./jsk-tilt-laser {};
 
  jsk-topic-tools = self.callPackage ./jsk-topic-tools {};
@@ -1528,6 +1538,10 @@ self: super: {
 
  khi-rs013n-moveit-config = self.callPackage ./khi-rs013n-moveit-config {};
 
+ khi-rs020n-moveit-config = self.callPackage ./khi-rs020n-moveit-config {};
+
+ khi-rs025n-moveit-config = self.callPackage ./khi-rs025n-moveit-config {};
+
  khi-rs080n-moveit-config = self.callPackage ./khi-rs080n-moveit-config {};
 
  khi-rs-description = self.callPackage ./khi-rs-description {};
@@ -1555,8 +1569,6 @@ self: super: {
  kvh-geo-fog-3d-msgs = self.callPackage ./kvh-geo-fog-3d-msgs {};
 
  kvh-geo-fog-3d-rviz = self.callPackage ./kvh-geo-fog-3d-rviz {};
-
- l3cam-ros = self.callPackage ./l3cam-ros {};
 
  label-manager = self.callPackage ./label-manager {};
 
@@ -1838,8 +1850,6 @@ self: super: {
 
  mikrotik-swos-tools = self.callPackage ./mikrotik-swos-tools {};
 
- mimic-joint-controller = self.callPackage ./mimic-joint-controller {};
-
  mini-maxwell = self.callPackage ./mini-maxwell {};
 
  mir-actions = self.callPackage ./mir-actions {};
@@ -1891,10 +1901,6 @@ self: super: {
  move-slow-and-clear = self.callPackage ./move-slow-and-clear {};
 
  moveit = self.callPackage ./moveit {};
-
- moveit-calibration-gui = self.callPackage ./moveit-calibration-gui {};
-
- moveit-calibration-plugins = self.callPackage ./moveit-calibration-plugins {};
 
  moveit-chomp-optimizer-adapter = self.callPackage ./moveit-chomp-optimizer-adapter {};
 
@@ -1984,6 +1990,8 @@ self: super: {
 
  movie-publisher = self.callPackage ./movie-publisher {};
 
+ mp2p-icp = self.callPackage ./mp2p-icp {};
+
  mpc-local-planner = self.callPackage ./mpc-local-planner {};
 
  mpc-local-planner-examples = self.callPackage ./mpc-local-planner-examples {};
@@ -1993,6 +2001,8 @@ self: super: {
  mqtt-bridge = self.callPackage ./mqtt-bridge {};
 
  mqtt-client = self.callPackage ./mqtt-client {};
+
+ mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
@@ -2027,6 +2037,8 @@ self: super: {
  mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
 
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
+
+ mrpt-sensors-examples = self.callPackage ./mrpt-sensors-examples {};
 
  mrpt-slam = self.callPackage ./mrpt-slam {};
 
@@ -2121,6 +2133,8 @@ self: super: {
  neonavigation-common = self.callPackage ./neonavigation-common {};
 
  neonavigation-launch = self.callPackage ./neonavigation-launch {};
+
+ neonavigation-metrics-msgs = self.callPackage ./neonavigation-metrics-msgs {};
 
  neonavigation-msgs = self.callPackage ./neonavigation-msgs {};
 
@@ -2358,6 +2372,8 @@ self: super: {
 
  pluginlib-tutorials = self.callPackage ./pluginlib-tutorials {};
 
+ point-cloud-transport-plugins = self.callPackage ./point-cloud-transport-plugins {};
+
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
  pointgrey-camera-description = self.callPackage ./pointgrey-camera-description {};
@@ -2385,8 +2401,6 @@ self: super: {
  power-msgs = self.callPackage ./power-msgs {};
 
  pr2-app-manager = self.callPackage ./pr2-app-manager {};
-
- pr2-apps = self.callPackage ./pr2-apps {};
 
  pr2-arm-kinematics = self.callPackage ./pr2-arm-kinematics {};
 
@@ -2546,11 +2560,7 @@ self: super: {
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
 
- qb-chain = self.callPackage ./qb-chain {};
-
  qb-chain-control = self.callPackage ./qb-chain-control {};
-
- qb-chain-controllers = self.callPackage ./qb-chain-controllers {};
 
  qb-chain-description = self.callPackage ./qb-chain-description {};
 
@@ -2586,15 +2596,11 @@ self: super: {
 
  qb-hand-hardware-interface = self.callPackage ./qb-hand-hardware-interface {};
 
- qb-move = self.callPackage ./qb-move {};
-
  qb-move-control = self.callPackage ./qb-move-control {};
 
  qb-move-description = self.callPackage ./qb-move-description {};
 
  qb-move-gazebo = self.callPackage ./qb-move-gazebo {};
-
- qb-move-hardware-interface = self.callPackage ./qb-move-hardware-interface {};
 
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
 
@@ -2688,13 +2694,9 @@ self: super: {
 
  rm-calibration-controllers = self.callPackage ./rm-calibration-controllers {};
 
- rm-chassis-controllers = self.callPackage ./rm-chassis-controllers {};
-
  rm-common = self.callPackage ./rm-common {};
 
  rm-control = self.callPackage ./rm-control {};
-
- rm-controllers = self.callPackage ./rm-controllers {};
 
  rm-dbus = self.callPackage ./rm-dbus {};
 
@@ -3228,8 +3230,6 @@ self: super: {
 
  semantic-point-annotator = self.callPackage ./semantic-point-annotator {};
 
- sensor-filters = self.callPackage ./sensor-filters {};
-
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
  septentrio-gnss-driver = self.callPackage ./septentrio-gnss-driver {};
@@ -3448,6 +3448,8 @@ self: super: {
 
  tf2-bullet = self.callPackage ./tf2-bullet {};
 
+ tf2-client = self.callPackage ./tf2-client {};
+
  tf2-eigen = self.callPackage ./tf2-eigen {};
 
  tf2-geometry-msgs = self.callPackage ./tf2-geometry-msgs {};
@@ -3483,26 +3485,6 @@ self: super: {
  tof-radar-controller = self.callPackage ./tof-radar-controller {};
 
  topic-tools = self.callPackage ./topic-tools {};
-
- toposens = self.callPackage ./toposens {};
-
- toposens-sensor-library = self.callPackage ./toposens-sensor-library {};
-
- toposens-bringup = self.callPackage ./toposens-bringup {};
-
- toposens-description = self.callPackage ./toposens-description {};
-
- toposens-driver = self.callPackage ./toposens-driver {};
-
- toposens-echo-driver = self.callPackage ./toposens-echo-driver {};
-
- toposens-markers = self.callPackage ./toposens-markers {};
-
- toposens-msgs = self.callPackage ./toposens-msgs {};
-
- toposens-pointcloud = self.callPackage ./toposens-pointcloud {};
-
- toposens-sync = self.callPackage ./toposens-sync {};
 
  trac-ik = self.callPackage ./trac-ik {};
 
@@ -3591,8 +3573,6 @@ self: super: {
  ubnt-airos-tools = self.callPackage ./ubnt-airos-tools {};
 
  udp-com = self.callPackage ./udp-com {};
-
- ueye-cam = self.callPackage ./ueye-cam {};
 
  um6 = self.callPackage ./um6 {};
 

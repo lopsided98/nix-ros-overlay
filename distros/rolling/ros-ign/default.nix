@@ -2,25 +2,25 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ros-ign-bridge, ros-ign-gazebo, ros-ign-gazebo-demos, ros-ign-image }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ros-gz, ros-ign-bridge, ros-ign-gazebo, ros-ign-gazebo-demos, ros-ign-image }:
 buildRosPackage {
   pname = "ros-rolling-ros-ign";
-  version = "0.244.3-r2";
+  version = "0.245.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/rolling/ros_ign/0.244.3-2.tar.gz";
-    name = "0.244.3-2.tar.gz";
-    sha256 = "2d9681e6798a1be57349e448dfa9976c00797176e1f567a09a6276c98422c078";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/rolling/ros_ign/0.245.0-1.tar.gz";
+    name = "0.245.0-1.tar.gz";
+    sha256 = "e470f04184e028214511ee6baf1be8a30a924c3dbe8f26cd41665117a46fa756";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ros-ign-bridge ros-ign-gazebo ros-ign-gazebo-demos ros-ign-image ];
+  propagatedBuildInputs = [ ros-gz ros-ign-bridge ros-ign-gazebo ros-ign-gazebo-demos ros-ign-image ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Meta-package containing interfaces for using ROS 2 with <a href="https://ignitionrobotics.org">Ignition</a> simulation.'';
+    description = ''Shim meta-package to redirect to <a href="https://github.com/gazebosim/ros_gz/tree/ros2/ros_gz">ros_gz</a>.'';
     license = with lib.licenses; [ asl20 ];
   };
 }

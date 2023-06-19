@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, ros-environment, rosidl-default-generators, rosidl-default-runtime, shape-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-foxy-derived-object-msgs";
-  version = "3.1.0-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/astuff/astuff_sensor_msgs-release/archive/release/foxy/derived_object_msgs/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "1c8368fd5e5eca6a7dafa651489bb8569bc66a68cd0e8105a7885eb7f88a18bf";
+    url = "https://github.com/ros2-gbp/astuff_sensor_msgs-release/archive/release/foxy/derived_object_msgs/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "b340dc3a9b0ae3a4b7eb48ecd26a1595506e3e36c6915e5f64ba760a7564066e";
   };
 
   buildType = "ament_cmake";

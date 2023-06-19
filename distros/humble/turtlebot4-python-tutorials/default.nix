@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, irobot-create-msgs, pythonPackages, rclpy, turtlebot4-navigation }:
 buildRosPackage {
   pname = "ros-humble-turtlebot4-python-tutorials";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4_tutorials-release/archive/release/humble/turtlebot4_python_tutorials/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "7c6c37fe82656c10d15293d3ebb9ee4ae376dab37d70feea38723b447f072829";
+    url = "https://github.com/ros2-gbp/turtlebot4_tutorials-release/archive/release/humble/turtlebot4_python_tutorials/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "caf34ee343abceb49a0c0da0c8a7b160e188c297f5c7932c421d1fe99a0ccc86";
   };
 
   buildType = "ament_python";

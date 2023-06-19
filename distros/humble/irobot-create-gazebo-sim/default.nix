@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, irobot-create-gazebo-bringup, irobot-create-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-humble-irobot-create-gazebo-sim";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/humble/irobot_create_gazebo_sim/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "d3e0a73b63c911e7200efa44a0b81c4be0a26cdc3a9a9152d2c72b89480f9bd7";
+    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/humble/irobot_create_gazebo_sim/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "d2dfb23bf6521d22b39121d29917d9da62116c2e8b63c505572cc3f2745062d2";
   };
 
   buildType = "ament_cmake";

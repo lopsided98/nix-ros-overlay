@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, geometry-msgs, nav2-common, nav2-controller, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-regulated-pure-pursuit-controller, nav2-util, pluginlib, rclcpp, tf2 }:
 buildRosPackage {
   pname = "ros-humble-nav2-rotation-shim-controller";
-  version = "1.1.6-r1";
+  version = "1.1.7-r3";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_rotation_shim_controller/1.1.6-1.tar.gz";
-    name = "1.1.6-1.tar.gz";
-    sha256 = "af63521f0e25f2f86b2dd64738d62c80fda7cfd77f998cdc7ae25988ce5b5d99";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_rotation_shim_controller/1.1.7-3.tar.gz";
+    name = "1.1.7-3.tar.gz";
+    sha256 = "763ccca607ff9beccb0cd6eb5156a3c789eca52be394e5b12391c73f7781cf60";
   };
 
   buildType = "ament_cmake";

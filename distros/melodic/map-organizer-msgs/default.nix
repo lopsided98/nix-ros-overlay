@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, nav-msgs }:
 buildRosPackage {
   pname = "ros-melodic-map-organizer-msgs";
-  version = "0.12.0-r1";
+  version = "0.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/melodic/map_organizer_msgs/0.12.0-1.tar.gz";
-    name = "0.12.0-1.tar.gz";
-    sha256 = "227088f427e2855398fadcfdb9b7dd63f06bb116614c6dfb10f1ae6e40499d2e";
+    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/melodic/map_organizer_msgs/0.14.0-1.tar.gz";
+    name = "0.14.0-1.tar.gz";
+    sha256 = "5a1349369b4a4d650d13a296435ff6b4e47561ba562a16207cd0971f937a98f8";
   };
 
   buildType = "catkin";

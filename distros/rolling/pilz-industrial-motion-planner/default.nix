@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, eigen3-cmake-module, generate-parameter-library, geometry-msgs, launch-param-builder, moveit-common, moveit-configs-utils, moveit-core, moveit-msgs, moveit-resources-panda-moveit-config, moveit-resources-prbt-moveit-config, moveit-resources-prbt-pg70-support, moveit-resources-prbt-support, moveit-ros-move-group, moveit-ros-planning, moveit-ros-planning-interface, orocos-kdl-vendor, pilz-industrial-motion-planner-testutils, pluginlib, rclcpp, ros-testing, tf2, tf2-eigen, tf2-eigen-kdl, tf2-geometry-msgs, tf2-kdl, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-pilz-industrial-motion-planner";
-  version = "2.7.3-r1";
+  version = "2.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/pilz_industrial_motion_planner/2.7.3-1.tar.gz";
-    name = "2.7.3-1.tar.gz";
-    sha256 = "efbf161d4d393bf6308c19afa15efffe8ae1ce8c433dab1e9e7e175a6dafb3c5";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/pilz_industrial_motion_planner/2.7.4-1.tar.gz";
+    name = "2.7.4-1.tar.gz";
+    sha256 = "93eba5baa6c70a4cfdb89a35da7185b898fa9f4ce8c74a1d3c59206b252d4056";
   };
 
   buildType = "ament_cmake";

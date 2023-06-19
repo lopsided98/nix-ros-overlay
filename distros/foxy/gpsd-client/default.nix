@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gps-msgs, gpsd, pkg-config, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-foxy-gpsd-client";
-  version = "1.0.8-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/foxy/gpsd_client/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "5ad3e4aee1715265e1040c431571e00a89dacea7e1946c2eb0df6c81dda57f94";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/foxy/gpsd_client/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "c03a35228248d2a3974c5c1e6dd96b2d520dd8a27ece5cb3f5249f522f15592e";
   };
 
   buildType = "ament_cmake";

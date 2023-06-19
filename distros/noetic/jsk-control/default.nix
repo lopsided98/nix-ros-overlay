@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eus-nlopt, eus-qp, eus-qpoases, joy-mouse, jsk-calibration, jsk-footstep-controller, jsk-footstep-planner, jsk-ik-server, jsk-teleop-joy }:
 buildRosPackage {
   pname = "ros-noetic-jsk-control";
-  version = "0.1.16-r1";
+  version = "0.1.17-r2";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/jsk_control/0.1.16-1.tar.gz";
-    name = "0.1.16-1.tar.gz";
-    sha256 = "d9147f76e0e6ddd8d01656c801e6acf003e0f6b3843e8d7647cafc7f691d7f4e";
+    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/jsk_control/0.1.17-2.tar.gz";
+    name = "0.1.17-2.tar.gz";
+    sha256 = "fcf165838cce9145cf6e0ad99e1deb58037581525fd3be87ed6986c2269f0cff";
   };
 
   buildType = "catkin";

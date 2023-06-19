@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, control-msgs, irobot-create-msgs, irobot-create-toolbox, nav-msgs, rclcpp, rclcpp-action, rcutils, ros-ign-interfaces, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-humble-irobot-create-ignition-toolbox";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/humble/irobot_create_ignition_toolbox/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "8e7746fc0c28603d5cdce006a5a5b2e98810cdbcd0a5fc9b6981436b59762d2b";
+    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/humble/irobot_create_ignition_toolbox/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "a11b084c8fea2e30e2d6aaeb18887312d63ff70c98a52c691099aa77b166dfbb";
   };
 
   buildType = "ament_cmake";

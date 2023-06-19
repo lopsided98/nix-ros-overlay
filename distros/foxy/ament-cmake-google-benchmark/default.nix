@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-python, ament-cmake-test, google-benchmark-vendor }:
 buildRosPackage {
   pname = "ros-foxy-ament-cmake-google-benchmark";
-  version = "0.9.11-r1";
+  version = "0.9.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/foxy/ament_cmake_google_benchmark/0.9.11-1.tar.gz";
-    name = "0.9.11-1.tar.gz";
-    sha256 = "455344a6166cc5dce39c9bad4731a4beb28c0734e6d628839ff3b846ac0f2c59";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/foxy/ament_cmake_google_benchmark/0.9.12-1.tar.gz";
+    name = "0.9.12-1.tar.gz";
+    sha256 = "f3cdf542521dab6bf0c55ab8436db395047cd3c7a27961064470aa932631424e";
   };
 
   buildType = "ament_cmake";

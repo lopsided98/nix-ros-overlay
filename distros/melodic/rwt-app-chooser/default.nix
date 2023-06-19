@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, app-manager, catkin, phantomjs, pythonPackages, rosbridge-server, rostest, roswww, sound-play }:
 buildRosPackage {
   pname = "ros-melodic-rwt-app-chooser";
-  version = "0.1.1-r1";
+  version = "0.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/melodic/rwt_app_chooser/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "d895ce642f710dec08e1dbebe7de978bcc9977b03bf135dbbf53b17a4afcf69e";
+    url = "https://github.com/tork-a/visualization_rwt-release/archive/release/melodic/rwt_app_chooser/0.1.2-2.tar.gz";
+    name = "0.1.2-2.tar.gz";
+    sha256 = "77ed17c09bfecf9bfcc82a772eb77d8b817b4a30936e640efef575aada75d6f4";
   };
 
   buildType = "catkin";

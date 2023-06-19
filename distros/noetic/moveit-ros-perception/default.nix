@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, eigen, freeglut, glew, image-transport, libGL, libGLU, llvmPackages, message-filters, moveit-core, moveit-msgs, moveit-ros-occupancy-map-monitor, moveit-ros-planning, nodelet, object-recognition-msgs, pluginlib, rosconsole, roscpp, rosunit, sensor-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, urdf }:
 buildRosPackage {
   pname = "ros-noetic-moveit-ros-perception";
-  version = "1.1.11-r1";
+  version = "1.1.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_perception/1.1.11-1.tar.gz";
-    name = "1.1.11-1.tar.gz";
-    sha256 = "3c47387e40dfe90de39484ded54873179351a099ec4a870b6e9f00258c6a7c65";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_perception/1.1.12-1.tar.gz";
+    name = "1.1.12-1.tar.gz";
+    sha256 = "a36e3443e81864176d88f3f9b4c92845c4086783694fc6858a58176f2f082c0e";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, gazebo-dev, gazebo-ros, geometry-msgs, rclcpp, rmf-building-map-msgs, rmf-fleet-msgs, rmf-robot-sim-common }:
 buildRosPackage {
   pname = "ros-humble-rmf-robot-sim-gz-classic-plugins";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/humble/rmf_robot_sim_gz_classic_plugins/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "d742cb4f3908ff3314ced85c3e7fa24d2ab079e38d2502cb9ba1914fe0b0136e";
+    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/humble/rmf_robot_sim_gz_classic_plugins/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "9508f6fd6646dff5afbfb96561c64f8f50c797966b788f8b1d03af4c28d230d4";
   };
 
   buildType = "ament_cmake";

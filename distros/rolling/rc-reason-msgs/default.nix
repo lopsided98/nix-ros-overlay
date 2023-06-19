@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, geometry-msgs, rc-common-msgs, rosidl-default-generators, rosidl-default-runtime, shape-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rc-reason-msgs";
-  version = "0.2.1-r4";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_reason_clients-release/archive/release/rolling/rc_reason_msgs/0.2.1-4.tar.gz";
-    name = "0.2.1-4.tar.gz";
-    sha256 = "fd6e45d0991cca6f021d90ff127474e6e500081b24ef60cc8f1684ebec14ac1f";
+    url = "https://github.com/ros2-gbp/rc_reason_clients-release/archive/release/rolling/rc_reason_msgs/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "1280b76742f55556a48e3d1323a862bc2a9d900c62cfe5f86cf3acfb127a1732";
   };
 
   buildType = "ament_cmake";

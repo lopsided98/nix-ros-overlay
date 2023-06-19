@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-planner-cspace-msgs";
-  version = "0.12.0-r1";
+  version = "0.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/noetic/planner_cspace_msgs/0.12.0-1.tar.gz";
-    name = "0.12.0-1.tar.gz";
-    sha256 = "d47e6ca73d1dc9fd18cd6f6f30ffc98310aff6428da03bdefd2bf80e8cc0b4b5";
+    url = "https://github.com/at-wat/neonavigation_msgs-release/archive/release/noetic/planner_cspace_msgs/0.14.0-1.tar.gz";
+    name = "0.14.0-1.tar.gz";
+    sha256 = "099189963e8784336bbb283f1ef0f4d3b1a7e34d0b87b75685893f8414ad01c1";
   };
 
   buildType = "catkin";

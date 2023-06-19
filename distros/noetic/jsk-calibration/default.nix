@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pr2-controllers-msgs, pr2-msgs, roseus }:
 buildRosPackage {
   pname = "ros-noetic-jsk-calibration";
-  version = "0.1.16-r1";
+  version = "0.1.17-r2";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/jsk_calibration/0.1.16-1.tar.gz";
-    name = "0.1.16-1.tar.gz";
-    sha256 = "5a0517ce201c7c293df300b22f12c1d265253dfd73f93db9f25db33c148a713a";
+    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/jsk_calibration/0.1.17-2.tar.gz";
+    name = "0.1.17-2.tar.gz";
+    sha256 = "626e831e1d63d1f3c19fd56d14e12fc664246d1b68635a45bee293af7f2204dc";
   };
 
   buildType = "catkin";

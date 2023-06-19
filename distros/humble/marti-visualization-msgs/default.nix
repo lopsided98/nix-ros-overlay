@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-marti-visualization-msgs";
-  version = "1.4.0-r2";
+  version = "1.4.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/humble/marti_visualization_msgs/1.4.0-2.tar.gz";
-    name = "1.4.0-2.tar.gz";
-    sha256 = "a0bf038e5b933cc197de0365be22a6f5cb266d75e8e801b8a2d11932465b68ed";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/humble/marti_visualization_msgs/1.4.1-2.tar.gz";
+    name = "1.4.1-2.tar.gz";
+    sha256 = "99c041386e3626c2cd51774fd3fcf5f18dca8e6cdcd2567bbb1676ad2116fed0";
   };
 
   buildType = "ament_cmake";

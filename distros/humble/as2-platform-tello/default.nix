@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-cpplint, ament-lint-auto, as2-core, as2-msgs, eigen, geometry-msgs, nav-msgs, rclcpp, rclpy, sensor-msgs, std-msgs, std-srvs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-as2-platform-tello";
-  version = "1.0.0-r1";
+  version = "1.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_platform_tello/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "87160b6806b47e93f971be1f1a51be37c3832c8a3c15635c7c0a56443c956195";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_platform_tello/1.0.0-2.tar.gz";
+    name = "1.0.0-2.tar.gz";
+    sha256 = "20d433b6eb9b53ed9cc5f547e1332842c5c67e19f8c86742eb1417ebdd9ce69f";
   };
 
   buildType = "ament_cmake";

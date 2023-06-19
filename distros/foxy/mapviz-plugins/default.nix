@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, cv-bridge, gps-msgs, image-transport, map-msgs, mapviz, marti-common-msgs, marti-nav-msgs, marti-sensor-msgs, marti-visualization-msgs, nav-msgs, pluginlib, qt5, rclcpp, rclcpp-action, sensor-msgs, std-msgs, stereo-msgs, swri-image-util, swri-math-util, swri-route-util, swri-transform-util, tf2, visualization-msgs }:
 buildRosPackage {
   pname = "ros-foxy-mapviz-plugins";
-  version = "2.1.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/foxy/mapviz_plugins/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "61ca617eae88cf33b3fa10d6865e43ef938b79d27ea07624a1f1b2a8a0d847bb";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/foxy/mapviz_plugins/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "dc40e2fafd5ef9454caf349cf08da8de51d27b6a6349492deaaf4638d52d2d8b";
   };
 
   buildType = "ament_cmake";

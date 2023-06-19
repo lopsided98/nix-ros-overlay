@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, glew, jsoncpp, libyamlcpp, mapviz, pluginlib, qt5, rclcpp, swri-math-util, swri-transform-util, tf2 }:
 buildRosPackage {
   pname = "ros-foxy-tile-map";
-  version = "2.1.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/foxy/tile_map/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "4c442a1e13ffea454c4cd65053f800a59a8afc6c3239a351ebd2d68e23ac41f9";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/foxy/tile_map/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "b5d370abccedef8e170b7de1cd7b038e5ea1e49cdf6fec06be6d9bf326de5792";
   };
 
   buildType = "ament_cmake";

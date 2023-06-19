@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-core, moveit-planners, moveit-plugins, moveit-ros-move-group, moveit-ros-perception, moveit-ros-planning, moveit-ros-planning-interface, moveit-ros-warehouse }:
 buildRosPackage {
   pname = "ros-rolling-moveit-runtime";
-  version = "2.7.3-r1";
+  version = "2.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_runtime/2.7.3-1.tar.gz";
-    name = "2.7.3-1.tar.gz";
-    sha256 = "efaea203254c68f5ca1237cec9d168451b0e2f1f9a9e0d4ffdc2389a3284e57e";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_runtime/2.7.4-1.tar.gz";
+    name = "2.7.4-1.tar.gz";
+    sha256 = "5098e1bcaac77f7ddd148cb9ccadde3b50a513c41431c9cbce93bf6381a9918e";
   };
 
   buildType = "ament_cmake";

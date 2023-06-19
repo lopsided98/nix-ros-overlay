@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, irobot-create-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-turtlebot4-cpp-tutorials";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4_tutorials-release/archive/release/humble/turtlebot4_cpp_tutorials/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "47e7b6c05c52b9569cac74bd8fc59a306e4ee4100d5a1ab580fa62317169ded7";
+    url = "https://github.com/ros2-gbp/turtlebot4_tutorials-release/archive/release/humble/turtlebot4_cpp_tutorials/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "7c5fb49b3425499b092718cef4e0ec8742f461daca4f2acace0bbc12ed316c1b";
   };
 
   buildType = "ament_cmake";

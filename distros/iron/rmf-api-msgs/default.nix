@@ -1,0 +1,25 @@
+
+# Copyright 2023 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, nlohmann_json, python3Packages }:
+buildRosPackage {
+  pname = "ros-iron-rmf-api-msgs";
+  version = "0.1.0-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/rmf_api_msgs-release/archive/release/iron/rmf_api_msgs/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
+    sha256 = "dd8b281518bba80b949778ceef472bb748d3c3d6c0af5b9a7e175b3d37bacc56";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
+  propagatedBuildInputs = [ nlohmann_json python3Packages.jinja2 python3Packages.jsonschema ];
+  nativeBuildInputs = [ ament-cmake ];
+
+  meta = {
+    description = ''RMF API msgs definition'';
+    license = with lib.licenses; [ asl20 ];
+  };
+}

@@ -2,22 +2,22 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, flexbe-core, flexbe-msgs, flexbe-testing, geometry-msgs, rosbag, rospy, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, flexbe-core, flexbe-msgs, flexbe-testing, geometry-msgs, python3Packages, rosbag, rospy, rostest }:
 buildRosPackage {
   pname = "ros-noetic-flexbe-states";
-  version = "1.3.1-r1";
+  version = "1.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/noetic/flexbe_states/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "42049fb167f51778300a4caf5eddbb03f2084922bbd763990d673ad3bd0f482e";
+    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/noetic/flexbe_states/1.4.0-2.tar.gz";
+    name = "1.4.0-2.tar.gz";
+    sha256 = "c0a11796df45f7a8741de73a936e81129de79d3f601bc222cfff9b955a2b86c6";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin rostest ];
+  buildInputs = [ catkin python3Packages.setuptools ];
   checkInputs = [ geometry-msgs ];
-  propagatedBuildInputs = [ flexbe-core flexbe-msgs flexbe-testing rosbag rospy ];
-  nativeBuildInputs = [ catkin ];
+  propagatedBuildInputs = [ flexbe-core flexbe-msgs flexbe-testing rosbag rospy rostest ];
+  nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
     description = ''flexbe_states provides a collection of predefined states.

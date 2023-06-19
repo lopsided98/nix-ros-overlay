@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rospy, tf2-msgs }:
 buildRosPackage {
   pname = "ros-melodic-static-transform-mux";
-  version = "1.1.0";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/peci1/static_transform_mux-release/archive/release/melodic/static_transform_mux/1.1.0-0.tar.gz";
-    name = "1.1.0-0.tar.gz";
-    sha256 = "9b5bce13459bb33c3bcf4eb03f3c72e10e4b9b118f16a5a352ca9d42937e8343";
+    url = "https://github.com/peci1/static_transform_mux-release/archive/release/melodic/static_transform_mux/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "2e2a25e2b41e55da3689ab7f56ddea2f4945ec8ea78a37610f070e1318b620b7";
   };
 
   buildType = "catkin";

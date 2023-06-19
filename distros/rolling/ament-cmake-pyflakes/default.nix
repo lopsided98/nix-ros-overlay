@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-pyflakes }:
 buildRosPackage {
   pname = "ros-rolling-ament-cmake-pyflakes";
-  version = "0.15.0-r1";
+  version = "0.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_cmake_pyflakes/0.15.0-1.tar.gz";
-    name = "0.15.0-1.tar.gz";
-    sha256 = "b443cdfe72c4ffd6f674c2720078dea8db116c42906d5d4fe2cdf138f390d7c4";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_cmake_pyflakes/0.15.1-1.tar.gz";
+    name = "0.15.1-1.tar.gz";
+    sha256 = "59858727afcbc30acf081e311f4d3aeb825ef9217fb6030d2e1c640a0abdf81b";
   };
 
   buildType = "ament_cmake";

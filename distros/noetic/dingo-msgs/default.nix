@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-dingo-msgs";
-  version = "0.3.1-r1";
+  version = "0.3.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/noetic/dingo_msgs/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "7ab839f3eed5463e193c1777a2c90c089552bbeb5939d660291e78b4d7e070b7";
+    url = "https://github.com/clearpath-gbp/dingo-release/archive/release/noetic/dingo_msgs/0.3.1-2.tar.gz";
+    name = "0.3.1-2.tar.gz";
+    sha256 = "1410910a1fedf6ad73408012d24972f1c76a440d440b5ce84046e1026d30b70a";
   };
 
   buildType = "catkin";

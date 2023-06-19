@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, joint-state-controller, joint-trajectory-controller, khi-duaro-description, khi-duaro-moveit-config, khi-robot-control, position-controllers, robot-state-publisher, roslaunch, rostest, tf }:
 buildRosPackage {
   pname = "ros-noetic-khi-robot-bringup";
-  version = "1.3.0-r2";
+  version = "1.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/noetic/khi_robot_bringup/1.3.0-2.tar.gz";
-    name = "1.3.0-2.tar.gz";
-    sha256 = "2fb5d538ff7cca22d2210aac7ff0f6ca52d388b2fbd6eee3920de9fdb3909c81";
+    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/noetic/khi_robot_bringup/1.4.0-2.tar.gz";
+    name = "1.4.0-2.tar.gz";
+    sha256 = "054c0457c5d1e91f7d928a09279c70ad808532faccc19d701d4d99f6e6335d6c";
   };
 
   buildType = "catkin";

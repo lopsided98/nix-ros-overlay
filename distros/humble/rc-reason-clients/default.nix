@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, python3Packages, pythonPackages, rc-reason-msgs, rclpy, ros2pkg, tf2-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-rc-reason-clients";
-  version = "0.2.1-r4";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_reason_clients-release/archive/release/humble/rc_reason_clients/0.2.1-4.tar.gz";
-    name = "0.2.1-4.tar.gz";
-    sha256 = "f0f5e1113217ac1253e7179d8d2c5eaa858d5424c734dae59c8954405b5eb5d1";
+    url = "https://github.com/ros2-gbp/rc_reason_clients-release/archive/release/humble/rc_reason_clients/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "25c88f019eacb627209b4e2acb8111b288f6f42f285b0abeb5330094e1befb9b";
   };
 
   buildType = "ament_python";

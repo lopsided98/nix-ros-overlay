@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, liblapack, moveit-core, pluginlib, roscpp, tf-conversions }:
 buildRosPackage {
   pname = "ros-melodic-khi-duaro-ikfast-plugin";
-  version = "1.2.0-r1";
+  version = "1.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/melodic/khi_duaro_ikfast_plugin/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "3eda3984c7adabaa70f7d83c4d63a58e147049ef64d09d61569e99d143e13d2e";
+    url = "https://github.com/Kawasaki-Robotics/khi_robot-release/archive/release/melodic/khi_duaro_ikfast_plugin/1.4.0-2.tar.gz";
+    name = "1.4.0-2.tar.gz";
+    sha256 = "c8c789ff0a685c4fc84d09f274cf65ff92e67349907ed9134655b125ad789ecf";
   };
 
   buildType = "catkin";

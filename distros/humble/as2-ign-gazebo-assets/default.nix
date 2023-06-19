@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, as2-core, geometry-msgs, python3Packages, rclcpp, ros-gz-bridge, ros-gz-sim, sensor-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-as2-ign-gazebo-assets";
-  version = "1.0.0-r1";
+  version = "1.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_ign_gazebo_assets/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "5da4fc9b3cc15c501063ace6001df581432de073e78e0a9b4fe4c570c8a5a5fd";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_ign_gazebo_assets/1.0.0-2.tar.gz";
+    name = "1.0.0-2.tar.gz";
+    sha256 = "072ecf46cdb980fb25355b3074b449a29fb1a4bdd011aba869f10d49162e5089";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, turtlebot4-cpp-tutorials, turtlebot4-python-tutorials }:
 buildRosPackage {
   pname = "ros-humble-turtlebot4-tutorials";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4_tutorials-release/archive/release/humble/turtlebot4_tutorials/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "529b215dddfeb2a9ea8438d5bc581b025077d815bea33d6ebcabab36cc675c3f";
+    url = "https://github.com/ros2-gbp/turtlebot4_tutorials-release/archive/release/humble/turtlebot4_tutorials/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "fd4ec5f49c48af12ba3cc6f76472907791d95b3e29ce6ae32eb3bec2d3097f76";
   };
 
   buildType = "ament_cmake";
