@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, python3Packages }:
+{ lib, buildPythonPackage, fetchPypi, colcon-core, argcomplete }:
 
 buildPythonPackage rec {
   pname = "colcon-argcomplete";
@@ -9,13 +9,13 @@ buildPythonPackage rec {
     hash = "sha256-PnCjK30WuBanxyGCvbIN+YX/wBZ47Jxn1EZZgUphmH0=";
   };
 
-  propagatedBuildInputs = [ colcon-core python3Packages.argcomplete ];
+  propagatedBuildInputs = [ colcon-core argcomplete ];
 
   doCheck = false;
 
   meta = with lib; {
     description = "An extension for colcon-core to provide command line completion using argcomplete.";
-    homepage = "https://colcon.readthedocs.io";
+    homepage = "https://github.com/colcon/colcon-argcomplete";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];
   };

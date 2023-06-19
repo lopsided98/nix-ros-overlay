@@ -16,7 +16,7 @@ buildPythonPackage rec {
 
   meta = with lib; {
     description = "An extension for colcon-core to provide information about the test results.";
-    homepage = "https://colcon.readthedocs.io";
+    homepage = "https://github.com/colcon/colcon-test-result";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];
   };
