@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, controller-manager, controller-manager-msgs, hardware-interface, joint-limits, ros2-control-test-assets, ros2controlcli, transmission-interface }:
 buildRosPackage {
   pname = "ros-rolling-ros2-control";
-  version = "3.13.0-r1";
+  version = "3.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/ros2_control/3.13.0-1.tar.gz";
-    name = "3.13.0-1.tar.gz";
-    sha256 = "8493e021e124478c286b46ca0f9981a00d696c9a438c88ca8c56daff5a651c06";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/ros2_control/3.14.0-1.tar.gz";
+    name = "3.14.0-1.tar.gz";
+    sha256 = "ddfed5d1895f02339be45cea9ba2c0c115dadecc2c936e770d07adef33717e49";
   };
 
   buildType = "ament_cmake";

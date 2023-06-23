@@ -8,6 +8,8 @@ self: super: {
 
  ackermann-msgs = self.callPackage ./ackermann-msgs {};
 
+ ackermann-steering-controller = self.callPackage ./ackermann-steering-controller {};
+
  action-msgs = self.callPackage ./action-msgs {};
 
  action-tutorials-cpp = self.callPackage ./action-tutorials-cpp {};
@@ -246,6 +248,8 @@ self: super: {
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
+ bicycle-steering-controller = self.callPackage ./bicycle-steering-controller {};
+
  bno055 = self.callPackage ./bno055 {};
 
  bond = self.callPackage ./bond {};
@@ -283,6 +287,8 @@ self: super: {
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
 
  class-loader = self.callPackage ./class-loader {};
+
+ clearpath-config = self.callPackage ./clearpath-config {};
 
  clearpath-msgs = self.callPackage ./clearpath-msgs {};
 
@@ -887,6 +893,8 @@ self: super: {
  lifecycle-msgs = self.callPackage ./lifecycle-msgs {};
 
  lifecycle-py = self.callPackage ./lifecycle-py {};
+
+ lms1xx = self.callPackage ./lms1xx {};
 
  logging-demo = self.callPackage ./logging-demo {};
 
@@ -2014,6 +2022,8 @@ self: super: {
 
  std-srvs = self.callPackage ./std-srvs {};
 
+ steering-controllers-library = self.callPackage ./steering-controllers-library {};
+
  stereo-image-proc = self.callPackage ./stereo-image-proc {};
 
  stereo-msgs = self.callPackage ./stereo-msgs {};
@@ -2167,6 +2177,8 @@ self: super: {
  transmission-interface = self.callPackage ./transmission-interface {};
 
  tricycle-controller = self.callPackage ./tricycle-controller {};
+
+ tricycle-steering-controller = self.callPackage ./tricycle-steering-controller {};
 
  turbojpeg-compressed-image-transport = self.callPackage ./turbojpeg-compressed-image-transport {};
 

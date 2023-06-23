@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ddynamic-reconfigure-python, message-runtime, pythonPackages, rc-reason-msgs, rospy }:
 buildRosPackage {
   pname = "ros-melodic-rc-reason-clients";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_reason_clients_ros-release/archive/release/melodic/rc_reason_clients/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "5680aca20acb26716ada6a8fb89a11b099535eab0eea9976e07cb35e2379feb9";
+    url = "https://github.com/roboception-gbp/rc_reason_clients_ros-release/archive/release/melodic/rc_reason_clients/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "f6198732d4e87f351743c1ab26ec97f5bbb39388b5674a1deeaa8a8b21c6e71a";
   };
 
   buildType = "catkin";

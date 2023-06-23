@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cpp-common, diagnostic-msgs, geographiclib, geometry-msgs, gps-common, libpcap, message-generation, message-runtime, nav-msgs, nmea-msgs, rosconsole, roscpp, roscpp-serialization, rostime, sensor-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-melodic-septentrio-gnss-driver";
-  version = "1.2.3-r2";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/septentrio-users/septentrio_gnss_driver-release/archive/release/melodic/septentrio_gnss_driver/1.2.3-2.tar.gz";
-    name = "1.2.3-2.tar.gz";
-    sha256 = "06bad4f5068960ec8c7adb2133dd0fc7eff960e6fdae3c2401c577d80f09b701";
+    url = "https://github.com/septentrio-users/septentrio_gnss_driver-release/archive/release/melodic/septentrio_gnss_driver/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "7c8ead556a7d887fe2ac1c02d7569057ba8066a00e056f085e8c9655d2dc7e8d";
   };
 
   buildType = "catkin";

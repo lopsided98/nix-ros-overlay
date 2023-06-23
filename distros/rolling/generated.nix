@@ -102,8 +102,6 @@ self: super: {
 
  ament-cmake-uncrustify = self.callPackage ./ament-cmake-uncrustify {};
 
- ament-cmake-vendor-package = self.callPackage ./ament-cmake-vendor-package {};
-
  ament-cmake-version = self.callPackage ./ament-cmake-version {};
 
  ament-cmake-xmllint = self.callPackage ./ament-cmake-xmllint {};
@@ -213,6 +211,30 @@ self: super: {
  camera-info-manager = self.callPackage ./camera-info-manager {};
 
  can-msgs = self.callPackage ./can-msgs {};
+
+ canopen = self.callPackage ./canopen {};
+
+ canopen-402-driver = self.callPackage ./canopen-402-driver {};
+
+ canopen-base-driver = self.callPackage ./canopen-base-driver {};
+
+ canopen-core = self.callPackage ./canopen-core {};
+
+ canopen-fake-slaves = self.callPackage ./canopen-fake-slaves {};
+
+ canopen-interfaces = self.callPackage ./canopen-interfaces {};
+
+ canopen-master-driver = self.callPackage ./canopen-master-driver {};
+
+ canopen-proxy-driver = self.callPackage ./canopen-proxy-driver {};
+
+ canopen-ros2-control = self.callPackage ./canopen-ros2-control {};
+
+ canopen-ros2-controllers = self.callPackage ./canopen-ros2-controllers {};
+
+ canopen-tests = self.callPackage ./canopen-tests {};
+
+ canopen-utils = self.callPackage ./canopen-utils {};
 
  cartographer = self.callPackage ./cartographer {};
 
@@ -721,6 +743,8 @@ self: super: {
  launch-xml = self.callPackage ./launch-xml {};
 
  launch-yaml = self.callPackage ./launch-yaml {};
+
+ lely-core-libraries = self.callPackage ./lely-core-libraries {};
 
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 

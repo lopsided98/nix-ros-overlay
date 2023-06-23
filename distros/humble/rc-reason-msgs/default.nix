@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, geometry-msgs, rc-common-msgs, rosidl-default-generators, rosidl-default-runtime, shape-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-rc-reason-msgs";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_reason_clients-release/archive/release/humble/rc_reason_msgs/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "527d7ed3342ba3e54af4c763030e1683e31efc74b6b4205ef3a57e7e2d06db54";
+    url = "https://github.com/ros2-gbp/rc_reason_clients-release/archive/release/humble/rc_reason_msgs/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "ae2db8d62dfec093c4d27b6ae935054694ba3c8be9d8b85346a2e93e245d9a3c";
   };
 
   buildType = "ament_cmake";

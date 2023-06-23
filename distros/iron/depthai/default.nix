@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb1, nlohmann_json, opencv, ros-environment }:
 buildRosPackage {
   pname = "ros-iron-depthai";
-  version = "2.21.2-r1";
+  version = "2.22.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-core-release/archive/release/iron/depthai/2.21.2-1.tar.gz";
-    name = "2.21.2-1.tar.gz";
-    sha256 = "9c665686be6a7214434e186b337a7f3efefdf6e42b731e0231755f8d456a210b";
+    url = "https://github.com/luxonis/depthai-core-release/archive/release/iron/depthai/2.22.0-1.tar.gz";
+    name = "2.22.0-1.tar.gz";
+    sha256 = "ab355885dad8c0908d0735bd9f42c41d9b645408964792f3fe68b113414fa345";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, image-pipeline, image-transport, image-transport-plugins, message-filters, nodelet, opencv, roscpp, sensor-msgs, vision-msgs }:
 buildRosPackage {
   pname = "ros-noetic-depthai-filters";
-  version = "2.7.2-r1";
+  version = "2.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/noetic/depthai_filters/2.7.2-1.tar.gz";
-    name = "2.7.2-1.tar.gz";
-    sha256 = "04644873505600542a2d91910be23b35b18b96636044615c1d7922c546f880ae";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/noetic/depthai_filters/2.7.3-1.tar.gz";
+    name = "2.7.3-1.tar.gz";
+    sha256 = "e5bb69859968d409796ac7d916fe903963c1bf634eb7503627358b1171dede0a";
   };
 
   buildType = "catkin";

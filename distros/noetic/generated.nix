@@ -40,6 +40,8 @@ self: super: {
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
+ aques-talk = self.callPackage ./aques-talk {};
+
  arbotix = self.callPackage ./arbotix {};
 
  arbotix-controllers = self.callPackage ./arbotix-controllers {};
@@ -211,6 +213,8 @@ self: super: {
  catkin = self.callPackage ./catkin {};
 
  catkin-virtualenv = self.callPackage ./catkin-virtualenv {};
+
+ chaplus-ros = self.callPackage ./chaplus-ros {};
 
  checkerboard-detector = self.callPackage ./checkerboard-detector {};
 
@@ -506,6 +510,10 @@ self: super: {
 
  cpr-onav-description = self.callPackage ./cpr-onav-description {};
 
+ cras-imu-tools = self.callPackage ./cras-imu-tools {};
+
+ cras-laser-geometry = self.callPackage ./cras-laser-geometry {};
+
  create-bringup = self.callPackage ./create-bringup {};
 
  create-description = self.callPackage ./create-description {};
@@ -629,6 +637,8 @@ self: super: {
  diagnostic-updater = self.callPackage ./diagnostic-updater {};
 
  diagnostics = self.callPackage ./diagnostics {};
+
+ dialogflow-task-executive = self.callPackage ./dialogflow-task-executive {};
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
@@ -1090,6 +1100,8 @@ self: super: {
 
  gazebo-video-monitors = self.callPackage ./gazebo-video-monitors {};
 
+ gdrive-ros = self.callPackage ./gdrive-ros {};
+
  gencpp = self.callPackage ./gencpp {};
 
  generic-throttle = self.callPackage ./generic-throttle {};
@@ -1133,6 +1145,8 @@ self: super: {
  gmcl = self.callPackage ./gmcl {};
 
  goal-passer = self.callPackage ./goal-passer {};
+
+ google-chat-ros = self.callPackage ./google-chat-ros {};
 
  gpio-controller = self.callPackage ./gpio-controller {};
 
@@ -1193,6 +1207,8 @@ self: super: {
  gripper-action-controller = self.callPackage ./gripper-action-controller {};
 
  grpc = self.callPackage ./grpc {};
+
+ gtsam = self.callPackage ./gtsam {};
 
  handeye = self.callPackage ./handeye {};
 
@@ -1448,6 +1464,8 @@ self: super: {
 
  joystick-interrupt = self.callPackage ./joystick-interrupt {};
 
+ jsk-3rdparty = self.callPackage ./jsk-3rdparty {};
+
  jsk-calibration = self.callPackage ./jsk-calibration {};
 
  jsk-common = self.callPackage ./jsk-common {};
@@ -1603,8 +1621,6 @@ self: super: {
  laser-filtering = self.callPackage ./laser-filtering {};
 
  laser-filters = self.callPackage ./laser-filters {};
-
- laser-filters-jsk-patch = self.callPackage ./laser-filters-jsk-patch {};
 
  laser-geometry = self.callPackage ./laser-geometry {};
 
@@ -2028,6 +2044,8 @@ self: super: {
 
  mrpt-navigation = self.callPackage ./mrpt-navigation {};
 
+ mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
+
  mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
 
  mrpt-rbpf-slam = self.callPackage ./mrpt-rbpf-slam {};
@@ -2144,6 +2162,8 @@ self: super: {
 
  network-interface = self.callPackage ./network-interface {};
 
+ nfc-ros = self.callPackage ./nfc-ros {};
+
  nmea-comms = self.callPackage ./nmea-comms {};
 
  nmea-msgs = self.callPackage ./nmea-msgs {};
@@ -2235,6 +2255,8 @@ self: super: {
  opw-kinematics = self.callPackage ./opw-kinematics {};
 
  osm-cartography = self.callPackage ./osm-cartography {};
+
+ osqp = self.callPackage ./osqp {};
 
  osqp-vendor = self.callPackage ./osqp-vendor {};
 
@@ -2371,6 +2393,8 @@ self: super: {
  pluginlib = self.callPackage ./pluginlib {};
 
  pluginlib-tutorials = self.callPackage ./pluginlib-tutorials {};
+
+ point-cloud-color = self.callPackage ./point-cloud-color {};
 
  point-cloud-transport-plugins = self.callPackage ./point-cloud-transport-plugins {};
 
@@ -2672,6 +2696,8 @@ self: super: {
 
  resource-retriever = self.callPackage ./resource-retriever {};
 
+ respeaker-ros = self.callPackage ./respeaker-ros {};
+
  rgbd-launch = self.callPackage ./rgbd-launch {};
 
  ridgeback-control = self.callPackage ./ridgeback-control {};
@@ -2803,6 +2829,8 @@ self: super: {
  ros-environment = self.callPackage ./ros-environment {};
 
  ros-ethercat-eml = self.callPackage ./ros-ethercat-eml {};
+
+ ros-google-cloud-language = self.callPackage ./ros-google-cloud-language {};
 
  ros-ign = self.callPackage ./ros-ign {};
 
@@ -3350,6 +3378,8 @@ self: super: {
 
  stereo-msgs = self.callPackage ./stereo-msgs {};
 
+ switchbot-ros = self.callPackage ./switchbot-ros {};
+
  swri-cli-tools = self.callPackage ./swri-cli-tools {};
 
  swri-console = self.callPackage ./swri-console {};
@@ -3797,5 +3827,9 @@ self: super: {
  ypspur-ros = self.callPackage ./ypspur-ros {};
 
  zbar-ros = self.callPackage ./zbar-ros {};
+
+ zdepth = self.callPackage ./zdepth {};
+
+ zdepth-image-transport = self.callPackage ./zdepth-image-transport {};
 
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, class-loader, compressed-depth-image-transport, compressed-image-transport, cras-cpp-common, cras-topic-tools, dynamic-reconfigure, image-transport, libjpeg_turbo, pluginlib, pythonPackages, rosbag, roslint, sensor-msgs, theora-image-transport, topic-tools }:
 buildRosPackage {
   pname = "ros-melodic-image-transport-codecs";
-  version = "2.2.2-r1";
+  version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://gitlab.fel.cvut.cz/cras/ros-release/ros-utils/-/archive/release/melodic/image_transport_codecs/2.2.2-1/archive.tar.gz";
+    url = "https://gitlab.fel.cvut.cz/cras/ros-release/ros-utils/-/archive/release/melodic/image_transport_codecs/2.2.3-1/archive.tar.gz";
     name = "archive.tar.gz";
-    sha256 = "ac6e2a0cf6b5edd4cbb9a0a966fd84b123f6c60894272661fe8a88769635e7da";
+    sha256 = "bb4faa447143819d0bffe0abb1a8b0f18e5e1650f8366da239ae682a14a88227";
   };
 
   buildType = "catkin";

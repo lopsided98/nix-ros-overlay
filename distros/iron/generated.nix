@@ -102,8 +102,6 @@ self: super: {
 
  ament-cmake-uncrustify = self.callPackage ./ament-cmake-uncrustify {};
 
- ament-cmake-vendor-package = self.callPackage ./ament-cmake-vendor-package {};
-
  ament-cmake-version = self.callPackage ./ament-cmake-version {};
 
  ament-cmake-xmllint = self.callPackage ./ament-cmake-xmllint {};

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-cspace-msgs, qt5, roscpp, roslint, rviz }:
 buildRosPackage {
   pname = "ros-melodic-costmap-cspace-rviz-plugins";
-  version = "0.11.6-r1";
+  version = "0.11.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_rviz_plugins-release/archive/release/melodic/costmap_cspace_rviz_plugins/0.11.6-1.tar.gz";
-    name = "0.11.6-1.tar.gz";
-    sha256 = "bcd73822b9dd77d03b425ddad5918adea6d64ac3e9b7bbe8f4605ef9048af760";
+    url = "https://github.com/at-wat/neonavigation_rviz_plugins-release/archive/release/melodic/costmap_cspace_rviz_plugins/0.11.7-1.tar.gz";
+    name = "0.11.7-1.tar.gz";
+    sha256 = "71d6175db707daf9106b869a957398f1da44c549dbaa6ac3a8d734c7b2332991";
   };
 
   buildType = "catkin";
