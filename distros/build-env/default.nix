@@ -11,7 +11,7 @@
 # By default, all binaries in the environment are wrapped, setting the relevant
 # ROS environment variables, allowing use outside of nix-shell.
 { lib, stdenv, buildPackages, writeText, buildEnv, makeWrapper, python }:
-{ paths ? [], wrapPrograms ? true, ... }@args:
+{ paths ? [], wrapPrograms ? true, postBuild ? "", passthru ? { }, ... }@args:
 
 with lib;
 
@@ -46,6 +46,7 @@ let
     nativeBuildInputs = optional wrapPrograms makeWrapper;
 
     postBuild = ''
+      ${postBuild}
       "${buildPackages.perl}/bin/perl" "${./setup-hook-builder.pl}"
     '' + optionalString wrapPrograms ''
       if [ -d "$out/bin" ]; then
@@ -67,17 +68,19 @@ let
       fi
     '';
 
-    passthru.env = stdenv.mkDerivation {
-      name = "interactive-ros-env";
+    passthru = passthru // {
+      env = stdenv.mkDerivation {
+        name = "interactive-ros-env";
 
-      buildInputs = [ env ];
+        buildInputs = [ env ];
 
-      buildCommand = ''
-        echo >&2 ""
-        echo >&2 "*** ROS 'env' attributes are intended for interactive nix-shell sessions, not for building! ***"
-        echo >&2 ""
-        exit 1
-      '';
+        buildCommand = ''
+          echo >&2 ""
+          echo >&2 "*** ROS 'env' attributes are intended for interactive nix-shell sessions, not for building! ***"
+          echo >&2 ""
+          exit 1
+        '';
+      };
     };
   })).overrideAttrs ({ buildCommand, passAsFile ? [], ...}: {
     # Hack to allow buildEnv to use propagatedBuildInputs
