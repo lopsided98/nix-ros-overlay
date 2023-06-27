@@ -33,7 +33,7 @@ let
 
   propagatedPaths = propagatePackages paths;
 
-  env = (buildEnv (args // {
+  env = (buildEnv ((removeAttrs args [ "wrapPrograms" ]) // {
     name = "ros-env";
     # Only add ROS packages to environment. The rest are propagated like normal.
     # ROS packages propagate a huge number of dependencies, which are added all
