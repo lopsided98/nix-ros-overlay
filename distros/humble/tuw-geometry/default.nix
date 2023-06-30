@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, opencv, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-tuw-geometry";
-  version = "0.0.9-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/tuw-robotics/tuw_geometry-release/archive/release/humble/tuw_geometry/0.0.9-1.tar.gz";
-    name = "0.0.9-1.tar.gz";
-    sha256 = "58c3a98dc01f60051845b3da4f0909d6d59e17d3c9f475a080a982bbbac0f573";
+    url = "https://github.com/tuw-robotics/tuw_geometry-release/archive/release/humble/tuw_geometry/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "ead05b67d7d43c49d5bcfef73f5db67b4a81389db907feef1c64670d231e6faa";
   };
 
   buildType = "ament_cmake";

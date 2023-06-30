@@ -618,6 +618,10 @@ self: super: {
 
  cpu-temperature-diagnostics = self.callPackage ./cpu-temperature-diagnostics {};
 
+ cras-imu-tools = self.callPackage ./cras-imu-tools {};
+
+ cras-laser-geometry = self.callPackage ./cras-laser-geometry {};
+
  create-bringup = self.callPackage ./create-bringup {};
 
  create-description = self.callPackage ./create-description {};
@@ -2859,6 +2863,8 @@ self: super: {
  pluginlib = self.callPackage ./pluginlib {};
 
  pluginlib-tutorials = self.callPackage ./pluginlib-tutorials {};
+
+ point-cloud-color = self.callPackage ./point-cloud-color {};
 
  point-cloud-publisher-tutorial = self.callPackage ./point-cloud-publisher-tutorial {};
 

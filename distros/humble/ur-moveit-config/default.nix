@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, launch, launch-ros, moveit-kinematics, moveit-planners-ompl, moveit-ros-move-group, moveit-ros-visualization, moveit-servo, moveit-simple-controller-manager, rviz2, ur-description, urdf, warehouse-ros-sqlite, xacro }:
 buildRosPackage {
   pname = "ros-humble-ur-moveit-config";
-  version = "2.2.7-r1";
+  version = "2.2.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/humble/ur_moveit_config/2.2.7-1.tar.gz";
-    name = "2.2.7-1.tar.gz";
-    sha256 = "8dff96dadb21d87fe117a4afc67dffc153c734af7d54898145745fd29a0584f2";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/humble/ur_moveit_config/2.2.8-1.tar.gz";
+    name = "2.2.8-1.tar.gz";
+    sha256 = "eb21f652aaec1444c69cd5567d9553cc09cba13f106b2dc9d316287902a7e4ff";
   };
 
   buildType = "ament_cmake";

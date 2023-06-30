@@ -102,8 +102,6 @@ self: super: {
 
  ament-cmake-uncrustify = self.callPackage ./ament-cmake-uncrustify {};
 
- ament-cmake-vendor-package = self.callPackage ./ament-cmake-vendor-package {};
-
  ament-cmake-version = self.callPackage ./ament-cmake-version {};
 
  ament-cmake-xmllint = self.callPackage ./ament-cmake-xmllint {};
@@ -224,6 +222,8 @@ self: super: {
 
  cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
 
+ catch-ros2 = self.callPackage ./catch-ros2 {};
+
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
 
  class-loader = self.callPackage ./class-loader {};
@@ -273,6 +273,20 @@ self: super: {
  depth-image-proc = self.callPackage ./depth-image-proc {};
 
  depthai = self.callPackage ./depthai {};
+
+ depthai-ros = self.callPackage ./depthai-ros {};
+
+ depthai-bridge = self.callPackage ./depthai-bridge {};
+
+ depthai-descriptions = self.callPackage ./depthai-descriptions {};
+
+ depthai-examples = self.callPackage ./depthai-examples {};
+
+ depthai-filters = self.callPackage ./depthai-filters {};
+
+ depthai-ros-driver = self.callPackage ./depthai-ros-driver {};
+
+ depthai-ros-msgs = self.callPackage ./depthai-ros-msgs {};
 
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
 
@@ -461,6 +475,8 @@ self: super: {
  examples-rclpy-pointcloud-publisher = self.callPackage ./examples-rclpy-pointcloud-publisher {};
 
  examples-tf2-py = self.callPackage ./examples-tf2-py {};
+
+ executive-smach = self.callPackage ./executive-smach {};
 
  fastcdr = self.callPackage ./fastcdr {};
 
@@ -768,6 +784,8 @@ self: super: {
 
  libpointmatcher = self.callPackage ./libpointmatcher {};
 
+ librealsense2 = self.callPackage ./librealsense2 {};
+
  libstatistics-collector = self.callPackage ./libstatistics-collector {};
 
  libyaml-vendor = self.callPackage ./libyaml-vendor {};
@@ -932,11 +950,15 @@ self: super: {
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
+ mp2p-icp = self.callPackage ./mp2p-icp {};
+
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
+
+ mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
@@ -1279,6 +1301,12 @@ self: super: {
  rcss3d-nao = self.callPackage ./rcss3d-nao {};
 
  rcutils = self.callPackage ./rcutils {};
+
+ realsense2-camera = self.callPackage ./realsense2-camera {};
+
+ realsense2-camera-msgs = self.callPackage ./realsense2-camera-msgs {};
+
+ realsense2-description = self.callPackage ./realsense2-description {};
 
  realtime-tools = self.callPackage ./realtime-tools {};
 
@@ -1737,6 +1765,12 @@ self: super: {
  smacc2 = self.callPackage ./smacc2 {};
 
  smacc2-msgs = self.callPackage ./smacc2-msgs {};
+
+ smach = self.callPackage ./smach {};
+
+ smach-msgs = self.callPackage ./smach-msgs {};
+
+ smach-ros = self.callPackage ./smach-ros {};
 
  smclib = self.callPackage ./smclib {};
 

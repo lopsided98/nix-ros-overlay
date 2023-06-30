@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pluginlib, qt5, rviz, trajectory-tracker-msgs }:
 buildRosPackage {
   pname = "ros-melodic-trajectory-tracker-rviz-plugins";
-  version = "0.11.6-r1";
+  version = "0.11.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_rviz_plugins-release/archive/release/melodic/trajectory_tracker_rviz_plugins/0.11.6-1.tar.gz";
-    name = "0.11.6-1.tar.gz";
-    sha256 = "644e1c112888474dc2bee1a80c94dfa76798cfeca77fad982e691b88088d220d";
+    url = "https://github.com/at-wat/neonavigation_rviz_plugins-release/archive/release/melodic/trajectory_tracker_rviz_plugins/0.11.7-1.tar.gz";
+    name = "0.11.7-1.tar.gz";
+    sha256 = "a4140671aeac1c451bf611ab0533b9d211216a3a27d687dd269da4dd321c75f2";
   };
 
   buildType = "catkin";

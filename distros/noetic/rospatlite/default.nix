@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rospy, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rospatlite";
-  version = "2.1.21-r2";
+  version = "2.1.26-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/rospatlite/2.1.21-2.tar.gz";
-    name = "2.1.21-2.tar.gz";
-    sha256 = "f52f6aa6146511a5551db4f2b648bcd0ebe7908093dfb2a7a431297f380400e0";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/rospatlite/2.1.26-1.tar.gz";
+    name = "2.1.26-1.tar.gz";
+    sha256 = "5c56f165128c3980917fee6417253fc26a983e9fe9e645ca137bb733b66fc7ff";
   };
 
   buildType = "catkin";

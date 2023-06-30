@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, console-bridge, eigen, gtest, liblapack, libyamlcpp, opw-kinematics, orocos-kdl, ros-industrial-cmake-boilerplate, tesseract-common, tesseract-scene-graph, tesseract-state-solver, tesseract-support, tesseract-urdf }:
 buildRosPackage {
   pname = "ros-noetic-tesseract-kinematics";
-  version = "0.15.2-r1";
+  version = "0.18.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_kinematics/0.15.2-1.tar.gz";
-    name = "0.15.2-1.tar.gz";
-    sha256 = "57dd1329a32d50e2119e242400d5d9d7a5f109f76bff7491207c04cc672fa488";
+    url = "https://github.com/ros-industrial-release/tesseract-release/archive/release/noetic/tesseract_kinematics/0.18.0-1.tar.gz";
+    name = "0.18.0-1.tar.gz";
+    sha256 = "9e3e053956086bb513d205237844304f5d29fe5c533df16682e79820c68e7f96";
   };
 
   buildType = "cmake";

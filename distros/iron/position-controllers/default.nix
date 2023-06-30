@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-manager, forward-command-controller, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-iron-position-controllers";
-  version = "3.10.1-r1";
+  version = "3.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/position_controllers/3.10.1-1.tar.gz";
-    name = "3.10.1-1.tar.gz";
-    sha256 = "b6d35e54f35a74b13f2b3278bf5e2319920427151c452cce750c66f2636f56e8";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/position_controllers/3.11.0-1.tar.gz";
+    name = "3.11.0-1.tar.gz";
+    sha256 = "e92c4f2723fae802510ae91d575369ab710e976182089475dd4f9208771e5d18";
   };
 
   buildType = "ament_cmake";

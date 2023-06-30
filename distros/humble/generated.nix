@@ -8,6 +8,8 @@ self: super: {
 
  ackermann-msgs = self.callPackage ./ackermann-msgs {};
 
+ ackermann-steering-controller = self.callPackage ./ackermann-steering-controller {};
+
  action-msgs = self.callPackage ./action-msgs {};
 
  action-tutorials-cpp = self.callPackage ./action-tutorials-cpp {};
@@ -246,6 +248,8 @@ self: super: {
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
+ bicycle-steering-controller = self.callPackage ./bicycle-steering-controller {};
+
  bno055 = self.callPackage ./bno055 {};
 
  bond = self.callPackage ./bond {};
@@ -280,9 +284,13 @@ self: super: {
 
  cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
 
+ catch-ros2 = self.callPackage ./catch-ros2 {};
+
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
 
  class-loader = self.callPackage ./class-loader {};
+
+ clearpath-config = self.callPackage ./clearpath-config {};
 
  clearpath-msgs = self.callPackage ./clearpath-msgs {};
 
@@ -531,6 +539,8 @@ self: super: {
  examples-rclpy-pointcloud-publisher = self.callPackage ./examples-rclpy-pointcloud-publisher {};
 
  examples-tf2-py = self.callPackage ./examples-tf2-py {};
+
+ executive-smach = self.callPackage ./executive-smach {};
 
  fastcdr = self.callPackage ./fastcdr {};
 
@@ -888,6 +898,8 @@ self: super: {
 
  lifecycle-py = self.callPackage ./lifecycle-py {};
 
+ lms1xx = self.callPackage ./lms1xx {};
+
  logging-demo = self.callPackage ./logging-demo {};
 
  lsc-ros2-driver = self.callPackage ./lsc-ros2-driver {};
@@ -1052,11 +1064,15 @@ self: super: {
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
+ mp2p-icp = self.callPackage ./mp2p-icp {};
+
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
+
+ mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
@@ -1972,6 +1988,12 @@ self: super: {
 
  smacc2-msgs = self.callPackage ./smacc2-msgs {};
 
+ smach = self.callPackage ./smach {};
+
+ smach-msgs = self.callPackage ./smach-msgs {};
+
+ smach-ros = self.callPackage ./smach-ros {};
+
  smclib = self.callPackage ./smclib {};
 
  snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
@@ -2013,6 +2035,8 @@ self: super: {
  std-msgs = self.callPackage ./std-msgs {};
 
  std-srvs = self.callPackage ./std-srvs {};
+
+ steering-controllers-library = self.callPackage ./steering-controllers-library {};
 
  stereo-image-proc = self.callPackage ./stereo-image-proc {};
 
@@ -2167,6 +2191,8 @@ self: super: {
  transmission-interface = self.callPackage ./transmission-interface {};
 
  tricycle-controller = self.callPackage ./tricycle-controller {};
+
+ tricycle-steering-controller = self.callPackage ./tricycle-steering-controller {};
 
  turbojpeg-compressed-image-transport = self.callPackage ./turbojpeg-compressed-image-transport {};
 

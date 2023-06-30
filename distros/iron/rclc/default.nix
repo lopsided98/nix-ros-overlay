@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, example-interfaces, launch-testing, osrf-testing-tools-cpp, rcl, rcl-action, rclcpp, rclcpp-action, rcutils, rosidl-generator-c, rosidl-typesupport-c, std-msgs, test-msgs }:
 buildRosPackage {
   pname = "ros-iron-rclc";
-  version = "3.0.9-r3";
+  version = "5.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclc-release/archive/release/iron/rclc/3.0.9-3.tar.gz";
-    name = "3.0.9-3.tar.gz";
-    sha256 = "71f0a4e7882ec2fbf68724f96103e467d77db040a394c8e145948d65c1b263bb";
+    url = "https://github.com/ros2-gbp/rclc-release/archive/release/iron/rclc/5.0.1-1.tar.gz";
+    name = "5.0.1-1.tar.gz";
+    sha256 = "a1fb3fda135580c3701685ba46180989cc20b99ec5a39f84eb84e7f0f14dea77";
   };
 
   buildType = "ament_cmake";

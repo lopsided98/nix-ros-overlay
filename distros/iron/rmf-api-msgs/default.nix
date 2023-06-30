@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nlohmann_json, python3Packages }:
 buildRosPackage {
   pname = "ros-iron-rmf-api-msgs";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_api_msgs-release/archive/release/iron/rmf_api_msgs/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "dd8b281518bba80b949778ceef472bb748d3c3d6c0af5b9a7e175b3d37bacc56";
+    url = "https://github.com/ros2-gbp/rmf_api_msgs-release/archive/release/iron/rmf_api_msgs/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "93b37e0bdc3dd6ad469018b95ce6092daa50ca30760f86ff2ce8cd2ebf003c49";
   };
 
   buildType = "ament_cmake";

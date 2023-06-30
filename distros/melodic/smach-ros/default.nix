@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, rospy, rostest, rostopic, smach, smach-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-melodic-smach-ros";
-  version = "2.0.1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/executive_smach-release/archive/release/melodic/smach_ros/2.0.1-0.tar.gz";
-    name = "2.0.1-0.tar.gz";
-    sha256 = "2a6062c9bb60b5cea300784b67e7c977b1cd42bc7117c0d5bea7122eb04d37ed";
+    url = "https://github.com/ros-gbp/executive_smach-release/archive/release/melodic/smach_ros/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "04573f2454e319ed33b8d7e1038c13ddd7f2d85f88ed3a47c46e3f2e2c8f7c45";
   };
 
   buildType = "catkin";

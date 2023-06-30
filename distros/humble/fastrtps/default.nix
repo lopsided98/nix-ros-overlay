@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, asio, cmake, fastcdr, foonathan-memory-vendor, openssl, python3, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-humble-fastrtps";
-  version = "2.6.4-r1";
+  version = "2.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/humble/fastrtps/2.6.4-1.tar.gz";
-    name = "2.6.4-1.tar.gz";
-    sha256 = "e9309a16a3df6e187f88dd605eb37bd7095a911b35cb2ec2cf49289c25e3cbee";
+    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/humble/fastrtps/2.6.5-1.tar.gz";
+    name = "2.6.5-1.tar.gz";
+    sha256 = "98990243a4732532b1f1b08d86b836c002c2c5ba6747560638d19c20fad97fed";
   };
 
   buildType = "cmake";

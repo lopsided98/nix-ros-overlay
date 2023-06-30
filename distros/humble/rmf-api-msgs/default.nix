@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nlohmann_json, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-rmf-api-msgs";
-  version = "0.0.2-r1";
+  version = "0.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_api_msgs-release/archive/release/humble/rmf_api_msgs/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "81e1980a8869f42e676a032a80a462261c6fa4a9a4d5848b268074046081831e";
+    url = "https://github.com/ros2-gbp/rmf_api_msgs-release/archive/release/humble/rmf_api_msgs/0.0.3-1.tar.gz";
+    name = "0.0.3-1.tar.gz";
+    sha256 = "6f7f218d3d21e84c9dec3135a00cb00fd8b38287bdafed384bc16f1546c12a93";
   };
 
   buildType = "ament_cmake";
