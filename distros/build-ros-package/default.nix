@@ -9,6 +9,7 @@
 # applications are broken, but allows all libraries that depend on Qt5 to build
 # correctly.
 , dontWrapQtApps ? true
+, nativeBuildInputs ? [ ]
 , CXXFLAGS ? ""
 , passthru ? {}
 , ...
@@ -28,4 +29,28 @@ else stdenv.mkDerivation) (args // {
   };
 } // lib.optionalAttrs (buildType == "ament_python") {
   dontUseCmakeConfigure = true;
+
+  # Modelled after colcon:
+  # https://github.com/colcon/colcon-core/blob/master/colcon_core/task/python/build.py
+  format = "other";
+
+  nativeBuildInputs = nativeBuildInputs ++ [ pythonPackages.setuptools ];
+
+  buildPhase = ''
+    runHook preBuild
+
+    python setup.py build
+
+    runHook postBuild
+  '';
+
+  installPhase = ''
+    runHook preInstall
+
+    mkdir -p "$out/${pythonPackages.python.sitePackages}"
+    export PYTHONPATH="$out/${pythonPackages.python.sitePackages}:$PYTHONPATH"
+    python setup.py install --prefix="$out" --single-version-externally-managed --record /dev/null
+
+    runHook postInstall
+  '';
 })
