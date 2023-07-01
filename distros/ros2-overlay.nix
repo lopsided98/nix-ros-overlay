@@ -143,7 +143,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     postFixup ? "", ...
   }: {
     postFixup = postFixup + ''
-      wrapQtApp "$out/bin/rqt_robot_monitor"
+      wrapQtApp "$out/lib/rqt_robot_monitor/rqt_robot_monitor"
     '';
   });
 
