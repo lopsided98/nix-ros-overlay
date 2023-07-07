@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cpp-common }:
 buildRosPackage {
   pname = "ros-noetic-rostime";
-  version = "0.7.2-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/noetic/rostime/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "7111aa9956e9e8ec623edd54c59b344c6488b65aed8b1d768a5a7a55b467c47c";
+    url = "https://github.com/ros-gbp/roscpp_core-release/archive/release/noetic/rostime/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "9147416c5ab3b2593a22ae339ad7fe66630ac730431018352f4962f5f58d6e6b";
   };
 
   buildType = "catkin";

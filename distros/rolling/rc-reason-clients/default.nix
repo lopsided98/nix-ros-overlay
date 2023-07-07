@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, python3Packages, pythonPackages, rc-reason-msgs, rclpy, ros2pkg, tf2-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rc-reason-clients";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_reason_clients-release/archive/release/rolling/rc_reason_clients/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "f12a3b67c6c5a8843c3b33c6064806d47045f3a6c38d05b4c3fc0debe15a4105";
+    url = "https://github.com/ros2-gbp/rc_reason_clients-release/archive/release/rolling/rc_reason_clients/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "817dbcf9b2a34a691de40df8fd465f6dd129e5a8a0a9689dd289f9b5872ed7c0";
   };
 
   buildType = "ament_python";

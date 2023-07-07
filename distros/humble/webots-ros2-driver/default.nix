@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, geometry-msgs, pluginlib, python-cmake-module, rclcpp, rclpy, ros-environment, sensor-msgs, std-msgs, tf2-geometry-msgs, tf2-ros, tinyxml2-vendor, vision-msgs, webots-ros2-importer, webots-ros2-msgs }:
 buildRosPackage {
   pname = "ros-humble-webots-ros2-driver";
-  version = "2023.0.4-r1";
+  version = "2023.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/humble/webots_ros2_driver/2023.0.4-1.tar.gz";
-    name = "2023.0.4-1.tar.gz";
-    sha256 = "9a6093901c3d9e6c732c58f8bf6e33f62c4a1055b3ec0d73eb3ff589041aa3e6";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/humble/webots_ros2_driver/2023.1.0-1.tar.gz";
+    name = "2023.1.0-1.tar.gz";
+    sha256 = "468ae5c37a29d383a7720d4c5e5487e7eecf83dbf7cb43f07201a57f2d1a1ddd";
   };
 
   buildType = "ament_cmake";

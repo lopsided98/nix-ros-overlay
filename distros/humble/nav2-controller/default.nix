@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, angles, nav-2d-msgs, nav-2d-utils, nav2-common, nav2-core, nav2-msgs, nav2-util, pluginlib, rclcpp, rclcpp-action, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-nav2-controller";
-  version = "1.1.7-r3";
+  version = "1.1.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_controller/1.1.7-3.tar.gz";
-    name = "1.1.7-3.tar.gz";
-    sha256 = "42b20b018a9eaabb6136cc33fcbd8ae97bc267fa8b21ad36d0495532f341d929";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_controller/1.1.8-2.tar.gz";
+    name = "1.1.8-2.tar.gz";
+    sha256 = "7f691c6fe45846d9fa41374c717398b17f67d356e0c987843af2873e078670f5";
   };
 
   buildType = "ament_cmake";

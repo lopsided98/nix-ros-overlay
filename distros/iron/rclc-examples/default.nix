@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, example-interfaces, lifecycle-msgs, rcl, rclc, rclc-lifecycle, rclc-parameter, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-rclc-examples";
-  version = "3.0.9-r3";
+  version = "5.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclc-release/archive/release/iron/rclc_examples/3.0.9-3.tar.gz";
-    name = "3.0.9-3.tar.gz";
-    sha256 = "b1fc6db030cae1d15084a570a94239bb8ca4c0b3bc9cb0a7cfb0aade0367270f";
+    url = "https://github.com/ros2-gbp/rclc-release/archive/release/iron/rclc_examples/5.0.1-1.tar.gz";
+    name = "5.0.1-1.tar.gz";
+    sha256 = "5050ea3a6bb86bf1219b8b9ed1a50cc19014242bceac4215bb4a7704de894439";
   };
 
   buildType = "ament_cmake";

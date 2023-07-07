@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, eigen3-cmake-module, geometry-msgs, rclcpp, rmf-building-map-msgs, rmf-dispenser-msgs, rmf-fleet-msgs, rmf-ingestor-msgs, std-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-rmf-robot-sim-common";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/iron/rmf_robot_sim_common/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "6be279473793066dcb10d03b2a433baf88751e05376cc70573af3ba14d0693f1";
+    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/iron/rmf_robot_sim_common/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "2cb012169d9268632138939550a98147baf5d1ffd54c01ff81c979a213f27cb4";
   };
 
   buildType = "ament_cmake";

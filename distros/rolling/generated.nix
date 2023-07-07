@@ -102,8 +102,6 @@ self: super: {
 
  ament-cmake-uncrustify = self.callPackage ./ament-cmake-uncrustify {};
 
- ament-cmake-vendor-package = self.callPackage ./ament-cmake-vendor-package {};
-
  ament-cmake-version = self.callPackage ./ament-cmake-version {};
 
  ament-cmake-xmllint = self.callPackage ./ament-cmake-xmllint {};
@@ -214,6 +212,30 @@ self: super: {
 
  can-msgs = self.callPackage ./can-msgs {};
 
+ canopen = self.callPackage ./canopen {};
+
+ canopen-402-driver = self.callPackage ./canopen-402-driver {};
+
+ canopen-base-driver = self.callPackage ./canopen-base-driver {};
+
+ canopen-core = self.callPackage ./canopen-core {};
+
+ canopen-fake-slaves = self.callPackage ./canopen-fake-slaves {};
+
+ canopen-interfaces = self.callPackage ./canopen-interfaces {};
+
+ canopen-master-driver = self.callPackage ./canopen-master-driver {};
+
+ canopen-proxy-driver = self.callPackage ./canopen-proxy-driver {};
+
+ canopen-ros2-control = self.callPackage ./canopen-ros2-control {};
+
+ canopen-ros2-controllers = self.callPackage ./canopen-ros2-controllers {};
+
+ canopen-tests = self.callPackage ./canopen-tests {};
+
+ canopen-utils = self.callPackage ./canopen-utils {};
+
  cartographer = self.callPackage ./cartographer {};
 
  cartographer-ros = self.callPackage ./cartographer-ros {};
@@ -223,6 +245,8 @@ self: super: {
  cartographer-rviz = self.callPackage ./cartographer-rviz {};
 
  cascade-lifecycle-msgs = self.callPackage ./cascade-lifecycle-msgs {};
+
+ catch-ros2 = self.callPackage ./catch-ros2 {};
 
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
 
@@ -457,6 +481,8 @@ self: super: {
  examples-rclpy-pointcloud-publisher = self.callPackage ./examples-rclpy-pointcloud-publisher {};
 
  examples-tf2-py = self.callPackage ./examples-tf2-py {};
+
+ executive-smach = self.callPackage ./executive-smach {};
 
  fastcdr = self.callPackage ./fastcdr {};
 
@@ -722,6 +748,8 @@ self: super: {
 
  launch-yaml = self.callPackage ./launch-yaml {};
 
+ lely-core-libraries = self.callPackage ./lely-core-libraries {};
+
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
@@ -896,11 +924,15 @@ self: super: {
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
+ mp2p-icp = self.callPackage ./mp2p-icp {};
+
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
+
+ mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
@@ -1630,6 +1662,12 @@ self: super: {
 
  smacc2-msgs = self.callPackage ./smacc2-msgs {};
 
+ smach = self.callPackage ./smach {};
+
+ smach-msgs = self.callPackage ./smach-msgs {};
+
+ smach-ros = self.callPackage ./smach-ros {};
+
  smclib = self.callPackage ./smclib {};
 
  snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
@@ -1831,6 +1869,8 @@ self: super: {
  tuw-geometry = self.callPackage ./tuw-geometry {};
 
  twist-mux = self.callPackage ./twist-mux {};
+
+ twist-mux-msgs = self.callPackage ./twist-mux-msgs {};
 
  twist-stamper = self.callPackage ./twist-stamper {};
 

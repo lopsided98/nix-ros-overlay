@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, gazebo-ros-pkgs, geometry-msgs, launch, launch-ros, launch-testing, lcov, nav-msgs, nav2-amcl, nav2-behavior-tree, nav2-bringup, nav2-common, nav2-lifecycle-manager, nav2-map-server, nav2-msgs, nav2-navfn-planner, nav2-planner, nav2-util, navigation2, python3Packages, rclcpp, rclpy, robot-state-publisher, std-msgs, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-nav2-system-tests";
-  version = "1.1.7-r3";
+  version = "1.1.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_system_tests/1.1.7-3.tar.gz";
-    name = "1.1.7-3.tar.gz";
-    sha256 = "554dfbfb50eb9fa90e9b29ad55697a0cae649a8d934df1895e473d8199c48466";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_system_tests/1.1.8-2.tar.gz";
+    name = "1.1.8-2.tar.gz";
+    sha256 = "ea54a42aaa2a302e287b98e21ba3b16ab6543ea3b0beec5116089798fcf1d423";
   };
 
   buildType = "ament_cmake";

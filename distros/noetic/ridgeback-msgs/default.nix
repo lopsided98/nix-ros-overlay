@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-ridgeback-msgs";
-  version = "0.3.3-r2";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/noetic/ridgeback_msgs/0.3.3-2.tar.gz";
-    name = "0.3.3-2.tar.gz";
-    sha256 = "c5ea43d5a76a14885722d87f62e46a6548738765821a1307c73da022dd2b7c05";
+    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/noetic/ridgeback_msgs/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "d55a786d0b7e263801de2e86eec33c7e2b4d04a7df876d0d10e0dee6cac39651";
   };
 
   buildType = "catkin";

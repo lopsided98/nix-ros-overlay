@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ros2-gbp/ignition_math6_vendor-release/archive/release/humble/ignition_math6_vendor/0.0.2-2.tar.gz";
     name = "0.0.2-2.tar.gz";
-    sha256 = "fec674061b7a8feda3bdadf48c9ce762ba2170b39660f9cb763da882425167be";
+    sha256 = "829ad291e00604ebe981322945ce10f2666e3886dc53048af053d52ad79fc239";
   };
 
   buildType = "cmake";

@@ -2,20 +2,21 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, tuw-geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-tuw-nav-msgs";
-  version = "0.0.15-r3";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/tuw-robotics/tuw_msgs-release/archive/release/humble/tuw_nav_msgs/0.0.15-3.tar.gz";
-    name = "0.0.15-3.tar.gz";
-    sha256 = "097a436221df31971082e8427680686e7444461b2d97e3bfa929bac05f8f08bc";
+    url = "https://github.com/tuw-robotics/tuw_msgs-release/archive/release/humble/tuw_nav_msgs/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "fdd695739c4bc35dd17c377b029b725adcfa99ba64354903d7681386d661beb0";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];
-  propagatedBuildInputs = [ builtin-interfaces geometry-msgs nav-msgs rosidl-default-runtime std-msgs tuw-geometry-msgs ];
+  checkInputs = [ ament-lint-common ];
+  propagatedBuildInputs = [ builtin-interfaces geometry-msgs nav-msgs rosidl-default-runtime std-msgs ];
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {

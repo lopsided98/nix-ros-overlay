@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-iron-magic-enum";
-  version = "0.9.2-r1";
+  version = "0.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/magic_enum-release/archive/release/iron/magic_enum/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "803e25e0160c5cc0b2823d93e3cfd86f5e871b1e40dd48aa524af883676bee0e";
+    url = "https://github.com/nobleo/magic_enum-release/archive/release/iron/magic_enum/0.9.3-1.tar.gz";
+    name = "0.9.3-1.tar.gz";
+    sha256 = "91a8fe99d1630ad43ddc7e7c10fcf46df22a96c6124786ed5f2c164cf9c483cb";
   };
 
   buildType = "cmake";
