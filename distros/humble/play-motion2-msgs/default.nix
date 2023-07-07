@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-play-motion2-msgs";
-  version = "0.0.8-r1";
+  version = "0.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/play_motion2-release/archive/release/humble/play_motion2_msgs/0.0.8-1.tar.gz";
-    name = "0.0.8-1.tar.gz";
-    sha256 = "ce0427c4906e531a334f131c9a06a336c6f17bd6b04f899bacf36c93f2162532";
+    url = "https://github.com/pal-gbp/play_motion2-release/archive/release/humble/play_motion2_msgs/0.0.9-1.tar.gz";
+    name = "0.0.9-1.tar.gz";
+    sha256 = "4baf0586af2b17dea8ffe15e47d6eaf2ca1dc3623e8cefb74c636ff4f2ecbb62";
   };
 
   buildType = "ament_cmake";

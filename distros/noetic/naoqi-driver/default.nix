@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cv-bridge, diagnostic-msgs, diagnostic-updater, geometry-msgs, image-transport, kdl-parser, naoqi-bridge-msgs, naoqi-libqi, naoqi-libqicore, orocos-kdl, robot-state-publisher, rosbag-storage, rosconsole, rosgraph-msgs, sensor-msgs, tf2-geometry-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-naoqi-driver";
-  version = "0.5.13";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-naoqi/naoqi_driver-release/archive/release/noetic/naoqi_driver/0.5.13-0.tar.gz";
-    name = "0.5.13-0.tar.gz";
-    sha256 = "e7c9a6b41e27f1b7af037eb423b64134c6e345ec04bfcfd5a322e4d6407f71e2";
+    url = "https://github.com/ros-naoqi/naoqi_driver-release/archive/release/noetic/naoqi_driver/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "6bedeacb7d8d14b6374d60b3876608067b67205f458403760b7b94e9bf84a938";
   };
 
   buildType = "catkin";

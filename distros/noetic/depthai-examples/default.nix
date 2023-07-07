@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-info-manager, catkin, cv-bridge, depth-image-proc, depthai, depthai-bridge, depthai-descriptions, depthai-ros-msgs, foxglove-msgs, image-transport, message-filters, nodelet, opencv, robot-state-publisher, ros-environment, roscpp, rospy, sensor-msgs, std-msgs, stereo-msgs, vision-msgs, xacro }:
 buildRosPackage {
   pname = "ros-noetic-depthai-examples";
-  version = "2.7.2-r1";
+  version = "2.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/noetic/depthai_examples/2.7.2-1.tar.gz";
-    name = "2.7.2-1.tar.gz";
-    sha256 = "92fe5fb359b733d4a3499eabc45f4f283de7e0de9cba189afb9ad2135fd43319";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/noetic/depthai_examples/2.7.4-1.tar.gz";
+    name = "2.7.4-1.tar.gz";
+    sha256 = "1a4c52c6e6d0979ca585ae8d7395a534954d09ffb21a3fad98921dab560880ef";
   };
 
   buildType = "catkin";

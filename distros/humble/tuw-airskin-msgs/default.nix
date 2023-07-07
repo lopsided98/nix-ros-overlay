@@ -2,20 +2,21 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-tuw-airskin-msgs";
-  version = "0.0.15-r3";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/tuw-robotics/tuw_msgs-release/archive/release/humble/tuw_airskin_msgs/0.0.15-3.tar.gz";
-    name = "0.0.15-3.tar.gz";
-    sha256 = "d057a9181bb7291727636765d2f9cd8bc779b7281a84845190e99b24d5c44323";
+    url = "https://github.com/tuw-robotics/tuw_msgs-release/archive/release/humble/tuw_airskin_msgs/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "3968b52429fcf7d4ec3b1382b763efa23bd2ebcb3ade2725f378675f4a903b7e";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];
-  propagatedBuildInputs = [ builtin-interfaces geometry-msgs rosidl-default-runtime std-msgs ];
+  checkInputs = [ ament-lint-common ];
+  propagatedBuildInputs = [ builtin-interfaces rosidl-default-runtime std-msgs ];
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {

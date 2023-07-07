@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-msgs, ament-cmake, ament-cmake-gmock, backward-ros, builtin-interfaces, controller-interface, controller-manager, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-test-assets, std-srvs, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-iron-tricycle-controller";
-  version = "3.10.1-r1";
+  version = "3.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/tricycle_controller/3.10.1-1.tar.gz";
-    name = "3.10.1-1.tar.gz";
-    sha256 = "1142fae7da10e71ee0351de7959bfbae67d9a89a9a6b9f1f25b0b3c41f658421";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/tricycle_controller/3.11.0-1.tar.gz";
+    name = "3.11.0-1.tar.gz";
+    sha256 = "4d6bfed1e72386db1b0e7585c451e1cafe47c0900c48ef7208b9e07f7309eb02";
   };
 
   buildType = "ament_cmake";

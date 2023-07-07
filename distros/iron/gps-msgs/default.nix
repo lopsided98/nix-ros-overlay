@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-gps-msgs";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/iron/gps_msgs/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "e9e293659d62ba04a4df6dd0fd0557ed4176a0cbbe97c3504869f7a6cf56ba39";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/iron/gps_msgs/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "f59e0d1b6e8238e9bd45160312663a5334db79da1c4ea9b4274d96a6a12f326b";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto }:
 buildRosPackage {
   pname = "ros-humble-pmb2-maps";
-  version = "4.0.4-r1";
+  version = "4.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_maps/4.0.4-1.tar.gz";
-    name = "4.0.4-1.tar.gz";
-    sha256 = "06c72511123f0b348eee99939f7fe8f7c7aaa963fb0bf2f949e73487ef73f784";
+    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_maps/4.0.5-1.tar.gz";
+    name = "4.0.5-1.tar.gz";
+    sha256 = "de4d3426a261719cf7907702c9e4ceb8028bf5e1809b3a0d840a8096a81a1c31";
   };
 
   buildType = "ament_cmake";

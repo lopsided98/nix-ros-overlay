@@ -2,19 +2,22 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, tuw-airskin-msgs, tuw-geometry-msgs, tuw-multi-robot-msgs, tuw-nav-msgs, tuw-object-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, tuw-airskin-msgs, tuw-geometry-msgs, tuw-multi-robot-msgs, tuw-nav-msgs, tuw-object-msgs }:
 buildRosPackage {
   pname = "ros-humble-tuw-msgs";
-  version = "0.0.15-r3";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/tuw-robotics/tuw_msgs-release/archive/release/humble/tuw_msgs/0.0.15-3.tar.gz";
-    name = "0.0.15-3.tar.gz";
-    sha256 = "cb781c588bee83c19659879008785dad042bc3748c02d5fa145627f1a61a3539";
+    url = "https://github.com/tuw-robotics/tuw_msgs-release/archive/release/humble/tuw_msgs/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "bc9a6396972d8ed7e10f4860a1f3ca3bf2ff7d5383e8d8f396f97f4ab1afc1e5";
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ tuw-airskin-msgs tuw-geometry-msgs tuw-multi-robot-msgs tuw-nav-msgs tuw-object-msgs ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = ''The tuw_msgs meta package'';

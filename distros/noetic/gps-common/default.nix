@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-filters, message-generation, message-runtime, nav-msgs, roscpp, rospy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-gps-common";
-  version = "0.3.3-r1";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/noetic/gps_common/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "9f1698a8af546ffc0e466dfda956ef9e0ce7d733eeb2aa7fc17790472e644854";
+    url = "https://github.com/swri-robotics-gbp/gps_umd-release/archive/release/noetic/gps_common/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "5abd03d0635d912f745d654127904b42eba5102d6d93da93f7f14a884f894827";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, menge-vendor, rclcpp, rmf-building-map-msgs, rmf-door-msgs, rmf-lift-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rmf-building-sim-common";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/rolling/rmf_building_sim_common/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "3130ced7406f1a3bf8af8d0d23c9713b7df0a26b2024440649b164e204c0002c";
+    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/rolling/rmf_building_sim_common/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "8450d0e13732b04d3780e1e19ddabb269b1ecdbdda40833e52c5e426b19a0f74";
   };
 
   buildType = "ament_cmake";

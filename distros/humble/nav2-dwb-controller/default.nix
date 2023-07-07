@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, costmap-queue, dwb-core, dwb-critics, dwb-msgs, dwb-plugins, nav-2d-msgs, nav-2d-utils }:
 buildRosPackage {
   pname = "ros-humble-nav2-dwb-controller";
-  version = "1.1.7-r3";
+  version = "1.1.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_dwb_controller/1.1.7-3.tar.gz";
-    name = "1.1.7-3.tar.gz";
-    sha256 = "9259772e70601d3caceebd949e543a5745bd94a48e404fb4984903c6cac96fb9";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_dwb_controller/1.1.8-2.tar.gz";
+    name = "1.1.8-2.tar.gz";
+    sha256 = "de633bc517bcffac84cddc5f60eba7c81072632209061e26670467ea05fca30f";
   };
 
   buildType = "ament_cmake";

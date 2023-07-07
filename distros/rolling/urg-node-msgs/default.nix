@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-urg-node-msgs";
-  version = "1.0.1-r6";
+  version = "1.0.1-r7";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/urg_node_msgs-release/archive/release/rolling/urg_node_msgs/1.0.1-6.tar.gz";
-    name = "1.0.1-6.tar.gz";
-    sha256 = "61cae54e2424a0b4cf485a290efcc9ce9f62a5bcb5592a7ab51522727b72833b";
+    url = "https://github.com/ros2-gbp/urg_node_msgs-release/archive/release/rolling/urg_node_msgs/1.0.1-7.tar.gz";
+    name = "1.0.1-7.tar.gz";
+    sha256 = "93104cffb9894b6fafecd0795a4a57758150ff293d94ac19e1a7d1b9b6443422";
   };
 
   buildType = "ament_cmake";

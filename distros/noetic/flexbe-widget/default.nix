@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/FlexBE/flexbe_behavior_engine-release/archive/release/noetic/flexbe_widget/1.4.0-2.tar.gz";
+    url = "https://github.com/flexbe/flexbe_behavior_engine-release/archive/release/noetic/flexbe_widget/1.4.0-2.tar.gz";
     name = "1.4.0-2.tar.gz";
     sha256 = "22c8f64421094b5479cc0cf0f71e5a894096215f4f610ccf31836ea5fd613544";
   };

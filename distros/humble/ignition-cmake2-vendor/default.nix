@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ros2-gbp/ignition_cmake2_vendor-release/archive/release/humble/ignition_cmake2_vendor/0.0.2-2.tar.gz";
     name = "0.0.2-2.tar.gz";
-    sha256 = "dcb1ce243048b84ce324cd1eacd6af6fc767d53068f2fa2fe472eb8e08cdbb8f";
+    sha256 = "9fffa5d0f4bd7ea0eea709e603b2f6dd30511ec21b514d4950775a365ad61a4e";
   };
 
   buildType = "cmake";

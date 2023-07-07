@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-gtest, ament-package }:
 buildRosPackage {
   pname = "ros-iron-ament-cmake-gen-version-h";
-  version = "2.0.2-r2";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/iron/ament_cmake_gen_version_h/2.0.2-2.tar.gz";
-    name = "2.0.2-2.tar.gz";
-    sha256 = "ea58b00c7d467436406c571449e75b369b3b704c091eca994ea151b0be68a553";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/iron/ament_cmake_gen_version_h/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "f947b05e180a613609d58702fad526c7d4e1d76b6c165cb61c80437472ba252e";
   };
 
   buildType = "ament_cmake";

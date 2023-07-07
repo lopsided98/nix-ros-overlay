@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-catch2, ament-cmake-uncrustify, cmake, nlohmann-json-schema-validator-vendor, nlohmann_json, rmf-api-msgs, rmf-task }:
 buildRosPackage {
   pname = "ros-rolling-rmf-task-sequence";
-  version = "2.3.0-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_task-release/archive/release/rolling/rmf_task_sequence/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "ef68a68b9be0f09df5665068700230f53352ad3947d524e17182c56f8e97bcaf";
+    url = "https://github.com/ros2-gbp/rmf_task-release/archive/release/rolling/rmf_task_sequence/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "9e17bcbce80e6ec343b1db366cc09aebd727722a39767b4dbc4932ab7d4c489a";
   };
 
   buildType = "cmake";
