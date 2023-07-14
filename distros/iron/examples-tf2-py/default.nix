@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, launch-ros, pythonPackages, rclpy, sensor-msgs, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-iron-examples-tf2-py";
-  version = "0.31.3-r1";
+  version = "0.31.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/iron/examples_tf2_py/0.31.3-1.tar.gz";
-    name = "0.31.3-1.tar.gz";
-    sha256 = "f02678312bdd2da98aad84276180eccf1261249937566e31ae050342a66ce443";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/iron/examples_tf2_py/0.31.4-1.tar.gz";
+    name = "0.31.4-1.tar.gz";
+    sha256 = "a9d25d130d1724296117fdf7d302520c3ba12ca2a2ecdd8b8c5c712cb4450f42";
   };
 
   buildType = "ament_python";

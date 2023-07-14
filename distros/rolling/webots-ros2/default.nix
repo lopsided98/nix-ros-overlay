@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, builtin-interfaces, pythonPackages, rclpy, std-msgs, webots-ros2-control, webots-ros2-driver, webots-ros2-epuck, webots-ros2-importer, webots-ros2-mavic, webots-ros2-msgs, webots-ros2-tesla, webots-ros2-tests, webots-ros2-tiago, webots-ros2-turtlebot, webots-ros2-universal-robot }:
 buildRosPackage {
   pname = "ros-rolling-webots-ros2";
-  version = "2023.1.0-r1";
+  version = "2023.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/rolling/webots_ros2/2023.1.0-1.tar.gz";
-    name = "2023.1.0-1.tar.gz";
-    sha256 = "9e73981db8b44a2f1d0007047ca3a0412c00630c23f0387e4a3ebcf494cd0abc";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/rolling/webots_ros2/2023.1.1-1.tar.gz";
+    name = "2023.1.1-1.tar.gz";
+    sha256 = "189f8211d848cfeeb5b522eb7764b66e2c0738984ba17999614e0f3c33b09798";
   };
 
   buildType = "ament_python";

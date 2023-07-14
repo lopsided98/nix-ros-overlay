@@ -1320,6 +1320,10 @@ self: super: {
 
  picknik-ament-copyright = self.callPackage ./picknik-ament-copyright {};
 
+ picknik-reset-fault-controller = self.callPackage ./picknik-reset-fault-controller {};
+
+ picknik-twist-controller = self.callPackage ./picknik-twist-controller {};
+
  pilz-industrial-motion-planner = self.callPackage ./pilz-industrial-motion-planner {};
 
  pilz-industrial-motion-planner-testutils = self.callPackage ./pilz-industrial-motion-planner-testutils {};

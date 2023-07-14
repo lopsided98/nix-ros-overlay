@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, builtin-interfaces, geometry-msgs, pythonPackages, rclpy, sensor-msgs, std-msgs, tf2-msgs, tf2-py }:
 buildRosPackage {
   pname = "ros-iron-tf2-ros-py";
-  version = "0.31.3-r1";
+  version = "0.31.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/iron/tf2_ros_py/0.31.3-1.tar.gz";
-    name = "0.31.3-1.tar.gz";
-    sha256 = "47f809b46bc80d392445056fa520360fb61e1fa4c6fc2639b44e8e479a71a3b4";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/iron/tf2_ros_py/0.31.4-1.tar.gz";
+    name = "0.31.4-1.tar.gz";
+    sha256 = "cac17b483bdfa04e04d4fcca76663cec045b554a6be43174f2ec89295355ada3";
   };
 
   buildType = "ament_python";

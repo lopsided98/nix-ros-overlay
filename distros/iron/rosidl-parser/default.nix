@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python3Packages, pythonPackages, rosidl-adapter }:
 buildRosPackage {
   pname = "ros-iron-rosidl-parser";
-  version = "4.0.0-r2";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/iron/rosidl_parser/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "46d9a1e8089fbe8e1b07d27c7c258c059aa187d11c48761a6a66a7ca0b63931f";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/iron/rosidl_parser/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "dd2fed01ac8bb4f4b99c9e1cebb98ea0ecc624a3ec3894903a784356cf55c1e2";
   };
 
   buildType = "ament_cmake";

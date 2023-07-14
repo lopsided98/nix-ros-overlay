@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-core, ament-index-python, ament-lint-auto, ament-lint-common, python3, rosidl-cli, rosidl-generator-c, rosidl-generator-type-description, rosidl-parser, rosidl-pycommon, rosidl-runtime-cpp }:
 buildRosPackage {
   pname = "ros-iron-rosidl-generator-cpp";
-  version = "4.0.0-r2";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/iron/rosidl_generator_cpp/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "17d7860d55c7f3a7b62c78a85e02479d2d3eae21f9f49109c12160266e648427";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/iron/rosidl_generator_cpp/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "f997e396afb091a0425bc2842c1860d4607dd3a6497b1ae4403d44d1b5da1da4";
   };
 
   buildType = "ament_cmake";

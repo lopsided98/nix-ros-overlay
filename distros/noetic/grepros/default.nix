@@ -5,22 +5,22 @@
 { lib, buildRosPackage, fetchurl, catkin, genpy, python3Packages, rosbag, roslib, rospy, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-grepros";
-  version = "0.6.0-r2";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/suurjaak/grepros-release/archive/release/noetic/grepros/0.6.0-2.tar.gz";
-    name = "0.6.0-2.tar.gz";
-    sha256 = "94c1ce2bbb5206d82a4db272fdf69c9151991480d76f7f2ba8fc7c21738e875e";
+    url = "https://github.com/suurjaak/grepros-release/archive/release/noetic/grepros/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "59e3e47c6ac9a20a1bec9d3ad438669968949ded0de55cdea8663cc72ce9d472";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin ];
   checkInputs = [ rostest std-msgs ];
-  propagatedBuildInputs = [ genpy python3Packages.pyyaml rosbag roslib rospy ];
+  propagatedBuildInputs = [ genpy python3Packages.pyyaml python3Packages.six rosbag roslib rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''grep for ROS bag files and live topics'';
+    description = ''grep for ROS bag files and live topics: read, filter, export'';
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

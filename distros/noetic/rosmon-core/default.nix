@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catch-ros, catkin, cmake-modules, diagnostic-msgs, libyamlcpp, ncurses, python3, python3Packages, rosbash, roscpp, rosfmt, roslib, rosmon-msgs, rospack, rostest, std-msgs, tinyxml }:
 buildRosPackage {
   pname = "ros-noetic-rosmon-core";
-  version = "2.4.0-r1";
+  version = "2.5.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/xqms/rosmon-release/archive/release/noetic/rosmon_core/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "de8c15525cefb38d9727a49a66f71f2da3b4bf31de94bd7057d6a80ab5ec8806";
+    url = "https://github.com/xqms/rosmon-release/archive/release/noetic/rosmon_core/2.5.0-2.tar.gz";
+    name = "2.5.0-2.tar.gz";
+    sha256 = "b3bf928b65c486dc166ee27510dbdf079a9df8fb10986aa8340db7f952e43e21";
   };
 
   buildType = "catkin";
