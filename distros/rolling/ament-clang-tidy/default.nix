@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, clang, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-rolling-ament-clang-tidy";
-  version = "0.15.1-r1";
+  version = "0.15.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_clang_tidy/0.15.1-1.tar.gz";
-    name = "0.15.1-1.tar.gz";
-    sha256 = "978a3421fa9d3360977e2ba8e5f1a25d4935e112818ebe66939dbc4bd2a94da5";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_clang_tidy/0.15.2-1.tar.gz";
+    name = "0.15.2-1.tar.gz";
+    sha256 = "a25e9dcdf8a7debf5c175a55b990c5fbd382aa84edf11be587c8946a6ced1512";
   };
 
   buildType = "ament_python";

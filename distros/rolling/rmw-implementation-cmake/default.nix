@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-rmw-implementation-cmake";
-  version = "7.2.0-r1";
+  version = "7.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw-release/archive/release/rolling/rmw_implementation_cmake/7.2.0-1.tar.gz";
-    name = "7.2.0-1.tar.gz";
-    sha256 = "dfe25dca3ab95e7d1af14743334f6fa6cde940e600fc973ed0d129059010cc61";
+    url = "https://github.com/ros2-gbp/rmw-release/archive/release/rolling/rmw_implementation_cmake/7.2.1-1.tar.gz";
+    name = "7.2.1-1.tar.gz";
+    sha256 = "0e5281d339e1dbc69e3a179cc8eefabbdcdda0f1708bbe5bf95337b3b30f08fb";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, vision-msgs }:
 buildRosPackage {
   pname = "ros-rolling-webots-ros2-msgs";
-  version = "2023.1.0-r1";
+  version = "2023.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/rolling/webots_ros2_msgs/2023.1.0-1.tar.gz";
-    name = "2023.1.0-1.tar.gz";
-    sha256 = "24ebf0306cd5d731a93362fcc4128f2ee4207d360b392a9d701e95db5a96e16b";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/rolling/webots_ros2_msgs/2023.1.1-1.tar.gz";
+    name = "2023.1.1-1.tar.gz";
+    sha256 = "c196cc1beb50bebfa5db1dcea0d14963a2ea77342035d92276a564518aa1d83f";
   };
 
   buildType = "ament_cmake";

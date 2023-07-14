@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, git, zstd-vendor }:
 buildRosPackage {
   pname = "ros-iron-mcap-vendor";
-  version = "0.22.1-r1";
+  version = "0.22.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/mcap_vendor/0.22.1-1.tar.gz";
-    name = "0.22.1-1.tar.gz";
-    sha256 = "2130612d757ccb21133c2fa2aa2f1b4e88780650d1b905254ff8d1e43c9345a0";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/mcap_vendor/0.22.2-1.tar.gz";
+    name = "0.22.2-1.tar.gz";
+    sha256 = "126b51b296e3a11654a53477963bb171925fc8c87f989e9b2c96e28d2d74a465";
   };
 
   buildType = "ament_cmake";

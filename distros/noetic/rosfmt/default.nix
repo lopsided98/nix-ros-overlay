@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosconsole, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-rosfmt";
-  version = "7.0.0-r1";
+  version = "8.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/xqms/rosfmt-release/archive/release/noetic/rosfmt/7.0.0-1.tar.gz";
-    name = "7.0.0-1.tar.gz";
-    sha256 = "b2c2c4f2436a5a0215d932e2cc308cfa91dde43404cba0af8986624a907b1def";
+    url = "https://github.com/xqms/rosfmt-release/archive/release/noetic/rosfmt/8.0.0-1.tar.gz";
+    name = "8.0.0-1.tar.gz";
+    sha256 = "30bbda0ce08f4f729b6cb47524d1723ea0b7d9722ea9081377161009e575b4c5";
   };
 
   buildType = "catkin";

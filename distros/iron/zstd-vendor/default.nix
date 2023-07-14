@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, git, zstd }:
 buildRosPackage {
   pname = "ros-iron-zstd-vendor";
-  version = "0.22.1-r1";
+  version = "0.22.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/zstd_vendor/0.22.1-1.tar.gz";
-    name = "0.22.1-1.tar.gz";
-    sha256 = "fd764a9f09d43570284237eddf58912fc076f2efbfb05e881eb2ad18593eb973";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/zstd_vendor/0.22.2-1.tar.gz";
+    name = "0.22.2-1.tar.gz";
+    sha256 = "a61f4136f4c24cad0c1f3ec5d8c0f97fb150e7dc51141bf77133691a2bd6e3ad";
   };
 
   buildType = "ament_cmake";

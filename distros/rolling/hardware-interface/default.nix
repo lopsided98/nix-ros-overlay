@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, lifecycle-msgs, pluginlib, rclcpp-lifecycle, rcpputils, rcutils, ros2-control-test-assets, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-rolling-hardware-interface";
-  version = "3.15.0-r1";
+  version = "3.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/hardware_interface/3.15.0-1.tar.gz";
-    name = "3.15.0-1.tar.gz";
-    sha256 = "42c5fc09df98d3c37259d72fa1ce5aef0c90b2bfca6be9c55fd47381d818de23";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/hardware_interface/3.16.0-1.tar.gz";
+    name = "3.16.0-1.tar.gz";
+    sha256 = "160653b1eab04e7d6387e222565b2d63da21982141d6987ad85f590766ee5a50";
   };
 
   buildType = "ament_cmake";

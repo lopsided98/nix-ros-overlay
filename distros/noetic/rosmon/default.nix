@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosmon-core, rqt-rosmon }:
 buildRosPackage {
   pname = "ros-noetic-rosmon";
-  version = "2.4.0-r1";
+  version = "2.5.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/xqms/rosmon-release/archive/release/noetic/rosmon/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "22055a518407348cc4061d41a8fd9eaf35b15c279706187f4e6b7a3ebaabdc9c";
+    url = "https://github.com/xqms/rosmon-release/archive/release/noetic/rosmon/2.5.0-2.tar.gz";
+    name = "2.5.0-2.tar.gz";
+    sha256 = "bb4c3387d7d5a05cb27837d635782383cb9c83aa84a2bfc4f30162923c4fda10";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros2bag, rosbag2-compression, rosbag2-compression-zstd, rosbag2-cpp, rosbag2-py, rosbag2-storage, rosbag2-storage-default-plugins, rosbag2-test-common, rosbag2-tests, rosbag2-transport, shared-queues-vendor }:
 buildRosPackage {
   pname = "ros-iron-rosbag2";
-  version = "0.22.1-r1";
+  version = "0.22.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/rosbag2/0.22.1-1.tar.gz";
-    name = "0.22.1-1.tar.gz";
-    sha256 = "384c91a6428ccff1d0b0e444f71f75e227be49f51696c09d70126fde54cc4bb1";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/rosbag2/0.22.2-1.tar.gz";
+    name = "0.22.2-1.tar.gz";
+    sha256 = "01d9103f4698ec9b4fd5bfdb3bf9cc1d579bde4e626e108ce2ad80e2878ca043";
   };
 
   buildType = "ament_cmake";

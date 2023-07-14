@@ -2,21 +2,21 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, git, uncrustify }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, uncrustify }:
 buildRosPackage {
   pname = "ros-rolling-uncrustify-vendor";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/uncrustify_vendor-release/archive/release/rolling/uncrustify_vendor/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "82cbd497bb719740802a27fc79310c6260a0aba379a5874efef80c2bec78bb60";
+    url = "https://github.com/ros2-gbp/uncrustify_vendor-release/archive/release/rolling/uncrustify_vendor/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "2a24f7a54b84fa5bb0e6475088c1ba099e8c92e8b7b995bcec9616603b785038";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake git ];
+  buildInputs = [ ament-cmake ament-cmake-vendor-package ];
   propagatedBuildInputs = [ uncrustify ];
-  nativeBuildInputs = [ ament-cmake git ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package ];
 
   meta = {
     description = ''Wrapper around uncrustify, providing nothing but a dependency on uncrustify, on some systems.

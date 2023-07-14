@@ -1714,8 +1714,6 @@ self: super: {
 
  rviz-assimp-vendor = self.callPackage ./rviz-assimp-vendor {};
 
- rviz-common = self.callPackage ./rviz-common {};
-
  rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};

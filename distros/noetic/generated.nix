@@ -2862,6 +2862,10 @@ self: super: {
 
  rosbag = self.callPackage ./rosbag {};
 
+ rosbag-fancy = self.callPackage ./rosbag-fancy {};
+
+ rosbag-fancy-msgs = self.callPackage ./rosbag-fancy-msgs {};
+
  rosbag-migration-rule = self.callPackage ./rosbag-migration-rule {};
 
  rosbag-pandas = self.callPackage ./rosbag-pandas {};
@@ -3107,6 +3111,8 @@ self: super: {
  rqt-robot-plugins = self.callPackage ./rqt-robot-plugins {};
 
  rqt-robot-steering = self.callPackage ./rqt-robot-steering {};
+
+ rqt-rosbag-fancy = self.callPackage ./rqt-rosbag-fancy {};
 
  rqt-rosmon = self.callPackage ./rqt-rosmon {};
 

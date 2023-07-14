@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-iron-rosidl-typesupport-interface";
-  version = "4.0.0-r2";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/iron/rosidl_typesupport_interface/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "581efa018fcaf8ed22060b83687048be3563925d60d414d371bd74ce7e64e6b5";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/iron/rosidl_typesupport_interface/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "282cbac09b58e4c5b653f267a1bace335f906d6f4ee7b44b4ada5f4255122e1e";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pluginlib, qt5, roscpp, rosmon-msgs, rqt-gui, rqt-gui-cpp }:
 buildRosPackage {
   pname = "ros-noetic-rqt-rosmon";
-  version = "2.4.0-r1";
+  version = "2.5.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/xqms/rosmon-release/archive/release/noetic/rqt_rosmon/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "a396f55c22efecbad5499a7feae65489435d1f093c364a6c577fde1fb34d768f";
+    url = "https://github.com/xqms/rosmon-release/archive/release/noetic/rqt_rosmon/2.5.0-2.tar.gz";
+    name = "2.5.0-2.tar.gz";
+    sha256 = "bd616519f9e479b01f3815009a69f594683dd99198bbfe8ebeea4328e5579f64";
   };
 
   buildType = "catkin";
