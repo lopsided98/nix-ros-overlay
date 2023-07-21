@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, class-loader, compressed-depth-image-transport, compressed-image-transport, cras-cpp-common, cras-topic-tools, dynamic-reconfigure, image-transport, libjpeg_turbo, pluginlib, rosbag, roslint, sensor-msgs, theora-image-transport, topic-tools }:
 buildRosPackage {
   pname = "ros-noetic-image-transport-codecs";
-  version = "2.3.0-r2";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://gitlab.fel.cvut.cz/cras/ros-release/ros-utils/-/archive/release/noetic/image_transport_codecs/2.3.0-2/archive.tar.gz";
+    url = "https://gitlab.fel.cvut.cz/cras/ros-release/ros-utils/-/archive/release/noetic/image_transport_codecs/2.3.1-1/archive.tar.gz";
     name = "archive.tar.gz";
-    sha256 = "df7d5f39149f2cfecc67ff2dc5b89ba18962b85efd872b84209da7eb52978683";
+    sha256 = "e115764e2e571a71aaa1d9146f4c0d795705a701583c952af77e129e2a3fbad9";
   };
 
   buildType = "catkin";

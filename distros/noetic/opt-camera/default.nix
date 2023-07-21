@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-calibration-parsers, catkin, compressed-image-transport, cv-bridge, dynamic-reconfigure, image-proc, roslang, rospack, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-opt-camera";
-  version = "2.1.26-r1";
+  version = "2.1.27-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/opt_camera/2.1.26-1.tar.gz";
-    name = "2.1.26-1.tar.gz";
-    sha256 = "359407843f822ea792aaad63bf30a3b05ecb59d1c9933cbdbf9aa76f6d04f730";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/opt_camera/2.1.27-1.tar.gz";
+    name = "2.1.27-1.tar.gz";
+    sha256 = "e38bb0ef9947847b8ff040dc77e3b109534e7598e444813b67163d662e26c935";
   };
 
   buildType = "catkin";

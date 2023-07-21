@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-humble-ros2lifecycle-test-fixtures";
-  version = "0.18.6-r1";
+  version = "0.18.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/humble/ros2lifecycle_test_fixtures/0.18.6-1.tar.gz";
-    name = "0.18.6-1.tar.gz";
-    sha256 = "eb05d22a94623293f4511c65d919e175562b317f73aa4a03f753f3bc4761169e";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/humble/ros2lifecycle_test_fixtures/0.18.6-2.tar.gz";
+    name = "0.18.6-2.tar.gz";
+    sha256 = "9d0f397f093b53101ccbebb706347ec9dcd833b76e081651747d7007ca207c6e";
   };
 
   buildType = "ament_cmake";

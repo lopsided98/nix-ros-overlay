@@ -470,6 +470,8 @@ self: super: {
 
  common-tutorials = self.callPackage ./common-tutorials {};
 
+ compass-msgs = self.callPackage ./compass-msgs {};
+
  compressed-depth-image-transport = self.callPackage ./compressed-depth-image-transport {};
 
  compressed-image-transport = self.callPackage ./compressed-image-transport {};
@@ -989,8 +991,6 @@ self: super: {
  flatland-server = self.callPackage ./flatland-server {};
 
  flatland-viz = self.callPackage ./flatland-viz {};
-
- flexbe-app = self.callPackage ./flexbe-app {};
 
  flexbe-behavior-engine = self.callPackage ./flexbe-behavior-engine {};
 
@@ -1740,6 +1740,8 @@ self: super: {
 
  magical-ros2-conversion-tool = self.callPackage ./magical-ros2-conversion-tool {};
 
+ magnetometer-compass = self.callPackage ./magnetometer-compass {};
+
  map-laser = self.callPackage ./map-laser {};
 
  map-msgs = self.callPackage ./map-msgs {};
@@ -2281,6 +2283,12 @@ self: super: {
  paho-mqtt-c = self.callPackage ./paho-mqtt-c {};
 
  paho-mqtt-cpp = self.callPackage ./paho-mqtt-cpp {};
+
+ pal-carbon-collector = self.callPackage ./pal-carbon-collector {};
+
+ pal-statistics = self.callPackage ./pal-statistics {};
+
+ pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
 
  panda-moveit-config = self.callPackage ./panda-moveit-config {};
 

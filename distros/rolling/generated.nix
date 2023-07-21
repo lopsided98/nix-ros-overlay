@@ -602,6 +602,10 @@ self: super: {
 
  gtsam = self.callPackage ./gtsam {};
 
+ gz-ros2-control-demos = self.callPackage ./gz-ros2-control-demos {};
+
+ gz-ros2-control-tests = self.callPackage ./gz-ros2-control-tests {};
+
  hardware-interface = self.callPackage ./hardware-interface {};
 
  hash-library-vendor = self.callPackage ./hash-library-vendor {};
@@ -621,8 +625,6 @@ self: super: {
  iceoryx-posh = self.callPackage ./iceoryx-posh {};
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
-
- ign-ros2-control-demos = self.callPackage ./ign-ros2-control-demos {};
 
  ignition-cmake2-vendor = self.callPackage ./ignition-cmake2-vendor {};
 
@@ -1010,6 +1012,10 @@ self: super: {
 
  ouxt-lint-common = self.callPackage ./ouxt-lint-common {};
 
+ pal-statistics = self.callPackage ./pal-statistics {};
+
+ pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
+
  parameter-traits = self.callPackage ./parameter-traits {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
@@ -1061,6 +1067,10 @@ self: super: {
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
  picknik-ament-copyright = self.callPackage ./picknik-ament-copyright {};
+
+ picknik-reset-fault-controller = self.callPackage ./picknik-reset-fault-controller {};
+
+ picknik-twist-controller = self.callPackage ./picknik-twist-controller {};
 
  pilz-industrial-motion-planner = self.callPackage ./pilz-industrial-motion-planner {};
 
@@ -1329,6 +1339,10 @@ self: super: {
  robot-localization = self.callPackage ./robot-localization {};
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
+
+ robotiq-controllers = self.callPackage ./robotiq-controllers {};
+
+ robotiq-description = self.callPackage ./robotiq-description {};
 
  ros2-control = self.callPackage ./ros2-control {};
 

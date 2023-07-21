@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-cmake-xmllint, ament-index-cpp, ament-lint-auto, geometry-msgs, ignition-math6-vendor, image-transport, interactive-markers, laser-geometry, map-msgs, nav-msgs, pluginlib, qt5, rclcpp, resource-retriever, rviz-common, rviz-ogre-vendor, rviz-rendering, rviz-rendering-tests, rviz-visual-testing-framework, tf2, tf2-geometry-msgs, tf2-ros, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-rviz-default-plugins";
-  version = "11.2.5-r1";
+  version = "11.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/humble/rviz_default_plugins/11.2.5-1.tar.gz";
-    name = "11.2.5-1.tar.gz";
-    sha256 = "0dddae01bd7e0560544bac307785ba212fdfc907fac80b2126b7c3249a226f23";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/humble/rviz_default_plugins/11.2.6-1.tar.gz";
+    name = "11.2.6-1.tar.gz";
+    sha256 = "79c23d24c9a09be1580f0341ae1f112f52eb9c952941e186d942b073b5362cfb";
   };
 
   buildType = "ament_cmake";

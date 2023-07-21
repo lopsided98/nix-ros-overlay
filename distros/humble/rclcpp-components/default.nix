@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-google-benchmark, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, class-loader, composition-interfaces, launch-testing, rclcpp, rcpputils, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-rclcpp-components";
-  version = "16.0.4-r2";
+  version = "16.0.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/humble/rclcpp_components/16.0.4-2.tar.gz";
-    name = "16.0.4-2.tar.gz";
-    sha256 = "8c77328b489117a13782a8a1f094aa9ab42b771b9efd6d62d2a13f146d8b06e6";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/humble/rclcpp_components/16.0.5-2.tar.gz";
+    name = "16.0.5-2.tar.gz";
+    sha256 = "390f0062449155255c14cb3a65b3511fe97b7f516087c0ecee621e03fe31b6ff";
   };
 
   buildType = "ament_cmake";

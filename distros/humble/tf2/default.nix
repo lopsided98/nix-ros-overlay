@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-cmake-xmllint, builtin-interfaces, console-bridge, console-bridge-vendor, geometry-msgs, rcutils, rosidl-runtime-cpp }:
 buildRosPackage {
   pname = "ros-humble-tf2";
-  version = "0.25.2-r1";
+  version = "0.25.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2/0.25.2-1.tar.gz";
-    name = "0.25.2-1.tar.gz";
-    sha256 = "6179ccf7d00247551c8869eae8f158b88465c39cbc5d3fce112e2463ed5bb5a2";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2/0.25.3-1.tar.gz";
+    name = "0.25.3-1.tar.gz";
+    sha256 = "a97490b440b12cc8681b79ba03d5db8063e129994505e038b93d64128c94cccd";
   };
 
   buildType = "ament_cmake";

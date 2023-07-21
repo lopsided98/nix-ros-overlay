@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python }:
 buildRosPackage {
   pname = "ros-iron-smach";
-  version = "3.0.2-r1";
+  version = "3.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/executive_smach-release/archive/release/iron/smach/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "2ac4779cea397c8c461519e82f44b270fe15109b7cbc5147626aa399f14d0e4b";
+    url = "https://github.com/ros2-gbp/executive_smach-release/archive/release/iron/smach/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
+    sha256 = "8c3b247d97e14a6fe7b32cc3dcc5025783c37c0b39c4f437470ab23df50fb6ea";
   };
 
   buildType = "ament_python";

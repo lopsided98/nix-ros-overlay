@@ -312,6 +312,8 @@ self: super: {
 
  clearpath-msgs = self.callPackage ./clearpath-msgs {};
 
+ clearpath-nav2-demos = self.callPackage ./clearpath-nav2-demos {};
+
  clearpath-platform = self.callPackage ./clearpath-platform {};
 
  clearpath-platform-description = self.callPackage ./clearpath-platform-description {};
@@ -824,9 +826,21 @@ self: super: {
 
  kinematics-interface-kdl = self.callPackage ./kinematics-interface-kdl {};
 
+ kinova-gen3-6dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-6dof-robotiq-2f-85-moveit-config {};
+
+ kinova-gen3-7dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-7dof-robotiq-2f-85-moveit-config {};
+
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
 
  kobuki-velocity-smoother = self.callPackage ./kobuki-velocity-smoother {};
+
+ kortex-api = self.callPackage ./kortex-api {};
+
+ kortex-bringup = self.callPackage ./kortex-bringup {};
+
+ kortex-description = self.callPackage ./kortex-description {};
+
+ kortex-driver = self.callPackage ./kortex-driver {};
 
  lanelet2 = self.callPackage ./lanelet2 {};
 
@@ -1660,6 +1674,10 @@ self: super: {
 
  robot-upstart = self.callPackage ./robot-upstart {};
 
+ robotiq-controllers = self.callPackage ./robotiq-controllers {};
+
+ robotiq-description = self.callPackage ./robotiq-description {};
+
  robotraconteur = self.callPackage ./robotraconteur {};
 
  ros2-control = self.callPackage ./ros2-control {};
@@ -1953,8 +1971,6 @@ self: super: {
  rviz-2d-overlay-plugins = self.callPackage ./rviz-2d-overlay-plugins {};
 
  rviz-assimp-vendor = self.callPackage ./rviz-assimp-vendor {};
-
- rviz-common = self.callPackage ./rviz-common {};
 
  rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, mk, python3Packages, rosboost-cfg, roslib, rospack, subversion }:
 buildRosPackage {
   pname = "ros-noetic-libsiftfast";
-  version = "2.1.26-r1";
+  version = "2.1.27-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/libsiftfast/2.1.26-1.tar.gz";
-    name = "2.1.26-1.tar.gz";
-    sha256 = "22cdd64c7377bb355b22118fc76f59e2c2f9222b4014a145c0a864e6ee51e42c";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/libsiftfast/2.1.27-1.tar.gz";
+    name = "2.1.27-1.tar.gz";
+    sha256 = "c093d3c5baa03c1b9ba5180dbfa0da672d44c1ffe3d84ce1e037b0e0bc452220";
   };
 
   buildType = "catkin";
