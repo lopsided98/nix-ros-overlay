@@ -144,6 +144,7 @@ in {
   python38 = pythonOverridesFor super.python38;
   python39 = pythonOverridesFor super.python39;
   python310 = pythonOverridesFor super.python310;
+  python311 = pythonOverridesFor super.python311;
 
   sdformat_6 = self.callPackage ./sdformat/6.nix { };
   sdformat_9 = self.callPackage ./sdformat/9.nix { };
