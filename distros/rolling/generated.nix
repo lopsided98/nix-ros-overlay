@@ -562,6 +562,8 @@ self: super: {
 
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
 
+ generate-parameter-module-example = self.callPackage ./generate-parameter-module-example {};
+
  geodesy = self.callPackage ./geodesy {};
 
  geographic-info = self.callPackage ./geographic-info {};
@@ -602,6 +604,8 @@ self: super: {
 
  gtsam = self.callPackage ./gtsam {};
 
+ gz-ros2-control-demos = self.callPackage ./gz-ros2-control-demos {};
+
  hardware-interface = self.callPackage ./hardware-interface {};
 
  hash-library-vendor = self.callPackage ./hash-library-vendor {};
@@ -621,8 +625,6 @@ self: super: {
  iceoryx-posh = self.callPackage ./iceoryx-posh {};
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
-
- ign-ros2-control-demos = self.callPackage ./ign-ros2-control-demos {};
 
  ignition-cmake2-vendor = self.callPackage ./ignition-cmake2-vendor {};
 
@@ -694,11 +696,23 @@ self: super: {
 
  kinematics-interface-kdl = self.callPackage ./kinematics-interface-kdl {};
 
+ kinova-gen3-6dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-6dof-robotiq-2f-85-moveit-config {};
+
+ kinova-gen3-7dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-7dof-robotiq-2f-85-moveit-config {};
+
  kobuki-core = self.callPackage ./kobuki-core {};
 
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
 
  kobuki-velocity-smoother = self.callPackage ./kobuki-velocity-smoother {};
+
+ kortex-api = self.callPackage ./kortex-api {};
+
+ kortex-bringup = self.callPackage ./kortex-bringup {};
+
+ kortex-description = self.callPackage ./kortex-description {};
+
+ kortex-driver = self.callPackage ./kortex-driver {};
 
  lanelet2 = self.callPackage ./lanelet2 {};
 
@@ -1010,6 +1024,10 @@ self: super: {
 
  ouxt-lint-common = self.callPackage ./ouxt-lint-common {};
 
+ pal-statistics = self.callPackage ./pal-statistics {};
+
+ pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
+
  parameter-traits = self.callPackage ./parameter-traits {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
@@ -1061,6 +1079,10 @@ self: super: {
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
  picknik-ament-copyright = self.callPackage ./picknik-ament-copyright {};
+
+ picknik-reset-fault-controller = self.callPackage ./picknik-reset-fault-controller {};
+
+ picknik-twist-controller = self.callPackage ./picknik-twist-controller {};
 
  pilz-industrial-motion-planner = self.callPackage ./pilz-industrial-motion-planner {};
 
@@ -1329,6 +1351,10 @@ self: super: {
  robot-localization = self.callPackage ./robot-localization {};
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
+
+ robotiq-controllers = self.callPackage ./robotiq-controllers {};
+
+ robotiq-description = self.callPackage ./robotiq-description {};
 
  ros2-control = self.callPackage ./ros2-control {};
 

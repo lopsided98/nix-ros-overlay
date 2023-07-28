@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages, rospy }:
 buildRosPackage {
   pname = "ros-noetic-chaplus-ros";
-  version = "2.1.26-r1";
+  version = "2.1.28-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/chaplus_ros/2.1.26-1.tar.gz";
-    name = "2.1.26-1.tar.gz";
-    sha256 = "ae79ee80c96bbf0e602474b0cb400a1992e7f9507e101daa4545c24fb228d5ef";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/chaplus_ros/2.1.28-1.tar.gz";
+    name = "2.1.28-1.tar.gz";
+    sha256 = "23c39faa33cde64e39d1ae256f5589d4b26416a35d459f32d342ef1034fb346a";
   };
 
   buildType = "catkin";

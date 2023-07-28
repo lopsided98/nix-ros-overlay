@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, fmt, rclcpp, rsl, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-rolling-parameter-traits";
-  version = "0.3.3-r1";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/rolling/parameter_traits/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "c9195aa4ff4ca6c531b174a5aea9751ba50cd8c2bbb7557c64b190644c234a78";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/rolling/parameter_traits/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "2d6b184285946811287bc4b42a24934af09d82aa35a273f5fdd1eba459dbfe82";
   };
 
   buildType = "ament_cmake";

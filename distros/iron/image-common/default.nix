@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, camera-calibration-parsers, camera-info-manager, image-transport }:
 buildRosPackage {
   pname = "ros-iron-image-common";
-  version = "4.2.0-r3";
+  version = "4.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/iron/image_common/4.2.0-3.tar.gz";
-    name = "4.2.0-3.tar.gz";
-    sha256 = "1c4f8fe34fabde1189e03e1a4eb405467ad13947be204fa7aed20c3565bf5f5f";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/iron/image_common/4.2.1-1.tar.gz";
+    name = "4.2.1-1.tar.gz";
+    sha256 = "887c6d4339794cca465578a1f7984f64d6999b96c99bff92d62613112e43ea99";
   };
 
   buildType = "ament_cmake";

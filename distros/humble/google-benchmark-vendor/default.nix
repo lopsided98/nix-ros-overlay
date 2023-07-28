@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gbenchmark, git }:
 buildRosPackage {
   pname = "ros-humble-google-benchmark-vendor";
-  version = "0.1.1-r2";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/google_benchmark_vendor-release/archive/release/humble/google_benchmark_vendor/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "ebd71b641bbcec01396c4e495525eb8c2ccd92580fe6ce2a14d82dc50d714c4e";
+    url = "https://github.com/ros2-gbp/google_benchmark_vendor-release/archive/release/humble/google_benchmark_vendor/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "62136f74690014cc2411088bfc493c78693a5641a49dd898222d35e9ce0e46b0";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, git, message-generation, message-runtime, mk, rospy, std-msgs, unzip }:
 buildRosPackage {
   pname = "ros-noetic-bayesian-belief-networks";
-  version = "2.1.26-r1";
+  version = "2.1.28-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/bayesian_belief_networks/2.1.26-1.tar.gz";
-    name = "2.1.26-1.tar.gz";
-    sha256 = "2fe668ade379094723382cf451a6c2115ad22fea43586006cee1c0a9d3332f36";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/bayesian_belief_networks/2.1.28-1.tar.gz";
+    name = "2.1.28-1.tar.gz";
+    sha256 = "87a189fc5812343b7baffd577ab14f1503669f02ef6850fa90cf0de7c857b920";
   };
 
   buildType = "catkin";

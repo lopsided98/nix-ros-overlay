@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lms1xx, realsense2-description, urdf, velodyne-description, xacro }:
 buildRosPackage {
   pname = "ros-noetic-cpr-onav-description";
-  version = "0.1.2-r1";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/cpr_onav_description-release/archive/release/noetic/cpr_onav_description/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "6ae1262faa317d0f8dce5ed0ea757d856f9b1b8db57876f88e04a8c9fdf077f6";
+    url = "https://github.com/clearpath-gbp/cpr_onav_description-release/archive/release/noetic/cpr_onav_description/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "20a9fa74fde7304c2b8a28a94e02f8e7b9ef5fc908b4864901e9a8e5e4f5a0d6";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-msgs, ament-copyright, builtin-interfaces, python3Packages, pythonPackages, rclpy, webots-ros2-driver }:
 buildRosPackage {
   pname = "ros-humble-webots-ros2-tesla";
-  version = "2023.1.1-r1";
+  version = "2023.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/humble/webots_ros2_tesla/2023.1.1-1.tar.gz";
-    name = "2023.1.1-1.tar.gz";
-    sha256 = "a04f2aa3aff71a8bc91a85cfd4e86e1fb9c9c5477a0e7e9c909771b26876f3bc";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/humble/webots_ros2_tesla/2023.1.1-2.tar.gz";
+    name = "2023.1.1-2.tar.gz";
+    sha256 = "537cec542f2f73343589075eb530dff61c9330932b1559c2b8cc1129b7f34b2b";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-qb-device-msgs";
-  version = "3.0.5-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/noetic/qb_device_msgs/3.0.5-1.tar.gz";
-    name = "3.0.5-1.tar.gz";
-    sha256 = "d70728e4aa968557dfeaf830ac8fc7772388600368e5b78dbc46c386f1a7c5ab";
+    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/noetic/qb_device_msgs/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "30130f6acc4eed3ec2b039d3da21b6300fa1b339f7f02f58f79cb2e479399257";
   };
 
   buildType = "catkin";

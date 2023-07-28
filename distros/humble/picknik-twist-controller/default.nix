@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, controller-interface, example-interfaces, geometry-msgs, rclcpp, realtime-tools }:
 buildRosPackage {
   pname = "ros-humble-picknik-twist-controller";
-  version = "0.0.1-r1";
+  version = "0.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/picknik_controllers-release/archive/release/humble/picknik_twist_controller/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "88fe65b60536cde66480fc75cd915ed3704803715e224aa951fd32425a4ecf91";
+    url = "https://github.com/ros2-gbp/picknik_controllers-release/archive/release/humble/picknik_twist_controller/0.0.3-1.tar.gz";
+    name = "0.0.3-1.tar.gz";
+    sha256 = "aa5861298283a04c10af410eff459b4f67c40cf15c20bc5af321e99f2ade8c5d";
   };
 
   buildType = "ament_cmake";

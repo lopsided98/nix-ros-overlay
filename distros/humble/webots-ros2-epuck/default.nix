@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, builtin-interfaces, controller-manager, diff-drive-controller, geometry-msgs, joint-state-broadcaster, nav-msgs, pythonPackages, rclpy, robot-state-publisher, rviz2, sensor-msgs, std-msgs, tf2-ros, webots-ros2-control, webots-ros2-driver, webots-ros2-msgs }:
 buildRosPackage {
   pname = "ros-humble-webots-ros2-epuck";
-  version = "2023.1.1-r1";
+  version = "2023.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/humble/webots_ros2_epuck/2023.1.1-1.tar.gz";
-    name = "2023.1.1-1.tar.gz";
-    sha256 = "d5f0aa5fce03c7170e5eb36490804335b8b7607dc028dd60ebd80393fc98ad25";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/humble/webots_ros2_epuck/2023.1.1-2.tar.gz";
+    name = "2023.1.1-2.tar.gz";
+    sha256 = "32ea34d91bbec806e5bcadcad021d15b973e22e21b299b38f76cf5eec26f707d";
   };
 
   buildType = "ament_python";

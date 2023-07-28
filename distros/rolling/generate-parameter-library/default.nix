@@ -2,22 +2,22 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, fmt, generate-parameter-library-py, parameter-traits, rclcpp, rclcpp-lifecycle, rsl, tcb-span, tl-expected }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, fmt, generate-parameter-library-py, parameter-traits, rclcpp, rclcpp-lifecycle, rclpy, rsl, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-rolling-generate-parameter-library";
-  version = "0.3.3-r1";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/rolling/generate_parameter_library/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "37cb932f698be51b17efc4ca81676c8a560b46db6d7885a0cc52c35a9c9655bb";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/rolling/generate_parameter_library/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "d85ff973da80725e15e432f31aa55126fd39b29db62e942e7e0e3e579137d578";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
+  buildInputs = [ ament-cmake ament-cmake-python ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ fmt generate-parameter-library-py parameter-traits rclcpp rclcpp-lifecycle rsl tcb-span tl-expected ];
-  nativeBuildInputs = [ ament-cmake generate-parameter-library-py ];
+  propagatedBuildInputs = [ fmt generate-parameter-library-py parameter-traits rclcpp rclcpp-lifecycle rclpy rsl tcb-span tl-expected ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-python generate-parameter-library-py ];
 
   meta = {
     description = ''CMake to generate ROS parameter library.'';

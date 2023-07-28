@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dingo-control, dingo-description, gazebo-plugins, gazebo-ros, gazebo-ros-control, hector-gazebo-plugins, ridgeback-gazebo-plugins, roslaunch }:
 buildRosPackage {
   pname = "ros-noetic-dingo-gazebo";
-  version = "0.1.2-r1";
+  version = "0.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/dingo_simulator-release/archive/release/noetic/dingo_gazebo/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "b63a571d75030a17ee122d792496aabb629ebdd2466afea7273238995857d19d";
+    url = "https://github.com/clearpath-gbp/dingo_simulator-release/archive/release/noetic/dingo_gazebo/0.1.2-2.tar.gz";
+    name = "0.1.2-2.tar.gz";
+    sha256 = "cf3dfd02314f6ea170a6280d44f7b228f440911cdc0589d6f9a3e2275de78f7e";
   };
 
   buildType = "catkin";

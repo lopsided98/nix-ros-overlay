@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-qb-move-description";
-  version = "2.2.2-r1";
+  version = "3.0.3-r2";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbmove-ros-release/get/release/noetic/qb_move_description/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "5e973f773b0b97c1a05d2e968c5a59adc3c6b984a94062dd9a66464746f580db";
+    url = "https://bitbucket.org/qbrobotics/qbmove-ros-release/get/release/noetic/qb_move_description/3.0.3-2.tar.gz";
+    name = "3.0.3-2.tar.gz";
+    sha256 = "df7cca13c9ed38c67c788529d82208b353f32dcfc5017c9a11c77efe61039b97";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cacert, catkin, git, mk, openssl, rosboost-cfg, rosbuild, unzip, zlib }:
 buildRosPackage {
   pname = "ros-noetic-assimp-devel";
-  version = "2.1.26-r1";
+  version = "2.1.28-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/assimp_devel/2.1.26-1.tar.gz";
-    name = "2.1.26-1.tar.gz";
-    sha256 = "e8e1d96cbd67690f2d08c69cc97bb158f37a5502d2db01d0b19d524ba57a89d3";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/assimp_devel/2.1.28-1.tar.gz";
+    name = "2.1.28-1.tar.gz";
+    sha256 = "37b99395920abb52017659d1ff642d22274e8b2b38c4b1e3706d6cc42a51b54e";
   };
 
   buildType = "catkin";

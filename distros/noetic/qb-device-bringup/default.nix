@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-qb-device-bringup";
-  version = "3.0.5-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/noetic/qb_device_bringup/3.0.5-1.tar.gz";
-    name = "3.0.5-1.tar.gz";
-    sha256 = "db41bec0a226ffa8bb21c6c980940a0f80aa10992c37aee0e05fd573ce6629fe";
+    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/noetic/qb_device_bringup/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "a7672d3dc03525ba4644365a97b9ec2a71885affddaf3523c7cd43f353aa5090";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, pythonPackages }:
 buildRosPackage {
   pname = "ros-humble-robot-upstart";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/robot_upstart-release/archive/release/humble/robot_upstart/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "310d5e60443ca37dce66b7240c80bd21ddd1e29ba8479b88468c7d64474432e9";
+    url = "https://github.com/clearpath-gbp/robot_upstart-release/archive/release/humble/robot_upstart/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "69ed49909e2d2ef215129252b073e8f563b4e2d41f04e80db9eff51dcc987df4";
   };
 
   buildType = "ament_python";

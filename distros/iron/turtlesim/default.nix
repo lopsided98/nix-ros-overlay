@@ -8,9 +8,9 @@ buildRosPackage {
   version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_tutorials-release/archive/release/rolling/turtlesim/1.6.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/ros_tutorials-release/archive/release/iron/turtlesim/1.6.1-1.tar.gz";
     name = "1.6.1-1.tar.gz";
-    sha256 = "4790460ab3745e6f64057c0a1fc334348d7b55ed9905cb36a4143a177e1ea73a";
+    sha256 = "96163d1ee724c4326d699e44b4603b7d292e77fbe0e40133dcbb17a0ccdd6f3e";
   };
 
   buildType = "ament_cmake";
