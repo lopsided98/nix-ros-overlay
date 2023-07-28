@@ -2,20 +2,20 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, catkin-virtualenv, message-generation, message-runtime, rospy, rostest, std-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, catkin-virtualenv, message-generation, message-runtime, roslaunch, rospy, rostest }:
 buildRosPackage {
   pname = "ros-noetic-gdrive-ros";
-  version = "2.1.26-r1";
+  version = "2.1.28-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/gdrive_ros/2.1.26-1.tar.gz";
-    name = "2.1.26-1.tar.gz";
-    sha256 = "aeb66f26a0526ef1f136b938b1f2c8914e7052230f962d31ff814dda012a851c";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/gdrive_ros/2.1.28-1.tar.gz";
+    name = "2.1.28-1.tar.gz";
+    sha256 = "9d7a30004e5b0a7ea433034bba7458972fb4abd33c1eceec94e2399ae4b47665";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin catkin-virtualenv message-generation std-msgs ];
-  checkInputs = [ rostest ];
+  buildInputs = [ catkin catkin-virtualenv message-generation ];
+  checkInputs = [ roslaunch rostest ];
   propagatedBuildInputs = [ message-runtime rospy ];
   nativeBuildInputs = [ catkin ];
 

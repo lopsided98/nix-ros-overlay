@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-humble-pal-navigation-cfg-params";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_navigation_cfg_public-release/archive/release/humble/pal_navigation_cfg_params/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "daa09954ede58fa13c8c2466d91589bef33242d81f1d41fef82cb83346043c14";
+    url = "https://github.com/pal-gbp/pal_navigation_cfg_public-release/archive/release/humble/pal_navigation_cfg_params/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "df6fa4e7e7b79f3c3a4c3ac39e22a2a9ffb0c4a1ab1f2afc6ffb13324b5c06ad";
   };
 
   buildType = "ament_cmake";

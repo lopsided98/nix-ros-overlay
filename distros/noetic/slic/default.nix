@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cacert, cmake, cmake-modules, git, opencv, openssl }:
 buildRosPackage {
   pname = "ros-noetic-slic";
-  version = "2.1.26-r1";
+  version = "2.1.28-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/slic/2.1.26-1.tar.gz";
-    name = "2.1.26-1.tar.gz";
-    sha256 = "a1e759834fd52662e76d417bc9439887133f0641bac02cde0909e9af740bb15c";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/slic/2.1.28-1.tar.gz";
+    name = "2.1.28-1.tar.gz";
+    sha256 = "6b19a73df1d00ff17ad33119db6fafd6d3df4ca0a1dda42fdbf7d0a2bd323364";
   };
 
   buildType = "cmake";

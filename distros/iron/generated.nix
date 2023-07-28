@@ -556,6 +556,8 @@ self: super: {
 
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
 
+ generate-parameter-module-example = self.callPackage ./generate-parameter-module-example {};
+
  geodesy = self.callPackage ./geodesy {};
 
  geographic-info = self.callPackage ./geographic-info {};
@@ -626,6 +628,8 @@ self: super: {
 
  gtsam = self.callPackage ./gtsam {};
 
+ gz-ros2-control-demos = self.callPackage ./gz-ros2-control-demos {};
+
  hardware-interface = self.callPackage ./hardware-interface {};
 
  hash-library-vendor = self.callPackage ./hash-library-vendor {};
@@ -643,8 +647,6 @@ self: super: {
  iceoryx-posh = self.callPackage ./iceoryx-posh {};
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
-
- ign-ros2-control-demos = self.callPackage ./ign-ros2-control-demos {};
 
  ignition-cmake2-vendor = self.callPackage ./ignition-cmake2-vendor {};
 
@@ -714,11 +716,23 @@ self: super: {
 
  kinematics-interface-kdl = self.callPackage ./kinematics-interface-kdl {};
 
+ kinova-gen3-6dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-6dof-robotiq-2f-85-moveit-config {};
+
+ kinova-gen3-7dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-7dof-robotiq-2f-85-moveit-config {};
+
  kobuki-core = self.callPackage ./kobuki-core {};
 
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
 
  kobuki-velocity-smoother = self.callPackage ./kobuki-velocity-smoother {};
+
+ kortex-api = self.callPackage ./kortex-api {};
+
+ kortex-bringup = self.callPackage ./kortex-bringup {};
+
+ kortex-description = self.callPackage ./kortex-description {};
+
+ kortex-driver = self.callPackage ./kortex-driver {};
 
  lanelet2 = self.callPackage ./lanelet2 {};
 
@@ -1152,11 +1166,43 @@ self: super: {
 
  picknik-ament-copyright = self.callPackage ./picknik-ament-copyright {};
 
+ picknik-reset-fault-controller = self.callPackage ./picknik-reset-fault-controller {};
+
+ picknik-twist-controller = self.callPackage ./picknik-twist-controller {};
+
  pilz-industrial-motion-planner = self.callPackage ./pilz-industrial-motion-planner {};
 
  pilz-industrial-motion-planner-testutils = self.callPackage ./pilz-industrial-motion-planner-testutils {};
 
  pinocchio = self.callPackage ./pinocchio {};
+
+ plansys2-bringup = self.callPackage ./plansys2-bringup {};
+
+ plansys2-bt-actions = self.callPackage ./plansys2-bt-actions {};
+
+ plansys2-core = self.callPackage ./plansys2-core {};
+
+ plansys2-domain-expert = self.callPackage ./plansys2-domain-expert {};
+
+ plansys2-executor = self.callPackage ./plansys2-executor {};
+
+ plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
+
+ plansys2-msgs = self.callPackage ./plansys2-msgs {};
+
+ plansys2-pddl-parser = self.callPackage ./plansys2-pddl-parser {};
+
+ plansys2-planner = self.callPackage ./plansys2-planner {};
+
+ plansys2-popf-plan-solver = self.callPackage ./plansys2-popf-plan-solver {};
+
+ plansys2-problem-expert = self.callPackage ./plansys2-problem-expert {};
+
+ plansys2-terminal = self.callPackage ./plansys2-terminal {};
+
+ plansys2-tests = self.callPackage ./plansys2-tests {};
+
+ plansys2-tools = self.callPackage ./plansys2-tools {};
 
  plotjuggler = self.callPackage ./plotjuggler {};
 
@@ -1177,6 +1223,8 @@ self: super: {
  polygon-rviz-plugins = self.callPackage ./polygon-rviz-plugins {};
 
  polygon-utils = self.callPackage ./polygon-utils {};
+
+ popf = self.callPackage ./popf {};
 
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
@@ -1427,6 +1475,10 @@ self: super: {
  robot-localization = self.callPackage ./robot-localization {};
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
+
+ robotiq-controllers = self.callPackage ./robotiq-controllers {};
+
+ robotiq-description = self.callPackage ./robotiq-description {};
 
  ros2-control = self.callPackage ./ros2-control {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bison, cacert, catkin, flex, gawk, python3, rostest, time }:
 buildRosPackage {
   pname = "ros-noetic-downward";
-  version = "2.1.26-r1";
+  version = "2.1.28-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/downward/2.1.26-1.tar.gz";
-    name = "2.1.26-1.tar.gz";
-    sha256 = "43648e97ad5f6998d75ad3f1bfe3769c943944a910dea8e8bd94c5718bf61e6a";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/downward/2.1.28-1.tar.gz";
+    name = "2.1.28-1.tar.gz";
+    sha256 = "2257bbcc0cef433aeeba2ba8c257d308005ea91a1dd432eda664794de6de5e1d";
   };
 
   buildType = "catkin";

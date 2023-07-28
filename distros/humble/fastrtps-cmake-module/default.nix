@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-humble-fastrtps-cmake-module";
-  version = "2.2.0-r2";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/humble/fastrtps_cmake_module/2.2.0-2.tar.gz";
-    name = "2.2.0-2.tar.gz";
-    sha256 = "67b27cf23415494ed271615dc43e0b46871e80f6ca9ed69e341d6117cfe6abf5";
+    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/humble/fastrtps_cmake_module/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "2b2296e4c4762ff6e9e42241affe7489e7893fde75d4277591b28bc47153fbd0";
   };
 
   buildType = "ament_cmake";

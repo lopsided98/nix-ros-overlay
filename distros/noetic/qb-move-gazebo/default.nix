@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, gazebo-ros-control, qb-device-gazebo, qb-device-hardware-interface, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-qb-move-gazebo";
-  version = "2.2.2-r1";
+  version = "3.0.3-r2";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbmove-ros-release/get/release/noetic/qb_move_gazebo/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "45d54aa657ed48fff70b90970ff8bd6fc84b4bd928a1f52dd422dc13bbfb498f";
+    url = "https://bitbucket.org/qbrobotics/qbmove-ros-release/get/release/noetic/qb_move_gazebo/3.0.3-2.tar.gz";
+    name = "3.0.3-2.tar.gz";
+    sha256 = "34fe68d505300e511627ba6a0b78a9906d9402dd000b1d84dcb709ea0ce7690d";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, combined-robot-hw, control-msgs, controller-manager, qb-device-hardware-interface, qb-device-utils, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-qb-device-control";
-  version = "3.0.5-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/noetic/qb_device_control/3.0.5-1.tar.gz";
-    name = "3.0.5-1.tar.gz";
-    sha256 = "691a12d32828349408e9be4a980b0b53b8af72a6d6f72c0ad92a583fc3fa046b";
+    url = "https://bitbucket.org/qbrobotics/qbdevice-ros-release/get/release/noetic/qb_device_control/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "1800fa231f1de75e8734d683dc086cb00021397476ea9b16479c179d648b1513";
   };
 
   buildType = "catkin";

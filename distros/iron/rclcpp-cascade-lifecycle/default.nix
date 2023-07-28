@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, cascade-lifecycle-msgs, lifecycle-msgs, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-iron-rclcpp-cascade-lifecycle";
-  version = "1.0.3-r5";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cascade_lifecycle-release/archive/release/iron/rclcpp_cascade_lifecycle/1.0.3-5.tar.gz";
-    name = "1.0.3-5.tar.gz";
-    sha256 = "26f5ceedbabb6c2ae68eef1b1a5a507e2b3cea686ce2ea99b2adc87d2d40a656";
+    url = "https://github.com/ros2-gbp/cascade_lifecycle-release/archive/release/iron/rclcpp_cascade_lifecycle/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "938948c178767f26c23f6f4e43a4eb206dc82cfca4e14df7cdd02c7f37fe9da8";
   };
 
   buildType = "ament_cmake";

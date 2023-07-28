@@ -312,6 +312,8 @@ self: super: {
 
  clearpath-msgs = self.callPackage ./clearpath-msgs {};
 
+ clearpath-nav2-demos = self.callPackage ./clearpath-nav2-demos {};
+
  clearpath-platform = self.callPackage ./clearpath-platform {};
 
  clearpath-platform-description = self.callPackage ./clearpath-platform-description {};
@@ -580,6 +582,10 @@ self: super: {
 
  find-object-2d = self.callPackage ./find-object-2d {};
 
+ flir-camera-description = self.callPackage ./flir-camera-description {};
+
+ flir-camera-msgs = self.callPackage ./flir-camera-msgs {};
+
  fluent-rviz = self.callPackage ./fluent-rviz {};
 
  fmi-adapter = self.callPackage ./fmi-adapter {};
@@ -633,6 +639,8 @@ self: super: {
  generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
 
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
+
+ generate-parameter-module-example = self.callPackage ./generate-parameter-module-example {};
 
  geodesy = self.callPackage ./geodesy {};
 
@@ -824,9 +832,21 @@ self: super: {
 
  kinematics-interface-kdl = self.callPackage ./kinematics-interface-kdl {};
 
+ kinova-gen3-6dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-6dof-robotiq-2f-85-moveit-config {};
+
+ kinova-gen3-7dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-7dof-robotiq-2f-85-moveit-config {};
+
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
 
  kobuki-velocity-smoother = self.callPackage ./kobuki-velocity-smoother {};
+
+ kortex-api = self.callPackage ./kortex-api {};
+
+ kortex-bringup = self.callPackage ./kortex-bringup {};
+
+ kortex-description = self.callPackage ./kortex-description {};
+
+ kortex-driver = self.callPackage ./kortex-driver {};
 
  lanelet2 = self.callPackage ./lanelet2 {};
 
@@ -1660,6 +1680,10 @@ self: super: {
 
  robot-upstart = self.callPackage ./robot-upstart {};
 
+ robotiq-controllers = self.callPackage ./robotiq-controllers {};
+
+ robotiq-description = self.callPackage ./robotiq-description {};
+
  robotraconteur = self.callPackage ./robotraconteur {};
 
  ros2-control = self.callPackage ./ros2-control {};
@@ -1954,8 +1978,6 @@ self: super: {
 
  rviz-assimp-vendor = self.callPackage ./rviz-assimp-vendor {};
 
- rviz-common = self.callPackage ./rviz-common {};
-
  rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
@@ -2049,6 +2071,8 @@ self: super: {
  spacenav = self.callPackage ./spacenav {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
+
+ spinnaker-camera-driver = self.callPackage ./spinnaker-camera-driver {};
 
  splsm-7 = self.callPackage ./splsm-7 {};
 

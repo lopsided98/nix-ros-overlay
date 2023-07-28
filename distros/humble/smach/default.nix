@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python }:
 buildRosPackage {
   pname = "ros-humble-smach";
-  version = "3.0.2-r1";
+  version = "3.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/executive_smach-release/archive/release/humble/smach/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "e39a503e4a6643716010ac47539bf8a6af86172ff5e0ce6b3556c6903f064fe5";
+    url = "https://github.com/ros2-gbp/executive_smach-release/archive/release/humble/smach/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
+    sha256 = "407b55c6a7cca4b66377c95ecd861d6afd32ef7c28d1cc935080930c197ac74b";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-osqp";
-  version = "2.1.26-r1";
+  version = "2.1.28-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/osqp/2.1.26-1.tar.gz";
-    name = "2.1.26-1.tar.gz";
-    sha256 = "878c82ff8c752a036c41211648eb0fa9b3656f9c4c799808dba894dc88022b74";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/osqp/2.1.28-1.tar.gz";
+    name = "2.1.28-1.tar.gz";
+    sha256 = "1a53b444089adea24e199f0c9fc7293499a2576c85528d62bfd749cab78b5edb";
   };
 
   buildType = "cmake";
