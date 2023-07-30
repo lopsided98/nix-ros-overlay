@@ -11,7 +11,8 @@
 , dontWrapQtApps ? true
 , nativeBuildInputs ? [ ]
 , CXXFLAGS ? ""
-, passthru ? {}
+, postFixup ? ""
+, passthru ? { }
 , ...
 }@args:
 
@@ -36,6 +37,8 @@ else stdenv.mkDerivation) (args // {
 
   nativeBuildInputs = nativeBuildInputs ++ [ pythonPackages.setuptools ];
 
+  dontWrapPythonPrograms = true;
+
   buildPhase = ''
     runHook preBuild
 
@@ -52,5 +55,12 @@ else stdenv.mkDerivation) (args // {
     python setup.py install --prefix="$out" --single-version-externally-managed --record /dev/null
 
     runHook postInstall
+  '';
+
+  postFixup = ''
+    ${postFixup}
+    find "$out/lib" -mindepth 1 -maxdepth 1 -type d ! -name '${pythonPackages.python.libPrefix}' -print0 | while read -d '''''' d; do
+      wrapPythonProgramsIn "$d" "$out $pythonPath"
+    done
   '';
 })
