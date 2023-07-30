@@ -37,8 +37,6 @@ else stdenv.mkDerivation) (args // {
 
   nativeBuildInputs = nativeBuildInputs ++ [ pythonPackages.setuptools ];
 
-  dontWrapPythonPrograms = true;
-
   buildPhase = ''
     runHook preBuild
 
