@@ -45,8 +45,7 @@ let
 
     nativeBuildInputs = optional wrapPrograms makeWrapper;
 
-    postBuild = ''
-      ${postBuild}
+    postBuild = postBuild + ''
       "${buildPackages.perl}/bin/perl" "${./setup-hook-builder.pl}"
     '' + optionalString wrapPrograms ''
       if [ -d "$out/bin" ]; then
