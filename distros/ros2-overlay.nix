@@ -111,6 +111,14 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
+  rig-reconfigure = patchVendorGit rosSuper.rig-reconfigure {
+    url = "https://github.com/ocornut/imgui.git";
+    fetchgitArgs = {
+      rev = "3ea0fad204e994d669f79ed29dcaf61cd5cb571d";
+      sha256 = "sha256-v9FP9zJvul+2zRGaIugNDBCR9xZqCY8U90Dfe6fXpJM=";
+    };
+  };
+
   rmw-implementation = rosSuper.rmw-implementation.overrideAttrs ({
     propagatedBuildInputs ? [], ...
   }: {
