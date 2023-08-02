@@ -56,8 +56,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
   });
 
   rosfmt = patchVendorUrl rosSuper.rosfmt {
-    url = "https://github.com/fmtlib/fmt/releases/download/7.1.2/fmt-7.1.2.zip";
-    sha256 = "19qfd19mvzg4awqbh5x10m8riyyy0dbpadpidp3mrs81gjmnhsad";
+    url = "https://github.com/fmtlib/fmt/releases/download/9.1.0/fmt-9.1.0.zip";
+    sha256 = "sha256-zOtMuTZuGKV0ISjLNSTOX1Doi0dvHlRzekf/3030yZY=";
   };
 
   rqt-graph = rosSuper.rqt-graph.overrideAttrs ({
