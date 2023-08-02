@@ -26,6 +26,18 @@ rosSelf: rosSuper: with rosSelf.lib; {
     }) ];
   });
 
+  moveit-core = rosSuper.moveit-core.overrideAttrs ({
+    buildInputs ? [], patches ? [], ...
+  }: {
+    buildInputs = buildInputs ++ [ rosSelf.angles ];
+    # Add angles dependency to CMakeLists.txt and packages.xml
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/ros-planning/moveit/commit/ea73996b7ff9736504ea012dbdea9e81a80a561c.patch";
+      hash = "sha256-ZduyFhnl5WH07TEkfF1DwTUBZNd5CbZ3wHN7JHJb1XI=";
+      stripLen = 1;
+    }) ];
+  });
+
   pcl-ros = rosSuper.pcl-ros.overrideAttrs ({
     patches ? [], ...
   }: {
