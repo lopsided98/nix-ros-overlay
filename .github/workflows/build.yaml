@@ -11,6 +11,7 @@ jobs:
           - noetic
           - foxy
           - humble
+          - iron
           - rolling
         system:
           - x86_64-linux
