@@ -32,15 +32,6 @@ let
       python = rosSelf.python;
       enablePython = true;
     };
-
-    # Ogre 1.9 has been removed from nixpkgs, use Ogre 1.10
-    # TODO: make this change in rosdep if Ogre 1.10 works with most packages.
-    ogre1_9 = self.ogre1_10.overrideAttrs ({
-      cmakeFlags ? [], ...
-    }: {
-      # Avoid broken Boost::date_time dependency in CMake config file
-      cmakeFlags = cmakeFlags ++ [ "-DOGRE_CONFIG_THREAD_PROVIDER=std" ];
-    });
   };
 
   overrides = rosSelf: rosSuper: with rosSelf.lib; {
