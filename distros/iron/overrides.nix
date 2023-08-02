@@ -49,8 +49,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
   });
 
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
-    url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.9.20220203.tar.gz";
-    sha256 = "sha256-CJ1ZC7ydrZzEsZChrKuWg4/d20r6szFWeQCctiKFLgY=";
+    url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.13.20230224.tar.gz";
+    sha256 = "sha256-HQeVEQUX6xjIBkcoh8r8hh3QtqHBBFJGxVW8R/a9d+M=";
   };
 
   libyaml-vendor = patchVendorGit rosSuper.libyaml-vendor {
@@ -73,8 +73,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
   };
 
   rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
-    url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
-    sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
+    url = "https://github.com/OGRECave/ogre/archive/v1.12.10.zip";
+    sha256 = "sha256-lZDLywgShlWeWah7oTnyKBTqzN505LJKbQbgXRfJXlk=";
   };
 
   urdfdom = rosSuper.urdfdom.overrideAttrs ({
