@@ -18,6 +18,7 @@ buildRosPackage {
   checkInputs = [ rostest ];
   propagatedBuildInputs = [ costmap-2d cv-bridge dynamic-reconfigure geometry-msgs message-runtime pluginlib roscpp std-msgs ];
   nativeBuildInputs = [ catkin ];
+  patches = [ ./blob-detector.patch ];
 
   meta = {
     description = ''A ros package that includes plugins and nodes to convert occupied costmap2d cells to primitive types.'';

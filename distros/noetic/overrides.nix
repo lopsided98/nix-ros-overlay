@@ -44,17 +44,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "sha256-IBlmph3IJvGxh5okozF6HskhSpGMjrA1vi8ww+nPvcs=";
   };
 
-  rosconsole = rosSuper.rosconsole.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    # Support liblog4cxx 0.13
-    # https://github.com/ros/rosconsole/pull/58
-    patches = patches ++ [ (self.fetchpatch {
-      url = "https://github.com/ros/rosconsole/pull/58.patch";
-      hash = "sha256-Rg+WCPak5sxBqdQ/QR9eboyX921PZTjk3/PuH5mz96U=";
-    }) ];
-  });
-
   rosfmt = patchVendorUrl rosSuper.rosfmt {
     url = "https://github.com/fmtlib/fmt/releases/download/7.1.2/fmt-7.1.2.zip";
     sha256 = "19qfd19mvzg4awqbh5x10m8riyyy0dbpadpidp3mrs81gjmnhsad";
@@ -99,7 +88,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
       wrapQtApp "$out/lib/rqt_plot/rqt_plot"
     '';
   });
-  
+
   rqt-publisher = rosSuper.rqt-publisher.overrideAttrs ({
     postFixup ? "", ...
   }: {
@@ -161,6 +150,20 @@ rosSelf: rosSuper: with rosSelf.lib; {
   }: {
     postFixup = postFixup + ''
       wrapQtApp "$out/lib/rqt_topic/rqt_topic"
+    '';
+  });
+
+  rosconsole = rosSuper.rosconsole.overrideAttrs ({
+    cmakeFlags ? [], ...
+  }: {
+    cmakeFlags = cmakeFlags ++ [ "-DROSCONSOLE_BACKEND=print" ];
+  });
+
+  plotjuggler = rosSuper.plotjuggler.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/lib/plotjuggler/plotjuggler"
     '';
   });
 }

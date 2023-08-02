@@ -15,7 +15,8 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ binutils boost diagnostic-msgs geometry-msgs nav-msgs plotjuggler plotjuggler-msgs qt5.qtbase qt5.qtsvg qt5.qtwebsockets rosbag-storage roscpp roscpp-serialization sensor-msgs tf tf2-msgs tf2-ros ];
+  propagatedBuildInputs = [ binutils boost diagnostic-msgs geometry-msgs nav-msgs plotjuggler plotjuggler-msgs qt5.qtbase qt5.qtsvg qt5.qtwebsockets qt5.qtx11extras rosbag-storage roscpp roscpp-serialization sensor-msgs tf tf2-msgs tf2-ros ];
+
   nativeBuildInputs = [ catkin ];
 
   meta = {

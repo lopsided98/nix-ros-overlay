@@ -1,4 +1,3 @@
-
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
@@ -18,6 +17,7 @@ buildRosPackage {
   checkInputs = [ python3Packages.mock ];
   propagatedBuildInputs = [ python3Packages.netifaces python3Packages.pyyaml python3Packages.rospkg ];
   nativeBuildInputs = [ catkin ];
+  patches = [ ./frame.patch ];
 
   meta = {
     description = ''rosgraph contains the rosgraph command-line tool, which prints

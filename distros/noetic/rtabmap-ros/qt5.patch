@@ -1,0 +1,37 @@
+diff --color -Naur ros-noetic-rtabmap-ros/CMakeLists.txt ros-noetic-rtabmap-ros_new/CMakeLists.txt
+--- A/CMakeLists.txt    2023-02-20 13:48:40.821431556 +0100
++++ B/CMakeLists.txt    2023-02-20 13:47:50.091430005 +0100
+@@ -1,13 +1,13 @@
+-cmake_minimum_required(VERSION 2.8.3)
++cmake_minimum_required(VERSION 3.5)
+ project(rtabmap_ros)
+
+ # Policy CMP0043 introduced in cmake version 3.0 IGNORES the use of COMPILE_DEFINITIONS suffixed variables, e.g. COMPILE_DEFINITIONS_DEBUG
+ # Set to OLD behavior until minimum cmake version >= 2.8.10 (version that COMPILE_DEFINITIONS can be set by generator expressions instead)
+-if (POLICY CMP0043)
+-    cmake_policy(SET CMP0043 OLD)
+-endif (POLICY CMP0043)
++# if (POLICY CMP0043)
++#     cmake_policy(SET CMP0043 OLD)
++# endif (POLICY CMP0043)
+ # Policy CMP0042 introduced in cmake version 3.0 enables the use of @rpath in an install name via MACOSX_RPATH by default
+ # Set to OLD behavior so that all versions use the same behavior, or until minimum cmake version >= 2.8.12 (version where @rpath is available)
+-if (POLICY CMP0042)
+-    cmake_policy(SET CMP0042 OLD)
+-endif (POLICY CMP0042)
++# if (POLICY CMP0042)
++#     cmake_policy(SET CMP0042 OLD)
++# endif (POLICY CMP0042)
+@@ -30,6 +30,12 @@
+ find_package(find_object_2d)
+ find_package(fiducial_msgs)
+
++set( CMAKE_AUTOMOC ON )  # to automoc remove the need to wrap by hand
++# As moc files are generated in the binary dir, tell CMake
++# to always look for includes there:
++set(CMAKE_INCLUDE_CURRENT_DIR ON)
++find_package(Qt5 REQUIRED COMPONENTS Core Widgets)
++
+ ## System dependencies are found with CMake's conventions
+ # find_package(Boost REQUIRED COMPONENTS system)
+ find_package(RTABMap 0.21.0 REQUIRED)

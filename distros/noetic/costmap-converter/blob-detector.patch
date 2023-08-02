@@ -1,0 +1,12 @@
+diff --color -Naur costmap_converter-0.0.13_old/src/costmap_to_dynamic_obstacles/blob_detector.cpp costmap_converter-0.0.13/src/costmap_to_dynamic_obstacles/blob_detector.cpp
+--- A/src/costmap_to_dynamic_obstacles/blob_detector.cpp    2020-05-13 09:38:27.000000000 +0200
++++ B/src/costmap_to_dynamic_obstacles/blob_detector.cpp    2023-01-19 13:24:07.185882522 +0100
+@@ -6,7 +6,7 @@
+
+ cv::Ptr<BlobDetector> BlobDetector::create(const cv::SimpleBlobDetector::Params& params)
+ {
+-  return cv::Ptr<BlobDetector> (new BlobDetector(params)); // compatibility with older versions
++  return cv::Ptr<BlobDetector> (BlobDetector::create(params)); // compatibility with older versions
+   //return cv::makePtr<BlobDetector>(params);
+ }
+

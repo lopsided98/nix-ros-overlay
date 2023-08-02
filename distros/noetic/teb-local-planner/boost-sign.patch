@@ -1,0 +1,11 @@
+diff --color -Naur teb_local_planner-release-release-noetic-teb_local_planner/include/teb_local_planner/h_signature.h teb_local_planner-release-release-noetic-teb_local_planner_new/include/teb_local_planner/h_signature.h
+--- A/include/teb_local_planner/h_signature.h   2020-05-29 18:12:46.000000000 +0200
++++ B/include/teb_local_planner/h_signature.h   2023-01-20 19:56:56.259209108 +0100
+@@ -51,6 +51,7 @@
+ #include <functional>
+ #include <vector>
+ #include <iterator>
++#include <boost/math/special_functions/sign.hpp>
+
+
+ namespace teb_local_planner

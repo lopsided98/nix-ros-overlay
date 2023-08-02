@@ -2224,6 +2224,8 @@ self: super: {
 
  osqp-vendor = self.callPackage ./osqp-vendor {};
 
+ ouster-ros = self.callPackage ./ouster-ros {};
+
  oxford-gps-eth = self.callPackage ./oxford-gps-eth {};
 
  p2os-doc = self.callPackage ./p2os-doc {};
@@ -2653,6 +2655,8 @@ self: super: {
  rc-visard-driver = self.callPackage ./rc-visard-driver {};
 
  rcdiscover = self.callPackage ./rcdiscover {};
+
+ realsense-gazebo-plugin = self.callPackage ./realsense-gazebo-plugin {};
 
  realsense2-camera = self.callPackage ./realsense2-camera {};
 
@@ -3330,6 +3334,8 @@ self: super: {
 
  srdfdom = self.callPackage ./srdfdom {};
 
+ sound-play = self.callPackage ./sound-play {};
+
  stag-ros = self.callPackage ./stag-ros {};
 
  stage = self.callPackage ./stage {};
@@ -3811,6 +3817,44 @@ self: super: {
  xsens-mti-driver = self.callPackage ./xsens-mti-driver {};
 
  xv-11-laser-driver = self.callPackage ./xv-11-laser-driver {};
+
+ yocs-ar-marker-tracking = self.callPackage ./yocs-ar-marker-tracking {};
+
+ yocs-ar-pair-approach = self.callPackage ./yocs-ar-pair-approach {};
+
+ yocs-ar-pair-tracking = self.callPackage ./yocs-ar-pair-tracking {};
+
+ yocs-cmd-vel-mux = self.callPackage ./yocs-cmd-vel-mux {};
+
+ yocs-controllers = self.callPackage ./yocs-controllers {};
+
+ yocs-diff-drive-pose-controller = self.callPackage ./yocs-diff-drive-pose-controller {};
+
+ yocs-joyop = self.callPackage ./yocs-joyop {};
+
+ yocs-keyop = self.callPackage ./yocs-keyop {};
+
+ yocs-localization-manager = self.callPackage ./yocs-localization-manager {};
+
+ yocs-math-toolkit = self.callPackage ./yocs-math-toolkit {};
+
+ yocs-msgs = self.callPackage ./yocs-msgs {};
+
+ yocs-navi-toolkit = self.callPackage ./yocs-navi-toolkit {};
+
+ yocs-navigator = self.callPackage ./yocs-navigator {};
+
+ yocs-rapps = self.callPackage ./yocs-rapps {};
+
+ yocs-safety-controller = self.callPackage ./yocs-safety-controller {};
+
+ yocs-velocity-smoother = self.callPackage ./yocs-velocity-smoother {};
+
+ yocs-virtual-sensor = self.callPackage ./yocs-virtual-sensor {};
+
+ yocs-waypoint-provider = self.callPackage ./yocs-waypoint-provider {};
+
+ yocs-waypoints-navi = self.callPackage ./yocs-waypoints-navi {};
 
  ypspur = self.callPackage ./ypspur {};
 

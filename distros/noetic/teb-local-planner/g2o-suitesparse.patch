@@ -1,0 +1,97 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 165527d..17d7256 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -3,6 +3,7 @@ project(teb_local_planner)
+
+ # Set to Release in order to speed up the program significantly
+ set(CMAKE_BUILD_TYPE Release) #None, Debug, Release, RelWithDebInfo, MinSizeRel
++set(CMAKE_CXX_STANDARD 17)
+
+ ## Find catkin macros and libraries
+ find_package(catkin REQUIRED COMPONENTS
+@@ -32,7 +33,7 @@ message(STATUS "System: ${CMAKE_SYSTEM}")
+ SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake_modules)
+ message(STATUS "${CMAKE_MODULE_PATH}")
+ find_package(Boost REQUIRED COMPONENTS system thread graph)
+-find_package(SUITESPARSE REQUIRED)
++# find_package(SUITESPARSE REQUIRED)
+ find_package(G2O REQUIRED)
+
+ # Eigen3 FindScript Backward compatibility (ubuntu saucy)
+diff --git a/cmake_modules/FindG2O.cmake b/cmake_modules/FindG2O.cmake
+index b2670d3..0d74b06 100644
+--- a/cmake_modules/FindG2O.cmake
++++ b/cmake_modules/FindG2O.cmake
+@@ -71,7 +71,7 @@ IF(UNIX)
+                     ${G2O_SOLVER_CHOLMOD_LIB} 
+                     ${G2O_SOLVER_PCG_LIB}     
+                     ${G2O_SOLVER_CSPARSE_LIB} 
+-                    ${G2O_INCREMENTAL_LIB}                        
++                    # ${G2O_INCREMENTAL_LIB}                        
+                     )
+ 
+   IF(G2O_LIBRARIES AND G2O_INCLUDE_DIR)
+diff --git a/package.xml b/package.xml
+index baa6d8a..b0d15da 100644
+--- a/package.xml
++++ b/package.xml
+@@ -38,7 +38,7 @@
+   <depend>dynamic_reconfigure</depend>
+   <depend>geometry_msgs</depend>
+   <depend>interactive_markers</depend>
+-  <depend>libg2o</depend>
++  <depend>g2o</depend>
+   <depend>nav_core</depend>
+   <depend>nav_msgs</depend>
+   <depend>mbf_costmap_core</depend>
+diff --git a/src/optimal_planner.cpp b/src/optimal_planner.cpp
+index df64e66..ade3093 100644
+--- a/src/optimal_planner.cpp
++++ b/src/optimal_planner.cpp
+@@ -137,26 +137,25 @@ void TebOptimalPlanner::visualize()
+ void TebOptimalPlanner::registerG2OTypes()
+ {
+   g2o::Factory* factory = g2o::Factory::instance();
+-  factory->registerType("VERTEX_POSE", new g2o::HyperGraphElementCreator<VertexPose>);
+-  factory->registerType("VERTEX_TIMEDIFF", new g2o::HyperGraphElementCreator<VertexTimeDiff>);
+-
+-  factory->registerType("EDGE_TIME_OPTIMAL", new g2o::HyperGraphElementCreator<EdgeTimeOptimal>);
+-  factory->registerType("EDGE_SHORTEST_PATH", new g2o::HyperGraphElementCreator<EdgeShortestPath>);
+-  factory->registerType("EDGE_VELOCITY", new g2o::HyperGraphElementCreator<EdgeVelocity>);
+-  factory->registerType("EDGE_VELOCITY_HOLONOMIC", new g2o::HyperGraphElementCreator<EdgeVelocityHolonomic>);
+-  factory->registerType("EDGE_ACCELERATION", new g2o::HyperGraphElementCreator<EdgeAcceleration>);
+-  factory->registerType("EDGE_ACCELERATION_START", new g2o::HyperGraphElementCreator<EdgeAccelerationStart>);
+-  factory->registerType("EDGE_ACCELERATION_GOAL", new g2o::HyperGraphElementCreator<EdgeAccelerationGoal>);
+-  factory->registerType("EDGE_ACCELERATION_HOLONOMIC", new g2o::HyperGraphElementCreator<EdgeAccelerationHolonomic>);
+-  factory->registerType("EDGE_ACCELERATION_HOLONOMIC_START", new g2o::HyperGraphElementCreator<EdgeAccelerationHolonomicStart>);
+-  factory->registerType("EDGE_ACCELERATION_HOLONOMIC_GOAL", new g2o::HyperGraphElementCreator<EdgeAccelerationHolonomicGoal>);
+-  factory->registerType("EDGE_KINEMATICS_DIFF_DRIVE", new g2o::HyperGraphElementCreator<EdgeKinematicsDiffDrive>);
+-  factory->registerType("EDGE_KINEMATICS_CARLIKE", new g2o::HyperGraphElementCreator<EdgeKinematicsCarlike>);
+-  factory->registerType("EDGE_OBSTACLE", new g2o::HyperGraphElementCreator<EdgeObstacle>);
+-  factory->registerType("EDGE_INFLATED_OBSTACLE", new g2o::HyperGraphElementCreator<EdgeInflatedObstacle>);
+-  factory->registerType("EDGE_DYNAMIC_OBSTACLE", new g2o::HyperGraphElementCreator<EdgeDynamicObstacle>);
+-  factory->registerType("EDGE_VIA_POINT", new g2o::HyperGraphElementCreator<EdgeViaPoint>);
+-  factory->registerType("EDGE_PREFER_ROTDIR", new g2o::HyperGraphElementCreator<EdgePreferRotDir>);
++  factory->registerType("VERTEX_POSE", std::make_shared<g2o::HyperGraphElementCreator<VertexPose>>());
++  factory->registerType("VERTEX_TIMEDIFF", std::make_shared<g2o::HyperGraphElementCreator<VertexTimeDiff>>());
++  factory->registerType("EDGE_TIME_OPTIMAL", std::make_shared<g2o::HyperGraphElementCreator<EdgeTimeOptimal>>());
++  factory->registerType("EDGE_SHORTEST_PATH", std::make_shared<g2o::HyperGraphElementCreator<EdgeShortestPath>>());
++  factory->registerType("EDGE_VELOCITY", std::make_shared<g2o::HyperGraphElementCreator<EdgeVelocity>>());
++  factory->registerType("EDGE_VELOCITY_HOLONOMIC", std::make_shared<g2o::HyperGraphElementCreator<EdgeVelocityHolonomic>>());
++  factory->registerType("EDGE_ACCELERATION", std::make_shared<g2o::HyperGraphElementCreator<EdgeAcceleration>>());
++  factory->registerType("EDGE_ACCELERATION_START", std::make_shared<g2o::HyperGraphElementCreator<EdgeAccelerationStart>>());
++  factory->registerType("EDGE_ACCELERATION_GOAL", std::make_shared<g2o::HyperGraphElementCreator<EdgeAccelerationGoal>>());
++  factory->registerType("EDGE_ACCELERATION_HOLONOMIC", std::make_shared<g2o::HyperGraphElementCreator<EdgeAccelerationHolonomic>>());
++  factory->registerType("EDGE_ACCELERATION_HOLONOMIC_START", std::make_shared<g2o::HyperGraphElementCreator<EdgeAccelerationHolonomicStart>>());
++  factory->registerType("EDGE_ACCELERATION_HOLONOMIC_GOAL", std::make_shared<g2o::HyperGraphElementCreator<EdgeAccelerationHolonomicGoal>>());
++  factory->registerType("EDGE_KINEMATICS_DIFF_DRIVE", std::make_shared<g2o::HyperGraphElementCreator<EdgeKinematicsDiffDrive>>());
++  factory->registerType("EDGE_KINEMATICS_CARLIKE", std::make_shared<g2o::HyperGraphElementCreator<EdgeKinematicsCarlike>>());
++  factory->registerType("EDGE_OBSTACLE", std::make_shared<g2o::HyperGraphElementCreator<EdgeObstacle>>());
++  factory->registerType("EDGE_INFLATED_OBSTACLE", std::make_shared<g2o::HyperGraphElementCreator<EdgeInflatedObstacle>>());
++  factory->registerType("EDGE_DYNAMIC_OBSTACLE", std::make_shared<g2o::HyperGraphElementCreator<EdgeDynamicObstacle>>());
++  factory->registerType("EDGE_VIA_POINT", std::make_shared<g2o::HyperGraphElementCreator<EdgeViaPoint>>());
++  factory->registerType("EDGE_PREFER_ROTDIR", std::make_shared<g2o::HyperGraphElementCreator<EdgePreferRotDir>>());
+   return;
+ }
+ 

@@ -1,0 +1,23 @@
+From 7333d408ae1baf4ca3efd2226ccd234a469615e8 Mon Sep 17 00:00:00 2001
+From: Akash Patel <17132214+acxz@users.noreply.github.com>
+Date: Tue, 23 May 2023 16:12:44 -0500
+Subject: [PATCH] disregard finding the proper stack frame
+
+---
+ tools/rosgraph/src/rosgraph/roslogging.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/tools/rosgraph/src/rosgraph/roslogging.py b/tools/rosgraph/src/rosgraph/roslogging.py
+index 9ecc121893..f7e5cb5aea 100644
+--- a/src/rosgraph/roslogging.py
++++ b/src/rosgraph/roslogging.py
+@@ -69,6 +69,9 @@ def findCaller(self, *args, **kwargs):
+                 break
+             if f.f_back:
+                 f = f.f_back
++                # Disregard finding the proper stack frame
++                # See: https://github.com/ros/ros_comm/issues/2330
++                break
+ 
+         # Jump up two more frames, as the logger methods have been double wrapped.
+         if f is not None and f.f_back and f.f_code and f.f_code.co_name == '_base_logger':
