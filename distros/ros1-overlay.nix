@@ -51,6 +51,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
   });
 
+  roscpp = patchBoostSignals rosSuper.roscpp;
+
   # rviz does not support shiboken/pyside2 and SIP4 is broken with the latest
   # pyqt5. This applies a patch to make pyqt5 compatible with SIP 4 and uses
   # SIP 4 with python-qt-binding for rviz only.
@@ -89,6 +91,4 @@ rosSelf: rosSuper: with rosSelf.lib; {
       wrapQtApp "$out/lib/rviz/rviz"
     '';
   });
-
-  roscpp = patchBoostSignals rosSuper.roscpp;
 }

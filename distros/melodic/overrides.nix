@@ -97,7 +97,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "0h148anbaqgch6n69pxsvs1c9wmykgd052wmzgdia7qpz8w6p8dl";
   };
 
-  # Spends an hour time trying to download npm packages before failing.
+  # Spends an hour trying to download npm packages before failing.
   vapor-master = rosSuper.vapor-master.overrideAttrs ({
     meta ? {}, ...
   }: {
