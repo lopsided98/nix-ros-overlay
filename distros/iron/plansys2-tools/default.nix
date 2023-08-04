@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, plansys2-msgs, plansys2-problem-expert, qt-gui-cpp, qt5, rclcpp, rclcpp-lifecycle, rqt-gui, rqt-gui-cpp }:
 buildRosPackage {
   pname = "ros-iron-plansys2-tools";
-  version = "2.0.10-r1";
+  version = "2.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/iron/plansys2_tools/2.0.10-1.tar.gz";
-    name = "2.0.10-1.tar.gz";
-    sha256 = "f0ebb4d1cbcae3807f7536a8d0ce076c6f9c5f9459bce9981470cf98165bd793";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/iron/plansys2_tools/2.0.11-1.tar.gz";
+    name = "2.0.11-1.tar.gz";
+    sha256 = "d11d5da69309261039d25f2df79c433b6c4791492ac7a0fd4ce3aaeb6a8173f5";
   };
 
   buildType = "ament_cmake";

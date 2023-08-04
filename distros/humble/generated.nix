@@ -356,6 +356,18 @@ self: super: {
 
  costmap-queue = self.callPackage ./costmap-queue {};
 
+ crane-plus = self.callPackage ./crane-plus {};
+
+ crane-plus-control = self.callPackage ./crane-plus-control {};
+
+ crane-plus-description = self.callPackage ./crane-plus-description {};
+
+ crane-plus-examples = self.callPackage ./crane-plus-examples {};
+
+ crane-plus-gazebo = self.callPackage ./crane-plus-gazebo {};
+
+ crane-plus-moveit-config = self.callPackage ./crane-plus-moveit-config {};
+
  create-bringup = self.callPackage ./create-bringup {};
 
  create-description = self.callPackage ./create-description {};
@@ -524,6 +536,8 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ event-camera-msgs = self.callPackage ./event-camera-msgs {};
+
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-async-client = self.callPackage ./examples-rclcpp-async-client {};
@@ -581,6 +595,24 @@ self: super: {
  filters = self.callPackage ./filters {};
 
  find-object-2d = self.callPackage ./find-object-2d {};
+
+ flexbe-behavior-engine = self.callPackage ./flexbe-behavior-engine {};
+
+ flexbe-core = self.callPackage ./flexbe-core {};
+
+ flexbe-input = self.callPackage ./flexbe-input {};
+
+ flexbe-mirror = self.callPackage ./flexbe-mirror {};
+
+ flexbe-msgs = self.callPackage ./flexbe-msgs {};
+
+ flexbe-onboard = self.callPackage ./flexbe-onboard {};
+
+ flexbe-states = self.callPackage ./flexbe-states {};
+
+ flexbe-testing = self.callPackage ./flexbe-testing {};
+
+ flexbe-widget = self.callPackage ./flexbe-widget {};
 
  flir-camera-description = self.callPackage ./flir-camera-description {};
 
@@ -1003,6 +1035,8 @@ self: super: {
  message-filters = self.callPackage ./message-filters {};
 
  message-tf-frame-transformer = self.callPackage ./message-tf-frame-transformer {};
+
+ metavision-driver = self.callPackage ./metavision-driver {};
 
  micro-ros-diagnostic-bridge = self.callPackage ./micro-ros-diagnostic-bridge {};
 

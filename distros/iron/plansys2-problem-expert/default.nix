@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, lifecycle-msgs, plansys2-domain-expert, plansys2-msgs, plansys2-pddl-parser, qt5, rclcpp, rclcpp-action, rclcpp-lifecycle, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-plansys2-problem-expert";
-  version = "2.0.10-r1";
+  version = "2.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/iron/plansys2_problem_expert/2.0.10-1.tar.gz";
-    name = "2.0.10-1.tar.gz";
-    sha256 = "74bba957c59ecf2d8a385c5222809a715a775303de7ccabeb145ce77b3211374";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/iron/plansys2_problem_expert/2.0.11-1.tar.gz";
+    name = "2.0.11-1.tar.gz";
+    sha256 = "085d31fa82d9e715a72a2ab7f4ff5e5c118bb7958e60103ba0b9545859dc506b";
   };
 
   buildType = "ament_cmake";

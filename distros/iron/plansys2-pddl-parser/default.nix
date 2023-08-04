@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, plansys2-msgs, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-plansys2-pddl-parser";
-  version = "2.0.10-r1";
+  version = "2.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/iron/plansys2_pddl_parser/2.0.10-1.tar.gz";
-    name = "2.0.10-1.tar.gz";
-    sha256 = "506665575fea2ca48b4136b1bdff58bad64211a2d5d6299b1d48f08a5a8fdca8";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/iron/plansys2_pddl_parser/2.0.11-1.tar.gz";
+    name = "2.0.11-1.tar.gz";
+    sha256 = "a12e27cf2b90a766500496fb20687128a409841d12404127dd97533964f0ff13";
   };
 
   buildType = "ament_cmake";
