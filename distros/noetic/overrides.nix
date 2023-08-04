@@ -187,15 +187,22 @@ rosSelf: rosSuper: with rosSelf.lib; {
     }) ];
   });
 
-  teb-local-planner = rosSuper.teb-local-planner.overrideAttrs ({
-    patches ? [], cmakeFlags ? [], ...
+  libg2o = rosSuper.libg2o.overrideAttrs ({
+    propagatedBuildInputs ? [],...
   }: {
-    # fix: boost sigh
+    propagatedBuildInputs = propagatedBuildInputs ++ [ self.openblas ];
+  });
+
+  teb-local-planner = rosSuper.teb-local-planner.overrideAttrs ({
+    patches ? [], cmakeFlags ? [], buildInputs ? [],...
+  }: {
+    # fix: boost sign
     # https://github.com/rst-tu-dortmund/teb_local_planner/pull/413
     patches = patches ++ [ (self.fetchpatch {
       url = "https://github.com/rst-tu-dortmund/teb_local_planner/pull/413.patch";
       hash = "sha256-td4yejakcXUH6b6wUa2d85R4dyegc5pbZLDEzTTz/x8=";
     }) ];
     cmakeFlags = cmakeFlags ++ [ "-DCMAKE_INCLUDE_PATH=${self.suitesparse}/lib" ];
+    buildInputs = buildInputs ++ [ self.suitesparse ];
   });
 }
