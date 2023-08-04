@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, control-toolbox, hardware-interface, qb-device-hardware-interface, roscpp, transmission-interface }:
 buildRosPackage {
   pname = "ros-noetic-qb-hand-hardware-interface";
-  version = "3.0.2-r1";
+  version = "3.0.3-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbhand-ros-release/get/release/noetic/qb_hand_hardware_interface/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "a91b53d027cfa0364a66cb84b19d7a0dacaea02967ecf59517031b0c7d43d13a";
+    url = "https://bitbucket.org/qbrobotics/qbhand-ros-release/get/release/noetic/qb_hand_hardware_interface/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
+    sha256 = "28f9763028d6a5f79e3a16f7b50a730dbb635f6cb740e2bb57fec42090784030";
   };
 
   buildType = "catkin";

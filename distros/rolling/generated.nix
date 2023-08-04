@@ -436,6 +436,8 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ event-camera-msgs = self.callPackage ./event-camera-msgs {};
+
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-async-client = self.callPackage ./examples-rclcpp-async-client {};
@@ -957,6 +959,14 @@ self: super: {
  nao-command-msgs = self.callPackage ./nao-command-msgs {};
 
  nao-lola = self.callPackage ./nao-lola {};
+
+ nao-lola-client = self.callPackage ./nao-lola-client {};
+
+ nao-lola-command-msgs = self.callPackage ./nao-lola-command-msgs {};
+
+ nao-lola-conversion = self.callPackage ./nao-lola-conversion {};
+
+ nao-lola-sensor-msgs = self.callPackage ./nao-lola-sensor-msgs {};
 
  nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
 

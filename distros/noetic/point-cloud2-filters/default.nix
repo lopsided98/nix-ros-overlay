@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, filters, pcl-conversions, pcl-ros, pluginlib, roscpp, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-point-cloud2-filters";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ADVRHumanoids/point_cloud2_filters-release/archive/release/noetic/point_cloud2_filters/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "59aca0f3d7358cc45d0218ec59036765ac29219a469e170ef0c01b4c9e054c0b";
+    url = "https://github.com/ADVRHumanoids/point_cloud2_filters-release/archive/release/noetic/point_cloud2_filters/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "2d850891e224b1416a67e4087e55302cadfd6928eedfd99385ddccd59e5c8cd4";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, rclcpp, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-plansys2-msgs";
-  version = "2.0.10-r1";
+  version = "2.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/iron/plansys2_msgs/2.0.10-1.tar.gz";
-    name = "2.0.10-1.tar.gz";
-    sha256 = "67fffe446b14bf2523aa88a4534eafdcb983e6a64f94b7c081905b25d40a621d";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/iron/plansys2_msgs/2.0.11-1.tar.gz";
+    name = "2.0.11-1.tar.gz";
+    sha256 = "957841ffa743c85fe3df16da52e94afa81bcd1bf1d1407a2fbee740201858ed8";
   };
 
   buildType = "ament_cmake";

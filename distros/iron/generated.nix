@@ -1802,6 +1802,12 @@ self: super: {
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
 
+ sick-safetyscanners2 = self.callPackage ./sick-safetyscanners2 {};
+
+ sick-safetyscanners2-interfaces = self.callPackage ./sick-safetyscanners2-interfaces {};
+
+ sick-safetyscanners-base = self.callPackage ./sick-safetyscanners-base {};
+
  simple-actions = self.callPackage ./simple-actions {};
 
  simple-launch = self.callPackage ./simple-launch {};

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, plansys2-domain-expert, plansys2-executor, plansys2-lifecycle-manager, plansys2-planner, plansys2-problem-expert, rclcpp }:
 buildRosPackage {
   pname = "ros-iron-plansys2-bringup";
-  version = "2.0.10-r1";
+  version = "2.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/iron/plansys2_bringup/2.0.10-1.tar.gz";
-    name = "2.0.10-1.tar.gz";
-    sha256 = "289ca01aa856e839ee243101a937e21377837e37093947d09b877c33234d1af2";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/iron/plansys2_bringup/2.0.11-1.tar.gz";
+    name = "2.0.11-1.tar.gz";
+    sha256 = "927bdbdee37b318cad0f392d6c1bf22a02f2a4eeaa27569d9dfe2b8f6973b115";
   };
 
   buildType = "ament_cmake";

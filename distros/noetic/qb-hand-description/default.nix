@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-qb-hand-description";
-  version = "3.0.2-r1";
+  version = "3.0.3-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbhand-ros-release/get/release/noetic/qb_hand_description/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "238565902edb69c79a2cfd59a536f570c2fc1103cc8562d2d8dfea5ac3fad114";
+    url = "https://bitbucket.org/qbrobotics/qbhand-ros-release/get/release/noetic/qb_hand_description/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
+    sha256 = "ca55da147352f5eacad5cf2f80c4ed082fa8b8dbcb68d8077dd00d89e671bcfe";
   };
 
   buildType = "catkin";
