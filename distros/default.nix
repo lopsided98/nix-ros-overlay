@@ -1,7 +1,7 @@
 # Define all supported ROS distros
 
 self: super: {
-  rosPackages = rec {
+  rosPackages = self.lib.warn "nix-ros-overlay staging branch has been renamed to develop, use it instead" rec {
     recurseForDerivations = true;
     lib = super.lib // import ../lib { inherit lib self; };
 
