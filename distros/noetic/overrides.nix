@@ -111,7 +111,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
       wrapQtApp "$out/lib/rqt_plot/rqt_plot"
     '';
   });
-  
+
   rqt-publisher = rosSuper.rqt-publisher.overrideAttrs ({
     postFixup ? "", ...
   }: {
@@ -185,5 +185,17 @@ rosSelf: rosSuper: with rosSelf.lib; {
       url = "https://github.com/rst-tu-dortmund/costmap_converter/pull/40.patch";
       hash = "sha256-xIjxFsyWbHzIhuthGivpZAA2xdFQm7g68bsNjcS8cYM=";
     }) ];
+  });
+
+  teb-local-planner = rosSuper.teb-local-planner.overrideAttrs ({
+    patches ? [], cmakeFlags ? [], ...
+  }: {
+    # fix: boost sigh
+    # https://github.com/rst-tu-dortmund/teb_local_planner/pull/413
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/rst-tu-dortmund/teb_local_planner/pull/413.patch";
+      hash = "sha256-xIjxFsyWbHzIhuthGivpZAA2xdFQm7g68bsNjcS8cYM=";
+    }) ];
+    cmakeFlags = cmakeFlags ++ [ "-DCMAKE_INCLUDE_PATH=${suitesparse}/lib" ];
   });
 }
