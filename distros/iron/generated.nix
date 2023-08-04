@@ -102,6 +102,8 @@ self: super: {
 
  ament-cmake-uncrustify = self.callPackage ./ament-cmake-uncrustify {};
 
+ ament-cmake-vendor-package = self.callPackage ./ament-cmake-vendor-package {};
+
  ament-cmake-version = self.callPackage ./ament-cmake-version {};
 
  ament-cmake-xmllint = self.callPackage ./ament-cmake-xmllint {};
@@ -1765,6 +1767,8 @@ self: super: {
  rviz-2d-overlay-plugins = self.callPackage ./rviz-2d-overlay-plugins {};
 
  rviz-assimp-vendor = self.callPackage ./rviz-assimp-vendor {};
+
+ rviz-common = self.callPackage ./rviz-common {};
 
  rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
 

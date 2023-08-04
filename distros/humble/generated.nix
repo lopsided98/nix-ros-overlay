@@ -112,6 +112,8 @@ self: super: {
 
  ament-cmake-uncrustify = self.callPackage ./ament-cmake-uncrustify {};
 
+ ament-cmake-vendor-package = self.callPackage ./ament-cmake-vendor-package {};
+
  ament-cmake-version = self.callPackage ./ament-cmake-version {};
 
  ament-cmake-xmllint = self.callPackage ./ament-cmake-xmllint {};
@@ -1036,8 +1038,6 @@ self: super: {
 
  message-tf-frame-transformer = self.callPackage ./message-tf-frame-transformer {};
 
- metavision-driver = self.callPackage ./metavision-driver {};
-
  micro-ros-diagnostic-bridge = self.callPackage ./micro-ros-diagnostic-bridge {};
 
  micro-ros-diagnostic-msgs = self.callPackage ./micro-ros-diagnostic-msgs {};
@@ -1507,6 +1507,8 @@ self: super: {
  raspimouse-description = self.callPackage ./raspimouse-description {};
 
  raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
+
+ raspimouse-ros2-examples = self.callPackage ./raspimouse-ros2-examples {};
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
@@ -2011,6 +2013,8 @@ self: super: {
  rviz-2d-overlay-plugins = self.callPackage ./rviz-2d-overlay-plugins {};
 
  rviz-assimp-vendor = self.callPackage ./rviz-assimp-vendor {};
+
+ rviz-common = self.callPackage ./rviz-common {};
 
  rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
 
