@@ -196,6 +196,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
       url = "https://github.com/rst-tu-dortmund/teb_local_planner/pull/413.patch";
       hash = "sha256-xIjxFsyWbHzIhuthGivpZAA2xdFQm7g68bsNjcS8cYM=";
     }) ];
-    cmakeFlags = cmakeFlags ++ [ "-DCMAKE_INCLUDE_PATH=${suitesparse}/lib" ];
+    cmakeFlags = cmakeFlags ++ [ "-DCMAKE_INCLUDE_PATH=${rosSelf.suitesparse}/lib" ];
   });
 }
