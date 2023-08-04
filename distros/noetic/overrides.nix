@@ -183,7 +183,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     # https://github.com/rst-tu-dortmund/costmap_converter/pull/40
     patches = patches ++ [ (self.fetchpatch {
       url = "https://github.com/rst-tu-dortmund/costmap_converter/pull/40.patch";
-      hash = "sha256-Rg+WCPak5sxBqdQ/QR9eboyX921PZTjk3/PuH5mz96U=";
+      hash = "sha256-xIjxFsyWbHzIhuthGivpZAA2xdFQm7g68bsNjcS8cYM=";
     }) ];
   });
 }
