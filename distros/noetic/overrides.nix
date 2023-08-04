@@ -175,4 +175,15 @@ rosSelf: rosSuper: with rosSelf.lib; {
       wrapQtApp "$out/lib/rqt_topic/rqt_topic"
     '';
   });
+
+  costmap_converter = rosSuper.costmap_converter.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # fix: invalid new-expression of abstract class type ‘BlobDetector’
+    # https://github.com/rst-tu-dortmund/costmap_converter/pull/40.patch
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/rst-tu-dortmund/costmap_converter/pull/40.patch";
+      hash = "sha256-Rg+WCPak5sxBqdQ/QR9eboyX921PZTjk3/PuH5mz96U=";
+    }) ];
+  });
 }
