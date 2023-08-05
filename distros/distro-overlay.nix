@@ -315,15 +315,6 @@ let
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
     });
 
-    rviz-ogre-vendor = rosSuper.rviz-ogre-vendor.overrideAttrs ({
-      preFixup ? "", ...
-    }: {
-      preFixup = ''
-        # Prevent /build RPATH references
-        rm -r ogre_install
-      '' + preFixup;
-    });
-
     rxcpp-vendor = patchVendorUrl rosSuper.rxcpp-vendor {
       url = "https://github.com/ReactiveX/RxCpp/archive/v4.1.0.tar.gz";
       sha256 = "1smxrcm0s6bz05185dx1i2xjgn47rq7m247pblil6p3bmk3lkfyk";
