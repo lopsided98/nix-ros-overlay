@@ -48,6 +48,14 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
+  lely-core-libraries = patchVendorGit rosSuper.lely-core-libraries {
+    url = "https://gitlab.com/lely_industries/lely-core.git";
+    fetchgitArgs = {
+      rev = "7824cbb2ac08d091c4fa2fb397669b938de9e3f5";
+      sha256 = "sha256-L06rL+DiF2+FnYgKBELjes70sywKP8EzdhNq/uOnEp4=";
+    };
+  };
+
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
     url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.13.20230224.tar.gz";
     sha256 = "sha256-HQeVEQUX6xjIBkcoh8r8hh3QtqHBBFJGxVW8R/a9d+M=";
