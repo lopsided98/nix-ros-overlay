@@ -1,10 +1,9 @@
 { lib ? rosSelf.lib or self.lib
 , self ? null
 , rosSelf ? null }:
-with lib;
 {
   mkOverlay = overlays: let
-    s = composeManyExtensions overlays s {};
+    s = lib.composeManyExtensions overlays s {};
   in s;
 
   # Create a tarball of a package source. If the source is already an archive,
@@ -32,8 +31,8 @@ with lib;
     postPatch ? "", ...
   }: {
     postPatch = ''
-      substituteInPlace ${escapeShellArg file} \
-        --replace ${escapeShellArg originalUrl} ${escapeShellArg (self.fetchurl { inherit url hash sha256; })}
+      substituteInPlace ${lib.escapeShellArg file} \
+        --replace ${lib.escapeShellArg originalUrl} ${lib.escapeShellArg (self.fetchurl { inherit url hash sha256; })}
     '' + postPatch;
   });
 
@@ -48,7 +47,7 @@ with lib;
     postPatch = ''
       sed -i '\|GIT_REPOSITORY\s.*${originalUrl}|c\
         URL "${self.fetchgit ({ inherit url; } // fetchgitArgs)}"' \
-        ${escapeShellArg file}
+        ${lib.escapeShellArg file}
     '' + postPatch;
   });
 
