@@ -52,7 +52,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
     url = "https://gitlab.com/lely_industries/lely-core.git";
     fetchgitArgs = {
       rev = "7824cbb2ac08d091c4fa2fb397669b938de9e3f5";
-      sha256 = "sha256-L06rL+DiF2+FnYgKBELjes70sywKP8EzdhNq/uOnEp4=";
+      sha256 = "sha256-Ykmnz/zlEXmkyRO9AHMprML7uKbNer2zu4i9PDHfgxw=";
+      leaveDotGit = true;
     };
   };
 
