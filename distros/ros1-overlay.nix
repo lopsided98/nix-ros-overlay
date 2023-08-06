@@ -91,4 +91,13 @@ rosSelf: rosSuper: with rosSelf.lib; {
       wrapQtApp "$out/lib/rviz/rviz"
     '';
   });
+
+  swri-transform-util = (rosSuper.swri-transform-util.override {
+    # PROJ 8 finally removed the deprecated proj_api.h header
+    proj = self.proj_7;
+  }).overrideAttrs ({
+    CXXFLAGS ? "", ...
+  }: {
+    CXXFLAGS = CXXFLAGS + " -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H";
+  });
 }
