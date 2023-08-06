@@ -192,6 +192,14 @@ let
       '';
     });
 
+    rosbridge-library = rosSuper.rosbridge-library.override {
+      python3Packages = rosSuper.python3Packages.overrideScope (pySelf: pySuper: {
+        # Use PyMongo for BSON.
+        # https://github.com/RobotWebTools/rosbridge_suite/issues/198
+        bson = pySelf.pymongo;
+      });
+    };
+
     rqt-console = rosSuper.rqt-console.overrideAttrs ({
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
