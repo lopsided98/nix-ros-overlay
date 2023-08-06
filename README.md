@@ -40,7 +40,7 @@ nix develop github:lopsided98/nix-ros-overlay#example-turtlebot3-gazebo
 ## Current status
 
 What works:
-1. More than 1700 packages successfully built for ROS Kinetic
+1. More than 1400 packages successfully built for ROS Noetic
 2. Fully functional ROS development environment using `nix-shell`
 3. Automated generation of Nix package definitions using standard ROS tools ([superflore](https://github.com/lopsided98/superflore))
 
