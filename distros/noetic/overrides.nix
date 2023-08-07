@@ -216,4 +216,15 @@ rosSelf: rosSuper: with rosSelf.lib; {
       hash = "sha256-xjkMzavqCLQaGsKpF32mp0thxDgovnHJFLB7B0j1et0=";
     }) ];
   });
+
+  opencv-apps = rosSuper.opencv-apps.overrideAttrs ({
+    patches ? [],...
+  }: {
+    # fix: nodelet face_recognition_nodelet.cpp
+    # https://github.com/ros-perception/opencv_apps/pull/144
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/ros-perception/opencv_apps/pull/144.patch";
+      hash = "sha256-90LpN/8NcxpBd4E513ea7PoKik5xvpmJsNnH6F/giq0=";
+    }) ];
+  });
 }
