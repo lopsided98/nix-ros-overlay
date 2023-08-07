@@ -102,6 +102,8 @@ self: super: {
 
  ament-cmake-uncrustify = self.callPackage ./ament-cmake-uncrustify {};
 
+ ament-cmake-vendor-package = self.callPackage ./ament-cmake-vendor-package {};
+
  ament-cmake-version = self.callPackage ./ament-cmake-version {};
 
  ament-cmake-xmllint = self.callPackage ./ament-cmake-xmllint {};
@@ -435,6 +437,8 @@ self: super: {
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
 
  eigenpy = self.callPackage ./eigenpy {};
+
+ event-camera-msgs = self.callPackage ./event-camera-msgs {};
 
  example-interfaces = self.callPackage ./example-interfaces {};
 
@@ -957,6 +961,14 @@ self: super: {
  nao-command-msgs = self.callPackage ./nao-command-msgs {};
 
  nao-lola = self.callPackage ./nao-lola {};
+
+ nao-lola-client = self.callPackage ./nao-lola-client {};
+
+ nao-lola-command-msgs = self.callPackage ./nao-lola-command-msgs {};
+
+ nao-lola-conversion = self.callPackage ./nao-lola-conversion {};
+
+ nao-lola-sensor-msgs = self.callPackage ./nao-lola-sensor-msgs {};
 
  nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
 
@@ -1641,6 +1653,8 @@ self: super: {
  rviz-2d-overlay-plugins = self.callPackage ./rviz-2d-overlay-plugins {};
 
  rviz-assimp-vendor = self.callPackage ./rviz-assimp-vendor {};
+
+ rviz-common = self.callPackage ./rviz-common {};
 
  rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
 

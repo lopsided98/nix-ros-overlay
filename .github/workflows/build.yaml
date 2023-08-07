@@ -9,7 +9,6 @@ jobs:
         distro:
           - melodicPython3
           - noetic
-          - foxy
           - humble
           - iron
           - rolling

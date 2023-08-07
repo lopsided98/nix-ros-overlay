@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, clearpath-config, nav2-bringup, slam-toolbox }:
 buildRosPackage {
   pname = "ros-humble-clearpath-nav2-demos";
-  version = "0.0.1-r1";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_nav2_demos-release/archive/release/humble/clearpath_nav2_demos/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "0e0d3e550de48b33a15917451d3d81dce7c5d04715979a197c068ade5d00c423";
+    url = "https://github.com/clearpath-gbp/clearpath_nav2_demos-release/archive/release/humble/clearpath_nav2_demos/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "296e5408d7d0018f0e79d726148b721700c1979c297a37e3919de281d1d49f1d";
   };
 
   buildType = "ament_cmake";

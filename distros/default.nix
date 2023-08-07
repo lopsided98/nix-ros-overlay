@@ -17,12 +17,6 @@ self: super: {
       python = self.python3;
     } self super;
 
-    foxy = import ./distro-overlay.nix {
-      version = 2;
-      distro = "foxy";
-      python = self.python3;
-    } self super;
-
     humble = import ./distro-overlay.nix {
       version = 2;
       distro = "humble";

@@ -72,6 +72,19 @@ rosSelf: rosSuper: with rosSelf.lib; {
     };
   };
 
+  nav2-costmap-2d = rosSuper.nav2-costmap-2d.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix uninitialized variable warning
+      (self.fetchpatch {
+        url = "https://github.com/ros-planning/navigation2/commit/4d060c3dbeb63f63c93d41260608b78b9a151bae.patch";
+        hash = "sha256-cFoiiyINc6Q0ecT5ioShdFIfcs/XjPlmgzdVRO5GOHM=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.10.zip";
     sha256 = "sha256-lZDLywgShlWeWah7oTnyKBTqzN505LJKbQbgXRfJXlk=";

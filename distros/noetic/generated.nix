@@ -2642,6 +2642,24 @@ self: super: {
 
  qb-move-hardware-interface = self.callPackage ./qb-move-hardware-interface {};
 
+ qb-softhand-industry = self.callPackage ./qb-softhand-industry {};
+
+ qb-softhand-industry-bringup = self.callPackage ./qb-softhand-industry-bringup {};
+
+ qb-softhand-industry-control = self.callPackage ./qb-softhand-industry-control {};
+
+ qb-softhand-industry-description = self.callPackage ./qb-softhand-industry-description {};
+
+ qb-softhand-industry-driver = self.callPackage ./qb-softhand-industry-driver {};
+
+ qb-softhand-industry-hardware-interface = self.callPackage ./qb-softhand-industry-hardware-interface {};
+
+ qb-softhand-industry-msgs = self.callPackage ./qb-softhand-industry-msgs {};
+
+ qb-softhand-industry-srvs = self.callPackage ./qb-softhand-industry-srvs {};
+
+ qb-softhand-industry-utils = self.callPackage ./qb-softhand-industry-utils {};
+
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
 
  qt-dotgraph = self.callPackage ./qt-dotgraph {};

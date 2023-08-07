@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: staging
+          ref: develop
       - uses: cachix/install-nix-action@v22
       - uses: cachix/cachix-action@v12
         with:
@@ -40,5 +40,5 @@ jobs:
           superflore-gen-nix \
             --tar-archive-dir "${{ runner.temp }}/tar" \
             --output-repository-path . \
-            --upstream-branch staging \
+            --upstream-branch develop \
             --all

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, assimp }:
 buildRosPackage {
   pname = "ros-iron-rviz-assimp-vendor";
-  version = "12.4.1-r1";
+  version = "12.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/iron/rviz_assimp_vendor/12.4.1-1.tar.gz";
-    name = "12.4.1-1.tar.gz";
-    sha256 = "a6657401a740cfb552f81a9fd79cf31c00ab96e3c084e973baba753a8d1aaee8";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/iron/rviz_assimp_vendor/12.4.2-1.tar.gz";
+    name = "12.4.2-1.tar.gz";
+    sha256 = "0fba733c5d70d007b7828bba0aef5b922385d4a1a7c557335e6495a3a068c883";
   };
 
   buildType = "ament_cmake";

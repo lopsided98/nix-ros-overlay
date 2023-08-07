@@ -315,15 +315,6 @@ let
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
     });
 
-    rviz-ogre-vendor = rosSuper.rviz-ogre-vendor.overrideAttrs ({
-      preFixup ? "", ...
-    }: {
-      preFixup = ''
-        # Prevent /build RPATH references
-        rm -r ogre_install
-      '' + preFixup;
-    });
-
     rxcpp-vendor = patchVendorUrl rosSuper.rxcpp-vendor {
       url = "https://github.com/ReactiveX/RxCpp/archive/v4.1.0.tar.gz";
       sha256 = "1smxrcm0s6bz05185dx1i2xjgn47rq7m247pblil6p3bmk3lkfyk";
@@ -345,23 +336,6 @@ let
       postFixup = ''
         wrapQtApp "$out/lib/swri_profiler_tools/profiler"
       '';
-    });
-
-    swri-transform-util = (rosSuper.swri-transform-util.override {
-      # PROJ 8 finally removed the deprecated proj_api.h header
-      proj = self.proj_7;
-    }).overrideAttrs ({
-      patches ? [], CXXFLAGS ? "", ...
-    }: {
-      # Use CMake to find PROJ
-      # https://github.com/swri-robotics/marti_common/pull/649
-      patches = patches ++ [ (self.fetchpatch {
-        url = "https://github.com/swri-robotics/marti_common/commit/6f8dbca5d4adaca84823249fde8bec3360ab1fb8.patch";
-        stripLen = 1;
-        sha256 = "sha256-kO4U26RttaC5mEhsCqtZV5rUlS0QIaA6I7Bhxlnb8d8=";
-      }) ];
-
-      CXXFLAGS = CXXFLAGS + " -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H";
     });
 
     tf = patchBoostSignals rosSuper.tf;

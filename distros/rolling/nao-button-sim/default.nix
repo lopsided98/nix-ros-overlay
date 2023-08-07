@@ -2,20 +2,20 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, nao-sensor-msgs, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, nao-lola-sensor-msgs, pythonPackages }:
 buildRosPackage {
   pname = "ros-rolling-nao-button-sim";
-  version = "0.1.1-r4";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nao_button_sim-release/archive/release/rolling/nao_button_sim/0.1.1-4.tar.gz";
-    name = "0.1.1-4.tar.gz";
-    sha256 = "3b815d3335333cda164deacf7208b4ea367e98e125844d4a832dbcbe4c8b3bc0";
+    url = "https://github.com/ros2-gbp/nao_button_sim-release/archive/release/rolling/nao_button_sim/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "fcce4aedc76b057cce39fe6350429e16218438b40f5cfea44a13b42596ffeae1";
   };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
-  propagatedBuildInputs = [ nao-sensor-msgs ];
+  propagatedBuildInputs = [ nao-lola-sensor-msgs ];
 
   meta = {
     description = ''Allows simulating button presses through command line interface'';

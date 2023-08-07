@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, nao-command-msgs, nao-sensor-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-nao-lola";
-  version = "0.3.1-r1";
+  version = "1.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nao_lola-release/archive/release/rolling/nao_lola/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "1cb69731328dda40eea84ccfc9c046a8fc8ff91788811975100846805fe03e97";
+    url = "https://github.com/ros2-gbp/nao_lola-release/archive/release/rolling/nao_lola/1.1.0-2.tar.gz";
+    name = "1.1.0-2.tar.gz";
+    sha256 = "171fccbd4272d8645fe9a25dec4cd8538f46dc28f2c422a6b6a36290575461dd";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Packages that allow communicating with the NAO’s Lola middle-ware.'';
+    description = ''Packages that allow communicating with the NAO's Lola middle-ware.'';
     license = with lib.licenses; [ asl20 ];
   };
 }

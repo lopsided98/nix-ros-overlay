@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, plansys2-msgs, plansys2-pddl-parser, pluginlib, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-iron-plansys2-core";
-  version = "2.0.10-r1";
+  version = "2.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/iron/plansys2_core/2.0.10-1.tar.gz";
-    name = "2.0.10-1.tar.gz";
-    sha256 = "0cb8a01cd8583d39ee75f4900351f6d70cdbecd852a23cacd2dc63fc8975895a";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/iron/plansys2_core/2.0.11-1.tar.gz";
+    name = "2.0.11-1.tar.gz";
+    sha256 = "0dd3e30bd84b5b69725040acf5515d8380cd2423e89a59bf5c524e322798fefe";
   };
 
   buildType = "ament_cmake";

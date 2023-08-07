@@ -102,6 +102,8 @@ self: super: {
 
  ament-cmake-uncrustify = self.callPackage ./ament-cmake-uncrustify {};
 
+ ament-cmake-vendor-package = self.callPackage ./ament-cmake-vendor-package {};
+
  ament-cmake-version = self.callPackage ./ament-cmake-version {};
 
  ament-cmake-xmllint = self.callPackage ./ament-cmake-xmllint {};
@@ -1766,6 +1768,8 @@ self: super: {
 
  rviz-assimp-vendor = self.callPackage ./rviz-assimp-vendor {};
 
+ rviz-common = self.callPackage ./rviz-common {};
+
  rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
@@ -1801,6 +1805,12 @@ self: super: {
  shape-msgs = self.callPackage ./shape-msgs {};
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
+
+ sick-safetyscanners2 = self.callPackage ./sick-safetyscanners2 {};
+
+ sick-safetyscanners2-interfaces = self.callPackage ./sick-safetyscanners2-interfaces {};
+
+ sick-safetyscanners-base = self.callPackage ./sick-safetyscanners-base {};
 
  simple-actions = self.callPackage ./simple-actions {};
 

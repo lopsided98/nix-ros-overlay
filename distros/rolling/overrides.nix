@@ -48,6 +48,15 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
+  lely-core-libraries = patchVendorGit rosSuper.lely-core-libraries {
+    url = "https://gitlab.com/lely_industries/lely-core.git";
+    fetchgitArgs = {
+      rev = "7824cbb2ac08d091c4fa2fb397669b938de9e3f5";
+      sha256 = "sha256-Ykmnz/zlEXmkyRO9AHMprML7uKbNer2zu4i9PDHfgxw=";
+      leaveDotGit = true;
+    };
+  };
+
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
     url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.13.20230224.tar.gz";
     sha256 = "sha256-HQeVEQUX6xjIBkcoh8r8hh3QtqHBBFJGxVW8R/a9d+M=";
@@ -64,9 +73,24 @@ rosSelf: rosSuper: with rosSelf.lib; {
     };
   };
 
-  rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
-    url = "https://github.com/OGRECave/ogre/archive/v1.12.10.zip";
-    sha256 = "sha256-lZDLywgShlWeWah7oTnyKBTqzN505LJKbQbgXRfJXlk=";
+  rviz-ogre-vendor = patchAmentVendorGit rosSuper.rviz-ogre-vendor {
+    url = "https://github.com/OGRECave/ogre.git";
+    rev = "v1.12.10";
+    fetchgitArgs.hash = "sha256-Z0ixdSmkV93coBBVZ5R3lPLfVMXRfWsFz/RsSyqPWFY=";
+    tarSourceArgs.hook = let
+      version = "1.79";
+      imgui = (self.fetchFromGitHub rec {
+        name = "${repo}-${version}";
+        owner = "ocornut";
+        repo = "imgui";
+        rev = "v${version}";
+        hash = "sha256-GIVhZ8Q7WebfHeKeJdVABXrTT26FOS7updncbv2LRnQ=";
+      });
+      imguiTar = tarSource { } imgui;
+    in ''
+      substituteInPlace Components/Overlay/CMakeLists.txt \
+        --replace ${escapeShellArg imgui.url} file://${escapeShellArg imguiTar}
+    '';
   };
 
   urdfdom = rosSuper.urdfdom.overrideAttrs ({
