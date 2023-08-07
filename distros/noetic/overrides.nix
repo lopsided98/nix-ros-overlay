@@ -205,4 +205,15 @@ rosSelf: rosSuper: with rosSelf.lib; {
     cmakeFlags = cmakeFlags ++ [ "-DCMAKE_INCLUDE_PATH=${self.suitesparse}/lib" ];
     buildInputs = buildInputs ++ [ self.suitesparse ];
   });
+
+  canopen-master = rosSuper.canopen-master.overrideAttrs ({
+    patches ? [],...
+  }: {
+    # fix: error: 'set' in namespace 'std' does not name a template type
+    # https://github.com/ros-industrial/ros_canopen/pull/480
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://gist.githubusercontent.com/muellerbernd/0e1a7da0e054ac7cc957f1e2026de418/raw/b6788be851b08a2c2f58189f96381ee77181a598/canopen-master-include-set.patch";
+      hash = "sha256-xjkMzavqCLQaGsKpF32mp0thxDgovnHJFLB7B0j1et0=";
+    }) ];
+  });
 }
