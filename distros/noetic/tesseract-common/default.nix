@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, clang, cmake, console-bridge, eigen, gtest, lcov, libyamlcpp, ros-industrial-cmake-boilerplate, tinyxml-2 }:
+{ lib, buildRosPackage, fetchurl, boost, clang, cmake, console-bridge, eigen, gtest, lcov, ros-industrial-cmake-boilerplate, tinyxml-2, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-tesseract-common";
   version = "0.18.1-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "cmake";
   buildInputs = [ cmake ros-industrial-cmake-boilerplate ];
   checkInputs = [ clang gtest lcov ];
-  propagatedBuildInputs = [ boost console-bridge eigen libyamlcpp tinyxml-2 ];
+  propagatedBuildInputs = [ boost console-bridge eigen tinyxml-2 yaml-cpp ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

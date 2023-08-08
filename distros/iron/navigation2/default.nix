@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-amcl, nav2-behavior-tree, nav2-behaviors, nav2-bt-navigator, nav2-collision-monitor, nav2-constrained-smoother, nav2-controller, nav2-core, nav2-costmap-2d, nav2-dwb-controller, nav2-lifecycle-manager, nav2-map-server, nav2-mppi-controller, nav2-msgs, nav2-navfn-planner, nav2-planner, nav2-regulated-pure-pursuit-controller, nav2-rotation-shim-controller, nav2-rviz-plugins, nav2-simple-commander, nav2-smac-planner, nav2-smoother, nav2-theta-star-planner, nav2-util, nav2-velocity-smoother, nav2-voxel-grid, nav2-waypoint-follower }:
 buildRosPackage {
   pname = "ros-iron-navigation2";
-  version = "1.2.1-r1";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/navigation2/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "d04956c2f3aec0db4a3329ca8954b36ce003ea3caec49b082a6ffab660f7e491";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/navigation2/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "e01343fd78ecaa08a341a5f03020e3992c229b565fb87e75ab1dc828c1656055";
   };
 
   buildType = "ament_cmake";

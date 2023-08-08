@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, nav-msgs, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-iron-nav2-planner";
-  version = "1.2.1-r1";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_planner/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "1a6424e5064c462ff16a064914c9d535be0eb967fca3b08669c10a4930c718de";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_planner/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "dcc344dab6fa980f88eb906845a112737947c2dda9195e1506888f8d927f43e5";
   };
 
   buildType = "ament_cmake";

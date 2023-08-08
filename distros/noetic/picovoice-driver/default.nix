@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib, catkin, ddynamic-reconfigure, libsndfile, libyamlcpp, picovoice-msgs, roscpp, roslib }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, ddynamic-reconfigure, libsndfile, picovoice-msgs, roscpp, roslib, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-picovoice-driver";
   version = "1.0.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ actionlib ddynamic-reconfigure libsndfile libyamlcpp picovoice-msgs roscpp roslib ];
+  propagatedBuildInputs = [ actionlib ddynamic-reconfigure libsndfile picovoice-msgs roscpp roslib yaml-cpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

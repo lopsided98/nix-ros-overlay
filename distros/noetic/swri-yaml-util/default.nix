@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, libyamlcpp, pkg-config, roscpp }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, pkg-config, roscpp, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-swri-yaml-util";
   version = "2.15.2-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin pkg-config ];
-  propagatedBuildInputs = [ boost libyamlcpp roscpp ];
+  propagatedBuildInputs = [ boost roscpp yaml-cpp ];
   nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {

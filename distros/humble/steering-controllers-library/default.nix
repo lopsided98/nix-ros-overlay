@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-msgs, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-test-assets, std-srvs, tf2, tf2-geometry-msgs, tf2-msgs }:
 buildRosPackage {
   pname = "ros-humble-steering-controllers-library";
-  version = "2.23.0-r1";
+  version = "2.24.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/steering_controllers_library/2.23.0-1.tar.gz";
-    name = "2.23.0-1.tar.gz";
-    sha256 = "5f6cf93e53322fa66db3299aaa4235cda0b4e8fcd31a4b8ac338101d32d8b664";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/steering_controllers_library/2.24.0-1.tar.gz";
+    name = "2.24.0-1.tar.gz";
+    sha256 = "a1dcd92a525ba7f728a403e67abef3be9bca98b1038e6c5795ce1eba92b5c774";
   };
 
   buildType = "ament_cmake";
