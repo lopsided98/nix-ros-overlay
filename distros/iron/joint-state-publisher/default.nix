@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-xmllint, launch-testing, launch-testing-ros, pythonPackages, rclpy, ros2topic, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-joint-state-publisher";
-  version = "2.3.0-r3";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joint_state_publisher-release/archive/release/iron/joint_state_publisher/2.3.0-3.tar.gz";
-    name = "2.3.0-3.tar.gz";
-    sha256 = "b0afefb75839a250355afc8baeee1412fba687a8d977357f560cd7faf568a11f";
+    url = "https://github.com/ros2-gbp/joint_state_publisher-release/archive/release/iron/joint_state_publisher/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "b2ae780da6ca9be6bdf7181f8cf863990f97f50a3091fea01e3c297137b0cc7e";
   };
 
   buildType = "ament_python";

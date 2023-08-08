@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, geometry-msgs, nav2-common, nav2-controller, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-regulated-pure-pursuit-controller, nav2-util, pluginlib, rclcpp, tf2 }:
 buildRosPackage {
   pname = "ros-iron-nav2-rotation-shim-controller";
-  version = "1.2.1-r1";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_rotation_shim_controller/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "b99955aad2bba8d2a4b9d613ff208c2218c941680c9ecacc7b3b50da703469af";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_rotation_shim_controller/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "e30070a8977297c4bb8a51734dda498eb0495ee9a1796cbc9947f91350afdf83";
   };
 
   buildType = "ament_cmake";

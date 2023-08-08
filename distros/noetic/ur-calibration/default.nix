@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, eigen, libyamlcpp, roscpp, rosunit, ur-client-library, ur-robot-driver }:
+{ lib, buildRosPackage, fetchurl, catkin, eigen, roscpp, rosunit, ur-client-library, ur-robot-driver, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-ur-calibration";
   version = "2.1.2-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ catkin ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ eigen libyamlcpp roscpp ur-client-library ur-robot-driver ];
+  propagatedBuildInputs = [ eigen roscpp ur-client-library ur-robot-driver yaml-cpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

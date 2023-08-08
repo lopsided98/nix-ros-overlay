@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, SDL, SDL_image, bullet, catkin, libyamlcpp, nav-msgs, roscpp, roslib, rospy, rostest, rosunit, tf2 }:
+{ lib, buildRosPackage, fetchurl, SDL, SDL_image, bullet, catkin, nav-msgs, roscpp, roslib, rospy, rostest, rosunit, tf2, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-map-server";
   version = "1.17.3-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ catkin ];
   checkInputs = [ roslib rospy rostest rosunit ];
-  propagatedBuildInputs = [ SDL SDL_image bullet libyamlcpp nav-msgs roscpp tf2 ];
+  propagatedBuildInputs = [ SDL SDL_image bullet nav-msgs roscpp tf2 yaml-cpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

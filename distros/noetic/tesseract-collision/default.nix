@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, bullet, cmake, console-bridge, eigen, fcl, gbenchmark, gtest, libyamlcpp, ros-industrial-cmake-boilerplate, tesseract-common, tesseract-geometry, tesseract-scene-graph, tesseract-support }:
+{ lib, buildRosPackage, fetchurl, boost, bullet, cmake, console-bridge, eigen, fcl, gbenchmark, gtest, ros-industrial-cmake-boilerplate, tesseract-common, tesseract-geometry, tesseract-scene-graph, tesseract-support, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-tesseract-collision";
   version = "0.18.1-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "cmake";
   buildInputs = [ cmake ros-industrial-cmake-boilerplate ];
   checkInputs = [ gbenchmark gtest tesseract-scene-graph ];
-  propagatedBuildInputs = [ boost bullet console-bridge eigen fcl libyamlcpp tesseract-common tesseract-geometry tesseract-support ];
+  propagatedBuildInputs = [ boost bullet console-bridge eigen fcl tesseract-common tesseract-geometry tesseract-support yaml-cpp ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

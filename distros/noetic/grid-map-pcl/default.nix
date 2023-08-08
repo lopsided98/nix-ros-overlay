@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, grid-map-core, grid-map-msgs, grid-map-ros, gtest, libyamlcpp, pcl, pcl-ros, roscpp }:
+{ lib, buildRosPackage, fetchurl, catkin, grid-map-core, grid-map-msgs, grid-map-ros, gtest, pcl, pcl-ros, roscpp, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-grid-map-pcl";
   version = "1.6.4-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ catkin ];
   checkInputs = [ gtest ];
-  propagatedBuildInputs = [ grid-map-core grid-map-msgs grid-map-ros libyamlcpp pcl pcl-ros roscpp ];
+  propagatedBuildInputs = [ grid-map-core grid-map-msgs grid-map-ros pcl pcl-ros roscpp yaml-cpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

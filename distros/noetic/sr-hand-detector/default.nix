@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, libyamlcpp, roscpp, roslib, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, roscpp, roslib, rostest, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-sr-hand-detector";
   version = "0.0.9-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ catkin ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ libyamlcpp roscpp roslib ];
+  propagatedBuildInputs = [ roscpp roslib yaml-cpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

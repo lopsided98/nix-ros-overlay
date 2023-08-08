@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, angles, ceres-solver, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-iron-nav2-constrained-smoother";
-  version = "1.2.1-r1";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_constrained_smoother/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "73d2fb720d53be37fd117e5edaa3870b21d4944e0ea5d8aa35a967f343670704";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_constrained_smoother/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "fec6b701812c9b3b68f0ab36c343c8304803f918c616c46bf531842f9b73dbc1";
   };
 
   buildType = "ament_cmake";

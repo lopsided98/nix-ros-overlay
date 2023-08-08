@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gtest, ament-cmake-uncrustify, ament-lint-auto, boost, builtin-interfaces, ceres-solver, eigen, interactive-markers, launch, launch-testing, liblapack, message-filters, nav-msgs, nav2-map-server, pluginlib, qt5, rclcpp, rosidl-default-generators, rviz-common, rviz-default-plugins, rviz-ogre-vendor, rviz-rendering, sensor-msgs, std-msgs, std-srvs, suitesparse, tbb, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-slam-toolbox";
-  version = "2.6.4-r1";
+  version = "2.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/slam_toolbox-release/archive/release/humble/slam_toolbox/2.6.4-1.tar.gz";
-    name = "2.6.4-1.tar.gz";
-    sha256 = "347a14b83e8e5c073f244ba0daf4b3d0d9927e2d964310e49040da53a1213df9";
+    url = "https://github.com/SteveMacenski/slam_toolbox-release/archive/release/humble/slam_toolbox/2.6.5-1.tar.gz";
+    name = "2.6.5-1.tar.gz";
+    sha256 = "b2b6dbec2cf653dd25c892a81085a1984d54ed1eedc0ae55a24e0679c0a162e9";
   };
 
   buildType = "ament_cmake";

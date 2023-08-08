@@ -1848,6 +1848,8 @@ self: super: {
 
  tf-transformations = self.callPackage ./tf-transformations {};
 
+ theora-image-transport = self.callPackage ./theora-image-transport {};
+
  tinyspline-vendor = self.callPackage ./tinyspline-vendor {};
 
  tinyxml2-vendor = self.callPackage ./tinyxml2-vendor {};

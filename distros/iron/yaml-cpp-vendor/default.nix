@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, libyamlcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, yaml-cpp }:
 buildRosPackage {
   pname = "ros-iron-yaml-cpp-vendor";
   version = "8.1.2-r3";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ libyamlcpp ];
+  propagatedBuildInputs = [ yaml-cpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
