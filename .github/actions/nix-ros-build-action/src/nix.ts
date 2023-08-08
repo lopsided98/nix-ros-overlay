@@ -12,7 +12,7 @@ const execFile = util.promisify(childProcess.execFile)
 export async function listAttrs(
   file: string,
   parentAttr: string
-): Promise<Array<string>> {
+): Promise<string[]> {
   const { stdout } = await execFile('nix-instantiate', [
     '--eval', '--json', '-E',
     `with (import (./. + "/${file}") {}); builtins.attrNames (${parentAttr})`
@@ -20,20 +20,20 @@ export async function listAttrs(
   return JSON.parse(stdout).map((a: string) => `${parentAttr}.${a}`)
 }
 
-function parseLines(lines: string): Array<string> {
+function parseLines(lines: string): string[] {
   return lines.split('\n')
     .map(r => r.trim())
     .filter(r => r !== '')
 }
 
-export async function getRequisites(drvPath: string): Promise<Array<string>> {
+export async function getRequisites(drvPath: string): Promise<string[]> {
   const { stdout: requisites } = await execFile(
     'nix-store', ['--query', '--requisites', drvPath]
   )
   return parseLines(requisites)
 }
 
-export async function getOutputs(drvPath: string): Promise<Array<string>> {
+export async function getOutputs(drvPath: string): Promise<string[]> {
   const { stdout: outputs } = await execFile(
     'nix-store', ['--query', '--outputs', drvPath]
   )
@@ -74,7 +74,7 @@ export async function instantiate(
   attribute: string,
   drvDir: string,
   system?: string
-): Promise<Array<string>> {
+): Promise<string[]> {
   let args = [
     file, '-A', attribute,
     '--add-root', path.join(drvDir, attribute), '--indirect'
@@ -85,7 +85,7 @@ export async function instantiate(
   let drvPaths
   try {
     drvPaths = (await execFile('nix-instantiate', args)).stdout
-  } catch (e) {
+  } catch (e: any) {
     throw e.stderr
   }
   return parseLines(drvPaths)
@@ -95,10 +95,10 @@ export async function realize(
   drvPath: string,
   attribute: string,
   resultDir: string
-): Promise<string> {
-  const { stdout: resultPath } = await execFile('nix-store', [
+): Promise<string[]> {
+  const { stdout: resultPaths } = await execFile('nix-store', [
     '--realise', drvPath, '--no-build-output',
     '--add-root', path.join(resultDir, attribute), '--indirect'
   ])
-  return resultPath.trim()
+  return parseLines(resultPaths)
 }

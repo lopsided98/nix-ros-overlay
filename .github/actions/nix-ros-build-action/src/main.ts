@@ -60,10 +60,10 @@ class PackageSet {
 
   private async buildPackage(attr: string): Promise<BuildResult> {
     core.debug(`Instantiating ${attr}`)
-    let drvPaths: Array<string>
+    let drvPaths: string[]
     try {
       drvPaths = await nix.instantiate(this.nixFile, attr, this.drvDir, this.system)
-    } catch (e) {
+    } catch (e: any) {
       core.debug(`${attr} failed to evaluate`)
       return {
         status: BuildStatus.EVALUATION_FAILURE,
@@ -113,10 +113,10 @@ class PackageSet {
     }
 
     core.debug(`Building ${attr} (${drvPath})`)
-    let resultPath: string
+    let resultPaths: string[]
     try {
-      resultPath = await nix.realize(drvPath, attr, this.resultDir)
-    } catch (e) {
+      resultPaths = await nix.realize(drvPath, attr, this.resultDir)
+    } catch (e: any) {
       this.failedPackages.set(drvPath, attr)
       core.debug(`${attr} (${drvPath}) failed to build`)
       // Get last 10 lines of stderr
@@ -128,7 +128,7 @@ class PackageSet {
     }
 
     core.debug(`Pushing ${attr} (${drvPath})`)
-    await cachix.push(this.cachixCache, [resultPath])
+    await cachix.push(this.cachixCache, resultPaths)
     return {
       status: BuildStatus.SUCCESS,
       attr, drvPath,
@@ -243,7 +243,7 @@ async function run() {
     statusResults.get(BuildStatus.CACHED)!
       .forEach(r => core.info(`${r.attr} (${r.drvPath})`));
     core.endGroup()
-  } catch (error) {
+  } catch (error: any) {
     core.setFailed(error.message)
   }
 }

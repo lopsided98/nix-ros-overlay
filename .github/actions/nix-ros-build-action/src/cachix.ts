@@ -11,6 +11,6 @@ export async function query(name: string, drvPath: string) {
         drvPath, `https://${name}.cachix.org`)
 }
 
-export async function push(name: string, paths: Array<string>) {
+export async function push(name: string, paths: string[]) {
     await execFile('cachix', ['push', name].concat(paths))
 }
