@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, libyamlcpp, map-server, nav-core2, nav-msgs, pluginlib, roscpp, roslint }:
+{ lib, buildRosPackage, fetchurl, catkin, map-server, nav-core2, nav-msgs, pluginlib, roscpp, roslint, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-global-planner-tests";
   version = "0.3.0-r2";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ catkin ];
   checkInputs = [ roslint ];
-  propagatedBuildInputs = [ libyamlcpp map-server nav-core2 nav-msgs pluginlib roscpp ];
+  propagatedBuildInputs = [ map-server nav-core2 nav-msgs pluginlib roscpp yaml-cpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

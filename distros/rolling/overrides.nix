@@ -63,8 +63,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
   };
 
   mcap-vendor = patchVendorGit (patchVendorUrl rosSuper.mcap-vendor {
-    url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v0.8.0.tar.gz";
-    sha256 = "sha256-KDP3I0QwjqWGOfOzY6DPF2aVgK56tDX0PzsQTP9u9Ug=";
+    url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.1.0.tar.gz";
+    hash = "sha256-HLKuny6RDusuk7OrcidE0YBbnaRXZOT9iHA7ZpQTNQ0=";
   }) {
     url = "https://github.com/lz4/lz4.git";
     fetchgitArgs = {

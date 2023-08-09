@@ -1508,7 +1508,13 @@ self: super: {
 
  raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
 
+ raspimouse-navigation = self.callPackage ./raspimouse-navigation {};
+
  raspimouse-ros2-examples = self.callPackage ./raspimouse-ros2-examples {};
+
+ raspimouse-slam = self.callPackage ./raspimouse-slam {};
+
+ raspimouse-slam-navigation = self.callPackage ./raspimouse-slam-navigation {};
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
@@ -2223,6 +2229,8 @@ self: super: {
  tf2-tools = self.callPackage ./tf2-tools {};
 
  tf-transformations = self.callPackage ./tf-transformations {};
+
+ theora-image-transport = self.callPackage ./theora-image-transport {};
 
  tiago-2dnav = self.callPackage ./tiago-2dnav {};
 

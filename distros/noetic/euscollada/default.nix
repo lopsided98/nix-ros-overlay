@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, assimp-devel, catkin, cmake-modules, collada-dom, collada-parser, collada-urdf, libyamlcpp, mk, openhrp3, pr2-description, qhull, resource-retriever, rosboost-cfg, rosbuild, roscpp, roseus, rospack, rostest, tf, urdf, urdfdom }:
+{ lib, buildRosPackage, fetchurl, assimp-devel, catkin, cmake-modules, collada-dom, collada-parser, collada-urdf, mk, openhrp3, pr2-description, qhull, resource-retriever, rosboost-cfg, rosbuild, roscpp, roseus, rospack, rostest, tf, urdf, urdfdom, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-euscollada";
   version = "0.4.4-r2";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules mk rosboost-cfg rosbuild ];
   checkInputs = [ openhrp3 pr2-description roseus ];
-  propagatedBuildInputs = [ assimp-devel collada-dom collada-parser collada-urdf libyamlcpp qhull resource-retriever roscpp rospack rostest tf urdf urdfdom ];
+  propagatedBuildInputs = [ assimp-devel collada-dom collada-parser collada-urdf qhull resource-retriever roscpp rospack rostest tf urdf urdfdom yaml-cpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

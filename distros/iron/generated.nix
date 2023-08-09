@@ -1752,6 +1752,34 @@ self: super: {
 
  rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
 
+ rtabmap = self.callPackage ./rtabmap {};
+
+ rtabmap-conversions = self.callPackage ./rtabmap-conversions {};
+
+ rtabmap-demos = self.callPackage ./rtabmap-demos {};
+
+ rtabmap-examples = self.callPackage ./rtabmap-examples {};
+
+ rtabmap-launch = self.callPackage ./rtabmap-launch {};
+
+ rtabmap-msgs = self.callPackage ./rtabmap-msgs {};
+
+ rtabmap-odom = self.callPackage ./rtabmap-odom {};
+
+ rtabmap-python = self.callPackage ./rtabmap-python {};
+
+ rtabmap-ros = self.callPackage ./rtabmap-ros {};
+
+ rtabmap-rviz-plugins = self.callPackage ./rtabmap-rviz-plugins {};
+
+ rtabmap-slam = self.callPackage ./rtabmap-slam {};
+
+ rtabmap-sync = self.callPackage ./rtabmap-sync {};
+
+ rtabmap-util = self.callPackage ./rtabmap-util {};
+
+ rtabmap-viz = self.callPackage ./rtabmap-viz {};
+
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
 
  rti-connext-dds-cmake-module = self.callPackage ./rti-connext-dds-cmake-module {};
@@ -1971,6 +1999,8 @@ self: super: {
  tf2-tools = self.callPackage ./tf2-tools {};
 
  tf-transformations = self.callPackage ./tf-transformations {};
+
+ theora-image-transport = self.callPackage ./theora-image-transport {};
 
  tile-map = self.callPackage ./tile-map {};
 

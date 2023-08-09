@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, angles, catkin, diagnostic-updater, dynamic-reconfigure, eigen, libyamlcpp, nodelet, roscpp, roslaunch, roslib, roslint, rostest, rosunit, sensor-msgs, tf2-ros, velodyne-driver, velodyne-laserscan, velodyne-msgs }:
+{ lib, buildRosPackage, fetchurl, angles, catkin, diagnostic-updater, dynamic-reconfigure, eigen, nodelet, roscpp, roslaunch, roslib, roslint, rostest, rosunit, sensor-msgs, tf2-ros, velodyne-driver, velodyne-laserscan, velodyne-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-velodyne-pointcloud";
   version = "1.7.0-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ catkin roslint ];
   checkInputs = [ roslaunch rostest rosunit tf2-ros ];
-  propagatedBuildInputs = [ angles diagnostic-updater dynamic-reconfigure eigen libyamlcpp nodelet roscpp roslib sensor-msgs tf2-ros velodyne-driver velodyne-laserscan velodyne-msgs ];
+  propagatedBuildInputs = [ angles diagnostic-updater dynamic-reconfigure eigen nodelet roscpp roslib sensor-msgs tf2-ros velodyne-driver velodyne-laserscan velodyne-msgs yaml-cpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

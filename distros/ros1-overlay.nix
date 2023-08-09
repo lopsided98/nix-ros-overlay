@@ -1,6 +1,19 @@
 self:
 rosSelf: rosSuper: with rosSelf.lib; {
 
+  # Fix usages of global Boost placeholders
+  # https://github.com/ros/actionlib/pull/197
+  actionlib = rosSuper.actionlib.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/lopsided98/actionlib/commit/d675dd75d9080d2832591e0220d19e0f0d981446.patch";
+      stripLen = 1;
+      includes = [ "include/*" ];
+      sha256 = "sha256-bB8PkiDisgBgZoDyieiT1dSQK/xSfG8ZZOJyigX0SYY=";
+    }) ];
+  });
+
   catkin = rosSuper.catkin.overrideAttrs ({
     propagatedBuildInputs ? [],
     patches ? [],

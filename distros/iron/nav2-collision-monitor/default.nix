@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nav2-common, nav2-costmap-2d, nav2-msgs, nav2-util, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-nav2-collision-monitor";
-  version = "1.2.1-r1";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_collision_monitor/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "7ee3bd6fd23d315127127db27b17fab854f94d5abc74596593713ae6ea15f351";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_collision_monitor/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "c973395d3ce953fda85491647a292117f98fd30d7155b1990265d50d552bf40c";
   };
 
   buildType = "ament_cmake";

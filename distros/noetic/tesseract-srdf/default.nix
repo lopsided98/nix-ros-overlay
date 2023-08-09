@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, console-bridge, eigen, gtest, libyamlcpp, ros-industrial-cmake-boilerplate, tesseract-common, tesseract-scene-graph, tesseract-support }:
+{ lib, buildRosPackage, fetchurl, cmake, console-bridge, eigen, gtest, ros-industrial-cmake-boilerplate, tesseract-common, tesseract-scene-graph, tesseract-support, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-tesseract-srdf";
   version = "0.18.1-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "cmake";
   buildInputs = [ cmake ros-industrial-cmake-boilerplate ];
   checkInputs = [ gtest tesseract-support ];
-  propagatedBuildInputs = [ console-bridge eigen libyamlcpp tesseract-common tesseract-scene-graph ];
+  propagatedBuildInputs = [ console-bridge eigen tesseract-common tesseract-scene-graph yaml-cpp ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

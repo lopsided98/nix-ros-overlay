@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, libpcap, libyamlcpp, pcl, pcl-conversions, pcl-ros, roscpp, sensor-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, libpcap, pcl, pcl-conversions, pcl-ros, roscpp, sensor-msgs, std-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-rslidar-sdk";
   version = "1.3.2-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ libpcap libyamlcpp pcl pcl-conversions pcl-ros roscpp sensor-msgs std-msgs ];
+  propagatedBuildInputs = [ libpcap pcl pcl-conversions pcl-ros roscpp sensor-msgs std-msgs yaml-cpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

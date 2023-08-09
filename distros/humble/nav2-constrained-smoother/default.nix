@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, angles, ceres-solver, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-nav2-constrained-smoother";
-  version = "1.1.8-r2";
+  version = "1.1.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_constrained_smoother/1.1.8-2.tar.gz";
-    name = "1.1.8-2.tar.gz";
-    sha256 = "1cf7e74f87e78c72b7825bee1073f837bcc7b3f91f78b9f238d758048f95bb97";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_constrained_smoother/1.1.9-1.tar.gz";
+    name = "1.1.9-1.tar.gz";
+    sha256 = "e4cebb590924fae49146ad5adbac761c76c42fa3e076a6d88a05ac4ab2c2c0d3";
   };
 
   buildType = "ament_cmake";

@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, libyamlcpp, roscpp, sensor-msgs, std-srvs, trajectory-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, roscpp, sensor-msgs, std-srvs, trajectory-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-dynamixel-workbench-operators";
   version = "2.2.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ cmake-modules geometry-msgs libyamlcpp roscpp sensor-msgs std-srvs trajectory-msgs ];
+  propagatedBuildInputs = [ cmake-modules geometry-msgs roscpp sensor-msgs std-srvs trajectory-msgs yaml-cpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
