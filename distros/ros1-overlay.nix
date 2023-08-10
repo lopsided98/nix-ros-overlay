@@ -53,6 +53,19 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
+  costmap-converter = rosSuper.costmap-converter.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix build with OpenCV 4.7.0
+      # https://github.com/rst-tu-dortmund/costmap_converter/pull/41
+      (self.fetchpatch {
+        url = "https://github.com/lopsided98/costmap_converter/commit/cb6af72f331a881fb399e651d6c9aaaf536a63e3.patch";
+        hash = "sha256-ifpALB/poc8rFeuLGXz5YPcZT37hex1pwG+6G6V/FtA=";
+      })
+    ];
+  });
+
   fcl-catkin = patchVendorUrl rosSuper.fcl-catkin {
     url = "https://github.com/flexible-collision-library/fcl/archive/v0.6.1.zip";
     sha256 = "0nryr4hg3lha1aaz35wbqr42lb6l8alfcy6slj2yn2dgb5syrmn2";
