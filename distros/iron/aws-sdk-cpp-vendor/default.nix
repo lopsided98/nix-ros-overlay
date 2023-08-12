@@ -1,0 +1,26 @@
+
+# Copyright 2023 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-lint-auto, ament-lint-common, curl, openssl }:
+buildRosPackage {
+  pname = "ros-iron-aws-sdk-cpp-vendor";
+  version = "0.1.0-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/aws_sdk_cpp_vendor-release/archive/release/iron/aws_sdk_cpp_vendor/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
+    sha256 = "ef2dfbce2f3efe0aba47e345c47b5ebe97c5865a8c9b85349d0d8486c0839434";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ament-cmake-vendor-package curl ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ openssl ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package curl ];
+
+  meta = {
+    description = ''A vendor package for aws-sdk-cpp'';
+    license = with lib.licenses; [ asl20 ];
+  };
+}
