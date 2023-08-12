@@ -242,6 +242,8 @@ self: super: {
 
  aws-robomaker-small-warehouse-world = self.callPackage ./aws-robomaker-small-warehouse-world {};
 
+ aws-sdk-cpp-vendor = self.callPackage ./aws-sdk-cpp-vendor {};
+
  backward-ros = self.callPackage ./backward-ros {};
 
  bag2-to-image = self.callPackage ./bag2-to-image {};
@@ -1198,6 +1200,8 @@ self: super: {
 
  nav2-map-server = self.callPackage ./nav2-map-server {};
 
+ nav2-mppi-controller = self.callPackage ./nav2-mppi-controller {};
+
  nav2-msgs = self.callPackage ./nav2-msgs {};
 
  nav2-navfn-planner = self.callPackage ./nav2-navfn-planner {};
@@ -2107,6 +2111,10 @@ self: super: {
  soccer-vision-3d-msgs = self.callPackage ./soccer-vision-3d-msgs {};
 
  soccer-vision-attribute-msgs = self.callPackage ./soccer-vision-attribute-msgs {};
+
+ social-nav-msgs = self.callPackage ./social-nav-msgs {};
+
+ social-nav-util = self.callPackage ./social-nav-util {};
 
  sol-vendor = self.callPackage ./sol-vendor {};
 

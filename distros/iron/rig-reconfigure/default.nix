@@ -2,20 +2,20 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, git, glfw3, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, git, glfw3, rclcpp }:
 buildRosPackage {
   pname = "ros-iron-rig-reconfigure";
-  version = "1.1.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rig_reconfigure-release/archive/release/iron/rig_reconfigure/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "1ebaff0aeecdebd82fde14b52ad6a6cf8c6b64b01030c51fdeab8b702f7f5e1a";
+    url = "https://github.com/ros2-gbp/rig_reconfigure-release/archive/release/iron/rig_reconfigure/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "71375046e2c7dc61eb42bf6d59d6bbae2f9f410b3c09b8bec2d301b4b95b6638";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake git ];
-  propagatedBuildInputs = [ glfw3 rclcpp ];
+  propagatedBuildInputs = [ ament-index-cpp glfw3 rclcpp ];
   nativeBuildInputs = [ ament-cmake git ];
 
   meta = {

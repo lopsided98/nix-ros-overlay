@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-catch2, ament-cmake-uncrustify, boost, eigen, nlohmann-json-schema-validator-vendor, nlohmann_json, rclcpp, rmf-utils, websocketpp }:
 buildRosPackage {
   pname = "ros-iron-rmf-websocket";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/iron/rmf_websocket/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "1433f12069ebe0c169a75aabc82227aa91285123c82adf63f2e126f27a7f249d";
+    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/iron/rmf_websocket/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "5659aa6bea4ef57132770471d70be347a0c57f20ea7e66041026363eaa964f02";
   };
 
   buildType = "ament_cmake";

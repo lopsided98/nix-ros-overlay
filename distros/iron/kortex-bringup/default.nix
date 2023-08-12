@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, controller-manager, gazebo-ros2-control, gripper-controllers, joint-state-broadcaster, joint-state-publisher, joint-trajectory-controller, kortex-description, kortex-driver, launch, launch-ros, rclpy, robotiq-description, rviz2, urdf, xacro }:
 buildRosPackage {
   pname = "ros-iron-kortex-bringup";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/iron/kortex_bringup/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "245626ecf6eaf80091f36665bd8f4dfe1b00eb78f1d9ffcb1c7cad5f430b26b4";
+    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/iron/kortex_bringup/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "7fea8b96990a8404cbbc209664e2ca846c25670c27c6dcd0c155cfe9454e81ce";
   };
 
   buildType = "ament_cmake";

@@ -182,6 +182,8 @@ self: super: {
 
  aws-robomaker-small-warehouse-world = self.callPackage ./aws-robomaker-small-warehouse-world {};
 
+ aws-sdk-cpp-vendor = self.callPackage ./aws-sdk-cpp-vendor {};
+
  backward-ros = self.callPackage ./backward-ros {};
 
  bag2-to-image = self.callPackage ./bag2-to-image {};
@@ -489,6 +491,24 @@ self: super: {
  filters = self.callPackage ./filters {};
 
  find-object-2d = self.callPackage ./find-object-2d {};
+
+ flexbe-behavior-engine = self.callPackage ./flexbe-behavior-engine {};
+
+ flexbe-core = self.callPackage ./flexbe-core {};
+
+ flexbe-input = self.callPackage ./flexbe-input {};
+
+ flexbe-mirror = self.callPackage ./flexbe-mirror {};
+
+ flexbe-msgs = self.callPackage ./flexbe-msgs {};
+
+ flexbe-onboard = self.callPackage ./flexbe-onboard {};
+
+ flexbe-states = self.callPackage ./flexbe-states {};
+
+ flexbe-testing = self.callPackage ./flexbe-testing {};
+
+ flexbe-widget = self.callPackage ./flexbe-widget {};
 
  fluent-rviz = self.callPackage ./fluent-rviz {};
 
@@ -1017,6 +1037,8 @@ self: super: {
  nav2-lifecycle-manager = self.callPackage ./nav2-lifecycle-manager {};
 
  nav2-map-server = self.callPackage ./nav2-map-server {};
+
+ nav2-mppi-controller = self.callPackage ./nav2-mppi-controller {};
 
  nav2-msgs = self.callPackage ./nav2-msgs {};
 

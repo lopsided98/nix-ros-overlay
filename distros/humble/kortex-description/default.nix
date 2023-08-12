@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher, joint-state-publisher-gui, joint-trajectory-controller, picknik-reset-fault-controller, picknik-twist-controller, robot-state-publisher, robotiq-description, rviz2 }:
 buildRosPackage {
   pname = "ros-humble-kortex-description";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/humble/kortex_description/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "b32072a36491874256a68765cb4e829647df5e35cf9c3526ca060328606f6a24";
+    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/humble/kortex_description/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "e3f435aa09fd39732151c98ccdd22c88bd92412fd1f3f5923b6627802c2c5b6f";
   };
 
   buildType = "ament_cmake";

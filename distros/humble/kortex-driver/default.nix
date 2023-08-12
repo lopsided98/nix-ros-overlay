@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, hardware-interface, kortex-api, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-kortex-driver";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/humble/kortex_driver/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "53a5047576cbb737a4bb2534bdc23aa2d226117484562dd59e9437cc71ad6867";
+    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/humble/kortex_driver/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "789bcb19f13e9f90e0bcc59a47f8e676296e8bf50fd398ca865cc43f6170704e";
   };
 
   buildType = "ament_cmake";
