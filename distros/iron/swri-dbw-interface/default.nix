@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-iron-swri-dbw-interface";
-  version = "3.5.3-r1";
+  version = "3.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_dbw_interface/3.5.3-1.tar.gz";
-    name = "3.5.3-1.tar.gz";
-    sha256 = "f103f1d462763ec0fde39344c54136f9365b96da715e7e82a5681b0346e0c2e5";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_dbw_interface/3.5.4-1.tar.gz";
+    name = "3.5.4-1.tar.gz";
+    sha256 = "b5901875c2ac349189e857b128214e2b4c2d421afa74f17ae659d3da8706ef50";
   };
 
   buildType = "ament_cmake";

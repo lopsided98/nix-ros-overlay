@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, camera-calibration-parsers, rclcpp, rclcpp-lifecycle, rcpputils, sensor-msgs }:
 buildRosPackage {
   pname = "ros-iron-camera-info-manager";
-  version = "4.2.1-r1";
+  version = "4.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/iron/camera_info_manager/4.2.1-1.tar.gz";
-    name = "4.2.1-1.tar.gz";
-    sha256 = "1853ad846e4fa3e6fc3f8965bec0155aa8198f74d28c9270ca7d52679ff89016";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/iron/camera_info_manager/4.2.2-1.tar.gz";
+    name = "4.2.2-1.tar.gz";
+    sha256 = "4a08d3e0bc3cc438afe56174d26def4ca66af38146f7fb29ab61a05c1187bf2d";
   };
 
   buildType = "ament_cmake";

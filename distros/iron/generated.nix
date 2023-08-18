@@ -1900,6 +1900,10 @@ self: super: {
 
  soccer-vision-attribute-msgs = self.callPackage ./soccer-vision-attribute-msgs {};
 
+ social-nav-msgs = self.callPackage ./social-nav-msgs {};
+
+ social-nav-util = self.callPackage ./social-nav-util {};
+
  sol-vendor = self.callPackage ./sol-vendor {};
 
  sophus = self.callPackage ./sophus {};

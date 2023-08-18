@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, boost, cv-bridge, diagnostic-msgs, diagnostic-updater, geographic-msgs, geometry-msgs, geos, gps-msgs, launch-xml, marti-nav-msgs, pkg-config, proj, python3Packages, rcl-interfaces, rclcpp, rclcpp-components, rclpy, sensor-msgs, swri-math-util, swri-roscpp, tf2, tf2-geometry-msgs, tf2-py, tf2-ros, yaml-cpp }:
 buildRosPackage {
   pname = "ros-iron-swri-transform-util";
-  version = "3.5.3-r1";
+  version = "3.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_transform_util/3.5.3-1.tar.gz";
-    name = "3.5.3-1.tar.gz";
-    sha256 = "e231c69965a0da8e88851a4814e4a6c312cc0313cf759e87bc0bc2e72375b6dd";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_transform_util/3.5.4-1.tar.gz";
+    name = "3.5.4-1.tar.gz";
+    sha256 = "64689c83a75fc01325d82133323fdc20f3b90c6a50072a3e4859d00b6a66784b";
   };
 
   buildType = "ament_cmake";

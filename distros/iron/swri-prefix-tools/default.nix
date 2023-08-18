@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, python3Packages }:
 buildRosPackage {
   pname = "ros-iron-swri-prefix-tools";
-  version = "3.5.3-r1";
+  version = "3.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_prefix_tools/3.5.3-1.tar.gz";
-    name = "3.5.3-1.tar.gz";
-    sha256 = "cc322b1fdc5bce096de19cdfcbc50674bc2d6cad7d10820b0d5544e4608fbf7e";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_prefix_tools/3.5.4-1.tar.gz";
+    name = "3.5.4-1.tar.gz";
+    sha256 = "8e5152ef6e521db75c1c8db02527a7e096a552b2064f61725be4183a248112b4";
   };
 
   buildType = "ament_cmake";

@@ -2156,8 +2156,6 @@ self: super: {
 
  stubborn-buddies-msgs = self.callPackage ./stubborn-buddies-msgs {};
 
- swri-cli-tools = self.callPackage ./swri-cli-tools {};
-
  swri-console = self.callPackage ./swri-console {};
 
  swri-console-util = self.callPackage ./swri-console-util {};

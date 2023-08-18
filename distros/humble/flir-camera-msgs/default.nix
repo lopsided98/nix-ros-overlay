@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-flir-camera-msgs";
-  version = "2.0.5-r1";
+  version = "2.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/flir_camera_driver-release/archive/release/humble/flir_camera_msgs/2.0.5-1.tar.gz";
-    name = "2.0.5-1.tar.gz";
-    sha256 = "84a18cfa1f5f60b0b3a0e8562b6bde1e4a8d504c047deee384e36567c033b9ac";
+    url = "https://github.com/ros-drivers-gbp/flir_camera_driver-release/archive/release/humble/flir_camera_msgs/2.0.6-1.tar.gz";
+    name = "2.0.6-1.tar.gz";
+    sha256 = "071857c4edf87b92f5110845d87a305d77607a82ddf090c0c22ec8c351e24ddc";
   };
 
   buildType = "ament_cmake";
