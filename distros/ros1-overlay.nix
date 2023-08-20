@@ -7,10 +7,10 @@ rosSelf: rosSuper: with rosSelf.lib; {
     patches ? [], ...
   }: {
     patches = patches ++ [ (self.fetchpatch {
-      url = "https://github.com/lopsided98/actionlib/commit/d675dd75d9080d2832591e0220d19e0f0d981446.patch";
+      url = "https://github.com/ros/actionlib/commit/d675dd75d9080d2832591e0220d19e0f0d981446.patch";
       stripLen = 1;
       includes = [ "include/*" ];
-      sha256 = "sha256-bB8PkiDisgBgZoDyieiT1dSQK/xSfG8ZZOJyigX0SYY=";
+      hash = "sha256-bB8PkiDisgBgZoDyieiT1dSQK/xSfG8ZZOJyigX0SYY=";
     }) ];
   });
 
