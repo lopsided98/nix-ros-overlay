@@ -141,6 +141,16 @@ let
       '';
     });
 
+    novatel-oem7-driver = (patchVendorGit rosSuper.novatel-oem7-driver {
+      url = "https://github.com/novatel/novatel_edie";
+      fetchgitArgs = {
+        rev = "d02ccc2dfe531d642c1e2ca8a8c0f8205c856f23";
+        hash = "sha256-ZQ7z9vQ8quI+SoNhB93tTw5LQe07UAKdbJJpaMj1C6I=";
+      };
+    }).overrideAttrs ({ ... }: {
+      dontFixCmake = true;
+    });
+
     open-manipulator-control-gui = rosSuper.open-manipulator-control-gui.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
