@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, orocos-kdl-vendor, tf2 }:
 buildRosPackage {
   pname = "ros-rolling-tf2-eigen-kdl";
-  version = "0.32.2-r1";
+  version = "0.33.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_eigen_kdl/0.32.2-1.tar.gz";
-    name = "0.32.2-1.tar.gz";
-    sha256 = "36edba189affa1a2ec3670c7ef61f541fc06f4d1967481ea8067fdde90c304bc";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_eigen_kdl/0.33.0-1.tar.gz";
+    name = "0.33.0-1.tar.gz";
+    sha256 = "91c40f4919e8ca4e027658c402ac809e1ad677ff38a5bbc6b7dc806cd87a8dd0";
   };
 
   buildType = "ament_cmake";

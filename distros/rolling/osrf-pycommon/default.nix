@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-osrf-pycommon";
-  version = "2.1.3-r1";
+  version = "2.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/osrf_pycommon-release/archive/release/rolling/osrf_pycommon/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "78cc5fe80582e35a31cbd850b0048e2c7ad1d7a2951cdf60f7de505effe6cb66";
+    url = "https://github.com/ros2-gbp/osrf_pycommon-release/archive/release/rolling/osrf_pycommon/2.1.4-1.tar.gz";
+    name = "2.1.4-1.tar.gz";
+    sha256 = "0d95f2e642248dd350eee61e3e2da22bd8c10408efe173f6dfc534fecf0d7367";
   };
 
   buildType = "ament_python";

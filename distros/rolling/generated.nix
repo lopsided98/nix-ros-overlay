@@ -182,6 +182,8 @@ self: super: {
 
  aws-robomaker-small-warehouse-world = self.callPackage ./aws-robomaker-small-warehouse-world {};
 
+ aws-sdk-cpp-vendor = self.callPackage ./aws-sdk-cpp-vendor {};
+
  backward-ros = self.callPackage ./backward-ros {};
 
  bag2-to-image = self.callPackage ./bag2-to-image {};
@@ -253,6 +255,8 @@ self: super: {
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
 
  class-loader = self.callPackage ./class-loader {};
+
+ classic-bags = self.callPackage ./classic-bags {};
 
  color-names = self.callPackage ./color-names {};
 
@@ -728,6 +732,8 @@ self: super: {
 
  lanelet2-maps = self.callPackage ./lanelet2-maps {};
 
+ lanelet2-matching = self.callPackage ./lanelet2-matching {};
+
  lanelet2-projection = self.callPackage ./lanelet2-projection {};
 
  lanelet2-python = self.callPackage ./lanelet2-python {};
@@ -942,8 +948,6 @@ self: super: {
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
- mp2p-icp = self.callPackage ./mp2p-icp {};
-
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
 
  mrpt2 = self.callPackage ./mrpt2 {};
@@ -1089,6 +1093,8 @@ self: super: {
  phidgets-spatial = self.callPackage ./phidgets-spatial {};
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
+
+ pick-ik = self.callPackage ./pick-ik {};
 
  picknik-ament-copyright = self.callPackage ./picknik-ament-copyright {};
 
@@ -1634,6 +1640,8 @@ self: super: {
 
  rqt-topic = self.callPackage ./rqt-topic {};
 
+ rsl = self.callPackage ./rsl {};
+
  rt-manipulators-cpp = self.callPackage ./rt-manipulators-cpp {};
 
  rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
@@ -1961,6 +1969,8 @@ self: super: {
  ur-msgs = self.callPackage ./ur-msgs {};
 
  urdf = self.callPackage ./urdf {};
+
+ urdf-launch = self.callPackage ./urdf-launch {};
 
  urdf-parser-plugin = self.callPackage ./urdf-parser-plugin {};
 

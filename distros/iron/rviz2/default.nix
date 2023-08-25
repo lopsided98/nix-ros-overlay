@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-lint-cmake, ament-cmake-pytest, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, geometry-msgs, python3, python3Packages, qt5, rclcpp, rviz-common, rviz-default-plugins, rviz-ogre-vendor, sensor-msgs }:
 buildRosPackage {
   pname = "ros-iron-rviz2";
-  version = "12.4.2-r1";
+  version = "12.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/iron/rviz2/12.4.2-1.tar.gz";
-    name = "12.4.2-1.tar.gz";
-    sha256 = "d33d1faa3b34d7a22e18200a3c6d12b21b7612070f37a2fc58f34b60836b0d11";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/iron/rviz2/12.4.3-1.tar.gz";
+    name = "12.4.3-1.tar.gz";
+    sha256 = "0ef4e282f43c58a22ec19b199d6b7d8d75e5a4776d76ac9b1ed33ae975b638b9";
   };
 
   buildType = "ament_cmake";

@@ -1134,6 +1134,8 @@ self: super: {
 
  osrf-testing-tools-cpp = self.callPackage ./osrf-testing-tools-cpp {};
 
+ ouster-msgs = self.callPackage ./ouster-msgs {};
+
  ouxt-common = self.callPackage ./ouxt-common {};
 
  ouxt-lint-common = self.callPackage ./ouxt-lint-common {};
@@ -1187,6 +1189,8 @@ self: super: {
  phidgets-spatial = self.callPackage ./phidgets-spatial {};
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
+
+ pick-ik = self.callPackage ./pick-ik {};
 
  picknik-ament-copyright = self.callPackage ./picknik-ament-copyright {};
 
@@ -1769,6 +1773,8 @@ self: super: {
  rqt-tf-tree = self.callPackage ./rqt-tf-tree {};
 
  rqt-topic = self.callPackage ./rqt-topic {};
+
+ rsl = self.callPackage ./rsl {};
 
  rt-manipulators-cpp = self.callPackage ./rt-manipulators-cpp {};
 
