@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-swri-console-util";
-  version = "3.5.0-r2";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_console_util/3.5.0-2.tar.gz";
-    name = "3.5.0-2.tar.gz";
-    sha256 = "450ba474c0718f5564846f0643f351bf7082c62da3ae63bc5a8e5afcc000f3d0";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_console_util/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "5f248ff6218c11eba147d446fb0a8dcae22053d92af9e469118c7a1aa46f0e62";
   };
 
   buildType = "ament_cmake";

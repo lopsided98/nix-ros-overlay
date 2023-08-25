@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, launch, launch-ros, launch-testing, launch-testing-ros, lifecycle-msgs, python3Packages, pythonPackages, rclpy, ros2cli, ros2lifecycle-test-fixtures, ros2node, ros2service }:
 buildRosPackage {
   pname = "ros-rolling-ros2lifecycle";
-  version = "0.28.0-r1";
+  version = "0.29.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/rolling/ros2lifecycle/0.28.0-1.tar.gz";
-    name = "0.28.0-1.tar.gz";
-    sha256 = "26ba7765f9476f781c24ad66e35848f07bb899588a6967c8445e3676b0cdf98e";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/rolling/ros2lifecycle/0.29.0-1.tar.gz";
+    name = "0.29.0-1.tar.gz";
+    sha256 = "98e39dd16c6c146dfd5669fdc2a50c24f9dd333c1f3c400f9ba250e523a1f87c";
   };
 
   buildType = "ament_python";

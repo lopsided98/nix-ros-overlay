@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, nao-lola-command-msgs, nao-lola-sensor-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-nao-lola-client";
-  version = "1.1.0-r2";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nao_lola-release/archive/release/rolling/nao_lola_client/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "6609c54654e6b33ed42e10d23871a0740f5713005a3ae2409871505021df9524";
+    url = "https://github.com/ros2-gbp/nao_lola-release/archive/release/rolling/nao_lola_client/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "6b2235348d33557255df3070ffc3efb619ecd4825103b51575f7f0bf2f69680a";
   };
 
   buildType = "ament_cmake";

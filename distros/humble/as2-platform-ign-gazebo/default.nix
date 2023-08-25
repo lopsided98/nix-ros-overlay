@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-cpplint, ament-lint-auto, as2-core, as2-ign-gazebo-assets, as2-msgs, geometry-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-as2-platform-ign-gazebo";
-  version = "1.0.0-r2";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_platform_ign_gazebo/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "f2b70f16c24fe8877a1998ba320e4d360f6df1d168251527b5b06ef73b8caef7";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_platform_ign_gazebo/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "43f69b74c541d7a1d77ade49ed162d498912c2e8ac6831f148b397d16964c3fa";
   };
 
   buildType = "ament_cmake";

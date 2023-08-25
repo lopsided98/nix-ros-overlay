@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, message-filters, nao-lola-sensor-msgs, rclcpp, rclcpp-components, sensor-msgs, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-rolling-nao-lola-conversion";
-  version = "1.1.0-r2";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nao_lola-release/archive/release/rolling/nao_lola_conversion/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "3eb1d5c930e1c11454a41654effc5126fcc17a6a5633006a4d8d0363c93ac7a5";
+    url = "https://github.com/ros2-gbp/nao_lola-release/archive/release/rolling/nao_lola_conversion/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "426a0894b1c140c588e2d5b986450c5851048625c22aa7ff15ca37d567160308";
   };
 
   buildType = "ament_cmake";

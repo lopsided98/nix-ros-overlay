@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-marti-common-msgs";
-  version = "1.3.0-r3";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/rolling/marti_common_msgs/1.3.0-3.tar.gz";
-    name = "1.3.0-3.tar.gz";
-    sha256 = "bbcc1f08a1c77cec7650f0ca6ae31295e2ef99c913145b11df990595b6c8ed00";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/rolling/marti_common_msgs/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "f31f5ca3583b107659180b08b9a708d4eaefcda91c73a303b6fce0611f1de993";
   };
 
   buildType = "ament_cmake";

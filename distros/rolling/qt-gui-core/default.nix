@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, qt-dotgraph, qt-gui, qt-gui-app, qt-gui-cpp, qt-gui-py-common }:
 buildRosPackage {
   pname = "ros-rolling-qt-gui-core";
-  version = "2.6.0-r1";
+  version = "2.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui_core/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "7bed0afd2dcb374868917e8815d8453968839256d4ec5944bfb3b9c14657adc3";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui_core/2.7.0-1.tar.gz";
+    name = "2.7.0-1.tar.gz";
+    sha256 = "2755e97ed23164041b3632b4df69151d379dcc78dd4dcba04d46975da8cdcbeb";
   };
 
   buildType = "ament_cmake";
