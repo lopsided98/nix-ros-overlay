@@ -17,6 +17,7 @@
             pkgs.colcon
             # ... other non-ROS packages
             (with pkgs.rosPackages.humble; buildEnv {
+              underlay = true;
               paths = [
                 ros-core
                 # ... other ROS packages

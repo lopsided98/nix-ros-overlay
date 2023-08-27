@@ -10,11 +10,18 @@
 #
 # By default, all binaries in the environment are wrapped, setting the relevant
 # ROS environment variables, allowing use outside of nix-shell.
+# Wrapping prefixes the existing variables with the buildEnv output, which
+# ensures reproducibility and prevents an incompatible user environment from
+# breaking the Nix setup. However, for development environments used within
+# mkShell, it is often desirable for packages in the local ROS workspace to
+# take precedence over Nix-built packages. This can be achieved by setting
+# underlay to true.
 { lib, stdenv, buildPackages, writeText, buildEnv, makeWrapper, python, ros-environment }:
-{ paths ? [], wrapPrograms ? true, postBuild ? "", passthru ? { }, ... }@args:
+{ paths ? [], wrapPrograms ? true, underlay ? false, postBuild ? "", passthru ? { }, ... }@args:
 
 with lib;
-
+assert assertMsg (underlay -> wrapPrograms)
+  "Setting underlay without wrapPrograms has no effect.";
 let
   propagatePackages = packages: let
     validPackages = filter (d: d != null) packages;
@@ -33,7 +40,9 @@ let
 
   propagatedPaths = propagatePackages paths;
 
-  env = (buildEnv ((removeAttrs args [ "wrapPrograms" ]) // {
+  xfix = if underlay then "suffix" else "prefix";
+
+  env = (buildEnv ((removeAttrs args [ "underlay" "wrapPrograms" ]) // {
     name = "ros-env";
     # Only add ROS packages to environment. The rest are propagated like normal.
     # ROS packages propagate a huge number of dependencies, which are added all
@@ -70,13 +79,13 @@ let
           if [[ "$(basename "$link")" == .*-wrapped ]]; then continue; fi
 
           makeWrapper "$file" "$link" \
-            --prefix PATH : "$out/bin" \
-            --prefix LD_LIBRARY_PATH : "$out/lib" \
-            --prefix PYTHONPATH : "$out/${python.sitePackages}" \
-            --prefix CMAKE_PREFIX_PATH : "$out" \
-            --prefix AMENT_PREFIX_PATH : "$out" \
-            --prefix ROS_PACKAGE_PATH : "$out/share" \
-            --prefix GZ_CONFIG_PATH : "$out/share/gz" \
+            --${xfix} PATH : "$out/bin" \
+            --${xfix} LD_LIBRARY_PATH : "$out/lib" \
+            --${xfix} PYTHONPATH : "$out/${python.sitePackages}" \
+            --${xfix} CMAKE_PREFIX_PATH : "$out" \
+            --${xfix} AMENT_PREFIX_PATH : "$out" \
+            --${xfix} ROS_PACKAGE_PATH : "$out/share" \
+            --${xfix} GZ_CONFIG_PATH : "$out/share/gz" \
             --set ROS_DISTRO '${ros-environment.rosDistro}' \
             --set ROS_VERSION '${toString ros-environment.rosVersion}' \
             --set ROS_PYTHON_VERSION '${lib.versions.major python.version}' \
