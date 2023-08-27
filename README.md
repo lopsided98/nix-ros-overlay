@@ -73,6 +73,7 @@ Using the overlay in your `flake.nix`-based project could look like this:
             pkgs.colcon
             # ... other non-ROS packages
             (with pkgs.rosPackages.humble; buildEnv {
+              underlay = true;
               paths = [
                 ros-core
                 # ... other ROS packages
