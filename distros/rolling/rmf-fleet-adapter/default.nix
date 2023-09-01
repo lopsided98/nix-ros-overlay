@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-catch2, ament-cmake-uncrustify, eigen, nlohmann-json-schema-validator-vendor, nlohmann_json, rclcpp, rclcpp-components, rmf-api-msgs, rmf-battery, rmf-building-map-msgs, rmf-dispenser-msgs, rmf-door-msgs, rmf-fleet-msgs, rmf-ingestor-msgs, rmf-lift-msgs, rmf-task, rmf-task-msgs, rmf-task-ros2, rmf-task-sequence, rmf-traffic, rmf-traffic-ros2, rmf-utils, rmf-websocket, std-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-rolling-rmf-fleet-adapter";
-  version = "2.3.1-r1";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/rolling/rmf_fleet_adapter/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "e3347171f2009ac57873352290b85d4f7dc20115e23b2db76ca12b307383b642";
+    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/rolling/rmf_fleet_adapter/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "bdec13fc67d39f33f2c1f7b7caf3eb08d5305e7fa960165fa179eb9537d74a2b";
   };
 
   buildType = "ament_cmake";

@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ cv-bridge ffmpeg python3Packages.imageio python3Packages.opencv3 rosbash-params rospy sensor-msgs ];
+  propagatedBuildInputs = [ cv-bridge ffmpeg python3Packages.imageio python3Packages.opencv4 rosbash-params rospy sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

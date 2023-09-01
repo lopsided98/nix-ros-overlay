@@ -1,0 +1,26 @@
+
+# Copyright 2023 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
+buildRosPackage {
+  pname = "ros-humble-weight-scale-interfaces";
+  version = "0.0.1-r1";
+
+  src = fetchurl {
+    url = "https://github.com/TechMagicKK/weight_scale_interfaces-release/archive/release/humble/weight_scale_interfaces/0.0.1-1.tar.gz";
+    name = "0.0.1-1.tar.gz";
+    sha256 = "c23b45efac85df71f7d05f1f3427251eacd80f346714fd1493e68ff8ec29a5ff";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake rosidl-default-generators ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ rosidl-default-runtime ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
+
+  meta = {
+    description = ''Definition of the interface for weight scale devices'';
+    license = with lib.licenses; [ asl20 ];
+  };
+}
