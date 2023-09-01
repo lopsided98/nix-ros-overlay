@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, git, glfw3, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-rig-reconfigure";
-  version = "1.2.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rig_reconfigure-release/archive/release/humble/rig_reconfigure/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "774ca172ef389244354e925b64ff8f8e3705cede0a283e2ca201cb0e3582ca1d";
+    url = "https://github.com/ros2-gbp/rig_reconfigure-release/archive/release/humble/rig_reconfigure/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "7e05cbfd8760a1246e6526ced1e305d797e8f314d3898f906a400741be8af707";
   };
 
   buildType = "ament_cmake";

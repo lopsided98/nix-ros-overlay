@@ -524,6 +524,8 @@ self: super: {
 
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
+ ecal = self.callPackage ./ecal {};
+
  ecl-build = self.callPackage ./ecl-build {};
 
  ecl-license = self.callPackage ./ecl-license {};
@@ -1058,6 +1060,10 @@ self: super: {
 
  mod = self.callPackage ./mod {};
 
+ mola-common = self.callPackage ./mola-common {};
+
+ mola-yaml = self.callPackage ./mola-yaml {};
+
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
  moveit = self.callPackage ./moveit {};
@@ -1145,6 +1151,8 @@ self: super: {
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
+
+ mp2p-icp = self.callPackage ./mp2p-icp {};
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
 
@@ -2537,6 +2545,8 @@ self: super: {
  webots-ros2-turtlebot = self.callPackage ./webots-ros2-turtlebot {};
 
  webots-ros2-universal-robot = self.callPackage ./webots-ros2-universal-robot {};
+
+ weight-scale-interfaces = self.callPackage ./weight-scale-interfaces {};
 
  wiimote = self.callPackage ./wiimote {};
 

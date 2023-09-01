@@ -362,6 +362,8 @@ self: super: {
 
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
+ ecal = self.callPackage ./ecal {};
+
  ecl-build = self.callPackage ./ecl-build {};
 
  ecl-command-line = self.callPackage ./ecl-command-line {};
@@ -804,6 +806,12 @@ self: super: {
 
  map-msgs = self.callPackage ./map-msgs {};
 
+ mapviz = self.callPackage ./mapviz {};
+
+ mapviz-interfaces = self.callPackage ./mapviz-interfaces {};
+
+ mapviz-plugins = self.callPackage ./mapviz-plugins {};
+
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
 
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
@@ -855,6 +863,10 @@ self: super: {
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
+
+ mola-common = self.callPackage ./mola-common {};
+
+ mola-yaml = self.callPackage ./mola-yaml {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
@@ -948,6 +960,8 @@ self: super: {
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
+ mp2p-icp = self.callPackage ./mp2p-icp {};
+
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
 
  mrpt2 = self.callPackage ./mrpt2 {};
@@ -957,6 +971,8 @@ self: super: {
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ multires-image = self.callPackage ./multires-image {};
 
  mvsim = self.callPackage ./mvsim {};
 
@@ -1857,6 +1873,8 @@ self: super: {
  tf-transformations = self.callPackage ./tf-transformations {};
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
+
+ tile-map = self.callPackage ./tile-map {};
 
  tinyspline-vendor = self.callPackage ./tinyspline-vendor {};
 

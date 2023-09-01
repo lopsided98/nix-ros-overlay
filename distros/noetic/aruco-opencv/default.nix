@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ aruco-opencv-msgs catkin ];
-  propagatedBuildInputs = [ cv-bridge dynamic-reconfigure image-transport nodelet python39Packages.img2pdf python3Packages.numpy python3Packages.opencv3 roscpp tf2-geometry-msgs tf2-ros yaml-cpp ];
+  propagatedBuildInputs = [ cv-bridge dynamic-reconfigure image-transport nodelet python39Packages.img2pdf python3Packages.numpy python3Packages.opencv4 roscpp tf2-geometry-msgs tf2-ros yaml-cpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

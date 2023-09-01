@@ -354,6 +354,8 @@ self: super: {
 
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
+ ecal = self.callPackage ./ecal {};
+
  ecl-build = self.callPackage ./ecl-build {};
 
  ecl-command-line = self.callPackage ./ecl-command-line {};
@@ -893,6 +895,10 @@ self: super: {
  microstrain-inertial-rqt = self.callPackage ./microstrain-inertial-rqt {};
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
+
+ mola-common = self.callPackage ./mola-common {};
+
+ mola-yaml = self.callPackage ./mola-yaml {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
@@ -2147,6 +2153,8 @@ self: super: {
  ur-msgs = self.callPackage ./ur-msgs {};
 
  urdf = self.callPackage ./urdf {};
+
+ urdf-launch = self.callPackage ./urdf-launch {};
 
  urdf-parser-plugin = self.callPackage ./urdf-parser-plugin {};
 
