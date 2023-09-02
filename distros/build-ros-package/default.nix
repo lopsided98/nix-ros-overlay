@@ -57,8 +57,8 @@ else stdenv.mkDerivation) (args // {
 
   postFixup = ''
     ${postFixup}
-    find "$out/lib" -mindepth 1 -maxdepth 1 -type d ! -name '${pythonPackages.python.libPrefix}' -print0 | while read -d '''''' d; do
-      wrapPythonProgramsIn "$d" "$out $pythonPath"
+    find "$out/lib" -mindepth 1 -maxdepth 1 -type d ! -name '${pythonPackages.python.libPrefix}' -print0 | while read -d "" libpkgdir; do
+      wrapPythonProgramsIn "$libpkgdir" "$out $pythonPath"
     done
   '';
 })
