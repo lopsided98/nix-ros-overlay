@@ -92,7 +92,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     postFixup ? "", ...
   }: {
     postFixup = postFixup + ''
-      wrapQtApp "$out/bin/rqt_image_view"
+      wrapQtApp "$out/lib/rqt_image_view/rqt_image_view"
     '';
   });
 
