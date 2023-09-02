@@ -31,7 +31,10 @@ else stdenv.mkDerivation) (args // {
 } // lib.optionalAttrs (buildType == "ament_python") {
   dontUseCmakeConfigure = true;
 
-  # Modelled after colcon:
+  # Modelled after colcon.
+  # As of 0.12.1, colcon uses the legacy distutils install.py script, so we do
+  # the same. Using modern techniques, such as "pip install" with setuptools,
+  # causes issues due to differences in setup.cfg interpretation.
   # https://github.com/colcon/colcon-core/blob/0.12.1/colcon_core/task/python/build.py#L84
   format = "other";
 
