@@ -195,7 +195,7 @@ let
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = postFixup + ''
-        wrapQtApp "$out/bin/rqt_console"
+        wrapQtApp "$out/lib/rqt_console/rqt_console"
       '';
     });
 
@@ -205,7 +205,7 @@ let
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = postFixup + ''
-        wrapQtApp "$out/bin/rqt_graph"
+        wrapQtApp "$out/lib/rqt_graph/rqt_graph"
       '';
     });
 
@@ -242,7 +242,7 @@ let
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = postFixup + ''
-        wrapQtApp "$out/bin/rqt_plot"
+        wrapQtApp "$out/lib/rqt_plot/rqt_plot"
       '';
     });
     
@@ -287,7 +287,7 @@ let
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = postFixup + ''
-        wrapQtApp "$out/bin/rqt_shell"
+        wrapQtApp "$out/lib/rqt_shell/rqt_shell"
       '';
     });
 
