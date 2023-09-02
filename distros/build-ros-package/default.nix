@@ -32,7 +32,7 @@ else stdenv.mkDerivation) (args // {
   dontUseCmakeConfigure = true;
 
   # Modelled after colcon:
-  # https://github.com/colcon/colcon-core/blob/master/colcon_core/task/python/build.py
+  # https://github.com/colcon/colcon-core/blob/0.12.1/colcon_core/task/python/build.py#L84
   format = "other";
 
   nativeBuildInputs = nativeBuildInputs ++ [ pythonPackages.setuptools ];
