@@ -898,6 +898,12 @@ self: super: {
 
  mola-common = self.callPackage ./mola-common {};
 
+ mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
+
+ mola-input-kitti-dataset = self.callPackage ./mola-input-kitti-dataset {};
+
+ mola-kernel = self.callPackage ./mola-kernel {};
+
  mola-yaml = self.callPackage ./mola-yaml {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};

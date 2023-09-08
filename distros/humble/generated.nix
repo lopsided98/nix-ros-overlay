@@ -262,6 +262,8 @@ self: super: {
 
  boost-geometry-util = self.callPackage ./boost-geometry-util {};
 
+ boost-plugin-loader = self.callPackage ./boost-plugin-loader {};
+
  bosch-locator-bridge = self.callPackage ./bosch-locator-bridge {};
 
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
@@ -1062,6 +1064,12 @@ self: super: {
 
  mola-common = self.callPackage ./mola-common {};
 
+ mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
+
+ mola-input-kitti-dataset = self.callPackage ./mola-input-kitti-dataset {};
+
+ mola-kernel = self.callPackage ./mola-kernel {};
+
  mola-yaml = self.callPackage ./mola-yaml {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
@@ -1255,6 +1263,8 @@ self: super: {
  nmea-hardware-interface = self.callPackage ./nmea-hardware-interface {};
 
  nmea-msgs = self.callPackage ./nmea-msgs {};
+
+ nmea-navsat-driver = self.callPackage ./nmea-navsat-driver {};
 
  nodl-python = self.callPackage ./nodl-python {};
 

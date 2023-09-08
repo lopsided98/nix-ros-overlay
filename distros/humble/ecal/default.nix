@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, protobuf }:
 buildRosPackage {
   pname = "ros-humble-ecal";
-  version = "5.12.0-r1";
+  version = "5.12.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ecal-release/archive/release/humble/ecal/5.12.0-1.tar.gz";
-    name = "5.12.0-1.tar.gz";
-    sha256 = "6a9b97cc1d3dc7e9a70454bef30b066e3b598b38e9bb28a13021e84919ecd9c9";
+    url = "https://github.com/ros2-gbp/ecal-release/archive/release/humble/ecal/5.12.0-2.tar.gz";
+    name = "5.12.0-2.tar.gz";
+    sha256 = "e4fcbb77ab8c5101b1a9c6a50d88f30ac0eb8b0dc9543822dda884cb98fa1457";
   };
 
   buildType = "cmake";

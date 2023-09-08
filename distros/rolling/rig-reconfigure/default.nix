@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, git, glfw3, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-rig-reconfigure";
-  version = "1.3.0-r1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rig_reconfigure-release/archive/release/rolling/rig_reconfigure/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "2689e42f5786b8bd1277846e5b20aca19124c709af52753167b39c76c9a30463";
+    url = "https://github.com/ros2-gbp/rig_reconfigure-release/archive/release/rolling/rig_reconfigure/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "02d0f224f9b83b959b84e38dd8efb1039570e34b48375a636f7109c6267c58b6";
   };
 
   buildType = "ament_cmake";

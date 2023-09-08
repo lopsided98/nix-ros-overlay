@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-core-generators, rosidl-core-runtime, service-msgs }:
 buildRosPackage {
   pname = "ros-rolling-type-description-interfaces";
-  version = "1.7.0-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/type_description_interfaces/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "ce4231326964780f5ec25e9d7633270eccc7d30c6edeae6642ea2f5c6a05231a";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/type_description_interfaces/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "81243577b6c5bc424ee2c7e71ec43e53d69180cb1fa54c588d7a2530a22c3bb4";
   };
 
   buildType = "ament_cmake";
