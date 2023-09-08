@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-nmea-msgs";
-  version = "2.0.0-r4";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nmea_msgs-release/archive/release/rolling/nmea_msgs/2.0.0-4.tar.gz";
-    name = "2.0.0-4.tar.gz";
-    sha256 = "01d3f9ff81deee1ca94f9e9cbe21b1ba116d4dd45a4904e306800b5a57a4dcce";
+    url = "https://github.com/ros2-gbp/nmea_msgs-release/archive/release/rolling/nmea_msgs/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "83a27d2759899781dab4ce305e2564fbfe288e130e70f467db05ebb505195594";
   };
 
   buildType = "ament_cmake";

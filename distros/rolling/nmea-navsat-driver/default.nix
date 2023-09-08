@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, nmea-msgs, python3Packages, pythonPackages, rclpy, sensor-msgs, tf-transformations }:
 buildRosPackage {
   pname = "ros-rolling-nmea-navsat-driver";
-  version = "2.0.0-r2";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nmea_navsat_driver-release/archive/release/rolling/nmea_navsat_driver/2.0.0-2.tar.gz";
-    name = "2.0.0-2.tar.gz";
-    sha256 = "4c8f9602db904910a10c41b97ed5305e0cb342bd93a79591bf7ca46b50e6d7b1";
+    url = "https://github.com/ros2-gbp/nmea_navsat_driver-release/archive/release/rolling/nmea_navsat_driver/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "e8cbe6a0cd088496471fef8f084b0d6c6b737c630989990d2165c63aec7fa9d5";
   };
 
   buildType = "ament_python";

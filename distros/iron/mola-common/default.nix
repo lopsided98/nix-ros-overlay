@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-iron-mola-common";
-  version = "0.2.0-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_common/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "d055feb72e1f72b4e0b32361387084f447bd1e0ce467b0d8930ffc0a94afc1d4";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_common/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "f93da2a8b68465ecddf852891f96565971f724a874caf6207e2434aef5da3267";
   };
 
   buildType = "cmake";

@@ -2,20 +2,20 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, depthai, depthai-bridge, depthai-descriptions, depthai-examples, depthai-ros-driver, depthai-ros-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, depthai, depthai-bridge, depthai-descriptions, depthai-examples, depthai-filters, depthai-ros-driver, depthai-ros-msgs }:
 buildRosPackage {
   pname = "ros-humble-depthai-ros";
-  version = "2.7.5-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/humble/depthai-ros/2.7.5-1.tar.gz";
-    name = "2.7.5-1.tar.gz";
-    sha256 = "282c90940081008cbb15720c6f30770c0c414c9888ac8581578184fe72af0819";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/humble/depthai-ros/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "44ecc50da290733b3461a159ff033ff720285c3cc3d64ee0a3fc4081fad21f51";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ depthai depthai-bridge depthai-descriptions depthai-examples depthai-ros-driver depthai-ros-msgs ];
+  propagatedBuildInputs = [ depthai depthai-bridge depthai-descriptions depthai-examples depthai-filters depthai-ros-driver depthai-ros-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

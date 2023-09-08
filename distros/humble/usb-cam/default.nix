@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, camera-info-manager, cv-bridge, ffmpeg, image-transport, image-transport-plugins, rclcpp, rclcpp-components, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, v4l-utils }:
 buildRosPackage {
   pname = "ros-humble-usb-cam";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/usb_cam-release/archive/release/humble/usb_cam/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "fc7ffde88bd2b3766b87a52d3bab612deb778964f14b91aae45784c78e10ba10";
+    url = "https://github.com/ros2-gbp/usb_cam-release/archive/release/humble/usb_cam/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "63272f4f6873929dd3eb23bc693bbd7981df81d6a51fe362a5018f0abed9c471";
   };
 
   buildType = "ament_cmake";

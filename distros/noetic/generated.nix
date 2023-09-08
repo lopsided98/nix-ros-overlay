@@ -1078,6 +1078,8 @@ self: super: {
 
  fuse-viz = self.callPackage ./fuse-viz {};
 
+ gazebo-custom-sensor-preloader = self.callPackage ./gazebo-custom-sensor-preloader {};
+
  gazebo-dev = self.callPackage ./gazebo-dev {};
 
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
@@ -2642,11 +2644,17 @@ self: super: {
 
  qb-move-hardware-interface = self.callPackage ./qb-move-hardware-interface {};
 
+ qb-softhand-industry = self.callPackage ./qb-softhand-industry {};
+
  qb-softhand-industry-bringup = self.callPackage ./qb-softhand-industry-bringup {};
+
+ qb-softhand-industry-control = self.callPackage ./qb-softhand-industry-control {};
 
  qb-softhand-industry-description = self.callPackage ./qb-softhand-industry-description {};
 
  qb-softhand-industry-driver = self.callPackage ./qb-softhand-industry-driver {};
+
+ qb-softhand-industry-hardware-interface = self.callPackage ./qb-softhand-industry-hardware-interface {};
 
  qb-softhand-industry-msgs = self.callPackage ./qb-softhand-industry-msgs {};
 
@@ -2711,6 +2719,8 @@ self: super: {
  rc-visard-driver = self.callPackage ./rc-visard-driver {};
 
  rcdiscover = self.callPackage ./rcdiscover {};
+
+ reach = self.callPackage ./reach {};
 
  realsense2-camera = self.callPackage ./realsense2-camera {};
 
