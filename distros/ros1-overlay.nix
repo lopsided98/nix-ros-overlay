@@ -79,6 +79,56 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   roscpp = patchBoostSignals rosSuper.roscpp;
 
+  rqt-console = rosSuper.rqt-console.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/bin/rqt_console"
+    '';
+  });
+
+  rqt-image-view = rosSuper.rqt-image-view.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/bin/rqt_image_view"
+    '';
+  });
+
+  rqt-plot = rosSuper.rqt-plot.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/bin/rqt_plot"
+    '';
+  });
+
+  rqt-shell = rosSuper.rqt-shell.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/bin/rqt_shell"
+    '';
+  });
+
+  rqt-top = rosSuper.rqt-top.overrideAttrs ({
+    nativeBuildInputs ? [], postFixup ? "", ...
+  }: {
+    dontWrapQtApps = false;
+    nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+    postFixup = postFixup + ''
+      wrapQtApp "$out/lib/rqt_top/rqt_top"
+    '';
+  });
+
+  rqt-topic = rosSuper.rqt-topic.overrideAttrs ({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      wrapQtApp "$out/bin/rqt_topic"
+    '';
+  });
+
   # rviz does not support shiboken/pyside2 and SIP4 is broken with the latest
   # pyqt5. This applies a patch to make pyqt5 compatible with SIP 4 and uses
   # SIP 4 with python-qt-binding for rviz only.
@@ -90,7 +140,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
         }: {
           patches = patches ++ [ (self.fetchpatch {
             url = "https://aur.archlinux.org/cgit/aur.git/plain/restore-sip4-support.patch?h=python-pyqt5-sip4&id=6e712e6c588d550a1a6f83c1b37c2c9135aae6ba";
-            sha256 = "sha256-NfMe/EK1Uj88S82xZSm+A6js3PK9mlgsaci/kinlsy8=";
+            hash = "sha256-NfMe/EK1Uj88S82xZSm+A6js3PK9mlgsaci/kinlsy8=";
           }) ];
         });
       });
