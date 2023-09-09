@@ -3,7 +3,7 @@ self:
 # Distro package set
 rosSelf: rosSuper: let
   inherit (rosSelf) lib;
-in with lib; {
+in {
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -31,7 +31,7 @@ in with lib; {
     ];
   });
 
-  iceoryx-posh = (patchExternalProjectGit rosSuper.iceoryx-posh {
+  iceoryx-posh = (lib.patchExternalProjectGit rosSuper.iceoryx-posh {
     url = "https://github.com/skystrife/cpptoml.git";
     file = "cmake/cpptoml/cpptoml.cmake.in";
     fetchgitArgs = {
@@ -50,7 +50,7 @@ in with lib; {
     ];
   });
 
-  lely-core-libraries = patchExternalProjectGit rosSuper.lely-core-libraries {
+  lely-core-libraries = lib.patchExternalProjectGit rosSuper.lely-core-libraries {
     url = "https://gitlab.com/lely_industries/lely-core.git";
     fetchgitArgs = {
       rev = "7824cbb2ac08d091c4fa2fb397669b938de9e3f5";
@@ -59,12 +59,12 @@ in with lib; {
     };
   };
 
-  libphidget22 = patchVendorUrl rosSuper.libphidget22 {
+  libphidget22 = lib.patchVendorUrl rosSuper.libphidget22 {
     url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.13.20230224.tar.gz";
     sha256 = "sha256-HQeVEQUX6xjIBkcoh8r8hh3QtqHBBFJGxVW8R/a9d+M=";
   };
 
-  mcap-vendor = patchExternalProjectGit (patchVendorUrl rosSuper.mcap-vendor {
+  mcap-vendor = lib.patchExternalProjectGit (lib.patchVendorUrl rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.1.0.tar.gz";
     hash = "sha256-HLKuny6RDusuk7OrcidE0YBbnaRXZOT9iHA7ZpQTNQ0=";
   }) {
