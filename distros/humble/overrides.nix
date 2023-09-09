@@ -29,7 +29,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
-  iceoryx-posh = (patchVendorGit rosSuper.iceoryx-posh {
+  iceoryx-posh = (patchExternalProjectGit rosSuper.iceoryx-posh {
     url = "https://github.com/skystrife/cpptoml.git";
     file = "cmake/cpptoml/cpptoml.cmake.in";
     fetchgitArgs = {
@@ -53,7 +53,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "sha256-CJ1ZC7ydrZzEsZChrKuWg4/d20r6szFWeQCctiKFLgY=";
   };
 
-  libyaml-vendor = patchVendorGit rosSuper.libyaml-vendor {
+  libyaml-vendor = patchExternalProjectGit rosSuper.libyaml-vendor {
     url = "https://github.com/yaml/libyaml.git";
     fetchgitArgs = {
       rev = "2c891fc7a770e8ba2fec34fc6b545c672beb37e6";
@@ -61,7 +61,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     };
   };
 
-  mcap-vendor = patchVendorGit (patchVendorUrl rosSuper.mcap-vendor {
+  mcap-vendor = patchExternalProjectGit (patchVendorUrl rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v0.8.0.tar.gz";
     sha256 = "sha256-KDP3I0QwjqWGOfOzY6DPF2aVgK56tDX0PzsQTP9u9Ug=";
   }) {

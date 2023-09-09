@@ -29,7 +29,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
-  iceoryx-posh = (patchVendorGit rosSuper.iceoryx-posh {
+  iceoryx-posh = (patchExternalProjectGit rosSuper.iceoryx-posh {
     url = "https://github.com/skystrife/cpptoml.git";
     file = "cmake/cpptoml/cpptoml.cmake.in";
     fetchgitArgs = {
@@ -48,7 +48,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
-  lely-core-libraries = patchVendorGit rosSuper.lely-core-libraries {
+  lely-core-libraries = patchExternalProjectGit rosSuper.lely-core-libraries {
     url = "https://gitlab.com/lely_industries/lely-core.git";
     fetchgitArgs = {
       rev = "7824cbb2ac08d091c4fa2fb397669b938de9e3f5";
@@ -62,7 +62,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "sha256-HQeVEQUX6xjIBkcoh8r8hh3QtqHBBFJGxVW8R/a9d+M=";
   };
 
-  mcap-vendor = patchVendorGit (patchVendorUrl rosSuper.mcap-vendor {
+  mcap-vendor = patchExternalProjectGit (patchVendorUrl rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.1.0.tar.gz";
     hash = "sha256-HLKuny6RDusuk7OrcidE0YBbnaRXZOT9iHA7ZpQTNQ0=";
   }) {

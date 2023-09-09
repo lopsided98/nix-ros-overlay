@@ -141,7 +141,7 @@ let
       '';
     });
 
-    novatel-oem7-driver = (patchVendorGit rosSuper.novatel-oem7-driver {
+    novatel-oem7-driver = (patchExternalProjectGit rosSuper.novatel-oem7-driver {
       url = "https://github.com/novatel/novatel_edie";
       fetchgitArgs = {
         rev = "d02ccc2dfe531d642c1e2ca8a8c0f8205c856f23";

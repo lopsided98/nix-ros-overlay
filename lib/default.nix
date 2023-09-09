@@ -36,7 +36,7 @@
     '' + postPatch;
   });
 
-  patchVendorGit = pkg: {
+  patchExternalProjectGit = pkg: {
     url,
     originalUrl ? url,
     file ? "CMakeLists.txt",
