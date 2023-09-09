@@ -1,7 +1,9 @@
 # Top level package set
 self:
 # Distro package set
-rosSelf: rosSuper: with rosSelf.lib; {
+rosSelf: rosSuper: let
+  inherit (rosSelf) lib;
+in with lib; {
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -73,23 +75,23 @@ rosSelf: rosSuper: with rosSelf.lib; {
     };
   };
 
-  rviz-ogre-vendor = patchAmentVendorGit rosSuper.rviz-ogre-vendor {
+  rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre.git";
     rev = "v1.12.10";
     fetchgitArgs.hash = "sha256-Z0ixdSmkV93coBBVZ5R3lPLfVMXRfWsFz/RsSyqPWFY=";
     tarSourceArgs.hook = let
       version = "1.79";
-      imgui = (self.fetchFromGitHub rec {
+      imgui = self.fetchFromGitHub rec {
         name = "${repo}-${version}";
         owner = "ocornut";
         repo = "imgui";
         rev = "v${version}";
         hash = "sha256-GIVhZ8Q7WebfHeKeJdVABXrTT26FOS7updncbv2LRnQ=";
-      });
-      imguiTar = tarSource { } imgui;
+      };
+      imguiTar = lib.tarSource { } imgui;
     in ''
       substituteInPlace Components/Overlay/CMakeLists.txt \
-        --replace ${escapeShellArg imgui.url} file://${escapeShellArg imguiTar}
+        --replace ${lib.escapeShellArg imgui.url} file://${lib.escapeShellArg imguiTar}
     '';
   };
 
