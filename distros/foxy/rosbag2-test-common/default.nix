@@ -1,0 +1,26 @@
+
+# Copyright 2023 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rcutils }:
+buildRosPackage {
+  pname = "ros-foxy-rosbag2-test-common";
+  version = "0.3.11-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/foxy/rosbag2_test_common/0.3.11-1.tar.gz";
+    name = "0.3.11-1.tar.gz";
+    sha256 = "c7da6b9dcd0a424957b7fea9c987baa10cddac178a292a69cf9169ed0a09d5dc";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ rclcpp rcutils ];
+  nativeBuildInputs = [ ament-cmake ];
+
+  meta = {
+    description = ''Commonly used test helper classes and fixtures for rosbag2'';
+    license = with lib.licenses; [ asl20 ];
+  };
+}
