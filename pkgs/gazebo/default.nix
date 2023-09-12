@@ -82,6 +82,12 @@ mkDerivation rec {
     ignition-fuel-tools
   ];
 
+  qtWrapperArgs = [
+    # Let the gazebo binary see neighboring binaries.
+    # It attempts to run gzclient from PATH.
+    "--prefix PATH : ${placeholder "out"}/bin"
+  ];
+
   meta = {
     homepage = "http://gazebosim.org/";
     description = "Multi-robot simulator for outdoor environments";
