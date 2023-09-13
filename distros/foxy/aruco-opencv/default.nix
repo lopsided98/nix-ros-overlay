@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-copyright ament-cmake-lint-cmake ament-cmake-uncrustify ament-cmake-xmllint ament-lint-auto ];
-  propagatedBuildInputs = [ aruco-opencv-msgs cv-bridge image-transport libyamlcpp python39Packages.img2pdf python3Packages.numpy python3Packages.opencv3 rclcpp rclcpp-components rclcpp-lifecycle tf2-geometry-msgs tf2-ros ];
+  propagatedBuildInputs = [ aruco-opencv-msgs cv-bridge image-transport libyamlcpp python39Packages.img2pdf python3Packages.numpy python3Packages.opencv4 rclcpp rclcpp-components rclcpp-lifecycle tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
