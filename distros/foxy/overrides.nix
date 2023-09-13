@@ -38,6 +38,19 @@ rosSelf: rosSuper: with rosSelf.lib; {
     };
   };
 
+  pendulum-control = rosSuper.pendulum-control.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Remove the malloc_hook from the pendulum_demo (for glibc 2.34).
+      (self.fetchpatch {
+        url = "https://github.com/ros2/demos/commit/754612348e408675f526174c5f03786e08ad8a70.patch";
+        hash = "sha256-B+UW1OL0SOs7mOEOtpu5CSo8zSk5ifJdwC/deY/7zTg=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
     patches ? [], ...
   }: {
