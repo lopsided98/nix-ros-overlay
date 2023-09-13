@@ -75,6 +75,17 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
+  ros2cli = rosSuper.ros2cli.overrideAttrs ({
+    propagatedBuildInputs ? [], ...
+  }: {
+    propagatedBuildInputs = propagatedBuildInputs ++ [
+      # Add argcomplete as a propagated ros2cli dependency.
+      # https://github.com/ros2/ros2cli/pull/564
+      # https://github.com/ros2/ros2cli/blob/26715cbb0948258d6f04b94c909d035c5130456a/ros2cli/ros2cli/cli.py#L45
+      rosSelf.python3Packages.argcomplete
+    ];
+  });
+
   rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
     patches ? [], ...
   }: {
