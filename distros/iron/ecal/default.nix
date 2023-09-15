@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, protobuf }:
 buildRosPackage {
   pname = "ros-iron-ecal";
-  version = "5.12.0-r1";
+  version = "5.12.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ecal-release/archive/release/iron/ecal/5.12.0-1.tar.gz";
-    name = "5.12.0-1.tar.gz";
-    sha256 = "504c795b3ca05f7bcff30dddadc502db1cdf55867ca249cb56d1fca1ad9c8fcc";
+    url = "https://github.com/ros2-gbp/ecal-release/archive/release/iron/ecal/5.12.0-3.tar.gz";
+    name = "5.12.0-3.tar.gz";
+    sha256 = "b1db4d416cdbb1d895eb8e0fd9a9d8f09842780bb7bd3892a5aa80294708384e";
   };
 
   buildType = "cmake";

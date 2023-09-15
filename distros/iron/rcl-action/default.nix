@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, osrf-testing-tools-cpp, rcl, rcutils, rmw, rmw-implementation-cmake, rosidl-runtime-c, test-msgs }:
 buildRosPackage {
   pname = "ros-iron-rcl-action";
-  version = "6.0.2-r1";
+  version = "6.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/iron/rcl_action/6.0.2-1.tar.gz";
-    name = "6.0.2-1.tar.gz";
-    sha256 = "8e342979dd1f4ab58bf2d1f01f334533e732c313594a462727e609a6e6d2b109";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/iron/rcl_action/6.0.3-1.tar.gz";
+    name = "6.0.3-1.tar.gz";
+    sha256 = "a2e4b4a68161292ab74b8746b85444cb4675cb05e007304f5e26cd26043503f1";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cpplint }:
 buildRosPackage {
   pname = "ros-iron-ament-cmake-cpplint";
-  version = "0.14.1-r2";
+  version = "0.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_cmake_cpplint/0.14.1-2.tar.gz";
-    name = "0.14.1-2.tar.gz";
-    sha256 = "b587f53de473d8089e53311beec61e8e1da7666c5cb2b62f867e7a6bf54f8958";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_cmake_cpplint/0.14.2-1.tar.gz";
+    name = "0.14.2-1.tar.gz";
+    sha256 = "31acb712ce2c4737774b2e703b68bb08d31e23b02142058aef2ce1c6d314b04d";
   };
 
   buildType = "ament_cmake";

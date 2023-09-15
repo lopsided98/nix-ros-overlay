@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost }:
 buildRosPackage {
   pname = "ros-iron-swri-serial-util";
-  version = "3.5.4-r1";
+  version = "3.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_serial_util/3.5.4-1.tar.gz";
-    name = "3.5.4-1.tar.gz";
-    sha256 = "98ca0362247cdcd4b122508621d654354288aed7335809db5d8f6f942a33f0bd";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_serial_util/3.6.1-1.tar.gz";
+    name = "3.6.1-1.tar.gz";
+    sha256 = "a22ee1c48bddc28c6b54e682dc40d6ad64c3843c81a8634411eeab9edf26864f";
   };
 
   buildType = "ament_cmake";

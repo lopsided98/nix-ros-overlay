@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, backward-ros }:
 buildRosPackage {
   pname = "ros-iron-moveit-common";
-  version = "2.7.4-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_common/2.7.4-1.tar.gz";
-    name = "2.7.4-1.tar.gz";
-    sha256 = "c560175d00cb5c1cbb09fdd42dfd2341e306a1d5ae11a7a0c4d906c5bb6e87a4";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_common/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "e0adfdfcc1695d2cb460cd9f54e2e59ad1c580224a6078230f1bfafcfb1cec8a";
   };
 
   buildType = "ament_cmake";

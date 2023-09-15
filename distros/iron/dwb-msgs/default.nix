@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, nav-2d-msgs, nav-msgs, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-dwb-msgs";
-  version = "1.2.2-r1";
+  version = "1.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/dwb_msgs/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "53f60bfaea5ab021e63790480fcb571fdd5eef15ba841336d6d986b39fddc093";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/dwb_msgs/1.2.2-2.tar.gz";
+    name = "1.2.2-2.tar.gz";
+    sha256 = "6cd8c10a4b4dddaf49d3624bded1bde0d87f85ba46b22a27cabd1d37ab64e8aa";
   };
 
   buildType = "ament_cmake";

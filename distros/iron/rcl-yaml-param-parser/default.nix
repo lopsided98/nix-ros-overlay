@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, libyaml, libyaml-vendor, mimick-vendor, osrf-testing-tools-cpp, performance-test-fixture, rcpputils, rcutils, rmw }:
 buildRosPackage {
   pname = "ros-iron-rcl-yaml-param-parser";
-  version = "6.0.2-r1";
+  version = "6.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/iron/rcl_yaml_param_parser/6.0.2-1.tar.gz";
-    name = "6.0.2-1.tar.gz";
-    sha256 = "d60e6b11d2cbd245122eeba7795753c036d12eaaaebe1d9d9ca2abe15337f2f5";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/iron/rcl_yaml_param_parser/6.0.3-1.tar.gz";
+    name = "6.0.3-1.tar.gz";
+    sha256 = "b3483b539a64ab2f650c4be230081ef1302bac35b81d766d07a3352dc0b01e35";
   };
 
   buildType = "ament_cmake";

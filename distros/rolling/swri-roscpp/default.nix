@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, diagnostic-updater, gtest, marti-common-msgs, nav-msgs, rclcpp, ros-environment, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-swri-roscpp";
-  version = "3.6.0-r1";
+  version = "3.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_roscpp/3.6.0-1.tar.gz";
-    name = "3.6.0-1.tar.gz";
-    sha256 = "783718c3705cca7f7ca1fe9588ecc496493b21d255e91d82cbc49a0c0112cbf7";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_roscpp/3.6.1-1.tar.gz";
+    name = "3.6.1-1.tar.gz";
+    sha256 = "2fd48b3629c8a15290bae157dd3aff64c0ea81d3ab885664cd8e2419e44351e5";
   };
 
   buildType = "ament_cmake";

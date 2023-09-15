@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-iron-ros2cli-test-interfaces";
-  version = "0.25.2-r1";
+  version = "0.25.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/iron/ros2cli_test_interfaces/0.25.2-1.tar.gz";
-    name = "0.25.2-1.tar.gz";
-    sha256 = "5346997d8f749ea666bb95e3ce3b313231c42e681b8f93dec7f2711946b4adaf";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/iron/ros2cli_test_interfaces/0.25.3-1.tar.gz";
+    name = "0.25.3-1.tar.gz";
+    sha256 = "8fdf71545dc4947700b79ee420ebf3a428cae387c960cb6f1c26f1bdafaa8c67";
   };
 
   buildType = "ament_cmake";

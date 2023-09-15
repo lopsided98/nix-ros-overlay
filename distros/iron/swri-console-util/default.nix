@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-iron-swri-console-util";
-  version = "3.5.4-r1";
+  version = "3.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_console_util/3.5.4-1.tar.gz";
-    name = "3.5.4-1.tar.gz";
-    sha256 = "e3ac1afb3b3ff7115873805112a632e59dafdaf781bb3fcd53f097731a9e374a";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_console_util/3.6.1-1.tar.gz";
+    name = "3.6.1-1.tar.gz";
+    sha256 = "c4db5c0bb2ec09dc4f82e33c272cf601b6404948349716820040dbb659ecfc07";
   };
 
   buildType = "ament_cmake";

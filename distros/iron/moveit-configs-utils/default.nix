@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, ament-lint-auto, ament-lint-common, launch, launch-param-builder, launch-ros, srdfdom }:
 buildRosPackage {
   pname = "ros-iron-moveit-configs-utils";
-  version = "2.7.4-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_configs_utils/2.7.4-1.tar.gz";
-    name = "2.7.4-1.tar.gz";
-    sha256 = "cde620774bbf5fc94e531fd6946fe089d97cdf4aa47d4ec0a96b60539175e3cd";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_configs_utils/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "f29546aab2598d0f51b1732b8f2e994dddd6d3bb8992069b7afdb2a33d0eaecc";
   };
 
   buildType = "ament_python";

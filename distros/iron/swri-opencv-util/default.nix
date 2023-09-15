@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cv-bridge, swri-math-util }:
 buildRosPackage {
   pname = "ros-iron-swri-opencv-util";
-  version = "3.5.4-r1";
+  version = "3.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_opencv_util/3.5.4-1.tar.gz";
-    name = "3.5.4-1.tar.gz";
-    sha256 = "3df32c10847d62f751ddf321e15ce7efb424bf74fc12389e08f06902d5ec62b8";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_opencv_util/3.6.1-1.tar.gz";
+    name = "3.6.1-1.tar.gz";
+    sha256 = "09aae6b9f4d7ff9fb7190b1fa4d027809fa39d9729dca3f75d95b46fa839db7d";
   };
 
   buildType = "ament_cmake";

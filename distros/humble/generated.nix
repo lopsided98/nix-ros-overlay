@@ -4,6 +4,8 @@
 
 self: super: {
 
+ aandd-ekew-driver-py = self.callPackage ./aandd-ekew-driver-py {};
+
  acado-vendor = self.callPackage ./acado-vendor {};
 
  ackermann-msgs = self.callPackage ./ackermann-msgs {};
@@ -246,6 +248,10 @@ self: super: {
 
  bag2-to-image = self.callPackage ./bag2-to-image {};
 
+ base2d-kinematics = self.callPackage ./base2d-kinematics {};
+
+ base2d-kinematics-msgs = self.callPackage ./base2d-kinematics-msgs {};
+
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
@@ -293,6 +299,8 @@ self: super: {
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
 
  class-loader = self.callPackage ./class-loader {};
+
+ classic-bags = self.callPackage ./classic-bags {};
 
  clearpath-common = self.callPackage ./clearpath-common {};
 
@@ -958,6 +966,8 @@ self: super: {
 
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
+ libcamera = self.callPackage ./libcamera {};
+
  libcreate = self.callPackage ./libcreate {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
@@ -1042,6 +1052,8 @@ self: super: {
 
  message-tf-frame-transformer = self.callPackage ./message-tf-frame-transformer {};
 
+ metavision-driver = self.callPackage ./metavision-driver {};
+
  micro-ros-diagnostic-bridge = self.callPackage ./micro-ros-diagnostic-bridge {};
 
  micro-ros-diagnostic-msgs = self.callPackage ./micro-ros-diagnostic-msgs {};
@@ -1064,11 +1076,25 @@ self: super: {
 
  mola-common = self.callPackage ./mola-common {};
 
+ mola-demos = self.callPackage ./mola-demos {};
+
+ mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
+
  mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
 
  mola-input-kitti-dataset = self.callPackage ./mola-input-kitti-dataset {};
 
+ mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
+
+ mola-input-ros2 = self.callPackage ./mola-input-ros2 {};
+
  mola-kernel = self.callPackage ./mola-kernel {};
+
+ mola-launcher = self.callPackage ./mola-launcher {};
+
+ mola-test-datasets = self.callPackage ./mola-test-datasets {};
+
+ mola-viz = self.callPackage ./mola-viz {};
 
  mola-yaml = self.callPackage ./mola-yaml {};
 
@@ -1161,6 +1187,8 @@ self: super: {
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
+
+ mqtt-client = self.callPackage ./mqtt-client {};
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
 
@@ -1257,6 +1285,8 @@ self: super: {
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
  nerian-stereo = self.callPackage ./nerian-stereo {};
+
+ network-interface = self.callPackage ./network-interface {};
 
  nlohmann-json-schema-validator-vendor = self.callPackage ./nlohmann-json-schema-validator-vendor {};
 
@@ -1608,6 +1638,10 @@ self: super: {
 
  rcutils = self.callPackage ./rcutils {};
 
+ reach = self.callPackage ./reach {};
+
+ reach-ros = self.callPackage ./reach-ros {};
+
  realsense2-camera = self.callPackage ./realsense2-camera {};
 
  realsense2-camera-msgs = self.callPackage ./realsense2-camera-msgs {};
@@ -1755,6 +1789,8 @@ self: super: {
  ros2-controllers = self.callPackage ./ros2-controllers {};
 
  ros2-controllers-test-nodes = self.callPackage ./ros2-controllers-test-nodes {};
+
+ ros2-ouster = self.callPackage ./ros2-ouster {};
 
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
 
@@ -2173,6 +2209,8 @@ self: super: {
  stubborn-buddies = self.callPackage ./stubborn-buddies {};
 
  stubborn-buddies-msgs = self.callPackage ./stubborn-buddies-msgs {};
+
+ swri-cli-tools = self.callPackage ./swri-cli-tools {};
 
  swri-console = self.callPackage ./swri-console {};
 

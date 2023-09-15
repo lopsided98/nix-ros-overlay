@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-clang-format, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-index-cpp, ament-lint-auto, moveit-resources-panda-moveit-config, moveit-setup-app-plugins, moveit-setup-controllers, moveit-setup-core-plugins, moveit-setup-framework, moveit-setup-srdf-plugins, pluginlib, qt5, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-moveit-setup-assistant";
-  version = "2.5.4-r1";
+  version = "2.5.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_setup_assistant/2.5.4-1.tar.gz";
-    name = "2.5.4-1.tar.gz";
-    sha256 = "1e871c66920a28b23b96bbf75f687476019f1204e41e8c53f3e2d7df2e416a12";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_setup_assistant/2.5.5-1.tar.gz";
+    name = "2.5.5-1.tar.gz";
+    sha256 = "2ab9e159e948492e739154241ce135a390bc1341b0a6a0e29df4210ea382883d";
   };
 
   buildType = "ament_cmake";

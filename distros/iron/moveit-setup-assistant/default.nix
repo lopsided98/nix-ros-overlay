@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-clang-format, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-index-cpp, ament-lint-auto, moveit-resources-panda-moveit-config, moveit-setup-app-plugins, moveit-setup-controllers, moveit-setup-core-plugins, moveit-setup-framework, moveit-setup-srdf-plugins, pluginlib, qt5, rclcpp }:
 buildRosPackage {
   pname = "ros-iron-moveit-setup-assistant";
-  version = "2.7.4-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_setup_assistant/2.7.4-1.tar.gz";
-    name = "2.7.4-1.tar.gz";
-    sha256 = "f779386976889e2ae85b0e230a666414ec3b356600c28aadb3ea5786ebb74496";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_setup_assistant/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "9e286cc9460787885ecd4279891e9e4a95dc88ced0a1a9b0b3cafef00a92b5b8";
   };
 
   buildType = "ament_cmake";

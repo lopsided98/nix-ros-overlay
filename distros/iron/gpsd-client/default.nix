@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gps-msgs, gpsd, pkg-config, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-iron-gpsd-client";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/iron/gpsd_client/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "3c0aefa30110d2e99721dd75bfc6ecd6df033a7c8944512177130f5ebe70d990";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/iron/gpsd_client/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "070f2dc56f569de54a1dd570df5121471fe7ba493d2390409bbde6af0db4f65c";
   };
 
   buildType = "ament_cmake";

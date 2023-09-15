@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-lint, python3Packages }:
 buildRosPackage {
   pname = "ros-iron-ament-flake8";
-  version = "0.14.1-r2";
+  version = "0.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_flake8/0.14.1-2.tar.gz";
-    name = "0.14.1-2.tar.gz";
-    sha256 = "5d9a205b100ecb43ea1c716783ca4e902a048e0179ff0383b25e05bf4b57a306";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_flake8/0.14.2-1.tar.gz";
+    name = "0.14.2-1.tar.gz";
+    sha256 = "a14af59be3111bbc66efb20267b34c11f4a34c4d590631c8a4a5e4fa2fad6b16";
   };
 
   buildType = "ament_python";

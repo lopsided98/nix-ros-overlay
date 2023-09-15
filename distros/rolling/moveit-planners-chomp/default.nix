@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, chomp-motion-planner, moveit-common, moveit-core, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-moveit-planners-chomp";
-  version = "2.7.4-r1";
+  version = "2.8.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_planners_chomp/2.7.4-1.tar.gz";
-    name = "2.7.4-1.tar.gz";
-    sha256 = "b2886942e6fadf4b9bdf76a4bf76c8f1490ab7cd163a17752bc604ddf1ef7fd8";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_planners_chomp/2.8.0-2.tar.gz";
+    name = "2.8.0-2.tar.gz";
+    sha256 = "40945057f936861bfd6a0803b1480a809fd95494055ae6a0e4cbf4e01093ae1d";
   };
 
   buildType = "ament_cmake";

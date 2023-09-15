@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl,  }:
 buildRosPackage {
   pname = "ros-iron-ament-lint";
-  version = "0.14.1-r2";
+  version = "0.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_lint/0.14.1-2.tar.gz";
-    name = "0.14.1-2.tar.gz";
-    sha256 = "c179f120fdffee8be8032f670c91dc0026fdf227107c0bf19c7789c0bf5a0bc4";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_lint/0.14.2-1.tar.gz";
+    name = "0.14.2-1.tar.gz";
+    sha256 = "060df712efb5301170c3ca005872423636d0ab2dd948abf2a4362f8404a14f82";
   };
 
   buildType = "ament_python";

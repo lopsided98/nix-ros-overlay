@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-core, moveit-planners, moveit-plugins, moveit-ros-move-group, moveit-ros-perception, moveit-ros-planning, moveit-ros-planning-interface, moveit-ros-warehouse }:
 buildRosPackage {
   pname = "ros-iron-moveit-runtime";
-  version = "2.7.4-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_runtime/2.7.4-1.tar.gz";
-    name = "2.7.4-1.tar.gz";
-    sha256 = "96e3e55f6eeec519d69adb1ca9a8bf818d6ccee30b2e9c4fbb5fb9e1747b2fa3";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_runtime/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "fad90f93fbe81e0fec8a11703a1017f6d6cf671e06c77b356ec34e4954a76d8b";
   };
 
   buildType = "ament_cmake";

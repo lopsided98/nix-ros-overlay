@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-yaml, mrpt2 }:
 buildRosPackage {
   pname = "ros-rolling-mola-kernel";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_kernel/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "82cbe0a84e38fdafa22b3b94cb178c6cb27fc6fd7fde80284004b63406670c6e";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_kernel/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "be95ce763e51fa21071f826823bb5af2d191580a9e15ace393c1e0aa8795899c";
   };
 
   buildType = "cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Fundamental C++ virtual interfaces and data types for the rest of MOLA modules'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ gpl3Only ];
   };
 }

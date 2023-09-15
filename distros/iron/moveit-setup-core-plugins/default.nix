@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-clang-format, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-index-cpp, ament-lint-auto, moveit-ros-visualization, moveit-setup-framework, pluginlib, rclcpp, srdfdom, urdf }:
 buildRosPackage {
   pname = "ros-iron-moveit-setup-core-plugins";
-  version = "2.7.4-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_setup_core_plugins/2.7.4-1.tar.gz";
-    name = "2.7.4-1.tar.gz";
-    sha256 = "e23db905e1f9003d015ae8f223c5925e0dee41e398aab7348e4c752eabec799c";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_setup_core_plugins/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "239bffd1cc33dfa783b2b23f832dd8b164ffb3d2dec4728cf9661e11450c22da";
   };
 
   buildType = "ament_cmake";
