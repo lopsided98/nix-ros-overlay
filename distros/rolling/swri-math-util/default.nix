@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-swri-math-util";
-  version = "3.6.0-r1";
+  version = "3.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_math_util/3.6.0-1.tar.gz";
-    name = "3.6.0-1.tar.gz";
-    sha256 = "8c5972ae6ce9350141c437de2f558bbf1d93d2424cae4334e87c691dfae6be2c";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_math_util/3.6.1-1.tar.gz";
+    name = "3.6.1-1.tar.gz";
+    sha256 = "04d3c471042b63e0c1b6fbbd87b2b9413d33e24058a7f87f38e52b61d859e084";
   };
 
   buildType = "ament_cmake";

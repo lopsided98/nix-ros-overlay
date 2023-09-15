@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-clang-format, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-index-cpp, ament-lint-auto, moveit-configs-utils, moveit-resources-fanuc-moveit-config, moveit-resources-panda-moveit-config, moveit-setup-framework, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-iron-moveit-setup-controllers";
-  version = "2.7.4-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_setup_controllers/2.7.4-1.tar.gz";
-    name = "2.7.4-1.tar.gz";
-    sha256 = "be5c4fff472aba156efaa5e64248d80060aac85e4352a8c6e1b39e54a300a69b";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_setup_controllers/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "99086890dc41cccfe1255124dc79c3ae5a002ae0858d2cb6fc60082ea425aee3";
   };
 
   buildType = "ament_cmake";

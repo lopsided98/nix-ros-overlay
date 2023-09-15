@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav2-common, nav2-costmap-2d, rclcpp }:
 buildRosPackage {
   pname = "ros-iron-costmap-queue";
-  version = "1.2.2-r1";
+  version = "1.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/costmap_queue/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "c4c4413831414bb1b613bed512ca90ebe0cdad829f322c3e0443ddfbcf8d00c4";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/costmap_queue/1.2.2-2.tar.gz";
+    name = "1.2.2-2.tar.gz";
+    sha256 = "c42dc99163d9ec869bc82b82a32df3afd38afdaeca0405b6297b1474dab93086";
   };
 
   buildType = "ament_cmake";

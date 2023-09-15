@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, nav2-common, navigation2, slam-toolbox, turtlebot3-gazebo }:
 buildRosPackage {
   pname = "ros-iron-nav2-bringup";
-  version = "1.2.2-r1";
+  version = "1.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_bringup/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "9f4476b1be269caf56ff78673a62ede11fbeb9e9a9292601c7471e360f2f2aca";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_bringup/1.2.2-2.tar.gz";
+    name = "1.2.2-2.tar.gz";
+    sha256 = "275ad933213bd38b37d4752e725cbbc73209f446606992f84b22bb2a43e6762c";
   };
 
   buildType = "ament_cmake";

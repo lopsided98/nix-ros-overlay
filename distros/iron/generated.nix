@@ -232,6 +232,8 @@ self: super: {
 
  class-loader = self.callPackage ./class-loader {};
 
+ classic-bags = self.callPackage ./classic-bags {};
+
  color-names = self.callPackage ./color-names {};
 
  color-util = self.callPackage ./color-util {};
@@ -898,11 +900,25 @@ self: super: {
 
  mola-common = self.callPackage ./mola-common {};
 
+ mola-demos = self.callPackage ./mola-demos {};
+
+ mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
+
  mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
 
  mola-input-kitti-dataset = self.callPackage ./mola-input-kitti-dataset {};
 
+ mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
+
+ mola-input-ros2 = self.callPackage ./mola-input-ros2 {};
+
  mola-kernel = self.callPackage ./mola-kernel {};
+
+ mola-launcher = self.callPackage ./mola-launcher {};
+
+ mola-test-datasets = self.callPackage ./mola-test-datasets {};
+
+ mola-viz = self.callPackage ./mola-viz {};
 
  mola-yaml = self.callPackage ./mola-yaml {};
 
@@ -999,6 +1015,8 @@ self: super: {
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
+
+ mqtt-client = self.callPackage ./mqtt-client {};
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
 
@@ -1147,6 +1165,8 @@ self: super: {
  osrf-testing-tools-cpp = self.callPackage ./osrf-testing-tools-cpp {};
 
  ouster-msgs = self.callPackage ./ouster-msgs {};
+
+ ouster-ros = self.callPackage ./ouster-ros {};
 
  ouxt-common = self.callPackage ./ouxt-common {};
 
@@ -1313,6 +1333,8 @@ self: super: {
  radar-msgs = self.callPackage ./radar-msgs {};
 
  random-numbers = self.callPackage ./random-numbers {};
+
+ range-sensor-broadcaster = self.callPackage ./range-sensor-broadcaster {};
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
@@ -1959,6 +1981,8 @@ self: super: {
  stubborn-buddies = self.callPackage ./stubborn-buddies {};
 
  stubborn-buddies-msgs = self.callPackage ./stubborn-buddies-msgs {};
+
+ swri-cli-tools = self.callPackage ./swri-cli-tools {};
 
  swri-console = self.callPackage ./swri-console {};
 

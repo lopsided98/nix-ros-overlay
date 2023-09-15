@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-uncrustify, geometry-msgs, rclcpp, rclcpp-components, rmf-obstacle-msgs, rmf-utils, rmf-visualization-msgs, vision-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-iron-rmf-visualization-obstacles";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/iron/rmf_visualization_obstacles/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "df6ed48d43478016306ca310ab820812fc412a01b05796906dcdd1bda4b59288";
+    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/iron/rmf_visualization_obstacles/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "dd666f677b7c29ca538bb02f0bb5e7a15f1802ae67e50fde5dd77aa2dc6d3acf";
   };
 
   buildType = "ament_cmake";

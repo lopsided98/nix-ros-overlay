@@ -2,21 +2,21 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-clang-format, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-index-cpp, ament-lint-auto, moveit-common, moveit-core, moveit-ros-planning, moveit-ros-visualization, pluginlib, rclcpp, rviz-common, rviz-rendering, srdfdom, urdf }:
+{ lib, buildRosPackage, fetchurl, ament-clang-format, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-index-cpp, ament-lint-auto, fmt, moveit-common, moveit-core, moveit-ros-planning, moveit-ros-visualization, pluginlib, rclcpp, rviz-common, rviz-rendering, srdfdom, urdf }:
 buildRosPackage {
   pname = "ros-iron-moveit-setup-framework";
-  version = "2.7.4-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_setup_framework/2.7.4-1.tar.gz";
-    name = "2.7.4-1.tar.gz";
-    sha256 = "3c07c9580454efc4da14b46d1e5626038bddf095ee38c8ab95bae8dc71bee80d";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_setup_framework/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "0b37470cec56e98fe4aaeb8e37f1cf56d8fe32fd0e83045aac084770c3f8589b";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-clang-format ament-cmake-lint-cmake ament-cmake-xmllint ament-lint-auto ];
-  propagatedBuildInputs = [ ament-index-cpp moveit-common moveit-core moveit-ros-planning moveit-ros-visualization pluginlib rclcpp rviz-common rviz-rendering srdfdom urdf ];
+  propagatedBuildInputs = [ ament-index-cpp fmt moveit-common moveit-core moveit-ros-planning moveit-ros-visualization pluginlib rclcpp rviz-common rviz-rendering srdfdom urdf ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

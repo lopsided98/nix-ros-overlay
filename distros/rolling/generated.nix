@@ -846,6 +846,8 @@ self: super: {
 
  message-tf-frame-transformer = self.callPackage ./message-tf-frame-transformer {};
 
+ metavision-driver = self.callPackage ./metavision-driver {};
+
  micro-ros-diagnostic-bridge = self.callPackage ./micro-ros-diagnostic-bridge {};
 
  micro-ros-diagnostic-msgs = self.callPackage ./micro-ros-diagnostic-msgs {};
@@ -866,11 +868,25 @@ self: super: {
 
  mola-common = self.callPackage ./mola-common {};
 
+ mola-demos = self.callPackage ./mola-demos {};
+
+ mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
+
  mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
 
  mola-input-kitti-dataset = self.callPackage ./mola-input-kitti-dataset {};
 
+ mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
+
+ mola-input-ros2 = self.callPackage ./mola-input-ros2 {};
+
  mola-kernel = self.callPackage ./mola-kernel {};
+
+ mola-launcher = self.callPackage ./mola-launcher {};
+
+ mola-test-datasets = self.callPackage ./mola-test-datasets {};
+
+ mola-viz = self.callPackage ./mola-viz {};
 
  mola-yaml = self.callPackage ./mola-yaml {};
 
@@ -967,6 +983,8 @@ self: super: {
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
+
+ mqtt-client = self.callPackage ./mqtt-client {};
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
 
@@ -1196,6 +1214,8 @@ self: super: {
 
  random-numbers = self.callPackage ./random-numbers {};
 
+ range-sensor-broadcaster = self.callPackage ./range-sensor-broadcaster {};
+
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
@@ -1403,6 +1423,8 @@ self: super: {
  ros2-controllers = self.callPackage ./ros2-controllers {};
 
  ros2-controllers-test-nodes = self.callPackage ./ros2-controllers-test-nodes {};
+
+ ros2-ouster = self.callPackage ./ros2-ouster {};
 
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
 
@@ -1793,6 +1815,8 @@ self: super: {
  stubborn-buddies = self.callPackage ./stubborn-buddies {};
 
  stubborn-buddies-msgs = self.callPackage ./stubborn-buddies-msgs {};
+
+ swri-cli-tools = self.callPackage ./swri-cli-tools {};
 
  swri-console = self.callPackage ./swri-console {};
 

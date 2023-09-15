@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, rcutils, rosidl-runtime-c }:
 buildRosPackage {
   pname = "ros-iron-rosidl-dynamic-typesupport";
-  version = "0.0.3-r2";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_dynamic_typesupport-release/archive/release/iron/rosidl_dynamic_typesupport/0.0.3-2.tar.gz";
-    name = "0.0.3-2.tar.gz";
-    sha256 = "96b13500a676ec036564bc6ad65f89881ac96ca04f9c1cc2fcb0a3909d5f1583";
+    url = "https://github.com/ros2-gbp/rosidl_dynamic_typesupport-release/archive/release/iron/rosidl_dynamic_typesupport/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "720020584762a48310e863ca7bc0556e1024519f30b8345a6dd54e5201c85755";
   };
 
   buildType = "ament_cmake";

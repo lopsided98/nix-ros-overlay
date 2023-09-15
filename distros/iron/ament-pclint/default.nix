@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages }:
 buildRosPackage {
   pname = "ros-iron-ament-pclint";
-  version = "0.14.1-r2";
+  version = "0.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_pclint/0.14.1-2.tar.gz";
-    name = "0.14.1-2.tar.gz";
-    sha256 = "ba3e7d23ecfaac74abde6b5833475c6da7952dd832293f85d05999d66fb5e8f4";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_pclint/0.14.2-1.tar.gz";
+    name = "0.14.2-1.tar.gz";
+    sha256 = "3f6f8e450e61beef10c343e7ebb8e3c8174d04464e4865815ff162d7c11ded06";
   };
 
   buildType = "ament_python";

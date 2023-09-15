@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, bondcpp, diagnostic-updater, geometry-msgs, lifecycle-msgs, nav2-common, nav2-msgs, nav2-util, rclcpp-action, rclcpp-lifecycle, std-msgs, std-srvs, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-iron-nav2-lifecycle-manager";
-  version = "1.2.2-r1";
+  version = "1.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_lifecycle_manager/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "0f8832c3823f02b3a2234981ced3f8ba811f7eb8515e70f83345660ea550f1d3";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_lifecycle_manager/1.2.2-2.tar.gz";
+    name = "1.2.2-2.tar.gz";
+    sha256 = "b3001729a8cebec2db6dacbe6e2c86655cd2c22289b1cf6b82291ef62bb0def9";
   };
 
   buildType = "ament_cmake";

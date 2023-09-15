@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-simple-controller-manager }:
 buildRosPackage {
   pname = "ros-iron-moveit-plugins";
-  version = "2.7.4-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_plugins/2.7.4-1.tar.gz";
-    name = "2.7.4-1.tar.gz";
-    sha256 = "0a2ed4ba372291a9762ddc2a04dc122fa1f3ecd78b7bb7344da3846ea8db625f";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/iron/moveit_plugins/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "b7529afea917736f59a6852ab282650911a004ef0ebf3740afdc35d56a372e2b";
   };
 
   buildType = "ament_cmake";

@@ -2722,6 +2722,8 @@ self: super: {
 
  reach = self.callPackage ./reach {};
 
+ reach-ros = self.callPackage ./reach-ros {};
+
  realsense2-camera = self.callPackage ./realsense2-camera {};
 
  realsense2-description = self.callPackage ./realsense2-description {};

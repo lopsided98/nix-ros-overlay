@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, gbenchmark, geometry-msgs, llvmPackages, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp, std-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, visualization-msgs, xsimd, xtensor }:
 buildRosPackage {
   pname = "ros-iron-nav2-mppi-controller";
-  version = "1.2.2-r1";
+  version = "1.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_mppi_controller/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "a913a626213164c5a366fa5f759501c08b9319346f6e6f7e0cb38b76a8a8ff29";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_mppi_controller/1.2.2-2.tar.gz";
+    name = "1.2.2-2.tar.gz";
+    sha256 = "4f366f372ed3e41776a436fbb9a68a058cb0589423950c0d10b9c4c01aef7c34";
   };
 
   buildType = "ament_cmake";

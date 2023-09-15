@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-test-assets, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-iron-diff-drive-controller";
-  version = "3.14.0-r1";
+  version = "3.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/diff_drive_controller/3.14.0-1.tar.gz";
-    name = "3.14.0-1.tar.gz";
-    sha256 = "71aa81259d7fbaa5ca1c8f39f954e98d09b8465782948e22223ad442ecf402c3";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/diff_drive_controller/3.15.0-1.tar.gz";
+    name = "3.15.0-1.tar.gz";
+    sha256 = "552ac274873d705995ce2256b693b78f9e26ad11ee10ae2514dbdbefe87f5a13";
   };
 
   buildType = "ament_cmake";

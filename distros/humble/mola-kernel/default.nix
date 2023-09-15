@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-yaml, mrpt2 }:
 buildRosPackage {
   pname = "ros-humble-mola-kernel";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_kernel/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "6318388bae11442b31d9cd2abbb9219609eb6b01b833b18d8f8536c482a54908";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_kernel/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "57108ad222bde0ca8e46bd734761892a08383bbd956d9862990fbf23c721b6b0";
   };
 
   buildType = "cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = ''Fundamental C++ virtual interfaces and data types for the rest of MOLA modules'';
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ gpl3Only ];
   };
 }
