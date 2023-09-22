@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, git, zstd-vendor }:
 buildRosPackage {
   pname = "ros-humble-mcap-vendor";
-  version = "0.15.7-r1";
+  version = "0.15.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/mcap_vendor/0.15.7-1.tar.gz";
-    name = "0.15.7-1.tar.gz";
-    sha256 = "fee50904b8871dc6a9de4010851dc7d25f847b5c103363a946a9d5923bf0778c";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/mcap_vendor/0.15.8-1.tar.gz";
+    name = "0.15.8-1.tar.gz";
+    sha256 = "ede3693a7b9c1a9d3a605c11990b774c9019ba868390aa36c5a85302bf833503";
   };
 
   buildType = "ament_cmake";

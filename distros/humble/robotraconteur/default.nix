@@ -2,25 +2,25 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bluez, boost, cmake, dbus, gtest, libusb1, openssl, python3, python3Packages, swig, zlib }:
+{ lib, buildRosPackage, fetchurl, bluez, boost, cmake, dbus, gtest, libusb1, openssl, python3, python3Packages, zlib }:
 buildRosPackage {
   pname = "ros-humble-robotraconteur";
-  version = "0.16.0-r4";
+  version = "0.18.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotraconteur-packaging/robotraconteur-ros2-release/archive/release/humble/robotraconteur/0.16.0-4.tar.gz";
-    name = "0.16.0-4.tar.gz";
-    sha256 = "588df38a171f3cefd97f2ab935b6d80c1a6310c506946d23d6a58b5e9c38937d";
+    url = "https://github.com/robotraconteur-packaging/robotraconteur-ros2-release/archive/release/humble/robotraconteur/0.18.0-1.tar.gz";
+    name = "0.18.0-1.tar.gz";
+    sha256 = "38056a0041df92701b6a291b84ccd743e9310e53b573902d91ae7015feb7abba";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake swig ];
+  buildInputs = [ cmake ];
   checkInputs = [ gtest ];
   propagatedBuildInputs = [ bluez boost dbus libusb1 openssl python3 python3Packages.numpy python3Packages.setuptools zlib ];
-  nativeBuildInputs = [ cmake swig ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Robot Raconteur ROS Package'';
+    description = ''The robotraconteur package'';
     license = with lib.licenses; [ asl20 ];
   };
 }

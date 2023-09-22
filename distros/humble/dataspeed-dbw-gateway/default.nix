@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, dataspeed-dbw-common, dataspeed-dbw-msgs, dbw-fca-msgs, dbw-ford-msgs, dbw-polaris-msgs, diagnostic-msgs, rclcpp, rclcpp-components, ros-environment, rosidl-default-generators, rosidl-default-runtime, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-dataspeed-dbw-gateway";
-  version = "2.1.1-r1";
+  version = "2.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dataspeed_dbw_gateway/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "bb6fa62d393825fbc90387f2dee97ec750e46565cc8c8fde06b34182caad0403";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dataspeed_dbw_gateway/2.1.3-1.tar.gz";
+    name = "2.1.3-1.tar.gz";
+    sha256 = "0eef31efddfd0c1330afc1b94573f8f9b9006cd35d253b7e8e238ecf08c275a1";
   };
 
   buildType = "ament_cmake";

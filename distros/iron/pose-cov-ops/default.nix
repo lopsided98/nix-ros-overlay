@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, geometry-msgs, gtest, mrpt2, ros-environment, tf2 }:
 buildRosPackage {
   pname = "ros-iron-pose-cov-ops";
-  version = "0.3.10-r2";
+  version = "0.3.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pose_cov_ops-release/archive/release/iron/pose_cov_ops/0.3.10-2.tar.gz";
-    name = "0.3.10-2.tar.gz";
-    sha256 = "84487b193317bf00daa10bd7b02a68b0ecea379f1a5ce0a578917661fe1ab364";
+    url = "https://github.com/ros2-gbp/pose_cov_ops-release/archive/release/iron/pose_cov_ops/0.3.11-1.tar.gz";
+    name = "0.3.11-1.tar.gz";
+    sha256 = "5c6a3d61bc65c0a03ed579f51014ef075fe3f07596d1f67366e0aa726c08e979";
   };
 
   buildType = "ament_cmake";

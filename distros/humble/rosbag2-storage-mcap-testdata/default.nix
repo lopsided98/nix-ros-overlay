@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-humble-rosbag2-storage-mcap-testdata";
-  version = "0.15.7-r1";
+  version = "0.15.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/rosbag2_storage_mcap_testdata/0.15.7-1.tar.gz";
-    name = "0.15.7-1.tar.gz";
-    sha256 = "1926e751206a63693ef29351b6c58744b9d32598b7be0684399b5efc165c2a7c";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/rosbag2_storage_mcap_testdata/0.15.8-1.tar.gz";
+    name = "0.15.8-1.tar.gz";
+    sha256 = "3505919bce97771f1194563bc7f205d1fe4751a9a55a5f446c8a902fc15ae4c7";
   };
 
   buildType = "ament_cmake";
