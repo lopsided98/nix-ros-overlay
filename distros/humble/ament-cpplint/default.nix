@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages }:
 buildRosPackage {
   pname = "ros-humble-ament-cpplint";
-  version = "0.12.7-r2";
+  version = "0.12.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_cpplint/0.12.7-2.tar.gz";
-    name = "0.12.7-2.tar.gz";
-    sha256 = "30dc9767d733476209dc21502817493edd1be126973bc73568788a1ea31578cb";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_cpplint/0.12.8-1.tar.gz";
+    name = "0.12.8-1.tar.gz";
+    sha256 = "5481a317aeeb25c357de3c4ef5ed73dc35fab0166f76ba750497b3c7f6fe5852";
   };
 
   buildType = "ament_python";

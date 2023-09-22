@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, costmap-cspace, costmap-cspace-msgs, diagnostic-updater, dynamic-reconfigure, geometry-msgs, map-server, move-base-msgs, nav-msgs, neonavigation-common, neonavigation-metrics-msgs, planner-cspace-msgs, roscpp, roslint, rostest, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, trajectory-msgs, trajectory-tracker, trajectory-tracker-msgs }:
 buildRosPackage {
   pname = "ros-noetic-planner-cspace";
-  version = "0.15.0-r1";
+  version = "0.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/noetic/planner_cspace/0.15.0-1.tar.gz";
-    name = "0.15.0-1.tar.gz";
-    sha256 = "e71c02c6f5c825b7314defd90a5f9293feceae690b51a3c965c8d05bcce27ef4";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/noetic/planner_cspace/0.16.0-1.tar.gz";
+    name = "0.16.0-1.tar.gz";
+    sha256 = "725e2c5e2143cb4cf36156562efbdad5013ef7b9d3862c35d8d14a366b71144c";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin ];
   checkInputs = [ map-server roslint rostest trajectory-tracker ];
-  propagatedBuildInputs = [ actionlib costmap-cspace costmap-cspace-msgs diagnostic-updater dynamic-reconfigure geometry-msgs move-base-msgs nav-msgs neonavigation-common neonavigation-metrics-msgs planner-cspace-msgs roscpp sensor-msgs std-srvs tf2 tf2-geometry-msgs tf2-ros trajectory-msgs trajectory-tracker-msgs ];
+  propagatedBuildInputs = [ actionlib costmap-cspace costmap-cspace-msgs diagnostic-updater dynamic-reconfigure geometry-msgs move-base-msgs nav-msgs neonavigation-common neonavigation-metrics-msgs planner-cspace-msgs roscpp sensor-msgs std-srvs tf2 tf2-geometry-msgs tf2-ros trajectory-msgs trajectory-tracker trajectory-tracker-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

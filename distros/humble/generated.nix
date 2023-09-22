@@ -550,7 +550,13 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ event-camera-codecs = self.callPackage ./event-camera-codecs {};
+
  event-camera-msgs = self.callPackage ./event-camera-msgs {};
+
+ event-camera-py = self.callPackage ./event-camera-py {};
+
+ event-camera-renderer = self.callPackage ./event-camera-renderer {};
 
  example-interfaces = self.callPackage ./example-interfaces {};
 
@@ -599,6 +605,10 @@ self: super: {
  examples-tf2-py = self.callPackage ./examples-tf2-py {};
 
  executive-smach = self.callPackage ./executive-smach {};
+
+ fadecandy-driver = self.callPackage ./fadecandy-driver {};
+
+ fadecandy-msgs = self.callPackage ./fadecandy-msgs {};
 
  fastcdr = self.callPackage ./fastcdr {};
 
@@ -1492,7 +1502,15 @@ self: super: {
 
  pmb2-simulation = self.callPackage ./pmb2-simulation {};
 
+ point-cloud-interfaces = self.callPackage ./point-cloud-interfaces {};
+
  point-cloud-msg-wrapper = self.callPackage ./point-cloud-msg-wrapper {};
+
+ point-cloud-transport = self.callPackage ./point-cloud-transport {};
+
+ point-cloud-transport-plugins = self.callPackage ./point-cloud-transport-plugins {};
+
+ point-cloud-transport-py = self.callPackage ./point-cloud-transport-py {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
@@ -2612,7 +2630,11 @@ self: super: {
 
  zenoh-bridge-dds = self.callPackage ./zenoh-bridge-dds {};
 
+ zlib-point-cloud-transport = self.callPackage ./zlib-point-cloud-transport {};
+
  zmqpp-vendor = self.callPackage ./zmqpp-vendor {};
+
+ zstd-point-cloud-transport = self.callPackage ./zstd-point-cloud-transport {};
 
  zstd-vendor = self.callPackage ./zstd-vendor {};
 

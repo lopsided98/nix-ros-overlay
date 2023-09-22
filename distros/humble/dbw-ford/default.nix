@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, dbw-ford-can, dbw-ford-description, dbw-ford-joystick-demo, dbw-ford-msgs }:
 buildRosPackage {
   pname = "ros-humble-dbw-ford";
-  version = "2.1.1-r1";
+  version = "2.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dbw_ford/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "144ee7d55b8fdf62b5400361550bfc59a49f7204b312750e3940509117b07f01";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dbw_ford/2.1.3-1.tar.gz";
+    name = "2.1.3-1.tar.gz";
+    sha256 = "87de75e12f2f16cfc4e8c82f746f864dc957732157f72e3f2ad0e910f67de620";
   };
 
   buildType = "ament_cmake";

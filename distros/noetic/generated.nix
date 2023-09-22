@@ -1892,6 +1892,8 @@ self: super: {
 
  mk = self.callPackage ./mk {};
 
+ mlx90640-thermal-camera = self.callPackage ./mlx90640-thermal-camera {};
+
  mobile-robot-simulator = self.callPackage ./mobile-robot-simulator {};
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
