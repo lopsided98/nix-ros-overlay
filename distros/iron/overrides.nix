@@ -104,7 +104,7 @@ in with lib; {
     postPatch = postPatch + ''
       substituteInPlace CMakeLists.txt \
         --replace 'https://github.com/${ogre.owner}/${ogre.repo}/archive/${ogre.rev}.zip' ${lib.escapeShellArg ogreTar} \
-        --replace c1b870955efddf539385094e9034e7f7 22a120dfa4d8783b2da24e0dd4a650eb
+        --replace c1b870955efddf539385094e9034e7f7 755abbcb42e33b3d1f916d7f743e088c
     '';
   });
 
