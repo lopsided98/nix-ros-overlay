@@ -19,6 +19,7 @@
     tar --sort=name \
       --format=gnu \
       --owner=0 --group=0 --numeric-owner \
+      --mtime="@$SOURCE_DATE_EPOCH" \
       ${lib.optionalString compress "-z"} \
       -cf "$out" "$sourceRoot"
   '';
