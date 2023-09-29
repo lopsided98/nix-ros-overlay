@@ -1,7 +1,9 @@
 # Top level package set
 self:
 # Distro package set
-rosSelf: rosSuper: with rosSelf.lib; {
+rosSelf: rosSuper: let
+  inherit (rosSelf) lib;
+in with lib; {
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -16,6 +18,14 @@ rosSelf: rosSuper: with rosSelf.lib; {
   });
 
   gazebo = self.gazebo_11;
+
+  google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
+    url = "https://github.com/google/benchmark.git";
+    fetchgitArgs = {
+      rev = "c05843a9f622db08ad59804c190f98879b76beba";
+      hash = "sha256-h/e2vJacUp7PITez9HPzGc5+ofz7Oplso44VibECmsI=";
+    };
+  };
 
   iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
     patches ? [], ...

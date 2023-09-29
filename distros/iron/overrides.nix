@@ -19,6 +19,14 @@ in with lib; {
 
   gazebo = self.gazebo_11;
 
+  google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
+    url = "https://github.com/google/benchmark.git";
+    fetchgitArgs = {
+      rev = "0d98dba29d66e93259db7daa53a9327df767a415";
+      hash = "sha256-yUiFxi80FWBmTZgqmqTMf9oqcBeg3o4I4vKd4djyRWY=";
+    };
+  };
+
   iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
     patches ? [], ...
   }: {
