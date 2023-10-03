@@ -101,7 +101,9 @@ in with lib; {
         rev = "v${version}";
         hash = "sha256-GIVhZ8Q7WebfHeKeJdVABXrTT26FOS7updncbv2LRnQ=";
       };
-      imguiTar = lib.tarSource { } imgui;
+      imguiTar = lib.tarSource {
+        hash = "sha256-TmkxzGLNo40swbFO9YT7RnHP/6ORxr78o+CH9TA5OfM=";
+      } imgui;
     in lib.tarSource {
       hook = ''
         substituteInPlace Components/Overlay/CMakeLists.txt \
@@ -112,7 +114,7 @@ in with lib; {
     postPatch = postPatch + ''
       substituteInPlace CMakeLists.txt \
         --replace 'https://github.com/${ogre.owner}/${ogre.repo}/archive/${ogre.rev}.zip' ${lib.escapeShellArg ogreTar} \
-        --replace c1b870955efddf539385094e9034e7f7 f6b9e3567bc0cd72c64e8c5d388ddc70
+        --replace c1b870955efddf539385094e9034e7f7 fcc1176585a7feb9f23c7900182a1f32
     '';
   });
 

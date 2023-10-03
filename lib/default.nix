@@ -10,8 +10,13 @@
   # it will be unpacked and repacked as a tarball.
   tarSource = {
     compress ? false,
-    hook ? ""
-  }: src: self.runCommand ("${src.name}.tar" + lib.optionalString compress ".gz") { inherit src; } ''
+    hook ? "",
+    hash ? null
+  }: src: self.runCommand ("${src.name}.tar" + lib.optionalString compress ".gz") {
+    inherit src;
+    outputHashMode = "flat";
+    outputHash = hash;
+  } ''
     unpackPhase
     pushd "$sourceRoot"
     ${hook}
