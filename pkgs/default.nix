@@ -101,7 +101,6 @@ in {
     cmake2 = self.callPackage ./ignition/cmake { };
     cmake = self.ignition.cmake2;
 
-    common1 = self.callPackage ./ignition/common/1.nix { };
     common3 = self.callPackage ./ignition/common/3.nix { };
     common4 = self.callPackage ./ignition/common { };
     common = self.ignition.common4;
