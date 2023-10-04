@@ -105,7 +105,6 @@ in {
     common4 = self.callPackage ./ignition/common { };
     common = self.ignition.common4;
 
-    fuel-tools1 = self.callPackage ./ignition/fuel-tools/1.nix { };
     fuel-tools4 = self.callPackage ./ignition/fuel-tools/4.nix { };
     fuel-tools7 = self.callPackage ./ignition/fuel-tools { };
     fuel-tools = self.ignition.fuel-tools7;
