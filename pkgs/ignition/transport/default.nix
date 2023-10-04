@@ -3,8 +3,8 @@
 , ignition-msgs ? ignition.msgs, ignition-utils ? ignition.utils, protobuf
 , libuuid, sqlite, libsodium, cppzmq, zeromq
 , majorVersion ? "11"
-, version ? "11.4.0"
-, srcHash ? "sha256-dI/MwR0+Vvi/+AZg9dDeqIFdIuBuJ/N2VEsnvMHu780="
+, version ? "11.4.1"
+, srcHash ? "sha256-wQ/ugKYopWgSaa6tqPrp8oQexPpnA6fa28L383OGNXM="
 , ... }:
 
 stdenv.mkDerivation rec {
