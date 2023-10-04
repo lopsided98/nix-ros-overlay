@@ -82,11 +82,6 @@ let
       sha256 = "07w54dmr75vq2imngfy66nk1sxlvkzhl2p6g362q0a02f099jy0f";
     };
 
-    libphidgets = patchVendorUrl rosSuper.libphidgets {
-      url = "https://www.phidgets.com/downloads/phidget21/libraries/linux/libphidget/libphidget_2.1.8.20151217.tar.gz";
-      sha256 = "0lpaskqxpklm05050wwvdqwhw30f2hpzss8sgyvczdpvvqzjg4vk";
-    };
-
     librealsense = rosSuper.librealsense.overrideAttrs ({
       patches ? [], ...
     }: {
