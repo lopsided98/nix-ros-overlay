@@ -1,6 +1,7 @@
-{ lib, stdenv, fetchFromGitHub, cmake, ignition, ignition-cmake ? ignition.cmake
-, ignition-math ? ignition.math, ignition-msgs ? ignition.msgs
-, ignition-utils ? ignition.utils, protobuf, libuuid, sqlite, libsodium, cppzmq, zeromq
+{ lib, stdenv, fetchFromGitHub, fetchpatch, cmake, ignition
+, ignition-cmake ? ignition.cmake, ignition-math ? ignition.math
+, ignition-msgs ? ignition.msgs, ignition-utils ? ignition.utils, protobuf
+, libuuid, sqlite, libsodium, cppzmq, zeromq
 , majorVersion ? "11"
 , version ? "11.4.0"
 , srcHash ? "sha256-dI/MwR0+Vvi/+AZg9dDeqIFdIuBuJ/N2VEsnvMHu780="
@@ -17,6 +18,13 @@ stdenv.mkDerivation rec {
     rev = "${pname}_${version}";
     hash = srcHash;
   };
+
+  patches =
+    # Fix compatibility with protobuf 22
+    lib.optional (majorVersion == "8") (fetchpatch {
+      url = "https://github.com/gazebosim/gz-transport/commit/3d68f46329ec6e4efe20c5125caceae83d4f8e45.patch";
+      hash = "sha256-23qSKsMSVL4sXFQrTggyUmxBJm/6RsKsB5EI09GRNKQ=";
+    });
 
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];
