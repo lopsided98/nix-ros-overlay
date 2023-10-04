@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, depthai, depthai-bridge, depthai-descriptions, depthai-examples, depthai-filters, depthai-ros-driver, depthai-ros-msgs }:
 buildRosPackage {
   pname = "ros-iron-depthai-ros";
-  version = "2.8.0-r1";
+  version = "2.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/iron/depthai-ros/2.8.0-1.tar.gz";
-    name = "2.8.0-1.tar.gz";
-    sha256 = "ce5366559fd73cbced8121220f0b9577e69fb4bcab1e9835290522b7d50b41bf";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/iron/depthai-ros/2.8.1-1.tar.gz";
+    name = "2.8.1-1.tar.gz";
+    sha256 = "c9390491f0566db7e85791d198f90e8c72cdc1da2362663cd0cffeb1bebce8df";
   };
 
   buildType = "ament_cmake";

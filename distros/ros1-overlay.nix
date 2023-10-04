@@ -71,6 +71,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "0nryr4hg3lha1aaz35wbqr42lb6l8alfcy6slj2yn2dgb5syrmn2";
   };
 
+  libphidgets = patchVendorUrl rosSuper.libphidgets {
+    url = "https://www.phidgets.com/downloads/phidget21/libraries/linux/libphidget/libphidget_2.1.8.20151217.tar.gz";
+    sha256 = "0lpaskqxpklm05050wwvdqwhw30f2hpzss8sgyvczdpvvqzjg4vk";
+  };
+
   map-server = rosSuper.map-server.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {

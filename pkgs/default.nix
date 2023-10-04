@@ -85,7 +85,6 @@ in {
     colcon-zsh
   ];
 
-  gazebo_9 = self.libsForQt5.callPackage ./gazebo/9.nix { };
   gazebo_11 = self.libsForQt5.callPackage ./gazebo { };
   gazebo = self.gazebo_11;
 
@@ -102,12 +101,10 @@ in {
     cmake2 = self.callPackage ./ignition/cmake { };
     cmake = self.ignition.cmake2;
 
-    common1 = self.callPackage ./ignition/common/1.nix { };
     common3 = self.callPackage ./ignition/common/3.nix { };
     common4 = self.callPackage ./ignition/common { };
     common = self.ignition.common4;
 
-    fuel-tools1 = self.callPackage ./ignition/fuel-tools/1.nix { };
     fuel-tools4 = self.callPackage ./ignition/fuel-tools/4.nix { };
     fuel-tools7 = self.callPackage ./ignition/fuel-tools { };
     fuel-tools = self.ignition.fuel-tools7;
@@ -116,14 +113,12 @@ in {
     math6 = self.callPackage ./ignition/math { };
     math = self.ignition.math6;
 
-    msgs1 = self.callPackage ./ignition/msgs/1.nix { };
     msgs5 = self.callPackage ./ignition/msgs/5.nix { };
     msgs8 = self.callPackage ./ignition/msgs { };
     msgs = self.ignition.msgs8;
 
     tools = self.callPackage ./ignition/tools { };
 
-    transport4 = self.callPackage ./ignition/transport/4.nix { };
     transport8 = self.callPackage ./ignition/transport/8.nix { };
     transport11 = self.callPackage ./ignition/transport { };
     transport = self.ignition.transport11;
@@ -146,7 +141,6 @@ in {
   python310 = pythonOverridesFor super.python310;
   python311 = pythonOverridesFor super.python311;
 
-  sdformat_6 = self.callPackage ./sdformat/6.nix { };
   sdformat_9 = self.callPackage ./sdformat/9.nix { };
   sdformat_13 = self.callPackage ./sdformat/13.nix { };
   sdformat = self.sdformat_9;

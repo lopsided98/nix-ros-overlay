@@ -26,13 +26,9 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];
-  buildInputs = [ ignition-math tinyxml-2 ]
-    ++ lib.optionals (lib.versionAtLeast version "3")
-      [ ignition-math gts freeimage ffmpeg ]
+  buildInputs = [ ignition-math tinyxml-2 ignition-math gts freeimage ffmpeg ]
     ++ lib.optional (lib.versionAtLeast version "4") ignition-utils;
-  propagatedBuildInputs = [ libuuid ]
-    ++ lib.optionals (lib.versionOlder version "3")
-      [ ignition-math gts freeimage ffmpeg ];
+  propagatedBuildInputs = [ libuuid ];
 
   meta = with lib; {
     homepage = "https://ignitionrobotics.org/libs/common";

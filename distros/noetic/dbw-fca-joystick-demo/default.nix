@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dbw-fca-can, dbw-fca-msgs, joy, roscpp, roslaunch, roslib, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-dbw-fca-joystick-demo";
-  version = "1.3.0-r1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/noetic/dbw_fca_joystick_demo/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "4fe787498a1794d237365d13aeb5cf9c02ddae44aa7968704f82f0742d7279c6";
+    url = "https://github.com/DataspeedInc-release/dbw_fca_ros-release/archive/release/noetic/dbw_fca_joystick_demo/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "524dcf21bf4cba913f774c2108e2260d71373881500d6c66ab041c6bc556d2c8";
   };
 
   buildType = "catkin";

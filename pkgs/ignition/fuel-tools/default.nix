@@ -20,9 +20,15 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];
-  propagatedBuildInputs = [ ignition-common tinyxml-2 curl jsoncpp libyaml
-    libzip ]
-    ++ lib.optional (lib.versionAtLeast version "4") ignition-msgs;
+  propagatedBuildInputs = [
+    ignition-common
+    tinyxml-2
+    curl
+    jsoncpp
+    libyaml
+    libzip
+    ignition-msgs
+  ];
 
   meta = with lib; {
     homepage = "https://ignitionrobotics.org/libs/fuel_tools";

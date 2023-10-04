@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-catch2, ament-cmake-uncrustify, eigen, nlohmann_json, proj, rclcpp, rmf-building-map-msgs, rmf-fleet-msgs, rmf-site-map-msgs, rmf-traffic, rmf-traffic-msgs, rmf-utils, util-linux, yaml-cpp, zlib }:
 buildRosPackage {
   pname = "ros-iron-rmf-traffic-ros2";
-  version = "2.2.2-r1";
+  version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/iron/rmf_traffic_ros2/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "8a5608df41cfa1df1899f4d0abdfb256c48bf091c3ebbefa96b080a5728b694b";
+    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/iron/rmf_traffic_ros2/2.2.3-1.tar.gz";
+    name = "2.2.3-1.tar.gz";
+    sha256 = "c0f365a2b0b540526bd2accbb397ed2e01faed94707103d0b7ed46256e88228a";
   };
 
   buildType = "ament_cmake";

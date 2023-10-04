@@ -17,17 +17,15 @@ stdenv.mkDerivation rec {
     hash = srcHash;
   };
 
-  patches =
-    # Fix compatibility with Protobuf 3.20
-    lib.optional (majorVersion == "" /* 1 */) (fetchpatch {
-      url = "https://github.com/gazebosim/gz-msgs/commit/faaf25d5ef991798b301b0c8b7a4c15904016695.patch";
-      hash = "sha256-jVZCKGDTEdgHiEKItv+rbcLW0L2cs2EryoJe5qcoOsU=";
-    });
+  # Don't require Protobuf 3
+  patches = [ (fetchpatch {
+    url = "https://github.com/gazebosim/gz-msgs/commit/0c0926c37042ac8f5aeb49ac36101acd3e084c6b.patch";
+    hash = "sha256-QnR1WtB4gbgyJKbQ4doMhfSjJBksEeQ3Us4y9KqCWeY=";
+  }) ];
 
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];
-  propagatedBuildInputs = [ protobuf ignition-math ]
-    ++ lib.optional (lib.versionAtLeast version "5") tinyxml-2;
+  propagatedBuildInputs = [ protobuf ignition-math tinyxml-2 ];
 
   meta = with lib; {
     homepage = "https://ignitionrobotics.org/libs/msgs";

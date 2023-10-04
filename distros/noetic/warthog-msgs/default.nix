@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-warthog-msgs";
-  version = "0.1.7-r1";
+  version = "0.1.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/warthog-release/archive/release/noetic/warthog_msgs/0.1.7-1.tar.gz";
-    name = "0.1.7-1.tar.gz";
-    sha256 = "05d9c5393c442a1c967c79766e87e4a9506ebdae16b2f5d6213175c757db2fb2";
+    url = "https://github.com/clearpath-gbp/warthog-release/archive/release/noetic/warthog_msgs/0.1.8-1.tar.gz";
+    name = "0.1.8-1.tar.gz";
+    sha256 = "6e3300939f22481a59a39f0c0156c04757d6d5713551e6bdfaadb43d7f450f9e";
   };
 
   buildType = "catkin";

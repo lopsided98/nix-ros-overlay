@@ -1272,7 +1272,15 @@ self: super: {
 
  pluginlib = self.callPackage ./pluginlib {};
 
+ point-cloud-interfaces = self.callPackage ./point-cloud-interfaces {};
+
  point-cloud-msg-wrapper = self.callPackage ./point-cloud-msg-wrapper {};
+
+ point-cloud-transport = self.callPackage ./point-cloud-transport {};
+
+ point-cloud-transport-plugins = self.callPackage ./point-cloud-transport-plugins {};
+
+ point-cloud-transport-py = self.callPackage ./point-cloud-transport-py {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
@@ -1541,6 +1549,8 @@ self: super: {
  robotiq-controllers = self.callPackage ./robotiq-controllers {};
 
  robotiq-description = self.callPackage ./robotiq-description {};
+
+ robotraconteur = self.callPackage ./robotraconteur {};
 
  ros2-control = self.callPackage ./ros2-control {};
 
@@ -2280,7 +2290,11 @@ self: super: {
 
  zenoh-bridge-dds = self.callPackage ./zenoh-bridge-dds {};
 
+ zlib-point-cloud-transport = self.callPackage ./zlib-point-cloud-transport {};
+
  zmqpp-vendor = self.callPackage ./zmqpp-vendor {};
+
+ zstd-point-cloud-transport = self.callPackage ./zstd-point-cloud-transport {};
 
  zstd-vendor = self.callPackage ./zstd-vendor {};
 

@@ -19,6 +19,14 @@ in with lib; {
 
   gazebo = self.gazebo_11;
 
+  google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
+    url = "https://github.com/google/benchmark.git";
+    fetchgitArgs = {
+      rev = "0d98dba29d66e93259db7daa53a9327df767a415";
+      hash = "sha256-yUiFxi80FWBmTZgqmqTMf9oqcBeg3o4I4vKd4djyRWY=";
+    };
+  };
+
   iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -93,7 +101,9 @@ in with lib; {
         rev = "v${version}";
         hash = "sha256-GIVhZ8Q7WebfHeKeJdVABXrTT26FOS7updncbv2LRnQ=";
       };
-      imguiTar = lib.tarSource { } imgui;
+      imguiTar = lib.tarSource {
+        hash = "sha256-TmkxzGLNo40swbFO9YT7RnHP/6ORxr78o+CH9TA5OfM=";
+      } imgui;
     in lib.tarSource {
       hook = ''
         substituteInPlace Components/Overlay/CMakeLists.txt \
@@ -104,7 +114,7 @@ in with lib; {
     postPatch = postPatch + ''
       substituteInPlace CMakeLists.txt \
         --replace 'https://github.com/${ogre.owner}/${ogre.repo}/archive/${ogre.rev}.zip' ${lib.escapeShellArg ogreTar} \
-        --replace c1b870955efddf539385094e9034e7f7 22a120dfa4d8783b2da24e0dd4a650eb
+        --replace c1b870955efddf539385094e9034e7f7 fcc1176585a7feb9f23c7900182a1f32
     '';
   });
 

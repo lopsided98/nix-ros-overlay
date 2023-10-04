@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, pythonPackages, rclpy, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ros2-controllers-test-nodes";
-  version = "3.15.0-r1";
+  version = "3.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/ros2_controllers_test_nodes/3.15.0-1.tar.gz";
-    name = "3.15.0-1.tar.gz";
-    sha256 = "a8353018bd37b15cea1f6ce8f4ad5c08b8d415377adc51540ed20b212ddd1bf8";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/ros2_controllers_test_nodes/3.16.0-1.tar.gz";
+    name = "3.16.0-1.tar.gz";
+    sha256 = "26f0ea6f74a689db51a8286a635fe2d7682ca2a738c8e2d94981e2eff442291c";
   };
 
   buildType = "ament_python";
