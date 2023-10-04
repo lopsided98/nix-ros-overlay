@@ -1,4 +1,4 @@
-{ lib, mkDerivation, fetchurl, cmake, pkg-config, ronn, libGL
+{ lib, mkDerivation, fetchurl, fetchpatch, cmake, pkg-config, ronn, libGL
 , openal, hdf5, curl, tinyxml, tinyxml-2, libtar, gts, libusb1, qtbase, gdal
 , libuuid, graphviz, libsForQt5, freeimage, boost, protobuf, sdformat, tbb
 , ogre1_9, ffmpeg, ignition, ignition-cmake ? ignition.cmake0
@@ -6,19 +6,22 @@
 , ignition-transport ? ignition.transport8, ignition-msgs ? ignition.msgs5
 , ignition-fuel-tools ? ignition.fuel-tools4
 
-, bullet, withBulletEngineSupport ? false
-, version ? "11.12.0"
-, srcHash ? "sha256-xAyh7HG2q0J+f+uDySK/smLoThHr9ruR+ZvDzKdbzZc="
-, ... }: with lib;
+, bullet, withBulletEngineSupport ? false }:
 
 mkDerivation rec {
   pname = "gazebo";
-  inherit version;
+  version = "11.13.0";
 
   src = fetchurl {
     url = "https://osrf-distributions.s3.amazonaws.com/gazebo/releases/${pname}-${version}.tar.bz2";
-    hash = srcHash;
+    hash = "sha256-L2W5j+ZSpXTgG3yubPEuFKndKTQ/3pngZqxRk6jQPnE=";
   };
+
+  # Fix build with Protobuf >= 22
+  patches = [ (fetchpatch {
+    url = "https://github.com/gazebosim/gazebo-classic/commit/17e09f574a4f39caff279cd70364cd1a3ea46f70.patch";
+    hash = "sha256-YrepsP3TOQsJaF+rIF4CmfEHSRfL2j9dqQCmd1UR2b8=";
+  }) ];
 
   enableParallelBuilding = true;
 
@@ -43,7 +46,7 @@ mkDerivation rec {
     ignition-cmake
     ignition-common
     libsForQt5.qwt
-  ] ++ optional withBulletEngineSupport bullet;
+  ] ++ lib.optional withBulletEngineSupport bullet;
 
   propagatedBuildInputs = [
     freeimage
@@ -69,7 +72,7 @@ mkDerivation rec {
     "--set WAYLAND_DISPLAY dummy" # "dummy" is arbitrary - it just doesn't exist.
   ];
 
-  meta = {
+  meta = with lib; {
     homepage = "http://gazebosim.org/";
     description = "Multi-robot simulator for outdoor environments";
     license = licenses.asl20;
