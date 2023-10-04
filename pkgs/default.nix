@@ -113,7 +113,6 @@ in {
     math6 = self.callPackage ./ignition/math { };
     math = self.ignition.math6;
 
-    msgs1 = self.callPackage ./ignition/msgs/1.nix { };
     msgs5 = self.callPackage ./ignition/msgs/5.nix { };
     msgs8 = self.callPackage ./ignition/msgs { };
     msgs = self.ignition.msgs8;

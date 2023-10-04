@@ -25,8 +25,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];
-  propagatedBuildInputs = [ protobuf ignition-math ]
-    ++ lib.optional (lib.versionAtLeast version "5") tinyxml-2;
+  propagatedBuildInputs = [ protobuf ignition-math tinyxml-2 ];
 
   meta = with lib; {
     homepage = "https://ignitionrobotics.org/libs/msgs";
