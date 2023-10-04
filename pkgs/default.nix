@@ -119,7 +119,6 @@ in {
 
     tools = self.callPackage ./ignition/tools { };
 
-    transport4 = self.callPackage ./ignition/transport/4.nix { };
     transport8 = self.callPackage ./ignition/transport/8.nix { };
     transport11 = self.callPackage ./ignition/transport { };
     transport = self.ignition.transport11;

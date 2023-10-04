@@ -28,8 +28,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];
-  buildInputs = [ ignition-math sqlite libsodium ]
-    ++ lib.optional (lib.versionAtLeast version "5") ignition-utils;
+  buildInputs = [ ignition-math sqlite libsodium ignition-utils ];
   propagatedBuildInputs = [ protobuf cppzmq zeromq libuuid ignition-msgs ];
 
   meta = with lib; {
