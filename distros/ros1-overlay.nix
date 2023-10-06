@@ -14,6 +14,20 @@ rosSelf: rosSuper: with rosSelf.lib; {
     }) ];
   });
 
+  canopen-master = rosSuper.canopen-master.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix: error: 'set' in namespace 'std' does not name a template type
+      # https://github.com/ros-industrial/ros_canopen/pull/480
+      (self.fetchpatch {
+        url = "https://github.com/ros-industrial/ros_canopen/commit/44b80b08ec0aa5e3bab8fd50bba785c3d8765e3c.patch";
+        hash = "sha256-yMhkDpQq9RNC4CEd516n1PJivfTEeWFKuGtggm0UMpQ=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   catkin = rosSuper.catkin.overrideAttrs ({
     propagatedBuildInputs ? [],
     patches ? [],
