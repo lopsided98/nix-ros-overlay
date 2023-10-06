@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-point-cloud-interfaces";
-  version = "3.0.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/rolling/point_cloud_interfaces/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "677f032da654125d20f5ddb66737a9023da7fb32157fa8a51f3f557ddbf20f6e";
+    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/rolling/point_cloud_interfaces/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "6cc77668f11090f490fd9818727b1cb9e297770aa9f5b040cc225727a7939622";
   };
 
   buildType = "ament_cmake";

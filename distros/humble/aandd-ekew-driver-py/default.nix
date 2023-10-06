@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-copyright, ament-flake8, ament-pep257, python3Packages, pythonPackages, rclpy, weight-scale-interfaces }:
 buildRosPackage {
   pname = "ros-humble-aandd-ekew-driver-py";
-  version = "0.0.2-r1";
+  version = "0.0.2-r3";
 
   src = fetchurl {
-    url = "https://github.com/TechMagicKK/aandd_ekew_driver_py-release/archive/release/humble/aandd_ekew_driver_py/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "24e36b1a642e89fe9dbabe70bf616a1d33e0a4a6dd917c8952cdcb9d2e24bf97";
+    url = "https://github.com/ros2-gbp/aandd_ekew_driver_py-release/archive/release/humble/aandd_ekew_driver_py/0.0.2-3.tar.gz";
+    name = "0.0.2-3.tar.gz";
+    sha256 = "60582a27125ea1fa0ab6d964d1ae7e23fd0e4a65ad2a9ce27a375def1faad6b4";
   };
 
   buildType = "ament_python";

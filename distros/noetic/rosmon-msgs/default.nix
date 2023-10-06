@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rosmon-msgs";
-  version = "2.5.0-r2";
+  version = "2.5.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/xqms/rosmon-release/archive/release/noetic/rosmon_msgs/2.5.0-2.tar.gz";
-    name = "2.5.0-2.tar.gz";
-    sha256 = "8c74faaf6ed0b29287802446e7968ec1a4e47f0d1723aec8afedcb10514cdd36";
+    url = "https://github.com/xqms/rosmon-release/archive/release/noetic/rosmon_msgs/2.5.1-2.tar.gz";
+    name = "2.5.1-2.tar.gz";
+    sha256 = "d64fd909a64d8c995d333a6aeb96ff362f13567ccfca3c91fa24b021c907a2bc";
   };
 
   buildType = "catkin";

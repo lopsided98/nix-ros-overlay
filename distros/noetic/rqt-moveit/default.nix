@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python-qt-binding, python3Packages, rosnode, rospy, rostopic, rqt-gui, rqt-gui-py, rqt-py-common, rqt-topic, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rqt-moveit";
-  version = "0.5.10-r1";
+  version = "0.5.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_moveit-release/archive/release/noetic/rqt_moveit/0.5.10-1.tar.gz";
-    name = "0.5.10-1.tar.gz";
-    sha256 = "6c481788f1737b83c47f4696dbaf2202b1305cdb206c9b73778028c3199c4a94";
+    url = "https://github.com/ros-gbp/rqt_moveit-release/archive/release/noetic/rqt_moveit/0.5.11-1.tar.gz";
+    name = "0.5.11-1.tar.gz";
+    sha256 = "38a31a5536e36e503751d3742ccc6c2277ef6c80768fad6088bbcc3a7e6efbdb";
   };
 
   buildType = "catkin";

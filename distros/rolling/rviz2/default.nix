@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-lint-cmake, ament-cmake-pytest, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, geometry-msgs, python3, python3Packages, qt5, rclcpp, rviz-common, rviz-default-plugins, rviz-ogre-vendor, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rviz2";
-  version = "13.1.0-r1";
+  version = "13.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/rolling/rviz2/13.1.0-1.tar.gz";
-    name = "13.1.0-1.tar.gz";
-    sha256 = "85a48f164331a99f2380966313fe09942087c43704eb0992c6f257ac7b203e94";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/rolling/rviz2/13.1.1-1.tar.gz";
+    name = "13.1.1-1.tar.gz";
+    sha256 = "ef8b0b0338a259f3771be852db3c483fb81b7082b088712a5cb25efc18736b8d";
   };
 
   buildType = "ament_cmake";

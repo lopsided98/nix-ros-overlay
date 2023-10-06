@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-lint-auto, ament-lint-common, curl, openssl, zlib }:
 buildRosPackage {
   pname = "ros-iron-aws-sdk-cpp-vendor";
-  version = "0.1.1-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aws_sdk_cpp_vendor-release/archive/release/iron/aws_sdk_cpp_vendor/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "d684e1829eea7de31132685dd7f37eee45094faf5192a2c95092de90ba2b2103";
+    url = "https://github.com/ros2-gbp/aws_sdk_cpp_vendor-release/archive/release/iron/aws_sdk_cpp_vendor/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "8c196ea3e201837bb591a98ed082d0ac1d0b167eb5c6af16b3b5807fb78a1345";
   };
 
   buildType = "ament_cmake";

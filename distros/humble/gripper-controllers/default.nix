@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-action, realtime-tools, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-humble-gripper-controllers";
-  version = "2.25.0-r1";
+  version = "2.26.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/gripper_controllers/2.25.0-1.tar.gz";
-    name = "2.25.0-1.tar.gz";
-    sha256 = "617bf3a4df7c6a44027ac3cc11e6ffb6ccf6ce560bab826997461dcd510198bc";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/gripper_controllers/2.26.0-1.tar.gz";
+    name = "2.26.0-1.tar.gz";
+    sha256 = "03b1dc7e8bdcebc5c2aec87ca27cce2fd269334f4a175397175f11301f114478";
   };
 
   buildType = "ament_cmake";
