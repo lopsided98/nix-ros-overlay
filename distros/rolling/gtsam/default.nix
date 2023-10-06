@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cmake, eigen, tbb }:
+{ lib, buildRosPackage, fetchurl, boost, cmake, eigen, tbb_2021_8 }:
 buildRosPackage {
   pname = "ros-rolling-gtsam";
   version = "4.2.0-r4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ boost cmake eigen tbb ];
+  buildInputs = [ boost cmake eigen tbb_2021_8 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

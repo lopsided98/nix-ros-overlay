@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-lint-auto, ament-lint-common, curl, openssl, zlib }:
 buildRosPackage {
   pname = "ros-humble-aws-sdk-cpp-vendor";
-  version = "0.1.1-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aws_sdk_cpp_vendor-release/archive/release/humble/aws_sdk_cpp_vendor/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "f98659d79e692a49d2324b3798d77b74fae43b739f9e6e11bc76f4cc165ee3b5";
+    url = "https://github.com/ros2-gbp/aws_sdk_cpp_vendor-release/archive/release/humble/aws_sdk_cpp_vendor/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "3955e09d7edfe2510084b614e7d813034de26d0181638772e80f6560c81d48c2";
   };
 
   buildType = "ament_cmake";

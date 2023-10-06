@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nav2-common, nav2-costmap-2d, nav2-util, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-nav2-collision-monitor";
-  version = "1.1.9-r1";
+  version = "1.1.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_collision_monitor/1.1.9-1.tar.gz";
-    name = "1.1.9-1.tar.gz";
-    sha256 = "5e1069dddebe908cd4827fd64936c465b4bb36ce2414bc090d13beceec3de81b";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_collision_monitor/1.1.12-1.tar.gz";
+    name = "1.1.12-1.tar.gz";
+    sha256 = "895703c36cb0e8ee7ac75093c97cde782847d5de0306824beb925f3315e3cba3";
   };
 
   buildType = "ament_cmake";

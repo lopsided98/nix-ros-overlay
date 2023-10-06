@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, diagnostic-msgs, geometry-msgs, message-generation, message-runtime, nav-msgs, python3Packages, roscpp, rosgraph, rospy, rospy-tutorials, rosservice, rostest, rostopic, rosunit, sensor-msgs, std-msgs, std-srvs, stereo-msgs, tf2-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rosbridge-library";
-  version = "0.11.16-r2";
+  version = "0.11.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/noetic/rosbridge_library/0.11.16-2.tar.gz";
-    name = "0.11.16-2.tar.gz";
-    sha256 = "3088f6ad0760a950cf1862ce787b98b0e47e2331b9f585d94734936e202af605";
+    url = "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/noetic/rosbridge_library/0.11.17-1.tar.gz";
+    name = "0.11.17-1.tar.gz";
+    sha256 = "01ae6153076f7ae789bf7c2a5a2a4387878fc36e1f0a1c6378486b442df677fc";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-humble-clearpath-config";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_config-release/archive/release/humble/clearpath_config/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "7b202e7d533ebac41399892568bf770bd5b962b99249a8c149fe84b24956a869";
+    url = "https://github.com/clearpath-gbp/clearpath_config-release/archive/release/humble/clearpath_config/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "635ba85c7a2bee51e545a262b3088cb97d99c4c87a09b1cc5b7f978440519710";
   };
 
   buildType = "ament_python";

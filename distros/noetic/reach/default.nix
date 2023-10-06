@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, boost-plugin-loader, cmake, eigen, gtest, llvmPackages, pcl, ros-industrial-cmake-boilerplate, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-reach";
-  version = "1.5.2-r1";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/reach-release/archive/release/noetic/reach/1.5.2-1.tar.gz";
-    name = "1.5.2-1.tar.gz";
-    sha256 = "4055142acd4239e1435e9ed32e8ce84fd49207f2167baac80b9b3d49f3b0060c";
+    url = "https://github.com/ros2-gbp/reach-release/archive/release/noetic/reach/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "d245fd2ce71a1457aec8e2cb0974be0f2cf5f8c93fb55589fb5f03b6203b41a2";
   };
 
   buildType = "cmake";

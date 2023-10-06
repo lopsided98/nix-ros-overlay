@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, behaviortree-cpp-v3, geometry-msgs, nav-msgs, nav2-behavior-tree, nav2-common, nav2-core, nav2-msgs, nav2-util, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, std-msgs, std-srvs, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-nav2-bt-navigator";
-  version = "1.2.2-r2";
+  version = "1.2.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_bt_navigator/1.2.2-2.tar.gz";
-    name = "1.2.2-2.tar.gz";
-    sha256 = "fd1cb121f0a4258966547b6298f3d7738300c257b4ea7ef41ff07ee456c355a9";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_bt_navigator/1.2.5-2.tar.gz";
+    name = "1.2.5-2.tar.gz";
+    sha256 = "945eebad3541bf3ee705467efbf9d8ba7e7359b7b8b93e256e98b686399d3f0a";
   };
 
   buildType = "ament_cmake";

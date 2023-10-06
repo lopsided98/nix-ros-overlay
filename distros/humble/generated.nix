@@ -338,6 +338,8 @@ self: super: {
 
  clearpath-viz = self.callPackage ./clearpath-viz {};
 
+ collision-log-msgs = self.callPackage ./collision-log-msgs {};
+
  color-names = self.callPackage ./color-names {};
 
  color-util = self.callPackage ./color-util {};
@@ -1064,6 +1066,10 @@ self: super: {
 
  metavision-driver = self.callPackage ./metavision-driver {};
 
+ metro-benchmark-msgs = self.callPackage ./metro-benchmark-msgs {};
+
+ metro-benchmark-pub = self.callPackage ./metro-benchmark-pub {};
+
  micro-ros-diagnostic-bridge = self.callPackage ./micro-ros-diagnostic-bridge {};
 
  micro-ros-diagnostic-msgs = self.callPackage ./micro-ros-diagnostic-msgs {};
@@ -1569,6 +1575,8 @@ self: super: {
  radar-msgs = self.callPackage ./radar-msgs {};
 
  random-numbers = self.callPackage ./random-numbers {};
+
+ range-sensor-broadcaster = self.callPackage ./range-sensor-broadcaster {};
 
  raspimouse = self.callPackage ./raspimouse {};
 

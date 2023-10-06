@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake }:
 buildRosPackage {
   pname = "ros-humble-ur-client-library";
-  version = "1.3.3-r1";
+  version = "1.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/humble/ur_client_library/1.3.3-1.tar.gz";
-    name = "1.3.3-1.tar.gz";
-    sha256 = "9e2b31c47a15d99e5b97bd901d9af84739451d4a460f6427208d4572d4dc1fa8";
+    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/humble/ur_client_library/1.3.4-1.tar.gz";
+    name = "1.3.4-1.tar.gz";
+    sha256 = "e0e2c457247ea7e9a8345947efa05f31d3e58cc766c2631fd365b66bf10868df";
   };
 
   buildType = "cmake";

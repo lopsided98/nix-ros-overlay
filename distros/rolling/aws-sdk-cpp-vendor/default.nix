@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-lint-auto, ament-lint-common, curl, openssl, zlib }:
 buildRosPackage {
   pname = "ros-rolling-aws-sdk-cpp-vendor";
-  version = "0.1.1-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aws_sdk_cpp_vendor-release/archive/release/rolling/aws_sdk_cpp_vendor/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "c92015ce6fd7b08dc33cab87a6176623f64246f224630861f519136f83e15993";
+    url = "https://github.com/ros2-gbp/aws_sdk_cpp_vendor-release/archive/release/rolling/aws_sdk_cpp_vendor/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "5167c0f54ba538b151f717bbed423f909d5a89d386da5cef0b702c7d3a359ba0";
   };
 
   buildType = "ament_cmake";

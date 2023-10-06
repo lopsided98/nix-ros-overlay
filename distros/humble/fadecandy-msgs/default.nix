@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-fadecandy-msgs";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/eurogroep/fadecandy_ros-release/archive/release/humble/fadecandy_msgs/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "4f5f1e8358b826b59e401319c382af130ad7bc42188e5e50a1b4cc6828f08dc2";
+    url = "https://github.com/eurogroep/fadecandy_ros-release/archive/release/humble/fadecandy_msgs/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "16629179ec834b935eef72c2a38873024385c1d1251bf5d01d6c652170b576d2";
   };
 
   buildType = "ament_cmake";

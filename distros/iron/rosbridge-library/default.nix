@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, ament-cmake, ament-cmake-pytest, ament-cmake-ros, builtin-interfaces, diagnostic-msgs, example-interfaces, geometry-msgs, nav-msgs, python3Packages, rclpy, rosbridge-test-msgs, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, stereo-msgs, tf2-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-iron-rosbridge-library";
-  version = "1.3.1-r3";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/iron/rosbridge_library/1.3.1-3.tar.gz";
-    name = "1.3.1-3.tar.gz";
-    sha256 = "3fc22a6da8cc113f0b9df57e56aae0db0f4a12d03d4664cd0b019b5e92edea4b";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/iron/rosbridge_library/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "78b32f280bfe77de1d651cdd27c329e2104d339331446ef97f62b29967db1581";
   };
 
   buildType = "ament_cmake";
