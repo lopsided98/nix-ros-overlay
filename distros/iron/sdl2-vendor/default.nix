@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, SDL2, ament-cmake }:
 buildRosPackage {
   pname = "ros-iron-sdl2-vendor";
-  version = "3.1.0-r4";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/iron/sdl2_vendor/3.1.0-4.tar.gz";
-    name = "3.1.0-4.tar.gz";
-    sha256 = "7b37c6ae14b00a034bc7c095a1d14f23a510e0471de6d58caa8e94cad30be381";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/iron/sdl2_vendor/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "c41ca90bff32b0914b41400a7449719e1773603fa54c4d3feb22da8dfff9de98";
   };
 
   buildType = "ament_cmake";

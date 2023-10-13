@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, libspnav, rclcpp, rclcpp-components, sensor-msgs, spacenavd }:
 buildRosPackage {
   pname = "ros-iron-spacenav";
-  version = "3.1.0-r4";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/iron/spacenav/3.1.0-4.tar.gz";
-    name = "3.1.0-4.tar.gz";
-    sha256 = "821583bb7e2528c2346e3879ae1d8090ddfa8c8215e0ac5387ef8eb2ab3bdb32";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/iron/spacenav/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "c7403ea6752c876f11297f681f09e363ae0187c272740b1b2e3c37a3bee559d8";
   };
 
   buildType = "ament_cmake";

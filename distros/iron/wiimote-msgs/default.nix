@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-wiimote-msgs";
-  version = "3.1.0-r4";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/iron/wiimote_msgs/3.1.0-4.tar.gz";
-    name = "3.1.0-4.tar.gz";
-    sha256 = "68707e471ceef707e1c19106722d2b7fd056b5cb41b81d0109383e16adccbd49";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/iron/wiimote_msgs/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "2d7536f190b776222c8db094e663e4989c4b7ca837c15bd06ef1b13175d336b9";
   };
 
   buildType = "ament_cmake";
