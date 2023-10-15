@@ -1,0 +1,9 @@
+--- a/include/flatland_server/types.h
++++ b/include/flatland_server/types.h
+@@ -44,6 +44,7 @@
+  *  POSSIBILITY OF SUCH DAMAGE.
+  */
+ 
++#include <array>
+ #include <Box2D/Box2D.h>
+ #include <geometry_msgs/Pose2D.h>
