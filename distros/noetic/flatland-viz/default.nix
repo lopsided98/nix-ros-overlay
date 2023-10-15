@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];
-  propagatedBuildInputs = [ flatland-msgs flatland-server ogre1_9 qt5.qtbase roscpp rviz lsb-release ];
+  propagatedBuildInputs = [ flatland-msgs flatland-server ogre1_9 qt5.qtbase roscpp rviz lsb-release qt5.wrapQtAppsHook ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
