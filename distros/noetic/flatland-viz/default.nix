@@ -2,7 +2,7 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, flatland-msgs, flatland-server, ogre1_9, qt5, roscpp, rviz, lsb-release }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, flatland-msgs, flatland-server, ogre1_9, qt5, roscpp, rviz }:
 buildRosPackage {
   pname = "ros-noetic-flatland-viz";
   version = "1.3.3-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];
-  propagatedBuildInputs = [ flatland-msgs flatland-server ogre1_9 qt5.qtbase roscpp rviz lsb-release qt5.wrapQtAppsHook ];
+  propagatedBuildInputs = [ flatland-msgs flatland-server ogre1_9 qt5.qtbase roscpp rviz ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

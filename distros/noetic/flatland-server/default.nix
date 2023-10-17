@@ -13,8 +13,6 @@ buildRosPackage {
     sha256 = "d460757818012c73a849d5ddba63e79fb5a1a1cd2b7e6281900a0b345411357e";
   };
 
-  patches = [ ./yaml_preprocessor.patch ./types.patch ];
-
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];
   propagatedBuildInputs = [ flatland-msgs geometry-msgs interactive-markers lua opencv pluginlib roscpp std-msgs std-srvs tf2 tf2-geometry-msgs visualization-msgs yaml-cpp ];
