@@ -672,6 +672,8 @@ self: super: {
 
  imu-tools = self.callPackage ./imu-tools {};
 
+ interactive-marker-twist-server = self.callPackage ./interactive-marker-twist-server {};
+
  interactive-markers = self.callPackage ./interactive-markers {};
 
  intra-process-demo = self.callPackage ./intra-process-demo {};
@@ -1169,6 +1171,8 @@ self: super: {
  point-cloud-transport-plugins = self.callPackage ./point-cloud-transport-plugins {};
 
  point-cloud-transport-py = self.callPackage ./point-cloud-transport-py {};
+
+ point-cloud-transport-tutorial = self.callPackage ./point-cloud-transport-tutorial {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 

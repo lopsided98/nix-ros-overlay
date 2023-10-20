@@ -3324,6 +3324,8 @@ self: super: {
 
  sick-safetyscanners = self.callPackage ./sick-safetyscanners {};
 
+ sick-safevisionary-msgs = self.callPackage ./sick-safevisionary-msgs {};
+
  sick-scan = self.callPackage ./sick-scan {};
 
  sick-tim = self.callPackage ./sick-tim {};

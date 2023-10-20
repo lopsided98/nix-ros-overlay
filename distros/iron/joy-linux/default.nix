@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, diagnostic-msgs, diagnostic-updater, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-iron-joy-linux";
-  version = "3.1.0-r4";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/iron/joy_linux/3.1.0-4.tar.gz";
-    name = "3.1.0-4.tar.gz";
-    sha256 = "9aabffb27cac0456cf28c48f496bcce808366ca0428717b0f987e8beb89711ae";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/iron/joy_linux/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "b4da052df766063a3d131740c7c9036ce1e17c00024d9d2763972cade5a3e9db";
   };
 
   buildType = "ament_cmake";

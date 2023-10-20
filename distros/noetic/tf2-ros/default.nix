@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, geometry-msgs, message-filters, roscpp, rosgraph, rospy, rostest, std-msgs, tf2, tf2-msgs, tf2-py, xmlrpcpp }:
 buildRosPackage {
   pname = "ros-noetic-tf2-ros";
-  version = "0.7.6-r1";
+  version = "0.7.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_ros/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "6cb6ebf52c8de736ee197bbe05f77f453e30d160e4eaedde9f66ff716f8f084a";
+    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_ros/0.7.7-1.tar.gz";
+    name = "0.7.7-1.tar.gz";
+    sha256 = "15a92e64deab87ec27986b6d16d690bef7979cefbe2346a0fc1e37090acb3881";
   };
 
   buildType = "catkin";
