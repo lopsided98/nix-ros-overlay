@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, camera-info-manager, cv-bridge, depth-image-proc, depthai, depthai-bridge, depthai-descriptions, depthai-ros-msgs, foxglove-msgs, image-transport, opencv, rclcpp, robot-state-publisher, ros-environment, rviz-imu-plugin, sensor-msgs, std-msgs, stereo-msgs, vision-msgs, xacro }:
 buildRosPackage {
   pname = "ros-iron-depthai-examples";
-  version = "2.8.1-r1";
+  version = "2.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/iron/depthai_examples/2.8.1-1.tar.gz";
-    name = "2.8.1-1.tar.gz";
-    sha256 = "5b979fe132314a63841ee8b1cc21e7a7266bc824c576cb498b0d7b0cb5e04b2b";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/iron/depthai_examples/2.8.2-1.tar.gz";
+    name = "2.8.2-1.tar.gz";
+    sha256 = "05cf7aa647a7c19bff14f01545cb0cb68f1f09de627ac3494710fb3361b1e00d";
   };
 
   buildType = "ament_cmake";

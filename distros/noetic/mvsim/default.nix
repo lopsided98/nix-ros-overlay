@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, cppzmq, dynamic-reconfigure, gtest, mrpt2, nav-msgs, protobuf, python3, python3Packages, pythonPackages, ros-environment, roscpp, sensor-msgs, tf2, tf2-geometry-msgs, unzip, visualization-msgs, wget }:
 buildRosPackage {
   pname = "ros-noetic-mvsim";
-  version = "0.8.1-r1";
+  version = "0.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ual-arm-ros-pkg-release/mvsim-release/archive/release/noetic/mvsim/0.8.1-1.tar.gz";
-    name = "0.8.1-1.tar.gz";
-    sha256 = "fcea023939c08670dcbc373c4f6f9cda2bd5f709d866ca56b6c6610eee9942b6";
+    url = "https://github.com/ual-arm-ros-pkg-release/mvsim-release/archive/release/noetic/mvsim/0.8.2-1.tar.gz";
+    name = "0.8.2-1.tar.gz";
+    sha256 = "dae2f3f7e815e8d0b7c31ab68a9902503ee551de2c34e01c6681d3581ab52253";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake ros-environment ];
   checkInputs = [ gtest ];
-  propagatedBuildInputs = [ boost cppzmq dynamic-reconfigure mrpt2 nav-msgs protobuf python3 python3Packages.protobuf pythonPackages.pybind11 roscpp sensor-msgs tf2 tf2-geometry-msgs unzip visualization-msgs wget ];
+  propagatedBuildInputs = [ boost cppzmq dynamic-reconfigure mrpt2 nav-msgs protobuf python3 python3Packages.pip python3Packages.protobuf pythonPackages.pybind11 roscpp sensor-msgs tf2 tf2-geometry-msgs unzip visualization-msgs wget ];
   nativeBuildInputs = [ catkin cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, sqlite }:
 buildRosPackage {
   pname = "ros-iron-sqlite3-vendor";
-  version = "0.22.3-r1";
+  version = "0.22.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/sqlite3_vendor/0.22.3-1.tar.gz";
-    name = "0.22.3-1.tar.gz";
-    sha256 = "156a1ccd7b7f74b947052d8caf2bffdf9803a36914a1ea432a83865218d9803a";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/sqlite3_vendor/0.22.4-1.tar.gz";
+    name = "0.22.4-1.tar.gz";
+    sha256 = "1721b530f9aaf81be8a57446d05803e52f0bc508db12c4b10ec08de46b99cbf8";
   };
 
   buildType = "ament_cmake";

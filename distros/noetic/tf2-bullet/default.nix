@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bullet, catkin, geometry-msgs, pkg-config, tf2 }:
 buildRosPackage {
   pname = "ros-noetic-tf2-bullet";
-  version = "0.7.6-r1";
+  version = "0.7.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_bullet/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "f47f0a21eccf4d95cfad04a7e26b6641c7ad9278751e57e1f751124a357d3318";
+    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_bullet/0.7.7-1.tar.gz";
+    name = "0.7.7-1.tar.gz";
+    sha256 = "60c9dc1e9743218c4c012819b3f09a5caeedcddab2ee41e5e95cd6bbcd541aea";
   };
 
   buildType = "catkin";

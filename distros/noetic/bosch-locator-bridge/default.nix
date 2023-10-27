@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, nav-msgs, pcl-conversions, poco, roscpp, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-bosch-locator-bridge";
-  version = "1.0.9-r3";
+  version = "1.0.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/locator_ros_bridge-release/archive/release/noetic/bosch_locator_bridge/1.0.9-3.tar.gz";
-    name = "1.0.9-3.tar.gz";
-    sha256 = "a9fc3414d5071e21f2cd854e18e25bb4e479e64292de1ba10dc2ad40c98a969c";
+    url = "https://github.com/ros-gbp/locator_ros_bridge-release/archive/release/noetic/bosch_locator_bridge/1.0.10-1.tar.gz";
+    name = "1.0.10-1.tar.gz";
+    sha256 = "6f3d1ff26c34164a77ff5447752ec39c2cc10645c250ea91b535ea8f4c8637d0";
   };
 
   buildType = "catkin";

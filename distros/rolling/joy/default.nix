@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components, sdl2-vendor, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-joy";
-  version = "3.1.0-r3";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/rolling/joy/3.1.0-3.tar.gz";
-    name = "3.1.0-3.tar.gz";
-    sha256 = "c34b43cc0a9de3a2ce0ab6b7a74304681c1faa829974019c648be8919f2b3eaa";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/rolling/joy/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "d18573a6b2438670df17de5a3b2e486942b21a6da7881e755aad23c8a1c4b2cf";
   };
 
   buildType = "ament_cmake";
@@ -20,9 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''The joy package contains joy_node, a node that interfaces a
-    generic joystick to ROS 2. This node publishes a &quot;Joy&quot;
-    message, which contains the current state of each one of the
+    description = ''The joy package contains joy_node, a node that interfaces a generic joystick to ROS
+    2. This node publishes a &quot;Joy&quot; message, which contains the current state of each one of the
     joystick's buttons and axes.'';
     license = with lib.licenses; [ bsdOriginal ];
   };
