@@ -236,6 +236,32 @@ self: super: {
 
  clear-costmap-recovery = self.callPackage ./clear-costmap-recovery {};
 
+ clearpath-configuration-msgs = self.callPackage ./clearpath-configuration-msgs {};
+
+ clearpath-control-msgs = self.callPackage ./clearpath-control-msgs {};
+
+ clearpath-dock-msgs = self.callPackage ./clearpath-dock-msgs {};
+
+ clearpath-localization-msgs = self.callPackage ./clearpath-localization-msgs {};
+
+ clearpath-mission-manager-msgs = self.callPackage ./clearpath-mission-manager-msgs {};
+
+ clearpath-mission-scheduler-msgs = self.callPackage ./clearpath-mission-scheduler-msgs {};
+
+ clearpath-msgs = self.callPackage ./clearpath-msgs {};
+
+ clearpath-navigation-msgs = self.callPackage ./clearpath-navigation-msgs {};
+
+ clearpath-onav-api-examples = self.callPackage ./clearpath-onav-api-examples {};
+
+ clearpath-onav-api-examples-lib = self.callPackage ./clearpath-onav-api-examples-lib {};
+
+ clearpath-onav-examples = self.callPackage ./clearpath-onav-examples {};
+
+ clearpath-platform-msgs = self.callPackage ./clearpath-platform-msgs {};
+
+ clearpath-safety-msgs = self.callPackage ./clearpath-safety-msgs {};
+
  clober-msgs = self.callPackage ./clober-msgs {};
 
  clpe = self.callPackage ./clpe {};
@@ -1145,6 +1171,8 @@ self: super: {
  gmapping = self.callPackage ./gmapping {};
 
  gmcl = self.callPackage ./gmcl {};
+
+ gnsstk = self.callPackage ./gnsstk {};
 
  goal-passer = self.callPackage ./goal-passer {};
 
@@ -2566,6 +2594,8 @@ self: super: {
 
  pr2eus = self.callPackage ./pr2eus {};
 
+ pr2eus-moveit = self.callPackage ./pr2eus-moveit {};
+
  prbt-gazebo = self.callPackage ./prbt-gazebo {};
 
  prbt-grippers = self.callPackage ./prbt-grippers {};
@@ -3324,7 +3354,15 @@ self: super: {
 
  sick-safetyscanners = self.callPackage ./sick-safetyscanners {};
 
+ sick-safevisionary-base = self.callPackage ./sick-safevisionary-base {};
+
+ sick-safevisionary-driver = self.callPackage ./sick-safevisionary-driver {};
+
+ sick-safevisionary-msgs = self.callPackage ./sick-safevisionary-msgs {};
+
  sick-scan = self.callPackage ./sick-scan {};
+
+ sick-scan-xd = self.callPackage ./sick-scan-xd {};
 
  sick-tim = self.callPackage ./sick-tim {};
 

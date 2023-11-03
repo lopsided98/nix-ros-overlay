@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, leo-description, leo-msgs, leo-teleop }:
 buildRosPackage {
   pname = "ros-noetic-leo";
-  version = "2.2.0-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_common-release/archive/release/noetic/leo/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "f7ad600b2ac91137aad450f3c657041399a9a4d3d2239e3b8d7f93be7001a220";
+    url = "https://github.com/fictionlab-gbp/leo_common-release/archive/release/noetic/leo/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "a95abaee37952d21ddc5b2b66d4295649556ea31057c2b6b66a09fe7f7321a61";
   };
 
   buildType = "catkin";

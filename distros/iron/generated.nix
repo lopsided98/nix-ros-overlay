@@ -28,6 +28,8 @@ self: super: {
 
  ament-acceleration = self.callPackage ./ament-acceleration {};
 
+ ament-black = self.callPackage ./ament-black {};
+
  ament-clang-format = self.callPackage ./ament-clang-format {};
 
  ament-clang-tidy = self.callPackage ./ament-clang-tidy {};
@@ -35,6 +37,8 @@ self: super: {
  ament-cmake = self.callPackage ./ament-cmake {};
 
  ament-cmake-auto = self.callPackage ./ament-cmake-auto {};
+
+ ament-cmake-black = self.callPackage ./ament-cmake-black {};
 
  ament-cmake-catch2 = self.callPackage ./ament-cmake-catch2 {};
 
@@ -151,8 +155,6 @@ self: super: {
  ament-xmllint = self.callPackage ./ament-xmllint {};
 
  angles = self.callPackage ./angles {};
-
- apex-containers = self.callPackage ./apex-containers {};
 
  apex-test-tools = self.callPackage ./apex-test-tools {};
 
@@ -705,6 +707,8 @@ self: super: {
  imu-sensor-broadcaster = self.callPackage ./imu-sensor-broadcaster {};
 
  imu-tools = self.callPackage ./imu-tools {};
+
+ interactive-marker-twist-server = self.callPackage ./interactive-marker-twist-server {};
 
  interactive-markers = self.callPackage ./interactive-markers {};
 
@@ -2197,6 +2201,8 @@ self: super: {
  urdf-launch = self.callPackage ./urdf-launch {};
 
  urdf-parser-plugin = self.callPackage ./urdf-parser-plugin {};
+
+ urdf-sim-tutorial = self.callPackage ./urdf-sim-tutorial {};
 
  urdf-tutorial = self.callPackage ./urdf-tutorial {};
 

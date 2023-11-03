@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-wiimote-msgs";
-  version = "3.1.0-r3";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/humble/wiimote_msgs/3.1.0-3.tar.gz";
-    name = "3.1.0-3.tar.gz";
-    sha256 = "33663c760a07fbdb0145efec5ee3f64846a97d5403c7046fbae7696190e8f7b0";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/humble/wiimote_msgs/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "2e0f8977eabb494442878e8dd4f145ed197ce76b830b34ecf28fa5a2512397be";
   };
 
   buildType = "ament_cmake";

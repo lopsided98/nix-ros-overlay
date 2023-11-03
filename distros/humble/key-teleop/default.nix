@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-humble-key-teleop";
-  version = "1.3.0-r2";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/humble/key_teleop/1.3.0-2.tar.gz";
-    name = "1.3.0-2.tar.gz";
-    sha256 = "6a32b880d1918822c3f54f42de698feaa6c37486b791b2eabb5f8f64b9dbd723";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/humble/key_teleop/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "ddb72d5b8d968de1987c72e0f40918eedb207ae16972d07977d5fb13eee53a00";
   };
 
   buildType = "ament_python";

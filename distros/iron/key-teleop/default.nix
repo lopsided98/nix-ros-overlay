@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-iron-key-teleop";
-  version = "1.4.0-r2";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/iron/key_teleop/1.4.0-2.tar.gz";
-    name = "1.4.0-2.tar.gz";
-    sha256 = "7bddfdeda59f7a653876f0545a5efd28462efd64a726d9f6dc4409f669a6b0da";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/iron/key_teleop/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "88be6e7fbabbf11c576d66aea0c77c52149788a84640eda144618e3fa2e074f6";
   };
 
   buildType = "ament_python";

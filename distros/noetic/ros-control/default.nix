@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, combined-robot-hw, controller-interface, controller-manager, controller-manager-msgs, hardware-interface, joint-limits-interface, realtime-tools, transmission-interface }:
 buildRosPackage {
   pname = "ros-noetic-ros-control";
-  version = "0.19.6-r1";
+  version = "0.20.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/ros_control/0.19.6-1.tar.gz";
-    name = "0.19.6-1.tar.gz";
-    sha256 = "0cc79d68db8a2eeec518498db0d6d806e0137c9984e5a4ecd297db5741871245";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/ros_control/0.20.0-1.tar.gz";
+    name = "0.20.0-1.tar.gz";
+    sha256 = "6664b1f5f7623c07f607c5e9a6e2b067af014ba3a2065745952b378556297924";
   };
 
   buildType = "catkin";

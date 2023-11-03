@@ -2,20 +2,20 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-vendor-package, ament-lint-auto, ament-lint-common, libyaml, performance-test-fixture, pkg-config, rcpputils, rcutils }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-vendor-package, ament-lint-auto, ament-lint-common, libyaml, performance-test-fixture, pkg-config }:
 buildRosPackage {
   pname = "ros-rolling-libyaml-vendor";
-  version = "1.6.1-r1";
+  version = "1.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libyaml_vendor-release/archive/release/rolling/libyaml_vendor/1.6.1-1.tar.gz";
-    name = "1.6.1-1.tar.gz";
-    sha256 = "8e0cd178c9da4cc1d0f3df2f30ed2f8351added40e617339097068197ba0951d";
+    url = "https://github.com/ros2-gbp/libyaml_vendor-release/archive/release/rolling/libyaml_vendor/1.6.2-1.tar.gz";
+    name = "1.6.2-1.tar.gz";
+    sha256 = "6b3024b4e45abc38e60bb671b428220844a5f4fec99620a90a7f5f2b4169b389";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-vendor-package ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common performance-test-fixture rcpputils rcutils ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common performance-test-fixture ];
   propagatedBuildInputs = [ libyaml pkg-config ];
   nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package pkg-config ];
 

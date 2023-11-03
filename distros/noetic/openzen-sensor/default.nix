@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, roslaunch, rostest, sensor-msgs, std-msgs, std-srvs, tf, topic-tools }:
 buildRosPackage {
   pname = "ros-noetic-openzen-sensor";
-  version = "1.3.2-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/lp-research/openzen_sensor-release/archive/release/noetic/openzen_sensor/1.3.2-1.tar.gz";
-    name = "1.3.2-1.tar.gz";
-    sha256 = "7d6e5ad201246d3469bf5834928532d849d3d0934e6569759fadb9e60ffb99d1";
+    url = "https://github.com/lp-research/openzen_sensor-release/archive/release/noetic/openzen_sensor/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "d2a6931e13d2e6ddb0623a71397a4e9408335ec109831f0aeff988b46414f85c";
   };
 
   buildType = "catkin";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS driver for LP-Research inertial measurement units and satellite navigation senors'';
+    description = ''ROS driver for LP-Research OpenZen'';
     license = with lib.licenses; [ mit "BSL-1.0" lgpl3Only bsdOriginal ];
   };
 }

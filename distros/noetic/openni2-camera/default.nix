@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, camera-info-manager, catkin, dynamic-reconfigure, image-transport, message-generation, message-runtime, nodelet, openni2, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-openni2-camera";
-  version = "1.6.0-r1";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/openni2_camera-release/archive/release/noetic/openni2_camera/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "be6698786c1add6f19733466b7ae1d97f59b1ac340c3cb8d479532eaae953076";
+    url = "https://github.com/ros-gbp/openni2_camera-release/archive/release/noetic/openni2_camera/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "9cab720242b072dbe66031b1b6bec175f46d4b1de0ba66920270870d54d86427";
   };
 
   buildType = "catkin";
