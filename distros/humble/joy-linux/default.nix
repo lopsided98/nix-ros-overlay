@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, diagnostic-msgs, diagnostic-updater, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-joy-linux";
-  version = "3.1.0-r3";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/humble/joy_linux/3.1.0-3.tar.gz";
-    name = "3.1.0-3.tar.gz";
-    sha256 = "db3542c66747f1d33c2d9aedea8b1008f875c056a6a51ca2528559b20b1af6dc";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/humble/joy_linux/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "2e7ed0334f225d2924b77363ea354010db817e5145fbf4baca08483da7d6b547";
   };
 
   buildType = "ament_cmake";

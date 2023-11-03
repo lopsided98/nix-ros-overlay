@@ -162,6 +162,22 @@ self: super: {
 
  ament-xmllint = self.callPackage ./ament-xmllint {};
 
+ andino-bringup = self.callPackage ./andino-bringup {};
+
+ andino-control = self.callPackage ./andino-control {};
+
+ andino-description = self.callPackage ./andino-description {};
+
+ andino-firmware = self.callPackage ./andino-firmware {};
+
+ andino-gz-classic = self.callPackage ./andino-gz-classic {};
+
+ andino-hardware = self.callPackage ./andino-hardware {};
+
+ andino-navigation = self.callPackage ./andino-navigation {};
+
+ andino-slam = self.callPackage ./andino-slam {};
+
  angles = self.callPackage ./angles {};
 
  apex-containers = self.callPackage ./apex-containers {};
@@ -2535,6 +2551,8 @@ self: super: {
  urdf-launch = self.callPackage ./urdf-launch {};
 
  urdf-parser-plugin = self.callPackage ./urdf-parser-plugin {};
+
+ urdf-sim-tutorial = self.callPackage ./urdf-sim-tutorial {};
 
  urdf-test = self.callPackage ./urdf-test {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-rolling-key-teleop";
-  version = "1.4.0-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/rolling/key_teleop/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "384d5202f67a16e32c95509087a5ce03aeee70e53c9b1d846bf6b0d06f8b3cc8";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/rolling/key_teleop/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "688dc0500ba10d31f3ccfe20ff76ede40eb81d6445a3c3cc9933e54095ca08af";
   };
 
   buildType = "ament_python";

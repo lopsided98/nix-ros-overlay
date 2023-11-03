@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-interface, controller-manager-msgs, hardware-interface, pluginlib, python3Packages, roscpp, rosparam, rospy, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-controller-manager";
-  version = "0.19.6-r1";
+  version = "0.20.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/controller_manager/0.19.6-1.tar.gz";
-    name = "0.19.6-1.tar.gz";
-    sha256 = "205f276492f5a5e9caf112e287e49a7579a2831fc10a9b6446dd48f44f3229fb";
+    url = "https://github.com/ros-gbp/ros_control-release/archive/release/noetic/controller_manager/0.20.0-1.tar.gz";
+    name = "0.20.0-1.tar.gz";
+    sha256 = "cb5393ab1084c526ecd6e957a6031b6189bba2749f963ae4b93aceb2a53d971d";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, leo, leo-bringup, leo-fw }:
 buildRosPackage {
   pname = "ros-noetic-leo-robot";
-  version = "2.3.0-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/leo_robot-release/archive/release/noetic/leo_robot/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "f7c674eff3757145fb1caa61d2b52d73ab8eed0946b4ca35d983d8fa1910d372";
+    url = "https://github.com/fictionlab-gbp/leo_robot-release/archive/release/noetic/leo_robot/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "c6a90bcd48471d92d564bb4dddb5571801e07cf3f83ddbbb37a91d83cb2d59eb";
   };
 
   buildType = "catkin";

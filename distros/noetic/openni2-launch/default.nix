@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, depth-image-proc, image-proc, nodelet, openni2-camera, python3Packages, rgbd-launch, roslaunch, rospy, roswtf, tf, usbutils }:
 buildRosPackage {
   pname = "ros-noetic-openni2-launch";
-  version = "1.6.0-r1";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/openni2_camera-release/archive/release/noetic/openni2_launch/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "eb365e4d85b763816ba56ad2b2d369d519a801907b1b5ef66e695981191f2483";
+    url = "https://github.com/ros-gbp/openni2_camera-release/archive/release/noetic/openni2_launch/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "c5f4657621bbde2c43bf3494d169604ba6d77c236e456a2168b4d9acfe1e4cb0";
   };
 
   buildType = "catkin";
