@@ -24,7 +24,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "0v6ks4hpxmakgymcfvafynla76gl3866grgwf4vjdsb4rsvr13vx";
   };
 
-  mcap-vendor = patchVendorGit (patchVendorGit rosSuper.mcap-vendor {
+  mcap-vendor = patchExternalProjectGit (patchExternalProjectGit rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap.git";
     fetchgitArgs = {
       rev = "dc6561d9ba867901709e36526dcf7f7359861e9c";
