@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-marti-status-msgs";
-  version = "1.4.1-r1";
+  version = "1.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/iron/marti_status_msgs/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "35679b04bede45c2b717f511be954aeec60577791a594cd4fac77e56a44330bd";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/iron/marti_status_msgs/1.5.2-1.tar.gz";
+    name = "1.5.2-1.tar.gz";
+    sha256 = "e1adf0843c4c98e9377a290d4753caf6eda541710f05f364c1ef88b69d1c9ee2";
   };
 
   buildType = "ament_cmake";

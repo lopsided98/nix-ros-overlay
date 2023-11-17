@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-python, ament-index-cpp, backward-ros, controller-interface, controller-manager-msgs, diagnostic-updater, hardware-interface, launch, launch-ros, pluginlib, rclcpp, rcpputils, realtime-tools, ros2-control-test-assets, ros2param, ros2run, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-controller-manager";
-  version = "3.20.0-r1";
+  version = "3.21.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/iron/controller_manager/3.20.0-1.tar.gz";
-    name = "3.20.0-1.tar.gz";
-    sha256 = "64c22b7c0dec52c31031e328b41a7ea56941b5ac81778a017c36ce5c640bb1f3";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/iron/controller_manager/3.21.0-1.tar.gz";
+    name = "3.21.0-1.tar.gz";
+    sha256 = "b0c136b5d26ab3427567cf4f570c35b6e67c48e3d763c83c963c7c326eeba040";
   };
 
   buildType = "ament_cmake";

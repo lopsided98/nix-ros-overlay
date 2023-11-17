@@ -2,20 +2,20 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, gazebo-video-monitor-msgs, gazebo-video-monitor-plugins }:
+{ lib, buildRosPackage, fetchurl, catkin, gazebo-video-monitor-msgs, gazebo-video-monitor-plugins, gazebo-video-monitor-utils }:
 buildRosPackage {
   pname = "ros-noetic-gazebo-video-monitors";
-  version = "0.7.0-r1";
+  version = "0.7.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/nlamprian/gazebo_video_monitors-release/archive/release/noetic/gazebo_video_monitors/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "3f826e78f7e83116edc3d110bd2df6ab8f2109e9447590e59d13325259a448a5";
+    url = "https://github.com/nlamprian/gazebo_video_monitors-release/archive/release/noetic/gazebo_video_monitors/0.7.1-2.tar.gz";
+    name = "0.7.1-2.tar.gz";
+    sha256 = "72d8c707aa2e5a993ff11330df1ab0f6dd91b122cc643a392f2a5e7b653f23c0";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ gazebo-video-monitor-msgs gazebo-video-monitor-plugins ];
+  propagatedBuildInputs = [ gazebo-video-monitor-msgs gazebo-video-monitor-plugins gazebo-video-monitor-utils ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

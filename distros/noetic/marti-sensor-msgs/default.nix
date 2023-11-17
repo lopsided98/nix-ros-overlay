@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-marti-sensor-msgs";
-  version = "0.12.1-r1";
+  version = "0.12.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/noetic/marti_sensor_msgs/0.12.1-1.tar.gz";
-    name = "0.12.1-1.tar.gz";
-    sha256 = "a425718da781bf525ced7de5d28b40fb1b63ff14a99ae3dc9d06d5368e50e96a";
+    url = "https://github.com/swri-robotics-gbp/marti_messages-release/archive/release/noetic/marti_sensor_msgs/0.12.2-1.tar.gz";
+    name = "0.12.2-1.tar.gz";
+    sha256 = "305780b0f39323d1f78458eac9dbeef76cf8e2003ed22e1ac1a3ad051b15b72a";
   };
 
   buildType = "catkin";

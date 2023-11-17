@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-iron-ros2-control-test-assets";
-  version = "3.20.0-r1";
+  version = "3.21.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/iron/ros2_control_test_assets/3.20.0-1.tar.gz";
-    name = "3.20.0-1.tar.gz";
-    sha256 = "44aaf55da3e67e6dd3a4122dd22729fc7ad671f8c26673f4f9cbefe0e9653350";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/iron/ros2_control_test_assets/3.21.0-1.tar.gz";
+    name = "3.21.0-1.tar.gz";
+    sha256 = "66f31c50db215ed723275d601ac11b9d8fdeb3cf8d0214d0acd85cbc64ea7206";
   };
 
   buildType = "ament_cmake";

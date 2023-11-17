@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, launch-testing-ament-cmake, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-iron-joint-limits";
-  version = "3.20.0-r1";
+  version = "3.21.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/iron/joint_limits/3.20.0-1.tar.gz";
-    name = "3.20.0-1.tar.gz";
-    sha256 = "f688d575a0b66042548e4ef579f4837dc7d625db1b6f4002e7eceaf00ee50ab6";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/iron/joint_limits/3.21.0-1.tar.gz";
+    name = "3.21.0-1.tar.gz";
+    sha256 = "9022c7f389761a3d855db5fcff67b32d77ef05f4e54d57f274a06500ab040cd6";
   };
 
   buildType = "ament_cmake";

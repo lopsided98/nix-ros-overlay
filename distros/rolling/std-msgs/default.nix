@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-std-msgs";
-  version = "5.2.0-r1";
+  version = "5.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/std_msgs/5.2.0-1.tar.gz";
-    name = "5.2.0-1.tar.gz";
-    sha256 = "b1130eb14f45d76317457e590d33438f152994325ebf9f22e3e7ee2f71214800";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/std_msgs/5.2.1-1.tar.gz";
+    name = "5.2.1-1.tar.gz";
+    sha256 = "696ad7bd3736ce3d34b8f54807df887ecfed727380c24e51a2a0b69d78ba9b34";
   };
 
   buildType = "ament_cmake";

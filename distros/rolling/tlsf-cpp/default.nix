@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, rclcpp, rmw, rmw-implementation-cmake, std-msgs, tlsf }:
 buildRosPackage {
   pname = "ros-rolling-tlsf-cpp";
-  version = "0.16.0-r1";
+  version = "0.17.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realtime_support-release/archive/release/rolling/tlsf_cpp/0.16.0-1.tar.gz";
-    name = "0.16.0-1.tar.gz";
-    sha256 = "dc2d6b995143a2fda8e03594509dea755756867a6083b674157667291d0d21eb";
+    url = "https://github.com/ros2-gbp/realtime_support-release/archive/release/rolling/tlsf_cpp/0.17.0-1.tar.gz";
+    name = "0.17.0-1.tar.gz";
+    sha256 = "d2039712459b4cb30faa139e7370cc77739aca49a7e0fb32b0ea32f40fc5679d";
   };
 
   buildType = "ament_cmake";

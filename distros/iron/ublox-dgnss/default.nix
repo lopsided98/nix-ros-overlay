@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ntrip-client-node, ublox-dgnss-node, ublox-nav-sat-fix-hp-node, ublox-ubx-interfaces, ublox-ubx-msgs }:
 buildRosPackage {
   pname = "ros-iron-ublox-dgnss";
-  version = "0.5.1-r1";
+  version = "0.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/iron/ublox_dgnss/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "85e406ab84077cca7db8ce26b1c48766654119e6e615c655d9feebe2103d0a6c";
+    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/iron/ublox_dgnss/0.5.2-1.tar.gz";
+    name = "0.5.2-1.tar.gz";
+    sha256 = "21813d7ec62da342fcb8ea421e3c30827fd6145de945be6736c159c1a0cfc675";
   };
 
   buildType = "ament_cmake";

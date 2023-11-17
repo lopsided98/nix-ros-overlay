@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-action-tutorials-interfaces";
-  version = "0.31.1-r1";
+  version = "0.32.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/action_tutorials_interfaces/0.31.1-1.tar.gz";
-    name = "0.31.1-1.tar.gz";
-    sha256 = "43a47ff6cf56bc044162c9b719e4dc74fbbe338887abd22de7210fcc7e991622";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/action_tutorials_interfaces/0.32.0-1.tar.gz";
+    name = "0.32.0-1.tar.gz";
+    sha256 = "53c766af9192e47ff3640cf2f8832066c64a7b0a67641b134e2f8d9f6e85a430";
   };
 
   buildType = "ament_cmake";

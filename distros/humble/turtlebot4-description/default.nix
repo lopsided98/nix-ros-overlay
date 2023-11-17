@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, irobot-create-description, joint-state-publisher, robot-state-publisher, urdf }:
 buildRosPackage {
   pname = "ros-humble-turtlebot4-description";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4-release/archive/release/humble/turtlebot4_description/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "36a18c35b30d8df33daa4dbf6b68d0ec76c5b4489f2b9e0ac4dff10eebb1c212";
+    url = "https://github.com/ros2-gbp/turtlebot4-release/archive/release/humble/turtlebot4_description/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "cbdac376de0ce1ab83d109b39e7fccb8861b201fcc022d6696c023142805c0d8";
   };
 
   buildType = "ament_cmake";

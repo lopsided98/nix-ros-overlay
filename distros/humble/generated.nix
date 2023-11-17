@@ -354,6 +354,12 @@ self: super: {
 
  clearpath-viz = self.callPackage ./clearpath-viz {};
 
+ cob-actions = self.callPackage ./cob-actions {};
+
+ cob-msgs = self.callPackage ./cob-msgs {};
+
+ cob-srvs = self.callPackage ./cob-srvs {};
+
  collision-log-msgs = self.callPackage ./collision-log-msgs {};
 
  color-names = self.callPackage ./color-names {};
@@ -706,6 +712,14 @@ self: super: {
 
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
 
+ gazebo-video-monitor-interfaces = self.callPackage ./gazebo-video-monitor-interfaces {};
+
+ gazebo-video-monitor-plugins = self.callPackage ./gazebo-video-monitor-plugins {};
+
+ gazebo-video-monitor-utils = self.callPackage ./gazebo-video-monitor-utils {};
+
+ gazebo-video-monitors = self.callPackage ./gazebo-video-monitors {};
+
  gc-spl-2022 = self.callPackage ./gc-spl-2022 {};
 
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
@@ -984,9 +998,15 @@ self: super: {
 
  leo-fw = self.callPackage ./leo-fw {};
 
+ leo-gz-bringup = self.callPackage ./leo-gz-bringup {};
+
+ leo-gz-worlds = self.callPackage ./leo-gz-worlds {};
+
  leo-msgs = self.callPackage ./leo-msgs {};
 
  leo-robot = self.callPackage ./leo-robot {};
+
+ leo-simulator = self.callPackage ./leo-simulator {};
 
  leo-teleop = self.callPackage ./leo-teleop {};
 
@@ -1243,6 +1263,10 @@ self: super: {
  nao-lola = self.callPackage ./nao-lola {};
 
  nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
+
+ naoqi-bridge-msgs = self.callPackage ./naoqi-bridge-msgs {};
+
+ naoqi-libqi = self.callPackage ./naoqi-libqi {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-marti-status-msgs";
-  version = "1.4.1-r2";
+  version = "1.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/humble/marti_status_msgs/1.4.1-2.tar.gz";
-    name = "1.4.1-2.tar.gz";
-    sha256 = "443e9685e9cec9a6f3ace091a180f167013672131961afd873d7e51a690d977d";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/humble/marti_status_msgs/1.5.2-1.tar.gz";
+    name = "1.5.2-1.tar.gz";
+    sha256 = "a971e1665f0aabdf62621833bd3be9324a7321365e0cf58dd049f0dedd0ff10c";
   };
 
   buildType = "ament_cmake";

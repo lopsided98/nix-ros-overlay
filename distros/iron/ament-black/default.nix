@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/botsandus/ament_black-release/archive/release/iron/ament_black/0.2.3-1.tar.gz";
+    url = "https://github.com/ros2-gbp/ament_black-release/archive/release/iron/ament_black/0.2.3-1.tar.gz";
     name = "0.2.3-1.tar.gz";
     sha256 = "19a6a5f68d8f767aa06b624117db7e714b42526718c64b89918b67dbfe13848e";
   };

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-noetic-magic-enum";
-  version = "0.9.3-r1";
+  version = "0.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/magic_enum-release/archive/release/noetic/magic_enum/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "e373d29493a4c9bad7be05105e9894f6905fe24ac54a607236853903499b0a9d";
+    url = "https://github.com/nobleo/magic_enum-release/archive/release/noetic/magic_enum/0.9.4-1.tar.gz";
+    name = "0.9.4-1.tar.gz";
+    sha256 = "6d41a65dbaef7b73b5d2ca06e63c4e0217dc1edc9c8f80cd3a74f4edfd18c45d";
   };
 
   buildType = "cmake";

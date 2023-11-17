@@ -440,6 +440,10 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ event-camera-codecs = self.callPackage ./event-camera-codecs {};
+
+ event-camera-msgs = self.callPackage ./event-camera-msgs {};
+
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-async-client = self.callPackage ./examples-rclcpp-async-client {};
@@ -812,6 +816,18 @@ self: super: {
 
  launch-yaml = self.callPackage ./launch-yaml {};
 
+ leo = self.callPackage ./leo {};
+
+ leo-description = self.callPackage ./leo-description {};
+
+ leo-desktop = self.callPackage ./leo-desktop {};
+
+ leo-msgs = self.callPackage ./leo-msgs {};
+
+ leo-teleop = self.callPackage ./leo-teleop {};
+
+ leo-viz = self.callPackage ./leo-viz {};
+
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
  libcreate = self.callPackage ./libcreate {};
@@ -1043,6 +1059,8 @@ self: super: {
  nao-lola = self.callPackage ./nao-lola {};
 
  nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
+
+ naoqi-libqi = self.callPackage ./naoqi-libqi {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};
 

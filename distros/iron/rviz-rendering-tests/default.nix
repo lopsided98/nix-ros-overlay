@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-cmake-xmllint, ament-index-cpp, ament-lint-auto, qt5, resource-retriever, rviz-rendering }:
 buildRosPackage {
   pname = "ros-iron-rviz-rendering-tests";
-  version = "12.4.4-r1";
+  version = "12.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/iron/rviz_rendering_tests/12.4.4-1.tar.gz";
-    name = "12.4.4-1.tar.gz";
-    sha256 = "e5454e4d8ca46fa315ba03f4a2f13955dc7707b45ad7ee716710c991d2dd0180";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/iron/rviz_rendering_tests/12.4.5-1.tar.gz";
+    name = "12.4.5-1.tar.gz";
+    sha256 = "19536fbbcbb63e38bda7cf8dcf769b88adcea76bc22c260a5fbb458b12ddbad1";
   };
 
   buildType = "ament_cmake";

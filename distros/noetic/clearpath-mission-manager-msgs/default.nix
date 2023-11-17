@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, clearpath-navigation-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-clearpath-mission-manager-msgs";
-  version = "0.9.4-r1";
+  version = "0.9.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_msgs-release/archive/release/noetic/clearpath_mission_manager_msgs/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "131754327cbf05f16374de6d3cb0791ccda337e3478bbf65c013e77921f60430";
+    url = "https://github.com/clearpath-gbp/clearpath_msgs-release/archive/release/noetic/clearpath_mission_manager_msgs/0.9.5-1.tar.gz";
+    name = "0.9.5-1.tar.gz";
+    sha256 = "37576dfa510dad8a2a516948c3c29d9aef71a77bb9b3cc2b0b6b7ba6b63d6d24";
   };
 
   buildType = "catkin";
