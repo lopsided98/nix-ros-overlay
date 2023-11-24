@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-copyright }:
 buildRosPackage {
   pname = "ros-rolling-ament-cmake-copyright";
-  version = "0.16.0-r1";
+  version = "0.16.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_cmake_copyright/0.16.0-1.tar.gz";
-    name = "0.16.0-1.tar.gz";
-    sha256 = "5b7823a7288b087470646c6d5fc0fe23d6191a50f81e067aab197635dd26c077";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_cmake_copyright/0.16.1-1.tar.gz";
+    name = "0.16.1-1.tar.gz";
+    sha256 = "0db968522cb49e429154173f92afc15f3b9309f9089df579a79de9ebcc417328";
   };
 
   buildType = "ament_cmake";

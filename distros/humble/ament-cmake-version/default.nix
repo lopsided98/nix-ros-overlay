@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-humble-ament-cmake-version";
-  version = "1.3.5-r1";
+  version = "1.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/humble/ament_cmake_version/1.3.5-1.tar.gz";
-    name = "1.3.5-1.tar.gz";
-    sha256 = "d22aa8e92bf5913635eab765dc471758a28be773455d71acf2f1a310fa885ccd";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/humble/ament_cmake_version/1.3.6-1.tar.gz";
+    name = "1.3.6-1.tar.gz";
+    sha256 = "5fa4acb5a8b2f4f36ca61c47b447b10d4231ce2b02fce2555b8517d47a868bcc";
   };
 
   buildType = "ament_cmake";

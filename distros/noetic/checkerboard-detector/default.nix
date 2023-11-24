@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, dynamic-reconfigure, dynamic-tf-publisher, eigen-conversions, image-geometry, image-publisher, jsk-recognition-msgs, jsk-tools, jsk-topic-tools, message-filters, posedetection-msgs, rosconsole, roscpp, rostest, sensor-msgs, tf, tf2 }:
 buildRosPackage {
   pname = "ros-noetic-checkerboard-detector";
-  version = "1.2.15-r1";
+  version = "1.2.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/noetic/checkerboard_detector/1.2.15-1.tar.gz";
-    name = "1.2.15-1.tar.gz";
-    sha256 = "70b9133ad9add9dcad01366b8a2969cdf43acea745ba922d1497d887aa58fed9";
+    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/noetic/checkerboard_detector/1.2.17-1.tar.gz";
+    name = "1.2.17-1.tar.gz";
+    sha256 = "e82e2f249839372cbb7026733605d346bc2b8bd6a6503f94794ec5946f484db1";
   };
 
   buildType = "catkin";

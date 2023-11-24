@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, control-msgs, moveit-msgs, moveit-planners-ompl, pr2-gazebo, pr2eus, roseus, rostest }:
 buildRosPackage {
   pname = "ros-noetic-pr2eus-moveit";
-  version = "0.3.15-r3";
+  version = "0.3.15-r4";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_pr2eus-release/archive/release/noetic/pr2eus_moveit/0.3.15-3.tar.gz";
-    name = "0.3.15-3.tar.gz";
-    sha256 = "99b7121252a81953aa0ea54ec71f442ac207ed364775eec3ee72aaa8ab598c3c";
+    url = "https://github.com/tork-a/jsk_pr2eus-release/archive/release/noetic/pr2eus_moveit/0.3.15-4.tar.gz";
+    name = "0.3.15-4.tar.gz";
+    sha256 = "8d0002e02e4c555435091d74e938cb1ed54940ab70092239399ea7a8890ec2af";
   };
 
   buildType = "catkin";

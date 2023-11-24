@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-pycodestyle, pythonPackages, uncrustify-vendor }:
 buildRosPackage {
   pname = "ros-humble-ament-uncrustify";
-  version = "0.12.8-r1";
+  version = "0.12.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_uncrustify/0.12.8-1.tar.gz";
-    name = "0.12.8-1.tar.gz";
-    sha256 = "f41c10f271a73ef1b0925106a0a67c4818fa80160b3f7c1984b07c2c3c43cadb";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_uncrustify/0.12.9-1.tar.gz";
+    name = "0.12.9-1.tar.gz";
+    sha256 = "4a9b29cd5674d01d1e41f279b84989bdbcb0f2df0197919411c379866d38da2c";
   };
 
   buildType = "ament_python";

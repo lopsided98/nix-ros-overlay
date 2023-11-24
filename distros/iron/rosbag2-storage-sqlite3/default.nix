@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-python, ament-lint-auto, ament-lint-common, pluginlib, rcpputils, rcutils, rosbag2-storage, rosbag2-test-common, sqlite3-vendor, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-iron-rosbag2-storage-sqlite3";
-  version = "0.22.4-r1";
+  version = "0.22.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/rosbag2_storage_sqlite3/0.22.4-1.tar.gz";
-    name = "0.22.4-1.tar.gz";
-    sha256 = "f5192d2eab6aa3b633ccabad375b76e8ca99f39257ef67e4694d8ec192ee57b3";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/rosbag2_storage_sqlite3/0.22.5-1.tar.gz";
+    name = "0.22.5-1.tar.gz";
+    sha256 = "5eb9025245ccd0978f47305ae0dac1195fe9213a9bc9c46105fb700c051f074d";
   };
 
   buildType = "ament_cmake";

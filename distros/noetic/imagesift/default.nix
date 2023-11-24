@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, cv-bridge, image-transport, jsk-recognition-utils, jsk-topic-tools, libsiftfast, nodelet, posedetection-msgs, python3Packages, roscpp, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-imagesift";
-  version = "1.2.15-r1";
+  version = "1.2.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/noetic/imagesift/1.2.15-1.tar.gz";
-    name = "1.2.15-1.tar.gz";
-    sha256 = "06cf6f1d7b56163b99a2de23e98a0fd897d8a8891fd2773ed98abee91be74a71";
+    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/noetic/imagesift/1.2.17-1.tar.gz";
+    name = "1.2.17-1.tar.gz";
+    sha256 = "428e560c08942c65dc0a5b8277d9d7bc8b6913ff2beeb96520525d28aecb7210";
   };
 
   buildType = "catkin";

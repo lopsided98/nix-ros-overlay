@@ -354,6 +354,12 @@ self: super: {
 
  clearpath-viz = self.callPackage ./clearpath-viz {};
 
+ cob-actions = self.callPackage ./cob-actions {};
+
+ cob-msgs = self.callPackage ./cob-msgs {};
+
+ cob-srvs = self.callPackage ./cob-srvs {};
+
  collision-log-msgs = self.callPackage ./collision-log-msgs {};
 
  color-names = self.callPackage ./color-names {};
@@ -706,6 +712,14 @@ self: super: {
 
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
 
+ gazebo-video-monitor-interfaces = self.callPackage ./gazebo-video-monitor-interfaces {};
+
+ gazebo-video-monitor-plugins = self.callPackage ./gazebo-video-monitor-plugins {};
+
+ gazebo-video-monitor-utils = self.callPackage ./gazebo-video-monitor-utils {};
+
+ gazebo-video-monitors = self.callPackage ./gazebo-video-monitors {};
+
  gc-spl-2022 = self.callPackage ./gc-spl-2022 {};
 
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
@@ -984,9 +998,15 @@ self: super: {
 
  leo-fw = self.callPackage ./leo-fw {};
 
+ leo-gz-bringup = self.callPackage ./leo-gz-bringup {};
+
+ leo-gz-worlds = self.callPackage ./leo-gz-worlds {};
+
  leo-msgs = self.callPackage ./leo-msgs {};
 
  leo-robot = self.callPackage ./leo-robot {};
+
+ leo-simulator = self.callPackage ./leo-simulator {};
 
  leo-teleop = self.callPackage ./leo-teleop {};
 
@@ -1242,7 +1262,13 @@ self: super: {
 
  nao-lola = self.callPackage ./nao-lola {};
 
+ nao-meshes = self.callPackage ./nao-meshes {};
+
  nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
+
+ naoqi-bridge-msgs = self.callPackage ./naoqi-bridge-msgs {};
+
+ naoqi-libqi = self.callPackage ./naoqi-libqi {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};
 
@@ -1413,6 +1439,8 @@ self: super: {
  pendulum-control = self.callPackage ./pendulum-control {};
 
  pendulum-msgs = self.callPackage ./pendulum-msgs {};
+
+ pepper-meshes = self.callPackage ./pepper-meshes {};
 
  perception = self.callPackage ./perception {};
 
@@ -1598,11 +1626,17 @@ self: super: {
 
  raspimouse-description = self.callPackage ./raspimouse-description {};
 
+ raspimouse-fake = self.callPackage ./raspimouse-fake {};
+
+ raspimouse-gazebo = self.callPackage ./raspimouse-gazebo {};
+
  raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
 
  raspimouse-navigation = self.callPackage ./raspimouse-navigation {};
 
  raspimouse-ros2-examples = self.callPackage ./raspimouse-ros2-examples {};
+
+ raspimouse-sim = self.callPackage ./raspimouse-sim {};
 
  raspimouse-slam = self.callPackage ./raspimouse-slam {};
 
@@ -2169,6 +2203,14 @@ self: super: {
  sick-safetyscanners2-interfaces = self.callPackage ./sick-safetyscanners2-interfaces {};
 
  sick-safetyscanners-base = self.callPackage ./sick-safetyscanners-base {};
+
+ sick-safevisionary-base = self.callPackage ./sick-safevisionary-base {};
+
+ sick-safevisionary-driver = self.callPackage ./sick-safevisionary-driver {};
+
+ sick-safevisionary-interfaces = self.callPackage ./sick-safevisionary-interfaces {};
+
+ sick-safevisionary-tests = self.callPackage ./sick-safevisionary-tests {};
 
  simple-actions = self.callPackage ./simple-actions {};
 

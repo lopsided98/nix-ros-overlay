@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-humble-magic-enum";
-  version = "0.9.3-r1";
+  version = "0.9.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/magic_enum-release/archive/release/humble/magic_enum/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "a920be4a38da07d0c58348e6317e6caca9f38e09b2b5f894254704d8ef313773";
+    url = "https://github.com/nobleo/magic_enum-release/archive/release/humble/magic_enum/0.9.5-1.tar.gz";
+    name = "0.9.5-1.tar.gz";
+    sha256 = "23f6ed6e8c6eb3d3c0620768297150d5a385dce187a243f6159d4b73a2610cb6";
   };
 
   buildType = "cmake";

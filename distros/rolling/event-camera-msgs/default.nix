@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-event-camera-msgs";
-  version = "1.1.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/event_camera_msgs-release/archive/release/rolling/event_camera_msgs/1.1.4-1.tar.gz";
-    name = "1.1.4-1.tar.gz";
-    sha256 = "69cd21779d220d9f22921b6eee6c396074772e1fb996d86fb0c84b4a9b16b5e7";
+    url = "https://github.com/ros2-gbp/event_camera_msgs-release/archive/release/rolling/event_camera_msgs/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "6182bcd3db15ce3dc88f567a6e31e99d39df36b31e5f958b208dca69205fc187";
   };
 
   buildType = "ament_cmake";

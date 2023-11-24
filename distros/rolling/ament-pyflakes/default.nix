@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-pycodestyle, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-rolling-ament-pyflakes";
-  version = "0.16.0-r1";
+  version = "0.16.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_pyflakes/0.16.0-1.tar.gz";
-    name = "0.16.0-1.tar.gz";
-    sha256 = "dc84a753490111c5c37200ccc1599fc52b2fb274750bad87fc06fee86deb2f09";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_pyflakes/0.16.1-1.tar.gz";
+    name = "0.16.1-1.tar.gz";
+    sha256 = "ed9a8ad70b0b71c579f6388e3c48fae1044a65fac48be41641ba38083f1c8321";
   };
 
   buildType = "ament_python";

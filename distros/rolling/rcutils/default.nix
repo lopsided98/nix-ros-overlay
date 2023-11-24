@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, mimick-vendor, osrf-testing-tools-cpp, performance-test-fixture, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-rcutils";
-  version = "6.4.0-r1";
+  version = "6.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcutils-release/archive/release/rolling/rcutils/6.4.0-1.tar.gz";
-    name = "6.4.0-1.tar.gz";
-    sha256 = "4f9ea18c584b95f45e1e115cfd4271643a42943b96ee53908b596a2abbda65bf";
+    url = "https://github.com/ros2-gbp/rcutils-release/archive/release/rolling/rcutils/6.4.1-1.tar.gz";
+    name = "6.4.1-1.tar.gz";
+    sha256 = "a58dc3b07744603204e9be6ac05ac40545cc13a81dbf1b0faf2913b0f1c34f9c";
   };
 
   buildType = "ament_cmake";

@@ -28,6 +28,8 @@ self: super: {
 
  ament-acceleration = self.callPackage ./ament-acceleration {};
 
+ ament-black = self.callPackage ./ament-black {};
+
  ament-clang-format = self.callPackage ./ament-clang-format {};
 
  ament-clang-tidy = self.callPackage ./ament-clang-tidy {};
@@ -35,6 +37,8 @@ self: super: {
  ament-cmake = self.callPackage ./ament-cmake {};
 
  ament-cmake-auto = self.callPackage ./ament-cmake-auto {};
+
+ ament-cmake-black = self.callPackage ./ament-cmake-black {};
 
  ament-cmake-catch2 = self.callPackage ./ament-cmake-catch2 {};
 
@@ -502,6 +506,8 @@ self: super: {
 
  fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
 
+ fields2cover = self.callPackage ./fields2cover {};
+
  filters = self.callPackage ./filters {};
 
  find-object-2d = self.callPackage ./find-object-2d {};
@@ -779,6 +785,24 @@ self: super: {
  launch-yaml = self.callPackage ./launch-yaml {};
 
  lely-core-libraries = self.callPackage ./lely-core-libraries {};
+
+ leo = self.callPackage ./leo {};
+
+ leo-bringup = self.callPackage ./leo-bringup {};
+
+ leo-description = self.callPackage ./leo-description {};
+
+ leo-desktop = self.callPackage ./leo-desktop {};
+
+ leo-fw = self.callPackage ./leo-fw {};
+
+ leo-msgs = self.callPackage ./leo-msgs {};
+
+ leo-robot = self.callPackage ./leo-robot {};
+
+ leo-teleop = self.callPackage ./leo-teleop {};
+
+ leo-viz = self.callPackage ./leo-viz {};
 
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
@@ -1755,6 +1779,14 @@ self: super: {
  shape-msgs = self.callPackage ./shape-msgs {};
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
+
+ sick-safevisionary-base = self.callPackage ./sick-safevisionary-base {};
+
+ sick-safevisionary-driver = self.callPackage ./sick-safevisionary-driver {};
+
+ sick-safevisionary-interfaces = self.callPackage ./sick-safevisionary-interfaces {};
+
+ sick-safevisionary-tests = self.callPackage ./sick-safevisionary-tests {};
 
  simple-actions = self.callPackage ./simple-actions {};
 
