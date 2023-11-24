@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, geometry-msgs, map-organizer-msgs, map-server, nav-msgs, neonavigation-common, pcl, pcl-conversions, roscpp, roslint, rostest, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-map-organizer";
-  version = "0.16.0-r1";
+  version = "0.17.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation-release/archive/release/noetic/map_organizer/0.16.0-1.tar.gz";
-    name = "0.16.0-1.tar.gz";
-    sha256 = "35b7c6a45cf458901cfaf308830376261a9bc828735a818f218ccdd95b0d6369";
+    url = "https://github.com/at-wat/neonavigation-release/archive/release/noetic/map_organizer/0.17.0-1.tar.gz";
+    name = "0.17.0-1.tar.gz";
+    sha256 = "a9ed539186102070ab7d5b8045ceb9dc02a1c1d10a3827fc8d722a84173d24a3";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-nav-msgs";
-  version = "5.2.0-r1";
+  version = "5.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/nav_msgs/5.2.0-1.tar.gz";
-    name = "5.2.0-1.tar.gz";
-    sha256 = "d9f2cf21cace47fccfa49a2f64be3c9939cd58596e9ce7153e6a3d6c32612793";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/nav_msgs/5.2.1-1.tar.gz";
+    name = "5.2.1-1.tar.gz";
+    sha256 = "17ed06a49a4004ed36cc05cb376979917535153440dbc58a4c4d55d547a969f0";
   };
 
   buildType = "ament_cmake";

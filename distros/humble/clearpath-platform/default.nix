@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, clearpath-control, clearpath-platform-description, clearpath-platform-msgs, controller-interface, controller-manager, controller-manager-msgs, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, sensor-msgs, std-msgs, std-srvs, tf2, tf2-ros, xacro }:
 buildRosPackage {
   pname = "ros-humble-clearpath-platform";
-  version = "0.1.2-r1";
+  version = "0.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_platform/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "9ca6df16fc19d3f915fad2220f1b69e80af9d1901de042356d6914d4257a4f19";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_platform/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "4c4d2da316ab6b4988c495be25b716fb1a4aa3907f97019c0ea8be7fb883a92c";
   };
 
   buildType = "ament_cmake";

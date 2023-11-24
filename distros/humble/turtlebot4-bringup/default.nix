@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, depthai-bridge, depthai-examples, depthai-ros-driver, depthai-ros-msgs, joy-linux, nav2-common, rplidar-ros, teleop-twist-joy, tf2-ros, turtlebot4-description, turtlebot4-diagnostics, turtlebot4-node }:
 buildRosPackage {
   pname = "ros-humble-turtlebot4-bringup";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4_robot-release/archive/release/humble/turtlebot4_bringup/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "dfc655f048ffb8fe09ce5485e45f3c6416ad49a5b172e9c544fcfa3c0c5ee1c1";
+    url = "https://github.com/ros2-gbp/turtlebot4_robot-release/archive/release/humble/turtlebot4_bringup/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "1a27452eb08bdb086e428a383ce2e506c25eb6c8c07fbb79385a7851bb59a8a2";
   };
 
   buildType = "ament_cmake";

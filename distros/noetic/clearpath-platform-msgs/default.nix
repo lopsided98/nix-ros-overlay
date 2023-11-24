@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, genmsg, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-clearpath-platform-msgs";
-  version = "0.9.4-r1";
+  version = "0.9.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_msgs-release/archive/release/noetic/clearpath_platform_msgs/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "0cc273d4fc4a401fcfecd4c032e82c78a3ee583fb6359da4de1bc3cee3ef5c04";
+    url = "https://github.com/clearpath-gbp/clearpath_msgs-release/archive/release/noetic/clearpath_platform_msgs/0.9.5-1.tar.gz";
+    name = "0.9.5-1.tar.gz";
+    sha256 = "2c74bffef0e128dd0e55cb8d419e3d40086ee724e9f7e7a302beff160ee29a72";
   };
 
   buildType = "catkin";

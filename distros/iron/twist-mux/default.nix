@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, diagnostic-updater, geometry-msgs, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, rclcpp, std-msgs, twist-mux-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-iron-twist-mux";
-  version = "4.2.0-r1";
+  version = "4.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/twist_mux-release/archive/release/iron/twist_mux/4.2.0-1.tar.gz";
-    name = "4.2.0-1.tar.gz";
-    sha256 = "f9d2b5c2865e4076fa8e3145fef5922911d7eab1b63891f3a6e69946a834d149";
+    url = "https://github.com/ros2-gbp/twist_mux-release/archive/release/iron/twist_mux/4.3.0-1.tar.gz";
+    name = "4.3.0-1.tar.gz";
+    sha256 = "02bb83be8b8e5073815d763c6748e86a093dc391cfe5521219d4398129bef4e6";
   };
 
   buildType = "ament_cmake";

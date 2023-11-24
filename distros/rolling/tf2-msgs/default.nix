@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-tf2-msgs";
-  version = "0.33.2-r1";
+  version = "0.34.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_msgs/0.33.2-1.tar.gz";
-    name = "0.33.2-1.tar.gz";
-    sha256 = "115261c735abcd614975fa2bab1f11bc1a175f7d832a70064cd25d717fba336f";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_msgs/0.34.0-1.tar.gz";
+    name = "0.34.0-1.tar.gz";
+    sha256 = "2b26cdb0a254ddb54c9b774e7570fde98026a6a64109be71d5502fbe6f50a5ee";
   };
 
   buildType = "ament_cmake";

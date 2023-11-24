@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosconsole, roscpp, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-rplidar-ros";
-  version = "2.0.0-r1";
+  version = "2.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/rplidar_ros-release/archive/release/noetic/rplidar_ros/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "0101b1ac6fea66c77b67bffaeebbb6d03840bf25a7aa8262fa2b962d3314fdcb";
+    url = "https://github.com/Slamtec/rplidar_ros-release/archive/release/noetic/rplidar_ros/2.1.5-1.tar.gz";
+    name = "2.1.5-1.tar.gz";
+    sha256 = "e135d3fd09a7422a0d1ed25df2301109afdda66ef6ede75a0eb00929627d22c6";
   };
 
   buildType = "catkin";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rplidar ros package, support rplidar A2/A1 and A3/S1'';
+    description = ''The rplidar ros package, support rplidar A1/A2/A3/S1/S2/S3/T1/C1'';
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

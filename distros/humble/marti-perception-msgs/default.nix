@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-marti-perception-msgs";
-  version = "1.4.1-r2";
+  version = "1.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/humble/marti_perception_msgs/1.4.1-2.tar.gz";
-    name = "1.4.1-2.tar.gz";
-    sha256 = "a93c9606cda1365abccfe392ca59f9dbf18895d9c4dad75b2bed2c16fdcdf06e";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/humble/marti_perception_msgs/1.5.2-1.tar.gz";
+    name = "1.5.2-1.tar.gz";
+    sha256 = "d32dd7f76589c206aca4f6ec0248a55e988f0d464e3a001d5ff5f70204879602";
   };
 
   buildType = "ament_cmake";

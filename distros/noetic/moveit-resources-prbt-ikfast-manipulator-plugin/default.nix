@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen-conversions, moveit-core, pluginlib, roscpp, tf2-eigen, tf2-kdl }:
 buildRosPackage {
   pname = "ros-noetic-moveit-resources-prbt-ikfast-manipulator-plugin";
-  version = "0.8.2-r1";
+  version = "0.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_prbt_ikfast_manipulator_plugin/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "7b9a978e377e94714f8f1a13e6ca778e300453ffdc7d98f4a869989b3fddac11";
+    url = "https://github.com/ros-gbp/moveit_resources-release/archive/release/noetic/moveit_resources_prbt_ikfast_manipulator_plugin/0.8.3-1.tar.gz";
+    name = "0.8.3-1.tar.gz";
+    sha256 = "e17bf9b993cd4692ab8f049856946687894397894203fba2a87e13b6cbde7ac7";
   };
 
   buildType = "catkin";

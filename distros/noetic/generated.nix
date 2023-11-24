@@ -986,6 +986,8 @@ self: super: {
 
  fiducials = self.callPackage ./fiducials {};
 
+ fields2cover = self.callPackage ./fields2cover {};
+
  filters = self.callPackage ./filters {};
 
  find-object-2d = self.callPackage ./find-object-2d {};
@@ -1528,13 +1530,15 @@ self: super: {
 
  jsk-network-tools = self.callPackage ./jsk-network-tools {};
 
+ jsk-pcl-ros = self.callPackage ./jsk-pcl-ros {};
+
+ jsk-pcl-ros-utils = self.callPackage ./jsk-pcl-ros-utils {};
+
  jsk-pr2eus = self.callPackage ./jsk-pr2eus {};
 
  jsk-recognition = self.callPackage ./jsk-recognition {};
 
  jsk-recognition-msgs = self.callPackage ./jsk-recognition-msgs {};
-
- jsk-recognition-utils = self.callPackage ./jsk-recognition-utils {};
 
  jsk-roseus = self.callPackage ./jsk-roseus {};
 
@@ -1975,6 +1979,8 @@ self: super: {
  moveit-plugins = self.callPackage ./moveit-plugins {};
 
  moveit-resources = self.callPackage ./moveit-resources {};
+
+ moveit-resources-dual-panda-moveit-config = self.callPackage ./moveit-resources-dual-panda-moveit-config {};
 
  moveit-resources-fanuc-description = self.callPackage ./moveit-resources-fanuc-description {};
 
@@ -3427,6 +3433,8 @@ self: super: {
  sot-dynamic-pinocchio = self.callPackage ./sot-dynamic-pinocchio {};
 
  sot-tools = self.callPackage ./sot-tools {};
+
+ sound-classification = self.callPackage ./sound-classification {};
 
  spacenav-node = self.callPackage ./spacenav-node {};
 

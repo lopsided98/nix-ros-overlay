@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, lifecycle-msgs, osrf-testing-tools-cpp, rcl, rcutils, rmw, rosidl-runtime-c, tracetools }:
 buildRosPackage {
   pname = "ros-rolling-rcl-lifecycle";
-  version = "7.3.0-r1";
+  version = "8.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/rolling/rcl_lifecycle/7.3.0-1.tar.gz";
-    name = "7.3.0-1.tar.gz";
-    sha256 = "832886e3854244461c11c6a9e78151964e3bb8d1d6b02e562781e232e886d1ee";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/rolling/rcl_lifecycle/8.0.0-1.tar.gz";
+    name = "8.0.0-1.tar.gz";
+    sha256 = "45c9612204f7a05a0c7c73540f44afbaf6275905e5584e642e14dbfb5a820ebe";
   };
 
   buildType = "ament_cmake";

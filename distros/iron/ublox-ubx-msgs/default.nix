@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-ublox-ubx-msgs";
-  version = "0.5.1-r1";
+  version = "0.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/iron/ublox_ubx_msgs/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "cbd72f52ae5b278bfadc704cfdd1e8f0bb7459efff88561bf4d7c4fe61d3dcb3";
+    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/iron/ublox_ubx_msgs/0.5.2-1.tar.gz";
+    name = "0.5.2-1.tar.gz";
+    sha256 = "51b78d567117874f23f9f4e5cefe9ed0b56b4e4f9d2296cd08e6fd09659e9961";
   };
 
   buildType = "ament_cmake";

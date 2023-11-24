@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-iron-kinematics-interface";
-  version = "0.1.0-r3";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/iron/kinematics_interface/0.1.0-3.tar.gz";
-    name = "0.1.0-3.tar.gz";
-    sha256 = "93446dd9e4ec1e1069d980479d5ac270b275ec21dac0f0113c2950db3e4f6a1a";
+    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/iron/kinematics_interface/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "3edf5bb04225ab9dada9702a8a8d2e1c9f80a087ce24dc96e4d60f996866a2cf";
   };
 
   buildType = "ament_cmake";

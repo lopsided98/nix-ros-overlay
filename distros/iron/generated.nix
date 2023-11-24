@@ -440,6 +440,12 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ event-camera-codecs = self.callPackage ./event-camera-codecs {};
+
+ event-camera-msgs = self.callPackage ./event-camera-msgs {};
+
+ event-camera-renderer = self.callPackage ./event-camera-renderer {};
+
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-async-client = self.callPackage ./examples-rclcpp-async-client {};
@@ -493,6 +499,8 @@ self: super: {
  fastrtps = self.callPackage ./fastrtps {};
 
  fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
+
+ fields2cover = self.callPackage ./fields2cover {};
 
  filters = self.callPackage ./filters {};
 
@@ -575,6 +583,14 @@ self: super: {
  gazebo-ros2-control-demos = self.callPackage ./gazebo-ros2-control-demos {};
 
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
+
+ gazebo-video-monitor-interfaces = self.callPackage ./gazebo-video-monitor-interfaces {};
+
+ gazebo-video-monitor-plugins = self.callPackage ./gazebo-video-monitor-plugins {};
+
+ gazebo-video-monitor-utils = self.callPackage ./gazebo-video-monitor-utils {};
+
+ gazebo-video-monitors = self.callPackage ./gazebo-video-monitors {};
 
  gc-spl-2022 = self.callPackage ./gc-spl-2022 {};
 
@@ -812,6 +828,24 @@ self: super: {
 
  launch-yaml = self.callPackage ./launch-yaml {};
 
+ leo = self.callPackage ./leo {};
+
+ leo-bringup = self.callPackage ./leo-bringup {};
+
+ leo-description = self.callPackage ./leo-description {};
+
+ leo-desktop = self.callPackage ./leo-desktop {};
+
+ leo-fw = self.callPackage ./leo-fw {};
+
+ leo-msgs = self.callPackage ./leo-msgs {};
+
+ leo-robot = self.callPackage ./leo-robot {};
+
+ leo-teleop = self.callPackage ./leo-teleop {};
+
+ leo-viz = self.callPackage ./leo-viz {};
+
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
  libcreate = self.callPackage ./libcreate {};
@@ -885,6 +919,8 @@ self: super: {
  message-filters = self.callPackage ./message-filters {};
 
  message-tf-frame-transformer = self.callPackage ./message-tf-frame-transformer {};
+
+ metavision-driver = self.callPackage ./metavision-driver {};
 
  micro-ros-diagnostic-bridge = self.callPackage ./micro-ros-diagnostic-bridge {};
 
@@ -1042,7 +1078,17 @@ self: super: {
 
  nao-lola = self.callPackage ./nao-lola {};
 
+ nao-meshes = self.callPackage ./nao-meshes {};
+
  nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
+
+ naoqi-bridge-msgs = self.callPackage ./naoqi-bridge-msgs {};
+
+ naoqi-driver = self.callPackage ./naoqi-driver {};
+
+ naoqi-libqi = self.callPackage ./naoqi-libqi {};
+
+ naoqi-libqicore = self.callPackage ./naoqi-libqicore {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};
 
@@ -1187,6 +1233,8 @@ self: super: {
  pendulum-control = self.callPackage ./pendulum-control {};
 
  pendulum-msgs = self.callPackage ./pendulum-msgs {};
+
+ pepper-meshes = self.callPackage ./pepper-meshes {};
 
  perception = self.callPackage ./perception {};
 
@@ -1915,6 +1963,14 @@ self: super: {
  sick-safetyscanners2-interfaces = self.callPackage ./sick-safetyscanners2-interfaces {};
 
  sick-safetyscanners-base = self.callPackage ./sick-safetyscanners-base {};
+
+ sick-safevisionary-base = self.callPackage ./sick-safevisionary-base {};
+
+ sick-safevisionary-driver = self.callPackage ./sick-safevisionary-driver {};
+
+ sick-safevisionary-interfaces = self.callPackage ./sick-safevisionary-interfaces {};
+
+ sick-safevisionary-tests = self.callPackage ./sick-safevisionary-tests {};
 
  simple-actions = self.callPackage ./simple-actions {};
 

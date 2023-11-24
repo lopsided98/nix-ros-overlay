@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-test-assets, std-srvs, steering-controllers-library }:
 buildRosPackage {
   pname = "ros-humble-bicycle-steering-controller";
-  version = "2.26.0-r1";
+  version = "2.27.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/bicycle_steering_controller/2.26.0-1.tar.gz";
-    name = "2.26.0-1.tar.gz";
-    sha256 = "7f0ac3e8cb47c90305e6643f252e645a55d4a6779017dee20b176aa2f0ba57e0";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/bicycle_steering_controller/2.27.0-1.tar.gz";
+    name = "2.27.0-1.tar.gz";
+    sha256 = "2b7dbb5f5994e8fbd8a048715f3ff94ec2b5df377d62d0ca67c06dc650936a2b";
   };
 
   buildType = "ament_cmake";

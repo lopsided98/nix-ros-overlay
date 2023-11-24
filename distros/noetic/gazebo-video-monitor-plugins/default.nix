@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-ros, gazebo-video-monitor-msgs, opencv, roscpp, std-srvs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-gazebo-video-monitor-plugins";
-  version = "0.7.0-r1";
+  version = "0.7.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/nlamprian/gazebo_video_monitors-release/archive/release/noetic/gazebo_video_monitor_plugins/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "75f65f76f92d6da2545a63a2fa23d93e55923cc576c973f11efdb2a5480a71ed";
+    url = "https://github.com/nlamprian/gazebo_video_monitors-release/archive/release/noetic/gazebo_video_monitor_plugins/0.7.1-2.tar.gz";
+    name = "0.7.1-2.tar.gz";
+    sha256 = "6d90044eddbfa24b6cbae044368068ca8c4960fa72d9c6e5699e905b52961bc6";
   };
 
   buildType = "catkin";

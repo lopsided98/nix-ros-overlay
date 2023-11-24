@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/botsandus/ament_black-release/archive/release/humble/ament_cmake_black/0.2.3-1.tar.gz";
+    url = "https://github.com/ros2-gbp/ament_black-release/archive/release/humble/ament_cmake_black/0.2.3-1.tar.gz";
     name = "0.2.3-1.tar.gz";
     sha256 = "b841f007d2b41dbac17073a72a89f166b8001976db42811d91ac011ca82ff4db";
   };
