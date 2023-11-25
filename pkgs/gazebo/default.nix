@@ -14,7 +14,7 @@ mkDerivation rec {
 
   src = fetchurl {
     url = "https://osrf-distributions.s3.amazonaws.com/gazebo/releases/${pname}-${version}.tar.bz2";
-    hash = "sha256-L2W5j+ZSpXTgG3yubPEuFKndKTQ/3pngZqxRk6jQPnE=";
+    hash = "sha256-fphCwEbJ4HVTVbJ0wkCoq79Olivnznt/WRlOX0tYT0U=";
   };
 
   # Fix build with Protobuf >= 22
