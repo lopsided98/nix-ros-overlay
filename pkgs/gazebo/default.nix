@@ -18,10 +18,10 @@ mkDerivation rec {
   };
 
   # Fix build with Protobuf >= 22
-  patches = [ (fetchpatch {
-    url = "https://github.com/gazebosim/gazebo-classic/commit/17e09f574a4f39caff279cd70364cd1a3ea46f70.patch";
-    hash = "sha256-YrepsP3TOQsJaF+rIF4CmfEHSRfL2j9dqQCmd1UR2b8=";
-  }) ];
+  # patches = [ (fetchpatch {
+  #  url = "https://github.com/gazebosim/gazebo-classic/commit/17e09f574a4f39caff279cd70364cd1a3ea46f70.patch";
+  #  hash = "sha256-YrepsP3TOQsJaF+rIF4CmfEHSRfL2j9dqQCmd1UR2b8=";
+  # }) ];
 
   enableParallelBuilding = true;
 
