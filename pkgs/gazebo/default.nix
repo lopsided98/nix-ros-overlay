@@ -10,7 +10,7 @@
 
 mkDerivation rec {
   pname = "gazebo";
-  version = "11.13.0";
+  version = "11.14.0";
 
   src = fetchurl {
     url = "https://osrf-distributions.s3.amazonaws.com/gazebo/releases/${pname}-${version}.tar.bz2";
