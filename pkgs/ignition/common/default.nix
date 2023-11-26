@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchFromGitHub, fetchpatch, cmake, pkg-config, ignition
+{ lib, stdenv, fetchFromGitHub, cmake, pkg-config, ignition
 , ignition-cmake ? ignition.cmake, ignition-math ? ignition.math
 , ignition-utils ? ignition.utils, libuuid, tinyxml-2, freeimage, gts, ffmpeg
 , majorVersion ? "4"
@@ -17,12 +17,6 @@ stdenv.mkDerivation rec {
     rev = "${pname}_${version}";
     hash = srcHash;
   };
-
-  patches =
-    lib.optional (majorVersion == "3") (fetchpatch {
-      url = "https://github.com/gazebosim/gz-common/commit/dedc51888e0af28267a87a2ce888aa4189efacf4.patch";
-      hash = "sha256-p+EEHIYaxQ0aZ7wMyz/TuDWUQmHfIB4vOPwrUSsZ+DE=";
-    });
 
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];
