@@ -12,11 +12,12 @@
     compress ? false,
     hook ? "",
     hash ? null
-  }: src: self.runCommand ("${src.name}.tar" + lib.optionalString compress ".gz") {
+  }: src: self.runCommand ("${src.name}.tar" + lib.optionalString compress ".gz") ({
     inherit src;
+  } // lib.optionalAttrs (hash != null) {
     outputHashMode = "flat";
     outputHash = hash;
-  } ''
+  }) ''
     unpackPhase
     pushd "$sourceRoot"
     ${hook}
