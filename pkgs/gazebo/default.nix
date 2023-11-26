@@ -10,18 +10,18 @@
 
 mkDerivation rec {
   pname = "gazebo";
-  version = "11.13.0";
+  version = "11.14.0";
 
   src = fetchurl {
     url = "https://osrf-distributions.s3.amazonaws.com/gazebo/releases/${pname}-${version}.tar.bz2";
-    hash = "sha256-L2W5j+ZSpXTgG3yubPEuFKndKTQ/3pngZqxRk6jQPnE=";
+    hash = "sha256-fphCwEbJ4HVTVbJ0wkCoq79Olivnznt/WRlOX0tYT0U=";
   };
 
   # Fix build with Protobuf >= 22
-  patches = [ (fetchpatch {
-    url = "https://github.com/gazebosim/gazebo-classic/commit/17e09f574a4f39caff279cd70364cd1a3ea46f70.patch";
-    hash = "sha256-YrepsP3TOQsJaF+rIF4CmfEHSRfL2j9dqQCmd1UR2b8=";
-  }) ];
+  # patches = [ (fetchpatch {
+  #  url = "https://github.com/gazebosim/gazebo-classic/commit/17e09f574a4f39caff279cd70364cd1a3ea46f70.patch";
+  #  hash = "sha256-YrepsP3TOQsJaF+rIF4CmfEHSRfL2j9dqQCmd1UR2b8=";
+  # }) ];
 
   enableParallelBuilding = true;
 
