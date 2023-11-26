@@ -2,8 +2,8 @@
 , ignition-cmake ? ignition.cmake, ignition-math ? ignition.math
 , ignition-utils ? ignition.utils, libuuid, tinyxml-2, freeimage, gts, ffmpeg
 , majorVersion ? "4"
-, version ? "4.6.2"
-, srcHash ? "sha256-VyvpTeCCwX2WBJdVd6lZrN7QomdOQnxGZFXXnT3ct0s="
+, version ? "4.7.0"
+, srcHash ? "sha256-y8qp0UVXxSJm0aJeUD64+aG+gfNEboInW7F6tvHYTPI="
 , ... }:
 
 stdenv.mkDerivation rec {
