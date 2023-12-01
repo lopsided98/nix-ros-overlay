@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-robot-calibration-msgs";
-  version = "0.8.0-r2";
+  version = "0.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robot_calibration-release/archive/release/rolling/robot_calibration_msgs/0.8.0-2.tar.gz";
-    name = "0.8.0-2.tar.gz";
-    sha256 = "42c57b0e93106af6e653508f0d866c25b49e0277eaca85bfbccb014db7f5427e";
+    url = "https://github.com/ros2-gbp/robot_calibration-release/archive/release/rolling/robot_calibration_msgs/0.8.1-1.tar.gz";
+    name = "0.8.1-1.tar.gz";
+    sha256 = "675b73eb562e24d0cb58840d14fd6d3fb4413bb66d6b87ddc883c62cdc66dce4";
   };
 
   buildType = "ament_cmake";

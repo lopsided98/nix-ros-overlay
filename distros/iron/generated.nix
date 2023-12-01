@@ -440,6 +440,30 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ etsi-its-cam-coding = self.callPackage ./etsi-its-cam-coding {};
+
+ etsi-its-cam-conversion = self.callPackage ./etsi-its-cam-conversion {};
+
+ etsi-its-cam-msgs = self.callPackage ./etsi-its-cam-msgs {};
+
+ etsi-its-coding = self.callPackage ./etsi-its-coding {};
+
+ etsi-its-conversion = self.callPackage ./etsi-its-conversion {};
+
+ etsi-its-denm-coding = self.callPackage ./etsi-its-denm-coding {};
+
+ etsi-its-denm-conversion = self.callPackage ./etsi-its-denm-conversion {};
+
+ etsi-its-denm-msgs = self.callPackage ./etsi-its-denm-msgs {};
+
+ etsi-its-messages = self.callPackage ./etsi-its-messages {};
+
+ etsi-its-msgs = self.callPackage ./etsi-its-msgs {};
+
+ etsi-its-primitives-conversion = self.callPackage ./etsi-its-primitives-conversion {};
+
+ etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
+
  event-camera-codecs = self.callPackage ./event-camera-codecs {};
 
  event-camera-msgs = self.callPackage ./event-camera-msgs {};
