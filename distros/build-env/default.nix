@@ -96,5 +96,14 @@ let
       runHook postBuild
     '';
     phases = [ "buildPhase" "fixupPhase" ];
+
+    # Disable redundant fixup operations.
+    # The fixupPhase is needed for shell hooks and input propagation, but other
+    # things like RPATH shrinking and shebang patching are not needed, as the
+    # original packages should have already been fixed up.
+    dontPatchELF = true;
+    noAuditTmpdir = true;
+    dontGzipMan = true;
+    dontPatchShebangs = true;
   });
 in env
