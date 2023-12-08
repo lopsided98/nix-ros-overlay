@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, phidgets-msgs, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-phidgets-motors";
-  version = "2.3.1-r3";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/phidgets_motors/2.3.1-3.tar.gz";
-    name = "2.3.1-3.tar.gz";
-    sha256 = "b2277859661787ba92eb45634b2d289dda45e9432467f209f3d6cd2a0f124254";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/phidgets_motors/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "28b56a9db4b195732f6b151084a371be5e961e9e5e5c4b858f939f00757c5fe7";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-test-assets, std-srvs, steering-controllers-library }:
 buildRosPackage {
   pname = "ros-rolling-ackermann-steering-controller";
-  version = "4.0.0-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/ackermann_steering_controller/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "e39c9454a43b615cc951ba7e6dc2c93450a4f5e3a15d6944c00f397d54490bc1";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/ackermann_steering_controller/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "05aaf73e468ff7d3a6c2f0167ac5a7eda984d93bda6ffb3b4817d81f40e67d2c";
   };
 
   buildType = "ament_cmake";

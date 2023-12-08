@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-manager, forward-command-controller, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-iron-effort-controllers";
-  version = "3.18.0-r1";
+  version = "3.19.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/effort_controllers/3.18.0-1.tar.gz";
-    name = "3.18.0-1.tar.gz";
-    sha256 = "cd3c46e1f7f100b09139c07eb044e5061728d08384b92c8a699c94bad33363cf";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/effort_controllers/3.19.1-1.tar.gz";
+    name = "3.19.1-1.tar.gz";
+    sha256 = "9031807e2c9eeb1d3fdbe7f1dc0fbe6f11413bdd75a3902c02b31de97a7fa746";
   };
 
   buildType = "ament_cmake";

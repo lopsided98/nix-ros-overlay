@@ -858,6 +858,8 @@ self: super: {
 
  ergodic-exploration = self.callPackage ./ergodic-exploration {};
 
+ ess-imu-driver = self.callPackage ./ess-imu-driver {};
+
  ess-imu-ros1-uart-driver = self.callPackage ./ess-imu-ros1-uart-driver {};
 
  ethercat-grant = self.callPackage ./ethercat-grant {};
@@ -1533,6 +1535,8 @@ self: super: {
  jsk-pcl-ros = self.callPackage ./jsk-pcl-ros {};
 
  jsk-pcl-ros-utils = self.callPackage ./jsk-pcl-ros-utils {};
+
+ jsk-planning = self.callPackage ./jsk-planning {};
 
  jsk-pr2eus = self.callPackage ./jsk-pr2eus {};
 
@@ -2339,6 +2343,12 @@ self: super: {
  pcl-msgs = self.callPackage ./pcl-msgs {};
 
  pcl-ros = self.callPackage ./pcl-ros {};
+
+ pddl-msgs = self.callPackage ./pddl-msgs {};
+
+ pddl-planner = self.callPackage ./pddl-planner {};
+
+ pddl-planner-viewer = self.callPackage ./pddl-planner-viewer {};
 
  people = self.callPackage ./people {};
 
@@ -3372,6 +3382,8 @@ self: super: {
 
  sick-tim = self.callPackage ./sick-tim {};
 
+ sick-visionary-ros = self.callPackage ./sick-visionary-ros {};
+
  simple-grasping = self.callPackage ./simple-grasping {};
 
  simple-message = self.callPackage ./simple-message {};
@@ -3521,6 +3533,8 @@ self: super: {
  system-fingerprint = self.callPackage ./system-fingerprint {};
 
  tablet-socket-msgs = self.callPackage ./tablet-socket-msgs {};
+
+ task-compiler = self.callPackage ./task-compiler {};
 
  taskflow = self.callPackage ./taskflow {};
 
@@ -3699,6 +3713,8 @@ self: super: {
  ubnt-airos-tools = self.callPackage ./ubnt-airos-tools {};
 
  udp-com = self.callPackage ./udp-com {};
+
+ udp-msgs = self.callPackage ./udp-msgs {};
 
  um6 = self.callPackage ./um6 {};
 

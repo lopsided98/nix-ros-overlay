@@ -640,6 +640,8 @@ self: super: {
 
  iceoryx-hoofs = self.callPackage ./iceoryx-hoofs {};
 
+ iceoryx-introspection = self.callPackage ./iceoryx-introspection {};
+
  iceoryx-posh = self.callPackage ./iceoryx-posh {};
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
@@ -1104,6 +1106,10 @@ self: super: {
 
  ouster-msgs = self.callPackage ./ouster-msgs {};
 
+ ouster-ros = self.callPackage ./ouster-ros {};
+
+ ouster-sensor-msgs = self.callPackage ./ouster-sensor-msgs {};
+
  ouxt-common = self.callPackage ./ouxt-common {};
 
  ouxt-lint-common = self.callPackage ./ouxt-lint-common {};
@@ -1211,6 +1217,8 @@ self: super: {
  position-controllers = self.callPackage ./position-controllers {};
 
  py-trees = self.callPackage ./py-trees {};
+
+ py-trees-js = self.callPackage ./py-trees-js {};
 
  py-trees-ros = self.callPackage ./py-trees-ros {};
 

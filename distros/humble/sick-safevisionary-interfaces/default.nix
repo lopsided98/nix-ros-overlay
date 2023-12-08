@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-sick-safevisionary-interfaces";
-  version = "1.0.1-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sick_safevisionary_ros2-release/archive/release/humble/sick_safevisionary_interfaces/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "f541283b3d78572ecaf2fb231c3de5b2683a74400a4030427ec5db4996faf307";
+    url = "https://github.com/ros2-gbp/sick_safevisionary_ros2-release/archive/release/humble/sick_safevisionary_interfaces/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "45ba7100f1a4739558fb2b32c44815118259a4f5badb999461a2c1bf658ff163";
   };
 
   buildType = "ament_cmake";

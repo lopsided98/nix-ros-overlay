@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, rclcpp, rclcpp-components, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-iron-phidgets-gyroscope";
-  version = "2.3.1-r3";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/phidgets_gyroscope/2.3.1-3.tar.gz";
-    name = "2.3.1-3.tar.gz";
-    sha256 = "c67c99be54307517f3dd541759557f793c70e1049e6849800db21f634ff78a20";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/phidgets_gyroscope/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "f75efc7558ba579a552fb1b4a3914faf4dd84d8903f48b100eac9ac1f40fbed2";
   };
 
   buildType = "ament_cmake";
