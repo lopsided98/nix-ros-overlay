@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, collada-urdf-jsk-patch, gazebo-ros, python3Packages, roseus, rostest }:
 buildRosPackage {
   pname = "ros-noetic-eusurdf";
-  version = "0.4.4-r2";
+  version = "0.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_model_tools-release/archive/release/noetic/eusurdf/0.4.4-2.tar.gz";
-    name = "0.4.4-2.tar.gz";
-    sha256 = "ddc05b743572e8dc8e9ac5ed0b1898030cd1603dcab5483db037d8074f728532";
+    url = "https://github.com/tork-a/jsk_model_tools-release/archive/release/noetic/eusurdf/0.4.5-1.tar.gz";
+    name = "0.4.5-1.tar.gz";
+    sha256 = "ad87f0f2c6612ab871b380e767c33ee36d9e17b6e3272a0ccd634e620d29bfff";
   };
 
   buildType = "catkin";

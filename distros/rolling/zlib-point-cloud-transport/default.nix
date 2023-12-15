@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, pluginlib, point-cloud-interfaces, point-cloud-transport, rclcpp, zlib }:
 buildRosPackage {
   pname = "ros-rolling-zlib-point-cloud-transport";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/rolling/zlib_point_cloud_transport/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "13944e28d1160e53bb962fc1d06d060aa78fd9833d8c1c8eb24e0ea00dfe35c3";
+    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/rolling/zlib_point_cloud_transport/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "666444d708b9b634abecbfa18d1308283eb6b0ff76cdf7a4ae2cc16de55f7bdf";
   };
 
   buildType = "ament_cmake";

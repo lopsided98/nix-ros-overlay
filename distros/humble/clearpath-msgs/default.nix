@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, clearpath-platform-msgs }:
 buildRosPackage {
   pname = "ros-humble-clearpath-msgs";
-  version = "0.0.4-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_msgs-release/archive/release/humble/clearpath_msgs/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "a55f459d96d9ea0214420798560f041d3290068d5b395a68ce605b5b02f286dc";
+    url = "https://github.com/clearpath-gbp/clearpath_msgs-release/archive/release/humble/clearpath_msgs/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "506e283e487c92b5dbe7c7b38fdb9ccbe2123cc28f4447ab24a958df0e07cd66";
   };
 
   buildType = "ament_cmake";
