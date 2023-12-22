@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];
-  propagatedBuildInputs = [ cv-bridge depthai-ros-msgs image-transport message-filters opencv rclcpp rclcpp-components sensor-msgs vision-msgs visualization-msgs ];
+  propagatedBuildInputs = [ cv-bridge depthai-ros-msgs image-transport message-filters opencv opencv.cxxdev rclcpp rclcpp-components sensor-msgs vision-msgs visualization-msgs ];
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {

@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin yaml-cpp ];
-  propagatedBuildInputs = [ gazebo-ros gazebo-video-monitor-msgs opencv roscpp std-srvs ];
+  propagatedBuildInputs = [ gazebo-ros gazebo-video-monitor-msgs opencv opencv.cxxdev roscpp std-srvs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

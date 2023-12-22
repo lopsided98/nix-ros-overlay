@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-cpplint, ament-lint-auto, as2-core, geometry-msgs, nav-msgs, rclcpp, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-as2-state-estimator";
-  version = "1.0.5-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_state_estimator/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "7628adadf2c6828fa88a7f97498cb2643105f7f43980d0a4183925714fdd07ac";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_state_estimator/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "bcfa5ca1bc66bddd38a9abf0e20b3302e60bb4f3bd309ae69ff64b7e029bbb57";
   };
 
   buildType = "ament_cmake";

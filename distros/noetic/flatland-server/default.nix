@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];
-  propagatedBuildInputs = [ flatland-msgs geometry-msgs interactive-markers lua opencv pluginlib roscpp std-msgs std-srvs tf2 tf2-geometry-msgs visualization-msgs yaml-cpp ];
+  propagatedBuildInputs = [ flatland-msgs geometry-msgs interactive-markers lua opencv opencv.cxxdev pluginlib roscpp std-msgs std-srvs tf2 tf2-geometry-msgs visualization-msgs yaml-cpp ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

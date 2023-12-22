@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, ros-gz-sim }:
 buildRosPackage {
   pname = "ros-humble-ros-ign-gazebo";
-  version = "0.244.11-r1";
+  version = "0.244.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/humble/ros_ign_gazebo/0.244.11-1.tar.gz";
-    name = "0.244.11-1.tar.gz";
-    sha256 = "11beae5cd60655630a818175833fe7b1d9366f128e7c643aafc09de8898e6f2b";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/humble/ros_ign_gazebo/0.244.12-1.tar.gz";
+    name = "0.244.12-1.tar.gz";
+    sha256 = "bfece8ba01c271a55750dea03578eba72daefff154662443a976f26addba15c5";
   };
 
   buildType = "ament_cmake";

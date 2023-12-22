@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake yaml-cpp-vendor ];
-  propagatedBuildInputs = [ gazebo-dev gazebo-ros gazebo-video-monitor-interfaces opencv rclcpp std-srvs ];
+  propagatedBuildInputs = [ gazebo-dev gazebo-ros gazebo-video-monitor-interfaces opencv opencv.cxxdev rclcpp std-srvs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ffmpeg libgphoto2 libjpeg_turbo libmicrohttpd message-generation opencv python3Packages.setuptools roscpp roslint ];
+  buildInputs = [ catkin ffmpeg libgphoto2 libjpeg_turbo libmicrohttpd message-generation opencv opencv.cxxdev python3Packages.setuptools roscpp roslint ];
   propagatedBuildInputs = [ dnsmasq geometry-msgs hostapd libnl mavlink message-runtime python3Packages.cherrypy python3Packages.colorama python3Packages.psutil python3Packages.pyserial rosbash rosbridge-suite roslaunch rospy sensor-msgs std-msgs std-srvs vision-opencv ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 

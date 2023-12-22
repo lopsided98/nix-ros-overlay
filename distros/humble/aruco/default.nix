@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, eigen }:
 buildRosPackage {
   pname = "ros-humble-aruco";
-  version = "5.0.3-r1";
+  version = "5.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/aruco_ros-release/archive/release/humble/aruco/5.0.3-1.tar.gz";
-    name = "5.0.3-1.tar.gz";
-    sha256 = "ef6192f44fceb9a53a3f14baa4a0fc08a1ec9184cc089e2872162a17dc2e8c66";
+    url = "https://github.com/pal-gbp/aruco_ros-release/archive/release/humble/aruco/5.0.4-1.tar.gz";
+    name = "5.0.4-1.tar.gz";
+    sha256 = "719481ea6dba98a00a04587366c39cbe55bffeebb00eecabb547c30ab9abee94";
   };
 
   buildType = "ament_cmake";

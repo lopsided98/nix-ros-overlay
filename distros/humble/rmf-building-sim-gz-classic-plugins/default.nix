@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ gazebo-dev gazebo-ros menge-vendor opencv qt5.qtbase rclcpp rmf-building-sim-common rmf-fleet-msgs ];
+  propagatedBuildInputs = [ gazebo-dev gazebo-ros menge-vendor opencv opencv.cxxdev qt5.qtbase rclcpp rmf-building-sim-common rmf-fleet-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

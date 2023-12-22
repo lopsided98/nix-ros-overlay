@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, python3Packages, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-iron-slider-publisher";
-  version = "2.2.1-r3";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/slider_publisher-release/archive/release/iron/slider_publisher/2.2.1-3.tar.gz";
-    name = "2.2.1-3.tar.gz";
-    sha256 = "a6a9719488c2a661fd9600a0c44c4184b5971d51773cd3d4c649ba92fa0df96a";
+    url = "https://github.com/ros2-gbp/slider_publisher-release/archive/release/iron/slider_publisher/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "b267e154be70673883f3bd9445b7e10785fd2e8aeff24c2bb4f520c00cd2d44b";
   };
 
   buildType = "ament_cmake";

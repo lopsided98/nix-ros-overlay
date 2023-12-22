@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-clang-format, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, class-loader, event-camera-msgs, rclcpp, ros-environment, rosbag2-cpp }:
 buildRosPackage {
   pname = "ros-humble-event-camera-codecs";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/event_camera_codecs-release/archive/release/humble/event_camera_codecs/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "a51029a431c5752775ca421c0f703d7d796df3d5414871774bc964297ee81c34";
+    url = "https://github.com/ros2-gbp/event_camera_codecs-release/archive/release/humble/event_camera_codecs/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "3728597f320b26add4cd4704fdc358777a73f141790a824172dc15d4f6536581";
   };
 
   buildType = "ament_cmake";

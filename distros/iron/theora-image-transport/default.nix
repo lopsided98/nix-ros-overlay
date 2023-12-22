@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pkg-config rosidl-default-generators ];
   checkInputs = [ ament-lint-common ];
-  propagatedBuildInputs = [ cv-bridge image-transport libogg libtheora opencv pluginlib rclcpp rcutils rosidl-default-runtime sensor-msgs std-msgs ];
+  propagatedBuildInputs = [ cv-bridge image-transport libogg libtheora opencv opencv.cxxdev pluginlib rclcpp rcutils rosidl-default-runtime sensor-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake pkg-config rosidl-default-generators ];
 
   meta = {

@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation python3Packages.setuptools ];
-  propagatedBuildInputs = [ boost cob-3d-mapping-msgs cv-bridge geometry-msgs image-transport message-filters message-runtime nav-msgs opencv pcl pcl-ros roscpp rospy sensor-msgs tf ];
+  propagatedBuildInputs = [ boost cob-3d-mapping-msgs cv-bridge geometry-msgs image-transport message-filters message-runtime nav-msgs opencv opencv.cxxdev pcl pcl-ros roscpp rospy sensor-msgs tf ];
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {

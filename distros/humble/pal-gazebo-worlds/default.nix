@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-humble-pal-gazebo-worlds";
-  version = "4.0.0-r1";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_gazebo_worlds-ros2-release/archive/release/humble/pal_gazebo_worlds/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "83e63ebee2ce22783561ca40986054116689bbf592a0ad2c67afc38dc8934de2";
+    url = "https://github.com/pal-gbp/pal_gazebo_worlds-ros2-release/archive/release/humble/pal_gazebo_worlds/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "b60d6fffdeba1f9aca2058d03adddfd999318c56aafd91387eb584a1ce3df253";
   };
 
   buildType = "ament_cmake";

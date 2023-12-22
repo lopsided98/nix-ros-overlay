@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, microstrain-inertial-msgs, nav-msgs, rclpy, rqt-gui, rqt-gui-py, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-microstrain-inertial-rqt";
-  version = "3.1.0-r1";
+  version = "3.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/humble/microstrain_inertial_rqt/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "a9bc772d5f1f50f08d9cf3aeec49ef95efe4b0cc0474da7c9510be2cc11e2913";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/humble/microstrain_inertial_rqt/3.2.0-2.tar.gz";
+    name = "3.2.0-2.tar.gz";
+    sha256 = "f14d83da5d6508bd537cac1bf9911d209fef7db253ca9e1b73dce3560bce7b78";
   };
 
   buildType = "ament_python";

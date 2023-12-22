@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, as2-core, as2-msgs, behaviortree-cpp-v3, geometry-msgs, nav2-behavior-tree, nav2-msgs, rclcpp, rclcpp-action, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-as2-behavior-tree";
-  version = "1.0.5-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_behavior_tree/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "c8e17492362c44bc33b80de4c5940b9023cb44888eb8582db2cda09d08ae5b52";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_behavior_tree/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "7f70f650e245de8478492dd117ec96816c5dc92008cae59b456e4bb2f752fe6d";
   };
 
   buildType = "ament_cmake";

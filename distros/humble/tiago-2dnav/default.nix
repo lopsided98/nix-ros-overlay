@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, launch-pal, pmb2-2dnav, ros2launch }:
 buildRosPackage {
   pname = "ros-humble-tiago-2dnav";
-  version = "4.0.5-r1";
+  version = "4.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_navigation-release/archive/release/humble/tiago_2dnav/4.0.5-1.tar.gz";
-    name = "4.0.5-1.tar.gz";
-    sha256 = "85d1d37395dc2826415b330f5dbb1c7f37d83e60335da9b93616e0b119193974";
+    url = "https://github.com/pal-gbp/tiago_navigation-release/archive/release/humble/tiago_2dnav/4.0.9-1.tar.gz";
+    name = "4.0.9-1.tar.gz";
+    sha256 = "04ef9850e82abc68f27e4c79c6430af565f700b82939714bc776fb1df9006ac8";
   };
 
   buildType = "ament_cmake";

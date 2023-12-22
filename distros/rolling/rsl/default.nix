@@ -2,22 +2,22 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, clang, doxygen, eigen, fmt, git, range-v3, rclcpp, tcb-span, tl-expected }:
+{ lib, buildRosPackage, fetchurl, clang, doxygen, eigen, fmt, git, range-v3, rclcpp, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-rolling-rsl";
-  version = "0.2.2-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/RSL-release/archive/release/rolling/rsl/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "9b49ad5f45221c9ff22e97cba92c9238ec694ef218963caeafda19c1b269287e";
+    url = "https://github.com/ros2-gbp/RSL-release/archive/release/rolling/rsl/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "f3547325309488340275542e6da7d69675cee90d7cf8accb42f6f403914d3208";
   };
 
-  buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-ros doxygen git ];
-  checkInputs = [ clang range-v3 ];
+  buildType = "catkin";
+  buildInputs = [ doxygen ];
+  checkInputs = [ clang git range-v3 ];
   propagatedBuildInputs = [ eigen fmt rclcpp tcb-span tl-expected ];
-  nativeBuildInputs = [ ament-cmake-ros doxygen git ];
+  nativeBuildInputs = [ doxygen ];
 
   meta = {
     description = ''ROS Support Library'';

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, pybind11-json-vendor, pybind11-vendor, rclpy, rmf-fleet-adapter }:
 buildRosPackage {
   pname = "ros-iron-rmf-fleet-adapter-python";
-  version = "2.2.3-r1";
+  version = "2.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/iron/rmf_fleet_adapter_python/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "ff474562168bc0dc1cd2856e305407a80415b766441c88216152f99781ea20f0";
+    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/iron/rmf_fleet_adapter_python/2.2.4-1.tar.gz";
+    name = "2.2.4-1.tar.gz";
+    sha256 = "2c3e214a0c61a461f00f1554fcefc7ddf589d39eaa569028f47b7de7520bf0ba";
   };
 
   buildType = "ament_cmake";

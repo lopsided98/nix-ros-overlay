@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, boost, cmake, doxygen, eigen, eigenpy, git, octomap, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-iron-hpp-fcl";
-  version = "2.3.0-r5";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hpp_fcl-release/archive/release/iron/hpp-fcl/2.3.0-5.tar.gz";
-    name = "2.3.0-5.tar.gz";
-    sha256 = "a44e6189c4dda6b8eefc7082e487dae74fdbaf31cd659e7c5b8279a49517720a";
+    url = "https://github.com/ros2-gbp/hpp_fcl-release/archive/release/iron/hpp-fcl/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "eca39b56b89fbde81ebf07dbc9f8bde61563684c7a939db88f1f4ec1c3f04483";
   };
 
   buildType = "cmake";

@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ catkin ];
   checkInputs = [ python3Packages.numpy rostest ];
-  propagatedBuildInputs = [ boost opencv python3 python3Packages.opencv4 rosconsole sensor-msgs ];
+  propagatedBuildInputs = [ boost opencv opencv.cxxdev python3 python3Packages.opencv4 rosconsole sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, boost, cv-bridge, diagnostic-msgs, diagnostic-updater, geometry-msgs, image-transport, kdl-parser, naoqi-bridge-msgs, naoqi-libqi, naoqi-libqicore, rclcpp, rclcpp-action, robot-state-publisher, rosidl-default-generators, sensor-msgs, tf2-geometry-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-naoqi-driver";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-naoqi/naoqi_driver2-release/archive/release/iron/naoqi_driver/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "be32391d297f3a8ea3c74c22e55d67b1097b77d2a7e0a1ac3ac7edbc4f8be47b";
+    url = "https://github.com/ros-naoqi/naoqi_driver2-release/archive/release/iron/naoqi_driver/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "0a43055a6c3d1337045e191452ae9a5cd469d4f5b8a6792a132bed3f84d2857c";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-catch2, ament-cmake-uncrustify, cmake, eigen, eigen3-cmake-module, libccd, rmf-utils }:
 buildRosPackage {
   pname = "ros-humble-rmf-traffic";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic-release/archive/release/humble/rmf_traffic/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "90823a43012e9bf3b27bd205d4b9ab952db2c5302e26d190ef97cc994abea46e";
+    url = "https://github.com/ros2-gbp/rmf_traffic-release/archive/release/humble/rmf_traffic/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "035e79e7ba394cbe317ff962314f1df23f6ac417a4c20af6d64727624dc6269e";
   };
 
   buildType = "cmake";

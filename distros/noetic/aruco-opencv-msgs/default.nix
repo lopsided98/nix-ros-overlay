@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-aruco-opencv-msgs";
-  version = "0.3.1-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/aruco_opencv-release/archive/release/noetic/aruco_opencv_msgs/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "f2ec4432d036c31d83337541414cba41cf75fc4d4431ea321c0dd6c8f0c59ed3";
+    url = "https://github.com/fictionlab-gbp/aruco_opencv-release/archive/release/noetic/aruco_opencv_msgs/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "e48a3384affa57d6a2c5525da24009e0e209c526f9aaa801a5e6685daa727aef";
   };
 
   buildType = "catkin";

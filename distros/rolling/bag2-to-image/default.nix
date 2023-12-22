@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-clang-format ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ opencv rclcpp rclcpp-components rosbag2-cpp rosbag2-storage sensor-msgs ];
+  propagatedBuildInputs = [ opencv opencv.cxxdev rclcpp rclcpp-components rosbag2-cpp rosbag2-storage sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

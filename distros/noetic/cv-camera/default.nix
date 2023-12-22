@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin roslint rostest ];
-  propagatedBuildInputs = [ camera-info-manager cv-bridge image-transport nodelet opencv roscpp sensor-msgs ];
+  propagatedBuildInputs = [ camera-info-manager cv-bridge image-transport nodelet opencv opencv.cxxdev roscpp sensor-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

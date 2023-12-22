@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-phidgets-temperature";
-  version = "2.3.1-r1";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/humble/phidgets_temperature/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "3d97ce71359fdaff7c9074ee607d064efd33b24ce99cb2d58e63d168a3bf47ed";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/humble/phidgets_temperature/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "8301cdc3165351f9221a6a9205d849406c9fd683228ab3a9a9d03ee3744a41ed";
   };
 
   buildType = "ament_cmake";

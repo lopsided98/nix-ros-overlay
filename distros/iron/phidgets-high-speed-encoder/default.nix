@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, phidgets-msgs, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-iron-phidgets-high-speed-encoder";
-  version = "2.3.1-r3";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/phidgets_high_speed_encoder/2.3.1-3.tar.gz";
-    name = "2.3.1-3.tar.gz";
-    sha256 = "b84c3bb7b4ce9689983e302c328ec25fd53d4c9885117778ec9317e4033af54b";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/phidgets_high_speed_encoder/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "02d9e3c5c32d2f763ae47e24b975c740cd742ab8b645d649a342fa4a215e136d";
   };
 
   buildType = "ament_cmake";

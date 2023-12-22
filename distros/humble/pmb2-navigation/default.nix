@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, pmb2-2dnav, pmb2-laser-sensors, pmb2-maps }:
 buildRosPackage {
   pname = "ros-humble-pmb2-navigation";
-  version = "4.0.5-r1";
+  version = "4.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_navigation/4.0.5-1.tar.gz";
-    name = "4.0.5-1.tar.gz";
-    sha256 = "0fa5dd5b0111f852661e4e888bceeaacf0803e14e1beb645ec78dfd6aea3dbc4";
+    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_navigation/4.0.9-1.tar.gz";
+    name = "4.0.9-1.tar.gz";
+    sha256 = "9fbd56a31fe39736a0374d17dfc55e170453c9c5460fea371a80d4e9cc753692";
   };
 
   buildType = "ament_cmake";

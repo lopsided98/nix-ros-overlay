@@ -574,6 +574,30 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ etsi-its-cam-coding = self.callPackage ./etsi-its-cam-coding {};
+
+ etsi-its-cam-conversion = self.callPackage ./etsi-its-cam-conversion {};
+
+ etsi-its-cam-msgs = self.callPackage ./etsi-its-cam-msgs {};
+
+ etsi-its-coding = self.callPackage ./etsi-its-coding {};
+
+ etsi-its-conversion = self.callPackage ./etsi-its-conversion {};
+
+ etsi-its-denm-coding = self.callPackage ./etsi-its-denm-coding {};
+
+ etsi-its-denm-conversion = self.callPackage ./etsi-its-denm-conversion {};
+
+ etsi-its-denm-msgs = self.callPackage ./etsi-its-denm-msgs {};
+
+ etsi-its-messages = self.callPackage ./etsi-its-messages {};
+
+ etsi-its-msgs = self.callPackage ./etsi-its-msgs {};
+
+ etsi-its-primitives-conversion = self.callPackage ./etsi-its-primitives-conversion {};
+
+ etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
+
  event-camera-codecs = self.callPackage ./event-camera-codecs {};
 
  event-camera-msgs = self.callPackage ./event-camera-msgs {};
@@ -640,6 +664,8 @@ self: super: {
 
  fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
 
+ fields2cover = self.callPackage ./fields2cover {};
+
  filters = self.callPackage ./filters {};
 
  find-object-2d = self.callPackage ./find-object-2d {};
@@ -699,6 +725,10 @@ self: super: {
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
  gazebo-dev = self.callPackage ./gazebo-dev {};
+
+ gazebo-model-attachment-plugin = self.callPackage ./gazebo-model-attachment-plugin {};
+
+ gazebo-model-attachment-plugin-msgs = self.callPackage ./gazebo-model-attachment-plugin-msgs {};
 
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
 
@@ -819,6 +849,8 @@ self: super: {
  iceoryx-binding-c = self.callPackage ./iceoryx-binding-c {};
 
  iceoryx-hoofs = self.callPackage ./iceoryx-hoofs {};
+
+ iceoryx-introspection = self.callPackage ./iceoryx-introspection {};
 
  iceoryx-posh = self.callPackage ./iceoryx-posh {};
 
@@ -1126,30 +1158,6 @@ self: super: {
 
  mod = self.callPackage ./mod {};
 
- mola-common = self.callPackage ./mola-common {};
-
- mola-demos = self.callPackage ./mola-demos {};
-
- mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
-
- mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
-
- mola-input-kitti-dataset = self.callPackage ./mola-input-kitti-dataset {};
-
- mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
-
- mola-input-ros2 = self.callPackage ./mola-input-ros2 {};
-
- mola-kernel = self.callPackage ./mola-kernel {};
-
- mola-launcher = self.callPackage ./mola-launcher {};
-
- mola-test-datasets = self.callPackage ./mola-test-datasets {};
-
- mola-viz = self.callPackage ./mola-viz {};
-
- mola-yaml = self.callPackage ./mola-yaml {};
-
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
  moveit = self.callPackage ./moveit {};
@@ -1238,8 +1246,6 @@ self: super: {
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
- mp2p-icp = self.callPackage ./mp2p-icp {};
-
  mqtt-client = self.callPackage ./mqtt-client {};
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
@@ -1268,7 +1274,11 @@ self: super: {
 
  naoqi-bridge-msgs = self.callPackage ./naoqi-bridge-msgs {};
 
+ naoqi-driver = self.callPackage ./naoqi-driver {};
+
  naoqi-libqi = self.callPackage ./naoqi-libqi {};
+
+ naoqi-libqicore = self.callPackage ./naoqi-libqicore {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};
 
@@ -1418,6 +1428,12 @@ self: super: {
 
  pal-gripper-description = self.callPackage ./pal-gripper-description {};
 
+ pal-hey5 = self.callPackage ./pal-hey5 {};
+
+ pal-hey5-controller-configuration = self.callPackage ./pal-hey5-controller-configuration {};
+
+ pal-hey5-description = self.callPackage ./pal-hey5-description {};
+
  pal-navigation-cfg = self.callPackage ./pal-navigation-cfg {};
 
  pal-navigation-cfg-bringup = self.callPackage ./pal-navigation-cfg-bringup {};
@@ -1427,6 +1443,8 @@ self: super: {
  pal-statistics = self.callPackage ./pal-statistics {};
 
  pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
+
+ pal-urdf-utils = self.callPackage ./pal-urdf-utils {};
 
  parameter-traits = self.callPackage ./parameter-traits {};
 
@@ -1579,6 +1597,8 @@ self: super: {
  position-controllers = self.callPackage ./position-controllers {};
 
  py-trees = self.callPackage ./py-trees {};
+
+ py-trees-js = self.callPackage ./py-trees-js {};
 
  py-trees-ros = self.callPackage ./py-trees-ros {};
 

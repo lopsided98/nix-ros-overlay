@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ cacert cmake cmake-modules git openssl ];
-  propagatedBuildInputs = [ opencv ];
+  propagatedBuildInputs = [ opencv opencv.cxxdev ];
   nativeBuildInputs = [ cmake ];
 
   meta = {
