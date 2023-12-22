@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pkg-config, tinyxml }:
 buildRosPackage {
   pname = "ros-iron-menge-vendor";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/menge_vendor-release/archive/release/iron/menge_vendor/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "d941a8cbf4f3ddbcc87599ce36d4976e1fa9f581b6ff224792dbb5382876c4bc";
+    url = "https://github.com/ros2-gbp/menge_vendor-release/archive/release/iron/menge_vendor/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "3b9dbe0fdbdf3a3591d425466be77f56b046b1f3bf0783fa586a51997952a0c7";
   };
 
   buildType = "catkin";

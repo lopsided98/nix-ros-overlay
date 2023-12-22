@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-sick-safevisionary-interfaces";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sick_safevisionary_ros2-release/archive/release/rolling/sick_safevisionary_interfaces/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "87d8b44cde31dc26c329d0b986759783b8cbe4faa4194e64f4a4c51ef7268351";
+    url = "https://github.com/ros2-gbp/sick_safevisionary_ros2-release/archive/release/rolling/sick_safevisionary_interfaces/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "47ad375a18b5e88315d2ab688af7f3e813b59e3a41e9961d638f079c7891739f";
   };
 
   buildType = "ament_cmake";

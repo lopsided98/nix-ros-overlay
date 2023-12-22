@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, boost, cmake, cppzmq, mrpt2, nav-msgs, protobuf, python3, python3Packages, pythonPackages, ros-environment, ros2launch, sensor-msgs, tf2, tf2-geometry-msgs, unzip, visualization-msgs, wget }:
 buildRosPackage {
   pname = "ros-iron-mvsim";
-  version = "0.8.2-r1";
+  version = "0.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/iron/mvsim/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "e3f8cf189e2f4d04da991b090efda455f78c96d10f83cc7d86436804774719dc";
+    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/iron/mvsim/0.8.3-1.tar.gz";
+    name = "0.8.3-1.tar.gz";
+    sha256 = "2a0d2ea02006bf0f52a411b3ed941d1ad3f16e74a8f76420e4b5d555917add39";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-catch2, ament-cmake-uncrustify, cmake }:
 buildRosPackage {
   pname = "ros-iron-rmf-utils";
-  version = "1.5.0-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_utils-release/archive/release/iron/rmf_utils/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "c8d5f36c9fab9fa311a745ba880466e61621df72e47c9afe83a0fb3989de1508";
+    url = "https://github.com/ros2-gbp/rmf_utils-release/archive/release/iron/rmf_utils/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "3acd77bdfb3219b6c99bfad959c84f41791fcf0911779e41f748a4e0a0ec0a53";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, fmt, generate-parameter-library, moveit-core, moveit-resources-panda-moveit-config, pluginlib, range-v3, rclcpp, rsl, tf2-geometry-msgs, tf2-kdl, tl-expected }:
 buildRosPackage {
   pname = "ros-iron-pick-ik";
-  version = "1.0.1-r2";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pick_ik-release/archive/release/iron/pick_ik/1.0.1-2.tar.gz";
-    name = "1.0.1-2.tar.gz";
-    sha256 = "c41038de125ee215cb3b332b8d0256a093ac36cca1101fc802b9c52296a24468";
+    url = "https://github.com/ros2-gbp/pick_ik-release/archive/release/iron/pick_ik/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "52fd269767e79d6fbaef41dbe87ad823cc7560f36a99ff7dd5315f0b600028fd";
   };
 
   buildType = "ament_cmake";

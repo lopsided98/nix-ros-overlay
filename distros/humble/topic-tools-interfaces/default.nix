@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-topic-tools-interfaces";
-  version = "1.0.0-r2";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/humble/topic_tools_interfaces/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "6e68d8fee9e39482da8aa56ba90086f41f79500ab073bc260216f5b6afb38676";
+    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/humble/topic_tools_interfaces/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "28fbf6b17d7ceda9b3f1f0b62d449c82c63d35a5728be9f69bba3bf6939e4ca6";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, rmf-traffic }:
 buildRosPackage {
   pname = "ros-iron-rmf-traffic-examples";
-  version = "3.1.0-r1";
+  version = "3.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic-release/archive/release/iron/rmf_traffic_examples/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "c223e1783397a577947e4d6817fa4a850a4c15c09ffd2dd9fe2a2276020f0958";
+    url = "https://github.com/ros2-gbp/rmf_traffic-release/archive/release/iron/rmf_traffic_examples/3.1.1-1.tar.gz";
+    name = "3.1.1-1.tar.gz";
+    sha256 = "acc468c5a39d9bdca0f775af23baff84717a795624737c50c870eddffc661694";
   };
 
   buildType = "cmake";

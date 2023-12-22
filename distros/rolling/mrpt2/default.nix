@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, cv-bridge, eigen, ffmpeg, freeglut, freenect, geometry-msgs, glfw3, jsoncpp, libGL, libGLU, libfyaml, libjpeg, libpcap, libusb1, nav-msgs, octomap, opencv, openni2, pkg-config, python3Packages, pythonPackages, qt5, rclcpp, ros-environment, rosbag2-storage, sensor-msgs, std-msgs, stereo-msgs, suitesparse, tf2, tf2-msgs, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-rolling-mrpt2";
-  version = "2.11.2-r1";
+  version = "2.11.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt2-release/archive/release/rolling/mrpt2/2.11.2-1.tar.gz";
-    name = "2.11.2-1.tar.gz";
-    sha256 = "f8ca3b535c16d6a393f438869e1e5e6d351be736e8764e23f55c883d76596e80";
+    url = "https://github.com/ros2-gbp/mrpt2-release/archive/release/rolling/mrpt2/2.11.5-1.tar.gz";
+    name = "2.11.5-1.tar.gz";
+    sha256 = "53a691399926c2ac5e35d54e3750c80ddad3e2cfaee94d0c61a5af66940cbc33";
   };
 
   buildType = "cmake";
   buildInputs = [ ament-cmake assimp cmake ffmpeg freenect jsoncpp libfyaml libjpeg libpcap libusb1 openni2 pkg-config python3Packages.pip pythonPackages.pybind11 qt5.qtbase ros-environment tinyxml-2 udev wxGTK32 zlib ];
-  propagatedBuildInputs = [ cv-bridge eigen freeglut geometry-msgs glfw3 libGL libGLU nav-msgs octomap opencv rclcpp rosbag2-storage sensor-msgs std-msgs stereo-msgs suitesparse tf2 tf2-msgs xorg.libXrandr xorg.libXxf86vm ];
+  propagatedBuildInputs = [ cv-bridge eigen freeglut geometry-msgs glfw3 libGL libGLU nav-msgs octomap opencv opencv.cxxdev rclcpp rosbag2-storage sensor-msgs std-msgs stereo-msgs suitesparse tf2 tf2-msgs xorg.libXrandr xorg.libXxf86vm ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

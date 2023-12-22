@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-rmf-scheduler-msgs";
-  version = "3.0.3-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/humble/rmf_scheduler_msgs/3.0.3-1.tar.gz";
-    name = "3.0.3-1.tar.gz";
-    sha256 = "53c754270d6fdcfe73cf24da50b99f2df31c331abe9c6902aa5da639865781e7";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/humble/rmf_scheduler_msgs/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "1b02556bad1dca09973bfbf86d77a295f6352dd4046144e9a9f66836afce1a20";
   };
 
   buildType = "ament_cmake";

@@ -640,6 +640,8 @@ self: super: {
 
  iceoryx-hoofs = self.callPackage ./iceoryx-hoofs {};
 
+ iceoryx-introspection = self.callPackage ./iceoryx-introspection {};
+
  iceoryx-posh = self.callPackage ./iceoryx-posh {};
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
@@ -894,30 +896,6 @@ self: super: {
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
- mola-common = self.callPackage ./mola-common {};
-
- mola-demos = self.callPackage ./mola-demos {};
-
- mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
-
- mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
-
- mola-input-kitti-dataset = self.callPackage ./mola-input-kitti-dataset {};
-
- mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
-
- mola-input-ros2 = self.callPackage ./mola-input-ros2 {};
-
- mola-kernel = self.callPackage ./mola-kernel {};
-
- mola-launcher = self.callPackage ./mola-launcher {};
-
- mola-test-datasets = self.callPackage ./mola-test-datasets {};
-
- mola-viz = self.callPackage ./mola-viz {};
-
- mola-yaml = self.callPackage ./mola-yaml {};
-
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
  moveit = self.callPackage ./moveit {};
@@ -1010,8 +988,6 @@ self: super: {
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
- mp2p-icp = self.callPackage ./mp2p-icp {};
-
  mqtt-client = self.callPackage ./mqtt-client {};
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
@@ -1037,8 +1013,6 @@ self: super: {
  nao-lola-client = self.callPackage ./nao-lola-client {};
 
  nao-lola-command-msgs = self.callPackage ./nao-lola-command-msgs {};
-
- nao-lola-conversion = self.callPackage ./nao-lola-conversion {};
 
  nao-lola-sensor-msgs = self.callPackage ./nao-lola-sensor-msgs {};
 
@@ -1103,6 +1077,10 @@ self: super: {
  osrf-testing-tools-cpp = self.callPackage ./osrf-testing-tools-cpp {};
 
  ouster-msgs = self.callPackage ./ouster-msgs {};
+
+ ouster-ros = self.callPackage ./ouster-ros {};
+
+ ouster-sensor-msgs = self.callPackage ./ouster-sensor-msgs {};
 
  ouxt-common = self.callPackage ./ouxt-common {};
 
@@ -1170,6 +1148,8 @@ self: super: {
 
  picknik-twist-controller = self.callPackage ./picknik-twist-controller {};
 
+ pid-controller = self.callPackage ./pid-controller {};
+
  pilz-industrial-motion-planner = self.callPackage ./pilz-industrial-motion-planner {};
 
  pilz-industrial-motion-planner-testutils = self.callPackage ./pilz-industrial-motion-planner-testutils {};
@@ -1211,6 +1191,8 @@ self: super: {
  position-controllers = self.callPackage ./position-controllers {};
 
  py-trees = self.callPackage ./py-trees {};
+
+ py-trees-js = self.callPackage ./py-trees-js {};
 
  py-trees-ros = self.callPackage ./py-trees-ros {};
 
@@ -1347,6 +1329,8 @@ self: super: {
  rmf-building-sim-gz-classic-plugins = self.callPackage ./rmf-building-sim-gz-classic-plugins {};
 
  rmf-charger-msgs = self.callPackage ./rmf-charger-msgs {};
+
+ rmf-charging-schedule = self.callPackage ./rmf-charging-schedule {};
 
  rmf-cmake-uncrustify = self.callPackage ./rmf-cmake-uncrustify {};
 

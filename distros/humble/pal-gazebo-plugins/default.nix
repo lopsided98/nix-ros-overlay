@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, control-toolbox, gazebo-dev, gazebo-msgs, gazebo-ros, nav-msgs, rclcpp, std-msgs, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-humble-pal-gazebo-plugins";
-  version = "4.0.4-r1";
+  version = "4.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_gazebo_plugins-release/archive/release/humble/pal_gazebo_plugins/4.0.4-1.tar.gz";
-    name = "4.0.4-1.tar.gz";
-    sha256 = "41184dde484b2150cef96dba6ae2cbdd185324a33f3f6309ca1425596ae01900";
+    url = "https://github.com/pal-gbp/pal_gazebo_plugins-release/archive/release/humble/pal_gazebo_plugins/4.0.5-1.tar.gz";
+    name = "4.0.5-1.tar.gz";
+    sha256 = "e0830a80d606faf2c4e6db227c0d081d91044838a117d827814b4860792cf0aa";
   };
 
   buildType = "ament_cmake";

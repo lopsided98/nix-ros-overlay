@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-iron-rmf-fleet-msgs";
-  version = "3.1.0-r1";
+  version = "3.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/iron/rmf_fleet_msgs/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "3f705467b169864ebdc915695329f34de536f6ab744a12277f190bc0110e0193";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/iron/rmf_fleet_msgs/3.1.1-1.tar.gz";
+    name = "3.1.1-1.tar.gz";
+    sha256 = "03985e91d5c1547af4e453b63ab65746982b0163d9a2c8afa351df3abd2eb3e6";
   };
 
   buildType = "ament_cmake";

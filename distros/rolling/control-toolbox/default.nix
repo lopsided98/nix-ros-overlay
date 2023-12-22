@@ -2,21 +2,21 @@
 # Copyright 2023 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, control-msgs, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, control-msgs, filters, generate-parameter-library, geometry-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools }:
 buildRosPackage {
   pname = "ros-rolling-control-toolbox";
-  version = "3.1.0-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/control_toolbox-release/archive/release/rolling/control_toolbox/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "278d67e5f979b74b478130a5d6551b9dadcad01f7a19e246ea7cac9f7317614e";
+    url = "https://github.com/ros2-gbp/control_toolbox-release/archive/release/rolling/control_toolbox/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "c9d3dab494187a55e7dc672313833b600bc7acf8907c68157edd8d8a083aed24";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gmock ament-cmake-gtest rclcpp-lifecycle ];
-  propagatedBuildInputs = [ control-msgs rclcpp rcutils realtime-tools ];
+  propagatedBuildInputs = [ control-msgs filters generate-parameter-library geometry-msgs pluginlib rclcpp rcutils realtime-tools ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

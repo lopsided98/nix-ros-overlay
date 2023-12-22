@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb1 }:
 buildRosPackage {
   pname = "ros-humble-libphidget22";
-  version = "2.3.1-r1";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/humble/libphidget22/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "b33c2ed88ee8728586da5943d4be8573d8625a92085d8c1c72d3ff24cba2dbf2";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/humble/libphidget22/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "ba9b0efce856d2c750015b277ce27595fdb93e9a9b4a385ee7de77905afcd7b0";
   };
 
   buildType = "ament_cmake";

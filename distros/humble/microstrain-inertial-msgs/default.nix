@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-microstrain-inertial-msgs";
-  version = "3.1.0-r1";
+  version = "3.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/humble/microstrain_inertial_msgs/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "e55bfa5710c6e347f9cc0b2656a18c9fbf94480324445773928fa9eda6485f64";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/humble/microstrain_inertial_msgs/3.2.0-2.tar.gz";
+    name = "3.2.0-2.tar.gz";
+    sha256 = "34a7a7fcb0acd4309062ae2fa2a2e62c2e4053d0a5dc2f6bb2d651f3d8bb7c6f";
   };
 
   buildType = "ament_cmake";

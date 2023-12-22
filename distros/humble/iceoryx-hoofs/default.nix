@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, acl, cmake }:
 buildRosPackage {
   pname = "ros-humble-iceoryx-hoofs";
-  version = "2.0.3-r1";
+  version = "2.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/iceoryx-release/archive/release/humble/iceoryx_hoofs/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "4dc71a2368549ff46e18473a3696d5c526f9f6a6951271c9c312641b8c5b3f3c";
+    url = "https://github.com/ros2-gbp/iceoryx-release/archive/release/humble/iceoryx_hoofs/2.0.5-1.tar.gz";
+    name = "2.0.5-1.tar.gz";
+    sha256 = "f30ea6dc3e5e319a65083e0cd2aa6d79f011e80c6a3e1e64b797abb4e3ec9b49";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-uncrustify, ament-index-cpp, ceres-solver, eigen, glog, proj, qt5, rmf-utils, yaml-cpp }:
 buildRosPackage {
   pname = "ros-iron-rmf-traffic-editor";
-  version = "1.7.1-r1";
+  version = "1.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/iron/rmf_traffic_editor/1.7.1-1.tar.gz";
-    name = "1.7.1-1.tar.gz";
-    sha256 = "b9c5e4efedecd112528d086e7796f1233382f85feeedd955ef0cf6c4086d44cb";
+    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/iron/rmf_traffic_editor/1.7.2-1.tar.gz";
+    name = "1.7.2-1.tar.gz";
+    sha256 = "6af17265fb0276f294dfdac96676ed55bb576c653ebc855acbc1a2165bf0e201";
   };
 
   buildType = "ament_cmake";

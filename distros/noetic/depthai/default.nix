@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ cmake ros-environment ];
-  propagatedBuildInputs = [ catkin libusb1 nlohmann_json opencv ];
+  propagatedBuildInputs = [ catkin libusb1 nlohmann_json opencv opencv.cxxdev ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

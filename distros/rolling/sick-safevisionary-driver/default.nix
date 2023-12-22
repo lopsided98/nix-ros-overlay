@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cv-bridge, lifecycle-msgs, rclcpp, rclcpp-lifecycle, sensor-msgs, sick-safevisionary-base, sick-safevisionary-interfaces }:
 buildRosPackage {
   pname = "ros-rolling-sick-safevisionary-driver";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sick_safevisionary_ros2-release/archive/release/rolling/sick_safevisionary_driver/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "b7104ce41ea54b715db4dd8744c86b57924de240acde5028328b4cf11205444e";
+    url = "https://github.com/ros2-gbp/sick_safevisionary_ros2-release/archive/release/rolling/sick_safevisionary_driver/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "1d53498f3e413723315d0898c12a6d376c6670f7c23f1478f9128ed76075807f";
   };
 
   buildType = "ament_cmake";

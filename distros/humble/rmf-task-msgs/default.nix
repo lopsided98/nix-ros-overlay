@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rmf-dispenser-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-rmf-task-msgs";
-  version = "3.0.3-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/humble/rmf_task_msgs/3.0.3-1.tar.gz";
-    name = "3.0.3-1.tar.gz";
-    sha256 = "2830cea5252abe611a68c9f69a0a611bbe70b5487e4a2424eed5c91bb489994f";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/humble/rmf_task_msgs/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "4a992275e10455a1e7704432255bbfa18bd04b67d1d91c24372ba88cb5ef0df4";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cpplint, curl, diagnostic-aggregator, diagnostic-updater, geometry-msgs, git, jq, lifecycle-msgs, mavros-msgs, microstrain-inertial-msgs, nav-msgs, nmea-msgs, rclcpp-lifecycle, ros-environment, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-microstrain-inertial-driver";
-  version = "3.1.0-r1";
+  version = "3.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/humble/microstrain_inertial_driver/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "ad25c567541c9fa1d5fe4f92e2daaeaad761c1745b67622934b6793d62a3d138";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/humble/microstrain_inertial_driver/3.2.0-2.tar.gz";
+    name = "3.2.0-2.tar.gz";
+    sha256 = "ccf540359a05f800260fba22261a1e8e1035b9b588c4190156de44cf2feaede8";
   };
 
   buildType = "ament_cmake";

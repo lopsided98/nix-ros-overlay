@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-catch2, ament-cmake-uncrustify, cmake, eigen, rmf-battery, rmf-utils }:
 buildRosPackage {
   pname = "ros-iron-rmf-task";
-  version = "2.2.2-r1";
+  version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_task-release/archive/release/iron/rmf_task/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "64aeee7812200dfe86ed08fd59de183486c41d715dcc927d67dc7099cd70320c";
+    url = "https://github.com/ros2-gbp/rmf_task-release/archive/release/iron/rmf_task/2.2.3-1.tar.gz";
+    name = "2.2.3-1.tar.gz";
+    sha256 = "9edfbf23fcd12d941735ca92cc8eea83b313b5748ca351336c21d1bc6cf7598b";
   };
 
   buildType = "cmake";

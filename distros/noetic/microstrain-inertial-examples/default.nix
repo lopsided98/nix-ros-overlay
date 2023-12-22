@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, microstrain-inertial-msgs, roscpp, roslint, rospy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-microstrain-inertial-examples";
-  version = "3.1.0-r1";
+  version = "3.2.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/noetic/microstrain_inertial_examples/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "948329301561cffbefef14c6e9ba970ff511f5672f5de7bc4c29d890b74c9124";
+    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/noetic/microstrain_inertial_examples/3.2.0-3.tar.gz";
+    name = "3.2.0-3.tar.gz";
+    sha256 = "f1e9c7efcae5ee354b1d4547d46a3b280631ee126d17ee07cd6f82dd48dbe831";
   };
 
   buildType = "catkin";

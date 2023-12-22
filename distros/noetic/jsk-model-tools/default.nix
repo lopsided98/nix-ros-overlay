@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eus-assimp, euscollada }:
 buildRosPackage {
   pname = "ros-noetic-jsk-model-tools";
-  version = "0.4.4-r2";
+  version = "0.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_model_tools-release/archive/release/noetic/jsk_model_tools/0.4.4-2.tar.gz";
-    name = "0.4.4-2.tar.gz";
-    sha256 = "01078b70b2d69d83a5a531d05c4f546d557a8281c6376a3e090aa274df68173b";
+    url = "https://github.com/tork-a/jsk_model_tools-release/archive/release/noetic/jsk_model_tools/0.4.5-1.tar.gz";
+    name = "0.4.5-1.tar.gz";
+    sha256 = "5606e0d782c584bbf5c7e4744731c8b8eb0e504ed638478022cd4f9399dc3f33";
   };
 
   buildType = "catkin";

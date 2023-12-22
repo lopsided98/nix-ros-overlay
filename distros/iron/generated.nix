@@ -440,6 +440,30 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ etsi-its-cam-coding = self.callPackage ./etsi-its-cam-coding {};
+
+ etsi-its-cam-conversion = self.callPackage ./etsi-its-cam-conversion {};
+
+ etsi-its-cam-msgs = self.callPackage ./etsi-its-cam-msgs {};
+
+ etsi-its-coding = self.callPackage ./etsi-its-coding {};
+
+ etsi-its-conversion = self.callPackage ./etsi-its-conversion {};
+
+ etsi-its-denm-coding = self.callPackage ./etsi-its-denm-coding {};
+
+ etsi-its-denm-conversion = self.callPackage ./etsi-its-denm-conversion {};
+
+ etsi-its-denm-msgs = self.callPackage ./etsi-its-denm-msgs {};
+
+ etsi-its-messages = self.callPackage ./etsi-its-messages {};
+
+ etsi-its-msgs = self.callPackage ./etsi-its-msgs {};
+
+ etsi-its-primitives-conversion = self.callPackage ./etsi-its-primitives-conversion {};
+
+ etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
+
  event-camera-codecs = self.callPackage ./event-camera-codecs {};
 
  event-camera-msgs = self.callPackage ./event-camera-msgs {};
@@ -523,6 +547,10 @@ self: super: {
  flexbe-testing = self.callPackage ./flexbe-testing {};
 
  flexbe-widget = self.callPackage ./flexbe-widget {};
+
+ flir-camera-description = self.callPackage ./flir-camera-description {};
+
+ flir-camera-msgs = self.callPackage ./flir-camera-msgs {};
 
  fluent-rviz = self.callPackage ./fluent-rviz {};
 
@@ -630,6 +658,8 @@ self: super: {
 
  graph-msgs = self.callPackage ./graph-msgs {};
 
+ grasping-msgs = self.callPackage ./grasping-msgs {};
+
  grbl-msgs = self.callPackage ./grbl-msgs {};
 
  grbl-ros = self.callPackage ./grbl-ros {};
@@ -687,6 +717,8 @@ self: super: {
  iceoryx-binding-c = self.callPackage ./iceoryx-binding-c {};
 
  iceoryx-hoofs = self.callPackage ./iceoryx-hoofs {};
+
+ iceoryx-introspection = self.callPackage ./iceoryx-introspection {};
 
  iceoryx-posh = self.callPackage ./iceoryx-posh {};
 
@@ -938,30 +970,6 @@ self: super: {
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
- mola-common = self.callPackage ./mola-common {};
-
- mola-demos = self.callPackage ./mola-demos {};
-
- mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
-
- mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
-
- mola-input-kitti-dataset = self.callPackage ./mola-input-kitti-dataset {};
-
- mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
-
- mola-input-ros2 = self.callPackage ./mola-input-ros2 {};
-
- mola-kernel = self.callPackage ./mola-kernel {};
-
- mola-launcher = self.callPackage ./mola-launcher {};
-
- mola-test-datasets = self.callPackage ./mola-test-datasets {};
-
- mola-viz = self.callPackage ./mola-viz {};
-
- mola-yaml = self.callPackage ./mola-yaml {};
-
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
  moveit = self.callPackage ./moveit {};
@@ -1053,8 +1061,6 @@ self: super: {
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
-
- mp2p-icp = self.callPackage ./mp2p-icp {};
 
  mqtt-client = self.callPackage ./mqtt-client {};
 
@@ -1354,6 +1360,8 @@ self: super: {
 
  py-trees = self.callPackage ./py-trees {};
 
+ py-trees-js = self.callPackage ./py-trees-js {};
+
  py-trees-ros = self.callPackage ./py-trees-ros {};
 
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
@@ -1495,6 +1503,8 @@ self: super: {
  rmf-building-sim-gz-classic-plugins = self.callPackage ./rmf-building-sim-gz-classic-plugins {};
 
  rmf-charger-msgs = self.callPackage ./rmf-charger-msgs {};
+
+ rmf-charging-schedule = self.callPackage ./rmf-charging-schedule {};
 
  rmf-cmake-uncrustify = self.callPackage ./rmf-cmake-uncrustify {};
 
@@ -2021,6 +2031,8 @@ self: super: {
  spacenav = self.callPackage ./spacenav {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
+
+ spinnaker-camera-driver = self.callPackage ./spinnaker-camera-driver {};
 
  splsm-7 = self.callPackage ./splsm-7 {};
 
