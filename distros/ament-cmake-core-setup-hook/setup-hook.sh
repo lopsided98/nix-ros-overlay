@@ -14,6 +14,7 @@ _findAmentPackages() {
     # ROS scripts use unbound variables
     set +u
     for setup in "$pkg"/share/*/local_setup.sh; do
+      AMENT_CURRENT_PREFIX=$pkg
       source "$setup"
     done
     set -u
