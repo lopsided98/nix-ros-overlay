@@ -10,7 +10,7 @@
 #
 # By default, all binaries in the environment are wrapped, setting the relevant
 # ROS environment variables, allowing use outside of nix-shell.
-{ lib, stdenv, buildPackages, writeText, buildEnv, makeWrapper, python }:
+{ lib, stdenv, buildPackages, writeText, buildEnv, makeWrapper, python, ros-environment }:
 { paths ? [], wrapPrograms ? true, postBuild ? "", passthru ? { }, ... }@args:
 
 with lib;
@@ -63,6 +63,9 @@ let
             --prefix CMAKE_PREFIX_PATH : "$out" \
             --prefix AMENT_PREFIX_PATH : "$out" \
             --prefix ROS_PACKAGE_PATH : "$out/share" \
+            --set ROS_DISTRO '${ros-environment.rosDistro}' \
+            --set ROS_VERSION '${toString ros-environment.rosVersion}' \
+            --set ROS_PYTHON_VERSION '${lib.versions.major python.version}' \
             ''${rosWrapperArgs[@]}
         done
       fi
