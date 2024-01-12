@@ -99,6 +99,8 @@ self: super: with self.lib; {
 
       colcon-cargo = pyFinal.callPackage ./colcon/cargo.nix { };
 
+      colcon-clean = pyFinal.callPackage ./colcon/clean.nix { };
+
       colcon-cmake = pyFinal.callPackage ./colcon/cmake.nix { };
 
       colcon-core = pyFinal.callPackage ./colcon/core.nix { setuptools = pyFinal.setuptools_79; };
