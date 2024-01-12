@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ign-ros2-control, joint-state-publisher, joint-state-publisher-gui, launch, realsense2-description, robot-state-publisher, rviz2, urdf, xacro }:

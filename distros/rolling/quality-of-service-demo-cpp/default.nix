@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-ros, launch-testing, rclcpp, rclcpp-components, rcutils, rmw, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-quality-of-service-demo-cpp";
-  version = "0.32.0-r1";
+  version = "0.32.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/quality_of_service_demo_cpp/0.32.0-1.tar.gz";
-    name = "0.32.0-1.tar.gz";
-    sha256 = "5df6979f7647cacd726a8cd6b191fcc1baf06a299dd6a69c4451ceae746aae4e";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/quality_of_service_demo_cpp/0.32.1-1.tar.gz";
+    name = "0.32.1-1.tar.gz";
+    sha256 = "0094e3f37fc90e476ee957c61a4306f9e6b72ccab1e4cc66948ba6c86920dbc0";
   };
 
   buildType = "ament_cmake";

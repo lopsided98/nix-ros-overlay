@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, nav-msgs, rosbag, roscpp, roslint, rospy, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-bagger";
-  version = "0.1.4-r1";
+  version = "0.1.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/squarerobot/bagger-release/archive/release/noetic/bagger/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "781c7b23f9e302fabb4b9067e62e3ef8158a8ea4f3a2276fe5ce03530884eed3";
+    url = "https://github.com/squarerobot/bagger-release/archive/release/noetic/bagger/0.1.5-2.tar.gz";
+    name = "0.1.5-2.tar.gz";
+    sha256 = "0b88e82b919d03903e35ed19db982eb00235576a35834756f0b3152dbcbee207";
   };
 
   buildType = "catkin";

@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, launch-ros, pythonPackages, rclpy, sensor-msgs, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-rolling-examples-tf2-py";
-  version = "0.34.0-r1";
+  version = "0.35.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/examples_tf2_py/0.34.0-1.tar.gz";
-    name = "0.34.0-1.tar.gz";
-    sha256 = "943e0b74e382fd384f7d5df54369df2757ed7f3dc12aba53377e605115884761";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/examples_tf2_py/0.35.0-1.tar.gz";
+    name = "0.35.0-1.tar.gz";
+    sha256 = "38686ae594de88efcd2c9118cf9a20b0ac57779e29e829f304e525dc18350dc8";
   };
 
   buildType = "ament_python";

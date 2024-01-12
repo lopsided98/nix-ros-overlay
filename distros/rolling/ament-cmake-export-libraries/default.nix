@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-rolling-ament-cmake-export-libraries";
-  version = "2.3.1-r1";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/rolling/ament_cmake_export_libraries/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "19b96da57cae954eeae8e11f329c48f859a8c2c4202125e84116054ebccccc6f";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/rolling/ament_cmake_export_libraries/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "dc2044c9d7b0c5c4bdf8e0d495b811b7292946603dbe5d59bdfb7814a6025f52";
   };
 
   buildType = "ament_cmake";

@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, pythonPackages, ros2cli }:
 buildRosPackage {
   pname = "ros-rolling-ros2multicast";
-  version = "0.30.0-r1";
+  version = "0.30.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/rolling/ros2multicast/0.30.0-1.tar.gz";
-    name = "0.30.0-1.tar.gz";
-    sha256 = "8f686e4816efa3f149a07c4a7757fa9c5f449d95dff0f9517c4eb1898d0f36c3";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/rolling/ros2multicast/0.30.1-1.tar.gz";
+    name = "0.30.1-1.tar.gz";
+    sha256 = "977deb9b6af22456e1db3b17dfa3f7efef2de491fd81f39a50837a29e7a79827";
   };
 
   buildType = "ament_python";

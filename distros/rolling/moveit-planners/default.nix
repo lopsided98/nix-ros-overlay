@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-planners-ompl, moveit-planners-stomp, pilz-industrial-motion-planner }:
 buildRosPackage {
   pname = "ros-rolling-moveit-planners";
-  version = "2.8.0-r2";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_planners/2.8.0-2.tar.gz";
-    name = "2.8.0-2.tar.gz";
-    sha256 = "287edea150651cc1d1486d268e2ce92ffba60e963a5edfb9629f914f6bced1f2";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_planners/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "81030769517b80c480449c0e913b11dcdd9da52896b47adc32519f9578c9db75";
   };
 
   buildType = "ament_cmake";

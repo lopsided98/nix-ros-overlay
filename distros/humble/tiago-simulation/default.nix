@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, tiago-gazebo }:
 buildRosPackage {
   pname = "ros-humble-tiago-simulation";
-  version = "4.0.6-r1";
+  version = "4.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_simulation-release/archive/release/humble/tiago_simulation/4.0.6-1.tar.gz";
-    name = "4.0.6-1.tar.gz";
-    sha256 = "04e14e16aacb2a0d913da0a3ccc125547b5d8c7ad037957064dc90444ff833c0";
+    url = "https://github.com/pal-gbp/tiago_simulation-release/archive/release/humble/tiago_simulation/4.0.7-1.tar.gz";
+    name = "4.0.7-1.tar.gz";
+    sha256 = "fd666d5fc5345c0eef8f49c833eb889aeb69876256ae12a4cfb02a31a6a6b499";
   };
 
   buildType = "ament_cmake";

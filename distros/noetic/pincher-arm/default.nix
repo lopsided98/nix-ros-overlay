@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, pincher-arm-bringup, pincher-arm-description, pincher-arm-ikfast-plugin, pincher-arm-moveit-config, pincher-arm-moveit-demos }:

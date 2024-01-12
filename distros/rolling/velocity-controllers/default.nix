@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-manager, forward-command-controller, hardware-interface, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-rolling-velocity-controllers";
-  version = "4.2.0-r1";
+  version = "4.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/velocity_controllers/4.2.0-1.tar.gz";
-    name = "4.2.0-1.tar.gz";
-    sha256 = "1bde97b9cdff35df665c401a0d737ecdf04cb6ccc40af8bc8858f3fbe1e3a86b";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/velocity_controllers/4.4.0-1.tar.gz";
+    name = "4.4.0-1.tar.gz";
+    sha256 = "444c79d9bddbdfdf797621c7557ad0d75d90af11624e1f2bb76dd473df1bd204";
   };
 
   buildType = "ament_cmake";

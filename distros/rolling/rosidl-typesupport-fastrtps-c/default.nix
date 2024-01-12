@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-index-python, ament-lint-auto, ament-lint-common, fastcdr, fastrtps-cmake-module, osrf-testing-tools-cpp, performance-test-fixture, python3, rcutils, rmw, rosidl-cli, rosidl-generator-c, rosidl-pycommon, rosidl-runtime-c, rosidl-runtime-cpp, rosidl-typesupport-fastrtps-cpp, rosidl-typesupport-interface }:
 buildRosPackage {
   pname = "ros-rolling-rosidl-typesupport-fastrtps-c";
-  version = "3.3.0-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/rolling/rosidl_typesupport_fastrtps_c/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "6345b2ac0b06f103722fb6b22cf968a9a7add799f41b5650c76be4c742d655af";
+    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/rolling/rosidl_typesupport_fastrtps_c/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "b279a2171b5e54903f836853a5c11b4036c609a0d029f9067b2a5c2c2ae326de";
   };
 
   buildType = "ament_cmake";

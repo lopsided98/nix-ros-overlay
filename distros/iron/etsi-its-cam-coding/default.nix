@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-iron-etsi-its-cam-coding";
-  version = "1.0.0-r2";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/iron/etsi_its_cam_coding/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "f852c2e48b730e3609315bcb83e3f1b37c79a08a393974f032cc45ba8ab657b4";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/iron/etsi_its_cam_coding/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "2d55cf74e2da4933162eec1b2cd4c9c827399b4061b6101e3dd993cf50a573be";
   };
 
   buildType = "ament_cmake";

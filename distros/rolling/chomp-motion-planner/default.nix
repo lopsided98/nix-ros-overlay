@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-common, moveit-core, rclcpp, rsl, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-chomp-motion-planner";
-  version = "2.8.0-r2";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/chomp_motion_planner/2.8.0-2.tar.gz";
-    name = "2.8.0-2.tar.gz";
-    sha256 = "44739528137d0fc866fcbca076e393b1f84a4f8a01cf3a830d3d2d5406915ef4";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/chomp_motion_planner/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "fa62fd990a9bfbf400757ae904699ed81088dddf0fca93ec020849e5fd851c1b";
   };
 
   buildType = "ament_cmake";

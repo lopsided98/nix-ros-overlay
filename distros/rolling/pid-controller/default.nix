@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, parameter-traits, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-pid-controller";
-  version = "4.2.0-r1";
+  version = "4.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/pid_controller/4.2.0-1.tar.gz";
-    name = "4.2.0-1.tar.gz";
-    sha256 = "dc16726e76c73a6fa75b6f80915ea0993a8df0f90a6de74c31a68f74486f84aa";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/pid_controller/4.4.0-1.tar.gz";
+    name = "4.4.0-1.tar.gz";
+    sha256 = "2360d4dea0b148813963a18976420966c5134179858b336595ced716cd0a91da";
   };
 
   buildType = "ament_cmake";

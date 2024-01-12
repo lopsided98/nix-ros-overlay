@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-denm-coding";
-  version = "1.0.0-r2";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/humble/etsi_its_denm_coding/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "487b885d857dd41b7c20a03223925f9de74437c3df0830788b9176cb09f04742";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/humble/etsi_its_denm_coding/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "64a1b927b061a955b74cad146b4bfc31348c57d7b210d0b7f87fb87a1aef6ca6";
   };
 
   buildType = "ament_cmake";

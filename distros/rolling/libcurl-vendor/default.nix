@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, curl, file, pkg-config }:
 buildRosPackage {
   pname = "ros-rolling-libcurl-vendor";
-  version = "3.3.1-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/rolling/libcurl_vendor/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "9baf60a83806a92de227f21348df29bb93731a06534873ec47f8db29b33983b2";
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/rolling/libcurl_vendor/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "a41ba130844835c8cabb58fc6e6580e7bdee2c9224adada762810c66f17e4d7d";
   };
 
   buildType = "ament_cmake";

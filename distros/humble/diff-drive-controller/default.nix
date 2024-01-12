@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-test-assets, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-humble-diff-drive-controller";
-  version = "2.30.0-r1";
+  version = "2.31.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/diff_drive_controller/2.30.0-1.tar.gz";
-    name = "2.30.0-1.tar.gz";
-    sha256 = "4430308f2414d471ffd46fbcdf4ab5dd9b9152ad8a4cc7c17765f1817d1c9833";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/diff_drive_controller/2.31.0-1.tar.gz";
+    name = "2.31.0-1.tar.gz";
+    sha256 = "a23117e265508e5e5f3645a545e52d549f2158f6b63c544d022e8743cddebd0d";
   };
 
   buildType = "ament_cmake";

@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, git, glfw3, rclcpp }:
 buildRosPackage {
   pname = "ros-iron-rig-reconfigure";
-  version = "1.3.2-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rig_reconfigure-release/archive/release/iron/rig_reconfigure/1.3.2-1.tar.gz";
-    name = "1.3.2-1.tar.gz";
-    sha256 = "fa51a7a7b2a86fdb187f3da386c0bab216a5f67869db171b38d3c3ecdfed1116";
+    url = "https://github.com/ros2-gbp/rig_reconfigure-release/archive/release/iron/rig_reconfigure/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "c43cfe7e8ae670fc2a592dfa187fe8a042c9928f65c5219d2fafa4a98be4bd0e";
   };
 
   buildType = "ament_cmake";

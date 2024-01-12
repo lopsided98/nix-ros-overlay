@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-rolling-ros2lifecycle-test-fixtures";
-  version = "0.30.0-r1";
+  version = "0.30.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/rolling/ros2lifecycle_test_fixtures/0.30.0-1.tar.gz";
-    name = "0.30.0-1.tar.gz";
-    sha256 = "c9124f586793322020bbf2db05781e11f44443e7c340e29eeb314af57941cea5";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/rolling/ros2lifecycle_test_fixtures/0.30.1-1.tar.gz";
+    name = "0.30.1-1.tar.gz";
+    sha256 = "685c33bfaff85f19d18d38151c097637d56e9a15be7e2a8ac975abcc4210a952";
   };
 
   buildType = "ament_cmake";

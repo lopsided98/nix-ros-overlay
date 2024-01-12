@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, dbw-mkz-can, dbw-mkz-msgs, joy, roscpp, roslaunch, roslib, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-dbw-mkz-joystick-demo";
-  version = "1.6.4-r1";
+  version = "1.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/noetic/dbw_mkz_joystick_demo/1.6.4-1.tar.gz";
-    name = "1.6.4-1.tar.gz";
-    sha256 = "611933f5a6dcf8d7afef3fbb6da89ec4bfa77821b63ea3ca7f23e44ca4b2c24b";
+    url = "https://github.com/DataspeedInc-release/dbw_mkz_ros-release/archive/release/noetic/dbw_mkz_joystick_demo/1.6.5-1.tar.gz";
+    name = "1.6.5-1.tar.gz";
+    sha256 = "d69e3bd364248b723e83af93fecfa71645ced16bdad123582175f817d2e58f87";
   };
 
   buildType = "catkin";

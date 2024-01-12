@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-updater, fuse-constraints, fuse-core, fuse-graphs, fuse-models, fuse-variables, geometry-msgs, nav-msgs, pluginlib, roscpp, roslint, rostest, std-srvs }:

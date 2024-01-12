@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, builtin-interfaces, performance-test-fixture, rcl, rcpputils, rcutils, rmw, rosidl-default-generators, rosidl-default-runtime, statistics-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-libstatistics-collector";
-  version = "1.6.4-r1";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libstatistics_collector-release/archive/release/rolling/libstatistics_collector/1.6.4-1.tar.gz";
-    name = "1.6.4-1.tar.gz";
-    sha256 = "df299180c5fe1005145580048cd9417b3ab4c14d9da01a966387d631e45328c4";
+    url = "https://github.com/ros2-gbp/libstatistics_collector-release/archive/release/rolling/libstatistics_collector/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "f9eea7ab1bf398b24dcaf8142fe2cae5fd34f32ed2fdffa60eb07ad82c24e1ca";
   };
 
   buildType = "ament_cmake";

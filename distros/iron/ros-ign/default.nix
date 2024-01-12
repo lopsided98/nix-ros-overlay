@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ros-gz, ros-ign-bridge, ros-ign-gazebo, ros-ign-gazebo-demos, ros-ign-image }:
 buildRosPackage {
   pname = "ros-iron-ros-ign";
-  version = "0.247.0-r1";
+  version = "0.254.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/iron/ros_ign/0.247.0-1.tar.gz";
-    name = "0.247.0-1.tar.gz";
-    sha256 = "768b35cdd30962b35ab0b6d6e4ebbeb0791d6c458fd97b13a30141fb3a02da36";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/iron/ros_ign/0.254.0-1.tar.gz";
+    name = "0.254.0-1.tar.gz";
+    sha256 = "2c6a917189bfb608368a86db580a4ebfdf59b1e561715367787a1d049f60b691";
   };
 
   buildType = "ament_cmake";

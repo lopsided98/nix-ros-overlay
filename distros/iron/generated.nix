@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -460,6 +460,8 @@ self: super: {
 
  etsi-its-msgs = self.callPackage ./etsi-its-msgs {};
 
+ etsi-its-msgs-utils = self.callPackage ./etsi-its-msgs-utils {};
+
  etsi-its-primitives-conversion = self.callPackage ./etsi-its-primitives-conversion {};
 
  etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
@@ -523,6 +525,8 @@ self: super: {
  fastrtps = self.callPackage ./fastrtps {};
 
  fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
+
+ ffmpeg-image-transport-msgs = self.callPackage ./ffmpeg-image-transport-msgs {};
 
  fields2cover = self.callPackage ./fields2cover {};
 
@@ -752,9 +756,15 @@ self: super: {
 
  imu-filter-madgwick = self.callPackage ./imu-filter-madgwick {};
 
+ imu-pipeline = self.callPackage ./imu-pipeline {};
+
+ imu-processors = self.callPackage ./imu-processors {};
+
  imu-sensor-broadcaster = self.callPackage ./imu-sensor-broadcaster {};
 
  imu-tools = self.callPackage ./imu-tools {};
+
+ imu-transformer = self.callPackage ./imu-transformer {};
 
  interactive-marker-twist-server = self.callPackage ./interactive-marker-twist-server {};
 
@@ -880,6 +890,8 @@ self: super: {
 
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
+ libcaer = self.callPackage ./libcaer {};
+
  libcreate = self.callPackage ./libcreate {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
@@ -969,6 +981,8 @@ self: super: {
  microstrain-inertial-rqt = self.callPackage ./microstrain-inertial-rqt {};
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
+
+ mola-common = self.callPackage ./mola-common {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
@@ -1831,6 +1845,8 @@ self: super: {
  rqt-console = self.callPackage ./rqt-console {};
 
  rqt-controller-manager = self.callPackage ./rqt-controller-manager {};
+
+ rqt-gauges = self.callPackage ./rqt-gauges {};
 
  rqt-graph = self.callPackage ./rqt-graph {};
 

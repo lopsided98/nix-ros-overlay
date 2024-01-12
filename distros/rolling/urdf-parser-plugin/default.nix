@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-rolling-urdf-parser-plugin";
-  version = "2.9.0-r1";
+  version = "2.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/urdf-release/archive/release/rolling/urdf_parser_plugin/2.9.0-1.tar.gz";
-    name = "2.9.0-1.tar.gz";
-    sha256 = "92ceaddbf33595ef678d01d020f53f2ac1e817da41ffdff06378616f13dd8866";
+    url = "https://github.com/ros2-gbp/urdf-release/archive/release/rolling/urdf_parser_plugin/2.10.0-1.tar.gz";
+    name = "2.10.0-1.tar.gz";
+    sha256 = "0000d86231702fa7cfa940bb1a44075d9dfa6c2b1eb174afe30e17f731955a23";
   };
 
   buildType = "ament_cmake";

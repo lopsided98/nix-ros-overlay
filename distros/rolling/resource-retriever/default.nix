@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-index-cpp, ament-index-python, ament-lint-auto, ament-lint-common, libcurl-vendor, python-cmake-module, pythonPackages }:
 buildRosPackage {
   pname = "ros-rolling-resource-retriever";
-  version = "3.3.1-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/rolling/resource_retriever/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "213ae846ac22294a9da4d07eae1c713d104350390d07bf6d906d405fd932fd08";
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/rolling/resource_retriever/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "35a5a794e2341f5cf873dadd8f9fca156a7e1ad13d3dc3eeeae4a79329595d59";
   };
 
   buildType = "ament_cmake";

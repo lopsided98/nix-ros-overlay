@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rcutils }:
 buildRosPackage {
   pname = "ros-rolling-rcpputils";
-  version = "2.8.1-r1";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcpputils-release/archive/release/rolling/rcpputils/2.8.1-1.tar.gz";
-    name = "2.8.1-1.tar.gz";
-    sha256 = "9f7ed953d5e78567f18a200ed7c1fba6c4159991f507b1743a103809144530fb";
+    url = "https://github.com/ros2-gbp/rcpputils-release/archive/release/rolling/rcpputils/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "ce5db4ccaccc678efa0ea1029920d16d209e8a594add6151308badf90311db2e";
   };
 
   buildType = "ament_cmake";

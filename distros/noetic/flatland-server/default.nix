@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, flatland-msgs, geometry-msgs, interactive-markers, lua, opencv, pluginlib, roscpp, std-msgs, std-srvs, tf2, tf2-geometry-msgs, visualization-msgs, yaml-cpp }:

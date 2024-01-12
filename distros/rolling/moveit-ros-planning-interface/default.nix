@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, eigen, eigen3-cmake-module, geometry-msgs, moveit-common, moveit-configs-utils, moveit-core, moveit-msgs, moveit-planners-ompl, moveit-resources-fanuc-moveit-config, moveit-resources-panda-moveit-config, moveit-ros-move-group, moveit-ros-planning, moveit-ros-warehouse, moveit-simple-controller-manager, python3, rclcpp, rclcpp-action, rclpy, ros-testing, rviz2, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-moveit-ros-planning-interface";
-  version = "2.8.0-r2";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_ros_planning_interface/2.8.0-2.tar.gz";
-    name = "2.8.0-2.tar.gz";
-    sha256 = "957a496c671a538b6db4747a99a976c692540e530c1a1449edd1c6ca0522e81c";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_ros_planning_interface/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "a20de1b60802a9446a92d0afbb2b7182677baee61fa4e3ecbdf909abe88eb6f4";
   };
 
   buildType = "ament_cmake";

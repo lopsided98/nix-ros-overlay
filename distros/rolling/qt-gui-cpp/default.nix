@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, pkg-config, pluginlib, python-qt-binding, qt-gui, qt5, rcpputils, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-rolling-qt-gui-cpp";
-  version = "2.7.0-r1";
+  version = "2.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui_cpp/2.7.0-1.tar.gz";
-    name = "2.7.0-1.tar.gz";
-    sha256 = "3f9e07271de1bcf82073c003a95a6b104af5d79117aa2fbdd5c0903083455ecb";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui_cpp/2.7.1-1.tar.gz";
+    name = "2.7.1-1.tar.gz";
+    sha256 = "1cb18b3a1ad7281eca945b0dd5e7829d90e9cbca7405a4b6f6f06157a92650df";
   };
 
   buildType = "ament_cmake";

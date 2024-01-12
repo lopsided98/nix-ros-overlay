@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-manager, forward-command-controller, hardware-interface, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-humble-velocity-controllers";
-  version = "2.30.0-r1";
+  version = "2.31.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/velocity_controllers/2.30.0-1.tar.gz";
-    name = "2.30.0-1.tar.gz";
-    sha256 = "7f1e8d5907a31e0c5edc65abab99fcabf14b21c9674ee07fe0280baf4fc91349";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/velocity_controllers/2.31.0-1.tar.gz";
+    name = "2.31.0-1.tar.gz";
+    sha256 = "dd2eb48f2bed65a6f2888912d6f8567d9e8358a1e909506771b6160c55c9e8d3";
   };
 
   buildType = "ament_cmake";

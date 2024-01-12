@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-lint-cmake, ament-cmake-pytest, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, geometry-msgs, python3, python3Packages, qt5, rclcpp, rviz-common, rviz-default-plugins, rviz-ogre-vendor, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rviz2";
-  version = "13.2.0-r1";
+  version = "13.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/rolling/rviz2/13.2.0-1.tar.gz";
-    name = "13.2.0-1.tar.gz";
-    sha256 = "3947d91dac24ced6243a4d5dbcaed126fdfd1aedadde8f38f0da2f93fe37859b";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/rolling/rviz2/13.3.0-1.tar.gz";
+    name = "13.3.0-1.tar.gz";
+    sha256 = "5310a93d7c369a2aaee706645522634e483c9e84f351cfd3d182a0a1eb3d396d";
   };
 
   buildType = "ament_cmake";

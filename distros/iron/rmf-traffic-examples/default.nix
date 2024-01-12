@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, rmf-traffic }:
 buildRosPackage {
   pname = "ros-iron-rmf-traffic-examples";
-  version = "3.1.1-r1";
+  version = "3.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic-release/archive/release/iron/rmf_traffic_examples/3.1.1-1.tar.gz";
-    name = "3.1.1-1.tar.gz";
-    sha256 = "acc468c5a39d9bdca0f775af23baff84717a795624737c50c870eddffc661694";
+    url = "https://github.com/ros2-gbp/rmf_traffic-release/archive/release/iron/rmf_traffic_examples/3.1.2-1.tar.gz";
+    name = "3.1.2-1.tar.gz";
+    sha256 = "56626a8683b134f2ef7c7e92ce83e2ea6c91bca0da109157d8ad57e0a0d83709";
   };
 
   buildType = "cmake";

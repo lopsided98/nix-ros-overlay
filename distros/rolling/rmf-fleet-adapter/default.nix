@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-catch2, ament-cmake-uncrustify, eigen, nlohmann-json-schema-validator-vendor, nlohmann_json, rclcpp, rclcpp-components, rmf-api-msgs, rmf-battery, rmf-building-map-msgs, rmf-dispenser-msgs, rmf-door-msgs, rmf-fleet-msgs, rmf-ingestor-msgs, rmf-lift-msgs, rmf-task, rmf-task-msgs, rmf-task-ros2, rmf-task-sequence, rmf-traffic, rmf-traffic-ros2, rmf-utils, rmf-websocket, std-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-rolling-rmf-fleet-adapter";
-  version = "2.4.0-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/rolling/rmf_fleet_adapter/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "474126c5f380c0f255cd34a861509c5d573cd9f8c341871e3cc76793f64a46e4";
+    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/rolling/rmf_fleet_adapter/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "95e73ed2af8cde391d1307fe64eadd12f2b3a03e2529c936bd075e17773a269d";
   };
 
   buildType = "ament_cmake";

@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, angles, catkin, controller-interface, dynamic-reconfigure, effort-controllers, rm-common, roscpp, tf2-eigen, tf2-geometry-msgs, visualization-msgs }:

@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, image-transport, jsk-recognition-utils, jsk-tools, jsk-topic-tools, message-generation, message-runtime, nodelet, rostest, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-resized-image-transport";
-  version = "1.2.17-r1";
+  version = "1.2.17-r2";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/noetic/resized_image_transport/1.2.17-1.tar.gz";
-    name = "1.2.17-1.tar.gz";
-    sha256 = "2428068e71213ef08e93078e1b07ab1271cb8b3c67f5221feec605dd188d387a";
+    url = "https://github.com/tork-a/jsk_recognition-release/archive/release/noetic/resized_image_transport/1.2.17-2.tar.gz";
+    name = "1.2.17-2.tar.gz";
+    sha256 = "101c694f69ca0eee454ed4d6f2917f0d37dc830ed4af67ca81214c262a13e301";
   };
 
   buildType = "catkin";
