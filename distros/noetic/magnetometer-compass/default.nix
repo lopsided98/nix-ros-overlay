@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, angles, catkin, compass-msgs, cras-cpp-common, geographiclib, geometry-msgs, imu-transformer, message-filters, nodelet, roscpp, roslib, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:

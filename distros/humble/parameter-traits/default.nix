@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, fmt, rclcpp, rsl, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-humble-parameter-traits";
-  version = "0.3.6-r1";
+  version = "0.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/humble/parameter_traits/0.3.6-1.tar.gz";
-    name = "0.3.6-1.tar.gz";
-    sha256 = "df756f89e426e6e1d4a4e137c447fa2b84e3cce19ffe49518c8cfc70a54a3923";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/humble/parameter_traits/0.3.7-1.tar.gz";
+    name = "0.3.7-1.tar.gz";
+    sha256 = "44cd95440c4a5cec51563a1243eea8acc8ee155212dabdf44db1df2a4b297501";
   };
 
   buildType = "ament_cmake";

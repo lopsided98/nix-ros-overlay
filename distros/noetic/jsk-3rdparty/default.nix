@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, aques-talk, assimp-devel, bayesian-belief-networks, catkin, chaplus-ros, collada-urdf-jsk-patch, dialogflow-task-executive, downward, ff, ffha, google-chat-ros, google-cloud-texttospeech, influxdb-store, julius, julius-ros, libcmt, libsiftfast, lpg-planner, mini-maxwell, nfc-ros, opt-camera, osqp, pgm-learner, respeaker-ros, ros-google-cloud-language, ros-speech-recognition, rospatlite, rosping, rostwitter, sesame-ros, slic, switchbot-ros, voice-text, webrtcvad-ros, zdepth, zdepth-image-transport }:

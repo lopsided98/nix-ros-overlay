@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-forward-command-controller";
-  version = "3.19.2-r1";
+  version = "3.20.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/forward_command_controller/3.19.2-1.tar.gz";
-    name = "3.19.2-1.tar.gz";
-    sha256 = "63c7081896439b57faa6b0f600af05832f0050642fe4a2e4493ffe1c38a44b4b";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/forward_command_controller/3.20.2-1.tar.gz";
+    name = "3.20.2-1.tar.gz";
+    sha256 = "1d564e39dc7b45cecc229173960de44dd57ede2bc8acb26f8be2fd1ba5229eb9";
   };
 
   buildType = "ament_cmake";

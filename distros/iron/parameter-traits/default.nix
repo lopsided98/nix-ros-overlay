@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, fmt, rclcpp, rsl, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-iron-parameter-traits";
-  version = "0.3.6-r1";
+  version = "0.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/iron/parameter_traits/0.3.6-1.tar.gz";
-    name = "0.3.6-1.tar.gz";
-    sha256 = "d2b26fe850c77d8fff19f626e4f876eef3e5489daffa7bb79900761bd44cafd2";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/iron/parameter_traits/0.3.7-1.tar.gz";
+    name = "0.3.7-1.tar.gz";
+    sha256 = "cdc317d58b65c57998ea590802e13fbd36dcec5309f6d698afbfe7063ac18e55";
   };
 
   buildType = "ament_cmake";

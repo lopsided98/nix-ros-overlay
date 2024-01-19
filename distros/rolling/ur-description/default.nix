@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, joint-state-publisher-gui, launch, launch-ros, launch-testing-ament-cmake, launch-testing-ros, robot-state-publisher, rviz2, urdf, urdfdom, xacro }:
 buildRosPackage {
   pname = "ros-rolling-ur-description";
-  version = "2.2.2-r1";
+  version = "2.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ur_description-release/archive/release/rolling/ur_description/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "c412384d460593048553ab24b9e754626af0d88faf3e552cde3e895f7d1cf5ff";
+    url = "https://github.com/ros2-gbp/ur_description-release/archive/release/rolling/ur_description/2.2.4-1.tar.gz";
+    name = "2.2.4-1.tar.gz";
+    sha256 = "407322d9e9309a5b8f05ff0b26e110519338b4a746e768d4253a5f103fdd8831";
   };
 
   buildType = "ament_cmake";

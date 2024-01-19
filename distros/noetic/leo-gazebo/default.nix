@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, compressed-image-transport, controller-manager, diff-drive-controller, gazebo-plugins, gazebo-ros, gazebo-ros-control, geometry-msgs, joint-state-controller, leo-description, leo-gazebo-plugins, leo-gazebo-worlds, nav-msgs, robot-state-publisher, topic-tools }:

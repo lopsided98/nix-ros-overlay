@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, cv-bridge, geometry-msgs, nav-msgs, rclcpp, rtabmap-msgs, rtabmap-sync, std-msgs, std-srvs, tf2 }:
 buildRosPackage {
   pname = "ros-iron-rtabmap-viz";
-  version = "0.21.2-r1";
+  version = "0.21.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/iron/rtabmap_viz/0.21.2-1.tar.gz";
-    name = "0.21.2-1.tar.gz";
-    sha256 = "591003c02ce57dc8bcf04884012f22115eac41e4fd9fc0c63247e630be354543";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/iron/rtabmap_viz/0.21.3-1.tar.gz";
+    name = "0.21.3-1.tar.gz";
+    sha256 = "efac12b78907d279ef9bfc43bfe284a58d2f19c599e12b37cdcb24c844817c20";
   };
 
   buildType = "ament_cmake";

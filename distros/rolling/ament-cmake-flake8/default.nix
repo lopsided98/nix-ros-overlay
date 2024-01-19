@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-flake8 }:
 buildRosPackage {
   pname = "ros-rolling-ament-cmake-flake8";
-  version = "0.16.1-r1";
+  version = "0.16.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_cmake_flake8/0.16.1-1.tar.gz";
-    name = "0.16.1-1.tar.gz";
-    sha256 = "14cbb0a812a945590689a902a51380dbc54ba732e9e7061be1abe92738bb3152";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_cmake_flake8/0.16.2-1.tar.gz";
+    name = "0.16.2-1.tar.gz";
+    sha256 = "cc6187656905ed7e81b91da60008e1f377b1edacdb234f5d22dacae04cc8121c";
   };
 
   buildType = "ament_cmake";

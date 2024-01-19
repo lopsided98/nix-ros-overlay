@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-manager, forward-command-controller, hardware-interface, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-iron-velocity-controllers";
-  version = "3.19.2-r1";
+  version = "3.20.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/velocity_controllers/3.19.2-1.tar.gz";
-    name = "3.19.2-1.tar.gz";
-    sha256 = "5efad60dbf6a158d6d0faac8ec7656d77fcc75d361a250080bbac8af2295f21a";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/velocity_controllers/3.20.2-1.tar.gz";
+    name = "3.20.2-1.tar.gz";
+    sha256 = "2257959f2606b8e534ff7f0101620a4a3f3e9919f9e7e5d349bdacbf8d7aa876";
   };
 
   buildType = "ament_cmake";

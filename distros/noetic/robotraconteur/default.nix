@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, bluez, boost, catkin, cmake, dbus, gtest, libusb1, openssl, python3, python3Packages, zlib }:
 buildRosPackage {
   pname = "ros-noetic-robotraconteur";
-  version = "0.18.0-r2";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotraconteur-packaging/robotraconteur-ros-release/archive/release/noetic/robotraconteur/0.18.0-2.tar.gz";
-    name = "0.18.0-2.tar.gz";
-    sha256 = "2c62cf4101258752094a69101186c757013eaf00c2b2f4bcc88591b8fa62077d";
+    url = "https://github.com/robotraconteur-packaging/robotraconteur-ros-release/archive/release/noetic/robotraconteur/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "b13a141955c7375111c1b297f9af90d8ac3f50fd977ba3ef6851e6f7475a8370";
   };
 
   buildType = "cmake";

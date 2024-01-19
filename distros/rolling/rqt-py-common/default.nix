@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, python-cmake-module, python-qt-binding, qt-gui, qt5, rclpy, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rqt-py-common";
-  version = "1.4.1-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/rolling/rqt_py_common/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "d67a1c45d8bb8d29951756506860bb20f0d2d2765d8adb3ee99f81308ac3cfe6";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/rolling/rqt_py_common/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "e58e013906e35868074db2f5c77e9bf8807cc5b90f34a4662e737f1f774336d9";
   };
 
   buildType = "ament_cmake";

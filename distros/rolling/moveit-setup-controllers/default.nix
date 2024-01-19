@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-clang-format, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-index-cpp, ament-lint-auto, moveit-configs-utils, moveit-resources-fanuc-moveit-config, moveit-resources-panda-moveit-config, moveit-setup-framework, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-moveit-setup-controllers";
-  version = "2.8.0-r2";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_setup_controllers/2.8.0-2.tar.gz";
-    name = "2.8.0-2.tar.gz";
-    sha256 = "7dd56e93a985b185f4c7eb8fbaa74e0a1d6b962ade357a13b128176f0fead22f";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_setup_controllers/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "efac6d5ddc713021807ad309fd9c2e4cb9cd4d30fd2cc71610948982d432b638";
   };
 
   buildType = "ament_cmake";

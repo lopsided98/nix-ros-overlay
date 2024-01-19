@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, eigen-conversions, geometry-msgs, image-geometry, laser-geometry, pcl-conversions, roscpp, rtabmap, rtabmap-msgs, sensor-msgs, std-msgs, tf, tf-conversions }:
 buildRosPackage {
   pname = "ros-noetic-rtabmap-conversions";
-  version = "0.21.1-r4";
+  version = "0.21.3-r4";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_conversions/0.21.1-4.tar.gz";
-    name = "0.21.1-4.tar.gz";
-    sha256 = "72fcbcac359fdb0245e504d62465fd82b69c86cc3fcb0adbec6f0f9fb090e81b";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_conversions/0.21.3-4.tar.gz";
+    name = "0.21.3-4.tar.gz";
+    sha256 = "ff8dc32f4f85aad823a6bc1bb13a0f43182c6ccba92adaaade64b851590b5589";
   };
 
   buildType = "catkin";

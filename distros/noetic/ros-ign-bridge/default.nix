@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, ignition, message-generation, message-runtime, nav-msgs, rosconsole, roscpp, rosgraph-msgs, rostest, sensor-msgs, std-msgs, std-srvs, tf2-msgs, visualization-msgs }:

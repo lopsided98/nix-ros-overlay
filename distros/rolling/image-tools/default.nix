@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, opencv, rclcpp, rclcpp-components, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-image-tools";
-  version = "0.32.0-r1";
+  version = "0.32.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/image_tools/0.32.0-1.tar.gz";
-    name = "0.32.0-1.tar.gz";
-    sha256 = "c02f76cccafe92b557d8741a6e7a2652c5e324eadf8284bc321f24f1d8e9a768";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/image_tools/0.32.1-1.tar.gz";
+    name = "0.32.1-1.tar.gz";
+    sha256 = "b43dc0604c359586a81e55c71463cc45b0aa0f82882528a7638d6012e51ec2e4";
   };
 
   buildType = "ament_cmake";

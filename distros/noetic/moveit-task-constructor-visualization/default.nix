@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, moveit-core, moveit-resources-fanuc-moveit-config, moveit-ros-visualization, moveit-task-constructor-core, moveit-task-constructor-msgs, qt5, roscpp, rostest, rosunit, rviz }:

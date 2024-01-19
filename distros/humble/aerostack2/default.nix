@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, as2-alphanumeric-viewer, as2-behavior, as2-behavior-tree, as2-behaviors-motion, as2-behaviors-perception, as2-behaviors-platform, as2-behaviors-trajectory-generation, as2-cli, as2-core, as2-gazebo-classic-assets, as2-ign-gazebo-assets, as2-keyboard-teleoperation, as2-motion-controller, as2-motion-reference-handlers, as2-msgs, as2-platform-crazyflie, as2-platform-ign-gazebo, as2-platform-tello, as2-python-api, as2-realsense-interface, as2-state-estimator, as2-usb-camera-interface }:

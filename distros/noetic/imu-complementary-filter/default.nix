@@ -1,21 +1,21 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, message-filters, nodelet, roscpp, sensor-msgs, std-msgs, tf }:
+{ lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, message-filters, nodelet, pluginlib, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-imu-complementary-filter";
-  version = "1.2.5-r1";
+  version = "1.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/noetic/imu_complementary_filter/1.2.5-1.tar.gz";
-    name = "1.2.5-1.tar.gz";
-    sha256 = "a97788fe8767198ec5d00ca5d110ae90f43efa644f4fea5d70b20f6f27a265f4";
+    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/noetic/imu_complementary_filter/1.2.6-1.tar.gz";
+    name = "1.2.6-1.tar.gz";
+    sha256 = "35634b87575262536b8943d6588f1b3d44d765a0df4012295d50da357d9e2923";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin cmake-modules ];
-  propagatedBuildInputs = [ geometry-msgs message-filters nodelet roscpp sensor-msgs std-msgs tf ];
+  propagatedBuildInputs = [ geometry-msgs message-filters nodelet pluginlib roscpp sensor-msgs std-msgs tf ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-rmw-implementation-cmake";
-  version = "7.2.2-r1";
+  version = "7.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw-release/archive/release/rolling/rmw_implementation_cmake/7.2.2-1.tar.gz";
-    name = "7.2.2-1.tar.gz";
-    sha256 = "1d6faad11d6938f52ed234b74bab51d6bf83573fe6286743ed0dc256312b3a18";
+    url = "https://github.com/ros2-gbp/rmw-release/archive/release/rolling/rmw_implementation_cmake/7.3.0-1.tar.gz";
+    name = "7.3.0-1.tar.gz";
+    sha256 = "29b4bf460db4d50f041dab9bcb49f8f4b9b4abc09d22af902a5c3151a0e7dfc5";
   };
 
   buildType = "ament_cmake";

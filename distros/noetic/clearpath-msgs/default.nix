@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, clearpath-configuration-msgs, clearpath-control-msgs, clearpath-dock-msgs, clearpath-localization-msgs, clearpath-mission-manager-msgs, clearpath-mission-scheduler-msgs, clearpath-navigation-msgs, clearpath-platform-msgs, clearpath-safety-msgs, dingo-msgs, husky-msgs, jackal-msgs, ridgeback-msgs, warthog-msgs }:

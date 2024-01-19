@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, angles, catkin, common-tutorials, geometry-tutorials, joint-state-publisher-gui, robot, ros-tutorials, roslint, urdf-tutorial, visualization-tutorials, viz }:

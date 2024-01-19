@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, image-transport, nodelet, rtabmap-conversions, rtabmap-demos, rtabmap-launch, rtabmap-msgs, rtabmap-odom, rtabmap-slam, rtabmap-util, rtabmap-viz }:
 buildRosPackage {
   pname = "ros-noetic-rtabmap-legacy";
-  version = "0.21.1-r4";
+  version = "0.21.3-r4";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_legacy/0.21.1-4.tar.gz";
-    name = "0.21.1-4.tar.gz";
-    sha256 = "dc5b75e9f4dccdfe3f198efd3c2a02b2ec788966bf770ad5a2b6b521285f6750";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_legacy/0.21.3-4.tar.gz";
+    name = "0.21.3-4.tar.gz";
+    sha256 = "b5c7fa86fed4d1a2322e5cba34c6ece2950b621d2840cdab4d6aa67931cac33d";
   };
 
   buildType = "catkin";

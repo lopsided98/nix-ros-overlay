@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, clearpath-config, clearpath-control, clearpath-description, clearpath-platform }:
 buildRosPackage {
   pname = "ros-humble-clearpath-generator-common";
-  version = "0.2.1-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_generator_common/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "3ab50f2c89984b78fa72eaec189979e6ce1d14f91ede01e2384cc71272e7a32b";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_generator_common/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "e80ade17556a719375e62ec98818df3dd0bef8bb14a673ca39ae5e0beb1eff3c";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''TODO: Package description'';
+    description = ''Clearpath Common Generator'';
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

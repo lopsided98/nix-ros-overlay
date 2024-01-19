@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, nav-msgs, rtabmap-msgs, rtabmap-sync, std-msgs, std-srvs, tf }:
 buildRosPackage {
   pname = "ros-noetic-rtabmap-viz";
-  version = "0.21.1-r4";
+  version = "0.21.3-r4";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_viz/0.21.1-4.tar.gz";
-    name = "0.21.1-4.tar.gz";
-    sha256 = "17c2697df366e3b70bd90c47f6d194b235cb155c28a9d7e2d0ceb9f1beff3b21";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_viz/0.21.3-4.tar.gz";
+    name = "0.21.3-4.tar.gz";
+    sha256 = "439f95a8031f2a92c5e55a62052ccf8c3c34caa274a3484851b827b9a884777c";
   };
 
   buildType = "catkin";

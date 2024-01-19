@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-test-assets, std-srvs, steering-controllers-library }:
 buildRosPackage {
   pname = "ros-rolling-ackermann-steering-controller";
-  version = "4.2.0-r1";
+  version = "4.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/ackermann_steering_controller/4.2.0-1.tar.gz";
-    name = "4.2.0-1.tar.gz";
-    sha256 = "8c43129364f700b8331becaeaa80bb31b045ac0a51f099fe2cdc506321114543";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/ackermann_steering_controller/4.4.0-1.tar.gz";
+    name = "4.4.0-1.tar.gz";
+    sha256 = "0b5c3c71ba03df53da5b5281db094d8f4926c4265ce116e8c6685a55de7ac47b";
   };
 
   buildType = "ament_cmake";

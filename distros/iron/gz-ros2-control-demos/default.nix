@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-python, ament-lint-auto, ament-lint-common, control-msgs, diff-drive-controller, effort-controllers, geometry-msgs, gz-ros2-control, hardware-interface, imu-sensor-broadcaster, joint-state-broadcaster, joint-trajectory-controller, launch, launch-ros, rclcpp, rclcpp-action, robot-state-publisher, ros-gz-sim, ros2controlcli, ros2launch, std-msgs, tricycle-controller, velocity-controllers, xacro }:
 buildRosPackage {
   pname = "ros-iron-gz-ros2-control-demos";
-  version = "1.1.2-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/iron/gz_ros2_control_demos/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "43e3641af4fff973f621485d31e59d57fc36be74bb578ebc9b27922757dce8c3";
+    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/iron/gz_ros2_control_demos/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "f1800b4e517da706a15e5f21c302ae4c902275a3eb17c83865082f0f5fb9b886";
   };
 
   buildType = "ament_cmake";
