@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, actionlib-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, diagnostic-msgs, geometry-msgs, nav-msgs, sensor-msgs, shape-msgs, std-msgs, std-srvs, stereo-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-common-interfaces";
-  version = "5.2.1-r1";
+  version = "5.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/common_interfaces/5.2.1-1.tar.gz";
-    name = "5.2.1-1.tar.gz";
-    sha256 = "e42cdd3af6cd9f6aceb33f0f15f8e9acd92e052113ad3ead28d94a6e73d7c70b";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/common_interfaces/5.2.2-1.tar.gz";
+    name = "5.2.2-1.tar.gz";
+    sha256 = "e8a91020c087097b2514a2d5bf7b2263bde4cc6e111aa3d522efb27253b35fb8";
   };
 
   buildType = "ament_cmake";

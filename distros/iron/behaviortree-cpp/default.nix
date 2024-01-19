@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, cppzmq, rclcpp, ros-environment, sqlite }:
 buildRosPackage {
   pname = "ros-iron-behaviortree-cpp";
-  version = "4.4.3-r1";
+  version = "4.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/iron/behaviortree_cpp/4.4.3-1.tar.gz";
-    name = "4.4.3-1.tar.gz";
-    sha256 = "46a0e8e86a1724e5824a6a52c991c99f1c30b88d99f6c201c49c7e20d1369249";
+    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/iron/behaviortree_cpp/4.5.0-1.tar.gz";
+    name = "4.5.0-1.tar.gz";
+    sha256 = "53073b98eab060065db145564715ff1807ca799765c3bd5913728b276a41fdd3";
   };
 
   buildType = "ament_cmake";

@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-iron-etsi-its-denm-coding";
-  version = "1.0.0-r2";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/iron/etsi_its_denm_coding/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "2a2ce06be97e8de45dd9837bcaa4a7676223494814529a5a06b6dde98a44525e";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/iron/etsi_its_denm_coding/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "146221e501bddf1313be171b5626cb0fa51efd20db94024146363b74bcb1569c";
   };
 
   buildType = "ament_cmake";

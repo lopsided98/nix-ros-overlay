@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-test-assets, std-srvs, steering-controllers-library }:
 buildRosPackage {
   pname = "ros-rolling-tricycle-steering-controller";
-  version = "4.2.0-r1";
+  version = "4.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/tricycle_steering_controller/4.2.0-1.tar.gz";
-    name = "4.2.0-1.tar.gz";
-    sha256 = "a49c185375cc258b19e9af1cddaa71c8f0805b0e86a2949e908fe774db4c1d0b";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/tricycle_steering_controller/4.4.0-1.tar.gz";
+    name = "4.4.0-1.tar.gz";
+    sha256 = "5762eefd76975046c35afd2a520f29a64c6616e90a77b1aadf8d04b99f82eda4";
   };
 
   buildType = "ament_cmake";

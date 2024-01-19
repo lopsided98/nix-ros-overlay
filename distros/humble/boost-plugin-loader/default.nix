@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, boost, cmake, gtest, ros-industrial-cmake-boilerplate }:
 buildRosPackage {
   pname = "ros-humble-boost-plugin-loader";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/tesseract-robotics-release/boost_plugin_loader-release/archive/release/humble/boost_plugin_loader/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "5464e5b2049c8f2281a4ea8e1dc418166c03c8714dec3f429d517fde8e6dc293";
+    url = "https://github.com/tesseract-robotics-release/boost_plugin_loader-release/archive/release/humble/boost_plugin_loader/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "bfed44986961e35027b68a7cccde875e86032ce16568c93be0bed059ff290a45";
   };
 
   buildType = "cmake";

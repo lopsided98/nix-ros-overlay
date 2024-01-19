@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, costmap-2d, dynamic-reconfigure, genmsg, message-generation, pcl, pcl-conversions, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-rtabmap-costmap-plugins";
-  version = "0.21.1-r4";
+  version = "0.21.3-r4";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_costmap_plugins/0.21.1-4.tar.gz";
-    name = "0.21.1-4.tar.gz";
-    sha256 = "bfb47a579627b2e136745ff9d55f452222ffa27dd6f21e39351cfe663721b49a";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_costmap_plugins/0.21.3-4.tar.gz";
+    name = "0.21.3-4.tar.gz";
+    sha256 = "ad0f7169c173a4850b6abe62148113bd712d0d9b8b12e8ace06205f535a0565e";
   };
 
   buildType = "catkin";

@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, launch, launch-ros, launch-xml, launch-yaml, pythonPackages, ros2cli, ros2pkg }:
 buildRosPackage {
   pname = "ros-rolling-ros2launch";
-  version = "0.26.2-r1";
+  version = "0.26.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch_ros-release/archive/release/rolling/ros2launch/0.26.2-1.tar.gz";
-    name = "0.26.2-1.tar.gz";
-    sha256 = "9e13de4ef4eeb09993c7887981de7ac184abbfc97acf1371d1a8e5914dcfdcfc";
+    url = "https://github.com/ros2-gbp/launch_ros-release/archive/release/rolling/ros2launch/0.26.3-1.tar.gz";
+    name = "0.26.3-1.tar.gz";
+    sha256 = "b61b4d2039b53fb8a9133570186138fd5c7a3042596948e7ced6f101285a9598";
   };
 
   buildType = "ament_python";

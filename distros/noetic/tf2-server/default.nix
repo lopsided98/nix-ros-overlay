@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, gtest, message-generation, message-runtime, nodelet, python3Packages, roscpp, rospy, rostest, tf, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-tf2-server";
-  version = "1.1.2-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/peci1/tf2_server-release/archive/release/noetic/tf2_server/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "0ec115bae4a412ef6d2ffb78be3ac3eaf93d84afba296b398c3253447f5c120d";
+    url = "https://github.com/peci1/tf2_server-release/archive/release/noetic/tf2_server/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "1c98fb211ac2301414422859a57cb8f4d3185f79b3922b77208fa5433772e29e";
   };
 
   buildType = "catkin";

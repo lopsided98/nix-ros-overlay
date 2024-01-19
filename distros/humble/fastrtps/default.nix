@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, asio, cmake, fastcdr, foonathan-memory-vendor, openssl, python3, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-humble-fastrtps";
-  version = "2.6.6-r1";
+  version = "2.6.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/humble/fastrtps/2.6.6-1.tar.gz";
-    name = "2.6.6-1.tar.gz";
-    sha256 = "68ce3661e22ba7eaf48e0a276b3054fb3e7e59a386d978766b046eca6db23c40";
+    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/humble/fastrtps/2.6.7-1.tar.gz";
+    name = "2.6.7-1.tar.gz";
+    sha256 = "a03e9a7af36842debadf1385c4393d9bb4db663a2cbbcdd8625094da67f1e148";
   };
 
   buildType = "cmake";

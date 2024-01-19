@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, git, glfw3, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-rig-reconfigure";
-  version = "1.3.2-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rig_reconfigure-release/archive/release/humble/rig_reconfigure/1.3.2-1.tar.gz";
-    name = "1.3.2-1.tar.gz";
-    sha256 = "aea0c1d09fe555523c6d3c639e5371e7ff5fe3cd341961ec62fc1baa2a39b239";
+    url = "https://github.com/ros2-gbp/rig_reconfigure-release/archive/release/humble/rig_reconfigure/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "b382a87724d4dafe3c56b59e7c4ba93fe588114e301864724da569e31d81bffe";
   };
 
   buildType = "ament_cmake";

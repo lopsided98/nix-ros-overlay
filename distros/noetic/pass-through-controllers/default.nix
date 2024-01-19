@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, cartesian-control-msgs, cartesian-interface, cartesian-trajectory-controller, catkin, control-msgs, controller-interface, controller-manager, controller-manager-msgs, dynamic-reconfigure, geometry-msgs, hardware-interface, roscpp, rostest, speed-scaling-interface, trajectory-msgs, xacro }:

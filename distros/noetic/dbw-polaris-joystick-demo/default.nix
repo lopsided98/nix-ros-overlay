@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, dbw-polaris-can, dbw-polaris-msgs, joy, roscpp, roslaunch, roslib, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-dbw-polaris-joystick-demo";
-  version = "1.1.2-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/noetic/dbw_polaris_joystick_demo/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "641570f25836f6754a4f3d0d88b7a365e3fb7a31fdb0a1aa82362114de3afc97";
+    url = "https://github.com/DataspeedInc-release/dbw_polaris_ros-release/archive/release/noetic/dbw_polaris_joystick_demo/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "29dcd196e343f598919a093b81fab42de0664781e12a0a33e9571616ebbaae3f";
   };
 
   buildType = "catkin";

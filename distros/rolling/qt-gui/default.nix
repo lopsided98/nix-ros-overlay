@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages, qt5, tango-icons-vendor }:
 buildRosPackage {
   pname = "ros-rolling-qt-gui";
-  version = "2.7.0-r1";
+  version = "2.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui/2.7.0-1.tar.gz";
-    name = "2.7.0-1.tar.gz";
-    sha256 = "e1df4a66b70fa17b0a487209bee5bcdfdc0fdd810c377513c5393c339beb2425";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui/2.7.1-1.tar.gz";
+    name = "2.7.1-1.tar.gz";
+    sha256 = "7e39b75e7aa8addb2b31a8e002990799df3bb883ada42d6ad12b3b9deaf76d57";
   };
 
   buildType = "ament_cmake";

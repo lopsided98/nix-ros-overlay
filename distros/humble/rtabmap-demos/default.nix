@@ -1,21 +1,21 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, nav2-bringup, rtabmap-odom, rtabmap-rviz-plugins, rtabmap-slam, rtabmap-util, rtabmap-viz, turtlebot3 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, nav2-bringup, rtabmap-odom, rtabmap-rviz-plugins, rtabmap-slam, rtabmap-util, rtabmap-viz, turtlebot3-gazebo }:
 buildRosPackage {
   pname = "ros-humble-rtabmap-demos";
-  version = "0.21.1-r1";
+  version = "0.21.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_demos/0.21.1-1.tar.gz";
-    name = "0.21.1-1.tar.gz";
-    sha256 = "5a2e99a6a63fb2c3c33d28426668efcd6695853bc938a8b2501c11091f7443ae";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_demos/0.21.3-1.tar.gz";
+    name = "0.21.3-1.tar.gz";
+    sha256 = "f639712b66d69c3bd4f2fee80ed3fe303fb34132818c49bfde8bb7de84f9b12a";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ nav2-bringup rtabmap-odom rtabmap-rviz-plugins rtabmap-slam rtabmap-util rtabmap-viz turtlebot3 ];
+  propagatedBuildInputs = [ nav2-bringup rtabmap-odom rtabmap-rviz-plugins rtabmap-slam rtabmap-util rtabmap-viz turtlebot3-gazebo ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

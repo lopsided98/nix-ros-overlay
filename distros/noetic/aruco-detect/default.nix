@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, compressed-depth-image-transport, compressed-image-transport, cv-bridge, dynamic-reconfigure, fiducial-msgs, image-transport, python3Packages, roscpp, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros, theora-image-transport, vision-msgs, visualization-msgs }:

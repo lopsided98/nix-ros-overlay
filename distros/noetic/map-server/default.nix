@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, SDL, SDL_image, bullet, catkin, nav-msgs, roscpp, roslib, rospy, rostest, rosunit, tf2, yaml-cpp }:

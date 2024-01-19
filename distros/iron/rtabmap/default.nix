@@ -1,21 +1,21 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, cv-bridge, libg2o, libpointmatcher, octomap, pcl, proj, qt-gui-cpp, sqlite, zlib }:
+{ lib, buildRosPackage, fetchurl, cmake, cv-bridge, grid-map-core, gtsam, libg2o, libpointmatcher, octomap, pcl, proj, qt-gui-cpp, sqlite, zlib }:
 buildRosPackage {
   pname = "ros-iron-rtabmap";
-  version = "0.21.2-r1";
+  version = "0.21.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rtabmap-release/archive/release/iron/rtabmap/0.21.2-1.tar.gz";
-    name = "0.21.2-1.tar.gz";
-    sha256 = "951d2768fb44aab80941dd84744274e9cd592df5dc2dea17b62f288a976b96b7";
+    url = "https://github.com/ros2-gbp/rtabmap-release/archive/release/iron/rtabmap/0.21.3-1.tar.gz";
+    name = "0.21.3-1.tar.gz";
+    sha256 = "0fb6717aadc2f6e31618af30c62f776dfa2bbd48a461b3f98457ea9e846189d7";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake proj ];
-  propagatedBuildInputs = [ cv-bridge libg2o libpointmatcher octomap pcl qt-gui-cpp sqlite zlib ];
+  propagatedBuildInputs = [ cv-bridge grid-map-core gtsam libg2o libpointmatcher octomap pcl qt-gui-cpp sqlite zlib ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

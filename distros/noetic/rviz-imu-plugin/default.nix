@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, qt5, roscpp, rviz }:
 buildRosPackage {
   pname = "ros-noetic-rviz-imu-plugin";
-  version = "1.2.5-r1";
+  version = "1.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/noetic/rviz_imu_plugin/1.2.5-1.tar.gz";
-    name = "1.2.5-1.tar.gz";
-    sha256 = "3897796fc2ba1be442d6a350bf5257ffc679ff5b1f586f6bd48d0aba352ce40e";
+    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/noetic/rviz_imu_plugin/1.2.6-1.tar.gz";
+    name = "1.2.6-1.tar.gz";
+    sha256 = "f6820392a73baab4c11089bb00d056778dffb2bbd1c171aa863a42bf9d49a828";
   };
 
   buildType = "catkin";

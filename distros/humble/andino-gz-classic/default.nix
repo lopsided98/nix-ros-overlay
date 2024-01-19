@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, andino-control, andino-description, control-msgs, gazebo-ros, gazebo-ros-pkgs, gazebo-ros2-control, robot-state-publisher, ros2launch, rviz2, xacro }:

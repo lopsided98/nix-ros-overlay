@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, interactive-markers, joint-state-publisher, moveit-core, moveit-msgs, moveit-ros-planning-interface, reach, robot-state-publisher, sensor-msgs, tf2-eigen, visualization-msgs, xacro }:

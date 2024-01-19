@@ -1,5 +1,5 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -27,6 +27,8 @@ self: super: {
  actionlib-tools = self.callPackage ./actionlib-tools {};
 
  actionlib-tutorials = self.callPackage ./actionlib-tutorials {};
+
+ adi-tmcl = self.callPackage ./adi-tmcl {};
 
  agni-tf-tools = self.callPackage ./agni-tf-tools {};
 
@@ -127,6 +129,8 @@ self: super: {
  base-local-planner = self.callPackage ./base-local-planner {};
 
  bayesian-belief-networks = self.callPackage ./bayesian-belief-networks {};
+
+ bcr-bot = self.callPackage ./bcr-bot {};
 
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
 
@@ -867,6 +871,32 @@ self: super: {
  ethercat-hardware = self.callPackage ./ethercat-hardware {};
 
  ethercat-trigger-controllers = self.callPackage ./ethercat-trigger-controllers {};
+
+ etsi-its-cam-coding = self.callPackage ./etsi-its-cam-coding {};
+
+ etsi-its-cam-conversion = self.callPackage ./etsi-its-cam-conversion {};
+
+ etsi-its-cam-msgs = self.callPackage ./etsi-its-cam-msgs {};
+
+ etsi-its-coding = self.callPackage ./etsi-its-coding {};
+
+ etsi-its-conversion = self.callPackage ./etsi-its-conversion {};
+
+ etsi-its-denm-coding = self.callPackage ./etsi-its-denm-coding {};
+
+ etsi-its-denm-conversion = self.callPackage ./etsi-its-denm-conversion {};
+
+ etsi-its-denm-msgs = self.callPackage ./etsi-its-denm-msgs {};
+
+ etsi-its-messages = self.callPackage ./etsi-its-messages {};
+
+ etsi-its-msgs = self.callPackage ./etsi-its-msgs {};
+
+ etsi-its-msgs-utils = self.callPackage ./etsi-its-msgs-utils {};
+
+ etsi-its-primitives-conversion = self.callPackage ./etsi-its-primitives-conversion {};
+
+ etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
 
  eus-assimp = self.callPackage ./eus-assimp {};
 
@@ -3228,6 +3258,8 @@ self: super: {
 
  rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
 
+ rtabmap = self.callPackage ./rtabmap {};
+
  rtabmap-conversions = self.callPackage ./rtabmap-conversions {};
 
  rtabmap-costmap-plugins = self.callPackage ./rtabmap-costmap-plugins {};
@@ -3913,6 +3945,8 @@ self: super: {
  wireless-msgs = self.callPackage ./wireless-msgs {};
 
  wireless-watcher = self.callPackage ./wireless-watcher {};
+
+ wrapyfi-ros-interfaces = self.callPackage ./wrapyfi-ros-interfaces {};
 
  ws281x = self.callPackage ./ws281x {};
 

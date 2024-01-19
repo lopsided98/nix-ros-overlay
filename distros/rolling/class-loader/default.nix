@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, console-bridge, console-bridge-vendor, rcpputils }:
 buildRosPackage {
   pname = "ros-rolling-class-loader";
-  version = "2.6.0-r1";
+  version = "2.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/rolling/class_loader/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "8c9b6a7072be21342f703678c8fcdc6626ed04fe1365a8a710a3f4078eae4c46";
+    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/rolling/class_loader/2.7.0-1.tar.gz";
+    name = "2.7.0-1.tar.gz";
+    sha256 = "8c6993c74bc2b712b7d023f4f4dc112c8190b2d32b35de4a6882083b03689814";
   };
 
   buildType = "ament_cmake";

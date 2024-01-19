@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, controller-manager-msgs, moveit-common, moveit-core, moveit-simple-controller-manager, pluginlib, rclcpp-action, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-moveit-ros-control-interface";
-  version = "2.8.0-r2";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_ros_control_interface/2.8.0-2.tar.gz";
-    name = "2.8.0-2.tar.gz";
-    sha256 = "3d23f2458d6791d8d4603ecfebb230370189964c1f79fe5cbf1a518352d9a8d6";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_ros_control_interface/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "b890021f75778e4b0ee0d5d03fb68a682b0ff73b82e9687a4695d63458437926";
   };
 
   buildType = "ament_cmake";

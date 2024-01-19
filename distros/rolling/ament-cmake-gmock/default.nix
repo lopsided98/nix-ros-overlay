@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-gtest, ament-cmake-test, gmock-vendor, gtest }:
 buildRosPackage {
   pname = "ros-rolling-ament-cmake-gmock";
-  version = "2.3.1-r1";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/rolling/ament_cmake_gmock/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "717ae7c6590e0da823e721782f95e1017d87e900c3dbf4ab07d29fd6f3fa53d4";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/rolling/ament_cmake_gmock/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "6f292f94abd706dccdefc5368c472d45cf9ba2f7a8a7d1ae18a9812a8e52ef7c";
   };
 
   buildType = "ament_cmake";
