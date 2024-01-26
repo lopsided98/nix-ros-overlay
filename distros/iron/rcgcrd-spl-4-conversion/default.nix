@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, pythonPackages, rcgcrd-spl-4 }:
 buildRosPackage {
   pname = "ros-iron-rcgcrd-spl-4-conversion";
-  version = "3.0.0-r4";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/iron/rcgcrd_spl_4_conversion/3.0.0-4.tar.gz";
-    name = "3.0.0-4.tar.gz";
-    sha256 = "d3c0fb0f74b0ea7c3f0c6c4b4be0df67f31e8482e902b821902eabc62f4029f4";
+    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/iron/rcgcrd_spl_4_conversion/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "5837b981df22ffdf6b33b7fbd9b0b7bf25433683debfcf49129c46e80a8dca15";
   };
 
   buildType = "ament_python";

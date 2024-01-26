@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, cv-bridge, image-geometry, message-filters, python3Packages, pythonPackages, rclpy, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-iron-camera-calibration";
-  version = "3.0.1-r3";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/iron/camera_calibration/3.0.1-3.tar.gz";
-    name = "3.0.1-3.tar.gz";
-    sha256 = "7fb197873a394ea0bb089e716ced6ff81b7bc06cc230ae7f48bd8511ec90850c";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/iron/camera_calibration/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "95d3316ba87710174f32e9b2aabbd643c6409bdf06c84975bcd80496f98566de";
   };
 
   buildType = "ament_python";

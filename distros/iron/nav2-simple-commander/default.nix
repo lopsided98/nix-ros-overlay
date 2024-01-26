@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, lifecycle-msgs, nav2-msgs, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-iron-nav2-simple-commander";
-  version = "1.2.5-r2";
+  version = "1.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_simple_commander/1.2.5-2.tar.gz";
-    name = "1.2.5-2.tar.gz";
-    sha256 = "bf7bc8337f09134ec55dba0e0af28ebab639cbcd9fc6d14d38953deb39feddd0";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_simple_commander/1.2.6-1.tar.gz";
+    name = "1.2.6-1.tar.gz";
+    sha256 = "f1ef46a6e22ba3cf1b54a061cdaf7b3ca18060fa000827868f89cc3a6ceae882";
   };
 
   buildType = "ament_python";

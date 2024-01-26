@@ -204,8 +204,6 @@ self: super: {
 
  boost-geometry-util = self.callPackage ./boost-geometry-util {};
 
- bosch-locator-bridge = self.callPackage ./bosch-locator-bridge {};
-
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
  camera-calibration = self.callPackage ./camera-calibration {};
@@ -291,6 +289,10 @@ self: super: {
  cv-bridge = self.callPackage ./cv-bridge {};
 
  cyclonedds = self.callPackage ./cyclonedds {};
+
+ data-tamer-cpp = self.callPackage ./data-tamer-cpp {};
+
+ data-tamer-msgs = self.callPackage ./data-tamer-msgs {};
 
  delphi-esr-msgs = self.callPackage ./delphi-esr-msgs {};
 
@@ -560,6 +562,10 @@ self: super: {
 
  fuse-viz = self.callPackage ./fuse-viz {};
 
+ game-controller-spl = self.callPackage ./game-controller-spl {};
+
+ game-controller-spl-interfaces = self.callPackage ./game-controller-spl-interfaces {};
+
  gazebo-dev = self.callPackage ./gazebo-dev {};
 
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
@@ -574,7 +580,11 @@ self: super: {
 
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
 
+ gc-spl = self.callPackage ./gc-spl {};
+
  gc-spl-2022 = self.callPackage ./gc-spl-2022 {};
+
+ gc-spl-interfaces = self.callPackage ./gc-spl-interfaces {};
 
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
@@ -906,6 +916,12 @@ self: super: {
 
  mola-common = self.callPackage ./mola-common {};
 
+ mola-test-datasets = self.callPackage ./mola-test-datasets {};
+
+ motion-capture-tracking = self.callPackage ./motion-capture-tracking {};
+
+ motion-capture-tracking-interfaces = self.callPackage ./motion-capture-tracking-interfaces {};
+
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
  moveit = self.callPackage ./moveit {};
@@ -995,6 +1011,8 @@ self: super: {
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
+
+ mp2p-icp = self.callPackage ./mp2p-icp {};
 
  mqtt-client = self.callPackage ./mqtt-client {};
 
@@ -1979,6 +1997,8 @@ self: super: {
  tracetools-launch = self.callPackage ./tracetools-launch {};
 
  tracetools-test = self.callPackage ./tracetools-test {};
+
+ tracetools-trace = self.callPackage ./tracetools-trace {};
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 

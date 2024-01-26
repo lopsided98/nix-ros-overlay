@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-keyboard-handler";
-  version = "0.2.0-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/keyboard_handler-release/archive/release/rolling/keyboard_handler/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "476703028d0bef12ad06e7ca3fe4a43a0adff3a6259bdfed8b3c16bceeb575aa";
+    url = "https://github.com/ros2-gbp/keyboard_handler-release/archive/release/rolling/keyboard_handler/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "d511eeec461dee499ea00b6b8e07281c123936a9ad0a1c8dea1e109e793abadd";
   };
 
   buildType = "ament_cmake";

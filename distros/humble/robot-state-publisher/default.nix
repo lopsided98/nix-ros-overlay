@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, kdl-parser, launch-ros, launch-testing-ament-cmake, orocos-kdl-vendor, rcl-interfaces, rclcpp, rclcpp-components, sensor-msgs, std-msgs, tf2-ros, urdf }:
 buildRosPackage {
   pname = "ros-humble-robot-state-publisher";
-  version = "3.0.2-r2";
+  version = "3.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/humble/robot_state_publisher/3.0.2-2.tar.gz";
-    name = "3.0.2-2.tar.gz";
-    sha256 = "bba04ccb6962f707d1aa277ec0c1f0e94a3fd4094b64b7b391c35330ffd1ff26";
+    url = "https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/humble/robot_state_publisher/3.0.3-2.tar.gz";
+    name = "3.0.3-2.tar.gz";
+    sha256 = "6be164f193e3f7ee8616f299ae8c03291b283d5616d1840fec2b3547e108f779";
   };
 
   buildType = "ament_cmake";

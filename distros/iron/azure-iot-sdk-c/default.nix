@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, curl, openssl, util-linux }:
 buildRosPackage {
   pname = "ros-iron-azure-iot-sdk-c";
-  version = "1.10.1-r3";
+  version = "1.10.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/azure-iot-sdk-c-release/archive/release/iron/azure-iot-sdk-c/1.10.1-3.tar.gz";
-    name = "1.10.1-3.tar.gz";
-    sha256 = "533f3ad71e43ad5b1bcb2469a5eb9d3a0144675281b2ef0b9249aa4025a8cde3";
+    url = "https://github.com/nobleo/azure-iot-sdk-c-release/archive/release/iron/azure-iot-sdk-c/1.10.1-4.tar.gz";
+    name = "1.10.1-4.tar.gz";
+    sha256 = "88eed8b26efaa6213e22be630994bd9aabda0fadce49b142070c6fa0d1eede11";
   };
 
   buildType = "cmake";

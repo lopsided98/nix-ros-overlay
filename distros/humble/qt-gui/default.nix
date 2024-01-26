@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages, qt5, tango-icons-vendor }:
 buildRosPackage {
   pname = "ros-humble-qt-gui";
-  version = "2.2.2-r1";
+  version = "2.2.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/humble/qt_gui/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "d4ab6a0ab03675365c44403333d4e2f832724cb9ca80dabc80cd55344b064854";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/humble/qt_gui/2.2.3-2.tar.gz";
+    name = "2.2.3-2.tar.gz";
+    sha256 = "1d10e41d843388b6e3823b14442a5157d90bb21b57b23a3a877020913474572e";
   };
 
   buildType = "ament_cmake";

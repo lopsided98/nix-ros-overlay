@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rclcpp, rcpputils, sensor-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-humble-camera-calibration-parsers";
-  version = "3.1.7-r1";
+  version = "3.1.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/humble/camera_calibration_parsers/3.1.7-1.tar.gz";
-    name = "3.1.7-1.tar.gz";
-    sha256 = "dc0609ae321cec0a32997d6439b01742fea6bd5b89e4cbb0c8124b98429ddef9";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/humble/camera_calibration_parsers/3.1.8-2.tar.gz";
+    name = "3.1.8-2.tar.gz";
+    sha256 = "bd94a8175bc71f492b0d94c35909bf3385f5d69a999110e7e539044667b01bf8";
   };
 
   buildType = "ament_cmake";

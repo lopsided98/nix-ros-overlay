@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, pkg-config, pluginlib, python-qt-binding, qt-gui, qt5, rcpputils, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-iron-qt-gui-cpp";
-  version = "2.4.2-r1";
+  version = "2.4.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/iron/qt_gui_cpp/2.4.2-1.tar.gz";
-    name = "2.4.2-1.tar.gz";
-    sha256 = "5ba6d4ae91caa8f4a3ffafcd8e546eece1d65df3f730caf915c7cc1a5abbe81c";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/iron/qt_gui_cpp/2.4.2-2.tar.gz";
+    name = "2.4.2-2.tar.gz";
+    sha256 = "47e4f1082be9569109981ca5b194f923b2ec32fc9ae36b176fc5cf0e795a529d";
   };
 
   buildType = "ament_cmake";

@@ -734,6 +734,10 @@ self: super: {
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
+ game-controller-spl = self.callPackage ./game-controller-spl {};
+
+ game-controller-spl-interfaces = self.callPackage ./game-controller-spl-interfaces {};
+
  gazebo-dev = self.callPackage ./gazebo-dev {};
 
  gazebo-model-attachment-plugin = self.callPackage ./gazebo-model-attachment-plugin {};
@@ -760,7 +764,11 @@ self: super: {
 
  gazebo-video-monitors = self.callPackage ./gazebo-video-monitors {};
 
+ gc-spl = self.callPackage ./gc-spl {};
+
  gc-spl-2022 = self.callPackage ./gc-spl-2022 {};
+
+ gc-spl-interfaces = self.callPackage ./gc-spl-interfaces {};
 
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
@@ -1172,13 +1180,33 @@ self: super: {
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
- mocap-msgs = self.callPackage ./mocap-msgs {};
+ mocap4r2-control = self.callPackage ./mocap4r2-control {};
+
+ mocap4r2-control-msgs = self.callPackage ./mocap4r2-control-msgs {};
+
+ mocap4r2-marker-publisher = self.callPackage ./mocap4r2-marker-publisher {};
+
+ mocap4r2-marker-viz = self.callPackage ./mocap4r2-marker-viz {};
+
+ mocap4r2-marker-viz-srvs = self.callPackage ./mocap4r2-marker-viz-srvs {};
+
+ mocap4r2-msgs = self.callPackage ./mocap4r2-msgs {};
+
+ mocap4r2-robot-gt = self.callPackage ./mocap4r2-robot-gt {};
+
+ mocap4r2-robot-gt-msgs = self.callPackage ./mocap4r2-robot-gt-msgs {};
 
  mocap-optitrack = self.callPackage ./mocap-optitrack {};
 
  mod = self.callPackage ./mod {};
 
  mola-common = self.callPackage ./mola-common {};
+
+ mola-test-datasets = self.callPackage ./mola-test-datasets {};
+
+ motion-capture-tracking = self.callPackage ./motion-capture-tracking {};
+
+ motion-capture-tracking-interfaces = self.callPackage ./motion-capture-tracking-interfaces {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
@@ -1267,6 +1295,8 @@ self: super: {
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
+
+ mp2p-icp = self.callPackage ./mp2p-icp {};
 
  mqtt-client = self.callPackage ./mqtt-client {};
 
@@ -2121,6 +2151,8 @@ self: super: {
  rqt-image-view = self.callPackage ./rqt-image-view {};
 
  rqt-joint-trajectory-controller = self.callPackage ./rqt-joint-trajectory-controller {};
+
+ rqt-mocap4r2-control = self.callPackage ./rqt-mocap4r2-control {};
 
  rqt-moveit = self.callPackage ./rqt-moveit {};
 

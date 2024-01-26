@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, controller-manager, controller-manager-msgs, python3Packages, rcl-interfaces, rclpy, ros2cli, ros2node, ros2param, rosidl-runtime-py }:
 buildRosPackage {
   pname = "ros-iron-ros2controlcli";
-  version = "3.21.2-r1";
+  version = "3.22.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/iron/ros2controlcli/3.21.2-1.tar.gz";
-    name = "3.21.2-1.tar.gz";
-    sha256 = "50cbaf45e27a7fcad176e1d53e7db4ecce41174da366e5c0891a39cba409c41d";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/iron/ros2controlcli/3.22.0-1.tar.gz";
+    name = "3.22.0-1.tar.gz";
+    sha256 = "1fccd9b50ab3f6bcf9a50a22a11e1aec999afc06feb6346abf6bd7db02a27574";
   };
 
   buildType = "ament_python";

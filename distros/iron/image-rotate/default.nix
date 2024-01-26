@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, geometry-msgs, image-transport, opencv, rcl-interfaces, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-image-rotate";
-  version = "3.0.1-r3";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/iron/image_rotate/3.0.1-3.tar.gz";
-    name = "3.0.1-3.tar.gz";
-    sha256 = "f2981adffd6ad441516c2e75090ecdca561e017ff261c6f63756fffe7f3af769";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/iron/image_rotate/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "ada8220cc3b76e2a0b2134a1ec963b0e1412a113177a590f36bf898416fa2a1c";
   };
 
   buildType = "ament_cmake";

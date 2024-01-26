@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-tutorials-interfaces, ament-lint-auto, ament-lint-common, rclpy }:
 buildRosPackage {
   pname = "ros-rolling-action-tutorials-py";
-  version = "0.32.1-r1";
+  version = "0.33.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/action_tutorials_py/0.32.1-1.tar.gz";
-    name = "0.32.1-1.tar.gz";
-    sha256 = "41ebdf275f2aab034797f41bf853f3bf595e5516842e2a08267b505f9e3c094e";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/action_tutorials_py/0.33.0-1.tar.gz";
+    name = "0.33.0-1.tar.gz";
+    sha256 = "4b10ffb1dc32fa00104589464e2dfa952e14e3a6cdb306968d981c29ef3afa49";
   };
 
   buildType = "ament_python";

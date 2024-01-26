@@ -2,20 +2,19 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, cunit, iceoryx-binding-c, iceoryx-hoofs, iceoryx-posh, openssl }:
+{ lib, buildRosPackage, fetchurl, cmake, iceoryx-binding-c, iceoryx-hoofs, iceoryx-posh, openssl }:
 buildRosPackage {
   pname = "ros-rolling-cyclonedds";
-  version = "0.10.3-r1";
+  version = "0.10.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cyclonedds-release/archive/release/rolling/cyclonedds/0.10.3-1.tar.gz";
-    name = "0.10.3-1.tar.gz";
-    sha256 = "20896ef4fe41ab69b7596b988caae93ee333f57bef42eb94406ee3ba46dc77e8";
+    url = "https://github.com/ros2-gbp/cyclonedds-release/archive/release/rolling/cyclonedds/0.10.4-1.tar.gz";
+    name = "0.10.4-1.tar.gz";
+    sha256 = "b20ef0d6a57eb460ef385b6f2d8ab61911177536fbc085b1d45f49791ee7d1e6";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  checkInputs = [ cunit ];
   propagatedBuildInputs = [ iceoryx-binding-c iceoryx-hoofs iceoryx-posh openssl ];
   nativeBuildInputs = [ cmake ];
 

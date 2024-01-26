@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, gazebo-plugins, gazebo-ros, gazebo-ros2-control, launch, launch-pal, launch-ros, launch-testing-ament-cmake, pal-gazebo-plugins, pal-gazebo-worlds, play-motion2-msgs, rclcpp, sensor-msgs, tiago-2dnav, tiago-bringup, tiago-description, tiago-moveit-config }:
 buildRosPackage {
   pname = "ros-humble-tiago-gazebo";
-  version = "4.0.7-r1";
+  version = "4.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_simulation-release/archive/release/humble/tiago_gazebo/4.0.7-1.tar.gz";
-    name = "4.0.7-1.tar.gz";
-    sha256 = "a2203538f84c450377624ae07e9e84c0cb4a133c67520316915ca6116a88a6ae";
+    url = "https://github.com/pal-gbp/tiago_simulation-release/archive/release/humble/tiago_gazebo/4.0.8-1.tar.gz";
+    name = "4.0.8-1.tar.gz";
+    sha256 = "524811f9901425170eb70dfd2fa64fa67b49673199bc7a8e7ab5d4857836de1e";
   };
 
   buildType = "ament_cmake";

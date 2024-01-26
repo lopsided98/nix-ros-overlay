@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, pythonPackages, rcgcrd-spl-4 }:
 buildRosPackage {
   pname = "ros-humble-rcgcrd-spl-4-conversion";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/humble/rcgcrd_spl_4_conversion/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "a6343f4ebbd8d3c5a6dc10d5b0864c79acf266d02adfb6d9baccd6792453b6a2";
+    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/humble/rcgcrd_spl_4_conversion/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "162201935938aaf2bf25c9cc8e4a22f9a46b815d69ddee682ad8cda817ab62cb";
   };
 
   buildType = "ament_python";
