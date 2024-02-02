@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-vision-msgs";
-  version = "4.1.0-r3";
+  version = "4.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_msgs-release/archive/release/iron/vision_msgs/4.1.0-3.tar.gz";
-    name = "4.1.0-3.tar.gz";
-    sha256 = "47b718cb955e4205140645028f8a4c2728478ea50cf2ca94116a145b4e6dad3d";
+    url = "https://github.com/ros2-gbp/vision_msgs-release/archive/release/iron/vision_msgs/4.1.1-1.tar.gz";
+    name = "4.1.1-1.tar.gz";
+    sha256 = "c0dd04d3bb39c8a3c899ff127fe7d7f79b4479d69a829ae8572577f2fc13aff3";
   };
 
   buildType = "ament_cmake";

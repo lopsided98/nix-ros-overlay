@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, controller-manager-msgs, rclpy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-iron-rqt-controller-manager";
-  version = "3.21.2-r1";
+  version = "3.23.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/iron/rqt_controller_manager/3.21.2-1.tar.gz";
-    name = "3.21.2-1.tar.gz";
-    sha256 = "8c49f2ccbb5ad1a1112db0b0883bbd7e6227e0544f643a95c249eae7cdd281e3";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/iron/rqt_controller_manager/3.23.0-1.tar.gz";
+    name = "3.23.0-1.tar.gz";
+    sha256 = "3513e3f5676054aeb0f63cd8bac2043966a4ad3ed4c97d11b41da85342cd0723";
   };
 
   buildType = "ament_python";

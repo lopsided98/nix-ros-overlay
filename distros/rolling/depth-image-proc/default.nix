@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, image-geometry, image-transport, message-filters, opencv, rclcpp, rclcpp-components, sensor-msgs, stereo-msgs, tf2, tf2-eigen, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-depth-image-proc";
-  version = "3.0.1-r2";
+  version = "5.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/depth_image_proc/3.0.1-2.tar.gz";
-    name = "3.0.1-2.tar.gz";
-    sha256 = "bc2486a3f69ea6c50a6b5d106c403fe1bfff28211d0bd8b4ffaefc638f81f866";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/depth_image_proc/5.0.0-1.tar.gz";
+    name = "5.0.0-1.tar.gz";
+    sha256 = "f29e812f77bb63707a7b845ce7391ef24ecc68af98cf954ffceb738204567d2e";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, canopen-402-driver, canopen-base-driver, canopen-core, canopen-interfaces, canopen-proxy-driver, lely-core-libraries }:
 buildRosPackage {
   pname = "ros-rolling-canopen";
-  version = "0.2.7-r1";
+  version = "0.2.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/rolling/canopen/0.2.7-1.tar.gz";
-    name = "0.2.7-1.tar.gz";
-    sha256 = "cdcbf11022557f706712badfe01acfc70ce5c18c7b0d5f17bb3588e98caabf50";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/rolling/canopen/0.2.8-1.tar.gz";
+    name = "0.2.8-1.tar.gz";
+    sha256 = "057d2c0019ebdc19f59b69c3d052b9af319c715bdb73d272cd4e535def432e6b";
   };
 
   buildType = "ament_cmake";

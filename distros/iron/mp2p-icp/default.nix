@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt2 }:
 buildRosPackage {
   pname = "ros-iron-mp2p-icp";
-  version = "0.2.2-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mp2p_icp/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "1ddc9e253f1c6732081f359c372ab34228073c9ed1d63f6b0021caea51e296d1";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/iron/mp2p_icp/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "0fc380f0e1b2637eb1ab9418234cb2c01c091a6828856a2a1cff132175a180d1";
   };
 
   buildType = "cmake";

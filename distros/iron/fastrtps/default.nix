@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, asio, cmake, fastcdr, foonathan-memory-vendor, openssl, python3, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-iron-fastrtps";
-  version = "2.10.2-r1";
+  version = "2.10.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/iron/fastrtps/2.10.2-1.tar.gz";
-    name = "2.10.2-1.tar.gz";
-    sha256 = "c4fb3ebdd3315c92bd41aadb24132e28e63c12fd39572493ea06cccee5a7be02";
+    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/iron/fastrtps/2.10.3-1.tar.gz";
+    name = "2.10.3-1.tar.gz";
+    sha256 = "af71014f14f61a1a7ebfdf4b4a711af62e726fefd4dcb117e11cfe7eab8f867f";
   };
 
   buildType = "cmake";

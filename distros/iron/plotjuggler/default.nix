@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, binutils, boost, cppzmq, fastcdr, lz4, protobuf, qt5, rclcpp, zstd }:
 buildRosPackage {
   pname = "ros-iron-plotjuggler";
-  version = "3.8.7-r1";
+  version = "3.8.10-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/plotjuggler-release/archive/release/iron/plotjuggler/3.8.7-1.tar.gz";
-    name = "3.8.7-1.tar.gz";
-    sha256 = "b1e9227c062a5cf476ddbb4c399e06c125031e7ba26cfb4946eb19d1907dfdee";
+    url = "https://github.com/ros2-gbp/plotjuggler-release/archive/release/iron/plotjuggler/3.8.10-2.tar.gz";
+    name = "3.8.10-2.tar.gz";
+    sha256 = "c4bf4b101ded27818274c6ff8a66d03982684bea6700469ec5733acc0d5d88f0";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, cv-bridge, depthai-ros-msgs, image-transport, message-filters, opencv, rclcpp, rclcpp-components, sensor-msgs, vision-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-iron-depthai-filters";
-  version = "2.8.2-r1";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/iron/depthai_filters/2.8.2-1.tar.gz";
-    name = "2.8.2-1.tar.gz";
-    sha256 = "fc3c602048452571320aee09735f4459f0388b0dc7291d606b03d67869b2b03c";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/iron/depthai_filters/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "7704b54abf26ff8b4ff985ae007a5106fb8eb25a2fc31d498cd697b1e80f0028";
   };
 
   buildType = "ament_cmake";

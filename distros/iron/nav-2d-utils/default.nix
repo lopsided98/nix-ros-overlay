@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nav-2d-msgs, nav-msgs, nav2-common, nav2-msgs, nav2-util, std-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-iron-nav-2d-utils";
-  version = "1.2.5-r2";
+  version = "1.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav_2d_utils/1.2.5-2.tar.gz";
-    name = "1.2.5-2.tar.gz";
-    sha256 = "ad98ba3f7ee80c95ee24641178be9edd60fc48335051ee1e8d519d7c025e7c98";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav_2d_utils/1.2.6-1.tar.gz";
+    name = "1.2.6-1.tar.gz";
+    sha256 = "ac8ecd12132474848d65b5e36ae8a7302390c32787c8c6d5d0e64a703c557da2";
   };
 
   buildType = "ament_cmake";

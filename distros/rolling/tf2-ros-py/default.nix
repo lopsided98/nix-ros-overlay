@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, builtin-interfaces, geometry-msgs, pythonPackages, rclpy, sensor-msgs, std-msgs, tf2-msgs, tf2-py }:
 buildRosPackage {
   pname = "ros-rolling-tf2-ros-py";
-  version = "0.35.0-r1";
+  version = "0.35.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_ros_py/0.35.0-1.tar.gz";
-    name = "0.35.0-1.tar.gz";
-    sha256 = "eb7d13756d9d544edf2015a7bfd53de77aa9f583df6a020df5d1b73ecd3823d6";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_ros_py/0.35.1-1.tar.gz";
+    name = "0.35.1-1.tar.gz";
+    sha256 = "b0d19167314b691d23e8c79ae56ed2c0f1763939240b729582da0ab96029d7e5";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, qt-dotgraph, qt-gui, qt-gui-app, qt-gui-cpp, qt-gui-py-common }:
 buildRosPackage {
   pname = "ros-humble-qt-gui-core";
-  version = "2.2.2-r1";
+  version = "2.2.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/humble/qt_gui_core/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "49ca2bae45782d4ea180a05a182c685bfb296fd3cd05cd8be384b73024e4530b";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/humble/qt_gui_core/2.2.3-2.tar.gz";
+    name = "2.2.3-2.tar.gz";
+    sha256 = "57ce27a65a22605dbdd6b4e4577a6cb4d361b02025fd3e75d681923b04fac21b";
   };
 
   buildType = "ament_cmake";

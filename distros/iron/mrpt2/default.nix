@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, cv-bridge, eigen, ffmpeg, freeglut, freenect, geometry-msgs, glfw3, jsoncpp, libGL, libGLU, libfyaml, libjpeg, libpcap, libusb1, nav-msgs, octomap, opencv, openni2, pkg-config, python3Packages, pythonPackages, qt5, rclcpp, ros-environment, rosbag2-storage, sensor-msgs, std-msgs, stereo-msgs, suitesparse, tf2, tf2-msgs, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-iron-mrpt2";
-  version = "2.11.6-r1";
+  version = "2.11.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt2-release/archive/release/iron/mrpt2/2.11.6-1.tar.gz";
-    name = "2.11.6-1.tar.gz";
-    sha256 = "fab8cb8e026a00d3a22377ae5d64f8112b49acd2015e2d47d2076f2cf4c0f09a";
+    url = "https://github.com/ros2-gbp/mrpt2-release/archive/release/iron/mrpt2/2.11.7-1.tar.gz";
+    name = "2.11.7-1.tar.gz";
+    sha256 = "bcb23231c5cbede1c51a585492d8dcb7f6701178d453e136454f054796bb01a9";
   };
 
   buildType = "cmake";

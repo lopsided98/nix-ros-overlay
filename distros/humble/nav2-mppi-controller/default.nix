@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, gbenchmark, geometry-msgs, llvmPackages, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp, std-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, visualization-msgs, xsimd, xtensor }:
 buildRosPackage {
   pname = "ros-humble-nav2-mppi-controller";
-  version = "1.1.12-r1";
+  version = "1.1.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_mppi_controller/1.1.12-1.tar.gz";
-    name = "1.1.12-1.tar.gz";
-    sha256 = "933cfffd500d0b56f828ea8cd7dd08ac614fddfa8bd3fc2dc7ee8b9702abceeb";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_mppi_controller/1.1.13-1.tar.gz";
+    name = "1.1.13-1.tar.gz";
+    sha256 = "022d5d675576b8463c00bb984deeb9702b66cce39b3949f49c566a7eb9f03188";
   };
 
   buildType = "ament_cmake";
