@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, python-qt-binding }:
 buildRosPackage {
   pname = "ros-humble-qt-gui-py-common";
-  version = "2.2.2-r1";
+  version = "2.2.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/humble/qt_gui_py_common/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "37deb0d66736b9ae1c1f29205e054765c0446bddd84574ca7eeacd9852d8d0e8";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/humble/qt_gui_py_common/2.2.3-2.tar.gz";
+    name = "2.2.3-2.tar.gz";
+    sha256 = "38452d3ae6ebf90ba833ba6010cd8aa7d133328c5145e8ffad3f449f3a892f2a";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-iron-rcgcrd-spl-4";
-  version = "3.0.0-r4";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/iron/rcgcrd_spl_4/3.0.0-4.tar.gz";
-    name = "3.0.0-4.tar.gz";
-    sha256 = "0d418e6395b89e92109475be0c2f0767beeccf7b70069b77ba736aab1f2c4707";
+    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/iron/rcgcrd_spl_4/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "431c596062f7e8d5122155d7406d47fe4578891f1f6f652d9142bfa03f470d82";
   };
 
   buildType = "ament_cmake";

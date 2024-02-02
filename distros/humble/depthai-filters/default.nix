@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, cv-bridge, depthai-ros-msgs, image-transport, message-filters, opencv, rclcpp, rclcpp-components, sensor-msgs, vision-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-depthai-filters";
-  version = "2.8.2-r1";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/humble/depthai_filters/2.8.2-1.tar.gz";
-    name = "2.8.2-1.tar.gz";
-    sha256 = "9fc8f206a176205263b1a0fa2fbf374f4151831ba35e8bab8570257a66883049";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/humble/depthai_filters/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "d5e68dd431c92ff97c0238fc584964f12b3535062af73f9a1f9548bc0f8366cb";
   };
 
   buildType = "ament_cmake";

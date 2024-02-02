@@ -604,6 +604,10 @@ self: super: {
 
  fuse-viz = self.callPackage ./fuse-viz {};
 
+ game-controller-spl = self.callPackage ./game-controller-spl {};
+
+ game-controller-spl-interfaces = self.callPackage ./game-controller-spl-interfaces {};
+
  gazebo-dev = self.callPackage ./gazebo-dev {};
 
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
@@ -626,7 +630,11 @@ self: super: {
 
  gazebo-video-monitors = self.callPackage ./gazebo-video-monitors {};
 
+ gc-spl = self.callPackage ./gc-spl {};
+
  gc-spl-2022 = self.callPackage ./gc-spl-2022 {};
+
+ gc-spl-interfaces = self.callPackage ./gc-spl-interfaces {};
 
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
@@ -707,6 +715,8 @@ self: super: {
  gz-ros2-control-demos = self.callPackage ./gz-ros2-control-demos {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
+
+ hardware-interface-testing = self.callPackage ./hardware-interface-testing {};
 
  hash-library-vendor = self.callPackage ./hash-library-vendor {};
 
@@ -984,6 +994,12 @@ self: super: {
 
  mola-common = self.callPackage ./mola-common {};
 
+ mola-test-datasets = self.callPackage ./mola-test-datasets {};
+
+ motion-capture-tracking = self.callPackage ./motion-capture-tracking {};
+
+ motion-capture-tracking-interfaces = self.callPackage ./motion-capture-tracking-interfaces {};
+
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
  moveit = self.callPackage ./moveit {};
@@ -1076,6 +1092,8 @@ self: super: {
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
+ mp2p-icp = self.callPackage ./mp2p-icp {};
+
  mqtt-client = self.callPackage ./mqtt-client {};
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
@@ -1087,6 +1105,8 @@ self: super: {
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ multidim-rrt-planner = self.callPackage ./multidim-rrt-planner {};
 
  multires-image = self.callPackage ./multires-image {};
 
@@ -1180,6 +1200,8 @@ self: super: {
 
  neo-simulation2 = self.callPackage ./neo-simulation2 {};
 
+ nerian-stereo = self.callPackage ./nerian-stereo {};
+
  nlohmann-json-schema-validator-vendor = self.callPackage ./nlohmann-json-schema-validator-vendor {};
 
  nmea-hardware-interface = self.callPackage ./nmea-hardware-interface {};
@@ -1223,6 +1245,18 @@ self: super: {
  odom-to-tf-ros2 = self.callPackage ./odom-to-tf-ros2 {};
 
  ompl = self.callPackage ./ompl {};
+
+ opennav-coverage = self.callPackage ./opennav-coverage {};
+
+ opennav-coverage-bt = self.callPackage ./opennav-coverage-bt {};
+
+ opennav-coverage-demo = self.callPackage ./opennav-coverage-demo {};
+
+ opennav-coverage-msgs = self.callPackage ./opennav-coverage-msgs {};
+
+ opennav-coverage-navigator = self.callPackage ./opennav-coverage-navigator {};
+
+ opennav-row-coverage = self.callPackage ./opennav-row-coverage {};
 
  openni2-camera = self.callPackage ./openni2-camera {};
 
@@ -1895,8 +1929,6 @@ self: super: {
  rqt-tf-tree = self.callPackage ./rqt-tf-tree {};
 
  rqt-topic = self.callPackage ./rqt-topic {};
-
- rrt-planner = self.callPackage ./rrt-planner {};
 
  rsl = self.callPackage ./rsl {};
 

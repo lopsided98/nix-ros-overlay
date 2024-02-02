@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, lifecycle-msgs, pluginlib, rclcpp-lifecycle, rcpputils, rcutils, ros2-control-test-assets, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-iron-hardware-interface";
-  version = "3.21.2-r1";
+  version = "3.23.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/iron/hardware_interface/3.21.2-1.tar.gz";
-    name = "3.21.2-1.tar.gz";
-    sha256 = "0e97397e83e8a82834f39e3cf0c15b0548c2d2e172eb37665aa3148615eb8783";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/iron/hardware_interface/3.23.0-1.tar.gz";
+    name = "3.23.0-1.tar.gz";
+    sha256 = "fb8d894a661102c7431e5035b23b2e915ce36d19f19d973ffc6ac40bab858460";
   };
 
   buildType = "ament_cmake";

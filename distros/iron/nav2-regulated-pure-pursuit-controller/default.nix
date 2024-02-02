@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-iron-nav2-regulated-pure-pursuit-controller";
-  version = "1.2.5-r2";
+  version = "1.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_regulated_pure_pursuit_controller/1.2.5-2.tar.gz";
-    name = "1.2.5-2.tar.gz";
-    sha256 = "603d54d11d42780041a2df3782950d542ffe66bfc04750fb64b93324b9486995";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_regulated_pure_pursuit_controller/1.2.6-1.tar.gz";
+    name = "1.2.6-1.tar.gz";
+    sha256 = "2908fa26645a973d0d01986e19754f1bdb7cecb651b5417222b026fc534aed3a";
   };
 
   buildType = "ament_cmake";

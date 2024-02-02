@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-rcgcd-spl-14";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/humble/rcgcd_spl_14/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "a15dc993030f80c4b4d009d9506fb16bee35b40e39e2199204eb9cd253238d1f";
+    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/humble/rcgcd_spl_14/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "abf161f153e6d21d881299a1b68103796e185ce91cba425c0b57f2df551d699d";
   };
 
   buildType = "ament_cmake";

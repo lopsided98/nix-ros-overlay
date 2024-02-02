@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, cv-bridge, image-geometry, message-filters, python3Packages, pythonPackages, rclpy, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-camera-calibration";
-  version = "3.0.0-r1";
+  version = "3.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/camera_calibration/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "f689effc0b89b8e55c429100b954d3a39122889a30d21b1e74b787e6c8aac96f";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/camera_calibration/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
+    sha256 = "3efabeaeb554b11b3aee276c147fd398faeaf32c9212728b9fd2e2acf0f7e6f8";
   };
 
   buildType = "ament_python";

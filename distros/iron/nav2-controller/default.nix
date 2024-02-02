@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, angles, nav-2d-msgs, nav-2d-utils, nav2-common, nav2-core, nav2-msgs, nav2-util, pluginlib, rclcpp, rclcpp-action, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-nav2-controller";
-  version = "1.2.5-r2";
+  version = "1.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_controller/1.2.5-2.tar.gz";
-    name = "1.2.5-2.tar.gz";
-    sha256 = "24f00983d58e7e661062c58d894413aac5d28045de7d0d1eebf57804f9f17f1c";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_controller/1.2.6-1.tar.gz";
+    name = "1.2.6-1.tar.gz";
+    sha256 = "3ef12b701fa8034e9dc7bd68fb95d9a791dc431ed5ccae4252d7477eb99f96e5";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cras-cpp-common, laser-geometry, nodelet, roscpp, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-cras-laser-geometry";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://gitlab.fel.cvut.cz/cras/ros-release/cras_laser_geometry/-/archive/release/noetic/cras_laser_geometry/1.2.0-1/archive.tar.gz";
+    url = "https://gitlab.fel.cvut.cz/cras/ros-release/cras_laser_geometry/-/archive/release/noetic/cras_laser_geometry/1.2.1-1/archive.tar.gz";
     name = "archive.tar.gz";
-    sha256 = "cea28091ce7dcad0395299e2f629ba989c2852bd2f281745e4ac9f584a7d35ed";
+    sha256 = "6d6b08416ff9d133015b2eaf95889b8a355ac77583a4e0193e59b91d83bfdd49";
   };
 
   buildType = "catkin";
