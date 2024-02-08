@@ -1,4 +1,4 @@
-{ callPackage, ignition } @ args :
+{ callPackage, ignition, ... } @ args :
 
 callPackage ./. ({
   majorVersion = "4";
