@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, binutils, boost, plotjuggler, qt5, rclcpp, rcpputils, rosbag2, rosbag2-transport, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-plotjuggler-ros";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/plotjuggler-ros-plugins-release/archive/release/iron/plotjuggler_ros/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "011e71b277e14135d6b8cba4bbd47d10d2e9a31eab8f5773bc7fdf8b6bf1c6df";
+    url = "https://github.com/ros2-gbp/plotjuggler-ros-plugins-release/archive/release/iron/plotjuggler_ros/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "7949c6415af2a009e4753783ee8e9f010b9afffd201f6b609e3715f8d8cbb464";
   };
 
   buildType = "ament_cmake";

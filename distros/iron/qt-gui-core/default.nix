@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, qt-dotgraph, qt-gui, qt-gui-app, qt-gui-cpp, qt-gui-py-common }:
 buildRosPackage {
   pname = "ros-iron-qt-gui-core";
-  version = "2.4.2-r2";
+  version = "2.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/iron/qt_gui_core/2.4.2-2.tar.gz";
-    name = "2.4.2-2.tar.gz";
-    sha256 = "fb241f30caccbeca35ccf86c0840950582bfb52e76fb069ef646528621ccdb16";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/iron/qt_gui_core/2.4.3-1.tar.gz";
+    name = "2.4.3-1.tar.gz";
+    sha256 = "4a2569bd3c76ba9dec69a1375f9b20a5ee19deb0896e9d028e97fb8b4fc83fac";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-dummy-sensors";
-  version = "0.33.0-r1";
+  version = "0.33.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/dummy_sensors/0.33.0-1.tar.gz";
-    name = "0.33.0-1.tar.gz";
-    sha256 = "35179b053073b167130488a9cadd154c075277e0b37650c5c12129316861af88";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/dummy_sensors/0.33.1-1.tar.gz";
+    name = "0.33.1-1.tar.gz";
+    sha256 = "327121a834e80484291384c37d29f44545f0871b42fd462fba99cbd0a597112f";
   };
 
   buildType = "ament_cmake";

@@ -472,6 +472,8 @@ self: super: {
 
  event-camera-msgs = self.callPackage ./event-camera-msgs {};
 
+ event-camera-py = self.callPackage ./event-camera-py {};
+
  event-camera-renderer = self.callPackage ./event-camera-renderer {};
 
  example-interfaces = self.callPackage ./example-interfaces {};

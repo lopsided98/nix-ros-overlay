@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-export-dependencies, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint }:
 buildRosPackage {
   pname = "ros-iron-ament-lint-common";
-  version = "0.14.2-r1";
+  version = "0.14.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_lint_common/0.14.2-1.tar.gz";
-    name = "0.14.2-1.tar.gz";
-    sha256 = "e2178f1752693a4605ab1ff2c6099a857c07f2eb8073e4115f07aa4c6cc2bb97";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_lint_common/0.14.3-1.tar.gz";
+    name = "0.14.3-1.tar.gz";
+    sha256 = "6853a69ad08625f8b05de97c95bf26a35d2b21116a74b2d11d79ab560e09115d";
   };
 
   buildType = "ament_cmake";

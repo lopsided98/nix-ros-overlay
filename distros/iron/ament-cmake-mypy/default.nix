@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-mypy }:
 buildRosPackage {
   pname = "ros-iron-ament-cmake-mypy";
-  version = "0.14.2-r1";
+  version = "0.14.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_cmake_mypy/0.14.2-1.tar.gz";
-    name = "0.14.2-1.tar.gz";
-    sha256 = "be53d19a4d166175f09794b4c9a32996ef475805ebfe4a5b5aaa7c6665ca91d7";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_cmake_mypy/0.14.3-1.tar.gz";
+    name = "0.14.3-1.tar.gz";
+    sha256 = "60ea68f687278cb7d9c8ea5551ba1166050b9ff4629ac2369051ed8081ae81fa";
   };
 
   buildType = "ament_cmake";
