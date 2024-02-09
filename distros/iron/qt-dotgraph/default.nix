@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages }:
 buildRosPackage {
   pname = "ros-iron-qt-dotgraph";
-  version = "2.4.2-r2";
+  version = "2.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/iron/qt_dotgraph/2.4.2-2.tar.gz";
-    name = "2.4.2-2.tar.gz";
-    sha256 = "96abf3d10094073fb47fcb1cfdafb93d7c98d60233da6aedf1c8af89f441cd60";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/iron/qt_dotgraph/2.4.3-1.tar.gz";
+    name = "2.4.3-1.tar.gz";
+    sha256 = "e708fa300e8f363ab4a39a1638fddf499ff07fd8c7eed317bb6d03eac4602852";
   };
 
   buildType = "ament_cmake";

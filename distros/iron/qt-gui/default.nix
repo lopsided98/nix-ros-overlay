@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages, qt5, tango-icons-vendor }:
 buildRosPackage {
   pname = "ros-iron-qt-gui";
-  version = "2.4.2-r2";
+  version = "2.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/iron/qt_gui/2.4.2-2.tar.gz";
-    name = "2.4.2-2.tar.gz";
-    sha256 = "f4034dee118d2ff7c9bf1c1f4ac5aec42b8069c45f7736f6a9cc2f28a51d1c05";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/iron/qt_gui/2.4.3-1.tar.gz";
+    name = "2.4.3-1.tar.gz";
+    sha256 = "0f3fc26019c2a71dea1808c16adeb1bf706c1f71b0de15a1c1d16de36d3eb17d";
   };
 
   buildType = "ament_cmake";

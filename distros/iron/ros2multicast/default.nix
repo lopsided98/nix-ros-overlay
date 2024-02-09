@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, pythonPackages, ros2cli }:
 buildRosPackage {
   pname = "ros-iron-ros2multicast";
-  version = "0.25.4-r1";
+  version = "0.25.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/iron/ros2multicast/0.25.4-1.tar.gz";
-    name = "0.25.4-1.tar.gz";
-    sha256 = "e2d793ae8307bc8da4a7b05f767ffb9e556335ce5cb2ef0de606a8a909735190";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/iron/ros2multicast/0.25.5-1.tar.gz";
+    name = "0.25.5-1.tar.gz";
+    sha256 = "e159928d81a105ae11d927cf4e694a9708ab055702d5fad6c58a9d4cff85cfe7";
   };
 
   buildType = "ament_python";

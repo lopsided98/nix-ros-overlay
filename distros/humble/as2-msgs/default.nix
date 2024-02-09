@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, geographic-msgs, geometry-msgs, nav-msgs, rclcpp, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-as2-msgs";
-  version = "1.0.6-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_msgs/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "19873e38f5896e137413f2d81acd5a7000c6015ae87701f6a0699276923d5d20";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_msgs/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "32f9c89a2d3bf277f4693c6d25b6c59f742e0c6d8e3adf74886fba793ada9b3d";
   };
 
   buildType = "ament_cmake";

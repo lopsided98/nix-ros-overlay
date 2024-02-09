@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, launch-ros, rclcpp, rmw, ros-testing, ros2bag, ros2launch, rosbag2-compression, rosbag2-cpp, rosbag2-performance-benchmarking-msgs, rosbag2-py, rosbag2-storage, rosbag2-storage-default-plugins, rosbag2-test-common, sensor-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-iron-rosbag2-performance-benchmarking";
-  version = "0.22.5-r1";
+  version = "0.22.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/rosbag2_performance_benchmarking/0.22.5-1.tar.gz";
-    name = "0.22.5-1.tar.gz";
-    sha256 = "a8e4dcafb5c16f06767837a5abcf5712d3fa06dc628587a9b47925bb4d54e630";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/rosbag2_performance_benchmarking/0.22.6-1.tar.gz";
+    name = "0.22.6-1.tar.gz";
+    sha256 = "a8e2305f68c04fb3ba6c83974e715c68c3b4158d01b44b41f72c3ab60fc4bad7";
   };
 
   buildType = "ament_cmake";

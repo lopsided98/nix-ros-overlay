@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-components, rcutils, rmw-implementation-cmake, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-composition";
-  version = "0.33.0-r1";
+  version = "0.33.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/composition/0.33.0-1.tar.gz";
-    name = "0.33.0-1.tar.gz";
-    sha256 = "772d4ce691ce0a43f667fe435787e18ba15a8d5cc167e3cb86676ff0292fcd32";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/composition/0.33.1-1.tar.gz";
+    name = "0.33.1-1.tar.gz";
+    sha256 = "eb0413920564a829a182b4f7062c07c2e0c2dbdb7777004907a8c594ba4426d4";
   };
 
   buildType = "ament_cmake";

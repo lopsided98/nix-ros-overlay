@@ -234,7 +234,7 @@ self: super: {
 
  as2-platform-dji-osdk = self.callPackage ./as2-platform-dji-osdk {};
 
- as2-platform-ign-gazebo = self.callPackage ./as2-platform-ign-gazebo {};
+ as2-platform-gazebo = self.callPackage ./as2-platform-gazebo {};
 
  as2-platform-tello = self.callPackage ./as2-platform-tello {};
 
@@ -1688,6 +1688,18 @@ self: super: {
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
 
+ qb-softhand-industry = self.callPackage ./qb-softhand-industry {};
+
+ qb-softhand-industry-description = self.callPackage ./qb-softhand-industry-description {};
+
+ qb-softhand-industry-driver = self.callPackage ./qb-softhand-industry-driver {};
+
+ qb-softhand-industry-msgs = self.callPackage ./qb-softhand-industry-msgs {};
+
+ qb-softhand-industry-ros2-control = self.callPackage ./qb-softhand-industry-ros2-control {};
+
+ qb-softhand-industry-srvs = self.callPackage ./qb-softhand-industry-srvs {};
+
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
 
  qt-dotgraph = self.callPackage ./qt-dotgraph {};
@@ -1969,6 +1981,8 @@ self: super: {
  ros2action = self.callPackage ./ros2action {};
 
  ros2bag = self.callPackage ./ros2bag {};
+
+ ros2caret = self.callPackage ./ros2caret {};
 
  ros2cli = self.callPackage ./ros2cli {};
 

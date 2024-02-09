@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-pep257 }:
 buildRosPackage {
   pname = "ros-iron-ament-cmake-pep257";
-  version = "0.14.2-r1";
+  version = "0.14.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_cmake_pep257/0.14.2-1.tar.gz";
-    name = "0.14.2-1.tar.gz";
-    sha256 = "2360693b364bbe7981cd29f1be1faf30191f94f4d2cfec0690aaeae4083b6434";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_cmake_pep257/0.14.3-1.tar.gz";
+    name = "0.14.3-1.tar.gz";
+    sha256 = "48a342ce98f5ad5cdadf7901f4a9fdf578e604b4fcf21cb35ba6fe8b93f208d9";
   };
 
   buildType = "ament_cmake";

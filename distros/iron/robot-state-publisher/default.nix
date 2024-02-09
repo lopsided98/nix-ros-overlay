@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, kdl-parser, launch-ros, launch-testing-ament-cmake, orocos-kdl-vendor, rcl-interfaces, rclcpp, rclcpp-components, sensor-msgs, std-msgs, tf2-ros, urdf }:
 buildRosPackage {
   pname = "ros-iron-robot-state-publisher";
-  version = "3.2.0-r2";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/iron/robot_state_publisher/3.2.0-2.tar.gz";
-    name = "3.2.0-2.tar.gz";
-    sha256 = "2a0f1b6735d9c43f25fdba637f16165a193a30602ed8ea021e0a47a11f35d574";
+    url = "https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/iron/robot_state_publisher/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "201c2417014a8e2395b7b5a904cf43c9ef16b56ee49b301843adbb7487b8fbac";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-python, ament-lint-auto, as2-core, as2-msgs, eigen, geometry-msgs, libusb1, nav-msgs, rclcpp, rclpy, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-as2-platform-crazyflie";
-  version = "1.0.6-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_platform_crazyflie/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "99d16f555bd975e66c335ab67553883bdd2495a5e0c578e3c935f7bf6c84ac56";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_platform_crazyflie/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "77be7d322162c176fa152d2c32035590cb5097bea2be39caedd1133cfe26d775";
   };
 
   buildType = "ament_cmake";
