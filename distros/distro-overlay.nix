@@ -2,8 +2,19 @@
 self: super:
 let
   pythonOverridesFor = with self.lib; prevPython: prevPython // {
-    pkgs = prevPython.pkgs.overrideScope (pyFinal: pyPrev: optionalAttrs pyPrev.isPy3k {
+    pkgs = prevPython.pkgs.overrideScope (pyFinal: pyPrev: {
       wxPython = pyFinal.wxPython_4_2;
+
+      # ROS is not compatible with empy 4
+      empy = pyPrev.empy.overrideAttrs ({
+        pname, ...
+      }: rec {
+        version = "3.3.4";
+        src = pyFinal.fetchPypi {
+          inherit pname version;
+          hash = "sha256-c6xJeFtgFHnfTqGKfHm8EwSop8NMArlHLPEgauiPAbM=";
+        };
+      });
     });
   };
 
