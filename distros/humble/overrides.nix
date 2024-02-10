@@ -63,6 +63,18 @@ in with lib; {
     sha256 = "sha256-CJ1ZC7ydrZzEsZChrKuWg4/d20r6szFWeQCctiKFLgY=";
   };
 
+  libstatistics-collector = rosSuper.libstatistics-collector.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Add missing cstdint include
+      (self.fetchpatch {
+        url = "https://github.com/ros-tooling/libstatistics_collector/commit/1c340c97c731019d0c7b40f8c167b0ef666bcf75.patch";
+        hash = "sha256-zGCvIs/1CcqLyiLWZ+e3rCBJmNbGkkUs96dnPfHpjdE=";
+      })
+    ];
+  });
+
   libyaml-vendor = patchExternalProjectGit rosSuper.libyaml-vendor {
     url = "https://github.com/yaml/libyaml.git";
     fetchgitArgs = {
@@ -86,7 +98,7 @@ in with lib; {
     patches ? [], ...
   }: {
     patches = patches ++ [
-      # Fix missing cstdint include
+      # Add missing cstdint include
       (self.fetchpatch {
         url = "https://github.com/ros2/rcpputils/commit/f96811a9047fa6a084a885219c88b415bc544487.patch";
         hash = "sha256-NwKFHiRlvy6E3WjaJYykOqafLTEw75OUm+id540AcRQ=";
