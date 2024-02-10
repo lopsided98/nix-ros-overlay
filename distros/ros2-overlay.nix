@@ -77,7 +77,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
   python-cmake-module = rosSuper.python-cmake-module.overrideAttrs ({ ... }: let
     python = rosSelf.python;
   in {
-    pythonExecutable = python.pythonForBuild.interpreter;
+    pythonExecutable = python.pythonOnBuildForHost.interpreter;
     pythonLibrary = "${python}/lib/lib${python.libPrefix}.so";
     pythonIncludeDir = "${python}/include/${python.libPrefix}";
     setupHook = ./python-cmake-module-setup-hook.sh;
