@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchFromGitHub, cmake, pkg-config, ignition
+{ lib, stdenv, fetchFromGitHub, fetchpatch, cmake, pkg-config, ignition
 , ignition-cmake ? ignition.cmake, ignition-math ? ignition.math
 , ignition-utils ? ignition.utils, libuuid, tinyxml-2, freeimage, gts, ffmpeg
 , majorVersion ? "4"
@@ -17,6 +17,14 @@ stdenv.mkDerivation rec {
     rev = "${pname}_${version}";
     hash = srcHash;
   };
+
+  patches = [
+    # Fix missing cstdint include
+    (fetchpatch {
+      url = "https://github.com/gazebosim/gz-common/commit/1243852c4bd8525ffc760a620e7d97f94cc2375c.patch";
+      hash = "sha256-Smk1EWcBB520kFmyrs+nka8Fj7asedhqagMDfq2liwY=";
+    })
+  ];
 
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];
