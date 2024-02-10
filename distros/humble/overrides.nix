@@ -82,6 +82,18 @@ in with lib; {
     };
   };
 
+  rcpputils = rosSuper.rcpputils.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix missing cstdint include
+      (self.fetchpatch {
+        url = "https://github.com/ros2/rcpputils/commit/f96811a9047fa6a084a885219c88b415bc544487.patch";
+        hash = "sha256-NwKFHiRlvy6E3WjaJYykOqafLTEw75OUm+id540AcRQ=";
+      })
+    ];
+  });
+
   rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
