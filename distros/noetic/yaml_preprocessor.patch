@@ -1,0 +1,22 @@
+--- a/include/flatland_server/yaml_preprocessor.h
++++ b/include/flatland_server/yaml_preprocessor.h
+@@ -47,12 +47,15 @@
+ #ifndef FLATLAND_SERVER_YAML_PREPROCESSOR_H
+ #define FLATLAND_SERVER_YAML_PREPROCESSOR_H
+
++extern "C"
++{
++    #include <lua.h>
++    #include <lualib.h>
++    #include <lauxlib.h>
++}
++
+ #include <flatland_server/exceptions.h>
+ #include <yaml-cpp/yaml.h>
+-
+-#include <lauxlib.h>
+-#include <lua.h>
+-#include <lualib.h>
+ #include <set>
+ #include <string>
+ #include <vector>

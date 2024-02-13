@@ -8,6 +8,30 @@ rosSelf: rosSuper: with rosSelf.lib; {
     cmakeFlags = cmakeFlags ++ [ "-DPYTHON_EXECUTABLE=${rosSelf.python.interpreter}" ];
   });
 
+  flatland-msgs = rosSuper.flatland-msgs.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+  });
+
+  flatland-server = rosSuper.flatland-server.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix linking with Lua 
+      ./yaml_preprocessor.patch
+
+      # Fix missing <array> include
+      ./types.patch
+    ];
+  });
+
+  flatland-viz = rosSuper.flatland-viz.overrideAttrs ({
+    propagatedBuildInputs ? [], ...
+  }: {
+    propagatedBuildInputs = propagatedBuildInputs ++ [ self.lsb-release self.qt5.wrapQtAppsHook ];
+  });
+
   gazebo = self.gazebo_11;
 
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
