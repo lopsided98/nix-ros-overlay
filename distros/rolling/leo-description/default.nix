@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-rolling-leo-description";
-  version = "3.0.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/rolling/leo_description/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "ca3044aa4dae62289786a5e27ffa42b97cb8246206d9d47a6f3e4c84619df7e3";
+    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/rolling/leo_description/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "cc503a68a47e7112c25b95fa12edf185b1e3f875ad1c886a5e8d7c097c26e532";
   };
 
   buildType = "ament_cmake";

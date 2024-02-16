@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, hardware-interface, pluginlib }:
 buildRosPackage {
   pname = "ros-rolling-transmission-interface";
-  version = "4.4.0-r1";
+  version = "4.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/transmission_interface/4.4.0-1.tar.gz";
-    name = "4.4.0-1.tar.gz";
-    sha256 = "bdb0a237ad70bdec62b972eea77debc2bca5c3151b36a846e298009f4d65beed";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/transmission_interface/4.5.0-1.tar.gz";
+    name = "4.5.0-1.tar.gz";
+    sha256 = "8fa393dc10d0ad7193bf9b427d0f41991d1724eda3cea83cf60dd761a590b747";
   };
 
   buildType = "ament_cmake";

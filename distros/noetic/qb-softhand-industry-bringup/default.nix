@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-qb-softhand-industry-bringup";
-  version = "1.0.9-r1";
+  version = "1.2.5-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbshin-ros-release/get/release/noetic/qb_softhand_industry_bringup/1.0.9-1.tar.gz";
-    name = "1.0.9-1.tar.gz";
-    sha256 = "571efd14b1ee6c8c6f7169a11a9d32f5e99504fecdda94db166f7bcf1f0bb8b2";
+    url = "https://bitbucket.org/qbrobotics/qbshin-ros-release/get/release/noetic/qb_softhand_industry_bringup/1.2.5-1.tar.gz";
+    name = "1.2.5-1.tar.gz";
+    sha256 = "7971ab21eb260341df7280bd83560ca9d9e7743d2ebf25acccdafdad884022fe";
   };
 
   buildType = "catkin";

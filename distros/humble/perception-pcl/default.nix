@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pcl-conversions, pcl-msgs, pcl-ros }:
 buildRosPackage {
   pname = "ros-humble-perception-pcl";
-  version = "2.4.0-r4";
+  version = "2.4.0-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/humble/perception_pcl/2.4.0-4.tar.gz";
-    name = "2.4.0-4.tar.gz";
-    sha256 = "d7510dd5106185979c591097ff990c2604c6b581ded57f6b4fbdb4c34cb1691e";
+    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/humble/perception_pcl/2.4.0-5.tar.gz";
+    name = "2.4.0-5.tar.gz";
+    sha256 = "e85038742b715f25dcedff5e4215220f21458d4cb058c7dcd3d48f365b03fb01";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, as2-alphanumeric-viewer, as2-behavior, as2-behavior-tree, as2-behaviors-motion, as2-behaviors-perception, as2-behaviors-platform, as2-behaviors-trajectory-generation, as2-cli, as2-core, as2-gazebo-assets, as2-gazebo-classic-assets, as2-keyboard-teleoperation, as2-motion-controller, as2-motion-reference-handlers, as2-msgs, as2-platform-crazyflie, as2-platform-gazebo, as2-platform-tello, as2-python-api, as2-realsense-interface, as2-state-estimator, as2-usb-camera-interface }:
 buildRosPackage {
   pname = "ros-humble-aerostack2";
-  version = "1.0.7-r1";
+  version = "1.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/aerostack2/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "306cd86add2f4dc22d15fae1abd5926d959e47fd777fdd946c5a19ff6c4db75c";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/aerostack2/1.0.8-1.tar.gz";
+    name = "1.0.8-1.tar.gz";
+    sha256 = "6c9053d00e2a179c7be6ad81f243e52b188d60d69eb8282f08e4694fe41d0f76";
   };
 
   buildType = "ament_cmake";
