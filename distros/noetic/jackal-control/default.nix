@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, diff-drive-controller, interactive-marker-twist-server, joint-state-controller, joy, robot-localization, roslaunch, teleop-twist-joy, topic-tools, twist-mux }:
 buildRosPackage {
   pname = "ros-noetic-jackal-control";
-  version = "0.8.8-r1";
+  version = "0.8.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/noetic/jackal_control/0.8.8-1.tar.gz";
-    name = "0.8.8-1.tar.gz";
-    sha256 = "7f1c7ab4f5df6621b8b2cbb79dc46ed78a87ee016eab6350248f14d5e398a633";
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/noetic/jackal_control/0.8.9-1.tar.gz";
+    name = "0.8.9-1.tar.gz";
+    sha256 = "3243b47691b1cff5dfd351127b65749b1a096c85fe9a01728fc44ff784778c62";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-cpplint, ament-lint-auto, as2-behavior, as2-core, as2-msgs, cv-bridge, rclcpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-as2-behaviors-perception";
-  version = "1.0.7-r1";
+  version = "1.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_behaviors_perception/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "b1a630b2392e989d7f1d736618c14e18dede558c57ea9872e1ddc67cd7e84c78";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_behaviors_perception/1.0.8-1.tar.gz";
+    name = "1.0.8-1.tar.gz";
+    sha256 = "dcfc2effa8b86b1e63fe618af24be04696313e38f965a0ae3b4ec7f179218dcc";
   };
 
   buildType = "ament_cmake";

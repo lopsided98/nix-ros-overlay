@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, qb-softhand-industry-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-qb-softhand-industry-srvs";
-  version = "1.0.9-r1";
+  version = "1.2.5-r1";
 
   src = fetchurl {
-    url = "https://bitbucket.org/qbrobotics/qbshin-ros-release/get/release/noetic/qb_softhand_industry_srvs/1.0.9-1.tar.gz";
-    name = "1.0.9-1.tar.gz";
-    sha256 = "9ba47ff27cf74620b5f20d16bbb6e9a304920735237c14a20582e73686668b7d";
+    url = "https://bitbucket.org/qbrobotics/qbshin-ros-release/get/release/noetic/qb_softhand_industry_srvs/1.2.5-1.tar.gz";
+    name = "1.2.5-1.tar.gz";
+    sha256 = "0ae96f0defe477ecdc683a717ebb354f7d56feab20349a8cfb6c804b2b094231";
   };
 
   buildType = "catkin";

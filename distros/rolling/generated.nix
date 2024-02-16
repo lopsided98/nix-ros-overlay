@@ -158,6 +158,8 @@ self: super: {
 
  apriltag = self.callPackage ./apriltag {};
 
+ apriltag-detector = self.callPackage ./apriltag-detector {};
+
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};

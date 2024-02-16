@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pluginlib, qt-gui, qt-gui-cpp, qt5, rclcpp }:
 buildRosPackage {
   pname = "ros-iron-rqt-gui-cpp";
-  version = "1.3.3-r1";
+  version = "1.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/iron/rqt_gui_cpp/1.3.3-1.tar.gz";
-    name = "1.3.3-1.tar.gz";
-    sha256 = "e12a988de9c81c3bc5c975436f07ad3c76c53220a5ce9a1ec36f0180441260a6";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/iron/rqt_gui_cpp/1.3.4-1.tar.gz";
+    name = "1.3.4-1.tar.gz";
+    sha256 = "2e012a92faa646f2b67f1e2c87cd3ba19da983b53ff5205ee63099ddb6e8f1ec";
   };
 
   buildType = "ament_cmake";

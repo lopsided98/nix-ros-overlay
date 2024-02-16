@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp, roslint, rostest, rosunit, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-urg-stamped";
-  version = "0.0.17-r1";
+  version = "0.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/seqsense/urg_stamped-release/archive/release/noetic/urg_stamped/0.0.17-1.tar.gz";
-    name = "0.0.17-1.tar.gz";
-    sha256 = "e5c49b35f3d72dc3dbd4bd171bad8f27c56689d29a221786a80f6857f8e37967";
+    url = "https://github.com/seqsense/urg_stamped-release/archive/release/noetic/urg_stamped/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
+    sha256 = "457bd32788d830b1d0164f553786191767cc149b06fec8827b956cc9d6a936d2";
   };
 
   buildType = "catkin";

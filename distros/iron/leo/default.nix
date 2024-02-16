@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, leo-description, leo-msgs, leo-teleop }:
 buildRosPackage {
   pname = "ros-iron-leo";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/iron/leo/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "405ca4b6028d273af6fd41d6b8fcc94f2703db2be8a6065d176d3345d81ca5c9";
+    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/iron/leo/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "19fdb6122c7831d7b8e083c64f2516bcde371700062c8bf376d3e0b750afe883";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-caret-msgs";
-  version = "0.5.0-r2";
+  version = "0.5.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/caret_trace-release/archive/release/humble/caret_msgs/0.5.0-2.tar.gz";
-    name = "0.5.0-2.tar.gz";
-    sha256 = "a37fdd9b8787a8502aad98b68012fced36f37daec0cffb7a2192c9f16d3c9f6f";
+    url = "https://github.com/ros2-gbp/caret_trace-release/archive/release/humble/caret_msgs/0.5.0-4.tar.gz";
+    name = "0.5.0-4.tar.gz";
+    sha256 = "dd8bdae66cbaf0a7b315e76438dd91d42d9f92bbbd3e6051b656bf8d5011066c";
   };
 
   buildType = "ament_cmake";

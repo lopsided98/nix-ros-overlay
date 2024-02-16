@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gazebo-ros-pkgs, python3Packages, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-as2-gazebo-classic-assets";
-  version = "1.0.7-r1";
+  version = "1.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_gazebo_classic_assets/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "e77ebc7ac79b6aa18a27716fc899538e30a812a71b73da0f9d458f5d2db4f385";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_gazebo_classic_assets/1.0.8-1.tar.gz";
+    name = "1.0.8-1.tar.gz";
+    sha256 = "6941d8fcf610cf1a40c3a0653f2ed2574344463230dc0d2601e699d0040c317e";
   };
 
   buildType = "ament_cmake";

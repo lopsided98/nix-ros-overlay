@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rcutils }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, rcutils }:
 buildRosPackage {
   pname = "ros-iron-rcpputils";
-  version = "2.6.2-r1";
+  version = "2.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcpputils-release/archive/release/iron/rcpputils/2.6.2-1.tar.gz";
-    name = "2.6.2-1.tar.gz";
-    sha256 = "ee44666a692192ca3a3c93629b750b13f616c7af78d531dc0334cd311a4915fe";
+    url = "https://github.com/ros2-gbp/rcpputils-release/archive/release/iron/rcpputils/2.6.3-1.tar.gz";
+    name = "2.6.3-1.tar.gz";
+    sha256 = "9099b0cf2d8908ddcb7b63437ac6ca8d6a93e3aa0766219a93552bbada9edc37";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-ros ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-cmake-copyright ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-flake8 ament-cmake-gtest ament-cmake-lint-cmake ament-cmake-pep257 ament-cmake-uncrustify ament-cmake-xmllint ];
   propagatedBuildInputs = [ rcutils ];
   nativeBuildInputs = [ ament-cmake ament-cmake-ros ];
 
