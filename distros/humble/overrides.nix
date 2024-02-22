@@ -120,6 +120,19 @@ in with lib; {
     ];
   });
 
+  rosbag2-compression = rosSuper.rosbag2-compression.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        # Add in a missing cstdint include
+        url = "https://github.com/ros2/rosbag2/commit/65c889e1fa55dd85a148b27b8c27dadc73238e67.patch";
+        hash = "sha256-EzfOqI08roSSqpo3hEUFxoImxKJGi1wUN4ZxwhYszUY=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
