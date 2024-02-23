@@ -94,6 +94,18 @@ in with lib; {
     };
   };
 
+  plotjuggler-ros = rosSuper.plotjuggler-ros.overrideAttrs ({
+    patches ? [], nativeBuildInputs ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = "https://patch-diff.githubusercontent.com/raw/PlotJuggler/plotjuggler-ros-plugins/pull/82.patch";
+        hash = "sha256-ojZ/ErZZkGIB89O0u2ocU6Gcdu/JhowUqkdsulcArHY=";
+      })
+    ];
+    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.ros-environment ];
+  });
+
   rcpputils = rosSuper.rcpputils.overrideAttrs ({
     patches ? [], ...
   }: {
