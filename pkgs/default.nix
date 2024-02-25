@@ -50,6 +50,16 @@ self: super: with self.lib; let
 
       colcon-zsh = pyFinal.callPackage ./colcon/zsh.nix { };
 
+      empy_3 = pyPrev.empy.overrideAttrs ({
+        pname, ...
+      }: rec {
+        version = "3.3.4";
+        src = pyFinal.fetchPypi {
+          inherit pname version;
+          hash = "sha256-c6xJeFtgFHnfTqGKfHm8EwSop8NMArlHLPEgauiPAbM=";
+        };
+      });
+
       osrf-pycommon = pyFinal.callPackage ./osrf-pycommon {};
 
       rosdep = pyFinal.callPackage ./rosdep { };
