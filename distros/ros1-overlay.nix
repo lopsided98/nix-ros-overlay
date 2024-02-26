@@ -53,20 +53,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
-  # Packages that depend on catkin-pip still fail because they try to
-  # download from the internet, but it should work outside of Nix builds.
-  catkin-pip = rosSuper.catkin-pip.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-      patchShebangs cmake
-      substituteInPlace cmake/scripts/path_prepend.sh \
-        --replace /bin/sed "${self.gnused}/bin/sed"
-      substituteInPlace cmake/catkin-pip-prefix.cmake.in \
-        --replace NO_SYSTEM_ENVIRONMENT_PATH ""
-    '';
-  });
-
   costmap-converter = rosSuper.costmap-converter.overrideAttrs ({
     patches ? [], ...
   }: {
