@@ -90,13 +90,9 @@ let
     });
 
     librealsense2 = rosSuper.librealsense2.overrideAttrs ({
-      buildInputs ? [], patches ? [], ...
+      buildInputs ? [], ...
     }: {
       buildInputs = buildInputs ++ [ self.glfw self.libGLU ];
-      patches = patches ++ [(self.fetchpatch {
-        url = "https://github.com/IntelRealSense/librealsense/commit/847b74d3dcade2842ba138f321474159315ab8c2.patch";
-        sha256 = "sha256-zaW8HG8rfsApI5S/3x+x9Fx8xhyTIPNn/fJVFtkmlEA=";
-      })];
     });
 
     libuvc-camera = rosSuper.libuvc-camera.overrideAttrs ({
