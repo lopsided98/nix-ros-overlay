@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-bringup, cob-default-robot-behavior, cob-default-robot-config, cob-hardware-config, cob-moveit-config }:
 buildRosPackage {
   pname = "ros-noetic-cob-robots";
-  version = "0.7.9-r1";
+  version = "0.7.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_robots-release/archive/release/noetic/cob_robots/0.7.9-1.tar.gz";
-    name = "0.7.9-1.tar.gz";
-    sha256 = "324b2a78e80b86337ddf497988c69ddc9e7d43df7525be1b1dee1b2d64688c1f";
+    url = "https://github.com/ipa320/cob_robots-release/archive/release/noetic/cob_robots/0.7.10-1.tar.gz";
+    name = "0.7.10-1.tar.gz";
+    sha256 = "63cebce51a80f8ea1ced166ae630811e58a2bee0937f52a6c57dc3f8ae1844f7";
   };
 
   buildType = "catkin";

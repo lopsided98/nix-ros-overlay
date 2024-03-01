@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, etsi-its-coding, etsi-its-conversion, etsi-its-msgs, etsi-its-msgs-utils, ros-environment }:
 buildRosPackage {
   pname = "ros-noetic-etsi-its-messages";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_messages/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "2197d7509b084f0debbff3c1c91d3c5da3d83170129c873057a1ddbd36f9a576";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_messages/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "354748c4587a42729e4ae5a73216b5454eec8d3b63f9721bac5b6d9ec120cbd8";
   };
 
   buildType = "catkin";

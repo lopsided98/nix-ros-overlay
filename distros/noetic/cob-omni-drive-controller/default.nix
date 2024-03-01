@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, boost, catkin, cob-base-controller-utils, controller-interface, dynamic-reconfigure, geometry-msgs, hardware-interface, nav-msgs, pluginlib, realtime-tools, roscpp, sensor-msgs, std-msgs, std-srvs, tf, tf2, urdf }:
 buildRosPackage {
   pname = "ros-noetic-cob-omni-drive-controller";
-  version = "0.8.22-r1";
+  version = "0.8.23-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_omni_drive_controller/0.8.22-1.tar.gz";
-    name = "0.8.22-1.tar.gz";
-    sha256 = "5dbe37e53b8d0bd8a73d01fd0e4cb0bbe7cc469178e76cdb9ee80bab3b996094";
+    url = "https://github.com/4am-robotics/cob_control-release/archive/release/noetic/cob_omni_drive_controller/0.8.23-1.tar.gz";
+    name = "0.8.23-1.tar.gz";
+    sha256 = "5d39c42851ca4f7f1e81eace32db3e3f9d22d8a29bc3e0b506e90acc0509954f";
   };
 
   buildType = "catkin";

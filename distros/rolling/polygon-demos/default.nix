@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/MetroRobots-release/polygon_ros-release/archive/release/rolling/polygon_demos/1.0.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/rolling/polygon_demos/1.0.2-1.tar.gz";
     name = "1.0.2-1.tar.gz";
     sha256 = "4037c69e158eb3470777dc1db81ca468cdc2f3819cf6f010cc21e100d109db5a";
   };

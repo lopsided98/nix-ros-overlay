@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-cam-coding, etsi-its-cam-msgs, etsi-its-primitives-conversion, ros-environment }:
 buildRosPackage {
   pname = "ros-iron-etsi-its-cam-conversion";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/iron/etsi_its_cam_conversion/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "e27c85deea703a4157b029912edea15da480bbc40d9383a2ed719cf09388f14e";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/iron/etsi_its_cam_conversion/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "84fa7ce461af8c7d7334659f89c1ce89c1c476c194ebe0d3764c7a0febe72399";
   };
 
   buildType = "ament_cmake";

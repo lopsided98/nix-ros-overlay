@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, dynamic-reconfigure, geometry-msgs, nav-msgs, roscpp, roslint, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-base-velocity-smoother";
-  version = "0.8.22-r1";
+  version = "0.8.23-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_base_velocity_smoother/0.8.22-1.tar.gz";
-    name = "0.8.22-1.tar.gz";
-    sha256 = "71345480830b5bb49db4e1450f8e0ff5cc19eb58342553ec50d7dca15295d916";
+    url = "https://github.com/4am-robotics/cob_control-release/archive/release/noetic/cob_base_velocity_smoother/0.8.23-1.tar.gz";
+    name = "0.8.23-1.tar.gz";
+    sha256 = "16ff0313294d31701994ca16b0b43972dbc5462ff00894ed6e9e8953fecb3b02";
   };
 
   buildType = "catkin";

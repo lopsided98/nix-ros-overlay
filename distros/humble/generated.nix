@@ -280,8 +280,6 @@ self: super: {
 
  bicycle-steering-controller = self.callPackage ./bicycle-steering-controller {};
 
- bno055 = self.callPackage ./bno055 {};
-
  bond = self.callPackage ./bond {};
 
  bond-core = self.callPackage ./bond-core {};
@@ -442,10 +440,6 @@ self: super: {
 
  dataspeed-dbw-common = self.callPackage ./dataspeed-dbw-common {};
 
- dataspeed-dbw-gateway = self.callPackage ./dataspeed-dbw-gateway {};
-
- dataspeed-dbw-msgs = self.callPackage ./dataspeed-dbw-msgs {};
-
  dataspeed-ulc = self.callPackage ./dataspeed-ulc {};
 
  dataspeed-ulc-can = self.callPackage ./dataspeed-ulc-can {};
@@ -543,6 +537,14 @@ self: super: {
  domain-bridge = self.callPackage ./domain-bridge {};
 
  domain-coordinator = self.callPackage ./domain-coordinator {};
+
+ ds-dbw = self.callPackage ./ds-dbw {};
+
+ ds-dbw-can = self.callPackage ./ds-dbw-can {};
+
+ ds-dbw-joystick-demo = self.callPackage ./ds-dbw-joystick-demo {};
+
+ ds-dbw-msgs = self.callPackage ./ds-dbw-msgs {};
 
  dummy-map-server = self.callPackage ./dummy-map-server {};
 
@@ -756,6 +758,8 @@ self: super: {
 
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
 
+ gazebo-no-physics-plugin = self.callPackage ./gazebo-no-physics-plugin {};
+
  gazebo-plugins = self.callPackage ./gazebo-plugins {};
 
  gazebo-ros = self.callPackage ./gazebo-ros {};
@@ -857,6 +861,8 @@ self: super: {
  gtsam = self.callPackage ./gtsam {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
+
+ hardware-interface-testing = self.callPackage ./hardware-interface-testing {};
 
  hash-library-vendor = self.callPackage ./hash-library-vendor {};
 
@@ -2553,6 +2559,8 @@ self: super: {
  tracetools-launch = self.callPackage ./tracetools-launch {};
 
  tracetools-test = self.callPackage ./tracetools-test {};
+
+ tracetools-trace = self.callPackage ./tracetools-trace {};
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 

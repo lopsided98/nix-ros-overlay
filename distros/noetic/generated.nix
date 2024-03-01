@@ -380,8 +380,6 @@ self: super: {
 
  cob-image-flip = self.callPackage ./cob-image-flip {};
 
- cob-interactive-teleop = self.callPackage ./cob-interactive-teleop {};
-
  cob-light = self.callPackage ./cob-light {};
 
  cob-linear-nav = self.callPackage ./cob-linear-nav {};
@@ -1825,6 +1823,10 @@ self: super: {
  mapviz = self.callPackage ./mapviz {};
 
  mapviz-plugins = self.callPackage ./mapviz-plugins {};
+
+ marine-acoustic-msgs = self.callPackage ./marine-acoustic-msgs {};
+
+ marine-sensor-msgs = self.callPackage ./marine-sensor-msgs {};
 
  marker-msgs = self.callPackage ./marker-msgs {};
 

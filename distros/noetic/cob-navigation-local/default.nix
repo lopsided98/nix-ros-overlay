@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-navigation-config, cob-supported-robots, dwa-local-planner, move-base, roslaunch, rviz }:
 buildRosPackage {
   pname = "ros-noetic-cob-navigation-local";
-  version = "0.6.14-r1";
+  version = "0.6.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_navigation-release/archive/release/noetic/cob_navigation_local/0.6.14-1.tar.gz";
-    name = "0.6.14-1.tar.gz";
-    sha256 = "1998136fc253fcdbcd4465efd2aa21dab3a1f21c515a53b3805a6d42d7031244";
+    url = "https://github.com/ipa320/cob_navigation-release/archive/release/noetic/cob_navigation_local/0.6.15-1.tar.gz";
+    name = "0.6.15-1.tar.gz";
+    sha256 = "b0f695bcb4346dad3bfdd3c6ed54f5409b7b5ceb1e74ba6f965eac0113adda94";
   };
 
   buildType = "catkin";

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.9.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/magic_enum-release/archive/release/iron/magic_enum/0.9.5-1.tar.gz";
+    url = "https://github.com/ros2-gbp/magic_enum-release/archive/release/iron/magic_enum/0.9.5-1.tar.gz";
     name = "0.9.5-1.tar.gz";
     sha256 = "4813a17e7ab18c13c1d8be6aa0f7db33137d1de36ff45ea319f1d70f964c01a2";
   };

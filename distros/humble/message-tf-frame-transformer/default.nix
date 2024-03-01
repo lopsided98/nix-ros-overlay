@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/message_tf_frame_transformer-release/archive/release/humble/message_tf_frame_transformer/1.1.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/message_tf_frame_transformer-release/archive/release/humble/message_tf_frame_transformer/1.1.0-1.tar.gz";
     name = "1.1.0-1.tar.gz";
     sha256 = "51bf95fac905e0ea0f9119ee44795a449662b0ddf7693dfd211421e34ed18f34";
   };

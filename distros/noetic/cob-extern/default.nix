@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libdlib, libntcan, libpcan, libphidgets, opengm }:
 buildRosPackage {
   pname = "ros-noetic-cob-extern";
-  version = "0.6.18-r1";
+  version = "0.6.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/noetic/cob_extern/0.6.18-1.tar.gz";
-    name = "0.6.18-1.tar.gz";
-    sha256 = "97e887c73b8759c68eea45d53b7ff0473908de639d557b8c88ea428aa88df5d0";
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/noetic/cob_extern/0.6.19-1.tar.gz";
+    name = "0.6.19-1.tar.gz";
+    sha256 = "6fe75f00669f2dad0c35dc724bf98855b9b8dc7b46a11f12ef65367f5d1c5638";
   };
 
   buildType = "catkin";

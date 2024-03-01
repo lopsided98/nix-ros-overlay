@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, geometry-msgs, nav-msgs, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-mecanum-controller";
-  version = "0.8.22-r1";
+  version = "0.8.23-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_mecanum_controller/0.8.22-1.tar.gz";
-    name = "0.8.22-1.tar.gz";
-    sha256 = "908a8a8dc1fcca65388188b7d62a3e036773650a45c7430c522ac1935086f687";
+    url = "https://github.com/4am-robotics/cob_control-release/archive/release/noetic/cob_mecanum_controller/0.8.23-1.tar.gz";
+    name = "0.8.23-1.tar.gz";
+    sha256 = "33be91852ff7d325dfb439cb14b58ca90d2ee99282035647f110248e61983236";
   };
 
   buildType = "catkin";

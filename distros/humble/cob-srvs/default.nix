@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-cob-srvs";
-  version = "2.7.9-r1";
+  version = "2.7.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_common-release/archive/release/humble/cob_srvs/2.7.9-1.tar.gz";
-    name = "2.7.9-1.tar.gz";
-    sha256 = "80f9372180b3d1bca14f9d1ddc175a6e02e7181774b37468acdac33ae43995d8";
+    url = "https://github.com/4am-robotics/cob_common-release/archive/release/humble/cob_srvs/2.7.10-1.tar.gz";
+    name = "2.7.10-1.tar.gz";
+    sha256 = "c0783cbe62d7d71d7d2e7ab870271cfe5c84d62bfb7deba3291de595aaf4c14d";
   };
 
   buildType = "ament_cmake";

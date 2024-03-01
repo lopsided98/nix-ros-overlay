@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, imu-filter-madgwick, realsense2-camera, rtabmap-odom, rtabmap-rviz-plugins, rtabmap-slam, rtabmap-util, rtabmap-viz, tf2-ros, velodyne }:
 buildRosPackage {
   pname = "ros-iron-rtabmap-examples";
-  version = "0.21.3-r1";
+  version = "0.21.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/iron/rtabmap_examples/0.21.3-1.tar.gz";
-    name = "0.21.3-1.tar.gz";
-    sha256 = "2ebe5bf4cd5d969456d89dd8bae744360aea0204d68b59e408a605a042ad2552";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/iron/rtabmap_examples/0.21.4-2.tar.gz";
+    name = "0.21.4-2.tar.gz";
+    sha256 = "e27e6f19a3f7ebb8b0cc5a54e5afddbcd636b41f20cc564ffdfe19971790221e";
   };
 
   buildType = "ament_cmake";

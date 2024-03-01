@@ -196,8 +196,6 @@ self: super: {
 
  bicycle-steering-controller = self.callPackage ./bicycle-steering-controller {};
 
- bno055 = self.callPackage ./bno055 {};
-
  bond = self.callPackage ./bond {};
 
  bond-core = self.callPackage ./bond-core {};

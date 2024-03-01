@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rospy }:
 buildRosPackage {
   pname = "ros-noetic-rtabmap-python";
-  version = "0.21.3-r4";
+  version = "0.21.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_python/0.21.3-4.tar.gz";
-    name = "0.21.3-4.tar.gz";
-    sha256 = "119a4439fe07536c87115bd9b99f8cce95e34353589c1e9eb404c29b84e321f9";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_python/0.21.4-1.tar.gz";
+    name = "0.21.4-1.tar.gz";
+    sha256 = "d72002531472bc2fdb37902da988e66d60f2332a30ad166c66de450a446eb596";
   };
 
   buildType = "catkin";

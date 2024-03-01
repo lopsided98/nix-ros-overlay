@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.2.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/Fields2Cover/fields2cover-release/archive/release/iron/fields2cover/1.2.1-2.tar.gz";
+    url = "https://github.com/ros2-gbp/fields2cover-release/archive/release/iron/fields2cover/1.2.1-2.tar.gz";
     name = "1.2.1-2.tar.gz";
     sha256 = "c2e956c725c499fafd36d03ca150ec49ff2f34ed7e4cc371a3639d0f51911314";
   };

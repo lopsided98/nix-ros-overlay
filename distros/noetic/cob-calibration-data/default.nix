@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-supported-robots, xacro }:
 buildRosPackage {
   pname = "ros-noetic-cob-calibration-data";
-  version = "0.6.18-r1";
+  version = "0.6.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_calibration_data-release/archive/release/noetic/cob_calibration_data/0.6.18-1.tar.gz";
-    name = "0.6.18-1.tar.gz";
-    sha256 = "c0a110318bf61e339d863b480e66599205a518185054e0796dfc90bf7f3d61cc";
+    url = "https://github.com/ipa320/cob_calibration_data-release/archive/release/noetic/cob_calibration_data/0.6.19-1.tar.gz";
+    name = "0.6.19-1.tar.gz";
+    sha256 = "295b37871f0e2f47e91f7c0975766fa529af22651db1441f88633cebd7ae6b0e";
   };
 
   buildType = "catkin";

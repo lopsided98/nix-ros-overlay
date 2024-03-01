@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/MetroRobots-release/polygon_ros-release/archive/release/humble/polygon_rviz_plugins/1.0.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/humble/polygon_rviz_plugins/1.0.2-1.tar.gz";
     name = "1.0.2-1.tar.gz";
     sha256 = "f66f9b02b0abddfd0f7d251b7c9af425530f781bc20dfc69621f07a785abf257";
   };

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager-msgs, diagnostic-msgs, geometry-msgs, message-generation, message-runtime, nav-msgs, roscpp, rospy, std-msgs, std-srvs, tf, tf2, urdf }:
 buildRosPackage {
   pname = "ros-noetic-cob-base-controller-utils";
-  version = "0.8.22-r1";
+  version = "0.8.23-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_control-release/archive/release/noetic/cob_base_controller_utils/0.8.22-1.tar.gz";
-    name = "0.8.22-1.tar.gz";
-    sha256 = "b3d759b9dbf0890df1b0c1b0f2f76a688dd4a76ebbebf6b314063fb22058a51d";
+    url = "https://github.com/4am-robotics/cob_control-release/archive/release/noetic/cob_base_controller_utils/0.8.23-1.tar.gz";
+    name = "0.8.23-1.tar.gz";
+    sha256 = "aff4c20df99aa85d1b389ef6a8aeec732d98347378bc882f3d1d5138cfe541f1";
   };
 
   buildType = "catkin";

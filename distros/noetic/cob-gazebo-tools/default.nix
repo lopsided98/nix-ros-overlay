@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-msgs, geometry-msgs, python3Packages, roslib, rospy, tf }:
 buildRosPackage {
   pname = "ros-noetic-cob-gazebo-tools";
-  version = "0.7.7-r1";
+  version = "0.7.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_simulation-release/archive/release/noetic/cob_gazebo_tools/0.7.7-1.tar.gz";
-    name = "0.7.7-1.tar.gz";
-    sha256 = "2a56de346759adc40c7d1ad137b828e03fbc25ca877e7b6599bd6c2a21bd7e5d";
+    url = "https://github.com/ipa320/cob_simulation-release/archive/release/noetic/cob_gazebo_tools/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
+    sha256 = "aa501cdeceab9188318532e4c90176934ecc5b1de078628e22da510b7c5c333a";
   };
 
   buildType = "catkin";

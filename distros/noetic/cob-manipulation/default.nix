@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-collision-monitor, cob-grasp-generation, cob-lookat-action, cob-manipulation-msgs, cob-moveit-bringup, cob-moveit-interface }:
 buildRosPackage {
   pname = "ros-noetic-cob-manipulation";
-  version = "0.7.8-r1";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/noetic/cob_manipulation/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "60d6b2d0cb1ef39ddd7a5c90a36d460ea2958ebae1a8f2df6ef206772f22dd63";
+    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/noetic/cob_manipulation/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "4e7f054c01f433636e7cbce7ae7fe60714f7539d0b4b4776fa543e70fdc4db9e";
   };
 
   buildType = "catkin";

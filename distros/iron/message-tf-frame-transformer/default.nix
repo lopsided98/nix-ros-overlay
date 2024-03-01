@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/message_tf_frame_transformer-release/archive/release/iron/message_tf_frame_transformer/1.1.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/message_tf_frame_transformer-release/archive/release/iron/message_tf_frame_transformer/1.1.0-1.tar.gz";
     name = "1.1.0-1.tar.gz";
     sha256 = "deee91f888bc5747e4176a3092e1c20a5c04ef6c641958e57a34b41d234b948f";
   };

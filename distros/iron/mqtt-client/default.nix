@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/mqtt_client-release/archive/release/iron/mqtt_client/2.2.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/mqtt_client-release/archive/release/iron/mqtt_client/2.2.0-1.tar.gz";
     name = "2.2.0-1.tar.gz";
     sha256 = "55d5a46ba0595cdf74cd67a4f73ee84f8b8251dcfe36dc5f5941c11df5936b74";
   };

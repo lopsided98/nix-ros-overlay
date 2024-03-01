@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ros-environment }:
 buildRosPackage {
   pname = "ros-noetic-etsi-its-cam-coding";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_cam_coding/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "79d53e101596b4f5781692f83f8b23ffabdfc723a7996a52f83fcaf6d2187420";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_cam_coding/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "e2c903493ee8e8e3a167924d84e1aa439ed5575bfa78746448a9b47db15f707f";
   };
 
   buildType = "catkin";

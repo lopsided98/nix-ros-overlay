@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/MetroRobots-release/polygon_ros-release/archive/release/humble/polygon_utils/1.0.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/humble/polygon_utils/1.0.2-1.tar.gz";
     name = "1.0.2-1.tar.gz";
     sha256 = "b54f35d9f5ffaf46684c6621270b5ae0f796b9298152bb8be3b4b7172a575cab";
   };

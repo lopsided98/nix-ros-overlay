@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-cob-utilities";
-  version = "0.7.15-r1";
+  version = "0.7.16-r2";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_utilities/0.7.15-1.tar.gz";
-    name = "0.7.15-1.tar.gz";
-    sha256 = "5f24c761bc9867f51771008d1d3cce67410168293d2e46322ce68dfdd5a97028";
+    url = "https://github.com/4am-robotics/cob_driver-release/archive/release/noetic/cob_utilities/0.7.16-2.tar.gz";
+    name = "0.7.16-2.tar.gz";
+    sha256 = "0319d8a97a3d1ed52fa1c232b50bee817758674fb3c75e6ec731311ea8f12970";
   };
 
   buildType = "catkin";

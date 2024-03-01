@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/PickNikRobotics/topic_based_ros2_control-release/archive/release/rolling/topic_based_ros2_control/0.2.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/topic_based_ros2_control-release/archive/release/rolling/topic_based_ros2_control/0.2.0-1.tar.gz";
     name = "0.2.0-1.tar.gz";
     sha256 = "226ec871a9053c7925d032d435e61aebd1128503d3f654dfa87812715e955b38";
   };

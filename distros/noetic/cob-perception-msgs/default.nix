@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-perception-msgs";
-  version = "0.6.19-r1";
+  version = "0.6.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/noetic/cob_perception_msgs/0.6.19-1.tar.gz";
-    name = "0.6.19-1.tar.gz";
-    sha256 = "c46c5760c1ea6f9494679c6673872abac8b25e4ea6b4f698263eacf2106cabaa";
+    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/noetic/cob_perception_msgs/0.6.20-1.tar.gz";
+    name = "0.6.20-1.tar.gz";
+    sha256 = "66aaf0f34199852386017120c3d71d09c0e6159ba84e0dcb08a74077b7195c5f";
   };
 
   buildType = "catkin";
