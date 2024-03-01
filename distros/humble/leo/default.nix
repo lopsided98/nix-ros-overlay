@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, leo-description, leo-msgs, leo-teleop }:
 buildRosPackage {
   pname = "ros-humble-leo";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/humble/leo/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "2466f7670b18809c81b1a2e6feb6924b8acc98535395c79c00276e6f75e4de55";
+    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/humble/leo/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "08c0214787b9d0018eeb512db91fef13a996d068d5b14efab6c381d86f53f08c";
   };
 
   buildType = "ament_cmake";

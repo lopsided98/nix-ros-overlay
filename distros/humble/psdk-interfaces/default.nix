@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, rosidl-default-generators, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-psdk-interfaces";
-  version = "0.0.5-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/psdk_ros2-release/archive/release/humble/psdk_interfaces/0.0.5-1.tar.gz";
-    name = "0.0.5-1.tar.gz";
-    sha256 = "70b4146d19b9a48951ddada7fb02a2286b9cb2ac404b364a89fded553884bb9e";
+    url = "https://github.com/ros2-gbp/psdk_ros2-release/archive/release/humble/psdk_interfaces/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "ddc90f3d3639fea9c3e1ee61f3eaafc4963603daaeceb2f03137db27d52ecf09";
   };
 
   buildType = "ament_cmake";

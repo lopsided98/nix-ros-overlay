@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, cv-bridge, diagnostic-updater, image-transport, message-filters, nav-msgs, rclcpp, rclcpp-components, rtabmap-conversions, rtabmap-msgs, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-rtabmap-sync";
-  version = "0.21.3-r1";
+  version = "0.21.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_sync/0.21.3-1.tar.gz";
-    name = "0.21.3-1.tar.gz";
-    sha256 = "d4de4ea580fdf82d2d90df4fe55079cd4223083b9c36ecc358e45fa3fb802874";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_sync/0.21.4-2.tar.gz";
+    name = "0.21.4-2.tar.gz";
+    sha256 = "b3bc8905a34fbbd21ebd15323f2b3c32e42fcfb740f2209dc1b8443058ae3589";
   };
 
   buildType = "ament_cmake";

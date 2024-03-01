@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, gazebo, gazebo-ros, gazebo-ros-control, hardware-interface, joint-limits-interface, pluginlib, roscpp, transmission-interface, urdf }:
 buildRosPackage {
   pname = "ros-noetic-cob-gazebo-ros-control";
-  version = "0.7.7-r1";
+  version = "0.7.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_gazebo_plugins-release/archive/release/noetic/cob_gazebo_ros_control/0.7.7-1.tar.gz";
-    name = "0.7.7-1.tar.gz";
-    sha256 = "fd49e81694642749589b62ad73957b9e4504ca1f3beb0b7350fb77e1440863db";
+    url = "https://github.com/ipa320/cob_gazebo_plugins-release/archive/release/noetic/cob_gazebo_ros_control/0.7.8-1.tar.gz";
+    name = "0.7.8-1.tar.gz";
+    sha256 = "6c371e511098efea6a90e2edda78d1c1dbc663a73f541f3e9490131ddd57a1c6";
   };
 
   buildType = "catkin";

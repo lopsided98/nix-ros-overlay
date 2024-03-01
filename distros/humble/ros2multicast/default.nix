@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, pythonPackages, ros2cli }:
 buildRosPackage {
   pname = "ros-humble-ros2multicast";
-  version = "0.18.8-r1";
+  version = "0.18.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/humble/ros2multicast/0.18.8-1.tar.gz";
-    name = "0.18.8-1.tar.gz";
-    sha256 = "e34d785f8a44925147e1d45b122bf807cc2949fc0fec227c2bb2c5e586a1d897";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/humble/ros2multicast/0.18.9-1.tar.gz";
+    name = "0.18.9-1.tar.gz";
+    sha256 = "1a98081682b169f6eb1a0e422f08eb751c4da12f030f567f94b341471d247946";
   };
 
   buildType = "ament_python";

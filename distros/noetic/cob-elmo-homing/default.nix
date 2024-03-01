@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, canopen-402, catkin, pluginlib, socketcan-interface }:
 buildRosPackage {
   pname = "ros-noetic-cob-elmo-homing";
-  version = "0.7.15-r1";
+  version = "0.7.16-r2";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_elmo_homing/0.7.15-1.tar.gz";
-    name = "0.7.15-1.tar.gz";
-    sha256 = "36d8c76a9e67b7ef718ea1dc7de40e716202a087a6ae13735bc1d2a497135a4a";
+    url = "https://github.com/4am-robotics/cob_driver-release/archive/release/noetic/cob_elmo_homing/0.7.16-2.tar.gz";
+    name = "0.7.16-2.tar.gz";
+    sha256 = "7e7d86ecf196b1a24deb2a8ba45a242041fa1722ece1f868deba1ae6ba434dee";
   };
 
   buildType = "catkin";

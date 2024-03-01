@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, care-o-bot-robot, care-o-bot-simulation, catkin, cob-manipulation, cob-navigation }:
 buildRosPackage {
   pname = "ros-noetic-care-o-bot";
-  version = "0.7.10-r1";
+  version = "0.7.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/care-o-bot-release/archive/release/noetic/care_o_bot/0.7.10-1.tar.gz";
-    name = "0.7.10-1.tar.gz";
-    sha256 = "3ad322ea442e98494b3f780a42850c527ab030814a83af8fcc3550176870f3db";
+    url = "https://github.com/ipa320/care-o-bot-release/archive/release/noetic/care_o_bot/0.7.11-1.tar.gz";
+    name = "0.7.11-1.tar.gz";
+    sha256 = "16fdee4ffb54d5d53be7ce975ef5961403dd1be803709ffaf31f352cbe2fecac";
   };
 
   buildType = "catkin";

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/MetroRobots-release/color_util-release/archive/release/humble/color_util/1.0.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/color_util-release/archive/release/humble/color_util/1.0.0-1.tar.gz";
     name = "1.0.0-1.tar.gz";
     sha256 = "ad88e72db74ed89e5ea85d0c4ecfe934ae1b990321de7927742260d02ad380b2";
   };

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, dbw-polaris-can, dbw-polaris-description, dbw-polaris-joystick-demo, dbw-polaris-msgs }:
 buildRosPackage {
   pname = "ros-humble-dbw-polaris";
-  version = "2.1.3-r1";
+  version = "2.1.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dbw_polaris/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "a301cbf2a3aec9e3da64bb2c0a201acf61dd96a5557e579e3e6d682e8c14795d";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dbw_polaris/2.1.10-1.tar.gz";
+    name = "2.1.10-1.tar.gz";
+    sha256 = "b705fd19952bbf393dc421269cd2572895b2689bc298efa3673bf9a4445e430e";
   };
 
   buildType = "ament_cmake";

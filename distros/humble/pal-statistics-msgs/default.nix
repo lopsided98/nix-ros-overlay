@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_statistics-release/archive/release/humble/pal_statistics_msgs/2.2.3-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pal_statistics-release/archive/release/humble/pal_statistics_msgs/2.2.3-1.tar.gz";
     name = "2.2.3-1.tar.gz";
     sha256 = "feb621751a41b1cbe76482b7880339b1cb0a8c548f1ff67729c99b2d1eddefaa";
   };

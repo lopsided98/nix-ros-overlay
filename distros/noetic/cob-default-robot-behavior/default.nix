@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-light, cob-script-server, python3Packages, rospy, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-cob-default-robot-behavior";
-  version = "0.7.9-r1";
+  version = "0.7.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_robots-release/archive/release/noetic/cob_default_robot_behavior/0.7.9-1.tar.gz";
-    name = "0.7.9-1.tar.gz";
-    sha256 = "879a26c1f54c4777ae57ce4ce505d150d80482b37342b34de93fd32bf5fb997f";
+    url = "https://github.com/ipa320/cob_robots-release/archive/release/noetic/cob_default_robot_behavior/0.7.10-1.tar.gz";
+    name = "0.7.10-1.tar.gz";
+    sha256 = "6b6dbe96750e89f81ebf55b583b14053c061d01a3670d100810e5cae9a63c124";
   };
 
   buildType = "catkin";

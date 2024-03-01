@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-canopen-motor, cob-generic-can, cob-utilities, control-msgs, diagnostic-msgs, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-cob-base-drive-chain";
-  version = "0.7.15-r1";
+  version = "0.7.16-r2";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_base_drive_chain/0.7.15-1.tar.gz";
-    name = "0.7.15-1.tar.gz";
-    sha256 = "39a6faa136253910301a986ad33e4edc807e34aa07bb49d565e465164109e205";
+    url = "https://github.com/4am-robotics/cob_driver-release/archive/release/noetic/cob_base_drive_chain/0.7.16-2.tar.gz";
+    name = "0.7.16-2.tar.gz";
+    sha256 = "ca0c8ccd2605670b866c4f377a3f1d95a74fcbcaeb1759d0ae535665ac18d736";
   };
 
   buildType = "catkin";

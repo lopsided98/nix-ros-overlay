@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/mqtt_client-release/archive/release/humble/mqtt_client_interfaces/2.2.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/mqtt_client-release/archive/release/humble/mqtt_client_interfaces/2.2.0-1.tar.gz";
     name = "2.2.0-1.tar.gz";
     sha256 = "0c250c21ab149d4801d3ea6c5b43f062a532c70ce793df25d10425d85f44f0e9";
   };

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/MetroRobots-release/color_util-release/archive/release/rolling/color_util/1.0.0-2.tar.gz";
+    url = "https://github.com/ros2-gbp/color_util-release/archive/release/rolling/color_util/1.0.0-2.tar.gz";
     name = "1.0.0-2.tar.gz";
     sha256 = "b198e816837b6e32fed161596f19e48b069d321fc038f747b41febeeebd97a02";
   };

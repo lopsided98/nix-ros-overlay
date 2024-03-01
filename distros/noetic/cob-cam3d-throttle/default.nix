@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-filters, nodelet, pluginlib, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-cam3d-throttle";
-  version = "0.6.19-r1";
+  version = "0.6.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/noetic/cob_cam3d_throttle/0.6.19-1.tar.gz";
-    name = "0.6.19-1.tar.gz";
-    sha256 = "3401f950f372a490fe11b3128a01e9b531d1f6a5c6c1ed27d0ddefdbd76acac0";
+    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/noetic/cob_cam3d_throttle/0.6.20-1.tar.gz";
+    name = "0.6.20-1.tar.gz";
+    sha256 = "a5da7ca9b1e883d314d39a47a695296224cd8fcc7af5ee902a6d654414bc5e43";
   };
 
   buildType = "catkin";

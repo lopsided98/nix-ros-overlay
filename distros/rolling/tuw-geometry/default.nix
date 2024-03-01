@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.0.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/tuw-robotics/tuw_geometry-release/archive/release/rolling/tuw_geometry/0.0.7-2.tar.gz";
+    url = "https://github.com/ros2-gbp/tuw_geometry-release/archive/release/rolling/tuw_geometry/0.0.7-2.tar.gz";
     name = "0.0.7-2.tar.gz";
     sha256 = "de41212d3c5d7b39a51e69098aaff89793edf155ba35d104f5fa23dc5031ad16";
   };

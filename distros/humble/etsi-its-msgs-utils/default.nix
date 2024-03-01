@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-msgs, geographiclib, geometry-msgs, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-msgs-utils";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/humble/etsi_its_msgs_utils/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "a0598452aae44187351d12be0b311292beb2dc4b5aa9a217112f0f360cb802b6";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/humble/etsi_its_msgs_utils/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "31650c8e148315444985a5a2372fb0f1e5b06cb4f2ae0b72bb395ea55ab5fe0f";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, boost, catkin, diagnostic-msgs, message-generation, message-runtime, roscpp, rospy, sensor-msgs, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-light";
-  version = "0.7.15-r1";
+  version = "0.7.16-r2";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_driver-release/archive/release/noetic/cob_light/0.7.15-1.tar.gz";
-    name = "0.7.15-1.tar.gz";
-    sha256 = "c014084a6122454fb9ae684fd062a7d3fd348eb192332d312574dba3dd916b23";
+    url = "https://github.com/4am-robotics/cob_driver-release/archive/release/noetic/cob_light/0.7.16-2.tar.gz";
+    name = "0.7.16-2.tar.gz";
+    sha256 = "fdd17b8194f1510ee67d2a724e6803c0c40210d8c0a601bada0c492327e9d2db";
   };
 
   buildType = "catkin";

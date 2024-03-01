@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, cv-bridge, grid-map-core, gtsam, libg2o, libpointmatcher, octomap, pcl, proj, qt-gui-cpp, sqlite, zlib }:
 buildRosPackage {
   pname = "ros-iron-rtabmap";
-  version = "0.21.3-r1";
+  version = "0.21.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rtabmap-release/archive/release/iron/rtabmap/0.21.3-1.tar.gz";
-    name = "0.21.3-1.tar.gz";
-    sha256 = "0fb6717aadc2f6e31618af30c62f776dfa2bbd48a461b3f98457ea9e846189d7";
+    url = "https://github.com/ros2-gbp/rtabmap-release/archive/release/iron/rtabmap/0.21.4-1.tar.gz";
+    name = "0.21.4-1.tar.gz";
+    sha256 = "dffc7ce0e7b719eda612f943a06f4239774bd325f38e09cc80807f27627d4741";
   };
 
   buildType = "cmake";

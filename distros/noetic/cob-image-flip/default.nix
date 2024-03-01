@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-perception-msgs, cv-bridge, geometry-msgs, image-transport, nodelet, pcl-conversions, pcl-ros, pluginlib, roscpp, sensor-msgs, stereo-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-cob-image-flip";
-  version = "0.6.19-r1";
+  version = "0.6.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/noetic/cob_image_flip/0.6.19-1.tar.gz";
-    name = "0.6.19-1.tar.gz";
-    sha256 = "c99621835873ca678c8ae4e5311c5667f66c9f142a97f310d058604319a09ac8";
+    url = "https://github.com/ipa320/cob_perception_common-release/archive/release/noetic/cob_image_flip/0.6.20-1.tar.gz";
+    name = "0.6.20-1.tar.gz";
+    sha256 = "c99f87ee9d87adfee1567f54c9d6330772cfcb3f7474b4b1b2972f16e36c8fe3";
   };
 
   buildType = "catkin";

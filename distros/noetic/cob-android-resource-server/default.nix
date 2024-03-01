@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages, rospy }:
 buildRosPackage {
   pname = "ros-noetic-cob-android-resource-server";
-  version = "0.1.10-r1";
+  version = "0.1.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_android-release/archive/release/noetic/cob_android_resource_server/0.1.10-1.tar.gz";
-    name = "0.1.10-1.tar.gz";
-    sha256 = "259bfab83811916e28ae201e2bb4aeb2961509844c722584b375203ebb8c5697";
+    url = "https://github.com/ipa320/cob_android-release/archive/release/noetic/cob_android_resource_server/0.1.11-1.tar.gz";
+    name = "0.1.11-1.tar.gz";
+    sha256 = "8eeb703192d3797253e9274cd320826d7e271a7cb28cd8a49955c0e07bf9ef25";
   };
 
   buildType = "catkin";

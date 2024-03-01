@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-mypy, ament-pep257, caret-analyze, caret-msgs, python3Packages, pythonPackages, ros2cli, tracetools-trace }:
 buildRosPackage {
   pname = "ros-humble-ros2caret";
-  version = "0.5.0-r2";
+  version = "0.5.0-r6";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2caret-release/archive/release/humble/ros2caret/0.5.0-2.tar.gz";
-    name = "0.5.0-2.tar.gz";
-    sha256 = "41bc5103018749665db80182249d8fd56e94bb41977ad94faca5ea0ace470a7a";
+    url = "https://github.com/ros2-gbp/ros2caret-release/archive/release/humble/ros2caret/0.5.0-6.tar.gz";
+    name = "0.5.0-6.tar.gz";
+    sha256 = "2902914f68a199160d89197fd79676105840912ba1768680f35518d6bd933d7c";
   };
 
   buildType = "ament_python";

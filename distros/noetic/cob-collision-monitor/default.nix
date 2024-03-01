@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-moveit-config, moveit-ros-move-group, moveit-ros-planning, pluginlib, std-msgs, tf, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-cob-collision-monitor";
-  version = "0.7.8-r1";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/noetic/cob_collision_monitor/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "48e150ed386f0e2257436a253cef0d68a0fba5b27af97fc97156e15621f17054";
+    url = "https://github.com/ipa320/cob_manipulation-release/archive/release/noetic/cob_collision_monitor/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "07f518d6a61c83e9e24376471a6f26c9d076719c1d2ef72007d1cde3dcebe4d1";
   };
 
   buildType = "catkin";

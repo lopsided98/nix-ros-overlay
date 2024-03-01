@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, robot-state-publisher, urdf, xacro }:
 buildRosPackage {
   pname = "ros-iron-flir-camera-description";
-  version = "2.0.8-r1";
+  version = "2.0.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/flir_camera_driver-release/archive/release/iron/flir_camera_description/2.0.8-1.tar.gz";
-    name = "2.0.8-1.tar.gz";
-    sha256 = "1652cb642467a8946af3f44e25a410880114cc95fcf35b3a30d0a7b4e492f629";
+    url = "https://github.com/ros-drivers-gbp/flir_camera_driver-release/archive/release/iron/flir_camera_description/2.0.8-2.tar.gz";
+    name = "2.0.8-2.tar.gz";
+    sha256 = "c28fdb71a7c4a82b6befe799881c635a7e9e360a7629da25a7c7909b54de09cf";
   };
 
   buildType = "ament_cmake";

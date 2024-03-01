@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-opengm";
-  version = "0.6.18-r1";
+  version = "0.6.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ipa320/cob_extern-release/archive/release/noetic/opengm/0.6.18-1.tar.gz";
-    name = "0.6.18-1.tar.gz";
-    sha256 = "5c29a653bbc69cc079bdf853a7298bb82844abc10dd215b66374c60b697eb128";
+    url = "https://github.com/ipa320/cob_extern-release/archive/release/noetic/opengm/0.6.19-1.tar.gz";
+    name = "0.6.19-1.tar.gz";
+    sha256 = "9b00f306a7dd60054b32b0b9e24d6eed80eafed6c2910d6075e4c757bccc6656";
   };
 
   buildType = "catkin";

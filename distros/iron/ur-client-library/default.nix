@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake }:
 buildRosPackage {
   pname = "ros-iron-ur-client-library";
-  version = "1.3.4-r1";
+  version = "1.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/iron/ur_client_library/1.3.4-1.tar.gz";
-    name = "1.3.4-1.tar.gz";
-    sha256 = "c7461f5a5f2c0158423d146358c4002b096551cf273b706b53219355d1830de8";
+    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/iron/ur_client_library/1.3.5-1.tar.gz";
+    name = "1.3.5-1.tar.gz";
+    sha256 = "962cc2773eaa3038bd8124e2e5be06021dfccef42dd2babbae88a19617fd9539";
   };
 
   buildType = "cmake";

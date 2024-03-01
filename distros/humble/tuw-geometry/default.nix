@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/tuw-robotics/tuw_geometry-release/archive/release/humble/tuw_geometry/0.1.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/tuw_geometry-release/archive/release/humble/tuw_geometry/0.1.1-1.tar.gz";
     name = "0.1.1-1.tar.gz";
     sha256 = "ead05b67d7d43c49d5bcfef73f5db67b4a81389db907feef1c64670d231e6faa";
   };
