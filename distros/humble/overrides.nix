@@ -108,18 +108,6 @@ in with lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.ros-environment ];
   });
 
-  rcpputils = rosSuper.rcpputils.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Add missing cstdint include
-      (self.fetchpatch {
-        url = "https://github.com/ros2/rcpputils/commit/f96811a9047fa6a084a885219c88b415bc544487.patch";
-        hash = "sha256-NwKFHiRlvy6E3WjaJYykOqafLTEw75OUm+id540AcRQ=";
-      })
-    ];
-  });
-
   rosbag2-compression = rosSuper.rosbag2-compression.overrideAttrs ({
     patches ? [], ...
   }: {
