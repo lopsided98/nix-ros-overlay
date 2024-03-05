@@ -94,6 +94,14 @@ in with lib; {
     };
   };
 
+  moveit-kinematics = rosSuper.moveit-kinematics.overrideAttrs ({
+    propagatedBuildInputs ? [], ...
+  }: {
+    # Added upstream in 2.7.2
+    # https://github.com/ros-planning/moveit2/pull/2109
+    propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.moveit-ros-planning ];
+  });
+
   plotjuggler-ros = rosSuper.plotjuggler-ros.overrideAttrs ({
     patches ? [], nativeBuildInputs ? [], ...
   }: {
