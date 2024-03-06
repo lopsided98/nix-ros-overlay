@@ -40,3 +40,4 @@ jobs:
       with:
         root-attribute: '${{ matrix.distro }}'
         system: '${{ matrix.system }}'
+        parallelism: 4
