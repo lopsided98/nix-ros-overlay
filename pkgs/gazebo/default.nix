@@ -5,6 +5,7 @@
 , ignition-common ? ignition.common, ignition-math ? ignition.math4
 , ignition-transport ? ignition.transport8, ignition-msgs ? ignition.msgs5
 , ignition-fuel-tools ? ignition.fuel-tools4
+, wrapGAppsHook
 
 , bullet, withBulletEngineSupport ? false }:
 
@@ -21,7 +22,7 @@ mkDerivation rec {
 
   cmakeFlags = [ "-DUSE_HOST_CFLAGS=False" ];
 
-  nativeBuildInputs = [ cmake pkg-config ronn ];
+  nativeBuildInputs = [ cmake pkg-config ronn wrapGAppsHook ];
 
   buildInputs = [
     libGL
