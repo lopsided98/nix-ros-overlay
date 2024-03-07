@@ -54,7 +54,7 @@ function query(name, drvPath) {
 exports.query = query;
 function push(name, paths) {
     return __awaiter(this, void 0, void 0, function* () {
-        yield execFile('cachix', ['--compression-method', 'zstd', 'push', name].concat(paths));
+        yield execFile('cachix', ['push', name].concat(paths));
     });
 }
 exports.push = push;

@@ -12,5 +12,5 @@ export async function query(name: string, drvPath: string) {
 }
 
 export async function push(name: string, paths: string[]) {
-    await execFile('cachix', ['--compression-method', 'zstd', 'push', name].concat(paths))
+    await execFile('cachix', ['push', name].concat(paths))
 }
