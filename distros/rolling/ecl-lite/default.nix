@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-config, ecl-converters-lite, ecl-errors, ecl-io, ecl-sigslots-lite, ecl-time-lite }:
 buildRosPackage {
   pname = "ros-rolling-ecl-lite";
-  version = "1.2.0-r3";
+  version = "1.2.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ecl_lite-release/archive/release/rolling/ecl_lite/1.2.0-3.tar.gz";
-    name = "1.2.0-3.tar.gz";
-    sha256 = "62c843f681efa4219b541633a23658150018124655c493771959a368389d41a7";
+    url = "https://github.com/ros2-gbp/ecl_lite-release/archive/release/rolling/ecl_lite/1.2.0-4.tar.gz";
+    name = "1.2.0-4.tar.gz";
+    sha256 = "beb1e706a96b8d2d38b4994484a320e888f43cb689ad225472b0b4b941e7e7bb";
   };
 
   buildType = "ament_cmake";

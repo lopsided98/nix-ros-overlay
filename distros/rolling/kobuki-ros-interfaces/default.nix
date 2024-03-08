@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-kobuki-ros-interfaces";
-  version = "1.0.0-r3";
+  version = "1.0.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kobuki_ros_interfaces-release/archive/release/rolling/kobuki_ros_interfaces/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "691448752239cd8c962dae3d12cf6a1efa4830ef2bae753ce4da5c0e10c56eda";
+    url = "https://github.com/ros2-gbp/kobuki_ros_interfaces-release/archive/release/rolling/kobuki_ros_interfaces/1.0.0-4.tar.gz";
+    name = "1.0.0-4.tar.gz";
+    sha256 = "89aa1f049b537365cb996a1d2fa7fe7c2e53ad45f5b7103c5f2de4f5bcec5027";
   };
 
   buildType = "ament_cmake";

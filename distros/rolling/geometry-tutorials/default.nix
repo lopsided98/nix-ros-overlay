@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-geometry-tutorials";
-  version = "0.3.6-r3";
+  version = "0.3.6-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/rolling/geometry_tutorials/0.3.6-3.tar.gz";
-    name = "0.3.6-3.tar.gz";
-    sha256 = "8e9db0efd24fa8eb16d01f09195a23471bbea0d798e092d098966d06a658ca80";
+    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/rolling/geometry_tutorials/0.3.6-4.tar.gz";
+    name = "0.3.6-4.tar.gz";
+    sha256 = "0a13b606f87ab55ccd622891bf038784189f86a808e74800b96e6a47c0d16a74";
   };
 
   buildType = "ament_cmake";

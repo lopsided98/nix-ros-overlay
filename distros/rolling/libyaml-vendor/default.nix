@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-vendor-package, ament-lint-auto, ament-lint-common, libyaml, performance-test-fixture, pkg-config }:
 buildRosPackage {
   pname = "ros-rolling-libyaml-vendor";
-  version = "1.6.2-r1";
+  version = "1.6.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libyaml_vendor-release/archive/release/rolling/libyaml_vendor/1.6.2-1.tar.gz";
-    name = "1.6.2-1.tar.gz";
-    sha256 = "6b3024b4e45abc38e60bb671b428220844a5f4fec99620a90a7f5f2b4169b389";
+    url = "https://github.com/ros2-gbp/libyaml_vendor-release/archive/release/rolling/libyaml_vendor/1.6.2-2.tar.gz";
+    name = "1.6.2-2.tar.gz";
+    sha256 = "e88390c3a83bb3886d666882ac31adf5e3d41feb113dfd5eadf8764bedae4c9a";
   };
 
   buildType = "ament_cmake";

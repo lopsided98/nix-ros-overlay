@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-ament-nodl";
-  version = "0.1.0-r5";
+  version = "0.1.0-r6";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_nodl-release/archive/release/rolling/ament_nodl/0.1.0-5.tar.gz";
-    name = "0.1.0-5.tar.gz";
-    sha256 = "3d07b6056921c918ad2def2c44650aea9fd578a6234bb3505a4a382d18e511df";
+    url = "https://github.com/ros2-gbp/ament_nodl-release/archive/release/rolling/ament_nodl/0.1.0-6.tar.gz";
+    name = "0.1.0-6.tar.gz";
+    sha256 = "3e53a43fdca6814bf8a0c8ca1c09e874920cfd5dfd755e47bab21f55557213ea";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-uncrustify, ament-index-python, ament-lint-auto, builtin-interfaces, launch-ros, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-lifecycle, ros2run, system-modes-msgs }:
 buildRosPackage {
   pname = "ros-rolling-system-modes";
-  version = "0.9.0-r4";
+  version = "0.9.0-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/system_modes-release/archive/release/rolling/system_modes/0.9.0-4.tar.gz";
-    name = "0.9.0-4.tar.gz";
-    sha256 = "a6be90288d9e10b4a9c08b3620c1f4b2226f56641203d741e36f41279b47d22b";
+    url = "https://github.com/ros2-gbp/system_modes-release/archive/release/rolling/system_modes/0.9.0-5.tar.gz";
+    name = "0.9.0-5.tar.gz";
+    sha256 = "9f95154b4277c8d3482a2b4e24c253b9861cff38f445e0c182a964bd8d2f886d";
   };
 
   buildType = "ament_cmake";

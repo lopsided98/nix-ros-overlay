@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-examples-rclpy-executors";
-  version = "0.19.1-r1";
+  version = "0.19.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/rolling/examples_rclpy_executors/0.19.1-1.tar.gz";
-    name = "0.19.1-1.tar.gz";
-    sha256 = "c7212673e58f1595a4660aa5644c296cb118510427a4aa80f33d4f7e3aca9fe6";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/rolling/examples_rclpy_executors/0.19.1-2.tar.gz";
+    name = "0.19.1-2.tar.gz";
+    sha256 = "a921513f818f08f4ec309e529121bccf2dd1ff6c4f5e1a67c7e5544025b0d354";
   };
 
   buildType = "ament_python";

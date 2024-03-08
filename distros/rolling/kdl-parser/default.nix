@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, orocos-kdl-vendor, rcutils, urdf, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-rolling-kdl-parser";
-  version = "2.11.0-r1";
+  version = "2.11.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kdl_parser-release/archive/release/rolling/kdl_parser/2.11.0-1.tar.gz";
-    name = "2.11.0-1.tar.gz";
-    sha256 = "3eb354ada04acb3ff1efc4c98617c76dfe538c129df3a422ebc221ab1dce6c40";
+    url = "https://github.com/ros2-gbp/kdl_parser-release/archive/release/rolling/kdl_parser/2.11.0-2.tar.gz";
+    name = "2.11.0-2.tar.gz";
+    sha256 = "9998cc38377ff9c76986fe2c7c3871a4a82f8758da27371028aa64af4ea42dfd";
   };
 
   buildType = "ament_cmake";

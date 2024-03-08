@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-automotive-platform-msgs";
-  version = "3.0.4-r4";
+  version = "3.0.4-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/automotive_autonomy_msgs-release/archive/release/rolling/automotive_platform_msgs/3.0.4-4.tar.gz";
-    name = "3.0.4-4.tar.gz";
-    sha256 = "f2005ab99d5e54aae8ed1658967a56b0a9f03ba43638653483c154d7a47ab647";
+    url = "https://github.com/ros2-gbp/automotive_autonomy_msgs-release/archive/release/rolling/automotive_platform_msgs/3.0.4-5.tar.gz";
+    name = "3.0.4-5.tar.gz";
+    sha256 = "5b85b92bdc93e768c20f4e9864ce34c43e546a64e8fb472b57922fa8f077d2a4";
   };
 
   buildType = "ament_cmake";

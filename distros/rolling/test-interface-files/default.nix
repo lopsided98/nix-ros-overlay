@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-rolling-test-interface-files";
-  version = "0.11.0-r1";
+  version = "0.11.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/test_interface_files-release/archive/release/rolling/test_interface_files/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "6b79658933b56d880528d130f381ef63c087b6f02d4320f3a3f53762d67454c3";
+    url = "https://github.com/ros2-gbp/test_interface_files-release/archive/release/rolling/test_interface_files/0.11.0-2.tar.gz";
+    name = "0.11.0-2.tar.gz";
+    sha256 = "6b5ec41e7b80fb41be0885f05f5c82376c1e413ef6aedf47ba1cc773bbe4a359";
   };
 
   buildType = "ament_cmake";

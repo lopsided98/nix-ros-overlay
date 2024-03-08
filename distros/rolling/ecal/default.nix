@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, protobuf }:
 buildRosPackage {
   pname = "ros-rolling-ecal";
-  version = "5.12.0-r3";
+  version = "5.12.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ecal-release/archive/release/rolling/ecal/5.12.0-3.tar.gz";
-    name = "5.12.0-3.tar.gz";
-    sha256 = "758854bdada0eae5f04657c8e6056a19dde85cee23f0064c24ed90fa7fba8b89";
+    url = "https://github.com/ros2-gbp/ecal-release/archive/release/rolling/ecal/5.12.0-4.tar.gz";
+    name = "5.12.0-4.tar.gz";
+    sha256 = "2172df2f2570a0594900ad09a7cded393b1fd16e1d53256c2865037eda3a5ce1";
   };
 
   buildType = "cmake";

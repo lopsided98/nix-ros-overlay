@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-resources-prbt-ikfast-manipulator-plugin, moveit-resources-prbt-moveit-config, moveit-resources-prbt-support, xacro }:
 buildRosPackage {
   pname = "ros-rolling-moveit-resources-prbt-pg70-support";
-  version = "2.9.0-r1";
+  version = "2.9.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_resources_prbt_pg70_support/2.9.0-1.tar.gz";
-    name = "2.9.0-1.tar.gz";
-    sha256 = "82244bf1199759e902c926e851ed7e2af070401f192b06d3babadc33d237e663";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_resources_prbt_pg70_support/2.9.0-2.tar.gz";
+    name = "2.9.0-2.tar.gz";
+    sha256 = "0fb2d59e6a53e3da9f5bfd9bcec2e54d5de06a35d99b8fe31ef3211e171734b6";
   };
 
   buildType = "ament_cmake";

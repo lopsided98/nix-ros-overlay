@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/iron/rcgcrd_spl_4/3.1.0-1.tar.gz";
     name = "3.1.0-1.tar.gz";
-    sha256 = "431c596062f7e8d5122155d7406d47fe4578891f1f6f652d9142bfa03f470d82";
+    sha256 = "e5395eaa511f9f7c5e78d3ffbc9dfad3517393e6f43287565ac0c640b5934239";
   };
 
   buildType = "ament_cmake";

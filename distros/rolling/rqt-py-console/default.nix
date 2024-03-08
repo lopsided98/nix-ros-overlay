@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, python-qt-binding, pythonPackages, qt-gui, qt-gui-py-common, rclpy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-rolling-rqt-py-console";
-  version = "1.2.2-r1";
+  version = "1.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_py_console-release/archive/release/rolling/rqt_py_console/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "905f4f3f4ae3a6ab51cc70dacccd9bf5a195f164e6dc3bd899b98a957548978c";
+    url = "https://github.com/ros2-gbp/rqt_py_console-release/archive/release/rolling/rqt_py_console/1.2.2-2.tar.gz";
+    name = "1.2.2-2.tar.gz";
+    sha256 = "2ec19d9ad87126a31ae292b23a10b218cd144f78ffdc9b694189001f93dd8ce3";
   };
 
   buildType = "ament_python";

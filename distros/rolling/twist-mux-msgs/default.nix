@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-twist-mux-msgs";
-  version = "3.0.1-r1";
+  version = "3.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/twist_mux_msgs-release/archive/release/rolling/twist_mux_msgs/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "22e1ea6473d541c8010735fe004a6a4b5d9ec1a94d20a9e4232ecbe5e0d959af";
+    url = "https://github.com/ros2-gbp/twist_mux_msgs-release/archive/release/rolling/twist_mux_msgs/3.0.1-2.tar.gz";
+    name = "3.0.1-2.tar.gz";
+    sha256 = "31d286bb3ea9e37610aec34c0bb29763c896410b68bdd93d88abeb2d1fc2e96a";
   };
 
   buildType = "ament_cmake";

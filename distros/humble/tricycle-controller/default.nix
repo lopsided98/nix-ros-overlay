@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ackermann-msgs, ament-cmake, ament-cmake-gmock, backward-ros, builtin-interfaces, controller-interface, controller-manager, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-test-assets, std-srvs, tf2, tf2-msgs }:
+{ lib, buildRosPackage, fetchurl, ackermann-msgs, ament-cmake, ament-cmake-gmock, backward-ros, builtin-interfaces, controller-interface, controller-manager, geometry-msgs, hardware-interface, hardware-interface-testing, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-test-assets, std-srvs, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-humble-tricycle-controller";
-  version = "2.32.0-r1";
+  version = "2.33.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/tricycle_controller/2.32.0-1.tar.gz";
-    name = "2.32.0-1.tar.gz";
-    sha256 = "60c4cb6266742d033737ba97f1905e2bc7c814bf80aaad8893aaafa04e5d38ac";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/tricycle_controller/2.33.0-1.tar.gz";
+    name = "2.33.0-1.tar.gz";
+    sha256 = "3f89550f6515b24b0f8dd755c0074172a8a4fe76edb3dfe35a74fb798d00a7d5";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gmock controller-manager ros2-control-test-assets ];
+  checkInputs = [ ament-cmake-gmock controller-manager hardware-interface-testing ros2-control-test-assets ];
   propagatedBuildInputs = [ ackermann-msgs backward-ros builtin-interfaces controller-interface geometry-msgs hardware-interface nav-msgs pluginlib rclcpp rclcpp-lifecycle rcpputils realtime-tools std-srvs tf2 tf2-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

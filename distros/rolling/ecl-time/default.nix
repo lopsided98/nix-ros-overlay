@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ecl-build, ecl-config, ecl-errors, ecl-exceptions, ecl-license, ecl-time-lite }:
 buildRosPackage {
   pname = "ros-rolling-ecl-time";
-  version = "1.2.1-r3";
+  version = "1.2.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ecl_core-release/archive/release/rolling/ecl_time/1.2.1-3.tar.gz";
-    name = "1.2.1-3.tar.gz";
-    sha256 = "86ea33ca71cd2d4d3a2ef731879ae143a0816148e91735bac3e6829a512dd5e4";
+    url = "https://github.com/ros2-gbp/ecl_core-release/archive/release/rolling/ecl_time/1.2.1-4.tar.gz";
+    name = "1.2.1-4.tar.gz";
+    sha256 = "d17e3b4e2c720d1f076534d5ace763f580c2aa085b6ac9582617963c7cc2d0a3";
   };
 
   buildType = "ament_cmake";

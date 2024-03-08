@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, rclcpp, soccer-object-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-soccer-marker-generation";
-  version = "0.1.0-r2";
+  version = "0.1.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/soccer_visualization-release/archive/release/rolling/soccer_marker_generation/0.1.0-2.tar.gz";
-    name = "0.1.0-2.tar.gz";
-    sha256 = "2518d956c1af9b5a59e91fa7e5f1114dbc8e7fb50aee1670743dbcea8df0ce2d";
+    url = "https://github.com/ros2-gbp/soccer_visualization-release/archive/release/rolling/soccer_marker_generation/0.1.0-3.tar.gz";
+    name = "0.1.0-3.tar.gz";
+    sha256 = "d1d1e783fa492805aea580151cd623d94e2fa03dcd5577a88411faa5ec93e57b";
   };
 
   buildType = "ament_cmake";

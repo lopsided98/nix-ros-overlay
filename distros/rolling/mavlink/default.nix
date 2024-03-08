@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake, python3, python3Packages, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-mavlink";
-  version = "2023.9.9-r1";
+  version = "2023.9.9-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavlink-gbp-release/archive/release/rolling/mavlink/2023.9.9-1.tar.gz";
-    name = "2023.9.9-1.tar.gz";
-    sha256 = "79707b60d6c8cd1ee4044d805cb5386d8da18bdf509dc9366bf1707e5eac1824";
+    url = "https://github.com/ros2-gbp/mavlink-gbp-release/archive/release/rolling/mavlink/2023.9.9-2.tar.gz";
+    name = "2023.9.9-2.tar.gz";
+    sha256 = "4f30675d00bc61c49f9310634d7eef09644f06c0d9b8f3c0aa3b6df7d2a805b7";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, ament-lint-auto, ament-lint-common, fastcdr, rcpputils, rcutils, rmw, rmw-dds-common, rosidl-runtime-c, rosidl-runtime-cpp, rosidl-typesupport-fastrtps-c, rosidl-typesupport-fastrtps-cpp, rosidl-typesupport-introspection-c, rosidl-typesupport-introspection-cpp, rti-connext-dds-cmake-module, tracetools }:
 buildRosPackage {
   pname = "ros-rolling-rmw-connextdds-common";
-  version = "0.20.0-r1";
+  version = "0.20.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_connextdds-release/archive/release/rolling/rmw_connextdds_common/0.20.0-1.tar.gz";
-    name = "0.20.0-1.tar.gz";
-    sha256 = "a6a7dfd8f21c1d158e0aa02dd3e811ea89d4812064ae33ee8a0e34667da6d6fc";
+    url = "https://github.com/ros2-gbp/rmw_connextdds-release/archive/release/rolling/rmw_connextdds_common/0.20.0-2.tar.gz";
+    name = "0.20.0-2.tar.gz";
+    sha256 = "e816a343d5556277d77224663ba95f97bdf83986cce4425561eac90505b058d9";
   };
 
   buildType = "ament_cmake";

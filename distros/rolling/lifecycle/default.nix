@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, lifecycle-msgs, rclcpp, rclcpp-lifecycle, ros-testing, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-lifecycle";
-  version = "0.33.1-r1";
+  version = "0.33.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/lifecycle/0.33.1-1.tar.gz";
-    name = "0.33.1-1.tar.gz";
-    sha256 = "03735239bd74aba88afc1d44937b4010578422783c4d32d8f5aace52bd6a2ea2";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/lifecycle/0.33.1-2.tar.gz";
+    name = "0.33.1-2.tar.gz";
+    sha256 = "e5b8c977fd47b86550a5fd0cc70fc7c4f3cde5c46e6264d765f09b2eee38a87b";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-index-python, python3Packages, pythonPackages, rclpy, xacro }:
 buildRosPackage {
   pname = "ros-rolling-launch-param-builder";
-  version = "0.1.1-r2";
+  version = "0.1.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch_param_builder-release/archive/release/rolling/launch_param_builder/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "1d5892fd11f1dee62da2f9d5663b0947165600453e45e3233f5321774db1fb81";
+    url = "https://github.com/ros2-gbp/launch_param_builder-release/archive/release/rolling/launch_param_builder/0.1.1-3.tar.gz";
+    name = "0.1.1-3.tar.gz";
+    sha256 = "399e0c8b2cf4104cb87c5406a499f11e555e5b5d6163f0c2700f84de1b5ad25e";
   };
 
   buildType = "ament_python";

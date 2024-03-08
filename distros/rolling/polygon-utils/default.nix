@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, polygon-msgs }:
 buildRosPackage {
   pname = "ros-rolling-polygon-utils";
-  version = "1.0.2-r1";
+  version = "1.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/rolling/polygon_utils/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "4f1a64249d943c18684fb0c7e5c605537ee16d347165083a9a5bc9258402cdfa";
+    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/rolling/polygon_utils/1.0.2-2.tar.gz";
+    name = "1.0.2-2.tar.gz";
+    sha256 = "21a1b229e087cbcc0b60af797466e4f990f2bb6a15b0e58e1ecfe544b74c6613";
   };
 
   buildType = "ament_cmake";

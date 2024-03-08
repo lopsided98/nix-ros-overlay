@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-actuator-msgs";
-  version = "0.0.1-r2";
+  version = "0.0.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/actuator_msgs-release/archive/release/rolling/actuator_msgs/0.0.1-2.tar.gz";
-    name = "0.0.1-2.tar.gz";
-    sha256 = "b6a5e5259d6696f1967b0883cc0224719111afa231ca0689871369beb4e97fe9";
+    url = "https://github.com/ros2-gbp/actuator_msgs-release/archive/release/rolling/actuator_msgs/0.0.1-3.tar.gz";
+    name = "0.0.1-3.tar.gz";
+    sha256 = "69b745674db32e24ab628ea804c55385024306dd50dfbaf784f2bf2341b698f8";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, launch-xml, rmf-visualization-building-systems, rmf-visualization-fleet-states, rmf-visualization-floorplans, rmf-visualization-navgraphs, rmf-visualization-obstacles, rmf-visualization-rviz2-plugins, rmf-visualization-schedule }:
 buildRosPackage {
   pname = "ros-rolling-rmf-visualization";
-  version = "2.2.1-r1";
+  version = "2.2.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/rolling/rmf_visualization/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "35fd3f3080bca7b539517cc60ea719dd620d77387bca745fff4dccd9c4c77f67";
+    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/rolling/rmf_visualization/2.2.1-2.tar.gz";
+    name = "2.2.1-2.tar.gz";
+    sha256 = "8fe3ff1f13ea3a6dbe15098845a02e504ab004406c32683e89d0698a6e017e46";
   };
 
   buildType = "ament_cmake";

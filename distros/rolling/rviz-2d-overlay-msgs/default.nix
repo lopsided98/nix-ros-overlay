@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rviz-2d-overlay-msgs";
-  version = "1.3.0-r1";
+  version = "1.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz_2d_overlay_plugins-release/archive/release/rolling/rviz_2d_overlay_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "0e8eddbb74c82997a841c5e7d1df1c64d5d0aef5a66eebc6e0c0625adb80b74d";
+    url = "https://github.com/ros2-gbp/rviz_2d_overlay_plugins-release/archive/release/rolling/rviz_2d_overlay_msgs/1.3.0-2.tar.gz";
+    name = "1.3.0-2.tar.gz";
+    sha256 = "39df394a75cce7c429163303ab52d81528ba0383ceae61e3a4dd6da7b8cb2927";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components, sdl2-vendor, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-joy";
-  version = "3.3.0-r1";
+  version = "3.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/rolling/joy/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "02e1a15babd1d9460302ea1dfc2fe2392a5eca59e2c76387bae99785d7139274";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/rolling/joy/3.3.0-2.tar.gz";
+    name = "3.3.0-2.tar.gz";
+    sha256 = "506b628013f98cc7102f2ab19d684c170d82398473a561a25e37db7f95a82838";
   };
 
   buildType = "ament_cmake";

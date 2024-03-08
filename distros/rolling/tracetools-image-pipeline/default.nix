@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, pkg-config }:
 buildRosPackage {
   pname = "ros-rolling-tracetools-image-pipeline";
-  version = "5.0.0-r1";
+  version = "5.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/tracetools_image_pipeline/5.0.0-1.tar.gz";
-    name = "5.0.0-1.tar.gz";
-    sha256 = "50c0d7e4f0392d9346e88f954505203d88425d50be90c134e939db53b54f5d32";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/tracetools_image_pipeline/5.0.0-2.tar.gz";
+    name = "5.0.0-2.tar.gz";
+    sha256 = "df73a3ac5fb583bb06d558db26c82d9d129ae7608ab8335c536d2565d96328d5";
   };
 
   buildType = "ament_cmake";

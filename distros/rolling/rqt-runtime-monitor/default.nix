@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, diagnostic-msgs, python-qt-binding, python3Packages, pythonPackages, qt-gui, rclpy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-rolling-rqt-runtime-monitor";
-  version = "1.0.0-r3";
+  version = "1.0.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_runtime_monitor-release/archive/release/rolling/rqt_runtime_monitor/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "b17ed41602f9ed227665b63b0e49432be1f8b710cb5d8b137372b0ae1699c9d3";
+    url = "https://github.com/ros2-gbp/rqt_runtime_monitor-release/archive/release/rolling/rqt_runtime_monitor/1.0.0-4.tar.gz";
+    name = "1.0.0-4.tar.gz";
+    sha256 = "ac39d7a2088c182e46169662e72eddf6ceff9c9b8c5581271e7a241cca6ae4a2";
   };
 
   buildType = "ament_python";

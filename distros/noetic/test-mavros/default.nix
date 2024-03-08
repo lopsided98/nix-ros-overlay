@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, cmake-modules, control-toolbox, eigen, eigen-conversions, geometry-msgs, mavros, mavros-extras, roscpp, std-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-test-mavros";
-  version = "1.17.0-r1";
+  version = "1.18.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/test_mavros/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "0f7505ce385af8911f6cba30d9ca04c641328c720b40f74f05a789e881d463d3";
+    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/test_mavros/1.18.0-1.tar.gz";
+    name = "1.18.0-1.tar.gz";
+    sha256 = "0b0cf01bf79dba960e68e4cc45a84d78989857f8e40b651dc73ee9fcdba6ca5d";
   };
 
   buildType = "catkin";

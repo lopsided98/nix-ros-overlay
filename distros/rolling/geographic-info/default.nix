@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geodesy, geographic-msgs }:
 buildRosPackage {
   pname = "ros-rolling-geographic-info";
-  version = "1.0.5-r1";
+  version = "1.0.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geographic_info-release/archive/release/rolling/geographic_info/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "89a5b56140dada64036cc18304691156b2fb38a4841b0e6a808201d665e8cae3";
+    url = "https://github.com/ros2-gbp/geographic_info-release/archive/release/rolling/geographic_info/1.0.5-2.tar.gz";
+    name = "1.0.5-2.tar.gz";
+    sha256 = "2e1757e449ed2857d5044e939db1afb4ae7a870168b84274855e9da72fd3b82f";
   };
 
   buildType = "ament_cmake";

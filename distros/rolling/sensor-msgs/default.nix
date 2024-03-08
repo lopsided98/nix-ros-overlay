@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-sensor-msgs";
-  version = "5.3.0-r1";
+  version = "5.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/sensor_msgs/5.3.0-1.tar.gz";
-    name = "5.3.0-1.tar.gz";
-    sha256 = "0e50feb0d64f2561972cbe21a32a5ba4f878ab1111984378ff96b3b6057c462b";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/sensor_msgs/5.3.0-2.tar.gz";
+    name = "5.3.0-2.tar.gz";
+    sha256 = "de80c41187e666d42a8d95333697c5f0a177c6f10b23663ccc7499ebb6482899";
   };
 
   buildType = "ament_cmake";

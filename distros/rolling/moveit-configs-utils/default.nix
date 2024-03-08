@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, ament-lint-auto, ament-lint-common, launch, launch-param-builder, launch-ros, srdfdom }:
 buildRosPackage {
   pname = "ros-rolling-moveit-configs-utils";
-  version = "2.9.0-r1";
+  version = "2.9.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_configs_utils/2.9.0-1.tar.gz";
-    name = "2.9.0-1.tar.gz";
-    sha256 = "09a5638916bb2741516aacd7081f7c5bfdfe2da8148ff774f919a1a0be1fceaf";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_configs_utils/2.9.0-2.tar.gz";
+    name = "2.9.0-2.tar.gz";
+    sha256 = "9f9015f4d2693c4ee0b91269778f2335eeb01c9ac2a97f8a1c4a6af733ac1b93";
   };
 
   buildType = "ament_python";

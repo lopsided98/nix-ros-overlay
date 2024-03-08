@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, dynamixel-workbench-toolbox, hardware-interface, lifecycle-msgs, pluginlib, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-rolling-dynamixel-hardware";
-  version = "0.3.1-r3";
+  version = "0.3.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_hardware-release/archive/release/rolling/dynamixel_hardware/0.3.1-3.tar.gz";
-    name = "0.3.1-3.tar.gz";
-    sha256 = "c6440af95ca1b88fd51f943f5022df3a01402d4cc204d76d55258fec35e636e6";
+    url = "https://github.com/ros2-gbp/dynamixel_hardware-release/archive/release/rolling/dynamixel_hardware/0.3.1-4.tar.gz";
+    name = "0.3.1-4.tar.gz";
+    sha256 = "3b9674db4fb3db5bfcfe8d36859084ed3a9ccb8a16ec27587035ba791fd428d6";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-rolling-gtest-vendor";
-  version = "1.11.9000-r1";
+  version = "1.11.9000-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/googletest-release/archive/release/rolling/gtest_vendor/1.11.9000-1.tar.gz";
-    name = "1.11.9000-1.tar.gz";
-    sha256 = "e5524eefa9b0803126c55ad0de5cd1e0aae6cba0a218166a16f4691126df6ed3";
+    url = "https://github.com/ros2-gbp/googletest-release/archive/release/rolling/gtest_vendor/1.11.9000-2.tar.gz";
+    name = "1.11.9000-2.tar.gz";
+    sha256 = "3a80c0855bccd88896d9e5200450a2daa774b24a7e68fe9f470d0e3dc734c4a3";
   };
 
   buildType = "cmake";

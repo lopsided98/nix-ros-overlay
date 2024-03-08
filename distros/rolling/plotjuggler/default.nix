@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, binutils, boost, cppzmq, fastcdr, lz4, protobuf, qt5, rclcpp, zstd }:
 buildRosPackage {
   pname = "ros-rolling-plotjuggler";
-  version = "3.9.0-r1";
+  version = "3.9.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/plotjuggler-release/archive/release/rolling/plotjuggler/3.9.0-1.tar.gz";
-    name = "3.9.0-1.tar.gz";
-    sha256 = "8f3a44253071da03fe935a1e140785aa23b711dc903c4a8391c790d3518539fb";
+    url = "https://github.com/ros2-gbp/plotjuggler-release/archive/release/rolling/plotjuggler/3.9.0-2.tar.gz";
+    name = "3.9.0-2.tar.gz";
+    sha256 = "4b015cbe9c6d793a2934d120bcf01338e90278c2657a29a773e73a6dc797769f";
   };
 
   buildType = "ament_cmake";

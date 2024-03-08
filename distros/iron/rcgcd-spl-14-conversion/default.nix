@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/iron/rcgcd_spl_14_conversion/3.1.0-1.tar.gz";
     name = "3.1.0-1.tar.gz";
-    sha256 = "3397215b84e531f2671bbdfb5963faaf9e143204c6f0684ef9fffeefd8461855";
+    sha256 = "615159fc51714e45abf7294ba218b2e848d95d24fae794544c01924dab58d74b";
   };
 
   buildType = "ament_python";

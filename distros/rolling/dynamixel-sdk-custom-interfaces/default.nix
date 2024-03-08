@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-dynamixel-sdk-custom-interfaces";
-  version = "3.7.40-r4";
+  version = "3.7.40-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/rolling/dynamixel_sdk_custom_interfaces/3.7.40-4.tar.gz";
-    name = "3.7.40-4.tar.gz";
-    sha256 = "9e562eca5a0d29682c49c1fb21a7a700404a3777bfd1ee1f22867279786491f2";
+    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/rolling/dynamixel_sdk_custom_interfaces/3.7.40-5.tar.gz";
+    name = "3.7.40-5.tar.gz";
+    sha256 = "44693cac095703dadaa52593182b99edc47dfe109bb9c2bbd3132a69ee39a0c1";
   };
 
   buildType = "ament_cmake";

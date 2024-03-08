@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-rolling-acado-vendor";
-  version = "1.0.0-r5";
+  version = "1.0.0-r6";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/acado_vendor-release/archive/release/rolling/acado_vendor/1.0.0-5.tar.gz";
-    name = "1.0.0-5.tar.gz";
-    sha256 = "aa7818ef443458fc2f67f4bc5db847c7623243319584442bc80f4e4508273c5e";
+    url = "https://github.com/ros2-gbp/acado_vendor-release/archive/release/rolling/acado_vendor/1.0.0-6.tar.gz";
+    name = "1.0.0-6.tar.gz";
+    sha256 = "8d2fd575773b648e9c177c2f9a43c626bee471d81f14508729273b866f99cac0";
   };
 
   buildType = "ament_cmake";

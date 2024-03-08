@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-pal-statistics-msgs";
-  version = "2.1.5-r1";
+  version = "2.1.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pal_statistics-release/archive/release/rolling/pal_statistics_msgs/2.1.5-1.tar.gz";
-    name = "2.1.5-1.tar.gz";
-    sha256 = "9b26e68f60417627e378cca066922338008557d03d0ae2cf25db780d60bee958";
+    url = "https://github.com/ros2-gbp/pal_statistics-release/archive/release/rolling/pal_statistics_msgs/2.1.5-2.tar.gz";
+    name = "2.1.5-2.tar.gz";
+    sha256 = "222b0ec6eb049a998f7e207385fd1b43e8bdd3d8ed009d094ad33366d482e46f";
   };
 
   buildType = "ament_cmake";

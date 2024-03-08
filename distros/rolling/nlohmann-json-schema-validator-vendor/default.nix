@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, git, nlohmann_json }:
 buildRosPackage {
   pname = "ros-rolling-nlohmann-json-schema-validator-vendor";
-  version = "0.4.0-r1";
+  version = "0.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nlohmann_json_schema_validator_vendor-release/archive/release/rolling/nlohmann_json_schema_validator_vendor/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "3d82a4b2ce9a64fd45611e3a9ec37d4e4278746c4b079111d2bf4a2eaaf5a612";
+    url = "https://github.com/ros2-gbp/nlohmann_json_schema_validator_vendor-release/archive/release/rolling/nlohmann_json_schema_validator_vendor/0.4.0-2.tar.gz";
+    name = "0.4.0-2.tar.gz";
+    sha256 = "7b54c3459b4394cdbbfdb1fecdce0143bb907f3408ef36f25936395c3bf6d651";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-marti-visualization-msgs";
-  version = "1.5.2-r1";
+  version = "1.5.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/rolling/marti_visualization_msgs/1.5.2-1.tar.gz";
-    name = "1.5.2-1.tar.gz";
-    sha256 = "9dda61c55ce40aae53aafff699e17e5d4adf990c61c606982d5d15efcf878f35";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/rolling/marti_visualization_msgs/1.5.2-2.tar.gz";
+    name = "1.5.2-2.tar.gz";
+    sha256 = "4be3e285b06fb4a54c18a7d06746c4a55638f1e81a6689655ab033588341d86a";
   };
 
   buildType = "ament_cmake";

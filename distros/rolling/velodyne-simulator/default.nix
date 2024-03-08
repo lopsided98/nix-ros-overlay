@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, velodyne-description, velodyne-gazebo-plugins }:
 buildRosPackage {
   pname = "ros-rolling-velodyne-simulator";
-  version = "2.0.3-r2";
+  version = "2.0.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/velodyne_simulator-release/archive/release/rolling/velodyne_simulator/2.0.3-2.tar.gz";
-    name = "2.0.3-2.tar.gz";
-    sha256 = "2a28ff368a3f493cdcdb17e88b3ef897cdde615cc8910a72862661b329404cb8";
+    url = "https://github.com/ros2-gbp/velodyne_simulator-release/archive/release/rolling/velodyne_simulator/2.0.3-3.tar.gz";
+    name = "2.0.3-3.tar.gz";
+    sha256 = "29b3ff619e4c7abe562bdb91bb29f03cb8451bca04144642511ebcdb102f1384";
   };
 
   buildType = "ament_cmake";

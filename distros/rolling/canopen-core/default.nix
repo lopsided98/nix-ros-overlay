@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, boost, canopen-interfaces, lely-core-libraries, lifecycle-msgs, rclcpp, rclcpp-components, rclcpp-lifecycle, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-rolling-canopen-core";
-  version = "0.2.8-r1";
+  version = "0.2.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/rolling/canopen_core/0.2.8-1.tar.gz";
-    name = "0.2.8-1.tar.gz";
-    sha256 = "fd4f3c3055d0ea535d9c4b0621477286f8e72487f53c8a84af08be0c1fbb8e47";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/rolling/canopen_core/0.2.8-2.tar.gz";
+    name = "0.2.8-2.tar.gz";
+    sha256 = "a7f2758ce38f2d66de3b0395cdb0ec379961083443f019c50ea5dac97949cfc1";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-phidgets-magnetometer";
-  version = "2.3.2-r1";
+  version = "2.3.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_magnetometer/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "af7a5e8bc252c91ba8345587a2cd24de54b341ef4db31feb9d7411ad6cf86b53";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_magnetometer/2.3.2-2.tar.gz";
+    name = "2.3.2-2.tar.gz";
+    sha256 = "6a65430a8047644c4993ade519cb4e115985de7f82e30be080ee2c7537f65755";
   };
 
   buildType = "ament_cmake";

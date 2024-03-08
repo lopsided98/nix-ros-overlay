@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-rolling-sick-safevisionary-base";
-  version = "1.0.1-r1";
+  version = "1.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sick_safevisionary_base-release/archive/release/rolling/sick_safevisionary_base/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "49e894c71bd5c752c3e7f2f597efcb4b4e50fedef7e60d7c156e8df0305be932";
+    url = "https://github.com/ros2-gbp/sick_safevisionary_base-release/archive/release/rolling/sick_safevisionary_base/1.0.1-2.tar.gz";
+    name = "1.0.1-2.tar.gz";
+    sha256 = "f7d6f57388eb4e35c477633fb81dc3c029b15f3bba3bbee1358b8383d7c7a15b";
   };
 
   buildType = "cmake";

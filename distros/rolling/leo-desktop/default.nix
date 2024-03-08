@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, leo, leo-viz }:
 buildRosPackage {
   pname = "ros-rolling-leo-desktop";
-  version = "3.0.0-r1";
+  version = "3.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_desktop-release/archive/release/rolling/leo_desktop/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "269d7507793e2416e76bacfc5da987033c8c9afc0ea41cfed41674753c3117d6";
+    url = "https://github.com/ros2-gbp/leo_desktop-release/archive/release/rolling/leo_desktop/3.0.0-2.tar.gz";
+    name = "3.0.0-2.tar.gz";
+    sha256 = "445db6ee8cfa063b45d6f5778a7d3fb3dadd9501b510d2dad03f002fa9fa1cd6";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, ament-pep257, pythonPackages }:
 buildRosPackage {
   pname = "ros-rolling-tf-transformations";
-  version = "1.0.1-r3";
+  version = "1.0.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tf_transformations_release/archive/release/rolling/tf_transformations/1.0.1-3.tar.gz";
-    name = "1.0.1-3.tar.gz";
-    sha256 = "ce64f280076a6c186e55f51063885f71af7270cc47bfaecb76958bb957d41a02";
+    url = "https://github.com/ros2-gbp/tf_transformations_release/archive/release/rolling/tf_transformations/1.0.1-4.tar.gz";
+    name = "1.0.1-4.tar.gz";
+    sha256 = "ea4ee95a92cc19ad11b73c37c1b2a62ef6116ace81ff0a998961897f8a75c7cb";
   };
 
   buildType = "ament_python";

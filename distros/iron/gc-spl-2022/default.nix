@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/iron/gc_spl_2022/3.1.0-1.tar.gz";
     name = "3.1.0-1.tar.gz";
-    sha256 = "deadf38664818db96103c9032131936da604fdba9d0e1a228fd868a33ccdd277";
+    sha256 = "6f5e4ce02e7bce8eab9a2feea76250f51b8d1020e1eb5330a245b32db95ad651";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, ecl-build, geometry-msgs, launch-testing, launch-testing-ament-cmake, launch-testing-ros, nav-msgs, python3Packages, rcl-interfaces, rclcpp, rclcpp-components, ros2test }:
 buildRosPackage {
   pname = "ros-rolling-kobuki-velocity-smoother";
-  version = "0.15.0-r2";
+  version = "0.15.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kobuki_velocity_smoother-release/archive/release/rolling/kobuki_velocity_smoother/0.15.0-2.tar.gz";
-    name = "0.15.0-2.tar.gz";
-    sha256 = "bf07b21aa06a35636081826ce4de651013211abd66308cce799410b382ecfbe6";
+    url = "https://github.com/ros2-gbp/kobuki_velocity_smoother-release/archive/release/rolling/kobuki_velocity_smoother/0.15.0-3.tar.gz";
+    name = "0.15.0-3.tar.gz";
+    sha256 = "a20ff94b7dc49dc409f844f4e0eebe561558d95a168a3fb0cd33526e9f44d746";
   };
 
   buildType = "ament_cmake";

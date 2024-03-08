@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, asio, asio-cmake-module, rclcpp, std-msgs, udp-msgs }:
 buildRosPackage {
   pname = "ros-rolling-io-context";
-  version = "1.2.0-r2";
+  version = "1.2.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/rolling/io_context/1.2.0-2.tar.gz";
-    name = "1.2.0-2.tar.gz";
-    sha256 = "f37687a64758512bcebafc36a8214a4c22e83ea4bc828598715baa2e51ef5ec4";
+    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/rolling/io_context/1.2.0-3.tar.gz";
+    name = "1.2.0-3.tar.gz";
+    sha256 = "88ad4817444876ed9610d26a273031d39570d74fb55e0277717c05c93c941ec1";
   };
 
   buildType = "ament_cmake";

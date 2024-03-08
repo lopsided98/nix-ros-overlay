@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, angles, hardware-interface, picknik-ament-copyright, rclcpp, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-topic-based-ros2-control";
-  version = "0.2.0-r1";
+  version = "0.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/topic_based_ros2_control-release/archive/release/rolling/topic_based_ros2_control/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "226ec871a9053c7925d032d435e61aebd1128503d3f654dfa87812715e955b38";
+    url = "https://github.com/ros2-gbp/topic_based_ros2_control-release/archive/release/rolling/topic_based_ros2_control/0.2.0-2.tar.gz";
+    name = "0.2.0-2.tar.gz";
+    sha256 = "63d341f82c5f182d66c2512e4807211214e2a90e314d0c3912d48c7e2346956e";
   };
 
   buildType = "ament_cmake";

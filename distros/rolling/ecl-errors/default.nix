@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-config, ecl-license }:
 buildRosPackage {
   pname = "ros-rolling-ecl-errors";
-  version = "1.2.0-r3";
+  version = "1.2.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ecl_lite-release/archive/release/rolling/ecl_errors/1.2.0-3.tar.gz";
-    name = "1.2.0-3.tar.gz";
-    sha256 = "5c4e4297ba1177ba98d5ddc96a1c688662bede6f06fe9369670a4665a3eea1ea";
+    url = "https://github.com/ros2-gbp/ecl_lite-release/archive/release/rolling/ecl_errors/1.2.0-4.tar.gz";
+    name = "1.2.0-4.tar.gz";
+    sha256 = "3107ea0d2a68bbcdddecc2550ddf58863ab184ae59f1c69e96d4adfe4611c7e3";
   };
 
   buildType = "ament_cmake";

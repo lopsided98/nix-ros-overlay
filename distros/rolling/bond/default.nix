@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-bond";
-  version = "4.0.0-r3";
+  version = "4.0.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/rolling/bond/4.0.0-3.tar.gz";
-    name = "4.0.0-3.tar.gz";
-    sha256 = "8e10d4a32e4b0508ee6890ba405a6fb4224c3d2f2e21ebffe1649652feb44318";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/rolling/bond/4.0.0-4.tar.gz";
+    name = "4.0.0-4.tar.gz";
+    sha256 = "68f8c6aed4e1074afdebd8d435bf8f5821c8d9240da3b288e79c7b97eb6fe512";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-google-benchmark, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, angles, assimp, boost, bullet, common-interfaces, eigen, eigen-stl-containers, eigen3-cmake-module, fcl, generate-parameter-library, geometric-shapes, geometry-msgs, google-benchmark-vendor, kdl-parser, launch-testing-ament-cmake, moveit-common, moveit-msgs, moveit-resources-panda-moveit-config, moveit-resources-pr2-description, octomap, octomap-msgs, orocos-kdl-vendor, pkg-config, pluginlib, random-numbers, rcl-interfaces, rclcpp, rclpy, rsl, ruckig, sensor-msgs, shape-msgs, srdfdom, std-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-kdl, trajectory-msgs, urdf, urdfdom, urdfdom-headers, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-moveit-core";
-  version = "2.9.0-r1";
+  version = "2.9.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_core/2.9.0-1.tar.gz";
-    name = "2.9.0-1.tar.gz";
-    sha256 = "cf881b5260f8612e5f8f58b41a988bdf15f9328ce3957d583c3da6bd26947ca2";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_core/2.9.0-2.tar.gz";
+    name = "2.9.0-2.tar.gz";
+    sha256 = "a5a4db427ccc738a71fa90e3e570d9ebff7d41530e57642f6d2f23b1673c1c1b";
   };
 
   buildType = "ament_cmake";

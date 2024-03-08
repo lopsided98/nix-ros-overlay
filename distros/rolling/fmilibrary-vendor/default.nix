@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, git }:
 buildRosPackage {
   pname = "ros-rolling-fmilibrary-vendor";
-  version = "1.0.1-r3";
+  version = "1.0.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fmilibrary_vendor-release/archive/release/rolling/fmilibrary_vendor/1.0.1-3.tar.gz";
-    name = "1.0.1-3.tar.gz";
-    sha256 = "53b7fc18509a51c9591aa4a1f040c4a4494fc467474c5f2698ccea9625326940";
+    url = "https://github.com/ros2-gbp/fmilibrary_vendor-release/archive/release/rolling/fmilibrary_vendor/1.0.1-4.tar.gz";
+    name = "1.0.1-4.tar.gz";
+    sha256 = "90247f6cda47a1109686cf3b46c024528d61581483aef90179f7ddb08f48d250";
   };
 
   buildType = "ament_cmake";

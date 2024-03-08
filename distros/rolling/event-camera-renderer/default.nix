@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-clang-format, ament-cmake-ros, ament-lint-auto, ament-lint-common, event-camera-codecs, event-camera-msgs, image-transport, rclcpp, rclcpp-components, ros-environment, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-event-camera-renderer";
-  version = "1.0.3-r1";
+  version = "1.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/event_camera_renderer-release/archive/release/rolling/event_camera_renderer/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "78f73634e902653e35c41d357af69b5a1d7adbb5d32f3a5860b257a6e8b1664f";
+    url = "https://github.com/ros2-gbp/event_camera_renderer-release/archive/release/rolling/event_camera_renderer/1.0.3-2.tar.gz";
+    name = "1.0.3-2.tar.gz";
+    sha256 = "d417d0cc0e55b34502da9da78cfcb2386afa5b106ea3dc6a31da339ad141547b";
   };
 
   buildType = "ament_cmake";

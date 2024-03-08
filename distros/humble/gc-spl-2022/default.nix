@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/humble/gc_spl_2022/2.1.0-1.tar.gz";
     name = "2.1.0-1.tar.gz";
-    sha256 = "f11b10541c95542de78a1ae080fb41a0fdfe44cfaa74fecb4840cb228226713e";
+    sha256 = "596280149d63225e31560b1fc117ff4f1272c9c5e4af2b1cc21efd599781a0c1";
   };
 
   buildType = "ament_python";

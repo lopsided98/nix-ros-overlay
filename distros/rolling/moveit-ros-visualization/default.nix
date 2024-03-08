@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, class-loader, eigen, geometric-shapes, interactive-markers, moveit-common, moveit-ros-planning-interface, moveit-ros-robot-interaction, moveit-ros-warehouse, object-recognition-msgs, pkg-config, pluginlib, qt5, rclcpp, rclpy, rviz2, tf2-eigen }:
 buildRosPackage {
   pname = "ros-rolling-moveit-ros-visualization";
-  version = "2.9.0-r1";
+  version = "2.9.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_ros_visualization/2.9.0-1.tar.gz";
-    name = "2.9.0-1.tar.gz";
-    sha256 = "ad609a8a94ab9fd11377bf0a0867dca670669a5c4a4600feaaa9c1186091bdb7";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_ros_visualization/2.9.0-2.tar.gz";
+    name = "2.9.0-2.tar.gz";
+    sha256 = "ffb601c9aa27500f8597bc6236054b6d510b6341fecd8b70ba5374dd457a1dec";
   };
 
   buildType = "ament_cmake";

@@ -182,8 +182,6 @@ self: super: {
 
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
 
- aws-robomaker-small-warehouse-world = self.callPackage ./aws-robomaker-small-warehouse-world {};
-
  aws-sdk-cpp-vendor = self.callPackage ./aws-sdk-cpp-vendor {};
 
  backward-ros = self.callPackage ./backward-ros {};
@@ -314,8 +312,6 @@ self: super: {
 
  desktop = self.callPackage ./desktop {};
 
- desktop-full = self.callPackage ./desktop-full {};
-
  diagnostic-aggregator = self.callPackage ./diagnostic-aggregator {};
 
  diagnostic-common-diagnostics = self.callPackage ./diagnostic-common-diagnostics {};
@@ -331,10 +327,6 @@ self: super: {
  dolly = self.callPackage ./dolly {};
 
  dolly-follow = self.callPackage ./dolly-follow {};
-
- dolly-gazebo = self.callPackage ./dolly-gazebo {};
-
- dolly-ignition = self.callPackage ./dolly-ignition {};
 
  domain-bridge = self.callPackage ./domain-bridge {};
 
@@ -566,20 +558,6 @@ self: super: {
 
  game-controller-spl-interfaces = self.callPackage ./game-controller-spl-interfaces {};
 
- gazebo-dev = self.callPackage ./gazebo-dev {};
-
- gazebo-msgs = self.callPackage ./gazebo-msgs {};
-
- gazebo-plugins = self.callPackage ./gazebo-plugins {};
-
- gazebo-ros = self.callPackage ./gazebo-ros {};
-
- gazebo-ros2-control = self.callPackage ./gazebo-ros2-control {};
-
- gazebo-ros2-control-demos = self.callPackage ./gazebo-ros2-control-demos {};
-
- gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
-
  gc-spl = self.callPackage ./gc-spl {};
 
  gc-spl-2022 = self.callPackage ./gc-spl-2022 {};
@@ -629,8 +607,6 @@ self: super: {
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  gtsam = self.callPackage ./gtsam {};
-
- gz-ros2-control-demos = self.callPackage ./gz-ros2-control-demos {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
 
@@ -838,8 +814,6 @@ self: super: {
 
  libphidget22 = self.callPackage ./libphidget22 {};
 
- libpointmatcher = self.callPackage ./libpointmatcher {};
-
  libstatistics-collector = self.callPackage ./libstatistics-collector {};
 
  libyaml-vendor = self.callPackage ./libyaml-vendor {};
@@ -1017,10 +991,6 @@ self: super: {
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
-
- mqtt-client = self.callPackage ./mqtt-client {};
-
- mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
@@ -1270,8 +1240,6 @@ self: super: {
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
- rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
-
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
 
  rc-genicam-driver = self.callPackage ./rc-genicam-driver {};
@@ -1350,31 +1318,17 @@ self: super: {
 
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
 
- rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
-
  rmf-battery = self.callPackage ./rmf-battery {};
 
  rmf-building-map-msgs = self.callPackage ./rmf-building-map-msgs {};
 
- rmf-building-sim-common = self.callPackage ./rmf-building-sim-common {};
-
- rmf-building-sim-gz-classic-plugins = self.callPackage ./rmf-building-sim-gz-classic-plugins {};
-
  rmf-charger-msgs = self.callPackage ./rmf-charger-msgs {};
 
- rmf-charging-schedule = self.callPackage ./rmf-charging-schedule {};
-
  rmf-cmake-uncrustify = self.callPackage ./rmf-cmake-uncrustify {};
-
- rmf-dev = self.callPackage ./rmf-dev {};
 
  rmf-dispenser-msgs = self.callPackage ./rmf-dispenser-msgs {};
 
  rmf-door-msgs = self.callPackage ./rmf-door-msgs {};
-
- rmf-fleet-adapter = self.callPackage ./rmf-fleet-adapter {};
-
- rmf-fleet-adapter-python = self.callPackage ./rmf-fleet-adapter-python {};
 
  rmf-fleet-msgs = self.callPackage ./rmf-fleet-msgs {};
 
@@ -1384,35 +1338,17 @@ self: super: {
 
  rmf-obstacle-msgs = self.callPackage ./rmf-obstacle-msgs {};
 
- rmf-robot-sim-common = self.callPackage ./rmf-robot-sim-common {};
-
- rmf-robot-sim-gz-classic-plugins = self.callPackage ./rmf-robot-sim-gz-classic-plugins {};
-
  rmf-scheduler-msgs = self.callPackage ./rmf-scheduler-msgs {};
 
  rmf-site-map-msgs = self.callPackage ./rmf-site-map-msgs {};
 
- rmf-task = self.callPackage ./rmf-task {};
-
  rmf-task-msgs = self.callPackage ./rmf-task-msgs {};
 
- rmf-task-ros2 = self.callPackage ./rmf-task-ros2 {};
-
- rmf-task-sequence = self.callPackage ./rmf-task-sequence {};
-
  rmf-traffic = self.callPackage ./rmf-traffic {};
-
- rmf-traffic-editor = self.callPackage ./rmf-traffic-editor {};
-
- rmf-traffic-editor-assets = self.callPackage ./rmf-traffic-editor-assets {};
-
- rmf-traffic-editor-test-maps = self.callPackage ./rmf-traffic-editor-test-maps {};
 
  rmf-traffic-examples = self.callPackage ./rmf-traffic-examples {};
 
  rmf-traffic-msgs = self.callPackage ./rmf-traffic-msgs {};
-
- rmf-traffic-ros2 = self.callPackage ./rmf-traffic-ros2 {};
 
  rmf-utils = self.callPackage ./rmf-utils {};
 
@@ -1426,15 +1362,7 @@ self: super: {
 
  rmf-visualization-msgs = self.callPackage ./rmf-visualization-msgs {};
 
- rmf-visualization-navgraphs = self.callPackage ./rmf-visualization-navgraphs {};
-
  rmf-visualization-obstacles = self.callPackage ./rmf-visualization-obstacles {};
-
- rmf-visualization-rviz2-plugins = self.callPackage ./rmf-visualization-rviz2-plugins {};
-
- rmf-visualization-schedule = self.callPackage ./rmf-visualization-schedule {};
-
- rmf-websocket = self.callPackage ./rmf-websocket {};
 
  rmf-workcell-msgs = self.callPackage ./rmf-workcell-msgs {};
 
@@ -1541,22 +1469,6 @@ self: super: {
  ros-core = self.callPackage ./ros-core {};
 
  ros-environment = self.callPackage ./ros-environment {};
-
- ros-gz = self.callPackage ./ros-gz {};
-
- ros-gz-interfaces = self.callPackage ./ros-gz-interfaces {};
-
- ros-ign = self.callPackage ./ros-ign {};
-
- ros-ign-bridge = self.callPackage ./ros-ign-bridge {};
-
- ros-ign-gazebo = self.callPackage ./ros-ign-gazebo {};
-
- ros-ign-gazebo-demos = self.callPackage ./ros-ign-gazebo-demos {};
-
- ros-ign-image = self.callPackage ./ros-ign-image {};
-
- ros-ign-interfaces = self.callPackage ./ros-ign-interfaces {};
 
  ros-image-to-qimage = self.callPackage ./ros-image-to-qimage {};
 
@@ -1778,8 +1690,6 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
- sdformat-test-files = self.callPackage ./sdformat-test-files {};
-
  sdl2-vendor = self.callPackage ./sdl2-vendor {};
 
  self-test = self.callPackage ./self-test {};
@@ -1787,8 +1697,6 @@ self: super: {
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
  sensor-msgs-py = self.callPackage ./sensor-msgs-py {};
-
- septentrio-gnss-driver = self.callPackage ./septentrio-gnss-driver {};
 
  serial-driver = self.callPackage ./serial-driver {};
 
@@ -1810,13 +1718,7 @@ self: super: {
 
  simple-launch = self.callPackage ./simple-launch {};
 
- simulation = self.callPackage ./simulation {};
-
  slider-publisher = self.callPackage ./slider-publisher {};
-
- smacc2 = self.callPackage ./smacc2 {};
-
- smacc2-msgs = self.callPackage ./smacc2-msgs {};
 
  smach = self.callPackage ./smach {};
 
@@ -2022,8 +1924,6 @@ self: super: {
 
  turtlebot3-fake-node = self.callPackage ./turtlebot3-fake-node {};
 
- turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
-
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
  turtlebot3-simulations = self.callPackage ./turtlebot3-simulations {};
@@ -2113,8 +2013,6 @@ self: super: {
  velodyne-description = self.callPackage ./velodyne-description {};
 
  velodyne-driver = self.callPackage ./velodyne-driver {};
-
- velodyne-gazebo-plugins = self.callPackage ./velodyne-gazebo-plugins {};
 
  velodyne-laserscan = self.callPackage ./velodyne-laserscan {};
 

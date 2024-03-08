@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python-qt-binding, python3Packages, pythonPackages, qt-gui-py-common, rclpy, rqt-gui, rqt-gui-py, rqt-py-common, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rqt-plot";
-  version = "1.3.2-r1";
+  version = "1.3.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/rolling/rqt_plot/1.3.2-1.tar.gz";
-    name = "1.3.2-1.tar.gz";
-    sha256 = "6039d06496cbad98c251b89bc1c471bb68b8aa65b266c81ac122384060759315";
+    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/rolling/rqt_plot/1.3.2-2.tar.gz";
+    name = "1.3.2-2.tar.gz";
+    sha256 = "0516310dc7ca345d6211caa6e706475cb330b31d0bbc1e853598d0bb021d62e9";
   };
 
   buildType = "ament_python";

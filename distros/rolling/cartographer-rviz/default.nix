@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, abseil-cpp, ament-cmake, boost, cartographer, cartographer-ros, cartographer-ros-msgs, eigen, pluginlib, rclcpp, rviz-common, rviz-ogre-vendor, rviz-rendering }:
 buildRosPackage {
   pname = "ros-rolling-cartographer-rviz";
-  version = "2.0.9001-r1";
+  version = "2.0.9001-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cartographer_ros-release/archive/release/rolling/cartographer_rviz/2.0.9001-1.tar.gz";
-    name = "2.0.9001-1.tar.gz";
-    sha256 = "a8968c8efceeabc9321f83cca37115c832d0db3150bdb37e9dffc9e5e49479a7";
+    url = "https://github.com/ros2-gbp/cartographer_ros-release/archive/release/rolling/cartographer_rviz/2.0.9001-2.tar.gz";
+    name = "2.0.9001-2.tar.gz";
+    sha256 = "66c6f73715ddb2a04ff9d80a3965e1f1b6d3978c167a73ff283da8b5542d3378";
   };
 
   buildType = "ament_cmake";
