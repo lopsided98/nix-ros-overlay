@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-mobileye-560-660-msgs";
-  version = "4.0.0-r2";
+  version = "4.0.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/astuff_sensor_msgs-release/archive/release/rolling/mobileye_560_660_msgs/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "cec891d31f17e45aeb9d7ef124f1c54248a3ab95b80b0e0d637836615a779fe8";
+    url = "https://github.com/ros2-gbp/astuff_sensor_msgs-release/archive/release/rolling/mobileye_560_660_msgs/4.0.0-3.tar.gz";
+    name = "4.0.0-3.tar.gz";
+    sha256 = "abed6a4598a82e03f4217dbcb325a586b64cd3668e434006625badd3dcce9c79";
   };
 
   buildType = "ament_cmake";

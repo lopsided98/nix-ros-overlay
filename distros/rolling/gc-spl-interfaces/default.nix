@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-gc-spl-interfaces";
-  version = "4.0.0-r1";
+  version = "4.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/rolling/gc_spl_interfaces/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "53468876d53939edf6eee44f1908f22c56ec315cf29976f8e3cb21a9d7f857eb";
+    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/rolling/gc_spl_interfaces/4.0.0-2.tar.gz";
+    name = "4.0.0-2.tar.gz";
+    sha256 = "234432737bcf64cbecdb61686e61a506e119562d1fb569b034fdeee16ca20e79";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-kartech-linear-actuator-msgs";
-  version = "4.0.0-r2";
+  version = "4.0.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/astuff_sensor_msgs-release/archive/release/rolling/kartech_linear_actuator_msgs/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "a2cdfdf5e254decfd5929672119977b785dd797e1abf0570f1e25a05e57915d3";
+    url = "https://github.com/ros2-gbp/astuff_sensor_msgs-release/archive/release/rolling/kartech_linear_actuator_msgs/4.0.0-3.tar.gz";
+    name = "4.0.0-3.tar.gz";
+    sha256 = "5081b79fef949e95f20e17d244414fec132966d8bf2b306264b35f97bed1be46";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ibeo-msgs";
-  version = "4.0.0-r2";
+  version = "4.0.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/astuff_sensor_msgs-release/archive/release/rolling/ibeo_msgs/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "b1eea4377b90587ca8a756043f0c1ae29ff17673404fac1631befca23875946d";
+    url = "https://github.com/ros2-gbp/astuff_sensor_msgs-release/archive/release/rolling/ibeo_msgs/4.0.0-3.tar.gz";
+    name = "4.0.0-3.tar.gz";
+    sha256 = "57a2e99fc99aed52463cb41eb4c250906bdb4a783c09edb2088bdbca24d8f5af";
   };
 
   buildType = "ament_cmake";

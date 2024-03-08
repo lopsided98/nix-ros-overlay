@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-rolling-rcdiscover";
-  version = "1.1.6-r2";
+  version = "1.1.6-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcdiscover-release/archive/release/rolling/rcdiscover/1.1.6-2.tar.gz";
-    name = "1.1.6-2.tar.gz";
-    sha256 = "d8fef8a8f0e8735f6f2954daa86af7b4e61a68bcc2eb5ec4554e2ff4fb7d7252";
+    url = "https://github.com/ros2-gbp/rcdiscover-release/archive/release/rolling/rcdiscover/1.1.6-3.tar.gz";
+    name = "1.1.6-3.tar.gz";
+    sha256 = "7c83a4b917ed25a05ad968afc28bdb5fa80c5aa58e73eb59e24c7089d42dd2f0";
   };
 
   buildType = "cmake";

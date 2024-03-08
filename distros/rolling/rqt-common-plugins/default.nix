@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rqt-action, rqt-bag, rqt-bag-plugins, rqt-console, rqt-graph, rqt-image-view, rqt-msg, rqt-plot, rqt-publisher, rqt-py-common, rqt-py-console, rqt-reconfigure, rqt-service-caller, rqt-shell, rqt-srv, rqt-topic }:
 buildRosPackage {
   pname = "ros-rolling-rqt-common-plugins";
-  version = "1.2.0-r2";
+  version = "1.2.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_common_plugins-release/archive/release/rolling/rqt_common_plugins/1.2.0-2.tar.gz";
-    name = "1.2.0-2.tar.gz";
-    sha256 = "ec20b63a01eabf0d0693b003657dae96f3c41de0be9b41dcfffe406695e10751";
+    url = "https://github.com/ros2-gbp/rqt_common_plugins-release/archive/release/rolling/rqt_common_plugins/1.2.0-3.tar.gz";
+    name = "1.2.0-3.tar.gz";
+    sha256 = "a5d90c6ab4242c0417a96324e5837943bade98bef4890243b079fbe16aa5b53d";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-turtlebot3-msgs";
-  version = "2.2.1-r3";
+  version = "2.2.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_msgs-release/archive/release/rolling/turtlebot3_msgs/2.2.1-3.tar.gz";
-    name = "2.2.1-3.tar.gz";
-    sha256 = "a142ce85d83d072ebe0900686e1545bf95ec3f902231c033bd15061f47fc64e6";
+    url = "https://github.com/ros2-gbp/turtlebot3_msgs-release/archive/release/rolling/turtlebot3_msgs/2.2.1-4.tar.gz";
+    name = "2.2.1-4.tar.gz";
+    sha256 = "2512d1abe8a0c3c465c4a77f3a202453ec122f56d4edc3ce57f4c9e394f807e5";
   };
 
   buildType = "ament_cmake";

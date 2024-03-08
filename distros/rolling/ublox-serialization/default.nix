@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-ublox-serialization";
-  version = "2.3.0-r2";
+  version = "2.3.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox-release/archive/release/rolling/ublox_serialization/2.3.0-2.tar.gz";
-    name = "2.3.0-2.tar.gz";
-    sha256 = "f7818e4f82e1710dd7c793d8a23764bc4e8ed0d775be9dbad0f6322f3ec2ea91";
+    url = "https://github.com/ros2-gbp/ublox-release/archive/release/rolling/ublox_serialization/2.3.0-3.tar.gz";
+    name = "2.3.0-3.tar.gz";
+    sha256 = "30418726bc8c96df1d129f6121f01b121a90573f15ad95f37eb8f575461fef60";
   };
 
   buildType = "ament_cmake";

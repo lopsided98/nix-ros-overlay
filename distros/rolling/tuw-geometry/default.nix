@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, opencv, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-tuw-geometry";
-  version = "0.0.7-r2";
+  version = "0.0.7-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tuw_geometry-release/archive/release/rolling/tuw_geometry/0.0.7-2.tar.gz";
-    name = "0.0.7-2.tar.gz";
-    sha256 = "de41212d3c5d7b39a51e69098aaff89793edf155ba35d104f5fa23dc5031ad16";
+    url = "https://github.com/ros2-gbp/tuw_geometry-release/archive/release/rolling/tuw_geometry/0.0.7-3.tar.gz";
+    name = "0.0.7-3.tar.gz";
+    sha256 = "0b642408b297260de9d38c9e9607d5559fb4b83c04d515e414e9710bcec4e15b";
   };
 
   buildType = "ament_cmake";

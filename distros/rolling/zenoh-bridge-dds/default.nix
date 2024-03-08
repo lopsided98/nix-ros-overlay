@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cargo, clang }:
 buildRosPackage {
   pname = "ros-rolling-zenoh-bridge-dds";
-  version = "0.5.0-r3";
+  version = "0.5.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/zenoh_bridge_dds-release/archive/release/rolling/zenoh_bridge_dds/0.5.0-3.tar.gz";
-    name = "0.5.0-3.tar.gz";
-    sha256 = "bcf9606bb7960dbe763af889473633f9ddfe02a066c00f88218d117f5ffaa48c";
+    url = "https://github.com/ros2-gbp/zenoh_bridge_dds-release/archive/release/rolling/zenoh_bridge_dds/0.5.0-4.tar.gz";
+    name = "0.5.0-4.tar.gz";
+    sha256 = "6e915d2b7e15f7963e2ea80512c4a99195d83a4c2e06cc942db4fcb1570c5f8d";
   };
 
   buildType = "ament_cmake";

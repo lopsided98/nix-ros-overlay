@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-ros, geometry-msgs, pluginlib, rviz-common, rviz-rendering }:
 buildRosPackage {
   pname = "ros-rolling-snowbot-operating-system";
-  version = "0.1.2-r3";
+  version = "0.1.2-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/snowbot_release/archive/release/rolling/snowbot_operating_system/0.1.2-3.tar.gz";
-    name = "0.1.2-3.tar.gz";
-    sha256 = "969b90a8591bf639e59e517434a0c33d791f96aaff8b4a43ebcf1a473f7783c1";
+    url = "https://github.com/ros2-gbp/snowbot_release/archive/release/rolling/snowbot_operating_system/0.1.2-4.tar.gz";
+    name = "0.1.2-4.tar.gz";
+    sha256 = "1686c865def713b8c6c9724349b094540a37efd1b6898cf99570d666e81577e4";
   };
 
   buildType = "ament_cmake";

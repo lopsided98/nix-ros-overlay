@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/humble/rcgcd_spl_14/2.1.0-1.tar.gz";
     name = "2.1.0-1.tar.gz";
-    sha256 = "abf161f153e6d21d881299a1b68103796e185ce91cba425c0b57f2df551d699d";
+    sha256 = "6daa987a47e6f6f33d6e6194dd725573cb913490a7827ab1e90da2f7a795b5ea";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-mypy, ament-pep257, ament-xmllint, jupyter, python3Packages, pythonPackages, tracetools-read }:
 buildRosPackage {
   pname = "ros-rolling-tracetools-analysis";
-  version = "3.0.0-r4";
+  version = "3.0.0-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tracetools_analysis-release/archive/release/rolling/tracetools_analysis/3.0.0-4.tar.gz";
-    name = "3.0.0-4.tar.gz";
-    sha256 = "11d102f2f66a97842a54033ad72cd841818c57038bbfbc321b329a9c11e0bce8";
+    url = "https://github.com/ros2-gbp/tracetools_analysis-release/archive/release/rolling/tracetools_analysis/3.0.0-5.tar.gz";
+    name = "3.0.0-5.tar.gz";
+    sha256 = "4d643da4ac78d36ba0d38d8035c78c5ac68fb9bbbc72620c2e975a4f688577f9";
   };
 
   buildType = "ament_python";

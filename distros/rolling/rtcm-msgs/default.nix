@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rtcm-msgs";
-  version = "1.1.6-r2";
+  version = "1.1.6-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rtcm_msgs-release/archive/release/rolling/rtcm_msgs/1.1.6-2.tar.gz";
-    name = "1.1.6-2.tar.gz";
-    sha256 = "376436dc39842b72d58ceaa273ee02f6b847a4504ef53108ee806bcc71ef30d9";
+    url = "https://github.com/ros2-gbp/rtcm_msgs-release/archive/release/rolling/rtcm_msgs/1.1.6-3.tar.gz";
+    name = "1.1.6-3.tar.gz";
+    sha256 = "4f7ea35cb3be93c9b81e29b4f224a73455baaff9262f99b5a29490216cae29b4";
   };
 
   buildType = "ament_cmake";

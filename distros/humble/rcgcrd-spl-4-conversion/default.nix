@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/humble/rcgcrd_spl_4_conversion/2.1.0-1.tar.gz";
     name = "2.1.0-1.tar.gz";
-    sha256 = "a79898de064a062082145ad5cbcacc4029e507dbfe19921ba26d88ecd2a2d0bb";
+    sha256 = "162201935938aaf2bf25c9cc8e4a22f9a46b815d69ddee682ad8cda817ab62cb";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-kortex-api";
-  version = "0.2.2-r1";
+  version = "0.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/rolling/kortex_api/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "d00640e25ff98cf6dd828bb17c40a5f72fda19d91662ec240f90c4de1e0b0a56";
+    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/rolling/kortex_api/0.2.2-2.tar.gz";
+    name = "0.2.2-2.tar.gz";
+    sha256 = "d24452ed9b238a2a6ed0a3f675b0c4930e6f0057ccfcd1fa64aa22fd02b6de5a";
   };
 
   buildType = "ament_cmake";

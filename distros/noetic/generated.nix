@@ -76,6 +76,20 @@ self: super: {
 
  async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
 
+ atf = self.callPackage ./atf {};
+
+ atf-metrics = self.callPackage ./atf-metrics {};
+
+ atf-msgs = self.callPackage ./atf-msgs {};
+
+ atf-plotter = self.callPackage ./atf-plotter {};
+
+ atf-recorder-plugins = self.callPackage ./atf-recorder-plugins {};
+
+ atf-test = self.callPackage ./atf-test {};
+
+ atf-test-tools = self.callPackage ./atf-test-tools {};
+
  audibot = self.callPackage ./audibot {};
 
  audibot-description = self.callPackage ./audibot-description {};
@@ -2665,6 +2679,8 @@ self: super: {
  prosilica-gige-sdk = self.callPackage ./prosilica-gige-sdk {};
 
  psen-scan-v2 = self.callPackage ./psen-scan-v2 {};
+
+ py-binding-tools = self.callPackage ./py-binding-tools {};
 
  py-trees = self.callPackage ./py-trees {};
 

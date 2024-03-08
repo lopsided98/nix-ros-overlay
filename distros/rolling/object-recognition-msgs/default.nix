@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, shape-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-object-recognition-msgs";
-  version = "2.0.0-r3";
+  version = "2.0.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/object_recognition_msgs-release/archive/release/rolling/object_recognition_msgs/2.0.0-3.tar.gz";
-    name = "2.0.0-3.tar.gz";
-    sha256 = "34fc62d06de1e5dbdeb65415b73947db957ef9993634eb569a69843a91b95875";
+    url = "https://github.com/ros2-gbp/object_recognition_msgs-release/archive/release/rolling/object_recognition_msgs/2.0.0-4.tar.gz";
+    name = "2.0.0-4.tar.gz";
+    sha256 = "6f253657781284f0be612049548be04d8f005759acc3f3cc1e6d1d7d178d3941";
   };
 
   buildType = "ament_cmake";

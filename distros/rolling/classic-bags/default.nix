@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, builtin-interfaces, rclcpp, rclpy, rosbag2-cpp, rosbag2-py, rosbag2-storage, rosidl-runtime-py, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-classic-bags";
-  version = "0.1.0-r1";
+  version = "0.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/classic_bags-release/archive/release/rolling/classic_bags/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "54702b9ddea4d08dfe365a4589bc916524f98cbec6867b9c59909e7d7ea2a414";
+    url = "https://github.com/ros2-gbp/classic_bags-release/archive/release/rolling/classic_bags/0.1.0-2.tar.gz";
+    name = "0.1.0-2.tar.gz";
+    sha256 = "ef1071fbb909a6c2f1067a8f0e04014025b7c82af89c44fe009d2cd32e585a1d";
   };
 
   buildType = "ament_cmake";

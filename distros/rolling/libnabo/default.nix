@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen }:
 buildRosPackage {
   pname = "ros-rolling-libnabo";
-  version = "1.0.7-r3";
+  version = "1.0.7-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libnabo-release/archive/release/rolling/libnabo/1.0.7-3.tar.gz";
-    name = "1.0.7-3.tar.gz";
-    sha256 = "ccd35392bf761f8821413d2f5e333d1ae14102959200104265d98fb66c3dfbfa";
+    url = "https://github.com/ros2-gbp/libnabo-release/archive/release/rolling/libnabo/1.0.7-4.tar.gz";
+    name = "1.0.7-4.tar.gz";
+    sha256 = "99993b352d68db7945342c578b7cd8ec54727b1fa041cb9ac88ef16ead2d7c7a";
   };
 
   buildType = "cmake";

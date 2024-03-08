@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ecl-build, ecl-exceptions, ecl-formatters, ecl-geometry, ecl-license }:
 buildRosPackage {
   pname = "ros-rolling-ecl-manipulators";
-  version = "1.2.1-r3";
+  version = "1.2.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ecl_core-release/archive/release/rolling/ecl_manipulators/1.2.1-3.tar.gz";
-    name = "1.2.1-3.tar.gz";
-    sha256 = "bba599c33ade0c14dd91c9a0b779ec268d2c923e5ea8483aab0781bfdaad6634";
+    url = "https://github.com/ros2-gbp/ecl_core-release/archive/release/rolling/ecl_manipulators/1.2.1-4.tar.gz";
+    name = "1.2.1-4.tar.gz";
+    sha256 = "c213e17ada887326a830e18903dc63e1716131390d8d31db2307aecff117f316";
   };
 
   buildType = "ament_cmake";

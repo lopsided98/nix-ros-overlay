@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-copyright, ament-flake8, ament-pep257, pythonPackages }:
 buildRosPackage {
   pname = "ros-rolling-neo-simulation2";
-  version = "1.0.0-r3";
+  version = "1.0.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/neo_simulation2-release/archive/release/rolling/neo_simulation2/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "3e948417eb7c43e407b26681b902a0b1920d7fa7ab2c7c430e8fde4e8a468cb6";
+    url = "https://github.com/ros2-gbp/neo_simulation2-release/archive/release/rolling/neo_simulation2/1.0.0-4.tar.gz";
+    name = "1.0.0-4.tar.gz";
+    sha256 = "934502cb11ee667ae37d2ad426d61a935d3233ad8332a60b5eaf8af6d303e100";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, fmi-adapter, launch, launch-ros }:
 buildRosPackage {
   pname = "ros-rolling-fmi-adapter-examples";
-  version = "2.1.2-r1";
+  version = "2.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fmi_adapter-release/archive/release/rolling/fmi_adapter_examples/2.1.2-1.tar.gz";
-    name = "2.1.2-1.tar.gz";
-    sha256 = "a1d4c6b97e53120f7066334d2d5181f735c7b65ef7bc26559dd4178de694dcba";
+    url = "https://github.com/ros2-gbp/fmi_adapter-release/archive/release/rolling/fmi_adapter_examples/2.1.2-2.tar.gz";
+    name = "2.1.2-2.tar.gz";
+    sha256 = "17844f4bb7ceee128ff0f3a6621612d7306dcb316e925bcd59ab83770305f42e";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, curl, eigen, geometry-msgs, gtest, jsoncpp, launch, launch-ros, libtins, ouster-sensor-msgs, pcl, pcl-conversions, pcl-ros, rclcpp, rclcpp-components, rclcpp-lifecycle, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, spdlog, std-msgs, std-srvs, tf2-eigen, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-ouster-ros";
-  version = "0.11.1-r4";
+  version = "0.11.1-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ouster-ros-release/archive/release/rolling/ouster_ros/0.11.1-4.tar.gz";
-    name = "0.11.1-4.tar.gz";
-    sha256 = "9d59c51c89662f2dd2f2968b24fff73fb9286ebd47f0ecdd226daa8fd0d83b88";
+    url = "https://github.com/ros2-gbp/ouster-ros-release/archive/release/rolling/ouster_ros/0.11.1-5.tar.gz";
+    name = "0.11.1-5.tar.gz";
+    sha256 = "a8bcb24a3098e796f641812ee738bbe0684a347e5141c74ccda84178886ea6ab";
   };
 
   buildType = "ament_cmake";

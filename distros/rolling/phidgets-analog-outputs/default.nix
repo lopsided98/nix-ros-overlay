@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, phidgets-api, phidgets-msgs, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-phidgets-analog-outputs";
-  version = "2.3.2-r1";
+  version = "2.3.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_analog_outputs/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "ac0ea869b95f7ca35a3b86c5ba58d6b74b7ea7146272b1dd7f7cf0451b68a8eb";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_analog_outputs/2.3.2-2.tar.gz";
+    name = "2.3.2-2.tar.gz";
+    sha256 = "f9d971852df8e34665852be42ca531e053c70cd0de59257e722e69c502cdfec4";
   };
 
   buildType = "ament_cmake";

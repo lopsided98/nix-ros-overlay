@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, imu-processors, imu-transformer }:
 buildRosPackage {
   pname = "ros-rolling-imu-pipeline";
-  version = "0.5.0-r1";
+  version = "0.5.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_pipeline-release/archive/release/rolling/imu_pipeline/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "ec06d302db033b28b0a78e49d178f633c624bf7006392a556eb1c5af51cbe7fe";
+    url = "https://github.com/ros2-gbp/imu_pipeline-release/archive/release/rolling/imu_pipeline/0.5.0-2.tar.gz";
+    name = "0.5.0-2.tar.gz";
+    sha256 = "678f5d74e08292b32bfd7f21c3eb8129d3b509d218d4bfa36dc4a50b13032d5c";
   };
 
   buildType = "ament_cmake";

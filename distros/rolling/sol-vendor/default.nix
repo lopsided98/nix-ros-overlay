@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, git, ouxt-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-sol-vendor";
-  version = "0.0.3-r3";
+  version = "0.0.3-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sol_vendor-release/archive/release/rolling/sol_vendor/0.0.3-3.tar.gz";
-    name = "0.0.3-3.tar.gz";
-    sha256 = "30596212a7c5e613ae09ef7b49a6ec55a8bc1b3d7b61e6f54758ea3373d91e6f";
+    url = "https://github.com/ros2-gbp/sol_vendor-release/archive/release/rolling/sol_vendor/0.0.3-4.tar.gz";
+    name = "0.0.3-4.tar.gz";
+    sha256 = "f2e7c40869445bd0aa118d8628d4f9dc794d9aea4549f9c03e9b04957fdfdc4a";
   };
 
   buildType = "ament_cmake";

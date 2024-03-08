@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, canopen-402-driver, canopen-interfaces, canopen-proxy-driver, controller-interface, controller-manager, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-canopen-ros2-controllers";
-  version = "0.2.8-r1";
+  version = "0.2.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/rolling/canopen_ros2_controllers/0.2.8-1.tar.gz";
-    name = "0.2.8-1.tar.gz";
-    sha256 = "6aa6246196931c2fc010aa39e40cd4c0054b1d3cacdb320fcb33c2c219355978";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/rolling/canopen_ros2_controllers/0.2.8-2.tar.gz";
+    name = "0.2.8-2.tar.gz";
+    sha256 = "829751ec78b8616cea766e2d802aa2a4eacc217242504f056e68cab346df5bf7";
   };
 
   buildType = "ament_cmake";

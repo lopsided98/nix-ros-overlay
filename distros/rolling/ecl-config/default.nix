@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ecl-build, ecl-license }:
 buildRosPackage {
   pname = "ros-rolling-ecl-config";
-  version = "1.2.0-r3";
+  version = "1.2.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ecl_lite-release/archive/release/rolling/ecl_config/1.2.0-3.tar.gz";
-    name = "1.2.0-3.tar.gz";
-    sha256 = "5d2736f9365bd84239b883286a89d1e13f820a3a2e86ee5e289009a143c56735";
+    url = "https://github.com/ros2-gbp/ecl_lite-release/archive/release/rolling/ecl_config/1.2.0-4.tar.gz";
+    name = "1.2.0-4.tar.gz";
+    sha256 = "9a7a140ec3f6b01d6913539c18aeccc70df565a0affdf2375d054f0cea61d670";
   };
 
   buildType = "ament_cmake";
