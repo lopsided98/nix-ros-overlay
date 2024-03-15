@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, libpng, libusb1 }:
+{ lib, buildRosPackage, fetchurl, cmake, libpng, libusb1, ncurses }:
 buildRosPackage {
   pname = "ros-rolling-rc-genicam-api";
-  version = "2.6.1-r3";
+  version = "2.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_genicam_api-release/archive/release/rolling/rc_genicam_api/2.6.1-3.tar.gz";
-    name = "2.6.1-3.tar.gz";
-    sha256 = "044f2119766f5948db0f7a75aeaa4c924106e120dad1fb6ec046fdd8ea3354bc";
+    url = "https://github.com/ros2-gbp/rc_genicam_api-release/archive/release/rolling/rc_genicam_api/2.6.5-1.tar.gz";
+    name = "2.6.5-1.tar.gz";
+    sha256 = "2cd2bb6d745ad7b9d5604527a56bf8bb10c101b64dcadc50c3366dd19c548bf9";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ libpng libusb1 ];
+  propagatedBuildInputs = [ libpng libusb1 ncurses ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

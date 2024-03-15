@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, generate-parameter-library, generate-parameter-library-py, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-iron-generate-parameter-module-example";
-  version = "0.3.6-r1";
+  version = "0.3.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/iron/generate_parameter_module_example/0.3.6-1.tar.gz";
-    name = "0.3.6-1.tar.gz";
-    sha256 = "72475cf5472ce06e4f391a2a601e8bfe55adafa28bb1b5aec03e08770a2e72c8";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/iron/generate_parameter_module_example/0.3.8-1.tar.gz";
+    name = "0.3.8-1.tar.gz";
+    sha256 = "8e68e10b9dc8959ab2405c2826d553eea809139d3b3216683f7c7953bc6bae58";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-rti-connext-dds-cmake-module";
-  version = "0.20.0-r2";
+  version = "0.20.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_connextdds-release/archive/release/rolling/rti_connext_dds_cmake_module/0.20.0-2.tar.gz";
-    name = "0.20.0-2.tar.gz";
-    sha256 = "f27a90c33621f0562db8e5dac26bbb8e7537bb17c263ab96e6beb273c7e7441f";
+    url = "https://github.com/ros2-gbp/rmw_connextdds-release/archive/release/rolling/rti_connext_dds_cmake_module/0.20.1-1.tar.gz";
+    name = "0.20.1-1.tar.gz";
+    sha256 = "5b3b9a88e1a1ea439e88e4feeb161a18a838f84a8beb00d5dbe09ef16951f0f2";
   };
 
   buildType = "ament_cmake";

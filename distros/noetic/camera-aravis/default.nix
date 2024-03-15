@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, aravis, camera-info-manager, catkin, diagnostic-msgs, dynamic-reconfigure, glib, image-transport, message-generation, message-runtime, nodelet, roscpp, sensor-msgs, std-msgs, tf, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-camera-aravis";
-  version = "4.0.5-r3";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/FraunhoferIOSB/camera_aravis-release/archive/release/noetic/camera_aravis/4.0.5-3.tar.gz";
-    name = "4.0.5-3.tar.gz";
-    sha256 = "6e0f6a3e6647eec18d87d77c6f2c687454698961b22ad32332d00fb8ab824bf9";
+    url = "https://github.com/FraunhoferIOSB/camera_aravis-release/archive/release/noetic/camera_aravis/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "f3f5e83315b871e70a00a229ecb6a0fea941d2ca335f2f01d2aeeb53ccf79b2b";
   };
 
   buildType = "catkin";

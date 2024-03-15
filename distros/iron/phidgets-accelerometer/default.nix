@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-iron-phidgets-accelerometer";
-  version = "2.3.2-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/phidgets_accelerometer/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "aa6c80a40a8ce930c0896a5cfd83a6ee33f5665c108673d6af0c9f9394bc3334";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/phidgets_accelerometer/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "69bf22b77fbce1213f73b291eb339c8bc1ecfd11fb74ee0710efcb657f416910";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, lifecycle-msgs, rclcpp, rclcpp-components, rclcpp-lifecycle, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-raspimouse-fake";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/raspimouse_sim-release/archive/release/humble/raspimouse_fake/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "4adecba84f76d80c1463225bc67e18b40950cda89b6a652451e83f841defd2e9";
+    url = "https://github.com/ros2-gbp/raspimouse_sim-release/archive/release/humble/raspimouse_fake/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "d1408df1c47df7c882c5f485ffb524b3a2295a2ee8c952810b742c7e52cdd7c8";
   };
 
   buildType = "ament_cmake";

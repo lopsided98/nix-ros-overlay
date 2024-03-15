@@ -362,6 +362,8 @@ self: super: {
 
  clearpath-viz = self.callPackage ./clearpath-viz {};
 
+ cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
+
  cob-actions = self.callPackage ./cob-actions {};
 
  cob-msgs = self.callPackage ./cob-msgs {};
@@ -786,7 +788,11 @@ self: super: {
 
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
+ generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
+
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
+
+ generate-parameter-module-example = self.callPackage ./generate-parameter-module-example {};
 
  geodesy = self.callPackage ./geodesy {};
 
@@ -2387,6 +2393,8 @@ self: super: {
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
 
  spinnaker-camera-driver = self.callPackage ./spinnaker-camera-driver {};
+
+ spinnaker-synchronized-camera-driver = self.callPackage ./spinnaker-synchronized-camera-driver {};
 
  splsm-7 = self.callPackage ./splsm-7 {};
 

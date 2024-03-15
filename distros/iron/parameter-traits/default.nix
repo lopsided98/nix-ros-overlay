@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, fmt, rclcpp, rsl, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-iron-parameter-traits";
-  version = "0.3.7-r1";
+  version = "0.3.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/iron/parameter_traits/0.3.7-1.tar.gz";
-    name = "0.3.7-1.tar.gz";
-    sha256 = "cdc317d58b65c57998ea590802e13fbd36dcec5309f6d698afbfe7063ac18e55";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/iron/parameter_traits/0.3.8-1.tar.gz";
+    name = "0.3.8-1.tar.gz";
+    sha256 = "0b7fa00152ddfd2eb8bace89cdbe138f81bc21322c91200f02a90b3cd2e65419";
   };
 
   buildType = "ament_cmake";

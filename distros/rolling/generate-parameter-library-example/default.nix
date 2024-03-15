@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-core, ament-lint-auto, ament-lint-common, generate-parameter-library, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-rolling-generate-parameter-library-example";
-  version = "0.3.6-r1";
+  version = "0.3.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/rolling/generate_parameter_library_example/0.3.6-1.tar.gz";
-    name = "0.3.6-1.tar.gz";
-    sha256 = "9ab0b0d9763442d0c6a384c60a2021d0f83f014267c7c5702aa51fc9e6763ce8";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/rolling/generate_parameter_library_example/0.3.8-1.tar.gz";
+    name = "0.3.8-1.tar.gz";
+    sha256 = "b89d40f5e138db8adc4371f6f6b510e94823d4707236c1fce279347611af8dcf";
   };
 
   buildType = "ament_cmake";

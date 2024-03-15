@@ -254,6 +254,8 @@ self: super: {
 
  classic-bags = self.callPackage ./classic-bags {};
 
+ cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
+
  color-names = self.callPackage ./color-names {};
 
  color-util = self.callPackage ./color-util {};
@@ -566,7 +568,11 @@ self: super: {
 
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
+ generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
+
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
+
+ generate-parameter-module-example = self.callPackage ./generate-parameter-module-example {};
 
  geodesy = self.callPackage ./geodesy {};
 
@@ -813,6 +819,8 @@ self: super: {
  libnabo = self.callPackage ./libnabo {};
 
  libphidget22 = self.callPackage ./libphidget22 {};
+
+ libpointmatcher = self.callPackage ./libpointmatcher {};
 
  libstatistics-collector = self.callPackage ./libstatistics-collector {};
 
@@ -1240,6 +1248,8 @@ self: super: {
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
+ rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
+
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
 
  rc-genicam-driver = self.callPackage ./rc-genicam-driver {};
@@ -1318,17 +1328,25 @@ self: super: {
 
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
 
+ rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
+
  rmf-battery = self.callPackage ./rmf-battery {};
 
  rmf-building-map-msgs = self.callPackage ./rmf-building-map-msgs {};
 
  rmf-charger-msgs = self.callPackage ./rmf-charger-msgs {};
 
+ rmf-charging-schedule = self.callPackage ./rmf-charging-schedule {};
+
  rmf-cmake-uncrustify = self.callPackage ./rmf-cmake-uncrustify {};
 
  rmf-dispenser-msgs = self.callPackage ./rmf-dispenser-msgs {};
 
  rmf-door-msgs = self.callPackage ./rmf-door-msgs {};
+
+ rmf-fleet-adapter = self.callPackage ./rmf-fleet-adapter {};
+
+ rmf-fleet-adapter-python = self.callPackage ./rmf-fleet-adapter-python {};
 
  rmf-fleet-msgs = self.callPackage ./rmf-fleet-msgs {};
 
@@ -1342,13 +1360,21 @@ self: super: {
 
  rmf-site-map-msgs = self.callPackage ./rmf-site-map-msgs {};
 
+ rmf-task = self.callPackage ./rmf-task {};
+
  rmf-task-msgs = self.callPackage ./rmf-task-msgs {};
+
+ rmf-task-ros2 = self.callPackage ./rmf-task-ros2 {};
+
+ rmf-task-sequence = self.callPackage ./rmf-task-sequence {};
 
  rmf-traffic = self.callPackage ./rmf-traffic {};
 
  rmf-traffic-examples = self.callPackage ./rmf-traffic-examples {};
 
  rmf-traffic-msgs = self.callPackage ./rmf-traffic-msgs {};
+
+ rmf-traffic-ros2 = self.callPackage ./rmf-traffic-ros2 {};
 
  rmf-utils = self.callPackage ./rmf-utils {};
 
@@ -1362,7 +1388,15 @@ self: super: {
 
  rmf-visualization-msgs = self.callPackage ./rmf-visualization-msgs {};
 
+ rmf-visualization-navgraphs = self.callPackage ./rmf-visualization-navgraphs {};
+
  rmf-visualization-obstacles = self.callPackage ./rmf-visualization-obstacles {};
+
+ rmf-visualization-rviz2-plugins = self.callPackage ./rmf-visualization-rviz2-plugins {};
+
+ rmf-visualization-schedule = self.callPackage ./rmf-visualization-schedule {};
+
+ rmf-websocket = self.callPackage ./rmf-websocket {};
 
  rmf-workcell-msgs = self.callPackage ./rmf-workcell-msgs {};
 

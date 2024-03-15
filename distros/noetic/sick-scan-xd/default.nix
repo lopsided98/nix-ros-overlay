@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, diagnostic-updater, dynamic-reconfigure, geometry-msgs, message-generation, message-runtime, nav-msgs, roscpp, roslib, rospy, rviz, sensor-msgs, std-msgs, tf, tf2, tf2-ros, visualization-msgs, xacro }:
 buildRosPackage {
   pname = "ros-noetic-sick-scan-xd";
-  version = "3.1.5-r1";
+  version = "3.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SICKAG/sick_scan_xd-release/archive/release/noetic/sick_scan_xd/3.1.5-1.tar.gz";
-    name = "3.1.5-1.tar.gz";
-    sha256 = "6eed40eceaa8dc9bda5c547ade68486317d454d51f005a6bacaf379d67023cce";
+    url = "https://github.com/SICKAG/sick_scan_xd-release/archive/release/noetic/sick_scan_xd/3.2.6-1.tar.gz";
+    name = "3.2.6-1.tar.gz";
+    sha256 = "17f6417d6b4c3c97d162aca5450ab31f31e5cc19117e9cfb6832ae8327debcef";
   };
 
   buildType = "catkin";

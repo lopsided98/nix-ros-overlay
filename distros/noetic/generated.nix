@@ -2432,6 +2432,8 @@ self: super: {
 
  phidgets-high-speed-encoder = self.callPackage ./phidgets-high-speed-encoder {};
 
+ phidgets-humidity = self.callPackage ./phidgets-humidity {};
+
  phidgets-ik = self.callPackage ./phidgets-ik {};
 
  phidgets-magnetometer = self.callPackage ./phidgets-magnetometer {};
