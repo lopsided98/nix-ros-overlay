@@ -102,6 +102,12 @@ in with lib; {
     propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.moveit-ros-planning ];
   });
 
+  ompl = rosSuper.ompl.overrideAttrs ({
+    ...
+  }: {
+    patches = [ ./ompl.patch ];
+  });
+
   plotjuggler-ros = rosSuper.plotjuggler-ros.overrideAttrs ({
     patches ? [], nativeBuildInputs ? [], ...
   }: {
