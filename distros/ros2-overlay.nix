@@ -77,6 +77,12 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
+  ompl = rosSuper.ompl.overrideAttrs ({
+    ...
+  }: {
+    patches = [ ./ompl_ros2.patch ];
+  });
+
   popf = rosSuper.popf.overrideAttrs ({
     nativeBuildInputs ? [], postPatch ? "", ...
   }: {
