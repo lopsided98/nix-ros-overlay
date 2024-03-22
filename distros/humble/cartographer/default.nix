@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, abseil-cpp, boost, cairo, ceres-solver, cmake, eigen, gflags, git, glog, gtest, lua5, protobuf, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-cartographer";
-  version = "2.0.9002-r2";
+  version = "2.0.9003-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cartographer-release/archive/release/humble/cartographer/2.0.9002-2.tar.gz";
-    name = "2.0.9002-2.tar.gz";
-    sha256 = "ee74f0e0d86be3b0c946edf63212372e6420861713cce3b79955c2d1eb9c0cca";
+    url = "https://github.com/ros2-gbp/cartographer-release/archive/release/humble/cartographer/2.0.9003-1.tar.gz";
+    name = "2.0.9003-1.tar.gz";
+    sha256 = "eabfde564729afc123db44693aec27d5034a8cb7209ab53c0b21dd40657c0178";
   };
 
   buildType = "cmake";

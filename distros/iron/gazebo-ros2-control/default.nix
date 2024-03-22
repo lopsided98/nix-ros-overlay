@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, controller-manager, gazebo-dev, gazebo-ros, hardware-interface, pluginlib, rclcpp, std-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-iron-gazebo-ros2-control";
-  version = "0.6.4-r1";
+  version = "0.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gazebo_ros2_control-release/archive/release/iron/gazebo_ros2_control/0.6.4-1.tar.gz";
-    name = "0.6.4-1.tar.gz";
-    sha256 = "1a1b83f1967581678d0c0be0509b654d31bda11ffe15e3f4c3b16e48741f7c2c";
+    url = "https://github.com/ros2-gbp/gazebo_ros2_control-release/archive/release/iron/gazebo_ros2_control/0.6.5-1.tar.gz";
+    name = "0.6.5-1.tar.gz";
+    sha256 = "4ea6e089296a2b671192975672186a29212a0eed48a089aa0395e9591056e3c8";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, rclcpp, rclcpp-components, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-iron-phidgets-spatial";
-  version = "2.3.2-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/phidgets_spatial/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "12e7cc27ac1e373401a186653f31fea536596a3a5583b6a0ed7c68c5a825b430";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/phidgets_spatial/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "296213799ed4f3060f44566fed36cdf5623d62a1cd647a6fb096c4005959fec6";
   };
 
   buildType = "ament_cmake";

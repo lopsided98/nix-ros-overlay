@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, qt5, rosbag-fancy-msgs, rosfmt, rqt-gui, rqt-gui-cpp, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-rqt-rosbag-fancy";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/xqms/rosbag_fancy-release/archive/release/noetic/rqt_rosbag_fancy/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "4ac455e9bdccfca046e48afc148f6d390dfc7023fdd438a38021953ec2699549";
+    url = "https://github.com/xqms/rosbag_fancy-release/archive/release/noetic/rqt_rosbag_fancy/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "d2de3ef53df647a60ed01833cd880e83892b96a9a6b115329237d849792e3c75";
   };
 
   buildType = "catkin";

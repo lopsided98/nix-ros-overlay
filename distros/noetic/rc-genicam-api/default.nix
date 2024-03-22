@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, libpng, libusb1 }:
+{ lib, buildRosPackage, fetchurl, cmake, libpng, libusb1, ncurses }:
 buildRosPackage {
   pname = "ros-noetic-rc-genicam-api";
-  version = "2.6.1-r1";
+  version = "2.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/noetic/rc_genicam_api/2.6.1-1.tar.gz";
-    name = "2.6.1-1.tar.gz";
-    sha256 = "dcfe40169c77cfca98488db442517f001efe243c98b6baf87c1a59a66d07f792";
+    url = "https://github.com/roboception-gbp/rc_genicam_api-release/archive/release/noetic/rc_genicam_api/2.6.5-1.tar.gz";
+    name = "2.6.5-1.tar.gz";
+    sha256 = "16837d9781d1dde8c502d9185d55f243dc95dcf174c2bbc9b523bff93b98aaec";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ libpng libusb1 ];
+  propagatedBuildInputs = [ libpng libusb1 ncurses ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

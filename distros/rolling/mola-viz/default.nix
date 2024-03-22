@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt2 }:
 buildRosPackage {
   pname = "ros-rolling-mola-viz";
-  version = "0.2.2-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_viz/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "948f802286f774e70b460c7d26fd3f0b0a285705daa089c8a78c3f09d1f6534a";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_viz/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "e4800bac705d57f43512a679a6142a37daf816c6f4e0037a07c320ff15efee0d";
   };
 
   buildType = "cmake";

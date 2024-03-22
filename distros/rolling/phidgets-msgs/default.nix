@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-phidgets-msgs";
-  version = "2.3.2-r2";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_msgs/2.3.2-2.tar.gz";
-    name = "2.3.2-2.tar.gz";
-    sha256 = "e341762b851f9e6d879798d8ab33d80780cd9accd60e3896a9123b61c0c94e10";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_msgs/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "1fa389a996fadfe992fdf2fd24debab2fbd30f1c0117cc8784fe71122dc09737";
   };
 
   buildType = "ament_cmake";

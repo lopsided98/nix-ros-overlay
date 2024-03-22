@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen }:
 buildRosPackage {
   pname = "ros-iron-sophus";
-  version = "1.3.1-r3";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sophus-release/archive/release/iron/sophus/1.3.1-3.tar.gz";
-    name = "1.3.1-3.tar.gz";
-    sha256 = "8d33ae85782f2f8868ad6515b74177bdb1b6231390562cc85bffeffb0d1d0827";
+    url = "https://github.com/ros2-gbp/sophus-release/archive/release/iron/sophus/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "d1e8183120617de2f79ea109679f1ac23eabeef14c68991e11a6ea3099cff1ce";
   };
 
   buildType = "cmake";

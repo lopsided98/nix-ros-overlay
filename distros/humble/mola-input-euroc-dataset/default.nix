@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt2 }:
 buildRosPackage {
   pname = "ros-humble-mola-input-euroc-dataset";
-  version = "0.2.2-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_euroc_dataset/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "83ccb89ef6628f753f67be6e3b12496378ceccb09768662d8383d3a3060e9a66";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_euroc_dataset/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "d306f1d7df8bcb5831165764b84b6195c0880e4b37945b1926c3c895fdf0b464";
   };
 
   buildType = "cmake";

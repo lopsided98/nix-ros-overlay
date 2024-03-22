@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, controller-manager, diff-drive-controller, husky-description, interactive-marker-twist-server, joint-state-controller, joint-trajectory-controller, joy, robot-localization, robot-state-publisher, roslaunch, rostopic, teleop-twist-joy, teleop-twist-keyboard, twist-mux }:
 buildRosPackage {
   pname = "ros-noetic-husky-control";
-  version = "0.6.9-r1";
+  version = "0.6.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/husky-release/archive/release/noetic/husky_control/0.6.9-1.tar.gz";
-    name = "0.6.9-1.tar.gz";
-    sha256 = "97c15ce309d32e60754a8b70d0169d59580233121a366021633aab588e916ec3";
+    url = "https://github.com/clearpath-gbp/husky-release/archive/release/noetic/husky_control/0.6.10-1.tar.gz";
+    name = "0.6.10-1.tar.gz";
+    sha256 = "445c1dfb9e874677d394a3aba29c5121f5dfb94e90c914800a68c6ca6ce1478e";
   };
 
   buildType = "catkin";

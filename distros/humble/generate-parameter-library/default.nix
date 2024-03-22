@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, fmt, generate-parameter-library-py, parameter-traits, rclcpp, rclcpp-lifecycle, rclpy, rsl, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-humble-generate-parameter-library";
-  version = "0.3.7-r1";
+  version = "0.3.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/humble/generate_parameter_library/0.3.7-1.tar.gz";
-    name = "0.3.7-1.tar.gz";
-    sha256 = "dd613acf03ee7c06c93b3f71cfb8a21ff5a6207fa2bcb501af6184a3e922b838";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/humble/generate_parameter_library/0.3.8-1.tar.gz";
+    name = "0.3.8-1.tar.gz";
+    sha256 = "949d568868cfb9de77cd18b8ead166b54d2eec57325256fbceceeb1d701fefc9";
   };
 
   buildType = "ament_cmake";

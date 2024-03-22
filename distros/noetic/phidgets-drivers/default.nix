@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, libphidget22, phidgets-accelerometer, phidgets-analog-inputs, phidgets-api, phidgets-digital-inputs, phidgets-digital-outputs, phidgets-gyroscope, phidgets-high-speed-encoder, phidgets-ik, phidgets-magnetometer, phidgets-motors, phidgets-msgs, phidgets-spatial, phidgets-temperature }:
 buildRosPackage {
   pname = "ros-noetic-phidgets-drivers";
-  version = "1.0.8-r2";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_drivers/1.0.8-2.tar.gz";
-    name = "1.0.8-2.tar.gz";
-    sha256 = "570610ae7e8377d3c613127797533178d8e34637b7fe5f69c53397081dcf1eff";
+    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_drivers/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "bd139897d0e9dc09b0603ec65e2ac7abe01fae8065a518a3b1eaf6cd7f614696";
   };
 
   buildType = "catkin";

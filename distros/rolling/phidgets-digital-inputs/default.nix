@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-phidgets-digital-inputs";
-  version = "2.3.2-r2";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_digital_inputs/2.3.2-2.tar.gz";
-    name = "2.3.2-2.tar.gz";
-    sha256 = "bcee8eddc8458e5a57f57eaa378a3de9f9fa0c69843f1e47ef80f09250f71862";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_digital_inputs/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "59bf4279682a58e3ee98bc9e4fef1fb9c6ddca376f93b17c3d881dba4b5e04e1";
   };
 
   buildType = "ament_cmake";

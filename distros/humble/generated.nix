@@ -362,6 +362,8 @@ self: super: {
 
  clearpath-viz = self.callPackage ./clearpath-viz {};
 
+ cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
+
  cob-actions = self.callPackage ./cob-actions {};
 
  cob-msgs = self.callPackage ./cob-msgs {};
@@ -786,7 +788,11 @@ self: super: {
 
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
+ generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
+
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
+
+ generate-parameter-module-example = self.callPackage ./generate-parameter-module-example {};
 
  geodesy = self.callPackage ./geodesy {};
 
@@ -875,6 +881,8 @@ self: super: {
  hpp-fcl = self.callPackage ./hpp-fcl {};
 
  hri-msgs = self.callPackage ./hri-msgs {};
+
+ human-description = self.callPackage ./human-description {};
 
  ibeo-msgs = self.callPackage ./ibeo-msgs {};
 
@@ -993,6 +1001,8 @@ self: super: {
  kinova-gen3-6dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-6dof-robotiq-2f-85-moveit-config {};
 
  kinova-gen3-7dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-7dof-robotiq-2f-85-moveit-config {};
+
+ kitti-metrics-eval = self.callPackage ./kitti-metrics-eval {};
 
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
 
@@ -1134,6 +1144,10 @@ self: super: {
 
  mapviz-plugins = self.callPackage ./mapviz-plugins {};
 
+ marine-acoustic-msgs = self.callPackage ./marine-acoustic-msgs {};
+
+ marine-sensor-msgs = self.callPackage ./marine-sensor-msgs {};
+
  marker-msgs = self.callPackage ./marker-msgs {};
 
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
@@ -1220,9 +1234,47 @@ self: super: {
 
  mod = self.callPackage ./mod {};
 
+ mola = self.callPackage ./mola {};
+
+ mola-bridge-ros2 = self.callPackage ./mola-bridge-ros2 {};
+
  mola-common = self.callPackage ./mola-common {};
 
+ mola-demos = self.callPackage ./mola-demos {};
+
+ mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
+
+ mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
+
+ mola-input-kitti360-dataset = self.callPackage ./mola-input-kitti360-dataset {};
+
+ mola-input-kitti-dataset = self.callPackage ./mola-input-kitti-dataset {};
+
+ mola-input-mulran-dataset = self.callPackage ./mola-input-mulran-dataset {};
+
+ mola-input-paris-luco-dataset = self.callPackage ./mola-input-paris-luco-dataset {};
+
+ mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
+
+ mola-input-rosbag2 = self.callPackage ./mola-input-rosbag2 {};
+
+ mola-kernel = self.callPackage ./mola-kernel {};
+
+ mola-launcher = self.callPackage ./mola-launcher {};
+
+ mola-metric-maps = self.callPackage ./mola-metric-maps {};
+
+ mola-navstate-fuse = self.callPackage ./mola-navstate-fuse {};
+
+ mola-pose-list = self.callPackage ./mola-pose-list {};
+
  mola-test-datasets = self.callPackage ./mola-test-datasets {};
+
+ mola-traj-tools = self.callPackage ./mola-traj-tools {};
+
+ mola-viz = self.callPackage ./mola-viz {};
+
+ mola-yaml = self.callPackage ./mola-yaml {};
 
  motion-capture-tracking = self.callPackage ./motion-capture-tracking {};
 
@@ -1970,6 +2022,8 @@ self: super: {
 
  robotiq-description = self.callPackage ./robotiq-description {};
 
+ robotont-driver = self.callPackage ./robotont-driver {};
+
  robotraconteur = self.callPackage ./robotraconteur {};
 
  ros2-control = self.callPackage ./ros2-control {};
@@ -2387,6 +2441,8 @@ self: super: {
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
 
  spinnaker-camera-driver = self.callPackage ./spinnaker-camera-driver {};
+
+ spinnaker-synchronized-camera-driver = self.callPackage ./spinnaker-synchronized-camera-driver {};
 
  splsm-7 = self.callPackage ./splsm-7 {};
 

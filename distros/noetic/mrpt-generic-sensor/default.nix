@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, mrpt-sensorlib, mrpt2, ros-environment, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-generic-sensor";
-  version = "0.0.3-r1";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_sensors-release/archive/release/noetic/mrpt_generic_sensor/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "af22fedd26147af93bb3194a75c4dc6fc87b834498cea553bb7493773265b619";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_sensors-release/archive/release/noetic/mrpt_generic_sensor/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "147a9d09f9351cd8e64c80c6e3270cb38b1cb6f8fcb3a378a765e2aed597b2f8";
   };
 
   buildType = "catkin";

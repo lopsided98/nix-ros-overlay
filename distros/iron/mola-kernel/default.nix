@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-yaml, mrpt2 }:
 buildRosPackage {
   pname = "ros-iron-mola-kernel";
-  version = "0.2.2-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_kernel/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "8d61d802133d9ba8d3b5a33751e5a8e0877e19eabffa5ad66b253594af8b0216";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_kernel/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "edd0275ad083804c4f0f7d0a2f07ff73226e35fa6258c1bbd5a321e2e7e2116f";
   };
 
   buildType = "cmake";
