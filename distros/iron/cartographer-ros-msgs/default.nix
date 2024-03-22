@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-cartographer-ros-msgs";
-  version = "2.0.9001-r2";
+  version = "2.0.9002-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cartographer_ros-release/archive/release/iron/cartographer_ros_msgs/2.0.9001-2.tar.gz";
-    name = "2.0.9001-2.tar.gz";
-    sha256 = "6cf821f3b65838ade056f34399b1b65ea0e63929fe09344aef83356c336244aa";
+    url = "https://github.com/ros2-gbp/cartographer_ros-release/archive/release/iron/cartographer_ros_msgs/2.0.9002-1.tar.gz";
+    name = "2.0.9002-1.tar.gz";
+    sha256 = "5c8038ac52a7cd8997dbf3e8cf52646d312556269ab63dcdc150281e5f92a36e";
   };
 
   buildType = "ament_cmake";

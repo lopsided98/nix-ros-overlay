@@ -2,21 +2,21 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, hls-lfcd-lds-driver, joy-linux, nav2-map-server, opencv, raspimouse, raspimouse-msgs, rclcpp, rclcpp-components, rclcpp-lifecycle, rt-usb-9axisimu-driver, sensor-msgs, slam-toolbox, std-msgs, std-srvs, v4l-utils }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, hls-lfcd-lds-driver, joy-linux, nav2-map-server, opencv, raspimouse, raspimouse-msgs, rclcpp, rclcpp-components, rclcpp-lifecycle, rt-usb-9axisimu-driver, sensor-msgs, slam-toolbox, std-msgs, std-srvs, usb-cam, v4l-utils }:
 buildRosPackage {
   pname = "ros-humble-raspimouse-ros2-examples";
-  version = "2.1.0-r1";
+  version = "2.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/raspimouse_ros2_examples-release/archive/release/humble/raspimouse_ros2_examples/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "4567bff84be33ef7d59c41fb4945ba38adb19accd63aa094748f07cf385e20ba";
+    url = "https://github.com/ros2-gbp/raspimouse_ros2_examples-release/archive/release/humble/raspimouse_ros2_examples/2.2.0-2.tar.gz";
+    name = "2.2.0-2.tar.gz";
+    sha256 = "0554257dd89a8ab704a2ee597cd9ee16a38d404e3735085eb7c5fb15fae0ff30";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ cv-bridge geometry-msgs hls-lfcd-lds-driver joy-linux nav2-map-server opencv opencv.cxxdev raspimouse raspimouse-msgs rclcpp rclcpp-components rclcpp-lifecycle rt-usb-9axisimu-driver sensor-msgs slam-toolbox std-msgs std-srvs v4l-utils ];
+  propagatedBuildInputs = [ cv-bridge geometry-msgs hls-lfcd-lds-driver joy-linux nav2-map-server opencv opencv.cxxdev raspimouse raspimouse-msgs rclcpp rclcpp-components rclcpp-lifecycle rt-usb-9axisimu-driver sensor-msgs slam-toolbox std-msgs std-srvs usb-cam v4l-utils ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

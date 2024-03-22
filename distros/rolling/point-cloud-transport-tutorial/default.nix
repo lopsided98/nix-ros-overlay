@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, point-cloud-transport, point-cloud-transport-plugins, rclcpp, rcpputils, rosbag2-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-point-cloud-transport-tutorial";
-  version = "0.0.1-r2";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport_tutorial-release/archive/release/rolling/point_cloud_transport_tutorial/0.0.1-2.tar.gz";
-    name = "0.0.1-2.tar.gz";
-    sha256 = "504ae06e52d656c57ed25d40ebf463005395d6c5c22d3eb69722c39e258218f1";
+    url = "https://github.com/ros2-gbp/point_cloud_transport_tutorial-release/archive/release/rolling/point_cloud_transport_tutorial/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "6b1275f5154a2e5243b6219907fe29f7e320ce26520a5ddc5ef7d80f49fbfbb2";
   };
 
   buildType = "ament_cmake";

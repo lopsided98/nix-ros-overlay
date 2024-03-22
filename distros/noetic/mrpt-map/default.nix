@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mrpt2, nav-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-map";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_map/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "eba76b2b463bcd9892c395964b239d54a8ec98d959efddbda69c8a31cb1b65e5";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_map/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "288b74bf615f58f3d4120de178bbdab0430ab6a0a46ecea02f2552311194d820";
   };
 
   buildType = "catkin";

@@ -714,6 +714,8 @@ self: super: {
 
  kinova-gen3-7dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-7dof-robotiq-2f-85-moveit-config {};
 
+ kitti-metrics-eval = self.callPackage ./kitti-metrics-eval {};
+
  kobuki-core = self.callPackage ./kobuki-core {};
 
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
@@ -814,6 +816,8 @@ self: super: {
 
  libphidget22 = self.callPackage ./libphidget22 {};
 
+ libpointmatcher = self.callPackage ./libpointmatcher {};
+
  libstatistics-collector = self.callPackage ./libstatistics-collector {};
 
  libyaml-vendor = self.callPackage ./libyaml-vendor {};
@@ -837,6 +841,10 @@ self: super: {
  mapviz-interfaces = self.callPackage ./mapviz-interfaces {};
 
  mapviz-plugins = self.callPackage ./mapviz-plugins {};
+
+ marine-acoustic-msgs = self.callPackage ./marine-acoustic-msgs {};
+
+ marine-sensor-msgs = self.callPackage ./marine-sensor-msgs {};
 
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
 
@@ -892,9 +900,47 @@ self: super: {
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
+ mola = self.callPackage ./mola {};
+
+ mola-bridge-ros2 = self.callPackage ./mola-bridge-ros2 {};
+
  mola-common = self.callPackage ./mola-common {};
 
+ mola-demos = self.callPackage ./mola-demos {};
+
+ mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
+
+ mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
+
+ mola-input-kitti360-dataset = self.callPackage ./mola-input-kitti360-dataset {};
+
+ mola-input-kitti-dataset = self.callPackage ./mola-input-kitti-dataset {};
+
+ mola-input-mulran-dataset = self.callPackage ./mola-input-mulran-dataset {};
+
+ mola-input-paris-luco-dataset = self.callPackage ./mola-input-paris-luco-dataset {};
+
+ mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
+
+ mola-input-rosbag2 = self.callPackage ./mola-input-rosbag2 {};
+
+ mola-kernel = self.callPackage ./mola-kernel {};
+
+ mola-launcher = self.callPackage ./mola-launcher {};
+
+ mola-metric-maps = self.callPackage ./mola-metric-maps {};
+
+ mola-navstate-fuse = self.callPackage ./mola-navstate-fuse {};
+
+ mola-pose-list = self.callPackage ./mola-pose-list {};
+
  mola-test-datasets = self.callPackage ./mola-test-datasets {};
+
+ mola-traj-tools = self.callPackage ./mola-traj-tools {};
+
+ mola-viz = self.callPackage ./mola-viz {};
+
+ mola-yaml = self.callPackage ./mola-yaml {};
 
  motion-capture-tracking = self.callPackage ./motion-capture-tracking {};
 
@@ -991,6 +1037,10 @@ self: super: {
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
+
+ mqtt-client = self.callPackage ./mqtt-client {};
+
+ mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
@@ -1240,6 +1290,8 @@ self: super: {
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
+ rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
+
  rc-genicam-api = self.callPackage ./rc-genicam-api {};
 
  rc-genicam-driver = self.callPackage ./rc-genicam-driver {};
@@ -1318,17 +1370,25 @@ self: super: {
 
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
 
+ rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
+
  rmf-battery = self.callPackage ./rmf-battery {};
 
  rmf-building-map-msgs = self.callPackage ./rmf-building-map-msgs {};
 
  rmf-charger-msgs = self.callPackage ./rmf-charger-msgs {};
 
+ rmf-charging-schedule = self.callPackage ./rmf-charging-schedule {};
+
  rmf-cmake-uncrustify = self.callPackage ./rmf-cmake-uncrustify {};
 
  rmf-dispenser-msgs = self.callPackage ./rmf-dispenser-msgs {};
 
  rmf-door-msgs = self.callPackage ./rmf-door-msgs {};
+
+ rmf-fleet-adapter = self.callPackage ./rmf-fleet-adapter {};
+
+ rmf-fleet-adapter-python = self.callPackage ./rmf-fleet-adapter-python {};
 
  rmf-fleet-msgs = self.callPackage ./rmf-fleet-msgs {};
 
@@ -1342,13 +1402,21 @@ self: super: {
 
  rmf-site-map-msgs = self.callPackage ./rmf-site-map-msgs {};
 
+ rmf-task = self.callPackage ./rmf-task {};
+
  rmf-task-msgs = self.callPackage ./rmf-task-msgs {};
+
+ rmf-task-ros2 = self.callPackage ./rmf-task-ros2 {};
+
+ rmf-task-sequence = self.callPackage ./rmf-task-sequence {};
 
  rmf-traffic = self.callPackage ./rmf-traffic {};
 
  rmf-traffic-examples = self.callPackage ./rmf-traffic-examples {};
 
  rmf-traffic-msgs = self.callPackage ./rmf-traffic-msgs {};
+
+ rmf-traffic-ros2 = self.callPackage ./rmf-traffic-ros2 {};
 
  rmf-utils = self.callPackage ./rmf-utils {};
 
@@ -1362,7 +1430,15 @@ self: super: {
 
  rmf-visualization-msgs = self.callPackage ./rmf-visualization-msgs {};
 
+ rmf-visualization-navgraphs = self.callPackage ./rmf-visualization-navgraphs {};
+
  rmf-visualization-obstacles = self.callPackage ./rmf-visualization-obstacles {};
+
+ rmf-visualization-rviz2-plugins = self.callPackage ./rmf-visualization-rviz2-plugins {};
+
+ rmf-visualization-schedule = self.callPackage ./rmf-visualization-schedule {};
+
+ rmf-websocket = self.callPackage ./rmf-websocket {};
 
  rmf-workcell-msgs = self.callPackage ./rmf-workcell-msgs {};
 
@@ -1777,10 +1853,6 @@ self: super: {
  stereo-msgs = self.callPackage ./stereo-msgs {};
 
  stomp = self.callPackage ./stomp {};
-
- stubborn-buddies = self.callPackage ./stubborn-buddies {};
-
- stubborn-buddies-msgs = self.callPackage ./stubborn-buddies-msgs {};
 
  swri-cli-tools = self.callPackage ./swri-cli-tools {};
 

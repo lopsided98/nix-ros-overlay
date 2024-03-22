@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt2 }:
 buildRosPackage {
   pname = "ros-iron-mola-input-kitti-dataset";
-  version = "0.2.2-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_input_kitti_dataset/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "a21bceb6d11b63787b47bb0d2907db2ae9c3210d6079d5a7008a90a5c416dd80";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_input_kitti_dataset/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "f8e21c9ff6382c2100b2d0edcf089f44765c74deb8f7a8e866e634c20d2f2b7e";
   };
 
   buildType = "cmake";

@@ -362,6 +362,8 @@ self: super: {
 
  cob-extern = self.callPackage ./cob-extern {};
 
+ cob-fiducials = self.callPackage ./cob-fiducials {};
+
  cob-footprint-observer = self.callPackage ./cob-footprint-observer {};
 
  cob-frame-tracker = self.callPackage ./cob-frame-tracker {};
@@ -2431,6 +2433,8 @@ self: super: {
  phidgets-gyroscope = self.callPackage ./phidgets-gyroscope {};
 
  phidgets-high-speed-encoder = self.callPackage ./phidgets-high-speed-encoder {};
+
+ phidgets-humidity = self.callPackage ./phidgets-humidity {};
 
  phidgets-ik = self.callPackage ./phidgets-ik {};
 

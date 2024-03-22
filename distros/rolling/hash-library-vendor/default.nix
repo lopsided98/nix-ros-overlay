@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, git }:
 buildRosPackage {
   pname = "ros-rolling-hash-library-vendor";
-  version = "0.1.1-r5";
+  version = "0.1.1-r6";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hash_library_vendor-release/archive/release/rolling/hash_library_vendor/0.1.1-5.tar.gz";
-    name = "0.1.1-5.tar.gz";
-    sha256 = "a29ee3b049894dc3d3ded35e66f972b9d963ebd0e28d007d6f40282a3cef43a4";
+    url = "https://github.com/ros2-gbp/hash_library_vendor-release/archive/release/rolling/hash_library_vendor/0.1.1-6.tar.gz";
+    name = "0.1.1-6.tar.gz";
+    sha256 = "542b80b6cac36ab95d018c73a7a6514de517b3d06187ce7e6f0b7cf8c52236e9";
   };
 
   buildType = "ament_cmake";

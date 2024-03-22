@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt2, mvsim }:
 buildRosPackage {
   pname = "ros-iron-mrpt-path-planning";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_path_planning-release/archive/release/iron/mrpt_path_planning/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "894431be27b5c6f0b240413eef280e0312bf560abc545e2b28789d51b7b16c37";
+    url = "https://github.com/ros2-gbp/mrpt_path_planning-release/archive/release/iron/mrpt_path_planning/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "39edb10457f01fcb1d31812cbf4defbc508477895e0f5fd096384f6dd1a35336";
   };
 
   buildType = "cmake";

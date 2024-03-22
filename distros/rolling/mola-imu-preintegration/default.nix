@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt2 }:
 buildRosPackage {
   pname = "ros-rolling-mola-imu-preintegration";
-  version = "0.2.2-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_imu_preintegration/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "b4c53d06ccf60198a654dee68210187caa6343c9ed566b6a970d081aab7d288d";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_imu_preintegration/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "f95b63dfe01096e3db2860c500900f111aa900176220943a0ef0ab2f769e96c4";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, ros-environment, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mqtt-client-interfaces";
-  version = "2.2.0-r2";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/mqtt_client-release/archive/release/noetic/mqtt_client_interfaces/2.2.0-2.tar.gz";
-    name = "2.2.0-2.tar.gz";
-    sha256 = "6675f85695f6ea7aaaa39113e986e088bf53b0c9d03379034268bfc7c1c470a3";
+    url = "https://github.com/ika-rwth-aachen/mqtt_client-release/archive/release/noetic/mqtt_client_interfaces/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "1c727f6cd1d05dc3c9a8c0abcbf1dc5499cda920be619b05f62aee27e75ed92d";
   };
 
   buildType = "catkin";

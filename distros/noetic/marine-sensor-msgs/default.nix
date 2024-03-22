@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, rosbag-migration-rule, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-marine-sensor-msgs";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/CCOMJHC/marine_msgs-release/archive/release/noetic/marine_sensor_msgs/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "2c391fb403d10aa7e749e6ee3a050e378248bf4b96a4302913a8154327a9a415";
+    url = "https://github.com/CCOMJHC/marine_msgs-release/archive/release/noetic/marine_sensor_msgs/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "d4c984439b7520c0203dca46e4d4695771bf57f0bcfa8bac2db919740bb658c2";
   };
 
   buildType = "catkin";

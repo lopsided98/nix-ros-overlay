@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen }:
 buildRosPackage {
   pname = "ros-rolling-sophus";
-  version = "1.3.1-r3";
+  version = "1.22.9100-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sophus-release/archive/release/rolling/sophus/1.3.1-3.tar.gz";
-    name = "1.3.1-3.tar.gz";
-    sha256 = "62bf548430e63dd485903fac8cc98d0535a9c64905e8d1a7a2aeed293de1c8cf";
+    url = "https://github.com/ros2-gbp/sophus-release/archive/release/rolling/sophus/1.22.9100-1.tar.gz";
+    name = "1.22.9100-1.tar.gz";
+    sha256 = "7d2e7c41aad833b0fc1a4c42ba4f95e7586fa37d08aa9f2d1bf0daa52e8eafd0";
   };
 
   buildType = "cmake";

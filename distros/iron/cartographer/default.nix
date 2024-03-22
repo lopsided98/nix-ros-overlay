@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, abseil-cpp, boost, cairo, ceres-solver, cmake, eigen, gflags, git, glog, gtest, lua5, protobuf, python3Packages }:
 buildRosPackage {
   pname = "ros-iron-cartographer";
-  version = "2.0.9002-r5";
+  version = "2.0.9003-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cartographer-release/archive/release/iron/cartographer/2.0.9002-5.tar.gz";
-    name = "2.0.9002-5.tar.gz";
-    sha256 = "3213541ddbb4d4b7bf3856afa5c5c07c16d551149848e6ca47256dfe77c4784d";
+    url = "https://github.com/ros2-gbp/cartographer-release/archive/release/iron/cartographer/2.0.9003-1.tar.gz";
+    name = "2.0.9003-1.tar.gz";
+    sha256 = "9a7a64bb7042ae113863898517b755df218a3793b2d788f3a089c2a052ea7e81";
   };
 
   buildType = "cmake";

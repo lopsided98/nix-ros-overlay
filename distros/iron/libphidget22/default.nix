@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb1 }:
 buildRosPackage {
   pname = "ros-iron-libphidget22";
-  version = "2.3.2-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/libphidget22/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "d4a3e3f94b0e88d08871bd04a71fb1b8e4fd069109733c50414b113ca9aaa2b5";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/libphidget22/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "fcbcb17ea740415cd2577b11fa135ab839fc38ef5a5bdd57bc201340ff192502";
   };
 
   buildType = "ament_cmake";

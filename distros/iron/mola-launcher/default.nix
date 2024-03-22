@@ -1,22 +1,23 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt2 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, mola-kernel, mrpt2, ros-environment }:
 buildRosPackage {
   pname = "ros-iron-mola-launcher";
-  version = "0.2.2-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_launcher/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "5efdf5664504d96b92b4aaa96ccb801cf5387ce9f92742094da0a63fee49cfd5";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_launcher/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "5fd141c2404a7bbb8ebe5af5365eb26501801229b21f7895ae53c4e647cbbc6b";
   };
 
-  buildType = "cmake";
-  buildInputs = [ cmake ];
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ament-cmake-gtest ament-cmake-xmllint cmake ros-environment ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ mola-kernel mrpt2 ];
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-gtest cmake ];
 
   meta = {
     description = ''Launcher app for MOLA systems'';

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-phidgets-msgs";
-  version = "2.3.2-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/phidgets_msgs/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "a838f173127f2f123067ca280cb8a68b17d60888f390dc2061014ee477d3fbc0";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/phidgets_msgs/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "d92761c8e0bcd91fd8b6809f2d4d04035b94e67e69e87eb3f10f16bb67bee489";
   };
 
   buildType = "ament_cmake";

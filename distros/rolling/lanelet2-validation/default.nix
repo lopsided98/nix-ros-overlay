@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, gtest, lanelet2-core, lanelet2-io, lanelet2-maps, lanelet2-projection, lanelet2-routing, lanelet2-traffic-rules, mrt-cmake-modules }:
 buildRosPackage {
   pname = "ros-rolling-lanelet2-validation";
-  version = "1.2.1-r5";
+  version = "1.2.1-r6";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/rolling/lanelet2_validation/1.2.1-5.tar.gz";
-    name = "1.2.1-5.tar.gz";
-    sha256 = "abb1b0529bbbdca184043b0d1726334310ac5e59dbc80a7c21d40f1d8ccc08ae";
+    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/rolling/lanelet2_validation/1.2.1-6.tar.gz";
+    name = "1.2.1-6.tar.gz";
+    sha256 = "7e01c5c940b44d7bb890d3a04ad6d6da3e389cdf67c3a0d7c93cfa59c3adba66";
   };
 
   buildType = "ament_cmake";

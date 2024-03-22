@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libphidget22, phidgets-accelerometer, phidgets-analog-inputs, phidgets-api, phidgets-digital-inputs, phidgets-digital-outputs, phidgets-gyroscope, phidgets-high-speed-encoder, phidgets-ik, phidgets-magnetometer, phidgets-motors, phidgets-msgs, phidgets-spatial, phidgets-temperature }:
 buildRosPackage {
   pname = "ros-iron-phidgets-drivers";
-  version = "2.3.2-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/phidgets_drivers/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "d3bc49b5c6a1101ccac4954da7a4f1dc4c2d44bafaddc2f08398d9dae674bee8";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/iron/phidgets_drivers/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "a0bf453122627560758096c47eb86d264c55f5701b95be35c8d863a2ca8001bf";
   };
 
   buildType = "ament_cmake";

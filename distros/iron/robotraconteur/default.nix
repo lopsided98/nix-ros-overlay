@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bluez, boost, cmake, dbus, gtest, libusb1, openssl, python3, python3Packages, zlib }:
 buildRosPackage {
   pname = "ros-iron-robotraconteur";
-  version = "1.0.0-r2";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotraconteur-packaging/robotraconteur-ros2-release/archive/release/iron/robotraconteur/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "b6be3ff8330ae553dce1beeccc482c40ab659587e1e61913d8a4ac1948dabe2d";
+    url = "https://github.com/robotraconteur-packaging/robotraconteur-ros2-release/archive/release/iron/robotraconteur/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "d8c4b6665e9826694246c9e6c4106b835658ef20d2b90b49985ee0a95e2895bd";
   };
 
   buildType = "cmake";
