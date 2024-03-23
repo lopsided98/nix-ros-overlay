@@ -5,13 +5,13 @@
 
 buildPythonPackage rec {
   pname = "superflore";
-  version = "unstable-2022-12-09";
+  version = "unstable-2024-03-22";
 
   src = fetchFromGitHub {
     owner = "lopsided98";
     repo = pname;
-    rev = "385eebb9465b8ab7c0b1c7de4d86d81362fe10fa";
-    hash = "sha256-ZrB4mUAClQbqVnbAVaNlrK+tDCpUf502q0gTzxGBeSQ=";
+    rev = "f3b2aceae47ced2d0a0af868cd4cce2b6de5effa";
+    hash = "sha256-YRgzRuMvG7AXHkTFO87GLBobaQArO6gxpacifDq1CPo=";
   };
 
   propagatedBuildInputs = [
