@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Messages and services for the controller manager.'';
+    description = "Messages and services for the controller manager.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

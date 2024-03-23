@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin mrt-cmake-modules ];
 
   meta = {
-    description = ''Package for interpreting traffic rules in a lanelet map'';
+    description = "Package for interpreting traffic rules in a lanelet map";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

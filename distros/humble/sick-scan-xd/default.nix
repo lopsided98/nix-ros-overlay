@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS 1 and 2 driver for SICK scanner'';
-    license = with lib.licenses; [ "Apache-License,-Version-2.0,-see-"http-www.apache.org-licenses-LICENSE-2.0"" ];
+    description = "ROS 1 and 2 driver for SICK scanner";
+    license = with lib.licenses; [ "Apache-License,-Version-2.0,-see-\"http-www.apache.org-licenses-LICENSE-2.0\"" ];
   };
 }

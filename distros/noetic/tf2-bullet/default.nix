@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
-    description = ''tf2_bullet'';
+    description = "tf2_bullet";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

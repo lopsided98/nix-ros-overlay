@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''TF2 server that can provide transforms over separate TF topics'';
+    description = "TF2 server that can provide transforms over separate TF topics";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

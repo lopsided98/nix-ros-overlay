@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Provides definitions and templated functions for getting and working with rosidl typesupport types in C++.'';
+    description = "Provides definitions and templated functions for getting and working with rosidl typesupport types in C++.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -17,7 +17,7 @@ buildRosPackage {
   checkInputs = [ controller-manager-msgs launch launch-ros launch-testing-ament-cmake schunk-svh-driver ];
 
   meta = {
-    description = ''Integration tests for the Schunk SVH ROS2 driver'';
+    description = "Integration tests for the Schunk SVH ROS2 driver";
     license = with lib.licenses; [ "GPL-3.0-or-later" ];
   };
 }

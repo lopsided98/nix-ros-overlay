@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides ROS plugins that offer message and service publishers for interfacing with <a href="http://gazebosim.org">Gazebo</a> through ROS.
-    Formally simulator_gazebo/gazebo'';
+    description = "Provides ROS plugins that offer message and service publishers for interfacing with <a href=\"http://gazebosim.org\">Gazebo</a> through ROS.
+    Formally simulator_gazebo/gazebo";
     license = with lib.licenses; [ asl20 ];
   };
 }

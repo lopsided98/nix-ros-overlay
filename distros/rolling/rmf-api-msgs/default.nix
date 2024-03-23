@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''RMF API msgs definition'';
+    description = "RMF API msgs definition";
     license = with lib.licenses; [ asl20 ];
   };
 }

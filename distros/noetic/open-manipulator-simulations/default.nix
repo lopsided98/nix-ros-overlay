@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Simulation packages for OpenManipulator'';
+    description = "Simulation packages for OpenManipulator";
     license = with lib.licenses; [ asl20 ];
   };
 }

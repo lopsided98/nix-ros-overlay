@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Implementations for dwb_local_planner TrajectoryCritic interface'';
+    description = "Implementations for dwb_local_planner TrajectoryCritic interface";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

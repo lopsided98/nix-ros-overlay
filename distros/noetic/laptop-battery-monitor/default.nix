@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Simple script to check battery status'';
+    description = "Simple script to check battery status";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

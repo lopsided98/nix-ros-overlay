@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''The pal_hey5_controller_configuration package'';
+    description = "The pal_hey5_controller_configuration package";
     license = with lib.licenses; [ asl20 ];
   };
 }

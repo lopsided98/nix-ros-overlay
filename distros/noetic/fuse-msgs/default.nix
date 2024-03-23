@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The fuse_msgs package contains messages capable of holding serialized fuse objects'';
+    description = "The fuse_msgs package contains messages capable of holding serialized fuse objects";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

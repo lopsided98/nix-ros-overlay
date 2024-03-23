@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS KHI robot controller package based on ros_control'';
+    description = "ROS KHI robot controller package based on ros_control";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

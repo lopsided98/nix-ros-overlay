@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''IKFast plugin for the PhantomX Pincher arm'';
+    description = "IKFast plugin for the PhantomX Pincher arm";
     license = with lib.licenses; [ bsdOriginal asl20 ];
   };
 }

@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rosgraph contains the rosgraph command-line tool, which prints
+    description = "rosgraph contains the rosgraph command-line tool, which prints
     information about the ROS Computation Graph. It also provides an
-    internal library that can be used by graphical tools.'';
+    internal library that can be used by graphical tools.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

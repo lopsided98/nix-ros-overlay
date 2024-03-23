@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''eus_assimp'';
+    description = "eus_assimp";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

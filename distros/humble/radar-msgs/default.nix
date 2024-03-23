@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Standard ROS messages for radars'';
+    description = "Standard ROS messages for radars";
     license = with lib.licenses; [ asl20 ];
   };
 }

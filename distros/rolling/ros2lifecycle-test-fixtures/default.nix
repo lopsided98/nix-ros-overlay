@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Package containing fixture nodes for ros2lifecycle tests'';
+    description = "Package containing fixture nodes for ros2lifecycle tests";
     license = with lib.licenses; [ asl20 ];
   };
 }

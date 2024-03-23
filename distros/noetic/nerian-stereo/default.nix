@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Driver node for Scarlet and SceneScan stereo vision sensors by Nerian Vision GmbH'';
+    description = "Driver node for Scarlet and SceneScan stereo vision sensors by Nerian Vision GmbH";
     license = with lib.licenses; [ mit ];
   };
 }

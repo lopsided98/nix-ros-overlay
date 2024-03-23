@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rqt-gui rqt-gui-py rqt-msg rqt-py-common ];
 
   meta = {
-    description = ''rqt_action provides a feature to introspect all available ROS action types.'';
+    description = "rqt_action provides a feature to introspect all available ROS action types.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

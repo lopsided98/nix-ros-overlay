@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages, services, and actions used in the pr2_controllers stack.'';
+    description = "Messages, services, and actions used in the pr2_controllers stack.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

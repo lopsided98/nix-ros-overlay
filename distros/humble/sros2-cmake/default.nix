@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''CMake macros to configure security'';
+    description = "CMake macros to configure security";
     license = with lib.licenses; [ asl20 ];
   };
 }

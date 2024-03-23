@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Improved ROS robot_state_publisher which can update the robot model via dynamic_reconfigure.'';
+    description = "Improved ROS robot_state_publisher which can update the robot model via dynamic_reconfigure.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ doxygen ];
 
   meta = {
-    description = ''ROS Support Library'';
+    description = "ROS Support Library";
     license = with lib.licenses; [ bsd3 ];
   };
 }

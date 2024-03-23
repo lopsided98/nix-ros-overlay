@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Interface to IO board that manages emergency stop and battery voltage on rob@work 3'';
+    description = "Interface to IO board that manages emergency stop and battery voltage on rob@work 3";
     license = with lib.licenses; [ asl20 ];
   };
 }

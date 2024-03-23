@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''The nmea_msgs package contains messages related to data in the NMEA format.'';
+    description = "The nmea_msgs package contains messages related to data in the NMEA format.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

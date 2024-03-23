@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Generic Messages for Navigation Objectives in Automotive Automation Software'';
+    description = "Generic Messages for Navigation Objectives in Automotive Automation Software";
     license = with lib.licenses; [ mit ];
   };
 }

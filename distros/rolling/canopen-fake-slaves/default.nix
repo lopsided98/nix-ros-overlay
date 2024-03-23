@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Package with mock canopen slave'';
+    description = "Package with mock canopen slave";
     license = with lib.licenses; [ asl20 ];
   };
 }

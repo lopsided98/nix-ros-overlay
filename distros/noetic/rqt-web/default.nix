@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rqt_web is a simple web content viewer for rqt. Users can show web content in Qt-based window by specifying its URL.'';
+    description = "rqt_web is a simple web content viewer for rqt. Users can show web content in Qt-based window by specifying its URL.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

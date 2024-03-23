@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Metapackage with all core open-sourced MOLA packages.'';
+    description = "Metapackage with all core open-sourced MOLA packages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

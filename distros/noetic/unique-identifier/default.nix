@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS messages and interfaces for universally unique identifiers.
+    description = "ROS messages and interfaces for universally unique identifiers.
 
     Not needed for wet packages, use only to resolve dry stack
-    dependencies.'';
+    dependencies.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

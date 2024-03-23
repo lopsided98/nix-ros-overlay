@@ -19,13 +19,13 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rosparam contains the rosparam command-line tool for getting and
-    setting ROS Parameters on the <a href="http://wiki.ros.org/Parameter%20Server">Parameter
+    description = "rosparam contains the rosparam command-line tool for getting and
+    setting ROS Parameters on the <a href=\"http://wiki.ros.org/Parameter%20Server\">Parameter
     Server</a> using YAML-encoded files. It also contains an
     experimental library for using YAML with the Parameter
     Server. This library is intended for internal use only.
 
-    rosparam can be invoked within a <a href="http://wiki.ros.org/roslaunch">roslaunch</a> file.'';
+    rosparam can be invoked within a <a href=\"http://wiki.ros.org/roslaunch\">roslaunch</a> file.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

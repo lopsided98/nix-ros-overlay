@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Message and service types: custom messages and services for TurtleBot3 packages'';
+    description = "Message and service types: custom messages and services for TurtleBot3 packages";
     license = with lib.licenses; [ asl20 ];
   };
 }

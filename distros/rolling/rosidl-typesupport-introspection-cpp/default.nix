@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-ros python3 rosidl-generator-c rosidl-generator-cpp rosidl-pycommon ];
 
   meta = {
-    description = ''Generate the message type support for dynamic message construction in C++.'';
+    description = "Generate the message type support for dynamic message construction in C++.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rqt_shell is a Python GUI plugin providing an interactive shell.'';
+    description = "rqt_shell is a Python GUI plugin providing an interactive shell.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

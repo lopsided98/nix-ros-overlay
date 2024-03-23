@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ros2_control hardware for ROBOTIS Dynamixel'';
+    description = "ros2_control hardware for ROBOTIS Dynamixel";
     license = with lib.licenses; [ asl20 ];
   };
 }

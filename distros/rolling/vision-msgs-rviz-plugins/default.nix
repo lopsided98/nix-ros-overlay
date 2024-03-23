@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''RVIZ2 plugins for visualizing vision_msgs'';
+    description = "RVIZ2 plugins for visualizing vision_msgs";
     license = with lib.licenses; [ asl20 ];
   };
 }

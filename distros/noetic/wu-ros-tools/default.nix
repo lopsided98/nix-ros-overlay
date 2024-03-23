@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A collection of tools for making a variety of generic ROS-related tasks easier.'';
+    description = "A collection of tools for making a variety of generic ROS-related tasks easier.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

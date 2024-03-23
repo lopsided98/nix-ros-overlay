@@ -18,14 +18,14 @@ buildRosPackage {
   nativeBuildInputs = [ ament-package cmake python3Packages.catkin-pkg ];
 
   meta = {
-    description = ''The core of the ament buildsystem in CMake.
+    description = "The core of the ament buildsystem in CMake.
 
     Several subcomponents provide specific funtionalities:
     * environment: provide prefix-level setup files
     * environment_hooks: provide package-level setup files and environment hooks
     * index: store information in an index and retrieve them without crawling
     * package_templates: templates from the ament_package Python package
-    * symlink_install: use symlinks for CMake install commands'';
+    * symlink_install: use symlinks for CMake install commands";
     license = with lib.licenses; [ asl20 ];
   };
 }

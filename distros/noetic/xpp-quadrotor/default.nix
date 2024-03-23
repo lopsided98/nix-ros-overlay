@@ -19,12 +19,12 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The URDF file for a quadrotor to be used with the xpp packages and a 
+    description = "The URDF file for a quadrotor to be used with the xpp packages and a 
     simple rviz publisher of quadrotor tfs.
      
     Adapted from Daniel Mellinger, Nathan Michael, Vijay Kumar, 
     &quot;Trajectory Generation and Control for Precise Aggressive Maneuvers
-    with Quadrotors&quot;.'';
+    with Quadrotors&quot;.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''RealSense Camera description package for Intel 3D D400 cameras'';
+    description = "RealSense Camera description package for Intel 3D D400 cameras";
     license = with lib.licenses; [ asl20 ];
   };
 }

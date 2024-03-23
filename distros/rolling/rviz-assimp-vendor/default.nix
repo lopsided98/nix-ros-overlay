@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package ];
 
   meta = {
-    description = ''Wrapper around assimp, providing nothing but a dependency on assimp, on some systems.
-    On others, it provides a fixed CMake module or even an ExternalProject build of assimp.'';
+    description = "Wrapper around assimp, providing nothing but a dependency on assimp, on some systems.
+    On others, it provides a fixed CMake module or even an ExternalProject build of assimp.";
     license = with lib.licenses; [ asl20 bsdOriginal ];
   };
 }

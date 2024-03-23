@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Layer encapsulating ROS middleware to allow rosbag2 to be used with or without middleware'';
+    description = "Layer encapsulating ROS middleware to allow rosbag2 to be used with or without middleware";
     license = with lib.licenses; [ asl20 ];
   };
 }

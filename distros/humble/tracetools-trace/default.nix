@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.lttng ];
 
   meta = {
-    description = ''Tools for setting up tracing sessions.'';
+    description = "Tools for setting up tracing sessions.";
     license = with lib.licenses; [ asl20 ];
   };
 }

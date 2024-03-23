@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The single joint position action is a node that provides an action
+    description = "The single joint position action is a node that provides an action
   interface for commanding a trajectory to move a joint to a particular
   position. The action reports success when the joint reaches the desired
-  position.'';
+  position.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

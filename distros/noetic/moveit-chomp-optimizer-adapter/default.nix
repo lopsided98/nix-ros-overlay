@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''MoveIt planning request adapter utilizing chomp for solution optimization'';
+    description = "MoveIt planning request adapter utilizing chomp for solution optimization";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

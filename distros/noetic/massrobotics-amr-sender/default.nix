@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''MassRobotics AMR Interop Sender'';
+    description = "MassRobotics AMR Interop Sender";
     license = with lib.licenses; [ "3-Clause-BSD-License" ];
   };
 }

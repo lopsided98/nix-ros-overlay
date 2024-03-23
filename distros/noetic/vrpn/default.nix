@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The VRPN is a library and set of servers that interfaces with virtual-reality systems, such as VICON, OptiTrack, and others.'';
+    description = "The VRPN is a library and set of servers that interfaces with virtual-reality systems, such as VICON, OptiTrack, and others.";
     license = with lib.licenses; [ "BSL-1.0" ];
   };
 }

@@ -19,12 +19,12 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''The State Machine Compiler (SMC) from http://smc.sourceforge.net/
+    description = "The State Machine Compiler (SMC) from http://smc.sourceforge.net/
     converts a language-independent description of a state machine
     into the source code to support that state machine.
 
     This package contains the libraries that a compiled state machine
-    depends on, but it does not contain the compiler itself.'';
+    depends on, but it does not contain the compiler itself.";
     license = with lib.licenses; [ mpl11 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The lms1xx package contains a basic ROS driver for the SICK LMS1xx line of LIDARs.'';
+    description = "The lms1xx package contains a basic ROS driver for the SICK LMS1xx line of LIDARs.";
     license = with lib.licenses; [ "LGPL" ];
   };
 }

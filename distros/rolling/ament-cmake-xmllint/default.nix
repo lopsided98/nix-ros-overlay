@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-xmllint ];
 
   meta = {
-    description = ''The CMake API for ament_xmllint to check XML file using xmmlint.'';
+    description = "The CMake API for ament_xmllint to check XML file using xmmlint.";
     license = with lib.licenses; [ asl20 ];
   };
 }

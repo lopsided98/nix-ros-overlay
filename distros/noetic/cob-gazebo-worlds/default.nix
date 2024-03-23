@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides some worlds for gazebo simulation.'';
+    description = "This package provides some worlds for gazebo simulation.";
     license = with lib.licenses; [ asl20 ];
   };
 }

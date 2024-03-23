@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-gen-version-h ament-cmake-ros python3 ];
 
   meta = {
-    description = ''The ROS client library in C++.'';
+    description = "The ROS client library in C++.";
     license = with lib.licenses; [ asl20 ];
   };
 }

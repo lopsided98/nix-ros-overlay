@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''OLED I2C display node package'';
+    description = "OLED I2C display node package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The tablet_socket_msgs package'';
+    description = "The tablet_socket_msgs package";
     license = with lib.licenses; [ asl20 ];
   };
 }

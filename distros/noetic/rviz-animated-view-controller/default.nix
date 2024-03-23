@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A rviz view controller featuring smooth transitions.'';
+    description = "A rviz view controller featuring smooth transitions.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

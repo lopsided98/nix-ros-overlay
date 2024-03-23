@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ builtin-interfaces control-msgs controller-manager joint-state-broadcaster joint-trajectory-controller rclpy robot-state-publisher rviz2 trajectory-msgs webots-ros2-control webots-ros2-driver xacro ];
 
   meta = {
-    description = ''Universal Robot ROS2 interface for Webots.'';
+    description = "Universal Robot ROS2 interface for Webots.";
     license = with lib.licenses; [ asl20 ];
   };
 }

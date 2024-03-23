@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A framework for writing drivers that helps with runtime reconfiguration, diagnostics and self-test.
+    description = "A framework for writing drivers that helps with runtime reconfiguration, diagnostics and self-test.
 
-    This package is deprecated.'';
+    This package is deprecated.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

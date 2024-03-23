@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''ouster_ros message and service definitions'';
+    description = "ouster_ros message and service definitions";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

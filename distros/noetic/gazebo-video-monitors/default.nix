@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Metapackage that groups together the gazebo_video_monitors packages.'';
+    description = "Metapackage that groups together the gazebo_video_monitors packages.";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

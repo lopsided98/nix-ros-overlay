@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Examples of how to use the ros2launch_security extension.'';
+    description = "Examples of how to use the ros2launch_security extension.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-copyright ];
 
   meta = {
-    description = ''Check PickNik-specific copyright headers.'';
+    description = "Check PickNik-specific copyright headers.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ProAut parameter package'';
+    description = "ProAut parameter package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

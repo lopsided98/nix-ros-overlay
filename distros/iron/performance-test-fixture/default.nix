@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-export-dependencies ament-cmake-export-targets ament-cmake-google-benchmark ament-cmake-test ];
 
   meta = {
-    description = ''Test fixture and CMake macro for using osrf_testing_tools_cpp with Google Benchmark'';
+    description = "Test fixture and CMake macro for using osrf_testing_tools_cpp with Google Benchmark";
     license = with lib.licenses; [ asl20 ];
   };
 }

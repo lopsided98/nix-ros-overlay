@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Robot agnostic information theoretic exploration strategy'';
+    description = "Robot agnostic information theoretic exploration strategy";
     license = with lib.licenses; [ bsd3 ];
   };
 }

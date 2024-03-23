@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''diagnostic_aggregator'';
+    description = "diagnostic_aggregator";
     license = with lib.licenses; [ bsd3 ];
   };
 }

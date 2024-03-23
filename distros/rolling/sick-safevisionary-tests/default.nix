@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Integration tests for the Sick SafeVisionary2 driver'';
+    description = "Integration tests for the Sick SafeVisionary2 driver";
     license = with lib.licenses; [ asl20 ];
   };
 }

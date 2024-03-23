@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''image_pipeline fills the gap between getting raw images from a camera driver and higher-level vision processing.'';
+    description = "image_pipeline fills the gap between getting raw images from a camera driver and higher-level vision processing.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

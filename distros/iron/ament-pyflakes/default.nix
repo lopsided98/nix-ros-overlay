@@ -18,8 +18,8 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.pyflakes ];
 
   meta = {
-    description = ''The ability to check code using pyflakes and generate xUnit test
-    result files.'';
+    description = "The ability to check code using pyflakes and generate xUnit test
+    result files.";
     license = with lib.licenses; [ asl20 ];
   };
 }

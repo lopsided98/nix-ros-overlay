@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ generate-parameter-library generate-parameter-library-py rclpy ];
 
   meta = {
-    description = ''Example usage of generate_parameter_library for a python module'';
+    description = "Example usage of generate_parameter_library for a python module";
     license = with lib.licenses; [ bsd3 ];
   };
 }

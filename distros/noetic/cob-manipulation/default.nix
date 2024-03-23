@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_manipulation stack includes packages that provide manipulation capabilities for Care-O-bot.'';
+    description = "The cob_manipulation stack includes packages that provide manipulation capabilities for Care-O-bot.";
     license = with lib.licenses; [ asl20 ];
   };
 }

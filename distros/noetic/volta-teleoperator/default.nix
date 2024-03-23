@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The volta_teleoperator package'';
+    description = "The volta_teleoperator package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

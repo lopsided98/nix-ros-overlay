@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package wraps the libphidget22 to use it as a ROS dependency'';
+    description = "This package wraps the libphidget22 to use it as a ROS dependency";
     license = with lib.licenses; [ "LGPL" ];
   };
 }

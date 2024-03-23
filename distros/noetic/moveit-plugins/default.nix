@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Metapackage for MoveIt plugins.'';
+    description = "Metapackage for MoveIt plugins.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

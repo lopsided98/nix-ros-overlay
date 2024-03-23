@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ flexbe-core flexbe-msgs rclpy ];
 
   meta = {
-    description = ''flexbe_mirror implements functionality to remotely mirror an executed behavior.'';
+    description = "flexbe_mirror implements functionality to remotely mirror an executed behavior.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

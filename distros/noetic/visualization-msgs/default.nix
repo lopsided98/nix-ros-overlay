@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''visualization_msgs is a set of messages used by higher level packages, such as <a href="/wiki/rviz">rviz</a>, that deal in visualization-specific data.
+    description = "visualization_msgs is a set of messages used by higher level packages, such as <a href=\"/wiki/rviz\">rviz</a>, that deal in visualization-specific data.
 
     The main messages in visualization_msgs is <tt>visualization_msgs/Marker</tt>.
-    The marker message is used to send visualization &quot;markers&quot; such as boxes, spheres, arrows, lines, etc. to a visualization environment such as <a href="http:///www.ros.org/wiki/rviz">rviz</a>.
-    See the rviz tutorial <a href="http://www.ros.org/wiki/rviz/Tutorials">rviz tutorials</a> for more information.'';
+    The marker message is used to send visualization &quot;markers&quot; such as boxes, spheres, arrows, lines, etc. to a visualization environment such as <a href=\"http:///www.ros.org/wiki/rviz\">rviz</a>.
+    See the rviz tutorial <a href=\"http://www.ros.org/wiki/rviz/Tutorials\">rviz tutorials</a> for more information.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The urg_c package'';
+    description = "The urg_c package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

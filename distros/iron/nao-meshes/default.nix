@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS2 Meshes for the NAO robot'';
+    description = "ROS2 Meshes for the NAO robot";
     license = with lib.licenses; [ "CC-BY-NC-ND-4.0" ];
   };
 }

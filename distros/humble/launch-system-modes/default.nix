@@ -18,8 +18,8 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python launch osrf-pycommon python3Packages.importlib-metadata python3Packages.pyyaml rclpy system-modes-msgs ];
 
   meta = {
-    description = ''System modes specific extensions to the launch tool, i.e. launch actions, events, and event
-    handlers for system modes.'';
+    description = "System modes specific extensions to the launch tool, i.e. launch actions, events, and event
+    handlers for system modes.";
     license = with lib.licenses; [ asl20 ];
   };
 }

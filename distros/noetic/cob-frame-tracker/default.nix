@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_frame_tracker package contains nodes that publish Twist commands based on the distance to the desired tf frame target.'';
+    description = "The cob_frame_tracker package contains nodes that publish Twist commands based on the distance to the desired tf frame target.";
     license = with lib.licenses; [ asl20 ];
   };
 }

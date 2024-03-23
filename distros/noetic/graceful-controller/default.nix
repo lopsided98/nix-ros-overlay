@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A controller.'';
+    description = "A controller.";
     license = with lib.licenses; [ lgpl3Only ];
   };
 }

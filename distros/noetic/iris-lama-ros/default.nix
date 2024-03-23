@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS package of IRIS Localization and Mapping (LaMa).'';
+    description = "ROS package of IRIS Localization and Mapping (LaMa).";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

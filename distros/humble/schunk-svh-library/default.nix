@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Standalone C++ library for accessing the Schunk five finger hand.'';
+    description = "Standalone C++ library for accessing the Schunk five finger hand.";
     license = with lib.licenses; [ "GPL-3.0-or-later" ];
   };
 }

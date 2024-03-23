@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''flexbe_onboard implements the robot-side of the behavior engine from where all behaviors are started.'';
+    description = "flexbe_onboard implements the robot-side of the behavior engine from where all behaviors are started.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

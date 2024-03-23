@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The hdf5_map_io package'';
+    description = "The hdf5_map_io package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

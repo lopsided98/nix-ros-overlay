@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''RViz2 plugin for 2D overlays in the 3D view. Mainly a ROS2 port of the JSK overlay plugin
-        (https://github.com/jsk-ros-pkg/jsk_visualization).'';
+    description = "RViz2 plugin for 2D overlays in the 3D view. Mainly a ROS2 port of the JSK overlay plugin
+        (https://github.com/jsk-ros-pkg/jsk_visualization).";
     license = with lib.licenses; [ bsd3 ];
   };
 }

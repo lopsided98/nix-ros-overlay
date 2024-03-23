@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Package to keep interface independent of the driver'';
+    description = "Package to keep interface independent of the driver";
     license = with lib.licenses; [ mit ];
   };
 }

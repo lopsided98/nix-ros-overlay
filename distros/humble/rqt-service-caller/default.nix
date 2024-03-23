@@ -17,7 +17,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rqt-gui rqt-gui-py rqt-py-common ];
 
   meta = {
-    description = ''rqt_service_caller provides a GUI plugin for calling arbitrary services.'';
+    description = "rqt_service_caller provides a GUI plugin for calling arbitrary services.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

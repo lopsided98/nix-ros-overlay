@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rosserial for the VEX Cortex V5 Robot Brain platform.'';
+    description = "rosserial for the VEX Cortex V5 Robot Brain platform.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

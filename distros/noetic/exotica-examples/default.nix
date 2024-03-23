@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package containing examples and system tests for EXOTica.'';
+    description = "Package containing examples and system tests for EXOTica.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

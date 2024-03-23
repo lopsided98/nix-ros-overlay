@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-test cmake doxygen git ];
 
   meta = {
-    description = ''This package provides the Ignition CMake 2.x library.'';
+    description = "This package provides the Ignition CMake 2.x library.";
     license = with lib.licenses; [ asl20 ];
   };
 }

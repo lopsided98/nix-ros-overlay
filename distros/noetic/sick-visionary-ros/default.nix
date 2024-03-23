@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Open source drivers for the SICK Visionary-S 3D camera and Visionary-T Mini 3D-ToF camera.'';
+    description = "Open source drivers for the SICK Visionary-S 3D camera and Visionary-T Mini 3D-ToF camera.";
     license = with lib.licenses; [ "Unlicense" ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''This provides an Eigen implementation for ecl's linear algebra.'';
+    description = "This provides an Eigen implementation for ecl's linear algebra.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

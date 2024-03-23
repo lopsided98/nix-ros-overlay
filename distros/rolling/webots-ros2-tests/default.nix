@@ -18,7 +18,7 @@ buildRosPackage {
   checkInputs = [ ament-copyright geometry-msgs launch launch-testing launch-testing-ament-cmake launch-testing-ros pythonPackages.pytest sensor-msgs std-msgs std-srvs tf2-ros webots-ros2-epuck webots-ros2-mavic webots-ros2-tesla webots-ros2-tiago webots-ros2-turtlebot webots-ros2-universal-robot ];
 
   meta = {
-    description = ''System tests for `webots_ros2` packages.'';
+    description = "System tests for `webots_ros2` packages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A package vendoring recent versions of pybind11 and providing extra macros for easier integration.'';
+    description = "A package vendoring recent versions of pybind11 and providing extra macros for easier integration.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

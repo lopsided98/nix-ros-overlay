@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The control_box_rst package provides C++ libraries for predictive control, 
-               direct optimal control, optimization and simulation.'';
+    description = "The control_box_rst package provides C++ libraries for predictive control, 
+               direct optimal control, optimization and simulation.";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Homogeneous transform library for Common Lisp.'';
+    description = "Homogeneous transform library for Common Lisp.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

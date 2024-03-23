@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A MoveIt! Kinematics plugin using TRAC-IK'';
+    description = "A MoveIt! Kinematics plugin using TRAC-IK";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Metapackage of software for Leo Rover common to the robot and ROS desktop'';
+    description = "Metapackage of software for Leo Rover common to the robot and ROS desktop";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''<p>Simulation environment for a line follower development</p>
-    <p>Created for the discipline PMR3100 - Intro to Mechatronics from Poli-USP</p>'';
+    description = "<p>Simulation environment for a line follower development</p>
+    <p>Created for the discipline PMR3100 - Intro to Mechatronics from Poli-USP</p>";
     license = with lib.licenses; [ mit ];
   };
 }

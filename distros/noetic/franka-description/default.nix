@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''franka_description contains URDF files and meshes of Franka Emika robots'';
+    description = "franka_description contains URDF files and meshes of Franka Emika robots";
     license = with lib.licenses; [ asl20 ];
   };
 }

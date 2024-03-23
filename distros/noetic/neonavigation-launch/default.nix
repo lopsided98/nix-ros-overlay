@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Demonstration and sample launch files for neonavigation meta-package'';
+    description = "Demonstration and sample launch files for neonavigation meta-package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

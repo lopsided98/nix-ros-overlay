@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''The fuse_graphs package provides some concrete implementations of the fuse_core::Graph interface.'';
+    description = "The fuse_graphs package provides some concrete implementations of the fuse_core::Graph interface.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

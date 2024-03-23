@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''jsk_topic_tools'';
+    description = "jsk_topic_tools";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

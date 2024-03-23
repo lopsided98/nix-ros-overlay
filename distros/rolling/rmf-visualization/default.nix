@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Package containing a single launch file to bringup various visualizations'';
+    description = "Package containing a single launch file to bringup various visualizations";
     license = with lib.licenses; [ asl20 ];
   };
 }

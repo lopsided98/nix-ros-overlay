@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Exposes ROS-Industrial's RobotStatus info from hardware_interfaces for consumption by ros_control controllers.'';
+    description = "Exposes ROS-Industrial's RobotStatus info from hardware_interfaces for consumption by ros_control controllers.";
     license = with lib.licenses; [ asl20 ];
   };
 }

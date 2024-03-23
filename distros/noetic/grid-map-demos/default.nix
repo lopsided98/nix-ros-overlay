@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Demo nodes to demonstrate the usage of the grid map library.'';
+    description = "Demo nodes to demonstrate the usage of the grid map library.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

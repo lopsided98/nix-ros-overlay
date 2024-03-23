@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Common taskmaps provided with EXOTica.'';
+    description = "Common taskmaps provided with EXOTica.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''C++ implementation of Lie Groups using Eigen.'';
+    description = "C++ implementation of Lie Groups using Eigen.";
     license = with lib.licenses; [ mit ];
   };
 }

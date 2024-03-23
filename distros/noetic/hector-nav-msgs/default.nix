@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''hector_nav_msgs contains messages and services used in the hector_slam stack.'';
+    description = "hector_nav_msgs contains messages and services used in the hector_slam stack.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

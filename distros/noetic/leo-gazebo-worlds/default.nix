@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Gazebo Worlds for simulating Leo Rover'';
+    description = "Gazebo Worlds for simulating Leo Rover";
     license = with lib.licenses; [ mit ];
   };
 }

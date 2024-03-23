@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''Simple library for using the `rclpy/rclcpp` action libraries'';
+    description = "Simple library for using the `rclpy/rclcpp` action libraries";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

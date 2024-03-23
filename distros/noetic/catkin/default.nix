@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake python3Packages.setuptools ];
 
   meta = {
-    description = ''Low-level build system macros and infrastructure for ROS.'';
+    description = "Low-level build system macros and infrastructure for ROS.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

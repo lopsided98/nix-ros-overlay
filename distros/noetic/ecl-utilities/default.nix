@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Includes various supporting tools and utilities for c++ programming.'';
+    description = "Includes various supporting tools and utilities for c++ programming.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

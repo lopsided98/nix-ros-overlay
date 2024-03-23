@@ -17,7 +17,7 @@ buildRosPackage {
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
 
   meta = {
-    description = ''RTAB-Map's python package.'';
+    description = "RTAB-Map's python package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

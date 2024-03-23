@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The mesh_layers package'';
+    description = "The mesh_layers package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

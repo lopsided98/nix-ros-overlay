@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Visualization launchers for Clearpath Platforms.'';
+    description = "Visualization launchers for Clearpath Platforms.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

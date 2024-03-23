@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Contains a set of tools that can be used from a hard
-    realtime thread, without breaking the realtime behavior.'';
+    description = "Contains a set of tools that can be used from a hard
+    realtime thread, without breaking the realtime behavior.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

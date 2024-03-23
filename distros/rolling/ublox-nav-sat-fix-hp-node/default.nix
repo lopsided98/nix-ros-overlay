@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Provides a NavSatFix node for a u-blox GPS GNSS receiver using Gen 9 UBX Protocol'';
+    description = "Provides a NavSatFix node for a u-blox GPS GNSS receiver using Gen 9 UBX Protocol";
     license = with lib.licenses; [ asl20 ];
   };
 }

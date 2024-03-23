@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Dynamic graph library Python bindings'';
+    description = "Dynamic graph library Python bindings";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

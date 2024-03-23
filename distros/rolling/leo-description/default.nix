@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''URDF Description package for Leo Rover'';
+    description = "URDF Description package for Leo Rover";
     license = with lib.licenses; [ mit ];
   };
 }

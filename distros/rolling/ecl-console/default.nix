@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Color codes for ansii consoles.'';
+    description = "Color codes for ansii consoles.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

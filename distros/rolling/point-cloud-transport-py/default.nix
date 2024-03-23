@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-python ament-cmake-ros python-cmake-module ];
 
   meta = {
-    description = ''Python API for point_cloud_transport'';
+    description = "Python API for point_cloud_transport";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Integration of the ROS package system and ROS-specific plugins for a Qt-based GUI.'';
+    description = "Integration of the ROS package system and ROS-specific plugins for a Qt-based GUI.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

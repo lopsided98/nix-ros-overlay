@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''ROS messages for robots using FourWheelSteering.'';
+    description = "ROS messages for robots using FourWheelSteering.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

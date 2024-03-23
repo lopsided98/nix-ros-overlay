@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The autoware_lanelet2_msgs package. Contains messages for lanelet2 maps'';
+    description = "The autoware_lanelet2_msgs package. Contains messages for lanelet2 maps";
     license = with lib.licenses; [ asl20 ];
   };
 }

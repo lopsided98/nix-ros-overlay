@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Bindings and low-level controllers for ArbotiX-powered robots.'';
+    description = "Bindings and low-level controllers for ArbotiX-powered robots.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

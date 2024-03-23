@@ -19,8 +19,8 @@ buildRosPackage {
   propagatedBuildInputs = [ angles filters laser-geometry message-filters pluginlib rclcpp rclcpp-lifecycle sensor-msgs tf2 tf2-ros ];
 
   meta = {
-    description = ''Assorted filters designed to operate on 2D planar laser scanners,
-    which use the sensor_msgs/LaserScan type.'';
+    description = "Assorted filters designed to operate on 2D planar laser scanners,
+    which use the sensor_msgs/LaserScan type.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

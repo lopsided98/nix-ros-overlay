@@ -18,8 +18,8 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''This is SDHLibrary-CPP, the C++ library to access
-  an SDH (SCHUNK Dexterous Hand)'';
+    description = "This is SDHLibrary-CPP, the C++ library to access
+  an SDH (SCHUNK Dexterous Hand)";
     license = with lib.licenses; [ asl20 ];
   };
 }

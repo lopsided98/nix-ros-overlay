@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains common nodelet tools such as a mux, demux and throttle.'';
+    description = "This package contains common nodelet tools such as a mux, demux and throttle.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

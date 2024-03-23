@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rosserial for ChibiOS/HAL platforms.'';
+    description = "rosserial for ChibiOS/HAL platforms.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

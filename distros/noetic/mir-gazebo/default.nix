@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Simulation specific launch and configuration files for the MiR robot.'';
+    description = "Simulation specific launch and configuration files for the MiR robot.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Messages for NovAtel Oem7 family of receivers.'';
+    description = "Messages for NovAtel Oem7 family of receivers.";
     license = with lib.licenses; [ mit ];
   };
 }

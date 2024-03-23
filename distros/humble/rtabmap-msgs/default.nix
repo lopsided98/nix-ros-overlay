@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''RTAB-Map's msgs package.'';
+    description = "RTAB-Map's msgs package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

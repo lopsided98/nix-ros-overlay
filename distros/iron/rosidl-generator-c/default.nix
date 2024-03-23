@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-python ament-cmake-ros python3 rosidl-pycommon ];
 
   meta = {
-    description = ''Generate the ROS interfaces in C.'';
+    description = "Generate the ROS interfaces in C.";
     license = with lib.licenses; [ asl20 ];
   };
 }

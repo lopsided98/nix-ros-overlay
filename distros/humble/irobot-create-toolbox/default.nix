@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Components and helpers for the iRobot(R) Create(R) 3 Educational Robot.'';
+    description = "Components and helpers for the iRobot(R) Create(R) 3 Educational Robot.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

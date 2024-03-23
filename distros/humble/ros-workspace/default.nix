@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Provides the prefix level environment files for ROS 2 packages.'';
+    description = "Provides the prefix level environment files for ROS 2 packages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

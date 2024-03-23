@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A C++ Wrapper for the Phidgets C API'';
+    description = "A C++ Wrapper for the Phidgets C API";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

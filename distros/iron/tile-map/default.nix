@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake qt5.qtbase ];
 
   meta = {
-    description = ''Tile map provides a slippy map style interface for visualizing 
+    description = "Tile map provides a slippy map style interface for visualizing 
      OpenStreetMap and GoogleMap tiles.  A mapviz visualization plug-in is also
-     implemented'';
+     implemented";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

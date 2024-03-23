@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A set of generic teleoperation tools for any robot.'';
+    description = "A set of generic teleoperation tools for any robot.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

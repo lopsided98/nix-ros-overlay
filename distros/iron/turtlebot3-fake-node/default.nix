@@ -17,8 +17,8 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-cmake geometry-msgs nav-msgs rclcpp robot-state-publisher sensor-msgs tf2 tf2-msgs turtlebot3-msgs ];
 
   meta = {
-    description = ''Package for TurtleBot3 fake node. With this package, simple tests can be done without a robot.
-    You can do simple tests using this package on rviz without real robots.'';
+    description = "Package for TurtleBot3 fake node. With this package, simple tests can be done without a robot.
+    You can do simple tests using this package on rviz without real robots.";
     license = with lib.licenses; [ asl20 ];
   };
 }

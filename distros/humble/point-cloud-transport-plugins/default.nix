@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Metapackage with common point_cloud_transport plugins'';
+    description = "Metapackage with common point_cloud_transport plugins";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

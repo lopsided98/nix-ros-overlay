@@ -19,14 +19,14 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The smach_ros package contains extensions for the SMACH library to
+    description = "The smach_ros package contains extensions for the SMACH library to
     integrate it tightly with ROS.  For example, SMACH-ROS can call
     ROS services, listen to ROS topics, and integrate
-    with <a href="http://www.ros.org/wiki/actionlib">actionlib</a>
+    with <a href=\"http://www.ros.org/wiki/actionlib\">actionlib</a>
     both as a client, and a provider of action servers.  SMACH is a
     new library that takes advantage of very old concepts in order to
     quickly create robust robot behavior with maintainable and modular
-    code.'';
+    code.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

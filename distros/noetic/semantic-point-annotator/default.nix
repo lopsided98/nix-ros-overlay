@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A node which annotates 3D point cloud data with semantic labels.'';
+    description = "A node which annotates 3D point cloud data with semantic labels.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

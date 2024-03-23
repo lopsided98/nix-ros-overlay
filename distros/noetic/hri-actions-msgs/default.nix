@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Action definitions useful for Human-Robot Interaction'';
+    description = "Action definitions useful for Human-Robot Interaction";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

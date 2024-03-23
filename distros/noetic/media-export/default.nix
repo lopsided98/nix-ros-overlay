@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Placeholder package enabling generic export of media paths.'';
+    description = "Placeholder package enabling generic export of media paths.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

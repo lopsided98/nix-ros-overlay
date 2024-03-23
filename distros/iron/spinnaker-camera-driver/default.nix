@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS2 driver for flir spinnaker sdk'';
+    description = "ROS2 driver for flir spinnaker sdk";
     license = with lib.licenses; [ "Apache-2" bsdOriginal ];
   };
 }

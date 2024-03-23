@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The stag_ros package'';
+    description = "The stag_ros package";
     license = with lib.licenses; [ mit ];
   };
 }

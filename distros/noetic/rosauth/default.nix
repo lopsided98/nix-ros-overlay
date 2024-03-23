@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Server Side tools for Authorization and Authentication of ROS Clients'';
+    description = "Server Side tools for Authorization and Authentication of ROS Clients";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

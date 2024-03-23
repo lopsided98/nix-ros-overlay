@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''franka_control provides a hardware node to control a Franka Emika research robot'';
+    description = "franka_control provides a hardware node to control a Franka Emika research robot";
     license = with lib.licenses; [ asl20 ];
   };
 }

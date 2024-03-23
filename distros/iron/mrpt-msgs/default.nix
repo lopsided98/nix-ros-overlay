@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''ROS messages for MRPT classes and objects'';
+    description = "ROS messages for MRPT classes and objects";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The depthai-ros package'';
+    description = "The depthai-ros package";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A generic canopen implementation for ROS'';
+    description = "A generic canopen implementation for ROS";
     license = with lib.licenses; [ "LGPL" ];
   };
 }

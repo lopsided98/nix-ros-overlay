@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Metapackage for universal robots'';
+    description = "Metapackage for universal robots";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Enabled Robotics public messages package'';
+    description = "Enabled Robotics public messages package";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Helper functions for displaying and debugging MoveIt data in Rviz via published markers'';
+    description = "Helper functions for displaying and debugging MoveIt data in Rviz via published markers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

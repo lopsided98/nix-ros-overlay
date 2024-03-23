@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Mobile Robot Programming Toolkit (MRPT) version 2.x'';
+    description = "Mobile Robot Programming Toolkit (MRPT) version 2.x";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

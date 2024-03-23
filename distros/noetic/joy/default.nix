@@ -20,11 +20,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS driver for a generic Linux joystick.
+    description = "ROS driver for a generic Linux joystick.
     The joy package contains joy_node, a node that interfaces a
     generic Linux joystick to ROS. This node publishes a &quot;Joy&quot;
     message, which contains the current state of each one of the
-    joystick's buttons and axes.'';
+    joystick's buttons and axes.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

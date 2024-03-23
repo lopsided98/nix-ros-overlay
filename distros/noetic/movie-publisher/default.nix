@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Node for using a video file as video topic source.'';
+    description = "Node for using a video file as video topic source.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

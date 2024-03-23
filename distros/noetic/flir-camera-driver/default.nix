@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A set of drivers for Flir cameras based on the Spinnaker SDK.'';
+    description = "A set of drivers for Flir cameras based on the Spinnaker SDK.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

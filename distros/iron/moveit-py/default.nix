@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Python binding for MoveIt 2'';
+    description = "Python binding for MoveIt 2";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

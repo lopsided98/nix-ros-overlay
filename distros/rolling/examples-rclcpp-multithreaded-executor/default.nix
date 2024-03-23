@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Package containing example of how to implement a multithreaded executor'';
+    description = "Package containing example of how to implement a multithreaded executor";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-ros python3 ];
 
   meta = {
-    description = ''Generate the type support for C messages.'';
+    description = "Generate the type support for C messages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

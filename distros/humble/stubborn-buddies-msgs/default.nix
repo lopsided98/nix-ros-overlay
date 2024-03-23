@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Messages to support library of stubborn buddies'';
+    description = "Messages to support library of stubborn buddies";
     license = with lib.licenses; [ asl20 ];
   };
 }

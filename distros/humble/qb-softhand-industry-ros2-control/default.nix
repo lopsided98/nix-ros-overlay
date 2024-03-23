@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Package of `ros2_control` hardware for qbSoftHand Industry with transmission interface.'';
+    description = "Package of `ros2_control` hardware for qbSoftHand Industry with transmission interface.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

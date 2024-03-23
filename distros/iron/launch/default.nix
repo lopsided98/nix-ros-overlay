@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python osrf-pycommon python3Packages.importlib-metadata python3Packages.lark python3Packages.pyyaml ];
 
   meta = {
-    description = ''The ROS launch tool.'';
+    description = "The ROS launch tool.";
     license = with lib.licenses; [ asl20 ];
   };
 }

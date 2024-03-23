@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-lint-cmake ];
 
   meta = {
-    description = ''The CMake API for ament_lint_cmake to lint CMake code using cmakelint.'';
+    description = "The CMake API for ament_lint_cmake to lint CMake code using cmakelint.";
     license = with lib.licenses; [ asl20 ];
   };
 }

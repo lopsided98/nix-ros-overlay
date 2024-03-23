@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-export-dependencies vcstool ];
 
   meta = {
-    description = ''Macros for maintaining a 'vendor' package.'';
+    description = "Macros for maintaining a 'vendor' package.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''jsk_ik_server'';
+    description = "jsk_ik_server";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

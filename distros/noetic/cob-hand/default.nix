@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_hand stack includes packages that provide access to the Care-O-bot hand through ROS serial.'';
+    description = "The cob_hand stack includes packages that provide access to the Care-O-bot hand through ROS serial.";
     license = with lib.licenses; [ asl20 ];
   };
 }

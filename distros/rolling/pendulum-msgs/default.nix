@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Custom messages for real-time pendulum control.'';
+    description = "Custom messages for real-time pendulum control.";
     license = with lib.licenses; [ asl20 ];
   };
 }

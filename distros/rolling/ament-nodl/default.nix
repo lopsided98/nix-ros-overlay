@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Ament extension for exporting NoDL .xml files'';
+    description = "Ament extension for exporting NoDL .xml files";
     license = with lib.licenses; [ lgpl3Only ];
   };
 }

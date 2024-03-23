@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''RViz visualizations for robot_navigation datatypes'';
+    description = "RViz visualizations for robot_navigation datatypes";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

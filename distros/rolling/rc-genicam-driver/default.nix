@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Driver for rc_visard and rc_cube from Roboception GmbH'';
+    description = "Driver for rc_visard and rc_cube from Roboception GmbH";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

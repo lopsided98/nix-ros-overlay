@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python-qt-binding qt-dotgraph rclpy rqt-graph rqt-gui rqt-gui-py tf2-msgs tf2-ros ];
 
   meta = {
-    description = ''rqt_tf_tree provides a GUI plugin for visualizing the ROS TF frame tree.'';
+    description = "rqt_tf_tree provides a GUI plugin for visualizing the ROS TF frame tree.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

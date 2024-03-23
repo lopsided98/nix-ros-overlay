@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A set of packages that include controller interfaces, controller managers, transmissions and hardware_interfaces.'';
+    description = "A set of packages that include controller interfaces, controller managers, transmissions and hardware_interfaces.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ graphviz python3Packages.pyyaml rclpy tf2-msgs tf2-py tf2-ros-py ];
 
   meta = {
-    description = ''tf2_tools'';
+    description = "tf2_tools";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

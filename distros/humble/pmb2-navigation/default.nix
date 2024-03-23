@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''PMB2 navigation metapackage'';
+    description = "PMB2 navigation metapackage";
     license = with lib.licenses; [ asl20 ];
   };
 }

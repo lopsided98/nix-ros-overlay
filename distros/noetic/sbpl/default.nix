@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Search-based planning library (SBPL).'';
+    description = "Search-based planning library (SBPL).";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

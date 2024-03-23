@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package implements the franka gripper of type Franka Hand for the use in ros'';
+    description = "This package implements the franka gripper of type Franka Hand for the use in ros";
     license = with lib.licenses; [ asl20 ];
   };
 }

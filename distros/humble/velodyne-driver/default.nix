@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''ROS device driver for Velodyne 3D LIDARs.'';
+    description = "ROS device driver for Velodyne 3D LIDARs.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

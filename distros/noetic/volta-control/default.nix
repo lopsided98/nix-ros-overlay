@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The volta_control package'';
+    description = "The volta_control package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Definition of the interface for weight scale devices'';
+    description = "Definition of the interface for weight scale devices";
     license = with lib.licenses; [ asl20 ];
   };
 }

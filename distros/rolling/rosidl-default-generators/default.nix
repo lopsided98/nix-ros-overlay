@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ action-msgs ament-cmake ament-cmake-core rosidl-core-generators service-msgs ];
 
   meta = {
-    description = ''A configuration package defining the default ROS interface generators.'';
+    description = "A configuration package defining the default ROS interface generators.";
     license = with lib.licenses; [ asl20 ];
   };
 }

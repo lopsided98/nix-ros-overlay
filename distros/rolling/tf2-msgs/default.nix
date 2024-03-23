@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''tf2_msgs'';
+    description = "tf2_msgs";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''CRANE+ V2 move_group config package'';
+    description = "CRANE+ V2 move_group config package";
     license = with lib.licenses; [ asl20 ];
   };
 }

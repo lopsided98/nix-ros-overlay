@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''RVIZ plugin for IMU visualization'';
+    description = "RVIZ plugin for IMU visualization";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

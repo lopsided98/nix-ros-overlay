@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''This package defines messages for commonly used sensors, including
-    cameras and scanning laser rangefinders.'';
+    description = "This package defines messages for commonly used sensors, including
+    cameras and scanning laser rangefinders.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

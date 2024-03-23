@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''API and ROS drivers for Phidgets devices'';
+    description = "API and ROS drivers for Phidgets devices";
     license = with lib.licenses; [ "BSD-&-LGPL" ];
   };
 }

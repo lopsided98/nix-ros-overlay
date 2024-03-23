@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];
 
   meta = {
-    description = ''Helper scripts and functionality to test industrial motion generation'';
+    description = "Helper scripts and functionality to test industrial motion generation";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

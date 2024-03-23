@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''gazebo_video_monitor_utils contains utility scripts that are meant to interact with the gazebo video monitor plugins.'';
+    description = "gazebo_video_monitor_utils contains utility scripts that are meant to interact with the gazebo video monitor plugins.";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

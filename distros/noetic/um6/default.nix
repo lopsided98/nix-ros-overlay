@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The um6 package provides a C++ implementation of the CH Robotics serial protocol, and a
-    corresponding ROS node for publishing standard ROS orientation topics from a UM6.'';
+    description = "The um6 package provides a C++ implementation of the CH Robotics serial protocol, and a
+    corresponding ROS node for publishing standard ROS orientation topics from a UM6.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

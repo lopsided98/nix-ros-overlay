@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''A package containing some message definitions which describe geometric shapes.'';
+    description = "A package containing some message definitions which describe geometric shapes.";
     license = with lib.licenses; [ asl20 ];
   };
 }

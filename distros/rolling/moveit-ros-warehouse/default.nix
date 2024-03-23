@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Components of MoveIt connecting to MongoDB'';
+    description = "Components of MoveIt connecting to MongoDB";
     license = with lib.licenses; [ bsd3 ];
   };
 }

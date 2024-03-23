@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The rc_dynamics_api provides an API for easy handling of the dynamic-state data
+    description = "The rc_dynamics_api provides an API for easy handling of the dynamic-state data
       streams provided by Roboception's stereo camera with self-localization.
       See http://rc-visard.com
 
@@ -27,7 +27,7 @@ buildRosPackage {
       ego-motion estimation. These states refer to rc_visard's current pose,
       velocity, or acceleration and are published on demand via several data streams.
       For a complete list and descriptions of these dynamics states and the
-      respective data streams please refer to rc_visard's user manual.'';
+      respective data streams please refer to rc_visard's user manual.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

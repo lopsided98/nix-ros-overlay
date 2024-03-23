@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A package containing RViz2 plugins for RMF'';
+    description = "A package containing RViz2 plugins for RMF";
     license = with lib.licenses; [ asl20 ];
   };
 }

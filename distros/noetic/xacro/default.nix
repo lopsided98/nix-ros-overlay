@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Xacro (XML Macros)
+    description = "Xacro (XML Macros)
 
-    Xacro is an XML macro language. With xacro, you can construct shorter and more readable XML files by using macros that expand to larger XML expressions.'';
+    Xacro is an XML macro language. With xacro, you can construct shorter and more readable XML files by using macros that expand to larger XML expressions.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

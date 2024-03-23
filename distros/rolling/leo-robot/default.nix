@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Metapackage of software to install on Leo Rover.'';
+    description = "Metapackage of software to install on Leo Rover.";
     license = with lib.licenses; [ mit ];
   };
 }

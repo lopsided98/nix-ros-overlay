@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This library provides functionality to simplify working with the
-    navigation messages defined in marti_nav_msgs.'';
+    description = "This library provides functionality to simplify working with the
+    navigation messages defined in marti_nav_msgs.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

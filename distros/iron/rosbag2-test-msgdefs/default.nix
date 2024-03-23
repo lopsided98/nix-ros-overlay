@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''message definition test fixtures for rosbag2 schema recording'';
+    description = "message definition test fixtures for rosbag2 schema recording";
     license = with lib.licenses; [ asl20 ];
   };
 }

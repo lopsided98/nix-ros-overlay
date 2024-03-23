@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Generic definitions of geometric shapes and bodies.'';
+    description = "Generic definitions of geometric shapes and bodies.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

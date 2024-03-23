@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''AS2 Controller Package'';
+    description = "AS2 Controller Package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

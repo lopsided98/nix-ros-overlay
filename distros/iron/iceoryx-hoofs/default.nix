@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Eclipse iceoryx inter-process-communication (IPC) middleware basic building blocks'';
+    description = "Eclipse iceoryx inter-process-communication (IPC) middleware basic building blocks";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,10 +20,10 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''This package provides the c++ extensions for a variety of threaded
+    description = "This package provides the c++ extensions for a variety of threaded
      programming tools. These are usually different on different
      platforms, so the architecture for a cross-platform framework
-     is also implemented.'';
+     is also implemented.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

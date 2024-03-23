@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ marti-introspection-msgs python3Packages.natsort rcl-interfaces rclpy ros2cli ];
 
   meta = {
-    description = ''Command line tools for introspecting ROS systems'';
+    description = "Command line tools for introspecting ROS systems";
     license = with lib.licenses; [ bsd3 ];
   };
 }

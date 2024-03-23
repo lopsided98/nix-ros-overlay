@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin cmake ];
 
   meta = {
-    description = ''The robotraconteur package'';
+    description = "The robotraconteur package";
     license = with lib.licenses; [ asl20 ];
   };
 }

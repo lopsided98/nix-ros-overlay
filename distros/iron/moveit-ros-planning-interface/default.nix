@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];
 
   meta = {
-    description = ''Components of MoveIt that offer simpler remote (as from another ROS 2 node) interfaces to planning and execution'';
+    description = "Components of MoveIt that offer simpler remote (as from another ROS 2 node) interfaces to planning and execution";
     license = with lib.licenses; [ bsd3 ];
   };
 }

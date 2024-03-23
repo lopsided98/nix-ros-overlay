@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The vector_map_msgs package'';
+    description = "The vector_map_msgs package";
     license = with lib.licenses; [ asl20 ];
   };
 }

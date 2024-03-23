@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains the source code for testing and comparing trac_ik'';
+    description = "This package contains the source code for testing and comparing trac_ik";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

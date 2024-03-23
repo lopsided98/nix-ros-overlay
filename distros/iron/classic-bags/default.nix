@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''A ROS 2 interface in the style of ROS 1 for reading and writing bag files'';
+    description = "A ROS 2 interface in the style of ROS 1 for reading and writing bag files";
     license = with lib.licenses; [ "BSD-3-clause" ];
   };
 }

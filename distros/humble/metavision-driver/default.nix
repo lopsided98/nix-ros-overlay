@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-auto ament-cmake-ros cmake curl git hdf5 ros-environment unzip wget ];
 
   meta = {
-    description = ''ROS1 and ROS2 drivers for metavision based event cameras'';
+    description = "ROS1 and ROS2 drivers for metavision based event cameras";
     license = with lib.licenses; [ "Apache-2" ];
   };
 }

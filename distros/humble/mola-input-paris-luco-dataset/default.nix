@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Offline RawDataSource from Paris LUCO (CT-ICP) odometry/SLAM datasets'';
+    description = "Offline RawDataSource from Paris LUCO (CT-ICP) odometry/SLAM datasets";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

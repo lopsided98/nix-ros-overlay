@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''qt_gui provides the infrastructure for an integrated graphical user interface based on Qt.
+    description = "qt_gui provides the infrastructure for an integrated graphical user interface based on Qt.
     It is extensible with Python- and C++-based plugins (implemented in separate packages) which can contribute arbitrary widgets.
-    It requires either PyQt or PySide bindings.'';
+    It requires either PyQt or PySide bindings.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

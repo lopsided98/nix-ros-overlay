@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''<p>
+    description = "<p>
       Dual Franka Emika Panda MoveIt Configuration 
-    </p>'';
+    </p>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

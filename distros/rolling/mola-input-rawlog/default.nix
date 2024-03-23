@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Offline RawDataSource from MRPT rawlog datasets'';
+    description = "Offline RawDataSource from MRPT rawlog datasets";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

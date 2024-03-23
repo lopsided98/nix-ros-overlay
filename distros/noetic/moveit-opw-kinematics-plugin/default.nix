@@ -20,14 +20,14 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''<p>
+    description = "<p>
       MoveIt kinematics plugin for industrial robots.
     </p>
     <p>
       This plugin uses an analytical inverse kinematic library, opw_kinematics,
       to calculate the inverse kinematics for industrial robots with 6 degrees of freedom,
       two parallel joints, and a spherical wrist.
-    </p>'';
+    </p>";
     license = with lib.licenses; [ asl20 ];
   };
 }

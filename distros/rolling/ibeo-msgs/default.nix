@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The ibeo_msgs package'';
+    description = "The ibeo_msgs package";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-core-generators ];
 
   meta = {
-    description = ''A package containing message and service definitions for describing and communicating descriptions of other types.'';
+    description = "A package containing message and service definitions for describing and communicating descriptions of other types.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Wrapper (aka vendor package) around the FMILibrary by Modelon AB (JModelica.org)'';
+    description = "Wrapper (aka vendor package) around the FMILibrary by Modelon AB (JModelica.org)";
     license = with lib.licenses; [ bsd3 ];
   };
 }

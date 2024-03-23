@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Examples for RT Manipulators C++ Library'';
+    description = "Examples for RT Manipulators C++ Library";
     license = with lib.licenses; [ asl20 ];
   };
 }

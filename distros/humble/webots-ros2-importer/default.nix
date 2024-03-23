@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ builtin-interfaces python3Packages.lark python3Packages.pycollada xacro ];
 
   meta = {
-    description = ''This package allows to convert URDF and XACRO files into Webots PROTO files.'';
+    description = "This package allows to convert URDF and XACRO files into Webots PROTO files.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Exotica solvers based on the Open Motion Planning Libary (OMPL)'';
+    description = "Exotica solvers based on the Open Motion Planning Libary (OMPL)";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

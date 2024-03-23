@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Transmission Interface.'';
+    description = "Transmission Interface.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

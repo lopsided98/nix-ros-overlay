@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Single image rectification and color processing.'';
+    description = "Single image rectification and color processing.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

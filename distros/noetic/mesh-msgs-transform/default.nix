@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Methods to transform mesh_msgs'';
+    description = "Methods to transform mesh_msgs";
     license = with lib.licenses; [ bsd3 ];
   };
 }

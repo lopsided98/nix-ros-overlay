@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Common utility functions for Gazebo-classic and Gazebo building plugins'';
+    description = "Common utility functions for Gazebo-classic and Gazebo building plugins";
     license = with lib.licenses; [ asl20 ];
   };
 }

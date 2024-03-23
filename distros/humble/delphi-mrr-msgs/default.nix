@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Message definitions for the Delphi MRR'';
+    description = "Message definitions for the Delphi MRR";
     license = with lib.licenses; [ mit ];
   };
 }

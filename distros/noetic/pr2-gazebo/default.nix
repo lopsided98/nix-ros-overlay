@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Launch scripts for simulating the PR2 in <a href="http://ros.org/wiki/gazebo">gazebo</a>.
+    description = "Launch scripts for simulating the PR2 in <a href=\"http://ros.org/wiki/gazebo\">gazebo</a>.
     The simulation equivalent of pr2.launch is found here.
-    pr2_fingertip_pressure_contact_translator produces the same ROS topics as fingertip_pressure package for simulated PR2.'';
+    pr2_fingertip_pressure_contact_translator produces the same ROS topics as fingertip_pressure package for simulated PR2.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

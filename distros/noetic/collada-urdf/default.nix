@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains a tool to convert Unified Robot Description Format (URDF) documents into COLLAborative Design Activity (COLLADA) documents.
+    description = "This package contains a tool to convert Unified Robot Description Format (URDF) documents into COLLAborative Design Activity (COLLADA) documents.
 
     Implements robot-specific COLLADA extensions as defined by
-    http://openrave.programmingvision.com/index.php/Started:COLLADA'';
+    http://openrave.programmingvision.com/index.php/Started:COLLADA";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

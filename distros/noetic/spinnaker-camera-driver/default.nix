@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Spinnaker camera driver based on Spinnaker.'';
+    description = "Spinnaker camera driver based on Spinnaker.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

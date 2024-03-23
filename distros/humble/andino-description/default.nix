@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The andino_description package'';
+    description = "The andino_description package";
     license = with lib.licenses; [ "BSD-Clause-3" ];
   };
 }

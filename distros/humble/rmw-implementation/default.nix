@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rmw-implementation-cmake ];
 
   meta = {
-    description = ''Proxy implementation of the ROS 2 Middleware Interface.'';
+    description = "Proxy implementation of the ROS 2 Middleware Interface.";
     license = with lib.licenses; [ asl20 ];
   };
 }

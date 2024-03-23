@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''include
+    description = "include
         This package provides an implementation of a 3D costmap that takes in sensor
-        data from the world, builds a 3D occupancy grid of the data for only one iteration.'';
+        data from the world, builds a 3D occupancy grid of the data for only one iteration.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides a simple script to write simple launch files
+    description = "This package provides a simple script to write simple launch files
     that can easily switch between running nodelets together or as
-    standalone nodes.'';
+    standalone nodes.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

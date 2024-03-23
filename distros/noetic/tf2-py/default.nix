@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The tf2_py package'';
+    description = "The tf2_py package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

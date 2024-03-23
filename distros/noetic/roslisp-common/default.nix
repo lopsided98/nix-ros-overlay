@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Common libraries to control ROS based robots. This stack contains
+    description = "Common libraries to control ROS based robots. This stack contains
     an implementation of actionlib (client and server) in Common Lisp,
     a transformation library and an implementation of tf in Common
-    Lisp.'';
+    Lisp.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

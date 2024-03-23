@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS messages for ETSI ITS CAM'';
+    description = "ROS messages for ETSI ITS CAM";
     license = with lib.licenses; [ mit ];
   };
 }

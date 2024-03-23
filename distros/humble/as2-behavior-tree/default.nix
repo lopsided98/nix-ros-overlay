@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''AS2 behavior trees'';
+    description = "AS2 behavior trees";
     license = with lib.licenses; [ bsd3 ];
   };
 }

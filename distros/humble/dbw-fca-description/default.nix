@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''URDF and meshes describing the Chrysler Pacifica.'';
+    description = "URDF and meshes describing the Chrysler Pacifica.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

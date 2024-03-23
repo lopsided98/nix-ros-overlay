@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This is a set of tools for recording from and playing back ROS
-    message without relying on the ROS client library.'';
+    description = "This is a set of tools for recording from and playing back ROS
+    message without relying on the ROS client library.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

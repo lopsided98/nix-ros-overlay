@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Smac global planning plugin: A*, Hybrid-A*, State Lattice'';
+    description = "Smac global planning plugin: A*, Hybrid-A*, State Lattice";
     license = with lib.licenses; [ asl20 ];
   };
 }

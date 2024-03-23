@@ -20,10 +20,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The actionlib stack provides a standardized interface for
+    description = "The actionlib stack provides a standardized interface for
     interfacing with preemptable tasks. Examples of this include moving
     the base to a target location, performing a laser scan and returning
-    the resulting point cloud, detecting the handle of a door, etc.'';
+    the resulting point cloud, detecting the handle of a door, etc.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pr2_calibration_controllers package contains the controllers
-     used to bring all the joints in the PR2 to a calibrated state.'';
+    description = "The pr2_calibration_controllers package contains the controllers
+     used to bring all the joints in the PR2 to a calibrated state.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The gpp_plugin package offers a pipeline for running global 
-  planners together with auxiliary pre- and post-processing functions'';
+    description = "The gpp_plugin package offers a pipeline for running global 
+  planners together with auxiliary pre- and post-processing functions";
     license = with lib.licenses; [ mit ];
   };
 }

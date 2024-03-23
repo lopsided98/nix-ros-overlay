@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros pkg-config ];
 
   meta = {
-    description = ''Tracing wrapper for ROS 2.'';
+    description = "Tracing wrapper for ROS 2.";
     license = with lib.licenses; [ asl20 ];
   };
 }

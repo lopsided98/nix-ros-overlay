@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, boost, cmake, doxygen, eigen, eigenpy, git, octomap, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-hpp-fcl";
-  version = "2.4.0-r2";
+  version = "2.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hpp_fcl-release/archive/release/rolling/hpp-fcl/2.4.0-2.tar.gz";
-    name = "2.4.0-2.tar.gz";
-    sha256 = "e6ca9387b7f28654b74d67c5e5e1e16f25358932c7c345c5ce22da2ed587914f";
+    url = "https://github.com/ros2-gbp/hpp_fcl-release/archive/release/rolling/hpp-fcl/2.4.4-1.tar.gz";
+    name = "2.4.4-1.tar.gz";
+    sha256 = "e1cefaf6c230f096e4ab3475445b2d123b055103072852541cdbdbaa61272a6f";
   };
 
   buildType = "cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''An extension of the Flexible Collision Library.'';
+    description = "An extension of the Flexible Collision Library.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

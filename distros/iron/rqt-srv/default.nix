@@ -17,9 +17,9 @@ buildRosPackage {
   propagatedBuildInputs = [ rclpy rqt-gui rqt-gui-py rqt-msg ];
 
   meta = {
-    description = ''A Python GUI plugin for introspecting available ROS message types.
+    description = "A Python GUI plugin for introspecting available ROS message types.
   Note that the srvs available through this plugin is the ones that are stored
-  on your machine, not on the ROS core your rqt instance connects to.'';
+  on your machine, not on the ROS core your rqt instance connects to.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

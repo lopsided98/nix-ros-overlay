@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin cmake ];
 
   meta = {
-    description = ''C++ library for the base generic MRPT sensor node'';
+    description = "C++ library for the base generic MRPT sensor node";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

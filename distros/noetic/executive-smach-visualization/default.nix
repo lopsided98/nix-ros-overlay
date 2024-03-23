@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This metapackage depends on the SMACH visualization tools.'';
+    description = "This metapackage depends on the SMACH visualization tools.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ];
 
   meta = {
-    description = ''CMake support functionality used throughout grid_map'';
+    description = "CMake support functionality used throughout grid_map";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

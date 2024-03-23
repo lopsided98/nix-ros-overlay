@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Compass based on a 3-axis magnetometer, attitude readings and possibly also GPS.'';
+    description = "Compass based on a 3-axis magnetometer, attitude readings and possibly also GPS.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

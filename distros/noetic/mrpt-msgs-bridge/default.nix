@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''C++ library to convert between custom mrpt_msgs messages and native MRPT classes'';
+    description = "C++ library to convert between custom mrpt_msgs messages and native MRPT classes";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

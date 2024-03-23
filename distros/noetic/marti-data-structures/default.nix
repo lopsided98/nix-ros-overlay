@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''marti_data_structures'';
+    description = "marti_data_structures";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

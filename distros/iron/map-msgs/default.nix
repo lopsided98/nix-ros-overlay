@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''This package defines messages commonly used in mapping packages.'';
+    description = "This package defines messages commonly used in mapping packages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

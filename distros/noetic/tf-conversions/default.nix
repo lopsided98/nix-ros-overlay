@@ -19,14 +19,14 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains a set of conversion functions to convert
+    description = "This package contains a set of conversion functions to convert
 common tf datatypes (point, vector, pose, etc) into semantically
 identical datatypes used by other libraries. The conversion functions
 make it easier for users of the transform library (tf) to work with
 the datatype of their choice. Currently this package has support for
 the Kinematics and Dynamics Library (KDL) and the Eigen matrix
 library. This package is stable, and will get integrated into tf in
-the next major release cycle (see roadmap).'';
+the next major release cycle (see roadmap).";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

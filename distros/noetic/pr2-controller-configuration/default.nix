@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Configuration files for PR2 controllers.'';
+    description = "Configuration files for PR2 controllers.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

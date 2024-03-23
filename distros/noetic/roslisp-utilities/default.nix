@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Some utility functionality to interact with ROS using roslisp.'';
+    description = "Some utility functionality to interact with ROS using roslisp.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

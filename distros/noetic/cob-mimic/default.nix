@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package implements the Care-O-bot mimic'';
+    description = "This package implements the Care-O-bot mimic";
     license = with lib.licenses; [ asl20 ];
   };
 }

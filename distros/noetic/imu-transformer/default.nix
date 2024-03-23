@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Node/nodelet combination to transform sensor_msgs::Imu data from one frame into another.'';
+    description = "Node/nodelet combination to transform sensor_msgs::Imu data from one frame into another.";
     license = with lib.licenses; [ "GPL" ];
   };
 }

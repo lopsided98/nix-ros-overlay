@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''publish end effector's force, which is estmated from joint torque value'';
+    description = "publish end effector's force, which is estmated from joint torque value";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

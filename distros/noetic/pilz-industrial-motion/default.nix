@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pilz_industrial_motion package'';
+    description = "The pilz_industrial_motion package";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Message definitions for planner_cspace package'';
+    description = "Message definitions for planner_cspace package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

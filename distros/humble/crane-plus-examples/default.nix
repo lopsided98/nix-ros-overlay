@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''CRANE+ V2 examples package'';
+    description = "CRANE+ V2 examples package";
     license = with lib.licenses; [ asl20 ];
   };
 }

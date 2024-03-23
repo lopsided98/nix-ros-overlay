@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''Robotiq Gripper Definition Packages'';
+    description = "Robotiq Gripper Definition Packages";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];
 
   meta = {
-    description = ''A collection of functions that address common computations and numerical handling of rotations in 3D Euclidean space'';
+    description = "A collection of functions that address common computations and numerical handling of rotations in 3D Euclidean space";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

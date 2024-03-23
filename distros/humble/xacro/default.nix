@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''Xacro (XML Macros)
-    Xacro is an XML macro language. With xacro, you can construct shorter and more readable XML files by using macros that expand to larger XML expressions.'';
+    description = "Xacro (XML Macros)
+    Xacro is an XML macro language. With xacro, you can construct shorter and more readable XML files by using macros that expand to larger XML expressions.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

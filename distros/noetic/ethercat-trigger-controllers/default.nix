@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Controllers to operate the digital output of the motor controller
+    description = "Controllers to operate the digital output of the motor controller
     boards and the projector board. This package has not been reviewed and
-    should be considered unstable.'';
+    should be considered unstable.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

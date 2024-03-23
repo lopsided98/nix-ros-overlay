@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Library with methods that convert rcss3d_agent_msgs to soccer_interfaces'';
+    description = "Library with methods that convert rcss3d_agent_msgs to soccer_interfaces";
     license = with lib.licenses; [ asl20 ];
   };
 }

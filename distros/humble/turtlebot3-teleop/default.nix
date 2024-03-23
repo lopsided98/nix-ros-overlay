@@ -17,7 +17,7 @@ buildRosPackage {
   propagatedBuildInputs = [ geometry-msgs rclpy ];
 
   meta = {
-    description = ''Teleoperation node using keyboard for TurtleBot3.'';
+    description = "Teleoperation node using keyboard for TurtleBot3.";
     license = with lib.licenses; [ asl20 ];
   };
 }

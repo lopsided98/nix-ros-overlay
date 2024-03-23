@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ geometry-msgs python3Packages.pillow python3Packages.pycairo rclpy rosbag2 rqt-bag rqt-gui rqt-gui-py rqt-plot sensor-msgs std-msgs ];
 
   meta = {
-    description = ''rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.'';
+    description = "rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

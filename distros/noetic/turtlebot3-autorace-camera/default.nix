@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''TurtleBot3 AutoRace ROS package that controls Raspberry Pi Camera, and process the image'';
+    description = "TurtleBot3 AutoRace ROS package that controls Raspberry Pi Camera, and process the image";
     license = with lib.licenses; [ asl20 ];
   };
 }

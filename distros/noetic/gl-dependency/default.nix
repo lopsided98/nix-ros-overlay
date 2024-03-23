@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This encapsulates the GL dependency for a specific ROS distribution and its Qt version'';
+    description = "This encapsulates the GL dependency for a specific ROS distribution and its Qt version";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

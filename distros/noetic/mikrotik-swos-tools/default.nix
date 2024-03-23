@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Integration between ROS (Robot Operating System) and Mikrotik SwOS'';
+    description = "Integration between ROS (Robot Operating System) and Mikrotik SwOS";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

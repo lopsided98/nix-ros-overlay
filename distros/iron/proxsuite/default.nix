@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The Advanced Proximal Optimization Toolbox'';
+    description = "The Advanced Proximal Optimization Toolbox";
     license = with lib.licenses; [ bsd2 ];
   };
 }

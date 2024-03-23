@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''A package containing messages used by all workcells generically to interfact with rmf_core'';
+    description = "A package containing messages used by all workcells generically to interfact with rmf_core";
     license = with lib.licenses; [ asl20 ];
   };
 }

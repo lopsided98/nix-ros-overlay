@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS wrapper for lely-core-libraries'';
+    description = "ROS wrapper for lely-core-libraries";
     license = with lib.licenses; [ asl20 ];
   };
 }

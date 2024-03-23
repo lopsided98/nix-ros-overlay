@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Visualization package for rc_visard'';
+    description = "Visualization package for rc_visard";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

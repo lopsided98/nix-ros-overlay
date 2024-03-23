@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Includes messages to handle each class in Autoware Map Format'';
+    description = "Includes messages to handle each class in Autoware Map Format";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''mrpt_slam'';
+    description = "mrpt_slam";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

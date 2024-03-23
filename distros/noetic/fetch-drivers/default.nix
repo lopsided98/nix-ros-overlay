@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The public fetch_drivers package is a binary only release.
+    description = "The public fetch_drivers package is a binary only release.
 
     fetch_drivers contains both the drivers and firmware for the fetch and freight research robots.
     There should be no reason to use these drivers unless you're running on a fetch or a freight research robot.
-    This package, is a cmake/make only package which installs the binaries for the drivers and firmware.'';
+    This package, is a cmake/make only package which installs the binaries for the drivers and firmware.";
     license = with lib.licenses; [ "Proprietary" ];
   };
 }

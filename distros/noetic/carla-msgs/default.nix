@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The carla_msgs package'';
+    description = "The carla_msgs package";
     license = with lib.licenses; [ mit ];
   };
 }

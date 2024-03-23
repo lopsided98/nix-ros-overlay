@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin mrt-cmake-modules ];
 
   meta = {
-    description = ''Parser/Writer module for lanelet2'';
+    description = "Parser/Writer module for lanelet2";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

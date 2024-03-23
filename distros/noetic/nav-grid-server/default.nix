@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Customizable tools for publishing images as NavGrids or OccupancyGrids'';
+    description = "Customizable tools for publishing images as NavGrids or OccupancyGrids";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Turtlebot4 Desktop Metapackage'';
+    description = "Turtlebot4 Desktop Metapackage";
     license = with lib.licenses; [ asl20 ];
   };
 }

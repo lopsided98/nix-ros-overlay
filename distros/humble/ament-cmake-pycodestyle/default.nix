@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-pycodestyle ];
 
   meta = {
-    description = ''The CMake API for ament_pycodestyle to check code against the style conventions in
-    PEP 8.'';
+    description = "The CMake API for ament_pycodestyle to check code against the style conventions in
+    PEP 8.";
     license = with lib.licenses; [ asl20 ];
   };
 }

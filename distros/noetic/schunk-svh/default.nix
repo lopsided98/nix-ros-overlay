@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS1 specific packages for the Schunk SVH five finger hand'';
+    description = "ROS1 specific packages for the Schunk SVH five finger hand";
     license = with lib.licenses; [ "GPL-3.0-or-later" ];
   };
 }

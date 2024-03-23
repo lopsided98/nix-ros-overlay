@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
-    description = ''Provides wrappers around the yaml-cpp library for various utility functions
+    description = "Provides wrappers around the yaml-cpp library for various utility functions
     and to abstract out the API changes made to yaml-cpp between ubuntu:precise
-    and ubuntu:trusty.'';
+    and ubuntu:trusty.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

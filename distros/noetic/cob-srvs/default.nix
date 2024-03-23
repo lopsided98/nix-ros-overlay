@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This Package contains Care-O-bot specific service definitions.'';
+    description = "This Package contains Care-O-bot specific service definitions.";
     license = with lib.licenses; [ asl20 ];
   };
 }

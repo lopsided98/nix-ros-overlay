@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''System-wide logging mechanism for messages sent to the /rosout topic.'';
+    description = "System-wide logging mechanism for messages sent to the /rosout topic.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Package to translate ROS messages to and from CAN messages to interact with the Universal Lat/Lon Controller (ULC) firmware'';
+    description = "Package to translate ROS messages to and from CAN messages to interact with the Universal Lat/Lon Controller (ULC) firmware";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

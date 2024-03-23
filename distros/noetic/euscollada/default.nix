@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''euscollada'';
+    description = "euscollada";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

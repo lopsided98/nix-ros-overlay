@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-python ];
 
   meta = {
-    description = ''The ability to add tests in the ament buildsystem in CMake.'';
+    description = "The ability to add tests in the ament buildsystem in CMake.";
     license = with lib.licenses; [ asl20 ];
   };
 }

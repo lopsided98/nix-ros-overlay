@@ -19,13 +19,13 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''common_msgs contains messages that are widely used by other ROS packages.
+    description = "common_msgs contains messages that are widely used by other ROS packages.
     These includes messages for
-    actions (<a href="http://wiki.ros.org/actionlib_msgs">actionlib_msgs</a>),
-    diagnostics (<a href="http://wiki.ros.org/diagnostic_msgs">diagnostic_msgs</a>),
-    geometric primitives (<a href="http://wiki.ros.org/geometry_msgs">geometry_msgs</a>),
-    robot navigation (<a href="http://wiki.ros.org/nav_msgs">nav_msgs</a>),
-    and common sensors (<a href="http://wiki.ros.org/sensor_msgs">sensor_msgs</a>), such as laser range finders, cameras, point clouds.'';
+    actions (<a href=\"http://wiki.ros.org/actionlib_msgs\">actionlib_msgs</a>),
+    diagnostics (<a href=\"http://wiki.ros.org/diagnostic_msgs\">diagnostic_msgs</a>),
+    geometric primitives (<a href=\"http://wiki.ros.org/geometry_msgs\">geometry_msgs</a>),
+    robot navigation (<a href=\"http://wiki.ros.org/nav_msgs\">nav_msgs</a>),
+    and common sensors (<a href=\"http://wiki.ros.org/sensor_msgs\">sensor_msgs</a>), such as laser range finders, cameras, point clouds.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

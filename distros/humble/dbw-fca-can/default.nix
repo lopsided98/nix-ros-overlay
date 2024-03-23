@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Drive-by-wire interface to the Dataspeed Inc. Chrysler Pacifica DBW kit'';
+    description = "Drive-by-wire interface to the Dataspeed Inc. Chrysler Pacifica DBW kit";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

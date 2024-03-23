@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Utilities for working with polygons, including triangulation'';
+    description = "Utilities for working with polygons, including triangulation";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

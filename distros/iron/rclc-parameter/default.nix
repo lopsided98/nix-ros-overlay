@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Parameter server implementation for micro-ROS nodes'';
+    description = "Parameter server implementation for micro-ROS nodes";
     license = with lib.licenses; [ asl20 ];
   };
 }

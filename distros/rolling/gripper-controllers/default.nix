@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-action, realtime-tools, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-rolling-gripper-controllers";
-  version = "4.6.0-r2";
+  version = "4.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/gripper_controllers/4.6.0-2.tar.gz";
-    name = "4.6.0-2.tar.gz";
-    sha256 = "d118e33e3d9ea1478fff2c23c33d32e6039e372ccea7bed9846fac3714bc7443";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/gripper_controllers/4.7.0-1.tar.gz";
+    name = "4.7.0-1.tar.gz";
+    sha256 = "69686ad52da7601ef86670e437eea6a0fd54036735a5b415164c5eb03af84d34";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The gripper_controllers package'';
+    description = "The gripper_controllers package";
     license = with lib.licenses; [ asl20 ];
   };
 }

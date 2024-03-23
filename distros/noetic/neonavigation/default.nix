@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The neonavigation meta-package including 3-dof configuration space planner'';
+    description = "The neonavigation meta-package including 3-dof configuration space planner";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

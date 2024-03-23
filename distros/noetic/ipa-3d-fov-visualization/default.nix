@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The ipa_3d_fov_visualization package allows to visualize the field-of-view of a camera.'';
+    description = "The ipa_3d_fov_visualization package allows to visualize the field-of-view of a camera.";
     license = with lib.licenses; [ asl20 ];
   };
 }

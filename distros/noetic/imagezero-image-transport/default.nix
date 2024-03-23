@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A plugin to image_transport for transparently sending images encoded with ImageZero.'';
+    description = "A plugin to image_transport for transparently sending images encoded with ImageZero.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

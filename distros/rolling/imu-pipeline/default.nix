@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''imu_pipeline'';
+    description = "imu_pipeline";
     license = with lib.licenses; [ bsdOriginal "GPL" ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS controller providing reading the state of speed scaling on the robot'';
+    description = "ROS controller providing reading the state of speed scaling on the robot";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module rosidl-default-generators ];
 
   meta = {
-    description = ''This package contains generic definitions of geometric shapes and bodies.'';
+    description = "This package contains generic definitions of geometric shapes and bodies.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake git ];
 
   meta = {
-    description = ''Standalone GUI tool for editing node parameters at runtime.'';
+    description = "Standalone GUI tool for editing node parameters at runtime.";
     license = with lib.licenses; [ mit ];
   };
 }

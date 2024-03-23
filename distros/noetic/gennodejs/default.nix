@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Javascript ROS message and service generators.'';
+    description = "Javascript ROS message and service generators.";
     license = with lib.licenses; [ asl20 ];
   };
 }

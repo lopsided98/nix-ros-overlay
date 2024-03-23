@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Lisp client library for ROS, the Robot Operating System.'';
+    description = "Lisp client library for ROS, the Robot Operating System.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

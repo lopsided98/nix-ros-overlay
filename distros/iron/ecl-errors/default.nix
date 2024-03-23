@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''This library provides lean and mean error mechanisms.
+    description = "This library provides lean and mean error mechanisms.
     It includes c style error functions as well as a few
     useful macros. For higher level mechanisms,
-    refer to ecl_exceptions.'';
+    refer to ecl_exceptions.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

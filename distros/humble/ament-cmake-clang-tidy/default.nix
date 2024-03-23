@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-clang-tidy ament-cmake-core ament-cmake-test ];
 
   meta = {
-    description = ''The CMake API for ament_clang_tidy to lint C / C++ code using clang tidy.'';
+    description = "The CMake API for ament_clang_tidy to lint C / C++ code using clang tidy.";
     license = with lib.licenses; [ asl20 ];
   };
 }

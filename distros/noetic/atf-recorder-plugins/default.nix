@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Plugins for the ATF recorder.'';
+    description = "Plugins for the ATF recorder.";
     license = with lib.licenses; [ asl20 ];
   };
 }

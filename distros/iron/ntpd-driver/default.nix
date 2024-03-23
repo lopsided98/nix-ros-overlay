@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ntpd_driver sends TimeReference message time to ntpd server'';
+    description = "ntpd_driver sends TimeReference message time to ntpd server";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Message definitions for safety_limiter_msgs package'';
+    description = "Message definitions for safety_limiter_msgs package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

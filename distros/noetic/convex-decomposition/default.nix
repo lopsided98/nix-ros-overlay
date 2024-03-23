@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Convex Decomposition Tool for Robot Model'';
+    description = "Convex Decomposition Tool for Robot Model";
     license = with lib.licenses; [ mit ];
   };
 }

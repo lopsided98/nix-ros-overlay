@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The bag2_to_image package'';
+    description = "The bag2_to_image package";
     license = with lib.licenses; [ asl20 ];
   };
 }

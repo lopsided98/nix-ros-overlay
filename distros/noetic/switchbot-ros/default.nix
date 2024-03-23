@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''use switchbot with ros'';
+    description = "use switchbot with ros";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Loading and publishing grid maps from bag files.'';
+    description = "Loading and publishing grid maps from bag files.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

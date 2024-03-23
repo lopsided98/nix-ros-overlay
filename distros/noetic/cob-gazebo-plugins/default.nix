@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Additional gazebo plugins used with Care-O-bot'';
+    description = "Additional gazebo plugins used with Care-O-bot";
     license = with lib.licenses; [ asl20 ];
   };
 }

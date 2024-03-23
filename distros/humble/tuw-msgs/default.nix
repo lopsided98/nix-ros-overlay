@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The tuw_msgs meta package'';
+    description = "The tuw_msgs meta package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

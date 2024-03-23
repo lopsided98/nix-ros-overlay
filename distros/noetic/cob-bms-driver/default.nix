@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Driver package for interfacing the battery management system (BMS) on Care-O-bot.'';
+    description = "Driver package for interfacing the battery management system (BMS) on Care-O-bot.";
     license = with lib.licenses; [ asl20 ];
   };
 }

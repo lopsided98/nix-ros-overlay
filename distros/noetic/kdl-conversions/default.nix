@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Conversion functions between KDL and geometry_msgs types.'';
+    description = "Conversion functions between KDL and geometry_msgs types.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

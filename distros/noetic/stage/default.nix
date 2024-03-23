@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake pkg-config ];
 
   meta = {
-    description = ''Mobile robot simulator http://rtv.github.com/Stage'';
+    description = "Mobile robot simulator http://rtv.github.com/Stage";
     license = with lib.licenses; [ "GPL" ];
   };
 }

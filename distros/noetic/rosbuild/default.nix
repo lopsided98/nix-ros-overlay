@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rosbuild contains scripts for managing the CMake-based build system for ROS.'';
+    description = "rosbuild contains scripts for managing the CMake-based build system for ROS.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

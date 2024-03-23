@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Offline RawDataSource from Kitti odometry/SLAM datasets'';
+    description = "Offline RawDataSource from Kitti odometry/SLAM datasets";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

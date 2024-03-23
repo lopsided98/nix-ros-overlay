@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Custom messages for communicating with rcss3d_agent'';
+    description = "Custom messages for communicating with rcss3d_agent";
     license = with lib.licenses; [ asl20 ];
   };
 }

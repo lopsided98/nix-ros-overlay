@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''GPS routines for use in GPS drivers'';
+    description = "GPS routines for use in GPS drivers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

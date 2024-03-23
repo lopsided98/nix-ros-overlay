@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Meta package for rosbag2 related packages'';
+    description = "Meta package for rosbag2 related packages";
     license = with lib.licenses; [ asl20 ];
   };
 }

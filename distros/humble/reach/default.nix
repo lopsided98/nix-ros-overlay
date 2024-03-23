@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The reach package'';
+    description = "The reach package";
     license = with lib.licenses; [ asl20 ];
   };
 }

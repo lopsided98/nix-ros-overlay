@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Example of how to use the rclcpp::WaitSet directly.'';
+    description = "Example of how to use the rclcpp::WaitSet directly.";
     license = with lib.licenses; [ asl20 ];
   };
 }

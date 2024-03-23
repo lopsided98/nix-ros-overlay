@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Python library to assist in publishing markers easily'';
+    description = "Python library to assist in publishing markers easily";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

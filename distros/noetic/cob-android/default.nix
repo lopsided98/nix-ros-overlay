@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''cob_android package provides tools for android apps operation.'';
+    description = "cob_android package provides tools for android apps operation.";
     license = with lib.licenses; [ asl20 ];
   };
 }

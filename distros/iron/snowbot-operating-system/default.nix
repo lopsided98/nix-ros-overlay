@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The weather outside is frightful'';
+    description = "The weather outside is frightful";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides ROS message and service definitions, representing basic interaction with ABB robot controllers.'';
+    description = "Provides ROS message and service definitions, representing basic interaction with ABB robot controllers.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Lightweight frontier-based exploration.'';
+    description = "Lightweight frontier-based exploration.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

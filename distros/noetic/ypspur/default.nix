@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''YP-Spur is a mobile robot motion control software with coordinate frame based commands.'';
+    description = "YP-Spur is a mobile robot motion control software with coordinate frame based commands.";
     license = with lib.licenses; [ mit ];
   };
 }

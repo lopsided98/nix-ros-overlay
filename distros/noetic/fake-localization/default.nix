@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A ROS node that simply forwards odometry information.'';
+    description = "A ROS node that simply forwards odometry information.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

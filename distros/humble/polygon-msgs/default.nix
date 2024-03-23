@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''General purpose two-dimensional polygons. Formerly a part of nav_2d_msgs'';
+    description = "General purpose two-dimensional polygons. Formerly a part of nav_2d_msgs";
     license = with lib.licenses; [ bsd3 ];
   };
 }

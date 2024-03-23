@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Common support functionality used throughout MoveIt'';
+    description = "Common support functionality used throughout MoveIt";
     license = with lib.licenses; [ bsd3 ];
   };
 }

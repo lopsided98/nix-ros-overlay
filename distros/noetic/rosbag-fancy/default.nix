@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rosbag with terminal UI'';
+    description = "rosbag with terminal UI";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''<p>URDF and xacro description package for Kortex robots</p>
+    description = "<p>URDF and xacro description package for Kortex robots</p>
     <p>This package contains configuration data, 3D models and launch files
-for Kortex arms and supported grippers</p>'';
+for Kortex arms and supported grippers</p>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

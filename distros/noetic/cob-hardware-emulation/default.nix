@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_hardware_emulation package provides idealized nodes emulating real robot hardware and/or physics simulation.'';
+    description = "The cob_hardware_emulation package provides idealized nodes emulating real robot hardware and/or physics simulation.";
     license = with lib.licenses; [ asl20 ];
   };
 }

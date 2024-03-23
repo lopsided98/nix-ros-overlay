@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS / ROS2 udp_msgs package'';
+    description = "ROS / ROS2 udp_msgs package";
     license = with lib.licenses; [ mit ];
   };
 }

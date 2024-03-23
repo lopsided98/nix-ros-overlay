@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''tf2_geometry_msgs'';
+    description = "tf2_geometry_msgs";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

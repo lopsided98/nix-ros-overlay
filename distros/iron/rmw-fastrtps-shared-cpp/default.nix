@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-ros fastrtps-cmake-module ];
 
   meta = {
-    description = ''Code shared on static and dynamic type support of rmw_fastrtps_cpp.'';
+    description = "Code shared on static and dynamic type support of rmw_fastrtps_cpp.";
     license = with lib.licenses; [ asl20 ];
   };
 }

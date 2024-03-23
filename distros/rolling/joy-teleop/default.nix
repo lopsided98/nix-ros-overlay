@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ control-msgs rclpy rosidl-runtime-py sensor-msgs teleop-tools-msgs trajectory-msgs ];
 
   meta = {
-    description = ''A (to be) generic joystick interface to control a robot'';
+    description = "A (to be) generic joystick interface to control a robot";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

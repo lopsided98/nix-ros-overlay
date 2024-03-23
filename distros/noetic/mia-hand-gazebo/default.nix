@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package for simulating Mia Hand in Gazebo, interfacing simulation with ROS
-    Control.'';
+    description = "Package for simulating Mia Hand in Gazebo, interfacing simulation with ROS
+    Control.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

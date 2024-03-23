@@ -20,10 +20,10 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''This package contains a parametric kinematic description of humans. 
+    description = "This package contains a parametric kinematic description of humans. 
         The files in this package are parsed and used by a variety of other 
         components, notably in the context of human-robot interaction.
-        Most users will not interact directly with this package.'';
+        Most users will not interact directly with this package.";
     license = with lib.licenses; [ asl20 ];
   };
 }

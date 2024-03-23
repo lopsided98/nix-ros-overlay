@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''USB Video Class camera driver'';
+    description = "USB Video Class camera driver";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

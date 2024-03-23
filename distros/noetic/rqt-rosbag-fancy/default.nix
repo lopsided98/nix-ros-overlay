@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rqt GUI for rosbag_fancy'';
+    description = "rqt GUI for rosbag_fancy";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Processing grid maps as a sequence of ROS filters.'';
+    description = "Processing grid maps as a sequence of ROS filters.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

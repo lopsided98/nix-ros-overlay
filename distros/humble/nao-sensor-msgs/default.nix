@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Package defining sensor msgs to be received from NAO robot.'';
+    description = "Package defining sensor msgs to be received from NAO robot.";
     license = with lib.licenses; [ asl20 ];
   };
 }

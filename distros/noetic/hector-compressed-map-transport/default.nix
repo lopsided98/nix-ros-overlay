@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''hector_compressed_map_transport provides means for transporting compressed map data through the use of image_transport.'';
+    description = "hector_compressed_map_transport provides means for transporting compressed map data through the use of image_transport.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

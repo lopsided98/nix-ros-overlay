@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Vendor package for concurrent queues from moodycamel'';
+    description = "Vendor package for concurrent queues from moodycamel";
     license = with lib.licenses; [ asl20 ];
   };
 }

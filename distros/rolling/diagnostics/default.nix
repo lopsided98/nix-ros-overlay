@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''diagnostics'';
+    description = "diagnostics";
     license = with lib.licenses; [ bsd3 ];
   };
 }

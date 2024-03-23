@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The ROS packages in this repository were created to provide an improved
+    description = "The ROS packages in this repository were created to provide an improved
     alternative Inverse Kinematics solver to the popular inverse Jacobian
     methods in KDL.  TRAC-IK handles joint-limited chains better than KDL
-    without increasing solve time.'';
+    without increasing solve time.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

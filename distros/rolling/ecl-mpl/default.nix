@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Metaprogramming tools move alot of runtime calculations to be shifted to
-    compile time. This has only very elementary structures at this stage.'';
+    description = "Metaprogramming tools move alot of runtime calculations to be shifted to
+    compile time. This has only very elementary structures at this stage.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

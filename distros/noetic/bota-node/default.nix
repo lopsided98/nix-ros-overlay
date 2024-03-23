@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS node wrapper with some convenience functions using *bota_worker*.'';
+    description = "ROS node wrapper with some convenience functions using *bota_worker*.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

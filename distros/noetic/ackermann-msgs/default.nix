@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS messages for robots using Ackermann steering.'';
+    description = "ROS messages for robots using Ackermann steering.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

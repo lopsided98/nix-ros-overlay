@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''dynamically set the tf trensformation'';
+    description = "dynamically set the tf trensformation";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

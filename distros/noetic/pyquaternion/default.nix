@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''quaternion operations'';
+    description = "quaternion operations";
     license = with lib.licenses; [ mit ];
   };
 }

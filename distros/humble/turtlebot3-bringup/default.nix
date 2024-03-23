@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS 2 launch scripts for starting the TurtleBot3'';
+    description = "ROS 2 launch scripts for starting the TurtleBot3";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-ros ];
 
   meta = {
-    description = ''A WebSocket interface to rosbridge.'';
+    description = "A WebSocket interface to rosbridge.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

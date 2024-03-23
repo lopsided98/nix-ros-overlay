@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ament-cmake-ros ];
 
   meta = {
-    description = ''The rplidar ros package, support rplidar A2/A1 and A3/S1'';
+    description = "The rplidar ros package, support rplidar A2/A1 and A3/S1";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

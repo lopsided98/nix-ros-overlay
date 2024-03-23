@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''pr2_motor_diagnostic_tool'';
+    description = "pr2_motor_diagnostic_tool";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

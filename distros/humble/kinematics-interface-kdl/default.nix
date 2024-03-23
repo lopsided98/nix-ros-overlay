@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];
 
   meta = {
-    description = ''KDL implementation of ros2_control kinematics interface'';
+    description = "KDL implementation of ros2_control kinematics interface";
     license = with lib.licenses; [ asl20 ];
   };
 }

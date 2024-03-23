@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Controllers for Clearpath Robotics platforms'';
+    description = "Controllers for Clearpath Robotics platforms";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

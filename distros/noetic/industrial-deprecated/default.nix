@@ -18,10 +18,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The Industrial deprecated package contains nodes, launch files, etc... that are slated for 
+    description = "The Industrial deprecated package contains nodes, launch files, etc... that are slated for 
   deprecation.  This package is the last place something will end up before being deleted.  
   If you are missing a package/node and find it's contents here, then you should consider 
-  a replacement.'';
+  a replacement.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

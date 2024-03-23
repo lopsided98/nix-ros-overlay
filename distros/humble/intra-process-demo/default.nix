@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Demonstrations of intra process communication.'';
+    description = "Demonstrations of intra process communication.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''<p>
+    description = "<p>
       Kobuki message and service types: custom messages and services for Kobuki packages.
-    </p>'';
+    </p>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

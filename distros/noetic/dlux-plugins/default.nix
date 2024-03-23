@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Implementation of dlux_global_planner plugin interfaces.'';
+    description = "Implementation of dlux_global_planner plugin interfaces.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

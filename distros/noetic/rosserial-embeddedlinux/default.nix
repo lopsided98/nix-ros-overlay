@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rosserial for embedded Linux enviroments'';
+    description = "rosserial for embedded Linux enviroments";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

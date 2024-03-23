@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A fake controller manager plugin for MoveIt.'';
+    description = "A fake controller manager plugin for MoveIt.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

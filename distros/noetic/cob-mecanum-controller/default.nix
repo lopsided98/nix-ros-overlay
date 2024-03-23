@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_mecanum_controller_node provides a lightweight base controller for mecanum drive robots. 
+    description = "The cob_mecanum_controller_node provides a lightweight base controller for mecanum drive robots. 
     The out/input for the wheel command/state are wheel velocities in rad/s for the wheels 
-    [front left, front right, rear left, rear right]'';
+    [front left, front right, rear left, rear right]";
     license = with lib.licenses; [ asl20 ];
   };
 }

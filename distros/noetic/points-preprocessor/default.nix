@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The points_preprocessor package'';
+    description = "The points_preprocessor package";
     license = with lib.licenses; [ asl20 ];
   };
 }

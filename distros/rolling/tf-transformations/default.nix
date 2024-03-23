@@ -17,7 +17,7 @@ buildRosPackage {
   checkInputs = [ ament-flake8 ament-pep257 pythonPackages.pytest ];
 
   meta = {
-    description = ''Reimplementation of the tf/transformations.py library for common Python spatial operations'';
+    description = "Reimplementation of the tf/transformations.py library for common Python spatial operations";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

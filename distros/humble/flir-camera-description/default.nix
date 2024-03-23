@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''FLIR camera Description package'';
+    description = "FLIR camera Description package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,13 +19,13 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The nodelet package is designed to provide a way to run multiple
+    description = "The nodelet package is designed to provide a way to run multiple
     algorithms in the same process with zero copy transport between
     algorithms.
 
     This package provides both the nodelet base class needed for
     implementing a nodelet, as well as the NodeletLoader class used
-    for instantiating nodelets.'';
+    for instantiating nodelets.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

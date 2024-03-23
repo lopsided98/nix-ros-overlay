@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''rospilot'';
+    description = "rospilot";
     license = with lib.licenses; [ asl20 ];
   };
 }

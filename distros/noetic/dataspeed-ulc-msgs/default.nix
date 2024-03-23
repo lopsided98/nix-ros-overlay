@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS messages for interacting with the Universal Lat/Lon Controller (ULC)'';
+    description = "ROS messages for interacting with the Universal Lat/Lon Controller (ULC)";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

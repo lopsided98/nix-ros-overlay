@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Offline RawDataSource from Kitti-360 datasets'';
+    description = "Offline RawDataSource from Kitti-360 datasets";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

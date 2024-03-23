@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''MAVLink message marshaling library.
+    description = "MAVLink message marshaling library.
   This package provides C-headers and C++11 library
   for both 1.0 and 2.0 versions of protocol.
 
-  For pymavlink use separate install via rosdep (python-pymavlink).'';
+  For pymavlink use separate install via rosdep (python-pymavlink).";
     license = with lib.licenses; [ lgpl3Only ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''C++ compatible C source code for ETSI ITS CAMs generated from ASN.1 using asn1c'';
+    description = "C++ compatible C source code for ETSI ITS CAMs generated from ASN.1 using asn1c";
     license = with lib.licenses; [ mit ];
   };
 }

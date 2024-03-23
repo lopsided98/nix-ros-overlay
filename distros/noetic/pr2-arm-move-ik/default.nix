@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Move the pr2 arm using inverse kinematics'';
+    description = "Move the pr2 arm using inverse kinematics";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

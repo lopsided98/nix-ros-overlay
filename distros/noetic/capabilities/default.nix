@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package which implements capabilities, including code to parse capability interface specs, to parse capability provider specs, and implement the capability server.'';
+    description = "Package which implements capabilities, including code to parse capability interface specs, to parse capability provider specs, and implement the capability server.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains the ROS description for qbrobotics® qbmove device.'';
+    description = "This package contains the ROS description for qbrobotics® qbmove device.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

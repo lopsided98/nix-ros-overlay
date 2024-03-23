@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Clearpath sensors URDF descriptions'';
+    description = "Clearpath sensors URDF descriptions";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

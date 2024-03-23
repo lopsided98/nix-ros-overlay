@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Outputs audio to a speaker from a source node.'';
+    description = "Outputs audio to a speaker from a source node.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

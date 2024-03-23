@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Offline RawDataSource from rosbag2 datasets'';
+    description = "Offline RawDataSource from rosbag2 datasets";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

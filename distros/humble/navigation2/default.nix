@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS2 Navigation Stack'';
+    description = "ROS2 Navigation Stack";
     license = with lib.licenses; [ asl20 ];
   };
 }

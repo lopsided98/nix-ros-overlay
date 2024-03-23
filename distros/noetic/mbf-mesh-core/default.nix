@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The mbf_mesh_core package'';
+    description = "The mbf_mesh_core package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''jsk_interactive'';
+    description = "jsk_interactive";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

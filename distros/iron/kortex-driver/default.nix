@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS2 driver package for the Kinova Robot Hardware.'';
+    description = "ROS2 driver package for the Kinova Robot Hardware.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

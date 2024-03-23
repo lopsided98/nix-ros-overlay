@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''URDF Macro for adding an adjustable, fath pivot mount used for cameras and other sensors'';
+    description = "URDF Macro for adding an adjustable, fath pivot mount used for cameras and other sensors";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

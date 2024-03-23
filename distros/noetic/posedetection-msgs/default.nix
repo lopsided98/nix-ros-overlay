@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''posedetection_msgs provides messages and services to facilitate passing pose detection results and features.'';
+    description = "posedetection_msgs provides messages and services to facilitate passing pose detection results and features.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

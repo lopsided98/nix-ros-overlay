@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Messages for calibrating a robot'';
+    description = "Messages for calibrating a robot";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A path planner library and node.'';
+    description = "A path planner library and node.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

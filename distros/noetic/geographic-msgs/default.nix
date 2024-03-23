@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS messages for Geographic Information Systems.'';
+    description = "ROS messages for Geographic Information Systems.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

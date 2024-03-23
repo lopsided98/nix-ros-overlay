@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.numpy rclpy sensor-msgs sensor-msgs-py std-msgs ];
 
   meta = {
-    description = ''Example on how to publish a Pointcloud2 message'';
+    description = "Example on how to publish a Pointcloud2 message";
     license = with lib.licenses; [ asl20 ];
   };
 }

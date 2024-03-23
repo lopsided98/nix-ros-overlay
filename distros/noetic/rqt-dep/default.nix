@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rqt_dep provides a GUI plugin for visualizing the ROS dependency graph.'';
+    description = "rqt_dep provides a GUI plugin for visualizing the ROS dependency graph.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

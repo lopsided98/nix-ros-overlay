@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''The tiago_gazebo package'';
+    description = "The tiago_gazebo package";
     license = with lib.licenses; [ asl20 ];
   };
 }

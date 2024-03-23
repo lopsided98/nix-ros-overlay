@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Jackal's tutorials.'';
+    description = "Jackal's tutorials.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

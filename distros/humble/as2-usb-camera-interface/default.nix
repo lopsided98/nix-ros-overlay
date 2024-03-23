@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''USB camera driver'';
+    description = "USB camera driver";
     license = with lib.licenses; [ bsd3 ];
   };
 }

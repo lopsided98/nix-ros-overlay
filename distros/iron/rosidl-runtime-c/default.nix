@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-ros ];
 
   meta = {
-    description = ''Provides definitions, initialization and finalization functions, and macros for getting and working with rosidl typesupport types in C.'';
+    description = "Provides definitions, initialization and finalization functions, and macros for getting and working with rosidl typesupport types in C.";
     license = with lib.licenses; [ asl20 ];
   };
 }

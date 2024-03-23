@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A template for ROS packages.'';
+    description = "A template for ROS packages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

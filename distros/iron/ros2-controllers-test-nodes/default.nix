@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rclpy std-msgs trajectory-msgs ];
 
   meta = {
-    description = ''Demo nodes for showing and testing functionalities of the ros2_control framework.'';
+    description = "Demo nodes for showing and testing functionalities of the ros2_control framework.";
     license = with lib.licenses; [ asl20 ];
   };
 }

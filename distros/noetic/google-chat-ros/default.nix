@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Use Google Chat API clients via ROS'';
+    description = "Use Google Chat API clients via ROS";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_simulation stack includes packages to work with Care-O-bot within simulation environments, e.g. gazebo.'';
+    description = "The cob_simulation stack includes packages to work with Care-O-bot within simulation environments, e.g. gazebo.";
     license = with lib.licenses; [ asl20 ];
   };
 }

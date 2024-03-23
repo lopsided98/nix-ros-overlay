@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A ROS driver for the SICK TiM and SICK MRS series of lidars.
-    This package is based on the original sick_tim-repository of Martin Günther et al.'';
+    description = "A ROS driver for the SICK TiM and SICK MRS series of lidars.
+    This package is based on the original sick_tim-repository of Martin Günther et al.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

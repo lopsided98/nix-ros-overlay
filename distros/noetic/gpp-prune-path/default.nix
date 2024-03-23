@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The gpp_prune_path plugin will prune the path produced by a global-planner'';
+    description = "The gpp_prune_path plugin will prune the path produced by a global-planner";
     license = with lib.licenses; [ mit ];
   };
 }

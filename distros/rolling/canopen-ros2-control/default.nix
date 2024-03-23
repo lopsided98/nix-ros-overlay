@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ros2_control wrapper for ros2_canopen functionalities'';
+    description = "ros2_control wrapper for ros2_canopen functionalities";
     license = with lib.licenses; [ asl20 ];
   };
 }

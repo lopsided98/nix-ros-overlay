@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS package for Multiple objects detection, tracking and classification from LIDAR scans/point-clouds'';
+    description = "ROS package for Multiple objects detection, tracking and classification from LIDAR scans/point-clouds";
     license = with lib.licenses; [ mit ];
   };
 }

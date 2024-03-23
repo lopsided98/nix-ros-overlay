@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Msg and srv definitions for rc_reason_clients'';
+    description = "Msg and srv definitions for rc_reason_clients";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

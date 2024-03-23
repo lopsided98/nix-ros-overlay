@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides ROS message definitions, representing RAPID data from ABB robot controllers.'';
+    description = "Provides ROS message definitions, representing RAPID data from ABB robot controllers.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

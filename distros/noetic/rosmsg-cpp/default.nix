@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ros-environment ];
 
   meta = {
-    description = ''C++ library for getting full message definition or MD5 sum given message type as string'';
+    description = "C++ library for getting full message definition or MD5 sum given message type as string";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

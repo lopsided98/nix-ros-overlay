@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ros-environment ];
 
   meta = {
-    description = ''Meta-package for lanelet2'';
+    description = "Meta-package for lanelet2";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

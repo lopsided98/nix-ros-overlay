@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''CAN bus tools using Dataspeed hardware'';
+    description = "CAN bus tools using Dataspeed hardware";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

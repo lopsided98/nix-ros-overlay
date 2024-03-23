@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Pinocchio bindings for dynamic-graph'';
+    description = "Pinocchio bindings for dynamic-graph";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

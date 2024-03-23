@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Node for the Color Machine Vision Project, used for fast color blob detection'';
+    description = "Node for the Color Machine Vision Project, used for fast color blob detection";
     license = with lib.licenses; [ "LGPL" ];
   };
 }

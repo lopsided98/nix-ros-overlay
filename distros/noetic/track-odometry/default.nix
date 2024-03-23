@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Odometry slip compensation package'';
+    description = "Odometry slip compensation package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

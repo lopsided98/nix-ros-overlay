@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake git ];
 
   meta = {
-    description = ''A vendor package for JSON schema validator for JSON for Modern C++'';
+    description = "A vendor package for JSON schema validator for JSON for Modern C++";
     license = with lib.licenses; [ asl20 mit ];
   };
 }

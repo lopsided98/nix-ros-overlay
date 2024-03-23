@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''control_msgs contains base messages and actions useful for
+    description = "control_msgs contains base messages and actions useful for
     controlling robots.  It provides representations for controller
-    setpoints and joint and cartesian trajectories.'';
+    setpoints and joint and cartesian trajectories.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

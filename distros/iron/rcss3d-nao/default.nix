@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''An interface to SimSpark that uses interfaces used by a Nao robot'';
+    description = "An interface to SimSpark that uses interfaces used by a Nao robot";
     license = with lib.licenses; [ asl20 ];
   };
 }

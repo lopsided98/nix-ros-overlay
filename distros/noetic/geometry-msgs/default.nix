@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''geometry_msgs provides messages for common geometric primitives
+    description = "geometry_msgs provides messages for common geometric primitives
     such as points, vectors, and poses. These primitives are designed
     to provide a common data type and facilitate interoperability
-    throughout the system.'';
+    throughout the system.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Various Message Types for Mesh Data.'';
+    description = "Various Message Types for Mesh Data.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

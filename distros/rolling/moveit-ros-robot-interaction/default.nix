@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Components of MoveIt that offer interaction via interactive markers'';
+    description = "Components of MoveIt that offer interaction via interactive markers";
     license = with lib.licenses; [ bsd3 ];
   };
 }

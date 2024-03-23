@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The DYNAMIXEL SDK ROS example package'';
+    description = "The DYNAMIXEL SDK ROS example package";
     license = with lib.licenses; [ asl20 ];
   };
 }

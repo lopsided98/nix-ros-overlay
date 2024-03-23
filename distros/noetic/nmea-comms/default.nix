@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The nmea_comms package provides helper nodes for transmitting and receiving
-    the NMEA sentences.'';
+    description = "The nmea_comms package provides helper nodes for transmitting and receiving
+    the NMEA sentences.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains common message type definitions for perception tasks.'';
+    description = "This package contains common message type definitions for perception tasks.";
     license = with lib.licenses; [ asl20 ];
   };
 }

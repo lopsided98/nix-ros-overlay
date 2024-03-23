@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Controllers for the Robotiq gripper.'';
+    description = "Controllers for the Robotiq gripper.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

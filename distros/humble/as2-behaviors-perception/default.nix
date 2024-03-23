@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ArUco detector behavior'';
+    description = "ArUco detector behavior";
     license = with lib.licenses; [ bsd3 ];
   };
 }

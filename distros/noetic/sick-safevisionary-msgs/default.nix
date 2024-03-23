@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides the interface descriptions to communicate with a SICk Safevisionary Sensor over ROS'';
+    description = "Provides the interface descriptions to communicate with a SICk Safevisionary Sensor over ROS";
     license = with lib.licenses; [ asl20 ];
   };
 }

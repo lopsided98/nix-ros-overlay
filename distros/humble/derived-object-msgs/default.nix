@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Abstracted Messages from Perception Modalities'';
+    description = "Abstracted Messages from Perception Modalities";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The diffbot_mbf package'';
+    description = "The diffbot_mbf package";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

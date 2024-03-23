@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Metapacakge that installs all available planners for MoveIt'';
+    description = "Metapacakge that installs all available planners for MoveIt";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

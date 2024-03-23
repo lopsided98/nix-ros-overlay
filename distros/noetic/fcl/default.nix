@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''FCL: the Flexible Collision Library'';
+    description = "FCL: the Flexible Collision Library";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

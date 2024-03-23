@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Filters the robot's body out of laser scans or point clouds.'';
+    description = "Filters the robot's body out of laser scans or point clouds.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

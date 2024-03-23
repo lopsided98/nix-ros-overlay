@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Contains utilities used within the object detection tool chain.'';
+    description = "Contains utilities used within the object detection tool chain.";
     license = with lib.licenses; [ asl20 ];
   };
 }

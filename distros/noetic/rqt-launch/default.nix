@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This rqt plugin ROS package provides easy view of .launch files.
-  User can also start and end node by node that are defined in those files.'';
+    description = "This rqt plugin ROS package provides easy view of .launch files.
+  User can also start and end node by node that are defined in those files.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

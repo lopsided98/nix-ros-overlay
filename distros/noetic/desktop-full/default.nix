@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A metapackage to aggregate several packages.'';
+    description = "A metapackage to aggregate several packages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

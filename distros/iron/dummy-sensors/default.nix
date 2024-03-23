@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''dummy sensor nodes'';
+    description = "dummy sensor nodes";
     license = with lib.licenses; [ asl20 ];
   };
 }

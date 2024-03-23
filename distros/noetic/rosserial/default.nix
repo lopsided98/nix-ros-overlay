@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Metapackage for core of rosserial.'';
+    description = "Metapackage for core of rosserial.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

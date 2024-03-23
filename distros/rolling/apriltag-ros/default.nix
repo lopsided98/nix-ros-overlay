@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''AprilTag detection node'';
+    description = "AprilTag detection node";
     license = with lib.licenses; [ mit ];
   };
 }

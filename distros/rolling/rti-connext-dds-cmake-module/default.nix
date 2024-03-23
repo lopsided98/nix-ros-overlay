@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Helper module to provide access to RTI products like Connext DDS Professional'';
+    description = "Helper module to provide access to RTI products like Connext DDS Professional";
     license = with lib.licenses; [ asl20 ];
   };
 }

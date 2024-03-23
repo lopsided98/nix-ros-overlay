@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Aerostack2 core package which contains launchers for the basic behaviors'';
+    description = "Aerostack2 core package which contains launchers for the basic behaviors";
     license = with lib.licenses; [ bsd3 ];
   };
 }

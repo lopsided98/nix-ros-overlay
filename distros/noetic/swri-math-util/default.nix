@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''swri_math_util'';
+    description = "swri_math_util";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

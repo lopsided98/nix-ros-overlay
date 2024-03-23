@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''The marine_sensor_msgs package, meant to contain messages for common
-  underwater sensors (e.g., conductivity, turbidity, dissolved oxygen)'';
+    description = "The marine_sensor_msgs package, meant to contain messages for common
+  underwater sensors (e.g., conductivity, turbidity, dissolved oxygen)";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Library for controlling and capturing data from the Intel(R) RealSense(TM) D400 devices.'';
+    description = "Library for controlling and capturing data from the Intel(R) RealSense(TM) D400 devices.";
     license = with lib.licenses; [ asl20 ];
   };
 }

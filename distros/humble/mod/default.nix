@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Maps of Dynamics Package'';
+    description = "Maps of Dynamics Package";
     license = with lib.licenses; [ lgpl3Only ];
   };
 }

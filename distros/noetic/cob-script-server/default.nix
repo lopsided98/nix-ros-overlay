@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''The cob_script_server package provides a simple interface to operate Care-O-bot. It can be used via the python API or the actionlib interface.'';
+    description = "The cob_script_server package provides a simple interface to operate Care-O-bot. It can be used via the python API or the actionlib interface.";
     license = with lib.licenses; [ asl20 ];
   };
 }

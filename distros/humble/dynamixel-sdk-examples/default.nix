@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS2 examples using ROBOTIS DYNAMIXEL SDK'';
+    description = "ROS2 examples using ROBOTIS DYNAMIXEL SDK";
     license = with lib.licenses; [ asl20 ];
   };
 }

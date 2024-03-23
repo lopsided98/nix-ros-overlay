@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''SRDF-based plugins for MoveIt Setup Assistant'';
+    description = "SRDF-based plugins for MoveIt Setup Assistant";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

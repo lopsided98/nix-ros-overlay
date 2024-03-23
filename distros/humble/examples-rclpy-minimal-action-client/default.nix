@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ example-interfaces rclpy ];
 
   meta = {
-    description = ''Examples of minimal action clients using rclpy.'';
+    description = "Examples of minimal action clients using rclpy.";
     license = with lib.licenses; [ asl20 ];
   };
 }

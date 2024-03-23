@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-uncrustify ];
 
   meta = {
-    description = ''ament_cmake_uncrustify with support for parsing a config file.'';
+    description = "ament_cmake_uncrustify with support for parsing a config file.";
     license = with lib.licenses; [ asl20 ];
   };
 }

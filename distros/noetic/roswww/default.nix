@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Feathery lightweight web server for ROS, that is based on <a href="http://www.tornadoweb.org/en/stable">Tornado</a> web server module.'';
+    description = "Feathery lightweight web server for ROS, that is based on <a href=\"http://www.tornadoweb.org/en/stable\">Tornado</a> web server module.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

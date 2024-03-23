@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Pure C++ driver library for Kobuki.'';
+    description = "Pure C++ driver library for Kobuki.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

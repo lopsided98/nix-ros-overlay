@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''A library to access URDFs using the DOM model.'';
+    description = "A library to access URDFs using the DOM model.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

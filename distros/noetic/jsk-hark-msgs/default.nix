@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''jsk_hark_msgs'';
+    description = "jsk_hark_msgs";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

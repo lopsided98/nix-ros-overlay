@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Examples for composing multiple nodes in a single process.'';
+    description = "Examples for composing multiple nodes in a single process.";
     license = with lib.licenses; [ asl20 ];
   };
 }

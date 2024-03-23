@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.numpy python3Packages.pyyaml rosidl-parser ];
 
   meta = {
-    description = ''Runtime utilities for working with generated ROS interfaces in Python.'';
+    description = "Runtime utilities for working with generated ROS interfaces in Python.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,12 +19,12 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Timing utilities are very dependent on the system api provided for their use.
+    description = "Timing utilities are very dependent on the system api provided for their use.
 	This package provides a means for handling different timing models. Current support
 	
 	- posix rt : complete.
 	- macosx : posix timers only, missing absolute timers.
-	- win : none.'';
+	- win : none.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

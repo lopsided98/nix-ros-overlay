@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros fastrtps-cmake-module ];
 
   meta = {
-    description = ''FastDDS serialization support implementation for use with C/C++.'';
+    description = "FastDDS serialization support implementation for use with C/C++.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Ecl frontend to a linear matrix package (currently eigen).'';
+    description = "Ecl frontend to a linear matrix package (currently eigen).";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

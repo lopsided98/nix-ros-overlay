@@ -19,13 +19,13 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''TRAC-IK is a faster, significantly more reliable drop-in replacement for
+    description = "TRAC-IK is a faster, significantly more reliable drop-in replacement for
     KDL's pseudoinverse Jacobian solver.
 
     The TRAC-IK library has a very similar API to KDL's IK solver calls,
     except that the user passes a maximum time instead of a maximum number of
     search iterations.  Additionally, TRAC-IK allows for error tolerances to
-    be set independently for each Cartesian dimension (x,y,z,roll,pitch.yaw).'';
+    be set independently for each Cartesian dimension (x,y,z,roll,pitch.yaw).";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

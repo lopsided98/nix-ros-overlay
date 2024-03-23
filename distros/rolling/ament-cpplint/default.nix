@@ -17,8 +17,8 @@ buildRosPackage {
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
 
   meta = {
-    description = ''The ability to check code against the Google style conventions using
-    cpplint and generate xUnit test result files.'';
+    description = "The ability to check code against the Google style conventions using
+    cpplint and generate xUnit test result files.";
     license = with lib.licenses; [ asl20 bsdOriginal ];
   };
 }

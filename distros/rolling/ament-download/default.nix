@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''CMake macros for downloading files with ament'';
+    description = "CMake macros for downloading files with ament";
     license = with lib.licenses; [ asl20 ];
   };
 }

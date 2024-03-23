@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Improved ROS message filters'';
+    description = "Improved ROS message filters";
     license = with lib.licenses; [ asl20 ];
   };
 }

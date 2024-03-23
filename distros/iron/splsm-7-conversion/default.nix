@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.construct splsm-7 ];
 
   meta = {
-    description = ''Converts Standard Platform League Standard Message V7 between ROS msg and UDP raw bytes'';
+    description = "Converts Standard Platform League Standard Message V7 between ROS msg and UDP raw bytes";
     license = with lib.licenses; [ asl20 ];
   };
 }

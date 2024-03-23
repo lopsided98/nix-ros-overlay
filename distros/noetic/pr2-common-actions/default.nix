@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Various actions which help in moving the arms of the PR2
-    or getting data from its tilting laser.'';
+    description = "Various actions which help in moving the arms of the PR2
+    or getting data from its tilting laser.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

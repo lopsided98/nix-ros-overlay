@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains the ROS node to control multiple qbrobotics® devices simultaneously.'';
+    description = "This package contains the ROS node to control multiple qbrobotics® devices simultaneously.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''RTAB-Map's synchronization package.'';
+    description = "RTAB-Map's synchronization package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS wrapper for slime'';
+    description = "ROS wrapper for slime";
     license = with lib.licenses; [ publicDomain ];
   };
 }

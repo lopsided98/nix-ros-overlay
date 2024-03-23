@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Tools to capture and play back images to and from DDS subscriptions and publications.'';
+    description = "Tools to capture and play back images to and from DDS subscriptions and publications.";
     license = with lib.licenses; [ asl20 ];
   };
 }

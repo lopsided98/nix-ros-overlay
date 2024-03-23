@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The metapackage to combine the nodes required to establish and manage a multimaster network.
-    This requires no or minimal configuration. The changes are automatically detected and synchronized.'';
+    description = "The metapackage to combine the nodes required to establish and manage a multimaster network.
+    This requires no or minimal configuration. The changes are automatically detected and synchronized.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

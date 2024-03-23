@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Messages for rclcpp_cascade_lifecycle package'';
+    description = "Messages for rclcpp_cascade_lifecycle package";
     license = with lib.licenses; [ asl20 ];
   };
 }

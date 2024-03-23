@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Provide CMake module to find eProsima FastRTPS.'';
+    description = "Provide CMake module to find eProsima FastRTPS.";
     license = with lib.licenses; [ asl20 ];
   };
 }

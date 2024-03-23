@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''nav_msgs defines the common messages used to interact with the
-    <a href="http://wiki.ros.org/navigation">navigation</a> stack.'';
+    description = "nav_msgs defines the common messages used to interact with the
+    <a href=\"http://wiki.ros.org/navigation\">navigation</a> stack.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A ROS package for Google Dialogflow and launching apps via Dialogflow'';
+    description = "A ROS package for Google Dialogflow and launching apps via Dialogflow";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

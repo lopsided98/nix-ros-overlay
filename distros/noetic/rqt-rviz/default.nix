@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rqt_rviz provides a GUI plugin embedding <a href="http://www.ros.org/wiki/rviz">RViz</a>.
-    Note that this rqt plugin does NOT supersede RViz but depends on it.'';
+    description = "rqt_rviz provides a GUI plugin embedding <a href=\"http://www.ros.org/wiki/rviz\">RViz</a>.
+    Note that this rqt plugin does NOT supersede RViz but depends on it.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''Launch files and scripts needed to bring up the ROS nodes of a TIAGo robot.'';
+    description = "Launch files and scripts needed to bring up the ROS nodes of a TIAGo robot.";
     license = with lib.licenses; [ asl20 ];
   };
 }

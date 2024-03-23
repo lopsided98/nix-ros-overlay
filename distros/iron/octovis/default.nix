@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''octovis is visualization tool for the OctoMap library based on Qt and libQGLViewer. See
-  http://octomap.github.io for details.'';
+    description = "octovis is visualization tool for the OctoMap library based on Qt and libQGLViewer. See
+  http://octomap.github.io for details.";
     license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

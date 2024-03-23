@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Extract geometry value of a vehicle from urdf.'';
+    description = "Extract geometry value of a vehicle from urdf.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

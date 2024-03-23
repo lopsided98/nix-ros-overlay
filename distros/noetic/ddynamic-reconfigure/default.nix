@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The ddynamic_reconfigure package'';
+    description = "The ddynamic_reconfigure package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

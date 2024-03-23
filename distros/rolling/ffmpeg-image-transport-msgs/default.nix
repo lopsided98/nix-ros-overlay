@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''messages for ffmpeg image transport plugin'';
+    description = "messages for ffmpeg image transport plugin";
     license = with lib.licenses; [ "Apache-2" ];
   };
 }

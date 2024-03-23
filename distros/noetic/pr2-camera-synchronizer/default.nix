@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''<p>
+    description = "<p>
     The PR2 is equipped with a texture projector that can be used to
     project a texture onto featureless surfaces, allowing their
     three-dimensional structure to be determined using stereoscopy. The
@@ -31,7 +31,7 @@ buildRosPackage {
 
     <p>
       This package contains the pr2_projector_synchronizer node. Based on its dynamically reconfigurable parameters, this node controls the projector pulsing, and sets up triggering of the WGE100 cameras.
-    </p>'';
+    </p>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

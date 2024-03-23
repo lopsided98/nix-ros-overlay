@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Common msg and srv definitions used by Roboception's ROS2 packages'';
+    description = "Common msg and srv definitions used by Roboception's ROS2 packages";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

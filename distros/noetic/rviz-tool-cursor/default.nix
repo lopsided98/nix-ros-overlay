@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rviz_tool_cursor package'';
+    description = "The rviz_tool_cursor package";
     license = with lib.licenses; [ asl20 ];
   };
 }

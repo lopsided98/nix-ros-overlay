@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The system_fingerprint package'';
+    description = "The system_fingerprint package";
     license = with lib.licenses; [ "BSD-2-clause" ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''multisense_cal_check'';
+    description = "multisense_cal_check";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

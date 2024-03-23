@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''laser_proc'';
+    description = "laser_proc";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''hector_map_tools contains some functions related to accessing information from OccupancyGridMap maps.
-    Currently consists of a single header.'';
+    description = "hector_map_tools contains some functions related to accessing information from OccupancyGridMap maps.
+    Currently consists of a single header.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

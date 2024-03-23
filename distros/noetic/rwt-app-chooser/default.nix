@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The simple web frontend for app_manager'';
+    description = "The simple web frontend for app_manager";
     license = with lib.licenses; [ mit ];
   };
 }

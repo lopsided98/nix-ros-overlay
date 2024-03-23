@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''iXblue parsing library for protocol iXblue stdbin'';
+    description = "iXblue parsing library for protocol iXblue stdbin";
     license = with lib.licenses; [ mit ];
   };
 }

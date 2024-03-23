@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''URDF and meshes describing Polaris vehicles.'';
+    description = "URDF and meshes describing Polaris vehicles.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

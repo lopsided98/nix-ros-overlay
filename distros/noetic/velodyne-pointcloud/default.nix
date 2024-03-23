@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Point cloud conversions for Velodyne 3D LIDARs.'';
+    description = "Point cloud conversions for Velodyne 3D LIDARs.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

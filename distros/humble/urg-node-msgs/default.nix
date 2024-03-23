@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''urg_node_msgs'';
+    description = "urg_node_msgs";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

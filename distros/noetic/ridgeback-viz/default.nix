@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Visualization launchers and helpers for Ridgeback.'';
+    description = "Visualization launchers and helpers for Ridgeback.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

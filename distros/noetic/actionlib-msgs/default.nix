@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''actionlib_msgs defines the common messages to interact with an
+    description = "actionlib_msgs defines the common messages to interact with an
      action server and an action client.  For full documentation of
      the actionlib API see
-     the <a href="http://wiki.ros.org/actionlib">actionlib</a>
-     package.'';
+     the <a href=\"http://wiki.ros.org/actionlib\">actionlib</a>
+     package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

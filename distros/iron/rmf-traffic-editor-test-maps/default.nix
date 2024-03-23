@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rmf-building-map-tools ros2run ];
 
   meta = {
-    description = ''Some test maps for traffic_editor and rmf_building_map_tools.'';
+    description = "Some test maps for traffic_editor and rmf_building_map_tools.";
     license = with lib.licenses; [ asl20 ];
   };
 }

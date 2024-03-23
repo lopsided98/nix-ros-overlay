@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Teleoperation for fetch and freight.'';
+    description = "Teleoperation for fetch and freight.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

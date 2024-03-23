@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROSBag2 SQLite3 storage plugin'';
+    description = "ROSBag2 SQLite3 storage plugin";
     license = with lib.licenses; [ asl20 ];
   };
 }

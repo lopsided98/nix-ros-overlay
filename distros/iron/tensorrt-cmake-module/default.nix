@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Exports a CMake module to find TensorRT.'';
+    description = "Exports a CMake module to find TensorRT.";
     license = with lib.licenses; [ asl20 ];
   };
 }

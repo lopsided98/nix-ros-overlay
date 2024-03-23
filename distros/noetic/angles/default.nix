@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides a set of simple math utilities to work
+    description = "This package provides a set of simple math utilities to work
         with angles. The utilities cover simple things like
         normalizing an angle and conversion between degrees and
         radians. But even if you're trying to calculate things like
@@ -27,7 +27,7 @@ buildRosPackage {
         positions of your robot, but the joint motion is constrained
         by joint limits, this package is what you need. The code in
         this package is stable and well tested. There are no plans for
-        major changes in the near future.'';
+        major changes in the near future.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

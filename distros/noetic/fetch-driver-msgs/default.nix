@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages for the fetch_drivers package'';
+    description = "Messages for the fetch_drivers package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Interface to the Dataspeed Inc. Drive-By-Wire kits'';
+    description = "Interface to the Dataspeed Inc. Drive-By-Wire kits";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

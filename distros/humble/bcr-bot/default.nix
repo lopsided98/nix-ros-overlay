@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''bcr_bot'';
+    description = "bcr_bot";
     license = with lib.licenses; [ "-C-Black-Coffee-Robotics" ];
   };
 }

@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package to parse NMEA strings and publish a very simple GPS message. Does not
-    require or use the GPSD deamon.'';
+    description = "Package to parse NMEA strings and publish a very simple GPS message. Does not
+    require or use the GPSD deamon.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

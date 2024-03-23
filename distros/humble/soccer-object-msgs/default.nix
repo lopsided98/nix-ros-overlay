@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Package providing interfaces for objects in a soccer domain.'';
+    description = "Package providing interfaces for objects in a soccer domain.";
     license = with lib.licenses; [ asl20 ];
   };
 }

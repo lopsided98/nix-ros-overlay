@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''neobotix_usboard package'';
+    description = "neobotix_usboard package";
     license = with lib.licenses; [ mit ];
   };
 }

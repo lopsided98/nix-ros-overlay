@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS driver for iRobot's Create 1 and 2, based on the libcreate C++ library'';
+    description = "ROS driver for iRobot's Create 1 and 2, based on the libcreate C++ library";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

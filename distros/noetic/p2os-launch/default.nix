@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Launch and config files designed for use with the p2os stack.'';
+    description = "Launch and config files designed for use with the p2os stack.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

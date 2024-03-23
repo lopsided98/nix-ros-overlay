@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin genmsg ];
 
   meta = {
-    description = ''RTAB-Map's costmap_2d plugins'';
+    description = "RTAB-Map's costmap_2d plugins";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

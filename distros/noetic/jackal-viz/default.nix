@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Visualization launchers and helpers for Jackal.'';
+    description = "Visualization launchers and helpers for Jackal.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

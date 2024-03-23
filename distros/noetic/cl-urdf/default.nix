@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''cl_urdf'';
+    description = "cl_urdf";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

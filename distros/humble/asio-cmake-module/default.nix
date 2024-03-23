@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A CMake module for using the ASIO network library'';
+    description = "A CMake module for using the ASIO network library";
     license = with lib.licenses; [ asl20 ];
   };
 }

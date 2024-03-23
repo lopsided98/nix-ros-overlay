@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Metapackage of geometry tutorials ROS.'';
+    description = "Metapackage of geometry tutorials ROS.";
     license = with lib.licenses; [ asl20 ];
   };
 }

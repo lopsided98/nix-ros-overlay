@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''PRBT support for Schunk pg70 gripper.'';
+    description = "PRBT support for Schunk pg70 gripper.";
     license = with lib.licenses; [ asl20 ];
   };
 }

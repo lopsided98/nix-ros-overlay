@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''gazebo_video_monitor_msgs defines interfaces for the gazebo_video_monitor_plugins package.'';
+    description = "gazebo_video_monitor_msgs defines interfaces for the gazebo_video_monitor_plugins package.";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

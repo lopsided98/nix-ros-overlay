@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Complete functionality tests for PR2. Contains utilities designed to test and verify devices, mechanicals and sensors.'';
+    description = "Complete functionality tests for PR2. Contains utilities designed to test and verify devices, mechanicals and sensors.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

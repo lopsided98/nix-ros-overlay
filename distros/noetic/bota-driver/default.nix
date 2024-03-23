@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Meta package that contains all essential packages of BOTA driver.'';
+    description = "Meta package that contains all essential packages of BOTA driver.";
     license = with lib.licenses; [ asl20 ];
   };
 }

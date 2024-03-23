@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Visualization tools for MoveIt Task Pipeline'';
+    description = "Visualization tools for MoveIt Task Pipeline";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

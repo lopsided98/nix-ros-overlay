@@ -18,8 +18,8 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-lint python3Packages.pydocstyle ];
 
   meta = {
-    description = ''The ability to check code against the docstring style conventions in
-    PEP 257 and generate xUnit test result files.'';
+    description = "The ability to check code against the docstring style conventions in
+    PEP 257 and generate xUnit test result files.";
     license = with lib.licenses; [ asl20 mit ];
   };
 }

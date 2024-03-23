@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ flexbe-core flexbe-msgs flexbe-testing rclpy ];
 
   meta = {
-    description = ''flexbe_states provides a collection of common generic predefined states.'';
+    description = "flexbe_states provides a collection of common generic predefined states.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

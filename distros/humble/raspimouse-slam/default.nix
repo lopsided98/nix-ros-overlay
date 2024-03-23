@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''SLAM package for Raspberry Pi Mouse'';
+    description = "SLAM package for Raspberry Pi Mouse";
     license = with lib.licenses; [ asl20 ];
   };
 }

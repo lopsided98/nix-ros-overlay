@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Library for interfacing to USB devices'';
+    description = "Library for interfacing to USB devices";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

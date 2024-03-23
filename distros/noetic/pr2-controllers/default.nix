@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Contains the controllers that run in realtime on the PR2 and supporting packages.'';
+    description = "Contains the controllers that run in realtime on the PR2 and supporting packages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

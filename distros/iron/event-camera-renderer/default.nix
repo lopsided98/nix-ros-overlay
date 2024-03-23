@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-auto ament-cmake-ros ];
 
   meta = {
-    description = ''package for rendering event_camera_msgs'';
+    description = "package for rendering event_camera_msgs";
     license = with lib.licenses; [ asl20 ];
   };
 }

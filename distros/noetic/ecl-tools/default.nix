@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Tools and utilities for ecl development.'';
+    description = "Tools and utilities for ecl development.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''RTAB-Map's python package.'';
+    description = "RTAB-Map's python package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

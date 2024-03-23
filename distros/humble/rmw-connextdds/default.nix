@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-ros ];
 
   meta = {
-    description = ''A ROS2 RMW implementation built with RTI Connext DDS Professional.'';
+    description = "A ROS2 RMW implementation built with RTI Connext DDS Professional.";
     license = with lib.licenses; [ asl20 ];
   };
 }

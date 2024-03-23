@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The tesseract_srdf package for parsing Tesseract specific srdf'';
+    description = "The tesseract_srdf package for parsing Tesseract specific srdf";
     license = with lib.licenses; [ asl20 ];
   };
 }

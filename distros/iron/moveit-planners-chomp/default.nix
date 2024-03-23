@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The interface for using CHOMP within MoveIt'';
+    description = "The interface for using CHOMP within MoveIt";
     license = with lib.licenses; [ bsd3 ];
   };
 }

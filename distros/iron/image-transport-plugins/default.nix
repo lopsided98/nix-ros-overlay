@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A set of plugins for publishing and subscribing to sensor_msgs/Image topics
+    description = "A set of plugins for publishing and subscribing to sensor_msgs/Image topics
     in representations other than raw pixel data. For example, for viewing a
     stream of images off-robot, a video codec will give much lower bandwidth
     and latency. For low frame rate tranport of high-definition images, you
-    might prefer sending them as JPEG or PNG-compressed form.'';
+    might prefer sending them as JPEG or PNG-compressed form.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''roscpp_serialization contains the code for serialization as described in
-    <a href="http://www.ros.org/wiki/roscpp/Overview/MessagesSerializationAndAdaptingTypes">MessagesSerializationAndAdaptingTypes</a>.
+    description = "roscpp_serialization contains the code for serialization as described in
+    <a href=\"http://www.ros.org/wiki/roscpp/Overview/MessagesSerializationAndAdaptingTypes\">MessagesSerializationAndAdaptingTypes</a>.
 
-    This package is a component of <a href="http://www.ros.org/wiki/roscpp">roscpp</a>.'';
+    This package is a component of <a href=\"http://www.ros.org/wiki/roscpp\">roscpp</a>.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

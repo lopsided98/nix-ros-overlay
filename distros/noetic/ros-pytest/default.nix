@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The ros_pytest package'';
+    description = "The ros_pytest package";
     license = with lib.licenses; [ mit ];
   };
 }

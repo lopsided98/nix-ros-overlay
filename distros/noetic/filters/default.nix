@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This library provides a standardized interface for processing data as a sequence 
+    description = "This library provides a standardized interface for processing data as a sequence 
     of filters.  This package contains a base class upon which to build specific implementations
-    as well as an interface which dynamically loads filters based on runtime parameters.'';
+    as well as an interface which dynamically loads filters based on runtime parameters.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

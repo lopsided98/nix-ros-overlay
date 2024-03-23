@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Gazebo wrapper for the Universal UR5/10 robot arms.'';
+    description = "Gazebo wrapper for the Universal UR5/10 robot arms.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

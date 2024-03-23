@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Rviz plugins for trajectory_tracker_msgs'';
+    description = "Rviz plugins for trajectory_tracker_msgs";
     license = with lib.licenses; [ bsdOriginal "Creative-Commons" ];
   };
 }

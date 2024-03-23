@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin git ];
 
   meta = {
-    description = ''The ros_mscl package provides a driver for the LORD/Microstrain inertial products.'';
+    description = "The ros_mscl package provides a driver for the LORD/Microstrain inertial products.";
     license = with lib.licenses; [ mit ];
   };
 }

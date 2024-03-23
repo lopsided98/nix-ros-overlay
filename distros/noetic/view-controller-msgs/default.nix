@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages for (camera) view controllers'';
+    description = "Messages for (camera) view controllers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

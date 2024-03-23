@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages used in PR2 hardware testing.'';
+    description = "Messages used in PR2 hardware testing.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rostwitter package'';
+    description = "The rostwitter package";
     license = with lib.licenses; [ "Apache" ];
   };
 }

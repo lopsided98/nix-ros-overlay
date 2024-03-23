@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The move_base_sequence package'';
+    description = "The move_base_sequence package";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

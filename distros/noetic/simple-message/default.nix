@@ -20,10 +20,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''simple_message defines a simple messaging connection and protocol for communicating 
+    description = "simple_message defines a simple messaging connection and protocol for communicating 
 	with an industrial robot controller.  Additional handler and manager classes are 
 	included for handling connection limited systems.  This package is part of the ROS-Industrial 
-	program.'';
+	program.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

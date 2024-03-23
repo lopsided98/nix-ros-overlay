@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides a spline based implementation to local robot navigation on a plane.
+    description = "This package provides a spline based implementation to local robot navigation on a plane.
 
 		This package's ROS wrapper adheres to the
-        BaseLocalPlanner interface specified in the <a href="http://wiki.ros.org/nav_core">nav_core</a> package.'';
+        BaseLocalPlanner interface specified in the <a href=\"http://wiki.ros.org/nav_core\">nav_core</a> package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

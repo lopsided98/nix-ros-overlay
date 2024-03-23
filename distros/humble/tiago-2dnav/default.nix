@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''TIAGo-specific launch files needed to run navigation on a TIAGo robot.'';
+    description = "TIAGo-specific launch files needed to run navigation on a TIAGo robot.";
     license = with lib.licenses; [ asl20 ];
   };
 }

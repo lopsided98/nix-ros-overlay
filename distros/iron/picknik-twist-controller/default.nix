@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Subscribes to twist msg and forwards to hardware'';
+    description = "Subscribes to twist msg and forwards to hardware";
     license = with lib.licenses; [ asl20 ];
   };
 }

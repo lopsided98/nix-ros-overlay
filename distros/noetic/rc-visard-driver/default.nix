@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rc_visard_driver provides data from a Roboception rc_visard 3D sensor on several ROS topics.'';
+    description = "The rc_visard_driver provides data from a Roboception rc_visard 3D sensor on several ROS topics.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

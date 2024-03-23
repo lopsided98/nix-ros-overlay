@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_object_detection_visualizer package visualizes the object detection result.'';
+    description = "The cob_object_detection_visualizer package visualizes the object detection result.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Handler for input from keyboard'';
+    description = "Handler for input from keyboard";
     license = with lib.licenses; [ asl20 ];
   };
 }

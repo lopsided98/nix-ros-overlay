@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''neobotix_usboard package'';
+    description = "neobotix_usboard package";
     license = with lib.licenses; [ mit ];
   };
 }

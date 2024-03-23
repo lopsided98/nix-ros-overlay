@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''A package containing some stereo camera related message definitions.'';
+    description = "A package containing some stereo camera related message definitions.";
     license = with lib.licenses; [ asl20 ];
   };
 }

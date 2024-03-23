@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides simulated tactile sensors for the Schunk Dextrous
+    description = "This package provides simulated tactile sensors for the Schunk Dextrous
      Hand (SDH) which is mounted on the Care-O-bot arm. The node subscribes to
      the Gazebo bumper topics of the SDH. It transforms the Gazebo feedback to
      the &quot;tactile_data&quot; topic to provide the same tactile sensor interface as
@@ -61,7 +61,7 @@ buildRosPackage {
 
      The simulated bumper must obtain the collision data in the link that the
      sensor is attached to. This is achieved by setting the &quot;frameName&quot; property
-     in the gazebo_ros_bumper controller.'';
+     in the gazebo_ros_bumper controller.";
     license = with lib.licenses; [ asl20 ];
   };
 }

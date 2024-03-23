@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Package to communicate Gazebo Simulator with Aerostack2 framework'';
+    description = "Package to communicate Gazebo Simulator with Aerostack2 framework";
     license = with lib.licenses; [ bsd3 ];
   };
 }

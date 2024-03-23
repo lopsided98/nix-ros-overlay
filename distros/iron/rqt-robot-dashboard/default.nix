@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ python3Packages.setuptools ];
 
   meta = {
-    description = ''rqt_robot_dashboard provides an infrastructure for building robot dashboard plugins in rqt.'';
+    description = "rqt_robot_dashboard provides an infrastructure for building robot dashboard plugins in rqt.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

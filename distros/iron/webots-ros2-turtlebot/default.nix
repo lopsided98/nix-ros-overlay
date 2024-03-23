@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ builtin-interfaces controller-manager diff-drive-controller joint-state-broadcaster rclpy robot-state-publisher rviz2 tf2-ros webots-ros2-control webots-ros2-driver ];
 
   meta = {
-    description = ''TurtleBot3 Burger robot ROS2 interface for Webots.'';
+    description = "TurtleBot3 Burger robot ROS2 interface for Webots.";
     license = with lib.licenses; [ asl20 ];
   };
 }

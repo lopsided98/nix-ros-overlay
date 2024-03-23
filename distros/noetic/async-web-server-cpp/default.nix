@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Asynchronous Web/WebSocket Server in C++'';
+    description = "Asynchronous Web/WebSocket Server in C++";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This repository holds the current calibration data for Care-O-bot.'';
+    description = "This repository holds the current calibration data for Care-O-bot.";
     license = with lib.licenses; [ asl20 ];
   };
 }

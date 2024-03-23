@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides some objects and furniture for gazebo simulation.'';
+    description = "This package provides some objects and furniture for gazebo simulation.";
     license = with lib.licenses; [ asl20 ];
   };
 }

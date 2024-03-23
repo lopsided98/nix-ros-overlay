@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Message and service definitions for mqtt_client'';
+    description = "Message and service definitions for mqtt_client";
     license = with lib.licenses; [ mit ];
   };
 }

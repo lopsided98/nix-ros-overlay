@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The tesseract_scene_graph package'';
+    description = "The tesseract_scene_graph package";
     license = with lib.licenses; [ asl20 bsdOriginal ];
   };
 }

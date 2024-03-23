@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''connects to a GPSd server and broadcasts GPS fixes 
-   using the NavSatFix message'';
+    description = "connects to a GPSd server and broadcasts GPS fixes 
+   using the NavSatFix message";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

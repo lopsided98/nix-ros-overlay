@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Filters for the sensor_msgs/PointCloud2 based on the filters and sensor_filters chains'';
+    description = "Filters for the sensor_msgs/PointCloud2 based on the filters and sensor_filters chains";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

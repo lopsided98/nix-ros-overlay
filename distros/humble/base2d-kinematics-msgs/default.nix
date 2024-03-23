@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Interfaces for 2.5D kinematics'';
+    description = "Interfaces for 2.5D kinematics";
     license = with lib.licenses; [ "BSD-3-clause" ];
   };
 }

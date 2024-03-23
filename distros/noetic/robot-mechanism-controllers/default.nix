@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Generic Mechanism Controller Library'';
+    description = "Generic Mechanism Controller Library";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

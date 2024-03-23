@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''The tuw_multi_robot_msgs package contains messages for sending graph, route and sync data over topics.'';
+    description = "The tuw_multi_robot_msgs package contains messages for sending graph, route and sync data over topics.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

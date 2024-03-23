@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Message and service data structures for interacting with Gazebo from ROS2.'';
+    description = "Message and service data structures for interacting with Gazebo from ROS2.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

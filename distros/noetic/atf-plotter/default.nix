@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ATF plotting functionalities for ATF results.'';
+    description = "ATF plotting functionalities for ATF results.";
     license = with lib.licenses; [ asl20 ];
   };
 }

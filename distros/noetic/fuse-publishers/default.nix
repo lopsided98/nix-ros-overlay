@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The fuse_publishers package provides a set of common publisher plugins.'';
+    description = "The fuse_publishers package provides a set of common publisher plugins.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

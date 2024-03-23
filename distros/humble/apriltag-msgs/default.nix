@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''AprilTag message definitions'';
+    description = "AprilTag message definitions";
     license = with lib.licenses; [ mit ];
   };
 }

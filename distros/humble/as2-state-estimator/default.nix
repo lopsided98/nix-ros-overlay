@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Basic state estimator for AeroStack2'';
+    description = "Basic state estimator for AeroStack2";
     license = with lib.licenses; [ "BDS-3-Clause" ];
   };
 }

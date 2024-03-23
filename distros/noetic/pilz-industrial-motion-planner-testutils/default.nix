@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Helper scripts and functionality to test industrial motion generation'';
+    description = "Helper scripts and functionality to test industrial motion generation";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

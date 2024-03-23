@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Simple Kalman Filter in Python'';
+    description = "Simple Kalman Filter in Python";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

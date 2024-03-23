@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''rqt_image_view provides a GUI plugin for displaying images using image_transport.'';
+    description = "rqt_image_view provides a GUI plugin for displaying images using image_transport.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Launch and configuration files for common accessories when working with Create/Roomba platforms.'';
+    description = "Launch and configuration files for common accessories when working with Create/Roomba platforms.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

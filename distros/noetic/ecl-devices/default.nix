@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides an extensible and standardised framework for input-output devices.'';
+    description = "Provides an extensible and standardised framework for input-output devices.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

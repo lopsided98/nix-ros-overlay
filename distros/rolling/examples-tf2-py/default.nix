@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ geometry-msgs launch-ros rclpy sensor-msgs tf2-ros-py ];
 
   meta = {
-    description = ''Has examples of using the tf2 Python API.'';
+    description = "Has examples of using the tf2 Python API.";
     license = with lib.licenses; [ asl20 ];
   };
 }

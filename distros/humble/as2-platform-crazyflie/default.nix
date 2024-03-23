@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''Package to communicate Crazyflie drones with Aerostack2 framework'';
+    description = "Package to communicate Crazyflie drones with Aerostack2 framework";
     license = with lib.licenses; [ bsd3 ];
   };
 }

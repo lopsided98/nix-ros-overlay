@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS interfaces for interacting with Picovoice driver nodes'';
+    description = "ROS interfaces for interacting with Picovoice driver nodes";
     license = with lib.licenses; [ asl20 ];
   };
 }

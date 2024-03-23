@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin mrt-cmake-modules ];
 
   meta = {
-    description = ''Package for sanitizing lanelet maps'';
+    description = "Package for sanitizing lanelet maps";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

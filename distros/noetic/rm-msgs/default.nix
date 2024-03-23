@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rm_msgs package provides all the messages for all kind of robot'';
+    description = "The rm_msgs package provides all the messages for all kind of robot";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''C++ library for interfacing with iRobot's Create 1 and Create 2'';
+    description = "C++ library for interfacing with iRobot's Create 1 and Create 2";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

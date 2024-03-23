@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The lockfree package contains lock-free data structures for use in multithreaded programming.  These
+    description = "The lockfree package contains lock-free data structures for use in multithreaded programming.  These
      kinds of data structures are generally not as easy to use as single-threaded equivalents, and are not
      always faster.  If you don't know you need to use one, try another structure with a lock around it
-     first.'';
+     first.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ flexbe-msgs rclpy std-msgs std-srvs tf2-ros-py ];
 
   meta = {
-    description = ''flexbe_core provides the core components for the FlexBE behavior engine.'';
+    description = "flexbe_core provides the core components for the FlexBE behavior engine.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

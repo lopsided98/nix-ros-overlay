@@ -17,7 +17,7 @@ buildRosPackage {
   propagatedBuildInputs = [ joint-state-publisher python-qt-binding rclpy ];
 
   meta = {
-    description = ''This package contains a GUI tool for setting and publishing joint state values for a given URDF.'';
+    description = "This package contains a GUI tool for setting and publishing joint state values for a given URDF.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

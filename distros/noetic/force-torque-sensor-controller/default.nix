@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Controller to publish state of force-torque sensors'';
+    description = "Controller to publish state of force-torque sensors";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

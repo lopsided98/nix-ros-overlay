@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The raspimouse_description package'';
+    description = "The raspimouse_description package";
     license = with lib.licenses; [ mit ];
   };
 }

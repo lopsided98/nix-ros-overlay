@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package pulls in the Karto mapping library, and provides a ROS
-     wrapper for using it.'';
+    description = "This package pulls in the Karto mapping library, and provides a ROS
+     wrapper for using it.";
     license = with lib.licenses; [ "LGPL" ];
   };
 }

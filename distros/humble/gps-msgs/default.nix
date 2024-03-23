@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''GPS messages for use in GPS drivers'';
+    description = "GPS messages for use in GPS drivers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

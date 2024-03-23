@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Trajectory controllers (joint-based and Cartesian) that forward trajectories
-    directly to a robot controller and let it handle trajectory interpolation and execution.'';
+    description = "Trajectory controllers (joint-based and Cartesian) that forward trajectories
+    directly to a robot controller and let it handle trajectory interpolation and execution.";
     license = with lib.licenses; [ asl20 ];
   };
 }

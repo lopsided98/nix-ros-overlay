@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''CLI tools to manipulate trajectory files as a complement to the evo package'';
+    description = "CLI tools to manipulate trajectory files as a complement to the evo package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

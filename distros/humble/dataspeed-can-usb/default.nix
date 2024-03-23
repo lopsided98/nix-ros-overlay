@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Driver to interface with the Dataspeed Inc. USB CAN Tool'';
+    description = "Driver to interface with the Dataspeed Inc. USB CAN Tool";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

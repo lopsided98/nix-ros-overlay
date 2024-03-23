@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''AprilTag detector library'';
+    description = "AprilTag detector library";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

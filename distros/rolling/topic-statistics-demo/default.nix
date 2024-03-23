@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''C++ demo application for topic statistics feature.'';
+    description = "C++ demo application for topic statistics feature.";
     license = with lib.licenses; [ asl20 ];
   };
 }

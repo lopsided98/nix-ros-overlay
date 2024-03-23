@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Example of an async service client'';
+    description = "Example of an async service client";
     license = with lib.licenses; [ asl20 ];
   };
 }

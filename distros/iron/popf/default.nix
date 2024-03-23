@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The POPF package'';
+    description = "The POPF package";
     license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

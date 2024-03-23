@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Dynamixel-Workbench is dynamixel solution for ROS.
+    description = "Dynamixel-Workbench is dynamixel solution for ROS.
     This metapackage allows you to easily change the ID, baudrate and operating mode of the Dynamixel.
     Furthermore, it supports various controllers based on operating mode and Dynamixel SDK.
-    These controllers are commanded by operators.'';
+    These controllers are commanded by operators.";
     license = with lib.licenses; [ asl20 ];
   };
 }

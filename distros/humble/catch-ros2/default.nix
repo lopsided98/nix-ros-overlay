@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Catch2 testing framework for ROS 2 unit and integration tests.'';
+    description = "Catch2 testing framework for ROS 2 unit and integration tests.";
     license = with lib.licenses; [ asl20 ];
   };
 }

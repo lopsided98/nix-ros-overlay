@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS packages to use Mia Hand with ROS tools and ROS control.'';
+    description = "ROS packages to use Mia Hand with ROS tools and ROS control.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

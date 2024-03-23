@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A collection of tools / accessories for the robot_navigation packages'';
+    description = "A collection of tools / accessories for the robot_navigation packages";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

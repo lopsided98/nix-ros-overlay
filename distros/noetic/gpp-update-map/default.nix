@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The gpp_update_map plugin will update the map before running the global planner'';
+    description = "The gpp_update_map plugin will update the map before running the global planner";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rqt_py_trees provides a GUI plugin for visualizing py_trees behaviour trees based on rqt_tf_tree.'';
+    description = "rqt_py_trees provides a GUI plugin for visualizing py_trees behaviour trees based on rqt_tf_tree.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

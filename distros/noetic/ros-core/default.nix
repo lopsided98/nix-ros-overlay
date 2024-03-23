@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A metapackage to aggregate the packages required to use publish / subscribe, services, launch files, and other core ROS concepts.'';
+    description = "A metapackage to aggregate the packages required to use publish / subscribe, services, launch files, and other core ROS concepts.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

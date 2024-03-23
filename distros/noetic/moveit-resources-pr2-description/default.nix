@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''PR2 Resources used for MoveIt! testing'';
+    description = "PR2 Resources used for MoveIt! testing";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

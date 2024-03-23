@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Aerostack2 Behavior Class'';
+    description = "Aerostack2 Behavior Class";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A package to aggregate the packages required for a minimal installation of Open-RMF'';
+    description = "A package to aggregate the packages required for a minimal installation of Open-RMF";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS Foxglove Bridge'';
+    description = "ROS Foxglove Bridge";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''CLI tool to evaluate the KITTI odometry bechmark metrics to trajectory files'';
+    description = "CLI tool to evaluate the KITTI odometry bechmark metrics to trajectory files";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

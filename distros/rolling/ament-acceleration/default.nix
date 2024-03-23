@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ];
 
   meta = {
-    description = ''CMake macros and utilities to include hardware acceleration into the ROS 2 build system (ament) and its development flows.'';
+    description = "CMake macros and utilities to include hardware acceleration into the ROS 2 build system (ament) and its development flows.";
     license = with lib.licenses; [ asl20 ];
   };
 }

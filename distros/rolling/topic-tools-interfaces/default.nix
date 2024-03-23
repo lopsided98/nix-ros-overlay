@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''topic_tools_interfaces contains messages and services for topic_tools'';
+    description = "topic_tools_interfaces contains messages and services for topic_tools";
     license = with lib.licenses; [ asl20 ];
   };
 }

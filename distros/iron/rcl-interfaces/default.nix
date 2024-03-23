@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''The ROS client library common interfaces.
+    description = "The ROS client library common interfaces.
     This package contains the messages and services which ROS client libraries will use under the hood to
-    communicate higher level concepts such as parameters.'';
+    communicate higher level concepts such as parameters.";
     license = with lib.licenses; [ asl20 ];
   };
 }

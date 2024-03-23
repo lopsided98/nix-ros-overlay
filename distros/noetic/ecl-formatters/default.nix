@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The formatters here simply format various input types to a specified
+    description = "The formatters here simply format various input types to a specified
    text format. They can be used with most streaming types (including both
-   ecl and stl streams).'';
+   ecl and stl streams).";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

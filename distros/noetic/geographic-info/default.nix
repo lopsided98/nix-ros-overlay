@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Geographic information metapackage.
+    description = "Geographic information metapackage.
 
     Not needed for wet packages, use only to resolve dry stack
-    dependencies.'';
+    dependencies.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

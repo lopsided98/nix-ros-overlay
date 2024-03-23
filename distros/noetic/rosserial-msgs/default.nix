@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages for automatic topic configuration using rosserial.'';
+    description = "Messages for automatic topic configuration using rosserial.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

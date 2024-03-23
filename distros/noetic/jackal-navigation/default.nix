@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Launch files and code for autonomous navigation of the Jackal'';
+    description = "Launch files and code for autonomous navigation of the Jackal";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

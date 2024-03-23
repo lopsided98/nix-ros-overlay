@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Implementation of the Approximate Inference Control algorithm (AICO)'';
+    description = "Implementation of the Approximate Inference Control algorithm (AICO)";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

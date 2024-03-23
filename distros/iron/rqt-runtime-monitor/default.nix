@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python diagnostic-msgs python-qt-binding python3Packages.rospkg qt-gui rclpy rqt-gui rqt-gui-py ];
 
   meta = {
-    description = ''rqt_runtime_monitor provides a GUI plugin viewing DiagnosticsArray messages.'';
+    description = "rqt_runtime_monitor provides a GUI plugin viewing DiagnosticsArray messages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

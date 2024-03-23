@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Bringup scripts and configurations for the Nav2 stack'';
+    description = "Bringup scripts and configurations for the Nav2 stack";
     license = with lib.licenses; [ asl20 ];
   };
 }

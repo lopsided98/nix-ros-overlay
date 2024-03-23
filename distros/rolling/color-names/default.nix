@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The color_names package'';
+    description = "The color_names package";
     license = with lib.licenses; [ asl20 ];
   };
 }

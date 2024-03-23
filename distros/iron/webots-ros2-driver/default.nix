@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python python-cmake-module ];
 
   meta = {
-    description = ''Implementation of the Webots - ROS 2 interface'';
+    description = "Implementation of the Webots - ROS 2 interface";
     license = with lib.licenses; [ asl20 ];
   };
 }

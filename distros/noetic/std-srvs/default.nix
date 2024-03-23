@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Common service definitions.'';
+    description = "Common service definitions.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

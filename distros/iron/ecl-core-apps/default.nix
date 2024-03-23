@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''This includes a suite of programs demo'ing various aspects of the
+    description = "This includes a suite of programs demo'ing various aspects of the
      ecl_core. It also includes various benchmarking and utility programs for
-     use primarily with embedded systems.'';
+     use primarily with embedded systems.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Wrapyfi ROS 2 interfaces'';
+    description = "Wrapyfi ROS 2 interfaces";
     license = with lib.licenses; [ mit ];
   };
 }

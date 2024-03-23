@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Command to print aggregated diagnostic contents to the command line'';
+    description = "Command to print aggregated diagnostic contents to the command line";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

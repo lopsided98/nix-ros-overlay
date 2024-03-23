@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''URDF Description package for PhantomX Pincher arm'';
+    description = "URDF Description package for PhantomX Pincher arm";
     license = with lib.licenses; [ bsdOriginal cc-by-nc-sa-40 ];
   };
 }

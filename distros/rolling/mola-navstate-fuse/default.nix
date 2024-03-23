@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''SE(3) pose and twist path data fusion estimator'';
+    description = "SE(3) pose and twist path data fusion estimator";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

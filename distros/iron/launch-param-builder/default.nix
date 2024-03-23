@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python python3Packages.pyyaml rclpy xacro ];
 
   meta = {
-    description = ''Python library for loading parameters in launch files'';
+    description = "Python library for loading parameters in launch files";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

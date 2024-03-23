@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''C++ action tutorial cpp code'';
+    description = "C++ action tutorial cpp code";
     license = with lib.licenses; [ asl20 ];
   };
 }

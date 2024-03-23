@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A controller. Some say it might be graceful.'';
+    description = "A controller. Some say it might be graceful.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

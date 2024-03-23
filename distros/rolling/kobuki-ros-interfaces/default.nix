@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''<p>
+    description = "<p>
       ROS2 message, service and action interfaces for the Kobuki.
-    </p>'';
+    </p>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

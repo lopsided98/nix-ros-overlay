@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ geometry-msgs rclpy ];
 
   meta = {
-    description = ''A text-based interface to send a robot movement commands.'';
+    description = "A text-based interface to send a robot movement commands.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

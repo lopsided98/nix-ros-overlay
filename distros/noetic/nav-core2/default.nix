@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Interfaces for Costmap, LocalPlanner and GlobalPlanner. Replaces nav_core.'';
+    description = "Interfaces for Costmap, LocalPlanner and GlobalPlanner. Replaces nav_core.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

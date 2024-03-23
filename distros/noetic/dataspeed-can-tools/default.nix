@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''CAN bus introspection'';
+    description = "CAN bus introspection";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

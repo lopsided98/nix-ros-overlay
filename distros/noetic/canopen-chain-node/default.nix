@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Base implementation for CANopen chains node with support for management services and diagnostics'';
+    description = "Base implementation for CANopen chains node with support for management services and diagnostics";
     license = with lib.licenses; [ lgpl3Only ];
   };
 }

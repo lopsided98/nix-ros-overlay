@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''RViz plugin for displaying grid map messages.'';
+    description = "RViz plugin for displaying grid map messages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

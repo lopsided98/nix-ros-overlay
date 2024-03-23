@@ -20,13 +20,13 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides an implementation of a 2D costmap that takes in sensor
+    description = "This package provides an implementation of a 2D costmap that takes in sensor
         data from the world, builds a 2D or 3D occupancy grid of the data (depending
         on whether a voxel based implementation is used), and inflates costs in a
         2D costmap based on the occupancy grid and a user specified inflation radius.
         This package also provides support for map_server based initialization of a
         costmap, rolling window based costmaps, and parameter based subscription to
-        and configuration of sensor topics.'';
+        and configuration of sensor topics.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

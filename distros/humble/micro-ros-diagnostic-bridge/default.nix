@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Translates micro-ROS diagnostic messages to vanilla ROS 2 diagnostic messages.'';
+    description = "Translates micro-ROS diagnostic messages to vanilla ROS 2 diagnostic messages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rwt_robot_monitor package'';
+    description = "The rwt_robot_monitor package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A simulation interface for a hardware interface for ros_control, and loads default joint values from SRDF'';
+    description = "A simulation interface for a hardware interface for ros_control, and loads default joint values from SRDF";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

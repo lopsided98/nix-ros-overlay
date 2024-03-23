@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''RealSense Camera package allowing access to Intel T265 Tracking module and SR300 and D400 3D cameras'';
+    description = "RealSense Camera package allowing access to Intel T265 Tracking module and SR300 and D400 3D cameras";
     license = with lib.licenses; [ asl20 ];
   };
 }

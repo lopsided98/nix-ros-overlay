@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''pr2eus'';
+    description = "pr2eus";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

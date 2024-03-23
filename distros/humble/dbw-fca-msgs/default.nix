@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Drive-by-wire messages for the Chrysler Pacifica'';
+    description = "Drive-by-wire messages for the Chrysler Pacifica";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

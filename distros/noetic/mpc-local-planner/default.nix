@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The mpc_local_planner package implements a plugin
+    description = "The mpc_local_planner package implements a plugin
     to the base_local_planner of the 2D navigation stack.
     It provides a generic and versatile model predictive control implementation
-    with minimum-time and quadratic-form receding-horizon configurations.'';
+    with minimum-time and quadratic-form receding-horizon configurations.";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

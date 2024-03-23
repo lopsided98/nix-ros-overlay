@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The mobile_robot_simulator package'';
+    description = "The mobile_robot_simulator package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

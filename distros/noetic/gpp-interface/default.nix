@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The gpp_interface package defines the interfaces for
-  pre and post-planning inside the global_planner_pipeline framework'';
+    description = "The gpp_interface package defines the interfaces for
+  pre and post-planning inside the global_planner_pipeline framework";
     license = with lib.licenses; [ mit ];
   };
 }

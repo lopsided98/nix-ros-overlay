@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Provides real-time manipulator Cartesian and joint servoing.'';
+    description = "Provides real-time manipulator Cartesian and joint servoing.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

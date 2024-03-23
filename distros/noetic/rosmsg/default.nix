@@ -19,12 +19,12 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rosmsg contains two command-line tools: <tt>rosmsg</tt> and
+    description = "rosmsg contains two command-line tools: <tt>rosmsg</tt> and
     <tt>rossrv</tt>. <tt>rosmsg</tt> is a command-line tool for
-    displaying information about <a href="http://wiki.ros.org/msg">ROS Message
+    displaying information about <a href=\"http://wiki.ros.org/msg\">ROS Message
     types</a>. <tt>rossrv</tt> is a command-line tool for displaying
-    information about <a href="http://wiki.ros.org/srv">ROS
-    Service types</a>.'';
+    information about <a href=\"http://wiki.ros.org/srv\">ROS
+    Service types</a>.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Interactive control for generic Twist-based robots using interactive markers'';
+    description = "Interactive control for generic Twist-based robots using interactive markers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

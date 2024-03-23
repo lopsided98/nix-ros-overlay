@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''GenICam/GigE Vision Convenience Layer.
+    description = "GenICam/GigE Vision Convenience Layer.
 
       This package combines the Roboception convenience layer for images with the
       GenICam reference implementation and a GigE Vision transport layer. It is a
@@ -32,7 +32,7 @@ buildRosPackage {
       script, their main purpose is to serve as example on how to use the API for
       reading and setting parameters, streaming and synchronizing images.
 
-      See LICENSE.md for licensing terms of the different parts.'';
+      See LICENSE.md for licensing terms of the different parts.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

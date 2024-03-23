@@ -18,11 +18,11 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''IRIS package for Localization and Mapping (LaMa).
+    description = "IRIS package for Localization and Mapping (LaMa).
         This packages includes the sparse-dense library for grid mapping,
         a 2D localization algorithm based on scan matching, an online SLAM solution
         with a dynamic likelihood field and a 2D RB Particle Filter SLAM solution
-        with multithreading.'';
+        with multithreading.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

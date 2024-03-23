@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Broadcaster to publish joint state'';
+    description = "Broadcaster to publish joint state";
     license = with lib.licenses; [ asl20 ];
   };
 }

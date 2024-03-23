@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The khi_duaro_ikfast_plugin package'';
+    description = "The khi_duaro_ikfast_plugin package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

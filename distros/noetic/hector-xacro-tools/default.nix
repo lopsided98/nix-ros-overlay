@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''hector_xacro_tools'';
+    description = "hector_xacro_tools";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

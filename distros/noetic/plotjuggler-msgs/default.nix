@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Special Messages for PlotJuggler'';
+    description = "Special Messages for PlotJuggler";
     license = with lib.licenses; [ mit ];
   };
 }

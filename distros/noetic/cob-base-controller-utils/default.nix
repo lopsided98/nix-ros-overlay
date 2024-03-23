@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_base_controller_utils package contains common utils for various base_controllers.'';
+    description = "The cob_base_controller_utils package contains common utils for various base_controllers.";
     license = with lib.licenses; [ asl20 ];
   };
 }

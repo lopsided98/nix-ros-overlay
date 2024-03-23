@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The robotont_nuc_description package'';
+    description = "The robotont_nuc_description package";
     license = with lib.licenses; [ asl20 ];
   };
 }

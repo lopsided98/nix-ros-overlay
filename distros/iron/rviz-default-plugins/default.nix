@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Several default plugins for rviz to cover the basic functionality.'';
+    description = "Several default plugins for rviz to cover the basic functionality.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

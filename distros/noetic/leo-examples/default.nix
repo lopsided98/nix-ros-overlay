@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A collection of ROS packages that show an example usage of functionalities on a stock Leo Rover.'';
+    description = "A collection of ROS packages that show an example usage of functionalities on a stock Leo Rover.";
     license = with lib.licenses; [ mit ];
   };
 }

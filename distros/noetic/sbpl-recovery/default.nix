@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A recovery behavior that uses the sbpl lattice planner and the pose
+    description = "A recovery behavior that uses the sbpl lattice planner and the pose
     follower to try to plan in full 3D to get the robot out of really tricky
-    situations.'';
+    situations.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

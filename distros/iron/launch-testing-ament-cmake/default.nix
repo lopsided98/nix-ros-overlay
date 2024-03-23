@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-test launch-testing python-cmake-module ];
 
   meta = {
-    description = ''A package providing cmake functions for running launch tests from the build.'';
+    description = "A package providing cmake functions for running launch tests from the build.";
     license = with lib.licenses; [ asl20 bsdOriginal ];
   };
 }

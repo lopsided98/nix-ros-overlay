@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Alphanumeric Viewer'';
+    description = "Alphanumeric Viewer";
     license = with lib.licenses; [ "BDS-3" ];
   };
 }

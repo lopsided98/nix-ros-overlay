@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The spatio-temporal 3D obstacle costmap package'';
+    description = "The spatio-temporal 3D obstacle costmap package";
     license = with lib.licenses; [ "LGPL-2.1-only" ];
   };
 }

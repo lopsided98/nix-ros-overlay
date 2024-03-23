@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Launchfiles to use Dingo in Gazebo.'';
+    description = "Launchfiles to use Dingo in Gazebo.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

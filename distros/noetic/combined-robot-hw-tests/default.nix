@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Tests for the combined Robot HW class.'';
+    description = "Tests for the combined Robot HW class.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

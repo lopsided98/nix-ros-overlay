@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ flexbe-core flexbe-msgs rclpy ];
 
   meta = {
-    description = ''flexbe_input enables to send data to onboard behavior when required.'';
+    description = "flexbe_input enables to send data to onboard behavior when required.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

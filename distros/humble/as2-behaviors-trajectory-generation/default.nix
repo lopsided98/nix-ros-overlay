@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Aerostack behaviors collection for trajectory generation'';
+    description = "Aerostack behaviors collection for trajectory generation";
     license = with lib.licenses; [ bsd3 ];
   };
 }

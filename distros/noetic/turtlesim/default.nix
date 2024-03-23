@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''turtlesim is a tool made for teaching ROS and ROS packages.'';
+    description = "turtlesim is a tool made for teaching ROS and ROS packages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

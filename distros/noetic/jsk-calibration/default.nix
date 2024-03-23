@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The jsk_calibration package'';
+    description = "The jsk_calibration package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

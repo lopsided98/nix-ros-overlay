@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Boost plugin loader implementation'';
+    description = "Boost plugin loader implementation";
     license = with lib.licenses; [ asl20 ];
   };
 }

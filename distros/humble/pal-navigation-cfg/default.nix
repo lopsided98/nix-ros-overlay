@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''PAL Navigation Configuration metapackage'';
+    description = "PAL Navigation Configuration metapackage";
     license = with lib.licenses; [ asl20 ];
   };
 }

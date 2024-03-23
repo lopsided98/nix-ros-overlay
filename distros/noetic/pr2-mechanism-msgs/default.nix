@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package defines services that are used to communicate with
+    description = "This package defines services that are used to communicate with
      the realtime control loop. It also defines messages
      that represent the state of the realtime controllers, the joints
-     and the actuators.'';
+     and the actuators.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

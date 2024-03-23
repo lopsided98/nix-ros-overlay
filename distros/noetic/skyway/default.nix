@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package for using SkyWay from ROS'';
+    description = "Package for using SkyWay from ROS";
     license = with lib.licenses; [ mit ];
   };
 }

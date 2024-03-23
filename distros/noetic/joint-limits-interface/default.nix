@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Interface for enforcing joint limits.'';
+    description = "Interface for enforcing joint limits.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

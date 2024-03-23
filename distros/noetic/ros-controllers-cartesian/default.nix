@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Metapackage for Cartesian ROS controllers'';
+    description = "Metapackage for Cartesian ROS controllers";
     license = with lib.licenses; [ asl20 ];
   };
 }

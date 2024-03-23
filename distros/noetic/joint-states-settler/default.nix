@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides a node that reports how long a subset of joints has been
+    description = "Provides a node that reports how long a subset of joints has been
      settled. That is, it calculates how long a set of joints has remained
      within a specified threshold. This package is experimental and unstable.
-     Expect its APIs to change.'';
+     Expect its APIs to change.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

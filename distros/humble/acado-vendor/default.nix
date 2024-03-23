@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ament package for ACADO toolkit for MPC code generation'';
+    description = "ament package for ACADO toolkit for MPC code generation";
     license = with lib.licenses; [ asl20 ];
   };
 }

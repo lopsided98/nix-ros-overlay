@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake git ];
 
   meta = {
-    description = ''Eclipse iceoryx inter-process-communication (IPC) middleware Posix Shared Memory Library and middleware daemon (RouDi)'';
+    description = "Eclipse iceoryx inter-process-communication (IPC) middleware Posix Shared Memory Library and middleware daemon (RouDi)";
     license = with lib.licenses; [ asl20 ];
   };
 }

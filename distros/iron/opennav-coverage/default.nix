@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A Task Server for complete coverage planning'';
+    description = "A Task Server for complete coverage planning";
     license = with lib.licenses; [ asl20 ];
   };
 }

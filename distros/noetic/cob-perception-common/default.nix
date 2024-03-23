@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This stack provides utilities commonly needed for a variety of computer vision tasks.'';
+    description = "This stack provides utilities commonly needed for a variety of computer vision tasks.";
     license = with lib.licenses; [ asl20 ];
   };
 }

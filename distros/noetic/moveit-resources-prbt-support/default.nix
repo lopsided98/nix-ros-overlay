@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Mechanical, kinematic and visual description
-  of the Pilz light weight arm PRBT.'';
+    description = "Mechanical, kinematic and visual description
+  of the Pilz light weight arm PRBT.";
     license = with lib.licenses; [ asl20 ];
   };
 }

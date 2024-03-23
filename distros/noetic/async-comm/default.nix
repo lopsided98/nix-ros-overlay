@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''A C++ library for asynchronous serial communication'';
+    description = "A C++ library for asynchronous serial communication";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

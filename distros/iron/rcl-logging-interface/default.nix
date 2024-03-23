@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Interface that rcl_logging backends needs to implement.'';
+    description = "Interface that rcl_logging backends needs to implement.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Interface for using ROS with the <a href="http://gazebosim.org/">Gazebo</a> simulator.'';
+    description = "Interface for using ROS with the <a href=\"http://gazebosim.org/\">Gazebo</a> simulator.";
     license = with lib.licenses; [ "BSD-&-LGPL-&-Apache-2.0" ];
   };
 }

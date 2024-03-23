@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages used for 2D-Navigation.'';
+    description = "Messages used for 2D-Navigation.";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Example launch and configuration files for mrpt_sensors nodes'';
+    description = "Example launch and configuration files for mrpt_sensors nodes";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

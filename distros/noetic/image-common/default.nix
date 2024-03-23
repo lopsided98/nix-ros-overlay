@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Common code for working with images in ROS.'';
+    description = "Common code for working with images in ROS.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

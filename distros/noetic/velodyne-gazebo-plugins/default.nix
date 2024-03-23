@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Gazebo plugin to provide simulated data from Velodyne laser scanners.'';
+    description = "Gazebo plugin to provide simulated data from Velodyne laser scanners.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

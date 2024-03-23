@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''The twist_mux msgs and actions package'';
+    description = "The twist_mux msgs and actions package";
     license = with lib.licenses; [ asl20 ];
   };
 }

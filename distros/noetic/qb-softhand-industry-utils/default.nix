@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains some utility functions for qbrobotics® SoftHand INdustry device.'';
+    description = "This package contains some utility functions for qbrobotics® SoftHand INdustry device.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

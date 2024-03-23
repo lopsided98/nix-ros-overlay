@@ -20,10 +20,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides a C++ interface for camera calibration
+    description = "This package provides a C++ interface for camera calibration
      information.  It provides CameraInfo, and handles SetCameraInfo
      service requests, saving and restoring the camera calibration
-     data.'';
+     data.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

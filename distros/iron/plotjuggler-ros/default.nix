@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''PlotJuggler plugin for ROS'';
+    description = "PlotJuggler plugin for ROS";
     license = with lib.licenses; [ "AGPLv3" ];
   };
 }

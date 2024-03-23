@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Common interfaces for drive-by-wire.'';
+    description = "Common interfaces for drive-by-wire.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

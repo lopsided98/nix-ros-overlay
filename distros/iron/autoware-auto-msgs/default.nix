@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''Interfaces between core Autoware.Auto components'';
+    description = "Interfaces between core Autoware.Auto components";
     license = with lib.licenses; [ asl20 ];
   };
 }

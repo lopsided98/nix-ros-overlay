@@ -18,8 +18,8 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Static reflection for enums (to string, from string, iteration) for modern C++,
-    work with any enum type without any macro or boilerplate code'';
+    description = "Static reflection for enums (to string, from string, iteration) for modern C++,
+    work with any enum type without any macro or boilerplate code";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A ROS driver for the SICK TiM and the SICK MRS 1000 laser scanners.'';
+    description = "A ROS driver for the SICK TiM and the SICK MRS 1000 laser scanners.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

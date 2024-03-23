@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Layered costmap organizer package'';
+    description = "Layered costmap organizer package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

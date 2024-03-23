@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rwt_speech_recognition package'';
+    description = "The rwt_speech_recognition package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

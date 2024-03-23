@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Small lib to transform sensor_msgs with tf. Most notably, PointCloud2'';
+    description = "Small lib to transform sensor_msgs with tf. Most notably, PointCloud2";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -17,7 +17,7 @@ buildRosPackage {
   checkInputs = [ pythonPackages.pytest ];
 
   meta = {
-    description = ''Providing common API for ament linter packages.'';
+    description = "Providing common API for ament linter packages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

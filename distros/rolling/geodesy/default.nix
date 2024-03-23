@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Python and C++ interfaces for manipulating geodetic coordinates.'';
+    description = "Python and C++ interfaces for manipulating geodetic coordinates.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Messages, services and action definitions useful for Human-Robot Interaction'';
+    description = "Messages, services and action definitions useful for Human-Robot Interaction";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

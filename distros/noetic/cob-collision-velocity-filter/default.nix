@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_collision_velocity_filter package is a package for collision avoidance using teleoperation.'';
+    description = "The cob_collision_velocity_filter package is a package for collision avoidance using teleoperation.";
     license = with lib.licenses; [ asl20 ];
   };
 }

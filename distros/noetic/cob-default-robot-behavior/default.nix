@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''The cob_default_robot_behavior package provides helper scripts for standard robot behaviors.'';
+    description = "The cob_default_robot_behavior package provides helper scripts for standard robot behaviors.";
     license = with lib.licenses; [ asl20 ];
   };
 }

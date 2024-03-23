@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''gazebo_ros_control'';
+    description = "gazebo_ros_control";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

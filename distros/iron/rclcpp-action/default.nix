@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Adds action APIs for C++.'';
+    description = "Adds action APIs for C++.";
     license = with lib.licenses; [ asl20 ];
   };
 }

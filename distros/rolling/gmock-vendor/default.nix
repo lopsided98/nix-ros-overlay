@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The package provides GoogleMock.'';
+    description = "The package provides GoogleMock.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''clpe sdk'';
+    description = "clpe sdk";
     license = with lib.licenses; [ asl20 ];
   };
 }

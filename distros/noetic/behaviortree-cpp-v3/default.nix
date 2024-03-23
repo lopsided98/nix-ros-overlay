@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides the Behavior Trees core library.'';
+    description = "This package provides the Behavior Trees core library.";
     license = with lib.licenses; [ mit ];
   };
 }

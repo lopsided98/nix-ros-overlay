@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package implements a sound play module using text2wave and aplay through python.'';
+    description = "This package implements a sound play module using text2wave and aplay through python.";
     license = with lib.licenses; [ asl20 ];
   };
 }

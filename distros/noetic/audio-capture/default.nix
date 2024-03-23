@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Transports audio from a source to a destination. Audio sources can come
+    description = "Transports audio from a source to a destination. Audio sources can come
       from a microphone or file. The destination can play the audio or save it
-      to an mp3 file.'';
+      to an mp3 file.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

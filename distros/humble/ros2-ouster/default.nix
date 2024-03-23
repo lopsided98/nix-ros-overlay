@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS2 Drivers for the Ouster OS-1 Lidar'';
+    description = "ROS2 Drivers for the Ouster OS-1 Lidar";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The volta_navigation package'';
+    description = "The volta_navigation package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

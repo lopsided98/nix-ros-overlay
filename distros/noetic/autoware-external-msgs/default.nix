@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package to contain an install external message dependencies'';
+    description = "Package to contain an install external message dependencies";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''The marine_acoustic_msgs package, including messages for common
-  underwater sensors (DVL, multibeam sonar, imaging sonar)'';
+    description = "The marine_acoustic_msgs package, including messages for common
+  underwater sensors (DVL, multibeam sonar, imaging sonar)";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''hector_imu_tools provides some tools for processing IMU messages'';
+    description = "hector_imu_tools provides some tools for processing IMU messages";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

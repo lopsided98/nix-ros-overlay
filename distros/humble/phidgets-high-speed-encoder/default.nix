@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Driver for the Phidgets high speed encoder devices'';
+    description = "Driver for the Phidgets high speed encoder devices";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

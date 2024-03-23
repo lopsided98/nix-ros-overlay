@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package for Nodelet tutorial.'';
+    description = "Package for Nodelet tutorial.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

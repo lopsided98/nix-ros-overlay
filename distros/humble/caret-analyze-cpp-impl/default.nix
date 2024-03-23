@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake python-cmake-module ];
 
   meta = {
-    description = ''c++ implementation of caret_analyze'';
+    description = "c++ implementation of caret_analyze";
     license = with lib.licenses; [ asl20 ];
   };
 }

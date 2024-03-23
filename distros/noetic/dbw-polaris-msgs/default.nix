@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Drive-by-wire messages for Polaris platforms'';
+    description = "Drive-by-wire messages for Polaris platforms";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

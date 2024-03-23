@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Publishes RTCM ntrip messages from an external mountpoint'';
+    description = "Publishes RTCM ntrip messages from an external mountpoint";
     license = with lib.licenses; [ asl20 ];
   };
 }

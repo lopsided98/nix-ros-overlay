@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ament-cmake-ros fastrtps-cmake-module python3 rosidl-generator-cpp ];
 
   meta = {
-    description = ''Generate the C++ interfaces for eProsima FastRTPS.'';
+    description = "Generate the C++ interfaces for eProsima FastRTPS.";
     license = with lib.licenses; [ asl20 ];
   };
 }

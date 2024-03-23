@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-gmock ament-cmake-gtest ament-cmake-pytest ];
 
   meta = {
-    description = ''The ROS specific CMake bits in the ament buildsystem.'';
+    description = "The ROS specific CMake bits in the ament buildsystem.";
     license = with lib.licenses; [ asl20 ];
   };
 }

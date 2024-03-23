@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A Levenberg-Marquardt solver for EXOTica'';
+    description = "A Levenberg-Marquardt solver for EXOTica";
     license = with lib.licenses; [ mit ];
   };
 }

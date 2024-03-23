@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS msgs for fadecandy LED controllers'';
+    description = "ROS msgs for fadecandy LED controllers";
     license = with lib.licenses; [ asl20 ];
   };
 }

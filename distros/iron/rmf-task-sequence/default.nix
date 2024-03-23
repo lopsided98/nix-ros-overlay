@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Implementation of phase-sequence tasks for the Robotics Middleware Framework'';
+    description = "Implementation of phase-sequence tasks for the Robotics Middleware Framework";
     license = with lib.licenses; [ asl20 ];
   };
 }

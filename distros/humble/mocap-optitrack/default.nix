@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Streaming of OptiTrack mocap data to tf
+    description = "Streaming of OptiTrack mocap data to tf
     <p>
     This package contains a node that translates motion capture data from an
     OptiTrack rig to tf transforms, poses and 2D poses. The node receives
@@ -34,7 +34,7 @@ buildRosPackage {
     Copyright (c) 2013, Clearpath Robotics<br/> 
     Copyright (c) 2010, University of Bonn, Computer Science Institute VI<br/>
     All rights reserved.
-    </p>'';
+    </p>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

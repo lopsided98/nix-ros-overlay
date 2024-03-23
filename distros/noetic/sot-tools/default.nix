@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Miscellanous entities for the stack of tasks'';
+    description = "Miscellanous entities for the stack of tasks";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

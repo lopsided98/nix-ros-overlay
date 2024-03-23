@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This is an interface to the Ocean Server Technology Intelligent Battery and Power System.'';
+    description = "This is an interface to the Ocean Server Technology Intelligent Battery and Power System.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

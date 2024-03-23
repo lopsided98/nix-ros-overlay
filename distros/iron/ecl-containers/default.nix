@@ -20,12 +20,12 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''The containers included here are intended to extend the stl containers.
+    description = "The containers included here are intended to extend the stl containers.
     In all cases, these implementations are designed to implement
     c++ conveniences and safety where speed is not sacrificed.
 
     Also includes techniques for memory debugging of common problems such
-    as buffer overruns.'';
+    as buffer overruns.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

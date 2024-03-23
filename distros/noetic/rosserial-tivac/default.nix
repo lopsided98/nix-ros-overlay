@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rosserial for TivaC Launchpad evaluation boards.'';
+    description = "rosserial for TivaC Launchpad evaluation boards.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

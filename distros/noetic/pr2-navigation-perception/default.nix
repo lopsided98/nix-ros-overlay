@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package holds navigation-specific sensor configuration options and launch files for the PR2.'';
+    description = "This package holds navigation-specific sensor configuration options and launch files for the PR2.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

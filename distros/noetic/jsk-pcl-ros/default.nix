@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS nodelets for pointcloud perception.'';
+    description = "ROS nodelets for pointcloud perception.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

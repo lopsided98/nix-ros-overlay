@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rosidl-parser ];
 
   meta = {
-    description = ''Common Python functions used by rosidl packages.'';
+    description = "Common Python functions used by rosidl packages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

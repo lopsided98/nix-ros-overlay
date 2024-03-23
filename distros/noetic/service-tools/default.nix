@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Service tools'';
+    description = "Service tools";
     license = with lib.licenses; [ asl20 ];
   };
 }

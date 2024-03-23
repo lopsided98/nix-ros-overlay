@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Camera driver for Allied Vision Technologies (AVT) cameras, based on their Vimba SDK.'';
+    description = "Camera driver for Allied Vision Technologies (AVT) cameras, based on their Vimba SDK.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

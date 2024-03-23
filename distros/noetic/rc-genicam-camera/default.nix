@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rc_genicam_camera provides images from a GenICam compatible camera.'';
+    description = "The rc_genicam_camera provides images from a GenICam compatible camera.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

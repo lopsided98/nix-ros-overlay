@@ -17,8 +17,8 @@ buildRosPackage {
   propagatedBuildInputs = [ cppcheck ];
 
   meta = {
-    description = ''The ability to perform static code analysis on C/C++ code using Cppcheck
-    and generate xUnit test result files.'';
+    description = "The ability to perform static code analysis on C/C++ code using Cppcheck
+    and generate xUnit test result files.";
     license = with lib.licenses; [ asl20 ];
   };
 }

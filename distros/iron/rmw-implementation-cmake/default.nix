@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''CMake functions which can discover and enumerate available implementations.'';
+    description = "CMake functions which can discover and enumerate available implementations.";
     license = with lib.licenses; [ asl20 ];
   };
 }

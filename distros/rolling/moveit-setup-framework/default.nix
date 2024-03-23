@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''C++ Interface for defining setup steps for MoveIt Setup Assistant'';
+    description = "C++ Interface for defining setup steps for MoveIt Setup Assistant";
     license = with lib.licenses; [ bsd3 ];
   };
 }

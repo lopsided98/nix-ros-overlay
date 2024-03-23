@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Metapackage for OpenMANIPULATOR-P Simulations'';
+    description = "Metapackage for OpenMANIPULATOR-P Simulations";
     license = with lib.licenses; [ asl20 ];
   };
 }

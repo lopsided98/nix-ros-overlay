@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ArUco marker detection using aruco module from OpenCV libraries.'';
+    description = "ArUco marker detection using aruco module from OpenCV libraries.";
     license = with lib.licenses; [ mit ];
   };
 }

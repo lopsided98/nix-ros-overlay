@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-pyflakes ];
 
   meta = {
-    description = ''The CMake API for ament_pyflakes to check code using pyflakes.'';
+    description = "The CMake API for ament_pyflakes to check code using pyflakes.";
     license = with lib.licenses; [ asl20 ];
   };
 }

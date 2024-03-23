@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.pyqt5 python3Packages.pyqtwebengine ];
 
   meta = {
-    description = ''Javascript library for visualising behaviour trees.'';
+    description = "Javascript library for visualising behaviour trees.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

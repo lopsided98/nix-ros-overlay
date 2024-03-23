@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Package for steering robot configurations including odometry and interfaces.'';
+    description = "Package for steering robot configurations including odometry and interfaces.";
     license = with lib.licenses; [ asl20 ];
   };
 }

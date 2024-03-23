@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Implementation of TF datatypes'';
+    description = "Implementation of TF datatypes";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

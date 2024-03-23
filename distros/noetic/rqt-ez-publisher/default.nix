@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rqt_ez_publisher package'';
+    description = "The rqt_ez_publisher package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

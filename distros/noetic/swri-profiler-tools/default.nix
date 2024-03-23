@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin qt5.qtbase ];
 
   meta = {
-    description = ''Provides tools for viewing data produced by nodes that use the
-    swri_profiler library to output profiling information.'';
+    description = "Provides tools for viewing data produced by nodes that use the
+    swri_profiler library to output profiling information.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

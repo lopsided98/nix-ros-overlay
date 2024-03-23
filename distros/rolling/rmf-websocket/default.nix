@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A package managing the websocket api endpoints in RMF system.'';
+    description = "A package managing the websocket api endpoints in RMF system.";
     license = with lib.licenses; [ asl20 ];
   };
 }

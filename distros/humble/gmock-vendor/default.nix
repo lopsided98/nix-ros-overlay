@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ gtest-vendor ];
 
   meta = {
-    description = ''The package provides GoogleMock.'';
+    description = "The package provides GoogleMock.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

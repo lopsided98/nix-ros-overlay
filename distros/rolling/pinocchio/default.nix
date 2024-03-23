@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ clang cmake ];
 
   meta = {
-    description = ''A fast and flexible implementation of Rigid Body Dynamics algorithms and their analytical derivatives.'';
+    description = "A fast and flexible implementation of Rigid Body Dynamics algorithms and their analytical derivatives.";
     license = with lib.licenses; [ bsd2 ];
   };
 }

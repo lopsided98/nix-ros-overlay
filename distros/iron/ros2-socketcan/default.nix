@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''Simple wrapper around SocketCAN'';
+    description = "Simple wrapper around SocketCAN";
     license = with lib.licenses; [ asl20 ];
   };
 }

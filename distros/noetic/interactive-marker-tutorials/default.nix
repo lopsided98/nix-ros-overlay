@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The interactive_marker_tutorials package'';
+    description = "The interactive_marker_tutorials package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

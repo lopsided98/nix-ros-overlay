@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Examples for using and configuring loggers.'';
+    description = "Examples for using and configuring loggers.";
     license = with lib.licenses; [ asl20 ];
   };
 }

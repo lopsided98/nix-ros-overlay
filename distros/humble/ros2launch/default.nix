@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python launch launch-ros launch-xml launch-yaml ros2cli ros2pkg ];
 
   meta = {
-    description = ''The launch command for ROS 2 command line tools.'';
+    description = "The launch command for ROS 2 command line tools.";
     license = with lib.licenses; [ asl20 ];
   };
 }

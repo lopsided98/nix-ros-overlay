@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The nfc_ros package'';
+    description = "The nfc_ros package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

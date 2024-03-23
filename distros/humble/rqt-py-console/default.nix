@@ -17,7 +17,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python python-qt-binding qt-gui qt-gui-py-common rclpy rqt-gui rqt-gui-py ];
 
   meta = {
-    description = ''rqt_py_console is a Python GUI plugin providing an interactive Python console.'';
+    description = "rqt_py_console is a Python GUI plugin providing an interactive Python console.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

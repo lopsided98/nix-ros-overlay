@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''C++ driver library for Kobuki:
-    Pure C++ driver library for Kobuki. This is for those who do not wish to use ROS on their systems.'';
+    description = "C++ driver library for Kobuki:
+    Pure C++ driver library for Kobuki. This is for those who do not wish to use ROS on their systems.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

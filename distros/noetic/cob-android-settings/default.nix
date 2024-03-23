@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''cob_android_settings'';
+    description = "cob_android_settings";
     license = with lib.licenses; [ asl20 ];
   };
 }

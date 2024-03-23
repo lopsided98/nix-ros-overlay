@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Navigation package for Raspberry Pi Mouse'';
+    description = "Navigation package for Raspberry Pi Mouse";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Interface definitions for controlling rosbag2'';
+    description = "Interface definitions for controlling rosbag2";
     license = with lib.licenses; [ asl20 ];
   };
 }

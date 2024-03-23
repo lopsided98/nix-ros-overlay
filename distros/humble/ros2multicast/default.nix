@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ros2cli ];
 
   meta = {
-    description = ''The multicast command for ROS 2 command line tools.'';
+    description = "The multicast command for ROS 2 command line tools.";
     license = with lib.licenses; [ asl20 ];
   };
 }

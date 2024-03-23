@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Message/Service definitions specifically for the dwb_local_planner'';
+    description = "Message/Service definitions specifically for the dwb_local_planner";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

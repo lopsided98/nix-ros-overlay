@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages used by nodes in the people stack.'';
+    description = "Messages used by nodes in the people stack.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

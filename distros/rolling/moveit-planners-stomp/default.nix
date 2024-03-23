@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''STOMP Motion Planner for MoveIt'';
+    description = "STOMP Motion Planner for MoveIt";
     license = with lib.licenses; [ bsd3 ];
   };
 }

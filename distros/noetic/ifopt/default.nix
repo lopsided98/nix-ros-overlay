@@ -19,12 +19,12 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''An <a href="http://eigen.tuxfamily.org">Eigen-</a>
+    description = "An <a href=\"http://eigen.tuxfamily.org\">Eigen-</a>
     based interface to Nonlinear Programming solver
-    <a href="https://projects.coin-or.org/Ipopt">Ipopt</a>. 
+    <a href=\"https://projects.coin-or.org/Ipopt\">Ipopt</a>. 
     Inuitive and efficient C++ implementation of variables, costs and 
     constraints using Eigen. Easy integration in your projects in catkin
-    or pure cmake.'';
+    or pure cmake.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

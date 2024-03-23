@@ -19,13 +19,13 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The driver_common stack contains classes and tools that are useful
+    description = "The driver_common stack contains classes and tools that are useful
     throughout the driver stacks. It currently contains:
 
     driver_base: A base class for sensors to provide a consistent state machine
     (retries, error handling, etc.) and interface
 
-    timestamp_tools: Classes to help timestamp hardware events'';
+    timestamp_tools: Classes to help timestamp hardware events";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_python";
 
   meta = {
-    description = ''Assets for use with traffic_editor.'';
+    description = "Assets for use with traffic_editor.";
     license = with lib.licenses; [ asl20 ];
   };
 }

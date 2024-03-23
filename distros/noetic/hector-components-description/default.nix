@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''hector_components_description contains URDF xacro macros for robot components, so they are easily attachable to robot models.'';
+    description = "hector_components_description contains URDF xacro macros for robot components, so they are easily attachable to robot models.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

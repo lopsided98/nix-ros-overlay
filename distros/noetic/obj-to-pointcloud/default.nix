@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''OBJ file to pointcloud message converter package'';
+    description = "OBJ file to pointcloud message converter package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

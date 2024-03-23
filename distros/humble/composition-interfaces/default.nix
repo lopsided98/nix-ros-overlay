@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''A package containing message and service definitions for managing composable nodes in a container process.'';
+    description = "A package containing message and service definitions for managing composable nodes in a container process.";
     license = with lib.licenses; [ asl20 ];
   };
 }

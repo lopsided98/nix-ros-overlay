@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS node for rpi_ws281x LED strip driver'';
+    description = "ROS node for rpi_ws281x LED strip driver";
     license = with lib.licenses; [ mit bsdOriginal ];
   };
 }

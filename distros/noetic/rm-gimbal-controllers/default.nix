@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''RoboMaster standard robot Gimbal controller'';
+    description = "RoboMaster standard robot Gimbal controller";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

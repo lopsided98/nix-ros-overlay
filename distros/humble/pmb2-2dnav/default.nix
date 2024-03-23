@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''PMB2-specific launch files needed to run
-    navigation on the PMB2 robot.'';
+    description = "PMB2-specific launch files needed to run
+    navigation on the PMB2 robot.";
     license = with lib.licenses; [ asl20 ];
   };
 }

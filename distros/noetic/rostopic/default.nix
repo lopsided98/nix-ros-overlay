@@ -19,16 +19,16 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rostopic contains the rostopic command-line tool for displaying
+    description = "rostopic contains the rostopic command-line tool for displaying
     debug information about
-    ROS <a href="http://wiki.ros.org/Topics">Topics</a>, including
+    ROS <a href=\"http://wiki.ros.org/Topics\">Topics</a>, including
     publishers, subscribers, publishing rate,
-    and ROS <a href="http://wiki.ros.org/Messages">Messages</a>. It also
+    and ROS <a href=\"http://wiki.ros.org/Messages\">Messages</a>. It also
     contains an experimental Python library for getting information about
     and interacting with topics dynamically. This library is for
     internal-use only as the code API may change, though it does provide
     examples of how to implement dynamic subscription and publication
-    behaviors in ROS.'';
+    behaviors in ROS.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

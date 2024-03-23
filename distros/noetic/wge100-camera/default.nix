@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A ROS node and assorted tools to provide access to the WGE100
+    description = "A ROS node and assorted tools to provide access to the WGE100
     camera used in the forearms and the stereo cameras of the PR2
-    robot.'';
+    robot.";
     license = with lib.licenses; [ "GPL-because-of-list.h-&-other-files-released-under-BSD" ];
   };
 }

@@ -19,12 +19,12 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''roseus_smach
+    description = "roseus_smach
 
      * Euslisp state machine class. it will be moved.
      * Message publisher for visualizing current state by smach_viewer.
      * Simple pickle dump script for debugging state machine.
-     * Execute state machine as a action server.'';
+     * Execute state machine as a action server.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

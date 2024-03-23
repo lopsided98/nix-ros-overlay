@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''effort_controllers'';
+    description = "effort_controllers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

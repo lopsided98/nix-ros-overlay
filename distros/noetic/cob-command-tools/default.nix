@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_command_tools stack provides tools, for operating Care-O-bot.'';
+    description = "The cob_command_tools stack provides tools, for operating Care-O-bot.";
     license = with lib.licenses; [ asl20 ];
   };
 }

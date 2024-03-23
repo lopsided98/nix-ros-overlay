@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Demos for testing/demonstrating the robot_nav_rviz_plugins and color_util packages'';
+    description = "Demos for testing/demonstrating the robot_nav_rviz_plugins and color_util packages";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

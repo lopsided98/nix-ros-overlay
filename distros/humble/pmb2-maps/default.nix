@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''PMB2-specific maps and launch files.'';
+    description = "PMB2-specific maps and launch files.";
     license = with lib.licenses; [ asl20 ];
   };
 }

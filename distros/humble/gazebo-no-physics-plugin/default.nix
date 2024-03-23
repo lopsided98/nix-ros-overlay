@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Disables physics in gazebo'';
+    description = "Disables physics in gazebo";
     license = with lib.licenses; [ asl20 ];
   };
 }

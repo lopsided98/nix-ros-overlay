@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A navigator plugin for BT Navigator for coverage planning'';
+    description = "A navigator plugin for BT Navigator for coverage planning";
     license = with lib.licenses; [ asl20 ];
   };
 }

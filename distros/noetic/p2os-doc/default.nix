@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Contains the Documentation for the p2os driver/componenets'';
+    description = "Contains the Documentation for the p2os driver/componenets";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''An application used to systematically record rosbags'';
+    description = "An application used to systematically record rosbags";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

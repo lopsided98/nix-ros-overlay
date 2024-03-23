@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Demo that uses node composition of lifecycle nodes to achieve fail-over robustness on ROS nodes'';
+    description = "Demo that uses node composition of lifecycle nodes to achieve fail-over robustness on ROS nodes";
     license = with lib.licenses; [ asl20 ];
   };
 }

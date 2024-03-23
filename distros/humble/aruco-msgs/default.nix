@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The aruco_msgs package'';
+    description = "The aruco_msgs package";
     license = with lib.licenses; [ mit ];
   };
 }

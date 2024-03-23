@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''The tuw_object_msgs package. This pkg provides a set of messages used to detect, map and track objects of different types.'';
+    description = "The tuw_object_msgs package. This pkg provides a set of messages used to detect, map and track objects of different types.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

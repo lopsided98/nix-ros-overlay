@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains the hardware interface for qbrobotics® qbhand device.'';
+    description = "This package contains the hardware interface for qbrobotics® qbhand device.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

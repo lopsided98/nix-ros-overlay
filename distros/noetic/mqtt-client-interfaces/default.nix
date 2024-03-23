@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Message and service definitions for mqtt_client'';
+    description = "Message and service definitions for mqtt_client";
     license = with lib.licenses; [ mit ];
   };
 }

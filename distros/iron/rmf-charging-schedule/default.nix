@@ -17,7 +17,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rclpy rmf-fleet-msgs ];
 
   meta = {
-    description = ''Node for a fixed 24-hour rotating charger usage schedule'';
+    description = "Node for a fixed 24-hour rotating charger usage schedule";
     license = with lib.licenses; [ asl20 ];
   };
 }

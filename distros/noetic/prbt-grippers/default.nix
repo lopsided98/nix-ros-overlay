@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The package provides gripper support for the pilz_robots package.'';
+    description = "The package provides gripper support for the pilz_robots package.";
     license = with lib.licenses; [ asl20 ];
   };
 }

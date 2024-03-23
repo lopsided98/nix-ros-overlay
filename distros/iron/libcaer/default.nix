@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ libusb1 ];
 
   meta = {
-    description = ''library for event based sensors'';
+    description = "library for event based sensors";
     license = with lib.licenses; [ bsd2 ];
   };
 }

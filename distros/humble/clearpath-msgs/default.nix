@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Metapackage for Clearapth messages.'';
+    description = "Metapackage for Clearapth messages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Message definitions for aruco_opencv package.'';
+    description = "Message definitions for aruco_opencv package.";
     license = with lib.licenses; [ mit ];
   };
 }

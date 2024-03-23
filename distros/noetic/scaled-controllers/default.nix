@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''scaled controllers metapackage'';
+    description = "scaled controllers metapackage";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Cartographer is a system that provides real-time simultaneous localization
+    description = "Cartographer is a system that provides real-time simultaneous localization
     and mapping (SLAM) in 2D and 3D across multiple platforms and sensor
-    configurations.'';
+    configurations.";
     license = with lib.licenses; [ asl20 ];
   };
 }

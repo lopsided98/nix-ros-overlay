@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Fetch ROS, packages for working with Fetch and Freight'';
+    description = "Fetch ROS, packages for working with Fetch and Freight";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

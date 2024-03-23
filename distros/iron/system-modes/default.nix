@@ -20,11 +20,11 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The system modes concept assumes that a robotics system is built
+    description = "The system modes concept assumes that a robotics system is built
     from components with a lifecycle. It adds a notion of (sub-)systems,
     hiararchically grouping these nodes, as well as a notion of modes
     that determine the configuration of these nodes and (sub-)systems in
-    terms of their parameter values.'';
+    terms of their parameter values.";
     license = with lib.licenses; [ asl20 ];
   };
 }

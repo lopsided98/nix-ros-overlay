@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pf_description package'';
+    description = "The pf_description package";
     license = with lib.licenses; [ asl20 ];
   };
 }

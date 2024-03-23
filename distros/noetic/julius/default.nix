@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''julius: Open-Source Large Vocabulary CSR Engine (http://julius.sourceforge.jp/index.php)'';
+    description = "julius: Open-Source Large Vocabulary CSR Engine (http://julius.sourceforge.jp/index.php)";
     license = with lib.licenses; [ "GPL" ];
   };
 }

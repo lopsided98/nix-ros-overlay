@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS driver package for LSC-C Series'';
+    description = "ROS driver package for LSC-C Series";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

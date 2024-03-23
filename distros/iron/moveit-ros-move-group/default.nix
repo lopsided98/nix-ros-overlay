@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The move_group node for MoveIt'';
+    description = "The move_group node for MoveIt";
     license = with lib.licenses; [ bsd3 ];
   };
 }

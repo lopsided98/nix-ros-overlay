@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The package provides shared test resources for ros2_control stack'';
+    description = "The package provides shared test resources for ros2_control stack";
     license = with lib.licenses; [ asl20 ];
   };
 }

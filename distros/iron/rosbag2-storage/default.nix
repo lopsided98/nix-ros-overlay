@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS2 independent storage format to store serialized ROS2 messages'';
+    description = "ROS2 independent storage format to store serialized ROS2 messages";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Aerostack2 is a ROS2-based framework for the development of autonomous systems for aerial robotics.'';
+    description = "Aerostack2 is a ROS2-based framework for the development of autonomous systems for aerial robotics.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

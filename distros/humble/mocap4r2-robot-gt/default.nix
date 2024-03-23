@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Package that provides Ground Truth tools for robots'';
+    description = "Package that provides Ground Truth tools for robots";
     license = with lib.licenses; [ asl20 ];
   };
 }

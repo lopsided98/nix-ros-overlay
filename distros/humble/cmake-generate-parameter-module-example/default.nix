@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-python ];
 
   meta = {
-    description = ''Example usage of generate_parameter_library for a python module with cmake.'';
+    description = "Example usage of generate_parameter_library for a python module with cmake.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -17,7 +17,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.importlib-metadata ];
 
   meta = {
-    description = ''Commonly needed Python modules, used by Python software developed at OSRF.'';
+    description = "Commonly needed Python modules, used by Python software developed at OSRF.";
     license = with lib.licenses; [ asl20 ];
   };
 }

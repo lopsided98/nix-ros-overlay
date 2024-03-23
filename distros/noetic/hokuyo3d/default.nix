@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS driver node for HOKUYO 3D LIDARs'';
+    description = "ROS driver node for HOKUYO 3D LIDARs";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

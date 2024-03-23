@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''GUI for MOLA'';
+    description = "GUI for MOLA";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

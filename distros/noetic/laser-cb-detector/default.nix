@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Extracts checkerboard corners from a dense laser snapshot.
-     This package is experimental and unstable. Expect its APIs to change.'';
+    description = "Extracts checkerboard corners from a dense laser snapshot.
+     This package is experimental and unstable. Expect its APIs to change.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

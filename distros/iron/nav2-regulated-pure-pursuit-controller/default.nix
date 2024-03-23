@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Regulated Pure Pursuit Controller'';
+    description = "Regulated Pure Pursuit Controller";
     license = with lib.licenses; [ asl20 ];
   };
 }

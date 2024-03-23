@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake git ];
 
   meta = {
-    description = ''This package provides Google Benchmark.'';
+    description = "This package provides Google Benchmark.";
     license = with lib.licenses; [ asl20 ];
   };
 }

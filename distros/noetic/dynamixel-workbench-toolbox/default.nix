@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package is composed of 'dynamixel_item', 'dynamixel_tool', 'dynamixel_driver' and 'dynamixel_workbench' class.
+    description = "This package is composed of 'dynamixel_item', 'dynamixel_tool', 'dynamixel_driver' and 'dynamixel_workbench' class.
     The 'dynamixel_item' is saved as control table item and information of Dynamixels.
     The 'dynamixel_tool' class loads its by model number of Dynamixels.
     The 'dynamixel_driver' class includes wraped function used in DYNAMIXEL SDK.
-    The 'dynamixel_workbench' class make simple to use Dynamixels'';
+    The 'dynamixel_workbench' class make simple to use Dynamixels";
     license = with lib.licenses; [ asl20 ];
   };
 }

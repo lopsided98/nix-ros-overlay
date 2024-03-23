@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cmd_vel_smoother package'';
+    description = "The cmd_vel_smoother package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

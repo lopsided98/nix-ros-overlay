@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''RTAB-Map's example launch files.'';
+    description = "RTAB-Map's example launch files.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

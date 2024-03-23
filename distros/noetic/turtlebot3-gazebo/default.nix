@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Gazebo simulation package for the TurtleBot3'';
+    description = "Gazebo simulation package for the TurtleBot3";
     license = with lib.licenses; [ asl20 ];
   };
 }

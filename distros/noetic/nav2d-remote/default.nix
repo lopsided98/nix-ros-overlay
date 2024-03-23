@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package is used to manually control a robot that uses the operator and
+    description = "This package is used to manually control a robot that uses the operator and
     navigator node from navigation_2d. Currently there is one node to control one
     robot with a joystick and one to control multiple robots in simulation.
-    It can send commands directly to the operator or start and stop navigator actions.'';
+    It can send commands directly to the operator or start and stop navigator actions.";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

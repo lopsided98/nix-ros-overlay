@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Metapackage of software for simulating Leo Rover'';
+    description = "Metapackage of software for simulating Leo Rover";
     license = with lib.licenses; [ mit ];
   };
 }

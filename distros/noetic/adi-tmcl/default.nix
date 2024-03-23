@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The adi_tmcl ROS package'';
+    description = "The adi_tmcl ROS package";
     license = with lib.licenses; [ mit ];
   };
 }

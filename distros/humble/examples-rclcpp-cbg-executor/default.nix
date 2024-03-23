@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Example for multiple Executor instances in one process, using the callback-group-level interface of the Executor class.'';
+    description = "Example for multiple Executor instances in one process, using the callback-group-level interface of the Executor class.";
     license = with lib.licenses; [ asl20 ];
   };
 }

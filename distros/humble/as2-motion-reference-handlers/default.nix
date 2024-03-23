@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''Motion handlers to ease the control of the UAVs inside the Aerostack2 framework'';
+    description = "Motion handlers to ease the control of the UAVs inside the Aerostack2 framework";
     license = with lib.licenses; [ bsd3 ];
   };
 }

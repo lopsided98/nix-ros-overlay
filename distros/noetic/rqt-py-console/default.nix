@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rqt_py_console is a Python GUI plugin providing an interactive Python console.'';
+    description = "rqt_py_console is a Python GUI plugin providing an interactive Python console.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

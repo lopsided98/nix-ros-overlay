@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The KVH GEO FOG 3D rviz plugin package'';
+    description = "The KVH GEO FOG 3D rviz plugin package";
     license = with lib.licenses; [ asl20 ];
   };
 }

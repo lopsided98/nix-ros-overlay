@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''gtsam'';
+    description = "gtsam";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

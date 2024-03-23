@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Fail over ROS messages (raft RPCs)'';
+    description = "Fail over ROS messages (raft RPCs)";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS <a href="http://ros.org/wiki/Master">Master</a> implementation.'';
+    description = "ROS <a href=\"http://ros.org/wiki/Master\">Master</a> implementation.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

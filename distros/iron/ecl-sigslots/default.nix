@@ -20,11 +20,11 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Provides a signal/slot mechanism (in the same vein as qt sigslots,
+    description = "Provides a signal/slot mechanism (in the same vein as qt sigslots,
      boost::signals etc for intra-process communication. These include
      some improvements - they do not need a preprocessor, are fully type safe,
      allow for simple connections via a posix style string identifier
-     and are multithread-safe.'';
+     and are multithread-safe.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

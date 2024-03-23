@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Examples of minimal nodes which have timers'';
+    description = "Examples of minimal nodes which have timers";
     license = with lib.licenses; [ asl20 ];
   };
 }

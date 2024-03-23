@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ackermann-msgs builtin-interfaces python3Packages.numpy python3Packages.opencv4 rclpy webots-ros2-driver ];
 
   meta = {
-    description = ''Tesla ROS2 interface for Webots.'';
+    description = "Tesla ROS2 interface for Webots.";
     license = with lib.licenses; [ asl20 ];
   };
 }

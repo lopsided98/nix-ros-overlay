@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages for Clearpath Platforms.'';
+    description = "Messages for Clearpath Platforms.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

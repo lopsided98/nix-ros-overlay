@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Python stub generator from genmsg specs'';
+    description = "Python stub generator from genmsg specs";
     license = with lib.licenses; [ asl20 ];
   };
 }

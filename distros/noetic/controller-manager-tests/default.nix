@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Tests for the controller manager.'';
+    description = "Tests for the controller manager.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

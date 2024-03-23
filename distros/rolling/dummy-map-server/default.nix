@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''dummy map server node'';
+    description = "dummy map server node";
     license = with lib.licenses; [ asl20 ];
   };
 }

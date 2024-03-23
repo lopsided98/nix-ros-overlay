@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake pkg-config qt5.qtbase ];
 
   meta = {
-    description = ''mapviz'';
+    description = "mapviz";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Messages, services and action files for the AS2 stack'';
+    description = "Messages, services and action files for the AS2 stack";
     license = with lib.licenses; [ bsd3 ];
   };
 }

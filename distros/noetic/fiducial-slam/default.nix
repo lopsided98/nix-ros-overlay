@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS node to build a 3D map of fiducials and estimate robot pose from fiducial transforms'';
+    description = "ROS node to build a 3D map of fiducials and estimate robot pose from fiducial transforms";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Library and Utilities for working with ifm pmd-based 3D ToF Cameras'';
+    description = "Library and Utilities for working with ifm pmd-based 3D ToF Cameras";
     license = with lib.licenses; [ asl20 ];
   };
 }

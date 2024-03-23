@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides a cmake config for the default version of Gazebo for the ROS distribution.'';
+    description = "Provides a cmake config for the default version of Gazebo for the ROS distribution.";
     license = with lib.licenses; [ asl20 ];
   };
 }

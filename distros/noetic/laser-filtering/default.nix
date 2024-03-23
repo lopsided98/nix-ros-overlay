@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS Libraries for filtering specific kinds of laser scans'';
+    description = "ROS Libraries for filtering specific kinds of laser scans";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

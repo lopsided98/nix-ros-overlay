@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This is a set of tools for recording from and playing back to ROS
+    description = "This is a set of tools for recording from and playing back to ROS
     topics.  It is intended to be high performance and avoids
-    deserialization and reserialization of the messages.'';
+    deserialization and reserialization of the messages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains messages for defining shapes, such as simple solid
-    object primitives (cube, sphere, etc), planes, and meshes.'';
+    description = "This package contains messages for defining shapes, such as simple solid
+    object primitives (cube, sphere, etc), planes, and meshes.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

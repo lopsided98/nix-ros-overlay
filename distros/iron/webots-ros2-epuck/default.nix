@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ builtin-interfaces controller-manager diff-drive-controller geometry-msgs joint-state-broadcaster nav-msgs rclpy robot-state-publisher rviz2 sensor-msgs std-msgs tf2-ros webots-ros2-control webots-ros2-driver webots-ros2-msgs ];
 
   meta = {
-    description = ''E-puck2 driver for Webots simulated robot'';
+    description = "E-puck2 driver for Webots simulated robot";
     license = with lib.licenses; [ asl20 ];
   };
 }

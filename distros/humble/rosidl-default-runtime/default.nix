@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A configuration package defining the runtime for the ROS interfaces.'';
+    description = "A configuration package defining the runtime for the ROS interfaces.";
     license = with lib.licenses; [ asl20 ];
   };
 }

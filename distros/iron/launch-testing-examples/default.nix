@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ demo-nodes-cpp launch launch-ros launch-testing launch-testing-ros pythonPackages.pytest rcl-interfaces rclpy ros2bag rosbag2-transport std-msgs ];
 
   meta = {
-    description = ''Examples of simple launch tests'';
+    description = "Examples of simple launch tests";
     license = with lib.licenses; [ asl20 ];
   };
 }

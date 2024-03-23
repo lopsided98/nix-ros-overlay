@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Fiducial recognition. Implementation of different 2D tags like PI-tag from Bergamasco et al. for recognition with a single 2D camera.'';
+    description = "Fiducial recognition. Implementation of different 2D tags like PI-tag from Bergamasco et al. for recognition with a single 2D camera.";
     license = with lib.licenses; [ "LGPL" ];
   };
 }

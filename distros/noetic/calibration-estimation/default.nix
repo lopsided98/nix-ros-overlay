@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Runs an optimization to estimate the a robot's kinematic parameters. This package is a
-    generic rewrite of pr2_calibration_estimation.'';
+    description = "Runs an optimization to estimate the a robot's kinematic parameters. This package is a
+    generic rewrite of pr2_calibration_estimation.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

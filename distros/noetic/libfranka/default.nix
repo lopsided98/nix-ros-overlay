@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''libfranka is a C++ library for Franka Emika research robots'';
+    description = "libfranka is a C++ library for Franka Emika research robots";
     license = with lib.licenses; [ asl20 ];
   };
 }

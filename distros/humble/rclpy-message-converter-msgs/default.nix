@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Messages for rclpy_message_converter'';
+    description = "Messages for rclpy_message_converter";
     license = with lib.licenses; [ asl20 ];
   };
 }

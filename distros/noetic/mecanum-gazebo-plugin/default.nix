@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Plugin which uses directional friction to simulate mecanum wheels.'';
+    description = "Plugin which uses directional friction to simulate mecanum wheels.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

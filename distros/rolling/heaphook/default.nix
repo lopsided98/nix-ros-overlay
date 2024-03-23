@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Replace all the dynamic heap allocation functions by LD_PRELOAD'';
+    description = "Replace all the dynamic heap allocation functions by LD_PRELOAD";
     license = with lib.licenses; [ asl20 ];
   };
 }

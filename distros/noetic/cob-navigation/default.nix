@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_navigation stack provides different navigation packages for <a href="http://ros.org/wiki/care-o-bot">Care-O-bot</a>.'';
+    description = "The cob_navigation stack provides different navigation packages for <a href=\"http://ros.org/wiki/care-o-bot\">Care-O-bot</a>.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Message, service and action definitions for environment perception.'';
+    description = "Message, service and action definitions for environment perception.";
     license = with lib.licenses; [ asl20 ];
   };
 }

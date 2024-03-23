@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-python ament-cmake-ros python3 ];
 
   meta = {
-    description = ''Generate hashes and descriptions of ROS 2 interface types, per REP-2011.'';
+    description = "Generate hashes and descriptions of ROS 2 interface types, per REP-2011.";
     license = with lib.licenses; [ asl20 ];
   };
 }

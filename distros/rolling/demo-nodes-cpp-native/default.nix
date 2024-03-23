@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''C++ nodes which access the native handles of the rmw implementation.'';
+    description = "C++ nodes which access the native handles of the rmw implementation.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ geometry-msgs rclpy sensor-msgs std-msgs tf2-msgs tf2-py ];
 
   meta = {
-    description = ''This package contains the ROS Python bindings for the tf2 library'';
+    description = "This package contains the ROS Python bindings for the tf2 library";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A ROS camera driver that uses gstreamer to connect to
-    devices such as webcams.'';
+    description = "A ROS camera driver that uses gstreamer to connect to
+    devices such as webcams.";
     license = with lib.licenses; [ "Apache-2.0-License" ];
   };
 }

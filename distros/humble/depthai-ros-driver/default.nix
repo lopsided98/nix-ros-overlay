@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Depthai ROS Monolithic node.'';
+    description = "Depthai ROS Monolithic node.";
     license = with lib.licenses; [ mit ];
   };
 }

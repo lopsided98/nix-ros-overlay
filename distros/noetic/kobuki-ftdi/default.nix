@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Utilities for flashing and enabling Kobuki's USB connection.
+    description = "Utilities for flashing and enabling Kobuki's USB connection.
 	    This package contains tools for flashing the Kobuki's FTDI chip (usually done at the factory).
 	    The special firmware for the FTDI chip (USB to serial converter) enables it to appear as
-	    /dev/kobuki on the user's PC.'';
+	    /dev/kobuki on the user's PC.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

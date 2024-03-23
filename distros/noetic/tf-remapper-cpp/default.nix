@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''More efficient version of tf/tf_remap able to handle TFs at kHz with tens of subscribers.'';
+    description = "More efficient version of tf/tf_remap able to handle TFs at kHz with tens of subscribers.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

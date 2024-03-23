@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''HTTP Streaming of ROS Image Topics in Multiple Formats'';
+    description = "HTTP Streaming of ROS Image Topics in Multiple Formats";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

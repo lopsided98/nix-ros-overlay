@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''fuse plugins that implement various kinematic and sensor models'';
+    description = "fuse plugins that implement various kinematic and sensor models";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Render large point clouds in rviz'';
+    description = "Render large point clouds in rviz";
     license = with lib.licenses; [ asl20 ];
   };
 }

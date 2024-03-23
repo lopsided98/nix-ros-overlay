@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Track the output of the leg_detector to indicate the velocity of person.'';
+    description = "Track the output of the leg_detector to indicate the velocity of person.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

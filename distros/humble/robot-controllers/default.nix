@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Some basic robot controllers for use with robot_controllers_interface.'';
+    description = "Some basic robot controllers for use with robot_controllers_interface.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

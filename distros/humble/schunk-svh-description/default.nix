@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Kinematic and visual descriptions of the Schunk SVH'';
+    description = "Kinematic and visual descriptions of the Schunk SVH";
     license = with lib.licenses; [ "GPL-3.0-or-later" ];
   };
 }

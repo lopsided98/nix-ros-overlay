@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The lms1xx package contains a basic ROS 2 driver for the SICK LMS1xx line of LIDARs.'';
+    description = "The lms1xx package contains a basic ROS 2 driver for the SICK LMS1xx line of LIDARs.";
     license = with lib.licenses; [ "LGPL" ];
   };
 }

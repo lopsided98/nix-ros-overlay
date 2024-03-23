@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Bindings between Numpy and Eigen using Boost.Python'';
+    description = "Bindings between Numpy and Eigen using Boost.Python";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

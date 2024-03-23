@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS 2 Gazebo-classic plugins for TeleportIngestors, TeleportDispensers and Readonly Objects'';
+    description = "ROS 2 Gazebo-classic plugins for TeleportIngestors, TeleportDispensers and Readonly Objects";
     license = with lib.licenses; [ asl20 ];
   };
 }

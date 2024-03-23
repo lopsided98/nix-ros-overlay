@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''hector_trajectory_server keeps track of tf trajectories extracted from tf data and makes this data accessible via a service and topic.'';
+    description = "hector_trajectory_server keeps track of tf trajectories extracted from tf data and makes this data accessible via a service and topic.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

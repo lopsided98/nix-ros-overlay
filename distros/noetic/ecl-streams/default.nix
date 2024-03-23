@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''These are lightweight text streaming classes that connect to standardised
-     ecl type devices.'';
+    description = "These are lightweight text streaming classes that connect to standardised
+     ecl type devices.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

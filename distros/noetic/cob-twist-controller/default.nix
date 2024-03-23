@@ -19,12 +19,12 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''The main purpose of the cob_twist_controller is to convert target twists into joint velocities. 
+    description = "The main purpose of the cob_twist_controller is to convert target twists into joint velocities. 
   Therefore it makes use of several implemented inverse kinematics approaches at the first order differential level. 
   The inverse differential kinematics solver considers kinematic chain extensions, singularity robustness, 
   redundancy resolution and priority-based methods.
   To avoid hardware destruction there is a limiter interface active as well. 
-  Via parameter server users can dynamically configure the solving strategy.'';
+  Via parameter server users can dynamically configure the solving strategy.";
     license = with lib.licenses; [ asl20 ];
   };
 }

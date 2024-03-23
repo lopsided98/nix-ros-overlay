@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A package to aggregate the packages required to use publish / subscribe, services, generate messages and other core ROS concepts.'';
+    description = "A package to aggregate the packages required to use publish / subscribe, services, generate messages and other core ROS concepts.";
     license = with lib.licenses; [ asl20 ];
   };
 }

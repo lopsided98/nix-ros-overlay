@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-gtest ];
 
   meta = {
-    description = ''The auto-magic functions for ease to use of the ament buildsystem in CMake.'';
+    description = "The auto-magic functions for ease to use of the ament buildsystem in CMake.";
     license = with lib.licenses; [ asl20 ];
   };
 }

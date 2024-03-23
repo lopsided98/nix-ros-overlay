@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The clearpath_mission_manager_msgs package'';
+    description = "The clearpath_mission_manager_msgs package";
     license = with lib.licenses; [ "Clearpath-Proprietary" ];
   };
 }

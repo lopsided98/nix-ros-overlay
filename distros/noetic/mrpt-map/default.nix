@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The mrpt_map is able to publish a mrpt map as ros occupancy grid like the map_server'';
+    description = "The mrpt_map is able to publish a mrpt map as ros occupancy grid like the map_server";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

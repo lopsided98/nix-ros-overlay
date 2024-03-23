@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-auto ];
 
   meta = {
-    description = ''The package Apex.OS Test Tools contains test helpers'';
+    description = "The package Apex.OS Test Tools contains test helpers";
     license = with lib.licenses; [ asl20 ];
   };
 }

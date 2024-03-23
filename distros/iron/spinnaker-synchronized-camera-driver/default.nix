@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS2 driver for synchronized flir cameras using the Spinnaker SDK'';
+    description = "ROS2 driver for synchronized flir cameras using the Spinnaker SDK";
     license = with lib.licenses; [ "Apache-2" ];
   };
 }

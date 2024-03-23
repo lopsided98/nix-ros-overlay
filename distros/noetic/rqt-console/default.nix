@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''rqt_console provides a GUI plugin for displaying and filtering ROS messages.'';
+    description = "rqt_console provides a GUI plugin for displaying and filtering ROS messages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

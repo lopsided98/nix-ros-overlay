@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''message to control end-effector pose, robot sitiffness and velocity'';
+    description = "message to control end-effector pose, robot sitiffness and velocity";
     license = with lib.licenses; [ bsd3 ];
   };
 }

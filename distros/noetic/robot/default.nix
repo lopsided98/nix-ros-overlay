@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A metapackage which extends ros_base and includes ROS libaries for any robot hardware. It may not contain any GUI dependencies.'';
+    description = "A metapackage which extends ros_base and includes ROS libaries for any robot hardware. It may not contain any GUI dependencies.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

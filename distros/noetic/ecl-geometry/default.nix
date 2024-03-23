@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Any tools relating to mathematical geometry. 
-     Primarily featuring polynomials and interpolations.'';
+    description = "Any tools relating to mathematical geometry. 
+     Primarily featuring polynomials and interpolations.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

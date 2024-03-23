@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Meta-package for Dolly, the robot sheep.'';
+    description = "Meta-package for Dolly, the robot sheep.";
     license = with lib.licenses; [ asl20 ];
   };
 }

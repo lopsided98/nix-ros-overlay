@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The ros_introspection package'';
+    description = "The ros_introspection package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

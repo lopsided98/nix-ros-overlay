@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The raspimouse_control package'';
+    description = "The raspimouse_control package";
     license = with lib.licenses; [ mit ];
   };
 }

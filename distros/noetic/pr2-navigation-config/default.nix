@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package holds common configuration files for running the'';
+    description = "This package holds common configuration files for running the";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ launch ];
 
   meta = {
-    description = ''XML frontend for the launch package.'';
+    description = "XML frontend for the launch package.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''This package contains a number of URDF tutorials.'';
+    description = "This package contains a number of URDF tutorials.";
     license = with lib.licenses; [ "BSD-3-clause" ];
   };
 }

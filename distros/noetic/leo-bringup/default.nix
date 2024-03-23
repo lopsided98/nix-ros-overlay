@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Scripts and launch files for starting basic Leo Rover functionalities.'';
+    description = "Scripts and launch files for starting basic Leo Rover functionalities.";
     license = with lib.licenses; [ mit ];
   };
 }

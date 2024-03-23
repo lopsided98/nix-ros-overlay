@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Messages and services used in smacc2.'';
+    description = "Messages and services used in smacc2.";
     license = with lib.licenses; [ asl20 ];
   };
 }

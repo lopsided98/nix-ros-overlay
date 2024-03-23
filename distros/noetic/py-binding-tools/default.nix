@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Python binding tools for C++'';
+    description = "Python binding tools for C++";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

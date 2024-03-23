@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''EusLisp is an integrated programming system for the
+    description = "EusLisp is an integrated programming system for the
   research on intelligent robots based on Common Lisp and
-  Object-Oriented programming'';
+  Object-Oriented programming";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

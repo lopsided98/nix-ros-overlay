@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Zstandard compression library implementation of rosbag2_compression'';
+    description = "Zstandard compression library implementation of rosbag2_compression";
     license = with lib.licenses; [ asl20 ];
   };
 }

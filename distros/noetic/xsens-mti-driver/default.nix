@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS driver for Xsens MTi IMU sensors'';
+    description = "ROS driver for Xsens MTi IMU sensors";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A ros_control controller that reports robot status using the ROS-Industrial RobotStatus message.'';
+    description = "A ros_control controller that reports robot status using the ROS-Industrial RobotStatus message.";
     license = with lib.licenses; [ asl20 ];
   };
 }

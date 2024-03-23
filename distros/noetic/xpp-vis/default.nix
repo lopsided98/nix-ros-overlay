@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Visualization for the XPP Motion Framework.'';
+    description = "Visualization for the XPP Motion Framework.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

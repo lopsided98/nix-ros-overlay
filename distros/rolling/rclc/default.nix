@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''The ROS client library in C.'';
+    description = "The ROS client library in C.";
     license = with lib.licenses; [ asl20 ];
   };
 }

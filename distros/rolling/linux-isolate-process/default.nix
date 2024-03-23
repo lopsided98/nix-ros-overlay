@@ -17,7 +17,7 @@ buildRosPackage {
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
 
   meta = {
-    description = ''A tool to isolate ros2 nodes'';
+    description = "A tool to isolate ros2 nodes";
     license = with lib.licenses; [ asl20 ];
   };
 }

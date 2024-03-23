@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Nav2's Output velocity smoother'';
+    description = "Nav2's Output velocity smoother";
     license = with lib.licenses; [ asl20 ];
   };
 }

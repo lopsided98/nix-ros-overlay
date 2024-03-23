@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Roboception rc_visard support meta package'';
+    description = "Roboception rc_visard support meta package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

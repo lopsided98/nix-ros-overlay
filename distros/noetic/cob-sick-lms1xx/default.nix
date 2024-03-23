@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package published a laser scan message out of a Sick LMS1xx laser scanner.
-	This version is made by fusion of ipa320/RCPRG_laser_drivers and ipa320/libLMS1xx repository. This package shuld have clearer structure and be easier to install.'';
+    description = "This package published a laser scan message out of a Sick LMS1xx laser scanner.
+	This version is made by fusion of ipa320/RCPRG_laser_drivers and ipa320/libLMS1xx repository. This package shuld have clearer structure and be easier to install.";
     license = with lib.licenses; [ asl20 ];
   };
 }

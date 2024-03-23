@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A driver for IMUs compatible the microstrain 3DM-GX2 and 3DM-GX3 protocol. Includes 
+    description = "A driver for IMUs compatible the microstrain 3DM-GX2 and 3DM-GX3 protocol. Includes 
     a heavily modified standalone driver pulled from the player distribution, 
-    and a ROS node.'';
+    and a ROS node.";
     license = with lib.licenses; [ "LGPL" ];
   };
 }

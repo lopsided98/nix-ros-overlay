@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Turtlebot4 Base Node'';
+    description = "Turtlebot4 Base Node";
     license = with lib.licenses; [ asl20 ];
   };
 }

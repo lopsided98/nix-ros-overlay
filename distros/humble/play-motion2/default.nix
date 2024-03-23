@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''Play a pre-recorded motion on a robot'';
+    description = "Play a pre-recorded motion on a robot";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''messages related to flir camera driver'';
+    description = "messages related to flir camera driver";
     license = with lib.licenses; [ "Apache-2" ];
   };
 }

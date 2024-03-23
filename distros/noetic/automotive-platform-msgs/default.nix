@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Generic Messages for Communication with an Automotive Autonomous Platform'';
+    description = "Generic Messages for Communication with an Automotive Autonomous Platform";
     license = with lib.licenses; [ mit ];
   };
 }

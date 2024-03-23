@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros rosidl-default-generators ];
 
   meta = {
-    description = ''Package containing message files'';
+    description = "Package containing message files";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

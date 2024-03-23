@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ nao-sensor-msgs ];
 
   meta = {
-    description = ''Allows simulating button presses through command line interface'';
+    description = "Allows simulating button presses through command line interface";
     license = with lib.licenses; [ asl20 ];
   };
 }

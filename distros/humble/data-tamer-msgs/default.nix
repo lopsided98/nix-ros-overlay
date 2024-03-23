@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Interfaces for data_tamer'';
+    description = "Interfaces for data_tamer";
     license = with lib.licenses; [ mit ];
   };
 }

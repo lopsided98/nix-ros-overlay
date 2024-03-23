@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core gtest-vendor lcov python3Packages.catkin-pkg python3Packages.pyyaml python3Packages.rospkg python3Packages.setuptools ros-environment ];
 
   meta = {
-    description = ''CMake Functions and Modules for automating CMake'';
+    description = "CMake Functions and Modules for automating CMake";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

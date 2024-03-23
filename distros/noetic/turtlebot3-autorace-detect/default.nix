@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''AutoRace ROS packages for feature detection with TurtleBot3 Auto'';
+    description = "AutoRace ROS packages for feature detection with TurtleBot3 Auto";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];
 
   meta = {
-    description = ''Common utility functions for Gazebo-classic and Gazebo RMF plugins'';
+    description = "Common utility functions for Gazebo-classic and Gazebo RMF plugins";
     license = with lib.licenses; [ asl20 ];
   };
 }

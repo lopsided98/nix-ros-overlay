@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.catkin-pkg ];
 
   meta = {
-    description = ''The fuse_doc package provides documentation and examples for the fuse package.'';
+    description = "The fuse_doc package provides documentation and examples for the fuse package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''An open-source version of the Fetch charge docking system.'';
+    description = "An open-source version of the Fetch charge docking system.";
     license = with lib.licenses; [ lgpl3Only ];
   };
 }

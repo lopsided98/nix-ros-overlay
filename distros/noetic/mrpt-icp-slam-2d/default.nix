@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''mrpt_icp_slam_2d contains a wrapper on MRPT's 2D ICP-SLAM algorithms.'';
+    description = "mrpt_icp_slam_2d contains a wrapper on MRPT's 2D ICP-SLAM algorithms.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

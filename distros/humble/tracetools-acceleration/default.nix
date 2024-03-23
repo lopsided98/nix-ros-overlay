@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros pkg-config ];
 
   meta = {
-    description = ''LTTng tracing provider wrapper for ROS 2 packages using hardware acceleration.
-    Fork of tracetools to trace hardware acceleration in ROS 2.'';
+    description = "LTTng tracing provider wrapper for ROS 2 packages using hardware acceleration.
+    Fork of tracetools to trace hardware acceleration in ROS 2.";
     license = with lib.licenses; [ asl20 ];
   };
 }

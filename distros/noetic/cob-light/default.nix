@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains scripts to operate the LED lights on Care-O-bot.'';
+    description = "This package contains scripts to operate the LED lights on Care-O-bot.";
     license = with lib.licenses; [ asl20 ];
   };
 }

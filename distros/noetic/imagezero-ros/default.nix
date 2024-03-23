@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A library that provides convenient methods for manipulating ROS images with ImageZero'';
+    description = "A library that provides convenient methods for manipulating ROS images with ImageZero";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

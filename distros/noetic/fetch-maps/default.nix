@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The fetch_maps package'';
+    description = "The fetch_maps package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

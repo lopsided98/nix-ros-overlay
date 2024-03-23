@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python python3Packages.lxml ];
 
   meta = {
-    description = ''Implementation of the NoDL API in Python.'';
+    description = "Implementation of the NoDL API in Python.";
     license = with lib.licenses; [ asl20 ];
   };
 }

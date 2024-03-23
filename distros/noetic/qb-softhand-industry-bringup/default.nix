@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains bringup utilities for qbrobotics® SoftHand Industry.'';
+    description = "This package contains bringup utilities for qbrobotics® SoftHand Industry.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

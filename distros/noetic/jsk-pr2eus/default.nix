@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''<p>Metapackage that contains robot eus client package for jsk-ros-pkg</p>'';
+    description = "<p>Metapackage that contains robot eus client package for jsk-ros-pkg</p>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

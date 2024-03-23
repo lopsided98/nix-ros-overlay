@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''End-Effector package: provides a ROS-based set of standard interfaces to command robotics end-effectors in an agnostic fashion'';
+    description = "End-Effector package: provides a ROS-based set of standard interfaces to command robotics end-effectors in an agnostic fashion";
     license = with lib.licenses; [ asl20 ];
   };
 }

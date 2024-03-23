@@ -17,7 +17,7 @@ buildRosPackage {
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint pythonPackages.pytest ];
 
   meta = {
-    description = ''Package containing various utility types and functions for Python'';
+    description = "Package containing various utility types and functions for Python";
     license = with lib.licenses; [ asl20 ];
   };
 }

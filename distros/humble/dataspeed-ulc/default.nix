@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''CAN interface to the Universal Lat/Lon Controller (ULC) firmware'';
+    description = "CAN interface to the Universal Lat/Lon Controller (ULC) firmware";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

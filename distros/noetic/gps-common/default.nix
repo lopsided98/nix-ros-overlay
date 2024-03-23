@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''GPS messages and common routines for use in GPS drivers'';
+    description = "GPS messages and common routines for use in GPS drivers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

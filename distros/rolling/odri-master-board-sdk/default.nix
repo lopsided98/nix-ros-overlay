@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''This project contains the sdk for the communication between a computer
-        and the master-board'';
+    description = "This project contains the sdk for the communication between a computer
+        and the master-board";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package is a substitute for the private implementation of ipa_differential_docking package'';
+    description = "This package is a substitute for the private implementation of ipa_differential_docking package";
     license = with lib.licenses; [ asl20 ];
   };
 }

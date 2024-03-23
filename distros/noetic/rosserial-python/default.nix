@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A Python-based implementation of the rosserial protocol.'';
+    description = "A Python-based implementation of the rosserial protocol.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

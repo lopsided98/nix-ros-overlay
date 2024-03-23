@@ -18,8 +18,8 @@ buildRosPackage {
   propagatedBuildInputs = [ clang python3Packages.pyyaml ];
 
   meta = {
-    description = ''The ability to check code against style conventions using
-    clang-tidy and generate xUnit test result files.'';
+    description = "The ability to check code against style conventions using
+    clang-tidy and generate xUnit test result files.";
     license = with lib.licenses; [ asl20 ];
   };
 }

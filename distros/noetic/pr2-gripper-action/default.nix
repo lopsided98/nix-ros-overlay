@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pr2_gripper_action provides an action interface for using the
+    description = "The pr2_gripper_action provides an action interface for using the
   gripper. Users can specify what position to move to (while limiting the
   force) and the action will report success when the position is reached or
-  failure when the gripper cannot move any longer.'';
+  failure when the gripper cannot move any longer.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

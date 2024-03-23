@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Wrapper around Particle Filter implementation.
-    The SelfLocalizer can be used as library or as a ros-node.'';
+    description = "Wrapper around Particle Filter implementation.
+    The SelfLocalizer can be used as library or as a ros-node.";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

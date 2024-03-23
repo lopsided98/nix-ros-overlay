@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The tesseract_support package containing files for test and examples'';
+    description = "The tesseract_support package containing files for test and examples";
     license = with lib.licenses; [ asl20 ];
   };
 }

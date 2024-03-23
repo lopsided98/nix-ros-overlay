@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''<p>
+    description = "<p>
          gmcl, which stands for general monte carlo localization,
          is a probabilistic-based localization technique for mobile robots in
          2D-known map. It integrates the adaptive monte carlo localization
@@ -29,7 +29,7 @@ buildRosPackage {
         </p>
         <p>
          Main node structure and amcl-algorithms’s code was derived, with thanks, from Brian Gerkey's amcl package.     
-        </p>'';
+        </p>";
     license = with lib.licenses; [ "LGPL" ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Provides an rqt_image_overlay_layer plugin interface, and a template impelementation class'';
+    description = "Provides an rqt_image_overlay_layer plugin interface, and a template impelementation class";
     license = with lib.licenses; [ asl20 ];
   };
 }

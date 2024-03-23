@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''RealSense camera_msgs package containing realsense camera messages definitions'';
+    description = "RealSense camera_msgs package containing realsense camera messages definitions";
     license = with lib.licenses; [ asl20 ];
   };
 }

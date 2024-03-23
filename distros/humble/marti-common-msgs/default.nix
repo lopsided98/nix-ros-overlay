@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''marti_common_msgs'';
+    description = "marti_common_msgs";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS wrapper for the sparse bundle adjustment (sba) library (needed for slam_karto)'';
+    description = "ROS wrapper for the sparse bundle adjustment (sba) library (needed for slam_karto)";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''Launch files and scripts needed to bring up the ROS nodes of a PMB2 robot.'';
+    description = "Launch files and scripts needed to bring up the ROS nodes of a PMB2 robot.";
     license = with lib.licenses; [ asl20 ];
   };
 }

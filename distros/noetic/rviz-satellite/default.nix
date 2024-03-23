@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Display satellite map tiles in RViz'';
+    description = "Display satellite map tiles in RViz";
     license = with lib.licenses; [ asl20 ];
   };
 }

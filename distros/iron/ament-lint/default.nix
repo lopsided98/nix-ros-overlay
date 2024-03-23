@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_python";
 
   meta = {
-    description = ''Providing common API for ament linter packages.'';
+    description = "Providing common API for ament linter packages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

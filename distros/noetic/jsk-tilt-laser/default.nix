@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The jsk_tilt_laser package'';
+    description = "The jsk_tilt_laser package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

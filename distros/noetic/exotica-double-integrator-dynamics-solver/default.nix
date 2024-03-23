@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Double integrator dynamics solver plug-in for Exotica'';
+    description = "Double integrator dynamics solver plug-in for Exotica";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The tesseract_environment package contains environment'';
+    description = "The tesseract_environment package contains environment";
     license = with lib.licenses; [ asl20 ];
   };
 }

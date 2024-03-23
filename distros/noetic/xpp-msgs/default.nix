@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS messages used in the XPP framework.'';
+    description = "ROS messages used in the XPP framework.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

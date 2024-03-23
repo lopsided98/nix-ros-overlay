@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Action tutorials action'';
+    description = "Action tutorials action";
     license = with lib.licenses; [ asl20 ];
   };
 }

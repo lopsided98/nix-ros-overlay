@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A node that provides the move_base action server interface, but instead of
+    description = "A node that provides the move_base action server interface, but instead of
     planning simply drives towards the target pose using a control-based
-    approach.'';
+    approach.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

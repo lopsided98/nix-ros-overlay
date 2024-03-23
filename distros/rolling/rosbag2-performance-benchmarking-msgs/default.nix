@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''A package containing rosbag2 performance benchmarking specific messages.'';
+    description = "A package containing rosbag2 performance benchmarking specific messages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

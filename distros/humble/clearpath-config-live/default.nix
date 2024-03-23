@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''Live URDF Updater from Clearpath Configuration.'';
+    description = "Live URDF Updater from Clearpath Configuration.";
     license = with lib.licenses; [ asl20 ];
   };
 }

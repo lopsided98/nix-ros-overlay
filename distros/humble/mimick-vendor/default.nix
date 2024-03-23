@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake git ];
 
   meta = {
-    description = ''Wrapper around mimick, it provides an ExternalProject build of mimick.'';
+    description = "Wrapper around mimick, it provides an ExternalProject build of mimick.";
     license = with lib.licenses; [ asl20 mit ];
   };
 }

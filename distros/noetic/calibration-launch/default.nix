@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains a collection of launch files that can be helpful in configuring
-    the calibration stack to run on your robot.'';
+    description = "This package contains a collection of launch files that can be helpful in configuring
+    the calibration stack to run on your robot.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

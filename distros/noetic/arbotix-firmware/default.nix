@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Firmware source code for ArbotiX ROS bindings.'';
+    description = "Firmware source code for ArbotiX ROS bindings.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

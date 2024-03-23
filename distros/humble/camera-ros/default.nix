@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''node for libcamera supported cameras (V4L2, Raspberry Pi Camera Modules)'';
+    description = "node for libcamera supported cameras (V4L2, Raspberry Pi Camera Modules)";
     license = with lib.licenses; [ mit ];
   };
 }

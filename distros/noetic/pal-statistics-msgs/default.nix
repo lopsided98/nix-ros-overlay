@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Statistics msgs package'';
+    description = "Statistics msgs package";
     license = with lib.licenses; [ mit ];
   };
 }

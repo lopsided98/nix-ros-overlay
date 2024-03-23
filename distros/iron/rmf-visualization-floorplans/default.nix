@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];
 
   meta = {
-    description = ''A package to visualize the floorplans for levels in a building'';
+    description = "A package to visualize the floorplans for levels in a building";
     license = with lib.licenses; [ asl20 ];
   };
 }

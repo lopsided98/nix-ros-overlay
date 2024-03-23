@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The fuse metapackage.'';
+    description = "The fuse metapackage.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

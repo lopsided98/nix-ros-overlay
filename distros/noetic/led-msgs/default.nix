@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages for LEDs and LED strips'';
+    description = "Messages for LEDs and LED strips";
     license = with lib.licenses; [ mit ];
   };
 }

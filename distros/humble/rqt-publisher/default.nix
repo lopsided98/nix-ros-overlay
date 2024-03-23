@@ -17,7 +17,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python-qt-binding python3Packages.catkin-pkg qt-gui-py-common rqt-gui rqt-gui-py rqt-py-common ];
 
   meta = {
-    description = ''rqt_publisher provides a GUI plugin for publishing arbitrary messages with fixed or computed field values.'';
+    description = "rqt_publisher provides a GUI plugin for publishing arbitrary messages with fixed or computed field values.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

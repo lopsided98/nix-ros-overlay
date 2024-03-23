@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Drive-by-wire interface to the Dataspeed Inc. Lincoln MKZ DBW kit'';
+    description = "Drive-by-wire interface to the Dataspeed Inc. Lincoln MKZ DBW kit";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

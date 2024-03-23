@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Gazebo Plugins for various PR2-specific sensors and actuators on the robot.'';
+    description = "Gazebo Plugins for various PR2-specific sensors and actuators on the robot.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rclpy wireless-msgs wirelesstools ];
 
   meta = {
-    description = ''A Python-based node which publishes connection information about a linux wireless interface.'';
+    description = "A Python-based node which publishes connection information about a linux wireless interface.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

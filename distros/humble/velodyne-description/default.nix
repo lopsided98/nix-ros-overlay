@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''URDF and meshes describing Velodyne laser scanners.'';
+    description = "URDF and meshes describing Velodyne laser scanners.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

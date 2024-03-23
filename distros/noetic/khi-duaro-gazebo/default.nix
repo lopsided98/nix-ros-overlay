@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The khi_duaro_gazebo package'';
+    description = "The khi_duaro_gazebo package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

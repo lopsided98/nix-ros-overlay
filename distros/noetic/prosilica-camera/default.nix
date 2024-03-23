@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A ROS driver node for AVT/Prosilica Gigabit Ethernet (GigE) cameras.'';
+    description = "A ROS driver node for AVT/Prosilica Gigabit Ethernet (GigE) cameras.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

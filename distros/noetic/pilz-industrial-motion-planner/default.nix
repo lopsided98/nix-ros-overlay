@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''MoveIt plugin to generate industrial trajectories PTP, LIN, CIRC and sequences thereof.'';
+    description = "MoveIt plugin to generate industrial trajectories PTP, LIN, CIRC and sequences thereof.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

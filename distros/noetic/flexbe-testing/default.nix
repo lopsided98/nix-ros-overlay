@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''flexbe_testing provides a framework for unit testing states.'';
+    description = "flexbe_testing provides a framework for unit testing states.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''3-dof configuration space costmap package'';
+    description = "3-dof configuration space costmap package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

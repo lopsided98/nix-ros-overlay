@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''eus_qpoases'';
+    description = "eus_qpoases";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''lpg_planner: LPGL Planner (http://zeus.ing.unibs.it/lpg/)'';
+    description = "lpg_planner: LPGL Planner (http://zeus.ing.unibs.it/lpg/)";
     license = with lib.licenses; [ "GPL" ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Aldebaran's libqi: a core library for NAOqiOS development'';
+    description = "Aldebaran's libqi: a core library for NAOqiOS development";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

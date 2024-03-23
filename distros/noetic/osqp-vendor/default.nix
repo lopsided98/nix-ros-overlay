@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin git ];
 
   meta = {
-    description = ''Wrapper around osqp that ships with a CMake module'';
+    description = "Wrapper around osqp that ships with a CMake module";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The laser_scan_sparsifier takes in a LaserScan message and sparsifies it.'';
+    description = "The laser_scan_sparsifier takes in a LaserScan message and sparsifies it.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

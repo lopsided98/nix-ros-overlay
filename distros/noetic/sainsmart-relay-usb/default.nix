@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''SainSmart USB relay driver controller'';
+    description = "SainSmart USB relay driver controller";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

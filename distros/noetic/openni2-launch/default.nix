@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Launch files to start the openni2_camera drivers using rgbd_launch.'';
+    description = "Launch files to start the openni2_camera drivers using rgbd_launch.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

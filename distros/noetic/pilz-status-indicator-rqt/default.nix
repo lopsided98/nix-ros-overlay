@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Showing information about operation mode, status and speed override of the robot.'';
+    description = "Showing information about operation mode, status and speed override of the robot.";
     license = with lib.licenses; [ asl20 ];
   };
 }

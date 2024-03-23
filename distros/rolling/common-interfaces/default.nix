@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''common_interfaces contains messages and services that are widely used by other ROS packages.'';
+    description = "common_interfaces contains messages and services that are widely used by other ROS packages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

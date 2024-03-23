@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rwt_utils_3rdparty package'';
+    description = "The rwt_utils_3rdparty package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''throw a monkeywrench in your robot code'';
+    description = "throw a monkeywrench in your robot code";
     license = with lib.licenses; [ asl20 ];
   };
 }

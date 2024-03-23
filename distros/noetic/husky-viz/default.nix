@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Visualization configuration for Clearpath Husky'';
+    description = "Visualization configuration for Clearpath Husky";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''A repertory of multi primitive-to-primitive (MP2P) ICP algorithms in C++'';
+    description = "A repertory of multi primitive-to-primitive (MP2P) ICP algorithms in C++";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

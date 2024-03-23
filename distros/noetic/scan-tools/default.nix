@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Laser scan processing tools.'';
+    description = "Laser scan processing tools.";
     license = with lib.licenses; [ bsdOriginal lgpl3Only ];
   };
 }

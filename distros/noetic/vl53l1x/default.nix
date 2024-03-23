@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''VL53L1X ToF rangefinder driver'';
+    description = "VL53L1X ToF rangefinder driver";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

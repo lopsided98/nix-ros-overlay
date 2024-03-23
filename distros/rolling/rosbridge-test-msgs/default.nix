@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Message and service definitions used in internal tests for rosbridge packages.'';
+    description = "Message and service definitions used in internal tests for rosbridge packages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

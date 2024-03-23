@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package for interfacing Mia Hand to ROS Control.
+    description = "Package for interfacing Mia Hand to ROS Control.
 
-    Tested under ubuntu 18.04.3 LTS and 20.04.01 and ROS Noetic.'';
+    Tested under ubuntu 18.04.3 LTS and 20.04.01 and ROS Noetic.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

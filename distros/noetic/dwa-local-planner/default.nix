@@ -19,14 +19,14 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides an implementation of the Dynamic Window Approach to
+    description = "This package provides an implementation of the Dynamic Window Approach to
         local robot navigation on a plane. Given a global plan to follow and a
         costmap, the local planner produces velocity commands to send to a mobile
         base. This package supports any robot who's footprint can be represented as
         a convex polygon or cicrle, and exposes its configuration as ROS parameters
         that can be set in a launch file. The parameters for this planner are also
         dynamically reconfigurable. This package's ROS wrapper adheres to the
-        BaseLocalPlanner interface specified in the <a href="http://wiki.ros.org/nav_core">nav_core</a> package.'';
+        BaseLocalPlanner interface specified in the <a href=\"http://wiki.ros.org/nav_core\">nav_core</a> package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

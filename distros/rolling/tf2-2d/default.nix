@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A set of 2D geometry classes modeled after the 3D geometry classes in tf2.'';
+    description = "A set of 2D geometry classes modeled after the 3D geometry classes in tf2.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

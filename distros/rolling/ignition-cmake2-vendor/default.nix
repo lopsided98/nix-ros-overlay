@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package ];
 
   meta = {
-    description = ''This package provides the Ignition CMake 2.x library.'';
+    description = "This package provides the Ignition CMake 2.x library.";
     license = with lib.licenses; [ asl20 ];
   };
 }

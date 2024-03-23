@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''C++ nodes which were previously in the ros2/examples repository but are now just used for demo purposes.'';
+    description = "C++ nodes which were previously in the ros2/examples repository but are now just used for demo purposes.";
     license = with lib.licenses; [ asl20 ];
   };
 }

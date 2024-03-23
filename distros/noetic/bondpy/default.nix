@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Python implementation of bond, a mechanism for checking when
-    another process has terminated.'';
+    description = "Python implementation of bond, a mechanism for checking when
+    another process has terminated.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

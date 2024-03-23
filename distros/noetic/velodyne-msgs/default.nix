@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS message definitions for Velodyne 3D LIDARs.'';
+    description = "ROS message definitions for Velodyne 3D LIDARs.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

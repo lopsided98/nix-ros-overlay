@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''cob_mapping_slam holds launch files for running SLAM using the <a href="http://ros.org/wiki/gmapping">gmapping</a> package.'';
+    description = "cob_mapping_slam holds launch files for running SLAM using the <a href=\"http://ros.org/wiki/gmapping\">gmapping</a> package.";
     license = with lib.licenses; [ asl20 ];
   };
 }

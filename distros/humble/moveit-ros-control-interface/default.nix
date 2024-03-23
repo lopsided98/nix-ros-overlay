@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ros_control controller manager interface for MoveIt'';
+    description = "ros_control controller manager interface for MoveIt";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

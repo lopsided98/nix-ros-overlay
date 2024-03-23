@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ controller-manager controller-manager-msgs python3Packages.pygraphviz rcl-interfaces rclpy ros2cli ros2node ros2param rosidl-runtime-py ];
 
   meta = {
-    description = ''The ROS 2 command line tools for ROS2 Control.'';
+    description = "The ROS 2 command line tools for ROS2 Control.";
     license = with lib.licenses; [ asl20 ];
   };
 }

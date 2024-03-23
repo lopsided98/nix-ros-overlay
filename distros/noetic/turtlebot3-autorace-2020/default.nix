@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''TurtleBot3 AutoRace 2020 ROS 1 packages (meta package)'';
+    description = "TurtleBot3 AutoRace 2020 ROS 1 packages (meta package)";
     license = with lib.licenses; [ asl20 ];
   };
 }

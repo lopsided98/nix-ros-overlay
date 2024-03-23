@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A teleoperation node for the p2os_driver package.'';
+    description = "A teleoperation node for the p2os_driver package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

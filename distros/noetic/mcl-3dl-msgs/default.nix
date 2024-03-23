@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The mcl_3dl message definition package'';
+    description = "The mcl_3dl message definition package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

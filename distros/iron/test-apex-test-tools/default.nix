@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''Test package, which uses things exported by apex_test_tools'';
+    description = "Test package, which uses things exported by apex_test_tools";
     license = with lib.licenses; [ asl20 ];
   };
 }

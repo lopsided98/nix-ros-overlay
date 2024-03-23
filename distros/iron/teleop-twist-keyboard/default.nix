@@ -18,8 +18,8 @@ buildRosPackage {
   propagatedBuildInputs = [ geometry-msgs rclpy ];
 
   meta = {
-    description = ''A robot-agnostic teleoperation node to convert keyboard commands to Twist
-    messages.'';
+    description = "A robot-agnostic teleoperation node to convert keyboard commands to Twist
+    messages.";
     license = with lib.licenses; [ "BSD-License-2.0" ];
   };
 }

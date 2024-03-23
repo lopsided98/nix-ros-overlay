@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''flexbe_widget implements some smaller scripts for the behavior engine.'';
+    description = "flexbe_widget implements some smaller scripts for the behavior engine.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

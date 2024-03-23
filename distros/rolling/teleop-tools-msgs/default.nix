@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''The teleop_tools_msgs package'';
+    description = "The teleop_tools_msgs package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

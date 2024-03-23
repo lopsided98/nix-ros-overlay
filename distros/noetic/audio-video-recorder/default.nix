@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS package for recording image and audio synchronously'';
+    description = "ROS package for recording image and audio synchronously";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

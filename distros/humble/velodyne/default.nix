@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Basic ROS support for the Velodyne 3D LIDARs.'';
+    description = "Basic ROS support for the Velodyne 3D LIDARs.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

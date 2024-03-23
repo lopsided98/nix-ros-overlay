@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Metapackage for the iRobot(R) Create(R) 3 robot Gazebo simulator<a href="http://gazebosim.org/">Gazebo</a> simulation stack.'';
+    description = "Metapackage for the iRobot(R) Create(R) 3 robot Gazebo simulator<a href=\"http://gazebosim.org/\">Gazebo</a> simulation stack.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

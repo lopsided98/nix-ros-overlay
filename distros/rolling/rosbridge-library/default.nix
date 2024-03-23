@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-ros ];
 
   meta = {
-    description = ''The core rosbridge package, responsible for interpreting JSON andperforming
+    description = "The core rosbridge package, responsible for interpreting JSON andperforming
     the appropriate ROS action, like subscribe, publish, call service, and
-    interact with params.'';
+    interact with params.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''URDF descriptions for Point Grey cameras'';
+    description = "URDF descriptions for Point Grey cameras";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

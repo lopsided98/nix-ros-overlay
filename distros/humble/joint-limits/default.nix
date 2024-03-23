@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Interfaces for handling of joint limits for controllers or hardware.'';
+    description = "Interfaces for handling of joint limits for controllers or hardware.";
     license = with lib.licenses; [ asl20 ];
   };
 }

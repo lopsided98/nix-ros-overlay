@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The handeye package'';
+    description = "The handeye package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

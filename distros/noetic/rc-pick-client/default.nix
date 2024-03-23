@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The ros client for roboception grasp generation modules'';
+    description = "The ros client for roboception grasp generation modules";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

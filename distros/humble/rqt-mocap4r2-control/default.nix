@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Control tools GUI'';
+    description = "Control tools GUI";
     license = with lib.licenses; [ asl20 ];
   };
 }

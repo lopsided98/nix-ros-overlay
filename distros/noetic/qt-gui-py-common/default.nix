@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''qt_gui_py_common provides common functionality for GUI plugins written in Python.'';
+    description = "qt_gui_py_common provides common functionality for GUI plugins written in Python.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

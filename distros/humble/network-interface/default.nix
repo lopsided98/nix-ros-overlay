@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''Network interfaces and messages.'';
+    description = "Network interfaces and messages.";
     license = with lib.licenses; [ mit ];
   };
 }

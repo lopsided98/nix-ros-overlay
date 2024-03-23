@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.mypy ];
 
   meta = {
-    description = ''Support for mypy static type checking in ament.'';
+    description = "Support for mypy static type checking in ament.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.numpy sensor-msgs ];
 
   meta = {
-    description = ''A package for easy creation and reading of PointCloud2 messages in Python.'';
+    description = "A package for easy creation and reading of PointCloud2 messages in Python.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Driver for NovAtel receivers'';
+    description = "Driver for NovAtel receivers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

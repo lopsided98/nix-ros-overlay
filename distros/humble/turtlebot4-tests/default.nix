@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ irobot-create-msgs python3Packages.psutil sensor-msgs std-msgs turtlebot4-msgs ];
 
   meta = {
-    description = ''Turtlebot4 System Tests'';
+    description = "Turtlebot4 System Tests";
     license = with lib.licenses; [ asl20 ];
   };
 }

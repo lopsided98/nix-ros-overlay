@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides a specialized joint_trajectory_controller that can be moved into holding state via service call.
-  No further trajectories will be accepted/followed in this state.'';
+    description = "This package provides a specialized joint_trajectory_controller that can be moved into holding state via service call.
+  No further trajectories will be accepted/followed in this state.";
     license = with lib.licenses; [ asl20 ];
   };
 }

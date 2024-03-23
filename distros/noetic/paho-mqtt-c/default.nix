@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Eclipse Paho C Client Library for the MQTT Protocol'';
+    description = "Eclipse Paho C Client Library for the MQTT Protocol";
     license = with lib.licenses; [ "EPL-2.0" ];
   };
 }

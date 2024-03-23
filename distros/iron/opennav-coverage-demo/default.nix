@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ nav2-bringup nav2-util opennav-coverage opennav-coverage-bt opennav-coverage-msgs opennav-coverage-navigator opennav-row-coverage rclcpp rclcpp-action ];
 
   meta = {
-    description = ''A demo using the Coverage Server, BT Nodes, and Coverage Navigator'';
+    description = "A demo using the Coverage Server, BT Nodes, and Coverage Navigator";
     license = with lib.licenses; [ asl20 ];
   };
 }

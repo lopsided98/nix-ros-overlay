@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Implement graphSLAM using the mrpt-graphslam library, in an online fashion
-  	by directly reading measurements off ROS Topics.'';
+    description = "Implement graphSLAM using the mrpt-graphslam library, in an online fashion
+  	by directly reading measurements off ROS Topics.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

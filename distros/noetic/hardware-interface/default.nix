@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Hardware Interface base class.'';
+    description = "Hardware Interface base class.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

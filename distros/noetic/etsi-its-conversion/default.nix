@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Converts ROS messages to and from ASN.1-encoded ETSI ITS messages'';
+    description = "Converts ROS messages to and from ASN.1-encoded ETSI ITS messages";
     license = with lib.licenses; [ mit ];
   };
 }

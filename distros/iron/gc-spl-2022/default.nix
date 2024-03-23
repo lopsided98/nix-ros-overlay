@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rcgcd-spl-14 rcgcd-spl-14-conversion rcgcrd-spl-4 rcgcrd-spl-4-conversion rclpy ];
 
   meta = {
-    description = ''GameController-Robot communication in RoboCup SPL at RoboCup2022'';
+    description = "GameController-Robot communication in RoboCup SPL at RoboCup2022";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package ];
 
   meta = {
-    description = ''Wrapper around ogre3d, it provides a fixed CMake module and an ExternalProject build of ogre.'';
+    description = "Wrapper around ogre3d, it provides a fixed CMake module and an ExternalProject build of ogre.";
     license = with lib.licenses; [ asl20 mit ];
   };
 }

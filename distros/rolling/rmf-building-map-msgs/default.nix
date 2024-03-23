@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Messages used to send building maps'';
+    description = "Messages used to send building maps";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''This package provides messages and serializations / conversion for the <a href="http://octomap.github.com">OctoMap library</a>.
-   This ROS2 version is based on version 0.3.3 of the ROS1 package.'';
+    description = "This package provides messages and serializations / conversion for the <a href=\"http://octomap.github.com\">OctoMap library</a>.
+   This ROS2 version is based on version 0.3.3 of the ROS1 package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

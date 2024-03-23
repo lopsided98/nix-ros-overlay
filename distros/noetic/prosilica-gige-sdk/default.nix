@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''AVT GigE SDK version 1.26 for ROS'';
+    description = "AVT GigE SDK version 1.26 for ROS";
     license = with lib.licenses; [ "Commercial" ];
   };
 }

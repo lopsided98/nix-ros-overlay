@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The messages for Clober'';
+    description = "The messages for Clober";
     license = with lib.licenses; [ asl20 ];
   };
 }

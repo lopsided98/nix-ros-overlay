@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake pkg-config ];
 
   meta = {
-    description = ''Components of MoveIt that offer visualization'';
+    description = "Components of MoveIt that offer visualization";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

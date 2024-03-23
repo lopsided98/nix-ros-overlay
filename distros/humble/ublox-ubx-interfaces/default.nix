@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''UBLOX UBX Interfaces'';
+    description = "UBLOX UBX Interfaces";
     license = with lib.licenses; [ asl20 ];
   };
 }

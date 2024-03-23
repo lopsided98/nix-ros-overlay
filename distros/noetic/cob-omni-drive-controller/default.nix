@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_omni_drive_controller package provides a ros_controller plugin for the Care-O-bot omni-directional base platform.'';
+    description = "The cob_omni_drive_controller package provides a ros_controller plugin for the Care-O-bot omni-directional base platform.";
     license = with lib.licenses; [ asl20 ];
   };
 }

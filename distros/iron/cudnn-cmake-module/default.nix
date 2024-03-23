@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Exports a CMake module to find cuDNN.'';
+    description = "Exports a CMake module to find cuDNN.";
     license = with lib.licenses; [ asl20 ];
   };
 }

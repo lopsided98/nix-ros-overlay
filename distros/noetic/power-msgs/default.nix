@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS messages for power measurement and breaker control.'';
+    description = "ROS messages for power measurement and breaker control.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

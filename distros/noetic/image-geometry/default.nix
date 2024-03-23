@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''`image_geometry` contains C++ and Python libraries for interpreting images
+    description = "`image_geometry` contains C++ and Python libraries for interpreting images
     geometrically. It interfaces the calibration parameters in sensor_msgs/CameraInfo
     messages with OpenCV functions such as image rectification, much as cv_bridge
-    interfaces ROS sensor_msgs/Image with OpenCV data types.'';
+    interfaces ROS sensor_msgs/Image with OpenCV data types.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

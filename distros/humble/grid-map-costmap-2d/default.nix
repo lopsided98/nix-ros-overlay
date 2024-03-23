@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Interface for grid maps to the costmap_2d format.'';
+    description = "Interface for grid maps to the costmap_2d format.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

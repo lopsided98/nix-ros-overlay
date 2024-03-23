@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''Launch file and run-time configurations, e.g. controllers.'';
+    description = "Launch file and run-time configurations, e.g. controllers.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

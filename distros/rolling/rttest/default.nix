@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Instrumentation library for real-time performance testing'';
+    description = "Instrumentation library for real-time performance testing";
     license = with lib.licenses; [ asl20 ];
   };
 }

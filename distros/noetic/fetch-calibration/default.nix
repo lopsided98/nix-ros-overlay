@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Launch and configuration files for calibrating Fetch using the 'robot_calibration' package.'';
+    description = "Launch and configuration files for calibrating Fetch using the 'robot_calibration' package.";
     license = with lib.licenses; [ asl20 ];
   };
 }

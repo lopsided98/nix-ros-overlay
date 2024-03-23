@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Maintains a local obstacle map (point cloud,
+    description = "Maintains a local obstacle map (point cloud,
    voxels or occupancy grid) from recent sensor readings within a
-   configurable time window.'';
+   configurable time window.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

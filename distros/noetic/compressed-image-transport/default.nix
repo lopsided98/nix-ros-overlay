@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Compressed_image_transport provides a plugin to image_transport for transparently sending images
-    encoded as JPEG or PNG.'';
+    description = "Compressed_image_transport provides a plugin to image_transport for transparently sending images
+    encoded as JPEG or PNG.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

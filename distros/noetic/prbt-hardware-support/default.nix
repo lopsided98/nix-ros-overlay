@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Control hardware functions of the PRBT manipulator like RUN_PERMITTED for Stop1 functionality.'';
+    description = "Control hardware functions of the PRBT manipulator like RUN_PERMITTED for Stop1 functionality.";
     license = with lib.licenses; [ lgpl3Only ];
   };
 }

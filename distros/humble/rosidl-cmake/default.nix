@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python python3Packages.empy ];
 
   meta = {
-    description = ''The CMake functionality to invoke code generation for ROS interface files.'';
+    description = "The CMake functionality to invoke code generation for ROS interface files.";
     license = with lib.licenses; [ asl20 ];
   };
 }

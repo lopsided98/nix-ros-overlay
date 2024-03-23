@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Library containing abstract CANopen driver class for ros2_canopen'';
+    description = "Library containing abstract CANopen driver class for ros2_canopen";
     license = with lib.licenses; [ asl20 ];
   };
 }

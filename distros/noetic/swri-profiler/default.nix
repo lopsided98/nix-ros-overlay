@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''swri_profiler provides basic tools for real-time selective
-    profiling of ROS C++ nodes.'';
+    description = "swri_profiler provides basic tools for real-time selective
+    profiling of ROS C++ nodes.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,13 +19,13 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''SLIC-Superpizel ROS Wrapper
+    description = "SLIC-Superpizel ROS Wrapper
   This file contains the class elements of the class Slic. This class is an
   implementation of the SLIC Superpixel algorithm by Achanta et al. [PAMI'12,
   vol. 34, num. 11, pp. 2274-2282].
 
   This implementation is created for the specific purpose of creating
-  over-segmentations in an OpenCV-based environment.'';
+  over-segmentations in an OpenCV-based environment.";
     license = with lib.licenses; [ "N-A" ];
   };
 }

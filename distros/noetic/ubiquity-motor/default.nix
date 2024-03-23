@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides a ROS interface to Ubiquity Robotics Magni motor controllers'';
+    description = "Provides a ROS interface to Ubiquity Robotics Magni motor controllers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

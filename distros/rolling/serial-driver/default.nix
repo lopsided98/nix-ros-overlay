@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto asio-cmake-module ];
 
   meta = {
-    description = ''A template class and associated utilities which encapsulate basic reading from serial ports'';
+    description = "A template class and associated utilities which encapsulate basic reading from serial ports";
     license = with lib.licenses; [ asl20 ];
   };
 }

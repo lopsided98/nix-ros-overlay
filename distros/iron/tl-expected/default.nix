@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''C++11/14/17 std::expected with functional-style extensions'';
+    description = "C++11/14/17 std::expected with functional-style extensions";
     license = with lib.licenses; [ "Creative-Commons-Zero-v1.0-Universal" ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A ROS Driver for V4L USB Cameras'';
+    description = "A ROS Driver for V4L USB Cameras";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

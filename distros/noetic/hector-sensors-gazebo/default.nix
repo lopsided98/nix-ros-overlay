@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''hector_sensors_gazebo depends on the necessary plugins for using the sensors from the hector_models repository.'';
+    description = "hector_sensors_gazebo depends on the necessary plugins for using the sensors from the hector_models repository.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

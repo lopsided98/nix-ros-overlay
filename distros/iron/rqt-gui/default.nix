@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python python-qt-binding python3Packages.catkin-pkg qt-gui rclpy ];
 
   meta = {
-    description = ''rqt_gui provides the main to start an instance of the ROS integrated graphical user interface provided by qt_gui.'';
+    description = "rqt_gui provides the main to start an instance of the ROS integrated graphical user interface provided by qt_gui.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

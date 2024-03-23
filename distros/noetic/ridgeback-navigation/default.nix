@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Launch files and code for autonomous navigation of the Ridgeback'';
+    description = "Launch files and code for autonomous navigation of the Ridgeback";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

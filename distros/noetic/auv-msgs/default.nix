@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides message types commonly used with Autonomous Underwater Vehicles'';
+    description = "This package provides message types commonly used with Autonomous Underwater Vehicles";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The operator is a lightweight, purely reactive obstacle-avoidance
+    description = "The operator is a lightweight, purely reactive obstacle-avoidance
     module for mobile robots moving in a planar environment. The operator node
     works by evaluating a set of predefined motion primitives based on a local
     costmap and a desired direction. The best evaluated motion command will be
-    send to the mobile base.'';
+    send to the mobile base.";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

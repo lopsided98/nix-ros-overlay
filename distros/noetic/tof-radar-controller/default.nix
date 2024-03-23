@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The tof radar controller package'';
+    description = "The tof radar controller package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

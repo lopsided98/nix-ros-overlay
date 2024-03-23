@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Wrapper around tinyxml2, providing nothing but a dependency on tinyxml2, on some systems.
-    On others, it provides a fixed CMake module or even an ExternalProject build of tinyxml2.'';
+    description = "Wrapper around tinyxml2, providing nothing but a dependency on tinyxml2, on some systems.
+    On others, it provides a fixed CMake module or even an ExternalProject build of tinyxml2.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''cob_monitoring'';
+    description = "cob_monitoring";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python nodl-python python3Packages.argcomplete ros2cli ros2pkg ros2run ];
 
   meta = {
-    description = ''CLI tools for NoDL files.'';
+    description = "CLI tools for NoDL files.";
     license = with lib.licenses; [ asl20 ];
   };
 }

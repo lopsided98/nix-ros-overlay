@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This stack holds packages for IPA default environment configuration.'';
+    description = "This stack holds packages for IPA default environment configuration.";
     license = with lib.licenses; [ asl20 ];
   };
 }

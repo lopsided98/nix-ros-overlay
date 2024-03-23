@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The ddynamic_reconfigure_python package contains
+    description = "The ddynamic_reconfigure_python package contains
     a class to instantiate dynamic reconfigure servers on the fly
-    registering variables'';
+    registering variables";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

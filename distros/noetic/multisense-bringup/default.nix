@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''multisense_bringup'';
+    description = "multisense_bringup";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''demo tasks illustrating various capabilities of MTC.'';
+    description = "demo tasks illustrating various capabilities of MTC.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

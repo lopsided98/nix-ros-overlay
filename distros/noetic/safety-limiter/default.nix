@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Motion limiter package for collision prevention'';
+    description = "Motion limiter package for collision prevention";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

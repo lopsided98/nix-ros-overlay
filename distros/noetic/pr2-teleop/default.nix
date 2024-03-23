@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pr2_teleop package'';
+    description = "The pr2_teleop package";
     license = with lib.licenses; [ "TODO-CATKIN-PACKAGE-LICENSE" ];
   };
 }

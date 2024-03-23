@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS interface to the 3Dconnexion SpaceNavigator 6DOF joystick.'';
+    description = "ROS interface to the 3Dconnexion SpaceNavigator 6DOF joystick.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

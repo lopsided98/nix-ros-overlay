@@ -18,9 +18,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS wrapper for the Simple Open EtherCAT Master SOEM.
+    description = "ROS wrapper for the Simple Open EtherCAT Master SOEM.
     This is an updated version of the original SOEM wrapper released into ROS now including
-    the upstream Repo as a git subtree.'';
+    the upstream Repo as a git subtree.";
     license = with lib.licenses; [ "GPLv2-with-linking-exception" ];
   };
 }

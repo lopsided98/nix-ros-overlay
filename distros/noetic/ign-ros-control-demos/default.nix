@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Ignition ros_control package demos.'';
+    description = "Ignition ros_control package demos.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Generic controller for forwarding commands.'';
+    description = "Generic controller for forwarding commands.";
     license = with lib.licenses; [ asl20 ];
   };
 }

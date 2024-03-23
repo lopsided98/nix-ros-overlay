@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''This package contains a library for parsing PDDL domains and problems.
+    description = "This package contains a library for parsing PDDL domains and problems.
   
     This package derives from the work of Anders Jonsson, contained in https://github.com/wisdompoet/universal-pddl-parser.git
     with many modifications by Francisco Martin:
@@ -28,7 +28,7 @@ buildRosPackage {
       * Source code structure refactor
       * CMakeLists.txt for cmake compilation
       * Reading from String instead of files
-      * Licensing'';
+      * Licensing";
     license = with lib.licenses; [ asl20 ];
   };
 }

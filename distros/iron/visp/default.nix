@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''ViSP standing for Visual Servoing Platform is a modular cross
+    description = "ViSP standing for Visual Servoing Platform is a modular cross
     platform library that allows prototyping and developing applications
     using visual tracking and visual servoing technics at the heart of the
     researches done by Inria Lagadic team. ViSP is able to compute control
@@ -28,7 +28,7 @@ buildRosPackage {
     vision algorithms. ViSP provides also simulation capabilities.
 
     ViSP can be useful in robotics, computer vision, augmented reality
-    and computer animation.'';
+    and computer animation.";
     license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

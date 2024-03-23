@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Conversions between grid maps and OpenCV images.'';
+    description = "Conversions between grid maps and OpenCV images.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

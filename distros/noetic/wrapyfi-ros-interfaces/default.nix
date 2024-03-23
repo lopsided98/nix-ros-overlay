@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The wrapyfi_ros_interfaces package'';
+    description = "The wrapyfi_ros_interfaces package";
     license = with lib.licenses; [ mit ];
   };
 }

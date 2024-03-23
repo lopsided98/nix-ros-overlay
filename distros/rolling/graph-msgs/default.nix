@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS messages for publishing graphs of different data types'';
+    description = "ROS messages for publishing graphs of different data types";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

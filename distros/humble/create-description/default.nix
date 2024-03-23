@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Robot URDF descriptions for create_robot'';
+    description = "Robot URDF descriptions for create_robot";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

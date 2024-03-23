@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Instantaneous Motion Generation for Robots and Machines.'';
+    description = "Instantaneous Motion Generation for Robots and Machines.";
     license = with lib.licenses; [ mit ];
   };
 }

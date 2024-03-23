@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The turtlebot3_navigation provides roslaunch scripts for starting the navigation.'';
+    description = "The turtlebot3_navigation provides roslaunch scripts for starting the navigation.";
     license = with lib.licenses; [ asl20 ];
   };
 }

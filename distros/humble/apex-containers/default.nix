@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-auto ];
 
   meta = {
-    description = ''Containers'';
+    description = "Containers";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The urg_c package'';
+    description = "The urg_c package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

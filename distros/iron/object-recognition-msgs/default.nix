@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Object_recognition_msgs contains the ROS message and the actionlib definition used in object_recognition_core'';
+    description = "Object_recognition_msgs contains the ROS message and the actionlib definition used in object_recognition_core";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

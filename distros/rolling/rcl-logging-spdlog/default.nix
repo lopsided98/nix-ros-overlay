@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Implementation of rcl_logging API for an spdlog backend.'';
+    description = "Implementation of rcl_logging API for an spdlog backend.";
     license = with lib.licenses; [ asl20 ];
   };
 }

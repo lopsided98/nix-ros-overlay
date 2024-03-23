@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Examples of how to use the xpp framework.'';
+    description = "Examples of how to use the xpp framework.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

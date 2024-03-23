@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A templatized interface for overlaying a two dimensional grid on the world.'';
+    description = "A templatized interface for overlaying a two dimensional grid on the world.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

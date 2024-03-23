@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This contains CvBridge, which converts between ROS
-    Image messages and OpenCV images.'';
+    description = "This contains CvBridge, which converts between ROS
+    Image messages and OpenCV images.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

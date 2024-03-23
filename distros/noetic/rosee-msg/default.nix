@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rosee_msg package'';
+    description = "The rosee_msg package";
     license = with lib.licenses; [ asl20 ];
   };
 }

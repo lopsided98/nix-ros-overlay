@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package ];
 
   meta = {
-    description = ''This package provides the Ignition Math 6.x library.'';
+    description = "This package provides the Ignition Math 6.x library.";
     license = with lib.licenses; [ asl20 ];
   };
 }

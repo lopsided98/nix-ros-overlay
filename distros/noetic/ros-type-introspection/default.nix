@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The ros_type_introspection package allows the user to parse and deserialize
-  ROS messages which type is unknown at compilation time.'';
+    description = "The ros_type_introspection package allows the user to parse and deserialize
+  ROS messages which type is unknown at compilation time.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

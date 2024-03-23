@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python nodl-python ros2launch sros2 ];
 
   meta = {
-    description = ''Security extensions for ros2 launch'';
+    description = "Security extensions for ros2 launch";
     license = with lib.licenses; [ asl20 ];
   };
 }

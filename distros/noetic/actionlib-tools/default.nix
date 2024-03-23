@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The actionlib_tools package'';
+    description = "The actionlib_tools package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }
