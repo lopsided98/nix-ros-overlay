@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The diagnostic_analysis package can convert a log of diagnostics data
+    description = "The diagnostic_analysis package can convert a log of diagnostics data
     into a series of CSV files. Robot logs are recorded with rosbag, and
-    can be processed offline using the scripts in this package.'';
+    can be processed offline using the scripts in this package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

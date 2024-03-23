@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Localization using fiducial markers'';
+    description = "Localization using fiducial markers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''swri_string_util'';
+    description = "swri_string_util";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

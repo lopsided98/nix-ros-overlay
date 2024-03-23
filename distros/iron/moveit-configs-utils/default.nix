@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python launch launch-param-builder launch-ros srdfdom ];
 
   meta = {
-    description = ''Python library for loading moveit config parameters in launch files'';
+    description = "Python library for loading moveit config parameters in launch files";
     license = with lib.licenses; [ bsd3 ];
   };
 }

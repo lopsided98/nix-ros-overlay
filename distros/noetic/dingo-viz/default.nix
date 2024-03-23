@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Visualization launchers and helpers for Dingo.'';
+    description = "Visualization launchers and helpers for Dingo.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

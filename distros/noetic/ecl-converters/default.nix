@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Some fast/convenient type converters, mostly for char strings or strings.
+    description = "Some fast/convenient type converters, mostly for char strings or strings.
      These are not really fully fleshed out, alot of them could use the addition for
      the whole range of fundamental types (e.g. all integers, not just int, unsigned int).
      
-     They will come as the need arises.'';
+     They will come as the need arises.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

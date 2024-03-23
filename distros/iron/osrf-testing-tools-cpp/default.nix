@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Testing tools for C++, and is used in various OSRF projects.'';
+    description = "Testing tools for C++, and is used in various OSRF projects.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package holds common configuration files for running the  <a href="http://ros.org/wiki/move_base">move_base</a> node and other navigation related nodes on the <a href="http://ros.org/wiki/care-o-bot">Care-O-bot</a>.'';
+    description = "This package holds common configuration files for running the  <a href=\"http://ros.org/wiki/move_base\">move_base</a> node and other navigation related nodes on the <a href=\"http://ros.org/wiki/care-o-bot\">Care-O-bot</a>.";
     license = with lib.licenses; [ asl20 ];
   };
 }

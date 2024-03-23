@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS 2 package suite of CRANE+ V2'';
+    description = "ROS 2 package suite of CRANE+ V2";
     license = with lib.licenses; [ asl20 ];
   };
 }

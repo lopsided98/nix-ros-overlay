@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A package managing the dispatching of tasks in RMF system.'';
+    description = "A package managing the dispatching of tasks in RMF system.";
     license = with lib.licenses; [ asl20 ];
   };
 }

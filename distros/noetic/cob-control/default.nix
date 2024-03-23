@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''cob_control meta-package'';
+    description = "cob_control meta-package";
     license = with lib.licenses; [ asl20 ];
   };
 }

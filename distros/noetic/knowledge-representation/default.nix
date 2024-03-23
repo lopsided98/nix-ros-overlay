@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''APIs for storing and querying information about the world.
+    description = "APIs for storing and querying information about the world.
     Provides C++ and Python API's to make getting facts in and out easy (while still exposing a full SQL interface).
-        Supports PostgreSQL and MySQL backends.'';
+        Supports PostgreSQL and MySQL backends.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

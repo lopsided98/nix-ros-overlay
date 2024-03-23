@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The tuw_geometry package'';
+    description = "The tuw_geometry package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Minimalist examples of composing nodes in the same
-  process'';
+    description = "Minimalist examples of composing nodes in the same
+  process";
     license = with lib.licenses; [ asl20 ];
   };
 }

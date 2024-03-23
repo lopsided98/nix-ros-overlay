@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Merging multiple maps without knowledge of initial
-  positions of robots.'';
+    description = "Merging multiple maps without knowledge of initial
+  positions of robots.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

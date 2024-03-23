@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rqt_gui_py enables GUI plugins to use the Python client library for ROS.'';
+    description = "rqt_gui_py enables GUI plugins to use the Python client library for ROS.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

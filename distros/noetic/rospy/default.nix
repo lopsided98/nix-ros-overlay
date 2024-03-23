@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rospy is a pure Python client library for ROS. The rospy client
-    API enables Python programmers to quickly interface with ROS <a href="http://ros.org/wiki/Topics">Topics</a>, <a href="http://ros.org/wiki/Services">Services</a>, and <a href="http://ros.org/wiki/Parameter Server">Parameters</a>. The
+    description = "rospy is a pure Python client library for ROS. The rospy client
+    API enables Python programmers to quickly interface with ROS <a href=\"http://ros.org/wiki/Topics\">Topics</a>, <a href=\"http://ros.org/wiki/Services\">Services</a>, and <a href=\"http://ros.org/wiki/Parameter Server\">Parameters</a>. The
     design of rospy favors implementation speed (i.e. developer
     time) over runtime performance so that algorithms can be quickly
     prototyped and tested within ROS. It is also ideal for
@@ -29,9 +29,9 @@ buildRosPackage {
     advantage of the type introspection capabilities.
 
     Many of the ROS tools, such
-    as <a href="http://ros.org/wiki/rostopic">rostopic</a>
-    and <a href="http://ros.org/wiki/rosservice">rosservice</a>, are
-    built on top of rospy.'';
+    as <a href=\"http://ros.org/wiki/rostopic\">rostopic</a>
+    and <a href=\"http://ros.org/wiki/rosservice\">rosservice</a>, are
+    built on top of rospy.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''MoveIt Setup Steps for ROS 2 Control'';
+    description = "MoveIt Setup Steps for ROS 2 Control";
     license = with lib.licenses; [ bsd3 ];
   };
 }

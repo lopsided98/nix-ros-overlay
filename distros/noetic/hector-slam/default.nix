@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The hector_slam metapackage that installs hector_mapping and related packages.'';
+    description = "The hector_slam metapackage that installs hector_mapping and related packages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package modeling the run-time dependencies for language bindings of messages.'';
+    description = "Package modeling the run-time dependencies for language bindings of messages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

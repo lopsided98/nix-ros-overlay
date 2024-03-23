@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros python3Packages.empy ];
 
   meta = {
-    description = ''Package containing various utility types and functions for C'';
+    description = "Package containing various utility types and functions for C";
     license = with lib.licenses; [ asl20 ];
   };
 }

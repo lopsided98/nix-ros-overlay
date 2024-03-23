@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''Central storage of navigation configuration parameters'';
+    description = "Central storage of navigation configuration parameters";
     license = with lib.licenses; [ asl20 ];
   };
 }

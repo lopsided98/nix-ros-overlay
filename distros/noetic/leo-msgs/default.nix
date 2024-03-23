@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Message and Service definitions for Leo Rover'';
+    description = "Message and Service definitions for Leo Rover";
     license = with lib.licenses; [ mit ];
   };
 }

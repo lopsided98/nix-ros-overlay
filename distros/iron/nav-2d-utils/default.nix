@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A handful of useful utility functions for nav_2d packages.'';
+    description = "A handful of useful utility functions for nav_2d packages.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

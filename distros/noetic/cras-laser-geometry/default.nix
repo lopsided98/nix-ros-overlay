@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Tools for working with laser scans.'';
+    description = "Tools for working with laser scans.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''RealSense description package for Intel 3D D400 cameras'';
+    description = "RealSense description package for Intel 3D D400 cameras";
     license = with lib.licenses; [ asl20 ];
   };
 }

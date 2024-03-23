@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS control warped interface for RoboMaster motor and some robot hardware'';
+    description = "ROS control warped interface for RoboMaster motor and some robot hardware";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

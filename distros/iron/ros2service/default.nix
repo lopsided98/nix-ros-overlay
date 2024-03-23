@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.pyyaml rclpy ros2cli rosidl-runtime-py ];
 
   meta = {
-    description = ''The service command for ROS 2 command line tools.'';
+    description = "The service command for ROS 2 command line tools.";
     license = with lib.licenses; [ asl20 ];
   };
 }

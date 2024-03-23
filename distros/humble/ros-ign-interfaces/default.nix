@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Shim package to redirect to ros_gz_interfaces.'';
+    description = "Shim package to redirect to ros_gz_interfaces.";
     license = with lib.licenses; [ asl20 ];
   };
 }

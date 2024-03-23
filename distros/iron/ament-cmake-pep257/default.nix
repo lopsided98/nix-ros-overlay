@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-pep257 ];
 
   meta = {
-    description = ''The CMake API for ament_pep257 to check code against the docstring style conventions in
-    PEP 257.'';
+    description = "The CMake API for ament_pep257 to check code against the docstring style conventions in
+    PEP 257.";
     license = with lib.licenses; [ asl20 ];
   };
 }

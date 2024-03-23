@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS message definitions for Velodyne 3D LIDARs.'';
+    description = "ROS message definitions for Velodyne 3D LIDARs.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

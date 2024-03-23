@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''Wrapper around qpOASES to make it available to the ROS ecosystem.'';
+    description = "Wrapper around qpOASES to make it available to the ROS ecosystem.";
     license = with lib.licenses; [ asl20 "LGPL" ];
   };
 }

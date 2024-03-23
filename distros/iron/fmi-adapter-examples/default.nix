@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Provides small examples for use of the fmi_adapter package'';
+    description = "Provides small examples for use of the fmi_adapter package";
     license = with lib.licenses; [ asl20 ];
   };
 }

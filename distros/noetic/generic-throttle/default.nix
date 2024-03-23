@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''This package provides a throttle for ROS topics'';
+    description = "This package provides a throttle for ROS topics";
     license = with lib.licenses; [ asl20 ];
   };
 }

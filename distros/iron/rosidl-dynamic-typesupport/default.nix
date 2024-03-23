@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Unified serialization support interface for dynamic typesupport in C.'';
+    description = "Unified serialization support interface for dynamic typesupport in C.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Demonstration of drive-by-wire with joystick'';
+    description = "Demonstration of drive-by-wire with joystick";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''jsk_footstep_planner'';
+    description = "jsk_footstep_planner";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

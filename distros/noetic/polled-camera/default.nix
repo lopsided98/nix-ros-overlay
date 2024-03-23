@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''polled_camera contains a service and C++ helper classes for implementing a polled
+    description = "polled_camera contains a service and C++ helper classes for implementing a polled
      camera driver node and requesting images from it. The package is currently for
-     internal use as the API is still under development.'';
+     internal use as the API is still under development.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

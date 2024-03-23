@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains several rviz plugins to visualize HRI-related topics (like face/body region of interests, 3D skeletons...)'';
+    description = "This package contains several rviz plugins to visualize HRI-related topics (like face/body region of interests, 3D skeletons...)";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

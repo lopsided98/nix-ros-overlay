@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The log_view package provides a ncurses based terminal GUI for
+    description = "The log_view package provides a ncurses based terminal GUI for
     viewing and filtering published ROS log messages.
 
     This is an alternative to rqt_console and swri_console that doesn't depend
-    on qt and can be run directly in a terminal.'';
+    on qt and can be run directly in a terminal.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

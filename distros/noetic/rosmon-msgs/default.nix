@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages for rosmon, the node launcher and monitor for ROS.
+    description = "Messages for rosmon, the node launcher and monitor for ROS.
 		rosmon is a replacement for the roslaunch tool, focused on performance,
-		remote monitoring, and usability.'';
+		remote monitoring, and usability.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

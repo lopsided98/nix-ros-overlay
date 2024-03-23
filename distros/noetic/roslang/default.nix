@@ -18,8 +18,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''roslang is a common package that all <a href="http://www.ros.org/wiki/Client%20Libraries">ROS client libraries</a> depend on.
-    This is mainly used to find client libraries (via 'rospack depends-on1 roslang').'';
+    description = "roslang is a common package that all <a href=\"http://www.ros.org/wiki/Client%20Libraries\">ROS client libraries</a> depend on.
+    This is mainly used to find client libraries (via 'rospack depends-on1 roslang').";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The ros client for roboception tag detection modules'';
+    description = "The ros client for roboception tag detection modules";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

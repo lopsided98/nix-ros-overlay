@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Google drive upload and download package'';
+    description = "Google drive upload and download package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

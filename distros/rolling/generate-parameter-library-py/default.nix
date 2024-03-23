@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3 python3Packages.jinja2 python3Packages.pyyaml python3Packages.typeguard ];
 
   meta = {
-    description = ''Python to generate ROS parameter library.'';
+    description = "Python to generate ROS parameter library.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''PMB2 robot description and launch files'';
+    description = "PMB2 robot description and launch files";
     license = with lib.licenses; [ asl20 ];
   };
 }

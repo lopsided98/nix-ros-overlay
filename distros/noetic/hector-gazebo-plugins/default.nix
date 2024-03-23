@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''hector_gazebo_plugins provides gazebo plugins from Team Hector.
+    description = "hector_gazebo_plugins provides gazebo plugins from Team Hector.
      Currently it contains a 6wd differential drive plugin, an IMU sensor plugin,
      an earth magnetic field sensor plugin, a GPS sensor plugin and a
-     sonar ranger plugin.'';
+     sonar ranger plugin.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

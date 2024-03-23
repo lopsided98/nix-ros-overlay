@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''The mqtt_bridge package'';
+    description = "The mqtt_bridge package";
     license = with lib.licenses; [ mit ];
   };
 }

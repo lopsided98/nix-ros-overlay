@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Interfaces for the sick_safetyscanners ros2 driver'';
+    description = "Interfaces for the sick_safetyscanners ros2 driver";
     license = with lib.licenses; [ "ALv2" ];
   };
 }

@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides a set of tools/actions for manipulating the pr2's tilting
+    description = "Provides a set of tools/actions for manipulating the pr2's tilting
     laser. Simplifies previously complex tasks, such as fetching
     a single sweep, given a set of desired parameters for both the laser
-    driver and tilting platform.'';
+    driver and tilting platform.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

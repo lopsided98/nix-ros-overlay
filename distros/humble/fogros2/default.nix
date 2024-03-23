@@ -18,8 +18,8 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.boto3 python3Packages.paramiko python3Packages.scp rmw-cyclonedds-cpp ros2cli wireguard-tools ];
 
   meta = {
-    description = ''A ROS 2 extension for the cloud deployment of computational graphs in a cloud-provider
-    agnostic and security-conscious manner.'';
+    description = "A ROS 2 extension for the cloud deployment of computational graphs in a cloud-provider
+    agnostic and security-conscious manner.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A common repository for CMake Modules which are not distributed with CMake but are commonly used by ROS packages.'';
+    description = "A common repository for CMake Modules which are not distributed with CMake but are commonly used by ROS packages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

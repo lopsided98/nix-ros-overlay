@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''CRANE+ V2 gazebo simulation package'';
+    description = "CRANE+ V2 gazebo simulation package";
     license = with lib.licenses; [ asl20 ];
   };
 }

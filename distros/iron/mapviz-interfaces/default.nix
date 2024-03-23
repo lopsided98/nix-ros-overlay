@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ rosidl-default-generators ];
 
   meta = {
-    description = ''ROS interfaces used by Mapviz'';
+    description = "ROS interfaces used by Mapviz";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

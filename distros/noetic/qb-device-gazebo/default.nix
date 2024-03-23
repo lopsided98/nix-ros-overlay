@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains the Gazebo ROS control custom dependencies for qbrobotics® devices.'';
+    description = "This package contains the Gazebo ROS control custom dependencies for qbrobotics® devices.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

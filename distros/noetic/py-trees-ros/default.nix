@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Ros extensions and behaviours for py_trees.'';
+    description = "Ros extensions and behaviours for py_trees.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

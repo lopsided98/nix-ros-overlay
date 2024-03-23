@@ -20,11 +20,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''MAVLink communication library.
+    description = "MAVLink communication library.
     This library provide unified connection handling classes
     and URL to connection object mapper.
 
-    This library can be used in standalone programs.'';
+    This library can be used in standalone programs.";
     license = with lib.licenses; [ gpl3Only lgpl3Only bsdOriginal ];
   };
 }

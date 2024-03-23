@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Contains a set of tutorials that run 2D-Navigation within Stage-Simulator.'';
+    description = "Contains a set of tutorials that run 2D-Navigation within Stage-Simulator.";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

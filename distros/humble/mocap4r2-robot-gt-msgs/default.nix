@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''mocap4r2_robot_gt_msgs'';
+    description = "mocap4r2_robot_gt_msgs";
     license = with lib.licenses; [ asl20 ];
   };
 }

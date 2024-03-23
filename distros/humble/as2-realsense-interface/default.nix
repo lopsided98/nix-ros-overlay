@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Intel Realsense cameras driver'';
+    description = "Intel Realsense cameras driver";
     license = with lib.licenses; [ bsd3 ];
   };
 }

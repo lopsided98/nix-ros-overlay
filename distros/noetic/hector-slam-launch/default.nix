@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''hector_slam_launch contains launch files for launching hector_slam with different robot systems/setups/postprocessing scenarios.'';
+    description = "hector_slam_launch contains launch files for launching hector_slam with different robot systems/setups/postprocessing scenarios.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

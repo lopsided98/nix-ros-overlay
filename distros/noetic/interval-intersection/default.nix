@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Tools for calculating the intersection of interval messages coming
+    description = "Tools for calculating the intersection of interval messages coming
     in on several topics. This package is experimental and unstable.
-    Expect its APIs to change.'';
+    Expect its APIs to change.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

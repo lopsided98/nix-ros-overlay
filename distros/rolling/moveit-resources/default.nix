@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Resources used for MoveIt testing'';
+    description = "Resources used for MoveIt testing";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

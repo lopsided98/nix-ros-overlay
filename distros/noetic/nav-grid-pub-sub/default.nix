@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Publishers and Subscribers for nav_grid data.'';
+    description = "Publishers and Subscribers for nav_grid data.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Basic rcss3d agent node that uses rcss3d_agent_msgs'';
+    description = "Basic rcss3d agent node that uses rcss3d_agent_msgs";
     license = with lib.licenses; [ asl20 ];
   };
 }

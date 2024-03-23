@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-gmock ament-cmake-gtest cmake ];
 
   meta = {
-    description = ''A lightweight multivehicle simulation framework.'';
+    description = "A lightweight multivehicle simulation framework.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

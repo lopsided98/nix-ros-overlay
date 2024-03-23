@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''An example package with MoveIt2 configurations for UR robots.'';
+    description = "An example package with MoveIt2 configurations for UR robots.";
     license = with lib.licenses; [ asl20 ];
   };
 }

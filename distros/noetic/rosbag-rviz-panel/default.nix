@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rosbag_rviz_panel package'';
+    description = "The rosbag_rviz_panel package";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''NovAtel Oem7 ROS Driver'';
+    description = "NovAtel Oem7 ROS Driver";
     license = with lib.licenses; [ mit ];
   };
 }

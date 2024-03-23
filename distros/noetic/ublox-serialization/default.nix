@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ublox_serialization provides header files for serialization of ROS messages to and from u-blox message format.'';
+    description = "ublox_serialization provides header files for serialization of ROS messages to and from u-blox message format.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

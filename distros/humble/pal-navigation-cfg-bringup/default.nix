@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''Central storage of PAL Navigation launch files'';
+    description = "Central storage of PAL Navigation launch files";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python python-qt-binding python3Packages.pyyaml qt-gui-py-common rclpy rqt-console rqt-gui rqt-gui-py rqt-py-common ];
 
   meta = {
-    description = ''This rqt plugin provides a way to view and edit parameters on nodes.'';
+    description = "This rqt plugin provides a way to view and edit parameters on nodes.";
     license = with lib.licenses; [ bsdOriginal asl20 ];
   };
 }

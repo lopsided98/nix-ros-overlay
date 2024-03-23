@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pr2_self_test package'';
+    description = "The pr2_self_test package";
     license = with lib.licenses; [ "TODO-CATKIN-PACKAGE-LICENSE" ];
   };
 }

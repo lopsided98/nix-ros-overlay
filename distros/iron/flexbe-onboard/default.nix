@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ flexbe-core flexbe-msgs flexbe-states launch-ros rclpy ];
 
   meta = {
-    description = ''flexbe_onboard implements the robot-side of the behavior engine from where all behaviors are started.'';
+    description = "flexbe_onboard implements the robot-side of the behavior engine from where all behaviors are started.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

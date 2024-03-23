@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''rqt_runtime_monitor provides a GUI plugin viewing DiagnosticsArray messages.'';
+    description = "rqt_runtime_monitor provides a GUI plugin viewing DiagnosticsArray messages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

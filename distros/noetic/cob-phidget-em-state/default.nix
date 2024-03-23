@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_phidget_em_state package publishes emergency state based on phidgets signals.'';
+    description = "The cob_phidget_em_state package publishes emergency state based on phidgets signals.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-export-dependencies ];
 
   meta = {
-    description = ''The list of commonly used linters in the ament build system in CMake.'';
+    description = "The list of commonly used linters in the ament build system in CMake.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.pyyaml ];
 
   meta = {
-    description = ''Clearpath Configuration YAML Parser and Writer'';
+    description = "Clearpath Configuration YAML Parser and Writer";
     license = with lib.licenses; [ bsd3 ];
   };
 }

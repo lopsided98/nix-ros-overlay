@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Package to communicate DJI Tello drones with Aerostack2 framework'';
+    description = "Package to communicate DJI Tello drones with Aerostack2 framework";
     license = with lib.licenses; [ bsd3 ];
   };
 }

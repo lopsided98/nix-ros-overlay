@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''SciPy-based Python solvers for Exotica'';
+    description = "SciPy-based Python solvers for Exotica";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

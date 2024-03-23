@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Provides custom message, srv and action types for psdk ros2 wrapper'';
+    description = "Provides custom message, srv and action types for psdk ros2 wrapper";
     license = with lib.licenses; [ "MPL" ];
   };
 }

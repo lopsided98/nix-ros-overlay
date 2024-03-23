@@ -17,7 +17,7 @@ buildRosPackage {
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
 
   meta = {
-    description = ''Python API to access the ament resource index.'';
+    description = "Python API to access the ament resource index.";
     license = with lib.licenses; [ asl20 ];
   };
 }

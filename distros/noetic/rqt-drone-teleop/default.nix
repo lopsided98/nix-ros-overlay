@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A common drone teleop interface for all drone exercises in the JdeRobot Robotics Academy'';
+    description = "A common drone teleop interface for all drone exercises in the JdeRobot Robotics Academy";
     license = with lib.licenses; [ mit ];
   };
 }

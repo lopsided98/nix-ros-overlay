@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''This package contains tools for the discovery of Roboception devices via GigE Vision.'';
+    description = "This package contains tools for the discovery of Roboception devices via GigE Vision.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

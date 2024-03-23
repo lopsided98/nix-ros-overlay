@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Core (meta) plugins for MoveIt Setup Assistant'';
+    description = "Core (meta) plugins for MoveIt Setup Assistant";
     license = with lib.licenses; [ bsd3 ];
   };
 }

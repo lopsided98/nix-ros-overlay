@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ];
 
   meta = {
-    description = ''Common support functionality used throughout the navigation 2 stack'';
+    description = "Common support functionality used throughout the navigation 2 stack";
     license = with lib.licenses; [ asl20 ];
   };
 }

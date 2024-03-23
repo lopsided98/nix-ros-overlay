@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Contains aligned allocation functions, as well as an STL-compatible AlignedAllocator class.'';
+    description = "Contains aligned allocation functions, as well as an STL-compatible AlignedAllocator class.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

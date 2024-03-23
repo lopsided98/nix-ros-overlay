@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Packages that allow communicating with the NAO’s Lola middle-ware.'';
+    description = "Packages that allow communicating with the NAO’s Lola middle-ware.";
     license = with lib.licenses; [ asl20 ];
   };
 }

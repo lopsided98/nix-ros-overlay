@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains the list of supported robots within the care-o-bot family.'';
+    description = "This package contains the list of supported robots within the care-o-bot family.";
     license = with lib.licenses; [ asl20 ];
   };
 }

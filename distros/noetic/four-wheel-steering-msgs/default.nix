@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS messages for robots using FourWheelSteering.'';
+    description = "ROS messages for robots using FourWheelSteering.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

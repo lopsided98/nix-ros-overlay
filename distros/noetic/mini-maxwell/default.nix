@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''mini_maxwell'';
+    description = "mini_maxwell";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

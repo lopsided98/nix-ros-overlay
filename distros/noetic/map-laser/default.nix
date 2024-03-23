@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Filters a laser scan to remove points that are in the current static map'';
+    description = "Filters a laser scan to remove points that are in the current static map";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

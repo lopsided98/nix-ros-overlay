@@ -18,8 +18,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''This package provides documentation on common interface conventions for
-    drive-by-wire systems.'';
+    description = "This package provides documentation on common interface conventions for
+    drive-by-wire systems.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rosservice contains the rosservice command-line tool for listing
-    and querying ROS <a href="http://wiki.ros.org/Services">Services</a>. It also
+    description = "rosservice contains the rosservice command-line tool for listing
+    and querying ROS <a href=\"http://wiki.ros.org/Services\">Services</a>. It also
     contains a Python library for retrieving information about
     Services and dynamically invoking them. The Python library is
-    experimental and is for internal-use only.'';
+    experimental and is for internal-use only.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

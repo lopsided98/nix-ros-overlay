@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Graphical frontend for interacting with joint_trajectory_controller instances.'';
+    description = "Graphical frontend for interacting with joint_trajectory_controller instances.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

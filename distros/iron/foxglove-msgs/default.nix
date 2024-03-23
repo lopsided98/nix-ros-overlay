@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''foxglove_msgs provides visualization messages that are supported by Foxglove Studio.'';
+    description = "foxglove_msgs provides visualization messages that are supported by Foxglove Studio.";
     license = with lib.licenses; [ mit ];
   };
 }

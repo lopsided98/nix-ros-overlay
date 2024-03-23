@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Common rviz API, used by rviz plugins and applications.'';
+    description = "Common rviz API, used by rviz plugins and applications.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

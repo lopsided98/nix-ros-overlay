@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''EusLisp software developed and used by JSK at The University of Tokyo'';
+    description = "EusLisp software developed and used by JSK at The University of Tokyo";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS-Industrial core stack contains packages and libraries for supporing industrial systems'';
+    description = "ROS-Industrial core stack contains packages and libraries for supporing industrial systems";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Launchfiles to use Ridgeback in Gazebo.'';
+    description = "Launchfiles to use Ridgeback in Gazebo.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,14 +19,14 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A ROS wrapper of the AprilTag 3 visual fiducial detection
+    description = "A ROS wrapper of the AprilTag 3 visual fiducial detection
     algorithm. Provides full access to the core AprilTag 3 algorithm's
     customizations and makes the tag detection image and detected tags' poses
     available over ROS topics (including tf). The core AprilTag 3 algorithm is
     extended to allow the detection of tag bundles and a bundle calibration
     script is provided (bundle detection is more accurate than single tag
     detection). Continuous (camera image stream) and single image detector nodes
-    are available.'';
+    are available.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

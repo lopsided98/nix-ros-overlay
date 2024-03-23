@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python composition-interfaces launch lifecycle-msgs osrf-pycommon python3Packages.importlib-metadata python3Packages.pyyaml rclpy ];
 
   meta = {
-    description = ''ROS specific extensions to the launch tool.'';
+    description = "ROS specific extensions to the launch tool.";
     license = with lib.licenses; [ asl20 ];
   };
 }

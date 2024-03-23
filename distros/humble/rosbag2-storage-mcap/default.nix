@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''rosbag2 storage plugin using the MCAP file format'';
+    description = "rosbag2 storage plugin using the MCAP file format";
     license = with lib.licenses; [ asl20 ];
   };
 }

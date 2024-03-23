@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''This package contains the C++ ROS bindings for the tf2 library'';
+    description = "This package contains the C++ ROS bindings for the tf2 library";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

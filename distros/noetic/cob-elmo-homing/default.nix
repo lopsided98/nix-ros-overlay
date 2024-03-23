@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This packagae implements the special homing procedure that is needed for old cob4/raw bases'';
+    description = "This packagae implements the special homing procedure that is needed for old cob4/raw bases";
     license = with lib.licenses; [ asl20 ];
   };
 }

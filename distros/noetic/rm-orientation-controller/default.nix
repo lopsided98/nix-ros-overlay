@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''RoboMaster standard robot orientation controller'';
+    description = "RoboMaster standard robot orientation controller";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Vendor library for SDL2.'';
+    description = "Vendor library for SDL2.";
     license = with lib.licenses; [ asl20 ];
   };
 }

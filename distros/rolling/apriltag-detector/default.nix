@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-auto ament-cmake-ros ];
 
   meta = {
-    description = ''ROS package for apriltag detection'';
+    description = "ROS package for apriltag detection";
     license = with lib.licenses; [ asl20 ];
   };
 }

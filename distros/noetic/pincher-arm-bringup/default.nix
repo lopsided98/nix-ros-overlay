@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Launch files for starting PhantomX Pincher arm drivers.'';
+    description = "Launch files for starting PhantomX Pincher arm drivers.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

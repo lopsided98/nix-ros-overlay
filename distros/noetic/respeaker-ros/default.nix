@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The respeaker_ros package'';
+    description = "The respeaker_ros package";
     license = with lib.licenses; [ "Apache" ];
   };
 }

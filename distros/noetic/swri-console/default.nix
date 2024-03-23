@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A rosout GUI viewer developed at Southwest Research Insititute as an
-     alternative to rqt_console.'';
+    description = "A rosout GUI viewer developed at Southwest Research Insititute as an
+     alternative to rqt_console.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

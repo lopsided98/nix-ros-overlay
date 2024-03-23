@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ builtin-interfaces rclpy std-msgs webots-ros2-control webots-ros2-driver webots-ros2-epuck webots-ros2-importer webots-ros2-mavic webots-ros2-msgs webots-ros2-tesla webots-ros2-tiago webots-ros2-turtlebot webots-ros2-universal-robot ];
 
   meta = {
-    description = ''Interface between Webots and ROS2'';
+    description = "Interface between Webots and ROS2";
     license = with lib.licenses; [ asl20 ];
   };
 }

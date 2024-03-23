@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Raspberry Pi Mouse examples'';
+    description = "Raspberry Pi Mouse examples";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ action-msgs geometry-msgs lifecycle-msgs nav2-msgs rclpy ];
 
   meta = {
-    description = ''An importable library for writing mobile robot applications in python3'';
+    description = "An importable library for writing mobile robot applications in python3";
     license = with lib.licenses; [ asl20 ];
   };
 }

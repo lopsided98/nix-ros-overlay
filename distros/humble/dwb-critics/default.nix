@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The dwb_critics package'';
+    description = "The dwb_critics package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

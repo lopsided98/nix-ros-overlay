@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''Launch files to upload the robot description and start the controllers'';
+    description = "Launch files to upload the robot description and start the controllers";
     license = with lib.licenses; [ asl20 ];
   };
 }

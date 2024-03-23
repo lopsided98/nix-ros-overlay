@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Node that collects statistics from topics and sends them to carbon'';
+    description = "Node that collects statistics from topics and sends them to carbon";
     license = with lib.licenses; [ mit ];
   };
 }

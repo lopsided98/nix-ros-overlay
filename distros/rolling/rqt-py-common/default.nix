@@ -20,13 +20,13 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''rqt_py_common provides common functionality for rqt plugins written in Python.
+    description = "rqt_py_common provides common functionality for rqt plugins written in Python.
     Despite no plugin is provided, this package is part of the rqt_common_plugins
     repository to keep refactoring generic functionality from these common plugins
     into this package as easy as possible.
 
     Functionality included in this package should cover generic ROS concepts and
-    should not introduce any special dependencies beside &quot;ros_base&quot;.'';
+    should not introduce any special dependencies beside &quot;ros_base&quot;.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

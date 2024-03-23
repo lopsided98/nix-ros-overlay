@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''laser_tilt_controller_filter'';
+    description = "laser_tilt_controller_filter";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''SQLite 3 vendor package'';
+    description = "SQLite 3 vendor package";
     license = with lib.licenses; [ asl20 ];
   };
 }

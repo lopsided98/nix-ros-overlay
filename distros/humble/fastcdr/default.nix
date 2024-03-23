@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''CDR serialization implementation.'';
+    description = "CDR serialization implementation.";
     license = with lib.licenses; [ asl20 ];
   };
 }

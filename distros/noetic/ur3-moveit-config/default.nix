@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''An automatically generated package with all the configuration and launch files for using the ur3 with the MoveIt Motion Planning Framework'';
+    description = "An automatically generated package with all the configuration and launch files for using the ur3 with the MoveIt Motion Planning Framework";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

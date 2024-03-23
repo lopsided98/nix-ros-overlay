@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Common statistical structures and algorithms for control systems.'';
+    description = "Common statistical structures and algorithms for control systems.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

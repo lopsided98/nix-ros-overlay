@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The trac_ik_python package contains a python wrapper using SWIG
-  for trac_ik_lib'';
+    description = "The trac_ik_python package contains a python wrapper using SWIG
+  for trac_ik_lib";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

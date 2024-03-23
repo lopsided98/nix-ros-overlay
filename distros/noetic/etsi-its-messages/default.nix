@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS support for ETSI ITS messages'';
+    description = "ROS support for ETSI ITS messages";
     license = with lib.licenses; [ mit ];
   };
 }

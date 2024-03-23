@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Holds maps of Willow Garage that can be used for a number of different applications.'';
+    description = "Holds maps of Willow Garage that can be used for a number of different applications.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

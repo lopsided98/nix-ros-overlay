@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Hierarchical task solver plug-in for dynamic-graph'';
+    description = "Hierarchical task solver plug-in for dynamic-graph";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

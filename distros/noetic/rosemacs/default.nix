@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS tools for those who live in Emacs.'';
+    description = "ROS tools for those who live in Emacs.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

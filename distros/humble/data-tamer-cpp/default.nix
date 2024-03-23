@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''DataTamer data logging library'';
+    description = "DataTamer data logging library";
     license = with lib.licenses; [ mit ];
   };
 }

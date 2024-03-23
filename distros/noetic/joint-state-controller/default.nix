@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Controller to publish joint state'';
+    description = "Controller to publish joint state";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

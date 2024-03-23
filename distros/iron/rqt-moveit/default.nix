@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ python3Packages.setuptools rosidl-default-generators ];
 
   meta = {
-    description = ''An rqt-based tool that assists monitoring tasks
-   for <a href="http://ros.org/wiki/moveit">MoveIt!</a> motion planner
+    description = "An rqt-based tool that assists monitoring tasks
+   for <a href=\"http://ros.org/wiki/moveit\">MoveIt!</a> motion planner
    developers and users. Currently the following items are monitored if they
    are either running, existing or published:
    <ul>
@@ -32,7 +32,7 @@ buildRosPackage {
    </ul>
    Since this package is not made by the MoveIt! development team (although with
    assistance from the them), please post issue reports to the designated
-   tracker (not MoveIt!'s main tracker).'';
+   tracker (not MoveIt!'s main tracker).";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

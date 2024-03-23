@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Smoother action interface'';
+    description = "Smoother action interface";
     license = with lib.licenses; [ asl20 ];
   };
 }

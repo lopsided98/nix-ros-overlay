@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The gripper_controllers package'';
+    description = "The gripper_controllers package";
     license = with lib.licenses; [ asl20 ];
   };
 }

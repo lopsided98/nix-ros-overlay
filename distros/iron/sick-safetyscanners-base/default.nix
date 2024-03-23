@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Provides an Interface to read the sensor output of a SICK
-  Safety Scanner'';
+    description = "Provides an Interface to read the sensor output of a SICK
+  Safety Scanner";
     license = with lib.licenses; [ "ALv2" ];
   };
 }

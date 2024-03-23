@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''opt_camera'';
+    description = "opt_camera";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

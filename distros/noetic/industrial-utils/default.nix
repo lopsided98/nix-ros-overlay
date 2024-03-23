@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Industrial utils is a library package that captures common funcitonality for the ROS-Industrial distribution.'';
+    description = "Industrial utils is a library package that captures common funcitonality for the ROS-Industrial distribution.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

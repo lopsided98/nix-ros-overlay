@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''TLSF allocator version 2.4.6'';
+    description = "TLSF allocator version 2.4.6";
     license = with lib.licenses; [ "LGPL-2.1-only" ];
   };
 }

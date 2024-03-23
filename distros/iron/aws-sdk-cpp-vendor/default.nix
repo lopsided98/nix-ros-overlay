@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package curl ];
 
   meta = {
-    description = ''A vendor package for aws-sdk-cpp'';
+    description = "A vendor package for aws-sdk-cpp";
     license = with lib.licenses; [ asl20 ];
   };
 }

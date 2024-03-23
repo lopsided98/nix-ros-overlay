@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The quanergy_client_ros package provides a ROS driver for Quanergy sensors'';
+    description = "The quanergy_client_ros package provides a ROS driver for Quanergy sensors";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS-2 Simulation packages for neobotix robots'';
+    description = "ROS-2 Simulation packages for neobotix robots";
     license = with lib.licenses; [ mit ];
   };
 }

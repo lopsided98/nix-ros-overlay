@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Precisely stamped URG driver for ROS'';
+    description = "Precisely stamped URG driver for ROS";
     license = with lib.licenses; [ asl20 ];
   };
 }

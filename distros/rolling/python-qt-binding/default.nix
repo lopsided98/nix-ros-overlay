@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''This stack provides Python bindings for Qt.
+    description = "This stack provides Python bindings for Qt.
     There are two providers: pyside and pyqt.  PySide2 is available under
     the GPL, LGPL and a commercial license.  PyQt is released under the GPL.
 
@@ -30,7 +30,7 @@ buildRosPackage {
 
     Also provided is adapter code to make the user's Python code
     independent of which binding provider was actually used which makes
-    it very easy to switch between these.'';
+    it very easy to switch between these.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

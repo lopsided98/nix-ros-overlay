@@ -17,7 +17,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rqt-gui rqt-gui-cpp rqt-gui-py rqt-py-common ];
 
   meta = {
-    description = ''rqt is a Qt-based framework for GUI development for ROS.'';
+    description = "rqt is a Qt-based framework for GUI development for ROS.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

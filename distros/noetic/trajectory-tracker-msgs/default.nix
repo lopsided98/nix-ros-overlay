@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Message definitions for trajectory_tracker package'';
+    description = "Message definitions for trajectory_tracker package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

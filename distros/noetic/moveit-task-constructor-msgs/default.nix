@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages for MoveIt Task Pipeline'';
+    description = "Messages for MoveIt Task Pipeline";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

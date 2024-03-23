@@ -20,12 +20,12 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''This package retrieves data from url-format files such as http://,
+    description = "This package retrieves data from url-format files such as http://,
    ftp://, package:// file://, etc., and loads the data into memory.
    The package:// url for ros packages is translated into a local
    file:// url.  The resourse retriever was initially designed to load
    mesh files into memory, but it can be used for any type of
-   data. The resource retriever is based on the the libcurl library.'';
+   data. The resource retriever is based on the the libcurl library.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

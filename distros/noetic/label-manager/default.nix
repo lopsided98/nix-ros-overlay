@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Serving and persisting label information'';
+    description = "Serving and persisting label information";
     license = with lib.licenses; [ bsd3 ];
   };
 }

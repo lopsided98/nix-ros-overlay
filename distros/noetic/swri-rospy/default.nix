@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''This package provides added functionality on top of rospy, including a
-  single-threaded callback queue.'';
+    description = "This package provides added functionality on top of rospy, including a
+  single-threaded callback queue.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

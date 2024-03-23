@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ geometry-msgs python3Packages.requests rc-reason-msgs rclpy ros2pkg tf2-msgs visualization-msgs ];
 
   meta = {
-    description = ''Clients for interfacing with Roboception reason modules on rc_visard and rc_cube.'';
+    description = "Clients for interfacing with Roboception reason modules on rc_visard and rc_cube.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

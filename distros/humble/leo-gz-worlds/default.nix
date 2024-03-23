@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Gazebo worlds for Leo Rover simulation in ROS 2'';
+    description = "Gazebo worlds for Leo Rover simulation in ROS 2";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-auto ament-cmake-python ament-cmake-ros python-cmake-module ];
 
   meta = {
-    description = ''Python access for event_camera_msgs.'';
+    description = "Python access for event_camera_msgs.";
     license = with lib.licenses; [ asl20 ];
   };
 }

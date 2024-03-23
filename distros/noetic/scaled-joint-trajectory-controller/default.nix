@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides controllers that use the speed scaling interface.'';
+    description = "Provides controllers that use the speed scaling interface.";
     license = with lib.licenses; [ asl20 bsd3 ];
   };
 }

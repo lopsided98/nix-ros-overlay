@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Generic joystick teleop for twist robots.'';
+    description = "Generic joystick teleop for twist robots.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

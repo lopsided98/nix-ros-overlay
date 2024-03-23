@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Libraries and utilities for embedded and low-level linux development.'';
+    description = "Libraries and utilities for embedded and low-level linux development.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

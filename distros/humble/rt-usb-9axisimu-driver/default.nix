@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The rt_usb_9axisimu_driver package'';
+    description = "The rt_usb_9axisimu_driver package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

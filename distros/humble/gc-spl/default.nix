@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ gc-spl-interfaces python3Packages.construct rclpy ];
 
   meta = {
-    description = ''GameController-Robot communication in RoboCup SPL'';
+    description = "GameController-Robot communication in RoboCup SPL";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Persistent storage of ROS messages'';
+    description = "Persistent storage of ROS messages";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

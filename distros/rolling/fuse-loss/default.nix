@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''The fuse_loss package provides a set of commonly used loss functions, such as the basic ones provided by Ceres.'';
+    description = "The fuse_loss package provides a set of commonly used loss functions, such as the basic ones provided by Ceres.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

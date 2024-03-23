@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''A package containing some diagnostics related message and service definitions.'';
+    description = "A package containing some diagnostics related message and service definitions.";
     license = with lib.licenses; [ asl20 ];
   };
 }

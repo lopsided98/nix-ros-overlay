@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python generate-parameter-library-py ];
 
   meta = {
-    description = ''CMake to generate ROS parameter library.'';
+    description = "CMake to generate ROS parameter library.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

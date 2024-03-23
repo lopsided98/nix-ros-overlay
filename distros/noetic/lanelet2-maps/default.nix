@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin mrt-cmake-modules ];
 
   meta = {
-    description = ''Example maps in the lanelet2-format'';
+    description = "Example maps in the lanelet2-format";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

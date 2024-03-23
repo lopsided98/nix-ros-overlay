@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Universal grid map library to manage two-dimensional grid maps with multiple data layers.'';
+    description = "Universal grid map library to manage two-dimensional grid maps with multiple data layers.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

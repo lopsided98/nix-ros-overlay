@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains a C++ base class for URDF parsers.'';
+    description = "This package contains a C++ base class for URDF parsers.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

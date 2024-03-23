@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This stack includes packages that provide access to the Schunk hardware through ROS messages, services and actions.'';
+    description = "This stack includes packages that provide access to the Schunk hardware through ROS messages, services and actions.";
     license = with lib.licenses; [ asl20 ];
   };
 }

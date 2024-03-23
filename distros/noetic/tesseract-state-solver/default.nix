@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The state solver for tesseract_scene_graph'';
+    description = "The state solver for tesseract_scene_graph";
     license = with lib.licenses; [ asl20 ];
   };
 }

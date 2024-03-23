@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Twist multiplexer, which multiplex several velocity commands (topics) and
-      allows to priorize or disable them (locks).'';
+    description = "Twist multiplexer, which multiplex several velocity commands (topics) and
+      allows to priorize or disable them (locks).";
     license = with lib.licenses; [ cc-by-nc-sa-40 ];
   };
 }

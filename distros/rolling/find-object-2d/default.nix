@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The find_object_2d package'';
+    description = "The find_object_2d package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

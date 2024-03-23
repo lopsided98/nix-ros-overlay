@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Path following control package for wheeled mobile robot'';
+    description = "Path following control package for wheeled mobile robot";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

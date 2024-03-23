@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A reverse ROS bridge for the MiR robot'';
+    description = "A reverse ROS bridge for the MiR robot";
     license = with lib.licenses; [ bsdOriginal asl20 ];
   };
 }

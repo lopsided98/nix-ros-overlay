@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Message definitions for CARET'';
+    description = "Message definitions for CARET";
     license = with lib.licenses; [ asl20 ];
   };
 }

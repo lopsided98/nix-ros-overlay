@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-clang-format ament-cmake-core ament-cmake-test ];
 
   meta = {
-    description = ''The CMake API for ament_clang_format to lint C / C++ code using clang format.'';
+    description = "The CMake API for ament_clang_format to lint C / C++ code using clang format.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains a number of scripts to set various components of the PR2. They are used in the apps to improve usablity.'';
+    description = "This package contains a number of scripts to set various components of the PR2. They are used in the apps to improve usablity.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

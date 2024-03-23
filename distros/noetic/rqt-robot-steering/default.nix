@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rqt_robot_steering provides a GUI plugin for steering a robot using Twist messages.'';
+    description = "rqt_robot_steering provides a GUI plugin for steering a robot using Twist messages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

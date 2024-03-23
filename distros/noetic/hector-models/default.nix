@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''hector_models contains (urdf) models of robots, sensors etc.'';
+    description = "hector_models contains (urdf) models of robots, sensors etc.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

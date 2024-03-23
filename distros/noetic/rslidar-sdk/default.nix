@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rslidar_sdk package'';
+    description = "The rslidar_sdk package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

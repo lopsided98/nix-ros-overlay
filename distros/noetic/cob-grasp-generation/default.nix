@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Grasp generation for Care-O-bot based on OpenRAVE'';
+    description = "Grasp generation for Care-O-bot based on OpenRAVE";
     license = with lib.licenses; [ asl20 ];
   };
 }

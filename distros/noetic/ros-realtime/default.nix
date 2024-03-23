@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The ros_realtime package'';
+    description = "The ros_realtime package";
     license = with lib.licenses; [ "TODO-CATKIN-PACKAGE-LICENSE" ];
   };
 }

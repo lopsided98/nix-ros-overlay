@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''This package includes ROS messages and services for dynamixel_workbench packages'';
+    description = "This package includes ROS messages and services for dynamixel_workbench packages";
     license = with lib.licenses; [ asl20 ];
   };
 }

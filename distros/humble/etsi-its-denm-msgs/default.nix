@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ rosidl-default-generators ];
 
   meta = {
-    description = ''ROS messages for ETSI ITS DENM'';
+    description = "ROS messages for ETSI ITS DENM";
     license = with lib.licenses; [ mit ];
   };
 }

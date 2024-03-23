@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''OMPL is a free sampling-based motion planning library.'';
+    description = "OMPL is a free sampling-based motion planning library.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

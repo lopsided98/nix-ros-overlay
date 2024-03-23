@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''joint_trajectory_generator action takes in a trajectory specified
+    description = "joint_trajectory_generator action takes in a trajectory specified
     by a number of joint positions, and it generates a new smooth trajectory
-    through these joint positions.'';
+    through these joint positions.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

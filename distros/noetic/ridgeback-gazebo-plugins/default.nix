@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A fork of hector_gazebo_plugins to provide the ros_force_based_move plugin.'';
+    description = "A fork of hector_gazebo_plugins to provide the ros_force_based_move plugin.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

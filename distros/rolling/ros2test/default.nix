@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ domain-coordinator launch launch-ros launch-testing launch-testing-ros ros2cli ];
 
   meta = {
-    description = ''The test command for ROS 2 launch tests.'';
+    description = "The test command for ROS 2 launch tests.";
     license = with lib.licenses; [ asl20 ];
   };
 }

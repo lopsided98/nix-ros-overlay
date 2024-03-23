@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''This ROS package wraps documentation tools like doxygen, sphinx,
+    description = "This ROS package wraps documentation tools like doxygen, sphinx,
     and epydoc, making it convenient to generate ROS package
     documentation.
 
-    It also generates online documentation for the ROS wiki.'';
+    It also generates online documentation for the ROS wiki.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

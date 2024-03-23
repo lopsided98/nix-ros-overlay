@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''rosmake is a ros dependency aware build tool which can be used to
-     build all dependencies in the correct order.'';
+    description = "rosmake is a ros dependency aware build tool which can be used to
+     build all dependencies in the correct order.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

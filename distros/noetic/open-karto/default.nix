@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Catkinized ROS packaging of the OpenKarto library'';
+    description = "Catkinized ROS packaging of the OpenKarto library";
     license = with lib.licenses; [ lgpl3Only ];
   };
 }

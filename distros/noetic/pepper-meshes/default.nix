@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''meshes for the Aldebaran Robotics Pepper'';
+    description = "meshes for the Aldebaran Robotics Pepper";
     license = with lib.licenses; [ "CC-BY-NC-ND-4.0" ];
   };
 }

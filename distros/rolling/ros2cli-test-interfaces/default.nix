@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''A package containing interface definitions for testing ros2cli.'';
+    description = "A package containing interface definitions for testing ros2cli.";
     license = with lib.licenses; [ asl20 ];
   };
 }

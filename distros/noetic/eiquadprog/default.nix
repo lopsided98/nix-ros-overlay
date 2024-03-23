@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Eiquadprog a QP solver using active sets'';
+    description = "Eiquadprog a QP solver using active sets";
     license = with lib.licenses; [ lgpl3Only ];
   };
 }

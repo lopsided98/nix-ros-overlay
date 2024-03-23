@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS interface aques_talk demo program'';
+    description = "ROS interface aques_talk demo program";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

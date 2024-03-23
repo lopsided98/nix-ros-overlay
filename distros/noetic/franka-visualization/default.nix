@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains visualization tools for Franka Emika.'';
+    description = "This package contains visualization tools for Franka Emika.";
     license = with lib.licenses; [ asl20 ];
   };
 }

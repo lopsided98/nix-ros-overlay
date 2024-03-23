@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Generate the DDS interfaces for ROS interfaces.'';
+    description = "Generate the DDS interfaces for ROS interfaces.";
     license = with lib.licenses; [ asl20 ];
   };
 }

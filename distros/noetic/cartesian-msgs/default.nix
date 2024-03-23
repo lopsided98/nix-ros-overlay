@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Stream cartesian commands'';
+    description = "Stream cartesian commands";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

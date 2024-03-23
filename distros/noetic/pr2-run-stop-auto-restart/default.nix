@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides a node that monitors the state of the run stops of the pr2_robot. When the state of the
+    description = "This package provides a node that monitors the state of the run stops of the pr2_robot. When the state of the
    run stop changes from off to on, this node will automatically enable the power to the motors, and reset
    the motors. This allows you to use the run stop as a 'pause' button. By using the run stop as a tool to
-   power up the robot, the run stop is also in reach of the user once the robot starts moving.'';
+   power up the robot, the run stop is also in reach of the user once the robot starts moving.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

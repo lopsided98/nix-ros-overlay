@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''URDF and meshes describing the Lincoln MKZ.'';
+    description = "URDF and meshes describing the Lincoln MKZ.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

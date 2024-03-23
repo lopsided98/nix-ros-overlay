@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Meshes and URDF descriptions for audibot'';
+    description = "Meshes and URDF descriptions for audibot";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

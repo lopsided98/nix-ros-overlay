@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The dijkstra_mesh_planner package'';
+    description = "The dijkstra_mesh_planner package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

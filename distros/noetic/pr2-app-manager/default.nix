@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Scripts and tools for running the application manager on the PR2.'';
+    description = "Scripts and tools for running the application manager on the PR2.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

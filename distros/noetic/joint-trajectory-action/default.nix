@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The joint_trajectory_action is a node that exposes an action interface
-     to a joint trajectory controller.'';
+    description = "The joint_trajectory_action is a node that exposes an action interface
+     to a joint trajectory controller.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rwt_steer package'';
+    description = "The rwt_steer package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

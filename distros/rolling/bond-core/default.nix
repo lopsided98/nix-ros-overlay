@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A bond allows two processes, A and B, to know when the other has
+    description = "A bond allows two processes, A and B, to know when the other has
     terminated, either cleanly or by crashing. The bond remains
     connected until it is either broken explicitly or until a
-    heartbeat times out.'';
+    heartbeat times out.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

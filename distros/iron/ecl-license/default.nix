@@ -18,8 +18,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Maintains the ecl licenses and also provides an install
-     target for deploying licenses with the ecl libraries.'';
+    description = "Maintains the ecl licenses and also provides an install
+     target for deploying licenses with the ecl libraries.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

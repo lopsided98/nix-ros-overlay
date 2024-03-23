@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Contains launch files to bring up andinobot robot.'';
+    description = "Contains launch files to bring up andinobot robot.";
     license = with lib.licenses; [ "BSD-Clause-3" ];
   };
 }

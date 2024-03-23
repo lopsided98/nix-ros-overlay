@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Metapackage referencing tutorials related to rviz and visualization.'';
+    description = "Metapackage referencing tutorials related to rviz and visualization.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

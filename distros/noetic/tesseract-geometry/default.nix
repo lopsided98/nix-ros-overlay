@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The tesseract_geometry package'';
+    description = "The tesseract_geometry package";
     license = with lib.licenses; [ asl20 ];
   };
 }

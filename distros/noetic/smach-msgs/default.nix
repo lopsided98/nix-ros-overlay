@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''this package contains a set of messages that are used by the introspection
-    interfaces for smach.'';
+    description = "this package contains a set of messages that are used by the introspection
+    interfaces for smach.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

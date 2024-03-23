@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros python-cmake-module ];
 
   meta = {
-    description = ''This contains CvBridge, which converts between ROS2
-    Image messages and OpenCV images.'';
+    description = "This contains CvBridge, which converts between ROS2
+    Image messages and OpenCV images.";
     license = with lib.licenses; [ asl20 bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS 2 package suite for Raspberry Pi Mouse Simulator'';
+    description = "ROS 2 package suite for Raspberry Pi Mouse Simulator";
     license = with lib.licenses; [ mit ];
   };
 }

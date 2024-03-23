@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-uncrustify ];
 
   meta = {
-    description = ''The CMake API for ament_uncrustify to check code against styleconventions
-    using uncrustify.'';
+    description = "The CMake API for ament_uncrustify to check code against styleconventions
+    using uncrustify.";
     license = with lib.licenses; [ asl20 ];
   };
 }

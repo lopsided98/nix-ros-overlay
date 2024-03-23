@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''URDF and xacro description package for the Robotiq gripper.'';
+    description = "URDF and xacro description package for the Robotiq gripper.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

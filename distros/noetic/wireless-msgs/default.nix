@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages for describing a wireless network such as bitrate, essid, and link quality.'';
+    description = "Messages for describing a wireless network such as bitrate, essid, and link quality.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

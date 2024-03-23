@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ launch-ros launch-testing rclpy ];
 
   meta = {
-    description = ''A package providing utilities for writing ROS2 enabled launch tests.'';
+    description = "A package providing utilities for writing ROS2 enabled launch tests.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Interface driver for Omron OS32C Lidar via Ethernet/IP (Industrial Protocol)'';
+    description = "Interface driver for Omron OS32C Lidar via Ethernet/IP (Industrial Protocol)";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

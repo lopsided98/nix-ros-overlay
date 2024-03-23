@@ -19,14 +19,14 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''This is a ROS 3rd-party wrapper <a href="http://www.ros.org/reps/rep-0136.html">(see REP-136 for more detail)</a> of Andrea Censi's CSM package. 
+    description = "This is a ROS 3rd-party wrapper <a href=\"http://www.ros.org/reps/rep-0136.html\">(see REP-136 for more detail)</a> of Andrea Censi's CSM package. 
 
-    From <a href="http://censi.mit.edu/software/csm/">the official website</a>:
+    From <a href=\"http://censi.mit.edu/software/csm/\">the official website</a>:
     <ul>
       The C(anonical) Scan Matcher (CSM) is a pure C implementation of a very fast variation of ICP using a point-to-line metric optimized for range-finder scan matching.
 
       It is robust enough to be used in industrial prototypes of autonomous mobile robotics, for example at Kuka. CSM is used by a variety of people, though it is hard to keep track because of the open source distribution, especially as packaged in ROS. If you use this software for something cool, let me know.
-    </ul>'';
+    </ul>";
     license = with lib.licenses; [ "LGPL" ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ];
 
   meta = {
-    description = ''The package provides the environment variables `ROS_VERSION` and `ROS_DISTRO`.'';
+    description = "The package provides the environment variables `ROS_VERSION` and `ROS_DISTRO`.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Generates signed distance fields from grid maps.'';
+    description = "Generates signed distance fields from grid maps.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

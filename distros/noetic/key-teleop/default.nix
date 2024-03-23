@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A text-based interface to send a robot movement commands'';
+    description = "A text-based interface to send a robot movement commands";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

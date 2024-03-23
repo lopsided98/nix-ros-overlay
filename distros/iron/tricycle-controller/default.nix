@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Controller for a tricycle drive mobile base'';
+    description = "Controller for a tricycle drive mobile base";
     license = with lib.licenses; [ asl20 ];
   };
 }

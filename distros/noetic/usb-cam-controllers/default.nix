@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The usb_cam_controllers package'';
+    description = "The usb_cam_controllers package";
     license = with lib.licenses; [ mit ];
   };
 }

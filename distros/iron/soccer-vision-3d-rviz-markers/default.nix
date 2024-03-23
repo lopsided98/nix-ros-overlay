@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rclpy soccer-vision-3d-msgs soccer-vision-attribute-msgs visualization-msgs ];
 
   meta = {
-    description = ''Package that converts soccer_vision_3d_msgs to RViz markers'';
+    description = "Package that converts soccer_vision_3d_msgs to RViz markers";
     license = with lib.licenses; [ asl20 ];
   };
 }

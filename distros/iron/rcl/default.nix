@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''The ROS client library common implementation.
-    This package contains an API which builds on the ROS middleware API and is optionally built upon by the other ROS client libraries.'';
+    description = "The ROS client library common implementation.
+    This package contains an API which builds on the ROS middleware API and is optionally built upon by the other ROS client libraries.";
     license = with lib.licenses; [ asl20 ];
   };
 }

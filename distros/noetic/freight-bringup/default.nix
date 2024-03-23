@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Bringup for freight'';
+    description = "Bringup for freight";
     license = with lib.licenses; [ "Proprietary" ];
   };
 }

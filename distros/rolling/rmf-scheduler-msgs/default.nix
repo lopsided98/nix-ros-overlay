@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Messages used by rmf_scheduler_msgs'';
+    description = "Messages used by rmf_scheduler_msgs";
     license = with lib.licenses; [ asl20 ];
   };
 }

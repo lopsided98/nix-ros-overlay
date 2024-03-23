@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''<p>
+    description = "<p>
             amcl is a probabilistic localization system for a robot moving in
             2D. It implements the adaptive (or KLD-sampling) Monte Carlo
             localization approach (as described by Dieter Fox), which uses a
@@ -29,7 +29,7 @@ buildRosPackage {
         <p>
             This node is derived, with thanks, from Andrew Howard's excellent
             'amcl' Player driver.
-        </p>'';
+        </p>";
     license = with lib.licenses; [ "LGPL" ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros python3Packages.empy ];
 
   meta = {
-    description = ''An rcl logger implementation that doesn't do anything with log messages.'';
+    description = "An rcl logger implementation that doesn't do anything with log messages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

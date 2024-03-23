@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS support for the Pilz laser scanner'';
+    description = "ROS support for the Pilz laser scanner";
     license = with lib.licenses; [ lgpl3Only ];
   };
 }

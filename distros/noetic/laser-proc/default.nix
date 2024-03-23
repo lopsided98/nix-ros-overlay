@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''laser_proc'';
+    description = "laser_proc";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

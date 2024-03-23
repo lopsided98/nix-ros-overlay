@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''marti_sensor_msgs'';
+    description = "marti_sensor_msgs";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

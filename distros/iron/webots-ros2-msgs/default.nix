@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Services and Messages of the webots_ros2 packages.'';
+    description = "Services and Messages of the webots_ros2 packages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

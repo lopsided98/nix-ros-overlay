@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''kortex_api'';
+    description = "kortex_api";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''tf2_msgs'';
+    description = "tf2_msgs";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

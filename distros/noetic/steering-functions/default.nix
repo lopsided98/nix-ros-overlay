@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The steering_functions package'';
+    description = "The steering_functions package";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ffha: PDDL Planner (http://ipc.informatik.uni-freiburg.de)'';
+    description = "ffha: PDDL Planner (http://ipc.informatik.uni-freiburg.de)";
     license = with lib.licenses; [ "GPL" ];
   };
 }

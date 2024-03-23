@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Network interfaces and messages.'';
+    description = "Network interfaces and messages.";
     license = with lib.licenses; [ mit ];
   };
 }

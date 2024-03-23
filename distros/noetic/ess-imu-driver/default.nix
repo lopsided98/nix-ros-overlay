@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS package for Epson IMU based on C++ wrapper of Linux C driver'';
+    description = "ROS package for Epson IMU based on C++ wrapper of Linux C driver";
     license = with lib.licenses; [ bsd3 publicDomain ];
   };
 }

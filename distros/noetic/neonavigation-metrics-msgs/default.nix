@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Metrics message definitions for neonavigation meta-package'';
+    description = "Metrics message definitions for neonavigation meta-package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

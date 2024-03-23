@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python python-cmake-module ];
 
   meta = {
-    description = ''Wrapper around PyKDL, providing nothing but a dependency on PyKDL on some systems.
-    On others, it fetches and builds python_orocos_kdl locally.'';
+    description = "Wrapper around PyKDL, providing nothing but a dependency on PyKDL on some systems.
+    On others, it fetches and builds python_orocos_kdl locally.";
     license = with lib.licenses; [ asl20 "LGPL-2.1-or-later" ];
   };
 }

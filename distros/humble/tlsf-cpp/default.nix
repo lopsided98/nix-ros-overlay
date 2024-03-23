@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''C++ stdlib-compatible wrapper around tlsf allocator and ROS2 examples'';
+    description = "C++ stdlib-compatible wrapper around tlsf allocator and ROS2 examples";
     license = with lib.licenses; [ "LGPL-2.1-only" asl20 ];
   };
 }

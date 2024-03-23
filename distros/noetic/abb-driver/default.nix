@@ -19,13 +19,13 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''<p>
+    description = "<p>
      ROS-Industrial nodes for interfacing with ABB robot controllers.
    </p>
    <p>
      This package is part of the ROS-Industrial program and contains nodes 
      for interfacing with ABB industrial robot controllers.
-   </p>'';
+   </p>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

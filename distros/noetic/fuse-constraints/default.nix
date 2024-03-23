@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The fuse_constraints package provides a set of commonly used constraint types, such as direct measurements on
-    state variables (absolute constraints) or measurements of the state changes (relative constraints).'';
+    description = "The fuse_constraints package provides a set of commonly used constraint types, such as direct measurements on
+    state variables (absolute constraints) or measurements of the state changes (relative constraints).";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

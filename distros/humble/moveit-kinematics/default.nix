@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Package for all inverse kinematics solvers in MoveIt'';
+    description = "Package for all inverse kinematics solvers in MoveIt";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_gazebo_tools package provides helper tools for the gazebo simulation'';
+    description = "The cob_gazebo_tools package provides helper tools for the gazebo simulation";
     license = with lib.licenses; [ asl20 ];
   };
 }

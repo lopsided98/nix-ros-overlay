@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Drive-by-wire messages'';
+    description = "Drive-by-wire messages";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

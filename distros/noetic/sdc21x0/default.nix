@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Message definitions for the sdc21x0 motor controller'';
+    description = "Message definitions for the sdc21x0 motor controller";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

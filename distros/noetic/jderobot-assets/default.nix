@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''The jderobot_assets package'';
+    description = "The jderobot_assets package";
     license = with lib.licenses; [ mit ];
   };
 }

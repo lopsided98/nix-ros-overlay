@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS nodes for various robotics sensors via mrpt-hwdrivers'';
+    description = "ROS nodes for various robotics sensors via mrpt-hwdrivers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

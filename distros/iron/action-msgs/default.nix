@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-core-generators ];
 
   meta = {
-    description = ''Messages and service definitions common among all ROS actions.'';
+    description = "Messages and service definitions common among all ROS actions.";
     license = with lib.licenses; [ asl20 ];
   };
 }

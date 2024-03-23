@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains a script to generate calibration launch and configurationfiles for your robot.
-    which is based on Michael Ferguson's calibration code'';
+    description = "This package contains a script to generate calibration launch and configurationfiles for your robot.
+    which is based on Michael Ferguson's calibration code";
     license = with lib.licenses; [ asl20 ];
   };
 }

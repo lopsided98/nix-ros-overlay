@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This provides a ROS node for the PR2 Power Board.'';
+    description = "This provides a ROS node for the PR2 Power Board.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Drive-by-wire messages for the Lincoln MKZ'';
+    description = "Drive-by-wire messages for the Lincoln MKZ";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS messages for ETSI ITS DENM'';
+    description = "ROS messages for ETSI ITS DENM";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Meta-Package containing modules for 2D-Navigation'';
+    description = "Meta-Package containing modules for 2D-Navigation";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS console output library.'';
+    description = "ROS console output library.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

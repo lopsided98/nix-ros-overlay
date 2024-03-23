@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''These are regression tests for the osm_cartography and
+    description = "These are regression tests for the osm_cartography and
      route_network packages. They are packaged separately to avoid
-     unnecessary implementation dependencies.'';
+     unnecessary implementation dependencies.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

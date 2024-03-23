@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Library of ros controllers'';
+    description = "Library of ros controllers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Offline RawDataSource from MulRan datasets'';
+    description = "Offline RawDataSource from MulRan datasets";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

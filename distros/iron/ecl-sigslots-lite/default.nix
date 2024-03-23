@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''This avoids use of dynamic storage (malloc/new) and thread safety (mutexes) to
+    description = "This avoids use of dynamic storage (malloc/new) and thread safety (mutexes) to
      provide a very simple sigslots implementation that can be used for *very*
-     embedded development.'';
+     embedded development.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

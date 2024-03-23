@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The ros client for roboception silhouette match module'';
+    description = "The ros client for roboception silhouette match module";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Generates rviz display markers from soccer msgs'';
+    description = "Generates rviz display markers from soccer msgs";
     license = with lib.licenses; [ asl20 ];
   };
 }

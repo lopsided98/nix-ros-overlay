@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake builtin-interfaces rosidl-default-generators ];
 
   meta = {
-    description = ''Provides nonlinear state estimation through sensor fusion of an abritrary number of sensors.'';
+    description = "Provides nonlinear state estimation through sensor fusion of an abritrary number of sensors.";
     license = with lib.licenses; [ asl20 ];
   };
 }

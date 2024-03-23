@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-index-python python-cmake-module rosidl-generator-c rosidl-pycommon rosidl-typesupport-c rosidl-typesupport-interface ];
 
   meta = {
-    description = ''Generate the ROS interfaces in Python.'';
+    description = "Generate the ROS interfaces in Python.";
     license = with lib.licenses; [ asl20 ];
   };
 }

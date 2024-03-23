@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Conversion functions between:
+    description = "Conversion functions between:
       - Eigen and KDL
-      - Eigen and geometry_msgs.'';
+      - Eigen and geometry_msgs.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

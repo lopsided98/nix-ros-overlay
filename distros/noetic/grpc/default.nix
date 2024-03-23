@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Catkinized gRPC Package'';
+    description = "Catkinized gRPC Package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

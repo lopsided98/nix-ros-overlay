@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Simple node to publish regular IP camera video streams to a ros topic.'';
+    description = "Simple node to publish regular IP camera video streams to a ros topic.";
     license = with lib.licenses; [ "GPL" ];
   };
 }

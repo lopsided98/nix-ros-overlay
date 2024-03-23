@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pr2_mechanism stack contains the infrastructure to control the PR2 robot in a hard realtime control loop.'';
+    description = "The pr2_mechanism stack contains the infrastructure to control the PR2 robot in a hard realtime control loop.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

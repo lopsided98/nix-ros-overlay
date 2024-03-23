@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ nodl-python python3Packages.argcomplete python3Packages.lxml ros2cli ros2nodl ros2run sros2 ];
 
   meta = {
-    description = ''Package to generate a ROS 2 Access Control Policy from the NoDL description of a ROS system'';
+    description = "Package to generate a ROS 2 Access Control Policy from the NoDL description of a ROS system";
     license = with lib.licenses; [ asl20 ];
   };
 }

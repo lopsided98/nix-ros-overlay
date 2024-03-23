@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake eigen3-cmake-module ];
 
   meta = {
-    description = ''Package for modelling battery life of robots'';
+    description = "Package for modelling battery life of robots";
     license = with lib.licenses; [ asl20 ];
   };
 }

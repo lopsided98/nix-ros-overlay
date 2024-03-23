@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Eclipse iceoryx inter-process-communication (IPC) middleware C-Language Binding'';
+    description = "Eclipse iceoryx inter-process-communication (IPC) middleware C-Language Binding";
     license = with lib.licenses; [ asl20 ];
   };
 }

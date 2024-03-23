@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Metapackage for all dynamics solvers bundled with core EXOTica.'';
+    description = "Metapackage for all dynamics solvers bundled with core EXOTica.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

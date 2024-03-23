@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ros2_control plugin for Webots'';
+    description = "ros2_control plugin for Webots";
     license = with lib.licenses; [ asl20 ];
   };
 }

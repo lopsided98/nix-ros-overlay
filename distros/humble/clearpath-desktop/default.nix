@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Packages for working with Clearpath Platforms from a ROS 2 desktop.'';
+    description = "Packages for working with Clearpath Platforms from a ROS 2 desktop.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

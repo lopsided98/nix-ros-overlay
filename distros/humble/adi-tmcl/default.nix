@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''The adi_tmcl ROS2 package'';
+    description = "The adi_tmcl ROS2 package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

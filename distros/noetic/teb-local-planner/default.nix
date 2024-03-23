@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The teb_local_planner package implements a plugin
+    description = "The teb_local_planner package implements a plugin
     to the base_local_planner of the 2D navigation stack.
     The underlying method called Timed Elastic Band locally optimizes
     the robot's trajectory with respect to trajectory execution time,
-    separation from obstacles and compliance with kinodynamic constraints at runtime.'';
+    separation from obstacles and compliance with kinodynamic constraints at runtime.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The mongodb_store_msgs package'';
+    description = "The mongodb_store_msgs package";
     license = with lib.licenses; [ mit ];
   };
 }

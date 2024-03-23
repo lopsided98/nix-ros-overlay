@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Base dependencies and support libraries for ROS.
-    roslib contains many of the common data structures and tools that are shared across ROS client library implementations.'';
+    description = "Base dependencies and support libraries for ROS.
+    roslib contains many of the common data structures and tools that are shared across ROS client library implementations.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

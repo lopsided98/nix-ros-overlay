@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Packages for interfacing ROS2 with OpenCV, a library of programming functions for real time computer vision.'';
+    description = "Packages for interfacing ROS2 with OpenCV, a library of programming functions for real time computer vision.";
     license = with lib.licenses; [ asl20 bsdOriginal ];
   };
 }

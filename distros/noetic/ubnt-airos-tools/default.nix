@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Ubiquiti AirOS tools for extracting AP information to ROS'';
+    description = "Ubiquiti AirOS tools for extracting AP information to ROS";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

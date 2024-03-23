@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Pythonic implementation of behaviour trees.'';
+    description = "Pythonic implementation of behaviour trees.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

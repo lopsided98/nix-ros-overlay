@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package published a laser scan message out of a Sick S300 laser scanner.'';
+    description = "This package published a laser scan message out of a Sick S300 laser scanner.";
     license = with lib.licenses; [ asl20 ];
   };
 }

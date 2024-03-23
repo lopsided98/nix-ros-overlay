@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Transforms messages of arbitrary type to a different frame using tf2::doTransform'';
+    description = "Transforms messages of arbitrary type to a different frame using tf2::doTransform";
     license = with lib.licenses; [ mit ];
   };
 }

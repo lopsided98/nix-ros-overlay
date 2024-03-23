@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''zstd_point_cloud_transport provides a plugin to point_cloud_transport for sending point clouds
-    encoded with lib'';
+    description = "zstd_point_cloud_transport provides a plugin to point_cloud_transport for sending point clouds
+    encoded with lib";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

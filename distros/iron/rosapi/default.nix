@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Provides service calls for getting ros meta-information, like list of
-    topics, services, params, etc.'';
+    description = "Provides service calls for getting ros meta-information, like list of
+    topics, services, params, etc.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

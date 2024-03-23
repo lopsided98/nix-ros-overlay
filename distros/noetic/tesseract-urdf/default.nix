@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The tesseract_urdf package for parsing tesseract specific urdf'';
+    description = "The tesseract_urdf package for parsing tesseract specific urdf";
     license = with lib.licenses; [ asl20 ];
   };
 }

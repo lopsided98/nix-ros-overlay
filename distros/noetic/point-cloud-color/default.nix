@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package for coloring point clouds using calibrated cameras.'';
+    description = "Package for coloring point clouds using calibrated cameras.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

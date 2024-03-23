@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''C++ library for searchable pose lists'';
+    description = "C++ library for searchable pose lists";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

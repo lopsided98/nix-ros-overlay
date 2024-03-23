@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Quanergy Sensor SDK'';
+    description = "Quanergy Sensor SDK";
     license = with lib.licenses; [ mit ];
   };
 }

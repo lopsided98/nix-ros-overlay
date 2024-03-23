@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin qt5.qtbase ];
 
   meta = {
-    description = ''multires_image'';
+    description = "multires_image";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

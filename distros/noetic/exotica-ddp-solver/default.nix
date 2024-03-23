@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Various DDP Solvers'';
+    description = "Various DDP Solvers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

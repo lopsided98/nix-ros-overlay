@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''This is a MOCAP4ROS2 Dummy driver for testing.'';
+    description = "This is a MOCAP4ROS2 Dummy driver for testing.";
     license = with lib.licenses; [ asl20 ];
   };
 }

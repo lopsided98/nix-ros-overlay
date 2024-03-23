@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake python3Packages.setuptools ];
 
   meta = {
-    description = ''The goal of the gnsstk project is to provide an open source library to the satellite navigation community--to free researchers to focus on research, not lower level coding.'';
+    description = "The goal of the gnsstk project is to provide an open source library to the satellite navigation community--to free researchers to focus on research, not lower level coding.";
     license = with lib.licenses; [ lgpl3Only ];
   };
 }

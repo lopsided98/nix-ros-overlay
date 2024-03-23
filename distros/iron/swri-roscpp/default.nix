@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''swri_roscpp'';
+    description = "swri_roscpp";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

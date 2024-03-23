@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-ros fastrtps-cmake-module ];
 
   meta = {
-    description = ''Implement the ROS middleware interface using eProsima FastRTPS static code generation in C++.'';
+    description = "Implement the ROS middleware interface using eProsima FastRTPS static code generation in C++.";
     license = with lib.licenses; [ asl20 ];
   };
 }

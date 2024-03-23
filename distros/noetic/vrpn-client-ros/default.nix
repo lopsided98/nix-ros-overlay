@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS client nodes for the <a href="https://github.com/vrpn/vrpn/wiki">VRPN</a> library, compatible with VICON, OptiTrack, and other <a href="https://github.com/vrpn/vrpn/wiki/Supported-hardware-devices">hardware interfaces</a>.'';
+    description = "ROS client nodes for the <a href=\"https://github.com/vrpn/vrpn/wiki\">VRPN</a> library, compatible with VICON, OptiTrack, and other <a href=\"https://github.com/vrpn/vrpn/wiki/Supported-hardware-devices\">hardware interfaces</a>.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

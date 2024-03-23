@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''Model Attachment Plugin'';
+    description = "Model Attachment Plugin";
     license = with lib.licenses; [ asl20 ];
   };
 }

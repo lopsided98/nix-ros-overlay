@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''C++ headers for URDF.'';
+    description = "C++ headers for URDF.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

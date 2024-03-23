@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''rosclean: cleanup filesystem resources (e.g. log files).'';
+    description = "rosclean: cleanup filesystem resources (e.g. log files).";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

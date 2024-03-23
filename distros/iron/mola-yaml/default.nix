@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''YAML helper library common to MOLA modules'';
+    description = "YAML helper library common to MOLA modules";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

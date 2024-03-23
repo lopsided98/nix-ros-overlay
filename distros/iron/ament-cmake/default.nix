@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The entry point package for the ament buildsystem in CMake.'';
+    description = "The entry point package for the ament buildsystem in CMake.";
     license = with lib.licenses; [ asl20 ];
   };
 }

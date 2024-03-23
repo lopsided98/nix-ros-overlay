@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package ];
 
   meta = {
-    description = ''Wrapper around pybind11.'';
+    description = "Wrapper around pybind11.";
     license = with lib.licenses; [ asl20 bsdOriginal ];
   };
 }

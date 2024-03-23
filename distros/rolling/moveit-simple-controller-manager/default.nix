@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A generic, simple controller manager plugin for MoveIt.'';
+    description = "A generic, simple controller manager plugin for MoveIt.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

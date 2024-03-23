@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A metapackage of Emacs utils for ROS.
-    Only there for simplifying the release process.'';
+    description = "A metapackage of Emacs utils for ROS.
+    Only there for simplifying the release process.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

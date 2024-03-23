@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Launches a RoboCup 3D Simulation Agent, and converts data to and from ROS2 msgs'';
+    description = "Launches a RoboCup 3D Simulation Agent, and converts data to and from ROS2 msgs";
     license = with lib.licenses; [ asl20 ];
   };
 }

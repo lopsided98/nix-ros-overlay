@@ -18,8 +18,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Bridge between ROS2/DDS and Eclipse zenoh (https://zenoh.io). It allows the integration of zenoh applications with ROS2,
-    or the tunneling of ROS2 communications between nodes via the zenoh protocol at Internet scale.'';
+    description = "Bridge between ROS2/DDS and Eclipse zenoh (https://zenoh.io). It allows the integration of zenoh applications with ROS2,
+    or the tunneling of ROS2 communications between nodes via the zenoh protocol at Internet scale.";
     license = with lib.licenses; [ "EPL-2.0" asl20 ];
   };
 }

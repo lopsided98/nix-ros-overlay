@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS interfaces for recording compute time and other related benchmarking concepts'';
+    description = "ROS interfaces for recording compute time and other related benchmarking concepts";
     license = with lib.licenses; [ "BSD-3-clause" ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''TODO: Package description'';
+    description = "TODO: Package description";
     license = with lib.licenses; [ asl20 ];
   };
 }

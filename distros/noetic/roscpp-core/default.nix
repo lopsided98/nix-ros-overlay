@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Underlying data libraries for roscpp messages.'';
+    description = "Underlying data libraries for roscpp messages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

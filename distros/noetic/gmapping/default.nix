@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains a ROS wrapper for OpenSlam's Gmapping. 
+    description = "This package contains a ROS wrapper for OpenSlam's Gmapping. 
   The gmapping package provides laser-based SLAM (Simultaneous Localization and Mapping), 
   as a ROS node called slam_gmapping. Using slam_gmapping, you can create a 2-D occupancy
-  grid map (like a building floorplan) from laser and pose data collected by a mobile robot.'';
+  grid map (like a building floorplan) from laser and pose data collected by a mobile robot.";
     license = with lib.licenses; [ bsdOriginal asl20 ];
   };
 }

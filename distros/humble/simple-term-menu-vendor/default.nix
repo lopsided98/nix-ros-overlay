@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''A Python package which creates simple interactive menus on the command line.'';
+    description = "A Python package which creates simple interactive menus on the command line.";
     license = with lib.licenses; [ mit ];
   };
 }

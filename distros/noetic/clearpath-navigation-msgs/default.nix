@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS package containing the message definitions for the Clearpath Robotics OutdoorNav navigation module.'';
+    description = "ROS package containing the message definitions for the Clearpath Robotics OutdoorNav navigation module.";
     license = with lib.licenses; [ "Proprietary" ];
   };
 }

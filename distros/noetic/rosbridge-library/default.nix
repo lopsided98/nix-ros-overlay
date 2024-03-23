@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''The core rosbridge package, responsible for interpreting JSON and performing
+    description = "The core rosbridge package, responsible for interpreting JSON and performing
     the appropriate ROS action, like subscribe, publish, call service, and
-    interact with params.'';
+    interact with params.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

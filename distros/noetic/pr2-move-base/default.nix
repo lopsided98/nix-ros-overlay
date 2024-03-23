@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''pr2_move_base'';
+    description = "pr2_move_base";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

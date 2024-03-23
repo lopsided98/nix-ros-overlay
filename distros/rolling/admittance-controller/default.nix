@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, filters, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, joint-trajectory-controller, kinematics-interface, kinematics-interface-kdl, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, tf2, tf2-eigen, tf2-geometry-msgs, tf2-kdl, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-admittance-controller";
-  version = "4.6.0-r2";
+  version = "4.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/admittance_controller/4.6.0-2.tar.gz";
-    name = "4.6.0-2.tar.gz";
-    sha256 = "3344f07bd0a86641b0bcd0576e1656ff65e294a4c7813c666dfa96cfd0ba1ab1";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/admittance_controller/4.7.0-1.tar.gz";
+    name = "4.7.0-1.tar.gz";
+    sha256 = "89e17ce846a2d3d2621cdedb714c175b8f16547cb54126dd7a5cb23d9f9d9569";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Implementation of admittance controllers for different input and output interface.'';
+    description = "Implementation of admittance controllers for different input and output interface.";
     license = with lib.licenses; [ asl20 ];
   };
 }

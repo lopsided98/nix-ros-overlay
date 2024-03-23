@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rclpy sensor-msgs std-msgs ];
 
   meta = {
-    description = ''Python Demo applications for Quality of Service features'';
+    description = "Python Demo applications for Quality of Service features";
     license = with lib.licenses; [ asl20 ];
   };
 }

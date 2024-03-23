@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Stereo and single image rectification and disparity processing.'';
+    description = "Stereo and single image rectification and disparity processing.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-gmock ament-cmake-gtest cmake ];
 
   meta = {
-    description = ''C++ library for SE(2)/SE(3) pose composition operations with uncertainty'';
+    description = "C++ library for SE(2)/SE(3) pose composition operations with uncertainty";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

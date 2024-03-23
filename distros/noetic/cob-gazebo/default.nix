@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Launch files and tools for 3D simulation of Care-O-bot in gazebo simulator.'';
+    description = "Launch files and tools for 3D simulation of Care-O-bot in gazebo simulator.";
     license = with lib.licenses; [ asl20 ];
   };
 }

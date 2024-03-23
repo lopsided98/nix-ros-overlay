@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The turtlebot3_autorace_msgs package'';
+    description = "The turtlebot3_autorace_msgs package";
     license = with lib.licenses; [ asl20 ];
   };
 }

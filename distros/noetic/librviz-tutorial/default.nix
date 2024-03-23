@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Tutorial showing how to compile your own C++ program with RViz displays and features.'';
+    description = "Tutorial showing how to compile your own C++ program with RViz displays and features.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

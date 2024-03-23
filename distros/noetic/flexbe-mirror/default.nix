@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''flexbe_mirror implements functionality to remotely mirror an executed behavior.'';
+    description = "flexbe_mirror implements functionality to remotely mirror an executed behavior.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

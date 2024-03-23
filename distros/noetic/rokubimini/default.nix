@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''C++ library deriving the abstract communication interface classes in the rokubimini library for EtherCAT.'';
+    description = "C++ library deriving the abstract communication interface classes in the rokubimini library for EtherCAT.";
     license = with lib.licenses; [ asl20 ];
   };
 }

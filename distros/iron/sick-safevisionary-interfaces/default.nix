@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Provides interface descriptions to communicate with a SICK Safevisionary Sensor over ROS 2'';
+    description = "Provides interface descriptions to communicate with a SICK Safevisionary Sensor over ROS 2";
     license = with lib.licenses; [ asl20 ];
   };
 }

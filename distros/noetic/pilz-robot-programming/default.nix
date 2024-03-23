@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''An Easy to use API to execute standard industrial robot commands like Ptp, Lin, Circ and Sequence using Moveit.'';
+    description = "An Easy to use API to execute standard industrial robot commands like Ptp, Lin, Circ and Sequence using Moveit.";
     license = with lib.licenses; [ lgpl3Only ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The interface for rosidl typesupport packages.'';
+    description = "The interface for rosidl typesupport packages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

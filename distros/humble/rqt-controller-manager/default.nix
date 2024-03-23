@@ -17,7 +17,7 @@ buildRosPackage {
   propagatedBuildInputs = [ controller-manager-msgs rclpy rqt-gui rqt-gui-py ];
 
   meta = {
-    description = ''Graphical frontend for interacting with the controller manager.'';
+    description = "Graphical frontend for interacting with the controller manager.";
     license = with lib.licenses; [ asl20 ];
   };
 }

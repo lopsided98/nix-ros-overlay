@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS nodes to publish resized images.'';
+    description = "ROS nodes to publish resized images.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

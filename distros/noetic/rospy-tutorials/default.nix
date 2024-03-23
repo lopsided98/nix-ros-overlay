@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package attempts to show the features of ROS python API step-by-step,
-    including using messages, servers, parameters, etc. These tutorials are compatible with the nodes in roscpp_tutorial.'';
+    description = "This package attempts to show the features of ROS python API step-by-step,
+    including using messages, servers, parameters, etc. These tutorials are compatible with the nodes in roscpp_tutorial.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

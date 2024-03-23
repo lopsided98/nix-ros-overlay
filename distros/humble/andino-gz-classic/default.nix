@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Launch Gazebo simulation with Andino'';
+    description = "Launch Gazebo simulation with Andino";
     license = with lib.licenses; [ "BSD-Clause-3" ];
   };
 }

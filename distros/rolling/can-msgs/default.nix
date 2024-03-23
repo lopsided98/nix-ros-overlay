@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''CAN related message types.'';
+    description = "CAN related message types.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

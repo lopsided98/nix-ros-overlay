@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A package to visualize positions of robots from different fleets in the a building'';
+    description = "A package to visualize positions of robots from different fleets in the a building";
     license = with lib.licenses; [ asl20 ];
   };
 }

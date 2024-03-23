@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Enhanced tools for benchmarks in MoveIt'';
+    description = "Enhanced tools for benchmarks in MoveIt";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];
 
   meta = {
-    description = ''MoveIt interface to OMPL'';
+    description = "MoveIt interface to OMPL";
     license = with lib.licenses; [ bsd3 ];
   };
 }

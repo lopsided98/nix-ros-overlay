@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Convert audio (audio_common_msgs/AudioData) to spectrogram (sensor_msgs/Image)'';
+    description = "Convert audio (audio_common_msgs/AudioData) to spectrogram (sensor_msgs/Image)";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

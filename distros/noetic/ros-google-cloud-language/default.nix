@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ros clinet library for google cloud language'';
+    description = "ros clinet library for google cloud language";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

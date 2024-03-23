@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python eigen3-cmake-module ];
 
   meta = {
-    description = ''Extra nodes and plugins for <a href="http://wiki.ros.org/mavros">MAVROS</a>.'';
+    description = "Extra nodes and plugins for <a href=\"http://wiki.ros.org/mavros\">MAVROS</a>.";
     license = with lib.licenses; [ gpl3Only lgpl3Only bsdOriginal ];
   };
 }

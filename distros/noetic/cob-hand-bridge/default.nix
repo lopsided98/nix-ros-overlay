@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_hand_bridge package provides a driver for the gripper of Care-O-bot4.'';
+    description = "The cob_hand_bridge package provides a driver for the gripper of Care-O-bot4.";
     license = with lib.licenses; [ asl20 ];
   };
 }

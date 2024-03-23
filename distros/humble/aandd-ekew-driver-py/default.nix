@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ action-msgs python3Packages.pyserial rclpy weight-scale-interfaces ];
 
   meta = {
-    description = ''aandd ek/ew series driver python package'';
+    description = "aandd ek/ew series driver python package";
     license = with lib.licenses; [ asl20 ];
   };
 }

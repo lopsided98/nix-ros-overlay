@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Converts LaserScan to PointCloud messages.'';
+    description = "Converts LaserScan to PointCloud messages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

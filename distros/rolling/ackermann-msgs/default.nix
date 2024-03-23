@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''ROS2 messages for robots using Ackermann steering.'';
+    description = "ROS2 messages for robots using Ackermann steering.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

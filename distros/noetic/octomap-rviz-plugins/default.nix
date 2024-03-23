@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A set of plugins for displaying occupancy information decoded from binary octomap messages.'';
+    description = "A set of plugins for displaying occupancy information decoded from binary octomap messages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

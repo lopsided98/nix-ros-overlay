@@ -19,12 +19,12 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''<p>
+    description = "<p>
       MoveIt Resources for testing: Fanuc M-10iA.
     </p>
     <p>
 		A project-internal configuration for testing in MoveIt.
-    </p>'';
+    </p>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

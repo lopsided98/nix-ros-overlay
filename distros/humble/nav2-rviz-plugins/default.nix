@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Navigation 2 plugins for rviz'';
+    description = "Navigation 2 plugins for rviz";
     license = with lib.licenses; [ asl20 ];
   };
 }

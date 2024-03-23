@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Example test configuration to verifying the correct behaviour of the ATF.'';
+    description = "Example test configuration to verifying the correct behaviour of the ATF.";
     license = with lib.licenses; [ asl20 ];
   };
 }

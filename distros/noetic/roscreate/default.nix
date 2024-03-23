@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''roscreate contains a tool that assists in the creation of ROS filesystem resources.
+    description = "roscreate contains a tool that assists in the creation of ROS filesystem resources.
      It provides: <tt>roscreate-pkg</tt>, which creates a new package directory,
-     including the appropriate build and manifest files.'';
+     including the appropriate build and manifest files.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Minimal action client examples'';
+    description = "Minimal action client examples";
     license = with lib.licenses; [ asl20 ];
   };
 }

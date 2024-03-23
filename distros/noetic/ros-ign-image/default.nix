@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Image utilities for Ignition simulation with ROS.'';
+    description = "Image utilities for Ignition simulation with ROS.";
     license = with lib.licenses; [ asl20 ];
   };
 }

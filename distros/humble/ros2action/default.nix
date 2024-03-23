@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ action-msgs ament-index-python rclpy ros2cli rosidl-runtime-py ];
 
   meta = {
-    description = ''The action command for ROS 2 command line tools.'';
+    description = "The action command for ROS 2 command line tools.";
     license = with lib.licenses; [ asl20 ];
   };
 }

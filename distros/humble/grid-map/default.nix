@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Meta-package for the universal grid map library.'';
+    description = "Meta-package for the universal grid map library.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

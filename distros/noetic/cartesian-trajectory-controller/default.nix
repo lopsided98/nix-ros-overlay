@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A Cartesian trajectory controller with multiple hardware interface support'';
+    description = "A Cartesian trajectory controller with multiple hardware interface support";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides teleoperation using keyboard for TurtleBot3.'';
+    description = "Provides teleoperation using keyboard for TurtleBot3.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

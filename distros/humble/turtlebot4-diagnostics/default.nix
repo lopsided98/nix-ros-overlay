@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ diagnostic-aggregator diagnostic-msgs diagnostic-updater irobot-create-msgs rclpy sensor-msgs ];
 
   meta = {
-    description = ''Turtlebot4 Diagnostics'';
+    description = "Turtlebot4 Diagnostics";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rwt_plot'';
+    description = "rwt_plot";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

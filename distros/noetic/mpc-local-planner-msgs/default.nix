@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides message types that are used by the package mpc_local_planner'';
+    description = "This package provides message types that are used by the package mpc_local_planner";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

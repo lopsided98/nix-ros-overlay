@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package holds a special teleop configuration for the PR2 robot that
-     should be used when running applications that use autonomous navigation.'';
+    description = "This package holds a special teleop configuration for the PR2 robot that
+     should be used when running applications that use autonomous navigation.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

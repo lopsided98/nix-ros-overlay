@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Common definitions (positions, velocities, angular angles,
+    description = "Common definitions (positions, velocities, angular angles,
     angular rates) and robot definitions in Cartesian and joint state
     used in the Xpp Motion Framework, as well as conversions to/from
-    xpp_msgs.'';
+    xpp_msgs.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

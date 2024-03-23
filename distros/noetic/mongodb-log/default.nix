@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The mongodb_log package'';
+    description = "The mongodb_log package";
     license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

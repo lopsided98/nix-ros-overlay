@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Time-Indexed RRT-Connect solver (Humanoids 2018)'';
+    description = "Time-Indexed RRT-Connect solver (Humanoids 2018)";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

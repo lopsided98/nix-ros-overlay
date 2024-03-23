@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Ros2 Package of the turtlebot3_manipulation_teleop'';
+    description = "Ros2 Package of the turtlebot3_manipulation_teleop";
     license = with lib.licenses; [ asl20 ];
   };
 }

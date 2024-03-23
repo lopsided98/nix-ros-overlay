@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ example-interfaces rclpy rosbag2-py std-msgs ];
 
   meta = {
-    description = ''Python bag writing tutorial'';
+    description = "Python bag writing tutorial";
     license = with lib.licenses; [ asl20 ];
   };
 }

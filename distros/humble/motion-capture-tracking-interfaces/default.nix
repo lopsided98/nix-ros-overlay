@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Interfaces for motion_capture_tracking package.'';
+    description = "Interfaces for motion_capture_tracking package.";
     license = with lib.licenses; [ mit ];
   };
 }

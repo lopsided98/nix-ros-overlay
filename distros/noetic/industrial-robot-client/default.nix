@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''industrial robot client contains generic clients for connecting 
+    description = "industrial robot client contains generic clients for connecting 
      to industrial robot controllers with servers that adhere to the
-     simple message protocol.'';
+     simple message protocol.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

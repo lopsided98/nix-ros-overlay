@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A copy of the pr2_controller_configuration package, for use in 
+    description = "A copy of the pr2_controller_configuration package, for use in 
     the PR2 simulator.  We maintain two copies to allow for controller
-    gains to be set differently between hardware and simulation.'';
+    gains to be set differently between hardware and simulation.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

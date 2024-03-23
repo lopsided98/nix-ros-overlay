@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rqt_pose_view provides a GUI plugin for visualizing 3D poses.'';
+    description = "rqt_pose_view provides a GUI plugin for visualizing 3D poses.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core python3 ];
 
   meta = {
-    description = ''API and scripts to parse .msg/.srv/.action files and convert them to .idl.'';
+    description = "API and scripts to parse .msg/.srv/.action files and convert them to .idl.";
     license = with lib.licenses; [ asl20 ];
   };
 }

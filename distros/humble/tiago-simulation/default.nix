@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The tiago_simulation package'';
+    description = "The tiago_simulation package";
     license = with lib.licenses; [ asl20 ];
   };
 }

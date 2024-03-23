@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The urdf_sim_tutorial package'';
+    description = "The urdf_sim_tutorial package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

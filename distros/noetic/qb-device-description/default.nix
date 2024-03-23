@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains a device-independent description utilities for qbrobotics® devices.'';
+    description = "This package contains a device-independent description utilities for qbrobotics® devices.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

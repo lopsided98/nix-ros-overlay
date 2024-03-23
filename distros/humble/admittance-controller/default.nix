@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Implementation of admittance controllers for different input and output interface.'';
+    description = "Implementation of admittance controllers for different input and output interface.";
     license = with lib.licenses; [ asl20 ];
   };
 }

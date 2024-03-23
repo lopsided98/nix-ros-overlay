@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''ROS 2 controller that offers a service to clear faults in a hardware interface'';
+    description = "ROS 2 controller that offers a service to clear faults in a hardware interface";
     license = with lib.licenses; [ asl20 ];
   };
 }

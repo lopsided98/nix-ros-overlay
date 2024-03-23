@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python python3Packages.catkin-pkg python3Packages.importlib-metadata python3Packages.psutil python3Packages.rosdistro rclpy ros-environment ros2cli ];
 
   meta = {
-    description = ''A command line tool to check potential issues in a ROS 2 system'';
+    description = "A command line tool to check potential issues in a ROS 2 system";
     license = with lib.licenses; [ asl20 ];
   };
 }

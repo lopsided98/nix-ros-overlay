@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Deploys various manipulation algorithms, currently just
-    feedforward filters (interpolations).'';
+    description = "Deploys various manipulation algorithms, currently just
+    feedforward filters (interpolations).";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

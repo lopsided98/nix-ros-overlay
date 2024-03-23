@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains nodes that control the Dynamixel by communicating with the server registered in the 'dynamixel_workbench_controllers' package'';
+    description = "This package contains nodes that control the Dynamixel by communicating with the server registered in the 'dynamixel_workbench_controllers' package";
     license = with lib.licenses; [ asl20 ];
   };
 }

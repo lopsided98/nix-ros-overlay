@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core mrt-cmake-modules ];
 
   meta = {
-    description = ''Lanelet2 projection library for lat/lon to local x/y conversion'';
+    description = "Lanelet2 projection library for lat/lon to local x/y conversion";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

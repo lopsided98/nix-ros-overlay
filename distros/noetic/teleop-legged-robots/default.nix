@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Generic keyboard teleop for legged robots.'';
+    description = "Generic keyboard teleop for legged robots.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

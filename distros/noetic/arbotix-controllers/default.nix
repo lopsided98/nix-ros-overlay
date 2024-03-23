@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Extends the arbotix_python package with a number of more sophisticated ROS wrappers for common devices.'';
+    description = "Extends the arbotix_python package with a number of more sophisticated ROS wrappers for common devices.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

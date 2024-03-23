@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Controller for executing joint-space trajectories on a group of joints.'';
+    description = "Controller for executing joint-space trajectories on a group of joints.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

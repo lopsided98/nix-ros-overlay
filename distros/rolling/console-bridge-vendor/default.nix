@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package ];
 
   meta = {
-    description = ''Wrapper around console_bridge, providing nothing but a dependency on console_bridge, on some systems.
-    On others, it provides an ExternalProject build of console_bridge.'';
+    description = "Wrapper around console_bridge, providing nothing but a dependency on console_bridge, on some systems.
+    On others, it provides an ExternalProject build of console_bridge.";
     license = with lib.licenses; [ asl20 bsdOriginal ];
   };
 }

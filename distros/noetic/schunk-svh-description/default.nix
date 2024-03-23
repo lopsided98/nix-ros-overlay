@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The schunk_svh_description package'';
+    description = "The schunk_svh_description package";
     license = with lib.licenses; [ "GPL-3.0-or-later" ];
   };
 }

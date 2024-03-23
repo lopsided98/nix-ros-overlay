@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Theta* Global Planning Plugin'';
+    description = "Theta* Global Planning Plugin";
     license = with lib.licenses; [ asl20 ];
   };
 }

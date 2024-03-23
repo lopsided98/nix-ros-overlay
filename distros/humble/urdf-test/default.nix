@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''The urdf_test package'';
+    description = "The urdf_test package";
     license = with lib.licenses; [ asl20 ];
   };
 }

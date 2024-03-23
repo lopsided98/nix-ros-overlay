@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides a sped up improved slam karto with updated SDK and visualization and modification toolsets'';
+    description = "This package provides a sped up improved slam karto with updated SDK and visualization and modification toolsets";
     license = with lib.licenses; [ "LGPL" ];
   };
 }

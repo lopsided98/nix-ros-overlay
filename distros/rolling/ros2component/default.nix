@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python composition-interfaces rcl-interfaces rclcpp-components rclpy ros2cli ros2node ros2param ros2pkg ];
 
   meta = {
-    description = ''The component command for ROS 2 command line tools.'';
+    description = "The component command for ROS 2 command line tools.";
     license = with lib.licenses; [ asl20 ];
   };
 }

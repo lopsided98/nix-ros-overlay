@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python eigen3-cmake-module ];
 
   meta = {
-    description = ''MAVROS -- MAVLink extendable communication node for ROS
-    with proxy for Ground Control Station.'';
+    description = "MAVROS -- MAVLink extendable communication node for ROS
+    with proxy for Ground Control Station.";
     license = with lib.licenses; [ gpl3Only lgpl3Only bsdOriginal ];
   };
 }

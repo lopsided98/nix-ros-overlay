@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Conversion nodes for messages from SocketCAN to a ROS Topic and vice versa.'';
+    description = "Conversion nodes for messages from SocketCAN to a ROS Topic and vice versa.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

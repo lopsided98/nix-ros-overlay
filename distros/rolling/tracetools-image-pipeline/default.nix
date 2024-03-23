@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros pkg-config ];
 
   meta = {
-    description = ''LTTng tracing provider wrapper for image_pipeline ROS 2 meta-package.'';
+    description = "LTTng tracing provider wrapper for image_pipeline ROS 2 meta-package.";
     license = with lib.licenses; [ asl20 ];
   };
 }

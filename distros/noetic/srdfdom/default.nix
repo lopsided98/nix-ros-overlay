@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Parser for Semantic Robot Description Format (SRDF).'';
+    description = "Parser for Semantic Robot Description Format (SRDF).";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

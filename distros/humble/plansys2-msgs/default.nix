@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Messages and service files for the ROS2 Planning System'';
+    description = "Messages and service files for the ROS2 Planning System";
     license = with lib.licenses; [ asl20 ];
   };
 }

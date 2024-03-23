@@ -19,12 +19,12 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Rosbridge provides a JSON API to ROS functionality for non-ROS programs.
+    description = "Rosbridge provides a JSON API to ROS functionality for non-ROS programs.
     There are a variety of front ends that interface with rosbridge, including
     a WebSocket server for web browsers to interact with.
 
     Rosbridge_suite is a meta-package containing rosbridge, various front end
-    packages for rosbridge like a WebSocket package, and helper packages.'';
+    packages for rosbridge like a WebSocket package, and helper packages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

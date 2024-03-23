@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rospatlite'';
+    description = "rospatlite";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

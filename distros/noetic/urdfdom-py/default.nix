@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Python implementation of the URDF parser.'';
+    description = "Python implementation of the URDF parser.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

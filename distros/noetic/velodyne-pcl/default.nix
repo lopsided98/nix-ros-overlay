@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The velodyne_pcl package'';
+    description = "The velodyne_pcl package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

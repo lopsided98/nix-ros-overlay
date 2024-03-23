@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-gmock ament-cmake-gtest cmake ];
 
   meta = {
-    description = ''Bidirectional bridge ROS2-MOLA'';
+    description = "Bidirectional bridge ROS2-MOLA";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

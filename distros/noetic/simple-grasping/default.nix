@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Basic grasping applications and demos.'';
+    description = "Basic grasping applications and demos.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Provides an interface to read the sensor output of a SICK Safevisionary sensor in ROS 2'';
+    description = "Provides an interface to read the sensor output of a SICK Safevisionary sensor in ROS 2";
     license = with lib.licenses; [ asl20 ];
   };
 }

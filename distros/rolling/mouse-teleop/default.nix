@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ geometry-msgs python3Packages.numpy python3Packages.tkinter rclpy ];
 
   meta = {
-    description = ''A mouse teleop tool for holonomic mobile robots.'';
+    description = "A mouse teleop tool for holonomic mobile robots.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

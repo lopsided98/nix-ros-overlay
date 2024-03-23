@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides ROS specific hooks for stage'';
+    description = "This package provides ROS specific hooks for stage";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

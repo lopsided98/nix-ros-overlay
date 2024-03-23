@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides a node for higher level navigation of a mobile
+    description = "This package provides a node for higher level navigation of a mobile
     robot in a planar environment. It needs a map and the robot's position
     within this map to create a plan for navigation. When used together with
     a SLAM module it can also be used to perform autonomous exploration of
-    the robot's workspace.'';
+    the robot's workspace.";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

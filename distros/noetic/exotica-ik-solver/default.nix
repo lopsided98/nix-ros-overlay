@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Regularised and weighted pseudo-inverse unconstrained end-pose solver'';
+    description = "Regularised and weighted pseudo-inverse unconstrained end-pose solver";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

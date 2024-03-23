@@ -19,12 +19,12 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''<p>
+    description = "<p>
       MoveIt Resources for testing: Pilz PRBT 6
     </p>
     <p>
 		A project-internal configuration for testing in MoveIt.
-    </p>'';
+    </p>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

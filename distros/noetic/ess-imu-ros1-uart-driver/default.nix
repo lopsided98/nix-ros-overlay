@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The Epson IMU Driver using UART interface for ROS package'';
+    description = "The Epson IMU Driver using UART interface for ROS package";
     license = with lib.licenses; [ bsdOriginal publicDomain ];
   };
 }

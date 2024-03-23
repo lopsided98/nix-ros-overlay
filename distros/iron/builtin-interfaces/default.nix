@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-core-generators ];
 
   meta = {
-    description = ''A package containing message and service definitions for types defined in the OMG IDL Platform Specific Model.'';
+    description = "A package containing message and service definitions for types defined in the OMG IDL Platform Specific Model.";
     license = with lib.licenses; [ asl20 ];
   };
 }

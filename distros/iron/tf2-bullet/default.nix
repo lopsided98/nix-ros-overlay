@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''tf2_bullet'';
+    description = "tf2_bullet";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

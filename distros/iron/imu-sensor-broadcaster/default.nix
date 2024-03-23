@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Controller to publish readings of IMU sensors.'';
+    description = "Controller to publish readings of IMU sensors.";
     license = with lib.licenses; [ asl20 ];
   };
 }

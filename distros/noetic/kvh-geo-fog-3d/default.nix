@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides a driver node for KVH GEO FOG 3D INS sensors, messages, and rviz plugins.'';
+    description = "Provides a driver node for KVH GEO FOG 3D INS sensors, messages, and rviz plugins.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,12 +20,12 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-ros ];
 
   meta = {
-    description = ''tf2 is the second generation of the transform library, which lets
+    description = "tf2 is the second generation of the transform library, which lets
     the user keep track of multiple coordinate frames over time. tf2
     maintains the relationship between coordinate frames in a tree
     structure buffered in time, and lets the user transform points,
     vectors, etc between any two coordinate frames at any desired
-    point in time.'';
+    point in time.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

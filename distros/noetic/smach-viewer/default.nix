@@ -19,13 +19,13 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The smach viewer is a GUI that shows the state of hierarchical
+    description = "The smach viewer is a GUI that shows the state of hierarchical
     SMACH state machines. It can visualize the possible transitions
     between states, as well as the currently active state and the
     values of user data that is passed around between states. The
     smach viewer uses the SMACH debugging interface based on
-    the <a href="http://www.ros.org/wiki/smach_msgs">smach
-    messages</a> to gather information from running state machines.'';
+    the <a href=\"http://www.ros.org/wiki/smach_msgs\">smach
+    messages</a> to gather information from running state machines.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

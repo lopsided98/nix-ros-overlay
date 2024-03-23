@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''roswtf is a tool for diagnosing issues with a running ROS system. Think of it as a FAQ implemented in code.'';
+    description = "roswtf is a tool for diagnosing issues with a running ROS system. Think of it as a FAQ implemented in code.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

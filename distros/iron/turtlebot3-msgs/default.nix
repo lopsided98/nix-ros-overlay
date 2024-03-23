@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Message and service types: custom messages and services for TurtleBot3 packages for ROS2'';
+    description = "Message and service types: custom messages and services for TurtleBot3 packages for ROS2";
     license = with lib.licenses; [ asl20 ];
   };
 }

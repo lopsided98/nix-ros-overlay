@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Defines helper functions and routines that greatly help when trying to create a settler
+    description = "Defines helper functions and routines that greatly help when trying to create a settler
     for a specific sensor channel. This package is experimental and unstable.
-    Expect its APIs to change.'';
+    Expect its APIs to change.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

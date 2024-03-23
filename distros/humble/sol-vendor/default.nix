@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''vendor package for the sol2 library'';
+    description = "vendor package for the sol2 library";
     license = with lib.licenses; [ asl20 mit ];
   };
 }

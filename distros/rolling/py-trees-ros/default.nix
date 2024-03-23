@@ -19,7 +19,7 @@ buildRosPackage {
   propagatedBuildInputs = [ geometry-msgs py-trees py-trees-ros-interfaces rcl-interfaces rclpy ros2topic sensor-msgs std-msgs tf2-ros-py unique-identifier-msgs ];
 
   meta = {
-    description = ''ROS2 extensions and behaviours for py_trees.'';
+    description = "ROS2 extensions and behaviours for py_trees.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

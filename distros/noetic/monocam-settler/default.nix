@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Listens on a ImageFeatures topic, and waits for the data to settle.
+    description = "Listens on a ImageFeatures topic, and waits for the data to settle.
      This package is experimental and unstable.
-     Expect its APIs to change.'';
+     Expect its APIs to change.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

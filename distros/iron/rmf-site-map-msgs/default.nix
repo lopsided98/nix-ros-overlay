@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Messages that contain GeoPackage maps'';
+    description = "Messages that contain GeoPackage maps";
     license = with lib.licenses; [ asl20 ];
   };
 }

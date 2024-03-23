@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The kartech_linear_actuator_msgs package'';
+    description = "The kartech_linear_actuator_msgs package";
     license = with lib.licenses; [ mit ];
   };
 }

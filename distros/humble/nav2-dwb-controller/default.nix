@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS2 controller (DWB) metapackage'';
+    description = "ROS2 controller (DWB) metapackage";
     license = with lib.licenses; [ asl20 ];
   };
 }

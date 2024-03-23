@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides a toolchain running through the robot calibration process. This
+    description = "Provides a toolchain running through the robot calibration process. This
      involves capturing calibration data, estimating parameters, and
-     then updating the URDF.'';
+     then updating the URDF.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

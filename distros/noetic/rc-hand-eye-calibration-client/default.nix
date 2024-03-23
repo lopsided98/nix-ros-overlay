@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rc_hand_eye_calibration_client package'';
+    description = "The rc_hand_eye_calibration_client package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

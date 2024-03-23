@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Tools for writing ros-node-like bash scripts'';
+    description = "Tools for writing ros-node-like bash scripts";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''ROS rqt GUI for the Dataspeed Inc. Intelligent Power Distribution System (iPDS)'';
+    description = "ROS rqt GUI for the Dataspeed Inc. Intelligent Power Distribution System (iPDS)";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

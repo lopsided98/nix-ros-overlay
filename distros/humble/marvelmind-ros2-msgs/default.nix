@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Marvelmind message package for ROS2'';
+    description = "Marvelmind message package for ROS2";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

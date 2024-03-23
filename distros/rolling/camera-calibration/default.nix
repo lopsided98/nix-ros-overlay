@@ -18,8 +18,8 @@ buildRosPackage {
   propagatedBuildInputs = [ cv-bridge image-geometry message-filters python3Packages.opencv4 rclpy sensor-msgs std-srvs ];
 
   meta = {
-    description = ''camera_calibration allows easy calibration of monocular or stereo
-     cameras using a checkerboard calibration target.'';
+    description = "camera_calibration allows easy calibration of monocular or stereo
+     cameras using a checkerboard calibration target.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

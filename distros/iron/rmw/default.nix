@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ament-cmake-version ];
 
   meta = {
-    description = ''Contains the ROS middleware API.'';
+    description = "Contains the ROS middleware API.";
     license = with lib.licenses; [ asl20 ];
   };
 }

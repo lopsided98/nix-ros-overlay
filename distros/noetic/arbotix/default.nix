@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ArbotiX Drivers'';
+    description = "ArbotiX Drivers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

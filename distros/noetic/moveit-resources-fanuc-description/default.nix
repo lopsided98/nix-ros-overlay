@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Fanuc Resources used for MoveIt! testing'';
+    description = "Fanuc Resources used for MoveIt! testing";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

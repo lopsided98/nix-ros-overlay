@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Driver for the Phidgets Humidity devices'';
+    description = "Driver for the Phidgets Humidity devices";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

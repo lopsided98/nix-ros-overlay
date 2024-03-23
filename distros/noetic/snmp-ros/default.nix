@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Utilities for working with SNMP from ROS'';
+    description = "Utilities for working with SNMP from ROS";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

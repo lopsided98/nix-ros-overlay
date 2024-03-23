@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cppcheck ];
 
   meta = {
-    description = ''The CMake API for ament_cppcheck to perform static code analysis on C/C++
-    code using Cppcheck.'';
+    description = "The CMake API for ament_cppcheck to perform static code analysis on C/C++
+    code using Cppcheck.";
     license = with lib.licenses; [ asl20 ];
   };
 }

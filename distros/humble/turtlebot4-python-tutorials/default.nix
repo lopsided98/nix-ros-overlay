@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ irobot-create-msgs rclpy turtlebot4-navigation ];
 
   meta = {
-    description = ''TurtleBot 4 Python Tutorials'';
+    description = "TurtleBot 4 Python Tutorials";
     license = with lib.licenses; [ asl20 ];
   };
 }

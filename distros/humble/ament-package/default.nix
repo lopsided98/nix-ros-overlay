@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.importlib-metadata python3Packages.importlib-resources python3Packages.setuptools ];
 
   meta = {
-    description = ''The parser for the manifest files in the ament buildsystem.'';
+    description = "The parser for the manifest files in the ament buildsystem.";
     license = with lib.licenses; [ asl20 ];
   };
 }

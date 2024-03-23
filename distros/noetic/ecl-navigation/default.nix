@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This stack aims to bring the common tools and algorithms needed to
+    description = "This stack aims to bring the common tools and algorithms needed to
     develop navigation algorithms, in particular slam. It does not focus on
     the end-point solution, rather the tools needed to create a variety of
-    end-point solutions.'';
+    end-point solutions.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

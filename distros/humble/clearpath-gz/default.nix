@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Clearpath Gazebo Simulator'';
+    description = "Clearpath Gazebo Simulator";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS integration for the Catch unit test framework'';
+    description = "ROS integration for the Catch unit test framework";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

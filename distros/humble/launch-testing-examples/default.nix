@@ -17,7 +17,7 @@ buildRosPackage {
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 demo-nodes-cpp launch launch-ros launch-testing launch-testing-ros pythonPackages.pytest rclpy ros2bag rosbag2-transport std-msgs ];
 
   meta = {
-    description = ''Examples of simple launch tests'';
+    description = "Examples of simple launch tests";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Simple proxy driver for the ros2_canopen stack'';
+    description = "Simple proxy driver for the ros2_canopen stack";
     license = with lib.licenses; [ asl20 ];
   };
 }

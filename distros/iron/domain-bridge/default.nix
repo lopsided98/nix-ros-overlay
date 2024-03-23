@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''ROS 2 Domain Bridge'';
+    description = "ROS 2 Domain Bridge";
     license = with lib.licenses; [ asl20 ];
   };
 }

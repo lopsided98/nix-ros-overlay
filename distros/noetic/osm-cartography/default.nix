@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Geographic mapping using Open Street Map data.'';
+    description = "Geographic mapping using Open Street Map data.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

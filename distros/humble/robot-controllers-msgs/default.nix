@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Messages for use with robot_controllers framework.'';
+    description = "Messages for use with robot_controllers framework.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

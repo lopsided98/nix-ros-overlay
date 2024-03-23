@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages for proprietary (non-NMEA) sentences from Novatel GPS receivers.'';
+    description = "Messages for proprietary (non-NMEA) sentences from Novatel GPS receivers.";
     license = with lib.licenses; [ "Southwest-Research-Institute-Proprietary" ];
   };
 }

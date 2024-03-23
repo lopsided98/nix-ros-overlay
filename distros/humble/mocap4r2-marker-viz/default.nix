@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Node for visualizing markers'';
+    description = "Node for visualizing markers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

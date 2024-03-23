@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Test messages for the ros_babel_fish project tests.'';
+    description = "Test messages for the ros_babel_fish project tests.";
     license = with lib.licenses; [ mit ];
   };
 }

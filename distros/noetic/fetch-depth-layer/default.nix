@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The fetch_depth_layer package'';
+    description = "The fetch_depth_layer package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

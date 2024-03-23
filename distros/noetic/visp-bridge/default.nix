@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Converts between ROS structures and ViSP structures.'';
+    description = "Converts between ROS structures and ViSP structures.";
     license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The flatland_server package'';
+    description = "The flatland_server package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

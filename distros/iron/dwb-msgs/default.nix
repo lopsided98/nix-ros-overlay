@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Message/Service definitions specifically for the dwb_core'';
+    description = "Message/Service definitions specifically for the dwb_core";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin qt5.qtbase ];
 
   meta = {
-    description = ''Common plugins for the Mapviz visualization tool'';
+    description = "Common plugins for the Mapviz visualization tool";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

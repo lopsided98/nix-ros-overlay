@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Republishing of Selected TFs'';
+    description = "Republishing of Selected TFs";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

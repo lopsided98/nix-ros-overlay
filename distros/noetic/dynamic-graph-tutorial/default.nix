@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Dynamic graph tutorial'';
+    description = "Dynamic graph tutorial";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

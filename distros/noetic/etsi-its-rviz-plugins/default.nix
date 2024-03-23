@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''RViz plugin for ROS 2 messages based on ETSI ITS messages'';
+    description = "RViz plugin for ROS 2 messages based on ETSI ITS messages";
     license = with lib.licenses; [ mit ];
   };
 }

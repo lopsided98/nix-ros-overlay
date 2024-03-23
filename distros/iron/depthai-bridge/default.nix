@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The depthai_bridge package'';
+    description = "The depthai_bridge package";
     license = with lib.licenses; [ mit ];
   };
 }

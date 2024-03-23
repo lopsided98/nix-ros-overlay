@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package containing Mia Hand msg and srv files.'';
+    description = "Package containing Mia Hand msg and srv files.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

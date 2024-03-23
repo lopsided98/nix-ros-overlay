@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''hector_pose_estimation provides the hector_pose_estimation node and the hector_pose_estimation nodelet.'';
+    description = "hector_pose_estimation provides the hector_pose_estimation node and the hector_pose_estimation nodelet.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

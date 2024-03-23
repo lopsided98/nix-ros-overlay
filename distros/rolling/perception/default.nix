@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A package which aggregates common perception packages.'';
+    description = "A package which aggregates common perception packages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

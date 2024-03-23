@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Drive-by-wire interface to the Dataspeed Inc. Ford DBW kit'';
+    description = "Drive-by-wire interface to the Dataspeed Inc. Ford DBW kit";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains configuration files for the default environments for Care-O-bot supported by IPA.'';
+    description = "This package contains configuration files for the default environments for Care-O-bot supported by IPA.";
     license = with lib.licenses; [ asl20 ];
   };
 }

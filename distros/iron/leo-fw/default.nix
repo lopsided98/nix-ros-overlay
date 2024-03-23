@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''Binary releases of Leo Rover firmware and related utilities'';
+    description = "Binary releases of Leo Rover firmware and related utilities";
     license = with lib.licenses; [ mit ];
   };
 }

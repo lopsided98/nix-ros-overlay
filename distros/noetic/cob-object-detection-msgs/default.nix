@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains message type definitions for object detection'';
+    description = "This package contains message type definitions for object detection";
     license = with lib.licenses; [ asl20 ];
   };
 }

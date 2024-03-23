@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages, services and actions for the ATF.'';
+    description = "Messages, services and actions for the ATF.";
     license = with lib.licenses; [ asl20 ];
   };
 }

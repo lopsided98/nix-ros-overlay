@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''hector_gazebo provides packages related to to simulation of robots using gazebo (gazebo plugins, world files etc.)'';
+    description = "hector_gazebo provides packages related to to simulation of robots using gazebo (gazebo plugins, world files etc.)";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

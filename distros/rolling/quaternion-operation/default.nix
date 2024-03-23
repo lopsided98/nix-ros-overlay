@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The quaternion_operation package'';
+    description = "The quaternion_operation package";
     license = with lib.licenses; [ asl20 ];
   };
 }

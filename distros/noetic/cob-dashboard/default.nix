@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''cob_dashboard is a modified version of [[pr2_dashboard]].'';
+    description = "cob_dashboard is a modified version of [[pr2_dashboard]].";
     license = with lib.licenses; [ asl20 ];
   };
 }

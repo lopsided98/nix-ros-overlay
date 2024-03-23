@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ example-interfaces rclpy std-msgs ];
 
   meta = {
-    description = ''Examples of minimal service servers using rclpy.'';
+    description = "Examples of minimal service servers using rclpy.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The zdepth package'';
+    description = "The zdepth package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

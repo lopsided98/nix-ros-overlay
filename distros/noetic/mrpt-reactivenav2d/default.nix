@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Reactive navigation for 2D robots using MRPT navigation algorithms (TP-Space)'';
+    description = "Reactive navigation for 2D robots using MRPT navigation algorithms (TP-Space)";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

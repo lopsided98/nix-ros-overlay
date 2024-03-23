@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''A point cloud message wrapper that allows for simple and safe PointCloud2 msg usage'';
+    description = "A point cloud message wrapper that allows for simple and safe PointCloud2 msg usage";
     license = with lib.licenses; [ asl20 ];
   };
 }

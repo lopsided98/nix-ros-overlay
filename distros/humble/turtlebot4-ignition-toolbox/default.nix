@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Turtlebot4 Ignition Toolbox'';
+    description = "Turtlebot4 Ignition Toolbox";
     license = with lib.licenses; [ asl20 ];
   };
 }

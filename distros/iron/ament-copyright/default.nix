@@ -18,8 +18,8 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-lint python3Packages.importlib-metadata ];
 
   meta = {
-    description = ''The ability to check source files for copyright and license
-    information.'';
+    description = "The ability to check source files for copyright and license
+    information.";
     license = with lib.licenses; [ asl20 ];
   };
 }

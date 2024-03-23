@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''flexbe_states provides a collection of predefined states.
-     Feel free to add new states.'';
+    description = "flexbe_states provides a collection of predefined states.
+     Feel free to add new states.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

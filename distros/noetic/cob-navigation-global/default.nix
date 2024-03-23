@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package holds config and launch files for running the  <a href="http://ros.org/wiki/move_base">move_base</a> node on the <a href="http://ros.org/wiki/care-o-bot">Care-O-bot</a>.
-    The move_base node is configured to run over a pre-specified static map.'';
+    description = "This package holds config and launch files for running the  <a href=\"http://ros.org/wiki/move_base\">move_base</a> node on the <a href=\"http://ros.org/wiki/care-o-bot\">Care-O-bot</a>.
+    The move_base node is configured to run over a pre-specified static map.";
     license = with lib.licenses; [ asl20 ];
   };
 }

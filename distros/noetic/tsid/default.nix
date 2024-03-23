@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Efficient Task Space Inverse Dynamics (TSID) based on Pinocchio'';
+    description = "Efficient Task Space Inverse Dynamics (TSID) based on Pinocchio";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

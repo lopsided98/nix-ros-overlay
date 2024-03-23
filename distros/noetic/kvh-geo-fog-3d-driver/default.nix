@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A ROS driver for the KVH Geo Fog 3D INS family of systems.'';
+    description = "A ROS driver for the KVH Geo Fog 3D INS family of systems.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''RQT plugin for monitoring ROS processes.'';
+    description = "RQT plugin for monitoring ROS processes.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

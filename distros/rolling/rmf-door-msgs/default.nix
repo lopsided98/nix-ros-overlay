@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Messages used to interface to doors'';
+    description = "Messages used to interface to doors";
     license = with lib.licenses; [ asl20 ];
   };
 }

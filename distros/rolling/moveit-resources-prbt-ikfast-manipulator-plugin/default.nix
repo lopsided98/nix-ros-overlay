@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The prbt_ikfast_manipulator_plugin package'';
+    description = "The prbt_ikfast_manipulator_plugin package";
     license = with lib.licenses; [ asl20 ];
   };
 }

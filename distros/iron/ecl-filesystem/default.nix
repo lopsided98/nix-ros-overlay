@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Cross platform filesystem utilities (until c++11 makes its way in).'';
+    description = "Cross platform filesystem utilities (until c++11 makes its way in).";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

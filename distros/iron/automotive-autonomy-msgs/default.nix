@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Messages for vehicle automation'';
+    description = "Messages for vehicle automation";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Driver for u-blox GPS devices.'';
+    description = "Driver for u-blox GPS devices.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

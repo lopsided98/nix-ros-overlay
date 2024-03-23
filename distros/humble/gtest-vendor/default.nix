@@ -17,7 +17,7 @@ buildRosPackage {
   buildInputs = [ cmake ];
 
   meta = {
-    description = ''The package provides GoogleTest.'';
+    description = "The package provides GoogleTest.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

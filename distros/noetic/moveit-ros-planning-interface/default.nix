@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.catkin-pkg ];
 
   meta = {
-    description = ''Components of MoveIt that offer simpler interfaces to planning and execution'';
+    description = "Components of MoveIt that offer simpler interfaces to planning and execution";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

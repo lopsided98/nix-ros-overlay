@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Utility functions for displaying and debugging data in Rviz via published markers'';
+    description = "Utility functions for displaying and debugging data in Rviz via published markers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

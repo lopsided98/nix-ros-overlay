@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Drive-by-wire interface to the Dataspeed Inc. Polaris GEM/Ranger/RZR DBW kit'';
+    description = "Drive-by-wire interface to the Dataspeed Inc. Polaris GEM/Ranger/RZR DBW kit";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

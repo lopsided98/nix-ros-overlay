@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.argcomplete python3Packages.importlib-metadata python3Packages.packaging python3Packages.psutil python3Packages.setuptools rclpy ];
 
   meta = {
-    description = ''Framework for ROS 2 command line tools.'';
+    description = "Framework for ROS 2 command line tools.";
     license = with lib.licenses; [ asl20 ];
   };
 }

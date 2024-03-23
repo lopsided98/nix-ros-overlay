@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''URDF description for Universal UR3(e), UR5(e), UR10(e), UR16e and UR20 robots'';
+    description = "URDF description for Universal UR3(e), UR5(e), UR10(e), UR16e and UR20 robots";
     license = with lib.licenses; [ bsdOriginal "Universal-Robots-A-S'-Terms-and-Conditions-for-Use-of-Graphical-Documentation" ];
   };
 }

@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Defines a hardware interface to send Cartesian commands to a robot hardware and read
-    Cartesian states.'';
+    description = "Defines a hardware interface to send Cartesian commands to a robot hardware and read
+    Cartesian states.";
     license = with lib.licenses; [ asl20 ];
   };
 }

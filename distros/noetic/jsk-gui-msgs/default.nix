@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''jsk_gui_msgs'';
+    description = "jsk_gui_msgs";
     license = with lib.licenses; [ asl20 ];
   };
 }

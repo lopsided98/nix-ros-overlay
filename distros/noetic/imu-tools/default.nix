@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Various tools for IMU devices'';
+    description = "Various tools for IMU devices";
     license = with lib.licenses; [ "BSD-&-GPL" ];
   };
 }

@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python pkg-config ];
 
   meta = {
-    description = ''The swri_transform_util package contains utility functions and classes for
-     transforming between coordinate frames.'';
+    description = "The swri_transform_util package contains utility functions and classes for
+     transforming between coordinate frames.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

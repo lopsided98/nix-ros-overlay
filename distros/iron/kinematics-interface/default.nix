@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Kinematics interface for ROS 2 control'';
+    description = "Kinematics interface for ROS 2 control";
     license = with lib.licenses; [ asl20 ];
   };
 }

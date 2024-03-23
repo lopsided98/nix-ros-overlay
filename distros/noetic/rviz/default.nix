@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''3D visualization tool for ROS.'';
+    description = "3D visualization tool for ROS.";
     license = with lib.licenses; [ bsdOriginal "Creative-Commons" ];
   };
 }

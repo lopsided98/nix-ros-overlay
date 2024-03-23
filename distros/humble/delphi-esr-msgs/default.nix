@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Message definitions for the Delphi ESR'';
+    description = "Message definitions for the Delphi ESR";
     license = with lib.licenses; [ mit ];
   };
 }

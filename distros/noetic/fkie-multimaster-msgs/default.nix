@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The messages required by multimaster packages.'';
+    description = "The messages required by multimaster packages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

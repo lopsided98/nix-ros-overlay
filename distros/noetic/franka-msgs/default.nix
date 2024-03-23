@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''franka_msgs provides messages specific to Franka Emika research robots'';
+    description = "franka_msgs provides messages specific to Franka Emika research robots";
     license = with lib.licenses; [ asl20 ];
   };
 }

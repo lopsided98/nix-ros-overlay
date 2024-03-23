@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ geometry-msgs rclpy std-msgs ];
 
   meta = {
-    description = ''ROS2 package for converting between Twist and TwistStamped messages'';
+    description = "ROS2 package for converting between Twist and TwistStamped messages";
     license = with lib.licenses; [ asl20 ];
   };
 }

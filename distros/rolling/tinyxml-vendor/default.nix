@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''CMake shim over the tinxml library.'';
+    description = "CMake shim over the tinxml library.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides access to the PR2 fingertip pressure sensors. This information includes:'';
+    description = "This package provides access to the PR2 fingertip pressure sensors. This information includes:";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

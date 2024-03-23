@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''Contains a node publish an image stream from single image file
-      or avi motion file.'';
+    description = "Contains a node publish an image stream from single image file
+      or avi motion file.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

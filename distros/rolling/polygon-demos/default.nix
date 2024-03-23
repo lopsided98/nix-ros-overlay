@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Demo of polygon_rviz_plugins'';
+    description = "Demo of polygon_rviz_plugins";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

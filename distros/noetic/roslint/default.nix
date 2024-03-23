@@ -18,10 +18,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''CMake lint commands for ROS packages.
+    description = "CMake lint commands for ROS packages.
 
     The lint commands perform static checking of Python or C++ source
-    code for errors and standards compliance.'';
+    code for errors and standards compliance.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

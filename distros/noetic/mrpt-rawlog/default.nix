@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides nodes to record and play MRPT rawlogs.'';
+    description = "This package provides nodes to record and play MRPT rawlogs.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

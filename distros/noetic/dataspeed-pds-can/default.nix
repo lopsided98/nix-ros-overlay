@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Interface to the Dataspeed Inc. Intelligent Power Distribution System (iPDS) via CAN'';
+    description = "Interface to the Dataspeed Inc. Intelligent Power Distribution System (iPDS) via CAN";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

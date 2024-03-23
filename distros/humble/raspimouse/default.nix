@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''RaspiMouse ROS 2 node'';
+    description = "RaspiMouse ROS 2 node";
     license = with lib.licenses; [ asl20 ];
   };
 }

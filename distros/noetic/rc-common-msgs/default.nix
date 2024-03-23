@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Common msg and srv definitions used by Roboception's ROS packages'';
+    description = "Common msg and srv definitions used by Roboception's ROS packages";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

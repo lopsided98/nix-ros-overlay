@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The bcr_bot package'';
+    description = "The bcr_bot package";
     license = with lib.licenses; [ "-C-Black-Coffee-Robotics" ];
   };
 }

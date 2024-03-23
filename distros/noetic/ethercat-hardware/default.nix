@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package for creating a hardware interface to the robot using the EtherCAT motor controller/driver'';
+    description = "Package for creating a hardware interface to the robot using the EtherCAT motor controller/driver";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''hector_marker_drawing provides convenience functions for easier publishing of visualization markers.'';
+    description = "hector_marker_drawing provides convenience functions for easier publishing of visualization markers.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

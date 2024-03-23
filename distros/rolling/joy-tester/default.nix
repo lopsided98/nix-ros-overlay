@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.tkinter rclpy sensor-msgs ];
 
   meta = {
-    description = ''Simple GUI tool for testing joysticks/gamepads'';
+    description = "Simple GUI tool for testing joysticks/gamepads";
     license = with lib.licenses; [ asl20 ];
   };
 }

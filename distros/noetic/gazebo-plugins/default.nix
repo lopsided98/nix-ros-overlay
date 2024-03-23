@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable components.'';
+    description = "Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable components.";
     license = with lib.licenses; [ "BSD-&-Apache-2.0" ];
   };
 }

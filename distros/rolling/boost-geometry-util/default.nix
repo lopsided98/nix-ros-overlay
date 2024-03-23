@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-auto ];
 
   meta = {
-    description = ''Utility library for boost geometry'';
+    description = "Utility library for boost geometry";
     license = with lib.licenses; [ asl20 ];
   };
 }

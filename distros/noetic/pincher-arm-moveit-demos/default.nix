@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Moveit demos for the PhantomX Pincher arm.'';
+    description = "Moveit demos for the PhantomX Pincher arm.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

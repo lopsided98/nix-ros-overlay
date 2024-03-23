@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Autonomous docking'';
+    description = "Autonomous docking";
     license = with lib.licenses; [ asl20 ];
   };
 }

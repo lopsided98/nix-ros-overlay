@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Packages for interfacing ROS with OpenCV, a library of programming functions for real time computer vision.'';
+    description = "Packages for interfacing ROS with OpenCV, a library of programming functions for real time computer vision.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

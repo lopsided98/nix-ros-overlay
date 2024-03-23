@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Gazebo configurations package for OpenManipulator'';
+    description = "Gazebo configurations package for OpenManipulator";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The frame_editor package'';
+    description = "The frame_editor package";
     license = with lib.licenses; [ mit ];
   };
 }

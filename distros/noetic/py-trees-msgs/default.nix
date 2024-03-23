@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages used by py_trees_ros and some extras for the mock demos/tests.'';
+    description = "Messages used by py_trees_ros and some extras for the mock demos/tests.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

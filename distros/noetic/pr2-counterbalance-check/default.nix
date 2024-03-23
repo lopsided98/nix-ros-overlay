@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''pr2_counterbalance_check'';
+    description = "pr2_counterbalance_check";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

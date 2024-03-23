@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''PMB2-specific simulation components. These include plugins
-               and launch scripts necessary for running PMB2 in simulation.'';
+    description = "PMB2-specific simulation components. These include plugins
+               and launch scripts necessary for running PMB2 in simulation.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Packages for working with Dingo from a ROS desktop.'';
+    description = "Packages for working with Dingo from a ROS desktop.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

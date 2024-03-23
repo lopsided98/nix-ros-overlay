@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package holds a collection of plugins for the RobotNavigator, that provide
-    different cooperative exploration strategies for a team of mobile robots.'';
+    description = "This package holds a collection of plugins for the RobotNavigator, that provide
+    different cooperative exploration strategies for a team of mobile robots.";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

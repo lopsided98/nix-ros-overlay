@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Time and Duration implementations for C++ libraries, including roscpp.'';
+    description = "Time and Duration implementations for C++ libraries, including roscpp.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

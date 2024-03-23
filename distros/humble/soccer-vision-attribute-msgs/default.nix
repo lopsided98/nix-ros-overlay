@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''A package containing attributes of objects in 2d/3d vision in the soccer domain.'';
+    description = "A package containing attributes of objects in 2d/3d vision in the soccer domain.";
     license = with lib.licenses; [ asl20 ];
   };
 }

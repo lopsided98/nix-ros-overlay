@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''AS2 CLI Package'';
+    description = "AS2 CLI Package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pal_statistics package'';
+    description = "The pal_statistics package";
     license = with lib.licenses; [ mit ];
   };
 }

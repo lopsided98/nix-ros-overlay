@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Fail Over ROS framework'';
+    description = "Fail Over ROS framework";
     license = with lib.licenses; [ asl20 ];
   };
 }

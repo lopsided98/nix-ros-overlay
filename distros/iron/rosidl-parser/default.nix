@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The parser for `.idl` ROS interface files.'';
+    description = "The parser for `.idl` ROS interface files.";
     license = with lib.licenses; [ asl20 ];
   };
 }

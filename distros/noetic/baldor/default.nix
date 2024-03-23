@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The baldor package'';
+    description = "The baldor package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

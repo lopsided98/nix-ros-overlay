@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Fleet Adapter package for RMF fleets.'';
+    description = "Fleet Adapter package for RMF fleets.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS interfaces for social navigation'';
+    description = "ROS interfaces for social navigation";
     license = with lib.licenses; [ "BSD-3-clause" ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Azure IoT C SDKs and Libraries'';
+    description = "Azure IoT C SDKs and Libraries";
     license = with lib.licenses; [ mit ];
   };
 }

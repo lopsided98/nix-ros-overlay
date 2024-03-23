@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Message definitions for the Delphi SRR'';
+    description = "Message definitions for the Delphi SRR";
     license = with lib.licenses; [ mit ];
   };
 }

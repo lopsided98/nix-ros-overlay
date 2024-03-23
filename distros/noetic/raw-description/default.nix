@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains the description (mechanical, kinematic, visual,
+    description = "This package contains the description (mechanical, kinematic, visual,
   etc.) of the Care-O-bot robot. The files in this package are parsed and used by
   a variety of other components. Most users will not interact directly
-  with this package.'';
+  with this package.";
     license = with lib.licenses; [ asl20 ];
   };
 }

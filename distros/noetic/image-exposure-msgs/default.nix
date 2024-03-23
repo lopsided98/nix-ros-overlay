@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages related to the Point Grey camera driver.'';
+    description = "Messages related to the Point Grey camera driver.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

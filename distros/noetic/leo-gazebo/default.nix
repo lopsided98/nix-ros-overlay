@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Launch files and other resources for simulating Leo Rover in Gazebo.'';
+    description = "Launch files and other resources for simulating Leo Rover in Gazebo.";
     license = with lib.licenses; [ mit ];
   };
 }

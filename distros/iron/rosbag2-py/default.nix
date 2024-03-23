@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-python ament-cmake-ros python-cmake-module ];
 
   meta = {
-    description = ''Python API for rosbag2'';
+    description = "Python API for rosbag2";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The gpio_controller package'';
+    description = "The gpio_controller package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

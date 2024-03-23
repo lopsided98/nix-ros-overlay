@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Example listener for Parker LORD Sensing inertial device driver ros_mscl (C++).'';
+    description = "Example listener for Parker LORD Sensing inertial device driver ros_mscl (C++).";
     license = with lib.licenses; [ mit ];
   };
 }

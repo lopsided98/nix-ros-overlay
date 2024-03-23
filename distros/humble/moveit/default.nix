@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Meta package that contains all essential packages of MoveIt 2'';
+    description = "Meta package that contains all essential packages of MoveIt 2";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

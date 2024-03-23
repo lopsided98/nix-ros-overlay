@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''stereo_msgs contains messages specific to stereo processing, such as disparity images.'';
+    description = "stereo_msgs contains messages specific to stereo processing, such as disparity images.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

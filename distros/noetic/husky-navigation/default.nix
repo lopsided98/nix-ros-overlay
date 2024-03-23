@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Autonomous mapping and navigation demos for the Clearpath Husky'';
+    description = "Autonomous mapping and navigation demos for the Clearpath Husky";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

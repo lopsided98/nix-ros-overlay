@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Clearpath Platform Drivers.'';
+    description = "Clearpath Platform Drivers.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

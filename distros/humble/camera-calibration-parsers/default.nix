@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''camera_calibration_parsers contains routines for reading and writing camera calibration parameters.'';
+    description = "camera_calibration_parsers contains routines for reading and writing camera calibration parameters.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

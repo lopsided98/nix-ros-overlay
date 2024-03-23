@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake git ];
 
   meta = {
-    description = ''Foonathan/memory vendor package for Fast-RTPS.'';
+    description = "Foonathan/memory vendor package for Fast-RTPS.";
     license = with lib.licenses; [ asl20 "Zlib" ];
   };
 }

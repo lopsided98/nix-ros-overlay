@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The zdepth_image_transport package'';
+    description = "The zdepth_image_transport package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

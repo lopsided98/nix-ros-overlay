@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Exports a custom CMake module to find Eigen3.'';
+    description = "Exports a custom CMake module to find Eigen3.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides messages and serializations / conversion for the <a href="http://octomap.github.io">OctoMap library</a>.'';
+    description = "This package provides messages and serializations / conversion for the <a href=\"http://octomap.github.io\">OctoMap library</a>.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

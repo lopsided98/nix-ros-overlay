@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Plugin-replacement for the default costmap_2d::InflationLayer.'';
+    description = "Plugin-replacement for the default costmap_2d::InflationLayer.";
     license = with lib.licenses; [ mit ];
   };
 }

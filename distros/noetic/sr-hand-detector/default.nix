@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The sr_hand_detector package'';
+    description = "The sr_hand_detector package";
     license = with lib.licenses; [ "GPL" ];
   };
 }

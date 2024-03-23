@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Bridge communication between ROS and Ignition Transport'';
+    description = "Bridge communication between ROS and Ignition Transport";
     license = with lib.licenses; [ asl20 ];
   };
 }

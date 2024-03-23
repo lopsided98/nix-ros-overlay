@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Driver for the Phidgets Temperature devices'';
+    description = "Driver for the Phidgets Temperature devices";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A metapackage to bring in the default packages second generation Transform Library in ros, tf2.'';
+    description = "A metapackage to bring in the default packages second generation Transform Library in ros, tf2.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

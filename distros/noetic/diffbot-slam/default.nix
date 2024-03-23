@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The diffbot_slam package'';
+    description = "The diffbot_slam package";
     license = with lib.licenses; [ "BSDv3" ];
   };
 }

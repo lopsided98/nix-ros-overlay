@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS-Industrial support for Universal Robots manipulators (metapackage).'';
+    description = "ROS-Industrial support for Universal Robots manipulators (metapackage).";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

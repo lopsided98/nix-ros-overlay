@@ -19,13 +19,13 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains the C++ interfaces to the PR2 hardware
+    description = "This package contains the C++ interfaces to the PR2 hardware
   components that are controlled over EtherCAT. This includes the
   motors and encoders needed to control the PR2 mechanism, as well as
   components like the pressure sensors in the fingertips, camera
   triggers, etc... All of the hardware components in this interface are
   directly available to the controllers inside the hard realtime
-  control loop.'';
+  control loop.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ILQG Solver (Todorov and Li, 2004)'';
+    description = "ILQG Solver (Todorov and Li, 2004)";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

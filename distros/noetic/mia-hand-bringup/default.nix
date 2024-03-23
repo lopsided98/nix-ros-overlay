@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package for grouping together all Mia Hand config and launch files.'';
+    description = "Package for grouping together all Mia Hand config and launch files.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A visualizer for obstacles in RMF'';
+    description = "A visualizer for obstacles in RMF";
     license = with lib.licenses; [ asl20 ];
   };
 }

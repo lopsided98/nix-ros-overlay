@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''A package containing messages used to interface to ingestor workcells'';
+    description = "A package containing messages used to interface to ingestor workcells";
     license = with lib.licenses; [ asl20 ];
   };
 }

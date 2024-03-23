@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package pkg-config ];
 
   meta = {
-    description = ''Wrapper around libcurl, it provides a fixed CMake module and an ExternalProject build of it.'';
+    description = "Wrapper around libcurl, it provides a fixed CMake module and an ExternalProject build of it.";
     license = with lib.licenses; [ asl20 mit ];
   };
 }

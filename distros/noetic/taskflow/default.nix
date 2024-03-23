@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The taskflow package'';
+    description = "The taskflow package";
     license = with lib.licenses; [ mit ];
   };
 }

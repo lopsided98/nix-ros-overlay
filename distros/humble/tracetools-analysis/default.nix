@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ jupyter python3Packages.pandas tracetools-read ];
 
   meta = {
-    description = ''Tools for analysing trace data.'';
+    description = "Tools for analysing trace data.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python python-cmake-module ];
 
   meta = {
-    description = ''Commonly used test helper classes and fixtures for rosbag2'';
+    description = "Commonly used test helper classes and fixtures for rosbag2";
     license = with lib.licenses; [ asl20 ];
   };
 }

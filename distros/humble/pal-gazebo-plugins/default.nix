@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''Robot-independent Gazebo plugins used by PAL Robotics.'';
+    description = "Robot-independent Gazebo plugins used by PAL Robotics.";
     license = with lib.licenses; [ asl20 ];
   };
 }

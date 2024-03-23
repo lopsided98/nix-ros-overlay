@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rqt_publisher provides a GUI plugin for publishing arbitrary messages with fixed or computed field values.'';
+    description = "rqt_publisher provides a GUI plugin for publishing arbitrary messages with fixed or computed field values.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

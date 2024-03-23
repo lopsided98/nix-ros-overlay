@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.construct rcgcrd-spl-4 ];
 
   meta = {
-    description = ''Converts RoboCup SPL GameController Return Data V4 between ROS msg and UDP raw bytes'';
+    description = "Converts RoboCup SPL GameController Return Data V4 between ROS msg and UDP raw bytes";
     license = with lib.licenses; [ asl20 ];
   };
 }

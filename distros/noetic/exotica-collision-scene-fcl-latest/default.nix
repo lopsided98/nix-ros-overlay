@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Collision checking and distance computation using the latest version of the FCL library.'';
+    description = "Collision checking and distance computation using the latest version of the FCL library.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-cppcheck ament-cmake-flake8 ament-cmake-pep257 rosidl-default-generators ];
 
   meta = {
-    description = ''this package contains a set of messages that are used by the introspection
-    interfaces for smach.'';
+    description = "this package contains a set of messages that are used by the introspection
+    interfaces for smach.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

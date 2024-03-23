@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Synchronize the local ROS master to the remote masters 
+    description = "Synchronize the local ROS master to the remote masters 
      discovered by fkie_master_discovery node. The registration
-     of topics and services is only perform by local ROS master.'';
+     of topics and services is only perform by local ROS master.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Hybrid planning components of MoveIt 2'';
+    description = "Hybrid planning components of MoveIt 2";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

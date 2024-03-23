@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A package which extends 'ros_base' and includes high level packages like vizualization tools and demos.'';
+    description = "A package which extends 'ros_base' and includes high level packages like vizualization tools and demos.";
     license = with lib.licenses; [ asl20 ];
   };
 }

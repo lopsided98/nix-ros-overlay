@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The laser_ortho_projector package calculates orthogonal projections of LaserScan messages.'';
+    description = "The laser_ortho_projector package calculates orthogonal projections of LaserScan messages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

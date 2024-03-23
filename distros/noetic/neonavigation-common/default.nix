@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Common headers for neonavigation meta-package'';
+    description = "Common headers for neonavigation meta-package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

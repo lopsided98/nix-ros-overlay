@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''CiA(r) CANopen 301 master implementation with support for interprocess master synchronisation.'';
+    description = "CiA(r) CANopen 301 master implementation with support for interprocess master synchronisation.";
     license = with lib.licenses; [ lgpl3Only ];
   };
 }

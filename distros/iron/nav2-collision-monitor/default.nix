@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Collision Monitor'';
+    description = "Collision Monitor";
     license = with lib.licenses; [ asl20 ];
   };
 }

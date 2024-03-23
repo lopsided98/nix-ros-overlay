@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Route network graphing and path planning.'';
+    description = "Route network graphing and path planning.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

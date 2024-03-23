@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A waypoint follower navigation server'';
+    description = "A waypoint follower navigation server";
     license = with lib.licenses; [ asl20 ];
   };
 }

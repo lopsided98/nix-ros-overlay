@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages for the swri_profiler tool.'';
+    description = "Messages for the swri_profiler tool.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

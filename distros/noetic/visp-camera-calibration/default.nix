@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''visp_camera_calibration allows easy calibration of
-     cameras using a customizable pattern and ViSP library.'';
+    description = "visp_camera_calibration allows easy calibration of
+     cameras using a customizable pattern and ViSP library.";
     license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

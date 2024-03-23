@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Defines the messages that are used to communicate with the
-    p2os_driver package and the ROS infrastructure.'';
+    description = "Defines the messages that are used to communicate with the
+    p2os_driver package and the ROS infrastructure.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

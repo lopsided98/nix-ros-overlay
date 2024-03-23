@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Create a Pandas data frame from a ros bag file.'';
+    description = "Create a Pandas data frame from a ros bag file.";
     license = with lib.licenses; [ asl20 ];
   };
 }

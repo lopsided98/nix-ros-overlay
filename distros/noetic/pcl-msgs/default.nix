@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package containing PCL (Point Cloud Library)-related ROS messages.'';
+    description = "Package containing PCL (Point Cloud Library)-related ROS messages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

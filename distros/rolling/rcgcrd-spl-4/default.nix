@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''RoboCup SPL GameController Return Data V4 ROS msg'';
+    description = "RoboCup SPL GameController Return Data V4 ROS msg";
     license = with lib.licenses; [ asl20 ];
   };
 }

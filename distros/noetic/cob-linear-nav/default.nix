@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''cob_linear_nav provides a simple navigation instrument driving on a linear path from current position to goal without any planning or obstacle avoidance capabilites.
-    Obstacle avoidance should be carried out in other package, e.g. <a href="http://ros.org/wiki/cob_collision_velocity_filter">cob_collision_velocity_filter</a>.'';
+    description = "cob_linear_nav provides a simple navigation instrument driving on a linear path from current position to goal without any planning or obstacle avoidance capabilites.
+    Obstacle avoidance should be carried out in other package, e.g. <a href=\"http://ros.org/wiki/cob_collision_velocity_filter\">cob_collision_velocity_filter</a>.";
     license = with lib.licenses; [ asl20 ];
   };
 }

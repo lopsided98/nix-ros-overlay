@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test pythonPackages.pytest ];
 
   meta = {
-    description = ''The ability to run Python tests using pytest in the ament buildsystem in CMake.'';
+    description = "The ability to run Python tests using pytest in the ament buildsystem in CMake.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Cartesian trajectory execution interface.'';
+    description = "Cartesian trajectory execution interface.";
     license = with lib.licenses; [ asl20 ];
   };
 }

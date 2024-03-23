@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A runtime message handler for ROS.
-    Allows subscription, publishing, calling of services and actions with messages known only at runtime.'';
+    description = "A runtime message handler for ROS.
+    Allows subscription, publishing, calling of services and actions with messages known only at runtime.";
     license = with lib.licenses; [ mit ];
   };
 }

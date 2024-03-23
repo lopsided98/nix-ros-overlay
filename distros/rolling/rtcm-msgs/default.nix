@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''The rtcm_msgs package contains messages related to data in the RTCM format.'';
+    description = "The rtcm_msgs package contains messages related to data in the RTCM format.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin message-generation ];
 
   meta = {
-    description = ''kvh_geo_fog_3d_msgs contains raw messages for the KVH GEO FOG 3D INS devices.'';
+    description = "kvh_geo_fog_3d_msgs contains raw messages for the KVH GEO FOG 3D INS devices.";
     license = with lib.licenses; [ asl20 ];
   };
 }

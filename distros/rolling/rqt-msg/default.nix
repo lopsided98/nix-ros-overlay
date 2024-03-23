@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python python-qt-binding rclpy rosidl-runtime-py rqt-console rqt-gui rqt-gui-py rqt-py-common ];
 
   meta = {
-    description = ''A Python GUI plugin for introspecting available ROS message types.'';
+    description = "A Python GUI plugin for introspecting available ROS message types.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

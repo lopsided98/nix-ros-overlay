@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Example systems and according launch files for the system_modes
-    package.'';
+    description = "Example systems and according launch files for the system_modes
+    package.";
     license = with lib.licenses; [ asl20 ];
   };
 }

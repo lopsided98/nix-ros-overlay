@@ -20,10 +20,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Contains nodelets for processing depth images such as those
+    description = "Contains nodelets for processing depth images such as those
      produced by OpenNI camera. Functions include creating disparity
      images and point clouds, as well as registering (reprojecting)
-     a depth image into another camera frame.'';
+     a depth image into another camera frame.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

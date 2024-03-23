@@ -20,10 +20,10 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ament-cmake-python ];
 
   meta = {
-    description = ''Mechanical, kinematic, visual, etc. description of the PMB2 robot.
+    description = "Mechanical, kinematic, visual, etc. description of the PMB2 robot.
       The files in this package are parsed and used by
       a variety of other components.  Most users will not interact directly
-      with this package.'';
+      with this package.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Common Lisp utility libraries'';
+    description = "Common Lisp utility libraries";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Lightweight aggregation utilities to collect statistics and measure message metrics.'';
+    description = "Lightweight aggregation utilities to collect statistics and measure message metrics.";
     license = with lib.licenses; [ asl20 ];
   };
 }

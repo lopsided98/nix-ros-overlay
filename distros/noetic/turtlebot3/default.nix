@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS packages for the Turtlebot3 (meta package)'';
+    description = "ROS packages for the Turtlebot3 (meta package)";
     license = with lib.licenses; [ asl20 bsdOriginal ];
   };
 }

@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This stack collects PR2-specific components that are used in bringing up
-  a robot.'';
+    description = "This stack collects PR2-specific components that are used in bringing up
+  a robot.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

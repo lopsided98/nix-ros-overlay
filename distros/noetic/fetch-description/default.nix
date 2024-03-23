@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''URDF for Fetch Robot.'';
+    description = "URDF for Fetch Robot.";
     license = with lib.licenses; [ cc-by-nc-sa-40 ];
   };
 }

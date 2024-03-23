@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This implements the CANopen device profile for drives and motion control. CiA(r) 402'';
+    description = "This implements the CANopen device profile for drives and motion control. CiA(r) 402";
     license = with lib.licenses; [ lgpl3Only ];
   };
 }

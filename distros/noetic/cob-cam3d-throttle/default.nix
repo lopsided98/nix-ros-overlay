@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''cob_cam3d_throttle: only for Trottel'';
+    description = "cob_cam3d_throttle: only for Trottel";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides a set of typedef's that allow
-  using Eigen datatypes in STL containers'';
+    description = "This package provides a set of typedef's that allow
+  using Eigen datatypes in STL containers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

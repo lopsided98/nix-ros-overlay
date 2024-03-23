@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''forward_command_controller'';
+    description = "forward_command_controller";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

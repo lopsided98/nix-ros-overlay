@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages exclusive to Ridgeback, especially for representing low-level motor commands and sensors.'';
+    description = "Messages exclusive to Ridgeback, especially for representing low-level motor commands and sensors.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

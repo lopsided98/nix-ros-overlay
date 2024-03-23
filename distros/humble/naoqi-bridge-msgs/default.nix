@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The naoqi_bridge_msgs package provides custom messages for running Aldebaran's robots in ROS2.'';
+    description = "The naoqi_bridge_msgs package provides custom messages for running Aldebaran's robots in ROS2.";
     license = with lib.licenses; [ asl20 ];
   };
 }

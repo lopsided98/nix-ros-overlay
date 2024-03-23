@@ -20,10 +20,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''XmlRpc++ is a C++ implementation of the XML-RPC protocol. This version is
+    description = "XmlRpc++ is a C++ implementation of the XML-RPC protocol. This version is
     heavily modified from the package available on SourceForge in order to
     support roscpp's threading model. As such, we are maintaining our
-    own fork.'';
+    own fork.";
     license = with lib.licenses; [ "LGPL-2.1-only" ];
   };
 }

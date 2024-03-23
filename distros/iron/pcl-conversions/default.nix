@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Provides conversions from PCL data types and ROS message types'';
+    description = "Provides conversions from PCL data types and ROS message types";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

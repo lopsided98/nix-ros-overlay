@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Iterator implementations for moving around the cells of a nav_grid in a number of common patterns.'';
+    description = "Iterator implementations for moving around the cells of a nav_grid in a number of common patterns.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

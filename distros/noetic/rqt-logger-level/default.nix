@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''rqt_logger_level provides a GUI plugin for configuring the logger level of ROS nodes.<br/>
+    description = "rqt_logger_level provides a GUI plugin for configuring the logger level of ROS nodes.<br/>
    <br/>
-  rqt_logger_level takes over `wx`-based tool [[rxloggerlevel]].'';
+  rqt_logger_level takes over `wx`-based tool [[rxloggerlevel]].";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package wraps the libpcan to use it as a ros dependency'';
+    description = "This package wraps the libpcan to use it as a ros dependency";
     license = with lib.licenses; [ "LGPL" ];
   };
 }

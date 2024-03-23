@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ rosidl-default-generators ];
 
   meta = {
-    description = ''A package that contains ROS message corresponding to microstrain message types.'';
+    description = "A package that contains ROS message corresponding to microstrain message types.";
     license = with lib.licenses; [ mit ];
   };
 }

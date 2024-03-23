@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''EusLisp client for ROS Robot Operating System.'';
+    description = "EusLisp client for ROS Robot Operating System.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''swri_opencv_util'';
+    description = "swri_opencv_util";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

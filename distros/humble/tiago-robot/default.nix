@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Description and controller configuration of TIAGo'';
+    description = "Description and controller configuration of TIAGo";
     license = with lib.licenses; [ asl20 ];
   };
 }

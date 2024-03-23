@@ -18,7 +18,7 @@ buildRosPackage {
   checkInputs = [ ament-cmake-catch2 ament-cmake-uncrustify ];
 
   meta = {
-    description = ''Simple C++ programming utilities used by Robotics Middleware Framework packages'';
+    description = "Simple C++ programming utilities used by Robotics Middleware Framework packages";
     license = with lib.licenses; [ asl20 ];
   };
 }

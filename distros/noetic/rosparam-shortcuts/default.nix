@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Quickly load variables from rosparam with good command line error checking.'';
+    description = "Quickly load variables from rosparam with good command line error checking.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

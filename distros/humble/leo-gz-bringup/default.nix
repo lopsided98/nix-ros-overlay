@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Bringup package for Leo Rover Gazebo simulation in ROS 2'';
+    description = "Bringup package for Leo Rover Gazebo simulation in ROS 2";
     license = with lib.licenses; [ mit ];
   };
 }

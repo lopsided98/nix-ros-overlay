@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The microstrain_inertial_rqt package provides several RQT widgets to view the status of Microstrain devices'';
+    description = "The microstrain_inertial_rqt package provides several RQT widgets to view the status of Microstrain devices";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

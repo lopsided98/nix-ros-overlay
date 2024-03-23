@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''C++ API to access the ament resource index.'';
+    description = "C++ API to access the ament resource index.";
     license = with lib.licenses; [ asl20 ];
   };
 }

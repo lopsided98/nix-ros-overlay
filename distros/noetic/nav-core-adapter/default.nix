@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains adapters for using `nav_core` plugins as `nav_core2` plugins and vice versa (more or less).
-      See README.md for more information.'';
+    description = "This package contains adapters for using `nav_core` plugins as `nav_core2` plugins and vice versa (more or less).
+      See README.md for more information.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin mrt-cmake-modules ];
 
   meta = {
-    description = ''Lanelet2 core module'';
+    description = "Lanelet2 core module";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ lifecycle-msgs rclpy std-msgs ];
 
   meta = {
-    description = ''Package containing demos for rclpy lifecycle implementation'';
+    description = "Package containing demos for rclpy lifecycle implementation";
     license = with lib.licenses; [ asl20 ];
   };
 }

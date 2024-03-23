@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Wrapper around yaml-cpp, it provides a fixed CMake module and an ExternalProject build of it.'';
+    description = "Wrapper around yaml-cpp, it provides a fixed CMake module and an ExternalProject build of it.";
     license = with lib.licenses; [ asl20 mit ];
   };
 }

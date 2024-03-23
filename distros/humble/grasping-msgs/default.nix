@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Messages for describing objects and how to grasp them.'';
+    description = "Messages for describing objects and how to grasp them.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

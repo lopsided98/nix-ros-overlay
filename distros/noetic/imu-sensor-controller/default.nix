@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Controller to publish state of IMU sensors'';
+    description = "Controller to publish state of IMU sensors";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

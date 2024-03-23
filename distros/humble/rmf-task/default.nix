@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Package for managing tasks in the Robotics Middleware Framework'';
+    description = "Package for managing tasks in the Robotics Middleware Framework";
     license = with lib.licenses; [ asl20 ];
   };
 }

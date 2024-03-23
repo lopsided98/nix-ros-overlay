@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Fiducial detection based on the aruco library'';
+    description = "Fiducial detection based on the aruco library";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

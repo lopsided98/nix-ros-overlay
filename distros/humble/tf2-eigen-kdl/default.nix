@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Conversion functions between:
-      - Eigen and KDL'';
+    description = "Conversion functions between:
+      - Eigen and KDL";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

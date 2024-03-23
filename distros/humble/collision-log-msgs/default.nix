@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Messages for describing collisions (simulated or not)'';
+    description = "Messages for describing collisions (simulated or not)";
     license = with lib.licenses; [ "BSD-3-clause" ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The package provides the basic hardware interface to the SICK Safevisionary sensor'';
+    description = "The package provides the basic hardware interface to the SICK Safevisionary sensor";
     license = with lib.licenses; [ asl20 ];
   };
 }

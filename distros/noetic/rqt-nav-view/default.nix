@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rqt_nav_view provides a gui for viewing navigation maps and paths.'';
+    description = "rqt_nav_view provides a gui for viewing navigation maps and paths.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

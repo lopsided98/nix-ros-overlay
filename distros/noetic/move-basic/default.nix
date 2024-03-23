@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Simple navigation package'';
+    description = "Simple navigation package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

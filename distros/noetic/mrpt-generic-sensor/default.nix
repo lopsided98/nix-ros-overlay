@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin cmake ];
 
   meta = {
-    description = ''ROS node for interfacing any sensor supported by mrpt-hwdrivers'';
+    description = "ROS node for interfacing any sensor supported by mrpt-hwdrivers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

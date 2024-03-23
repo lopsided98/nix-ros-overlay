@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''A ROS 2 camera driver using Video4Linux2'';
+    description = "A ROS 2 camera driver using Video4Linux2";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The ROS package containing examples for interfacing ROS with the standard ROS controller of Webots'';
+    description = "The ROS package containing examples for interfacing ROS with the standard ROS controller of Webots";
     license = with lib.licenses; [ asl20 ];
   };
 }

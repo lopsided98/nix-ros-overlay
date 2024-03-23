@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Example files used as tutorials for MRPT ROS packages'';
+    description = "Example files used as tutorials for MRPT ROS packages";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

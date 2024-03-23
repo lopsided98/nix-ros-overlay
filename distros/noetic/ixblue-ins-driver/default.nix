@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The iXblue_ins_driver package'';
+    description = "The iXblue_ins_driver package";
     license = with lib.licenses; [ mit ];
   };
 }

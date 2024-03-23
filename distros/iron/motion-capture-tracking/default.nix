@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS Package for different motion capture systems, including custom rigid body tracking support'';
+    description = "ROS Package for different motion capture systems, including custom rigid body tracking support";
     license = with lib.licenses; [ mit ];
   };
 }

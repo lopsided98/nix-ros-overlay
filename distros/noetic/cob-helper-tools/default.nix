@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Helper scripts for Care-O-bot'';
+    description = "Helper scripts for Care-O-bot";
     license = with lib.licenses; [ asl20 ];
   };
 }

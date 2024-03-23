@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Trajectory critics for the dwb_local_planner that work well together with the SBPL global planner on the MiR robot'';
+    description = "Trajectory critics for the dwb_local_planner that work well together with the SBPL global planner on the MiR robot";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages around the UR Dashboard server.'';
+    description = "Messages around the UR Dashboard server.";
     license = with lib.licenses; [ asl20 ];
   };
 }

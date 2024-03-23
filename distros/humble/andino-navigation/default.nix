@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Bring up nav2 package with Andino.'';
+    description = "Bring up nav2 package with Andino.";
     license = with lib.licenses; [ "BSD-Clause-3" ];
   };
 }

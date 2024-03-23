@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Cartesian trajectory interpolation as a standalone library'';
+    description = "Cartesian trajectory interpolation as a standalone library";
     license = with lib.licenses; [ asl20 ];
   };
 }

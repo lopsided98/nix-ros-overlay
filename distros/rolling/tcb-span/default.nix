@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Implementation of C++20's std::span'';
+    description = "Implementation of C++20's std::span";
     license = with lib.licenses; [ "BSL-1.0" ];
   };
 }

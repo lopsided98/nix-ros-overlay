@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Tools related to the Mobile Robot Programming Toolkit (MRPT).
-    Refer to https://wiki.ros.org/mrpt_navigation for further documentation.'';
+    description = "Tools related to the Mobile Robot Programming Toolkit (MRPT).
+    Refer to https://wiki.ros.org/mrpt_navigation for further documentation.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

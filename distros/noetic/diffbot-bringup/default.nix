@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The diffbot_bringup package'';
+    description = "The diffbot_bringup package";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

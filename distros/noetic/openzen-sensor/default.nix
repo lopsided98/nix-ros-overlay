@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS driver for LP-Research OpenZen'';
+    description = "ROS driver for LP-Research OpenZen";
     license = with lib.licenses; [ mit "BSL-1.0" lgpl3Only bsdOriginal ];
   };
 }

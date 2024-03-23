@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The controller manager (CM) package provides the infrastructure to run controllers in a hard realtime loop.'';
+    description = "The controller manager (CM) package provides the infrastructure to run controllers in a hard realtime loop.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

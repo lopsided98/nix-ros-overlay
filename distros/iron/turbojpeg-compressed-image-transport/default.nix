@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Compressed_image_transport provides a plugin to image_transport for transparently sending images
-    encoded as JPEG by turbojpeg.'';
+    description = "Compressed_image_transport provides a plugin to image_transport for transparently sending images
+    encoded as JPEG by turbojpeg.";
     license = with lib.licenses; [ asl20 bsdOriginal ];
   };
 }

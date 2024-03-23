@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rclpy ros2launch std-msgs ];
 
   meta = {
-    description = ''RRT exploration in 2D and 3D'';
+    description = "RRT exploration in 2D and 3D";
     license = with lib.licenses; [ asl20 ];
   };
 }

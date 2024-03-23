@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package offers the FrankaHWSim Class to simulate a Franka Robot in Gazebo'';
+    description = "This package offers the FrankaHWSim Class to simulate a Franka Robot in Gazebo";
     license = with lib.licenses; [ asl20 ];
   };
 }

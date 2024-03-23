@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains a specialization of the gazebo_ros_control plugin.
-    The cob_gazebo_ros_control plugin allows Multi-HardwareInterface-Support.'';
+    description = "This package contains a specialization of the gazebo_ros_control plugin.
+    The cob_gazebo_ros_control plugin allows Multi-HardwareInterface-Support.";
     license = with lib.licenses; [ asl20 ];
   };
 }

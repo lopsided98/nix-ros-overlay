@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-auto ament-cmake-ros ];
 
   meta = {
-    description = ''package to encode and decode event_camera_msgs'';
+    description = "package to encode and decode event_camera_msgs";
     license = with lib.licenses; [ asl20 ];
   };
 }

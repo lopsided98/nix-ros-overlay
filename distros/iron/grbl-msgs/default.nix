@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS2 Messages package for GRBL devices'';
+    description = "ROS2 Messages package for GRBL devices";
     license = with lib.licenses; [ mit ];
   };
 }

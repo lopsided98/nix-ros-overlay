@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python-qt-binding python3Packages.catkin-pkg python3Packages.matplotlib python3Packages.numpy qt-gui-py-common rclpy rqt-gui rqt-gui-py rqt-py-common std-msgs ];
 
   meta = {
-    description = ''rqt_plot provides a GUI plugin visualizing numeric values in a 2D plot using different plotting backends.'';
+    description = "rqt_plot provides a GUI plugin visualizing numeric values in a 2D plot using different plotting backends.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

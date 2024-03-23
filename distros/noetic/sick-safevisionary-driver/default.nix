@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides an interface to read the sensor output of a SICK Safevisionary sensor in ROS.'';
+    description = "Provides an interface to read the sensor output of a SICK Safevisionary sensor in ROS.";
     license = with lib.licenses; [ asl20 ];
   };
 }

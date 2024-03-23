@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS node for communicating with rokubimini sensors'';
+    description = "ROS node for communicating with rokubimini sensors";
     license = with lib.licenses; [ asl20 ];
   };
 }

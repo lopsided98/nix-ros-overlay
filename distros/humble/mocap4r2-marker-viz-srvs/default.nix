@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Service definitions for the marker visualization node'';
+    description = "Service definitions for the marker visualization node";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''TurtleBot3 driver node that include diff drive controller, odometry and tf node'';
+    description = "TurtleBot3 driver node that include diff drive controller, odometry and tf node";
     license = with lib.licenses; [ asl20 ];
   };
 }

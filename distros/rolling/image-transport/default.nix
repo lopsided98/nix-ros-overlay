@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''image_transport should always be used to subscribe to and publish images. It provides transparent
+    description = "image_transport should always be used to subscribe to and publish images. It provides transparent
      support for transporting images in low-bandwidth compressed formats. Examples (provided by separate
-     plugin packages) include JPEG/PNG compression and Theora streaming video.'';
+     plugin packages) include JPEG/PNG compression and Theora streaming video.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

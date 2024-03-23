@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''A simple viewer for ROS image topics. Includes a specialized viewer
-  for stereo + disparity images.'';
+    description = "A simple viewer for ROS image topics. Includes a specialized viewer
+  for stereo + disparity images.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

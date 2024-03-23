@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Package containing tools for dynamically loadable components'';
+    description = "Package containing tools for dynamically loadable components";
     license = with lib.licenses; [ asl20 ];
   };
 }

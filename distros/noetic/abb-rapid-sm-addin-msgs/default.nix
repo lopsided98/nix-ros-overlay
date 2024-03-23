@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides ROS message and service definitions, representing interaction
-    with ABB robot controllers using the RobotWare StateMachine Add-In.'';
+    description = "Provides ROS message and service definitions, representing interaction
+    with ABB robot controllers using the RobotWare StateMachine Add-In.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

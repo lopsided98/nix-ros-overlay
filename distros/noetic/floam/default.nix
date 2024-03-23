@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A generic Lidar SLAM package based on FLOAM which was based on ALOAM by HKUST and LOAM by CMU'';
+    description = "A generic Lidar SLAM package based on FLOAM which was based on ALOAM by HKUST and LOAM by CMU";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

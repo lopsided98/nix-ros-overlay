@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pr2_navigation stack holds common configuration options for running the'';
+    description = "The pr2_navigation stack holds common configuration options for running the";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

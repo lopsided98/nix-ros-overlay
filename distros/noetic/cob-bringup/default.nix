@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides launch files for operating Care-O-bot.'';
+    description = "This package provides launch files for operating Care-O-bot.";
     license = with lib.licenses; [ asl20 ];
   };
 }

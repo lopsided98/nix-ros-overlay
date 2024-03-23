@@ -20,11 +20,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Tools for directing, throttling, selecting, and otherwise messing with
+    description = "Tools for directing, throttling, selecting, and otherwise messing with
     ROS topics at a meta level. None of the programs in this package actually
     know about the topics whose streams they are altering; instead, these
     tools deal with messages as generic binary blobs. This means they can be
-    applied to any ROS topic.'';
+    applied to any ROS topic.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

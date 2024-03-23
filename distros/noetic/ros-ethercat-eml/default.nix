@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This is an implementation of the EtherCAT master protocol for use wiht ros_ethercar package
-      based on the work done at Flanders' Mechatronics Technology Centre and Willow Garage.'';
+    description = "This is an implementation of the EtherCAT master protocol for use wiht ros_ethercar package
+      based on the work done at Flanders' Mechatronics Technology Centre and Willow Garage.";
     license = with lib.licenses; [ "GPL" ];
   };
 }

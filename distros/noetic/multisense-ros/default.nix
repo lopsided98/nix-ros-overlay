@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin yaml-cpp ];
 
   meta = {
-    description = ''multisense_ros'';
+    description = "multisense_ros";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

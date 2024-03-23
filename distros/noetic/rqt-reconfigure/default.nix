@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''This rqt plugin succeeds former dynamic_reconfigure's GUI
+    description = "This rqt plugin succeeds former dynamic_reconfigure's GUI
     (reconfigure_gui), and provides the way to view and edit the parameters
     that are accessible via dynamic_reconfigure.<br/>
     <br/>
@@ -29,7 +29,7 @@ buildRosPackage {
     become handled.
     However, currently as the name indicates, this pkg solely is dependent
     on dynamic_reconfigure that allows access to only those params latched
-    to nodes.'';
+    to nodes.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

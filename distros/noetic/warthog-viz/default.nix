@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Visualization launchers and helpers for Warthog.'';
+    description = "Visualization launchers and helpers for Warthog.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

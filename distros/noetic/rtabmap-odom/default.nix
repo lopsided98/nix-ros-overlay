@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''RTAB-Map's odometry package.'';
+    description = "RTAB-Map's odometry package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Tutorials showing how to call into rviz internals from python scripts.'';
+    description = "Tutorials showing how to call into rviz internals from python scripts.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

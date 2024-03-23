@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''voice_text (www.voicetext.jp)'';
+    description = "voice_text (www.voicetext.jp)";
     license = with lib.licenses; [ "HOYA-License" ];
   };
 }

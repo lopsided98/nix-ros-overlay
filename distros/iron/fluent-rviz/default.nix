@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''A library which makes Rviz fluent. Powered by C++17'';
+    description = "A library which makes Rviz fluent. Powered by C++17";
     license = with lib.licenses; [ asl20 ];
   };
 }

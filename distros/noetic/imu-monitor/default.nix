@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains a single node that monitors the drift of the IMU
+    description = "This package contains a single node that monitors the drift of the IMU
 gyroscopes. The results are published to the '/diagnostics' topic and
-are aggregated in the PR2 dashboard.'';
+are aggregated in the PR2 dashboard.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

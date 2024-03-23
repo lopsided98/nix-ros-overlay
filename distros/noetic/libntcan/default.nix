@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package wraps the libntcan to use it as a ros dependency.'';
+    description = "This package wraps the libntcan to use it as a ros dependency.";
     license = with lib.licenses; [ "Proprietary" ];
   };
 }

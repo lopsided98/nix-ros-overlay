@@ -19,13 +19,13 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''<p>
+    description = "<p>
      ROS Industrial libraries/plugins for filtering trajectories.
    </p>
    <p>
      This package is part of the ROS Industrial program and contains libraries
      and moveit plugins for filtering robot trajectories.
-   </p>'';
+   </p>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

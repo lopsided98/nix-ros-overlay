@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''The JdeRobot Behavior Metrics drone assets package'';
+    description = "The JdeRobot Behavior Metrics drone assets package";
     license = with lib.licenses; [ mit ];
   };
 }

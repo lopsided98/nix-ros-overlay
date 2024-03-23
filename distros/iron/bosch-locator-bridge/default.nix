@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS interface to Rexroth ROKIT Locator'';
+    description = "ROS interface to Rexroth ROKIT Locator";
     license = with lib.licenses; [ asl20 ];
   };
 }

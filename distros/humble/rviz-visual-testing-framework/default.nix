@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''3D testing framework for RViz.'';
+    description = "3D testing framework for RViz.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

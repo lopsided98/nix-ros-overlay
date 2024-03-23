@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A package containing messages used by the RMF traffic management system.'';
+    description = "A package containing messages used by the RMF traffic management system.";
     license = with lib.licenses; [ asl20 ];
   };
 }

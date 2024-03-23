@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto rosidl-default-generators ];
 
   meta = {
-    description = ''A ROS Driver for V4L USB Cameras'';
+    description = "A ROS Driver for V4L USB Cameras";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

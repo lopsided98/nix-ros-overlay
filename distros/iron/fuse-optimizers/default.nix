@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''The fuse_optimizers package provides a set of optimizer implementations. An optimizer is the object responsible \
-    for coordinating the sensors and motion model inputs, computing the optimal state values, and providing access to \
-    to the optimal state via the publishers.'';
+    description = "The fuse_optimizers package provides a set of optimizer implementations. An optimizer is the object responsible \\
+    for coordinating the sensors and motion model inputs, computing the optimal state values, and providing access to \\
+    to the optimal state via the publishers.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

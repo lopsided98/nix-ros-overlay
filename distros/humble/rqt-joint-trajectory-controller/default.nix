@@ -17,7 +17,7 @@ buildRosPackage {
   propagatedBuildInputs = [ control-msgs controller-manager-msgs python-qt-binding python3Packages.rospkg qt-gui rclpy rqt-gui rqt-gui-py trajectory-msgs ];
 
   meta = {
-    description = ''Graphical frontend for interacting with joint_trajectory_controller instances.'';
+    description = "Graphical frontend for interacting with joint_trajectory_controller instances.";
     license = with lib.licenses; [ asl20 ];
   };
 }

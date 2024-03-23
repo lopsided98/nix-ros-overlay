@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''This package provides a simple GUI for operating Care-O-bot.'';
+    description = "This package provides a simple GUI for operating Care-O-bot.";
     license = with lib.licenses; [ asl20 ];
   };
 }

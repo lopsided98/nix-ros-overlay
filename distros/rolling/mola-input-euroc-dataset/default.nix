@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Offline RawDataSource from EUROC SLAM datasets'';
+    description = "Offline RawDataSource from EUROC SLAM datasets";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Library to compute SIFT features'';
+    description = "Library to compute SIFT features";
     license = with lib.licenses; [ "LGPL" ];
   };
 }

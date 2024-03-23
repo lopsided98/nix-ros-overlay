@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Non-ROS software for Kobuki, Yujin Robot's mobile research base.'';
+    description = "Non-ROS software for Kobuki, Yujin Robot's mobile research base.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

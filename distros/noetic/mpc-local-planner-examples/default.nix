@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The mpc_local_planner_examples package'';
+    description = "The mpc_local_planner_examples package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

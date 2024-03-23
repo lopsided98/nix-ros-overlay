@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Node for publishing some simple marker data for testing purposes'';
+    description = "Node for publishing some simple marker data for testing purposes";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

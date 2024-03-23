@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''ROS2 udp_msgs package'';
+    description = "ROS2 udp_msgs package";
     license = with lib.licenses; [ mit ];
   };
 }

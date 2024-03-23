@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake python3 ];
 
   meta = {
-    description = ''Provide CMake module with extra functionality for Python.'';
+    description = "Provide CMake module with extra functionality for Python.";
     license = with lib.licenses; [ asl20 ];
   };
 }

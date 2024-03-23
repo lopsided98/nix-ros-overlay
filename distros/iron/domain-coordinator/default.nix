@@ -17,7 +17,7 @@ buildRosPackage {
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
 
   meta = {
-    description = ''A tool to coordinate unique ROS_DOMAIN_IDs across multiple processes'';
+    description = "A tool to coordinate unique ROS_DOMAIN_IDs across multiple processes";
     license = with lib.licenses; [ asl20 ];
   };
 }

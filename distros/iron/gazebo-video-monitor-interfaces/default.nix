@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''gazebo_video_monitor_interfaces defines interfaces for the gazebo_video_monitor_plugins package.'';
+    description = "gazebo_video_monitor_interfaces defines interfaces for the gazebo_video_monitor_plugins package.";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

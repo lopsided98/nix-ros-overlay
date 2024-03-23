@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS2 package for Epson IMU based on C++ wrapper of Linux C driver'';
+    description = "ROS2 package for Epson IMU based on C++ wrapper of Linux C driver";
     license = with lib.licenses; [ bsd3 publicDomain ];
   };
 }

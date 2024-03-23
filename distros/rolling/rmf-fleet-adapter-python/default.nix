@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ pybind11-json-vendor pybind11-vendor rclpy rmf-fleet-adapter ];
 
   meta = {
-    description = ''Python bindings for the rmf_fleet_adapter'';
+    description = "Python bindings for the rmf_fleet_adapter";
     license = with lib.licenses; [ asl20 ];
   };
 }

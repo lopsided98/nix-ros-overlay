@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides a kinematics implementation for the PR2 robot. It can be used to compute forward and inverse kinematics.'';
+    description = "This package provides a kinematics implementation for the PR2 robot. It can be used to compute forward and inverse kinematics.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

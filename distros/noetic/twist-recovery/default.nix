@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A recovery behavior that performs a particular used-defined twist.'';
+    description = "A recovery behavior that performs a particular used-defined twist.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

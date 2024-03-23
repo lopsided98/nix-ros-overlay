@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provides nodes to assemble point clouds from either LaserScan or PointCloud messages'';
+    description = "Provides nodes to assemble point clouds from either LaserScan or PointCloud messages";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

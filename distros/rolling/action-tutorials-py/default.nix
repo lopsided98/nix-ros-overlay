@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ action-tutorials-interfaces rclpy ];
 
   meta = {
-    description = ''Python action tutorial code'';
+    description = "Python action tutorial code";
     license = with lib.licenses; [ asl20 ];
   };
 }

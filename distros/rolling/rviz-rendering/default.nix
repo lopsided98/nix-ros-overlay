@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros eigen3-cmake-module ];
 
   meta = {
-    description = ''Library which provides the 3D rendering functionality in rviz.'';
+    description = "Library which provides the 3D rendering functionality in rviz.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

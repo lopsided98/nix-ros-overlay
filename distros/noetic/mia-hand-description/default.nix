@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package containing Mia Hand URDF model. Includes Gazebo tags that allow
+    description = "Package containing Mia Hand URDF model. Includes Gazebo tags that allow
     for URDF usage in Gazebo simulator. Includes description of the index_thumb
-    opposition passive joint.'';
+    opposition passive joint.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

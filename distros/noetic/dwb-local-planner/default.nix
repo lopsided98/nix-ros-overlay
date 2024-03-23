@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Plugin based local planner implementing the nav_core2::LocalPlanner interface.'';
+    description = "Plugin based local planner implementing the nav_core2::LocalPlanner interface.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

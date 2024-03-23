@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Ccontains messages and service definitions for micro-ROS diagnostics.'';
+    description = "Ccontains messages and service definitions for micro-ROS diagnostics.";
     license = with lib.licenses; [ asl20 ];
   };
 }

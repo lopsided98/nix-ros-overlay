@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pr2_mannequin_mode package'';
+    description = "The pr2_mannequin_mode package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

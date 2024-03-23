@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The magical_ros2_conversion_tool package'';
+    description = "The magical_ros2_conversion_tool package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

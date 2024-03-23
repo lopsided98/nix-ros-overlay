@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''grep for ROS bag files and live topics: read, filter, export'';
+    description = "grep for ROS bag files and live topics: read, filter, export";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The contact_states_observer package'';
+    description = "The contact_states_observer package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

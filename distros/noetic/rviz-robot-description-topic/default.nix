@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''RobotModel display using a `/robot_description` topic instead of a parameter'';
+    description = "RobotModel display using a `/robot_description` topic instead of a parameter";
     license = with lib.licenses; [ asl20 ];
   };
 }

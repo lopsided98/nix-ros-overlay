@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Interfaces used by py_trees_ros and py_trees_ros_tutorials.'';
+    description = "Interfaces used by py_trees_ros and py_trees_ros_tutorials.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

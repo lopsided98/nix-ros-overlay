@@ -18,8 +18,8 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.unidiff python3Packages.uvloop pythonPackages.black ];
 
   meta = {
-    description = ''The ability to check code against style conventions using
-    black and generate xUnit test result files.'';
+    description = "The ability to check code against style conventions using
+    black and generate xUnit test result files.";
     license = with lib.licenses; [ asl20 ];
   };
 }

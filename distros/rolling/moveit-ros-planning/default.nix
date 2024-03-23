@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];
 
   meta = {
-    description = ''Planning components of MoveIt that use ROS'';
+    description = "Planning components of MoveIt that use ROS";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''message definition test fixtures for MCAP schema recording'';
+    description = "message definition test fixtures for MCAP schema recording";
     license = with lib.licenses; [ asl20 ];
   };
 }

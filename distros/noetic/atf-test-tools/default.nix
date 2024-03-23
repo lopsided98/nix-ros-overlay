@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Support package for the ATF test app packages.'';
+    description = "Support package for the ATF test app packages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

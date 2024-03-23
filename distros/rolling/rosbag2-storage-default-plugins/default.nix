@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Intermediate metapackage to point at default storage plugin(s) for rosbag2'';
+    description = "Intermediate metapackage to point at default storage plugin(s) for rosbag2";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -17,7 +17,7 @@ buildRosPackage {
   propagatedBuildInputs = [ gazebo-msgs rclpy std-srvs ];
 
   meta = {
-    description = ''Contains utility scripts that are meant to interact with the gazebo video monitor plugins.'';
+    description = "Contains utility scripts that are meant to interact with the gazebo video monitor plugins.";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

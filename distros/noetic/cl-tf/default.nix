@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Client implementation to use TF from Common Lisp'';
+    description = "Client implementation to use TF from Common Lisp";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

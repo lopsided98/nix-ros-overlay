@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''ublox_msgs contains raw messages for u-blox GNSS devices.'';
+    description = "ublox_msgs contains raw messages for u-blox GNSS devices.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

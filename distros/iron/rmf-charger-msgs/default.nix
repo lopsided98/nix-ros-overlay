@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''This package contains messages regarding charging and discharging'';
+    description = "This package contains messages regarding charging and discharging";
     license = with lib.licenses; [ asl20 ];
   };
 }

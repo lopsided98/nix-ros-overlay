@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A collection of .mk include files for building ROS architectural elements.
+    description = "A collection of .mk include files for building ROS architectural elements.
     Most package authors should use cmake .mk, which calls CMake for the build of the package.
-    The other files in this package are intended for use in exotic situations that mostly arise when importing 3rdparty code.'';
+    The other files in this package are intended for use in exotic situations that mostly arise when importing 3rdparty code.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

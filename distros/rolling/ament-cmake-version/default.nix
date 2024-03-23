@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ];
 
   meta = {
-    description = ''The ability to override the exported package version in the ament buildsystem.'';
+    description = "The ability to override the exported package version in the ament buildsystem.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A controller/manager for the lifecycle nodes of the ROS2 Planning System'';
+    description = "A controller/manager for the lifecycle nodes of the ROS2 Planning System";
     license = with lib.licenses; [ asl20 ];
   };
 }

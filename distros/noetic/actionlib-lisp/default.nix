@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''actionlib_lisp is a native implementation of the famous actionlib
-   in Common Lisp. It provides a client and a simple server.'';
+    description = "actionlib_lisp is a native implementation of the famous actionlib
+   in Common Lisp. It provides a client and a simple server.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

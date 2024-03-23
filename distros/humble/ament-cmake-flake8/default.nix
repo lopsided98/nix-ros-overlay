@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-flake8 ];
 
   meta = {
-    description = ''The CMake API for ament_flake8 to check code syntax and style conventions
-    with flake8.'';
+    description = "The CMake API for ament_flake8 to check code syntax and style conventions
+    with flake8.";
     license = with lib.licenses; [ asl20 ];
   };
 }

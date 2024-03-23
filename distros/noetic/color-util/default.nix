@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''An almost dependency-less library for converting between color spaces'';
+    description = "An almost dependency-less library for converting between color spaces";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

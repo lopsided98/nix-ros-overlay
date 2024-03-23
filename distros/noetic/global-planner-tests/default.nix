@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A collection of tests for checking the validity and completeness of global planners.'';
+    description = "A collection of tests for checking the validity and completeness of global planners.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

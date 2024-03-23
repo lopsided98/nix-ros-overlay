@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS to InOrbit topic republisher'';
+    description = "ROS to InOrbit topic republisher";
     license = with lib.licenses; [ mit ];
   };
 }

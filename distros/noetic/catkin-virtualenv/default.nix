@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Bundle python requirements in a catkin package via virtualenv.'';
+    description = "Bundle python requirements in a catkin package via virtualenv.";
     license = with lib.licenses; [ "GPL" ];
   };
 }

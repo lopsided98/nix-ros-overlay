@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''3D models of the TurtleBot3 for simulation and visualization'';
+    description = "3D models of the TurtleBot3 for simulation and visualization";
     license = with lib.licenses; [ asl20 ];
   };
 }

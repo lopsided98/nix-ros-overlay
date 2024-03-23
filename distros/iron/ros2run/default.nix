@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ros2cli ros2pkg ];
 
   meta = {
-    description = ''The run command for ROS 2 command line tools.'';
+    description = "The run command for ROS 2 command line tools.";
     license = with lib.licenses; [ asl20 ];
   };
 }

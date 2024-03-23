@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Calibrate a Robot'';
+    description = "Calibrate a Robot";
     license = with lib.licenses; [ asl20 ];
   };
 }

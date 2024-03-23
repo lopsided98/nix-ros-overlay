@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Dock driving library for Kobuki. Users owning a docking station for Kobuki 
-	    can use this tool to develop autonomous docking drive algorithms.'';
+    description = "Dock driving library for Kobuki. Users owning a docking station for Kobuki 
+	    can use this tool to develop autonomous docking drive algorithms.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

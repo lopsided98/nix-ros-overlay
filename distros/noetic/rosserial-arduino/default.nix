@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rosserial for Arduino/AVR platforms.'';
+    description = "rosserial for Arduino/AVR platforms.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

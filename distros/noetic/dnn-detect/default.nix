@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''DNN based detection'';
+    description = "DNN based detection";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

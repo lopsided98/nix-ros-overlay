@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rqt-gui rqt-gui-py rqt-msg ];
 
   meta = {
-    description = ''A Python GUI plugin for introspecting available ROS service types.'';
+    description = "A Python GUI plugin for introspecting available ROS service types.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake launch-testing-ament-cmake ros2test ];
 
   meta = {
-    description = ''The entry point package to launch testing in ROS.'';
+    description = "The entry point package to launch testing in ROS.";
     license = with lib.licenses; [ asl20 ];
   };
 }

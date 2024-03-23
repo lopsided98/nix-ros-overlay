@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains a C++ parser for the Collada robot
+    description = "This package contains a C++ parser for the Collada robot
     description format. The parser reads a Collada XML robot
     description, and creates a C++ URDF model. Although it is possible
     to directly use this parser when working with Collada robot
-    descriptions, the preferred user API is found in the urdf package.'';
+    descriptions, the preferred user API is found in the urdf package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A Python wrapper library around the ROS4HRI ROS topics'';
+    description = "A Python wrapper library around the ROS4HRI ROS topics";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

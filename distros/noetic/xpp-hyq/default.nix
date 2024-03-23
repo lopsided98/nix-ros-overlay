@@ -19,16 +19,16 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''HyQ-robot specific functions for visualization in the  XPP Motion Framework.
+    description = "HyQ-robot specific functions for visualization in the  XPP Motion Framework.
     
     These include inverse kinematics as well as urdf files for a one-legged,
-    two-legged and four legged robot with <a href="http://dls.iit.it/">HyQ</a>
+    two-legged and four legged robot with <a href=\"http://dls.iit.it/\">HyQ</a>
     legs.
         
     The dynamic model can be found 
-    <a href="https://github.com/iit-DLSLab/hyq-description">here</a>.  
+    <a href=\"https://github.com/iit-DLSLab/hyq-description\">here</a>.  
     
-    See also <a href="https://dls.iit.it">IIT</a>.'';
+    See also <a href=\"https://dls.iit.it\">IIT</a>.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

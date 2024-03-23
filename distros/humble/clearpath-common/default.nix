@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Clearpath Common Metapackage'';
+    description = "Clearpath Common Metapackage";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

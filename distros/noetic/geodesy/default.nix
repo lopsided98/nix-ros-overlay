@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Python and C++ interfaces for manipulating geodetic coordinates.'';
+    description = "Python and C++ interfaces for manipulating geodetic coordinates.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

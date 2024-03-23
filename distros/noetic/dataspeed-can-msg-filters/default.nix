@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Time synchronize multiple CAN messages to get a single callback'';
+    description = "Time synchronize multiple CAN messages to get a single callback";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

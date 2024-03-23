@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Rotation Shim Controller'';
+    description = "Rotation Shim Controller";
     license = with lib.licenses; [ asl20 ];
   };
 }

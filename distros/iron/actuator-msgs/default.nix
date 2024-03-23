@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''ROS 2 message interface for Actuators.'';
+    description = "ROS 2 message interface for Actuators.";
     license = with lib.licenses; [ asl20 ];
   };
 }

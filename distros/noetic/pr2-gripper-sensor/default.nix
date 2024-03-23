@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pr2_gripper_sensor package'';
+    description = "The pr2_gripper_sensor package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

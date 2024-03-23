@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''cob_substitute'';
+    description = "cob_substitute";
     license = with lib.licenses; [ asl20 ];
   };
 }

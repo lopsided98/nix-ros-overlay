@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
-    description = ''swri_geometry_util'';
+    description = "swri_geometry_util";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

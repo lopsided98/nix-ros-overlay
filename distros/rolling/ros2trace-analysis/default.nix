@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ros2cli tracetools-analysis ];
 
   meta = {
-    description = ''The trace-analysis command for ROS 2 command line tools.'';
+    description = "The trace-analysis command for ROS 2 command line tools.";
     license = with lib.licenses; [ asl20 ];
   };
 }

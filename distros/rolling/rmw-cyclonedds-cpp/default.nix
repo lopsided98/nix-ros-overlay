@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Implement the ROS middleware interface using Eclipse CycloneDDS in C++.'';
+    description = "Implement the ROS middleware interface using Eclipse CycloneDDS in C++.";
     license = with lib.licenses; [ asl20 ];
   };
 }

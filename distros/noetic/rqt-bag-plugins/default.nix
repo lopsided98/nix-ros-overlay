@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.'';
+    description = "rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Common message definitions for create_robot'';
+    description = "Common message definitions for create_robot";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

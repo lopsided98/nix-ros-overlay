@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''octomap_ros provides conversion functions between ROS and OctoMap's native types.
-    This enables a convenvient use of the octomap package in ROS.'';
+    description = "octomap_ros provides conversion functions between ROS and OctoMap's native types.
+    This enables a convenvient use of the octomap package in ROS.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

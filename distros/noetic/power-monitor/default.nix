@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The power_monitor collects messages from the ocean_battery_server and
+    description = "The power_monitor collects messages from the ocean_battery_server and
      the pr2_power_board, and publishes a summary of their data in a
-     friendlier message format.'';
+     friendlier message format.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

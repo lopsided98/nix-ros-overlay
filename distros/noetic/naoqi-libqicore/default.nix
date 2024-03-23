@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Aldebaran's libqicore: a layer on top of libqi'';
+    description = "Aldebaran's libqicore: a layer on top of libqi";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

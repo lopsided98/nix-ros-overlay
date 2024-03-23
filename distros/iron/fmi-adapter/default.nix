@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Wraps FMUs for co-simulation'';
+    description = "Wraps FMUs for co-simulation";
     license = with lib.licenses; [ asl20 ];
   };
 }

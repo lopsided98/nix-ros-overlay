@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ];
 
   meta = {
-    description = ''Allows integrating catch2 tests in the ament buildsystem with CMake'';
+    description = "Allows integrating catch2 tests in the ament buildsystem with CMake";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Control protocol for MOCAP4ROS2 Project'';
+    description = "Control protocol for MOCAP4ROS2 Project";
     license = with lib.licenses; [ asl20 ];
   };
 }

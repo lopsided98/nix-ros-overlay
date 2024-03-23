@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A daemon node to manage ROS launch files and launch nodes from loaded files.'';
+    description = "A daemon node to manage ROS launch files and launch nodes from loaded files.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Refactored map server for ROS2 Navigation'';
+    description = "Refactored map server for ROS2 Navigation";
     license = with lib.licenses; [ asl20 bsd3 ];
   };
 }

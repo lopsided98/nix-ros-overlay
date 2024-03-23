@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''msg definitions for use with point_cloud_transport plugins.'';
+    description = "msg definitions for use with point_cloud_transport plugins.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

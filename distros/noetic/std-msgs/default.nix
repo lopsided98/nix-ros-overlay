@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Standard ROS Messages including common message types representing primitive data types and other basic message constructs, such as multiarrays.
-    For common, generic robot-specific message types, please see <a href="http://www.ros.org/wiki/common_msgs">common_msgs</a>.'';
+    description = "Standard ROS Messages including common message types representing primitive data types and other basic message constructs, such as multiarrays.
+    For common, generic robot-specific message types, please see <a href=\"http://www.ros.org/wiki/common_msgs\">common_msgs</a>.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

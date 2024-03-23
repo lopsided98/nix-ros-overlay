@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A Gazebo-based simulation environment for the Schunk SVH'';
+    description = "A Gazebo-based simulation environment for the Schunk SVH";
     license = with lib.licenses; [ "GPL-3.0-or-later" ];
   };
 }

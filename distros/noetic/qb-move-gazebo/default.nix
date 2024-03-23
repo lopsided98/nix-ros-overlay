@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains the Gazebo ROS control plugins for qbrobotics® qbmove device.'';
+    description = "This package contains the Gazebo ROS control plugins for qbrobotics® qbmove device.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

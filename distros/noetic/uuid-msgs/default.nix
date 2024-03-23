@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS messages for universally unique identifiers.'';
+    description = "ROS messages for universally unique identifiers.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

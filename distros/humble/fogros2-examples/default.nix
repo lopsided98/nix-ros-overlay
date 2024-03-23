@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ fogros2 ];
 
   meta = {
-    description = ''Examples using FogROS2'';
+    description = "Examples using FogROS2";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Cartpole dynamics solver plug-in for Exotica'';
+    description = "Cartpole dynamics solver plug-in for Exotica";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

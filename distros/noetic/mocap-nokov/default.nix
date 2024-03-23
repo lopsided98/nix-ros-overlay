@@ -20,11 +20,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Streaming of Nokov mocap data to tf
+    description = "Streaming of Nokov mocap data to tf
     <p>
     This package contains a node that translates motion capture data from an
     nokov rig to tf transforms, poses and 2D poses.
-    </p>'';
+    </p>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

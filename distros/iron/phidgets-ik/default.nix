@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Driver for the Phidgets InterfaceKit devices'';
+    description = "Driver for the Phidgets InterfaceKit devices";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

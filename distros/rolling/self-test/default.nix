@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''self_test'';
+    description = "self_test";
     license = with lib.licenses; [ bsd3 ];
   };
 }

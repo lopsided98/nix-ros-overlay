@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package containing message definitions for fiducials'';
+    description = "Package containing message definitions for fiducials";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

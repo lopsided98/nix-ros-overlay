@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Launch files to open an RGBD device and load all nodelets to 
+    description = "Launch files to open an RGBD device and load all nodelets to 
      convert raw depth/RGB/IR streams to depth images, disparity images, 
-     and (registered) point clouds.'';
+     and (registered) point clouds.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

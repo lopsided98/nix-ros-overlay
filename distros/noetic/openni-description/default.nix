@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Model files of OpenNI device.'';
+    description = "Model files of OpenNI device.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

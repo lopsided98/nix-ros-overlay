@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A simple viewer for ROS image topics with draw-on features'';
+    description = "A simple viewer for ROS image topics with draw-on features";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Ceres constrained smoother'';
+    description = "Ceres constrained smoother";
     license = with lib.licenses; [ asl20 ];
   };
 }

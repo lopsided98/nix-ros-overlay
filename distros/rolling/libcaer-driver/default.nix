@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-auto ament-cmake-ros ros-environment ];
 
   meta = {
-    description = ''ROS2 driver for event base sensors using libcaer'';
+    description = "ROS2 driver for event base sensors using libcaer";
     license = with lib.licenses; [ "Apache-2" ];
   };
 }

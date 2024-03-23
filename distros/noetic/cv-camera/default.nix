@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''cv_camera uses OpenCV capture object to capture camera image.
-  This supports camera_image and nodelet.'';
+    description = "cv_camera uses OpenCV capture object to capture camera image.
+  This supports camera_image and nodelet.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

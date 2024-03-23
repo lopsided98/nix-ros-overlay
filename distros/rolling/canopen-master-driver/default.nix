@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Basic canopen master implementation'';
+    description = "Basic canopen master implementation";
     license = with lib.licenses; [ asl20 ];
   };
 }

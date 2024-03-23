@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Processors for sensor_msgs::Imu data'';
+    description = "Processors for sensor_msgs::Imu data";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Bound incoming velocity messages according to robot velocity and acceleration limits.'';
+    description = "Bound incoming velocity messages according to robot velocity and acceleration limits.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

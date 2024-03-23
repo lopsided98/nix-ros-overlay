@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''MoveGroupCapabilites to interact with MoveIt'';
+    description = "MoveGroupCapabilites to interact with MoveIt";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''cob_android_resource_server'';
+    description = "cob_android_resource_server";
     license = with lib.licenses; [ asl20 ];
   };
 }

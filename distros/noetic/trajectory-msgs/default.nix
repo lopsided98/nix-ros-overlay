@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package defines messages for defining robot trajectories. These messages are
+    description = "This package defines messages for defining robot trajectories. These messages are
     also the building blocks of most of the
-    <a href="http://wiki.ros.org/control_msgs">control_msgs</a> actions.'';
+    <a href=\"http://wiki.ros.org/control_msgs\">control_msgs</a> actions.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

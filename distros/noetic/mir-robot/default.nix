@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''URDF description, Gazebo simulation, navigation, bringup launch files, message and action descriptions for the MiR robot.'';
+    description = "URDF description, Gazebo simulation, navigation, bringup launch files, message and action descriptions for the MiR robot.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

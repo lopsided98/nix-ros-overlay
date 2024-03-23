@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS Python and C++ interfaces for universally unique identifiers.'';
+    description = "ROS Python and C++ interfaces for universally unique identifiers.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

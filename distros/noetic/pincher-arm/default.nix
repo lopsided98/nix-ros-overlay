@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pincher_arm metapackage.'';
+    description = "The pincher_arm metapackage.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

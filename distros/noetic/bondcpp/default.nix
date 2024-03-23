@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''C++ implementation of bond, a mechanism for checking when
-    another process has terminated.'';
+    description = "C++ implementation of bond, a mechanism for checking when
+    another process has terminated.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

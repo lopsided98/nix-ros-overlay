@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A simple script that aggregates all of the topics that a &quot;pr2_dashboard&quot; app might be interested in.'';
+    description = "A simple script that aggregates all of the topics that a &quot;pr2_dashboard&quot; app might be interested in.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

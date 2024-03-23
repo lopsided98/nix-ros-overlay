@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package ];
 
   meta = {
-    description = ''Wrapper around spdlog, providing nothing but a dependency on spdlog, on some systems.
-    On others, it provides an ExternalProject build of spdlog.'';
+    description = "Wrapper around spdlog, providing nothing but a dependency on spdlog, on some systems.
+    On others, it provides an ExternalProject build of spdlog.";
     license = with lib.licenses; [ asl20 mit ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''A package containing some message definitions used in the implementation of ROS 1 actions.'';
+    description = "A package containing some message definitions used in the implementation of ROS 1 actions.";
     license = with lib.licenses; [ asl20 ];
   };
 }

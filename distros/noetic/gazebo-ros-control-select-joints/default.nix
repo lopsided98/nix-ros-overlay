@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''gazebo_ros_contrl_select_joints'';
+    description = "gazebo_ros_contrl_select_joints";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

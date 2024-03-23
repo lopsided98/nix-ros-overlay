@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ];
 
   meta = {
-    description = ''The ability to export link flags to downstream packages in the ament buildsystem.'';
+    description = "The ability to export link flags to downstream packages in the ament buildsystem.";
     license = with lib.licenses; [ asl20 ];
   };
 }

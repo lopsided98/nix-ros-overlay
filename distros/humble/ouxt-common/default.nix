@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''common settings for OUXT Polaris ROS2 packages'';
+    description = "common settings for OUXT Polaris ROS2 packages";
     license = with lib.licenses; [ asl20 ];
   };
 }

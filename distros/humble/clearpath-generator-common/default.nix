@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Clearpath Common Generator'';
+    description = "Clearpath Common Generator";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

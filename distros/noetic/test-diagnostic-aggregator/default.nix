@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Basic diagnostic_aggregator tests are  in the'';
+    description = "Basic diagnostic_aggregator tests are  in the";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

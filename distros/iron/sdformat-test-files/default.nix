@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Example SDFormat XML files for testing tools using hthis format.'';
+    description = "Example SDFormat XML files for testing tools using hthis format.";
     license = with lib.licenses; [ asl20 ];
   };
 }

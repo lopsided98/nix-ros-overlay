@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Gazebo plugin that allows writing custom Gazebo sensors.'';
+    description = "Gazebo plugin that allows writing custom Gazebo sensors.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

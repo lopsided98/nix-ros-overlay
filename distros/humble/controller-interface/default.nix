@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Description of controller_interface'';
+    description = "Description of controller_interface";
     license = with lib.licenses; [ asl20 ];
   };
 }

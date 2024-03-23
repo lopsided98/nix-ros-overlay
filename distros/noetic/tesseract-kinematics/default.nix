@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The tesseract_kinematics package contains kinematics related libraries.'';
+    description = "The tesseract_kinematics package contains kinematics related libraries.";
     license = with lib.licenses; [ asl20 ];
   };
 }

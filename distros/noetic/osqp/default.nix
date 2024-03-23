@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS wrapper for OSQP'';
+    description = "ROS wrapper for OSQP";
     license = with lib.licenses; [ "Apache" ];
   };
 }

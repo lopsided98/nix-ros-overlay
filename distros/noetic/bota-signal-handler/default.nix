@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Contains a static signal handling helper class.'';
+    description = "Contains a static signal handling helper class.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''This metapackage depends on the SMACH library and ROS SMACH integration
-    packages.'';
+    description = "This metapackage depends on the SMACH library and ROS SMACH integration
+    packages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

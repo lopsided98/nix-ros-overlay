@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ as2-motion-reference-handlers as2-python-api rclpy ];
 
   meta = {
-    description = ''Keyboard Teleoperation'';
+    description = "Keyboard Teleoperation";
     license = with lib.licenses; [ bsd3 ];
   };
 }

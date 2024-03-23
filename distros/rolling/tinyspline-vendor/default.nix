@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake git ];
 
   meta = {
-    description = ''The vendor package for tinyspline.'';
+    description = "The vendor package for tinyspline.";
     license = with lib.licenses; [ asl20 mit ];
   };
 }

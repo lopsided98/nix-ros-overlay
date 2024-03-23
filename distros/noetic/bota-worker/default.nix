@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''High resolution version of the ROS worker.'';
+    description = "High resolution version of the ROS worker.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

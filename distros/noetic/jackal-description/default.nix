@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''URDF robot description for Jackal'';
+    description = "URDF robot description for Jackal";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

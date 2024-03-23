@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Graphical frontend for interacting with the controller manager.'';
+    description = "Graphical frontend for interacting with the controller manager.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

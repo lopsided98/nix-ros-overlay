@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''franka_ros is a metapackage for all Franka Emika ROS packages'';
+    description = "franka_ros is a metapackage for all Franka Emika ROS packages";
     license = with lib.licenses; [ asl20 ];
   };
 }

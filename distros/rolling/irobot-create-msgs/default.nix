@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Package containing action, message, and service definitions used by the iRobot(R) Create(R) platform'';
+    description = "Package containing action, message, and service definitions used by the iRobot(R) Create(R) platform";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

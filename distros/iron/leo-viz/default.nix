@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Visualization launch files and RViz configurations for Leo Rover'';
+    description = "Visualization launch files and RViz configurations for Leo Rover";
     license = with lib.licenses; [ mit ];
   };
 }

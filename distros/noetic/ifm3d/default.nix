@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ifm pmd-based 3D ToF Camera ROS package'';
+    description = "ifm pmd-based 3D ToF Camera ROS package";
     license = with lib.licenses; [ asl20 ];
   };
 }

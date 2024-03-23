@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python python3Packages.cryptography python3Packages.importlib-resources python3Packages.lxml rclpy ros2cli ];
 
   meta = {
-    description = ''Command line tools for managing SROS2 keys'';
+    description = "Command line tools for managing SROS2 keys";
     license = with lib.licenses; [ asl20 ];
   };
 }

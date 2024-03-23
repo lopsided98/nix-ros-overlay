@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Configurable tf2 client wrapper using local or remote buffer.'';
+    description = "Configurable tf2 client wrapper using local or remote buffer.";
     license = with lib.licenses; [ mit ];
   };
 }

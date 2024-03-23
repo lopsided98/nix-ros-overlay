@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages for transmitting audio via ROS'';
+    description = "Messages for transmitting audio via ROS";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

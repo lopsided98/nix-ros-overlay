@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''MoveIt launch files'';
+    description = "MoveIt launch files";
     license = with lib.licenses; [ asl20 ];
   };
 }

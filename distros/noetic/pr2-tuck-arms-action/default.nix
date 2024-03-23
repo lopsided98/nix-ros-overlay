@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pr2_tuck_arms_action package'';
+    description = "The pr2_tuck_arms_action package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

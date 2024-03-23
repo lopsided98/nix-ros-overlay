@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Functions and types for rclcpp::Parameter'';
+    description = "Functions and types for rclcpp::Parameter";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python launch launch-ros python3Packages.pyyaml ];
 
   meta = {
-    description = ''Utilities for launch files'';
+    description = "Utilities for launch files";
     license = with lib.licenses; [ asl20 ];
   };
 }

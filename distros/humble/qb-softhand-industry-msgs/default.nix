@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''This package contains the ROS messages for qbrobotics® SoftHand Industry.'';
+    description = "This package contains the ROS messages for qbrobotics® SoftHand Industry.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

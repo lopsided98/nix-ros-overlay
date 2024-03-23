@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin mrt-cmake-modules ];
 
   meta = {
-    description = ''Library to match objects to lanelets'';
+    description = "Library to match objects to lanelets";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

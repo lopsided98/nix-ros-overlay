@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module pkg-config ];
 
   meta = {
-    description = ''Core libraries used by MoveIt'';
+    description = "Core libraries used by MoveIt";
     license = with lib.licenses; [ bsd3 ];
   };
 }

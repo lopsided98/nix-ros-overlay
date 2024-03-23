@@ -19,14 +19,14 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Allows multipoint communication between rosserial
+    description = "Allows multipoint communication between rosserial
      nodes connected to an xbee. All nodes communicate back
      to a master xbee connected to a computer running ROS.
 
      This software currently only works with Series 1 Xbees.
 
      This pkg includes python code from the python-xbee project:
-     http://code.google.com/p/python-xbee/'';
+     http://code.google.com/p/python-xbee/";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

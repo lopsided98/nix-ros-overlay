@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Launch files for common URDF operations'';
+    description = "Launch files for common URDF operations";
     license = with lib.licenses; [ "BSD-3-clause" ];
   };
 }

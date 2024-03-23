@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A meta-package to aggregate all the FlexBE packages'';
+    description = "A meta-package to aggregate all the FlexBE packages";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

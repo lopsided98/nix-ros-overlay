@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS messages for ETSI ITS messages'';
+    description = "ROS messages for ETSI ITS messages";
     license = with lib.licenses; [ mit ];
   };
 }

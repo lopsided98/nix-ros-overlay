@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages for representing PR2 state, such as battery information and the PR2 fingertip sensors.'';
+    description = "Messages for representing PR2 state, such as battery information and the PR2 fingertip sensors.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

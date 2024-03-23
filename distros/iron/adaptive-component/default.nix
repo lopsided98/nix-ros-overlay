@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A composable container for Adaptive ROS 2 Node computations.
+    description = "A composable container for Adaptive ROS 2 Node computations.
     Allows building Nodes that can select between FPGA, CPU or
     GPU, at run-time. Stateless by default, can be made stateful
     to meet use-case specific needs. Refer to examples in README.
@@ -30,7 +30,7 @@ buildRosPackage {
     to build adaptive computations. Adaptive ROS 2 Nodes are able to
     perform computations in the CPU, the FPGA or the GPU, adaptively.
     Adaptive behavior is controlled through the &quot;adaptive&quot; ROS 2
-    parameter.'';
+    parameter.";
     license = with lib.licenses; [ asl20 ];
   };
 }

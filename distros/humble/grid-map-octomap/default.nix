@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Conversions between grid maps and OctoMap types.'';
+    description = "Conversions between grid maps and OctoMap types.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

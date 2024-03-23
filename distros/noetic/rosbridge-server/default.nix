@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''A WebSocket interface to rosbridge.'';
+    description = "A WebSocket interface to rosbridge.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

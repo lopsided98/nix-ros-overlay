@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The raspimouse_gazebo package'';
+    description = "The raspimouse_gazebo package";
     license = with lib.licenses; [ mit ];
   };
 }

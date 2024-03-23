@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Power drivers for the PR2 robot.'';
+    description = "Power drivers for the PR2 robot.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

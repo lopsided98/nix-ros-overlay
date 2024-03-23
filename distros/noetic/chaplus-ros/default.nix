@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The ROS package for chaplus service'';
+    description = "The ROS package for chaplus service";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

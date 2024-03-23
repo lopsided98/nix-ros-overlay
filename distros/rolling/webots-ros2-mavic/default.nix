@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ builtin-interfaces rclpy webots-ros2-driver ];
 
   meta = {
-    description = ''Mavic 2 Pro robot ROS2 interface for Webots.'';
+    description = "Mavic 2 Pro robot ROS2 interface for Webots.";
     license = with lib.licenses; [ asl20 ];
   };
 }

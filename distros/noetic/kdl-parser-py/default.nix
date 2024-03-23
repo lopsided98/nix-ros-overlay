@@ -20,10 +20,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.catkin-pkg python3Packages.setuptools ];
 
   meta = {
-    description = ''The Kinematics and Dynamics Library (KDL) defines a tree structure
+    description = "The Kinematics and Dynamics Library (KDL) defines a tree structure
    to represent the kinematic and dynamic parameters of a robot
    mechanism. <tt>kdl_parser_py</tt> provides Python tools to construct a KDL
-   tree from an XML robot representation in URDF.'';
+   tree from an XML robot representation in URDF.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

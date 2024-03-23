@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''<p>visualization packages using rwt</p>'';
+    description = "<p>visualization packages using rwt</p>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

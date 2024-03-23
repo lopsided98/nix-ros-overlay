@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-index-cpp ];
 
   meta = {
-    description = ''Shim package to redirect to ros_gz_image.'';
+    description = "Shim package to redirect to ros_gz_image.";
     license = with lib.licenses; [ asl20 ];
   };
 }

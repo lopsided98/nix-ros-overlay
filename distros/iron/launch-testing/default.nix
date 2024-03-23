@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python launch launch-xml launch-yaml osrf-pycommon pythonPackages.pytest ];
 
   meta = {
-    description = ''A package to create tests which involve launch files and multiple processes.'';
+    description = "A package to create tests which involve launch files and multiple processes.";
     license = with lib.licenses; [ asl20 ];
   };
 }

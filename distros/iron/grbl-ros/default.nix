@@ -19,7 +19,7 @@ buildRosPackage {
   propagatedBuildInputs = [ grbl-msgs rclpy std-msgs ];
 
   meta = {
-    description = ''ROS2 package to interface with a GRBL serial device'';
+    description = "ROS2 package to interface with a GRBL serial device";
     license = with lib.licenses; [ mit ];
   };
 }

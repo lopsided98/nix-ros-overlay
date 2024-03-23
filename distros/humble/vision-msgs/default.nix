@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Messages for interfacing with various computer vision pipelines, such as
-    object detectors.'';
+    description = "Messages for interfacing with various computer vision pipelines, such as
+    object detectors.";
     license = with lib.licenses; [ asl20 asl20 ];
   };
 }

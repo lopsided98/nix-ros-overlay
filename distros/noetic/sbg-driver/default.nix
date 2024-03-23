@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS driver package for communication with the SBG navigation systems.'';
+    description = "ROS driver package for communication with the SBG navigation systems.";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages and services package for OpenManipulator to send information about state or pose'';
+    description = "Messages and services package for OpenManipulator to send information about state or pose";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''MoveIt config files for all cob and raw'';
+    description = "MoveIt config files for all cob and raw";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Components of MoveIt that use ROS'';
+    description = "Components of MoveIt that use ROS";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

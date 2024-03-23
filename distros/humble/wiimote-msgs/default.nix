@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-auto rosidl-default-generators ];
 
   meta = {
-    description = ''Messages used by wiimote package.'';
+    description = "Messages used by wiimote package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_scan_unifier package holds code to unify two or more laser-scans to one unified scan-message'';
+    description = "The cob_scan_unifier package holds code to unify two or more laser-scans to one unified scan-message";
     license = with lib.licenses; [ asl20 ];
   };
 }

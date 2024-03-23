@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Ouster ROS2 driver'';
+    description = "Ouster ROS2 driver";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

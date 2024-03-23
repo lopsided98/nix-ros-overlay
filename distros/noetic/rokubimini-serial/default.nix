@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Rokubimini Serial implementation.'';
+    description = "Rokubimini Serial implementation.";
     license = with lib.licenses; [ asl20 ];
   };
 }

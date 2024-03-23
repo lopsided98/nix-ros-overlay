@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''Utilities for publishing / processing metro_benchmark_msgs'';
+    description = "Utilities for publishing / processing metro_benchmark_msgs";
     license = with lib.licenses; [ "BSD-3-clause" ];
   };
 }

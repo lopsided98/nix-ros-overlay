@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The usb_cam_hardware package'';
+    description = "The usb_cam_hardware package";
     license = with lib.licenses; [ mit ];
   };
 }

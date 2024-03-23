@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''The pal_hey5 package'';
+    description = "The pal_hey5 package";
     license = with lib.licenses; [ asl20 ];
   };
 }

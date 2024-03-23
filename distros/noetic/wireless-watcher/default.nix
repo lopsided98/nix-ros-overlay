@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A Python-based which publishes connection information about a linux wireless interface.'';
+    description = "A Python-based which publishes connection information about a linux wireless interface.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS API for Sesame smart lock'';
+    description = "ROS API for Sesame smart lock";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

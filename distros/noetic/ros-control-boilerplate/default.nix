@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Simple simulation interface and template for setting up a hardware interface for ros_control'';
+    description = "Simple simulation interface and template for setting up a hardware interface for ros_control";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

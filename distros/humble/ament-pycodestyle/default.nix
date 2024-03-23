@@ -17,8 +17,8 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.pycodestyle ];
 
   meta = {
-    description = ''The ability to check code against the style conventions in PEP 8 and
-    generate xUnit test result files.'';
+    description = "The ability to check code against the style conventions in PEP 8 and
+    generate xUnit test result files.";
     license = with lib.licenses; [ asl20 ];
   };
 }

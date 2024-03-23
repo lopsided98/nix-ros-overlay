@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake git ];
 
   meta = {
-    description = ''Zstd compression vendor package, providing a dependency for Zstd.'';
+    description = "Zstd compression vendor package, providing a dependency for Zstd.";
     license = with lib.licenses; [ asl20 bsdOriginal ];
   };
 }

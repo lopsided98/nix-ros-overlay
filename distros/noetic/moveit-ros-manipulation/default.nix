@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Components of MoveIt used for manipulation'';
+    description = "Components of MoveIt used for manipulation";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

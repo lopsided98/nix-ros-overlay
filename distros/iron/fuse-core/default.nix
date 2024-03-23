@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''The fuse_core package provides the base class interfaces for the various fuse components. Concrete implementations of these
-    interfaces are provided in other packages.'';
+    description = "The fuse_core package provides the base class interfaces for the various fuse components. Concrete implementations of these
+    interfaces are provided in other packages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

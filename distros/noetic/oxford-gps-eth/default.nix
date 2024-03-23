@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Ethernet interface to OxTS GPS receivers (NCOM packet structure)'';
+    description = "Ethernet interface to OxTS GPS receivers (NCOM packet structure)";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

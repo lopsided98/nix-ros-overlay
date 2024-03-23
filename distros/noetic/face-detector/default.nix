@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Face detection in images.'';
+    description = "Face detection in images.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

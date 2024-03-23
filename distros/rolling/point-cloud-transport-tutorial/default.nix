@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Tutorial for point_cloud_transport.'';
+    description = "Tutorial for point_cloud_transport.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

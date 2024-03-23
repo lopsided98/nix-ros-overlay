@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-core ];
 
   meta = {
-    description = ''Example usage of generate_parameter_library.'';
+    description = "Example usage of generate_parameter_library.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

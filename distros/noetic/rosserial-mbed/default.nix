@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rosserial for mbed platforms.'';
+    description = "rosserial for mbed platforms.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

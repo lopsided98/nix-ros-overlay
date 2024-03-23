@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-python ];
 
   meta = {
-    description = ''Python helper class for the ROS 2 launch system'';
+    description = "Python helper class for the ROS 2 launch system";
     license = with lib.licenses; [ mit ];
   };
 }

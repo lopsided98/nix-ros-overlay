@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A mouse teleop tool for holonomic mobile robots.'';
+    description = "A mouse teleop tool for holonomic mobile robots.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

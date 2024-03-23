@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''ROS messages for the cartographer_ros package.'';
+    description = "ROS messages for the cartographer_ros package.";
     license = with lib.licenses; [ asl20 ];
   };
 }

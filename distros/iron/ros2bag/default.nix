@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python rclpy ros2cli rosbag2-py ];
 
   meta = {
-    description = ''Entry point for rosbag in ROS 2'';
+    description = "Entry point for rosbag in ROS 2";
     license = with lib.licenses; [ asl20 ];
   };
 }

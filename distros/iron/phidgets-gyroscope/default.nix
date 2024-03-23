@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Driver for the Phidgets Gyroscope devices'';
+    description = "Driver for the Phidgets Gyroscope devices";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

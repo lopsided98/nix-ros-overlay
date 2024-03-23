@@ -19,7 +19,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.numpy rclpy rosidl-parser rosidl-runtime-py ];
 
   meta = {
-    description = ''Converts between Python dictionaries and JSON to rclpy messages.'';
+    description = "Converts between Python dictionaries and JSON to rclpy messages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

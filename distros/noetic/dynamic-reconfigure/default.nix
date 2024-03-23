@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The dynamic_reconfigure package provides a means to update parameters
-    at runtime without having to restart the node.'';
+    description = "The dynamic_reconfigure package provides a means to update parameters
+    at runtime without having to restart the node.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

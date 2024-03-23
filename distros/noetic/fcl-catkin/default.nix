@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''fcl_catkin'';
+    description = "fcl_catkin";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_control_mode_adapter package provides a node that automatically loads respective ros_controllers depending on required control mode.'';
+    description = "The cob_control_mode_adapter package provides a node that automatically loads respective ros_controllers depending on required control mode.";
     license = with lib.licenses; [ asl20 ];
   };
 }

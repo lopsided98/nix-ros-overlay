@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Examples library to show how to use CPR OutdoorNav API'';
+    description = "Examples library to show how to use CPR OutdoorNav API";
     license = with lib.licenses; [ "Proprietary" ];
   };
 }

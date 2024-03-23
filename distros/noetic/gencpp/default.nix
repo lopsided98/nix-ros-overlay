@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''C++ ROS message and service generators.'';
+    description = "C++ ROS message and service generators.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

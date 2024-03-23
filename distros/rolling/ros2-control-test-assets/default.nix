@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-ros2-control-test-assets";
-  version = "4.6.0-r1";
+  version = "4.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/ros2_control_test_assets/4.6.0-1.tar.gz";
-    name = "4.6.0-1.tar.gz";
-    sha256 = "cb9d08aabb24529fafa1a7fe96ce619c65404956469bc69a340a11df63504c7d";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/ros2_control_test_assets/4.7.0-1.tar.gz";
+    name = "4.7.0-1.tar.gz";
+    sha256 = "d252bf42ff4e5d60946b48f579ad6328aa80d9dd3e90cfc089ce9da545e22562";
   };
 
   buildType = "ament_cmake";
@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The package provides shared test resources for ros2_control stack'';
+    description = "The package provides shared test resources for ros2_control stack";
     license = with lib.licenses; [ asl20 ];
   };
 }

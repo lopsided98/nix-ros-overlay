@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This empty package allows to export rosbag migration rule files without depending on rosbag.'';
+    description = "This empty package allows to export rosbag migration rule files without depending on rosbag.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

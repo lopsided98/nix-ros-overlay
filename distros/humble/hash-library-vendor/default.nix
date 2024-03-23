@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto git ];
 
   meta = {
-    description = ''ROS2 vendor package for stbrumme/hash-library'';
+    description = "ROS2 vendor package for stbrumme/hash-library";
     license = with lib.licenses; [ asl20 "Zlib-License" ];
   };
 }

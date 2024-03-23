@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-package ];
 
   meta = {
-    description = ''Generate a C header containing the version number of the package'';
+    description = "Generate a C header containing the version number of the package";
     license = with lib.licenses; [ asl20 ];
   };
 }

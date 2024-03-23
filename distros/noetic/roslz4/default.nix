@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A Python and C++ implementation of the LZ4 streaming format.  Large data
+    description = "A Python and C++ implementation of the LZ4 streaming format.  Large data
     streams are split into blocks which are compressed using the very fast LZ4
-    compression algorithm.'';
+    compression algorithm.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

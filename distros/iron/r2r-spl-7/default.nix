@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rclpy splsm-7-conversion ];
 
   meta = {
-    description = ''Robot-To-Robot communication in RoboCup SPL using SPLSM V7'';
+    description = "Robot-To-Robot communication in RoboCup SPL using SPLSM V7";
     license = with lib.licenses; [ asl20 ];
   };
 }

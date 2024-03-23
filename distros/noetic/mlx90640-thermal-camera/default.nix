@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The mlx90640_thermal_camera package'';
+    description = "The mlx90640_thermal_camera package";
     license = with lib.licenses; [ mit ];
   };
 }

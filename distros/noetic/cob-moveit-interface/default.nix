@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''cob_moveit_interface'';
+    description = "cob_moveit_interface";
     license = with lib.licenses; [ asl20 ];
   };
 }

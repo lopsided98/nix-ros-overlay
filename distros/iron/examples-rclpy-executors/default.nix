@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rclpy std-msgs ];
 
   meta = {
-    description = ''Examples of creating and using exectors to run multiple nodes in the same process'';
+    description = "Examples of creating and using exectors to run multiple nodes in the same process";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Converts between Python dictionaries and JSON to rospy messages.'';
+    description = "Converts between Python dictionaries and JSON to rospy messages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

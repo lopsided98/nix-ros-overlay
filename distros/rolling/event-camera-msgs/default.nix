@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ros-environment ];
 
   meta = {
-    description = ''messages for event based cameras'';
+    description = "messages for event based cameras";
     license = with lib.licenses; [ "Apache-2" ];
   };
 }

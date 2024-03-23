@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Implementation of warehouse_ros for sqlite'';
+    description = "Implementation of warehouse_ros for sqlite";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,12 +19,12 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Wraps the ViSP moving edge tracker provided by the ViSP visual
+    description = "Wraps the ViSP moving edge tracker provided by the ViSP visual
     servoing library into a ROS package.
 
     This computer vision algorithm computes the pose (i.e. position
     and orientation) of an object in an image. It is fast enough to
-    allow object online tracking using a camera.'';
+    allow object online tracking using a camera.";
     license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

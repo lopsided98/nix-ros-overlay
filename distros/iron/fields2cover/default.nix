@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Robust and efficient coverage paths for autonomous agricultural vehicles.
-    A modular and extensible Coverage Path Planning library'';
+    description = "Robust and efficient coverage paths for autonomous agricultural vehicles.
+    A modular and extensible Coverage Path Planning library";
     license = with lib.licenses; [ bsd3 ];
   };
 }

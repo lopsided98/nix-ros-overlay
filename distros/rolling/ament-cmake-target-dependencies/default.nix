@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-include-directories ament-cmake-libraries ];
 
   meta = {
-    description = ''The ability to add definitions, include directories and libraries of a package to a target in the ament buildsystem in CMake.'';
+    description = "The ability to add definitions, include directories and libraries of a package to a target in the ament buildsystem in CMake.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''flexbe_msgs provides the messages used by FlexBE.'';
+    description = "flexbe_msgs provides the messages used by FlexBE.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

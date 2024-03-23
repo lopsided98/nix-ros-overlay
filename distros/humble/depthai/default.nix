@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''DepthAI core is a C++ library which comes with firmware and an API to interact with OAK Platform'';
+    description = "DepthAI core is a C++ library which comes with firmware and an API to interact with OAK Platform";
     license = with lib.licenses; [ mit ];
   };
 }

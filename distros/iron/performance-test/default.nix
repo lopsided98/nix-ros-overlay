@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Tool to test performance of ROS2 and DDS data layers and communication.'';
+    description = "Tool to test performance of ROS2 and DDS data layers and communication.";
     license = with lib.licenses; [ asl20 ];
   };
 }

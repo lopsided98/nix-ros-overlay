@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Collection of RQt Image Overlay Plugins for Vision Msgs'';
+    description = "Collection of RQt Image Overlay Plugins for Vision Msgs";
     license = with lib.licenses; [ asl20 ];
   };
 }

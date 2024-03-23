@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
-    description = ''swri_roscpp'';
+    description = "swri_roscpp";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

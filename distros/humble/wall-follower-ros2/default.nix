@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''wall_follower_ros2 package'';
+    description = "wall_follower_ros2 package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

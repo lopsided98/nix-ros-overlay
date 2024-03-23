@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-mypy ];
 
   meta = {
-    description = ''The CMake API for ament_mypy to perform static type analysis on python code
-    with mypy.'';
+    description = "The CMake API for ament_mypy to perform static type analysis on python code
+    with mypy.";
     license = with lib.licenses; [ asl20 ];
   };
 }

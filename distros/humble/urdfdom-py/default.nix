@@ -17,7 +17,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.lxml python3Packages.pyyaml rclpy ];
 
   meta = {
-    description = ''Python implementation of the URDF parser.'';
+    description = "Python implementation of the URDF parser.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

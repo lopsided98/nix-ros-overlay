@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Integration test suite based on roslaunch that is compatible with xUnit frameworks.'';
+    description = "Integration test suite based on roslaunch that is compatible with xUnit frameworks.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

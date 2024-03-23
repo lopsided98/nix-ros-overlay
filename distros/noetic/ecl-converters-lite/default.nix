@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''These are a very simple version of some of the functions in ecl_converters 
+    description = "These are a very simple version of some of the functions in ecl_converters 
      suitable for firmware development. That is, there is no use of new, 
-     templates or exceptions.'';
+     templates or exceptions.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

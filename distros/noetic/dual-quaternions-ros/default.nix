@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS msgs from and to dual quaternions'';
+    description = "ROS msgs from and to dual quaternions";
     license = with lib.licenses; [ mit ];
   };
 }

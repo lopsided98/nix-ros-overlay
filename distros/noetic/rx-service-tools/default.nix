@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Graphical tools to interact with ROS services.'';
+    description = "Graphical tools to interact with ROS services.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

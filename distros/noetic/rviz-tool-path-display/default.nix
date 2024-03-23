@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rviz_tool_path_display package'';
+    description = "The rviz_tool_path_display package";
     license = with lib.licenses; [ asl20 ];
   };
 }

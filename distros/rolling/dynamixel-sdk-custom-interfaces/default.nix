@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''ROS2 custom interface examples using ROBOTIS DYNAMIXEL SDK'';
+    description = "ROS2 custom interface examples using ROBOTIS DYNAMIXEL SDK";
     license = with lib.licenses; [ asl20 ];
   };
 }

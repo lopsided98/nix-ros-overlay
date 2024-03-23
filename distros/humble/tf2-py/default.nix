@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake python-cmake-module ];
 
   meta = {
-    description = ''The tf2_py package'';
+    description = "The tf2_py package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

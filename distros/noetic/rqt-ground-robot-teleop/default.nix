@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A common ground robot teleop interface for all ground robot exercises in the JdeRobot Robotics Academy'';
+    description = "A common ground robot teleop interface for all ground robot exercises in the JdeRobot Robotics Academy";
     license = with lib.licenses; [ mit ];
   };
 }

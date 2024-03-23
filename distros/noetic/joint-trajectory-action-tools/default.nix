@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''joint_trajectory_action_tools'';
+    description = "joint_trajectory_action_tools";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

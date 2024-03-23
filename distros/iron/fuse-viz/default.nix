@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''The fuse_viz package provides visualization tools for fuse.'';
+    description = "The fuse_viz package provides visualization tools for fuse.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Follow node for Dolly, the robot sheep.'';
+    description = "Follow node for Dolly, the robot sheep.";
     license = with lib.licenses; [ asl20 ];
   };
 }

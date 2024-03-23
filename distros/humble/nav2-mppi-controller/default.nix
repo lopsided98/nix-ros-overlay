@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-ros ];
 
   meta = {
-    description = ''nav2_mppi_controller'';
+    description = "nav2_mppi_controller";
     license = with lib.licenses; [ mit ];
   };
 }

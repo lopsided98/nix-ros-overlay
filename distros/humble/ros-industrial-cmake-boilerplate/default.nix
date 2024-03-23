@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Contains boilerplate cmake script, macros and utils'';
+    description = "Contains boilerplate cmake script, macros and utils";
     license = with lib.licenses; [ asl20 bsd3 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Library for affordance motion primitives.'';
+    description = "Library for affordance motion primitives.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

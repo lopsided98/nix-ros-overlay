@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Implementation of simple kinematics in two and half dimensions'';
+    description = "Implementation of simple kinematics in two and half dimensions";
     license = with lib.licenses; [ "BSD-3-clause" ];
   };
 }

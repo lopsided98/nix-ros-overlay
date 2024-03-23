@@ -20,10 +20,10 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];
 
   meta = {
-    description = ''This package contains a class for converting from a 2D laser scan as defined by
+    description = "This package contains a class for converting from a 2D laser scan as defined by
     sensor_msgs/LaserScan into a point cloud as defined by sensor_msgs/PointCloud
     or sensor_msgs/PointCloud2. In particular, it contains functionality to account
-    for the skew resulting from moving robots or tilting laser scanners.'';
+    for the skew resulting from moving robots or tilting laser scanners.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

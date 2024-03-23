@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''qt_gui_app provides the main to start an instance of the integrated graphical user interface provided by qt_gui.'';
+    description = "qt_gui_app provides the main to start an instance of the integrated graphical user interface provided by qt_gui.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

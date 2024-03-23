@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The depthai_filters package'';
+    description = "The depthai_filters package";
     license = with lib.licenses; [ mit ];
   };
 }

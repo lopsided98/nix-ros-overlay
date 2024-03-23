@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package attempts to show the features of ROS step-by-step,
-    including using messages, servers, parameters, etc.'';
+    description = "This package attempts to show the features of ROS step-by-step,
+    including using messages, servers, parameters, etc.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

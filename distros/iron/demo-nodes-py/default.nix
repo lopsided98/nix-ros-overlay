@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python example-interfaces rcl-interfaces rclpy std-msgs ];
 
   meta = {
-    description = ''Python nodes which were previously in the ros2/examples repository but are now just used for demo purposes.'';
+    description = "Python nodes which were previously in the ros2/examples repository but are now just used for demo purposes.";
     license = with lib.licenses; [ asl20 ];
   };
 }

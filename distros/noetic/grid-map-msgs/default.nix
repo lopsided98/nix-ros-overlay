@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Definition of the multi-layered grid map message type.'';
+    description = "Definition of the multi-layered grid map message type.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

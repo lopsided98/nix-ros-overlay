@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Marvelmind ROS2 package'';
+    description = "Marvelmind ROS2 package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

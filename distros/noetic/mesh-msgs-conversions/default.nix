@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''converts point clouds and attributes into meshes and mesh attributes'';
+    description = "converts point clouds and attributes into meshes and mesh attributes";
     license = with lib.licenses; [ bsd3 ];
   };
 }

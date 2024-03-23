@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-copyright ament-index-python python3Packages.catkin-pkg python3Packages.empy python3Packages.importlib-resources python3Packages.setuptools ros2cli ];
 
   meta = {
-    description = ''The pkg command for ROS 2 command line tools.'';
+    description = "The pkg command for ROS 2 command line tools.";
     license = with lib.licenses; [ asl20 ];
   };
 }

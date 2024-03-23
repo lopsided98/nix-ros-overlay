@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''AS2 Movement Behaviors Behaviors Meta Package'';
+    description = "AS2 Movement Behaviors Behaviors Meta Package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

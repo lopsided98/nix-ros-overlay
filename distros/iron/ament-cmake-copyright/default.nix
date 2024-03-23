@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-copyright ];
 
   meta = {
-    description = ''The CMake API for ament_copyright to check every source file contains copyright reference.'';
+    description = "The CMake API for ament_copyright to check every source file contains copyright reference.";
     license = with lib.licenses; [ asl20 ];
   };
 }

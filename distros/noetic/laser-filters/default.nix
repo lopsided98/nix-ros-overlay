@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Assorted filters designed to operate on 2D planar laser scanners,
-    which use the sensor_msgs/LaserScan type.'';
+    description = "Assorted filters designed to operate on 2D planar laser scanners,
+    which use the sensor_msgs/LaserScan type.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

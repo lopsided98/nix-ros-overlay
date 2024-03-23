@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake python-cmake-module ];
 
   meta = {
-    description = ''Package containing the Python client.'';
+    description = "Package containing the Python client.";
     license = with lib.licenses; [ asl20 ];
   };
 }

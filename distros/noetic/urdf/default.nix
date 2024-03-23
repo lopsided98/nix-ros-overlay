@@ -20,10 +20,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains a C++ parser for the Unified Robot Description
+    description = "This package contains a C++ parser for the Unified Robot Description
     Format (URDF), which is an XML format for representing a robot model.
     The code API of the parser has been through our review process and will remain
-    backwards compatible in future releases.'';
+    backwards compatible in future releases.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

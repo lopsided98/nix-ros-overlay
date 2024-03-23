@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Meta package that contains package of rm_control.'';
+    description = "Meta package that contains package of rm_control.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

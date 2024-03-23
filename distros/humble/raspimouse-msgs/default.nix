@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''RaspiMouse messages'';
+    description = "RaspiMouse messages";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pluginlib package provides tools for writing and dynamically loading plugins using the ROS build infrastructure.
-    To work, these tools require plugin providers to register their plugins in the package.xml of their package.'';
+    description = "The pluginlib package provides tools for writing and dynamically loading plugins using the ROS build infrastructure.
+    To work, these tools require plugin providers to register their plugins in the package.xml of their package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

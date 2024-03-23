@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Message definition files for the PACMod driver'';
+    description = "Message definition files for the PACMod driver";
     license = with lib.licenses; [ mit ];
   };
 }

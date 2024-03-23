@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin pkg-config ];
 
   meta = {
-    description = ''Core libraries used by MoveIt'';
+    description = "Core libraries used by MoveIt";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

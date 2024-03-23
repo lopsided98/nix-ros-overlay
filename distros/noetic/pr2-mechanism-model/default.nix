@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''<p>
+    description = "<p>
         This package contains the robot model that is used by the realtime
         controllers
-        inside <a href="http://www.ros.org/wiki/pr2_controller_manager">controller
+        inside <a href=\"http://www.ros.org/wiki/pr2_controller_manager\">controller
            manager</a>. This robot model focuses on controlling the robot
         mechanism in a realtime control loop, and therefore it only contains
         the components of a robot that are relevant in realtime: the robot
@@ -31,7 +31,7 @@ buildRosPackage {
      </p>
      <p>
         The pr2_mechanism_model package is well tested and is released with a stable API.
-     </p>'';
+     </p>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

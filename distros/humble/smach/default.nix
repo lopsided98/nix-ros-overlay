@@ -18,11 +18,11 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''SMACH is a task-level architecture for rapidly creating complex robot
+    description = "SMACH is a task-level architecture for rapidly creating complex robot
     behavior. At its core, SMACH is a ROS-independent Python library to build
     hierarchical state machines. SMACH is a new library that takes advantage of
     very old concepts in order to quickly create robust robot behavior with
-    maintainable and modular code.'';
+    maintainable and modular code.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

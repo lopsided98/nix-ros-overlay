@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A package to visualiize the navigation graphs of fleets'';
+    description = "A package to visualiize the navigation graphs of fleets";
     license = with lib.licenses; [ "Apache-license-2.0" ];
   };
 }

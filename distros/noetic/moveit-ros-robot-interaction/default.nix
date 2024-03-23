@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Components of MoveIt that offer interaction via interactive markers'';
+    description = "Components of MoveIt that offer interaction via interactive markers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

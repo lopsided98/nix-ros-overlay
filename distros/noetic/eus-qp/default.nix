@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''eus_qp is an interface of euslisp to solve qp problems with linear constraints.'';
+    description = "eus_qp is an interface of euslisp to solve qp problems with linear constraints.";
     license = with lib.licenses; [ asl20 ];
   };
 }

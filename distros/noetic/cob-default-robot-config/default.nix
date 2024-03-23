@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Default configuration of the different robots supported by the Care-O-bot stacks. Configuration is e.g. preconfigured joint positions.'';
+    description = "Default configuration of the different robots supported by the Care-O-bot stacks. Configuration is e.g. preconfigured joint positions.";
     license = with lib.licenses; [ asl20 ];
   };
 }

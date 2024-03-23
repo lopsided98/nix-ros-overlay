@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pluginlib_tutorials package'';
+    description = "The pluginlib_tutorials package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

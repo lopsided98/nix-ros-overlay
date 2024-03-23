@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ launch launch-ros tracetools-trace ];
 
   meta = {
-    description = ''Launch integration for tracing.'';
+    description = "Launch integration for tracing.";
     license = with lib.licenses; [ asl20 ];
   };
 }

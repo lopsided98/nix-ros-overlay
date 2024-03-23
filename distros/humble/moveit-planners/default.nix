@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Meta package that installs all available planners for MoveIt'';
+    description = "Meta package that installs all available planners for MoveIt";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

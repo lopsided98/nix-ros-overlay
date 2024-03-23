@@ -19,20 +19,20 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Metapackage of rqt plugins that are particularly used with robots
+    description = "Metapackage of rqt plugins that are particularly used with robots
    during its operation.<br/>
    <br/>
    To run any rqt plugins, just type in a single command &quot;rqt&quot;, then select any plugins you want from the GUI that launches afterwards.<br/>
    <br/>
    rqt consists of three following metapackages:<br/>
     <ul>
-     <li><a href="http://ros.org/wiki/rqt">rqt</a> - provides a container window
+     <li><a href=\"http://ros.org/wiki/rqt\">rqt</a> - provides a container window
          where all rqt tools can be docked at. rqt plugin developers barely
          needs to pay attention.</li>
-     <li><a href="http://ros.org/wiki/rqt_common_plugins">rqt_common_plugins</a> -
+     <li><a href=\"http://ros.org/wiki/rqt_common_plugins\">rqt_common_plugins</a> -
          ROS backend tools suite that can be used on/off of robot runtime.</li>
      <li>rqt_robot_plugins (You're here!)</li>
-    </ul>'';
+    </ul>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A (to be) generic joystick interface to control a robot'';
+    description = "A (to be) generic joystick interface to control a robot";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

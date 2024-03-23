@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Standard implementations of the GoalChecker
-      and TrajectoryGenerators for dwb_local_planner'';
+    description = "Standard implementations of the GoalChecker
+      and TrajectoryGenerators for dwb_local_planner";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

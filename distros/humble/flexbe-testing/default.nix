@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''flexbe_testing provides a framework for unit testing states.'';
+    description = "flexbe_testing provides a framework for unit testing states.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

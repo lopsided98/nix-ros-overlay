@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''The tuw_airskin_msgs package'';
+    description = "The tuw_airskin_msgs package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

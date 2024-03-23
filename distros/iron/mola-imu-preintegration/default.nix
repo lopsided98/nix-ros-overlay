@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Integrator of IMU angular velocity readings'';
+    description = "Integrator of IMU angular velocity readings";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Scripts and launch files for Leo Rover teleoperation'';
+    description = "Scripts and launch files for Leo Rover teleoperation";
     license = with lib.licenses; [ mit ];
   };
 }

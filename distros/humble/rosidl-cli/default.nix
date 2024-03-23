@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python3Packages.argcomplete python3Packages.importlib-metadata ];
 
   meta = {
-    description = ''Command line tools for ROS interface generation.'';
+    description = "Command line tools for ROS interface generation.";
     license = with lib.licenses; [ asl20 ];
   };
 }

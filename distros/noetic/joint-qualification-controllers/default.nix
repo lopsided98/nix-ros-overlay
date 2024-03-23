@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Controllers used in PR2 hardware testing. For testing counterbalance of PR2, and for internal WG use.'';
+    description = "Controllers used in PR2 hardware testing. For testing counterbalance of PR2, and for internal WG use.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

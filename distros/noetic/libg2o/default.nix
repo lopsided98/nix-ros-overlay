@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''The libg2o library from http://openslam.org/g2o.html'';
+    description = "The libg2o library from http://openslam.org/g2o.html";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

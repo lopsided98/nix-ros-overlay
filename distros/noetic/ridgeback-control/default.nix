@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Controllers for Ridgeback'';
+    description = "Controllers for Ridgeback";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

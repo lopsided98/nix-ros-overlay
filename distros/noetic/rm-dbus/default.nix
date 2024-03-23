@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A package that uses dbus to read remote control information'';
+    description = "A package that uses dbus to read remote control information";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

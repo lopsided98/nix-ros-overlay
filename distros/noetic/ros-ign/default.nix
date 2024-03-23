@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Meta-package containing interfaces for using ROS with <a href="https://ignitionrobotics.org">Ignition</a> simulation.'';
+    description = "Meta-package containing interfaces for using ROS with <a href=\"https://ignitionrobotics.org\">Ignition</a> simulation.";
     license = with lib.licenses; [ asl20 ];
   };
 }

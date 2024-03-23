@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Extension of locomotor that implements move_base's functionality.'';
+    description = "Extension of locomotor that implements move_base's functionality.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

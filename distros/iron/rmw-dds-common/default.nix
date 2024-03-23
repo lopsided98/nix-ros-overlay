@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Define a common interface between DDS implementations of ROS middleware.'';
+    description = "Define a common interface between DDS implementations of ROS middleware.";
     license = with lib.licenses; [ asl20 ];
   };
 }

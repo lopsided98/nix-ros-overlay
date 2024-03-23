@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-gtest cmake ];
 
   meta = {
-    description = ''Common CMake scripts to all MOLA modules'';
+    description = "Common CMake scripts to all MOLA modules";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

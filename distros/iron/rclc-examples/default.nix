@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Example of using rclc_executor'';
+    description = "Example of using rclc_executor";
     license = with lib.licenses; [ asl20 ];
   };
 }

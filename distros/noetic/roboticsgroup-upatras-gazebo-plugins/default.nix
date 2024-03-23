@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Collection of gazebo plugins'';
+    description = "Collection of gazebo plugins";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

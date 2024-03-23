@@ -18,8 +18,8 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-lint libxml2 ];
 
   meta = {
-    description = ''The ability to check XML files like the package manifest using xmllint
-    and generate xUnit test result files.'';
+    description = "The ability to check XML files like the package manifest using xmllint
+    and generate xUnit test result files.";
     license = with lib.licenses; [ asl20 ];
   };
 }

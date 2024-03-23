@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Configurable tool to visualize grid maps in RViz.'';
+    description = "Configurable tool to visualize grid maps in RViz.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

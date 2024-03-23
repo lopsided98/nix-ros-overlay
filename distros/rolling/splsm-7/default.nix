@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''RoboCup Standard Platform League Standard Message V7 ROS msg'';
+    description = "RoboCup Standard Platform League Standard Message V7 ROS msg";
     license = with lib.licenses; [ asl20 ];
   };
 }

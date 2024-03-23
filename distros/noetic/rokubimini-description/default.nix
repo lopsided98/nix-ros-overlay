@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The rokubimini_description package'';
+    description = "The rokubimini_description package";
     license = with lib.licenses; [ asl20 ];
   };
 }

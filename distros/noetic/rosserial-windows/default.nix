@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rosserial for Windows platforms.'';
+    description = "rosserial for Windows platforms.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

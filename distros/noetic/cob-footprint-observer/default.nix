@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The cob_footprint_observer package adjusts the footprint of the robot based on the setup (e.g. arm and/or tray).'';
+    description = "The cob_footprint_observer package adjusts the footprint of the robot based on the setup (e.g. arm and/or tray).";
     license = with lib.licenses; [ asl20 ];
   };
 }

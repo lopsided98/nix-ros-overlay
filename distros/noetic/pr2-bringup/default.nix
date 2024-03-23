@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Launch files and scripts needed to bring a PR2 up into a running state.'';
+    description = "Launch files and scripts needed to bring a PR2 up into a running state.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

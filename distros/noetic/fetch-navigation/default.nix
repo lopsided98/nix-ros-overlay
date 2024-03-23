@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Configuration and launch files for running ROS navigation on Fetch.'';
+    description = "Configuration and launch files for running ROS navigation on Fetch.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Library implementing ODVA EtherNet/IP (Industrial Protocol).'';
+    description = "Library implementing ODVA EtherNet/IP (Industrial Protocol).";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

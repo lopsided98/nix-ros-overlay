@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Packages for simulating Dingo.'';
+    description = "Packages for simulating Dingo.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

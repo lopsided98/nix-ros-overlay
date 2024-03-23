@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Quadrotor dynamics solver plug-in for Exotica'';
+    description = "Quadrotor dynamics solver plug-in for Exotica";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

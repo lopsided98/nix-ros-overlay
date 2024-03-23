@@ -17,7 +17,7 @@ buildRosPackage {
   propagatedBuildInputs = [ geometry-msgs rclpy social-nav-msgs visualization-msgs ];
 
   meta = {
-    description = ''Utilities for social navigation work'';
+    description = "Utilities for social navigation work";
     license = with lib.licenses; [ "BSD-3-clause" ];
   };
 }

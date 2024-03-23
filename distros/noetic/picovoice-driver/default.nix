@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS Wrappers for the Picovoice libraries'';
+    description = "ROS Wrappers for the Picovoice libraries";
     license = with lib.licenses; [ asl20 ];
   };
 }

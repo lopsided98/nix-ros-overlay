@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Pendulum dynamics solver plug-in for Exotica'';
+    description = "Pendulum dynamics solver plug-in for Exotica";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Assorted shell commands for using ros with bash.'';
+    description = "Assorted shell commands for using ros with bash.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

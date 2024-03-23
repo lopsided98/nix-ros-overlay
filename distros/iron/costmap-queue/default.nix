@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''The costmap_queue package'';
+    description = "The costmap_queue package";
     license = with lib.licenses; [ bsd3 ];
   };
 }

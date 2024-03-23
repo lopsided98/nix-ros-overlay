@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ];
 
   meta = {
-    description = ''The functionality to order include directories according to a chain of prefixes in the ament buildsystem in CMake.'';
+    description = "The functionality to order include directories according to a chain of prefixes in the ament buildsystem in CMake.";
     license = with lib.licenses; [ asl20 ];
   };
 }

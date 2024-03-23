@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS2 wrapper for the DJI PSDK'';
+    description = "ROS2 wrapper for the DJI PSDK";
     license = with lib.licenses; [ "MPL" ];
   };
 }

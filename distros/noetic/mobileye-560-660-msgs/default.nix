@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Message definitions for the Mobileye 560/660'';
+    description = "Message definitions for the Mobileye 560/660";
     license = with lib.licenses; [ mit ];
   };
 }

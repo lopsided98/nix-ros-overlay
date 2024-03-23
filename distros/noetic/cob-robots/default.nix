@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This stack holds packages for hardware configuration as well as launch files for starting up the basic layer for operating Care-O-bot.'';
+    description = "This stack holds packages for hardware configuration as well as launch files for starting up the basic layer for operating Care-O-bot.";
     license = with lib.licenses; [ asl20 ];
   };
 }

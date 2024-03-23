@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-pclint ];
 
   meta = {
-    description = ''The CMake API for ament_pclint to perform static code analysis on C/C++
-    code using PC-lint.'';
+    description = "The CMake API for ament_pclint to perform static code analysis on C/C++
+    code using PC-lint.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Nav2 demos for Clearpath robots'';
+    description = "Nav2 demos for Clearpath robots";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

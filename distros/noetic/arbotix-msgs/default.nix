@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages and Services definitions for the ArbotiX.'';
+    description = "Messages and Services definitions for the ArbotiX.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

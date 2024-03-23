@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Kinematics plugin for Fetch robot, generated through IKFast'';
+    description = "Kinematics plugin for Fetch robot, generated through IKFast";
     license = with lib.licenses; [ asl20 ];
   };
 }

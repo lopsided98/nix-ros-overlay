@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Examples of how to use the rmf_traffic library'';
+    description = "Examples of how to use the rmf_traffic library";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rosnode is a command-line tool for displaying debug information
-    about ROS <a href="http://wiki.ros.org/Nodes">Nodes</a>,
+    description = "rosnode is a command-line tool for displaying debug information
+    about ROS <a href=\"http://wiki.ros.org/Nodes\">Nodes</a>,
     including publications, subscriptions and connections. It also
     contains an experimental library for retrieving node
-    information. This library is intended for internal use only.'';
+    information. This library is intended for internal use only.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

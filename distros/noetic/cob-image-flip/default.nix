@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Flips the image of Care-O-bots kinect in dependence of the viewing direction of the cameras to receive an upright image all the time.'';
+    description = "Flips the image of Care-O-bots kinect in dependence of the viewing direction of the cameras to receive an upright image all the time.";
     license = with lib.licenses; [ asl20 ];
   };
 }

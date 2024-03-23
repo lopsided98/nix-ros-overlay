@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''qt_dotgraph provides helpers to work with dot graphs.'';
+    description = "qt_dotgraph provides helpers to work with dot graphs.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

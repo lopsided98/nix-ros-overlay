@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Launch prbt robot in an empty Gazebo world.'';
+    description = "Launch prbt robot in an empty Gazebo world.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake git ];
 
   meta = {
-    description = ''mcap vendor package'';
+    description = "mcap vendor package";
     license = with lib.licenses; [ asl20 ];
   };
 }

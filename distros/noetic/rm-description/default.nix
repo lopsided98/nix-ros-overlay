@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''RoboMaster robot description files'';
+    description = "RoboMaster robot description files";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

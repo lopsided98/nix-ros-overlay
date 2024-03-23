@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ament-cmake-python rosidl-default-generators ];
 
   meta = {
-    description = ''Tools for directing, throttling, selecting, and otherwise messing with
-    ROS 2 topics at a meta level.'';
+    description = "Tools for directing, throttling, selecting, and otherwise messing with
+    ROS 2 topics at a meta level.";
     license = with lib.licenses; [ asl20 ];
   };
 }

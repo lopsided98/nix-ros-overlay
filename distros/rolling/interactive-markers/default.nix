@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''3D interactive marker communication library for RViz and similar tools.'';
+    description = "3D interactive marker communication library for RViz and similar tools.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

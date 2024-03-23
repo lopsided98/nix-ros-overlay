@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The jsk_rqt_plugins package'';
+    description = "The jsk_rqt_plugins package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

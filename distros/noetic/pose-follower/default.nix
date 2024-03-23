@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A implementation of a local planner that attempts to follow a plan as closely as possible.'';
+    description = "A implementation of a local planner that attempts to follow a plan as closely as possible.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

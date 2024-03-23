@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ros2 hardware interface for nmea_gps'';
+    description = "ros2 hardware interface for nmea_gps";
     license = with lib.licenses; [ "apache-2.0" ];
   };
 }

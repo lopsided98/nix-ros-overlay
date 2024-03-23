@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''gps_umd metapackage'';
+    description = "gps_umd metapackage";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

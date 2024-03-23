@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROSaic: C++ driver for Septentrio's mosaic receivers and beyond'';
+    description = "ROSaic: C++ driver for Septentrio's mosaic receivers and beyond";
     license = with lib.licenses; [ "BSD-3-Clause-License" ];
   };
 }

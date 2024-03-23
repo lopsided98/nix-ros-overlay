@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Access to the DD-WRT wifi'';
+    description = "Access to the DD-WRT wifi";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

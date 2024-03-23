@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A package which extends 'ros_core' and includes other basic functionalities like tf2 and urdf.'';
+    description = "A package which extends 'ros_core' and includes other basic functionalities like tf2 and urdf.";
     license = with lib.licenses; [ asl20 ];
   };
 }

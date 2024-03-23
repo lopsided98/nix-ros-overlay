@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Tools for marker creation / handling'';
+    description = "Tools for marker creation / handling";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

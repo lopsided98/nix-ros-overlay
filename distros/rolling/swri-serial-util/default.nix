@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''swri_serial_util'';
+    description = "swri_serial_util";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

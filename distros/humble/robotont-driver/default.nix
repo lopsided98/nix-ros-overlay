@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-auto asio-cmake-module ];
 
   meta = {
-    description = ''Hardware driver for the Robotont robot'';
+    description = "Hardware driver for the Robotont robot";
     license = with lib.licenses; [ asl20 ];
   };
 }

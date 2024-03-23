@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Rviz plugins for neonavigation package'';
+    description = "Rviz plugins for neonavigation package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''This Package contains Care-O-bot specific action definitions.'';
+    description = "This Package contains Care-O-bot specific action definitions.";
     license = with lib.licenses; [ asl20 ];
   };
 }

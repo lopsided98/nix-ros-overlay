@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Shim package to redirect to ros_gz_sim_demos.'';
+    description = "Shim package to redirect to ros_gz_sim_demos.";
     license = with lib.licenses; [ asl20 ];
   };
 }

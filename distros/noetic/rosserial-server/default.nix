@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A more performance- and stability-oriented server alternative implemented
-    in C++ to rosserial_python.'';
+    description = "A more performance- and stability-oriented server alternative implemented
+    in C++ to rosserial_python.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

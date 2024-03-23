@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Statistics msgs package'';
+    description = "Statistics msgs package";
     license = with lib.licenses; [ mit ];
   };
 }

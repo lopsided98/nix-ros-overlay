@@ -20,10 +20,10 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {
-    description = ''This package contains the color materials of common elements of PAL Robotics' robot.
+    description = "This package contains the color materials of common elements of PAL Robotics' robot.
       The files in this package are parsed and used by
       a variety of other components.  Most users will not interact directly
-      with this package.'';
+      with this package.";
     license = with lib.licenses; [ asl20 ];
   };
 }

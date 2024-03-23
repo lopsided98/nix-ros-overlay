@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Meta-package of libraries for processing laser data, including converting laser data
-      into 3D representations.'';
+    description = "Meta-package of libraries for processing laser data, including converting laser data
+      into 3D representations.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

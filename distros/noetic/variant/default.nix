@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Meta-package for the universal variant library.'';
+    description = "Meta-package for the universal variant library.";
     license = with lib.licenses; [ "GNU-Lesser-General-Public-License-LGPL-" ];
   };
 }

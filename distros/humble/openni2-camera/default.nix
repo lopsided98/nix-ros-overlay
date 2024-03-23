@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Drivers for the Asus Xtion and Primesense Devices. For using a kinect
-  with ROS, try the <a href="http://wiki.ros.org/freenect_stack">freenect stack</a>'';
+    description = "Drivers for the Asus Xtion and Primesense Devices. For using a kinect
+  with ROS, try the <a href=\"http://wiki.ros.org/freenect_stack\">freenect stack</a>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

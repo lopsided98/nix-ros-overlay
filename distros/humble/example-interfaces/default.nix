@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Contains message and service definitions used by the examples.'';
+    description = "Contains message and service definitions used by the examples.";
     license = with lib.licenses; [ asl20 ];
   };
 }

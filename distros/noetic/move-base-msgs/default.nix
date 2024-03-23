@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Holds the action description and relevant messages for the move_base package.'';
+    description = "Holds the action description and relevant messages for the move_base package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

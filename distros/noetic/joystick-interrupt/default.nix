@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Interrupt cmd_vel by joystick input'';
+    description = "Interrupt cmd_vel by joystick input";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

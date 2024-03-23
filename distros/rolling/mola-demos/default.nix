@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-gtest cmake ];
 
   meta = {
-    description = ''Demo and example launch files for MOLA'';
+    description = "Demo and example launch files for MOLA";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

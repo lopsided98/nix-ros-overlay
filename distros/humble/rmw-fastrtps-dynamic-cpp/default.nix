@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-ros fastrtps-cmake-module ];
 
   meta = {
-    description = ''Implement the ROS middleware interface using introspection type support.'';
+    description = "Implement the ROS middleware interface using introspection type support.";
     license = with lib.licenses; [ asl20 ];
   };
 }

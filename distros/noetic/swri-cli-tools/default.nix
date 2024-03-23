@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rosman contains the rosman tool for introspecting ROS nodes'';
+    description = "rosman contains the rosman tool for introspecting ROS nodes";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

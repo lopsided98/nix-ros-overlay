@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ lifecycle-msgs rclpy ros2cli ros2node ros2service ];
 
   meta = {
-    description = ''The lifecycle command for ROS 2 command line tools.'';
+    description = "The lifecycle command for ROS 2 command line tools.";
     license = with lib.licenses; [ asl20 ];
   };
 }

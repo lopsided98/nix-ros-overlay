@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core mrt-cmake-modules ];
 
   meta = {
-    description = ''Python bindings for lanelet2'';
+    description = "Python bindings for lanelet2";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

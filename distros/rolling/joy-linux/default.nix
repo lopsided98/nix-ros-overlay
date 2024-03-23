@@ -20,12 +20,12 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS2 driver for a generic Linux joystick.
+    description = "ROS2 driver for a generic Linux joystick.
     Will contain a MacOS and Windows version later.
     The joy package contains joy_node, a node that interfaces a
     generic Linux joystick to ROS2. This node publishes a &quot;Joy&quot;
     message, which contains the current state of each one of the
-    joystick's buttons and axes.'';
+    joystick's buttons and axes.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

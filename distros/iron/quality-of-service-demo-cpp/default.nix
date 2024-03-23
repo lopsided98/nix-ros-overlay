@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''C++ Demo applications for Quality of Service features'';
+    description = "C++ Demo applications for Quality of Service features";
     license = with lib.licenses; [ asl20 ];
   };
 }

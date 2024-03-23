@@ -19,15 +19,15 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''roscpp is a C++ implementation of ROS. It provides
-    a <a href="http://wiki.ros.org/Client%20Libraries">client
+    description = "roscpp is a C++ implementation of ROS. It provides
+    a <a href=\"http://wiki.ros.org/Client%20Libraries\">client
     library</a> that enables C++ programmers to quickly interface with
-    ROS <a href="http://ros.org/wiki/Topics">Topics</a>,
-    <a href="http://ros.org/wiki/Services">Services</a>,
-    and <a href="http://ros.org/wiki/Parameter Server">Parameters</a>.
+    ROS <a href=\"http://ros.org/wiki/Topics\">Topics</a>,
+    <a href=\"http://ros.org/wiki/Services\">Services</a>,
+    and <a href=\"http://ros.org/wiki/Parameter Server\">Parameters</a>.
 
     roscpp is the most widely used ROS client library and is designed to
-    be the high-performance library for ROS.'';
+    be the high-performance library for ROS.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

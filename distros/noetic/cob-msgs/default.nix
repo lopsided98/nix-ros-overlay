@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages for representing state information, such as battery information and emergency stop status.'';
+    description = "Messages for representing state information, such as battery information and emergency stop status.";
     license = with lib.licenses; [ asl20 ];
   };
 }

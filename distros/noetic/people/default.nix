@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The people stack holds algorithms for perceiving people from a number of sensors.'';
+    description = "The people stack holds algorithms for perceiving people from a number of sensors.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

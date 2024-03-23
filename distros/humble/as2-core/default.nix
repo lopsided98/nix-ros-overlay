@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Aerostack2 core package which contains the basic classes of the Aerostack2 framework'';
+    description = "Aerostack2 core package which contains the basic classes of the Aerostack2 framework";
     license = with lib.licenses; [ bsd3 ];
   };
 }

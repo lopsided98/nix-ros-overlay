@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Tests for MAVROS package'';
+    description = "Tests for MAVROS package";
     license = with lib.licenses; [ bsdOriginal gpl3Only lgpl3Only ];
   };
 }

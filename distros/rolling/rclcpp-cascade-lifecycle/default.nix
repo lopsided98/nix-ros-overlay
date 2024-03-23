@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Provides a mechanism to make trees of lifecycle nodes to propagate state changes'';
+    description = "Provides a mechanism to make trees of lifecycle nodes to propagate state changes";
     license = with lib.licenses; [ asl20 ];
   };
 }

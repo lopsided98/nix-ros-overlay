@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A package that converts a ros image msg to a qimage object'';
+    description = "A package that converts a ros image msg to a qimage object";
     license = with lib.licenses; [ asl20 ];
   };
 }

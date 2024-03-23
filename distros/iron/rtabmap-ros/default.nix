@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''RTAB-Map Stack'';
+    description = "RTAB-Map Stack";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

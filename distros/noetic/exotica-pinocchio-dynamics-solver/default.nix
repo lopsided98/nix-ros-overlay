@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Dynamics solver plug-in using Pinocchio for Exotica'';
+    description = "Dynamics solver plug-in using Pinocchio for Exotica";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

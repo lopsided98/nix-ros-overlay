@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin genmsg ];
 
   meta = {
-    description = ''RTAB-Map's msgs package.'';
+    description = "RTAB-Map's msgs package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

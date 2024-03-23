@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Gazebo Plugins for simulating Leo Rover.'';
+    description = "Gazebo Plugins for simulating Leo Rover.";
     license = with lib.licenses; [ mit ];
   };
 }

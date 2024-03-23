@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Message and service data structures for interacting with Gazebo from ROS.'';
+    description = "Message and service data structures for interacting with Gazebo from ROS.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

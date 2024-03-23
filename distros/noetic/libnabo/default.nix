@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''libnabo is a fast K Nearest Neighbour library for low-dimensional spaces.'';
+    description = "libnabo is a fast K Nearest Neighbour library for low-dimensional spaces.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

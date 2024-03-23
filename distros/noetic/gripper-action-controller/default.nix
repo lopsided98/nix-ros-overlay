@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The gripper_action_controller package'';
+    description = "The gripper_action_controller package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

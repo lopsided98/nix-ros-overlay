@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''canopen_chain_node specialization for handling of canopen_402 motor devices. It facilitates interface abstraction with ros_control.'';
+    description = "canopen_chain_node specialization for handling of canopen_402 motor devices. It facilitates interface abstraction with ros_control.";
     license = with lib.licenses; [ lgpl3Only ];
   };
 }

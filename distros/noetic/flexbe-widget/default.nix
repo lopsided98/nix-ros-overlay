@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''flexbe_widget implements some smaller scripts for the behavior engine.'';
+    description = "flexbe_widget implements some smaller scripts for the behavior engine.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

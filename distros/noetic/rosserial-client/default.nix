@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Generalized client side source for rosserial.'';
+    description = "Generalized client side source for rosserial.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

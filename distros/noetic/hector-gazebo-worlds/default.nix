@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''hector_gazebo_worlds provides gazebo scenarios used by Team Hector Darmstadt'';
+    description = "hector_gazebo_worlds provides gazebo scenarios used by Team Hector Darmstadt";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

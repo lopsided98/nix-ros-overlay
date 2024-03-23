@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''<p>
+    description = "<p>
       Contains a node that rotates an image stream in a way that minimizes
       the angle between a vector in some arbitrary frame and a vector in the
       camera frame. The frame of the outgoing image is published by the node.
@@ -37,7 +37,7 @@ buildRosPackage {
       It is not recommended to use the output from this node for further
       computation, as it interpolates the source image, introduces black
       borders, and does not output a camera_info.
-    </p>'';
+    </p>";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

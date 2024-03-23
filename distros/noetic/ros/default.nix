@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ROS packaging system'';
+    description = "ROS packaging system";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

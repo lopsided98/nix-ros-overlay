@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Clearpath Simulator Metapackage'';
+    description = "Clearpath Simulator Metapackage";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

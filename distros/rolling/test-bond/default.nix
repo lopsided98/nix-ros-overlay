@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ rosidl-default-generators ];
 
   meta = {
-    description = ''Contains tests for [[bond]], including tests for [[bondcpp]].'';
+    description = "Contains tests for [[bond]], including tests for [[bondcpp]].";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

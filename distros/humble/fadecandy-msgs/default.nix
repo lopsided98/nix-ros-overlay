@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''ROS msgs for fadecandy LED controllers'';
+    description = "ROS msgs for fadecandy LED controllers";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,12 +19,12 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package specifies the interface to a realtime controller. A
+    description = "This package specifies the interface to a realtime controller. A
    controller that implements this interface can be executed by the
-    <a href="http://www.ros.org/wiki/pr2_controller_manager">controller
+    <a href=\"http://www.ros.org/wiki/pr2_controller_manager\">controller
   manager</a> in the real time control loop. The package basically
   contains the C++ controller base class that all controllers need to
-  inherit from.'';
+  inherit from.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

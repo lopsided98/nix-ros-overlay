@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Driver for the Phidgets Digital Output devices'';
+    description = "Driver for the Phidgets Digital Output devices";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

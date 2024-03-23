@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Parse a YAML parameter file and populate the C data structure.'';
+    description = "Parse a YAML parameter file and populate the C data structure.";
     license = with lib.licenses; [ asl20 ];
   };
 }

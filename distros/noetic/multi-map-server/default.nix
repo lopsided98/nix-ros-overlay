@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''multi_map_server provides the'';
+    description = "multi_map_server provides the";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''State machine library with ros logging'';
+    description = "State machine library with ros logging";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

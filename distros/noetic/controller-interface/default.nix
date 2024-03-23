@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Interface base class for controllers.'';
+    description = "Interface base class for controllers.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

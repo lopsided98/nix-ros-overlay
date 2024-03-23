@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Package containing source code for the fuse tutorials.'';
+    description = "Package containing source code for the fuse tutorials.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

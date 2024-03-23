@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Fundamental C++ virtual interfaces and data types for the rest of MOLA modules'';
+    description = "Fundamental C++ virtual interfaces and data types for the rest of MOLA modules";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

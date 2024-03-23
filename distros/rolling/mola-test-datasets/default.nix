@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-gtest cmake ];
 
   meta = {
-    description = ''Small SLAM dataset extracts used for demos or unit tests in the rest of MOLA packages'';
+    description = "Small SLAM dataset extracts used for demos or unit tests in the rest of MOLA packages";
     license = with lib.licenses; [ bsdOriginal bsdOriginal "CC-BY-NC-SA-3.0" "CC-BY-3.0" "CC-BY-3.0" ];
   };
 }

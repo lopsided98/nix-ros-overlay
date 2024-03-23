@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''EusLisp meets SLIME'';
+    description = "EusLisp meets SLIME";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''chomp_motion_planner'';
+    description = "chomp_motion_planner";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

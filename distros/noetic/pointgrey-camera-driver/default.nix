@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Point Grey camera driver based on libflycapture2.'';
+    description = "Point Grey camera driver based on libflycapture2.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

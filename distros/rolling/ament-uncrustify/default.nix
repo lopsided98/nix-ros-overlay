@@ -18,8 +18,8 @@ buildRosPackage {
   propagatedBuildInputs = [ uncrustify-vendor ];
 
   meta = {
-    description = ''The ability to check code against style conventions using uncrustify
-    and generate xUnit test result files.'';
+    description = "The ability to check code against style conventions using uncrustify
+    and generate xUnit test result files.";
     license = with lib.licenses; [ asl20 ];
   };
 }

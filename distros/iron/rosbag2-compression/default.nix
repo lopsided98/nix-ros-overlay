@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Compression implementations for rosbag2 bags and messages.'';
+    description = "Compression implementations for rosbag2 bags and messages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

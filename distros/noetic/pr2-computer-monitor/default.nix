@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Monitors the computer's processor and hard drives of the PR2 and publishes data to diagnostics.'';
+    description = "Monitors the computer's processor and hard drives of the PR2 and publishes data to diagnostics.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

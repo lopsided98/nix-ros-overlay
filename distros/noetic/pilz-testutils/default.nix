@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains testing utilities used by Pilz packages.'';
+    description = "This package contains testing utilities used by Pilz packages.";
     license = with lib.licenses; [ asl20 ];
   };
 }

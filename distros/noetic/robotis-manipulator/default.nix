@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains the manipulation API and functions for controlling the manipulator.'';
+    description = "This package contains the manipulation API and functions for controlling the manipulator.";
     license = with lib.licenses; [ asl20 ];
   };
 }

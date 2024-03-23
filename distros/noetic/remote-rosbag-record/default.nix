@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The remote_rosbag_record package'';
+    description = "The remote_rosbag_record package";
     license = with lib.licenses; [ mit ];
   };
 }

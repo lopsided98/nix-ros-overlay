@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''libCMT ROS Wrapper'';
+    description = "libCMT ROS Wrapper";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

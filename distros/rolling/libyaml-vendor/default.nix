@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package pkg-config ];
 
   meta = {
-    description = ''Vendored version of libyaml.'';
+    description = "Vendored version of libyaml.";
     license = with lib.licenses; [ asl20 mit ];
   };
 }

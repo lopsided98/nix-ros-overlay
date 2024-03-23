@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''speech_recognition_msgs'';
+    description = "speech_recognition_msgs";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

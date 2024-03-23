@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Rokubimini Ethercat implementation.'';
+    description = "Rokubimini Ethercat implementation.";
     license = with lib.licenses; [ asl20 ];
   };
 }

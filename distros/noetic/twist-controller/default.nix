@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A ros_control controller accepting Cartesian twist messages in order to move a robot manipulator.
+    description = "A ros_control controller accepting Cartesian twist messages in order to move a robot manipulator.
     It uses a Cartesian interface to the robot, so that the robot hardware takes care about
-    doing the inverse kinematics. This could be used e.g. for visual servoing applications.'';
+    doing the inverse kinematics. This could be used e.g. for visual servoing applications.";
     license = with lib.licenses; [ asl20 ];
   };
 }

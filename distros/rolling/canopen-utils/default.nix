@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ canopen-interfaces lifecycle-msgs rclpy std-msgs ];
 
   meta = {
-    description = ''Utils for working with ros2_canopen.'';
+    description = "Utils for working with ros2_canopen.";
     license = with lib.licenses; [ asl20 ];
   };
 }

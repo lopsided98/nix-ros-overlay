@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Basic message types for two dimensional navigation, extending from geometry_msgs::Pose2D.'';
+    description = "Basic message types for two dimensional navigation, extending from geometry_msgs::Pose2D.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

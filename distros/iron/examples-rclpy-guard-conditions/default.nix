@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rclpy ];
 
   meta = {
-    description = ''Examples of using guard conditions.'';
+    description = "Examples of using guard conditions.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Components of MoveIt connecting to occupancy map'';
+    description = "Components of MoveIt connecting to occupancy map";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

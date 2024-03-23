@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Gazebo model plugin to simulate Audibot'';
+    description = "Gazebo model plugin to simulate Audibot";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

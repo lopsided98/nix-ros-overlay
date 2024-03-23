@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A terminal tool for monitor and manage the ROS2 Planning System'';
+    description = "A terminal tool for monitor and manage the ROS2 Planning System";
     license = with lib.licenses; [ asl20 ];
   };
 }

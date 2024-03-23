@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Driiver for devices implementing CIA402 profile'';
+    description = "Driiver for devices implementing CIA402 profile";
     license = with lib.licenses; [ "LGPL-v3" ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake git ];
 
   meta = {
-    description = ''Vendor package for zmqpp'';
+    description = "Vendor package for zmqpp";
     license = with lib.licenses; [ asl20 "Mozilla-Public-License-2.0" ];
   };
 }

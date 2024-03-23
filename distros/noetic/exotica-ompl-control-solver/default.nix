@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Kinodynamic Control Solvers from OMPL'';
+    description = "Kinodynamic Control Solvers from OMPL";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

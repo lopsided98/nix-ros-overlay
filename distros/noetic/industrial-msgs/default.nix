@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The industrial message package containes industrial specific messages 
-	definitions. This package is part of the ROS-Industrial program.'';
+    description = "The industrial message package containes industrial specific messages 
+	definitions. This package is part of the ROS-Industrial program.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

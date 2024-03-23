@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A coverage server based on pre-defined rows'';
+    description = "A coverage server based on pre-defined rows";
     license = with lib.licenses; [ asl20 ];
   };
 }

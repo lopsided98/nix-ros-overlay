@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A radar-like visualization for humans in the scene, representing their position, orientation, engagement level'';
+    description = "A radar-like visualization for humans in the scene, representing their position, orientation, engagement level";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

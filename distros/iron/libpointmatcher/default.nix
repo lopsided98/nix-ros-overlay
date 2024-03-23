@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''libpointmatcher is a modular ICP library, useful for robotics and computer vision.'';
+    description = "libpointmatcher is a modular ICP library, useful for robotics and computer vision.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

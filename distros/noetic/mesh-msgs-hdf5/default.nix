@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Read mesh_msgs from hdf5'';
+    description = "Read mesh_msgs from hdf5";
     license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Launch a PID control node.'';
+    description = "Launch a PID control node.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

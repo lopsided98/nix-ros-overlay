@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Teleop node'';
+    description = "Teleop node";
     license = with lib.licenses; [ asl20 ];
   };
 }

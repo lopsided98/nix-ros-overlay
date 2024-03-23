@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''fast downward: PDDL Planner (http://www.fast-downward.org)'';
+    description = "fast downward: PDDL Planner (http://www.fast-downward.org)";
     license = with lib.licenses; [ "GPL" ];
   };
 }

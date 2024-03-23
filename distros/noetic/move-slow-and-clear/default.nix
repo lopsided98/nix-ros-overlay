@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''move_slow_and_clear'';
+    description = "move_slow_and_clear";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

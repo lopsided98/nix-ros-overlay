@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Metapackage for ROS2 control related packages'';
+    description = "Metapackage for ROS2 control related packages";
     license = with lib.licenses; [ asl20 ];
   };
 }

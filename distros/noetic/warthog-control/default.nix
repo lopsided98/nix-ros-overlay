@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Controllers for Warthog'';
+    description = "Controllers for Warthog";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

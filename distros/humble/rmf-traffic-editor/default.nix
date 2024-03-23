@@ -19,7 +19,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ceres-solver glog proj ];
 
   meta = {
-    description = ''traffic editor'';
+    description = "traffic editor";
     license = with lib.licenses; [ asl20 ];
   };
 }

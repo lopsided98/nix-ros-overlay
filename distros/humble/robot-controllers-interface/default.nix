@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Generic framework for robot controls.'';
+    description = "Generic framework for robot controls.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -18,8 +18,8 @@ buildRosPackage {
   propagatedBuildInputs = [ geometry-msgs nmea-msgs python3Packages.numpy python3Packages.pyserial rclpy sensor-msgs tf-transformations ];
 
   meta = {
-    description = ''Package to parse NMEA strings and publish a very simple GPS message. Does not
-        require or use the GPSD deamon.'';
+    description = "Package to parse NMEA strings and publish a very simple GPS message. Does not
+        require or use the GPSD deamon.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

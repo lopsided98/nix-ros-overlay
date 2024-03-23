@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python ros2cli rosidl-adapter rosidl-runtime-py ];
 
   meta = {
-    description = ''The interface command for ROS 2 command line tools'';
+    description = "The interface command for ROS 2 command line tools";
     license = with lib.licenses; [ asl20 ];
   };
 }

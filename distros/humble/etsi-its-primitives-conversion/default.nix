@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Conversion functions for converting ROS primitives to and from ASN.1-encoded primitives'';
+    description = "Conversion functions for converting ROS primitives to and from ASN.1-encoded primitives";
     license = with lib.licenses; [ mit ];
   };
 }

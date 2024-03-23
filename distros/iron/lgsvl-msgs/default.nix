@@ -19,7 +19,7 @@ buildRosPackage {
   propagatedBuildInputs = [ builtin-interfaces geometry-msgs rosidl-default-runtime sensor-msgs std-msgs ];
 
   meta = {
-    description = ''Message definitions for interfacing with the LGSVL Simulator for ROS and ROS 2.'';
+    description = "Message definitions for interfacing with the LGSVL Simulator for ROS and ROS 2.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

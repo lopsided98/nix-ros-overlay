@@ -20,10 +20,10 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''A simple, analytical inverse kinematic library for industrial robots with parallel bases and
+    description = "A simple, analytical inverse kinematic library for industrial robots with parallel bases and
     spherical wrists. Based on the paper &quot;An Analytical Solution of the Inverse Kinematics Problem
     of Industrial Serial Manipulators with an Ortho-parallel Basis and a Spherical Wrist&quot; by
-    Mathias Brandstötter, Arthur Angerer, and Michael Hofbaur.'';
+    Mathias Brandstötter, Arthur Angerer, and Michael Hofbaur.";
     license = with lib.licenses; [ asl20 ];
   };
 }

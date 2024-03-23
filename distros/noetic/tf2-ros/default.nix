@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package contains the ROS bindings for the tf2 library, for both Python and C++.'';
+    description = "This package contains the ROS bindings for the tf2 library, for both Python and C++.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

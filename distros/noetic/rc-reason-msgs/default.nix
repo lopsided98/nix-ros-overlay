@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Msg and srv definitions for rc_reason_clients'';
+    description = "Msg and srv definitions for rc_reason_clients";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

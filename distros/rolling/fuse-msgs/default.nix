@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''The fuse_msgs package contains messages capable of holding serialized fuse objects.'';
+    description = "The fuse_msgs package contains messages capable of holding serialized fuse objects.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

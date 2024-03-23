@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''rclc lifecycle convenience methods.'';
+    description = "rclc lifecycle convenience methods.";
     license = with lib.licenses; [ asl20 ];
   };
 }

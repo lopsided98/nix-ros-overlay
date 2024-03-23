@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = ''Description of controller_manager'';
+    description = "Description of controller_manager";
     license = with lib.licenses; [ asl20 ];
   };
 }

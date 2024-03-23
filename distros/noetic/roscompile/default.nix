@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''The roscompile package'';
+    description = "The roscompile package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ros2 control hardware interface for topic_based sim'';
+    description = "ros2 control hardware interface for topic_based sim";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''PlotJuggler: juggle with data'';
+    description = "PlotJuggler: juggle with data";
     license = with lib.licenses; [ mpl20 ];
   };
 }

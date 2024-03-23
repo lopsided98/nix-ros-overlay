@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Utilities to interface with <a href="http://gazebosim.org">Gazebo</a> through ROS.'';
+    description = "Utilities to interface with <a href=\"http://gazebosim.org\">Gazebo</a> through ROS.";
     license = with lib.licenses; [ asl20 ];
   };
 }

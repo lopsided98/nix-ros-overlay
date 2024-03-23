@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ caret-analyze caret-msgs python3Packages.tabulate ros2cli tracetools-trace ];
 
   meta = {
-    description = ''ROS 2 CLI package for caret'';
+    description = "ROS 2 CLI package for caret";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The codec_image_transport package'';
+    description = "The codec_image_transport package";
     license = with lib.licenses; [ mit ];
   };
 }

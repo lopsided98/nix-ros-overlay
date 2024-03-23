@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''gazebo_ros2_control_demos'';
+    description = "gazebo_ros2_control_demos";
     license = with lib.licenses; [ asl20 ];
   };
 }

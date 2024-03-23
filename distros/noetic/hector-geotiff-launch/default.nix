@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Contains launch files for the hector_geotiff mapper.'';
+    description = "Contains launch files for the hector_geotiff mapper.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

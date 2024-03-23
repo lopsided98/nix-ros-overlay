@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages related to compass'';
+    description = "Messages related to compass";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

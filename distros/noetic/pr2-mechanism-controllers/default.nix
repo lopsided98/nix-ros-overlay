@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The pr2_mechanism_controllers package contains realtime
-    controllers that are meant for specific mechanisms of the PR2.'';
+    description = "The pr2_mechanism_controllers package contains realtime
+    controllers that are meant for specific mechanisms of the PR2.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

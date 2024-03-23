@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The autoware_msgs package'';
+    description = "The autoware_msgs package";
     license = with lib.licenses; [ asl20 ];
   };
 }

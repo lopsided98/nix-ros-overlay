@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Meta-package aggregating the ros2_canopen packages and documentation'';
+    description = "Meta-package aggregating the ros2_canopen packages and documentation";
     license = with lib.licenses; [ asl20 ];
   };
 }

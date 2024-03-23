@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Introduces a compile time concept checking mechanism that can be used
+    description = "Introduces a compile time concept checking mechanism that can be used
      most commonly to check for required functionality when passing
-     template arguments.'';
+     template arguments.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

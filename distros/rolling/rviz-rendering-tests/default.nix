@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Example plugin for RViz - documents and tests RViz plugin development'';
+    description = "Example plugin for RViz - documents and tests RViz plugin development";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

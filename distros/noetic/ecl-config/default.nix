@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''These tools inspect and describe your system with macros, types 
-     and functions.'';
+    description = "These tools inspect and describe your system with macros, types 
+     and functions.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

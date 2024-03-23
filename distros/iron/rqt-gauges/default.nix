@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ ament-index-python qt-gui qt-gui-py-common rclpy rqt-gui rqt-gui-py ];
 
   meta = {
-    description = ''Visualization plugin for several sensors.'';
+    description = "Visualization plugin for several sensors.";
     license = with lib.licenses; [ "BSD-Clause-3" ];
   };
 }

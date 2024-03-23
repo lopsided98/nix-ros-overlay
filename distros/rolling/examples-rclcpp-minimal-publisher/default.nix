@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Examples of minimal publisher nodes'';
+    description = "Examples of minimal publisher nodes";
     license = with lib.licenses; [ asl20 ];
   };
 }

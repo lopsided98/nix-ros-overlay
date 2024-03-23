@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ rclpy std-msgs ];
 
   meta = {
-    description = ''Examples of minimal subscribers using rclpy.'';
+    description = "Examples of minimal subscribers using rclpy.";
     license = with lib.licenses; [ asl20 ];
   };
 }

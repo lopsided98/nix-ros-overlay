@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A neural Network model for line track following Example for Leo Rover.'';
+    description = "A neural Network model for line track following Example for Leo Rover.";
     license = with lib.licenses; [ mit ];
   };
 }

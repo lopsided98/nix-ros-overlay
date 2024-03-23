@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A ROS node for using libsensors to provide diagnostics information about the sensors on a computer system.'';
+    description = "A ROS node for using libsensors to provide diagnostics information about the sensors on a computer system.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

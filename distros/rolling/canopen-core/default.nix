@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Core ros2_canopen functionalities such as DeviceContainer and master'';
+    description = "Core ros2_canopen functionalities such as DeviceContainer and master";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package for robot 2D self-localization using dynamic or static (MRPT or ROS) maps.
+    description = "Package for robot 2D self-localization using dynamic or static (MRPT or ROS) maps.
 	The interface is similar to amcl (https://wiki.ros.org/amcl)
    but supports different particle-filter algorithms, several grid maps at
-   different heights, range-only localization, etc.'';
+   different heights, range-only localization, etc.";
     license = with lib.licenses; [ bsdOriginal bsdOriginal ];
   };
 }

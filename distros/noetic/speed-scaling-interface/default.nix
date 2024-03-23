@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Hardware interface reading a scalar value from robot hardware.'';
+    description = "Hardware interface reading a scalar value from robot hardware.";
     license = with lib.licenses; [ asl20 ];
   };
 }

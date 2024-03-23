@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A collection of conversion function for extracting numpy arrays from messages'';
+    description = "A collection of conversion function for extracting numpy arrays from messages";
     license = with lib.licenses; [ mit ];
   };
 }

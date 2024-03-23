@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Package containing a C-based lifecycle implementation'';
+    description = "Package containing a C-based lifecycle implementation";
     license = with lib.licenses; [ asl20 ];
   };
 }

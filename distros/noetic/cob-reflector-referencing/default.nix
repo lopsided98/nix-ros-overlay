@@ -18,8 +18,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This package provides a node broadcasting a tf frame based on reflector markers detected within sensor_msgs::LaserScan messages.
-    It can be used to position/reference a robot wrt to the reflektor markers.'';
+    description = "This package provides a node broadcasting a tf frame based on reflector markers detected within sensor_msgs::LaserScan messages.
+    It can be used to position/reference a robot wrt to the reflektor markers.";
     license = with lib.licenses; [ asl20 ];
   };
 }

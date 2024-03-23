@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Demonstrates ROS 2's realtime capabilities with a simulated inverted pendulum.'';
+    description = "Demonstrates ROS 2's realtime capabilities with a simulated inverted pendulum.";
     license = with lib.licenses; [ asl20 ];
   };
 }

@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''library to read/write .npy and .npz files in C/C++'';
+    description = "library to read/write .npy and .npz files in C/C++";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -17,7 +17,7 @@ buildRosPackage {
   propagatedBuildInputs = [ python-qt-binding rclpy rosbag2-py rqt-gui rqt-gui-py ];
 
   meta = {
-    description = ''rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.'';
+    description = "rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

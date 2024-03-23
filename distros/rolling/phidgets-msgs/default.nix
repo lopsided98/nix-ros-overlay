@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Custom ROS messages for Phidgets drivers'';
+    description = "Custom ROS messages for Phidgets drivers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

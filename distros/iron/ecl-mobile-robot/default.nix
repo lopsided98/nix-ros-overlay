@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Contains transforms (e.g. differential drive inverse kinematics)
-    for the various types of mobile robot platforms.'';
+    description = "Contains transforms (e.g. differential drive inverse kinematics)
+    for the various types of mobile robot platforms.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

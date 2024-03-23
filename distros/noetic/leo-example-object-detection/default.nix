@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''An object Detection Example for Leo Rover.'';
+    description = "An object Detection Example for Leo Rover.";
     license = with lib.licenses; [ mit ];
   };
 }

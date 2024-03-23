@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-black ament-cmake-core ament-cmake-test ];
 
   meta = {
-    description = ''The CMake API for ament_black to lint Python code using black.'';
+    description = "The CMake API for ament_black to lint Python code using black.";
     license = with lib.licenses; [ asl20 ];
   };
 }

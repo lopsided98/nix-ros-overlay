@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''An rqt plugin to display overlays for custom msgs on an image using plugins.'';
+    description = "An rqt plugin to display overlays for custom msgs on an image using plugins.";
     license = with lib.licenses; [ asl20 ];
   };
 }

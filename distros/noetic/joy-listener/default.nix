@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Translates joy msgs'';
+    description = "Translates joy msgs";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

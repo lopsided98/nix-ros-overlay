@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''KDL binding for tf2'';
+    description = "KDL binding for tf2";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

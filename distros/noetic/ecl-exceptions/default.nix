@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Template based exceptions - these are simple and practical
+    description = "Template based exceptions - these are simple and practical
      and avoid the proliferation of exception types. Although not
-     syntatactically ideal, it is convenient and eminently practical.'';
+     syntatactically ideal, it is convenient and eminently practical.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

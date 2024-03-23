@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-ros ];
 
   meta = {
-    description = ''Package containing utility code for C++.'';
+    description = "Package containing utility code for C++.";
     license = with lib.licenses; [ asl20 bsd3 ];
   };
 }

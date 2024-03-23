@@ -18,7 +18,7 @@ buildRosPackage {
   propagatedBuildInputs = [ launch launch-ros rclpy std-msgs ];
 
   meta = {
-    description = ''Package containing tools for monitoring ROS 2 topics.'';
+    description = "Package containing tools for monitoring ROS 2 topics.";
     license = with lib.licenses; [ asl20 ];
   };
 }

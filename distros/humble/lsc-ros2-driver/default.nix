@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''ROS2 driver package for Autonics LSC Series'';
+    description = "ROS2 driver package for Autonics LSC Series";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

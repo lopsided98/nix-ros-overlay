@@ -20,9 +20,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''The scenario_test_tools package implements helpers for scriptable scenario testing.
+    description = "The scenario_test_tools package implements helpers for scriptable scenario testing.
     It allows to set up a test harness for eg. a state machine or other high level behavior by
-    providing mocked implementations for various action servers and services that work together'';
+    providing mocked implementations for various action servers and services that work together";
     license = with lib.licenses; [ asl20 ];
   };
 }

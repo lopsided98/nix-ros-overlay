@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages for cob_manipulation'';
+    description = "Messages for cob_manipulation";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

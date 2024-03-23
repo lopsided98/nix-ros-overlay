@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Follow ARTag Example for Leo Rover.'';
+    description = "Follow ARTag Example for Leo Rover.";
     license = with lib.licenses; [ mit ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Tutorials showing how to write plugins for RViz.'';
+    description = "Tutorials showing how to write plugins for RViz.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Components of MoveIt connecting to perception'';
+    description = "Components of MoveIt connecting to perception";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

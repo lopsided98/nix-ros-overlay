@@ -20,10 +20,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Source for the WGE100 Ethernet camera: Verilog source for the
+    description = "Source for the WGE100 Ethernet camera: Verilog source for the
     FPGA, Forth source for the camera firmware.  Intended for camera
     developers.  Note that a built binary from this package is checked
-    in under wge100_camera/firmware_images/'';
+    in under wge100_camera/firmware_images/";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

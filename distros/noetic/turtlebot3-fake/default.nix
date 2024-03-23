@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Package for TurtleBot3 fake node. With this package, simple tests can be done without a robot.
-    You can do simple tests using this package on rviz without real robots.'';
+    description = "Package for TurtleBot3 fake node. With this package, simple tests can be done without a robot.
+    You can do simple tests using this package on rviz without real robots.";
     license = with lib.licenses; [ asl20 ];
   };
 }

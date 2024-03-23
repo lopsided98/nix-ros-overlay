@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Message definitions for reporting statistics for topics and system resources.'';
+    description = "Message definitions for reporting statistics for topics and system resources.";
     license = with lib.licenses; [ asl20 ];
   };
 }

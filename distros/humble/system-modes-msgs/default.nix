@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = ''Interface package, containing message definitions and service definitions
-    for the system modes package.'';
+    description = "Interface package, containing message definitions and service definitions
+    for the system modes package.";
     license = with lib.licenses; [ asl20 ];
   };
 }

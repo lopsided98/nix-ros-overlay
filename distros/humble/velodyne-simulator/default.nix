@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Metapackage allowing easy installation of Velodyne simulation components.'';
+    description = "Metapackage allowing easy installation of Velodyne simulation components.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

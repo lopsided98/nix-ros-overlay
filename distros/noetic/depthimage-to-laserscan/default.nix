@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''depthimage_to_laserscan'';
+    description = "depthimage_to_laserscan";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''position_controllers'';
+    description = "position_controllers";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

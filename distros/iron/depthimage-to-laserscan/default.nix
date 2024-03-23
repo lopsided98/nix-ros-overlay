@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''depthimage_to_laserscan'';
+    description = "depthimage_to_laserscan";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

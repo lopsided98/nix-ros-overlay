@@ -20,8 +20,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Embeds the TCLAP library inside the ecl. This is a very convenient
-     command line parser in templatised c++.'';
+    description = "Embeds the TCLAP library inside the ecl. This is a very convenient
+     command line parser in templatised c++.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

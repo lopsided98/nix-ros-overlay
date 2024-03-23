@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''A set of tools and interfaces extending the capabilities of c++ to 
+    description = "A set of tools and interfaces extending the capabilities of c++ to 
     provide a lightweight, consistent interface with a focus for control
-    programming.'';
+    programming.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

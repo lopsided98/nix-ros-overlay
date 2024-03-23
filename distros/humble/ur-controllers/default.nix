@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Provides controllers that use the speed scaling interface of Universal Robots.'';
+    description = "Provides controllers that use the speed scaling interface of Universal Robots.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

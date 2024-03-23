@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''message for pddl planner'';
+    description = "message for pddl planner";
     license = with lib.licenses; [ asl20 ];
   };
 }

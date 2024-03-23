@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Contains common macros, utils and types used throughout'';
+    description = "Contains common macros, utils and types used throughout";
     license = with lib.licenses; [ asl20 ];
   };
 }

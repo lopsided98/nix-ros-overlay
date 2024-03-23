@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Controller for a steer drive mobile base.'';
+    description = "Controller for a steer drive mobile base.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

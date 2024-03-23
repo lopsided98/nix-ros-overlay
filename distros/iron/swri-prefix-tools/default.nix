@@ -19,8 +19,8 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Contains scripts that are useful as prefix commands for nodes
-    started by roslaunch.'';
+    description = "Contains scripts that are useful as prefix commands for nodes
+    started by roslaunch.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

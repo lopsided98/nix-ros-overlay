@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Action definition for Locomotor'';
+    description = "Action definition for Locomotor";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

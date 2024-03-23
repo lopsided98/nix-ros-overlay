@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''Standalone Python library for generating ROS message and service data structures for various languages.'';
+    description = "Standalone Python library for generating ROS message and service data structures for various languages.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

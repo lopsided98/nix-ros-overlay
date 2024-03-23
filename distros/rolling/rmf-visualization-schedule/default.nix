@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A visualizer for trajectories in rmf schedule'';
+    description = "A visualizer for trajectories in rmf schedule";
     license = with lib.licenses; [ asl20 ];
   };
 }

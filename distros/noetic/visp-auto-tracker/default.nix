@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Online automated pattern-based object tracker relying on visual servoing.
+    description = "Online automated pattern-based object tracker relying on visual servoing.
 
     visp_auto_tracker wraps model-based trackers provided by ViSP visual
     servoing library into a ROS package. The tracked object should have a
@@ -30,7 +30,7 @@ buildRosPackage {
 
     This computer vision algorithm computes the pose (i.e. position and
     orientation) of an object in an image. It is fast enough to allow
-    object online tracking using a camera.'';
+    object online tracking using a camera.";
     license = with lib.licenses; [ "GPL-2.0-only" ];
   };
 }

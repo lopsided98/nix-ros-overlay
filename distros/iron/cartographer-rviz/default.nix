@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Cartographer is a system that provides real-time simultaneous localization
+    description = "Cartographer is a system that provides real-time simultaneous localization
     and mapping (SLAM) in 2D and 3D across multiple platforms and sensor
-    configurations. This package provides Cartographer's RViz integration.'';
+    configurations. This package provides Cartographer's RViz integration.";
     license = with lib.licenses; [ asl20 ];
   };
 }

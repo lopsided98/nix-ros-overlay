@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake pkg-config ];
 
   meta = {
-    description = ''swri_image_util'';
+    description = "swri_image_util";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

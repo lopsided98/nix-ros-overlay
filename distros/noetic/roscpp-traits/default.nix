@@ -19,10 +19,10 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''roscpp_traits contains the message traits code as described in
-    <a href="http://www.ros.org/wiki/roscpp/Overview/MessagesTraits">MessagesTraits</a>.
+    description = "roscpp_traits contains the message traits code as described in
+    <a href=\"http://www.ros.org/wiki/roscpp/Overview/MessagesTraits\">MessagesTraits</a>.
 
-    This package is a component of <a href="http://www.ros.org/wiki/roscpp">roscpp</a>.'';
+    This package is a component of <a href=\"http://www.ros.org/wiki/roscpp\">roscpp</a>.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

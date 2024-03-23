@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''rqt_plot provides a GUI plugin visualizing numeric values in a 2D plot using different plotting backends.'';
+    description = "rqt_plot provides a GUI plugin visualizing numeric values in a 2D plot using different plotting backends.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

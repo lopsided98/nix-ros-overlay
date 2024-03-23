@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Simulation worlds for PAL robots.'';
+    description = "Simulation worlds for PAL robots.";
     license = with lib.licenses; [ asl20 ];
   };
 }

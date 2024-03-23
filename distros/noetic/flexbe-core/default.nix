@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
-    description = ''flexbe_core provides the core components for the FlexBE behavior engine.'';
+    description = "flexbe_core provides the core components for the FlexBE behavior engine.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''eus_nlopt'';
+    description = "eus_nlopt";
     license = with lib.licenses; [ asl20 ];
   };
 }

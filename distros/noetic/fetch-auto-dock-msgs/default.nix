@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Messages for fetch_auto_dock package'';
+    description = "Messages for fetch_auto_dock package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

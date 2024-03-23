@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-auto asio-cmake-module ];
 
   meta = {
-    description = ''A library to write Synchronous and Asynchronous networking applications, ROS and ROS2 nodes'';
+    description = "A library to write Synchronous and Asynchronous networking applications, ROS and ROS2 nodes";
     license = with lib.licenses; [ asl20 ];
   };
 }

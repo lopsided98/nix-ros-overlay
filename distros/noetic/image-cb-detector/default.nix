@@ -19,9 +19,9 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Provide a node that extracts checkerboard corners from ROS images.
+    description = "Provide a node that extracts checkerboard corners from ROS images.
     This package is still experimental and unstable.
-    Expect its APIs to change.'';
+    Expect its APIs to change.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

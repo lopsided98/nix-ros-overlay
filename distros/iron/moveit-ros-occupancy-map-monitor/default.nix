@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];
 
   meta = {
-    description = ''Components of MoveIt connecting to occupancy map'';
+    description = "Components of MoveIt connecting to occupancy map";
     license = with lib.licenses; [ bsd3 ];
   };
 }

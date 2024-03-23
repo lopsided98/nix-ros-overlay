@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''ImageZero is a fast lossless image compression algorithm for RGB color photos.'';
+    description = "ImageZero is a fast lossless image compression algorithm for RGB color photos.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

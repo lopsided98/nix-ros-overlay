@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The imu_from_ios_sensorlog package'';
+    description = "The imu_from_ios_sensorlog package";
     license = with lib.licenses; [ "TODO-CATKIN-PACKAGE-LICENSE" ];
   };
 }

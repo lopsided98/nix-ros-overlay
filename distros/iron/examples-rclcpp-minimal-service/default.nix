@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''A minimal service server which adds two numbers'';
+    description = "A minimal service server which adds two numbers";
     license = with lib.licenses; [ asl20 ];
   };
 }

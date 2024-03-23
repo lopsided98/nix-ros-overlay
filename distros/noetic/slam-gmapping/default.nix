@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''slam_gmapping contains a wrapper around gmapping which provides SLAM capabilities.'';
+    description = "slam_gmapping contains a wrapper around gmapping which provides SLAM capabilities.";
     license = with lib.licenses; [ bsdOriginal asl20 ];
   };
 }

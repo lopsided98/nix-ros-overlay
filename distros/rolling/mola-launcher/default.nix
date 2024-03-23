@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-gtest cmake ];
 
   meta = {
-    description = ''Launcher app for MOLA systems'';
+    description = "Launcher app for MOLA systems";
     license = with lib.licenses; [ gpl3Only ];
   };
 }

@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {
-    description = ''Extends c++ type traits and implements a few more to boot.'';
+    description = "Extends c++ type traits and implements a few more to boot.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The turtlebot3_slam package provides roslaunch scripts for starting the SLAM'';
+    description = "The turtlebot3_slam package provides roslaunch scripts for starting the SLAM";
     license = with lib.licenses; [ asl20 ];
   };
 }

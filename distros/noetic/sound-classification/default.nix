@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''The sound_classification package'';
+    description = "The sound_classification package";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

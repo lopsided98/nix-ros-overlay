@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = ''Gazebo classic resources'';
+    description = "Gazebo classic resources";
     license = with lib.licenses; [ bsd3 ];
   };
 }

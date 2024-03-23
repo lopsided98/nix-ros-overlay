@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Plays rosbags as though they were happening NOW.'';
+    description = "Plays rosbags as though they were happening NOW.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

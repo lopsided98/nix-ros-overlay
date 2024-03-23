@@ -19,11 +19,11 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''This packages provides a configurable driver of a chain
+    description = "This packages provides a configurable driver of a chain
   of Schunk powercubes. The powercube chain is configured
   through parameters. Most users will not directly interact
   with this package but with the corresponding launch files
-  in other packages, e.g. schunk_bringup, cob_bringup, ...'';
+  in other packages, e.g. schunk_bringup, cob_bringup, ...";
     license = with lib.licenses; [ asl20 ];
   };
 }

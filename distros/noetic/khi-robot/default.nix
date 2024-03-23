@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Meta package for khi_robot'';
+    description = "Meta package for khi_robot";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

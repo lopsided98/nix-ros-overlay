@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''jsk_teleop_joy'';
+    description = "jsk_teleop_joy";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

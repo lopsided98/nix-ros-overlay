@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ catkin ];
 
   meta = {
-    description = ''Common messages and services used in various packages within cob_control.'';
+    description = "Common messages and services used in various packages within cob_control.";
     license = with lib.licenses; [ asl20 ];
   };
 }
