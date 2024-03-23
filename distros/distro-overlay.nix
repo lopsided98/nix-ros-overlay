@@ -144,6 +144,18 @@ let
       dontFixCmake = true;
     });
 
+    ompl = rosSuper.ompl.overrideAttrs ({
+      patches ? [], ...
+    }: {
+      patches = patches ++ [
+        # Fix pkg-config paths
+        (self.fetchpatch {
+          url = "https://github.com/ompl/ompl/commit/d4e26fc3d86cae0c36941a10bf0307e02526db44.patch";
+          hash = "sha256-sAQLrWHoR/DhHk8TtUEy8E8VXqrvtXl2BGS5UvElJl8=";
+        })
+      ];
+    });
+
     open-manipulator-control-gui = rosSuper.open-manipulator-control-gui.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
