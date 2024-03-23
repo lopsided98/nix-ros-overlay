@@ -68,8 +68,8 @@ in {
   };
 
   libphidget22 = lib.patchVendorUrl rosSuper.libphidget22 {
-    url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.13.20230224.tar.gz";
-    sha256 = "sha256-HQeVEQUX6xjIBkcoh8r8hh3QtqHBBFJGxVW8R/a9d+M=";
+    url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.19.20240304.tar.gz";
+    hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
   };
 
   mcap-vendor = lib.patchExternalProjectGit (lib.patchVendorUrl rosSuper.mcap-vendor {
