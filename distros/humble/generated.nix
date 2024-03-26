@@ -576,6 +576,10 @@ self: super: {
 
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
+ easy-handeye2 = self.callPackage ./easy-handeye2 {};
+
+ easy-handeye2-msgs = self.callPackage ./easy-handeye2-msgs {};
+
  ecal = self.callPackage ./ecal {};
 
  ecl-build = self.callPackage ./ecl-build {};
