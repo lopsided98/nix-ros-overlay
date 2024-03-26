@@ -1,15 +1,16 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-index-python, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages, qt-gui, rclpy }:
+{ lib, buildRosPackage, fetchFromGitHub, ament-index-python, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages, qt-gui, rclpy }:
 buildRosPackage {
   pname = "ros-humble-easy-handeye2";
   version = "1.1.7-r1";
 
-  src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/humble/rqt_gui/1.1.7-1.tar.gz";
-    name = "1.1.7-1.tar.gz";
-    sha256 = "aa99f15e7b90e0a7b271b3be81c014a1f1ea01e7e03c655e835b58bca17c5ca6";
+  src = fetchFromGitHub {
+    owner = "Thieso";
+    repo = "easy_handeye2";
+    rev = "f8ce95b";
+    hash = "sha256-Y43jFDMOf+zyxWhkglMbCNygBvauRZ40Brm2MLNrT4I=";
   };
 
   buildType = "ament_python";

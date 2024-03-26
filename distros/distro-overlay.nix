@@ -239,6 +239,16 @@ let
       '';
     });
 
+    easy-handeye2 = rosSuper.easy-handeye2.overrideAttrs ({
+      nativeBuildInputs ? [], postFixup ? "", ...
+    }: {
+      dontWrapQtApps = false;
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      postFixup = postFixup + ''
+        wrapQtApp "$out/lib/easy_handeye2/rqt_calibrator.py"
+      '';
+    });
+
     rqt-msg = rosSuper.rqt-msg.overrideAttrs ({
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
