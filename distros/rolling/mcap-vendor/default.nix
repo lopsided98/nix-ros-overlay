@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, git, zstd-vendor }:
 buildRosPackage {
   pname = "ros-rolling-mcap-vendor";
-  version = "0.24.0-r3";
+  version = "0.25.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/mcap_vendor/0.24.0-3.tar.gz";
-    name = "0.24.0-3.tar.gz";
-    sha256 = "52c589c9ff38c7a250ba0c99e6db4edb85d06c8c2262053fc3cc2a982b6a282e";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/mcap_vendor/0.25.0-1.tar.gz";
+    name = "0.25.0-1.tar.gz";
+    sha256 = "e2d80edbbdfb12f0fc233221d06927d72a50d25e540fca94ef1b98684435bfb8";
   };
 
   buildType = "ament_cmake";

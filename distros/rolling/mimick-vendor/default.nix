@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-mimick-vendor";
-  version = "0.6.0-r3";
+  version = "0.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mimick_vendor-release/archive/release/rolling/mimick_vendor/0.6.0-3.tar.gz";
-    name = "0.6.0-3.tar.gz";
-    sha256 = "58ca397bd5bb614066ada32fa63ea17d3dddc43aff78104ed2e18f28976f00c6";
+    url = "https://github.com/ros2-gbp/mimick_vendor-release/archive/release/rolling/mimick_vendor/0.6.1-1.tar.gz";
+    name = "0.6.1-1.tar.gz";
+    sha256 = "7d48a1988327a6ee759081a1551e1be3801b01c869e856c45c34377f0c3ac271";
   };
 
   buildType = "ament_cmake";

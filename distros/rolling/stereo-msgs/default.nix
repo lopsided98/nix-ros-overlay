@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-stereo-msgs";
-  version = "5.3.0-r2";
+  version = "5.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/stereo_msgs/5.3.0-2.tar.gz";
-    name = "5.3.0-2.tar.gz";
-    sha256 = "035bfc3f2b26c198ab8f6702302cbf4b3d22730b0f2a68f44ef952630a2524ee";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/stereo_msgs/5.3.1-1.tar.gz";
+    name = "5.3.1-1.tar.gz";
+    sha256 = "aae8acd381fd6a914f80e0cdc99292025db71760d15982bf78daf86e94a6a81c";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, as2-motion-reference-handlers, as2-python-api, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-humble-as2-keyboard-teleoperation";
-  version = "1.0.8-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_keyboard_teleoperation/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "4dad4aefdea5724ab2b2c99d4dbfc1c280723a5de40a4abc798b0ebbeed0f29f";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_keyboard_teleoperation/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "0236ddff52bc2c8956c1e65d4328d91b08114ec307ee2bbe36653aedb687b2f7";
   };
 
   buildType = "ament_python";

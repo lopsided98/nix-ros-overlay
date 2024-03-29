@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, geometry-msgs, message-generation, message-runtime, nav-msgs, roscpp, roslint, rostest, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, trajectory-msgs, ypspur }:
 buildRosPackage {
   pname = "ros-noetic-ypspur-ros";
-  version = "0.3.6-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/openspur/ypspur_ros-release/archive/release/noetic/ypspur_ros/0.3.6-1.tar.gz";
-    name = "0.3.6-1.tar.gz";
-    sha256 = "2a95c1e89e2c0a14ae6b3b45813126afc2450a3a4dd5fe604e3692d9eb2e0d6f";
+    url = "https://github.com/openspur/ypspur_ros-release/archive/release/noetic/ypspur_ros/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "fd7e719209d90f3a10da1957ad9ac983d79b5b9fcbedd6d300002f782a95469d";
   };
 
   buildType = "catkin";

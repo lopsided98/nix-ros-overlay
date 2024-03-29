@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-as2-cli";
-  version = "1.0.8-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_cli/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "c05a8b768197c2b6becb6665c002aabe37dbe812f96027873565aed8f78fe21a";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_cli/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "7b38088d612d188280ce6a250351888f06a6a2755de2c9be27b173ece7a0be1a";
   };
 
   buildType = "ament_cmake";

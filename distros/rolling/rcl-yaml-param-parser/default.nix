@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, libyaml, libyaml-vendor, mimick-vendor, osrf-testing-tools-cpp, performance-test-fixture, rcutils, rmw }:
 buildRosPackage {
   pname = "ros-rolling-rcl-yaml-param-parser";
-  version = "9.1.0-r2";
+  version = "9.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/rolling/rcl_yaml_param_parser/9.1.0-2.tar.gz";
-    name = "9.1.0-2.tar.gz";
-    sha256 = "c49759edf1c2659b977b2c44a11fadbb3c5eb76ac715b8aae426531f2612cd3d";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/rolling/rcl_yaml_param_parser/9.2.0-1.tar.gz";
+    name = "9.2.0-1.tar.gz";
+    sha256 = "0aabb4c5e1c3afc98497a0c40747e61bebeef68d65cb54a0fa4267002933b350";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, octomap-server }:
 buildRosPackage {
   pname = "ros-noetic-octomap-mapping";
-  version = "0.6.7-r1";
+  version = "0.6.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/octomap_mapping-release/archive/release/noetic/octomap_mapping/0.6.7-1.tar.gz";
-    name = "0.6.7-1.tar.gz";
-    sha256 = "ee74a243e61605b47a6e8444e0db6edcc84c5e4f4182f53fe42e555aa11ed8d6";
+    url = "https://github.com/ros-gbp/octomap_mapping-release/archive/release/noetic/octomap_mapping/0.6.8-1.tar.gz";
+    name = "0.6.8-1.tar.gz";
+    sha256 = "043e8ad5df165c8844dfdef8279ef0a498a091741fa09a52aa20ba114c1a3253";
   };
 
   buildType = "catkin";

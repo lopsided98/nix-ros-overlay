@@ -2344,6 +2344,8 @@ self: super: {
 
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
 
+ unitree-ros = self.callPackage ./unitree-ros {};
+
  ur = self.callPackage ./ur {};
 
  ur-calibration = self.callPackage ./ur-calibration {};

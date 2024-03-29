@@ -508,6 +508,10 @@ self: super: {
 
  find-object-2d = self.callPackage ./find-object-2d {};
 
+ flir-camera-description = self.callPackage ./flir-camera-description {};
+
+ flir-camera-msgs = self.callPackage ./flir-camera-msgs {};
+
  fluent-rviz = self.callPackage ./fluent-rviz {};
 
  fmi-adapter = self.callPackage ./fmi-adapter {};
@@ -607,6 +611,12 @@ self: super: {
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  gtsam = self.callPackage ./gtsam {};
+
+ gz-cmake-vendor = self.callPackage ./gz-cmake-vendor {};
+
+ gz-math-vendor = self.callPackage ./gz-math-vendor {};
+
+ gz-utils-vendor = self.callPackage ./gz-utils-vendor {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
 
@@ -1827,6 +1837,10 @@ self: super: {
  spacenav = self.callPackage ./spacenav {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
+
+ spinnaker-camera-driver = self.callPackage ./spinnaker-camera-driver {};
+
+ spinnaker-synchronized-camera-driver = self.callPackage ./spinnaker-synchronized-camera-driver {};
 
  splsm-7 = self.callPackage ./splsm-7 {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-python, ament-index-python, launch, launch-ros, xacro }:
 buildRosPackage {
   pname = "ros-iron-simple-launch";
-  version = "1.9.1-r1";
+  version = "1.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/simple_launch-release/archive/release/iron/simple_launch/1.9.1-1.tar.gz";
-    name = "1.9.1-1.tar.gz";
-    sha256 = "d614e6f671bb2d71eab3236fb47d77a775e8d18886fe321740e0829ee143b54c";
+    url = "https://github.com/ros2-gbp/simple_launch-release/archive/release/iron/simple_launch/1.9.2-1.tar.gz";
+    name = "1.9.2-1.tar.gz";
+    sha256 = "eef7beceadd9e943e556fdf71ca26046590c05937ecc6e1b5e5d041c588de5c1";
   };
 
   buildType = "ament_cmake";
