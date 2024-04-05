@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, gdal, git, gtest, lcov, python3, python3Packages, tbb_2021_8 }:
 buildRosPackage {
   pname = "ros-humble-fields2cover";
-  version = "1.2.1-r2";
+  version = "1.2.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fields2cover-release/archive/release/humble/fields2cover/1.2.1-2.tar.gz";
-    name = "1.2.1-2.tar.gz";
-    sha256 = "e88e84ed14b66ef8ec9a3dfcc7d60b5e63e193c9003254882766a4b4587a1a67";
+    url = "https://github.com/ros2-gbp/fields2cover-release/archive/release/humble/fields2cover/1.2.1-3.tar.gz";
+    name = "1.2.1-3.tar.gz";
+    sha256 = "11ca6ae60cd6c395f357cfa4d29f79bce7efbea2defb4b1bc9696f749e02fdfd";
   };
 
   buildType = "cmake";

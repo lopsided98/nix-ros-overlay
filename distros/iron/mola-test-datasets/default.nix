@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-iron-mola-test-datasets";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_test_datasets-release/archive/release/iron/mola_test_datasets/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "7fd9305039cb0c5f7b73449ad6b717fe7c96b1154be1a299c968639b00b27272";
+    url = "https://github.com/ros2-gbp/mola_test_datasets-release/archive/release/iron/mola_test_datasets/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "7fc3aa8c9f825638f650621abafd2756ae749e1d4a63d81cb9ab9862f50a4c3f";
   };
 
   buildType = "ament_cmake";

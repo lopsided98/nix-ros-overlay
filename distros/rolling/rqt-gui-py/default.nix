@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-lint-common, qt-gui, rqt-gui }:
 buildRosPackage {
   pname = "ros-rolling-rqt-gui-py";
-  version = "1.5.0-r2";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/rolling/rqt_gui_py/1.5.0-2.tar.gz";
-    name = "1.5.0-2.tar.gz";
-    sha256 = "8f4a77909e1a50660255d1262cd50f991126bfd30e218d70cbd7d532f0b243b5";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/rolling/rqt_gui_py/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "3966fce220c6342f02233d51341bd1e59e9376403ba045b5ee1e050c4cbb268d";
   };
 
   buildType = "ament_python";

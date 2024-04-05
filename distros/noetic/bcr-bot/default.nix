@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, gazebo-ros-pkgs, joint-state-publisher, robot-state-publisher, rviz, xacro }:
 buildRosPackage {
   pname = "ros-noetic-bcr-bot";
-  version = "0.0.1-r4";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/blackcoffeerobotics/bcr_bot-release/archive/release/noetic/bcr_bot/0.0.1-4.tar.gz";
-    name = "0.0.1-4.tar.gz";
-    sha256 = "69109ec3cd2e0d11104ebe7a5fc2afbe34f84fb7c987e6c8b85dd1f446566c00";
+    url = "https://github.com/blackcoffeerobotics/bcr_bot-release/archive/release/noetic/bcr_bot/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "45177f645813df47d3f44a4c6bbcc1dfcd0c473d9d1bf65f93fc8057d979b7d4";
   };
 
   buildType = "catkin";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "The bcr_bot package";
-    license = with lib.licenses; [ "-C-Black-Coffee-Robotics" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

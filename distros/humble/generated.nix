@@ -762,6 +762,8 @@ self: super: {
 
  gazebo-no-physics-plugin = self.callPackage ./gazebo-no-physics-plugin {};
 
+ gazebo-planar-move-plugin = self.callPackage ./gazebo-planar-move-plugin {};
+
  gazebo-plugins = self.callPackage ./gazebo-plugins {};
 
  gazebo-ros = self.callPackage ./gazebo-ros {};
@@ -771,6 +773,8 @@ self: super: {
  gazebo-ros2-control-demos = self.callPackage ./gazebo-ros2-control-demos {};
 
  gazebo-ros-pkgs = self.callPackage ./gazebo-ros-pkgs {};
+
+ gazebo-set-joint-positions-plugin = self.callPackage ./gazebo-set-joint-positions-plugin {};
 
  gazebo-video-monitor-interfaces = self.callPackage ./gazebo-video-monitor-interfaces {};
 
@@ -879,6 +883,8 @@ self: super: {
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
  hpp-fcl = self.callPackage ./hpp-fcl {};
+
+ hri = self.callPackage ./hri {};
 
  hri-msgs = self.callPackage ./hri-msgs {};
 
@@ -1200,6 +1206,8 @@ self: super: {
 
  micro-ros-msgs = self.callPackage ./micro-ros-msgs {};
 
+ microstrain-inertial-description = self.callPackage ./microstrain-inertial-description {};
+
  microstrain-inertial-driver = self.callPackage ./microstrain-inertial-driver {};
 
  microstrain-inertial-examples = self.callPackage ./microstrain-inertial-examples {};
@@ -1267,6 +1275,8 @@ self: super: {
  mola-navstate-fuse = self.callPackage ./mola-navstate-fuse {};
 
  mola-pose-list = self.callPackage ./mola-pose-list {};
+
+ mola-relocalization = self.callPackage ./mola-relocalization {};
 
  mola-test-datasets = self.callPackage ./mola-test-datasets {};
 
@@ -1376,9 +1386,19 @@ self: super: {
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
+ mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
+
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
+
+ mrpt-sensor-bumblebee-stereo = self.callPackage ./mrpt-sensor-bumblebee-stereo {};
+
+ mrpt-sensor-gnns-nmea = self.callPackage ./mrpt-sensor-gnns-nmea {};
+
+ mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
+
+ mrpt-sensors = self.callPackage ./mrpt-sensors {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
@@ -1741,6 +1761,8 @@ self: super: {
  pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
 
  pybind11-vendor = self.callPackage ./pybind11-vendor {};
+
+ pyhri = self.callPackage ./pyhri {};
 
  python-cmake-module = self.callPackage ./python-cmake-module {};
 
@@ -2753,6 +2775,8 @@ self: super: {
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
 
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
+
+ unitree-ros = self.callPackage ./unitree-ros {};
 
  ur = self.callPackage ./ur {};
 

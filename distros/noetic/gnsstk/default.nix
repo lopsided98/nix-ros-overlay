@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake, python3, python3Packages, swig }:
 buildRosPackage {
   pname = "ros-noetic-gnsstk";
-  version = "14.0.0-r8";
+  version = "14.3.0-r1";
 
   src = fetchurl {
-    url = "https://gitlab.fel.cvut.cz/cras/ros-release/gnsstk-release/-/archive/release/noetic/gnsstk/14.0.0-8/archive.tar.gz";
+    url = "https://gitlab.fel.cvut.cz/cras/ros-release/gnsstk-release/-/archive/release/noetic/gnsstk/14.3.0-1/archive.tar.gz";
     name = "archive.tar.gz";
-    sha256 = "f39dff1828b05129c65d105626424a1f317230b6af24fdd6b14649626393c406";
+    sha256 = "62bb70dfb6aa04c962edeb3b8f69aea59a504f571ec7dc8b5a121c32a1b169ca";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake, cppzmq, dynamic-reconfigure, gtest, mrpt2, nav-msgs, protobuf, python3, python3Packages, pythonPackages, ros-environment, roscpp, rviz-plugin-tutorials, sensor-msgs, tf2, tf2-geometry-msgs, unzip, visualization-msgs, wget }:
 buildRosPackage {
   pname = "ros-noetic-mvsim";
-  version = "0.9.1-r2";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ual-arm-ros-pkg-release/mvsim-release/archive/release/noetic/mvsim/0.9.1-2.tar.gz";
-    name = "0.9.1-2.tar.gz";
-    sha256 = "45ce15a4093e94b326f033d67615a526f63e11c92d9ddd1cabcc3e5c72bddfe9";
+    url = "https://github.com/ual-arm-ros-pkg-release/mvsim-release/archive/release/noetic/mvsim/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
+    sha256 = "8848f1576df055be318a657d1eb3c16aedb5be8563b5a7f96f747a69db0bb04a";
   };
 
   buildType = "catkin";

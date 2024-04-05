@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, freetype, git, libGL, libGLU, pkg-config, xorg }:
 buildRosPackage {
   pname = "ros-iron-rviz-ogre-vendor";
-  version = "12.4.6-r1";
+  version = "12.4.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/iron/rviz_ogre_vendor/12.4.6-1.tar.gz";
-    name = "12.4.6-1.tar.gz";
-    sha256 = "bff5ab6d14bf7af5375cdd1f0edeb5ed984ddcd1cb75606c3f8c568599a3925f";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/iron/rviz_ogre_vendor/12.4.7-1.tar.gz";
+    name = "12.4.7-1.tar.gz";
+    sha256 = "33642e85795846cfdc0e5f6e8e0a1c5c9b5c23e6191c004ff68b7716ca6d47c3";
   };
 
   buildType = "ament_cmake";
