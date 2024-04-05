@@ -254,6 +254,8 @@ self: super: {
 
  classic-bags = self.callPackage ./classic-bags {};
 
+ cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
+
  color-names = self.callPackage ./color-names {};
 
  color-util = self.callPackage ./color-util {};
@@ -508,6 +510,10 @@ self: super: {
 
  find-object-2d = self.callPackage ./find-object-2d {};
 
+ flir-camera-description = self.callPackage ./flir-camera-description {};
+
+ flir-camera-msgs = self.callPackage ./flir-camera-msgs {};
+
  fluent-rviz = self.callPackage ./fluent-rviz {};
 
  fmi-adapter = self.callPackage ./fmi-adapter {};
@@ -566,7 +572,11 @@ self: super: {
 
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
+ generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
+
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
+
+ generate-parameter-module-example = self.callPackage ./generate-parameter-module-example {};
 
  geodesy = self.callPackage ./geodesy {};
 
@@ -607,6 +617,14 @@ self: super: {
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  gtsam = self.callPackage ./gtsam {};
+
+ gz-cmake-vendor = self.callPackage ./gz-cmake-vendor {};
+
+ gz-dartsim-vendor = self.callPackage ./gz-dartsim-vendor {};
+
+ gz-math-vendor = self.callPackage ./gz-math-vendor {};
+
+ gz-utils-vendor = self.callPackage ./gz-utils-vendor {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
 
@@ -888,6 +906,8 @@ self: super: {
 
  micro-ros-msgs = self.callPackage ./micro-ros-msgs {};
 
+ microstrain-inertial-description = self.callPackage ./microstrain-inertial-description {};
+
  microstrain-inertial-driver = self.callPackage ./microstrain-inertial-driver {};
 
  microstrain-inertial-examples = self.callPackage ./microstrain-inertial-examples {};
@@ -933,6 +953,8 @@ self: super: {
  mola-navstate-fuse = self.callPackage ./mola-navstate-fuse {};
 
  mola-pose-list = self.callPackage ./mola-pose-list {};
+
+ mola-relocalization = self.callPackage ./mola-relocalization {};
 
  mola-test-datasets = self.callPackage ./mola-test-datasets {};
 
@@ -1044,9 +1066,19 @@ self: super: {
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
+ mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
+
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
+
+ mrpt-sensor-bumblebee-stereo = self.callPackage ./mrpt-sensor-bumblebee-stereo {};
+
+ mrpt-sensor-gnns-nmea = self.callPackage ./mrpt-sensor-gnns-nmea {};
+
+ mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
+
+ mrpt-sensors = self.callPackage ./mrpt-sensors {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
@@ -1766,6 +1798,8 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ sdformat-vendor = self.callPackage ./sdformat-vendor {};
+
  sdl2-vendor = self.callPackage ./sdl2-vendor {};
 
  self-test = self.callPackage ./self-test {};
@@ -1827,6 +1861,10 @@ self: super: {
  spacenav = self.callPackage ./spacenav {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
+
+ spinnaker-camera-driver = self.callPackage ./spinnaker-camera-driver {};
+
+ spinnaker-synchronized-camera-driver = self.callPackage ./spinnaker-synchronized-camera-driver {};
 
  splsm-7 = self.callPackage ./splsm-7 {};
 
@@ -1965,6 +2003,12 @@ self: super: {
  topic-tools = self.callPackage ./topic-tools {};
 
  topic-tools-interfaces = self.callPackage ./topic-tools-interfaces {};
+
+ trac-ik = self.callPackage ./trac-ik {};
+
+ trac-ik-kinematics-plugin = self.callPackage ./trac-ik-kinematics-plugin {};
+
+ trac-ik-lib = self.callPackage ./trac-ik-lib {};
 
  tracetools = self.callPackage ./tracetools {};
 

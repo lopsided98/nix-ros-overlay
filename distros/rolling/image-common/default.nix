@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, camera-calibration-parsers, camera-info-manager, image-transport }:
 buildRosPackage {
   pname = "ros-rolling-image-common";
-  version = "5.1.0-r2";
+  version = "5.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/image_common/5.1.0-2.tar.gz";
-    name = "5.1.0-2.tar.gz";
-    sha256 = "0667bdda6b1ce1436d3fad9e0a2d03e90de2a400fda3cde3575ba06efcdaa6fe";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/image_common/5.1.1-1.tar.gz";
+    name = "5.1.1-1.tar.gz";
+    sha256 = "48b5761ab4b4052e3dcf68063d13af1623dfbed978a994174e23b0c6dd0dc0d0";
   };
 
   buildType = "ament_cmake";

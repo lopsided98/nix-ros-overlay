@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-lint-auto, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-aruco-opencv-msgs";
-  version = "5.0.0-r1";
+  version = "5.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aruco_opencv-release/archive/release/iron/aruco_opencv_msgs/5.0.0-1.tar.gz";
-    name = "5.0.0-1.tar.gz";
-    sha256 = "0ece6409394c37d72d46a43b4d60001baabfa8e86fcdf690536865b4a81e84e9";
+    url = "https://github.com/ros2-gbp/aruco_opencv-release/archive/release/iron/aruco_opencv_msgs/5.1.0-1.tar.gz";
+    name = "5.1.0-1.tar.gz";
+    sha256 = "778a10c6ff82c11b611fac9ab232189d945c9275f8e93def53a91f9aeb7bc300";
   };
 
   buildType = "ament_cmake";

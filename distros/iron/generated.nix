@@ -990,6 +990,8 @@ self: super: {
 
  micro-ros-msgs = self.callPackage ./micro-ros-msgs {};
 
+ microstrain-inertial-description = self.callPackage ./microstrain-inertial-description {};
+
  microstrain-inertial-driver = self.callPackage ./microstrain-inertial-driver {};
 
  microstrain-inertial-examples = self.callPackage ./microstrain-inertial-examples {};
@@ -1146,9 +1148,19 @@ self: super: {
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
+ mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
+
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
+
+ mrpt-sensor-bumblebee-stereo = self.callPackage ./mrpt-sensor-bumblebee-stereo {};
+
+ mrpt-sensor-gnns-nmea = self.callPackage ./mrpt-sensor-gnns-nmea {};
+
+ mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
+
+ mrpt-sensors = self.callPackage ./mrpt-sensors {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
@@ -1291,18 +1303,6 @@ self: super: {
  odom-to-tf-ros2 = self.callPackage ./odom-to-tf-ros2 {};
 
  ompl = self.callPackage ./ompl {};
-
- opennav-coverage = self.callPackage ./opennav-coverage {};
-
- opennav-coverage-bt = self.callPackage ./opennav-coverage-bt {};
-
- opennav-coverage-demo = self.callPackage ./opennav-coverage-demo {};
-
- opennav-coverage-msgs = self.callPackage ./opennav-coverage-msgs {};
-
- opennav-coverage-navigator = self.callPackage ./opennav-coverage-navigator {};
-
- opennav-row-coverage = self.callPackage ./opennav-row-coverage {};
 
  openni2-camera = self.callPackage ./openni2-camera {};
 
@@ -2343,6 +2343,8 @@ self: super: {
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
 
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
+
+ unitree-ros = self.callPackage ./unitree-ros {};
 
  ur = self.callPackage ./ur {};
 

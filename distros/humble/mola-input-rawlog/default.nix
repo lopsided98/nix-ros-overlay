@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt2 }:
 buildRosPackage {
   pname = "ros-humble-mola-input-rawlog";
-  version = "1.0.0-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_rawlog/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "ef800f9d1ae626bc385d3847fb12c00f8ac4f8dbdfc6e482e1d796006177274a";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_rawlog/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "14e583502d4669d4da9750296e75c18bdaf6ff0010624971415884ea1d77a5a9";
   };
 
   buildType = "cmake";

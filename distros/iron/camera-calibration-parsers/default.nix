@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rclcpp, rcpputils, sensor-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-iron-camera-calibration-parsers";
-  version = "4.2.3-r1";
+  version = "4.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/iron/camera_calibration_parsers/4.2.3-1.tar.gz";
-    name = "4.2.3-1.tar.gz";
-    sha256 = "26bbe270df87c4a314f76441747756762892101ac3d1a04a2c6e2f2cbfd217fa";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/iron/camera_calibration_parsers/4.2.4-1.tar.gz";
+    name = "4.2.4-1.tar.gz";
+    sha256 = "71da8fbec6b1f45f43c560356c1a385b26f7e57eb9cf9f1d4fbe1afe9773e023";
   };
 
   buildType = "ament_cmake";

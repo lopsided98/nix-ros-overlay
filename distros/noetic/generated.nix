@@ -1948,6 +1948,8 @@ self: super: {
 
  microstrain-3dmgx2-imu = self.callPackage ./microstrain-3dmgx2-imu {};
 
+ microstrain-inertial-description = self.callPackage ./microstrain-inertial-description {};
+
  microstrain-inertial-driver = self.callPackage ./microstrain-inertial-driver {};
 
  microstrain-inertial-examples = self.callPackage ./microstrain-inertial-examples {};

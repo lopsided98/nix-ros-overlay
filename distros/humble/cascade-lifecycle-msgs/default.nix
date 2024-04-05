@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, lifecycle-msgs, rclcpp, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-humble-cascade-lifecycle-msgs";
-  version = "1.0.2-r2";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cascade_lifecycle-release/archive/release/humble/cascade_lifecycle_msgs/1.0.2-2.tar.gz";
-    name = "1.0.2-2.tar.gz";
-    sha256 = "f657ab4af09517b16809c4faf1e3f6b9bb056aa169d8171e8994d922b1d7df9f";
+    url = "https://github.com/ros2-gbp/cascade_lifecycle-release/archive/release/humble/cascade_lifecycle_msgs/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "e6946ab8acf0dec40bf52ae822e86b19e7efbc1ba6f6e20220a40fe809920022";
   };
 
   buildType = "ament_cmake";

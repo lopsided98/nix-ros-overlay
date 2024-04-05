@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, kitti-metrics-eval, mola-bridge-ros2, mola-demos, mola-imu-preintegration, mola-input-euroc-dataset, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset, mola-input-rawlog, mola-input-rosbag2, mola-kernel, mola-launcher, mola-metric-maps, mola-navstate-fuse, mola-pose-list, mola-traj-tools, mola-viz, mola-yaml }:
 buildRosPackage {
   pname = "ros-iron-mola";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "7c9b6c37c721be11c64ca1f0a538d4274954dc628e1ae3bc0261609e96dbd70b";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "cf59c7d35fafc63c30c3634d38492ac83f00a5f1d096d98eeeceb289529cbcde";
   };
 
   buildType = "ament_cmake";

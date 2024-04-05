@@ -2,24 +2,24 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, microstrain-inertial-msgs, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, microstrain-inertial-driver, rviz-imu-plugin, rviz2, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-microstrain-inertial-examples";
-  version = "3.2.1-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/iron/microstrain_inertial_examples/3.2.1-1.tar.gz";
-    name = "3.2.1-1.tar.gz";
-    sha256 = "c4d47499bc861a140fcff349d9769e342dcd8b2dbdcb893113d44536f9626b0c";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/iron/microstrain_inertial_examples/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "f976ccbaaa64ecbec5beb5c3a788db7e95ff3f1eb450ff65133852fe6207e06b";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ microstrain-inertial-msgs rclcpp rclcpp-components rclpy sensor-msgs std-msgs ];
+  propagatedBuildInputs = [ microstrain-inertial-driver rviz-imu-plugin rviz2 sensor-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "Example listener for Parker LORD Sensing inertial device driver ros_mscl (C++).";
+    description = "Simple examples using the microstrain_inertial_driver for MicroStrain sensors.";
     license = with lib.licenses; [ mit ];
   };
 }

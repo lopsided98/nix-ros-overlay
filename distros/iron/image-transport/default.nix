@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, message-filters, pluginlib, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-iron-image-transport";
-  version = "4.2.3-r1";
+  version = "4.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/iron/image_transport/4.2.3-1.tar.gz";
-    name = "4.2.3-1.tar.gz";
-    sha256 = "096bb06528635bbcb2b405c06ed2dc322a5acb022ef7c8524118c1d29253e575";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/iron/image_transport/4.2.4-1.tar.gz";
+    name = "4.2.4-1.tar.gz";
+    sha256 = "76c7624c9c9afc63e2e014cb59b0ec31a98d827306639c4f6fb20d3172f3d8a7";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-python, ament-lint-auto, as2-core, as2-msgs, eigen, geometry-msgs, rclcpp, rclcpp-action, rclpy, std-msgs, std-srvs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-humble-as2-motion-reference-handlers";
-  version = "1.0.8-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_motion_reference_handlers/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "1fcba1242b555ea7865635c8d1879ddddaf213e4a2d659ce774dce6785ebe323";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_motion_reference_handlers/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "66c16898e5c24221c2e7558c297599c74f9d42c6acde3a52a81e3aed4e1d29e4";
   };
 
   buildType = "ament_cmake";
