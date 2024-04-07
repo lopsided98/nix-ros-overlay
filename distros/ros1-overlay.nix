@@ -91,6 +91,18 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   roscpp = patchBoostSignals rosSuper.roscpp;
 
+  rosgraph = rosSuper.rosgraph.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # Fix infinite loop with python 3.11
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://patch-diff.githubusercontent.com/raw/ros/ros_comm/pull/2297.patch";
+      hash = "sha256-Z96KUsKv1LvEPnTXl+Icz89bEhkxfoETbvPasNPO6AY=";
+      stripLen = 2;
+      includes = [ "src/rosgraph/roslogging.py" ];
+    }) ];
+  });
+
   rqt-console = rosSuper.rqt-console.overrideAttrs ({
     postFixup ? "", ...
   }: {
