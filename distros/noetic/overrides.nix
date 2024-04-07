@@ -8,6 +8,17 @@ rosSelf: rosSuper: with rosSelf.lib; {
     cmakeFlags = cmakeFlags ++ [ "-DPYTHON_EXECUTABLE=${rosSelf.python.interpreter}" ];
   });
 
+  franka-hw = rosSuper.franka-hw.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # Fix missing cstdint include
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/frankaemika/franka_ros/pull/381.patch";
+      hash = "sha256-zv3mjemVB2s99w8lnYDjpm5uuCJwsj/Hta0f9/MEpRE=";
+      stripLen = 1;
+    }) ];
+  });
+
   gazebo = self.gazebo_11;
 
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
@@ -25,6 +36,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
       stripLen = 1;
     }) ];
   });
+
 
   moveit-core = rosSuper.moveit-core.overrideAttrs ({
     buildInputs ? [], patches ? [], ...
