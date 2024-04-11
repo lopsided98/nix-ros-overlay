@@ -29,10 +29,44 @@ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 ```
 
+### Flakes
+
 With [Flakes enabled][flake], the equivalent of the above is:
 ```
 nix develop github:lopsided98/nix-ros-overlay#example-turtlebot3-gazebo
 # Then use roslaunch commands as above
+```
+
+Using the overlay in your `flake.nix`-based project could look like this:
+
+```nix
+{
+  inputs = {
+    nix-ros-overlay.url = "github:lopsided98/nix-ros-overlay";
+    nixpkgs.follows = "nix-ros-overlay/nixpkgs";  # IMPORTANT!!!
+  };
+  outputs = { self, nix-ros-overlay, nixpkgs }:
+    nix-ros-overlay.inputs.flake-utils.lib.eachDefaultSystem (system:
+      let
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [ nix-ros-overlay.overlays.default ];
+        };
+      in {
+        devShells.default = pkgs.mkShell {
+          name = "Example project";
+          packages = with pkgs.rosPackages.humble; [
+            pkgs.colcon
+            ros-core
+            # ...
+          ];
+        };
+      });
+  nixConfig = {
+    extra-substituters = [ "https://ros.cachix.org" ];
+    extra-trusted-public-keys = [ "ros.cachix.org-1:dSyZxI8geDCJrwgvCOHDoAfOm5sV1wCPjBkKL+38Rvo=" ];
+  };
+}
 ```
 
 [flake]: https://nixos.wiki/wiki/Flakes#Enable_flakes
