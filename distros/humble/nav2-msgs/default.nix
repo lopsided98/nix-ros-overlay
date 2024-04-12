@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, geometry-msgs, nav-msgs, nav2-common, rclcpp, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-nav2-msgs";
-  version = "1.1.13-r1";
+  version = "1.1.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_msgs/1.1.13-1.tar.gz";
-    name = "1.1.13-1.tar.gz";
-    sha256 = "89ce4ebd4a120ce7f8a1d706de6b834f97e427985632fa0e06d14b461b917e25";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_msgs/1.1.14-1.tar.gz";
+    name = "1.1.14-1.tar.gz";
+    sha256 = "1153a3f51db63711838b9168ce96c56d42688d59ca63be4b0338bdb0254190ca";
   };
 
   buildType = "ament_cmake";

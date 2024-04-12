@@ -334,6 +334,8 @@ self: super: {
 
  clearpath-control = self.callPackage ./clearpath-control {};
 
+ clearpath-customization = self.callPackage ./clearpath-customization {};
+
  clearpath-description = self.callPackage ./clearpath-description {};
 
  clearpath-desktop = self.callPackage ./clearpath-desktop {};
@@ -1448,6 +1450,8 @@ self: super: {
 
  nav2-dwb-controller = self.callPackage ./nav2-dwb-controller {};
 
+ nav2-graceful-controller = self.callPackage ./nav2-graceful-controller {};
+
  nav2-lifecycle-manager = self.callPackage ./nav2-lifecycle-manager {};
 
  nav2-map-server = self.callPackage ./nav2-map-server {};
@@ -2553,6 +2557,8 @@ self: super: {
  test-interface-files = self.callPackage ./test-interface-files {};
 
  test-msgs = self.callPackage ./test-msgs {};
+
+ test-ros-gz-bridge = self.callPackage ./test-ros-gz-bridge {};
 
  tf2 = self.callPackage ./tf2 {};
 

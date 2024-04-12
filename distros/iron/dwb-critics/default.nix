@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, costmap-queue, dwb-core, geometry-msgs, nav-2d-msgs, nav-2d-utils, nav2-common, nav2-costmap-2d, nav2-util, pluginlib, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-iron-dwb-critics";
-  version = "1.2.6-r1";
+  version = "1.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/dwb_critics/1.2.6-1.tar.gz";
-    name = "1.2.6-1.tar.gz";
-    sha256 = "a34190ef0a2328127603b01f47daa7d3dd29236259d409ad9da8f6053d385abe";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/dwb_critics/1.2.7-1.tar.gz";
+    name = "1.2.7-1.tar.gz";
+    sha256 = "0074c66b50bddce9b597283dc6b80c62ff34994dd5351c5d19698e0e12e4b78a";
   };
 
   buildType = "ament_cmake";

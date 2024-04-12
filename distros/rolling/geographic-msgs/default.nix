@@ -2,19 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, unique-identifier-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-rolling-geographic-msgs";
-  version = "1.0.5-r2";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geographic_info-release/archive/release/rolling/geographic_msgs/1.0.5-2.tar.gz";
-    name = "1.0.5-2.tar.gz";
-    sha256 = "7901d1e58339646d7be1be410bb3a2a08c1504a5a2dd277a465d49336f84507c";
+    url = "https://github.com/ros2-gbp/geographic_info-release/archive/release/rolling/geographic_msgs/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "4a2de75e12520519ffbeea5d4ce3b114be126877413aa35057be629d91405102";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];
+  checkInputs = [ ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-gtest ament-cmake-lint-cmake ament-cmake-uncrustify ament-cmake-xmllint ament-lint-auto ];
   propagatedBuildInputs = [ geometry-msgs rosidl-default-runtime std-msgs unique-identifier-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

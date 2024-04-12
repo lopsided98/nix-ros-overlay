@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, automake, catkin, cmake, doxygen, libtool, omniorb, pkg-config, pythonPackages, util-linux }:
 buildRosPackage {
   pname = "ros-noetic-openrtm-aist";
-  version = "1.1.2-r4";
+  version = "1.1.2-r5";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/openrtm_aist-release/archive/release/noetic/openrtm_aist/1.1.2-4.tar.gz";
-    name = "1.1.2-4.tar.gz";
-    sha256 = "61a7a22fbfbf87fff5685a08bde398fc1523e543865f24fe3bacc6f83afc341b";
+    url = "https://github.com/tork-a/openrtm_aist-release/archive/release/noetic/openrtm_aist/1.1.2-5.tar.gz";
+    name = "1.1.2-5.tar.gz";
+    sha256 = "c41cfdf69cd365e435dca2379bcfcb8c5f0e317fc97f43671c47627399608d54";
   };
 
   buildType = "cmake";

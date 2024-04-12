@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, ros-gz-bridge }:
 buildRosPackage {
   pname = "ros-iron-ros-ign-bridge";
-  version = "0.254.0-r1";
+  version = "0.254.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/iron/ros_ign_bridge/0.254.0-1.tar.gz";
-    name = "0.254.0-1.tar.gz";
-    sha256 = "b7a0f6c8a8e65df66aab78c15f4d2871396cfe25b3383a40bdd9786aed2bb658";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/iron/ros_ign_bridge/0.254.1-1.tar.gz";
+    name = "0.254.1-1.tar.gz";
+    sha256 = "fb22cdace78dbabd72690fed6d1a8d981ef607acb1e98267533e72ad2e30b55f";
   };
 
   buildType = "ament_cmake";

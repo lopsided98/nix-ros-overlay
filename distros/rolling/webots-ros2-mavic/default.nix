@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, builtin-interfaces, pythonPackages, rclpy, webots-ros2-driver }:
 buildRosPackage {
   pname = "ros-rolling-webots-ros2-mavic";
-  version = "2023.1.1-r3";
+  version = "2023.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/rolling/webots_ros2_mavic/2023.1.1-3.tar.gz";
-    name = "2023.1.1-3.tar.gz";
-    sha256 = "b362c097df0ce806aeb50b070c10f25014882d9067ad02c975708119ecfc046c";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/rolling/webots_ros2_mavic/2023.1.2-1.tar.gz";
+    name = "2023.1.2-1.tar.gz";
+    sha256 = "0cdf88e2747568a1927d85d57885700e2802dc8bce986f13505f9a9191dd3c9e";
   };
 
   buildType = "ament_python";

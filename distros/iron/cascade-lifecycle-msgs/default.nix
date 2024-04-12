@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, lifecycle-msgs, rclcpp, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-iron-cascade-lifecycle-msgs";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cascade_lifecycle-release/archive/release/iron/cascade_lifecycle_msgs/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "63b073f2cac4c5b729d550691d7073a2474a812a662357394a0687322d6668b6";
+    url = "https://github.com/ros2-gbp/cascade_lifecycle-release/archive/release/iron/cascade_lifecycle_msgs/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "7f5726bdd3bbdfacbdfb84f311917432a81aa9ca5a5822d8e56097757c459417";
   };
 
   buildType = "ament_cmake";

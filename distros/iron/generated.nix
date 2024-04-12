@@ -238,6 +238,8 @@ self: super: {
 
  classic-bags = self.callPackage ./classic-bags {};
 
+ cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
+
  color-names = self.callPackage ./color-names {};
 
  color-util = self.callPackage ./color-util {};
@@ -640,7 +642,11 @@ self: super: {
 
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
+ generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
+
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
+
+ generate-parameter-module-example = self.callPackage ./generate-parameter-module-example {};
 
  geodesy = self.callPackage ./geodesy {};
 
@@ -1035,6 +1041,8 @@ self: super: {
  mola-navstate-fuse = self.callPackage ./mola-navstate-fuse {};
 
  mola-pose-list = self.callPackage ./mola-pose-list {};
+
+ mola-relocalization = self.callPackage ./mola-relocalization {};
 
  mola-test-datasets = self.callPackage ./mola-test-datasets {};
 
@@ -2215,6 +2223,8 @@ self: super: {
  test-interface-files = self.callPackage ./test-interface-files {};
 
  test-msgs = self.callPackage ./test-msgs {};
+
+ test-ros-gz-bridge = self.callPackage ./test-ros-gz-bridge {};
 
  tf2 = self.callPackage ./tf2 {};
 

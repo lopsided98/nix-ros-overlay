@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, gz-cmake-vendor }:
 buildRosPackage {
   pname = "ros-rolling-gz-utils-vendor";
-  version = "0.0.2-r1";
+  version = "0.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_utils_vendor-release/archive/release/rolling/gz_utils_vendor/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "a1617570aa92a2a50b57b81fd98bfc5a9962b95a77c56f0a8e7c93207237aefd";
+    url = "https://github.com/ros2-gbp/gz_utils_vendor-release/archive/release/rolling/gz_utils_vendor/0.0.3-1.tar.gz";
+    name = "0.0.3-1.tar.gz";
+    sha256 = "83c6cb47fae95ba55679b18c0f9b951771dd5ddf5b9f7fbacd2358e0949ea87e";
   };
 
   buildType = "ament_cmake";

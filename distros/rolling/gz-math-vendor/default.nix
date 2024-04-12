@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, eigen, gz-cmake-vendor, gz-utils-vendor, pythonPackages }:
 buildRosPackage {
   pname = "ros-rolling-gz-math-vendor";
-  version = "0.0.3-r1";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_math_vendor-release/archive/release/rolling/gz_math_vendor/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "ee7eef25401d8735b8b85fd7827933f606a9464a0bf9d1906e141fd2c009189d";
+    url = "https://github.com/ros2-gbp/gz_math_vendor-release/archive/release/rolling/gz_math_vendor/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "d784be7f504301220354ff6b16b46b450b1d712a728b59db3953fcd87c7848ef";
   };
 
   buildType = "ament_cmake";

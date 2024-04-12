@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, dwb-core, nav-2d-msgs, nav-2d-utils, nav2-common, nav2-util, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-dwb-plugins";
-  version = "1.1.13-r1";
+  version = "1.1.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/dwb_plugins/1.1.13-1.tar.gz";
-    name = "1.1.13-1.tar.gz";
-    sha256 = "f383a6541e981b829e3d137d3e20c30d351d4debb71d1df5f4e4f2b6d759f767";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/dwb_plugins/1.1.14-1.tar.gz";
+    name = "1.1.14-1.tar.gz";
+    sha256 = "728732cf65743cdb5e838367ce59a99bf4ccb1577179c18c4f35fa1ded54536e";
   };
 
   buildType = "ament_cmake";

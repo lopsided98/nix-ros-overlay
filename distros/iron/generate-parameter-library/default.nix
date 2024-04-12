@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, fmt, generate-parameter-library-py, parameter-traits, rclcpp, rclcpp-lifecycle, rclpy, rsl, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-iron-generate-parameter-library";
-  version = "0.3.7-r1";
+  version = "0.3.8-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/iron/generate_parameter_library/0.3.7-1.tar.gz";
-    name = "0.3.7-1.tar.gz";
-    sha256 = "7bad8adac3783a4181d99dcf688b89c6f1ab8ef6176d20cacaac22034e181d68";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/iron/generate_parameter_library/0.3.8-3.tar.gz";
+    name = "0.3.8-3.tar.gz";
+    sha256 = "ec4c68c6ceedcd8cb25f8faba0afd1939c92f74c2f7da4d584fee77378b6ab37";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-python, ament-lint-auto, ament-lint-common, control-msgs, diff-drive-controller, effort-controllers, geometry-msgs, hardware-interface, ign-ros2-control, imu-sensor-broadcaster, joint-state-broadcaster, joint-trajectory-controller, launch, launch-ros, rclcpp, rclcpp-action, robot-state-publisher, ros-gz-bridge, ros-ign-gazebo, ros2controlcli, ros2launch, std-msgs, tricycle-controller, velocity-controllers, xacro }:
 buildRosPackage {
   pname = "ros-humble-ign-ros2-control-demos";
-  version = "0.7.6-r1";
+  version = "0.7.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/humble/ign_ros2_control_demos/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "bac8b751eafe2f8eb06584f51230d58c3c64fa72be326a4c90085b099feb54d1";
+    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/humble/ign_ros2_control_demos/0.7.7-1.tar.gz";
+    name = "0.7.7-1.tar.gz";
+    sha256 = "cd15d60be5d1cb0c4d52309d2466c87ebf59f944caa91617a36054f2a9a05873";
   };
 
   buildType = "ament_cmake";
