@@ -624,6 +624,16 @@ self: super: {
 
  gz-math-vendor = self.callPackage ./gz-math-vendor {};
 
+ gz-msgs-vendor = self.callPackage ./gz-msgs-vendor {};
+
+ gz-physics-vendor = self.callPackage ./gz-physics-vendor {};
+
+ gz-plugin-vendor = self.callPackage ./gz-plugin-vendor {};
+
+ gz-sensors-vendor = self.callPackage ./gz-sensors-vendor {};
+
+ gz-transport-vendor = self.callPackage ./gz-transport-vendor {};
+
  gz-utils-vendor = self.callPackage ./gz-utils-vendor {};
 
  hardware-interface = self.callPackage ./hardware-interface {};

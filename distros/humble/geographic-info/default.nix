@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geodesy, geographic-msgs }:
 buildRosPackage {
   pname = "ros-humble-geographic-info";
-  version = "1.0.5-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geographic_info-release/archive/release/humble/geographic_info/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "c602139fab33140b9333ca07d78d3e5ffb401c36713edec21427df7aa34a8628";
+    url = "https://github.com/ros2-gbp/geographic_info-release/archive/release/humble/geographic_info/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "1a899289d143c388be120854f654f5bbe36fed4317d31b7d062dcf5215c7e745";
   };
 
   buildType = "ament_cmake";

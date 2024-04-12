@@ -1,16 +1,16 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-core, ament-lint-auto, ament-lint-common, generate-parameter-library, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-iron-generate-parameter-library-example";
-  version = "0.3.6-r1";
+  version = "0.3.8-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/iron/generate_parameter_library_example/0.3.6-1.tar.gz";
-    name = "0.3.6-1.tar.gz";
-    sha256 = "3170753249cde8bcbe014651292b45965f71a2eadd1637aac24e5fd50accc940";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/iron/generate_parameter_library_example/0.3.8-3.tar.gz";
+    name = "0.3.8-3.tar.gz";
+    sha256 = "0a111e6d491f92ede777fd9d905f92dd7cc086419616e611805f83ea1a54b6a3";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-core ];
 
   meta = {
-    description = ''Example usage of generate_parameter_library.'';
+    description = "Example usage of generate_parameter_library.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

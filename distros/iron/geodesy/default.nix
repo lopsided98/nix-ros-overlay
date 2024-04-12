@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, angles, geographic-msgs, geometry-msgs, python3Packages, sensor-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-iron-geodesy";
-  version = "1.0.5-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geographic_info-release/archive/release/iron/geodesy/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "125c88baf26e8ac54a393fe20b04fa88c873a85e6095d66434073aa02d903550";
+    url = "https://github.com/ros2-gbp/geographic_info-release/archive/release/iron/geodesy/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "252b8b13c89b705d8e3a5ec74c9ac4b2ca56f519943ab5103b27b7b88d9fbc28";
   };
 
   buildType = "ament_cmake";

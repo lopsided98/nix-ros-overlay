@@ -3794,6 +3794,8 @@ self: super: {
 
  ur20-moveit-config = self.callPackage ./ur20-moveit-config {};
 
+ ur30-moveit-config = self.callPackage ./ur30-moveit-config {};
+
  ur3-moveit-config = self.callPackage ./ur3-moveit-config {};
 
  ur3e-moveit-config = self.callPackage ./ur3e-moveit-config {};
