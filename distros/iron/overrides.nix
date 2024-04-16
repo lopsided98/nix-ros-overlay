@@ -118,6 +118,18 @@ in with lib; {
     '';
   });
 
+  sophus = rosSuper.sophus.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Remove -Werror from the compile flags.
+      (self.fetchpatch {
+        url = "https://github.com/clalancette/sophus/commit/13339e883e627dc62e5a3e8d13919173051ea139.patch";
+        hash = "sha256-vY99tXRcrWxcztva+wQiOw50PwLePrvaSVZ/lerX1Kg=";
+      })
+    ];
+  });
+
   urdfdom = rosSuper.urdfdom.overrideAttrs ({
     patches ? [], ...
   }: {

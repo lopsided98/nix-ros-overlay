@@ -134,6 +134,18 @@ in with lib; {
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
   };
 
+  sophus = rosSuper.sophus.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Remove -Werror from the compile flags.
+      (self.fetchpatch {
+        url = "https://github.com/clalancette/sophus/commit/13339e883e627dc62e5a3e8d13919173051ea139.patch";
+        hash = "sha256-vY99tXRcrWxcztva+wQiOw50PwLePrvaSVZ/lerX1Kg=";
+      })
+    ];
+  });
+
   urdfdom = rosSuper.urdfdom.overrideAttrs ({
     patches ? [], ...
   }: {
