@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-shared-queues-vendor";
-  version = "0.25.0-r1";
+  version = "0.26.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/shared_queues_vendor/0.25.0-1.tar.gz";
-    name = "0.25.0-1.tar.gz";
-    sha256 = "5debd1f194e6a08e2de37f2359235254b05837835743c2efebd14257d499eba1";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/shared_queues_vendor/0.26.1-1.tar.gz";
+    name = "0.26.1-1.tar.gz";
+    sha256 = "6128cbc38272feaee6394c1dcc327713bf7aa0bb99e9becd53580eed6c545a42";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, nao-command-msgs, nao-sensor-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-iron-nao-lola";
-  version = "0.2.2-r1";
+  version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nao_lola-release/archive/release/iron/nao_lola/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "5b1bf6f65c637157754b25e5d0712f0cd17833a3942889f599be15c2cb381264";
+    url = "https://github.com/ros2-gbp/nao_lola-release/archive/release/iron/nao_lola/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
+    sha256 = "aa1eac17d2095c5befe2e66eb62f61b55c22bdeac7b5d9464e2ce4f2be2eba7d";
   };
 
   buildType = "ament_cmake";

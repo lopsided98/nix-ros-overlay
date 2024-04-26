@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, boost, cmake, cppzmq, mrpt2, nav-msgs, protobuf, python3, python3Packages, pythonPackages, ros-environment, ros2launch, sensor-msgs, tf2, tf2-geometry-msgs, unzip, visualization-msgs, wget }:
 buildRosPackage {
   pname = "ros-humble-mvsim";
-  version = "0.9.2-r1";
+  version = "0.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/humble/mvsim/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "10779c23498f9ec2f109ac9266308692aecf3d2dc3065553882834958c716c13";
+    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/humble/mvsim/0.9.3-1.tar.gz";
+    name = "0.9.3-1.tar.gz";
+    sha256 = "267e35d0f832e173c73898ef5a2f9593eeec689af0a85ed9c55f4662660e4143";
   };
 
   buildType = "ament_cmake";

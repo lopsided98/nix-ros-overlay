@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, compressed-depth-image-transport, compressed-image-transport, theora-image-transport }:
 buildRosPackage {
   pname = "ros-humble-image-transport-plugins";
-  version = "2.5.0-r2";
+  version = "2.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/humble/image_transport_plugins/2.5.0-2.tar.gz";
-    name = "2.5.0-2.tar.gz";
-    sha256 = "ceafb2f3053f0dbb8680362a9e1a7179be7e985017b2dca9621ac43394dc3669";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/humble/image_transport_plugins/2.5.1-1.tar.gz";
+    name = "2.5.1-1.tar.gz";
+    sha256 = "563c92e40ea22bb5d2425e5166cb6ce6db0d83b5902a5f79884ff2fb6f1dd5f8";
   };
 
   buildType = "ament_cmake";

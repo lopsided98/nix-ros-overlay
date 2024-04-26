@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, ros2launch, std-srvs }:
 buildRosPackage {
   pname = "ros-iron-catch-ros2";
-  version = "0.2.0-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/catch_ros2-release/archive/release/iron/catch_ros2/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "681fe3820843cb74e5f5e9d449bcd497726e441e54963027b7dd2a99e7c94482";
+    url = "https://github.com/ros2-gbp/catch_ros2-release/archive/release/iron/catch_ros2/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "56bfeea2ff6df786b13cb4b4f36d7de72898c7af776b200cb255fb5bee73df0f";
   };
 
   buildType = "ament_cmake";

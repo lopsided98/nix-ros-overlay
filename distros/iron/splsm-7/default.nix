@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-iron-splsm-7";
-  version = "3.0.1-r3";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/r2r_spl-release/archive/release/iron/splsm_7/3.0.1-3.tar.gz";
-    name = "3.0.1-3.tar.gz";
-    sha256 = "25888380de4c0b7284eeadc984d2153c4e9c3d657d78e2d0ac45576cc68f5d07";
+    url = "https://github.com/ros2-gbp/r2r_spl-release/archive/release/iron/splsm_7/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "62c5a0ba8407494aa2051e7abfefb99ad46b932c2d1a5e223dba1c4a77e69841";
   };
 
   buildType = "ament_cmake";

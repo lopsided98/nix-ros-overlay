@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-imu-preintegration, mrpt2 }:
 buildRosPackage {
   pname = "ros-iron-mola-navstate-fuse";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_navstate_fuse/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "d910279ecdcf4d589d155b5a94b6b6fcaa97f24888708fe112b47268d8ec18d1";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_navstate_fuse/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "22f07ca3d43cf3874f435a8c41f211e799e132339e517ec98880c46c5f5860b0";
   };
 
   buildType = "cmake";

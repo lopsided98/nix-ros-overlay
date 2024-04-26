@@ -8,9 +8,9 @@ buildRosPackage {
   version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/iron/gc_spl/3.1.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/iron/gc_spl/3.1.0-1.tar.gz";
     name = "3.1.0-1.tar.gz";
-    sha256 = "34568d0a2dd9fa372f51cfac301dbb92da25b735d32d9f5782f487e9621b0fc2";
+    sha256 = "f19dee091c5f82733a8f1a23d444fe52ca1151ffe6d17b568fc1d72defc8917e";
   };
 
   buildType = "ament_python";

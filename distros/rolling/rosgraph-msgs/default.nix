@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rosgraph-msgs";
-  version = "2.0.1-r2";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/rosgraph_msgs/2.0.1-2.tar.gz";
-    name = "2.0.1-2.tar.gz";
-    sha256 = "4fd94f10eedaa7b45e303eab5b3328d2cfe49a5689f5f7ae424215f1e68507ca";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/rosgraph_msgs/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "db8d0d53dadd3c992def354ddfcc3462cb8ef2726e2f0eca6e0e42c6644386c5";
   };
 
   buildType = "ament_cmake";

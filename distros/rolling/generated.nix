@@ -160,6 +160,8 @@ self: super: {
 
  apriltag-detector = self.callPackage ./apriltag-detector {};
 
+ apriltag-mit = self.callPackage ./apriltag-mit {};
+
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
@@ -504,6 +506,8 @@ self: super: {
 
  ffmpeg-image-transport-msgs = self.callPackage ./ffmpeg-image-transport-msgs {};
 
+ ffmpeg-image-transport-tools = self.callPackage ./ffmpeg-image-transport-tools {};
+
  fields2cover = self.callPackage ./fields2cover {};
 
  filters = self.callPackage ./filters {};
@@ -622,6 +626,8 @@ self: super: {
 
  gz-dartsim-vendor = self.callPackage ./gz-dartsim-vendor {};
 
+ gz-launch-vendor = self.callPackage ./gz-launch-vendor {};
+
  gz-math-vendor = self.callPackage ./gz-math-vendor {};
 
  gz-msgs-vendor = self.callPackage ./gz-msgs-vendor {};
@@ -629,6 +635,8 @@ self: super: {
  gz-physics-vendor = self.callPackage ./gz-physics-vendor {};
 
  gz-plugin-vendor = self.callPackage ./gz-plugin-vendor {};
+
+ gz-ros2-control-demos = self.callPackage ./gz-ros2-control-demos {};
 
  gz-sensors-vendor = self.callPackage ./gz-sensors-vendor {};
 
@@ -660,13 +668,7 @@ self: super: {
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
 
- ignition-cmake2-vendor = self.callPackage ./ignition-cmake2-vendor {};
-
- ignition-math6-vendor = self.callPackage ./ignition-math6-vendor {};
-
  image-common = self.callPackage ./image-common {};
-
- image-geometry = self.callPackage ./image-geometry {};
 
  image-pipeline = self.callPackage ./image-pipeline {};
 
@@ -1164,6 +1166,8 @@ self: super: {
 
  orocos-kdl-vendor = self.callPackage ./orocos-kdl-vendor {};
 
+ ortools-vendor = self.callPackage ./ortools-vendor {};
+
  osqp-vendor = self.callPackage ./osqp-vendor {};
 
  osrf-pycommon = self.callPackage ./osrf-pycommon {};
@@ -1588,6 +1592,18 @@ self: super: {
 
  ros-environment = self.callPackage ./ros-environment {};
 
+ ros-gz = self.callPackage ./ros-gz {};
+
+ ros-gz-bridge = self.callPackage ./ros-gz-bridge {};
+
+ ros-gz-image = self.callPackage ./ros-gz-image {};
+
+ ros-gz-interfaces = self.callPackage ./ros-gz-interfaces {};
+
+ ros-gz-sim = self.callPackage ./ros-gz-sim {};
+
+ ros-gz-sim-demos = self.callPackage ./ros-gz-sim-demos {};
+
  ros-image-to-qimage = self.callPackage ./ros-image-to-qimage {};
 
  ros-industrial-cmake-boilerplate = self.callPackage ./ros-industrial-cmake-boilerplate {};
@@ -1808,6 +1824,10 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ sdformat-test-files = self.callPackage ./sdformat-test-files {};
+
+ sdformat-urdf = self.callPackage ./sdformat-urdf {};
+
  sdformat-vendor = self.callPackage ./sdformat-vendor {};
 
  sdl2-vendor = self.callPackage ./sdl2-vendor {};
@@ -1850,11 +1870,11 @@ self: super: {
 
  snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
 
+ soccer-geometry-msgs = self.callPackage ./soccer-geometry-msgs {};
+
  soccer-interfaces = self.callPackage ./soccer-interfaces {};
 
- soccer-marker-generation = self.callPackage ./soccer-marker-generation {};
-
- soccer-object-msgs = self.callPackage ./soccer-object-msgs {};
+ soccer-model-msgs = self.callPackage ./soccer-model-msgs {};
 
  soccer-vision-2d-msgs = self.callPackage ./soccer-vision-2d-msgs {};
 
@@ -1959,6 +1979,8 @@ self: super: {
  test-interface-files = self.callPackage ./test-interface-files {};
 
  test-msgs = self.callPackage ./test-msgs {};
+
+ test-ros-gz-bridge = self.callPackage ./test-ros-gz-bridge {};
 
  tf2 = self.callPackage ./tf2 {};
 
@@ -2202,11 +2224,15 @@ self: super: {
 
  zbar-ros = self.callPackage ./zbar-ros {};
 
+ zbar-ros-interfaces = self.callPackage ./zbar-ros-interfaces {};
+
  zenoh-bridge-dds = self.callPackage ./zenoh-bridge-dds {};
 
  zlib-point-cloud-transport = self.callPackage ./zlib-point-cloud-transport {};
 
  zmqpp-vendor = self.callPackage ./zmqpp-vendor {};
+
+ zstd-image-transport = self.callPackage ./zstd-image-transport {};
 
  zstd-point-cloud-transport = self.callPackage ./zstd-point-cloud-transport {};
 

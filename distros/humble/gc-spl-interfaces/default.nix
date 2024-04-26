@@ -8,9 +8,9 @@ buildRosPackage {
   version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/humble/gc_spl_interfaces/2.1.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/humble/gc_spl_interfaces/2.1.0-1.tar.gz";
     name = "2.1.0-1.tar.gz";
-    sha256 = "118ed6ee93a837b3a022c06c9ce215e101db62ae6809a0be79fa0cb515670d78";
+    sha256 = "71ae3b11bbcc4d19cc7ae7c7a4b2e33254d3827e716d06ff52023826bc6031cd";
   };
 
   buildType = "ament_cmake";

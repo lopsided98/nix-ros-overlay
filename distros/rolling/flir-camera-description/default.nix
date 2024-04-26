@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.0.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/flir_camera_driver-release/archive/release/rolling/flir_camera_description/2.0.15-1.tar.gz";
+    url = "https://github.com/ros2-gbp/flir_camera_driver-release/archive/release/rolling/flir_camera_description/2.0.15-1.tar.gz";
     name = "2.0.15-1.tar.gz";
     sha256 = "34ae4b598b6c20ba0bf1fc34dc600378692db2a2668592756e0a3f91aecd92cb";
   };

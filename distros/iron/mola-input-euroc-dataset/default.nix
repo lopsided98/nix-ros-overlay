@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt2 }:
 buildRosPackage {
   pname = "ros-iron-mola-input-euroc-dataset";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_input_euroc_dataset/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "17a54f13b0ccbb9f570e64eb35e40755271be63cfb8f806f2a0a0697385a97d9";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_input_euroc_dataset/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "a38ce6bd9340a12a9f05c8bb4bafeee75ccb9484856a3a1a33dc74fa5c736a0d";
   };
 
   buildType = "cmake";

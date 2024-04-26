@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, diagnostic-updater, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-lsc-ros2-driver";
-  version = "1.0.0-r2";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/AutonicsLiDAR-release/lsc_ros2_driver-release/archive/release/humble/lsc_ros2_driver/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "1c59950825906d29f11e58275fabd6bd399d22dc2d609a46381143864d4ac872";
+    url = "https://github.com/AutonicsLiDAR-release/lsc_ros2_driver-release/archive/release/humble/lsc_ros2_driver/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "201027620f2d6c7aaa7c15943446fd1bf4e3292e6f2c55bbb05afd1fb47e830c";
   };
 
   buildType = "ament_cmake";

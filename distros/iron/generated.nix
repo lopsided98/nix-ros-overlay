@@ -162,6 +162,8 @@ self: super: {
 
  apriltag-detector = self.callPackage ./apriltag-detector {};
 
+ apriltag-mit = self.callPackage ./apriltag-mit {};
+
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
@@ -533,6 +535,8 @@ self: super: {
  fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
 
  ffmpeg-image-transport-msgs = self.callPackage ./ffmpeg-image-transport-msgs {};
+
+ ffmpeg-image-transport-tools = self.callPackage ./ffmpeg-image-transport-tools {};
 
  fields2cover = self.callPackage ./fields2cover {};
 
@@ -1316,6 +1320,8 @@ self: super: {
 
  orocos-kdl-vendor = self.callPackage ./orocos-kdl-vendor {};
 
+ ortools-vendor = self.callPackage ./ortools-vendor {};
+
  osqp-vendor = self.callPackage ./osqp-vendor {};
 
  osrf-pycommon = self.callPackage ./osrf-pycommon {};
@@ -1498,7 +1504,13 @@ self: super: {
 
  quaternion-operation = self.callPackage ./quaternion-operation {};
 
+ r2r-spl = self.callPackage ./r2r-spl {};
+
  r2r-spl-7 = self.callPackage ./r2r-spl-7 {};
+
+ r2r-spl-8 = self.callPackage ./r2r-spl-8 {};
+
+ r2r-spl-test-interfaces = self.callPackage ./r2r-spl-test-interfaces {};
 
  radar-msgs = self.callPackage ./radar-msgs {};
 
@@ -2110,9 +2122,13 @@ self: super: {
 
  snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
 
+ soccer-geometry-msgs = self.callPackage ./soccer-geometry-msgs {};
+
  soccer-interfaces = self.callPackage ./soccer-interfaces {};
 
  soccer-marker-generation = self.callPackage ./soccer-marker-generation {};
+
+ soccer-model-msgs = self.callPackage ./soccer-model-msgs {};
 
  soccer-object-msgs = self.callPackage ./soccer-object-msgs {};
 
@@ -2143,6 +2159,10 @@ self: super: {
  splsm-7 = self.callPackage ./splsm-7 {};
 
  splsm-7-conversion = self.callPackage ./splsm-7-conversion {};
+
+ splsm-8 = self.callPackage ./splsm-8 {};
+
+ splsm-8-conversion = self.callPackage ./splsm-8-conversion {};
 
  sqlite3-vendor = self.callPackage ./sqlite3-vendor {};
 

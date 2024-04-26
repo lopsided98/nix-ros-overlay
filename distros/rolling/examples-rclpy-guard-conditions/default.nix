@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-rolling-examples-rclpy-guard-conditions";
-  version = "0.19.2-r1";
+  version = "0.19.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/rolling/examples_rclpy_guard_conditions/0.19.2-1.tar.gz";
-    name = "0.19.2-1.tar.gz";
-    sha256 = "ea26b8f7f5f0a1dc18027cdb2261c34b27f5474be0b9b562a4ab9d2e9c3640c4";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/rolling/examples_rclpy_guard_conditions/0.19.3-1.tar.gz";
+    name = "0.19.3-1.tar.gz";
+    sha256 = "f7db9a934312f3a6d1c19bba3d294a2d6c7a40d2d5148a790b4ff553dac14530";
   };
 
   buildType = "ament_python";

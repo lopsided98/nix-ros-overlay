@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-fastrtps-cmake-module";
-  version = "3.5.0-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/rolling/fastrtps_cmake_module/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "413181feb19d47f873646e2ec8be85ad6319abac36f5c6e0fa0b3f01ac908a96";
+    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/rolling/fastrtps_cmake_module/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "c9b5a64fbccb074fc6fe7753bfe5f33b14ace01d3bd52ac029a326e22bc8655d";
   };
 
   buildType = "ament_cmake";

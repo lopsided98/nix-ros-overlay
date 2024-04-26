@@ -190,6 +190,8 @@ self: super: {
 
  apriltag-detector = self.callPackage ./apriltag-detector {};
 
+ apriltag-mit = self.callPackage ./apriltag-mit {};
+
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
@@ -303,6 +305,30 @@ self: super: {
  camera-ros = self.callPackage ./camera-ros {};
 
  can-msgs = self.callPackage ./can-msgs {};
+
+ canopen = self.callPackage ./canopen {};
+
+ canopen-402-driver = self.callPackage ./canopen-402-driver {};
+
+ canopen-base-driver = self.callPackage ./canopen-base-driver {};
+
+ canopen-core = self.callPackage ./canopen-core {};
+
+ canopen-fake-slaves = self.callPackage ./canopen-fake-slaves {};
+
+ canopen-interfaces = self.callPackage ./canopen-interfaces {};
+
+ canopen-master-driver = self.callPackage ./canopen-master-driver {};
+
+ canopen-proxy-driver = self.callPackage ./canopen-proxy-driver {};
+
+ canopen-ros2-control = self.callPackage ./canopen-ros2-control {};
+
+ canopen-ros2-controllers = self.callPackage ./canopen-ros2-controllers {};
+
+ canopen-tests = self.callPackage ./canopen-tests {};
+
+ canopen-utils = self.callPackage ./canopen-utils {};
 
  caret-analyze-cpp-impl = self.callPackage ./caret-analyze-cpp-impl {};
 
@@ -690,6 +716,8 @@ self: super: {
 
  ffmpeg-image-transport-msgs = self.callPackage ./ffmpeg-image-transport-msgs {};
 
+ ffmpeg-image-transport-tools = self.callPackage ./ffmpeg-image-transport-tools {};
+
  fields2cover = self.callPackage ./fields2cover {};
 
  filters = self.callPackage ./filters {};
@@ -1075,6 +1103,8 @@ self: super: {
  launch-xml = self.callPackage ./launch-xml {};
 
  launch-yaml = self.callPackage ./launch-yaml {};
+
+ lely-core-libraries = self.callPackage ./lely-core-libraries {};
 
  leo = self.callPackage ./leo {};
 
@@ -1548,11 +1578,35 @@ self: super: {
 
  odom-to-tf-ros2 = self.callPackage ./odom-to-tf-ros2 {};
 
+ omni-base-2dnav = self.callPackage ./omni-base-2dnav {};
+
+ omni-base-bringup = self.callPackage ./omni-base-bringup {};
+
+ omni-base-controller-configuration = self.callPackage ./omni-base-controller-configuration {};
+
+ omni-base-description = self.callPackage ./omni-base-description {};
+
+ omni-base-gazebo = self.callPackage ./omni-base-gazebo {};
+
+ omni-base-laser-sensors = self.callPackage ./omni-base-laser-sensors {};
+
+ omni-base-maps = self.callPackage ./omni-base-maps {};
+
+ omni-base-navigation = self.callPackage ./omni-base-navigation {};
+
+ omni-base-robot = self.callPackage ./omni-base-robot {};
+
+ omni-base-simulation = self.callPackage ./omni-base-simulation {};
+
  ompl = self.callPackage ./ompl {};
 
  openni2-camera = self.callPackage ./openni2-camera {};
 
+ openvdb-vendor = self.callPackage ./openvdb-vendor {};
+
  orocos-kdl-vendor = self.callPackage ./orocos-kdl-vendor {};
+
+ ortools-vendor = self.callPackage ./ortools-vendor {};
 
  osqp-vendor = self.callPackage ./osqp-vendor {};
 
@@ -1806,7 +1860,13 @@ self: super: {
 
  quaternion-operation = self.callPackage ./quaternion-operation {};
 
+ r2r-spl = self.callPackage ./r2r-spl {};
+
  r2r-spl-7 = self.callPackage ./r2r-spl-7 {};
+
+ r2r-spl-8 = self.callPackage ./r2r-spl-8 {};
+
+ r2r-spl-test-interfaces = self.callPackage ./r2r-spl-test-interfaces {};
 
  radar-msgs = self.callPackage ./radar-msgs {};
 
@@ -2464,6 +2524,8 @@ self: super: {
 
  spacenav = self.callPackage ./spacenav {};
 
+ spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
+
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
 
  spinnaker-camera-driver = self.callPackage ./spinnaker-camera-driver {};
@@ -2473,6 +2535,10 @@ self: super: {
  splsm-7 = self.callPackage ./splsm-7 {};
 
  splsm-7-conversion = self.callPackage ./splsm-7-conversion {};
+
+ splsm-8 = self.callPackage ./splsm-8 {};
+
+ splsm-8-conversion = self.callPackage ./splsm-8-conversion {};
 
  sqlite3-vendor = self.callPackage ./sqlite3-vendor {};
 

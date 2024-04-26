@@ -8,9 +8,9 @@ buildRosPackage {
   version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/iron/game_controller_spl_interfaces/3.1.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/iron/game_controller_spl_interfaces/3.1.0-1.tar.gz";
     name = "3.1.0-1.tar.gz";
-    sha256 = "f5f264117e128ea0329e8e588cdd07b18d54f31c5551d1adefcbd67858bee4f6";
+    sha256 = "2ebd157e606bfa3b7b9a681930d14b53d7ee3c463471638c40c9f9a42803ec70";
   };
 
   buildType = "ament_cmake";

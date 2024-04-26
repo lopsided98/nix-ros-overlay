@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, qt-gui }:
 buildRosPackage {
   pname = "ros-rolling-qt-gui-app";
-  version = "2.7.3-r1";
+  version = "2.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui_app/2.7.3-1.tar.gz";
-    name = "2.7.3-1.tar.gz";
-    sha256 = "8914647f8b6e42dd98978e6b965448da1d8803f402a4f25521059ce447ffc0c0";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui_app/2.7.4-1.tar.gz";
+    name = "2.7.4-1.tar.gz";
+    sha256 = "1277cca1a9f01e2f778faff7a7f8bddc4f10d3cafaadcf9d0987180faa5b184a";
   };
 
   buildType = "ament_cmake";

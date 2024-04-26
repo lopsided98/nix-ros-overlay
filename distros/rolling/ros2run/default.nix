@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, pythonPackages, ros2cli, ros2pkg }:
 buildRosPackage {
   pname = "ros-rolling-ros2run";
-  version = "0.31.2-r1";
+  version = "0.32.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/rolling/ros2run/0.31.2-1.tar.gz";
-    name = "0.31.2-1.tar.gz";
-    sha256 = "579a296f3e54c6034bec86e56262ab4e9b88ebf4ca85a8432f6aadd775aa2e67";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/rolling/ros2run/0.32.0-1.tar.gz";
+    name = "0.32.0-1.tar.gz";
+    sha256 = "0cf99ed71c5e62f38d6e85c2d7b20d14231ed5d1d84e67f2d6de2b0cdbf93e56";
   };
 
   buildType = "ament_python";

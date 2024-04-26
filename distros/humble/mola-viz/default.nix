@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt2 }:
 buildRosPackage {
   pname = "ros-humble-mola-viz";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_viz/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "a405138ba962fc27b9b7de326eea11847944ac9d241daaf1f7a603456c2d1a34";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_viz/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "b0e2eee497b36234d6e96a92f1546a5faef6b38fc3ffa6bc128719fc2bce5fcf";
   };
 
   buildType = "cmake";

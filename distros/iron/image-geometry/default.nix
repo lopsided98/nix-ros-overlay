@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, opencv, sensor-msgs }:
 buildRosPackage {
   pname = "ros-iron-image-geometry";
-  version = "3.4.0-r3";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/iron/image_geometry/3.4.0-3.tar.gz";
-    name = "3.4.0-3.tar.gz";
-    sha256 = "28e96420a32aefdc01a61afde629b00aafc445db85964ed73294bfd83ceb021f";
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/iron/image_geometry/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "33bebfd72ae43e334d2d5a37556009df9f949679c67f477a56bccda0531b750a";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, soccer-vision-attribute-msgs, vision-msgs }:
 buildRosPackage {
   pname = "ros-iron-soccer-vision-2d-msgs";
-  version = "0.2.0-r3";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/soccer_interfaces-release/archive/release/iron/soccer_vision_2d_msgs/0.2.0-3.tar.gz";
-    name = "0.2.0-3.tar.gz";
-    sha256 = "1f0c813ebbce2ee3426d3803e298276be8d53467dbfa378f784e970711d6b510";
+    url = "https://github.com/ros2-gbp/soccer_interfaces-release/archive/release/iron/soccer_vision_2d_msgs/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "7acb311d7d019bdd1ee8007b4a1f04b53f590cf08eaa41cc0350e4923d9cd254";
   };
 
   buildType = "ament_cmake";

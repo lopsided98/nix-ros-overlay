@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, sqlite }:
 buildRosPackage {
   pname = "ros-rolling-sqlite3-vendor";
-  version = "0.25.0-r1";
+  version = "0.26.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/sqlite3_vendor/0.25.0-1.tar.gz";
-    name = "0.25.0-1.tar.gz";
-    sha256 = "44c8ae1a96a10f3fb0e60fc973c76be54b30f54ff649532fc6a70e58ac17453e";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/sqlite3_vendor/0.26.1-1.tar.gz";
+    name = "0.26.1-1.tar.gz";
+    sha256 = "ce070baeb77346ccdf7231e94df33ceb42daf18e9cfd361a34b5e92ece7cfbdd";
   };
 
   buildType = "ament_cmake";

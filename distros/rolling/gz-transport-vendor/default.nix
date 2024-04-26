@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cppzmq, gz-cmake-vendor, gz-math-vendor, gz-msgs-vendor, gz-tools-vendor, gz-utils-vendor, pkg-config, protobuf, python3, python3Packages, pythonPackages, sqlite, util-linux }:
 buildRosPackage {
   pname = "ros-rolling-gz-transport-vendor";
-  version = "0.0.2-r1";
+  version = "0.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_transport_vendor-release/archive/release/rolling/gz_transport_vendor/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "d469720bda8a063cb13cbeec267522230d79a81924c4be60100e992661d957d3";
+    url = "https://github.com/ros2-gbp/gz_transport_vendor-release/archive/release/rolling/gz_transport_vendor/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
+    sha256 = "e94fa6308ef5726f87dcb3f1dafcd58c433ff4a436c48ccd42d12dfe162d6af0";
   };
 
   buildType = "ament_cmake";

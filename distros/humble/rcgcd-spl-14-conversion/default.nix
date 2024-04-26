@@ -8,9 +8,9 @@ buildRosPackage {
   version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/humble/rcgcd_spl_14_conversion/2.1.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/humble/rcgcd_spl_14_conversion/2.1.0-1.tar.gz";
     name = "2.1.0-1.tar.gz";
-    sha256 = "935b2e2e3a2eb54b45cb1cd469bd457f5dcc9f2c0c9fcf5ab84e25e77a8709a5";
+    sha256 = "4e7aab6c4a6bc6d9688768bed265ab5b7a70241dcad54cf090e76020fb03d58e";
   };
 
   buildType = "ament_python";

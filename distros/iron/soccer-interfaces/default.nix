@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, soccer-vision-2d-msgs, soccer-vision-3d-msgs, soccer-vision-attribute-msgs }:
 buildRosPackage {
   pname = "ros-iron-soccer-interfaces";
-  version = "0.2.0-r3";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/soccer_interfaces-release/archive/release/iron/soccer_interfaces/0.2.0-3.tar.gz";
-    name = "0.2.0-3.tar.gz";
-    sha256 = "53f7e5c8b9494ace40c05d703cd8b6ade2d75f72886ca2723e25dfa8edbcfbf0";
+    url = "https://github.com/ros2-gbp/soccer_interfaces-release/archive/release/iron/soccer_interfaces/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "ac183416d82adb2fc780172e73b1be2a16eb1a71f2154da4d6a5034fa5668b07";
   };
 
   buildType = "ament_cmake";

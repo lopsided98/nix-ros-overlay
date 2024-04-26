@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-rolling-rosbag2-test-msgdefs";
-  version = "0.25.0-r1";
+  version = "0.26.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_test_msgdefs/0.25.0-1.tar.gz";
-    name = "0.25.0-1.tar.gz";
-    sha256 = "12c86590a270b2fbaad801e051c78424dff5bda35f10260454a3690bb8d8693c";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_test_msgdefs/0.26.1-1.tar.gz";
+    name = "0.26.1-1.tar.gz";
+    sha256 = "94c599b433e704869d498e2f7402fb560d374ce1b69b17c0f43cc93af2d425f7";
   };
 
   buildType = "ament_cmake";
