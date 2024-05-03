@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime }:
 buildRosPackage {
   pname = "ros-noetic-cob-srvs";
-  version = "0.7.10-r1";
+  version = "0.7.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/4am-robotics/cob_common-release/archive/release/noetic/cob_srvs/0.7.10-1.tar.gz";
-    name = "0.7.10-1.tar.gz";
-    sha256 = "e2f647572f2ef18bd42c8d2bfd86296355be963387b962360ac32f2e1a831360";
+    url = "https://github.com/4am-robotics/cob_common-release/archive/release/noetic/cob_srvs/0.7.11-1.tar.gz";
+    name = "0.7.11-1.tar.gz";
+    sha256 = "636fb0f354dd232129c47f35e7daea21d284dcc2a88fef2aaf439205521e6820";
   };
 
   buildType = "catkin";

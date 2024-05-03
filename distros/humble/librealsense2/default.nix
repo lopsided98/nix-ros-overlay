@@ -2,20 +2,21 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, libusb1, openssl, pkg-config, udev }:
+{ lib, buildRosPackage, fetchurl, cmake, git, glfw3, libGL, libGLU, libusb1, openssl, pkg-config, udev, xorg }:
 buildRosPackage {
   pname = "ros-humble-librealsense2";
-  version = "2.54.1-r1";
+  version = "2.55.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/humble/librealsense2/2.54.1-1.tar.gz";
-    name = "2.54.1-1.tar.gz";
-    sha256 = "4d24c5f3e178071855f666eae87966fb7f1faa29bbc48710c5e3ee478ea4c0bc";
+    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/humble/librealsense2/2.55.1-1.tar.gz";
+    name = "2.55.1-1.tar.gz";
+    sha256 = "c4f80335f89d731dc6320a7453c69772e9d2351b94220e6e82f0400a40e06385";
   };
 
-  buildType = "ament_cmake";
-  buildInputs = [ ament-cmake libusb1 openssl pkg-config udev ];
-  nativeBuildInputs = [ ament-cmake ];
+  buildType = "cmake";
+  buildInputs = [ cmake git libusb1 openssl pkg-config udev ];
+  propagatedBuildInputs = [ glfw3 libGL libGLU xorg.libX11 ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = "Library for controlling and capturing data from the Intel(R) RealSense(TM) D400 devices.";

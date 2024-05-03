@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-iron-tf2-msgs";
-  version = "0.31.5-r1";
+  version = "0.31.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/iron/tf2_msgs/0.31.5-1.tar.gz";
-    name = "0.31.5-1.tar.gz";
-    sha256 = "4216c6ac55bb032d98edbc8e96ad6929d4c13779dde27279a9507bba5aa648a2";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/iron/tf2_msgs/0.31.6-1.tar.gz";
+    name = "0.31.6-1.tar.gz";
+    sha256 = "80834cc6b5fc656118f6f1a6b142c0647e1ddeff668967de2e7bc81d299e109a";
   };
 
   buildType = "ament_cmake";

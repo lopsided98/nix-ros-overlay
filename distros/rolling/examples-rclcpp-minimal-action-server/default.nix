@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, rclcpp, rclcpp-action }:
 buildRosPackage {
   pname = "ros-rolling-examples-rclcpp-minimal-action-server";
-  version = "0.19.2-r1";
+  version = "0.20.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/rolling/examples_rclcpp_minimal_action_server/0.19.2-1.tar.gz";
-    name = "0.19.2-1.tar.gz";
-    sha256 = "6a739dd0005cb06a70a4ef01f7dc908cee04c0c341e0e1dd68109271de7ea3b0";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/rolling/examples_rclcpp_minimal_action_server/0.20.0-1.tar.gz";
+    name = "0.20.0-1.tar.gz";
+    sha256 = "39f36a220adb95f6b0574bc83fcad1c65771979c5ca09af58e789815a83859c7";
   };
 
   buildType = "ament_cmake";

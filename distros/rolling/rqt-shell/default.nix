@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python-qt-binding, python3Packages, pythonPackages, qt-gui, qt-gui-py-common, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-rolling-rqt-shell";
-  version = "1.2.1-r2";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_shell-release/archive/release/rolling/rqt_shell/1.2.1-2.tar.gz";
-    name = "1.2.1-2.tar.gz";
-    sha256 = "0432eebf630f25049aa064a2a145be29ccca196ae47f19d031217dc309a708ea";
+    url = "https://github.com/ros2-gbp/rqt_shell-release/archive/release/rolling/rqt_shell/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "81b7a1e15a009104ec8525c454fce9887fad3e670b61d974d89601e2c15122d8";
   };
 
   buildType = "ament_python";

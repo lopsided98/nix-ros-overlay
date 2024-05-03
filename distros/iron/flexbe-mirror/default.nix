@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, flexbe-core, flexbe-msgs, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-iron-flexbe-mirror";
-  version = "2.3.3-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/iron/flexbe_mirror/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "5d099242522218ab4ebba12236b422ca078522cbe80c38cc105bb638a1a0d97f";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/iron/flexbe_mirror/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "6330b53230aa30c401c51edcb13104bc1373f884436780ffb3cc09a17a25967c";
   };
 
   buildType = "ament_python";

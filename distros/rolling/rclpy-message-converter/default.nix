@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, builtin-interfaces, geometry-msgs, python3Packages, pythonPackages, rclpy, rclpy-message-converter-msgs, rosidl-default-generators, rosidl-parser, rosidl-runtime-py, std-msgs, std-srvs, tf2-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rclpy-message-converter";
-  version = "2.0.1-r3";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rospy_message_converter-release/archive/release/rolling/rclpy_message_converter/2.0.1-3.tar.gz";
-    name = "2.0.1-3.tar.gz";
-    sha256 = "0793b6f831738a7f1ac59da71dbce6fbfa65c853504c7a6d2bb272774d72b010";
+    url = "https://github.com/ros2-gbp/rospy_message_converter-release/archive/release/rolling/rclpy_message_converter/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "3400d67c0bbf7940010baaeafbcb389d289ba07cd8dfd064ef8f634e34c9b675";
   };
 
   buildType = "ament_python";

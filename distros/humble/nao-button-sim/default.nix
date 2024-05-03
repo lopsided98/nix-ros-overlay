@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, nao-sensor-msgs, pythonPackages }:
 buildRosPackage {
   pname = "ros-humble-nao-button-sim";
-  version = "0.1.1-r4";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nao_button_sim-release/archive/release/humble/nao_button_sim/0.1.1-4.tar.gz";
-    name = "0.1.1-4.tar.gz";
-    sha256 = "9bc9e8864b6cc26cb6cab39180f3a4becc38902e72cfe3f2da735d610c058f12";
+    url = "https://github.com/ros2-gbp/nao_button_sim-release/archive/release/humble/nao_button_sim/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "d095e863f718a0adbf1c4af961964c320f73942905ac5badf7dedf3ca781b5a4";
   };
 
   buildType = "ament_python";

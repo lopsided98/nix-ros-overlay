@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, pythonPackages, rcgcrd-spl-4 }:
 buildRosPackage {
   pname = "ros-rolling-rcgcrd-spl-4-conversion";
-  version = "4.0.0-r2";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/rolling/rcgcrd_spl_4_conversion/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "241acd27c087f7db4ddd7f8751f581cd42752ec9b168174cfcc352c06b894512";
+    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/rolling/rcgcrd_spl_4_conversion/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "c759bc681edfa4ca2691194e97fceb261bd14dcd64e3215cebdedbd1a4de292b";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-humble-rclpy-message-converter-msgs";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rospy_message_converter-release/archive/release/humble/rclpy_message_converter_msgs/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "3dac64ea287d7826168b18431c24f989621f740a30eeaf13af84e4334b6b4762";
+    url = "https://github.com/ros2-gbp/rospy_message_converter-release/archive/release/humble/rclpy_message_converter_msgs/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "da24f87126fb7db843ca5b0e9c5fab0a6d2e7220844725af6296280d7b543419";
   };
 
   buildType = "ament_cmake";

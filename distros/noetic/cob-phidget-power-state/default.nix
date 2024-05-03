@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cob-msgs, cob-phidgets, rospy }:
 buildRosPackage {
   pname = "ros-noetic-cob-phidget-power-state";
-  version = "0.7.16-r2";
+  version = "0.7.17-r2";
 
   src = fetchurl {
-    url = "https://github.com/4am-robotics/cob_driver-release/archive/release/noetic/cob_phidget_power_state/0.7.16-2.tar.gz";
-    name = "0.7.16-2.tar.gz";
-    sha256 = "2a7796b920f5a74d71b5572a0cd817e1a665628f28149888420cb1ce4362430b";
+    url = "https://github.com/4am-robotics/cob_driver-release/archive/release/noetic/cob_phidget_power_state/0.7.17-2.tar.gz";
+    name = "0.7.17-2.tar.gz";
+    sha256 = "14b1a8b62cc620ec7ede037df9598e45dc4d97850b474e45dfe82c197fb43459";
   };
 
   buildType = "catkin";

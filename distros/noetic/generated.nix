@@ -2352,6 +2352,8 @@ self: super: {
 
  opw-kinematics = self.callPackage ./opw-kinematics {};
 
+ ortools-vendor = self.callPackage ./ortools-vendor {};
+
  osm-cartography = self.callPackage ./osm-cartography {};
 
  osqp = self.callPackage ./osqp {};

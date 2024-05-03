@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, python3Packages, rospy, rostopic }:
 buildRosPackage {
   pname = "ros-noetic-generic-throttle";
-  version = "0.6.34-r1";
+  version = "0.6.35-r2";
 
   src = fetchurl {
-    url = "https://github.com/4am-robotics/cob_command_tools-release/archive/release/noetic/generic_throttle/0.6.34-1.tar.gz";
-    name = "0.6.34-1.tar.gz";
-    sha256 = "bed8095818cd955e0afad4a0f3c9db2872c51b1ff44c2c5f4b0e08a534f722c4";
+    url = "https://github.com/4am-robotics/cob_command_tools-release/archive/release/noetic/generic_throttle/0.6.35-2.tar.gz";
+    name = "0.6.35-2.tar.gz";
+    sha256 = "78cf9424b8e70269e91dbc3571f0ea86c3105875e5b1bda47447122c3eee4089";
   };
 
   buildType = "catkin";

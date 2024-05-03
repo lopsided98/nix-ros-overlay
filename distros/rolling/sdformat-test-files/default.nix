@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-rolling-sdformat-test-files";
-  version = "1.0.1-r2";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sdformat_urdf-release/archive/release/rolling/sdformat_test_files/1.0.1-2.tar.gz";
-    name = "1.0.1-2.tar.gz";
-    sha256 = "fd920008db6128a0d3399f99ac07c5ff60e88505980391f5f7277a3ac5075572";
+    url = "https://github.com/ros2-gbp/sdformat_urdf-release/archive/release/rolling/sdformat_test_files/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "387c10d875dbf35da8b35e8358db6714fac10e2b5e5239827dd992ee05ba7b2e";
   };
 
   buildType = "cmake";
@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = ''Example SDFormat XML files for testing tools using hthis format.'';
+    description = "Example SDFormat XML files for testing tools using hthis format.";
     license = with lib.licenses; [ asl20 ];
   };
 }

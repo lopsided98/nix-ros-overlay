@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, builtin-interfaces, console-bridge, console-bridge-vendor, geometry-msgs, rcutils, rosidl-runtime-cpp }:
 buildRosPackage {
   pname = "ros-iron-tf2";
-  version = "0.31.5-r1";
+  version = "0.31.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/iron/tf2/0.31.5-1.tar.gz";
-    name = "0.31.5-1.tar.gz";
-    sha256 = "f03e1ea75af1bc695c70492ddd56db2a9760614669a03a63622309b806682183";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/iron/tf2/0.31.6-1.tar.gz";
+    name = "0.31.6-1.tar.gz";
+    sha256 = "fa5757af93f7142c928df4f0afd7459c1e09de7dfdfc727245a556cfc65d4071";
   };
 
   buildType = "ament_cmake";

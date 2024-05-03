@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-qt-dotgraph";
-  version = "2.7.3-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_dotgraph/2.7.3-1.tar.gz";
-    name = "2.7.3-1.tar.gz";
-    sha256 = "5438763644890089bd1db01f2842e03ae0b6eab91756914e721fe1c5fc8d65d8";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_dotgraph/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "cc423b4ac4390e2446d8586e0139b01f8db09fc88a453d332aaeec68a676a24c";
   };
 
   buildType = "ament_cmake";

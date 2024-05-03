@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-example-interfaces";
-  version = "0.12.0-r2";
+  version = "0.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/example_interfaces-release/archive/release/rolling/example_interfaces/0.12.0-2.tar.gz";
-    name = "0.12.0-2.tar.gz";
-    sha256 = "83d902683762cbcbdde4d4581da83690aba56bfe5f4907faf968925faeb06f6a";
+    url = "https://github.com/ros2-gbp/example_interfaces-release/archive/release/rolling/example_interfaces/0.13.0-1.tar.gz";
+    name = "0.13.0-1.tar.gz";
+    sha256 = "cf5950e594a63c38836eb3d6d69f4b011ee00b79e225fe38d01c286147674831";
   };
 
   buildType = "ament_cmake";
