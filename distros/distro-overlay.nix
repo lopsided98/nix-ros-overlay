@@ -65,6 +65,12 @@ let
 
     image-cb-detector = patchBoostSignals rosSuper.image-cb-detector;
 
+    jsk-recognition-msgs = rosSuper.jsk-recognition-msgs.overrideAttrs ({
+      buildInputs ? [], ...
+    }: {
+      buildInputs = buildInputs ++ [ rosSuper.ros-environment ];
+    });
+
     laser-cb-detector = patchBoostSignals rosSuper.laser-cb-detector;
 
     libfranka = rosSuper.libfranka.overrideAttrs ({
