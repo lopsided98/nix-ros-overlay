@@ -66,9 +66,12 @@ let
     image-cb-detector = patchBoostSignals rosSuper.image-cb-detector;
 
     jsk-recognition-msgs = rosSuper.jsk-recognition-msgs.overrideAttrs ({
-      buildInputs ? [], ...
+      buildInputs ? [], postPatch ? "", ...
     }: {
       buildInputs = buildInputs ++ [ rosSuper.ros-environment ];
+      postPatch = ''
+        substituteInPlace CMakeLists.txt --replace "catkin_python_setup()" ""
+      '';
     });
 
     laser-cb-detector = patchBoostSignals rosSuper.laser-cb-detector;
