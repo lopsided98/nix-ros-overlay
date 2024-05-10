@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, diagnostic-msgs, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-cob-sick-lms1xx";
-  version = "0.7.16-r2";
+  version = "0.7.17-r2";
 
   src = fetchurl {
-    url = "https://github.com/4am-robotics/cob_driver-release/archive/release/noetic/cob_sick_lms1xx/0.7.16-2.tar.gz";
-    name = "0.7.16-2.tar.gz";
-    sha256 = "30cb9af324fa7e9e515bf9faf50c2565f6cf081df959cf4ea0dd54974204b4bb";
+    url = "https://github.com/4am-robotics/cob_driver-release/archive/release/noetic/cob_sick_lms1xx/0.7.17-2.tar.gz";
+    name = "0.7.17-2.tar.gz";
+    sha256 = "138b29e4136fc2a2606a61bff979b7d5ddb7f0abaf45aa227693406f539dbb90";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, message-filters, rclcpp, sensor-msgs, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-imu-complementary-filter";
-  version = "2.1.3-r3";
+  version = "2.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/iron/imu_complementary_filter/2.1.3-3.tar.gz";
-    name = "2.1.3-3.tar.gz";
-    sha256 = "82a0bde5bc164fa46c1461ce8c9cb2945baf7ff0f7eae0e45ca8b5df7c92b279";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/iron/imu_complementary_filter/2.1.4-1.tar.gz";
+    name = "2.1.4-1.tar.gz";
+    sha256 = "fca3d0b22750be7b1f2927295b0a7c1fb01023e802bf58559e201ee4c784bf93";
   };
 
   buildType = "ament_cmake";

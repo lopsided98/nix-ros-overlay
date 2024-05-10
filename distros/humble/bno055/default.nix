@@ -5,20 +5,20 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, example-interfaces, python3Packages, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-bno055";
-  version = "0.4.1-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bno055-release/archive/release/humble/bno055/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "9065ac576a47e5ae8d8d8f5b2b1bfe8babaea795d310dadc2791abe31cb02fe7";
+    url = "https://github.com/ros2-gbp/bno055-release/archive/release/humble/bno055/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "036395db0a15510bd3845458f53178123187eb6dc04bf871090971d9a02278be";
   };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
-  propagatedBuildInputs = [ example-interfaces python3Packages.pyserial rclpy std-msgs ];
+  propagatedBuildInputs = [ example-interfaces python3Packages.i2c-tools python3Packages.pyserial rclpy std-msgs ];
 
   meta = {
-    description = ''Bosch BNO055 IMU driver for ROS2'';
+    description = "Bosch BNO055 IMU driver for ROS2";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

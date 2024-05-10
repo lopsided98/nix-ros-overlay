@@ -1,23 +1,23 @@
 
-# Copyright 2023 Open Source Robotics Foundation
+# Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-ament-flake8";
-  version = "0.15.2-r1";
+  version = "0.18.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_flake8/0.15.2-1.tar.gz";
-    name = "0.15.2-1.tar.gz";
-    sha256 = "925de56e63124aa61a2d58c97ef67f16e5a6722e635a50a7e10fb3fa3b716d0b";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_flake8/0.18.0-1.tar.gz";
+    name = "0.18.0-1.tar.gz";
+    sha256 = "3f1a922310d494bb748a6c256ded721ced29dc4db045b1befbd493072435f653";
   };
 
   buildType = "ament_python";
-  propagatedBuildInputs = [ ament-lint python3Packages.flake8 ];
+  propagatedBuildInputs = [ ament-lint python3Packages.flake8 python3Packages.flake8-docstrings python3Packages.flake8-import-order ];
 
   meta = {
-    description = ''The ability to check code for style and syntax conventions with flake8.'';
+    description = "The ability to check code for style and syntax conventions with flake8.";
     license = with lib.licenses; [ asl20 ];
   };
 }

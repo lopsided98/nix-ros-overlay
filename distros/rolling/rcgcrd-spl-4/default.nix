@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rcgcrd-spl-4";
-  version = "4.0.0-r2";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gc_spl-release/archive/release/rolling/rcgcrd_spl_4/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "05f2193432b30adf2a830a35410a7babcd2cb9632f62665114975c822c804541";
+    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/rolling/rcgcrd_spl_4/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "04ac79407a915442446747ad359863ff6a6f0f5f83acb9137345f4f9b72c8016";
   };
 
   buildType = "ament_cmake";

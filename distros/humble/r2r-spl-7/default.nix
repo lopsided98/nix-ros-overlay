@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages, rclpy, splsm-7-conversion }:
 buildRosPackage {
   pname = "ros-humble-r2r-spl-7";
-  version = "2.0.1-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/r2r_spl-release/archive/release/humble/r2r_spl_7/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "f5ca4a67fc245d933b43ebe7728fa4927c19327c078fda027874a7f59c9bd89c";
+    url = "https://github.com/ros2-gbp/r2r_spl-release/archive/release/humble/r2r_spl_7/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "6fc3b62435b782132e68f3c61816e29eb653029f5e64e3b8931f90f79c36fae8";
   };
 
   buildType = "ament_python";

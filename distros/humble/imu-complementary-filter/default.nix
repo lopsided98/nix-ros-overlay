@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, message-filters, rclcpp, sensor-msgs, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-imu-complementary-filter";
-  version = "2.1.3-r1";
+  version = "2.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/humble/imu_complementary_filter/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "5f4e6d1b85ea858d49a5d22aa1a0782b71776735a5cb243912032aab24a25da6";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/humble/imu_complementary_filter/2.1.4-1.tar.gz";
+    name = "2.1.4-1.tar.gz";
+    sha256 = "d7d48c6daffe6feb36a4a373cd7ae6596defa74027ce96260d235b5ef7bfc3f9";
   };
 
   buildType = "ament_cmake";

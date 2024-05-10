@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-examples-rclcpp-cbg-executor";
-  version = "0.19.2-r1";
+  version = "0.20.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/rolling/examples_rclcpp_cbg_executor/0.19.2-1.tar.gz";
-    name = "0.19.2-1.tar.gz";
-    sha256 = "66b116d405400cade2fa382707e03847827ee11c2ac25c207c5c6a2b449ff370";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/rolling/examples_rclcpp_cbg_executor/0.20.0-1.tar.gz";
+    name = "0.20.0-1.tar.gz";
+    sha256 = "09a07dae3268891d4b00d8570729e605e70105c248861d06fcfa78164ddbefe6";
   };
 
   buildType = "ament_cmake";

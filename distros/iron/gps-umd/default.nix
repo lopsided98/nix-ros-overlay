@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gps-msgs, gps-tools, gpsd-client }:
 buildRosPackage {
   pname = "ros-iron-gps-umd";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/iron/gps_umd/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "5d60244beeaaf519a15cc973a93eca4d0118b5e66f37220da7ee56f0f5c60e70";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/iron/gps_umd/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "615c6bdde2c51b996b6a06cd733d6665e6c2aa6312261e244cd673b75b43fdf6";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, joy-linux, teleop-twist-joy, teleop-twist-keyboard }:
 buildRosPackage {
   pname = "ros-rolling-leo-teleop";
-  version = "3.0.1-r2";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/rolling/leo_teleop/3.0.1-2.tar.gz";
-    name = "3.0.1-2.tar.gz";
-    sha256 = "e12120b1c427438556c5c2480bcd3237bced4a681c290126290fcade2a646ee6";
+    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/rolling/leo_teleop/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "922b8b31ad476cf996b4ddc2c4e61c0813ac990c49207503192f4c3df725a393";
   };
 
   buildType = "ament_cmake";

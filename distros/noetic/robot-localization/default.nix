@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, cmake-modules, diagnostic-msgs, diagnostic-updater, eigen, eigen-conversions, geographic-msgs, geographiclib, geometry-msgs, message-filters, message-generation, message-runtime, nav-msgs, nodelet, python3Packages, rosbag, roscpp, roslint, rostest, rosunit, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-robot-localization";
-  version = "2.7.5-r1";
+  version = "2.7.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/cra-ros-pkg/robot_localization-release/archive/release/noetic/robot_localization/2.7.5-1.tar.gz";
-    name = "2.7.5-1.tar.gz";
-    sha256 = "d1414c2fe217759515e8ede82d674060aba7a898da82e5bff3cd1268c0fa5714";
+    url = "https://github.com/cra-ros-pkg/robot_localization-release/archive/release/noetic/robot_localization/2.7.6-1.tar.gz";
+    name = "2.7.6-1.tar.gz";
+    sha256 = "6a187bac4d1fb6267fbfd18881cb0aa760a7af75ded84ef02b3482a5627a9607";
   };
 
   buildType = "catkin";

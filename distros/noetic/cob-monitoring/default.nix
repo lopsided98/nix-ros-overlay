@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, cob-light, cob-msgs, cob-script-server, diagnostic-msgs, diagnostic-updater, ifstat-legacy, ipmitool, ntp, python3Packages, roscpp, rospy, rostopic, sensor-msgs, std-msgs, sysstat, topic-tools }:
 buildRosPackage {
   pname = "ros-noetic-cob-monitoring";
-  version = "0.6.34-r1";
+  version = "0.6.35-r2";
 
   src = fetchurl {
-    url = "https://github.com/4am-robotics/cob_command_tools-release/archive/release/noetic/cob_monitoring/0.6.34-1.tar.gz";
-    name = "0.6.34-1.tar.gz";
-    sha256 = "d0b70f4552d47bd32ab8c25bc85fa4801b4887a3ba745e25120ecafbc39c9841";
+    url = "https://github.com/4am-robotics/cob_command_tools-release/archive/release/noetic/cob_monitoring/0.6.35-2.tar.gz";
+    name = "0.6.35-2.tar.gz";
+    sha256 = "f05614611bce588fa98010b0c8ccc6da1393b849a77cbc63c6eb5b7b32ee35cc";
   };
 
   buildType = "catkin";

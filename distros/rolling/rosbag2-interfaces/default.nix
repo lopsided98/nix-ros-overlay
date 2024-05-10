@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rosbag2-interfaces";
-  version = "0.25.0-r1";
+  version = "0.27.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_interfaces/0.25.0-1.tar.gz";
-    name = "0.25.0-1.tar.gz";
-    sha256 = "2178704ca466b3f79e61c1b1960d491945310e005d5e961501a3596b338b8d29";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_interfaces/0.27.0-1.tar.gz";
+    name = "0.27.0-1.tar.gz";
+    sha256 = "fe9bad9c0b4359ea6a90089cd6d84e1682bde9f2e6b901685c37c6f63e3194ba";
   };
 
   buildType = "ament_cmake";
