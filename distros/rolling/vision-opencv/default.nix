@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, image-geometry }:
 buildRosPackage {
   pname = "ros-rolling-vision-opencv";
-  version = "3.4.0-r3";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/rolling/vision_opencv/3.4.0-3.tar.gz";
-    name = "3.4.0-3.tar.gz";
-    sha256 = "99c4286c667da61d42932b0ac7100938a30d473bc73a0a7bdeaaf52b43b2ad41";
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/rolling/vision_opencv/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "da3e19d19b5ddcc8f06f1577d9e6ffbdf445c9b6b7a57a79f2fb6aa292c99bfd";
   };
 
   buildType = "ament_cmake";

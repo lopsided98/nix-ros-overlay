@@ -120,6 +120,8 @@ self: super: {
 
  ament-download = self.callPackage ./ament-download {};
 
+ ament-flake8 = self.callPackage ./ament-flake8 {};
+
  ament-index-cpp = self.callPackage ./ament-index-cpp {};
 
  ament-index-python = self.callPackage ./ament-index-python {};
@@ -160,6 +162,8 @@ self: super: {
 
  apriltag-detector = self.callPackage ./apriltag-detector {};
 
+ apriltag-mit = self.callPackage ./apriltag-mit {};
+
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
@@ -178,11 +182,23 @@ self: super: {
 
  automotive-platform-msgs = self.callPackage ./automotive-platform-msgs {};
 
+ autoware-adapi-v1-msgs = self.callPackage ./autoware-adapi-v1-msgs {};
+
+ autoware-adapi-version-msgs = self.callPackage ./autoware-adapi-version-msgs {};
+
  autoware-auto-msgs = self.callPackage ./autoware-auto-msgs {};
+
+ autoware-cmake = self.callPackage ./autoware-cmake {};
+
+ autoware-lint-common = self.callPackage ./autoware-lint-common {};
+
+ autoware-utils = self.callPackage ./autoware-utils {};
 
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
 
  aws-sdk-cpp-vendor = self.callPackage ./aws-sdk-cpp-vendor {};
+
+ azure-iot-sdk-c = self.callPackage ./azure-iot-sdk-c {};
 
  backward-ros = self.callPackage ./backward-ros {};
 
@@ -193,6 +209,8 @@ self: super: {
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
  bicycle-steering-controller = self.callPackage ./bicycle-steering-controller {};
+
+ bno055 = self.callPackage ./bno055 {};
 
  bond = self.callPackage ./bond {};
 
@@ -314,6 +332,8 @@ self: super: {
 
  desktop = self.callPackage ./desktop {};
 
+ desktop-full = self.callPackage ./desktop-full {};
+
  diagnostic-aggregator = self.callPackage ./diagnostic-aggregator {};
 
  diagnostic-common-diagnostics = self.callPackage ./diagnostic-common-diagnostics {};
@@ -333,6 +353,8 @@ self: super: {
  domain-bridge = self.callPackage ./domain-bridge {};
 
  domain-coordinator = self.callPackage ./domain-coordinator {};
+
+ draco-point-cloud-transport = self.callPackage ./draco-point-cloud-transport {};
 
  dual-arm-panda-moveit-config = self.callPackage ./dual-arm-panda-moveit-config {};
 
@@ -502,7 +524,11 @@ self: super: {
 
  fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
 
+ ffmpeg-image-transport = self.callPackage ./ffmpeg-image-transport {};
+
  ffmpeg-image-transport-msgs = self.callPackage ./ffmpeg-image-transport-msgs {};
+
+ ffmpeg-image-transport-tools = self.callPackage ./ffmpeg-image-transport-tools {};
 
  fields2cover = self.callPackage ./fields2cover {};
 
@@ -620,17 +646,35 @@ self: super: {
 
  gz-cmake-vendor = self.callPackage ./gz-cmake-vendor {};
 
+ gz-common-vendor = self.callPackage ./gz-common-vendor {};
+
  gz-dartsim-vendor = self.callPackage ./gz-dartsim-vendor {};
+
+ gz-fuel-tools-vendor = self.callPackage ./gz-fuel-tools-vendor {};
+
+ gz-gui-vendor = self.callPackage ./gz-gui-vendor {};
+
+ gz-launch-vendor = self.callPackage ./gz-launch-vendor {};
 
  gz-math-vendor = self.callPackage ./gz-math-vendor {};
 
  gz-msgs-vendor = self.callPackage ./gz-msgs-vendor {};
 
+ gz-ogre-next-vendor = self.callPackage ./gz-ogre-next-vendor {};
+
  gz-physics-vendor = self.callPackage ./gz-physics-vendor {};
 
  gz-plugin-vendor = self.callPackage ./gz-plugin-vendor {};
 
+ gz-rendering-vendor = self.callPackage ./gz-rendering-vendor {};
+
+ gz-ros2-control-demos = self.callPackage ./gz-ros2-control-demos {};
+
  gz-sensors-vendor = self.callPackage ./gz-sensors-vendor {};
+
+ gz-sim-vendor = self.callPackage ./gz-sim-vendor {};
+
+ gz-tools-vendor = self.callPackage ./gz-tools-vendor {};
 
  gz-transport-vendor = self.callPackage ./gz-transport-vendor {};
 
@@ -659,10 +703,6 @@ self: super: {
  iceoryx-posh = self.callPackage ./iceoryx-posh {};
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
-
- ignition-cmake2-vendor = self.callPackage ./ignition-cmake2-vendor {};
-
- ignition-math6-vendor = self.callPackage ./ignition-math6-vendor {};
 
  image-common = self.callPackage ./image-common {};
 
@@ -820,9 +860,17 @@ self: super: {
 
  leo-fw = self.callPackage ./leo-fw {};
 
+ leo-gz-bringup = self.callPackage ./leo-gz-bringup {};
+
+ leo-gz-plugins = self.callPackage ./leo-gz-plugins {};
+
+ leo-gz-worlds = self.callPackage ./leo-gz-worlds {};
+
  leo-msgs = self.callPackage ./leo-msgs {};
 
  leo-robot = self.callPackage ./leo-robot {};
+
+ leo-simulator = self.callPackage ./leo-simulator {};
 
  leo-teleop = self.callPackage ./leo-teleop {};
 
@@ -837,6 +885,8 @@ self: super: {
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
 
  libg2o = self.callPackage ./libg2o {};
+
+ liblz4-vendor = self.callPackage ./liblz4-vendor {};
 
  libmavconn = self.callPackage ./libmavconn {};
 
@@ -859,6 +909,8 @@ self: super: {
  linux-isolate-process = self.callPackage ./linux-isolate-process {};
 
  logging-demo = self.callPackage ./logging-demo {};
+
+ lttngpy = self.callPackage ./lttngpy {};
 
  magic-enum = self.callPackage ./magic-enum {};
 
@@ -1164,6 +1216,8 @@ self: super: {
 
  orocos-kdl-vendor = self.callPackage ./orocos-kdl-vendor {};
 
+ ortools-vendor = self.callPackage ./ortools-vendor {};
+
  osqp-vendor = self.callPackage ./osqp-vendor {};
 
  osrf-pycommon = self.callPackage ./osrf-pycommon {};
@@ -1183,6 +1237,8 @@ self: super: {
  pal-statistics = self.callPackage ./pal-statistics {};
 
  pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
+
+ pangolin = self.callPackage ./pangolin {};
 
  parameter-traits = self.callPackage ./parameter-traits {};
 
@@ -1283,6 +1339,8 @@ self: super: {
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
  position-controllers = self.callPackage ./position-controllers {};
+
+ proxsuite = self.callPackage ./proxsuite {};
 
  py-trees = self.callPackage ./py-trees {};
 
@@ -1588,6 +1646,18 @@ self: super: {
 
  ros-environment = self.callPackage ./ros-environment {};
 
+ ros-gz = self.callPackage ./ros-gz {};
+
+ ros-gz-bridge = self.callPackage ./ros-gz-bridge {};
+
+ ros-gz-image = self.callPackage ./ros-gz-image {};
+
+ ros-gz-interfaces = self.callPackage ./ros-gz-interfaces {};
+
+ ros-gz-sim = self.callPackage ./ros-gz-sim {};
+
+ ros-gz-sim-demos = self.callPackage ./ros-gz-sim-demos {};
+
  ros-image-to-qimage = self.callPackage ./ros-image-to-qimage {};
 
  ros-industrial-cmake-boilerplate = self.callPackage ./ros-industrial-cmake-boilerplate {};
@@ -1808,6 +1878,10 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ sdformat-test-files = self.callPackage ./sdformat-test-files {};
+
+ sdformat-urdf = self.callPackage ./sdformat-urdf {};
+
  sdformat-vendor = self.callPackage ./sdformat-vendor {};
 
  sdl2-vendor = self.callPackage ./sdl2-vendor {};
@@ -1838,6 +1912,8 @@ self: super: {
 
  simple-launch = self.callPackage ./simple-launch {};
 
+ simulation = self.callPackage ./simulation {};
+
  slider-publisher = self.callPackage ./slider-publisher {};
 
  smach = self.callPackage ./smach {};
@@ -1850,11 +1926,11 @@ self: super: {
 
  snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
 
+ soccer-geometry-msgs = self.callPackage ./soccer-geometry-msgs {};
+
  soccer-interfaces = self.callPackage ./soccer-interfaces {};
 
- soccer-marker-generation = self.callPackage ./soccer-marker-generation {};
-
- soccer-object-msgs = self.callPackage ./soccer-object-msgs {};
+ soccer-model-msgs = self.callPackage ./soccer-model-msgs {};
 
  soccer-vision-2d-msgs = self.callPackage ./soccer-vision-2d-msgs {};
 
@@ -1960,6 +2036,8 @@ self: super: {
 
  test-msgs = self.callPackage ./test-msgs {};
 
+ test-ros-gz-bridge = self.callPackage ./test-ros-gz-bridge {};
+
  tf2 = self.callPackage ./tf2 {};
 
  tf2-2d = self.callPackage ./tf2-2d {};
@@ -2030,6 +2108,8 @@ self: super: {
 
  tracetools-launch = self.callPackage ./tracetools-launch {};
 
+ tracetools-read = self.callPackage ./tracetools-read {};
+
  tracetools-test = self.callPackage ./tracetools-test {};
 
  tracetools-trace = self.callPackage ./tracetools-trace {};
@@ -2057,6 +2137,8 @@ self: super: {
  turtlesim = self.callPackage ./turtlesim {};
 
  tuw-geometry = self.callPackage ./tuw-geometry {};
+
+ tvm-vendor = self.callPackage ./tvm-vendor {};
 
  twist-mux = self.callPackage ./twist-mux {};
 
@@ -2107,6 +2189,8 @@ self: super: {
  ur-moveit-config = self.callPackage ./ur-moveit-config {};
 
  ur-msgs = self.callPackage ./ur-msgs {};
+
+ ur-robot-driver = self.callPackage ./ur-robot-driver {};
 
  urdf = self.callPackage ./urdf {};
 
@@ -2160,6 +2244,8 @@ self: super: {
 
  visualization-msgs = self.callPackage ./visualization-msgs {};
 
+ vitis-common = self.callPackage ./vitis-common {};
+
  vrpn = self.callPackage ./vrpn {};
 
  vrpn-mocap = self.callPackage ./vrpn-mocap {};
@@ -2202,11 +2288,15 @@ self: super: {
 
  zbar-ros = self.callPackage ./zbar-ros {};
 
+ zbar-ros-interfaces = self.callPackage ./zbar-ros-interfaces {};
+
  zenoh-bridge-dds = self.callPackage ./zenoh-bridge-dds {};
 
  zlib-point-cloud-transport = self.callPackage ./zlib-point-cloud-transport {};
 
  zmqpp-vendor = self.callPackage ./zmqpp-vendor {};
+
+ zstd-image-transport = self.callPackage ./zstd-image-transport {};
 
  zstd-point-cloud-transport = self.callPackage ./zstd-point-cloud-transport {};
 

@@ -2,21 +2,21 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nao-lola-command-msgs, nao-lola-sensor-msgs, rclcpp-components, rcss3d-agent, rcss3d-agent-msgs-to-soccer-interfaces, soccer-vision-3d-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nao-lola-command-msgs, nao-lola-sensor-msgs, rclcpp-components, rcss3d-agent, rcss3d-agent-msgs-to-soccer-interfaces, sensor-msgs, soccer-vision-3d-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rcss3d-nao";
-  version = "1.1.0-r2";
+  version = "1.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcss3d_nao-release/archive/release/rolling/rcss3d_nao/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "cfce50b7f6e9c99999abede82576f4279bdf48206017628dc2d6da40aaa799f1";
+    url = "https://github.com/ros2-gbp/rcss3d_nao-release/archive/release/rolling/rcss3d_nao/1.2.0-2.tar.gz";
+    name = "1.2.0-2.tar.gz";
+    sha256 = "a7646f7396de3a9782536542a1ace435871c65bb74afab79bc3b676c08f5a3b6";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ geometry-msgs nao-lola-command-msgs nao-lola-sensor-msgs rclcpp-components rcss3d-agent rcss3d-agent-msgs-to-soccer-interfaces soccer-vision-3d-msgs ];
+  propagatedBuildInputs = [ geometry-msgs nao-lola-command-msgs nao-lola-sensor-msgs rclcpp-components rcss3d-agent rcss3d-agent-msgs-to-soccer-interfaces sensor-msgs soccer-vision-3d-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

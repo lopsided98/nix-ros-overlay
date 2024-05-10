@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-examples-rclcpp-multithreaded-executor";
-  version = "0.19.2-r1";
+  version = "0.20.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/rolling/examples_rclcpp_multithreaded_executor/0.19.2-1.tar.gz";
-    name = "0.19.2-1.tar.gz";
-    sha256 = "cca0d915c75d97c21cc3ced06ecd08bf7b90a8a1e4bfd822966bf850e56bb287";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/rolling/examples_rclcpp_multithreaded_executor/0.20.0-1.tar.gz";
+    name = "0.20.0-1.tar.gz";
+    sha256 = "7d8f132a59e55ce82a4889deed0d98be1587c3ba016dffb5940e3acb734c3e41";
   };
 
   buildType = "ament_cmake";

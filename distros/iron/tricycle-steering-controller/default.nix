@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-test-assets, std-srvs, steering-controllers-library }:
 buildRosPackage {
   pname = "ros-iron-tricycle-steering-controller";
-  version = "3.22.0-r1";
+  version = "3.23.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/tricycle_steering_controller/3.22.0-1.tar.gz";
-    name = "3.22.0-1.tar.gz";
-    sha256 = "39dae544882a5428a6ddf398410fd6c68d8e1b97287cb0eaeffceabb117e654f";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/tricycle_steering_controller/3.23.0-1.tar.gz";
+    name = "3.23.0-1.tar.gz";
+    sha256 = "09e0de94bd2ca7d4a406c069cb41c74b15173df3622bd5cdbc192c8a0641ebad";
   };
 
   buildType = "ament_cmake";

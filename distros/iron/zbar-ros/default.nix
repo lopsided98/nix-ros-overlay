@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, rclcpp, sensor-msgs, std-msgs, zbar }:
 buildRosPackage {
   pname = "ros-iron-zbar-ros";
-  version = "0.4.0-r3";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/zbar_ros-release/archive/release/iron/zbar_ros/0.4.0-3.tar.gz";
-    name = "0.4.0-3.tar.gz";
-    sha256 = "2100de4262cf1ef354f3b715aca036fcaf3008d923b3be2c0c49ee1416dab2d5";
+    url = "https://github.com/ros2-gbp/zbar_ros-release/archive/release/iron/zbar_ros/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "609142dd6f38b52689efa7a76fc53b9039a272586cc43c42afa787c0aa2894c8";
   };
 
   buildType = "ament_cmake";

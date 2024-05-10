@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-nao-sensor-msgs";
-  version = "0.0.4-r3";
+  version = "0.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nao_interfaces-release/archive/release/humble/nao_sensor_msgs/0.0.4-3.tar.gz";
-    name = "0.0.4-3.tar.gz";
-    sha256 = "3ec45e64f06cb53c754ad728194f38889901cdb7732bd68ac210ec60bf825491";
+    url = "https://github.com/ros2-gbp/nao_interfaces-release/archive/release/humble/nao_sensor_msgs/0.0.5-1.tar.gz";
+    name = "0.0.5-1.tar.gz";
+    sha256 = "cba14812e93a6068579e79e967e4e687314af0497dddc4cb543efa9f692ed659";
   };
 
   buildType = "ament_cmake";

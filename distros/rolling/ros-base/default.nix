@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry2, kdl-parser, robot-state-publisher, ros-core, rosbag2, urdf }:
 buildRosPackage {
   pname = "ros-rolling-ros-base";
-  version = "0.10.0-r3";
+  version = "0.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/variants-release/archive/release/rolling/ros_base/0.10.0-3.tar.gz";
-    name = "0.10.0-3.tar.gz";
-    sha256 = "5aa2676a9adc8ee62add7c20667c0897c03d23d684245f95cc90932d03933c83";
+    url = "https://github.com/ros2-gbp/variants-release/archive/release/rolling/ros_base/0.11.0-1.tar.gz";
+    name = "0.11.0-1.tar.gz";
+    sha256 = "4d9d73b1293c3b3bff2465806f8ef875a0caaf0ce49a68aef0d455486ab0b412";
   };
 
   buildType = "ament_cmake";

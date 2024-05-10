@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, boost, ceres-solver, eigen, fuse-constraints, fuse-core, fuse-graphs, fuse-msgs, fuse-publishers, fuse-variables, gbenchmark, geometry-msgs, nav-msgs, pluginlib, rclcpp, rclcpp-components, sensor-msgs, std-srvs, tf2, tf2-2d, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-fuse-models";
-  version = "1.0.1-r3";
+  version = "1.0.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/iron/fuse_models/1.0.1-3.tar.gz";
-    name = "1.0.1-3.tar.gz";
-    sha256 = "de53f18dd3b0179585d8601ca6b62b5035470099f8bfc50c6796a20f1fe1a528";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/iron/fuse_models/1.0.1-4.tar.gz";
+    name = "1.0.1-4.tar.gz";
+    sha256 = "b44ea41b14accdd331a00291bb3b65b2f81d680098a8ce67626bf34cd5568897";
   };
 
   buildType = "ament_cmake";

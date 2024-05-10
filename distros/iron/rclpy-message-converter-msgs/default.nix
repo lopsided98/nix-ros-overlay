@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-iron-rclpy-message-converter-msgs";
-  version = "2.0.1-r3";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rospy_message_converter-release/archive/release/iron/rclpy_message_converter_msgs/2.0.1-3.tar.gz";
-    name = "2.0.1-3.tar.gz";
-    sha256 = "2e7cbb3b3912dd69c1d3f9bacaf2610e2868750a8ab44393f461cfab5d773e1d";
+    url = "https://github.com/ros2-gbp/rospy_message_converter-release/archive/release/iron/rclpy_message_converter_msgs/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "577dcc31d246963691a38ea34a009848d3ff2614fb75faaf6232e7623ccfa9dc";
   };
 
   buildType = "ament_cmake";

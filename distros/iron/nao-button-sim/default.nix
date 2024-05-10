@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, nao-sensor-msgs, pythonPackages }:
 buildRosPackage {
   pname = "ros-iron-nao-button-sim";
-  version = "0.1.1-r5";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nao_button_sim-release/archive/release/iron/nao_button_sim/0.1.1-5.tar.gz";
-    name = "0.1.1-5.tar.gz";
-    sha256 = "85f25a2cc8926839802fc405701c091d8f8d48e36c19a63498f916563a2003f7";
+    url = "https://github.com/ros2-gbp/nao_button_sim-release/archive/release/iron/nao_button_sim/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "d5e48902f726d33c41a663cc5e769aa3cc8277f9145b53e52ee5227a2a03b038";
   };
 
   buildType = "ament_python";

@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, eigen, kdl-parser, nlopt, pkg-config, rclcpp, urdf }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, eigen, geometry-msgs, kdl-parser, nlopt, pkg-config, rclcpp, urdf }:
 buildRosPackage {
   pname = "ros-rolling-trac-ik-lib";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/trac_ik-release/archive/release/rolling/trac_ik_lib/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "d13ed94586b55b8d04e4399703d8856268ea8b6f399ef4ac0315e3628c7993b8";
+    url = "https://github.com/ros2-gbp/trac_ik-release/archive/release/rolling/trac_ik_lib/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "ac6dec1bd32056c786145e5ff4e30e1863b4827f8c177dd4c6e15f4f998be93c";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ eigen kdl-parser nlopt pkg-config rclcpp urdf ];
+  propagatedBuildInputs = [ eigen geometry-msgs kdl-parser nlopt pkg-config rclcpp urdf ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

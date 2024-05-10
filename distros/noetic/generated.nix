@@ -1820,6 +1820,8 @@ self: super: {
 
  lusb = self.callPackage ./lusb {};
 
+ lvr2 = self.callPackage ./lvr2 {};
+
  magic-enum = self.callPackage ./magic-enum {};
 
  magical-ros2-conversion-tool = self.callPackage ./magical-ros2-conversion-tool {};
@@ -2351,6 +2353,8 @@ self: super: {
  opt-camera = self.callPackage ./opt-camera {};
 
  opw-kinematics = self.callPackage ./opw-kinematics {};
+
+ ortools-vendor = self.callPackage ./ortools-vendor {};
 
  osm-cartography = self.callPackage ./osm-cartography {};
 
@@ -3323,6 +3327,8 @@ self: super: {
  rviz-animated-view-controller = self.callPackage ./rviz-animated-view-controller {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
+
+ rviz-map-plugin = self.callPackage ./rviz-map-plugin {};
 
  rviz-marker-tools = self.callPackage ./rviz-marker-tools {};
 

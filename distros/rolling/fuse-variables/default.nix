@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ceres-solver, fuse-core, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-fuse-variables";
-  version = "1.0.1-r3";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/rolling/fuse_variables/1.0.1-3.tar.gz";
-    name = "1.0.1-3.tar.gz";
-    sha256 = "bc1f3ccf52bcdb350be2c47f0a5c4e5342c468b2bbdbd9c708249f1bd8b904df";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/rolling/fuse_variables/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "3d8253c521137a6fb18ae8fac1d5b8bef5303b02fc225ef975ee89ad9c6a1241";
   };
 
   buildType = "ament_cmake";

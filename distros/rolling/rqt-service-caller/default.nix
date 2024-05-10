@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, pythonPackages, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-rolling-rqt-service-caller";
-  version = "1.2.1-r2";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_service_caller-release/archive/release/rolling/rqt_service_caller/1.2.1-2.tar.gz";
-    name = "1.2.1-2.tar.gz";
-    sha256 = "5a237ed4d5bddd41e255026574a529023c5c9ac18760c4ba4903a8e44d3aa4f6";
+    url = "https://github.com/ros2-gbp/rqt_service_caller-release/archive/release/rolling/rqt_service_caller/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "8dbb977604b466313e360ff991681db1219d56d96f4cf72376a03cba554d935e";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tf2, tf2-bullet, tf2-eigen, tf2-eigen-kdl, tf2-geometry-msgs, tf2-kdl, tf2-msgs, tf2-py, tf2-ros, tf2-sensor-msgs, tf2-tools }:
 buildRosPackage {
   pname = "ros-iron-geometry2";
-  version = "0.31.5-r1";
+  version = "0.31.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/iron/geometry2/0.31.5-1.tar.gz";
-    name = "0.31.5-1.tar.gz";
-    sha256 = "3d74475a9f71b363fa386ca8944395238f9ee4047066816133d379ed5f2ba9a5";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/iron/geometry2/0.31.6-1.tar.gz";
+    name = "0.31.6-1.tar.gz";
+    sha256 = "67acea5bcbb00728b7442a4280dfb966a1c2e23778bb388935e754042ce63199";
   };
 
   buildType = "ament_cmake";

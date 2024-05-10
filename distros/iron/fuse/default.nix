@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, fuse-constraints, fuse-core, fuse-doc, fuse-graphs, fuse-models, fuse-msgs, fuse-optimizers, fuse-publishers, fuse-variables, fuse-viz }:
 buildRosPackage {
   pname = "ros-iron-fuse";
-  version = "1.0.1-r3";
+  version = "1.0.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/iron/fuse/1.0.1-3.tar.gz";
-    name = "1.0.1-3.tar.gz";
-    sha256 = "4b102bd69bfe2af253882272bdd87379a253ec2bb0c3d2ecbee4449ab7fc6114";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/iron/fuse/1.0.1-4.tar.gz";
+    name = "1.0.1-4.tar.gz";
+    sha256 = "7de80bc401175f1ee33909f79a4ae43ed02776e74cbda5ab3f6c7e5f857e9e84";
   };
 
   buildType = "ament_cmake";

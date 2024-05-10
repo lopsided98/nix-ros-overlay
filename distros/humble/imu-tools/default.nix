@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, imu-complementary-filter, imu-filter-madgwick, rviz-imu-plugin }:
 buildRosPackage {
   pname = "ros-humble-imu-tools";
-  version = "2.1.3-r1";
+  version = "2.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/humble/imu_tools/2.1.3-1.tar.gz";
-    name = "2.1.3-1.tar.gz";
-    sha256 = "171fcbc9363e5fc4c5299cdecd0902344cf886a8c4e674199cb7261c2d3fe2a6";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/humble/imu_tools/2.1.4-1.tar.gz";
+    name = "2.1.4-1.tar.gz";
+    sha256 = "41ca90904d49c220105eb53268893846350fb204c2f6948d6de8455ca20a9274";
   };
 
   buildType = "ament_cmake";

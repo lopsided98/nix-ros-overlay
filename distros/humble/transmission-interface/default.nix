@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, hardware-interface, pluginlib }:
 buildRosPackage {
   pname = "ros-humble-transmission-interface";
-  version = "2.40.0-r1";
+  version = "2.41.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/transmission_interface/2.40.0-1.tar.gz";
-    name = "2.40.0-1.tar.gz";
-    sha256 = "a5920ef4cefa2cb9e10360907b9b45bd43d17584965e2ca40c5d6a9fa79a9983";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/transmission_interface/2.41.0-1.tar.gz";
+    name = "2.41.0-1.tar.gz";
+    sha256 = "0626eff94d47968992e95f67eb26053a232d264e73d072af5b47b96e6c1da5f1";
   };
 
   buildType = "ament_cmake";
