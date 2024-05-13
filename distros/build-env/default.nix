@@ -108,5 +108,6 @@ let
     noAuditTmpdir = true;
     dontGzipMan = true;
     dontPatchShebangs = true;
+    dontMoveLib64 = true;
   });
 in env
