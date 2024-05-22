@@ -83,4 +83,12 @@ rosSelf: rosSuper: with rosSelf.lib; {
     url = "https://github.com/fmtlib/fmt/releases/download/9.1.0/fmt-9.1.0.zip";
     sha256 = "sha256-zOtMuTZuGKV0ISjLNSTOX1Doi0dvHlRzekf/3030yZY=";
   };
+
+  sophus = rosSuper.sophus.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail " -Werror" ""
+    '';
+  });
 }
