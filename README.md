@@ -55,10 +55,15 @@ Using the overlay in your `flake.nix`-based project could look like this:
       in {
         devShells.default = pkgs.mkShell {
           name = "Example project";
-          packages = with pkgs.rosPackages.humble; [
+          packages = [
             pkgs.colcon
-            ros-core
-            # ...
+            # ... other non-ROS packages
+            (with pkgs.rosPackages.humble; buildEnv {
+                paths = [
+                    ros-core
+                    # ... other ROS packages
+                ];
+            })
           ];
         };
       });
