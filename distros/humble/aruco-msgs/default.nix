@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-aruco-msgs";
-  version = "5.0.4-r1";
+  version = "5.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/aruco_ros-release/archive/release/humble/aruco_msgs/5.0.4-1.tar.gz";
-    name = "5.0.4-1.tar.gz";
-    sha256 = "651f6eaccc1fc67a6f6669f92cc4fd341e0011635c74d228a76a494f6b293995";
+    url = "https://github.com/pal-gbp/aruco_ros-release/archive/release/humble/aruco_msgs/5.0.5-1.tar.gz";
+    name = "5.0.5-1.tar.gz";
+    sha256 = "74a41f58f6b1b9764f24e0b391abe60418565a7039be0f0726a2f5922359e2e8";
   };
 
   buildType = "ament_cmake";

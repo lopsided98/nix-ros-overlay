@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt2 }:
 buildRosPackage {
   pname = "ros-iron-mp2p-icp";
-  version = "1.4.0-r1";
+  version = "1.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/iron/mp2p_icp/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "a318201dcc45f6c0192105ed515cb5630e435373df183c9a3e74d191a51ba576";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/iron/mp2p_icp/1.4.1-1.tar.gz";
+    name = "1.4.1-1.tar.gz";
+    sha256 = "c604e77ed921caeaac92f50c92fa87f30bfc3f2c698d5a147deb2d7d6cb11831";
   };
 
   buildType = "cmake";

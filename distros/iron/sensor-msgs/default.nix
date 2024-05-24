@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-sensor-msgs";
-  version = "5.0.0-r2";
+  version = "5.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/iron/sensor_msgs/5.0.0-2.tar.gz";
-    name = "5.0.0-2.tar.gz";
-    sha256 = "5f20e79bf323874d1fcf0f91000de48b09462e3b268b78ad1dbbb079181b72a2";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/iron/sensor_msgs/5.0.1-1.tar.gz";
+    name = "5.0.1-1.tar.gz";
+    sha256 = "42f3d5826755c30be24f2a9cb398bcf6d7ff968f4b08bd88f00c240b310cc317";
   };
 
   buildType = "ament_cmake";

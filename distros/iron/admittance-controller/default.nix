@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, filters, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, joint-trajectory-controller, kinematics-interface, kinematics-interface-kdl, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, tf2, tf2-eigen, tf2-geometry-msgs, tf2-kdl, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-iron-admittance-controller";
-  version = "3.23.0-r1";
+  version = "3.24.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/admittance_controller/3.23.0-1.tar.gz";
-    name = "3.23.0-1.tar.gz";
-    sha256 = "ba71c4495c8734fe6f7e4959c3412c80472abe345575f44567a02224819102f5";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/admittance_controller/3.24.0-1.tar.gz";
+    name = "3.24.0-1.tar.gz";
+    sha256 = "eee8d917902ef28bd0efe72983d062afcb9a98c8b1523505c9a858ff132eb9ba";
   };
 
   buildType = "ament_cmake";

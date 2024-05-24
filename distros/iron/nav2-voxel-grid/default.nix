@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav2-common, rclcpp }:
 buildRosPackage {
   pname = "ros-iron-nav2-voxel-grid";
-  version = "1.2.7-r1";
+  version = "1.2.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_voxel_grid/1.2.7-1.tar.gz";
-    name = "1.2.7-1.tar.gz";
-    sha256 = "00d07e852f1858e90c1e51d58a6a121c30636ad7b7025fe14a09809f5e08bc67";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_voxel_grid/1.2.8-1.tar.gz";
+    name = "1.2.8-1.tar.gz";
+    sha256 = "88b53724aeb2fcbcae12c2e2a267ba8250363671e721fb5a5a5d364f9708013f";
   };
 
   buildType = "ament_cmake";

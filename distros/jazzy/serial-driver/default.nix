@@ -1,0 +1,26 @@
+
+# Copyright 2024 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, asio, asio-cmake-module, io-context, rclcpp, rclcpp-components, rclcpp-lifecycle, std-msgs }:
+buildRosPackage {
+  pname = "ros-jazzy-serial-driver";
+  version = "1.2.0-r4";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/jazzy/serial_driver/1.2.0-4.tar.gz";
+    name = "1.2.0-4.tar.gz";
+    sha256 = "974892643640bbf5141178c54813ba9906bb42a50f7bb9952242ff36864703d6";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-auto asio-cmake-module ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ asio io-context rclcpp rclcpp-components rclcpp-lifecycle std-msgs ];
+  nativeBuildInputs = [ ament-cmake-auto asio-cmake-module ];
+
+  meta = {
+    description = "A template class and associated utilities which encapsulate basic reading from serial ports";
+    license = with lib.licenses; [ asl20 ];
+  };
+}

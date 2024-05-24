@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav2-common, nav2-costmap-2d, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-costmap-queue";
-  version = "1.1.14-r1";
+  version = "1.1.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/costmap_queue/1.1.14-1.tar.gz";
-    name = "1.1.14-1.tar.gz";
-    sha256 = "8f585b5b455d6e10784e67bf911ba53022e4094e7340150f83b13994d410bdda";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/costmap_queue/1.1.15-1.tar.gz";
+    name = "1.1.15-1.tar.gz";
+    sha256 = "5cbe17b0bef3d78c18a638a09f4e2ee3431b70733528563a82f90d07b63e8b04";
   };
 
   buildType = "ament_cmake";

@@ -162,15 +162,27 @@ self: super: {
 
  apriltag-detector = self.callPackage ./apriltag-detector {};
 
+ apriltag-detector-mit = self.callPackage ./apriltag-detector-mit {};
+
+ apriltag-detector-umich = self.callPackage ./apriltag-detector-umich {};
+
+ apriltag-draw = self.callPackage ./apriltag-draw {};
+
  apriltag-mit = self.callPackage ./apriltag-mit {};
 
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
+ aruco = self.callPackage ./aruco {};
+
+ aruco-msgs = self.callPackage ./aruco-msgs {};
+
  aruco-opencv = self.callPackage ./aruco-opencv {};
 
  aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
+
+ aruco-ros = self.callPackage ./aruco-ros {};
 
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
 
@@ -668,6 +680,8 @@ self: super: {
 
  gz-rendering-vendor = self.callPackage ./gz-rendering-vendor {};
 
+ gz-ros2-control = self.callPackage ./gz-ros2-control {};
+
  gz-ros2-control-demos = self.callPackage ./gz-ros2-control-demos {};
 
  gz-sensors-vendor = self.callPackage ./gz-sensors-vendor {};
@@ -792,8 +806,6 @@ self: super: {
 
  kortex-api = self.callPackage ./kortex-api {};
 
- kortex-bringup = self.callPackage ./kortex-bringup {};
-
  kortex-description = self.callPackage ./kortex-description {};
 
  kortex-driver = self.callPackage ./kortex-driver {};
@@ -881,6 +893,10 @@ self: super: {
  libcaer = self.callPackage ./libcaer {};
 
  libcaer-driver = self.callPackage ./libcaer-driver {};
+
+ libcaer-vendor = self.callPackage ./libcaer-vendor {};
+
+ libcamera = self.callPackage ./libcamera {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
 
@@ -1137,6 +1153,8 @@ self: super: {
  mrpt-sensor-bumblebee-stereo = self.callPackage ./mrpt-sensor-bumblebee-stereo {};
 
  mrpt-sensor-gnns-nmea = self.callPackage ./mrpt-sensor-gnns-nmea {};
+
+ mrpt-sensor-imu-taobotics = self.callPackage ./mrpt-sensor-imu-taobotics {};
 
  mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
 
@@ -1891,6 +1909,8 @@ self: super: {
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
  sensor-msgs-py = self.callPackage ./sensor-msgs-py {};
+
+ septentrio-gnss-driver = self.callPackage ./septentrio-gnss-driver {};
 
  serial-driver = self.callPackage ./serial-driver {};
 
