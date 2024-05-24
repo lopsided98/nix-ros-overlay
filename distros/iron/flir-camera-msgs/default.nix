@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-flir-camera-msgs";
-  version = "2.2.16-r1";
+  version = "2.2.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/flir_camera_driver-release/archive/release/iron/flir_camera_msgs/2.2.16-1.tar.gz";
-    name = "2.2.16-1.tar.gz";
-    sha256 = "d02d2e63e4d58e76a80d4601b8219c0aecb7f2b917667e05422602e0a2132465";
+    url = "https://github.com/ros-drivers-gbp/flir_camera_driver-release/archive/release/iron/flir_camera_msgs/2.2.17-1.tar.gz";
+    name = "2.2.17-1.tar.gz";
+    sha256 = "337a6b9d0c146bdafc01fea3c59c420290625b8a8cdee42e93dc2648f56b7e37";
   };
 
   buildType = "ament_cmake";

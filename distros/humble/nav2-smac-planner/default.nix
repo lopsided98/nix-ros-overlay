@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, angles, builtin-interfaces, eigen, eigen3-cmake-module, geometry-msgs, nav-msgs, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, nlohmann_json, ompl, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-nav2-smac-planner";
-  version = "1.1.14-r1";
+  version = "1.1.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_smac_planner/1.1.14-1.tar.gz";
-    name = "1.1.14-1.tar.gz";
-    sha256 = "309bfd870686759bc307221780073758dbddd7cfb0d2c809261e27a0385e566d";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_smac_planner/1.1.15-1.tar.gz";
+    name = "1.1.15-1.tar.gz";
+    sha256 = "76ead7489f89a3c8870ae3d15f0e235ba72ac2082b7be018244b6f3e13d23a21";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-std-srvs";
-  version = "4.2.3-r1";
+  version = "4.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/std_srvs/4.2.3-1.tar.gz";
-    name = "4.2.3-1.tar.gz";
-    sha256 = "cbda77a951e5fd1ee521ed20fd9bb23a781cacbc4d728d875dbc05c7dbdb0951";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/std_srvs/4.2.4-1.tar.gz";
+    name = "4.2.4-1.tar.gz";
+    sha256 = "0049bc8de2a2ac117fc6b5763f21749ad501d244eee6d9ac193d9ff5ccf51b19";
   };
 
   buildType = "ament_cmake";

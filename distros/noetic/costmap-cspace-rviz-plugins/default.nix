@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-cspace-msgs, qt5, roscpp, roslint, rviz }:
 buildRosPackage {
   pname = "ros-noetic-costmap-cspace-rviz-plugins";
-  version = "0.11.7-r1";
+  version = "0.17.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_rviz_plugins-release/archive/release/noetic/costmap_cspace_rviz_plugins/0.11.7-1.tar.gz";
-    name = "0.11.7-1.tar.gz";
-    sha256 = "255bf89103286b80d9a24972a40164f597a9fd4234ce5453adca8f60e4aaa129";
+    url = "https://github.com/at-wat/neonavigation_rviz_plugins-release/archive/release/noetic/costmap_cspace_rviz_plugins/0.17.1-1.tar.gz";
+    name = "0.17.1-1.tar.gz";
+    sha256 = "84e5bfd261f594a313fdb345f6961f454dac21dfbe11e93267037d66b10b4d0d";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-trajectory-msgs";
-  version = "5.0.0-r2";
+  version = "5.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/iron/trajectory_msgs/5.0.0-2.tar.gz";
-    name = "5.0.0-2.tar.gz";
-    sha256 = "0c4dfaf7175b443eebd1c27ccbb553e2c22dd5b87a851652542854610fb7c19e";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/iron/trajectory_msgs/5.0.1-1.tar.gz";
+    name = "5.0.1-1.tar.gz";
+    sha256 = "d3306d53405830c1c29963543588a84c5527e2cba5cd3e61866290155d8cd5fa";
   };
 
   buildType = "ament_cmake";

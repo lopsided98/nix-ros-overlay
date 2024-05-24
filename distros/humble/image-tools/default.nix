@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, opencv, rclcpp, rclcpp-components, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-image-tools";
-  version = "0.20.3-r1";
+  version = "0.20.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/image_tools/0.20.3-1.tar.gz";
-    name = "0.20.3-1.tar.gz";
-    sha256 = "483b45eda51e4adf7e1b2853aab1aeaf172894a5013123bbbf3f628245bf7213";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/image_tools/0.20.4-1.tar.gz";
+    name = "0.20.4-1.tar.gz";
+    sha256 = "edc7de87884657dddf7943dc3e5692a0f0276d1e40596ac49a22945732b8b24a";
   };
 
   buildType = "ament_cmake";

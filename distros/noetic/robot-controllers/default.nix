@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, angles, catkin, control-msgs, geometry-msgs, kdl-parser, nav-msgs, orocos-kdl, pluginlib, robot-controllers-interface, roscpp, sensor-msgs, std-msgs, tf, tf-conversions, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-noetic-robot-controllers";
-  version = "0.7.0-r1";
+  version = "0.7.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/fetchrobotics-gbp/robot_controllers-release/archive/release/noetic/robot_controllers/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "cd13b537617dbdb7619f16bb991be69f9106df73970c9429dede5db6430ce1ae";
+    url = "https://github.com/fetchrobotics-gbp/robot_controllers-release/archive/release/noetic/robot_controllers/0.7.1-4.tar.gz";
+    name = "0.7.1-4.tar.gz";
+    sha256 = "36877685e046139d2fb7b49d1bad2b06fd7c5966a57fcf122e8fceab3e064d53";
   };
 
   buildType = "catkin";

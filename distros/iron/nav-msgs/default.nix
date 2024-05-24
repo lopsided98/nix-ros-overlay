@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-nav-msgs";
-  version = "5.0.0-r2";
+  version = "5.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/iron/nav_msgs/5.0.0-2.tar.gz";
-    name = "5.0.0-2.tar.gz";
-    sha256 = "485f95819b2863c000c9a8be593516eac35332a78f44933ab111809fbc1bac54";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/iron/nav_msgs/5.0.1-1.tar.gz";
+    name = "5.0.1-1.tar.gz";
+    sha256 = "f956fef080a0f0eed00ab2c28a846f99efc6cf2cb38402f4dd6c86b85ac574f5";
   };
 
   buildType = "ament_cmake";

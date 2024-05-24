@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-actionlib-msgs";
-  version = "5.0.0-r2";
+  version = "5.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/iron/actionlib_msgs/5.0.0-2.tar.gz";
-    name = "5.0.0-2.tar.gz";
-    sha256 = "09f6a762a9ae196f865895c69c27d1e7922a3e4fc08f5ae539524b0d718c1352";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/iron/actionlib_msgs/5.0.1-1.tar.gz";
+    name = "5.0.1-1.tar.gz";
+    sha256 = "71ffdba612b708db24769d34d77d1a2942d42477a77d1abcacd0cb2379471266";
   };
 
   buildType = "ament_cmake";

@@ -190,6 +190,12 @@ self: super: {
 
  apriltag-detector = self.callPackage ./apriltag-detector {};
 
+ apriltag-detector-mit = self.callPackage ./apriltag-detector-mit {};
+
+ apriltag-detector-umich = self.callPackage ./apriltag-detector-umich {};
+
+ apriltag-draw = self.callPackage ./apriltag-draw {};
+
  apriltag-mit = self.callPackage ./apriltag-mit {};
 
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
@@ -291,6 +297,12 @@ self: super: {
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
+
+ beluga = self.callPackage ./beluga {};
+
+ beluga-amcl = self.callPackage ./beluga-amcl {};
+
+ beluga-ros = self.callPackage ./beluga-ros {};
 
  bicycle-steering-controller = self.callPackage ./bicycle-steering-controller {};
 
@@ -798,6 +810,8 @@ self: super: {
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
+ franka-description = self.callPackage ./franka-description {};
+
  game-controller-spl = self.callPackage ./game-controller-spl {};
 
  game-controller-spl-interfaces = self.callPackage ./game-controller-spl-interfaces {};
@@ -1076,6 +1090,8 @@ self: super: {
 
  kuka-cybertech-support = self.callPackage ./kuka-cybertech-support {};
 
+ kuka-external-control-sdk-examples = self.callPackage ./kuka-external-control-sdk-examples {};
+
  kuka-fortec-support = self.callPackage ./kuka-fortec-support {};
 
  kuka-iontec-support = self.callPackage ./kuka-iontec-support {};
@@ -1181,6 +1197,8 @@ self: super: {
  libcaer = self.callPackage ./libcaer {};
 
  libcaer-driver = self.callPackage ./libcaer-driver {};
+
+ libcaer-vendor = self.callPackage ./libcaer-vendor {};
 
  libcamera = self.callPackage ./libcamera {};
 
@@ -1474,6 +1492,8 @@ self: super: {
 
  mrpt-sensor-gnns-nmea = self.callPackage ./mrpt-sensor-gnns-nmea {};
 
+ mrpt-sensor-imu-taobotics = self.callPackage ./mrpt-sensor-imu-taobotics {};
+
  mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
 
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
@@ -1625,6 +1645,28 @@ self: super: {
  octovis = self.callPackage ./octovis {};
 
  odom-to-tf-ros2 = self.callPackage ./odom-to-tf-ros2 {};
+
+ off-highway-can = self.callPackage ./off-highway-can {};
+
+ off-highway-general-purpose-radar = self.callPackage ./off-highway-general-purpose-radar {};
+
+ off-highway-general-purpose-radar-msgs = self.callPackage ./off-highway-general-purpose-radar-msgs {};
+
+ off-highway-premium-radar-sample = self.callPackage ./off-highway-premium-radar-sample {};
+
+ off-highway-premium-radar-sample-msgs = self.callPackage ./off-highway-premium-radar-sample-msgs {};
+
+ off-highway-radar = self.callPackage ./off-highway-radar {};
+
+ off-highway-radar-msgs = self.callPackage ./off-highway-radar-msgs {};
+
+ off-highway-sensor-drivers = self.callPackage ./off-highway-sensor-drivers {};
+
+ off-highway-sensor-drivers-examples = self.callPackage ./off-highway-sensor-drivers-examples {};
+
+ off-highway-uss = self.callPackage ./off-highway-uss {};
+
+ off-highway-uss-msgs = self.callPackage ./off-highway-uss-msgs {};
 
  omni-base-2dnav = self.callPackage ./omni-base-2dnav {};
 
@@ -2974,6 +3016,14 @@ self: super: {
 
  velodyne-simulator = self.callPackage ./velodyne-simulator {};
 
+ vimbax-camera = self.callPackage ./vimbax-camera {};
+
+ vimbax-camera-events = self.callPackage ./vimbax-camera-events {};
+
+ vimbax-camera-examples = self.callPackage ./vimbax-camera-examples {};
+
+ vimbax-camera-msgs = self.callPackage ./vimbax-camera-msgs {};
+
  vision-msgs = self.callPackage ./vision-msgs {};
 
  vision-msgs-layers = self.callPackage ./vision-msgs-layers {};
@@ -2987,6 +3037,8 @@ self: super: {
  visualization-msgs = self.callPackage ./visualization-msgs {};
 
  vitis-common = self.callPackage ./vitis-common {};
+
+ vmbc-interface = self.callPackage ./vmbc-interface {};
 
  vrpn = self.callPackage ./vrpn {};
 

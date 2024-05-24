@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-cspace-rviz-plugins, trajectory-tracker-rviz-plugins }:
 buildRosPackage {
   pname = "ros-noetic-neonavigation-rviz-plugins";
-  version = "0.11.7-r1";
+  version = "0.17.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/at-wat/neonavigation_rviz_plugins-release/archive/release/noetic/neonavigation_rviz_plugins/0.11.7-1.tar.gz";
-    name = "0.11.7-1.tar.gz";
-    sha256 = "2d3c51269310fb6617d2670c9c430b3663405e02500068e2b2073ace5ed91742";
+    url = "https://github.com/at-wat/neonavigation_rviz_plugins-release/archive/release/noetic/neonavigation_rviz_plugins/0.17.1-1.tar.gz";
+    name = "0.17.1-1.tar.gz";
+    sha256 = "1f81da84c68ea5ec6cadafa4630cb2277f2fd356c4e43275a41d249f4fd69afd";
   };
 
   buildType = "catkin";
