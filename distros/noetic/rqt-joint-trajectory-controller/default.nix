@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, control-msgs, controller-manager-msgs, python-qt-binding, python3Packages, qt-gui, rospy, rqt-gui, rqt-gui-py, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rqt-joint-trajectory-controller";
-  version = "0.21.2-r1";
+  version = "0.22.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/rqt_joint_trajectory_controller/0.21.2-1.tar.gz";
-    name = "0.21.2-1.tar.gz";
-    sha256 = "779762c837c19d2deba1d9032ba74a56000baed1840e1e0dbc0e85912ab16c95";
+    url = "https://github.com/ros-gbp/ros_controllers-release/archive/release/noetic/rqt_joint_trajectory_controller/0.22.0-1.tar.gz";
+    name = "0.22.0-1.tar.gz";
+    sha256 = "4bad78f00e5f1e3c197bfb201dd52b291e6aa04e69dbe0eb66d692905b3cd53a";
   };
 
   buildType = "catkin";

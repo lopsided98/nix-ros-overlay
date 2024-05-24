@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, dwb-core, nav-2d-msgs, nav-2d-utils, nav2-common, nav2-util, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-iron-dwb-plugins";
-  version = "1.2.7-r1";
+  version = "1.2.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/dwb_plugins/1.2.7-1.tar.gz";
-    name = "1.2.7-1.tar.gz";
-    sha256 = "455254dd4330c0b68a6b177723cebd5a45352d85e1abda1cae94780dc8b894ea";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/dwb_plugins/1.2.8-1.tar.gz";
+    name = "1.2.8-1.tar.gz";
+    sha256 = "8fbb85a82c448038a8509da129b4d73b867d9f2690794162b8efb51645892ed6";
   };
 
   buildType = "ament_cmake";

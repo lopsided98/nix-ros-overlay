@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, joy-linux, teleop-twist-joy, teleop-twist-keyboard }:
 buildRosPackage {
   pname = "ros-humble-leo-teleop";
-  version = "1.2.2-r1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/humble/leo_teleop/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "933cb488a1c5bb5bf1332f2642fc2d041f6f3da3d783f71686313c69510c5daa";
+    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/humble/leo_teleop/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
+    sha256 = "c4a242bda5d5d41042159b42e21d244f755bc967459559179d82d7978e5c7a88";
   };
 
   buildType = "ament_cmake";

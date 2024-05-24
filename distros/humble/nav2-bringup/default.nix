@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, nav2-common, navigation2, slam-toolbox }:
 buildRosPackage {
   pname = "ros-humble-nav2-bringup";
-  version = "1.1.14-r1";
+  version = "1.1.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_bringup/1.1.14-1.tar.gz";
-    name = "1.1.14-1.tar.gz";
-    sha256 = "222d5410d197a84541af081b9ef0f07f366a9df00e9922e09d647d6f76134eec";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_bringup/1.1.15-1.tar.gz";
+    name = "1.1.15-1.tar.gz";
+    sha256 = "6a66c276595248d4a39fc8aba70f97c49e6f3996b08946bd4c2f25b4d9c99297";
   };
 
   buildType = "ament_cmake";

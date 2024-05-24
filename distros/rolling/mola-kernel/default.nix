@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-yaml, mrpt2 }:
 buildRosPackage {
   pname = "ros-rolling-mola-kernel";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_kernel/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "9915d85989ee049cb11bab5a72e3e43531c2265001b79f0c7fe12c52ea43e049";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_kernel/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "319d8973924968d3212826aabb647d986bdfa3d0242bb4149936dd3d8f4c1d01";
   };
 
   buildType = "cmake";

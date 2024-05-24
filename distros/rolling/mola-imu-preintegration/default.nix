@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt2 }:
 buildRosPackage {
   pname = "ros-rolling-mola-imu-preintegration";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_imu_preintegration/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "a8030777eb1fed170afcad065a1300cbb188ec4c0ebe9a9472d241728fb80be6";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_imu_preintegration/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "5fc575f0619ab0cbdb9ae34244c371fc8ee063bafaf6b2677826dce8b9dc80c7";
   };
 
   buildType = "cmake";

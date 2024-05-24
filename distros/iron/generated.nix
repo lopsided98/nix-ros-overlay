@@ -162,15 +162,27 @@ self: super: {
 
  apriltag-detector = self.callPackage ./apriltag-detector {};
 
+ apriltag-detector-mit = self.callPackage ./apriltag-detector-mit {};
+
+ apriltag-detector-umich = self.callPackage ./apriltag-detector-umich {};
+
+ apriltag-draw = self.callPackage ./apriltag-draw {};
+
  apriltag-mit = self.callPackage ./apriltag-mit {};
 
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
+ aruco = self.callPackage ./aruco {};
+
+ aruco-msgs = self.callPackage ./aruco-msgs {};
+
  aruco-opencv = self.callPackage ./aruco-opencv {};
 
  aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
+
+ aruco-ros = self.callPackage ./aruco-ros {};
 
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
 
@@ -199,6 +211,12 @@ self: super: {
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
+
+ beluga = self.callPackage ./beluga {};
+
+ beluga-amcl = self.callPackage ./beluga-amcl {};
+
+ beluga-ros = self.callPackage ./beluga-ros {};
 
  bicycle-steering-controller = self.callPackage ./bicycle-steering-controller {};
 
@@ -928,6 +946,8 @@ self: super: {
 
  libcaer-driver = self.callPackage ./libcaer-driver {};
 
+ libcaer-vendor = self.callPackage ./libcaer-vendor {};
+
  libcreate = self.callPackage ./libcreate {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
@@ -1182,6 +1202,8 @@ self: super: {
 
  mrpt-sensor-gnns-nmea = self.callPackage ./mrpt-sensor-gnns-nmea {};
 
+ mrpt-sensor-imu-taobotics = self.callPackage ./mrpt-sensor-imu-taobotics {};
+
  mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
 
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
@@ -1329,6 +1351,8 @@ self: super: {
  ompl = self.callPackage ./ompl {};
 
  openni2-camera = self.callPackage ./openni2-camera {};
+
+ openvdb-vendor = self.callPackage ./openvdb-vendor {};
 
  orocos-kdl-vendor = self.callPackage ./orocos-kdl-vendor {};
 
@@ -2161,6 +2185,8 @@ self: super: {
  sophus = self.callPackage ./sophus {};
 
  spacenav = self.callPackage ./spacenav {};
+
+ spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
 

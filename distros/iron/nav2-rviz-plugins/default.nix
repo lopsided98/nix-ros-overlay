@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, nav-msgs, nav2-lifecycle-manager, nav2-msgs, nav2-util, pluginlib, qt5, rclcpp, rclcpp-lifecycle, resource-retriever, rviz-common, rviz-default-plugins, rviz-ogre-vendor, rviz-rendering, std-msgs, tf2-geometry-msgs, urdf, visualization-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-iron-nav2-rviz-plugins";
-  version = "1.2.7-r1";
+  version = "1.2.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_rviz_plugins/1.2.7-1.tar.gz";
-    name = "1.2.7-1.tar.gz";
-    sha256 = "4e983093cd5e95253442541098c93d47a90ea84b171e077209c3c5ca99a37123";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_rviz_plugins/1.2.8-1.tar.gz";
+    name = "1.2.8-1.tar.gz";
+    sha256 = "836c3dcfa704b48f9faa7367d96c3d3107bb7ed2c5ce8f30d5c18ce4f5d28623";
   };
 
   buildType = "ament_cmake";

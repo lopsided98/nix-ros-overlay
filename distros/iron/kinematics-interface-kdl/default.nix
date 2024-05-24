@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, eigen, eigen3-cmake-module, kdl-parser, kinematics-interface, pluginlib, ros2-control-test-assets, tf2-eigen-kdl }:
 buildRosPackage {
   pname = "ros-iron-kinematics-interface-kdl";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/iron/kinematics_interface_kdl/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "b4e5cd0e25af368e4039bdbbc45da827d0f0024b8b236299afe73ad6525c027b";
+    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/iron/kinematics_interface_kdl/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "96b60dc55fad8669fd9a2f076fef1c0edb861d37abd0cccc49e3cda71fed1f3c";
   };
 
   buildType = "ament_cmake";
