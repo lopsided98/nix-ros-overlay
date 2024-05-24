@@ -11,6 +11,7 @@ jobs:
           - foxy
           - humble
           - iron
+          - jazzy
           - rolling
         system:
           - x86_64-linux

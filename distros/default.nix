@@ -29,6 +29,12 @@ self: super: {
       python = self.python3;
     } self super;
 
+    jazzy = import ./distro-overlay.nix {
+      version = 2;
+      distro = "jazzy";
+      python = self.python3;
+    } self super;
+
     rolling = import ./distro-overlay.nix {
       version = 2;
       distro = "rolling";
