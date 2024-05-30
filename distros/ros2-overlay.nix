@@ -112,8 +112,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     postPatch ? "", ...
   }: {
     propagatedNativeBuildInputs = with rosSelf.pythonPackages;
-      (rosSelf.lib.subtractLists [ shiboken2 pyside2 ] propagatedNativeBuildInputs)
-      ++ [ sip_4 ];
+      propagatedNativeBuildInputs++ [ sip_4 ];
     postPatch = ''
       sed -e "1 i\\import PyQt5" \
           -e "s#sipconfig\._pkg_config\['default_mod_dir'\], 'PyQt5'#PyQt5.__path__[0]#" \
