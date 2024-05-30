@@ -156,34 +156,40 @@ rosSelf: rosSuper: with rosSelf.lib; {
   });
 
   # rviz does not support shiboken/pyside2 and SIP4 is broken with the latest
-  # pyqt5. This applies a patch to make pyqt5 compatible with SIP 4 and uses
-  # SIP 4 with python-qt-binding for rviz only.
-  rviz = (rosSuper.rviz.override {
-    python-qt-binding = (rosSuper.python-qt-binding.override {
-      python3Packages = rosSelf.python3Packages.overrideScope (pyFinal: pyPrev: {
-        pyqt5 = pyPrev.pyqt5.overrideAttrs ({
-          patches ? [], ...
-        }: {
-          patches = patches ++ [ (self.fetchpatch {
-            url = "https://aur.archlinux.org/cgit/aur.git/plain/restore-sip4-support.patch?h=python-pyqt5-sip4&id=6e712e6c588d550a1a6f83c1b37c2c9135aae6ba";
-            hash = "sha256-NfMe/EK1Uj88S82xZSm+A6js3PK9mlgsaci/kinlsy8=";
-          }) ];
-        });
+  # pyqt5. This applies a patch to make pyqt5 compatible.
+  # On darwin, python-qt-bindings will often default to shiboken/pyside2,
+  # but on other platforms it will try to use a broken version of pyqt,
+  # necessitating this patch for anything using the bindings to function properly.
+  #
+  # An alternative patch is possible, which would force the bindings to always use
+  # pyside (see #404)
+  python-qt-binding = (rosSuper.python-qt-binding.override {
+    python3Packages = rosSelf.python3Packages.overrideScope (pyFinal: pyPrev: {
+      pyqt5 = pyPrev.pyqt5.overrideAttrs ({
+        patches ? [], ...
+      }: {
+        patches = patches ++ [ (self.fetchpatch {
+          url = "https://aur.archlinux.org/cgit/aur.git/plain/restore-sip4-support.patch?h=python-pyqt5-sip4&id=6e712e6c588d550a1a6f83c1b37c2c9135aae6ba";
+          hash = "sha256-NfMe/EK1Uj88S82xZSm+A6js3PK9mlgsaci/kinlsy8=";
+        }) ];
       });
-    }).overrideAttrs({
-      propagatedNativeBuildInputs ? [],
-      postPatch ? "", ...
-    }: {
-      propagatedNativeBuildInputs = with rosSelf.pythonPackages;
-        (rosSelf.lib.subtractLists [ shiboken2 pyside2 ] propagatedNativeBuildInputs)
-        ++ [ sip_4 ];
-      postPatch = ''
-        sed -e "1 i\\import PyQt5" \
-            -e "s#sipconfig\._pkg_config\['default_mod_dir'\], 'PyQt5'#PyQt5.__path__[0]#" \
-            -i cmake/sip_configure.py
-      '' + postPatch;
     });
-  }).overrideAttrs ({
+  }).overrideAttrs({
+    propagatedNativeBuildInputs ? [],
+    postPatch ? "", ...
+  }: {
+    propagatedNativeBuildInputs = with rosSelf.pythonPackages;
+      (rosSelf.lib.subtractLists [ shiboken2 pyside2 ] propagatedNativeBuildInputs)
+      ++ [ sip_4 ];
+    postPatch = ''
+      sed -e "1 i\\import PyQt5" \
+          -e "s#sipconfig\._pkg_config\['default_mod_dir'\], 'PyQt5'#PyQt5.__path__[0]#" \
+          -i cmake/sip_configure.py
+    '' + postPatch;
+  });
+
+  # since python-qt-bindings above uses pyqt, include the Qt stuff
+  rviz = rosSuper.rviz.override.overrideAttrs ({
     nativeBuildInputs ? [],
     postFixup ? "", ...
   }: {
