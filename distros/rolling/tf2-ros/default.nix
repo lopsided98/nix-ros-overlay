@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, message-filters, rcl-interfaces, rclcpp, rclcpp-action, rclcpp-components, rosgraph-msgs, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-rolling-tf2-ros";
-  version = "0.37.0-r1";
+  version = "0.37.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_ros/0.37.0-1.tar.gz";
-    name = "0.37.0-1.tar.gz";
-    sha256 = "f7c6a2b17829e8cbd5ec04289e0cf8151c6c563550f20bf803eb499011d50b53";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_ros/0.37.1-1.tar.gz";
+    name = "0.37.1-1.tar.gz";
+    sha256 = "ec46841fcbaa6c7fce80dad88beedf9ca303419ea21d5a714bf89f50567102d2";
   };
 
   buildType = "ament_cmake";

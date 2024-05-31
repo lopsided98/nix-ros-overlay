@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, bullet, geometry-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-tf2-bullet";
-  version = "0.37.0-r1";
+  version = "0.37.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_bullet/0.37.0-1.tar.gz";
-    name = "0.37.0-1.tar.gz";
-    sha256 = "dfb9f8138a3612030a4df0143898fcab75cbc8e0d42384c0407943e805dece78";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_bullet/0.37.1-1.tar.gz";
+    name = "0.37.1-1.tar.gz";
+    sha256 = "92149f60033176e3d8e887e9b454bc4435d3c8dcb56881092f2ac860dcd6050e";
   };
 
   buildType = "ament_cmake";

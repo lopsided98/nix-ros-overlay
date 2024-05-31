@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-nav2-theta-star-planner";
-  version = "1.2.7-r1";
+  version = "1.2.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_theta_star_planner/1.2.7-1.tar.gz";
-    name = "1.2.7-1.tar.gz";
-    sha256 = "d9efc98b4683efb6d3649d79bce800720336ff7e9eaf5eb5933ac9aecfcf7617";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_theta_star_planner/1.2.8-1.tar.gz";
+    name = "1.2.8-1.tar.gz";
+    sha256 = "0242d89748048691e483d164117032294a732f09b2ad45b1912dbb79463d730d";
   };
 
   buildType = "ament_cmake";

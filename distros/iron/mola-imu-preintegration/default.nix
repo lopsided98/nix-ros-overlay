@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt2 }:
 buildRosPackage {
   pname = "ros-iron-mola-imu-preintegration";
-  version = "1.0.3-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_imu_preintegration/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "810c08f45110491cf141a6d24a6dcedc40820424db6ad469bbd6ac58c88b6963";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_imu_preintegration/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "8aa8d1a3d485e74a8c55322d166c14f72b3c5d6c8a6dd21054bca575c815038d";
   };
 
   buildType = "cmake";

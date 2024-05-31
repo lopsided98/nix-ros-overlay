@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pcl-conversions, pcl-msgs, pcl-ros }:
 buildRosPackage {
   pname = "ros-iron-perception-pcl";
-  version = "2.4.0-r5";
+  version = "2.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/iron/perception_pcl/2.4.0-5.tar.gz";
-    name = "2.4.0-5.tar.gz";
-    sha256 = "563d0db90de514a487a7a00ef8eb180bdb25b930a0d1e98ec17787cf48d3e89a";
+    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/iron/perception_pcl/2.5.2-1.tar.gz";
+    name = "2.5.2-1.tar.gz";
+    sha256 = "0e84d42b7b71ebfd4e0cdd5615e067898a40b2ac20d672285d2830766808a864";
   };
 
   buildType = "ament_cmake";
