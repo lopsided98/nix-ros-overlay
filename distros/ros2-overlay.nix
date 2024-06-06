@@ -113,11 +113,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
   }: {
     propagatedNativeBuildInputs = with rosSelf.pythonPackages;
       propagatedNativeBuildInputs++ [ sip_4 ];
-    postPatch = ''
-      sed -e "1 i\\import PyQt5" \
-          -e "s#sipconfig\._pkg_config\['default_mod_dir'\], 'PyQt5'#PyQt5.__path__[0]#" \
-          -i cmake/sip_configure.py
-    '' + postPatch;
+    # postPatch = ''
+    #   sed -e "1 i\\import PyQt5" \
+    #       -e "s#sipconfig\._pkg_config\['default_mod_dir'\], 'PyQt5'#PyQt5.__path__[0]#" \
+    #       -i cmake/sip_configure.py
+    # '' + postPatch;
   });
 
   rcutils = rosSuper.rcutils.overrideAttrs ({
