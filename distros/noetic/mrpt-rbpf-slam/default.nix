@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, mrpt-msgs-bridge, mrpt-rawlog, mrpt2, mvsim, nav-msgs, roscpp, roslaunch, roslib, rviz, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-rbpf-slam";
-  version = "0.1.16-r1";
+  version = "0.1.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/noetic/mrpt_rbpf_slam/0.1.16-1.tar.gz";
-    name = "0.1.16-1.tar.gz";
-    sha256 = "d8e484c24824aab1c9401b1abb2bef1d60d7d13759abbdc389e2926606174116";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/noetic/mrpt_rbpf_slam/0.1.17-1.tar.gz";
+    name = "0.1.17-1.tar.gz";
+    sha256 = "6897ff3436603d02a6ba5d42d31d58d5541228ed05b7a87654ea77ba5ddf5bf7";
   };
 
   buildType = "catkin";

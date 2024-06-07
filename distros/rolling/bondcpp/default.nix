@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, bond, pkg-config, rclcpp, rclcpp-lifecycle, smclib, util-linux }:
 buildRosPackage {
   pname = "ros-rolling-bondcpp";
-  version = "4.0.0-r4";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/rolling/bondcpp/4.0.0-4.tar.gz";
-    name = "4.0.0-4.tar.gz";
-    sha256 = "b53dd873186805aebf9e2871abfe03a9ddbf9fa8961704a9b7d7da6fc337837c";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/rolling/bondcpp/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "b58d6ba6c3171cc38a651e35ca4307bb20fbebf773b8fe3abbdfb89374652b8d";
   };
 
   buildType = "ament_cmake";

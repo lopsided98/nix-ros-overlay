@@ -190,6 +190,12 @@ self: super: {
 
  apriltag-detector = self.callPackage ./apriltag-detector {};
 
+ apriltag-detector-mit = self.callPackage ./apriltag-detector-mit {};
+
+ apriltag-detector-umich = self.callPackage ./apriltag-detector-umich {};
+
+ apriltag-draw = self.callPackage ./apriltag-draw {};
+
  apriltag-mit = self.callPackage ./apriltag-mit {};
 
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
@@ -268,6 +274,8 @@ self: super: {
 
  autoware-cmake = self.callPackage ./autoware-cmake {};
 
+ autoware-internal-msgs = self.callPackage ./autoware-internal-msgs {};
+
  autoware-lint-common = self.callPackage ./autoware-lint-common {};
 
  autoware-utils = self.callPackage ./autoware-utils {};
@@ -292,6 +300,12 @@ self: super: {
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
 
+ beluga = self.callPackage ./beluga {};
+
+ beluga-amcl = self.callPackage ./beluga-amcl {};
+
+ beluga-ros = self.callPackage ./beluga-ros {};
+
  bicycle-steering-controller = self.callPackage ./bicycle-steering-controller {};
 
  bno055 = self.callPackage ./bno055 {};
@@ -307,6 +321,8 @@ self: super: {
  boost-plugin-loader = self.callPackage ./boost-plugin-loader {};
 
  bosch-locator-bridge = self.callPackage ./bosch-locator-bridge {};
+
+ bosch-locator-bridge-utils = self.callPackage ./bosch-locator-bridge-utils {};
 
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
@@ -726,6 +742,8 @@ self: super: {
 
  fadecandy-msgs = self.callPackage ./fadecandy-msgs {};
 
+ fast-gicp = self.callPackage ./fast-gicp {};
+
  fastcdr = self.callPackage ./fastcdr {};
 
  fastrtps = self.callPackage ./fastrtps {};
@@ -797,6 +815,8 @@ self: super: {
  foxglove-bridge = self.callPackage ./foxglove-bridge {};
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
+
+ franka-description = self.callPackage ./franka-description {};
 
  game-controller-spl = self.callPackage ./game-controller-spl {};
 
@@ -1076,6 +1096,8 @@ self: super: {
 
  kuka-cybertech-support = self.callPackage ./kuka-cybertech-support {};
 
+ kuka-external-control-sdk-examples = self.callPackage ./kuka-external-control-sdk-examples {};
+
  kuka-fortec-support = self.callPackage ./kuka-fortec-support {};
 
  kuka-iontec-support = self.callPackage ./kuka-iontec-support {};
@@ -1181,6 +1203,8 @@ self: super: {
  libcaer = self.callPackage ./libcaer {};
 
  libcaer-driver = self.callPackage ./libcaer-driver {};
+
+ libcaer-vendor = self.callPackage ./libcaer-vendor {};
 
  libcamera = self.callPackage ./libcamera {};
 
@@ -1466,17 +1490,37 @@ self: super: {
 
  mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
 
+ mrpt-map-server = self.callPackage ./mrpt-map-server {};
+
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
+ mrpt-msgs-bridge = self.callPackage ./mrpt-msgs-bridge {};
+
+ mrpt-nav-interfaces = self.callPackage ./mrpt-nav-interfaces {};
+
+ mrpt-navigation = self.callPackage ./mrpt-navigation {};
+
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
+
+ mrpt-pf-localization = self.callPackage ./mrpt-pf-localization {};
+
+ mrpt-pointcloud-pipeline = self.callPackage ./mrpt-pointcloud-pipeline {};
+
+ mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
+
+ mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
 
  mrpt-sensor-bumblebee-stereo = self.callPackage ./mrpt-sensor-bumblebee-stereo {};
 
  mrpt-sensor-gnns-nmea = self.callPackage ./mrpt-sensor-gnns-nmea {};
 
+ mrpt-sensor-imu-taobotics = self.callPackage ./mrpt-sensor-imu-taobotics {};
+
  mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
 
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
+
+ mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
@@ -1574,6 +1618,8 @@ self: super: {
 
  navigation2 = self.callPackage ./navigation2 {};
 
+ ndt-omp = self.callPackage ./ndt-omp {};
+
  neo-simulation2 = self.callPackage ./neo-simulation2 {};
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
@@ -1626,6 +1672,28 @@ self: super: {
 
  odom-to-tf-ros2 = self.callPackage ./odom-to-tf-ros2 {};
 
+ off-highway-can = self.callPackage ./off-highway-can {};
+
+ off-highway-general-purpose-radar = self.callPackage ./off-highway-general-purpose-radar {};
+
+ off-highway-general-purpose-radar-msgs = self.callPackage ./off-highway-general-purpose-radar-msgs {};
+
+ off-highway-premium-radar-sample = self.callPackage ./off-highway-premium-radar-sample {};
+
+ off-highway-premium-radar-sample-msgs = self.callPackage ./off-highway-premium-radar-sample-msgs {};
+
+ off-highway-radar = self.callPackage ./off-highway-radar {};
+
+ off-highway-radar-msgs = self.callPackage ./off-highway-radar-msgs {};
+
+ off-highway-sensor-drivers = self.callPackage ./off-highway-sensor-drivers {};
+
+ off-highway-sensor-drivers-examples = self.callPackage ./off-highway-sensor-drivers-examples {};
+
+ off-highway-uss = self.callPackage ./off-highway-uss {};
+
+ off-highway-uss-msgs = self.callPackage ./off-highway-uss-msgs {};
+
  omni-base-2dnav = self.callPackage ./omni-base-2dnav {};
 
  omni-base-bringup = self.callPackage ./omni-base-bringup {};
@@ -1647,6 +1715,16 @@ self: super: {
  omni-base-simulation = self.callPackage ./omni-base-simulation {};
 
  ompl = self.callPackage ./ompl {};
+
+ openeb-vendor = self.callPackage ./openeb-vendor {};
+
+ opennav-docking = self.callPackage ./opennav-docking {};
+
+ opennav-docking-bt = self.callPackage ./opennav-docking-bt {};
+
+ opennav-docking-core = self.callPackage ./opennav-docking-core {};
+
+ opennav-docking-msgs = self.callPackage ./opennav-docking-msgs {};
 
  openni2-camera = self.callPackage ./openni2-camera {};
 
@@ -1862,6 +1940,8 @@ self: super: {
 
  psdk-wrapper = self.callPackage ./psdk-wrapper {};
 
+ py-binding-tools = self.callPackage ./py-binding-tools {};
+
  py-trees = self.callPackage ./py-trees {};
 
  py-trees-js = self.callPackage ./py-trees-js {};
@@ -1881,6 +1961,18 @@ self: super: {
  python-orocos-kdl-vendor = self.callPackage ./python-orocos-kdl-vendor {};
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
+
+ qb-device = self.callPackage ./qb-device {};
+
+ qb-device-bringup = self.callPackage ./qb-device-bringup {};
+
+ qb-device-driver = self.callPackage ./qb-device-driver {};
+
+ qb-device-msgs = self.callPackage ./qb-device-msgs {};
+
+ qb-device-ros2-control = self.callPackage ./qb-device-ros2-control {};
+
+ qb-device-test-controllers = self.callPackage ./qb-device-test-controllers {};
 
  qb-softhand-industry = self.callPackage ./qb-softhand-industry {};
 
@@ -2538,6 +2630,8 @@ self: super: {
 
  simulation = self.callPackage ./simulation {};
 
+ situational-graphs-msgs = self.callPackage ./situational-graphs-msgs {};
+
  slam-toolbox = self.callPackage ./slam-toolbox {};
 
  slider-publisher = self.callPackage ./slider-publisher {};
@@ -2974,6 +3068,14 @@ self: super: {
 
  velodyne-simulator = self.callPackage ./velodyne-simulator {};
 
+ vimbax-camera = self.callPackage ./vimbax-camera {};
+
+ vimbax-camera-events = self.callPackage ./vimbax-camera-events {};
+
+ vimbax-camera-examples = self.callPackage ./vimbax-camera-examples {};
+
+ vimbax-camera-msgs = self.callPackage ./vimbax-camera-msgs {};
+
  vision-msgs = self.callPackage ./vision-msgs {};
 
  vision-msgs-layers = self.callPackage ./vision-msgs-layers {};
@@ -2987,6 +3089,8 @@ self: super: {
  visualization-msgs = self.callPackage ./visualization-msgs {};
 
  vitis-common = self.callPackage ./vitis-common {};
+
+ vmbc-interface = self.callPackage ./vmbc-interface {};
 
  vrpn = self.callPackage ./vrpn {};
 

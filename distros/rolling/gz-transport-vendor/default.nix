@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cppzmq, gz-cmake-vendor, gz-math-vendor, gz-msgs-vendor, gz-tools-vendor, gz-utils-vendor, pkg-config, protobuf, python3, python3Packages, pythonPackages, sqlite, util-linux }:
 buildRosPackage {
   pname = "ros-rolling-gz-transport-vendor";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_transport_vendor-release/archive/release/rolling/gz_transport_vendor/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "e94fa6308ef5726f87dcb3f1dafcd58c433ff4a436c48ccd42d12dfe162d6af0";
+    url = "https://github.com/ros2-gbp/gz_transport_vendor-release/archive/release/rolling/gz_transport_vendor/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "1a9c665f203ded448770c42cd8683d227e41f9edc479ac8643b9905bfcc90a49";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package ];
 
   meta = {
-    description = "Vendor package for: gz-transport13 13.2.0
+    description = "Vendor package for: gz-transport13 13.3.0
 
     Gazebo Transport: Provides fast and efficient asynchronous message passing, services, and data logging.";
     license = with lib.licenses; [ asl20 ];

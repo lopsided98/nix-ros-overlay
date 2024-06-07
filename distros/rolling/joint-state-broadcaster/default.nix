@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, builtin-interfaces, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-joint-state-broadcaster";
-  version = "4.7.0-r1";
+  version = "4.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/joint_state_broadcaster/4.7.0-1.tar.gz";
-    name = "4.7.0-1.tar.gz";
-    sha256 = "d177d683e1152c957e3ea817edd7f1ec8286060de4ec2615a5199971756f4d21";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/joint_state_broadcaster/4.9.0-1.tar.gz";
+    name = "4.9.0-1.tar.gz";
+    sha256 = "fe8917b844247dd325f19b52e5e141b1bd4f3c056326ddc55ebe5aa87efb4ea7";
   };
 
   buildType = "ament_cmake";

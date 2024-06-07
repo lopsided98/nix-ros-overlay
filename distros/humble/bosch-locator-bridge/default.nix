@@ -2,21 +2,21 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, launch-xml, nav-msgs, pcl-conversions, poco, rclcpp, rosidl-default-generators, rosidl-default-runtime, std-srvs, tf2-geometry-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, launch-xml, nav-msgs, pcl-conversions, poco, rclcpp, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-srvs, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-bosch-locator-bridge";
-  version = "2.1.5-r1";
+  version = "2.1.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/locator_ros_bridge-release/archive/release/humble/bosch_locator_bridge/2.1.5-1.tar.gz";
-    name = "2.1.5-1.tar.gz";
-    sha256 = "6943a059e8f98294f6edfd2e70e4a31d72b5884bbfe035cbd392934d24b7ae0a";
+    url = "https://github.com/ros2-gbp/locator_ros_bridge-release/archive/release/humble/bosch_locator_bridge/2.1.11-1.tar.gz";
+    name = "2.1.11-1.tar.gz";
+    sha256 = "90e7214fa94ea97c978f10eaa333fd1b0c24453d1d1660b31f15913c48674f11";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ geometry-msgs launch-xml nav-msgs pcl-conversions poco rclcpp rosidl-default-runtime std-srvs tf2-geometry-msgs tf2-ros ];
+  propagatedBuildInputs = [ geometry-msgs launch-xml nav-msgs pcl-conversions poco rclcpp rosidl-default-runtime sensor-msgs std-srvs tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

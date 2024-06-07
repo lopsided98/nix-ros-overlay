@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, flexbe-core, flexbe-msgs, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-humble-flexbe-input";
-  version = "2.3.3-r1";
+  version = "2.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/humble/flexbe_input/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "645ee6f26ea60ddee96adec014fef3ccc77990834cea2f74c3e492ae9f48fe86";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/humble/flexbe_input/2.3.5-1.tar.gz";
+    name = "2.3.5-1.tar.gz";
+    sha256 = "1224d1048e0c742b894554f26de165813d23c1f78a4c586b5af3d361068e3e46";
   };
 
   buildType = "ament_python";

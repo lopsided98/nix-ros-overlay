@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-uncrustify, eigen, pluginlib, qt5, rclcpp, resource-retriever, rmf-door-msgs, rmf-lift-msgs, rmf-traffic-ros2, rmf-utils, rmf-visualization-msgs, rviz-common, rviz-default-plugins, rviz-rendering }:
 buildRosPackage {
   pname = "ros-rolling-rmf-visualization-rviz2-plugins";
-  version = "2.2.1-r2";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/rolling/rmf_visualization_rviz2_plugins/2.2.1-2.tar.gz";
-    name = "2.2.1-2.tar.gz";
-    sha256 = "0e3460aee667d8fcfc90996118a739d297a2cf149b3e9f1b46d7aa9110ea5cb2";
+    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/rolling/rmf_visualization_rviz2_plugins/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "07ecb67dbf8b15ff131441bb74deead3dcf1d9bcb75353e1bcbc83312f37542c";
   };
 
   buildType = "ament_cmake";

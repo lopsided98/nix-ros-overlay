@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, moveit-core, moveit-ros-planning, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-moveit-fake-controller-manager";
-  version = "1.1.13-r2";
+  version = "1.1.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_fake_controller_manager/1.1.13-2.tar.gz";
-    name = "1.1.13-2.tar.gz";
-    sha256 = "9c721596c68bc12cc0d9d905f97a09ac3c76cd97eefb5ddf5def64dc0666253a";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_fake_controller_manager/1.1.14-1.tar.gz";
+    name = "1.1.14-1.tar.gz";
+    sha256 = "1d8ead834b981b15b0a27ca7e894344f6e5ae9d3c50f77b5f4ab9d37132f3e7b";
   };
 
   buildType = "catkin";

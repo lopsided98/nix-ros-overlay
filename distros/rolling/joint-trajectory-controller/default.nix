@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, rsl, tl-expected, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-rolling-joint-trajectory-controller";
-  version = "4.7.0-r1";
+  version = "4.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/joint_trajectory_controller/4.7.0-1.tar.gz";
-    name = "4.7.0-1.tar.gz";
-    sha256 = "c0ff52d34c24ccbf1aed5d864388514f64d100f1158d8ebd0bc3a90fc769d444";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/joint_trajectory_controller/4.9.0-1.tar.gz";
+    name = "4.9.0-1.tar.gz";
+    sha256 = "9f78a60e4aac13be4ae297be0e0fa39c5c0f86de87ff46f19310d6f1c15d1125";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, mola-kernel, mrpt2, ros-environment }:
 buildRosPackage {
   pname = "ros-iron-mola-launcher";
-  version = "1.0.3-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_launcher/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "41adb4474147185f3f2b0f52640cf9a06ea0972645ba22afebb1ef213f777d88";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_launcher/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "bc9571ff8d6f9d131fa74e341e517e7013e2071092c464a257c37ba1971abee3";
   };
 
   buildType = "ament_cmake";
