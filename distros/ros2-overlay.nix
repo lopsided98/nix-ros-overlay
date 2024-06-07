@@ -12,6 +12,13 @@ rosSelf: rosSuper: with rosSelf.lib; {
     outputs = [ "out" "dev" ];
   });
 
+  ament-cmake-vendor-package = rosSuper.ament-cmake-vendor-package.overrideAttrs ({
+    # the regular cmake fixing replaces <snip>/opt<snip> with /var/empty, even within
+    # the local ros2 install folder, which completely breaks vendoring, since the
+    # cmake_prefix_path will no longer point the where the files are.
+    dontFixCmake = true;
+  });
+
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
     cmakeFlags ? [], ...
   }: {
