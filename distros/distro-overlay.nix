@@ -415,4 +415,5 @@ in self.lib.makeScopeWithSplicing
   ++ self.lib.optional (version == 2) (import ./ros2-overlay.nix self)
   ++ [
     (import (./. + "/${distro}/overrides.nix") self)
+    (import ../pkgs)
   ]) rosSelf {})
