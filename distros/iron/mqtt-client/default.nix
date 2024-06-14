@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, fmt, mqtt-client-interfaces, paho-mqtt-c, paho-mqtt-cpp, rclcpp, rclcpp-components, rcpputils, ros-environment, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-mqtt-client";
-  version = "2.2.1-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mqtt_client-release/archive/release/iron/mqtt_client/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "db3d01ead931e49c2ee2eb89340c50bb8defcf55062eb4287e2dcb3da70627e5";
+    url = "https://github.com/ros2-gbp/mqtt_client-release/archive/release/iron/mqtt_client/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "ea2385635952fec25e3be2737909cb66fa80281086c8347593ac88d99a82a7cf";
   };
 
   buildType = "ament_cmake";

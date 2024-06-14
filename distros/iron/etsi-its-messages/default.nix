@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-coding, etsi-its-conversion, etsi-its-msgs, etsi-its-msgs-utils, ros-environment }:
 buildRosPackage {
   pname = "ros-iron-etsi-its-messages";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/iron/etsi_its_messages/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "f8188e1850c6db1210e766b63db9b6107ce900a4b990d1de154e42fb2b1974f8";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/iron/etsi_its_messages/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "4ca28ab4d8acdbef39f902722ff179f42709f938c64ba9e397a552ab65144f49";
   };
 
   buildType = "ament_cmake";

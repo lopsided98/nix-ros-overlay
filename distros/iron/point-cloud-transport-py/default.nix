@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-python, ament-cmake-ros, pluginlib, point-cloud-transport, pybind11-vendor, python-cmake-module, rclcpp, rpyutils, sensor-msgs }:
 buildRosPackage {
   pname = "ros-iron-point-cloud-transport-py";
-  version = "2.0.5-r1";
+  version = "2.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport-release/archive/release/iron/point_cloud_transport_py/2.0.5-1.tar.gz";
-    name = "2.0.5-1.tar.gz";
-    sha256 = "646603f3cf9fecaace3e4d51970552f8a0e55ceea442d549eae96385825d5591";
+    url = "https://github.com/ros2-gbp/point_cloud_transport-release/archive/release/iron/point_cloud_transport_py/2.0.6-1.tar.gz";
+    name = "2.0.6-1.tar.gz";
+    sha256 = "990a27f270c15af9be35dc1bcdb675f24e77e51e8e4018f05e601734a93fbec2";
   };
 
   buildType = "ament_cmake";

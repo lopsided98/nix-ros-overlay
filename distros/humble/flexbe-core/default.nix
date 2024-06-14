@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, flexbe-msgs, launch-ros, launch-testing, pythonPackages, rclpy, std-msgs, std-srvs, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-humble-flexbe-core";
-  version = "2.3.3-r1";
+  version = "2.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/humble/flexbe_core/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "789512ca53f2db6e6840c0e84b6bd2da737f2ca92bc90c0a3924e92731f24147";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/humble/flexbe_core/2.3.5-1.tar.gz";
+    name = "2.3.5-1.tar.gz";
+    sha256 = "c4349b45d418a33c369a20ac84c33b1bd5fd9ae7cc7980e274f34db89910fd31";
   };
 
   buildType = "ament_python";

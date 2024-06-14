@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, eigen3-cmake-module, geometry-msgs, rclcpp, rmf-building-map-msgs, rmf-dispenser-msgs, rmf-fleet-msgs, rmf-ingestor-msgs, std-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-rmf-robot-sim-common";
-  version = "2.2.2-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/rolling/rmf_robot_sim_common/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "31cfa0c904dc4c9d7e49ff76e72019d43b35cb3ac7c3a1e0595a657f7315f4e3";
+    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/rolling/rmf_robot_sim_common/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "91fa424b468e7dbd40d65afb4e1fb1771d096dae894bf523bd8f2f1561a32314";
   };
 
   buildType = "ament_cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];
 
   meta = {
-    description = ''Common utility functions for Gazebo-classic and Gazebo RMF plugins'';
+    description = "Common utility functions for Gazebo-classic and Gazebo RMF plugins";
     license = with lib.licenses; [ asl20 ];
   };
 }

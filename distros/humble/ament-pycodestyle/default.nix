@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-ament-pycodestyle";
-  version = "0.12.10-r1";
+  version = "0.12.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_pycodestyle/0.12.10-1.tar.gz";
-    name = "0.12.10-1.tar.gz";
-    sha256 = "0ba183871c7e1d2cc591651212be215a633f5ef92f5c689bf54f39130edd1edf";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_pycodestyle/0.12.11-1.tar.gz";
+    name = "0.12.11-1.tar.gz";
+    sha256 = "37bcf8dbe365dc7c333e138b4863b4ad0863bd853ca0a330c2ab4032100d4117";
   };
 
   buildType = "ament_python";

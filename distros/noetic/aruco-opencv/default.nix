@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, aruco-opencv-msgs, catkin, cv-bridge, dynamic-reconfigure, image-transport, nodelet, python3Packages, roscpp, tf2-geometry-msgs, tf2-ros, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-aruco-opencv";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/fictionlab-gbp/aruco_opencv-release/archive/release/noetic/aruco_opencv/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "d77b153af83108c26acb37dea319cc3b1afc6d06a83139f30d26a19e69e7ca0c";
+    url = "https://github.com/fictionlab-gbp/aruco_opencv-release/archive/release/noetic/aruco_opencv/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "973b5a4f33db0d950a3948fc4fd7f6a7e32619a7ece3c1ee15850414eec938c0";
   };
 
   buildType = "catkin";

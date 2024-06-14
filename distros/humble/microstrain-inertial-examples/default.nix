@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, microstrain-inertial-driver, rviz-imu-plugin, rviz2, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-microstrain-inertial-examples";
-  version = "4.2.0-r1";
+  version = "4.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/humble/microstrain_inertial_examples/4.2.0-1.tar.gz";
-    name = "4.2.0-1.tar.gz";
-    sha256 = "bc459df536af086358bc6e4d165b084a3c25ccc75d941b83a08552e48a741db0";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/humble/microstrain_inertial_examples/4.3.0-1.tar.gz";
+    name = "4.3.0-1.tar.gz";
+    sha256 = "46ac9845c897d80e5f9fc98e53ec392b5ff6f0bd411ac12da273f55588a1bbbf";
   };
 
   buildType = "ament_cmake";

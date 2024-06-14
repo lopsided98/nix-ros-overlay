@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, doxygen, eigen, git, matio, python3Packages, simde }:
 buildRosPackage {
   pname = "ros-humble-proxsuite";
-  version = "0.3.6-r2";
+  version = "0.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/proxsuite-release/archive/release/humble/proxsuite/0.3.6-2.tar.gz";
-    name = "0.3.6-2.tar.gz";
-    sha256 = "849c8e47914f68dec90a55bf5b085e6c6945bcae0b771097e444ab635e284796";
+    url = "https://github.com/ros2-gbp/proxsuite-release/archive/release/humble/proxsuite/0.6.5-1.tar.gz";
+    name = "0.6.5-1.tar.gz";
+    sha256 = "16617d8b126e84c54d2acd8f360676357b2c7111f75eeec393a4f43942c34b58";
   };
 
   buildType = "cmake";

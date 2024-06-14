@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-cam-conversion, etsi-its-denm-conversion, rclcpp, rclcpp-components, ros-environment, std-msgs, udp-msgs }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-conversion";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/humble/etsi_its_conversion/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "df82966ca39886626605261e620666819ae3645555601e13699fa8a418956f52";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_conversion/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "97f9a6b0c06556635f01f2d45c7c4182e5dcfa0fbf57ee19e9465287ad052492";
   };
 
   buildType = "ament_cmake";
