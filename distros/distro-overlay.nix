@@ -387,6 +387,14 @@ let
     };
 
     urdf = patchBoostPython rosSuper.urdf;
+
+    vrpn = rosSuper.vrpn.overrideAttrs { 
+      src = self.fetchurl {
+        url = "https://github.com/ros2-gbp/vrpn-release/archive/release/rolling/vrpn/7.35.0-20.tar.gz";# "https://github.com/alvinsunyixiao/vrpn/archive/9493113de3ace0a8dd1de1e3ff44a4db4cebcdb3.tar.gz";
+        name = "7.35.0-20.tar.gz";
+        sha256 = "831455c11c3016a4ef652ebd8c24ece8af87af59ef879e357a4847017b05e571"; # "e423e3215117a50bccbf2e7f65cfd117d34447fea193bc49ba0af7c442f5521d";#"0fa4eb542c2a0d4c34ea15bcfdf860835e3241d20a30885aa68231dea2d53fe7";
+      };
+    };
   };
 
   otherSplices = {
