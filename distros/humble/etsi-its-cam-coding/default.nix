@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-cam-coding";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/humble/etsi_its_cam_coding/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "265e2588131c3b725edf0bf7305f442dad35d045cb9134700e62ca0d52a057ee";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_cam_coding/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "d7108956c78bf03a508eb731c23cc94c8e4ae802ca17a3667d850275c3fd433a";
   };
 
   buildType = "ament_cmake";

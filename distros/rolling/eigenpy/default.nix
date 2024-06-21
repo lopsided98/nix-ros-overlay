@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, doxygen, eigen, git, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-eigenpy";
-  version = "3.1.4-r2";
+  version = "3.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/eigenpy-release/archive/release/rolling/eigenpy/3.1.4-2.tar.gz";
-    name = "3.1.4-2.tar.gz";
-    sha256 = "7890e3da7c07b2b4af02778f4a49d95873b222b8f54934477e037947f4bbf376";
+    url = "https://github.com/ros2-gbp/eigenpy-release/archive/release/rolling/eigenpy/3.7.0-1.tar.gz";
+    name = "3.7.0-1.tar.gz";
+    sha256 = "81db02df0f0c386cb294673802dc8289c99b8dddc66e4c1d2ddfde3059252b0d";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen git ];
-  propagatedBuildInputs = [ boost eigen python3 python3Packages.numpy ];
+  propagatedBuildInputs = [ boost eigen python3 python3Packages.numpy python3Packages.scipy ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

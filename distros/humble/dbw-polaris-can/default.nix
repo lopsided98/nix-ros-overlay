@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, can-msgs, dataspeed-can-msg-filters, dataspeed-can-usb, dataspeed-dbw-common, dataspeed-ulc-can, dbw-polaris-description, dbw-polaris-msgs, geometry-msgs, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-dbw-polaris-can";
-  version = "2.1.10-r1";
+  version = "2.1.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dbw_polaris_can/2.1.10-1.tar.gz";
-    name = "2.1.10-1.tar.gz";
-    sha256 = "b9b7a9f44e3d9a06f8c5267bd12010c324f73e2534a644f131a6bdc0caf30ecd";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dbw_polaris_can/2.1.16-1.tar.gz";
+    name = "2.1.16-1.tar.gz";
+    sha256 = "2db5dd3aefbe4565544c709ca5a26c96036bc5e85288ac02d60bf80573bf04e0";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python3Packages, pythonPackages, rosidl-adapter }:
 buildRosPackage {
   pname = "ros-rolling-rosidl-parser";
-  version = "4.7.0-r1";
+  version = "4.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_parser/4.7.0-1.tar.gz";
-    name = "4.7.0-1.tar.gz";
-    sha256 = "e015571969d753aea36a4a194d76526d36bc5503167a20ad2628c8143a5b5555";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_parser/4.8.0-1.tar.gz";
+    name = "4.8.0-1.tar.gz";
+    sha256 = "73615973ec6f6dabc7732ffd6d3bfd624e92c3936fbe45d5174d63eac96df8f7";
   };
 
   buildType = "ament_cmake";

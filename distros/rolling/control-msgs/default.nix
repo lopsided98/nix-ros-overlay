@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-control-msgs";
-  version = "5.1.0-r1";
+  version = "5.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/rolling/control_msgs/5.1.0-1.tar.gz";
-    name = "5.1.0-1.tar.gz";
-    sha256 = "ddf332e88cab63dbc1fe5d44b213e883ce21317e929c10f0386c1e2d53fea468";
+    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/rolling/control_msgs/5.2.0-1.tar.gz";
+    name = "5.2.0-1.tar.gz";
+    sha256 = "04b4283bed83ab8fc701a1ac0969401a03053f2f2833737265c0c3b1cc4a13bd";
   };
 
   buildType = "ament_cmake";
@@ -21,7 +21,7 @@ buildRosPackage {
 
   meta = {
     description = "control_msgs contains base messages and actions useful for
-    controlling robots.  It provides representations for controller
+    controlling robots. It provides representations for controller
     setpoints and joint and cartesian trajectories.";
     license = with lib.licenses; [ bsd3 ];
   };

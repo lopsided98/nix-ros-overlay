@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cartesian-interface, cartesian-trajectory-controller, cartesian-trajectory-interpolation, catkin, twist-controller }:
 buildRosPackage {
   pname = "ros-noetic-ros-controllers-cartesian";
-  version = "0.1.5-r1";
+  version = "0.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/noetic/ros_controllers_cartesian/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "c9809ea177dcb158ec15cd20bcd3d8de96a6d235db4b04baa825bf653e7dcf36";
+    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_controllers_cartesian-release/archive/release/noetic/ros_controllers_cartesian/0.1.6-1.tar.gz";
+    name = "0.1.6-1.tar.gz";
+    sha256 = "c436da2b475cf766f6d09b3b48c155f9f35fa7d9cd1b0852a3b12c3b7de23a62";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, curl, file, pkg-config }:
 buildRosPackage {
   pname = "ros-humble-libcurl-vendor";
-  version = "3.1.1-r1";
+  version = "3.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/humble/libcurl_vendor/3.1.1-1.tar.gz";
-    name = "3.1.1-1.tar.gz";
-    sha256 = "b11a6bd16588b5a04624fa27e7ab49c74f3bb50d57b08d7ca0ff8610a2d3651f";
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/humble/libcurl_vendor/3.1.2-1.tar.gz";
+    name = "3.1.2-1.tar.gz";
+    sha256 = "e9d1100eb201ed07e31c2549eded35fe16a49c4e862107046a22fed8f69a5c29";
   };
 
   buildType = "ament_cmake";

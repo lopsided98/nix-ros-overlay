@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt2 }:
 buildRosPackage {
   pname = "ros-rolling-kitti-metrics-eval";
-  version = "1.0.3-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/kitti_metrics_eval/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "199de3e4f34fdc88b589339e289f07087b837242472a83e90ef173de1df43060";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/kitti_metrics_eval/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "54c8eae6af8ca3521a63c337e11978465c4cf21ec24cb06f8222c689acb1ef69";
   };
 
   buildType = "cmake";

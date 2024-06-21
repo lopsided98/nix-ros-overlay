@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-sensor-msgs";
-  version = "4.2.3-r1";
+  version = "4.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/sensor_msgs/4.2.3-1.tar.gz";
-    name = "4.2.3-1.tar.gz";
-    sha256 = "0dd8464afe00837aa1448580769e0d9cebada9d55fdb0e6f0f101ca69b5fb8f0";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/sensor_msgs/4.2.4-1.tar.gz";
+    name = "4.2.4-1.tar.gz";
+    sha256 = "c9cdabad13067c910808841b6531c2d56ec6ee49705ee68d9926bb943322968f";
   };
 
   buildType = "ament_cmake";

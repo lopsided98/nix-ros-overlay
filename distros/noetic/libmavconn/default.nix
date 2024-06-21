@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, console-bridge, gtest, mavlink, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-libmavconn";
-  version = "1.18.0-r1";
+  version = "1.19.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/libmavconn/1.18.0-1.tar.gz";
-    name = "1.18.0-1.tar.gz";
-    sha256 = "f59ced2a80d0084aa9cde8c9711fba69d4dc8d965d87620127a9ca84cd7209c1";
+    url = "https://github.com/mavlink/mavros-release/archive/release/noetic/libmavconn/1.19.0-1.tar.gz";
+    name = "1.19.0-1.tar.gz";
+    sha256 = "3379a9549a312f88da86b56b572ccb0b48166682db56a8025b0ea8ca265a8057";
   };
 
   buildType = "catkin";

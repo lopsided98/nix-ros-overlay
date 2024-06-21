@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, can-msgs, dataspeed-can-msg-filters, dataspeed-can-usb, dataspeed-dbw-common, dataspeed-ulc-can, dbw-ford-description, dbw-ford-msgs, geometry-msgs, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-dbw-ford-can";
-  version = "2.1.10-r1";
+  version = "2.1.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dbw_ford_can/2.1.10-1.tar.gz";
-    name = "2.1.10-1.tar.gz";
-    sha256 = "825cc869efdb77aa88d749a014169dfed75e934b1a8e642499ff443f75852107";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dbw_ford_can/2.1.16-1.tar.gz";
+    name = "2.1.16-1.tar.gz";
+    sha256 = "ccd0e19150a4e9703b50a94e94a72230100c75e2cb1f100f524627b09de1dc44";
   };
 
   buildType = "ament_cmake";

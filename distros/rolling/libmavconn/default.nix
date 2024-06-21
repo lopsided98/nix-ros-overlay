@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, asio, console-bridge, mavlink, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-libmavconn";
-  version = "2.6.0-r2";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavros-release/archive/release/rolling/libmavconn/2.6.0-2.tar.gz";
-    name = "2.6.0-2.tar.gz";
-    sha256 = "710acbe18ea0e40f7071070eff5766a2b99bccb4c650008222e19230cd8ac262";
+    url = "https://github.com/ros2-gbp/mavros-release/archive/release/rolling/libmavconn/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "118cc0a7105261832681190483a0889664f0a99f9358a5422e4b9804701fc298";
   };
 
   buildType = "ament_cmake";

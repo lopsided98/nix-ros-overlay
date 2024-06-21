@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cpplint, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, aruco-opencv-msgs, cv-bridge, image-transport, python3Packages, rclcpp, rclcpp-components, rclcpp-lifecycle, tf2-geometry-msgs, tf2-ros, yaml-cpp }:
 buildRosPackage {
   pname = "ros-iron-aruco-opencv";
-  version = "5.2.0-r1";
+  version = "5.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aruco_opencv-release/archive/release/iron/aruco_opencv/5.2.0-1.tar.gz";
-    name = "5.2.0-1.tar.gz";
-    sha256 = "4d2a878671b4c6ba7083e9a8aefb2a3117a9b1a8717074568c665ff538d79adb";
+    url = "https://github.com/ros2-gbp/aruco_opencv-release/archive/release/iron/aruco_opencv/5.2.1-1.tar.gz";
+    name = "5.2.1-1.tar.gz";
+    sha256 = "350a0bf741d23f5a433cc3c01f91d14ef4c87e1b42483bda8e4e60a56c14db36";
   };
 
   buildType = "ament_cmake";

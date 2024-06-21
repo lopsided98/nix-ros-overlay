@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, mqtt-client-interfaces, nodelet, paho-mqtt-cpp, ros-environment, roscpp, rosfmt, std-msgs, topic-tools }:
+{ lib, buildRosPackage, fetchurl, catkin, fmt, mqtt-client-interfaces, nodelet, paho-mqtt-cpp, ros-environment, roscpp, std-msgs, topic-tools }:
 buildRosPackage {
   pname = "ros-noetic-mqtt-client";
-  version = "2.2.1-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/mqtt_client-release/archive/release/noetic/mqtt_client/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "cd99b24d1ed0f4fa3e839c503be9d86adaf8fb99dee2cb0ac07e99ae4280f2f6";
+    url = "https://github.com/ika-rwth-aachen/mqtt_client-release/archive/release/noetic/mqtt_client/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "58412b0cdc69473da75d0720ee93563b85073d2208a8d000c0e849d9a69d1bfb";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ mqtt-client-interfaces nodelet paho-mqtt-cpp ros-environment roscpp rosfmt std-msgs topic-tools ];
+  propagatedBuildInputs = [ fmt mqtt-client-interfaces nodelet paho-mqtt-cpp ros-environment roscpp std-msgs topic-tools ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, interactive-markers, moveit-ros-planning, roscpp, rosunit, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-moveit-ros-robot-interaction";
-  version = "1.1.13-r2";
+  version = "1.1.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_robot_interaction/1.1.13-2.tar.gz";
-    name = "1.1.13-2.tar.gz";
-    sha256 = "389ae8f5a83c9a27f805a505143651fe12f3ebb4854c02210a5d0b19614ae45b";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_robot_interaction/1.1.14-1.tar.gz";
+    name = "1.1.14-1.tar.gz";
+    sha256 = "a9e74c682c404b887e68125eac6c7c605e671676c1f6a4418a321e350f5ccebe";
   };
 
   buildType = "catkin";

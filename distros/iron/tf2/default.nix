@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, builtin-interfaces, console-bridge, console-bridge-vendor, geometry-msgs, rcutils, rosidl-runtime-cpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-google-benchmark, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, builtin-interfaces, console-bridge, console-bridge-vendor, geometry-msgs, rcutils, rosidl-runtime-cpp }:
 buildRosPackage {
   pname = "ros-iron-tf2";
-  version = "0.31.6-r1";
+  version = "0.31.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/iron/tf2/0.31.6-1.tar.gz";
-    name = "0.31.6-1.tar.gz";
-    sha256 = "fa5757af93f7142c928df4f0afd7459c1e09de7dfdfc727245a556cfc65d4071";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/iron/tf2/0.31.7-1.tar.gz";
+    name = "0.31.7-1.tar.gz";
+    sha256 = "97ef7b14c4ce8653c87e98cc8872fe4df8176149d2514ee21e1c22ac0e641fea";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-ros ];
-  checkInputs = [ ament-cmake-copyright ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-gtest ament-cmake-lint-cmake ament-cmake-uncrustify ament-cmake-xmllint ];
+  checkInputs = [ ament-cmake-copyright ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-google-benchmark ament-cmake-gtest ament-cmake-lint-cmake ament-cmake-uncrustify ament-cmake-xmllint ];
   propagatedBuildInputs = [ builtin-interfaces console-bridge console-bridge-vendor geometry-msgs rcutils rosidl-runtime-cpp ];
   nativeBuildInputs = [ ament-cmake ament-cmake-ros ];
 

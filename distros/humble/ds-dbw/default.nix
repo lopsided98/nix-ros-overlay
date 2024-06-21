@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ds-dbw-can, ds-dbw-joystick-demo, ds-dbw-msgs }:
 buildRosPackage {
   pname = "ros-humble-ds-dbw";
-  version = "2.1.10-r1";
+  version = "2.1.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/ds_dbw/2.1.10-1.tar.gz";
-    name = "2.1.10-1.tar.gz";
-    sha256 = "ae1d357e89cb024d70a5658a019897f6a4024b6ddeeb7510547d3d2d5f76eb05";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/ds_dbw/2.1.16-1.tar.gz";
+    name = "2.1.16-1.tar.gz";
+    sha256 = "a522df4b95b257daf31faa79a1eee5ae922a54525068e91fda6fd553f1af115b";
   };
 
   buildType = "ament_cmake";

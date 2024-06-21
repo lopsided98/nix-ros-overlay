@@ -2,21 +2,21 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, abseil-cpp, cmake, eigen, gdal, git, gtest, lcov, protobuf, python3, python3Packages, tbb_2021_8, tinyxml-2 }:
+{ lib, buildRosPackage, fetchurl, boost, cmake, eigen, gdal, geos, git, gtest, lcov, protobuf, python3, python3Packages, swig, tbb_2021_8, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-iron-fields2cover";
-  version = "2.0.0-r6";
+  version = "2.0.0-r11";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fields2cover-release/archive/release/iron/fields2cover/2.0.0-6.tar.gz";
-    name = "2.0.0-6.tar.gz";
-    sha256 = "050324755c5bd294bf1ad2a800844a6e72ca8f37ae5c63de1d8bd059d7f47ceb";
+    url = "https://github.com/ros2-gbp/fields2cover-release/archive/release/iron/fields2cover/2.0.0-11.tar.gz";
+    name = "2.0.0-11.tar.gz";
+    sha256 = "b59faf67dafd9a0e6bcaee1c28aac02449df8a509f232ca983710c866cbbeb81";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
   checkInputs = [ gtest lcov ];
-  propagatedBuildInputs = [ abseil-cpp eigen gdal git gtest protobuf python3 python3Packages.matplotlib python3Packages.tkinter tbb_2021_8 tinyxml-2 ];
+  propagatedBuildInputs = [ boost eigen gdal geos git gtest protobuf python3 python3Packages.matplotlib python3Packages.tkinter swig tbb_2021_8 tinyxml-2 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

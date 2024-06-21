@@ -162,15 +162,27 @@ self: super: {
 
  apriltag-detector = self.callPackage ./apriltag-detector {};
 
+ apriltag-detector-mit = self.callPackage ./apriltag-detector-mit {};
+
+ apriltag-detector-umich = self.callPackage ./apriltag-detector-umich {};
+
+ apriltag-draw = self.callPackage ./apriltag-draw {};
+
  apriltag-mit = self.callPackage ./apriltag-mit {};
 
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
+ aruco = self.callPackage ./aruco {};
+
+ aruco-msgs = self.callPackage ./aruco-msgs {};
+
  aruco-opencv = self.callPackage ./aruco-opencv {};
 
  aruco-opencv-msgs = self.callPackage ./aruco-opencv-msgs {};
+
+ aruco-ros = self.callPackage ./aruco-ros {};
 
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
 
@@ -189,6 +201,8 @@ self: super: {
  autoware-auto-msgs = self.callPackage ./autoware-auto-msgs {};
 
  autoware-cmake = self.callPackage ./autoware-cmake {};
+
+ autoware-internal-msgs = self.callPackage ./autoware-internal-msgs {};
 
  autoware-lint-common = self.callPackage ./autoware-lint-common {};
 
@@ -218,11 +232,11 @@ self: super: {
 
  bondcpp = self.callPackage ./bondcpp {};
 
+ bondpy = self.callPackage ./bondpy {};
+
  boost-geometry-util = self.callPackage ./boost-geometry-util {};
 
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
-
- camera-calibration = self.callPackage ./camera-calibration {};
 
  camera-calibration-parsers = self.callPackage ./camera-calibration-parsers {};
 
@@ -536,6 +550,24 @@ self: super: {
 
  find-object-2d = self.callPackage ./find-object-2d {};
 
+ flexbe-behavior-engine = self.callPackage ./flexbe-behavior-engine {};
+
+ flexbe-core = self.callPackage ./flexbe-core {};
+
+ flexbe-input = self.callPackage ./flexbe-input {};
+
+ flexbe-mirror = self.callPackage ./flexbe-mirror {};
+
+ flexbe-msgs = self.callPackage ./flexbe-msgs {};
+
+ flexbe-onboard = self.callPackage ./flexbe-onboard {};
+
+ flexbe-states = self.callPackage ./flexbe-states {};
+
+ flexbe-testing = self.callPackage ./flexbe-testing {};
+
+ flexbe-widget = self.callPackage ./flexbe-widget {};
+
  flir-camera-description = self.callPackage ./flir-camera-description {};
 
  flir-camera-msgs = self.callPackage ./flir-camera-msgs {};
@@ -668,6 +700,8 @@ self: super: {
 
  gz-rendering-vendor = self.callPackage ./gz-rendering-vendor {};
 
+ gz-ros2-control = self.callPackage ./gz-ros2-control {};
+
  gz-ros2-control-demos = self.callPackage ./gz-ros2-control-demos {};
 
  gz-sensors-vendor = self.callPackage ./gz-sensors-vendor {};
@@ -792,8 +826,6 @@ self: super: {
 
  kortex-api = self.callPackage ./kortex-api {};
 
- kortex-bringup = self.callPackage ./kortex-bringup {};
-
  kortex-description = self.callPackage ./kortex-description {};
 
  kortex-driver = self.callPackage ./kortex-driver {};
@@ -881,6 +913,10 @@ self: super: {
  libcaer = self.callPackage ./libcaer {};
 
  libcaer-driver = self.callPackage ./libcaer-driver {};
+
+ libcaer-vendor = self.callPackage ./libcaer-vendor {};
+
+ libcamera = self.callPackage ./libcamera {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
 
@@ -1012,6 +1048,8 @@ self: super: {
 
  mola-metric-maps = self.callPackage ./mola-metric-maps {};
 
+ mola-navstate-fg = self.callPackage ./mola-navstate-fg {};
+
  mola-navstate-fuse = self.callPackage ./mola-navstate-fuse {};
 
  mola-pose-list = self.callPackage ./mola-pose-list {};
@@ -1096,6 +1134,8 @@ self: super: {
 
  moveit-ros-robot-interaction = self.callPackage ./moveit-ros-robot-interaction {};
 
+ moveit-ros-tests = self.callPackage ./moveit-ros-tests {};
+
  moveit-ros-visualization = self.callPackage ./moveit-ros-visualization {};
 
  moveit-ros-warehouse = self.callPackage ./moveit-ros-warehouse {};
@@ -1130,17 +1170,37 @@ self: super: {
 
  mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
 
+ mrpt-map-server = self.callPackage ./mrpt-map-server {};
+
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
+ mrpt-msgs-bridge = self.callPackage ./mrpt-msgs-bridge {};
+
+ mrpt-nav-interfaces = self.callPackage ./mrpt-nav-interfaces {};
+
+ mrpt-navigation = self.callPackage ./mrpt-navigation {};
+
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
+
+ mrpt-pf-localization = self.callPackage ./mrpt-pf-localization {};
+
+ mrpt-pointcloud-pipeline = self.callPackage ./mrpt-pointcloud-pipeline {};
+
+ mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
+
+ mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
 
  mrpt-sensor-bumblebee-stereo = self.callPackage ./mrpt-sensor-bumblebee-stereo {};
 
  mrpt-sensor-gnns-nmea = self.callPackage ./mrpt-sensor-gnns-nmea {};
 
+ mrpt-sensor-imu-taobotics = self.callPackage ./mrpt-sensor-imu-taobotics {};
+
  mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
 
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
+
+ mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
@@ -1161,6 +1221,12 @@ self: super: {
  nao-lola-sensor-msgs = self.callPackage ./nao-lola-sensor-msgs {};
 
  nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
+
+ nav2-minimal-tb3-sim = self.callPackage ./nav2-minimal-tb3-sim {};
+
+ nav2-minimal-tb4-description = self.callPackage ./nav2-minimal-tb4-description {};
+
+ nav2-minimal-tb4-sim = self.callPackage ./nav2-minimal-tb4-sim {};
 
  nav-msgs = self.callPackage ./nav-msgs {};
 
@@ -1212,6 +1278,8 @@ self: super: {
 
  ompl = self.callPackage ./ompl {};
 
+ openeb-vendor = self.callPackage ./openeb-vendor {};
+
  openni2-camera = self.callPackage ./openni2-camera {};
 
  orocos-kdl-vendor = self.callPackage ./orocos-kdl-vendor {};
@@ -1223,8 +1291,6 @@ self: super: {
  osrf-pycommon = self.callPackage ./osrf-pycommon {};
 
  osrf-testing-tools-cpp = self.callPackage ./osrf-testing-tools-cpp {};
-
- ouster-msgs = self.callPackage ./ouster-msgs {};
 
  ouster-ros = self.callPackage ./ouster-ros {};
 
@@ -1341,6 +1407,8 @@ self: super: {
  position-controllers = self.callPackage ./position-controllers {};
 
  proxsuite = self.callPackage ./proxsuite {};
+
+ py-binding-tools = self.callPackage ./py-binding-tools {};
 
  py-trees = self.callPackage ./py-trees {};
 
@@ -1476,11 +1544,27 @@ self: super: {
 
  rmf-building-map-msgs = self.callPackage ./rmf-building-map-msgs {};
 
+ rmf-building-map-tools = self.callPackage ./rmf-building-map-tools {};
+
+ rmf-building-sim-gz-plugins = self.callPackage ./rmf-building-sim-gz-plugins {};
+
  rmf-charger-msgs = self.callPackage ./rmf-charger-msgs {};
 
  rmf-charging-schedule = self.callPackage ./rmf-charging-schedule {};
 
  rmf-cmake-uncrustify = self.callPackage ./rmf-cmake-uncrustify {};
+
+ rmf-demos = self.callPackage ./rmf-demos {};
+
+ rmf-demos-assets = self.callPackage ./rmf-demos-assets {};
+
+ rmf-demos-gz = self.callPackage ./rmf-demos-gz {};
+
+ rmf-demos-maps = self.callPackage ./rmf-demos-maps {};
+
+ rmf-demos-tasks = self.callPackage ./rmf-demos-tasks {};
+
+ rmf-dev = self.callPackage ./rmf-dev {};
 
  rmf-dispenser-msgs = self.callPackage ./rmf-dispenser-msgs {};
 
@@ -1498,6 +1582,10 @@ self: super: {
 
  rmf-obstacle-msgs = self.callPackage ./rmf-obstacle-msgs {};
 
+ rmf-robot-sim-common = self.callPackage ./rmf-robot-sim-common {};
+
+ rmf-robot-sim-gz-plugins = self.callPackage ./rmf-robot-sim-gz-plugins {};
+
  rmf-scheduler-msgs = self.callPackage ./rmf-scheduler-msgs {};
 
  rmf-site-map-msgs = self.callPackage ./rmf-site-map-msgs {};
@@ -1511,6 +1599,12 @@ self: super: {
  rmf-task-sequence = self.callPackage ./rmf-task-sequence {};
 
  rmf-traffic = self.callPackage ./rmf-traffic {};
+
+ rmf-traffic-editor = self.callPackage ./rmf-traffic-editor {};
+
+ rmf-traffic-editor-assets = self.callPackage ./rmf-traffic-editor-assets {};
+
+ rmf-traffic-editor-test-maps = self.callPackage ./rmf-traffic-editor-test-maps {};
 
  rmf-traffic-examples = self.callPackage ./rmf-traffic-examples {};
 
@@ -1581,8 +1675,6 @@ self: super: {
  ros2-controllers = self.callPackage ./ros2-controllers {};
 
  ros2-controllers-test-nodes = self.callPackage ./ros2-controllers-test-nodes {};
-
- ros2-ouster = self.callPackage ./ros2-ouster {};
 
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
 
@@ -1846,6 +1938,8 @@ self: super: {
 
  rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
 
+ rtabmap = self.callPackage ./rtabmap {};
+
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
 
  rti-connext-dds-cmake-module = self.callPackage ./rti-connext-dds-cmake-module {};
@@ -1891,6 +1985,8 @@ self: super: {
  sensor-msgs = self.callPackage ./sensor-msgs {};
 
  sensor-msgs-py = self.callPackage ./sensor-msgs-py {};
+
+ septentrio-gnss-driver = self.callPackage ./septentrio-gnss-driver {};
 
  serial-driver = self.callPackage ./serial-driver {};
 
@@ -2029,8 +2125,6 @@ self: super: {
  tensorrt-cmake-module = self.callPackage ./tensorrt-cmake-module {};
 
  test-apex-test-tools = self.callPackage ./test-apex-test-tools {};
-
- test-bond = self.callPackage ./test-bond {};
 
  test-interface-files = self.callPackage ./test-interface-files {};
 
