@@ -88,9 +88,10 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   python-cmake-module = rosSuper.python-cmake-module.overrideAttrs ({ ... }: let
     python = rosSelf.python;
+    libExt = if self.stdenv.isDarwin then "dylib" else "so";
   in {
     pythonExecutable = python.pythonOnBuildForHost.interpreter;
-    pythonLibrary = "${python}/lib/lib${python.libPrefix}.so";
+    pythonLibrary = "${python}/lib/lib${python.libPrefix}.${libExt}";
     pythonIncludeDir = "${python}/include/${python.libPrefix}";
     setupHook = ./python-cmake-module-setup-hook.sh;
     outputs = [ "out" "dev" ];
