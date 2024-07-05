@@ -82,6 +82,21 @@ rosSelf: rosSuper: with rosSelf.lib; {
     cmakeFlags = cmakeFlags ++ [ "-DDOWNLOAD_TOML_LIB=OFF" ];
   });
 
+  librealsense2 = rosSuper.librealsense2.overrideAttrs ({
+    buildInputs, postPatch ? "", version, ...
+  }: {
+    buildInputs = buildInputs ++
+                  (if version >= "2.55.1" then
+                    [ self.nlohmann_json ]
+                   else []);
+    postPatch = postPatch +
+                (if version >= "2.55.1" then
+                  ''
+  substituteInPlace third-party/CMakeLists.txt --replace-fail 'include(CMake/external_json.cmake)' ""
+''
+                 else "");
+  });
+
   popf = rosSuper.popf.overrideAttrs ({
     nativeBuildInputs ? [], postPatch ? "", ...
   }: {
