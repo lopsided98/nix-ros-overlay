@@ -53,15 +53,9 @@ in {
     hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
   };
 
-  mcap-vendor = lib.patchExternalProjectGit (lib.patchVendorUrl rosSuper.mcap-vendor {
-    url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.1.0.tar.gz";
-    hash = "sha256-HLKuny6RDusuk7OrcidE0YBbnaRXZOT9iHA7ZpQTNQ0=";
-  }) {
-    url = "https://github.com/lz4/lz4.git";
-    fetchgitArgs = {
-      rev = "d44371841a2f1728a3f36839fd4b7e872d0927d3";
-      hash = "sha256-f7GZgOzUrkAfw1mqwlIKQQqDvkvIahGlHvq6AL+aAvA=";
-    };
+  mcap-vendor = lib.patchVendorUrl rosSuper.mcap-vendor {
+    url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.3.0.tar.gz";
+    hash = "sha256-Qaz26F11VWxkQH8HfgVJLTHbHwmeByQu8ENkuyk5rPE=";
   };
 
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
