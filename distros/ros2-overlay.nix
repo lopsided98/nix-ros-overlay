@@ -65,6 +65,23 @@ rosSelf: rosSuper: with rosSelf.lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ self.buildPackages.cmake ];
   });
 
+  iceoryx-posh = rosSuper.iceoryx-posh.overrideAttrs ({
+    patches ? [],
+    buildInputs ? [],
+    cmakeFlags ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = "https://github.com/eclipse-iceoryx/iceoryx/commit/d4519632964794553791ef3f951ed47ca52ebbb6.patch";
+        hash = "sha256-f4kITUql8uFSptFmu7LZGChlfDG63b0gmsRyHp1NsWw=";
+        stripLen = 1;
+      })
+    ];
+
+    buildInputs = buildInputs ++ [ self.cpptoml ];
+    cmakeFlags = cmakeFlags ++ [ "-DDOWNLOAD_TOML_LIB=OFF" ];
+  });
+
   librealsense2 = rosSuper.librealsense2.overrideAttrs ({
     patches ? [], ...
   }: {

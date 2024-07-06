@@ -39,25 +39,6 @@ in {
     ];
   });
 
-  iceoryx-posh = (lib.patchExternalProjectGit rosSuper.iceoryx-posh {
-    url = "https://github.com/skystrife/cpptoml.git";
-    file = "cmake/cpptoml/cpptoml.cmake.in";
-    fetchgitArgs = {
-      rev = "v0.1.1";
-      sha256 = "0gxzzi4xbjszzlvmzaniayrd190kag1pmkn1h384s80cvqphbr00";
-    };
-  }).overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      (self.fetchpatch {
-        url = "https://github.com/eclipse-iceoryx/iceoryx/commit/d4519632964794553791ef3f951ed47ca52ebbb6.patch";
-        hash = "sha256-f4kITUql8uFSptFmu7LZGChlfDG63b0gmsRyHp1NsWw=";
-        stripLen = 1;
-      })
-    ];
-  });
-
   lely-core-libraries = lib.patchExternalProjectGit rosSuper.lely-core-libraries {
     url = "https://gitlab.com/lely_industries/lely-core.git";
     fetchgitArgs = {
