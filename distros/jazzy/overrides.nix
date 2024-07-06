@@ -22,8 +22,8 @@ in {
   google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
     url = "https://github.com/google/benchmark.git";
     fetchgitArgs = {
-      rev = "0d98dba29d66e93259db7daa53a9327df767a415";
-      hash = "sha256-yUiFxi80FWBmTZgqmqTMf9oqcBeg3o4I4vKd4djyRWY=";
+      rev = "344117638c8ff7e239044fd0fa7085839fc03021";
+      hash = "sha256-gztnxui9Fe/FTieMjdvfJjWHjkImtlsHn6fM1FruyME=";
     };
   };
 
