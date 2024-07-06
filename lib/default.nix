@@ -106,6 +106,39 @@
     '' + postPatch;
   });
 
+  # patchAmentVendorGit specialized for gz-*-vendor packages. In
+  # addition to patching ament_vendor() calls, it adds a check to
+  # CMakeLists.txt to detect upstream updates of the vendored package
+  # version.
+  patchGzAmentVendorGit = pkg: {
+    version,
+    hash,
+    tarSourceArgs ? {}
+  }: let
+    stem = lib.strings.removeSuffix "-vendor"
+      (lib.strings.removePrefix "ros-${pkg.rosDistro}-" pkg.pname); # e.g. gz-cmake
+    majorNum = lib.versions.major version;
+    patchedPkg = lib.patchAmentVendorGit pkg {
+      url = "https://github.com/gazebosim/${stem}.git";
+      originalUrl = "https://github.com/gazebosim/\${GITHUB_NAME}.git";
+      rev = "${stem}${majorNum}_${version}"; # e.g. "gz-cmake3_3.5.3"
+      fetchgitArgs.hash = hash;
+      inherit tarSourceArgs;
+    };
+  in
+    patchedPkg.overrideAttrs ({
+      pname, postPatch ? "", ...
+    }: {
+      dontFixCmake = true;      # don't replace $out/opt with $out/var/empty
+      postPatch = postPatch + ''
+        cat >> CMakeLists.txt <<'EOF'
+        if(NOT ''${LIB_VER} VERSION_EQUAL "${version}")
+          message(FATAL_ERROR "Mismatch in ${pname} version (Nix: ${version}, upstream: ''${LIB_VER}). Fix this in overrides.nix.")
+        endif()
+        EOF
+      '';
+    });
+
   patchBoostPython = pkg: pkg.overrideAttrs ({
     postPatch ? "", ...
   }: {
