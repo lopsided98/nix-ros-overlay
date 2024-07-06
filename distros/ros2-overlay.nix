@@ -124,13 +124,18 @@ rosSelf: rosSuper: with rosSelf.lib; {
   };
 
   rmw-implementation = rosSuper.rmw-implementation.overrideAttrs ({
-    propagatedBuildInputs ? [], ...
+    propagatedBuildInputs ? [], buildInputs ? [], ...
   }: {
     # The default implementation must be available to all dependent packages
     # at build time.
     propagatedBuildInputs = with rosSelf; [
       rmw-fastrtps-cpp
     ] ++ propagatedBuildInputs;
+    # rmw-cyclonedds-cpp fails to build on MacOS.
+    buildInputs = if self.stdenv.isDarwin then
+      builtins.filter (p: p.pname != "ros-${p.rosDistro}-rmw-cyclonedds-cpp") buildInputs
+    else
+      buildInputs;
   });
 
   rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
