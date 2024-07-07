@@ -28,7 +28,7 @@ mkDerivation rec {
     (fetchpatch {
       name = "fix-TRUE-constant-patch";
       url = "https://github.com/gazebosim/gazebo-classic/commit/660ae15f4af1f5ea8d9d50d4a24e4d91a94f9c2d.patch";
-      sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="; # Replace with actual hash
+      sha256 = "sha256-KPwuDdTEWMDbLF/FQACM/huCYlXDg43cd8QBt3E859A=";
     })
   ];
 
