@@ -38,6 +38,17 @@ rosSelf: rosSuper: with rosSelf.lib; {
   });
 
 
+  mavros-extras = rosSuper.mavros-extras.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # Fix compile error when compiling with gcc 13
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/mavlink/mavros/commit/640e916127167029e5be3e86c5f43b05baf52e16.patch";
+      hash = "sha256-IpCeQeeUKTweCTdsP9m07i+q2fNosFP4Y5SVX+wMeP8=";
+      stripLen = 1;
+    }) ];
+  });
+
   moveit-core = rosSuper.moveit-core.overrideAttrs ({
     buildInputs ? [], patches ? [], ...
   }: {
