@@ -82,18 +82,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     cmakeFlags = cmakeFlags ++ [ "-DDOWNLOAD_TOML_LIB=OFF" ];
   });
 
-  librealsense2 = rosSuper.librealsense2.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Fix missing cstdint include
-      (self.fetchpatch {
-        url = "https://github.com/IntelRealSense/librealsense/commit/847b74d3dcade2842ba138f321474159315ab8c2.patch";
-        hash = "sha256-zaW8HG8rfsApI5S/3x+x9Fx8xhyTIPNn/fJVFtkmlEA=";
-      })
-    ];
-  });
-
   popf = rosSuper.popf.overrideAttrs ({
     nativeBuildInputs ? [], postPatch ? "", ...
   }: {
