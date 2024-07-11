@@ -22,7 +22,7 @@ mkDerivation rec {
     # Allow building with graphviz 10+
     (fetchpatch {
       name = "fix-build-against-graphviz-10.patch";
-      url = "https://github.com/gazebosim/gazebo-classic/commit/660ae15f4af1f5ea8d9d50d4a24e4d91a94f9c2d.patch";
+      url = "https://github.com/gazebosim/gazebo-classic/commit/3a9efee7ccdf552cbf22188131782f242f6c0542.patch";
       hash = "sha256-KPwuDdTEWMDbLF/FQACM/huCYlXDg43cd8QBt3E859A=";
     })
   ];
