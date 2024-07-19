@@ -13,12 +13,13 @@
 , CXXFLAGS ? ""
 , postFixup ? ""
 , passthru ? { }
+, separateDebugInfo ? true
 , ...
 }@args:
 
 (if buildType == "ament_python" then pythonPackages.buildPythonPackage
 else stdenv.mkDerivation) (args // {
-  inherit doCheck dontWrapQtApps;
+  inherit doCheck dontWrapQtApps separateDebugInfo;
 
   # Disable warnings that cause "Log limit exceeded" errors on Hydra in lots of
   # packages that use Eigen
