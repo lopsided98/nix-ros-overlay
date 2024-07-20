@@ -93,7 +93,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   python-cmake-module = rosSuper.python-cmake-module.overrideAttrs ({ ... }: let
     python = rosSelf.python;
-    libExt = if self.stdenv.isDarwin then "dylib" else "so";
+    libExt = self.stdenv.hostPlatform.extensions.sharedLibrary;
   in {
     pythonExecutable = python.pythonOnBuildForHost.interpreter;
     pythonLibrary = "${python}/lib/lib${python.libPrefix}.${libExt}";
