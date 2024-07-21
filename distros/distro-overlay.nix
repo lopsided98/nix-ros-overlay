@@ -45,7 +45,7 @@ let
     }: {
       postPatch = postPatch + ''
         substituteInPlace cmake/setup_custom_pythonpath.sh.in \
-          --replace '#!/usr/bin/env sh' '#!${self.stdenv.shell}'
+          --replace-fail '#!/usr/bin/env sh' '#!${self.stdenv.shell}'
       '';
     });
 
@@ -93,7 +93,7 @@ let
       postPatch ? "", ...
     }: {
       postPatch = postPatch + ''
-        substituteInPlace cfg/UVCCamera.cfg --replace python2 python
+        substituteInPlace cfg/UVCCamera.cfg --replace-fail python2 python
       '';
     });
 
@@ -112,7 +112,7 @@ let
       postPatch ? "", ...
     }: {
       postPatch = postPatch + ''
-        substituteInPlace CMakeLists.txt --replace /usr/bin/env '${self.buildPackages.coreutils}/bin/env'
+        substituteInPlace CMakeLists.txt --replace-fail /usr/bin/env '${self.buildPackages.coreutils}/bin/env'
         patchShebangs pymavlink/tools/mavgen.py
       '';
       ROS_PYTHON_VERSION = if rosSelf.python.isPy3k then 3 else 2;

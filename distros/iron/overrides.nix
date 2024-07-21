@@ -88,14 +88,14 @@ in with lib; {
     in lib.tarSource {
       hook = ''
         substituteInPlace Components/Overlay/CMakeLists.txt \
-          --replace ${lib.escapeShellArg imgui.url} file://${lib.escapeShellArg imguiTar}
+          --replace-fail ${lib.escapeShellArg imgui.url} file://${lib.escapeShellArg imguiTar}
       '';
     } ogre;
   in {
     postPatch = postPatch + ''
       substituteInPlace CMakeLists.txt \
-        --replace 'https://github.com/${ogre.owner}/${ogre.repo}/archive/${ogre.rev}.zip' ${lib.escapeShellArg ogreTar} \
-        --replace c1b870955efddf539385094e9034e7f7 fcc1176585a7feb9f23c7900182a1f32
+        --replace-fail 'https://github.com/${ogre.owner}/${ogre.repo}/archive/${ogre.rev}.zip' ${lib.escapeShellArg ogreTar} \
+        --replace-fail c1b870955efddf539385094e9034e7f7 fcc1176585a7feb9f23c7900182a1f32
     '';
   });
 

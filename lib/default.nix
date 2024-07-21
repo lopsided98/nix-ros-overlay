@@ -39,7 +39,7 @@
   }: {
     postPatch = ''
       substituteInPlace ${lib.escapeShellArg file} \
-        --replace ${lib.escapeShellArg originalUrl} ${lib.escapeShellArg (self.fetchurl { inherit url hash sha256; })}
+        --replace-fail ${lib.escapeShellArg originalUrl} ${lib.escapeShellArg (self.fetchurl { inherit url hash sha256; })}
     '' + postPatch;
   });
 

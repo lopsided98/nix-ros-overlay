@@ -49,7 +49,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     postPatch = postPatch + ''
       patchShebangs cmake
       substituteInPlace cmake/templates/python_distutils_install.sh.in \
-        --replace /usr/bin/env "${self.coreutils}/bin/env"
+        --replace-fail /usr/bin/env "${self.coreutils}/bin/env"
     '';
   });
 

@@ -74,7 +74,7 @@ in {
       imguiTar = lib.tarSource { } imgui;
     in ''
       substituteInPlace Components/Overlay/CMakeLists.txt \
-        --replace ${lib.escapeShellArg imgui.url} file://${lib.escapeShellArg imguiTar}
+        --replace-fail ${lib.escapeShellArg imgui.url} file://${lib.escapeShellArg imguiTar}
     '';
   };
 

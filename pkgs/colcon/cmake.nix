@@ -12,7 +12,7 @@ buildPythonPackage rec {
 
   postPatch = ''
     substituteInPlace colcon_cmake/task/cmake/__init__.py \
-      --replace "'cmake'" "'${cmake}/bin/cmake'"
+      --replace-fail "'cmake'" "'${cmake}/bin/cmake'"
   '';
 
   propagatedBuildInputs = [

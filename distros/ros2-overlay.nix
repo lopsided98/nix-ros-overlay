@@ -146,8 +146,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
     # Fix finding NumPy headers
     postPatch = postPatch + ''
       substituteInPlace cmake/rosidl_generator_py_generate_interfaces.cmake \
-       --replace '"import numpy"' "" \
-       --replace 'numpy.get_include()' "'${python.pkgs.numpy}/${python.sitePackages}/numpy/core/include'"
+       --replace-fail '"import numpy"' "" \
+       --replace-fail 'numpy.get_include()' "'${python.pkgs.numpy}/${python.sitePackages}/numpy/core/include'"
     '';
     setupHook = ./rosidl-generator-py-setup-hook.sh;
   });

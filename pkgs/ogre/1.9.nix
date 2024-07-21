@@ -43,7 +43,7 @@ stdenv.mkDerivation rec {
   # needed anyway.
   postPatch = ''
     substituteInPlace OgreMain/src/OgrePlatformInformation.cpp \
-      --replace '#include <sys/sysctl.h>' ""
+      --replace-fail '#include <sys/sysctl.h>' ""
   '';
 
   cmakeFlags = [
