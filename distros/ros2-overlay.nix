@@ -96,7 +96,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     libExt = self.stdenv.hostPlatform.extensions.sharedLibrary;
   in {
     pythonExecutable = python.pythonOnBuildForHost.interpreter;
-    pythonLibrary = "${python}/lib/lib${python.libPrefix}.${libExt}";
+    pythonLibrary = "${python}/lib/lib${python.libPrefix}${libExt}";
     pythonIncludeDir = "${python}/include/${python.libPrefix}";
     setupHook = ./python-cmake-module-setup-hook.sh;
     outputs = [ "out" "dev" ];
