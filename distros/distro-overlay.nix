@@ -1,15 +1,6 @@
 { version, distro, python }:
 self: super:
 let
-  pythonOverridesFor = with self.lib; prevPython: prevPython // {
-    pkgs = prevPython.pkgs.overrideScope (pyFinal: pyPrev: {
-      wxPython = pyFinal.wxPython_4_2;
-
-      # ROS is not compatible with empy 4
-      empy = pyFinal.empy_3;
-    });
-  };
-
   base = rosSelf: rosSuper: {
     recurseForDerivations = true;
     lib = super.lib // import ../lib { inherit self rosSelf; };
@@ -25,11 +16,14 @@ let
       inherit (self) buildEnv;
     };
 
-    python = pythonOverridesFor python;
-    pythonPackages = rosSelf.python.pkgs;
+    pythonPackagesExtensions = super.pythonPackagesExtensions ++ [
+      (pyFinal: pyPrev: {
+        wxPython = pyFinal.wxPython_4_2;
 
-    python3 = pythonOverridesFor self.python3;
-    python3Packages = rosSelf.python3.pkgs;
+        # ROS is not compatible with empy 4
+        empy = pyFinal.empy_3;
+      })
+    ];
 
     boost = self.boost.override {
       python = rosSelf.python;
