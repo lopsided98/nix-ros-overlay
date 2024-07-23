@@ -382,8 +382,9 @@ let
     });
 
     uncrustify-vendor = patchVendorUrl rosSuper.uncrustify-vendor {
-      url = "https://github.com/uncrustify/uncrustify/archive/uncrustify-0.68.1.tar.gz";
-      sha256 = "04ndwhcn9iv3cy4p5wgh5z0vx2sywqlydyympn9m3h5458w1aijh";
+      originalUrl = "https://github.com/uncrustify/uncrustify.git";
+      url = "https://github.com/uncrustify/uncrustify/archive/uncrustify-0.72.0.tar.gz";
+      hash = "sha256-1v/3C8eCP6xMdwEwVTM7eaSDmQkJTo7uihTujxd3N04=";
     };
 
     urdf = patchBoostPython rosSuper.urdf;
