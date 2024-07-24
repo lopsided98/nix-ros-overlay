@@ -61,6 +61,15 @@ rosSelf: rosSuper: with rosSelf.lib; {
     }) ];
   });
 
+  novatel-oem7-driver = (patchExternalProjectGit rosSuper.novatel-oem7-driver {
+    url = "https://github.com/novatel/novatel_edie";
+    originalRev = "origin/dev-ros_install_prefix";
+    rev = "d02ccc2dfe531d642c1e2ca8a8c0f8205c856f23";
+    fetchgitArgs.hash = "sha256-ZQ7z9vQ8quI+SoNhB93tTw5LQe07UAKdbJJpaMj1C6I=";
+  }).overrideAttrs ({ ... }: {
+    dontFixCmake = true;
+  });
+
   pcl-ros = rosSuper.pcl-ros.overrideAttrs ({
     patches ? [], ...
   }: {
