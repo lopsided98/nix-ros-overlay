@@ -172,9 +172,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
       # Use X11 by default in RViz2.
       # https://github.com/ros-visualization/rviz/issues/1442
       "--set-default QT_QPA_PLATFORM xcb"
+      "--set QT_QPA_PLATFORM xcb"
     ];
     postFixup = postFixup + ''
       wrapQtApp "$out/lib/rviz2/rviz2"
+      wrapQtApp "$out/bin/rviz2"
     '';
     meta = meta // {
       mainProgram = "rviz2";
@@ -191,10 +193,4 @@ rosSelf: rosSuper: with rosSelf.lib; {
       broken = true;
     };
   });
-
-  yaml-cpp-vendor = patchVendorUrl rosSuper.yaml-cpp-vendor {
-    url = "https://github.com/jbeder/yaml-cpp/archive/0f9a586ca1dc29c2ecb8dd715a315b93e3f40f79.zip";
-    sha256 = "1g45f71mk4gyca550177qf70v5cvavlsalmg7x8bi59j6z6f0mgz";
-  };
-
 }
