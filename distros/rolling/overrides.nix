@@ -17,14 +17,18 @@ in {
     ];
   });
 
+  foonathan-memory-vendor = lib.patchExternalProjectGit rosSuper.foonathan-memory-vendor {
+    url = "https://github.com/foonathan/memory.git";
+    rev = "v0.7-3";
+    fetchgitArgs.hash = "sha256-nLBnxPbPKiLCFF2TJgD/eJKJJfzktVBW3SRW2m3WK/s=";
+  };
+
   gazebo = self.gazebo_11;
 
   google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
     url = "https://github.com/google/benchmark.git";
-    fetchgitArgs = {
-      rev = "344117638c8ff7e239044fd0fa7085839fc03021";
-      hash = "sha256-gztnxui9Fe/FTieMjdvfJjWHjkImtlsHn6fM1FruyME=";
-    };
+    rev = "344117638c8ff7e239044fd0fa7085839fc03021";
+    fetchgitArgs.hash = "sha256-gztnxui9Fe/FTieMjdvfJjWHjkImtlsHn6fM1FruyME=";
   };
 
   iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
@@ -41,9 +45,9 @@ in {
 
   lely-core-libraries = lib.patchExternalProjectGit rosSuper.lely-core-libraries {
     url = "https://gitlab.com/lely_industries/lely-core.git";
+    rev = "b63a0b6f79d3ea91dc221724b42dae49894449fc";
     fetchgitArgs = {
-      rev = "7824cbb2ac08d091c4fa2fb397669b938de9e3f5";
-      sha256 = "sha256-Ykmnz/zlEXmkyRO9AHMprML7uKbNer2zu4i9PDHfgxw=";
+      hash = "sha256-x9JCU2Ryssq424n90IzVOxixnvsoYTukyCOL3zNbwt4=";
       leaveDotGit = true;
     };
   };
@@ -54,8 +58,8 @@ in {
   };
 
   mcap-vendor = lib.patchVendorUrl rosSuper.mcap-vendor {
-    url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.3.0.tar.gz";
-    hash = "sha256-Qaz26F11VWxkQH8HfgVJLTHbHwmeByQu8ENkuyk5rPE=";
+    url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.1.0.tar.gz";
+    hash = "sha256-HLKuny6RDusuk7OrcidE0YBbnaRXZOT9iHA7ZpQTNQ0=";
   };
 
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {

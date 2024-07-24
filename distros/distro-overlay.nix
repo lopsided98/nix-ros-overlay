@@ -134,16 +134,6 @@ let
       '';
     });
 
-    novatel-oem7-driver = (patchExternalProjectGit rosSuper.novatel-oem7-driver {
-      url = "https://github.com/novatel/novatel_edie";
-      fetchgitArgs = {
-        rev = "d02ccc2dfe531d642c1e2ca8a8c0f8205c856f23";
-        hash = "sha256-ZQ7z9vQ8quI+SoNhB93tTw5LQe07UAKdbJJpaMj1C6I=";
-      };
-    }).overrideAttrs ({ ... }: {
-      dontFixCmake = true;
-    });
-
     ompl = rosSuper.ompl.overrideAttrs ({
       patches ? [], ...
     }: {
@@ -380,11 +370,6 @@ let
         wrapQtApp "$out/lib/turtlesim/turtlesim_node"
       '';
     });
-
-    uncrustify-vendor = patchVendorUrl rosSuper.uncrustify-vendor {
-      url = "https://github.com/uncrustify/uncrustify/archive/uncrustify-0.68.1.tar.gz";
-      sha256 = "04ndwhcn9iv3cy4p5wgh5z0vx2sywqlydyympn9m3h5458w1aijh";
-    };
 
     urdf = patchBoostPython rosSuper.urdf;
   };

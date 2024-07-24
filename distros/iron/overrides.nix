@@ -17,14 +17,18 @@ in with lib; {
     ];
   });
 
+  foonathan-memory-vendor = patchExternalProjectGit rosSuper.foonathan-memory-vendor {
+    url = "https://github.com/foonathan/memory.git";
+    rev = "v0.7-3";
+    fetchgitArgs.hash = "sha256-nLBnxPbPKiLCFF2TJgD/eJKJJfzktVBW3SRW2m3WK/s=";
+  };
+
   gazebo = self.gazebo_11;
 
   google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
     url = "https://github.com/google/benchmark.git";
-    fetchgitArgs = {
-      rev = "0d98dba29d66e93259db7daa53a9327df767a415";
-      hash = "sha256-yUiFxi80FWBmTZgqmqTMf9oqcBeg3o4I4vKd4djyRWY=";
-    };
+    rev = "0d98dba29d66e93259db7daa53a9327df767a415";
+    fetchgitArgs.hash = "sha256-yUiFxi80FWBmTZgqmqTMf9oqcBeg3o4I4vKd4djyRWY=";
   };
 
   iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
@@ -46,10 +50,8 @@ in with lib; {
 
   libyaml-vendor = patchExternalProjectGit rosSuper.libyaml-vendor {
     url = "https://github.com/yaml/libyaml.git";
-    fetchgitArgs = {
-      rev = "2c891fc7a770e8ba2fec34fc6b545c672beb37e6";
-      hash = "sha256-S7PnooyfyAsIiRAlEPGYkgkVACGaBaCItuqOwrq2+qM=";
-    };
+    rev = "2c891fc7a770e8ba2fec34fc6b545c672beb37e6";
+    fetchgitArgs.hash = "sha256-S7PnooyfyAsIiRAlEPGYkgkVACGaBaCItuqOwrq2+qM=";
   };
 
   mcap-vendor = patchExternalProjectGit (patchVendorUrl rosSuper.mcap-vendor {
@@ -57,10 +59,8 @@ in with lib; {
     sha256 = "sha256-KDP3I0QwjqWGOfOzY6DPF2aVgK56tDX0PzsQTP9u9Ug=";
   }) {
     url = "https://github.com/lz4/lz4.git";
-    fetchgitArgs = {
-      rev = "d44371841a2f1728a3f36839fd4b7e872d0927d3";
-      hash = "sha256-f7GZgOzUrkAfw1mqwlIKQQqDvkvIahGlHvq6AL+aAvA=";
-    };
+    rev = "d44371841a2f1728a3f36839fd4b7e872d0927d3";
+    fetchgitArgs.hash = "sha256-f7GZgOzUrkAfw1mqwlIKQQqDvkvIahGlHvq6AL+aAvA=";
   };
 
   rviz-ogre-vendor = rosSuper.rviz-ogre-vendor.overrideAttrs ({

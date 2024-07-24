@@ -35,20 +35,10 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   fmilibrary-vendor = patchExternalProjectGit rosSuper.fmilibrary-vendor {
     url = "https://github.com/modelon-community/fmi-library.git";
-    fetchgitArgs = {
-      rev = "2.1";
-      sha256 = "177rlw1ba1y0ahi8qfpg0sflh8mjdl6fmffwjg2a5vxyxwdwrjvh";
-    };
-  };
-
-  # This is a newer version than the build system tries to download, but this
-  # version doesn't try to run host platform binaries on the build platform.
-  foonathan-memory-vendor = patchExternalProjectGit rosSuper.foonathan-memory-vendor {
-    url = "https://github.com/foonathan/memory.git";
-    fetchgitArgs = {
-      rev = "v0.7-2";
-      sha256 = "sha256-5nJNW0xwjSCc0Egq1zv0tIsGvAh1Xbnu8190A1ZP+VA=";
-    };
+    # Uses ${fmilibrary_version}, so can't match
+    originalRev = "";
+    rev = "2.2.3";
+    fetchgitArgs.hash = "sha256-i8EtjPMg39S/3RyoUaXm5A8Nu/NbgAwjxRCdyh2elyU=";
   };
 
   gmock-vendor = rosSuper.gmock-vendor.overrideAttrs ({
@@ -117,10 +107,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   rig-reconfigure = patchExternalProjectGit rosSuper.rig-reconfigure {
     url = "https://github.com/ocornut/imgui.git";
-    fetchgitArgs = {
-      rev = "3ea0fad204e994d669f79ed29dcaf61cd5cb571d";
-      sha256 = "sha256-v9FP9zJvul+2zRGaIugNDBCR9xZqCY8U90Dfe6fXpJM=";
-    };
+    rev = "v1.89.8-docking";
+    fetchgitArgs.hash = "sha256-eY8lRsonPfDRTMCPhInT9rQ6lSaJPsXpkh428OKpTnA=";
   };
 
   rmw-implementation = rosSuper.rmw-implementation.overrideAttrs ({

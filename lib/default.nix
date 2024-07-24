@@ -45,15 +45,32 @@
 
   patchExternalProjectGit = pkg: {
     url,
+    rev,
+    originalRev ? rev,
     originalUrl ? url,
     file ? "CMakeLists.txt",
     fetchgitArgs ? {}
   }: pkg.overrideAttrs ({
     postPatch ? "", ...
   }: {
-    postPatch = ''
-      sed -i '\|GIT_REPOSITORY\s.*${originalUrl}|c\
-        URL "${self.fetchgit ({ inherit url; } // fetchgitArgs)}"' \
+    postPatch = let
+      script = ''
+        $0 ~ "GIT_REPOSITORY[[:blank:]]+" originalUrl \
+          { print "URL \"" path "\""; foundUrl=1; next } \
+          { print }
+        $0 ~ "GIT_TAG[[:blank:]]+" originalRev { print; foundRev=1 }
+        END {
+          if (!foundUrl) print "patchExternalProjectGit: did not find URL: " originalUrl > "/dev/stderr"
+          if (!foundRev) print "patchExternalProjectGit: did not find revision: " originalRev > "/dev/stderr"
+          exit !(foundUrl && foundRev)
+        }
+      '';
+    in ''
+      awk -i inplace \
+        -v originalUrl=${lib.escapeShellArg originalUrl} \
+        -v originalRev=${lib.escapeShellArg originalRev} \
+        -v path=${lib.escapeShellArg (self.fetchgit ({ inherit url rev; } // fetchgitArgs))} \
+        ${lib.escapeShellArg script} \
         ${lib.escapeShellArg file}
     '' + postPatch;
   });
