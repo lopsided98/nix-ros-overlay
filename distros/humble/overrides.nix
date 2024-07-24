@@ -117,6 +117,19 @@ in with lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.ros-environment ];
   });
 
+  rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
+    postPatch ? "", ...
+  }: let
+    python = rosSelf.python;
+  in {
+    # Fix finding NumPy headers
+    postPatch = postPatch + ''
+      substituteInPlace cmake/rosidl_generator_py_generate_interfaces.cmake \
+       --replace-fail '"import numpy"' "" \
+       --replace-fail 'numpy.get_include()' "'${python.pkgs.numpy}/${python.sitePackages}/numpy/core/include'"
+    '';
+  });
+
   rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";

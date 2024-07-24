@@ -126,17 +126,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
       buildInputs;
   });
 
-  rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
-    postPatch ? "", ...
-  }: let
-    python = rosSelf.python;
-  in {
-    # Fix finding NumPy headers
-    postPatch = postPatch + ''
-      substituteInPlace cmake/rosidl_generator_py_generate_interfaces.cmake \
-       --replace-fail '"import numpy"' "" \
-       --replace-fail 'numpy.get_include()' "'${python.pkgs.numpy}/${python.sitePackages}/numpy/core/include'"
-    '';
+  rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({ ... }: {
     setupHook = ./rosidl-generator-py-setup-hook.sh;
   });
 
