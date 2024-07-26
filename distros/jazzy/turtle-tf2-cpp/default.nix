@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, launch, launch-ros, message-filters, rclcpp, tf2, tf2-geometry-msgs, tf2-ros, turtlesim }:
 buildRosPackage {
   pname = "ros-jazzy-turtle-tf2-cpp";
-  version = "0.3.6-r5";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/jazzy/turtle_tf2_cpp/0.3.6-5.tar.gz";
-    name = "0.3.6-5.tar.gz";
-    sha256 = "7fcedeb5492f1e74c1b9d0ce106835e667cad8ed2c4b5808a6cea5fd4f61debb";
+    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/jazzy/turtle_tf2_cpp/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "5af3b0eff152cc64fe993f7934f5305035e8816d076969c5ff144be52849da8f";
   };
 
   buildType = "ament_cmake";

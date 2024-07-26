@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, example-interfaces, pythonPackages, rcl-interfaces, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-demo-nodes-py";
-  version = "0.27.1-r1";
+  version = "0.27.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/demo_nodes_py/0.27.1-1.tar.gz";
-    name = "0.27.1-1.tar.gz";
-    sha256 = "b0d85615fcb4e66df7f2d21b148d3372cded8a9341df171c2e9b65209dad1c03";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/demo_nodes_py/0.27.2-1.tar.gz";
+    name = "0.27.2-1.tar.gz";
+    sha256 = "fc5e157e2a64a766fa3a4ab2f9cd6f96f620e18c8cbfa02e71f3f725910d226f";
   };
 
   buildType = "ament_python";

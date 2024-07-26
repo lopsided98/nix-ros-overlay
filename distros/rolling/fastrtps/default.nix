@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, asio, cmake, fastcdr, foonathan-memory-vendor, openssl, python3, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-rolling-fastrtps";
-  version = "2.14.0-r1";
+  version = "2.14.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/rolling/fastrtps/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "dc4c2b504a3cee8d80d155983e47a48733438f7af6f233a025c0532f46e0a492";
+    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/rolling/fastrtps/2.14.3-1.tar.gz";
+    name = "2.14.3-1.tar.gz";
+    sha256 = "9d02d70eea85b694972d7bc080767975585dd12b24d7d1e0ba5a0f2f2065c636";
   };
 
   buildType = "cmake";

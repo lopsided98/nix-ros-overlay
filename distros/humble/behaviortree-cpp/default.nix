@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, cppzmq, rclcpp, ros-environment, sqlite }:
 buildRosPackage {
   pname = "ros-humble-behaviortree-cpp";
-  version = "4.6.1-r1";
+  version = "4.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/humble/behaviortree_cpp/4.6.1-1.tar.gz";
-    name = "4.6.1-1.tar.gz";
-    sha256 = "52bd382efc6f2bc48a354d3b65f9ef422bc517ca9fde0ef301afef06f7b28778";
+    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/humble/behaviortree_cpp/4.6.2-1.tar.gz";
+    name = "4.6.2-1.tar.gz";
+    sha256 = "30ec5d5add94d0e4587736d45c117f8cb438a9c26a975903b26260b10c3b51fc";
   };
 
   buildType = "ament_cmake";

@@ -2,21 +2,21 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-pytest, ament-cmake-python, ament-cmake-xmllint, ament-lint-auto, diagnostic-updater, python3Packages, rclpy }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-pytest, ament-cmake-python, ament-cmake-xmllint, ament-lint-auto, diagnostic-updater, launch-testing-ament-cmake, lm_sensors, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-diagnostic-common-diagnostics";
-  version = "3.1.2-r2";
+  version = "4.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/rolling/diagnostic_common_diagnostics/3.1.2-2.tar.gz";
-    name = "3.1.2-2.tar.gz";
-    sha256 = "eba9b9e10432d0296250899340ac86a930ab5c11d3c7010ffa764688f5f08f92";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/rolling/diagnostic_common_diagnostics/4.3.0-1.tar.gz";
+    name = "4.3.0-1.tar.gz";
+    sha256 = "e08cf7fb69a93d1fec3418a601d3da67463e2c05a8cde97bf1340406099d8c62";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];
-  checkInputs = [ ament-cmake-lint-cmake ament-cmake-pytest ament-cmake-xmllint ament-lint-auto ];
-  propagatedBuildInputs = [ diagnostic-updater python3Packages.ntplib rclpy ];
+  checkInputs = [ ament-cmake-lint-cmake ament-cmake-pytest ament-cmake-xmllint ament-lint-auto launch-testing-ament-cmake ];
+  propagatedBuildInputs = [ diagnostic-updater lm_sensors python3Packages.ntplib python3Packages.psutil ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {

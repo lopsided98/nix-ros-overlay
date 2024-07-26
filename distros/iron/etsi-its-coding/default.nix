@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-cam-coding, etsi-its-denm-coding, ros-environment }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-cam-coding, etsi-its-cpm-ts-coding, etsi-its-denm-coding, ros-environment }:
 buildRosPackage {
   pname = "ros-iron-etsi-its-coding";
-  version = "2.0.1-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/iron/etsi_its_coding/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "e09436ff47b52758096a06567ce313e6c2539850ab42507da0cabd4042b6e65f";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/iron/etsi_its_coding/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "f6046cfb20e0ac23d0b672a851331cebf80fb27144dbe886ddc3fb9ce96c0908";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ etsi-its-cam-coding etsi-its-denm-coding ros-environment ];
+  propagatedBuildInputs = [ etsi-its-cam-coding etsi-its-cpm-ts-coding etsi-its-denm-coding ros-environment ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

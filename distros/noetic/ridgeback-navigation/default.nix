@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, amcl, catkin, gmapping, map-server, move-base, roslaunch, urdf, xacro }:
 buildRosPackage {
   pname = "ros-noetic-ridgeback-navigation";
-  version = "0.3.4-r1";
+  version = "0.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/noetic/ridgeback_navigation/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "a5a9872dc2b50f74a11d60cc3df0d5254453ef40ab7fb470ab772bd3f45326fc";
+    url = "https://github.com/clearpath-gbp/ridgeback-release/archive/release/noetic/ridgeback_navigation/0.3.5-1.tar.gz";
+    name = "0.3.5-1.tar.gz";
+    sha256 = "7db3d0db11933fdfefc0322d49e3b7b751a02e9a9cb3df72a6b1ddd3e3feee28";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, backward-ros, controller-manager, controller-manager-msgs, force-torque-sensor-broadcaster, geometry-msgs, hardware-interface, joint-state-broadcaster, joint-state-publisher, joint-trajectory-controller, launch, launch-ros, launch-testing-ament-cmake, pluginlib, position-controllers, rclcpp, rclcpp-lifecycle, rclpy, robot-state-publisher, ros2-controllers-test-nodes, rviz2, socat, std-msgs, std-srvs, tf2-geometry-msgs, ur-client-library, ur-controllers, ur-dashboard-msgs, ur-description, ur-msgs, urdf, velocity-controllers, xacro }:
 buildRosPackage {
   pname = "ros-iron-ur-robot-driver";
-  version = "2.3.7-r1";
+  version = "2.3.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/iron/ur_robot_driver/2.3.7-1.tar.gz";
-    name = "2.3.7-1.tar.gz";
-    sha256 = "eb92c2ffbf812452d3310f0da429bdc1d2ba9d5209be9d7b77d7204ae5978970";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/iron/ur_robot_driver/2.3.9-1.tar.gz";
+    name = "2.3.9-1.tar.gz";
+    sha256 = "6758bd488d8cc8219d9ae88b70a10afdd5034c15e409b7fbc11deb1a59a3fc82";
   };
 
   buildType = "ament_cmake";

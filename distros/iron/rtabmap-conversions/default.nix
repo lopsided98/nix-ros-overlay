@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, geometry-msgs, image-geometry, laser-geometry, pcl-conversions, rclcpp, rclcpp-components, ros-environment, rtabmap, rtabmap-msgs, sensor-msgs, std-msgs, tf2, tf2-eigen, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-iron-rtabmap-conversions";
-  version = "0.21.4-r2";
+  version = "0.21.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/iron/rtabmap_conversions/0.21.4-2.tar.gz";
-    name = "0.21.4-2.tar.gz";
-    sha256 = "1c691506c24c76b75c48d4729267eec2e573b1942bf1c42cb63a54ecf863d810";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/iron/rtabmap_conversions/0.21.5-1.tar.gz";
+    name = "0.21.5-1.tar.gz";
+    sha256 = "2e58dd929d6fb1108f1bcb9a3791f92d2342c5a23d5caeb46d64a0c225271289";
   };
 
   buildType = "ament_cmake";

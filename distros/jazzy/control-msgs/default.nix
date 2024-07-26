@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-control-msgs";
-  version = "5.1.0-r2";
+  version = "5.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/jazzy/control_msgs/5.1.0-2.tar.gz";
-    name = "5.1.0-2.tar.gz";
-    sha256 = "0d0d989498faf7eb1fb8fe90f7b548efb4ebf85e35e171402c4600a408d0e82e";
+    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/jazzy/control_msgs/5.2.0-1.tar.gz";
+    name = "5.2.0-1.tar.gz";
+    sha256 = "5206bf027dd7c02026f7876200fa17ba305825414db2fc6b075562f23f506aff";
   };
 
   buildType = "ament_cmake";
@@ -21,7 +21,7 @@ buildRosPackage {
 
   meta = {
     description = "control_msgs contains base messages and actions useful for
-    controlling robots.  It provides representations for controller
+    controlling robots. It provides representations for controller
     setpoints and joint and cartesian trajectories.";
     license = with lib.licenses; [ bsd3 ];
   };

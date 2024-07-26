@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, geometry-msgs, message-filters, nav-msgs, octomap, octomap-msgs, octomap-ros, pcl, pcl-conversions, pcl-ros, rclcpp, rclcpp-components, sensor-msgs, std-msgs, std-srvs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-iron-octomap-server";
-  version = "2.0.0-r4";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap_mapping-release/archive/release/iron/octomap_server/2.0.0-4.tar.gz";
-    name = "2.0.0-4.tar.gz";
-    sha256 = "369cbf787114b038b9d5966854a79d23471a67ab9cdb6c5ca14311406be9aab9";
+    url = "https://github.com/ros2-gbp/octomap_mapping-release/archive/release/iron/octomap_server/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "85b21ab8f68f975a371e7f7d1a201d5fdbcf0c9f2d31e58e566f1eb038fca837";
   };
 
   buildType = "ament_cmake";

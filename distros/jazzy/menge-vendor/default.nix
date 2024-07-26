@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pkg-config, tinyxml }:
 buildRosPackage {
   pname = "ros-jazzy-menge-vendor";
-  version = "1.2.0-r3";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/menge_vendor-release/archive/release/jazzy/menge_vendor/1.2.0-3.tar.gz";
-    name = "1.2.0-3.tar.gz";
-    sha256 = "8fb9ac573f44be69b53986bce1151846becfbcf5176bd0aa1673c67ba0e5254d";
+    url = "https://github.com/ros2-gbp/menge_vendor-release/archive/release/jazzy/menge_vendor/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "24b12c1d0035fecf5c231ff0317accdcd03fac1e568df09d937adb0bc7aae55f";
   };
 
   buildType = "catkin";

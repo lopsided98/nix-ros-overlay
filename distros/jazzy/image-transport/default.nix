@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, message-filters, pluginlib, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-image-transport";
-  version = "5.1.2-r2";
+  version = "5.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/jazzy/image_transport/5.1.2-2.tar.gz";
-    name = "5.1.2-2.tar.gz";
-    sha256 = "fb5a5e02cf5d38c0c2723bc07ffe3548d265787171a126290eb2265e27ba4ed4";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/jazzy/image_transport/5.1.4-1.tar.gz";
+    name = "5.1.4-1.tar.gz";
+    sha256 = "ffd8eb9dbedb94346e11847a8053f969ca537c3d26138c9795578ce7af504e4f";
   };
 
   buildType = "ament_cmake";

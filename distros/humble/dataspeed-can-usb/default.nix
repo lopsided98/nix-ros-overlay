@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, can-msgs, lusb, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-dataspeed-can-usb";
-  version = "2.0.1-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/humble/dataspeed_can_usb/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "c334aa91fe85651e5dca8946159ac45c98804847799f598ac1a4fbd95dd4975d";
+    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/humble/dataspeed_can_usb/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "33e680f958b9a17c68e4fcbc61756e1c091fd17ff16cd1ad25a3d63d5b6d1df6";
   };
 
   buildType = "ament_cmake";

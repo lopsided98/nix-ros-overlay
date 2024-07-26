@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-bringup, rtabmap-odom, rtabmap-rviz-plugins, rtabmap-slam, rtabmap-util, rtabmap-viz }:
 buildRosPackage {
   pname = "ros-iron-rtabmap-demos";
-  version = "0.21.4-r2";
+  version = "0.21.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/iron/rtabmap_demos/0.21.4-2.tar.gz";
-    name = "0.21.4-2.tar.gz";
-    sha256 = "7f5fcdcdc9948a54170dff59af10c485caf6a9571480699e84f270d75106c5f9";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/iron/rtabmap_demos/0.21.5-1.tar.gz";
+    name = "0.21.5-1.tar.gz";
+    sha256 = "466d84cfa5f6b04911ec5def9171009160448885a3e256c648febed07366c691";
   };
 
   buildType = "ament_cmake";

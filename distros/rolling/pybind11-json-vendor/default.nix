@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, nlohmann_json, pybind11-vendor }:
 buildRosPackage {
   pname = "ros-rolling-pybind11-json-vendor";
-  version = "0.4.1-r2";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pybind11_json_vendor-release/archive/release/rolling/pybind11_json_vendor/0.4.1-2.tar.gz";
-    name = "0.4.1-2.tar.gz";
-    sha256 = "a5e09f7bf9d418ea966b21eaa78367a3861d82b44452007e1210eb953bbb406c";
+    url = "https://github.com/ros2-gbp/pybind11_json_vendor-release/archive/release/rolling/pybind11_json_vendor/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "d9c05642255326975d1d58380319843ca5ad94f19bf06d3310207f7d1e64dd06";
   };
 
   buildType = "ament_cmake";

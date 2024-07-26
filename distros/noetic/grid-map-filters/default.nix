@@ -2,7 +2,7 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, filters, grid-map-core, grid-map-msgs, grid-map-ros, gtest, opencv, tbb_2021_8 }:
+{ lib, buildRosPackage, fetchurl, catkin, filters, grid-map-core, grid-map-msgs, grid-map-ros, gtest, opencv, tbb_2021_11 }:
 buildRosPackage {
   pname = "ros-noetic-grid-map-filters";
   version = "1.6.4-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ catkin ];
   checkInputs = [ gtest ];
-  propagatedBuildInputs = [ filters grid-map-core grid-map-msgs grid-map-ros opencv opencv.cxxdev tbb_2021_8 ];
+  propagatedBuildInputs = [ filters grid-map-core grid-map-msgs grid-map-ros opencv opencv.cxxdev tbb_2021_11 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

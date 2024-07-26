@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-examples-rclcpp-multithreaded-executor";
-  version = "0.18.0-r2";
+  version = "0.18.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/iron/examples_rclcpp_multithreaded_executor/0.18.0-2.tar.gz";
-    name = "0.18.0-2.tar.gz";
-    sha256 = "b16ec1ee7996bb89849be50c1ddac0af0d563c8c5abef2b94a7c0f19b5183df1";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/iron/examples_rclcpp_multithreaded_executor/0.18.1-1.tar.gz";
+    name = "0.18.1-1.tar.gz";
+    sha256 = "f7ac9607ef86503bfe6e8bd0b37d7a5b0a0f7b5d4dc1856afbd7984fa6ff6d58";
   };
 
   buildType = "ament_cmake";

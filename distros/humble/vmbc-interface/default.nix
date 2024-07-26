@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-vmbc-interface";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vimbax_ros2_driver-release/archive/release/humble/vmbc_interface/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "88d9347a7bdee96c2861dba66dd5b9c7197e377904972e21eb8aa686005b113a";
+    url = "https://github.com/ros2-gbp/vimbax_ros2_driver-release/archive/release/humble/vmbc_interface/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "31a595c6f62c35f9b4a9c88abda0b734900d431f839c5f514f34817157fb3c57";
   };
 
   buildType = "ament_cmake";

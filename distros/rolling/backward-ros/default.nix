@@ -2,21 +2,22 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, elfutils }:
+{ lib, buildRosPackage, fetchurl, ament-lint-auto, ament-lint-common, cmake, elfutils }:
 buildRosPackage {
   pname = "ros-rolling-backward-ros";
-  version = "1.0.2-r5";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/backward_ros-release/archive/release/rolling/backward_ros/1.0.2-5.tar.gz";
-    name = "1.0.2-5.tar.gz";
-    sha256 = "4945543dd5b7dba7dee4e039948e9c00e694cb3655a287bbae1c45e6462dcbf5";
+    url = "https://github.com/ros2-gbp/backward_ros-release/archive/release/rolling/backward_ros/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "76035dc2f955c50d79fc920780ef426f3128b51cc4616620328dd25b93d6314b";
   };
 
-  buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
+  buildType = "cmake";
+  buildInputs = [ cmake ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ elfutils ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = "The backward_ros package is a ros wrapper of backward-cpp from https://github.com/bombela/backward-cpp";

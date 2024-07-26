@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-iron-rtabmap-msgs";
-  version = "0.21.4-r2";
+  version = "0.21.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/iron/rtabmap_msgs/0.21.4-2.tar.gz";
-    name = "0.21.4-2.tar.gz";
-    sha256 = "c063638ea24b245ab4cfa40b1b76ee7d6d7b2a2c6b25c1b21e4a43d02bc0f1ca";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/iron/rtabmap_msgs/0.21.5-1.tar.gz";
+    name = "0.21.5-1.tar.gz";
+    sha256 = "33582ac8d0c02302264a61d73f112046e2bdf5a2e5bb2e9b93c63175b48752d1";
   };
 
   buildType = "ament_cmake";

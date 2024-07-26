@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, pythonPackages, rclpy, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ros2-controllers-test-nodes";
-  version = "4.8.0-r1";
+  version = "4.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/ros2_controllers_test_nodes/4.8.0-1.tar.gz";
-    name = "4.8.0-1.tar.gz";
-    sha256 = "96c9b5092979fbbe92ba4a13ca79bef3419092678bed777cda7c335576b7a9af";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/ros2_controllers_test_nodes/4.12.0-1.tar.gz";
+    name = "4.12.0-1.tar.gz";
+    sha256 = "d79988166dc4b5f2ecbd5f858470b603ea455b902fff68bf7703cf016b03ddf3";
   };
 
   buildType = "ament_python";

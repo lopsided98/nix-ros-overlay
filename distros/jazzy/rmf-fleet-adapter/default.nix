@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-catch2, ament-cmake-uncrustify, backward-ros, eigen, nlohmann-json-schema-validator-vendor, nlohmann_json, rclcpp, rclcpp-components, rmf-api-msgs, rmf-battery, rmf-building-map-msgs, rmf-dispenser-msgs, rmf-door-msgs, rmf-fleet-msgs, rmf-ingestor-msgs, rmf-lift-msgs, rmf-task, rmf-task-msgs, rmf-task-ros2, rmf-task-sequence, rmf-traffic, rmf-traffic-ros2, rmf-utils, rmf-websocket, std-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-rmf-fleet-adapter";
-  version = "2.6.0-r2";
+  version = "2.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/jazzy/rmf_fleet_adapter/2.6.0-2.tar.gz";
-    name = "2.6.0-2.tar.gz";
-    sha256 = "17bed5a2439d6a89b879c0372a5bd9560a068af035c2939d409acb9366cd4ef5";
+    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/jazzy/rmf_fleet_adapter/2.7.2-1.tar.gz";
+    name = "2.7.2-1.tar.gz";
+    sha256 = "565d7ca3171b6aa0e2b549004c7cdf8062c2c9525468f8fd6b6762b64db1cc2a";
   };
 
   buildType = "ament_cmake";

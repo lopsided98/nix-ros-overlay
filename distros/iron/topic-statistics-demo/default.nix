@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rcutils, sensor-msgs, statistics-msgs }:
 buildRosPackage {
   pname = "ros-iron-topic-statistics-demo";
-  version = "0.27.1-r1";
+  version = "0.27.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/topic_statistics_demo/0.27.1-1.tar.gz";
-    name = "0.27.1-1.tar.gz";
-    sha256 = "3acb9b51e43dc9cf584d499ec05be2ea1f5eda37a5d56973a01e0b549c1898ef";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/topic_statistics_demo/0.27.2-1.tar.gz";
+    name = "0.27.2-1.tar.gz";
+    sha256 = "5edc5a233efc699b868f5b8f39059b7eeab564f5e442553dcc2006d82912d4c8";
   };
 
   buildType = "ament_cmake";

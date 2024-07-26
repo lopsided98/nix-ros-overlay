@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, beluga, beluga-ros, catkin, diagnostic-updater, dynamic-reconfigure, message-filters, nodelet, roscpp, rostest, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-beluga-amcl";
-  version = "2.0.0-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/beluga-release/archive/release/noetic/beluga_amcl/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "f31d3c1016d0516e19cce43a3e2d6fdcf2c12f20bb66ba4466a5620c6f0367bb";
+    url = "https://github.com/ros2-gbp/beluga-release/archive/release/noetic/beluga_amcl/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "65f49b5058504bbaf4e3ae841733de267e1a7fd418073ce49a6028d3be336582";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, moveit-core, moveit-resources-panda-moveit-config, moveit-ros-planning, moveit-ros-visualization, ogre1_9, ompl, qt5, rosconsole, roscpp, rosunit, rviz, srdfdom, urdf, xacro, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-moveit-setup-assistant";
-  version = "1.1.13-r2";
+  version = "1.1.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_setup_assistant/1.1.13-2.tar.gz";
-    name = "1.1.13-2.tar.gz";
-    sha256 = "a484660bd4e5fcd57ae16ea0729394091b329da7867ea5e94f2a30393ede27cc";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_setup_assistant/1.1.14-1.tar.gz";
+    name = "1.1.14-1.tar.gz";
+    sha256 = "5b999d60db634b595dac4856707d68afc1dfec6793672e0815d7441da0c7e0ab";
   };
 
   buildType = "catkin";

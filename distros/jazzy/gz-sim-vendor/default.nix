@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, freeglut, freeimage, gbenchmark, glew, gz-cmake-vendor, gz-common-vendor, gz-fuel-tools-vendor, gz-gui-vendor, gz-math-vendor, gz-msgs-vendor, gz-physics-vendor, gz-plugin-vendor, gz-rendering-vendor, gz-sensors-vendor, gz-tools-vendor, gz-transport-vendor, gz-utils-vendor, protobuf, pythonPackages, qt5, sdformat-vendor, tinyxml-2, util-linux, xorg }:
 buildRosPackage {
   pname = "ros-jazzy-gz-sim-vendor";
-  version = "0.0.3-r1";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_sim_vendor-release/archive/release/jazzy/gz_sim_vendor/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "d1498fafc350ba804ec6a6b88fb4bb87bb3816b89998402e0482323ee494b559";
+    url = "https://github.com/ros2-gbp/gz_sim_vendor-release/archive/release/jazzy/gz_sim_vendor/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "e544dc77b8cd8f80669af7c616c207aff953637c90f9d73874338ba2caa36be9";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package ];
 
   meta = {
-    description = "Vendor package for: gz-sim8 8.3.0
+    description = "Vendor package for: gz-sim8 8.5.0
 
     Gazebo Sim : A Robotic Simulator";
     license = with lib.licenses; [ asl20 ];

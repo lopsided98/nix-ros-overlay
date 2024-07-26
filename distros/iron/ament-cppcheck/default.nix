@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cppcheck }:
 buildRosPackage {
   pname = "ros-iron-ament-cppcheck";
-  version = "0.14.3-r1";
+  version = "0.14.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_cppcheck/0.14.3-1.tar.gz";
-    name = "0.14.3-1.tar.gz";
-    sha256 = "fcf0b309f4afed0cd52909f9b6012538619af5d97dbaeca2f1e432b6cac09c6e";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_cppcheck/0.14.4-1.tar.gz";
+    name = "0.14.4-1.tar.gz";
+    sha256 = "a0d494dab234a6486cc81305745cec85bb8ee6ce586b0c6e970d221849b0d89e";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-lint-common, lifecycle, lifecycle-msgs, rclpy, ros-testing, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-lifecycle-py";
-  version = "0.27.1-r1";
+  version = "0.27.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/lifecycle_py/0.27.1-1.tar.gz";
-    name = "0.27.1-1.tar.gz";
-    sha256 = "fda72b5c9a5f4b5dfad66d653bdf4c83d565ab5a35d232ea7cecd77de745b8c2";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/lifecycle_py/0.27.2-1.tar.gz";
+    name = "0.27.2-1.tar.gz";
+    sha256 = "90ae085472a1e221982e01e50c3b0652d5699d44dcdf123810b030dca8627832";
   };
 
   buildType = "ament_python";

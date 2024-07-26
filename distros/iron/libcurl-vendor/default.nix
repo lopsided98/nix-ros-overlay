@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, curl, file, pkg-config }:
 buildRosPackage {
   pname = "ros-iron-libcurl-vendor";
-  version = "3.2.2-r3";
+  version = "3.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/iron/libcurl_vendor/3.2.2-3.tar.gz";
-    name = "3.2.2-3.tar.gz";
-    sha256 = "23a5f431960b790ad5d51197e40fb3494295c8489d8cbf64a941cbd5b7be1eb7";
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/iron/libcurl_vendor/3.2.3-1.tar.gz";
+    name = "3.2.3-1.tar.gz";
+    sha256 = "5c3c14c660037cc901cbe74dfa37ff83b8996e5150f67694c016924a5465ea3f";
   };
 
   buildType = "ament_cmake";

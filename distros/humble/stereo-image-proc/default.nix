@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-pytest, ament-lint-auto, ament-lint-common, cv-bridge, image-geometry, image-proc, image-transport, launch, launch-ros, launch-testing, launch-testing-ament-cmake, message-filters, python-cmake-module, python3Packages, rclcpp, rclcpp-components, rclpy, ros-testing, sensor-msgs, stereo-msgs }:
 buildRosPackage {
   pname = "ros-humble-stereo-image-proc";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/stereo_image_proc/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "736e771a19a046a8f256ef7a4c10639306881d9180c096658a1dbbb22340a2ff";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/stereo_image_proc/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "af3bcc9cf863240cc678b3cdf4a1294639b2bcbb0b3fd2e2f68b91927f7b760a";
   };
 
   buildType = "ament_cmake";

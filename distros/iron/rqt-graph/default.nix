@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, python-qt-binding, qt-dotgraph, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-iron-rqt-graph";
-  version = "1.4.2-r1";
+  version = "1.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/iron/rqt_graph/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "b586e61674795f72f549919e51d08bfad8022c160d726fc875ecff6d289ae923";
+    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/iron/rqt_graph/1.4.3-1.tar.gz";
+    name = "1.4.3-1.tar.gz";
+    sha256 = "8e32a803a86c6cc5e04ba2c40c207fdd4ca5fc186411bed69ec059a25a83930e";
   };
 
   buildType = "ament_python";

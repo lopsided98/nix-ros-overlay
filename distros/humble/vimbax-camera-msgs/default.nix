@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-vimbax-camera-msgs";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vimbax_ros2_driver-release/archive/release/humble/vimbax_camera_msgs/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "d38aca85079abe7eedd3e5dc4a54917520b062c6e6eaac576a6b81916c7b520a";
+    url = "https://github.com/ros2-gbp/vimbax_ros2_driver-release/archive/release/humble/vimbax_camera_msgs/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "e07fd25446a6fbfca8528c10b92fd3d9f49de71a5dc957fa6806f4a9c4707bc8";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt2 }:
 buildRosPackage {
   pname = "ros-jazzy-mp2p-icp";
-  version = "1.3.1-r2";
+  version = "1.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/jazzy/mp2p_icp/1.3.1-2.tar.gz";
-    name = "1.3.1-2.tar.gz";
-    sha256 = "3f94e850ab887aab47b63ad4550c6097bea19ffcc5478055953f40d68a8524df";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/jazzy/mp2p_icp/1.5.2-1.tar.gz";
+    name = "1.5.2-1.tar.gz";
+    sha256 = "68258c830dcf05d375e5abda88ca7c77cd4f406eefb2d104d261b0752bdd6b68";
   };
 
   buildType = "cmake";

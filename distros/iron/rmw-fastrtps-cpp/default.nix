@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, fastcdr, fastrtps, fastrtps-cmake-module, osrf-testing-tools-cpp, rcpputils, rcutils, rmw, rmw-dds-common, rmw-fastrtps-shared-cpp, rosidl-dynamic-typesupport, rosidl-runtime-c, rosidl-runtime-cpp, rosidl-typesupport-fastrtps-c, rosidl-typesupport-fastrtps-cpp, test-msgs, tracetools }:
 buildRosPackage {
   pname = "ros-iron-rmw-fastrtps-cpp";
-  version = "7.1.3-r1";
+  version = "7.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_fastrtps-release/archive/release/iron/rmw_fastrtps_cpp/7.1.3-1.tar.gz";
-    name = "7.1.3-1.tar.gz";
-    sha256 = "70e6ee3bc55e30461875c928f02c54fee457768b400be260d374dd54aca1daf7";
+    url = "https://github.com/ros2-gbp/rmw_fastrtps-release/archive/release/iron/rmw_fastrtps_cpp/7.1.4-1.tar.gz";
+    name = "7.1.4-1.tar.gz";
+    sha256 = "d7ac8913808a2a344c117617509e8d4cc17dbf548856695fab6ad6e76c3a1ff8";
   };
 
   buildType = "ament_cmake";

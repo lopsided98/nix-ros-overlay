@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-command-line, ecl-config, ecl-console, ecl-converters, ecl-devices, ecl-geometry, ecl-mobile-robot, ecl-sigslots, ecl-threads, ecl-time }:
 buildRosPackage {
   pname = "ros-iron-kobuki-core";
-  version = "1.4.0-r3";
+  version = "1.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kobuki_core-release/archive/release/iron/kobuki_core/1.4.0-3.tar.gz";
-    name = "1.4.0-3.tar.gz";
-    sha256 = "0d2c716c94165ca7efec65856f6dea834d6a464a6ce176302b5c928b52e89bbe";
+    url = "https://github.com/ros2-gbp/kobuki_core-release/archive/release/iron/kobuki_core/1.4.1-1.tar.gz";
+    name = "1.4.1-1.tar.gz";
+    sha256 = "381f27a55688734cb7efb8932869f8bf55f72431a82b1179eaa1a78196f18735";
   };
 
   buildType = "ament_cmake";

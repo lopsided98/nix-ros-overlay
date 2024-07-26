@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb1, pkg-config }:
 buildRosPackage {
   pname = "ros-humble-lusb";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/lusb-release/archive/release/humble/lusb/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "df060eb9a667ff2162d9a3baf1d8f4311540d7b8d121f56ebb74e392a1a11638";
+    url = "https://github.com/DataspeedInc-release/lusb-release/archive/release/humble/lusb/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "bd718f2cd39eb08357163b2b7e1d7f42bffee72a6e634123ea7858ab50925d09";
   };
 
   buildType = "ament_cmake";

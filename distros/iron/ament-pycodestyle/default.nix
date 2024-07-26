@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-iron-ament-pycodestyle";
-  version = "0.14.3-r1";
+  version = "0.14.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_pycodestyle/0.14.3-1.tar.gz";
-    name = "0.14.3-1.tar.gz";
-    sha256 = "815030ac797fd292bdcfe37c953e4860795dbab4c452dea30b2483748ca86a5d";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/iron/ament_pycodestyle/0.14.4-1.tar.gz";
+    name = "0.14.4-1.tar.gz";
+    sha256 = "86834dcd00d47fe56d4bd2ba16bdf09e1fa051a7ba7b22302a59376856efe60c";
   };
 
   buildType = "ament_python";

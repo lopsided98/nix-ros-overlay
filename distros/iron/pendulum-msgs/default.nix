@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-iron-pendulum-msgs";
-  version = "0.27.1-r1";
+  version = "0.27.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/pendulum_msgs/0.27.1-1.tar.gz";
-    name = "0.27.1-1.tar.gz";
-    sha256 = "ff6f71a5877d62e543dfd7057dfe7605b42cf58f69a64011d40af3f2747cb6df";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/pendulum_msgs/0.27.2-1.tar.gz";
+    name = "0.27.2-1.tar.gz";
+    sha256 = "2e6b5bb75cb6f888c0e1c9dd3441853dadc44a5cb3fc5fb0337ab7050648b24a";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-tutorials-interfaces, ament-lint-auto, ament-lint-common, rclpy }:
 buildRosPackage {
   pname = "ros-iron-action-tutorials-py";
-  version = "0.27.1-r1";
+  version = "0.27.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/action_tutorials_py/0.27.1-1.tar.gz";
-    name = "0.27.1-1.tar.gz";
-    sha256 = "a694fc7ad2b72b70bb71a97f0b71a4effc5e10878992f08a4639a13a88a24fc6";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/action_tutorials_py/0.27.2-1.tar.gz";
+    name = "0.27.2-1.tar.gz";
+    sha256 = "7001763d61ff5d81a63f9bd97dd4f2fc21c5df7d5c5065beb6719e830a4fe74a";
   };
 
   buildType = "ament_python";

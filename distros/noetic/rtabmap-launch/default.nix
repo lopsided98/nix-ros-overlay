@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rtabmap-costmap-plugins, rtabmap-msgs, rtabmap-odom, rtabmap-rviz-plugins, rtabmap-slam, rtabmap-util, rtabmap-viz }:
 buildRosPackage {
   pname = "ros-noetic-rtabmap-launch";
-  version = "0.21.4-r1";
+  version = "0.21.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_launch/0.21.4-1.tar.gz";
-    name = "0.21.4-1.tar.gz";
-    sha256 = "bdf6e6841ed47244ef2a9bf9c195cd6fcc6b8c1f180a0046a6e98cd214834f1c";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_launch/0.21.5-1.tar.gz";
+    name = "0.21.5-1.tar.gz";
+    sha256 = "9a4c395641957129d3c3f8aaf9a8dcff6e6df75bad77ff976fc7cc47440b4955";
   };
 
   buildType = "catkin";

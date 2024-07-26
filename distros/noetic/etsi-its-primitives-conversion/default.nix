@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ros-environment }:
 buildRosPackage {
   pname = "ros-noetic-etsi-its-primitives-conversion";
-  version = "2.0.1-r1";
+  version = "2.1.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_primitives_conversion/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "0eef1a5a72ff5122ff4aeca8ed830004fd052e730918745bf91dca71d1fb54cc";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_primitives_conversion/2.1.0-3.tar.gz";
+    name = "2.1.0-3.tar.gz";
+    sha256 = "8685ae34cc36684180e46fd9be9d926d3efedcf7bf26532fcbcbb933a7ad9c08";
   };
 
   buildType = "catkin";

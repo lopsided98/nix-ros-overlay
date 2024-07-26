@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, mrpt-msgs, mrpt-sensorlib, rclcpp, rclcpp-components, ros-environment, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-mrpt-generic-sensor";
-  version = "0.2.0-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/iron/mrpt_generic_sensor/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "7074ceb286aee76794b53c0a374e6a9551e3632a72952c0801eaa0cc0bd2731f";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/iron/mrpt_generic_sensor/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "25f213e694deb78e116461c5f0ccabf56903ea93b18b512b1993cdff336c3847";
   };
 
   buildType = "ament_cmake";

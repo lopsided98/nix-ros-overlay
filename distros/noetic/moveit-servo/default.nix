@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, control-msgs, control-toolbox, geometry-msgs, joy-teleop, moveit-msgs, moveit-resources-panda-moveit-config, moveit-ros-planning-interface, rosparam-shortcuts, rostest, sensor-msgs, spacenav-node, std-msgs, std-srvs, tf2-eigen, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-noetic-moveit-servo";
-  version = "1.1.13-r2";
+  version = "1.1.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_servo/1.1.13-2.tar.gz";
-    name = "1.1.13-2.tar.gz";
-    sha256 = "dbbd29928415b6e5b0e5617d60036d231fd517fe66083e924992a375b16127e9";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_servo/1.1.14-1.tar.gz";
+    name = "1.1.14-1.tar.gz";
+    sha256 = "4301c285096eb3a7e127b3aa3701ea9a33ff911af4fb3773a61672bcddfeb977";
   };
 
   buildType = "catkin";

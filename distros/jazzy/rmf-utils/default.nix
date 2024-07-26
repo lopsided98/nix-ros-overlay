@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-catch2, ament-cmake-uncrustify, cmake }:
 buildRosPackage {
   pname = "ros-jazzy-rmf-utils";
-  version = "1.6.0-r3";
+  version = "1.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_utils-release/archive/release/jazzy/rmf_utils/1.6.0-3.tar.gz";
-    name = "1.6.0-3.tar.gz";
-    sha256 = "513748872c9cfa79124b7673d456ba7395c111ced92720084e1953b9f595d7b9";
+    url = "https://github.com/ros2-gbp/rmf_utils-release/archive/release/jazzy/rmf_utils/1.6.2-1.tar.gz";
+    name = "1.6.2-1.tar.gz";
+    sha256 = "31fdf59c784a2e3a80d0ea1ed4fb692686e9d06490290730ec4535b5861e205b";
   };
 
   buildType = "cmake";

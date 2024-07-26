@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, geometry-msgs, image-geometry, laser-geometry, pcl-conversions, rclcpp, rclcpp-components, ros-environment, rtabmap, rtabmap-msgs, sensor-msgs, std-msgs, tf2, tf2-eigen, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-humble-rtabmap-conversions";
-  version = "0.21.4-r2";
+  version = "0.21.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_conversions/0.21.4-2.tar.gz";
-    name = "0.21.4-2.tar.gz";
-    sha256 = "d620493b25d9da89e64ba786a2e1421cf7cf9e296b381f8d344a2144bcdb19f1";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_conversions/0.21.5-1.tar.gz";
+    name = "0.21.5-1.tar.gz";
+    sha256 = "8af4b4769938ad1a4ba87ede3156f5ce0717db1ab6b2afd9e6e136b580fcf65b";
   };
 
   buildType = "ament_cmake";

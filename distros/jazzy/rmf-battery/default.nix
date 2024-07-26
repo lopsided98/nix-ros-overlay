@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-catch2, ament-cmake-uncrustify, cmake, eigen, eigen3-cmake-module, rmf-traffic, rmf-utils }:
 buildRosPackage {
   pname = "ros-jazzy-rmf-battery";
-  version = "0.3.0-r3";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_battery-release/archive/release/jazzy/rmf_battery/0.3.0-3.tar.gz";
-    name = "0.3.0-3.tar.gz";
-    sha256 = "ad79651b38977f437aa4dd51da42ecb6dbb6f12cb4db45b992f785140fdd40ff";
+    url = "https://github.com/ros2-gbp/rmf_battery-release/archive/release/jazzy/rmf_battery/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "4d435fcee3374d6ef3adcfd7c640be8a925388120521780c3438b1dbe36ef473";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, image-geometry }:
 buildRosPackage {
   pname = "ros-jazzy-vision-opencv";
-  version = "4.0.0-r2";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/jazzy/vision_opencv/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "e6783f96a71944939c412398fb72bfe1fbbefaf61f7f0654a321383a064cc364";
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/jazzy/vision_opencv/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "a57562216e7baed3d9e25c74dda06679938b08d77d7edbf9eeb7de1b1503e14d";
   };
 
   buildType = "ament_cmake";

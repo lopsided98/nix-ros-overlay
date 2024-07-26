@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, boost, cmake, doxygen, eigen, eigenpy, git, octomap, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-hpp-fcl";
-  version = "2.4.4-r2";
+  version = "2.4.4-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hpp_fcl-release/archive/release/jazzy/hpp-fcl/2.4.4-2.tar.gz";
-    name = "2.4.4-2.tar.gz";
-    sha256 = "730b5cbaefb58e1496972e97991e795e23ccf861fc4129e132c7ba51133e3ff2";
+    url = "https://github.com/ros2-gbp/hpp_fcl-release/archive/release/jazzy/hpp-fcl/2.4.4-3.tar.gz";
+    name = "2.4.4-3.tar.gz";
+    sha256 = "c9045db14d1795af200abb4d341a38569a67bf76c06955a899911575bcfe877f";
   };
 
   buildType = "cmake";

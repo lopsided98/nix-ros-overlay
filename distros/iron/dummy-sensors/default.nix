@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-iron-dummy-sensors";
-  version = "0.27.1-r1";
+  version = "0.27.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/dummy_sensors/0.27.1-1.tar.gz";
-    name = "0.27.1-1.tar.gz";
-    sha256 = "d068d113874e67dc6a4d40e57b3fccd2748a7b0b994478725d23f7843652737c";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/dummy_sensors/0.27.2-1.tar.gz";
+    name = "0.27.2-1.tar.gz";
+    sha256 = "bd03a4056be4fc7f4102cf382c096b136ad4b66969c396fdde1b8b6ab9cc7abb";
   };
 
   buildType = "ament_cmake";

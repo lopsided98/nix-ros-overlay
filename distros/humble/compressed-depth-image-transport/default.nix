@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, image-transport }:
 buildRosPackage {
   pname = "ros-humble-compressed-depth-image-transport";
-  version = "2.5.1-r1";
+  version = "2.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/humble/compressed_depth_image_transport/2.5.1-1.tar.gz";
-    name = "2.5.1-1.tar.gz";
-    sha256 = "bf2df11f2a3e3227ad2e41d03a3131f8de0d5027fc5a4ee95cf21aeb0db3e395";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/humble/compressed_depth_image_transport/2.5.2-1.tar.gz";
+    name = "2.5.2-1.tar.gz";
+    sha256 = "4c3a763b6421686ed20154598c87bfa43be0dc786e0d3e4f21446408738f0c2b";
   };
 
   buildType = "ament_cmake";

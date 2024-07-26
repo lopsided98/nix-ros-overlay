@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, git, glfw3, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-rig-reconfigure";
-  version = "1.4.0-r4";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rig_reconfigure-release/archive/release/jazzy/rig_reconfigure/1.4.0-4.tar.gz";
-    name = "1.4.0-4.tar.gz";
-    sha256 = "934bfa4b524ca1932fd01096a62d3330c8290d00a76fb04bddebd8ca32be41ac";
+    url = "https://github.com/ros2-gbp/rig_reconfigure-release/archive/release/jazzy/rig_reconfigure/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "78e0d6bc88da7fec352ea229ec36c39aeb4a743ef15d2a153b7e3c0e6b4eba22";
   };
 
   buildType = "ament_cmake";

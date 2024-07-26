@@ -234,6 +234,10 @@ self: super: {
 
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
+ camera-aravis2 = self.callPackage ./camera-aravis2 {};
+
+ camera-aravis2-msgs = self.callPackage ./camera-aravis2-msgs {};
+
  camera-calibration = self.callPackage ./camera-calibration {};
 
  camera-calibration-parsers = self.callPackage ./camera-calibration-parsers {};
@@ -478,6 +482,12 @@ self: super: {
 
  etsi-its-conversion = self.callPackage ./etsi-its-conversion {};
 
+ etsi-its-cpm-ts-coding = self.callPackage ./etsi-its-cpm-ts-coding {};
+
+ etsi-its-cpm-ts-conversion = self.callPackage ./etsi-its-cpm-ts-conversion {};
+
+ etsi-its-cpm-ts-msgs = self.callPackage ./etsi-its-cpm-ts-msgs {};
+
  etsi-its-denm-coding = self.callPackage ./etsi-its-denm-coding {};
 
  etsi-its-denm-conversion = self.callPackage ./etsi-its-denm-conversion {};
@@ -550,6 +560,8 @@ self: super: {
 
  executive-smach = self.callPackage ./executive-smach {};
 
+ fast-gicp = self.callPackage ./fast-gicp {};
+
  fastcdr = self.callPackage ./fastcdr {};
 
  fastrtps = self.callPackage ./fastrtps {};
@@ -567,6 +579,8 @@ self: super: {
  filters = self.callPackage ./filters {};
 
  find-object-2d = self.callPackage ./find-object-2d {};
+
+ flex-sync = self.callPackage ./flex-sync {};
 
  flexbe-behavior-engine = self.callPackage ./flexbe-behavior-engine {};
 
@@ -968,6 +982,8 @@ self: super: {
 
  libyaml-vendor = self.callPackage ./libyaml-vendor {};
 
+ lidar-situational-graphs = self.callPackage ./lidar-situational-graphs {};
+
  lifecycle = self.callPackage ./lifecycle {};
 
  lifecycle-msgs = self.callPackage ./lifecycle-msgs {};
@@ -1073,6 +1089,8 @@ self: super: {
  mola-launcher = self.callPackage ./mola-launcher {};
 
  mola-metric-maps = self.callPackage ./mola-metric-maps {};
+
+ mola-navstate-fg = self.callPackage ./mola-navstate-fg {};
 
  mola-navstate-fuse = self.callPackage ./mola-navstate-fuse {};
 
@@ -1194,19 +1212,39 @@ self: super: {
 
  mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
 
+ mrpt-map-server = self.callPackage ./mrpt-map-server {};
+
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
+
+ mrpt-msgs-bridge = self.callPackage ./mrpt-msgs-bridge {};
+
+ mrpt-nav-interfaces = self.callPackage ./mrpt-nav-interfaces {};
+
+ mrpt-navigation = self.callPackage ./mrpt-navigation {};
 
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
+ mrpt-pf-localization = self.callPackage ./mrpt-pf-localization {};
+
+ mrpt-pointcloud-pipeline = self.callPackage ./mrpt-pointcloud-pipeline {};
+
+ mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
+
+ mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
+
  mrpt-sensor-bumblebee-stereo = self.callPackage ./mrpt-sensor-bumblebee-stereo {};
 
- mrpt-sensor-gnns-nmea = self.callPackage ./mrpt-sensor-gnns-nmea {};
+ mrpt-sensor-gnss-nmea = self.callPackage ./mrpt-sensor-gnss-nmea {};
+
+ mrpt-sensor-gnss-novatel = self.callPackage ./mrpt-sensor-gnss-novatel {};
 
  mrpt-sensor-imu-taobotics = self.callPackage ./mrpt-sensor-imu-taobotics {};
 
  mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
 
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
+
+ mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
@@ -1302,6 +1340,8 @@ self: super: {
 
  navigation2 = self.callPackage ./navigation2 {};
 
+ ndt-omp = self.callPackage ./ndt-omp {};
+
  neo-simulation2 = self.callPackage ./neo-simulation2 {};
 
  nerian-stereo = self.callPackage ./nerian-stereo {};
@@ -1349,6 +1389,8 @@ self: super: {
  odom-to-tf-ros2 = self.callPackage ./odom-to-tf-ros2 {};
 
  ompl = self.callPackage ./ompl {};
+
+ openeb-vendor = self.callPackage ./openeb-vendor {};
 
  openni2-camera = self.callPackage ./openni2-camera {};
 
@@ -1432,6 +1474,8 @@ self: super: {
 
  picknik-twist-controller = self.callPackage ./picknik-twist-controller {};
 
+ pid-controller = self.callPackage ./pid-controller {};
+
  pilz-industrial-motion-planner = self.callPackage ./pilz-industrial-motion-planner {};
 
  pilz-industrial-motion-planner-testutils = self.callPackage ./pilz-industrial-motion-planner-testutils {};
@@ -1501,6 +1545,8 @@ self: super: {
  position-controllers = self.callPackage ./position-controllers {};
 
  proxsuite = self.callPackage ./proxsuite {};
+
+ py-binding-tools = self.callPackage ./py-binding-tools {};
 
  py-trees = self.callPackage ./py-trees {};
 
@@ -1962,6 +2008,8 @@ self: super: {
 
  rosidl-typesupport-introspection-cpp = self.callPackage ./rosidl-typesupport-introspection-cpp {};
 
+ rosx-introspection = self.callPackage ./rosx-introspection {};
+
  rot-conv = self.callPackage ./rot-conv {};
 
  rplidar-ros = self.callPackage ./rplidar-ros {};
@@ -2134,11 +2182,21 @@ self: super: {
 
  sick-safevisionary-tests = self.callPackage ./sick-safevisionary-tests {};
 
+ sick-scan-xd = self.callPackage ./sick-scan-xd {};
+
  simple-actions = self.callPackage ./simple-actions {};
 
  simple-launch = self.callPackage ./simple-launch {};
 
  simulation = self.callPackage ./simulation {};
+
+ situational-graphs-datasets = self.callPackage ./situational-graphs-datasets {};
+
+ situational-graphs-msgs = self.callPackage ./situational-graphs-msgs {};
+
+ situational-graphs-reasoning-msgs = self.callPackage ./situational-graphs-reasoning-msgs {};
+
+ situational-graphs-wrapper = self.callPackage ./situational-graphs-wrapper {};
 
  slam-toolbox = self.callPackage ./slam-toolbox {};
 
@@ -2217,6 +2275,8 @@ self: super: {
  std-srvs = self.callPackage ./std-srvs {};
 
  steering-controllers-library = self.callPackage ./steering-controllers-library {};
+
+ steering-functions = self.callPackage ./steering-functions {};
 
  stereo-image-proc = self.callPackage ./stereo-image-proc {};
 

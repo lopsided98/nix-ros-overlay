@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, geometry-msgs, image-transport, opencv, rcl-interfaces, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-image-rotate";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/image_rotate/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "124b20ee68cee9d3c18730eb25230a87ccfbf9a67b070d0ec8f3492cd26648b3";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/image_rotate/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "a53d059e46a4f8aeb20cef34fffa2a6f4ebbaf84f3931125fb069fb248e1f10a";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-core-generators, rosidl-core-runtime }:
 buildRosPackage {
   pname = "ros-rolling-unique-identifier-msgs";
-  version = "2.6.0-r2";
+  version = "2.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/unique_identifier_msgs-release/archive/release/rolling/unique_identifier_msgs/2.6.0-2.tar.gz";
-    name = "2.6.0-2.tar.gz";
-    sha256 = "e58e07cc6ab2f87777d39f9c0db20f61fa04567fb0a39d25df9e7ba9b1a4f36f";
+    url = "https://github.com/ros2-gbp/unique_identifier_msgs-release/archive/release/rolling/unique_identifier_msgs/2.7.0-1.tar.gz";
+    name = "2.7.0-1.tar.gz";
+    sha256 = "51aaeb9ba4054d32ed0475f3b25aef57f9e067153c488a520b68b5a0f68bbdb5";
   };
 
   buildType = "ament_cmake";

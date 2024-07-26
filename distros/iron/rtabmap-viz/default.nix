@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, cv-bridge, geometry-msgs, nav-msgs, rclcpp, rtabmap-msgs, rtabmap-sync, std-msgs, std-srvs, tf2 }:
 buildRosPackage {
   pname = "ros-iron-rtabmap-viz";
-  version = "0.21.4-r2";
+  version = "0.21.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/iron/rtabmap_viz/0.21.4-2.tar.gz";
-    name = "0.21.4-2.tar.gz";
-    sha256 = "5cb2adc9a5abf913ebe5a9c58761b556bc60b974f329a7f2db53c559cc824f23";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/iron/rtabmap_viz/0.21.5-1.tar.gz";
+    name = "0.21.5-1.tar.gz";
+    sha256 = "2691dc8895ea31ab25c0422dd58a72c4ef5c12075daeee30ef994664cb57eac3";
   };
 
   buildType = "ament_cmake";

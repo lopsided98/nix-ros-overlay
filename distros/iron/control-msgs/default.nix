@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-iron-control-msgs";
-  version = "5.1.0-r1";
+  version = "5.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/iron/control_msgs/5.1.0-1.tar.gz";
-    name = "5.1.0-1.tar.gz";
-    sha256 = "956b4a3c1e4a85265f8e11207dc6c9b985a6133974fb1eb63ebd0922f5f832a4";
+    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/iron/control_msgs/5.2.0-1.tar.gz";
+    name = "5.2.0-1.tar.gz";
+    sha256 = "cb1f1494bbefe9d6bf6331fe6eba9fcaccd4b7fa27e92b91c160cbd98db89430";
   };
 
   buildType = "ament_cmake";
@@ -21,7 +21,7 @@ buildRosPackage {
 
   meta = {
     description = "control_msgs contains base messages and actions useful for
-    controlling robots.  It provides representations for controller
+    controlling robots. It provides representations for controller
     setpoints and joint and cartesian trajectories.";
     license = with lib.licenses; [ bsd3 ];
   };

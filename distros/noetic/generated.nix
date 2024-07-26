@@ -902,6 +902,12 @@ self: super: {
 
  etsi-its-conversion = self.callPackage ./etsi-its-conversion {};
 
+ etsi-its-cpm-ts-coding = self.callPackage ./etsi-its-cpm-ts-coding {};
+
+ etsi-its-cpm-ts-conversion = self.callPackage ./etsi-its-cpm-ts-conversion {};
+
+ etsi-its-cpm-ts-msgs = self.callPackage ./etsi-its-cpm-ts-msgs {};
+
  etsi-its-denm-coding = self.callPackage ./etsi-its-denm-coding {};
 
  etsi-its-denm-conversion = self.callPackage ./etsi-its-denm-conversion {};
@@ -2269,6 +2275,8 @@ self: super: {
  network-interface = self.callPackage ./network-interface {};
 
  nfc-ros = self.callPackage ./nfc-ros {};
+
+ nicla-vision-ros = self.callPackage ./nicla-vision-ros {};
 
  nmea-comms = self.callPackage ./nmea-comms {};
 

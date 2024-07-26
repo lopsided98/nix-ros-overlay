@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-iron-etsi-its-cam-coding";
-  version = "2.0.1-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/iron/etsi_its_cam_coding/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "74afcafccc483ebe6dcf9738898a71bd682e114ebec2c3d0096f779fde2b31ab";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/iron/etsi_its_cam_coding/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "7dcd0f8d56153af7fd3e8a9b5e82a020017cd1528fac1355a0b6d501e0b9e1c2";
   };
 
   buildType = "ament_cmake";
