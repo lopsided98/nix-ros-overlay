@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-rmf-dispenser-msgs";
-  version = "3.2.1-r3";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/jazzy/rmf_dispenser_msgs/3.2.1-3.tar.gz";
-    name = "3.2.1-3.tar.gz";
-    sha256 = "e30a699200a8dc027e32fe87bd833886452700d433f99737727ca45344c6492e";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/jazzy/rmf_dispenser_msgs/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "86784aa6a92d09700adfbc4e4f68a2744d0c880c17d7e579c763153eb4f3ef7d";
   };
 
   buildType = "ament_cmake";

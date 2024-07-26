@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-test-assets, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-rolling-diff-drive-controller";
-  version = "4.8.0-r1";
+  version = "4.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/diff_drive_controller/4.8.0-1.tar.gz";
-    name = "4.8.0-1.tar.gz";
-    sha256 = "00e33bceacf01f2b2b36fa6392791551bf921235c389d29bf558a9005f131d73";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/diff_drive_controller/4.12.0-1.tar.gz";
+    name = "4.12.0-1.tar.gz";
+    sha256 = "af67f3212d102a68b207723b377b2ec965cf2cf12e9b2c0d80418c3e02b4c3ac";
   };
 
   buildType = "ament_cmake";

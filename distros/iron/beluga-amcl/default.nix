@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, beluga, beluga-ros, bondcpp, message-filters, rclcpp, rclcpp-components, rclcpp-lifecycle, std-srvs }:
 buildRosPackage {
   pname = "ros-iron-beluga-amcl";
-  version = "2.0.0-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/beluga-release/archive/release/iron/beluga_amcl/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "93442a9b75cb7961d35c24017ff8c1355832a7f9be783d9435e5d519d4785551";
+    url = "https://github.com/ros2-gbp/beluga-release/archive/release/iron/beluga_amcl/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "5ca860eba2f88a1e62388288762c220f72184e875b9611f78bb3a38d464b9788";
   };
 
   buildType = "ament_cmake";

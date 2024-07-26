@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ffmpeg, geometry-msgs, libopus, libusb1, nav-msgs, nlohmann_json, psdk-interfaces, rclcpp, rclcpp-lifecycle, sensor-msgs, std-msgs, std-srvs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-psdk-wrapper";
-  version = "1.2.0-r4";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/psdk_ros2-release/archive/release/humble/psdk_wrapper/1.2.0-4.tar.gz";
-    name = "1.2.0-4.tar.gz";
-    sha256 = "59ddcc1169cc23db6b5181653fbb7d2ef79bc725cfdca40d1574cf4b0cd58870";
+    url = "https://github.com/ros2-gbp/psdk_ros2-release/archive/release/humble/psdk_wrapper/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "dc15650c50ac6ec8a56985ed0fa5946708caaae577112840e48c6628456136ee";
   };
 
   buildType = "ament_cmake";

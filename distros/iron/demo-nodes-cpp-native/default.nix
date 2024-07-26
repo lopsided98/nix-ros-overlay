@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-components, rmw-fastrtps-cpp, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-demo-nodes-cpp-native";
-  version = "0.27.1-r1";
+  version = "0.27.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/demo_nodes_cpp_native/0.27.1-1.tar.gz";
-    name = "0.27.1-1.tar.gz";
-    sha256 = "91308cd9c57e14002f83588fbc6ff5c7abe96880c3af5f6d1d1cf02f560d97ca";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/demo_nodes_cpp_native/0.27.2-1.tar.gz";
+    name = "0.27.2-1.tar.gz";
+    sha256 = "2f86e07a05e24d2230b562eb6b0fdca35ec91deb5852bed397c88de397b7f978";
   };
 
   buildType = "ament_cmake";

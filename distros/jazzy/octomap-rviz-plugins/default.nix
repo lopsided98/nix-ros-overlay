@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, octomap, octomap-msgs, qt5, rclcpp, rviz-common, rviz-default-plugins, rviz-rendering }:
 buildRosPackage {
   pname = "ros-jazzy-octomap-rviz-plugins";
-  version = "2.0.0-r5";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap_rviz_plugins-release/archive/release/jazzy/octomap_rviz_plugins/2.0.0-5.tar.gz";
-    name = "2.0.0-5.tar.gz";
-    sha256 = "d530590f2e730d4476dcc33cd963d551879a86335463f094e471c0c257657924";
+    url = "https://github.com/ros2-gbp/octomap_rviz_plugins-release/archive/release/jazzy/octomap_rviz_plugins/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "50086857dda7911e3dfe93b860c3ede0568277dadad38f2a01c4f24cfb12d9ca";
   };
 
   buildType = "ament_cmake";

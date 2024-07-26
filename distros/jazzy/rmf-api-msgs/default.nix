@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nlohmann_json, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-rmf-api-msgs";
-  version = "0.2.1-r3";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_api_msgs-release/archive/release/jazzy/rmf_api_msgs/0.2.1-3.tar.gz";
-    name = "0.2.1-3.tar.gz";
-    sha256 = "9da535ed5b07b1e29daab4c6873071b52a0fd52f55643dc76cb7cfa801004483";
+    url = "https://github.com/ros2-gbp/rmf_api_msgs-release/archive/release/jazzy/rmf_api_msgs/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "a647475b71d123b662f718dbd2c73ec47d54feb7b57526aa4fa3907cac019630";
   };
 
   buildType = "ament_cmake";

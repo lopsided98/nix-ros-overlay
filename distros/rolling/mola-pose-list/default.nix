@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt2 }:
 buildRosPackage {
   pname = "ros-rolling-mola-pose-list";
-  version = "1.0.4-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_pose_list/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "7bb750d3e7d035e454058dac26f019e925dc0f2467924aacc5d075dee2d98ddd";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_pose_list/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "041f276195d952fd548c7c322c84f3a9ff47781b363a119677009c8eb754b3b0";
   };
 
   buildType = "cmake";

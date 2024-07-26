@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, ros-gz-sim }:
 buildRosPackage {
   pname = "ros-iron-ros-ign-gazebo";
-  version = "0.254.1-r1";
+  version = "0.254.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/iron/ros_ign_gazebo/0.254.1-1.tar.gz";
-    name = "0.254.1-1.tar.gz";
-    sha256 = "b6507e24611302199087c445aeba78a39d345d00666c275cdd011b4be1d9d4e1";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/iron/ros_ign_gazebo/0.254.2-1.tar.gz";
+    name = "0.254.2-1.tar.gz";
+    sha256 = "22194be3779e67815ac7e8736075fbefeec036c061917d66482195bf67d23546";
   };
 
   buildType = "ament_cmake";

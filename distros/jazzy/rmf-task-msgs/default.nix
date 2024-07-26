@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rmf-dispenser-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-rmf-task-msgs";
-  version = "3.2.1-r3";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/jazzy/rmf_task_msgs/3.2.1-3.tar.gz";
-    name = "3.2.1-3.tar.gz";
-    sha256 = "56d374f2dcc2391131f0fd2f311d3bddbb9766866c8494d2eb4280859f713283";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/jazzy/rmf_task_msgs/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "a09f5bbe6506514d893c389291cd29a581cfceb1616b89a4b373dce0e94c8f97";
   };
 
   buildType = "ament_cmake";

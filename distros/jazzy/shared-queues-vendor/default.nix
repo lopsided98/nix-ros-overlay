@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-shared-queues-vendor";
-  version = "0.26.3-r1";
+  version = "0.26.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/shared_queues_vendor/0.26.3-1.tar.gz";
-    name = "0.26.3-1.tar.gz";
-    sha256 = "420075a4dd887049e6a698f8837e7a5614e6f5769e6334703fdf0b3cffc6d619";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/shared_queues_vendor/0.26.4-1.tar.gz";
+    name = "0.26.4-1.tar.gz";
+    sha256 = "be49551d32fe18cf0693dc0cf28e76068537e8933cfb5e2d56bce209ea71fd80";
   };
 
   buildType = "ament_cmake";

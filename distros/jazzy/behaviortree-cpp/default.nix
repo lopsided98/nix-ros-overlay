@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, cppzmq, rclcpp, ros-environment, sqlite }:
 buildRosPackage {
   pname = "ros-jazzy-behaviortree-cpp";
-  version = "4.6.1-r1";
+  version = "4.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/jazzy/behaviortree_cpp/4.6.1-1.tar.gz";
-    name = "4.6.1-1.tar.gz";
-    sha256 = "a297ba84e9b11a3e34c4f81215012107ead732f2b8c43cd99c38374934b1cf08";
+    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/jazzy/behaviortree_cpp/4.6.2-1.tar.gz";
+    name = "4.6.2-1.tar.gz";
+    sha256 = "5b267869a56ef5b41ff62efc9ea3bafe2be50fef6f7f429d8d0955ee816d54a1";
   };
 
   buildType = "ament_cmake";

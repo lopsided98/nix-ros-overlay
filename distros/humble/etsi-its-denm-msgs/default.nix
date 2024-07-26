@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-denm-msgs";
-  version = "2.0.1-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/humble/etsi_its_denm_msgs/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "dbd8114e56ad21e9d481198b7e1cefe8256fe21a33d4fe1972ca790f03b4c568";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_denm_msgs/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "87c0dd5c5e4968d0ed46695ab5c557a1fe7bf8d8b5f777fc47ac4bf1b07b1284";
   };
 
   buildType = "ament_cmake";

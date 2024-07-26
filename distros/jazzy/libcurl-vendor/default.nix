@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, curl, file, pkg-config }:
 buildRosPackage {
   pname = "ros-jazzy-libcurl-vendor";
-  version = "3.4.2-r2";
+  version = "3.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/jazzy/libcurl_vendor/3.4.2-2.tar.gz";
-    name = "3.4.2-2.tar.gz";
-    sha256 = "386e0f119b93ac83b9e2255ae5443de102664ebea83ff9ba3b303a321e35c860";
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/jazzy/libcurl_vendor/3.4.3-1.tar.gz";
+    name = "3.4.3-1.tar.gz";
+    sha256 = "45541f14c0f47e3d463162e99b41d3ebb693d5c9cad02bb6f7e62d0b9bf0fbc1";
   };
 
   buildType = "ament_cmake";

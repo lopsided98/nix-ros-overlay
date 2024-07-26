@@ -194,13 +194,39 @@ self: super: {
 
  autoware-cmake = self.callPackage ./autoware-cmake {};
 
+ autoware-common-msgs = self.callPackage ./autoware-common-msgs {};
+
+ autoware-control-msgs = self.callPackage ./autoware-control-msgs {};
+
+ autoware-internal-msgs = self.callPackage ./autoware-internal-msgs {};
+
+ autoware-lanelet2-extension = self.callPackage ./autoware-lanelet2-extension {};
+
+ autoware-lanelet2-extension-python = self.callPackage ./autoware-lanelet2-extension-python {};
+
  autoware-lint-common = self.callPackage ./autoware-lint-common {};
 
+ autoware-localization-msgs = self.callPackage ./autoware-localization-msgs {};
+
+ autoware-map-msgs = self.callPackage ./autoware-map-msgs {};
+
+ autoware-perception-msgs = self.callPackage ./autoware-perception-msgs {};
+
+ autoware-planning-msgs = self.callPackage ./autoware-planning-msgs {};
+
+ autoware-sensing-msgs = self.callPackage ./autoware-sensing-msgs {};
+
+ autoware-system-msgs = self.callPackage ./autoware-system-msgs {};
+
  autoware-utils = self.callPackage ./autoware-utils {};
+
+ autoware-vehicle-msgs = self.callPackage ./autoware-vehicle-msgs {};
 
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
 
  aws-sdk-cpp-vendor = self.callPackage ./aws-sdk-cpp-vendor {};
+
+ azure-iot-sdk-c = self.callPackage ./azure-iot-sdk-c {};
 
  backward-ros = self.callPackage ./backward-ros {};
 
@@ -226,9 +252,15 @@ self: super: {
 
  bondcpp = self.callPackage ./bondcpp {};
 
+ bondpy = self.callPackage ./bondpy {};
+
  boost-geometry-util = self.callPackage ./boost-geometry-util {};
 
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
+
+ camera-aravis2 = self.callPackage ./camera-aravis2 {};
+
+ camera-aravis2-msgs = self.callPackage ./camera-aravis2-msgs {};
 
  camera-calibration = self.callPackage ./camera-calibration {};
 
@@ -310,6 +342,8 @@ self: super: {
 
  controller-manager-msgs = self.callPackage ./controller-manager-msgs {};
 
+ costmap-queue = self.callPackage ./costmap-queue {};
+
  cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
@@ -333,6 +367,8 @@ self: super: {
  demo-nodes-py = self.callPackage ./demo-nodes-py {};
 
  depth-image-proc = self.callPackage ./depth-image-proc {};
+
+ depthai = self.callPackage ./depthai {};
 
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
 
@@ -371,6 +407,14 @@ self: super: {
  dummy-robot-bringup = self.callPackage ./dummy-robot-bringup {};
 
  dummy-sensors = self.callPackage ./dummy-sensors {};
+
+ dwb-core = self.callPackage ./dwb-core {};
+
+ dwb-critics = self.callPackage ./dwb-critics {};
+
+ dwb-msgs = self.callPackage ./dwb-msgs {};
+
+ dwb-plugins = self.callPackage ./dwb-plugins {};
 
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
@@ -468,6 +512,38 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ etsi-its-cam-coding = self.callPackage ./etsi-its-cam-coding {};
+
+ etsi-its-cam-conversion = self.callPackage ./etsi-its-cam-conversion {};
+
+ etsi-its-cam-msgs = self.callPackage ./etsi-its-cam-msgs {};
+
+ etsi-its-coding = self.callPackage ./etsi-its-coding {};
+
+ etsi-its-conversion = self.callPackage ./etsi-its-conversion {};
+
+ etsi-its-cpm-ts-coding = self.callPackage ./etsi-its-cpm-ts-coding {};
+
+ etsi-its-cpm-ts-conversion = self.callPackage ./etsi-its-cpm-ts-conversion {};
+
+ etsi-its-cpm-ts-msgs = self.callPackage ./etsi-its-cpm-ts-msgs {};
+
+ etsi-its-denm-coding = self.callPackage ./etsi-its-denm-coding {};
+
+ etsi-its-denm-conversion = self.callPackage ./etsi-its-denm-conversion {};
+
+ etsi-its-denm-msgs = self.callPackage ./etsi-its-denm-msgs {};
+
+ etsi-its-messages = self.callPackage ./etsi-its-messages {};
+
+ etsi-its-msgs = self.callPackage ./etsi-its-msgs {};
+
+ etsi-its-msgs-utils = self.callPackage ./etsi-its-msgs-utils {};
+
+ etsi-its-primitives-conversion = self.callPackage ./etsi-its-primitives-conversion {};
+
+ etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
+
  event-camera-codecs = self.callPackage ./event-camera-codecs {};
 
  event-camera-msgs = self.callPackage ./event-camera-msgs {};
@@ -542,6 +618,26 @@ self: super: {
 
  find-object-2d = self.callPackage ./find-object-2d {};
 
+ flex-sync = self.callPackage ./flex-sync {};
+
+ flexbe-behavior-engine = self.callPackage ./flexbe-behavior-engine {};
+
+ flexbe-core = self.callPackage ./flexbe-core {};
+
+ flexbe-input = self.callPackage ./flexbe-input {};
+
+ flexbe-mirror = self.callPackage ./flexbe-mirror {};
+
+ flexbe-msgs = self.callPackage ./flexbe-msgs {};
+
+ flexbe-onboard = self.callPackage ./flexbe-onboard {};
+
+ flexbe-states = self.callPackage ./flexbe-states {};
+
+ flexbe-testing = self.callPackage ./flexbe-testing {};
+
+ flexbe-widget = self.callPackage ./flexbe-widget {};
+
  flir-camera-description = self.callPackage ./flir-camera-description {};
 
  flir-camera-msgs = self.callPackage ./flir-camera-msgs {};
@@ -596,6 +692,8 @@ self: super: {
 
  game-controller-spl-interfaces = self.callPackage ./game-controller-spl-interfaces {};
 
+ gazebo-msgs = self.callPackage ./gazebo-msgs {};
+
  gc-spl = self.callPackage ./gc-spl {};
 
  gc-spl-2022 = self.callPackage ./gc-spl-2022 {};
@@ -641,6 +739,36 @@ self: super: {
  grbl-msgs = self.callPackage ./grbl-msgs {};
 
  grbl-ros = self.callPackage ./grbl-ros {};
+
+ grid-map = self.callPackage ./grid-map {};
+
+ grid-map-cmake-helpers = self.callPackage ./grid-map-cmake-helpers {};
+
+ grid-map-core = self.callPackage ./grid-map-core {};
+
+ grid-map-costmap-2d = self.callPackage ./grid-map-costmap-2d {};
+
+ grid-map-cv = self.callPackage ./grid-map-cv {};
+
+ grid-map-demos = self.callPackage ./grid-map-demos {};
+
+ grid-map-filters = self.callPackage ./grid-map-filters {};
+
+ grid-map-loader = self.callPackage ./grid-map-loader {};
+
+ grid-map-msgs = self.callPackage ./grid-map-msgs {};
+
+ grid-map-octomap = self.callPackage ./grid-map-octomap {};
+
+ grid-map-pcl = self.callPackage ./grid-map-pcl {};
+
+ grid-map-ros = self.callPackage ./grid-map-ros {};
+
+ grid-map-rviz-plugin = self.callPackage ./grid-map-rviz-plugin {};
+
+ grid-map-sdf = self.callPackage ./grid-map-sdf {};
+
+ grid-map-visualization = self.callPackage ./grid-map-visualization {};
 
  gripper-controllers = self.callPackage ./gripper-controllers {};
 
@@ -896,6 +1024,8 @@ self: super: {
 
  libpointmatcher = self.callPackage ./libpointmatcher {};
 
+ librealsense2 = self.callPackage ./librealsense2 {};
+
  libstatistics-collector = self.callPackage ./libstatistics-collector {};
 
  libyaml-vendor = self.callPackage ./libyaml-vendor {};
@@ -911,6 +1041,8 @@ self: super: {
  logging-demo = self.callPackage ./logging-demo {};
 
  lttngpy = self.callPackage ./lttngpy {};
+
+ lusb = self.callPackage ./lusb {};
 
  magic-enum = self.callPackage ./magic-enum {};
 
@@ -1012,6 +1144,8 @@ self: super: {
 
  mola-metric-maps = self.callPackage ./mola-metric-maps {};
 
+ mola-navstate-fg = self.callPackage ./mola-navstate-fg {};
+
  mola-navstate-fuse = self.callPackage ./mola-navstate-fuse {};
 
  mola-pose-list = self.callPackage ./mola-pose-list {};
@@ -1096,6 +1230,8 @@ self: super: {
 
  moveit-ros-robot-interaction = self.callPackage ./moveit-ros-robot-interaction {};
 
+ moveit-ros-tests = self.callPackage ./moveit-ros-tests {};
+
  moveit-ros-visualization = self.callPackage ./moveit-ros-visualization {};
 
  moveit-ros-warehouse = self.callPackage ./moveit-ros-warehouse {};
@@ -1130,17 +1266,39 @@ self: super: {
 
  mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
 
+ mrpt-map-server = self.callPackage ./mrpt-map-server {};
+
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
+
+ mrpt-msgs-bridge = self.callPackage ./mrpt-msgs-bridge {};
+
+ mrpt-nav-interfaces = self.callPackage ./mrpt-nav-interfaces {};
+
+ mrpt-navigation = self.callPackage ./mrpt-navigation {};
 
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
+ mrpt-pf-localization = self.callPackage ./mrpt-pf-localization {};
+
+ mrpt-pointcloud-pipeline = self.callPackage ./mrpt-pointcloud-pipeline {};
+
+ mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
+
+ mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
+
  mrpt-sensor-bumblebee-stereo = self.callPackage ./mrpt-sensor-bumblebee-stereo {};
 
- mrpt-sensor-gnns-nmea = self.callPackage ./mrpt-sensor-gnns-nmea {};
+ mrpt-sensor-gnss-nmea = self.callPackage ./mrpt-sensor-gnss-nmea {};
+
+ mrpt-sensor-gnss-novatel = self.callPackage ./mrpt-sensor-gnss-novatel {};
+
+ mrpt-sensor-imu-taobotics = self.callPackage ./mrpt-sensor-imu-taobotics {};
 
  mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
 
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
+
+ mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
@@ -1162,11 +1320,89 @@ self: super: {
 
  nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
 
+ nav2-amcl = self.callPackage ./nav2-amcl {};
+
+ nav2-behavior-tree = self.callPackage ./nav2-behavior-tree {};
+
+ nav2-behaviors = self.callPackage ./nav2-behaviors {};
+
+ nav2-bringup = self.callPackage ./nav2-bringup {};
+
+ nav2-bt-navigator = self.callPackage ./nav2-bt-navigator {};
+
+ nav2-collision-monitor = self.callPackage ./nav2-collision-monitor {};
+
+ nav2-common = self.callPackage ./nav2-common {};
+
+ nav2-constrained-smoother = self.callPackage ./nav2-constrained-smoother {};
+
+ nav2-controller = self.callPackage ./nav2-controller {};
+
+ nav2-core = self.callPackage ./nav2-core {};
+
+ nav2-costmap-2d = self.callPackage ./nav2-costmap-2d {};
+
+ nav2-dwb-controller = self.callPackage ./nav2-dwb-controller {};
+
+ nav2-graceful-controller = self.callPackage ./nav2-graceful-controller {};
+
+ nav2-lifecycle-manager = self.callPackage ./nav2-lifecycle-manager {};
+
+ nav2-map-server = self.callPackage ./nav2-map-server {};
+
+ nav2-minimal-tb3-sim = self.callPackage ./nav2-minimal-tb3-sim {};
+
+ nav2-minimal-tb4-description = self.callPackage ./nav2-minimal-tb4-description {};
+
+ nav2-minimal-tb4-sim = self.callPackage ./nav2-minimal-tb4-sim {};
+
+ nav2-mppi-controller = self.callPackage ./nav2-mppi-controller {};
+
+ nav2-msgs = self.callPackage ./nav2-msgs {};
+
+ nav2-navfn-planner = self.callPackage ./nav2-navfn-planner {};
+
+ nav2-planner = self.callPackage ./nav2-planner {};
+
+ nav2-regulated-pure-pursuit-controller = self.callPackage ./nav2-regulated-pure-pursuit-controller {};
+
+ nav2-rotation-shim-controller = self.callPackage ./nav2-rotation-shim-controller {};
+
+ nav2-rviz-plugins = self.callPackage ./nav2-rviz-plugins {};
+
+ nav2-simple-commander = self.callPackage ./nav2-simple-commander {};
+
+ nav2-smac-planner = self.callPackage ./nav2-smac-planner {};
+
+ nav2-smoother = self.callPackage ./nav2-smoother {};
+
+ nav2-system-tests = self.callPackage ./nav2-system-tests {};
+
+ nav2-theta-star-planner = self.callPackage ./nav2-theta-star-planner {};
+
+ nav2-util = self.callPackage ./nav2-util {};
+
+ nav2-velocity-smoother = self.callPackage ./nav2-velocity-smoother {};
+
+ nav2-voxel-grid = self.callPackage ./nav2-voxel-grid {};
+
+ nav2-waypoint-follower = self.callPackage ./nav2-waypoint-follower {};
+
+ nav-2d-msgs = self.callPackage ./nav-2d-msgs {};
+
+ nav-2d-utils = self.callPackage ./nav-2d-utils {};
+
  nav-msgs = self.callPackage ./nav-msgs {};
+
+ navigation2 = self.callPackage ./navigation2 {};
 
  neo-simulation2 = self.callPackage ./neo-simulation2 {};
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
+
+ network-bridge = self.callPackage ./network-bridge {};
+
+ nicla-vision-ros2 = self.callPackage ./nicla-vision-ros2 {};
 
  nlohmann-json-schema-validator-vendor = self.callPackage ./nlohmann-json-schema-validator-vendor {};
 
@@ -1212,7 +1448,17 @@ self: super: {
 
  ompl = self.callPackage ./ompl {};
 
+ openeb-vendor = self.callPackage ./openeb-vendor {};
+
+ opennav-docking = self.callPackage ./opennav-docking {};
+
+ opennav-docking-bt = self.callPackage ./opennav-docking-bt {};
+
+ opennav-docking-core = self.callPackage ./opennav-docking-core {};
+
  openni2-camera = self.callPackage ./openni2-camera {};
+
+ openvdb-vendor = self.callPackage ./openvdb-vendor {};
 
  orocos-kdl-vendor = self.callPackage ./orocos-kdl-vendor {};
 
@@ -1223,8 +1469,6 @@ self: super: {
  osrf-pycommon = self.callPackage ./osrf-pycommon {};
 
  osrf-testing-tools-cpp = self.callPackage ./osrf-testing-tools-cpp {};
-
- ouster-msgs = self.callPackage ./ouster-msgs {};
 
  ouster-ros = self.callPackage ./ouster-ros {};
 
@@ -1239,6 +1483,8 @@ self: super: {
  pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
 
  pangolin = self.callPackage ./pangolin {};
+
+ parallel-gripper-controller = self.callPackage ./parallel-gripper-controller {};
 
  parameter-traits = self.callPackage ./parameter-traits {};
 
@@ -1341,6 +1587,8 @@ self: super: {
  position-controllers = self.callPackage ./position-controllers {};
 
  proxsuite = self.callPackage ./proxsuite {};
+
+ py-binding-tools = self.callPackage ./py-binding-tools {};
 
  py-trees = self.callPackage ./py-trees {};
 
@@ -1464,6 +1712,12 @@ self: super: {
 
  rcutils = self.callPackage ./rcutils {};
 
+ realsense2-camera = self.callPackage ./realsense2-camera {};
+
+ realsense2-camera-msgs = self.callPackage ./realsense2-camera-msgs {};
+
+ realsense2-description = self.callPackage ./realsense2-description {};
+
  realtime-tools = self.callPackage ./realtime-tools {};
 
  resource-retriever = self.callPackage ./resource-retriever {};
@@ -1476,11 +1730,15 @@ self: super: {
 
  rmf-building-map-msgs = self.callPackage ./rmf-building-map-msgs {};
 
+ rmf-building-map-tools = self.callPackage ./rmf-building-map-tools {};
+
+ rmf-building-sim-gz-plugins = self.callPackage ./rmf-building-sim-gz-plugins {};
+
  rmf-charger-msgs = self.callPackage ./rmf-charger-msgs {};
 
  rmf-charging-schedule = self.callPackage ./rmf-charging-schedule {};
 
- rmf-cmake-uncrustify = self.callPackage ./rmf-cmake-uncrustify {};
+ rmf-dev = self.callPackage ./rmf-dev {};
 
  rmf-dispenser-msgs = self.callPackage ./rmf-dispenser-msgs {};
 
@@ -1498,6 +1756,10 @@ self: super: {
 
  rmf-obstacle-msgs = self.callPackage ./rmf-obstacle-msgs {};
 
+ rmf-robot-sim-common = self.callPackage ./rmf-robot-sim-common {};
+
+ rmf-robot-sim-gz-plugins = self.callPackage ./rmf-robot-sim-gz-plugins {};
+
  rmf-scheduler-msgs = self.callPackage ./rmf-scheduler-msgs {};
 
  rmf-site-map-msgs = self.callPackage ./rmf-site-map-msgs {};
@@ -1511,6 +1773,12 @@ self: super: {
  rmf-task-sequence = self.callPackage ./rmf-task-sequence {};
 
  rmf-traffic = self.callPackage ./rmf-traffic {};
+
+ rmf-traffic-editor = self.callPackage ./rmf-traffic-editor {};
+
+ rmf-traffic-editor-assets = self.callPackage ./rmf-traffic-editor-assets {};
+
+ rmf-traffic-editor-test-maps = self.callPackage ./rmf-traffic-editor-test-maps {};
 
  rmf-traffic-examples = self.callPackage ./rmf-traffic-examples {};
 
@@ -1581,8 +1849,6 @@ self: super: {
  ros2-controllers = self.callPackage ./ros2-controllers {};
 
  ros2-controllers-test-nodes = self.callPackage ./ros2-controllers-test-nodes {};
-
- ros2-ouster = self.callPackage ./ros2-ouster {};
 
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
 
@@ -1770,6 +2036,8 @@ self: super: {
 
  rosidl-typesupport-introspection-cpp = self.callPackage ./rosidl-typesupport-introspection-cpp {};
 
+ rosx-introspection = self.callPackage ./rosx-introspection {};
+
  rot-conv = self.callPackage ./rot-conv {};
 
  rplidar-ros = self.callPackage ./rplidar-ros {};
@@ -1846,6 +2114,34 @@ self: super: {
 
  rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
 
+ rtabmap = self.callPackage ./rtabmap {};
+
+ rtabmap-conversions = self.callPackage ./rtabmap-conversions {};
+
+ rtabmap-demos = self.callPackage ./rtabmap-demos {};
+
+ rtabmap-examples = self.callPackage ./rtabmap-examples {};
+
+ rtabmap-launch = self.callPackage ./rtabmap-launch {};
+
+ rtabmap-msgs = self.callPackage ./rtabmap-msgs {};
+
+ rtabmap-odom = self.callPackage ./rtabmap-odom {};
+
+ rtabmap-python = self.callPackage ./rtabmap-python {};
+
+ rtabmap-ros = self.callPackage ./rtabmap-ros {};
+
+ rtabmap-rviz-plugins = self.callPackage ./rtabmap-rviz-plugins {};
+
+ rtabmap-slam = self.callPackage ./rtabmap-slam {};
+
+ rtabmap-sync = self.callPackage ./rtabmap-sync {};
+
+ rtabmap-util = self.callPackage ./rtabmap-util {};
+
+ rtabmap-viz = self.callPackage ./rtabmap-viz {};
+
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
 
  rti-connext-dds-cmake-module = self.callPackage ./rti-connext-dds-cmake-module {};
@@ -1873,6 +2169,8 @@ self: super: {
  rviz-rendering = self.callPackage ./rviz-rendering {};
 
  rviz-rendering-tests = self.callPackage ./rviz-rendering-tests {};
+
+ rviz-satellite = self.callPackage ./rviz-satellite {};
 
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 
@@ -1910,11 +2208,15 @@ self: super: {
 
  sick-safevisionary-tests = self.callPackage ./sick-safevisionary-tests {};
 
+ sick-scan-xd = self.callPackage ./sick-scan-xd {};
+
  simple-actions = self.callPackage ./simple-actions {};
 
  simple-launch = self.callPackage ./simple-launch {};
 
  simulation = self.callPackage ./simulation {};
+
+ slam-toolbox = self.callPackage ./slam-toolbox {};
 
  slider-publisher = self.callPackage ./slider-publisher {};
 
@@ -1948,6 +2250,8 @@ self: super: {
 
  spacenav = self.callPackage ./spacenav {};
 
+ spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
+
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
 
  spinnaker-camera-driver = self.callPackage ./spinnaker-camera-driver {};
@@ -1973,6 +2277,8 @@ self: super: {
  std-srvs = self.callPackage ./std-srvs {};
 
  steering-controllers-library = self.callPackage ./steering-controllers-library {};
+
+ steering-functions = self.callPackage ./steering-functions {};
 
  stereo-image-proc = self.callPackage ./stereo-image-proc {};
 
@@ -2031,8 +2337,6 @@ self: super: {
  tensorrt-cmake-module = self.callPackage ./tensorrt-cmake-module {};
 
  test-apex-test-tools = self.callPackage ./test-apex-test-tools {};
-
- test-bond = self.callPackage ./test-bond {};
 
  test-interface-files = self.callPackage ./test-interface-files {};
 

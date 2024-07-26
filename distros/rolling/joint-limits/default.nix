@@ -2,25 +2,25 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, launch-ros, launch-testing-ament-cmake, rclcpp, rclcpp-lifecycle, urdf }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, ament-cmake-gtest, backward-ros, generate-parameter-library, launch-ros, launch-testing-ament-cmake, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-rolling-joint-limits";
-  version = "4.11.0-r1";
+  version = "4.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/joint_limits/4.11.0-1.tar.gz";
-    name = "4.11.0-1.tar.gz";
-    sha256 = "3cb2dcdbf20e729f720413d90503de65b04e2d8a673008734707f5b7a115174c";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/joint_limits/4.14.0-1.tar.gz";
+    name = "4.14.0-1.tar.gz";
+    sha256 = "36a4afa157bc7fcb895b28ecead2e900c2b56665dfbd7b8aef57e05df2a876fc";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest launch-ros launch-testing-ament-cmake ];
-  propagatedBuildInputs = [ rclcpp rclcpp-lifecycle urdf ];
-  nativeBuildInputs = [ ament-cmake ];
+  buildInputs = [ ament-cmake ament-cmake-gen-version-h ];
+  checkInputs = [ ament-cmake-gmock ament-cmake-gtest generate-parameter-library launch-ros launch-testing-ament-cmake ];
+  propagatedBuildInputs = [ backward-ros pluginlib rclcpp rclcpp-lifecycle realtime-tools trajectory-msgs urdf ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-gen-version-h ];
 
   meta = {
-    description = "Interfaces for handling of joint limits for controllers or hardware.";
+    description = "Package with interfaces for handling of joint limits in controllers or in hardware. The package also implements Saturation Joint Limiter for position-velocity-acceleration set and other individual interfaces.";
     license = with lib.licenses; [ asl20 ];
   };
 }

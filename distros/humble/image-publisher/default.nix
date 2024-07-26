@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, camera-info-manager, cv-bridge, image-transport, rcl-interfaces, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-humble-image-publisher";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/image_publisher/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "9248620366b319100e84aedfca91f4961eaee808ac6fe72c58c6477f03a40485";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/image_publisher/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "744f5a11b9e0bf32146e7b737c07695208e8f3b41b739335dd9ff9670965b64d";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-pytest, ament-lint-auto, ament-lint-common, cv-bridge, image-geometry, image-proc, image-transport, launch, launch-ros, launch-testing, launch-testing-ament-cmake, message-filters, python-cmake-module, python3Packages, rclcpp, rclcpp-components, rclpy, ros-testing, sensor-msgs, stereo-msgs }:
 buildRosPackage {
   pname = "ros-rolling-stereo-image-proc";
-  version = "5.0.1-r1";
+  version = "6.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/stereo_image_proc/5.0.1-1.tar.gz";
-    name = "5.0.1-1.tar.gz";
-    sha256 = "0f77a222d655538746a921cd98e9111da6baf8779c2094706cce19dd80df7940";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/stereo_image_proc/6.0.2-1.tar.gz";
+    name = "6.0.2-1.tar.gz";
+    sha256 = "7ddb96783dd28f74b39140a915ce27908defaab9e365ace687eca2e1ff3279e7";
   };
 
   buildType = "ament_cmake";

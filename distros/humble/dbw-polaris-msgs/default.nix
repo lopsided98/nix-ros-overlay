@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-dbw-polaris-msgs";
-  version = "2.1.10-r1";
+  version = "2.1.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dbw_polaris_msgs/2.1.10-1.tar.gz";
-    name = "2.1.10-1.tar.gz";
-    sha256 = "cede355bd0569f48e60fbff7a7484af56dd92f309af842c832f0b495d8a4c778";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/humble/dbw_polaris_msgs/2.1.16-1.tar.gz";
+    name = "2.1.16-1.tar.gz";
+    sha256 = "286c4d3486182230aa436a71802a427692a660056a525583f43b0ec08c0627ce";
   };
 
   buildType = "ament_cmake";

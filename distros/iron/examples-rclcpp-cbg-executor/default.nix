@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-examples-rclcpp-cbg-executor";
-  version = "0.18.0-r2";
+  version = "0.18.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/iron/examples_rclcpp_cbg_executor/0.18.0-2.tar.gz";
-    name = "0.18.0-2.tar.gz";
-    sha256 = "a27326573874a744b58139fbe2a02642edc0338bc2a9e10515b7a36f743d0a0d";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/iron/examples_rclcpp_cbg_executor/0.18.1-1.tar.gz";
+    name = "0.18.1-1.tar.gz";
+    sha256 = "ef5991a7c56f5053416e9d9f553572ad735ee037ea8cd943b1c1fe378c5869af";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-irobot-create-msgs";
-  version = "2.1.0-r4";
+  version = "3.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/irobot_create_msgs-release/archive/release/jazzy/irobot_create_msgs/2.1.0-4.tar.gz";
-    name = "2.1.0-4.tar.gz";
-    sha256 = "45b53ac01fe2fd115c9bc1875b79b17d963590bc9596b71ff4382f6f28e18916";
+    url = "https://github.com/ros2-gbp/irobot_create_msgs-release/archive/release/jazzy/irobot_create_msgs/3.0.0-2.tar.gz";
+    name = "3.0.0-2.tar.gz";
+    sha256 = "2f6927bda222e7430c179dcea1f95fda045305ca7d9f5bb502b411bccaa05d6c";
   };
 
   buildType = "ament_cmake";

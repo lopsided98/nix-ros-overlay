@@ -2,20 +2,19 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, control-msgs, moveit-common, moveit-core, pluginlib, rclcpp, rclcpp-action }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, control-msgs, moveit-common, moveit-core, pluginlib, rclcpp, rclcpp-action }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-simple-controller-manager";
-  version = "2.9.0-r1";
+  version = "2.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_simple_controller_manager/2.9.0-1.tar.gz";
-    name = "2.9.0-1.tar.gz";
-    sha256 = "27c70df2ad86badfc1ff499f848fbe25de55f233c32e3e2f75b6dfd29029a4e2";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_simple_controller_manager/2.10.0-1.tar.gz";
+    name = "2.10.0-1.tar.gz";
+    sha256 = "f03637aab4033897625360d799c5b702fe9d4b607c90f23f0843cf4752f82ef4";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ control-msgs moveit-common moveit-core pluginlib rclcpp rclcpp-action ];
   nativeBuildInputs = [ ament-cmake ];
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, gazebo-ros-pkgs, geometry-msgs, launch, launch-ros, launch-testing, lcov, nav-msgs, nav2-amcl, nav2-behavior-tree, nav2-bringup, nav2-common, nav2-lifecycle-manager, nav2-map-server, nav2-msgs, nav2-navfn-planner, nav2-planner, nav2-util, navigation2, python3Packages, rclcpp, rclpy, robot-state-publisher, std-msgs, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-iron-nav2-system-tests";
-  version = "1.2.8-r1";
+  version = "1.2.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_system_tests/1.2.8-1.tar.gz";
-    name = "1.2.8-1.tar.gz";
-    sha256 = "67540405c8ffc36e09696f9b7d43ece2ed594b3be6b213295f2488e00b8c3dc3";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_system_tests/1.2.9-1.tar.gz";
+    name = "1.2.9-1.tar.gz";
+    sha256 = "2223d4ed73057929b763eea17ed1361d8abf99eb4b58ef534459e79ee32c3cfd";
   };
 
   buildType = "ament_cmake";

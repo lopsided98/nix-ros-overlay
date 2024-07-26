@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, lifecycle-msgs, mimick-vendor, performance-test-fixture, rcl, rcl-interfaces, rcl-lifecycle, rclcpp, rcpputils, rcutils, rmw, rosidl-typesupport-cpp, test-msgs }:
 buildRosPackage {
   pname = "ros-iron-rclcpp-lifecycle";
-  version = "21.0.6-r1";
+  version = "21.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/iron/rclcpp_lifecycle/21.0.6-1.tar.gz";
-    name = "21.0.6-1.tar.gz";
-    sha256 = "b4bd6447355d3d997ded92153c01cb13b47089de5ed1a2e9f23721943251410c";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/iron/rclcpp_lifecycle/21.0.7-1.tar.gz";
+    name = "21.0.7-1.tar.gz";
+    sha256 = "04a5e786f73e7c1d12fc4f9d614fe2d7d949b365afecfbb367fc9cfb5b79be25";
   };
 
   buildType = "ament_cmake";

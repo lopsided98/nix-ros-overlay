@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, iceoryx-binding-c, iceoryx-hoofs, iceoryx-posh, openssl }:
 buildRosPackage {
   pname = "ros-jazzy-cyclonedds";
-  version = "0.10.4-r4";
+  version = "0.10.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cyclonedds-release/archive/release/jazzy/cyclonedds/0.10.4-4.tar.gz";
-    name = "0.10.4-4.tar.gz";
-    sha256 = "ccda30d3a2e0a5323998a0ad0dc2074e18bfdc48e7d73612f590d661139aee09";
+    url = "https://github.com/ros2-gbp/cyclonedds-release/archive/release/jazzy/cyclonedds/0.10.5-1.tar.gz";
+    name = "0.10.5-1.tar.gz";
+    sha256 = "e17f2f7fd86396485f91bbe73275048204cf76b1b0aee773cca1fc2d59c8d979";
   };
 
   buildType = "cmake";

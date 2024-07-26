@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, opencv, rclcpp, rclcpp-components, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-image-tools";
-  version = "0.33.3-r1";
+  version = "0.33.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/image_tools/0.33.3-1.tar.gz";
-    name = "0.33.3-1.tar.gz";
-    sha256 = "b28700d490edafd167924b35a5d58ba5615d71ed1d6c112e3a4027be35a8be2a";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/image_tools/0.33.4-1.tar.gz";
+    name = "0.33.4-1.tar.gz";
+    sha256 = "e01bad07733ddac396b37b595f6370ec43cf4e289681fa81ef668a1e784e8108";
   };
 
   buildType = "ament_cmake";

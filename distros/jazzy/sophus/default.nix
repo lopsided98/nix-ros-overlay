@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, eigen }:
+{ lib, buildRosPackage, fetchurl, ceres-solver, cmake, eigen, fmt }:
 buildRosPackage {
   pname = "ros-jazzy-sophus";
-  version = "1.22.9100-r2";
+  version = "1.22.9102-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sophus-release/archive/release/jazzy/sophus/1.22.9100-2.tar.gz";
-    name = "1.22.9100-2.tar.gz";
-    sha256 = "222d9a3a1b143fc523db82a9d8bb70a5f738a30049bfce4b232f28c0bdaa1534";
+    url = "https://github.com/ros2-gbp/sophus-release/archive/release/jazzy/sophus/1.22.9102-2.tar.gz";
+    name = "1.22.9102-2.tar.gz";
+    sha256 = "3bbcab8844f06c727403f0d602be286fc9779048754b37c23a3a936bee074807";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ eigen ];
+  propagatedBuildInputs = [ ceres-solver eigen fmt ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

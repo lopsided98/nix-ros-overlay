@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, diagnostic-msgs, diagnostic-updater, rclcpp, ros-environment }:
 buildRosPackage {
   pname = "ros-iron-self-test";
-  version = "3.1.2-r3";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/iron/self_test/3.1.2-3.tar.gz";
-    name = "3.1.2-3.tar.gz";
-    sha256 = "2c5c544f4b55e95f76f805bea927070708e30bf9628f0f0d30b24b341588d6a0";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/iron/self_test/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "6aefaefb1047eee2deb995f7b2a4e0055c853e408708eb1cc912897a5d154954";
   };
 
   buildType = "ament_cmake";

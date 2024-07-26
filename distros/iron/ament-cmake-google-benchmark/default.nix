@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-export-dependencies, ament-cmake-python, ament-cmake-test, google-benchmark-vendor }:
 buildRosPackage {
   pname = "ros-iron-ament-cmake-google-benchmark";
-  version = "2.0.5-r1";
+  version = "2.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/iron/ament_cmake_google_benchmark/2.0.5-1.tar.gz";
-    name = "2.0.5-1.tar.gz";
-    sha256 = "30b9ebd5e360b976d35eea256506a5eec1532be53e184501aec7b1c6decca097";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/iron/ament_cmake_google_benchmark/2.0.6-1.tar.gz";
+    name = "2.0.6-1.tar.gz";
+    sha256 = "faa647b435e71b7082ffc449f677632890dfc0f95f8ae1d7d07257640ea6ac18";
   };
 
   buildType = "ament_cmake";

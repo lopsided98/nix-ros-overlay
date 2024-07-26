@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, python-qt-binding, pythonPackages, qt-dotgraph, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-rolling-rqt-graph";
-  version = "1.6.0-r1";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/rolling/rqt_graph/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "182d4befa4bf21cc67172b6602cac68c1a145ff64695fec5adb7943473e35b9e";
+    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/rolling/rqt_graph/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "38e6508240c527331107fbd86464f314978a6136da0123c8ef6d0c371b81cc4f";
   };
 
   buildType = "ament_python";

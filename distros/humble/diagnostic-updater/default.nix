@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, diagnostic-msgs, rclcpp, rclcpp-lifecycle, rclpy, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, diagnostic-msgs, launch, launch-testing, launch-testing-ros, pythonPackages, rclcpp, rclcpp-lifecycle, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-diagnostic-updater";
-  version = "3.1.2-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/humble/diagnostic_updater/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "147ceba0e667702cecd3ca0b8cf2c4e0ab275fa207744186ae232e281b6f2cb1";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/humble/diagnostic_updater/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "83dc142088b003033d8267021c5a91849a07b0fbe79f88b1dc5e6b0f2017ed6a";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];
-  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common rclcpp-lifecycle ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing launch-testing-ros pythonPackages.pytest rclcpp-lifecycle ];
   propagatedBuildInputs = [ diagnostic-msgs rclcpp rclpy std-msgs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 

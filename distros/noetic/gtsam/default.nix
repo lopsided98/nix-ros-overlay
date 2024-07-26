@@ -2,7 +2,7 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cmake, eigen, tbb_2021_8 }:
+{ lib, buildRosPackage, fetchurl, boost, cmake, eigen, tbb_2021_11 }:
 buildRosPackage {
   pname = "ros-noetic-gtsam";
   version = "4.2.0-r2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ boost cmake eigen tbb_2021_8 ];
+  buildInputs = [ boost cmake eigen tbb_2021_11 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

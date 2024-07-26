@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-iron-shared-queues-vendor";
-  version = "0.22.6-r1";
+  version = "0.22.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/shared_queues_vendor/0.22.6-1.tar.gz";
-    name = "0.22.6-1.tar.gz";
-    sha256 = "500336a44e108a880cbe2453b6e6d6f361db051827101e1849aa3926e9e8ad40";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/shared_queues_vendor/0.22.7-1.tar.gz";
+    name = "0.22.7-1.tar.gz";
+    sha256 = "32f391da36e18e8dc29130bde6918c0bb6effe04f2bc48e41c9ee552e9c7fcf3";
   };
 
   buildType = "ament_cmake";

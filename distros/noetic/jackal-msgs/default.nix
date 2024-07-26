@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-jackal-msgs";
-  version = "0.8.9-r1";
+  version = "0.8.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/noetic/jackal_msgs/0.8.9-1.tar.gz";
-    name = "0.8.9-1.tar.gz";
-    sha256 = "d77b5d39e26c042ef2f7094a84ea3f533bbe3194aa948297a371a29bc975d534";
+    url = "https://github.com/clearpath-gbp/jackal-release/archive/release/noetic/jackal_msgs/0.8.10-1.tar.gz";
+    name = "0.8.10-1.tar.gz";
+    sha256 = "f2328e94dfd40e94174a5f0cd73e78a2774c0c042f274b2004fc4bb886faecbf";
   };
 
   buildType = "catkin";

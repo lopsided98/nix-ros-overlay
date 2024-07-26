@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, bond, bondcpp, smclib }:
 buildRosPackage {
   pname = "ros-rolling-bond-core";
-  version = "4.0.0-r4";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/rolling/bond_core/4.0.0-4.tar.gz";
-    name = "4.0.0-4.tar.gz";
-    sha256 = "21d76ed8e0a60126262d698ca1a7377fdaf35c75e026db62150beb1d14c1466d";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/rolling/bond_core/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "20a8c4bcde9cfabbf65e13fc7952e325cb9bf476da5e8274c9f75aa75e8e0808";
   };
 
   buildType = "ament_cmake";

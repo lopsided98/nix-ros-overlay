@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, launch, launch-ros, python3Packages, pythonPackages, rclpy, tf2-ros, turtlesim }:
 buildRosPackage {
   pname = "ros-iron-turtle-tf2-py";
-  version = "0.3.6-r4";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/iron/turtle_tf2_py/0.3.6-4.tar.gz";
-    name = "0.3.6-4.tar.gz";
-    sha256 = "d7c18ef9eb48d29b419b3744e33350b9e00b9532ee94192525db84e9702aece3";
+    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/iron/turtle_tf2_py/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "d483fe87783c5b90042ff77248484f8f97f5f0ee950dc8bd641b1299d60a0cef";
   };
 
   buildType = "ament_python";

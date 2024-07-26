@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-iron-dummy-map-server";
-  version = "0.27.1-r1";
+  version = "0.27.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/dummy_map_server/0.27.1-1.tar.gz";
-    name = "0.27.1-1.tar.gz";
-    sha256 = "ce03adb21c5fc8de4ada8fa97cae6ceca57c03ecc594959ce00fbe4a14fecb2c";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/dummy_map_server/0.27.2-1.tar.gz";
+    name = "0.27.2-1.tar.gz";
+    sha256 = "a3ab235c1a5affa1c323901c6f952a67edad464429f07a04ba614e5bb87382f5";
   };
 
   buildType = "ament_cmake";

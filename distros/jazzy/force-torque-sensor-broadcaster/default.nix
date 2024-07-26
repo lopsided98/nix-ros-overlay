@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-jazzy-force-torque-sensor-broadcaster";
-  version = "4.8.0-r1";
+  version = "4.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/force_torque_sensor_broadcaster/4.8.0-1.tar.gz";
-    name = "4.8.0-1.tar.gz";
-    sha256 = "fdbf047c92f3d8d93dfc028f98a88cceaba2b2250c62a57c874d80598fc1caf1";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/force_torque_sensor_broadcaster/4.12.0-1.tar.gz";
+    name = "4.12.0-1.tar.gz";
+    sha256 = "6df54cd4004ab330cf294812e9f5e6e4f4edd6d49c038317630c1e0d329e3bad";
   };
 
   buildType = "ament_cmake";

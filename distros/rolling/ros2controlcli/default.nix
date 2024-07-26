@@ -2,19 +2,18 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, controller-manager, controller-manager-msgs, python3Packages, rcl-interfaces, rclpy, ros2cli, ros2node, ros2param, rosidl-runtime-py }:
+{ lib, buildRosPackage, fetchurl, controller-manager, controller-manager-msgs, python3Packages, rcl-interfaces, rclpy, ros2cli, ros2node, ros2param, rosidl-runtime-py }:
 buildRosPackage {
   pname = "ros-rolling-ros2controlcli";
-  version = "4.11.0-r1";
+  version = "4.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/ros2controlcli/4.11.0-1.tar.gz";
-    name = "4.11.0-1.tar.gz";
-    sha256 = "db230fecbdee21681dfa480ddc15b0609e78ab54e88bebcf4b65b9b0865ede1d";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/ros2controlcli/4.14.0-1.tar.gz";
+    name = "4.14.0-1.tar.gz";
+    sha256 = "01f54e74820b492de9cb662135dc90714d73620cfbeaabedcd295eafc5fecf78";
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint ];
   propagatedBuildInputs = [ controller-manager controller-manager-msgs python3Packages.pygraphviz rcl-interfaces rclpy ros2cli ros2node ros2param rosidl-runtime-py ];
 
   meta = {

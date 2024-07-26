@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, octomap, octomap-msgs, sensor-msgs, tf2 }:
 buildRosPackage {
   pname = "ros-iron-octomap-ros";
-  version = "0.4.3-r3";
+  version = "0.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap_ros-release/archive/release/iron/octomap_ros/0.4.3-3.tar.gz";
-    name = "0.4.3-3.tar.gz";
-    sha256 = "c40e2e4d5de430ba4fb697440ea97b14dd8f7cd0b144ab05c96eee78eae47ff3";
+    url = "https://github.com/ros2-gbp/octomap_ros-release/archive/release/iron/octomap_ros/0.4.4-1.tar.gz";
+    name = "0.4.4-1.tar.gz";
+    sha256 = "3e8f44d883a226668a7d88f320949b6e12465b3ca8962452eb9c044f8fbfa0d0";
   };
 
   buildType = "ament_cmake";

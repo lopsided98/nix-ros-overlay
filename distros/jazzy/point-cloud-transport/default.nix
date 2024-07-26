@@ -2,21 +2,21 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, message-filters, pluginlib, rclcpp, rclcpp-components, rcpputils, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, message-filters, pluginlib, rclcpp, rclcpp-components, rcpputils, rmw, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-point-cloud-transport";
-  version = "4.0.0-r2";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport-release/archive/release/jazzy/point_cloud_transport/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "d878bafb0d34562bd47d53841b3dc28adb7c704ca8d23767c4317da0b80b82e8";
+    url = "https://github.com/ros2-gbp/point_cloud_transport-release/archive/release/jazzy/point_cloud_transport/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "9f7341b334abc32744b9036ce4f1e05efcf7f97dee2b7d9a21dffcdb46c486c2";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ message-filters pluginlib rclcpp rclcpp-components rcpputils sensor-msgs ];
+  propagatedBuildInputs = [ message-filters pluginlib rclcpp rclcpp-components rcpputils rmw sensor-msgs ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

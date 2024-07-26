@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, mrpt-msgs, mrpt-sensorlib, rclcpp, rclcpp-components, ros-environment, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-generic-sensor";
-  version = "0.1.0-r2";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/jazzy/mrpt_generic_sensor/0.1.0-2.tar.gz";
-    name = "0.1.0-2.tar.gz";
-    sha256 = "a8371d06c6dcd92eb6af0d486b9c37606196576b0fe2338512eb9ed880f7b2c6";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/jazzy/mrpt_generic_sensor/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "a11fd603de94c438564908dba24c3b949625b3abe5ab93930f372fe44aae0eaa";
   };
 
   buildType = "ament_cmake";

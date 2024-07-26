@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, sqlite }:
 buildRosPackage {
   pname = "ros-jazzy-sqlite3-vendor";
-  version = "0.26.3-r1";
+  version = "0.26.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/sqlite3_vendor/0.26.3-1.tar.gz";
-    name = "0.26.3-1.tar.gz";
-    sha256 = "6bf2faa24701d1d17786bb0ec60a9aa2271e90396ff3ef24f3cde9b5d1b92b29";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/sqlite3_vendor/0.26.4-1.tar.gz";
+    name = "0.26.4-1.tar.gz";
+    sha256 = "8426211e2e7fb1f78e4d4afc3033408e81b9f8731b7f5239dcaa298c22914d56";
   };
 
   buildType = "ament_cmake";

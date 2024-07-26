@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, launch, launch-ros, python3Packages, pythonPackages, rclpy, tf2-ros, turtlesim }:
 buildRosPackage {
   pname = "ros-jazzy-turtle-tf2-py";
-  version = "0.3.6-r5";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/jazzy/turtle_tf2_py/0.3.6-5.tar.gz";
-    name = "0.3.6-5.tar.gz";
-    sha256 = "3ae2f4cda56a52ddfde483d42db752825b17dfb4aa50f50dc771de470b277867";
+    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/jazzy/turtle_tf2_py/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "e27d36deb180b38b7901dc25596d41942c4101715cfdf26feb601e9c9099886b";
   };
 
   buildType = "ament_python";

@@ -2,21 +2,21 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, opencv, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, opencv, python3Packages, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-image-geometry";
-  version = "4.0.0-r2";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/jazzy/image_geometry/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "5ccc40e042f426cfda7f2a6c3dd321ddfaed2ffd4be47b4ad6a31eee84f9fd75";
+    url = "https://github.com/ros2-gbp/vision_opencv-release/archive/release/jazzy/image_geometry/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "4c3c36ebb48cc3d6b902dd67471164fffa11839b92b5866dd4af631487648922";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-python ament-cmake-ros ];
   checkInputs = [ ament-cmake-gtest ament-cmake-pytest ];
-  propagatedBuildInputs = [ opencv opencv.cxxdev sensor-msgs ];
+  propagatedBuildInputs = [ opencv opencv.cxxdev python3Packages.deprecated sensor-msgs ];
   nativeBuildInputs = [ ament-cmake-python ament-cmake-ros ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-ros, launch-testing, rclcpp, rclcpp-components, rcutils, rmw, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-quality-of-service-demo-cpp";
-  version = "0.33.3-r1";
+  version = "0.33.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/quality_of_service_demo_cpp/0.33.3-1.tar.gz";
-    name = "0.33.3-1.tar.gz";
-    sha256 = "b5fa829c3926a09732a6b690f3f1d1de62d7a4fc2a7b8a2db20823a20871cb81";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/quality_of_service_demo_cpp/0.33.4-1.tar.gz";
+    name = "0.33.4-1.tar.gz";
+    sha256 = "5e6715e7bec83dba2359e1ed40dbdc4a818f7c8779c4792a06210863c701c937";
   };
 
   buildType = "ament_cmake";

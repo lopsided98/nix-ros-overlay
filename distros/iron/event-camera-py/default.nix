@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-clang-format, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-lint-auto, ament-lint-common, event-camera-codecs, event-camera-msgs, pybind11-vendor, python-cmake-module, python3Packages, rclpy, ros-environment, rosbag2-py, rosbag2-storage-default-plugins, rosidl-runtime-py, rpyutils }:
 buildRosPackage {
   pname = "ros-iron-event-camera-py";
-  version = "1.2.5-r1";
+  version = "1.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/event_camera_py-release/archive/release/iron/event_camera_py/1.2.5-1.tar.gz";
-    name = "1.2.5-1.tar.gz";
-    sha256 = "f84d183d6a9d8769d73e476d1ac761e33e32f804efcb5a1d997b1741f7052835";
+    url = "https://github.com/ros2-gbp/event_camera_py-release/archive/release/iron/event_camera_py/1.2.6-1.tar.gz";
+    name = "1.2.6-1.tar.gz";
+    sha256 = "2409a3862a39cd34c2fe802d10c237cfa3b8614d249026f8777d2368f812fd56";
   };
 
   buildType = "ament_cmake";

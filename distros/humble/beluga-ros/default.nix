@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-python, beluga, geometry-msgs, nav-msgs, python3Packages, sensor-msgs, std-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-beluga-ros";
-  version = "2.0.0-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/beluga-release/archive/release/humble/beluga_ros/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "9307baca4de3640ad0dcfaaffcd782ffa9add0146129ea644b9bb0ac844ab563";
+    url = "https://github.com/ros2-gbp/beluga-release/archive/release/humble/beluga_ros/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "5ab27975dbca6004ca0cd0ce2ff886e630ce832253b3f06068fa9783156ad721";
   };
 
   buildType = "ament_cmake";

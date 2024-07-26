@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components, rmf-fleet-msgs, rmf-utils, rmf-visualization-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rmf-visualization-fleet-states";
-  version = "2.2.1-r3";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/jazzy/rmf_visualization_fleet_states/2.2.1-3.tar.gz";
-    name = "2.2.1-3.tar.gz";
-    sha256 = "d110f4442d047ebb1ede286c3f62077149d40fef5e87d45c0f56be654e3f1cd6";
+    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/jazzy/rmf_visualization_fleet_states/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "2b176a734f5382df6c4df9930e24510c1497b0fbfcd71cb1c0c1002d5bd11542";
   };
 
   buildType = "ament_cmake";

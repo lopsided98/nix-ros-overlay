@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-copyright }:
 buildRosPackage {
   pname = "ros-jazzy-ament-cmake-copyright";
-  version = "0.17.0-r2";
+  version = "0.17.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/jazzy/ament_cmake_copyright/0.17.0-2.tar.gz";
-    name = "0.17.0-2.tar.gz";
-    sha256 = "8e7f83ae54c5e4a96a12d0c7aff060fd70e9bf852017d1e6399dac68e8d4ceed";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/jazzy/ament_cmake_copyright/0.17.1-1.tar.gz";
+    name = "0.17.1-1.tar.gz";
+    sha256 = "93a3aff2d3bde07345c9fcfcd1af0e51a39f052c5032aaf7ecdbef7fe70108a7";
   };
 
   buildType = "ament_cmake";

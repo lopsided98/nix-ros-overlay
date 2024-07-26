@@ -2,21 +2,21 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-python, ament-lint-auto, ament-lint-common, launch, launch-pal, launch-param-builder, launch-ros, launch-testing-ament-cmake, pal-gripper-description, pal-hey5-description, pal-robotiq-description, pal-urdf-utils, pmb2-description, tiago-controller-configuration, urdf-test, xacro }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-python, ament-lint-auto, ament-lint-common, launch, launch-pal, launch-param-builder, launch-ros, launch-testing-ament-cmake, omni-base-description, pal-gripper-description, pal-hey5-description, pal-robotiq-description, pal-urdf-utils, pmb2-description, robot-state-publisher, urdf-test, xacro }:
 buildRosPackage {
   pname = "ros-humble-tiago-description";
-  version = "4.2.3-r1";
+  version = "4.2.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_robot-release/archive/release/humble/tiago_description/4.2.3-1.tar.gz";
-    name = "4.2.3-1.tar.gz";
-    sha256 = "39d6365376a32cf90c3cf6e988425b579d0f2c056def98a8921d2c106af400dd";
+    url = "https://github.com/pal-gbp/tiago_robot-release/archive/release/humble/tiago_description/4.2.17-1.tar.gz";
+    name = "4.2.17-1.tar.gz";
+    sha256 = "3d6645ef19dcabdf9c08595cf8b92e5b6a517fb7ce4937b378c9cf605bc301cf";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ament-cmake-python ];
   checkInputs = [ ament-lint-auto ament-lint-common launch-testing-ament-cmake urdf-test ];
-  propagatedBuildInputs = [ launch launch-pal launch-param-builder launch-ros pal-gripper-description pal-hey5-description pal-robotiq-description pal-urdf-utils pmb2-description tiago-controller-configuration xacro ];
+  propagatedBuildInputs = [ launch launch-pal launch-param-builder launch-ros omni-base-description pal-gripper-description pal-hey5-description pal-robotiq-description pal-urdf-utils pmb2-description robot-state-publisher xacro ];
   nativeBuildInputs = [ ament-cmake-auto ament-cmake-python ];
 
   meta = {

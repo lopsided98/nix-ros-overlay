@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, pendulum-msgs, rclcpp, rmw-implementation-cmake, ros2run, rttest, tlsf-cpp }:
 buildRosPackage {
   pname = "ros-iron-pendulum-control";
-  version = "0.27.1-r1";
+  version = "0.27.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/pendulum_control/0.27.1-1.tar.gz";
-    name = "0.27.1-1.tar.gz";
-    sha256 = "b6abe0c8e6805d3a23e57338a30f50398e2eae6c91eeecb3058f46e03d7370db";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/pendulum_control/0.27.2-1.tar.gz";
+    name = "0.27.2-1.tar.gz";
+    sha256 = "56165628abb9ebec273e5906e4b90eb1dd6e6062a52470d188dc50efcb9f514d";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, octomap-server }:
 buildRosPackage {
   pname = "ros-jazzy-octomap-mapping";
-  version = "2.1.0-r3";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap_mapping-release/archive/release/jazzy/octomap_mapping/2.1.0-3.tar.gz";
-    name = "2.1.0-3.tar.gz";
-    sha256 = "707624329bba7614db613b7770e66220f4c898c331445bfd8bf94fc4ca970082";
+    url = "https://github.com/ros2-gbp/octomap_mapping-release/archive/release/jazzy/octomap_mapping/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "ab2bd712fa64941dc4494f7888a5cffb4fe50a89ce0abf7f7d561c63b45387aa";
   };
 
   buildType = "ament_cmake";

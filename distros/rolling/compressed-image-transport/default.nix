@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, image-transport }:
 buildRosPackage {
   pname = "ros-rolling-compressed-image-transport";
-  version = "4.0.0-r1";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/rolling/compressed_image_transport/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "e7103ffd1e8aae85df2d79a95ebe272a1094b3b73095dd161589a35d99c481f9";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/rolling/compressed_image_transport/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "16589b06f945a7b52596633b515aabc74fe6ea3b07664d06a2e2e4ae43b2b8bc";
   };
 
   buildType = "ament_cmake";

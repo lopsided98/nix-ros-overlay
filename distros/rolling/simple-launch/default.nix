@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-python, ament-index-python, launch, launch-ros, xacro }:
 buildRosPackage {
   pname = "ros-rolling-simple-launch";
-  version = "1.9.1-r2";
+  version = "1.10.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/simple_launch-release/archive/release/rolling/simple_launch/1.9.1-2.tar.gz";
-    name = "1.9.1-2.tar.gz";
-    sha256 = "1311f8dda92f013e2066cf0cb305ee25a9bbbdc0211ecb7f987117e57b077aea";
+    url = "https://github.com/ros2-gbp/simple_launch-release/archive/release/rolling/simple_launch/1.10.1-1.tar.gz";
+    name = "1.10.1-1.tar.gz";
+    sha256 = "81c3be980f4744d43cf2c639b96c4f74a8f523804f70bb2f3039bd0463ad6cfc";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-rmf-traffic-msgs";
-  version = "3.2.1-r3";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/jazzy/rmf_traffic_msgs/3.2.1-3.tar.gz";
-    name = "3.2.1-3.tar.gz";
-    sha256 = "cb46c8b961395ee16cda496a837ade1b26ac6952fa3a38edfd63c5bdbfc31d58";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/jazzy/rmf_traffic_msgs/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "6ca5d3aa9a854da733f530aa6eb325e5168b9be01648f00375a80ea27fa9b462";
   };
 
   buildType = "ament_cmake";

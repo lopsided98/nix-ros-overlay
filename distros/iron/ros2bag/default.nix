@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, launch-testing, launch-testing-ros, pythonPackages, rclpy, ros2cli, rosbag2-py, rosbag2-storage-default-plugins, rosbag2-test-common }:
 buildRosPackage {
   pname = "ros-iron-ros2bag";
-  version = "0.22.6-r1";
+  version = "0.22.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/ros2bag/0.22.6-1.tar.gz";
-    name = "0.22.6-1.tar.gz";
-    sha256 = "3cba79783be0a01f66305083b7e2b1bdc064f45a840ba924c2247787e202a182";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/ros2bag/0.22.7-1.tar.gz";
+    name = "0.22.7-1.tar.gz";
+    sha256 = "31243f9738cf9f2dbd97201420835f1f925485ebcc47fcdb0a24f1595e5efd6d";
   };
 
   buildType = "ament_python";

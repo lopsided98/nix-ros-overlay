@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, lttng-tools, lttng-ust, pkg-config }:
 buildRosPackage {
   pname = "ros-jazzy-tracetools";
-  version = "8.2.0-r2";
+  version = "8.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/jazzy/tracetools/8.2.0-2.tar.gz";
-    name = "8.2.0-2.tar.gz";
-    sha256 = "1e1606ef314a8c12226c7c4e1219ef1ecde45168270f4d357395967d15b21377";
+    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/jazzy/tracetools/8.2.1-1.tar.gz";
+    name = "8.2.1-1.tar.gz";
+    sha256 = "8a07c470d1b20e9ee356d47720f6d1fe908f30f2f7e81224ff825ea6807e79fa";
   };
 
   buildType = "ament_cmake";

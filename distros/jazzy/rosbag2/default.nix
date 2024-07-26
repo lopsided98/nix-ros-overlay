@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros2bag, rosbag2-compression, rosbag2-compression-zstd, rosbag2-cpp, rosbag2-py, rosbag2-storage, rosbag2-storage-default-plugins, rosbag2-test-common, rosbag2-tests, rosbag2-transport, shared-queues-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-rosbag2";
-  version = "0.26.3-r1";
+  version = "0.26.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/rosbag2/0.26.3-1.tar.gz";
-    name = "0.26.3-1.tar.gz";
-    sha256 = "549babb52f97316bb363ead9f9148778cc8c1280968915eca2564d913071d1b1";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/rosbag2/0.26.4-1.tar.gz";
+    name = "0.26.4-1.tar.gz";
+    sha256 = "c662d15d1bf42e3fad06a2d6fbed19617ef9d1d453422f1cf610cb88a88077ce";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, rclcpp }:
 buildRosPackage {
   pname = "ros-iron-examples-rclcpp-minimal-service";
-  version = "0.18.0-r2";
+  version = "0.18.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/iron/examples_rclcpp_minimal_service/0.18.0-2.tar.gz";
-    name = "0.18.0-2.tar.gz";
-    sha256 = "92df9af4e28096623ed5cd5a8536e686cd49182201bb3bb0d9a5fe9472e697df";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/iron/examples_rclcpp_minimal_service/0.18.1-1.tar.gz";
+    name = "0.18.1-1.tar.gz";
+    sha256 = "b2e114dd06f883c3959f4df0f3048a4e471363631f4e7e0f4d414f82988e6c6d";
   };
 
   buildType = "ament_cmake";

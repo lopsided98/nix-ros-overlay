@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, robot-state-publisher, urdf, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-flir-camera-description";
-  version = "2.0.15-r2";
+  version = "2.0.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flir_camera_driver-release/archive/release/jazzy/flir_camera_description/2.0.15-2.tar.gz";
-    name = "2.0.15-2.tar.gz";
-    sha256 = "ef6196e4493e762521846c227316796a211759ae7a7b49278d8534e649e479de";
+    url = "https://github.com/ros2-gbp/flir_camera_driver-release/archive/release/jazzy/flir_camera_description/2.0.20-1.tar.gz";
+    name = "2.0.20-1.tar.gz";
+    sha256 = "546b4c5cabe3d0bb913741610a5552129bf83446589c540baffceadaf1ce315a";
   };
 
   buildType = "ament_cmake";

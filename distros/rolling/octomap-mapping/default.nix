@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, octomap-server }:
 buildRosPackage {
   pname = "ros-rolling-octomap-mapping";
-  version = "2.1.0-r2";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap_mapping-release/archive/release/rolling/octomap_mapping/2.1.0-2.tar.gz";
-    name = "2.1.0-2.tar.gz";
-    sha256 = "ca43574dff8532acd3c1a3a432f611ba5e9349bf208fbba5ac8d801197dc9106";
+    url = "https://github.com/ros2-gbp/octomap_mapping-release/archive/release/rolling/octomap_mapping/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "fdf78b6aa6331783a9015e986150cc77b61e973508363d1a7063e676abef506e";
   };
 
   buildType = "ament_cmake";

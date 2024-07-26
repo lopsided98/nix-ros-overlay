@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt2 }:
 buildRosPackage {
   pname = "ros-jazzy-mola-yaml";
-  version = "1.0.2-r2";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_yaml/1.0.2-2.tar.gz";
-    name = "1.0.2-2.tar.gz";
-    sha256 = "7d172466acfe84cce6c82b9a9eb2b698da342f51b1fc6235e8cdc3cad695a3a6";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_yaml/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "725fa55d864d5b66f29e453afa8e2f357bfabffc0cd2839c4051dd558fb39fb8";
   };
 
   buildType = "cmake";

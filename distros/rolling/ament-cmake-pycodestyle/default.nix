@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-pycodestyle }:
 buildRosPackage {
   pname = "ros-rolling-ament-cmake-pycodestyle";
-  version = "0.18.0-r1";
+  version = "0.18.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_cmake_pycodestyle/0.18.0-1.tar.gz";
-    name = "0.18.0-1.tar.gz";
-    sha256 = "f79412e86e30affede8b05d52674e8fe216337311874c7d8a8b75ea08cef9f67";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_cmake_pycodestyle/0.18.1-1.tar.gz";
+    name = "0.18.1-1.tar.gz";
+    sha256 = "55ea219b567b6404a9c3321633e9dfbcad363976a46f825cba000d3ecb634037";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, cv-bridge, grid-map-core, gtsam, libg2o, libpointmatcher, octomap, pcl, proj, qt-gui-cpp, sqlite, zlib }:
 buildRosPackage {
   pname = "ros-noetic-rtabmap";
-  version = "0.21.4-r1";
+  version = "0.21.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap-release/archive/release/noetic/rtabmap/0.21.4-1.tar.gz";
-    name = "0.21.4-1.tar.gz";
-    sha256 = "7e01d73a35af9bbcd403143d29671479169708cd0eab0c94a33ef998da2d69e1";
+    url = "https://github.com/introlab/rtabmap-release/archive/release/noetic/rtabmap/0.21.6-1.tar.gz";
+    name = "0.21.6-1.tar.gz";
+    sha256 = "cda4b5d176db6243039740f7f0b049b3abc2bb433c41dec5bd6b722949814f5b";
   };
 
   buildType = "cmake";

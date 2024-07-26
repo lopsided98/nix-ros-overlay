@@ -2,7 +2,7 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, boost, c-blosc, git, tbb_2021_8, zlib }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, boost, c-blosc, git, tbb_2021_11, zlib }:
 buildRosPackage {
   pname = "ros-iron-openvdb-vendor";
   version = "2.4.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-vendor-package git ];
-  propagatedBuildInputs = [ boost c-blosc tbb_2021_8 zlib ];
+  propagatedBuildInputs = [ boost c-blosc tbb_2021_11 zlib ];
   nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package git ];
 
   meta = {

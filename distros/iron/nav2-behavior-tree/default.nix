@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, behaviortree-cpp-v3, builtin-interfaces, geometry-msgs, lifecycle-msgs, nav-msgs, nav2-common, nav2-msgs, nav2-util, rclcpp, rclcpp-action, rclcpp-lifecycle, sensor-msgs, std-msgs, std-srvs, test-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-nav2-behavior-tree";
-  version = "1.2.8-r1";
+  version = "1.2.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_behavior_tree/1.2.8-1.tar.gz";
-    name = "1.2.8-1.tar.gz";
-    sha256 = "8176a146d2b5c763a66ba021df4b29f77b5d2891bbfc4ce73c0042d95cddd2df";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_behavior_tree/1.2.9-1.tar.gz";
+    name = "1.2.9-1.tar.gz";
+    sha256 = "28d2de69b207bc6975373cbe2c743077ee6919a530861e9e25f986234b04193e";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ros-environment }:
 buildRosPackage {
   pname = "ros-noetic-etsi-its-rviz-plugins";
-  version = "2.0.1-r1";
+  version = "2.1.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_rviz_plugins/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "1a4e99d8f80fe4c2b4f228cd1157799e1fa65ef2bc9712d2e3c6d5dcac922e45";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_rviz_plugins/2.1.0-3.tar.gz";
+    name = "2.1.0-3.tar.gz";
+    sha256 = "be081a5113d5d3686812ae79986e11d5d626bb589a47db12935bef7d64be9bb5";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-flexbe-msgs";
-  version = "2.3.3-r1";
+  version = "2.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/humble/flexbe_msgs/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "43f72cff3105576e3ee373da45f3613284a0f6534e642c9d078da0de89f0cbc8";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/humble/flexbe_msgs/2.3.5-1.tar.gz";
+    name = "2.3.5-1.tar.gz";
+    sha256 = "340432727176360731daa40c6dad7ea4adc29ac123bcae48a4d8886f6649c5c4";
   };
 
   buildType = "ament_cmake";

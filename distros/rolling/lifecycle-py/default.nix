@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-lint-common, lifecycle, lifecycle-msgs, rclpy, ros-testing, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-lifecycle-py";
-  version = "0.34.0-r1";
+  version = "0.34.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/lifecycle_py/0.34.0-1.tar.gz";
-    name = "0.34.0-1.tar.gz";
-    sha256 = "95b9e699d44ebc2e307590e7c4ad171a0cf0013c09c676a0806e83550cf4a79e";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/lifecycle_py/0.34.1-1.tar.gz";
+    name = "0.34.1-1.tar.gz";
+    sha256 = "828cd7c74b6fe76ecee4854ac93ecf2b699506bbfdd1c030ae469f9360e9377b";
   };
 
   buildType = "ament_python";

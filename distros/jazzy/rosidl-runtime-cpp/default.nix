@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, performance-test-fixture, rosidl-runtime-c }:
 buildRosPackage {
   pname = "ros-jazzy-rosidl-runtime-cpp";
-  version = "4.6.2-r1";
+  version = "4.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/jazzy/rosidl_runtime_cpp/4.6.2-1.tar.gz";
-    name = "4.6.2-1.tar.gz";
-    sha256 = "e708e9ccd36637a4cf1d7d4c2a0cddc1c065c3832fadde1dae900bcc029fef9e";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/jazzy/rosidl_runtime_cpp/4.6.3-1.tar.gz";
+    name = "4.6.3-1.tar.gz";
+    sha256 = "809faf315ea118023788957df4d4449a191c9e2a1416d24b6e45d159f9f49e01";
   };
 
   buildType = "ament_cmake";

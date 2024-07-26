@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, libyaml, meson, openssl, pkg-config, python3Packages, pythonPackages, udev }:
+{ lib, buildRosPackage, fetchurl, libyaml, meson, openssl, pkg-config, python3, python3Packages, pythonPackages, udev }:
 buildRosPackage {
   pname = "ros-rolling-libcamera";
-  version = "0.3.0-r2";
+  version = "0.3.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libcamera-release/archive/release/rolling/libcamera/0.3.0-2.tar.gz";
-    name = "0.3.0-2.tar.gz";
-    sha256 = "87e5862440b8603b09041c961be89e81b7ba047b7b0f26b1ff10e7310b27ad39";
+    url = "https://github.com/ros2-gbp/libcamera-release/archive/release/rolling/libcamera/0.3.0-3.tar.gz";
+    name = "0.3.0-3.tar.gz";
+    sha256 = "1cf0e570eb31582da007f1b792d4711045e7d5a29aacf2edeaa05097dabbe247";
   };
 
   buildType = "meson";
   buildInputs = [ meson pkg-config python3Packages.jinja2 python3Packages.ply python3Packages.pyyaml pythonPackages.pybind11 ];
-  propagatedBuildInputs = [ libyaml openssl udev ];
+  propagatedBuildInputs = [ libyaml openssl python3 udev ];
   nativeBuildInputs = [ meson ];
 
   meta = {

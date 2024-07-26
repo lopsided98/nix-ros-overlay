@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-rmf-fleet-msgs";
-  version = "3.2.1-r3";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/jazzy/rmf_fleet_msgs/3.2.1-3.tar.gz";
-    name = "3.2.1-3.tar.gz";
-    sha256 = "fe84179e8a4803e02faf277c418bbdc4450fb3482f83c4f0732a5d5467f3a988";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/jazzy/rmf_fleet_msgs/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "23ef6e2b7d8e2db1f6c78ff0f39b1c9af026484fe8005db9c44ca1778dccac3d";
   };
 
   buildType = "ament_cmake";

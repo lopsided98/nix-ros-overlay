@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, opencv, rclcpp, rclcpp-components, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-image-tools";
-  version = "0.27.1-r1";
+  version = "0.27.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/image_tools/0.27.1-1.tar.gz";
-    name = "0.27.1-1.tar.gz";
-    sha256 = "786d0fa3305a22d8bb2bf9d802e8d02e2a3d0c087237e01dc5970c3585885159";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/iron/image_tools/0.27.2-1.tar.gz";
+    name = "0.27.2-1.tar.gz";
+    sha256 = "21f6a2b1c482ced0a19c35e0eec4eb90fe48f183ac663634c7f54aba0f34df21";
   };
 
   buildType = "ament_cmake";

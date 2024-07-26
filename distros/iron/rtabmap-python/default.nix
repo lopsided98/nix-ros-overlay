@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages }:
 buildRosPackage {
   pname = "ros-iron-rtabmap-python";
-  version = "0.21.4-r2";
+  version = "0.21.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/iron/rtabmap_python/0.21.4-2.tar.gz";
-    name = "0.21.4-2.tar.gz";
-    sha256 = "c65edf345c44b67cd2a9d4ab01aaf4433c624d0bcbebaaee8bcb1e1a0ace074a";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/iron/rtabmap_python/0.21.5-1.tar.gz";
+    name = "0.21.5-1.tar.gz";
+    sha256 = "d3415cd87f066428f3a2d2febd2db9334de19e5f1f1ee3de80e60a4e6baa90b4";
   };
 
   buildType = "ament_python";
