@@ -18,12 +18,14 @@ in with lib; {
   });
 
   # This is a newer version than the build system tries to download, but this
-  # version doesn't try to run host platform binaries on the build platform.
+  # version doesn't try to run host platform binaries on the build platform
+  # and fixes "Allocator foonathan::memory::memory_pool received invalid size"
+  # error on MacOS
   foonathan-memory-vendor = patchExternalProjectGit rosSuper.foonathan-memory-vendor {
     url = "https://github.com/foonathan/memory.git";
     originalRev = "v0.7-1";
-    rev = "v0.7-2";
-    fetchgitArgs.hash = "sha256-5nJNW0xwjSCc0Egq1zv0tIsGvAh1Xbnu8190A1ZP+VA=";
+    rev = "v0.7-3";
+    fetchgitArgs.hash = "sha256-nLBnxPbPKiLCFF2TJgD/eJKJJfzktVBW3SRW2m3WK/s=";
   };
 
   gazebo = self.gazebo_11;
