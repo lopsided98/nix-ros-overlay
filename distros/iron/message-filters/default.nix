@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-lint-auto, builtin-interfaces, python-cmake-module, rclcpp, rclcpp-lifecycle, rclpy, rcutils, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-message-filters";
-  version = "4.7.0-r3";
+  version = "4.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/iron/message_filters/4.7.0-3.tar.gz";
-    name = "4.7.0-3.tar.gz";
-    sha256 = "7738944a9e1330ad85c910454f2e87c83c18d6bf6ac51ab08d7a590108864a50";
+    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/iron/message_filters/4.7.1-1.tar.gz";
+    name = "4.7.1-1.tar.gz";
+    sha256 = "b06a44fed7bbf3381371bf82d965751999a6762c5a501f901e3c9ee4e385b95d";
   };
 
   buildType = "ament_cmake";

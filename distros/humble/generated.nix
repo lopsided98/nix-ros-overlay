@@ -448,6 +448,8 @@ self: super: {
 
  clearpath-simulator = self.callPackage ./clearpath-simulator {};
 
+ clearpath-socketcan-interface = self.callPackage ./clearpath-socketcan-interface {};
+
  clearpath-viz = self.callPackage ./clearpath-viz {};
 
  cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
@@ -1528,6 +1530,8 @@ self: super: {
 
  mola-metric-maps = self.callPackage ./mola-metric-maps {};
 
+ mola-msgs = self.callPackage ./mola-msgs {};
+
  mola-navstate-fg = self.callPackage ./mola-navstate-fg {};
 
  mola-navstate-fuse = self.callPackage ./mola-navstate-fuse {};
@@ -2101,6 +2105,10 @@ self: super: {
  psdk-interfaces = self.callPackage ./psdk-interfaces {};
 
  psdk-wrapper = self.callPackage ./psdk-wrapper {};
+
+ puma-motor-driver = self.callPackage ./puma-motor-driver {};
+
+ puma-motor-msgs = self.callPackage ./puma-motor-msgs {};
 
  py-binding-tools = self.callPackage ./py-binding-tools {};
 

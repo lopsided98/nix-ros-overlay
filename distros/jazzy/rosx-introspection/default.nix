@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, fastcdr, geometry-msgs, rapidjson, rclcpp, rosbag2-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rosx-introspection";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosx_introspection-release/archive/release/jazzy/rosx_introspection/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "f592fd3b5df463b4fe2bd6ad8f18f54ecb09c612791ae9245c1cbdf830a09e08";
+    url = "https://github.com/ros2-gbp/rosx_introspection-release/archive/release/jazzy/rosx_introspection/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "e75fd9f7062589565d6a461931ea12f3508ca590e037be720f9a08d2ec58f9b7";
   };
 
   buildType = "ament_cmake";

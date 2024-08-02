@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, fastcdr, geometry-msgs, rapidjson, rclcpp, rosbag2-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-iron-rosx-introspection";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosx_introspection-release/archive/release/iron/rosx_introspection/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "1c35967ac6fa42ea9f218a0180fe76d76099c87a0ec38bea96e4860bfb93b664";
+    url = "https://github.com/ros2-gbp/rosx_introspection-release/archive/release/iron/rosx_introspection/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "937c1746fe37ceed3643df0db9153bbcd270c7cdaf044790b1a6563c951ec409";
   };
 
   buildType = "ament_cmake";

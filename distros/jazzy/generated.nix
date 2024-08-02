@@ -354,6 +354,16 @@ self: super: {
 
  data-tamer-msgs = self.callPackage ./data-tamer-msgs {};
 
+ dataspeed-can = self.callPackage ./dataspeed-can {};
+
+ dataspeed-can-msg-filters = self.callPackage ./dataspeed-can-msg-filters {};
+
+ dataspeed-can-msgs = self.callPackage ./dataspeed-can-msgs {};
+
+ dataspeed-can-tools = self.callPackage ./dataspeed-can-tools {};
+
+ dataspeed-can-usb = self.callPackage ./dataspeed-can-usb {};
+
  delphi-esr-msgs = self.callPackage ./delphi-esr-msgs {};
 
  delphi-mrr-msgs = self.callPackage ./delphi-mrr-msgs {};
@@ -399,6 +409,14 @@ self: super: {
  domain-coordinator = self.callPackage ./domain-coordinator {};
 
  draco-point-cloud-transport = self.callPackage ./draco-point-cloud-transport {};
+
+ ds-dbw = self.callPackage ./ds-dbw {};
+
+ ds-dbw-can = self.callPackage ./ds-dbw-can {};
+
+ ds-dbw-joystick-demo = self.callPackage ./ds-dbw-joystick-demo {};
+
+ ds-dbw-msgs = self.callPackage ./ds-dbw-msgs {};
 
  dual-arm-panda-moveit-config = self.callPackage ./dual-arm-panda-moveit-config {};
 
@@ -1143,6 +1161,8 @@ self: super: {
  mola-launcher = self.callPackage ./mola-launcher {};
 
  mola-metric-maps = self.callPackage ./mola-metric-maps {};
+
+ mola-msgs = self.callPackage ./mola-msgs {};
 
  mola-navstate-fg = self.callPackage ./mola-navstate-fg {};
 
@@ -2109,6 +2129,8 @@ self: super: {
  rqt-topic = self.callPackage ./rqt-topic {};
 
  rsl = self.callPackage ./rsl {};
+
+ rslidar-msg = self.callPackage ./rslidar-msg {};
 
  rt-manipulators-cpp = self.callPackage ./rt-manipulators-cpp {};
 

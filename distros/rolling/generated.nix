@@ -1074,6 +1074,8 @@ self: super: {
 
  mola-metric-maps = self.callPackage ./mola-metric-maps {};
 
+ mola-msgs = self.callPackage ./mola-msgs {};
+
  mola-navstate-fg = self.callPackage ./mola-navstate-fg {};
 
  mola-navstate-fuse = self.callPackage ./mola-navstate-fuse {};

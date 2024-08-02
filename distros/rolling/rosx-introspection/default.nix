@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, fastcdr, geometry-msgs, rapidjson, rclcpp, rosbag2-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rosx-introspection";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosx_introspection-release/archive/release/rolling/rosx_introspection/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "4aca59106ea3bcafacb18a12feaa8454657419448e0ec84525640f876c918b03";
+    url = "https://github.com/ros2-gbp/rosx_introspection-release/archive/release/rolling/rosx_introspection/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "96e8c78e70d835097c862872c3a1f90718386d9b2807e69d903465ffb8504496";
   };
 
   buildType = "ament_cmake";
