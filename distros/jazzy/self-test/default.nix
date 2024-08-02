@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, diagnostic-msgs, diagnostic-updater, rclcpp, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-self-test";
-  version = "3.1.2-r3";
+  version = "4.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/jazzy/self_test/3.1.2-3.tar.gz";
-    name = "3.1.2-3.tar.gz";
-    sha256 = "73017fc9ad053502340445b5c2707b69c7d864c3e6be18ddf4e547040e4e1177";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/jazzy/self_test/4.2.1-1.tar.gz";
+    name = "4.2.1-1.tar.gz";
+    sha256 = "6c16e94e4d97e46c57708871dd8f881bc117b57a28e7f9c8067f92a74b7deb39";
   };
 
   buildType = "ament_cmake";

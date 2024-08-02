@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, builtin-interfaces, performance-test-fixture, rcl, rcpputils, rosidl-default-generators, rosidl-default-runtime, statistics-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-libstatistics-collector";
-  version = "1.3.1-r1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libstatistics_collector-release/archive/release/humble/libstatistics_collector/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "2a05584b95e02dc80716324f183566028689cfeea04e2834fbe535efce2264eb";
+    url = "https://github.com/ros2-gbp/libstatistics_collector-release/archive/release/humble/libstatistics_collector/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "e725e6f3bfaf74e4936377fcd403ef4dbe5e7b3b0e45574009fc6b7be57fe4e9";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-black, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-xmllint }:
 buildRosPackage {
   pname = "ros-iron-ament-cmake-black";
-  version = "0.2.4-r1";
+  version = "0.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_black-release/archive/release/iron/ament_cmake_black/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "c24ca0fa303beca74cd0fb551128534863bf99c9d1f1a79cd1ab355281c2e4ed";
+    url = "https://github.com/ros2-gbp/ament_black-release/archive/release/iron/ament_cmake_black/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
+    sha256 = "45cd02c5b752c83f9c4444cccc55e172afcbff7673368bb30efbfa0443834730";
   };
 
   buildType = "ament_cmake";

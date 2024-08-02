@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, kitti-metrics-eval, mola-bridge-ros2, mola-demos, mola-imu-preintegration, mola-input-euroc-dataset, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset, mola-input-rawlog, mola-input-rosbag2, mola-kernel, mola-launcher, mola-metric-maps, mola-navstate-fg, mola-navstate-fuse, mola-pose-list, mola-relocalization, mola-traj-tools, mola-viz, mola-yaml }:
 buildRosPackage {
   pname = "ros-jazzy-mola";
-  version = "1.0.7-r1";
+  version = "1.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "6141d8c0671844fce73a4e0bbbf4aca50d96c22936082013aa5f327a27548373";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola/1.0.8-1.tar.gz";
+    name = "1.0.8-1.tar.gz";
+    sha256 = "da7900f646bb49a6c8951e7ef8840952531690705fbc05b353953791d244b73e";
   };
 
   buildType = "ament_cmake";

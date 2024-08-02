@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, boost, cmake, doxygen, eigen, eigenpy, git, octomap, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-hpp-fcl";
-  version = "2.4.4-r2";
+  version = "2.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hpp_fcl-release/archive/release/rolling/hpp-fcl/2.4.4-2.tar.gz";
-    name = "2.4.4-2.tar.gz";
-    sha256 = "3ddb59db86a779012f0228bfad29780155c2d16da08dac78ad216ce3901dd216";
+    url = "https://github.com/ros2-gbp/hpp_fcl-release/archive/release/rolling/hpp-fcl/2.4.5-1.tar.gz";
+    name = "2.4.5-1.tar.gz";
+    sha256 = "627193c739fb118667f53ec0e7cc5b1c9b5593990288532efebf8effcd9334a9";
   };
 
   buildType = "cmake";

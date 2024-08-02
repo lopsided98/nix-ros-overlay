@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-pytest, ament-cmake-python, ament-cmake-xmllint, ament-lint-auto, diagnostic-updater, launch-testing-ament-cmake, lm_sensors, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-diagnostic-common-diagnostics";
-  version = "4.3.0-r1";
+  version = "4.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/rolling/diagnostic_common_diagnostics/4.3.0-1.tar.gz";
-    name = "4.3.0-1.tar.gz";
-    sha256 = "e08cf7fb69a93d1fec3418a601d3da67463e2c05a8cde97bf1340406099d8c62";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/rolling/diagnostic_common_diagnostics/4.3.1-1.tar.gz";
+    name = "4.3.1-1.tar.gz";
+    sha256 = "39f37717ae5f21c79b151a27e1dbc8ff51079fd193ffe51c1f449ba48edb693d";
   };
 
   buildType = "ament_cmake";

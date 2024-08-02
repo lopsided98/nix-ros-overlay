@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, kitti-metrics-eval, mola-bridge-ros2, mola-demos, mola-imu-preintegration, mola-input-euroc-dataset, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset, mola-input-rawlog, mola-input-rosbag2, mola-kernel, mola-launcher, mola-metric-maps, mola-navstate-fg, mola-navstate-fuse, mola-pose-list, mola-relocalization, mola-traj-tools, mola-viz, mola-yaml }:
 buildRosPackage {
   pname = "ros-rolling-mola";
-  version = "1.0.7-r1";
+  version = "1.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "de25f3a78b2bd066638a00f5ae6ce12ca5cf1b61cd603216b2a38cd1e095d223";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola/1.0.8-1.tar.gz";
+    name = "1.0.8-1.tar.gz";
+    sha256 = "b5ec7e91a72c58af33f3851a3e3faa387cfa601f0ce8a375c73d19d37c1c978c";
   };
 
   buildType = "ament_cmake";

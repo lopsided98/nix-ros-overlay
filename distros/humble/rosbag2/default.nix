@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros2bag, rosbag2-compression, rosbag2-compression-zstd, rosbag2-cpp, rosbag2-py, rosbag2-storage, rosbag2-storage-default-plugins, rosbag2-test-common, rosbag2-tests, rosbag2-transport, shared-queues-vendor, sqlite3-vendor }:
 buildRosPackage {
   pname = "ros-humble-rosbag2";
-  version = "0.15.11-r1";
+  version = "0.15.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/rosbag2/0.15.11-1.tar.gz";
-    name = "0.15.11-1.tar.gz";
-    sha256 = "63850b41d877c893739b807301f66f63badcd02bba775734ff4d7f20acf273ab";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/rosbag2/0.15.12-1.tar.gz";
+    name = "0.15.12-1.tar.gz";
+    sha256 = "43ced50be2c00e8ca9574e86be2e4ff43d7bb1371c3534b7fa743e0c3db46eca";
   };
 
   buildType = "ament_cmake";
