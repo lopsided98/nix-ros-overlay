@@ -23,7 +23,7 @@
       };
     }) // {
       overlays.default = import ./overlay.nix;
-      nixosModules.default = import ./modules;
+      nixosModules.default = ./modules;
 
       overlay = nixpkgs.lib.warn
         "'nix-ros-overlay.overlay' is deprecated, use 'nix-ros-overlay.overlays.default' instead"
