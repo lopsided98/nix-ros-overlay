@@ -60,18 +60,6 @@ in with lib; {
     hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
   };
 
-  libstatistics-collector = rosSuper.libstatistics-collector.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Add missing cstdint include
-      (self.fetchpatch {
-        url = "https://github.com/ros-tooling/libstatistics_collector/commit/1c340c97c731019d0c7b40f8c167b0ef666bcf75.patch";
-        hash = "sha256-zGCvIs/1CcqLyiLWZ+e3rCBJmNbGkkUs96dnPfHpjdE=";
-      })
-    ];
-  });
-
   libyaml-vendor = patchExternalProjectGit rosSuper.libyaml-vendor {
     url = "https://github.com/yaml/libyaml.git";
     rev = "2c891fc7a770e8ba2fec34fc6b545c672beb37e6";
