@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-denm-coding";
-  version = "2.1.0-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_denm_coding/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "bc3c08eb93c72d823d9c1dc2ec4ee795c88329bb582428f7703cbdcd69fb9bf8";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_denm_coding/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "ca462017af498c1bb8e15ab6f13613352760b95154814b442d77b33cab5617d8";
   };
 
   buildType = "ament_cmake";

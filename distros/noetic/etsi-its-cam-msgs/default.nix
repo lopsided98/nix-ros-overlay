@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, ros-environment, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-etsi-its-cam-msgs";
-  version = "2.1.0-r3";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_cam_msgs/2.1.0-3.tar.gz";
-    name = "2.1.0-3.tar.gz";
-    sha256 = "fc378315ff1c0b93e7e59f50a06ca9778fb88aeb8e1cef1a5041c347f55c6ae8";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_cam_msgs/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "51537a334716da07afe5b31d05c98e047186b5efcfca1321efdfd030be8c3f50";
   };
 
   buildType = "catkin";

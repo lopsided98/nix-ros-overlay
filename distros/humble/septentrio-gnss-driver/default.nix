@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, diagnostic-msgs, geographiclib, geometry-msgs, gps-msgs, libpcap, nav-msgs, nmea-msgs, rclcpp, rclcpp-components, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-septentrio-gnss-driver";
-  version = "1.4.0-r2";
+  version = "1.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/septentrio_gnss_driver_ros2-release/archive/release/humble/septentrio_gnss_driver/1.4.0-2.tar.gz";
-    name = "1.4.0-2.tar.gz";
-    sha256 = "dca396384bb208b75011bbb1f342a37981de3d8fb71bfc327be3a579ceea6ea9";
+    url = "https://github.com/ros2-gbp/septentrio_gnss_driver_ros2-release/archive/release/humble/septentrio_gnss_driver/1.4.1-1.tar.gz";
+    name = "1.4.1-1.tar.gz";
+    sha256 = "7da5c3dacf4bc3a07172c249dabc3722331d05ce78d47ada9b343430229663e7";
   };
 
   buildType = "ament_cmake";

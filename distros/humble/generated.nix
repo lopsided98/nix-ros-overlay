@@ -774,6 +774,12 @@ self: super: {
 
  etsi-its-cam-msgs = self.callPackage ./etsi-its-cam-msgs {};
 
+ etsi-its-cam-ts-coding = self.callPackage ./etsi-its-cam-ts-coding {};
+
+ etsi-its-cam-ts-conversion = self.callPackage ./etsi-its-cam-ts-conversion {};
+
+ etsi-its-cam-ts-msgs = self.callPackage ./etsi-its-cam-ts-msgs {};
+
  etsi-its-coding = self.callPackage ./etsi-its-coding {};
 
  etsi-its-conversion = self.callPackage ./etsi-its-conversion {};
@@ -1870,9 +1876,9 @@ self: super: {
 
  omni-base-laser-sensors = self.callPackage ./omni-base-laser-sensors {};
 
- omni-base-maps = self.callPackage ./omni-base-maps {};
-
  omni-base-navigation = self.callPackage ./omni-base-navigation {};
+
+ omni-base-rgbd-sensors = self.callPackage ./omni-base-rgbd-sensors {};
 
  omni-base-robot = self.callPackage ./omni-base-robot {};
 

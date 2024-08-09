@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-iron-etsi-its-cpm-ts-coding";
-  version = "2.1.0-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/iron/etsi_its_cpm_ts_coding/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "d502322f49638181d354ce053b0cdb3c57371acdec8dbcd53c28ae9e1a473090";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/iron/etsi_its_cpm_ts_coding/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "de36c78a79e033500ab19a0b9164f0bb564864198f18cca1b588ae9a7996845d";
   };
 
   buildType = "ament_cmake";

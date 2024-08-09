@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, etsi-its-denm-coding, etsi-its-denm-msgs, etsi-its-primitives-conversion, ros-environment }:
 buildRosPackage {
   pname = "ros-noetic-etsi-its-denm-conversion";
-  version = "2.1.0-r3";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_denm_conversion/2.1.0-3.tar.gz";
-    name = "2.1.0-3.tar.gz";
-    sha256 = "ab4e5b4f44907b88238874ed7e8f345502ebaf0986ff7b47ad5c17d3d04335a7";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_denm_conversion/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "cb555b69f78d74270bcbcdf2398466a96dbd31a580a5264291cd1dd907ec2738";
   };
 
   buildType = "catkin";

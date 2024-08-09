@@ -536,6 +536,12 @@ self: super: {
 
  etsi-its-cam-msgs = self.callPackage ./etsi-its-cam-msgs {};
 
+ etsi-its-cam-ts-coding = self.callPackage ./etsi-its-cam-ts-coding {};
+
+ etsi-its-cam-ts-conversion = self.callPackage ./etsi-its-cam-ts-conversion {};
+
+ etsi-its-cam-ts-msgs = self.callPackage ./etsi-its-cam-ts-msgs {};
+
  etsi-its-coding = self.callPackage ./etsi-its-coding {};
 
  etsi-its-conversion = self.callPackage ./etsi-its-conversion {};
