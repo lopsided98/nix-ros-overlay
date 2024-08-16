@@ -240,6 +240,10 @@ self: super: {
 
  bag2-to-image = self.callPackage ./bag2-to-image {};
 
+ battery-state-broadcaster = self.callPackage ./battery-state-broadcaster {};
+
+ battery-state-rviz-overlay = self.callPackage ./battery-state-rviz-overlay {};
+
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
@@ -1072,6 +1076,8 @@ self: super: {
 
  mola-launcher = self.callPackage ./mola-launcher {};
 
+ mola-lidar-odometry = self.callPackage ./mola-lidar-odometry {};
+
  mola-metric-maps = self.callPackage ./mola-metric-maps {};
 
  mola-msgs = self.callPackage ./mola-msgs {};
@@ -1196,7 +1202,35 @@ self: super: {
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
+ mrpt-apps = self.callPackage ./mrpt-apps {};
+
  mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
+
+ mrpt-libapps = self.callPackage ./mrpt-libapps {};
+
+ mrpt-libbase = self.callPackage ./mrpt-libbase {};
+
+ mrpt-libgui = self.callPackage ./mrpt-libgui {};
+
+ mrpt-libhwdrivers = self.callPackage ./mrpt-libhwdrivers {};
+
+ mrpt-libmaps = self.callPackage ./mrpt-libmaps {};
+
+ mrpt-libmath = self.callPackage ./mrpt-libmath {};
+
+ mrpt-libnav = self.callPackage ./mrpt-libnav {};
+
+ mrpt-libobs = self.callPackage ./mrpt-libobs {};
+
+ mrpt-libopengl = self.callPackage ./mrpt-libopengl {};
+
+ mrpt-libposes = self.callPackage ./mrpt-libposes {};
+
+ mrpt-libros2bridge = self.callPackage ./mrpt-libros2bridge {};
+
+ mrpt-libslam = self.callPackage ./mrpt-libslam {};
+
+ mrpt-libtclap = self.callPackage ./mrpt-libtclap {};
 
  mrpt-map-server = self.callPackage ./mrpt-map-server {};
 
@@ -1229,6 +1263,8 @@ self: super: {
  mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
 
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
+
+ mrpt-tps-astar-planner = self.callPackage ./mrpt-tps-astar-planner {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 

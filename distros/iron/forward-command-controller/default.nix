@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-forward-command-controller";
-  version = "3.26.0-r1";
+  version = "3.26.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/forward_command_controller/3.26.0-1.tar.gz";
-    name = "3.26.0-1.tar.gz";
-    sha256 = "ce1a875ee31fbf09ca14eaeb12f9fd6d943077950203605ffe43e15ef6c18276";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/forward_command_controller/3.26.1-1.tar.gz";
+    name = "3.26.1-1.tar.gz";
+    sha256 = "98b3dd93508679bf5a804f670396bdf2b430c6f8de91e4fbe7291aa25f7cb25c";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-python, ament-lint-auto, ament-lint-common, gazebo-planar-move-plugin, joint-state-publisher-gui, launch, launch-pal, launch-param-builder, launch-ros, launch-testing-ament-cmake, pal-urdf-utils, realsense2-description, rviz2, urdf-test, xacro }:
 buildRosPackage {
   pname = "ros-humble-omni-base-description";
-  version = "2.0.18-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/omni_base_robot-release/archive/release/humble/omni_base_description/2.0.18-1.tar.gz";
-    name = "2.0.18-1.tar.gz";
-    sha256 = "692b1585227455afcbc6e74f4402d748f7018e2562b474c42923fb72059b3100";
+    url = "https://github.com/pal-gbp/omni_base_robot-release/archive/release/humble/omni_base_description/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "4711c18339ce893fb797d037e5184a5f4b937473811833cbcfc7d2c3900a1062";
   };
 
   buildType = "ament_cmake";

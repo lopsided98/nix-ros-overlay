@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-marti-introspection-msgs";
-  version = "1.5.2-r2";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/rolling/marti_introspection_msgs/1.5.2-2.tar.gz";
-    name = "1.5.2-2.tar.gz";
-    sha256 = "ad8fb153059027a73eb19ace003308c973fbdb8ecb59a40bae099e79c41ff0cc";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/rolling/marti_introspection_msgs/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "f738216b7b2075c8b18d91bcaf64853ae82e9e6f299a879b8732d0008308bf05";
   };
 
   buildType = "ament_cmake";

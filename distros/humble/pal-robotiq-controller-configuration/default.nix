@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, controller-manager, joint-trajectory-controller, position-controllers }:
 buildRosPackage {
   pname = "ros-humble-pal-robotiq-controller-configuration";
-  version = "2.0.3-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_robotiq_gripper-release/archive/release/humble/pal_robotiq_controller_configuration/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "e2b9f6935821513c84bbe58dad9e185c38d88f0b6d4d57b3e139ae398392c29b";
+    url = "https://github.com/pal-gbp/pal_robotiq_gripper-release/archive/release/humble/pal_robotiq_controller_configuration/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "b911b8b0efebd0d3b49779928303fa8a55be9c7e30c1db172ce0d26f6c343aa2";
   };
 
   buildType = "ament_cmake";

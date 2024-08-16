@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, glew, jsoncpp, mapviz, pluginlib, qt5, rclcpp, swri-math-util, swri-transform-util, tf2, yaml-cpp }:
 buildRosPackage {
   pname = "ros-iron-tile-map";
-  version = "2.2.2-r1";
+  version = "2.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/iron/tile_map/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "6dd4c9ae3c6719ccb2f9239007b196f4988731923d416450aaa0eeeaba5fa06b";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/iron/tile_map/2.4.2-1.tar.gz";
+    name = "2.4.2-1.tar.gz";
+    sha256 = "a5c00c4805d366f1aea0f0cbd735d6e13eeaf2f975a1084c8387d9879fc8ccf7";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-msgs, geographiclib, geometry-msgs, ros-environment }:
 buildRosPackage {
   pname = "ros-iron-etsi-its-msgs-utils";
-  version = "2.1.0-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/iron/etsi_its_msgs_utils/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "dc8a8b83c1a8c762ede232bb1e2d66e396f323c773020981c81f4a10b749381b";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/iron/etsi_its_msgs_utils/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "ef73b9cdbea64da2021a37c01176040aa89b4581871b9faa2526502529865b4f";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-marti-dbw-msgs";
-  version = "1.5.2-r1";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/iron/marti_dbw_msgs/1.5.2-1.tar.gz";
-    name = "1.5.2-1.tar.gz";
-    sha256 = "613d8162f9ed5073c67c61d771de1fb0633bd27a0d80cc981a9c965b5f1f5b2d";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/iron/marti_dbw_msgs/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "e4632fd96de31d401294e4df64a0c7f82ef7ea3820184bb636660d0341085be8";
   };
 
   buildType = "ament_cmake";

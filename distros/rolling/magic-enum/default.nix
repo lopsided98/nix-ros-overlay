@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-rolling-magic-enum";
-  version = "0.9.5-r2";
+  version = "0.9.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/magic_enum-release/archive/release/rolling/magic_enum/0.9.5-2.tar.gz";
-    name = "0.9.5-2.tar.gz";
-    sha256 = "3d01be1a650e8f72b57c87ba4e43bd3b42e2c8413dbb02fd6384eef5d17e33c6";
+    url = "https://github.com/ros2-gbp/magic_enum-release/archive/release/rolling/magic_enum/0.9.6-1.tar.gz";
+    name = "0.9.6-1.tar.gz";
+    sha256 = "ba547a65f69284866b4c3e30a8f1d2f0d372d1d684104b9abac6e5d99f700dfc";
   };
 
   buildType = "cmake";
