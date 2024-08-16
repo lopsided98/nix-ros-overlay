@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-marti-can-msgs";
-  version = "1.5.2-r3";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/jazzy/marti_can_msgs/1.5.2-3.tar.gz";
-    name = "1.5.2-3.tar.gz";
-    sha256 = "4efba69d33d0e73b4b78884c32644378fc06f9e81307a9fa54e14fef62bd7b30";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/jazzy/marti_can_msgs/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "164859a94dbaff474ab8d301782c3b6f913a368cc3d7e5392907d975c204c0cd";
   };
 
   buildType = "ament_cmake";

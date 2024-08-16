@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, builtin-interfaces, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-joint-state-broadcaster";
-  version = "4.12.0-r1";
+  version = "4.12.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/joint_state_broadcaster/4.12.0-1.tar.gz";
-    name = "4.12.0-1.tar.gz";
-    sha256 = "c75156d9b690eda94ecea6fe80b7d6f5b886528cf0f8d5d7aeff83b4d0e3c144";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/joint_state_broadcaster/4.12.1-1.tar.gz";
+    name = "4.12.1-1.tar.gz";
+    sha256 = "91e541d087729241aa94620801be8ec3133d303732e8d32de2714053aee6813f";
   };
 
   buildType = "ament_cmake";

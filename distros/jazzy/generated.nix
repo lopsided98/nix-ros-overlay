@@ -232,6 +232,10 @@ self: super: {
 
  bag2-to-image = self.callPackage ./bag2-to-image {};
 
+ battery-state-broadcaster = self.callPackage ./battery-state-broadcaster {};
+
+ battery-state-rviz-overlay = self.callPackage ./battery-state-rviz-overlay {};
+
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
@@ -535,6 +539,12 @@ self: super: {
  etsi-its-cam-conversion = self.callPackage ./etsi-its-cam-conversion {};
 
  etsi-its-cam-msgs = self.callPackage ./etsi-its-cam-msgs {};
+
+ etsi-its-cam-ts-coding = self.callPackage ./etsi-its-cam-ts-coding {};
+
+ etsi-its-cam-ts-conversion = self.callPackage ./etsi-its-cam-ts-conversion {};
+
+ etsi-its-cam-ts-msgs = self.callPackage ./etsi-its-cam-ts-msgs {};
 
  etsi-its-coding = self.callPackage ./etsi-its-coding {};
 
@@ -1066,12 +1076,6 @@ self: super: {
 
  map-msgs = self.callPackage ./map-msgs {};
 
- mapviz = self.callPackage ./mapviz {};
-
- mapviz-interfaces = self.callPackage ./mapviz-interfaces {};
-
- mapviz-plugins = self.callPackage ./mapviz-plugins {};
-
  marine-acoustic-msgs = self.callPackage ./marine-acoustic-msgs {};
 
  marine-sensor-msgs = self.callPackage ./marine-sensor-msgs {};
@@ -1159,6 +1163,8 @@ self: super: {
  mola-kernel = self.callPackage ./mola-kernel {};
 
  mola-launcher = self.callPackage ./mola-launcher {};
+
+ mola-lidar-odometry = self.callPackage ./mola-lidar-odometry {};
 
  mola-metric-maps = self.callPackage ./mola-metric-maps {};
 
@@ -1284,7 +1290,35 @@ self: super: {
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
+ mrpt-apps = self.callPackage ./mrpt-apps {};
+
  mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
+
+ mrpt-libapps = self.callPackage ./mrpt-libapps {};
+
+ mrpt-libbase = self.callPackage ./mrpt-libbase {};
+
+ mrpt-libgui = self.callPackage ./mrpt-libgui {};
+
+ mrpt-libhwdrivers = self.callPackage ./mrpt-libhwdrivers {};
+
+ mrpt-libmaps = self.callPackage ./mrpt-libmaps {};
+
+ mrpt-libmath = self.callPackage ./mrpt-libmath {};
+
+ mrpt-libnav = self.callPackage ./mrpt-libnav {};
+
+ mrpt-libobs = self.callPackage ./mrpt-libobs {};
+
+ mrpt-libopengl = self.callPackage ./mrpt-libopengl {};
+
+ mrpt-libposes = self.callPackage ./mrpt-libposes {};
+
+ mrpt-libros2bridge = self.callPackage ./mrpt-libros2bridge {};
+
+ mrpt-libslam = self.callPackage ./mrpt-libslam {};
+
+ mrpt-libtclap = self.callPackage ./mrpt-libtclap {};
 
  mrpt-map-server = self.callPackage ./mrpt-map-server {};
 
@@ -1318,11 +1352,11 @@ self: super: {
 
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
 
+ mrpt-tps-astar-planner = self.callPackage ./mrpt-tps-astar-planner {};
+
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
-
- multires-image = self.callPackage ./multires-image {};
 
  mvsim = self.callPackage ./mvsim {};
 
@@ -1926,6 +1960,10 @@ self: super: {
 
  ros2trace-analysis = self.callPackage ./ros2trace-analysis {};
 
+ ros-babel-fish = self.callPackage ./ros-babel-fish {};
+
+ ros-babel-fish-test-msgs = self.callPackage ./ros-babel-fish-test-msgs {};
+
  ros-base = self.callPackage ./ros-base {};
 
  ros-core = self.callPackage ./ros-core {};
@@ -2395,8 +2433,6 @@ self: super: {
  tf-transformations = self.callPackage ./tf-transformations {};
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
-
- tile-map = self.callPackage ./tile-map {};
 
  tinyspline-vendor = self.callPackage ./tinyspline-vendor {};
 

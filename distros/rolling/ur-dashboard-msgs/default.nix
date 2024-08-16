@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-ur-dashboard-msgs";
-  version = "2.4.8-r1";
+  version = "2.4.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/rolling/ur_dashboard_msgs/2.4.8-1.tar.gz";
-    name = "2.4.8-1.tar.gz";
-    sha256 = "861bf5613ddd16958191a5c42fda3d1623a21bbaf8345907c4f749a794f02c27";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/rolling/ur_dashboard_msgs/2.4.9-1.tar.gz";
+    name = "2.4.9-1.tar.gz";
+    sha256 = "c98a927fe0b255fe531b000564cf87c5ff6c8f945edf1921454d19a2a17999ce";
   };
 
   buildType = "ament_cmake";

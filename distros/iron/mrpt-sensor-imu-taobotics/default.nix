@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, mrpt-msgs, mrpt-sensorlib, mrpt2, rclcpp, rclcpp-components, ros-environment, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-mrpt-sensor-imu-taobotics";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/iron/mrpt_sensor_imu_taobotics/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "77077a4b838f47b65edafe79deabbffe2f0dae0b6eab0d9bc82ac9136601639d";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/iron/mrpt_sensor_imu_taobotics/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "89439de16e5c66ae4b74d9299622c0b038c082599a33253a5c8eed1533aae95f";
   };
 
   buildType = "ament_cmake";

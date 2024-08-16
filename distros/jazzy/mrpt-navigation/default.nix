@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, mrpt-map-server, mrpt-nav-interfaces, mrpt-pf-localization, mrpt-pointcloud-pipeline, mrpt-rawlog, mrpt-reactivenav2d, mrpt-tutorials }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-navigation";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/jazzy/mrpt_navigation/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "90ec0cf232d052c1dc01451646ac7579d6bb807172db6098d1917ccd592686b0";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/jazzy/mrpt_navigation/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "02f457e2c4314c67d80e9dcf9b8329ba062bef89a94d8d52fe267a4b30db54c5";
   };
 
   buildType = "ament_cmake";

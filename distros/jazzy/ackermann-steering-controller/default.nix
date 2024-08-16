@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-test-assets, std-srvs, steering-controllers-library }:
 buildRosPackage {
   pname = "ros-jazzy-ackermann-steering-controller";
-  version = "4.12.0-r1";
+  version = "4.12.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/ackermann_steering_controller/4.12.0-1.tar.gz";
-    name = "4.12.0-1.tar.gz";
-    sha256 = "4d7dd3228bd4ceac069c74ad489c7434347222eb457493bb89bc872b48bddf31";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/ackermann_steering_controller/4.12.1-1.tar.gz";
+    name = "4.12.1-1.tar.gz";
+    sha256 = "1e8e69e01c0ef732df2aee67480714f16856a917280362ee80c06681da6d2e34";
   };
 
   buildType = "ament_cmake";

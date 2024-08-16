@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-etsi-its-cam-msgs";
-  version = "2.1.0-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/iron/etsi_its_cam_msgs/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "488b9776070d9136623e4c93627003dc3fa04a5ac9312876fad4fe7e17b3e184";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/iron/etsi_its_cam_msgs/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "0c2174bb9541f63e249320944d46299dcd13bf7fc6274fdbb79c2b8613fd392e";
   };
 
   buildType = "ament_cmake";
