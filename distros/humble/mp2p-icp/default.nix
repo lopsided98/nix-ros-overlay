@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt2 }:
 buildRosPackage {
   pname = "ros-humble-mp2p-icp";
-  version = "1.5.2-r1";
+  version = "1.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/humble/mp2p_icp/1.5.2-1.tar.gz";
-    name = "1.5.2-1.tar.gz";
-    sha256 = "040980796548e883876fcd2392772eabab9b639cf8c6ed66a9a82e7dc65d0401";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/humble/mp2p_icp/1.5.3-1.tar.gz";
+    name = "1.5.3-1.tar.gz";
+    sha256 = "83821bab39fde89ac04ba1ac7326b4c18f9465caea14d7d0d14d1d0da9d8fc68";
   };
 
   buildType = "cmake";

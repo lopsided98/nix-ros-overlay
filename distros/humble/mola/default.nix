@@ -2,20 +2,21 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, kitti-metrics-eval, mola-bridge-ros2, mola-demos, mola-imu-preintegration, mola-input-euroc-dataset, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset, mola-input-rawlog, mola-input-rosbag2, mola-kernel, mola-launcher, mola-metric-maps, mola-navstate-fg, mola-navstate-fuse, mola-pose-list, mola-relocalization, mola-traj-tools, mola-viz, mola-yaml }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, kitti-metrics-eval, mola-bridge-ros2, mola-demos, mola-imu-preintegration, mola-input-euroc-dataset, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset, mola-input-rawlog, mola-input-rosbag2, mola-kernel, mola-launcher, mola-metric-maps, mola-navstate-fg, mola-navstate-fuse, mola-pose-list, mola-relocalization, mola-traj-tools, mola-viz, mola-yaml }:
 buildRosPackage {
   pname = "ros-humble-mola";
-  version = "1.0.8-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "b91341c40e17396ce71f54a3a102e31f53b7b3b45f4e76b075cc0e8916049129";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "7150c2782ccb5180901276c03bfb55b129fd569ff46b2b3d62d6d79d247022f6";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ ament-lint-auto ament-lint-common kitti-metrics-eval mola-bridge-ros2 mola-demos mola-imu-preintegration mola-input-euroc-dataset mola-input-kitti-dataset mola-input-kitti360-dataset mola-input-mulran-dataset mola-input-paris-luco-dataset mola-input-rawlog mola-input-rosbag2 mola-kernel mola-launcher mola-metric-maps mola-navstate-fg mola-navstate-fuse mola-pose-list mola-relocalization mola-traj-tools mola-viz mola-yaml ];
+  checkInputs = [ ament-cmake-xmllint ament-lint-auto ament-lint-cmake ];
+  propagatedBuildInputs = [ kitti-metrics-eval mola-bridge-ros2 mola-demos mola-imu-preintegration mola-input-euroc-dataset mola-input-kitti-dataset mola-input-kitti360-dataset mola-input-mulran-dataset mola-input-paris-luco-dataset mola-input-rawlog mola-input-rosbag2 mola-kernel mola-launcher mola-metric-maps mola-navstate-fg mola-navstate-fuse mola-pose-list mola-relocalization mola-traj-tools mola-viz mola-yaml ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

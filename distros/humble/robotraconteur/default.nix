@@ -8,9 +8,9 @@ buildRosPackage {
   version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotraconteur-packaging/robotraconteur-ros2-release/archive/release/humble/robotraconteur/1.1.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/robotraconteur-release/archive/release/humble/robotraconteur/1.1.1-1.tar.gz";
     name = "1.1.1-1.tar.gz";
-    sha256 = "93add797df392d650edff054674f3f2f02a2a539c6c90da18c3b19f8d2ec0990";
+    sha256 = "db1b74f0b2d8a431616e273cd8688730dc5bbb1c46d077041c3e9701ac9d5ec8";
   };
 
   buildType = "cmake";

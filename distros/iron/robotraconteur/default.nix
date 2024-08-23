@@ -8,9 +8,9 @@ buildRosPackage {
   version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotraconteur-packaging/robotraconteur-ros2-release/archive/release/iron/robotraconteur/1.1.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/robotraconteur-release/archive/release/iron/robotraconteur/1.1.1-1.tar.gz";
     name = "1.1.1-1.tar.gz";
-    sha256 = "d8c4b6665e9826694246c9e6c4106b835658ef20d2b90b49985ee0a95e2895bd";
+    sha256 = "1b7eec32c70e349856b846eee9e0ae53d7533a55f953640126b106aae533979a";
   };
 
   buildType = "cmake";

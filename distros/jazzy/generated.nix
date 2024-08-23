@@ -1662,6 +1662,8 @@ self: super: {
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
 
+ qml-ros2-plugin = self.callPackage ./qml-ros2-plugin {};
+
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
 
  qt-dotgraph = self.callPackage ./qt-dotgraph {};

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt2 }:
 buildRosPackage {
   pname = "ros-iron-mola-traj-tools";
-  version = "1.0.8-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_traj_tools/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "6cba2f09e1729f153ad57116794f1743e13881170962388d3f087d61c02ccca2";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_traj_tools/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "24aab63bcca36dc4ed8101b25d3ab81ab7d1d2dad0be08b21a173c9d4f35e53b";
   };
 
   buildType = "cmake";

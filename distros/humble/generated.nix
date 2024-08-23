@@ -250,9 +250,19 @@ self: super: {
 
  as2-msgs = self.callPackage ./as2-msgs {};
 
+ as2-platform-crazyflie = self.callPackage ./as2-platform-crazyflie {};
+
+ as2-platform-dji-osdk = self.callPackage ./as2-platform-dji-osdk {};
+
+ as2-platform-dji-psdk = self.callPackage ./as2-platform-dji-psdk {};
+
  as2-platform-gazebo = self.callPackage ./as2-platform-gazebo {};
 
+ as2-platform-mavlink = self.callPackage ./as2-platform-mavlink {};
+
  as2-platform-multirotor-simulator = self.callPackage ./as2-platform-multirotor-simulator {};
+
+ as2-platform-tello = self.callPackage ./as2-platform-tello {};
 
  as2-realsense-interface = self.callPackage ./as2-realsense-interface {};
 
@@ -1220,6 +1230,8 @@ self: super: {
 
  kinematics-interface-kdl = self.callPackage ./kinematics-interface-kdl {};
 
+ kinematics-interface-pinocchio = self.callPackage ./kinematics-interface-pinocchio {};
+
  kinova-gen3-6dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-6dof-robotiq-2f-85-moveit-config {};
 
  kinova-gen3-7dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-7dof-robotiq-2f-85-moveit-config {};
@@ -1827,6 +1839,8 @@ self: super: {
  navigation2 = self.callPackage ./navigation2 {};
 
  ndt-omp = self.callPackage ./ndt-omp {};
+
+ neo-nav2-bringup = self.callPackage ./neo-nav2-bringup {};
 
  neo-simulation2 = self.callPackage ./neo-simulation2 {};
 

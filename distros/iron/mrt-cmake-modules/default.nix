@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, gtest-vendor, lcov, python3Packages, ros-environment }:
 buildRosPackage {
   pname = "ros-iron-mrt-cmake-modules";
-  version = "1.0.9-r4";
+  version = "1.0.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrt_cmake_modules-release/archive/release/iron/mrt_cmake_modules/1.0.9-4.tar.gz";
-    name = "1.0.9-4.tar.gz";
-    sha256 = "6c842930ef31705670429336ff21676d8f7a825d1fb56aefd852ac7ef0c0717a";
+    url = "https://github.com/ros2-gbp/mrt_cmake_modules-release/archive/release/iron/mrt_cmake_modules/1.0.10-1.tar.gz";
+    name = "1.0.10-1.tar.gz";
+    sha256 = "0e76f821f7c9e484c0682d37a00e11cdf4780e51ec8ecca7556ff34a7305ffbf";
   };
 
   buildType = "catkin";
