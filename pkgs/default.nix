@@ -10,6 +10,7 @@ self: super: with self.lib; {
     colcon-devtools
     colcon-library-path
     colcon-metadata
+    colcon-mixin
     colcon-notification
     colcon-output
     colcon-package-information
@@ -96,6 +97,8 @@ self: super: with self.lib; {
       colcon-library-path = pyFinal.callPackage ./colcon/library-path.nix { };
 
       colcon-metadata = pyFinal.callPackage ./colcon/metadata.nix { };
+
+      colcon-mixin = pyFinal.callPackage ./colcon/mixin.nix { };
 
       colcon-notification = pyFinal.callPackage ./colcon/notification.nix { };
 
