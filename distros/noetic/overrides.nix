@@ -26,6 +26,21 @@ rosSelf: rosSuper: with rosSelf.lib; {
     hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
   };
 
+  lvr2 = rosSuper.lvr2.overrideAttrs ({
+    nativeBuildInputs ? [], buildInputs ? [], postPatch ? "", ...
+  } : {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+    buildInputs = buildInputs ++ (with self; [ libtiff lz4 libGLU ]);
+
+    env.NIX_CFLAGS_COMPILE = "-fpermissive";
+
+    postPatch = with self.lib; postPatch + ''
+      substituteInPlace CMakeModules/FindLz4.cmake \
+        --replace-fail "set(LZ4_SEARCH_HEADER_PATHS" "set(LZ4_SEARCH_HEADER_PATHS ${getDev self.lz4}/include" \
+        --replace-fail "set(LZ4_SEARCH_LIB_PATH" "set(LZ4_SEARCH_LIB_PATH ${getLib self.lz4}/lib"
+    '';
+  });
+
   mapviz = rosSuper.mapviz.overrideAttrs ({
     patches ? [], ...
   }: {
