@@ -406,8 +406,6 @@ self: super: {
 
  dummy-sensors = self.callPackage ./dummy-sensors {};
 
- dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
-
  dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
 
  dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
@@ -1226,7 +1224,7 @@ self: super: {
 
  mrpt-libposes = self.callPackage ./mrpt-libposes {};
 
- mrpt-libros2bridge = self.callPackage ./mrpt-libros2bridge {};
+ mrpt-libros-bridge = self.callPackage ./mrpt-libros-bridge {};
 
  mrpt-libslam = self.callPackage ./mrpt-libslam {};
 
@@ -1324,8 +1322,6 @@ self: super: {
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
 
- octomap = self.callPackage ./octomap {};
-
  octomap-mapping = self.callPackage ./octomap-mapping {};
 
  octomap-msgs = self.callPackage ./octomap-msgs {};
@@ -1335,8 +1331,6 @@ self: super: {
  octomap-rviz-plugins = self.callPackage ./octomap-rviz-plugins {};
 
  octomap-server = self.callPackage ./octomap-server {};
-
- octovis = self.callPackage ./octovis {};
 
  odom-to-tf-ros2 = self.callPackage ./odom-to-tf-ros2 {};
 
@@ -1495,6 +1489,8 @@ self: super: {
  python-orocos-kdl-vendor = self.callPackage ./python-orocos-kdl-vendor {};
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
+
+ qml-ros2-plugin = self.callPackage ./qml-ros2-plugin {};
 
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
 
@@ -1740,6 +1736,8 @@ self: super: {
 
  robotiq-description = self.callPackage ./robotiq-description {};
 
+ robotraconteur = self.callPackage ./robotraconteur {};
+
  ros2-control = self.callPackage ./ros2-control {};
 
  ros2-control-test-assets = self.callPackage ./ros2-control-test-assets {};
@@ -1803,6 +1801,10 @@ self: super: {
  ros2trace = self.callPackage ./ros2trace {};
 
  ros2trace-analysis = self.callPackage ./ros2trace-analysis {};
+
+ ros-babel-fish = self.callPackage ./ros-babel-fish {};
+
+ ros-babel-fish-test-msgs = self.callPackage ./ros-babel-fish-test-msgs {};
 
  ros-base = self.callPackage ./ros-base {};
 

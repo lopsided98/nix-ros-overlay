@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, as2-core, as2-msgs, geometry-msgs, librealsense2, nav-msgs, rclcpp, sensor-msgs, std-msgs, std-srvs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-as2-realsense-interface";
-  version = "1.1.0-r1";
+  version = "1.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_realsense_interface/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "5d2771e9e49aaaed48500cc9021c5ae619ba32bcb8219eb4478820bd5194098e";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_realsense_interface/1.1.2-2.tar.gz";
+    name = "1.1.2-2.tar.gz";
+    sha256 = "ac7fd77fc0993e8ceaaabe634395bd04fdebfa0f48b1a0a90ee2ac0a7bc6f57f";
   };
 
   buildType = "ament_cmake";

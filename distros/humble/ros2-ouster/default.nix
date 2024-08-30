@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, launch, launch-ros, libtins, ouster-msgs, pcl, pcl-conversions, rclcpp, rclcpp-components, rclcpp-lifecycle, sensor-msgs, std-srvs, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros2-ouster";
-  version = "0.4.2-r1";
+  version = "0.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_ouster_drivers-release/archive/release/humble/ros2_ouster/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "6de63b6b84d56891bd82c890d839ee8cf70f03f66822a2b2cb5a2ce18b71d7dd";
+    url = "https://github.com/ros2-gbp/ros2_ouster_drivers-release/archive/release/humble/ros2_ouster/0.4.3-1.tar.gz";
+    name = "0.4.3-1.tar.gz";
+    sha256 = "e3fbe0422fc69482bf934982349b66265998d6aa52a982e076ffc02572721f85";
   };
 
   buildType = "ament_cmake";

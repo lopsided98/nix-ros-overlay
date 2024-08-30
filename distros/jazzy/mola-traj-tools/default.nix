@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt2 }:
+{ lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-jazzy-mola-traj-tools";
-  version = "1.0.8-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_traj_tools/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "86df4a35a910a62284824ab39509b92973c3a52a92d54d3cda8994611e9f3e4a";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_traj_tools/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "1a3aa2c77762709845ae2b60016110788aec8d5c5cf126e515de221aff13b573";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ mola-common mrpt2 ];
+  propagatedBuildInputs = [ mola-common mrpt-libposes ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

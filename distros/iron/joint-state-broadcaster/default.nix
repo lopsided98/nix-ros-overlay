@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, builtin-interfaces, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-iron-joint-state-broadcaster";
-  version = "3.26.1-r1";
+  version = "3.26.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/joint_state_broadcaster/3.26.1-1.tar.gz";
-    name = "3.26.1-1.tar.gz";
-    sha256 = "790c4bbb9ad79f065564351e31a72b5973f8a365f3aab901e9536414db7a9f35";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/joint_state_broadcaster/3.26.2-1.tar.gz";
+    name = "3.26.2-1.tar.gz";
+    sha256 = "ea18a2a854580b7974af1b7913928786b66dffa92914d8a495e48a7717e60cf8";
   };
 
   buildType = "ament_cmake";

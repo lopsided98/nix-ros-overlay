@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, geometry-msgs, laser-geometry, launch, launch-testing, map-msgs, message-filters, nav-msgs, nav2-common, nav2-lifecycle-manager, nav2-map-server, nav2-msgs, nav2-util, nav2-voxel-grid, pluginlib, rclcpp, rclcpp-lifecycle, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-iron-nav2-costmap-2d";
-  version = "1.2.9-r1";
+  version = "1.2.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_costmap_2d/1.2.9-1.tar.gz";
-    name = "1.2.9-1.tar.gz";
-    sha256 = "a171d1434435788e727c650aa731758f85af37a6875b1719faa2478eeed3b084";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_costmap_2d/1.2.10-1.tar.gz";
+    name = "1.2.10-1.tar.gz";
+    sha256 = "a783472d30b4b063c68a722f33ce86a7f939729dbf4e46cb3774282efe3e3dab";
   };
 
   buildType = "ament_cmake";

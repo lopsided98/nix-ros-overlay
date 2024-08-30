@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb1, nlohmann_json, opencv, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-depthai";
-  version = "2.26.1-r1";
+  version = "2.28.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-core-release/archive/release/jazzy/depthai/2.26.1-1.tar.gz";
-    name = "2.26.1-1.tar.gz";
-    sha256 = "37b2c93808f785c66e709f7c3754c079977e71269e5f73629e8af4a0005db335";
+    url = "https://github.com/luxonis/depthai-core-release/archive/release/jazzy/depthai/2.28.0-1.tar.gz";
+    name = "2.28.0-1.tar.gz";
+    sha256 = "4b59598aa06bc44891f0a19d69298a59f66c65af71ead774f6a2b2af8485f3d4";
   };
 
   buildType = "ament_cmake";
