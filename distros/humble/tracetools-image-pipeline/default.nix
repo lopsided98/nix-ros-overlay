@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, pkg-config }:
 buildRosPackage {
   pname = "ros-humble-tracetools-image-pipeline";
-  version = "3.0.5-r1";
+  version = "3.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/tracetools_image_pipeline/3.0.5-1.tar.gz";
-    name = "3.0.5-1.tar.gz";
-    sha256 = "6c724c1d8a7b4a0ef82bcb1e88edd263beebca8187a30d81ad534cb8c319bff8";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/tracetools_image_pipeline/3.0.6-1.tar.gz";
+    name = "3.0.6-1.tar.gz";
+    sha256 = "91f8c5a4b0f3cd4637eea7538a4a6fe56402e1323e7cfb05522c82391a76c25a";
   };
 
   buildType = "ament_cmake";

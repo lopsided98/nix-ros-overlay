@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mrpt2 }:
+{ lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libbase, mrpt-libgui, mrpt-libmaps, mrpt-libobs, mrpt-libposes, mrpt-libtclap, tbb_2021_11 }:
 buildRosPackage {
   pname = "ros-noetic-mp2p-icp";
-  version = "0.1.0-r1";
+  version = "1.5.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mp2p_icp-release/archive/release/noetic/mp2p_icp/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "f090e068a36d0fcc5a69fca60d30b847bfc156daf89fcce02bd5cc96dfadf45b";
+    url = "https://github.com/mrpt-ros-pkg-release/mp2p_icp-release/archive/release/noetic/mp2p_icp/1.5.5-1.tar.gz";
+    name = "1.5.5-1.tar.gz";
+    sha256 = "b128759e8672406dfa52aee9e1b53609df9a35c2113e1b8f2db3cad69b58af7e";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ mrpt2 ];
+  propagatedBuildInputs = [ mola-common mrpt-libbase mrpt-libgui mrpt-libmaps mrpt-libobs mrpt-libposes mrpt-libtclap tbb_2021_11 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

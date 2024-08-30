@@ -1248,7 +1248,7 @@ self: super: {
 
  mrpt-libposes = self.callPackage ./mrpt-libposes {};
 
- mrpt-libros2bridge = self.callPackage ./mrpt-libros2bridge {};
+ mrpt-libros-bridge = self.callPackage ./mrpt-libros-bridge {};
 
  mrpt-libslam = self.callPackage ./mrpt-libslam {};
 

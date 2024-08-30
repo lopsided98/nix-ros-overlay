@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mola-common, mola-imu-preintegration, mola-kernel, mrpt2 }:
+{ lib, buildRosPackage, fetchurl, cmake, mola-common, mola-imu-preintegration, mola-kernel, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-jazzy-mola-navstate-fuse";
-  version = "1.0.8-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_navstate_fuse/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "8ca849a9fd2f7ce1733338b39b44cf62ded16922e0e17cd6fa954a536f8e5d20";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_navstate_fuse/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "e5496c50804d7964a4550b4b6637de1e0cd5ec8de1adc123f009e06add3a6524";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ mola-common mola-imu-preintegration mola-kernel mrpt2 ];
+  propagatedBuildInputs = [ mola-common mola-imu-preintegration mola-kernel mrpt-libobs ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

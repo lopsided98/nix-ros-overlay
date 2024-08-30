@@ -28,6 +28,8 @@ self: super: {
 
  actionlib-tutorials = self.callPackage ./actionlib-tutorials {};
 
+ adi-tmc-coe = self.callPackage ./adi-tmc-coe {};
+
  adi-tmcl = self.callPackage ./adi-tmcl {};
 
  agni-tf-tools = self.callPackage ./agni-tf-tools {};
@@ -2010,6 +2012,8 @@ self: super: {
 
  mocap-optitrack = self.callPackage ./mocap-optitrack {};
 
+ mola-common = self.callPackage ./mola-common {};
+
  mongodb-log = self.callPackage ./mongodb-log {};
 
  mongodb-store-msgs = self.callPackage ./mongodb-store-msgs {};
@@ -2140,6 +2144,8 @@ self: super: {
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
+ mrpt-apps = self.callPackage ./mrpt-apps {};
+
  mrpt-ekf-slam-2d = self.callPackage ./mrpt-ekf-slam-2d {};
 
  mrpt-ekf-slam-3d = self.callPackage ./mrpt-ekf-slam-3d {};
@@ -2149,6 +2155,32 @@ self: super: {
  mrpt-graphslam-2d = self.callPackage ./mrpt-graphslam-2d {};
 
  mrpt-icp-slam-2d = self.callPackage ./mrpt-icp-slam-2d {};
+
+ mrpt-libapps = self.callPackage ./mrpt-libapps {};
+
+ mrpt-libbase = self.callPackage ./mrpt-libbase {};
+
+ mrpt-libgui = self.callPackage ./mrpt-libgui {};
+
+ mrpt-libhwdrivers = self.callPackage ./mrpt-libhwdrivers {};
+
+ mrpt-libmaps = self.callPackage ./mrpt-libmaps {};
+
+ mrpt-libmath = self.callPackage ./mrpt-libmath {};
+
+ mrpt-libnav = self.callPackage ./mrpt-libnav {};
+
+ mrpt-libobs = self.callPackage ./mrpt-libobs {};
+
+ mrpt-libopengl = self.callPackage ./mrpt-libopengl {};
+
+ mrpt-libposes = self.callPackage ./mrpt-libposes {};
+
+ mrpt-libros-bridge = self.callPackage ./mrpt-libros-bridge {};
+
+ mrpt-libslam = self.callPackage ./mrpt-libslam {};
+
+ mrpt-libtclap = self.callPackage ./mrpt-libtclap {};
 
  mrpt-local-obstacles = self.callPackage ./mrpt-local-obstacles {};
 

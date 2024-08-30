@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, cv-bridge, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libgui, mrpt-libmaps, mrpt-libslam, octomap, opencv, openni2, pkg-config, python3Packages, pythonPackages, rclcpp, ros-environment, rosbag2-storage, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-libhwdrivers";
-  version = "2.13.6-r1";
+  version = "2.13.7-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/rolling/mrpt_libhwdrivers/2.13.6-1.tar.gz";
-    name = "2.13.6-1.tar.gz";
-    sha256 = "da5e14a2ae91c4efeb0f1ddfcbda881be3babffbc6a8c78a96005a12ccbcfe2d";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/rolling/mrpt_libhwdrivers/2.13.7-3.tar.gz";
+    name = "2.13.7-3.tar.gz";
+    sha256 = "3f9b61102c54d0d84aa98d105a74b7a9fd62c70c7d22b084082584a5d0e512d9";
   };
 
   buildType = "cmake";

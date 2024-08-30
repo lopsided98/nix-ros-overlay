@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, geometry-msgs, nav2-common, nav2-controller, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-regulated-pure-pursuit-controller, nav2-util, pluginlib, rclcpp, tf2 }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-rotation-shim-controller";
-  version = "1.3.1-r1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_rotation_shim_controller/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "de4094930b890d2314dc6cfbcd458c1c38a925e4310cf5388aae5a9dff1923b8";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_rotation_shim_controller/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "ccdf44d2baf5d5e2c9cb8b53f49df28f1964219db6dace6e9c6d88af563488ba";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, as2-core, as2-msgs, cv-bridge, rclcpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-as2-usb-camera-interface";
-  version = "1.1.0-r1";
+  version = "1.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_usb_camera_interface/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "478fed8ec19fb95537d461c2ca5bea76bb2e11261fdb48ded421a2ff454d68df";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_usb_camera_interface/1.1.2-2.tar.gz";
+    name = "1.1.2-2.tar.gz";
+    sha256 = "c1ab0806e168ea92a9a897f3fbabe1c5ac7c04f8dd4954e21e6f72302622fc6f";
   };
 
   buildType = "ament_cmake";

@@ -384,6 +384,20 @@ self: super: {
 
  depthai = self.callPackage ./depthai {};
 
+ depthai-ros = self.callPackage ./depthai-ros {};
+
+ depthai-bridge = self.callPackage ./depthai-bridge {};
+
+ depthai-descriptions = self.callPackage ./depthai-descriptions {};
+
+ depthai-examples = self.callPackage ./depthai-examples {};
+
+ depthai-filters = self.callPackage ./depthai-filters {};
+
+ depthai-ros-driver = self.callPackage ./depthai-ros-driver {};
+
+ depthai-ros-msgs = self.callPackage ./depthai-ros-msgs {};
+
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
 
  derived-object-msgs = self.callPackage ./derived-object-msgs {};
@@ -910,7 +924,25 @@ self: super: {
 
  io-context = self.callPackage ./io-context {};
 
+ irobot-create-common-bringup = self.callPackage ./irobot-create-common-bringup {};
+
+ irobot-create-control = self.callPackage ./irobot-create-control {};
+
+ irobot-create-description = self.callPackage ./irobot-create-description {};
+
+ irobot-create-gz-bringup = self.callPackage ./irobot-create-gz-bringup {};
+
+ irobot-create-gz-plugins = self.callPackage ./irobot-create-gz-plugins {};
+
+ irobot-create-gz-sim = self.callPackage ./irobot-create-gz-sim {};
+
+ irobot-create-gz-toolbox = self.callPackage ./irobot-create-gz-toolbox {};
+
  irobot-create-msgs = self.callPackage ./irobot-create-msgs {};
+
+ irobot-create-nodes = self.callPackage ./irobot-create-nodes {};
+
+ irobot-create-toolbox = self.callPackage ./irobot-create-toolbox {};
 
  joint-limits = self.callPackage ./joint-limits {};
 
@@ -1314,7 +1346,7 @@ self: super: {
 
  mrpt-libposes = self.callPackage ./mrpt-libposes {};
 
- mrpt-libros2bridge = self.callPackage ./mrpt-libros2bridge {};
+ mrpt-libros-bridge = self.callPackage ./mrpt-libros-bridge {};
 
  mrpt-libslam = self.callPackage ./mrpt-libslam {};
 
@@ -1401,6 +1433,8 @@ self: super: {
  nav2-graceful-controller = self.callPackage ./nav2-graceful-controller {};
 
  nav2-lifecycle-manager = self.callPackage ./nav2-lifecycle-manager {};
+
+ nav2-loopback-sim = self.callPackage ./nav2-loopback-sim {};
 
  nav2-map-server = self.callPackage ./nav2-map-server {};
 
@@ -1662,6 +1696,8 @@ self: super: {
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
 
+ qml-ros2-plugin = self.callPackage ./qml-ros2-plugin {};
+
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
 
  qt-dotgraph = self.callPackage ./qt-dotgraph {};
@@ -1895,6 +1931,8 @@ self: super: {
  robotiq-controllers = self.callPackage ./robotiq-controllers {};
 
  robotiq-description = self.callPackage ./robotiq-description {};
+
+ robotraconteur = self.callPackage ./robotraconteur {};
 
  ros2-control = self.callPackage ./ros2-control {};
 

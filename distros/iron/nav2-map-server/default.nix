@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, graphicsmagick, launch, launch-ros, launch-testing, nav-msgs, nav2-common, nav2-msgs, nav2-util, rclcpp, rclcpp-lifecycle, std-msgs, tf2, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-iron-nav2-map-server";
-  version = "1.2.9-r1";
+  version = "1.2.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_map_server/1.2.9-1.tar.gz";
-    name = "1.2.9-1.tar.gz";
-    sha256 = "dad36da0198cd2eee79e386b50b9dd1843212d168e74b7954fe5fcb2950aa62e";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav2_map_server/1.2.10-1.tar.gz";
+    name = "1.2.10-1.tar.gz";
+    sha256 = "e033d3a6e5808b9694c844ce4b535377e8889bc8e8db9015c6c9c9bd9a692d3c";
   };
 
   buildType = "ament_cmake";

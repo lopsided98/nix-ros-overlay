@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, cv-bridge, image-geometry, image-transport, opencv, rclcpp, rclcpp-components, rcutils, sensor-msgs, tracetools-image-pipeline }:
 buildRosPackage {
   pname = "ros-iron-image-proc";
-  version = "4.0.1-r1";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/iron/image_proc/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "72d474f8c554cdd05f833aff73dc6ea5b42dada4ef4f0629610cf7321aaa7778";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/iron/image_proc/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "32e9a1b13c52763c3b9f5cb21b6f743fbceab23968d6bc2d5932caef62c2c2d9";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, pkg-config }:
 buildRosPackage {
   pname = "ros-iron-tracetools-image-pipeline";
-  version = "4.0.1-r1";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/iron/tracetools_image_pipeline/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "860e21c1d482e7763b4f4891f3ac0c42dd59880f4b39475f277b2374f5306a1c";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/iron/tracetools_image_pipeline/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "5efef89bd7c30f9351b29cd6591c94fb411e1e3adfeae721f582c228ae734554";
   };
 
   buildType = "ament_cmake";

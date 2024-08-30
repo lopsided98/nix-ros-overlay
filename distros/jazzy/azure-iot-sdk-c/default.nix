@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, curl, openssl, util-linux }:
 buildRosPackage {
   pname = "ros-jazzy-azure-iot-sdk-c";
-  version = "1.13.0-r2";
+  version = "1.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/azure_iot_sdk_c-release/archive/release/jazzy/azure_iot_sdk_c/1.13.0-2.tar.gz";
-    name = "1.13.0-2.tar.gz";
-    sha256 = "61bd420b5b0962a2abe09200876607d6489c321199ce41c05e1211437a48ebf3";
+    url = "https://github.com/ros2-gbp/azure_iot_sdk_c-release/archive/release/jazzy/azure_iot_sdk_c/1.14.0-1.tar.gz";
+    name = "1.14.0-1.tar.gz";
+    sha256 = "10edb55ea60191e09279b20b389d45fc4e3922ee8856a6fae62cbedb3c6c16dd";
   };
 
   buildType = "cmake";
