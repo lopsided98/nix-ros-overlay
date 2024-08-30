@@ -124,4 +124,10 @@ rosSelf: rosSuper: with rosSelf.lib; {
     url = "https://github.com/fmtlib/fmt/releases/download/9.1.0/fmt-9.1.0.zip";
     sha256 = "sha256-zOtMuTZuGKV0ISjLNSTOX1Doi0dvHlRzekf/3030yZY=";
   };
+
+  rviz-map-plugin = rosSuper.rviz-map-plugin.overrideAttrs ({
+    buildInputs ? [], ...
+  } : {
+    buildInputs = buildInputs ++ [ self.opencl-clhpp ];
+  });
 }
