@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake }:
 buildRosPackage {
   pname = "ros-iron-sick-safetyscanners-base";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SICKAG/sick_safetyscanners_base-release/archive/release/iron/sick_safetyscanners_base/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "d1483b618ec1cfacb14af9ac89d5c50b0d0aa9da72420359da7b8581b2b1cb13";
+    url = "https://github.com/SICKAG/sick_safetyscanners_base-release/archive/release/iron/sick_safetyscanners_base/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "5eff865176382d2fc626094504997c9d44439840df5402c9ed8098594e075859";
   };
 
   buildType = "cmake";

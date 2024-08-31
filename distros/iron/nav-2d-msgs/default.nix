@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-nav-2d-msgs";
-  version = "1.2.9-r1";
+  version = "1.2.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav_2d_msgs/1.2.9-1.tar.gz";
-    name = "1.2.9-1.tar.gz";
-    sha256 = "6225b794ea2f67449910f1d2f5be7dccfebe8adb110283cd26b0b988e3a7b233";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/iron/nav_2d_msgs/1.2.10-1.tar.gz";
+    name = "1.2.10-1.tar.gz";
+    sha256 = "54623845cf97b70678dcf3dcef9404106210a29878a72167a99000c1f05d1a98";
   };
 
   buildType = "ament_cmake";

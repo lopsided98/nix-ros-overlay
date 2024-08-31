@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-pytest, ament-lint-auto, ament-lint-common, cv-bridge, image-geometry, image-proc, image-transport, launch, launch-ros, launch-testing, launch-testing-ament-cmake, message-filters, python-cmake-module, python3Packages, rclcpp, rclcpp-components, rclpy, ros-testing, sensor-msgs, stereo-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-stereo-image-proc";
-  version = "5.0.3-r1";
+  version = "5.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/stereo_image_proc/5.0.3-1.tar.gz";
-    name = "5.0.3-1.tar.gz";
-    sha256 = "499f820fc5fdeb2b21a1314bb6eeb424c6cf3a9da0a33563c03b45a266bd0228";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/stereo_image_proc/5.0.4-1.tar.gz";
+    name = "5.0.4-1.tar.gz";
+    sha256 = "3709f2c426c22c05ca1c65a9e08998b8807be6465fad4dafc05ca98b539698c4";
   };
 
   buildType = "ament_cmake";

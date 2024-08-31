@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt2 }:
+{ lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libmaps, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-iron-mola-pose-list";
-  version = "1.0.8-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_pose_list/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "5633ce6008fa8f2e48ae8654d72ef36ac251e5717e72d31a5f70facd7183e02f";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_pose_list/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "a2d22d334fa10e4ba5b96aec7192e24aec5be2349b9df18d67a276be225cd9aa";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ mola-common mrpt2 ];
+  propagatedBuildInputs = [ mola-common mrpt-libmaps mrpt-libposes ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

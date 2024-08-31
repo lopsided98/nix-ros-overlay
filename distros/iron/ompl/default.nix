@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen, flann, ode, pkg-config }:
 buildRosPackage {
   pname = "ros-iron-ompl";
-  version = "1.6.0-r1";
+  version = "1.6.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ompl-release/archive/release/iron/ompl/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "309f675bba76482e1f1819a637bd3a8b233feb30338a580e71f256bfc9dda203";
+    url = "https://github.com/ros2-gbp/ompl-release/archive/release/iron/ompl/1.6.0-2.tar.gz";
+    name = "1.6.0-2.tar.gz";
+    sha256 = "e78ab8a4413442fcf58ca1a4a101c54ddd270d7994c5dc8a615191aed8e80ae0";
   };
 
   buildType = "cmake";

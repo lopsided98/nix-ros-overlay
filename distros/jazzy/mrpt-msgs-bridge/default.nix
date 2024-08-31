@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, mrpt-msgs, mrpt2, ros-environment, tf2 }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-msgs-bridge";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/jazzy/mrpt_msgs_bridge/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "066f63a61e6f9eb2bc442e211531ee988a3c8d1ef08a0a4714a1b8f7c20e9fc8";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/jazzy/mrpt_msgs_bridge/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "9dda3a58cc01d5087a7030458fabd2576a48f6cf298a29b370f18cbff6476a96";
   };
 
   buildType = "ament_cmake";

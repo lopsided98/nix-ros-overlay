@@ -5,16 +5,17 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen, tbb_2021_11 }:
 buildRosPackage {
   pname = "ros-iron-gtsam";
-  version = "4.2.0-r5";
+  version = "4.2.0-r6";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gtsam-release/archive/release/iron/gtsam/4.2.0-5.tar.gz";
-    name = "4.2.0-5.tar.gz";
-    sha256 = "b297a8cb85344b23f1424e03a38fdb3b18516f5a61dc1f54b80be25cfd50b0d1";
+    url = "https://github.com/ros2-gbp/gtsam-release/archive/release/iron/gtsam/4.2.0-6.tar.gz";
+    name = "4.2.0-6.tar.gz";
+    sha256 = "11508ded4e8060e29e25ef145b13ce27335fba4548eca0635278026f271a8b5d";
   };
 
   buildType = "cmake";
-  buildInputs = [ boost cmake eigen tbb_2021_11 ];
+  buildInputs = [ cmake ];
+  propagatedBuildInputs = [ boost eigen tbb_2021_11 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

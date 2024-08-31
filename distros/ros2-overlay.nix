@@ -151,6 +151,16 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   rosidl-generator-rs = rosSelf.callPackage ../pkgs/rosidl-generator-rs { };
 
+  rosx-introspection = rosSuper.rosx-introspection.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Don't download CPM, which is never needed because all
+    # dependencies are provided by Nix.
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail 'include(cmake/CPM.cmake)' ""
+    '';
+  });
+
   rqt-robot-monitor = rosSuper.rqt-robot-monitor.overrideAttrs ({
     postFixup ? "", ...
   }: {

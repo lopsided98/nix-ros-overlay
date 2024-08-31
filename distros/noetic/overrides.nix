@@ -21,10 +21,31 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   gazebo = self.gazebo_11;
 
+  hdf5-map-io = rosSuper.hdf5-map-io.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  } : {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+  });
+
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
     url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.19.20240304.tar.gz";
     hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
   };
+
+  lvr2 = rosSuper.lvr2.overrideAttrs ({
+    nativeBuildInputs ? [], buildInputs ? [], postPatch ? "", ...
+  } : {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+    buildInputs = buildInputs ++ (with self; [ libtiff lz4 libGLU ]);
+
+    env.NIX_CFLAGS_COMPILE = "-fpermissive";
+
+    postPatch = with self.lib; postPatch + ''
+      substituteInPlace CMakeModules/FindLz4.cmake \
+        --replace-fail "set(LZ4_SEARCH_HEADER_PATHS" "set(LZ4_SEARCH_HEADER_PATHS ${getDev self.lz4}/include" \
+        --replace-fail "set(LZ4_SEARCH_LIB_PATH" "set(LZ4_SEARCH_LIB_PATH ${getLib self.lz4}/lib"
+    '';
+  });
 
   mapviz = rosSuper.mapviz.overrideAttrs ({
     patches ? [], ...
@@ -103,4 +124,10 @@ rosSelf: rosSuper: with rosSelf.lib; {
     url = "https://github.com/fmtlib/fmt/releases/download/9.1.0/fmt-9.1.0.zip";
     sha256 = "sha256-zOtMuTZuGKV0ISjLNSTOX1Doi0dvHlRzekf/3030yZY=";
   };
+
+  rviz-map-plugin = rosSuper.rviz-map-plugin.overrideAttrs ({
+    buildInputs ? [], ...
+  } : {
+    buildInputs = buildInputs ++ [ self.opencl-clhpp ];
+  });
 }

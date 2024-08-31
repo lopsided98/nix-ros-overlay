@@ -60,18 +60,6 @@ in with lib; {
     hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
   };
 
-  libstatistics-collector = rosSuper.libstatistics-collector.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Add missing cstdint include
-      (self.fetchpatch {
-        url = "https://github.com/ros-tooling/libstatistics_collector/commit/1c340c97c731019d0c7b40f8c167b0ef666bcf75.patch";
-        hash = "sha256-zGCvIs/1CcqLyiLWZ+e3rCBJmNbGkkUs96dnPfHpjdE=";
-      })
-    ];
-  });
-
   libyaml-vendor = patchExternalProjectGit rosSuper.libyaml-vendor {
     url = "https://github.com/yaml/libyaml.git";
     rev = "2c891fc7a770e8ba2fec34fc6b545c672beb37e6";
@@ -133,6 +121,14 @@ in with lib; {
   rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
+  };
+
+  shared-queues-vendor = patchVendorUrl (patchVendorUrl rosSuper.shared-queues-vendor {
+    url = "https://github.com/cameron314/concurrentqueue/archive/8f65a8734d77c3cc00d74c0532efca872931d3ce.zip";
+    sha256 = "0cmsmgc87ndd9hiv187xkvjkn8fipn3hsijjc864h2lfcyigbxq1";
+  }) {
+    url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";
+    sha256 = "1255n51y1bjry97n4w60mgz6b9h14flfrxb01ihjf6pwvvfns8ag";
   };
 
   urdfdom = rosSuper.urdfdom.overrideAttrs ({

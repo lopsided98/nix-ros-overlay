@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, pal-hey5-controller-configuration, pal-hey5-description }:
 buildRosPackage {
   pname = "ros-humble-pal-hey5";
-  version = "4.1.0-r1";
+  version = "4.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_hey5-release/archive/release/humble/pal_hey5/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "e0dbc2fc4d461f91b1b43fcfa966304a336eae5e2c627a3baf6fa3ba71e62b84";
+    url = "https://github.com/pal-gbp/pal_hey5-release/archive/release/humble/pal_hey5/4.2.0-1.tar.gz";
+    name = "4.2.0-1.tar.gz";
+    sha256 = "aadeee6a18df940f052a8eca1b15dc779ab74b4275f8091fd65682338648b32e";
   };
 
   buildType = "ament_cmake";

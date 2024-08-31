@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-lint-auto, builtin-interfaces, python-cmake-module, rclcpp, rclcpp-lifecycle, rclpy, rcutils, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-message-filters";
-  version = "4.3.4-r1";
+  version = "4.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/humble/message_filters/4.3.4-1.tar.gz";
-    name = "4.3.4-1.tar.gz";
-    sha256 = "fc42f671f076306fc915b63cdee629c211d4845766f8b6c4e1520d68d866d2d9";
+    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/humble/message_filters/4.3.5-1.tar.gz";
+    name = "4.3.5-1.tar.gz";
+    sha256 = "47ae144dd748d730505a462eabba1014172373cc16235b1d9512846ed80de1cc";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, joint-state-publisher-gui, launch, launch-ros, launch-testing-ament-cmake, launch-testing-ros, robot-state-publisher, rviz2, urdf, urdfdom, xacro }:
 buildRosPackage {
   pname = "ros-iron-ur-description";
-  version = "2.3.0-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ur_description-release/archive/release/iron/ur_description/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "ee117dde74d6f17ee122ca5ddd93eda79d174776bd87db82327bfa3d5e1e7ad1";
+    url = "https://github.com/ros2-gbp/ur_description-release/archive/release/iron/ur_description/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "d9f20d276b5250e81a37b2829ab0e3e2587ee2851dcf61526a4b7621571ce1df";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ur-calibration, ur-controllers, ur-dashboard-msgs, ur-moveit-config, ur-robot-driver }:
 buildRosPackage {
   pname = "ros-iron-ur";
-  version = "2.3.9-r1";
+  version = "2.3.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/iron/ur/2.3.9-1.tar.gz";
-    name = "2.3.9-1.tar.gz";
-    sha256 = "c633d98b3dbe442c65137adf4c7e64dbfa532e7c881919b813f9167644dc1d6c";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/iron/ur/2.3.10-1.tar.gz";
+    name = "2.3.10-1.tar.gz";
+    sha256 = "3d6384d9ce0c73fd30cd4d59f8428d7711e192e4e3f7e3d6ee5b02935e6a78e9";
   };
 
   buildType = "ament_cmake";

@@ -5,16 +5,17 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen, tbb_2021_11 }:
 buildRosPackage {
   pname = "ros-jazzy-gtsam";
-  version = "4.2.0-r3";
+  version = "4.2.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gtsam-release/archive/release/jazzy/gtsam/4.2.0-3.tar.gz";
-    name = "4.2.0-3.tar.gz";
-    sha256 = "57e51516de0f7abfc08c5898559a3573097a494f215489c5f9e3ee6e1a87d16b";
+    url = "https://github.com/ros2-gbp/gtsam-release/archive/release/jazzy/gtsam/4.2.0-4.tar.gz";
+    name = "4.2.0-4.tar.gz";
+    sha256 = "cd30a2e523cc5b42e3e9514ecef072df4e9c6a01a92ad713c26228031a58171d";
   };
 
   buildType = "cmake";
-  buildInputs = [ boost cmake eigen tbb_2021_11 ];
+  buildInputs = [ cmake ];
+  propagatedBuildInputs = [ boost eigen tbb_2021_11 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

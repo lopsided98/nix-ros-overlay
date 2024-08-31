@@ -2,20 +2,21 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mola-common, mola-pose-list, mola-test-datasets, mp2p-icp, mrpt2 }:
+{ lib, buildRosPackage, fetchurl, cmake, mola-common, mola-pose-list, mola-test-datasets, mp2p-icp, mrpt-libmaps, mrpt-libobs, mrpt-libslam }:
 buildRosPackage {
   pname = "ros-iron-mola-relocalization";
-  version = "1.0.8-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_relocalization/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "1fd7e708dcd65c996a50c3c3079244558b50d430471d759316536be9c29bbf4b";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_relocalization/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "ffcac03e7bbe6e64a7a932de14384c1fd3aa5bdf214c30c7d138cbd6b3d79a5b";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ mola-common mola-pose-list mola-test-datasets mp2p-icp mrpt2 ];
+  checkInputs = [ mola-test-datasets ];
+  propagatedBuildInputs = [ mola-common mola-pose-list mp2p-icp mrpt-libmaps mrpt-libobs mrpt-libslam ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

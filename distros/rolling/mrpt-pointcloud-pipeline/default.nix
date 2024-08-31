@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, mp2p-icp, mrpt2, nav-msgs, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-pointcloud-pipeline";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/rolling/mrpt_pointcloud_pipeline/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "8d9be605b5f7ea9e4913f394aa9cf4374ec7ebb61d2d9ef1a547da8b250fb9b6";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/rolling/mrpt_pointcloud_pipeline/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "30a0f6f7faa61488d545c86301e516fe5faaefa2a2bf02b8f1d2dabebfd8f96a";
   };
 
   buildType = "ament_cmake";

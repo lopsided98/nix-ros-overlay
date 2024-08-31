@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, ament-lint-auto, ament-lint-common, controller-manager, gz-plugin-vendor, gz-sim-vendor, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-gz-ros2-control";
-  version = "1.2.6-r1";
+  version = "1.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/jazzy/gz_ros2_control/1.2.6-1.tar.gz";
-    name = "1.2.6-1.tar.gz";
-    sha256 = "020f07dbc6ad6471b9c452d43b53a70c38315e244ac6abc94d57ddde96738d57";
+    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/jazzy/gz_ros2_control/1.2.7-1.tar.gz";
+    name = "1.2.7-1.tar.gz";
+    sha256 = "d1e26813d6c9d8d45587664c10ccf9b66db5cfdca25d63c3844afa1eed09b6fb";
   };
 
   buildType = "ament_cmake";

@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cmake, gtsam, mola-common, mola-imu-preintegration, mola-kernel, mrpt2 }:
+{ lib, buildRosPackage, fetchurl, boost, cmake, gtsam, mola-common, mola-imu-preintegration, mola-kernel, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-rolling-mola-navstate-fg";
-  version = "1.0.8-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_navstate_fg/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "e032ba6898e40bd9b0eb43fa4031806f3c407bdf6cac668189f899b6a0a9ece1";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_navstate_fg/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "c8265d4350eeb7d00c54e44c978736de34062b05bbcf5c852162b179ea1ac510";
   };
 
   buildType = "cmake";
   buildInputs = [ boost cmake gtsam ];
-  propagatedBuildInputs = [ mola-common mola-imu-preintegration mola-kernel mrpt2 ];
+  propagatedBuildInputs = [ mola-common mola-imu-preintegration mola-kernel mrpt-libobs ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

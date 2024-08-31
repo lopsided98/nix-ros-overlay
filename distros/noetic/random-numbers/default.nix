@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin }:
 buildRosPackage {
   pname = "ros-noetic-random-numbers";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/random_numbers-release/archive/release/noetic/random_numbers/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "b1eba248517898185240a7f4f60dbddbe38d11b9409d55bc7512ea3903b909de";
+    url = "https://github.com/ros-gbp/random_numbers-release/archive/release/noetic/random_numbers/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "3ac65a35b0b89c7dff2363ddc7cb6fde57470e4f4de8d67aa1579a37f689e185";
   };
 
   buildType = "catkin";

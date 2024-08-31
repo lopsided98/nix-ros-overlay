@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, cv-bridge, image-geometry, image-transport, opencv, rclcpp, rclcpp-components, rcutils, sensor-msgs, tracetools-image-pipeline }:
 buildRosPackage {
   pname = "ros-humble-image-proc";
-  version = "3.0.5-r1";
+  version = "3.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/image_proc/3.0.5-1.tar.gz";
-    name = "3.0.5-1.tar.gz";
-    sha256 = "718066e2eea159a3ce0e75d6016e1a21ab251ac3168dd1fd6dc34fdef566ad77";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/image_proc/3.0.6-1.tar.gz";
+    name = "3.0.6-1.tar.gz";
+    sha256 = "9cf2ecfa7bca00fec55a209c9dd835435e4b0bb5d8af02b3f6f6578f0f8c59a6";
   };
 
   buildType = "ament_cmake";

@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt2 }:
+{ lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libmath, mrpt-libposes, mrpt-libtclap }:
 buildRosPackage {
   pname = "ros-rolling-kitti-metrics-eval";
-  version = "1.0.8-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/kitti_metrics_eval/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "3357b8c807373a35cc106aff748da60245f3ed54803ee85f81c02b5731356ca2";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/kitti_metrics_eval/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "203d4b55aac7c0997b0be587dc01f3b11434b649afc896220bf5dfe9ef4fe64d";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ mola-common mrpt2 ];
+  propagatedBuildInputs = [ mola-common mrpt-libmath mrpt-libposes mrpt-libtclap ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

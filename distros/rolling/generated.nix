@@ -240,6 +240,10 @@ self: super: {
 
  bag2-to-image = self.callPackage ./bag2-to-image {};
 
+ battery-state-broadcaster = self.callPackage ./battery-state-broadcaster {};
+
+ battery-state-rviz-overlay = self.callPackage ./battery-state-rviz-overlay {};
+
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
 
  behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
@@ -401,8 +405,6 @@ self: super: {
  dummy-robot-bringup = self.callPackage ./dummy-robot-bringup {};
 
  dummy-sensors = self.callPackage ./dummy-sensors {};
-
- dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
  dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
 
@@ -1072,6 +1074,8 @@ self: super: {
 
  mola-launcher = self.callPackage ./mola-launcher {};
 
+ mola-lidar-odometry = self.callPackage ./mola-lidar-odometry {};
+
  mola-metric-maps = self.callPackage ./mola-metric-maps {};
 
  mola-msgs = self.callPackage ./mola-msgs {};
@@ -1196,7 +1200,35 @@ self: super: {
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
+ mrpt-apps = self.callPackage ./mrpt-apps {};
+
  mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
+
+ mrpt-libapps = self.callPackage ./mrpt-libapps {};
+
+ mrpt-libbase = self.callPackage ./mrpt-libbase {};
+
+ mrpt-libgui = self.callPackage ./mrpt-libgui {};
+
+ mrpt-libhwdrivers = self.callPackage ./mrpt-libhwdrivers {};
+
+ mrpt-libmaps = self.callPackage ./mrpt-libmaps {};
+
+ mrpt-libmath = self.callPackage ./mrpt-libmath {};
+
+ mrpt-libnav = self.callPackage ./mrpt-libnav {};
+
+ mrpt-libobs = self.callPackage ./mrpt-libobs {};
+
+ mrpt-libopengl = self.callPackage ./mrpt-libopengl {};
+
+ mrpt-libposes = self.callPackage ./mrpt-libposes {};
+
+ mrpt-libros-bridge = self.callPackage ./mrpt-libros-bridge {};
+
+ mrpt-libslam = self.callPackage ./mrpt-libslam {};
+
+ mrpt-libtclap = self.callPackage ./mrpt-libtclap {};
 
  mrpt-map-server = self.callPackage ./mrpt-map-server {};
 
@@ -1229,6 +1261,8 @@ self: super: {
  mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
 
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
+
+ mrpt-tps-astar-planner = self.callPackage ./mrpt-tps-astar-planner {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
@@ -1288,8 +1322,6 @@ self: super: {
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
 
- octomap = self.callPackage ./octomap {};
-
  octomap-mapping = self.callPackage ./octomap-mapping {};
 
  octomap-msgs = self.callPackage ./octomap-msgs {};
@@ -1299,8 +1331,6 @@ self: super: {
  octomap-rviz-plugins = self.callPackage ./octomap-rviz-plugins {};
 
  octomap-server = self.callPackage ./octomap-server {};
-
- octovis = self.callPackage ./octovis {};
 
  odom-to-tf-ros2 = self.callPackage ./odom-to-tf-ros2 {};
 
@@ -1459,6 +1489,8 @@ self: super: {
  python-orocos-kdl-vendor = self.callPackage ./python-orocos-kdl-vendor {};
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
+
+ qml-ros2-plugin = self.callPackage ./qml-ros2-plugin {};
 
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
 
@@ -1704,6 +1736,8 @@ self: super: {
 
  robotiq-description = self.callPackage ./robotiq-description {};
 
+ robotraconteur = self.callPackage ./robotraconteur {};
+
  ros2-control = self.callPackage ./ros2-control {};
 
  ros2-control-test-assets = self.callPackage ./ros2-control-test-assets {};
@@ -1767,6 +1801,10 @@ self: super: {
  ros2trace = self.callPackage ./ros2trace {};
 
  ros2trace-analysis = self.callPackage ./ros2trace-analysis {};
+
+ ros-babel-fish = self.callPackage ./ros-babel-fish {};
+
+ ros-babel-fish-test-msgs = self.callPackage ./ros-babel-fish-test-msgs {};
 
  ros-base = self.callPackage ./ros-base {};
 

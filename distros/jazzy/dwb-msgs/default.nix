@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, nav-2d-msgs, nav-msgs, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-dwb-msgs";
-  version = "1.3.1-r1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/dwb_msgs/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "d5662418bede96d4d80d19ee1b68a54c4155455d02fd378f5b03e420c07f5f2b";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/dwb_msgs/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "441a72672122a54ad0af7603525446c8e746b3ad77ab0ddff3a20cd394245054";
   };
 
   buildType = "ament_cmake";

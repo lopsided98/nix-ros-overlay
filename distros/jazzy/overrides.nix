@@ -62,19 +62,6 @@ in {
     hash = "sha256-Qaz26F11VWxkQH8HfgVJLTHbHwmeByQu8ENkuyk5rPE=";
   };
 
-  rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
-    postPatch ? "", ...
-  }: let
-    python = rosSelf.python;
-  in {
-    # Fix finding NumPy headers
-    postPatch = postPatch + ''
-      substituteInPlace cmake/rosidl_generator_py_generate_interfaces.cmake \
-       --replace-fail '"import numpy"' "" \
-       --replace-fail 'numpy.get_include()' "'${python.pkgs.numpy}/${python.sitePackages}/numpy/core/include'"
-    '';
-  });
-
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre.git";
     rev = "v1.12.10";
@@ -93,6 +80,11 @@ in {
       substituteInPlace Components/Overlay/CMakeLists.txt \
         --replace-fail ${lib.escapeShellArg imgui.url} file://${lib.escapeShellArg imguiTar}
     '';
+  };
+
+  shared-queues-vendor = lib.patchVendorUrl rosSuper.shared-queues-vendor {
+    url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";
+    sha256 = "sha256-TyFt3d78GidhDGD17KgjAaZl/qvAcGJP8lmu4EOxpYg=";
   };
 
   urdfdom = rosSuper.urdfdom.overrideAttrs ({

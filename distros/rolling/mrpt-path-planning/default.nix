@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mrpt2, mvsim }:
+{ lib, buildRosPackage, fetchurl, cmake, mrpt-libgui, mrpt-libmaps, mrpt-libnav, mrpt-libtclap, mvsim }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-path-planning";
-  version = "0.1.3-r1";
+  version = "0.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_path_planning-release/archive/release/rolling/mrpt_path_planning/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "df855e2a2309b77f0b25277d5fca184ad07881f0bb1c91c34cb1242e47da3cb7";
+    url = "https://github.com/ros2-gbp/mrpt_path_planning-release/archive/release/rolling/mrpt_path_planning/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
+    sha256 = "03b4ff929e6975a0b022dddcd4a675df62377dcda1ace7abc4b4f0d11464ce85";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ mrpt2 mvsim ];
+  propagatedBuildInputs = [ mrpt-libgui mrpt-libmaps mrpt-libnav mrpt-libtclap mvsim ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

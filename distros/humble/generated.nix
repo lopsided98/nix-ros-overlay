@@ -222,6 +222,8 @@ self: super: {
 
  as2-behaviors-motion = self.callPackage ./as2-behaviors-motion {};
 
+ as2-behaviors-path-planning = self.callPackage ./as2-behaviors-path-planning {};
+
  as2-behaviors-perception = self.callPackage ./as2-behaviors-perception {};
 
  as2-behaviors-platform = self.callPackage ./as2-behaviors-platform {};
@@ -232,11 +234,15 @@ self: super: {
 
  as2-core = self.callPackage ./as2-core {};
 
+ as2-external-object-to-tf = self.callPackage ./as2-external-object-to-tf {};
+
  as2-gazebo-assets = self.callPackage ./as2-gazebo-assets {};
 
- as2-gazebo-classic-assets = self.callPackage ./as2-gazebo-classic-assets {};
+ as2-geozones = self.callPackage ./as2-geozones {};
 
  as2-keyboard-teleoperation = self.callPackage ./as2-keyboard-teleoperation {};
+
+ as2-map-server = self.callPackage ./as2-map-server {};
 
  as2-motion-controller = self.callPackage ./as2-motion-controller {};
 
@@ -248,15 +254,25 @@ self: super: {
 
  as2-platform-dji-osdk = self.callPackage ./as2-platform-dji-osdk {};
 
+ as2-platform-dji-psdk = self.callPackage ./as2-platform-dji-psdk {};
+
  as2-platform-gazebo = self.callPackage ./as2-platform-gazebo {};
+
+ as2-platform-mavlink = self.callPackage ./as2-platform-mavlink {};
+
+ as2-platform-multirotor-simulator = self.callPackage ./as2-platform-multirotor-simulator {};
 
  as2-platform-tello = self.callPackage ./as2-platform-tello {};
 
  as2-realsense-interface = self.callPackage ./as2-realsense-interface {};
 
+ as2-rviz-plugins = self.callPackage ./as2-rviz-plugins {};
+
  as2-state-estimator = self.callPackage ./as2-state-estimator {};
 
  as2-usb-camera-interface = self.callPackage ./as2-usb-camera-interface {};
+
+ as2-visualization = self.callPackage ./as2-visualization {};
 
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
 
@@ -431,6 +447,8 @@ self: super: {
  clearpath-generator-gz = self.callPackage ./clearpath-generator-gz {};
 
  clearpath-gz = self.callPackage ./clearpath-gz {};
+
+ clearpath-mecanum-drive-controller = self.callPackage ./clearpath-mecanum-drive-controller {};
 
  clearpath-mounts-description = self.callPackage ./clearpath-mounts-description {};
 
@@ -774,6 +792,12 @@ self: super: {
 
  etsi-its-cam-msgs = self.callPackage ./etsi-its-cam-msgs {};
 
+ etsi-its-cam-ts-coding = self.callPackage ./etsi-its-cam-ts-coding {};
+
+ etsi-its-cam-ts-conversion = self.callPackage ./etsi-its-cam-ts-conversion {};
+
+ etsi-its-cam-ts-msgs = self.callPackage ./etsi-its-cam-ts-msgs {};
+
  etsi-its-coding = self.callPackage ./etsi-its-coding {};
 
  etsi-its-conversion = self.callPackage ./etsi-its-conversion {};
@@ -1084,7 +1108,11 @@ self: super: {
 
  hri = self.callPackage ./hri {};
 
+ hri-actions-msgs = self.callPackage ./hri-actions-msgs {};
+
  hri-msgs = self.callPackage ./hri-msgs {};
+
+ hri-rviz = self.callPackage ./hri-rviz {};
 
  human-description = self.callPackage ./human-description {};
 
@@ -1205,6 +1233,8 @@ self: super: {
  kinematics-interface = self.callPackage ./kinematics-interface {};
 
  kinematics-interface-kdl = self.callPackage ./kinematics-interface-kdl {};
+
+ kinematics-interface-pinocchio = self.callPackage ./kinematics-interface-pinocchio {};
 
  kinova-gen3-6dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-6dof-robotiq-2f-85-moveit-config {};
 
@@ -1528,6 +1558,8 @@ self: super: {
 
  mola-launcher = self.callPackage ./mola-launcher {};
 
+ mola-lidar-odometry = self.callPackage ./mola-lidar-odometry {};
+
  mola-metric-maps = self.callPackage ./mola-metric-maps {};
 
  mola-msgs = self.callPackage ./mola-msgs {};
@@ -1648,7 +1680,35 @@ self: super: {
 
  mrpt2 = self.callPackage ./mrpt2 {};
 
+ mrpt-apps = self.callPackage ./mrpt-apps {};
+
  mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
+
+ mrpt-libapps = self.callPackage ./mrpt-libapps {};
+
+ mrpt-libbase = self.callPackage ./mrpt-libbase {};
+
+ mrpt-libgui = self.callPackage ./mrpt-libgui {};
+
+ mrpt-libhwdrivers = self.callPackage ./mrpt-libhwdrivers {};
+
+ mrpt-libmaps = self.callPackage ./mrpt-libmaps {};
+
+ mrpt-libmath = self.callPackage ./mrpt-libmath {};
+
+ mrpt-libnav = self.callPackage ./mrpt-libnav {};
+
+ mrpt-libobs = self.callPackage ./mrpt-libobs {};
+
+ mrpt-libopengl = self.callPackage ./mrpt-libopengl {};
+
+ mrpt-libposes = self.callPackage ./mrpt-libposes {};
+
+ mrpt-libros-bridge = self.callPackage ./mrpt-libros-bridge {};
+
+ mrpt-libslam = self.callPackage ./mrpt-libslam {};
+
+ mrpt-libtclap = self.callPackage ./mrpt-libtclap {};
 
  mrpt-map-server = self.callPackage ./mrpt-map-server {};
 
@@ -1681,6 +1741,8 @@ self: super: {
  mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
 
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
+
+ mrpt-tps-astar-planner = self.callPackage ./mrpt-tps-astar-planner {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
@@ -1782,6 +1844,8 @@ self: super: {
 
  ndt-omp = self.callPackage ./ndt-omp {};
 
+ neo-nav2-bringup = self.callPackage ./neo-nav2-bringup {};
+
  neo-simulation2 = self.callPackage ./neo-simulation2 {};
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
@@ -1870,9 +1934,9 @@ self: super: {
 
  omni-base-laser-sensors = self.callPackage ./omni-base-laser-sensors {};
 
- omni-base-maps = self.callPackage ./omni-base-maps {};
-
  omni-base-navigation = self.callPackage ./omni-base-navigation {};
+
+ omni-base-rgbd-sensors = self.callPackage ./omni-base-rgbd-sensors {};
 
  omni-base-robot = self.callPackage ./omni-base-robot {};
 

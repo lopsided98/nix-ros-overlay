@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-iron-force-torque-sensor-broadcaster";
-  version = "3.26.0-r1";
+  version = "3.26.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/force_torque_sensor_broadcaster/3.26.0-1.tar.gz";
-    name = "3.26.0-1.tar.gz";
-    sha256 = "89c51665d743928db16bc37d57189784d98658d0cd6e714da74a135affd059fa";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/force_torque_sensor_broadcaster/3.26.2-1.tar.gz";
+    name = "3.26.2-1.tar.gz";
+    sha256 = "2ce63591fda4be9818ed722a745293f3762769897f0159e62b17710d9a1606fe";
   };
 
   buildType = "ament_cmake";

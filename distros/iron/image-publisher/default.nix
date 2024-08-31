@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, camera-info-manager, cv-bridge, image-transport, rcl-interfaces, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-iron-image-publisher";
-  version = "4.0.1-r1";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/iron/image_publisher/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "f354f5abd82dc5062d63fa59f2ae8cb39f2753991f466fdb54fdb03ccdc132cb";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/iron/image_publisher/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "fa74cb195aabb2ddd4c456fb0cd02d4e59632e1145ba7b24d84ecde6c0376a89";
   };
 
   buildType = "ament_cmake";

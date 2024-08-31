@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-cpm-ts-coding";
-  version = "2.1.0-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_cpm_ts_coding/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "945eabb7748358af34bfe767cdbc5f25e5baaa8142395910c35ae569fd42cadd";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_cpm_ts_coding/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "28e3519acd31f2323ef8771ed6cd0be4d307c7b69a2d8bb4d98a083f9f75be0c";
   };
 
   buildType = "ament_cmake";
