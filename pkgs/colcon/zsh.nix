@@ -2,11 +2,11 @@
 
 buildPythonPackage rec {
   pname = "colcon-zsh";
-  version = "0.4.0";
+  version = "0.5.0";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-VVwbFlP5qXwayxb7NQBCs8zl1pKhPbmmy8w7Tem5S+s=";
+    hash = "sha256-7/91xD3asmSYU1KeQc7jbg+DttTIZMBzY1PQ3s54M0o=";
   };
 
   propagatedBuildInputs = [ colcon-core ];
