@@ -4,11 +4,11 @@
 
 buildPythonPackage rec {
   pname = "colcon-ros";
-  version = "0.3.23";
+  version = "0.5.0";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-nXjNB1otTGTxwmbVFEyxWcYaoWHR9w6v2hVBw0+kRl4=";
+    hash = "sha256-eafon2+mNvfk/USoi3hg+x2pnVHwunvPC5tiShpXg2U=";
   };
 
   propagatedBuildInputs = [

@@ -2,11 +2,11 @@
 
 buildPythonPackage rec {
   pname = "colcon-notification";
-  version = "0.2.15";
+  version = "0.3.0";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-ChiKTeuqED8fxiC6u2+CqQAy8BxVkJCsUaX/TK0yZVA=";
+    hash = "sha256-xFuJgHOo6YxFGDM7dYf56kmsG8Epp7xOE5AFkFcDH7g=";
   };
 
   propagatedBuildInputs = [ colcon-core notify2 ];
