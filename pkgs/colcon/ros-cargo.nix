@@ -1,15 +1,13 @@
-{ lib, buildPythonPackage, fetchFromGitHub, colcon-core, colcon-library-path
+{ lib, buildPythonPackage, fetchPypi, colcon-core, colcon-library-path
 , colcon-cargo, colcon-ros }:
 
 buildPythonPackage rec {
   pname = "colcon-ros-cargo";
-  version = "unstable-2022-05-23";
+  version = "0.1.0";
 
-  src = fetchFromGitHub {
-    owner = "colcon";
-    repo = pname;
-    rev = "73289b2d4019432461180a0bcdf00cd7dead79f0";
-    hash = "sha256-UJEP8f/Lz5OWgEKYju0ZvCxupIaGXTYz6zbdEYLqJGc=";
+  src = fetchPypi {
+    inherit pname version;
+    hash = "sha256-gwNvMVyG+rbXFNPUOEFalrYE+CLNrhyRQT4Lb+Rfhhw=";
   };
 
   propagatedBuildInputs = [
