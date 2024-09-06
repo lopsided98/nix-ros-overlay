@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, fkie-multimaster-msgs, geometry-msgs, mrpt-msgs, mrpt-msgs-bridge, mrpt2, nav-msgs, roscpp, rospy, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, catkin, fkie-multimaster-msgs, geometry-msgs, mrpt-libapps, mrpt-libgui, mrpt-libros-bridge, mrpt-msgs, mrpt-msgs-bridge, nav-msgs, roscpp, rospy, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-graphslam-2d";
-  version = "0.1.17-r1";
+  version = "0.1.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/noetic/mrpt_graphslam_2d/0.1.17-1.tar.gz";
-    name = "0.1.17-1.tar.gz";
-    sha256 = "bc41dd8439e320a34105596077f3ed73094c27865b1da353f7280aed0e1262c5";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/noetic/mrpt_graphslam_2d/0.1.18-1.tar.gz";
+    name = "0.1.18-1.tar.gz";
+    sha256 = "5b02ce04f7806786716ac7186984addb6e13e74b82e24a1215a3c9660106130a";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ fkie-multimaster-msgs geometry-msgs mrpt-msgs mrpt-msgs-bridge mrpt2 nav-msgs roscpp rospy sensor-msgs std-msgs tf2 tf2-geometry-msgs tf2-ros ];
+  propagatedBuildInputs = [ fkie-multimaster-msgs geometry-msgs mrpt-libapps mrpt-libgui mrpt-libros-bridge mrpt-msgs mrpt-msgs-bridge nav-msgs roscpp rospy sensor-msgs std-msgs tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

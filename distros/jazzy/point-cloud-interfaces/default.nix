@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-point-cloud-interfaces";
-  version = "4.0.0-r1";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/jazzy/point_cloud_interfaces/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "f471ff777e722d3e67da7d92c53a10a333a4de63a628900b6e3e1450caca6504";
+    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/jazzy/point_cloud_interfaces/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "71b38cee44fccfa68a72c74d67a548b2927f83d28a052f7df065f3313936022f";
   };
 
   buildType = "ament_cmake";

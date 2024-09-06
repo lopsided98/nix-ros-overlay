@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-marti-visualization-msgs";
-  version = "1.6.0-r1";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/jazzy/marti_visualization_msgs/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "3d09d5e03f2422aef79608a1e3b079df7eb6cd4f4ef0642dcf03c04c4ad74666";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/jazzy/marti_visualization_msgs/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "e03fde51e361901abde8520adf0748ddda24cbfb000e96ac0f7e30458876778d";
   };
 
   buildType = "ament_cmake";

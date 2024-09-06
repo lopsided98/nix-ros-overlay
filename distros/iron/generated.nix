@@ -578,6 +578,8 @@ self: super: {
 
  fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
 
+ ffmpeg-encoder-decoder = self.callPackage ./ffmpeg-encoder-decoder {};
+
  ffmpeg-image-transport = self.callPackage ./ffmpeg-image-transport {};
 
  ffmpeg-image-transport-msgs = self.callPackage ./ffmpeg-image-transport-msgs {};
@@ -2467,6 +2469,8 @@ self: super: {
  tricycle-steering-controller = self.callPackage ./tricycle-steering-controller {};
 
  turbojpeg-compressed-image-transport = self.callPackage ./turbojpeg-compressed-image-transport {};
+
+ turtle-nest = self.callPackage ./turtle-nest {};
 
  turtle-tf2-cpp = self.callPackage ./turtle-tf2-cpp {};
 

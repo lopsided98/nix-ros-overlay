@@ -602,6 +602,8 @@ self: super: {
 
  dataspeed-pds-can = self.callPackage ./dataspeed-pds-can {};
 
+ dataspeed-pds-lcm = self.callPackage ./dataspeed-pds-lcm {};
+
  dataspeed-pds-msgs = self.callPackage ./dataspeed-pds-msgs {};
 
  dataspeed-pds-rqt = self.callPackage ./dataspeed-pds-rqt {};
@@ -3737,6 +3739,8 @@ self: super: {
  thunder-line-follower-pmr3100 = self.callPackage ./thunder-line-follower-pmr3100 {};
 
  tile-map = self.callPackage ./tile-map {};
+
+ timed-roslaunch = self.callPackage ./timed-roslaunch {};
 
  timestamp-tools = self.callPackage ./timestamp-tools {};
 

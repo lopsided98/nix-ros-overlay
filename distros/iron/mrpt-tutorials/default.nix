@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cmake, mvsim, teleop-twist-keyboard }:
 buildRosPackage {
   pname = "ros-iron-mrpt-tutorials";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/iron/mrpt_tutorials/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "be1e1093be5e4187fe1f4ee52231946f72da9f4e5b5489c4d258a65db3d415a7";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/iron/mrpt_tutorials/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "3ff326b20f75dedb277dd25b19503b2258f6198f097a7ac2864570a6e817a38b";
   };
 
   buildType = "ament_cmake";
