@@ -31,6 +31,10 @@
       nixosModule = nixpkgs.lib.warn
         "'nix-ros-overlay.nixosModule' is deprecated, use 'nix-ros-overlay.nixosModules.default' instead"
         self.nixosModules.default;
+      templates.default = {
+        path = ./examples/flake;
+        description = "Basic ROS flake";
+      };
     };
 
   nixConfig = {
