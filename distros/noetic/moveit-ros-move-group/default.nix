@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, moveit-core, moveit-kinematics, moveit-resources-fanuc-moveit-config, moveit-ros-planning, pluginlib, roscpp, rostest, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-moveit-ros-move-group";
-  version = "1.1.14-r1";
+  version = "1.1.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_move_group/1.1.14-1.tar.gz";
-    name = "1.1.14-1.tar.gz";
-    sha256 = "f0134e5e2d638341ec373671e095fdfd71e6b93bf725e183761cf19b93aab4d3";
+    url = "https://github.com/ros-gbp/moveit-release/archive/release/noetic/moveit_ros_move_group/1.1.15-1.tar.gz";
+    name = "1.1.15-1.tar.gz";
+    sha256 = "fe8e8f171ec6f7fdaf0a212e6a4937bb537e55cbca26e705aee221dbe154db79";
   };
 
   buildType = "catkin";

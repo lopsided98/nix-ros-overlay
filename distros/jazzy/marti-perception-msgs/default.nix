@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-marti-perception-msgs";
-  version = "1.6.0-r1";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/jazzy/marti_perception_msgs/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "a334534b2535a57147f2b08b395e028ba9f278b5733b326998a87342416a9144";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/jazzy/marti_perception_msgs/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "87b98954babc661b0d2034bb7126778e755b16155209d760866b41a471120ff9";
   };
 
   buildType = "ament_cmake";

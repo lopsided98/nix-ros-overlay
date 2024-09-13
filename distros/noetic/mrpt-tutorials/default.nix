@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, teleop-twist-keyboard, tf2 }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-tutorials";
-  version = "1.0.5-r1";
+  version = "1.0.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_tutorials/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "b3e3dcd831acd3dcacc7c36d53afb0bfd0479bdfec3bef517234839602edabfd";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_tutorials/1.0.6-2.tar.gz";
+    name = "1.0.6-2.tar.gz";
+    sha256 = "35e2813cda4ed07d65e0b376e1ef99be915b2a230a9365d316cba9607b74179c";
   };
 
   buildType = "catkin";

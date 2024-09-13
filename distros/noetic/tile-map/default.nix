@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, glew, jsoncpp, mapviz, pluginlib, qt5, roscpp, swri-math-util, swri-transform-util, swri-yaml-util, tf }:
 buildRosPackage {
   pname = "ros-noetic-tile-map";
-  version = "1.4.2-r1";
+  version = "1.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/noetic/tile_map/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "2c4ecc0cd98353b953027598473433fa7e37f5516fc4cab995098980ca4e18af";
+    url = "https://github.com/swri-robotics-gbp/mapviz-release/archive/release/noetic/tile_map/1.4.3-1.tar.gz";
+    name = "1.4.3-1.tar.gz";
+    sha256 = "a43e6324989bcff57bc81ff8259e574e6de316b1c2bc8ab722554b238078bd2c";
   };
 
   buildType = "catkin";

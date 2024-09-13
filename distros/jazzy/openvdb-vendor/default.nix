@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, boost, c-blosc, git, openvdb, tbb_2021_11, zlib }:
 buildRosPackage {
   pname = "ros-jazzy-openvdb-vendor";
-  version = "2.5.1-r1";
+  version = "2.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/spatio_temporal_voxel_layer-release/archive/release/jazzy/openvdb_vendor/2.5.1-1.tar.gz";
-    name = "2.5.1-1.tar.gz";
-    sha256 = "386beb08033aed6d988e22f7ac8bed8fc237e3526742c8d6e6b27e94138d25b3";
+    url = "https://github.com/SteveMacenski/spatio_temporal_voxel_layer-release/archive/release/jazzy/openvdb_vendor/2.5.2-1.tar.gz";
+    name = "2.5.2-1.tar.gz";
+    sha256 = "b09b6d725c1aa223b16fae24c6e5b2073006bd2710c1e83abc6edaa561cc9fbc";
   };
 
   buildType = "ament_cmake";

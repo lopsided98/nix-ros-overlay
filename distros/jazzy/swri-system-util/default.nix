@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, boost, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-swri-system-util";
-  version = "3.6.1-r3";
+  version = "3.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_system_util/3.6.1-3.tar.gz";
-    name = "3.6.1-3.tar.gz";
-    sha256 = "4fe9380a71d478297d50ea0c8736ed133577c8572a6a57a03b1ffc779f7a5afd";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_system_util/3.7.1-1.tar.gz";
+    name = "3.7.1-1.tar.gz";
+    sha256 = "cb82404c374200b322f3964eb7056b638e0e940d94808e17f419090b3bd2552a";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "swri_system_util";
+    description = "A package with commonly used system utilities.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

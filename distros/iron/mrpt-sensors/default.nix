@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, mrpt-generic-sensor, mrpt-sensor-bumblebee-stereo, mrpt-sensor-gnss-nmea, mrpt-sensor-gnss-novatel, mrpt-sensor-imu-taobotics, mrpt-sensorlib }:
 buildRosPackage {
   pname = "ros-iron-mrpt-sensors";
-  version = "0.2.2-r1";
+  version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/iron/mrpt_sensors/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "eb2847266eec207b2af91073276ba8b487a113c275367ee9e9c00a8e3013b384";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/iron/mrpt_sensors/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
+    sha256 = "91524a41ddacc52b28ad90432658bd6288ffe310922df2825615de48807bfac4";
   };
 
   buildType = "ament_cmake";

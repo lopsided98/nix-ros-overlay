@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, lifecycle-msgs, rclcpp, rclcpp-lifecycle, ros-testing, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-lifecycle";
-  version = "0.33.4-r1";
+  version = "0.33.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/lifecycle/0.33.4-1.tar.gz";
-    name = "0.33.4-1.tar.gz";
-    sha256 = "2fae641fe9767e83e9bc02495943f67319f5d61287542c50edc82ab2e6644a25";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/lifecycle/0.33.5-1.tar.gz";
+    name = "0.33.5-1.tar.gz";
+    sha256 = "47f20b0c9a292819692538d83a3d30c067c40523126d6059c5c7e7b970113d6c";
   };
 
   buildType = "ament_cmake";

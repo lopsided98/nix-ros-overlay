@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, geometry-msgs, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-mouse-teleop";
-  version = "1.5.0-r3";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/jazzy/mouse_teleop/1.5.0-3.tar.gz";
-    name = "1.5.0-3.tar.gz";
-    sha256 = "f3028053e87279f0e1c494e6e704b5df805b02a48101bec366ef3c393f365dc0";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/jazzy/mouse_teleop/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "f34766819b0f44c2ab03671e81934bf091f1d9aff1b1b2d2a3cee9ac48c4a411";
   };
 
   buildType = "ament_python";

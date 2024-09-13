@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cv-bridge, eigen, geos, pkg-config, rclcpp, tf2 }:
 buildRosPackage {
   pname = "ros-jazzy-swri-geometry-util";
-  version = "3.6.1-r3";
+  version = "3.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_geometry_util/3.6.1-3.tar.gz";
-    name = "3.6.1-3.tar.gz";
-    sha256 = "a3cb85b471860f8ac967d3c2fa08603f2d4b78f6f79ce2b7ae779e41fc0f4cde";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_geometry_util/3.7.1-1.tar.gz";
+    name = "3.7.1-1.tar.gz";
+    sha256 = "ac666752681a4f3ca85262882593da4a4dcc61d519834dc699d05fa88edaad77";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake pkg-config ];
 
   meta = {
-    description = "swri_geometry_util";
+    description = "Commonly used geometry routines, implemented in a ROS friendly package.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

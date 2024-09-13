@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libbase, mrpt-libgui, mrpt-libmaps, mrpt-libobs, mrpt-libposes, mrpt-libtclap, tbb_2021_11 }:
 buildRosPackage {
   pname = "ros-noetic-mp2p-icp";
-  version = "1.5.5-r1";
+  version = "1.6.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mp2p_icp-release/archive/release/noetic/mp2p_icp/1.5.5-1.tar.gz";
-    name = "1.5.5-1.tar.gz";
-    sha256 = "b128759e8672406dfa52aee9e1b53609df9a35c2113e1b8f2db3cad69b58af7e";
+    url = "https://github.com/mrpt-ros-pkg-release/mp2p_icp-release/archive/release/noetic/mp2p_icp/1.6.0-2.tar.gz";
+    name = "1.6.0-2.tar.gz";
+    sha256 = "5426ed9e0fcdae82da7b416088571e120ab455365d4e830b271128100f6deb5d";
   };
 
   buildType = "cmake";

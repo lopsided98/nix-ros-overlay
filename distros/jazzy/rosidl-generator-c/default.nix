@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-python, ament-cmake-ros, ament-index-python, ament-lint-auto, ament-lint-common, python3, rcutils, rosidl-cli, rosidl-cmake, rosidl-generator-type-description, rosidl-parser, rosidl-pycommon, rosidl-typesupport-interface }:
 buildRosPackage {
   pname = "ros-jazzy-rosidl-generator-c";
-  version = "4.6.3-r1";
+  version = "4.6.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/jazzy/rosidl_generator_c/4.6.3-1.tar.gz";
-    name = "4.6.3-1.tar.gz";
-    sha256 = "8b155827ded92fab86861e446a262ffc66d20d759e15a83e711ca486ff14af61";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/jazzy/rosidl_generator_c/4.6.4-1.tar.gz";
+    name = "4.6.4-1.tar.gz";
+    sha256 = "b33db55843820cb55944ec5ecba13b80049ae6d616b11a7920dddf5fc27f9851";
   };
 
   buildType = "ament_cmake";

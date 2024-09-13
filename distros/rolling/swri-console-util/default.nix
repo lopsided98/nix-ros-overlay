@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-swri-console-util";
-  version = "3.6.1-r2";
+  version = "3.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_console_util/3.6.1-2.tar.gz";
-    name = "3.6.1-2.tar.gz";
-    sha256 = "ca48f16dbb49fcf84789996f02a5c557e4979d983a69f07671a22e9b9315f3e9";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_console_util/3.7.1-1.tar.gz";
+    name = "3.7.1-1.tar.gz";
+    sha256 = "5732efdf1b3d2a52c15950e363a50816cb1f98323a8df5c2269a85f81f05fbce";
   };
 
   buildType = "ament_cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "swri_console_util";
+    description = "Utility functions for interacting with console";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, cv-bridge, eigen, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libbase, octomap, opencv, openni2, pkg-config, python3Packages, pythonPackages, rclcpp, ros-environment, rosbag2-storage, suitesparse, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-iron-mrpt-libmath";
-  version = "2.13.7-r3";
+  version = "2.13.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/iron/mrpt_libmath/2.13.7-3.tar.gz";
-    name = "2.13.7-3.tar.gz";
-    sha256 = "4ffae9efdd392619ad05b4dd022be6114a9d8849c41672bd385b03c263c09164";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/iron/mrpt_libmath/2.13.8-1.tar.gz";
+    name = "2.13.8-1.tar.gz";
+    sha256 = "c05f4b2d1b81e1c1284384ec62e18a6d156fb310576d9da9772f59200c6d7c47";
   };
 
   buildType = "cmake";

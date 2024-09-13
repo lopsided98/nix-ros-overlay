@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, controller-manager, controller-manager-msgs, hardware-interface, joint-limits, ros2-control-test-assets, ros2controlcli, transmission-interface }:
 buildRosPackage {
   pname = "ros-jazzy-ros2-control";
-  version = "4.16.1-r1";
+  version = "4.17.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/ros2_control/4.16.1-1.tar.gz";
-    name = "4.16.1-1.tar.gz";
-    sha256 = "1b6e313b8d12ec415842a5027f085d02d5506ecec8af67dd6fe9ccf7e4a6250b";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/ros2_control/4.17.0-1.tar.gz";
+    name = "4.17.0-1.tar.gz";
+    sha256 = "e7a92c23dab56e83b69459fea66da19efeac9f8532489ab601e49bdabb371073";
   };
 
   buildType = "ament_cmake";

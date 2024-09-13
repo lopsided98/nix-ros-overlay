@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-manager, forward-command-controller, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-iron-velocity-controllers";
-  version = "3.26.2-r1";
+  version = "3.26.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/velocity_controllers/3.26.2-1.tar.gz";
-    name = "3.26.2-1.tar.gz";
-    sha256 = "3da2667a42272973fd92bfbb35954bf034bface25b5b9832a5c8f0cea815dab4";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/velocity_controllers/3.26.3-1.tar.gz";
+    name = "3.26.3-1.tar.gz";
+    sha256 = "0b41ad3011d7ffe1adfeeac60dd954bc21c13c8ed6379fefa6546cc1b2a98e0e";
   };
 
   buildType = "ament_cmake";

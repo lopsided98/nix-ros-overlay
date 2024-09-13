@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, cv-bridge, ffmpeg, freeglut, freenect, geometry-msgs, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libmaps, nav-msgs, octomap, opencv, openni2, pkg-config, python3Packages, pythonPackages, ros-environment, rosbag-storage, roscpp, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-geometry-msgs, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-libros-bridge";
-  version = "2.13.7-r4";
+  version = "2.13.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_ros-release/archive/release/noetic/mrpt_libros_bridge/2.13.7-4.tar.gz";
-    name = "2.13.7-4.tar.gz";
-    sha256 = "a7026b4ce63cceb810380f4cdcfdbdfc51018fdecbc5d3a8d30e34ea03a70976";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_ros-release/archive/release/noetic/mrpt_libros_bridge/2.13.8-1.tar.gz";
+    name = "2.13.8-1.tar.gz";
+    sha256 = "25f7eb6882bea97bbddec42e388120ed18df8e234c7933b7adf7b46bf9e16547";
   };
 
   buildType = "cmake";

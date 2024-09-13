@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost }:
 buildRosPackage {
   pname = "ros-jazzy-swri-serial-util";
-  version = "3.6.1-r3";
+  version = "3.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_serial_util/3.6.1-3.tar.gz";
-    name = "3.6.1-3.tar.gz";
-    sha256 = "69681c3220e5a52171ad77d7f182c397d78b4469d87d443fc373c3e009f32779";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_serial_util/3.7.1-1.tar.gz";
+    name = "3.7.1-1.tar.gz";
+    sha256 = "2cfa903e0a7e43e87146200811169632dd538245fc9ad0c4bdf4387c373f3709";
   };
 
   buildType = "ament_cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "swri_serial_util";
+    description = "Contains nodes and utilities for serial communication in ROS.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }
