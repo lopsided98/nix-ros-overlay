@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs }:
 buildRosPackage {
   pname = "ros-iron-marti-visualization-msgs";
-  version = "1.6.0-r1";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/iron/marti_visualization_msgs/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "0ba10c943043f9a8f47a4afd6545a325093184b986904d7999273a36cd2c6875";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/iron/marti_visualization_msgs/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "fd16cb0d8ebdfcaeab9d0e1ad0998c1ca68b91a172cf751ce6110ba03bddacf2";
   };
 
   buildType = "ament_cmake";

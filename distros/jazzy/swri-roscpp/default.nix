@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, diagnostic-updater, gtest, marti-common-msgs, nav-msgs, rclcpp, ros-environment, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-swri-roscpp";
-  version = "3.6.1-r3";
+  version = "3.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_roscpp/3.6.1-3.tar.gz";
-    name = "3.6.1-3.tar.gz";
-    sha256 = "9a934fbf3ae9e6e0804fb3bb59ce36bb08dcb1b291e4cd74f4df429cc73aca88";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_roscpp/3.7.1-1.tar.gz";
+    name = "3.7.1-1.tar.gz";
+    sha256 = "970f50c6d192127c4be08985a6a20d2f2773b78f65b99563395acaa215078b0d";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = "swri_roscpp";
+    description = "A package that extends rclcpp with some commonly used functionality to reduce boilerplate code.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

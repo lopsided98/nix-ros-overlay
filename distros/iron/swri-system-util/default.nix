@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, boost, rclcpp }:
 buildRosPackage {
   pname = "ros-iron-swri-system-util";
-  version = "3.6.1-r1";
+  version = "3.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_system_util/3.6.1-1.tar.gz";
-    name = "3.6.1-1.tar.gz";
-    sha256 = "eb3979c006d895471887289808a18bb1bfab1399561f16ee8f8c39e6c45f25c1";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_system_util/3.7.1-1.tar.gz";
+    name = "3.7.1-1.tar.gz";
+    sha256 = "3e34ec18d7637814a5224626061e3668176ce69f3c9aa394e736fb364b4debf1";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "swri_system_util";
+    description = "A package with commonly used system utilities.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, ament-index-python, ament-lint-auto, python3Packages }:
 buildRosPackage {
   pname = "ros-iron-xacro";
-  version = "2.0.9-r3";
+  version = "2.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/xacro-release/archive/release/iron/xacro/2.0.9-3.tar.gz";
-    name = "2.0.9-3.tar.gz";
-    sha256 = "30b5034c8f9355d9b15858f77799e74a8088730e1d19a64eb49b654fdbefb244";
+    url = "https://github.com/ros2-gbp/xacro-release/archive/release/iron/xacro/2.0.11-1.tar.gz";
+    name = "2.0.11-1.tar.gz";
+    sha256 = "6bd8de4eda0306fb482e59ef1df09d2569be12948f6be34f5f3016d95dfe391d";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, hardware-interface, pluginlib }:
 buildRosPackage {
   pname = "ros-iron-transmission-interface";
-  version = "3.28.0-r1";
+  version = "3.28.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/iron/transmission_interface/3.28.0-1.tar.gz";
-    name = "3.28.0-1.tar.gz";
-    sha256 = "4b796ad2e2ba7ad687c0bc03bd793a72be817a26cd1230696554d8fbcc583003";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/iron/transmission_interface/3.28.1-1.tar.gz";
+    name = "3.28.1-1.tar.gz";
+    sha256 = "6c41bc3b42c22cf593ff6aeba4b44ae7f81e91e4e3b7288520136cf49adcc089";
   };
 
   buildType = "ament_cmake";

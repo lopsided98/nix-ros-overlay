@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actuator-msgs, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, gps-msgs, gz-msgs-vendor, gz-transport-vendor, launch-ros, launch-testing, launch-testing-ament-cmake, nav-msgs, pkg-config, rclcpp, rclcpp-components, ros-gz-interfaces, rosgraph-msgs, rosidl-pycommon, sensor-msgs, std-msgs, tf2-msgs, trajectory-msgs, vision-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-ros-gz-bridge";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/jazzy/ros_gz_bridge/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "65d787081a34f899024c38efae99361055fce59a7991ff2825f28ad79bdb7cf5";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/jazzy/ros_gz_bridge/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "8bab40a2313e82e77a872ee0161b17e102d158cdceea598258536e4b77890c47";
   };
 
   buildType = "ament_cmake";

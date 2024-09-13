@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-vendor-package, ament-cmake-xmllint, ament-lint-auto, assimp }:
 buildRosPackage {
   pname = "ros-jazzy-rviz-assimp-vendor";
-  version = "14.1.4-r1";
+  version = "14.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/jazzy/rviz_assimp_vendor/14.1.4-1.tar.gz";
-    name = "14.1.4-1.tar.gz";
-    sha256 = "dd8eab63f3c4254ab3598c96d1479d559ae8f0da1f4d4bf3222fbe134217c501";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/jazzy/rviz_assimp_vendor/14.1.5-1.tar.gz";
+    name = "14.1.5-1.tar.gz";
+    sha256 = "df238eada18d5013e27c2abd403d70f77f979ecfa20d542fc4e8d9277d2f3520";
   };
 
   buildType = "ament_cmake";

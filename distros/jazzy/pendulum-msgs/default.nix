@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-pendulum-msgs";
-  version = "0.33.4-r1";
+  version = "0.33.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/pendulum_msgs/0.33.4-1.tar.gz";
-    name = "0.33.4-1.tar.gz";
-    sha256 = "ef217b803c59ae39f93ad4cecec0ebb102154be766a73b53dfb8961ad5d71bb1";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/pendulum_msgs/0.33.5-1.tar.gz";
+    name = "0.33.5-1.tar.gz";
+    sha256 = "2629e0ccc2c9926e5bd5efad357277aaf261f904d7233211639998277412c471";
   };
 
   buildType = "ament_cmake";

@@ -2,7 +2,7 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, git, libxml2, ocl-icd, openblas, opencl-headers, ros-environment, spirv-headers, spirv-tools, vulkan-loader }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, git, libxml2, ocl-icd, openblas, opencl-clhpp, ros-environment, spirv-headers, spirv-tools, vulkan-loader }:
 buildRosPackage {
   pname = "ros-rolling-tvm-vendor";
   version = "0.9.1-r3";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment ];
-  propagatedBuildInputs = [ git libxml2 ocl-icd openblas opencl-headers spirv-headers spirv-tools vulkan-loader ];
+  propagatedBuildInputs = [ git libxml2 ocl-icd openblas opencl-clhpp spirv-headers spirv-tools vulkan-loader ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

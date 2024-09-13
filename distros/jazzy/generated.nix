@@ -648,6 +648,8 @@ self: super: {
 
  fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
 
+ ffmpeg-encoder-decoder = self.callPackage ./ffmpeg-encoder-decoder {};
+
  ffmpeg-image-transport = self.callPackage ./ffmpeg-image-transport {};
 
  ffmpeg-image-transport-msgs = self.callPackage ./ffmpeg-image-transport-msgs {};
@@ -1692,6 +1694,8 @@ self: super: {
 
  python-cmake-module = self.callPackage ./python-cmake-module {};
 
+ python-mrpt = self.callPackage ./python-mrpt {};
+
  python-orocos-kdl-vendor = self.callPackage ./python-orocos-kdl-vendor {};
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
@@ -1927,6 +1931,8 @@ self: super: {
  robot-localization = self.callPackage ./robot-localization {};
 
  robot-state-publisher = self.callPackage ./robot-state-publisher {};
+
+ robot-upstart = self.callPackage ./robot-upstart {};
 
  robotiq-controllers = self.callPackage ./robotiq-controllers {};
 
@@ -2312,6 +2318,8 @@ self: super: {
 
  simple-launch = self.callPackage ./simple-launch {};
 
+ simple-term-menu-vendor = self.callPackage ./simple-term-menu-vendor {};
+
  simulation = self.callPackage ./simulation {};
 
  slam-toolbox = self.callPackage ./slam-toolbox {};
@@ -2399,8 +2407,6 @@ self: super: {
  swri-math-util = self.callPackage ./swri-math-util {};
 
  swri-opencv-util = self.callPackage ./swri-opencv-util {};
-
- swri-prefix-tools = self.callPackage ./swri-prefix-tools {};
 
  swri-roscpp = self.callPackage ./swri-roscpp {};
 
@@ -2526,6 +2532,8 @@ self: super: {
 
  turbojpeg-compressed-image-transport = self.callPackage ./turbojpeg-compressed-image-transport {};
 
+ turtle-nest = self.callPackage ./turtle-nest {};
+
  turtle-tf2-cpp = self.callPackage ./turtle-tf2-cpp {};
 
  turtle-tf2-py = self.callPackage ./turtle-tf2-py {};
@@ -2535,6 +2543,26 @@ self: super: {
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
  turtlebot3-simulations = self.callPackage ./turtlebot3-simulations {};
+
+ turtlebot4-description = self.callPackage ./turtlebot4-description {};
+
+ turtlebot4-desktop = self.callPackage ./turtlebot4-desktop {};
+
+ turtlebot4-gz-bringup = self.callPackage ./turtlebot4-gz-bringup {};
+
+ turtlebot4-gz-gui-plugins = self.callPackage ./turtlebot4-gz-gui-plugins {};
+
+ turtlebot4-gz-toolbox = self.callPackage ./turtlebot4-gz-toolbox {};
+
+ turtlebot4-msgs = self.callPackage ./turtlebot4-msgs {};
+
+ turtlebot4-navigation = self.callPackage ./turtlebot4-navigation {};
+
+ turtlebot4-node = self.callPackage ./turtlebot4-node {};
+
+ turtlebot4-simulator = self.callPackage ./turtlebot4-simulator {};
+
+ turtlebot4-viz = self.callPackage ./turtlebot4-viz {};
 
  turtlesim = self.callPackage ./turtlesim {};
 

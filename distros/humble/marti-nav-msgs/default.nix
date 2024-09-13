@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geographic-msgs, geometry-msgs, marti-common-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-marti-nav-msgs";
-  version = "1.6.0-r1";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/humble/marti_nav_msgs/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "c2b3b937a87bac79e30aff98482edc78d1cac367a8ad63fb438ca2b7c5e355fe";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/humble/marti_nav_msgs/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "71b73eb7a898ec7c850b653631335038d85527e3eea094ccd9a9a29dc6209d54";
   };
 
   buildType = "ament_cmake";

@@ -892,6 +892,8 @@ self: super: {
 
  fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
 
+ ffmpeg-encoder-decoder = self.callPackage ./ffmpeg-encoder-decoder {};
+
  ffmpeg-image-transport = self.callPackage ./ffmpeg-image-transport {};
 
  ffmpeg-image-transport-msgs = self.callPackage ./ffmpeg-image-transport-msgs {};
@@ -1301,6 +1303,8 @@ self: super: {
  kuka-robot-descriptions = self.callPackage ./kuka-robot-descriptions {};
 
  kuka-rsi-simulator = self.callPackage ./kuka-rsi-simulator {};
+
+ kuka-sunrise-fri-driver = self.callPackage ./kuka-sunrise-fri-driver {};
 
  lanelet2 = self.callPackage ./lanelet2 {};
 
@@ -2192,6 +2196,8 @@ self: super: {
 
  python-cmake-module = self.callPackage ./python-cmake-module {};
 
+ python-mrpt = self.callPackage ./python-mrpt {};
+
  python-orocos-kdl-vendor = self.callPackage ./python-orocos-kdl-vendor {};
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
@@ -2219,6 +2225,8 @@ self: super: {
  qb-softhand-industry-ros2-control = self.callPackage ./qb-softhand-industry-ros2-control {};
 
  qb-softhand-industry-srvs = self.callPackage ./qb-softhand-industry-srvs {};
+
+ qml-ros2-plugin = self.callPackage ./qml-ros2-plugin {};
 
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
 
@@ -2559,6 +2567,10 @@ self: super: {
  ros2trace = self.callPackage ./ros2trace {};
 
  ros2trace-analysis = self.callPackage ./ros2trace-analysis {};
+
+ ros-babel-fish = self.callPackage ./ros-babel-fish {};
+
+ ros-babel-fish-test-msgs = self.callPackage ./ros-babel-fish-test-msgs {};
 
  ros-base = self.callPackage ./ros-base {};
 
@@ -2974,8 +2986,6 @@ self: super: {
 
  swri-opencv-util = self.callPackage ./swri-opencv-util {};
 
- swri-prefix-tools = self.callPackage ./swri-prefix-tools {};
-
  swri-roscpp = self.callPackage ./swri-roscpp {};
 
  swri-route-util = self.callPackage ./swri-route-util {};
@@ -3115,6 +3125,8 @@ self: super: {
  tricycle-steering-controller = self.callPackage ./tricycle-steering-controller {};
 
  turbojpeg-compressed-image-transport = self.callPackage ./turbojpeg-compressed-image-transport {};
+
+ turtle-nest = self.callPackage ./turtle-nest {};
 
  turtle-tf2-cpp = self.callPackage ./turtle-tf2-cpp {};
 
@@ -3293,6 +3305,8 @@ self: super: {
  usb-cam = self.callPackage ./usb-cam {};
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
+
+ vector-pursuit-controller = self.callPackage ./vector-pursuit-controller {};
 
  velocity-controllers = self.callPackage ./velocity-controllers {};
 

@@ -2,7 +2,7 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, hdf5-map-io, mesh-msgs, ocl-icd, opencl-headers, qt5, roscpp, rviz, std-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, hdf5-map-io, mesh-msgs, ocl-icd, opencl-clhpp, qt5, roscpp, rviz, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rviz-map-plugin";
   version = "1.1.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ hdf5-map-io mesh-msgs ocl-icd opencl-headers qt5.qtbase roscpp rviz std-msgs ];
+  propagatedBuildInputs = [ hdf5-map-io mesh-msgs ocl-icd opencl-clhpp qt5.qtbase roscpp rviz std-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

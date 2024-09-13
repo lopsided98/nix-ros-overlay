@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, cv-bridge, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libmaps, octomap, opencv, openni2, pkg-config, python3Packages, pythonPackages, ros-environment, rosbag-storage, roscpp, tf2-geometry-msgs, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-libnav";
-  version = "2.13.7-r4";
+  version = "2.13.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_ros-release/archive/release/noetic/mrpt_libnav/2.13.7-4.tar.gz";
-    name = "2.13.7-4.tar.gz";
-    sha256 = "7b9dc66649f44f2911fe3b71e15cc63707e166c651583aeb9426b11098cf2f0d";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_ros-release/archive/release/noetic/mrpt_libnav/2.13.8-1.tar.gz";
+    name = "2.13.8-1.tar.gz";
+    sha256 = "37a2a0c4b89438058a3ceeb626685f05a8677428a2aad501f904b582a813d9bb";
   };
 
   buildType = "cmake";
