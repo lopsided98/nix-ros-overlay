@@ -3,11 +3,11 @@
 
 buildPythonPackage rec {
   pname = "rosdep";
-  version = "0.22.1";
+  version = "0.25.1";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-4zwINrBPHkP1QpEQTNBlRyw7z2ENcoysElNSiou+iGM=";
+    hash = "sha256-oKcA3r27EykySLprt6+ZAHBQ1XH+pNLkzGEZzkRj3nI=";
   };
 
   # Tries to download files
