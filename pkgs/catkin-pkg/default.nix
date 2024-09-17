@@ -1,13 +1,13 @@
-{ lib, buildPythonPackage, fetchPypi, fetchpatch, python-dateutil, docutils
+{ lib, buildPythonPackage, fetchPypi, python-dateutil, docutils
 , pyparsing, setuptools }:
 
 buildPythonPackage rec {
   pname = "catkin_pkg";
-  version = "0.5.2";
+  version = "1.0.0";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-XWQ+6vvOSJD8zq+dsZfq3yyloYfSVZP2W25cV5NfXaI=";
+    hash = "sha256-R26fUpFygvRkc5JBtLyvXrv7qaemjZr4+HUiX+rA4bU=";
   };
 
   propagatedBuildInputs = [ python-dateutil docutils pyparsing setuptools ];
