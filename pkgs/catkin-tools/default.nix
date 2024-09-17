@@ -3,11 +3,11 @@
 
 buildPythonPackage rec {
   pname = "catkin_tools";
-  version = "0.9.0";
+  version = "0.9.4";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-JlOjtDMAxkglzWb+Ou3+hnadQn9F6mTxDPqJc2yh/Lc=";
+    hash = "sha256-BjVwOJRD8L5ESOKlZbiuAc/NQdAsvDoU8INr1FiMBjo=";
   };
 
   propagatedBuildInputs = [ setuptools osrf-pycommon pyyaml catkin-pkg ];
