@@ -130,4 +130,12 @@ rosSelf: rosSuper: with rosSelf.lib; {
   } : {
     buildInputs = buildInputs ++ [ self.opencl-clhpp ];
   });
+
+  sophus = rosSuper.sophus.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail " -Werror" ""
+    '';
+  });
 }
