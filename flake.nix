@@ -21,7 +21,8 @@
         );
       inherit (pkgs.rosPackages.lib) distroNames;
     in {
-      legacyPackages = pkgs.rosPackages;
+      legacyPackages = (intersectAttrs (self.overlays.default null pkgs) pkgs)
+                       // pkgs.rosPackages; # for backward compatibility
       packages.update-overlay = pkgs.callPackage ./maintainers/scripts/update-overlay.nix { };
 
       devShells = {
