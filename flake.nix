@@ -9,7 +9,7 @@
   outputs = { self, nixpkgs, flake-utils }:
     with nixpkgs.lib;
     with flake-utils.lib;
-    eachSystem allSystems (system: let
+    eachSystem systems.flakeExposed (system: let
       pkgs = import nixpkgs {
         inherit system;
         overlays = [ self.overlays.default ];
