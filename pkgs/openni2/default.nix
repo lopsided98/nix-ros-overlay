@@ -1,5 +1,5 @@
-{ lib, clangStdenv, fetchurl, fetchFromGitHub, libusb1, jdk, python3, doxygen
-, libGLU, xorg, freeglut, fetchDebianPatch, libjpeg }:
+{ lib, clangStdenv, fetchurl, fetchFromGitHub, fetchDebianPatch, libusb1, jdk
+, python3, doxygen, libGLU, xorg, freeglut, libjpeg }:
 
 let
   libopenni2_pc = fetchurl {
@@ -35,11 +35,11 @@ in clangStdenv.mkDerivation rec {
     patchShebangs Source
     patchShebangs Packaging
 
-    sed -e "s/cmd = \[javaDocExe, '-d', 'java'\]/cmd = [javaDocExe, '-d', 'java', '-Xdoclint:none']/" \
-      -i Source/Documentation/Runme.py
-    sed -e "s%/etc/udev/rules.d/%$out/etc/udev/rules.d/%" \
-      -e s%exit%% \
-      -i Packaging/Linux/install.sh
+    substituteInPlace Source/Documentation/Runme.py \
+      --replace-fail "cmd = [javaDocExe, '-d', 'java']" "cmd = [javaDocExe, '-d', 'java', '-Xdoclint:none']"
+    substituteInPlace Packaging/Linux/install.sh \
+      --replace-fail /etc/udev/rules.d/ "$out/etc/udev/rules.d/" \
+      --replace-fail exit ""
     substituteInPlace Source/Drivers/PS1080/Sensor/Bayer.cpp \
       --replace-fail 'register ' ""
     substituteInPlace ThirdParty/GL/glh/glh_linear.h \
