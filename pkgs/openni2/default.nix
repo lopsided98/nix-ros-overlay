@@ -40,6 +40,10 @@ in clangStdenv.mkDerivation rec {
     sed -e "s%/etc/udev/rules.d/%$out/etc/udev/rules.d/%" \
       -e s%exit%% \
       -i Packaging/Linux/install.sh
+    substituteInPlace Source/Drivers/PS1080/Sensor/Bayer.cpp \
+      --replace-fail 'register ' ""
+    substituteInPlace ThirdParty/GL/glh/glh_linear.h \
+      --replace-fail 'register ' ""
   '';
 
   makeFlags = [ "CFG=Release" "ALLOW_WARNINGS=1" ];
