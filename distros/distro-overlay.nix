@@ -40,6 +40,35 @@ let
     };
   };
 
+  mrptOverrides = rosSelf: rosSuper:
+    let
+      patchMrptExternalProjectGit = pkg:
+        with rosSuper.lib;
+        patchExternalProjectGit pkg {
+          url = "https://github.com/MRPT/mrpt.git";
+          originalRev = "\\\\\${MRPT_VERSION_TO_DOWNLOAD}";
+          # CMakeLists.txt sets MRPT_VERSION_TO_DOWNLOAD to the
+          # version from package.xml
+          rev = head (splitString "-" pkg.version); # Ignore ROS release such as "-r1".
+          fetchgitArgs.hash = "sha256-hWQlDdeR9qkrKBL6k689yDSupynU24r1BWhycp8mqvI=";
+        };
+    in rosSuper.lib.genAttrs [
+      "mrpt-apps"
+      "mrpt-libapps"
+      "mrpt-libbase"
+      "mrpt-libgui"
+      "mrpt-libhwdrivers"
+      "mrpt-libmaps"
+      "mrpt-libmath"
+      "mrpt-libnav"
+      "mrpt-libobs"
+      "mrpt-libopengl"
+      "mrpt-libposes"
+      "mrpt-libros-bridge"
+      "mrpt-libslam"
+      "mrpt-libtclap"
+    ] (name: patchMrptExternalProjectGit rosSuper.${name});
+
   overrides = rosSelf: rosSuper: with rosSelf.lib; {
     # ROS package overrides/fixups
 
@@ -386,7 +415,7 @@ let
     });
 
     urdf = patchBoostPython rosSuper.urdf;
-  };
+  } // (mrptOverrides rosSelf rosSuper);
 
   otherSplices = {
     selfBuildBuild = self.pkgsBuildBuild.rosPackages.${distro};
