@@ -15,7 +15,8 @@
         overlays = [ self.overlays.default ];
       };
     in {
-      legacyPackages = pkgs.rosPackages;
+      legacyPackages = (intersectAttrs (self.overlays.default null pkgs) pkgs)
+                       // pkgs.rosPackages;
 
       devShells = {
         example-turtlebot3-gazebo = import ./examples/turtlebot3-gazebo.nix { inherit pkgs; };
