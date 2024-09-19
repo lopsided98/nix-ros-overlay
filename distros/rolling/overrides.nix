@@ -118,10 +118,22 @@ in {
     hash = "sha256-zSiPHEh3h2J8hGL342tde5U9FLaGnWs72WD9BqyPf6E=";
   };
 
-  gz-tools-vendor = lib.patchGzAmentVendorGit rosSuper.gz-tools-vendor {
+  gz-tools-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-tools-vendor {
     version = "2.0.1";
     hash = "sha256-sV/T53oVk1fgjwqn/SRTaPTukt+vAlGGxGvTN8+G6Mo=";
-  };
+  }).overrideAttrs({
+    nativeBuildInputs ? [], propagatedNativeBuildInputs ? [], qtWrapperArgs ? [], postFixup ? "", ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+    propagatedNativeBuildInputs = propagatedNativeBuildInputs ++ [self.qt5.qtquickcontrols2 self.qt5.qtgraphicaleffects self.pkg-config];
+    qtWrapperArgs = qtWrapperArgs ++ [
+      # Use X11 by default
+      "--set-default QT_QPA_PLATFORM xcb"
+    ];
+    postFixup = postFixup + ''
+      wrapQtApp "$out/opt/gz_tools_vendor/bin/gz"
+    '';
+  });
 
   gz-transport-vendor = lib.patchGzAmentVendorGit rosSuper.gz-transport-vendor {
     version = "13.4.0";

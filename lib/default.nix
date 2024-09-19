@@ -137,6 +137,12 @@
         endif()
         EOF
       '';
+      preBuild = ''
+        find . -name "*build.make" -print -exec sed -i "s#var/empty#opt#g" {} \;
+      '';
+      setupHook = self.writeText "${pname}-setup-hook.sh" ''
+        addToSearchPath GZ_CONFIG_PATH "@out@/opt/${lib.replaceStrings ["-"] ["_"] stem}_vendor/share/gz"
+      '';
     });
 
   patchBoostPython = pkg: pkg.overrideAttrs ({
