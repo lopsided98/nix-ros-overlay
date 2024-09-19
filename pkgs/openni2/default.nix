@@ -11,7 +11,7 @@ in clangStdenv.mkDerivation rec {
   version = "2.2.0.33";
 
   src = fetchFromGitHub {
-    owner = "OpenNI";
+    owner = "structureio";
     repo = "OpenNI2";
     rev = "ca2cdcf39d49332fa9462188a952ff9953e9e1d9";
     sha256 = "0mfnyzpq53wnzgjfx91xcbx0nrl0lp1vrk1rk20a3gb3kshsr675";
