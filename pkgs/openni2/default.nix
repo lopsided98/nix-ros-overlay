@@ -1,5 +1,5 @@
 { lib, clangStdenv, fetchurl, fetchFromGitHub, libusb1, jdk, python3, doxygen
-, libGLU, xorg, freeglut }:
+, libGLU, xorg, freeglut, fetchDebianPatch, libjpeg }:
 
 let
   libopenni2_pc = fetchurl {
@@ -17,8 +17,17 @@ in clangStdenv.mkDerivation rec {
     sha256 = "0mfnyzpq53wnzgjfx91xcbx0nrl0lp1vrk1rk20a3gb3kshsr675";
   };
 
+  patches = [
+    (fetchDebianPatch {
+      inherit pname;
+      version = "${version}+dfsg-18";
+      patch = "0003-Use-system-wide-libjpeg.patch";
+      hash = "sha256-Y4K70tqmbQDIsNCau/XZyNJL5RfBa/VW6xG5+M6XW6Q=";
+    })
+  ];
+
   nativeBuildInputs = [ jdk python3 doxygen ];
-  buildInputs = [ libusb1 libGLU xorg.libX11 freeglut ];
+  buildInputs = [ libusb1 libGLU xorg.libX11 freeglut libjpeg ];
 
   outputs = [ "out" "doc" ];
 
