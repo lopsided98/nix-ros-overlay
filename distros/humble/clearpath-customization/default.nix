@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-humble-clearpath-customization";
-  version = "0.2.11-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_customization/0.2.11-1.tar.gz";
-    name = "0.2.11-1.tar.gz";
-    sha256 = "525b443d122be96c0ae8c2035ee37fe14350e34a688b1b99e5dee430aea35311";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_customization/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "34df0fb4a43f2f1c6848003417bfef05050ec91ccb06419f7d9c8209264aac33";
   };
 
   buildType = "ament_cmake";

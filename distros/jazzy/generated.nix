@@ -1322,8 +1322,6 @@ self: super: {
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
 
- mrpt2 = self.callPackage ./mrpt2 {};
-
  mrpt-apps = self.callPackage ./mrpt-apps {};
 
  mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};

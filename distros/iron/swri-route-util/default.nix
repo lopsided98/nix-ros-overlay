@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, marti-common-msgs, marti-nav-msgs, rclcpp, swri-geometry-util, swri-math-util, swri-roscpp, swri-transform-util, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-iron-swri-route-util";
-  version = "3.7.1-r1";
+  version = "3.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_route_util/3.7.1-1.tar.gz";
-    name = "3.7.1-1.tar.gz";
-    sha256 = "b47b94a28fd6a5d4a833cd851b1f445134796179e2bde1709110902fdce2bcdf";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_route_util/3.7.3-1.tar.gz";
+    name = "3.7.3-1.tar.gz";
+    sha256 = "d0011e4f2af1763113b41243a3f34a6f01c4f16b527924f4983f4026693cff0b";
   };
 
   buildType = "ament_cmake";

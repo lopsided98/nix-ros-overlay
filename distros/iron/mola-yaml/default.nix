@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libbase }:
 buildRosPackage {
   pname = "ros-iron-mola-yaml";
-  version = "1.1.3-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_yaml/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "5091906c10f53ecf9a0fe898b9d7bf30eb8ea525610a62db46f85f315f572ae3";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_yaml/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "82894407e3ef1c3af1de8352da89edfd976e37ba4c1619b04958601aa8d0f6be";
   };
 
   buildType = "cmake";

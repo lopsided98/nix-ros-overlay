@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, cv-bridge, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libopengl, octomap, opencv, openni2, pkg-config, python3Packages, pythonPackages, rclcpp, ros-environment, rosbag2-storage, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-iron-mrpt-libgui";
-  version = "2.13.8-r1";
+  version = "2.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/iron/mrpt_libgui/2.13.8-1.tar.gz";
-    name = "2.13.8-1.tar.gz";
-    sha256 = "bfb9d9cce1656aaf559f957c15b02ff96083bee47f0f0548d4396c68d286f064";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/iron/mrpt_libgui/2.14.0-1.tar.gz";
+    name = "2.14.0-1.tar.gz";
+    sha256 = "6435c85370d57e21a4c55d42bd5234ffdd0b7ef9731ffcc71cf5ecf712a0f489";
   };
 
   buildType = "cmake";

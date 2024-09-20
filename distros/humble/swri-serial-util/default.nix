@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost }:
 buildRosPackage {
   pname = "ros-humble-swri-serial-util";
-  version = "3.7.1-r1";
+  version = "3.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_serial_util/3.7.1-1.tar.gz";
-    name = "3.7.1-1.tar.gz";
-    sha256 = "80b1f749eb1e6df40e5b8bac58c69fd3672a747b0df7be9edf32f7ab9980fd6e";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_serial_util/3.7.2-1.tar.gz";
+    name = "3.7.2-1.tar.gz";
+    sha256 = "2019c3e545ca6e0132a2f07288329773d922baf64835d77dfdd41107344cedad";
   };
 
   buildType = "ament_cmake";

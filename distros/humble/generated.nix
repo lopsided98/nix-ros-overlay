@@ -448,6 +448,10 @@ self: super: {
 
  clearpath-gz = self.callPackage ./clearpath-gz {};
 
+ clearpath-manipulators = self.callPackage ./clearpath-manipulators {};
+
+ clearpath-manipulators-description = self.callPackage ./clearpath-manipulators-description {};
+
  clearpath-mecanum-drive-controller = self.callPackage ./clearpath-mecanum-drive-controller {};
 
  clearpath-mounts-description = self.callPackage ./clearpath-mounts-description {};
@@ -959,6 +963,8 @@ self: super: {
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
 
  foxglove-bridge = self.callPackage ./foxglove-bridge {};
+
+ foxglove-compressed-video-transport = self.callPackage ./foxglove-compressed-video-transport {};
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
@@ -1681,8 +1687,6 @@ self: super: {
  mqtt-client = self.callPackage ./mqtt-client {};
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
-
- mrpt2 = self.callPackage ./mrpt2 {};
 
  mrpt-apps = self.callPackage ./mrpt-apps {};
 

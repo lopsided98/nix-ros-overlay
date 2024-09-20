@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-imu-preintegration, mola-kernel, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-humble-mola-navstate-fuse";
-  version = "1.1.3-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_navstate_fuse/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "a929268d6abcb4dd106caab8121047436d546ae4f1423687c63bc01874cdc60b";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_navstate_fuse/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "f33f504d55b4240457e739260aaf5d560ee1f3564358bb8b8b588952d363b258";
   };
 
   buildType = "cmake";

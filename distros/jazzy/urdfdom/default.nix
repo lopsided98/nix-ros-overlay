@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, console-bridge, console-bridge-vendor, python3, tinyxml-2, tinyxml2-vendor, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-jazzy-urdfdom";
-  version = "4.0.0-r3";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/urdfdom-release/archive/release/jazzy/urdfdom/4.0.0-3.tar.gz";
-    name = "4.0.0-3.tar.gz";
-    sha256 = "a635c5687985d166ceb09ebefecfafc74f344623c7e0fa15c993e6241d34e800";
+    url = "https://github.com/ros2-gbp/urdfdom-release/archive/release/jazzy/urdfdom/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "89e127d74dd777402cc802ac8102d3b9ba475d0d62f51d2056743a1da1882777";
   };
 
   buildType = "cmake";

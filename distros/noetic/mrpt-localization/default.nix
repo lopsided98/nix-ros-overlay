@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, mrpt-libgui, mrpt-libros-bridge, mrpt-libslam, mrpt-msgs, mrpt-msgs-bridge, nav-msgs, pose-cov-ops, roscpp, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-localization";
-  version = "1.0.6-r2";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_localization/1.0.6-2.tar.gz";
-    name = "1.0.6-2.tar.gz";
-    sha256 = "52949811e06f4a275f0bf5df8d4e0051ae3bc9f4ba2269cc854b7923e1c4db6e";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_localization/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "cfcc8102a0ffcbd4766a9e392a400336168cb23c75e47e2590c6ba8de2e9fef3";
   };
 
   buildType = "catkin";

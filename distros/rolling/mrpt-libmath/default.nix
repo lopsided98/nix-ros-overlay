@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, cv-bridge, eigen, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libbase, octomap, opencv, openni2, pkg-config, python3Packages, pythonPackages, rclcpp, ros-environment, rosbag2-storage, suitesparse, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-libmath";
-  version = "2.13.8-r1";
+  version = "2.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/rolling/mrpt_libmath/2.13.8-1.tar.gz";
-    name = "2.13.8-1.tar.gz";
-    sha256 = "e3d31e6ae06e243b2d7b289d1965dbd119af1007eb083dde05e72df6a724ab47";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/rolling/mrpt_libmath/2.14.0-1.tar.gz";
+    name = "2.14.0-1.tar.gz";
+    sha256 = "cb71d3aa47fef3ad2b35f3142aef7a8e07d9abe34c9c403229a70f3e6ecdddf0";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cv-bridge, eigen, geos, pkg-config, rclcpp, tf2 }:
 buildRosPackage {
   pname = "ros-humble-swri-geometry-util";
-  version = "3.7.1-r1";
+  version = "3.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_geometry_util/3.7.1-1.tar.gz";
-    name = "3.7.1-1.tar.gz";
-    sha256 = "09e961e76bf8f9650cf773c2355c11c69710bf73239b6278d9c31a47db1da9d8";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_geometry_util/3.7.2-1.tar.gz";
+    name = "3.7.2-1.tar.gz";
+    sha256 = "97638e874cd0f993d2cbd2c9a34f73ae3883e6f3e42a4c91bd86036e3a02e620";
   };
 
   buildType = "ament_cmake";

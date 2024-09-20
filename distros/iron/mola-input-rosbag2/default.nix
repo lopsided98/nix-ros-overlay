@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, cv-bridge, mola-kernel, mrpt-libobs, mrpt-libros-bridge, rosbag2-cpp, sensor-msgs, tf2-geometry-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-mola-input-rosbag2";
-  version = "1.1.3-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_input_rosbag2/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "d4009c1c2336a498a018350b7c4a165d21c1ab997b557ed395e6074b03a85934";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_input_rosbag2/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "f3e4c9de10ee9db64e9920457166168a5b6089f2e08cc14de50fc70f52d3337b";
   };
 
   buildType = "cmake";

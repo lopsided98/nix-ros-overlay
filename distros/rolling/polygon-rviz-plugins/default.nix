@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, color-util, geometry-msgs, pluginlib, polygon-msgs, polygon-utils, rviz-common, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-polygon-rviz-plugins";
-  version = "1.0.2-r2";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/rolling/polygon_rviz_plugins/1.0.2-2.tar.gz";
-    name = "1.0.2-2.tar.gz";
-    sha256 = "9228448e9bc901d2333459ecb18b5089ad0f367b832925ad46cc4295de61b8e1";
+    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/rolling/polygon_rviz_plugins/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "8cb0ddafee28e3771a054a7251862650826d1e12995aad6b97906a7b4b5441f5";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, clearpath-generator-gz, clearpath-gz }:
 buildRosPackage {
   pname = "ros-humble-clearpath-simulator";
-  version = "0.2.6-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_simulator-release/archive/release/humble/clearpath_simulator/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "96b9b0c9366af9ea214e2e634603b39a241a7629238e7fdee09f6cb53af658bc";
+    url = "https://github.com/clearpath-gbp/clearpath_simulator-release/archive/release/humble/clearpath_simulator/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "d3af91b4d468db5890ab459ecabca1661f2b7f0b0b4db7935c74ce46af238d0c";
   };
 
   buildType = "ament_cmake";

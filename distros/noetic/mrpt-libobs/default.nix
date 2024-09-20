@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, cv-bridge, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libopengl, mrpt-libposes, octomap, opencv, openni2, pkg-config, python3Packages, pythonPackages, ros-environment, rosbag-storage, roscpp, tf2-geometry-msgs, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-libobs";
-  version = "2.13.8-r1";
+  version = "2.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_ros-release/archive/release/noetic/mrpt_libobs/2.13.8-1.tar.gz";
-    name = "2.13.8-1.tar.gz";
-    sha256 = "ac6d8cf01cf10e128bccc0f9433ed96a88a7e8869c8dad6dc40fa33ba22f3407";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_ros-release/archive/release/noetic/mrpt_libobs/2.14.0-1.tar.gz";
+    name = "2.14.0-1.tar.gz";
+    sha256 = "33df1d7b1757f9966dd262ed6505c52a0c7a0df16bda5ec699d0336429846925";
   };
 
   buildType = "cmake";

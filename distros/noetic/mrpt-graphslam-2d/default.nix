@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, fkie-multimaster-msgs, geometry-msgs, mrpt-libapps, mrpt-libgui, mrpt-libros-bridge, mrpt-msgs, mrpt-msgs-bridge, nav-msgs, roscpp, rospy, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-graphslam-2d";
-  version = "0.1.18-r1";
+  version = "0.1.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/noetic/mrpt_graphslam_2d/0.1.18-1.tar.gz";
-    name = "0.1.18-1.tar.gz";
-    sha256 = "5b02ce04f7806786716ac7186984addb6e13e74b82e24a1215a3c9660106130a";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_slam-release/archive/release/noetic/mrpt_graphslam_2d/0.1.19-1.tar.gz";
+    name = "0.1.19-1.tar.gz";
+    sha256 = "52ac5481791c82afffd01c730409877c5235e7794b8f53e5c6157398bb9a3a9d";
   };
 
   buildType = "catkin";

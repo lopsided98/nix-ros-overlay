@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, angles, color-util, geometry-msgs, polygon-msgs, polygon-rviz-plugins, polygon-utils, rclcpp, rviz-common, rviz-default-plugins, rviz2 }:
 buildRosPackage {
   pname = "ros-iron-polygon-demos";
-  version = "1.0.2-r2";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/iron/polygon_demos/1.0.2-2.tar.gz";
-    name = "1.0.2-2.tar.gz";
-    sha256 = "8da8298adcd837ec77b401a2fa7ec02062657e29c2ac4939f2958cb7b66f84c1";
+    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/iron/polygon_demos/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "f0a9fef597746d1003c67e57fbee4505312100a031c841e991140cab0210f7aa";
   };
 
   buildType = "ament_cmake";

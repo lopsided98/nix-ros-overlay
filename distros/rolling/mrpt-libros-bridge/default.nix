@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, cv-bridge, ffmpeg, freeglut, freenect, geometry-msgs, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libmaps, nav-msgs, octomap, opencv, openni2, pkg-config, python3Packages, pythonPackages, rclcpp, ros-environment, rosbag2-storage, sensor-msgs, std-msgs, stereo-msgs, tf2, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-libros-bridge";
-  version = "2.13.8-r1";
+  version = "2.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/rolling/mrpt_libros_bridge/2.13.8-1.tar.gz";
-    name = "2.13.8-1.tar.gz";
-    sha256 = "b477b1abce22ca22c939b1f04dbbc90781aecb4d4626f8a47e99bbcf5b50df6b";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/rolling/mrpt_libros_bridge/2.14.0-1.tar.gz";
+    name = "2.14.0-1.tar.gz";
+    sha256 = "6541c3a3f36f87aad4396af69e851d96e20db2ce4f8b7d0c11d7ec6ee7165347";
   };
 
   buildType = "cmake";
