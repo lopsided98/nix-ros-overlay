@@ -74,7 +74,7 @@ Using the overlay in your `flake.nix`-based project could look like this:
 }
 ```
 
-[flake]: https://nixos.wiki/wiki/Flakes#Enable_flakes
+[flake]: https://wiki.nixos.org/wiki/Flakes
 
 ## Current status
 
