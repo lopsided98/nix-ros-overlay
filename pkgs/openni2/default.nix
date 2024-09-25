@@ -24,6 +24,12 @@ in clangStdenv.mkDerivation rec {
       patch = "0003-Use-system-wide-libjpeg.patch";
       hash = "sha256-Y4K70tqmbQDIsNCau/XZyNJL5RfBa/VW6xG5+M6XW6Q=";
     })
+    (fetchDebianPatch {
+      inherit pname;
+      version = "${version}+dfsg-18";
+      patch = "0012-generic-linux.patch";
+      hash = "sha256-u2Lr45C//GEcfLc3gaqttp4qGPL2OGyR/qW5eJlaJvA=";
+    })
   ];
 
   nativeBuildInputs = [ jdk python3 doxygen ];
