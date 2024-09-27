@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, marti-introspection-msgs, python3Packages, rcl-interfaces, rclpy, ros2cli, ros2node, ros2param, ros2topic }:
 buildRosPackage {
   pname = "ros-jazzy-swri-cli-tools";
-  version = "3.7.1-r1";
+  version = "3.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_cli_tools/3.7.1-1.tar.gz";
-    name = "3.7.1-1.tar.gz";
-    sha256 = "916fa7fe994251f006b9ce385676781700a56f2330c574fb0c2240779df9a79f";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_cli_tools/3.7.3-1.tar.gz";
+    name = "3.7.3-1.tar.gz";
+    sha256 = "f0bdb9763335b1601d72cdf15ded2d321832dd8f77c57f1283c9783ce06fa8de";
   };
 
   buildType = "ament_python";

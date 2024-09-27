@@ -162,6 +162,8 @@ self: super: {
 
  apriltag-detector = self.callPackage ./apriltag-detector {};
 
+ apriltag-mit = self.callPackage ./apriltag-mit {};
+
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
@@ -704,6 +706,8 @@ self: super: {
 
  foxglove-bridge = self.callPackage ./foxglove-bridge {};
 
+ foxglove-compressed-video-transport = self.callPackage ./foxglove-compressed-video-transport {};
+
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
  fuse = self.callPackage ./fuse {};
@@ -1110,6 +1114,12 @@ self: super: {
 
  map-msgs = self.callPackage ./map-msgs {};
 
+ mapviz = self.callPackage ./mapviz {};
+
+ mapviz-interfaces = self.callPackage ./mapviz-interfaces {};
+
+ mapviz-plugins = self.callPackage ./mapviz-plugins {};
+
  marine-acoustic-msgs = self.callPackage ./marine-acoustic-msgs {};
 
  marine-sensor-msgs = self.callPackage ./marine-sensor-msgs {};
@@ -1322,8 +1332,6 @@ self: super: {
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
 
- mrpt2 = self.callPackage ./mrpt2 {};
-
  mrpt-apps = self.callPackage ./mrpt-apps {};
 
  mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
@@ -1391,6 +1399,8 @@ self: super: {
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ multires-image = self.callPackage ./multires-image {};
 
  mvsim = self.callPackage ./mvsim {};
 
@@ -2304,6 +2314,12 @@ self: super: {
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
 
+ sick-safetyscanners2 = self.callPackage ./sick-safetyscanners2 {};
+
+ sick-safetyscanners2-interfaces = self.callPackage ./sick-safetyscanners2-interfaces {};
+
+ sick-safetyscanners-base = self.callPackage ./sick-safetyscanners-base {};
+
  sick-safevisionary-base = self.callPackage ./sick-safevisionary-base {};
 
  sick-safevisionary-driver = self.callPackage ./sick-safevisionary-driver {};
@@ -2477,6 +2493,8 @@ self: super: {
  tf-transformations = self.callPackage ./tf-transformations {};
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
+
+ tile-map = self.callPackage ./tile-map {};
 
  tinyspline-vendor = self.callPackage ./tinyspline-vendor {};
 

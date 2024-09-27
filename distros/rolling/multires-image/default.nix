@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, geometry-msgs, gps-msgs, mapviz, pluginlib, qt5, rclcpp, rclpy, swri-math-util, swri-transform-util, tf2 }:
 buildRosPackage {
   pname = "ros-rolling-multires-image";
-  version = "2.3.0-r2";
+  version = "2.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/rolling/multires_image/2.3.0-2.tar.gz";
-    name = "2.3.0-2.tar.gz";
-    sha256 = "168a574be48a5a72bf3f950e874a473b11f3d536addeef3043ab6468770fd116";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/rolling/multires_image/2.4.3-1.tar.gz";
+    name = "2.4.3-1.tar.gz";
+    sha256 = "96934363477164ad7da1df18e9225e6881c692992bff4e9cadd6eee2cb09f2fe";
   };
 
   buildType = "ament_cmake";

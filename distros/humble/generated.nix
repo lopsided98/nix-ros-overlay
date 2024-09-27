@@ -448,6 +448,10 @@ self: super: {
 
  clearpath-gz = self.callPackage ./clearpath-gz {};
 
+ clearpath-manipulators = self.callPackage ./clearpath-manipulators {};
+
+ clearpath-manipulators-description = self.callPackage ./clearpath-manipulators-description {};
+
  clearpath-mecanum-drive-controller = self.callPackage ./clearpath-mecanum-drive-controller {};
 
  clearpath-mounts-description = self.callPackage ./clearpath-mounts-description {};
@@ -960,6 +964,8 @@ self: super: {
 
  foxglove-bridge = self.callPackage ./foxglove-bridge {};
 
+ foxglove-compressed-video-transport = self.callPackage ./foxglove-compressed-video-transport {};
+
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
  franka-description = self.callPackage ./franka-description {};
@@ -1274,6 +1280,8 @@ self: super: {
 
  kuka-event-broadcaster = self.callPackage ./kuka-event-broadcaster {};
 
+ kuka-external-control-sdk = self.callPackage ./kuka-external-control-sdk {};
+
  kuka-external-control-sdk-examples = self.callPackage ./kuka-external-control-sdk-examples {};
 
  kuka-fortec-support = self.callPackage ./kuka-fortec-support {};
@@ -1397,6 +1405,8 @@ self: super: {
  libcreate = self.callPackage ./libcreate {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
+
+ libfranka = self.callPackage ./libfranka {};
 
  libg2o = self.callPackage ./libg2o {};
 
@@ -1681,8 +1691,6 @@ self: super: {
  mqtt-client = self.callPackage ./mqtt-client {};
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
-
- mrpt2 = self.callPackage ./mrpt2 {};
 
  mrpt-apps = self.callPackage ./mrpt-apps {};
 
@@ -3005,6 +3013,18 @@ self: super: {
  system-modes-examples = self.callPackage ./system-modes-examples {};
 
  system-modes-msgs = self.callPackage ./system-modes-msgs {};
+
+ talos-bringup = self.callPackage ./talos-bringup {};
+
+ talos-controller-configuration = self.callPackage ./talos-controller-configuration {};
+
+ talos-description = self.callPackage ./talos-description {};
+
+ talos-description-calibration = self.callPackage ./talos-description-calibration {};
+
+ talos-description-inertial = self.callPackage ./talos-description-inertial {};
+
+ talos-robot = self.callPackage ./talos-robot {};
 
  tango-icons-vendor = self.callPackage ./tango-icons-vendor {};
 

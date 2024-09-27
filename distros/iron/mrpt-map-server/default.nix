@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, mp2p-icp, mrpt-libmaps, mrpt-libros-bridge, mrpt-msgs, mrpt-nav-interfaces, rclcpp-components }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, mp2p-icp, mrpt-libmaps, mrpt-libobs, mrpt-libros-bridge, mrpt-msgs, mrpt-nav-interfaces, rclcpp-components, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-mrpt-map-server";
-  version = "2.1.1-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/iron/mrpt_map_server/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "3cbe54da54a9ecf904da0287c073426084d24a80370902ee30eea65804371bd2";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/iron/mrpt_map_server/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "5a128d172abe9fe2546007cbfc5d2f17c26917aeff473c11889f2c949aeb4a1c";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ ament-lint-auto ament-lint-common mp2p-icp mrpt-libmaps mrpt-libros-bridge mrpt-msgs mrpt-nav-interfaces rclcpp-components ];
+  propagatedBuildInputs = [ ament-cmake-lint-cmake ament-cmake-xmllint ament-lint-auto mp2p-icp mrpt-libmaps mrpt-libobs mrpt-libros-bridge mrpt-msgs mrpt-nav-interfaces rclcpp-components tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-pose-list, mola-test-datasets, mp2p-icp, mrpt-libmaps, mrpt-libobs, mrpt-libslam }:
 buildRosPackage {
   pname = "ros-iron-mola-relocalization";
-  version = "1.1.3-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_relocalization/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "ffcac03e7bbe6e64a7a932de14384c1fd3aa5bdf214c30c7d138cbd6b3d79a5b";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/iron/mola_relocalization/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "b95b5f5487a0f7801881c9f8f26e287b04f1c7749f11173cc1eba7dd776ea115";
   };
 
   buildType = "cmake";

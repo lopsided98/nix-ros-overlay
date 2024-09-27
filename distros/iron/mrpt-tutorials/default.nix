@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cmake, mvsim, teleop-twist-keyboard }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, cmake, mvsim, teleop-twist-keyboard }:
 buildRosPackage {
   pname = "ros-iron-mrpt-tutorials";
-  version = "2.1.1-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/iron/mrpt_tutorials/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "3ff326b20f75dedb277dd25b19503b2258f6198f097a7ac2864570a6e817a38b";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/iron/mrpt_tutorials/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "ea5d5fb1e7adb2f682787b4c451ff8312313c5245114df6b509503a074c6db6e";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake cmake ];
-  propagatedBuildInputs = [ ament-lint-auto ament-lint-common mvsim teleop-twist-keyboard ];
+  propagatedBuildInputs = [ ament-cmake-lint-cmake ament-cmake-xmllint ament-lint-auto mvsim teleop-twist-keyboard ];
   nativeBuildInputs = [ ament-cmake cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, color-util, geometry-msgs, pluginlib, polygon-msgs, polygon-utils, rviz-common, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-polygon-rviz-plugins";
-  version = "1.0.2-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/humble/polygon_rviz_plugins/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "f66f9b02b0abddfd0f7d251b7c9af425530f781bc20dfc69621f07a785abf257";
+    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/humble/polygon_rviz_plugins/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "3e4405797fd4a2c09f1e1d3145d53a27bd41c18fc5a6e408e09b92f59ce11e90";
   };
 
   buildType = "ament_cmake";

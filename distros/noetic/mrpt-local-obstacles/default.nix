@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, mrpt-libgui, mrpt-libmaps, mrpt-libros-bridge, mrpt-libtclap, roscpp, sensor-msgs, tf2, tf2-geometry-msgs, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, mp2p-icp, mrpt-libgui, mrpt-libmaps, mrpt-libros-bridge, mrpt-libtclap, roscpp, sensor-msgs, tf2, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-local-obstacles";
-  version = "1.0.6-r2";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_local_obstacles/1.0.6-2.tar.gz";
-    name = "1.0.6-2.tar.gz";
-    sha256 = "055f599d64ad8502c352b5f29fa73861eba39e9e33d2006bdf22f464043e57f6";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_local_obstacles/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "cea3025462dbde0671720bf19ffa8b889cbac8840205518a94183ed1f4f7980d";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  propagatedBuildInputs = [ dynamic-reconfigure mrpt-libgui mrpt-libmaps mrpt-libros-bridge mrpt-libtclap roscpp sensor-msgs tf2 tf2-geometry-msgs visualization-msgs ];
+  propagatedBuildInputs = [ dynamic-reconfigure mp2p-icp mrpt-libgui mrpt-libmaps mrpt-libros-bridge mrpt-libtclap roscpp sensor-msgs tf2 tf2-geometry-msgs visualization-msgs ];
   nativeBuildInputs = [ catkin ];
 
   meta = {

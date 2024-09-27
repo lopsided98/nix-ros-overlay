@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, marker-msgs, mrpt-libobs, mrpt-libros-bridge, mrpt-msgs, ros-environment, roscpp, tf2 }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-msgs-bridge";
-  version = "1.0.6-r2";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_msgs_bridge/1.0.6-2.tar.gz";
-    name = "1.0.6-2.tar.gz";
-    sha256 = "8535ee14b6ae934eb6fa36b0a74cf98ef074e507917c6f7e4331f33dd22be6b0";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release/archive/release/noetic/mrpt_msgs_bridge/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "af75ae1cdd5dbdaa8e9ed5c04be37aeb2c47f46e9bceaa0a967f291226d55d20";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, gtest-vendor, lcov, python3Packages, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-mrt-cmake-modules";
-  version = "1.0.10-r1";
+  version = "1.0.11-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrt_cmake_modules-release/archive/release/jazzy/mrt_cmake_modules/1.0.10-1.tar.gz";
-    name = "1.0.10-1.tar.gz";
-    sha256 = "25f8606c21ef907805760dc913b74896689e40d9b8c5dbdc590de2d20e66d1ff";
+    url = "https://github.com/ros2-gbp/mrt_cmake_modules-release/archive/release/jazzy/mrt_cmake_modules/1.0.11-2.tar.gz";
+    name = "1.0.11-2.tar.gz";
+    sha256 = "521fcefd901752d9b8168a421d355aae37c7cfc3379a9fc6ac80b69492c42ace";
   };
 
   buildType = "catkin";

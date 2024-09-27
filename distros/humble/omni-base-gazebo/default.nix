@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, gazebo-plugins, gazebo-ros, gazebo-ros2-control, launch-pal, omni-base-2dnav, omni-base-bringup, omni-base-description, pal-gazebo-plugins, pal-gazebo-worlds }:
 buildRosPackage {
   pname = "ros-humble-omni-base-gazebo";
-  version = "2.0.9-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/omni_base_simulation-release/archive/release/humble/omni_base_gazebo/2.0.9-1.tar.gz";
-    name = "2.0.9-1.tar.gz";
-    sha256 = "01fe43f9c3c7fd67a67912369ac7805d293dc7e2cbb61349d9cfeef54fcb6fa2";
+    url = "https://github.com/pal-gbp/omni_base_simulation-release/archive/release/humble/omni_base_gazebo/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "6b729ed1b82794072de36a353d3e095971017b011dfc3e4bdc2e37327c8a6da5";
   };
 
   buildType = "ament_cmake";

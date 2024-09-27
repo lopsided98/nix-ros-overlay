@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, freeglut, geometry-msgs, glew, image-transport, mapviz-interfaces, marti-common-msgs, pkg-config, pluginlib, qt5, rclcpp, ros-environment, rqt-gui, rqt-gui-cpp, std-srvs, swri-math-util, swri-transform-util, tf2, tf2-geometry-msgs, tf2-ros, xorg, yaml-cpp }:
 buildRosPackage {
   pname = "ros-iron-mapviz";
-  version = "2.4.2-r1";
+  version = "2.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/iron/mapviz/2.4.2-1.tar.gz";
-    name = "2.4.2-1.tar.gz";
-    sha256 = "3910ee8aea4f5feec068739db9c006c22ee15f000bd114235df6abe5bf1bfbc0";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/iron/mapviz/2.4.3-1.tar.gz";
+    name = "2.4.3-1.tar.gz";
+    sha256 = "dd7696d3f7d3332c8d218883ba41d07c126964635de0729484223eb146f893ff";
   };
 
   buildType = "ament_cmake";

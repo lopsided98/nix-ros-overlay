@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, boost, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-swri-system-util";
-  version = "3.7.1-r1";
+  version = "3.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_system_util/3.7.1-1.tar.gz";
-    name = "3.7.1-1.tar.gz";
-    sha256 = "5a3847db309a1160bb7c4e8dff370e8d9b170886aa330d1e3c2abd1da0fba52e";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_system_util/3.7.3-1.tar.gz";
+    name = "3.7.3-1.tar.gz";
+    sha256 = "e79ce720587d50c7599296e51adae4176b85c61b2ac62973001b6e34a50f66c2";
   };
 
   buildType = "ament_cmake";

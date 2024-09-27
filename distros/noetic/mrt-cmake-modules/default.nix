@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, lcov, python3Packages, ros-environment }:
 buildRosPackage {
   pname = "ros-noetic-mrt-cmake-modules";
-  version = "1.0.10-r1";
+  version = "1.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/KIT-MRT/mrt_cmake_modules-release/archive/release/noetic/mrt_cmake_modules/1.0.10-1.tar.gz";
-    name = "1.0.10-1.tar.gz";
-    sha256 = "c70823a245fe20c82ad07bde2efdd7ddf57c63e6b4b78153ba09e4884b863e9f";
+    url = "https://github.com/KIT-MRT/mrt_cmake_modules-release/archive/release/noetic/mrt_cmake_modules/1.0.11-1.tar.gz";
+    name = "1.0.11-1.tar.gz";
+    sha256 = "24db3708edf7075d82fe1158323ae31fc874e309199435a68f0c4b94647d201b";
   };
 
   buildType = "catkin";

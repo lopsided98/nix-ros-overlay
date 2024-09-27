@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, boost, ceres-solver, eigen, fuse-msgs, geometry-msgs, glog, launch, launch-pytest, pluginlib, rcl-interfaces, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-rolling-fuse-core";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/rolling/fuse_core/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "84a822ebffa4470d104a0189d4cf538541c7d29dbec79ca7a5b7e3a277dcc801";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/rolling/fuse_core/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "3b5e3f139f553d9a767c7f08118fe904b7c06efcd59a6a6cf6f292cbfa2bdca8";
   };
 
   buildType = "ament_cmake";

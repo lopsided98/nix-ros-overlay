@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, generate-parameter-library, moveit-common, moveit-core, rsl, std-msgs, stomp, tf2-eigen, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-moveit-planners-stomp";
-  version = "2.10.0-r1";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_planners_stomp/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "e16207decb2638a780c1ada4bf443be0cd41b1f76d33b7f57a4b7f93fc348f1d";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_planners_stomp/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "dd5cc45e1127ea407a10aa9e76caba04e22138e3aecbf2a7361cfc1842bfa79c";
   };
 
   buildType = "ament_cmake";
