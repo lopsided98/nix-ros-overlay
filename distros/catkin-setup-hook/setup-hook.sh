@@ -76,6 +76,13 @@ _catkinPreConfigureHook() {
 }
 preConfigureHooks+=(_catkinPreConfigureHook)
 
+_exportCMakePrefixPath() {
+  # Needed for https://github.com/NixOS/nixpkgs/commit/8c9c8ade2f88a85ccdd4858cc802d7b7d6c48fe0
+  # see: https://github.com/lopsided98/nix-ros-overlay/issues/491
+  export CMAKE_PREFIX_PATH=$NIXPKGS_CMAKE_PREFIX_PATH
+}
+preConfigureHooks+=(_exportCMakePrefixPath)
+
 _catkinMarkerHook() {
   # The ROS_PACKAGE_PATH hook needs the .catkin marker
   touch "$out/.catkin"
