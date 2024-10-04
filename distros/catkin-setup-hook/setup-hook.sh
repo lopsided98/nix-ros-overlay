@@ -73,15 +73,15 @@ _catkinPreConfigureHook() {
   # we still need the marker for the environment hooks, so it is created
   # manually.
   cmakeFlags+=" -DCATKIN_BUILD_BINARY_PACKAGE=ON"
+
+  # Catkin uses CMAKE_PREFIX_PATH to find additional workspaces, but
+  # nixpkgs switched to using NIXPKGS_CMAKE_PREFIX_PATH
+  # (https://github.com/NixOS/nixpkgs/commit/8c9c8ade2f88a85ccdd4858cc802d7b7d6c48fe0).
+  # see: https://github.com/lopsided98/nix-ros-overlay/issues/491
+  # When specified as a variable CMAKE_PREFIX_PATH is a semi-colon separated list.
+  cmakeFlags+=" -DCMAKE_PREFIX_PATH=${NIXPKGS_CMAKE_PREFIX_PATH//:/;}"
 }
 preConfigureHooks+=(_catkinPreConfigureHook)
-
-_exportCMakePrefixPath() {
-  # Needed for https://github.com/NixOS/nixpkgs/commit/8c9c8ade2f88a85ccdd4858cc802d7b7d6c48fe0
-  # see: https://github.com/lopsided98/nix-ros-overlay/issues/491
-  export CMAKE_PREFIX_PATH=$NIXPKGS_CMAKE_PREFIX_PATH
-}
-preConfigureHooks+=(_exportCMakePrefixPath)
 
 _catkinMarkerHook() {
   # The ROS_PACKAGE_PATH hook needs the .catkin marker
