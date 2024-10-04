@@ -206,7 +206,6 @@ let
             -e "s#with open(os.path.join(tmpdirname, 'QtCore', 'QtCoremod.sip'), 'w') as outfp:##" \
             -e "s#outfp.write(output)##" \
             -i cmake/sip_configure.py
-        substituteInPlace cmake/sip_configure.py --replace "from distutils.spawn import find_executable" "from shutil import which as find_executable"
       '';
     });
 
