@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joy-teleop, key-teleop, teleop-tools-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-teleop-tools";
-  version = "1.5.1-r1";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/jazzy/teleop_tools/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "06f72893a2717757b7f137c54c16bd16d013b3652ffae9c14c55fc00ddc11d8d";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/jazzy/teleop_tools/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "8f0bcb48c40c013923d876531ce9c2b103110f2d97d5409b2e521835e9bef57a";
   };
 
   buildType = "ament_cmake";

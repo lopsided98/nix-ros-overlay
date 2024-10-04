@@ -634,6 +634,8 @@ self: super: {
 
  foxglove-bridge = self.callPackage ./foxglove-bridge {};
 
+ foxglove-compressed-video-transport = self.callPackage ./foxglove-compressed-video-transport {};
+
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
  fuse = self.callPackage ./fuse {};
@@ -1387,6 +1389,8 @@ self: super: {
  navigation2 = self.callPackage ./navigation2 {};
 
  ndt-omp = self.callPackage ./ndt-omp {};
+
+ neo-nav2-bringup = self.callPackage ./neo-nav2-bringup {};
 
  neo-simulation2 = self.callPackage ./neo-simulation2 {};
 

@@ -162,6 +162,8 @@ self: super: {
 
  apriltag-detector = self.callPackage ./apriltag-detector {};
 
+ apriltag-mit = self.callPackage ./apriltag-mit {};
+
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
@@ -219,6 +221,8 @@ self: super: {
  autoware-system-msgs = self.callPackage ./autoware-system-msgs {};
 
  autoware-utils = self.callPackage ./autoware-utils {};
+
+ autoware-v2x-msgs = self.callPackage ./autoware-v2x-msgs {};
 
  autoware-vehicle-msgs = self.callPackage ./autoware-vehicle-msgs {};
 
@@ -347,6 +351,18 @@ self: super: {
  controller-manager-msgs = self.callPackage ./controller-manager-msgs {};
 
  costmap-queue = self.callPackage ./costmap-queue {};
+
+ create3-coverage = self.callPackage ./create3-coverage {};
+
+ create3-examples-msgs = self.callPackage ./create3-examples-msgs {};
+
+ create3-examples-py = self.callPackage ./create3-examples-py {};
+
+ create3-lidar-slam = self.callPackage ./create3-lidar-slam {};
+
+ create3-republisher = self.callPackage ./create3-republisher {};
+
+ create3-teleop = self.callPackage ./create3-teleop {};
 
  cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
 
@@ -704,6 +720,8 @@ self: super: {
 
  foxglove-bridge = self.callPackage ./foxglove-bridge {};
 
+ foxglove-compressed-video-transport = self.callPackage ./foxglove-compressed-video-transport {};
+
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
  fuse = self.callPackage ./fuse {};
@@ -779,6 +797,8 @@ self: super: {
  gpsd-client = self.callPackage ./gpsd-client {};
 
  graph-msgs = self.callPackage ./graph-msgs {};
+
+ grasping-msgs = self.callPackage ./grasping-msgs {};
 
  grbl-msgs = self.callPackage ./grbl-msgs {};
 
@@ -1110,6 +1130,12 @@ self: super: {
 
  map-msgs = self.callPackage ./map-msgs {};
 
+ mapviz = self.callPackage ./mapviz {};
+
+ mapviz-interfaces = self.callPackage ./mapviz-interfaces {};
+
+ mapviz-plugins = self.callPackage ./mapviz-plugins {};
+
  marine-acoustic-msgs = self.callPackage ./marine-acoustic-msgs {};
 
  marine-sensor-msgs = self.callPackage ./marine-sensor-msgs {};
@@ -1322,8 +1348,6 @@ self: super: {
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
 
- mrpt2 = self.callPackage ./mrpt2 {};
-
  mrpt-apps = self.callPackage ./mrpt-apps {};
 
  mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
@@ -1391,6 +1415,8 @@ self: super: {
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ multires-image = self.callPackage ./multires-image {};
 
  mvsim = self.callPackage ./mvsim {};
 
@@ -2280,6 +2306,24 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ scenario-execution-control = self.callPackage ./scenario-execution-control {};
+
+ scenario-execution-gazebo = self.callPackage ./scenario-execution-gazebo {};
+
+ scenario-execution-interfaces = self.callPackage ./scenario-execution-interfaces {};
+
+ scenario-execution-nav2 = self.callPackage ./scenario-execution-nav2 {};
+
+ scenario-execution-os = self.callPackage ./scenario-execution-os {};
+
+ scenario-execution-py-trees-ros = self.callPackage ./scenario-execution-py-trees-ros {};
+
+ scenario-execution-ros = self.callPackage ./scenario-execution-ros {};
+
+ scenario-execution-rviz = self.callPackage ./scenario-execution-rviz {};
+
+ scenario-execution-x11 = self.callPackage ./scenario-execution-x11 {};
+
  sdformat-test-files = self.callPackage ./sdformat-test-files {};
 
  sdformat-urdf = self.callPackage ./sdformat-urdf {};
@@ -2303,6 +2347,12 @@ self: super: {
  shape-msgs = self.callPackage ./shape-msgs {};
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
+
+ sick-safetyscanners2 = self.callPackage ./sick-safetyscanners2 {};
+
+ sick-safetyscanners2-interfaces = self.callPackage ./sick-safetyscanners2-interfaces {};
+
+ sick-safetyscanners-base = self.callPackage ./sick-safetyscanners-base {};
 
  sick-safevisionary-base = self.callPackage ./sick-safevisionary-base {};
 
@@ -2478,6 +2528,8 @@ self: super: {
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
 
+ tile-map = self.callPackage ./tile-map {};
+
  tinyspline-vendor = self.callPackage ./tinyspline-vendor {};
 
  tinyxml2-vendor = self.callPackage ./tinyxml2-vendor {};
@@ -2544,9 +2596,15 @@ self: super: {
 
  turtlebot3-simulations = self.callPackage ./turtlebot3-simulations {};
 
+ turtlebot4-base = self.callPackage ./turtlebot4-base {};
+
+ turtlebot4-bringup = self.callPackage ./turtlebot4-bringup {};
+
  turtlebot4-description = self.callPackage ./turtlebot4-description {};
 
  turtlebot4-desktop = self.callPackage ./turtlebot4-desktop {};
+
+ turtlebot4-diagnostics = self.callPackage ./turtlebot4-diagnostics {};
 
  turtlebot4-gz-bringup = self.callPackage ./turtlebot4-gz-bringup {};
 
@@ -2560,7 +2618,13 @@ self: super: {
 
  turtlebot4-node = self.callPackage ./turtlebot4-node {};
 
+ turtlebot4-robot = self.callPackage ./turtlebot4-robot {};
+
+ turtlebot4-setup = self.callPackage ./turtlebot4-setup {};
+
  turtlebot4-simulator = self.callPackage ./turtlebot4-simulator {};
+
+ turtlebot4-tests = self.callPackage ./turtlebot4-tests {};
 
  turtlebot4-viz = self.callPackage ./turtlebot4-viz {};
 

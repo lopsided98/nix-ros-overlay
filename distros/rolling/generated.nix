@@ -14,8 +14,6 @@ self: super: {
 
  action-tutorials-cpp = self.callPackage ./action-tutorials-cpp {};
 
- action-tutorials-interfaces = self.callPackage ./action-tutorials-interfaces {};
-
  action-tutorials-py = self.callPackage ./action-tutorials-py {};
 
  actionlib-msgs = self.callPackage ./actionlib-msgs {};
@@ -228,6 +226,8 @@ self: super: {
 
  autoware-utils = self.callPackage ./autoware-utils {};
 
+ autoware-v2x-msgs = self.callPackage ./autoware-v2x-msgs {};
+
  autoware-vehicle-msgs = self.callPackage ./autoware-vehicle-msgs {};
 
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
@@ -371,8 +371,6 @@ self: super: {
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
 
  derived-object-msgs = self.callPackage ./derived-object-msgs {};
-
- desktop = self.callPackage ./desktop {};
 
  desktop-full = self.callPackage ./desktop-full {};
 
@@ -619,6 +617,8 @@ self: super: {
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
 
  foxglove-bridge = self.callPackage ./foxglove-bridge {};
+
+ foxglove-compressed-video-transport = self.callPackage ./foxglove-compressed-video-transport {};
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
@@ -1170,6 +1170,8 @@ self: super: {
 
  moveit-ros-tests = self.callPackage ./moveit-ros-tests {};
 
+ moveit-ros-trajectory-cache = self.callPackage ./moveit-ros-trajectory-cache {};
+
  moveit-ros-visualization = self.callPackage ./moveit-ros-visualization {};
 
  moveit-ros-warehouse = self.callPackage ./moveit-ros-warehouse {};
@@ -1199,8 +1201,6 @@ self: super: {
  mqtt-client = self.callPackage ./mqtt-client {};
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
-
- mrpt2 = self.callPackage ./mrpt2 {};
 
  mrpt-apps = self.callPackage ./mrpt-apps {};
 
@@ -1806,8 +1806,6 @@ self: super: {
 
  ros2trace-analysis = self.callPackage ./ros2trace-analysis {};
 
- ros-babel-fish = self.callPackage ./ros-babel-fish {};
-
  ros-babel-fish-test-msgs = self.callPackage ./ros-babel-fish-test-msgs {};
 
  ros-base = self.callPackage ./ros-base {};
@@ -2076,6 +2074,12 @@ self: super: {
 
  shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
 
+ sick-safetyscanners2 = self.callPackage ./sick-safetyscanners2 {};
+
+ sick-safetyscanners2-interfaces = self.callPackage ./sick-safetyscanners2-interfaces {};
+
+ sick-safetyscanners-base = self.callPackage ./sick-safetyscanners-base {};
+
  sick-safevisionary-base = self.callPackage ./sick-safevisionary-base {};
 
  sick-safevisionary-driver = self.callPackage ./sick-safevisionary-driver {};
@@ -2083,8 +2087,6 @@ self: super: {
  sick-safevisionary-interfaces = self.callPackage ./sick-safevisionary-interfaces {};
 
  sick-safevisionary-tests = self.callPackage ./sick-safevisionary-tests {};
-
- simple-actions = self.callPackage ./simple-actions {};
 
  simple-launch = self.callPackage ./simple-launch {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-autoware-common-msgs";
-  version = "1.1.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/rolling/autoware_common_msgs/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "971fe60e90223724e4b61cab0609fdee68439b3129e2f0508a300d62e8bd0d8d";
+    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/rolling/autoware_common_msgs/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "a851e9052dc962dd7db73013788d889d253c5cd031520a7036aca9f0c0f81a0c";
   };
 
   buildType = "ament_cmake";

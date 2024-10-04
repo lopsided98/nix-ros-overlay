@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libmath, mrpt-libposes, mrpt-libtclap }:
 buildRosPackage {
   pname = "ros-humble-kitti-metrics-eval";
-  version = "1.1.3-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/kitti_metrics_eval/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "46a83c804639a071b06a484028b7efb64838743b7ef01b0bacc7e0e98a859c54";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/kitti_metrics_eval/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "abf9b94b4fb132d8fa90076bfeab78149acf7a85ece691a85aae86598fecd923";
   };
 
   buildType = "cmake";

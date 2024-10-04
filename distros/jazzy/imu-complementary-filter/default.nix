@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, message-filters, rclcpp, sensor-msgs, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-imu-complementary-filter";
-  version = "2.1.3-r4";
+  version = "2.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/jazzy/imu_complementary_filter/2.1.3-4.tar.gz";
-    name = "2.1.3-4.tar.gz";
-    sha256 = "26ad0936a0c7402b8db39d848f8f09b1e9b592b3f50ff93612f2bdf19fdcff2d";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/jazzy/imu_complementary_filter/2.1.5-1.tar.gz";
+    name = "2.1.5-1.tar.gz";
+    sha256 = "211605736e73aef38f3a4a34fe67e94f81df00646919c73ed2d0e9457dfade29";
   };
 
   buildType = "ament_cmake";

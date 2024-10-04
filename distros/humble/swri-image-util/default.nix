@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, boost, camera-calibration-parsers, cv-bridge, eigen, geometry-msgs, image-geometry, image-transport, message-filters, nav-msgs, pkg-config, rclcpp, rclcpp-components, rclpy, std-msgs, swri-geometry-util, swri-math-util, swri-opencv-util, swri-roscpp, tf2 }:
 buildRosPackage {
   pname = "ros-humble-swri-image-util";
-  version = "3.7.1-r1";
+  version = "3.7.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_image_util/3.7.1-1.tar.gz";
-    name = "3.7.1-1.tar.gz";
-    sha256 = "a0b1d46b87fef02d3f84b9e8d3b3c80e522299b965377bfed10e36adf690c98a";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_image_util/3.7.3-2.tar.gz";
+    name = "3.7.3-2.tar.gz";
+    sha256 = "76cc9c8b1f7cd6ea84906130a3e20d7274c3c76c0add79877c0b24de77c4b2e8";
   };
 
   buildType = "ament_cmake";

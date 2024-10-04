@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, irobot-create-gz-bringup, irobot-create-gz-plugins, irobot-create-gz-toolbox }:
 buildRosPackage {
   pname = "ros-jazzy-irobot-create-gz-sim";
-  version = "3.0.2-r2";
+  version = "3.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/jazzy/irobot_create_gz_sim/3.0.2-2.tar.gz";
-    name = "3.0.2-2.tar.gz";
-    sha256 = "d4394aab7abdd32d2e86d7c30af5e267bfa0daabb2be970b8ea910c84d5f3a23";
+    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/jazzy/irobot_create_gz_sim/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
+    sha256 = "9dbe5183a2cf0d475632495850aacb47c9041d203907539e11c721eb87f17393";
   };
 
   buildType = "ament_cmake";
