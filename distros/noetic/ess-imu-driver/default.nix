@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, roscpp, sensor-msgs, std-msgs, tf2 }:
 buildRosPackage {
   pname = "ros-noetic-ess-imu-driver";
-  version = "1.0.1-r3";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/cubicleguy/ess_imu_driver-release/archive/release/noetic/ess_imu_driver/1.0.1-3.tar.gz";
-    name = "1.0.1-3.tar.gz";
-    sha256 = "ae04d77e0518c622a232fb9470b284cd52668129a932bf2bc161d20d249f306f";
+    url = "https://github.com/cubicleguy/ess_imu_driver-release/archive/release/noetic/ess_imu_driver/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "943010f30250f64918560450ea5d9632c2dee9893e51698ff58be39a77015d7c";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-xmllint, ament-lint-auto, joint-state-broadcaster, ros2-controllers, ros2launch, rsl }:
 buildRosPackage {
   pname = "ros-jazzy-irobot-create-control";
-  version = "3.0.2-r2";
+  version = "3.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/jazzy/irobot_create_control/3.0.2-2.tar.gz";
-    name = "3.0.2-2.tar.gz";
-    sha256 = "65102419744ef2e56f0d71d4ab57507870559148d6dfafba2f4ded827aedbe58";
+    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/jazzy/irobot_create_control/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
+    sha256 = "bf66bbf94e5a2407d05851b634c778e653992487b9ca7c21606f2b1ee9beac83";
   };
 
   buildType = "ament_cmake";

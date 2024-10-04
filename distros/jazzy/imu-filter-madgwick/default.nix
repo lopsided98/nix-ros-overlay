@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, builtin-interfaces, geometry-msgs, nav-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, sensor-msgs, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-imu-filter-madgwick";
-  version = "2.1.3-r4";
+  version = "2.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/jazzy/imu_filter_madgwick/2.1.3-4.tar.gz";
-    name = "2.1.3-4.tar.gz";
-    sha256 = "1b703aadec42d0b0ee4a5d915757fb9e775a31ea71a4db5bd7910d755c3bffa1";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/jazzy/imu_filter_madgwick/2.1.5-1.tar.gz";
+    name = "2.1.5-1.tar.gz";
+    sha256 = "245e8e210c35b5ba09d176fa72aa8d6193aa896b259605b451c8b357171778d6";
   };
 
   buildType = "ament_cmake";

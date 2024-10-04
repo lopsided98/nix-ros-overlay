@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, cv-bridge, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libmaps, octomap, opencv, openni2, pkg-config, python3Packages, pythonPackages, rclcpp, ros-environment, rosbag2-storage, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-iron-mrpt-libnav";
-  version = "2.13.8-r1";
+  version = "2.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/iron/mrpt_libnav/2.13.8-1.tar.gz";
-    name = "2.13.8-1.tar.gz";
-    sha256 = "32886d4f3eb497ca0b5667cf85b87ae8872dc5572ff85dbbf02abba0c6f8395e";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/iron/mrpt_libnav/2.14.1-1.tar.gz";
+    name = "2.14.1-1.tar.gz";
+    sha256 = "83f9ea0a0d30148acf7ab004b8063305ad9cf8260263f074751d234ebd284643";
   };
 
   buildType = "cmake";

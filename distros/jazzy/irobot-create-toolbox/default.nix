@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, gz-math-vendor, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-irobot-create-toolbox";
-  version = "3.0.2-r2";
+  version = "3.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/jazzy/irobot_create_toolbox/3.0.2-2.tar.gz";
-    name = "3.0.2-2.tar.gz";
-    sha256 = "1fdbd7f41b14a211b2213dc7bd8999bb2ad9a97b1910d08635cb70986c97b0fd";
+    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/jazzy/irobot_create_toolbox/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
+    sha256 = "4d26149048a67846991d768aa7184893da7819cc9482be949ad39070dacbc88b";
   };
 
   buildType = "ament_cmake";

@@ -318,6 +318,8 @@ self: super: {
 
  autoware-utils = self.callPackage ./autoware-utils {};
 
+ autoware-v2x-msgs = self.callPackage ./autoware-v2x-msgs {};
+
  autoware-vehicle-msgs = self.callPackage ./autoware-vehicle-msgs {};
 
  avt-vimba-camera = self.callPackage ./avt-vimba-camera {};
@@ -447,6 +449,10 @@ self: super: {
  clearpath-generator-gz = self.callPackage ./clearpath-generator-gz {};
 
  clearpath-gz = self.callPackage ./clearpath-gz {};
+
+ clearpath-manipulators = self.callPackage ./clearpath-manipulators {};
+
+ clearpath-manipulators-description = self.callPackage ./clearpath-manipulators-description {};
 
  clearpath-mecanum-drive-controller = self.callPackage ./clearpath-mecanum-drive-controller {};
 
@@ -960,6 +966,8 @@ self: super: {
 
  foxglove-bridge = self.callPackage ./foxglove-bridge {};
 
+ foxglove-compressed-video-transport = self.callPackage ./foxglove-compressed-video-transport {};
+
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
  franka-description = self.callPackage ./franka-description {};
@@ -1274,6 +1282,8 @@ self: super: {
 
  kuka-event-broadcaster = self.callPackage ./kuka-event-broadcaster {};
 
+ kuka-external-control-sdk = self.callPackage ./kuka-external-control-sdk {};
+
  kuka-external-control-sdk-examples = self.callPackage ./kuka-external-control-sdk-examples {};
 
  kuka-fortec-support = self.callPackage ./kuka-fortec-support {};
@@ -1397,6 +1407,8 @@ self: super: {
  libcreate = self.callPackage ./libcreate {};
 
  libcurl-vendor = self.callPackage ./libcurl-vendor {};
+
+ libfranka = self.callPackage ./libfranka {};
 
  libg2o = self.callPackage ./libg2o {};
 
@@ -1681,8 +1693,6 @@ self: super: {
  mqtt-client = self.callPackage ./mqtt-client {};
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
-
- mrpt2 = self.callPackage ./mrpt2 {};
 
  mrpt-apps = self.callPackage ./mrpt-apps {};
 
@@ -2830,6 +2840,24 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ scenario-execution-control = self.callPackage ./scenario-execution-control {};
+
+ scenario-execution-gazebo = self.callPackage ./scenario-execution-gazebo {};
+
+ scenario-execution-interfaces = self.callPackage ./scenario-execution-interfaces {};
+
+ scenario-execution-nav2 = self.callPackage ./scenario-execution-nav2 {};
+
+ scenario-execution-os = self.callPackage ./scenario-execution-os {};
+
+ scenario-execution-py-trees-ros = self.callPackage ./scenario-execution-py-trees-ros {};
+
+ scenario-execution-ros = self.callPackage ./scenario-execution-ros {};
+
+ scenario-execution-rviz = self.callPackage ./scenario-execution-rviz {};
+
+ scenario-execution-x11 = self.callPackage ./scenario-execution-x11 {};
+
  schunk-svh-description = self.callPackage ./schunk-svh-description {};
 
  schunk-svh-driver = self.callPackage ./schunk-svh-driver {};
@@ -3005,6 +3033,22 @@ self: super: {
  system-modes-examples = self.callPackage ./system-modes-examples {};
 
  system-modes-msgs = self.callPackage ./system-modes-msgs {};
+
+ talos-bringup = self.callPackage ./talos-bringup {};
+
+ talos-controller-configuration = self.callPackage ./talos-controller-configuration {};
+
+ talos-description = self.callPackage ./talos-description {};
+
+ talos-description-calibration = self.callPackage ./talos-description-calibration {};
+
+ talos-description-inertial = self.callPackage ./talos-description-inertial {};
+
+ talos-gazebo = self.callPackage ./talos-gazebo {};
+
+ talos-moveit-config = self.callPackage ./talos-moveit-config {};
+
+ talos-robot = self.callPackage ./talos-robot {};
 
  tango-icons-vendor = self.callPackage ./tango-icons-vendor {};
 

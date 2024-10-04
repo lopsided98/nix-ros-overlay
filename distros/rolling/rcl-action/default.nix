@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, osrf-testing-tools-cpp, rcl, rcutils, rmw, rmw-implementation-cmake, rosidl-runtime-c, test-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rcl-action";
-  version = "9.4.1-r1";
+  version = "10.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/rolling/rcl_action/9.4.1-1.tar.gz";
-    name = "9.4.1-1.tar.gz";
-    sha256 = "2f9d7dbacd281795bc40fc72ba6649038b6e3cc5e5c6921f867bfbad8b546ad4";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/rolling/rcl_action/10.0.0-1.tar.gz";
+    name = "10.0.0-1.tar.gz";
+    sha256 = "563809395c8c30712fb451c42bec14576e7f1b48cc11f261451bbf953d357f2c";
   };
 
   buildType = "ament_cmake";

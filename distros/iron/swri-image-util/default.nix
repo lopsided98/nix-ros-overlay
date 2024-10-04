@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, boost, camera-calibration-parsers, cv-bridge, eigen, geometry-msgs, image-geometry, image-transport, message-filters, nav-msgs, pkg-config, rclcpp, rclcpp-components, rclpy, std-msgs, swri-geometry-util, swri-math-util, swri-opencv-util, swri-roscpp, tf2 }:
 buildRosPackage {
   pname = "ros-iron-swri-image-util";
-  version = "3.7.1-r1";
+  version = "3.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_image_util/3.7.1-1.tar.gz";
-    name = "3.7.1-1.tar.gz";
-    sha256 = "966f7e27e13dc7bf6b3535d4baa40c9c052263a8cb3007ad798f429cb9437533";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/iron/swri_image_util/3.7.3-1.tar.gz";
+    name = "3.7.3-1.tar.gz";
+    sha256 = "1632d2edbb064221149086ca511c34ccd0085d3b4750ce05307b43eccf5932f2";
   };
 
   buildType = "ament_cmake";

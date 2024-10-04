@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ds-dbw-can, ds-dbw-joystick-demo, ds-dbw-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ds-dbw";
-  version = "2.2.0-r1";
+  version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/jazzy/ds_dbw/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "7d6b75518160a7562cf6b51c2c05b450309ecefa2b2e71c1a46730bfb2f4fa1e";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/jazzy/ds_dbw/2.2.3-1.tar.gz";
+    name = "2.2.3-1.tar.gz";
+    sha256 = "7b0c76cf1f66ec70c900ba1d6d51307f9315296dec79d01e0476b4019e9ceec2";
   };
 
   buildType = "ament_cmake";

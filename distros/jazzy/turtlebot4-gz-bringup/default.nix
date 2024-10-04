@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, irobot-create-common-bringup, irobot-create-description, irobot-create-gz-bringup, irobot-create-gz-toolbox, irobot-create-msgs, irobot-create-nodes, irobot-create-toolbox, ros-gz-interfaces, ros-gz-sim, std-msgs, turtlebot4-description, turtlebot4-gz-gui-plugins, turtlebot4-gz-toolbox, turtlebot4-msgs, turtlebot4-navigation, turtlebot4-node, turtlebot4-viz }:
 buildRosPackage {
   pname = "ros-jazzy-turtlebot4-gz-bringup";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4_simulator-release/archive/release/jazzy/turtlebot4_gz_bringup/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "59d8f72335172ef1f5f6f84bdb20c768b8ec286d458c3fbb78f502427d7f554d";
+    url = "https://github.com/ros2-gbp/turtlebot4_simulator-release/archive/release/jazzy/turtlebot4_gz_bringup/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "a186ca89c094272930a0c1820521588356e176540860ccd5fe879b210a967ecf";
   };
 
   buildType = "ament_cmake";
