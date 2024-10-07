@@ -39,6 +39,9 @@ nix develop github:lopsided98/nix-ros-overlay#example-turtlebot3-gazebo
 
 Using the overlay in your `flake.nix`-based project could look like this:
 
+<!-- The following comment is for https://github.com/zimbatm/mdsh -->
+<!-- [$ flake.nix](examples/flake/flake.nix) as nix -->
+
 ```nix
 {
   inputs = {
@@ -59,10 +62,10 @@ Using the overlay in your `flake.nix`-based project could look like this:
             pkgs.colcon
             # ... other non-ROS packages
             (with pkgs.rosPackages.humble; buildEnv {
-                paths = [
-                    ros-core
-                    # ... other ROS packages
-                ];
+              paths = [
+                ros-core
+                # ... other ROS packages
+              ];
             })
           ];
         };
@@ -73,6 +76,9 @@ Using the overlay in your `flake.nix`-based project could look like this:
   };
 }
 ```
+You can use the following command to use the above template easily:
+
+    nix flake init --template github:lopsided98/nix-ros-overlay
 
 [flake]: https://wiki.nixos.org/wiki/Flakes
 
