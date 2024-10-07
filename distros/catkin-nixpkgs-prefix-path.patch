@@ -1,0 +1,11 @@
+--- a/cmake/all.cmake
++++ b/cmake/all.cmake
+@@ -48,6 +48,8 @@ if(NOT DEFINED CMAKE_PREFIX_PATH)
+     else()
+       set(CMAKE_PREFIX_PATH $ENV{CMAKE_PREFIX_PATH})
+     endif()
++  else()
++    string(REPLACE ":" ";" CMAKE_PREFIX_PATH $ENV{NIXPKGS_CMAKE_PREFIX_PATH})
+   endif()
+ endif()
+ message(STATUS "Using CMAKE_PREFIX_PATH: ${CMAKE_PREFIX_PATH}")

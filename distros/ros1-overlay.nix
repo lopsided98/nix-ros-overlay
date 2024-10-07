@@ -44,6 +44,13 @@ rosSelf: rosSuper: with rosSelf.lib; {
         url = "https://github.com/ros/catkin/commit/e082348c4992e1850ba5e2bd02bbd7bd0c4c4b82.patch";
         hash = "sha256-NNdV30gNWBf7p8IjyCmnvz9MnU4zFkd4aaXNjs411MA=";
       })
+
+      # Catkin uses CMAKE_PREFIX_PATH to find additional workspaces, but
+      # nixpkgs switched to using NIXPKGS_CMAKE_PREFIX_PATH.
+      # Force CMAKE_PREFIX_PATH to equal NIXPKGS_CMAKE_PREFIX_PATH here.
+      # (https://github.com/NixOS/nixpkgs/commit/8c9c8ade2f88a85ccdd4858cc802d7b7d6c48fe0).
+      # see: https://github.com/lopsided98/nix-ros-overlay/issues/491
+      ./catkin-nixpkgs-prefix-path.patch
     ];
 
     postPatch = postPatch + ''
