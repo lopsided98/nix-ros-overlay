@@ -125,6 +125,12 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "sha256-zOtMuTZuGKV0ISjLNSTOX1Doi0dvHlRzekf/3030yZY=";
   };
 
+  roslint = rosSuper.roslint.overrideAttrs({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
+  });
+
   rviz-map-plugin = rosSuper.rviz-map-plugin.overrideAttrs ({
     buildInputs ? [], ...
   } : {
