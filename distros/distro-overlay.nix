@@ -299,7 +299,7 @@ let
         wrapQtApp "$out/lib/rqt_plot/rqt_plot"
       '';
     });
-    
+
     rqt-publisher = rosSuper.rqt-publisher.overrideAttrs ({
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
