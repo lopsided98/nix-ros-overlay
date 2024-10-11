@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rclpy, scenario-execution, scenario-execution-interfaces, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-scenario-execution-control";
-  version = "1.2.0-r1";
+  version = "1.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/humble/scenario_execution_control/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "bb78d76fb00f4b74ef19933f7de8d2f9f51e49fd60843920f35ff335fcfff4f9";
+    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/humble/scenario_execution_control/1.2.0-2.tar.gz";
+    name = "1.2.0-2.tar.gz";
+    sha256 = "c1e7ef7e7d077365b339f040f2b28d90192fb9cb63a679cdf347efdea6bd3591";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, boost, cmake, curl, ffmpeg, git, glew, glfw3, gtest, hdf5, libusb-compat-0_1, libusb1, opencv, openscenegraph, pkg-config, protobuf, unzip, wget }:
 buildRosPackage {
   pname = "ros-jazzy-openeb-vendor";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/openeb_vendor-release/archive/release/jazzy/openeb_vendor/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "13d05d93514a405d8aa6f7fb0bdd3c81b38e74c162d1fc87ad9a43127c907414";
+    url = "https://github.com/ros2-gbp/openeb_vendor-release/archive/release/jazzy/openeb_vendor/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "683804040ec43c2a666b917ada8856241b139bc8e416c7a820dc3b7501aa3205";
   };
 
   buildType = "ament_cmake";

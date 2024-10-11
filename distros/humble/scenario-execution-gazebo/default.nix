@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, py-trees, python3Packages, pythonPackages, rclpy, scenario-execution-ros }:
 buildRosPackage {
   pname = "ros-humble-scenario-execution-gazebo";
-  version = "1.2.0-r1";
+  version = "1.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/humble/scenario_execution_gazebo/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "e8d6dcb3e7ec15f9fb2ccc87d3b6378f196dd32ef00c60b21e346142ac65934e";
+    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/humble/scenario_execution_gazebo/1.2.0-2.tar.gz";
+    name = "1.2.0-2.tar.gz";
+    sha256 = "bf241da62679f8ede0802e040cb62dd4b6c86b07cfda85b9c91ab569e5fa5249";
   };
 
   buildType = "ament_python";

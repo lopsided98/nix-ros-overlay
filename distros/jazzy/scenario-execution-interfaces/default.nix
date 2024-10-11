@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-scenario-execution-interfaces";
-  version = "1.2.0-r3";
+  version = "1.2.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/jazzy/scenario_execution_interfaces/1.2.0-3.tar.gz";
-    name = "1.2.0-3.tar.gz";
-    sha256 = "b692689573318b8cfc533f3a02ec24448fd3bc4150f6039b3774221980ff2bc3";
+    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/jazzy/scenario_execution_interfaces/1.2.0-4.tar.gz";
+    name = "1.2.0-4.tar.gz";
+    sha256 = "0d385cc7bc87e26ab87d8c09fd402accbf17f5ab395545276bcdeb9ebdc47e3a";
   };
 
   buildType = "ament_cmake";

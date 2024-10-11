@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-scenario-execution-interfaces";
-  version = "1.2.0-r1";
+  version = "1.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/humble/scenario_execution_interfaces/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "1558c499bb6e30333f5d72bf67d6b83066f1d903b69d432a73cfa54727ea4a0f";
+    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/humble/scenario_execution_interfaces/1.2.0-2.tar.gz";
+    name = "1.2.0-2.tar.gz";
+    sha256 = "fab1194fd027aa91c1827f64a7436532bee19fbf08da1092e9c80007a50f226d";
   };
 
   buildType = "ament_cmake";

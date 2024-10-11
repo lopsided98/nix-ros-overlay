@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, ros-environment, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-msgs";
-  version = "0.4.7-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_msgs-release/archive/release/noetic/mrpt_msgs/0.4.7-1.tar.gz";
-    name = "0.4.7-1.tar.gz";
-    sha256 = "30b5908a7fe2b661d5782d20cbbc41ef24b333f05b2d1f2cef97448e34c04091";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_msgs-release/archive/release/noetic/mrpt_msgs/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "036aa3355666b8158a946d2784c01f27e94cc656766ceb4d60200f0d13a0970e";
   };
 
   buildType = "catkin";
