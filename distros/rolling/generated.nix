@@ -372,6 +372,8 @@ self: super: {
 
  derived-object-msgs = self.callPackage ./derived-object-msgs {};
 
+ desktop = self.callPackage ./desktop {};
+
  desktop-full = self.callPackage ./desktop-full {};
 
  diagnostic-aggregator = self.callPackage ./diagnostic-aggregator {};
@@ -785,6 +787,8 @@ self: super: {
  image-transport = self.callPackage ./image-transport {};
 
  image-transport-plugins = self.callPackage ./image-transport-plugins {};
+
+ image-transport-py = self.callPackage ./image-transport-py {};
 
  image-view = self.callPackage ./image-view {};
 

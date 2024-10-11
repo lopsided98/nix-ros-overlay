@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, diagnostic-aggregator, diagnostic-updater, eigen, geographiclib, geometry-msgs, git, message-generation, message-runtime, microstrain-inertial-msgs, nav-msgs, nmea-msgs, roscpp, roslint, rtcm-msgs, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-microstrain-inertial-driver";
-  version = "4.3.0-r1";
+  version = "4.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/noetic/microstrain_inertial_driver/4.3.0-1.tar.gz";
-    name = "4.3.0-1.tar.gz";
-    sha256 = "686e17f70bb6c9c66fe8c9ac86651383b677a2a00fba398e165265a828a0bb91";
+    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/noetic/microstrain_inertial_driver/4.4.0-1.tar.gz";
+    name = "4.4.0-1.tar.gz";
+    sha256 = "017e52d7a609791b656f48050648e74dafae59c7281b0c0fc5bad62fe7cb40cd";
   };
 
   buildType = "catkin";

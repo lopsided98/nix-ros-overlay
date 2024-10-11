@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-puma-motor-msgs";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/puma_motor_driver-release/archive/release/humble/puma_motor_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "81d584c594ce8844be527942d710ffe1ed8fb1b65f635709bc388428935da7c7";
+    url = "https://github.com/clearpath-gbp/puma_motor_driver-release/archive/release/humble/puma_motor_msgs/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "74041378f0fd6bbd6e056f903e85da21d3709ed34242f3dada0fd583691b6a0f";
   };
 
   buildType = "ament_cmake";

@@ -28,6 +28,8 @@ self: super: {
 
  actionlib-tutorials = self.callPackage ./actionlib-tutorials {};
 
+ adi-3dtof-image-stitching = self.callPackage ./adi-3dtof-image-stitching {};
+
  adi-tmc-coe = self.callPackage ./adi-tmc-coe {};
 
  adi-tmcl = self.callPackage ./adi-tmcl {};

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rclcpp, rosidl-default-generators, sensor-msgs, std-msgs, vision-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-depthai-ros-msgs";
-  version = "2.10.1-r1";
+  version = "2.10.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/jazzy/depthai_ros_msgs/2.10.1-1.tar.gz";
-    name = "2.10.1-1.tar.gz";
-    sha256 = "db49fb576ed184f8fbf84e7498f850b5fbab8ebd89ccbc6c1d5838f1948fd463";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/jazzy/depthai_ros_msgs/2.10.2-1.tar.gz";
+    name = "2.10.2-1.tar.gz";
+    sha256 = "0641bf62992281ca1a257140c841c20d1c0a04972ca91264cdfaff6c1fc2f298";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cpplint, curl, diagnostic-aggregator, diagnostic-updater, eigen, geographiclib, geometry-msgs, git, jq, lifecycle-msgs, microstrain-inertial-msgs, nav-msgs, nmea-msgs, rclcpp-lifecycle, ros-environment, rosidl-default-generators, rosidl-default-runtime, rtcm-msgs, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-iron-microstrain-inertial-driver";
-  version = "4.3.0-r1";
+  version = "4.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/iron/microstrain_inertial_driver/4.3.0-1.tar.gz";
-    name = "4.3.0-1.tar.gz";
-    sha256 = "20ec0a30d3f29f669b7b52db02eaa4a237eaa388f6d911086fd68a3c9285c5c4";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/iron/microstrain_inertial_driver/4.4.0-1.tar.gz";
+    name = "4.4.0-1.tar.gz";
+    sha256 = "32320ed40803356c4f5564994e3fbf3727d7051f5e83f1a0204527e079412a5d";
   };
 
   buildType = "ament_cmake";

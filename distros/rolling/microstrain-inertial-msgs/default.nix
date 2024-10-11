@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-microstrain-inertial-msgs";
-  version = "4.3.0-r1";
+  version = "4.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/rolling/microstrain_inertial_msgs/4.3.0-1.tar.gz";
-    name = "4.3.0-1.tar.gz";
-    sha256 = "df076e614d2851da917e8924f43380b43ccfed5f8e938a471cb2bb7adda7cf49";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/rolling/microstrain_inertial_msgs/4.4.0-1.tar.gz";
+    name = "4.4.0-1.tar.gz";
+    sha256 = "86c9568473ae6331d71b5f0e7c37b18868ac9c38148022afcc7fc92696d2b616";
   };
 
   buildType = "ament_cmake";

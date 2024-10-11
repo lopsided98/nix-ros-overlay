@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ffmpeg, scenario-execution }:
 buildRosPackage {
   pname = "ros-humble-scenario-execution-x11";
-  version = "1.2.0-r1";
+  version = "1.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/humble/scenario_execution_x11/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "d1da4bf798ebbf2fef5eeb302965d75787c62b3522e76bade684a7255581925a";
+    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/humble/scenario_execution_x11/1.2.0-2.tar.gz";
+    name = "1.2.0-2.tar.gz";
+    sha256 = "86bcb1877b727689ebb5f4aa78fef7709a4ab3c575256b09a8040b8ff0d52312";
   };
 
   buildType = "ament_python";

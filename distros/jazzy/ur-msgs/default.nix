@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-ur-msgs";
-  version = "2.0.0-r4";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ur_msgs-release/archive/release/jazzy/ur_msgs/2.0.0-4.tar.gz";
-    name = "2.0.0-4.tar.gz";
-    sha256 = "a9f3ee2e271b4754a00c61f1d247c884c31512e7224435334a7577b8f4393024";
+    url = "https://github.com/ros2-gbp/ur_msgs-release/archive/release/jazzy/ur_msgs/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "773c7af3e7575cf50655acedee9b7a6c7302f1720032617c1cea266d0f679306";
   };
 
   buildType = "ament_cmake";

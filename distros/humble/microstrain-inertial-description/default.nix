@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, xacro }:
 buildRosPackage {
   pname = "ros-humble-microstrain-inertial-description";
-  version = "4.3.0-r1";
+  version = "4.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/humble/microstrain_inertial_description/4.3.0-1.tar.gz";
-    name = "4.3.0-1.tar.gz";
-    sha256 = "b342f317714233cf063e61fd98d321ebac6d7d1a29a3aae588080169dc515df4";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/humble/microstrain_inertial_description/4.4.0-1.tar.gz";
+    name = "4.4.0-1.tar.gz";
+    sha256 = "c6a59f34b3030523e30b4d7fb83352b5447e656b1dad920df83d1b47f7209d2b";
   };
 
   buildType = "ament_cmake";

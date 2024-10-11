@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, angles, console-bridge, diagnostic-msgs, diagnostic-updater, eigen, eigen-stl-containers, eigen3-cmake-module, geographic-msgs, geographiclib, geometry-msgs, gtest, libmavconn, mavlink, mavros-msgs, message-filters, nav-msgs, pluginlib, python3Packages, rclcpp, rclcpp-components, rclpy, rcpputils, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2-eigen, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-humble-mavros";
-  version = "2.8.0-r1";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavros-release/archive/release/humble/mavros/2.8.0-1.tar.gz";
-    name = "2.8.0-1.tar.gz";
-    sha256 = "03603f13329e7e679420961d30c689a384f29f851358efb1fe850d7067d65f57";
+    url = "https://github.com/ros2-gbp/mavros-release/archive/release/humble/mavros/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "1b2e40bd683b3685013bc8842924e4c381e6e74d7d9cac352a245b07c223f0eb";
   };
 
   buildType = "ament_cmake";
