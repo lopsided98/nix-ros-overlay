@@ -10,7 +10,7 @@
 #
 # By default, all binaries in the environment are wrapped, setting the relevant
 # ROS environment variables, allowing use outside of nix-shell.
-{ lib, stdenv, buildPackages, writeText, buildEnv, makeWrapper, python, ros-environment }:
+{ lib, stdenv, buildPackages, writeText, buildEnv, symlinkJoin, makeWrapper, python, ros-environment }:
 { paths ? [], wrapPrograms ? true, postBuild ? "", passthru ? { }, ... }@args:
 
 with lib;
@@ -32,6 +32,11 @@ let
     };
 
   propagatedPaths = propagatePackages paths;
+
+  gzEnv = symlinkJoin {
+    name = "gz-env";
+    paths = map (pkg: "${pkg}/${pkg.gzConfigPath}") (builtins.filter (pkg: pkg ? gzConfigPath) propagatedPaths.rosPackages);
+  };
 
   env = (buildEnv ((removeAttrs args [ "wrapPrograms" ]) // {
     name = "ros-env";
@@ -63,6 +68,7 @@ let
             --prefix CMAKE_PREFIX_PATH : "$out" \
             --prefix AMENT_PREFIX_PATH : "$out" \
             --prefix ROS_PACKAGE_PATH : "$out/share" \
+            --prefix GZ_CONFIG_PATH : '${gzEnv}' \
             --set ROS_DISTRO '${ros-environment.rosDistro}' \
             --set ROS_VERSION '${toString ros-environment.rosVersion}' \
             --set ROS_PYTHON_VERSION '${lib.versions.major python.version}' \
