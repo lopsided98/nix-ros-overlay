@@ -127,8 +127,12 @@
     };
   in
     patchedPkg.overrideAttrs ({
-      pname, postPatch ? "", ...
-    }: {
+      pname, postPatch ? "", preBuild ? "", postInstall ? "", passthru ? {}, ...
+    }:
+    let
+      gzConfigPath = "opt/${lib.replaceStrings ["-"] ["_"] stem}_vendor/share/gz";
+    in
+    {
       dontFixCmake = true;      # don't replace $out/opt with $out/var/empty
       postPatch = postPatch + ''
         cat >> CMakeLists.txt <<'EOF'
@@ -137,12 +141,18 @@
         endif()
         EOF
       '';
-      preBuild = ''
+      preBuild = preBuild + ''
         find . -name "*build.make" -print -exec sed -i "s#var/empty#opt#g" {} \;
       '';
-      setupHook = self.writeText "${pname}-setup-hook.sh" ''
-        addToSearchPath GZ_CONFIG_PATH "@out@/opt/${lib.replaceStrings ["-"] ["_"] stem}_vendor/share/gz"
+      postInstall = postInstall + ''
+        # Not all packages create a directory in share/gz, but it's easier to
+        # handle if we ensure that they do.
+        mkdir -p "$out/${gzConfigPath}"
       '';
+      setupHook = self.writeText "${pname}-setup-hook.sh" ''
+        addToSearchPath GZ_CONFIG_PATH "@out@/${gzConfigPath}"
+      '';
+      passthru = passthru // { inherit gzConfigPath; };
     });
 
   patchBoostPython = pkg: pkg.overrideAttrs ({
