@@ -144,6 +144,16 @@ rosSelf: rosSuper: with rosSelf.lib; {
       buildInputs;
   });
 
+  ros-gz-sim = rosSuper.ros-gz-sim.overrideAttrs ({ postPatch ? "", ... }: {
+    postPatch = postPatch + ''
+      # This launch file attempts to run the gz tool with a Ruby interpreter,
+      # but it is actually a regular executable.
+      substituteInPlace launch/gz_sim.launch.py.in \
+        --replace-warn 'ruby $(which gz) sim' 'gz sim' \
+        --replace-warn 'ruby $(which ign) gazebo' 'ign gazebo'
+    '';
+  });
+
   rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({ ... }: {
     setupHook = ./rosidl-generator-py-setup-hook.sh;
   });
