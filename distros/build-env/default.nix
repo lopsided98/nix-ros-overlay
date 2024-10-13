@@ -52,6 +52,15 @@ let
 
     postBuild = postBuild + ''
       "${buildPackages.perl}/bin/perl" "${./setup-hook-builder.pl}"
+
+      # Some ROS programs keep libraries and binaries in /opt.
+      if [ -d "$out/opt" ]; then
+        declare -A optMv=([lib]=lib [lib64]=lib [bin]=bin)
+        for dir in ''${!optMv[@]}; do
+          mkdir -p "$out/''${optMv["$dir"]}"
+          find -L "$out/opt" -mindepth 3 -maxdepth 3 -type f -executable -path "*/$dir/*" -not -name '.*' -exec ln -sf '{}' "$out/''${optMv["$dir"]}" \;
+        done
+      fi
     '' + optionalString wrapPrograms ''
       if [ -d "$out/bin" ]; then
         find -L "$out/bin" -executable -type f -xtype l -print0 | \
