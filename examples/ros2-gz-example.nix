@@ -35,6 +35,8 @@ with rosPackages.jazzy;
         ];
       })
     ];
+    # Gazebo is currently broken on Wayland
+    # https://gazebosim.org/docs/ionic/troubleshooting/#wayland-issues
     shellHook = ''
       unset QT_QPA_PLATFORM
     '';

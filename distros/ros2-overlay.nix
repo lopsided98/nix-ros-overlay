@@ -13,10 +13,22 @@ rosSelf: rosSuper: with rosSelf.lib; {
   });
 
   ament-cmake-vendor-package = rosSuper.ament-cmake-vendor-package.overrideAttrs ({
-    # the regular cmake fixing replaces <snip>/opt<snip> with /var/empty, even within
-    # the local ros2 install folder, which completely breaks vendoring, since the
-    # cmake_prefix_path will no longer point the where the files are.
-    dontFixCmake = true;
+    postPatch ? "", ...
+  }: {
+    # Install to standard directories instead of /opt. With Nix, we don't have
+    # to worry about collisions with system packages and Nix tooling generally
+    # expects standard directories.
+    postPatch = postPatch + ''
+      ls -l cmake/templates
+      substituteInPlace cmake/ament_vendor.cmake \
+        --replace-fail 'opt/''${PROJECT_NAME}' .
+      substituteInPlace cmake/templates/vendor_package.dsv.in \
+        --replace-fail 'opt/@PROJECT_NAME@/' ""
+      substituteInPlace cmake/templates/{vendor_package.sh.in,vendor_package_cmake_prefix.cmake.in,vendor_package_cmake_prefix.sh.in} \
+        --replace-fail '/opt/@PROJECT_NAME@' ""
+      substituteInPlace cmake/templates/vendor_package_cmake_prefix.dsv.in \
+        --replace-fail 'opt/@PROJECT_NAME@' ""
+    '';
   });
 
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
@@ -61,6 +73,17 @@ rosSelf: rosSuper: with rosSelf.lib; {
     buildInputs = [];
     nativeBuildInputs = nativeBuildInputs ++ [ self.buildPackages.cmake ];
   });
+
+  gz-tools-vendor = rosSuper.gz-tools-vendor.overrideAttrs {
+    setupHook = self.writeText "gz-tools-setup-hook.sh" ''
+      addGzConfigPath() {
+        if [ -d "$1/share/gz" ]; then
+            addToSearchPath GZ_CONFIG_PATH "$1/share/gz"
+        fi
+      }
+      addEnvHooks "$targetOffset" addGzConfigPath
+    '';
+  };
 
   iceoryx-posh = rosSuper.iceoryx-posh.overrideAttrs ({
     patches ? [],
@@ -144,10 +167,12 @@ rosSelf: rosSuper: with rosSelf.lib; {
       buildInputs;
   });
 
-  ros-gz-sim = rosSuper.ros-gz-sim.overrideAttrs ({ postPatch ? "", ... }: {
+  ros-gz-sim = rosSuper.ros-gz-sim.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # This launch file attempts to run the gz tool with a Ruby interpreter, but
+    # in our case it is an regular executable because it is wrapped.
     postPatch = postPatch + ''
-      # This launch file attempts to run the gz tool with a Ruby interpreter,
-      # but it is actually a regular executable.
       substituteInPlace launch/gz_sim.launch.py.in \
         --replace-warn 'ruby $(which gz) sim' 'gz sim' \
         --replace-warn 'ruby $(which ign) gazebo' 'ign gazebo'

@@ -66,7 +66,7 @@ in {
     # "RPATH of binary libGrid3D.so contains a forbidden reference to
     # /build/" (see https://github.com/gazebosim/gz-gui/issues/627).
     postInstall = postInstall + ''
-      ${self.patchelf}/bin/patchelf --remove-rpath $out/opt/gz_gui_vendor/lib64/gz-gui-9/plugins/libGrid3D.so
+      ${self.patchelf}/bin/patchelf --remove-rpath $out/lib64/gz-gui-9/plugins/libGrid3D.so
     '';
   });
 
@@ -122,16 +122,24 @@ in {
     version = "2.0.1";
     hash = "sha256-sV/T53oVk1fgjwqn/SRTaPTukt+vAlGGxGvTN8+G6Mo=";
   }).overrideAttrs({
-    nativeBuildInputs ? [], propagatedNativeBuildInputs ? [], qtWrapperArgs ? [], postFixup ? "", ...
+    nativeBuildInputs ? [],
+    propagatedNativeBuildInputs ? [],
+    qtWrapperArgs ? [],
+    postFixup ? "", ...
   }: {
     nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-    propagatedNativeBuildInputs = propagatedNativeBuildInputs ++ [self.qt5.qtquickcontrols2 self.qt5.qtgraphicaleffects self.pkg-config];
+    propagatedNativeBuildInputs = propagatedNativeBuildInputs ++ [
+      self.qt5.qtquickcontrols2
+      self.qt5.qtgraphicaleffects
+      self.pkg-config
+    ];
     qtWrapperArgs = qtWrapperArgs ++ [
-      # Use X11 by default
+      # Gazebo is currently broken on Wayland
+      # https://gazebosim.org/docs/ionic/troubleshooting/#wayland-issues
       "--set-default QT_QPA_PLATFORM xcb"
     ];
     postFixup = postFixup + ''
-      wrapQtApp "$out/opt/gz_tools_vendor/bin/gz"
+      wrapQtApp "$out/bin/gz"
     '';
   });
 

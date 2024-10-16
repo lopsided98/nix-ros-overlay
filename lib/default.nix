@@ -125,35 +125,23 @@
       fetchgitArgs.hash = hash;
       inherit tarSourceArgs;
     };
-  in
-    patchedPkg.overrideAttrs ({
-      pname, postPatch ? "", preBuild ? "", postInstall ? "", passthru ? {}, ...
-    }:
-    let
-      gzConfigPath = "opt/${lib.replaceStrings ["-"] ["_"] stem}_vendor/share/gz";
-    in
-    {
-      dontFixCmake = true;      # don't replace $out/opt with $out/var/empty
-      postPatch = postPatch + ''
-        cat >> CMakeLists.txt <<'EOF'
-        if(NOT ''${LIB_VER} VERSION_EQUAL "${version}")
-          message(FATAL_ERROR "Mismatch in ${pname} version (Nix: ${version}, upstream: ''${LIB_VER}). Fix this in overrides.nix.")
-        endif()
-        EOF
-      '';
-      preBuild = preBuild + ''
-        find . -name "*build.make" -print -exec sed -i "s#var/empty#opt#g" {} \;
-      '';
-      postInstall = postInstall + ''
-        # Not all packages create a directory in share/gz, but it's easier to
-        # handle if we ensure that they do.
-        mkdir -p "$out/${gzConfigPath}"
-      '';
-      setupHook = self.writeText "${pname}-setup-hook.sh" ''
-        addToSearchPath GZ_CONFIG_PATH "@out@/${gzConfigPath}"
-      '';
-      passthru = passthru // { inherit gzConfigPath; };
-    });
+  in patchedPkg.overrideAttrs ({
+    pname, postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      # Use standard installation paths rather than /opt
+      substituteInPlace CMakeLists.txt \
+        --replace-fail 'opt/''${PROJECT_NAME}/extra_cmake' 'share/extra_cmake'
+      substituteInPlace *-extras.cmake.in \
+        --replace-fail 'opt/@PROJECT_NAME@/extra_cmake' 'share/extra_cmake'
+
+      cat >> CMakeLists.txt <<'EOF'
+      if(NOT ''${LIB_VER} VERSION_EQUAL "${version}")
+        message(FATAL_ERROR "Mismatch in ${pname} version (Nix: ${version}, upstream: ''${LIB_VER}). Fix this in overrides.nix.")
+      endif()
+      EOF
+    '';
+  });
 
   patchBoostPython = pkg: pkg.overrideAttrs ({
     postPatch ? "", ...
