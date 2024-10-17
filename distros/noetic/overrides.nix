@@ -2,6 +2,13 @@
 self:
 # Distro package set
 rosSelf: rosSuper: with rosSelf.lib; {
+
+  angles = rosSuper.angles.overrideAttrs({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
+  });
+
   eigenpy = rosSuper.eigenpy.overrideAttrs ({
     cmakeFlags ? [], ...
   }: {
