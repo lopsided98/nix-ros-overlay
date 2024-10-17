@@ -214,9 +214,11 @@ let
     }).overrideAttrs ({
       propagatedBuildInputs ? [], ...
     }: {
+      # pyside2 is broken on macOS, needed for rqt build to succeed
       propagatedBuildInputs = propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
-        pyside2
         sip4
+      ] ++ self.lib.optionals self.stdenv.isLinux [
+        pyside2
       ]);
 
       dontWrapQtApps = true;
@@ -299,7 +301,7 @@ let
         wrapQtApp "$out/lib/rqt_plot/rqt_plot"
       '';
     });
-    
+
     rqt-publisher = rosSuper.rqt-publisher.overrideAttrs ({
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
