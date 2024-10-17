@@ -127,6 +127,12 @@ rosSelf: rosSuper: with rosSelf.lib; {
     }) ];
   });
 
+  ros-numpy = rosSuper.ros-numpy.overrideAttrs({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
+  });
+
   rosfmt = patchVendorUrl rosSuper.rosfmt {
     url = "https://github.com/fmtlib/fmt/releases/download/9.1.0/fmt-9.1.0.zip";
     sha256 = "sha256-zOtMuTZuGKV0ISjLNSTOX1Doi0dvHlRzekf/3030yZY=";
