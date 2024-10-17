@@ -120,10 +120,33 @@ in with lib; {
     '';
   });
 
-  rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
-    url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
-    sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
-  };
+  # This is a newer version than the build system tries to download,
+  # cleaned definition to fix build for macOS on ARM64 since v1.12.9
+  rviz-ogre-vendor = (patchVendorUrl rosSuper.rviz-ogre-vendor {
+    originalUrl = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
+    url = "https://github.com/OGRECave/ogre/archive/v1.12.13.zip";
+    hash = "sha256-S5CTQFiBPTs5w0DI9lpRIixqRBXFTyRs63/lk9uh5vI=";
+  }).overrideAttrs ({
+    propagatedBuildInputs ? [], nativeBuildInputs ? [], patches ? [], postPatch ? "", ...
+  }: {
+    propagatedBuildInputs = propagatedBuildInputs ++ [ self.pugixml self.glew ];
+    nativeBuildInputs = nativeBuildInputs ++ lib.optionals self.stdenv.isDarwin [
+      self.darwin.apple_sdk.frameworks.Foundation
+      self.darwin.apple_sdk.frameworks.AppKit
+    ];
+    patches = patches ++ [
+      # Fix build with darwin-aarch64
+      (self.fetchpatch {
+        url = "https://github.com/stevalkr/rviz-release/commit/777d3f45f7d6197e3ee3b7e3b9e95f0138ca6266.patch";
+        hash = "sha256-298POHJB05xJNp+WOIXh1z4D8O4IxWPt0rAhaLBS2AI=";
+      })
+    ];
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+      --replace-fail 'ogre-v1.12.1' 'ogre-v1.12.13' \
+      --replace-fail 'URL_MD5 cdbea4006d223c173e0a93864111b936' ""
+    '';
+  });
 
   shared-queues-vendor = patchVendorUrl (patchVendorUrl rosSuper.shared-queues-vendor {
     url = "https://github.com/cameron314/concurrentqueue/archive/8f65a8734d77c3cc00d74c0532efca872931d3ce.zip";
