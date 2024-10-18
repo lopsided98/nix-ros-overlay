@@ -2,6 +2,13 @@
 self:
 # Distro package set
 rosSelf: rosSuper: with rosSelf.lib; {
+
+  angles = rosSuper.angles.overrideAttrs({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
+  });
+
   eigenpy = rosSuper.eigenpy.overrideAttrs ({
     cmakeFlags ? [], ...
   }: {
@@ -118,6 +125,12 @@ rosSelf: rosSuper: with rosSelf.lib; {
       url = "https://github.com/ros/rosconsole/pull/58.patch";
       hash = "sha256-Rg+WCPak5sxBqdQ/QR9eboyX921PZTjk3/PuH5mz96U=";
     }) ];
+  });
+
+  ros-numpy = rosSuper.ros-numpy.overrideAttrs({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
   });
 
   rosfmt = patchVendorUrl rosSuper.rosfmt {
