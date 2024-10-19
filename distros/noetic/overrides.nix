@@ -6,6 +6,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
   angles = rosSuper.angles.overrideAttrs({
     nativeBuildInputs ? [], ...
   }: {
+    # distutils was removed from standard library in Python 3.12
     nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
   });
 
@@ -130,6 +131,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
   ros-numpy = rosSuper.ros-numpy.overrideAttrs({
     nativeBuildInputs ? [], ...
   }: {
+    # distutils was removed from standard library in Python 3.12
     nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
   });
 
@@ -141,6 +143,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
   roslint = rosSuper.roslint.overrideAttrs({
     nativeBuildInputs ? [], ...
   }: {
+    # distutils was removed from standard library in Python 3.12
     nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
   });
 
