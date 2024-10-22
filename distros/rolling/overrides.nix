@@ -204,6 +204,15 @@ in {
     '';
   };
 
+  rviz-rendering = rosSuper.rviz-rendering.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace src/rviz_rendering/render_system.cpp \
+        --replace-fail /opt/rviz_ogre_vendor ""
+    '';
+  });
+
   sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor {
     version = "15.0.0";
     hash = "sha256-d9PKTgUIFPX1rc1HlKCQPxcUcTn2ivObMvkGz/HBExw=";
