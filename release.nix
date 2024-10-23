@@ -23,6 +23,7 @@ let
     rosPackages = removeAttrs releaseDistros [
       "lib"
       "mkRosDistroOverlay"
+      "foxy" # No CI for EOL distro
     ];
   };
 in if distro == null then releasePackages else releasePackages.rosPackages.${distro}
