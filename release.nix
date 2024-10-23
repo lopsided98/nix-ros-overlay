@@ -7,7 +7,8 @@ let
 in
 { nixpkgs ? lockedNixpkgs, nix-ros-overlay ? ./., distro ? null, system ? builtins.currentSystem }:
 let
-  releasePackages = builtins.mapAttrs (_: a: removeAttrs a [
+  rosPackages = (import nix-ros-overlay { inherit nixpkgs system; }).rosPackages;
+  releaseDistros = builtins.mapAttrs (_: a: removeAttrs a [
     "lib"
     "python"
     "python3"
@@ -16,5 +17,9 @@ let
     "python2Packages"
     "python3Packages"
     "boost"
-  ]) (import nix-ros-overlay { inherit nixpkgs system; }).rosPackages;
+  ]) rosPackages;
+  releasePackages = removeAttrs releaseDistros [
+    "lib"
+    "mkRosDistroOverlay"
+  ];
 in if distro == null then releasePackages else releasePackages.${distro}
