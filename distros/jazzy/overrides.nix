@@ -200,6 +200,19 @@ in {
     '';
   });
 
+  moveit-ros-move-group = rosSuper.moveit-ros-move-group.overrideAttrs({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      patchelf --add-needed libmoveit_move_group_default_capabilities.so $out/lib/moveit_ros_move_group/move_group
+      patchelf --add-needed libmoveit_move_group_default_capabilities.so $out/lib/moveit_ros_move_group/list_move_group_capabilities
+
+      # TODO(anyone): Replace platform and Python version with what's actually in use
+      # patchelf --add-needed libmoveit_move_group_default_capabilities.so $out/lib/python3.11/site-packages/moveit/core.cpython-311-x86_64-linux-gnu.so
+      # patchelf --add-needed libmoveit_move_group_default_capabilities.so $out/lib/python3.11/site-packages/moveit/planning.cpython-311-x86_64-linux-gnu.so
+    '';
+  });
+
   moveit-ros-occupancy-map-monitor = rosSuper.moveit-ros-occupancy-map-monitor.overrideAttrs({
     postPatch ? "", ...
   }: {
