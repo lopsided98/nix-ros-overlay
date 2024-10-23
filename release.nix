@@ -5,7 +5,7 @@ let
     sha256 = lock.nodes.nixpkgs.locked.narHash;
   };
 in
-{ nixpkgs ? lockedNixpkgs, nix-ros-overlay ? ./., distro ? null }:
+{ nixpkgs ? lockedNixpkgs, nix-ros-overlay ? ./., distro ? null, system ? builtins.currentSystem }:
 let
   releasePackages = builtins.mapAttrs (_: a: removeAttrs a [
     "lib"
@@ -16,5 +16,5 @@ let
     "python2Packages"
     "python3Packages"
     "boost"
-  ]) (import nix-ros-overlay { inherit nixpkgs; }).rosPackages;
+  ]) (import nix-ros-overlay { inherit nixpkgs system; }).rosPackages;
 in if distro == null then releasePackages else releasePackages.${distro}
