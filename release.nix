@@ -6,9 +6,8 @@ let
   };
 in
 { nixpkgs ? lockedNixpkgs, nix-ros-overlay ? ./., distro ? null }:
-with import (nixpkgs + /lib);
 let
-  releasePackages = mapAttrs (_: a: removeAttrs a [
+  releasePackages = builtins.mapAttrs (_: a: removeAttrs a [
     "lib"
     "python"
     "python3"
