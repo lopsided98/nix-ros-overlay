@@ -39,6 +39,9 @@
         path = ./examples/flake;
         description = "Basic ROS flake";
       };
+      checks = {
+        x86_64-linux = import ./release.nix { system = "x86_64-linux"; };
+      };
     };
 
   nixConfig = {
