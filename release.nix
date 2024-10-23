@@ -1,4 +1,11 @@
-{ nixpkgs ? <nixpkgs>, nix-ros-overlay ? ./., distro ? null }:
+let
+  lock = builtins.fromJSON (builtins.readFile ./flake.lock);
+  lockedNixpkgs = builtins.fetchTarball {
+    url = "https://github.com/lopsided98/nixpkgs/archive/${lock.nodes.nixpkgs.locked.rev}.tar.gz";
+    sha256 = lock.nodes.nixpkgs.locked.narHash;
+  };
+in
+{ nixpkgs ? lockedNixpkgs, nix-ros-overlay ? ./., distro ? null }:
 with import (nixpkgs + /lib);
 let
   releasePackages = mapAttrs (_: a: removeAttrs a [
