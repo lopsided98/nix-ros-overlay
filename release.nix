@@ -25,5 +25,8 @@ let
       "mkRosDistroOverlay"
       "foxy" # No CI for EOL distro
     ];
+    examples = builtins.mapAttrs
+      (file: _: import (./examples + "/${file}") { inherit pkgs; })
+      (builtins.readDir ./examples);
   };
 in if distro == null then releasePackages else releasePackages.rosPackages.${distro}
