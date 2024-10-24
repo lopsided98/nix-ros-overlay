@@ -41,6 +41,7 @@
       };
       checks = {
         x86_64-linux = import ./release.nix { system = "x86_64-linux"; };
+        aarch64-linux = import ./release.nix { system = "aarch64-linux"; };
       };
     };
 
