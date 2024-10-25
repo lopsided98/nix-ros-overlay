@@ -5,10 +5,17 @@ let
     sha256 = lock.nodes.nixpkgs.locked.narHash;
   };
 in
-{ nixpkgs ? lockedNixpkgs, nix-ros-overlay ? ./., distro ? null, system ? builtins.currentSystem }:
+{
+  nixpkgs ? lockedNixpkgs,
+  nix-ros-overlay ? ./.,
+  distro ? null,
+  system ? builtins.currentSystem,
+}:
 let
   pkgs = import nix-ros-overlay { inherit nixpkgs system; };
-  releaseDistros = builtins.mapAttrs (_: a: removeAttrs a [
+  inherit (pkgs.lib) isDerivation;
+  inherit (builtins) mapAttrs attrNames filter listToAttrs readDir;
+  cleanupDistro = (_: a: removeAttrs a [
     "lib"
     "python"
     "python3"
@@ -17,16 +24,26 @@ let
     "python2Packages"
     "python3Packages"
     "boost"
-  ]) pkgs.rosPackages;
-  toplevelPackages = (pkgs.lib.intersectAttrs ((import ./overlay.nix) null pkgs) pkgs);
+  ]);
+  releaseRosPackages = mapAttrs cleanupDistro pkgs.rosPackages;
+  overlayAttrNames = attrNames ((import ./overlay.nix) null pkgs);
+  toplevelPackagesEntries =
+    map (name: { inherit name; value = pkgs.${name} or null; })
+      overlayAttrNames;
+  validToplevelPackageEntries = filter (e: isDerivation e.value)
+    toplevelPackagesEntries;
+  toplevelPackages = listToAttrs validToplevelPackageEntries;
   releasePackages = toplevelPackages // {
-    rosPackages = removeAttrs releaseDistros [
+    rosPackages = removeAttrs releaseRosPackages [
       "lib"
       "mkRosDistroOverlay"
       "foxy" # No CI for EOL distro
     ];
-    examples = builtins.mapAttrs
+    examples = mapAttrs
       (file: _: import (./examples + "/${file}") { inherit pkgs; })
-      (builtins.readDir ./examples);
+      (readDir ./examples);
   };
-in if distro == null then releasePackages else releasePackages.rosPackages.${distro}
+in
+if distro == null
+then releasePackages
+else releasePackages.rosPackages.${distro}
