@@ -25,14 +25,6 @@ in {
 
   gazebo = self.gazebo_11;
 
-  geometric-shapes = rosSuper.geometric-shapes.overrideAttrs({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail 'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' 'find_package(octomap REQUIRED)'
-    '';
-  });
-
   google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
     url = "https://github.com/google/benchmark.git";
     rev = "344117638c8ff7e239044fd0fa7085839fc03021";
@@ -191,52 +183,6 @@ in {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.3.0.tar.gz";
     hash = "sha256-Qaz26F11VWxkQH8HfgVJLTHbHwmeByQu8ENkuyk5rPE=";
   };
-
-  moveit-core = rosSuper.moveit-core.overrideAttrs({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail 'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' 'find_package(octomap REQUIRED)'
-    '';
-  });
-
-  moveit-ros-occupancy-map-monitor = rosSuper.moveit-ros-occupancy-map-monitor.overrideAttrs({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail 'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' 'find_package(octomap REQUIRED)'
-    '';
-  });
-
-  osqp-vendor = lib.pipe rosSuper.osqp-vendor [
-    # Make CMakeLists.txt amenable to automatic patching by the next step.
-    (pkg: pkg.overrideAttrs ({ prePatch ? "", ... }: {
-      prePatch = prePatch + ''
-        substituteInPlace CMakeLists.txt --replace-fail 'set(git_tag "v0.6.2")' 'set(git_tag "v0.6.2")' # fail when upstream version changes
-        substituteInPlace CMakeLists.txt --replace-fail 'GIT_TAG ''${git_tag}' 'GIT_TAG v0.6.2'
-      '';
-    }))
-
-    (pkg: lib.patchExternalProjectGit pkg {
-      url = "https://github.com/osqp/osqp.git";
-      rev = "v0.6.2";
-      fetchgitArgs = {
-        hash = "sha256-0BbUe1J9qzvyKDBLTz+pAEmR3QpRL+hnxZ2re/3mEvs=";
-        leaveDotGit = true;
-      };
-    })
-
-    # osqp installs into both lib/cmake/ and lib64/cmake/ which is problematic
-    # because moveLib64 doesn't attempt to merge overlapping directories but
-    # fails instead. Here we do the merge manually.
-    (pkg: pkg.overrideAttrs ({ preInstall ? "", ... }: {
-      preInstall = preInstall + ''
-        mkdir -p ./osqp_install/lib/cmake/osqp
-        mv ./osqp_install/lib64/cmake/osqp/* ./osqp_install/lib/cmake/osqp
-        rm -r ./osqp_install/lib64/cmake
-      '';
-    }))
-  ];
 
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre.git";
