@@ -212,7 +212,8 @@ in {
     # Make CMakeLists.txt amenable to automatic patching by the next step.
     (pkg: pkg.overrideAttrs ({ prePatch ? "", ... }: {
       prePatch = prePatch + ''
-        sed -i 's/GIT_TAG.*/GIT_TAG v0.6.2/' CMakeLists.txt
+        substituteInPlace CMakeLists.txt --replace-fail 'set(git_tag "v0.6.2")' 'set(git_tag "v0.6.2")' # fail when upstream version changes
+        substituteInPlace CMakeLists.txt --replace-fail 'GIT_TAG ''${git_tag}' 'GIT_TAG v0.6.2'
       '';
     }))
 
