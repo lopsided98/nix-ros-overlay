@@ -8,9 +8,8 @@ in
 {
   nixpkgs ? lockedNixpkgs,
   nix-ros-overlay ? ./.,
-  distro ? null,
+  distro ? null, # what to build: null = everything, .* = top or examples, anything else = specific ROS distro
   system ? builtins.currentSystem,
-  toplevelOnly ? false,
 }:
 let
   pkgs = import nix-ros-overlay { inherit nixpkgs system; };
@@ -45,8 +44,7 @@ let
       (readDir ./examples);
   };
 in
-if toplevelOnly
-then toplevelPackages
-else if distro == null
-then releasePackages
+if distro == ".top" then toplevelPackages
+else if distro == ".examples" then releasePackages.examples
+else if distro == null then releasePackages
 else releasePackages.rosPackages.${distro}
