@@ -143,6 +143,8 @@ self: super: with self.lib; {
       rosinstall-generator = pyFinal.callPackage ./rosinstall-generator { };
 
       rospkg = pyFinal.callPackage ./rospkg { };
+
+      vcstools = pyFinal.callPackage ./vcstools { };
     })
   ];
 
