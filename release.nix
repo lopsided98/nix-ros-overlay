@@ -10,6 +10,7 @@ in
   nix-ros-overlay ? ./.,
   distro ? null,
   system ? builtins.currentSystem,
+  toplevelOnly ? false,
 }:
 let
   pkgs = import nix-ros-overlay { inherit nixpkgs system; };
@@ -44,6 +45,8 @@ let
       (readDir ./examples);
   };
 in
-if distro == null
+if toplevelOnly
+then toplevelPackages
+else if distro == null
 then releasePackages
 else releasePackages.rosPackages.${distro}
