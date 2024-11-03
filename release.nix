@@ -13,7 +13,7 @@ in
 }:
 let
   pkgs = import nix-ros-overlay { inherit nixpkgs system; };
-  inherit (pkgs.lib) isDerivation;
+  inherit (pkgs.lib) isDerivation filterAttrs;
   inherit (builtins) mapAttrs attrNames filter listToAttrs readDir;
   cleanupDistro = (_: a: removeAttrs a [
     "lib"
@@ -41,7 +41,8 @@ let
     ];
     examples = mapAttrs
       (file: _: import (./examples + "/${file}") { inherit pkgs; })
-      (readDir ./examples);
+      (filterAttrs (n: v: v == "regular")
+        (readDir ./examples));
   };
 in
 if distro == ".top" then toplevelPackages
