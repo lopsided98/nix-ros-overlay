@@ -211,11 +211,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
-  rviz-ogre-vendor = rosSuper.rviz-ogre-vendor.overrideAttrs ({ ... }: {
-    # Prevent replacing $out/opt/.. with $out/var/empty/..
-    dontFixCmake = true;
-  });
-
   rviz2 = rosSuper.rviz2.overrideAttrs ({
     nativeBuildInputs ? [], qtWrapperArgs ? [], postFixup ? "", meta ? {}, ...
   }: {

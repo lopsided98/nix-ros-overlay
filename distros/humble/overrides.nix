@@ -135,10 +135,13 @@ in with lib; {
     '';
   });
 
-  rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
+  rviz-ogre-vendor = (patchVendorUrl rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
-  };
+  }).overrideAttrs ({ ... }: {
+    # Prevent replacing $out/opt/.. with $out/var/empty/..
+    dontFixCmake = true;
+  });
 
   shared-queues-vendor = patchVendorUrl (patchVendorUrl rosSuper.shared-queues-vendor {
     url = "https://github.com/cameron314/concurrentqueue/archive/8f65a8734d77c3cc00d74c0532efca872931d3ce.zip";

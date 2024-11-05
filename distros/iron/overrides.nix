@@ -110,6 +110,8 @@ in with lib; {
         --replace-fail 'https://github.com/${ogre.owner}/${ogre.repo}/archive/${ogre.rev}.zip' ${lib.escapeShellArg ogreTar} \
         --replace-fail c1b870955efddf539385094e9034e7f7 fcc1176585a7feb9f23c7900182a1f32
     '';
+    # Prevent replacing $out/opt/.. with $out/var/empty/..
+    dontFixCmake = true;
   });
 
   shared-queues-vendor = patchVendorUrl (patchVendorUrl rosSuper.shared-queues-vendor {
