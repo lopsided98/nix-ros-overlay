@@ -176,4 +176,16 @@ in with lib; {
       })
     ];
   });
+
+  vrpn = rosSuper.vrpn.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix compatibility with recent CMake versions
+      (self.fetchpatch {
+        url = "https://github.com/vrpn/vrpn/commit/04d86b71de06cb6cb8d2cb7276fef27275d083d2.patch";
+        hash = "sha256-AEiTLXPYcFdZrE4KzvCkXH4GiSFmhCl14wkq+0MRWLo=";
+      })
+    ];
+  });
 }
