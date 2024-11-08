@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, diagnostic-msgs, launch-pytest, launch-testing-ament-cmake, launch-testing-ros, pluginlib, rcl-interfaces, rclcpp, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-diagnostic-aggregator";
-  version = "4.1.0-r1";
+  version = "4.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/iron/diagnostic_aggregator/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "642462369d7350561c2bb66115abf654d8b16feaa325357fdc4021355672ad49";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/iron/diagnostic_aggregator/4.1.0-2.tar.gz";
+    name = "4.1.0-2.tar.gz";
+    sha256 = "633d80d37d2beea623435052d69dfa32cc8f7861417514b9fc7a73fdd2aacbdc";
   };
 
   buildType = "ament_cmake";

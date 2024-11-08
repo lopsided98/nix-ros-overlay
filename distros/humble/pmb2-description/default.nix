@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-python, ament-lint-auto, ament-lint-common, joint-state-publisher-gui, launch, launch-pal, launch-param-builder, launch-ros, launch-testing-ament-cmake, pal-urdf-utils, rviz2, urdf-test, xacro }:
 buildRosPackage {
   pname = "ros-humble-pmb2-description";
-  version = "5.3.0-r1";
+  version = "5.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_robot-gbp/archive/release/humble/pmb2_description/5.3.0-1.tar.gz";
-    name = "5.3.0-1.tar.gz";
-    sha256 = "87beca3b83442ed5a4cfda57c0b3bf1c4d91b183a5ab2e12ad862ef488ee0a7e";
+    url = "https://github.com/pal-gbp/pmb2_robot-gbp/archive/release/humble/pmb2_description/5.3.1-1.tar.gz";
+    name = "5.3.1-1.tar.gz";
+    sha256 = "715d1bf7c271e2767b94560af14c5b853e97445f21273099e34de7e7eaf1388c";
   };
 
   buildType = "ament_cmake";

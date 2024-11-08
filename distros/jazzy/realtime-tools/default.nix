@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, lifecycle-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, test-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, libcap, lifecycle-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, test-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-realtime-tools";
-  version = "2.6.0-r1";
+  version = "2.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/jazzy/realtime_tools/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "b21dc5f981eb2fe68539e0d0288d7e32d6a59419da6bf262d8497730f80ab72b";
+    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/jazzy/realtime_tools/2.8.1-1.tar.gz";
+    name = "2.8.1-1.tar.gz";
+    sha256 = "df31e6f2dcbf2d135aacccb1de6d7bb2418e395ee3f5624478880d1bd3297013";
   };
 
   buildType = "ament_cmake";
   checkInputs = [ ament-cmake-gmock lifecycle-msgs rclcpp-lifecycle test-msgs ];
-  propagatedBuildInputs = [ ament-cmake rclcpp rclcpp-action ];
+  propagatedBuildInputs = [ ament-cmake libcap rclcpp rclcpp-action ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, cv-bridge, geometry-msgs, gtest, mrpt-libposes, mrpt-libros-bridge, nav-msgs, rclcpp, ros-environment, sensor-msgs, std-msgs, stereo-msgs, tf2 }:
 buildRosPackage {
   pname = "ros-humble-pose-cov-ops";
-  version = "0.3.12-r1";
+  version = "0.3.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pose_cov_ops-release/archive/release/humble/pose_cov_ops/0.3.12-1.tar.gz";
-    name = "0.3.12-1.tar.gz";
-    sha256 = "7d20e03a9124707d41662c7f5d74f79b3e5f84a25a4c50e383a2f8023003535c";
+    url = "https://github.com/ros2-gbp/pose_cov_ops-release/archive/release/humble/pose_cov_ops/0.3.13-1.tar.gz";
+    name = "0.3.13-1.tar.gz";
+    sha256 = "7b03368cbeca013600bba276c28840f6f26554a8469a6367614a19145e639d86";
   };
 
   buildType = "ament_cmake";

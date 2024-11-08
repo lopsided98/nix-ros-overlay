@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, python3, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-humble-generate-parameter-library-py";
-  version = "0.3.8-r3";
+  version = "0.3.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/humble/generate_parameter_library_py/0.3.8-3.tar.gz";
-    name = "0.3.8-3.tar.gz";
-    sha256 = "23fecd138fea802ce97d7fbed0246fea6b3da21e4032cbd053317f4bdf6d7b93";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/humble/generate_parameter_library_py/0.3.9-1.tar.gz";
+    name = "0.3.9-1.tar.gz";
+    sha256 = "24041124ce6afcc32f07849063bd7d6cc9a45f99210c3adedcaa3284bcb91d63";
   };
 
   buildType = "ament_python";

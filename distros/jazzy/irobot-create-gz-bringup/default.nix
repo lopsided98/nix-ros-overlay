@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, geometry-msgs, gz-ros2-control, irobot-create-common-bringup, irobot-create-description, irobot-create-gz-toolbox, irobot-create-msgs, ros-gz-bridge, ros-gz-interfaces, ros-gz-sim, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-irobot-create-gz-bringup";
-  version = "3.0.3-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/jazzy/irobot_create_gz_bringup/3.0.3-1.tar.gz";
-    name = "3.0.3-1.tar.gz";
-    sha256 = "8f62e5d186a676afb80f5ffc065f8262c7a5bf4034433586dad19a431ddb6e30";
+    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/jazzy/irobot_create_gz_bringup/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "548adfe979b4e03ef58bf6ae9a08ea720725c3086cd6dc93923d180fbd7dfa4a";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-teleop-tools-msgs";
-  version = "1.6.0-r1";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/jazzy/teleop_tools_msgs/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "35a484ad4d2a21a4e8fd358763d57401f516147153bb9271a4192d01197b8fbc";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/jazzy/teleop_tools_msgs/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "1d65929def049d581d8be9968c20c4f62fe7587e0cc6f91a3db73b55c7a4d8d3";
   };
 
   buildType = "ament_cmake";

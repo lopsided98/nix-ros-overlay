@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, diagnostic-aggregator, diagnostic-msgs, diagnostic-updater, irobot-create-msgs, pythonPackages, rclpy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-turtlebot4-diagnostics";
-  version = "2.0.0-r1";
+  version = "2.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4_robot-release/archive/release/jazzy/turtlebot4_diagnostics/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "40052b135707870e2103fd28e690d2c24e2010c6825b7c5aa115e8fd62d1a493";
+    url = "https://github.com/ros2-gbp/turtlebot4_robot-release/archive/release/jazzy/turtlebot4_diagnostics/2.0.1-2.tar.gz";
+    name = "2.0.1-2.tar.gz";
+    sha256 = "535d0d5135951ad936dbaf259bd4823c49d75bbecfac8d9646d5ec750d3c1a0d";
   };
 
   buildType = "ament_python";

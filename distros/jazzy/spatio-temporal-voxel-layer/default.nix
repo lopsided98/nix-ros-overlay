@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, builtin-interfaces, geometry-msgs, laser-geometry, message-filters, nav2-costmap-2d, openexr, openvdb-vendor, pcl, pcl-conversions, pluginlib, rclcpp, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-spatio-temporal-voxel-layer";
-  version = "2.5.2-r1";
+  version = "2.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/spatio_temporal_voxel_layer-release/archive/release/jazzy/spatio_temporal_voxel_layer/2.5.2-1.tar.gz";
-    name = "2.5.2-1.tar.gz";
-    sha256 = "d99ba3048bac41ae6086640a92d2e5402ff3804ece69e42350799fa90a1a5f09";
+    url = "https://github.com/SteveMacenski/spatio_temporal_voxel_layer-release/archive/release/jazzy/spatio_temporal_voxel_layer/2.5.3-1.tar.gz";
+    name = "2.5.3-1.tar.gz";
+    sha256 = "40bd2fa987a5085a9add801f3066ad512c10f9d8f6179dc647c525da0a65290e";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-lint-auto, irobot-create-control, urdf, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-irobot-create-description";
-  version = "3.0.3-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/jazzy/irobot_create_description/3.0.3-1.tar.gz";
-    name = "3.0.3-1.tar.gz";
-    sha256 = "3ed95f2ac416e7714e9ef3b9c46fb25c44ad72faa0bfe39aea305b351818e881";
+    url = "https://github.com/ros2-gbp/create3_sim-release/archive/release/jazzy/irobot_create_description/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "14113b7075cf9f4f971a481f387e1ee212542b1e247f31846fca73dade619aeb";
   };
 
   buildType = "ament_cmake";

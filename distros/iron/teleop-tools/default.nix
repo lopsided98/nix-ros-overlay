@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joy-teleop, key-teleop, teleop-tools-msgs }:
 buildRosPackage {
   pname = "ros-iron-teleop-tools";
-  version = "1.5.1-r1";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/iron/teleop_tools/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "407d5e759e0d6769187a8f688ede1ecbec6421590ea524b87f3369dbd3c75463";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/iron/teleop_tools/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "d462d906ecd45753cb06ef01d7faf0e4ce06f1724017055fa37a28c896c2b969";
   };
 
   buildType = "ament_cmake";

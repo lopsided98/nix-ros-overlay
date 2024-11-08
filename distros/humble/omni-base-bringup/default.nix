@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, joy-linux, joy-teleop, launch-pal, omni-base-controller-configuration, omni-base-description, robot-state-publisher, twist-mux }:
 buildRosPackage {
   pname = "ros-humble-omni-base-bringup";
-  version = "2.4.0-r1";
+  version = "2.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/omni_base_robot-release/archive/release/humble/omni_base_bringup/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "5295ca280723a30bbb531ea0f5aeb347ede13a2a56f0099bfdd4a49eda41eab1";
+    url = "https://github.com/pal-gbp/omni_base_robot-release/archive/release/humble/omni_base_bringup/2.4.1-1.tar.gz";
+    name = "2.4.1-1.tar.gz";
+    sha256 = "6223da6ab08431df1a63e01c3f772ee61260cd7f120bb05c2823284c42c323b1";
   };
 
   buildType = "ament_cmake";

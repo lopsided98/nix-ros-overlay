@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-libgui, mrpt-libmaps, mrpt-libnav, mrpt-libtclap, mvsim }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-path-planning";
-  version = "0.2.0-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/mrpt-ros-pkg-release/mrpt_path_planning-release/archive/release/noetic/mrpt_path_planning/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "2f53fb75e4873b850e7eab1a05e6baf7578bc957d298292966525712517c81b6";
+    url = "https://github.com/mrpt-ros-pkg-release/mrpt_path_planning-release/archive/release/noetic/mrpt_path_planning/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "85d995b65395b72ef3e696fba4f114ee2a539380f035fad416d185961ed73ae2";
   };
 
   buildType = "cmake";
