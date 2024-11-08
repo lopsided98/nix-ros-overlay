@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, parameter-traits, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, std-srvs }:
 buildRosPackage {
   pname = "ros-iron-pid-controller";
-  version = "3.26.3-r1";
+  version = "3.27.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/pid_controller/3.26.3-1.tar.gz";
-    name = "3.26.3-1.tar.gz";
-    sha256 = "f5381104ffefbd4b359ff2e58f52bb8ad6233cb418a5cb62bdbc76f950bd9f99";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/pid_controller/3.27.0-1.tar.gz";
+    name = "3.27.0-1.tar.gz";
+    sha256 = "05bbc8170f082d10e1ce937f551194b6dcc77f4fb75f46032bcd28f2dd6e31ce";
   };
 
   buildType = "ament_cmake";

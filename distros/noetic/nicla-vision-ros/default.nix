@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, audio-common-msgs, catkin, cv-bridge, gazebo-ros, robot-state-publisher, rospy, rviz, sensor-msgs, xacro }:
 buildRosPackage {
   pname = "ros-noetic-nicla-vision-ros";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ADVRHumanoids/nicla_vision_ros-release/archive/release/noetic/nicla_vision_ros/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "f9e0b6796169c7f1f54ed187dc3ea43acd1a4de7141333c8bb4fadd7e8d6155d";
+    url = "https://github.com/ADVRHumanoids/nicla_vision_ros-release/archive/release/noetic/nicla_vision_ros/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "d5e3db9f5a8fcfb2bfed15d08671a9680cce49633dcb502fe42aa4c7f7a073d5";
   };
 
   buildType = "catkin";

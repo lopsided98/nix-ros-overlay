@@ -830,6 +830,12 @@ self: super: {
 
  etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
 
+ etsi-its-vam-ts-coding = self.callPackage ./etsi-its-vam-ts-coding {};
+
+ etsi-its-vam-ts-conversion = self.callPackage ./etsi-its-vam-ts-conversion {};
+
+ etsi-its-vam-ts-msgs = self.callPackage ./etsi-its-vam-ts-msgs {};
+
  event-camera-codecs = self.callPackage ./event-camera-codecs {};
 
  event-camera-msgs = self.callPackage ./event-camera-msgs {};
@@ -2184,6 +2190,8 @@ self: super: {
 
  psdk-wrapper = self.callPackage ./psdk-wrapper {};
 
+ ptz-action-server-msgs = self.callPackage ./ptz-action-server-msgs {};
+
  puma-motor-driver = self.callPackage ./puma-motor-driver {};
 
  puma-motor-msgs = self.callPackage ./puma-motor-msgs {};
@@ -2840,6 +2848,8 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ sbg-driver = self.callPackage ./sbg-driver {};
+
  scenario-execution-control = self.callPackage ./scenario-execution-control {};
 
  scenario-execution-gazebo = self.callPackage ./scenario-execution-gazebo {};
@@ -3403,6 +3413,8 @@ self: super: {
  warehouse-ros = self.callPackage ./warehouse-ros {};
 
  warehouse-ros-sqlite = self.callPackage ./warehouse-ros-sqlite {};
+
+ web-video-server = self.callPackage ./web-video-server {};
 
  webots-ros2 = self.callPackage ./webots-ros2 {};
 

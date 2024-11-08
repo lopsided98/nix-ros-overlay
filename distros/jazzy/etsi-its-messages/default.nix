@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-coding, etsi-its-conversion, etsi-its-msgs, etsi-its-msgs-utils, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-messages";
-  version = "2.2.0-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_messages/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "ed889f02f2b1dad47ffa89de7fc8ac3dcceb81091dbfda74c0fbe0ec00d7b4d5";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_messages/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "c69581afb932f1109f8ba6b2774961fc4a9ce041255461be9585e57cb804dce1";
   };
 
   buildType = "ament_cmake";

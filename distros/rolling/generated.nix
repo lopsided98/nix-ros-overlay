@@ -1810,6 +1810,8 @@ self: super: {
 
  ros2trace-analysis = self.callPackage ./ros2trace-analysis {};
 
+ ros-babel-fish = self.callPackage ./ros-babel-fish {};
+
  ros-babel-fish-test-msgs = self.callPackage ./ros-babel-fish-test-msgs {};
 
  ros-base = self.callPackage ./ros-base {};
@@ -2154,6 +2156,8 @@ self: super: {
 
  steering-controllers-library = self.callPackage ./steering-controllers-library {};
 
+ steering-functions = self.callPackage ./steering-functions {};
+
  stereo-image-proc = self.callPackage ./stereo-image-proc {};
 
  stereo-msgs = self.callPackage ./stereo-msgs {};
@@ -2435,6 +2439,8 @@ self: super: {
  warehouse-ros = self.callPackage ./warehouse-ros {};
 
  warehouse-ros-sqlite = self.callPackage ./warehouse-ros-sqlite {};
+
+ web-video-server = self.callPackage ./web-video-server {};
 
  webots-ros2 = self.callPackage ./webots-ros2 {};
 

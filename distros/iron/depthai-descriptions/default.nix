@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-iron-depthai-descriptions";
-  version = "2.10.2-r1";
+  version = "2.10.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/iron/depthai_descriptions/2.10.2-1.tar.gz";
-    name = "2.10.2-1.tar.gz";
-    sha256 = "0fadc3996444044423a8f5174e93a30a2cbcdfc65a98454720aa279a704b5f58";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/iron/depthai_descriptions/2.10.3-1.tar.gz";
+    name = "2.10.3-1.tar.gz";
+    sha256 = "5d510fe5621ad1bdaf1a18a2735647776148d0c99646e28964de607838263e53";
   };
 
   buildType = "ament_cmake";

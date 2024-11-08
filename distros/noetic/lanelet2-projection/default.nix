@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geographiclib, gtest, lanelet2-io, mrt-cmake-modules }:
 buildRosPackage {
   pname = "ros-noetic-lanelet2-projection";
-  version = "1.2.1-r2";
+  version = "1.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/noetic/lanelet2_projection/1.2.1-2.tar.gz";
-    name = "1.2.1-2.tar.gz";
-    sha256 = "9bda3e645ed4997eda60b91ed20f5b8a6b7b6c2c9303a5e752ac478b12f7bab9";
+    url = "https://github.com/fzi-forschungszentrum-informatik/lanelet2-release/archive/release/noetic/lanelet2_projection/1.2.2-2.tar.gz";
+    name = "1.2.2-2.tar.gz";
+    sha256 = "ce99f8dbfe4f31abbedada6eeae09d14a2e7bcbe220c47004a8036e7d3fef274";
   };
 
   buildType = "catkin";

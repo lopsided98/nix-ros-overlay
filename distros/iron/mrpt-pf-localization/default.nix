@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, cmake, mola-relocalization, mp2p-icp, mrpt-libgui, mrpt-libros-bridge, mrpt-libslam, mrpt-msgs, mrpt-msgs-bridge, mrpt-tutorials, nav-msgs, pose-cov-ops, rclcpp, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-iron-mrpt-pf-localization";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/iron/mrpt_pf_localization/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "1a8e92f339de0057827dfbdfdba2b24462e78dfe410ec97b28bd11720c8c6837";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/iron/mrpt_pf_localization/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "49a7366aad4b69c1be1c82b138fce2db1f7178fed8f2c02b6b09fb4815db880a";
   };
 
   buildType = "ament_cmake";

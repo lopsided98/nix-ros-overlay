@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, fmt, generate-parameter-library-py, parameter-traits, rclcpp, rclcpp-lifecycle, rclpy, rsl, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-jazzy-generate-parameter-library";
-  version = "0.3.8-r4";
+  version = "0.3.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/jazzy/generate_parameter_library/0.3.8-4.tar.gz";
-    name = "0.3.8-4.tar.gz";
-    sha256 = "9e5cf1387d371e8ce1a15ccb566ed2925fabf37af6f80fe7b38ff2bedfa9e6c1";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/jazzy/generate_parameter_library/0.3.9-1.tar.gz";
+    name = "0.3.9-1.tar.gz";
+    sha256 = "9a2d65abb23b77e42bdf29b63b0d65e182185df82d71de98267755d07c06ced0";
   };
 
   buildType = "ament_cmake";

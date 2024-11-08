@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, compressed-image-transport, image-transport, pluginlib, qt5, rclcpp, ros-image-to-qimage, rqt-gui, rqt-gui-cpp, rqt-image-overlay-layer, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rqt-image-overlay";
-  version = "0.3.1-r4";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_image_overlay-release/archive/release/jazzy/rqt_image_overlay/0.3.1-4.tar.gz";
-    name = "0.3.1-4.tar.gz";
-    sha256 = "556ccce6a619e4af90d9c16de4d5e6c486a465f11c8dd286510c9c1980723a9d";
+    url = "https://github.com/ros2-gbp/rqt_image_overlay-release/archive/release/jazzy/rqt_image_overlay/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "c5d9052c6a8f2a1de358baf2db84b12b7c838164becbb82182924e29f7f67ae4";
   };
 
   buildType = "ament_cmake";

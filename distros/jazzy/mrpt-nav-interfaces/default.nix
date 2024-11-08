@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, geometry-msgs, mrpt-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-nav-interfaces";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/jazzy/mrpt_nav_interfaces/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "c512be840eee0ac4a81d0cdb92beb87557d2d0ca93bff58f3f6e25438edeeeeb";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/jazzy/mrpt_nav_interfaces/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "321ddcffa4745c8fbc2bab54a267376a60d58933b0e50584e42b9421d8d42a62";
   };
 
   buildType = "ament_cmake";

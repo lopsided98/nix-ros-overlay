@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-msgs, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-test-assets, std-srvs, tf2, tf2-geometry-msgs, tf2-msgs }:
 buildRosPackage {
   pname = "ros-iron-steering-controllers-library";
-  version = "3.26.3-r1";
+  version = "3.27.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/steering_controllers_library/3.26.3-1.tar.gz";
-    name = "3.26.3-1.tar.gz";
-    sha256 = "a530c5566ea511b22bd8c50d91830af42d63223066f31273d64165369f41f631";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/steering_controllers_library/3.27.0-1.tar.gz";
+    name = "3.27.0-1.tar.gz";
+    sha256 = "12d73934dbb26b62faa335501cb38673afddacf057701a1e1a0b35559560d5de";
   };
 
   buildType = "ament_cmake";

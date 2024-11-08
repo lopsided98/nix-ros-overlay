@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-denm-coding";
-  version = "2.2.0-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_denm_coding/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "9acd5802c6f53b6eb4872a1eb04ba3c801093333c1707cbb68a2f722f3ee960f";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_denm_coding/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "e8a961fb8c679d8f03bf1a6b80b65211791382fc51d13350cb67c7bddae702df";
   };
 
   buildType = "ament_cmake";

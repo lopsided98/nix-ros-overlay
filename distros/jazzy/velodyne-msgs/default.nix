@@ -5,19 +5,19 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-velodyne-msgs";
-  version = "2.3.0-r4";
+  version = "2.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/velodyne-release/archive/release/jazzy/velodyne_msgs/2.3.0-4.tar.gz";
-    name = "2.3.0-4.tar.gz";
-    sha256 = "633a3a0e5cc501092f993f23a1dcc1076d1faa93a48caa0cce5d02eb5743aced";
+    url = "https://github.com/ros2-gbp/velodyne-release/archive/release/jazzy/velodyne_msgs/2.5.1-1.tar.gz";
+    name = "2.5.1-1.tar.gz";
+    sha256 = "79bfe9c03696409e525228f1d281c48e3cbd59fc3d89ea95876beff1be9f981e";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ builtin-interfaces rosidl-default-runtime std-msgs ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = "ROS message definitions for Velodyne 3D LIDARs.";

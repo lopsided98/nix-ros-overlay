@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, microstrain-inertial-driver, rviz, rviz-imu-plugin, tf }:
 buildRosPackage {
   pname = "ros-noetic-microstrain-inertial-examples";
-  version = "4.4.0-r1";
+  version = "4.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/noetic/microstrain_inertial_examples/4.4.0-1.tar.gz";
-    name = "4.4.0-1.tar.gz";
-    sha256 = "e4b61bd7769fe4b3b1e1f10237ad82276e01584ac086c877053842263c11cce6";
+    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/noetic/microstrain_inertial_examples/4.5.0-1.tar.gz";
+    name = "4.5.0-1.tar.gz";
+    sha256 = "b792aff77e900a6cfc96c1303226900650fc3175571404a80bcbef85f504ee24";
   };
 
   buildType = "catkin";

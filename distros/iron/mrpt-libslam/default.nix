@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, cv-bridge, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libmaps, octomap, opencv, openni2, pkg-config, python3Packages, pythonPackages, rclcpp, ros-environment, rosbag2-storage, tbb_2021_11, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-iron-mrpt-libslam";
-  version = "2.14.2-r1";
+  version = "2.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/iron/mrpt_libslam/2.14.2-1.tar.gz";
-    name = "2.14.2-1.tar.gz";
-    sha256 = "17637ad1f1cee3bc98c3b5701978fd3de5034b1560d1f715a85534d85f22e2f1";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/iron/mrpt_libslam/2.14.5-1.tar.gz";
+    name = "2.14.5-1.tar.gz";
+    sha256 = "7c2bb522820d32d9f7799078f7fe21b11891076e65bae7672c8e33af66f6983c";
   };
 
   buildType = "cmake";

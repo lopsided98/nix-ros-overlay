@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, camera-info-manager, depth-image-proc, image-transport, openni2, pkg-config, rclcpp, rclcpp-components, rosidl-default-generators, rosidl-default-runtime, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-openni2-camera";
-  version = "2.2.1-r1";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/openni2_camera-release/archive/release/rolling/openni2_camera/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "fa4d8989a0eb5cbb05bd953f97a9c91c830c95bda72132232d4fcc54eb37e463";
+    url = "https://github.com/ros2-gbp/openni2_camera-release/archive/release/rolling/openni2_camera/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "baddec448a890af590709ba4924bc24da9ed8c4ae8c60385b918e21b004bcf4a";
   };
 
   buildType = "ament_cmake";

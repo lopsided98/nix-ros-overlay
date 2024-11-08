@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-topic-tools-interfaces";
-  version = "1.3.1-r1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/jazzy/topic_tools_interfaces/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "ea2aaeb3858cee9663e2a24a3829826afbf715273e5e794ea56a7964aaa7e8f9";
+    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/jazzy/topic_tools_interfaces/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "47688a1f8042523925b72d54a2a222550fda3a0ac86b1ee5fd8bc18c4c38c50f";
   };
 
   buildType = "ament_cmake";

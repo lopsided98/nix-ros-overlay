@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, controller-manager, controller-manager-msgs, rclpy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-jazzy-rqt-controller-manager";
-  version = "4.18.0-r1";
+  version = "4.19.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/rqt_controller_manager/4.18.0-1.tar.gz";
-    name = "4.18.0-1.tar.gz";
-    sha256 = "328ba6a15f5d7a71986683580ac670e2b64d841796eec9f719bf63e2dbed007d";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/rqt_controller_manager/4.19.0-1.tar.gz";
+    name = "4.19.0-1.tar.gz";
+    sha256 = "ddbc927c0e86842c773cce3bb434a5eda70043414910df3c14280415a9807dd1";
   };
 
   buildType = "ament_python";

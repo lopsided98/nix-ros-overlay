@@ -564,6 +564,8 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ ess-imu-driver2 = self.callPackage ./ess-imu-driver2 {};
+
  etsi-its-cam-coding = self.callPackage ./etsi-its-cam-coding {};
 
  etsi-its-cam-conversion = self.callPackage ./etsi-its-cam-conversion {};
@@ -601,6 +603,12 @@ self: super: {
  etsi-its-primitives-conversion = self.callPackage ./etsi-its-primitives-conversion {};
 
  etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
+
+ etsi-its-vam-ts-coding = self.callPackage ./etsi-its-vam-ts-coding {};
+
+ etsi-its-vam-ts-conversion = self.callPackage ./etsi-its-vam-ts-conversion {};
+
+ etsi-its-vam-ts-msgs = self.callPackage ./etsi-its-vam-ts-msgs {};
 
  event-camera-codecs = self.callPackage ./event-camera-codecs {};
 
@@ -1668,6 +1676,36 @@ self: super: {
 
  pinocchio = self.callPackage ./pinocchio {};
 
+ plansys2-bringup = self.callPackage ./plansys2-bringup {};
+
+ plansys2-bt-actions = self.callPackage ./plansys2-bt-actions {};
+
+ plansys2-core = self.callPackage ./plansys2-core {};
+
+ plansys2-domain-expert = self.callPackage ./plansys2-domain-expert {};
+
+ plansys2-executor = self.callPackage ./plansys2-executor {};
+
+ plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
+
+ plansys2-msgs = self.callPackage ./plansys2-msgs {};
+
+ plansys2-pddl-parser = self.callPackage ./plansys2-pddl-parser {};
+
+ plansys2-planner = self.callPackage ./plansys2-planner {};
+
+ plansys2-popf-plan-solver = self.callPackage ./plansys2-popf-plan-solver {};
+
+ plansys2-problem-expert = self.callPackage ./plansys2-problem-expert {};
+
+ plansys2-support-py = self.callPackage ./plansys2-support-py {};
+
+ plansys2-terminal = self.callPackage ./plansys2-terminal {};
+
+ plansys2-tests = self.callPackage ./plansys2-tests {};
+
+ plansys2-tools = self.callPackage ./plansys2-tools {};
+
  plotjuggler = self.callPackage ./plotjuggler {};
 
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
@@ -1698,11 +1736,15 @@ self: super: {
 
  polygon-utils = self.callPackage ./polygon-utils {};
 
+ popf = self.callPackage ./popf {};
+
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
  position-controllers = self.callPackage ./position-controllers {};
 
  proxsuite = self.callPackage ./proxsuite {};
+
+ ptz-action-server-msgs = self.callPackage ./ptz-action-server-msgs {};
 
  py-binding-tools = self.callPackage ./py-binding-tools {};
 
@@ -2240,6 +2282,8 @@ self: super: {
 
  rslidar-msg = self.callPackage ./rslidar-msg {};
 
+ rslidar-sdk = self.callPackage ./rslidar-sdk {};
+
  rt-manipulators-cpp = self.callPackage ./rt-manipulators-cpp {};
 
  rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
@@ -2305,6 +2349,8 @@ self: super: {
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
+
+ sbg-driver = self.callPackage ./sbg-driver {};
 
  scenario-execution-control = self.callPackage ./scenario-execution-control {};
 
@@ -2747,6 +2793,8 @@ self: super: {
  warehouse-ros = self.callPackage ./warehouse-ros {};
 
  warehouse-ros-sqlite = self.callPackage ./warehouse-ros-sqlite {};
+
+ web-video-server = self.callPackage ./web-video-server {};
 
  webots-ros2 = self.callPackage ./webots-ros2 {};
 

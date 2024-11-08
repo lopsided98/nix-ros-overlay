@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, turtlebot4-base, turtlebot4-bringup, turtlebot4-diagnostics, turtlebot4-tests }:
 buildRosPackage {
   pname = "ros-jazzy-turtlebot4-robot";
-  version = "2.0.0-r1";
+  version = "2.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4_robot-release/archive/release/jazzy/turtlebot4_robot/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "bf495787622428c97d8bdce781209f0ee070b345821dc169b1a73fc415e0fbbf";
+    url = "https://github.com/ros2-gbp/turtlebot4_robot-release/archive/release/jazzy/turtlebot4_robot/2.0.1-2.tar.gz";
+    name = "2.0.1-2.tar.gz";
+    sha256 = "28eba84e096ba6c5184239f1af8496f9b8c7f1efe15edf6122d0e4a7b37be11b";
   };
 
   buildType = "ament_cmake";
