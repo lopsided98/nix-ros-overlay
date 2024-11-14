@@ -78,10 +78,6 @@ self: super: with self.lib; {
     (pyFinal: pyPrev: {
       bloom = pyFinal.callPackage ./bloom { };
 
-      bson = pyFinal.callPackage ./bson { };
-
-      catkin-pkg = pyFinal.callPackage ./catkin-pkg { };
-
       catkin-tools = pyFinal.callPackage ./catkin-tools { };
 
       colcon-argcomplete = pyFinal.callPackage ./colcon/argcomplete.nix { };
