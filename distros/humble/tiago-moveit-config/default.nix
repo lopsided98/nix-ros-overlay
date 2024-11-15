@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, launch-pal, moveit-configs-utils, moveit-kinematics, moveit-planners-ompl, moveit-ros-control-interface, moveit-ros-move-group, moveit-ros-perception, moveit-ros-visualization, tiago-description }:
 buildRosPackage {
   pname = "ros-humble-tiago-moveit-config";
-  version = "3.1.0-r1";
+  version = "3.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_moveit_config-release/archive/release/humble/tiago_moveit_config/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "08e208ae36597fccb6453b0b00db42dcecbb06bac26c084afff71f0517b5706e";
+    url = "https://github.com/pal-gbp/tiago_moveit_config-release/archive/release/humble/tiago_moveit_config/3.1.1-1.tar.gz";
+    name = "3.1.1-1.tar.gz";
+    sha256 = "975a951ce3b088eba2a3557a0a351ad62ba946dc550d15732b6926097422f4fb";
   };
 
   buildType = "ament_cmake";

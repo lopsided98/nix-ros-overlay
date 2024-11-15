@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-humble-leo-gz-worlds";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_simulator-release/archive/release/humble/leo_gz_worlds/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "b50de084e695744a6b9e1b43895120288b1cbd064b320f9f57d78adaad386ad9";
+    url = "https://github.com/ros2-gbp/leo_simulator-release/archive/release/humble/leo_gz_worlds/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "179a2fd729a70b326f1147b4c9c015c60fe316de236309f8347b6d618ff6c14f";
   };
 
   buildType = "ament_cmake";

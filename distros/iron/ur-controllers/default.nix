@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, angles, controller-interface, joint-trajectory-controller, lifecycle-msgs, pluginlib, rclcpp-lifecycle, rcutils, realtime-tools, std-msgs, std-srvs, ur-dashboard-msgs, ur-msgs }:
 buildRosPackage {
   pname = "ros-iron-ur-controllers";
-  version = "2.3.11-r2";
+  version = "2.3.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/iron/ur_controllers/2.3.11-2.tar.gz";
-    name = "2.3.11-2.tar.gz";
-    sha256 = "b8c7aaec4f8109ea124e39146950b1a9f2a882b74d628e03c3964002e871e688";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/iron/ur_controllers/2.3.12-1.tar.gz";
+    name = "2.3.12-1.tar.gz";
+    sha256 = "f74147bbf8f65fa66e2a68d52c66fb932c954a6b274827b1eb07dd4e09cd0ac4";
   };
 
   buildType = "ament_cmake";

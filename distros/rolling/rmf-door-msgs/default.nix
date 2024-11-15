@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rmf-door-msgs";
-  version = "3.4.0-r1";
+  version = "3.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_door_msgs/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "0c866a3b29373e3e47a93096b960e62b73c954363ace5c0527ac88bbebca2fcf";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_door_msgs/3.4.1-1.tar.gz";
+    name = "3.4.1-1.tar.gz";
+    sha256 = "e4fc9e59d928a7ed8aa68cef9597a547ca3307ff44d27c9f171bc43d3ba27b4c";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto }:
 buildRosPackage {
   pname = "ros-iron-leo-gz-worlds";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_simulator-release/archive/release/iron/leo_gz_worlds/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "5a074fc026365072735410b3a6beb780ec6c0c0ffaf39ca404558ffa9fb22546";
+    url = "https://github.com/ros2-gbp/leo_simulator-release/archive/release/iron/leo_gz_worlds/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "3814f40f5894f457cb3f9760bdc6e02702b568f9984395acf7e19bc313a30796";
   };
 
   buildType = "ament_cmake";

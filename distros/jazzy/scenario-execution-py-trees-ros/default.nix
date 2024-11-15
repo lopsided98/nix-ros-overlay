@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, py-trees-ros }:
 buildRosPackage {
   pname = "ros-jazzy-scenario-execution-py-trees-ros";
-  version = "1.2.0-r4";
+  version = "1.2.0-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/jazzy/scenario_execution_py_trees_ros/1.2.0-4.tar.gz";
-    name = "1.2.0-4.tar.gz";
-    sha256 = "9716904cedab67d9839c589f409171df0686a64edd8f0619e4e94b0eb628fd70";
+    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/jazzy/scenario_execution_py_trees_ros/1.2.0-5.tar.gz";
+    name = "1.2.0-5.tar.gz";
+    sha256 = "d9ed8b8dfc8363657afd09173339e4edb06ea3b8e70a47732d39522b64b1a8ff";
   };
 
   buildType = "ament_python";

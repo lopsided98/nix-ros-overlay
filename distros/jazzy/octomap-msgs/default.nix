@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-octomap-msgs";
-  version = "2.0.0-r5";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap_msgs-release/archive/release/jazzy/octomap_msgs/2.0.0-5.tar.gz";
-    name = "2.0.0-5.tar.gz";
-    sha256 = "009eb7d31798b05f1ead69930d87d960ebf71cd417a0660ac16126c3f8417c68";
+    url = "https://github.com/ros2-gbp/octomap_msgs-release/archive/release/jazzy/octomap_msgs/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "d89216f512cf3261fef4b526c3dbc5fa01f835f461b024c1b633c2a84554c74d";
   };
 
   buildType = "ament_cmake";

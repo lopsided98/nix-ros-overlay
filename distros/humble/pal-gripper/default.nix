@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pal-gripper-controller-configuration, pal-gripper-description }:
 buildRosPackage {
   pname = "ros-humble-pal-gripper";
-  version = "3.3.0-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_gripper-release/archive/release/humble/pal_gripper/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "45c892bf387bc6fc60dbd23b5406cd2d48a05b3452eee7c2c79119f74f7c4cc0";
+    url = "https://github.com/pal-gbp/pal_gripper-release/archive/release/humble/pal_gripper/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "886de4f575adbd0dbe6e98c7d29d96c65d4eb0d73f4df0f3014d8ba2a0fc0270";
   };
 
   buildType = "ament_cmake";

@@ -1738,6 +1738,8 @@ self: super: {
 
  popf = self.callPackage ./popf {};
 
+ pose-broadcaster = self.callPackage ./pose-broadcaster {};
+
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
  position-controllers = self.callPackage ./position-controllers {};
@@ -2411,6 +2413,8 @@ self: super: {
  sick-scan-xd = self.callPackage ./sick-scan-xd {};
 
  simple-actions = self.callPackage ./simple-actions {};
+
+ simple-grasping = self.callPackage ./simple-grasping {};
 
  simple-launch = self.callPackage ./simple-launch {};
 

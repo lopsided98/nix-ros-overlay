@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, lttng-tools, lttng-ust, pkg-config }:
 buildRosPackage {
   pname = "ros-iron-tracetools";
-  version = "6.3.2-r1";
+  version = "6.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/iron/tracetools/6.3.2-1.tar.gz";
-    name = "6.3.2-1.tar.gz";
-    sha256 = "556aa0489ae6f42b149fc7e114546b2b7b2b9923b3d85c57edd150728501037b";
+    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/iron/tracetools/6.3.3-1.tar.gz";
+    name = "6.3.3-1.tar.gz";
+    sha256 = "dd73969560a5e3c6c386ffe9af3f1a76a6c55e19891067128b06c550581f46a1";
   };
 
   buildType = "ament_cmake";

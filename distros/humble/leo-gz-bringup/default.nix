@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-black, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-mypy, ament-cmake-xmllint, ament-index-python, ament-lint-auto, leo-description, leo-gz-plugins, leo-gz-worlds, robot-state-publisher, ros-gz-bridge, ros-gz-image, ros-gz-sim, xacro }:
 buildRosPackage {
   pname = "ros-humble-leo-gz-bringup";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_simulator-release/archive/release/humble/leo_gz_bringup/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "17680367833b776d6ce06eabb7c92098858b4f042a2cff4131939a9bd7e36c92";
+    url = "https://github.com/ros2-gbp/leo_simulator-release/archive/release/humble/leo_gz_bringup/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "4cb0a44d0d17915992d1e66f41af1904ab4b035ba29160c349f42620c840556c";
   };
 
   buildType = "ament_cmake";

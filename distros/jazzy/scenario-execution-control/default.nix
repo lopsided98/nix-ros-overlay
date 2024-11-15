@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rclpy, scenario-execution, scenario-execution-interfaces, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-scenario-execution-control";
-  version = "1.2.0-r4";
+  version = "1.2.0-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/jazzy/scenario_execution_control/1.2.0-4.tar.gz";
-    name = "1.2.0-4.tar.gz";
-    sha256 = "eadccee4a5f3343f19e9e70c2d7c008682b52260015692573f875a1aecf6da3c";
+    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/jazzy/scenario_execution_control/1.2.0-5.tar.gz";
+    name = "1.2.0-5.tar.gz";
+    sha256 = "b884b5e242d25edeb7eb8fafc01044a3a9a20c2226f1eea5712dd820387a7ac5";
   };
 
   buildType = "ament_python";

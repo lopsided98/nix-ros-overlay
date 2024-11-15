@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-iron-leo-description";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/iron/leo_description/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "78241163b9d24182be0b4a7f37f63afbb98e286f022baa73d7b1b374678eaea7";
+    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/iron/leo_description/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "2b5f4720581e8be5aa423f409aa9ee12a6ec51837bd6084b486d9ef4aeba1d78";
   };
 
   buildType = "ament_cmake";

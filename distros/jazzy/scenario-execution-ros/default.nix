@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, py-trees, py-trees-ros, py-trees-ros-interfaces, python3Packages, pythonPackages, rcl-interfaces, rclpy, scenario-execution, scenario-execution-py-trees-ros, visualization-msgs, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-scenario-execution-ros";
-  version = "1.2.0-r4";
+  version = "1.2.0-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/jazzy/scenario_execution_ros/1.2.0-4.tar.gz";
-    name = "1.2.0-4.tar.gz";
-    sha256 = "6c0c78d73c714e276123cfe18b33858ae577a9112991a2c5a7adde8c925a74d6";
+    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/jazzy/scenario_execution_ros/1.2.0-5.tar.gz";
+    name = "1.2.0-5.tar.gz";
+    sha256 = "4f136a45109ede555762270b7a2b042299c8955737a540fa54845c211bfd9101";
   };
 
   buildType = "ament_python";

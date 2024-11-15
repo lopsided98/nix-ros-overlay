@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, controller-manager, controller-manager-msgs, python3Packages, rcl-interfaces, rclpy, ros2cli, ros2node, ros2param, rosidl-runtime-py }:
 buildRosPackage {
   pname = "ros-humble-ros2controlcli";
-  version = "2.43.1-r1";
+  version = "2.44.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/ros2controlcli/2.43.1-1.tar.gz";
-    name = "2.43.1-1.tar.gz";
-    sha256 = "adf8fd01700ddb1db0a0f53307ca29159c5da725460c4a11e7fe37fa09e5cf4d";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/ros2controlcli/2.44.0-1.tar.gz";
+    name = "2.44.0-1.tar.gz";
+    sha256 = "3605677eeea3816cf137f5b5b580f2d60c7a03c179feba7d92533d8fbd90eb8d";
   };
 
   buildType = "ament_python";

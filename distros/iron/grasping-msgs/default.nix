@@ -8,9 +8,9 @@ buildRosPackage {
   version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/mikeferguson/grasping_msgs-ros2-gbp/archive/release/iron/grasping_msgs/0.5.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/grasping_msgs-release/archive/release/iron/grasping_msgs/0.5.0-1.tar.gz";
     name = "0.5.0-1.tar.gz";
-    sha256 = "d7dc2967d5d1ec2740be9ec5a89171111377ac3288c0e5365279aeec4a599ddc";
+    sha256 = "11dffe168a1f95e4ca5e7a968f1658992b3f981b70d09469bdebb2d0245fae53";
   };
 
   buildType = "ament_cmake";
