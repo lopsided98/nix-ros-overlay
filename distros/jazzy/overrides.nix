@@ -195,6 +195,28 @@ in {
     hash = "sha256-Qaz26F11VWxkQH8HfgVJLTHbHwmeByQu8ENkuyk5rPE=";
   };
 
+  moveit-core = rosSuper.moveit-core.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Remove workaround for Ubuntu-specific dependency hell issue
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
+        'find_package(octomap REQUIRED)'
+    '';
+  });
+
+  moveit-ros-occupancy-map-monitor = rosSuper.moveit-ros-occupancy-map-monitor.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Remove workaround for Ubuntu-specific dependency hell issue
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
+        'find_package(octomap REQUIRED)'
+    '';
+  });
+
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre.git";
     rev = "v1.12.10";

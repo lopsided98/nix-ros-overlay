@@ -195,6 +195,28 @@ in {
     hash = "sha256-ZP8+URGfN//Pr53uy9mHp8tNTZA110o/03czlaRw/aE=";
   };
 
+  moveit-core = rosSuper.moveit-core.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Remove workaround for Ubuntu-specific dependency hell issue
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
+        'find_package(octomap REQUIRED)'
+    '';
+  });
+
+  moveit-ros-occupancy-map-monitor = rosSuper.moveit-ros-occupancy-map-monitor.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Remove workaround for Ubuntu-specific dependency hell issue
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
+        'find_package(octomap REQUIRED)'
+    '';
+  });
+
   nlohmann-json-schema-validator-vendor = lib.patchExternalProjectGit rosSuper.nlohmann-json-schema-validator-vendor {
     url = "https://github.com/pboettch/json-schema-validator.git";
     rev = "5ef4f903af055550e06955973a193e17efded896";

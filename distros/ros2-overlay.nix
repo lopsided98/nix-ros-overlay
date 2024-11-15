@@ -112,28 +112,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
-  moveit-core = rosSuper.moveit-core.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    # Remove workaround for Ubuntu-specific dependency hell issue
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail \
-        'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
-        'find_package(octomap REQUIRED)'
-    '';
-  });
-
-  moveit-ros-occupancy-map-monitor = rosSuper.moveit-ros-occupancy-map-monitor.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    # Remove workaround for Ubuntu-specific dependency hell issue
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail \
-        'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
-        'find_package(octomap REQUIRED)'
-    '';
-  });
-
   popf = rosSuper.popf.overrideAttrs ({
     nativeBuildInputs ? [], postPatch ? "", ...
   }: {
