@@ -117,6 +117,13 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "sha256-IBlmph3IJvGxh5okozF6HskhSpGMjrA1vi8ww+nPvcs=";
   };
 
+  resource-retriever = rosSuper.resource-retriever.overrideAttrs({
+    nativeBuildInputs ? [], ...
+  }: {
+    # distutils was removed from standard library in Python 3.12
+    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
+  });
+
   rosconsole = rosSuper.rosconsole.overrideAttrs ({
     patches ? [], ...
   }: {
