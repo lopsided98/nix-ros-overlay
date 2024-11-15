@@ -88,6 +88,13 @@ rosSelf: rosSuper: with rosSelf.lib; {
     }) ];
   });
 
+  mavros = rosSuper.mavros.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    # distutils was removed from standard library in Python 3.12
+    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
+  });
+
   mavros-extras = rosSuper.mavros-extras.overrideAttrs ({
     patches ? [], ...
   }: {
