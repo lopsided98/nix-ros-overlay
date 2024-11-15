@@ -3,7 +3,7 @@ self:
 # Distro package set
 rosSelf: rosSuper: with rosSelf.lib; {
 
-  angles = rosSuper.angles.overrideAttrs({
+  angles = rosSuper.angles.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
     # distutils was removed from standard library in Python 3.12
@@ -35,7 +35,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
   });
 
-  laser-geometry = rosSuper.laser-geometry.overrideAttrs({
+  laser-geometry = rosSuper.laser-geometry.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
     # distutils was removed from standard library in Python 3.12
@@ -129,7 +129,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     }) ];
   });
 
-  ros-numpy = rosSuper.ros-numpy.overrideAttrs({
+  ros-numpy = rosSuper.ros-numpy.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
     # distutils was removed from standard library in Python 3.12
@@ -141,14 +141,14 @@ rosSelf: rosSuper: with rosSelf.lib; {
     sha256 = "sha256-zOtMuTZuGKV0ISjLNSTOX1Doi0dvHlRzekf/3030yZY=";
   };
 
-  roslint = rosSuper.roslint.overrideAttrs({
+  roslint = rosSuper.roslint.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
     # distutils was removed from standard library in Python 3.12
     nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
   });
 
-  rosserial-python = rosSuper.rosserial-python.overrideAttrs({
+  rosserial-python = rosSuper.rosserial-python.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
     # distutils was removed from standard library in Python 3.12
@@ -167,5 +167,12 @@ rosSelf: rosSuper: with rosSelf.lib; {
     postPatch = postPatch + ''
       substituteInPlace CMakeLists.txt --replace-fail " -Werror" ""
     '';
+  });
+
+  turtlebot3-teleop = rosSuper.turtlebot3-teleop.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    # distutils was removed from standard library in Python 3.12
+    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
   });
 }
