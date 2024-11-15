@@ -189,6 +189,7 @@ in rosSuper.lib.genAttrs [
   "resource-retriever"
   "ros-numpy"
   "rosserial-python"
+  "rqt-bag"
   "rqt-gui"
   "rqt-gui-py"
   "rqt-py-common"
