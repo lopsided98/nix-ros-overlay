@@ -4,10 +4,25 @@ self:
 rosSelf: rosSuper: with rosSelf.lib; {
 
   angles = rosSuper.angles.overrideAttrs ({
-    nativeBuildInputs ? [], ...
+    patches ? [], ...
   }: {
-    # distutils was removed from standard library in Python 3.12
-    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
+    # Remove distutils dependency
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/ros/angles/commit/fe974f2d84b719d3aa0593a4bf633183d75ba213.patch";
+      hash = "sha256-96i+ZmISZzjYedoqIYt/2eMoDUK/RcKhj2BZrUkAgW8=";
+      stripLen = 1;
+    }) ];
+  });
+
+  base-local-planner = rosSuper.base-local-planner.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # Remove distutils dependency
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/ros-planning/navigation/commit/9ad644198e132d0e950579a3bc72c29da46e60b0.patch";
+      hash = "sha256-5xondSLm1NhfcjlcX5SwXMtOWNqYvZ5yVDWaiK5atwk=";
+      stripLen = 1;
+    }) ];
   });
 
   eigenpy = rosSuper.eigenpy.overrideAttrs ({
@@ -149,10 +164,13 @@ rosSelf: rosSuper: with rosSelf.lib; {
   };
 
   roslint = rosSuper.roslint.overrideAttrs ({
-    nativeBuildInputs ? [], ...
+    patches ? [], ...
   }: {
-    # distutils was removed from standard library in Python 3.12
-    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
+    # Remove distutils dependency
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/ros/roslint/commit/bb1a17dc17051094050b5bf58d83798db725c726.patch";
+      hash = "sha256-xggireHrRE++gjSzeMeCdfDXXZqiXhr/LCqbe7r3Kk8=";
+    }) ];
   });
 
   rosserial-python = rosSuper.rosserial-python.overrideAttrs ({
