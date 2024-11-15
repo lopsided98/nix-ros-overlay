@@ -54,9 +54,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   fmilibrary-vendor = patchExternalProjectGit rosSuper.fmilibrary-vendor {
     url = "https://github.com/modelon-community/fmi-library.git";
-    # Uses ${fmilibrary_version}, so can't match
-    originalRev = "";
     rev = "2.2.3";
+    revVariable = "fmilibrary_version";
     fetchgitArgs.hash = "sha256-i8EtjPMg39S/3RyoUaXm5A8Nu/NbgAwjxRCdyh2elyU=";
   };
 

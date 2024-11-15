@@ -168,20 +168,8 @@ let
 
     osqp-vendor = pipe rosSuper.osqp-vendor [
       (pkg: pkg.overrideAttrs ({
-        prePatch ? "",
         preInstall ? "", ...
       }: {
-        # Make CMakeLists.txt amenable to automatic patching with
-        # patchExternalProjectGit
-        prePatch = prePatch + ''
-          substituteInPlace CMakeLists.txt --replace-fail \
-            'set(git_tag "v0.6.2")' \
-            'set(git_tag "v0.6.2")' # fail when upstream version changes
-          substituteInPlace CMakeLists.txt --replace-fail \
-            'GIT_TAG ''${git_tag}' \
-            'GIT_TAG v0.6.2'
-        '';
-
         # osqp installs into both lib/cmake/ and lib64/cmake/ which is
         # problematic because moveLib64 doesn't attempt to merge overlapping
         # directories but fails instead. Here we do the merge manually.
@@ -195,6 +183,7 @@ let
       (pkg: patchExternalProjectGit pkg {
         url = "https://github.com/osqp/osqp.git";
         rev = "v0.6.2";
+        revVariable = "git_tag";
         fetchgitArgs = {
           hash = "sha256-0BbUe1J9qzvyKDBLTz+pAEmR3QpRL+hnxZ2re/3mEvs=";
           leaveDotGit = true;

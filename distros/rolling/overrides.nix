@@ -184,6 +184,13 @@ in {
     hash = "sha256-ZP8+URGfN//Pr53uy9mHp8tNTZA110o/03czlaRw/aE=";
   };
 
+  nlohmann-json-schema-validator-vendor = lib.patchExternalProjectGit rosSuper.nlohmann-json-schema-validator-vendor {
+    url = "https://github.com/pboettch/json-schema-validator.git";
+    rev = "5ef4f903af055550e06955973a193e17efded896";
+    revVariable = "nlohmann_json_schema_validator_version";
+    fetchgitArgs.hash = "sha256-b02OFUx0BxUA6HN6IaacSg1t3RP4o7NND7X0U635W8U=";
+  };
+
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre.git";
     rev = "v1.12.10";
