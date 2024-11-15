@@ -66,7 +66,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     }) ];
   });
 
-
   mavros-extras = rosSuper.mavros-extras.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -74,18 +73,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     patches = patches ++ [ (self.fetchpatch {
       url = "https://github.com/mavlink/mavros/commit/640e916127167029e5be3e86c5f43b05baf52e16.patch";
       hash = "sha256-IpCeQeeUKTweCTdsP9m07i+q2fNosFP4Y5SVX+wMeP8=";
-      stripLen = 1;
-    }) ];
-  });
-
-  moveit-core = rosSuper.moveit-core.overrideAttrs ({
-    buildInputs ? [], patches ? [], ...
-  }: {
-    buildInputs = buildInputs ++ [ rosSelf.angles ];
-    # Add angles dependency to CMakeLists.txt and packages.xml
-    patches = patches ++ [ (self.fetchpatch {
-      url = "https://github.com/ros-planning/moveit/commit/ea73996b7ff9736504ea012dbdea9e81a80a561c.patch";
-      hash = "sha256-ZduyFhnl5WH07TEkfF1DwTUBZNd5CbZ3wHN7JHJb1XI=";
       stripLen = 1;
     }) ];
   });
