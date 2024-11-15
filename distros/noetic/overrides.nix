@@ -182,6 +182,7 @@ in rosSuper.lib.genAttrs [
   "laser-geometry"
   "mavros"
   "pr2-computer-monitor"
+  "pr2-controller-manager"
   "pr2-power-board"
   "pyquaternion"
   "qt-gui-cpp"
@@ -191,6 +192,7 @@ in rosSuper.lib.genAttrs [
   "rqt-gui"
   "rqt-py-common"
   "turtlebot3-autorace-camera"
+  "turtlebot3-example"
   "turtlebot3-teleop"
   "unique-id"
 ] (name: addDistutils rosSuper.${name}))
