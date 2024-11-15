@@ -25,6 +25,17 @@ in {
 
   gazebo = self.gazebo_11;
 
+  geometric-shapes = rosSuper.geometric-shapes.overrideAttrs({
+      postPatch ? "", ...
+  }: {
+      # Remove workaround for Ubuntu-specific dependency hell issue
+      postPatch = postPatch + ''
+        substituteInPlace CMakeLists.txt --replace-fail \
+          'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
+          'find_package(octomap REQUIRED)'
+      '';
+  });
+
   google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
     url = "https://github.com/google/benchmark.git";
     rev = "344117638c8ff7e239044fd0fa7085839fc03021";

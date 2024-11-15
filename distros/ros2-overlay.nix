@@ -59,17 +59,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     fetchgitArgs.hash = "sha256-i8EtjPMg39S/3RyoUaXm5A8Nu/NbgAwjxRCdyh2elyU=";
   };
 
-  geometric-shapes = rosSuper.geometric-shapes.overrideAttrs({
-      postPatch ? "", ...
-  }: {
-      # Remove workaround for Ubuntu-specific dependency hell issue
-      postPatch = postPatch + ''
-        substituteInPlace CMakeLists.txt --replace-fail \
-          'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
-          'find_package(octomap REQUIRED)'
-      '';
-  });
-
   gmock-vendor = rosSuper.gmock-vendor.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
