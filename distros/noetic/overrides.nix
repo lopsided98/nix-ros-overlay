@@ -1,8 +1,9 @@
 # Top level package set
 self:
 # Distro package set
-rosSelf: rosSuper: with rosSelf.lib; {
-
+rosSelf: rosSuper: let 
+  lib = rosSelf.lib;
+in {
   angles = rosSuper.angles.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -44,27 +45,13 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   gazebo = self.gazebo_11;
 
-  gps-common = rosSuper.gps-common.overrideAttrs ({
-    nativeBuildInputs ? [], ...
-  }: {
-    # distutils was removed from standard library in Python 3.12
-    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
-  });
-
   hdf5-map-io = rosSuper.hdf5-map-io.overrideAttrs ({
     nativeBuildInputs ? [], ...
   } : {
     nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
   });
 
-  laser-geometry = rosSuper.laser-geometry.overrideAttrs ({
-    nativeBuildInputs ? [], ...
-  }: {
-    # distutils was removed from standard library in Python 3.12
-    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
-  });
-
-  libphidget22 = patchVendorUrl rosSuper.libphidget22 {
+  libphidget22 = lib.patchVendorUrl rosSuper.libphidget22 {
     url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.19.20240304.tar.gz";
     hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
   };
@@ -77,10 +64,10 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
     env.NIX_CFLAGS_COMPILE = "-fpermissive";
 
-    postPatch = with self.lib; postPatch + ''
+    postPatch = postPatch + ''
       substituteInPlace CMakeModules/FindLz4.cmake \
-        --replace-fail "set(LZ4_SEARCH_HEADER_PATHS" "set(LZ4_SEARCH_HEADER_PATHS ${getDev self.lz4}/include" \
-        --replace-fail "set(LZ4_SEARCH_LIB_PATH" "set(LZ4_SEARCH_LIB_PATH ${getLib self.lz4}/lib"
+        --replace-fail "set(LZ4_SEARCH_HEADER_PATHS" "set(LZ4_SEARCH_HEADER_PATHS ${lib.getDev self.lz4}/include" \
+        --replace-fail "set(LZ4_SEARCH_LIB_PATH" "set(LZ4_SEARCH_LIB_PATH ${lib.getLib self.lz4}/lib"
     '';
   });
 
@@ -95,13 +82,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     }) ];
   });
 
-  mavros = rosSuper.mavros.overrideAttrs ({
-    nativeBuildInputs ? [], ...
-  }: {
-    # distutils was removed from standard library in Python 3.12
-    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
-  });
-
   mavros-extras = rosSuper.mavros-extras.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -113,7 +93,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     }) ];
   });
 
-  novatel-oem7-driver = (patchExternalProjectGit rosSuper.novatel-oem7-driver {
+  novatel-oem7-driver = (lib.patchExternalProjectGit rosSuper.novatel-oem7-driver {
     url = "https://github.com/novatel/novatel_edie";
     originalRev = "origin/dev-ros_install_prefix";
     rev = "d02ccc2dfe531d642c1e2ca8a8c0f8205c856f23";
@@ -135,24 +115,10 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
-  pybind11-catkin = patchVendorUrl rosSuper.pybind11-catkin {
+  pybind11-catkin = lib.patchVendorUrl rosSuper.pybind11-catkin {
     url = "https://github.com/pybind/pybind11/archive/v2.10.3.zip";
     sha256 = "sha256-IBlmph3IJvGxh5okozF6HskhSpGMjrA1vi8ww+nPvcs=";
   };
-
-  pyquaternion = rosSuper.pyquaternion.overrideAttrs ({
-    nativeBuildInputs ? [], ...
-  }: {
-    # distutils was removed from standard library in Python 3.12
-    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
-  });
-
-  resource-retriever = rosSuper.resource-retriever.overrideAttrs({
-    nativeBuildInputs ? [], ...
-  }: {
-    # distutils was removed from standard library in Python 3.12
-    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
-  });
 
   rosconsole = rosSuper.rosconsole.overrideAttrs ({
     patches ? [], ...
@@ -165,14 +131,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     }) ];
   });
 
-  ros-numpy = rosSuper.ros-numpy.overrideAttrs ({
-    nativeBuildInputs ? [], ...
-  }: {
-    # distutils was removed from standard library in Python 3.12
-    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
-  });
-
-  rosfmt = patchVendorUrl rosSuper.rosfmt {
+  rosfmt = lib.patchVendorUrl rosSuper.rosfmt {
     url = "https://github.com/fmtlib/fmt/releases/download/9.1.0/fmt-9.1.0.zip";
     sha256 = "sha256-zOtMuTZuGKV0ISjLNSTOX1Doi0dvHlRzekf/3030yZY=";
   };
@@ -185,13 +144,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
       url = "https://github.com/ros/roslint/commit/bb1a17dc17051094050b5bf58d83798db725c726.patch";
       hash = "sha256-xggireHrRE++gjSzeMeCdfDXXZqiXhr/LCqbe7r3Kk8=";
     }) ];
-  });
-
-  rosserial-python = rosSuper.rosserial-python.overrideAttrs ({
-    nativeBuildInputs ? [], ...
-  }: {
-    # distutils was removed from standard library in Python 3.12
-    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
   });
 
   rviz-map-plugin = rosSuper.rviz-map-plugin.overrideAttrs ({
@@ -207,11 +159,37 @@ rosSelf: rosSuper: with rosSelf.lib; {
       substituteInPlace CMakeLists.txt --replace-fail " -Werror" ""
     '';
   });
-
-  turtlebot3-teleop = rosSuper.turtlebot3-teleop.overrideAttrs ({
+} //
+# distutils was removed from standard library in Python 3.12, but many packages
+# still depend on it.
+(let
+  addDistutils = pkg: pkg.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
-    # distutils was removed from standard library in Python 3.12
     nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
   });
-}
+in rosSuper.lib.genAttrs [
+  "baldor"
+  "catkin-virtualenv"
+  "ddynamic-reconfigure-python"
+  "dual-quaternions"
+  "gps-common"
+  "image-cb-detector"
+  "joint-trajectory-action-tools"
+  "joy-mouse"
+  "jsk-network-tools"
+  "laser-geometry"
+  "mavros"
+  "pr2-computer-monitor"
+  "pr2-power-board"
+  "pyquaternion"
+  "qt-gui-cpp"
+  "resource-retriever"
+  "ros-numpy"
+  "rosserial-python"
+  "rqt-gui"
+  "rqt-py-common"
+  "turtlebot3-autorace-camera"
+  "turtlebot3-teleop"
+  "unique-id"
+] (name: addDistutils rosSuper.${name}))
