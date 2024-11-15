@@ -190,6 +190,7 @@ in rosSuper.lib.genAttrs [
   "ros-numpy"
   "rosserial-python"
   "rqt-gui"
+  "rqt-gui-py"
   "rqt-py-common"
   "turtlebot3-autorace-camera"
   "turtlebot3-example"
