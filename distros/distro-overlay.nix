@@ -93,16 +93,6 @@ let
       setupHook = ./gazebo-ros-setup-hook.sh;
     });
 
-    geometric-shapes = rosSuper.geometric-shapes.overrideAttrs({
-        postPatch ? "", ...
-    }: {
-        postPatch = postPatch + ''
-          substituteInPlace CMakeLists.txt --replace-fail \
-            'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
-            'find_package(octomap REQUIRED)'
-        '';
-    });
-
     gmapping = patchBoostSignals rosSuper.gmapping;
 
     image-cb-detector = patchBoostSignals rosSuper.image-cb-detector;
@@ -176,29 +166,13 @@ let
       '';
     });
 
-    moveit-core = rosSuper.moveit-core.overrideAttrs({
-      postPatch ? "", ...
-    }: {
-      postPatch = postPatch + ''
-        substituteInPlace CMakeLists.txt --replace-fail \
-          'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
-          'find_package(octomap REQUIRED)'
-      '';
-    });
-
-    moveit-ros-occupancy-map-monitor = rosSuper.moveit-ros-occupancy-map-monitor.overrideAttrs({
-      postPatch ? "", ...
-    }: {
-      postPatch = postPatch + ''
-        substituteInPlace CMakeLists.txt --replace-fail \
-          'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
-          'find_package(octomap REQUIRED)'
-      '';
-    });
-
     osqp-vendor = pipe rosSuper.osqp-vendor [
-      # Make CMakeLists.txt amenable to automatic patching by the next step.
-      (pkg: pkg.overrideAttrs ({ prePatch ? "", ... }: {
+      (pkg: pkg.overrideAttrs ({
+        prePatch ? "",
+        preInstall ? "", ...
+      }: {
+        # Make CMakeLists.txt amenable to automatic patching with
+        # patchExternalProjectGit
         prePatch = prePatch + ''
           substituteInPlace CMakeLists.txt --replace-fail \
             'set(git_tag "v0.6.2")' \
@@ -206,6 +180,15 @@ let
           substituteInPlace CMakeLists.txt --replace-fail \
             'GIT_TAG ''${git_tag}' \
             'GIT_TAG v0.6.2'
+        '';
+
+        # osqp installs into both lib/cmake/ and lib64/cmake/ which is
+        # problematic because moveLib64 doesn't attempt to merge overlapping
+        # directories but fails instead. Here we do the merge manually.
+        preInstall = preInstall + ''
+          mkdir -p ./osqp_install/lib/cmake/osqp
+          mv ./osqp_install/lib64/cmake/osqp/* ./osqp_install/lib/cmake/osqp
+          rm -r ./osqp_install/lib64/cmake
         '';
       }))
 
@@ -217,17 +200,6 @@ let
           leaveDotGit = true;
         };
       })
-
-      # osqp installs into both lib/cmake/ and lib64/cmake/ which is problematic
-      # because moveLib64 doesn't attempt to merge overlapping directories but
-      # fails instead. Here we do the merge manually.
-      (pkg: pkg.overrideAttrs ({ preInstall ? "", ... }: {
-        preInstall = preInstall + ''
-          mkdir -p ./osqp_install/lib/cmake/osqp
-          mv ./osqp_install/lib64/cmake/osqp/* ./osqp_install/lib/cmake/osqp
-          rm -r ./osqp_install/lib64/cmake
-        '';
-      }))
     ];
 
     ompl = rosSuper.ompl.overrideAttrs ({

@@ -60,6 +60,17 @@ rosSelf: rosSuper: with rosSelf.lib; {
     fetchgitArgs.hash = "sha256-i8EtjPMg39S/3RyoUaXm5A8Nu/NbgAwjxRCdyh2elyU=";
   };
 
+  geometric-shapes = rosSuper.geometric-shapes.overrideAttrs({
+      postPatch ? "", ...
+  }: {
+      # Remove workaround for Ubuntu-specific dependency hell issue
+      postPatch = postPatch + ''
+        substituteInPlace CMakeLists.txt --replace-fail \
+          'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
+          'find_package(octomap REQUIRED)'
+      '';
+  });
+
   gmock-vendor = rosSuper.gmock-vendor.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
@@ -110,6 +121,28 @@ rosSelf: rosSuper: with rosSelf.lib; {
     postPatch = postPatch + ''
       substituteInPlace third-party/CMakeLists.txt \
         --replace-fail 'include(CMake/external_json.cmake)' ""
+    '';
+  });
+
+  moveit-core = rosSuper.moveit-core.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Remove workaround for Ubuntu-specific dependency hell issue
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
+        'find_package(octomap REQUIRED)'
+    '';
+  });
+
+  moveit-ros-occupancy-map-monitor = rosSuper.moveit-ros-occupancy-map-monitor.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Remove workaround for Ubuntu-specific dependency hell issue
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
+        'find_package(octomap REQUIRED)'
     '';
   });
 
