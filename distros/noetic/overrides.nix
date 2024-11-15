@@ -173,6 +173,7 @@ in rosSuper.lib.genAttrs [
   "catkin-virtualenv"
   "ddynamic-reconfigure-python"
   "dual-quaternions"
+  "fkie-master-discovery"
   "gps-common"
   "image-cb-detector"
   "joint-trajectory-action-tools"
