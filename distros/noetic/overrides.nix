@@ -148,6 +148,13 @@ rosSelf: rosSuper: with rosSelf.lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
   });
 
+  rosserial-python = rosSuper.rosserial-python.overrideAttrs({
+    nativeBuildInputs ? [], ...
+  }: {
+    # distutils was removed from standard library in Python 3.12
+    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
+  });
+
   rviz-map-plugin = rosSuper.rviz-map-plugin.overrideAttrs ({
     buildInputs ? [], ...
   } : {
