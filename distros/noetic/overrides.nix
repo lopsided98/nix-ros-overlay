@@ -44,6 +44,13 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   gazebo = self.gazebo_11;
 
+  gps-common = rosSuper.gps-common.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    # distutils was removed from standard library in Python 3.12
+    nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.python3Packages.distutils ];
+  });
+
   hdf5-map-io = rosSuper.hdf5-map-io.overrideAttrs ({
     nativeBuildInputs ? [], ...
   } : {
