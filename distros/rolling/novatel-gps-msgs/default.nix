@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-novatel-gps-msgs";
-  version = "4.1.3-r1";
+  version = "4.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/novatel_gps_driver-release/archive/release/rolling/novatel_gps_msgs/4.1.3-1.tar.gz";
-    name = "4.1.3-1.tar.gz";
-    sha256 = "ccf257414448fb78305d0da9b59a60543c159593de6f313a2218da81ea520dc7";
+    url = "https://github.com/ros2-gbp/novatel_gps_driver-release/archive/release/rolling/novatel_gps_msgs/4.2.0-1.tar.gz";
+    name = "4.2.0-1.tar.gz";
+    sha256 = "31c369e75f82b3b9a7c1c29de06b3cd74ff5cfaa606ae9ec4c01e1410201a81d";
   };
 
   buildType = "ament_cmake";

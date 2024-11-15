@@ -1350,6 +1350,8 @@ self: super: {
 
  laser-proc = self.callPackage ./laser-proc {};
 
+ laser-segmentation = self.callPackage ./laser-segmentation {};
+
  launch = self.callPackage ./launch {};
 
  launch-pal = self.callPackage ./launch-pal {};
@@ -2180,6 +2182,8 @@ self: super: {
 
  popf = self.callPackage ./popf {};
 
+ pose-broadcaster = self.callPackage ./pose-broadcaster {};
+
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
  position-controllers = self.callPackage ./position-controllers {};
@@ -2912,6 +2916,8 @@ self: super: {
 
  simple-actions = self.callPackage ./simple-actions {};
 
+ simple-grasping = self.callPackage ./simple-grasping {};
+
  simple-launch = self.callPackage ./simple-launch {};
 
  simple-term-menu-vendor = self.callPackage ./simple-term-menu-vendor {};
@@ -2927,6 +2933,8 @@ self: super: {
  situational-graphs-wrapper = self.callPackage ./situational-graphs-wrapper {};
 
  slam-toolbox = self.callPackage ./slam-toolbox {};
+
+ slg-msgs = self.callPackage ./slg-msgs {};
 
  slider-publisher = self.callPackage ./slider-publisher {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, backward-ros, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-imu-sensor-broadcaster";
-  version = "4.15.0-r1";
+  version = "4.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/imu_sensor_broadcaster/4.15.0-1.tar.gz";
-    name = "4.15.0-1.tar.gz";
-    sha256 = "3886729ea46086366440b6f355ce319ae7eb52a25101d2c2a8eadf6685cd47e4";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/imu_sensor_broadcaster/4.16.0-1.tar.gz";
+    name = "4.16.0-1.tar.gz";
+    sha256 = "dc8ea2302d6ed9b8eed0e1387ba2b05f11c57cf2fb148ed8cfe6e578b2e5a4fa";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, py-trees, python3Packages, pythonPackages, rclpy, scenario-execution-ros }:
 buildRosPackage {
   pname = "ros-jazzy-scenario-execution-gazebo";
-  version = "1.2.0-r4";
+  version = "1.2.0-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/jazzy/scenario_execution_gazebo/1.2.0-4.tar.gz";
-    name = "1.2.0-4.tar.gz";
-    sha256 = "72670031cb3f9f5a4fdeb3f1d1f43685a0e70803a074e66e8d5e63e3aaa4a473";
+    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/jazzy/scenario_execution_gazebo/1.2.0-5.tar.gz";
+    name = "1.2.0-5.tar.gz";
+    sha256 = "5624e3ed7396a9415d4dfec5d4ab70306e0814a73b57f3ecf2e490d976bfe8ed";
   };
 
   buildType = "ament_python";

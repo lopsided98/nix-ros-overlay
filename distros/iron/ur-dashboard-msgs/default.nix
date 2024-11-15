@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-iron-ur-dashboard-msgs";
-  version = "2.3.11-r2";
+  version = "2.3.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/iron/ur_dashboard_msgs/2.3.11-2.tar.gz";
-    name = "2.3.11-2.tar.gz";
-    sha256 = "7b9013c6222be49c3322c72b23425b25079d4e61e01c2804514e35e5849c9887";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/iron/ur_dashboard_msgs/2.3.12-1.tar.gz";
+    name = "2.3.12-1.tar.gz";
+    sha256 = "b337c76ef0e81c9a89ff655de7e0a259400940e980f400a3be436cdac87a9099";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-rolling-force-torque-sensor-broadcaster";
-  version = "4.15.0-r1";
+  version = "4.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/force_torque_sensor_broadcaster/4.15.0-1.tar.gz";
-    name = "4.15.0-1.tar.gz";
-    sha256 = "51e9b33ce9b7646fa37823e51c59b5f2ef6070ae8a353a62a835ce0fe1400f44";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/force_torque_sensor_broadcaster/4.16.0-1.tar.gz";
+    name = "4.16.0-1.tar.gz";
+    sha256 = "56c32cc893b1d38995704d251a59466ec32c0303971efebbc91c35e9c0cd1741";
   };
 
   buildType = "ament_cmake";

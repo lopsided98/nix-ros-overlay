@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-black, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-mypy, ament-cmake-xmllint, ament-index-python, ament-lint-auto, leo-description, leo-gz-plugins, leo-gz-worlds, robot-state-publisher, ros-gz-bridge, ros-gz-image, ros-gz-sim, xacro }:
 buildRosPackage {
   pname = "ros-iron-leo-gz-bringup";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_simulator-release/archive/release/iron/leo_gz_bringup/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "b859dc947e37abb2f63c00274da6532c3d48b8d7fee1143b4cdd9c8d75aaf9e5";
+    url = "https://github.com/ros2-gbp/leo_simulator-release/archive/release/iron/leo_gz_bringup/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "477aaf837bde8b0b5e2a581b2a98f4b425ca96254c455ae705f4f05a4bb18c89";
   };
 
   buildType = "ament_cmake";

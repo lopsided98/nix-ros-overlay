@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-iron-examples-rclcpp-minimal-subscriber";
-  version = "0.18.1-r1";
+  version = "0.18.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/iron/examples_rclcpp_minimal_subscriber/0.18.1-1.tar.gz";
-    name = "0.18.1-1.tar.gz";
-    sha256 = "ddc1be2834b3a65b78ca32ea21bea016e8d7aceac6795503958adc60f362dfd2";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/iron/examples_rclcpp_minimal_subscriber/0.18.2-1.tar.gz";
+    name = "0.18.2-1.tar.gz";
+    sha256 = "3289f01cd3183a028ad4e81b5972aec1a3f68ac4b2248c3a52d0455fc2f4e875";
   };
 
   buildType = "ament_cmake";

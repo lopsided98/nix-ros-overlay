@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-python, launch, launch-ros, osrf-pycommon, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-humble-nav2-common";
-  version = "1.1.16-r1";
+  version = "1.1.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_common/1.1.16-1.tar.gz";
-    name = "1.1.16-1.tar.gz";
-    sha256 = "6f292191e83926e25a40fa276d76b3e11926a2c96c524a94cc6d1c5a9c78c7f2";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_common/1.1.17-1.tar.gz";
+    name = "1.1.17-1.tar.gz";
+    sha256 = "cf4bb6d6115b74bbf9229df647658188e1d1a2cfd5d5f3b53c60b09e3858c466";
   };
 
   buildType = "ament_cmake";

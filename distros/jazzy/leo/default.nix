@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, leo-description, leo-msgs, leo-teleop }:
 buildRosPackage {
   pname = "ros-jazzy-leo";
-  version = "3.0.3-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/jazzy/leo/3.0.3-1.tar.gz";
-    name = "3.0.3-1.tar.gz";
-    sha256 = "7eddf01594dbc4d416500089d9d536cd268b0e3fe65a56aa30c216c05e576bf6";
+    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/jazzy/leo/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "4c156ae9962c3958c249386da3adb48b527948cfd3adfe6c203a57cb6020f9f4";
   };
 
   buildType = "ament_cmake";

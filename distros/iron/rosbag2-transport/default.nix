@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, keyboard-handler, rclcpp, rmw, rmw-implementation-cmake, rosbag2-compression, rosbag2-compression-zstd, rosbag2-cpp, rosbag2-interfaces, rosbag2-storage, rosbag2-storage-default-plugins, rosbag2-test-common, shared-queues-vendor, test-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-iron-rosbag2-transport";
-  version = "0.22.7-r1";
+  version = "0.22.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/rosbag2_transport/0.22.7-1.tar.gz";
-    name = "0.22.7-1.tar.gz";
-    sha256 = "df2ed0cee8b2d341c48ce3041f00e1b4207df9ff6f9475b9782ba08cecb72abf";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/iron/rosbag2_transport/0.22.8-1.tar.gz";
+    name = "0.22.8-1.tar.gz";
+    sha256 = "28a1df2a4d7ef76e206a218aa40cd9f63c8eb4a5e4131058162e6a9ad44486b1";
   };
 
   buildType = "ament_cmake";

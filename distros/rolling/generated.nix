@@ -696,6 +696,8 @@ self: super: {
 
  graph-msgs = self.callPackage ./graph-msgs {};
 
+ grasping-msgs = self.callPackage ./grasping-msgs {};
+
  grbl-msgs = self.callPackage ./grbl-msgs {};
 
  grbl-ros = self.callPackage ./grbl-ros {};
@@ -1470,6 +1472,8 @@ self: super: {
 
  polygon-utils = self.callPackage ./polygon-utils {};
 
+ pose-broadcaster = self.callPackage ./pose-broadcaster {};
+
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
  position-controllers = self.callPackage ./position-controllers {};
@@ -1527,6 +1531,10 @@ self: super: {
  random-numbers = self.callPackage ./random-numbers {};
 
  range-sensor-broadcaster = self.callPackage ./range-sensor-broadcaster {};
+
+ raspimouse = self.callPackage ./raspimouse {};
+
+ raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
@@ -1657,6 +1665,8 @@ self: super: {
  rmf-lift-msgs = self.callPackage ./rmf-lift-msgs {};
 
  rmf-obstacle-msgs = self.callPackage ./rmf-obstacle-msgs {};
+
+ rmf-reservation-msgs = self.callPackage ./rmf-reservation-msgs {};
 
  rmf-robot-sim-common = self.callPackage ./rmf-robot-sim-common {};
 
@@ -2022,6 +2032,8 @@ self: super: {
 
  rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
 
+ rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
+
  rtabmap = self.callPackage ./rtabmap {};
 
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
@@ -2094,9 +2106,13 @@ self: super: {
 
  sick-safevisionary-tests = self.callPackage ./sick-safevisionary-tests {};
 
+ simple-grasping = self.callPackage ./simple-grasping {};
+
  simple-launch = self.callPackage ./simple-launch {};
 
  simulation = self.callPackage ./simulation {};
+
+ slg-msgs = self.callPackage ./slg-msgs {};
 
  slider-publisher = self.callPackage ./slider-publisher {};
 

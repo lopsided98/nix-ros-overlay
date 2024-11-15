@@ -2250,6 +2250,8 @@ self: super: {
 
  simple-actions = self.callPackage ./simple-actions {};
 
+ simple-grasping = self.callPackage ./simple-grasping {};
+
  simple-launch = self.callPackage ./simple-launch {};
 
  simulation = self.callPackage ./simulation {};
