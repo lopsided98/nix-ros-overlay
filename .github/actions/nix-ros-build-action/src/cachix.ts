@@ -1,6 +1,6 @@
 import * as childProcess from 'child_process'
 import * as util from 'util'
-import * as nix from './nix'
+import * as nix from './nix.js'
 
 // Use instead of @actions/exec when we don't want to write the output to the
 // log

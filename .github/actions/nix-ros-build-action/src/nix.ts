@@ -1,9 +1,9 @@
-import * as fs from 'fs'
-import * as childProcess from 'child_process'
-import * as util from 'util'
-import * as path from 'path'
 import * as exec from '@actions/exec'
+import assert from 'assert'
+import * as childProcess from 'child_process'
 import fetch from 'node-fetch'
+import * as path from 'path'
+import * as util from 'util'
 
 // Don't use @actions/exec because we don't want these commands to be printed
 // to the log
@@ -75,20 +75,20 @@ export async function instantiate(
   drvDir: string,
   system?: string
 ): Promise<string[]> {
-  let args = [
+  const args = [
     file, '-A', attribute,
     '--add-root', path.join(drvDir, attribute), '--indirect'
   ]
   if (system !== undefined) {
     args.push('--option', 'system', system)
   }
-  let drvPaths
   try {
-    drvPaths = (await execFile('nix-instantiate', args)).stdout
-  } catch (e: any) {
+    const { stdout: drvPaths } = await execFile('nix-instantiate', args)
+    return parseLines(drvPaths)
+  } catch (e: unknown) {
+    assert(e instanceof Object && "stderr" in e)
     throw e.stderr
   }
-  return parseLines(drvPaths)
 }
 
 export async function realize(
@@ -96,9 +96,14 @@ export async function realize(
   attribute: string,
   resultDir: string
 ): Promise<string[]> {
-  const { stdout: resultPaths } = await execFile('nix-store', [
-    '--realise', drvPath, '--no-build-output',
-    '--add-root', path.join(resultDir, attribute), '--indirect'
-  ])
-  return parseLines(resultPaths)
+  try {
+    const { stdout: resultPaths } = await execFile('nix-store', [
+      '--realise', drvPath, '--no-build-output',
+      '--add-root', path.join(resultDir, attribute), '--indirect'
+    ])
+    return parseLines(resultPaths)
+  } catch (e: unknown) {
+    assert(e instanceof Object && "stderr" in e)
+    throw e.stderr
+  }
 }

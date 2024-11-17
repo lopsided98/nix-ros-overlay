@@ -1,10 +1,11 @@
-import * as path from 'path'
-import * as fs from 'fs'
 import * as core from '@actions/core'
 import * as io from '@actions/io'
+import assert from 'assert'
+import * as fs from 'fs'
 import * as pLimit from 'p-limit'
-import * as nix from './nix'
-import * as cachix from './cachix'
+import * as path from 'path'
+import * as cachix from './cachix.js'
+import * as nix from './nix.js'
 
 const enum BuildStatus {
   SUCCESS,
@@ -63,11 +64,12 @@ class PackageSet {
     let drvPaths: string[]
     try {
       drvPaths = await nix.instantiate(this.nixFile, attr, this.drvDir, this.system)
-    } catch (e: any) {
+    } catch (stderr: unknown) {
+      assert(typeof stderr === 'string');
       core.debug(`${attr} failed to evaluate`)
       return {
         status: BuildStatus.EVALUATION_FAILURE,
-        attr, message: e
+        attr, message: stderr
       }
     }
     if (drvPaths.length != 1) {
@@ -76,7 +78,7 @@ class PackageSet {
         attr, message: `Attribute evaluated to ${drvPaths.length} derivations`
       }
     }
-    let drvPath = await fs.promises.realpath(drvPaths[0])
+    const drvPath = await fs.promises.realpath(drvPaths[0])
 
     const requisites = await nix.getRequisites(drvPath)
     const failedRequisiteAttrs = requisites
@@ -116,11 +118,12 @@ class PackageSet {
     let resultPaths: string[]
     try {
       resultPaths = await nix.realize(drvPath, attr, this.resultDir)
-    } catch (e: any) {
+    } catch (stderr: unknown) {
+      assert(typeof stderr === 'string');
       this.failedPackages.set(drvPath, attr)
       core.debug(`${attr} (${drvPath}) failed to build`)
       // Get last 10 lines of stderr
-      const message = e.stderr.split('\n').slice(-30).join("\n")
+      const message = stderr.split('\n').slice(-30).join("\n")
       return {
         status: BuildStatus.BUILD_FAILURE,
         attr, drvPath, message
@@ -176,7 +179,7 @@ async function run() {
 
     const packageSet = new PackageSet(nixFile, rootAttribute, cachixCache, system)
 
-    let results = await packageSet.build(parallelism)
+    const results = await packageSet.build(parallelism)
 
     const statusResults = new Map<BuildStatus, Array<BuildResult>>([
       [BuildStatus.SUCCESS, []],
@@ -199,13 +202,13 @@ async function run() {
     core.info(`Unknown errors: ${statusResults.get(BuildStatus.ERROR)!.length}`)
     core.endGroup()
 
-    for (let r of statusResults.get(BuildStatus.ERROR)!) {
+    for (const r of statusResults.get(BuildStatus.ERROR)!) {
       core.startGroup(`Unknown error building ${r.attr} (${r.drvPath})`)
       core.error(r.message)
       core.endGroup()
     }
 
-    for (let r of statusResults.get(BuildStatus.BUILD_FAILURE)!) {
+    for (const r of statusResults.get(BuildStatus.BUILD_FAILURE)!) {
       await core.group(
         `Failed to build ${r.attr} (${r.drvPath})`,
         async () => {
@@ -215,13 +218,13 @@ async function run() {
       )
     }
 
-    for (let r of statusResults.get(BuildStatus.DEPENDENCY_FAILURE)!) {
+    for (const r of statusResults.get(BuildStatus.DEPENDENCY_FAILURE)!) {
       core.startGroup(`Dependency of ${r.attr} (${r.drvPath}) failed to build`)
       core.warning(r.message)
       core.endGroup()
     }
 
-    for (let r of statusResults.get(BuildStatus.EVALUATION_FAILURE)!) {
+    for (const r of statusResults.get(BuildStatus.EVALUATION_FAILURE)!) {
       core.startGroup(`Failed to evaluate ${r.attr}`)
       core.warning(r.message)
       core.endGroup()
@@ -232,7 +235,7 @@ async function run() {
       .forEach(r => core.info(`${r.attr} (${r.drvPath})`));
     core.endGroup()
 
-    for (let r of statusResults.get(BuildStatus.SUCCESS)!) {
+    for (const r of statusResults.get(BuildStatus.SUCCESS)!) {
       await core.group(
         `Sucessfully built ${r.attr} (${r.drvPath})`,
         () => nix.printLog(r.drvPath!).catch(() => undefined)
@@ -243,8 +246,9 @@ async function run() {
     statusResults.get(BuildStatus.CACHED)!
       .forEach(r => core.info(`${r.attr} (${r.drvPath})`));
     core.endGroup()
-  } catch (error: any) {
-    core.setFailed(error.message)
+  } catch (e: unknown) {
+    assert(e instanceof Error)
+    core.setFailed(e.message)
   }
 }
 
