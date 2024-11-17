@@ -21,7 +21,8 @@ jobs:
     - uses: cachix/install-nix-action@v22
       with:
         extra_nix_config: |
-          max-jobs = 1
+          max-jobs = 2
+          cores = 2
           extra-platforms = aarch64-linux
     - uses: docker/setup-qemu-action@v2
     - uses: cachix/cachix-action@v12
@@ -41,4 +42,4 @@ jobs:
       with:
         root-attribute: '${{ matrix.distro }}'
         system: '${{ matrix.system }}'
-        parallelism: 4
+        parallelism: 2
