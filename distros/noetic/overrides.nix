@@ -175,6 +175,7 @@ in rosSuper.lib.genAttrs [
   "catkin-virtualenv"
   "ddynamic-reconfigure-python"
   "dual-quaternions"
+  "dynamixel-sdk"
   "fkie-master-discovery"
   "gps-common"
   "image-cb-detector"
