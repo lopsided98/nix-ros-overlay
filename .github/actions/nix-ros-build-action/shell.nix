@@ -1,7 +1,9 @@
-{ pkgs ? import <nixpkgs> {} }: with pkgs;
+{ mkShell, nodejs, cachix }:
 
 mkShell {
-  buildInputs = [
+  name = "nix-ros-build-action-shell";
+
+  packages = [
     nodejs
     cachix
   ];
