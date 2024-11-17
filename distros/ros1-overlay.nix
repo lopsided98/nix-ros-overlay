@@ -73,10 +73,21 @@ rosSelf: rosSuper: with rosSelf.lib; {
     ];
   });
 
+  dynamic-reconfigure = rosSuper.dynamic-reconfigure.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace cmake/setup_custom_pythonpath.sh.in \
+        --replace-fail '#!/usr/bin/env sh' '#!${self.stdenv.shell}'
+    '';
+  });
+
   fcl-catkin = patchVendorUrl rosSuper.fcl-catkin {
     url = "https://github.com/flexible-collision-library/fcl/archive/v0.6.1.zip";
     sha256 = "0nryr4hg3lha1aaz35wbqr42lb6l8alfcy6slj2yn2dgb5syrmn2";
   };
+
+  image-cb-detector = patchBoostSignals rosSuper.image-cb-detector;
 
   jsk-recognition-msgs = rosSuper.jsk-recognition-msgs.overrideAttrs ({
     buildInputs ? [], postPatch ? "", ...
@@ -91,6 +102,13 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
+  laser-cb-detector = patchBoostSignals rosSuper.laser-cb-detector;
+
+  libpcan = patchVendorUrl rosSuper.libpcan {
+    url = "http://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.3.tar.gz";
+    sha256 = "0f6v3vjszyg1xp99jx48hyv8p32iyq4j18a4ir4x5p6f3b0z3r34";
+  };
+
   libphidgets = patchVendorUrl rosSuper.libphidgets {
     url = "https://www.phidgets.com/downloads/phidget21/libraries/linux/libphidget/libphidget_2.1.8.20151217.tar.gz";
     sha256 = "0lpaskqxpklm05050wwvdqwhw30f2hpzss8sgyvczdpvvqzjg4vk";
@@ -101,6 +119,14 @@ rosSelf: rosSuper: with rosSelf.lib; {
   }: {
     # Missing from package.xml; propagated by other dependencies in Ubuntu
     nativeBuildInputs = nativeBuildInputs ++ [ self.openblas ];
+  });
+
+  libuvc-camera = rosSuper.libuvc-camera.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace cfg/UVCCamera.cfg --replace-fail python2 python
+    '';
   });
 
   map-server = rosSuper.map-server.overrideAttrs ({
@@ -183,6 +209,16 @@ rosSelf: rosSuper: with rosSelf.lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
     postFixup = postFixup + ''
       wrapQtApp "$out/lib/rviz/rviz"
+    '';
+  });
+
+  swri-profiler-tools = rosSuper.swri-profiler-tools.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    dontWrapQtApps = false;
+    nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+    postFixup = ''
+      wrapQtApp "$out/lib/swri_profiler_tools/profiler"
     '';
   });
 

@@ -57,6 +57,14 @@ in with lib; {
     };
   };
 
+  libfranka = rosSuper.libfranka.overrideAttrs ({
+    cmakeFlags ? [], ...
+  }: {
+    # Uses custom flag to disable tests. Attempts to download GTest without
+    # this.
+    cmakeFlags = cmakeFlags ++ [ "-DBUILD_TESTS=OFF" ];
+  });
+
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
     url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.19.20240304.tar.gz";
     hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
