@@ -80511,7 +80511,6 @@ class BuildGraph {
     }
 }
 async function main_instantiate(nixFile, rootAttribute, drvDir, system, parallelism = 4) {
-    await io.mkdirP(drvDir);
     const attrs = await listAttrs(nixFile, rootAttribute);
     const queue = new PQueue({ concurrency: parallelism });
     return await queue.addAll(attrs.map(attr => async () => {
@@ -80555,7 +80554,7 @@ async function main_instantiate(nixFile, rootAttribute, drvDir, system, parallel
         }
     }));
 }
-async function build(drvPath, resultDir, cachixCache) {
+async function build(drvPath, resultDir, cachixCache, cacheDir) {
     const cacheKey = "failed-" + external_path_.basename(drvPath, ".drv");
     try {
         if (await isDrvCached(drvPath)) {
@@ -80573,7 +80572,7 @@ async function build(drvPath, resultDir, cachixCache) {
         if (cache.isFeatureAvailable()) {
             // We don't actually store anything in the cache, just lookup the
             // derivation name
-            if (await cache.restoreCache(["/var/empty"], cacheKey, [], { lookupOnly: true }) !== undefined) {
+            if (await cache.restoreCache([cacheDir], cacheKey, [], { lookupOnly: true }) !== undefined) {
                 core.debug(`found cached failure: ${drvPath}`);
                 return {
                     status: 'cached_failure',
@@ -80600,7 +80599,7 @@ async function build(drvPath, resultDir, cachixCache) {
         if (typeof error === 'string') {
             try {
                 if (cache.isFeatureAvailable()) {
-                    await cache.saveCache(["/var/empty"], cacheKey);
+                    await cache.saveCache([cacheDir], cacheKey);
                 }
             }
             catch (e) {
@@ -80632,6 +80631,11 @@ async function run() {
         const buildDir = "build";
         const drvDir = external_path_.join(buildDir, 'drvs');
         const resultDir = external_path_.join(buildDir, 'results');
+        // Empty directory to make GitHub Actions cache happy
+        const cacheDir = external_path_.join(buildDir, 'cache');
+        await io.mkdirP(drvDir);
+        await io.mkdirP(resultDir);
+        await io.mkdirP(cacheDir);
         const successes = [];
         const cachedSuccesses = [];
         const evalFailures = [];
@@ -80686,7 +80690,7 @@ async function run() {
                     });
                     return;
                 }
-                const r = await build(node.drvPath, resultDir, cachixCache);
+                const r = await build(node.drvPath, resultDir, cachixCache, cacheDir);
                 if (r.status === 'cached_success' || r.status === 'success') {
                     buildGraph.succeeded(node);
                 }

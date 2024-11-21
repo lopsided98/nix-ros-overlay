@@ -134,7 +134,6 @@ type EvalResult = EvalSuccess | EvalFailure | EvalError;
 
 
 async function instantiate(nixFile: string, rootAttribute: string, drvDir: string, system?: string, parallelism = 4): Promise<EvalResult[]> {
-  await io.mkdirP(drvDir)
   const attrs = await nix.listAttrs(nixFile, rootAttribute)
 
   const queue = new PQueue({ concurrency: parallelism })
@@ -211,7 +210,7 @@ interface BuildError {
 
 type BuildResult = BuildSuccess | BuildCachedSuccess | BuildFailure | BuildCachedFailure | BuildError;
 
-async function build(drvPath: string, resultDir: string, cachixCache: string): Promise<BuildResult> {
+async function build(drvPath: string, resultDir: string, cachixCache: string, cacheDir: string): Promise<BuildResult> {
   const cacheKey = "failed-" + path.basename(drvPath, ".drv");
 
   try {
@@ -230,7 +229,7 @@ async function build(drvPath: string, resultDir: string, cachixCache: string): P
     if (cache.isFeatureAvailable()) {
       // We don't actually store anything in the cache, just lookup the
       // derivation name
-      if (await cache.restoreCache(["/var/empty"], cacheKey, [], { lookupOnly: true }) !== undefined) {
+      if (await cache.restoreCache([cacheDir], cacheKey, [], { lookupOnly: true }) !== undefined) {
         core.debug(`found cached failure: ${drvPath}`)
         return {
           status: 'cached_failure',
@@ -259,7 +258,7 @@ async function build(drvPath: string, resultDir: string, cachixCache: string): P
     if (typeof error === 'string') {
       try {
         if (cache.isFeatureAvailable()) {
-          await cache.saveCache(["/var/empty"], cacheKey)
+          await cache.saveCache([cacheDir], cacheKey)
         }
       } catch (e: unknown) {
         core.warning(`failed to cache failed build for ${drvPath}: ${e}`)
@@ -325,6 +324,12 @@ async function run() {
     const buildDir = "build"
     const drvDir = path.join(buildDir, 'drvs')
     const resultDir = path.join(buildDir, 'results')
+    // Empty directory to make GitHub Actions cache happy
+    const cacheDir = path.join(buildDir, 'cache')
+
+    await io.mkdirP(drvDir)
+    await io.mkdirP(resultDir)
+    await io.mkdirP(cacheDir)
 
     const successes: SuccessResult[] = []
     const cachedSuccesses: CachedSuccessResult[] = []
@@ -349,7 +354,6 @@ async function run() {
         })
       }
     }
-
 
     // Create graph of references used to order the builds
     const buildGraph = new BuildGraph();
@@ -389,7 +393,7 @@ async function run() {
           return;
         }
 
-        const r = await build(node.drvPath, resultDir, cachixCache)
+        const r = await build(node.drvPath, resultDir, cachixCache, cacheDir)
 
         if (r.status === 'cached_success' || r.status === 'success') {
           buildGraph.succeeded(node)
