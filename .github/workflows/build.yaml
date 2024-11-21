@@ -29,17 +29,9 @@ jobs:
         name: ros
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
         skipPush: true
-    - name: Cache Failed Builds
-      id: cache-failed-builds
-      uses: actions/cache@v2
-      with:
-        path: failed-builds
-        key: failed-builds-${{ matrix.distro }}-${{ matrix.system }}-${{ github.sha }}
-        restore-keys: |
-          failed-builds-${{ matrix.distro }}-${{ matrix.system }}-
     - uses: ./.github/actions/nix-ros-build-action
       with:
-        root-attribute: '${{ matrix.distro }}'
+        root-attribute: 'rosPackages.${{ matrix.distro }}'
         system: '${{ matrix.system }}'
         eval-jobs: 4
         build-jobs: 2
