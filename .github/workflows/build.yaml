@@ -8,7 +8,6 @@ jobs:
       matrix:
         distro:
           - noetic
-          - foxy
           - humble
           - iron
           - jazzy
