@@ -6,9 +6,9 @@ import * as nix from './nix.js'
 // log
 const execFile = util.promisify(childProcess.execFile)
 
-export async function query(name: string, drvPath: string) {
+export async function query(name: string, path: string): Promise<boolean> {
     return nix.isValidBinaryCachePath(
-        drvPath, `https://${name}.cachix.org`)
+        path, `https://${name}.cachix.org`)
 }
 
 export async function push(name: string, paths: string[]) {

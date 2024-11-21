@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2021",
     "module": "nodenext",
     "outDir": "./lib", /* Redirect output structure to the directory. */
     "rootDir": "./src", /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
@@ -9,6 +9,7 @@
   },
   "exclude": [
     "node_modules",
+    "build",
     "**/*.test.ts"
   ]
 }

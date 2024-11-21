@@ -42,4 +42,5 @@ jobs:
       with:
         root-attribute: '${{ matrix.distro }}'
         system: '${{ matrix.system }}'
-        parallelism: 2
+        eval-jobs: 4
+        build-jobs: 2
