@@ -88,7 +88,8 @@ class BuildGraph {
   }
 
   public succeeded(node: BuildGraphNode) {
-    assert(node.state === 'pending')
+    assert.strictEqual(node.state, 'pending')
+    assert.strictEqual(node.references.size, 0)
     for (const referrer of node.referrers) {
       assert(referrer.references.delete(node))
       if (referrer.references.size == 0) {
@@ -98,9 +99,15 @@ class BuildGraph {
   }
 
   public failed(node: BuildGraphNode) {
-    assert(node.state === 'pending')
+    assert.strictEqual(node.state, 'pending')
     node.state = 'failed'
+    // Disconnect from graph so diamond dependencies don't cause it to added
+    // twice
+    for (const reference of node.references) {
+      assert(reference.referrers.delete(node))
+    }
     for (const referrer of node.referrers) {
+      assert(referrer.references.delete(node))
       this.failed(referrer)
       this.putReady(referrer)
     }
@@ -382,7 +389,7 @@ async function run() {
             }
           }
 
-          assert(failedDependencies.length !== 0)
+          assert.notStrictEqual(failedDependencies.length, 0)
 
           dependencyFailures.push({
             attr: drv.attr,

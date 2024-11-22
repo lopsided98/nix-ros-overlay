@@ -80493,7 +80493,8 @@ class BuildGraph {
         }
     }
     succeeded(node) {
-        external_assert_(node.state === 'pending');
+        external_assert_.strictEqual(node.state, 'pending');
+        external_assert_.strictEqual(node.references.size, 0);
         for (const referrer of node.referrers) {
             external_assert_(referrer.references.delete(node));
             if (referrer.references.size == 0) {
@@ -80502,9 +80503,15 @@ class BuildGraph {
         }
     }
     failed(node) {
-        external_assert_(node.state === 'pending');
+        external_assert_.strictEqual(node.state, 'pending');
         node.state = 'failed';
+        // Disconnect from graph so diamond dependencies don't cause it to added
+        // twice
+        for (const reference of node.references) {
+            external_assert_(reference.referrers.delete(node));
+        }
         for (const referrer of node.referrers) {
+            external_assert_(referrer.references.delete(node));
             this.failed(referrer);
             this.putReady(referrer);
         }
@@ -80682,7 +80689,7 @@ async function run() {
                             failedDependencies.push(reference.drvPath);
                         }
                     }
-                    external_assert_(failedDependencies.length !== 0);
+                    external_assert_.notStrictEqual(failedDependencies.length, 0);
                     dependencyFailures.push({
                         attr: drv.attr,
                         drvPath: drv.drvPath,
