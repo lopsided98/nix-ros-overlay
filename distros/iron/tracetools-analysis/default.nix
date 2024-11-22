@@ -2,7 +2,7 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-mypy, ament-pep257, ament-xmllint, jupyter, python3Packages, pythonPackages, tracetools-read }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-mypy, ament-pep257, ament-xmllint, python3Packages, pythonPackages, tracetools-read }:
 buildRosPackage {
   pname = "ros-iron-tracetools-analysis";
   version = "3.0.0-r5";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-mypy ament-pep257 ament-xmllint pythonPackages.pytest ];
-  propagatedBuildInputs = [ jupyter python3Packages.pandas tracetools-read ];
+  propagatedBuildInputs = [ python3Packages.notebook python3Packages.pandas tracetools-read ];
 
   meta = {
     description = "Tools for analysing trace data.";

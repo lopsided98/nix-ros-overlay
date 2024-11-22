@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, class-loader, eigen, launch-param-builder, moveit-common, moveit-configs-utils, moveit-core, moveit-msgs, moveit-resources-fanuc-description, moveit-resources-fanuc-moveit-config, moveit-resources-panda-description, moveit-resources-panda-moveit-config, moveit-ros-planning, orocos-kdl-vendor, pluginlib, python3Packages, ros-testing, tf2, tf2-kdl, urdfdom }:
 buildRosPackage {
   pname = "ros-humble-moveit-kinematics";
-  version = "2.5.5-r1";
+  version = "2.5.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_kinematics/2.5.5-1.tar.gz";
-    name = "2.5.5-1.tar.gz";
-    sha256 = "9743cfa3859c4d29d7e573c3ff697b1ec526b300b8bee872fcd409ad7856a63b";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_kinematics/2.5.6-1.tar.gz";
+    name = "2.5.6-1.tar.gz";
+    sha256 = "50144d296ed3b0a0dd8cc8b7798d85934861df5c92c6f8f5e0367d08e2401804";
   };
 
   buildType = "ament_cmake";

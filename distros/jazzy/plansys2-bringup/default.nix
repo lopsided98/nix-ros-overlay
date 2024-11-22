@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, plansys2-domain-expert, plansys2-executor, plansys2-lifecycle-manager, plansys2-planner, plansys2-problem-expert, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-plansys2-bringup";
-  version = "2.0.13-r1";
+  version = "2.0.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_bringup/2.0.13-1.tar.gz";
-    name = "2.0.13-1.tar.gz";
-    sha256 = "55ac0ac58ae963fa70a8b3b3b3aa8cd4b19cfe02e132a640c0bfd6ae5e5bf0a0";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_bringup/2.0.14-1.tar.gz";
+    name = "2.0.14-1.tar.gz";
+    sha256 = "c89e607f29faeca00a75ba7f1f9eb4dd2720afa5962a0e70a6fdf9b530c69056";
   };
 
   buildType = "ament_cmake";

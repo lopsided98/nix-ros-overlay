@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-simple-controller-manager }:
 buildRosPackage {
   pname = "ros-humble-moveit-plugins";
-  version = "2.5.5-r1";
+  version = "2.5.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_plugins/2.5.5-1.tar.gz";
-    name = "2.5.5-1.tar.gz";
-    sha256 = "56e6db623e76ca1b32ddd98997cd0d19424791cb7895ae900eef054de153ff45";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_plugins/2.5.6-1.tar.gz";
+    name = "2.5.6-1.tar.gz";
+    sha256 = "bd671754d40c112a208b566add067e33968085fcfcb53ecf2651f95b6ac3b833";
   };
 
   buildType = "ament_cmake";

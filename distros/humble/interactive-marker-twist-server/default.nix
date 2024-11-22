@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, interactive-markers, rclcpp, tf2, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-interactive-marker-twist-server";
-  version = "2.1.0-r2";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/interactive_marker_twist_server-release/archive/release/humble/interactive_marker_twist_server/2.1.0-2.tar.gz";
-    name = "2.1.0-2.tar.gz";
-    sha256 = "1b9df1af9948af8d471ad8d2e1e0453b9692bef48fd2af714168860433a658f2";
+    url = "https://github.com/ros-gbp/interactive_marker_twist_server-release/archive/release/humble/interactive_marker_twist_server/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "35b96f93781f185da250e93e39cea35adb28c92c799feb096e4eb530f85caac6";
   };
 
   buildType = "ament_cmake";

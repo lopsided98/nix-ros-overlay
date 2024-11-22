@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-twist-stamper";
-  version = "0.0.3-r1";
+  version = "0.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/twist_stamper-release/archive/release/humble/twist_stamper/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "e91fabf0b36836ae94e29706d8e875b62ef1c96ad06dbc31776ead5af2939c4a";
+    url = "https://github.com/ros2-gbp/twist_stamper-release/archive/release/humble/twist_stamper/0.0.5-1.tar.gz";
+    name = "0.0.5-1.tar.gz";
+    sha256 = "6686cd1b3233765239195167c004979c2f40a918aff85ba7e7cebc98332bea1a";
   };
 
   buildType = "ament_python";
