@@ -80511,7 +80511,7 @@ class BuildGraph {
             external_assert_(reference.referrers.delete(node));
         }
         for (const referrer of node.referrers) {
-            external_assert_(referrer.references.delete(node));
+            // Don't remove reference from referrer so we can print them out later
             this.failed(referrer);
             this.putReady(referrer);
         }
