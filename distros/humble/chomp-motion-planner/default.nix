@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-common, moveit-core, rclcpp, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-humble-chomp-motion-planner";
-  version = "2.5.5-r1";
+  version = "2.5.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/chomp_motion_planner/2.5.5-1.tar.gz";
-    name = "2.5.5-1.tar.gz";
-    sha256 = "8f68c53d2e7607917885f0a91b62fbbe76ba559117b5f8743f0ec60c31511cfa";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/chomp_motion_planner/2.5.6-1.tar.gz";
+    name = "2.5.6-1.tar.gz";
+    sha256 = "96929dd52f5c6e88582f01c7744051e46a1786d8ff89f9ec12b06d2df760788c";
   };
 
   buildType = "ament_cmake";

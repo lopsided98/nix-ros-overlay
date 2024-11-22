@@ -2,19 +2,19 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, launch, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, launch, pythonPackages }:
 buildRosPackage {
   pname = "ros-rolling-launch-xml";
-  version = "3.6.1-r1";
+  version = "3.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch-release/archive/release/rolling/launch_xml/3.6.1-1.tar.gz";
-    name = "3.6.1-1.tar.gz";
-    sha256 = "d5b55f2660c3bceb70dd0b3c62d6f1ed6c30362bdee07a859734b69528c98d94";
+    url = "https://github.com/ros2-gbp/launch-release/archive/release/rolling/launch_xml/3.7.0-1.tar.gz";
+    name = "3.7.0-1.tar.gz";
+    sha256 = "f95789e712b7e526b1668fde9025e9538eeda116c91204fe56185a7fc416f24a";
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint pythonPackages.pytest ];
   propagatedBuildInputs = [ launch ];
 
   meta = {

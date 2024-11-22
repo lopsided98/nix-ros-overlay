@@ -2,19 +2,19 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, domain-coordinator, launch, launch-ros, launch-testing, launch-testing-ros, pythonPackages, ros2cli }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, domain-coordinator, launch, launch-ros, launch-testing, launch-testing-ros, pythonPackages, ros2cli }:
 buildRosPackage {
   pname = "ros-rolling-ros2test";
-  version = "0.7.0-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_testing-release/archive/release/rolling/ros2test/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "19dbc55cfb71558dbb769659e2998e418f1c3cf002edd9934f40bfe61fd0ac94";
+    url = "https://github.com/ros2-gbp/ros_testing-release/archive/release/rolling/ros2test/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "1315f2f2a2c0a5a43e31f2bfc99c3ebf8f70479062037bcac3ac5375bc009c0e";
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint pythonPackages.pytest ];
   propagatedBuildInputs = [ domain-coordinator launch launch-ros launch-testing launch-testing-ros ros2cli ];
 
   meta = {

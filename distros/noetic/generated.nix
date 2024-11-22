@@ -1190,6 +1190,8 @@ self: super: {
 
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
 
+ gazebo-noisy-depth-camera = self.callPackage ./gazebo-noisy-depth-camera {};
+
  gazebo-plugins = self.callPackage ./gazebo-plugins {};
 
  gazebo-ros = self.callPackage ./gazebo-ros {};

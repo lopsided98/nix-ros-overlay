@@ -1800,6 +1800,8 @@ self: super: {
 
  range-sensor-broadcaster = self.callPackage ./range-sensor-broadcaster {};
 
+ raspimouse-description = self.callPackage ./raspimouse-description {};
+
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
@@ -2289,6 +2291,8 @@ self: super: {
  rt-manipulators-cpp = self.callPackage ./rt-manipulators-cpp {};
 
  rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
+
+ rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
 
  rtabmap = self.callPackage ./rtabmap {};
 

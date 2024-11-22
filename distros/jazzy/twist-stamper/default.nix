@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, pythonPackages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-twist-stamper";
-  version = "0.0.3-r4";
+  version = "0.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/twist_stamper-release/archive/release/jazzy/twist_stamper/0.0.3-4.tar.gz";
-    name = "0.0.3-4.tar.gz";
-    sha256 = "404bce67baa04e782a49c2b977a728e08f2745f2e94fb648973a5d8621a11a5f";
+    url = "https://github.com/ros2-gbp/twist_stamper-release/archive/release/jazzy/twist_stamper/0.0.5-1.tar.gz";
+    name = "0.0.5-1.tar.gz";
+    sha256 = "7cf5e6d3348f56839287c9b10398699b682af7be156839229ff08994c0eea507";
   };
 
   buildType = "ament_python";

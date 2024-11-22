@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-black, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-mypy, ament-cmake-python, ament-cmake-uncrustify, ament-cmake-xmllint, ament-index-python, ament-lint-auto, geometry-msgs, leo-msgs, nav-msgs, python3Packages, rclcpp, rclcpp-components, rclpy, ros2cli, sensor-msgs, std-msgs, std-srvs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-leo-fw";
-  version = "1.4.0-r3";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/jazzy/leo_fw/1.4.0-3.tar.gz";
-    name = "1.4.0-3.tar.gz";
-    sha256 = "76104fd4f3cd84e6937b9906b2fab5c375017c4d12824d2c3c6f86b17847549b";
+    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/jazzy/leo_fw/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "547c8e4db4c3c7588d18604e67438fff9997f68815527ad2935b81e4211507cf";
   };
 
   buildType = "ament_cmake";

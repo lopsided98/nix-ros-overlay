@@ -468,6 +468,8 @@ self: super: {
 
  clearpath-platform-msgs = self.callPackage ./clearpath-platform-msgs {};
 
+ clearpath-ros2-socketcan-interface = self.callPackage ./clearpath-ros2-socketcan-interface {};
+
  clearpath-sensors-description = self.callPackage ./clearpath-sensors-description {};
 
  clearpath-simulator = self.callPackage ./clearpath-simulator {};
@@ -1126,7 +1128,11 @@ self: super: {
 
  hri-actions-msgs = self.callPackage ./hri-actions-msgs {};
 
+ hri-face-body-matcher = self.callPackage ./hri-face-body-matcher {};
+
  hri-msgs = self.callPackage ./hri-msgs {};
+
+ hri-privacy-msgs = self.callPackage ./hri-privacy-msgs {};
 
  hri-rviz = self.callPackage ./hri-rviz {};
 

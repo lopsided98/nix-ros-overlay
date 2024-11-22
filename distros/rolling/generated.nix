@@ -118,8 +118,6 @@ self: super: {
 
  ament-download = self.callPackage ./ament-download {};
 
- ament-flake8 = self.callPackage ./ament-flake8 {};
-
  ament-index-cpp = self.callPackage ./ament-index-cpp {};
 
  ament-index-python = self.callPackage ./ament-index-python {};
@@ -894,6 +892,8 @@ self: super: {
 
  laser-proc = self.callPackage ./laser-proc {};
 
+ laser-segmentation = self.callPackage ./laser-segmentation {};
+
  launch = self.callPackage ./launch {};
 
  launch-param-builder = self.callPackage ./launch-param-builder {};
@@ -1591,8 +1591,6 @@ self: super: {
  rclcpp-components = self.callPackage ./rclcpp-components {};
 
  rclcpp-lifecycle = self.callPackage ./rclcpp-lifecycle {};
-
- rclpy = self.callPackage ./rclpy {};
 
  rclpy-message-converter = self.callPackage ./rclpy-message-converter {};
 
