@@ -87,8 +87,8 @@ in {
   };
 
   gz-math-vendor = lib.patchGzAmentVendorGit rosSuper.gz-math-vendor {
-    version = "7.5.0";
-    hash = "sha256-TEadejtPCR3FAUbyAAME28tmqaxypPTJDYidjZ3FPIY=";
+    version = "7.5.1";
+    hash = "sha256-RxCZiU0h0skVPBSn+PMtkdwEabmTKl+0PYDpl9SQoq8=";
   };
 
   gz-msgs-vendor = lib.patchGzAmentVendorGit rosSuper.gz-msgs-vendor {
