@@ -3,11 +3,12 @@
 
 buildPythonPackage rec {
   pname = "colcon-ros-cargo";
-  version = "0.1.0";
+  version = "0.2.0";
 
   src = fetchPypi {
-    inherit pname version;
-    hash = "sha256-gwNvMVyG+rbXFNPUOEFalrYE+CLNrhyRQT4Lb+Rfhhw=";
+    pname = "colcon_ros_cargo";
+    inherit version;
+    hash = "sha256-70taCMJRPSq2CPvO5aqudsc8RN0l194vLbT1UZWXfU8=";
   };
 
   propagatedBuildInputs = [
