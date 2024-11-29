@@ -1326,6 +1326,8 @@ self: super: {
 
  hardware-interface = self.callPackage ./hardware-interface {};
 
+ hatchbed-common = self.callPackage ./hatchbed-common {};
+
  hdf5-map-io = self.callPackage ./hdf5-map-io {};
 
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};

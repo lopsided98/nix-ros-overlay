@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, iceoryx-binding-c, iceoryx-hoofs, iceoryx-posh, openssl }:
 buildRosPackage {
   pname = "ros-humble-cyclonedds";
-  version = "0.10.4-r1";
+  version = "0.10.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cyclonedds-release/archive/release/humble/cyclonedds/0.10.4-1.tar.gz";
-    name = "0.10.4-1.tar.gz";
-    sha256 = "8f71cbd41b932e092f2d8cb172194d2862bf67c713fb449ede297185a9380fc8";
+    url = "https://github.com/ros2-gbp/cyclonedds-release/archive/release/humble/cyclonedds/0.10.5-2.tar.gz";
+    name = "0.10.5-2.tar.gz";
+    sha256 = "a636f8a862b4ec5a5ce6bc5d567a97d9e8cb16ac5a13aa07b0a7558a07777d29";
   };
 
   buildType = "cmake";

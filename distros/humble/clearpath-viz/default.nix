@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, clearpath-platform-description, joint-state-publisher-gui, rqt-robot-monitor, rviz2 }:
 buildRosPackage {
   pname = "ros-humble-clearpath-viz";
-  version = "0.3.0-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_desktop-release/archive/release/humble/clearpath_viz/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "b5727670409dd096cd9420e63d691ee495fd5ce35d78646089acae231310ae73";
+    url = "https://github.com/clearpath-gbp/clearpath_desktop-release/archive/release/humble/clearpath_viz/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "182edcb7ec769c9e36dab764a342f4c5dc8d62b301d2360ce8e36c7a428ae910";
   };
 
   buildType = "ament_cmake";

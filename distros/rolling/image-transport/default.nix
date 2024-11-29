@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, message-filters, pluginlib, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-image-transport";
-  version = "6.0.1-r1";
+  version = "6.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/image_transport/6.0.1-1.tar.gz";
-    name = "6.0.1-1.tar.gz";
-    sha256 = "ec295c4dd7cb8e444e6e1b8d349d43aa6c086cb70845bf2dc49716126fc70ec7";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/image_transport/6.0.3-1.tar.gz";
+    name = "6.0.3-1.tar.gz";
+    sha256 = "0151adba99a05d1073eee3834321873b71598dd8762bfc920a292c4b0f62b263";
   };
 
   buildType = "ament_cmake";

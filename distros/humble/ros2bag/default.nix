@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, launch-testing, launch-testing-ros, pythonPackages, rclpy, ros2cli, rosbag2-py, rosbag2-storage-default-plugins }:
 buildRosPackage {
   pname = "ros-humble-ros2bag";
-  version = "0.15.12-r1";
+  version = "0.15.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/ros2bag/0.15.12-1.tar.gz";
-    name = "0.15.12-1.tar.gz";
-    sha256 = "21d8d58f37a7737b648d4a5262c7d58e46e0ca93b05cb3e9ff379b0109f1c9c3";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/ros2bag/0.15.13-1.tar.gz";
+    name = "0.15.13-1.tar.gz";
+    sha256 = "ca4aa39499c3a5ec65e11a545f8fe408460e05591da8d5674261a16d5c7290e6";
   };
 
   buildType = "ament_python";

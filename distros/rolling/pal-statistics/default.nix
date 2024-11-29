@@ -2,22 +2,22 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gmock, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, pal-statistics-msgs, rclcpp, rclcpp-lifecycle, rclpy }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, boost, pal-statistics-msgs, rclcpp, rclcpp-lifecycle, rclpy }:
 buildRosPackage {
   pname = "ros-rolling-pal-statistics";
-  version = "2.2.4-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pal_statistics-release/archive/release/rolling/pal_statistics/2.2.4-1.tar.gz";
-    name = "2.2.4-1.tar.gz";
-    sha256 = "b3b48535f91157c46c724492800e9a129e7f463058f76d32e3a114ca9db20058";
+    url = "https://github.com/ros2-gbp/pal_statistics-release/archive/release/rolling/pal_statistics/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "903099f8270fb5146f40641f568c9472bb85559615f549a7a0925787c48d19ef";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-auto ];
-  checkInputs = [ ament-cmake-gmock ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  buildInputs = [ ament-cmake-auto ament-cmake-python ];
+  checkInputs = [ ament-cmake-gmock ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ boost pal-statistics-msgs rclcpp rclcpp-lifecycle rclpy ];
-  nativeBuildInputs = [ ament-cmake-auto ];
+  nativeBuildInputs = [ ament-cmake-auto ament-cmake-python ];
 
   meta = {
     description = "The pal_statistics package";

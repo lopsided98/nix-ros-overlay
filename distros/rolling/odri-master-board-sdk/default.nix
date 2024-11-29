@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catch2, cmake, git, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-odri-master-board-sdk";
-  version = "1.0.7-r1";
+  version = "1.0.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/odri_master_board_sdk-release/archive/release/rolling/odri_master_board_sdk/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "8a1b95685bb0178a02e1d22172ac35c6819e53ba7073851fef2b66e9c78dd262";
+    url = "https://github.com/ros2-gbp/odri_master_board_sdk-release/archive/release/rolling/odri_master_board_sdk/1.0.7-2.tar.gz";
+    name = "1.0.7-2.tar.gz";
+    sha256 = "2bd32a62ae5ae7374b6df74c4f68a92cf3de7e8a7fe22958260d90728c30ad46";
   };
 
   buildType = "cmake";

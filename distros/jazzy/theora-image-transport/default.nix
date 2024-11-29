@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, image-transport, libogg, libtheora, opencv, pkg-config, pluginlib, rclcpp, rcutils, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-theora-image-transport";
-  version = "4.0.2-r1";
+  version = "4.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/jazzy/theora_image_transport/4.0.2-1.tar.gz";
-    name = "4.0.2-1.tar.gz";
-    sha256 = "10ac13da104018ace175ecd301e199b4fa32676c2dd0b6c3e52bb3a243cbc7c1";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/jazzy/theora_image_transport/4.0.3-1.tar.gz";
+    name = "4.0.3-1.tar.gz";
+    sha256 = "dd48ef6845b03d656e190c5bcbee49c581dd04a9be5182bacf9d6fe11098c6e6";
   };
 
   buildType = "ament_cmake";

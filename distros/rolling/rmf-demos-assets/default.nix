@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-rmf-demos-assets";
-  version = "2.4.0-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/rolling/rmf_demos_assets/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "9f4f25a8ed8d047fddfc5a5ba461726ee1520d1a193daab4d4174fce48ac9ae8";
+    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/rolling/rmf_demos_assets/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "970a7d72b48164fb441b5ab51ed70ff1a37aaa776c198e0570f500cf1821dd10";
   };
 
   buildType = "ament_cmake";

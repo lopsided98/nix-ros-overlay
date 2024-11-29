@@ -230,6 +230,12 @@ self: super: {
 
  aws-sdk-cpp-vendor = self.callPackage ./aws-sdk-cpp-vendor {};
 
+ axis-camera = self.callPackage ./axis-camera {};
+
+ axis-description = self.callPackage ./axis-description {};
+
+ axis-msgs = self.callPackage ./axis-msgs {};
+
  azure-iot-sdk-c = self.callPackage ./azure-iot-sdk-c {};
 
  backward-ros = self.callPackage ./backward-ros {};
@@ -264,6 +270,8 @@ self: super: {
 
  boost-geometry-util = self.callPackage ./boost-geometry-util {};
 
+ boost-sml-vendor = self.callPackage ./boost-sml-vendor {};
+
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
  camera-aravis2 = self.callPackage ./camera-aravis2 {};
@@ -275,6 +283,10 @@ self: super: {
  camera-calibration-parsers = self.callPackage ./camera-calibration-parsers {};
 
  camera-info-manager = self.callPackage ./camera-info-manager {};
+
+ camera-info-manager-py = self.callPackage ./camera-info-manager-py {};
+
+ camera-ros = self.callPackage ./camera-ros {};
 
  can-msgs = self.callPackage ./can-msgs {};
 
@@ -319,6 +331,10 @@ self: super: {
  class-loader = self.callPackage ./class-loader {};
 
  classic-bags = self.callPackage ./classic-bags {};
+
+ clearpath-ros2-socketcan-interface = self.callPackage ./clearpath-ros2-socketcan-interface {};
+
+ clips-vendor = self.callPackage ./clips-vendor {};
 
  cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
 
@@ -453,6 +469,8 @@ self: super: {
  ds-dbw-msgs = self.callPackage ./ds-dbw-msgs {};
 
  dual-arm-panda-moveit-config = self.callPackage ./dual-arm-panda-moveit-config {};
+
+ dual-laser-merger = self.callPackage ./dual-laser-merger {};
 
  dummy-map-server = self.callPackage ./dummy-map-server {};
 
@@ -1520,6 +1538,8 @@ self: super: {
 
  navigation2 = self.callPackage ./navigation2 {};
 
+ neo-nav2-bringup = self.callPackage ./neo-nav2-bringup {};
+
  neo-simulation2 = self.callPackage ./neo-simulation2 {};
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
@@ -1800,7 +1820,19 @@ self: super: {
 
  range-sensor-broadcaster = self.callPackage ./range-sensor-broadcaster {};
 
+ raspimouse = self.callPackage ./raspimouse {};
+
  raspimouse-description = self.callPackage ./raspimouse-description {};
+
+ raspimouse-fake = self.callPackage ./raspimouse-fake {};
+
+ raspimouse-gazebo = self.callPackage ./raspimouse-gazebo {};
+
+ raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
+
+ raspimouse-ros2-examples = self.callPackage ./raspimouse-ros2-examples {};
+
+ raspimouse-sim = self.callPackage ./raspimouse-sim {};
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
@@ -2143,6 +2175,8 @@ self: super: {
  rosbag2-test-msgdefs = self.callPackage ./rosbag2-test-msgdefs {};
 
  rosbag2-tests = self.callPackage ./rosbag2-tests {};
+
+ rosbag2-to-video = self.callPackage ./rosbag2-to-video {};
 
  rosbag2-transport = self.callPackage ./rosbag2-transport {};
 
@@ -2833,6 +2867,8 @@ self: super: {
  wiimote-msgs = self.callPackage ./wiimote-msgs {};
 
  xacro = self.callPackage ./xacro {};
+
+ yaets = self.callPackage ./yaets {};
 
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
 
