@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, gz-fuel-tools-vendor, python3Packages, pythonPackages, rclpy, rmf-building-map-msgs, rmf-site-map-msgs, sqlite, std-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-rolling-rmf-building-map-tools";
-  version = "1.10.0-r1";
+  version = "1.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/rolling/rmf_building_map_tools/1.10.0-1.tar.gz";
-    name = "1.10.0-1.tar.gz";
-    sha256 = "537b5d7835d8b949882b746aa6bf245a19720923b61978ee7ebdb365944c5036";
+    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/rolling/rmf_building_map_tools/1.11.0-1.tar.gz";
+    name = "1.11.0-1.tar.gz";
+    sha256 = "8cfce9b48803e22350e6c85ce817f58330057b35ebb407a98cebd3ca301471e5";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, message-filters, pluginlib, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-image-transport";
-  version = "3.1.9-r1";
+  version = "3.1.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/humble/image_transport/3.1.9-1.tar.gz";
-    name = "3.1.9-1.tar.gz";
-    sha256 = "a0070dab9e1759df86a54a63c92f3417dd09031cdd352bbf5c9c542243aa65b2";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/humble/image_transport/3.1.10-1.tar.gz";
+    name = "3.1.10-1.tar.gz";
+    sha256 = "d4a3e9ed96cce39307039803d825099ef9d3ec1a57174d3251d9e678dc0c01ca";
   };
 
   buildType = "ament_cmake";

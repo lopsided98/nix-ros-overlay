@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, clearpath-manipulators-description, gripper-controllers, moveit-configs-utils, moveit-kinematics, moveit-planners, moveit-planners-chomp, moveit-ros-move-group, moveit-ros-warehouse, moveit-simple-controller-manager, position-controllers, tf2-ros, xacro }:
 buildRosPackage {
   pname = "ros-humble-clearpath-manipulators";
-  version = "0.3.4-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_manipulators/0.3.4-1.tar.gz";
-    name = "0.3.4-1.tar.gz";
-    sha256 = "88d02df5725b43739ab39256e79e388ca3362b72aa80171807b9e0c55085ce32";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_manipulators/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "badf41fadc197d605d76143ed3ac05e52a45a8a4bf8e2c4b9859c5519de0d248";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, camera-calibration-parsers, camera-info-manager, image-transport }:
 buildRosPackage {
   pname = "ros-jazzy-image-common";
-  version = "5.1.4-r1";
+  version = "5.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/jazzy/image_common/5.1.4-1.tar.gz";
-    name = "5.1.4-1.tar.gz";
-    sha256 = "304b8fc1eb40b8a0e6a8e81f8f059baa9c1adeec6ca8f460285afcb45f1d53ca";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/jazzy/image_common/5.1.5-1.tar.gz";
+    name = "5.1.5-1.tar.gz";
+    sha256 = "e48290e46adcefe898aea159574d6841344447476e9623bef857fcd8debef46c";
   };
 
   buildType = "ament_cmake";

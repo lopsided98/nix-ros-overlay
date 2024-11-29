@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ddynamic-reconfigure-python, message-runtime, python3Packages, rc-reason-msgs, rospy }:
 buildRosPackage {
   pname = "ros-noetic-rc-reason-clients";
-  version = "0.4.0-r1";
+  version = "0.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/roboception-gbp/rc_reason_clients_ros-release/archive/release/noetic/rc_reason_clients/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "55b139aec55da97a194d9947e1b2be49de36b8740aa25fec91ac021f2ffbc7d8";
+    url = "https://github.com/roboception-gbp/rc_reason_clients_ros-release/archive/release/noetic/rc_reason_clients/0.4.0-2.tar.gz";
+    name = "0.4.0-2.tar.gz";
+    sha256 = "15a2a445c8fb9612cfb3bb1731293d2c665e0ecd7fae508cb6e270892070df24";
   };
 
   buildType = "catkin";

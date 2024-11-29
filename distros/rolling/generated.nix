@@ -268,6 +268,10 @@ self: super: {
 
  camera-info-manager = self.callPackage ./camera-info-manager {};
 
+ camera-info-manager-py = self.callPackage ./camera-info-manager-py {};
+
+ camera-ros = self.callPackage ./camera-ros {};
+
  can-msgs = self.callPackage ./can-msgs {};
 
  canopen = self.callPackage ./canopen {};
@@ -397,6 +401,8 @@ self: super: {
  draco-point-cloud-transport = self.callPackage ./draco-point-cloud-transport {};
 
  dual-arm-panda-moveit-config = self.callPackage ./dual-arm-panda-moveit-config {};
+
+ dual-laser-merger = self.callPackage ./dual-laser-merger {};
 
  dummy-map-server = self.callPackage ./dummy-map-server {};
 
@@ -752,6 +758,8 @@ self: super: {
 
  hash-library-vendor = self.callPackage ./hash-library-vendor {};
 
+ hatchbed-common = self.callPackage ./hatchbed-common {};
+
  heaphook = self.callPackage ./heaphook {};
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
@@ -979,6 +987,8 @@ self: super: {
  lifecycle-py = self.callPackage ./lifecycle-py {};
 
  linux-isolate-process = self.callPackage ./linux-isolate-process {};
+
+ log-view = self.callPackage ./log-view {};
 
  logging-demo = self.callPackage ./logging-demo {};
 
@@ -1628,8 +1638,6 @@ self: super: {
 
  rmf-charger-msgs = self.callPackage ./rmf-charger-msgs {};
 
- rmf-charging-schedule = self.callPackage ./rmf-charging-schedule {};
-
  rmf-cmake-uncrustify = self.callPackage ./rmf-cmake-uncrustify {};
 
  rmf-demos = self.callPackage ./rmf-demos {};
@@ -1665,6 +1673,8 @@ self: super: {
  rmf-obstacle-msgs = self.callPackage ./rmf-obstacle-msgs {};
 
  rmf-reservation-msgs = self.callPackage ./rmf-reservation-msgs {};
+
+ rmf-reservation-node = self.callPackage ./rmf-reservation-node {};
 
  rmf-robot-sim-common = self.callPackage ./rmf-robot-sim-common {};
 
@@ -1885,6 +1895,8 @@ self: super: {
  rosbag2-test-msgdefs = self.callPackage ./rosbag2-test-msgdefs {};
 
  rosbag2-tests = self.callPackage ./rosbag2-tests {};
+
+ rosbag2-to-video = self.callPackage ./rosbag2-to-video {};
 
  rosbag2-transport = self.callPackage ./rosbag2-transport {};
 

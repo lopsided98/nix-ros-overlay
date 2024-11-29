@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, camera-calibration-parsers, rclcpp, rclcpp-lifecycle, rcpputils, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-camera-info-manager";
-  version = "5.1.4-r1";
+  version = "5.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/jazzy/camera_info_manager/5.1.4-1.tar.gz";
-    name = "5.1.4-1.tar.gz";
-    sha256 = "c115939671bf35bfad93fc27a65deaad1d20df286a075e3ffb566e522a01be72";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/jazzy/camera_info_manager/5.1.5-1.tar.gz";
+    name = "5.1.5-1.tar.gz";
+    sha256 = "11a4db7ac93ea393b21594ef41f2e6c66dc8729c4c1507f168dfc9381f3ebf19";
   };
 
   buildType = "ament_cmake";

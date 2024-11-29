@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, pythonPackages, rclpy, sensor-msgs, sensor-msgs-py, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-examples-rclpy-pointcloud-publisher";
-  version = "0.15.2-r1";
+  version = "0.15.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/humble/examples_rclpy_pointcloud_publisher/0.15.2-1.tar.gz";
-    name = "0.15.2-1.tar.gz";
-    sha256 = "a38407edd63ed333d688899297917ceb28a8055a5a784191ea61ee330bbb45fb";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/humble/examples_rclpy_pointcloud_publisher/0.15.3-1.tar.gz";
+    name = "0.15.3-1.tar.gz";
+    sha256 = "f911ca8d80797fdb63062752217c1fe3c80402583596a2fc815e549fccb28e46";
   };
 
   buildType = "ament_python";

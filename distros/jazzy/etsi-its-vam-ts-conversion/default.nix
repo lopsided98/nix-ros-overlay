@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-primitives-conversion, etsi-its-vam-ts-coding, etsi-its-vam-ts-msgs, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-vam-ts-conversion";
-  version = "2.3.0-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_vam_ts_conversion/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "5f442d8df2399b2dfecff59bc9763775506fa32a46ff629cfac76cfcaf910890";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_vam_ts_conversion/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "226d4924979ad54318c11ad30b84a12878cdb77a5932a0a1165814e110d3d712";
   };
 
   buildType = "ament_cmake";

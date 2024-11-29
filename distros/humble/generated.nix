@@ -26,6 +26,8 @@ self: super: {
 
  adaptive-component = self.callPackage ./adaptive-component {};
 
+ adi-3dtof-image-stitching = self.callPackage ./adi-3dtof-image-stitching {};
+
  adi-tmcl = self.callPackage ./adi-tmcl {};
 
  admittance-controller = self.callPackage ./admittance-controller {};
@@ -328,6 +330,12 @@ self: super: {
 
  aws-sdk-cpp-vendor = self.callPackage ./aws-sdk-cpp-vendor {};
 
+ axis-camera = self.callPackage ./axis-camera {};
+
+ axis-description = self.callPackage ./axis-description {};
+
+ axis-msgs = self.callPackage ./axis-msgs {};
+
  backward-ros = self.callPackage ./backward-ros {};
 
  bag2-to-image = self.callPackage ./bag2-to-image {};
@@ -377,6 +385,8 @@ self: super: {
  camera-calibration-parsers = self.callPackage ./camera-calibration-parsers {};
 
  camera-info-manager = self.callPackage ./camera-info-manager {};
+
+ camera-info-manager-py = self.callPackage ./camera-info-manager-py {};
 
  camera-ros = self.callPackage ./camera-ros {};
 
@@ -456,13 +466,13 @@ self: super: {
 
  clearpath-mecanum-drive-controller = self.callPackage ./clearpath-mecanum-drive-controller {};
 
+ clearpath-motor-msgs = self.callPackage ./clearpath-motor-msgs {};
+
  clearpath-mounts-description = self.callPackage ./clearpath-mounts-description {};
 
  clearpath-msgs = self.callPackage ./clearpath-msgs {};
 
  clearpath-nav2-demos = self.callPackage ./clearpath-nav2-demos {};
-
- clearpath-platform = self.callPackage ./clearpath-platform {};
 
  clearpath-platform-description = self.callPackage ./clearpath-platform-description {};
 
@@ -681,6 +691,8 @@ self: super: {
  ds-dbw-joystick-demo = self.callPackage ./ds-dbw-joystick-demo {};
 
  ds-dbw-msgs = self.callPackage ./ds-dbw-msgs {};
+
+ dual-laser-merger = self.callPackage ./dual-laser-merger {};
 
  dummy-map-server = self.callPackage ./dummy-map-server {};
 
@@ -1113,6 +1125,8 @@ self: super: {
  hardware-interface-testing = self.callPackage ./hardware-interface-testing {};
 
  hash-library-vendor = self.callPackage ./hash-library-vendor {};
+
+ hatchbed-common = self.callPackage ./hatchbed-common {};
 
  heaphook = self.callPackage ./heaphook {};
 
@@ -2660,6 +2674,8 @@ self: super: {
 
  rosbag2-tests = self.callPackage ./rosbag2-tests {};
 
+ rosbag2-to-video = self.callPackage ./rosbag2-to-video {};
+
  rosbag2-transport = self.callPackage ./rosbag2-transport {};
 
  rosbridge-library = self.callPackage ./rosbridge-library {};
@@ -3471,6 +3487,8 @@ self: super: {
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
 
  zbar-ros = self.callPackage ./zbar-ros {};
+
+ zed-msgs = self.callPackage ./zed-msgs {};
 
  zenoh-bridge-dds = self.callPackage ./zenoh-bridge-dds {};
 

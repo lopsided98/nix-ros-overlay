@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-python, ament-cmake-ros, ament-lint-auto, ament-lint-common, pybind11-vendor, python-cmake-module, pythonPackages, rcl-interfaces, rclpy, rosbag2-compression, rosbag2-cpp, rosbag2-storage, rosbag2-storage-default-plugins, rosbag2-transport, rosidl-runtime-py, rpyutils, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-rosbag2-py";
-  version = "0.15.12-r1";
+  version = "0.15.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/rosbag2_py/0.15.12-1.tar.gz";
-    name = "0.15.12-1.tar.gz";
-    sha256 = "0386fa145a08d78694e1076cd8db905ddd59c89dd5a1b9f3f448d1dae61509e5";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/rosbag2_py/0.15.13-1.tar.gz";
+    name = "0.15.13-1.tar.gz";
+    sha256 = "8e8b07943b5acb809bb11da4d132965ed319cd0ed89b703abce46b90abaed8f7";
   };
 
   buildType = "ament_cmake";
