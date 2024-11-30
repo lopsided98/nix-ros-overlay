@@ -252,8 +252,8 @@ in {
   };
 
   sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor {
-    version = "14.5.0";
-    hash = "sha256-nGBLnQP0TTKDVbYGyx23Fcs79UCJveajsll2LvyLJwQ=";
+    version = "14.6.0";
+    hash = "sha256-rRX8A6jZWR8iz4oMqWtG2ZP1XnpDsUnbktlF8q9z47M=";
   };
 
   urdfdom = rosSuper.urdfdom.overrideAttrs ({

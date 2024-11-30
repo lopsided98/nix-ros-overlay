@@ -254,8 +254,8 @@ in {
   });
 
   sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor {
-    version = "15.1.0";
-    hash = "sha256-59spzVnuKamIKFIItEx0K5+otuef1LVHp0U7u0UaA8o=";
+    version = "15.1.1";
+    hash = "sha256-4/0pVaev++v0+wHQiGeTl8XtTDzh2li32dND0EjfjwA=";
   };
 
   shared-queues-vendor = lib.patchVendorUrl rosSuper.shared-queues-vendor {
