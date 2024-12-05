@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, generate-parameter-library, generate-parameter-library-py, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-iron-generate-parameter-module-example";
-  version = "0.3.8-r3";
+  version = "0.3.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/iron/generate_parameter_module_example/0.3.8-3.tar.gz";
-    name = "0.3.8-3.tar.gz";
-    sha256 = "3560a9d74dfafcd184d563bccf8615a65bf7e6713175b89272686a03fafafad5";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/iron/generate_parameter_module_example/0.3.9-1.tar.gz";
+    name = "0.3.9-1.tar.gz";
+    sha256 = "6b0e76233f537d6dbef0c4791de40dfc1f5593ce7d71dba3c67727be95c6b46f";
   };
 
   buildType = "ament_python";

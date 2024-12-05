@@ -57,6 +57,14 @@ in with lib; {
     };
   };
 
+  libfranka = rosSuper.libfranka.overrideAttrs ({
+    cmakeFlags ? [], ...
+  }: {
+    # Uses custom flag to disable tests. Attempts to download GTest without
+    # this.
+    cmakeFlags = cmakeFlags ++ [ "-DBUILD_TESTS=OFF" ];
+  });
+
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
     url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.19.20240304.tar.gz";
     hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
@@ -107,6 +115,21 @@ in with lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.ros-environment ];
   });
 
+  python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = "https://github.com/ros-visualization/python_qt_binding/commit/e78372fd63eda527c9fad5fcdab8ca31eb3f36d2.patch";
+        hash = "sha256-8+58ggPUJmEQIS9C4RzT4PhK1pT9ms98nppn3ZA8AEo=";
+      })
+      (self.fetchpatch {
+        url = "https://github.com/ros-visualization/python_qt_binding/commit/ee4d43bcdb0c5c5d40f81dea3de6185298ab34a7.patch";
+        hash = "sha256-+n7wqQ9jDybwxVeUEjOQSQJh7nnU8JXv5DNCoK/5Sm4=";
+      })
+    ];
+  });
+
   rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
     postPatch ? "", ...
   }: let
@@ -120,10 +143,13 @@ in with lib; {
     '';
   });
 
-  rviz-ogre-vendor = patchVendorUrl rosSuper.rviz-ogre-vendor {
+  rviz-ogre-vendor = (patchVendorUrl rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
-  };
+  }).overrideAttrs ({ ... }: {
+    # Prevent replacing $out/opt/.. with $out/var/empty/..
+    dontFixCmake = true;
+  });
 
   shared-queues-vendor = patchVendorUrl (patchVendorUrl rosSuper.shared-queues-vendor {
     url = "https://github.com/cameron314/concurrentqueue/archive/8f65a8734d77c3cc00d74c0532efca872931d3ce.zip";
@@ -155,6 +181,18 @@ in with lib; {
       (self.fetchpatch {
         url = "https://github.com/ros/urdfdom_headers/commit/c9c993147bbf18d5ec83bae684c5780281e529b4.patch";
         hash = "sha256-BnYPdcetYSim2O1R38N0d1tY0Id++AgKNic8+dlM6Vg=";
+      })
+    ];
+  });
+
+  vrpn = rosSuper.vrpn.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix compatibility with recent CMake versions
+      (self.fetchpatch {
+        url = "https://github.com/vrpn/vrpn/commit/04d86b71de06cb6cb8d2cb7276fef27275d083d2.patch";
+        hash = "sha256-AEiTLXPYcFdZrE4KzvCkXH4GiSFmhCl14wkq+0MRWLo=";
       })
     ];
   });

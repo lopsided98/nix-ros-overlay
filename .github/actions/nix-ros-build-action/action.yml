@@ -10,22 +10,22 @@ inputs:
     description: Root attribute to begin evaluation
     required: true
     default: rosPackages
-  nixpkgs:
-    description: URL used to download nixpkgs
-    required: true
-    default: https://github.com/lopsided98/nixpkgs/archive/nix-ros.tar.gz
   system:
     description: Host system name (e.g. x86_64-linux). If different from the runner architecture, binfmt/qemu must be configured.
     required: false
-  parallelism:
+  eval-jobs:
+    description: Number of evaluations to run in parallel
+    required: true
+    default: "4"
+  build-jobs:
     description: Number of builds to run in parallel
     required: true
-    default: "20"
+    default: "2"
   cachix-cache:
     description: Name of the Cachix cache to use
     required: true
     default: ros
 
 runs:
-  using: node16
+  using: node20
   main: dist/index.js

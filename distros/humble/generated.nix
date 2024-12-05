@@ -26,6 +26,8 @@ self: super: {
 
  adaptive-component = self.callPackage ./adaptive-component {};
 
+ adi-3dtof-image-stitching = self.callPackage ./adi-3dtof-image-stitching {};
+
  adi-tmcl = self.callPackage ./adi-tmcl {};
 
  admittance-controller = self.callPackage ./admittance-controller {};
@@ -328,6 +330,12 @@ self: super: {
 
  aws-sdk-cpp-vendor = self.callPackage ./aws-sdk-cpp-vendor {};
 
+ axis-camera = self.callPackage ./axis-camera {};
+
+ axis-description = self.callPackage ./axis-description {};
+
+ axis-msgs = self.callPackage ./axis-msgs {};
+
  backward-ros = self.callPackage ./backward-ros {};
 
  bag2-to-image = self.callPackage ./bag2-to-image {};
@@ -377,6 +385,8 @@ self: super: {
  camera-calibration-parsers = self.callPackage ./camera-calibration-parsers {};
 
  camera-info-manager = self.callPackage ./camera-info-manager {};
+
+ camera-info-manager-py = self.callPackage ./camera-info-manager-py {};
 
  camera-ros = self.callPackage ./camera-ros {};
 
@@ -456,17 +466,19 @@ self: super: {
 
  clearpath-mecanum-drive-controller = self.callPackage ./clearpath-mecanum-drive-controller {};
 
+ clearpath-motor-msgs = self.callPackage ./clearpath-motor-msgs {};
+
  clearpath-mounts-description = self.callPackage ./clearpath-mounts-description {};
 
  clearpath-msgs = self.callPackage ./clearpath-msgs {};
 
  clearpath-nav2-demos = self.callPackage ./clearpath-nav2-demos {};
 
- clearpath-platform = self.callPackage ./clearpath-platform {};
-
  clearpath-platform-description = self.callPackage ./clearpath-platform-description {};
 
  clearpath-platform-msgs = self.callPackage ./clearpath-platform-msgs {};
+
+ clearpath-ros2-socketcan-interface = self.callPackage ./clearpath-ros2-socketcan-interface {};
 
  clearpath-sensors-description = self.callPackage ./clearpath-sensors-description {};
 
@@ -680,6 +692,8 @@ self: super: {
 
  ds-dbw-msgs = self.callPackage ./ds-dbw-msgs {};
 
+ dual-laser-merger = self.callPackage ./dual-laser-merger {};
+
  dummy-map-server = self.callPackage ./dummy-map-server {};
 
  dummy-robot-bringup = self.callPackage ./dummy-robot-bringup {};
@@ -829,6 +843,12 @@ self: super: {
  etsi-its-primitives-conversion = self.callPackage ./etsi-its-primitives-conversion {};
 
  etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
+
+ etsi-its-vam-ts-coding = self.callPackage ./etsi-its-vam-ts-coding {};
+
+ etsi-its-vam-ts-conversion = self.callPackage ./etsi-its-vam-ts-conversion {};
+
+ etsi-its-vam-ts-msgs = self.callPackage ./etsi-its-vam-ts-msgs {};
 
  event-camera-codecs = self.callPackage ./event-camera-codecs {};
 
@@ -1106,6 +1126,8 @@ self: super: {
 
  hash-library-vendor = self.callPackage ./hash-library-vendor {};
 
+ hatchbed-common = self.callPackage ./hatchbed-common {};
+
  heaphook = self.callPackage ./heaphook {};
 
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
@@ -1120,7 +1142,11 @@ self: super: {
 
  hri-actions-msgs = self.callPackage ./hri-actions-msgs {};
 
+ hri-face-body-matcher = self.callPackage ./hri-face-body-matcher {};
+
  hri-msgs = self.callPackage ./hri-msgs {};
+
+ hri-privacy-msgs = self.callPackage ./hri-privacy-msgs {};
 
  hri-rviz = self.callPackage ./hri-rviz {};
 
@@ -1343,6 +1369,8 @@ self: super: {
  laser-geometry = self.callPackage ./laser-geometry {};
 
  laser-proc = self.callPackage ./laser-proc {};
+
+ laser-segmentation = self.callPackage ./laser-segmentation {};
 
  launch = self.callPackage ./launch {};
 
@@ -2174,6 +2202,8 @@ self: super: {
 
  popf = self.callPackage ./popf {};
 
+ pose-broadcaster = self.callPackage ./pose-broadcaster {};
+
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
  position-controllers = self.callPackage ./position-controllers {};
@@ -2183,6 +2213,8 @@ self: super: {
  psdk-interfaces = self.callPackage ./psdk-interfaces {};
 
  psdk-wrapper = self.callPackage ./psdk-wrapper {};
+
+ ptz-action-server-msgs = self.callPackage ./ptz-action-server-msgs {};
 
  puma-motor-driver = self.callPackage ./puma-motor-driver {};
 
@@ -2642,6 +2674,8 @@ self: super: {
 
  rosbag2-tests = self.callPackage ./rosbag2-tests {};
 
+ rosbag2-to-video = self.callPackage ./rosbag2-to-video {};
+
  rosbag2-transport = self.callPackage ./rosbag2-transport {};
 
  rosbridge-library = self.callPackage ./rosbridge-library {};
@@ -2840,6 +2874,8 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ sbg-driver = self.callPackage ./sbg-driver {};
+
  scenario-execution-control = self.callPackage ./scenario-execution-control {};
 
  scenario-execution-gazebo = self.callPackage ./scenario-execution-gazebo {};
@@ -2902,6 +2938,8 @@ self: super: {
 
  simple-actions = self.callPackage ./simple-actions {};
 
+ simple-grasping = self.callPackage ./simple-grasping {};
+
  simple-launch = self.callPackage ./simple-launch {};
 
  simple-term-menu-vendor = self.callPackage ./simple-term-menu-vendor {};
@@ -2917,6 +2955,8 @@ self: super: {
  situational-graphs-wrapper = self.callPackage ./situational-graphs-wrapper {};
 
  slam-toolbox = self.callPackage ./slam-toolbox {};
+
+ slg-msgs = self.callPackage ./slg-msgs {};
 
  slider-publisher = self.callPackage ./slider-publisher {};
 
@@ -3404,6 +3444,8 @@ self: super: {
 
  warehouse-ros-sqlite = self.callPackage ./warehouse-ros-sqlite {};
 
+ web-video-server = self.callPackage ./web-video-server {};
+
  webots-ros2 = self.callPackage ./webots-ros2 {};
 
  webots-ros2-control = self.callPackage ./webots-ros2-control {};
@@ -3445,6 +3487,8 @@ self: super: {
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
 
  zbar-ros = self.callPackage ./zbar-ros {};
+
+ zed-msgs = self.callPackage ./zed-msgs {};
 
  zenoh-bridge-dds = self.callPackage ./zenoh-bridge-dds {};
 

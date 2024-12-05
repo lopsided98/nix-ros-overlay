@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-components, rcutils, rmw-implementation-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-logging-demo";
-  version = "0.35.0-r1";
+  version = "0.35.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/logging_demo/0.35.0-1.tar.gz";
-    name = "0.35.0-1.tar.gz";
-    sha256 = "b4e80a7bfae8aa12c904c1fd24a532fd52c070587b4bda1a98d08d2d8d146331";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/logging_demo/0.35.1-1.tar.gz";
+    name = "0.35.1-1.tar.gz";
+    sha256 = "8393d703868fa797348137245a8ac9ba8d0e32959c5e1ac402641ec26b9e9e0f";
   };
 
   buildType = "ament_cmake";

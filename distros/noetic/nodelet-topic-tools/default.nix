@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, dynamic-reconfigure, message-filters, nodelet, pluginlib, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-nodelet-topic-tools";
-  version = "1.11.0-r2";
+  version = "1.11.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/nodelet_core-release/archive/release/noetic/nodelet_topic_tools/1.11.0-2.tar.gz";
-    name = "1.11.0-2.tar.gz";
-    sha256 = "0f42086736f35d89d0a0e14cbd2d2d329cd7920936df789ab108b39baf8986c2";
+    url = "https://github.com/ros-gbp/nodelet_core-release/archive/release/noetic/nodelet_topic_tools/1.11.1-1.tar.gz";
+    name = "1.11.1-1.tar.gz";
+    sha256 = "c23a96966e2a2c6e587f848765a75267b7e5312ee40b58db75db20009d0ca3bd";
   };
 
   buildType = "catkin";

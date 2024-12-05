@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-action, realtime-tools, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-iron-gripper-controllers";
-  version = "3.26.3-r1";
+  version = "3.28.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/gripper_controllers/3.26.3-1.tar.gz";
-    name = "3.26.3-1.tar.gz";
-    sha256 = "10c1b982d947496701287bff8758b668489ab699f282878e37c9e0fa9ceb1c2b";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/iron/gripper_controllers/3.28.0-1.tar.gz";
+    name = "3.28.0-1.tar.gz";
+    sha256 = "08b3158257cfda75eaa34a5ee7617482669d6e6c371914e23ffe42d434011dc6";
   };
 
   buildType = "ament_cmake";

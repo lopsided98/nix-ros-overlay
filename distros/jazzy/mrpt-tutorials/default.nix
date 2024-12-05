@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, cmake, mvsim, teleop-twist-keyboard }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-tutorials";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/jazzy/mrpt_tutorials/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "07fe136b5e873fd0ab2dd1b7c766addb5f4ac6944e047760816f2343f3d6c710";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/jazzy/mrpt_tutorials/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "0f37f3b74caf37a68783deb25b48f2f568a4affd8055249ba1283c541195d801";
   };
 
   buildType = "ament_cmake";

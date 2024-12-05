@@ -63,6 +63,17 @@ in with lib; {
     fetchgitArgs.hash = "sha256-f7GZgOzUrkAfw1mqwlIKQQqDvkvIahGlHvq6AL+aAvA=";
   };
 
+  python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = "https://github.com/ros-visualization/python_qt_binding/commit/ee4d43bcdb0c5c5d40f81dea3de6185298ab34a7.patch";
+        hash = "sha256-+n7wqQ9jDybwxVeUEjOQSQJh7nnU8JXv5DNCoK/5Sm4=";
+      })
+    ];
+  });
+
   rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
     postPatch ? "", ...
   }: let
@@ -110,6 +121,8 @@ in with lib; {
         --replace-fail 'https://github.com/${ogre.owner}/${ogre.repo}/archive/${ogre.rev}.zip' ${lib.escapeShellArg ogreTar} \
         --replace-fail c1b870955efddf539385094e9034e7f7 fcc1176585a7feb9f23c7900182a1f32
     '';
+    # Prevent replacing $out/opt/.. with $out/var/empty/..
+    dontFixCmake = true;
   });
 
   shared-queues-vendor = patchVendorUrl (patchVendorUrl rosSuper.shared-queues-vendor {

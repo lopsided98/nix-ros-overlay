@@ -2,22 +2,22 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python-cmake-module, python-qt-binding, qt-gui, qt5, rclpy, rosidl-default-generators, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, python-qt-binding, qt-gui, qt5, rclpy, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rqt-py-common";
-  version = "1.7.3-r1";
+  version = "1.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/rolling/rqt_py_common/1.7.3-1.tar.gz";
-    name = "1.7.3-1.tar.gz";
-    sha256 = "9ef4a605b1f5a53c7aa00848c5b5d445f545f8bda43efe5516f3115a12d713fc";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/rolling/rqt_py_common/1.8.0-1.tar.gz";
+    name = "1.8.0-1.tar.gz";
+    sha256 = "86a3b855d5fcc94c77fa07ff5de6cc2a1f3b523bd390d9428a4decb2542419fc";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common python-cmake-module rosidl-default-generators rosidl-default-runtime ];
+  buildInputs = [ ament-cmake ament-cmake-python ];
+  checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common rosidl-default-generators rosidl-default-runtime ];
   propagatedBuildInputs = [ python-qt-binding qt-gui qt5.qtbase rclpy ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
     description = "rqt_py_common provides common functionality for rqt plugins written in Python.

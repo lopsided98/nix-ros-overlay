@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-iron-etsi-its-primitives-conversion";
-  version = "2.2.0-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/iron/etsi_its_primitives_conversion/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "4e5e3c14b97261b683d77c65600dde6480afec826dc810ab6c98bd504d814bc6";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/iron/etsi_its_primitives_conversion/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "34f97d9e1d14ce08c10c58bb58e44b11f607c54b84952eacc99874d871675859";
   };
 
   buildType = "ament_cmake";

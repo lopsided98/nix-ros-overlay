@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-test-assets, std-srvs, steering-controllers-library }:
 buildRosPackage {
   pname = "ros-rolling-bicycle-steering-controller";
-  version = "4.15.0-r1";
+  version = "4.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/bicycle_steering_controller/4.15.0-1.tar.gz";
-    name = "4.15.0-1.tar.gz";
-    sha256 = "810ac570c31715b4df42c6a7ba67881f0b16409faf863b02e938f18fe5f6f2cb";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/bicycle_steering_controller/4.16.0-1.tar.gz";
+    name = "4.16.0-1.tar.gz";
+    sha256 = "f019e91f84b7efb548d24a43e9c684062188c305892a821a3ea247089a88a6c1";
   };
 
   buildType = "ament_cmake";

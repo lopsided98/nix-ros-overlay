@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tiago-bringup, tiago-controller-configuration, tiago-description }:
 buildRosPackage {
   pname = "ros-humble-tiago-robot";
-  version = "4.5.0-r1";
+  version = "4.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_robot-release/archive/release/humble/tiago_robot/4.5.0-1.tar.gz";
-    name = "4.5.0-1.tar.gz";
-    sha256 = "1665820bc83a8945ac3f36005eb0a22ce81f772fcf7e48f3cf9bc28b62246ed0";
+    url = "https://github.com/pal-gbp/tiago_robot-release/archive/release/humble/tiago_robot/4.7.1-1.tar.gz";
+    name = "4.7.1-1.tar.gz";
+    sha256 = "d0946c8b859f46fba4cc4eb136764af7821bbecc45fd237d0ff41bd749013387";
   };
 
   buildType = "ament_cmake";

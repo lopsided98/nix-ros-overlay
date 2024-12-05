@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, mrpt-libgui, mrpt-libmaps, mrpt-libnav, mrpt-libros-bridge, mrpt-msgs, mrpt-nav-interfaces, mrpt-path-planning, nav-msgs, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-tps-astar-planner";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/rolling/mrpt_tps_astar_planner/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "229bb88ff4bbb082dfb565097faefd6b372f2966b8ee4bba27d27817b3b54bbf";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/rolling/mrpt_tps_astar_planner/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "5e56e8ea8f4ffb0d6aca8f52f471c52d6cce36f4211dd13cb2b6be05de2e9dce";
   };
 
   buildType = "ament_cmake";

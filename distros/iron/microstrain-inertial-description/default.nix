@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, xacro }:
 buildRosPackage {
   pname = "ros-iron-microstrain-inertial-description";
-  version = "4.4.0-r1";
+  version = "4.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/iron/microstrain_inertial_description/4.4.0-1.tar.gz";
-    name = "4.4.0-1.tar.gz";
-    sha256 = "754abb949da5116ec54cc4b19238744f9fc7578b7b72ede3cf00f5998fdfc1f2";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/iron/microstrain_inertial_description/4.5.0-1.tar.gz";
+    name = "4.5.0-1.tar.gz";
+    sha256 = "08cdfc7f8e3441f234da7e16cade71dd6b615f7697fdd3552a7950164fbf28e2";
   };
 
   buildType = "ament_cmake";

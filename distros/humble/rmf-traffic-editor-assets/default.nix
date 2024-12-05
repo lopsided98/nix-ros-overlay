@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl,  }:
 buildRosPackage {
   pname = "ros-humble-rmf-traffic-editor-assets";
-  version = "1.6.2-r1";
+  version = "1.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/humble/rmf_traffic_editor_assets/1.6.2-1.tar.gz";
-    name = "1.6.2-1.tar.gz";
-    sha256 = "478f806b54a7149f5312a4cc335566bfd33368cba562ddacf1e36e0035fe2ea9";
+    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/humble/rmf_traffic_editor_assets/1.6.3-1.tar.gz";
+    name = "1.6.3-1.tar.gz";
+    sha256 = "bf5ed9f37dee22647148230df490a8bf0b76b9495846874dc3ff8c6f45081ee6";
   };
 
   buildType = "ament_python";

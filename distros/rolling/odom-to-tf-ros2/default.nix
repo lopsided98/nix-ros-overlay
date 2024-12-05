@@ -2,21 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, nav-msgs, rclcpp, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, rclcpp, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-odom-to-tf-ros2";
-  version = "1.0.2-r3";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/odom_to_tf_ros2-release/archive/release/rolling/odom_to_tf_ros2/1.0.2-3.tar.gz";
-    name = "1.0.2-3.tar.gz";
-    sha256 = "59957be434e867743cc7b2b7dc259b042f7a79c63eaea0df3a591e8063316c1e";
+    url = "https://github.com/ros2-gbp/odom_to_tf_ros2-release/archive/release/rolling/odom_to_tf_ros2/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "a961e0f34468cd629eeb6bdd44543b114db595e7d98cbcafc51a5f3db5525580";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ nav-msgs rclcpp tf2-ros ];
+  propagatedBuildInputs = [ geometry-msgs nav-msgs rclcpp tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

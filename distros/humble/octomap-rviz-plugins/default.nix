@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, octomap, octomap-msgs, qt5, rclcpp, rviz-common, rviz-default-plugins, rviz-rendering }:
 buildRosPackage {
   pname = "ros-humble-octomap-rviz-plugins";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap_rviz_plugins-release/archive/release/humble/octomap_rviz_plugins/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "7ecc53592666697bc3829f42af99378cd0d348c937da2e32d4abdbc767b62b88";
+    url = "https://github.com/ros2-gbp/octomap_rviz_plugins-release/archive/release/humble/octomap_rviz_plugins/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "6518e341fe60cfa27eee64280cf002c4900a8cf915d83f08d22304eb75337b61";
   };
 
   buildType = "ament_cmake";

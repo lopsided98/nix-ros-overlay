@@ -39,6 +39,9 @@ nix develop github:lopsided98/nix-ros-overlay#example-turtlebot3-gazebo
 
 Using the overlay in your `flake.nix`-based project could look like this:
 
+<!-- The following comment is for https://github.com/zimbatm/mdsh -->
+<!-- [$ flake.nix](examples/flake/flake.nix) as nix -->
+
 ```nix
 {
   inputs = {
@@ -59,10 +62,10 @@ Using the overlay in your `flake.nix`-based project could look like this:
             pkgs.colcon
             # ... other non-ROS packages
             (with pkgs.rosPackages.humble; buildEnv {
-                paths = [
-                    ros-core
-                    # ... other ROS packages
-                ];
+              paths = [
+                ros-core
+                # ... other ROS packages
+              ];
             })
           ];
         };
@@ -73,13 +76,18 @@ Using the overlay in your `flake.nix`-based project could look like this:
   };
 }
 ```
+You can use the following command to use the above template easily:
+
+    nix flake init --template github:lopsided98/nix-ros-overlay
 
 [flake]: https://wiki.nixos.org/wiki/Flakes
 
 ## Current status
 
 What works:
-1. More than 1400 packages successfully built for ROS Noetic
+1. More than 1400 packages successfully built for ROS Noetic (for
+   up-to-date numbers and other distros, look at our experimental
+   [Hydra instance][] controlled by [@wentasah][])
 2. Fully functional ROS development environment using `nix-shell`
 3. Automated generation of Nix package definitions using standard ROS tools ([superflore](https://github.com/lopsided98/superflore))
 
@@ -88,6 +96,9 @@ What still needs to be done:
 2. Test on more Linux distributions
 3. aarch64 binary cache
 4. macOS support
+
+[Hydra instance]: https://hydra.iid.ciirc.cvut.cz/project/nix-ros-overlay
+[@wentasah]: https://github.com/wentasah
 
 ## Configure Binary Cache
 

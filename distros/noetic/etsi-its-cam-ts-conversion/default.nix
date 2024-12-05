@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, etsi-its-cam-ts-coding, etsi-its-cam-ts-msgs, etsi-its-primitives-conversion, ros-environment }:
 buildRosPackage {
   pname = "ros-noetic-etsi-its-cam-ts-conversion";
-  version = "2.2.0-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_cam_ts_conversion/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "c1fc35c84bdc1c9cc1d23f9df1ed986801ba1a7b6f9be98d4e6dc4ea681e2a79";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_cam_ts_conversion/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "7904db14cbfa96fe70acfe62ba8175d4c4268daf120128f98371e3ab536f9f83";
   };
 
   buildType = "catkin";

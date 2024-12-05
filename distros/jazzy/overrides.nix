@@ -19,18 +19,31 @@ in {
 
   foonathan-memory-vendor = lib.patchExternalProjectGit rosSuper.foonathan-memory-vendor {
     url = "https://github.com/foonathan/memory.git";
-    rev = "v0.7-3";
+    rev = "v0.7-3";    waypoints.push_back(
+                        generateRelativePose(-0.10, 0.3, -0.2, 0.0, 0.0, 0.0, home_pose));
+    waypoints.push_back(
+                        generateRelativePose(0.350, 0.3, -0.2, 0.8, 0.0, 0.0, home_pose));
+    waypoints.push_back(
+                        generateRelativePose(-0.10, 0.3, -0.2, 0.0, 0.0, 0.0, home_pose));
+    waypoints.push_back(
+                        generateRelativePose(0.350, 0.3, -0.2, 1.6, 0.0, 0.0, home_pose));
+    waypoints.push_back(
+                        generateRelativePose(-0.10, 0.3, -0.2, 0.0, 0.0, 0.0, home_pose));
+
     fetchgitArgs.hash = "sha256-nLBnxPbPKiLCFF2TJgD/eJKJJfzktVBW3SRW2m3WK/s=";
   };
 
   gazebo = self.gazebo_11;
 
   geometric-shapes = rosSuper.geometric-shapes.overrideAttrs({
-    postPatch ? "", ...
+      postPatch ? "", ...
   }: {
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail 'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' 'find_package(octomap REQUIRED)'
-    '';
+      # Remove workaround for Ubuntu-specific dependency hell issue
+      postPatch = postPatch + ''
+        substituteInPlace CMakeLists.txt --replace-fail \
+          'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
+          'find_package(octomap REQUIRED)'
+      '';
   });
 
   google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
@@ -45,8 +58,8 @@ in {
   };
 
   gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor {
-    version = "5.6.0";
-    hash = "sha256-vM+/V2F+Nr/LReqcMAmAbgAyaph/vMZVb0BO0MAUp6I=";
+    version = "5.7.0";
+    hash = "sha256-RBu49rxjzo4mc7ma4WpabUxUT7cvabJRinR98it10r4=";
   }).overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
@@ -84,13 +97,13 @@ in {
   };
 
   gz-math-vendor = lib.patchGzAmentVendorGit rosSuper.gz-math-vendor {
-    version = "7.5.0";
-    hash = "sha256-TEadejtPCR3FAUbyAAME28tmqaxypPTJDYidjZ3FPIY=";
+    version = "7.5.1";
+    hash = "sha256-RxCZiU0h0skVPBSn+PMtkdwEabmTKl+0PYDpl9SQoq8=";
   };
 
   gz-msgs-vendor = lib.patchGzAmentVendorGit rosSuper.gz-msgs-vendor {
-    version = "10.3.0";
-    hash = "sha256-PQT8EpTxafldnKG3hDSXw2P22gLRg2EfMllrzaTaDEw=";
+    version = "10.3.1";
+    hash = "sha256-GBEylFQvR2MWOIivW2+MGy//jjewId41mk8qpLfoaYM=";
   };
 
   gz-ogre-next-vendor = (lib.patchAmentVendorGit rosSuper.gz-ogre-next-vendor {
@@ -102,8 +115,8 @@ in {
   });
 
   gz-physics-vendor = lib.patchGzAmentVendorGit rosSuper.gz-physics-vendor {
-    version = "7.3.0";
-    hash = "sha256-PTalEQc9C/QsYMO+XK7aOzZUzC01jxiW6bjdItB5hlM=";
+    version = "7.4.0";
+    hash = "sha256-14/P/xoZSqqqf9krgqDKVcO/rTZOEhLni8ZUR3W9ey4=";
   };
 
   gz-plugin-vendor = lib.patchGzAmentVendorGit rosSuper.gz-plugin-vendor {
@@ -112,18 +125,18 @@ in {
   };
 
   gz-rendering-vendor = lib.patchGzAmentVendorGit rosSuper.gz-rendering-vendor {
-    version = "8.2.0";
-    hash = "sha256-eaWkZKHu566Rub7YSO2lnKdj8YQbhl86v+JR4zrgtjs=";
+    version = "8.2.1";
+    hash = "sha256-ZHeEC/zvBKROJ/e+6Bdvhut30crhlC5VMsxrpIGIA0M=";
   };
 
   gz-sensors-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sensors-vendor {
-    version = "8.2.0";
-    hash = "sha256-j/8kS+Bvaim2gtsZcp+/u8CAE+N24/5qZhciFR0Q8+M=";
+    version = "8.2.1";
+    hash = "sha256-wEUJoHbvvImuFbaKk84maw5AoKhoEhdU0uOYVBtHhI0=";
   };
 
   gz-sim-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sim-vendor {
-    version = "8.6.0";
-    hash = "sha256-zSiPHEh3h2J8hGL342tde5U9FLaGnWs72WD9BqyPf6E=";
+    version = "8.7.0";
+    hash = "sha256-Kalt+UwFiL1D+A5pkM/aZyEmBenqPo9U4jlAmqLze3c=";
   };
 
   gz-tools-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-tools-vendor {
@@ -192,63 +205,27 @@ in {
     hash = "sha256-Qaz26F11VWxkQH8HfgVJLTHbHwmeByQu8ENkuyk5rPE=";
   };
 
-  moveit-core = rosSuper.moveit-core.overrideAttrs({
+  moveit-core = rosSuper.moveit-core.overrideAttrs ({
     postPatch ? "", ...
   }: {
+    # Remove workaround for Ubuntu-specific dependency hell issue
     postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail 'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' 'find_package(octomap REQUIRED)'
+      substituteInPlace CMakeLists.txt --replace-fail \
+        'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
+        'find_package(octomap REQUIRED)'
     '';
   });
 
-  moveit-ros-move-group = rosSuper.moveit-ros-move-group.overrideAttrs({
-    postFixup ? "", ...
-  }: {
-    postFixup = postFixup + ''
-      patchelf --add-needed libmoveit_move_group_default_capabilities.so $out/lib/moveit_ros_move_group/move_group
-      patchelf --add-needed libmoveit_move_group_default_capabilities.so $out/lib/moveit_ros_move_group/list_move_group_capabilities
-
-      # TODO(anyone): Replace platform and Python version with what's actually in use
-      # patchelf --add-needed libmoveit_move_group_default_capabilities.so $out/lib/python3.11/site-packages/moveit/core.cpython-311-x86_64-linux-gnu.so
-      # patchelf --add-needed libmoveit_move_group_default_capabilities.so $out/lib/python3.11/site-packages/moveit/planning.cpython-311-x86_64-linux-gnu.so
-    '';
-  });
-
-  moveit-ros-occupancy-map-monitor = rosSuper.moveit-ros-occupancy-map-monitor.overrideAttrs({
+  moveit-ros-occupancy-map-monitor = rosSuper.moveit-ros-occupancy-map-monitor.overrideAttrs ({
     postPatch ? "", ...
   }: {
+    # Remove workaround for Ubuntu-specific dependency hell issue
     postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail 'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' 'find_package(octomap REQUIRED)'
+      substituteInPlace CMakeLists.txt --replace-fail \
+        'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
+        'find_package(octomap REQUIRED)'
     '';
   });
-
-  osqp-vendor = lib.pipe rosSuper.osqp-vendor [
-    # Make CMakeLists.txt amenable to automatic patching by the next step.
-    (pkg: pkg.overrideAttrs ({ prePatch ? "", ... }: {
-      prePatch = prePatch + ''
-        sed -i 's/GIT_TAG.*/GIT_TAG v0.6.2/' CMakeLists.txt
-      '';
-    }))
-
-    (pkg: lib.patchExternalProjectGit pkg {
-      url = "https://github.com/osqp/osqp.git";
-      rev = "v0.6.2";
-      fetchgitArgs = {
-        hash = "sha256-0BbUe1J9qzvyKDBLTz+pAEmR3QpRL+hnxZ2re/3mEvs=";
-        leaveDotGit = true;
-      };
-    })
-
-    # osqp installs into both lib/cmake/ and lib64/cmake/ which is problematic
-    # because moveLib64 doesn't attempt to merge overlapping directories but
-    # fails instead. Here we do the merge manually.
-    (pkg: pkg.overrideAttrs ({ preInstall ? "", ... }: {
-      preInstall = preInstall + ''
-        mkdir -p ./osqp_install/lib/cmake/osqp
-        mv ./osqp_install/lib64/cmake/osqp/* ./osqp_install/lib/cmake/osqp
-        rm -r ./osqp_install/lib64/cmake
-      '';
-    }))
-  ];
 
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre.git";
@@ -270,14 +247,23 @@ in {
     '';
   };
 
+  rviz-rendering = rosSuper.rviz-rendering.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace src/rviz_rendering/render_system.cpp \
+        --replace-fail /opt/rviz_ogre_vendor ""
+    '';
+  });
+
   shared-queues-vendor = lib.patchVendorUrl rosSuper.shared-queues-vendor {
     url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";
     sha256 = "sha256-TyFt3d78GidhDGD17KgjAaZl/qvAcGJP8lmu4EOxpYg=";
   };
 
   sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor {
-    version = "14.5.0";
-    hash = "sha256-nGBLnQP0TTKDVbYGyx23Fcs79UCJveajsll2LvyLJwQ=";
+    version = "14.6.0";
+    hash = "sha256-rRX8A6jZWR8iz4oMqWtG2ZP1XnpDsUnbktlF8q9z47M=";
   };
 
   urdfdom = rosSuper.urdfdom.overrideAttrs ({

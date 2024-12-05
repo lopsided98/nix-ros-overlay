@@ -1,4 +1,6 @@
 self: super: with self.lib; {
+  inherit (self.python3Packages) bloom; 
+
   cargo-ament-build = self.callPackage ./cargo-ament-build { };
 
   colcon = with self.python3Packages; colcon-core.withExtensions [
@@ -74,9 +76,7 @@ self: super: with self.lib; {
 
   pythonPackagesExtensions = super.pythonPackagesExtensions ++ [
     (pyFinal: pyPrev: {
-      bson = pyFinal.callPackage ./bson { };
-
-      catkin-pkg = pyFinal.callPackage ./catkin-pkg { };
+      bloom = pyFinal.callPackage ./bloom { };
 
       catkin-tools = pyFinal.callPackage ./catkin-tools { };
 
@@ -143,6 +143,8 @@ self: super: with self.lib; {
       rosinstall-generator = pyFinal.callPackage ./rosinstall-generator { };
 
       rospkg = pyFinal.callPackage ./rospkg { };
+
+      vcstools = pyFinal.callPackage ./vcstools { };
     })
   ];
 

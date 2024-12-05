@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, rclcpp, ros2launch, rosidl-default-generators, rosidl-default-runtime, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-adi-tmcl";
-  version = "2.0.0-r1";
+  version = "2.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/adi_tmcl-release/archive/release/humble/adi_tmcl/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "81aa7333bd14f20733ce64db029279e944e8a73f4f05ec92cfb2696c9d9303a8";
+    url = "https://github.com/ros2-gbp/adi_tmcl-release/archive/release/humble/adi_tmcl/2.0.3-2.tar.gz";
+    name = "2.0.3-2.tar.gz";
+    sha256 = "111f6f7c1412f268696ca3f2e1595372943a845300ddd33c58b1bdb0ee038300";
   };
 
   buildType = "ament_cmake";

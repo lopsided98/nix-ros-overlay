@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, image-transport, zlib }:
 buildRosPackage {
   pname = "ros-jazzy-zstd-image-transport";
-  version = "4.0.2-r1";
+  version = "4.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/jazzy/zstd_image_transport/4.0.2-1.tar.gz";
-    name = "4.0.2-1.tar.gz";
-    sha256 = "0610c3cf64ca08e8b4a38786bbc405229bbf86b6ee09866e00b966ee4d6fc7f2";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/jazzy/zstd_image_transport/4.0.3-1.tar.gz";
+    name = "4.0.3-1.tar.gz";
+    sha256 = "74a9e9b39a7d092c4c35dc17fb0ac7a2d09f6a6cbf3226708006ed6c0e4b61ca";
   };
 
   buildType = "ament_cmake";

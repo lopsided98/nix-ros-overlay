@@ -936,6 +936,12 @@ self: super: {
 
  etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
 
+ etsi-its-vam-ts-coding = self.callPackage ./etsi-its-vam-ts-coding {};
+
+ etsi-its-vam-ts-conversion = self.callPackage ./etsi-its-vam-ts-conversion {};
+
+ etsi-its-vam-ts-msgs = self.callPackage ./etsi-its-vam-ts-msgs {};
+
  eus-assimp = self.callPackage ./eus-assimp {};
 
  eus-nlopt = self.callPackage ./eus-nlopt {};
@@ -1184,6 +1190,8 @@ self: super: {
 
  gazebo-msgs = self.callPackage ./gazebo-msgs {};
 
+ gazebo-noisy-depth-camera = self.callPackage ./gazebo-noisy-depth-camera {};
+
  gazebo-plugins = self.callPackage ./gazebo-plugins {};
 
  gazebo-ros = self.callPackage ./gazebo-ros {};
@@ -1317,6 +1325,8 @@ self: super: {
  handeye = self.callPackage ./handeye {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
+
+ hatchbed-common = self.callPackage ./hatchbed-common {};
 
  hdf5-map-io = self.callPackage ./hdf5-map-io {};
 

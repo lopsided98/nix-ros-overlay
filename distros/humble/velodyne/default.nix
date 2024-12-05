@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, velodyne-driver, velodyne-laserscan, velodyne-msgs, velodyne-pointcloud }:
 buildRosPackage {
   pname = "ros-humble-velodyne";
-  version = "2.4.0-r1";
+  version = "2.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/velodyne-release/archive/release/humble/velodyne/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "b321901f7129a3c71825b1fb84f24ac4642a87d31d9ac434c431a8e7d1d887fa";
+    url = "https://github.com/ros2-gbp/velodyne-release/archive/release/humble/velodyne/2.5.1-1.tar.gz";
+    name = "2.5.1-1.tar.gz";
+    sha256 = "5adb2388921cff883b1c00c4520571955ad3b3199ff33fe4a3ef573a33113ec7";
   };
 
   buildType = "ament_cmake";

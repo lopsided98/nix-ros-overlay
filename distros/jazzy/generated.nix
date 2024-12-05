@@ -230,6 +230,12 @@ self: super: {
 
  aws-sdk-cpp-vendor = self.callPackage ./aws-sdk-cpp-vendor {};
 
+ axis-camera = self.callPackage ./axis-camera {};
+
+ axis-description = self.callPackage ./axis-description {};
+
+ axis-msgs = self.callPackage ./axis-msgs {};
+
  azure-iot-sdk-c = self.callPackage ./azure-iot-sdk-c {};
 
  backward-ros = self.callPackage ./backward-ros {};
@@ -264,6 +270,8 @@ self: super: {
 
  boost-geometry-util = self.callPackage ./boost-geometry-util {};
 
+ boost-sml-vendor = self.callPackage ./boost-sml-vendor {};
+
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
  camera-aravis2 = self.callPackage ./camera-aravis2 {};
@@ -275,6 +283,10 @@ self: super: {
  camera-calibration-parsers = self.callPackage ./camera-calibration-parsers {};
 
  camera-info-manager = self.callPackage ./camera-info-manager {};
+
+ camera-info-manager-py = self.callPackage ./camera-info-manager-py {};
+
+ camera-ros = self.callPackage ./camera-ros {};
 
  can-msgs = self.callPackage ./can-msgs {};
 
@@ -319,6 +331,10 @@ self: super: {
  class-loader = self.callPackage ./class-loader {};
 
  classic-bags = self.callPackage ./classic-bags {};
+
+ clearpath-ros2-socketcan-interface = self.callPackage ./clearpath-ros2-socketcan-interface {};
+
+ clips-vendor = self.callPackage ./clips-vendor {};
 
  cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
 
@@ -454,6 +470,8 @@ self: super: {
 
  dual-arm-panda-moveit-config = self.callPackage ./dual-arm-panda-moveit-config {};
 
+ dual-laser-merger = self.callPackage ./dual-laser-merger {};
+
  dummy-map-server = self.callPackage ./dummy-map-server {};
 
  dummy-robot-bringup = self.callPackage ./dummy-robot-bringup {};
@@ -564,6 +582,8 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ ess-imu-driver2 = self.callPackage ./ess-imu-driver2 {};
+
  etsi-its-cam-coding = self.callPackage ./etsi-its-cam-coding {};
 
  etsi-its-cam-conversion = self.callPackage ./etsi-its-cam-conversion {};
@@ -601,6 +621,12 @@ self: super: {
  etsi-its-primitives-conversion = self.callPackage ./etsi-its-primitives-conversion {};
 
  etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
+
+ etsi-its-vam-ts-coding = self.callPackage ./etsi-its-vam-ts-coding {};
+
+ etsi-its-vam-ts-conversion = self.callPackage ./etsi-its-vam-ts-conversion {};
+
+ etsi-its-vam-ts-msgs = self.callPackage ./etsi-its-vam-ts-msgs {};
 
  event-camera-codecs = self.callPackage ./event-camera-codecs {};
 
@@ -1512,6 +1538,8 @@ self: super: {
 
  navigation2 = self.callPackage ./navigation2 {};
 
+ neo-nav2-bringup = self.callPackage ./neo-nav2-bringup {};
+
  neo-simulation2 = self.callPackage ./neo-simulation2 {};
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
@@ -1668,6 +1696,36 @@ self: super: {
 
  pinocchio = self.callPackage ./pinocchio {};
 
+ plansys2-bringup = self.callPackage ./plansys2-bringup {};
+
+ plansys2-bt-actions = self.callPackage ./plansys2-bt-actions {};
+
+ plansys2-core = self.callPackage ./plansys2-core {};
+
+ plansys2-domain-expert = self.callPackage ./plansys2-domain-expert {};
+
+ plansys2-executor = self.callPackage ./plansys2-executor {};
+
+ plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
+
+ plansys2-msgs = self.callPackage ./plansys2-msgs {};
+
+ plansys2-pddl-parser = self.callPackage ./plansys2-pddl-parser {};
+
+ plansys2-planner = self.callPackage ./plansys2-planner {};
+
+ plansys2-popf-plan-solver = self.callPackage ./plansys2-popf-plan-solver {};
+
+ plansys2-problem-expert = self.callPackage ./plansys2-problem-expert {};
+
+ plansys2-support-py = self.callPackage ./plansys2-support-py {};
+
+ plansys2-terminal = self.callPackage ./plansys2-terminal {};
+
+ plansys2-tests = self.callPackage ./plansys2-tests {};
+
+ plansys2-tools = self.callPackage ./plansys2-tools {};
+
  plotjuggler = self.callPackage ./plotjuggler {};
 
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
@@ -1698,11 +1756,17 @@ self: super: {
 
  polygon-utils = self.callPackage ./polygon-utils {};
 
+ popf = self.callPackage ./popf {};
+
+ pose-broadcaster = self.callPackage ./pose-broadcaster {};
+
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
  position-controllers = self.callPackage ./position-controllers {};
 
  proxsuite = self.callPackage ./proxsuite {};
+
+ ptz-action-server-msgs = self.callPackage ./ptz-action-server-msgs {};
 
  py-binding-tools = self.callPackage ./py-binding-tools {};
 
@@ -1755,6 +1819,20 @@ self: super: {
  random-numbers = self.callPackage ./random-numbers {};
 
  range-sensor-broadcaster = self.callPackage ./range-sensor-broadcaster {};
+
+ raspimouse = self.callPackage ./raspimouse {};
+
+ raspimouse-description = self.callPackage ./raspimouse-description {};
+
+ raspimouse-fake = self.callPackage ./raspimouse-fake {};
+
+ raspimouse-gazebo = self.callPackage ./raspimouse-gazebo {};
+
+ raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
+
+ raspimouse-ros2-examples = self.callPackage ./raspimouse-ros2-examples {};
+
+ raspimouse-sim = self.callPackage ./raspimouse-sim {};
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
@@ -2098,6 +2176,8 @@ self: super: {
 
  rosbag2-tests = self.callPackage ./rosbag2-tests {};
 
+ rosbag2-to-video = self.callPackage ./rosbag2-to-video {};
+
  rosbag2-transport = self.callPackage ./rosbag2-transport {};
 
  rosbridge-library = self.callPackage ./rosbridge-library {};
@@ -2240,9 +2320,13 @@ self: super: {
 
  rslidar-msg = self.callPackage ./rslidar-msg {};
 
+ rslidar-sdk = self.callPackage ./rslidar-sdk {};
+
  rt-manipulators-cpp = self.callPackage ./rt-manipulators-cpp {};
 
  rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
+
+ rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
 
  rtabmap = self.callPackage ./rtabmap {};
 
@@ -2306,6 +2390,8 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ sbg-driver = self.callPackage ./sbg-driver {};
+
  scenario-execution-control = self.callPackage ./scenario-execution-control {};
 
  scenario-execution-gazebo = self.callPackage ./scenario-execution-gazebo {};
@@ -2365,6 +2451,8 @@ self: super: {
  sick-scan-xd = self.callPackage ./sick-scan-xd {};
 
  simple-actions = self.callPackage ./simple-actions {};
+
+ simple-grasping = self.callPackage ./simple-grasping {};
 
  simple-launch = self.callPackage ./simple-launch {};
 
@@ -2748,6 +2836,8 @@ self: super: {
 
  warehouse-ros-sqlite = self.callPackage ./warehouse-ros-sqlite {};
 
+ web-video-server = self.callPackage ./web-video-server {};
+
  webots-ros2 = self.callPackage ./webots-ros2 {};
 
  webots-ros2-control = self.callPackage ./webots-ros2-control {};
@@ -2777,6 +2867,8 @@ self: super: {
  wiimote-msgs = self.callPackage ./wiimote-msgs {};
 
  xacro = self.callPackage ./xacro {};
+
+ yaets = self.callPackage ./yaets {};
 
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
 

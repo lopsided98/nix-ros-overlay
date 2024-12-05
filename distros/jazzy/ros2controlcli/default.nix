@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, controller-manager, controller-manager-msgs, python3Packages, rcl-interfaces, rclpy, ros2cli, ros2node, ros2param, rosidl-runtime-py }:
 buildRosPackage {
   pname = "ros-jazzy-ros2controlcli";
-  version = "4.18.0-r1";
+  version = "4.20.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/ros2controlcli/4.18.0-1.tar.gz";
-    name = "4.18.0-1.tar.gz";
-    sha256 = "278c6f7ed6856e5fb7e7f46aec4c010b42b501cbf11d4b79144bb3238d38d0bf";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/ros2controlcli/4.20.0-1.tar.gz";
+    name = "4.20.0-1.tar.gz";
+    sha256 = "85b30b4e09158d12b5c99b2af2cebe3d9c4ccbc195834905a13f608598192403";
   };
 
   buildType = "ament_python";

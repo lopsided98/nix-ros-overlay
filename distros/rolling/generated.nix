@@ -118,8 +118,6 @@ self: super: {
 
  ament-download = self.callPackage ./ament-download {};
 
- ament-flake8 = self.callPackage ./ament-flake8 {};
-
  ament-index-cpp = self.callPackage ./ament-index-cpp {};
 
  ament-index-python = self.callPackage ./ament-index-python {};
@@ -270,6 +268,10 @@ self: super: {
 
  camera-info-manager = self.callPackage ./camera-info-manager {};
 
+ camera-info-manager-py = self.callPackage ./camera-info-manager-py {};
+
+ camera-ros = self.callPackage ./camera-ros {};
+
  can-msgs = self.callPackage ./can-msgs {};
 
  canopen = self.callPackage ./canopen {};
@@ -399,6 +401,8 @@ self: super: {
  draco-point-cloud-transport = self.callPackage ./draco-point-cloud-transport {};
 
  dual-arm-panda-moveit-config = self.callPackage ./dual-arm-panda-moveit-config {};
+
+ dual-laser-merger = self.callPackage ./dual-laser-merger {};
 
  dummy-map-server = self.callPackage ./dummy-map-server {};
 
@@ -696,6 +700,8 @@ self: super: {
 
  graph-msgs = self.callPackage ./graph-msgs {};
 
+ grasping-msgs = self.callPackage ./grasping-msgs {};
+
  grbl-msgs = self.callPackage ./grbl-msgs {};
 
  grbl-ros = self.callPackage ./grbl-ros {};
@@ -751,6 +757,8 @@ self: super: {
  hardware-interface-testing = self.callPackage ./hardware-interface-testing {};
 
  hash-library-vendor = self.callPackage ./hash-library-vendor {};
+
+ hatchbed-common = self.callPackage ./hatchbed-common {};
 
  heaphook = self.callPackage ./heaphook {};
 
@@ -892,6 +900,8 @@ self: super: {
 
  laser-proc = self.callPackage ./laser-proc {};
 
+ laser-segmentation = self.callPackage ./laser-segmentation {};
+
  launch = self.callPackage ./launch {};
 
  launch-param-builder = self.callPackage ./launch-param-builder {};
@@ -977,6 +987,8 @@ self: super: {
  lifecycle-py = self.callPackage ./lifecycle-py {};
 
  linux-isolate-process = self.callPackage ./linux-isolate-process {};
+
+ log-view = self.callPackage ./log-view {};
 
  logging-demo = self.callPackage ./logging-demo {};
 
@@ -1470,6 +1482,8 @@ self: super: {
 
  polygon-utils = self.callPackage ./polygon-utils {};
 
+ pose-broadcaster = self.callPackage ./pose-broadcaster {};
+
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
  position-controllers = self.callPackage ./position-controllers {};
@@ -1528,6 +1542,10 @@ self: super: {
 
  range-sensor-broadcaster = self.callPackage ./range-sensor-broadcaster {};
 
+ raspimouse = self.callPackage ./raspimouse {};
+
+ raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
+
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
@@ -1584,8 +1602,6 @@ self: super: {
 
  rclcpp-lifecycle = self.callPackage ./rclcpp-lifecycle {};
 
- rclpy = self.callPackage ./rclpy {};
-
  rclpy-message-converter = self.callPackage ./rclpy-message-converter {};
 
  rclpy-message-converter-msgs = self.callPackage ./rclpy-message-converter-msgs {};
@@ -1622,8 +1638,6 @@ self: super: {
 
  rmf-charger-msgs = self.callPackage ./rmf-charger-msgs {};
 
- rmf-charging-schedule = self.callPackage ./rmf-charging-schedule {};
-
  rmf-cmake-uncrustify = self.callPackage ./rmf-cmake-uncrustify {};
 
  rmf-demos = self.callPackage ./rmf-demos {};
@@ -1657,6 +1671,10 @@ self: super: {
  rmf-lift-msgs = self.callPackage ./rmf-lift-msgs {};
 
  rmf-obstacle-msgs = self.callPackage ./rmf-obstacle-msgs {};
+
+ rmf-reservation-msgs = self.callPackage ./rmf-reservation-msgs {};
+
+ rmf-reservation-node = self.callPackage ./rmf-reservation-node {};
 
  rmf-robot-sim-common = self.callPackage ./rmf-robot-sim-common {};
 
@@ -1810,6 +1828,8 @@ self: super: {
 
  ros2trace-analysis = self.callPackage ./ros2trace-analysis {};
 
+ ros-babel-fish = self.callPackage ./ros-babel-fish {};
+
  ros-babel-fish-test-msgs = self.callPackage ./ros-babel-fish-test-msgs {};
 
  ros-base = self.callPackage ./ros-base {};
@@ -1875,6 +1895,8 @@ self: super: {
  rosbag2-test-msgdefs = self.callPackage ./rosbag2-test-msgdefs {};
 
  rosbag2-tests = self.callPackage ./rosbag2-tests {};
+
+ rosbag2-to-video = self.callPackage ./rosbag2-to-video {};
 
  rosbag2-transport = self.callPackage ./rosbag2-transport {};
 
@@ -2020,6 +2042,8 @@ self: super: {
 
  rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
 
+ rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
+
  rtabmap = self.callPackage ./rtabmap {};
 
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
@@ -2092,9 +2116,13 @@ self: super: {
 
  sick-safevisionary-tests = self.callPackage ./sick-safevisionary-tests {};
 
+ simple-grasping = self.callPackage ./simple-grasping {};
+
  simple-launch = self.callPackage ./simple-launch {};
 
  simulation = self.callPackage ./simulation {};
+
+ slg-msgs = self.callPackage ./slg-msgs {};
 
  slider-publisher = self.callPackage ./slider-publisher {};
 
@@ -2153,6 +2181,8 @@ self: super: {
  std-srvs = self.callPackage ./std-srvs {};
 
  steering-controllers-library = self.callPackage ./steering-controllers-library {};
+
+ steering-functions = self.callPackage ./steering-functions {};
 
  stereo-image-proc = self.callPackage ./stereo-image-proc {};
 
@@ -2435,6 +2465,8 @@ self: super: {
  warehouse-ros = self.callPackage ./warehouse-ros {};
 
  warehouse-ros-sqlite = self.callPackage ./warehouse-ros-sqlite {};
+
+ web-video-server = self.callPackage ./web-video-server {};
 
  webots-ros2 = self.callPackage ./webots-ros2 {};
 

@@ -54,9 +54,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
   fmilibrary-vendor = patchExternalProjectGit rosSuper.fmilibrary-vendor {
     url = "https://github.com/modelon-community/fmi-library.git";
-    # Uses ${fmilibrary_version}, so can't match
-    originalRev = "";
     rev = "2.2.3";
+    revVariable = "fmilibrary_version";
     fetchgitArgs.hash = "sha256-i8EtjPMg39S/3RyoUaXm5A8Nu/NbgAwjxRCdyh2elyU=";
   };
 
@@ -209,11 +208,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     postFixup = postFixup + ''
       wrapQtApp "$out/lib/rqt_robot_monitor/rqt_robot_monitor"
     '';
-  });
-
-  rviz-ogre-vendor = rosSuper.rviz-ogre-vendor.overrideAttrs ({ ... }: {
-    # Prevent replacing $out/opt/.. with $out/var/empty/..
-    dontFixCmake = true;
   });
 
   rviz2 = rosSuper.rviz2.overrideAttrs ({

@@ -48,6 +48,7 @@
     rev,
     originalRev ? rev,
     originalUrl ? url,
+    revVariable ? "",
     file ? "CMakeLists.txt",
     fetchgitArgs ? {}
   }: pkg.overrideAttrs ({
@@ -59,6 +60,7 @@
           { print "URL \"" path "\""; foundUrl=1; next } \
           { print }
         $0 ~ "GIT_TAG[[:blank:]]+" originalRev { print; foundRev=1 }
+        $0 ~ "set\\(" revVariable "[[:blank:]]+\"?" originalRev "\"?\\)" { print; foundRev=1 }
         END {
           if (!foundUrl) print "patchExternalProjectGit: did not find URL: " originalUrl > "/dev/stderr"
           if (!foundRev) print "patchExternalProjectGit: did not find revision: " originalRev > "/dev/stderr"
@@ -69,6 +71,7 @@
       awk -i inplace \
         -v originalUrl=${lib.escapeShellArg originalUrl} \
         -v originalRev=${lib.escapeShellArg originalRev} \
+        -v revVariable=${lib.escapeShellArg revVariable} \
         -v path=${lib.escapeShellArg (self.fetchgit ({ inherit url rev; } // fetchgitArgs))} \
         ${lib.escapeShellArg script} \
         ${lib.escapeShellArg file}
@@ -141,18 +144,6 @@
       endif()
       EOF
     '';
-  });
-
-  patchBoostPython = pkg: pkg.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = let
-      pythonVersion = rosSelf.python.sourceVersion;
-      pythonLib = "python${pythonVersion.major}${pythonVersion.minor}";
-    in ''
-      sed -i CMakeLists.txt \
-        -e '/Boost [^)]*/s/python[^ )]*/${pythonLib}/'
-    '' + postPatch;
   });
 
   # Many ROS packages claim to have a dependency on Boost signals when they

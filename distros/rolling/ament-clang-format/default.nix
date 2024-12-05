@@ -2,19 +2,19 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, clang, python3Packages, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, clang, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-rolling-ament-clang-format";
-  version = "0.18.1-r1";
+  version = "0.19.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_clang_format/0.18.1-1.tar.gz";
-    name = "0.18.1-1.tar.gz";
-    sha256 = "97333955fe0d053c3cecc4748fdaf50c6598983c981ac7483451c4101425b1c9";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_clang_format/0.19.0-1.tar.gz";
+    name = "0.19.0-1.tar.gz";
+    sha256 = "6f4f00133cf3a5fd8906ea8decb8c3e677bea662a86a7bbda119dee5b6572732";
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint pythonPackages.pytest ];
   propagatedBuildInputs = [ clang python3Packages.pyyaml ];
 
   meta = {

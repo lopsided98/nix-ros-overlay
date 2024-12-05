@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-uncrustify, ament-index-cpp, ceres-solver, eigen, glog, proj, qt5, rmf-utils, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-rmf-traffic-editor";
-  version = "1.6.2-r1";
+  version = "1.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/humble/rmf_traffic_editor/1.6.2-1.tar.gz";
-    name = "1.6.2-1.tar.gz";
-    sha256 = "1bac08da58607592866dacc526df53c7910cc3f78a371e6214fc3f3da3f25956";
+    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/humble/rmf_traffic_editor/1.6.3-1.tar.gz";
+    name = "1.6.3-1.tar.gz";
+    sha256 = "8350790b614dbab407a13e5eddfbc7299c31357dd27ec267a136f24516a35904";
   };
 
   buildType = "ament_cmake";

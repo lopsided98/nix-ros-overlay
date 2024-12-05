@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-libgui, mrpt-libmaps, mrpt-libnav, mrpt-libtclap, mvsim }:
 buildRosPackage {
   pname = "ros-humble-mrpt-path-planning";
-  version = "0.2.0-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_path_planning-release/archive/release/humble/mrpt_path_planning/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "fd174f58ca4bea5731ef6a6602f6998ff623e9fa779024da1fdee84a46420eab";
+    url = "https://github.com/ros2-gbp/mrpt_path_planning-release/archive/release/humble/mrpt_path_planning/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "cd76ba4065992c09961d033d9698471296f705e494e1fa88f9b11ed17d311f55";
   };
 
   buildType = "cmake";

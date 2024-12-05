@@ -25,6 +25,17 @@ in {
 
   gazebo = self.gazebo_11;
 
+  geometric-shapes = rosSuper.geometric-shapes.overrideAttrs({
+      postPatch ? "", ...
+  }: {
+      # Remove workaround for Ubuntu-specific dependency hell issue
+      postPatch = postPatch + ''
+        substituteInPlace CMakeLists.txt --replace-fail \
+          'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
+          'find_package(octomap REQUIRED)'
+      '';
+  });
+
   google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
     url = "https://github.com/google/benchmark.git";
     rev = "344117638c8ff7e239044fd0fa7085839fc03021";
@@ -32,8 +43,8 @@ in {
   };
 
   gz-cmake-vendor = lib.patchGzAmentVendorGit rosSuper.gz-cmake-vendor {
-    version = "4.0.0";
-    hash = "sha256-r1XQqx+JqH+ITZIaixgZjA/9weyPq8+LQ1N2ZsIdOK4=";
+    version = "4.1.0";
+    hash = "sha256-GyVDbJM3qdFSdp+Kw8z1vB6ipOkB0+4TYWLV+FhIsj4=";
   };
 
   gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor {
@@ -184,6 +195,35 @@ in {
     hash = "sha256-ZP8+URGfN//Pr53uy9mHp8tNTZA110o/03czlaRw/aE=";
   };
 
+  moveit-core = rosSuper.moveit-core.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Remove workaround for Ubuntu-specific dependency hell issue
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
+        'find_package(octomap REQUIRED)'
+    '';
+  });
+
+  moveit-ros-occupancy-map-monitor = rosSuper.moveit-ros-occupancy-map-monitor.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Remove workaround for Ubuntu-specific dependency hell issue
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
+        'find_package(octomap REQUIRED)'
+    '';
+  });
+
+  nlohmann-json-schema-validator-vendor = lib.patchExternalProjectGit rosSuper.nlohmann-json-schema-validator-vendor {
+    url = "https://github.com/pboettch/json-schema-validator.git";
+    rev = "5ef4f903af055550e06955973a193e17efded896";
+    revVariable = "nlohmann_json_schema_validator_version";
+    fetchgitArgs.hash = "sha256-b02OFUx0BxUA6HN6IaacSg1t3RP4o7NND7X0U635W8U=";
+  };
+
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre.git";
     rev = "v1.12.10";
@@ -204,9 +244,18 @@ in {
     '';
   };
 
+  rviz-rendering = rosSuper.rviz-rendering.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace src/rviz_rendering/render_system.cpp \
+        --replace-fail /opt/rviz_ogre_vendor ""
+    '';
+  });
+
   sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor {
-    version = "15.0.0";
-    hash = "sha256-d9PKTgUIFPX1rc1HlKCQPxcUcTn2ivObMvkGz/HBExw=";
+    version = "15.1.1";
+    hash = "sha256-4/0pVaev++v0+wHQiGeTl8XtTDzh2li32dND0EjfjwA=";
   };
 
   shared-queues-vendor = lib.patchVendorUrl rosSuper.shared-queues-vendor {

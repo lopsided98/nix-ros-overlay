@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ethercat-grant, geometry-msgs, message-generation, message-runtime, roscpp, roscpp-serialization, soem, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-adi-tmc-coe";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/adi_tmcl_coe-release/archive/release/noetic/adi_tmc_coe/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "282e91770e81f785118f6013e870ccb3f4dc4b38f63982550a7cbaac25ddb9b0";
+    url = "https://github.com/ros2-gbp/adi_tmcl_coe-release/archive/release/noetic/adi_tmc_coe/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "1982f3185179e5350f7e179e541724e96a456c2cf27747e90b13ae23f55c50e3";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, gtest, lanelet2-core, lanelet2-io, lanelet2-maps, lanelet2-projection, lanelet2-traffic-rules, mrt-cmake-modules }:
 buildRosPackage {
   pname = "ros-humble-lanelet2-matching";
-  version = "1.2.1-r1";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/humble/lanelet2_matching/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "45fd4199f613a2aec3ad277229e906d5a682da6b1bb5dc9e65046f6d26f345a8";
+    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/humble/lanelet2_matching/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "de4ecfd491d630085ff4e39c09b44c6cfc777dc9201000bce3f2ccf292b25b3c";
   };
 
   buildType = "ament_cmake";

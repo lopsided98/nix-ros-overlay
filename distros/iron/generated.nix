@@ -476,6 +476,8 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ eiquadprog = self.callPackage ./eiquadprog {};
+
  etsi-its-cam-coding = self.callPackage ./etsi-its-cam-coding {};
 
  etsi-its-cam-conversion = self.callPackage ./etsi-its-cam-conversion {};
@@ -513,6 +515,12 @@ self: super: {
  etsi-its-primitives-conversion = self.callPackage ./etsi-its-primitives-conversion {};
 
  etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
+
+ etsi-its-vam-ts-coding = self.callPackage ./etsi-its-vam-ts-coding {};
+
+ etsi-its-vam-ts-conversion = self.callPackage ./etsi-its-vam-ts-conversion {};
+
+ etsi-its-vam-ts-msgs = self.callPackage ./etsi-its-vam-ts-msgs {};
 
  event-camera-codecs = self.callPackage ./event-camera-codecs {};
 
@@ -1590,6 +1598,8 @@ self: super: {
 
  popf = self.callPackage ./popf {};
 
+ pose-broadcaster = self.callPackage ./pose-broadcaster {};
+
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
  position-controllers = self.callPackage ./position-controllers {};
@@ -2200,6 +2210,8 @@ self: super: {
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
+ sbg-driver = self.callPackage ./sbg-driver {};
+
  sdformat-test-files = self.callPackage ./sdformat-test-files {};
 
  sdl2-vendor = self.callPackage ./sdl2-vendor {};
@@ -2237,6 +2249,8 @@ self: super: {
  sick-scan-xd = self.callPackage ./sick-scan-xd {};
 
  simple-actions = self.callPackage ./simple-actions {};
+
+ simple-grasping = self.callPackage ./simple-grasping {};
 
  simple-launch = self.callPackage ./simple-launch {};
 
@@ -2613,6 +2627,8 @@ self: super: {
  warehouse-ros = self.callPackage ./warehouse-ros {};
 
  warehouse-ros-sqlite = self.callPackage ./warehouse-ros-sqlite {};
+
+ web-video-server = self.callPackage ./web-video-server {};
 
  webots-ros2 = self.callPackage ./webots-ros2 {};
 

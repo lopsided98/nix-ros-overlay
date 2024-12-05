@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, camera-calibration-parsers, ceres-solver, control-msgs, cv-bridge, eigen, geometric-shapes, geometry-msgs, gflags, kdl-parser, launch, launch-ros, launch-testing, moveit-msgs, nav-msgs, orocos-kdl, pluginlib, protobuf, rclcpp, rclcpp-action, robot-calibration-msgs, rosbag2-cpp, sensor-msgs, std-msgs, suitesparse, tf2-geometry-msgs, tf2-ros, tinyxml-2, tinyxml2-vendor, visualization-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-rolling-robot-calibration";
-  version = "0.9.1-r1";
+  version = "0.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robot_calibration-release/archive/release/rolling/robot_calibration/0.9.1-1.tar.gz";
-    name = "0.9.1-1.tar.gz";
-    sha256 = "bb504e4303dfa03df9abd9cd29d28b1fa7235a4fb69bd348c66e5ee1f62f1805";
+    url = "https://github.com/ros2-gbp/robot_calibration-release/archive/release/rolling/robot_calibration/0.9.2-1.tar.gz";
+    name = "0.9.2-1.tar.gz";
+    sha256 = "e402530f659097f913d889e5910bdd7312eb20c1b095837487438ba1c9de5cea";
   };
 
   buildType = "ament_cmake";

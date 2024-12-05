@@ -50,7 +50,7 @@ let
           # CMakeLists.txt sets MRPT_VERSION_TO_DOWNLOAD to the
           # version from package.xml
           rev = head (splitString "-" pkg.version); # Ignore ROS release such as "-r1".
-          fetchgitArgs.hash = "sha256-hWQlDdeR9qkrKBL6k689yDSupynU24r1BWhycp8mqvI=";
+          fetchgitArgs.hash = "sha256-w9LxOtbXw01B2i4aqbhAIjjDwHzC+OvZbcZG/Pyn71Q=";
         };
     in rosSuper.lib.genAttrs [
       "mrpt-apps"
@@ -72,67 +72,14 @@ let
   overrides = rosSelf: rosSuper: with rosSelf.lib; {
     # ROS package overrides/fixups
 
-    camera-calibration-parsers = patchBoostPython rosSuper.camera-calibration-parsers;
-
-    cob-light = patchBoostSignals rosSuper.cob-light;
-
-    cv-bridge = patchBoostPython rosSuper.cv-bridge;
-
-    dynamic-reconfigure = rosSuper.dynamic-reconfigure.overrideAttrs ({
-      postPatch ? "", ...
-    }: {
-      postPatch = postPatch + ''
-        substituteInPlace cmake/setup_custom_pythonpath.sh.in \
-          --replace-fail '#!/usr/bin/env sh' '#!${self.stdenv.shell}'
-      '';
-    });
-
-    fake-localization = patchBoostSignals rosSuper.fake-localization;
-
     gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({ ... }:{
       setupHook = ./gazebo-ros-setup-hook.sh;
-    });
-
-    gmapping = patchBoostSignals rosSuper.gmapping;
-
-    image-cb-detector = patchBoostSignals rosSuper.image-cb-detector;
-
-    laser-cb-detector = patchBoostSignals rosSuper.laser-cb-detector;
-
-    libfranka = rosSuper.libfranka.overrideAttrs ({
-      cmakeFlags ? [], ...
-    }: {
-      # Uses custom flag to disable tests. Attempts to download GTest without
-      # this.
-      cmakeFlags = cmakeFlags ++ [ "-DBUILD_TESTS=OFF" ];
-    });
-
-    libpcan = patchVendorUrl rosSuper.libpcan {
-      url = "http://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.3.tar.gz";
-      sha256 = "0f6v3vjszyg1xp99jx48hyv8p32iyq4j18a4ir4x5p6f3b0z3r34";
-    };
-
-    librealsense = rosSuper.librealsense.overrideAttrs ({
-      patches ? [], ...
-    }: {
-      patches = patches ++ [ (self.fetchpatch {
-        url = "https://github.com/IntelRealSense/librealsense/commit/86e434c86096b91a722f22bd039c2b6eeb8174ab.patch";
-        sha256 = "1kcvm32cx9zzd56k9yglnyxizmfgar3a6cybjdwpyf6ljrxjlpp5";
-      }) ];
     });
 
     librealsense2 = rosSuper.librealsense2.overrideAttrs ({
       buildInputs ? [], ...
     }: {
       buildInputs = buildInputs ++ [ self.glfw self.libGLU ];
-    });
-
-    libuvc-camera = rosSuper.libuvc-camera.overrideAttrs ({
-      postPatch ? "", ...
-    }: {
-      postPatch = postPatch + ''
-        substituteInPlace cfg/UVCCamera.cfg --replace-fail python2 python
-      '';
     });
 
     mapviz = rosSuper.mapviz.overrideAttrs ({
@@ -156,15 +103,30 @@ let
       ROS_PYTHON_VERSION = if rosSelf.python.isPy3k then 3 else 2;
     });
 
-    message-filters = patchBoostSignals rosSuper.message-filters;
+    osqp-vendor = pipe rosSuper.osqp-vendor [
+      (pkg: pkg.overrideAttrs ({
+        preInstall ? "", ...
+      }: {
+        # osqp installs into both lib/cmake/ and lib64/cmake/ which is
+        # problematic because moveLib64 doesn't attempt to merge overlapping
+        # directories but fails instead. Here we do the merge manually.
+        preInstall = preInstall + ''
+          mkdir -p ./osqp_install/lib/cmake/osqp
+          mv ./osqp_install/lib64/cmake/osqp/* ./osqp_install/lib/cmake/osqp
+          rm -r ./osqp_install/lib64/cmake
+        '';
+      }))
 
-    message-relay = rosSuper.message-relay.overrideAttrs ({
-      postPatch ? "", ...
-    }: {
-      postPatch = postPatch + ''
-        patchShebangs scripts
-      '';
-    });
+      (pkg: patchExternalProjectGit pkg {
+        url = "https://github.com/osqp/osqp.git";
+        rev = "v0.6.2";
+        revVariable = "git_tag";
+        fetchgitArgs = {
+          hash = "sha256-0BbUe1J9qzvyKDBLTz+pAEmR3QpRL+hnxZ2re/3mEvs=";
+          leaveDotGit = true;
+        };
+      })
+    ];
 
     ompl = rosSuper.ompl.overrideAttrs ({
       patches ? [], ...
@@ -178,16 +140,6 @@ let
       ];
     });
 
-    open-manipulator-control-gui = rosSuper.open-manipulator-control-gui.overrideAttrs ({
-      nativeBuildInputs ? [], ...
-    }: {
-      dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
-        wrapQtApp "$out/lib/open_manipulator_control_gui/open_manipulator_control_gui"
-      '';
-    });
-
     plotjuggler = rosSuper.plotjuggler.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
@@ -197,8 +149,6 @@ let
         wrapQtApp "$out/lib/plotjuggler/plotjuggler"
       '';
     });
-
-    pr2-tilt-laser-interface = patchBoostSignals rosSuper.pr2-tilt-laser-interface;
 
     python-qt-binding = (rosSuper.python-qt-binding.override {
       python3Packages = rosSelf.python3Packages.overrideScope (pyFinal: pyPrev: {
@@ -299,7 +249,7 @@ let
         wrapQtApp "$out/lib/rqt_plot/rqt_plot"
       '';
     });
-    
+
     rqt-publisher = rosSuper.rqt-publisher.overrideAttrs ({
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
@@ -380,30 +330,6 @@ let
       '';
     });
 
-    rxcpp-vendor = patchVendorUrl rosSuper.rxcpp-vendor {
-      url = "https://github.com/ReactiveX/RxCpp/archive/v4.1.0.tar.gz";
-      sha256 = "1smxrcm0s6bz05185dx1i2xjgn47rq7m247pblil6p3bmk3lkfyk";
-    };
-
-    swri-profiler-tools = rosSuper.swri-profiler-tools.overrideAttrs ({
-      nativeBuildInputs ? [], ...
-    }: {
-      dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
-        wrapQtApp "$out/lib/swri_profiler_tools/profiler"
-      '';
-    });
-
-    tf = patchBoostSignals rosSuper.tf;
-
-    tf2 = patchBoostSignals rosSuper.tf2;
-
-    tinydir-vendor = patchVendorUrl rosSuper.tinydir-vendor {
-      url = "https://github.com/cxong/tinydir/archive/1.2.4.tar.gz";
-      sha256 = "1qjwky7v4b9d9dmxzsybnhiz6xgx94grc67sdyvlp1d4kfkfsl4w";
-    };
-
     turtlesim = rosSuper.turtlesim.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
@@ -413,8 +339,6 @@ let
         wrapQtApp "$out/lib/turtlesim/turtlesim_node"
       '';
     });
-
-    urdf = patchBoostPython rosSuper.urdf;
   } // (mrptOverrides rosSelf rosSuper);
 
   otherSplices = {
