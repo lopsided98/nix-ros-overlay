@@ -34,7 +34,7 @@ buildPythonPackage rec {
   doCheck = false;
 
   meta = with lib; {
-    description = "An extended release manager for ROS";
+    description = "Extended release manager for ROS";
     homepage = "https://github.com/ros-infrastructure/superflore";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];

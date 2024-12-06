@@ -15,7 +15,8 @@ buildPythonPackage rec {
   doCheck = false;
 
   meta = with lib; {
-    description = ''
+    description = "Extension for colcon-core to identify packages from setup.py files";
+    longDescription = ''
       An extension for colcon-core to identify packages with a setup.py file by
       introspecting the arguments to the setup() function call of setuptools.
     '';

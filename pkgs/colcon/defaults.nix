@@ -18,7 +18,7 @@ buildPythonPackage rec {
   doCheck = false;
 
   meta = with lib; {
-    description = "An extension for colcon-core to provide custom default values for the command line arguments from a configuration file.";
+    description = "Extension for colcon-core to provide custom default values for the command line arguments from a configuration file";
     homepage = "https://colcon.readthedocs.io/en/released/user/configuration.html#defaults-yaml";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];

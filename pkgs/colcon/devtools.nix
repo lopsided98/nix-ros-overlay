@@ -14,7 +14,7 @@ buildPythonPackage rec {
   ];
 
   meta = with lib; {
-    description = "Extension for colcon to provide information about all extension points and extensions.";
+    description = "Extension for colcon to provide information about all extension points and extensions";
     homepage = "https://github.com/colcon/colcon-devtools";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];

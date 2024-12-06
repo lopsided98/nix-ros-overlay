@@ -15,7 +15,7 @@ buildPythonPackage rec {
   doCheck = false;
 
   meta = with lib; {
-    description = "An extension for colcon-core to recursively crawl for packages.";
+    description = "Extension for colcon-core to recursively crawl for packages";
     homepage = "https://colcon.readthedocs.io";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];

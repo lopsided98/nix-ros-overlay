@@ -70,7 +70,7 @@ let
     };
 
     meta = with lib; {
-      description = "Command line tool to build sets of software packages.";
+      description = "Command line tool to build sets of software packages";
       homepage = "https://colcon.readthedocs.io";
       license = licenses.asl20;
       maintainers = with maintainers; [ lopsided98 ];
