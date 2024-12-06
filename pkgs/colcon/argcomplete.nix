@@ -14,7 +14,7 @@ buildPythonPackage rec {
   doCheck = false;
 
   meta = with lib; {
-    description = "An extension for colcon-core to provide command line completion using argcomplete.";
+    description = "Extension for colcon-core to provide command line completion using argcomplete";
     homepage = "https://github.com/colcon/colcon-argcomplete";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];

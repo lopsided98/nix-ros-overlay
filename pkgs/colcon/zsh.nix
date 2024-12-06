@@ -14,7 +14,7 @@ buildPythonPackage rec {
   doCheck = false;
 
   meta = with lib; {
-    description = "An extension for colcon-core to provide Z shell scripts.";
+    description = "Extension for colcon-core to provide Z shell scripts";
     homepage = "https://github.com/colcon/colcon-zsh";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];

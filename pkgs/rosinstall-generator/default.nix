@@ -19,7 +19,7 @@ buildPythonPackage rec {
   checkInputs = [ pytestCheckHook ];
 
   meta = with lib; {
-    description = "A tool to generator rosinstall files";
+    description = "Tool to generate rosinstall files";
     homepage = "http://wiki.ros.org/rosinstall_generator";
     license = licenses.bsd3;
     maintainers = with maintainers; [ lopsided98 ];

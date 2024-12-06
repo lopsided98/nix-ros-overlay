@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     homepage = "https://gazebosim.org/libs/math";
-    description = "General purpose math library for robot applications. ";
+    description = "General purpose math library for robot applications";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];
     platforms = platforms.all;

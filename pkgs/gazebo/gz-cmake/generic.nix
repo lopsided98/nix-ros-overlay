@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     homepage = "https://gazebosim.org/libs/cmake";
-    description = "A set of CMake modules that are used by the C++-based Gazebo projects. ";
+    description = "Set of CMake modules used by the C++-based Gazebo projects";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];
     platforms = platforms.all;

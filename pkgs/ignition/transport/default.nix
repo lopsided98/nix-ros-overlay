@@ -33,7 +33,7 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     homepage = "https://ignitionrobotics.org/libs/transport";
-    description = "Provides fast and efficient asyncronous message passing, services, and data logging.";
+    description = "Provides fast and efficient asynchronous message passing, services, and data logging";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];
     platforms = platforms.all;
