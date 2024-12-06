@@ -29,7 +29,7 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     homepage = "https://ignitionrobotics.org/libs/msgs";
-    description = "Protobuf messages and functions for robot applications.";
+    description = "Protobuf messages and functions for robot applications";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];
     platforms = platforms.all;

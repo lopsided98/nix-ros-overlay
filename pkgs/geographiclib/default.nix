@@ -35,7 +35,7 @@ in stdenv.mkDerivation rec {
   '';
 
   meta = with lib; {
-    description = "A small set of C++ classes for performing geographic calculations.";
+    description = "Small set of C++ classes for performing geographic calculations";
     homepage = "https://geographiclib.sourceforge.io/";
     license = licenses.mit;
     maintainers = with maintainers; [ lopsided98 ];

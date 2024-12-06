@@ -27,7 +27,8 @@ buildRosPackage rec {
   ];
 
   meta = {
-    description = "Generate the ROS interfaces in Rust.";
+    description = "Tool to generate the ROS interfaces in Rust";
+    homepage = "https://github.com/ros2-rust/ros2_rust";
     license = with lib.licenses; [ asl20 ];
   };
 }

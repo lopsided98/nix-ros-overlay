@@ -14,7 +14,7 @@ buildPythonPackage rec {
   doCheck = false;
 
   meta = with lib; {
-    description = "An extension for colcon-core to provide Bash scripts.";
+    description = "Extension for colcon-core to provide Bash scripts";
     homepage = "https://github.com/colcon/colcon-bash";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];

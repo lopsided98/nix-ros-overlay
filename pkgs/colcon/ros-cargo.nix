@@ -22,7 +22,7 @@ buildPythonPackage rec {
   doCheck = false;
 
   meta = with lib; {
-    description = "Build cargo projects with colcon.";
+    description = "Build cargo projects with colcon";
     homepage = "https://github.com/colcon/colcon-ros-cargo";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];

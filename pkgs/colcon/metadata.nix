@@ -18,7 +18,7 @@ buildPythonPackage rec {
   doCheck = false;
 
   meta = with lib; {
-    description = "An extension for colcon-core to fetch and manage package metadata from repositories.";
+    description = "Extension for colcon-core to fetch and manage package metadata from repositories";
     homepage = "https://colcon.readthedocs.io";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];

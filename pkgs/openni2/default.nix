@@ -84,6 +84,7 @@ in clangStdenv.mkDerivation rec {
 
   meta = with lib; {
     description = "Open source SDK used for developing 3D sensing middleware libraries and applications";
+    homepage = "https://structure.io/openni/";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];
   };
