@@ -1,6 +1,14 @@
-{ lib, buildPythonPackage, fetchPypi, catkin-pkg, colcon-cmake, colcon-core
-, colcon-pkg-config, colcon-python-setup-py
-, colcon-recursive-crawl }:
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  catkin-pkg,
+  colcon-cmake,
+  colcon-core,
+  colcon-pkg-config,
+  colcon-python-setup-py,
+  colcon-recursive-crawl,
+}:
 
 buildPythonPackage rec {
   pname = "colcon-ros";

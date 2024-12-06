@@ -1,6 +1,8 @@
 # Environment containing basic ROS2 tools
 
-{ pkgs ? import ../. {} }:
+{
+  pkgs ? import ../. { },
+}:
 with pkgs;
 with rosPackages.humble;
 

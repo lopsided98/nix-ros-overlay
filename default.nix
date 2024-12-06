@@ -5,10 +5,15 @@ let
     sha256 = lock.nodes.nixpkgs.locked.narHash;
   };
 in
-{ nixpkgs ? lockedNixpkgs
-, overlays ? []
-, ... }@args:
+{
+  nixpkgs ? lockedNixpkgs,
+  overlays ? [ ],
+  ...
+}@args:
 
-import nixpkgs (args // {
-  overlays = [ (import ./overlay.nix) ] ++ overlays;
-})
+import nixpkgs (
+  args
+  // {
+    overlays = [ (import ./overlay.nix) ] ++ overlays;
+  }
+)

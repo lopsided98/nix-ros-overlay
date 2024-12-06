@@ -1,20 +1,30 @@
-{ stdenv, lib, fetchFromGitHub, perl, bison, flex }:
+{
+  stdenv,
+  lib,
+  fetchFromGitHub,
+  perl,
+  bison,
+  flex,
+}:
 
 let
-  target = {
-    "armv6l-linux" = "armv6l.linux";
-    "armv7l-linux" = "armv7l.linux";
-    "aarch64-linux" = "armv8.linux";
-    "x86_64-linux" = "x86_64.linux";
-  }.${stdenv.hostPlatform.system} or (throw "Unsupported platform");
-in stdenv.mkDerivation rec {
+  target =
+    {
+      "armv6l-linux" = "armv6l.linux";
+      "armv7l-linux" = "armv7l.linux";
+      "aarch64-linux" = "armv8.linux";
+      "x86_64-linux" = "x86_64.linux";
+    }
+    .${stdenv.hostPlatform.system} or (throw "Unsupported platform");
+in
+stdenv.mkDerivation rec {
   pname = "opensplice";
   version = "6.9.210323";
 
   src = fetchFromGitHub {
     owner = "ADLINK-IST";
     repo = pname;
-    rev = "OSPL_V${lib.replaceStrings ["."] ["_"] version}OSS_RELEASE";
+    rev = "OSPL_V${lib.replaceStrings [ "." ] [ "_" ] version}OSS_RELEASE";
     sha256 = "0zg1gcrxkgp20yd7dil30qrm6w58jvn9x106rvsfs8q1vaafg5f7";
   };
 
@@ -26,14 +36,18 @@ in stdenv.mkDerivation rec {
     sed -i "s#/usr/bin/ar#$AR#" setup/*-default.mak
   '';
 
-  nativeBuildInputs = [ perl bison flex ];
+  nativeBuildInputs = [
+    perl
+    bison
+    flex
+  ];
 
   configurePhase = ''
     runHook preConfigure
     . configure ${target}-release
     runHook postConfigure
   '';
-  
+
   postInstall = ''
     cp -aT 'install/RTS/${target}' "$out"
   '';
@@ -50,6 +64,11 @@ in stdenv.mkDerivation rec {
     '';
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];
-    platforms = [ "armv6l-linux" "armv7l-linux" "aarch64-linux" "x86_64-linux" ];
+    platforms = [
+      "armv6l-linux"
+      "armv7l-linux"
+      "aarch64-linux"
+      "x86_64-linux"
+    ];
   };
 }

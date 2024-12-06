@@ -1,4 +1,12 @@
-{ lib, buildPythonPackage, fetchPypi, pyyaml, setuptools, catkin-pkg, rospkg }:
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  pyyaml,
+  setuptools,
+  catkin-pkg,
+  rospkg,
+}:
 
 buildPythonPackage rec {
   pname = "rosdistro";
@@ -9,7 +17,12 @@ buildPythonPackage rec {
     hash = "sha256-RwOCS1hwS8oZBhMuO9PUK6cq9zhh7QPVoZJUeKcr+ys=";
   };
 
-  propagatedBuildInputs = [ pyyaml setuptools catkin-pkg rospkg ];
+  propagatedBuildInputs = [
+    pyyaml
+    setuptools
+    catkin-pkg
+    rospkg
+  ];
 
   meta = with lib; {
     description = "A tool to work with rosdistro files";

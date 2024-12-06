@@ -1,12 +1,26 @@
-{ lib, clangStdenv, fetchurl, fetchFromGitHub, fetchDebianPatch, libusb1, jdk
-, python3, doxygen, libGLU, xorg, freeglut, libjpeg }:
+{
+  lib,
+  clangStdenv,
+  fetchurl,
+  fetchFromGitHub,
+  fetchDebianPatch,
+  libusb1,
+  jdk,
+  python3,
+  doxygen,
+  libGLU,
+  xorg,
+  freeglut,
+  libjpeg,
+}:
 
 let
   libopenni2_pc = fetchurl {
     url = "https://salsa.debian.org/multimedia-team/openni2/raw/8491921c14b8c41850f0e0b0493e195cb53a71a3/debian/libopenni2.pc";
     sha256 = "1023s3j71m56fnvqmai4683ds4fbm92dhf1s8csdrdn88a726ygm";
   };
-in clangStdenv.mkDerivation rec {
+in
+clangStdenv.mkDerivation rec {
   pname = "openni2";
   version = "2.2.0.33";
 
@@ -32,10 +46,23 @@ in clangStdenv.mkDerivation rec {
     })
   ];
 
-  nativeBuildInputs = [ jdk python3 doxygen ];
-  buildInputs = [ libusb1 libGLU xorg.libX11 freeglut libjpeg ];
+  nativeBuildInputs = [
+    jdk
+    python3
+    doxygen
+  ];
+  buildInputs = [
+    libusb1
+    libGLU
+    xorg.libX11
+    freeglut
+    libjpeg
+  ];
 
-  outputs = [ "out" "doc" ];
+  outputs = [
+    "out"
+    "doc"
+  ];
 
   postPatch = ''
     patchShebangs Source
@@ -52,7 +79,10 @@ in clangStdenv.mkDerivation rec {
       --replace-fail 'register ' ""
   '';
 
-  makeFlags = [ "CFG=Release" "ALLOW_WARNINGS=1" ];
+  makeFlags = [
+    "CFG=Release"
+    "ALLOW_WARNINGS=1"
+  ];
 
   postBuild = ''
     make doc

@@ -1,6 +1,16 @@
-{ lib, buildPythonPackage, fetchPypi, catkin-pkg, colcon-cmake
-, colcon-core, colcon-pkg-config, colcon-python-setup-py, colcon-recursive-crawl
-, colcon-library-path, toml }:
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  catkin-pkg,
+  colcon-cmake,
+  colcon-core,
+  colcon-pkg-config,
+  colcon-python-setup-py,
+  colcon-recursive-crawl,
+  colcon-library-path,
+  toml,
+}:
 
 buildPythonPackage rec {
   pname = "colcon-cargo";

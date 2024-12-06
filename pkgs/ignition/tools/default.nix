@@ -1,4 +1,10 @@
-{ lib, stdenv, fetchFromGitHub, cmake, ruby }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  cmake,
+  ruby,
+}:
 
 stdenv.mkDerivation rec {
   pname = "ignition-tools";
@@ -12,7 +18,10 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-HgYT7MARRnOdUuUllxRn9pl7tsWO5RDIFDObzJQgZpc=";
   };
 
-  nativeBuildInputs = [ cmake ruby ];
+  nativeBuildInputs = [
+    cmake
+    ruby
+  ];
 
   meta = with lib; {
     homepage = "https://bitbucket.org/ignitionrobotics/ign-tools";

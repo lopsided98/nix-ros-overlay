@@ -2,7 +2,9 @@
 # roslaunch turtlebot3_gazebo turtlebot3_world.launch
 # roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
-{ pkgs ? import ../. {} }:
+{
+  pkgs ? import ../. { },
+}:
 with pkgs;
 with rosPackages.noetic;
 with pythonPackages;
@@ -10,14 +12,16 @@ with pythonPackages;
 mkShell {
   buildInputs = [
     glibcLocales
-    (buildEnv { paths = [
-      rosbash
-      turtlebot3-description
-      turtlebot3-teleop
-      turtlebot3-gazebo
-      gazebo-plugins
-      xacro
-    ]; })
+    (buildEnv {
+      paths = [
+        rosbash
+        turtlebot3-description
+        turtlebot3-teleop
+        turtlebot3-gazebo
+        gazebo-plugins
+        xacro
+      ];
+    })
   ];
 
   ROS_HOSTNAME = "localhost";
