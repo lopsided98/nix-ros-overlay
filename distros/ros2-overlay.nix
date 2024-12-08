@@ -238,4 +238,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
       broken = true;
     };
   });
+
+  zmqpp-vendor = patchExternalProjectGit rosSuper.zmqpp-vendor {
+    url = "https://github.com/zeromq/zmqpp.git";
+    originalRev = "master";
+    rev = "da73a138f290274cfd604b3f05a908956390a66e";
+    fetchgitArgs.hash = "sha256-UZyJpBEOf/Ys+i2tiBTjv4PlM5fHjjNLWuGhpgcmYyM=";
+  };
 }
