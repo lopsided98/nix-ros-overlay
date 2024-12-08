@@ -1,4 +1,10 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, notify2 }:
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  colcon-core,
+  notify2,
+}:
 
 buildPythonPackage rec {
   pname = "colcon-notification";
@@ -9,7 +15,10 @@ buildPythonPackage rec {
     hash = "sha256-xFuJgHOo6YxFGDM7dYf56kmsG8Epp7xOE5AFkFcDH7g=";
   };
 
-  propagatedBuildInputs = [ colcon-core notify2 ];
+  propagatedBuildInputs = [
+    colcon-core
+    notify2
+  ];
 
   doCheck = false;
 
