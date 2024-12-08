@@ -18,7 +18,7 @@ buildPythonPackage rec {
   doCheck = false;
 
   meta = with lib; {
-    description = "An extension for colcon-core to read CLI mixins from files.";
+    description = "Extension for colcon-core to read CLI mixins from files";
     homepage = "https://colcon.readthedocs.io";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];

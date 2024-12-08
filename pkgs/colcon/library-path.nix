@@ -15,7 +15,7 @@ buildPythonPackage rec {
   doCheck = false;
 
   meta = with lib; {
-    description = "An extension for colcon-core to set an environment variable to find shared libraries at runtime.";
+    description = "Extension for colcon-core to set an environment variable to find shared libraries at runtime";
     homepage = "https://colcon.readthedocs.io";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];

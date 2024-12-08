@@ -12,7 +12,7 @@ buildPythonPackage rec {
   propagatedBuildInputs = [ pyyaml setuptools catkin-pkg rospkg ];
 
   meta = with lib; {
-    description = "A tool to work with rosdistro files";
+    description = "Tool to work with rosdistro files";
     homepage = "https://wiki.ros.org/rosdistro";
     license = licenses.bsd3;
     maintainers = with maintainers; [ lopsided98 ];
