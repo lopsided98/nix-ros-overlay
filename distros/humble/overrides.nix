@@ -58,11 +58,12 @@ in with lib; {
   };
 
   libfranka = rosSuper.libfranka.overrideAttrs ({
-    cmakeFlags ? [], ...
+    cmakeFlags ? [], propagatedBuildInputs ?[], ...
   }: {
     # Uses custom flag to disable tests. Attempts to download GTest without
     # this.
     cmakeFlags = cmakeFlags ++ [ "-DBUILD_TESTS=OFF" ];
+    propagatedBuildInputs = propagatedBuildInputs ++ [ self.pinocchio ];
   });
 
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
