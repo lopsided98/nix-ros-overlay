@@ -7,6 +7,14 @@ rosSelf: rosSuper: with rosSelf.lib; {
   python = rosSelf.python3;
   pythonPackages = rosSelf.python.pkgs;
 
+  python3 = rosSuper.python3 // {
+    pkgs = rosSuper.python3.pkgs.overrideScope (pyFinal: pyPrev: {
+      # nose is unmaintained and was removed from nixpkgs, but catkin depends
+      # on it for tests. We don't run tests, so eliminate this dependency.
+      nose = null;
+    });
+  };
+
   # Fix usages of global Boost placeholders
   # https://github.com/ros/actionlib/pull/197
   actionlib = rosSuper.actionlib.overrideAttrs ({
