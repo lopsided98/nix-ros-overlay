@@ -4,6 +4,8 @@ self:
 rosSelf: rosSuper: let 
   lib = rosSelf.lib;
 in {
+  inherit (self) eigenpy hpp-fcl pinocchio;
+
   angles = rosSuper.angles.overrideAttrs ({
     patches ? [], ...
   }: {
