@@ -6,7 +6,8 @@ Want to use ROS, but don't want to run Ubuntu? This project uses the power of [N
 
 [Nix](https://nixos.org/nix/) is a distro agnostic package manager that uses a purely functional programming language to reliably and reproducibly build software. These qualities have the potential to make it one of the easiest ways to run ROS on any machine, no matter the operating system.
 
-> This overlay is still experimental, so you may encounter some issues. Feel free to file a bug.
+> [!IMPORTANT]
+> The `master` branch is tested and updated when most packages are working. Development occurs on the `develop` branch, and it is expected that this branch will sometimes have many packages that fail to build. Please do not file issues about bugs that only occur in the `develop` branch.
 
 ## Setup
 
