@@ -7,6 +7,12 @@ let
 
       # ROS is not compatible with empy 4
       empy = pyFinal.empy_3;
+
+      # Nose was removed from nixpkgs due to being deprecated and
+      # unmaintained, but catkin depends on it for running tests.
+      # Since we disable tests for most packages, we can "fix" catkin
+      # evaluation by substituting a dummy package for nose.
+      nose = self.runCommand "nose-placeholder" {} "mkdir $out";
     });
   };
 
