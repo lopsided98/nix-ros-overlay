@@ -1,4 +1,4 @@
-{ stdenv, lib, pythonPackages, rosDistro, rosVersion }:
+{ stdenv, lib, python3Packages, rosDistro, rosVersion }:
 { buildType ? "catkin"
   # Too difficult to fix all the problems with the tests in each package
 , doCheck ? false
@@ -17,7 +17,7 @@
 , ...
 }@args:
 
-(if buildType == "ament_python" then pythonPackages.buildPythonPackage
+(if buildType == "ament_python" then python3Packages.buildPythonPackage
 else stdenv.mkDerivation) (args // {
   inherit doCheck dontWrapQtApps separateDebugInfo;
 
@@ -41,7 +41,7 @@ else stdenv.mkDerivation) (args // {
   # https://github.com/colcon/colcon-core/blob/0.12.1/colcon_core/task/python/build.py#L84
   format = "other";
 
-  nativeBuildInputs = nativeBuildInputs ++ [ pythonPackages.setuptools ];
+  nativeBuildInputs = nativeBuildInputs ++ [ python3Packages.setuptools ];
 
   buildPhase = ''
     runHook preBuild
@@ -54,8 +54,8 @@ else stdenv.mkDerivation) (args // {
   installPhase = ''
     runHook preInstall
 
-    mkdir -p "$out/${pythonPackages.python.sitePackages}"
-    export PYTHONPATH="$out/${pythonPackages.python.sitePackages}:$PYTHONPATH"
+    mkdir -p "$out/${python3Packages.python.sitePackages}"
+    export PYTHONPATH="$out/${python3Packages.python.sitePackages}:$PYTHONPATH"
     python setup.py install --prefix="$out" --single-version-externally-managed --record /dev/null
 
     runHook postInstall
@@ -63,7 +63,7 @@ else stdenv.mkDerivation) (args // {
 
   postFixup = ''
     ${postFixup}
-    find "$out/lib" -mindepth 1 -maxdepth 1 -type d ! -name '${pythonPackages.python.libPrefix}' -print0 | while read -d "" libpkgdir; do
+    find "$out/lib" -mindepth 1 -maxdepth 1 -type d ! -name '${python3Packages.python.libPrefix}' -print0 | while read -d "" libpkgdir; do
       wrapPythonProgramsIn "$libpkgdir" "$out $pythonPath"
     done
   '';
