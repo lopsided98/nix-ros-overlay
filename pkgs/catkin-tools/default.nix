@@ -1,5 +1,12 @@
-{ lib, buildPythonPackage, fetchPypi, setuptools, osrf-pycommon, pyyaml
-, catkin-pkg }:
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+  osrf-pycommon,
+  pyyaml,
+  catkin-pkg,
+}:
 
 buildPythonPackage rec {
   pname = "catkin_tools";
@@ -10,7 +17,12 @@ buildPythonPackage rec {
     hash = "sha256-BjVwOJRD8L5ESOKlZbiuAc/NQdAsvDoU8INr1FiMBjo=";
   };
 
-  propagatedBuildInputs = [ setuptools osrf-pycommon pyyaml catkin-pkg ];
+  propagatedBuildInputs = [
+    setuptools
+    osrf-pycommon
+    pyyaml
+    catkin-pkg
+  ];
 
   # No tests in PyPi tarball
   doCheck = false;

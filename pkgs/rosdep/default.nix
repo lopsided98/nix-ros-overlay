@@ -1,5 +1,13 @@
-{ lib, buildPythonPackage, fetchPypi, pyyaml, setuptools, catkin-pkg, rospkg
-, rosdistro }:
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  pyyaml,
+  setuptools,
+  catkin-pkg,
+  rospkg,
+  rosdistro,
+}:
 
 buildPythonPackage rec {
   pname = "rosdep";
@@ -13,7 +21,13 @@ buildPythonPackage rec {
   # Tries to download files
   doCheck = false;
 
-  propagatedBuildInputs = [ pyyaml setuptools catkin-pkg rospkg rosdistro ];
+  propagatedBuildInputs = [
+    pyyaml
+    setuptools
+    catkin-pkg
+    rospkg
+    rosdistro
+  ];
 
   meta = with lib; {
     description = "Package manager abstraction tool for ROS";

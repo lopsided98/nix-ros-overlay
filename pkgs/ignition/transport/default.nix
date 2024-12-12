@@ -1,11 +1,25 @@
-{ lib, stdenv, fetchFromGitHub, fetchpatch, cmake, ignition
-, ignition-cmake ? ignition.cmake, ignition-math ? ignition.math
-, ignition-msgs ? ignition.msgs, ignition-utils ? ignition.utils, protobuf
-, libuuid, sqlite, libsodium, cppzmq, zeromq
-, majorVersion ? "11"
-, version ? "11.4.1"
-, srcHash ? "sha256-wQ/ugKYopWgSaa6tqPrp8oQexPpnA6fa28L383OGNXM="
-, ... }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  fetchpatch,
+  cmake,
+  ignition,
+  ignition-cmake ? ignition.cmake,
+  ignition-math ? ignition.math,
+  ignition-msgs ? ignition.msgs,
+  ignition-utils ? ignition.utils,
+  protobuf,
+  libuuid,
+  sqlite,
+  libsodium,
+  cppzmq,
+  zeromq,
+  majorVersion ? "11",
+  version ? "11.4.1",
+  srcHash ? "sha256-wQ/ugKYopWgSaa6tqPrp8oQexPpnA6fa28L383OGNXM=",
+  ...
+}:
 
 stdenv.mkDerivation rec {
   pname = "ignition-transport${majorVersion}";
@@ -28,8 +42,19 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];
-  buildInputs = [ ignition-math sqlite libsodium ignition-utils ];
-  propagatedBuildInputs = [ protobuf cppzmq zeromq libuuid ignition-msgs ];
+  buildInputs = [
+    ignition-math
+    sqlite
+    libsodium
+    ignition-utils
+  ];
+  propagatedBuildInputs = [
+    protobuf
+    cppzmq
+    zeromq
+    libuuid
+    ignition-msgs
+  ];
 
   meta = with lib; {
     homepage = "https://ignitionrobotics.org/libs/transport";

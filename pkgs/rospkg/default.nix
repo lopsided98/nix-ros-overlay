@@ -1,4 +1,11 @@
-{ lib, buildPythonPackage, fetchPypi, catkin-pkg, pyyaml, distro }:
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  catkin-pkg,
+  pyyaml,
+  distro,
+}:
 
 buildPythonPackage rec {
   pname = "rospkg";
@@ -9,7 +16,11 @@ buildPythonPackage rec {
     hash = "sha256-/OdqdHd4bDcymBJiGY6iUPCX+I4NMynBDBEGm/QMpgQ=";
   };
 
-  propagatedBuildInputs = [ catkin-pkg pyyaml distro ];
+  propagatedBuildInputs = [
+    catkin-pkg
+    pyyaml
+    distro
+  ];
 
   setupHook = ./setup-hook.sh;
 

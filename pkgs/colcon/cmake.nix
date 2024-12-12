@@ -1,5 +1,12 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, colcon-library-path
-, colcon-test-result, cmake }:
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  colcon-core,
+  colcon-library-path,
+  colcon-test-result,
+  cmake,
+}:
 
 buildPythonPackage rec {
   pname = "colcon-cmake";

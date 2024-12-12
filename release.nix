@@ -14,24 +14,33 @@ in
 let
   pkgs = import nix-ros-overlay { inherit nixpkgs system; };
   inherit (pkgs.lib) isDerivation filterAttrs;
-  inherit (builtins) mapAttrs attrNames filter listToAttrs readDir;
-  cleanupDistro = (_: a: removeAttrs a [
-    "lib"
-    "python"
-    "python3"
-    "python2"
-    "pythonPackages"
-    "python2Packages"
-    "python3Packages"
-    "boost"
-  ]);
+  inherit (builtins)
+    mapAttrs
+    attrNames
+    filter
+    listToAttrs
+    readDir
+    ;
+  cleanupDistro = (
+    _: a:
+    removeAttrs a [
+      "lib"
+      "python"
+      "python3"
+      "python2"
+      "pythonPackages"
+      "python2Packages"
+      "python3Packages"
+      "boost"
+    ]
+  );
   releaseRosPackages = mapAttrs cleanupDistro pkgs.rosPackages;
   overlayAttrNames = attrNames ((import ./overlay.nix) null pkgs);
-  toplevelPackagesEntries =
-    map (name: { inherit name; value = pkgs.${name} or null; })
-      overlayAttrNames;
-  validToplevelPackageEntries = filter (e: isDerivation e.value)
-    toplevelPackagesEntries;
+  toplevelPackagesEntries = map (name: {
+    inherit name;
+    value = pkgs.${name} or null;
+  }) overlayAttrNames;
+  validToplevelPackageEntries = filter (e: isDerivation e.value) toplevelPackagesEntries;
   toplevelPackages = listToAttrs validToplevelPackageEntries;
   releasePackages = toplevelPackages // {
     rosPackages = removeAttrs releaseRosPackages [
@@ -39,13 +48,16 @@ let
       "mkRosDistroOverlay"
       "foxy" # No CI for EOL distro
     ];
-    examples = mapAttrs
-      (file: _: import (./examples + "/${file}") { inherit pkgs; })
-      (filterAttrs (n: v: v == "regular")
-        (readDir ./examples));
+    examples = mapAttrs (file: _: import (./examples + "/${file}") { inherit pkgs; }) (
+      filterAttrs (n: v: v == "regular") (readDir ./examples)
+    );
   };
 in
-if distro == ".top" then toplevelPackages
-else if distro == ".examples" then releasePackages.examples
-else if distro == null then releasePackages
-else releasePackages.rosPackages.${distro}
+if distro == ".top" then
+  toplevelPackages
+else if distro == ".examples" then
+  releasePackages.examples
+else if distro == null then
+  releasePackages
+else
+  releasePackages.rosPackages.${distro}
