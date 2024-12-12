@@ -39,9 +39,9 @@ in stdenv.mkDerivation rec {
   '';
 
   meta = with lib; {
-    description = "Vortex OpenSplice Community Edition";
+    description = "Open-source OMG DDS (Data Distribution Service for Real-Time Systems) implementation";
     longDescription = ''
-      Vortex OpenSplice is a full implementaiton of the OMG DDS Standard
+      Vortex OpenSplice is a full implementation of the OMG DDS Standard
       licensed under Apache 2. The DDS standard is used today across a large
       range of application domains ranging from autonomous vehicles, medical
       devices, robotic platforms, software defined networking, network

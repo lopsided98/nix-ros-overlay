@@ -25,7 +25,7 @@ buildPythonPackage rec {
   doCheck = false;
 
   meta = with lib; {
-    description = "An extension for colcon-core to support CMake projects.";
+    description = "Extension for colcon-core to support CMake projects";
     homepage = "https://colcon.readthedocs.io";
     license = licenses.asl20;
     maintainers = with maintainers; [ lopsided98 ];
