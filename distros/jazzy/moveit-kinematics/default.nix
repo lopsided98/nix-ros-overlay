@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, class-loader, eigen, generate-parameter-library, launch-param-builder, moveit-common, moveit-configs-utils, moveit-core, moveit-msgs, moveit-resources-fanuc-description, moveit-resources-fanuc-moveit-config, moveit-resources-panda-description, moveit-resources-panda-moveit-config, moveit-ros-planning, orocos-kdl-vendor, pluginlib, python3Packages, ros-testing, rsl, tf2, tf2-kdl, urdfdom }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-kinematics";
-  version = "2.10.0-r1";
+  version = "2.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_kinematics/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "46f998f40a0e7a0602b5194b1afa7c71b2571befd3d952b84df472468faecb69";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_kinematics/2.12.0-1.tar.gz";
+    name = "2.12.0-1.tar.gz";
+    sha256 = "93471c0df0ec4a0db89421fa6bf8a5bf5adb0a20e2e6456e403c9e4a658cd375";
   };
 
   buildType = "ament_cmake";

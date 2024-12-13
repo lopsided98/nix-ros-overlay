@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher, moveit-resources-fanuc-description, moveit-resources-fanuc-moveit-config, moveit-resources-panda-description, moveit-resources-panda-moveit-config, moveit-resources-pr2-description, robot-state-publisher }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-resources";
-  version = "3.0.0-r3";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/jazzy/moveit_resources/3.0.0-3.tar.gz";
-    name = "3.0.0-3.tar.gz";
-    sha256 = "9542c2a4aa384c39f3d8460745dba81baf2956fb978d351faaf995a29067d9c1";
+    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/jazzy/moveit_resources/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "10bbaf1e0ff57343e7d73345dabd99dddb8a8f21ed10eaa22869565c60aa7d35";
   };
 
   buildType = "ament_cmake";

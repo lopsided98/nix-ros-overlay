@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, lifecycle-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-controller-manager-msgs";
-  version = "2.44.0-r1";
+  version = "2.45.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/controller_manager_msgs/2.44.0-1.tar.gz";
-    name = "2.44.0-1.tar.gz";
-    sha256 = "d7f16083777054172220aa6beaf4f5a3d49cfe1b36d8413bee92d31b28348cac";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/controller_manager_msgs/2.45.0-1.tar.gz";
+    name = "2.45.0-1.tar.gz";
+    sha256 = "9d8763043617702c4b24298608924fa1d446a5990882e1b83b4cd235051283df";
   };
 
   buildType = "ament_cmake";

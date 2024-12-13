@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, boost, cmake, cppzmq, mrpt-libgui, mrpt-libmaps, mrpt-libposes, mrpt-libros-bridge, mrpt-libtclap, nav-msgs, protobuf, python3, python3Packages, pythonPackages, ros-environment, ros2launch, sensor-msgs, stereo-msgs, tf2, tf2-geometry-msgs, unzip, visualization-msgs, wget }:
 buildRosPackage {
   pname = "ros-jazzy-mvsim";
-  version = "0.11.1-r1";
+  version = "0.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/jazzy/mvsim/0.11.1-1.tar.gz";
-    name = "0.11.1-1.tar.gz";
-    sha256 = "d48e2fb7d1c92b9866839004b984903a03ce4db39330a09983ea596a2e457498";
+    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/jazzy/mvsim/0.12.0-1.tar.gz";
+    name = "0.12.0-1.tar.gz";
+    sha256 = "f5e8c980b2e677c4eb06d4efe0411a2688563bdb191e483d42287de8265dcd86";
   };
 
   buildType = "ament_cmake";

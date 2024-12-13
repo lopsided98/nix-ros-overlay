@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, camera-calibration-parsers, ceres-solver, control-msgs, cv-bridge, eigen, geometric-shapes, geometry-msgs, gflags, kdl-parser, launch, launch-ros, launch-testing, moveit-msgs, nav-msgs, orocos-kdl, pluginlib, protobuf, rclcpp, rclcpp-action, robot-calibration-msgs, rosbag2-cpp, sensor-msgs, std-msgs, suitesparse, tf2-geometry-msgs, tf2-ros, tinyxml-2, tinyxml2-vendor, visualization-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-robot-calibration";
-  version = "0.9.2-r1";
+  version = "0.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robot_calibration-release/archive/release/jazzy/robot_calibration/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "af67b1c65fefb524590622275bd1e11c1446c631b50886f48a7f47e97067b765";
+    url = "https://github.com/ros2-gbp/robot_calibration-release/archive/release/jazzy/robot_calibration/0.10.0-1.tar.gz";
+    name = "0.10.0-1.tar.gz";
+    sha256 = "cb15d2d8fea5ea9be16f3355a339eaba8f5fbc99088b053fc2dd2d3e719356bd";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, costmap-2d, dynamic-reconfigure, genmsg, message-generation, pcl, pcl-conversions, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-rtabmap-costmap-plugins";
-  version = "0.21.5-r1";
+  version = "0.21.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_costmap_plugins/0.21.5-1.tar.gz";
-    name = "0.21.5-1.tar.gz";
-    sha256 = "2d429f44da6754628bdeac1b5cd5a5bcc83e298045184d9fd2b796e6178d527c";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_costmap_plugins/0.21.9-1.tar.gz";
+    name = "0.21.9-1.tar.gz";
+    sha256 = "4b0b2193f435bb09154649cbce0453ab46432edd41a86494bd473f4f91a27182";
   };
 
   buildType = "catkin";

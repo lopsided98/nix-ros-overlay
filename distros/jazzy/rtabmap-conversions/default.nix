@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, geometry-msgs, image-geometry, laser-geometry, pcl-conversions, rclcpp, rclcpp-components, ros-environment, rtabmap, rtabmap-msgs, sensor-msgs, std-msgs, tf2, tf2-eigen, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rtabmap-conversions";
-  version = "0.21.5-r3";
+  version = "0.21.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/jazzy/rtabmap_conversions/0.21.5-3.tar.gz";
-    name = "0.21.5-3.tar.gz";
-    sha256 = "4f606c7aade28ede7ae4db564d0da54f23eac163a5205590d7f148a37b289d37";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/jazzy/rtabmap_conversions/0.21.9-1.tar.gz";
+    name = "0.21.9-1.tar.gz";
+    sha256 = "5ca4c359ef46cf5052870a50149594b3b5067e2703bb446789b23497f3f419b8";
   };
 
   buildType = "ament_cmake";

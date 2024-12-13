@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-yaml, mrpt-libgui, mrpt-libmaps, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-humble-mola-kernel";
-  version = "1.2.1-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_kernel/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "ca0e5a93b43eb08dbe04a479105ebec022d233ed19925e639b179b1f118d74cb";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_kernel/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "e227a870538b7dcf36091e0a12434c4cbac47994cde1e237a27dea08af7c63f1";
   };
 
   buildType = "cmake";

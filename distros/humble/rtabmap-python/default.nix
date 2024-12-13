@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages }:
 buildRosPackage {
   pname = "ros-humble-rtabmap-python";
-  version = "0.21.5-r1";
+  version = "0.21.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_python/0.21.5-1.tar.gz";
-    name = "0.21.5-1.tar.gz";
-    sha256 = "438a291c4f3cea8d75f889fb26848f625992b0b5009054e909b05e465b6690ba";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_python/0.21.9-1.tar.gz";
+    name = "0.21.9-1.tar.gz";
+    sha256 = "0f8f48e1e87fa50d146285f279059d1a95054d1fa49d218ee98735eec1e0f783";
   };
 
   buildType = "ament_python";
