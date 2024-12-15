@@ -1,7 +1,7 @@
 # Top level package set
 self:
 # Distro package set
-rosSelf: rosSuper: let 
+rosSelf: rosSuper: let
   lib = rosSelf.lib;
 in {
   angles = rosSuper.angles.overrideAttrs ({
@@ -212,6 +212,7 @@ in rosSuper.lib.genAttrs [
   "rqt-py-common"
   "rqt-robot-steering"
   "rqt-shell"
+  "rqt-nav-view"
   "turtlebot3-autorace-camera"
   "turtlebot3-example"
   "turtlebot3-teleop"
