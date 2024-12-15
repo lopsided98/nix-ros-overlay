@@ -185,6 +185,7 @@ in rosSuper.lib.genAttrs [
   "dual-quaternions"
   "dynamixel-sdk"
   "fkie-master-discovery"
+  "gazebo-plugins"
   "gazebo-ros"
   "gps-common"
   "image-cb-detector"
