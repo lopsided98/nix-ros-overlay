@@ -192,6 +192,7 @@ in rosSuper.lib.genAttrs [
   "jsk-network-tools"
   "laser-geometry"
   "mavros"
+  "mbf-abstract-nav"
   "pr2-computer-monitor"
   "pr2-controller-manager"
   "pr2-power-board"
