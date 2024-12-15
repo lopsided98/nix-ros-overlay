@@ -216,6 +216,7 @@ in rosSuper.lib.genAttrs [
   "rqt-shell"
   "rqt-topic"
   "rqt-nav-view"
+  "rviz"
   "turtlebot3-autorace-camera"
   "turtlebot3-example"
   "turtlebot3-teleop"
