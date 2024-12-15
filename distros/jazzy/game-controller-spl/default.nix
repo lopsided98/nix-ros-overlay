@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, game-controller-spl-interfaces, python3Packages, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-game-controller-spl";
-  version = "4.0.1-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/jazzy/game_controller_spl/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "dd0b4093c29e4743a001efaee225e81283390cf67ec80b7fa0ae015f04b1d20b";
+    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/jazzy/game_controller_spl/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "b1d2170142306c49e057b138286718465b28e91d2f59b9b62c4dc4993ad6f2d3";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, canopen-base-driver, canopen-core, canopen-interfaces, rclcpp, rclcpp-components, rclcpp-lifecycle, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-canopen-proxy-driver";
-  version = "0.2.12-r2";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/rolling/canopen_proxy_driver/0.2.12-2.tar.gz";
-    name = "0.2.12-2.tar.gz";
-    sha256 = "64b07445df057c9b47a73365d4441b7c97cc165e537d64053b0b2c9108a92d8e";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/rolling/canopen_proxy_driver/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "4f515e674b1b079654c9e4e9e26091d2f00bb675b011157548c004b7d264315e";
   };
 
   buildType = "ament_cmake";

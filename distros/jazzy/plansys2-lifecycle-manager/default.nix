@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, lifecycle-msgs, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-jazzy-plansys2-lifecycle-manager";
-  version = "2.0.14-r1";
+  version = "2.0.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_lifecycle_manager/2.0.14-1.tar.gz";
-    name = "2.0.14-1.tar.gz";
-    sha256 = "ea60cbec4d965233906603c577b94d81f7a1fa224b6b78d2f151d5ceed054a94";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_lifecycle_manager/2.0.15-1.tar.gz";
+    name = "2.0.15-1.tar.gz";
+    sha256 = "81b8d291306f9cff99a81b32992a49ad8e16157a35696f6b6104c0571bdd5f09";
   };
 
   buildType = "ament_cmake";

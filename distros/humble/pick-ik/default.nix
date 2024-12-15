@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, fmt, generate-parameter-library, moveit-core, moveit-resources-panda-moveit-config, pluginlib, range-v3, rclcpp, rsl, tf2-geometry-msgs, tf2-kdl, tl-expected }:
 buildRosPackage {
   pname = "ros-humble-pick-ik";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pick_ik-release/archive/release/humble/pick_ik/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "c5e4e739f8a995b3acce4f3f03ae8110e90bfc80406d6ddc948fd18c60290ceb";
+    url = "https://github.com/ros2-gbp/pick_ik-release/archive/release/humble/pick_ik/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "0f5ea00900ff101b170b97be3b8c93b0f16def7bf30613d2677a3a75adf4c3b3";
   };
 
   buildType = "ament_cmake";

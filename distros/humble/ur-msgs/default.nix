@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-ur-msgs";
-  version = "2.0.1-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ur_msgs-release/archive/release/humble/ur_msgs/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "a3d55c7a752d2510cfa840fb8c713112ca2617b69b7e4cc6fefab3330e8c81a4";
+    url = "https://github.com/ros2-gbp/ur_msgs-release/archive/release/humble/ur_msgs/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "4c96afd5bef26743c67daad232c5348ebe3774e234d902bf1a7913a3db5704be";
   };
 
   buildType = "ament_cmake";

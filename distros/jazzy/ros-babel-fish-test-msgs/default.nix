@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ros-babel-fish-test-msgs";
-  version = "0.10.0-r1";
+  version = "0.10.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_babel_fish-release/archive/release/jazzy/ros_babel_fish_test_msgs/0.10.0-1.tar.gz";
-    name = "0.10.0-1.tar.gz";
-    sha256 = "96091d1872078fc6f1319e20b36a515fd7207dfa0f48add3e4950040e2b2e149";
+    url = "https://github.com/ros2-gbp/ros_babel_fish-release/archive/release/jazzy/ros_babel_fish_test_msgs/0.10.3-1.tar.gz";
+    name = "0.10.3-1.tar.gz";
+    sha256 = "b1b8bbd2ce325f87dc92f4cff431e1c68b421b1fb4fc5c4eb30b34c04c9335e3";
   };
 
   buildType = "ament_cmake";

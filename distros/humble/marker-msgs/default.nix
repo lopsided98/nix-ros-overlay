@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-marker-msgs";
-  version = "0.0.8-r3";
+  version = "0.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/tuw-robotics/marker_msgs-release/archive/release/humble/marker_msgs/0.0.8-3.tar.gz";
-    name = "0.0.8-3.tar.gz";
-    sha256 = "624ebcf56dfe1f2f9db303ef141d94e3991b3e4897d256ae1cf39aecef43aa46";
+    url = "https://github.com/ros2-gbp/marker_msgs-release/archive/release/humble/marker_msgs/0.0.8-1.tar.gz";
+    name = "0.0.8-1.tar.gz";
+    sha256 = "ee6993aee593ce7ac8e9c8295c8d1b790700830d479bfe186320b37d1275ff1f";
   };
 
   buildType = "ament_cmake";

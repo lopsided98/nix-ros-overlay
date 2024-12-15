@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ros-environment }:
 buildRosPackage {
   pname = "ros-noetic-etsi-its-vam-ts-coding";
-  version = "2.4.0-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_vam_ts_coding/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "545af4de443b839d530d41535d22df577410cde291ed30ac6160e3f71d4461bb";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_vam_ts_coding/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "b802e8bdbb489748033bad0fbac3b69bc23abc9263a783be9bddadc215a77c57";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-manager, forward-command-controller, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-jazzy-position-controllers";
-  version = "4.16.0-r1";
+  version = "4.17.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/position_controllers/4.16.0-1.tar.gz";
-    name = "4.16.0-1.tar.gz";
-    sha256 = "6d90a0381c674d3d60e229631a59900a2bc6640c09c46e2aacb66b9eb017572b";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/position_controllers/4.17.0-1.tar.gz";
+    name = "4.17.0-1.tar.gz";
+    sha256 = "d5f5609ea5fe763c08e760df34590145cf5b9e4b1d9ca28128669b20e0869a73";
   };
 
   buildType = "ament_cmake";

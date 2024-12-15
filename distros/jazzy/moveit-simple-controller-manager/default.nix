@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, control-msgs, moveit-common, moveit-core, pluginlib, rclcpp, rclcpp-action }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-simple-controller-manager";
-  version = "2.10.0-r1";
+  version = "2.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_simple_controller_manager/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "f03637aab4033897625360d799c5b702fe9d4b607c90f23f0843cf4752f82ef4";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_simple_controller_manager/2.12.0-1.tar.gz";
+    name = "2.12.0-1.tar.gz";
+    sha256 = "8e7f508138c4ed977697a18d03c77042ca3a3c731109ba1a6e0dd768a76675b9";
   };
 
   buildType = "ament_cmake";

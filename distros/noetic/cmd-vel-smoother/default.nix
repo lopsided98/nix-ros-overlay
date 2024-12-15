@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, geometry-msgs, roscpp }:
 buildRosPackage {
   pname = "ros-noetic-cmd-vel-smoother";
-  version = "0.1.17-r2";
+  version = "0.1.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/cmd_vel_smoother/0.1.17-2.tar.gz";
-    name = "0.1.17-2.tar.gz";
-    sha256 = "bce922f288df760d08a0a0b460e135ea7f80d32ef3ba2a6f8a7e7f35a212c794";
+    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/cmd_vel_smoother/0.1.18-1.tar.gz";
+    name = "0.1.18-1.tar.gz";
+    sha256 = "5d0336db08d678cbd815726a019c75b1e642042e06599baa7ff5f21a38f90919";
   };
 
   buildType = "catkin";

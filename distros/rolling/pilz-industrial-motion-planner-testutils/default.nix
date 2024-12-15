@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen3-cmake-module, moveit-common, moveit-core, moveit-msgs, rclcpp, tf2-eigen }:
 buildRosPackage {
   pname = "ros-rolling-pilz-industrial-motion-planner-testutils";
-  version = "2.11.0-r1";
+  version = "2.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/pilz_industrial_motion_planner_testutils/2.11.0-1.tar.gz";
-    name = "2.11.0-1.tar.gz";
-    sha256 = "7bf8819709da10cd11d6da796ae1efaf659afa65729e34b49da7b3eda34637f0";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/pilz_industrial_motion_planner_testutils/2.12.0-1.tar.gz";
+    name = "2.12.0-1.tar.gz";
+    sha256 = "f5f05e95422e9fd4a3a44c22c6ba0d5afa85a7faec5d8bd5c4f71f18a8c4fe90";
   };
 
   buildType = "ament_cmake";

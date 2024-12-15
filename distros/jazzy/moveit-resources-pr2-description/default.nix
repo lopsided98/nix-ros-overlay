@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-resources-pr2-description";
-  version = "3.0.0-r3";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/jazzy/moveit_resources_pr2_description/3.0.0-3.tar.gz";
-    name = "3.0.0-3.tar.gz";
-    sha256 = "9dd7d3468146f066fa32e759c61015051ac5bed6df967e955e17c58cde6bb198";
+    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/jazzy/moveit_resources_pr2_description/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "65dcccbaa4feefc7cbd3ee9ef179ce8d815a7fab3085db1d947b855335f78553";
   };
 
   buildType = "ament_cmake";

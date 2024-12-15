@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, lifecycle-msgs, rclcpp, rclcpp-components, rclcpp-lifecycle, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-raspimouse-fake";
-  version = "3.0.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/raspimouse_sim-release/archive/release/jazzy/raspimouse_fake/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "454780d94a2b77a1a09d105dba224027b4bb4d5e03b125ee021afecfaaf64a2a";
+    url = "https://github.com/ros2-gbp/raspimouse_sim-release/archive/release/jazzy/raspimouse_fake/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "8209f53623dfe66766cc808a1b2483a88c7491c112074487f34b02073de3b116";
   };
 
   buildType = "ament_cmake";
