@@ -211,6 +211,7 @@ in rosSuper.lib.genAttrs [
   "rqt-msg"
   "rqt-plot"
   "rqt-py-common"
+  "rqt-pose-view"
   "rqt-robot-steering"
   "rqt-shell"
   "rqt-nav-view"
