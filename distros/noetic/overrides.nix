@@ -214,6 +214,7 @@ in rosSuper.lib.genAttrs [
   "rqt-pose-view"
   "rqt-robot-steering"
   "rqt-shell"
+  "rqt-topic"
   "rqt-nav-view"
   "turtlebot3-autorace-camera"
   "turtlebot3-example"
