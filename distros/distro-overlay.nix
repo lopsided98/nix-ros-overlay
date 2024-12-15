@@ -138,7 +138,7 @@ let
       nativeBuildInputs ? [], ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook self.protobuf_21 ];
       postFixup = ''
         wrapQtApp "$out/lib/plotjuggler/plotjuggler"
       '';
