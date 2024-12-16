@@ -207,6 +207,7 @@ in rosSuper.lib.genAttrs [
   "rosserial-xbee"
   "route-network"
   "rqt-bag"
+  "rqt-bag-plugins"
   "rqt-graph"
   "rqt-gui"
   "rqt-gui-py"
