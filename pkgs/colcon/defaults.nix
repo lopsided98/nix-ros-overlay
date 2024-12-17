@@ -1,4 +1,10 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, pyyaml }:
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  colcon-core,
+  pyyaml,
+}:
 
 buildPythonPackage rec {
   pname = "colcon-defaults";

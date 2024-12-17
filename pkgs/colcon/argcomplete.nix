@@ -1,4 +1,10 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, argcomplete }:
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  colcon-core,
+  argcomplete,
+}:
 
 buildPythonPackage rec {
   pname = "colcon-argcomplete";
@@ -9,7 +15,10 @@ buildPythonPackage rec {
     hash = "sha256-PnCjK30WuBanxyGCvbIN+YX/wBZ47Jxn1EZZgUphmH0=";
   };
 
-  propagatedBuildInputs = [ colcon-core argcomplete ];
+  propagatedBuildInputs = [
+    colcon-core
+    argcomplete
+  ];
 
   doCheck = false;
 

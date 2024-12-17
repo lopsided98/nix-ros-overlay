@@ -1,6 +1,13 @@
-{ lib, stdenv, fetchFromGitHub, cmake, gz-cmake
-, version, srcHash
-, ... }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  cmake,
+  gz-cmake,
+  version,
+  srcHash,
+  ...
+}:
 
 stdenv.mkDerivation rec {
   pname = "gz-utils${lib.versions.major version}";
@@ -14,7 +21,10 @@ stdenv.mkDerivation rec {
     hash = srcHash;
   };
 
-  nativeBuildInputs = [ cmake gz-cmake ];
+  nativeBuildInputs = [
+    cmake
+    gz-cmake
+  ];
 
   meta = with lib; {
     homepage = "https://gazebosim.org/libs/utils";
