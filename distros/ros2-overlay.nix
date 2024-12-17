@@ -35,6 +35,22 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
+  backward-ros = rosSuper.backward-ros.overrideAttrs ({ postPatch ? "", ... }: {
+
+    # The `--as-needed` flag directs the linker to search all libraries specified
+    # during its invocation to identify which ones contain the symbols required by the binary.
+    #
+    # Due to the nixpkgs binutils wrapper and the reliance to `propagatedBuildInputs`,
+    # the overlay often propagates an excessive number of libraries.
+    #
+    # As a result, the `--as-needed` flag can significantly increase the time the linker
+    # spends searching through these libraries, potentially causing builds to fail to complete.
+
+    postPatch = postPatch + ''
+     sed '/-Wl,--as-needed/d' -i cmake/BackwardConfigAment.cmake
+    '';
+  });
+
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
     cmakeFlags ? [], ...
   }: {
