@@ -4,6 +4,8 @@ self:
 rosSelf: rosSuper: let
   inherit (rosSelf) lib;
 in {
+  inherit (self) eigenpy hpp-fcl pinocchio;
+
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
     patches ? [], ...
   }: {
