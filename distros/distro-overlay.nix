@@ -324,6 +324,14 @@ let
       '';
     });
 
+    tf2-kdl = rosSuper.tf2-kdl.overrideAttrs ({
+      propagatedBuildInputs ? [], ...
+    }: {
+      propagatedBuildInputs = propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
+        pykdl
+      ]);
+    });
+
     turtlesim = rosSuper.turtlesim.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
