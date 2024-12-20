@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, qt-gui }:
 buildRosPackage {
   pname = "ros-jazzy-qt-gui-app";
-  version = "2.7.4-r2";
+  version = "2.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/jazzy/qt_gui_app/2.7.4-2.tar.gz";
-    name = "2.7.4-2.tar.gz";
-    sha256 = "30b2f841026416ca315bed3babd35ba413ac50e9aabc96f95a152fbed04229c7";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/jazzy/qt_gui_app/2.7.5-1.tar.gz";
+    name = "2.7.5-1.tar.gz";
+    sha256 = "f65a0c01a52fcf0f52a703de9eb43056efc388275860c9fb88ea762c3e1169cb";
   };
 
   buildType = "ament_cmake";

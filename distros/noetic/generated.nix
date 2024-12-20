@@ -524,8 +524,6 @@ self: super: {
 
  common-tutorials = self.callPackage ./common-tutorials {};
 
- compass-msgs = self.callPackage ./compass-msgs {};
-
  compressed-depth-image-transport = self.callPackage ./compressed-depth-image-transport {};
 
  compressed-image-transport = self.callPackage ./compressed-image-transport {};
@@ -926,6 +924,12 @@ self: super: {
 
  etsi-its-denm-msgs = self.callPackage ./etsi-its-denm-msgs {};
 
+ etsi-its-mapem-ts-coding = self.callPackage ./etsi-its-mapem-ts-coding {};
+
+ etsi-its-mapem-ts-conversion = self.callPackage ./etsi-its-mapem-ts-conversion {};
+
+ etsi-its-mapem-ts-msgs = self.callPackage ./etsi-its-mapem-ts-msgs {};
+
  etsi-its-messages = self.callPackage ./etsi-its-messages {};
 
  etsi-its-msgs = self.callPackage ./etsi-its-msgs {};
@@ -935,6 +939,12 @@ self: super: {
  etsi-its-primitives-conversion = self.callPackage ./etsi-its-primitives-conversion {};
 
  etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
+
+ etsi-its-spatem-ts-coding = self.callPackage ./etsi-its-spatem-ts-coding {};
+
+ etsi-its-spatem-ts-conversion = self.callPackage ./etsi-its-spatem-ts-conversion {};
+
+ etsi-its-spatem-ts-msgs = self.callPackage ./etsi-its-spatem-ts-msgs {};
 
  etsi-its-vam-ts-coding = self.callPackage ./etsi-its-vam-ts-coding {};
 
@@ -1626,6 +1636,8 @@ self: super: {
 
  jsk-recognition-msgs = self.callPackage ./jsk-recognition-msgs {};
 
+ jsk-rosbag-tools = self.callPackage ./jsk-rosbag-tools {};
+
  jsk-roseus = self.callPackage ./jsk-roseus {};
 
  jsk-rqt-plugins = self.callPackage ./jsk-rqt-plugins {};
@@ -1861,8 +1873,6 @@ self: super: {
  magic-enum = self.callPackage ./magic-enum {};
 
  magical-ros2-conversion-tool = self.callPackage ./magical-ros2-conversion-tool {};
-
- magnetometer-compass = self.callPackage ./magnetometer-compass {};
 
  map-laser = self.callPackage ./map-laser {};
 

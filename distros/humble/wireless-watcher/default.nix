@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rclcpp, wireless-msgs, wirelesstools }:
 buildRosPackage {
   pname = "ros-humble-wireless-watcher";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/humble/wireless_watcher/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "c6241524281c4c1a1ad46cc94c1e07ae9ac006e0703749a0200c62b03cc7f15a";
+    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/humble/wireless_watcher/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "7a63802fe7418741ba7ff3f1ab18ca5cceb6b6f1d2933ea916906b4d977fc264";
   };
 
   buildType = "ament_cmake";

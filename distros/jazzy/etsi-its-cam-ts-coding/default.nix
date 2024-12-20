@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-cam-ts-coding";
-  version = "2.4.0-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_cam_ts_coding/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "96de3e1c719e3fddaa4d01877e735dae16f0eb7628e52ff2c2f315597d9f12ea";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_cam_ts_coding/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "5755b075018065ff1756afef3a0e679ebe39c75f59996d156d7e8aed28ec05c7";
   };
 
   buildType = "ament_cmake";

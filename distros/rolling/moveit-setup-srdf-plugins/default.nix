@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, moveit-resources-fanuc-description, moveit-setup-framework, pluginlib }:
 buildRosPackage {
   pname = "ros-rolling-moveit-setup-srdf-plugins";
-  version = "2.11.0-r1";
+  version = "2.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_setup_srdf_plugins/2.11.0-1.tar.gz";
-    name = "2.11.0-1.tar.gz";
-    sha256 = "4faa04a98fc684abbf95625902343041cdd526f0e4d153c26b9c017c40762b7e";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_setup_srdf_plugins/2.12.0-1.tar.gz";
+    name = "2.12.0-1.tar.gz";
+    sha256 = "ad7b5dceecfe108c9cddbfdf02967d310d4bbc60edea226cd93be6a4b56f3a5d";
   };
 
   buildType = "ament_cmake";

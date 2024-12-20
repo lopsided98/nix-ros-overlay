@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, aravis, camera-aravis2-msgs, camera-info-manager, cv-bridge, diagnostic-msgs, glib, image-transport, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-camera-aravis2";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/camera_aravis2-release/archive/release/jazzy/camera_aravis2/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "dbe5d82638a295d0933ee20b22839f40ea0d50678c9353fd337de0c51b175e2c";
+    url = "https://github.com/ros2-gbp/camera_aravis2-release/archive/release/jazzy/camera_aravis2/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "35f390f2e6677d66f30b3141a33329db0ebc225d307c1c57e3cfa2806931529b";
   };
 
   buildType = "ament_cmake";

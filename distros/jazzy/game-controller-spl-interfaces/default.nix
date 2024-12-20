@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-game-controller-spl-interfaces";
-  version = "4.0.1-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/jazzy/game_controller_spl_interfaces/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "59d16e74682b073df59acaf970093b16c153de77e55169b3f5c96722b6851339";
+    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/jazzy/game_controller_spl_interfaces/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "1cea7618a1a53b7ffa4fff49dfbcd77e0ba5ffb798e219795fed2c4a4656f1ba";
   };
 
   buildType = "ament_cmake";

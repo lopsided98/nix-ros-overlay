@@ -804,6 +804,8 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ eiquadprog = self.callPackage ./eiquadprog {};
+
  ess-imu-driver2 = self.callPackage ./ess-imu-driver2 {};
 
  etsi-its-cam-coding = self.callPackage ./etsi-its-cam-coding {};
@@ -834,6 +836,12 @@ self: super: {
 
  etsi-its-denm-msgs = self.callPackage ./etsi-its-denm-msgs {};
 
+ etsi-its-mapem-ts-coding = self.callPackage ./etsi-its-mapem-ts-coding {};
+
+ etsi-its-mapem-ts-conversion = self.callPackage ./etsi-its-mapem-ts-conversion {};
+
+ etsi-its-mapem-ts-msgs = self.callPackage ./etsi-its-mapem-ts-msgs {};
+
  etsi-its-messages = self.callPackage ./etsi-its-messages {};
 
  etsi-its-msgs = self.callPackage ./etsi-its-msgs {};
@@ -843,6 +851,12 @@ self: super: {
  etsi-its-primitives-conversion = self.callPackage ./etsi-its-primitives-conversion {};
 
  etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
+
+ etsi-its-spatem-ts-coding = self.callPackage ./etsi-its-spatem-ts-coding {};
+
+ etsi-its-spatem-ts-conversion = self.callPackage ./etsi-its-spatem-ts-conversion {};
+
+ etsi-its-spatem-ts-msgs = self.callPackage ./etsi-its-spatem-ts-msgs {};
 
  etsi-its-vam-ts-coding = self.callPackage ./etsi-its-vam-ts-coding {};
 
@@ -2208,6 +2222,8 @@ self: super: {
 
  position-controllers = self.callPackage ./position-controllers {};
 
+ proto2ros = self.callPackage ./proto2ros {};
+
  proxsuite = self.callPackage ./proxsuite {};
 
  psdk-interfaces = self.callPackage ./psdk-interfaces {};
@@ -3362,6 +3378,8 @@ self: super: {
 
  ur-robot-driver = self.callPackage ./ur-robot-driver {};
 
+ ur-simulation-gz = self.callPackage ./ur-simulation-gz {};
+
  urdf = self.callPackage ./urdf {};
 
  urdf-launch = self.callPackage ./urdf-launch {};
@@ -3485,6 +3503,14 @@ self: super: {
  xacro = self.callPackage ./xacro {};
 
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
+
+ yasmin = self.callPackage ./yasmin {};
+
+ yasmin-demos = self.callPackage ./yasmin-demos {};
+
+ yasmin-msgs = self.callPackage ./yasmin-msgs {};
+
+ yasmin-ros = self.callPackage ./yasmin-ros {};
 
  zbar-ros = self.callPackage ./zbar-ros {};
 

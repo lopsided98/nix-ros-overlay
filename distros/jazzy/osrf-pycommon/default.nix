@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-osrf-pycommon";
-  version = "2.1.4-r3";
+  version = "2.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/osrf_pycommon-release/archive/release/jazzy/osrf_pycommon/2.1.4-3.tar.gz";
-    name = "2.1.4-3.tar.gz";
-    sha256 = "9a5eac6f997624fb8a81787bb2a188d40381ccd7a49757a96f28f6c49e7776b6";
+    url = "https://github.com/ros2-gbp/osrf_pycommon-release/archive/release/jazzy/osrf_pycommon/2.1.5-1.tar.gz";
+    name = "2.1.5-1.tar.gz";
+    sha256 = "1fecd245ff189e8c0867f804593f7c1ed1e31714f25491949e3a403dd1c77fbf";
   };
 
   buildType = "ament_python";

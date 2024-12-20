@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, builtin-interfaces, geometry-msgs, laser-geometry, message-filters, nav2-costmap-2d, openexr, openvdb-vendor, pcl, pcl-conversions, pluginlib, rclcpp, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-spatio-temporal-voxel-layer";
-  version = "2.3.2-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/spatio_temporal_voxel_layer-release/archive/release/humble/spatio_temporal_voxel_layer/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "b15b5fbf105133a02cace8c7ce35a931d394aac856fa89fdb9322e9e07d1bbce";
+    url = "https://github.com/SteveMacenski/spatio_temporal_voxel_layer-release/archive/release/humble/spatio_temporal_voxel_layer/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "6b77cfbd0232e74df522a8558b66c781a5f0b683fdaabea5bd2e702862a461eb";
   };
 
   buildType = "ament_cmake";

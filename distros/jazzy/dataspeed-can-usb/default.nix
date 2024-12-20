@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, can-msgs, lusb, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-dataspeed-can-usb";
-  version = "2.0.4-r1";
+  version = "2.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/jazzy/dataspeed_can_usb/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "7c34d242260e7d661056724bbdba897da86faf8c8f4882eb79ae0e0d5d083305";
+    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/jazzy/dataspeed_can_usb/2.0.5-1.tar.gz";
+    name = "2.0.5-1.tar.gz";
+    sha256 = "c10b2b5f83d016742d1c62055a6aec731428ea8fa59c62f8f2902998598affee";
   };
 
   buildType = "ament_cmake";
