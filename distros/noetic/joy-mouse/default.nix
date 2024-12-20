@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pythonPackages, rospy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-joy-mouse";
-  version = "0.1.17-r2";
+  version = "0.1.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/joy_mouse/0.1.17-2.tar.gz";
-    name = "0.1.17-2.tar.gz";
-    sha256 = "b8eda6797f4e9bcb7f121909d00359bf9542b60fbf5c2dd79410ae9a98979378";
+    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/joy_mouse/0.1.18-1.tar.gz";
+    name = "0.1.18-1.tar.gz";
+    sha256 = "b33520e961db90f10ec739569b9096f0a8cd6e2744ff98ac722b7ef4b0db105f";
   };
 
   buildType = "catkin";

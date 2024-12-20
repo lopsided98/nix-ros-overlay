@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, pythonPackages, rcgcd-spl-14 }:
 buildRosPackage {
   pname = "ros-jazzy-rcgcd-spl-14-conversion";
-  version = "4.0.1-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/jazzy/rcgcd_spl_14_conversion/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "e6145f8c39fed2d34e349c429a48b2927c8d68516169e3d42cdf1d46b1f968e1";
+    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/jazzy/rcgcd_spl_14_conversion/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "ac4c24848aeb7453de588f40b05d287766b93b7c41900a5b616718a7b70c13d8";
   };
 
   buildType = "ament_python";

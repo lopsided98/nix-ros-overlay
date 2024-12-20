@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, fmt, generate-parameter-library, moveit-core, moveit-resources-panda-moveit-config, pluginlib, range-v3, rclcpp, rsl, tf2-geometry-msgs, tf2-kdl, tl-expected }:
 buildRosPackage {
   pname = "ros-jazzy-pick-ik";
-  version = "1.1.0-r4";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pick_ik-release/archive/release/jazzy/pick_ik/1.1.0-4.tar.gz";
-    name = "1.1.0-4.tar.gz";
-    sha256 = "9045ec4f6da37f2607463a1581a0b17015de18d4821e2870efe2313e28760d28";
+    url = "https://github.com/ros2-gbp/pick_ik-release/archive/release/jazzy/pick_ik/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "d1a6ee0b589c081901d80045891aed9f4487bcea39e9b88c5e3fe5064583f34a";
   };
 
   buildType = "ament_cmake";

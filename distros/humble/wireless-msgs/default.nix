@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-wireless-msgs";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/humble/wireless_msgs/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "7c70e4f01954004a012520eae95b86114e46ac2aa5813d277b1f01d80dacea30";
+    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/humble/wireless_msgs/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "7e5cd5e7b657f5fc71e8950c91fa3850c9ada76d7c4e1fd74b8363684e961e86";
   };
 
   buildType = "ament_cmake";

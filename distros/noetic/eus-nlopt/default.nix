@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, euslisp, nlopt }:
 buildRosPackage {
   pname = "ros-noetic-eus-nlopt";
-  version = "0.1.17-r2";
+  version = "0.1.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/eus_nlopt/0.1.17-2.tar.gz";
-    name = "0.1.17-2.tar.gz";
-    sha256 = "36b1b1e4d18e4a56b5b842d6938041f3e5fd391cfcb81010205215475d99e9e2";
+    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/eus_nlopt/0.1.18-1.tar.gz";
+    name = "0.1.18-1.tar.gz";
+    sha256 = "ae0e2d6ddd75f5d2b4032b3187a5118920badaee4a2f6a1869b32bc0e9e4ead0";
   };
 
   buildType = "catkin";

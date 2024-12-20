@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-moveit-resources-pr2-description";
-  version = "3.0.0-r2";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/rolling/moveit_resources_pr2_description/3.0.0-2.tar.gz";
-    name = "3.0.0-2.tar.gz";
-    sha256 = "23df0bbc8596b7e1cdde90a0fa4f89604837e9a96c5c1f89bb25d971b09f5c52";
+    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/rolling/moveit_resources_pr2_description/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "b93e9d03d403e45c496b9716bb405d06ef485d853b030ede09d773c01d45479b";
   };
 
   buildType = "ament_cmake";
