@@ -1,11 +1,17 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 with lib;
 
 let
   rosCfg = config.services.ros;
   cfg = rosCfg.core;
-in {
+in
+{
   # Interface
 
   options.services.ros.core = {
@@ -25,12 +31,16 @@ in {
       description = "ROS core";
       serviceConfig = {
         Type = "exec";
-        ExecStart = let
-          env = with rosCfg.pkgs; buildEnv {
-            name = "roscore-env";
-            paths = [ roslaunch ];
-          };
-        in "${env}/bin/roscore -p ${toString cfg.port}";
+        ExecStart =
+          let
+            env =
+              with rosCfg.pkgs;
+              buildEnv {
+                name = "roscore-env";
+                paths = [ roslaunch ];
+              };
+          in
+          "${env}/bin/roscore -p ${toString cfg.port}";
         User = "ros";
         Group = "ros";
         StateDirectory = "ros";

@@ -1,4 +1,9 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core }:
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  colcon-core,
+}:
 
 buildPythonPackage rec {
   pname = "colcon-zsh";

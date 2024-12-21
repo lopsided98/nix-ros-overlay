@@ -1,10 +1,24 @@
-{ lib, stdenv, fetchFromGitHub, fetchpatch, cmake, pkg-config, ignition
-, ignition-cmake ? ignition.cmake, ignition-math ? ignition.math
-, ignition-utils ? ignition.utils, libuuid, tinyxml-2, freeimage, gts, ffmpeg
-, majorVersion ? "4"
-, version ? "4.7.0"
-, srcHash ? "sha256-y8qp0UVXxSJm0aJeUD64+aG+gfNEboInW7F6tvHYTPI="
-, ... }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  fetchpatch,
+  cmake,
+  pkg-config,
+  ignition,
+  ignition-cmake ? ignition.cmake,
+  ignition-math ? ignition.math,
+  ignition-utils ? ignition.utils,
+  libuuid,
+  tinyxml-2,
+  freeimage,
+  gts,
+  ffmpeg,
+  majorVersion ? "4",
+  version ? "4.7.0",
+  srcHash ? "sha256-y8qp0UVXxSJm0aJeUD64+aG+gfNEboInW7F6tvHYTPI=",
+  ...
+}:
 
 stdenv.mkDerivation rec {
   pname = "ignition-common${majorVersion}";
@@ -28,8 +42,14 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];
-  buildInputs = [ ignition-math tinyxml-2 ignition-math gts freeimage ffmpeg ]
-    ++ lib.optional (lib.versionAtLeast version "4") ignition-utils;
+  buildInputs = [
+    ignition-math
+    tinyxml-2
+    ignition-math
+    gts
+    freeimage
+    ffmpeg
+  ] ++ lib.optional (lib.versionAtLeast version "4") ignition-utils;
   propagatedBuildInputs = [ libuuid ];
 
   meta = with lib; {

@@ -1,4 +1,10 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, setuptools }:
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  colcon-core,
+  setuptools,
+}:
 
 buildPythonPackage rec {
   pname = "colcon-python-setup-py";
@@ -9,7 +15,10 @@ buildPythonPackage rec {
     hash = "sha256-TYurLgW6M04p7uNxX73kkCgTQu2OAA4lITDlxRkVODo=";
   };
 
-  propagatedBuildInputs = [ colcon-core setuptools ];
+  propagatedBuildInputs = [
+    colcon-core
+    setuptools
+  ];
 
   # Requires unpackaged dependencies
   doCheck = false;

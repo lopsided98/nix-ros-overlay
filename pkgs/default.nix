@@ -1,29 +1,31 @@
 self: super: with self.lib; {
-  inherit (self.python3Packages) bloom; 
+  inherit (self.python3Packages) bloom;
 
   cargo-ament-build = self.callPackage ./cargo-ament-build { };
 
-  colcon = with self.python3Packages; colcon-core.withExtensions [
-    colcon-argcomplete
-    colcon-bash
-    colcon-cmake
-    colcon-core
-    colcon-defaults
-    colcon-devtools
-    colcon-library-path
-    colcon-metadata
-    colcon-mixin
-    colcon-notification
-    colcon-output
-    colcon-package-information
-    colcon-package-selection
-    colcon-parallel-executor
-    colcon-python-setup-py
-    colcon-recursive-crawl
-    colcon-ros
-    colcon-test-result
-    colcon-zsh
-  ];
+  colcon =
+    with self.python3Packages;
+    colcon-core.withExtensions [
+      colcon-argcomplete
+      colcon-bash
+      colcon-cmake
+      colcon-core
+      colcon-defaults
+      colcon-devtools
+      colcon-library-path
+      colcon-metadata
+      colcon-mixin
+      colcon-notification
+      colcon-output
+      colcon-package-information
+      colcon-package-selection
+      colcon-parallel-executor
+      colcon-python-setup-py
+      colcon-recursive-crawl
+      colcon-ros
+      colcon-test-result
+      colcon-zsh
+    ];
 
   gazebo_11 = self.libsForQt5.callPackage ./gazebo { };
   gazebo = self.gazebo_11;
@@ -124,17 +126,21 @@ self: super: with self.lib; {
 
       colcon-zsh = pyFinal.callPackage ./colcon/zsh.nix { };
 
-      empy_3 = pyPrev.empy.overrideAttrs ({
-        pname, ...
-      }: rec {
-        version = "3.3.4";
-        src = pyFinal.fetchPypi {
-          inherit pname version;
-          hash = "sha256-c6xJeFtgFHnfTqGKfHm8EwSop8NMArlHLPEgauiPAbM=";
-        };
-      });
+      empy_3 = pyPrev.empy.overrideAttrs (
+        {
+          pname,
+          ...
+        }:
+        rec {
+          version = "3.3.4";
+          src = pyFinal.fetchPypi {
+            inherit pname version;
+            hash = "sha256-c6xJeFtgFHnfTqGKfHm8EwSop8NMArlHLPEgauiPAbM=";
+          };
+        }
+      );
 
-      osrf-pycommon = pyFinal.callPackage ./osrf-pycommon {};
+      osrf-pycommon = pyFinal.callPackage ./osrf-pycommon { };
 
       rosdep = pyFinal.callPackage ./rosdep { };
 
