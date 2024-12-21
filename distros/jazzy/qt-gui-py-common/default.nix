@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, python-qt-binding }:
 buildRosPackage {
   pname = "ros-jazzy-qt-gui-py-common";
-  version = "2.7.4-r2";
+  version = "2.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/jazzy/qt_gui_py_common/2.7.4-2.tar.gz";
-    name = "2.7.4-2.tar.gz";
-    sha256 = "96dab88d475ec53fbe396968a805e1d545684ec3e2a70bc72264ecda7f03e917";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/jazzy/qt_gui_py_common/2.7.5-1.tar.gz";
+    name = "2.7.5-1.tar.gz";
+    sha256 = "f5c8e142dbff72cd2cfecc49b76d470b60e686fd9ee786977a73043ad7487e47";
   };
 
   buildType = "ament_cmake";

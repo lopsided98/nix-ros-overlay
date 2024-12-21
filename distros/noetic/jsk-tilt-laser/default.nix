@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, laser-assembler, laser-filters, robot-state-publisher, sensor-msgs, tf, tf-conversions, urg-node }:
 buildRosPackage {
   pname = "ros-noetic-jsk-tilt-laser";
-  version = "2.2.12-r1";
+  version = "2.2.15-r4";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/jsk_tilt_laser/2.2.12-1.tar.gz";
-    name = "2.2.12-1.tar.gz";
-    sha256 = "a7f28528f48b54cabeaa344687640f515aa524f5f1c8c9e213137193848797a1";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/jsk_tilt_laser/2.2.15-4.tar.gz";
+    name = "2.2.15-4.tar.gz";
+    sha256 = "545c0bf54659634ef0aff90b10132b815130c429f890fe28bc046ab2eea5ee06";
   };
 
   buildType = "catkin";

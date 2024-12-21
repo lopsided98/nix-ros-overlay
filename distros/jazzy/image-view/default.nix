@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, camera-calibration-parsers, cv-bridge, image-transport, message-filters, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-srvs, stereo-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-image-view";
-  version = "5.0.5-r1";
+  version = "5.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/image_view/5.0.5-1.tar.gz";
-    name = "5.0.5-1.tar.gz";
-    sha256 = "8d27aae60b80330c475f1740eb980d3007e0a05df9389af670f50624ea8f728e";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/image_view/5.0.6-1.tar.gz";
+    name = "5.0.6-1.tar.gz";
+    sha256 = "a621997297c82d7355b1ede8f00fbc5a363c4201f40df3aa4121088bdc9833d9";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-jazzy-mola-input-rawlog";
-  version = "1.2.1-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_input_rawlog/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "05c1e30410d41dcc8fcb81b115561a1c74be1d5d0226614cb2ea2d74229b1f3b";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_input_rawlog/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "df881e7b52515325ae442efb02bd133c87bbe884e43777ed5a4098d8fc571aca";
   };
 
   buildType = "cmake";

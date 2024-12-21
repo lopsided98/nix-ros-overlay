@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, camera-calibration, depth-image-proc, image-proc, image-publisher, image-rotate, image-view, stereo-image-proc }:
 buildRosPackage {
   pname = "ros-jazzy-image-pipeline";
-  version = "5.0.5-r1";
+  version = "5.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/image_pipeline/5.0.5-1.tar.gz";
-    name = "5.0.5-1.tar.gz";
-    sha256 = "bd71eed7884bb0ea738c3f9efff4a4b7b4333533b27eec23d695ea5c51b6ca72";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/image_pipeline/5.0.6-1.tar.gz";
+    name = "5.0.6-1.tar.gz";
+    sha256 = "2bbd3d4ed2568a6ee090bff8670f882fe2743c11e65f5f414d93b376f4273fe9";
   };
 
   buildType = "ament_cmake";

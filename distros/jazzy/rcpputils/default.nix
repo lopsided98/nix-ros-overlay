@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, rcutils }:
 buildRosPackage {
   pname = "ros-jazzy-rcpputils";
-  version = "2.11.0-r2";
+  version = "2.11.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcpputils-release/archive/release/jazzy/rcpputils/2.11.0-2.tar.gz";
-    name = "2.11.0-2.tar.gz";
-    sha256 = "903bf9bd7b0723b970a00931b70320aee8c70cef0c9e887ca3d3dec29a138c44";
+    url = "https://github.com/ros2-gbp/rcpputils-release/archive/release/jazzy/rcpputils/2.11.1-1.tar.gz";
+    name = "2.11.1-1.tar.gz";
+    sha256 = "c7fb7e6ae2cb9cad66a4ac8e0530075ae0a950a5cb7b4d845f53e4f9b32f7131";
   };
 
   buildType = "ament_cmake";

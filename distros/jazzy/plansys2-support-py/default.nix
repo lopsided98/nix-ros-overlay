@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-copyright, ament-flake8, ament-pep257, lifecycle-msgs, plansys2-msgs, python-cmake-module, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-plansys2-support-py";
-  version = "2.0.14-r1";
+  version = "2.0.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_support_py/2.0.14-1.tar.gz";
-    name = "2.0.14-1.tar.gz";
-    sha256 = "d8ef31e518771df4b7330b600a87e836d5652cd30a4c256ae420c593952da1e7";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_support_py/2.0.15-1.tar.gz";
+    name = "2.0.15-1.tar.gz";
+    sha256 = "0ad7a556ff389218f0cd26501dd068c05cd42423b5caa8e6e3f3fd0e0248a628";
   };
 
   buildType = "ament_cmake";

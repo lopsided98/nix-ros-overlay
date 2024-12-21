@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-google-benchmark, ament-cmake-ros, ament-lint-auto, ament-lint-common, pluginlib, rcutils, tinyxml2-vendor, urdf-parser-plugin, urdfdom, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-rolling-urdf";
-  version = "2.12.0-r1";
+  version = "2.12.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/urdf-release/archive/release/rolling/urdf/2.12.0-1.tar.gz";
-    name = "2.12.0-1.tar.gz";
-    sha256 = "0d147ad2959a791d7ac1082f0f6d56a99a0ba3c683fe0b50604895ef4e1c9559";
+    url = "https://github.com/ros2-gbp/urdf-release/archive/release/rolling/urdf/2.12.1-1.tar.gz";
+    name = "2.12.1-1.tar.gz";
+    sha256 = "30154da6dfa8dfaad48c9d1f90a3baaa28e5d6560df72c74932ede30b9e891b1";
   };
 
   buildType = "ament_cmake";

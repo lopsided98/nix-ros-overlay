@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-game-controller-spl-interfaces";
-  version = "4.0.1-r1";
+  version = "5.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/rolling/game_controller_spl_interfaces/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "29ca51f72cf1fc657c54fb1583d62b1d718dbb0ea01ff7999ea6637fbec03b43";
+    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/rolling/game_controller_spl_interfaces/5.0.0-2.tar.gz";
+    name = "5.0.0-2.tar.gz";
+    sha256 = "809c366cbf156b9cac9f9d4ceeaaa143ab3c8cc8f0b7e57e7e69cf859dfebf80";
   };
 
   buildType = "ament_cmake";

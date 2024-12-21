@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, rcpputils, rcutils }:
 buildRosPackage {
   pname = "ros-jazzy-rcl-logging-interface";
-  version = "3.1.0-r2";
+  version = "3.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/jazzy/rcl_logging_interface/3.1.0-2.tar.gz";
-    name = "3.1.0-2.tar.gz";
-    sha256 = "e7e5e33a78f012bd2c4433271196ec0d471a8f8656d44f2ea7b01badfd3e4c17";
+    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/jazzy/rcl_logging_interface/3.1.1-1.tar.gz";
+    name = "3.1.1-1.tar.gz";
+    sha256 = "c0a3490f83a7a12d284619daf4eeb1050855fa989db6e80f8036bb117913a346";
   };
 
   buildType = "ament_cmake";

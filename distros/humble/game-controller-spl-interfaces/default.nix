@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-game-controller-spl-interfaces";
-  version = "2.1.0-r1";
+  version = "2.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/humble/game_controller_spl_interfaces/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "104f67596d8beebcddd455a9482b37b54c2d9007bb5f822c6ba501f18783ed88";
+    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/humble/game_controller_spl_interfaces/2.2.0-2.tar.gz";
+    name = "2.2.0-2.tar.gz";
+    sha256 = "ebbdd5deecd2365b4b6c5cc5c2c48fbda58c19de65418dbf09d1ae0974629738";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, can-msgs, dataspeed-can-msg-filters, dataspeed-can-usb, ds-dbw-msgs, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ds-dbw-can";
-  version = "2.2.3-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/jazzy/ds_dbw_can/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "f253104cb9c5fb81156943d57488151b5c6b9577553c639a3fe403ef08c89764";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/jazzy/ds_dbw_can/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "238f9b18a6f30bc706f7c224f0fea71194e2fb7e3489161b703c181644d89f95";
   };
 
   buildType = "ament_cmake";

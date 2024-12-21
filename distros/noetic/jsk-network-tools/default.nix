@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, diagnostic-updater, dynamic-reconfigure, message-generation, message-runtime, roscpp, rospy, rostest, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-jsk-network-tools";
-  version = "2.2.12-r1";
+  version = "2.2.15-r4";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/jsk_network_tools/2.2.12-1.tar.gz";
-    name = "2.2.12-1.tar.gz";
-    sha256 = "21b402ed5de2bcf9052d49b0c4cb1e5607eeb7320474179995e5d04cfb8d508f";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/jsk_network_tools/2.2.15-4.tar.gz";
+    name = "2.2.15-4.tar.gz";
+    sha256 = "65230a9dd89258b2c508d781423828210c2881334705bd94412280b55c2cca46";
   };
 
   buildType = "catkin";

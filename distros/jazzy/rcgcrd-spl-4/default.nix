@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-rcgcrd-spl-4";
-  version = "4.0.1-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/jazzy/rcgcrd_spl_4/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "94a7fe7011152a36e941b4afd3866be680792f1b9624ab71cd79f4918da336ef";
+    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/jazzy/rcgcrd_spl_4/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "469bd95ab150284d9028e051beedf2530db67f15a40b2bf994f04f376326e617";
   };
 
   buildType = "ament_cmake";

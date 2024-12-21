@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-dataspeed-can-msgs";
-  version = "2.0.4-r1";
+  version = "2.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/humble/dataspeed_can_msgs/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "2be41e041163acc3b62ea963cf5d98c84614415fec4916f39018576c1b0a8327";
+    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/humble/dataspeed_can_msgs/2.0.5-1.tar.gz";
+    name = "2.0.5-1.tar.gz";
+    sha256 = "3811cae0302280cb9c6c2af0beacb8c5fc5163496d9f0be58aaecc43c3539caf";
   };
 
   buildType = "ament_cmake";

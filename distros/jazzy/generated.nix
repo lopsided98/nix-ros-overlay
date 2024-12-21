@@ -332,6 +332,12 @@ self: super: {
 
  classic-bags = self.callPackage ./classic-bags {};
 
+ clearpath-motor-msgs = self.callPackage ./clearpath-motor-msgs {};
+
+ clearpath-msgs = self.callPackage ./clearpath-msgs {};
+
+ clearpath-platform-msgs = self.callPackage ./clearpath-platform-msgs {};
+
  clearpath-ros2-socketcan-interface = self.callPackage ./clearpath-ros2-socketcan-interface {};
 
  clips-vendor = self.callPackage ./clips-vendor {};
@@ -582,6 +588,8 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ eiquadprog = self.callPackage ./eiquadprog {};
+
  ess-imu-driver2 = self.callPackage ./ess-imu-driver2 {};
 
  etsi-its-cam-coding = self.callPackage ./etsi-its-cam-coding {};
@@ -612,6 +620,12 @@ self: super: {
 
  etsi-its-denm-msgs = self.callPackage ./etsi-its-denm-msgs {};
 
+ etsi-its-mapem-ts-coding = self.callPackage ./etsi-its-mapem-ts-coding {};
+
+ etsi-its-mapem-ts-conversion = self.callPackage ./etsi-its-mapem-ts-conversion {};
+
+ etsi-its-mapem-ts-msgs = self.callPackage ./etsi-its-mapem-ts-msgs {};
+
  etsi-its-messages = self.callPackage ./etsi-its-messages {};
 
  etsi-its-msgs = self.callPackage ./etsi-its-msgs {};
@@ -621,6 +635,12 @@ self: super: {
  etsi-its-primitives-conversion = self.callPackage ./etsi-its-primitives-conversion {};
 
  etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
+
+ etsi-its-spatem-ts-coding = self.callPackage ./etsi-its-spatem-ts-coding {};
+
+ etsi-its-spatem-ts-conversion = self.callPackage ./etsi-its-spatem-ts-conversion {};
+
+ etsi-its-spatem-ts-msgs = self.callPackage ./etsi-its-spatem-ts-msgs {};
 
  etsi-its-vam-ts-coding = self.callPackage ./etsi-its-vam-ts-coding {};
 
@@ -813,6 +833,8 @@ self: super: {
  gmock-vendor = self.callPackage ./gmock-vendor {};
 
  google-benchmark-vendor = self.callPackage ./google-benchmark-vendor {};
+
+ gpio-controllers = self.callPackage ./gpio-controllers {};
 
  gps-msgs = self.callPackage ./gps-msgs {};
 
@@ -1166,6 +1188,8 @@ self: super: {
 
  marine-sensor-msgs = self.callPackage ./marine-sensor-msgs {};
 
+ marker-msgs = self.callPackage ./marker-msgs {};
+
  marti-can-msgs = self.callPackage ./marti-can-msgs {};
 
  marti-common-msgs = self.callPackage ./marti-common-msgs {};
@@ -1193,6 +1217,8 @@ self: super: {
  mavros-msgs = self.callPackage ./mavros-msgs {};
 
  mcap-vendor = self.callPackage ./mcap-vendor {};
+
+ mecanum-drive-controller = self.callPackage ./mecanum-drive-controller {};
 
  menge-vendor = self.callPackage ./menge-vendor {};
 
@@ -1343,6 +1369,8 @@ self: super: {
  moveit-ros-robot-interaction = self.callPackage ./moveit-ros-robot-interaction {};
 
  moveit-ros-tests = self.callPackage ./moveit-ros-tests {};
+
+ moveit-ros-trajectory-cache = self.callPackage ./moveit-ros-trajectory-cache {};
 
  moveit-ros-visualization = self.callPackage ./moveit-ros-visualization {};
 
@@ -1830,9 +1858,15 @@ self: super: {
 
  raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
 
+ raspimouse-navigation = self.callPackage ./raspimouse-navigation {};
+
  raspimouse-ros2-examples = self.callPackage ./raspimouse-ros2-examples {};
 
  raspimouse-sim = self.callPackage ./raspimouse-sim {};
+
+ raspimouse-slam = self.callPackage ./raspimouse-slam {};
+
+ raspimouse-slam-navigation = self.callPackage ./raspimouse-slam-navigation {};
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
@@ -2718,7 +2752,27 @@ self: super: {
 
  turtlesim = self.callPackage ./turtlesim {};
 
+ tuw-airskin-msgs = self.callPackage ./tuw-airskin-msgs {};
+
+ tuw-geo-msgs = self.callPackage ./tuw-geo-msgs {};
+
  tuw-geometry = self.callPackage ./tuw-geometry {};
+
+ tuw-geometry-msgs = self.callPackage ./tuw-geometry-msgs {};
+
+ tuw-graph-msgs = self.callPackage ./tuw-graph-msgs {};
+
+ tuw-msgs = self.callPackage ./tuw-msgs {};
+
+ tuw-multi-robot-msgs = self.callPackage ./tuw-multi-robot-msgs {};
+
+ tuw-nav-msgs = self.callPackage ./tuw-nav-msgs {};
+
+ tuw-object-map-msgs = self.callPackage ./tuw-object-map-msgs {};
+
+ tuw-object-msgs = self.callPackage ./tuw-object-msgs {};
+
+ tuw-std-msgs = self.callPackage ./tuw-std-msgs {};
 
  tvm-vendor = self.callPackage ./tvm-vendor {};
 
@@ -2773,6 +2827,8 @@ self: super: {
  ur-msgs = self.callPackage ./ur-msgs {};
 
  ur-robot-driver = self.callPackage ./ur-robot-driver {};
+
+ ur-simulation-gz = self.callPackage ./ur-simulation-gz {};
 
  urdf = self.callPackage ./urdf {};
 
@@ -2866,11 +2922,23 @@ self: super: {
 
  wiimote-msgs = self.callPackage ./wiimote-msgs {};
 
+ wireless-msgs = self.callPackage ./wireless-msgs {};
+
+ wireless-watcher = self.callPackage ./wireless-watcher {};
+
  xacro = self.callPackage ./xacro {};
 
  yaets = self.callPackage ./yaets {};
 
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
+
+ yasmin = self.callPackage ./yasmin {};
+
+ yasmin-demos = self.callPackage ./yasmin-demos {};
+
+ yasmin-msgs = self.callPackage ./yasmin-msgs {};
+
+ yasmin-ros = self.callPackage ./yasmin-ros {};
 
  zbar-ros = self.callPackage ./zbar-ros {};
 

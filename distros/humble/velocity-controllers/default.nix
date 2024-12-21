@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-manager, forward-command-controller, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-humble-velocity-controllers";
-  version = "2.38.0-r1";
+  version = "2.39.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/velocity_controllers/2.38.0-1.tar.gz";
-    name = "2.38.0-1.tar.gz";
-    sha256 = "a309c2b86751e8a0e6816ff144a88f7aaf8c50c6701159bf3f1a72db5029568b";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/velocity_controllers/2.39.0-1.tar.gz";
+    name = "2.39.0-1.tar.gz";
+    sha256 = "056241f8753ec2ed48f4ce871b1865595a1cc13c439d460661195a9d1b9aedb0";
   };
 
   buildType = "ament_cmake";

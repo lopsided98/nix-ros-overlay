@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-jazzy-rosidl-cli";
-  version = "4.6.4-r1";
+  version = "4.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/jazzy/rosidl_cli/4.6.4-1.tar.gz";
-    name = "4.6.4-1.tar.gz";
-    sha256 = "2895fe7046b6a75b0fca755d14e976cb9b892b334214f60be2ffbdea06cf2d8c";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/jazzy/rosidl_cli/4.6.5-1.tar.gz";
+    name = "4.6.5-1.tar.gz";
+    sha256 = "6c245d50a34defdaad05b7b1e1fe17b35df035723ea5ad556a6a7e10dffd91c0";
   };
 
   buildType = "ament_python";

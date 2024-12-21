@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, can-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-dataspeed-can-msg-filters";
-  version = "2.0.4-r1";
+  version = "2.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/humble/dataspeed_can_msg_filters/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "55f472d230c13f5012b954d3e618a28bb5e2b96f84ad4c4adbe37d54cd096dbc";
+    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/humble/dataspeed_can_msg_filters/2.0.5-1.tar.gz";
+    name = "2.0.5-1.tar.gz";
+    sha256 = "383d790502fa6265df366f448193069e9db258a98e02c0f7ddf5864571b45f6b";
   };
 
   buildType = "ament_cmake";

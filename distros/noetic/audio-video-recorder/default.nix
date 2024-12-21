@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, audio-common-msgs, catkin, gst_all_1, message-filters, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-audio-video-recorder";
-  version = "2.2.12-r1";
+  version = "2.2.15-r4";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/audio_video_recorder/2.2.12-1.tar.gz";
-    name = "2.2.12-1.tar.gz";
-    sha256 = "e5d81483f8363b44f037d1bb399a315c5aab9a60e23a2c9815670c1ff1c67c43";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/audio_video_recorder/2.2.15-4.tar.gz";
+    name = "2.2.15-4.tar.gz";
+    sha256 = "d79e55ec00e36553449590990af29692e5cd4ac33ce5068f87e4c8ac1d917612";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, fmt, generate-parameter-library, moveit-core, moveit-resources-panda-moveit-config, pluginlib, range-v3, rclcpp, rsl, tf2-geometry-msgs, tf2-kdl, tl-expected }:
 buildRosPackage {
   pname = "ros-rolling-pick-ik";
-  version = "1.1.0-r3";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pick_ik-release/archive/release/rolling/pick_ik/1.1.0-3.tar.gz";
-    name = "1.1.0-3.tar.gz";
-    sha256 = "d0942041e0d12be2089f0b1eec42c1a521514fe3413abe82b991774c4423009d";
+    url = "https://github.com/ros2-gbp/pick_ik-release/archive/release/rolling/pick_ik/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "4095ca2353dd95e328d5aaeaaefe6c974977f4bffdb81b674393e5fb3661a86a";
   };
 
   buildType = "ament_cmake";
