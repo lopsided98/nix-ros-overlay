@@ -154,10 +154,14 @@ in {
     '';
   });
 
-  gz-transport-vendor = lib.patchGzAmentVendorGit rosSuper.gz-transport-vendor {
+  gz-transport-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-transport-vendor {
     version = "14.0.0";
     hash = "sha256-zoGphy2cpmqJsnyS1LNVm4eGtHCWkAwIblga4RdVj4k=";
-  };
+  }).overrideAttrs({
+    buildInputs ? [], ...
+  }: {
+    buildInputs = buildInputs ++ [ self.libsodium ];
+  });
 
   gz-utils-vendor = lib.patchGzAmentVendorGit rosSuper.gz-utils-vendor {
     version = "3.0.0";
