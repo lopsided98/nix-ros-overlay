@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, plansys2-msgs, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-plansys2-pddl-parser";
-  version = "2.0.14-r1";
+  version = "2.0.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_pddl_parser/2.0.14-1.tar.gz";
-    name = "2.0.14-1.tar.gz";
-    sha256 = "3c26d8b2f3a119a0cd8ce3e3187188a8ec2f391f6fe3f6f9fe54b4f125ed694b";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_pddl_parser/2.0.15-1.tar.gz";
+    name = "2.0.15-1.tar.gz";
+    sha256 = "c78c2f781b978b8eeb7dd82dd36908b66d779f8a2a41d70d75caf8850efc3072";
   };
 
   buildType = "ament_cmake";

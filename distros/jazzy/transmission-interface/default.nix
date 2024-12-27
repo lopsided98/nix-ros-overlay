@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, hardware-interface, pluginlib, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-jazzy-transmission-interface";
-  version = "4.20.0-r1";
+  version = "4.21.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/transmission_interface/4.20.0-1.tar.gz";
-    name = "4.20.0-1.tar.gz";
-    sha256 = "c538b17f7f4b6d06ee2bc7b6ffbd17fdbd66d2ec44757845eab41397bea5674e";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/transmission_interface/4.21.0-1.tar.gz";
+    name = "4.21.0-1.tar.gz";
+    sha256 = "c999f95fb9a25c9196d40785566df73838ac36cf520495760c31a2d8e1ec5bb4";
   };
 
   buildType = "ament_cmake";

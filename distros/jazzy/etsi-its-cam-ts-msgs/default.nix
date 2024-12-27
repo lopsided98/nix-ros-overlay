@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-cam-ts-msgs";
-  version = "2.4.0-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_cam_ts_msgs/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "fe6372b5433e51274fd8bd1e45a35706efa57ea667099d013b0e5aa52f7a1d93";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_cam_ts_msgs/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "bbd5c099e2c527ea721375bf5c7c67bfcee8f3709c304ca5e7628ed8bbed5129";
   };
 
   buildType = "ament_cmake";

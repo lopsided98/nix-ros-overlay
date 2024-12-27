@@ -298,7 +298,11 @@ self: super: {
 
  autoware-control-msgs = self.callPackage ./autoware-control-msgs {};
 
+ autoware-internal-debug-msgs = self.callPackage ./autoware-internal-debug-msgs {};
+
  autoware-internal-msgs = self.callPackage ./autoware-internal-msgs {};
+
+ autoware-internal-perception-msgs = self.callPackage ./autoware-internal-perception-msgs {};
 
  autoware-lanelet2-extension = self.callPackage ./autoware-lanelet2-extension {};
 
@@ -804,6 +808,8 @@ self: super: {
 
  eigenpy = self.callPackage ./eigenpy {};
 
+ eiquadprog = self.callPackage ./eiquadprog {};
+
  ess-imu-driver2 = self.callPackage ./ess-imu-driver2 {};
 
  etsi-its-cam-coding = self.callPackage ./etsi-its-cam-coding {};
@@ -834,6 +840,12 @@ self: super: {
 
  etsi-its-denm-msgs = self.callPackage ./etsi-its-denm-msgs {};
 
+ etsi-its-mapem-ts-coding = self.callPackage ./etsi-its-mapem-ts-coding {};
+
+ etsi-its-mapem-ts-conversion = self.callPackage ./etsi-its-mapem-ts-conversion {};
+
+ etsi-its-mapem-ts-msgs = self.callPackage ./etsi-its-mapem-ts-msgs {};
+
  etsi-its-messages = self.callPackage ./etsi-its-messages {};
 
  etsi-its-msgs = self.callPackage ./etsi-its-msgs {};
@@ -843,6 +855,12 @@ self: super: {
  etsi-its-primitives-conversion = self.callPackage ./etsi-its-primitives-conversion {};
 
  etsi-its-rviz-plugins = self.callPackage ./etsi-its-rviz-plugins {};
+
+ etsi-its-spatem-ts-coding = self.callPackage ./etsi-its-spatem-ts-coding {};
+
+ etsi-its-spatem-ts-conversion = self.callPackage ./etsi-its-spatem-ts-conversion {};
+
+ etsi-its-spatem-ts-msgs = self.callPackage ./etsi-its-spatem-ts-msgs {};
 
  etsi-its-vam-ts-coding = self.callPackage ./etsi-its-vam-ts-coding {};
 
@@ -2208,6 +2226,8 @@ self: super: {
 
  position-controllers = self.callPackage ./position-controllers {};
 
+ proto2ros = self.callPackage ./proto2ros {};
+
  proxsuite = self.callPackage ./proxsuite {};
 
  psdk-interfaces = self.callPackage ./psdk-interfaces {};
@@ -3294,9 +3314,13 @@ self: super: {
 
  tuw-airskin-msgs = self.callPackage ./tuw-airskin-msgs {};
 
+ tuw-geo-msgs = self.callPackage ./tuw-geo-msgs {};
+
  tuw-geometry = self.callPackage ./tuw-geometry {};
 
  tuw-geometry-msgs = self.callPackage ./tuw-geometry-msgs {};
+
+ tuw-graph-msgs = self.callPackage ./tuw-graph-msgs {};
 
  tuw-msgs = self.callPackage ./tuw-msgs {};
 
@@ -3304,7 +3328,11 @@ self: super: {
 
  tuw-nav-msgs = self.callPackage ./tuw-nav-msgs {};
 
+ tuw-object-map-msgs = self.callPackage ./tuw-object-map-msgs {};
+
  tuw-object-msgs = self.callPackage ./tuw-object-msgs {};
+
+ tuw-std-msgs = self.callPackage ./tuw-std-msgs {};
 
  tvm-vendor = self.callPackage ./tvm-vendor {};
 
@@ -3361,6 +3389,8 @@ self: super: {
  ur-msgs = self.callPackage ./ur-msgs {};
 
  ur-robot-driver = self.callPackage ./ur-robot-driver {};
+
+ ur-simulation-gz = self.callPackage ./ur-simulation-gz {};
 
  urdf = self.callPackage ./urdf {};
 
@@ -3485,6 +3515,14 @@ self: super: {
  xacro = self.callPackage ./xacro {};
 
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
+
+ yasmin = self.callPackage ./yasmin {};
+
+ yasmin-demos = self.callPackage ./yasmin-demos {};
+
+ yasmin-msgs = self.callPackage ./yasmin-msgs {};
+
+ yasmin-ros = self.callPackage ./yasmin-ros {};
 
  zbar-ros = self.callPackage ./zbar-ros {};
 

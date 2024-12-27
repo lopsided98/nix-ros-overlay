@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, example-interfaces, pythonPackages, rclpy, rosbag2-py, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rosbag2-examples-py";
-  version = "0.26.5-r1";
+  version = "0.26.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/rosbag2_examples_py/0.26.5-1.tar.gz";
-    name = "0.26.5-1.tar.gz";
-    sha256 = "46c955e108486c1b0f0d854822575b453648376b7002c02d81069ace30643d35";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/rosbag2_examples_py/0.26.6-1.tar.gz";
+    name = "0.26.6-1.tar.gz";
+    sha256 = "434f6ca7e7133a525d2de3327318a493331e1891727565dc845d4b4a8835625d";
   };
 
   buildType = "ament_python";

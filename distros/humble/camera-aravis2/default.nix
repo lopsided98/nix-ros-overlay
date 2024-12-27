@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, aravis, camera-aravis2-msgs, camera-info-manager, cv-bridge, diagnostic-msgs, glib, image-transport, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-camera-aravis2";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/camera_aravis2-release/archive/release/humble/camera_aravis2/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "9ad2e683be2a353c7da19c178a6d932f1651d664d11b099ede85c77598396db2";
+    url = "https://github.com/ros2-gbp/camera_aravis2-release/archive/release/humble/camera_aravis2/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "cf73c82b7a2aff79ffa52845239a580a66efb32152349039c5f5c0618a926096";
   };
 
   buildType = "ament_cmake";

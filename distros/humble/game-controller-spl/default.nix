@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, game-controller-spl-interfaces, python3Packages, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-humble-game-controller-spl";
-  version = "2.1.0-r1";
+  version = "2.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/humble/game_controller_spl/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "9049b73f61ce832f35368be8054b2322f734fea7674ce865189df2dcbe3f6bd7";
+    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/humble/game_controller_spl/2.2.0-2.tar.gz";
+    name = "2.2.0-2.tar.gz";
+    sha256 = "40d96979d05f9581750dd79ab5ccb46e998ae504221843607b1ad30002c4cc36";
   };
 
   buildType = "ament_python";

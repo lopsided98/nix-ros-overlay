@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, lifecycle-msgs, nav2-msgs, pythonPackages, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-simple-commander";
-  version = "1.3.3-r1";
+  version = "1.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_simple_commander/1.3.3-1.tar.gz";
-    name = "1.3.3-1.tar.gz";
-    sha256 = "71c6b78fa4e28e94fa0b633ff11bb228e1b13f85bf2ceddb1da30171c322da27";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_simple_commander/1.3.4-1.tar.gz";
+    name = "1.3.4-1.tar.gz";
+    sha256 = "7c32324309cfa896ad803059f753220630ed7ab5a7509efbd75d5097fd17e0d4";
   };
 
   buildType = "ament_python";

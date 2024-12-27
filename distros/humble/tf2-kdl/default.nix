@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, builtin-interfaces, geometry-msgs, orocos-kdl-vendor, rclcpp, tf2, tf2-msgs, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-humble-tf2-kdl";
-  version = "0.25.9-r1";
+  version = "0.25.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2_kdl/0.25.9-1.tar.gz";
-    name = "0.25.9-1.tar.gz";
-    sha256 = "656dbe4703d7104ada00fbf48b2c162ed50380366bd23a3bca065fa574aa331a";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2_kdl/0.25.10-1.tar.gz";
+    name = "0.25.10-1.tar.gz";
+    sha256 = "bff7d8830d98eb2d33e8ac331ec56f0919cff119fcb2857b67b51ebe4e09594a";
   };
 
   buildType = "ament_cmake";
