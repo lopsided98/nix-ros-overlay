@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, can-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-clearpath-ros2-socketcan-interface";
-  version = "1.0.0-r1";
+  version = "1.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_ros2_socketcan_interface-release/archive/release/humble/clearpath_ros2_socketcan_interface/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "4da41aa84a5fd27c212cbd158102d6a15c900b5041f8ea32590b3ce2dde12eae";
+    url = "https://github.com/clearpath-gbp/clearpath_ros2_socketcan_interface-release/archive/release/humble/clearpath_ros2_socketcan_interface/1.0.1-2.tar.gz";
+    name = "1.0.1-2.tar.gz";
+    sha256 = "8b641f43251021a58af334f3bec0ec87f78a4a67cbd7c3337a68c8e6c2cbb1f4";
   };
 
   buildType = "ament_cmake";

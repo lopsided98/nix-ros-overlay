@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, kdl-parser, sensor-msgs, tf-conversions, urdf }:
 buildRosPackage {
   pname = "ros-noetic-virtual-force-publisher";
-  version = "2.2.12-r1";
+  version = "2.2.15-r4";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/virtual_force_publisher/2.2.12-1.tar.gz";
-    name = "2.2.12-1.tar.gz";
-    sha256 = "5dacad62f81a05fffab95f19dd5ebf306902d484eae537467c45ec348267ce64";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/noetic/virtual_force_publisher/2.2.15-4.tar.gz";
+    name = "2.2.15-4.tar.gz";
+    sha256 = "c8d3d9c5a1790c01221b6cd8a050541747e1e491c28bc2be82e0ca8a0bd383fd";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ess-imu-driver2";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ess_imu_driver2-release/archive/release/jazzy/ess_imu_driver2/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "7824c4fc1756caa3c13c51e0dac8c257837312dc712f666f328912a630cb0a69";
+    url = "https://github.com/ros2-gbp/ess_imu_driver2-release/archive/release/jazzy/ess_imu_driver2/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "416fc0f09a435130c0edd9f1a42939f50559774a8e545595739205fb759af384";
   };
 
   buildType = "ament_cmake";

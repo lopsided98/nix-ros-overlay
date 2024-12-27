@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, moveit-resources-fanuc-description, moveit-setup-framework, pluginlib }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-setup-srdf-plugins";
-  version = "2.10.0-r1";
+  version = "2.12.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_setup_srdf_plugins/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "2ee2f8a8f723b293e1bc3620befc9f63f88d7eb5a56d2eaf80d620db52823c8f";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_setup_srdf_plugins/2.12.1-1.tar.gz";
+    name = "2.12.1-1.tar.gz";
+    sha256 = "c81ed9b55306edfcf7c89a8406f873a676cbe968ae9c700f53a3a98361687713";
   };
 
   buildType = "ament_cmake";

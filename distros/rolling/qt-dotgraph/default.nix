@@ -2,22 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python-qt-binding, python3Packages, pythonPackages }:
 buildRosPackage {
   pname = "ros-rolling-qt-dotgraph";
-  version = "2.8.3-r1";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_dotgraph/2.8.3-1.tar.gz";
-    name = "2.8.3-1.tar.gz";
-    sha256 = "f0471e60f0689ca1804f4cdd7f393ef382dd96a1df967b6b191db3c222435175";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_dotgraph/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "328e7fcc7be6dbc8f8d42c446249ee56de426fa6444b8b6d5513510c699cb01c";
   };
 
-  buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common python3Packages.pygraphviz ];
-  propagatedBuildInputs = [ python-qt-binding python3Packages.pydot ];
-  nativeBuildInputs = [ ament-cmake ];
+  buildType = "ament_python";
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint pythonPackages.pytest ];
+  propagatedBuildInputs = [ python-qt-binding python3Packages.pydot python3Packages.pygraphviz ];
 
   meta = {
     description = "qt_dotgraph provides helpers to work with dot graphs.";

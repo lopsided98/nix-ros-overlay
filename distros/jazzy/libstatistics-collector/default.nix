@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, builtin-interfaces, performance-test-fixture, rcl, rcpputils, rcutils, rmw, rosidl-default-generators, rosidl-default-runtime, statistics-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-libstatistics-collector";
-  version = "1.7.3-r1";
+  version = "1.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libstatistics_collector-release/archive/release/jazzy/libstatistics_collector/1.7.3-1.tar.gz";
-    name = "1.7.3-1.tar.gz";
-    sha256 = "d493fe9ee5204d360fe5de339f22d3dcb0d91fde7f8060beade1d93fede62234";
+    url = "https://github.com/ros2-gbp/libstatistics_collector-release/archive/release/jazzy/libstatistics_collector/1.7.4-1.tar.gz";
+    name = "1.7.4-1.tar.gz";
+    sha256 = "d475da13d4578843dc174a0ba0c3cccbdaaa03cae976a9239bf38dbd22fbbc34";
   };
 
   buildType = "ament_cmake";

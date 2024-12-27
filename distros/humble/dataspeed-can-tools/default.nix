@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, can-msgs, dataspeed-can-msgs, rclcpp, rosbag2-cpp, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-dataspeed-can-tools";
-  version = "2.0.4-r1";
+  version = "2.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/humble/dataspeed_can_tools/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "e848af9cfcd4c51f9d2cbb6aba2c2e4ccfc3865d28b3cd6cc21a7947d8751770";
+    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/humble/dataspeed_can_tools/2.0.5-1.tar.gz";
+    name = "2.0.5-1.tar.gz";
+    sha256 = "e3e02e8eb4ef3c95ad9c068dedf91b79eb7338024fd8e353eb6f5087477483e9";
   };
 
   buildType = "ament_cmake";

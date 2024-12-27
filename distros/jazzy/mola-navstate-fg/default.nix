@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, gtsam, mola-common, mola-imu-preintegration, mola-kernel, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-jazzy-mola-navstate-fg";
-  version = "1.2.1-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_navstate_fg/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "6923a8316175bd5bbfbaf3533f426aceefa85a8857bd3184329638bbb3cfe2f6";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_navstate_fg/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "d4cb539ce17fc41cec7810b504053d6bc9a9cb21f8b516760fdd14d8b7733c64";
   };
 
   buildType = "cmake";

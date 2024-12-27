@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, mk, moveit-msgs, roseus, rostest, tf }:
 buildRosPackage {
   pname = "ros-noetic-jsk-ik-server";
-  version = "0.1.17-r2";
+  version = "0.1.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/jsk_ik_server/0.1.17-2.tar.gz";
-    name = "0.1.17-2.tar.gz";
-    sha256 = "4e586c7eed8fa2f9c1dd6eb04b49b5c4d17555a851e7f2a2fd5a409bd7ca4a97";
+    url = "https://github.com/tork-a/jsk_control-release/archive/release/noetic/jsk_ik_server/0.1.18-1.tar.gz";
+    name = "0.1.18-1.tar.gz";
+    sha256 = "5a4e39b17ea0a792003bf7c10f8186fa177429bf8004f84e2f75434485d6c538";
   };
 
   buildType = "catkin";

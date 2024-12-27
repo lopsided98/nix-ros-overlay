@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, git, liblz4-vendor, zstd-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-mcap-vendor";
-  version = "0.26.5-r1";
+  version = "0.26.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/mcap_vendor/0.26.5-1.tar.gz";
-    name = "0.26.5-1.tar.gz";
-    sha256 = "63bfd853dd3f7b8842ec98e2c5adfe2a565d225ba73936e1c4ab6ccbcec5af82";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/mcap_vendor/0.26.6-1.tar.gz";
+    name = "0.26.6-1.tar.gz";
+    sha256 = "6757bb6a41784b906ce25d87336f569ca8a4cabc20a896aabf1395555f4d6e16";
   };
 
   buildType = "ament_cmake";

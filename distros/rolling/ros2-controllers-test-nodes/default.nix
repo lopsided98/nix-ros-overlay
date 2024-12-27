@@ -2,20 +2,20 @@
 # Copyright 2024 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pythonPackages, rclpy, std-msgs, trajectory-msgs }:
+{ lib, buildRosPackage, fetchurl, launch-ros, launch-testing-ros, pythonPackages, rclpy, sensor-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ros2-controllers-test-nodes";
-  version = "4.16.0-r1";
+  version = "4.18.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/ros2_controllers_test_nodes/4.16.0-1.tar.gz";
-    name = "4.16.0-1.tar.gz";
-    sha256 = "8af81c138913a1c7f0e644fd71976bb716bddc2c0c834d11648038b2bcb3500f";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/ros2_controllers_test_nodes/4.18.0-2.tar.gz";
+    name = "4.18.0-2.tar.gz";
+    sha256 = "87a1bda78e6b66ee06e01a694655c5ff3fad6b58ddc826741b4e966ecaeacd52";
   };
 
   buildType = "ament_python";
-  checkInputs = [ pythonPackages.pytest ];
-  propagatedBuildInputs = [ rclpy std-msgs trajectory-msgs ];
+  checkInputs = [ launch-ros launch-testing-ros pythonPackages.pytest ];
+  propagatedBuildInputs = [ rclpy sensor-msgs std-msgs trajectory-msgs ];
 
   meta = {
     description = "Demo nodes for showing and testing functionalities of the ros2_control framework.";

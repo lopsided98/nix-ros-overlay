@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, gtsam, mola-common, mola-imu-preintegration, mola-kernel, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-humble-mola-navstate-fg";
-  version = "1.2.1-r1";
+  version = "1.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_navstate_fg/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "1e1c1922de0f6aed3a74ede209cf1b781b59a45568bd22c985f27df17e89a96b";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_navstate_fg/1.4.1-1.tar.gz";
+    name = "1.4.1-1.tar.gz";
+    sha256 = "07bcb8b36cd9d3c341e518028125f0190830d66afda3087a399068622b6f151a";
   };
 
   buildType = "cmake";
