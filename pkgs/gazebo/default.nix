@@ -11,21 +11,12 @@
 
 mkDerivation rec {
   pname = "gazebo";
-  version = "11.14.0";
+  version = "11.15.1";
 
   src = fetchurl {
     url = "https://osrf-distributions.s3.amazonaws.com/gazebo/releases/${pname}-${version}.tar.bz2";
-    hash = "sha256-fphCwEbJ4HVTVbJ0wkCoq79Olivnznt/WRlOX0tYT0U=";
+    hash = "sha256-4EZal6G2SSZiyktio9ht1zHCLnuRLyD9wS/6CevW1xA=";
   };
-
-  patches = [
-    # Allow building with graphviz 10+
-    (fetchpatch {
-      name = "fix-build-against-graphviz-10.patch";
-      url = "https://github.com/gazebosim/gazebo-classic/commit/3a9efee7ccdf552cbf22188131782f242f6c0542.patch";
-      hash = "sha256-KPwuDdTEWMDbLF/FQACM/huCYlXDg43cd8QBt3E859A=";
-    })
-  ];
 
   enableParallelBuilding = true;
 
