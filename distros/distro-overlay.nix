@@ -134,7 +134,10 @@ let
       ];
     });
 
-    plotjuggler = rosSuper.plotjuggler.overrideAttrs ({
+    plotjuggler = (rosSuper.plotjuggler.override {
+      # plotjuggler is not yet compatible with newer versions
+      protobuf = self.protobuf_23;
+    }).overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
       dontWrapQtApps = false;
