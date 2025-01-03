@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, launch-pal, moveit-configs-utils, moveit-kinematics, moveit-planners-ompl, moveit-ros-move-group, moveit-ros-perception, moveit-ros-visualization, moveit-simple-controller-manager, talos-description }:

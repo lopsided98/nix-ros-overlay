@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, geometry-msgs, pythonPackages, rclpy, sensor-msgs, std-msgs, tf2-msgs, tf2-py }:
+{ lib, buildRosPackage, fetchurl, geometry-msgs, python3Packages, rclpy, sensor-msgs, std-msgs, tf2-msgs, tf2-py }:
 buildRosPackage {
   pname = "ros-humble-tf2-ros-py";
   version = "0.25.10-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ pythonPackages.pytest sensor-msgs ];
+  checkInputs = [ python3Packages.pytest sensor-msgs ];
   propagatedBuildInputs = [ geometry-msgs rclpy sensor-msgs std-msgs tf2-msgs tf2-py ];
 
   meta = {

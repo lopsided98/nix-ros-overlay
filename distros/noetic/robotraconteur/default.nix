@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, bluez, boost, catkin, cmake, dbus, gtest, libusb1, openssl, python3, python3Packages, zlib }:

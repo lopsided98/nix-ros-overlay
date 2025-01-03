@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-xmllint, launch-testing, launch-testing-ros, pythonPackages, rclpy, ros2topic, sensor-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-xmllint, launch-testing, launch-testing-ros, python3Packages, rclpy, ros2topic, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-joint-state-publisher";
   version = "2.4.0-r2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-xmllint launch-testing launch-testing-ros pythonPackages.pytest ros2topic ];
+  checkInputs = [ ament-copyright ament-xmllint launch-testing launch-testing-ros python3Packages.pytest ros2topic ];
   propagatedBuildInputs = [ rclpy sensor-msgs std-msgs ];
 
   meta = {

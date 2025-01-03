@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, diagnostic-aggregator, diagnostic-msgs, diagnostic-updater, irobot-create-msgs, pythonPackages, rclpy, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, diagnostic-aggregator, diagnostic-msgs, diagnostic-updater, irobot-create-msgs, python3Packages, rclpy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-turtlebot4-diagnostics";
   version = "1.0.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.pytest ];
   propagatedBuildInputs = [ diagnostic-aggregator diagnostic-msgs diagnostic-updater irobot-create-msgs rclpy sensor-msgs ];
 
   meta = {

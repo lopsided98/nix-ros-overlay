@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, cob-object-detection-msgs, cob-vision-utils, cv-bridge, diagnostic-msgs, diagnostic-updater, image-transport, opencv, roscpp, rospy, sensor-msgs, std-msgs, std-srvs, tf, tinyxml, visualization-msgs }:

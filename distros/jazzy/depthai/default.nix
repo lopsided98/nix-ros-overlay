@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb1, nlohmann_json, opencv, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-depthai";
-  version = "2.28.0-r1";
+  version = "2.29.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-core-release/archive/release/jazzy/depthai/2.28.0-1.tar.gz";
-    name = "2.28.0-1.tar.gz";
-    sha256 = "4b59598aa06bc44891f0a19d69298a59f66c65af71ead774f6a2b2af8485f3d4";
+    url = "https://github.com/luxonis/depthai-core-release/archive/release/jazzy/depthai/2.29.0-1.tar.gz";
+    name = "2.29.0-1.tar.gz";
+    sha256 = "bcbfbc992a5d5fa67f4a0230a54d643c64fe2937bb1d4776a104b62b5b03a85c";
   };
 
   buildType = "ament_cmake";

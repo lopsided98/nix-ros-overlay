@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, builtin-interfaces, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-joint-state-broadcaster";
-  version = "2.39.0-r1";
+  version = "2.40.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/joint_state_broadcaster/2.39.0-1.tar.gz";
-    name = "2.39.0-1.tar.gz";
-    sha256 = "b48c889359eea9aee6ac4ea922e01de7c8848e221fd61e889c1a74df80336030";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/joint_state_broadcaster/2.40.0-1.tar.gz";
+    name = "2.40.0-1.tar.gz";
+    sha256 = "a8dfda2935b2177d6a123860e3898d4adca000143b0495a7565c67ab6af09f8e";
   };
 
   buildType = "ament_cmake";

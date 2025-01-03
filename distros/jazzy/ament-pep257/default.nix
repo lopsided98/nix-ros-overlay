@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-flake8, ament-lint, python3Packages, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, ament-flake8, ament-lint, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-ament-pep257";
   version = "0.17.1-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-flake8 pythonPackages.pytest ];
+  checkInputs = [ ament-flake8 python3Packages.pytest ];
   propagatedBuildInputs = [ ament-lint python3Packages.pydocstyle ];
 
   meta = {

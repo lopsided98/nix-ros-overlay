@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, marker-msgs, mrpt-libgui, mrpt-libobs, mrpt-libros-bridge, mrpt-msgs, mrpt-msgs-bridge, nav-msgs, rosbag, roscpp, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:

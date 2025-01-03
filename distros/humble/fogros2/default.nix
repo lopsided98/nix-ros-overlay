@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, pythonPackages, rmw-cyclonedds-cpp, ros2cli, wireguard-tools }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, rmw-cyclonedds-cpp, ros2cli, wireguard-tools }:
 buildRosPackage {
   pname = "ros-humble-fogros2";
   version = "0.1.7-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.pytest ];
   propagatedBuildInputs = [ python3Packages.boto3 python3Packages.paramiko python3Packages.scp rmw-cyclonedds-cpp ros2cli wireguard-tools ];
 
   meta = {

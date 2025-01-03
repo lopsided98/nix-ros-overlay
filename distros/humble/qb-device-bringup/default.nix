@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, forward-command-controller, joint-state-broadcaster, joint-state-publisher-gui, joint-trajectory-controller, robot-state-publisher, ros2-controllers-test-nodes, ros2controlcli, ros2launch, rviz2, xacro }:

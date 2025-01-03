@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-picknik-ament-copyright";
   version = "0.0.2-r4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-flake8 ament-pep257 pythonPackages.pytest ];
+  checkInputs = [ ament-flake8 ament-pep257 python3Packages.pytest ];
   propagatedBuildInputs = [ ament-copyright ];
 
   meta = {

@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, class-loader, eigen, launch-param-builder, moveit-common, moveit-configs-utils, moveit-core, moveit-msgs, moveit-resources-fanuc-description, moveit-resources-fanuc-moveit-config, moveit-resources-panda-description, moveit-resources-panda-moveit-config, moveit-ros-planning, orocos-kdl-vendor, pluginlib, python3Packages, ros-testing, tf2, tf2-kdl, urdfdom }:
 buildRosPackage {
   pname = "ros-humble-moveit-kinematics";
-  version = "2.5.6-r1";
+  version = "2.5.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_kinematics/2.5.6-1.tar.gz";
-    name = "2.5.6-1.tar.gz";
-    sha256 = "50144d296ed3b0a0dd8cc8b7798d85934861df5c92c6f8f5e0367d08e2401804";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_kinematics/2.5.7-1.tar.gz";
+    name = "2.5.7-1.tar.gz";
+    sha256 = "c505f0e075b340164628bb266f9211fa1cfb18541f1baad412c3a89e8010cbc1";
   };
 
   buildType = "ament_cmake";

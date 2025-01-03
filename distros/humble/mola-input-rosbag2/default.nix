@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, cv-bridge, mola-kernel, mrpt-libobs, mrpt-libros-bridge, rosbag2-cpp, sensor-msgs, tf2-geometry-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-mola-input-rosbag2";
-  version = "1.4.1-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_rosbag2/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "20de9255d6415fff3a84f04fe9d6805fbf979feac2a2557ea48d131f3322a374";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_rosbag2/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "e2bc9eb1b8a5cd5b15ac47bd81795a75d9549ecf19d25d5876430b65003bf732";
   };
 
   buildType = "cmake";

@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, git, iceoryx-hoofs }:
 buildRosPackage {
   pname = "ros-jazzy-iceoryx-posh";
-  version = "2.0.5-r6";
+  version = "2.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/iceoryx-release/archive/release/jazzy/iceoryx_posh/2.0.5-6.tar.gz";
-    name = "2.0.5-6.tar.gz";
-    sha256 = "872d0b7b696e8c2693cf5d50868742c0daaba6b6687d49c95c2b8d73313ac37b";
+    url = "https://github.com/ros2-gbp/iceoryx-release/archive/release/jazzy/iceoryx_posh/2.0.6-1.tar.gz";
+    name = "2.0.6-1.tar.gz";
+    sha256 = "0a523fb8ff29a2766d4e57db8a76a8879648bc7486153dabb583efcb946e91fe";
   };
 
   buildType = "cmake";

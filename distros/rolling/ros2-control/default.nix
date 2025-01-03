@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, controller-manager, controller-manager-msgs, hardware-interface, joint-limits, ros2-control-test-assets, ros2controlcli, transmission-interface }:
 buildRosPackage {
   pname = "ros-rolling-ros2-control";
-  version = "4.22.0-r1";
+  version = "4.23.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/ros2_control/4.22.0-1.tar.gz";
-    name = "4.22.0-1.tar.gz";
-    sha256 = "ec7aafd770222076fa29c205d7210e9b1b16faac38d471394b5d5ee396e1457d";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/ros2_control/4.23.0-1.tar.gz";
+    name = "4.23.0-1.tar.gz";
+    sha256 = "5f7534c700cc3ca73d07a6ad3ecf04a7410cda82d041f11d8dd98d2abf791b79";
   };
 
   buildType = "ament_cmake";

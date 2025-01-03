@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager-msgs, fri-configuration-controller, fri-state-broadcaster, hardware-interface, joint-group-impedance-controller, joint-state-broadcaster, joint-trajectory-controller, kuka-control-mode-handler, kuka-driver-interfaces, kuka-drivers-core, kuka-event-broadcaster, kuka-lbr-iiwa-support, launch-testing-ament-cmake, nanopb, ros2-control, ros2lifecycle, std-msgs, std-srvs }:

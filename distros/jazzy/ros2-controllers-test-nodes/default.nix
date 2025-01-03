@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, launch-ros, launch-testing-ros, pythonPackages, rclpy, sensor-msgs, std-msgs, trajectory-msgs }:
+{ lib, buildRosPackage, fetchurl, launch-ros, launch-testing-ros, python3Packages, rclpy, sensor-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ros2-controllers-test-nodes";
   version = "4.18.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ launch-ros launch-testing-ros pythonPackages.pytest ];
+  checkInputs = [ launch-ros launch-testing-ros python3Packages.pytest ];
   propagatedBuildInputs = [ rclpy sensor-msgs std-msgs trajectory-msgs ];
 
   meta = {

@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, audio-capture, audio-to-spectrogram, catkin, catkin-virtualenv, image-view, jsk-recognition-msgs, jsk-topic-tools, message-filters, message-generation, message-runtime, roslaunch, rospy, rostest, sensor-msgs }:

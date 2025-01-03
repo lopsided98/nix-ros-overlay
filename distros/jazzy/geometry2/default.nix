@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, tf2, tf2-bullet, tf2-eigen, tf2-eigen-kdl, tf2-geometry-msgs, tf2-kdl, tf2-msgs, tf2-py, tf2-ros, tf2-sensor-msgs, tf2-tools }:
 buildRosPackage {
   pname = "ros-jazzy-geometry2";
-  version = "0.36.6-r1";
+  version = "0.36.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/geometry2/0.36.6-1.tar.gz";
-    name = "0.36.6-1.tar.gz";
-    sha256 = "d50c6b1dcf137be58a19d3c97530df376fa34803b4d1d6fbeea47eeb36feb247";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/geometry2/0.36.7-1.tar.gz";
+    name = "0.36.7-1.tar.gz";
+    sha256 = "9b959060169b41e53d2afc9e4ec5139ed3247e86cf917a41c8f668d322909b92";
   };
 
   buildType = "ament_cmake";

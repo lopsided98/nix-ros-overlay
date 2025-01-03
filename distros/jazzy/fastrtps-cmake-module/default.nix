@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-fastrtps-cmake-module";
-  version = "3.6.0-r2";
+  version = "3.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/jazzy/fastrtps_cmake_module/3.6.0-2.tar.gz";
-    name = "3.6.0-2.tar.gz";
-    sha256 = "e0b78b7a961ba55938dfaea8b7959966870bc0cc86a74d39a46c230d5020926c";
+    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/jazzy/fastrtps_cmake_module/3.6.1-1.tar.gz";
+    name = "3.6.1-1.tar.gz";
+    sha256 = "cb0ee581583a250d7d778cc48665b82a7b745231d8cc256096bb88ce99b1f05e";
   };
 
   buildType = "ament_cmake";

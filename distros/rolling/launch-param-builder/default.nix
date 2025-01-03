@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-index-python, python3Packages, pythonPackages, rclpy, xacro }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-index-python, python3Packages, rclpy, xacro }:
 buildRosPackage {
   pname = "ros-rolling-launch-param-builder";
   version = "0.1.1-r3";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright pythonPackages.pytest ];
+  checkInputs = [ ament-copyright python3Packages.pytest ];
   propagatedBuildInputs = [ ament-index-python python3Packages.pyyaml rclpy xacro ];
 
   meta = {

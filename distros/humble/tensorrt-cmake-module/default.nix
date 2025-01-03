@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-xmllint }:
 buildRosPackage {
   pname = "ros-humble-tensorrt-cmake-module";
-  version = "0.0.3-r1";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tensorrt_cmake_module-release/archive/release/humble/tensorrt_cmake_module/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "88f160087413626acfae816787221f5e9f5afe5b11fb478808645c5892d7f838";
+    url = "https://github.com/ros2-gbp/tensorrt_cmake_module-release/archive/release/humble/tensorrt_cmake_module/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "ba6189d92530352b5be9abe5a0c9707ae0335e2da459d5f6e6d6a380f0503305";
   };
 
   buildType = "ament_cmake";

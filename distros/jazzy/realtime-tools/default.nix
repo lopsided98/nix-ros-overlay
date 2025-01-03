@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, libcap, lifecycle-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, test-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-realtime-tools";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/jazzy/realtime_tools/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "f68a45d915292a97af7e3b0baed3d46bb1bf7c9b5890d01c88e6da416a1881f3";
+    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/jazzy/realtime_tools/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "740c144c6ae27c2643263f7289193d1351b3994bb4b96d5e02ef2d2f1fd35508";
   };
 
   buildType = "ament_cmake";

@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, assimp, cmake, cv-bridge, ffmpeg, freeglut, freenect, geometry-msgs, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libapps, mrpt-libnav, mrpt-libros-bridge, nav-msgs, openni2, pkg-config, python3Packages, pythonPackages, ros-environment, rosbag-storage, roscpp, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-geometry-msgs, tinyxml-2, udev, wxGTK32, xorg, zlib }:
+{ lib, buildRosPackage, fetchurl, assimp, cmake, cv-bridge, ffmpeg, freeglut, freenect, geometry-msgs, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libapps, mrpt-libnav, mrpt-libros-bridge, nav-msgs, openni2, pkg-config, python3Packages, ros-environment, rosbag-storage, roscpp, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-geometry-msgs, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-noetic-mrpt-apps";
   version = "2.14.7-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "cmake";
-  buildInputs = [ assimp cmake cv-bridge ffmpeg freeglut freenect geometry-msgs glfw3 libGL libGLU libjpeg libpcap libusb1 nav-msgs openni2 pkg-config python3Packages.pip pythonPackages.pybind11 ros-environment rosbag-storage roscpp sensor-msgs std-msgs stereo-msgs tf2 tf2-geometry-msgs tinyxml-2 udev wxGTK32 xorg.libXrandr xorg.libXxf86vm zlib ];
+  buildInputs = [ assimp cmake cv-bridge ffmpeg freeglut freenect geometry-msgs glfw3 libGL libGLU libjpeg libpcap libusb1 nav-msgs openni2 pkg-config python3Packages.pip python3Packages.pybind11 ros-environment rosbag-storage roscpp sensor-msgs std-msgs stereo-msgs tf2 tf2-geometry-msgs tinyxml-2 udev wxGTK32 xorg.libXrandr xorg.libXxf86vm zlib ];
   propagatedBuildInputs = [ mrpt-libapps mrpt-libnav mrpt-libros-bridge ];
   nativeBuildInputs = [ cmake ];
 

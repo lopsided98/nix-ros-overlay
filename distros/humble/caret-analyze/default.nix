@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-mypy, ament-pep257, graphviz, python3Packages, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-mypy, ament-pep257, graphviz, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-caret-analyze";
   version = "0.5.0-r2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-mypy ament-pep257 python3Packages.pytest-mock pythonPackages.pytest ];
+  checkInputs = [ ament-copyright ament-flake8 ament-mypy ament-pep257 python3Packages.pytest python3Packages.pytest-mock ];
   propagatedBuildInputs = [ graphviz python3Packages.colorcet python3Packages.graphviz python3Packages.pyyaml python3Packages.setuptools python3Packages.tqdm ];
 
   meta = {

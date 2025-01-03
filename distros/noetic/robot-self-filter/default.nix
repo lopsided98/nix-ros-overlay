@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, assimp, bullet, catkin, cmake-modules, filters, pcl-ros, resource-retriever, roscpp, sensor-msgs, tf, tinyxml, urdf, visualization-msgs }:

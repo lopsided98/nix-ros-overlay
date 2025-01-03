@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps }:
 buildRosPackage {
   pname = "ros-humble-mola-input-paris-luco-dataset";
-  version = "1.4.1-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_paris_luco_dataset/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "41b19e66b339ffc26cc977157ce177736e42d31c75f38af3d5eab2faacdd2607";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_paris_luco_dataset/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "eca2c80a3020b9c01fda0f121c47d2fbdf16d8fc13892bd8d163c01c62ca553b";
   };
 
   buildType = "cmake";

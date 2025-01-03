@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libmaps, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-jazzy-mola-pose-list";
-  version = "1.4.0-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_pose_list/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "14019f7e9a10a4bd677e9e29fa936df58af168a3fd870118389dfb9caaff2792";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_pose_list/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "f1517664329fd47746cfa26c7cb8d2c4e6d7e0d47ac2c4b2fc2041b186233c3e";
   };
 
   buildType = "cmake";

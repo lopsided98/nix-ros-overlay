@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, cmake, geometry-msgs, mola-common, mola-kernel, mola-msgs, mrpt-libmaps, mrpt-libros-bridge, nav-msgs, rclcpp, ros-environment, sensor-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-rolling-mola-bridge-ros2";
-  version = "1.4.1-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_bridge_ros2/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "5c72a464c36e0ac7315df2b8fee04ddb486ac946a3e1b6ec369144f5000b4d30";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_bridge_ros2/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "4b5617829ce7cd2ebf7fbbe0f00224afb020fc2d44e97f024a16a4ffaf72c644";
   };
 
   buildType = "ament_cmake";

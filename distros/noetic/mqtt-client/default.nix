@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, catkin, fmt, mqtt-client-interfaces, nodelet, paho-mqtt-cpp, ros-environment, roscpp, std-msgs, topic-tools }:

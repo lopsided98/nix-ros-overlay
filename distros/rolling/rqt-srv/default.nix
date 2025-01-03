@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-flake8, ament-xmllint, pythonPackages, rqt-gui, rqt-gui-py, rqt-msg }:
+{ lib, buildRosPackage, fetchurl, ament-flake8, ament-xmllint, python3Packages, rqt-gui, rqt-gui-py, rqt-msg }:
 buildRosPackage {
   pname = "ros-rolling-rqt-srv";
   version = "1.3.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-flake8 ament-xmllint pythonPackages.pytest ];
+  checkInputs = [ ament-flake8 ament-xmllint python3Packages.pytest ];
   propagatedBuildInputs = [ rqt-gui rqt-gui-py rqt-msg ];
 
   meta = {

@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, as2-core, backward-ros, geometry-msgs, python3Packages, pythonPackages, rclcpp, ros-gz-bridge, ros-gz-sim, sensor-msgs, tf2-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, as2-core, backward-ros, geometry-msgs, python3Packages, rclcpp, ros-gz-bridge, ros-gz-sim, sensor-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-as2-gazebo-assets";
   version = "1.1.2-r2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-pytest ament-cmake-python ];
-  checkInputs = [ ament-lint-auto ament-lint-common pythonPackages.pytest ];
+  checkInputs = [ ament-lint-auto ament-lint-common python3Packages.pytest ];
   propagatedBuildInputs = [ as2-core backward-ros geometry-msgs python3Packages.jinja2 python3Packages.pydantic rclcpp ros-gz-bridge ros-gz-sim sensor-msgs tf2-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ament-cmake-pytest ament-cmake-python ];
 

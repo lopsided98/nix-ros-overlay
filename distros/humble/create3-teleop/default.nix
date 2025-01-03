@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-flake8, joy, launch-ros, pythonPackages, teleop-twist-joy, teleop-twist-keyboard }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-flake8, joy, launch-ros, python3Packages, teleop-twist-joy, teleop-twist-keyboard }:
 buildRosPackage {
   pname = "ros-humble-create3-teleop";
   version = "0.0.5-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-cmake-flake8 pythonPackages.pytest ];
+  checkInputs = [ ament-cmake-flake8 python3Packages.pytest ];
   propagatedBuildInputs = [ joy launch-ros teleop-twist-joy teleop-twist-keyboard ];
 
   meta = {

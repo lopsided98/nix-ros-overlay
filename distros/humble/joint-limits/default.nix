@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, launch-ros, launch-testing-ament-cmake, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-humble-joint-limits";
-  version = "2.46.0-r1";
+  version = "2.47.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/joint_limits/2.46.0-1.tar.gz";
-    name = "2.46.0-1.tar.gz";
-    sha256 = "3dc3b4cb8109acf3ce46310300f1db2eff068b8bdfd335682ca36e112e164b6c";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/joint_limits/2.47.0-1.tar.gz";
+    name = "2.47.0-1.tar.gz";
+    sha256 = "07b4888b2e01b28b2da88d8e22c20681a0a2edb9c1389e1ae8a3f1994c5a1cb0";
   };
 
   buildType = "ament_cmake";

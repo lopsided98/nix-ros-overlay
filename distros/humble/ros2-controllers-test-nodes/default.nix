@@ -1,20 +1,20 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, launch-ros, launch-testing-ros, pythonPackages, rclpy, sensor-msgs, std-msgs, trajectory-msgs }:
+{ lib, buildRosPackage, fetchurl, launch-ros, launch-testing-ros, python3Packages, rclpy, sensor-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros2-controllers-test-nodes";
-  version = "2.39.0-r1";
+  version = "2.40.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/ros2_controllers_test_nodes/2.39.0-1.tar.gz";
-    name = "2.39.0-1.tar.gz";
-    sha256 = "08011f002e17a2df47c10595350cdb5ca361ee868faa21dc22d5df3b4d8641ed";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/ros2_controllers_test_nodes/2.40.0-1.tar.gz";
+    name = "2.40.0-1.tar.gz";
+    sha256 = "819ffc4dd8159b9cde749c0f852a9feeda2ce9bb260ef818a3f60f8cd41e55b9";
   };
 
   buildType = "ament_python";
-  checkInputs = [ launch-ros launch-testing-ros pythonPackages.pytest ];
+  checkInputs = [ launch-ros launch-testing-ros python3Packages.pytest ];
   propagatedBuildInputs = [ rclpy sensor-msgs std-msgs trajectory-msgs ];
 
   meta = {

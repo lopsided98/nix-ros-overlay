@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gmock, ament-lint-auto, ament-lint-common, blas, diagnostic-msgs, diagnostic-updater, dlib, hri, hri-msgs, liblapack, lifecycle-msgs, opencv, rcl-interfaces, rclcpp, rclcpp-lifecycle, rclpy, rosgraph-msgs, sqlite }:

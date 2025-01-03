@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, irobot-create-common-bringup, irobot-create-description, irobot-create-gz-bringup, irobot-create-gz-plugins, irobot-create-gz-toolbox, irobot-create-msgs, irobot-create-nodes, irobot-create-toolbox, ros-gz-interfaces, ros-gz-sim, std-msgs, turtlebot4-description, turtlebot4-gz-gui-plugins, turtlebot4-gz-toolbox, turtlebot4-msgs, turtlebot4-navigation, turtlebot4-node, turtlebot4-viz }:

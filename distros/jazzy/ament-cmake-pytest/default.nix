@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-ament-cmake-pytest";
   version = "2.5.3-r1";
@@ -14,8 +14,8 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ ament-cmake-core ament-cmake-test pythonPackages.pytest ];
-  nativeBuildInputs = [ ament-cmake-core ament-cmake-test pythonPackages.pytest ];
+  propagatedBuildInputs = [ ament-cmake-core ament-cmake-test python3Packages.pytest ];
+  nativeBuildInputs = [ ament-cmake-core ament-cmake-test python3Packages.pytest ];
 
   meta = {
     description = "The ability to run Python tests using pytest in the ament buildsystem in CMake.";

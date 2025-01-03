@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python3Packages, pythonPackages }:
+{ lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-ament-package";
   version = "0.14.0-r4";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ python3Packages.flake8 pythonPackages.pytest ];
+  checkInputs = [ python3Packages.flake8 python3Packages.pytest ];
   propagatedBuildInputs = [ python3Packages.importlib-metadata python3Packages.importlib-resources python3Packages.setuptools ];
 
   meta = {
