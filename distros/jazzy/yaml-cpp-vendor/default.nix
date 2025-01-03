@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-yaml-cpp-vendor";
-  version = "9.0.0-r2";
+  version = "9.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yaml_cpp_vendor-release/archive/release/jazzy/yaml_cpp_vendor/9.0.0-2.tar.gz";
-    name = "9.0.0-2.tar.gz";
-    sha256 = "f561c5c312bbf447916a50ecd28c465912d1c9fbbfe6d863a700f49a1782c984";
+    url = "https://github.com/ros2-gbp/yaml_cpp_vendor-release/archive/release/jazzy/yaml_cpp_vendor/9.0.1-1.tar.gz";
+    name = "9.0.1-1.tar.gz";
+    sha256 = "892d234d2e4f42be53fca06543266f9fc704b18a97133982432795fa58b01fec";
   };
 
   buildType = "ament_cmake";

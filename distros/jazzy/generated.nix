@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -182,6 +182,8 @@ self: super: {
 
  async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
 
+ automatika-ros-sugar = self.callPackage ./automatika-ros-sugar {};
+
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -200,7 +202,11 @@ self: super: {
 
  autoware-control-msgs = self.callPackage ./autoware-control-msgs {};
 
+ autoware-internal-debug-msgs = self.callPackage ./autoware-internal-debug-msgs {};
+
  autoware-internal-msgs = self.callPackage ./autoware-internal-msgs {};
+
+ autoware-internal-perception-msgs = self.callPackage ./autoware-internal-perception-msgs {};
 
  autoware-lanelet2-extension = self.callPackage ./autoware-lanelet2-extension {};
 
@@ -1044,6 +1050,8 @@ self: super: {
 
  kinematics-interface-kdl = self.callPackage ./kinematics-interface-kdl {};
 
+ kinematics-interface-pinocchio = self.callPackage ./kinematics-interface-pinocchio {};
+
  kitti-metrics-eval = self.callPackage ./kitti-metrics-eval {};
 
  kobuki-core = self.callPackage ./kobuki-core {};
@@ -1256,8 +1264,6 @@ self: super: {
 
  mola-demos = self.callPackage ./mola-demos {};
 
- mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
-
  mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
 
  mola-input-kitti360-dataset = self.callPackage ./mola-input-kitti360-dataset {};
@@ -1276,15 +1282,9 @@ self: super: {
 
  mola-launcher = self.callPackage ./mola-launcher {};
 
- mola-lidar-odometry = self.callPackage ./mola-lidar-odometry {};
-
  mola-metric-maps = self.callPackage ./mola-metric-maps {};
 
  mola-msgs = self.callPackage ./mola-msgs {};
-
- mola-navstate-fg = self.callPackage ./mola-navstate-fg {};
-
- mola-navstate-fuse = self.callPackage ./mola-navstate-fuse {};
 
  mola-pose-list = self.callPackage ./mola-pose-list {};
 
@@ -2062,6 +2062,8 @@ self: super: {
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
 
+ rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
+
  robot-calibration = self.callPackage ./robot-calibration {};
 
  robot-calibration-msgs = self.callPackage ./robot-calibration-msgs {};
@@ -2299,6 +2301,8 @@ self: super: {
  rqt-console = self.callPackage ./rqt-console {};
 
  rqt-controller-manager = self.callPackage ./rqt-controller-manager {};
+
+ rqt-dotgraph = self.callPackage ./rqt-dotgraph {};
 
  rqt-gauges = self.callPackage ./rqt-gauges {};
 
@@ -2945,6 +2949,8 @@ self: super: {
  zbar-ros-interfaces = self.callPackage ./zbar-ros-interfaces {};
 
  zenoh-bridge-dds = self.callPackage ./zenoh-bridge-dds {};
+
+ zenoh-cpp-vendor = self.callPackage ./zenoh-cpp-vendor {};
 
  zlib-point-cloud-transport = self.callPackage ./zlib-point-cloud-transport {};
 

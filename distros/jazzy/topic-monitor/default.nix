@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-flake8, ament-pep257, launch, launch-ros, pythonPackages, rclpy, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-flake8, ament-pep257, launch, launch-ros, python3Packages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-topic-monitor";
   version = "0.33.5-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-flake8 ament-pep257 pythonPackages.pytest ];
+  checkInputs = [ ament-flake8 ament-pep257 python3Packages.pytest ];
   propagatedBuildInputs = [ launch launch-ros rclpy std-msgs ];
 
   meta = {

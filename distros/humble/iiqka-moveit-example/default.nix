@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, kuka-iiqka-eac-driver, moveit, moveit-ros-planning-interface, moveit-visual-tools, ros2-controllers-test-nodes }:

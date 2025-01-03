@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, nav-msgs, python3Packages, pythonPackages, rospy, sensor-msgs, std-msgs, tf2-kdl }:
+{ lib, buildRosPackage, fetchurl, catkin, geometry-msgs, nav-msgs, python3Packages, rospy, sensor-msgs, std-msgs, tf2-kdl }:
 buildRosPackage {
   pname = "ros-noetic-massrobotics-amr-sender";
   version = "1.0.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin ];
-  checkInputs = [ python3Packages.jsonschema python3Packages.mock python3Packages.pep8 python3Packages.pytest-mock python3Packages.pyyaml pythonPackages.pytest ];
+  checkInputs = [ python3Packages.jsonschema python3Packages.mock python3Packages.pep8 python3Packages.pytest python3Packages.pytest-mock python3Packages.pyyaml ];
   propagatedBuildInputs = [ geometry-msgs nav-msgs python3Packages.pykdl python3Packages.websockets rospy sensor-msgs std-msgs tf2-kdl ];
   nativeBuildInputs = [ catkin ];
 

@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, bullet, geometry-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-tf2-bullet";
-  version = "0.36.6-r1";
+  version = "0.36.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_bullet/0.36.6-1.tar.gz";
-    name = "0.36.6-1.tar.gz";
-    sha256 = "2d7694a6754a304abfd108258c539eaf8f0233bccb3452ea6b8ff1d7cdaa37fa";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_bullet/0.36.7-1.tar.gz";
+    name = "0.36.7-1.tar.gz";
+    sha256 = "8d8a70eac302264775ce35dbcb120a9544c29288fa4f216940185817d8e253f6";
   };
 
   buildType = "ament_cmake";

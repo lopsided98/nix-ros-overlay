@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, ament-lint-auto, backward-ros, ceres-solver, fast-gicp, geodesy, geographic-msgs, geometry-msgs, libg2o, message-filters, nav-msgs, ndt-omp, nmea-msgs, pcl-ros, rclcpp, rclpy, rviz-visual-tools, sensor-msgs, situational-graphs-msgs, situational-graphs-reasoning, situational-graphs-reasoning-msgs, tf2, tf2-eigen, tf2-ros, tf2-sensor-msgs, visualization-msgs }:

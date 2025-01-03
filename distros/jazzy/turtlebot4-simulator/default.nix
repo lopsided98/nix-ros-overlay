@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, turtlebot4-gz-bringup, turtlebot4-gz-gui-plugins, turtlebot4-gz-toolbox }:

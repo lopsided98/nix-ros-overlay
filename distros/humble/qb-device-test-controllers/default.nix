@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, pythonPackages, rclpy, std-msgs, trajectory-msgs }:
+{ lib, buildRosPackage, fetchurl, python3Packages, rclpy, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-humble-qb-device-test-controllers";
   version = "4.1.3-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ pythonPackages.pytest ];
+  checkInputs = [ python3Packages.pytest ];
   propagatedBuildInputs = [ rclpy std-msgs trajectory-msgs ];
 
   meta = {

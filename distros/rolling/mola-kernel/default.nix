@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-yaml, mrpt-libgui, mrpt-libmaps, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-rolling-mola-kernel";
-  version = "1.4.1-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_kernel/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "aa02d919df38da10ea14c3a12b51439d5c915bcd888a4fad9531edcf6abb9b0f";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_kernel/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "c72b91fcd1ff9283eb1aaf20e887fc395601af64735d4a7d1700858fcc7d885b";
   };
 
   buildType = "cmake";

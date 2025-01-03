@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, hardware-interface, pluginlib, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-jazzy-transmission-interface";
-  version = "4.21.0-r1";
+  version = "4.23.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/transmission_interface/4.21.0-1.tar.gz";
-    name = "4.21.0-1.tar.gz";
-    sha256 = "c999f95fb9a25c9196d40785566df73838ac36cf520495760c31a2d8e1ec5bb4";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/transmission_interface/4.23.0-1.tar.gz";
+    name = "4.23.0-1.tar.gz";
+    sha256 = "128f012637b7d15d3c6d825215bf4bd734515c2fb131c6a9d695be3533121c6b";
   };
 
   buildType = "ament_cmake";

@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, cv-bridge, image-transport-plugins, rclpy, ros-gz, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, xacro }:

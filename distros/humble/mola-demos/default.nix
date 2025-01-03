@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-mola-demos";
-  version = "1.4.1-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_demos/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "cd7e5b5e68b3980ad52121b316b0a43cb81275d356b17d29fdf2cfe84d5fbe46";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_demos/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "aae3e82b63159821e5f1be84675e9acb14cf49f07d02f715266b5519cf56ef71";
   };
 
   buildType = "ament_cmake";

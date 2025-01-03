@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps }:
 buildRosPackage {
   pname = "ros-humble-mola-input-kitti-dataset";
-  version = "1.4.1-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_kitti_dataset/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "07617ba719768f6d5efaf996a5a3eb33c4dbfe02c2461bcf19898cd257678f00";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_kitti_dataset/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "494a3677b795c616939c95c8ebb9766165c59bd8009d0cd46a22703ee5d916c4";
   };
 
   buildType = "cmake";

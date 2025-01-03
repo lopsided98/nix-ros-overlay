@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, as2-gazebo-assets, pythonPackages, robot-state-publisher, ros-gz, rviz2, sdformat-urdf }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, as2-gazebo-assets, python3Packages, robot-state-publisher, ros-gz, rviz2, sdformat-urdf }:
 buildRosPackage {
   pname = "ros-humble-as2-visualization";
   version = "1.1.2-r2";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.pytest ];
   propagatedBuildInputs = [ as2-gazebo-assets robot-state-publisher ros-gz rviz2 sdformat-urdf ];
 
   meta = {

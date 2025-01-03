@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, audio-common-msgs, catkin, catkin-virtualenv, cv-bridge, ffmpeg, libjpeg, python3Packages, roslint, rostest, sensor-msgs }:

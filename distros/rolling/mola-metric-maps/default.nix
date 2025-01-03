@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, mola-common, mp2p-icp, mrpt-libmaps, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-mola-metric-maps";
-  version = "1.4.1-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_metric_maps/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "8ff15db3f4caf212299f45c89814ea0e8be36b3cdecad9fff0e0fa3595da0919";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_metric_maps/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "21905fc90302e120a7026a0ce48d9331e22155f81147d092c2c9dc4144043d6f";
   };
 
   buildType = "ament_cmake";

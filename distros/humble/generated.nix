@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 self: super: {
@@ -279,6 +279,8 @@ self: super: {
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
 
  async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
+
+ automatika-ros-sugar = self.callPackage ./automatika-ros-sugar {};
 
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
@@ -1082,6 +1084,8 @@ self: super: {
 
  google-benchmark-vendor = self.callPackage ./google-benchmark-vendor {};
 
+ gpio-controllers = self.callPackage ./gpio-controllers {};
+
  gps-msgs = self.callPackage ./gps-msgs {};
 
  gps-tools = self.callPackage ./gps-tools {};
@@ -1600,8 +1604,6 @@ self: super: {
 
  mola-demos = self.callPackage ./mola-demos {};
 
- mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
-
  mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
 
  mola-input-kitti360-dataset = self.callPackage ./mola-input-kitti360-dataset {};
@@ -1620,15 +1622,9 @@ self: super: {
 
  mola-launcher = self.callPackage ./mola-launcher {};
 
- mola-lidar-odometry = self.callPackage ./mola-lidar-odometry {};
-
  mola-metric-maps = self.callPackage ./mola-metric-maps {};
 
  mola-msgs = self.callPackage ./mola-msgs {};
-
- mola-navstate-fg = self.callPackage ./mola-navstate-fg {};
-
- mola-navstate-fuse = self.callPackage ./mola-navstate-fuse {};
 
  mola-pose-list = self.callPackage ./mola-pose-list {};
 
@@ -2538,6 +2534,8 @@ self: super: {
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
 
+ rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
+
  robot-calibration = self.callPackage ./robot-calibration {};
 
  robot-calibration-msgs = self.callPackage ./robot-calibration-msgs {};
@@ -2771,6 +2769,8 @@ self: super: {
  rqt-console = self.callPackage ./rqt-console {};
 
  rqt-controller-manager = self.callPackage ./rqt-controller-manager {};
+
+ rqt-dotgraph = self.callPackage ./rqt-dotgraph {};
 
  rqt-gauges = self.callPackage ./rqt-gauges {};
 
@@ -3529,6 +3529,8 @@ self: super: {
  zed-msgs = self.callPackage ./zed-msgs {};
 
  zenoh-bridge-dds = self.callPackage ./zenoh-bridge-dds {};
+
+ zenoh-cpp-vendor = self.callPackage ./zenoh-cpp-vendor {};
 
  zlib-point-cloud-transport = self.callPackage ./zlib-point-cloud-transport {};
 

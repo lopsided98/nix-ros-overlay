@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, hardware-interface, lifecycle-msgs, pluginlib, rclcpp-lifecycle, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-humble-hardware-interface-testing";
-  version = "2.46.0-r1";
+  version = "2.47.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/hardware_interface_testing/2.46.0-1.tar.gz";
-    name = "2.46.0-1.tar.gz";
-    sha256 = "19af4ed1727b8000bf5cd48e9adbb37e9f4ecc726d2d56afb7e00b440c78092c";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/hardware_interface_testing/2.47.0-1.tar.gz";
+    name = "2.47.0-1.tar.gz";
+    sha256 = "877d16145198225e655e93b569b9ba0c1d9b55de02e7271062213b5fe571c9c2";
   };
 
   buildType = "ament_cmake";

@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, game-controller-spl-interfaces, python3Packages, pythonPackages, r2r-spl-test-interfaces, rclpy, rosidl-parser }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, game-controller-spl-interfaces, python3Packages, r2r-spl-test-interfaces, rclpy, rosidl-parser }:
 buildRosPackage {
   pname = "ros-humble-r2r-spl";
   version = "2.1.0-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.numpy pythonPackages.pytest r2r-spl-test-interfaces ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.numpy python3Packages.pytest r2r-spl-test-interfaces ];
   propagatedBuildInputs = [ game-controller-spl-interfaces python3Packages.construct rclpy rosidl-parser ];
 
   meta = {

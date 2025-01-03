@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, message-filters, rcl-interfaces, rclcpp, rclcpp-action, rclcpp-components, rosgraph-msgs, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-tf2-ros";
-  version = "0.36.6-r1";
+  version = "0.36.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_ros/0.36.6-1.tar.gz";
-    name = "0.36.6-1.tar.gz";
-    sha256 = "374c15f7f6f7d9ba9f36030c1b65233789224f72872b5e530999730d798f5527";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_ros/0.36.7-1.tar.gz";
+    name = "0.36.7-1.tar.gz";
+    sha256 = "cb9533f5009a6eabffd293e26fbe508505bf8c36338fdcc0e2e6f55fba824b8b";
   };
 
   buildType = "ament_cmake";

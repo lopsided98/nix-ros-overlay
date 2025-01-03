@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, grbl-msgs, python3Packages, pythonPackages, rclpy, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, grbl-msgs, python3Packages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-grbl-ros";
   version = "0.0.16-r7";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_python";
   buildInputs = [ python3Packages.pyserial ];
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 pythonPackages.pytest ];
+  checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.pytest ];
   propagatedBuildInputs = [ grbl-msgs rclpy std-msgs ];
 
   meta = {

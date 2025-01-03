@@ -1,16 +1,16 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, lifecycle-msgs, plansys2-core, plansys2-domain-expert, plansys2-msgs, plansys2-pddl-parser, plansys2-popf-plan-solver, plansys2-problem-expert, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, ros2run, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-plansys2-planner";
-  version = "2.0.15-r1";
+  version = "2.0.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_planner/2.0.15-1.tar.gz";
-    name = "2.0.15-1.tar.gz";
-    sha256 = "530f2a7c154ca2772bc18a71cdd0c9b634f9704cf0edb89ed3646311741d6603";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_planner/2.0.18-1.tar.gz";
+    name = "2.0.18-1.tar.gz";
+    sha256 = "4d1e9296414e4fe13fcb3d972280845acb4b02e3c06773bd28945213922a0fe1";
   };
 
   buildType = "ament_cmake";

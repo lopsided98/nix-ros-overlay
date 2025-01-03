@@ -1,5 +1,5 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, gazebo-dev, gazebo-ros, geometry-msgs, launch-testing-ament-cmake, nav-msgs, rclcpp, robot-state-publisher, ros2launch, sensor-msgs, tf2-geometry-msgs, tf2-ros }:

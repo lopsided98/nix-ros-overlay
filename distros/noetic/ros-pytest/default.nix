@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, python3Packages, pythonPackages, rospy, rostest }:
+{ lib, buildRosPackage, fetchurl, catkin, python3Packages, rospy, rostest }:
 buildRosPackage {
   pname = "ros-noetic-ros-pytest";
   version = "0.2.1-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "catkin";
   buildInputs = [ catkin ];
   checkInputs = [ rostest ];
-  propagatedBuildInputs = [ python3Packages.pytestcov pythonPackages.pytest rospy ];
+  propagatedBuildInputs = [ python3Packages.pytest python3Packages.pytestcov rospy ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
