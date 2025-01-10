@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, example-interfaces, image-transport, qt5, rclcpp, ros-babel-fish, ros-babel-fish-test-msgs, std-srvs, tf2-ros, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-qml-ros2-plugin";
-  version = "1.0.1-r1";
+  version = "1.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qml_ros2_plugin-release/archive/release/humble/qml_ros2_plugin/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "6876de963f97807133507394f9fc61a79ef54d481ce1fa7ce6be3bcb84e0bf32";
+    url = "https://github.com/ros2-gbp/qml_ros2_plugin-release/archive/release/humble/qml_ros2_plugin/1.0.1-2.tar.gz";
+    name = "1.0.1-2.tar.gz";
+    sha256 = "94ee6164c17163d97d718ffd8ec6c1a864987638728e5e8a07f53dd9e419c044";
   };
 
   buildType = "ament_cmake";
