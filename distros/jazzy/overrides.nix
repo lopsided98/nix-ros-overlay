@@ -281,4 +281,18 @@ in {
       })
     ];
   });
+
+  zenoh-cpp-vendor = (lib.patchAmentVendorGit (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {
+    url = "https://github.com/eclipse-zenoh/zenoh-cpp";
+    rev = "964b64dc8b935a43147287199e7bb12da7b141e6";
+    fetchgitArgs.hash = "sha256-9aAWcTJU3D5R2J9fasQ1aUYXWkcCk3FcmOT340Pc0ko=";
+  }) {
+    url = "https://github.com/eclipse-zenoh/zenoh-c.git";
+    rev = "57d5e4d31d9b38fef34d7bcad3d3e54869c4ce73";
+    fetchgitArgs.hash = "sha256-e8OtpyKp+AEgh6QWD/5aBtbmDV55ocx9DeLakYdikmI=";
+  }).overrideAttrs ({
+     ...
+  }: {
+  });
+
 }
