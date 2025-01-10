@@ -324,6 +324,8 @@ self: super: {
 
  cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
 
+ coal = self.callPackage ./coal {};
+
  color-names = self.callPackage ./color-names {};
 
  color-util = self.callPackage ./color-util {};
@@ -1082,6 +1084,8 @@ self: super: {
 
  mola-demos = self.callPackage ./mola-demos {};
 
+ mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
+
  mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
 
  mola-input-kitti360-dataset = self.callPackage ./mola-input-kitti360-dataset {};
@@ -1100,6 +1104,8 @@ self: super: {
 
  mola-launcher = self.callPackage ./mola-launcher {};
 
+ mola-lidar-odometry = self.callPackage ./mola-lidar-odometry {};
+
  mola-metric-maps = self.callPackage ./mola-metric-maps {};
 
  mola-msgs = self.callPackage ./mola-msgs {};
@@ -1107,6 +1113,12 @@ self: super: {
  mola-pose-list = self.callPackage ./mola-pose-list {};
 
  mola-relocalization = self.callPackage ./mola-relocalization {};
+
+ mola-state-estimation = self.callPackage ./mola-state-estimation {};
+
+ mola-state-estimation-simple = self.callPackage ./mola-state-estimation-simple {};
+
+ mola-state-estimation-smoother = self.callPackage ./mola-state-estimation-smoother {};
 
  mola-test-datasets = self.callPackage ./mola-test-datasets {};
 
