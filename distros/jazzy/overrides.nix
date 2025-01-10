@@ -293,6 +293,14 @@ in {
   }).overrideAttrs ({
      ...
   }: {
+    cargoDeps = self.rustPlatform.fetchCargoVendor {
+      src = self.fetchFromGitHub {
+        owner = "eclipse-zenoh";
+        repo = "zenoh-c";
+        rev = "1.1.0";
+        hash = "sha256-uYr2EOD71F9goxMP3syHJbd7AfOltJoa2x7QcZMY+JA=";
+      };
+      hash = "sha256-kp0l+DU163eryojARD9HYpMaYiVP9mxu4+C3BM5OKQg=";
+    };
   });
-
 }
