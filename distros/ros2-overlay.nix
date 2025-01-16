@@ -235,7 +235,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
   }: {
     dontWrapQtApps = false;
     nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-    qtWrapperArgs = qtWrapperArgs ++ [
+    qtWrapperArgs = qtWrapperArgs ++ optionals self.stdenv.isLinux [
       # Use X11 by default in RViz2.
       # https://github.com/ros-visualization/rviz/issues/1442
       "--set-default QT_QPA_PLATFORM xcb"
@@ -246,6 +246,25 @@ rosSelf: rosSuper: with rosSelf.lib; {
     meta = meta // {
       mainProgram = "rviz2";
     };
+  });
+
+  rviz-ogre-vendor = rosSuper.rviz-ogre-vendor.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ optionals self.stdenv.isDarwin [
+      self.darwin.apple_sdk.frameworks.Foundation
+      self.darwin.apple_sdk.frameworks.AppKit
+    ];
+  });
+
+  # lttng-ust and lttng-tools is not available on Darwin, will disable tracking if not available.
+  tracetools = rosSuper.tracetools.overrideAttrs ({
+    propagatedBuildInputs ? [], ...
+  }: {
+    propagatedBuildInputs = if self.stdenv.isDarwin then
+      builtins.filter (p: !hasPrefix "lttng" p.pname) propagatedBuildInputs
+    else
+      propagatedBuildInputs;
   });
 
   # The build gets stuck in an infinite loop with absolute CMAKE_INSTALL_LIBDIR:
