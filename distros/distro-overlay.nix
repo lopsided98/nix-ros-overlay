@@ -70,6 +70,14 @@ let
       setupHook = ./gazebo-ros-setup-hook.sh;
     });
 
+    gtsam = rosSuper.gtsam.overrideAttrs ({
+      cmakeFlags ? [], ...
+    }: {
+      # Don't use vendored version of Eigen, which can collide with
+      # Eigen version in dependent packages.
+      cmakeFlags = cmakeFlags ++ [ "-DGTSAM_USE_SYSTEM_EIGEN=ON" ];
+    });
+
     joint-state-publisher-gui = rosSuper.joint-state-publisher-gui.overrideAttrs ({
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
