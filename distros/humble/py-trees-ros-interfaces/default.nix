@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, diagnostic-msgs, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-humble-py-trees-ros-interfaces";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees_ros_interfaces-release/archive/release/humble/py_trees_ros_interfaces/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "db94fc8dfe11f0b3e7278ff905c5aad38c4c3e27cd291d2facbabd2f9f743667";
+    url = "https://github.com/ros2-gbp/py_trees_ros_interfaces-release/archive/release/humble/py_trees_ros_interfaces/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "2261e1c486787720ee9c1ccce8670eb83197d24ae26bcaee17d3330903d6deac";
   };
 
   buildType = "ament_cmake";

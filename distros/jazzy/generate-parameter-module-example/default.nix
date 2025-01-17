@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, generate-parameter-library, generate-parameter-library-py, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-generate-parameter-module-example";
-  version = "0.3.9-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/jazzy/generate_parameter_module_example/0.3.9-1.tar.gz";
-    name = "0.3.9-1.tar.gz";
-    sha256 = "bbbf22f4c592c2c14340d98733b067874801419908fb7a273ad6d194003cd50f";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/jazzy/generate_parameter_module_example/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "efce492b86da3093a39c36ab73c0a4a1cb88b2b3f94051ca6f2a84146b031312";
   };
 
   buildType = "ament_python";

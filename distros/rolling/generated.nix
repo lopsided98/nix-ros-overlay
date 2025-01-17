@@ -672,6 +672,8 @@ self: super: {
 
  generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
 
+ generate-parameter-library-example-external = self.callPackage ./generate-parameter-library-example-external {};
+
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
 
  generate-parameter-module-example = self.callPackage ./generate-parameter-module-example {};
@@ -1513,6 +1515,8 @@ self: super: {
  py-trees-ros = self.callPackage ./py-trees-ros {};
 
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
+
+ py-trees-ros-viewer = self.callPackage ./py-trees-ros-viewer {};
 
  pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
 

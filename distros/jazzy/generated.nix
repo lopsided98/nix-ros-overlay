@@ -338,13 +338,37 @@ self: super: {
 
  classic-bags = self.callPackage ./classic-bags {};
 
+ clearpath-bt-joy = self.callPackage ./clearpath-bt-joy {};
+
+ clearpath-common = self.callPackage ./clearpath-common {};
+
+ clearpath-config = self.callPackage ./clearpath-config {};
+
+ clearpath-control = self.callPackage ./clearpath-control {};
+
+ clearpath-customization = self.callPackage ./clearpath-customization {};
+
+ clearpath-description = self.callPackage ./clearpath-description {};
+
+ clearpath-generator-common = self.callPackage ./clearpath-generator-common {};
+
+ clearpath-manipulators = self.callPackage ./clearpath-manipulators {};
+
+ clearpath-manipulators-description = self.callPackage ./clearpath-manipulators-description {};
+
  clearpath-motor-msgs = self.callPackage ./clearpath-motor-msgs {};
 
+ clearpath-mounts-description = self.callPackage ./clearpath-mounts-description {};
+
  clearpath-msgs = self.callPackage ./clearpath-msgs {};
+
+ clearpath-platform-description = self.callPackage ./clearpath-platform-description {};
 
  clearpath-platform-msgs = self.callPackage ./clearpath-platform-msgs {};
 
  clearpath-ros2-socketcan-interface = self.callPackage ./clearpath-ros2-socketcan-interface {};
+
+ clearpath-sensors-description = self.callPackage ./clearpath-sensors-description {};
 
  clips-vendor = self.callPackage ./clips-vendor {};
 
@@ -819,6 +843,8 @@ self: super: {
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
  generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
+
+ generate-parameter-library-example-external = self.callPackage ./generate-parameter-library-example-external {};
 
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
 
@@ -1818,6 +1844,8 @@ self: super: {
 
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
 
+ py-trees-ros-viewer = self.callPackage ./py-trees-ros-viewer {};
+
  pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
 
  pybind11-vendor = self.callPackage ./pybind11-vendor {};
@@ -1981,6 +2009,14 @@ self: super: {
  rmf-charger-msgs = self.callPackage ./rmf-charger-msgs {};
 
  rmf-charging-schedule = self.callPackage ./rmf-charging-schedule {};
+
+ rmf-demos-assets = self.callPackage ./rmf-demos-assets {};
+
+ rmf-demos-bridges = self.callPackage ./rmf-demos-bridges {};
+
+ rmf-demos-fleet-adapter = self.callPackage ./rmf-demos-fleet-adapter {};
+
+ rmf-demos-tasks = self.callPackage ./rmf-demos-tasks {};
 
  rmf-dev = self.callPackage ./rmf-dev {};
 
