@@ -210,6 +210,8 @@ self: super: {
 
  autoware-internal-perception-msgs = self.callPackage ./autoware-internal-perception-msgs {};
 
+ autoware-internal-planning-msgs = self.callPackage ./autoware-internal-planning-msgs {};
+
  autoware-lanelet2-extension = self.callPackage ./autoware-lanelet2-extension {};
 
  autoware-lanelet2-extension-python = self.callPackage ./autoware-lanelet2-extension-python {};
@@ -671,6 +673,8 @@ self: super: {
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
  generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
+
+ generate-parameter-library-example-external = self.callPackage ./generate-parameter-library-example-external {};
 
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
 
@@ -1514,6 +1518,8 @@ self: super: {
 
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
 
+ py-trees-ros-viewer = self.callPackage ./py-trees-ros-viewer {};
+
  pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
 
  pybind11-vendor = self.callPackage ./pybind11-vendor {};
@@ -1607,6 +1613,8 @@ self: super: {
  rclcpp-components = self.callPackage ./rclcpp-components {};
 
  rclcpp-lifecycle = self.callPackage ./rclcpp-lifecycle {};
+
+ rclpy = self.callPackage ./rclpy {};
 
  rclpy-message-converter = self.callPackage ./rclpy-message-converter {};
 

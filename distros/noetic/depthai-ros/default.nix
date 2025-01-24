@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, depthai, depthai-bridge, depthai-descriptions, depthai-examples, depthai-filters, depthai-ros-driver, depthai-ros-msgs }:
 buildRosPackage {
   pname = "ros-noetic-depthai-ros";
-  version = "2.10.3-r1";
+  version = "2.10.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/noetic/depthai-ros/2.10.3-1.tar.gz";
-    name = "2.10.3-1.tar.gz";
-    sha256 = "041c7cd29bdbcf72537281898cbeec9b8452116806625bcdf65e282c525fda33";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/noetic/depthai-ros/2.10.5-1.tar.gz";
+    name = "2.10.5-1.tar.gz";
+    sha256 = "61d429625bc2801e83962f7cd62efc774507bf668ad434f94902b78b45850396";
   };
 
   buildType = "catkin";

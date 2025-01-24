@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, grid-map-cmake-helpers, grid-map-core, nav2-costmap-2d, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-grid-map-costmap-2d";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/grid_map-release/archive/release/humble/grid_map_costmap_2d/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "f50942c89f88c00c1c7b23b832ac682fee617579b9ba6353c160fdb487ce25c5";
+    url = "https://github.com/ros2-gbp/grid_map-release/archive/release/humble/grid_map_costmap_2d/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "8bb8148225660f1373297a52d57560e9aa6d94b815a3c887f14bb0e9e87ef72b";
   };
 
   buildType = "ament_cmake";

@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, ackermann-msgs, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-test-assets, std-srvs, tf2, tf2-geometry-msgs, tf2-msgs }:
 buildRosPackage {
   pname = "ros-humble-steering-controllers-library";
-  version = "2.40.0-r1";
+  version = "2.41.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/steering_controllers_library/2.40.0-1.tar.gz";
-    name = "2.40.0-1.tar.gz";
-    sha256 = "aecb2e9e26f8be0162c2242af7131085b2d4d42ddb0c9c5bf0de00919fb7e15b";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/steering_controllers_library/2.41.0-1.tar.gz";
+    name = "2.41.0-1.tar.gz";
+    sha256 = "460f0dfaba903c72479a696b2f146a153e3b60983cdc52d94ad039a8d39e8f55";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake generate-parameter-library ];
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gmock controller-manager ros2-control-test-assets ];
-  propagatedBuildInputs = [ ackermann-msgs backward-ros control-msgs controller-interface geometry-msgs hardware-interface nav-msgs pluginlib rclcpp rclcpp-lifecycle rcpputils realtime-tools std-srvs tf2 tf2-geometry-msgs tf2-msgs ];
+  propagatedBuildInputs = [ ackermann-msgs backward-ros control-msgs controller-interface generate-parameter-library geometry-msgs hardware-interface nav-msgs pluginlib rclcpp rclcpp-lifecycle rcpputils realtime-tools std-srvs tf2 tf2-geometry-msgs tf2-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

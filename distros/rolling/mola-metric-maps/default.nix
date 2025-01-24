@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, mola-common, mp2p-icp, mrpt-libmaps, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-mola-metric-maps";
-  version = "1.5.1-r1";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_metric_maps/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "21905fc90302e120a7026a0ce48d9331e22155f81147d092c2c9dc4144043d6f";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_metric_maps/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "c8280a5e1cda9d7ec5fcc163df8553fbd14cfb912c73f81f8d2d780cefd66ef9";
   };
 
   buildType = "ament_cmake";

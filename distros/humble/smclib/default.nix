@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-humble-smclib";
-  version = "3.0.2-r3";
+  version = "4.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/humble/smclib/3.0.2-3.tar.gz";
-    name = "3.0.2-3.tar.gz";
-    sha256 = "b0caf26c1e49a1c1dae37f382723b283006a8fadb584f89e88953e88ae4adde1";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/humble/smclib/4.1.1-1.tar.gz";
+    name = "4.1.1-1.tar.gz";
+    sha256 = "9626d315aec341f5467485c9b76bf6be153b9d72b98e119306a8ddaf7a9108d5";
   };
 
   buildType = "ament_cmake";

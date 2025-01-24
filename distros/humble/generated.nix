@@ -306,6 +306,8 @@ self: super: {
 
  autoware-internal-perception-msgs = self.callPackage ./autoware-internal-perception-msgs {};
 
+ autoware-internal-planning-msgs = self.callPackage ./autoware-internal-planning-msgs {};
+
  autoware-lanelet2-extension = self.callPackage ./autoware-lanelet2-extension {};
 
  autoware-lanelet2-extension-python = self.callPackage ./autoware-lanelet2-extension-python {};
@@ -371,6 +373,8 @@ self: super: {
  bond-core = self.callPackage ./bond-core {};
 
  bondcpp = self.callPackage ./bondcpp {};
+
+ bondpy = self.callPackage ./bondpy {};
 
  boost-geometry-util = self.callPackage ./boost-geometry-util {};
 
@@ -1012,7 +1016,27 @@ self: super: {
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
+ franka-bringup = self.callPackage ./franka-bringup {};
+
  franka-description = self.callPackage ./franka-description {};
+
+ franka-example-controllers = self.callPackage ./franka-example-controllers {};
+
+ franka-fr3-moveit-config = self.callPackage ./franka-fr3-moveit-config {};
+
+ franka-gazebo-bringup = self.callPackage ./franka-gazebo-bringup {};
+
+ franka-gripper = self.callPackage ./franka-gripper {};
+
+ franka-hardware = self.callPackage ./franka-hardware {};
+
+ franka-msgs = self.callPackage ./franka-msgs {};
+
+ franka-robot-state-broadcaster = self.callPackage ./franka-robot-state-broadcaster {};
+
+ franka-ros2 = self.callPackage ./franka-ros2 {};
+
+ franka-semantic-components = self.callPackage ./franka-semantic-components {};
 
  fri-configuration-controller = self.callPackage ./fri-configuration-controller {};
 
@@ -1063,6 +1087,8 @@ self: super: {
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
  generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
+
+ generate-parameter-library-example-external = self.callPackage ./generate-parameter-library-example-external {};
 
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
 
@@ -1229,6 +1255,8 @@ self: super: {
  imu-tools = self.callPackage ./imu-tools {};
 
  imu-transformer = self.callPackage ./imu-transformer {};
+
+ integration-launch-testing = self.callPackage ./integration-launch-testing {};
 
  interactive-marker-twist-server = self.callPackage ./interactive-marker-twist-server {};
 
@@ -2257,6 +2285,8 @@ self: super: {
  py-trees-ros = self.callPackage ./py-trees-ros {};
 
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
+
+ py-trees-ros-viewer = self.callPackage ./py-trees-ros-viewer {};
 
  pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
 

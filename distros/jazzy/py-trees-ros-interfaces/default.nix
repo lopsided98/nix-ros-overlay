@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, diagnostic-msgs, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-py-trees-ros-interfaces";
-  version = "2.1.0-r4";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees_ros_interfaces-release/archive/release/jazzy/py_trees_ros_interfaces/2.1.0-4.tar.gz";
-    name = "2.1.0-4.tar.gz";
-    sha256 = "76e03f6cbb5c8eecfc7ca560321cd533e51e4f01fca9f2ab223df4eb2d247eb2";
+    url = "https://github.com/ros2-gbp/py_trees_ros_interfaces-release/archive/release/jazzy/py_trees_ros_interfaces/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "a61d8c3a10c1caf07fb2e50db04077ad9501777e5e31cfa0170c2e6678c5244e";
   };
 
   buildType = "ament_cmake";

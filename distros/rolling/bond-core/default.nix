@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, bond, bondcpp, smclib }:
 buildRosPackage {
   pname = "ros-rolling-bond-core";
-  version = "4.1.0-r1";
+  version = "4.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/rolling/bond_core/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "20a8c4bcde9cfabbf65e13fc7952e325cb9bf476da5e8274c9f75aa75e8e0808";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/rolling/bond_core/4.1.1-1.tar.gz";
+    name = "4.1.1-1.tar.gz";
+    sha256 = "316a5a7dd22839dccb60c8ac96c5e1818b6915b95fdbc9586192e945f7d989aa";
   };
 
   buildType = "ament_cmake";
@@ -23,6 +23,6 @@ buildRosPackage {
     terminated, either cleanly or by crashing. The bond remains
     connected until it is either broken explicitly or until a
     heartbeat times out.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

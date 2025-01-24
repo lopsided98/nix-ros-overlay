@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-bond";
-  version = "3.0.2-r3";
+  version = "4.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/humble/bond/3.0.2-3.tar.gz";
-    name = "3.0.2-3.tar.gz";
-    sha256 = "09410c19e20f66060b3b69deeafeca1c2aefe92a3c65cace2f97856325983caf";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/humble/bond/4.1.1-1.tar.gz";
+    name = "4.1.1-1.tar.gz";
+    sha256 = "3811da7d0544ea5c1f037aa1247b843a9d722dd868d37be8446be79ad3ca7fc8";
   };
 
   buildType = "ament_cmake";
@@ -24,6 +24,6 @@ buildRosPackage {
     terminated, either cleanly or by crashing.  The bond remains
     connected until it is either broken explicitly or until a
     heartbeat times out.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

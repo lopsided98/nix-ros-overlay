@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, geometry-msgs, launch-ros, python3Packages, rclpy, sensor-msgs, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-rolling-examples-tf2-py";
-  version = "0.40.0-r1";
+  version = "0.40.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/examples_tf2_py/0.40.0-1.tar.gz";
-    name = "0.40.0-1.tar.gz";
-    sha256 = "d26704321b40261106a8eaf78853d840113d1b95f2d181991c46f58e710f9988";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/examples_tf2_py/0.40.1-1.tar.gz";
+    name = "0.40.1-1.tar.gz";
+    sha256 = "053758c1f77e0875eb2590178ba20c9c13e25d0e634234ca92d70f13f21cf2f5";
   };
 
   buildType = "ament_python";

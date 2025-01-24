@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, bond, python3Packages, rclpy, smclib }:
 buildRosPackage {
   pname = "ros-jazzy-bondpy";
-  version = "4.1.0-r1";
+  version = "4.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bondpy/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "060e4ef29182b081e1b30c300efcbb1f753f2601b42e2bce8d9d2e9356052bca";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bondpy/4.1.1-1.tar.gz";
+    name = "4.1.1-1.tar.gz";
+    sha256 = "48de4656ead5d8eeafff84a7b659a545fb67d3ed6d00cfa5411a942fbeaeb2cd";
   };
 
   buildType = "ament_python";
@@ -20,6 +20,6 @@ buildRosPackage {
   meta = {
     description = "Python implementation of bond, a mechanism for checking when
     another process has terminated.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

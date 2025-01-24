@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoconf, catkin, git, libtool, rsync, zlib }:
 buildRosPackage {
   pname = "ros-noetic-grpc";
-  version = "0.0.12-r2";
+  version = "0.0.13-r3";
 
   src = fetchurl {
-    url = "https://github.com/CogRobRelease/catkin_grpc-release/archive/release/noetic/grpc/0.0.12-2.tar.gz";
-    name = "0.0.12-2.tar.gz";
-    sha256 = "d28e54ccec8478b4094c95e056e332254aba84daa93ee76df6ded4080d079a29";
+    url = "https://github.com/CogRobRelease/catkin_grpc-release/archive/release/noetic/grpc/0.0.13-3.tar.gz";
+    name = "0.0.13-3.tar.gz";
+    sha256 = "1f566833a9cbc550f79ac75a7a76bd75adce0639d2151faca001def482cdfe0b";
   };
 
   buildType = "catkin";
