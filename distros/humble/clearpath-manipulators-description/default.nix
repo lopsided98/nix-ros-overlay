@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, kortex-description, robot-state-publisher, robotiq-description, ur-description, urdf, xacro }:
 buildRosPackage {
   pname = "ros-humble-clearpath-manipulators-description";
-  version = "1.0.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_manipulators_description/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "b1af24d52c784d28bca2abe18e885b1e176c827b535dc273d57bdd3299279263";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_manipulators_description/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "e13476241bd928e2104a86bb6934043c92139ed9072226b3aa8ab4a02a679585";
   };
 
   buildType = "ament_cmake";

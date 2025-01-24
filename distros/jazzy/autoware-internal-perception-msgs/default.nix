@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, autoware-perception-msgs, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-internal-perception-msgs";
-  version = "1.3.0-r1";
+  version = "1.5.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_internal_msgs-release/archive/release/jazzy/autoware_internal_perception_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "c85da3c157a81ca02bb696f0aaebe84877451d7c44131af60e3076dbfbdc80b0";
+    url = "https://github.com/ros2-gbp/autoware_internal_msgs-release/archive/release/jazzy/autoware_internal_perception_msgs/1.5.0-2.tar.gz";
+    name = "1.5.0-2.tar.gz";
+    sha256 = "6226b46307420b1619d77e58588d9c72cbdf6cad1a77c51b7341b5799a4933a0";
   };
 
   buildType = "ament_cmake";

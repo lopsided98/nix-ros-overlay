@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, builtin-interfaces, geometry-msgs, lifecycle-msgs, nav-msgs, python3Packages, rclcpp, rclpy, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-automatika-ros-sugar";
-  version = "0.2.5-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/automatika_ros_sugar-release/archive/release/humble/automatika_ros_sugar/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "06c55119381de2122dfa25122b349bbb678f37a248fc899ef1bbbb210ec8270e";
+    url = "https://github.com/ros2-gbp/automatika_ros_sugar-release/archive/release/humble/automatika_ros_sugar/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "1a5e1cded3bc7057c0f7ec4329ead755c43e4f01a473e684c4ae2e9f02719b6b";
   };
 
   buildType = "ament_cmake";

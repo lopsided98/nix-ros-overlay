@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-manager, forward-command-controller, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-rolling-position-controllers";
-  version = "4.18.0-r2";
+  version = "4.19.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/position_controllers/4.18.0-2.tar.gz";
-    name = "4.18.0-2.tar.gz";
-    sha256 = "7eaf0e0bb5e028b6dbfa46e48026a0c5a3032296f72d45ae8aa0ea1b5cab503b";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/position_controllers/4.19.0-1.tar.gz";
+    name = "4.19.0-1.tar.gz";
+    sha256 = "f861ec8136199b4b7039004d6196d6a449a674700f6042db111accd72e83c9b6";
   };
 
   buildType = "ament_cmake";

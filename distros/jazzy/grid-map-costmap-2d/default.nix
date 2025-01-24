@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, grid-map-cmake-helpers, grid-map-core, nav2-costmap-2d, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-grid-map-costmap-2d";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/grid_map-release/archive/release/jazzy/grid_map_costmap_2d/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "7e7cd43c9491796411f0c57243569b7a05b1d027304130187e2933a09a6e0c11";
+    url = "https://github.com/ros2-gbp/grid_map-release/archive/release/jazzy/grid_map_costmap_2d/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "c2f95134708f20d7f552fdc0f97499344149a5f481a4e96500e3ff77e3abac6f";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, grid-map-cmake-helpers, grid-map-core, grid-map-cv, grid-map-filters, grid-map-loader, grid-map-msgs, grid-map-octomap, grid-map-ros, grid-map-rviz-plugin, grid-map-visualization, octomap-msgs, octomap-rviz-plugins, octomap-server, python3Packages, rclcpp, rclpy, rviz2, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-grid-map-demos";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/grid_map-release/archive/release/humble/grid_map_demos/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "58fc005c21ca0ea2e3f9fa9acde5e8a86169a30d36adf80e3f24bf217e1f2c54";
+    url = "https://github.com/ros2-gbp/grid_map-release/archive/release/humble/grid_map_demos/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "4ea13442dfedd4abc0fb428e707a393e8d03d3d0f06ec9118f18db810220c742";
   };
 
   buildType = "ament_cmake";
