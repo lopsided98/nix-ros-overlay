@@ -139,7 +139,7 @@ in with lib; {
     postPatch = postPatch + ''
       substituteInPlace cmake/rosidl_generator_py_generate_interfaces.cmake \
        --replace-fail '"import numpy"' "" \
-       --replace-fail 'numpy.get_include()' "'${python.pkgs.numpy}/${python.sitePackages}/numpy/core/include'"
+       --replace-fail 'numpy.get_include()' "'${python.pkgs.numpy}/${python.sitePackages}/numpy/_core/include'"
     '';
   });
 
