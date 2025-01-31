@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-cmake, boost, console-bridge, console-bridge-vendor, tinyxml2-vendor, urdf, urdfdom-headers, urdfdom-py }:
 buildRosPackage {
   pname = "ros-jazzy-srdfdom";
-  version = "2.0.5-r1";
+  version = "2.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/srdfdom-release/archive/release/jazzy/srdfdom/2.0.5-1.tar.gz";
-    name = "2.0.5-1.tar.gz";
-    sha256 = "d70fab11a3b4a61f8172c2d09aeb68e1931aac3f4d7480a6f4b28745a8c12543";
+    url = "https://github.com/ros2-gbp/srdfdom-release/archive/release/jazzy/srdfdom/2.0.7-1.tar.gz";
+    name = "2.0.7-1.tar.gz";
+    sha256 = "d9c1e0ea93ebf1071514ce4beb8ae2bee9e8b5222012331edf64098089515370";
   };
 
   buildType = "ament_cmake";

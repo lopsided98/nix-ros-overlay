@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen }:
 buildRosPackage {
   pname = "ros-jazzy-eigen-stl-containers";
-  version = "1.0.0-r7";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/eigen_stl_containers-release/archive/release/jazzy/eigen_stl_containers/1.0.0-7.tar.gz";
-    name = "1.0.0-7.tar.gz";
-    sha256 = "00362aa1010a4f01f68819fb9708bc950d61d47a57de4a7949cc71ef21df227e";
+    url = "https://github.com/ros2-gbp/eigen_stl_containers-release/archive/release/jazzy/eigen_stl_containers/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "0af72f653344e7ed08ec5c4692a729d56867bdad8285e706583df020a2601d88";
   };
 
   buildType = "ament_cmake";

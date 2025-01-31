@@ -1290,6 +1290,8 @@ self: super: {
 
  irobot-create-toolbox = self.callPackage ./irobot-create-toolbox {};
 
+ jacro = self.callPackage ./jacro {};
+
  joint-group-impedance-controller = self.callPackage ./joint-group-impedance-controller {};
 
  joint-limits = self.callPackage ./joint-limits {};
@@ -1335,6 +1337,10 @@ self: super: {
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
 
  kobuki-velocity-smoother = self.callPackage ./kobuki-velocity-smoother {};
+
+ kompass = self.callPackage ./kompass {};
+
+ kompass-interfaces = self.callPackage ./kompass-interfaces {};
 
  kortex-api = self.callPackage ./kortex-api {};
 
@@ -2286,6 +2292,8 @@ self: super: {
 
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
 
+ py-trees-ros-tutorials = self.callPackage ./py-trees-ros-tutorials {};
+
  py-trees-ros-viewer = self.callPackage ./py-trees-ros-viewer {};
 
  pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
@@ -2938,7 +2946,11 @@ self: super: {
 
  sbg-driver = self.callPackage ./sbg-driver {};
 
+ scenario-execution = self.callPackage ./scenario-execution {};
+
  scenario-execution-control = self.callPackage ./scenario-execution-control {};
+
+ scenario-execution-coverage = self.callPackage ./scenario-execution-coverage {};
 
  scenario-execution-gazebo = self.callPackage ./scenario-execution-gazebo {};
 
@@ -3458,6 +3470,8 @@ self: super: {
 
  urg-node-msgs = self.callPackage ./urg-node-msgs {};
 
+ urinterfaces = self.callPackage ./urinterfaces {};
+
  usb-cam = self.callPackage ./usb-cam {};
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
@@ -3565,6 +3579,8 @@ self: super: {
  yasmin-msgs = self.callPackage ./yasmin-msgs {};
 
  yasmin-ros = self.callPackage ./yasmin-ros {};
+
+ yasmin-viewer = self.callPackage ./yasmin-viewer {};
 
  zbar-ros = self.callPackage ./zbar-ros {};
 

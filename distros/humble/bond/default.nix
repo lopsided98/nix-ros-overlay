@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-bond";
-  version = "4.1.1-r1";
+  version = "4.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/humble/bond/4.1.1-1.tar.gz";
-    name = "4.1.1-1.tar.gz";
-    sha256 = "3811da7d0544ea5c1f037aa1247b843a9d722dd868d37be8446be79ad3ca7fc8";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/humble/bond/4.1.2-1.tar.gz";
+    name = "4.1.2-1.tar.gz";
+    sha256 = "79901ad238726b2cba0874ec355ca7004b1521e27ba16bdf11950455be1560bf";
   };
 
   buildType = "ament_cmake";

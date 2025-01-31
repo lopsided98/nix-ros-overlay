@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, bond, pkg-config, rclcpp, rclcpp-lifecycle, smclib, util-linux }:
 buildRosPackage {
   pname = "ros-humble-bondcpp";
-  version = "4.1.1-r1";
+  version = "4.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/humble/bondcpp/4.1.1-1.tar.gz";
-    name = "4.1.1-1.tar.gz";
-    sha256 = "ae3d20371e5f3eb7b07497ccf6a32709886ae7598406640ea284411d5742178c";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/humble/bondcpp/4.1.2-1.tar.gz";
+    name = "4.1.2-1.tar.gz";
+    sha256 = "3a8c5cb9448f042a5cf87f4b16be2c800e4591ebe9e0421303e6a3787fb78dc5";
   };
 
   buildType = "ament_cmake";

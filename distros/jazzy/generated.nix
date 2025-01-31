@@ -210,8 +210,6 @@ self: super: {
 
  autoware-internal-planning-msgs = self.callPackage ./autoware-internal-planning-msgs {};
 
- autoware-lanelet2-extension = self.callPackage ./autoware-lanelet2-extension {};
-
  autoware-lanelet2-extension-python = self.callPackage ./autoware-lanelet2-extension-python {};
 
  autoware-lint-common = self.callPackage ./autoware-lint-common {};
@@ -227,8 +225,6 @@ self: super: {
  autoware-sensing-msgs = self.callPackage ./autoware-sensing-msgs {};
 
  autoware-system-msgs = self.callPackage ./autoware-system-msgs {};
-
- autoware-utils = self.callPackage ./autoware-utils {};
 
  autoware-v2x-msgs = self.callPackage ./autoware-v2x-msgs {};
 
@@ -377,6 +373,12 @@ self: super: {
  cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
 
  coal = self.callPackage ./coal {};
+
+ cob-actions = self.callPackage ./cob-actions {};
+
+ cob-msgs = self.callPackage ./cob-msgs {};
+
+ cob-srvs = self.callPackage ./cob-srvs {};
 
  color-names = self.callPackage ./color-names {};
 
@@ -1050,6 +1052,8 @@ self: super: {
 
  irobot-create-toolbox = self.callPackage ./irobot-create-toolbox {};
 
+ jacro = self.callPackage ./jacro {};
+
  joint-limits = self.callPackage ./joint-limits {};
 
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
@@ -1089,6 +1093,10 @@ self: super: {
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
 
  kobuki-velocity-smoother = self.callPackage ./kobuki-velocity-smoother {};
+
+ kompass = self.callPackage ./kompass {};
+
+ kompass-interfaces = self.callPackage ./kompass-interfaces {};
 
  lanelet2 = self.callPackage ./lanelet2 {};
 
@@ -1846,6 +1854,8 @@ self: super: {
 
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
 
+ py-trees-ros-tutorials = self.callPackage ./py-trees-ros-tutorials {};
+
  py-trees-ros-viewer = self.callPackage ./py-trees-ros-viewer {};
 
  pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
@@ -2480,7 +2490,11 @@ self: super: {
 
  sbg-driver = self.callPackage ./sbg-driver {};
 
+ scenario-execution = self.callPackage ./scenario-execution {};
+
  scenario-execution-control = self.callPackage ./scenario-execution-control {};
+
+ scenario-execution-coverage = self.callPackage ./scenario-execution-coverage {};
 
  scenario-execution-gazebo = self.callPackage ./scenario-execution-gazebo {};
 
@@ -2993,6 +3007,8 @@ self: super: {
  yasmin-msgs = self.callPackage ./yasmin-msgs {};
 
  yasmin-ros = self.callPackage ./yasmin-ros {};
+
+ yasmin-viewer = self.callPackage ./yasmin-viewer {};
 
  zbar-ros = self.callPackage ./zbar-ros {};
 
