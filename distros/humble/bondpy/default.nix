@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, bond, python3Packages, rclpy, smclib }:
 buildRosPackage {
   pname = "ros-humble-bondpy";
-  version = "4.1.1-r1";
+  version = "4.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/humble/bondpy/4.1.1-1.tar.gz";
-    name = "4.1.1-1.tar.gz";
-    sha256 = "af5989b9f2866cb407c2dc8a2c167ce18b96c229bcf597aa703557a7652c2e16";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/humble/bondpy/4.1.2-1.tar.gz";
+    name = "4.1.2-1.tar.gz";
+    sha256 = "c7e568776e0c54cecd72b07876faecbd8590f3c0bb29ec84505de63d3acd902b";
   };
 
   buildType = "ament_python";

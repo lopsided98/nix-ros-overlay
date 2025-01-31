@@ -118,6 +118,8 @@ self: super: {
 
  ament-download = self.callPackage ./ament-download {};
 
+ ament-flake8 = self.callPackage ./ament-flake8 {};
+
  ament-index-cpp = self.callPackage ./ament-index-cpp {};
 
  ament-index-python = self.callPackage ./ament-index-python {};
@@ -327,6 +329,12 @@ self: super: {
  cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
 
  coal = self.callPackage ./coal {};
+
+ cob-actions = self.callPackage ./cob-actions {};
+
+ cob-msgs = self.callPackage ./cob-msgs {};
+
+ cob-srvs = self.callPackage ./cob-srvs {};
 
  color-names = self.callPackage ./color-names {};
 
@@ -834,6 +842,8 @@ self: super: {
 
  irobot-create-msgs = self.callPackage ./irobot-create-msgs {};
 
+ jacro = self.callPackage ./jacro {};
+
  joint-limits = self.callPackage ./joint-limits {};
 
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
@@ -877,6 +887,10 @@ self: super: {
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
 
  kobuki-velocity-smoother = self.callPackage ./kobuki-velocity-smoother {};
+
+ kompass = self.callPackage ./kompass {};
+
+ kompass-interfaces = self.callPackage ./kompass-interfaces {};
 
  kortex-api = self.callPackage ./kortex-api {};
 
@@ -1517,6 +1531,8 @@ self: super: {
  py-trees-ros = self.callPackage ./py-trees-ros {};
 
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
+
+ py-trees-ros-tutorials = self.callPackage ./py-trees-ros-tutorials {};
 
  py-trees-ros-viewer = self.callPackage ./py-trees-ros-viewer {};
 
@@ -2549,6 +2565,8 @@ self: super: {
  yasmin-msgs = self.callPackage ./yasmin-msgs {};
 
  yasmin-ros = self.callPackage ./yasmin-ros {};
+
+ yasmin-viewer = self.callPackage ./yasmin-viewer {};
 
  zbar-ros = self.callPackage ./zbar-ros {};
 

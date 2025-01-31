@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-smclib";
-  version = "4.1.1-r1";
+  version = "4.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/smclib/4.1.1-1.tar.gz";
-    name = "4.1.1-1.tar.gz";
-    sha256 = "f0365fa0c1fbc89e0b1a2a79eefc13caab5d12a7339615d9bad6c9352a775b74";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/smclib/4.1.2-1.tar.gz";
+    name = "4.1.2-1.tar.gz";
+    sha256 = "be4eb3d52d3fc8313f7d56bffb9d9143a6601a3dceb21a4f02f882086c9a6dd3";
   };
 
   buildType = "ament_cmake";

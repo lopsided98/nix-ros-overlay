@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, bond, bondcpp, smclib }:
 buildRosPackage {
   pname = "ros-jazzy-bond-core";
-  version = "4.1.1-r1";
+  version = "4.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bond_core/4.1.1-1.tar.gz";
-    name = "4.1.1-1.tar.gz";
-    sha256 = "b0491b97e03e5325d39f89206f6a10a8b1359c46a5262344c1eba97b7b187e43";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bond_core/4.1.2-1.tar.gz";
+    name = "4.1.2-1.tar.gz";
+    sha256 = "1123ad582459e77c2eb64053d8e39c2398c01169999f6770690281346d234b0e";
   };
 
   buildType = "ament_cmake";
