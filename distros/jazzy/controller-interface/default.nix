@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, geometry-msgs, hardware-interface, rclcpp-lifecycle, realtime-tools, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-controller-interface";
-  version = "4.24.0-r1";
+  version = "4.25.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/controller_interface/4.24.0-1.tar.gz";
-    name = "4.24.0-1.tar.gz";
-    sha256 = "b8e41b52961f238aae9a12258ac9e802eb898fc1d3dc8005c7b56433fc27b25d";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/controller_interface/4.25.0-1.tar.gz";
+    name = "4.25.0-1.tar.gz";
+    sha256 = "31f8dec752b2ae2cee6d84737389e9d274d732ed2077888beb1b03e625a88047";
   };
 
   buildType = "ament_cmake";

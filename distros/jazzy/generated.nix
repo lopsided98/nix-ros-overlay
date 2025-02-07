@@ -342,11 +342,15 @@ self: super: {
 
  clearpath-config = self.callPackage ./clearpath-config {};
 
+ clearpath-config-live = self.callPackage ./clearpath-config-live {};
+
  clearpath-control = self.callPackage ./clearpath-control {};
 
  clearpath-customization = self.callPackage ./clearpath-customization {};
 
  clearpath-description = self.callPackage ./clearpath-description {};
+
+ clearpath-desktop = self.callPackage ./clearpath-desktop {};
 
  clearpath-generator-common = self.callPackage ./clearpath-generator-common {};
 
@@ -360,6 +364,10 @@ self: super: {
 
  clearpath-msgs = self.callPackage ./clearpath-msgs {};
 
+ clearpath-nav2-demos = self.callPackage ./clearpath-nav2-demos {};
+
+ clearpath-offboard-sensors = self.callPackage ./clearpath-offboard-sensors {};
+
  clearpath-platform-description = self.callPackage ./clearpath-platform-description {};
 
  clearpath-platform-msgs = self.callPackage ./clearpath-platform-msgs {};
@@ -367,6 +375,8 @@ self: super: {
  clearpath-ros2-socketcan-interface = self.callPackage ./clearpath-ros2-socketcan-interface {};
 
  clearpath-sensors-description = self.callPackage ./clearpath-sensors-description {};
+
+ clearpath-viz = self.callPackage ./clearpath-viz {};
 
  clips-vendor = self.callPackage ./clips-vendor {};
 
@@ -409,6 +419,18 @@ self: super: {
  controller-manager-msgs = self.callPackage ./controller-manager-msgs {};
 
  costmap-queue = self.callPackage ./costmap-queue {};
+
+ crane-plus = self.callPackage ./crane-plus {};
+
+ crane-plus-control = self.callPackage ./crane-plus-control {};
+
+ crane-plus-description = self.callPackage ./crane-plus-description {};
+
+ crane-plus-examples = self.callPackage ./crane-plus-examples {};
+
+ crane-plus-gazebo = self.callPackage ./crane-plus-gazebo {};
+
+ crane-plus-moveit-config = self.callPackage ./crane-plus-moveit-config {};
 
  create3-coverage = self.callPackage ./create3-coverage {};
 
