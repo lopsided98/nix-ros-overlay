@@ -180,6 +180,18 @@ in {
     ];
   });
 
+  image-proc = rosSuper.image-proc.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = "https://github.com/ros-perception/image_pipeline/pull/1072.patch";
+        hash = "sha256-eRM+9nj5ZxvNjrY1H4/RqAbcUUeG+g7qUZnQT5wpsJ0=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   lely-core-libraries = lib.patchExternalProjectGit rosSuper.lely-core-libraries {
     url = "https://gitlab.com/lely_industries/lely-core.git";
     rev = "b63a0b6f79d3ea91dc221724b42dae49894449fc";
