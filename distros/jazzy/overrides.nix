@@ -43,8 +43,8 @@ in {
   };
 
   gz-cmake-vendor = lib.patchGzAmentVendorGit rosSuper.gz-cmake-vendor {
-    version = "3.5.3";
-    hash = "sha256-fnN3Fmp7F5W0JixJUEp2v/OnXzmRidS5ujmSYxIRWto=";
+    version = "3.5.4";
+    hash = "sha256-mP0bBPWWAoUFsUwKn95Eqv1lW3lJdPEu3hhfmiK3mNQ=";
   };
 
   gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor {
@@ -87,8 +87,8 @@ in {
   };
 
   gz-math-vendor = lib.patchGzAmentVendorGit rosSuper.gz-math-vendor {
-    version = "7.5.1";
-    hash = "sha256-RxCZiU0h0skVPBSn+PMtkdwEabmTKl+0PYDpl9SQoq8=";
+    version = "7.5.2";
+    hash = "sha256-LwYeyv8nwX06n5ju+ra2uqNMedMSLRumem8qDHXtNns=";
   };
 
   gz-msgs-vendor = lib.patchGzAmentVendorGit rosSuper.gz-msgs-vendor {
@@ -110,8 +110,8 @@ in {
   };
 
   gz-plugin-vendor = lib.patchGzAmentVendorGit rosSuper.gz-plugin-vendor {
-    version = "2.0.3";
-    hash = "sha256-9t6vcnBbfRWu6ptmqYAhmWKDoKAaK631JD9u1C0G0mY=";
+    version = "2.0.4";
+    hash = "sha256-iL4+EdFFAU55FVqE/CvyTv1zNaXxBWqWx44L0BeG2MU=";
   };
 
   gz-rendering-vendor = lib.patchGzAmentVendorGit rosSuper.gz-rendering-vendor {
@@ -130,8 +130,8 @@ in {
   };
 
   gz-tools-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-tools-vendor {
-    version = "2.0.1";
-    hash = "sha256-sV/T53oVk1fgjwqn/SRTaPTukt+vAlGGxGvTN8+G6Mo=";
+    version = "2.0.2";
+    hash = "sha256-CY+W1jWIkszKwKuLgKmJpZMXHn0RnueMHFSDhOXIzLg=";
   }).overrideAttrs({
     nativeBuildInputs ? [],
     propagatedNativeBuildInputs ? [],
@@ -155,8 +155,8 @@ in {
   });
 
   gz-transport-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-transport-vendor {
-    version = "13.4.0";
-    hash = "sha256-2Akd3vKr07IdgoJppvUV1nZlHE4RdQfI2R18ihHTDHk=";
+    version = "13.4.1";
+    hash = "sha256-hCP+yVoyl1c3KNmQ5jKrYvPT1IlAy9JkCh0c0mOF+KM=";
   }).overrideAttrs({
     buildInputs ? [], ...
   }: {
@@ -164,8 +164,8 @@ in {
   });
 
   gz-utils-vendor = lib.patchGzAmentVendorGit rosSuper.gz-utils-vendor {
-    version = "2.2.0";
-    hash = "sha256-dNoDOZtk/zseHuOM5mOPHkXKU7wqxxKrFnh7e09bjRA=";
+    version = "2.2.1";
+    hash = "sha256-utVW8pTP/emEWblTxVb6jzulKdxss+2VfS552MWMqm4=";
   };
 
   iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
@@ -256,8 +256,8 @@ in {
   };
 
   sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor {
-    version = "14.6.0";
-    hash = "sha256-rRX8A6jZWR8iz4oMqWtG2ZP1XnpDsUnbktlF8q9z47M=";
+    version = "14.7.0";
+    hash = "sha256-p2e01bCoMpDhia1yOFa5wIP2ritBiWNT5jYbp/bg1+g=";
   };
 
   urdfdom = rosSuper.urdfdom.overrideAttrs ({

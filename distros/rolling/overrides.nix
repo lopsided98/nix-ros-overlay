@@ -130,8 +130,8 @@ in {
   };
 
   gz-tools-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-tools-vendor {
-    version = "2.0.1";
-    hash = "sha256-sV/T53oVk1fgjwqn/SRTaPTukt+vAlGGxGvTN8+G6Mo=";
+    version = "2.0.2";
+    hash = "sha256-CY+W1jWIkszKwKuLgKmJpZMXHn0RnueMHFSDhOXIzLg=";
   }).overrideAttrs({
     nativeBuildInputs ? [],
     propagatedNativeBuildInputs ? [],
