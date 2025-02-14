@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, boost, cmake, doxygen, eigen, eigenpy, git, octomap, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-coal";
-  version = "3.0.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/coal-release/archive/release/jazzy/coal/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "1860c4440198270a6c30fe9dcd1bc67676d21d546be0f4bf88f8377dc5fbd0f5";
+    url = "https://github.com/ros2-gbp/coal-release/archive/release/jazzy/coal/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "8a4eed56dcf1a5923cc51e8f05cd9034046bbe3564ab3d63914063c7e280df28";
   };
 
   buildType = "cmake";

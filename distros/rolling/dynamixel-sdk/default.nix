@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-dynamixel-sdk";
-  version = "3.7.40-r5";
+  version = "3.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/rolling/dynamixel_sdk/3.7.40-5.tar.gz";
-    name = "3.7.40-5.tar.gz";
-    sha256 = "a3cc954fc3d305729a2d5d17c74fc34b668aee487af1ff23d5d938d1d6b941d4";
+    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/rolling/dynamixel_sdk/3.8.1-1.tar.gz";
+    name = "3.8.1-1.tar.gz";
+    sha256 = "4628656a7c414fade90d35fa029221267e7987f129db82d8c666c9702ea6680c";
   };
 
   buildType = "ament_cmake";

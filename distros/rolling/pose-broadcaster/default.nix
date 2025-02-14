@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, tf2-msgs }:
 buildRosPackage {
   pname = "ros-rolling-pose-broadcaster";
-  version = "4.19.0-r1";
+  version = "4.20.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/pose_broadcaster/4.19.0-1.tar.gz";
-    name = "4.19.0-1.tar.gz";
-    sha256 = "83ff97716d0a8fd62b5e30bce92a46646f61fbd9a3d316d155fc1e7eef8fa3f1";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/pose_broadcaster/4.20.0-1.tar.gz";
+    name = "4.20.0-1.tar.gz";
+    sha256 = "e6ddbabb4cf056f07dd014bd9bcb10d195a0beddc55d4c41499cf3338271dc58";
   };
 
   buildType = "ament_cmake";

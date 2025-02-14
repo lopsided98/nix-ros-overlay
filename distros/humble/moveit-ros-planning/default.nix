@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, message-filters, moveit-common, moveit-configs-utils, moveit-core, moveit-msgs, moveit-resources-panda-moveit-config, moveit-ros-occupancy-map-monitor, pluginlib, rclcpp, rclcpp-action, ros-testing, srdfdom, tf2, tf2-eigen, tf2-geometry-msgs, tf2-msgs, tf2-ros, urdf }:
 buildRosPackage {
   pname = "ros-humble-moveit-ros-planning";
-  version = "2.5.7-r1";
+  version = "2.5.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_ros_planning/2.5.7-1.tar.gz";
-    name = "2.5.7-1.tar.gz";
-    sha256 = "2f891a29cd4c778e326c3230080ca6882c8b51fdf054d46e713aeb59c76f20fc";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_ros_planning/2.5.8-1.tar.gz";
+    name = "2.5.8-1.tar.gz";
+    sha256 = "5d58499f69e7faf7535f672bb112b7e331b99f863229d88eadc281e382193ab5";
   };
 
   buildType = "ament_cmake";

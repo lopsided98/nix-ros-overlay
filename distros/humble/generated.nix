@@ -1970,6 +1970,8 @@ self: super: {
 
  nodl-to-policy = self.callPackage ./nodl-to-policy {};
 
+ nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
+
  novatel-gps-driver = self.callPackage ./novatel-gps-driver {};
 
  novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
