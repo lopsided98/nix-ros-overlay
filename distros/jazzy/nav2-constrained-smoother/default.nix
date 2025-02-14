@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, angles, ceres-solver, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-constrained-smoother";
-  version = "1.3.4-r1";
+  version = "1.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_constrained_smoother/1.3.4-1.tar.gz";
-    name = "1.3.4-1.tar.gz";
-    sha256 = "bed296050a7bb4ec71e119b740dd1d3a8ae04bbd0099110a9955530550deaef0";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_constrained_smoother/1.3.5-1.tar.gz";
+    name = "1.3.5-1.tar.gz";
+    sha256 = "e9c499cf57d0e632aa71630efcd80b764375b8473ba4babb082e95a02a102ece";
   };
 
   buildType = "ament_cmake";

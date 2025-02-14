@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-jazzy-gpio-controllers";
-  version = "4.19.0-r1";
+  version = "4.20.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/gpio_controllers/4.19.0-1.tar.gz";
-    name = "4.19.0-1.tar.gz";
-    sha256 = "03de7be4b34200e1fe05018b7eca24684da599852c6cbc3f3996a657dc2b6c84";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/gpio_controllers/4.20.0-1.tar.gz";
+    name = "4.20.0-1.tar.gz";
+    sha256 = "8c81b5dc43a0b7ff3fbe23e2376dc70e853bea394ab5bd6c8ac62a80eac1c5c2";
   };
 
   buildType = "ament_cmake";

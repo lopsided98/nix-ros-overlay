@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, rospy, rostest, rostopic, smach, smach-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-smach-ros";
-  version = "2.5.2-r1";
+  version = "2.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/executive_smach-release/archive/release/noetic/smach_ros/2.5.2-1.tar.gz";
-    name = "2.5.2-1.tar.gz";
-    sha256 = "8dbaedae6785bb0db9480f96c06c206d938d074b563c157a56cef140dcff6ea2";
+    url = "https://github.com/ros-gbp/executive_smach-release/archive/release/noetic/smach_ros/2.5.3-1.tar.gz";
+    name = "2.5.3-1.tar.gz";
+    sha256 = "9dc3e8f416e179db429410a4034e307ecc8ebb493b433d3752e4f30b4ab7c3a9";
   };
 
   buildType = "catkin";

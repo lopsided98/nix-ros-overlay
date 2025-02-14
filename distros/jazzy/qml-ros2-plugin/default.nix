@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, example-interfaces, image-transport, qt5, rclcpp, ros-babel-fish, ros-babel-fish-test-msgs, std-srvs, tf2-ros, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-qml-ros2-plugin";
-  version = "1.0.1-r1";
+  version = "1.25.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qml_ros2_plugin-release/archive/release/jazzy/qml_ros2_plugin/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "1c691e1eb5decad3483eae738999b52a9c9002ceb63821a77ee16c86fc0d113a";
+    url = "https://github.com/ros2-gbp/qml_ros2_plugin-release/archive/release/jazzy/qml_ros2_plugin/1.25.2-2.tar.gz";
+    name = "1.25.2-2.tar.gz";
+    sha256 = "4b5ecdf7dd679102efd9a2fcc638b3f43d1cb9dc4d06b9340036f6169dab0126";
   };
 
   buildType = "ament_cmake";

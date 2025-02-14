@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, geometry-msgs, launch, launch-ros, launch-testing, lcov, nav-msgs, nav2-amcl, nav2-behavior-tree, nav2-bringup, nav2-common, nav2-lifecycle-manager, nav2-map-server, nav2-minimal-tb3-sim, nav2-msgs, nav2-navfn-planner, nav2-planner, nav2-util, navigation2, python3Packages, rclcpp, rclpy, robot-state-publisher, std-msgs, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-system-tests";
-  version = "1.3.4-r1";
+  version = "1.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_system_tests/1.3.4-1.tar.gz";
-    name = "1.3.4-1.tar.gz";
-    sha256 = "555ddf4660b401d98646b0a4701da7cca28c575be17c5af1a1c8814d3f1c088c";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_system_tests/1.3.5-1.tar.gz";
+    name = "1.3.5-1.tar.gz";
+    sha256 = "ddfe516d9d85af2e1ae69f548b7778d70cc197d91c7d53edea1401c12abad8e9";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, cv-bridge, geographic-msgs, image-transport, nav-msgs, nav2-common, nav2-core, nav2-msgs, nav2-util, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, robot-localization, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-waypoint-follower";
-  version = "1.3.4-r1";
+  version = "1.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_waypoint_follower/1.3.4-1.tar.gz";
-    name = "1.3.4-1.tar.gz";
-    sha256 = "4f60291d889a59f4d4457d5c55ef7cfbf30eb8ff1dc3f6e0f71b5a9bbfa8ccec";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_waypoint_follower/1.3.5-1.tar.gz";
+    name = "1.3.5-1.tar.gz";
+    sha256 = "8e7a532fc8a0ef1a414d433acaa6af5822461bcc1d596772e55c48ccd2996094";
   };
 
   buildType = "ament_cmake";
