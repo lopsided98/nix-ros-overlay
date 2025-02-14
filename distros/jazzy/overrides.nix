@@ -185,8 +185,8 @@ in {
   }: {
     patches = patches ++ [
       (self.fetchpatch {
-        url = "https://github.com/ros-perception/image_pipeline/pull/1072.patch";
-        hash = "sha256-eRM+9nj5ZxvNjrY1H4/RqAbcUUeG+g7qUZnQT5wpsJ0=";
+        url = "https://github.com/ros-perception/image_pipeline/commit/bf7c7c2baddfa958407cca8e57e35caa53deead7.patch";
+        hash = "sha256-UBBiYsnlUydH1h95hFhsn3d+FSC6kpqQFifgZYx+PpU=";
         stripLen = 1;
       })
     ];
