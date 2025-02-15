@@ -293,7 +293,6 @@ in {
     postPatch = postPatch + ''
       ln -s zenoh-bridge-dds/Cargo.lock Cargo.lock
     '';
-    # setSourceRoot = "sourceRoot=$(echo */zenoh-bridge-dds)";
     cargoDeps = self.rustPlatform.fetchCargoVendor {
       inherit pname version src;
       hash = "sha256-DRMuF6DNLbMIA1CmhVZ7L//EuTCQNL5/lU6d+3DKnO4=";
