@@ -282,22 +282,53 @@ in {
     ];
   });
 
-  zenoh-cpp-vendor = (lib.patchAmentVendorGit (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {
+  zenoh-bridge-dds = rosSuper.zenoh-bridge-dds.overrideAttrs ({
+     nativeBuildInputs ? [], pname ? "", postPatch ? "", src ? "", version ? "", ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [
+      self.rustPlatform.cargoSetupHook
+      self.cargo
+      self.rustc
+    ];
+    postPatch = postPatch + ''
+      ln -s zenoh-bridge-dds/Cargo.lock Cargo.lock
+    '';
+    # setSourceRoot = "sourceRoot=$(echo */zenoh-bridge-dds)";
+    cargoDeps = self.rustPlatform.fetchCargoVendor {
+      inherit pname version src;
+      hash = "sha256-DRMuF6DNLbMIA1CmhVZ7L//EuTCQNL5/lU6d+3DKnO4=";
+      prePatch = ''
+        cd zenoh-bridge-dds
+      '';
+    };
+    env.LIBCLANG_PATH = "${lib.getLib self.llvmPackages.libclang}/lib";
+    env.NIX_CFLAGS_COMPILE = toString [
+      "-Wno-error=implicit-function-declaration"
+      "-Wno-error=int-conversion"
+      "-Wno-error=deprecated-declarations"
+    ];
+  });
+
+  zenoh-cpp-vendor = let
+    zenoh-c-url = "https://github.com/eclipse-zenoh/zenoh-c.git";
+    zenoh-c-rev = "57d5e4d31d9b38fef34d7bcad3d3e54869c4ce73";
+    zenoh-c-hash = "sha256-e8OtpyKp+AEgh6QWD/5aBtbmDV55ocx9DeLakYdikmI=";
+  in (lib.patchAmentVendorGit (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {
     url = "https://github.com/eclipse-zenoh/zenoh-cpp";
     rev = "964b64dc8b935a43147287199e7bb12da7b141e6";
     fetchgitArgs.hash = "sha256-9aAWcTJU3D5R2J9fasQ1aUYXWkcCk3FcmOT340Pc0ko=";
   }) {
-    url = "https://github.com/eclipse-zenoh/zenoh-c.git";
-    rev = "57d5e4d31d9b38fef34d7bcad3d3e54869c4ce73";
-    fetchgitArgs.hash = "sha256-e8OtpyKp+AEgh6QWD/5aBtbmDV55ocx9DeLakYdikmI=";
+    url = zenoh-c-url;
+    rev = zenoh-c-rev;
+    fetchgitArgs.hash = zenoh-c-hash;
   }).overrideAttrs ({
      nativeBuildInputs ? [], postPatch ? "", ...
   }: let
       zenoh-c-source = self.fetchFromGitHub {
         owner = "eclipse-zenoh";
         repo = "zenoh-c";
-        rev = "57d5e4d31d9b38fef34d7bcad3d3e54869c4ce73";
-        hash = "sha256-e8OtpyKp+AEgh6QWD/5aBtbmDV55ocx9DeLakYdikmI=";
+        rev = zenoh-c-rev;
+        hash = zenoh-c-hash;
       };
     in {
     nativeBuildInputs = nativeBuildInputs ++ [
@@ -306,7 +337,7 @@ in {
       self.rustc
     ];
     postPatch = postPatch + ''
-      cp ${zenoh-c-source.outPath}/Cargo.lock Cargo.lock
+      ln -s ${zenoh-c-source.outPath}/Cargo.lock Cargo.lock
     '';
     cargoDeps = self.rustPlatform.importCargoLock {
       lockFile = "${zenoh-c-source.outPath}/Cargo.lock";
