@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-humble-grid-map-cmake-helpers";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/grid_map-release/archive/release/humble/grid_map_cmake_helpers/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "bfb04f052926d584c05b994400ec8c827703c00183abfc847d9baa907be6b654";
+    url = "https://github.com/ros2-gbp/grid_map-release/archive/release/humble/grid_map_cmake_helpers/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "ad77ff8a542619abf163b4651da9d6ce14c5935cd784a4775d91a8b6f7e67999";
   };
 
   buildType = "ament_cmake";

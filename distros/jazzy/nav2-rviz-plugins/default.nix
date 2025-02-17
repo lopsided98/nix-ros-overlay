@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, nav-msgs, nav2-lifecycle-manager, nav2-msgs, nav2-util, pluginlib, qt5, rclcpp, rclcpp-lifecycle, resource-retriever, rviz-common, rviz-default-plugins, rviz-ogre-vendor, rviz-rendering, std-msgs, tf2-geometry-msgs, urdf, visualization-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-rviz-plugins";
-  version = "1.3.4-r1";
+  version = "1.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_rviz_plugins/1.3.4-1.tar.gz";
-    name = "1.3.4-1.tar.gz";
-    sha256 = "1d4524f62ae814b99b04f2541654a5901bdd8dd78ed95f21f5d9e7fb8f502bdd";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_rviz_plugins/1.3.5-1.tar.gz";
+    name = "1.3.5-1.tar.gz";
+    sha256 = "0d35a7dd66577f4024f48033cd9c0d50ba83e43851753751692286baa8b8a3e6";
   };
 
   buildType = "ament_cmake";

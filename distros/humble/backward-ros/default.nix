@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, elfutils }:
 buildRosPackage {
   pname = "ros-humble-backward-ros";
-  version = "1.0.6-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/backward_ros-release/archive/release/humble/backward_ros/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "8e8e19d24a46673ba94e22f96fa8f6cf8defbc76c64d566d7d4e5d9e352cbbb5";
+    url = "https://github.com/ros2-gbp/backward_ros-release/archive/release/humble/backward_ros/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "1689006a5358b7121e093bfeac5b8e933be4b6029e599cf0bb8013fdc57e75e5";
   };
 
   buildType = "cmake";

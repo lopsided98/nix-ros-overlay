@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, grid-map-cmake-helpers, grid-map-core, octomap }:
 buildRosPackage {
   pname = "ros-jazzy-grid-map-octomap";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/grid_map-release/archive/release/jazzy/grid_map_octomap/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "75a23e0da8cb64dd6caa34031f2ac77ffa633de16af5e100e244d74bd47d5e24";
+    url = "https://github.com/ros2-gbp/grid_map-release/archive/release/jazzy/grid_map_octomap/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "5c1ad916518bb8f2573a6a66f56e6ceb2395a8d10129d595ddf1e6f03a15134a";
   };
 
   buildType = "ament_cmake";

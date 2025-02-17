@@ -306,6 +306,8 @@ self: super: {
 
  autoware-internal-perception-msgs = self.callPackage ./autoware-internal-perception-msgs {};
 
+ autoware-internal-planning-msgs = self.callPackage ./autoware-internal-planning-msgs {};
+
  autoware-lanelet2-extension = self.callPackage ./autoware-lanelet2-extension {};
 
  autoware-lanelet2-extension-python = self.callPackage ./autoware-lanelet2-extension-python {};
@@ -371,6 +373,8 @@ self: super: {
  bond-core = self.callPackage ./bond-core {};
 
  bondcpp = self.callPackage ./bondcpp {};
+
+ bondpy = self.callPackage ./bondpy {};
 
  boost-geometry-util = self.callPackage ./boost-geometry-util {};
 
@@ -495,6 +499,8 @@ self: super: {
  clearpath-viz = self.callPackage ./clearpath-viz {};
 
  cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
+
+ coal = self.callPackage ./coal {};
 
  cob-actions = self.callPackage ./cob-actions {};
 
@@ -1010,7 +1016,27 @@ self: super: {
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
+ franka-bringup = self.callPackage ./franka-bringup {};
+
  franka-description = self.callPackage ./franka-description {};
+
+ franka-example-controllers = self.callPackage ./franka-example-controllers {};
+
+ franka-fr3-moveit-config = self.callPackage ./franka-fr3-moveit-config {};
+
+ franka-gazebo-bringup = self.callPackage ./franka-gazebo-bringup {};
+
+ franka-gripper = self.callPackage ./franka-gripper {};
+
+ franka-hardware = self.callPackage ./franka-hardware {};
+
+ franka-msgs = self.callPackage ./franka-msgs {};
+
+ franka-robot-state-broadcaster = self.callPackage ./franka-robot-state-broadcaster {};
+
+ franka-ros2 = self.callPackage ./franka-ros2 {};
+
+ franka-semantic-components = self.callPackage ./franka-semantic-components {};
 
  fri-configuration-controller = self.callPackage ./fri-configuration-controller {};
 
@@ -1061,6 +1087,8 @@ self: super: {
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
  generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
+
+ generate-parameter-library-example-external = self.callPackage ./generate-parameter-library-example-external {};
 
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
 
@@ -1228,6 +1256,8 @@ self: super: {
 
  imu-transformer = self.callPackage ./imu-transformer {};
 
+ integration-launch-testing = self.callPackage ./integration-launch-testing {};
+
  interactive-marker-twist-server = self.callPackage ./interactive-marker-twist-server {};
 
  interactive-markers = self.callPackage ./interactive-markers {};
@@ -1259,6 +1289,8 @@ self: super: {
  irobot-create-nodes = self.callPackage ./irobot-create-nodes {};
 
  irobot-create-toolbox = self.callPackage ./irobot-create-toolbox {};
+
+ jacro = self.callPackage ./jacro {};
 
  joint-group-impedance-controller = self.callPackage ./joint-group-impedance-controller {};
 
@@ -1305,6 +1337,10 @@ self: super: {
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
 
  kobuki-velocity-smoother = self.callPackage ./kobuki-velocity-smoother {};
+
+ kompass = self.callPackage ./kompass {};
+
+ kompass-interfaces = self.callPackage ./kompass-interfaces {};
 
  kortex-api = self.callPackage ./kortex-api {};
 
@@ -1604,6 +1640,8 @@ self: super: {
 
  mola-demos = self.callPackage ./mola-demos {};
 
+ mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
+
  mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
 
  mola-input-kitti360-dataset = self.callPackage ./mola-input-kitti360-dataset {};
@@ -1622,6 +1660,8 @@ self: super: {
 
  mola-launcher = self.callPackage ./mola-launcher {};
 
+ mola-lidar-odometry = self.callPackage ./mola-lidar-odometry {};
+
  mola-metric-maps = self.callPackage ./mola-metric-maps {};
 
  mola-msgs = self.callPackage ./mola-msgs {};
@@ -1629,6 +1669,12 @@ self: super: {
  mola-pose-list = self.callPackage ./mola-pose-list {};
 
  mola-relocalization = self.callPackage ./mola-relocalization {};
+
+ mola-state-estimation = self.callPackage ./mola-state-estimation {};
+
+ mola-state-estimation-simple = self.callPackage ./mola-state-estimation-simple {};
+
+ mola-state-estimation-smoother = self.callPackage ./mola-state-estimation-smoother {};
 
  mola-test-datasets = self.callPackage ./mola-test-datasets {};
 
@@ -1923,6 +1969,8 @@ self: super: {
  nodl-python = self.callPackage ./nodl-python {};
 
  nodl-to-policy = self.callPackage ./nodl-to-policy {};
+
+ nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
 
  novatel-gps-driver = self.callPackage ./novatel-gps-driver {};
 
@@ -2245,6 +2293,10 @@ self: super: {
  py-trees-ros = self.callPackage ./py-trees-ros {};
 
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
+
+ py-trees-ros-tutorials = self.callPackage ./py-trees-ros-tutorials {};
+
+ py-trees-ros-viewer = self.callPackage ./py-trees-ros-viewer {};
 
  pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
 
@@ -2896,7 +2948,11 @@ self: super: {
 
  sbg-driver = self.callPackage ./sbg-driver {};
 
+ scenario-execution = self.callPackage ./scenario-execution {};
+
  scenario-execution-control = self.callPackage ./scenario-execution-control {};
+
+ scenario-execution-coverage = self.callPackage ./scenario-execution-coverage {};
 
  scenario-execution-gazebo = self.callPackage ./scenario-execution-gazebo {};
 
@@ -3416,6 +3472,8 @@ self: super: {
 
  urg-node-msgs = self.callPackage ./urg-node-msgs {};
 
+ urinterfaces = self.callPackage ./urinterfaces {};
+
  usb-cam = self.callPackage ./usb-cam {};
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
@@ -3523,6 +3581,8 @@ self: super: {
  yasmin-msgs = self.callPackage ./yasmin-msgs {};
 
  yasmin-ros = self.callPackage ./yasmin-ros {};
+
+ yasmin-viewer = self.callPackage ./yasmin-viewer {};
 
  zbar-ros = self.callPackage ./zbar-ros {};
 

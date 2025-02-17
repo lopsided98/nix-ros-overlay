@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, elfutils }:
 buildRosPackage {
   pname = "ros-jazzy-backward-ros";
-  version = "1.0.6-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/backward_ros-release/archive/release/jazzy/backward_ros/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "206da5433d4bbad33a4b1f77108f22ba949e00cb20edd40d19c9532632cf8a2b";
+    url = "https://github.com/ros2-gbp/backward_ros-release/archive/release/jazzy/backward_ros/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "d704b2567ebe5050e5c1f621e31a4ad1e2560180a89ff9e6ecc041854821327a";
   };
 
   buildType = "cmake";

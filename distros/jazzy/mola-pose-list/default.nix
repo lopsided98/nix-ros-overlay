@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libmaps, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-jazzy-mola-pose-list";
-  version = "1.5.1-r1";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_pose_list/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "f1517664329fd47746cfa26c7cb8d2c4e6d7e0d47ac2c4b2fc2041b186233c3e";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_pose_list/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "52c41bb5a20427b1be185b675cce032f21c972b4fbc6c711a809a8ad363cab41";
   };
 
   buildType = "cmake";

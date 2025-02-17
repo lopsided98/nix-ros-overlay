@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, bond, bondcpp, smclib }:
 buildRosPackage {
   pname = "ros-jazzy-bond-core";
-  version = "4.1.0-r1";
+  version = "4.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bond_core/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "49d5a4cf9795a5814ae72a7b70107a1eb416fa5fc7d347f5e4523e6c0eb91459";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bond_core/4.1.2-1.tar.gz";
+    name = "4.1.2-1.tar.gz";
+    sha256 = "1123ad582459e77c2eb64053d8e39c2398c01169999f6770690281346d234b0e";
   };
 
   buildType = "ament_cmake";
@@ -23,6 +23,6 @@ buildRosPackage {
     terminated, either cleanly or by crashing. The bond remains
     connected until it is either broken explicitly or until a
     heartbeat times out.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

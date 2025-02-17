@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, eigen, poco }:
+{ lib, buildRosPackage, fetchurl, cmake, eigen, fmt, pinocchio, poco }:
 buildRosPackage {
   pname = "ros-humble-libfranka";
-  version = "0.13.6-r1";
+  version = "0.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/libfranka-release/archive/release/humble/libfranka/0.13.6-1.tar.gz";
-    name = "0.13.6-1.tar.gz";
-    sha256 = "539cba239079883b2f284e5662e696f8a7cfa4a383e28258c60ea383221454cc";
+    url = "https://github.com/frankaemika/libfranka-release/archive/release/humble/libfranka/0.15.0-1.tar.gz";
+    name = "0.15.0-1.tar.gz";
+    sha256 = "136ec8a29a3b5d66677c91bfd92ac3cfc274672eb352f02bb496d1d228f8139c";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake eigen ];
-  propagatedBuildInputs = [ poco ];
+  propagatedBuildInputs = [ fmt pinocchio poco ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

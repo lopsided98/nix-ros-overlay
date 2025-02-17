@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages, qt5 }:
 buildRosPackage {
   pname = "ros-rolling-py-trees-js";
-  version = "0.6.4-r3";
+  version = "0.6.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees_js-release/archive/release/rolling/py_trees_js/0.6.4-3.tar.gz";
-    name = "0.6.4-3.tar.gz";
-    sha256 = "7e341e7e703d352aca8ee6f4dd470001970bf9b63bb9f57e1f714108d18ea969";
+    url = "https://github.com/ros2-gbp/py_trees_js-release/archive/release/rolling/py_trees_js/0.6.6-1.tar.gz";
+    name = "0.6.6-1.tar.gz";
+    sha256 = "19d5603480063c6f5ed764ce849e870069985284df69a53891ac20b084ccd369";
   };
 
   buildType = "ament_python";

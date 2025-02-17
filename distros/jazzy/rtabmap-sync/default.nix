@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, cv-bridge, diagnostic-updater, image-transport, message-filters, nav-msgs, rclcpp, rclcpp-components, rtabmap-conversions, rtabmap-msgs, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rtabmap-sync";
-  version = "0.21.9-r1";
+  version = "0.21.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/jazzy/rtabmap_sync/0.21.9-1.tar.gz";
-    name = "0.21.9-1.tar.gz";
-    sha256 = "293547de387ec7c392f23c18c169efb5b234727955231eb0af24d5811450753f";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/jazzy/rtabmap_sync/0.21.10-1.tar.gz";
+    name = "0.21.10-1.tar.gz";
+    sha256 = "616f8e8252b2ede7d089bd787f22adb48f7aee42d62a5cd507caae6b1260866a";
   };
 
   buildType = "ament_cmake";

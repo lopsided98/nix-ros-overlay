@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, bond, pkg-config, rclcpp, rclcpp-lifecycle, smclib, util-linux }:
 buildRosPackage {
   pname = "ros-humble-bondcpp";
-  version = "3.0.2-r3";
+  version = "4.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/humble/bondcpp/3.0.2-3.tar.gz";
-    name = "3.0.2-3.tar.gz";
-    sha256 = "65e77756a2b4492c7d793b06769e5706b29928589f9f99befa5b21d4fa8508b5";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/humble/bondcpp/4.1.2-1.tar.gz";
+    name = "4.1.2-1.tar.gz";
+    sha256 = "3a8c5cb9448f042a5cf87f4b16be2c800e4591ebe9e0421303e6a3787fb78dc5";
   };
 
   buildType = "ament_cmake";
@@ -22,6 +22,6 @@ buildRosPackage {
   meta = {
     description = "C++ implementation of bond, a mechanism for checking when
     another process has terminated.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

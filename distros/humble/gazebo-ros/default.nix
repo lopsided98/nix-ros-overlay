@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, gazebo-dev, gazebo-msgs, geometry-msgs, launch-ros, launch-testing-ament-cmake, python3Packages, rcl, rclcpp, rclpy, rmw, ros2run, sensor-msgs, std-msgs, std-srvs, tinyxml-vendor }:
 buildRosPackage {
   pname = "ros-humble-gazebo-ros";
-  version = "3.7.0-r1";
+  version = "3.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/humble/gazebo_ros/3.7.0-1.tar.gz";
-    name = "3.7.0-1.tar.gz";
-    sha256 = "23a08d7e0590603b0908f9aa4687f7f21d8eab72c30c93a491fb92835f3f7bdb";
+    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/humble/gazebo_ros/3.9.0-1.tar.gz";
+    name = "3.9.0-1.tar.gz";
+    sha256 = "47a629eda8f2c6edf6635674d8bcccd249b513c57efb78e7b2da5fa793d6e9ec";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "Utilities to interface with <a href=\"http://gazebosim.org\">Gazebo</a> through ROS.";
+    description = "Utilities to interface with <a href=\"http://classic.gazebosim.org\">Gazebo</a> through ROS.";
     license = with lib.licenses; [ asl20 ];
   };
 }

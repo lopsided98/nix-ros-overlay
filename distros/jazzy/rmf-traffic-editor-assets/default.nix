@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-rmf-traffic-editor-assets";
-  version = "1.9.1-r1";
+  version = "1.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/jazzy/rmf_traffic_editor_assets/1.9.1-1.tar.gz";
-    name = "1.9.1-1.tar.gz";
-    sha256 = "002a18ae0adcf1385dc4c77af8a8832951be0ad20e4eef308728d3768301aaba";
+    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/jazzy/rmf_traffic_editor_assets/1.9.2-1.tar.gz";
+    name = "1.9.2-1.tar.gz";
+    sha256 = "7f3c6e1fd6bdab25a1df7c8e7cad3ab1edf133595070597474b6fb3276966c7a";
   };
 
   buildType = "ament_cmake";

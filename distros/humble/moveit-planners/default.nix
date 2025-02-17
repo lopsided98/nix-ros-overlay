@@ -2,21 +2,21 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-planners-ompl, pilz-industrial-motion-planner }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-planners-chomp, moveit-planners-ompl, pilz-industrial-motion-planner }:
 buildRosPackage {
   pname = "ros-humble-moveit-planners";
-  version = "2.5.7-r1";
+  version = "2.5.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_planners/2.5.7-1.tar.gz";
-    name = "2.5.7-1.tar.gz";
-    sha256 = "986c06614ecbc59667321b48894ec2b7107fedf83a2fd2ff4f5156cc2ddbea40";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_planners/2.5.8-1.tar.gz";
+    name = "2.5.8-1.tar.gz";
+    sha256 = "5ea3c2c91a57cd828f38467361d5537e96615efe2fe0b645e384f0757b3c6342";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ moveit-planners-ompl pilz-industrial-motion-planner ];
+  propagatedBuildInputs = [ moveit-planners-chomp moveit-planners-ompl pilz-industrial-motion-planner ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

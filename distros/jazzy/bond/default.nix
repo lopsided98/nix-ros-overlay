@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-bond";
-  version = "4.1.0-r1";
+  version = "4.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bond/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "5ed88364e78e3ce4eb4acc691c9291a7f2f8a30c14ea18aa7a4e976918d70eb1";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bond/4.1.2-1.tar.gz";
+    name = "4.1.2-1.tar.gz";
+    sha256 = "a7a0ccbd21349fb38b44d4e0d22701bf2e4ac121753437f4ca58108378586292";
   };
 
   buildType = "ament_cmake";
@@ -24,6 +24,6 @@ buildRosPackage {
     terminated, either cleanly or by crashing.  The bond remains
     connected until it is either broken explicitly or until a
     heartbeat times out.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, bond, pkg-config, rclcpp, rclcpp-lifecycle, smclib, util-linux }:
 buildRosPackage {
   pname = "ros-jazzy-bondcpp";
-  version = "4.1.0-r1";
+  version = "4.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bondcpp/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "f515b252bd5684fe747698d658ebe37aa417301dcefad1516b8437196bcbd9b8";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bondcpp/4.1.2-1.tar.gz";
+    name = "4.1.2-1.tar.gz";
+    sha256 = "2d43990501dd4c8dd5a65dce657e1cf1a9070e0d2fa3dec5b68d7abe1e5dadfb";
   };
 
   buildType = "ament_cmake";
@@ -22,6 +22,6 @@ buildRosPackage {
   meta = {
     description = "C++ implementation of bond, a mechanism for checking when
     another process has terminated.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

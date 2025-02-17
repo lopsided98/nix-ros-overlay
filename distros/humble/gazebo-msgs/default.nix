@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-humble-gazebo-msgs";
-  version = "3.7.0-r1";
+  version = "3.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/humble/gazebo_msgs/3.7.0-1.tar.gz";
-    name = "3.7.0-1.tar.gz";
-    sha256 = "43f032d5771c8fd3d5f68ca9fe7f31377f60e22b801b8703fd8d5e6b5b41b6f9";
+    url = "https://github.com/ros2-gbp/gazebo_ros_pkgs-release/archive/release/humble/gazebo_msgs/3.9.0-1.tar.gz";
+    name = "3.9.0-1.tar.gz";
+    sha256 = "53795dc75ed1a71de54cf71fe623839cb6d6dfdbf9075f94fda53dbf09eccb8c";
   };
 
   buildType = "ament_cmake";

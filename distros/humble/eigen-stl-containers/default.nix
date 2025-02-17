@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen }:
 buildRosPackage {
   pname = "ros-humble-eigen-stl-containers";
-  version = "1.0.0-r4";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/eigen_stl_containers-release/archive/release/humble/eigen_stl_containers/1.0.0-4.tar.gz";
-    name = "1.0.0-4.tar.gz";
-    sha256 = "0eba228939d1e39791329139e0d615a182f9fa88f1e972ad56884224b2d23885";
+    url = "https://github.com/ros2-gbp/eigen_stl_containers-release/archive/release/humble/eigen_stl_containers/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "c213498c7b752e1702adf7e7a1868c50f456a2825e18b4f434971d15abf4bd81";
   };
 
   buildType = "ament_cmake";

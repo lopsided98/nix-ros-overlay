@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, curl, python3Packages, rosconsole, roslib }:
 buildRosPackage {
   pname = "ros-noetic-resource-retriever";
-  version = "1.12.7-r1";
+  version = "1.12.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/resource_retriever-release/archive/release/noetic/resource_retriever/1.12.7-1.tar.gz";
-    name = "1.12.7-1.tar.gz";
-    sha256 = "fb6bb7f68b716ab88f3acd7c94b42aa8f9d1932879a9572e3d05643aac221d9e";
+    url = "https://github.com/ros-gbp/resource_retriever-release/archive/release/noetic/resource_retriever/1.12.8-1.tar.gz";
+    name = "1.12.8-1.tar.gz";
+    sha256 = "53548be2b97095493c7e587b62f3f049b0cdf02424823d3fabb31b7ac896cfb2";
   };
 
   buildType = "catkin";

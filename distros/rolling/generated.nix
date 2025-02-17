@@ -118,6 +118,8 @@ self: super: {
 
  ament-download = self.callPackage ./ament-download {};
 
+ ament-flake8 = self.callPackage ./ament-flake8 {};
+
  ament-index-cpp = self.callPackage ./ament-index-cpp {};
 
  ament-index-python = self.callPackage ./ament-index-python {};
@@ -209,6 +211,8 @@ self: super: {
  autoware-internal-msgs = self.callPackage ./autoware-internal-msgs {};
 
  autoware-internal-perception-msgs = self.callPackage ./autoware-internal-perception-msgs {};
+
+ autoware-internal-planning-msgs = self.callPackage ./autoware-internal-planning-msgs {};
 
  autoware-lanelet2-extension = self.callPackage ./autoware-lanelet2-extension {};
 
@@ -323,6 +327,14 @@ self: super: {
  classic-bags = self.callPackage ./classic-bags {};
 
  cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
+
+ coal = self.callPackage ./coal {};
+
+ cob-actions = self.callPackage ./cob-actions {};
+
+ cob-msgs = self.callPackage ./cob-msgs {};
+
+ cob-srvs = self.callPackage ./cob-srvs {};
 
  color-names = self.callPackage ./color-names {};
 
@@ -670,6 +682,8 @@ self: super: {
 
  generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
 
+ generate-parameter-library-example-external = self.callPackage ./generate-parameter-library-example-external {};
+
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
 
  generate-parameter-module-example = self.callPackage ./generate-parameter-module-example {};
@@ -828,6 +842,8 @@ self: super: {
 
  irobot-create-msgs = self.callPackage ./irobot-create-msgs {};
 
+ jacro = self.callPackage ./jacro {};
+
  joint-limits = self.callPackage ./joint-limits {};
 
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
@@ -871,6 +887,10 @@ self: super: {
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
 
  kobuki-velocity-smoother = self.callPackage ./kobuki-velocity-smoother {};
+
+ kompass = self.callPackage ./kompass {};
+
+ kompass-interfaces = self.callPackage ./kompass-interfaces {};
 
  kortex-api = self.callPackage ./kortex-api {};
 
@@ -1082,6 +1102,8 @@ self: super: {
 
  mola-demos = self.callPackage ./mola-demos {};
 
+ mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
+
  mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
 
  mola-input-kitti360-dataset = self.callPackage ./mola-input-kitti360-dataset {};
@@ -1100,6 +1122,8 @@ self: super: {
 
  mola-launcher = self.callPackage ./mola-launcher {};
 
+ mola-lidar-odometry = self.callPackage ./mola-lidar-odometry {};
+
  mola-metric-maps = self.callPackage ./mola-metric-maps {};
 
  mola-msgs = self.callPackage ./mola-msgs {};
@@ -1107,6 +1131,12 @@ self: super: {
  mola-pose-list = self.callPackage ./mola-pose-list {};
 
  mola-relocalization = self.callPackage ./mola-relocalization {};
+
+ mola-state-estimation = self.callPackage ./mola-state-estimation {};
+
+ mola-state-estimation-simple = self.callPackage ./mola-state-estimation-simple {};
+
+ mola-state-estimation-smoother = self.callPackage ./mola-state-estimation-smoother {};
 
  mola-test-datasets = self.callPackage ./mola-test-datasets {};
 
@@ -1502,6 +1532,10 @@ self: super: {
 
  py-trees-ros-interfaces = self.callPackage ./py-trees-ros-interfaces {};
 
+ py-trees-ros-tutorials = self.callPackage ./py-trees-ros-tutorials {};
+
+ py-trees-ros-viewer = self.callPackage ./py-trees-ros-viewer {};
+
  pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
 
  pybind11-vendor = self.callPackage ./pybind11-vendor {};
@@ -1595,6 +1629,8 @@ self: super: {
  rclcpp-components = self.callPackage ./rclcpp-components {};
 
  rclcpp-lifecycle = self.callPackage ./rclcpp-lifecycle {};
+
+ rclpy = self.callPackage ./rclpy {};
 
  rclpy-message-converter = self.callPackage ./rclpy-message-converter {};
 
@@ -2100,8 +2136,6 @@ self: super: {
 
  shape-msgs = self.callPackage ./shape-msgs {};
 
- shared-queues-vendor = self.callPackage ./shared-queues-vendor {};
-
  sick-safetyscanners2 = self.callPackage ./sick-safetyscanners2 {};
 
  sick-safetyscanners2-interfaces = self.callPackage ./sick-safetyscanners2-interfaces {};
@@ -2529,6 +2563,8 @@ self: super: {
  yasmin-msgs = self.callPackage ./yasmin-msgs {};
 
  yasmin-ros = self.callPackage ./yasmin-ros {};
+
+ yasmin-viewer = self.callPackage ./yasmin-viewer {};
 
  zbar-ros = self.callPackage ./zbar-ros {};
 

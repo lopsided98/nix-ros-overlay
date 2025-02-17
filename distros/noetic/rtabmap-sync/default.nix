@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, diagnostic-updater, image-transport, message-filters, nav-msgs, nodelet, roscpp, rtabmap-conversions, rtabmap-msgs, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rtabmap-sync";
-  version = "0.21.9-r1";
+  version = "0.21.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_sync/0.21.9-1.tar.gz";
-    name = "0.21.9-1.tar.gz";
-    sha256 = "13a1c70de8aac076c4c4bf8aafc0432845dd1fc6ed72c25fe06567048d0a5e55";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_sync/0.21.10-1.tar.gz";
+    name = "0.21.10-1.tar.gz";
+    sha256 = "d7a3699d6a81bf1c69f53d29cface15c3824f0ce84c70f9494987709aaa59fb9";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, geometry-msgs, ros-environment, rosidl-default-generators, rosidl-default-runtime, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-foxglove-msgs";
-  version = "3.0.0-r3";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_foxglove_msgs-release/archive/release/jazzy/foxglove_msgs/3.0.0-3.tar.gz";
-    name = "3.0.0-3.tar.gz";
-    sha256 = "86227bb60e9ec6dedcb069199d72458dfdc5a543207b208952a473189b74d75d";
+    url = "https://github.com/ros2-gbp/ros_foxglove_msgs-release/archive/release/jazzy/foxglove_msgs/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "e1c6c4f19466727fdd5e73b43034790ca0af844587dd222eb129f0f6d1195b33";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "foxglove_msgs provides visualization messages that are supported by Foxglove Studio.";
+    description = "foxglove_msgs provides visualization messages that are supported by Foxglove.";
     license = with lib.licenses; [ mit ];
   };
 }

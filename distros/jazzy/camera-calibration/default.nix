@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, cv-bridge, image-geometry, message-filters, python3Packages, rclpy, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-camera-calibration";
-  version = "5.0.6-r1";
+  version = "5.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/camera_calibration/5.0.6-1.tar.gz";
-    name = "5.0.6-1.tar.gz";
-    sha256 = "0aaee3b43759a189b980d1cdb447c1b041871a442bf714fd0c78f0ffea49776a";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/camera_calibration/5.0.8-1.tar.gz";
+    name = "5.0.8-1.tar.gz";
+    sha256 = "138c6ed98c42410c1305aaf8643012efe6662168618b8db28b58d34865090136";
   };
 
   buildType = "ament_python";
