@@ -212,6 +212,32 @@ in with lib; {
     ];
   });
 
+  zenoh-bridge-dds = rosSuper.zenoh-bridge-dds.overrideAttrs ({
+     nativeBuildInputs ? [], pname ? "", postPatch ? "", src ? "", version ? "", ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [
+      self.rustPlatform.cargoSetupHook
+      self.cargo
+      self.rustc
+    ];
+    postPatch = postPatch + ''
+      ln -s zenoh-bridge-dds/Cargo.lock Cargo.lock
+    '';
+    cargoDeps = self.rustPlatform.fetchCargoVendor {
+      inherit pname version src;
+      hash = "sha256-DRMuF6DNLbMIA1CmhVZ7L//EuTCQNL5/lU6d+3DKnO4=";
+      prePatch = ''
+        cd zenoh-bridge-dds
+      '';
+    };
+    env.LIBCLANG_PATH = "${lib.getLib self.llvmPackages.libclang}/lib";
+    # env.NIX_CFLAGS_COMPILE = toString [
+    #   "-Wno-error=implicit-function-declaration"
+    #   "-Wno-error=int-conversion"
+    #   "-Wno-error=deprecated-declarations"
+    # ];
+  });
+
   zenoh-cpp-vendor = let
     zenoh-c-url = "https://github.com/eclipse-zenoh/zenoh-c.git";
     zenoh-c-rev = "57d5e4d31d9b38fef34d7bcad3d3e54869c4ce73";
