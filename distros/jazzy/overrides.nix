@@ -306,9 +306,7 @@ in {
     };
     env.LIBCLANG_PATH = "${lib.getLib self.llvmPackages.libclang}/lib";
     env.NIX_CFLAGS_COMPILE = toString [
-      "-Wno-error=implicit-function-declaration"
-      "-Wno-error=int-conversion"
-      "-Wno-error=deprecated-declarations"
+      "-Wno-conversion"
     ];
   });
 
