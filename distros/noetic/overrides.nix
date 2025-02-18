@@ -167,6 +167,18 @@ in {
       substituteInPlace CMakeLists.txt --replace-fail " -Werror" ""
     '';
   });
+
+  tf2 = rosSuper.tf2.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [ (self.fetchpatch {
+      # Add missing #include for boost::tuple
+      url = "https://github.com/ros/geometry2/commit/08b4cc720bf95428a30a54d9e9a8257849a93c61.patch";
+      hash = "sha256-pxeJ1gE3kMaN3I4DH9E65dBrhQonuw7WKStEBfLWzY4=";
+      stripLen = 1;
+    }) ];
+  });
+
 } //
 # distutils was removed from standard library in Python 3.12, but many packages
 # still depend on it.
