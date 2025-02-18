@@ -70,6 +70,16 @@ let
       setupHook = ./gazebo-ros-setup-hook.sh;
     });
 
+    joint-state-publisher-gui = rosSuper.joint-state-publisher-gui.overrideAttrs ({
+      nativeBuildInputs ? [], postFixup ? "", ...
+    }: {
+      dontWrapQtApps = false;
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      postFixup = postFixup + ''
+        wrapQtApp "$out/lib/joint_state_publisher_gui/joint_state_publisher_gui"
+      '';
+    });
+
     librealsense2 = rosSuper.librealsense2.overrideAttrs ({
       buildInputs ? [], ...
     }: {

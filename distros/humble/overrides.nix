@@ -101,6 +101,21 @@ in with lib; {
     dontFixCmake = true;
   });
 
+  octomap = rosSuper.octomap.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix errors with recent compilers and C++17/20 standard
+      (self.fetchpatch {
+        url = "https://github.com/OctoMap/octomap/commit/8178b4f28c72a8c7b84ece25bda7a59df8d14eb8.patch";
+        hash = "sha256-vI3FEWJbAnDPNxG6s2pPX1UTorpokexOawY0AmDo8xY=";
+        # cmdinclude/octomap/OcTreeBase.h:46:21: error: template-id not allowed for constructor in C++20 [-Werror=template-id-cdtor]
+        includes = [ "include/octomap/OcTreeBase.h*" ];
+        stripLen = 1;
+      })
+    ];
+  });
+
   plotjuggler-ros = rosSuper.plotjuggler-ros.overrideAttrs ({
     patches ? [], nativeBuildInputs ? [], ...
   }: {
@@ -139,7 +154,7 @@ in with lib; {
     postPatch = postPatch + ''
       substituteInPlace cmake/rosidl_generator_py_generate_interfaces.cmake \
        --replace-fail '"import numpy"' "" \
-       --replace-fail 'numpy.get_include()' "'${python.pkgs.numpy}/${python.sitePackages}/numpy/core/include'"
+       --replace-fail 'numpy.get_include()' "'${python.pkgs.numpy}/${python.sitePackages}/numpy/_core/include'"
     '';
   });
 
