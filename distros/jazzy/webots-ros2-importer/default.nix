@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, builtin-interfaces, python3Packages, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-webots-ros2-importer";
-  version = "2023.1.3-r1";
+  version = "2025.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/jazzy/webots_ros2_importer/2023.1.3-1.tar.gz";
-    name = "2023.1.3-1.tar.gz";
-    sha256 = "281f7c67d686666ef1618117e84f76f3a1f83b83d4a3ac70a76c8ee612d5685d";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/jazzy/webots_ros2_importer/2025.0.0-1.tar.gz";
+    name = "2025.0.0-1.tar.gz";
+    sha256 = "95813d375f4aa3d96f57aeabe476303f6bbc2f73cbdb9851c6b812c4f8eb9725";
   };
 
   buildType = "ament_python";

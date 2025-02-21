@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps }:
 buildRosPackage {
   pname = "ros-humble-mola-input-paris-luco-dataset";
-  version = "1.6.0-r1";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_paris_luco_dataset/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "367d50f90535c1ea0a844c8c1efb42c9e7a02404e32484f14fee31efe0f72ece";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_paris_luco_dataset/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "5ed912baf67ec567bccc1c7a07c8ad019c606d69ccd7884f1ec7f0d3e2d7753d";
   };
 
   buildType = "cmake";

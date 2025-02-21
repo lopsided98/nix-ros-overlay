@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, boost, cmake, doxygen, eigen, eigenpy, git, octomap, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-coal";
-  version = "3.0.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/coal-release/archive/release/humble/coal/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "13a73d77648b6493b98656b512ddce4ca655dcbce52edaa41d128ca3877c058e";
+    url = "https://github.com/ros2-gbp/coal-release/archive/release/humble/coal/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "61b0c04de02eacd6e6b770cd901fee43f1a4dfac895b33aafbc9c2c5a8571928";
   };
 
   buildType = "cmake";

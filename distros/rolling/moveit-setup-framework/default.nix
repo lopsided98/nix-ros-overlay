@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, fmt, moveit-common, moveit-core, moveit-ros-planning, moveit-ros-visualization, pluginlib, rclcpp, rviz-common, rviz-rendering, srdfdom, urdf }:
 buildRosPackage {
   pname = "ros-rolling-moveit-setup-framework";
-  version = "2.12.0-r1";
+  version = "2.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_setup_framework/2.12.0-1.tar.gz";
-    name = "2.12.0-1.tar.gz";
-    sha256 = "e8d016f729f6a44942a7c5995363da8f1e9b02864a416e286572f703c7b9615a";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_setup_framework/2.13.0-1.tar.gz";
+    name = "2.13.0-1.tar.gz";
+    sha256 = "323c0d535423c190184864fa6210ef4ec88c40bf7993868db062e402c38c8d96";
   };
 
   buildType = "ament_cmake";

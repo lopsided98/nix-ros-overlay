@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, builtin-interfaces, controller-manager, diff-drive-controller, geometry-msgs, joint-state-broadcaster, python3Packages, rclpy, robot-state-publisher, rviz2, tf2-ros, webots-ros2-control, webots-ros2-driver }:
 buildRosPackage {
   pname = "ros-rolling-webots-ros2-tiago";
-  version = "2023.1.3-r1";
+  version = "2025.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/rolling/webots_ros2_tiago/2023.1.3-1.tar.gz";
-    name = "2023.1.3-1.tar.gz";
-    sha256 = "88cf81bf057ff234eae42977cd6ae19d276e561eb97ff7e165f2cc012f6d824a";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/rolling/webots_ros2_tiago/2025.0.0-1.tar.gz";
+    name = "2025.0.0-1.tar.gz";
+    sha256 = "babfb312a31d5051d0012037e4d5e39f451adb35c1bc2b2dcec29f954e92b123";
   };
 
   buildType = "ament_python";

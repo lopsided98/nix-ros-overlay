@@ -280,8 +280,6 @@ self: super: {
 
  async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
 
- automatika-ros-sugar = self.callPackage ./automatika-ros-sugar {};
-
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -722,6 +720,10 @@ self: super: {
 
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
+ dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
+
+ dynamixel-interfaces = self.callPackage ./dynamixel-interfaces {};
+
  dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
 
  dynamixel-sdk-custom-interfaces = self.callPackage ./dynamixel-sdk-custom-interfaces {};
@@ -847,6 +849,12 @@ self: super: {
  etsi-its-denm-conversion = self.callPackage ./etsi-its-denm-conversion {};
 
  etsi-its-denm-msgs = self.callPackage ./etsi-its-denm-msgs {};
+
+ etsi-its-denm-ts-coding = self.callPackage ./etsi-its-denm-ts-coding {};
+
+ etsi-its-denm-ts-conversion = self.callPackage ./etsi-its-denm-ts-conversion {};
+
+ etsi-its-denm-ts-msgs = self.callPackage ./etsi-its-denm-ts-msgs {};
 
  etsi-its-mapem-ts-coding = self.callPackage ./etsi-its-mapem-ts-coding {};
 
@@ -3538,9 +3546,13 @@ self: super: {
 
  webots-ros2-control = self.callPackage ./webots-ros2-control {};
 
+ webots-ros2-crazyflie = self.callPackage ./webots-ros2-crazyflie {};
+
  webots-ros2-driver = self.callPackage ./webots-ros2-driver {};
 
  webots-ros2-epuck = self.callPackage ./webots-ros2-epuck {};
+
+ webots-ros2-husarion = self.callPackage ./webots-ros2-husarion {};
 
  webots-ros2-importer = self.callPackage ./webots-ros2-importer {};
 

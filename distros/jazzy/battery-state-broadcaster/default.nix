@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, pluginlib, realtime-tools, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-battery-state-broadcaster";
-  version = "1.0.1-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_battery_monitoring-release/archive/release/jazzy/battery_state_broadcaster/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "bf35e9ca74db0f52ba515087fbf7c8800ef83fa69f789a7c3b897bf8c95bcce5";
+    url = "https://github.com/ros2-gbp/ros_battery_monitoring-release/archive/release/jazzy/battery_state_broadcaster/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "2c50a586c6ec242aa23a3ddc85c61c3b9cd7d774d35989b0e6563ef576b3f63e";
   };
 
   buildType = "ament_cmake";

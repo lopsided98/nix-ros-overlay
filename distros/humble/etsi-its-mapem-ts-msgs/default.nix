@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-mapem-ts-msgs";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_mapem_ts_msgs/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "616ffad565c9a5b497698ae8e1340cabc9339605fea42f264769c8598b6dfea4";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_mapem_ts_msgs/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "320b6a6a25c6de5d460aad04e13b18b7611a48e4b0ee476a3fa5219a2cc2df60";
   };
 
   buildType = "ament_cmake";

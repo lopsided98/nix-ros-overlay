@@ -926,6 +926,12 @@ self: super: {
 
  etsi-its-denm-msgs = self.callPackage ./etsi-its-denm-msgs {};
 
+ etsi-its-denm-ts-coding = self.callPackage ./etsi-its-denm-ts-coding {};
+
+ etsi-its-denm-ts-conversion = self.callPackage ./etsi-its-denm-ts-conversion {};
+
+ etsi-its-denm-ts-msgs = self.callPackage ./etsi-its-denm-ts-msgs {};
+
  etsi-its-mapem-ts-coding = self.callPackage ./etsi-its-mapem-ts-coding {};
 
  etsi-its-mapem-ts-conversion = self.callPackage ./etsi-its-mapem-ts-conversion {};
@@ -1029,6 +1035,48 @@ self: super: {
  fadecandy-msgs = self.callPackage ./fadecandy-msgs {};
 
  fake-localization = self.callPackage ./fake-localization {};
+
+ fanuc-cr35ia-support = self.callPackage ./fanuc-cr35ia-support {};
+
+ fanuc-cr7ia-support = self.callPackage ./fanuc-cr7ia-support {};
+
+ fanuc-crx10ia-support = self.callPackage ./fanuc-crx10ia-support {};
+
+ fanuc-driver = self.callPackage ./fanuc-driver {};
+
+ fanuc-lrmate200i-support = self.callPackage ./fanuc-lrmate200i-support {};
+
+ fanuc-lrmate200ib-support = self.callPackage ./fanuc-lrmate200ib-support {};
+
+ fanuc-lrmate200ic-support = self.callPackage ./fanuc-lrmate200ic-support {};
+
+ fanuc-lrmate200id-support = self.callPackage ./fanuc-lrmate200id-support {};
+
+ fanuc-m10ia-support = self.callPackage ./fanuc-m10ia-support {};
+
+ fanuc-m16ib-support = self.callPackage ./fanuc-m16ib-support {};
+
+ fanuc-m20ia-support = self.callPackage ./fanuc-m20ia-support {};
+
+ fanuc-m20ib-support = self.callPackage ./fanuc-m20ib-support {};
+
+ fanuc-m430ia-support = self.callPackage ./fanuc-m430ia-support {};
+
+ fanuc-m6ib-support = self.callPackage ./fanuc-m6ib-support {};
+
+ fanuc-m710ic-support = self.callPackage ./fanuc-m710ic-support {};
+
+ fanuc-m900ia-support = self.callPackage ./fanuc-m900ia-support {};
+
+ fanuc-m900ib-support = self.callPackage ./fanuc-m900ib-support {};
+
+ fanuc-r1000ia-support = self.callPackage ./fanuc-r1000ia-support {};
+
+ fanuc-r2000ib-support = self.callPackage ./fanuc-r2000ib-support {};
+
+ fanuc-r2000ic-support = self.callPackage ./fanuc-r2000ic-support {};
+
+ fanuc-resources = self.callPackage ./fanuc-resources {};
 
  fath-pivot-mount-description = self.callPackage ./fath-pivot-mount-description {};
 
@@ -2154,7 +2202,13 @@ self: super: {
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
- movie-publisher = self.callPackage ./movie-publisher {};
+ movie-publisher-plugins = self.callPackage ./movie-publisher-plugins {};
+
+ movie-publisher-plugins-copyleft = self.callPackage ./movie-publisher-plugins-copyleft {};
+
+ movie-publisher-plugins-nonfree = self.callPackage ./movie-publisher-plugins-nonfree {};
+
+ movie-publisher-plugins-permissive = self.callPackage ./movie-publisher-plugins-permissive {};
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
 

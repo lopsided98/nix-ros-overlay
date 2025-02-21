@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-steering-controller, ament-cmake, ament-cmake-gtest, ament-index-python, ament-lint-auto, ament-lint-common, control-msgs, diff-drive-controller, effort-controllers, geometry-msgs, gz-ros2-control, hardware-interface, imu-sensor-broadcaster, joint-state-broadcaster, joint-trajectory-controller, launch, launch-ros, mecanum-drive-controller, rclcpp, rclcpp-action, robot-state-publisher, ros-gz-bridge, ros-gz-sim, ros2controlcli, ros2launch, std-msgs, tricycle-controller, velocity-controllers, xacro }:
 buildRosPackage {
   pname = "ros-rolling-gz-ros2-control-demos";
-  version = "2.0.5-r1";
+  version = "2.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/rolling/gz_ros2_control_demos/2.0.5-1.tar.gz";
-    name = "2.0.5-1.tar.gz";
-    sha256 = "2204c3b6356b9435fe35d014c27a374ac4d9233076b86c4a79569fb003d09644";
+    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/rolling/gz_ros2_control_demos/2.0.6-1.tar.gz";
+    name = "2.0.6-1.tar.gz";
+    sha256 = "18338cc69d1d0b0623a912779c7306c7be7882f5d02713b7be8999dfd6f7faf3";
   };
 
   buildType = "ament_cmake";

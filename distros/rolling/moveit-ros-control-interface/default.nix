@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager-msgs, moveit-common, moveit-core, moveit-simple-controller-manager, pluginlib, rclcpp-action, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-moveit-ros-control-interface";
-  version = "2.12.0-r1";
+  version = "2.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_ros_control_interface/2.12.0-1.tar.gz";
-    name = "2.12.0-1.tar.gz";
-    sha256 = "e13a8f6d4ef10d5902f823a6fa94e593b552453755745161f4009eab9ec45d1c";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_ros_control_interface/2.13.0-1.tar.gz";
+    name = "2.13.0-1.tar.gz";
+    sha256 = "ded06a0df66d914236fa02813d53cd805f93e18ebd27449e5eab010244b0eba9";
   };
 
   buildType = "ament_cmake";

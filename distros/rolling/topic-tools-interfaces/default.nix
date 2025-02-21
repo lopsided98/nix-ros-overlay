@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-topic-tools-interfaces";
-  version = "1.4.1-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/rolling/topic_tools_interfaces/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "467d7335d17ff7393d30e18e3c715205fc9871f0b4c7513bc95ceef8c6cecb4c";
+    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/rolling/topic_tools_interfaces/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "5fe77f7ff5b4833b120e6922f3e4d6503638d38d2f7bab933e75a215548f20d9";
   };
 
   buildType = "ament_cmake";
