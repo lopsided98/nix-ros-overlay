@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, etsi-its-primitives-conversion, etsi-its-vam-ts-coding, etsi-its-vam-ts-msgs, ros-environment }:
 buildRosPackage {
   pname = "ros-noetic-etsi-its-vam-ts-conversion";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_vam_ts_conversion/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "d7bf66f020f748ef001caee4a5c55fe28ab106ab3afa71d6054df38ef1a4d93e";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_vam_ts_conversion/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "c1a9d60dd1c09712b101eb3c9be4f82e571d79a213b026b00f22d32762389b2e";
   };
 
   buildType = "catkin";

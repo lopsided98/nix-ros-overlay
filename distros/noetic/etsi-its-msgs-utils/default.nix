@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, etsi-its-msgs, geographiclib, geometry-msgs, ros-environment, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-noetic-etsi-its-msgs-utils";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_msgs_utils/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "937a43a32f78856e2d982d0cde8c5123efae13471f729aef893f549d05053e64";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_msgs_utils/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "7b1ef3968ff81526a1e73b37594608b1626d594d9f4e59040dd32f0f30bad659";
   };
 
   buildType = "catkin";

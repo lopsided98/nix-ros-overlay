@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, launch, launch-param-builder, launch-ros, srdfdom }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-configs-utils";
-  version = "2.12.1-r1";
+  version = "2.12.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_configs_utils/2.12.1-1.tar.gz";
-    name = "2.12.1-1.tar.gz";
-    sha256 = "4cb718b1bcbea788179fd75e007198145aadb0b8554b05a404d555149b22d4b7";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_configs_utils/2.12.2-1.tar.gz";
+    name = "2.12.2-1.tar.gz";
+    sha256 = "40befff1f11c5304c4e8c9090ae1277bd099cf9e535fdeb348423bca96366068";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-spatem-ts-msgs";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_spatem_ts_msgs/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "348be6f71e6f81d8f0d2921b9a9f6cc80ab46c7adc7411f420d515baf3338a0f";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_spatem_ts_msgs/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "8c0dc8e3520f328977856022b66e856cce7485bad93fe9b5ec1d6663c80b7d0e";
   };
 
   buildType = "ament_cmake";

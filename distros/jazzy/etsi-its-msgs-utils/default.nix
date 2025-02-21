@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-msgs, geographiclib, geometry-msgs, ros-environment, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-msgs-utils";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_msgs_utils/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "8b3c67e87b0b85a35d6f6fc7f17745ca2386984cc741eea0ff5a9ec403f422d2";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_msgs_utils/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "ef4e52e6ac74e651a1f4a2c117450b598834e6a465227f67ed87204cfa5d6735";
   };
 
   buildType = "ament_cmake";

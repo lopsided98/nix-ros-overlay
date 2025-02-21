@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-cpm-ts-coding, etsi-its-cpm-ts-msgs, etsi-its-primitives-conversion, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-cpm-ts-conversion";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_cpm_ts_conversion/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "fd8eb11b321c4ef8b962d0b0c43a1e8d242d5cf85fd4eb8982f217f09aba0408";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_cpm_ts_conversion/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "e3ed1de15125665540260a40187e594975967449414c2bb2baed232f4890981d";
   };
 
   buildType = "ament_cmake";

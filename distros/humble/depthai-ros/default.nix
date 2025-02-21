@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, depthai, depthai-bridge, depthai-descriptions, depthai-examples, depthai-filters, depthai-ros-driver, depthai-ros-msgs }:
 buildRosPackage {
   pname = "ros-humble-depthai-ros";
-  version = "2.10.5-r1";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/humble/depthai-ros/2.10.5-1.tar.gz";
-    name = "2.10.5-1.tar.gz";
-    sha256 = "776aab87f82e45266b51fac34a43b62a78aafcf9904f85633bb39068d0e46f7d";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/humble/depthai-ros/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "9eefdc02c02ad0ed11712f699467f52d051c1f79a720b290aeb9d20c84895e94";
   };
 
   buildType = "ament_cmake";

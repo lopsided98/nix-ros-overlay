@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, dynamixel-sdk, dynamixel-sdk-custom-interfaces, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-dynamixel-sdk-examples";
-  version = "3.7.60-r1";
+  version = "3.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/humble/dynamixel_sdk_examples/3.7.60-1.tar.gz";
-    name = "3.7.60-1.tar.gz";
-    sha256 = "54c84822e2cd61baec5a091f5e9acd5fbf2014c6878d1903418f3cf74cdebf2a";
+    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/humble/dynamixel_sdk_examples/3.8.1-1.tar.gz";
+    name = "3.8.1-1.tar.gz";
+    sha256 = "4a871d63aa6406318a490b8170b7a8b18ccb817435745bc710afde280f3c8173";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "ROS2 examples using ROBOTIS DYNAMIXEL SDK";
+    description = "ROS 2 examples using ROBOTIS DYNAMIXEL SDK";
     license = with lib.licenses; [ asl20 ];
   };
 }

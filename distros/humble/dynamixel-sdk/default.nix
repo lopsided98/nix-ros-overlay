@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-dynamixel-sdk";
-  version = "3.7.60-r1";
+  version = "3.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/humble/dynamixel_sdk/3.7.60-1.tar.gz";
-    name = "3.7.60-1.tar.gz";
-    sha256 = "78df24af4c32789fe1fe7a1ee5f6cf5222de7eae7d110d2404ede8b728bf9537";
+    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/humble/dynamixel_sdk/3.8.1-1.tar.gz";
+    name = "3.8.1-1.tar.gz";
+    sha256 = "42ad9fde7a326163d440452d731f2bbbd2041410e81bf2fb692df984ecf1c97e";
   };
 
   buildType = "ament_cmake";

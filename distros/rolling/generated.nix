@@ -186,8 +186,6 @@ self: super: {
 
  async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
 
- automatika-ros-sugar = self.callPackage ./automatika-ros-sugar {};
-
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -429,6 +427,8 @@ self: super: {
  dummy-sensors = self.callPackage ./dummy-sensors {};
 
  dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
+
+ dynamixel-interfaces = self.callPackage ./dynamixel-interfaces {};
 
  dynamixel-sdk = self.callPackage ./dynamixel-sdk {};
 
@@ -779,6 +779,8 @@ self: super: {
  hatchbed-common = self.callPackage ./hatchbed-common {};
 
  heaphook = self.callPackage ./heaphook {};
+
+ hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
@@ -1414,8 +1416,6 @@ self: super: {
 
  pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
 
- pangolin = self.callPackage ./pangolin {};
-
  parallel-gripper-controller = self.callPackage ./parallel-gripper-controller {};
 
  parameter-traits = self.callPackage ./parameter-traits {};
@@ -1779,6 +1779,8 @@ self: super: {
  rmw-implementation = self.callPackage ./rmw-implementation {};
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
+
+ rmw-security-common = self.callPackage ./rmw-security-common {};
 
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
 
@@ -2528,9 +2530,13 @@ self: super: {
 
  webots-ros2-control = self.callPackage ./webots-ros2-control {};
 
+ webots-ros2-crazyflie = self.callPackage ./webots-ros2-crazyflie {};
+
  webots-ros2-driver = self.callPackage ./webots-ros2-driver {};
 
  webots-ros2-epuck = self.callPackage ./webots-ros2-epuck {};
+
+ webots-ros2-husarion = self.callPackage ./webots-ros2-husarion {};
 
  webots-ros2-importer = self.callPackage ./webots-ros2-importer {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-mapem-ts-coding";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_mapem_ts_coding/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "1fe753540b1a47f4002af9b35b41de829fc7db6a86f148254653bd3bbbd258c1";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_mapem_ts_coding/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "22302214079867e704fbcbbe68f06c471a2fb03858e782cc3efd9f83db1e67fd";
   };
 
   buildType = "ament_cmake";

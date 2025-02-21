@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, control-msgs, controller-manager, generate-parameter-library, geometry-msgs, gripper-controllers, joint-state-broadcaster, joint-trajectory-controller, joy, launch-param-builder, moveit-common, moveit-configs-utils, moveit-core, moveit-msgs, moveit-resources-panda-moveit-config, moveit-ros-planning, moveit-ros-planning-interface, moveit-ros-visualization, pluginlib, realtime-tools, robot-state-publisher, ros-testing, sensor-msgs, std-msgs, std-srvs, tf2-eigen, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-servo";
-  version = "2.12.1-r1";
+  version = "2.12.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_servo/2.12.1-1.tar.gz";
-    name = "2.12.1-1.tar.gz";
-    sha256 = "4d69d929b07b1cea94f2c6fe8e95263730e5af0bbdd0271468b9b6ac223e0445";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_servo/2.12.2-1.tar.gz";
+    name = "2.12.2-1.tar.gz";
+    sha256 = "c22e3d175692e6fbc1bff35d73efdb0799a641bc51930eaeb8982bbefa162f56";
   };
 
   buildType = "ament_cmake";
