@@ -48,8 +48,8 @@ in {
   };
 
   gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor {
-    version = "5.7.0";
-    hash = "sha256-RBu49rxjzo4mc7ma4WpabUxUT7cvabJRinR98it10r4=";
+    version = "5.7.1";
+    hash = "sha256-vNCjCSQYCSUHXKwXnq8vwWXiSK2+cD3yPSLT1FdAWrE=";
   }).overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
