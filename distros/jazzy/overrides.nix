@@ -92,8 +92,8 @@ in {
   };
 
   gz-msgs-vendor = lib.patchGzAmentVendorGit rosSuper.gz-msgs-vendor {
-    version = "10.3.1";
-    hash = "sha256-GBEylFQvR2MWOIivW2+MGy//jjewId41mk8qpLfoaYM=";
+    version = "10.3.2";
+    hash = "sha256-gxhRqLzBCaDmK67T5RryDpxbDR3WLgV9DFs7w6ieMxQ=";
   };
 
   gz-ogre-next-vendor = (lib.patchAmentVendorGit rosSuper.gz-ogre-next-vendor {
