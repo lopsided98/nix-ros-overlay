@@ -64,8 +64,8 @@ in {
   };
 
   gz-fuel-tools-vendor = lib.patchGzAmentVendorGit rosSuper.gz-fuel-tools-vendor {
-    version = "9.1.0";
-    hash = "sha256-txeIzj2vmvL5NDu6O07c7LwcCWE26OFEzvyc9TBrJAw=";
+    version = "9.1.1";
+    hash = "sha256-XQoBcCtzwzzPypS1kIeTCIbjtxrzaW3JvZLCYbwXAOk=";
   };
 
   gz-gui-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-gui-vendor {
@@ -105,8 +105,8 @@ in {
   });
 
   gz-physics-vendor = lib.patchGzAmentVendorGit rosSuper.gz-physics-vendor {
-    version = "7.4.0";
-    hash = "sha256-14/P/xoZSqqqf9krgqDKVcO/rTZOEhLni8ZUR3W9ey4=";
+    version = "7.5.0";
+    hash = "sha256-75myTqDeEybvj5rsJxRambLPle1cen6HIatZGbVoXro=";
   };
 
   gz-plugin-vendor = lib.patchGzAmentVendorGit rosSuper.gz-plugin-vendor {
@@ -115,8 +115,8 @@ in {
   };
 
   gz-rendering-vendor = lib.patchGzAmentVendorGit rosSuper.gz-rendering-vendor {
-    version = "8.2.1";
-    hash = "sha256-ZHeEC/zvBKROJ/e+6Bdvhut30crhlC5VMsxrpIGIA0M=";
+    version = "8.2.2";
+    hash = "sha256-x+QHn8d+19U12CG1+HEmP0KcM3beY00Vvrc8mrxvAs0=";
   };
 
   gz-sensors-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sensors-vendor {
