@@ -120,8 +120,8 @@ in {
   };
 
   gz-sensors-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sensors-vendor {
-    version = "8.2.1";
-    hash = "sha256-wEUJoHbvvImuFbaKk84maw5AoKhoEhdU0uOYVBtHhI0=";
+    version = "8.2.2";
+    hash = "sha256-TRDMCMesJXVSVGA3bnRngtXTi4VVf0y12AJQ79EEMiI=";
   };
 
   gz-sim-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sim-vendor {
