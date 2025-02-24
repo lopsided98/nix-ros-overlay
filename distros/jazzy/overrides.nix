@@ -125,8 +125,8 @@ in {
   };
 
   gz-sim-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sim-vendor {
-    version = "8.7.0";
-    hash = "sha256-Kalt+UwFiL1D+A5pkM/aZyEmBenqPo9U4jlAmqLze3c=";
+    version = "8.9.0";
+    hash = "sha256-hvhq2XBzcIoupJdJyJzk38LDXoEnd9iBCCiXvPZsPqY=";
   };
 
   gz-tools-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-tools-vendor {
