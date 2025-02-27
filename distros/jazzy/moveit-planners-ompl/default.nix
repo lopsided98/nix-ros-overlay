@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, eigen, eigen3-cmake-module, llvmPackages, moveit-common, moveit-core, moveit-msgs, moveit-resources-fanuc-moveit-config, moveit-resources-panda-moveit-config, moveit-resources-pr2-description, moveit-ros-planning, ompl, pluginlib, rclcpp, tf2-eigen, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-planners-ompl";
-  version = "2.12.1-r1";
+  version = "2.12.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_planners_ompl/2.12.1-1.tar.gz";
-    name = "2.12.1-1.tar.gz";
-    sha256 = "a3de8e12a121958bd0d675c27beaccf0632a9e6949526338007d046fc13ace7f";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_planners_ompl/2.12.2-1.tar.gz";
+    name = "2.12.2-1.tar.gz";
+    sha256 = "d2714b713beab315ffc32a330cbfa7657b8cea474ea76b2611d3644ae088fa19";
   };
 
   buildType = "ament_cmake";

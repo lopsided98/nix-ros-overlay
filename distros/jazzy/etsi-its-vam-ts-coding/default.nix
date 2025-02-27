@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-vam-ts-coding";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_vam_ts_coding/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "0107f2ff566e693625d27cad4dec6760e978df3f17fa50c29db6dd1027dc5a2d";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_vam_ts_coding/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "88cfe5e85c82da05793a870c7c37b12ea1df0ecacbebf9b00fc55e1a617851ef";
   };
 
   buildType = "ament_cmake";

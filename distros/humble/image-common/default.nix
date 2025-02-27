@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, camera-calibration-parsers, camera-info-manager, image-transport }:
 buildRosPackage {
   pname = "ros-humble-image-common";
-  version = "3.1.10-r1";
+  version = "3.1.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/humble/image_common/3.1.10-1.tar.gz";
-    name = "3.1.10-1.tar.gz";
-    sha256 = "b26f7a64988ea47446bf3d7a7c1a6416a07ce7b5d1d09d0d3b1db1f61a4e3301";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/humble/image_common/3.1.11-1.tar.gz";
+    name = "3.1.11-1.tar.gz";
+    sha256 = "36b0e8e5e76bf17368767403d89e43c0d441b152443c9ab86361794f624e20db";
   };
 
   buildType = "ament_cmake";

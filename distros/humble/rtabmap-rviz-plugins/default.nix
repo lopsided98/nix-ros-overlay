@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, pcl-conversions, pluginlib, rclcpp, rtabmap-conversions, rtabmap-msgs, rviz-common, rviz-default-plugins, rviz-rendering, sensor-msgs, std-msgs, tf2 }:
 buildRosPackage {
   pname = "ros-humble-rtabmap-rviz-plugins";
-  version = "0.21.9-r1";
+  version = "0.21.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_rviz_plugins/0.21.9-1.tar.gz";
-    name = "0.21.9-1.tar.gz";
-    sha256 = "5747fb1ebeec7cbbe8c0953fdf839c5ba6410760bfcdf85c0c2d1c9c3ce812e5";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_rviz_plugins/0.21.10-1.tar.gz";
+    name = "0.21.10-1.tar.gz";
+    sha256 = "e9aecfffadf361a3446768fa0fa8b8c1dc39ec2aa308136365e7725f86e83e1d";
   };
 
   buildType = "ament_cmake";

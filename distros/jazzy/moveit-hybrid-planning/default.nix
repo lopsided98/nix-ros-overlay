@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, controller-manager, moveit-common, moveit-configs-utils, moveit-core, moveit-msgs, moveit-planners-ompl, moveit-resources-panda-moveit-config, moveit-ros-planning, moveit-ros-planning-interface, moveit-simple-controller-manager, pluginlib, position-controllers, rclcpp, rclcpp-action, rclcpp-components, robot-state-publisher, ros-testing, rviz2, std-msgs, std-srvs, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-hybrid-planning";
-  version = "2.12.1-r1";
+  version = "2.12.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_hybrid_planning/2.12.1-1.tar.gz";
-    name = "2.12.1-1.tar.gz";
-    sha256 = "1354484c28dea4665fdc3f3f666d1993f72233544c73fa17b1910fae9fc2c9e6";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_hybrid_planning/2.12.2-1.tar.gz";
+    name = "2.12.2-1.tar.gz";
+    sha256 = "c73ea6e88d6c60bc4ae920d92ed0d497e33c36005de97f0a6d8ab677b8fc391c";
   };
 
   buildType = "ament_cmake";

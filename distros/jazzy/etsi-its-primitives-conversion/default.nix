@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-primitives-conversion";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_primitives_conversion/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "1d6ac2adca68f89016d0518cb5dbb62d1cf154a981ae2059ab42face8cb18631";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_primitives_conversion/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "7f9e5c0884f4d1fca17b563b45a23f04b98d294665d0c07cd557f724699cf0b8";
   };
 
   buildType = "ament_cmake";

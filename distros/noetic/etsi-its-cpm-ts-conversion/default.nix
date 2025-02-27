@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, etsi-its-cpm-ts-coding, etsi-its-cpm-ts-msgs, etsi-its-primitives-conversion, ros-environment }:
 buildRosPackage {
   pname = "ros-noetic-etsi-its-cpm-ts-conversion";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_cpm_ts_conversion/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "76a619065b4a34c2ba522225e2adfb69474778ce49a5d989509481758ddb4925";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_cpm_ts_conversion/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "cf576a9ee55409cfe8558de5158409429b95081d548b18466b7748d4d93da795";
   };
 
   buildType = "catkin";

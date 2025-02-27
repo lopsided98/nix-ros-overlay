@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, ros-environment, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-etsi-its-denm-msgs";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_denm_msgs/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "1ceafcb247d54906156f017f3ee419d0ec6394e259bb7848d816ae2819449dd2";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_denm_msgs/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "0b1e54699ef6f6a938680990dd38f9acfc47190d13da5c8db4f4cd66cbea9a9f";
   };
 
   buildType = "catkin";
