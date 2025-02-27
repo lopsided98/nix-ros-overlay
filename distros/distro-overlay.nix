@@ -127,7 +127,6 @@ let
         revVariable = "git_tag";
         fetchgitArgs = {
           hash = "sha256-0BbUe1J9qzvyKDBLTz+pAEmR3QpRL+hnxZ2re/3mEvs=";
-          leaveDotGit = true;
         };
       })
     ];

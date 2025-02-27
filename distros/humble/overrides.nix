@@ -53,7 +53,6 @@ in with lib; {
     rev = "b63a0b6f79d3ea91dc221724b42dae49894449fc";
     fetchgitArgs = {
       hash = "sha256-x9JCU2Ryssq424n90IzVOxixnvsoYTukyCOL3zNbwt4=";
-      leaveDotGit = true;
     };
   };
 
