@@ -259,44 +259,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     };
   });
 
-  zenoh-cpp-vendor = let
-    zenoh-c-url = "https://github.com/eclipse-zenoh/zenoh-c.git";
-    zenoh-c-rev = "5fce7fb1d397e016ad02a50bde4262007d755424";
-    zenoh-c-hash = "sha256-jayvCq4xvvAheeSpmxwg1VA3TLPyS4QGdVhte8wk0KA=";
-  in (patchAmentVendorGit (patchAmentVendorGit rosSuper.zenoh-cpp-vendor {
-    url = "https://github.com/eclipse-zenoh/zenoh-cpp";
-    rev = "bd4d741c6c4fa6509d8d745e22c3c50b4306bd65";
-    fetchgitArgs.hash = "sha256-OLNlew4pOLl1PRWrJTTfDv7LGYHGX0A7A4RW9jwCOsE=";
-  }) {
-    url = zenoh-c-url;
-    rev = zenoh-c-rev;
-    fetchgitArgs.hash = zenoh-c-hash;
-  }).overrideAttrs ({
-     nativeBuildInputs ? [], postPatch ? "", ...
-  }: let
-      zenoh-c-source = self.fetchFromGitHub {
-        owner = "eclipse-zenoh";
-        repo = "zenoh-c";
-        rev = zenoh-c-rev;
-        hash = zenoh-c-hash;
-      };
-    in {
-    nativeBuildInputs = nativeBuildInputs ++ [
-      self.rustPlatform.cargoSetupHook
-      self.cargo
-      self.rustc
-    ];
-    postPatch = postPatch + ''
-      ln -s ${zenoh-c-source.outPath}/Cargo.lock Cargo.lock
-    '';
-    cargoDeps = self.rustPlatform.importCargoLock {
-      lockFile = "${zenoh-c-source.outPath}/Cargo.lock";
-      outputHashes = {
-        "zenoh-1.2.0" = "sha256-0E03X0ZjZNJr7FgqnbjXCM6gKKezSSFSC0HfAq7WhM4=";
-      };
-    };
-  });
-
   zmqpp-vendor = patchExternalProjectGit rosSuper.zmqpp-vendor {
     url = "https://github.com/zeromq/zmqpp.git";
     originalRev = "master";
