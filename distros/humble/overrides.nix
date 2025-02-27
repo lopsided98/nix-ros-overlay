@@ -240,10 +240,13 @@ in with lib; {
     zenoh-c-url = "https://github.com/eclipse-zenoh/zenoh-c.git";
     zenoh-c-rev = "5fce7fb1d397e016ad02a50bde4262007d755424";
     zenoh-c-hash = "sha256-jayvCq4xvvAheeSpmxwg1VA3TLPyS4QGdVhte8wk0KA=";
+    zenoh-cpp-url = "https://github.com/eclipse-zenoh/zenoh-cpp";
+    zenoh-cpp-rev = "bd4d741c6c4fa6509d8d745e22c3c50b4306bd65";
+    zenoh-cpp-hash = "sha256-OLNlew4pOLl1PRWrJTTfDv7LGYHGX0A7A4RW9jwCOsE=";
   in (lib.patchAmentVendorGit (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {
-    url = "https://github.com/eclipse-zenoh/zenoh-cpp";
-    rev = "bd4d741c6c4fa6509d8d745e22c3c50b4306bd65";
-    fetchgitArgs.hash = "sha256-OLNlew4pOLl1PRWrJTTfDv7LGYHGX0A7A4RW9jwCOsE=";
+    url = zenoh-cpp-url;
+    rev = zenoh-cpp-rev;
+    fetchgitArgs.hash = zenoh-cpp-hash;
   }) {
     url = zenoh-c-url;
     rev = zenoh-c-rev;
@@ -265,6 +268,17 @@ in with lib; {
     ];
     postPatch = postPatch + ''
       ln -s ${zenoh-c-source.outPath}/Cargo.lock Cargo.lock
+      echo "set(ZENOH-C-VENDOR $(awk '/ament_vendor\(zenoh_c_vendor/,/VCS_VERSION/ {if (/VCS_VERSION/) print $2}' CMakeLists.txt))" >> CMakeLists.txt
+      echo "set(ZENOH-CPP-VENDOR $(awk '/ament_vendor\(zenoh_cpp_vendor/,/VCS_VERSION/ {if (/VCS_VERSION/) print $2}' CMakeLists.txt))" >> CMakeLists.txt
+
+      cat >> CMakeLists.txt <<'EOF'
+        if(NOT ''${ZENOH-CPP-VENDOR} STREQUAL "${zenoh-cpp-rev}")
+          message(FATAL_ERROR "Mismatch in VCS_VERSION for zenoh_cpp_vendor (Nix: ${zenoh-cpp-rev}, upstream: ''${ZENOH-CPP-VENDOR}) Fix this in overrides.nix.")
+        endif()
+        if(NOT ''${ZENOH-C-VENDOR} STREQUAL "${zenoh-c-rev}")
+          message(FATAL_ERROR "Mismatch in VCS_VERSION for zenoh_c_vendor (Nix: ${zenoh-c-rev}, upstream: ''${ZENOH-C-VENDOR}) Fix this in overrides.nix.")
+        endif()
+      EOF
     '';
     cargoDeps = self.rustPlatform.importCargoLock {
       lockFile = "${zenoh-c-source.outPath}/Cargo.lock";
