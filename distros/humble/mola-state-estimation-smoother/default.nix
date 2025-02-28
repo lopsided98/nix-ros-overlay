@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, gtsam, mola-common, mola-imu-preintegration, mola-kernel, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-humble-mola-state-estimation-smoother";
-  version = "1.6.1-r1";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/humble/mola_state_estimation_smoother/1.6.1-1.tar.gz";
-    name = "1.6.1-1.tar.gz";
-    sha256 = "5003fe830a14ebaed7f89a5db4e9303dc8b8ba19e9d22c1076d1e25682d5e1fd";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/humble/mola_state_estimation_smoother/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "10a788ce50787ec62c668e67a6336efa0430567338f97771b5291c2f4c775a48";
   };
 
   buildType = "cmake";
-  buildInputs = [ boost cmake gtsam ];
-  propagatedBuildInputs = [ mola-common mola-imu-preintegration mola-kernel mrpt-libobs ];
+  buildInputs = [ boost cmake ];
+  propagatedBuildInputs = [ gtsam mola-common mola-imu-preintegration mola-kernel mrpt-libobs ];
   nativeBuildInputs = [ cmake ];
 
   meta = {
