@@ -372,8 +372,6 @@ self: super: {
 
  clearpath-ros2-socketcan-interface = self.callPackage ./clearpath-ros2-socketcan-interface {};
 
- clearpath-sensors-description = self.callPackage ./clearpath-sensors-description {};
-
  clearpath-viz = self.callPackage ./clearpath-viz {};
 
  clips-vendor = self.callPackage ./clips-vendor {};
@@ -1331,6 +1329,8 @@ self: super: {
  mola-common = self.callPackage ./mola-common {};
 
  mola-demos = self.callPackage ./mola-demos {};
+
+ mola-gnss-to-markers = self.callPackage ./mola-gnss-to-markers {};
 
  mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
 
@@ -2692,6 +2692,8 @@ self: super: {
 
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
+ synapticon-ros2-control = self.callPackage ./synapticon-ros2-control {};
+
  system-fingerprint = self.callPackage ./system-fingerprint {};
 
  system-modes = self.callPackage ./system-modes {};
@@ -2960,8 +2962,6 @@ self: super: {
 
  velodyne = self.callPackage ./velodyne {};
 
- velodyne-description = self.callPackage ./velodyne-description {};
-
  velodyne-driver = self.callPackage ./velodyne-driver {};
 
  velodyne-laserscan = self.callPackage ./velodyne-laserscan {};
@@ -2969,8 +2969,6 @@ self: super: {
  velodyne-msgs = self.callPackage ./velodyne-msgs {};
 
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
-
- velodyne-simulator = self.callPackage ./velodyne-simulator {};
 
  vision-msgs = self.callPackage ./vision-msgs {};
 

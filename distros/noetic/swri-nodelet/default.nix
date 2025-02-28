@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, nodelet, rosbash, roscpp, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-swri-nodelet";
-  version = "2.15.2-r1";
+  version = "2.15.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_nodelet/2.15.2-1.tar.gz";
-    name = "2.15.2-1.tar.gz";
-    sha256 = "e4569638c2b3528c9aa8837dd4eaaafd9ae571cd292684f14733198bb7879001";
+    url = "https://github.com/swri-robotics-gbp/marti_common-release/archive/release/noetic/swri_nodelet/2.15.4-1.tar.gz";
+    name = "2.15.4-1.tar.gz";
+    sha256 = "35da65a27c3e90d48fe0d54c07d4084da81a8d091e68ce48cd757abe0bbc5086";
   };
 
   buildType = "catkin";

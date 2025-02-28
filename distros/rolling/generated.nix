@@ -268,6 +268,8 @@ self: super: {
 
  boost-geometry-util = self.callPackage ./boost-geometry-util {};
 
+ boost-sml-vendor = self.callPackage ./boost-sml-vendor {};
+
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
  camera-calibration = self.callPackage ./camera-calibration {};
@@ -1104,6 +1106,8 @@ self: super: {
 
  mola-demos = self.callPackage ./mola-demos {};
 
+ mola-gnss-to-markers = self.callPackage ./mola-gnss-to-markers {};
+
  mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
 
  mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
@@ -1770,6 +1774,8 @@ self: super: {
 
  rmw-dds-common = self.callPackage ./rmw-dds-common {};
 
+ rmw-desert = self.callPackage ./rmw-desert {};
+
  rmw-fastrtps-cpp = self.callPackage ./rmw-fastrtps-cpp {};
 
  rmw-fastrtps-dynamic-cpp = self.callPackage ./rmw-fastrtps-dynamic-cpp {};
@@ -2252,6 +2258,8 @@ self: super: {
 
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
+ synapticon-ros2-control = self.callPackage ./synapticon-ros2-control {};
+
  system-fingerprint = self.callPackage ./system-fingerprint {};
 
  system-modes = self.callPackage ./system-modes {};
@@ -2490,8 +2498,6 @@ self: super: {
 
  velodyne = self.callPackage ./velodyne {};
 
- velodyne-description = self.callPackage ./velodyne-description {};
-
  velodyne-driver = self.callPackage ./velodyne-driver {};
 
  velodyne-laserscan = self.callPackage ./velodyne-laserscan {};
@@ -2499,8 +2505,6 @@ self: super: {
  velodyne-msgs = self.callPackage ./velodyne-msgs {};
 
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
-
- velodyne-simulator = self.callPackage ./velodyne-simulator {};
 
  vision-msgs = self.callPackage ./vision-msgs {};
 
