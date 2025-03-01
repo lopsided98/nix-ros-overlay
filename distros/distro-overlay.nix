@@ -125,9 +125,7 @@ let
         url = "https://github.com/osqp/osqp.git";
         rev = "v0.6.2";
         revVariable = "git_tag";
-        fetchgitArgs = {
-          hash = "sha256-RYk3zuZrJXPcF27eMhdoZAio4DZ+I+nFaUEg1g/aLNk=";
-        };
+        fetchgitArgs.hash = "sha256-RYk3zuZrJXPcF27eMhdoZAio4DZ+I+nFaUEg1g/aLNk=";
       })
     ];
 
