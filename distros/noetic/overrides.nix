@@ -168,6 +168,17 @@ in {
     '';
   });
 
+  tf = rosSuper.tf.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Boost.Math 1.87 requires C++14
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail COMPILER_SUPPORTS_CXX11 COMPILER_SUPPORTS_CXX14 \
+        --replace-fail '-std=c++11' '-std=c++14'
+    '';
+  });
+
   tf2 = rosSuper.tf2.overrideAttrs ({
     patches ? [], ...
   }: {
