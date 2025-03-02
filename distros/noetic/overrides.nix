@@ -128,6 +128,17 @@ in {
     sha256 = "sha256-IBlmph3IJvGxh5okozF6HskhSpGMjrA1vi8ww+nPvcs=";
   };
 
+  robot-state-publisher = rosSuper.robot-state-publisher.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # Use C++14 for Boost.Math compatibility
+    # https://github.com/ros/robot_state_publisher/pull/190
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/ros/robot_state_publisher/commit/8478b2aface9e4349f8a0bce61eb74dbfd9bfb63.patch";
+      hash = "sha256-BQt6HoOBMM5bJCADve19uH1RSLLNQlG9aR6g1p58WPw=";
+    }) ];
+  });
+
   rosconsole = rosSuper.rosconsole.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -165,6 +176,17 @@ in {
   }: {
     postPatch = postPatch + ''
       substituteInPlace CMakeLists.txt --replace-fail " -Werror" ""
+    '';
+  });
+
+  tf = rosSuper.tf.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Boost.Math 1.87 requires C++14
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail COMPILER_SUPPORTS_CXX11 COMPILER_SUPPORTS_CXX14 \
+        --replace-fail '-std=c++11' '-std=c++14'
     '';
   });
 

@@ -8,9 +8,9 @@ buildRosPackage {
   version = "2.14.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/jazzy/fastrtps/2.14.4-1.tar.gz";
+    url = "https://github.com/ros2-gbp/fastdds-release/archive/release/jazzy/fastrtps/2.14.4-1.tar.gz";
     name = "2.14.4-1.tar.gz";
-    sha256 = "d4e9b39d38d0a6db4296089c12cdf385d50b02061c74c8927e1fc57f2bb1f9c1";
+    sha256 = "6ebb9b74e4b03e93810e0d322dc26edebb7c9ab30ce5fb528ce666c80820ff54";
   };
 
   buildType = "cmake";

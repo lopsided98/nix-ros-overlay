@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, cmake, mola-common, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset, mola-input-rawlog, mola-input-rosbag2, mola-kernel, mola-launcher, mola-metric-maps, mola-pose-list, mola-state-estimation-simple, mola-test-datasets, mola-viz, mp2p-icp, mrpt-libmaps, mrpt-libtclap, ros-environment, rosbag2-storage-mcap }:
 buildRosPackage {
   pname = "ros-humble-mola-lidar-odometry";
-  version = "0.6.1-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_lidar_odometry-release/archive/release/humble/mola_lidar_odometry/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "8f8f6f732f59590f3f839fcf637b99f6ba665c670678ed51101befbff89f1585";
+    url = "https://github.com/ros2-gbp/mola_lidar_odometry-release/archive/release/humble/mola_lidar_odometry/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "4d99234f0882ba0bed63c548fdbb741d474e5dcaba9f147997d46af3e3da8b72";
   };
 
   buildType = "ament_cmake";

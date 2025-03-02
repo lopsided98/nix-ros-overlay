@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps }:
 buildRosPackage {
   pname = "ros-humble-mola-input-kitti-dataset";
-  version = "1.6.1-r1";
+  version = "1.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_kitti_dataset/1.6.1-1.tar.gz";
-    name = "1.6.1-1.tar.gz";
-    sha256 = "d06f01bcf5bb3a69d1c95b5d5f062395adf0285314c37a55bfdec263a2c590e3";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_kitti_dataset/1.6.2-1.tar.gz";
+    name = "1.6.2-1.tar.gz";
+    sha256 = "fa943a54348d715b5bd3429343e7c4161f2d0ba0a273c98daf77d5b656976f8c";
   };
 
   buildType = "cmake";

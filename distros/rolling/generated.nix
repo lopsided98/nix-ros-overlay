@@ -268,6 +268,8 @@ self: super: {
 
  boost-geometry-util = self.callPackage ./boost-geometry-util {};
 
+ boost-sml-vendor = self.callPackage ./boost-sml-vendor {};
+
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
  camera-calibration = self.callPackage ./camera-calibration {};
@@ -584,7 +586,7 @@ self: super: {
 
  fastcdr = self.callPackage ./fastcdr {};
 
- fastrtps = self.callPackage ./fastrtps {};
+ fastdds = self.callPackage ./fastdds {};
 
  fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
 
@@ -1103,6 +1105,8 @@ self: super: {
  mola-common = self.callPackage ./mola-common {};
 
  mola-demos = self.callPackage ./mola-demos {};
+
+ mola-gnss-to-markers = self.callPackage ./mola-gnss-to-markers {};
 
  mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
 
@@ -1770,11 +1774,7 @@ self: super: {
 
  rmw-dds-common = self.callPackage ./rmw-dds-common {};
 
- rmw-fastrtps-cpp = self.callPackage ./rmw-fastrtps-cpp {};
-
- rmw-fastrtps-dynamic-cpp = self.callPackage ./rmw-fastrtps-dynamic-cpp {};
-
- rmw-fastrtps-shared-cpp = self.callPackage ./rmw-fastrtps-shared-cpp {};
+ rmw-desert = self.callPackage ./rmw-desert {};
 
  rmw-implementation = self.callPackage ./rmw-implementation {};
 
@@ -1961,8 +1961,6 @@ self: super: {
  rosidl-default-runtime = self.callPackage ./rosidl-default-runtime {};
 
  rosidl-dynamic-typesupport = self.callPackage ./rosidl-dynamic-typesupport {};
-
- rosidl-dynamic-typesupport-fastrtps = self.callPackage ./rosidl-dynamic-typesupport-fastrtps {};
 
  rosidl-generator-c = self.callPackage ./rosidl-generator-c {};
 
@@ -2252,6 +2250,8 @@ self: super: {
 
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
+ synapticon-ros2-control = self.callPackage ./synapticon-ros2-control {};
+
  system-fingerprint = self.callPackage ./system-fingerprint {};
 
  system-modes = self.callPackage ./system-modes {};
@@ -2490,8 +2490,6 @@ self: super: {
 
  velodyne = self.callPackage ./velodyne {};
 
- velodyne-description = self.callPackage ./velodyne-description {};
-
  velodyne-driver = self.callPackage ./velodyne-driver {};
 
  velodyne-laserscan = self.callPackage ./velodyne-laserscan {};
@@ -2499,8 +2497,6 @@ self: super: {
  velodyne-msgs = self.callPackage ./velodyne-msgs {};
 
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
-
- velodyne-simulator = self.callPackage ./velodyne-simulator {};
 
  vision-msgs = self.callPackage ./vision-msgs {};
 

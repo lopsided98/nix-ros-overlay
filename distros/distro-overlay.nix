@@ -66,8 +66,20 @@ let
   overrides = rosSelf: rosSuper: with rosSelf.lib; {
     # ROS package overrides/fixups
 
+    # Some third-party packages are available in rodistro,
+    # but have a better packaging in nixpkgs, so use it instead
+    inherit (self.python3Packages) eigenpy hpp-fcl pinocchio ;
+
     gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({ ... }:{
       setupHook = ./gazebo-ros-setup-hook.sh;
+    });
+
+    gtsam = rosSuper.gtsam.overrideAttrs ({
+      cmakeFlags ? [], ...
+    }: {
+      # Don't use vendored version of Eigen, which can collide with
+      # Eigen version in dependent packages.
+      cmakeFlags = cmakeFlags ++ [ "-DGTSAM_USE_SYSTEM_EIGEN=ON" ];
     });
 
     joint-state-publisher-gui = rosSuper.joint-state-publisher-gui.overrideAttrs ({
@@ -125,10 +137,7 @@ let
         url = "https://github.com/osqp/osqp.git";
         rev = "v0.6.2";
         revVariable = "git_tag";
-        fetchgitArgs = {
-          hash = "sha256-0BbUe1J9qzvyKDBLTz+pAEmR3QpRL+hnxZ2re/3mEvs=";
-          leaveDotGit = true;
-        };
+        fetchgitArgs.hash = "sha256-RYk3zuZrJXPcF27eMhdoZAio4DZ+I+nFaUEg1g/aLNk=";
       })
     ];
 
