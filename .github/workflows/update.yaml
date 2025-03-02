@@ -20,10 +20,6 @@ jobs:
           nix-env -f . -iA python3Packages.rosdep superflore
       - name: Update overlay
         env:
-          # Don't use secrets.GITHUB_TOKEN because it prevents the PR from
-          # triggering a build
-          # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows#about-workflow-events
-          SUPERFLORE_GITHUB_TOKEN: ${{ secrets.SUPERFLORE_GITHUB_TOKEN }}
           ROS_OS_OVERRIDE: nixos
           ROSDEP_SOURCE_PATH: rosdep-sources
         run: |
@@ -37,8 +33,28 @@ jobs:
               echo "username=lopsided98"
               echo "password=${SUPERFLORE_GITHUB_TOKEN}"
             }; f'
-          superflore-gen-nix \
+          superflore-gen-nix --dry-run \
             --tar-archive-dir "${{ runner.temp }}/tar" \
             --output-repository-path . \
             --upstream-branch develop \
             --all
+      - name: Update ament_vendor info
+        continue-on-error: true
+        run: |
+          # permittedInsecurePackages is needed for updating some gz-*-vendor packages.
+          # Note that this runs without access to SUPERFLORE_GITHUB_TOKEN.
+          mkdir -p ~/.config/nixpkgs
+          echo '{ permittedInsecurePackages = [ "freeimage-unstable-2021-11-01" ]; }' > ~/.config/nixpkgs/config.nix
+          NIX_PATH=nixpkgs=$PWD ./maintainers/scripts/update-ament-vendor.sh || ret=$?
+          git commit -m 'Update vendored-source.json files' $(find -name vendored-source.json) || :
+          exit $ret
+      - name: Create PR
+        env:
+          # Don't use secrets.GITHUB_TOKEN because it prevents the PR from
+          # triggering a build
+          # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows#about-workflow-events
+          SUPERFLORE_GITHUB_TOKEN: ${{ secrets.SUPERFLORE_GITHUB_TOKEN }}
+        run: |
+          superflore-gen-nix --pr-only \
+            --output-repository-path . \
+            --upstream-branch develop \
