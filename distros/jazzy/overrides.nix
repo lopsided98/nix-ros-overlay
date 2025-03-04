@@ -171,13 +171,13 @@ in {
   nav2-behavior-tree = rosSuper.nav2-behavior-tree.overrideAttrs({
     ...
   }: {
-      env.NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
   });
 
   nav2-costmap-2d = rosSuper.nav2-costmap-2d.overrideAttrs({
     ...
   }: {
-      env.NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
   });
 
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
