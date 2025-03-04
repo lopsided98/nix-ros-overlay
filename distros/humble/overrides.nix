@@ -105,6 +105,12 @@ in with lib; {
     propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.moveit-ros-planning ];
   });
 
+  nav2-costmap-2d = rosSuper.nav2-costmap-2d.overrideAttrs({
+    ...
+  }: {
+      env.NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
+  });
+
   novatel-oem7-driver = (patchExternalProjectGit rosSuper.novatel-oem7-driver {
     url = "https://github.com/novatel/novatel_edie";
     rev = "d02ccc2dfe531d642c1e2ca8a8c0f8205c856f23";
