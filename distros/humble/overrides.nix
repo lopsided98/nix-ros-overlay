@@ -105,6 +105,12 @@ in with lib; {
     propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.moveit-ros-planning ];
   });
 
+  nav2-behavior-tree = rosSuper.nav2-behavior-tree.overrideAttrs({
+    ...
+  }: {
+      env.NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
+  });
+
   nav2-costmap-2d = rosSuper.nav2-costmap-2d.overrideAttrs({
     ...
   }: {
