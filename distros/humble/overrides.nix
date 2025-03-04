@@ -17,6 +17,18 @@ in with lib; {
     ];
   });
 
+  dwb-critics = rosSuper.dwb-critics.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=maybe-uninitialized" ];
+  });
+
+  dwb-plugins = rosSuper.dwb-plugins.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=maybe-uninitialized" ];
+  });
+
   # This is a newer version than the build system tries to download, but this
   # version doesn't try to run host platform binaries on the build platform
   # and fixes "Allocator foonathan::memory::memory_pool received invalid size"
@@ -93,16 +105,46 @@ in with lib; {
     propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.moveit-ros-planning ];
   });
 
+  nav2-behaviors = rosSuper.nav2-behaviors.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" "-Wno-error=maybe-uninitialized" ];
+  });
+
   nav2-behavior-tree = rosSuper.nav2-behavior-tree.overrideAttrs({
     ...
   }: {
-      env.NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds"];
   });
 
   nav2-costmap-2d = rosSuper.nav2-costmap-2d.overrideAttrs({
     ...
   }: {
-      env.NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds"];
+  });
+
+  nav2-mppi-controller = rosSuper.nav2-mppi-controller.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
+  });
+
+  nav2-planner = rosSuper.nav2-planner.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=maybe-uninitialized" ];
+  });
+
+  nav2-smoother = rosSuper.nav2-smoother.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=maybe-uninitialized" ];
+  });
+
+  nav2-waypoint-follower = rosSuper.nav2-waypoint-follower.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=maybe-uninitialized" ];
   });
 
   novatel-oem7-driver = (patchExternalProjectGit rosSuper.novatel-oem7-driver {
@@ -222,5 +264,81 @@ in with lib; {
         hash = "sha256-AEiTLXPYcFdZrE4KzvCkXH4GiSFmhCl14wkq+0MRWLo=";
       })
     ];
+  });
+
+  zenoh-bridge-dds = rosSuper.zenoh-bridge-dds.overrideAttrs ({
+     nativeBuildInputs ? [], pname ? "", postPatch ? "", src ? "", version ? "", ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [
+      self.rustPlatform.cargoSetupHook
+      self.cargo
+      self.rustc
+    ];
+    postPatch = postPatch + ''
+      ln -s zenoh-bridge-dds/Cargo.lock Cargo.lock
+    '';
+    cargoDeps = self.rustPlatform.fetchCargoVendor {
+      inherit pname version src;
+      hash = "sha256-DRMuF6DNLbMIA1CmhVZ7L//EuTCQNL5/lU6d+3DKnO4=";
+      prePatch = ''
+        cd zenoh-bridge-dds
+      '';
+    };
+    env.LIBCLANG_PATH = "${lib.getLib self.llvmPackages.libclang}/lib";
+    env.NIX_CFLAGS_COMPILE = toString [
+      "-Wno-conversion"
+    ];
+  });
+
+  zenoh-cpp-vendor = let
+    zenoh-c-url = "https://github.com/eclipse-zenoh/zenoh-c.git";
+    zenoh-c-rev = "5fce7fb1d397e016ad02a50bde4262007d755424";
+    zenoh-c-hash = "sha256-jayvCq4xvvAheeSpmxwg1VA3TLPyS4QGdVhte8wk0KA=";
+    zenoh-cpp-url = "https://github.com/eclipse-zenoh/zenoh-cpp";
+    zenoh-cpp-rev = "bd4d741c6c4fa6509d8d745e22c3c50b4306bd65";
+    zenoh-cpp-hash = "sha256-OLNlew4pOLl1PRWrJTTfDv7LGYHGX0A7A4RW9jwCOsE=";
+  in (lib.patchAmentVendorGit (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {
+    url = zenoh-cpp-url;
+    rev = zenoh-cpp-rev;
+    fetchgitArgs.hash = zenoh-cpp-hash;
+  }) {
+    url = zenoh-c-url;
+    rev = zenoh-c-rev;
+    fetchgitArgs.hash = zenoh-c-hash;
+  }).overrideAttrs ({
+     nativeBuildInputs ? [], postPatch ? "", ...
+  }: let
+      zenoh-c-source = self.fetchFromGitHub {
+        owner = "eclipse-zenoh";
+        repo = "zenoh-c";
+        rev = zenoh-c-rev;
+        hash = zenoh-c-hash;
+      };
+    in {
+    nativeBuildInputs = nativeBuildInputs ++ [
+      self.rustPlatform.cargoSetupHook
+      self.cargo
+      self.rustc
+    ];
+    postPatch = postPatch + ''
+      ln -s ${zenoh-c-source.outPath}/Cargo.lock Cargo.lock
+      echo "set(ZENOH-C-VENDOR $(awk '/ament_vendor\(zenoh_c_vendor/,/VCS_VERSION/ {if (/VCS_VERSION/) print $2}' CMakeLists.txt))" >> CMakeLists.txt
+      echo "set(ZENOH-CPP-VENDOR $(awk '/ament_vendor\(zenoh_cpp_vendor/,/VCS_VERSION/ {if (/VCS_VERSION/) print $2}' CMakeLists.txt))" >> CMakeLists.txt
+
+      cat >> CMakeLists.txt <<'EOF'
+        if(NOT ''${ZENOH-CPP-VENDOR} STREQUAL "${zenoh-cpp-rev}")
+          message(FATAL_ERROR "Mismatch in VCS_VERSION for zenoh_cpp_vendor (Nix: ${zenoh-cpp-rev}, upstream: ''${ZENOH-CPP-VENDOR}) Fix this in overrides.nix.")
+        endif()
+        if(NOT ''${ZENOH-C-VENDOR} STREQUAL "${zenoh-c-rev}")
+          message(FATAL_ERROR "Mismatch in VCS_VERSION for zenoh_c_vendor (Nix: ${zenoh-c-rev}, upstream: ''${ZENOH-C-VENDOR}) Fix this in overrides.nix.")
+        endif()
+      EOF
+    '';
+    cargoDeps = self.rustPlatform.importCargoLock {
+      lockFile = "${zenoh-c-source.outPath}/Cargo.lock";
+      outputHashes = {
+        "zenoh-1.2.0" = "sha256-0E03X0ZjZNJr7FgqnbjXCM6gKKezSSFSC0HfAq7WhM4=";
+      };
+    };
   });
 }
