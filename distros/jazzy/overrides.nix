@@ -221,6 +221,12 @@ in {
     '';
   });
 
+  nav2-costmap-2d = rosSuper.nav2-costmap-2d.overrideAttrs({
+    ...
+  }: {
+      env.NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
+  });
+
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre.git";
     rev = "v1.12.10";
