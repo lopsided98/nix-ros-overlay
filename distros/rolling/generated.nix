@@ -172,6 +172,8 @@ self: super: {
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
+ apriltag-tools = self.callPackage ./apriltag-tools {};
+
  aruco = self.callPackage ./aruco {};
 
  aruco-msgs = self.callPackage ./aruco-msgs {};
@@ -587,8 +589,6 @@ self: super: {
  fastcdr = self.callPackage ./fastcdr {};
 
  fastdds = self.callPackage ./fastdds {};
-
- fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
 
  ffmpeg-encoder-decoder = self.callPackage ./ffmpeg-encoder-decoder {};
 
@@ -1776,6 +1776,12 @@ self: super: {
 
  rmw-desert = self.callPackage ./rmw-desert {};
 
+ rmw-fastrtps-cpp = self.callPackage ./rmw-fastrtps-cpp {};
+
+ rmw-fastrtps-dynamic-cpp = self.callPackage ./rmw-fastrtps-dynamic-cpp {};
+
+ rmw-fastrtps-shared-cpp = self.callPackage ./rmw-fastrtps-shared-cpp {};
+
  rmw-implementation = self.callPackage ./rmw-implementation {};
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
@@ -1962,6 +1968,8 @@ self: super: {
 
  rosidl-dynamic-typesupport = self.callPackage ./rosidl-dynamic-typesupport {};
 
+ rosidl-dynamic-typesupport-fastrtps = self.callPackage ./rosidl-dynamic-typesupport-fastrtps {};
+
  rosidl-generator-c = self.callPackage ./rosidl-generator-c {};
 
  rosidl-generator-cpp = self.callPackage ./rosidl-generator-cpp {};
@@ -1985,10 +1993,6 @@ self: super: {
  rosidl-typesupport-c = self.callPackage ./rosidl-typesupport-c {};
 
  rosidl-typesupport-cpp = self.callPackage ./rosidl-typesupport-cpp {};
-
- rosidl-typesupport-fastrtps-c = self.callPackage ./rosidl-typesupport-fastrtps-c {};
-
- rosidl-typesupport-fastrtps-cpp = self.callPackage ./rosidl-typesupport-fastrtps-cpp {};
 
  rosidl-typesupport-interface = self.callPackage ./rosidl-typesupport-interface {};
 
