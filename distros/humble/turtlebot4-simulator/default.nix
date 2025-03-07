@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, turtlebot4-ignition-bringup, turtlebot4-ignition-gui-plugins, turtlebot4-ignition-toolbox }:
 buildRosPackage {
   pname = "ros-humble-turtlebot4-simulator";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4_simulator-release/archive/release/humble/turtlebot4_simulator/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "115f69a45730f80728a1e1dd715bd178e7ea7ca2681504a9246a5a1dab78d93c";
+    url = "https://github.com/ros2-gbp/turtlebot4_simulator-release/archive/release/humble/turtlebot4_simulator/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "3b4098ed98500027d369eeb34e6997c6937c5262eaafeda87c6230e73f5e3601";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-lint-auto, ament-lint-common, apriltag-msgs, cv-bridge, image-transport, rclcpp, rclcpp-components, ros-environment, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-apriltag-draw";
-  version = "2.1.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/apriltag_detector-release/archive/release/humble/apriltag_draw/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "b2b2b56ae64ef3919c30b47008171f24ca55f39a10fa3603428941ee53904a1c";
+    url = "https://github.com/ros2-gbp/apriltag_detector-release/archive/release/humble/apriltag_draw/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "1e6f0a3b5bd0d392ef39b5ca494da1192599c122e0b5b10b4792fcee48ecd52d";
   };
 
   buildType = "ament_cmake";

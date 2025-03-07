@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-action, rcutils, ros-ign-interfaces, sensor-msgs, std-msgs, turtlebot4-msgs }:
 buildRosPackage {
   pname = "ros-humble-turtlebot4-ignition-toolbox";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot4_simulator-release/archive/release/humble/turtlebot4_ignition_toolbox/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "42658e3d77806f03ce146c03f26054dededc699ed0918741df345f7074104257";
+    url = "https://github.com/ros2-gbp/turtlebot4_simulator-release/archive/release/humble/turtlebot4_ignition_toolbox/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "52ecf57a2b4dae61d1471cfdd4dafb0265adbf1367eb504f5ea6ebfa68fdcbdb";
   };
 
   buildType = "ament_cmake";

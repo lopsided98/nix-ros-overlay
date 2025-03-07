@@ -2,19 +2,19 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, rclcpp, wireless-msgs, wirelesstools }:
+{ lib, buildRosPackage, fetchurl, diagnostic-updater, rclcpp, wireless-msgs, wirelesstools }:
 buildRosPackage {
   pname = "ros-humble-wireless-watcher";
-  version = "1.1.2-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/humble/wireless_watcher/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "7a63802fe7418741ba7ff3f1ab18ca5cceb6b6f1d2933ea916906b4d977fc264";
+    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/humble/wireless_watcher/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "7815cbb2e4cabac8be536ce26cddd61e593e47bda48d0701d5f6c8d831ca1fd7";
   };
 
   buildType = "ament_cmake";
-  propagatedBuildInputs = [ rclcpp wireless-msgs wirelesstools ];
+  propagatedBuildInputs = [ diagnostic-updater rclcpp wireless-msgs wirelesstools ];
 
   meta = {
     description = "A node which publishes connection information about a linux wireless interface.";

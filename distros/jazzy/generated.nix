@@ -162,11 +162,19 @@ self: super: {
 
  apriltag-detector = self.callPackage ./apriltag-detector {};
 
+ apriltag-detector-mit = self.callPackage ./apriltag-detector-mit {};
+
+ apriltag-detector-umich = self.callPackage ./apriltag-detector-umich {};
+
+ apriltag-draw = self.callPackage ./apriltag-draw {};
+
  apriltag-mit = self.callPackage ./apriltag-mit {};
 
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
+
+ apriltag-tools = self.callPackage ./apriltag-tools {};
 
  aruco = self.callPackage ./aruco {};
 
@@ -371,6 +379,8 @@ self: super: {
  clearpath-platform-msgs = self.callPackage ./clearpath-platform-msgs {};
 
  clearpath-ros2-socketcan-interface = self.callPackage ./clearpath-ros2-socketcan-interface {};
+
+ clearpath-sensors-description = self.callPackage ./clearpath-sensors-description {};
 
  clearpath-viz = self.callPackage ./clearpath-viz {};
 
@@ -2146,6 +2156,8 @@ self: super: {
 
  rmw-dds-common = self.callPackage ./rmw-dds-common {};
 
+ rmw-desert = self.callPackage ./rmw-desert {};
+
  rmw-fastrtps-cpp = self.callPackage ./rmw-fastrtps-cpp {};
 
  rmw-fastrtps-dynamic-cpp = self.callPackage ./rmw-fastrtps-dynamic-cpp {};
@@ -2961,6 +2973,8 @@ self: super: {
  velocity-controllers = self.callPackage ./velocity-controllers {};
 
  velodyne = self.callPackage ./velodyne {};
+
+ velodyne-description = self.callPackage ./velodyne-description {};
 
  velodyne-driver = self.callPackage ./velodyne-driver {};
 
