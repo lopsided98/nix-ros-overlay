@@ -1,7 +1,8 @@
 # Top level package set
 self:
+self.lib.composeManyExtensions [
 # Distro package set
-rosSelf: rosSuper: let
+(rosSelf: rosSuper: let
   lib = rosSelf.lib;
 in {
   angles = rosSuper.angles.overrideAttrs ({
@@ -201,10 +202,10 @@ in {
     }) ];
   });
 
-} //
+})
 # distutils was removed from standard library in Python 3.12, but many packages
 # still depend on it.
-(let
+(rosSelf: rosSuper: let
   addDistutils = pkg: pkg.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
@@ -267,3 +268,4 @@ in rosSuper.lib.genAttrs [
   "turtlebot3-teleop"
   "unique-id"
 ] (name: addDistutils rosSuper.${name}))
+]
