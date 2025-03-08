@@ -131,6 +131,12 @@ in {
         hash = "sha256-tEp4/1loFpjHKpNYuDz32iSzXJdrXGWmfJuBkO8d95w=";
         stripLen = 1;
       })
+      # Add logic for missing pcl/point_traits.h in newer PCL
+      (self.fetchpatch {
+        url = "https://github.com/ros-perception/perception_pcl/commit/85334c39256530cf27abf6accbc7b55e18a2da02.patch";
+        hash = "sha256-Xot4vmukT76Jivt0qZC/fNr8B1XQiPrDKbjet8v0DNs=";
+        stripLen = 1;
+      })
     ];
   });
 
