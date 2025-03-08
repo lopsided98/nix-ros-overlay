@@ -112,6 +112,61 @@ in {
     }) ];
   });
 
+  nav-2d-utils = rosSuper.nav-2d-utils.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Boost.Math 1.87 requires C++14
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail '-std=c++11' '-std=c++14'
+    '';
+  });
+
+  nav-core-adapter = rosSuper.nav-core-adapter.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Boost.Math 1.87 requires C++14
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail '-std=c++11' '-std=c++14'
+    '';
+  });
+
+  nav-core-adapters = rosSuper.nav-core-adapters.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Boost.Math 1.87 requires C++14
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail '-std=c++11' '-std=c++14'
+    '';
+  });
+
+  nav-core2 = rosSuper.nav-core2.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Boost.Math 1.87 requires C++14
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail '-std=c++11' '-std=c++14'
+    '';
+  });
+
+  nav-grid-iterators = rosSuper.nav-grid-iterators.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Boost.Math 1.87 requires C++14
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail '-std=c++11' '-std=c++14'
+    '';
+  });
+
+  nav-grid-server = rosSuper.nav-grid-server.overrideAttrs ({
+    buildInputs ? [], postPatch ? "", ...
+  }: {
+    # Boost.Math 1.87 requires C++14
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail '-std=c++11' '-std=c++14'
+    '';
+    buildInputs = buildInputs ++ [ self.yaml-cpp ];
+  });
+
   novatel-oem7-driver = (lib.patchExternalProjectGit rosSuper.novatel-oem7-driver {
     url = "https://github.com/novatel/novatel_edie";
     originalRev = "origin/dev-ros_install_prefix";
