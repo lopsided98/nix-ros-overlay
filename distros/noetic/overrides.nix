@@ -140,6 +140,10 @@ in {
     ];
   });
 
+  octomap = rosSuper.octomap.overrideAttrs ({ ... }: {
+    NIX_CFLAGS_COMPILE = [ "-Wno-error=template-id-cdtor" ];
+  });
+
   pybind11-catkin = lib.patchVendorUrl rosSuper.pybind11-catkin {
     url = "https://github.com/pybind/pybind11/archive/v2.10.3.zip";
     sha256 = "sha256-IBlmph3IJvGxh5okozF6HskhSpGMjrA1vi8ww+nPvcs=";
