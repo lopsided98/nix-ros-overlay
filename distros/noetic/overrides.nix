@@ -246,6 +246,16 @@ in {
     }) ];
   });
 
+  rviz = rosSuper.rviz.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # Replace boost::filesystem::extension()
+    patches = patches ++ [ (self.fetchpatch {
+      url = "https://github.com/ros-visualization/rviz/commit/250c0c2875758953f98f3b1982d11b55f527b295.patch";
+      hash = "sha256-dr1dPSStGFPimac/LaDmPfojFl+iIc6lz2lIhXf9rTE=";
+    }) ];
+  });
+
   rviz-map-plugin = rosSuper.rviz-map-plugin.overrideAttrs ({
     buildInputs ? [], ...
   } : {
