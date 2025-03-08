@@ -52,6 +52,11 @@ in {
     nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
   });
 
+  joy = rosSuper.joy.overrideAttrs ({ ... }: {
+    # Boost.Math 1.87 requires C++14
+    NIX_CFLAGS_COMPILE = ["-std=c++14"];
+  });
+
   laser-geometry = rosSuper.laser-geometry.overrideAttrs ({
     postPatch ? "", ...
   }: {
