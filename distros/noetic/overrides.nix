@@ -52,6 +52,16 @@ in {
     nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
   });
 
+  laser-geometry = rosSuper.laser-geometry.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Boost.Math 1.87 requires C++14
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail 'set(CMAKE_CXX_STANDARD 11)' 'set(CMAKE_CXX_STANDARD 14)'
+    '';
+  });
+
   libfranka = rosSuper.libfranka.overrideAttrs ({
     cmakeFlags ? [], ...
   }: {
