@@ -262,6 +262,15 @@ in {
     buildInputs = buildInputs ++ [ self.opencl-clhpp ];
   });
 
+  simple-message = rosSuper.simple-message.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Boost.Math requires C++14
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail "set(CMAKE_CXX_STANDARD 11)" "set(CMAKE_CXX_STANDARD 14)"
+    '';
+  });
+
   sophus = rosSuper.sophus.overrideAttrs ({
     postPatch ? "", ...
   }: {
