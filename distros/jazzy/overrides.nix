@@ -180,6 +180,18 @@ in {
     NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
   });
 
+  nav2-rviz-plugins = rosSuper.nav2-rviz-plugins.overrideAttrs({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = "https://github.com/ros-navigation/navigation2/pull/4974.patch";
+        hash = "sha256-XFQjW9eb/CVF+wDgNTG+wyXoz1Hwa3qEU/cIXRcBY6Y=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     tarSourceArgs.hook = let
       version = "1.79";
