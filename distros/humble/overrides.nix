@@ -158,12 +158,45 @@ in with lib; {
     '';
   });
 
+  # This is a newer version than the build system tries to download,
+  # cleaned definition to fix build for macOS on ARM64 since v1.12.9
   rviz-ogre-vendor = (patchVendorUrl rosSuper.rviz-ogre-vendor {
-    url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
-    sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
-  }).overrideAttrs ({ ... }: {
+    originalUrl = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
+    url = "https://github.com/OGRECave/ogre/archive/v1.12.10.zip";
+    hash = "sha256-lZDLywgShlWeWah7oTnyKBTqzN505LJKbQbgXRfJXlk=";
+  }).overrideAttrs ({
+    propagatedBuildInputs ? [], nativeBuildInputs ? [], patches ? [], prePatch ? "", postPatch ? "", ...
+  }: {
     # Prevent replacing $out/opt/.. with $out/var/empty/..
     dontFixCmake = true;
+    propagatedBuildInputs = propagatedBuildInputs ++ [ self.pugixml self.glew ];
+    nativeBuildInputs = nativeBuildInputs ++ lib.optionals self.stdenv.isDarwin [
+      self.darwin.apple_sdk.frameworks.Foundation
+      self.darwin.apple_sdk.frameworks.AppKit
+    ];
+    patches = patches ++ [
+      # Fix build failures on macOS + Apple Silicon
+      (self.fetchpatch {
+        url = "https://github.com/ros2/rviz/commit/0ef2b56373b98b5536f0f817c11dc2b5549f391d.patch";
+        hash = "sha256-tS8UGHih29T8AKCe+/ZEEEYDKNyY3bZRR/0nhiWaXlU=";
+        stripLen = 2;
+        extraPrefix = "";
+        postFetch = ''
+          substituteInPlace $downloadedFile \
+          --replace-fail '@@ -191,7 +195,7 @@' '@@ -188,7 +192,7 @@' \
+          --replace-fail 'relocatable.patch' 'fix-arm64.diff' \
+          --replace-fail 'C4267.patch' 'relocatable.patch'
+        '';
+      })
+    ];
+    prePatch = prePatch + ''
+      echo -n > fix-arm64.diff
+    '';
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+      --replace-fail 'ogre-v1.12.1' 'ogre-v1.12.10' \
+      --replace-fail 'URL_MD5 cdbea4006d223c173e0a93864111b936' "URL_MD5 c1b870955efddf539385094e9034e7f7"
+    '';
   });
 
   shared-queues-vendor = patchVendorUrl (patchVendorUrl rosSuper.shared-queues-vendor {

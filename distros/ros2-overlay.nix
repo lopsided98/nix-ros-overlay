@@ -235,7 +235,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
   }: {
     dontWrapQtApps = false;
     nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-    qtWrapperArgs = qtWrapperArgs ++ [
+    qtWrapperArgs = qtWrapperArgs ++ optionals self.stdenv.isLinux [
       # Use X11 by default in RViz2.
       # https://github.com/ros-visualization/rviz/issues/1442
       "--set-default QT_QPA_PLATFORM xcb"
