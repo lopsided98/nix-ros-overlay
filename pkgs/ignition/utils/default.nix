@@ -1,9 +1,15 @@
-{ lib, stdenv, fetchFromGitHub, cmake, ignition
-, ignition-cmake ? ignition.cmake
-, majorVersion ? "1"
-, version ? "1.5.1"
-, srcHash ? "sha256-Ymlw1SBoSlHwxe/4E3jdMy8ECCFNy8YGboqTQi6UIs4="
-, ... }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  cmake,
+  ignition,
+  ignition-cmake ? ignition.cmake,
+  majorVersion ? "1",
+  version ? "1.5.1",
+  srcHash ? "sha256-Ymlw1SBoSlHwxe/4E3jdMy8ECCFNy8YGboqTQi6UIs4=",
+  ...
+}:
 
 stdenv.mkDerivation rec {
   pname = "ignition-utils${majorVersion}";
@@ -17,7 +23,10 @@ stdenv.mkDerivation rec {
     hash = srcHash;
   };
 
-  nativeBuildInputs = [ cmake ignition-cmake ];
+  nativeBuildInputs = [
+    cmake
+    ignition-cmake
+  ];
 
   meta = with lib; {
     homepage = "https://ignitionrobotics.org/libs/common";

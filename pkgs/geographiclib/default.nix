@@ -1,11 +1,23 @@
-{ lib, stdenv, fetchurl, cmake }:
+{
+  lib,
+  stdenv,
+  fetchurl,
+  cmake,
+}:
 
 let
-  fetchData = { subdir, file, hash }: fetchurl {
-    url = "mirror://sourceforge/geographiclib/${subdir}-distrib/${file}.tar.bz2";
-    inherit hash;
-  };
-in stdenv.mkDerivation rec {
+  fetchData =
+    {
+      subdir,
+      file,
+      hash,
+    }:
+    fetchurl {
+      url = "mirror://sourceforge/geographiclib/${subdir}-distrib/${file}.tar.bz2";
+      inherit hash;
+    };
+in
+stdenv.mkDerivation rec {
   pname = "geographiclib";
   version = "2.1.1";
 
@@ -24,7 +36,11 @@ in stdenv.mkDerivation rec {
   ];
 
   data = [
-    (fetchData { subdir = "geoids"; file = "egm96-5"; hash = "sha256-xGIk+Pcj3JFdlxefThWAqY1sdC/iuCzY/vDsqq0T5hQ="; })
+    (fetchData {
+      subdir = "geoids";
+      file = "egm96-5";
+      hash = "sha256-xGIk+Pcj3JFdlxefThWAqY1sdC/iuCzY/vDsqq0T5hQ=";
+    })
   ];
 
   postInstall = ''

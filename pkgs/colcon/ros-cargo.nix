@@ -1,5 +1,12 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, colcon-library-path
-, colcon-cargo, colcon-ros }:
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  colcon-core,
+  colcon-library-path,
+  colcon-cargo,
+  colcon-ros,
+}:
 
 buildPythonPackage rec {
   pname = "colcon-ros-cargo";

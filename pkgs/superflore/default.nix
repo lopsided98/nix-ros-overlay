@@ -1,6 +1,20 @@
-{ lib, buildPythonPackage, fetchFromGitHub, xmltodict, termcolor, setuptools
-, rosinstall-generator, rosdistro, rosdep, GitPython, requests, docker, pyyaml
-, PyGithub, catkin-pkg, rospkg
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  xmltodict,
+  termcolor,
+  setuptools,
+  rosinstall-generator,
+  rosdistro,
+  rosdep,
+  GitPython,
+  requests,
+  docker,
+  pyyaml,
+  PyGithub,
+  catkin-pkg,
+  rospkg,
 }:
 
 buildPythonPackage rec {

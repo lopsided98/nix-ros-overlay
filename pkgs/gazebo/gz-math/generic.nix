@@ -1,6 +1,15 @@
-{ lib, stdenv, fetchFromGitHub, cmake, gz-cmake, gz-utils, eigen
-, version, srcHash
-, ... }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  cmake,
+  gz-cmake,
+  gz-utils,
+  eigen,
+  version,
+  srcHash,
+  ...
+}:
 
 stdenv.mkDerivation rec {
   pname = "gz-math${lib.versions.major version}";
@@ -14,8 +23,14 @@ stdenv.mkDerivation rec {
     hash = srcHash;
   };
 
-  nativeBuildInputs = [ cmake gz-cmake ];
-  buildInputs = [ gz-utils eigen ];
+  nativeBuildInputs = [
+    cmake
+    gz-cmake
+  ];
+  buildInputs = [
+    gz-utils
+    eigen
+  ];
 
   meta = with lib; {
     homepage = "https://gazebosim.org/libs/math";

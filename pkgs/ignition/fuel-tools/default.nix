@@ -1,10 +1,22 @@
-{ lib, stdenv, fetchFromGitHub, cmake, ignition
-, ignition-cmake ? ignition.cmake, ignition-common ? ignition.common
-, ignition-msgs ? ignition.msgs, tinyxml-2, curl, jsoncpp, libyaml, libzip
-, majorVersion ? "7"
-, version ? "7.2.2"
-, srcHash ? "sha256-SgU7OuD6OoSvC2UJyZUFjc6IOMY7tukGGg5Ef5pGCPY="
-, ... }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  cmake,
+  ignition,
+  ignition-cmake ? ignition.cmake,
+  ignition-common ? ignition.common,
+  ignition-msgs ? ignition.msgs,
+  tinyxml-2,
+  curl,
+  jsoncpp,
+  libyaml,
+  libzip,
+  majorVersion ? "7",
+  version ? "7.2.2",
+  srcHash ? "sha256-SgU7OuD6OoSvC2UJyZUFjc6IOMY7tukGGg5Ef5pGCPY=",
+  ...
+}:
 
 stdenv.mkDerivation rec {
   pname = "ignition-fuel-tools${majorVersion}";

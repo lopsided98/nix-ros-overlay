@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 with lib;
 
@@ -15,7 +20,8 @@ let
     description = "ROS package set overlay";
     check = isFunction;
   };
-in {
+in
+{
   # Interface
 
   options.services.ros = {
@@ -38,7 +44,7 @@ in {
 
     overlays = mkOption {
       type = types.listOf overlayType;
-      default = [];
+      default = [ ];
       apply = composeManyExtensions;
       description = ''
         Set of package overlays to apply to ROS package set for the configured
@@ -64,7 +70,7 @@ in {
     };
 
     systemPackages = mkOption {
-      default = p: [];
+      default = p: [ ];
       example = literalExample "p: with p; [ roslaunch ]";
       description = ''
         Packages to add to a ROS environment that will be added to the system
@@ -94,12 +100,16 @@ in {
       ROS_MASTER_URI = cfg.masterUri;
     };
 
-    environment.systemPackages = let
-      paths = cfg.systemPackages cfg.pkgs;
-    in mkIf (length paths != 0) [ (cfg.pkgs.buildEnv {
-      name = "ros-system-env";
-      inherit paths;
-      extraOutputsToInstall = optional config.environment.enableDebugInfo "debug";
-    }) ];
+    environment.systemPackages =
+      let
+        paths = cfg.systemPackages cfg.pkgs;
+      in
+      mkIf (length paths != 0) [
+        (cfg.pkgs.buildEnv {
+          name = "ros-system-env";
+          inherit paths;
+          extraOutputsToInstall = optional config.environment.enableDebugInfo "debug";
+        })
+      ];
   };
 }

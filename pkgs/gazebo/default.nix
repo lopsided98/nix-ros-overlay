@@ -1,13 +1,44 @@
-{ lib, mkDerivation, fetchpatch, fetchurl, cmake, pkg-config, ronn, libGL
-, openal, hdf5, curl, tinyxml, tinyxml-2, libtar, gts, libusb1, qtbase, gdal
-, libuuid, graphviz, libsForQt5, freeimage, boost, protobuf, sdformat, tbb
-, ogre1_9, ffmpeg, ignition, ignition-cmake ? ignition.cmake0
-, ignition-common ? ignition.common, ignition-math ? ignition.math4
-, ignition-transport ? ignition.transport8, ignition-msgs ? ignition.msgs5
-, ignition-fuel-tools ? ignition.fuel-tools4
-, wrapGAppsHook
+{
+  lib,
+  mkDerivation,
+  fetchpatch,
+  fetchurl,
+  cmake,
+  pkg-config,
+  ronn,
+  libGL,
+  openal,
+  hdf5,
+  curl,
+  tinyxml,
+  tinyxml-2,
+  libtar,
+  gts,
+  libusb1,
+  qtbase,
+  gdal,
+  libuuid,
+  graphviz,
+  libsForQt5,
+  freeimage,
+  boost,
+  protobuf,
+  sdformat,
+  tbb,
+  ogre1_9,
+  ffmpeg,
+  ignition,
+  ignition-cmake ? ignition.cmake0,
+  ignition-common ? ignition.common,
+  ignition-math ? ignition.math4,
+  ignition-transport ? ignition.transport8,
+  ignition-msgs ? ignition.msgs5,
+  ignition-fuel-tools ? ignition.fuel-tools4,
+  wrapGAppsHook,
 
-, bullet, withBulletEngineSupport ? false }:
+  bullet,
+  withBulletEngineSupport ? false,
+}:
 
 mkDerivation rec {
   pname = "gazebo";
@@ -22,7 +53,12 @@ mkDerivation rec {
 
   cmakeFlags = [ "-DUSE_HOST_CFLAGS=False" ];
 
-  nativeBuildInputs = [ cmake pkg-config ronn wrapGAppsHook ];
+  nativeBuildInputs = [
+    cmake
+    pkg-config
+    ronn
+    wrapGAppsHook
+  ];
 
   buildInputs = [
     libGL

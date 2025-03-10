@@ -1,9 +1,19 @@
-{ lib, stdenv, fetchFromGitHub, fetchpatch, cmake, tinyxml-2, ignition
-, ignition-cmake ? ignition.cmake, protobuf, ignition-math ? ignition.math
-, majorVersion ? "8"
-, version ? "8.7.0"
-, srcHash ? "sha256-hG4UJfcq6DsyMqTWIcUQ15UCQNfdzTzwvJBpR9kmu84="
-, ... }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  fetchpatch,
+  cmake,
+  tinyxml-2,
+  ignition,
+  ignition-cmake ? ignition.cmake,
+  protobuf,
+  ignition-math ? ignition.math,
+  majorVersion ? "8",
+  version ? "8.7.0",
+  srcHash ? "sha256-hG4UJfcq6DsyMqTWIcUQ15UCQNfdzTzwvJBpR9kmu84=",
+  ...
+}:
 
 stdenv.mkDerivation rec {
   pname = "ignition-msgs${majorVersion}";
@@ -18,14 +28,20 @@ stdenv.mkDerivation rec {
   };
 
   # Don't require Protobuf 3
-  patches = [ (fetchpatch {
-    url = "https://github.com/gazebosim/gz-msgs/commit/0c0926c37042ac8f5aeb49ac36101acd3e084c6b.patch";
-    hash = "sha256-QnR1WtB4gbgyJKbQ4doMhfSjJBksEeQ3Us4y9KqCWeY=";
-  }) ];
+  patches = [
+    (fetchpatch {
+      url = "https://github.com/gazebosim/gz-msgs/commit/0c0926c37042ac8f5aeb49ac36101acd3e084c6b.patch";
+      hash = "sha256-QnR1WtB4gbgyJKbQ4doMhfSjJBksEeQ3Us4y9KqCWeY=";
+    })
+  ];
 
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];
-  propagatedBuildInputs = [ protobuf ignition-math tinyxml-2 ];
+  propagatedBuildInputs = [
+    protobuf
+    ignition-math
+    tinyxml-2
+  ];
 
   meta = with lib; {
     homepage = "https://ignitionrobotics.org/libs/msgs";

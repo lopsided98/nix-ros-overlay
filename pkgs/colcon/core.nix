@@ -1,31 +1,50 @@
-{ lib, buildPythonApplication, buildPythonPackage, makeWrapper, fetchPypi
-, python, distlib, empy_3, pytest, pytest-cov, pytest-repeat
-, pytest-rerunfailures, setuptools, pytestCheckHook, flake8, flake8-blind-except
-, flake8-docstrings, flake8-import-order, pep8-naming, pylint
+{
+  lib,
+  buildPythonApplication,
+  buildPythonPackage,
+  makeWrapper,
+  fetchPypi,
+  python,
+  distlib,
+  empy_3,
+  pytest,
+  pytest-cov,
+  pytest-repeat,
+  pytest-rerunfailures,
+  setuptools,
+  pytestCheckHook,
+  flake8,
+  flake8-blind-except,
+  flake8-docstrings,
+  flake8-import-order,
+  pep8-naming,
+  pylint,
 }:
 
 let
-  withExtensions = extensions: buildPythonApplication {
-    pname = "colcon";
-    inherit (package) version;
-    format = "other";
+  withExtensions =
+    extensions:
+    buildPythonApplication {
+      pname = "colcon";
+      inherit (package) version;
+      format = "other";
 
-    dontUnpack = true;
-    dontBuild = true;
-    doCheck = false;
+      dontUnpack = true;
+      dontBuild = true;
+      doCheck = false;
 
-    nativeBuildInputs = [ makeWrapper ];
-    buildInputs = [ package ] ++ extensions;
+      nativeBuildInputs = [ makeWrapper ];
+      buildInputs = [ package ] ++ extensions;
 
-    installPhase = ''
-      makeWrapper '${package}/bin/colcon' "$out/bin/colcon" \
-        --prefix PYTHONPATH : "$PYTHONPATH"
-    '';
+      installPhase = ''
+        makeWrapper '${package}/bin/colcon' "$out/bin/colcon" \
+          --prefix PYTHONPATH : "$PYTHONPATH"
+      '';
 
-    passthru = package.passthru // {
-      withExtensions = moreExtensions: withExtensions (moreExtensions ++ extensions);
+      passthru = package.passthru // {
+        withExtensions = moreExtensions: withExtensions (moreExtensions ++ extensions);
+      };
     };
-  };
 
   package = buildPythonPackage rec {
     pname = "colcon-core";
@@ -76,4 +95,5 @@ let
       maintainers = with maintainers; [ lopsided98 ];
     };
   };
-in package
+in
+package

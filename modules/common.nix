@@ -1,11 +1,17 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 with lib;
 
 let
   ros1Cfg = config.services.ros;
   ros2Cfg = config.services.ros2;
-in {
+in
+{
   # Interface
 
   # Implementation
