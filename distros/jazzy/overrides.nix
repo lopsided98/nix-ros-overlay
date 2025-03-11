@@ -185,7 +185,7 @@ in {
   }: {
     patches = patches ++ [
       (self.fetchpatch {
-        url = "https://github.com/ros-navigation/navigation2/pull/4974.patch";
+        url = "https://github.com/ros-navigation/navigation2/commit/e6f500e5b7528737f4a883598293b62c72c83946.patch";
         hash = "sha256-XFQjW9eb/CVF+wDgNTG+wyXoz1Hwa3qEU/cIXRcBY6Y=";
         stripLen = 1;
       })
