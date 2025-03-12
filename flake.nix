@@ -21,6 +21,7 @@
         example-turtlebot3-gazebo = import ./examples/turtlebot3-gazebo.nix { inherit pkgs; };
         example-ros2-basic = import ./examples/ros2-basic.nix { inherit pkgs; };
         example-ros2-gz = import ./examples/ros2-gz.nix { inherit pkgs; };
+        example-ros2-turtlebot4-gz = import ./examples/ros2-turtlebot4-gz.nix { inherit pkgs; };
 
         # Development environment for the custom GitHub action
         nix-ros-build-action = pkgs.callPackage ./.github/actions/nix-ros-build-action/shell.nix { };
