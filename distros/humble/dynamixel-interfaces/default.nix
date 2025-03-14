@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-dynamixel-interfaces";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_interfaces-release/archive/release/humble/dynamixel_interfaces/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "ae34f8bbe347f3463f8f32d927f8503db44d3a272f4c6862a1767c55257d8d8c";
+    url = "https://github.com/ros2-gbp/dynamixel_interfaces-release/archive/release/humble/dynamixel_interfaces/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "b31e0a947f62889e09dee727360e4ebe8d2a4b3d8877b1e312be53b27f29dba8";
   };
 
   buildType = "ament_cmake";

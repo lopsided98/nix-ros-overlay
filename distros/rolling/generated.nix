@@ -214,8 +214,6 @@ self: super: {
 
  autoware-internal-planning-msgs = self.callPackage ./autoware-internal-planning-msgs {};
 
- autoware-lanelet2-extension = self.callPackage ./autoware-lanelet2-extension {};
-
  autoware-lanelet2-extension-python = self.callPackage ./autoware-lanelet2-extension-python {};
 
  autoware-lint-common = self.callPackage ./autoware-lint-common {};
@@ -231,8 +229,6 @@ self: super: {
  autoware-sensing-msgs = self.callPackage ./autoware-sensing-msgs {};
 
  autoware-system-msgs = self.callPackage ./autoware-system-msgs {};
-
- autoware-utils = self.callPackage ./autoware-utils {};
 
  autoware-v2x-msgs = self.callPackage ./autoware-v2x-msgs {};
 
@@ -1361,6 +1357,8 @@ self: super: {
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nmea-navsat-driver = self.callPackage ./nmea-navsat-driver {};
+
+ nobleo-socketcan-bridge = self.callPackage ./nobleo-socketcan-bridge {};
 
  nodl-python = self.callPackage ./nodl-python {};
 
