@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, rcpputils, rcutils, rmw, rmw-dds-common, rosidl-cmake, rosidl-runtime-c, rosidl-typesupport-introspection-c, rosidl-typesupport-introspection-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-rmw-desert";
-  version = "1.0.2-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_desert-release/archive/release/jazzy/rmw_desert/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "1400df334619467e97bb95f2f0dfe4d967493d026c8617c0cb05ed459c3e9f27";
+    url = "https://github.com/ros2-gbp/rmw_desert-release/archive/release/jazzy/rmw_desert/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "8135a71d212e182576a81cf19db5f1073f8bac2cd4ee5f0a263c781dcb70c434";
   };
 
   buildType = "ament_cmake";

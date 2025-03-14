@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-clearpath-mounts-description";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_mounts_description/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "6f005d7a20fe0c614d8edef883b608dd5b007485ab2d4b21d49f5b406dc7ef46";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_mounts_description/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "157c3bb291f61b6fcc2c49b33ca44f30c4e44758fbab08ac1a1e2b30fbe69dd9";
   };
 
   buildType = "ament_cmake";
