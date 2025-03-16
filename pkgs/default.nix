@@ -96,6 +96,8 @@ self: super: with self.lib; {
 
       colcon-library-path = pyFinal.callPackage ./colcon/library-path.nix { };
 
+      colcon-meson = pyFinal.callPackage ./colcon/meson.nix { };
+
       colcon-metadata = pyFinal.callPackage ./colcon/metadata.nix { };
 
       colcon-mixin = pyFinal.callPackage ./colcon/mixin.nix { };
