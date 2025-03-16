@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-kortex-api";
-  version = "0.2.2-r1";
+  version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/humble/kortex_api/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "b57e60cf16e5373ff7ee2c095f60d007df753c745c487f06de2246e4062ee4bd";
+    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/humble/kortex_api/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
+    sha256 = "72bb72039b721b75834bea36c636e6363c2b0796889132f2164085f7c25a80b1";
   };
 
   buildType = "ament_cmake";
