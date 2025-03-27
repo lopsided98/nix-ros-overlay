@@ -121,6 +121,22 @@ rosSelf: rosSuper: with rosSelf.lib; {
     cmakeFlags = cmakeFlags ++ [ "-DDOWNLOAD_TOML_LIB=OFF" ];
   });
 
+  libcamera = rosSuper.libcamera.overrideAttrs ({
+    postPatch ? "",
+    nativeBuildInputs ? [], ...
+  }: {
+    # Nixpkgs defaults to enabling all optional features, but we
+    # enable only features for which ROS package.xml declares
+    # dependencies.
+    mesonAutoFeatures = "auto";
+    postPatch = postPatch + ''
+      patchShebangs --build \
+        src/py/libcamera/*.py \
+        utils
+    '';
+    nativeBuildInputs = nativeBuildInputs ++ [ self.ninja ];
+  });
+
   # Get rid of nlohmann_json vendoring
   librealsense2 = rosSuper.librealsense2.overrideAttrs ({
     buildInputs ? [], postPatch ? "", ...

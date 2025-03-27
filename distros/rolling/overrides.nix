@@ -189,24 +189,6 @@ in {
     };
   };
 
-  libcamera = rosSuper.libcamera.overrideAttrs ({
-    postPatch ? "",
-    nativeBuildInputs ? [],
-    ...
-  }: {
-    # Nixpkgs defaults to enabling all optional features, but we
-    # enable only features for which ROS package.xml declares
-    # dependencies.
-    mesonAutoFeatures = "auto";
-    postPatch = postPatch + ''
-      patchShebangs --build \
-        src/py/libcamera/*.py \
-        utils/codegen/*.py \
-        utils/codegen/ipc/*.py
-    '';
-    nativeBuildInputs = nativeBuildInputs ++ [ self.ninja ];
-  });
-
   libphidget22 = lib.patchVendorUrl rosSuper.libphidget22 {
     url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.19.20240304.tar.gz";
     hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
