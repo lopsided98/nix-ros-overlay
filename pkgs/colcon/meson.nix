@@ -15,9 +15,6 @@ buildPythonPackage rec {
     meson
   ];
 
-  # Requires unpackaged dependencies
-  #doCheck = false;
-
   meta = with lib; {
     description = "Extension for colcon to support Meson packages";
     homepage = "https://colcon.readthedocs.io";
