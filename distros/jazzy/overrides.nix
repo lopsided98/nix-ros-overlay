@@ -221,6 +221,30 @@ in {
     '';
   });
 
+  nav2-behavior-tree = rosSuper.nav2-behavior-tree.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
+  });
+
+  nav2-costmap-2d = rosSuper.nav2-costmap-2d.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
+  });
+
+  nav2-rviz-plugins = rosSuper.nav2-rviz-plugins.overrideAttrs({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = "https://github.com/ros-navigation/navigation2/commit/e6f500e5b7528737f4a883598293b62c72c83946.patch";
+        hash = "sha256-XFQjW9eb/CVF+wDgNTG+wyXoz1Hwa3qEU/cIXRcBY6Y=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre.git";
     rev = "v1.12.10";
