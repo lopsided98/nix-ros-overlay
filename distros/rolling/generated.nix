@@ -98,6 +98,8 @@ self: super: {
 
  ament-cmake-ros = self.callPackage ./ament-cmake-ros {};
 
+ ament-cmake-ros-core = self.callPackage ./ament-cmake-ros-core {};
+
  ament-cmake-target-dependencies = self.callPackage ./ament-cmake-target-dependencies {};
 
  ament-cmake-test = self.callPackage ./ament-cmake-test {};
@@ -427,6 +429,8 @@ self: super: {
  dummy-sensors = self.callPackage ./dummy-sensors {};
 
  dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
+
+ dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
 
  dynamixel-interfaces = self.callPackage ./dynamixel-interfaces {};
 
@@ -949,6 +953,8 @@ self: super: {
  launch-xml = self.callPackage ./launch-xml {};
 
  launch-yaml = self.callPackage ./launch-yaml {};
+
+ ld08-driver = self.callPackage ./ld08-driver {};
 
  lely-core-libraries = self.callPackage ./lely-core-libraries {};
 
@@ -1804,6 +1810,8 @@ self: super: {
 
  ros2-control = self.callPackage ./ros2-control {};
 
+ ros2-control-cmake = self.callPackage ./ros2-control-cmake {};
+
  ros2-control-test-assets = self.callPackage ./ros2-control-test-assets {};
 
  ros2-controllers = self.callPackage ./ros2-controllers {};
@@ -2573,6 +2581,8 @@ self: super: {
  zbar-ros = self.callPackage ./zbar-ros {};
 
  zbar-ros-interfaces = self.callPackage ./zbar-ros-interfaces {};
+
+ zed-msgs = self.callPackage ./zed-msgs {};
 
  zenoh-bridge-dds = self.callPackage ./zenoh-bridge-dds {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, rcpputils, rcutils, rmw, rmw-dds-common, rosidl-cmake, rosidl-runtime-c, rosidl-typesupport-introspection-c, rosidl-typesupport-introspection-cpp }:
 buildRosPackage {
   pname = "ros-rolling-rmw-desert";
-  version = "2.0.0-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_desert-release/archive/release/rolling/rmw_desert/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "c3d7beb6b5dd49058ae14820d280a2ecea25df22e9013e82b0e9bf114db447f7";
+    url = "https://github.com/ros2-gbp/rmw_desert-release/archive/release/rolling/rmw_desert/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "04ae305c71a316ef526449a2bd801f0e66d2d20255f9e40e41b5237fc57641e2";
   };
 
   buildType = "ament_cmake";

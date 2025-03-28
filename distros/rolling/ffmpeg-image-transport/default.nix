@@ -2,22 +2,22 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-ros, ament-lint-auto, ament-lint-common, cv-bridge, ffmpeg, ffmpeg-image-transport-msgs, image-transport, libogg, opencv, pkg-config, pluginlib, rclcpp, rcutils, ros-environment, sensor-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-ros, ament-lint-auto, ament-lint-common, ffmpeg-encoder-decoder, ffmpeg-image-transport-msgs, image-transport, pluginlib, rclcpp, rcutils, ros-environment, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ffmpeg-image-transport";
-  version = "1.0.2-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ffmpeg_image_transport-release/archive/release/rolling/ffmpeg_image_transport/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "71e6c369c6c739528613ced0206c9d54877e7d9b488cca51eec57012fae0b9d1";
+    url = "https://github.com/ros2-gbp/ffmpeg_image_transport-release/archive/release/rolling/ffmpeg_image_transport/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "f41ec659fe37c3c7dcf41d51d1f1222957935e363e0b74c2e6a5bfc73f78e99b";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-ros pkg-config ros-environment ];
+  buildInputs = [ ament-cmake ament-cmake-ros ros-environment ];
   checkInputs = [ ament-cmake-clang-format ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ cv-bridge ffmpeg ffmpeg-image-transport-msgs image-transport libogg opencv opencv.cxxdev pluginlib rclcpp rcutils sensor-msgs std-msgs ];
-  nativeBuildInputs = [ ament-cmake ament-cmake-ros pkg-config ros-environment ];
+  propagatedBuildInputs = [ ffmpeg-encoder-decoder ffmpeg-image-transport-msgs image-transport pluginlib rclcpp rcutils sensor-msgs std-msgs ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-ros ros-environment ];
 
   meta = {
     description = "ffmpeg_image_transport provides a plugin to image_transport for

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-sensor-msgs-py";
-  version = "5.3.5-r1";
+  version = "5.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/jazzy/sensor_msgs_py/5.3.5-1.tar.gz";
-    name = "5.3.5-1.tar.gz";
-    sha256 = "e4a35b1bc77d6227a414a70898f61f29fbf9c133128b6b739932984c4222221f";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/jazzy/sensor_msgs_py/5.3.6-1.tar.gz";
+    name = "5.3.6-1.tar.gz";
+    sha256 = "9e241162862085300d2177fec506efd4568f3f0fe2d3405c163cd7a51c3a196e";
   };
 
   buildType = "ament_python";
