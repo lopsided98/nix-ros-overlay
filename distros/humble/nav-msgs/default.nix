@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-nav-msgs";
-  version = "4.2.4-r1";
+  version = "4.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/nav_msgs/4.2.4-1.tar.gz";
-    name = "4.2.4-1.tar.gz";
-    sha256 = "2069a52f28279403153bf3040cf90711ded75ee259991c058afa0294eb027829";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/nav_msgs/4.8.0-1.tar.gz";
+    name = "4.8.0-1.tar.gz";
+    sha256 = "e19eb546e8a2c8b4a732e77e0b1fbfca6dea6cd58879a36f4e7cdc6e0438ffd6";
   };
 
   buildType = "ament_cmake";

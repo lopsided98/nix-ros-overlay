@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-cmake-xmllint, ament-lint-auto, freetype, libGL, libGLU, xorg }:
 buildRosPackage {
   pname = "ros-rolling-rviz-ogre-vendor";
-  version = "14.4.2-r1";
+  version = "14.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/rolling/rviz_ogre_vendor/14.4.2-1.tar.gz";
-    name = "14.4.2-1.tar.gz";
-    sha256 = "274b5005343f9235f0092f7943c4dab0e3ffb23e7c52e621152311bb241d9667";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/rolling/rviz_ogre_vendor/14.4.4-1.tar.gz";
+    name = "14.4.4-1.tar.gz";
+    sha256 = "9f735a558024f420bdc040a1a0be61130a99c4c6197e4f239de26d2087f62c06";
   };
 
   buildType = "ament_cmake";

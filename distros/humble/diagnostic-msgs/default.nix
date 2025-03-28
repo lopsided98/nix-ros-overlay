@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-diagnostic-msgs";
-  version = "4.2.4-r1";
+  version = "4.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/diagnostic_msgs/4.2.4-1.tar.gz";
-    name = "4.2.4-1.tar.gz";
-    sha256 = "fe0c1716635ac0aa987b25be50d2489d6898c6da7005bf4c4c2ee9f6c9466283";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/diagnostic_msgs/4.8.0-1.tar.gz";
+    name = "4.8.0-1.tar.gz";
+    sha256 = "cd72c4479f3db25192f2ee64279fd07b231fe1310835b0d4cc33d8c09f82d3a4";
   };
 
   buildType = "ament_cmake";

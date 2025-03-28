@@ -1466,6 +1466,8 @@ self: super: {
 
  launch-yaml = self.callPackage ./launch-yaml {};
 
+ ld08-driver = self.callPackage ./ld08-driver {};
+
  lely-core-libraries = self.callPackage ./lely-core-libraries {};
 
  leo = self.callPackage ./leo {};
@@ -1589,6 +1591,8 @@ self: super: {
  mavros-msgs = self.callPackage ./mavros-msgs {};
 
  mcap-vendor = self.callPackage ./mcap-vendor {};
+
+ mecanum-drive-controller = self.callPackage ./mecanum-drive-controller {};
 
  menge-vendor = self.callPackage ./menge-vendor {};
 
