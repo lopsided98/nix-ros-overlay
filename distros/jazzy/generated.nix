@@ -162,11 +162,19 @@ self: super: {
 
  apriltag-detector = self.callPackage ./apriltag-detector {};
 
+ apriltag-detector-mit = self.callPackage ./apriltag-detector-mit {};
+
+ apriltag-detector-umich = self.callPackage ./apriltag-detector-umich {};
+
+ apriltag-draw = self.callPackage ./apriltag-draw {};
+
  apriltag-mit = self.callPackage ./apriltag-mit {};
 
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
+
+ apriltag-tools = self.callPackage ./apriltag-tools {};
 
  aruco = self.callPackage ./aruco {};
 
@@ -371,6 +379,10 @@ self: super: {
  clearpath-platform-msgs = self.callPackage ./clearpath-platform-msgs {};
 
  clearpath-ros2-socketcan-interface = self.callPackage ./clearpath-ros2-socketcan-interface {};
+
+ clearpath-sensors-description = self.callPackage ./clearpath-sensors-description {};
+
+ clearpath-tests = self.callPackage ./clearpath-tests {};
 
  clearpath-viz = self.callPackage ./clearpath-viz {};
 
@@ -1662,6 +1674,8 @@ self: super: {
 
  nmea-navsat-driver = self.callPackage ./nmea-navsat-driver {};
 
+ nobleo-socketcan-bridge = self.callPackage ./nobleo-socketcan-bridge {};
+
  nodl-python = self.callPackage ./nodl-python {};
 
  nodl-to-policy = self.callPackage ./nodl-to-policy {};
@@ -2145,6 +2159,8 @@ self: super: {
  rmw-cyclonedds-cpp = self.callPackage ./rmw-cyclonedds-cpp {};
 
  rmw-dds-common = self.callPackage ./rmw-dds-common {};
+
+ rmw-desert = self.callPackage ./rmw-desert {};
 
  rmw-fastrtps-cpp = self.callPackage ./rmw-fastrtps-cpp {};
 
@@ -2961,6 +2977,8 @@ self: super: {
  velocity-controllers = self.callPackage ./velocity-controllers {};
 
  velodyne = self.callPackage ./velodyne {};
+
+ velodyne-description = self.callPackage ./velodyne-description {};
 
  velodyne-driver = self.callPackage ./velodyne-driver {};
 

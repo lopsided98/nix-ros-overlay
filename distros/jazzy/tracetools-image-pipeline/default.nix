@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, pkg-config }:
 buildRosPackage {
   pname = "ros-jazzy-tracetools-image-pipeline";
-  version = "5.0.8-r1";
+  version = "5.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/tracetools_image_pipeline/5.0.8-1.tar.gz";
-    name = "5.0.8-1.tar.gz";
-    sha256 = "d0d82e89d3456915efad8b73a79718c2649ba3251099eeaabeefa07bc9ecaff8";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/tracetools_image_pipeline/5.0.9-1.tar.gz";
+    name = "5.0.9-1.tar.gz";
+    sha256 = "a464a280fe56819f312dbaec2a6ea59249afc3b1f644c5b02827ef60fb25d39f";
   };
 
   buildType = "ament_cmake";

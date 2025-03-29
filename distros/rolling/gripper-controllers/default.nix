@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-action, realtime-tools, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-rolling-gripper-controllers";
-  version = "4.20.0-r1";
+  version = "4.21.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/gripper_controllers/4.20.0-1.tar.gz";
-    name = "4.20.0-1.tar.gz";
-    sha256 = "3f177131d0668cd00136a5d1c845242b2ff41f3a5c865c626d9aef9adc3fa518";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/gripper_controllers/4.21.0-1.tar.gz";
+    name = "4.21.0-1.tar.gz";
+    sha256 = "3b3ceaec706f21f22254a64ddff18910dd4055626b5b3fe9024ebea92134dee0";
   };
 
   buildType = "ament_cmake";

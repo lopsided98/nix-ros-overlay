@@ -206,6 +206,8 @@ self: super: {
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
+ apriltag-tools = self.callPackage ./apriltag-tools {};
+
  aruco = self.callPackage ./aruco {};
 
  aruco-msgs = self.callPackage ./aruco-msgs {};
@@ -1338,6 +1340,8 @@ self: super: {
 
  kinova-gen3-7dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-7dof-robotiq-2f-85-moveit-config {};
 
+ kinova-gen3-lite-moveit-config = self.callPackage ./kinova-gen3-lite-moveit-config {};
+
  kitti-metrics-eval = self.callPackage ./kitti-metrics-eval {};
 
  kobuki-core = self.callPackage ./kobuki-core {};
@@ -2248,6 +2252,8 @@ self: super: {
 
  pmb2-navigation = self.callPackage ./pmb2-navigation {};
 
+ pmb2-rgbd-sensors = self.callPackage ./pmb2-rgbd-sensors {};
+
  pmb2-robot = self.callPackage ./pmb2-robot {};
 
  pmb2-simulation = self.callPackage ./pmb2-simulation {};
@@ -2585,6 +2591,8 @@ self: super: {
  rmw-cyclonedds-cpp = self.callPackage ./rmw-cyclonedds-cpp {};
 
  rmw-dds-common = self.callPackage ./rmw-dds-common {};
+
+ rmw-desert = self.callPackage ./rmw-desert {};
 
  rmw-fastrtps-cpp = self.callPackage ./rmw-fastrtps-cpp {};
 
@@ -3243,6 +3251,8 @@ self: super: {
  tiago-moveit-config = self.callPackage ./tiago-moveit-config {};
 
  tiago-navigation = self.callPackage ./tiago-navigation {};
+
+ tiago-rgbd-sensors = self.callPackage ./tiago-rgbd-sensors {};
 
  tiago-robot = self.callPackage ./tiago-robot {};
 

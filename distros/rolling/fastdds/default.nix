@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, asio, cmake, fastcdr, foonathan-memory-vendor, openssl, python3, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-rolling-fastdds";
-  version = "3.1.2-r1";
+  version = "3.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastdds-release/archive/release/rolling/fastdds/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "167c2dca35012b69b5124d1ddc1eeb5a3362899d7d78ba970af9380959a4ff34";
+    url = "https://github.com/ros2-gbp/fastdds-release/archive/release/rolling/fastdds/3.1.2-2.tar.gz";
+    name = "3.1.2-2.tar.gz";
+    sha256 = "8f46286dab603522faf269c68fe7ad11d2a2ff768feb3a816e548387ce603028";
   };
 
   buildType = "cmake";

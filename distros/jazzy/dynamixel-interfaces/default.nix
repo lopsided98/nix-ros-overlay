@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-dynamixel-interfaces";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_interfaces-release/archive/release/jazzy/dynamixel_interfaces/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "04f2088d3329e58304cc13299bd0d62c63f8961b35e800ecb19f4f0de6b02caa";
+    url = "https://github.com/ros2-gbp/dynamixel_interfaces-release/archive/release/jazzy/dynamixel_interfaces/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "bec8c8e31e423145cf419b3324d3b7288b021f8da79869cab31e60ff9e07b796";
   };
 
   buildType = "ament_cmake";

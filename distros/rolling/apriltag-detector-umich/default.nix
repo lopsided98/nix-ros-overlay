@@ -2,21 +2,21 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-clang-format, ament-cmake-ros, ament-lint-auto, ament-lint-common, apriltag, apriltag-detector, apriltag-msgs, cv-bridge, image-transport, pluginlib, rclcpp, rclcpp-components, ros-environment, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-clang-format, ament-cmake-ros, ament-lint-auto, ament-lint-common, apriltag, apriltag-detector, apriltag-msgs, opencv, pluginlib, rclcpp, ros-environment, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-apriltag-detector-umich";
-  version = "2.0.0-r1";
+  version = "3.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/apriltag_detector-release/archive/release/rolling/apriltag_detector_umich/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "9d17a1d2c16fc5bfa5965cacc3a9eb6bf57d0bc6e427958a4c5033dfdacab84a";
+    url = "https://github.com/ros2-gbp/apriltag_detector-release/archive/release/rolling/apriltag_detector_umich/3.0.1-2.tar.gz";
+    name = "3.0.1-2.tar.gz";
+    sha256 = "c754609a275cf68273534f290165ec3cbbd80b859d4c1fc09d4002f6932bfdf4";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-auto ament-cmake-ros ros-environment ];
   checkInputs = [ ament-cmake-clang-format ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ apriltag apriltag-detector apriltag-msgs cv-bridge image-transport pluginlib rclcpp rclcpp-components sensor-msgs ];
+  propagatedBuildInputs = [ apriltag apriltag-detector apriltag-msgs opencv opencv.cxxdev pluginlib rclcpp sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-auto ament-cmake-ros ros-environment ];
 
   meta = {
