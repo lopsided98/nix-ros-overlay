@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ros2-gbp/fastrtps-release/archive/release/iron/fastrtps/2.10.6-1.tar.gz";
     name = "2.10.6-1.tar.gz";
-    sha256 = "8f9beefe4f43e9095fc415a972acb35c74cb3d3e849bd87978ca3130b43b4dbf";
+    sha256 = "sha256-00Ox9ymGoSc60UXaxkVI7kD8dAK2e8aKaOIcZ3hahlY=";
   };
 
   buildType = "cmake";
