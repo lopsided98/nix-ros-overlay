@@ -30,12 +30,31 @@ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 ```
 
+Turtlebot 3 simulation in Gazebo on humble distro:
+```
+nix-shell \
+  -I nix-ros-overlay=https://github.com/lopsided98/nix-ros-overlay/archive/master.tar.gz \
+  --option extra-substituters 'https://ros.cachix.org' \
+  --option trusted-public-keys 'cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= ros.cachix.org-1:dSyZxI8geDCJrwgvCOHDoAfOm5sV1wCPjBkKL+38Rvo=' \
+  '<nix-ros-overlay/examples/humble-turtlebot3-gazebo.nix>'
+# If not on NixOS, nixGL (https://github.com/guibou/nixGL) is needed for OpenGL support
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+# Spawn a new nix-shell in a new terminal and then:
+ros2 run turtlebot3_teleop teleop_keyboard
+```
+
 ### Flakes
 
 With [Flakes enabled][flake], the equivalent of the above for noetic distro is:
 ```
 nix develop github:lopsided98/nix-ros-overlay#example-noetic-turtlebot3-gazebo
 # Then use roslaunch commands as above
+```
+
+With [Flakes enabled][flake], the equivalent of the above for humble distro is:
+```
+nix develop github:lopsided98/nix-ros-overlay#example-humble-turtlebot3-gazebo
+# Then use ros2 commands as above
 ```
 
 Using the overlay in your `flake.nix`-based project could look like this:
