@@ -310,6 +310,12 @@ in {
     }) ];
   });
 
+  xacro = rosSuper.xacro.overrideAttrs ({
+    propagatedBuildInputs ? [], ...
+  } : {
+    propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.python3Packages.distutils ];
+  });
+
 })
 # distutils was removed from standard library in Python 3.12, but many packages
 # still depend on it.
