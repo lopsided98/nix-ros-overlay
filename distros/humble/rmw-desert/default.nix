@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, rcpputils, rcutils, rmw, rmw-dds-common, rosidl-cmake, rosidl-runtime-c, rosidl-typesupport-introspection-c, rosidl-typesupport-introspection-cpp }:
 buildRosPackage {
   pname = "ros-humble-rmw-desert";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_desert-release/archive/release/humble/rmw_desert/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "7f2e283844bfe55898548ae55a12e4ad40d6d177d414f00efe4cc5db6f8fc8aa";
+    url = "https://github.com/ros2-gbp/rmw_desert-release/archive/release/humble/rmw_desert/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "3af5d47700c021da4c44f5fe4db162a8c8bd7a1fa6acee6343bbb5b7db977283";
   };
 
   buildType = "ament_cmake";

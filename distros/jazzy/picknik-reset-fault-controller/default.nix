@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, controller-interface, example-interfaces, geometry-msgs, rclcpp, realtime-tools }:
 buildRosPackage {
   pname = "ros-jazzy-picknik-reset-fault-controller";
-  version = "0.0.3-r3";
+  version = "0.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/picknik_controllers-release/archive/release/jazzy/picknik_reset_fault_controller/0.0.3-3.tar.gz";
-    name = "0.0.3-3.tar.gz";
-    sha256 = "f6b4abf56f34fc4fb6f910d3290465f43a79e5ebde291daa1216eea195d20f6b";
+    url = "https://github.com/ros2-gbp/picknik_controllers-release/archive/release/jazzy/picknik_reset_fault_controller/0.0.4-1.tar.gz";
+    name = "0.0.4-1.tar.gz";
+    sha256 = "19012588afff8dd2c6e79e54ba941b748a60c45914e4ce05b21b71412a48a8ca";
   };
 
   buildType = "ament_cmake";

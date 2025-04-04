@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, launch, launch-ros, launch-xml, launch-yaml, python3Packages, ros2cli, ros2pkg }:
 buildRosPackage {
   pname = "ros-humble-ros2launch";
-  version = "0.19.8-r1";
+  version = "0.19.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch_ros-release/archive/release/humble/ros2launch/0.19.8-1.tar.gz";
-    name = "0.19.8-1.tar.gz";
-    sha256 = "0c98668e4e45ddc7df4de62acaafceeb319d737afba017cba9a624a0c9eb7fa2";
+    url = "https://github.com/ros2-gbp/launch_ros-release/archive/release/humble/ros2launch/0.19.9-1.tar.gz";
+    name = "0.19.9-1.tar.gz";
+    sha256 = "67f2dbb0f5adffde3ef0a393a8bc647e4b5b498efc141f54bad36524a5547beb";
   };
 
   buildType = "ament_python";

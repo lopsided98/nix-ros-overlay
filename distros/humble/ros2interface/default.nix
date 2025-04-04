@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, launch, launch-testing, launch-testing-ros, python3Packages, ros2cli, ros2cli-test-interfaces, rosidl-runtime-py, test-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros2interface";
-  version = "0.18.11-r1";
+  version = "0.18.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/humble/ros2interface/0.18.11-1.tar.gz";
-    name = "0.18.11-1.tar.gz";
-    sha256 = "77c87603a353c741496ebf026901a408e3e7f5992654b1b4abc5ab9c3bf32a7b";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/humble/ros2interface/0.18.12-1.tar.gz";
+    name = "0.18.12-1.tar.gz";
+    sha256 = "51041e078a7dff302ec8fed8296be5d236bbb41f1e889ac0a970b9c4e4362375";
   };
 
   buildType = "ament_python";

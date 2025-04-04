@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-index-cpp, ament-index-python, ament-lint-auto, ament-lint-common, libcurl-vendor, python-cmake-module, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-resource-retriever";
-  version = "3.1.2-r1";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/humble/resource_retriever/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "725ce4822659501f2075d1aa38082160009bcc6c9eab87bd0636f5080ba758c3";
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/humble/resource_retriever/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "fe0e577a5d63c56acfccc62834795fcfe4d85a399b46f38a14bdfbf3e5a5ed38";
   };
 
   buildType = "ament_cmake";

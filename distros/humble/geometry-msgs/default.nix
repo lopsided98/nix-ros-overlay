@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-geometry-msgs";
-  version = "4.2.4-r1";
+  version = "4.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/geometry_msgs/4.2.4-1.tar.gz";
-    name = "4.2.4-1.tar.gz";
-    sha256 = "a7443664eb369fe021532721e0fc763b756b9105ff3c1857c57fe7ad1754cee9";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/geometry_msgs/4.8.0-1.tar.gz";
+    name = "4.8.0-1.tar.gz";
+    sha256 = "14bc429f7c42367f3c6a78fbf11adc33fba0dd9efb270b54410a316323e95ec3";
   };
 
   buildType = "ament_cmake";
