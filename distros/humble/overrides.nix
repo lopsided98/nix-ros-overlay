@@ -30,6 +30,12 @@ in with lib; {
 
   gazebo = self.gazebo_11;
 
+  gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    buildInputs = buildInputs ++ [ self.qt5.qtbase ];
+  });
+
   google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
     url = "https://github.com/google/benchmark.git";
     rev = "c05843a9f622db08ad59804c190f98879b76beba";
@@ -103,6 +109,12 @@ in with lib; {
     # Added upstream in 2.7.2
     # https://github.com/ros-planning/moveit2/pull/2109
     propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.moveit-ros-planning ];
+  });
+
+  nav2-costmap-2d = rosSuper.nav2-costmap-2d.overrideAttrs({
+    ...
+  }: {
+      env.NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
   });
 
   novatel-oem7-driver = (patchExternalProjectGit rosSuper.novatel-oem7-driver {
