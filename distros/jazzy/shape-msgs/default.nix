@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-shape-msgs";
-  version = "5.3.5-r1";
+  version = "5.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/jazzy/shape_msgs/5.3.5-1.tar.gz";
-    name = "5.3.5-1.tar.gz";
-    sha256 = "264be19b6e4f7e095289a297caef69faf71408d6c20e0407060a92966e9d4a92";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/jazzy/shape_msgs/5.3.6-1.tar.gz";
+    name = "5.3.6-1.tar.gz";
+    sha256 = "c0769a50f2b2216a41882a25d408d9a091dc6371f90e1bfe403536e8101d92b7";
   };
 
   buildType = "ament_cmake";
