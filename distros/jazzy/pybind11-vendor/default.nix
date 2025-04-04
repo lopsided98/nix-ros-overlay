@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-pybind11-vendor";
-  version = "3.1.2-r2";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pybind11_vendor-release/archive/release/jazzy/pybind11_vendor/3.1.2-2.tar.gz";
-    name = "3.1.2-2.tar.gz";
-    sha256 = "b414cea123b6ed3359ad78deee1bbc4bd09652388faa3cdb81c869c3fe5dc3e7";
+    url = "https://github.com/ros2-gbp/pybind11_vendor-release/archive/release/jazzy/pybind11_vendor/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "5414bb266df59e01f7dd9b63c641b877432a41be0f74a45efa2e5605c4928ae3";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, diagnostic-msgs, diagnostic-updater, rclcpp, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-self-test";
-  version = "4.4.2-r1";
+  version = "4.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/rolling/self_test/4.4.2-1.tar.gz";
-    name = "4.4.2-1.tar.gz";
-    sha256 = "52359b0ac583d8f50291bf7cfca183aca3812be2841b968df4685654f4a00938";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/rolling/self_test/4.4.3-1.tar.gz";
+    name = "4.4.3-1.tar.gz";
+    sha256 = "bc2e29523d7c6cb2a0aebabad99bb88b836101d8ca435d707a83f82a20ea2e81";
   };
 
   buildType = "ament_cmake";

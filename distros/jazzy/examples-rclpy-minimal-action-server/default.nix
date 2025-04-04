@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, example-interfaces, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-examples-rclpy-minimal-action-server";
-  version = "0.19.4-r1";
+  version = "0.19.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/jazzy/examples_rclpy_minimal_action_server/0.19.4-1.tar.gz";
-    name = "0.19.4-1.tar.gz";
-    sha256 = "68ab928751c3520bee1080921582ad852d75036667d381bdf91ba647351693c9";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/jazzy/examples_rclpy_minimal_action_server/0.19.5-1.tar.gz";
+    name = "0.19.5-1.tar.gz";
+    sha256 = "33e391905c18dd6994de3a48132c697b9251e0b0f24a0e8f2664ad88d024ba21";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-noetic-depthai-descriptions";
-  version = "2.11.0-r1";
+  version = "2.11.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/noetic/depthai_descriptions/2.11.0-1.tar.gz";
-    name = "2.11.0-1.tar.gz";
-    sha256 = "97472f3f35e10daad0d617edc2ac65cb049c6540a8722ae36bb9b8bc14c53249";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/noetic/depthai_descriptions/2.11.2-1.tar.gz";
+    name = "2.11.2-1.tar.gz";
+    sha256 = "0bfb0098a7f524c5dfe88cdde2bc919671785b73393cf743e48ed24430359e40";
   };
 
   buildType = "catkin";

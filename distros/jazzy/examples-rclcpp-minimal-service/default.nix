@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-examples-rclcpp-minimal-service";
-  version = "0.19.4-r1";
+  version = "0.19.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/jazzy/examples_rclcpp_minimal_service/0.19.4-1.tar.gz";
-    name = "0.19.4-1.tar.gz";
-    sha256 = "7d26b12e634abfe9eead22631980bac0d87a87ab97876aa78888fde588698806";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/jazzy/examples_rclcpp_minimal_service/0.19.5-1.tar.gz";
+    name = "0.19.5-1.tar.gz";
+    sha256 = "09dba7ca3cfddca7c23d633674893e6365cdd3129f1a410a0f0c5001e6277f4f";
   };
 
   buildType = "ament_cmake";

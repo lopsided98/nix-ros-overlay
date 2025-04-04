@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, urdf }:
 buildRosPackage {
   pname = "ros-humble-turtlebot3-description";
-  version = "2.1.5-r1";
+  version = "2.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/humble/turtlebot3_description/2.1.5-1.tar.gz";
-    name = "2.1.5-1.tar.gz";
-    sha256 = "28ac59116690e5f0c57bde8c74578c1727788dd995cfe207bd65ef93f4ae5db7";
+    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/humble/turtlebot3_description/2.2.6-1.tar.gz";
+    name = "2.2.6-1.tar.gz";
+    sha256 = "04d1faafcace3fd4f832faaaf7c326fddc4ef32550b278be1e02ebc9c414b7c5";
   };
 
   buildType = "ament_cmake";

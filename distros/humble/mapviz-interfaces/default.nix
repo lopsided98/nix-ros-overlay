@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, builtin-interfaces, marti-common-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-mapviz-interfaces";
-  version = "2.4.5-r1";
+  version = "2.4.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/humble/mapviz_interfaces/2.4.5-1.tar.gz";
-    name = "2.4.5-1.tar.gz";
-    sha256 = "5ddcd400842fd34ae6252244a4d715a54276dbfc644b8ecbe71b94876b6a965b";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/humble/mapviz_interfaces/2.4.6-1.tar.gz";
+    name = "2.4.6-1.tar.gz";
+    sha256 = "e3035beed9ca59b8b6a3a1629a1be8cbe965364862ffa86a948cb9fc7a855362";
   };
 
   buildType = "ament_cmake";

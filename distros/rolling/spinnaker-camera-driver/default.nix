@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-ros, ament-lint-auto, ament-lint-common, camera-info-manager, curl, dpkg, ffmpeg, flir-camera-msgs, image-transport, libusb1, python3Packages, rclcpp, rclcpp-components, ros-environment, sensor-msgs, std-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-rolling-spinnaker-camera-driver";
-  version = "3.0.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flir_camera_driver-release/archive/release/rolling/spinnaker_camera_driver/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "90e3bab73c38e2436eca373f1ad3beaeb63aa5695cacfd525ed2db2765a12dfa";
+    url = "https://github.com/ros2-gbp/flir_camera_driver-release/archive/release/rolling/spinnaker_camera_driver/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "d6c77633c38181dc308a243c154ea246184f4bc17500a1d7eba7f7c9c396f278";
   };
 
   buildType = "ament_cmake";

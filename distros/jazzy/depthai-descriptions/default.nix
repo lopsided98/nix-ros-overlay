@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-depthai-descriptions";
-  version = "2.11.0-r1";
+  version = "2.11.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/jazzy/depthai_descriptions/2.11.0-1.tar.gz";
-    name = "2.11.0-1.tar.gz";
-    sha256 = "1b69c3f8c5e66014e730b709a478b22eeef479e985e67a6ded108264328426b3";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/jazzy/depthai_descriptions/2.11.2-1.tar.gz";
+    name = "2.11.2-1.tar.gz";
+    sha256 = "337eecacaee37b7fff055162d8c4415b66a506a59f8ddd90d539552cbd776ed7";
   };
 
   buildType = "ament_cmake";

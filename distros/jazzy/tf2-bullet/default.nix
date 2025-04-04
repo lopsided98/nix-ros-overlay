@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, bullet, geometry-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-tf2-bullet";
-  version = "0.36.8-r1";
+  version = "0.36.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_bullet/0.36.8-1.tar.gz";
-    name = "0.36.8-1.tar.gz";
-    sha256 = "c396fc31f06fc507f372875b6babff625cd8eb21589a50ebf0f0d2a1e4ce2bcb";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_bullet/0.36.9-1.tar.gz";
+    name = "0.36.9-1.tar.gz";
+    sha256 = "4995a604614486aecaa5b2b250b6361ae93e960d4708984e0d68a6a2b58b0f66";
   };
 
   buildType = "ament_cmake";

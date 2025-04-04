@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, builtin-interfaces, geometry-msgs, orocos-kdl-vendor, python-orocos-kdl-vendor, rclcpp, tf2, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-jazzy-tf2-kdl";
-  version = "0.36.8-r1";
+  version = "0.36.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_kdl/0.36.8-1.tar.gz";
-    name = "0.36.8-1.tar.gz";
-    sha256 = "b7019be1f94bd3fd87def0a853a6164c5a209b6bdb54e3f1b796afda371ca445";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_kdl/0.36.9-1.tar.gz";
+    name = "0.36.9-1.tar.gz";
+    sha256 = "2f9055035fda5ad04b6849fd8db5a1ec1d65aa2c1ed0d9806fe196bc0c80654c";
   };
 
   buildType = "ament_cmake";

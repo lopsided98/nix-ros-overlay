@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, navigation2, rviz2 }:
 buildRosPackage {
   pname = "ros-humble-turtlebot3-manipulation-navigation2";
-  version = "2.1.1-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_manipulation-release/archive/release/humble/turtlebot3_manipulation_navigation2/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "ab2460e5fecf16441470d5fea6eb7efb7bdcfcfaa9226881342c11279ce32d92";
+    url = "https://github.com/ros2-gbp/turtlebot3_manipulation-release/archive/release/humble/turtlebot3_manipulation_navigation2/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "cfbd0619f0eae2f4e7841055b7baab4cffc63702cab97ee946d60902b517aa4d";
   };
 
   buildType = "ament_cmake";
