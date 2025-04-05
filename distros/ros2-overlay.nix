@@ -51,6 +51,24 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
+  # Cartographer is unmaintained upstream:
+  # https://github.com/cartographer-project/cartographer?tab=readme-ov-file#a-note-for-ros-users
+  cartographer = rosSuper.cartographer.overrideAttrs ({
+    nativeBuildInputs ? [],
+    postPatch ? "", ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+
+    # Add ABSL_ prefix to thread annotation macros. See
+    # https://github.com/abseil/abseil-cpp/commit/6acb60c161f1203e6eca929b87f2041da7714bfe
+    # Note that the mentioned ABSL_LEGACY_THREAD_ANNOTATIONS is no
+    # longer available so we have to patch all call sites.
+    postPatch = ''
+      sed -i -Ee 's/\<(LOCKS_EXCLUDED|EXCLUSIVE_LOCKS_REQUIRED|GUARDED_BY)\>/ABSL_\1/g' \
+          $(find -name \*.h -o -name \*.cc )
+    '';
+  });
+
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
     cmakeFlags ? [], ...
   }: {
