@@ -382,6 +382,8 @@ self: super: {
 
  clearpath-sensors-description = self.callPackage ./clearpath-sensors-description {};
 
+ clearpath-tests = self.callPackage ./clearpath-tests {};
+
  clearpath-viz = self.callPackage ./clearpath-viz {};
 
  clips-vendor = self.callPackage ./clips-vendor {};
@@ -1671,6 +1673,8 @@ self: super: {
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nmea-navsat-driver = self.callPackage ./nmea-navsat-driver {};
+
+ nobleo-socketcan-bridge = self.callPackage ./nobleo-socketcan-bridge {};
 
  nodl-python = self.callPackage ./nodl-python {};
 
