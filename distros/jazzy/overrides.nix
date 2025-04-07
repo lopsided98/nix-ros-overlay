@@ -312,11 +312,11 @@ in {
 
   zenoh-cpp-vendor = let
     zenoh-c-url = "https://github.com/eclipse-zenoh/zenoh-c.git";
-    zenoh-c-rev = "261493682c7dc54db3a07079315e009a2e7c1573";
-    zenoh-c-hash = "sha256-WhD0zzD9xnUBV9OuHmV5SajFlF9k/b4eWCntN5b59GQ=";
+    zenoh-c-rev = "e6a1971139f405f7887bf5bb54f0efe402123032";
+    zenoh-c-hash = "sha256-eJbnb1UJbtuYb+dSpKqVgI1p/97bSc+KTcbO1GNg9jU=";
     zenoh-cpp-url = "https://github.com/eclipse-zenoh/zenoh-cpp";
-    zenoh-cpp-rev = "5dfb68c9ac966925e59bcb52f39b9bc26c0ad6d3";
-    zenoh-cpp-hash = "sha256-qEkY4M5gaBst5WEvZmW9jOPdZHcjgdR6HUZj4n7iN1E=";
+    zenoh-cpp-rev = "8ad67f6c7a9031acd437c8739bbc8ddab0ca8173";
+    zenoh-cpp-hash = "sha256-0iRhmMtrhDdM7X0ByiICT4s7lDFcGLSR1dEImzT1mWs=";
   in (lib.patchAmentVendorGit (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {
     url = zenoh-cpp-url;
     rev = zenoh-cpp-rev;
@@ -357,7 +357,7 @@ in {
     cargoDeps = self.rustPlatform.importCargoLock {
       lockFile = "${zenoh-c-source.outPath}/Cargo.lock";
       outputHashes = {
-        "zenoh-1.2.1" = "sha256-jtslgZxKKIhqNHOwZ38pjOn+zbnJSFnWejMnOQa8lv4=";
+        "zenoh-1.2.1" = "sha256-9oeeiS84Ymyra7yh7+GuocCsXfejlEgbQgKJlig6siY=";
       };
     };
   });
