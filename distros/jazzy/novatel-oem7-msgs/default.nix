@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-novatel-oem7-msgs";
-  version = "24.0.0-r1";
+  version = "24.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/jazzy/novatel_oem7_msgs/24.0.0-1.tar.gz";
-    name = "24.0.0-1.tar.gz";
-    sha256 = "3e66b68d38d52a01c9e8a910f26c654f9618ee1b9437bac6d76e1965b4295428";
+    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/jazzy/novatel_oem7_msgs/24.1.0-1.tar.gz";
+    name = "24.1.0-1.tar.gz";
+    sha256 = "d4ee5f0e2973ded03a15b85f2d483977c93fe30e18d8fda41fa4115c63f2f297";
   };
 
   buildType = "ament_cmake";

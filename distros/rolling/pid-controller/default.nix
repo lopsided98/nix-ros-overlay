@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, parameter-traits, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-pid-controller";
-  version = "4.20.0-r1";
+  version = "4.22.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/pid_controller/4.20.0-1.tar.gz";
-    name = "4.20.0-1.tar.gz";
-    sha256 = "3de4e87d83a758135d39cd6cd16b4323cbceb3ea399888c4b842fcfd06c4f72d";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/pid_controller/4.22.0-1.tar.gz";
+    name = "4.22.0-1.tar.gz";
+    sha256 = "e335e113b2843c17b4c412f6ffb74809d01d715d8760a86b29403b9fe0c64aad";
   };
 
   buildType = "ament_cmake";

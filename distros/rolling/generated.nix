@@ -98,6 +98,8 @@ self: super: {
 
  ament-cmake-ros = self.callPackage ./ament-cmake-ros {};
 
+ ament-cmake-ros-core = self.callPackage ./ament-cmake-ros-core {};
+
  ament-cmake-target-dependencies = self.callPackage ./ament-cmake-target-dependencies {};
 
  ament-cmake-test = self.callPackage ./ament-cmake-test {};
@@ -172,6 +174,8 @@ self: super: {
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
+ apriltag-tools = self.callPackage ./apriltag-tools {};
+
  aruco = self.callPackage ./aruco {};
 
  aruco-msgs = self.callPackage ./aruco-msgs {};
@@ -212,8 +216,6 @@ self: super: {
 
  autoware-internal-planning-msgs = self.callPackage ./autoware-internal-planning-msgs {};
 
- autoware-lanelet2-extension = self.callPackage ./autoware-lanelet2-extension {};
-
  autoware-lanelet2-extension-python = self.callPackage ./autoware-lanelet2-extension-python {};
 
  autoware-lint-common = self.callPackage ./autoware-lint-common {};
@@ -229,8 +231,6 @@ self: super: {
  autoware-sensing-msgs = self.callPackage ./autoware-sensing-msgs {};
 
  autoware-system-msgs = self.callPackage ./autoware-system-msgs {};
-
- autoware-utils = self.callPackage ./autoware-utils {};
 
  autoware-v2x-msgs = self.callPackage ./autoware-v2x-msgs {};
 
@@ -402,6 +402,8 @@ self: super: {
 
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
+ diagnostic-remote-logging = self.callPackage ./diagnostic-remote-logging {};
+
  diagnostic-updater = self.callPackage ./diagnostic-updater {};
 
  diagnostics = self.callPackage ./diagnostics {};
@@ -429,6 +431,8 @@ self: super: {
  dummy-sensors = self.callPackage ./dummy-sensors {};
 
  dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
+
+ dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
 
  dynamixel-interfaces = self.callPackage ./dynamixel-interfaces {};
 
@@ -587,8 +591,6 @@ self: super: {
  fastcdr = self.callPackage ./fastcdr {};
 
  fastdds = self.callPackage ./fastdds {};
-
- fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
 
  ffmpeg-encoder-decoder = self.callPackage ./ffmpeg-encoder-decoder {};
 
@@ -953,6 +955,8 @@ self: super: {
  launch-xml = self.callPackage ./launch-xml {};
 
  launch-yaml = self.callPackage ./launch-yaml {};
+
+ ld08-driver = self.callPackage ./ld08-driver {};
 
  lely-core-libraries = self.callPackage ./lely-core-libraries {};
 
@@ -1361,6 +1365,8 @@ self: super: {
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nmea-navsat-driver = self.callPackage ./nmea-navsat-driver {};
+
+ nobleo-socketcan-bridge = self.callPackage ./nobleo-socketcan-bridge {};
 
  nodl-python = self.callPackage ./nodl-python {};
 
@@ -1776,11 +1782,21 @@ self: super: {
 
  rmw-desert = self.callPackage ./rmw-desert {};
 
+ rmw-fastrtps-cpp = self.callPackage ./rmw-fastrtps-cpp {};
+
+ rmw-fastrtps-dynamic-cpp = self.callPackage ./rmw-fastrtps-dynamic-cpp {};
+
+ rmw-fastrtps-shared-cpp = self.callPackage ./rmw-fastrtps-shared-cpp {};
+
  rmw-implementation = self.callPackage ./rmw-implementation {};
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
 
  rmw-security-common = self.callPackage ./rmw-security-common {};
+
+ rmw-test-fixture = self.callPackage ./rmw-test-fixture {};
+
+ rmw-test-fixture-implementation = self.callPackage ./rmw-test-fixture-implementation {};
 
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
 
@@ -1799,6 +1815,8 @@ self: super: {
  robotraconteur = self.callPackage ./robotraconteur {};
 
  ros2-control = self.callPackage ./ros2-control {};
+
+ ros2-control-cmake = self.callPackage ./ros2-control-cmake {};
 
  ros2-control-test-assets = self.callPackage ./ros2-control-test-assets {};
 
@@ -1961,6 +1979,8 @@ self: super: {
  rosidl-default-runtime = self.callPackage ./rosidl-default-runtime {};
 
  rosidl-dynamic-typesupport = self.callPackage ./rosidl-dynamic-typesupport {};
+
+ rosidl-dynamic-typesupport-fastrtps = self.callPackage ./rosidl-dynamic-typesupport-fastrtps {};
 
  rosidl-generator-c = self.callPackage ./rosidl-generator-c {};
 
@@ -2376,6 +2396,8 @@ self: super: {
 
  turtlebot3-fake-node = self.callPackage ./turtlebot3-fake-node {};
 
+ turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
+
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
  turtlebot3-simulations = self.callPackage ./turtlebot3-simulations {};
@@ -2571,6 +2593,8 @@ self: super: {
  zbar-ros = self.callPackage ./zbar-ros {};
 
  zbar-ros-interfaces = self.callPackage ./zbar-ros-interfaces {};
+
+ zed-msgs = self.callPackage ./zed-msgs {};
 
  zenoh-bridge-dds = self.callPackage ./zenoh-bridge-dds {};
 

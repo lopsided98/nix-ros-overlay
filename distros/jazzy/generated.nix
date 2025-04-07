@@ -162,11 +162,19 @@ self: super: {
 
  apriltag-detector = self.callPackage ./apriltag-detector {};
 
+ apriltag-detector-mit = self.callPackage ./apriltag-detector-mit {};
+
+ apriltag-detector-umich = self.callPackage ./apriltag-detector-umich {};
+
+ apriltag-draw = self.callPackage ./apriltag-draw {};
+
  apriltag-mit = self.callPackage ./apriltag-mit {};
 
  apriltag-msgs = self.callPackage ./apriltag-msgs {};
 
  apriltag-ros = self.callPackage ./apriltag-ros {};
+
+ apriltag-tools = self.callPackage ./apriltag-tools {};
 
  aruco = self.callPackage ./aruco {};
 
@@ -352,6 +360,10 @@ self: super: {
 
  clearpath-generator-common = self.callPackage ./clearpath-generator-common {};
 
+ clearpath-generator-gz = self.callPackage ./clearpath-generator-gz {};
+
+ clearpath-gz = self.callPackage ./clearpath-gz {};
+
  clearpath-manipulators = self.callPackage ./clearpath-manipulators {};
 
  clearpath-manipulators-description = self.callPackage ./clearpath-manipulators-description {};
@@ -371,6 +383,12 @@ self: super: {
  clearpath-platform-msgs = self.callPackage ./clearpath-platform-msgs {};
 
  clearpath-ros2-socketcan-interface = self.callPackage ./clearpath-ros2-socketcan-interface {};
+
+ clearpath-sensors-description = self.callPackage ./clearpath-sensors-description {};
+
+ clearpath-simulator = self.callPackage ./clearpath-simulator {};
+
+ clearpath-tests = self.callPackage ./clearpath-tests {};
 
  clearpath-viz = self.callPackage ./clearpath-viz {};
 
@@ -549,6 +567,8 @@ self: super: {
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
  dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
+
+ dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
 
  dynamixel-interfaces = self.callPackage ./dynamixel-interfaces {};
 
@@ -1176,6 +1196,8 @@ self: super: {
 
  launch-yaml = self.callPackage ./launch-yaml {};
 
+ ld08-driver = self.callPackage ./ld08-driver {};
+
  lely-core-libraries = self.callPackage ./lely-core-libraries {};
 
  leo = self.callPackage ./leo {};
@@ -1550,6 +1572,10 @@ self: super: {
 
  multires-image = self.callPackage ./multires-image {};
 
+ multisensor-calibration = self.callPackage ./multisensor-calibration {};
+
+ multisensor-calibration-interface = self.callPackage ./multisensor-calibration-interface {};
+
  mvsim = self.callPackage ./mvsim {};
 
  nao-button-sim = self.callPackage ./nao-button-sim {};
@@ -1661,6 +1687,8 @@ self: super: {
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
  nmea-navsat-driver = self.callPackage ./nmea-navsat-driver {};
+
+ nobleo-socketcan-bridge = self.callPackage ./nobleo-socketcan-bridge {};
 
  nodl-python = self.callPackage ./nodl-python {};
 
@@ -2146,6 +2174,8 @@ self: super: {
 
  rmw-dds-common = self.callPackage ./rmw-dds-common {};
 
+ rmw-desert = self.callPackage ./rmw-desert {};
+
  rmw-fastrtps-cpp = self.callPackage ./rmw-fastrtps-cpp {};
 
  rmw-fastrtps-dynamic-cpp = self.callPackage ./rmw-fastrtps-dynamic-cpp {};
@@ -2175,6 +2205,8 @@ self: super: {
  robotraconteur = self.callPackage ./robotraconteur {};
 
  ros2-control = self.callPackage ./ros2-control {};
+
+ ros2-control-cmake = self.callPackage ./ros2-control-cmake {};
 
  ros2-control-test-assets = self.callPackage ./ros2-control-test-assets {};
 
@@ -2598,6 +2630,8 @@ self: super: {
 
  slam-toolbox = self.callPackage ./slam-toolbox {};
 
+ slg-msgs = self.callPackage ./slg-msgs {};
+
  slider-publisher = self.callPackage ./slider-publisher {};
 
  smach = self.callPackage ./smach {};
@@ -2605,6 +2639,8 @@ self: super: {
  smach-msgs = self.callPackage ./smach-msgs {};
 
  smach-ros = self.callPackage ./smach-ros {};
+
+ small-gicp-vendor = self.callPackage ./small-gicp-vendor {};
 
  smclib = self.callPackage ./smclib {};
 
@@ -2818,6 +2854,8 @@ self: super: {
 
  turtlebot3-fake-node = self.callPackage ./turtlebot3-fake-node {};
 
+ turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
+
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
  turtlebot3-simulations = self.callPackage ./turtlebot3-simulations {};
@@ -2962,6 +3000,8 @@ self: super: {
 
  velodyne = self.callPackage ./velodyne {};
 
+ velodyne-description = self.callPackage ./velodyne-description {};
+
  velodyne-driver = self.callPackage ./velodyne-driver {};
 
  velodyne-laserscan = self.callPackage ./velodyne-laserscan {};
@@ -3049,6 +3089,8 @@ self: super: {
  zbar-ros = self.callPackage ./zbar-ros {};
 
  zbar-ros-interfaces = self.callPackage ./zbar-ros-interfaces {};
+
+ zed-msgs = self.callPackage ./zed-msgs {};
 
  zenoh-bridge-dds = self.callPackage ./zenoh-bridge-dds {};
 

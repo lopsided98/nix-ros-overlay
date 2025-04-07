@@ -57,6 +57,18 @@ in with lib; {
     };
   };
 
+  libcamera = rosSuper.libcamera.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix build with Python 3.12
+      (self.fetchpatch {
+        url = "https://github.com/openembedded/meta-openembedded/raw/7d8115d5507bac6c018fbff8a7aa9bc513c2bc46/meta-multimedia/recipes-multimedia/libcamera/libcamera/0001-mojom-Drop-using-imp-module.patch";
+        hash = "sha256-Q5tPOfbwO28Lg+bP/IINykTZC2ZL1jeWf6TGP7ZUAE8=";
+      })
+    ];
+  });
+
   libfranka = rosSuper.libfranka.overrideAttrs ({
     cmakeFlags ? [], ...
   }: {

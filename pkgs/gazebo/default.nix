@@ -1,6 +1,6 @@
 { lib, mkDerivation, fetchpatch, fetchurl, cmake, pkg-config, ronn, libGL
 , openal, hdf5, curl, tinyxml, tinyxml-2, libtar, gts, libusb1, qtbase, gdal
-, libuuid, graphviz, libsForQt5, freeimage, boost, protobuf, sdformat, tbb
+, libuuid, graphviz, libsForQt5, freeimage, boost186, protobuf, sdformat, tbb
 , ogre1_9, ffmpeg, ignition, ignition-cmake ? ignition.cmake0
 , ignition-common ? ignition.common, ignition-math ? ignition.math4
 , ignition-transport ? ignition.transport8, ignition-msgs ? ignition.msgs5
@@ -45,7 +45,7 @@ mkDerivation rec {
 
   propagatedBuildInputs = [
     freeimage
-    boost
+    boost186
     protobuf
     sdformat
     tbb

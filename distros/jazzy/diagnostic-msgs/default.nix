@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-diagnostic-msgs";
-  version = "5.3.5-r1";
+  version = "5.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/jazzy/diagnostic_msgs/5.3.5-1.tar.gz";
-    name = "5.3.5-1.tar.gz";
-    sha256 = "e501682f430edf74c1551d5759743e773b1043dd7c70810658a70e33979edeef";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/jazzy/diagnostic_msgs/5.3.6-1.tar.gz";
+    name = "5.3.6-1.tar.gz";
+    sha256 = "a56e34b487d066b0d518e978dbed67ebd181d8278c2c7a485c3060527a64b80c";
   };
 
   buildType = "ament_cmake";

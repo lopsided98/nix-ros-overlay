@@ -77,7 +77,7 @@ in {
     # "RPATH of binary libGrid3D.so contains a forbidden reference to
     # /build/" (see https://github.com/gazebosim/gz-gui/issues/627).
     postInstall = postInstall + ''
-      ${self.patchelf}/bin/patchelf --remove-rpath $out/lib64/gz-gui-8/plugins/libGrid3D.so
+      ${self.patchelf}/bin/patchelf --remove-rpath $out/lib*/gz-gui-8/plugins/libGrid3D.so
     '';
   });
 

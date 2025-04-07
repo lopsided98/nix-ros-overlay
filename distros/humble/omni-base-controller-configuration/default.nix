@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, controller-manager, imu-sensor-broadcaster, joint-state-broadcaster, ros2controlcli, topic-tools }:
 buildRosPackage {
   pname = "ros-humble-omni-base-controller-configuration";
-  version = "2.4.1-r1";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/omni_base_robot-release/archive/release/humble/omni_base_controller_configuration/2.4.1-1.tar.gz";
-    name = "2.4.1-1.tar.gz";
-    sha256 = "5c5a545bd1f39b4b63711531f0d08f0a566e85a2643b291b894870ab7a9cd688";
+    url = "https://github.com/pal-gbp/omni_base_robot-release/archive/release/humble/omni_base_controller_configuration/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "99358a56ff5fbd8928ab24886d65d85191486f0d00bf943b25b1c097da0a23cc";
   };
 
   buildType = "ament_cmake";

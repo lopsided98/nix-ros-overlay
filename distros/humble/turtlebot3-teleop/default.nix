@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, rclpy }:
 buildRosPackage {
   pname = "ros-humble-turtlebot3-teleop";
-  version = "2.1.5-r1";
+  version = "2.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/humble/turtlebot3_teleop/2.1.5-1.tar.gz";
-    name = "2.1.5-1.tar.gz";
-    sha256 = "13b92dbda7241dcaa188416f813bcb14676f8e8abc908d72903d2594a3cc2896";
+    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/humble/turtlebot3_teleop/2.2.6-1.tar.gz";
+    name = "2.2.6-1.tar.gz";
+    sha256 = "11de2ce0d403ecf24024e6563eeacd388cbe0484d3b709dd13249d09bef0cb65";
   };
 
   buildType = "ament_python";

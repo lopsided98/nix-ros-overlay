@@ -2,7 +2,7 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, alsaOss, catkin, cob-srvs, diagnostic-msgs, message-generation, message-runtime, roscpp, rospy, std-msgs, std-srvs, visualization-msgs, vlc }:
+{ lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, alsa-oss, catkin, cob-srvs, diagnostic-msgs, message-generation, message-runtime, roscpp, rospy, std-msgs, std-srvs, visualization-msgs, vlc }:
 buildRosPackage {
   pname = "ros-noetic-cob-sound";
   version = "0.7.17-r2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "catkin";
   buildInputs = [ catkin message-generation ];
-  propagatedBuildInputs = [ actionlib actionlib-msgs alsaOss cob-srvs diagnostic-msgs message-runtime roscpp rospy std-msgs std-srvs visualization-msgs vlc ];
+  propagatedBuildInputs = [ actionlib actionlib-msgs alsa-oss cob-srvs diagnostic-msgs message-runtime roscpp rospy std-msgs std-srvs visualization-msgs vlc ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
