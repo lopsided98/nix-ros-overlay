@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, orocos-kdl }:
 buildRosPackage {
   pname = "ros-noetic-kdl-conversions";
-  version = "1.13.2-r1";
+  version = "1.13.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry-release/archive/release/noetic/kdl_conversions/1.13.2-1.tar.gz";
-    name = "1.13.2-1.tar.gz";
-    sha256 = "8bf8790de2b08b6274348c68c23337dc16e4ca2b4a1ca4028d5555cb53094a5f";
+    url = "https://github.com/ros-gbp/geometry-release/archive/release/noetic/kdl_conversions/1.13.3-1.tar.gz";
+    name = "1.13.3-1.tar.gz";
+    sha256 = "abbe6eb2d3e7b5142ffcd7f54ca72b7fb993036a19886a6d4caf7c76438361c1";
   };
 
   buildType = "catkin";

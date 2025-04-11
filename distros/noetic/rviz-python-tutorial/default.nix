@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rviz }:
 buildRosPackage {
   pname = "ros-noetic-rviz-python-tutorial";
-  version = "0.11.0-r1";
+  version = "0.11.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/noetic/rviz_python_tutorial/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "a6973338e5b84132cb2d445288ec8c6d84b81964c28e72be3c7010379e8ea599";
+    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/noetic/rviz_python_tutorial/0.11.1-1.tar.gz";
+    name = "0.11.1-1.tar.gz";
+    sha256 = "4e26cfa674bd4700044ea3d4c6e9ffda030e43d840c2b332a8f812ae81e2130a";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, python-qt-binding, rospy }:
 buildRosPackage {
   pname = "ros-noetic-joint-state-publisher-gui";
-  version = "1.15.1-r1";
+  version = "1.15.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/joint_state_publisher-release/archive/release/noetic/joint_state_publisher_gui/1.15.1-1.tar.gz";
-    name = "1.15.1-1.tar.gz";
-    sha256 = "0a285a9ff411a8dc5944e4540fade94f52a067f70fe79656ae40061938f8dc34";
+    url = "https://github.com/ros-gbp/joint_state_publisher-release/archive/release/noetic/joint_state_publisher_gui/1.15.2-1.tar.gz";
+    name = "1.15.2-1.tar.gz";
+    sha256 = "ed8bd7878ad29dd30ea25fc4192db25e97eae1a50cce4c0b8223750342772010";
   };
 
   buildType = "catkin";

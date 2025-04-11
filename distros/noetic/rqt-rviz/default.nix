@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, class-loader, pluginlib, qt5, rqt-gui, rqt-gui-cpp, rviz }:
 buildRosPackage {
   pname = "ros-noetic-rqt-rviz";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_rviz-release/archive/release/noetic/rqt_rviz/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "a654c09013c36efb408a635700dbd62bf8c37da8f9a5c53aaefe790a49fc7ad7";
+    url = "https://github.com/ros-gbp/rqt_rviz-release/archive/release/noetic/rqt_rviz/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "10f6557efe52f4a0ba3713f584a23bb713424459c3283485267b7f0ea2ed2023";
   };
 
   buildType = "catkin";

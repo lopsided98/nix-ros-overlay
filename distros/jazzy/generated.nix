@@ -210,11 +210,15 @@ self: super: {
 
  autoware-internal-debug-msgs = self.callPackage ./autoware-internal-debug-msgs {};
 
+ autoware-internal-metric-msgs = self.callPackage ./autoware-internal-metric-msgs {};
+
  autoware-internal-msgs = self.callPackage ./autoware-internal-msgs {};
 
  autoware-internal-perception-msgs = self.callPackage ./autoware-internal-perception-msgs {};
 
  autoware-internal-planning-msgs = self.callPackage ./autoware-internal-planning-msgs {};
+
+ autoware-lanelet2-extension = self.callPackage ./autoware-lanelet2-extension {};
 
  autoware-lanelet2-extension-python = self.callPackage ./autoware-lanelet2-extension-python {};
 
@@ -223,6 +227,8 @@ self: super: {
  autoware-localization-msgs = self.callPackage ./autoware-localization-msgs {};
 
  autoware-map-msgs = self.callPackage ./autoware-map-msgs {};
+
+ autoware-msgs = self.callPackage ./autoware-msgs {};
 
  autoware-perception-msgs = self.callPackage ./autoware-perception-msgs {};
 
@@ -521,6 +527,8 @@ self: super: {
  diagnostic-common-diagnostics = self.callPackage ./diagnostic-common-diagnostics {};
 
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
+
+ diagnostic-remote-logging = self.callPackage ./diagnostic-remote-logging {};
 
  diagnostic-updater = self.callPackage ./diagnostic-updater {};
 
@@ -1018,6 +1026,8 @@ self: super: {
 
  hash-library-vendor = self.callPackage ./hash-library-vendor {};
 
+ hatchbed-common = self.callPackage ./hatchbed-common {};
+
  heaphook = self.callPackage ./heaphook {};
 
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
@@ -1174,6 +1184,8 @@ self: super: {
 
  laser-proc = self.callPackage ./laser-proc {};
 
+ laser-segmentation = self.callPackage ./laser-segmentation {};
+
  launch = self.callPackage ./launch {};
 
  launch-param-builder = self.callPackage ./launch-param-builder {};
@@ -1263,6 +1275,8 @@ self: super: {
  lifecycle-py = self.callPackage ./lifecycle-py {};
 
  linux-isolate-process = self.callPackage ./linux-isolate-process {};
+
+ log-view = self.callPackage ./log-view {};
 
  logging-demo = self.callPackage ./logging-demo {};
 

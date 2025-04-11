@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joint-state-publisher, joint-state-publisher-gui, moveit-fake-controller-manager, moveit-planners-ompl, moveit-ros-benchmarks, moveit-ros-move-group, moveit-ros-visualization, moveit-ros-warehouse, moveit-setup-assistant, moveit-simple-controller-manager, robot-state-publisher, roslaunch, rviz, tf2-ros, trac-ik-kinematics-plugin, ur-description, warehouse-ros-mongo, xacro }:
 buildRosPackage {
   pname = "ros-noetic-ur3-moveit-config";
-  version = "1.3.3-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/noetic/ur3_moveit_config/1.3.3-1.tar.gz";
-    name = "1.3.3-1.tar.gz";
-    sha256 = "8746b956ca182345f66e0f9a19038a480a24c6cc889f53f47e034c36de310c7e";
+    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/noetic/ur3_moveit_config/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "010a1704c181076b2f6363b4b13766a4f6b64335f0a942bd1b3a88bf3c15da1d";
   };
 
   buildType = "catkin";
