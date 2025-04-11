@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, python3Packages, rclpy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-camera-info-manager-py";
-  version = "5.1.5-r1";
+  version = "5.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/jazzy/camera_info_manager_py/5.1.5-1.tar.gz";
-    name = "5.1.5-1.tar.gz";
-    sha256 = "b60c5cb07b54818a8dcca4c0aad36bc38790a1496405990e3f3c54fc85ac7882";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/jazzy/camera_info_manager_py/5.1.6-1.tar.gz";
+    name = "5.1.6-1.tar.gz";
+    sha256 = "d72957c2899b0d5ca05590aa111b0d14de63f3729aaf9c9064f45344bb906b60";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, joint-state-publisher-gui, robot-state-publisher, roslaunch, rviz, urdf, xacro }:
 buildRosPackage {
   pname = "ros-noetic-ur-description";
-  version = "1.3.3-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/noetic/ur_description/1.3.3-1.tar.gz";
-    name = "1.3.3-1.tar.gz";
-    sha256 = "27695dd079d7b005f3e0ed09ac2b3604af7df1c531ba7c22a795659af3784ba9";
+    url = "https://github.com/ros-industrial-release/universal_robot-release/archive/release/noetic/ur_description/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "1b0b6af27fdadc1bd47b32c130f12605176e46b67ea44c2811614f6436d9ee22";
   };
 
   buildType = "catkin";

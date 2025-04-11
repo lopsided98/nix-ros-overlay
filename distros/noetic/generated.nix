@@ -4,13 +4,47 @@
 
 self: super: {
 
+ abb = self.callPackage ./abb {};
+
+ abb-crb15000-support = self.callPackage ./abb-crb15000-support {};
+
  abb-driver = self.callPackage ./abb-driver {};
 
  abb-egm-msgs = self.callPackage ./abb-egm-msgs {};
 
+ abb-irb1200-support = self.callPackage ./abb-irb1200-support {};
+
+ abb-irb120-support = self.callPackage ./abb-irb120-support {};
+
+ abb-irb1600-support = self.callPackage ./abb-irb1600-support {};
+
+ abb-irb2400-support = self.callPackage ./abb-irb2400-support {};
+
+ abb-irb2600-support = self.callPackage ./abb-irb2600-support {};
+
+ abb-irb4400-support = self.callPackage ./abb-irb4400-support {};
+
+ abb-irb4600-support = self.callPackage ./abb-irb4600-support {};
+
+ abb-irb52-support = self.callPackage ./abb-irb52-support {};
+
+ abb-irb5400-support = self.callPackage ./abb-irb5400-support {};
+
+ abb-irb6600-support = self.callPackage ./abb-irb6600-support {};
+
+ abb-irb6640-support = self.callPackage ./abb-irb6640-support {};
+
+ abb-irb6650s-support = self.callPackage ./abb-irb6650s-support {};
+
+ abb-irb6700-support = self.callPackage ./abb-irb6700-support {};
+
+ abb-irb7600-support = self.callPackage ./abb-irb7600-support {};
+
  abb-rapid-msgs = self.callPackage ./abb-rapid-msgs {};
 
  abb-rapid-sm-addin-msgs = self.callPackage ./abb-rapid-sm-addin-msgs {};
+
+ abb-resources = self.callPackage ./abb-resources {};
 
  abb-robot-msgs = self.callPackage ./abb-robot-msgs {};
 
@@ -659,6 +693,10 @@ self: super: {
  delphi-srr-msgs = self.callPackage ./delphi-srr-msgs {};
 
  depth-image-proc = self.callPackage ./depth-image-proc {};
+
+ depth-obstacle-detect-ros = self.callPackage ./depth-obstacle-detect-ros {};
+
+ depth-obstacle-detect-ros-msgs = self.callPackage ./depth-obstacle-detect-ros-msgs {};
 
  depthai = self.callPackage ./depthai {};
 
@@ -3934,6 +3972,8 @@ self: super: {
 
  ur10e-moveit-config = self.callPackage ./ur10e-moveit-config {};
 
+ ur12e-moveit-config = self.callPackage ./ur12e-moveit-config {};
+
  ur16e-moveit-config = self.callPackage ./ur16e-moveit-config {};
 
  ur20-moveit-config = self.callPackage ./ur20-moveit-config {};
@@ -3947,6 +3987,8 @@ self: super: {
  ur5-moveit-config = self.callPackage ./ur5-moveit-config {};
 
  ur5e-moveit-config = self.callPackage ./ur5e-moveit-config {};
+
+ ur7e-moveit-config = self.callPackage ./ur7e-moveit-config {};
 
  ur-calibration = self.callPackage ./ur-calibration {};
 

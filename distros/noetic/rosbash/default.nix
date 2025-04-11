@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rospack }:
 buildRosPackage {
   pname = "ros-noetic-rosbash";
-  version = "1.15.8-r1";
+  version = "1.15.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros-release/archive/release/noetic/rosbash/1.15.8-1.tar.gz";
-    name = "1.15.8-1.tar.gz";
-    sha256 = "9e29d79829b5a974db4142d1d8f1bc5ed0e412d85694cf707316c503bce81af5";
+    url = "https://github.com/ros-gbp/ros-release/archive/release/noetic/rosbash/1.15.9-1.tar.gz";
+    name = "1.15.9-1.tar.gz";
+    sha256 = "f0231b7403be022793b2af49970c6a797af94e7cbdc4027ebeceab2c4dea33f1";
   };
 
   buildType = "catkin";

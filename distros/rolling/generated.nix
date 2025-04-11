@@ -210,11 +210,15 @@ self: super: {
 
  autoware-internal-debug-msgs = self.callPackage ./autoware-internal-debug-msgs {};
 
+ autoware-internal-metric-msgs = self.callPackage ./autoware-internal-metric-msgs {};
+
  autoware-internal-msgs = self.callPackage ./autoware-internal-msgs {};
 
  autoware-internal-perception-msgs = self.callPackage ./autoware-internal-perception-msgs {};
 
  autoware-internal-planning-msgs = self.callPackage ./autoware-internal-planning-msgs {};
+
+ autoware-lanelet2-extension = self.callPackage ./autoware-lanelet2-extension {};
 
  autoware-lanelet2-extension-python = self.callPackage ./autoware-lanelet2-extension-python {};
 
@@ -223,6 +227,8 @@ self: super: {
  autoware-localization-msgs = self.callPackage ./autoware-localization-msgs {};
 
  autoware-map-msgs = self.callPackage ./autoware-map-msgs {};
+
+ autoware-msgs = self.callPackage ./autoware-msgs {};
 
  autoware-perception-msgs = self.callPackage ./autoware-perception-msgs {};
 

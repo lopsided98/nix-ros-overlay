@@ -2,19 +2,19 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, catkin, pkg-config, rosbash, rosconsole, roscpp, roscpp-serialization, rosunit, sensor-msgs, yaml-cpp }:
+{ lib, buildRosPackage, fetchurl, boost, catkin, rosbash, rosconsole, roscpp, roscpp-serialization, rosunit, sensor-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-camera-calibration-parsers";
-  version = "1.12.0-r1";
+  version = "1.12.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_common-release/archive/release/noetic/camera_calibration_parsers/1.12.0-1.tar.gz";
-    name = "1.12.0-1.tar.gz";
-    sha256 = "9a61cdd6c7c363a7edb9e58315680826f1fccd4ed43418b4a3ff02c5fad30503";
+    url = "https://github.com/ros-gbp/image_common-release/archive/release/noetic/camera_calibration_parsers/1.12.1-1.tar.gz";
+    name = "1.12.1-1.tar.gz";
+    sha256 = "40beed2aa97e6f5c09b7f675d5f2bc98dc987d9626c8c55d54ff824af8560ba0";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin pkg-config rosconsole ];
+  buildInputs = [ catkin rosconsole ];
   checkInputs = [ rosbash rosunit ];
   propagatedBuildInputs = [ boost roscpp roscpp-serialization sensor-msgs yaml-cpp ];
   nativeBuildInputs = [ catkin ];

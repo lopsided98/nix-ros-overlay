@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-index-cpp, ament-index-python, ament-lint-auto, ament-lint-common, libcurl-vendor, python-cmake-module, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-resource-retriever";
-  version = "3.4.3-r1";
+  version = "3.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/jazzy/resource_retriever/3.4.3-1.tar.gz";
-    name = "3.4.3-1.tar.gz";
-    sha256 = "207b90e62b2a8c8f42a73f07a1d84a11192009fe03f8db5ae7a1af9ba9e3ab7c";
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/jazzy/resource_retriever/3.4.4-1.tar.gz";
+    name = "3.4.4-1.tar.gz";
+    sha256 = "a9cae73b48692d434e92160943351510e6f8b451f1d2aca4768e4ab6b50627ab";
   };
 
   buildType = "ament_cmake";
