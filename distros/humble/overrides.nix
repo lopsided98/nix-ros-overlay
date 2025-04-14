@@ -17,6 +17,18 @@ in with lib; {
     ];
   });
 
+  dwb-critics = rosSuper.dwb-critics.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=maybe-uninitialized" ];
+  });
+
+  dwb-plugins = rosSuper.dwb-plugins.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=maybe-uninitialized" ];
+  });
+
   # This is a newer version than the build system tries to download, but this
   # version doesn't try to run host platform binaries on the build platform
   # and fixes "Allocator foonathan::memory::memory_pool received invalid size"
@@ -103,6 +115,48 @@ in with lib; {
     # Added upstream in 2.7.2
     # https://github.com/ros-planning/moveit2/pull/2109
     propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.moveit-ros-planning ];
+  });
+
+  nav2-behaviors = rosSuper.nav2-behaviors.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" "-Wno-error=maybe-uninitialized" ];
+  });
+
+  nav2-behavior-tree = rosSuper.nav2-behavior-tree.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds"];
+  });
+
+  nav2-costmap-2d = rosSuper.nav2-costmap-2d.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds"];
+  });
+
+  nav2-mppi-controller = rosSuper.nav2-mppi-controller.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
+  });
+
+  nav2-planner = rosSuper.nav2-planner.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=maybe-uninitialized" ];
+  });
+
+  nav2-smoother = rosSuper.nav2-smoother.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=maybe-uninitialized" ];
+  });
+
+  nav2-waypoint-follower = rosSuper.nav2-waypoint-follower.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=maybe-uninitialized" ];
   });
 
   novatel-oem7-driver = (patchExternalProjectGit rosSuper.novatel-oem7-driver {
