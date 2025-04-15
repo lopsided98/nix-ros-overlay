@@ -110,6 +110,10 @@
     nativeBuildInputs = nativeBuildInputs ++ [ self.git ];
     postPatch = (
       if pathExists vendoredSourceJson then
+        # Remove all existing VCS_TYPE lines
+        ''
+          sed -i '/VCS_TYPE \(git\|zip\|svn\|path\)/d' ${lib.escapeShellArg file}
+        '' +
         # Iterate over all ament_vendor calls (i.e. targets) and try
         # to patch them. To not match an already patched line, we add
         # the bracketed comment #[[patched]]. To patch only one line
