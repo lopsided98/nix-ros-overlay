@@ -241,7 +241,7 @@ in {
     zenoh-cpp-url = "https://github.com/eclipse-zenoh/zenoh-cpp";
     zenoh-cpp-rev = "8ad67f6c7a9031acd437c8739bbc8ddab0ca8173";
     zenoh-cpp-hash = "sha256-0iRhmMtrhDdM7X0ByiICT4s7lDFcGLSR1dEImzT1mWs=";
-  in (lib.patchAmentVendorGit (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {
+  in (lib.patchAmentVendorGitZenoh (lib.patchAmentVendorGitZenoh rosSuper.zenoh-cpp-vendor {
     url = zenoh-cpp-url;
     rev = zenoh-cpp-rev;
     fetchgitArgs.hash = zenoh-cpp-hash;
