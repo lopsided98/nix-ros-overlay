@@ -80,6 +80,38 @@
 
   # Patch a vendored download that uses ament_vendor() with a Git repo as the
   # source.
+  # older version only for zenoh because of multiple ament_vendor calls
+  patchAmentVendorGitZenoh = pkg: {
+    url,
+    originalUrl ? url,
+    rev, # Must correspond to the VCS_VERSION argument
+    file ? "CMakeLists.txt",
+    fetchgitArgs ? {},
+    tarSourceArgs ? {}
+  }: pkg.overrideAttrs ({
+    nativeBuildInputs ? [],
+    postPatch ? "", ...
+  }: let
+    # ament_vendor doesn't allow patches for path inputs, so we have to pack it
+    # into a tar first. Additionally, vcstool only accepts tarballs with the
+    # version number as the root directory name.
+    vendor = lib.tarSource tarSourceArgs (self.fetchgit (fetchgitArgs // {
+      name = rev;
+      inherit url rev;
+    }));
+  in {
+    # CMake ExternalProject patches are applied with git apply
+    nativeBuildInputs = nativeBuildInputs ++ [ self.git ];
+    postPatch = ''
+      sed -i '\|VCS_URL\s*${originalUrl}|c\
+        VCS_URL "file://${vendor}"\
+        VCS_TYPE tar' \
+        ${lib.escapeShellArg file}
+    '' + postPatch;
+  });
+
+  # Patch a vendored download that uses ament_vendor() with a Git repo as the
+  # source.
   patchAmentVendorGit = pkg: {
     file ? "CMakeLists.txt",
     fetchgitArgs ? {},

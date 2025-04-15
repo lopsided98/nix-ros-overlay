@@ -226,4 +226,80 @@ in {
       })
     ];
   });
+
+  zenoh-bridge-dds = rosSuper.zenoh-bridge-dds.overrideAttrs ({
+     nativeBuildInputs ? [], pname ? "", postPatch ? "", src ? "", version ? "", ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [
+      self.rustPlatform.cargoSetupHook
+      self.cargo
+      self.rustc
+    ];
+    postPatch = postPatch + ''
+      ln -s zenoh-bridge-dds/Cargo.lock Cargo.lock
+    '';
+    cargoDeps = self.rustPlatform.fetchCargoVendor {
+      inherit pname version src;
+      hash = "sha256-DRMuF6DNLbMIA1CmhVZ7L//EuTCQNL5/lU6d+3DKnO4=";
+      prePatch = ''
+        cd zenoh-bridge-dds
+      '';
+    };
+    env.LIBCLANG_PATH = "${lib.getLib self.llvmPackages.libclang}/lib";
+    env.NIX_CFLAGS_COMPILE = toString [
+      "-Wno-conversion"
+    ];
+  });
+
+  zenoh-cpp-vendor = let
+    zenoh-c-url = "https://github.com/eclipse-zenoh/zenoh-c.git";
+    zenoh-c-rev = "e6a1971139f405f7887bf5bb54f0efe402123032";
+    zenoh-c-hash = "sha256-eJbnb1UJbtuYb+dSpKqVgI1p/97bSc+KTcbO1GNg9jU=";
+    zenoh-cpp-url = "https://github.com/eclipse-zenoh/zenoh-cpp";
+    zenoh-cpp-rev = "8ad67f6c7a9031acd437c8739bbc8ddab0ca8173";
+    zenoh-cpp-hash = "sha256-0iRhmMtrhDdM7X0ByiICT4s7lDFcGLSR1dEImzT1mWs=";
+  in (lib.patchAmentVendorGitZenoh (lib.patchAmentVendorGitZenoh rosSuper.zenoh-cpp-vendor {
+    url = zenoh-cpp-url;
+    rev = zenoh-cpp-rev;
+    fetchgitArgs.hash = zenoh-cpp-hash;
+  }) {
+    url = zenoh-c-url;
+    rev = zenoh-c-rev;
+    fetchgitArgs.hash = zenoh-c-hash;
+  }).overrideAttrs ({
+     nativeBuildInputs ? [], postPatch ? "", ...
+  }: let
+      zenoh-c-source = self.fetchFromGitHub {
+        owner = "eclipse-zenoh";
+        repo = "zenoh-c";
+        rev = zenoh-c-rev;
+        hash = zenoh-c-hash;
+      };
+    in {
+    nativeBuildInputs = nativeBuildInputs ++ [
+      self.rustPlatform.cargoSetupHook
+      self.cargo
+      self.rustc
+    ];
+    postPatch = postPatch + ''
+      ln -s ${zenoh-c-source.outPath}/Cargo.lock Cargo.lock
+      echo "set(ZENOH-C-VENDOR $(awk '/ament_vendor\(zenoh_c_vendor/,/VCS_VERSION/ {if (/VCS_VERSION/) print $2}' CMakeLists.txt))" >> CMakeLists.txt
+      echo "set(ZENOH-CPP-VENDOR $(awk '/ament_vendor\(zenoh_cpp_vendor/,/VCS_VERSION/ {if (/VCS_VERSION/) print $2}' CMakeLists.txt))" >> CMakeLists.txt
+
+      cat >> CMakeLists.txt <<'EOF'
+        if(NOT ''${ZENOH-CPP-VENDOR} STREQUAL "${zenoh-cpp-rev}")
+          message(FATAL_ERROR "Mismatch in VCS_VERSION for zenoh_cpp_vendor (Nix: ${zenoh-cpp-rev}, upstream: ''${ZENOH-CPP-VENDOR}) Fix this in overrides.nix.")
+        endif()
+        if(NOT ''${ZENOH-C-VENDOR} STREQUAL "${zenoh-c-rev}")
+          message(FATAL_ERROR "Mismatch in VCS_VERSION for zenoh_c_vendor (Nix: ${zenoh-c-rev}, upstream: ''${ZENOH-C-VENDOR}) Fix this in overrides.nix.")
+        endif()
+      EOF
+    '';
+    cargoDeps = self.rustPlatform.importCargoLock {
+      lockFile = "${zenoh-c-source.outPath}/Cargo.lock";
+      outputHashes = {
+        "zenoh-1.2.1" = "sha256-9oeeiS84Ymyra7yh7+GuocCsXfejlEgbQgKJlig6siY=";
+      };
+    };
+  });
 }
