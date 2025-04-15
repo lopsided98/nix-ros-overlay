@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, roscpp, rospy, std-msgs, tf, turtlesim }:
 buildRosPackage {
   pname = "ros-noetic-turtle-tf";
-  version = "0.2.3-r1";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/noetic/turtle_tf/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "647812c3fbed1534f79012e4c22e5701fe2d1b8dc0e3f838e96420e803fc313f";
+    url = "https://github.com/ros-gbp/geometry_tutorials-release/archive/release/noetic/turtle_tf/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "ee931e975a975648eeecfb48fa880dfaee3151bd043d491b857a986dc67a1637";
   };
 
   buildType = "catkin";

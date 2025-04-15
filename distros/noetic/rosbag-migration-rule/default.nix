@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-rosbag-migration-rule";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rosbag_migration_rule-release/archive/release/noetic/rosbag_migration_rule/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "4a014649acb782d64beee309a200e9043582ac3f27492568afe600873a2de41a";
+    url = "https://github.com/ros-gbp/rosbag_migration_rule-release/archive/release/noetic/rosbag_migration_rule/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "c3b1cf23e3470dd151c3422f0f26e3f364cfcb5ab36b5d7a027fbea7f8ea5ffc";
   };
 
   buildType = "catkin";

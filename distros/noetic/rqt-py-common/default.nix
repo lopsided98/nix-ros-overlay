@@ -2,21 +2,21 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, actionlib, catkin, genmsg, genpy, python-qt-binding, qt-gui, rosbag, roslib, rospy, rostopic, std-msgs }:
+{ lib, buildRosPackage, fetchurl, actionlib, catkin, genmsg, genpy, python-qt-binding, python3Packages, qt-gui, rosbag, roslib, rospy, rostopic, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rqt-py-common";
-  version = "0.5.3-r1";
+  version = "0.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt-release/archive/release/noetic/rqt_py_common/0.5.3-1.tar.gz";
-    name = "0.5.3-1.tar.gz";
-    sha256 = "021bd4579dd2ebf73b589a08345ba476ec96bc042466d345e41f760ca6eae06a";
+    url = "https://github.com/ros-gbp/rqt-release/archive/release/noetic/rqt_py_common/0.5.4-1.tar.gz";
+    name = "0.5.4-1.tar.gz";
+    sha256 = "aa0842f562dc7dcaafaa827bec51e2d8a2676fd9fd184ac50985d062ab424913";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin genmsg std-msgs ];
+  buildInputs = [ catkin genmsg python3Packages.setuptools std-msgs ];
   propagatedBuildInputs = [ actionlib genpy python-qt-binding qt-gui rosbag roslib rospy rostopic ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
     description = "rqt_py_common provides common functionality for rqt plugins written in Python.

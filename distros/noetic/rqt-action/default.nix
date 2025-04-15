@@ -2,21 +2,21 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rospy, rqt-msg, rqt-py-common }:
+{ lib, buildRosPackage, fetchurl, catkin, python3Packages, rospy, rqt-msg, rqt-py-common }:
 buildRosPackage {
   pname = "ros-noetic-rqt-action";
-  version = "0.4.9-r1";
+  version = "0.4.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_action-release/archive/release/noetic/rqt_action/0.4.9-1.tar.gz";
-    name = "0.4.9-1.tar.gz";
-    sha256 = "86d32021ce58ab1d2624157c728e664bcb7345bb055b1388f0d2f4b9045af03b";
+    url = "https://github.com/ros-gbp/rqt_action-release/archive/release/noetic/rqt_action/0.4.10-1.tar.gz";
+    name = "0.4.10-1.tar.gz";
+    sha256 = "294d156bbc984cb8a48349235f0f54bc19bbf1f3f8901a81b961173bc9e222d8";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
+  buildInputs = [ catkin python3Packages.setuptools ];
   propagatedBuildInputs = [ rospy rqt-msg rqt-py-common ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
     description = "rqt_action provides a feature to introspect all available ROS

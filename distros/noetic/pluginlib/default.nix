@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, class-loader, cmake-modules, rosconsole, roslib, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-noetic-pluginlib";
-  version = "1.13.0-r1";
+  version = "1.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/pluginlib-release/archive/release/noetic/pluginlib/1.13.0-1.tar.gz";
-    name = "1.13.0-1.tar.gz";
-    sha256 = "0601378fa3e4471c7e995df4d4ccfc0e03fece47661e15df6ae83ce4fb62d74f";
+    url = "https://github.com/ros-gbp/pluginlib-release/archive/release/noetic/pluginlib/1.13.1-1.tar.gz";
+    name = "1.13.1-1.tar.gz";
+    sha256 = "e6893821b8ab839fcd004f064019f8a59f187dd6ad5a0e9dee57de25fd01b63c";
   };
 
   buildType = "catkin";

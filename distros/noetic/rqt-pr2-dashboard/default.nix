@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, diagnostic-msgs, pr2-msgs, pr2-power-board, python3Packages, roslib, rospy, rqt-gui, rqt-gui-py, rqt-robot-dashboard, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-rqt-pr2-dashboard";
-  version = "0.4.1-r1";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_pr2_dashboard-release/archive/release/noetic/rqt_pr2_dashboard/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "699918f513dcffcd7924aa8ab7660844c55b4158dc3f2d71ca9a4e007b5a37e1";
+    url = "https://github.com/ros-gbp/rqt_pr2_dashboard-release/archive/release/noetic/rqt_pr2_dashboard/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
+    sha256 = "3826a38110940ff6e51a6c42243ae8f3fa670b186df64d7d8cd2c2aef7918e05";
   };
 
   buildType = "catkin";

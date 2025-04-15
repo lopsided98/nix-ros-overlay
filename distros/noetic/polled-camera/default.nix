@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, image-transport, message-generation, message-runtime, roscpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-polled-camera";
-  version = "1.12.0-r1";
+  version = "1.12.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_common-release/archive/release/noetic/polled_camera/1.12.0-1.tar.gz";
-    name = "1.12.0-1.tar.gz";
-    sha256 = "ef7758bb4a5e8e9cde9fb84846474e2df5ed0051eb17913f901f7d7c7889973e";
+    url = "https://github.com/ros-gbp/image_common-release/archive/release/noetic/polled_camera/1.12.1-1.tar.gz";
+    name = "1.12.1-1.tar.gz";
+    sha256 = "a7173b8bd8266ff81dc35d7ab2e56ea06078a7c02c73b5690af835135d226a35";
   };
 
   buildType = "catkin";
