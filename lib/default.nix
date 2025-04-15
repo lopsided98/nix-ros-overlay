@@ -109,6 +109,7 @@
     # CMake ExternalProject patches are applied with git apply
     nativeBuildInputs = nativeBuildInputs ++ [ self.git ];
     postPatch = (if pathExists vendoredSourceJson then ''
+      sed -i '/VCS_TYPE \(git\|zip\|svn\|path\)/d' ${lib.escapeShellArg file}
       sed -i '\|VCS_URL\s*|c\
         VCS_URL "file://${vendor}"\
         VCS_TYPE tar' \
