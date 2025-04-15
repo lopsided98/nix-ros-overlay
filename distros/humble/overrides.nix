@@ -182,6 +182,8 @@ in with lib; {
     ];
   });
 
+  openvdb-vendor = lib.patchAmentVendorGit rosSuper.openvdb-vendor {};
+
   plotjuggler-ros = rosSuper.plotjuggler-ros.overrideAttrs ({
     patches ? [], nativeBuildInputs ? [], ...
   }: {

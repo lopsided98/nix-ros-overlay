@@ -192,6 +192,8 @@ in {
     ];
   });
 
+  openvdb-vendor = lib.patchAmentVendorGit rosSuper.openvdb-vendor {};
+
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     tarSourceArgs.hook = let
       version = "1.79";
