@@ -24,7 +24,7 @@ macro(ament_vendor TARGET_NAME)
   endif()
 
   execute_process(
-    COMMAND ${NIX_PREFETCH_GIT} --url ${_ARG_VCS_URL} --rev ${_ARG_VCS_VERSION}
+    COMMAND ${NIX_PREFETCH_GIT} --url ${_ARG_VCS_URL} --rev ${_ARG_VCS_VERSION} --fetch-submodules
     COMMAND ${JQ} "{url: \"${_ARG_VCS_URL}\", rev: \"${_ARG_VCS_VERSION}\", hash: .hash}"
     OUTPUT_FILE ${CMAKE_BINARY_DIR}/vendored-source.json
     COMMAND_ECHO STDOUT
