@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-simple-controller-manager }:
 buildRosPackage {
   pname = "ros-rolling-moveit-plugins";
-  version = "2.13.0-r1";
+  version = "2.13.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_plugins/2.13.0-1.tar.gz";
-    name = "2.13.0-1.tar.gz";
-    sha256 = "4e33dec9bbab9a0c8bfaf27532cda9d6ea79cbfa8221ab77e4e7222d11c1a037";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_plugins/2.13.2-1.tar.gz";
+    name = "2.13.2-1.tar.gz";
+    sha256 = "0146e6baaffa5d0ffdb79f077874ced427c6690d871ff22aa1b29f3efdcc4b1c";
   };
 
   buildType = "ament_cmake";

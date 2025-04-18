@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, diagnostic-updater, gtest, marti-common-msgs, nav-msgs, rclcpp, ros-environment, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-swri-roscpp";
-  version = "3.7.3-r2";
+  version = "3.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_roscpp/3.7.3-2.tar.gz";
-    name = "3.7.3-2.tar.gz";
-    sha256 = "30a48227da7a7f39006951f35239a42fb6cbaad00b4130e3263d29ae11104a5a";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_roscpp/3.7.4-1.tar.gz";
+    name = "3.7.4-1.tar.gz";
+    sha256 = "ef72fd1b532f6a216c78e14816712aa85f285c25e40512649ca5d6eb9e92bfec";
   };
 
   buildType = "ament_cmake";

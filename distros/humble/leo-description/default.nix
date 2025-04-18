@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-humble-leo-description";
-  version = "1.2.4-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/humble/leo_description/1.2.4-1.tar.gz";
-    name = "1.2.4-1.tar.gz";
-    sha256 = "5db57530f37c1bd4594a712da74434822176d346aa7a71f7d5ce5e228d6ffb25";
+    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/humble/leo_description/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "12f8cb6df42469994de637b0a8a6a8fd25ddd7757ea909eecb2fc48b39b3b956";
   };
 
   buildType = "ament_cmake";

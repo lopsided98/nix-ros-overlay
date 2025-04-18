@@ -498,6 +498,10 @@ self: super: {
 
  depth-image-proc = self.callPackage ./depth-image-proc {};
 
+ depth-obstacle-detect-ros = self.callPackage ./depth-obstacle-detect-ros {};
+
+ depth-obstacle-detect-ros-msgs = self.callPackage ./depth-obstacle-detect-ros-msgs {};
+
  depthai = self.callPackage ./depthai {};
 
  depthai-ros = self.callPackage ./depthai-ros {};
@@ -814,6 +818,8 @@ self: super: {
 
  find-object-2d = self.callPackage ./find-object-2d {};
 
+ fkie-message-filters = self.callPackage ./fkie-message-filters {};
+
  flex-sync = self.callPackage ./flex-sync {};
 
  flexbe-behavior-engine = self.callPackage ./flexbe-behavior-engine {};
@@ -929,6 +935,8 @@ self: super: {
  gpio-controllers = self.callPackage ./gpio-controllers {};
 
  gps-msgs = self.callPackage ./gps-msgs {};
+
+ gps-sensor-broadcaster = self.callPackage ./gps-sensor-broadcaster {};
 
  gps-tools = self.callPackage ./gps-tools {};
 
@@ -1744,7 +1752,33 @@ self: super: {
 
  odri-master-board-sdk = self.callPackage ./odri-master-board-sdk {};
 
+ om-gravity-compensation-controller = self.callPackage ./om-gravity-compensation-controller {};
+
+ om-joint-trajectory-command-broadcaster = self.callPackage ./om-joint-trajectory-command-broadcaster {};
+
+ om-spring-actuator-controller = self.callPackage ./om-spring-actuator-controller {};
+
  ompl = self.callPackage ./ompl {};
+
+ open-manipulator = self.callPackage ./open-manipulator {};
+
+ open-manipulator-bringup = self.callPackage ./open-manipulator-bringup {};
+
+ open-manipulator-description = self.callPackage ./open-manipulator-description {};
+
+ open-manipulator-gui = self.callPackage ./open-manipulator-gui {};
+
+ open-manipulator-moveit-config = self.callPackage ./open-manipulator-moveit-config {};
+
+ open-manipulator-playground = self.callPackage ./open-manipulator-playground {};
+
+ open-manipulator-teleop = self.callPackage ./open-manipulator-teleop {};
+
+ open-sound-control = self.callPackage ./open-sound-control {};
+
+ open-sound-control-bridge = self.callPackage ./open-sound-control-bridge {};
+
+ open-sound-control-msgs = self.callPackage ./open-sound-control-msgs {};
 
  openeb-vendor = self.callPackage ./openeb-vendor {};
 
@@ -2866,13 +2900,29 @@ self: super: {
 
  turtle-tf2-py = self.callPackage ./turtle-tf2-py {};
 
+ turtlebot3 = self.callPackage ./turtlebot3 {};
+
+ turtlebot3-bringup = self.callPackage ./turtlebot3-bringup {};
+
+ turtlebot3-cartographer = self.callPackage ./turtlebot3-cartographer {};
+
+ turtlebot3-description = self.callPackage ./turtlebot3-description {};
+
+ turtlebot3-example = self.callPackage ./turtlebot3-example {};
+
  turtlebot3-fake-node = self.callPackage ./turtlebot3-fake-node {};
 
  turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
 
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
+ turtlebot3-navigation2 = self.callPackage ./turtlebot3-navigation2 {};
+
+ turtlebot3-node = self.callPackage ./turtlebot3-node {};
+
  turtlebot3-simulations = self.callPackage ./turtlebot3-simulations {};
+
+ turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
 
  turtlebot4-base = self.callPackage ./turtlebot4-base {};
 

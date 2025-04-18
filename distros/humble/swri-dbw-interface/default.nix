@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-swri-dbw-interface";
-  version = "3.7.3-r2";
+  version = "3.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_dbw_interface/3.7.3-2.tar.gz";
-    name = "3.7.3-2.tar.gz";
-    sha256 = "0eac606756d55c1d7ece2caa10a22227d90fe21960fc3524d6841c181be88bba";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_dbw_interface/3.7.4-1.tar.gz";
+    name = "3.7.4-1.tar.gz";
+    sha256 = "2e943ca020fa9e4ac28abe8bde4763449b96cd8963ae2185977d151b03bada85";
   };
 
   buildType = "ament_cmake";
