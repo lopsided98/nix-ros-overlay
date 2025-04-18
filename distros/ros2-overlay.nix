@@ -69,6 +69,26 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
+  cartographer-ros = rosSuper.cartographer-ros.overrideAttrs ({
+    patches ? [],
+    postPatch ? "", ...
+  }: {
+    patches = patches ++ [
+      # Fix compilation with glog >= 0.7.0 (https://github.com/ros2/cartographer_ros/pull/76)
+      (self.fetchpatch {
+        url = "https://github.com/ros2/cartographer_ros/commit/58cd253615606efbf0bf69d16a932d35aadef1f7.patch";
+        hash = "sha256-rmolyUYIWPT37kYITDW4cRO0XJNdIYs6AoUWgWVb8PU=";
+        stripLen = 1;
+      })
+    ];
+
+    # Add ABSL_ prefix to thread annotation macros. See details above.
+    postPatch = ''
+      sed -i -Ee 's/\<(LOCKS_EXCLUDED|EXCLUSIVE_LOCKS_REQUIRED|GUARDED_BY)\>/ABSL_\1/g' \
+          $(find -name \*.h -o -name \*.cpp )
+    '';
+  });
+
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
     cmakeFlags ? [], ...
   }: {
