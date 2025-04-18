@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, bluez, joy-linux, python3Packages, twist-mux }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-bt-joy";
-  version = "2.2.2-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_bt_joy/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "b84c7026ab9d3f69d873e4faa61709c9495baf5071be17ca6d53500de51facf8";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_bt_joy/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "f3336b42f3afe6231d34349182a305df018ebe195680cb539a75ed40532f511b";
   };
 
   buildType = "ament_python";
