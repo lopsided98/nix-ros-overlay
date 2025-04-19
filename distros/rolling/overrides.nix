@@ -55,15 +55,7 @@ in {
 
   gz-fuel-tools-vendor = lib.patchGzAmentVendorGit rosSuper.gz-fuel-tools-vendor { };
 
-  gz-gui-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-gui-vendor { }).overrideAttrs ({
-    postInstall ? "", ...
-  }: {
-    # "RPATH of binary libGrid3D.so contains a forbidden reference to
-    # /build/" (see https://github.com/gazebosim/gz-gui/issues/627).
-    postInstall = postInstall + ''
-      ${self.patchelf}/bin/patchelf --remove-rpath $out/lib64/gz-gui-9/plugins/libGrid3D.so
-    '';
-  });
+  gz-gui-vendor = lib.patchGzAmentVendorGit rosSuper.gz-gui-vendor { };
 
   gz-launch-vendor = lib.patchGzAmentVendorGit rosSuper.gz-launch-vendor { };
 
