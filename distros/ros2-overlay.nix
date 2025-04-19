@@ -13,7 +13,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
   in {
     propagatedBuildInputs = [ setupHook ] ++ propagatedBuildInputs;
     nativeBuildInputs = [ setupHook ] ++ nativeBuildInputs;
-    outputs = [ "out" "dev" ];
   });
 
   ament-cmake-vendor-package = rosSuper.ament-cmake-vendor-package.overrideAttrs ({
@@ -251,7 +250,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     pythonLibrary = "${python}/lib/lib${python.libPrefix}${libExt}";
     pythonIncludeDir = "${python}/include/${python.libPrefix}";
     setupHook = ./python-cmake-module-setup-hook.sh;
-    outputs = [ "out" "dev" ];
   });
 
   rig-reconfigure = patchExternalProjectGit rosSuper.rig-reconfigure {
