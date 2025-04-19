@@ -16,6 +16,10 @@ endif()
 find_program(JQ jq)
 find_program(NIX_PREFETCH_GIT nix-prefetch-git)
 
+# Write empty JSON array to vendored-source.json. Subsequent calls to
+# ament_vendor() will add entries to it.
+file(WRITE ${CMAKE_BINARY_DIR}/vendored-source.json "[]")
+
 macro(ament_vendor TARGET_NAME)
   cmake_parse_arguments(_ARG "GLOBAL_HOOK;SKIP_INSTALL" "SOURCE_SUBDIR;VCS_TYPE;VCS_URL;VCS_VERSION;SATISFIED" "CMAKE_ARGS;PATCHES" ${ARGN})
   if(_ARG_UNPARSED_ARGUMENTS)
@@ -23,10 +27,23 @@ macro(ament_vendor TARGET_NAME)
       "${_ARG_UNPARSED_ARGUMENTS}")
   endif()
 
+  # Read previous version of vendored-source.json
+  file(READ ${CMAKE_BINARY_DIR}/vendored-source.json VENDORED_SOURCE_JSON)
+
+  # Append new entry to vendored-source.json
   execute_process(
-    COMMAND ${NIX_PREFETCH_GIT} --url ${_ARG_VCS_URL} --rev ${_ARG_VCS_VERSION}
-    COMMAND ${JQ} "{url: \"${_ARG_VCS_URL}\", rev: \"${_ARG_VCS_VERSION}\", hash: .hash}"
+    COMMAND ${NIX_PREFETCH_GIT} --url ${_ARG_VCS_URL} --rev ${_ARG_VCS_VERSION} --fetch-submodules
+    COMMAND ${JQ} "${VENDORED_SOURCE_JSON} + [{url: \"${_ARG_VCS_URL}\", rev: \"${_ARG_VCS_VERSION}\", hash: .hash}]"
     OUTPUT_FILE ${CMAKE_BINARY_DIR}/vendored-source.json
     COMMAND_ECHO STDOUT
     COMMAND_ERROR_IS_FATAL ANY)
+
+  # Minimal implementation of the original ament_vendor macro that
+  # makes zenoh_cpp_vendor happy. Without this, generation of
+  # zenoh-cpp-vendor/vendored-source.json fails.
+  include(ExternalProject)
+  externalproject_add(
+    ${TARGET_NAME}
+    DOWNLOAD_COMMAND ""
+  )
 endmacro()

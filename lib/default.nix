@@ -97,26 +97,38 @@
       error: File ${vendoredSourceJson} missing.
       Run "$(nix-build -A rosPackages.${pkg.rosDistro}.${attr}.updateAmentVendor)" to create it.
     '';
-    sourceInfo = builtins.fromJSON (builtins.readFile vendoredSourceJson);
+    sourceInfos = builtins.fromJSON (builtins.readFile vendoredSourceJson);
     # ament_vendor doesn't allow patches for path inputs, so we have to pack it
     # into a tar first. Additionally, vcstool only accepts tarballs with the
     # version number as the root directory name.
-    vendor = lib.tarSource tarSourceArgs (
+    vendor = sourceInfo: lib.tarSource tarSourceArgs (
       self.fetchgit (sourceInfo // fetchgitArgs // {
         name = sourceInfo.rev;
       }));
   in {
     # CMake ExternalProject patches are applied with git apply
     nativeBuildInputs = nativeBuildInputs ++ [ self.git ];
-    postPatch = (if pathExists vendoredSourceJson then ''
-      sed -i '\|VCS_URL\s*|c\
-        VCS_URL "file://${vendor}"\
-        VCS_TYPE tar' \
-        ${lib.escapeShellArg file}
-    '' else ''
-      echo >&2 ${lib.escapeShellArg errMsg}
-      exit 1
-    '') + postPatch;
+    postPatch = (
+      if pathExists vendoredSourceJson then
+        # Remove all existing VCS_TYPE lines
+        ''
+          sed -i '/VCS_TYPE \(git\|zip\|svn\|path\)/d' ${lib.escapeShellArg file}
+        '' +
+        # Iterate over all ament_vendor calls (i.e. targets) and try
+        # to patch them. To not match an already patched line, we add
+        # the bracketed comment #[[patched]]. To patch only one line
+        # at a time, we follow the "s" command with ":p;n;bp" loop,
+        # which prints all remaining lines in the file unmodified.
+        lib.concatMapStrings (sourceInfo: ''
+          sed -i '\|^\s*VCS_URL\s.*|{s||  #[[patched]] VCS_URL "file://${vendor sourceInfo}"\
+            VCS_TYPE tar|;:p;n;bp}' \
+            ${lib.escapeShellArg file}
+        '')
+          sourceInfos
+      else ''
+        echo >&2 ${lib.escapeShellArg errMsg}
+        exit 1
+      '') + postPatch;
     passthru = passthru // {
       # Script to automatically update vendored-source.json by running
       # CMake with injected modified version of ament_cmake macro.
