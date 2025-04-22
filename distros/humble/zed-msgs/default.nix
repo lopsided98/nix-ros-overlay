@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, shape-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-zed-msgs";
-  version = "4.2.2-r1";
+  version = "5.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/zed-ros2-interfaces-release/archive/release/humble/zed_msgs/4.2.2-1.tar.gz";
-    name = "4.2.2-1.tar.gz";
-    sha256 = "ffaa216b7cd342b466d7ac7e2569e7d3a276076e544368eb2fcd9e577dadbf1d";
+    url = "https://github.com/ros2-gbp/zed-ros2-interfaces-release/archive/release/humble/zed_msgs/5.0.0-1.tar.gz";
+    name = "5.0.0-1.tar.gz";
+    sha256 = "2a630ba0c35240b92fd689c138e4cf412aad9676e4ca74bd137e3cd8e22bc202";
   };
 
   buildType = "ament_cmake";

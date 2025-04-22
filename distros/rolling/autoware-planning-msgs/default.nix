@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-rolling-autoware-planning-msgs";
-  version = "1.3.0-r1";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/rolling/autoware_planning_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "2feb661dc74fe6a111069919e50fd63a7770c74e59f2d2e9f7027705c37b8d63";
+    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/rolling/autoware_planning_msgs/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "e81cdf956c5437ab04ecddee66fa460c3f629ca8324e6db71d59b63e20984f35";
   };
 
   buildType = "ament_cmake";

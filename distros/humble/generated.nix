@@ -210,6 +210,10 @@ self: super: {
 
  aruco = self.callPackage ./aruco {};
 
+ aruco-markers = self.callPackage ./aruco-markers {};
+
+ aruco-markers-msgs = self.callPackage ./aruco-markers-msgs {};
+
  aruco-msgs = self.callPackage ./aruco-msgs {};
 
  aruco-opencv = self.callPackage ./aruco-opencv {};
@@ -302,6 +306,8 @@ self: super: {
 
  autoware-internal-debug-msgs = self.callPackage ./autoware-internal-debug-msgs {};
 
+ autoware-internal-metric-msgs = self.callPackage ./autoware-internal-metric-msgs {};
+
  autoware-internal-msgs = self.callPackage ./autoware-internal-msgs {};
 
  autoware-internal-perception-msgs = self.callPackage ./autoware-internal-perception-msgs {};
@@ -317,6 +323,8 @@ self: super: {
  autoware-localization-msgs = self.callPackage ./autoware-localization-msgs {};
 
  autoware-map-msgs = self.callPackage ./autoware-map-msgs {};
+
+ autoware-msgs = self.callPackage ./autoware-msgs {};
 
  autoware-perception-msgs = self.callPackage ./autoware-perception-msgs {};
 
@@ -675,6 +683,8 @@ self: super: {
  diagnostic-common-diagnostics = self.callPackage ./diagnostic-common-diagnostics {};
 
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
+
+ diagnostic-remote-logging = self.callPackage ./diagnostic-remote-logging {};
 
  diagnostic-updater = self.callPackage ./diagnostic-updater {};
 
@@ -1178,6 +1188,8 @@ self: super: {
 
  gtsam = self.callPackage ./gtsam {};
 
+ gz-ros2-control-demos = self.callPackage ./gz-ros2-control-demos {};
+
  gz-ros2-control-tests = self.callPackage ./gz-ros2-control-tests {};
 
  hardware-interface = self.callPackage ./hardware-interface {};
@@ -1223,6 +1235,8 @@ self: super: {
  iceoryx-posh = self.callPackage ./iceoryx-posh {};
 
  ifm3d-core = self.callPackage ./ifm3d-core {};
+
+ ign-ros2-control = self.callPackage ./ign-ros2-control {};
 
  ign-ros2-control-demos = self.callPackage ./ign-ros2-control-demos {};
 
@@ -1466,6 +1480,8 @@ self: super: {
 
  launch-yaml = self.callPackage ./launch-yaml {};
 
+ ld08-driver = self.callPackage ./ld08-driver {};
+
  lely-core-libraries = self.callPackage ./lely-core-libraries {};
 
  leo = self.callPackage ./leo {};
@@ -1589,6 +1605,8 @@ self: super: {
  mavros-msgs = self.callPackage ./mavros-msgs {};
 
  mcap-vendor = self.callPackage ./mcap-vendor {};
+
+ mecanum-drive-controller = self.callPackage ./mecanum-drive-controller {};
 
  menge-vendor = self.callPackage ./menge-vendor {};
 

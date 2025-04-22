@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin }:
 buildRosPackage {
   pname = "ros-noetic-cmake-modules";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/cmake_modules-release/archive/release/noetic/cmake_modules/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "dfeaf30ec1bc678393abb6429ee19d99582a6df73cdfdf5d8a165bd408ebc46b";
+    url = "https://github.com/ros-gbp/cmake_modules-release/archive/release/noetic/cmake_modules/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "91d4137c9f9be6fe30be4b0095d454333f1637eba80282b2d5ed6a37f9a3a311";
   };
 
   buildType = "catkin";

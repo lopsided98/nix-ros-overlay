@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-platform-msgs";
-  version = "2.1.0-r1";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_msgs-release/archive/release/jazzy/clearpath_platform_msgs/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "558b1c43206371fe28b04f44705a401323450b38adedf41c1130cf64e817f40c";
+    url = "https://github.com/clearpath-gbp/clearpath_msgs-release/archive/release/jazzy/clearpath_platform_msgs/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "e7b84cd5c1d800c4329d94b77b9af259c4cc2c1eaf619dd6e77d710ca80614fe";
   };
 
   buildType = "ament_cmake";

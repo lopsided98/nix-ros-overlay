@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, qt5, roscpp, rviz }:
 buildRosPackage {
   pname = "ros-noetic-librviz-tutorial";
-  version = "0.11.0-r1";
+  version = "0.11.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/noetic/librviz_tutorial/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "0a090780b1304627cff505805fafb7ed99b4ba1bb3e99fb1a40516be84bfa951";
+    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/noetic/librviz_tutorial/0.11.1-1.tar.gz";
+    name = "0.11.1-1.tar.gz";
+    sha256 = "f6c9d24390b03b2647ea7f82c2dd7e00153a78f02a038c162b6cbc6e8a5d27bf";
   };
 
   buildType = "catkin";

@@ -42,36 +42,20 @@ in {
     fetchgitArgs.hash = "sha256-gztnxui9Fe/FTieMjdvfJjWHjkImtlsHn6fM1FruyME=";
   };
 
-  gz-cmake-vendor = lib.patchGzAmentVendorGit rosSuper.gz-cmake-vendor {
-    version = "4.1.1";
-    hash = "sha256-BWgRm+3UW65Cu7TqXtFFG05JlYF52dbpAsIE8aDnJM0=";
-  };
+  gz-cmake-vendor = lib.patchGzAmentVendorGit rosSuper.gz-cmake-vendor { };
 
-  gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor {
-    version = "6.0.0";
-    hash = "sha256-Oo4dGN2vsVaElKf/KYjjJq6tlYLRPr0/uh6urGxvDdc=";
-  }).overrideAttrs ({
+  gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor { }).overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
     # https://github.com/gazebo-release/gz_common_vendor/pull/2
     nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
   });
 
-  gz-dartsim-vendor = lib.patchAmentVendorGit rosSuper.gz-dartsim-vendor {
-    url = "https://github.com/dartsim/dart.git";
-    rev = "v6.13.2";
-    fetchgitArgs.hash = "sha256-AfKPqUiW6BsM98TIzTY2ZcFP1WvURs8/dGOzanIiB9g=";
-  };
+  gz-dartsim-vendor = lib.patchAmentVendorGit rosSuper.gz-dartsim-vendor { };
 
-  gz-fuel-tools-vendor = lib.patchGzAmentVendorGit rosSuper.gz-fuel-tools-vendor {
-    version = "10.0.0";
-    hash = "sha256-9WskZnci7D09aW32lzmdtlhRBM+hcmhG6iNgf3OC1js=";
-  };
+  gz-fuel-tools-vendor = lib.patchGzAmentVendorGit rosSuper.gz-fuel-tools-vendor { };
 
-  gz-gui-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-gui-vendor {
-    version = "9.0.0";
-    hash = "sha256-/YJW6XmdGwbyd5Nx3wcTqnRlpwE1unVGaNX91qfZmiM=";
-  }).overrideAttrs ({
+  gz-gui-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-gui-vendor { }).overrideAttrs ({
     postInstall ? "", ...
   }: {
     # "RPATH of binary libGrid3D.so contains a forbidden reference to
@@ -81,58 +65,27 @@ in {
     '';
   });
 
-  gz-launch-vendor = lib.patchGzAmentVendorGit rosSuper.gz-launch-vendor {
-    version = "8.0.0";
-    hash = "sha256-K2W2SSlhJvF9mxEMNa7tZa3/3/LIvxZMGeVb0Mi6Vso=";
-  };
+  gz-launch-vendor = lib.patchGzAmentVendorGit rosSuper.gz-launch-vendor { };
 
-  gz-math-vendor = lib.patchGzAmentVendorGit rosSuper.gz-math-vendor {
-    version = "8.1.0";
-    hash = "sha256-3jQk98HJ0ru2Q4fTqoiaPRaIHaWQKQlnqj+gN2PLxkE=";
-  };
+  gz-math-vendor = lib.patchGzAmentVendorGit rosSuper.gz-math-vendor { };
 
-  gz-msgs-vendor = lib.patchGzAmentVendorGit rosSuper.gz-msgs-vendor {
-    version = "11.0.2";
-    hash = "sha256-PUhFOmVPRiOVWfOjAU8z8dcxKPdcoTrgRwDGXP/vsUs=";
-  };
+  gz-msgs-vendor = lib.patchGzAmentVendorGit rosSuper.gz-msgs-vendor { };
 
-  gz-ogre-next-vendor = (lib.patchAmentVendorGit rosSuper.gz-ogre-next-vendor {
-    url = "https://github.com/OGRECave/ogre-next.git";
-    rev = "v2.3.3";
-    fetchgitArgs.hash = "sha256-elSj35LwsLzj1ssDPsk9NW/KSXfiOGYmw9hQSAWdpFM=";
-  }).overrideAttrs({ ... }: {
+  gz-ogre-next-vendor = (lib.patchAmentVendorGit rosSuper.gz-ogre-next-vendor { }).overrideAttrs({ ... }: {
     dontFixCmake = true;
   });
 
-  gz-physics-vendor = lib.patchGzAmentVendorGit rosSuper.gz-physics-vendor {
-    version = "8.0.0";
-    hash = "sha256-PjwrJG3xvRYrkHDTaBUgoaW8NglEYDPuJrk4QjJjTHU=";
-  };
+  gz-physics-vendor = lib.patchGzAmentVendorGit rosSuper.gz-physics-vendor { };
 
-  gz-plugin-vendor = lib.patchGzAmentVendorGit rosSuper.gz-plugin-vendor {
-    version = "3.0.0";
-    hash = "sha256-h2Dx0KcFmJlS67q0v1zbd9nQkTCKgHkxt5KKTT5v+fw=";
-  };
+  gz-plugin-vendor = lib.patchGzAmentVendorGit rosSuper.gz-plugin-vendor { };
 
-  gz-rendering-vendor = lib.patchGzAmentVendorGit rosSuper.gz-rendering-vendor {
-    version = "9.0.0";
-    hash = "sha256-e3OPLeqV6OgjnQrbpwRj59e7Z0BqN2wOee/gAaMHfqU=";
-  };
+  gz-rendering-vendor = lib.patchGzAmentVendorGit rosSuper.gz-rendering-vendor { };
 
-  gz-sensors-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sensors-vendor {
-    version = "9.0.0";
-    hash = "sha256-8Ato7/YRL7JebbVPASD6VF9lf/Uyq26MIg2l+jQ4GDk=";
-  };
+  gz-sensors-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sensors-vendor { };
 
-  gz-sim-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sim-vendor {
-    version = "9.0.0";
-    hash = "sha256-gsWKknqcTiJc4YHIkmg1YGItwHG1As2OUnpPBQIwqj8=";
-  };
+  gz-sim-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sim-vendor { };
 
-  gz-tools-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-tools-vendor {
-    version = "2.0.2";
-    hash = "sha256-CY+W1jWIkszKwKuLgKmJpZMXHn0RnueMHFSDhOXIzLg=";
-  }).overrideAttrs({
+  gz-tools-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-tools-vendor { }).overrideAttrs({
     nativeBuildInputs ? [],
     propagatedNativeBuildInputs ? [],
     qtWrapperArgs ? [],
@@ -154,19 +107,13 @@ in {
     '';
   });
 
-  gz-transport-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-transport-vendor {
-    version = "14.0.0";
-    hash = "sha256-zoGphy2cpmqJsnyS1LNVm4eGtHCWkAwIblga4RdVj4k=";
-  }).overrideAttrs({
+  gz-transport-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-transport-vendor { }).overrideAttrs({
     buildInputs ? [], ...
   }: {
     buildInputs = buildInputs ++ [ self.libsodium ];
   });
 
-  gz-utils-vendor = lib.patchGzAmentVendorGit rosSuper.gz-utils-vendor {
-    version = "3.1.0";
-    hash = "sha256-pbbFO/4h3Tos+uigPC8XHWzv+Yuyd6EdzLWQPdmXaN8=";
-  };
+  gz-utils-vendor = lib.patchGzAmentVendorGit rosSuper.gz-utils-vendor { };
 
   iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
     patches ? [], ...
@@ -229,9 +176,6 @@ in {
   };
 
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
-    url = "https://github.com/OGRECave/ogre.git";
-    rev = "v1.12.10";
-    fetchgitArgs.hash = "sha256-Z0ixdSmkV93coBBVZ5R3lPLfVMXRfWsFz/RsSyqPWFY=";
     tarSourceArgs.hook = let
       version = "1.79";
       imgui = self.fetchFromGitHub rec {
@@ -257,10 +201,7 @@ in {
     '';
   });
 
-  sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor {
-    version = "15.1.1";
-    hash = "sha256-4/0pVaev++v0+wHQiGeTl8XtTDzh2li32dND0EjfjwA=";
-  };
+  sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor { };
 
   shared-queues-vendor = lib.patchVendorUrl rosSuper.shared-queues-vendor {
     url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";

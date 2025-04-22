@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, camera-calibration-parsers, catkin, gtest, image-transport, roscpp, roslib, rostest, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-camera-info-manager";
-  version = "1.12.0-r1";
+  version = "1.12.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/image_common-release/archive/release/noetic/camera_info_manager/1.12.0-1.tar.gz";
-    name = "1.12.0-1.tar.gz";
-    sha256 = "665ff2dc8fd366d67b1fd535bbf3bae4eca13f43e622b8ec4232afc0b8844c51";
+    url = "https://github.com/ros-gbp/image_common-release/archive/release/noetic/camera_info_manager/1.12.1-1.tar.gz";
+    name = "1.12.1-1.tar.gz";
+    sha256 = "eb6fbebb3802f05a602af88f612bba442eb59c3a37a39da64cd12397673511b7";
   };
 
   buildType = "catkin";

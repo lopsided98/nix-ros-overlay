@@ -2,21 +2,21 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-ros, ament-lint-auto, ament-lint-common, cv-bridge, ffmpeg-image-transport, ffmpeg-image-transport-msgs, rclcpp, ros-environment, rosbag2-cpp, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-ros, ament-lint-auto, ament-lint-common, cv-bridge, ffmpeg-encoder-decoder, ffmpeg-image-transport-msgs, rclcpp, ros-environment, rosbag2-cpp, rosbag2-storage, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-ffmpeg-image-transport-tools";
-  version = "1.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ffmpeg_image_transport_tools-release/archive/release/humble/ffmpeg_image_transport_tools/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "1a30bb6dd6ea0c994367ca4856dadca8abf3d44682fdf0a6bb7b59d9f511effa";
+    url = "https://github.com/ros2-gbp/ffmpeg_image_transport_tools-release/archive/release/humble/ffmpeg_image_transport_tools/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "cb75dd6f76d93c647792cdf7c76dfc4fee9b990c6dfd2d1e5978de2378e27dff";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-ros ros-environment ];
   checkInputs = [ ament-cmake-clang-format ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ cv-bridge ffmpeg-image-transport ffmpeg-image-transport-msgs rclcpp rosbag2-cpp sensor-msgs ];
+  propagatedBuildInputs = [ cv-bridge ffmpeg-encoder-decoder ffmpeg-image-transport-msgs rclcpp rosbag2-cpp rosbag2-storage sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-ros ros-environment ];
 
   meta = {

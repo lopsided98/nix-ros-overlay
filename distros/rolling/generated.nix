@@ -98,6 +98,8 @@ self: super: {
 
  ament-cmake-ros = self.callPackage ./ament-cmake-ros {};
 
+ ament-cmake-ros-core = self.callPackage ./ament-cmake-ros-core {};
+
  ament-cmake-target-dependencies = self.callPackage ./ament-cmake-target-dependencies {};
 
  ament-cmake-test = self.callPackage ./ament-cmake-test {};
@@ -208,11 +210,15 @@ self: super: {
 
  autoware-internal-debug-msgs = self.callPackage ./autoware-internal-debug-msgs {};
 
+ autoware-internal-metric-msgs = self.callPackage ./autoware-internal-metric-msgs {};
+
  autoware-internal-msgs = self.callPackage ./autoware-internal-msgs {};
 
  autoware-internal-perception-msgs = self.callPackage ./autoware-internal-perception-msgs {};
 
  autoware-internal-planning-msgs = self.callPackage ./autoware-internal-planning-msgs {};
+
+ autoware-lanelet2-extension = self.callPackage ./autoware-lanelet2-extension {};
 
  autoware-lanelet2-extension-python = self.callPackage ./autoware-lanelet2-extension-python {};
 
@@ -221,6 +227,8 @@ self: super: {
  autoware-localization-msgs = self.callPackage ./autoware-localization-msgs {};
 
  autoware-map-msgs = self.callPackage ./autoware-map-msgs {};
+
+ autoware-msgs = self.callPackage ./autoware-msgs {};
 
  autoware-perception-msgs = self.callPackage ./autoware-perception-msgs {};
 
@@ -400,6 +408,8 @@ self: super: {
 
  diagnostic-msgs = self.callPackage ./diagnostic-msgs {};
 
+ diagnostic-remote-logging = self.callPackage ./diagnostic-remote-logging {};
+
  diagnostic-updater = self.callPackage ./diagnostic-updater {};
 
  diagnostics = self.callPackage ./diagnostics {};
@@ -427,6 +437,8 @@ self: super: {
  dummy-sensors = self.callPackage ./dummy-sensors {};
 
  dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
+
+ dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
 
  dynamixel-interfaces = self.callPackage ./dynamixel-interfaces {};
 
@@ -949,6 +961,8 @@ self: super: {
  launch-xml = self.callPackage ./launch-xml {};
 
  launch-yaml = self.callPackage ./launch-yaml {};
+
+ ld08-driver = self.callPackage ./ld08-driver {};
 
  lely-core-libraries = self.callPackage ./lely-core-libraries {};
 
@@ -1786,6 +1800,10 @@ self: super: {
 
  rmw-security-common = self.callPackage ./rmw-security-common {};
 
+ rmw-test-fixture = self.callPackage ./rmw-test-fixture {};
+
+ rmw-test-fixture-implementation = self.callPackage ./rmw-test-fixture-implementation {};
+
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
 
  robot-calibration = self.callPackage ./robot-calibration {};
@@ -1803,6 +1821,8 @@ self: super: {
  robotraconteur = self.callPackage ./robotraconteur {};
 
  ros2-control = self.callPackage ./ros2-control {};
+
+ ros2-control-cmake = self.callPackage ./ros2-control-cmake {};
 
  ros2-control-test-assets = self.callPackage ./ros2-control-test-assets {};
 
@@ -1991,6 +2011,10 @@ self: super: {
  rosidl-typesupport-c = self.callPackage ./rosidl-typesupport-c {};
 
  rosidl-typesupport-cpp = self.callPackage ./rosidl-typesupport-cpp {};
+
+ rosidl-typesupport-fastrtps-c = self.callPackage ./rosidl-typesupport-fastrtps-c {};
+
+ rosidl-typesupport-fastrtps-cpp = self.callPackage ./rosidl-typesupport-fastrtps-cpp {};
 
  rosidl-typesupport-interface = self.callPackage ./rosidl-typesupport-interface {};
 
@@ -2378,6 +2402,8 @@ self: super: {
 
  turtlebot3-fake-node = self.callPackage ./turtlebot3-fake-node {};
 
+ turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
+
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
  turtlebot3-simulations = self.callPackage ./turtlebot3-simulations {};
@@ -2573,6 +2599,8 @@ self: super: {
  zbar-ros = self.callPackage ./zbar-ros {};
 
  zbar-ros-interfaces = self.callPackage ./zbar-ros-interfaces {};
+
+ zed-msgs = self.callPackage ./zed-msgs {};
 
  zenoh-bridge-dds = self.callPackage ./zenoh-bridge-dds {};
 

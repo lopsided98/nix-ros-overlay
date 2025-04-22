@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gen-version-h, ament-cmake-gmock, ament-cmake-google-benchmark, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, builtin-interfaces, libstatistics-collector, mimick-vendor, performance-test-fixture, python3, rcl, rcl-interfaces, rcl-logging-interface, rcl-yaml-param-parser, rcpputils, rcutils, rmw, rmw-implementation-cmake, rosgraph-msgs, rosidl-default-generators, rosidl-dynamic-typesupport, rosidl-runtime-c, rosidl-runtime-cpp, rosidl-typesupport-c, rosidl-typesupport-cpp, statistics-msgs, test-msgs, tracetools }:
 buildRosPackage {
   pname = "ros-jazzy-rclcpp";
-  version = "28.1.6-r1";
+  version = "28.1.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/jazzy/rclcpp/28.1.6-1.tar.gz";
-    name = "28.1.6-1.tar.gz";
-    sha256 = "ac0f7bd529e41ec00f5173e44776d5a02c71cafc13b51505d371f7906aa13358";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/jazzy/rclcpp/28.1.8-1.tar.gz";
+    name = "28.1.8-1.tar.gz";
+    sha256 = "786b0cc527c74f4d0787fc32f1fe282318ae4e7c41a607feac5a3284f6418ab1";
   };
 
   buildType = "ament_cmake";

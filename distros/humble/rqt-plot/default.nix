@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python-qt-binding, python3Packages, qt-gui-py-common, rclpy, rqt-gui, rqt-gui-py, rqt-py-common, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-rqt-plot";
-  version = "1.1.3-r1";
+  version = "1.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/humble/rqt_plot/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "353b96ab67b55a5c209a95fd0e535ac7b177357ff4b13e2713c229ff5dd011f4";
+    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/humble/rqt_plot/1.1.4-1.tar.gz";
+    name = "1.1.4-1.tar.gz";
+    sha256 = "bdb2222085242a691b9299d051051f545e61bca4d7813b94374005b4c19b8222";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, genmsg, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-gencpp";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/gencpp-release/archive/release/noetic/gencpp/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "3cd1676629c01895c386837a4c0ed2a3fec51386f96749a8f8a160cb8493f82d";
+    url = "https://github.com/ros-gbp/gencpp-release/archive/release/noetic/gencpp/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "197538d2bce13e399ebd6af742e8f08dd848f2f3fad81a8eae23e79740a67470";
   };
 
   buildType = "catkin";
