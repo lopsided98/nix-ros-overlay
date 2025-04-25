@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-ament-index-cpp";
-  version = "1.10.1-r1";
+  version = "1.10.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/rolling/ament_index_cpp/1.10.1-1.tar.gz";
-    name = "1.10.1-1.tar.gz";
-    sha256 = "748d548c1551872bf8bc5e59cbfca39bd1505f4029a52bf705127c7eddcf7bcc";
+    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/rolling/ament_index_cpp/1.10.2-1.tar.gz";
+    name = "1.10.2-1.tar.gz";
+    sha256 = "1433371983e80af29b550fd234563b2c9512fa765c260cf7f7e4654d01bfd4f5";
   };
 
   buildType = "ament_cmake";

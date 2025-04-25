@@ -612,6 +612,8 @@ self: super: {
 
  find-object-2d = self.callPackage ./find-object-2d {};
 
+ fkie-message-filters = self.callPackage ./fkie-message-filters {};
+
  flex-sync = self.callPackage ./flex-sync {};
 
  flexbe-behavior-engine = self.callPackage ./flexbe-behavior-engine {};
@@ -719,6 +721,8 @@ self: super: {
  gpio-controllers = self.callPackage ./gpio-controllers {};
 
  gps-msgs = self.callPackage ./gps-msgs {};
+
+ gps-sensor-broadcaster = self.callPackage ./gps-sensor-broadcaster {};
 
  gps-tools = self.callPackage ./gps-tools {};
 
@@ -1404,7 +1408,27 @@ self: super: {
 
  odri-master-board-sdk = self.callPackage ./odri-master-board-sdk {};
 
+ om-gravity-compensation-controller = self.callPackage ./om-gravity-compensation-controller {};
+
+ om-joint-trajectory-command-broadcaster = self.callPackage ./om-joint-trajectory-command-broadcaster {};
+
+ om-spring-actuator-controller = self.callPackage ./om-spring-actuator-controller {};
+
  ompl = self.callPackage ./ompl {};
+
+ open-manipulator = self.callPackage ./open-manipulator {};
+
+ open-manipulator-bringup = self.callPackage ./open-manipulator-bringup {};
+
+ open-manipulator-description = self.callPackage ./open-manipulator-description {};
+
+ open-manipulator-gui = self.callPackage ./open-manipulator-gui {};
+
+ open-manipulator-moveit-config = self.callPackage ./open-manipulator-moveit-config {};
+
+ open-manipulator-playground = self.callPackage ./open-manipulator-playground {};
+
+ open-manipulator-teleop = self.callPackage ./open-manipulator-teleop {};
 
  openeb-vendor = self.callPackage ./openeb-vendor {};
 
@@ -2605,6 +2629,8 @@ self: super: {
  zenoh-bridge-dds = self.callPackage ./zenoh-bridge-dds {};
 
  zenoh-cpp-vendor = self.callPackage ./zenoh-cpp-vendor {};
+
+ zenoh-security-tools = self.callPackage ./zenoh-security-tools {};
 
  zlib-point-cloud-transport = self.callPackage ./zlib-point-cloud-transport {};
 

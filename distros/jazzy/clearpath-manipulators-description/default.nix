@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, robot-state-publisher, robotiq-description, ur-description, urdf, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-manipulators-description";
-  version = "2.2.2-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_manipulators_description/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "a099dd638bfa923690e02670e3e29d34a02f446bb249c701693372af649da150";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_manipulators_description/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "764905a6a8d36b09be23a623fa939f515ecab551d0548e6bff5d94f547784198";
   };
 
   buildType = "ament_cmake";

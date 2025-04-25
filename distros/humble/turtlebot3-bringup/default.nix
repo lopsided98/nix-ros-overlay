@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, hls-lfcd-lds-driver, robot-state-publisher, rviz2, turtlebot3-description, turtlebot3-node }:
 buildRosPackage {
   pname = "ros-humble-turtlebot3-bringup";
-  version = "2.2.6-r1";
+  version = "2.2.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/robotis-ros2-release/turtlebot3-release/archive/release/humble/turtlebot3_bringup/2.2.6-1.tar.gz";
-    name = "2.2.6-1.tar.gz";
-    sha256 = "514640e62b77d89335d14059ea6aeb659fcc2e4d4aa1d1f228e2b944f33202e6";
+    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/humble/turtlebot3_bringup/2.2.9-1.tar.gz";
+    name = "2.2.9-1.tar.gz";
+    sha256 = "45aecc8ada144c6eabf74dc635a75cd1ae68e93389538f52456d78a2dea953fa";
   };
 
   buildType = "ament_cmake";

@@ -2,19 +2,19 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, rsl, tl-expected, trajectory-msgs, urdf }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, rsl, tl-expected, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-jazzy-joint-trajectory-controller";
-  version = "4.22.0-r1";
+  version = "4.23.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/joint_trajectory_controller/4.22.0-1.tar.gz";
-    name = "4.22.0-1.tar.gz";
-    sha256 = "aa636dcc13c94eec83eb317286141015b2904a1fbce1895bd672d4cf2f26842a";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/joint_trajectory_controller/4.23.0-1.tar.gz";
+    name = "4.23.0-1.tar.gz";
+    sha256 = "a315b961282524eaa5a4b58f70707552439b3f93f9fb57d2a85cdbe0793ef44d";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
+  buildInputs = [ ament-cmake ros2-control-cmake ];
   checkInputs = [ ament-cmake-gmock controller-manager hardware-interface-testing ros2-control-test-assets ];
   propagatedBuildInputs = [ angles backward-ros control-msgs control-toolbox controller-interface generate-parameter-library hardware-interface pluginlib rclcpp rclcpp-lifecycle realtime-tools rsl tl-expected trajectory-msgs urdf ];
   nativeBuildInputs = [ ament-cmake ];

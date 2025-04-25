@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, backward-ros }:
 buildRosPackage {
   pname = "ros-humble-moveit-common";
-  version = "2.5.8-r1";
+  version = "2.5.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_common/2.5.8-1.tar.gz";
-    name = "2.5.8-1.tar.gz";
-    sha256 = "b7aae7b646e3b2aaed1d5dee4c21e92de0a957b6aad082b72e60213a119e976a";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_common/2.5.9-1.tar.gz";
+    name = "2.5.9-1.tar.gz";
+    sha256 = "2a8269437b2e17340f05b9cea2487eddafd6e4e6bb8071d1ba2b1221ecaa79ab";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, ament-lint-auto, ament-lint-common, launch, launch-param-builder, launch-ros, srdfdom }:
 buildRosPackage {
   pname = "ros-humble-moveit-configs-utils";
-  version = "2.5.8-r1";
+  version = "2.5.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_configs_utils/2.5.8-1.tar.gz";
-    name = "2.5.8-1.tar.gz";
-    sha256 = "576094f52980f7fe3c4ec49fe4f899a7644beb12b2a37466b906b81552155905";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_configs_utils/2.5.9-1.tar.gz";
+    name = "2.5.9-1.tar.gz";
+    sha256 = "1640d5d067380f20f3abdff2940bd183b7363d3949209746185a70c383dc00b9";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-leo-msgs";
-  version = "3.0.4-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/jazzy/leo_msgs/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "b582607982f13ec9088e52977c283e44b25da60a963da97986b57ab39b20d941";
+    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/jazzy/leo_msgs/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "1b090464fce57599bafcf457dd051eb13e1590b471652b6406d311e8790bbe48";
   };
 
   buildType = "ament_cmake";

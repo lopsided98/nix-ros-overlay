@@ -976,6 +976,12 @@ self: super: {
 
  etsi-its-mapem-ts-msgs = self.callPackage ./etsi-its-mapem-ts-msgs {};
 
+ etsi-its-mcm-uulm-coding = self.callPackage ./etsi-its-mcm-uulm-coding {};
+
+ etsi-its-mcm-uulm-conversion = self.callPackage ./etsi-its-mcm-uulm-conversion {};
+
+ etsi-its-mcm-uulm-msgs = self.callPackage ./etsi-its-mcm-uulm-msgs {};
+
  etsi-its-messages = self.callPackage ./etsi-its-messages {};
 
  etsi-its-msgs = self.callPackage ./etsi-its-msgs {};

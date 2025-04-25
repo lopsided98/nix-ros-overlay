@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, backward-ros }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-common";
-  version = "2.12.2-r1";
+  version = "2.12.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_common/2.12.2-1.tar.gz";
-    name = "2.12.2-1.tar.gz";
-    sha256 = "7d54d5e2b932d5e9b4aff376f07097fa8de81aaad3e7db1c7dd55c43c081a4c3";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_common/2.12.3-1.tar.gz";
+    name = "2.12.3-1.tar.gz";
+    sha256 = "fc0bf5323471ba65ef56a38df5b1fedb7c8a50a5b960c0736e298defabc99445";
   };
 
   buildType = "ament_cmake";

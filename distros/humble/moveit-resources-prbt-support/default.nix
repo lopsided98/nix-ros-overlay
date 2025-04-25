@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, xacro }:
 buildRosPackage {
   pname = "ros-humble-moveit-resources-prbt-support";
-  version = "2.5.8-r1";
+  version = "2.5.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_resources_prbt_support/2.5.8-1.tar.gz";
-    name = "2.5.8-1.tar.gz";
-    sha256 = "0d9314d42cb6f2bfcaee303e53f7e16f123541d9b8f2ebb635d049999bf5df1e";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_resources_prbt_support/2.5.9-1.tar.gz";
+    name = "2.5.9-1.tar.gz";
+    sha256 = "5022fa9537162f8d35c0c70d55119c9aa7cb8646ec8f40ce602653fa7687fad2";
   };
 
   buildType = "ament_cmake";

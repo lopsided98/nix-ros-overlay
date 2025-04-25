@@ -874,6 +874,12 @@ self: super: {
 
  etsi-its-mapem-ts-msgs = self.callPackage ./etsi-its-mapem-ts-msgs {};
 
+ etsi-its-mcm-uulm-coding = self.callPackage ./etsi-its-mcm-uulm-coding {};
+
+ etsi-its-mcm-uulm-conversion = self.callPackage ./etsi-its-mcm-uulm-conversion {};
+
+ etsi-its-mcm-uulm-msgs = self.callPackage ./etsi-its-mcm-uulm-msgs {};
+
  etsi-its-messages = self.callPackage ./etsi-its-messages {};
 
  etsi-its-msgs = self.callPackage ./etsi-its-msgs {};
@@ -978,6 +984,8 @@ self: super: {
 
  find-object-2d = self.callPackage ./find-object-2d {};
 
+ fkie-message-filters = self.callPackage ./fkie-message-filters {};
+
  flex-sync = self.callPackage ./flex-sync {};
 
  flexbe-behavior-engine = self.callPackage ./flexbe-behavior-engine {};
@@ -1049,6 +1057,8 @@ self: super: {
  franka-gripper = self.callPackage ./franka-gripper {};
 
  franka-hardware = self.callPackage ./franka-hardware {};
+
+ franka-inria-inverse-dynamics-solver = self.callPackage ./franka-inria-inverse-dynamics-solver {};
 
  franka-msgs = self.callPackage ./franka-msgs {};
 
@@ -1288,6 +1298,8 @@ self: super: {
 
  intra-process-demo = self.callPackage ./intra-process-demo {};
 
+ inverse-dynamics-solver = self.callPackage ./inverse-dynamics-solver {};
+
  io-context = self.callPackage ./io-context {};
 
  irobot-create-common-bringup = self.callPackage ./irobot-create-common-bringup {};
@@ -1337,6 +1349,8 @@ self: super: {
  joy-tester = self.callPackage ./joy-tester {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
+
+ kdl-inverse-dynamics-solver = self.callPackage ./kdl-inverse-dynamics-solver {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
 
@@ -2079,6 +2093,18 @@ self: super: {
  omni-base-simulation = self.callPackage ./omni-base-simulation {};
 
  ompl = self.callPackage ./ompl {};
+
+ open-manipulator = self.callPackage ./open-manipulator {};
+
+ open-manipulator-x-bringup = self.callPackage ./open-manipulator-x-bringup {};
+
+ open-manipulator-x-description = self.callPackage ./open-manipulator-x-description {};
+
+ open-manipulator-x-gui = self.callPackage ./open-manipulator-x-gui {};
+
+ open-manipulator-x-playground = self.callPackage ./open-manipulator-x-playground {};
+
+ open-manipulator-x-teleop = self.callPackage ./open-manipulator-x-teleop {};
 
  openeb-vendor = self.callPackage ./openeb-vendor {};
 
@@ -3467,6 +3493,8 @@ self: super: {
  unitree-ros = self.callPackage ./unitree-ros {};
 
  ur = self.callPackage ./ur {};
+
+ ur10-inverse-dynamics-solver = self.callPackage ./ur10-inverse-dynamics-solver {};
 
  ur-bringup = self.callPackage ./ur-bringup {};
 

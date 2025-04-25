@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, angles, color-util, geometry-msgs, polygon-msgs, polygon-rviz-plugins, polygon-utils, rclcpp, rviz-common, rviz-default-plugins, rviz2 }:
 buildRosPackage {
   pname = "ros-jazzy-polygon-demos";
-  version = "1.1.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/jazzy/polygon_demos/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "99859b9222266f2d851502c82a08f1cca08b2433be59b8717a4ecb5038d30b4c";
+    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/jazzy/polygon_demos/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "c2097778dcf7120a0b3c8cda7e05f21b50da693ca3e3e6ffb107a2b731aa05de";
   };
 
   buildType = "ament_cmake";

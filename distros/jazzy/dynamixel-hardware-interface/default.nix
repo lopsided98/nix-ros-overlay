@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, dynamixel-interfaces, dynamixel-sdk, hardware-interface, pluginlib, rclcpp, realtime-tools, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-dynamixel-hardware-interface";
-  version = "1.4.2-r1";
+  version = "1.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_hardware_interface-release/archive/release/jazzy/dynamixel_hardware_interface/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "235d063cdc83c90d315964781866eaf684b48cb83427f6061c72c848a9f729d7";
+    url = "https://github.com/ros2-gbp/dynamixel_hardware_interface-release/archive/release/jazzy/dynamixel_hardware_interface/1.4.3-1.tar.gz";
+    name = "1.4.3-1.tar.gz";
+    sha256 = "6f806a8c40002bffe474ff6cb5a78e6f7cf2d1be4e7654a8824bb72d0460efc9";
   };
 
   buildType = "ament_cmake";
