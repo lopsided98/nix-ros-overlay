@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, geometry-msgs, orocos-kdl-vendor, python-cmake-module, python3Packages, rclcpp, tf2, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-jazzy-tf2-geometry-msgs";
-  version = "0.36.9-r1";
+  version = "0.36.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_geometry_msgs/0.36.9-1.tar.gz";
-    name = "0.36.9-1.tar.gz";
-    sha256 = "e245d2bd4df562a646bda450130854416a053640e013f59b4fdf8f2bb6a672a4";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_geometry_msgs/0.36.10-1.tar.gz";
+    name = "0.36.10-1.tar.gz";
+    sha256 = "249670c0404d6023cfd2125cce54fc47f89f6b80af5fab4a547997c18050ac64";
   };
 
   buildType = "ament_cmake";

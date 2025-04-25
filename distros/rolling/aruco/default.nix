@@ -8,7 +8,7 @@ buildRosPackage {
   version = "5.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/aruco_ros-release/archive/release/rolling/aruco/5.0.5-1.tar.gz";
+    url = "https://github.com/ros2-gbp/aruco_ros-release/archive/release/rolling/aruco/5.0.5-1.tar.gz";
     name = "5.0.5-1.tar.gz";
     sha256 = "560f7729ed5df74de5accc2b4881190e42b5aabe4149d966053a6c21860221c8";
   };

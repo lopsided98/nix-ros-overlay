@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-polygon-msgs";
-  version = "1.1.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/humble/polygon_msgs/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "ff9d2af0b47297dbd9ef166652c3959ad10bfe7d2640f8693fd2998608ec38f6";
+    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/humble/polygon_msgs/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "e4abc8d3e9fc3801d45a997518f2af633ad019a7a4e86bcb808be0ef346d3008";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, microstrain-inertial-description, realsense2-description, velodyne-description }:
 buildRosPackage {
   pname = "ros-humble-clearpath-sensors-description";
-  version = "1.2.0-r1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_sensors_description/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "e14b4da8a8c1da23f5e5975a3aee518c8485f46dc69968ad3f5c4583d75bb645";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_sensors_description/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "8bfbb5dfeb93dbbeadc481e7c422fda0f77d0f0bb71294c34a938ec4abce5222";
   };
 
   buildType = "ament_cmake";

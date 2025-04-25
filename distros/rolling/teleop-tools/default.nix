@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joy-teleop, key-teleop, teleop-tools-msgs }:
 buildRosPackage {
   pname = "ros-rolling-teleop-tools";
-  version = "1.7.0-r1";
+  version = "1.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/rolling/teleop_tools/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "ef2529ea7df67baeee0095fcd89b0ea15c3ef23dcabc2674c3a8c966f87833fc";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/rolling/teleop_tools/1.8.0-1.tar.gz";
+    name = "1.8.0-1.tar.gz";
+    sha256 = "8c01efb245693abf60cb657b65e1ff1b6eba0c3d17a56bd5f1a5f1bebac727f0";
   };
 
   buildType = "ament_cmake";

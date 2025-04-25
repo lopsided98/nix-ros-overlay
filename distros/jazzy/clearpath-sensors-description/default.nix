@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, axis-description, microstrain-inertial-description, realsense2-description, velodyne-description }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-sensors-description";
-  version = "2.2.2-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_sensors_description/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "2b72d8eb6810647a8d65b080ab53a94f19532a61b5bb0ea4b235b0bbfb6c63f7";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_sensors_description/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "203013248f3b24544501a5cb8086b96b75b6d7d11e3c71a8c40b17fca3e124cb";
   };
 
   buildType = "ament_cmake";

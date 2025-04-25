@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, control-msgs, control-toolbox, controller-manager, geometry-msgs, gripper-controllers, joint-state-broadcaster, joint-trajectory-controller, joy, launch-param-builder, moveit-common, moveit-configs-utils, moveit-core, moveit-msgs, moveit-resources-panda-moveit-config, moveit-ros-planning-interface, pluginlib, robot-state-publisher, ros-testing, sensor-msgs, std-msgs, std-srvs, tf2-eigen, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-humble-moveit-servo";
-  version = "2.5.8-r1";
+  version = "2.5.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_servo/2.5.8-1.tar.gz";
-    name = "2.5.8-1.tar.gz";
-    sha256 = "703f817b84313d5337a39441d62738a7c6520436fa78652653c2df43b463a88b";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_servo/2.5.9-1.tar.gz";
+    name = "2.5.9-1.tar.gz";
+    sha256 = "8101b409ac2c0d7f42202e821f1623cc9559567f90542b9e4fa233170bdc69c9";
   };
 
   buildType = "ament_cmake";

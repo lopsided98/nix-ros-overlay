@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, eigen3-cmake-module, moveit-common, moveit-core, moveit-msgs, rclcpp, tf2-eigen }:
 buildRosPackage {
   pname = "ros-humble-pilz-industrial-motion-planner-testutils";
-  version = "2.5.8-r1";
+  version = "2.5.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/pilz_industrial_motion_planner_testutils/2.5.8-1.tar.gz";
-    name = "2.5.8-1.tar.gz";
-    sha256 = "2f7cbab20690e9ad5c84dc6fe07047b655d468ef3e421c4a600612a1bed4a527";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/pilz_industrial_motion_planner_testutils/2.5.9-1.tar.gz";
+    name = "2.5.9-1.tar.gz";
+    sha256 = "0b6a4da790ed618d420399961dcf135c2d29ca735c40d2b4ce15acfae99842cd";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, gz-ros2-control, joint-state-publisher, launch, launch-ros, launch-testing-ament-cmake, launch-testing-ros, ros-gz-bridge, ros-gz-sim, rviz2, ur-controllers, ur-description, ur-moveit-config, urdf, urdfdom, xacro }:
 buildRosPackage {
   pname = "ros-rolling-ur-simulation-gz";
-  version = "2.1.0-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ur_simulation_gz-release/archive/release/rolling/ur_simulation_gz/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "538cd60081e6fa18529ba10516d733aee7b11219fb9f353eaba9fa38137a82b5";
+    url = "https://github.com/ros2-gbp/ur_simulation_gz-release/archive/release/rolling/ur_simulation_gz/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "70b3f868c469bc1e90a19a9e3d2992f2d209840112902be4cfa9bed0c4f9e24d";
   };
 
   buildType = "ament_cmake";

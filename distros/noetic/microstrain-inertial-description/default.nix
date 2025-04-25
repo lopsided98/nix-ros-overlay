@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, xacro }:
 buildRosPackage {
   pname = "ros-noetic-microstrain-inertial-description";
-  version = "4.5.0-r1";
+  version = "4.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/noetic/microstrain_inertial_description/4.5.0-1.tar.gz";
-    name = "4.5.0-1.tar.gz";
-    sha256 = "b4b8b7759129387b962ba8d5e5ca4e41dbdbd4a22d9993408fd8bd0dbf2693f0";
+    url = "https://github.com/LORD-MicroStrain/microstrain_inertial-release/archive/release/noetic/microstrain_inertial_description/4.6.0-1.tar.gz";
+    name = "4.6.0-1.tar.gz";
+    sha256 = "5d39fb7634d5a740ebb933b71c95e34312f02ade8848c1b68ab90c9068a99c0d";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, diagnostic-updater, rclcpp, wireless-msgs, wirelesstools }:
 buildRosPackage {
   pname = "ros-jazzy-wireless-watcher";
-  version = "1.1.3-r1";
+  version = "1.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/jazzy/wireless_watcher/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "a4fe28d7c6ef1f909182f99f37b7d66e2cc48ae8cc73555e0b79661e7a7d2b0d";
+    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/jazzy/wireless_watcher/1.1.4-1.tar.gz";
+    name = "1.1.4-1.tar.gz";
+    sha256 = "db2542893f0d751f4d584201e81d6c1a9f8c9f8a3758787aec49bfbbcb31902f";
   };
 
   buildType = "ament_cmake";

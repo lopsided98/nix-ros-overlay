@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen3-cmake-module, moveit-common, moveit-core, moveit-msgs, rclcpp, tf2-eigen }:
 buildRosPackage {
   pname = "ros-jazzy-pilz-industrial-motion-planner-testutils";
-  version = "2.12.2-r1";
+  version = "2.12.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/pilz_industrial_motion_planner_testutils/2.12.2-1.tar.gz";
-    name = "2.12.2-1.tar.gz";
-    sha256 = "6676cd79e2004fd582dae55eb411b67e19e07e4f3935cddeaecba55356aaaa28";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/pilz_industrial_motion_planner_testutils/2.12.3-1.tar.gz";
+    name = "2.12.3-1.tar.gz";
+    sha256 = "25546d3bfd0077e9843e1794d14a1538a3e4dcfa6741d116ac346683156a53ee";
   };
 
   buildType = "ament_cmake";

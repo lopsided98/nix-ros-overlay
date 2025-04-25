@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ros-environment }:
 buildRosPackage {
   pname = "ros-noetic-etsi-its-denm-ts-coding";
-  version = "3.1.0-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_denm_ts_coding/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "4774a1202c2bf06ae8c1b40bd59c0a579075581b0ded361cdadc58f5e2609e93";
+    url = "https://github.com/ika-rwth-aachen/etsi_its_messages-release/archive/release/noetic/etsi_its_denm_ts_coding/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "e0671f5518e5e6fcbfd20b3d6e3bb4d9333314561f2b4b675423d2f79cfe5330";
   };
 
   buildType = "catkin";

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-navigation/nav2_minimal_turtlebot_simulation-release/archive/release/jazzy/nav2_minimal_tb4_description/1.0.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/nav2_minimal_turtlebot_simulation-release/archive/release/jazzy/nav2_minimal_tb4_description/1.0.1-1.tar.gz";
     name = "1.0.1-1.tar.gz";
     sha256 = "58c6be4763f93ff86ea6d4f3d8779d6a36e0adc18317811b0088c21ce0c58d39";
   };
