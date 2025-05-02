@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rospy, tf2 }:
 buildRosPackage {
   pname = "ros-noetic-tf2-py";
-  version = "0.7.8-r1";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_py/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "651d4eb98faea1190b46faaa8fde245edfdc943cea5cfad0307338a5d8304a2e";
+    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_py/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "9ea69d1cee3623ea206a42a22fc520e2a95098903cbcdf7cb18431847a00e171";
   };
 
   buildType = "catkin";

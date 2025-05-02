@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libmaps, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-humble-mola-pose-list";
-  version = "1.6.3-r1";
+  version = "1.6.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_pose_list/1.6.3-1.tar.gz";
-    name = "1.6.3-1.tar.gz";
-    sha256 = "f3b7ab8bdd49369c9f3c6d4490ba73aca4ae9f11be1beabc6df5d2be3994f900";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_pose_list/1.6.4-1.tar.gz";
+    name = "1.6.4-1.tar.gz";
+    sha256 = "73a167359c4035052b0b42da01ad7816adfaacf5804538c09530126335098e31";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-control-msgs";
-  version = "6.0.0-r1";
+  version = "6.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/rolling/control_msgs/6.0.0-1.tar.gz";
-    name = "6.0.0-1.tar.gz";
-    sha256 = "9c10b434f01b64e3b4cf974a40206b74b2ef10150d7dd733ed7b18bc8c634f08";
+    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/rolling/control_msgs/6.1.0-1.tar.gz";
+    name = "6.1.0-1.tar.gz";
+    sha256 = "d85b71b40f839e0389b9424d471dab82d29bf6385a0b0c302a78807424bba7ac";
   };
 
   buildType = "ament_cmake";

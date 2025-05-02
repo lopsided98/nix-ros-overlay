@@ -3638,8 +3638,6 @@ self: super: {
 
  single-joint-position-action = self.callPackage ./single-joint-position-action {};
 
- skyway = self.callPackage ./skyway {};
-
  slam-gmapping = self.callPackage ./slam-gmapping {};
 
  slam-karto = self.callPackage ./slam-karto {};

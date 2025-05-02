@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, eigen, geometry-msgs, tf2 }:
 buildRosPackage {
   pname = "ros-noetic-tf2-eigen";
-  version = "0.7.8-r1";
+  version = "0.7.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_eigen/0.7.8-1.tar.gz";
-    name = "0.7.8-1.tar.gz";
-    sha256 = "40299e5e82f3ab4d2bc069e8241b4bfec3791f5e74b32a4b308675c6ff4b7e14";
+    url = "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_eigen/0.7.9-1.tar.gz";
+    name = "0.7.9-1.tar.gz";
+    sha256 = "e1a0ca64f3d31caa4f9b6cb15f06fc49550c5d0432ac4710a303b32d35396cbf";
   };
 
   buildType = "catkin";

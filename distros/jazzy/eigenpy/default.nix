@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, doxygen, eigen, git, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-eigenpy";
-  version = "3.10.3-r1";
+  version = "3.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/eigenpy-release/archive/release/jazzy/eigenpy/3.10.3-1.tar.gz";
-    name = "3.10.3-1.tar.gz";
-    sha256 = "796eebe12d10e1ef1a3bff715e43c0c0f1a31d76ec40dc78f153918d15ff8dcf";
+    url = "https://github.com/ros2-gbp/eigenpy-release/archive/release/jazzy/eigenpy/3.11.0-1.tar.gz";
+    name = "3.11.0-1.tar.gz";
+    sha256 = "1ad8c9dcaac8963e6e7162affcef9cc4d986ed8cdd77265b7c6db93a2204caa4";
   };
 
   buildType = "cmake";

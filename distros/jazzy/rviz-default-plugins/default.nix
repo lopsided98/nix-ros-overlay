@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, ament-index-cpp, ament-lint-auto, geometry-msgs, gz-math-vendor, image-transport, interactive-markers, laser-geometry, map-msgs, nav-msgs, pluginlib, point-cloud-transport, qt5, rclcpp, resource-retriever, rviz-common, rviz-ogre-vendor, rviz-rendering, rviz-rendering-tests, rviz-visual-testing-framework, tf2, tf2-geometry-msgs, tf2-ros, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rviz-default-plugins";
-  version = "14.1.9-r1";
+  version = "14.1.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/jazzy/rviz_default_plugins/14.1.9-1.tar.gz";
-    name = "14.1.9-1.tar.gz";
-    sha256 = "c8cb0209449fb5738f6ee99bbf157a0dd3782a1c91f512a6aefcce73ec84001d";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/jazzy/rviz_default_plugins/14.1.10-1.tar.gz";
+    name = "14.1.10-1.tar.gz";
+    sha256 = "b3ebd89e8c896fbf1abb7fcac305676af4daa06889d377e4d7af6a9682a619c9";
   };
 
   buildType = "ament_cmake";

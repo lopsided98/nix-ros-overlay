@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, boost, catkin, message-generation, message-runtime, roscpp, rosnode, rospy, rostest, rosunit, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-actionlib";
-  version = "1.14.1-r1";
+  version = "1.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/actionlib-release/archive/release/noetic/actionlib/1.14.1-1.tar.gz";
-    name = "1.14.1-1.tar.gz";
-    sha256 = "7176a73d832c6828fd6ae08ffac0837360c4436b539336d1e107a13a009feb8e";
+    url = "https://github.com/ros-gbp/actionlib-release/archive/release/noetic/actionlib/1.14.2-1.tar.gz";
+    name = "1.14.2-1.tar.gz";
+    sha256 = "cf82d6a92f2592c19789ec8f7e5744a6f348106ed5be6eef4019522974a8127c";
   };
 
   buildType = "catkin";

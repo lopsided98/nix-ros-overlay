@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-mola-demos";
-  version = "1.6.3-r1";
+  version = "1.6.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_demos/1.6.3-1.tar.gz";
-    name = "1.6.3-1.tar.gz";
-    sha256 = "fa8cf79a3f8fe19750ea7f3cb3422f906b06c2d7ef5c98a0a041cfdfd36e0dcf";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_demos/1.6.4-1.tar.gz";
+    name = "1.6.4-1.tar.gz";
+    sha256 = "4a2cf241add76a7fa9d408d5ac361fb43661ded9b731fbebd333847f46e93aa3";
   };
 
   buildType = "ament_cmake";

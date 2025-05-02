@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, autoware-cmake, autoware-map-msgs, autoware-planning-msgs, geographiclib, geometry-msgs, lanelet2-core, lanelet2-io, lanelet2-maps, lanelet2-projection, lanelet2-routing, lanelet2-traffic-rules, lanelet2-validation, pugixml, range-v3, rclcpp, tf2, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-lanelet2-extension";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_lanelet2_extension-release/archive/release/jazzy/autoware_lanelet2_extension/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "38c9a39c686cbb298efb1220e78f28a521b758c83228259319aff321e6415db0";
+    url = "https://github.com/ros2-gbp/autoware_lanelet2_extension-release/archive/release/jazzy/autoware_lanelet2_extension/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "3719eed410064ee8c36897d62a98666dd3e4f1faed6badde98c2584382d3c1e6";
   };
 
   buildType = "ament_cmake";
