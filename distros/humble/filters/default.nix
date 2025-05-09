@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gtest, ament-cmake-uncrustify, ament-cmake-xmllint, boost, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-filters";
-  version = "2.1.0-r3";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/filters-release/archive/release/humble/filters/2.1.0-3.tar.gz";
-    name = "2.1.0-3.tar.gz";
-    sha256 = "d41d74f12174f27e383ffd54adad4e985fcc669f9cc04025d42df9b8742ac42b";
+    url = "https://github.com/ros2-gbp/filters-release/archive/release/humble/filters/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "5a909aee4839db7ee2267251cee353091d534df17e170b9e37dfbcb1c6694266";
   };
 
   buildType = "ament_cmake";

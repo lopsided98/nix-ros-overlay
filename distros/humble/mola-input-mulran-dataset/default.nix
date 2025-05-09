@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-humble-mola-input-mulran-dataset";
-  version = "1.6.3-r1";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_mulran_dataset/1.6.3-1.tar.gz";
-    name = "1.6.3-1.tar.gz";
-    sha256 = "62e5b4e2404d0c24b9f673f5a50a547d11b4b91a48da484628d448bb96cc2d51";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_mulran_dataset/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "9c7adacefcf1eb6a2d1767b1f2cf24019269302b8d1a78e6485ec41640bac71a";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, roscpp, rosunit, ur-client-library, ur-robot-driver, yaml-cpp }:
 buildRosPackage {
   pname = "ros-noetic-ur-calibration";
-  version = "2.2.0-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_Driver-release/archive/release/noetic/ur_calibration/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "a582ee778834c844163937f4c4e75e6f01eb2fcf71505750612d92d9a72433d4";
+    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_Driver-release/archive/release/noetic/ur_calibration/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "115ceee44847e465c9e705fbf763229f4ceacceae33d4d297769b3d5c1616cb0";
   };
 
   buildType = "catkin";

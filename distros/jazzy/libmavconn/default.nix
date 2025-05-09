@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, asio, console-bridge, mavlink, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-libmavconn";
-  version = "2.9.0-r1";
+  version = "2.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavros-release/archive/release/jazzy/libmavconn/2.9.0-1.tar.gz";
-    name = "2.9.0-1.tar.gz";
-    sha256 = "70867887770e689088dc0e73aa4113a11621d8f44accfd48c58d5bcf68f32fab";
+    url = "https://github.com/ros2-gbp/mavros-release/archive/release/jazzy/libmavconn/2.10.0-1.tar.gz";
+    name = "2.10.0-1.tar.gz";
+    sha256 = "178f1e69e17e13090e02fb0ef67f42c5b9fdd54aa3f339fc2bf65760b5bf05c6";
   };
 
   buildType = "ament_cmake";

@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, git, glfw3, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, backward-ros, git, glfw3, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-rig-reconfigure";
-  version = "1.5.0-r1";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rig_reconfigure-release/archive/release/humble/rig_reconfigure/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "43b92c0c2ee6ebf5478b3c96bdef5205bffcd06e34752b877dec9dca407539c3";
+    url = "https://github.com/ros2-gbp/rig_reconfigure-release/archive/release/humble/rig_reconfigure/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "317a30ce7bf9bb07cc38be66a4fe3e612b78b45fe44e0a31f53b2c82797c8ce4";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake git ];
-  propagatedBuildInputs = [ ament-index-cpp glfw3 rclcpp ];
+  propagatedBuildInputs = [ ament-index-cpp backward-ros glfw3 rclcpp ];
   nativeBuildInputs = [ ament-cmake git ];
 
   meta = {

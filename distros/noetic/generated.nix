@@ -2608,6 +2608,8 @@ self: super: {
 
  phidgets-api = self.callPackage ./phidgets-api {};
 
+ phidgets-current-inputs = self.callPackage ./phidgets-current-inputs {};
+
  phidgets-digital-inputs = self.callPackage ./phidgets-digital-inputs {};
 
  phidgets-digital-outputs = self.callPackage ./phidgets-digital-outputs {};
@@ -3637,8 +3639,6 @@ self: super: {
  simulators = self.callPackage ./simulators {};
 
  single-joint-position-action = self.callPackage ./single-joint-position-action {};
-
- skyway = self.callPackage ./skyway {};
 
  slam-gmapping = self.callPackage ./slam-gmapping {};
 

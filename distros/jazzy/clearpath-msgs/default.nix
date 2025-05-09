@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, clearpath-motor-msgs, clearpath-platform-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-msgs";
-  version = "2.3.0-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_msgs-release/archive/release/jazzy/clearpath_msgs/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "0f6c7df39503f3b4c6121be20b748b0174f52f5215a955e8426cea6fcbb07743";
+    url = "https://github.com/clearpath-gbp/clearpath_msgs-release/archive/release/jazzy/clearpath_msgs/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "1a884ac14be9690434a627061d5ae2bc8aa18cff4338b471434d67892ccb2eb8";
   };
 
   buildType = "ament_cmake";

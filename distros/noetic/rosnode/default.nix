@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosgraph, rostest, rostopic }:
 buildRosPackage {
   pname = "ros-noetic-rosnode";
-  version = "1.17.0-r1";
+  version = "1.17.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rosnode/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "ead2ef7c21fd1d786aef6a1404c6f1c1776281ef89e5c52763bb0354426b686e";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rosnode/1.17.2-1.tar.gz";
+    name = "1.17.2-1.tar.gz";
+    sha256 = "5c87d100b1e82b6f329cbbdb114234113e0e5bf3c9dffa4bc8c22964794209d2";
   };
 
   buildType = "catkin";

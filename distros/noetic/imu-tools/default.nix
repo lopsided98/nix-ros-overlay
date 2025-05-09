@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, imu-complementary-filter, imu-filter-madgwick, rviz-imu-plugin }:
 buildRosPackage {
   pname = "ros-noetic-imu-tools";
-  version = "1.2.6-r1";
+  version = "1.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/noetic/imu_tools/1.2.6-1.tar.gz";
-    name = "1.2.6-1.tar.gz";
-    sha256 = "b6f96e7da9d7949ca0a7f75645185f037192ef4d3f983a52fc2db75ed0131e40";
+    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/noetic/imu_tools/1.2.7-1.tar.gz";
+    name = "1.2.7-1.tar.gz";
+    sha256 = "cfa9cc2ffd59ce0f38128ae4a033b283bcead9acaa04d4ebc8da0a7840150ab6";
   };
 
   buildType = "catkin";
