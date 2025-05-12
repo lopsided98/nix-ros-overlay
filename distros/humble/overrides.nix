@@ -48,6 +48,24 @@ in with lib; {
     fetchgitArgs.hash = "sha256-h/e2vJacUp7PITez9HPzGc5+ofz7Oplso44VibECmsI=";
   };
 
+  grid-map-cv = rosSuper.grid-map-cv.overrideAttrs ({
+    ...
+  }: {
+    env.NIX_CFLAGS_COMPILE = toString [
+      # Needed with GCC 12
+      "-Wno-error=stringop-overflow"
+      "-Wno-error=uninitialized"
+      # Needed for GCC 13
+      "-Wno-error=array-bounds"
+    ];
+  });
+
+  grid-map-filters = rosSuper.grid-map-filters.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [self.pkg-config];
+  });
+
   iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
     patches ? [], ...
   }: {
