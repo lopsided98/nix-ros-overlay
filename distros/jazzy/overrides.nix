@@ -141,6 +141,18 @@ in {
     hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
   };
 
+  libpointmatcher = rosSuper.libpointmatcher.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix failing build due to deprecated boost::filesystem functions
+      (self.fetchpatch {
+        url = "https://github.com/norlab-ulaval/libpointmatcher/commit/74435b8f434ffd36aab1c7f309facbe2911403df.patch";
+        hash = "sha256-/JaEmFbJrthEpyC4sAHfdn43eHbcSZD78nqgy++OSGM=";
+      })
+    ];
+  });
+
   mcap-vendor = lib.patchVendorUrl rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.3.0.tar.gz";
     hash = "sha256-Qaz26F11VWxkQH8HfgVJLTHbHwmeByQu8ENkuyk5rPE=";
