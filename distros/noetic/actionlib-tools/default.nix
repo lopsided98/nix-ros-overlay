@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, python3Packages, roslib, rospy, rostopic }:
 buildRosPackage {
   pname = "ros-noetic-actionlib-tools";
-  version = "1.14.1-r1";
+  version = "1.14.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/actionlib-release/archive/release/noetic/actionlib_tools/1.14.1-1.tar.gz";
-    name = "1.14.1-1.tar.gz";
-    sha256 = "7634b0137a2afaaa03a117108b8315ffdc2211750eb9edd78bf6619a7d135ba1";
+    url = "https://github.com/ros-gbp/actionlib-release/archive/release/noetic/actionlib_tools/1.14.3-1.tar.gz";
+    name = "1.14.3-1.tar.gz";
+    sha256 = "318fc57255c0e707ab653c620c3b693fc9534549c2a5be66b9995d6841bf3de8";
   };
 
   buildType = "catkin";

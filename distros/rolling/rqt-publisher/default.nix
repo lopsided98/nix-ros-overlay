@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, python-qt-binding, python3Packages, qt-gui-py-common, rclpy, rosidl-runtime-py, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-rolling-rqt-publisher";
-  version = "1.9.0-r1";
+  version = "1.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_publisher-release/archive/release/rolling/rqt_publisher/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "a74a53922a639dd5183b3b91c66f084ff7d3b97a42866f6f1d6a01f4df3f7f66";
+    url = "https://github.com/ros2-gbp/rqt_publisher-release/archive/release/rolling/rqt_publisher/1.10.0-1.tar.gz";
+    name = "1.10.0-1.tar.gz";
+    sha256 = "f42d3a8b629238e4d3429b3a39ba6804b66f507d09a430726d63dedac39f2258";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-depth-obstacle-detect-ros-msgs";
-  version = "1.0.0-r2";
+  version = "1.0.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/anilsripadarao/depth-obstacle-detect-ros-release/archive/release/noetic/depth_obstacle_detect_ros_msgs/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "a00b4ffecc61742f70463a7b29046d221904070a7786ada6ed0f04bffa22f9ee";
+    url = "https://github.com/anilsripadarao/depth-obstacle-detect-ros-release/archive/release/noetic/depth_obstacle_detect_ros_msgs/1.0.0-3.tar.gz";
+    name = "1.0.0-3.tar.gz";
+    sha256 = "9e134454a30cbc67eb2e2ffc0756fa0678b919e79504cb533319bc5d0c17f47a";
   };
 
   buildType = "catkin";

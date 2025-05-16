@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-humble-omni-base-laser-sensors";
-  version = "2.12.1-r1";
+  version = "2.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/omni_base_navigation-release/archive/release/humble/omni_base_laser_sensors/2.12.1-1.tar.gz";
-    name = "2.12.1-1.tar.gz";
-    sha256 = "e911f1fc5ff72d579751e86587466e0438e1175e9dea5e4fa89392d590b46a7f";
+    url = "https://github.com/pal-gbp/omni_base_navigation-release/archive/release/humble/omni_base_laser_sensors/2.15.0-1.tar.gz";
+    name = "2.15.0-1.tar.gz";
+    sha256 = "2e703f883df03945f877a434ec3ec6015e3248193cb471d17997f1dca5cf50af";
   };
 
   buildType = "ament_cmake";

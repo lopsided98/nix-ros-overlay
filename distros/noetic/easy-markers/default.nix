@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, interactive-markers, roslint, rospy, rviz, std-msgs, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-easy-markers";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/wu-robotics/wu_ros_tools/archive/release/noetic/easy_markers/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "6706cf26cb96afa9ee2aea827e3be776af427dd591d6cdfabbcc83f14cb6bc20";
+    url = "https://github.com/wu-robotics/wu_ros_tools/archive/release/noetic/easy_markers/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "4931a79ac36297929322d8b5ddd8f43c5e52530a0e47f0f412e7119e29b6577b";
   };
 
   buildType = "catkin";

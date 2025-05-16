@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, dynamic-reconfigure, roslib }:
 buildRosPackage {
   pname = "ros-noetic-mini-maxwell";
-  version = "2.1.28-r1";
+  version = "2.1.31-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/mini_maxwell/2.1.28-1.tar.gz";
-    name = "2.1.28-1.tar.gz";
-    sha256 = "b559c135801bcf04c73614d11c003df0d157ee0c30a275875c64053311ff2566";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/mini_maxwell/2.1.31-3.tar.gz";
+    name = "2.1.31-3.tar.gz";
+    sha256 = "0ad6d2a6419551bd4337714406f91a2ce247c74bae99616996cd052a7050a17f";
   };
 
   buildType = "catkin";

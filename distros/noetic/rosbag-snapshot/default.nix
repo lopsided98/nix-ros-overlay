@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosbag, rosbag-snapshot-msgs, roscpp, rosgraph-msgs, roslint, rospy, rostest, rostopic, std-msgs, std-srvs, topic-tools }:
 buildRosPackage {
   pname = "ros-noetic-rosbag-snapshot";
-  version = "1.0.5-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rosbag_snapshot-release/archive/release/noetic/rosbag_snapshot/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "1b657fb2cd5be647ae25fe577a2f598b110f9c15d51852f72322500692fa9486";
+    url = "https://github.com/ros-gbp/rosbag_snapshot-release/archive/release/noetic/rosbag_snapshot/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "b87bdf7575fdf9a7d53e938088e6aabfb5c4081500929830b26f5de83ff2e706";
   };
 
   buildType = "catkin";

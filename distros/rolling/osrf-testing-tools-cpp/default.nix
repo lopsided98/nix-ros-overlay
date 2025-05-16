@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-rolling-osrf-testing-tools-cpp";
-  version = "2.2.0-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/osrf_testing_tools_cpp-release/archive/release/rolling/osrf_testing_tools_cpp/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "c4b3845ffeae98779fb9e64ff0022c3a7b95abc072b4fe44798cfd9937db1ce3";
+    url = "https://github.com/ros2-gbp/osrf_testing_tools_cpp-release/archive/release/rolling/osrf_testing_tools_cpp/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "055f41b3e8a1621325b7d8aed5c00685a1cc5aa1e12221a9dfbf0d9ef0ebf6bf";
   };
 
   buildType = "cmake";

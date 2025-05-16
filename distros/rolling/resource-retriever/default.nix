@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-index-cpp, ament-index-python, ament-lint-auto, ament-lint-common, libcurl-vendor, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-resource-retriever";
-  version = "3.6.0-r1";
+  version = "3.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/rolling/resource_retriever/3.6.0-1.tar.gz";
-    name = "3.6.0-1.tar.gz";
-    sha256 = "bba32c128145d2dd2d90ae5882d8c64b0bcd8501c28d78cc3ec6a4cb03f48b79";
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/rolling/resource_retriever/3.8.0-1.tar.gz";
+    name = "3.8.0-1.tar.gz";
+    sha256 = "253c49887d2164dd1cb8223b66abda49bd115cad40d6e2ab5b4fa5773bc4c02e";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, catkin-virtualenv, message-generation, message-runtime, roslaunch, rostest, speech-recognition-msgs, std-msgs, topic-tools }:
 buildRosPackage {
   pname = "ros-noetic-dialogflow-task-executive";
-  version = "2.1.28-r1";
+  version = "2.1.31-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/dialogflow_task_executive/2.1.28-1.tar.gz";
-    name = "2.1.28-1.tar.gz";
-    sha256 = "f56221057407eef4dad3da68038746ac600c8019e70600329dd04a721cf2daa4";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/dialogflow_task_executive/2.1.31-3.tar.gz";
+    name = "2.1.31-3.tar.gz";
+    sha256 = "c8e33d8b06740e4f4c4e84afd78e36fd4d04434b9b91c568da674e164edcd0e6";
   };
 
   buildType = "catkin";

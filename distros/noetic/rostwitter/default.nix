@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, actionlib-msgs, catkin, dynamic-reconfigure, git, message-generation, message-runtime, mk, python3Packages, rospy, rostest, sound-play, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rostwitter";
-  version = "2.1.28-r1";
+  version = "2.1.31-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/rostwitter/2.1.28-1.tar.gz";
-    name = "2.1.28-1.tar.gz";
-    sha256 = "0074c3a683775981ae140c454d5e04625b4296265963b7297937043ec508ae9c";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/rostwitter/2.1.31-3.tar.gz";
+    name = "2.1.31-3.tar.gz";
+    sha256 = "a0a6855ee073497b4d75c89847d1eb0a06d163528118816e33fa836cfca24491";
   };
 
   buildType = "catkin";

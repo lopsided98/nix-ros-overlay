@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bison, cacert, catkin, flex, mk, openssl, rosbash, rosbuild, roslib, rospack, unzip }:
 buildRosPackage {
   pname = "ros-noetic-ff";
-  version = "2.1.28-r1";
+  version = "2.1.31-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/ff/2.1.28-1.tar.gz";
-    name = "2.1.28-1.tar.gz";
-    sha256 = "174b476e18d9644bd8f93842c084d5469dfd8db90ae99e096701a15fe09cbe52";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/ff/2.1.31-3.tar.gz";
+    name = "2.1.31-3.tar.gz";
+    sha256 = "3c83106b1972f1ec8b2719706a164e084786e6688e2341a2c9753f8637b6c687";
   };
 
   buildType = "catkin";

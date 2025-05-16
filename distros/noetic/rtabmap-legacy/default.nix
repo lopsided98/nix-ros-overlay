@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, dynamic-reconfigure, image-transport, nodelet, rtabmap-conversions, rtabmap-demos, rtabmap-launch, rtabmap-msgs, rtabmap-odom, rtabmap-slam, rtabmap-util, rtabmap-viz }:
 buildRosPackage {
   pname = "ros-noetic-rtabmap-legacy";
-  version = "0.21.10-r1";
+  version = "0.21.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_legacy/0.21.10-1.tar.gz";
-    name = "0.21.10-1.tar.gz";
-    sha256 = "3b41ac5e87350379276cb41722c43512a334531ede8c8c782710eaeafdac7554";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_legacy/0.21.13-1.tar.gz";
+    name = "0.21.13-1.tar.gz";
+    sha256 = "b5fb1c01228a87aad709c8254182c4a7beabd01ca23b9e6b1cddd915f8064b80";
   };
 
   buildType = "catkin";

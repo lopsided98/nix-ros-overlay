@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages, rospy, rqt-msg, rqt-py-common }:
 buildRosPackage {
   pname = "ros-noetic-rqt-action";
-  version = "0.4.10-r1";
+  version = "0.4.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_action-release/archive/release/noetic/rqt_action/0.4.10-1.tar.gz";
-    name = "0.4.10-1.tar.gz";
-    sha256 = "294d156bbc984cb8a48349235f0f54bc19bbf1f3f8901a81b961173bc9e222d8";
+    url = "https://github.com/ros-gbp/rqt_action-release/archive/release/noetic/rqt_action/0.4.11-1.tar.gz";
+    name = "0.4.11-1.tar.gz";
+    sha256 = "d966141aaa78e96f3b205681a392aa35bf349ca0f0c06cee2230b405416e217b";
   };
 
   buildType = "catkin";

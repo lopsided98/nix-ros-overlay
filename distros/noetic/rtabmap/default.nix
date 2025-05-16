@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, cv-bridge, grid-map-core, gtsam, libg2o, libpointmatcher, octomap, pcl, proj, qt-gui-cpp, sqlite, zlib }:
+{ lib, buildRosPackage, fetchurl, cmake, cv-bridge, gtsam, libg2o, libpointmatcher, octomap, pcl, proj, qt-gui-cpp, sqlite, zlib }:
 buildRosPackage {
   pname = "ros-noetic-rtabmap";
-  version = "0.21.10-r1";
+  version = "0.21.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap-release/archive/release/noetic/rtabmap/0.21.10-1.tar.gz";
-    name = "0.21.10-1.tar.gz";
-    sha256 = "e2d0a7d8d518fe7d9eb84ed4ab79c622937efc1c462f1298056b1c0c14c97775";
+    url = "https://github.com/introlab/rtabmap-release/archive/release/noetic/rtabmap/0.21.13-1.tar.gz";
+    name = "0.21.13-1.tar.gz";
+    sha256 = "56a14d61f5956a45a58f80267799abdd228712c0bf546e7fa7f40926ecafed22";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake proj ];
-  propagatedBuildInputs = [ cv-bridge grid-map-core gtsam libg2o libpointmatcher octomap pcl qt-gui-cpp sqlite zlib ];
+  propagatedBuildInputs = [ cv-bridge gtsam libg2o libpointmatcher octomap pcl qt-gui-cpp sqlite zlib ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

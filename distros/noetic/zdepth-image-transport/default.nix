@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, image-transport, message-generation, message-runtime, pluginlib, roscpp, sensor-msgs, std-msgs, zdepth }:
 buildRosPackage {
   pname = "ros-noetic-zdepth-image-transport";
-  version = "2.1.28-r1";
+  version = "2.1.31-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/zdepth_image_transport/2.1.28-1.tar.gz";
-    name = "2.1.28-1.tar.gz";
-    sha256 = "79d22d820b58694feed5ed794c92a816c68444bf7d4898f9ee82920725b02bee";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/zdepth_image_transport/2.1.31-3.tar.gz";
+    name = "2.1.31-3.tar.gz";
+    sha256 = "83e8610ae1d13b9cc3302e70cfa0e58333ec8e55db444590a53c243add819b60";
   };
 
   buildType = "catkin";

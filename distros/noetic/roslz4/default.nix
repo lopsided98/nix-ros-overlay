@@ -2,21 +2,21 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, cpp-common, lz4, rosunit }:
+{ lib, buildRosPackage, fetchurl, catkin, cpp-common, lz4, python3, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-roslz4";
-  version = "1.17.0-r1";
+  version = "1.17.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/roslz4/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "fbbb0722f57ba306be759bbc0c1741589b36462699cf504ecbb6c1360662b1e9";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/roslz4/1.17.3-1.tar.gz";
+    name = "1.17.3-1.tar.gz";
+    sha256 = "8bcc35a3ee3989ab8a8268cd6b47c3223b74973c722eb1517252a6f8e55d7350";
   };
 
   buildType = "catkin";
   buildInputs = [ catkin cpp-common ];
   checkInputs = [ rosunit ];
-  propagatedBuildInputs = [ lz4 ];
+  propagatedBuildInputs = [ lz4 python3 ];
   nativeBuildInputs = [ catkin ];
 
   meta = {
