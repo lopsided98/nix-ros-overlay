@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-xmllint, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-ament-pycodestyle";
-  version = "0.19.2-r1";
+  version = "0.20.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_pycodestyle/0.19.2-1.tar.gz";
-    name = "0.19.2-1.tar.gz";
-    sha256 = "0c2cec301817d22e286e324234c5852f94331a1b8689aa1adde25518ea252411";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_pycodestyle/0.20.0-1.tar.gz";
+    name = "0.20.0-1.tar.gz";
+    sha256 = "84666bfa5be7f53fb139bd054db9c38619826220b0c40cab4fb4e96d44195b10";
   };
 
   buildType = "ament_python";

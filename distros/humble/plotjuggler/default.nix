@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, binutils, boost, cppzmq, fastcdr, lz4, protobuf, qt5, rclcpp, zstd }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, binutils, boost, cppzmq, fastcdr, protobuf, qt5, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-plotjuggler";
-  version = "3.9.1-r1";
+  version = "3.10.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/plotjuggler-release/archive/release/humble/plotjuggler/3.9.1-1.tar.gz";
-    name = "3.9.1-1.tar.gz";
-    sha256 = "393a70dbc9841b891fb777ee6df9e9bf1849ac8ee77e61371bafe75561efc247";
+    url = "https://github.com/ros2-gbp/plotjuggler-release/archive/release/humble/plotjuggler/3.10.1-1.tar.gz";
+    name = "3.10.1-1.tar.gz";
+    sha256 = "45cdd348e665e03dccaf0669a2eb2c1804720d3ea2a241bcc1bd131eebd96b46";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ ament-index-cpp binutils boost cppzmq fastcdr lz4 protobuf qt5.qtbase qt5.qtsvg qt5.qtwebsockets qt5.qtx11extras rclcpp zstd ];
+  propagatedBuildInputs = [ ament-index-cpp binutils boost cppzmq fastcdr protobuf qt5.qtbase qt5.qtsvg qt5.qtwebsockets qt5.qtx11extras rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

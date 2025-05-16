@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, python3Packages, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-humble-slider-publisher";
-  version = "2.4.0-r1";
+  version = "2.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/slider_publisher-release/archive/release/humble/slider_publisher/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "a5e44301b0a63b3b38f04a7ed6a8ac826dda95003bd22a5f6e6ab369bbaa5203";
+    url = "https://github.com/ros2-gbp/slider_publisher-release/archive/release/humble/slider_publisher/2.4.1-1.tar.gz";
+    name = "2.4.1-1.tar.gz";
+    sha256 = "ab65d384fa6ac4f3704a6da1f1129eac5ee65e869851f4e925334e38d2091176";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages, rosservice, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-noetic-rqt-service-caller";
-  version = "0.4.11-r1";
+  version = "0.4.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_service_caller-release/archive/release/noetic/rqt_service_caller/0.4.11-1.tar.gz";
-    name = "0.4.11-1.tar.gz";
-    sha256 = "79dcc49d59bbe8c79564675bb8d1ec97c46b5f265066d62de99c6af3a9121ac6";
+    url = "https://github.com/ros-gbp/rqt_service_caller-release/archive/release/noetic/rqt_service_caller/0.4.12-1.tar.gz";
+    name = "0.4.12-1.tar.gz";
+    sha256 = "6b95c3c997a8135d08f06a708cb49b635fb7df7c0e0b337c8016c9c6bd5f2db6";
   };
 
   buildType = "catkin";

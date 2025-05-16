@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, diagnostic-aggregator, diagnostic-common-diagnostics, diagnostic-updater, self-test }:
 buildRosPackage {
   pname = "ros-humble-diagnostics";
-  version = "4.0.3-r1";
+  version = "4.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/humble/diagnostics/4.0.3-1.tar.gz";
-    name = "4.0.3-1.tar.gz";
-    sha256 = "e6d7a6bc2f453e989d0e165a3a9a2d9453a478ffef209b00905812a1db4b654c";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/humble/diagnostics/4.0.4-1.tar.gz";
+    name = "4.0.4-1.tar.gz";
+    sha256 = "3c88367851ca3aa10434c45573bcf48881724b73cd9b97efef473a53726b6a7f";
   };
 
   buildType = "ament_cmake";

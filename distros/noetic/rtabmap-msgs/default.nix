@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, genmsg, geometry-msgs, message-generation, message-runtime, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-rtabmap-msgs";
-  version = "0.21.10-r1";
+  version = "0.21.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_msgs/0.21.10-1.tar.gz";
-    name = "0.21.10-1.tar.gz";
-    sha256 = "8c04efcf256244e55637adf6e7c65811d6e988ee94fa1d0ca1f47108509fee73";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_msgs/0.21.13-1.tar.gz";
+    name = "0.21.13-1.tar.gz";
+    sha256 = "7b4e4a53fb10f6a5d74ea88dc4e45c524a7d75ecfabb82638ac3a21fd8bd4f4e";
   };
 
   buildType = "catkin";

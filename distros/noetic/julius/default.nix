@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mk, roslib, rospack, rsync, unzip, wget }:
 buildRosPackage {
   pname = "ros-noetic-julius";
-  version = "2.1.28-r1";
+  version = "2.1.31-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/julius/2.1.28-1.tar.gz";
-    name = "2.1.28-1.tar.gz";
-    sha256 = "2a3fb86c7626925a8af6ff73a65994a3a20a3ed038a2482591a83d44ec75ad6e";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/julius/2.1.31-3.tar.gz";
+    name = "2.1.31-3.tar.gz";
+    sha256 = "e59823f666704dcf041516d00cf27e4680908219d862b325066de4de8574b838";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, python-qt-binding, python3Packages, rostopic, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-noetic-rqt-robot-steering";
-  version = "0.5.13-r1";
+  version = "0.5.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_robot_steering-release/archive/release/noetic/rqt_robot_steering/0.5.13-1.tar.gz";
-    name = "0.5.13-1.tar.gz";
-    sha256 = "fac18ca09687c28905f56000a283176be6208851483a3e18fda78504429a65f4";
+    url = "https://github.com/ros-gbp/rqt_robot_steering-release/archive/release/noetic/rqt_robot_steering/0.5.14-1.tar.gz";
+    name = "0.5.14-1.tar.gz";
+    sha256 = "2010fb0a201b93262f9c5357a2185439c2a507a96e9faf53c998d3e8e431a158";
   };
 
   buildType = "catkin";

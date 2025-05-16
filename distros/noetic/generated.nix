@@ -694,6 +694,8 @@ self: super: {
 
  depth-image-proc = self.callPackage ./depth-image-proc {};
 
+ depth-image-publisher = self.callPackage ./depth-image-publisher {};
+
  depth-obstacle-detect-ros = self.callPackage ./depth-obstacle-detect-ros {};
 
  depth-obstacle-detect-ros-msgs = self.callPackage ./depth-obstacle-detect-ros-msgs {};
@@ -777,8 +779,6 @@ self: super: {
  dlux-plugins = self.callPackage ./dlux-plugins {};
 
  dnn-detect = self.callPackage ./dnn-detect {};
-
- downward = self.callPackage ./downward {};
 
  draco = self.callPackage ./draco {};
 
@@ -2608,6 +2608,8 @@ self: super: {
 
  phidgets-api = self.callPackage ./phidgets-api {};
 
+ phidgets-current-inputs = self.callPackage ./phidgets-current-inputs {};
+
  phidgets-digital-inputs = self.callPackage ./phidgets-digital-inputs {};
 
  phidgets-digital-outputs = self.callPackage ./phidgets-digital-outputs {};
@@ -3158,8 +3160,6 @@ self: super: {
 
  ros-ethercat-eml = self.callPackage ./ros-ethercat-eml {};
 
- ros-google-cloud-language = self.callPackage ./ros-google-cloud-language {};
-
  ros-ign = self.callPackage ./ros-ign {};
 
  ros-ign-bridge = self.callPackage ./ros-ign-bridge {};
@@ -3638,8 +3638,6 @@ self: super: {
 
  single-joint-position-action = self.callPackage ./single-joint-position-action {};
 
- skyway = self.callPackage ./skyway {};
-
  slam-gmapping = self.callPackage ./slam-gmapping {};
 
  slam-karto = self.callPackage ./slam-karto {};
@@ -3649,8 +3647,6 @@ self: super: {
  slam-toolbox-msgs = self.callPackage ./slam-toolbox-msgs {};
 
  slam-toolbox-rviz = self.callPackage ./slam-toolbox-rviz {};
-
- slic = self.callPackage ./slic {};
 
  slider-publisher = self.callPackage ./slider-publisher {};
 
@@ -3822,6 +3818,8 @@ self: super: {
 
  test-diagnostic-aggregator = self.callPackage ./test-diagnostic-aggregator {};
 
+ test-grpc = self.callPackage ./test-grpc {};
+
  test-mavros = self.callPackage ./test-mavros {};
 
  test-osm = self.callPackage ./test-osm {};
@@ -3980,6 +3978,8 @@ self: super: {
 
  ur12e-moveit-config = self.callPackage ./ur12e-moveit-config {};
 
+ ur15-moveit-config = self.callPackage ./ur15-moveit-config {};
+
  ur16e-moveit-config = self.callPackage ./ur16e-moveit-config {};
 
  ur20-moveit-config = self.callPackage ./ur20-moveit-config {};
@@ -4100,7 +4100,7 @@ self: super: {
 
  vl53l1x = self.callPackage ./vl53l1x {};
 
- voice-text = self.callPackage ./voice-text {};
+ voicevox = self.callPackage ./voicevox {};
 
  volta-base = self.callPackage ./volta-base {};
 

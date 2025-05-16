@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exiv2-metadata-extractor }:
 buildRosPackage {
   pname = "ros-noetic-movie-publisher-plugins-copyleft";
-  version = "2.0.3-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/peci1/movie_publisher-release/archive/release/noetic/movie_publisher_plugins_copyleft/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "3996a22585781c90437ef29104151ad6782e570e10cfd71047358369be420da8";
+    url = "https://github.com/peci1/movie_publisher-release/archive/release/noetic/movie_publisher_plugins_copyleft/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "9075e873646148140abde42d4d861412d1827b3ff430f2855d7303799ce17cf5";
   };
 
   buildType = "catkin";

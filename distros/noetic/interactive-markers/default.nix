@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages, rosconsole, roscpp, rospy, rostest, std-msgs, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-interactive-markers";
-  version = "1.12.1-r1";
+  version = "1.12.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/interactive_markers-release/archive/release/noetic/interactive_markers/1.12.1-1.tar.gz";
-    name = "1.12.1-1.tar.gz";
-    sha256 = "0b7993123eb4ed27cfe20b8e249acb3725982e61bc4b7f9de2dc89baba1eb533";
+    url = "https://github.com/ros-gbp/interactive_markers-release/archive/release/noetic/interactive_markers/1.12.2-1.tar.gz";
+    name = "1.12.2-1.tar.gz";
+    sha256 = "496ba9be8b54621ef6d68b98e03bff888f5e623b5a4444a9958c01e2507f3cee";
   };
 
   buildType = "catkin";

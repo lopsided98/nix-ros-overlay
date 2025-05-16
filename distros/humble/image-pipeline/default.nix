@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, camera-calibration, depth-image-proc, image-proc, image-publisher, image-rotate, image-view, stereo-image-proc }:
 buildRosPackage {
   pname = "ros-humble-image-pipeline";
-  version = "3.0.7-r1";
+  version = "3.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/image_pipeline/3.0.7-1.tar.gz";
-    name = "3.0.7-1.tar.gz";
-    sha256 = "85c981869b01dfd36017297b6626fec52dd0a8cfad55d9ce710d2fe56ffe653d";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/image_pipeline/3.0.8-1.tar.gz";
+    name = "3.0.8-1.tar.gz";
+    sha256 = "0ab7eaf38160791dd4008aa34de00a7c270f3a3998d8f933e801d54af2728851";
   };
 
   buildType = "ament_cmake";
