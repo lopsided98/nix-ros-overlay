@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, message-generation, message-runtime, rosbag-migration-rule, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-trajectory-msgs";
-  version = "1.13.1-r1";
+  version = "1.13.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/noetic/trajectory_msgs/1.13.1-1.tar.gz";
-    name = "1.13.1-1.tar.gz";
-    sha256 = "4d6c3b972523840d4add843ddec7a00ec69e6dedb1a5b56af6d4b3b121715360";
+    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/noetic/trajectory_msgs/1.13.2-1.tar.gz";
+    name = "1.13.2-1.tar.gz";
+    sha256 = "274cd3c31a5aa5c32a71d742064016164a7eb76502c5ba0511bd0ebeb7a1eb21";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, catkin-virtualenv, message-generation, message-runtime, roslaunch, rospy, rostest }:
 buildRosPackage {
   pname = "ros-noetic-gdrive-ros";
-  version = "2.1.28-r1";
+  version = "2.1.31-r4";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/gdrive_ros/2.1.28-1.tar.gz";
-    name = "2.1.28-1.tar.gz";
-    sha256 = "9d7a30004e5b0a7ea433034bba7458972fb4abd33c1eceec94e2399ae4b47665";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/gdrive_ros/2.1.31-4.tar.gz";
+    name = "2.1.31-4.tar.gz";
+    sha256 = "a9bd6e413097541ce516402ee9c822bb606a3b5bdd48af52879a3823387d1ff0";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake }:
 buildRosPackage {
   pname = "ros-jazzy-ur-client-library";
-  version = "1.9.0-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/jazzy/ur_client_library/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "62d55fdc7c98d8fcb80d86455e194ab0b5665773a0195db3fc86539b05a93c87";
+    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/jazzy/ur_client_library/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "945ce71ce1b0ee58c1a12f7ada873939ecf32e4ec932b61e02a7ef3548fdbf82";
   };
 
   buildType = "cmake";

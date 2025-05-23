@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, console-bridge, poco }:
 buildRosPackage {
   pname = "ros-noetic-class-loader";
-  version = "0.5.1-r1";
+  version = "0.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/class_loader-release/archive/release/noetic/class_loader/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "7657a7db4650dda3bf66e2c407f6ab64716e26cc6f29718efd3dbec553339e34";
+    url = "https://github.com/ros-gbp/class_loader-release/archive/release/noetic/class_loader/0.5.2-1.tar.gz";
+    name = "0.5.2-1.tar.gz";
+    sha256 = "8957d4d0301e28d4e17d7b860b5340db9fd13648ecf7c32b3bc244f0ee2b0a51";
   };
 
   buildType = "catkin";

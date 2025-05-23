@@ -2,18 +2,19 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, diagnostic-updater, rclcpp, wireless-msgs, wirelesstools }:
+{ lib, buildRosPackage, fetchurl, ament-lint-auto, ament-lint-common, diagnostic-updater, rclcpp, wireless-msgs, wirelesstools }:
 buildRosPackage {
   pname = "ros-humble-wireless-watcher";
-  version = "1.1.3-r1";
+  version = "1.1.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/humble/wireless_watcher/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "7815cbb2e4cabac8be536ce26cddd61e593e47bda48d0701d5f6c8d831ca1fd7";
+    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/humble/wireless_watcher/1.1.5-2.tar.gz";
+    name = "1.1.5-2.tar.gz";
+    sha256 = "354ddab3aade00b437ad90f6aa8a427187eeb73280cd663990f150cabdfff036";
   };
 
   buildType = "ament_cmake";
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ diagnostic-updater rclcpp wireless-msgs wirelesstools ];
 
   meta = {

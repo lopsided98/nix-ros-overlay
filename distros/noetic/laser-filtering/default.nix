@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, map-laser }:
 buildRosPackage {
   pname = "ros-noetic-laser-filtering";
-  version = "0.0.5-r1";
+  version = "0.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/wu-robotics/laser_filtering_release/archive/release/noetic/laser_filtering/0.0.5-1.tar.gz";
-    name = "0.0.5-1.tar.gz";
-    sha256 = "b2d105b7598d93ede269fb388bf842b9a2af441a5bcfe8a3db2ce8696de77af6";
+    url = "https://github.com/wu-robotics/laser_filtering_release/archive/release/noetic/laser_filtering/0.0.6-1.tar.gz";
+    name = "0.0.6-1.tar.gz";
+    sha256 = "64184241a523570b8424a94e659de556a1ce9e19ab338ff7dc0fd91c45b11548";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, joint-state-publisher, joint-state-publisher-gui, moveit-configs-utils, moveit-kinematics, moveit-planners, moveit-ros-move-group, moveit-ros-visualization, moveit-ros-warehouse, moveit-setup-assistant, moveit-simple-controller-manager, open-manipulator-description, robot-state-publisher, rviz-common, rviz-default-plugins, rviz2, tf2-ros, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-open-manipulator-moveit-config";
-  version = "3.2.1-r1";
+  version = "3.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_moveit_config/3.2.1-1.tar.gz";
-    name = "3.2.1-1.tar.gz";
-    sha256 = "7fe332176a32738fc9f6a9718f52684753a5b4bdbed9eba4dd0562636f4b7494";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_moveit_config/3.2.2-1.tar.gz";
+    name = "3.2.2-1.tar.gz";
+    sha256 = "1ae71e8393e46d968c32e188fdef2e977b5cf2b3f0a25f1791fdda8660137ed3";
   };
 
   buildType = "ament_cmake";

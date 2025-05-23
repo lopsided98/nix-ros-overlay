@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, ament-lint-auto, ament-lint-common, controller-manager, gz-plugin-vendor, gz-sim-vendor, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-rolling-gz-ros2-control";
-  version = "2.0.7-r1";
+  version = "2.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/rolling/gz_ros2_control/2.0.7-1.tar.gz";
-    name = "2.0.7-1.tar.gz";
-    sha256 = "1c0b56f620adcd1cf43b8458826ba597bc47735481f2af95325b69b891035209";
+    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/rolling/gz_ros2_control/2.0.8-1.tar.gz";
+    name = "2.0.8-1.tar.gz";
+    sha256 = "290fd4267d90d58ab5d9749f627b793ceca1355ca60cf600dba62c14bd265bba";
   };
 
   buildType = "ament_cmake";

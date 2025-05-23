@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, interactive-markers, roscpp, tf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-noetic-interactive-marker-tutorials";
-  version = "0.11.1-r1";
+  version = "0.11.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/noetic/interactive_marker_tutorials/0.11.1-1.tar.gz";
-    name = "0.11.1-1.tar.gz";
-    sha256 = "dae59c68ac8133827a1b442c85a67b55f9a1fac9466d7df0642b4159c088574c";
+    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/noetic/interactive_marker_tutorials/0.11.2-1.tar.gz";
+    name = "0.11.2-1.tar.gz";
+    sha256 = "5839aec3fd14cf4cd62468f2ee84992a7752c4f973795990521e47f63b9b5ac4";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rosemacs, roslisp, sbcl, slime-wrapper }:
 buildRosPackage {
   pname = "ros-noetic-slime-ros";
-  version = "0.4.17-r1";
+  version = "0.4.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/noetic/slime_ros/0.4.17-1.tar.gz";
-    name = "0.4.17-1.tar.gz";
-    sha256 = "c2005a984956b348a191f10d362ce48b3e0d4526b8c72ae31a1e7f8372918e87";
+    url = "https://github.com/code-iai-release/ros_emacs_utils-release/archive/release/noetic/slime_ros/0.4.18-1.tar.gz";
+    name = "0.4.18-1.tar.gz";
+    sha256 = "4a1041139d4964558e2dd9af6ab9273b1d624d37da266e604473003d9bd11097";
   };
 
   buildType = "catkin";

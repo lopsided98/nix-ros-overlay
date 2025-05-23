@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-humble-kinematics-interface";
-  version = "0.3.0-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/humble/kinematics_interface/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "0dfa527ba88ad9f6d300430c563aa8a273f5edd9f244639a99a2d048f2822f69";
+    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/humble/kinematics_interface/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "30fd4b0fe79c612200a750e02b3ec8e5d7211426faa7cdf459b4f77bf617f39d";
   };
 
   buildType = "ament_cmake";

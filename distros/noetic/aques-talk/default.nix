@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, kakasi, nkf, rostest, sound-play }:
 buildRosPackage {
   pname = "ros-noetic-aques-talk";
-  version = "2.1.28-r1";
+  version = "2.1.31-r4";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/aques_talk/2.1.28-1.tar.gz";
-    name = "2.1.28-1.tar.gz";
-    sha256 = "f258fe9eed04264021f915dbb599d863beb0174e970d048febafd0c21fa13887";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/aques_talk/2.1.31-4.tar.gz";
+    name = "2.1.31-4.tar.gz";
+    sha256 = "c3b97aa0cb9bfcd74ed8bcdacbb6c2dfaed1ff00365aa2f2215ca63ee614b277";
   };
 
   buildType = "catkin";

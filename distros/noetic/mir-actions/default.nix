@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib, catkin, geometry-msgs, message-generation, message-runtime, mir-msgs, nav-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mir-actions";
-  version = "1.1.7-r1";
+  version = "1.1.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_actions/1.1.7-1.tar.gz";
-    name = "1.1.7-1.tar.gz";
-    sha256 = "4730959b70dee88162c37d14709ff6570dc5e56aea6e434d4ea0700e9e820530";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_actions/1.1.8-1.tar.gz";
+    name = "1.1.8-1.tar.gz";
+    sha256 = "8f779dc7ce699daefd55e65bae7dd7be09c1a12df34245933074ed2968b098fd";
   };
 
   buildType = "catkin";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Action definitions for the MiR robot";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

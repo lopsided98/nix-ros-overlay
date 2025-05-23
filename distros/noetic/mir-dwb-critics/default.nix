@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, costmap-queue, dwb-critics, dwb-local-planner, geometry-msgs, nav-2d-msgs, nav-2d-utils, nav-core2, nav-grid-iterators, pluginlib, python3Packages, roscpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-mir-dwb-critics";
-  version = "1.1.7-r1";
+  version = "1.1.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_dwb_critics/1.1.7-1.tar.gz";
-    name = "1.1.7-1.tar.gz";
-    sha256 = "580d9fb7c917dfe167431ae7fffb9b272ad3f5e4ef29f5d862b6c85bfcba840f";
+    url = "https://github.com/uos-gbp/mir_robot-release/archive/release/noetic/mir_dwb_critics/1.1.8-1.tar.gz";
+    name = "1.1.8-1.tar.gz";
+    sha256 = "d99ef2c2879dc0eeb84d2098527f60723f551395f94c932fc3a26b820bce6127";
   };
 
   buildType = "catkin";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Trajectory critics for the dwb_local_planner that work well together with the SBPL global planner on the MiR robot";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

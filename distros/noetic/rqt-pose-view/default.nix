@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, geometry-msgs, gl-dependency, python-qt-binding, python3Packages, rospy, rostopic, rqt-gui, rqt-gui-py, rqt-py-common, tf }:
 buildRosPackage {
   pname = "ros-noetic-rqt-pose-view";
-  version = "0.5.12-r1";
+  version = "0.5.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_pose_view-release/archive/release/noetic/rqt_pose_view/0.5.12-1.tar.gz";
-    name = "0.5.12-1.tar.gz";
-    sha256 = "eea690c28149187f59e175a29bb0f58d5133965ae7dced44d4dbfa8ce7d6c88f";
+    url = "https://github.com/ros-gbp/rqt_pose_view-release/archive/release/noetic/rqt_pose_view/0.5.13-1.tar.gz";
+    name = "0.5.13-1.tar.gz";
+    sha256 = "b6ba80f7e0af839eea68728cbd72fa538049c3b3a4c79aa8fcf3b537340b2796";
   };
 
   buildType = "catkin";

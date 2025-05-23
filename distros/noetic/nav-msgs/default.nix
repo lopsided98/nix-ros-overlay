@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, geometry-msgs, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-nav-msgs";
-  version = "1.13.1-r1";
+  version = "1.13.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/noetic/nav_msgs/1.13.1-1.tar.gz";
-    name = "1.13.1-1.tar.gz";
-    sha256 = "32c2b9aa8f94a20f4718675c655e8f6d1ec0c00fa3b753bc2a0f9c0abcbec06a";
+    url = "https://github.com/ros-gbp/common_msgs-release/archive/release/noetic/nav_msgs/1.13.2-1.tar.gz";
+    name = "1.13.2-1.tar.gz";
+    sha256 = "02bb9155abe995ba423001874d0d0177b07d57fb4d6a2f4c0a4c1dd34bdc2818";
   };
 
   buildType = "catkin";

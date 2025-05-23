@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nodelet, phidgets-api, roscpp, roslaunch, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-phidgets-temperature";
-  version = "1.0.9-r1";
+  version = "1.0.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_temperature/1.0.9-1.tar.gz";
-    name = "1.0.9-1.tar.gz";
-    sha256 = "edaf8b2a446c14d6c8958bba2d5c3c6e74a299633fd44e99fbd6e379d7522e5a";
+    url = "https://github.com/ros-drivers-gbp/phidgets_drivers-release/archive/release/noetic/phidgets_temperature/1.0.10-1.tar.gz";
+    name = "1.0.10-1.tar.gz";
+    sha256 = "210e3fdadaf4a4267ec60941e9409c44b7decaf08e7091b367fcd3973b61eb12";
   };
 
   buildType = "catkin";

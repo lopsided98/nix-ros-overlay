@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-smclib";
-  version = "1.8.6-r1";
+  version = "1.8.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/bond_core-release/archive/release/noetic/smclib/1.8.6-1.tar.gz";
-    name = "1.8.6-1.tar.gz";
-    sha256 = "7a0fe1a46821a1fc84021ad2592661cfc9a4bfe0179a5d896558b7c1a7a00cde";
+    url = "https://github.com/ros-gbp/bond_core-release/archive/release/noetic/smclib/1.8.7-1.tar.gz";
+    name = "1.8.7-1.tar.gz";
+    sha256 = "4ad1258f7a5946f36c661bff04a1aa7077364652ffcb943c9342a4cecf4b946f";
   };
 
   buildType = "catkin";

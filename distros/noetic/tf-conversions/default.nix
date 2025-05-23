@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, geometry-msgs, kdl-conversions, orocos-kdl, python3Packages, tf }:
 buildRosPackage {
   pname = "ros-noetic-tf-conversions";
-  version = "1.13.3-r1";
+  version = "1.13.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry-release/archive/release/noetic/tf_conversions/1.13.3-1.tar.gz";
-    name = "1.13.3-1.tar.gz";
-    sha256 = "ee90e8b54280b000356b076083f76fa035f748e690c07dc8a6285387b48f946f";
+    url = "https://github.com/ros-gbp/geometry-release/archive/release/noetic/tf_conversions/1.13.4-1.tar.gz";
+    name = "1.13.4-1.tar.gz";
+    sha256 = "32adcaf128e51371ebc796fd0d63d7cadf73ea3b256a017488d9c610a418c605";
   };
 
   buildType = "catkin";

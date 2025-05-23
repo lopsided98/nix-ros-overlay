@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, control-msgs, moveit-ros-planning-interface, rclcpp, rclpy, sensor-msgs, trajectory-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, moveit-ros-planning-interface, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-open-manipulator-playground";
-  version = "3.2.1-r1";
+  version = "3.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_playground/3.2.1-1.tar.gz";
-    name = "3.2.1-1.tar.gz";
-    sha256 = "45e2f9ffb758ead43e18fe99bba759629fabfb09e331599859b5f1c17ce2409e";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_playground/3.2.2-1.tar.gz";
+    name = "3.2.2-1.tar.gz";
+    sha256 = "f3aa3898409a780a0438fc5a2d9c360a85365c81c33dc37c53073c7bc3ec9499";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ control-msgs moveit-ros-planning-interface rclcpp rclpy sensor-msgs trajectory-msgs ];
+  propagatedBuildInputs = [ moveit-ros-planning-interface rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

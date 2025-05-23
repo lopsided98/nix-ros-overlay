@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, joy-linux, joy-teleop, play-motion2, talos-controller-configuration, talos-description, twist-mux }:
 buildRosPackage {
   pname = "ros-humble-talos-bringup";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/talos_robot-release/archive/release/humble/talos_bringup/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "934224fe28c03c483dbd322abb3c0b6b16b812e2a884291017fb9cb06c22c7c0";
+    url = "https://github.com/pal-gbp/talos_robot-release/archive/release/humble/talos_bringup/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "ef690d06107cb71ec076d949c9f68f07c58d79f36339ac606d7f3f70633a6b48";
   };
 
   buildType = "ament_cmake";

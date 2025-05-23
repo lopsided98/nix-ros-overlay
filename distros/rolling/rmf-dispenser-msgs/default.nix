@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rmf-dispenser-msgs";
-  version = "3.4.1-r1";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_dispenser_msgs/3.4.1-1.tar.gz";
-    name = "3.4.1-1.tar.gz";
-    sha256 = "2f383cefc6ad44b316b84bb6c64434672a4e7f7b0d50c32be3c6151774ff37df";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_dispenser_msgs/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "a11f1ad3c531d1f93bc4ced83f4b76fa9c3a20492c684b3e54b1d2997372a94a";
   };
 
   buildType = "ament_cmake";

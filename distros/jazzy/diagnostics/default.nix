@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, diagnostic-aggregator, diagnostic-common-diagnostics, diagnostic-updater, self-test }:
 buildRosPackage {
   pname = "ros-jazzy-diagnostics";
-  version = "4.2.3-r1";
+  version = "4.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/jazzy/diagnostics/4.2.3-1.tar.gz";
-    name = "4.2.3-1.tar.gz";
-    sha256 = "94d21058a7f2d8c5a8db5bd12a4337565794f6e71c8b68b4e91796d6df8203cc";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/jazzy/diagnostics/4.2.4-1.tar.gz";
+    name = "4.2.4-1.tar.gz";
+    sha256 = "daeff748db0a5d17301e55ea323dfc711ab6fe40cf27078b0f5e43771cab1347";
   };
 
   buildType = "ament_cmake";

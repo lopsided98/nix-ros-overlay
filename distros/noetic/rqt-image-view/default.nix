@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cv-bridge, geometry-msgs, image-transport, python3Packages, qt5, rqt-gui, rqt-gui-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rqt-image-view";
-  version = "0.4.18-r1";
+  version = "0.4.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_image_view-release/archive/release/noetic/rqt_image_view/0.4.18-1.tar.gz";
-    name = "0.4.18-1.tar.gz";
-    sha256 = "9ca72bbe2358330b14178b1f8503a22758393e4a5561e8faaa1ff9d56bbc1e2c";
+    url = "https://github.com/ros-gbp/rqt_image_view-release/archive/release/noetic/rqt_image_view/0.4.19-1.tar.gz";
+    name = "0.4.19-1.tar.gz";
+    sha256 = "674d68cb450fb02685a5e954e3d69a01dda627efe516448e5963f36323bd5183";
   };
 
   buildType = "catkin";

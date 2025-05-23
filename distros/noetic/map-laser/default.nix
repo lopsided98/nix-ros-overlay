@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, laser-filters, nav-msgs, roslaunch, roslint, rospy, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-map-laser";
-  version = "0.0.5-r1";
+  version = "0.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/wu-robotics/laser_filtering_release/archive/release/noetic/map_laser/0.0.5-1.tar.gz";
-    name = "0.0.5-1.tar.gz";
-    sha256 = "9c55dec2f10d9b6710024e9af11b0a3e46a677c0e524b4d13856da9b4712d5ca";
+    url = "https://github.com/wu-robotics/laser_filtering_release/archive/release/noetic/map_laser/0.0.6-1.tar.gz";
+    name = "0.0.6-1.tar.gz";
+    sha256 = "9aa35f4b0c4d8ffd7c229beb0f2090a1992222ee368501622d08a7850f74cb85";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-key-teleop";
-  version = "1.8.0-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/jazzy/key_teleop/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "505d2366f5145ab799fee4e75fc5c1eacecc129d2e28c67f87c992e62d733245";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/jazzy/key_teleop/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "2aaafde1f3b72c71de28fc6380081562ba9cc518101bbfe7ee8b683782b58cf1";
   };
 
   buildType = "ament_python";

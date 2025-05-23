@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, catkin, message-generation, message-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-ur-dashboard-msgs";
-  version = "2.2.0-r1";
+  version = "2.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_Driver-release/archive/release/noetic/ur_dashboard_msgs/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "3ad298c657f185c413c6944a69a1bbd63650424ef89caead0a6684afa2dccb3b";
+    url = "https://github.com/UniversalRobots/Universal_Robots_ROS_Driver-release/archive/release/noetic/ur_dashboard_msgs/2.4.1-1.tar.gz";
+    name = "2.4.1-1.tar.gz";
+    sha256 = "34a7e58f542170150bee87b5ecb312eb54f1972354210a4ab9938415213fe57a";
   };
 
   buildType = "catkin";

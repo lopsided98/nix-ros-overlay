@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, moveit-core, nlopt, pluginlib, roscpp, tf-conversions, trac-ik-lib }:
 buildRosPackage {
   pname = "ros-noetic-trac-ik-kinematics-plugin";
-  version = "1.6.6-r1";
+  version = "1.6.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/traclabs/trac_ik-release/archive/release/noetic/trac_ik_kinematics_plugin/1.6.6-1.tar.gz";
-    name = "1.6.6-1.tar.gz";
-    sha256 = "5edc36fd48484fee5af8fc5d54a089505d17d1dbd9e20cbfbaa76a62afbf22f1";
+    url = "https://github.com/traclabs/trac_ik-release/archive/release/noetic/trac_ik_kinematics_plugin/1.6.7-1.tar.gz";
+    name = "1.6.7-1.tar.gz";
+    sha256 = "3e0cc579aaec74889907f8ae49b58415baac3d8f5c3b523f672219864463dc53";
   };
 
   buildType = "catkin";

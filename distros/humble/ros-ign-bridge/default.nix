@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, ros-gz-bridge }:
 buildRosPackage {
   pname = "ros-humble-ros-ign-bridge";
-  version = "0.244.16-r2";
+  version = "0.244.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/humble/ros_ign_bridge/0.244.16-2.tar.gz";
-    name = "0.244.16-2.tar.gz";
-    sha256 = "45ce59582234675f368c87fcf2b0609dfa567fe602e16c15cad979fc538c87b1";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/humble/ros_ign_bridge/0.244.17-1.tar.gz";
+    name = "0.244.17-1.tar.gz";
+    sha256 = "b8dca718e3a68cf84250dd577db18b5758d9d8fb00dad2ad0baeab7570532fb7";
   };
 
   buildType = "ament_cmake";

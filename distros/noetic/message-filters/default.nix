@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, rosconsole, roscpp, rostest, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-message-filters";
-  version = "1.17.0-r1";
+  version = "1.17.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/message_filters/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "4f125d0dc081b30eb13297cca905573600b66facec4d825903c04563c0a8611d";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/message_filters/1.17.4-1.tar.gz";
+    name = "1.17.4-1.tar.gz";
+    sha256 = "e922e1d03f47c3f1f32f595a2a13c2f633cdd7a9e81f6f4c3ea1a0658a587348";
   };
 
   buildType = "catkin";

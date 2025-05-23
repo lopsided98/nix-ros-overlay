@@ -2,21 +2,21 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-index-python, ament-lint-auto, ament-lint-common, launch-pal, nav2-bringup, pal-maps, pmb2-laser-sensors, ros2launch, rviz2 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, launch-pal, ros2launch }:
 buildRosPackage {
   pname = "ros-humble-pmb2-2dnav";
-  version = "4.11.0-r1";
+  version = "4.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_2dnav/4.11.0-1.tar.gz";
-    name = "4.11.0-1.tar.gz";
-    sha256 = "1f88acddb71c5ed6b61981461d227ef6028c46c8734193c9d8fb10cba2e27b55";
+    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_2dnav/4.15.0-1.tar.gz";
+    name = "4.15.0-1.tar.gz";
+    sha256 = "48b39526bf4caca70547fcac17f671d2a95703ffcb817542815a5594ee4994d2";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ament-index-python launch-pal nav2-bringup pal-maps pmb2-laser-sensors ros2launch rviz2 ];
+  propagatedBuildInputs = [ launch-pal ros2launch ];
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {

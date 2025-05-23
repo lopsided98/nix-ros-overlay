@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, curl, diagnostic-msgs, rclcpp-components }:
 buildRosPackage {
   pname = "ros-humble-diagnostic-remote-logging";
-  version = "4.0.3-r1";
+  version = "4.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/humble/diagnostic_remote_logging/4.0.3-1.tar.gz";
-    name = "4.0.3-1.tar.gz";
-    sha256 = "b7853761f4d9645413a994e4674dbb7b448286edebab5cedfc9862e43a51cb70";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/humble/diagnostic_remote_logging/4.0.4-1.tar.gz";
+    name = "4.0.4-1.tar.gz";
+    sha256 = "a3e70d5e64ef36a62947c3871a1849bce240844d269ba611c7a3cf11a8bb1527";
   };
 
   buildType = "ament_cmake";

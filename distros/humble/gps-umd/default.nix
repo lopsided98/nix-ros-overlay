@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gps-msgs, gps-tools, gpsd-client }:
 buildRosPackage {
   pname = "ros-humble-gps-umd";
-  version = "2.0.4-r1";
+  version = "2.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/humble/gps_umd/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "feb22d225c9c5cc97d05a03a49887335ab6759424e613520538146c4b86bfb4f";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/humble/gps_umd/2.0.5-1.tar.gz";
+    name = "2.0.5-1.tar.gz";
+    sha256 = "d097bd2bab6f2092ba40f8a7457aeabdd86dba888db99342b96b50325ffd2e4e";
   };
 
   buildType = "ament_cmake";
