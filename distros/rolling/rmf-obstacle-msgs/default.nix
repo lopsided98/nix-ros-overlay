@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rmf-obstacle-msgs";
-  version = "3.4.1-r1";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_obstacle_msgs/3.4.1-1.tar.gz";
-    name = "3.4.1-1.tar.gz";
-    sha256 = "432f1db338ff97305a0597eae021a23c60fcde4497a666b3c9a3a390ed6a6fc9";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_obstacle_msgs/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "bf03f25a6f612ad6c62bc24423f237c5dd497150680b711ed0c6843487652e61";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-python, xacro }:
 buildRosPackage {
   pname = "ros-humble-talos-description-inertial";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/talos_robot-release/archive/release/humble/talos_description_inertial/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "e9d9cfc38e44dcc2efd8bf5640da1a37b9d46f1da0bfdd4a05e4594cbe05ee00";
+    url = "https://github.com/pal-gbp/talos_robot-release/archive/release/humble/talos_description_inertial/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "e7424a690af4d20aa02377436d7de837a68d86c98b2f56a1373c0cdf0ad1e771";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, joint-state-publisher-gui, launch, launch-ros, launch-testing-ament-cmake, launch-testing-ros, robot-state-publisher, rviz2, urdf, urdfdom, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-ur-description";
-  version = "3.1.0-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ur_description-release/archive/release/jazzy/ur_description/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "c9566febcfecab9e566c7117b2340f60a6e329018bb0dcf0e0007f6264e742f1";
+    url = "https://github.com/ros2-gbp/ur_description-release/archive/release/jazzy/ur_description/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "b77eaba50ccd30d012e239b23a5aced23ff1d45d2493cb8384263b1099042102";
   };
 
   buildType = "ament_cmake";

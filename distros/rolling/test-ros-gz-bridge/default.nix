@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, launch-ros, launch-testing, launch-testing-ament-cmake, ros-gz-bridge }:
 buildRosPackage {
   pname = "ros-rolling-test-ros-gz-bridge";
-  version = "2.1.6-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/rolling/test_ros_gz_bridge/2.1.6-1.tar.gz";
-    name = "2.1.6-1.tar.gz";
-    sha256 = "10431e56ea5cff296f42ac9779669b02e87ee11495af5293e7488a4235f0107e";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/rolling/test_ros_gz_bridge/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "771a05718ee95c74e72df527249bcc27cd82eb69926fa2958bac864cbc41de97";
   };
 
   buildType = "ament_cmake";

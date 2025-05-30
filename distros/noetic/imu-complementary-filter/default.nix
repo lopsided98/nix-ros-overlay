@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, cmake-modules, geometry-msgs, message-filters, nodelet, pluginlib, roscpp, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-imu-complementary-filter";
-  version = "1.2.6-r1";
+  version = "1.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/noetic/imu_complementary_filter/1.2.6-1.tar.gz";
-    name = "1.2.6-1.tar.gz";
-    sha256 = "35634b87575262536b8943d6588f1b3d44d765a0df4012295d50da357d9e2923";
+    url = "https://github.com/uos-gbp/imu_tools-release/archive/release/noetic/imu_complementary_filter/1.2.7-1.tar.gz";
+    name = "1.2.7-1.tar.gz";
+    sha256 = "e1d3d3cd3fb2228536edb24be3ee3b99747a533c53990199fb011d7226b48b11";
   };
 
   buildType = "catkin";

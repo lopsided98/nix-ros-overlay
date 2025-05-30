@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, rmw }:
 buildRosPackage {
   pname = "ros-rolling-rmw-test-fixture";
-  version = "0.14.3-r1";
+  version = "0.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/rolling/rmw_test_fixture/0.14.3-1.tar.gz";
-    name = "0.14.3-1.tar.gz";
-    sha256 = "31164ae1a337c8d97761109b398b592241bc31cc5936b498640d11cc72824a79";
+    url = "https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/rolling/rmw_test_fixture/0.15.0-1.tar.gz";
+    name = "0.15.0-1.tar.gz";
+    sha256 = "a03b0c4ae6104423c03e942135b3e65ad4c315501a0dd387b02551e846c8b6b7";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, pcl-conversions, pluginlib, roscpp, rtabmap-conversions, rtabmap-msgs, rviz, sensor-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-rtabmap-rviz-plugins";
-  version = "0.21.10-r1";
+  version = "0.21.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_rviz_plugins/0.21.10-1.tar.gz";
-    name = "0.21.10-1.tar.gz";
-    sha256 = "ab7abd1220918b69e62a557de95a0a78611706d8761460d13210328edfa559fa";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/noetic/rtabmap_rviz_plugins/0.21.13-1.tar.gz";
+    name = "0.21.13-1.tar.gz";
+    sha256 = "1f4c14af17e6dacd1d48b1778f66cb2c1f2f5aaaeb61d1ca65da47c215cd8d23";
   };
 
   buildType = "catkin";

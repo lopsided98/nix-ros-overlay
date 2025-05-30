@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, trac-ik-examples, trac-ik-kinematics-plugin, trac-ik-lib, trac-ik-python }:
 buildRosPackage {
   pname = "ros-noetic-trac-ik";
-  version = "1.6.6-r1";
+  version = "1.6.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/traclabs/trac_ik-release/archive/release/noetic/trac_ik/1.6.6-1.tar.gz";
-    name = "1.6.6-1.tar.gz";
-    sha256 = "14bc7e8cc907b126ef1c5aadf458709569f07d2f3a9831a75f47ced763996e52";
+    url = "https://github.com/traclabs/trac_ik-release/archive/release/noetic/trac_ik/1.6.7-1.tar.gz";
+    name = "1.6.7-1.tar.gz";
+    sha256 = "e29db7a09b84bebd0cb2b17aff746a1d6d8fa36a58bd47373a67746b52ead908";
   };
 
   buildType = "catkin";

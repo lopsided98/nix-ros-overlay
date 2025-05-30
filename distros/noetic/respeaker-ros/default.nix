@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, audio-common-msgs, catkin, catkin-virtualenv, dynamic-reconfigure, flac, geometry-msgs, jsk-tools, python3Packages, rostest, speech-recognition-msgs, std-msgs, tf }:
 buildRosPackage {
   pname = "ros-noetic-respeaker-ros";
-  version = "2.1.28-r1";
+  version = "2.1.31-r4";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/respeaker_ros/2.1.28-1.tar.gz";
-    name = "2.1.28-1.tar.gz";
-    sha256 = "045b23e9e8be39f82cca6dfff49138c9b8e1f9b28dd364a82afc8eb89fae937a";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/respeaker_ros/2.1.31-4.tar.gz";
+    name = "2.1.31-4.tar.gz";
+    sha256 = "2b98b216061e7b44b729131d1f9a0885660c64708a135ab4368938ab405327e9";
   };
 
   buildType = "catkin";

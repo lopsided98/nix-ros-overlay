@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, rcutils, rmw }:
 buildRosPackage {
   pname = "ros-rolling-rmw-security-common";
-  version = "7.8.2-r1";
+  version = "7.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw-release/archive/release/rolling/rmw_security_common/7.8.2-1.tar.gz";
-    name = "7.8.2-1.tar.gz";
-    sha256 = "4a3e123796273f98cf398e298159faf017c359a2e6d7951b664d4c22a8bde10c";
+    url = "https://github.com/ros2-gbp/rmw-release/archive/release/rolling/rmw_security_common/7.9.0-1.tar.gz";
+    name = "7.9.0-1.tar.gz";
+    sha256 = "7132720ec93b708090b4b19e83784aa75ed8b8a22594308dad3e8e8a321746d5";
   };
 
   buildType = "ament_cmake";

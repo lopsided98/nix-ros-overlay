@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, tf2-msgs }:
 buildRosPackage {
   pname = "ros-humble-pose-broadcaster";
-  version = "2.44.0-r1";
+  version = "2.46.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/pose_broadcaster/2.44.0-1.tar.gz";
-    name = "2.44.0-1.tar.gz";
-    sha256 = "6adabcfc9d747e1e54d771dcb2e72402eba72e4b7da46089d817359dfb8ccd75";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/pose_broadcaster/2.46.0-1.tar.gz";
+    name = "2.46.0-1.tar.gz";
+    sha256 = "7e9ce316f36328f7c668b109f8fa74d2a8d5106aa0677d0f74fd04188d7a99b9";
   };
 
   buildType = "ament_cmake";

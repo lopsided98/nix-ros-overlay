@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, nodelet, nodelet-topic-tools }:
 buildRosPackage {
   pname = "ros-noetic-nodelet-core";
-  version = "1.11.1-r1";
+  version = "1.11.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/nodelet_core-release/archive/release/noetic/nodelet_core/1.11.1-1.tar.gz";
-    name = "1.11.1-1.tar.gz";
-    sha256 = "95964d68aede1dbcdeefca16aa31a0220e48766e6c79ca6fb5e6d64db4a452f4";
+    url = "https://github.com/ros-gbp/nodelet_core-release/archive/release/noetic/nodelet_core/1.11.2-1.tar.gz";
+    name = "1.11.2-1.tar.gz";
+    sha256 = "08ff5e3cdc8c8ecdc6c9fc9f84d5aa644b326b0797b87e68317a175429c9054a";
   };
 
   buildType = "catkin";

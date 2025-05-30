@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, controller-interface, controller-manager, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-gps-sensor-broadcaster";
-  version = "4.23.0-r1";
+  version = "5.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/gps_sensor_broadcaster/4.23.0-1.tar.gz";
-    name = "4.23.0-1.tar.gz";
-    sha256 = "0350c6f543cb2c8fdd178f03aa9f6f8e7e250ad50954bc768e56c6176b1531f3";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/gps_sensor_broadcaster/5.0.2-1.tar.gz";
+    name = "5.0.2-1.tar.gz";
+    sha256 = "c2f56f8c60571651ab12afd31784a710a6d5bb29ee2d8070f9ba921e91622de4";
   };
 
   buildType = "ament_cmake";

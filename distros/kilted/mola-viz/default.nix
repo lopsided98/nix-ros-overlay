@@ -1,0 +1,25 @@
+
+# Copyright 2025 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-libgui, mrpt-libmaps, mrpt-libopengl }:
+buildRosPackage {
+  pname = "ros-kilted-mola-viz";
+  version = "1.8.0-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_viz/1.8.0-1.tar.gz";
+    name = "1.8.0-1.tar.gz";
+    sha256 = "f94a5b901d09a8b1133654b56fe457aa0adde8e695d2a6cb5b4ae1b1d21817c3";
+  };
+
+  buildType = "cmake";
+  buildInputs = [ cmake ];
+  propagatedBuildInputs = [ mola-kernel mrpt-libgui mrpt-libmaps mrpt-libopengl ];
+  nativeBuildInputs = [ cmake ];
+
+  meta = {
+    description = "GUI for MOLA";
+    license = with lib.licenses; [ gpl3Only ];
+  };
+}

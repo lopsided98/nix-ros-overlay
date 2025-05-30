@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, exiftool-metadata-extractor }:
 buildRosPackage {
   pname = "ros-noetic-movie-publisher-plugins-nonfree";
-  version = "2.0.3-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/peci1/movie_publisher-release/archive/release/noetic/movie_publisher_plugins_nonfree/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "4ad92e722e39785460e47d84e50d09547cf770b94e2355b0fe5443dc9597ec6a";
+    url = "https://github.com/peci1/movie_publisher-release/archive/release/noetic/movie_publisher_plugins_nonfree/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "0f3c52fd16a6344b4a03b14630579ccb17ccf1e51367270c6109c331ed9b871b";
   };
 
   buildType = "catkin";

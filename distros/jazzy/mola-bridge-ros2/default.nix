@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, cmake, geometry-msgs, mola-common, mola-kernel, mola-msgs, mrpt-libmaps, mrpt-libros-bridge, mrpt-nav-interfaces, nav-msgs, rclcpp, ros-environment, sensor-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-mola-bridge-ros2";
-  version = "1.6.3-r1";
+  version = "1.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_bridge_ros2/1.6.3-1.tar.gz";
-    name = "1.6.3-1.tar.gz";
-    sha256 = "8a8ff98e2373101327a8e1a1b5b8fb934a984b9b83c6eeabf89912a68b2e43fd";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_bridge_ros2/1.8.0-1.tar.gz";
+    name = "1.8.0-1.tar.gz";
+    sha256 = "6f69158904ff4538bbb01bf53f5882b850a025e7efcf77511f1850b16dcf84ab";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Bidirectional bridge ROS2-MOLA";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

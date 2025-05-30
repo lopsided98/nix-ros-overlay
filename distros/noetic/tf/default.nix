@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, geometry-msgs, graphviz, message-filters, message-generation, message-runtime, rosconsole, roscpp, rostest, rostime, rosunit, roswtf, sensor-msgs, std-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-noetic-tf";
-  version = "1.13.3-r1";
+  version = "1.13.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry-release/archive/release/noetic/tf/1.13.3-1.tar.gz";
-    name = "1.13.3-1.tar.gz";
-    sha256 = "1ffeba83971b4b1fae35616dcb11da3a99a8a5f6603c3ee6b9aef2fe697e4147";
+    url = "https://github.com/ros-gbp/geometry-release/archive/release/noetic/tf/1.13.4-1.tar.gz";
+    name = "1.13.4-1.tar.gz";
+    sha256 = "a2413bcc3874f0987082981495d8f840d127addd1967dacfb65dd3cccd7e6961";
   };
 
   buildType = "catkin";

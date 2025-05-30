@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, cmake, gtest, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-catkin";
-  version = "0.8.11-r1";
+  version = "0.8.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/catkin-release/archive/release/noetic/catkin/0.8.11-1.tar.gz";
-    name = "0.8.11-1.tar.gz";
-    sha256 = "03c3a455f3b44252f1da0b886a3e88f0e7b8af0e85202400edebeac410c7f660";
+    url = "https://github.com/ros-gbp/catkin-release/archive/release/noetic/catkin/0.8.12-1.tar.gz";
+    name = "0.8.12-1.tar.gz";
+    sha256 = "46a919853e969ab707bfbced8cf0cb6de6efc13ec39e75719f836330d2aa6cb6";
   };
 
   buildType = "catkin";
-  checkInputs = [ python3Packages.mock python3Packages.nose ];
+  checkInputs = [ python3Packages.nose ];
   propagatedBuildInputs = [ cmake gtest python3Packages.catkin-pkg python3Packages.empy python3Packages.nose python3Packages.setuptools ];
   nativeBuildInputs = [ cmake python3Packages.setuptools ];
 

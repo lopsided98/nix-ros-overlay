@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-phidgets-temperature";
-  version = "2.3.3-r2";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/jazzy/phidgets_temperature/2.3.3-2.tar.gz";
-    name = "2.3.3-2.tar.gz";
-    sha256 = "db7fc31166e77c7dcf51faa342e7b13444f539e0731afa1773837d68cc74b235";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/jazzy/phidgets_temperature/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "f044935d68605022c4c878349f8b09e61f26e1c992ab6f5c010a29c7e8356a24";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, boost, libcap, lifecycle-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, ros2-control-cmake, test-msgs }:
 buildRosPackage {
   pname = "ros-rolling-realtime-tools";
-  version = "4.2.0-r1";
+  version = "4.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/rolling/realtime_tools/4.2.0-1.tar.gz";
-    name = "4.2.0-1.tar.gz";
-    sha256 = "3a839d51801d87372a4123f1964afc27a8e4049576a4f26be6c49906d107bfa6";
+    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/rolling/realtime_tools/4.3.0-1.tar.gz";
+    name = "4.3.0-1.tar.gz";
+    sha256 = "f37562b0b76ee56f2718918c5f78340788e6fd0d275f90c7224118ae7d8b4c65";
   };
 
   buildType = "ament_cmake";

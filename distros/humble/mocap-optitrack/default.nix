@@ -2,19 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, rclcpp, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, nav-msgs, rclcpp, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-mocap-optitrack";
-  version = "1.0.0-r3";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mocap_optitrack-release/archive/release/humble/mocap_optitrack/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "996d47b0ca20ad8140352f08326ac30039d0c9b4b402389b477a5795c8b1e777";
+    url = "https://github.com/ros2-gbp/mocap_optitrack-release/archive/release/humble/mocap_optitrack/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "af05b9be9033aae524fb33ac5dd5cdc661170e350ac06a4fee0b9a168ba1e404";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ geometry-msgs nav-msgs rclcpp tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
@@ -31,7 +32,7 @@ buildRosPackage {
     Currently, this node supports the NatNet streaming protocol v3.0
     </p>
     <p>
-    Copyright (c) 2013, Clearpath Robotics<br/> 
+    Copyright (c) 2013, Clearpath Robotics<br/>
     Copyright (c) 2010, University of Bonn, Computer Science Institute VI<br/>
     All rights reserved.
     </p>";

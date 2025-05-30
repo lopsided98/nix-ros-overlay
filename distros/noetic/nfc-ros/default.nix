@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, catkin-virtualenv, message-generation, message-runtime, rostest }:
 buildRosPackage {
   pname = "ros-noetic-nfc-ros";
-  version = "2.1.28-r1";
+  version = "2.1.31-r4";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/nfc_ros/2.1.28-1.tar.gz";
-    name = "2.1.28-1.tar.gz";
-    sha256 = "8fa2ac33f60bae2c91ab31481b3713c43437030d3caa62809a58377ed3b3ae29";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/nfc_ros/2.1.31-4.tar.gz";
+    name = "2.1.31-4.tar.gz";
+    sha256 = "7755316f7f55702e8b1f692a1e03ec727f293df90a854ab5e4aebc3187778a8e";
   };
 
   buildType = "catkin";

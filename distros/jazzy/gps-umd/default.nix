@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gps-msgs, gps-tools, gpsd-client }:
 buildRosPackage {
   pname = "ros-jazzy-gps-umd";
-  version = "2.0.4-r1";
+  version = "2.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/jazzy/gps_umd/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "690b87ca1fa5444826516ce919644733d4dc0c0733e3f84c783d603fd431a588";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/jazzy/gps_umd/2.0.5-1.tar.gz";
+    name = "2.0.5-1.tar.gz";
+    sha256 = "b31d9393af8cd1926e217981d7f018c0ba382eb33038ba0be1a20b71bea29130";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, rclcpp, rclcpp-components, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-phidgets-gyroscope";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_gyroscope/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "5c53beb0c310ff57a2fdb386793e721d6d3f968d75ec7ae0ea0f4fc18cdbb6d3";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_gyroscope/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "5bd207dcc77f6d7a1b4ae1ee743c4f87a81a28728647e2751a36b1ab05b7060a";
   };
 
   buildType = "ament_cmake";

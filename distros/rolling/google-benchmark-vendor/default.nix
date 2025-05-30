@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gbenchmark, git }:
 buildRosPackage {
   pname = "ros-rolling-google-benchmark-vendor";
-  version = "0.6.1-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/google_benchmark_vendor-release/archive/release/rolling/google_benchmark_vendor/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "ced9b20515ee594fe6269120281f4f5f7dce5fb8dc6aad3c1ac016e72b70d942";
+    url = "https://github.com/ros2-gbp/google_benchmark_vendor-release/archive/release/rolling/google_benchmark_vendor/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "8b8d37088f0e18869a88bc1bf0ba39bdeeebdcee3e7c818c6b019a12236792c4";
   };
 
   buildType = "cmake";

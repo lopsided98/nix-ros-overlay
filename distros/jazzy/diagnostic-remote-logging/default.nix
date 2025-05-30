@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, curl, diagnostic-msgs, rclcpp-components }:
 buildRosPackage {
   pname = "ros-jazzy-diagnostic-remote-logging";
-  version = "4.2.3-r1";
+  version = "4.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/jazzy/diagnostic_remote_logging/4.2.3-1.tar.gz";
-    name = "4.2.3-1.tar.gz";
-    sha256 = "347121c90cc6fc61d2d9b2e349bfe1f1c268de342bf9bd2a681079dddad81810";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/jazzy/diagnostic_remote_logging/4.2.6-1.tar.gz";
+    name = "4.2.6-1.tar.gz";
+    sha256 = "e76e1297feec1a00eb9240f7f1c86caea9aa3b1745cef8463ee7308c7ca45e75";
   };
 
   buildType = "ament_cmake";

@@ -2,20 +2,21 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, gtest-vendor }:
 buildRosPackage {
   pname = "ros-rolling-fuse-doc";
-  version = "1.2.1-r1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/rolling/fuse_doc/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "87e410a4557754e672e16cd1823ea0c6ed029906ef0e6f5695ae6c3efbb0cf05";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/rolling/fuse_doc/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
+    sha256 = "b5fcd1a8b6560d9e175e29a831f9e3e36a530563d8d5d244baadb48f0d5d22bd";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-ros ];
-  nativeBuildInputs = [ ament-cmake-ros ];
+  buildInputs = [ ament-cmake ];
+  propagatedBuildInputs = [ ament-cmake-ros gtest-vendor ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = "The fuse_doc package provides documentation and examples for the fuse package.";

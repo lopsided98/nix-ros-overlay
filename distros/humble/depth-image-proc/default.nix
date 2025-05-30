@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, image-geometry, image-transport, message-filters, opencv, rclcpp, rclcpp-components, sensor-msgs, stereo-msgs, tf2, tf2-eigen, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-depth-image-proc";
-  version = "3.0.7-r1";
+  version = "3.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/depth_image_proc/3.0.7-1.tar.gz";
-    name = "3.0.7-1.tar.gz";
-    sha256 = "b55bbf25bbf9b5ac1fd4c9e518a9fdc83d35d5825a13fd8daaf105d71c9d2581";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/depth_image_proc/3.0.8-1.tar.gz";
+    name = "3.0.8-1.tar.gz";
+    sha256 = "4cf3029deff1dede4aba42227299ab387933b095103ea547832e227d72ef59c8";
   };
 
   buildType = "ament_cmake";

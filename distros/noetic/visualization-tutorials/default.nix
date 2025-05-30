@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, interactive-marker-tutorials, librviz-tutorial, rviz-plugin-tutorials, rviz-python-tutorial, visualization-marker-tutorials }:
 buildRosPackage {
   pname = "ros-noetic-visualization-tutorials";
-  version = "0.11.1-r1";
+  version = "0.11.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/noetic/visualization_tutorials/0.11.1-1.tar.gz";
-    name = "0.11.1-1.tar.gz";
-    sha256 = "69cfb74ad79efe78f89a20303bf623157e804cdc1843b502c1157b2fda0e637c";
+    url = "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/noetic/visualization_tutorials/0.11.2-1.tar.gz";
+    name = "0.11.2-1.tar.gz";
+    sha256 = "8df5533f40e6567cc53983650c728e831cfa1e61a81a8c89492c54565809133f";
   };
 
   buildType = "catkin";
