@@ -250,4 +250,6 @@ in {
       })
     ];
   });
+
+  zenoh-cpp-vendor = lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor { };
 }
