@@ -257,7 +257,7 @@ in {
     cargoDeps = self.rustPlatform.importCargoLock {
       lockFile = "${zenoh-c-source.outPath}/Cargo.lock";
       outputHashes = {
-        "zenoh-1.3.1" = "sha256-MGYtIXdFCJLJk8YVj7ColCnRHSqyP2VFfwy08GTEgDw=";
+        "zenoh-1.4.0" = "sha256-eMrsoeToI8vsRLduRgSFh/yoGt/hHcCAqCGNE6ml9uw=";
       };
     };
   });
