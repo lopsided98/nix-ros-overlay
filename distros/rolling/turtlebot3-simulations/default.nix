@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, turtlebot3-fake-node, turtlebot3-gazebo }:
 buildRosPackage {
   pname = "ros-rolling-turtlebot3-simulations";
-  version = "2.3.2-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_simulations-release/archive/release/rolling/turtlebot3_simulations/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "1cc5b10c8f91ceff89feafd2d15af4494328ce1973a1e536d44bd2f2ad0b8f5f";
+    url = "https://github.com/ros2-gbp/turtlebot3_simulations-release/archive/release/rolling/turtlebot3_simulations/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "37da07f146ceb2c59e64f0e594a47af37a94caf919035ac196207268028bd579";
   };
 
   buildType = "ament_cmake";

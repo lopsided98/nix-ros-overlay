@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, geometry-msgs, gps-msgs, mapviz, pluginlib, qt5, rclcpp, rclpy, swri-math-util, swri-transform-util, tf2 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, geometry-msgs, gps-msgs, mapviz, pluginlib, qt5, rclcpp, rclpy, swri-math-util, swri-transform-util, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-multires-image";
-  version = "2.4.6-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/rolling/multires_image/2.4.6-1.tar.gz";
-    name = "2.4.6-1.tar.gz";
-    sha256 = "97668ce0a3fdcd7b9f5778f2c77b94495fe43adda3feaf76ee07d93c199905d3";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/rolling/multires_image/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "b09c2d0c152c930964269c795a40918ea6596a744cdcf8e7d8420a459629f915";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ cv-bridge geometry-msgs gps-msgs mapviz pluginlib qt5.qtbase rclcpp rclpy swri-math-util swri-transform-util tf2 ];
+  propagatedBuildInputs = [ cv-bridge geometry-msgs gps-msgs mapviz pluginlib qt5.qtbase rclcpp rclpy swri-math-util swri-transform-util tf2 tf2-ros ];
   nativeBuildInputs = [ ament-cmake qt5.qtbase ];
 
   meta = {

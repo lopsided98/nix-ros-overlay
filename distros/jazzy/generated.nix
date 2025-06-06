@@ -190,6 +190,8 @@ self: super: {
 
  async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
 
+ at-sonde-ros-driver = self.callPackage ./at-sonde-ros-driver {};
+
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -344,6 +346,10 @@ self: super: {
 
  canopen-interfaces = self.callPackage ./canopen-interfaces {};
 
+ canopen-inventus-driver = self.callPackage ./canopen-inventus-driver {};
+
+ canopen-inventus-interfaces = self.callPackage ./canopen-inventus-interfaces {};
+
  canopen-master-driver = self.callPackage ./canopen-master-driver {};
 
  canopen-proxy-driver = self.callPackage ./canopen-proxy-driver {};
@@ -389,6 +395,8 @@ self: super: {
  clearpath-description = self.callPackage ./clearpath-description {};
 
  clearpath-desktop = self.callPackage ./clearpath-desktop {};
+
+ clearpath-diagnostics = self.callPackage ./clearpath-diagnostics {};
 
  clearpath-generator-common = self.callPackage ./clearpath-generator-common {};
 
@@ -1914,6 +1922,8 @@ self: super: {
 
  phidgets-spatial = self.callPackage ./phidgets-spatial {};
 
+ phidgets-stepper = self.callPackage ./phidgets-stepper {};
+
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
  pick-ik = self.callPackage ./pick-ik {};
@@ -2836,8 +2846,6 @@ self: super: {
 
  swri-serial-util = self.callPackage ./swri-serial-util {};
 
- swri-system-util = self.callPackage ./swri-system-util {};
-
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
  synapticon-ros2-control = self.callPackage ./synapticon-ros2-control {};
@@ -2967,6 +2975,8 @@ self: super: {
  turtle-tf2-py = self.callPackage ./turtle-tf2-py {};
 
  turtlebot3 = self.callPackage ./turtlebot3 {};
+
+ turtlebot3-applications-msgs = self.callPackage ./turtlebot3-applications-msgs {};
 
  turtlebot3-autorace = self.callPackage ./turtlebot3-autorace {};
 

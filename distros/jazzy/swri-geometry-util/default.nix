@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cv-bridge, eigen, geos, pkg-config, rclcpp, tf2 }:
 buildRosPackage {
   pname = "ros-jazzy-swri-geometry-util";
-  version = "3.7.4-r1";
+  version = "3.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_geometry_util/3.7.4-1.tar.gz";
-    name = "3.7.4-1.tar.gz";
-    sha256 = "360eac381b0ab601346b2016a7e060bdd79411e52fa4dcc17548e9a16b88bf7e";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_geometry_util/3.8.1-1.tar.gz";
+    name = "3.8.1-1.tar.gz";
+    sha256 = "c6cde5b322327eb500778a668057c6feb365d2558c0727f45dd267e34a004d46";
   };
 
   buildType = "ament_cmake";

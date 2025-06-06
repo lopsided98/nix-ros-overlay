@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, ros-gz-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros-ign-interfaces";
-  version = "0.244.17-r1";
+  version = "0.244.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/humble/ros_ign_interfaces/0.244.17-1.tar.gz";
-    name = "0.244.17-1.tar.gz";
-    sha256 = "a542b2b24b16a95bc94397cd53940930537c5f615d97f9575b9a2636ab142a6a";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/humble/ros_ign_interfaces/0.244.19-1.tar.gz";
+    name = "0.244.19-1.tar.gz";
+    sha256 = "7caedfc5c3291b17718747d7c8cd6b50be7d15d69b9451e9569fef0feeb81b64";
   };
 
   buildType = "ament_cmake";

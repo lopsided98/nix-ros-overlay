@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, rclcpp, ros-gz-bridge, ros-gz-image, ros-gz-sim, sensor-msgs, tf2 }:
 buildRosPackage {
   pname = "ros-jazzy-turtlebot3-gazebo";
-  version = "2.3.2-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_simulations-release/archive/release/jazzy/turtlebot3_gazebo/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "4cf8f1d847d6f69ce089e2a9ecb8c97e762f12f012e319298b47f15875b6fbb2";
+    url = "https://github.com/ros2-gbp/turtlebot3_simulations-release/archive/release/jazzy/turtlebot3_gazebo/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "c1d35c00aadf170d6b538d738647890d4970b97dbf6a6ba7905e93b8dd37b6b8";
   };
 
   buildType = "ament_cmake";

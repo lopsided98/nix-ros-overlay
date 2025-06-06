@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, message-filters, rclcpp, rclcpp-components, sensor-msgs, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-imu-transformer";
-  version = "0.5.1-r1";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_pipeline-release/archive/release/rolling/imu_transformer/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "0c0383844159541d263fe9a7c097b867ff9714b8b409a305d5716d39afb836f5";
+    url = "https://github.com/ros2-gbp/imu_pipeline-release/archive/release/rolling/imu_transformer/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "4001de723777454267d290236902c0cf8cdf45bbf81fbc2108f425ddbed88bd7";
   };
 
   buildType = "ament_cmake";

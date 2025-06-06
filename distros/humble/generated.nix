@@ -2250,6 +2250,8 @@ self: super: {
 
  phidgets-spatial = self.callPackage ./phidgets-spatial {};
 
+ phidgets-stepper = self.callPackage ./phidgets-stepper {};
+
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
  pick-ik = self.callPackage ./pick-ik {};
@@ -3236,8 +3238,6 @@ self: super: {
 
  swri-serial-util = self.callPackage ./swri-serial-util {};
 
- swri-system-util = self.callPackage ./swri-system-util {};
-
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
  synapticon-ros2-control = self.callPackage ./synapticon-ros2-control {};
@@ -3399,6 +3399,8 @@ self: super: {
  turtle-tf2-py = self.callPackage ./turtle-tf2-py {};
 
  turtlebot3 = self.callPackage ./turtlebot3 {};
+
+ turtlebot3-applications-msgs = self.callPackage ./turtlebot3-applications-msgs {};
 
  turtlebot3-autorace = self.callPackage ./turtlebot3-autorace {};
 

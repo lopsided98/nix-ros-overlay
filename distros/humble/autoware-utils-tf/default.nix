@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-utils-geometry, geometry-msgs, rclcpp, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-autoware-utils-tf";
-  version = "1.4.0-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/humble/autoware_utils_tf/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "9d1b5e3c2861b2d856d57d32cc4f0cd264dd767eaf6b97327ae486423167874d";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/humble/autoware_utils_tf/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "704c719b4703026a99d7c7c2af1db6bf136731cc735dda18970d8db35f197d8d";
   };
 
   buildType = "ament_cmake";

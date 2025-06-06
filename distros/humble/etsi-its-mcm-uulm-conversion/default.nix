@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-mcm-uulm-coding, etsi-its-mcm-uulm-msgs, etsi-its-primitives-conversion, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-mcm-uulm-conversion";
-  version = "3.2.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_mcm_uulm_conversion/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "97e2108fdbb6d4beb3eca5e97aac83ba029a24433b767d24c77dae402fbb6223";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_mcm_uulm_conversion/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "72b0d18d332b6e01ce3ffec199a9885da1774675fd1a2c20a9d58ccccef6a103";
   };
 
   buildType = "ament_cmake";

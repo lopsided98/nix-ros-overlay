@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, kitti-metrics-eval, mola-bridge-ros2, mola-demos, mola-input-euroc-dataset, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset, mola-input-rawlog, mola-input-rosbag2, mola-input-video, mola-kernel, mola-launcher, mola-metric-maps, mola-pose-list, mola-relocalization, mola-traj-tools, mola-viz, mola-yaml }:
 buildRosPackage {
   pname = "ros-jazzy-mola";
-  version = "1.7.0-r1";
+  version = "1.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "f2fbd45036a852d0a9dfd3a13dca16895775a9640d5db6b930a8511260945ce1";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola/1.8.0-1.tar.gz";
+    name = "1.8.0-1.tar.gz";
+    sha256 = "cc382a38ef023114ec65b53a097113a580ec58de0e40b945b2f851ecb32ea165";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Metapackage with all core open-sourced MOLA packages.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }
