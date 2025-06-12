@@ -242,7 +242,7 @@ in with lib; {
 
 
   plotjuggler-ros = rosSuper.plotjuggler-ros.overrideAttrs ({
-    patches ? [], nativeBuildInputs ? [], ...
+    patches ? [], postPatch ? "", nativeBuildInputs ? [], ...
   }: {
     patches = patches ++ [
       # Fix detection of ROS 2 Humble
@@ -252,6 +252,10 @@ in with lib; {
         hash = "sha256-ojZ/ErZZkGIB89O0u2ocU6Gcdu/JhowUqkdsulcArHY=";
       })
     ];
+    postPatch = postPatch + ''
+      substituteInPlace src/ros_parsers/ros2_parser.cpp \
+        --replace-fail "PlotJuggler/fmt/core.h" "fmt/core.h"
+    '';
     nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.ros-environment ];
   });
 
