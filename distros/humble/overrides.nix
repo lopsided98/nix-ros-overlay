@@ -100,14 +100,24 @@ in with lib; {
     fetchgitArgs.hash = "sha256-S7PnooyfyAsIiRAlEPGYkgkVACGaBaCItuqOwrq2+qM=";
   };
 
-  mcap-vendor = patchExternalProjectGit (patchVendorUrl rosSuper.mcap-vendor {
+  mcap-vendor = (patchExternalProjectGit (patchVendorUrl rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v0.8.0.tar.gz";
     sha256 = "sha256-KDP3I0QwjqWGOfOzY6DPF2aVgK56tDX0PzsQTP9u9Ug=";
   }) {
     url = "https://github.com/lz4/lz4.git";
     rev = "d44371841a2f1728a3f36839fd4b7e872d0927d3";
     fetchgitArgs.hash = "sha256-f7GZgOzUrkAfw1mqwlIKQQqDvkvIahGlHvq6AL+aAvA=";
-  };
+  }).overrideAttrs({ postPatch ? "", ... }:
+    {
+      # fix "mcap_vendor/mcap/types.hpp:404:12: fatal error: types.inl: No such file or directory"
+      postPatch = postPatch + ''
+        substituteInPlace CMakeLists.txt \
+          --replace-fail \
+            "file(GLOB _mcap_installed_headers $""{_mcap_include_dir}/mcap/*.hpp)" \
+            "file(GLOB _mcap_installed_headers $""{_mcap_include_dir}/mcap/*)" 
+      '';
+    }
+  );
 
   moveit-kinematics = rosSuper.moveit-kinematics.overrideAttrs ({
     propagatedBuildInputs ? [], ...
@@ -181,6 +191,55 @@ in with lib; {
       })
     ];
   });
+
+  # v3.10.1 has some CMake issues.
+  # v3.10.6 also. But that one is patchable.
+  plotjuggler = rosSuper.plotjuggler.overrideAttrs (
+    {
+      buildInputs ? [ ],
+      postPatch ? "",
+      ...
+    }:
+    let
+      version = "3.10.6";
+    in
+    {
+      inherit version;
+      src = self.fetchFromGitHub {
+        owner = "facontidavide";
+        repo = "plotjuggler";
+        tag = version;
+        hash = "sha256-Z5yUpR0F5PMjVxnVpykvLRUlXKZ1KdIBNGWlxc6G7YE=";
+      };
+      postPatch =
+        postPatch
+        + ''
+          (
+            echo "function(find_or_download_data_tamer)"
+            echo "  find_package(data_tamer_cpp REQUIRED)"
+            echo "  add_library(data_tamer::parser ALIAS data_tamer_cpp::data_tamer)"
+            echo "  add_library(data_tamer_parser ALIAS data_tamer_cpp::data_tamer)"
+            echo "endfunction()"
+          ) > cmake/find_or_download_data_tamer.cmake
+
+          substituteInPlace plotjuggler_plugins/DataLoadMCAP/CMakeLists.txt \
+            --replace-fail \
+              'if(NOT TARGET mcap)' \
+              'find_package(mcap_vendor REQUIRED)
+               add_library(mcap ALIAS mcap_vendor::mcap)
+               if(NOT TARGET mcap)'
+        '';
+      buildInputs = buildInputs ++ [
+        self.libbfd
+        self.lua
+        self.nlohmann_json
+        self.lz4
+        rosSelf.data-tamer-cpp
+        rosSelf.mcap-vendor
+      ];
+    }
+  );
+
 
   plotjuggler-ros = rosSuper.plotjuggler-ros.overrideAttrs ({
     patches ? [], nativeBuildInputs ? [], ...
