@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, camera-calibration-parsers, cv-bridge, geometry-msgs, image-geometry, image-transport, opencv, rclcpp, rclcpp-components, rcutils, sensor-msgs, tf2, tf2-geometry-msgs, tracetools-image-pipeline }:
 buildRosPackage {
   pname = "ros-jazzy-image-proc";
-  version = "5.0.10-r1";
+  version = "5.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/image_proc/5.0.10-1.tar.gz";
-    name = "5.0.10-1.tar.gz";
-    sha256 = "d6031dc026f55677375d59560a403bceb1845eacfca18afb8cbb65934d02f920";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/image_proc/5.0.11-1.tar.gz";
+    name = "5.0.11-1.tar.gz";
+    sha256 = "20810b5b6a7056eed2c22a56d0f34730c8ae53dabf8db62f6bcd8909ebd33588";
   };
 
   buildType = "ament_cmake";

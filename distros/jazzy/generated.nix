@@ -190,6 +190,8 @@ self: super: {
 
  async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
 
+ at-sonde-ros-driver = self.callPackage ./at-sonde-ros-driver {};
+
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
  automotive-navigation-msgs = self.callPackage ./automotive-navigation-msgs {};
@@ -209,6 +211,8 @@ self: super: {
  autoware-control-msgs = self.callPackage ./autoware-control-msgs {};
 
  autoware-internal-debug-msgs = self.callPackage ./autoware-internal-debug-msgs {};
+
+ autoware-internal-localization-msgs = self.callPackage ./autoware-internal-localization-msgs {};
 
  autoware-internal-metric-msgs = self.callPackage ./autoware-internal-metric-msgs {};
 
@@ -344,6 +348,10 @@ self: super: {
 
  canopen-interfaces = self.callPackage ./canopen-interfaces {};
 
+ canopen-inventus-driver = self.callPackage ./canopen-inventus-driver {};
+
+ canopen-inventus-interfaces = self.callPackage ./canopen-inventus-interfaces {};
+
  canopen-master-driver = self.callPackage ./canopen-master-driver {};
 
  canopen-proxy-driver = self.callPackage ./canopen-proxy-driver {};
@@ -389,6 +397,8 @@ self: super: {
  clearpath-description = self.callPackage ./clearpath-description {};
 
  clearpath-desktop = self.callPackage ./clearpath-desktop {};
+
+ clearpath-diagnostics = self.callPackage ./clearpath-diagnostics {};
 
  clearpath-generator-common = self.callPackage ./clearpath-generator-common {};
 
@@ -1914,6 +1924,8 @@ self: super: {
 
  phidgets-spatial = self.callPackage ./phidgets-spatial {};
 
+ phidgets-stepper = self.callPackage ./phidgets-stepper {};
+
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
  pick-ik = self.callPackage ./pick-ik {};
@@ -2678,8 +2690,6 @@ self: super: {
 
  scenario-execution-os = self.callPackage ./scenario-execution-os {};
 
- scenario-execution-py-trees-ros = self.callPackage ./scenario-execution-py-trees-ros {};
-
  scenario-execution-ros = self.callPackage ./scenario-execution-ros {};
 
  scenario-execution-rviz = self.callPackage ./scenario-execution-rviz {};
@@ -2836,8 +2846,6 @@ self: super: {
 
  swri-serial-util = self.callPackage ./swri-serial-util {};
 
- swri-system-util = self.callPackage ./swri-system-util {};
-
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
  synapticon-ros2-control = self.callPackage ./synapticon-ros2-control {};
@@ -2968,6 +2976,8 @@ self: super: {
 
  turtlebot3 = self.callPackage ./turtlebot3 {};
 
+ turtlebot3-applications-msgs = self.callPackage ./turtlebot3-applications-msgs {};
+
  turtlebot3-autorace = self.callPackage ./turtlebot3-autorace {};
 
  turtlebot3-autorace-camera = self.callPackage ./turtlebot3-autorace-camera {};
@@ -2987,6 +2997,22 @@ self: super: {
  turtlebot3-fake-node = self.callPackage ./turtlebot3-fake-node {};
 
  turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
+
+ turtlebot3-manipulation = self.callPackage ./turtlebot3-manipulation {};
+
+ turtlebot3-manipulation-bringup = self.callPackage ./turtlebot3-manipulation-bringup {};
+
+ turtlebot3-manipulation-cartographer = self.callPackage ./turtlebot3-manipulation-cartographer {};
+
+ turtlebot3-manipulation-description = self.callPackage ./turtlebot3-manipulation-description {};
+
+ turtlebot3-manipulation-hardware = self.callPackage ./turtlebot3-manipulation-hardware {};
+
+ turtlebot3-manipulation-moveit-config = self.callPackage ./turtlebot3-manipulation-moveit-config {};
+
+ turtlebot3-manipulation-navigation2 = self.callPackage ./turtlebot3-manipulation-navigation2 {};
+
+ turtlebot3-manipulation-teleop = self.callPackage ./turtlebot3-manipulation-teleop {};
 
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-ros2-control-cmake";
-  version = "0.1.1-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control_cmake-release/archive/release/rolling/ros2_control_cmake/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "ed3d14b3372bc6cebaecffc9293250412213cb527c77e93d0ce0d9c639dd3ca1";
+    url = "https://github.com/ros2-gbp/ros2_control_cmake-release/archive/release/rolling/ros2_control_cmake/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "d443caaa56f6b372fea892c1fd96d19aa87bcbe44fa41b61dd08eef31e1ed810";
   };
 
   buildType = "ament_cmake";

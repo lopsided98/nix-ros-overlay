@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-steering-controller, admittance-controller, ament-cmake, bicycle-steering-controller, diff-drive-controller, effort-controllers, force-torque-sensor-broadcaster, forward-command-controller, gpio-controllers, gps-sensor-broadcaster, gripper-controllers, imu-sensor-broadcaster, joint-state-broadcaster, joint-trajectory-controller, mecanum-drive-controller, parallel-gripper-controller, pid-controller, pose-broadcaster, position-controllers, range-sensor-broadcaster, steering-controllers-library, tricycle-controller, tricycle-steering-controller, velocity-controllers }:
 buildRosPackage {
   pname = "ros-jazzy-ros2-controllers";
-  version = "4.24.0-r1";
+  version = "4.26.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/ros2_controllers/4.24.0-1.tar.gz";
-    name = "4.24.0-1.tar.gz";
-    sha256 = "f3f789dad49e35551d249729c9803cc54c4db1eb2bf3e39f94ef2f29d445337f";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/ros2_controllers/4.26.0-1.tar.gz";
+    name = "4.26.0-1.tar.gz";
+    sha256 = "3e7709075b71489fefe9fef99a10da539eea7fbba7ca61fc23b33cb54b6d5aac";
   };
 
   buildType = "ament_cmake";

@@ -16,8 +16,6 @@ self: super: {
 
  action-tutorials-py = self.callPackage ./action-tutorials-py {};
 
- actionlib-msgs = self.callPackage ./actionlib-msgs {};
-
  actuator-msgs = self.callPackage ./actuator-msgs {};
 
  adaptive-component = self.callPackage ./adaptive-component {};
@@ -57,8 +55,6 @@ self: super: {
  ament-cmake-export-dependencies = self.callPackage ./ament-cmake-export-dependencies {};
 
  ament-cmake-export-include-directories = self.callPackage ./ament-cmake-export-include-directories {};
-
- ament-cmake-export-interfaces = self.callPackage ./ament-cmake-export-interfaces {};
 
  ament-cmake-export-libraries = self.callPackage ./ament-cmake-export-libraries {};
 
@@ -175,6 +171,8 @@ self: super: {
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
  apriltag-tools = self.callPackage ./apriltag-tools {};
+
+ ardrone-sdk = self.callPackage ./ardrone-sdk {};
 
  ardrone-sumo = self.callPackage ./ardrone-sumo {};
 
@@ -363,8 +361,6 @@ self: super: {
  cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
 
  coal = self.callPackage ./coal {};
-
- cob-actions = self.callPackage ./cob-actions {};
 
  cob-msgs = self.callPackage ./cob-msgs {};
 
@@ -763,8 +759,6 @@ self: super: {
  grbl-msgs = self.callPackage ./grbl-msgs {};
 
  grbl-ros = self.callPackage ./grbl-ros {};
-
- gripper-controllers = self.callPackage ./gripper-controllers {};
 
  gscam = self.callPackage ./gscam {};
 
@@ -1234,8 +1228,6 @@ self: super: {
 
  moveit-resources-panda-description = self.callPackage ./moveit-resources-panda-description {};
 
- moveit-resources-panda-moveit-config = self.callPackage ./moveit-resources-panda-moveit-config {};
-
  moveit-resources-pr2-description = self.callPackage ./moveit-resources-pr2-description {};
 
  moveit-resources-prbt-ikfast-manipulator-plugin = self.callPackage ./moveit-resources-prbt-ikfast-manipulator-plugin {};
@@ -1273,8 +1265,6 @@ self: super: {
  moveit-ros-warehouse = self.callPackage ./moveit-ros-warehouse {};
 
  moveit-runtime = self.callPackage ./moveit-runtime {};
-
- moveit-servo = self.callPackage ./moveit-servo {};
 
  moveit-setup-app-plugins = self.callPackage ./moveit-setup-app-plugins {};
 
@@ -1446,8 +1436,6 @@ self: super: {
 
  open-manipulator = self.callPackage ./open-manipulator {};
 
- open-manipulator-bringup = self.callPackage ./open-manipulator-bringup {};
-
  open-manipulator-description = self.callPackage ./open-manipulator-description {};
 
  open-manipulator-gui = self.callPackage ./open-manipulator-gui {};
@@ -1533,6 +1521,8 @@ self: super: {
  phidgets-msgs = self.callPackage ./phidgets-msgs {};
 
  phidgets-spatial = self.callPackage ./phidgets-spatial {};
+
+ phidgets-stepper = self.callPackage ./phidgets-stepper {};
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
@@ -2058,6 +2048,8 @@ self: super: {
 
  rosidl-generator-py = self.callPackage ./rosidl-generator-py {};
 
+ rosidl-generator-rs = self.callPackage ./rosidl-generator-rs {};
+
  rosidl-generator-type-description = self.callPackage ./rosidl-generator-type-description {};
 
  rosidl-parser = self.callPackage ./rosidl-parser {};
@@ -2197,6 +2189,8 @@ self: super: {
  rviz-rendering-tests = self.callPackage ./rviz-rendering-tests {};
 
  rviz-resource-interfaces = self.callPackage ./rviz-resource-interfaces {};
+
+ rviz-satellite = self.callPackage ./rviz-satellite {};
 
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 
@@ -2338,8 +2332,6 @@ self: super: {
 
  swri-serial-util = self.callPackage ./swri-serial-util {};
 
- swri-system-util = self.callPackage ./swri-system-util {};
-
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
  synapticon-ros2-control = self.callPackage ./synapticon-ros2-control {};
@@ -2467,6 +2459,8 @@ self: super: {
  turtle-tf2-cpp = self.callPackage ./turtle-tf2-cpp {};
 
  turtle-tf2-py = self.callPackage ./turtle-tf2-py {};
+
+ turtlebot3-applications-msgs = self.callPackage ./turtlebot3-applications-msgs {};
 
  turtlebot3-autorace = self.callPackage ./turtlebot3-autorace {};
 

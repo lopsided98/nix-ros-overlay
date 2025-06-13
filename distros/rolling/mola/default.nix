@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, kitti-metrics-eval, mola-bridge-ros2, mola-demos, mola-input-euroc-dataset, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset, mola-input-rawlog, mola-input-rosbag2, mola-input-video, mola-kernel, mola-launcher, mola-metric-maps, mola-pose-list, mola-relocalization, mola-traj-tools, mola-viz, mola-yaml }:
 buildRosPackage {
   pname = "ros-rolling-mola";
-  version = "1.7.0-r1";
+  version = "1.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "40b284e5a69a4c2c7a79ed5c24fc29ab9d77c77ddc119f6d64e0a913625cb711";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola/1.8.1-1.tar.gz";
+    name = "1.8.1-1.tar.gz";
+    sha256 = "aa77d79c27b8ce1d5849220e661673790ee34bbea3e6826b9d195fde0e3e7433";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Metapackage with all core open-sourced MOLA packages.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

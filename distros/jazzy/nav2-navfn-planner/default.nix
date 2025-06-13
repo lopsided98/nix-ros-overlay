@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, nav-msgs, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-navfn-planner";
-  version = "1.3.6-r1";
+  version = "1.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_navfn_planner/1.3.6-1.tar.gz";
-    name = "1.3.6-1.tar.gz";
-    sha256 = "6ec4d92bc3ec4e8a848941627a20c0651e521ec052c51b56ef860d2dd48d80c4";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_navfn_planner/1.3.7-1.tar.gz";
+    name = "1.3.7-1.tar.gz";
+    sha256 = "a68aaa1238c17d59fc13728fbb323febd5641620cadd4116ca4ab616f1aadcb6";
   };
 
   buildType = "ament_cmake";

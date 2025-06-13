@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-rolling-mola-input-mulran-dataset";
-  version = "1.7.0-r1";
+  version = "1.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_input_mulran_dataset/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "9d2e8178eb7c035f42ef8f28234bb70bc2ea8e73a5564684795132e53ffdc91c";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_input_mulran_dataset/1.8.1-1.tar.gz";
+    name = "1.8.1-1.tar.gz";
+    sha256 = "dc2a8c27a9ca07b7b803523ab74eadb6ba840f2c87a04e14dc592cbeac2a415b";
   };
 
   buildType = "cmake";

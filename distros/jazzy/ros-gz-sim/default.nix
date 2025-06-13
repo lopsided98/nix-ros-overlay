@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-index-python, ament-lint-auto, ament-lint-common, builtin-interfaces, cli11, geometry-msgs, gflags, gz-math-vendor, gz-msgs-vendor, gz-sim-vendor, gz-transport-vendor, launch, launch-ros, launch-testing, launch-testing-ament-cmake, pkg-config, rclcpp, rclcpp-components, rcpputils, ros-gz-interfaces, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-ros-gz-sim";
-  version = "1.0.12-r1";
+  version = "1.0.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/jazzy/ros_gz_sim/1.0.12-1.tar.gz";
-    name = "1.0.12-1.tar.gz";
-    sha256 = "fe74da360dd60d9918b6949094881e2c0a3c893ef504c2e0b02b191d2af78e27";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/jazzy/ros_gz_sim/1.0.14-1.tar.gz";
+    name = "1.0.14-1.tar.gz";
+    sha256 = "b36a7cbc7bc29eff68265ff72c3e9502d73f30b684df293c3c460b111dcab3ba";
   };
 
   buildType = "ament_cmake";

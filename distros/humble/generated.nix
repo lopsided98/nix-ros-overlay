@@ -306,6 +306,8 @@ self: super: {
 
  autoware-internal-debug-msgs = self.callPackage ./autoware-internal-debug-msgs {};
 
+ autoware-internal-localization-msgs = self.callPackage ./autoware-internal-localization-msgs {};
+
  autoware-internal-metric-msgs = self.callPackage ./autoware-internal-metric-msgs {};
 
  autoware-internal-msgs = self.callPackage ./autoware-internal-msgs {};
@@ -2250,6 +2252,8 @@ self: super: {
 
  phidgets-spatial = self.callPackage ./phidgets-spatial {};
 
+ phidgets-stepper = self.callPackage ./phidgets-stepper {};
+
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
  pick-ik = self.callPackage ./pick-ik {};
@@ -3236,8 +3240,6 @@ self: super: {
 
  swri-serial-util = self.callPackage ./swri-serial-util {};
 
- swri-system-util = self.callPackage ./swri-system-util {};
-
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
  synapticon-ros2-control = self.callPackage ./synapticon-ros2-control {};
@@ -3400,6 +3402,8 @@ self: super: {
 
  turtlebot3 = self.callPackage ./turtlebot3 {};
 
+ turtlebot3-applications-msgs = self.callPackage ./turtlebot3-applications-msgs {};
+
  turtlebot3-autorace = self.callPackage ./turtlebot3-autorace {};
 
  turtlebot3-autorace-camera = self.callPackage ./turtlebot3-autorace-camera {};
@@ -3428,7 +3432,11 @@ self: super: {
 
  turtlebot3-manipulation-description = self.callPackage ./turtlebot3-manipulation-description {};
 
+ turtlebot3-manipulation-gazebo = self.callPackage ./turtlebot3-manipulation-gazebo {};
+
  turtlebot3-manipulation-hardware = self.callPackage ./turtlebot3-manipulation-hardware {};
+
+ turtlebot3-manipulation-moveit-config = self.callPackage ./turtlebot3-manipulation-moveit-config {};
 
  turtlebot3-manipulation-navigation2 = self.callPackage ./turtlebot3-manipulation-navigation2 {};
 

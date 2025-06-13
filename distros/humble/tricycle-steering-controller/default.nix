@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-test-assets, std-srvs, steering-controllers-library }:
 buildRosPackage {
   pname = "ros-humble-tricycle-steering-controller";
-  version = "2.45.0-r1";
+  version = "2.47.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/tricycle_steering_controller/2.45.0-1.tar.gz";
-    name = "2.45.0-1.tar.gz";
-    sha256 = "53d5e2d9450afc4dcfecb9640c7d5db7ffa9133d96e0504d67c939bde6e224c5";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/tricycle_steering_controller/2.47.0-1.tar.gz";
+    name = "2.47.0-1.tar.gz";
+    sha256 = "bdf7b83ecb4fa71e58d92dee29ee352f7d20dcc4950373a677d070cc822faa6c";
   };
 
   buildType = "ament_cmake";

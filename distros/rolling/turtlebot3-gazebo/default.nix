@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, rclcpp, ros-gz-bridge, ros-gz-image, ros-gz-sim, sensor-msgs, tf2 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, gz-math-vendor, gz-plugin-vendor, gz-sim-vendor, nav-msgs, rclcpp, ros-gz-bridge, ros-gz-image, ros-gz-sim, sensor-msgs, tf2 }:
 buildRosPackage {
   pname = "ros-rolling-turtlebot3-gazebo";
-  version = "2.3.2-r1";
+  version = "2.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_simulations-release/archive/release/rolling/turtlebot3_gazebo/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "e97da865a4b0dee6e5754ea13f2f6adfedba65b733ff9b2b2b4692edf00ef011";
+    url = "https://github.com/ros2-gbp/turtlebot3_simulations-release/archive/release/rolling/turtlebot3_gazebo/2.3.5-1.tar.gz";
+    name = "2.3.5-1.tar.gz";
+    sha256 = "17efa0cb001581188f145b7d00036086969afe2f21bec3b5002e6aa39a1b5920";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ geometry-msgs nav-msgs rclcpp ros-gz-bridge ros-gz-image ros-gz-sim sensor-msgs tf2 ];
+  propagatedBuildInputs = [ geometry-msgs gz-math-vendor gz-plugin-vendor gz-sim-vendor nav-msgs rclcpp ros-gz-bridge ros-gz-image ros-gz-sim sensor-msgs tf2 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

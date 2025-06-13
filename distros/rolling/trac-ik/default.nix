@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, trac-ik-kinematics-plugin, trac-ik-lib }:
 buildRosPackage {
   pname = "ros-rolling-trac-ik";
-  version = "2.0.1-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/trac_ik-release/archive/release/rolling/trac_ik/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "662d15c958553cedd23dadcf7f5ee17cbc7aac5584a09ce38b36b78c66e1227f";
+    url = "https://github.com/ros2-gbp/trac_ik-release/archive/release/rolling/trac_ik/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "7f86f49a989cae47b7666243027fc2840a5f30ced1a7c3e649fff8b4dc057b4d";
   };
 
   buildType = "ament_cmake";
