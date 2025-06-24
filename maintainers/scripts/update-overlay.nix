@@ -21,8 +21,13 @@ writeShellApplication {
   text = ''
     if [[ $# -eq 0 ]]; then
       echo "No superflore parameters specified, using defaults."
+      if [[ ''${GITHUB_RUNNER_TEMP:-} ]]; then
+        set -- --dry-run --output-repository-path . --all \
+               --tar-archive-dir "$GITHUB_RUNNER_TEMP/tar" --upstream-branch develop
+      else
         set -- --dry-run --output-repository-path . --all \
                --tar-archive-dir .tar --no-branch
+      fi
     fi
     set -x
     mkdir -p "$ROSDEP_SOURCE_PATH"

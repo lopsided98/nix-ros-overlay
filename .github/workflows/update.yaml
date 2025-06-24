@@ -17,15 +17,11 @@ jobs:
           signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
       - name: Install Superflore
         run: |
-          nix-env -f . -iA python3Packages.rosdep superflore
+          nix build .#update-overlay
       - name: Update overlay
         env:
-          ROS_OS_OVERRIDE: nixos
-          ROSDEP_SOURCE_PATH: rosdep-sources
+          GITHUB_RUNNER_TEMP: ${{ runner.temp }}
         run: |
-          mkdir -p "$ROSDEP_SOURCE_PATH"
-          curl https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/sources.list.d/20-default.list -o "$ROSDEP_SOURCE_PATH/20-default.list"
-          rosdep update
           git config --local user.email "superflore@github.com"
           git config --local user.name "Superflore"
           git config credential.helper '!
@@ -33,11 +29,7 @@ jobs:
               echo "username=lopsided98"
               echo "password=${SUPERFLORE_GITHUB_TOKEN}"
             }; f'
-          superflore-gen-nix --dry-run \
-            --tar-archive-dir "${{ runner.temp }}/tar" \
-            --output-repository-path . \
-            --upstream-branch develop \
-            --all
+          nix run .#update-overlay
       - name: Update ament_vendor info
         continue-on-error: true
         run: |
@@ -60,5 +52,6 @@ jobs:
             truncate -s 64K .pr-message.tmp
           fi
           superflore-gen-nix --pr-only \
+          nix run .#update-overlay -- --pr-only \
             --output-repository-path . \
             --upstream-branch develop \
