@@ -55,6 +55,10 @@ jobs:
           # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows#about-workflow-events
           SUPERFLORE_GITHUB_TOKEN: ${{ secrets.SUPERFLORE_GITHUB_TOKEN }}
         run: |
+          if [ $(stat --format='%s' .pr-message.tmp) -gt 65536 ]; then
+            echo "PR body too long - truncating!"
+            truncate -s 64K .pr-message.tmp
+          fi
           superflore-gen-nix --pr-only \
             --output-repository-path . \
             --upstream-branch develop \
