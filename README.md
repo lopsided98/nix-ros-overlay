@@ -135,3 +135,24 @@ This means all the system dependencies of `<package>` were available, so its Nix
 **Q: Why do some packages fail to build?**
 
 There are thousands of ROS packages, so it is infeasible to make sure every package builds. I generally aim to keep at least 80-90% of the packages in a distribution successfully building, but this percentage tends to decrease as distributions get older and develop incompatibilities with newer software. If a package you need does not build, please open an issue or try to fix it yourself. In many cases, build failures occur due to bugs in the packages themselves, and should be fixed upstream. In other cases, overrides may need to be added to this overlay to fix the auto-generated expressions.
+
+**Q: Can I update the overlay to match the latest ROS?**
+
+The overlay is updated semi-automatically approximately every few
+weeks. If you want to try a more recent ROS version, you can update
+the whole overlay locally by running the following command from
+repository root:
+
+```
+nix run .#update-overlay
+```
+
+It needs to download source tarballs of all ROS packages from all
+distributions, which can take long time. If you're interested in just
+a specific distribution, you can specify superflore arguments on the
+command line. For example, the following command updates just the
+`jazzy` distro:
+
+```
+nix run .#update-overlay -- --dry-run --output-repository-path . --tar-archive-dir .tar --no-branch --ros-distro jazzy
+```
