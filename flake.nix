@@ -16,6 +16,7 @@
       };
     in {
       legacyPackages = pkgs.rosPackages;
+      packages.update-overlay = pkgs.callPackage ./maintainers/scripts/update-overlay.nix { };
 
       devShells = {
         example-turtlebot3-gazebo = import ./examples/turtlebot3-gazebo.nix { inherit pkgs; };
