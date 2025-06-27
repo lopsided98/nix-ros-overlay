@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gazebo-ros-pkgs, geometry-msgs, nav-msgs, rclcpp, sensor-msgs, tf2 }:
 buildRosPackage {
   pname = "ros-humble-turtlebot3-gazebo";
-  version = "2.3.0-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_simulations-release/archive/release/humble/turtlebot3_gazebo/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "38d964890b09bc627e1eedb16bb44e8c152a6b21e2a067b49bb37c7c5f3c8b51";
+    url = "https://github.com/ros2-gbp/turtlebot3_simulations-release/archive/release/humble/turtlebot3_gazebo/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "cbb857de2fa416430761ccecbb5d8070c08e7224ade71ac7297c12ce495f54cd";
   };
 
   buildType = "ament_cmake";

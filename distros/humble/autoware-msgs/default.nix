@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, autoware-common-msgs, autoware-control-msgs, autoware-localization-msgs, autoware-map-msgs, autoware-perception-msgs, autoware-planning-msgs, autoware-sensing-msgs, autoware-system-msgs, autoware-v2x-msgs, autoware-vehicle-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-msgs";
-  version = "1.7.0-r1";
+  version = "1.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/humble/autoware_msgs/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "7112416d6fe20ba0c9b8e4322754a9ec8da2818bfa0df32060343e4b7acb1ae1";
+    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/humble/autoware_msgs/1.8.0-1.tar.gz";
+    name = "1.8.0-1.tar.gz";
+    sha256 = "6e42e4af35c40084a8e955e5336349118bf8305b0dd502790e4e3df0a81dc26d";
   };
 
   buildType = "ament_cmake";

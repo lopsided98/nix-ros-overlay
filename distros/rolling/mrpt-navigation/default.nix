@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, mrpt-map-server, mrpt-nav-interfaces, mrpt-pf-localization, mrpt-pointcloud-pipeline, mrpt-rawlog, mrpt-reactivenav2d, mrpt-tutorials }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-navigation";
-  version = "2.2.1-r1";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/rolling/mrpt_navigation/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "946143a74ddb9beaf975dc0b14e5af791e31d8877fcf93af11613669c76dd894";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/rolling/mrpt_navigation/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "3ac55b3a1cc30408549e8921ee5f2995fdc71b14c0cc4802f45b93ebe4467f25";
   };
 
   buildType = "ament_cmake";

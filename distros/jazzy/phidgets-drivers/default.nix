@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libphidget22, phidgets-accelerometer, phidgets-analog-inputs, phidgets-api, phidgets-digital-inputs, phidgets-digital-outputs, phidgets-gyroscope, phidgets-high-speed-encoder, phidgets-ik, phidgets-magnetometer, phidgets-motors, phidgets-msgs, phidgets-spatial, phidgets-temperature }:
 buildRosPackage {
   pname = "ros-jazzy-phidgets-drivers";
-  version = "2.3.3-r2";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/jazzy/phidgets_drivers/2.3.3-2.tar.gz";
-    name = "2.3.3-2.tar.gz";
-    sha256 = "f6dcda590744d2570012d6f689dd699b477f336afa198cffededd329304e160d";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/jazzy/phidgets_drivers/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "022a39ee01fb67de1da2bd3e2bd4cce3b3fa7aa0b11900f6cde40e718c597337";
   };
 
   buildType = "ament_cmake";

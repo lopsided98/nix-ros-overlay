@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-ros, ament-lint-auto, ament-lint-common, ffmpeg-encoder-decoder, ffmpeg-image-transport-msgs, image-transport, pluginlib, rclcpp, rcutils, ros-environment, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-ffmpeg-image-transport";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ffmpeg_image_transport-release/archive/release/humble/ffmpeg_image_transport/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "fb4a8fc25efb5051f2fca64db1884d374d014001e343c3ab36906f52a706acf2";
+    url = "https://github.com/ros2-gbp/ffmpeg_image_transport-release/archive/release/humble/ffmpeg_image_transport/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "d08b665e76731f49bb01a0415822bc3d2ad7c2adb08da0d3571a5d658438f5d0";
   };
 
   buildType = "ament_cmake";

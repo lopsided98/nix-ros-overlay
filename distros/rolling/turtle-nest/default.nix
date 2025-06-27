@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, qt5 }:
 buildRosPackage {
   pname = "ros-rolling-turtle-nest";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtle_nest-release/archive/release/rolling/turtle_nest/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "303b3a731c23fbc06e17c7f08d26a10fe8fb1fbb13bbf97b9554cfd2c92c3841";
+    url = "https://github.com/ros2-gbp/turtle_nest-release/archive/release/rolling/turtle_nest/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "a26e87f93227dca887688ef2867165f116bd32175fbde76651eb47a8e8f6b008";
   };
 
   buildType = "ament_cmake";

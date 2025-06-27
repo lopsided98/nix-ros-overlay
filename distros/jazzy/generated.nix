@@ -178,6 +178,10 @@ self: super: {
 
  aruco = self.callPackage ./aruco {};
 
+ aruco-markers = self.callPackage ./aruco-markers {};
+
+ aruco-markers-msgs = self.callPackage ./aruco-markers-msgs {};
+
  aruco-msgs = self.callPackage ./aruco-msgs {};
 
  aruco-opencv = self.callPackage ./aruco-opencv {};
@@ -189,6 +193,8 @@ self: super: {
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
 
  async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
+
+ at-sonde-ros-driver = self.callPackage ./at-sonde-ros-driver {};
 
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
@@ -209,6 +215,8 @@ self: super: {
  autoware-control-msgs = self.callPackage ./autoware-control-msgs {};
 
  autoware-internal-debug-msgs = self.callPackage ./autoware-internal-debug-msgs {};
+
+ autoware-internal-localization-msgs = self.callPackage ./autoware-internal-localization-msgs {};
 
  autoware-internal-metric-msgs = self.callPackage ./autoware-internal-metric-msgs {};
 
@@ -332,6 +340,8 @@ self: super: {
 
  can-msgs = self.callPackage ./can-msgs {};
 
+ canboat-vendor = self.callPackage ./canboat-vendor {};
+
  canopen = self.callPackage ./canopen {};
 
  canopen-402-driver = self.callPackage ./canopen-402-driver {};
@@ -343,6 +353,10 @@ self: super: {
  canopen-fake-slaves = self.callPackage ./canopen-fake-slaves {};
 
  canopen-interfaces = self.callPackage ./canopen-interfaces {};
+
+ canopen-inventus-driver = self.callPackage ./canopen-inventus-driver {};
+
+ canopen-inventus-interfaces = self.callPackage ./canopen-inventus-interfaces {};
 
  canopen-master-driver = self.callPackage ./canopen-master-driver {};
 
@@ -390,6 +404,8 @@ self: super: {
 
  clearpath-desktop = self.callPackage ./clearpath-desktop {};
 
+ clearpath-diagnostics = self.callPackage ./clearpath-diagnostics {};
+
  clearpath-generator-common = self.callPackage ./clearpath-generator-common {};
 
  clearpath-generator-gz = self.callPackage ./clearpath-generator-gz {};
@@ -436,6 +452,8 @@ self: super: {
 
  cob-srvs = self.callPackage ./cob-srvs {};
 
+ coin-d4-driver = self.callPackage ./coin-d4-driver {};
+
  color-names = self.callPackage ./color-names {};
 
  color-util = self.callPackage ./color-util {};
@@ -475,6 +493,16 @@ self: super: {
  crane-plus-gazebo = self.callPackage ./crane-plus-gazebo {};
 
  crane-plus-moveit-config = self.callPackage ./crane-plus-moveit-config {};
+
+ crazyflie = self.callPackage ./crazyflie {};
+
+ crazyflie-examples = self.callPackage ./crazyflie-examples {};
+
+ crazyflie-interfaces = self.callPackage ./crazyflie-interfaces {};
+
+ crazyflie-py = self.callPackage ./crazyflie-py {};
+
+ crazyflie-sim = self.callPackage ./crazyflie-sim {};
 
  create3-coverage = self.callPackage ./create3-coverage {};
 
@@ -1136,6 +1164,8 @@ self: super: {
 
  imu-transformer = self.callPackage ./imu-transformer {};
 
+ insight-gui = self.callPackage ./insight-gui {};
+
  interactive-marker-twist-server = self.callPackage ./interactive-marker-twist-server {};
 
  interactive-markers = self.callPackage ./interactive-markers {};
@@ -1329,6 +1359,8 @@ self: super: {
  lifecycle-py = self.callPackage ./lifecycle-py {};
 
  linux-isolate-process = self.callPackage ./linux-isolate-process {};
+
+ lms1xx = self.callPackage ./lms1xx {};
 
  log-view = self.callPackage ./log-view {};
 
@@ -1664,6 +1696,8 @@ self: super: {
 
  nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
 
+ naoqi-libqi = self.callPackage ./naoqi-libqi {};
+
  nav2-amcl = self.callPackage ./nav2-amcl {};
 
  nav2-behavior-tree = self.callPackage ./nav2-behavior-tree {};
@@ -1814,6 +1848,8 @@ self: super: {
 
  open-manipulator-bringup = self.callPackage ./open-manipulator-bringup {};
 
+ open-manipulator-collision = self.callPackage ./open-manipulator-collision {};
+
  open-manipulator-description = self.callPackage ./open-manipulator-description {};
 
  open-manipulator-gui = self.callPackage ./open-manipulator-gui {};
@@ -1913,6 +1949,8 @@ self: super: {
  phidgets-msgs = self.callPackage ./phidgets-msgs {};
 
  phidgets-spatial = self.callPackage ./phidgets-spatial {};
+
+ phidgets-stepper = self.callPackage ./phidgets-stepper {};
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
@@ -2678,8 +2716,6 @@ self: super: {
 
  scenario-execution-os = self.callPackage ./scenario-execution-os {};
 
- scenario-execution-py-trees-ros = self.callPackage ./scenario-execution-py-trees-ros {};
-
  scenario-execution-ros = self.callPackage ./scenario-execution-ros {};
 
  scenario-execution-rviz = self.callPackage ./scenario-execution-rviz {};
@@ -2836,8 +2872,6 @@ self: super: {
 
  swri-serial-util = self.callPackage ./swri-serial-util {};
 
- swri-system-util = self.callPackage ./swri-system-util {};
-
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
  synapticon-ros2-control = self.callPackage ./synapticon-ros2-control {};
@@ -2968,6 +3002,16 @@ self: super: {
 
  turtlebot3 = self.callPackage ./turtlebot3 {};
 
+ turtlebot3-applications = self.callPackage ./turtlebot3-applications {};
+
+ turtlebot3-applications-msgs = self.callPackage ./turtlebot3-applications-msgs {};
+
+ turtlebot3-aruco-tracker = self.callPackage ./turtlebot3-aruco-tracker {};
+
+ turtlebot3-automatic-parking = self.callPackage ./turtlebot3-automatic-parking {};
+
+ turtlebot3-automatic-parking-vision = self.callPackage ./turtlebot3-automatic-parking-vision {};
+
  turtlebot3-autorace = self.callPackage ./turtlebot3-autorace {};
 
  turtlebot3-autorace-camera = self.callPackage ./turtlebot3-autorace-camera {};
@@ -2986,7 +3030,25 @@ self: super: {
 
  turtlebot3-fake-node = self.callPackage ./turtlebot3-fake-node {};
 
+ turtlebot3-follower = self.callPackage ./turtlebot3-follower {};
+
  turtlebot3-gazebo = self.callPackage ./turtlebot3-gazebo {};
+
+ turtlebot3-manipulation = self.callPackage ./turtlebot3-manipulation {};
+
+ turtlebot3-manipulation-bringup = self.callPackage ./turtlebot3-manipulation-bringup {};
+
+ turtlebot3-manipulation-cartographer = self.callPackage ./turtlebot3-manipulation-cartographer {};
+
+ turtlebot3-manipulation-description = self.callPackage ./turtlebot3-manipulation-description {};
+
+ turtlebot3-manipulation-hardware = self.callPackage ./turtlebot3-manipulation-hardware {};
+
+ turtlebot3-manipulation-moveit-config = self.callPackage ./turtlebot3-manipulation-moveit-config {};
+
+ turtlebot3-manipulation-navigation2 = self.callPackage ./turtlebot3-manipulation-navigation2 {};
+
+ turtlebot3-manipulation-teleop = self.callPackage ./turtlebot3-manipulation-teleop {};
 
  turtlebot3-msgs = self.callPackage ./turtlebot3-msgs {};
 
@@ -2994,9 +3056,13 @@ self: super: {
 
  turtlebot3-node = self.callPackage ./turtlebot3-node {};
 
+ turtlebot3-panorama = self.callPackage ./turtlebot3-panorama {};
+
  turtlebot3-simulations = self.callPackage ./turtlebot3-simulations {};
 
  turtlebot3-teleop = self.callPackage ./turtlebot3-teleop {};
+
+ turtlebot3-yolo-object-detection = self.callPackage ./turtlebot3-yolo-object-detection {};
 
  turtlebot4-base = self.callPackage ./turtlebot4-base {};
 
@@ -3233,6 +3299,8 @@ self: super: {
  zenoh-bridge-dds = self.callPackage ./zenoh-bridge-dds {};
 
  zenoh-cpp-vendor = self.callPackage ./zenoh-cpp-vendor {};
+
+ zenoh-security-tools = self.callPackage ./zenoh-security-tools {};
 
  zlib-point-cloud-transport = self.callPackage ./zlib-point-cloud-transport {};
 

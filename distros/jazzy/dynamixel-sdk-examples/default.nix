@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, dynamixel-sdk, dynamixel-sdk-custom-interfaces, rclcpp, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-dynamixel-sdk-examples";
-  version = "3.8.3-r1";
+  version = "3.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/jazzy/dynamixel_sdk_examples/3.8.3-1.tar.gz";
-    name = "3.8.3-1.tar.gz";
-    sha256 = "5c77343b5f874e55ef90546311a625124a2e18d04ed5281aff17d6ae30f90405";
+    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/jazzy/dynamixel_sdk_examples/3.8.4-1.tar.gz";
+    name = "3.8.4-1.tar.gz";
+    sha256 = "97c0011544ff11358a9a650f94917bf27988a6c6afd60e5b9f63647c9da28de5";
   };
 
   buildType = "ament_cmake";

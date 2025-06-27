@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-ros-planning-interface, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-open-manipulator-playground";
-  version = "3.2.2-r1";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_playground/3.2.2-1.tar.gz";
-    name = "3.2.2-1.tar.gz";
-    sha256 = "f3aa3898409a780a0438fc5a2d9c360a85365c81c33dc37c53073c7bc3ec9499";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_playground/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "7e8f09ee0baba781003804597fbba0210265b11b42d940260bbcc88b392a5059";
   };
 
   buildType = "ament_cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "This package provides an example for utilizing the MoveIt API with the OpenMANIPULATOR-X,
+    description = "This package provides an example for utilizing the MoveIt API with the OpenMANIPULATOR,
     allowing users to practice and experiment freely.";
     license = with lib.licenses; [ asl20 ];
   };

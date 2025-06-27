@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, curl, file, pkg-config }:
 buildRosPackage {
   pname = "ros-rolling-libcurl-vendor";
-  version = "3.8.0-r1";
+  version = "3.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/rolling/libcurl_vendor/3.8.0-1.tar.gz";
-    name = "3.8.0-1.tar.gz";
-    sha256 = "f2d686baa51395db36e5d859c75d1236afb1855591588d03ff8e2d5b1f42ddf1";
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/rolling/libcurl_vendor/3.8.1-1.tar.gz";
+    name = "3.8.1-1.tar.gz";
+    sha256 = "e186f9ac40840d55dabadadd2585fa71d18111e9b04a369e7133e8cf202c9891";
   };
 
   buildType = "ament_cmake";

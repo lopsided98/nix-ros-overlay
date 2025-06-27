@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, marti-introspection-msgs, python3Packages, rcl-interfaces, rclpy, ros2cli, ros2node, ros2param, ros2topic }:
 buildRosPackage {
   pname = "ros-humble-swri-cli-tools";
-  version = "3.7.4-r1";
+  version = "3.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_cli_tools/3.7.4-1.tar.gz";
-    name = "3.7.4-1.tar.gz";
-    sha256 = "9fc4b429f0a49d6cf3bd975be1c264fbc2c94b8919fa500245ce2f4d62d56c1e";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_cli_tools/3.8.4-1.tar.gz";
+    name = "3.8.4-1.tar.gz";
+    sha256 = "24d23a823f8ef37544f12b421c4c056d7c0dfc76b0d1596172e6613955f0273c";
   };
 
   buildType = "ament_python";
