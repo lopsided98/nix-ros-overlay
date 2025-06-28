@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, joint-state-publisher, robot-state-publisher, urdf, xacro }:
 buildRosPackage {
   pname = "ros-rolling-nav2-minimal-tb4-description";
-  version = "1.1.0-r2";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nav2_minimal_turtlebot_simulation-release/archive/release/rolling/nav2_minimal_tb4_description/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "4231d8878a5dab86a96952c7194f815a0a4e3c80e42952ba0ff4f6c3d53c2c4b";
+    url = "https://github.com/ros2-gbp/nav2_minimal_turtlebot_simulation-release/archive/release/rolling/nav2_minimal_tb4_description/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "980f6635369c5f4993b14b188ec3f4773ce672f7cdb1c557c5bae99a71db03e0";
   };
 
   buildType = "ament_cmake";

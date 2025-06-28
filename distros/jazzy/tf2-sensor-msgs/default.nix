@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, geometry-msgs, python-cmake-module, python3Packages, rclcpp, sensor-msgs, sensor-msgs-py, std-msgs, tf2, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-jazzy-tf2-sensor-msgs";
-  version = "0.36.11-r1";
+  version = "0.36.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_sensor_msgs/0.36.11-1.tar.gz";
-    name = "0.36.11-1.tar.gz";
-    sha256 = "b983bc3f18f15a43c4414fd30ccccc5fffe349e206303b57055027c59b7f1c9d";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_sensor_msgs/0.36.12-1.tar.gz";
+    name = "0.36.12-1.tar.gz";
+    sha256 = "cd82a679792977c2cf03584112c94cfc85ff3301722b69ef29246c6c1e07105e";
   };
 
   buildType = "ament_cmake";

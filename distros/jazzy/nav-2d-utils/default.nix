@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nav-2d-msgs, nav-msgs, nav2-common, nav2-msgs, nav2-util, std-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-nav-2d-utils";
-  version = "1.3.6-r1";
+  version = "1.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav_2d_utils/1.3.6-1.tar.gz";
-    name = "1.3.6-1.tar.gz";
-    sha256 = "29f27564038cd345aa5f8fe6220a8fb386812febc414a6ead87cc7797026dfdf";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav_2d_utils/1.3.7-1.tar.gz";
+    name = "1.3.7-1.tar.gz";
+    sha256 = "823212505995b0f9744cae11679a40617d87e1d219214f2b37f046b9e0e24483";
   };
 
   buildType = "ament_cmake";

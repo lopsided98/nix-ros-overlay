@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-msgs, geographiclib, geometry-msgs, ros-environment, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-msgs-utils";
-  version = "3.2.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_msgs_utils/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "a58f4c1510a8c48dd5e2c3f54b4b86f16b49888eb71fa861839222802d443084";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_msgs_utils/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "495b5b691f27adc9bd6ca7dbb2f9b9f4b5f0a3837c4e8130f01a2c4a4cd5bc43";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-rtabmap-msgs";
-  version = "0.21.10-r1";
+  version = "0.22.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/jazzy/rtabmap_msgs/0.21.10-1.tar.gz";
-    name = "0.21.10-1.tar.gz";
-    sha256 = "aa481f7ffb62c3222f793c0e4061a888117ed8c548a41430dc21fe41a5e98ddf";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/jazzy/rtabmap_msgs/0.22.0-1.tar.gz";
+    name = "0.22.0-1.tar.gz";
+    sha256 = "8386c5c48159df0ee29a28c39acbf257c4f8c975e1367451f9ceb9f899425dbd";
   };
 
   buildType = "ament_cmake";

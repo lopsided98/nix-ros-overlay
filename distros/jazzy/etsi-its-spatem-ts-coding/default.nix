@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-spatem-ts-coding";
-  version = "3.2.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_spatem_ts_coding/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "d715c2f6d04bdf1f2fd29f353421e083d3d73700dc24bbf3e6e56c98d0571b55";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_spatem_ts_coding/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "70645708de4f8dd28e959c6fb339e8c6c4ac9845961fd94cf5e7c54e5b46fef9";
   };
 
   buildType = "ament_cmake";

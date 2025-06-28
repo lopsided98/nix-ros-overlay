@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, message-filters, rclcpp, rclcpp-components, sensor-msgs, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-imu-transformer";
-  version = "0.5.0-r3";
+  version = "0.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_pipeline-release/archive/release/jazzy/imu_transformer/0.5.0-3.tar.gz";
-    name = "0.5.0-3.tar.gz";
-    sha256 = "9c955be02f965f442ff7aafdd79662167aab24d0df1753e0a9cda553998cbb44";
+    url = "https://github.com/ros2-gbp/imu_pipeline-release/archive/release/jazzy/imu_transformer/0.5.2-1.tar.gz";
+    name = "0.5.2-1.tar.gz";
+    sha256 = "64bfd632c78616c59bd2cccce2ad365973d74743f9bd8dfb8681776869be7b17";
   };
 
   buildType = "ament_cmake";

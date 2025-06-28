@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-ffw-teleop";
-  version = "1.0.5-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_teleop/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "d3993b5f2f2c7f95e4d4589586fd15d19c0bebbf7d329aaf484894762d59fedc";
+    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_teleop/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "ecdfbca5b11156a501d39bba762ed3f277ea89432fade9b7d013932b8accfdd4";
   };
 
   buildType = "ament_python";

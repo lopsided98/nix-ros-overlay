@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-ros-planning-interface, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-open-manipulator-x-playground";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/humble/open_manipulator_x_playground/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "112a68dc674fb3c605d79f220e33061e10ca46c0a9ba81021be8ed3946136f8f";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/humble/open_manipulator_x_playground/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "8f1666ba983016f78bb406fa369e29c4dbbc783bc807d78c16a633180ab7f086";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, realsense2-description, urdf, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-ffw-description";
-  version = "1.0.5-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_description/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "ca3eb884ef910a6eff71cbeca44dbc3a0624896da0b53de608a41b9d30e58631";
+    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_description/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "4d48aa42b7796983e3a17c9f161505520a03f92ad2d6a4ef857fdf301818bfe6";
   };
 
   buildType = "ament_cmake";

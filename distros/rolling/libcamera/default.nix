@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, git, libyaml, meson, openssl, pkg-config, python3, python3Packages, udev }:
 buildRosPackage {
   pname = "ros-rolling-libcamera";
-  version = "0.5.0-r3";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libcamera-release/archive/release/rolling/libcamera/0.5.0-3.tar.gz";
-    name = "0.5.0-3.tar.gz";
-    sha256 = "fd929eda59d4bd5cadd7ad405189e584528137883e9acbe0f1364c774fbf2741";
+    url = "https://github.com/ros2-gbp/libcamera-release/archive/release/rolling/libcamera/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "ed63b4eb4d810e9a8cdf5dbdb77f8630617861993a182788e013d54f70086dc4";
   };
 
   buildType = "meson";

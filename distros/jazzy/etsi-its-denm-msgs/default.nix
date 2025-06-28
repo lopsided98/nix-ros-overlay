@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-denm-msgs";
-  version = "3.2.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_denm_msgs/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "9ad6f00077dd02784844d33ea24941ffb14f305a7005026cd4b26c0aca3e69e2";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_denm_msgs/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "bfb12692c520360d608f2364c0c23fe6c241e6dc0310af91e811c0f8bb585f9a";
   };
 
   buildType = "ament_cmake";

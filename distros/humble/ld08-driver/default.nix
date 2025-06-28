@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, rclcpp, sensor-msgs, udev }:
 buildRosPackage {
   pname = "ros-humble-ld08-driver";
-  version = "1.1.3-r1";
+  version = "1.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ld08_driver-release/archive/release/humble/ld08_driver/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "2fe59ab1ec5203caed2ba1efa45a27d664a6e0376720701f179f61bf6ffe6c65";
+    url = "https://github.com/ros2-gbp/ld08_driver-release/archive/release/humble/ld08_driver/1.1.4-1.tar.gz";
+    name = "1.1.4-1.tar.gz";
+    sha256 = "77538d9eda1d6904ab85bb63fe2f1c9eaeb2d69c4cf737be99292f9130e2359b";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, launch-pal, rclcpp-components, rclpy, ros2launch }:
 buildRosPackage {
   pname = "ros-humble-pmb2-rgbd-sensors";
-  version = "4.15.0-r1";
+  version = "4.17.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_rgbd_sensors/4.15.0-1.tar.gz";
-    name = "4.15.0-1.tar.gz";
-    sha256 = "d15a07f1b4a8753dcc7bd7dc5d5fabb58706d41cd6a17bf65059adb8f909ceaf";
+    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_rgbd_sensors/4.17.0-1.tar.gz";
+    name = "4.17.0-1.tar.gz";
+    sha256 = "27f455f6e8a77565951efde285915435e9f707a4d311732d8e6061e115d6b763";
   };
 
   buildType = "ament_cmake";

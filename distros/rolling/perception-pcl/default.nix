@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pcl-conversions, pcl-msgs, pcl-ros }:
 buildRosPackage {
   pname = "ros-rolling-perception-pcl";
-  version = "2.7.0-r1";
+  version = "2.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/rolling/perception_pcl/2.7.0-1.tar.gz";
-    name = "2.7.0-1.tar.gz";
-    sha256 = "964e5c2701ccd9bfcd676f47d01a48771e79416c1e2981d8a4e9783caba4d06a";
+    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/rolling/perception_pcl/2.7.3-1.tar.gz";
+    name = "2.7.3-1.tar.gz";
+    sha256 = "0e01f7fef4728bb0b777d83d1c56459550ff509585a91c4142aa811ec669d967";
   };
 
   buildType = "ament_cmake";

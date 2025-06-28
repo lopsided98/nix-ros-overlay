@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, cv-bridge, eigen, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libbase, octomap, opencv, openni2, pkg-config, python3Packages, rclcpp, ros-environment, rosbag2-storage, suitesparse, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-libmath";
-  version = "2.14.8-r1";
+  version = "2.14.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/jazzy/mrpt_libmath/2.14.8-1.tar.gz";
-    name = "2.14.8-1.tar.gz";
-    sha256 = "22fedfb7554c67ed8dce47ea227e58e6823b54da29a505fac8a50e230cf28aba";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/jazzy/mrpt_libmath/2.14.9-1.tar.gz";
+    name = "2.14.9-1.tar.gz";
+    sha256 = "7819d0c4c943a52a8fe7efbd2b80a49bc5075f1862750ab582db87161d4dc4d1";
   };
 
   buildType = "cmake";

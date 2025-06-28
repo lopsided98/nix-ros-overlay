@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, joint-state-publisher, joint-state-publisher-gui, moveit-configs-utils, moveit-kinematics, moveit-planners, moveit-ros-move-group, moveit-ros-visualization, moveit-setup-assistant, moveit-simple-controller-manager, robot-state-publisher, rviz-common, rviz-default-plugins, rviz2, tf2-ros, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-ffw-moveit-config";
-  version = "1.0.5-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_moveit_config/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "16e83c187632d0cb69a597e7dc2c3d26d78aa165ae860a00dcee997ec058015e";
+    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_moveit_config/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "e13e061b4c519a54f87b6c87a69895c22d3a3a79ffd56ab2037d3ee75cb59038";
   };
 
   buildType = "ament_cmake";

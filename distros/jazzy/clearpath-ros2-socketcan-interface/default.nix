@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, can-msgs, iproute2, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-ros2-socketcan-interface";
-  version = "2.1.1-r2";
+  version = "2.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_ros2_socketcan_interface-release/archive/release/jazzy/clearpath_ros2_socketcan_interface/2.1.1-2.tar.gz";
-    name = "2.1.1-2.tar.gz";
-    sha256 = "54f19c1ee7c6d9bc1b7f5525873a4b27b225e4026f06131f3b7e3dd490de351b";
+    url = "https://github.com/clearpath-gbp/clearpath_ros2_socketcan_interface-release/archive/release/jazzy/clearpath_ros2_socketcan_interface/2.1.4-1.tar.gz";
+    name = "2.1.4-1.tar.gz";
+    sha256 = "e270a83bbc911d848d88e615074d1bff9888383f21399ac4efa3543c14a1ff56";
   };
 
   buildType = "ament_cmake";

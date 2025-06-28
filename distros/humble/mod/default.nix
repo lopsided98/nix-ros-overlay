@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, eigen, ompl }:
 buildRosPackage {
   pname = "ros-humble-mod";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/OrebroUniversity/mod-release/archive/release/humble/mod/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "c9fabc4d5a7674c40135735f1a1dc1110d7aea83e59a84250708c082fc6d3049";
+    url = "https://github.com/OrebroUniversity/mod-release/archive/release/humble/mod/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "c13928fc2e87fa8964d7daa30c172ff5915051ef999ad90cf55d94dbea97d666";
   };
 
   buildType = "ament_cmake";

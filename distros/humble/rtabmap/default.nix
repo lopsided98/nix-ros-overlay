@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, cv-bridge, gtsam, libg2o, libpointmatcher, octomap, pcl, proj, qt-gui-cpp, sqlite, zlib }:
 buildRosPackage {
   pname = "ros-humble-rtabmap";
-  version = "0.21.10-r1";
+  version = "0.22.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rtabmap-release/archive/release/humble/rtabmap/0.21.10-1.tar.gz";
-    name = "0.21.10-1.tar.gz";
-    sha256 = "3fe0083e502f6f644235c2b0b993ad4eb71762756ed3a00aaf4f8b23203c49a9";
+    url = "https://github.com/ros2-gbp/rtabmap-release/archive/release/humble/rtabmap/0.22.0-1.tar.gz";
+    name = "0.22.0-1.tar.gz";
+    sha256 = "4a3f9878e805eadfe3687a790b9e930d13635df285cbd3667ead26bc5311ca78";
   };
 
   buildType = "cmake";

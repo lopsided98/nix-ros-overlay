@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-swri-console-util";
-  version = "3.7.4-r1";
+  version = "3.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_console_util/3.7.4-1.tar.gz";
-    name = "3.7.4-1.tar.gz";
-    sha256 = "5e826ddcaf7a0de51883dc5d8650f9449efdea15b339ea3a3a0dc5824b785e14";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_console_util/3.8.4-1.tar.gz";
+    name = "3.8.4-1.tar.gz";
+    sha256 = "c94b405885294d969355ca423903c658002ffd72e6e0b7c5040408b1187a8c54";
   };
 
   buildType = "ament_cmake";

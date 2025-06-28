@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-cam-msgs, etsi-its-cpm-ts-msgs, etsi-its-denm-msgs, etsi-its-mapem-ts-msgs, etsi-its-msgs-utils, etsi-its-spatem-ts-msgs, pluginlib, python3Packages, qt5, rclcpp, ros-environment, rviz-common, rviz-default-plugins, rviz-ogre-vendor, rviz-rendering, rviz-satellite, rviz2, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-rviz-plugins";
-  version = "3.2.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_rviz_plugins/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "4b57e8a02d72402681139f9b42c2437cb75b4e2e2949acf8ae3ffab097a99c05";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_rviz_plugins/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "17b43fd7cecc8f778e3a83eab9e93131f1a8fb0584aa6ab2d01f393f162264be";
   };
 
   buildType = "ament_cmake";

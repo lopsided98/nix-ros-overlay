@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, boost, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-utils-uuid";
-  version = "1.4.1-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/jazzy/autoware_utils_uuid/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "78824dfb123cdff93f4fad763d9195d3a1f4390e85508decf91a976622979610";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/jazzy/autoware_utils_uuid/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "b97298b7c0c1b9cf87315891bfa1074fa8cb58da303b3fe1c507fab05c4dc362";
   };
 
   buildType = "ament_cmake";

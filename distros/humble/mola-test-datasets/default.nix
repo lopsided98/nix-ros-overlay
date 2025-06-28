@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-mola-test-datasets";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_test_datasets-release/archive/release/humble/mola_test_datasets/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "10ccc02182a092d2ff7a1797f0d4570acf62dc42171896ecd3c1f6be3588479b";
+    url = "https://github.com/ros2-gbp/mola_test_datasets-release/archive/release/humble/mola_test_datasets/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "7fd5e7cbf0c575cea8de99b65f21fcc65422d1ce0b7d0c0cdbefd7c7415e5389";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Small SLAM dataset extracts used for demos or unit tests in the rest of MOLA packages";
-    license = with lib.licenses; [ bsdOriginal bsdOriginal "CC-BY-NC-SA-3.0" "CC-BY-3.0" "CC-BY-3.0" cc-by-nc-sa-40 ];
+    license = with lib.licenses; [ bsd3 bsd3 "CC-BY-NC-SA-3.0" "CC-BY-3.0" "CC-BY-3.0" cc-by-nc-sa-40 ];
   };
 }

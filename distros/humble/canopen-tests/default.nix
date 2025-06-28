@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, canopen-402-driver, canopen-core, canopen-fake-slaves, canopen-proxy-driver, canopen-ros2-controllers, controller-manager, forward-command-controller, joint-state-broadcaster, joint-trajectory-controller, lely-core-libraries, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-humble-canopen-tests";
-  version = "0.2.11-r2";
+  version = "0.2.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/humble/canopen_tests/0.2.11-2.tar.gz";
-    name = "0.2.11-2.tar.gz";
-    sha256 = "30a3e81760857467905ceaff7f46ed0fe0d07d0d377f4e1d12369835665a2f6c";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/humble/canopen_tests/0.2.13-1.tar.gz";
+    name = "0.2.13-1.tar.gz";
+    sha256 = "e2f43459322a260bf7fbd9e4491f919d701a97d53baf67c7e36f35544e5304bd";
   };
 
   buildType = "ament_cmake";
