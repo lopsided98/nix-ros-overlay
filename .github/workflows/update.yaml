@@ -18,6 +18,15 @@ jobs:
       - name: Install Superflore
         run: |
           nix build .#update-overlay
+      - name: Restore ROS tarball cache
+        uses: actions/cache/restore@v4
+        with:
+          # Use run_id to update the cache:
+          # https://github.com/actions/cache/blob/main/tips-and-workarounds.md#update-a-cache
+          key: tars-${{ github.run_id }}
+          restore-keys: tars
+          path: |
+            ~/.ros/tar
       - name: Update overlay
         env:
           GITHUB_RUNNER_TEMP: ${{ runner.temp }}
@@ -30,6 +39,14 @@ jobs:
               echo "password=${SUPERFLORE_GITHUB_TOKEN}"
             }; f'
           nix run .#update-overlay
+      - name: Remove untouched files from the cache
+        run: "find ~/.ros/tar -atime +1 | tee >(xargs -r ls -lh >&2) | xargs -r rm"
+      - name: Save ROS tarball cache
+        uses: actions/cache/save@v4
+        with:
+          key: tars-${{ github.run_id }}
+          path: |
+            ~/.ros/tar
       - name: Update ament_vendor info
         continue-on-error: true
         run: |
