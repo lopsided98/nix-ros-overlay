@@ -2,21 +2,21 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cv-bridge, eigen, geos, pkg-config, rclcpp, tf2 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, eigen, geos, opencv, pkg-config, tf2 }:
 buildRosPackage {
   pname = "ros-jazzy-swri-geometry-util";
-  version = "3.7.4-r1";
+  version = "3.8.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_geometry_util/3.7.4-1.tar.gz";
-    name = "3.7.4-1.tar.gz";
-    sha256 = "360eac381b0ab601346b2016a7e060bdd79411e52fa4dcc17548e9a16b88bf7e";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_geometry_util/3.8.5-1.tar.gz";
+    name = "3.8.5-1.tar.gz";
+    sha256 = "b26eb9d6e68f116e916a3f59c7331140652b77d23c2d52ef04c6eb5d78c9680f";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pkg-config ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ cv-bridge eigen geos rclcpp tf2 ];
+  propagatedBuildInputs = [ eigen geos opencv opencv.cxxdev tf2 ];
   nativeBuildInputs = [ ament-cmake pkg-config ];
 
   meta = {

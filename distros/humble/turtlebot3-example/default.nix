@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, nav-msgs, rclpy, sensor-msgs, tf-transformations, turtlebot3-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-turtlebot3-example";
-  version = "2.2.9-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/humble/turtlebot3_example/2.2.9-1.tar.gz";
-    name = "2.2.9-1.tar.gz";
-    sha256 = "401905d7d604f3f68035e7c47e2ed0c1cb52779e002a349523dc75dc07ea396f";
+    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/humble/turtlebot3_example/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "1f553c758aa8dfb897e2c6c04b8bb121523483f4218fc509fecf04207d5b8362";
   };
 
   buildType = "ament_python";

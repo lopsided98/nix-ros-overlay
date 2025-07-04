@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-clang-format, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-xmllint, camera-info-manager, event-camera-msgs, image-transport, libcaer-vendor, rclcpp, rclcpp-components, ros-environment, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-libcaer-driver";
-  version = "1.5.0-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libcaer_driver-release/archive/release/rolling/libcaer_driver/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "521738c5ceaf0a9799f5949e85513a2c8261c7741559dcc2c7d40de1cd38cecb";
+    url = "https://github.com/ros2-gbp/libcaer_driver-release/archive/release/rolling/libcaer_driver/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "c3f3b2475b60f1b96738a30f1ff4e425b9725779fd7efd2855b16acd25f7bdd8";
   };
 
   buildType = "ament_cmake";

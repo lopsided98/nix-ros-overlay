@@ -2,19 +2,19 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, geometry-msgs, hardware-interface, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, fmt, geometry-msgs, hardware-interface, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-controller-interface";
-  version = "4.29.0-r1";
+  version = "4.33.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/controller_interface/4.29.0-1.tar.gz";
-    name = "4.29.0-1.tar.gz";
-    sha256 = "adf2586f545db17d3c39709fd924ce3992f73747011ee2ea0b416f28b53a054d";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/controller_interface/4.33.0-1.tar.gz";
+    name = "4.33.0-1.tar.gz";
+    sha256 = "314ca387569c528c00bab2bb70b7797795605ea16daf42300071147ee1ef88f3";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-gen-version-h ros2-control-cmake sensor-msgs ];
+  buildInputs = [ ament-cmake ament-cmake-gen-version-h fmt ros2-control-cmake sensor-msgs ];
   checkInputs = [ ament-cmake-gmock geometry-msgs ];
   propagatedBuildInputs = [ hardware-interface rclcpp-lifecycle realtime-tools ];
   nativeBuildInputs = [ ament-cmake ament-cmake-gen-version-h ];

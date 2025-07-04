@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, nav2-msgs, nav2-simple-commander, portaudio, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, tf-transformations, vision-msgs }:
 buildRosPackage {
   pname = "ros-humble-rai-interfaces";
-  version = "0.2.2-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rai_interfaces-release/archive/release/humble/rai_interfaces/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "68578c8626142a6b62b298f3cb29490daa8c8d4f32cbfff14f65f1f6da414446";
+    url = "https://github.com/ros2-gbp/rai_interfaces-release/archive/release/humble/rai_interfaces/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "cd0ea8becbab019c849d8a4b54deae10acd2a4e9b24903733bf7763753a06c17";
   };
 
   buildType = "ament_cmake";

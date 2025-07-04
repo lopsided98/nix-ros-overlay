@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, image-transport, rclcpp, rclcpp-lifecycle, sensor-msgs, std-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-fkie-message-filters";
-  version = "3.2.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fkie_message_filters-release/archive/release/jazzy/fkie_message_filters/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "cc5eba46e4b04c2c6f95d8f684862ee02a432f2ac28efd941ab48abf77445c86";
+    url = "https://github.com/ros2-gbp/fkie_message_filters-release/archive/release/jazzy/fkie_message_filters/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "7f076185ad91d8aa97313d10c796ae4a020c1bf44cd9c6a45538c8beb699a8c3";
   };
 
   buildType = "ament_cmake";
