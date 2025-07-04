@@ -221,19 +221,6 @@ in {
     ];
   });
 
-  urdfdom-headers = rosSuper.urdfdom-headers.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Fix CMake relative install dir assumptions
-      # https://github.com/ros/urdfdom_headers/pull/66
-      (self.fetchpatch {
-        url = "https://github.com/ros/urdfdom_headers/commit/6e0cea148c3a7123f8367cd48d5709a4490c32f1.patch";
-        hash = "sha256-LC2TACGma/k6+WE9fTkzY98SgJYKsVuj5O9v84Q5mQ4=";
-      })
-    ];
-  });
-
   zenoh-cpp-vendor = (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor { }).overrideAttrs({
     nativeBuildInputs ? [], postPatch ? "", ...
   }: let
