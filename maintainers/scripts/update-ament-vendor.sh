@@ -51,3 +51,10 @@ then
     rush -j1 --verbose --continue --succ-cmd-file $ok_cmds -- \
          bash -c '$(nix-build -A rosPackages.{}.updateAmentVendor) 2>&1' <<<"$update_order"
 fi
+
+echo
+echo "Attempted updates ($(wc -l <<<"$update_order")):"
+echo "$update_order"
+echo
+echo "Successful updates ($(wc -l <"$ok_cmds")):"
+cat "$ok_cmds"
