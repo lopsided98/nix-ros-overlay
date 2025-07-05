@@ -36,6 +36,9 @@ let
       hash = "sha256-vt3cD/+0rGpkoMCLHbbvV3dtlHjCaDl3e19lNQRdJ5c=";
     };
 
+    pyproject = true;
+    build-system = [ setuptools ];
+
     propagatedBuildInputs = [
       distlib
       empy_3

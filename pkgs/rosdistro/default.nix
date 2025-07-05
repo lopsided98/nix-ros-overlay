@@ -9,6 +9,9 @@ buildPythonPackage rec {
     hash = "sha256-RwOCS1hwS8oZBhMuO9PUK6cq9zhh7QPVoZJUeKcr+ys=";
   };
 
+  pyproject = true;
+  build-system = [ setuptools ];
+
   propagatedBuildInputs = [ pyyaml setuptools catkin-pkg rospkg ];
 
   meta = with lib; {

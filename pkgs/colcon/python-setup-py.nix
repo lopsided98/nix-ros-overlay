@@ -9,6 +9,9 @@ buildPythonPackage rec {
     hash = "sha256-TYurLgW6M04p7uNxX73kkCgTQu2OAA4lITDlxRkVODo=";
   };
 
+  pyproject = true;
+  build-system = [ setuptools ];
+
   propagatedBuildInputs = [ colcon-core setuptools ];
 
   # Requires unpackaged dependencies

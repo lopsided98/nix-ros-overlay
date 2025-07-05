@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core }:
+{ lib, buildPythonPackage, fetchPypi, colcon-core, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-output";
@@ -8,6 +8,9 @@ buildPythonPackage rec {
     inherit pname version;
     hash = "sha256-RNLTSevbYWiLQeANVl6hoZno/Fwsd68nnPqsdNwBwE0=";
   };
+
+  pyproject = true;
+  build-system = [ setuptools ];
 
   propagatedBuildInputs = [ colcon-core ];
 

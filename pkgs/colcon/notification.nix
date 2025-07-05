@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, notify2 }:
+{ lib, buildPythonPackage, fetchPypi, colcon-core, notify2, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-notification";
@@ -8,6 +8,9 @@ buildPythonPackage rec {
     inherit pname version;
     hash = "sha256-xFuJgHOo6YxFGDM7dYf56kmsG8Epp7xOE5AFkFcDH7g=";
   };
+
+  pyproject = true;
+  build-system = [ setuptools ];
 
   propagatedBuildInputs = [ colcon-core notify2 ];
 
