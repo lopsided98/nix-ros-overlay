@@ -10,6 +10,9 @@ buildPythonPackage rec {
     hash = "sha256-BjVwOJRD8L5ESOKlZbiuAc/NQdAsvDoU8INr1FiMBjo=";
   };
 
+  pyproject = true;
+  build-system = [ setuptools ];
+
   propagatedBuildInputs = [ setuptools osrf-pycommon pyyaml catkin-pkg ];
 
   # No tests in PyPi tarball

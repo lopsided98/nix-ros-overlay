@@ -14,6 +14,9 @@ buildPythonPackage rec {
     hash = "sha256-it6cje1nkG4pjakn5Vvwhw0NGyc23xblmhXMEwUpTbg=";
   };
 
+  pyproject = true;
+  build-system = [ setuptools ];
+
   propagatedBuildInputs = [
     xmltodict
     termcolor

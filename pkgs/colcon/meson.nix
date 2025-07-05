@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, colcon-library-path, meson }:
+{ lib, buildPythonPackage, fetchPypi, colcon-core, colcon-library-path, meson, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-meson";
@@ -9,6 +9,9 @@ buildPythonPackage rec {
     pname = "colcon_meson"; # https://github.com/colcon/colcon-meson/issues/19
     hash = "sha256-MgrMpSth0R+9AdUVoQr8y1unciIClvBn42FhEAitrX8=";
   };
+
+  pyproject = true;
+  build-system = [ setuptools ];
 
   propagatedBuildInputs = [
     colcon-core

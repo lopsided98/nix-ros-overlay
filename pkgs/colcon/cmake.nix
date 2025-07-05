@@ -1,5 +1,5 @@
 { lib, buildPythonPackage, fetchPypi, colcon-core, colcon-library-path
-, colcon-test-result, cmake }:
+, colcon-test-result, cmake, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-cmake";
@@ -9,6 +9,9 @@ buildPythonPackage rec {
     inherit pname version;
     hash = "sha256-8cChTiUw07c4+NBlnCfVnioKA9/vYB5hNpu1CD6/H2k=";
   };
+
+  pyproject = true;
+  build-system = [ setuptools ];
 
   postPatch = ''
     substituteInPlace colcon_cmake/task/cmake/__init__.py \

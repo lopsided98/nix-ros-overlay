@@ -1,5 +1,5 @@
 { lib, buildPythonPackage, fetchPypi, colcon-core, colcon-library-path
-, colcon-cargo, colcon-ros }:
+, colcon-cargo, colcon-ros, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-ros-cargo";
@@ -10,6 +10,9 @@ buildPythonPackage rec {
     inherit version;
     hash = "sha256-70taCMJRPSq2CPvO5aqudsc8RN0l194vLbT1UZWXfU8=";
   };
+
+  pyproject = true;
+  build-system = [ setuptools ];
 
   propagatedBuildInputs = [
     colcon-core
