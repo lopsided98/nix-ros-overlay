@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, backward-ros, builtin-interfaces, control-msgs, controller-interface, generate-parameter-library, pluginlib, rclcpp-lifecycle, rcutils, realtime-tools, sensor-msgs, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-rolling-om-joint-trajectory-command-broadcaster";
-  version = "3.2.2-r1";
+  version = "4.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/rolling/om_joint_trajectory_command_broadcaster/3.2.2-1.tar.gz";
-    name = "3.2.2-1.tar.gz";
-    sha256 = "25f8dd30c20d1308cb6248c8e0c5b5ad05535cb58be138c7813e6108815d10d0";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/rolling/om_joint_trajectory_command_broadcaster/4.0.5-1.tar.gz";
+    name = "4.0.5-1.tar.gz";
+    sha256 = "1bcc7e4d546170eb9c641176dbe76fe6e3f8d2ca2302d3a039347941e85715df";
   };
 
   buildType = "ament_cmake";

@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, angles, backward-ros, control-msgs, control-toolbox, controller-interface, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, rsl, tl-expected, urdf }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, angles, backward-ros, control-msgs, control-toolbox, controller-interface, generate-parameter-library, hardware-interface, kdl-parser, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, rsl, tl-expected, urdf }:
 buildRosPackage {
   pname = "ros-jazzy-om-gravity-compensation-controller";
-  version = "3.2.2-r1";
+  version = "4.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/om_gravity_compensation_controller/3.2.2-1.tar.gz";
-    name = "3.2.2-1.tar.gz";
-    sha256 = "605622cc77b300f75b08b7655ca328362867afa33393fa25bd823b8698f70128";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/om_gravity_compensation_controller/4.0.5-1.tar.gz";
+    name = "4.0.5-1.tar.gz";
+    sha256 = "5ff4030cd1b2aa5f329b8b94c0505b67f3234f8a1e1e52fbb8d4d225eb244135";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ angles backward-ros control-msgs control-toolbox controller-interface generate-parameter-library hardware-interface pluginlib rclcpp rclcpp-lifecycle realtime-tools rsl tl-expected urdf ];
+  propagatedBuildInputs = [ angles backward-ros control-msgs control-toolbox controller-interface generate-parameter-library hardware-interface kdl-parser pluginlib rclcpp rclcpp-lifecycle realtime-tools rsl tl-expected urdf ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

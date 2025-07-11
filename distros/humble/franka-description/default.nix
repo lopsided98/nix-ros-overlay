@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, joint-state-publisher-gui, rviz2, xacro }:
 buildRosPackage {
   pname = "ros-humble-franka-description";
-  version = "0.4.0-r3";
+  version = "1.0.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/franka_description-release/archive/release/humble/franka_description/0.4.0-3.tar.gz";
-    name = "0.4.0-3.tar.gz";
-    sha256 = "8de46cf1a1a4fb0c70270d142d989ccbb80aa5e71c021ee0e75cbc7265a525bd";
+    url = "https://github.com/ros2-gbp/franka_description-release/archive/release/humble/franka_description/1.0.1-3.tar.gz";
+    name = "1.0.1-3.tar.gz";
+    sha256 = "8ef4531475037151be5470e510ed751bcbcd3f1ed24bffd843919dffaef86e53";
   };
 
   buildType = "ament_cmake";

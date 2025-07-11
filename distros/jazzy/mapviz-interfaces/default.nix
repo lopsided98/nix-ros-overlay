@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, builtin-interfaces, marti-common-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-mapviz-interfaces";
-  version = "2.4.6-r1";
+  version = "2.5.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/jazzy/mapviz_interfaces/2.4.6-1.tar.gz";
-    name = "2.4.6-1.tar.gz";
-    sha256 = "0311490aace8992354bcaf9577184fc6c9e25578f2806d779bdf4b1cd0200658";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/jazzy/mapviz_interfaces/2.5.7-1.tar.gz";
+    name = "2.5.7-1.tar.gz";
+    sha256 = "78984d3b83ed85a35aa4671f50470e3d70eefd5ce8d54c3a5df5d64f0c8e9734";
   };
 
   buildType = "ament_cmake";

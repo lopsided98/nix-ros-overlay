@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ds-dbw-can, ds-dbw-msgs, joy, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ds-dbw-joystick-demo";
-  version = "2.3.3-r1";
+  version = "2.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/jazzy/ds_dbw_joystick_demo/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "2ecb5fa105e1732d3fa2023993b800179459bc10ebd4b8f7cd929448f5ca24d4";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/jazzy/ds_dbw_joystick_demo/2.3.5-1.tar.gz";
+    name = "2.3.5-1.tar.gz";
+    sha256 = "493dcde712a44ae166a0c304692b17343cff02c4e17b1653e445cdbcf91af0fd";
   };
 
   buildType = "ament_cmake";

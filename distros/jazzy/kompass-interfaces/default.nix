@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, geometry-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-kompass-interfaces";
-  version = "0.2.1-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kompass-release/archive/release/jazzy/kompass_interfaces/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "af47c98911e964ef0ac67e1335de80d58292d5f68360b6c334b9b8eebb5bc4b9";
+    url = "https://github.com/ros2-gbp/kompass-release/archive/release/jazzy/kompass_interfaces/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "ab31a9ce36240bbbe852e0777051d545d7b33c40464de5d8f6ffe47dfe1ae63b";
   };
 
   buildType = "ament_cmake";

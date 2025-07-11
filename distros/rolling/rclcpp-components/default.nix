@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-google-benchmark, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, class-loader, composition-interfaces, launch-testing, rclcpp, rcpputils, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rclcpp-components";
-  version = "29.6.0-r1";
+  version = "30.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/rolling/rclcpp_components/29.6.0-1.tar.gz";
-    name = "29.6.0-1.tar.gz";
-    sha256 = "2b622ce92f8d85cd7b9b7a3a50c79d818283b7a69b948211e6362011fa402ba2";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/rolling/rclcpp_components/30.0.0-1.tar.gz";
+    name = "30.0.0-1.tar.gz";
+    sha256 = "08e61b7b98c56bb4c7161a47e2db63fbdf9c326aa17c6df060dc2cdf19f6598e";
   };
 
   buildType = "ament_cmake";

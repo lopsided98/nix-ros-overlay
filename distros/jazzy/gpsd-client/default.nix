@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gps-msgs, gpsd, pkg-config, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-gpsd-client";
-  version = "2.0.4-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/jazzy/gpsd_client/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "feed613ec35a496e494ea4ba6ecd77950ad8fc7768833107c0deabf201ef7a22";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/jazzy/gpsd_client/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "2efa6bb89ecc66905bdd686de2d5126533bfd69644fa0af85309b0928e9e4b7d";
   };
 
   buildType = "ament_cmake";

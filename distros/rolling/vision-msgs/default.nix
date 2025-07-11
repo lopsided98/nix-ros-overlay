@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-vision-msgs";
-  version = "4.1.1-r2";
+  version = "4.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_msgs-release/archive/release/rolling/vision_msgs/4.1.1-2.tar.gz";
-    name = "4.1.1-2.tar.gz";
-    sha256 = "e2e122d0d326cbb19fd8f5d6399a4a1c10de52dd4d6c20567d174b38f9e63a24";
+    url = "https://github.com/ros2-gbp/vision_msgs-release/archive/release/rolling/vision_msgs/4.2.0-1.tar.gz";
+    name = "4.2.0-1.tar.gz";
+    sha256 = "844fd71bcaa9819e775c81306af334a5bf2fb023d1a587812dc4e487966e534e";
   };
 
   buildType = "ament_cmake";

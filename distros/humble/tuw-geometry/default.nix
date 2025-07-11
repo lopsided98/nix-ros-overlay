@@ -2,21 +2,21 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-gtest, ament-lint-auto, ament-lint-common, opencv, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, gtest-vendor, opencv, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-tuw-geometry";
-  version = "0.1.2-r1";
+  version = "0.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tuw_geometry-release/archive/release/humble/tuw_geometry/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "98c7e1a26ad5ebfdb588476944287e4ada6d34cf74c2e72aeedf554a466e4d17";
+    url = "https://github.com/ros2-gbp/tuw_geometry-release/archive/release/humble/tuw_geometry/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
+    sha256 = "91f0ed0578245f2cee8f1b3c22f79e6a907674c0d62aace474449526130c6172";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-cppcheck ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ opencv opencv.cxxdev rclcpp rclcpp-components sensor-msgs std-msgs ];
+  propagatedBuildInputs = [ ament-cmake-ros gtest-vendor opencv opencv.cxxdev rclcpp rclcpp-components sensor-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

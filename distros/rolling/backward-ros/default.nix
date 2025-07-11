@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, elfutils }:
 buildRosPackage {
   pname = "ros-rolling-backward-ros";
-  version = "1.0.7-r1";
+  version = "1.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/backward_ros-release/archive/release/rolling/backward_ros/1.0.7-1.tar.gz";
-    name = "1.0.7-1.tar.gz";
-    sha256 = "d64c9498c379032ab0cebb46a894e523ad776448c16fe1168a99e1c6b4c165a9";
+    url = "https://github.com/ros2-gbp/backward_ros-release/archive/release/rolling/backward_ros/1.0.8-1.tar.gz";
+    name = "1.0.8-1.tar.gz";
+    sha256 = "056ea93cb30d28cf86391cc86897248c7efb363e3a4059643cfabb8dc07a8161";
   };
 
   buildType = "cmake";

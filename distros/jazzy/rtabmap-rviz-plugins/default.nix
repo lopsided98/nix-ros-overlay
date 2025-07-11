@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, pcl-conversions, pluginlib, rclcpp, rtabmap-conversions, rtabmap-msgs, rviz-common, rviz-default-plugins, rviz-rendering, sensor-msgs, std-msgs, tf2 }:
 buildRosPackage {
   pname = "ros-jazzy-rtabmap-rviz-plugins";
-  version = "0.21.10-r1";
+  version = "0.22.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/jazzy/rtabmap_rviz_plugins/0.21.10-1.tar.gz";
-    name = "0.21.10-1.tar.gz";
-    sha256 = "f5ee367cd00d0e7740ded609d95d7adebad10ebf348c7f103bb5d0b751542cc3";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/jazzy/rtabmap_rviz_plugins/0.22.0-1.tar.gz";
+    name = "0.22.0-1.tar.gz";
+    sha256 = "e7509469bbb54a2a1bf0d468be3314698e1557bf7591ff25b74c9c85ecf3ccea";
   };
 
   buildType = "ament_cmake";

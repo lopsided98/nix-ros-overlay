@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, nav-msgs, rclpy, sensor-msgs, tf-transformations, turtlebot3-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-turtlebot3-example";
-  version = "2.2.9-r1";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/jazzy/turtlebot3_example/2.2.9-1.tar.gz";
-    name = "2.2.9-1.tar.gz";
-    sha256 = "dc45274cc01dd4d9179647ae4893681021e3e9184c230813a48e433e8144d746";
+    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/jazzy/turtlebot3_example/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "0fca17b0a94f760a545f4f2c2eda7a3fa8f9e62e78b21964a58e20ec50c116f7";
   };
 
   buildType = "ament_python";
