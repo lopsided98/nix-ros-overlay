@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, dwb-core, nav-2d-msgs, nav-2d-utils, nav2-common, nav2-util, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-dwb-plugins";
-  version = "1.3.6-r1";
+  version = "1.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/dwb_plugins/1.3.6-1.tar.gz";
-    name = "1.3.6-1.tar.gz";
-    sha256 = "f58fd13b904a98ac6c74f34b3c95f2239d9f81b5f16b9a24976a89f977fb9c2b";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/dwb_plugins/1.3.7-1.tar.gz";
+    name = "1.3.7-1.tar.gz";
+    sha256 = "7f41db28bc7ed64a1ea2f20ba767478cead1ac232494dc3899c5271a9c07251c";
   };
 
   buildType = "ament_cmake";

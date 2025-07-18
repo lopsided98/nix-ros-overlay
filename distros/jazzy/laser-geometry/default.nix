@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-pytest, ament-cmake-uncrustify, eigen, eigen3-cmake-module, python-cmake-module, python3Packages, rclcpp, rclpy, sensor-msgs, sensor-msgs-py, tf2 }:
 buildRosPackage {
   pname = "ros-jazzy-laser-geometry";
-  version = "2.7.0-r3";
+  version = "2.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/laser_geometry-release/archive/release/jazzy/laser_geometry/2.7.0-3.tar.gz";
-    name = "2.7.0-3.tar.gz";
-    sha256 = "f86914480eeb5b49cd9f483c838cdf9572dad8d72d00c58585d385ac41d9d40f";
+    url = "https://github.com/ros2-gbp/laser_geometry-release/archive/release/jazzy/laser_geometry/2.7.1-1.tar.gz";
+    name = "2.7.1-1.tar.gz";
+    sha256 = "d28ea63bd3036fef5bc13e4898beaa00ebcb1d16010aa7af9a93c621cf9f8f0e";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, camera-calibration-parsers, rclcpp, rcpputils, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-camera-info-manager";
-  version = "3.1.11-r1";
+  version = "3.1.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/humble/camera_info_manager/3.1.11-1.tar.gz";
-    name = "3.1.11-1.tar.gz";
-    sha256 = "6f1d07a6e5d6fc6d1dd596430b9474f5eb23aa46ee3e461dac6a595f533c70b5";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/humble/camera_info_manager/3.1.12-1.tar.gz";
+    name = "3.1.12-1.tar.gz";
+    sha256 = "25e203b90f0b9b23a189efca504d7248b22ec6db6d98265879d6783f30d7aa05";
   };
 
   buildType = "ament_cmake";

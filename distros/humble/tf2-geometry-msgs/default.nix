@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, geometry-msgs, orocos-kdl-vendor, python-cmake-module, python3Packages, rclcpp, tf2, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-humble-tf2-geometry-msgs";
-  version = "0.25.12-r1";
+  version = "0.25.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2_geometry_msgs/0.25.12-1.tar.gz";
-    name = "0.25.12-1.tar.gz";
-    sha256 = "9ca9cb35bb159b20ef6a9844b2c519a9f27801b3e2df0f67979b92e6d352325e";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2_geometry_msgs/0.25.15-1.tar.gz";
+    name = "0.25.15-1.tar.gz";
+    sha256 = "b50cb63d1325ce24bd85ed47dd38f33ea2feee0014afc252e534bbf809e06328";
   };
 
   buildType = "ament_cmake";

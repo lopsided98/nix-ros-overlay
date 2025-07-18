@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, image-transport, libogg, libtheora, opencv, pkg-config, pluginlib, rclcpp, rcutils, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-theora-image-transport";
-  version = "5.0.2-r1";
+  version = "6.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/rolling/theora_image_transport/5.0.2-1.tar.gz";
-    name = "5.0.2-1.tar.gz";
-    sha256 = "6c2964ad343281b691f74002f23df592bef704828aa92db36d617cdd5264c7d4";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/rolling/theora_image_transport/6.0.0-1.tar.gz";
+    name = "6.0.0-1.tar.gz";
+    sha256 = "ffd284b5a39849bd9f95bfd63e0abde0e5fc34b02166eefe6979e218311935e3";
   };
 
   buildType = "ament_cmake";
