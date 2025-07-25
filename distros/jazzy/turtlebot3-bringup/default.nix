@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, hls-lfcd-lds-driver, robot-state-publisher, rviz2, turtlebot3-description, turtlebot3-node }:
 buildRosPackage {
   pname = "ros-jazzy-turtlebot3-bringup";
-  version = "2.2.9-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/jazzy/turtlebot3_bringup/2.2.9-1.tar.gz";
-    name = "2.2.9-1.tar.gz";
-    sha256 = "0eae6e192edafd69b755309cd4f2541fe84c9e34884c364657817e2504191a4c";
+    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/jazzy/turtlebot3_bringup/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "1d4cdbd0719362d75197edef49b3cc0261dc803fa4ee196db3d22c71c62372e0";
   };
 
   buildType = "ament_cmake";

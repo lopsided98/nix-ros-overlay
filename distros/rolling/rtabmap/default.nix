@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, cv-bridge, gtsam, libg2o, libpointmatcher, octomap, pcl, proj, qt5, sqlite, tbb_2021_11, zlib }:
 buildRosPackage {
   pname = "ros-rolling-rtabmap";
-  version = "0.21.6-r1";
+  version = "0.22.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rtabmap-release/archive/release/rolling/rtabmap/0.21.6-1.tar.gz";
-    name = "0.21.6-1.tar.gz";
-    sha256 = "7d4235ad514155abade51d8db1a48db0a60ed61fc79f38a42200ae2f2f759739";
+    url = "https://github.com/ros2-gbp/rtabmap-release/archive/release/rolling/rtabmap/0.22.1-1.tar.gz";
+    name = "0.22.1-1.tar.gz";
+    sha256 = "7359d2768f9ec8a1e891edfee153aba15769443bb0debd17bde40ad84317096d";
   };
 
   buildType = "cmake";

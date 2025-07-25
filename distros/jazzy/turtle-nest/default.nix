@@ -2,21 +2,21 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, qt5 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, python3, python3Packages, qt5, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-turtle-nest";
-  version = "1.0.2-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtle_nest-release/archive/release/jazzy/turtle_nest/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "441020e2abfaaa7ba7b07e624fe212d4b41cbe007f043fbcb0898fcc22f0ae63";
+    url = "https://github.com/ros2-gbp/turtle_nest-release/archive/release/jazzy/turtle_nest/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "9acbf1549344f563cd67cc7fb3dfbb50855b5be41bb8749bfe38081fbde8c194";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
+  buildInputs = [ ament-cmake python3Packages.black ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ qt5.qtbase ];
+  propagatedBuildInputs = [ python3 python3Packages.pybind11 qt5.qtbase qt5.qtsvg tinyxml2-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

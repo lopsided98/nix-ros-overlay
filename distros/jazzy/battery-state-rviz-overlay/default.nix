@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, fmt, rclcpp, rviz-2d-overlay-msgs, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-battery-state-rviz-overlay";
-  version = "1.0.0-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_battery_monitoring-release/archive/release/jazzy/battery_state_rviz_overlay/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "e8823b85013cf4c686803e295214f925f8557774c34f47ee0966521e44e1a11b";
+    url = "https://github.com/ros2-gbp/ros_battery_monitoring-release/archive/release/jazzy/battery_state_rviz_overlay/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "1461324f57aecb947e684d46fc5ab95990dff4c7321c776b5d14bc0e5b79938b";
   };
 
   buildType = "ament_cmake";

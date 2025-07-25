@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-imu-preintegration, mola-kernel, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-humble-mola-state-estimation-simple";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/humble/mola_state_estimation_simple/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "c6b2c412bc23291b9b85cb849173cebf121d579207996eb35ea86bc586e288a3";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/humble/mola_state_estimation_simple/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "8ea046f2baa1049346c9bc2736a68cac40eb24038b87952ba6d6acf3a12d9222";
   };
 
   buildType = "cmake";

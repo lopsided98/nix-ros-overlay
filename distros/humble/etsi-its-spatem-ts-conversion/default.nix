@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-primitives-conversion, etsi-its-spatem-ts-coding, etsi-its-spatem-ts-msgs, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-spatem-ts-conversion";
-  version = "3.2.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_spatem_ts_conversion/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "278eb4efee2bed712c1e5976a9060aabb49d8044eb920adc62d5b6270f30fb79";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_spatem_ts_conversion/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "264981f05a03c34d8461c650acc9b7074d404ce0a618284ea9db563e11b4dd84";
   };
 
   buildType = "ament_cmake";

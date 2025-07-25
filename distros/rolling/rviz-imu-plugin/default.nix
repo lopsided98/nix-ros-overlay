@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, message-filters, pluginlib, qt5, rclcpp, rviz-common, rviz-ogre-vendor, rviz-rendering, sensor-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-rviz-imu-plugin";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/rolling/rviz_imu_plugin/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "4a4a9863283b2f25f7cc87492ae25c16cb0415fb736107c0d4738642a927bd57";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/rolling/rviz_imu_plugin/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "0d638547d09394fee388b778201f913843a093872f85dfc1576b50e776734066";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, launch-testing, launch-testing-ros, python3Packages, rclpy, ros2cli, rosbag2-py, rosbag2-storage-default-plugins, rosbag2-test-common }:
 buildRosPackage {
   pname = "ros-jazzy-ros2bag";
-  version = "0.26.7-r1";
+  version = "0.26.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/ros2bag/0.26.7-1.tar.gz";
-    name = "0.26.7-1.tar.gz";
-    sha256 = "1cc2634d01158902896a981e7a61d77bfbca786d0227bf45b4e00d4b728aff13";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/ros2bag/0.26.8-1.tar.gz";
+    name = "0.26.8-1.tar.gz";
+    sha256 = "a7f6471b257d9900d067d6b919b2bf4c8989c3c777dbb8a4205501d89ba93762";
   };
 
   buildType = "ament_python";

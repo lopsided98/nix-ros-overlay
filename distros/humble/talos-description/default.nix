@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, launch, launch-pal, launch-param-builder, launch-ros, launch-testing-ament-cmake, talos-controller-configuration, talos-description-calibration, talos-description-inertial, urdf-test, xacro }:
 buildRosPackage {
   pname = "ros-humble-talos-description";
-  version = "2.0.2-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/talos_robot-release/archive/release/humble/talos_description/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "a025084fe0361eee29917fffcd8c83d9201244bcb1ebe8499d4fb88276b220d6";
+    url = "https://github.com/pal-gbp/talos_robot-release/archive/release/humble/talos_description/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "3278b50c99b73c3a263bdfd999c7fa448c4b7c04e1290cd4a33bc66fdac5d3db";
   };
 
   buildType = "ament_cmake";
