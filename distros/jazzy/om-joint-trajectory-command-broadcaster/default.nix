@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, backward-ros, builtin-interfaces, control-msgs, controller-interface, generate-parameter-library, pluginlib, rclcpp-lifecycle, rcutils, realtime-tools, sensor-msgs, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-jazzy-om-joint-trajectory-command-broadcaster";
-  version = "3.2.2-r1";
+  version = "4.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/om_joint_trajectory_command_broadcaster/3.2.2-1.tar.gz";
-    name = "3.2.2-1.tar.gz";
-    sha256 = "ca6fd4d12dc7ab13c8efdef6c37a8c262c2a48439145140564b33a296b90386b";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/om_joint_trajectory_command_broadcaster/4.0.6-1.tar.gz";
+    name = "4.0.6-1.tar.gz";
+    sha256 = "67b9b686a49a94e1c3d0da6c9ab47f90ca3a8b3eef0eea8f0558b5032ffed921";
   };
 
   buildType = "ament_cmake";

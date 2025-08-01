@@ -1,0 +1,26 @@
+
+# Copyright 2025 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
+buildRosPackage {
+  pname = "ros-kilted-simulation-interfaces";
+  version = "2.0.0-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/simulation_interfaces-release/archive/release/kilted/simulation_interfaces/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "44eedda1f5563a09796cad4357049bf20e2181a99aeb49f8ab850a592a36ab2a";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake rosidl-default-generators ];
+  checkInputs = [ ament-lint-common ];
+  propagatedBuildInputs = [ action-msgs builtin-interfaces geometry-msgs rosidl-default-runtime std-msgs ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
+
+  meta = {
+    description = "A package containing simulation interfaces including messages, services and actions";
+    license = with lib.licenses; [ asl20 ];
+  };
+}

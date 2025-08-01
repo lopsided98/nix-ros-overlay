@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, control-msgs, geometry-msgs, nav-msgs, rclcpp, sensor-msgs, turtlebot3-manipulation-bringup, turtlebot3-manipulation-description, turtlebot3-manipulation-moveit-config }:
 buildRosPackage {
   pname = "ros-humble-turtlebot3-manipulation-teleop";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_manipulation-release/archive/release/humble/turtlebot3_manipulation_teleop/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "7e149d96a1f007f9f4da901dcd7f1f7d328004fd434a6897eb6469d9ee54f242";
+    url = "https://github.com/ros2-gbp/turtlebot3_manipulation-release/archive/release/humble/turtlebot3_manipulation_teleop/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "f4b55d7e30e83cf0c33c4b594d04e6165ee547e21c3e9011b40808024fd7ed65";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, behaviortree-cpp, builtin-interfaces, geometry-msgs, lifecycle-msgs, nav-msgs, nav2-common, nav2-msgs, nav2-util, rclcpp, rclcpp-action, rclcpp-lifecycle, sensor-msgs, std-msgs, std-srvs, test-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-behavior-tree";
-  version = "1.3.6-r1";
+  version = "1.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_behavior_tree/1.3.6-1.tar.gz";
-    name = "1.3.6-1.tar.gz";
-    sha256 = "5c149319b1ed151e23d03a9edefc42ceaa29268635eb6685ac6e5b1c27b1c348";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_behavior_tree/1.3.7-1.tar.gz";
+    name = "1.3.7-1.tar.gz";
+    sha256 = "65336cd0e7dd6e7e72c9adecdcdd5128a427ac8f5866fb1181932164f88794a2";
   };
 
   buildType = "ament_cmake";

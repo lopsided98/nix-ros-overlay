@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros }:
 buildRosPackage {
   pname = "ros-jazzy-fuse-doc";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/jazzy/fuse_doc/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "a1beed588303295c5d0bc634af8dff0103813bbf2eb4c497b31463304e0384c6";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/jazzy/fuse_doc/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "d016343907e7d99b9c9085bd18a6d12183ddf7b608f2b4e2e05c89bacbe8f076";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, force-torque-sensor-broadcaster, imu-sensor-broadcaster, joint-state-broadcaster, joint-trajectory-controller, launch, launch-pal, ros2controlcli }:
 buildRosPackage {
   pname = "ros-humble-talos-controller-configuration";
-  version = "2.0.2-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/talos_robot-release/archive/release/humble/talos_controller_configuration/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "49b0cc14172b39fe094e2d35d2469ef7379c8ed8773f933c3077dabf58759eeb";
+    url = "https://github.com/pal-gbp/talos_robot-release/archive/release/humble/talos_controller_configuration/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "4706340d21628b0046680bb8b6f0eecb9b5b220c7fd627765c5eaa30d220a2cb";
   };
 
   buildType = "ament_cmake";

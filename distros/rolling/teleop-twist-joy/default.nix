@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, joy, launch-ros, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-teleop-twist-joy";
-  version = "2.6.3-r1";
+  version = "2.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_twist_joy-release/archive/release/rolling/teleop_twist_joy/2.6.3-1.tar.gz";
-    name = "2.6.3-1.tar.gz";
-    sha256 = "4027f80cfe69659faaf4cd2d0f71a69b894c58008b4eebf75a3975d37f5f512b";
+    url = "https://github.com/ros2-gbp/teleop_twist_joy-release/archive/release/rolling/teleop_twist_joy/2.6.5-1.tar.gz";
+    name = "2.6.5-1.tar.gz";
+    sha256 = "ed084f2171ef0cc667fffad21a21a573c6e46c08d715f3d1df1252dee671b826";
   };
 
   buildType = "ament_cmake";

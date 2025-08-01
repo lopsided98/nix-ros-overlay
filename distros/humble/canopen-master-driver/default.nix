@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, canopen-core, canopen-interfaces, lely-core-libraries, rclcpp, rclcpp-components, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-humble-canopen-master-driver";
-  version = "0.2.11-r2";
+  version = "0.2.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/humble/canopen_master_driver/0.2.11-2.tar.gz";
-    name = "0.2.11-2.tar.gz";
-    sha256 = "d2e89cebfc9da98d241f23f4f642b46a46baf4fa27b86f7bf4592bb41e80d200";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/humble/canopen_master_driver/0.2.13-1.tar.gz";
+    name = "0.2.13-1.tar.gz";
+    sha256 = "012a1094d374db987c264fb9288839e4624701d04e49a78f297135d8f4f12334";
   };
 
   buildType = "ament_cmake";

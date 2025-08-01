@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-actionlib-msgs";
-  version = "4.8.0-r1";
+  version = "4.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/actionlib_msgs/4.8.0-1.tar.gz";
-    name = "4.8.0-1.tar.gz";
-    sha256 = "605075c251f9aaa88c57acbccdb7d79b7f8a4503f0ed6dae487793d617ce9132";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/actionlib_msgs/4.9.0-1.tar.gz";
+    name = "4.9.0-1.tar.gz";
+    sha256 = "0519a76877187b7429488a118ab617ec198d1e0ab1f722e3e8842073bfc6b410";
   };
 
   buildType = "ament_cmake";

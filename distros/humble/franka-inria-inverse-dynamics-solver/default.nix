@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, franka-description, inverse-dynamics-solver, pluginlib }:
 buildRosPackage {
   pname = "ros-humble-franka-inria-inverse-dynamics-solver";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/inverse_dynamics_solver-release/archive/release/humble/franka_inria_inverse_dynamics_solver/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "ad5b99d5d91901203724c6bdee88e3645680440ddb530170944b72c732325355";
+    url = "https://github.com/ros2-gbp/inverse_dynamics_solver-release/archive/release/humble/franka_inria_inverse_dynamics_solver/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "bf1d8f02f6fdc197a998c16216a45f2c3365adb603d206ea12274c1152a16772";
   };
 
   buildType = "ament_cmake";

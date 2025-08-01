@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-humble-rosidl-typesupport-interface";
-  version = "3.1.6-r1";
+  version = "3.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/humble/rosidl_typesupport_interface/3.1.6-1.tar.gz";
-    name = "3.1.6-1.tar.gz";
-    sha256 = "e588b0540a54735ebe7e65bf7ca018f866f0a33851fc9d5fe7d8b6f3b406c762";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/humble/rosidl_typesupport_interface/3.1.7-1.tar.gz";
+    name = "3.1.7-1.tar.gz";
+    sha256 = "83bf19cb75fdc49859d5997ba838ec5c9b4caf3893ea07874ca5310824da757c";
   };
 
   buildType = "ament_cmake";

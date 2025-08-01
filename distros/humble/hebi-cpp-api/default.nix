@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen }:
 buildRosPackage {
   pname = "ros-humble-hebi-cpp-api";
-  version = "3.12.3-r1";
+  version = "3.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hebi_cpp_api-release/archive/release/humble/hebi_cpp_api/3.12.3-1.tar.gz";
-    name = "3.12.3-1.tar.gz";
-    sha256 = "635b0c0f451139a441d703766c48ac208fc54d666be62b344500042ef085742a";
+    url = "https://github.com/ros2-gbp/hebi_cpp_api-release/archive/release/humble/hebi_cpp_api/3.13.0-1.tar.gz";
+    name = "3.13.0-1.tar.gz";
+    sha256 = "fcc5ddd5fd76c50ebfe8c99122275d8ffad4eee6051f43b570cce104205ad9ba";
   };
 
   buildType = "ament_cmake";
