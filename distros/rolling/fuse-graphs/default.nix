@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ceres-solver, fuse-core, gbenchmark, gtest-vendor, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-fuse-graphs";
-  version = "1.2.2-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/rolling/fuse_graphs/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "a9700bb988ea16e48acf7ee0b7b992f211c28604bb3ea25e1836067c11e1e15f";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/rolling/fuse_graphs/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "037be98337eb8b02cde5a58d75c9113f098a1d6162cfc8ad3021e6c1880bd275";
   };
 
   buildType = "ament_cmake";

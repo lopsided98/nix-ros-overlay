@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-rolling-ros-environment";
-  version = "4.4.0-r1";
+  version = "4.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_environment-release/archive/release/rolling/ros_environment/4.4.0-1.tar.gz";
-    name = "4.4.0-1.tar.gz";
-    sha256 = "6dd935fb5f437cb43e287635f63771975a6d740077ed2085ef231f9aecfbfef0";
+    url = "https://github.com/ros2-gbp/ros_environment-release/archive/release/rolling/ros_environment/4.4.1-1.tar.gz";
+    name = "4.4.1-1.tar.gz";
+    sha256 = "15454a12d47222948bc1e6af15004455c4df5b9af2004f7385d91ea9f1f665b7";
   };
 
   buildType = "ament_cmake";

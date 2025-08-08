@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, phidgets-msgs, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-phidgets-digital-outputs";
-  version = "2.3.3-r2";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/jazzy/phidgets_digital_outputs/2.3.3-2.tar.gz";
-    name = "2.3.3-2.tar.gz";
-    sha256 = "e5915efb16d42679577214a853bf9ab72df2a21eeaddbc899fbeb62cb017a374";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/jazzy/phidgets_digital_outputs/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "d012c8d5094375222b375e4fcc653d5e707cc59ff0e7f9b90825a95069d0230c";
   };
 
   buildType = "ament_cmake";

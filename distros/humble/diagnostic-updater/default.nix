@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-lint-auto, ament-lint-common, diagnostic-msgs, launch, launch-testing, launch-testing-ros, python3Packages, rclcpp, rclcpp-lifecycle, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-diagnostic-updater";
-  version = "4.0.4-r1";
+  version = "4.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/humble/diagnostic_updater/4.0.4-1.tar.gz";
-    name = "4.0.4-1.tar.gz";
-    sha256 = "74936b305518d21b80a07ad9b6534af87c0351e37b0549792ea269066bb81a90";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/humble/diagnostic_updater/4.0.6-1.tar.gz";
+    name = "4.0.6-1.tar.gz";
+    sha256 = "20a81466492c221a8ca4e75bd786d049ff5ee3f395f221c517057cedacbf6358";
   };
 
   buildType = "ament_cmake";

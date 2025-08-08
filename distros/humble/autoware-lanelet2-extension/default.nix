@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, autoware-cmake, autoware-map-msgs, autoware-planning-msgs, geographiclib, geometry-msgs, lanelet2-core, lanelet2-io, lanelet2-maps, lanelet2-projection, lanelet2-routing, lanelet2-traffic-rules, lanelet2-validation, pugixml, range-v3, rclcpp, tf2, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-lanelet2-extension";
-  version = "0.7.2-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_lanelet2_extension-release/archive/release/humble/autoware_lanelet2_extension/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "620af3051fc59626024175983fd768bb18b62b3a52d5dfd4c2773a8564276c5f";
+    url = "https://github.com/ros2-gbp/autoware_lanelet2_extension-release/archive/release/humble/autoware_lanelet2_extension/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "d2f0b1d61890647050d5e2219258ecf06e2a7a51561a5f4fc5fdab2e69908861";
   };
 
   buildType = "ament_cmake";

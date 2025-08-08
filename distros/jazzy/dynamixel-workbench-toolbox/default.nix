@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, dynamixel-sdk, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, dynamixel-sdk }:
 buildRosPackage {
   pname = "ros-jazzy-dynamixel-workbench-toolbox";
-  version = "2.2.4-r1";
+  version = "2.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_workbench-release/archive/release/jazzy/dynamixel_workbench_toolbox/2.2.4-1.tar.gz";
-    name = "2.2.4-1.tar.gz";
-    sha256 = "3820a2e2386cec33422a783f03f779119cab8def599bf18097f69b8ed0eb4ac5";
+    url = "https://github.com/ros2-gbp/dynamixel_workbench-release/archive/release/jazzy/dynamixel_workbench_toolbox/2.2.5-1.tar.gz";
+    name = "2.2.5-1.tar.gz";
+    sha256 = "6c5915815d84827861937ef6573fc1913d7cbac7273a5c51005f874eb3553185";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ dynamixel-sdk rclcpp ];
+  propagatedBuildInputs = [ dynamixel-sdk ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

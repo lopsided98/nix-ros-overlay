@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-action-tutorials-interfaces";
-  version = "0.33.5-r1";
+  version = "0.33.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/action_tutorials_interfaces/0.33.5-1.tar.gz";
-    name = "0.33.5-1.tar.gz";
-    sha256 = "0336cc04cecdbae8ad79df7946bd1053d8ceabafc194931aa807d418001c7ccd";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/action_tutorials_interfaces/0.33.6-1.tar.gz";
+    name = "0.33.6-1.tar.gz";
+    sha256 = "cddfc9c4375ffe049f01e76086788b981c61fc54d1f84227135b320a8672fc5b";
   };
 
   buildType = "ament_cmake";

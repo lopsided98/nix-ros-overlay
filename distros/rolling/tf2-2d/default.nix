@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, eigen, rclcpp, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-tf2-2d";
-  version = "1.0.1-r3";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tf2_2d-release/archive/release/rolling/tf2_2d/1.0.1-3.tar.gz";
-    name = "1.0.1-3.tar.gz";
-    sha256 = "e587c4f99ee599d6975203aa49998c5d692425bdf9aa56878afe250df1f25cfe";
+    url = "https://github.com/ros2-gbp/tf2_2d-release/archive/release/rolling/tf2_2d/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "7a92630c93d2b8217a316b87d35d72db87595eb6b78548ead77493785b6e9aca";
   };
 
   buildType = "ament_cmake";

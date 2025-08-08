@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-color-util";
-  version = "1.0.0-r3";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/color_util-release/archive/release/rolling/color_util/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "c3e0ed124fddcb0e612fe78d7169c26646264f6039e12d93b871533f99790aa5";
+    url = "https://github.com/ros2-gbp/color_util-release/archive/release/rolling/color_util/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "2accf19cf6b2931eb8326518a37ba6423a6c5155407af600375d64dd9ba92964";
   };
 
   buildType = "ament_cmake";

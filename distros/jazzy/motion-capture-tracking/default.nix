@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, motion-capture-tracking-interfaces, pcl, rclcpp, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-motion-capture-tracking";
-  version = "1.0.3-r3";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/motion_capture_tracking-release/archive/release/jazzy/motion_capture_tracking/1.0.3-3.tar.gz";
-    name = "1.0.3-3.tar.gz";
-    sha256 = "f70ab0e24e428a84ffe71613fabedfcf72f7d619b4493ce2640eb1ae6077d4e3";
+    url = "https://github.com/ros2-gbp/motion_capture_tracking-release/archive/release/jazzy/motion_capture_tracking/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "8f41d7151bdbc29b2c9906b1987816f41e8071e40b98ea83b6a279acbbbada99";
   };
 
   buildType = "ament_cmake";

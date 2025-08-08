@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-ros, ament-lint-auto, ament-lint-common, ffmpeg-encoder-decoder, foxglove-msgs, image-transport, pluginlib, rclcpp, rcutils, ros-environment, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-foxglove-compressed-video-transport";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/foxglove_compressed_video_transport-release/archive/release/humble/foxglove_compressed_video_transport/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "8b55a0b0cb942d7c6e93bae61b8b89668ff341b0cd1d6ec1644e584a8fac5a7a";
+    url = "https://github.com/ros2-gbp/foxglove_compressed_video_transport-release/archive/release/humble/foxglove_compressed_video_transport/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "9e73341ee9ac90a7272d37989848d5f46ab44350dcf9ba65545d179b91d3764a";
   };
 
   buildType = "ament_cmake";

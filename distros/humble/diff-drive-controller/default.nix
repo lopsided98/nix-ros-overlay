@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-test-assets, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-humble-diff-drive-controller";
-  version = "2.45.0-r1";
+  version = "2.49.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/diff_drive_controller/2.45.0-1.tar.gz";
-    name = "2.45.0-1.tar.gz";
-    sha256 = "7e6d06eb4f6e27963bbf8262995817143d84f08d539d096e90fb32318b6e4a56";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/diff_drive_controller/2.49.1-1.tar.gz";
+    name = "2.49.1-1.tar.gz";
+    sha256 = "94c3a2fe320eea8305739773a0ac421e58d331ae95d97a24063770903f1073b7";
   };
 
   buildType = "ament_cmake";
