@@ -2,11 +2,11 @@
 
 buildPythonPackage rec {
   pname = "colcon-parallel-executor";
-  version = "0.3.0";
+  version = "0.4.0";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-5xN/yvTGHbeSlV/WQb+tfbrUtBkoxrgf+Hp4M54RZkQ=";
+    hash = "sha256-UwlL4kAQo7vCUD3Ck544tcm/oPKXfFiWk3d6CTPsRF0=";
   };
 
   propagatedBuildInputs = [ colcon-core ];
