@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-manager, forward-command-controller, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-jazzy-effort-controllers";
-  version = "4.24.0-r1";
+  version = "4.30.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/effort_controllers/4.24.0-1.tar.gz";
-    name = "4.24.0-1.tar.gz";
-    sha256 = "ee7b88c8c2551d56d136624a6742ab07b5b1d7e61a004a6134bd656640906e68";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/effort_controllers/4.30.1-1.tar.gz";
+    name = "4.30.1-1.tar.gz";
+    sha256 = "62e53ca90302b6560dfacdc602300b942e3469a9dacb6e40e74c3bd4ab4c4832";
   };
 
   buildType = "ament_cmake";

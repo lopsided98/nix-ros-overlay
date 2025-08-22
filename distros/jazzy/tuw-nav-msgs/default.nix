@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-tuw-nav-msgs";
-  version = "0.2.5-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tuw_msgs-release/archive/release/jazzy/tuw_nav_msgs/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "121fe7363591dfd510de0d8d20a303e44f1a84e2225235bcc2d5a01805b68795";
+    url = "https://github.com/ros2-gbp/tuw_msgs-release/archive/release/jazzy/tuw_nav_msgs/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "f516b059ef9ffe917151d4243ac58d1afa716a7eb9f5e2ede9279d7ec81d512b";
   };
 
   buildType = "ament_cmake";

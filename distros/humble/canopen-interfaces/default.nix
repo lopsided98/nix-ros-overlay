@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-canopen-interfaces";
-  version = "0.2.11-r2";
+  version = "0.2.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/humble/canopen_interfaces/0.2.11-2.tar.gz";
-    name = "0.2.11-2.tar.gz";
-    sha256 = "53d5e00847fb3b1b35d47f6e6005dd0a291eb9789aa7e0844f3afe8b77ba964c";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/humble/canopen_interfaces/0.2.13-1.tar.gz";
+    name = "0.2.13-1.tar.gz";
+    sha256 = "a09da6421653dcbb7480adda691d7d4b066980abaa4925106e1f287165d5eeee";
   };
 
   buildType = "ament_cmake";

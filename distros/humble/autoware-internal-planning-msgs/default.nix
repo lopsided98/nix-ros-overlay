@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, autoware-common-msgs, autoware-perception-msgs, autoware-planning-msgs, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-internal-planning-msgs";
-  version = "1.8.1-r1";
+  version = "1.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_internal_msgs-release/archive/release/humble/autoware_internal_planning_msgs/1.8.1-1.tar.gz";
-    name = "1.8.1-1.tar.gz";
-    sha256 = "11929fd9f99bff0755e265c9b1c20b386f1931d11fa11d3ff807f0b883b1d56d";
+    url = "https://github.com/ros2-gbp/autoware_internal_msgs-release/archive/release/humble/autoware_internal_planning_msgs/1.12.0-1.tar.gz";
+    name = "1.12.0-1.tar.gz";
+    sha256 = "ad09f8dbe8e6dd15074bcf41831a679325ae38b996937d78d13cf8b7306c1dab";
   };
 
   buildType = "ament_cmake";

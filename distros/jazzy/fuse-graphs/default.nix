@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ceres-solver, fuse-core, gbenchmark, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-fuse-graphs";
-  version = "1.1.1-r1";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/jazzy/fuse_graphs/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "669e21a7ea036f0f6d3d772b100089c4a347700cf71d5f9a96e17a0c7e1b2c56";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/jazzy/fuse_graphs/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "89caef5120f802cde3d743d9ae1f526f9459017d1abdc4f43e846606fcccd22f";
   };
 
   buildType = "ament_cmake";

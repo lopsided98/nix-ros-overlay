@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, rclcpp, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-odom-to-tf-ros2";
-  version = "1.0.5-r2";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/odom_to_tf_ros2-release/archive/release/rolling/odom_to_tf_ros2/1.0.5-2.tar.gz";
-    name = "1.0.5-2.tar.gz";
-    sha256 = "8ec1bcef7e88da133294ee8bce9269c1462c142decec3dee35dae30245931371";
+    url = "https://github.com/ros2-gbp/odom_to_tf_ros2-release/archive/release/rolling/odom_to_tf_ros2/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "f09c628532e0d8ba3e36a7d696d7dc66623e15fb59c5ad4c45cf700f016cdc4b";
   };
 
   buildType = "ament_cmake";

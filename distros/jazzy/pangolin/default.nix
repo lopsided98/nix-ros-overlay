@@ -2,20 +2,21 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, eigen, glew, libjpeg_turbo, libpng, libxkbcommon, python3, wayland }:
+{ lib, buildRosPackage, fetchurl, catch2, cmake, eigen, glew, libGL, libGLU, libepoxy, libjpeg_turbo, libpng, libxkbcommon, python3, python3Packages, wayland }:
 buildRosPackage {
   pname = "ros-jazzy-pangolin";
-  version = "0.9.1-r3";
+  version = "0.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Pangolin-release/archive/release/jazzy/pangolin/0.9.1-3.tar.gz";
-    name = "0.9.1-3.tar.gz";
-    sha256 = "0768b55f47152be5fab5889f558cd1eccb576cd0934e0326a9341bb8866a1c3a";
+    url = "https://github.com/ros2-gbp/Pangolin-release/archive/release/jazzy/pangolin/0.9.3-1.tar.gz";
+    name = "0.9.3-1.tar.gz";
+    sha256 = "fee76c95824c08d89b4341e9c51962e681e1d825346684ad49ef428dc99873ce";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake eigen ];
-  propagatedBuildInputs = [ glew libjpeg_turbo libpng libxkbcommon python3 wayland ];
+  buildInputs = [ cmake eigen python3Packages.wheel ];
+  checkInputs = [ catch2 ];
+  propagatedBuildInputs = [ glew libGL libGLU libepoxy libjpeg_turbo libpng libxkbcommon python3 wayland ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

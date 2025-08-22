@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, geometry-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-kompass-interfaces";
-  version = "0.2.1-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kompass-release/archive/release/rolling/kompass_interfaces/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "61cb6746d76e23dbe84d691119c5021c55d1c9b79b5401bf60defe5cee7dfadf";
+    url = "https://github.com/ros2-gbp/kompass-release/archive/release/rolling/kompass_interfaces/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "adf6bf1bc2811b59d2562bc8b948b67411bad7415c6dc902b9ccd2b3878e1c91";
   };
 
   buildType = "ament_cmake";

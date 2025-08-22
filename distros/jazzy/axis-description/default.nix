@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-axis-description";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/axis_camera-release/archive/release/jazzy/axis_description/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "69870f1046932ceb59d54f12e57a99ba04d3a95fcc3aa71b9fd6be4a4124717d";
+    url = "https://github.com/clearpath-gbp/axis_camera-release/archive/release/jazzy/axis_description/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "0c352ce90322189f1dca08d5d3b399c14b4934750ed04a1e6a9e9244aa464a53";
   };
 
   buildType = "ament_cmake";

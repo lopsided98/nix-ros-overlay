@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-autoware-internal-debug-msgs";
-  version = "1.8.1-r2";
+  version = "1.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_internal_msgs-release/archive/release/rolling/autoware_internal_debug_msgs/1.8.1-2.tar.gz";
-    name = "1.8.1-2.tar.gz";
-    sha256 = "26ececf0e31067313fb28dbdb2ffda2aa9d17fb0cd16badf05ac676cfda08c20";
+    url = "https://github.com/ros2-gbp/autoware_internal_msgs-release/archive/release/rolling/autoware_internal_debug_msgs/1.10.0-1.tar.gz";
+    name = "1.10.0-1.tar.gz";
+    sha256 = "03dd1f9818f3106bc39ad9f4820cff01297e367fdfdce7831bead762a728d127";
   };
 
   buildType = "ament_cmake";

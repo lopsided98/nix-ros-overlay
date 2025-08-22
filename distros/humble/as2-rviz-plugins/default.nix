@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, as2-core, as2-motion-reference-handlers, as2-msgs, geometry-msgs, qt5, rclcpp, rviz-common, rviz-rendering, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-as2-rviz-plugins";
-  version = "1.1.2-r2";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_rviz_plugins/1.1.2-2.tar.gz";
-    name = "1.1.2-2.tar.gz";
-    sha256 = "a5a58331a4e2f27a7006cbb244b539e84f0d94882867e101fe2be88552d91dbf";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_rviz_plugins/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "f21d5484179928dcf0787d09db2e0f2462de203bf140ddf1e44d4d1ff1ff5bb3";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "Tutorials showing how to write plugins for RViz.";
-    license = with lib.licenses; [ bsdOriginal ];
+    description = "A very simple plugin for RViz.";
+    license = with lib.licenses; [ bsd3 ];
   };
 }

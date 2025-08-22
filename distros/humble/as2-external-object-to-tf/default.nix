@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, as2-core, as2-msgs, geometry-msgs, mocap4r2-msgs, rclcpp, sensor-msgs, std-msgs, std-srvs, tf2, tf2-ros, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-as2-external-object-to-tf";
-  version = "1.1.2-r2";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_external_object_to_tf/1.1.2-2.tar.gz";
-    name = "1.1.2-2.tar.gz";
-    sha256 = "4cda49871919a814392d86f1b1dbbbc9176de7100a55a8c431bd5408b13a7129";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_external_object_to_tf/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "2d903d5eb7e0556a4a6814bd76f27a5287617cad97130a74eb998c2cc56f9816";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Adds external objects pose to tf";
-    license = with lib.licenses; [ "BDS-3" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

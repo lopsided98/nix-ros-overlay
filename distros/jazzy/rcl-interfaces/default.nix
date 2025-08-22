@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-rcl-interfaces";
-  version = "2.0.2-r2";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/jazzy/rcl_interfaces/2.0.2-2.tar.gz";
-    name = "2.0.2-2.tar.gz";
-    sha256 = "333a92fc94866481643e8715caba77a3f803f5b83b9b7830704019709e0fe45c";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/jazzy/rcl_interfaces/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "5ae01c0aa421d912979b4b8c310afba07061548fd6acf6aacb4e2c67b6469c98";
   };
 
   buildType = "ament_cmake";
