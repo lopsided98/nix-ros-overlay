@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, eigen, rclcpp, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-tf2-2d";
-  version = "1.0.1-r4";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tf2_2d-release/archive/release/jazzy/tf2_2d/1.0.1-4.tar.gz";
-    name = "1.0.1-4.tar.gz";
-    sha256 = "3d6d63a5841500abbb72acec8800ff40a7334529fe8699f3526da3131dd4cd28";
+    url = "https://github.com/ros2-gbp/tf2_2d-release/archive/release/jazzy/tf2_2d/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "18fed90edcd396421bf98b233638ff26549635ee385e4f6be22bfe4bbcb3dbf4";
   };
 
   buildType = "ament_cmake";

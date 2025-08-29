@@ -1,0 +1,25 @@
+
+# Copyright 2025 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, cmake, ros-environment }:
+buildRosPackage {
+  pname = "ros-kilted-mola-test-datasets";
+  version = "0.4.2-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/mola_test_datasets-release/archive/release/kilted/mola_test_datasets/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
+    sha256 = "0d28e57c6f4b877f6500828ee393a7ce3e778db5c259e00419dd7b0819a6f121";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ament-cmake-gtest cmake ros-environment ];
+  checkInputs = [ ament-cmake-lint-cmake ament-cmake-pep257 ament-cmake-uncrustify ament-cmake-xmllint ament-lint-auto ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-gtest cmake ];
+
+  meta = {
+    description = "Small SLAM dataset extracts used for demos or unit tests in the rest of MOLA packages";
+    license = with lib.licenses; [ bsd3 bsd3 "CC-BY-NC-SA-3.0" "CC-BY-3.0" "CC-BY-3.0" cc-by-nc-sa-40 ];
+  };
+}

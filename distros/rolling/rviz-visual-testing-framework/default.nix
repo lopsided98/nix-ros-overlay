@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, qt5, rclcpp, rcutils, rviz-common, rviz-ogre-vendor, rviz-rendering, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-rviz-visual-testing-framework";
-  version = "15.1.2-r1";
+  version = "15.1.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/rolling/rviz_visual_testing_framework/15.1.2-1.tar.gz";
-    name = "15.1.2-1.tar.gz";
-    sha256 = "aa5f78dd549bd43aac8062f006b4b89e818240c92d8bb447fd39ee10997802c8";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/rolling/rviz_visual_testing_framework/15.1.8-1.tar.gz";
+    name = "15.1.8-1.tar.gz";
+    sha256 = "43cf891550b4b4ac23c00e6b7dc3ca5ab57eea816de6cc918b08a2cc1ae2deb1";
   };
 
   buildType = "ament_cmake";

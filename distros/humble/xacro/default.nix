@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, ament-index-python, ament-lint-auto, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-xacro";
-  version = "2.0.13-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/xacro-release/archive/release/humble/xacro/2.0.13-1.tar.gz";
-    name = "2.0.13-1.tar.gz";
-    sha256 = "a6b3b6dc1483d1bc3a748018aa82f16b9d89b7ddb976fa26854b9bc47315001b";
+    url = "https://github.com/ros2-gbp/xacro-release/archive/release/humble/xacro/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "d6188ea6423aec20091d0f6799cfe50460cd3ec9169194f4d4bbc36512039ba2";
   };
 
   buildType = "ament_cmake";

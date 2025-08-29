@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, cv-bridge, ffmpeg, opencv, pkg-config, rclcpp, ros-environment, sensor-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, cv-bridge, ffmpeg, ffmpeg-image-transport-msgs, opencv, pkg-config, rclcpp, ros-environment, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ffmpeg-encoder-decoder";
-  version = "2.0.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ffmpeg_encoder_decoder-release/archive/release/jazzy/ffmpeg_encoder_decoder/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "80e0e08fc23981bcf546f2efc0467a4cb395d616f329d4b42b7f940670484961";
+    url = "https://github.com/ros2-gbp/ffmpeg_encoder_decoder-release/archive/release/jazzy/ffmpeg_encoder_decoder/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "174259a6dce7959240752e574491f8e5cb86787623d053017a7f993961e82d56";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-ros pkg-config ros-environment ];
-  checkInputs = [ ament-cmake-clang-format ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-cmake-clang-format ament-cmake-gtest ament-lint-auto ament-lint-common ffmpeg-image-transport-msgs ];
   propagatedBuildInputs = [ cv-bridge ffmpeg opencv opencv.cxxdev rclcpp sensor-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-ros pkg-config ros-environment ];
 

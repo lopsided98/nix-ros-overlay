@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, zstd }:
 buildRosPackage {
   pname = "ros-jazzy-zstd-vendor";
-  version = "0.26.7-r1";
+  version = "0.26.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/zstd_vendor/0.26.7-1.tar.gz";
-    name = "0.26.7-1.tar.gz";
-    sha256 = "8cab3f8fb0fb44fe6eef5e609e5430b959e097b0a3b342619195a0b6bdd5bf0b";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/zstd_vendor/0.26.9-1.tar.gz";
+    name = "0.26.9-1.tar.gz";
+    sha256 = "9c19afaa53ed20eae1b38692720a17e3ac4e85aeb347a9ea513fd7b2d450f702";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, boost, diagnostic-msgs, geographiclib, geometry-msgs, gps-msgs, gtest-vendor, libpcap, nav-msgs, nmea-msgs, rclcpp, rclcpp-components, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-septentrio-gnss-driver";
-  version = "1.4.3-r1";
+  version = "1.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/septentrio_gnss_driver_ros2-release/archive/release/jazzy/septentrio_gnss_driver/1.4.3-1.tar.gz";
-    name = "1.4.3-1.tar.gz";
-    sha256 = "4813f1bd3ee9e28316c243fc1c7d5caa2c1a11b2fc00e2024c8e7a26b12995c7";
+    url = "https://github.com/ros2-gbp/septentrio_gnss_driver_ros2-release/archive/release/jazzy/septentrio_gnss_driver/1.4.5-1.tar.gz";
+    name = "1.4.5-1.tar.gz";
+    sha256 = "65ca5b6fc5107825c91689d6bf126d05aafafed33cd4a4a2f996a3a326a51db2";
   };
 
   buildType = "ament_cmake";

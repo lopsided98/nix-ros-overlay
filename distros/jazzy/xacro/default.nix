@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, ament-index-python, ament-lint-auto, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-xacro";
-  version = "2.0.13-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/xacro-release/archive/release/jazzy/xacro/2.0.13-1.tar.gz";
-    name = "2.0.13-1.tar.gz";
-    sha256 = "72103c4fece3e334514bef076ef7a063bc005c1b7729c9898b81fad42c0184f0";
+    url = "https://github.com/ros2-gbp/xacro-release/archive/release/jazzy/xacro/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "0e58c450bf4d629c2ca95cfe46c5528a5f4d96af95de26f21124f82cd4307fd8";
   };
 
   buildType = "ament_cmake";

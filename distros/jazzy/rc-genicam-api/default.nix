@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, libpng, libusb1, ncurses }:
 buildRosPackage {
   pname = "ros-jazzy-rc-genicam-api";
-  version = "2.6.5-r2";
+  version = "2.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_genicam_api-release/archive/release/jazzy/rc_genicam_api/2.6.5-2.tar.gz";
-    name = "2.6.5-2.tar.gz";
-    sha256 = "3e0ed3598a0ea2678ec7aab837a8eea98778d6e7c3498722d7bcb00ec0a2cac1";
+    url = "https://github.com/ros2-gbp/rc_genicam_api-release/archive/release/jazzy/rc_genicam_api/2.8.1-1.tar.gz";
+    name = "2.8.1-1.tar.gz";
+    sha256 = "d647999f27e981cdf735f1020f43e4aeaa7b93b29cb61a660f880e7fbb9b6e65";
   };
 
   buildType = "cmake";

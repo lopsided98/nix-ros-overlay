@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, hardware-interface, pluginlib }:
 buildRosPackage {
   pname = "ros-humble-kuka-mock-hardware-interface";
-  version = "0.9.0-r2";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/humble/kuka_mock_hardware_interface/0.9.0-2.tar.gz";
-    name = "0.9.0-2.tar.gz";
-    sha256 = "ffcdac3c5b5b33096d22e734c5fd0e04cac0b3d7ec04c0a8994a57c05a1bd056";
+    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/humble/kuka_mock_hardware_interface/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "6f6d959a8bd46e14f7872ac67146ae85fd8020d263c95d96cca94c857718227b";
   };
 
   buildType = "ament_cmake";
