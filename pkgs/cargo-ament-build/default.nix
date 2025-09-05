@@ -8,8 +8,8 @@
       src = fetchFromGitHub {
         owner = "ros2-rust";
         repo = "cargo-ament-build";
-        rev = "v0.1.8";
-        hash = "sha256-P3HX3LXQLA2NvFeV3B1baGrl0CaPWAn4Yzh+aAgUuBM=";
+        rev = "v0.1.9";
+        hash = "sha256-5D0eB3GCQLgVYuYkHMTkboruiYSAaWy3qZjF/hVpRP0=";
       };
     };
   };
