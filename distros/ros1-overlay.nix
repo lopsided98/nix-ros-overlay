@@ -136,6 +136,18 @@ rosSelf: rosSuper: with rosSelf.lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
   });
 
+  ompl = rosSuper.ompl.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix pkg-config paths
+      (self.fetchpatch {
+        url = "https://github.com/ompl/ompl/commit/d4e26fc3d86cae0c36941a10bf0307e02526db44.patch";
+        hash = "sha256-sAQLrWHoR/DhHk8TtUEy8E8VXqrvtXl2BGS5UvElJl8=";
+      })
+    ];
+  });
+
   roscpp = patchBoostSignals rosSuper.roscpp;
 
   rqt-console = rosSuper.rqt-console.overrideAttrs ({
