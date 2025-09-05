@@ -141,18 +141,6 @@ let
       })
     ];
 
-    ompl = rosSuper.ompl.overrideAttrs ({
-      patches ? [], ...
-    }: {
-      patches = patches ++ [
-        # Fix pkg-config paths
-        (self.fetchpatch {
-          url = "https://github.com/ompl/ompl/commit/d4e26fc3d86cae0c36941a10bf0307e02526db44.patch";
-          hash = "sha256-sAQLrWHoR/DhHk8TtUEy8E8VXqrvtXl2BGS5UvElJl8=";
-        })
-      ];
-    });
-
     plotjuggler = (rosSuper.plotjuggler.override {
       # plotjuggler is not yet compatible with newer versions
       protobuf = self.protobuf_23;
