@@ -1,9 +1,10 @@
 { lib, stdenv, fetchFromGitHub, cmake, gz-cmake, gz-utils, eigen
+, baseName ? "gz"
 , version, srcHash
 , ... }:
 
 stdenv.mkDerivation rec {
-  pname = "gz-math${lib.versions.major version}";
+  pname = "${baseName}-math${lib.versions.major version}";
   inherit version;
 
   src = fetchFromGitHub rec {

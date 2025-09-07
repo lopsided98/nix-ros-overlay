@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ cmake gz-cmake ruby ];
   buildInputs = [ gz-math gz-utils urdfdom ];
-  propagatedBuildInputs = [ gz-math ]
+  propagatedBuildInputs = [ gz-math gz-cmake gz-utils ]
     ++ lib.singleton (if lib.versionAtLeast version "10.0.0" then tinyxml-2 else tinyxml);
 
   meta = with lib; {

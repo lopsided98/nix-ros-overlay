@@ -1,9 +1,10 @@
 { lib, stdenv, fetchFromGitHub, cmake, gz-cmake
+, baseName ? "gz"
 , version, srcHash
 , ... }:
 
 stdenv.mkDerivation rec {
-  pname = "gz-utils${lib.versions.major version}";
+  pname = "${baseName}-utils${lib.versions.major version}";
   inherit version;
 
   src = fetchFromGitHub rec {
