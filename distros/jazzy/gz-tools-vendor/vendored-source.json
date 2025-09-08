@@ -1,5 +1,7 @@
 {
-  "url": "https://github.com/gazebosim/gz-tools.git",
-  "rev": "gz-tools2_2.0.2",
-  "hash": "sha256-CY+W1jWIkszKwKuLgKmJpZMXHn0RnueMHFSDhOXIzLg="
+  "gz_tools_vendor": {
+    "url": "https://github.com/gazebosim/gz-tools.git",
+    "rev": "gz-tools2_2.0.2",
+    "hash": "sha256-CY+W1jWIkszKwKuLgKmJpZMXHn0RnueMHFSDhOXIzLg="
+  }
 }

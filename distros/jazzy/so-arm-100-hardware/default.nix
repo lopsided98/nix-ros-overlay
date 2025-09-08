@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, std-msgs, std-srvs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-so-arm-100-hardware";
-  version = "0.1.0-r3";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/brukg/so_arm_100_hardware-release/archive/release/jazzy/so_arm_100_hardware/0.1.0-3.tar.gz";
-    name = "0.1.0-3.tar.gz";
-    sha256 = "d10d6c687d1bc6019d631098affabd04764e4148187edb5e17b4d74370aab6e0";
+    url = "https://github.com/brukg/so_arm_100_hardware-release/archive/release/jazzy/so_arm_100_hardware/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "a105a92bcddfab24e50151981063608a5bb9ef81fa282b24925f64f31aa7ca55";
   };
 
   buildType = "ament_cmake";

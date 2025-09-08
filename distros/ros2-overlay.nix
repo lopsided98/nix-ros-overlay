@@ -23,7 +23,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     # to worry about collisions with system packages and Nix tooling generally
     # expects standard directories.
     postPatch = postPatch + ''
-      ls -l cmake/templates
       substituteInPlace cmake/ament_vendor.cmake \
         --replace-fail 'opt/''${PROJECT_NAME}' .
       substituteInPlace cmake/templates/vendor_package.dsv.in \
@@ -32,6 +31,23 @@ rosSelf: rosSuper: with rosSelf.lib; {
         --replace-fail '/opt/@PROJECT_NAME@' ""
       substituteInPlace cmake/templates/vendor_package_cmake_prefix.dsv.in \
         --replace-fail 'opt/@PROJECT_NAME@' ""
+    '';
+  });
+
+  # Version of ament-cmake-vendor-package for use in Nix build sandbox
+  # without network access. The unwrapped version is still useful in
+  # e.g. nix-shell.
+  ament-cmake-vendor-package-wrapped = rosSelf.ament-cmake-vendor-package.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      # Rename the macro so that we can wrap it with our wrapper
+      substituteInPlace cmake/ament_vendor.cmake \
+        --replace-fail 'macro(ament_vendor TARGET_NAME)' 'macro(ament_vendor_orig TARGET_NAME)'
+      cp ${./ament_vendor_wrapper.cmake} ament_vendor_wrapper.cmake
+      # Add our wrapper to the list of cmake files
+      substituteInPlace CMakeLists.txt \
+        --replace-fail 'CONFIG_EXTRAS' 'CONFIG_EXTRAS "ament_vendor_wrapper.cmake"'
     '';
   });
 

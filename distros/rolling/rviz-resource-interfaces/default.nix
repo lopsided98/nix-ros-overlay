@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rviz-resource-interfaces";
-  version = "15.1.2-r1";
+  version = "15.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/rolling/rviz_resource_interfaces/15.1.2-1.tar.gz";
-    name = "15.1.2-1.tar.gz";
-    sha256 = "32f1ec7c1ba8e70423a57abdd2e5c22e160ea6d9ebc9653491e3c4084acae3d7";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/rolling/rviz_resource_interfaces/15.1.4-1.tar.gz";
+    name = "15.1.4-1.tar.gz";
+    sha256 = "521fd622a54060bbb96e25deb4eb7fb227535f79e45e3acf9f2ce028c8a7794d";
   };
 
   buildType = "ament_cmake";

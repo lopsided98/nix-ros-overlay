@@ -44,7 +44,7 @@ jobs:
           # permittedInsecurePackages is needed for updating some gz-*-vendor packages.
           # Note that this runs without access to SUPERFLORE_GITHUB_TOKEN.
           mkdir -p ~/.config/nixpkgs
-          echo '{ permittedInsecurePackages = [ "freeimage-unstable-2021-11-01" ]; }' > ~/.config/nixpkgs/config.nix
+          echo '{ permittedInsecurePackages = [ "freeimage-3.18.0-unstable-2024-04-18" ]; }' > ~/.config/nixpkgs/config.nix
           NIX_PATH=nixpkgs=$PWD ./maintainers/scripts/update-ament-vendor.sh || ret=$?
           git commit -m 'Update vendored-source.json files' $(find -name vendored-source.json) || :
           exit $ret

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, rclcpp, robot-state-publisher, sensor-msgs, tf2, tf2-msgs, turtlebot3-msgs }:
 buildRosPackage {
   pname = "ros-humble-turtlebot3-fake-node";
-  version = "2.3.0-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_simulations-release/archive/release/humble/turtlebot3_fake_node/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "d3e3ab3b892849e7247e1469e659f2e5000aca3458220e7a1d41f58d297ceb0f";
+    url = "https://github.com/ros2-gbp/turtlebot3_simulations-release/archive/release/humble/turtlebot3_fake_node/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "f912f7c6bd3b0872ab3c59f3fe26ade07e3a20bd067782100f1ff95393ad3c5d";
   };
 
   buildType = "ament_cmake";

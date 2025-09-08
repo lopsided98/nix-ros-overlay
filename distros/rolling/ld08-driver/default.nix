@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, rclcpp, sensor-msgs, udev }:
 buildRosPackage {
   pname = "ros-rolling-ld08-driver";
-  version = "1.1.3-r1";
+  version = "1.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ld08_driver-release/archive/release/rolling/ld08_driver/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "48024541c847142f4cb0d0e81632d8a4aaa67ec0a6c4795d6de06f40f20ebb79";
+    url = "https://github.com/ros2-gbp/ld08_driver-release/archive/release/rolling/ld08_driver/1.1.4-1.tar.gz";
+    name = "1.1.4-1.tar.gz";
+    sha256 = "f50670cf1617c3b93c284dd1708eeeb7e3298f7831b7c530645ef553c1f807e4";
   };
 
   buildType = "ament_cmake";

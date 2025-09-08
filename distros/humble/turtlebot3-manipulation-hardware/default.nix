@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, dynamixel-sdk, hardware-interface, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-turtlebot3-manipulation-hardware";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_manipulation-release/archive/release/humble/turtlebot3_manipulation_hardware/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "c3e2a5c39a3f76ffd43a2563ec5fd313669799dabc4cec8dd9c26068d22bdefa";
+    url = "https://github.com/ros2-gbp/turtlebot3_manipulation-release/archive/release/humble/turtlebot3_manipulation_hardware/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "e69e49ad295f615dc5b88f435d380ec4b2d7927013fa4b67a81973696f16dce6";
   };
 
   buildType = "ament_cmake";

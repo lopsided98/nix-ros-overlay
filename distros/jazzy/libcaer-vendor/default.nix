@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, cmake, gtest, libusb1, pkg-config }:
 buildRosPackage {
   pname = "ros-jazzy-libcaer-vendor";
-  version = "1.3.0-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libcaer_vendor-release/archive/release/jazzy/libcaer_vendor/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "b563d59216500e29819f2784cc67c1817ff5fb6b8fcd41c949d2da27b9978dc0";
+    url = "https://github.com/ros2-gbp/libcaer_vendor-release/archive/release/jazzy/libcaer_vendor/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "a5481f17e31852c40792513190c726a7433cee3808bee83e681660d535837f6f";
   };
 
   buildType = "ament_cmake";

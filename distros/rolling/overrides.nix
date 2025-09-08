@@ -233,4 +233,32 @@ in {
       })
     ];
   });
+
+  zenoh-cpp-vendor = (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor { }).overrideAttrs({
+    nativeBuildInputs ? [], postPatch ? "", ...
+  }: let
+      vendoredSourceJson = "${dirOf rosSuper.zenoh-cpp-vendor.meta.position}/vendored-source.json";
+      sourceInfos = builtins.fromJSON (builtins.readFile vendoredSourceJson);
+      zenoh-c-source = self.fetchFromGitHub {
+        owner = "eclipse-zenoh";
+        repo = "zenoh-c";
+        rev = sourceInfos.zenoh_c_vendor.rev;
+        hash = sourceInfos.zenoh_c_vendor.hash;
+      };
+    in {
+    postPatch = postPatch + ''
+      ln -s ${zenoh-c-source.outPath}/Cargo.lock Cargo.lock
+    '';
+    nativeBuildInputs = nativeBuildInputs ++ [
+      self.rustPlatform.cargoSetupHook
+      self.cargo
+      self.rustc
+    ];
+    cargoDeps = self.rustPlatform.importCargoLock {
+      lockFile = "${zenoh-c-source.outPath}/Cargo.lock";
+      outputHashes = {
+        "zenoh-1.3.1" = "sha256-MGYtIXdFCJLJk8YVj7ColCnRHSqyP2VFfwy08GTEgDw=";
+      };
+    };
+  });
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-turtlebot3-teleop";
-  version = "2.2.9-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/jazzy/turtlebot3_teleop/2.2.9-1.tar.gz";
-    name = "2.2.9-1.tar.gz";
-    sha256 = "b213bdd88a9c48dfd53001662e478a66040ac7a4ce5b7f6872e1ac57115f4179";
+    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/jazzy/turtlebot3_teleop/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "b5298d38bedee5a29da9f63355f22e98133e05d7ca232110064e1188825b34fb";
   };
 
   buildType = "ament_python";

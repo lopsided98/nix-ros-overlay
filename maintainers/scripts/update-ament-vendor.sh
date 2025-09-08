@@ -10,10 +10,18 @@ set -euo pipefail
 # Run it from the top-level directory of this repo, i.e.,
 # ./maintainers/scripts/update-ament-vendor.sh
 
+# TODO: Remove after nixos-24.11 EOL
+if nix-eval-jobs --show-input-drvs --expr null >/dev/null; then
+    # Needed since v2.26.0
+    nix_eval_jobs="nix-eval-jobs --show-input-drvs"
+else
+    nix_eval_jobs="nix-eval-jobs"
+fi
+
 # Find potential candidates for updating
 candidates=$(
     # Extract all rosPackages (ignoring eval errors)
-    nix-eval-jobs --expr '(import ./. {}).rosPackages' |
+    $nix_eval_jobs --expr '(import ./. {}).rosPackages' |
         # Select only packages that depend on ament-cmake-vendor-package
         jq -r 'select(.inputDrvs|objects|keys|any(contains("ament-cmake-vendor-package"))).attr')
 
@@ -43,3 +51,10 @@ then
     rush -j1 --verbose --continue --succ-cmd-file $ok_cmds -- \
          bash -c '$(nix-build -A rosPackages.{}.updateAmentVendor) 2>&1' <<<"$update_order"
 fi
+
+echo
+echo "Attempted updates ($(wc -l <<<"$update_order")):"
+echo "$update_order"
+echo
+echo "Successful updates ($(wc -l <"$ok_cmds")):"
+cat "$ok_cmds"

@@ -1,5 +1,7 @@
 {
-  "url": "https://github.com/gazebosim/gz-launch.git",
-  "rev": "gz-launch8_8.0.1",
-  "hash": "sha256-el+4sVBOmeBj8VJqKut8pIhVJeyEyodrt6titunbBF0="
+  "gz_launch_vendor": {
+    "url": "https://github.com/gazebosim/gz-launch.git",
+    "rev": "gz-launch8_8.0.1",
+    "hash": "sha256-el+4sVBOmeBj8VJqKut8pIhVJeyEyodrt6titunbBF0="
+  }
 }

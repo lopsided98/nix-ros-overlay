@@ -1,5 +1,7 @@
 {
-  "url": "https://github.com/OGRECave/ogre.git",
-  "rev": "v1.12.10",
-  "hash": "sha256-Z0ixdSmkV93coBBVZ5R3lPLfVMXRfWsFz/RsSyqPWFY="
+  "ogre_vendor": {
+    "url": "https://github.com/OGRECave/ogre.git",
+    "rev": "v1.12.10",
+    "hash": "sha256-Z0ixdSmkV93coBBVZ5R3lPLfVMXRfWsFz/RsSyqPWFY="
+  }
 }

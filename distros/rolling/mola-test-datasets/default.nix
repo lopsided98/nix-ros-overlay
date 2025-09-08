@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-mola-test-datasets";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_test_datasets-release/archive/release/rolling/mola_test_datasets/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "f69ee565bb978869cb5a84cbec16e8463c441497bfc29995956122615f1f396a";
+    url = "https://github.com/ros2-gbp/mola_test_datasets-release/archive/release/rolling/mola_test_datasets/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "09808d58642a26bdbf0f4b1ff90085e3510ac17464c3b0a5f27860ac1ed8ab90";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Small SLAM dataset extracts used for demos or unit tests in the rest of MOLA packages";
-    license = with lib.licenses; [ bsdOriginal bsdOriginal "CC-BY-NC-SA-3.0" "CC-BY-3.0" "CC-BY-3.0" cc-by-nc-sa-40 ];
+    license = with lib.licenses; [ bsd3 bsd3 "CC-BY-NC-SA-3.0" "CC-BY-3.0" "CC-BY-3.0" cc-by-nc-sa-40 ];
   };
 }

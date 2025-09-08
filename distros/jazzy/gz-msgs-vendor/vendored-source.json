@@ -1,5 +1,7 @@
 {
-  "url": "https://github.com/gazebosim/gz-msgs.git",
-  "rev": "gz-msgs10_10.3.2",
-  "hash": "sha256-gxhRqLzBCaDmK67T5RryDpxbDR3WLgV9DFs7w6ieMxQ="
+  "gz_msgs_vendor": {
+    "url": "https://github.com/gazebosim/gz-msgs.git",
+    "rev": "gz-msgs10_10.3.2",
+    "hash": "sha256-gxhRqLzBCaDmK67T5RryDpxbDR3WLgV9DFs7w6ieMxQ="
+  }
 }

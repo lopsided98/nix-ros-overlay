@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-mypy, ament-cmake-ros, example-interfaces, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, python3Packages, rclpy, rosapi, rosbridge-library, rosbridge-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-rosbridge-server";
-  version = "2.2.0-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/jazzy/rosbridge_server/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "793f3cec42224a4a8ffd260c5ddb7ef260a87049cb00f3f03d4d9a2b15d84aac";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/jazzy/rosbridge_server/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "2cbb85a69e8a9f5fd37a6f31a4894ba97d5d9a9f6de8d22912943c41b2ad67b5";
   };
 
   buildType = "ament_cmake";
