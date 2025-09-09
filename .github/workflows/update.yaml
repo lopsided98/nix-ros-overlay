@@ -55,7 +55,8 @@ jobs:
           mkdir -p ~/.config/nixpkgs
           echo '{ permittedInsecurePackages = [ "freeimage-3.18.0-unstable-2024-04-18" ]; }' > ~/.config/nixpkgs/config.nix
           NIX_PATH=nixpkgs=$PWD ./maintainers/scripts/update-ament-vendor.sh || ret=$?
-          git commit -m 'Update vendored-source.json files' $(find -name vendored-source.json) || :
+          git add distros/*/*/vendored-source.json
+          git commit -m 'Update vendored-source.json files' || :
           exit $ret
       - name: Create PR
         env:
