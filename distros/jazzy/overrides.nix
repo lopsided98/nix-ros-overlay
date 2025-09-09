@@ -262,6 +262,17 @@ in {
       })
     ];
   });
+  
+  usb-cam = rosSuper.usb-cam.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = "https://github.com/ros-drivers/usb_cam/commit/1d1970b1a88fb1be3b961073748879900d2b1a70.patch";
+        hash = "sha256-0iWl2DtqdjkyFy7lKa7aLxXjynm4ggNEQLxB45Mqf/Y=";
+      })
+    ];
+  });
 
   zenoh-cpp-vendor = lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor { };
 }
