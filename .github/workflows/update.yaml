@@ -68,7 +68,6 @@ jobs:
             echo "PR body too long - truncating!"
             truncate -s 64K .pr-message.tmp
           fi
-          superflore-gen-nix --pr-only \
           nix run .#update-overlay -- --pr-only \
             --output-repository-path . \
             --upstream-branch develop \
