@@ -3,7 +3,6 @@ on:
   push:
 jobs:
   build:
-    runs-on: ubuntu-latest
     strategy:
       matrix:
         distro:
@@ -15,6 +14,7 @@ jobs:
         system:
           - x86_64-linux
           - aarch64-linux
+    runs-on: ${{ (matrix.system == 'x86_64-linux') && 'ubuntu-latest' || 'ubuntu-24.04-arm' }}
     steps:
     - uses: actions/checkout@v4
     - uses: cachix/install-nix-action@v30
@@ -22,10 +22,6 @@ jobs:
         extra_nix_config: |
           max-jobs = 2
           cores = 2
-          extra-platforms = aarch64-linux
-    - uses: docker/setup-qemu-action@v3
-      with:
-        platforms: arm64
     - uses: cachix/cachix-action@v15
       with:
         name: ros
