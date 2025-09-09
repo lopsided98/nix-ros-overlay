@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-tlsf";
-  version = "0.11.0-r1";
+  version = "0.11.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tlsf-release/archive/release/rolling/tlsf/0.11.0-1.tar.gz";
-    name = "0.11.0-1.tar.gz";
-    sha256 = "85a2a5187d3934dd84778d0470e062b91022782681094aab208a28daac2bf01c";
+    url = "https://github.com/ros2-gbp/tlsf-release/archive/release/rolling/tlsf/0.11.1-1.tar.gz";
+    name = "0.11.1-1.tar.gz";
+    sha256 = "52f42cf3323e2a4192a2a9b3b5d5d9786db1043ee7e74851a1fcd2ba97860b67";
   };
 
   buildType = "ament_cmake";

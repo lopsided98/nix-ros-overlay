@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-pycodestyle }:
 buildRosPackage {
   pname = "ros-jazzy-ament-cmake-pycodestyle";
-  version = "0.17.2-r1";
+  version = "0.17.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/jazzy/ament_cmake_pycodestyle/0.17.2-1.tar.gz";
-    name = "0.17.2-1.tar.gz";
-    sha256 = "9212d1d1d0ac3f2aa8904896410f3eca7257bdc72c28f8d8bd9813a13049b13d";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/jazzy/ament_cmake_pycodestyle/0.17.3-1.tar.gz";
+    name = "0.17.3-1.tar.gz";
+    sha256 = "355ae99871b3241dbfc63a4d31347763d74f6259b2403119f7e344bb7dc41ac3";
   };
 
   buildType = "ament_cmake";

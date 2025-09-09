@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, python3Packages, rclpy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-camera-info-manager-py";
-  version = "3.1.11-r1";
+  version = "3.1.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/humble/camera_info_manager_py/3.1.11-1.tar.gz";
-    name = "3.1.11-1.tar.gz";
-    sha256 = "9ffa4120151547fd1ba6a2ae453b1da31706f899d5446a5da341447b8560a34d";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/humble/camera_info_manager_py/3.1.12-1.tar.gz";
+    name = "3.1.12-1.tar.gz";
+    sha256 = "76f8e35c200f618eaa3552cc7c1e8efe4aa296fe39757bd2ddcb47db5e65767e";
   };
 
   buildType = "ament_python";

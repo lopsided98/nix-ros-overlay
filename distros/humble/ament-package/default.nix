@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-ament-package";
-  version = "0.14.0-r4";
+  version = "0.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_package-release/archive/release/humble/ament_package/0.14.0-4.tar.gz";
-    name = "0.14.0-4.tar.gz";
-    sha256 = "7f1ea32fff4a703c6eafb5a3dd4956a4824adec8c612326099ac434c9af7d743";
+    url = "https://github.com/ros2-gbp/ament_package-release/archive/release/humble/ament_package/0.14.1-1.tar.gz";
+    name = "0.14.1-1.tar.gz";
+    sha256 = "d379c0fa8d42afb2c21420b557e8eac940c5c0d50959c628a703b4a7945a71e6";
   };
 
   buildType = "ament_python";

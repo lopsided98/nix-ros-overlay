@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-autoware-utils-math";
-  version = "1.4.1-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/rolling/autoware_utils_math/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "081e61b03c790a096d6ef343347290ba85e93dee31551f7f5bb94da6f72205e6";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/rolling/autoware_utils_math/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "8b66a0f7ebf313f3825da063bc0da9732082637326fb10bf15debd52c94c67cf";
   };
 
   buildType = "ament_cmake";

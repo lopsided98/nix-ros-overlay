@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, camera-info-manager, cv-bridge, image-transport, rcl-interfaces, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-jazzy-image-publisher";
-  version = "5.0.10-r1";
+  version = "5.0.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/image_publisher/5.0.10-1.tar.gz";
-    name = "5.0.10-1.tar.gz";
-    sha256 = "0c794272315aa584106b9409d7426d814474cfc541b7f04951a104e50286db60";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/image_publisher/5.0.11-1.tar.gz";
+    name = "5.0.11-1.tar.gz";
+    sha256 = "952dd790c195d13d0321b865676faa369c6f40e44eedb5efa0fe727c4ea71f9f";
   };
 
   buildType = "ament_cmake";

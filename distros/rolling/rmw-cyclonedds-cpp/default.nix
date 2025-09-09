@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, cyclonedds, iceoryx-binding-c, rcpputils, rcutils, rmw, rmw-dds-common, rmw-security-common, rosidl-runtime-c, rosidl-typesupport-introspection-c, rosidl-typesupport-introspection-cpp, tracetools }:
 buildRosPackage {
   pname = "ros-rolling-rmw-cyclonedds-cpp";
-  version = "4.1.0-r1";
+  version = "4.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_cyclonedds-release/archive/release/rolling/rmw_cyclonedds_cpp/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "594556cdf8f10146b51b9088ada574005d8d7f4e3f58d96fb82347e9ba842459";
+    url = "https://github.com/ros2-gbp/rmw_cyclonedds-release/archive/release/rolling/rmw_cyclonedds_cpp/4.1.1-1.tar.gz";
+    name = "4.1.1-1.tar.gz";
+    sha256 = "55316afa16b092d73a971fe6a44f249cd0addc119ff6385199e4be101787a351";
   };
 
   buildType = "ament_cmake";

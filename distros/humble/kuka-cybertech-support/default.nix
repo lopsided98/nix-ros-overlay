@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher-gui, kuka-resources, launch-ros, launch-testing-ament-cmake, robot-state-publisher, rviz2, urdf, xacro }:
 buildRosPackage {
   pname = "ros-humble-kuka-cybertech-support";
-  version = "0.9.0-r2";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/humble/kuka_cybertech_support/0.9.0-2.tar.gz";
-    name = "0.9.0-2.tar.gz";
-    sha256 = "0be82824987283989f323f359c560c74ff2b523587d506e417b05f89f9459528";
+    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/humble/kuka_cybertech_support/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "01047d0937a85e16523e6213f3f1dced1d8f78dab6d10c357c0ce8fd72fcceb9";
   };
 
   buildType = "ament_cmake";

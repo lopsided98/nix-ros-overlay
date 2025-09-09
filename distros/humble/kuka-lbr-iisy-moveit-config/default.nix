@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, kuka-resources, moveit, robot-state-publisher, rviz2, urdf, xacro }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, kuka-resources, moveit, moveit-planners, robot-state-publisher, rviz2, urdf, xacro }:
 buildRosPackage {
   pname = "ros-humble-kuka-lbr-iisy-moveit-config";
-  version = "0.9.0-r2";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/humble/kuka_lbr_iisy_moveit_config/0.9.0-2.tar.gz";
-    name = "0.9.0-2.tar.gz";
-    sha256 = "eb5899c06d608967ea30421803ce6836df72d49cdb1825ae6428632de9e5e10e";
+    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/humble/kuka_lbr_iisy_moveit_config/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "18aaadbdf086add4fe920d23a6771fb4e57f9a018d96737b3b5eedf81b060afa";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ controller-manager kuka-resources moveit robot-state-publisher rviz2 urdf xacro ];
+  propagatedBuildInputs = [ controller-manager kuka-resources moveit moveit-planners robot-state-publisher rviz2 urdf xacro ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

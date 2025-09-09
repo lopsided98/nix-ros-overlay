@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-phidgets-magnetometer";
-  version = "2.3.3-r2";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/jazzy/phidgets_magnetometer/2.3.3-2.tar.gz";
-    name = "2.3.3-2.tar.gz";
-    sha256 = "205554a63c38a3c996af954197c687073d26202fafdb748e4f5daaab12cd328e";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/jazzy/phidgets_magnetometer/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "50e28da21610e26b46c3fa53320d603c49cdd10f755e149ead1961af0c258e03";
   };
 
   buildType = "ament_cmake";

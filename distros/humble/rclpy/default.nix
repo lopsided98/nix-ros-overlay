@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-index-python, ament-lint-auto, ament-lint-common, builtin-interfaces, pybind11-vendor, python-cmake-module, python3Packages, rcl, rcl-action, rcl-interfaces, rcl-lifecycle, rcl-logging-interface, rcl-yaml-param-parser, rcpputils, rcutils, rmw, rmw-implementation, rmw-implementation-cmake, rosgraph-msgs, rosidl-generator-py, rosidl-runtime-c, rpyutils, test-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-humble-rclpy";
-  version = "3.3.16-r1";
+  version = "3.3.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclpy-release/archive/release/humble/rclpy/3.3.16-1.tar.gz";
-    name = "3.3.16-1.tar.gz";
-    sha256 = "993bf3ced83980520551671ba5ceb9aeea1d69fd7aa3095803fde9836e9c60df";
+    url = "https://github.com/ros2-gbp/rclpy-release/archive/release/humble/rclpy/3.3.17-1.tar.gz";
+    name = "3.3.17-1.tar.gz";
+    sha256 = "bca737b407702c544fda24714a091f466f4fc0c373bb2964ab89b34ef1586251";
   };
 
   buildType = "ament_cmake";

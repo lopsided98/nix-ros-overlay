@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-uncrustify, ament-lint-auto, ament-lint-common, libcurl-vendor, pkg-config, rclcpp, rclcpp-components, rtcm-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ntrip-client-node";
-  version = "0.5.5-r3";
+  version = "0.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/jazzy/ntrip_client_node/0.5.5-3.tar.gz";
-    name = "0.5.5-3.tar.gz";
-    sha256 = "755da77f8e1106bab44b76bbe21afb8f515ed334a7443f2361fe3542181ebae3";
+    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/jazzy/ntrip_client_node/0.6.1-1.tar.gz";
+    name = "0.6.1-1.tar.gz";
+    sha256 = "6429002417b78c0c67444d5cc64fe05e9f6d8382445e79667ae70e7a2ece727b";
   };
 
   buildType = "ament_cmake";

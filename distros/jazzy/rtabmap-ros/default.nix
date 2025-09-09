@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rtabmap-conversions, rtabmap-demos, rtabmap-examples, rtabmap-launch, rtabmap-msgs, rtabmap-odom, rtabmap-python, rtabmap-rviz-plugins, rtabmap-slam, rtabmap-sync, rtabmap-util, rtabmap-viz }:
 buildRosPackage {
   pname = "ros-jazzy-rtabmap-ros";
-  version = "0.21.10-r1";
+  version = "0.22.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/jazzy/rtabmap_ros/0.21.10-1.tar.gz";
-    name = "0.21.10-1.tar.gz";
-    sha256 = "c5ecf9b08d1213e60cf2a6a6dd8b13fabf5cd6a505de676ead61e1326590eed2";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/jazzy/rtabmap_ros/0.22.1-1.tar.gz";
+    name = "0.22.1-1.tar.gz";
+    sha256 = "6d93c99b0e07beca70fc26a1a0577c46acdabd2b4497c4f73619c830c4b70be1";
   };
 
   buildType = "ament_cmake";

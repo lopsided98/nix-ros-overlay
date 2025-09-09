@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-imu-preintegration, mola-kernel, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-rolling-mola-state-estimation-simple";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/rolling/mola_state_estimation_simple/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "46529ed4cd5e874432e76eff94207b23d098e8fb2adb925118e2b8cfaa6084e5";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/rolling/mola_state_estimation_simple/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "401416f7f4253b377b0b126d2ce8e34c15f5c0763a68d2a8f4f51a2d93d8f7ae";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, as2-core, as2-msgs, geographic-msgs, geometry-msgs, nav-msgs, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-as2-geozones";
-  version = "1.1.2-r2";
+  version = "1.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_geozones/1.1.2-2.tar.gz";
-    name = "1.1.2-2.tar.gz";
-    sha256 = "712bde0d5acefc1897e5b6d7ad12bfd1119bb63ed730395400951dcd4b68a5ba";
+    url = "https://github.com/ros2-gbp/aerostack2-release/archive/release/humble/as2_geozones/1.1.3-1.tar.gz";
+    name = "1.1.3-1.tar.gz";
+    sha256 = "5e64ae29005dc211eb11b2ea3b5d9357b7c49952f05d52ab1a00634568e9589c";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Geozones for AeroStack2";
-    license = with lib.licenses; [ "BDS-3-Clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

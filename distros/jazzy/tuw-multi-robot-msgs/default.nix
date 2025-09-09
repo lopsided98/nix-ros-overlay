@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-tuw-multi-robot-msgs";
-  version = "0.2.5-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tuw_msgs-release/archive/release/jazzy/tuw_multi_robot_msgs/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "17c127bce478e4f337d8e31fab3f0ac37a480aa14c331f540265589d0d6939f5";
+    url = "https://github.com/ros2-gbp/tuw_msgs-release/archive/release/jazzy/tuw_multi_robot_msgs/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "24b0221beabd1b1f6ef48582f9e968791b038c10b75b75fe3c461f01b8ed43e6";
   };
 
   buildType = "ament_cmake";

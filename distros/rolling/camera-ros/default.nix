@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-mypy, ament-cmake-pep257, ament-cmake-pyflakes, ament-cmake-xmllint, ament-index-python, ament-lint-auto, camera-info-manager, clang, cv-bridge, image-view, libcamera, rclcpp, rclcpp-components, ros2launch, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-camera-ros";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/camera_ros-release/archive/release/rolling/camera_ros/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "e85bd872845595f1a36701e291dc6c22ed3079b6927644cf451593bb16f4c0be";
+    url = "https://github.com/ros2-gbp/camera_ros-release/archive/release/rolling/camera_ros/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "52e68632275b6eac76d0d320708326697831ffc8a891ef211e072b818df71324";
   };
 
   buildType = "ament_cmake";

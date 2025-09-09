@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, turtlebot3-manipulation-bringup, turtlebot3-manipulation-cartographer, turtlebot3-manipulation-description, turtlebot3-manipulation-hardware, turtlebot3-manipulation-moveit-config, turtlebot3-manipulation-navigation2, turtlebot3-manipulation-teleop }:
 buildRosPackage {
   pname = "ros-humble-turtlebot3-manipulation";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_manipulation-release/archive/release/humble/turtlebot3_manipulation/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "65b5e8912a18a896a46bd07950b78c66d144e483f011d7b86ce25ba789fa40b0";
+    url = "https://github.com/ros2-gbp/turtlebot3_manipulation-release/archive/release/humble/turtlebot3_manipulation/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "ad4b8bcaae0763d32379f296086bd8f1f3e3f8c6a63f318915c4e596cda185e0";
   };
 
   buildType = "ament_cmake";
