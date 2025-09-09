@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher, joint-state-publisher-gui, robot-state-publisher, rviz2 }:
 buildRosPackage {
   pname = "ros-jazzy-open-manipulator-description";
-  version = "3.2.2-r1";
+  version = "4.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_description/3.2.2-1.tar.gz";
-    name = "3.2.2-1.tar.gz";
-    sha256 = "b683378ed4d489d74ac50aff69ba4e723fe076448e16e88825ace79297f785a9";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_description/4.0.7-1.tar.gz";
+    name = "4.0.7-1.tar.gz";
+    sha256 = "d752bc68336f81a5e004710eada0832ec010e96d8214a44e836b26b133f6e705";
   };
 
   buildType = "ament_cmake";

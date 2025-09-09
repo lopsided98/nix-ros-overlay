@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, diagnostic-msgs, launch-pytest, launch-testing-ament-cmake, launch-testing-ros, pluginlib, rcl-interfaces, rclcpp, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-diagnostic-aggregator";
-  version = "4.2.4-r1";
+  version = "4.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/jazzy/diagnostic_aggregator/4.2.4-1.tar.gz";
-    name = "4.2.4-1.tar.gz";
-    sha256 = "ce6ca4878e3cfade55ff0e3bb12c26c0c8a571b055718ef61ed8f90ad356306c";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/jazzy/diagnostic_aggregator/4.2.6-1.tar.gz";
+    name = "4.2.6-1.tar.gz";
+    sha256 = "828ad098b4c3c59c2b5263e0679aba921f5110fa9871f78a9b2c2189c3dd54bc";
   };
 
   buildType = "ament_cmake";

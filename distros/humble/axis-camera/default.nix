@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, axis-msgs, camera-info-manager-py, ptz-action-server-msgs, python3Packages, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-axis-camera";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/axis_camera-release/archive/release/humble/axis_camera/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "2e4405c4288ac0cc6fecd3432866a1f6a877536139d575de3471dc2fb3255076";
+    url = "https://github.com/clearpath-gbp/axis_camera-release/archive/release/humble/axis_camera/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "7b1f43e9cd33ffeca06759d7e879740b80dc4b2dcd1279b856e0bec6acd02aa7";
   };
 
   buildType = "ament_python";

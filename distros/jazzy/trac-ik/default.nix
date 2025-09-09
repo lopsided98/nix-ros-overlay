@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, trac-ik-kinematics-plugin, trac-ik-lib }:
 buildRosPackage {
   pname = "ros-jazzy-trac-ik";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/trac_ik-release/archive/release/jazzy/trac_ik/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "3e4b5d3cd21a91be6c33deb7790bd74b0ad3d8f5f36d24e8c0c7ed5f101366a1";
+    url = "https://github.com/ros2-gbp/trac_ik-release/archive/release/jazzy/trac_ik/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "654dddff60176ead1ef074ebd701670f81a018d5f1e80bb7e241db03a71f55a3";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-mypy, ament-cmake-pytest, ament-cmake-ros, builtin-interfaces, geometry-msgs, rcl-interfaces, rclpy, rmw-dds-common, ros2node, ros2service, ros2topic, rosapi-msgs, rosbridge-library, sensor-msgs, shape-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rosapi";
-  version = "2.2.0-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/jazzy/rosapi/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "52c9e1ba46b70ca3052ef92b5b8f5270fce48dedd72595fd70a1934eb4d8adb0";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/jazzy/rosapi/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "db3ca4b98aa31ce107b6f214b0ff9ebfef422c7c616da55475891267b2c87246";
   };
 
   buildType = "ament_cmake";

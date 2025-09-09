@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-tuw-geometry-msgs";
-  version = "0.2.5-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/tuw-robotics/tuw_msgs-release/archive/release/humble/tuw_geometry_msgs/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "b9164b8fa357be8db47470769fb9bfa4dbfe599e9af6e594dd8d132dcb41d5d4";
+    url = "https://github.com/tuw-robotics/tuw_msgs-release/archive/release/humble/tuw_geometry_msgs/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "83812f1246ea160ab2c172e00de15d01252d0a445d80de34889fd5bc4f1afd1f";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, git, glfw3, libGL, libGLU, libusb1, openssl, pkg-config, udev, xorg }:
 buildRosPackage {
   pname = "ros-jazzy-librealsense2";
-  version = "2.55.1-r1";
+  version = "2.56.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/jazzy/librealsense2/2.55.1-1.tar.gz";
-    name = "2.55.1-1.tar.gz";
-    sha256 = "882b7132b60a543b6c0604c3db2058731647df45ff147454d48a9fba4ddbadad";
+    url = "https://github.com/ros2-gbp/librealsense2-release/archive/release/jazzy/librealsense2/2.56.4-1.tar.gz";
+    name = "2.56.4-1.tar.gz";
+    sha256 = "14356b1ace906cb85e03b5245ebe203979bc3f49ea0090fce3cccda06b1e9ffa";
   };
 
   buildType = "cmake";

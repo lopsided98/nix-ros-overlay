@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-tutorials-interfaces, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-action, rclcpp-components }:
 buildRosPackage {
   pname = "ros-jazzy-action-tutorials-cpp";
-  version = "0.33.5-r1";
+  version = "0.33.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/action_tutorials_cpp/0.33.5-1.tar.gz";
-    name = "0.33.5-1.tar.gz";
-    sha256 = "0b0b486546638c8d9d4a97cc20e8d4db28e2c99d85b593ce57ebc2384a220d96";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/action_tutorials_cpp/0.33.6-1.tar.gz";
+    name = "0.33.6-1.tar.gz";
+    sha256 = "96e4dd05bec536f2ca3d3462ef17e9a8b3524359a6a3511ba6d383899bc39cd0";
   };
 
   buildType = "ament_cmake";

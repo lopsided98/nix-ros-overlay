@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, cmake, gtest, libusb1, pkg-config }:
 buildRosPackage {
   pname = "ros-humble-libcaer-vendor";
-  version = "1.1.0-r2";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libcaer_vendor-release/archive/release/humble/libcaer_vendor/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "87671cb2104941805177fc9593c84801e6905a69584803224d6e169b7017d888";
+    url = "https://github.com/ros2-gbp/libcaer_vendor-release/archive/release/humble/libcaer_vendor/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "3b28405ae33aa584a627c7dba2992e27d4cb9f556df683d982b46e2b135466c6";
   };
 
   buildType = "ament_cmake";

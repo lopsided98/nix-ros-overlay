@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, clang, doxygen, eigen, fmt, git, range-v3, rclcpp, tcb-span, tl-expected }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, clang, doxygen, eigen, fmt, git, range-v3, rclcpp, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-humble-rsl";
-  version = "1.1.0-r1";
+  version = "1.2.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/RSL-release/archive/release/humble/rsl/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "95871ec8819069f9914cff2a99f5201df9bc544b082bf08b23ab20af5e8f778f";
+    url = "https://github.com/ros2-gbp/RSL-release/archive/release/humble/rsl/1.2.0-3.tar.gz";
+    name = "1.2.0-3.tar.gz";
+    sha256 = "65f0cf5a52b9eeefeaa05b54f26dbbce3da65b54b66f2f6ea81de40a1c5badbb";
   };
 
   buildType = "catkin";
   buildInputs = [ doxygen ];
-  checkInputs = [ clang git range-v3 ];
+  checkInputs = [ ament-cmake-ros clang git range-v3 ];
   propagatedBuildInputs = [ eigen fmt rclcpp tcb-span tl-expected ];
   nativeBuildInputs = [ doxygen ];
 

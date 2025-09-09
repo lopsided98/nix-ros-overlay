@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-examples-rclcpp-wait-set";
-  version = "0.19.5-r1";
+  version = "0.19.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/jazzy/examples_rclcpp_wait_set/0.19.5-1.tar.gz";
-    name = "0.19.5-1.tar.gz";
-    sha256 = "9b284e27d5df96c1bb4b01f6a9b9092001be8c973a0c9796ca8ebedaef76e797";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/jazzy/examples_rclcpp_wait_set/0.19.6-1.tar.gz";
+    name = "0.19.6-1.tar.gz";
+    sha256 = "20eff328b04db08de4cf38afbab2c1a7027bc26c6a1e880bf30612c104b62386";
   };
 
   buildType = "ament_cmake";

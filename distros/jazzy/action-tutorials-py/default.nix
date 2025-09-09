@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-tutorials-interfaces, ament-copyright, ament-flake8, ament-pep257, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-action-tutorials-py";
-  version = "0.33.5-r1";
+  version = "0.33.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/action_tutorials_py/0.33.5-1.tar.gz";
-    name = "0.33.5-1.tar.gz";
-    sha256 = "4349522133c8caf19ed961704abb137cea5cd3c1d267c03c2931fbe50fa0d04d";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/action_tutorials_py/0.33.6-1.tar.gz";
+    name = "0.33.6-1.tar.gz";
+    sha256 = "e65ef47d3b550ac69c2ddece4ff8eb24753271ed8f6de35d55c9d94a3beb76b5";
   };
 
   buildType = "ament_python";

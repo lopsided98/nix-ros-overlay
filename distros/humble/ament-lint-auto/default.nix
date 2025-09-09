@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test }:
 buildRosPackage {
   pname = "ros-humble-ament-lint-auto";
-  version = "0.12.12-r1";
+  version = "0.12.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_lint_auto/0.12.12-1.tar.gz";
-    name = "0.12.12-1.tar.gz";
-    sha256 = "78b935768b414ecd8ad4ba926072a864025ec6cedbad5fe7ade049df2e89bc48";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_lint_auto/0.12.14-1.tar.gz";
+    name = "0.12.14-1.tar.gz";
+    sha256 = "eb37210fa938b8cf9b3973b6bbf7ad472b50efad04c143422b393cab98b403e2";
   };
 
   buildType = "ament_cmake";

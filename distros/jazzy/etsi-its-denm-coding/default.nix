@@ -2,20 +2,19 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ros-environment }:
+{ lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-denm-coding";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_denm_coding/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "8a0957cb58b6e753aaa927609d3af5f271c73985ea90dc47e85af7b1a1ce4368";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_denm_coding/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "7a17cb83a7f78f2dbb57c29beea952f045f0d84cff4403085b419f60d452e97b";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ ros-environment ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
