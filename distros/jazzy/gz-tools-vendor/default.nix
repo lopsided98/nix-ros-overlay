@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, gz-cmake-vendor, ruby }:
 buildRosPackage {
   pname = "ros-jazzy-gz-tools-vendor";
-  version = "0.0.6-r1";
+  version = "0.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_tools_vendor-release/archive/release/jazzy/gz_tools_vendor/0.0.6-1.tar.gz";
-    name = "0.0.6-1.tar.gz";
-    sha256 = "29522541ec91bf9d196752360f1f38f237f1bd58f26240f6995f49631c21fc43";
+    url = "https://github.com/ros2-gbp/gz_tools_vendor-release/archive/release/jazzy/gz_tools_vendor/0.0.7-1.tar.gz";
+    name = "0.0.7-1.tar.gz";
+    sha256 = "5e681ed7dc3950c586f48b260f66c8fea5046b8537fef4c13cd92e473d2f514d";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package cmake ];
 
   meta = {
-    description = "Vendor package for: gz-tools2 2.0.2
+    description = "Vendor package for: gz-tools2 2.0.3
 
     Gazebo Tools: Entrypoint to Gazebo's command line interface";
     license = with lib.licenses; [ asl20 ];

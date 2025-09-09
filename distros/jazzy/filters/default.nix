@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gtest, ament-cmake-uncrustify, ament-cmake-xmllint, boost, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-filters";
-  version = "2.2.1-r1";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/filters-release/archive/release/jazzy/filters/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "2bd0da456a4a81d2e8cdd94b8be502dbeb6d7a3837e3cf11c4f411455a81d6a8";
+    url = "https://github.com/ros2-gbp/filters-release/archive/release/jazzy/filters/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "7020d2d5a3d40f6acce757e7ff7dd03988b117e80ddddac18ab1f7caa8fd5dc1";
   };
 
   buildType = "ament_cmake";

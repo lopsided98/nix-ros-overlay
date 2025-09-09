@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, launch, launch-pal, launch-param-builder, launch-ros, launch-testing-ament-cmake, omni-base-description, pal-gripper-description, pal-hey5-description, pal-robotiq-description, pal-urdf-utils, pmb2-description, robot-state-publisher, urdf-test, xacro }:
 buildRosPackage {
   pname = "ros-humble-tiago-description";
-  version = "4.17.1-r1";
+  version = "4.18.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_robot-release/archive/release/humble/tiago_description/4.17.1-1.tar.gz";
-    name = "4.17.1-1.tar.gz";
-    sha256 = "808dcf33a3c4c80ab47c816f05a253c81bea9d3796935b4a18aaeac0f87ec49e";
+    url = "https://github.com/pal-gbp/tiago_robot-release/archive/release/humble/tiago_description/4.18.0-1.tar.gz";
+    name = "4.18.0-1.tar.gz";
+    sha256 = "4ebe8514308cfb13c6def4785fdea484be83601e9da5ebee3962d2c9432f36a4";
   };
 
   buildType = "ament_cmake";

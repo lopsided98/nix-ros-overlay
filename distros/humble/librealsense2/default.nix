@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, git, glfw3, libGL, libGLU, libusb1, openssl, pkg-config, udev, xorg }:
 buildRosPackage {
   pname = "ros-humble-librealsense2";
-  version = "2.55.1-r1";
+  version = "2.56.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelRealSense/librealsense2-release/archive/release/humble/librealsense2/2.55.1-1.tar.gz";
-    name = "2.55.1-1.tar.gz";
-    sha256 = "c4f80335f89d731dc6320a7453c69772e9d2351b94220e6e82f0400a40e06385";
+    url = "https://github.com/ros2-gbp/librealsense2-release/archive/release/humble/librealsense2/2.56.4-1.tar.gz";
+    name = "2.56.4-1.tar.gz";
+    sha256 = "b75d8b431349ecf1d7c2668900206f110e50953b58339c67df0209aa2dba4b28";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-axis-description";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/axis_camera-release/archive/release/humble/axis_description/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "42adb697735b30ea2c3695e09d9aec3f4689fab9c5c61575617fccfa22637bf9";
+    url = "https://github.com/clearpath-gbp/axis_camera-release/archive/release/humble/axis_description/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "c15a676198d7aae0eac776eb16ebcae408a2fec046d03ac7b3ee71c5aa8b6a15";
   };
 
   buildType = "ament_cmake";

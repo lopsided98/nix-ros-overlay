@@ -1,0 +1,25 @@
+
+# Copyright 2025 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, cx-plugin, cx-utils, pluginlib, protobuf, protobuf-comm, python3Packages, rclcpp }:
+buildRosPackage {
+  pname = "ros-kilted-cx-protobuf-plugin";
+  version = "0.1.3-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/clips_executive-release/archive/release/kilted/cx_protobuf_plugin/0.1.3-1.tar.gz";
+    name = "0.1.3-1.tar.gz";
+    sha256 = "6c2e14490a5f9e38103bdce854da527e9a913e926047d6bbb9bfff70c777ea0a";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
+  propagatedBuildInputs = [ cx-plugin cx-utils pluginlib protobuf protobuf-comm python3Packages.jinja2 rclcpp ];
+  nativeBuildInputs = [ ament-cmake ];
+
+  meta = {
+    description = "CX plugin to send and receive protobuf messages";
+    license = with lib.licenses; [ "GPL-2.0-or-later" ];
+  };
+}

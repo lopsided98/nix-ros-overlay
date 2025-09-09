@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-utils-system";
-  version = "1.4.1-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/jazzy/autoware_utils_system/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "515e28bee8ceffa48252315094a117f07991b4bd481df3fe4f91955f1cd7408c";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/jazzy/autoware_utils_system/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "26ad92a4e2eeb9db2df95c2c6dc5676a60fceb8628d732a2b11c29a3fd45962b";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ds-dbw-msgs";
-  version = "2.3.3-r1";
+  version = "2.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/jazzy/ds_dbw_msgs/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "578967fcd233ebf2c30fb9d852652cf62c738d0756ab5ac8a641a9cb0861edb2";
+    url = "https://github.com/DataspeedInc-release/dbw_ros-release/archive/release/jazzy/ds_dbw_msgs/2.3.6-1.tar.gz";
+    name = "2.3.6-1.tar.gz";
+    sha256 = "d5b754744576f9d5c4cdf196c7d9684d13650e51693ace0d7c6adf9acab581ab";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, test-interface-files }:
 buildRosPackage {
   pname = "ros-jazzy-test-msgs";
-  version = "2.0.2-r2";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/jazzy/test_msgs/2.0.2-2.tar.gz";
-    name = "2.0.2-2.tar.gz";
-    sha256 = "f9217f21fc22978bd40d8efcb527d7b3bb0b388693999763867ee83fc077551b";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/jazzy/test_msgs/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "7b7819dee3d69bd293b1b108c11274f2cbb1d067a227d5397b3c72e08eb9bb13";
   };
 
   buildType = "ament_cmake";

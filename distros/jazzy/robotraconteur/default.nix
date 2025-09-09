@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bluez, boost, cmake, dbus, gtest, libusb1, openssl, python3, python3Packages, zlib }:
 buildRosPackage {
   pname = "ros-jazzy-robotraconteur";
-  version = "1.2.2-r1";
+  version = "1.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robotraconteur-release/archive/release/jazzy/robotraconteur/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "ddd6e43d4d9bb63324bbc72540e6f44058998459bb7b0e34d097a14ca7e6424c";
+    url = "https://github.com/ros2-gbp/robotraconteur-release/archive/release/jazzy/robotraconteur/1.2.6-1.tar.gz";
+    name = "1.2.6-1.tar.gz";
+    sha256 = "bce9d0e0721abd6f7b9b2d567d98e8c63364688daba3a40fecd982e9ad313fbd";
   };
 
   buildType = "cmake";

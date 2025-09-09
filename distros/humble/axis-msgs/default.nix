@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-axis-msgs";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/axis_camera-release/archive/release/humble/axis_msgs/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "f19d10a439d7d3acf999ad66b94f8dc3e822bd6368fd79033e9af5aa299bd42f";
+    url = "https://github.com/clearpath-gbp/axis_camera-release/archive/release/humble/axis_msgs/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "c199ec3ed29e330574d07251b8f6b9a707670dbf48fbeff6df5559e2194b2e36";
   };
 
   buildType = "catkin";

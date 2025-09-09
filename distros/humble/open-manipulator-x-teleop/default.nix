@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, control-msgs, geometry-msgs, nav-msgs, open-manipulator-x-bringup, open-manipulator-x-description, open-manipulator-x-moveit-config, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-open-manipulator-x-teleop";
-  version = "3.0.1-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/humble/open_manipulator_x_teleop/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "8c256869f9f423bff60c442494518dfdc7acec9bf162d17a897435b9a91222b3";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/humble/open_manipulator_x_teleop/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "c77f7f1c59b0381474aae7286605b89fd8dd6d1c12fb503adb975eb2e6354d54";
   };
 
   buildType = "ament_cmake";

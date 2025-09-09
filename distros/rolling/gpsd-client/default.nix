@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gps-msgs, gpsd, pkg-config, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-gpsd-client";
-  version = "2.0.4-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/rolling/gpsd_client/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "96800512a95261e232e894c2f8e0f9afac98bd36e1c05cb764731c3f0d48e816";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/rolling/gpsd_client/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "1fea5da3774b5eef795016020d10c19e57a3a3a2bad18ca28916fafb5a180d53";
   };
 
   buildType = "ament_cmake";

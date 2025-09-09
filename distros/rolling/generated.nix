@@ -16,8 +16,6 @@ self: super: {
 
  action-tutorials-py = self.callPackage ./action-tutorials-py {};
 
- actionlib-msgs = self.callPackage ./actionlib-msgs {};
-
  actuator-msgs = self.callPackage ./actuator-msgs {};
 
  adaptive-component = self.callPackage ./adaptive-component {};
@@ -57,8 +55,6 @@ self: super: {
  ament-cmake-export-dependencies = self.callPackage ./ament-cmake-export-dependencies {};
 
  ament-cmake-export-include-directories = self.callPackage ./ament-cmake-export-include-directories {};
-
- ament-cmake-export-interfaces = self.callPackage ./ament-cmake-export-interfaces {};
 
  ament-cmake-export-libraries = self.callPackage ./ament-cmake-export-libraries {};
 
@@ -176,9 +172,15 @@ self: super: {
 
  apriltag-tools = self.callPackage ./apriltag-tools {};
 
+ ardrone-sdk = self.callPackage ./ardrone-sdk {};
+
  ardrone-sumo = self.callPackage ./ardrone-sumo {};
 
  aruco = self.callPackage ./aruco {};
+
+ aruco-markers = self.callPackage ./aruco-markers {};
+
+ aruco-markers-msgs = self.callPackage ./aruco-markers-msgs {};
 
  aruco-msgs = self.callPackage ./aruco-msgs {};
 
@@ -191,6 +193,12 @@ self: super: {
  asio-cmake-module = self.callPackage ./asio-cmake-module {};
 
  async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
+
+ at-sonde-ros-driver = self.callPackage ./at-sonde-ros-driver {};
+
+ automatika-embodied-agents = self.callPackage ./automatika-embodied-agents {};
+
+ automatika-ros-sugar = self.callPackage ./automatika-ros-sugar {};
 
  automotive-autonomy-msgs = self.callPackage ./automotive-autonomy-msgs {};
 
@@ -211,6 +219,8 @@ self: super: {
  autoware-control-msgs = self.callPackage ./autoware-control-msgs {};
 
  autoware-internal-debug-msgs = self.callPackage ./autoware-internal-debug-msgs {};
+
+ autoware-internal-localization-msgs = self.callPackage ./autoware-internal-localization-msgs {};
 
  autoware-internal-metric-msgs = self.callPackage ./autoware-internal-metric-msgs {};
 
@@ -284,8 +294,6 @@ self: super: {
 
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
 
- behaviortree-cpp-v3 = self.callPackage ./behaviortree-cpp-v3 {};
-
  bicycle-steering-controller = self.callPackage ./bicycle-steering-controller {};
 
  bno055 = self.callPackage ./bno055 {};
@@ -354,21 +362,27 @@ self: super: {
 
  catch-ros2 = self.callPackage ./catch-ros2 {};
 
+ chained-filter-controller = self.callPackage ./chained-filter-controller {};
+
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
 
  class-loader = self.callPackage ./class-loader {};
 
  classic-bags = self.callPackage ./classic-bags {};
 
+ clips-executive = self.callPackage ./clips-executive {};
+
+ clips-vendor = self.callPackage ./clips-vendor {};
+
  cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
 
  coal = self.callPackage ./coal {};
 
- cob-actions = self.callPackage ./cob-actions {};
-
  cob-msgs = self.callPackage ./cob-msgs {};
 
  cob-srvs = self.callPackage ./cob-srvs {};
+
+ coin-d4-driver = self.callPackage ./coin-d4-driver {};
 
  color-names = self.callPackage ./color-names {};
 
@@ -394,11 +408,45 @@ self: super: {
 
  controller-interface = self.callPackage ./controller-interface {};
 
+ controller-manager = self.callPackage ./controller-manager {};
+
  controller-manager-msgs = self.callPackage ./controller-manager-msgs {};
 
  cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
+
+ cx-ament-index-plugin = self.callPackage ./cx-ament-index-plugin {};
+
+ cx-bringup = self.callPackage ./cx-bringup {};
+
+ cx-clips-env-manager = self.callPackage ./cx-clips-env-manager {};
+
+ cx-config-plugin = self.callPackage ./cx-config-plugin {};
+
+ cx-example-plugin = self.callPackage ./cx-example-plugin {};
+
+ cx-executive-plugin = self.callPackage ./cx-executive-plugin {};
+
+ cx-file-load-plugin = self.callPackage ./cx-file-load-plugin {};
+
+ cx-msgs = self.callPackage ./cx-msgs {};
+
+ cx-plugin = self.callPackage ./cx-plugin {};
+
+ cx-protobuf-plugin = self.callPackage ./cx-protobuf-plugin {};
+
+ cx-ros-comm-gen = self.callPackage ./cx-ros-comm-gen {};
+
+ cx-ros-msgs-plugin = self.callPackage ./cx-ros-msgs-plugin {};
+
+ cx-ros-param-plugin = self.callPackage ./cx-ros-param-plugin {};
+
+ cx-tf2-pose-tracker-plugin = self.callPackage ./cx-tf2-pose-tracker-plugin {};
+
+ cx-tutorial-agents = self.callPackage ./cx-tutorial-agents {};
+
+ cx-utils = self.callPackage ./cx-utils {};
 
  cyclonedds = self.callPackage ./cyclonedds {};
 
@@ -764,8 +812,6 @@ self: super: {
 
  grbl-ros = self.callPackage ./grbl-ros {};
 
- gripper-controllers = self.callPackage ./gripper-controllers {};
-
  gscam = self.callPackage ./gscam {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
@@ -894,6 +940,8 @@ self: super: {
 
  joint-state-publisher-gui = self.callPackage ./joint-state-publisher-gui {};
 
+ joint-state-topic-hardware-interface = self.callPackage ./joint-state-topic-hardware-interface {};
+
  joint-trajectory-controller = self.callPackage ./joint-trajectory-controller {};
 
  joy = self.callPackage ./joy {};
@@ -907,6 +955,8 @@ self: super: {
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
+
+ kdl-parser-py = self.callPackage ./kdl-parser-py {};
 
  key-teleop = self.callPackage ./key-teleop {};
 
@@ -1046,6 +1096,8 @@ self: super: {
 
  libpointmatcher = self.callPackage ./libpointmatcher {};
 
+ librealsense2 = self.callPackage ./librealsense2 {};
+
  libstatistics-collector = self.callPackage ./libstatistics-collector {};
 
  libyaml-vendor = self.callPackage ./libyaml-vendor {};
@@ -1057,6 +1109,8 @@ self: super: {
  lifecycle-py = self.callPackage ./lifecycle-py {};
 
  linux-isolate-process = self.callPackage ./linux-isolate-process {};
+
+ live555-vendor = self.callPackage ./live555-vendor {};
 
  log-view = self.callPackage ./log-view {};
 
@@ -1197,6 +1251,8 @@ self: super: {
  motion-capture-tracking = self.callPackage ./motion-capture-tracking {};
 
  motion-capture-tracking-interfaces = self.callPackage ./motion-capture-tracking-interfaces {};
+
+ motion-primitives-controllers = self.callPackage ./motion-primitives-controllers {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
@@ -1392,8 +1448,6 @@ self: super: {
 
  nav-msgs = self.callPackage ./nav-msgs {};
 
- neo-simulation2 = self.callPackage ./neo-simulation2 {};
-
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
  nlohmann-json-schema-validator-vendor = self.callPackage ./nlohmann-json-schema-validator-vendor {};
@@ -1442,11 +1496,15 @@ self: super: {
 
  om-spring-actuator-controller = self.callPackage ./om-spring-actuator-controller {};
 
+ omni-wheel-drive-controller = self.callPackage ./omni-wheel-drive-controller {};
+
  ompl = self.callPackage ./ompl {};
 
  open-manipulator = self.callPackage ./open-manipulator {};
 
  open-manipulator-bringup = self.callPackage ./open-manipulator-bringup {};
+
+ open-manipulator-collision = self.callPackage ./open-manipulator-collision {};
 
  open-manipulator-description = self.callPackage ./open-manipulator-description {};
 
@@ -1483,6 +1541,8 @@ self: super: {
  pal-statistics = self.callPackage ./pal-statistics {};
 
  pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
+
+ pangolin = self.callPackage ./pangolin {};
 
  parallel-gripper-controller = self.callPackage ./parallel-gripper-controller {};
 
@@ -1533,6 +1593,8 @@ self: super: {
  phidgets-msgs = self.callPackage ./phidgets-msgs {};
 
  phidgets-spatial = self.callPackage ./phidgets-spatial {};
+
+ phidgets-stepper = self.callPackage ./phidgets-stepper {};
 
  phidgets-temperature = self.callPackage ./phidgets-temperature {};
 
@@ -1588,6 +1650,8 @@ self: super: {
 
  position-controllers = self.callPackage ./position-controllers {};
 
+ protobuf-comm = self.callPackage ./protobuf-comm {};
+
  proxsuite = self.callPackage ./proxsuite {};
 
  py-binding-tools = self.callPackage ./py-binding-tools {};
@@ -1603,8 +1667,6 @@ self: super: {
  py-trees-ros-tutorials = self.callPackage ./py-trees-ros-tutorials {};
 
  py-trees-ros-viewer = self.callPackage ./py-trees-ros-viewer {};
-
- pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
 
  pybind11-vendor = self.callPackage ./pybind11-vendor {};
 
@@ -1700,6 +1762,8 @@ self: super: {
 
  rclpy = self.callPackage ./rclpy {};
 
+ rclpy-cascade-lifecycle = self.callPackage ./rclpy-cascade-lifecycle {};
+
  rclpy-message-converter = self.callPackage ./rclpy-message-converter {};
 
  rclpy-message-converter-msgs = self.callPackage ./rclpy-message-converter-msgs {};
@@ -1718,7 +1782,15 @@ self: super: {
 
  rcutils = self.callPackage ./rcutils {};
 
+ realsense2-camera = self.callPackage ./realsense2-camera {};
+
+ realsense2-camera-msgs = self.callPackage ./realsense2-camera-msgs {};
+
+ realsense2-description = self.callPackage ./realsense2-description {};
+
  realtime-tools = self.callPackage ./realtime-tools {};
+
+ reductstore-agent = self.callPackage ./reductstore-agent {};
 
  resource-retriever = self.callPackage ./resource-retriever {};
 
@@ -1754,15 +1826,11 @@ self: super: {
 
  rmf-demos-tasks = self.callPackage ./rmf-demos-tasks {};
 
- rmf-dev = self.callPackage ./rmf-dev {};
-
  rmf-dispenser-msgs = self.callPackage ./rmf-dispenser-msgs {};
 
  rmf-door-msgs = self.callPackage ./rmf-door-msgs {};
 
  rmf-fleet-adapter = self.callPackage ./rmf-fleet-adapter {};
-
- rmf-fleet-adapter-python = self.callPackage ./rmf-fleet-adapter-python {};
 
  rmf-fleet-msgs = self.callPackage ./rmf-fleet-msgs {};
 
@@ -1875,6 +1943,8 @@ self: super: {
  robotiq-description = self.callPackage ./robotiq-description {};
 
  robotraconteur = self.callPackage ./robotraconteur {};
+
+ robotraconteur-companion = self.callPackage ./robotraconteur-companion {};
 
  ros2-control = self.callPackage ./ros2-control {};
 
@@ -2058,6 +2128,8 @@ self: super: {
 
  rosidl-generator-py = self.callPackage ./rosidl-generator-py {};
 
+ rosidl-generator-rs = self.callPackage ./rosidl-generator-rs {};
+
  rosidl-generator-type-description = self.callPackage ./rosidl-generator-type-description {};
 
  rosidl-parser = self.callPackage ./rosidl-parser {};
@@ -2083,6 +2155,32 @@ self: super: {
  rosidl-typesupport-introspection-c = self.callPackage ./rosidl-typesupport-introspection-c {};
 
  rosidl-typesupport-introspection-cpp = self.callPackage ./rosidl-typesupport-introspection-cpp {};
+
+ rosidlcpp = self.callPackage ./rosidlcpp {};
+
+ rosidlcpp-generator-c = self.callPackage ./rosidlcpp-generator-c {};
+
+ rosidlcpp-generator-core = self.callPackage ./rosidlcpp-generator-core {};
+
+ rosidlcpp-generator-cpp = self.callPackage ./rosidlcpp-generator-cpp {};
+
+ rosidlcpp-generator-py = self.callPackage ./rosidlcpp-generator-py {};
+
+ rosidlcpp-generator-type-description = self.callPackage ./rosidlcpp-generator-type-description {};
+
+ rosidlcpp-parser = self.callPackage ./rosidlcpp-parser {};
+
+ rosidlcpp-typesupport-c = self.callPackage ./rosidlcpp-typesupport-c {};
+
+ rosidlcpp-typesupport-cpp = self.callPackage ./rosidlcpp-typesupport-cpp {};
+
+ rosidlcpp-typesupport-fastrtps-c = self.callPackage ./rosidlcpp-typesupport-fastrtps-c {};
+
+ rosidlcpp-typesupport-fastrtps-cpp = self.callPackage ./rosidlcpp-typesupport-fastrtps-cpp {};
+
+ rosidlcpp-typesupport-introspection-c = self.callPackage ./rosidlcpp-typesupport-introspection-c {};
+
+ rosidlcpp-typesupport-introspection-cpp = self.callPackage ./rosidlcpp-typesupport-introspection-cpp {};
 
  rosx-introspection = self.callPackage ./rosx-introspection {};
 
@@ -2168,6 +2266,32 @@ self: super: {
 
  rtabmap = self.callPackage ./rtabmap {};
 
+ rtabmap-conversions = self.callPackage ./rtabmap-conversions {};
+
+ rtabmap-demos = self.callPackage ./rtabmap-demos {};
+
+ rtabmap-examples = self.callPackage ./rtabmap-examples {};
+
+ rtabmap-launch = self.callPackage ./rtabmap-launch {};
+
+ rtabmap-msgs = self.callPackage ./rtabmap-msgs {};
+
+ rtabmap-odom = self.callPackage ./rtabmap-odom {};
+
+ rtabmap-python = self.callPackage ./rtabmap-python {};
+
+ rtabmap-ros = self.callPackage ./rtabmap-ros {};
+
+ rtabmap-rviz-plugins = self.callPackage ./rtabmap-rviz-plugins {};
+
+ rtabmap-slam = self.callPackage ./rtabmap-slam {};
+
+ rtabmap-sync = self.callPackage ./rtabmap-sync {};
+
+ rtabmap-util = self.callPackage ./rtabmap-util {};
+
+ rtabmap-viz = self.callPackage ./rtabmap-viz {};
+
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
 
  rti-connext-dds-cmake-module = self.callPackage ./rti-connext-dds-cmake-module {};
@@ -2182,8 +2306,6 @@ self: super: {
 
  rviz-2d-overlay-plugins = self.callPackage ./rviz-2d-overlay-plugins {};
 
- rviz-assimp-vendor = self.callPackage ./rviz-assimp-vendor {};
-
  rviz-common = self.callPackage ./rviz-common {};
 
  rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
@@ -2197,6 +2319,8 @@ self: super: {
  rviz-rendering-tests = self.callPackage ./rviz-rendering-tests {};
 
  rviz-resource-interfaces = self.callPackage ./rviz-resource-interfaces {};
+
+ rviz-satellite = self.callPackage ./rviz-satellite {};
 
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 
@@ -2338,8 +2462,6 @@ self: super: {
 
  swri-serial-util = self.callPackage ./swri-serial-util {};
 
- swri-system-util = self.callPackage ./swri-system-util {};
-
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
  synapticon-ros2-control = self.callPackage ./synapticon-ros2-control {};
@@ -2371,8 +2493,6 @@ self: super: {
  test-interface-files = self.callPackage ./test-interface-files {};
 
  test-msgs = self.callPackage ./test-msgs {};
-
- test-ros-gz-bridge = self.callPackage ./test-ros-gz-bridge {};
 
  tf2 = self.callPackage ./tf2 {};
 
@@ -2467,6 +2587,8 @@ self: super: {
  turtle-tf2-cpp = self.callPackage ./turtle-tf2-cpp {};
 
  turtle-tf2-py = self.callPackage ./turtle-tf2-py {};
+
+ turtlebot3-applications-msgs = self.callPackage ./turtlebot3-applications-msgs {};
 
  turtlebot3-autorace = self.callPackage ./turtlebot3-autorace {};
 
