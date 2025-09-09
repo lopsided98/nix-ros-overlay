@@ -266,6 +266,21 @@ in with lib; {
     ];
   });
 
+  usb-cam = rosSuper.usb-cam.overrideAttrs ({
+    nativeBuildInputs ? [],
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Remove undocumented pix_fmt (AV_PIX_FMT_XVMC) breaking the build
+      (self.fetchpatch {
+        url = "https://github.com/ros-drivers/usb_cam/commit/1d1970b1a88fb1be3b961073748879900d2b1a70.patch";
+        hash = "sha256-0iWl2DtqdjkyFy7lKa7aLxXjynm4ggNEQLxB45Mqf/Y=";
+      })
+    ];
+
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+  });
+
   vrpn = rosSuper.vrpn.overrideAttrs ({
     patches ? [], ...
   }: {
