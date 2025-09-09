@@ -154,8 +154,8 @@ in {
   });
 
   mcap-vendor = lib.patchVendorUrl rosSuper.mcap-vendor {
-    url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.3.0.tar.gz";
-    hash = "sha256-Qaz26F11VWxkQH8HfgVJLTHbHwmeByQu8ENkuyk5rPE=";
+    url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.3.1.tar.gz";
+    hash = "sha256-JCTITBfe8WrEBhWX0rkqLdnHN6qXidUCj1Xz0fmPnac=";
   };
 
   moveit-core = rosSuper.moveit-core.overrideAttrs ({
