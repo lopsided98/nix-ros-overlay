@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-cppcheck, ament-cmake-export-dependencies, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-xmllint }:
 buildRosPackage {
   pname = "ros-humble-autoware-lint-common";
-  version = "1.0.0-r2";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_cmake-release/archive/release/humble/autoware_lint_common/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "4a80f68ac0cfe1b5a15793e27026de58f7cf628b7f75ac5bb6ef299429456f16";
+    url = "https://github.com/ros2-gbp/autoware_cmake-release/archive/release/humble/autoware_lint_common/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "262b7889eb35ff70c0697741724a0cecd9aaf7d86820c004f9abbe5e814194c9";
   };
 
   buildType = "ament_cmake";

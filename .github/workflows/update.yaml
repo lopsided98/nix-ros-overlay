@@ -17,19 +17,20 @@ jobs:
           signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
       - name: Install Superflore
         run: |
-          nix-env -f . -iA python3Packages.rosdep superflore
+          nix build .#update-overlay
+      - name: Restore ROS tarball cache
+        uses: actions/cache/restore@v4
+        with:
+          # Use run_id to update the cache:
+          # https://github.com/actions/cache/blob/main/tips-and-workarounds.md#update-a-cache
+          key: tars-${{ github.run_id }}
+          restore-keys: tars
+          path: |
+            ~/.ros/tar
       - name: Update overlay
         env:
-          # Don't use secrets.GITHUB_TOKEN because it prevents the PR from
-          # triggering a build
-          # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows#about-workflow-events
-          SUPERFLORE_GITHUB_TOKEN: ${{ secrets.SUPERFLORE_GITHUB_TOKEN }}
-          ROS_OS_OVERRIDE: nixos
-          ROSDEP_SOURCE_PATH: rosdep-sources
+          GITHUB_RUNNER_TEMP: ${{ runner.temp }}
         run: |
-          mkdir -p "$ROSDEP_SOURCE_PATH"
-          curl https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/sources.list.d/20-default.list -o "$ROSDEP_SOURCE_PATH/20-default.list"
-          rosdep update
           git config --local user.email "superflore@github.com"
           git config --local user.name "Superflore"
           git config credential.helper '!
@@ -37,8 +38,37 @@ jobs:
               echo "username=lopsided98"
               echo "password=${SUPERFLORE_GITHUB_TOKEN}"
             }; f'
-          superflore-gen-nix \
-            --tar-archive-dir "${{ runner.temp }}/tar" \
+          nix run .#update-overlay
+      - name: Remove untouched files from the cache
+        run: "find ~/.ros/tar -atime +1 | tee >(xargs -r ls -lh >&2) | xargs -r rm"
+      - name: Save ROS tarball cache
+        uses: actions/cache/save@v4
+        with:
+          key: tars-${{ github.run_id }}
+          path: |
+            ~/.ros/tar
+      - name: Update ament_vendor info
+        continue-on-error: true
+        run: |
+          # permittedInsecurePackages is needed for updating some gz-*-vendor packages.
+          # Note that this runs without access to SUPERFLORE_GITHUB_TOKEN.
+          mkdir -p ~/.config/nixpkgs
+          echo '{ permittedInsecurePackages = [ "freeimage-3.18.0-unstable-2024-04-18" ]; }' > ~/.config/nixpkgs/config.nix
+          NIX_PATH=nixpkgs=$PWD ./maintainers/scripts/update-ament-vendor.sh || ret=$?
+          git commit -m 'Update vendored-source.json files' $(find -name vendored-source.json) || :
+          exit $ret
+      - name: Create PR
+        env:
+          # Don't use secrets.GITHUB_TOKEN because it prevents the PR from
+          # triggering a build
+          # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows#about-workflow-events
+          SUPERFLORE_GITHUB_TOKEN: ${{ secrets.SUPERFLORE_GITHUB_TOKEN }}
+        run: |
+          if [ $(stat --format='%s' .pr-message.tmp) -gt 65536 ]; then
+            echo "PR body too long - truncating!"
+            truncate -s 64K .pr-message.tmp
+          fi
+          superflore-gen-nix --pr-only \
+          nix run .#update-overlay -- --pr-only \
             --output-repository-path . \
             --upstream-branch develop \
-            --all

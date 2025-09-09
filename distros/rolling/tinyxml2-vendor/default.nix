@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-rolling-tinyxml2-vendor";
-  version = "0.10.0-r1";
+  version = "0.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tinyxml2_vendor-release/archive/release/rolling/tinyxml2_vendor/0.10.0-1.tar.gz";
-    name = "0.10.0-1.tar.gz";
-    sha256 = "965b5b7ad2da34e3845a8411c4a276e3a13d5474b839795543dac64b440a6fad";
+    url = "https://github.com/ros2-gbp/tinyxml2_vendor-release/archive/release/rolling/tinyxml2_vendor/0.11.0-1.tar.gz";
+    name = "0.11.0-1.tar.gz";
+    sha256 = "d89152fbaedb20065737333648d547a151cff01fb53023bf53b5f8c3bb7fd730";
   };
 
   buildType = "ament_cmake";

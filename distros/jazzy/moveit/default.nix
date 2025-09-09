@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-core, moveit-planners, moveit-plugins, moveit-ros, moveit-setup-assistant }:
 buildRosPackage {
   pname = "ros-jazzy-moveit";
-  version = "2.12.2-r1";
+  version = "2.12.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit/2.12.2-1.tar.gz";
-    name = "2.12.2-1.tar.gz";
-    sha256 = "7294fa1bef7b4d1b2911da5bd8f74a5d5386d46ef8890e9b62e4a675b4334440";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit/2.12.3-1.tar.gz";
+    name = "2.12.3-1.tar.gz";
+    sha256 = "caa60a658a3fc72c2e16340745c46692d83b496e5f613fdbb6d1dd6e4d5a8b10";
   };
 
   buildType = "ament_cmake";

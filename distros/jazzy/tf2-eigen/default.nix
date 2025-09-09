@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, geometry-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-tf2-eigen";
-  version = "0.36.8-r1";
+  version = "0.36.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_eigen/0.36.8-1.tar.gz";
-    name = "0.36.8-1.tar.gz";
-    sha256 = "e345591310ddf2c06911ab744925d1499c7b9ccd8d4928ac7c4942cb0239febf";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_eigen/0.36.11-1.tar.gz";
+    name = "0.36.11-1.tar.gz";
+    sha256 = "9800d686b38cda54c99e4bb078506632543d4a53d583f09a304583f517040fad";
   };
 
   buildType = "ament_cmake";

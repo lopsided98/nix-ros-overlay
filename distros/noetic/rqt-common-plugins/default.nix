@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, rqt-action, rqt-bag, rqt-bag-plugins, rqt-console, rqt-dep, rqt-graph, rqt-image-view, rqt-launch, rqt-logger-level, rqt-msg, rqt-plot, rqt-publisher, rqt-py-common, rqt-py-console, rqt-reconfigure, rqt-service-caller, rqt-shell, rqt-srv, rqt-top, rqt-topic, rqt-web }:
 buildRosPackage {
   pname = "ros-noetic-rqt-common-plugins";
-  version = "0.4.9-r1";
+  version = "0.4.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_common_plugins-release/archive/release/noetic/rqt_common_plugins/0.4.9-1.tar.gz";
-    name = "0.4.9-1.tar.gz";
-    sha256 = "76c6b6eef42e7935e220d53c6d52edea82550b947b0dbc0a0526d690bc169a9f";
+    url = "https://github.com/ros-gbp/rqt_common_plugins-release/archive/release/noetic/rqt_common_plugins/0.4.11-1.tar.gz";
+    name = "0.4.11-1.tar.gz";
+    sha256 = "d1ce530a87a6f54d2657ea1968c6170136ae9c9f08d26a604746d5312daef7ce";
   };
 
   buildType = "catkin";

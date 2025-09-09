@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages }:
 buildRosPackage {
   pname = "ros-noetic-gl-dependency";
-  version = "1.1.2-r1";
+  version = "1.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/gl_dependency-release/archive/release/noetic/gl_dependency/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "0dd1355fce88a9e67f0ee0f2c223511f7686e5a07bbabaecb7663a732452daf3";
+    url = "https://github.com/ros-gbp/gl_dependency-release/archive/release/noetic/gl_dependency/1.1.4-1.tar.gz";
+    name = "1.1.4-1.tar.gz";
+    sha256 = "8902c61f8050c400539da500f1687d65e25c3dbff7628b0f95cacd0d7655968a";
   };
 
   buildType = "catkin";

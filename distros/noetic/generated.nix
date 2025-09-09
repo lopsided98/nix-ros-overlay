@@ -4,13 +4,47 @@
 
 self: super: {
 
+ abb = self.callPackage ./abb {};
+
+ abb-crb15000-support = self.callPackage ./abb-crb15000-support {};
+
  abb-driver = self.callPackage ./abb-driver {};
 
  abb-egm-msgs = self.callPackage ./abb-egm-msgs {};
 
+ abb-irb1200-support = self.callPackage ./abb-irb1200-support {};
+
+ abb-irb120-support = self.callPackage ./abb-irb120-support {};
+
+ abb-irb1600-support = self.callPackage ./abb-irb1600-support {};
+
+ abb-irb2400-support = self.callPackage ./abb-irb2400-support {};
+
+ abb-irb2600-support = self.callPackage ./abb-irb2600-support {};
+
+ abb-irb4400-support = self.callPackage ./abb-irb4400-support {};
+
+ abb-irb4600-support = self.callPackage ./abb-irb4600-support {};
+
+ abb-irb52-support = self.callPackage ./abb-irb52-support {};
+
+ abb-irb5400-support = self.callPackage ./abb-irb5400-support {};
+
+ abb-irb6600-support = self.callPackage ./abb-irb6600-support {};
+
+ abb-irb6640-support = self.callPackage ./abb-irb6640-support {};
+
+ abb-irb6650s-support = self.callPackage ./abb-irb6650s-support {};
+
+ abb-irb6700-support = self.callPackage ./abb-irb6700-support {};
+
+ abb-irb7600-support = self.callPackage ./abb-irb7600-support {};
+
  abb-rapid-msgs = self.callPackage ./abb-rapid-msgs {};
 
  abb-rapid-sm-addin-msgs = self.callPackage ./abb-rapid-sm-addin-msgs {};
+
+ abb-resources = self.callPackage ./abb-resources {};
 
  abb-robot-msgs = self.callPackage ./abb-robot-msgs {};
 
@@ -660,6 +694,12 @@ self: super: {
 
  depth-image-proc = self.callPackage ./depth-image-proc {};
 
+ depth-image-publisher = self.callPackage ./depth-image-publisher {};
+
+ depth-obstacle-detect-ros = self.callPackage ./depth-obstacle-detect-ros {};
+
+ depth-obstacle-detect-ros-msgs = self.callPackage ./depth-obstacle-detect-ros-msgs {};
+
  depthai = self.callPackage ./depthai {};
 
  depthai-ros = self.callPackage ./depthai-ros {};
@@ -739,8 +779,6 @@ self: super: {
  dlux-plugins = self.callPackage ./dlux-plugins {};
 
  dnn-detect = self.callPackage ./dnn-detect {};
-
- downward = self.callPackage ./downward {};
 
  draco = self.callPackage ./draco {};
 
@@ -937,6 +975,12 @@ self: super: {
  etsi-its-mapem-ts-conversion = self.callPackage ./etsi-its-mapem-ts-conversion {};
 
  etsi-its-mapem-ts-msgs = self.callPackage ./etsi-its-mapem-ts-msgs {};
+
+ etsi-its-mcm-uulm-coding = self.callPackage ./etsi-its-mcm-uulm-coding {};
+
+ etsi-its-mcm-uulm-conversion = self.callPackage ./etsi-its-mcm-uulm-conversion {};
+
+ etsi-its-mcm-uulm-msgs = self.callPackage ./etsi-its-mcm-uulm-msgs {};
 
  etsi-its-messages = self.callPackage ./etsi-its-messages {};
 
@@ -2564,6 +2608,8 @@ self: super: {
 
  phidgets-api = self.callPackage ./phidgets-api {};
 
+ phidgets-current-inputs = self.callPackage ./phidgets-current-inputs {};
+
  phidgets-digital-inputs = self.callPackage ./phidgets-digital-inputs {};
 
  phidgets-digital-outputs = self.callPackage ./phidgets-digital-outputs {};
@@ -3114,8 +3160,6 @@ self: super: {
 
  ros-ethercat-eml = self.callPackage ./ros-ethercat-eml {};
 
- ros-google-cloud-language = self.callPackage ./ros-google-cloud-language {};
-
  ros-ign = self.callPackage ./ros-ign {};
 
  ros-ign-bridge = self.callPackage ./ros-ign-bridge {};
@@ -3594,8 +3638,6 @@ self: super: {
 
  single-joint-position-action = self.callPackage ./single-joint-position-action {};
 
- skyway = self.callPackage ./skyway {};
-
  slam-gmapping = self.callPackage ./slam-gmapping {};
 
  slam-karto = self.callPackage ./slam-karto {};
@@ -3605,8 +3647,6 @@ self: super: {
  slam-toolbox-msgs = self.callPackage ./slam-toolbox-msgs {};
 
  slam-toolbox-rviz = self.callPackage ./slam-toolbox-rviz {};
-
- slic = self.callPackage ./slic {};
 
  slider-publisher = self.callPackage ./slider-publisher {};
 
@@ -3778,6 +3818,8 @@ self: super: {
 
  test-diagnostic-aggregator = self.callPackage ./test-diagnostic-aggregator {};
 
+ test-grpc = self.callPackage ./test-grpc {};
+
  test-mavros = self.callPackage ./test-mavros {};
 
  test-osm = self.callPackage ./test-osm {};
@@ -3934,6 +3976,10 @@ self: super: {
 
  ur10e-moveit-config = self.callPackage ./ur10e-moveit-config {};
 
+ ur12e-moveit-config = self.callPackage ./ur12e-moveit-config {};
+
+ ur15-moveit-config = self.callPackage ./ur15-moveit-config {};
+
  ur16e-moveit-config = self.callPackage ./ur16e-moveit-config {};
 
  ur20-moveit-config = self.callPackage ./ur20-moveit-config {};
@@ -3947,6 +3993,8 @@ self: super: {
  ur5-moveit-config = self.callPackage ./ur5-moveit-config {};
 
  ur5e-moveit-config = self.callPackage ./ur5e-moveit-config {};
+
+ ur7e-moveit-config = self.callPackage ./ur7e-moveit-config {};
 
  ur-calibration = self.callPackage ./ur-calibration {};
 
@@ -4052,7 +4100,7 @@ self: super: {
 
  vl53l1x = self.callPackage ./vl53l1x {};
 
- voice-text = self.callPackage ./voice-text {};
+ voicevox = self.callPackage ./voicevox {};
 
  volta-base = self.callPackage ./volta-base {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, mk, rosboost-cfg, rosbuild, roscpp, rostest, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rosping";
-  version = "2.1.28-r1";
+  version = "2.1.31-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/rosping/2.1.28-1.tar.gz";
-    name = "2.1.28-1.tar.gz";
-    sha256 = "7d493fed4ad1860523560a628846f66e7b6ac5f4b74790eae2ea62ee007bd05a";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/rosping/2.1.31-3.tar.gz";
+    name = "2.1.31-3.tar.gz";
+    sha256 = "e321e7e0ae7e3ba871729f5057402d780eb43f4da90e0551dfc695d62273eaac";
   };
 
   buildType = "catkin";

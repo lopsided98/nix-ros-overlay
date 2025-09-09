@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, fmt, moveit-common, moveit-core, moveit-ros-planning, moveit-ros-visualization, pluginlib, rclcpp, rviz-common, rviz-rendering, srdfdom, urdf }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-setup-framework";
-  version = "2.12.2-r1";
+  version = "2.12.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_setup_framework/2.12.2-1.tar.gz";
-    name = "2.12.2-1.tar.gz";
-    sha256 = "fcebcc61f1ade142ae2b8bed833f8ca00c08c135cb64efd093ecceb53f05f3c5";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_setup_framework/2.12.3-1.tar.gz";
+    name = "2.12.3-1.tar.gz";
+    sha256 = "83d4a3c749714b96073958d004014d6e7bf65a792596f66eb8efaccf10b857e2";
   };
 
   buildType = "ament_cmake";

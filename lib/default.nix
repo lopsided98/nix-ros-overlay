@@ -81,51 +81,91 @@
   # Patch a vendored download that uses ament_vendor() with a Git repo as the
   # source.
   patchAmentVendorGit = pkg: {
-    url,
-    originalUrl ? url,
-    rev, # Must correspond to the VCS_VERSION argument
     file ? "CMakeLists.txt",
     fetchgitArgs ? {},
     tarSourceArgs ? {}
   }: pkg.overrideAttrs ({
+    cmakeFlags ? [],
     nativeBuildInputs ? [],
+    passthru ? {},
     postPatch ? "", ...
   }: let
+    # Make sure that non-existence of vendored-source.json file
+    # doesn't cause eval errors. This would break automatic updates.
+    vendoredSourceJson = "${dirOf pkg.meta.position}/vendored-source.json";
+    inherit (builtins) stringLength substring pathExists mapAttrs attrValues;
+    nameStart = 5 + stringLength pkg.rosDistro; # e.g. ros-jazzy- => 10
+    attr = substring nameStart (-1) pkg.pname;
+    errMsg = ''
+      error: File ${vendoredSourceJson} missing.
+      Run "$(nix-build -A rosPackages.${pkg.rosDistro}.${attr}.updateAmentVendor)" to create it.
+    '';
+    sourceInfos = builtins.fromJSON (builtins.readFile vendoredSourceJson);
     # ament_vendor doesn't allow patches for path inputs, so we have to pack it
     # into a tar first. Additionally, vcstool only accepts tarballs with the
     # version number as the root directory name.
-    vendor = lib.tarSource tarSourceArgs (self.fetchgit (fetchgitArgs // {
-      name = rev;
-      inherit url rev;
-    }));
+    vendor = sourceInfo: lib.tarSource tarSourceArgs (
+      self.fetchgit (sourceInfo // fetchgitArgs // {
+        name = sourceInfo.rev;
+      }));
   in {
-    # CMake ExternalProject patches are applied with git apply
-    nativeBuildInputs = nativeBuildInputs ++ [ self.git ];
-    postPatch = ''
-      sed -i '\|VCS_URL\s*${originalUrl}|c\
-        VCS_URL "file://${vendor}"\
-        VCS_TYPE tar' \
-        ${lib.escapeShellArg file}
-    '' + postPatch;
+
+    nativeBuildInputs = [
+      # Prepend wrapped ament_vendor to be found by CMake before the
+      # unwrapped one
+      rosSelf.ament-cmake-vendor-package-wrapped
+    ] ++ nativeBuildInputs ++ [
+      # CMake ExternalProject patches are applied with git apply
+      self.git
+    ];
+    cmakeFlags = cmakeFlags ++ lib.optionals (pathExists vendoredSourceJson)
+      (
+        # Tell ament_vendor_wrapper.cmake where to find tarballs with vendored sources
+        attrValues (mapAttrs (n: v: "-DAMENT_VENDOR_NIX_TAR_${n}=${vendor v}") sourceInfos)
+      );
+    postPatch =
+      if pathExists vendoredSourceJson then
+        postPatch
+      else ''
+        echo >&2 ${lib.escapeShellArg errMsg}
+        exit 1
+      '';
+    passthru = passthru // {
+      # Script to automatically update vendored-source.json by running
+      # CMake with injected modified version of ament_cmake macro.
+      updateAmentVendor = let
+        source = self.srcOnly pkg;
+        sourceDrvPath = builtins.unsafeDiscardOutputDependency source.drvPath;
+        updateScript = self.writeShellScript "ament-vendor-update.sh" ''
+          set -eo pipefail
+          cd "$(${self.coreutils}/bin/mktemp -d)"
+          trap "${self.coreutils}/bin/rm -rf '$PWD'" SIGINT SIGTERM ERR EXIT
+          source "$stdenv/setup"
+          export NIX_SSL_CERT_FILE="${self.cacert}/etc/ssl/certs/ca-bundle.crt"
+          export PATH="${lib.makeBinPath (with self; [ nix-prefetch-git jq nix ])}:$PATH"
+          # Ask CMake to generate vendored-source.json
+          export CMAKE_PREFIX_PATH=${rosSelf.ament-cmake-vendor-package-wrapped}
+          cmakeFlags+='-DAMENT_VENDOR_NIX_PREFETCH=ON'
+          phases="''${prePhases[*]:-} unpackPhase patchPhase ''${preConfigurePhases[*]:-} configurePhase ''${preBuildPhases[*]:-}" \
+            genericBuild
+          # Copy the resulting data to package source directory
+          cp -v vendored-source.json ${dirOf pkg.meta.position}
+        '';
+      in self.writeShellScript "update-${pkg.pname}" ''
+        set -eo pipefail
+        echo ============== Updating ${pkg.pname} ==============
+        NIX_BUILD_SHELL=${self.runtimeShell} nix-shell --pure ${sourceDrvPath} --run ${updateScript}
+      '';
+    };
   });
 
   # patchAmentVendorGit specialized for gz-*-vendor packages. In
-  # addition to patching ament_vendor() calls, it adds a check to
-  # CMakeLists.txt to detect upstream updates of the vendored package
-  # version.
+  # addition to patching ament_vendor() calls, it patches other things
+  # in CMakeLists.txt.
   patchGzAmentVendorGit = pkg: {
-    version,
-    hash,
     tarSourceArgs ? {}
   }: let
-    stem = lib.strings.removeSuffix "-vendor"
-      (lib.strings.removePrefix "ros-${pkg.rosDistro}-" pkg.pname); # e.g. gz-cmake
-    majorNum = lib.versions.major version;
     patchedPkg = lib.patchAmentVendorGit pkg {
-      url = "https://github.com/gazebosim/${stem}.git";
-      originalUrl = "https://github.com/gazebosim/\${GITHUB_NAME}.git";
-      rev = "${stem}${majorNum}_${version}"; # e.g. "gz-cmake3_3.5.3"
-      fetchgitArgs.hash = hash;
       inherit tarSourceArgs;
     };
   in patchedPkg.overrideAttrs ({
@@ -137,12 +177,6 @@
         --replace-fail 'opt/''${PROJECT_NAME}/extra_cmake' 'share/extra_cmake'
       substituteInPlace *-extras.cmake.in \
         --replace-fail 'opt/@PROJECT_NAME@/extra_cmake' 'share/extra_cmake'
-
-      cat >> CMakeLists.txt <<'EOF'
-      if(NOT ''${LIB_VER} VERSION_EQUAL "${version}")
-        message(FATAL_ERROR "Mismatch in ${pname} version (Nix: ${version}, upstream: ''${LIB_VER}). Fix this in overrides.nix.")
-      endif()
-      EOF
     '';
   });
 

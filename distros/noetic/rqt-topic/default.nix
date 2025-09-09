@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, catkin, python-qt-binding, python3Packages, rostopic, rqt-gui, rqt-gui-py, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rqt-topic";
-  version = "0.4.13-r1";
+  version = "0.4.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rqt_topic-release/archive/release/noetic/rqt_topic/0.4.13-1.tar.gz";
-    name = "0.4.13-1.tar.gz";
-    sha256 = "71b19f1b04cac8826e67b6cea1759cd4ede002eadbfeae9421a675e1bcdba30e";
+    url = "https://github.com/ros-gbp/rqt_topic-release/archive/release/noetic/rqt_topic/0.4.15-1.tar.gz";
+    name = "0.4.15-1.tar.gz";
+    sha256 = "ba985bc33de6130b0877db41d15572c74ee38a7ed89a57ae306f36643517bafd";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
+  buildInputs = [ catkin python3Packages.setuptools ];
   propagatedBuildInputs = [ python-qt-binding python3Packages.rospkg rostopic rqt-gui rqt-gui-py std-msgs ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
     description = "rqt_topic provides a GUI plugin for displaying debug information about ROS topics including publishers, subscribers, publishing rate, and ROS Messages.";

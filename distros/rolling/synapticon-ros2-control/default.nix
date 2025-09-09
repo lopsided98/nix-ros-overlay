@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/synapticon/synapticon_ros2_control-release/archive/release/rolling/synapticon_ros2_control/0.1.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/synapticon_ros2_control-release/archive/release/rolling/synapticon_ros2_control/0.1.2-1.tar.gz";
     name = "0.1.2-1.tar.gz";
     sha256 = "b584a7d0f6f40f84d83dfac0b11b91bd38cd75969c5f3876708a11d4d7bc4b27";
   };

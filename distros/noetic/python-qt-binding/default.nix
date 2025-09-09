@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, python3Packages, qt5, rosbuild }:
 buildRosPackage {
   pname = "ros-noetic-python-qt-binding";
-  version = "0.4.4-r1";
+  version = "0.4.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/python_qt_binding-release/archive/release/noetic/python_qt_binding/0.4.4-1.tar.gz";
-    name = "0.4.4-1.tar.gz";
-    sha256 = "d4db9983e7df47036a7afa16aac5db9e5c3de0de0c9a203fd0a2419456d035a7";
+    url = "https://github.com/ros-gbp/python_qt_binding-release/archive/release/noetic/python_qt_binding/0.4.6-1.tar.gz";
+    name = "0.4.6-1.tar.gz";
+    sha256 = "207a57e43d149f40a09b573a948ce0bfb9d3b9c0923ab2ec74ecf9f2969c0010";
   };
 
   buildType = "catkin";

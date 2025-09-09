@@ -23,7 +23,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     # to worry about collisions with system packages and Nix tooling generally
     # expects standard directories.
     postPatch = postPatch + ''
-      ls -l cmake/templates
       substituteInPlace cmake/ament_vendor.cmake \
         --replace-fail 'opt/''${PROJECT_NAME}' .
       substituteInPlace cmake/templates/vendor_package.dsv.in \
@@ -32,6 +31,23 @@ rosSelf: rosSuper: with rosSelf.lib; {
         --replace-fail '/opt/@PROJECT_NAME@' ""
       substituteInPlace cmake/templates/vendor_package_cmake_prefix.dsv.in \
         --replace-fail 'opt/@PROJECT_NAME@' ""
+    '';
+  });
+
+  # Version of ament-cmake-vendor-package for use in Nix build sandbox
+  # without network access. The unwrapped version is still useful in
+  # e.g. nix-shell.
+  ament-cmake-vendor-package-wrapped = rosSelf.ament-cmake-vendor-package.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      # Rename the macro so that we can wrap it with our wrapper
+      substituteInPlace cmake/ament_vendor.cmake \
+        --replace-fail 'macro(ament_vendor TARGET_NAME)' 'macro(ament_vendor_orig TARGET_NAME)'
+      cp ${./ament_vendor_wrapper.cmake} ament_vendor_wrapper.cmake
+      # Add our wrapper to the list of cmake files
+      substituteInPlace CMakeLists.txt \
+        --replace-fail 'CONFIG_EXTRAS' 'CONFIG_EXTRAS "ament_vendor_wrapper.cmake"'
     '';
   });
 
@@ -48,6 +64,44 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
     postPatch = postPatch + ''
      sed '/-Wl,--as-needed/d' -i cmake/BackwardConfigAment.cmake
+    '';
+  });
+
+  # Cartographer is unmaintained upstream:
+  # https://github.com/cartographer-project/cartographer?tab=readme-ov-file#a-note-for-ros-users
+  cartographer = rosSuper.cartographer.overrideAttrs ({
+    nativeBuildInputs ? [],
+    postPatch ? "", ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+
+    # Add ABSL_ prefix to thread annotation macros. See
+    # https://github.com/abseil/abseil-cpp/commit/6acb60c161f1203e6eca929b87f2041da7714bfe
+    # Note that the mentioned ABSL_LEGACY_THREAD_ANNOTATIONS is no
+    # longer available so we have to patch all call sites.
+    postPatch = ''
+      sed -i -Ee 's/\<(LOCKS_EXCLUDED|EXCLUSIVE_LOCKS_REQUIRED|GUARDED_BY)\>/ABSL_\1/g' \
+          $(find -name \*.h -o -name \*.cc )
+    '';
+  });
+
+  cartographer-ros = rosSuper.cartographer-ros.overrideAttrs ({
+    patches ? [],
+    postPatch ? "", ...
+  }: {
+    patches = patches ++ [
+      # Fix compilation with glog >= 0.7.0 (https://github.com/ros2/cartographer_ros/pull/76)
+      (self.fetchpatch {
+        url = "https://github.com/ros2/cartographer_ros/commit/58cd253615606efbf0bf69d16a932d35aadef1f7.patch";
+        hash = "sha256-rmolyUYIWPT37kYITDW4cRO0XJNdIYs6AoUWgWVb8PU=";
+        stripLen = 1;
+      })
+    ];
+
+    # Add ABSL_ prefix to thread annotation macros. See details above.
+    postPatch = ''
+      sed -i -Ee 's/\<(LOCKS_EXCLUDED|EXCLUSIVE_LOCKS_REQUIRED|GUARDED_BY)\>/ABSL_\1/g' \
+          $(find -name \*.h -o -name \*.cpp )
     '';
   });
 
@@ -119,6 +173,19 @@ rosSelf: rosSuper: with rosSelf.lib; {
 
     buildInputs = buildInputs ++ [ self.cpptoml ];
     cmakeFlags = cmakeFlags ++ [ "-DDOWNLOAD_TOML_LIB=OFF" ];
+  });
+
+  lanelet2-core = rosSuper.lanelet2-core.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix compilation with Boost 1.87
+      (self.fetchpatch {
+        url = "https://github.com/fzi-forschungszentrum-informatik/Lanelet2/pull/399/commits/ab7d2f4dee299563c6313336c070ed99635aba3f.patch";
+        hash = "sha256-RKTjYPlnFY4JPGMa4YfyHUEY9X/Y1UpkNzB7AHmk4p0=";
+        stripLen = 1;
+      })
+    ];
   });
 
   libcamera = rosSuper.libcamera.overrideAttrs ({

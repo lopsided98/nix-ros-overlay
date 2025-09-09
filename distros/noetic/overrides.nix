@@ -5,17 +5,6 @@ self.lib.composeManyExtensions [
 (rosSelf: rosSuper: let
   lib = rosSelf.lib;
 in {
-  angles = rosSuper.angles.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    # Remove distutils dependency
-    patches = patches ++ [ (self.fetchpatch {
-      url = "https://github.com/ros/angles/commit/fe974f2d84b719d3aa0593a4bf633183d75ba213.patch";
-      hash = "sha256-96i+ZmISZzjYedoqIYt/2eMoDUK/RcKhj2BZrUkAgW8=";
-      stripLen = 1;
-    }) ];
-  });
-
   base-local-planner = rosSuper.base-local-planner.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -64,16 +53,6 @@ in {
   joy = rosSuper.joy.overrideAttrs ({ ... }: {
     # Boost.Math 1.87 requires C++14
     NIX_CFLAGS_COMPILE = ["-std=c++14"];
-  });
-
-  laser-geometry = rosSuper.laser-geometry.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    # Boost.Math 1.87 requires C++14
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt \
-        --replace-fail 'set(CMAKE_CXX_STANDARD 11)' 'set(CMAKE_CXX_STANDARD 14)'
-    '';
   });
 
   libfranka = rosSuper.libfranka.overrideAttrs ({
@@ -218,17 +197,6 @@ in {
     sha256 = "sha256-IBlmph3IJvGxh5okozF6HskhSpGMjrA1vi8ww+nPvcs=";
   };
 
-  robot-state-publisher = rosSuper.robot-state-publisher.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    # Use C++14 for Boost.Math compatibility
-    # https://github.com/ros/robot_state_publisher/pull/190
-    patches = patches ++ [ (self.fetchpatch {
-      url = "https://github.com/ros/robot_state_publisher/commit/8478b2aface9e4349f8a0bce61eb74dbfd9bfb63.patch";
-      hash = "sha256-BQt6HoOBMM5bJCADve19uH1RSLLNQlG9aR6g1p58WPw=";
-    }) ];
-  });
-
   rosconsole = rosSuper.rosconsole.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -255,14 +223,38 @@ in {
     }) ];
   });
 
-  rviz = rosSuper.rviz.overrideAttrs ({
-    patches ? [], ...
+  rosmon-core = rosSuper.rosmon-core.overrideAttrs ({
+    cmakeFlags ? [], postPatch ? "", ...
   }: {
-    # Replace boost::filesystem::extension()
-    patches = patches ++ [ (self.fetchpatch {
-      url = "https://github.com/ros-visualization/rviz/commit/250c0c2875758953f98f3b1982d11b55f527b295.patch";
-      hash = "sha256-dr1dPSStGFPimac/LaDmPfojFl+iIc6lz2lIhXf9rTE=";
-    }) ];
+    cmakeFlags = cmakeFlags ++ [
+       # Boost.Math requires C++14
+       (lib.cmakeFeature "CMAKE_CXX_STANDARD" "14")
+    ];
+    postPatch = postPatch + ''
+      # use of std::array
+      substituteInPlace src/logger.cpp \
+      --replace-fail \
+          "#include <unistd.h>" \
+          "#include <unistd.h>
+           #include <array>"
+
+      # https://www.boost.org/doc/libs/latest/libs/filesystem/doc/deprecated.html
+      substituteInPlace src/main.cpp \
+        --replace-fail \
+          "it->path().leaf()" \
+          "it->path().filename()" \
+        --replace-fail \
+          "fs::basename(launchFilePath)" \
+          "fs::path(launchFilePath).stem().string()"
+    '';
+  });
+
+  rqt-rosmon = rosSuper.rqt-rosmon.overrideAttrs ({
+    cmakeFlags ? [], ...
+  }: {
+    cmakeFlags = cmakeFlags ++ [
+      (lib.cmakeFeature "CMAKE_CXX_STANDARD" "14")
+    ];
   });
 
   rviz-map-plugin = rosSuper.rviz-map-plugin.overrideAttrs ({
@@ -288,26 +280,10 @@ in {
     '';
   });
 
-  tf = rosSuper.tf.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    # Boost.Math 1.87 requires C++14
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt \
-        --replace-fail COMPILER_SUPPORTS_CXX11 COMPILER_SUPPORTS_CXX14 \
-        --replace-fail '-std=c++11' '-std=c++14'
-    '';
-  });
-
-  tf2 = rosSuper.tf2.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [ (self.fetchpatch {
-      # Add missing #include for boost::tuple
-      url = "https://github.com/ros/geometry2/commit/08b4cc720bf95428a30a54d9e9a8257849a93c61.patch";
-      hash = "sha256-pxeJ1gE3kMaN3I4DH9E65dBrhQonuw7WKStEBfLWzY4=";
-      stripLen = 1;
-    }) ];
+  xacro = rosSuper.xacro.overrideAttrs ({
+    propagatedBuildInputs ? [], ...
+  } : {
+    propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.python3Packages.distutils ];
   });
 
 })

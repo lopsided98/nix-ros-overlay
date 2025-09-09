@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-rolling-autoware-perception-msgs";
-  version = "1.3.0-r1";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/rolling/autoware_perception_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "d5d4dfbbf3475d470c9c490165851d3107432fadd19ec0767a833341b8a28aa9";
+    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/rolling/autoware_perception_msgs/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "866a7d6957354e0ddcf8faa5a6c451b153e2c2fcdb7c5fe8d60097c558a39546";
   };
 
   buildType = "ament_cmake";

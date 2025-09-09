@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-noetic-urdf-parser-plugin";
-  version = "1.13.2-r1";
+  version = "1.13.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/urdf-release/archive/release/noetic/urdf_parser_plugin/1.13.2-1.tar.gz";
-    name = "1.13.2-1.tar.gz";
-    sha256 = "dbcd40e7d574614908247854c7e3819cc0de375257f7e9e375596d6829e50603";
+    url = "https://github.com/ros-gbp/urdf-release/archive/release/noetic/urdf_parser_plugin/1.13.4-1.tar.gz";
+    name = "1.13.4-1.tar.gz";
+    sha256 = "b3c2cefdd84e23420c808386abbd86ea32b85944e16470d49bf4db314c4c4351";
   };
 
   buildType = "catkin";

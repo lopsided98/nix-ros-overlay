@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, performance-test-fixture, rosidl-runtime-c }:
 buildRosPackage {
   pname = "ros-rolling-rosidl-runtime-cpp";
-  version = "4.9.3-r1";
+  version = "4.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_runtime_cpp/4.9.3-1.tar.gz";
-    name = "4.9.3-1.tar.gz";
-    sha256 = "8f6a694eb4bd3659646602539aa5263ebd2a95289ebc587670be13b1cea69e83";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_runtime_cpp/4.10.0-1.tar.gz";
+    name = "4.10.0-1.tar.gz";
+    sha256 = "a6309a2bd66dc213a74d6de006fc572f97e5d26406c228617894f45a0f753fc9";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-stereo-msgs";
-  version = "4.2.4-r1";
+  version = "4.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/stereo_msgs/4.2.4-1.tar.gz";
-    name = "4.2.4-1.tar.gz";
-    sha256 = "820bba8c341eb3284eba36c2f3a067c7bb5bf7773659d184f702797f3d1a9278";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/stereo_msgs/4.8.0-1.tar.gz";
+    name = "4.8.0-1.tar.gz";
+    sha256 = "739669dd42d353899498b07c3552f6f5f52d784e100fe317033715f055d23e72";
   };
 
   buildType = "ament_cmake";

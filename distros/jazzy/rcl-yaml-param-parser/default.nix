@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, libyaml, libyaml-vendor, mimick-vendor, osrf-testing-tools-cpp, performance-test-fixture, rcutils, rmw }:
 buildRosPackage {
   pname = "ros-jazzy-rcl-yaml-param-parser";
-  version = "9.2.4-r1";
+  version = "9.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/jazzy/rcl_yaml_param_parser/9.2.4-1.tar.gz";
-    name = "9.2.4-1.tar.gz";
-    sha256 = "2387f2e0e91805f22af3e86ec9b3f493032e63ae457c63a144b6f5b5ac9d7755";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/jazzy/rcl_yaml_param_parser/9.2.6-1.tar.gz";
+    name = "9.2.6-1.tar.gz";
+    sha256 = "3245e252ca391d37ba69891950c8075596cbffbc0f457ec22ad6f2bee2be208e";
   };
 
   buildType = "ament_cmake";

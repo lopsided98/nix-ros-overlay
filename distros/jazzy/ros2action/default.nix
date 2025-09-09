@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, launch, launch-testing, launch-testing-ros, python3Packages, rclpy, ros2cli, rosidl-runtime-py, test-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ros2action";
-  version = "0.32.2-r1";
+  version = "0.32.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/jazzy/ros2action/0.32.2-1.tar.gz";
-    name = "0.32.2-1.tar.gz";
-    sha256 = "d4b1585b7eff033cf7968d629aee0169e1f85f978dff1a914c85db083462821b";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/jazzy/ros2action/0.32.4-1.tar.gz";
+    name = "0.32.4-1.tar.gz";
+    sha256 = "223884ef5f4605b14c08bbb370aa9a675c5b89031b77cd2c3f5c52f70218ee2d";
   };
 
   buildType = "ament_python";

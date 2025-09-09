@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, roscpp-tutorials, rospy-tutorials, turtlesim }:
 buildRosPackage {
   pname = "ros-noetic-ros-tutorials";
-  version = "0.10.2-r1";
+  version = "0.10.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_tutorials-release/archive/release/noetic/ros_tutorials/0.10.2-1.tar.gz";
-    name = "0.10.2-1.tar.gz";
-    sha256 = "a0c6ae6566e4b340c27826cef30b0706d1d24ac101884b1f3948a26281b23f5e";
+    url = "https://github.com/ros-gbp/ros_tutorials-release/archive/release/noetic/ros_tutorials/0.10.3-1.tar.gz";
+    name = "0.10.3-1.tar.gz";
+    sha256 = "5d2210ba31ebc201323264749901d90478792bd41323be34d637a382ffd3c16c";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, joint-state-publisher-gui, launch, launch-ros, launch-testing-ament-cmake, launch-testing-ros, robot-state-publisher, rviz2, urdf, urdfdom, xacro }:
 buildRosPackage {
   pname = "ros-rolling-ur-description";
-  version = "3.0.1-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ur_description-release/archive/release/rolling/ur_description/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "68f84c13812efcff8007f1ba80f8072c968c376e8901787a1e980f4cb29a9066";
+    url = "https://github.com/ros2-gbp/ur_description-release/archive/release/rolling/ur_description/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "11ac34fdef88bf1ec77949920c81793245cf46e610f0482142d71e11dc8bbf7c";
   };
 
   buildType = "ament_cmake";

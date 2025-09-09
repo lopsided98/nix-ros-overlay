@@ -2,21 +2,21 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catkin, rosunit }:
+{ lib, buildRosPackage, fetchurl, catkin, python3Packages, rosunit }:
 buildRosPackage {
   pname = "ros-noetic-angles";
-  version = "1.9.13-r1";
+  version = "1.9.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry_angles_utils-release/archive/release/noetic/angles/1.9.13-1.tar.gz";
-    name = "1.9.13-1.tar.gz";
-    sha256 = "bd33e903e57fce8b8cfc4444924e684088609475b61cdd8343e80be60a4861ea";
+    url = "https://github.com/ros-gbp/geometry_angles_utils-release/archive/release/noetic/angles/1.9.14-1.tar.gz";
+    name = "1.9.14-1.tar.gz";
+    sha256 = "a34880d681ee68ee08234bc5cda436ff23fd513713558bb54c6fba8ba77d7b11";
   };
 
   buildType = "catkin";
-  buildInputs = [ catkin ];
+  buildInputs = [ catkin python3Packages.setuptools ];
   checkInputs = [ rosunit ];
-  nativeBuildInputs = [ catkin ];
+  nativeBuildInputs = [ catkin python3Packages.setuptools ];
 
   meta = {
     description = "This package provides a set of simple math utilities to work

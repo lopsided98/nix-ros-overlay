@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-wireless-msgs";
-  version = "1.1.3-r1";
+  version = "1.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/jazzy/wireless_msgs/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "77f77397cca6414d70666eab1b05ba8ffd94a203c62f8ab50ec370f2e3e3e1bc";
+    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/jazzy/wireless_msgs/1.1.5-1.tar.gz";
+    name = "1.1.5-1.tar.gz";
+    sha256 = "6fe8f189fd313491a95c38e95487fe0f81ac4740cee8c5487aa4a2443aa64b61";
   };
 
   buildType = "ament_cmake";

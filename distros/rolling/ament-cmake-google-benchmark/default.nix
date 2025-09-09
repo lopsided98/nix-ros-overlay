@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-export-dependencies, ament-cmake-python, ament-cmake-test, google-benchmark-vendor }:
 buildRosPackage {
   pname = "ros-rolling-ament-cmake-google-benchmark";
-  version = "2.7.2-r2";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/rolling/ament_cmake_google_benchmark/2.7.2-2.tar.gz";
-    name = "2.7.2-2.tar.gz";
-    sha256 = "0b44e94f0ef50988e0f4f348b8ab173dc763fdd4bd5744e530a9cc06615008d1";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/rolling/ament_cmake_google_benchmark/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "02dab6e47616314bd6549ea3458346544c14362b08db475003c59f0a6dd9ee51";
   };
 
   buildType = "ament_cmake";

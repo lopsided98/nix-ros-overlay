@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, builtin-interfaces, geometry-msgs, python3Packages, rclpy, sensor-msgs, std-msgs, tf2-msgs, tf2-py }:
 buildRosPackage {
   pname = "ros-jazzy-tf2-ros-py";
-  version = "0.36.8-r1";
+  version = "0.36.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_ros_py/0.36.8-1.tar.gz";
-    name = "0.36.8-1.tar.gz";
-    sha256 = "b75bcf8a926f6d0342166306c989ed491585a9647796b74830b2845f143b05bd";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_ros_py/0.36.11-1.tar.gz";
+    name = "0.36.11-1.tar.gz";
+    sha256 = "e7eae6f00586efad51db016da2094a4db42626b190218cb05215e29a2c8f0313";
   };
 
   buildType = "ament_python";

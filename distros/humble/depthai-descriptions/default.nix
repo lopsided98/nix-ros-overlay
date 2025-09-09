@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-humble-depthai-descriptions";
-  version = "2.11.0-r1";
+  version = "2.11.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/humble/depthai_descriptions/2.11.0-1.tar.gz";
-    name = "2.11.0-1.tar.gz";
-    sha256 = "9d475fb6b85da920f33ec3454e3f2a6a78447903792d3019eddd42950adb7e17";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/humble/depthai_descriptions/2.11.2-1.tar.gz";
+    name = "2.11.2-1.tar.gz";
+    sha256 = "d750d4508e24099172c8ad7a0d85dfe4bb9756322ecfbda924dc9bc4f5caf7f7";
   };
 
   buildType = "ament_cmake";

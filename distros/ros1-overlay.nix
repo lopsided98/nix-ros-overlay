@@ -15,19 +15,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     });
   };
 
-  # Fix usages of global Boost placeholders
-  # https://github.com/ros/actionlib/pull/197
-  actionlib = rosSuper.actionlib.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [ (self.fetchpatch {
-      url = "https://github.com/ros/actionlib/commit/d675dd75d9080d2832591e0220d19e0f0d981446.patch";
-      stripLen = 1;
-      includes = [ "include/*" ];
-      hash = "sha256-bB8PkiDisgBgZoDyieiT1dSQK/xSfG8ZZOJyigX0SYY=";
-    }) ];
-  });
-
   canopen-master = rosSuper.canopen-master.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -150,20 +137,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
   });
 
   roscpp = patchBoostSignals rosSuper.roscpp;
-
-  rosgraph = rosSuper.rosgraph.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Fix infinite loop with Python 3.11
-      # From https://github.com/ros/ros_comm/pull/2297
-      (self.fetchpatch {
-        url = "https://github.com/ros/ros_comm/commit/2dc0ee9290012ee4674284f077355a39cc94c459.patch";
-        hash = "sha256-Z96KUsKv1LvEPnTXl+Icz89bEhkxfoETbvPasNPO6AY=";
-        stripLen = 2;
-      })
-    ];
-  });
 
   rqt-console = rosSuper.rqt-console.overrideAttrs ({
     postFixup ? "", ...

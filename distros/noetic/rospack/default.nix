@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, cmake-modules, gtest, pkg-config, python3, python3Packages, ros-environment, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-noetic-rospack";
-  version = "2.6.2-r1";
+  version = "2.6.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/rospack-release/archive/release/noetic/rospack/2.6.2-1.tar.gz";
-    name = "2.6.2-1.tar.gz";
-    sha256 = "1d74ca071fa02049d6f9739aa0e2624afbeef4100c2f8ca76db4fc1c9e13c390";
+    url = "https://github.com/ros-gbp/rospack-release/archive/release/noetic/rospack/2.6.4-1.tar.gz";
+    name = "2.6.4-1.tar.gz";
+    sha256 = "2ae080163c566f601b854c002f6e05cd3a6482bf395722ea12855f1999338deb";
   };
 
   buildType = "catkin";

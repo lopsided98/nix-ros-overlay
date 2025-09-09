@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-mypy, ament-pep257, ament-xmllint, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-ament-index-python";
-  version = "1.10.1-r1";
+  version = "1.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/rolling/ament_index_python/1.10.1-1.tar.gz";
-    name = "1.10.1-1.tar.gz";
-    sha256 = "96cfdb67df3607a726ba854b79d1af3d018aa2a02d0fe0a4ed46744d3730fb6d";
+    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/rolling/ament_index_python/1.12.0-1.tar.gz";
+    name = "1.12.0-1.tar.gz";
+    sha256 = "cf61ab015cc679fd33757b738f525f398f7545f7d83a14c517cf8958789b8a54";
   };
 
   buildType = "ament_python";

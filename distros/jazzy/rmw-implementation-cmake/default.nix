@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-rmw-implementation-cmake";
-  version = "7.3.1-r1";
+  version = "7.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw-release/archive/release/jazzy/rmw_implementation_cmake/7.3.1-1.tar.gz";
-    name = "7.3.1-1.tar.gz";
-    sha256 = "93f146dccb7fa4f634eb259da6f9cb35807e7f36b513deba4ab647d391b07f75";
+    url = "https://github.com/ros2-gbp/rmw-release/archive/release/jazzy/rmw_implementation_cmake/7.3.2-1.tar.gz";
+    name = "7.3.2-1.tar.gz";
+    sha256 = "712e518d0ecc9f5b116101ee23a6e86c36db5c04e18cf330a9412c9e1b71fc38";
   };
 
   buildType = "ament_cmake";

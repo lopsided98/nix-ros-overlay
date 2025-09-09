@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catkin, geometry-msgs, message-generation, message-runtime, qt5, rosconsole, roscpp, roscpp-serialization, roslib, rostime, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-noetic-turtlesim";
-  version = "0.10.2-r1";
+  version = "0.10.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_tutorials-release/archive/release/noetic/turtlesim/0.10.2-1.tar.gz";
-    name = "0.10.2-1.tar.gz";
-    sha256 = "f5e1c21ee45163443ccc76bdae473e39b1f1015e2289ab13e6a7391c59bd33fb";
+    url = "https://github.com/ros-gbp/ros_tutorials-release/archive/release/noetic/turtlesim/0.10.3-1.tar.gz";
+    name = "0.10.3-1.tar.gz";
+    sha256 = "0f07b73276f9d0830bcf2392733f3500027568bb0d9019c464b49616d6b200bb";
   };
 
   buildType = "catkin";

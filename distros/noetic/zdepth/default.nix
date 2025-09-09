@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, ros-environment }:
 buildRosPackage {
   pname = "ros-noetic-zdepth";
-  version = "2.1.28-r1";
+  version = "2.1.31-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/zdepth/2.1.28-1.tar.gz";
-    name = "2.1.28-1.tar.gz";
-    sha256 = "bbec74f7e1a3cf4b92504378d53de6f9ab84ea9def42b6b469032b9fcc665a48";
+    url = "https://github.com/tork-a/jsk_3rdparty-release/archive/release/noetic/zdepth/2.1.31-3.tar.gz";
+    name = "2.1.31-3.tar.gz";
+    sha256 = "f9704355706b716ccf1f855257b70e564d42ebd224e97661dba346d441c457b9";
   };
 
   buildType = "cmake";

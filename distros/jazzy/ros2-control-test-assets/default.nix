@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-ros2-control-test-assets";
-  version = "4.27.0-r1";
+  version = "4.29.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/ros2_control_test_assets/4.27.0-1.tar.gz";
-    name = "4.27.0-1.tar.gz";
-    sha256 = "b82601e88d15ad1670510778212914c8b7512a9eabc1b2fb06dddcdf0e969ded";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/ros2_control_test_assets/4.29.0-1.tar.gz";
+    name = "4.29.0-1.tar.gz";
+    sha256 = "013c8bfa1c51ea7c4cb37032821ee6840e46025f293512b1e9eacdfc86ba66fa";
   };
 
   buildType = "ament_cmake";
@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "The package provides shared test resources for ros2_control stack";
+    description = "Shared test resources for ros2_control stack";
     license = with lib.licenses; [ asl20 ];
   };
 }

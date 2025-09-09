@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, geometry-msgs, polygon-msgs, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-polygon-utils";
-  version = "1.1.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/jazzy/polygon_utils/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "5ddac03af96d1733d08254753c8c6840f7ffa8944666e91fdb7652ed81eeffc5";
+    url = "https://github.com/ros2-gbp/polygon_ros-release/archive/release/jazzy/polygon_utils/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "0a8dd0dadf538b3465485fb4f12c9e09bb0357af160e5fe2166fff7f9b4f60fc";
   };
 
   buildType = "ament_cmake";

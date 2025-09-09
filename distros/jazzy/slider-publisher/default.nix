@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, python3Packages, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-jazzy-slider-publisher";
-  version = "2.3.1-r3";
+  version = "2.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/slider_publisher-release/archive/release/jazzy/slider_publisher/2.3.1-3.tar.gz";
-    name = "2.3.1-3.tar.gz";
-    sha256 = "b6c5142e8627b28c879d34f7bdfda631addcb44ac2c503e42fe377593716bb0a";
+    url = "https://github.com/ros2-gbp/slider_publisher-release/archive/release/jazzy/slider_publisher/2.4.1-1.tar.gz";
+    name = "2.4.1-1.tar.gz";
+    sha256 = "7b2733e8449280e69140b76bf353c5674039f2a085fb2382eab4f64df5558a0f";
   };
 
   buildType = "ament_cmake";

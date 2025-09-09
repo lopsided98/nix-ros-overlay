@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catkin, eigen, kdl-parser, orocos-kdl, rosbag, rosconsole, roscpp, rostest, rostime, sensor-msgs, tf, tf2-kdl, tf2-ros, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-noetic-robot-state-publisher";
-  version = "1.15.2-r1";
+  version = "1.15.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/robot_state_publisher-release/archive/release/noetic/robot_state_publisher/1.15.2-1.tar.gz";
-    name = "1.15.2-1.tar.gz";
-    sha256 = "9939e39eb22755515c60d7d1941f9775c44725dbd10e79c18fc558c4a5b6af94";
+    url = "https://github.com/ros-gbp/robot_state_publisher-release/archive/release/noetic/robot_state_publisher/1.15.3-1.tar.gz";
+    name = "1.15.3-1.tar.gz";
+    sha256 = "e4240240cc0a2b870ca03f5c1628389ca7b717322682adf803ee4c4194da325f";
   };
 
   buildType = "catkin";

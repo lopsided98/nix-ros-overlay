@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cv-bridge, swri-math-util }:
 buildRosPackage {
   pname = "ros-jazzy-swri-opencv-util";
-  version = "3.7.3-r1";
+  version = "3.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_opencv_util/3.7.3-1.tar.gz";
-    name = "3.7.3-1.tar.gz";
-    sha256 = "794b462a1897f1d5adc5b72b53932ba9b51558add4b9a0e1f7a453f9dcc6ee3f";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_opencv_util/3.7.4-1.tar.gz";
+    name = "3.7.4-1.tar.gz";
+    sha256 = "50f5bc3538a8f3c3bd1ce977e5519715e99393329bc96cc5335647b5f77df1eb";
   };
 
   buildType = "ament_cmake";

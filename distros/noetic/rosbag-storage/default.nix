@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, bzip2, catkin, console-bridge, cpp-common, gpgme, openssl, pluginlib, roscpp-serialization, roscpp-traits, roslz4, rostest, rostime, std-msgs }:
 buildRosPackage {
   pname = "ros-noetic-rosbag-storage";
-  version = "1.17.0-r1";
+  version = "1.17.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rosbag_storage/1.17.0-1.tar.gz";
-    name = "1.17.0-1.tar.gz";
-    sha256 = "7d7e8680d8da462023dd8fe31a8f76de2092be8131019134c136fd311f7a5b47";
+    url = "https://github.com/ros-gbp/ros_comm-release/archive/release/noetic/rosbag_storage/1.17.3-1.tar.gz";
+    name = "1.17.3-1.tar.gz";
+    sha256 = "0e760238cb8d937dd7e65b14cbd3fea9efa99f3c7562547dd76cef6a57d1c10f";
   };
 
   buildType = "catkin";

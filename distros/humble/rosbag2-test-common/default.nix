@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rcutils }:
 buildRosPackage {
   pname = "ros-humble-rosbag2-test-common";
-  version = "0.15.13-r1";
+  version = "0.15.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/rosbag2_test_common/0.15.13-1.tar.gz";
-    name = "0.15.13-1.tar.gz";
-    sha256 = "400a7c0f1886017ac738becb13d93351aa507f5c838de56a89f04d3e9630d9dc";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/rosbag2_test_common/0.15.14-1.tar.gz";
+    name = "0.15.14-1.tar.gz";
+    sha256 = "38d26f8799d449126f2355b29f70868eb3855fdfabddc28aa3f6f21a556661e7";
   };
 
   buildType = "ament_cmake";

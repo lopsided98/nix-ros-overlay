@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, lz4 }:
 buildRosPackage {
   pname = "ros-jazzy-liblz4-vendor";
-  version = "0.26.6-r1";
+  version = "0.26.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/liblz4_vendor/0.26.6-1.tar.gz";
-    name = "0.26.6-1.tar.gz";
-    sha256 = "70c733562838fb29617bd7eeff18ae3be2898af17b4af210926d9fbb2ce99d67";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/liblz4_vendor/0.26.7-1.tar.gz";
+    name = "0.26.7-1.tar.gz";
+    sha256 = "9289244bc9002f2d34704cd0bdf043e0d4dedbafe5a5b807b13fb96a05fcaa4a";
   };
 
   buildType = "ament_cmake";

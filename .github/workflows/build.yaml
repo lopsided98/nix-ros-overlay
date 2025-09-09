@@ -9,8 +9,8 @@ jobs:
         distro:
           - noetic
           - humble
-          - iron
           - jazzy
+          - kilted
           - rolling
         system:
           - x86_64-linux

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "0.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/justagist/kinematics_interface_pinocchio-release/archive/release/rolling/kinematics_interface_pinocchio/0.0.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/kinematics_interface_pinocchio-release/archive/release/rolling/kinematics_interface_pinocchio/0.0.1-1.tar.gz";
     name = "0.0.1-1.tar.gz";
     sha256 = "1512acee9a6a18b7dbcf0b7313c5bc56e9e436035b7203833a4a4fed06f89d95";
   };

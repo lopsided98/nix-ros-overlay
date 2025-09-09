@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, moveit-configs-utils, moveit-resources-fanuc-moveit-config, moveit-resources-panda-moveit-config, moveit-setup-framework, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-setup-controllers";
-  version = "2.12.2-r1";
+  version = "2.12.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_setup_controllers/2.12.2-1.tar.gz";
-    name = "2.12.2-1.tar.gz";
-    sha256 = "28ab56d265946446f3366fcee4983b348b787ccf846d17683e37d9fe29b60828";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_setup_controllers/2.12.3-1.tar.gz";
+    name = "2.12.3-1.tar.gz";
+    sha256 = "a850c0447374373e86dd7f9fb50ada88300fe40c06845706ab39f1cb208f8195";
   };
 
   buildType = "ament_cmake";

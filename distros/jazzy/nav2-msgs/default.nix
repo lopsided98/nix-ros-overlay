@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, geographic-msgs, geometry-msgs, nav-msgs, nav2-common, rclcpp, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-msgs";
-  version = "1.3.5-r1";
+  version = "1.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_msgs/1.3.5-1.tar.gz";
-    name = "1.3.5-1.tar.gz";
-    sha256 = "11c8e6c3d6e32bdba1440a89a2d742bf58a01fea9d1c42d78c26398771d59152";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_msgs/1.3.6-1.tar.gz";
+    name = "1.3.6-1.tar.gz";
+    sha256 = "7c267ec6b11d13117f5e8552724476c6642777653b8b47cea30bd303c2412985";
   };
 
   buildType = "ament_cmake";

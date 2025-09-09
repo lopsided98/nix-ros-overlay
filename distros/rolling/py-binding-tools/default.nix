@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/py_binding_tools-release/archive/release/rolling/py_binding_tools/2.0.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/py_binding_tools-release/archive/release/rolling/py_binding_tools/2.0.1-1.tar.gz";
     name = "2.0.1-1.tar.gz";
     sha256 = "1fbf5db08ab767bc31ed9d90d3b13dedc5e5de3505fe321265a710c1a739d326";
   };

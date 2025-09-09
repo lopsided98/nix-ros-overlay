@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, leo-gz-bringup, leo-gz-plugins, leo-gz-worlds }:
 buildRosPackage {
   pname = "ros-jazzy-leo-simulator";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_simulator-release/archive/release/jazzy/leo_simulator/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "82c0ebcab09e7f310d408f99cb4fa005548ad06d798f6191b441e8d07b030f61";
+    url = "https://github.com/ros2-gbp/leo_simulator-release/archive/release/jazzy/leo_simulator/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "704ea56f7d43aeddf2611baba963a2a3fa0a5989ce5d41cad5d599576f857185";
   };
 
   buildType = "ament_cmake";

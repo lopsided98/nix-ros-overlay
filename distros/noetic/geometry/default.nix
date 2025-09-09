@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, catkin, eigen-conversions, kdl-conversions, tf, tf-conversions }:
 buildRosPackage {
   pname = "ros-noetic-geometry";
-  version = "1.13.2-r1";
+  version = "1.13.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-gbp/geometry-release/archive/release/noetic/geometry/1.13.2-1.tar.gz";
-    name = "1.13.2-1.tar.gz";
-    sha256 = "45d3dd1724ca4416f16efbc51f6bb9e8fd1eb72db66cd0b7392b83d7d6eb9e1f";
+    url = "https://github.com/ros-gbp/geometry-release/archive/release/noetic/geometry/1.13.4-1.tar.gz";
+    name = "1.13.4-1.tar.gz";
+    sha256 = "939f9bdfa7cba6b973fd9d6ca46066fbb430d4d72889c319b67a16ecc17f4ea3";
   };
 
   buildType = "catkin";
