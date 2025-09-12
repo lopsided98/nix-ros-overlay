@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake, python3, python3Packages, ros-environment }:
 buildRosPackage {
   pname = "ros-kilted-mavlink";
-  version = "2025.6.6-r1";
+  version = "2025.9.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavlink-gbp-release/archive/release/kilted/mavlink/2025.6.6-1.tar.gz";
-    name = "2025.6.6-1.tar.gz";
-    sha256 = "02b36998260e7f0b04a4e5656fafa3a3415bf9a7bf01c0deca62a1f6a635dbc4";
+    url = "https://github.com/ros2-gbp/mavlink-gbp-release/archive/release/kilted/mavlink/2025.9.9-1.tar.gz";
+    name = "2025.9.9-1.tar.gz";
+    sha256 = "e793262611fdd1ce82ec2f1144f0ca1b8c57ab16e0f4ccd5b0d0c40d09b88a1d";
   };
 
   buildType = "cmake";

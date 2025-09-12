@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, class-loader, eigen, geometric-shapes, interactive-markers, moveit-common, moveit-ros-planning-interface, moveit-ros-robot-interaction, moveit-ros-warehouse, object-recognition-msgs, pkg-config, pluginlib, qt5, rclcpp, rclpy, rviz2, tf2-eigen }:
 buildRosPackage {
   pname = "ros-kilted-moveit-ros-visualization";
-  version = "2.14.0-r1";
+  version = "2.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_ros_visualization/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "2fbfa4f10c2c37bae3dadaa92a466db802cd1830b963d217a6268f66d242d1b3";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_ros_visualization/2.14.1-1.tar.gz";
+    name = "2.14.1-1.tar.gz";
+    sha256 = "f317829115c8420646ee97971b0261b76478a9084fec169db5deea4bbee5cd7d";
   };
 
   buildType = "ament_cmake";

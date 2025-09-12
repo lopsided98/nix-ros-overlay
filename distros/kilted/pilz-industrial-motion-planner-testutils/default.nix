@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen3-cmake-module, moveit-common, moveit-core, moveit-msgs, rclcpp, tf2-eigen }:
 buildRosPackage {
   pname = "ros-kilted-pilz-industrial-motion-planner-testutils";
-  version = "2.14.0-r1";
+  version = "2.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/pilz_industrial_motion_planner_testutils/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "557505d721270220a0c0671ff8f08d766b4d3c243adfafd07c4da5ea67b3c68e";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/pilz_industrial_motion_planner_testutils/2.14.1-1.tar.gz";
+    name = "2.14.1-1.tar.gz";
+    sha256 = "84c83d99ff929bcdb5a9647dc18fc85581cc4a1d04770901bc520d6750af6e33";
   };
 
   buildType = "ament_cmake";
