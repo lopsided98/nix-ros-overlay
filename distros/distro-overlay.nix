@@ -334,6 +334,16 @@ let
       '';
     });
 
+    rtabmap = self.rtabmap.overrideAttrs ({
+      propagatedBuildInputs ? [], ...
+    }: {
+      inherit (rosSuper.rtabmap)
+        pname
+        version
+        src;
+      propagatedBuildInputs = propagatedBuildInputs ++ [ self.qt5.wrapQtAppsHook self.librealsense self.octomap ];
+    });
+
     turtlesim = rosSuper.turtlesim.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
