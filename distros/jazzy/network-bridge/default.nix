@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, boost, launch-testing, launch-testing-ament-cmake, launch-testing-ros, pkg-config, pluginlib, rclcpp, std-msgs, zstd }:
 buildRosPackage {
   pname = "ros-jazzy-network-bridge";
-  version = "1.0.2-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/network_bridge-release/archive/release/jazzy/network_bridge/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "485f38bfde87b65e4eec39d780ffbd085cd750c1891b3ae87a71b1312cc1b208";
+    url = "https://github.com/ros2-gbp/network_bridge-release/archive/release/jazzy/network_bridge/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "8391c19919ccbce655490a5583d90ca5765d524eba75a60637c320b4e72b1bbb";
   };
 
   buildType = "ament_cmake";

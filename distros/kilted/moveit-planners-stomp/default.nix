@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, generate-parameter-library, moveit-common, moveit-core, rsl, std-msgs, stomp, tf2-eigen, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-moveit-planners-stomp";
-  version = "2.14.0-r1";
+  version = "2.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_planners_stomp/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "df774b9be5c567d18ef8c2f4bea4e3981d1f6a5999683c3248253e487d86994d";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_planners_stomp/2.14.1-1.tar.gz";
+    name = "2.14.1-1.tar.gz";
+    sha256 = "5aa9158d75fc39ad598d56227e025f20541f52e7cfd27ff40250dffb18cdfdd4";
   };
 
   buildType = "ament_cmake";

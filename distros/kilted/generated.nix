@@ -1564,6 +1564,8 @@ self: super: {
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
+ network-bridge = self.callPackage ./network-bridge {};
+
  nlohmann-json-schema-validator-vendor = self.callPackage ./nlohmann-json-schema-validator-vendor {};
 
  nmea-hardware-interface = self.callPackage ./nmea-hardware-interface {};
@@ -2683,6 +2685,10 @@ self: super: {
  tf2-sensor-msgs = self.callPackage ./tf2-sensor-msgs {};
 
  tf2-tools = self.callPackage ./tf2-tools {};
+
+ tf2-web-republisher = self.callPackage ./tf2-web-republisher {};
+
+ tf2-web-republisher-interfaces = self.callPackage ./tf2-web-republisher-interfaces {};
 
  tf-transformations = self.callPackage ./tf-transformations {};
 

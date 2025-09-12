@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-ros-planning-interface, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-open-manipulator-playground";
-  version = "4.0.7-r1";
+  version = "4.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_playground/4.0.7-1.tar.gz";
-    name = "4.0.7-1.tar.gz";
-    sha256 = "ad37d262da413f599344a310c8402b6bea72998aabeae5d1f29a3e120d26d179";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_playground/4.0.8-1.tar.gz";
+    name = "4.0.8-1.tar.gz";
+    sha256 = "2542d35516ea6981fd50d74ffeac3935d968f1269370f161b2d99b469f8d165d";
   };
 
   buildType = "ament_cmake";

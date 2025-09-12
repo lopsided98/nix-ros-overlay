@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-ros-planning-interface, rclcpp }:
 buildRosPackage {
   pname = "ros-kilted-open-manipulator-playground";
-  version = "4.0.7-r1";
+  version = "4.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/kilted/open_manipulator_playground/4.0.7-1.tar.gz";
-    name = "4.0.7-1.tar.gz";
-    sha256 = "065f43d92d4d4c4daed7648d9345469f043cdc18be81fcb29a7c7b9e43b22b82";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/kilted/open_manipulator_playground/4.0.8-1.tar.gz";
+    name = "4.0.8-1.tar.gz";
+    sha256 = "c73f95dee536c8dbe003726f2ca29dee744ba0d910c00b4580caa7d8a8206f13";
   };
 
   buildType = "ament_cmake";

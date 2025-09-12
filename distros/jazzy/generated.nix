@@ -2774,6 +2774,8 @@ self: super: {
 
  rti-connext-dds-cmake-module = self.callPackage ./rti-connext-dds-cmake-module {};
 
+ rtsp-image-transport = self.callPackage ./rtsp-image-transport {};
+
  rttest = self.callPackage ./rttest {};
 
  ruckig = self.callPackage ./ruckig {};
@@ -3033,6 +3035,10 @@ self: super: {
  tf2-sensor-msgs = self.callPackage ./tf2-sensor-msgs {};
 
  tf2-tools = self.callPackage ./tf2-tools {};
+
+ tf2-web-republisher = self.callPackage ./tf2-web-republisher {};
+
+ tf2-web-republisher-interfaces = self.callPackage ./tf2-web-republisher-interfaces {};
 
  tf-transformations = self.callPackage ./tf-transformations {};
 

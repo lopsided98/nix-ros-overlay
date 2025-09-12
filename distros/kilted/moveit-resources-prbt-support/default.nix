@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, xacro }:
 buildRosPackage {
   pname = "ros-kilted-moveit-resources-prbt-support";
-  version = "2.14.0-r1";
+  version = "2.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_resources_prbt_support/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "b153bd629640881911a90756d79b4b37fa8f6c581378b7d05fbbc97e61e8611a";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_resources_prbt_support/2.14.1-1.tar.gz";
+    name = "2.14.1-1.tar.gz";
+    sha256 = "01fdeadb51532109196d87d93e60d331ca4ca69609c08d7b23bd6dfbabd6db34";
   };
 
   buildType = "ament_cmake";

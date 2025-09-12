@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-imu-preintegration, mola-kernel, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-kilted-mola-state-estimation-simple";
-  version = "1.9.0-r1";
+  version = "1.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/kilted/mola_state_estimation_simple/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "1c02e0cb59e53af94fe50d22835d7bc417c218839df4fa1cd60b76f1fa293a9e";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/kilted/mola_state_estimation_simple/1.10.0-1.tar.gz";
+    name = "1.10.0-1.tar.gz";
+    sha256 = "5b30ea3893910f5074a3f0461902cd37c72a5d659954e7c0ee8d3ade2c357bd1";
   };
 
   buildType = "cmake";

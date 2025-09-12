@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, gtsam, mola-common, mola-imu-preintegration, mola-kernel, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-kilted-mola-state-estimation-smoother";
-  version = "1.9.0-r1";
+  version = "1.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/kilted/mola_state_estimation_smoother/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "c92759046025abfed89a54d30b838bf15a8df690e8f72a848beef0e9f9e80d32";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/kilted/mola_state_estimation_smoother/1.10.0-1.tar.gz";
+    name = "1.10.0-1.tar.gz";
+    sha256 = "6623b65882bd8aceeee6a893fa512b7302b0dce700419a879d5672b70444cd4d";
   };
 
   buildType = "cmake";

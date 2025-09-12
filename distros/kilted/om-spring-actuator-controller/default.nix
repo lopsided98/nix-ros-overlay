@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, urdf }:
 buildRosPackage {
   pname = "ros-kilted-om-spring-actuator-controller";
-  version = "4.0.7-r1";
+  version = "4.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/kilted/om_spring_actuator_controller/4.0.7-1.tar.gz";
-    name = "4.0.7-1.tar.gz";
-    sha256 = "adf1d86bfe9e17613e6a8a875c54de2bd1badead61a6e7d9a0a3ba82fdb2b6ac";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/kilted/om_spring_actuator_controller/4.0.8-1.tar.gz";
+    name = "4.0.8-1.tar.gz";
+    sha256 = "37b1cd7222fb4a7501746396f4906097e7754e4e878d554025085a228d6e5962";
   };
 
   buildType = "ament_cmake";

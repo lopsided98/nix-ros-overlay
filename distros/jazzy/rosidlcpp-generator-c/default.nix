@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-core, ament-cmake-ros, fmt, nlohmann_json, rcutils, ros-environment, rosidl-cmake, rosidl-generator-type-description, rosidl-typesupport-interface, rosidlcpp-generator-core, rosidlcpp-parser }:
 buildRosPackage {
   pname = "ros-jazzy-rosidlcpp-generator-c";
-  version = "0.3.0-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidlcpp-release/archive/release/jazzy/rosidlcpp_generator_c/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "44a6dfc4a9cbdde049c36cc2c34c6c48bae0591a4818487da8cd86dc6d7673d0";
+    url = "https://github.com/ros2-gbp/rosidlcpp-release/archive/release/jazzy/rosidlcpp_generator_c/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "a081aca3a733382648a33a1777eda6c78961c3b9d755a173d4fd1a45ac33a3b0";
   };
 
   buildType = "ament_cmake";

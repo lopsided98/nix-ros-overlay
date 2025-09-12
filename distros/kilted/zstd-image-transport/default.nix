@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, image-transport, zlib }:
 buildRosPackage {
   pname = "ros-kilted-zstd-image-transport";
-  version = "5.1.0-r1";
+  version = "5.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/kilted/zstd_image_transport/5.1.0-1.tar.gz";
-    name = "5.1.0-1.tar.gz";
-    sha256 = "2e0a2a133506c98ae4ca44a4663e6e222d6ab18ce9be40cd4e07d1a3de10605e";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/kilted/zstd_image_transport/5.1.1-1.tar.gz";
+    name = "5.1.1-1.tar.gz";
+    sha256 = "d6071e6e93d6999afd6b9e9dc94a748f989e3e5676d74fc16d0ca74c323e7958";
   };
 
   buildType = "ament_cmake";

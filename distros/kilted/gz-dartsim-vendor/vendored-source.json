@@ -1,0 +1,7 @@
+{
+  "gz_dartsim_vendor": {
+    "url": "https://github.com/dartsim/dart.git",
+    "rev": "v6.13.2",
+    "hash": "sha256-AfKPqUiW6BsM98TIzTY2ZcFP1WvURs8/dGOzanIiB9g="
+  }
+}

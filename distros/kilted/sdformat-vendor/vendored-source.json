@@ -1,0 +1,7 @@
+{
+  "sdformat_vendor": {
+    "url": "https://github.com/gazebosim/sdformat.git",
+    "rev": "sdformat15_15.3.0",
+    "hash": "sha256-5EGAypmWiUHvGpAXTIWJi8ChWkafK1li1C0/C1GIfkA="
+  }
+}

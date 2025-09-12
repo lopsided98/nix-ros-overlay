@@ -826,8 +826,6 @@ self: super: {
 
  gz-fuel-tools-vendor = self.callPackage ./gz-fuel-tools-vendor {};
 
- gz-gui-vendor = self.callPackage ./gz-gui-vendor {};
-
  gz-launch-vendor = self.callPackage ./gz-launch-vendor {};
 
  gz-math-vendor = self.callPackage ./gz-math-vendor {};
@@ -847,8 +845,6 @@ self: super: {
  gz-ros2-control-demos = self.callPackage ./gz-ros2-control-demos {};
 
  gz-sensors-vendor = self.callPackage ./gz-sensors-vendor {};
-
- gz-sim-vendor = self.callPackage ./gz-sim-vendor {};
 
  gz-tools-vendor = self.callPackage ./gz-tools-vendor {};
 
@@ -1081,8 +1077,6 @@ self: super: {
  libcaer-vendor = self.callPackage ./libcaer-vendor {};
 
  libcamera = self.callPackage ./libcamera {};
-
- libcurl-vendor = self.callPackage ./libcurl-vendor {};
 
  libg2o = self.callPackage ./libg2o {};
 
@@ -1450,6 +1444,8 @@ self: super: {
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
+ network-bridge = self.callPackage ./network-bridge {};
+
  nlohmann-json-schema-validator-vendor = self.callPackage ./nlohmann-json-schema-validator-vendor {};
 
  nmea-hardware-interface = self.callPackage ./nmea-hardware-interface {};
@@ -1471,8 +1467,6 @@ self: super: {
  ntpd-driver = self.callPackage ./ntpd-driver {};
 
  ntrip-client = self.callPackage ./ntrip-client {};
-
- ntrip-client-node = self.callPackage ./ntrip-client-node {};
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
 
@@ -2296,6 +2290,8 @@ self: super: {
 
  rti-connext-dds-cmake-module = self.callPackage ./rti-connext-dds-cmake-module {};
 
+ rtsp-image-transport = self.callPackage ./rtsp-image-transport {};
+
  rttest = self.callPackage ./rttest {};
 
  ruckig = self.callPackage ./ruckig {};
@@ -2519,6 +2515,10 @@ self: super: {
  tf2-sensor-msgs = self.callPackage ./tf2-sensor-msgs {};
 
  tf2-tools = self.callPackage ./tf2-tools {};
+
+ tf2-web-republisher = self.callPackage ./tf2-web-republisher {};
+
+ tf2-web-republisher-interfaces = self.callPackage ./tf2-web-republisher-interfaces {};
 
  tf-transformations = self.callPackage ./tf-transformations {};
 

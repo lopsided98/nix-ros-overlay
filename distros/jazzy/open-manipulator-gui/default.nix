@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen3-cmake-module, geometry-msgs, moveit-core, moveit-msgs, moveit-ros-planning, moveit-ros-planning-interface, qt5, rclcpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-open-manipulator-gui";
-  version = "4.0.7-r1";
+  version = "4.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_gui/4.0.7-1.tar.gz";
-    name = "4.0.7-1.tar.gz";
-    sha256 = "8bed860d764b15017333e23b3b9189de29758300acf28306c9545390813a08e4";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_gui/4.0.8-1.tar.gz";
+    name = "4.0.8-1.tar.gz";
+    sha256 = "b9f67245fb6c7d37a80c19ab5323dec558129a40575a65ed3668c625646b6490";
   };
 
   buildType = "ament_cmake";

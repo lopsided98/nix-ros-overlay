@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, control-msgs, rclpy, sensor-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kilted-open-manipulator-teleop";
-  version = "4.0.7-r1";
+  version = "4.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/kilted/open_manipulator_teleop/4.0.7-1.tar.gz";
-    name = "4.0.7-1.tar.gz";
-    sha256 = "9296c9e9175b13f82da56b698c0318d56c6ca30f98279dd0b4c72592e2eb0454";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/kilted/open_manipulator_teleop/4.0.8-1.tar.gz";
+    name = "4.0.8-1.tar.gz";
+    sha256 = "9379089c120ff6c6852a46e854f0acb0d624a8cc650f8c0e1c11a176345823a3";
   };
 
   buildType = "ament_python";

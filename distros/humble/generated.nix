@@ -2202,6 +2202,8 @@ self: super: {
 
  nerian-stereo = self.callPackage ./nerian-stereo {};
 
+ network-bridge = self.callPackage ./network-bridge {};
+
  network-interface = self.callPackage ./network-interface {};
 
  nicla-vision-ros2 = self.callPackage ./nicla-vision-ros2 {};
@@ -3503,6 +3505,10 @@ self: super: {
  tf2-sensor-msgs = self.callPackage ./tf2-sensor-msgs {};
 
  tf2-tools = self.callPackage ./tf2-tools {};
+
+ tf2-web-republisher = self.callPackage ./tf2-web-republisher {};
+
+ tf2-web-republisher-interfaces = self.callPackage ./tf2-web-republisher-interfaces {};
 
  tf-transformations = self.callPackage ./tf-transformations {};
 
