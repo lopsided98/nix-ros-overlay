@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, poco, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-ntpd-driver";
-  version = "2.2.0-r4";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ntpd_driver-release/archive/release/kilted/ntpd_driver/2.2.0-4.tar.gz";
-    name = "2.2.0-4.tar.gz";
-    sha256 = "26955019a4f9c2e62e9d03427e46f17519bbcce532cc75be8e350f582ea577bc";
+    url = "https://github.com/ros2-gbp/ntpd_driver-release/archive/release/kilted/ntpd_driver/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "5a5c35bef9aceedcf1951fc740a5179cd8f00b588746d0df78aa7931f9ef5532";
   };
 
   buildType = "ament_cmake";

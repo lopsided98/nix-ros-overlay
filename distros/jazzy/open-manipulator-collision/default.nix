@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, fcl, kdl-parser, rclcpp, sensor-msgs, std-msgs, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-open-manipulator-collision";
-  version = "4.0.7-r1";
+  version = "4.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_collision/4.0.7-1.tar.gz";
-    name = "4.0.7-1.tar.gz";
-    sha256 = "eb649c9c34397e30581228e2ed3760bff6f4bcbe43e9edb7f4cfa27f411d1590";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_collision/4.0.8-1.tar.gz";
+    name = "4.0.8-1.tar.gz";
+    sha256 = "75ee87945689f274e5742bfb6f7255e17ae7bb660dbbf028376545f611e3591e";
   };
 
   buildType = "ament_cmake";

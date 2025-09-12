@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-config";
-  version = "2.7.0-r1";
+  version = "2.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_config-release/archive/release/jazzy/clearpath_config/2.7.0-1.tar.gz";
-    name = "2.7.0-1.tar.gz";
-    sha256 = "ffb7665ce273ec61dab464fdc21661fbfeb3c0b58f6784c06676c3397c3591b1";
+    url = "https://github.com/clearpath-gbp/clearpath_config-release/archive/release/jazzy/clearpath_config/2.7.1-1.tar.gz";
+    name = "2.7.1-1.tar.gz";
+    sha256 = "81640466e07f5d28bec074ce2dca33a69552fcf1256198de99b2e93b5b940106";
   };
 
   buildType = "ament_python";
