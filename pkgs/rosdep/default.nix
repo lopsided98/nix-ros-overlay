@@ -10,6 +10,9 @@ buildPythonPackage rec {
     hash = "sha256-oKcA3r27EykySLprt6+ZAHBQ1XH+pNLkzGEZzkRj3nI=";
   };
 
+  pyproject = true;
+  build-system = [ setuptools ];
+
   # Tries to download files
   doCheck = false;
 

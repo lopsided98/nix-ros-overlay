@@ -1,5 +1,5 @@
 { lib, buildPythonPackage, fetchFromGitHub, fetchpatch, catkin-pkg, rosdistro
-, rospkg, pyyaml, distutils, pytestCheckHook }:
+, rospkg, pyyaml, distutils, pytestCheckHook, setuptools }:
 
 buildPythonPackage rec {
   pname = "rosinstall_generator";
@@ -11,6 +11,9 @@ buildPythonPackage rec {
     rev = version;
     hash = "sha256-4Kan5MGfr4dMsSNTBf4RXsC4ae8mzeU2tgBdAsOw2IY=";
   };
+
+  pyproject = true;
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ distutils ];
 
