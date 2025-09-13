@@ -37,7 +37,6 @@ let
     rosPackages = removeAttrs releaseRosPackages [
       "lib"
       "mkRosDistroOverlay"
-      "foxy" # No CI for EOL distro
     ];
     examples = mapAttrs
       (file: _: import (./examples + "/${file}") { inherit pkgs; })
