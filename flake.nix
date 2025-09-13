@@ -2,7 +2,7 @@
   description = "ROS overlay for the Nix package manager";
 
   inputs = {
-    nixpkgs.url = "github:lopsided98/nixpkgs/nix-ros";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
