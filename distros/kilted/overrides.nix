@@ -226,7 +226,7 @@ in {
   }: {
     patches = patches ++ [
       # Fix CMake relative install dir assumptions
-      # https://github.com/ros/urdfdom_headers/pull/66
+      # https://github.com/ros/urdfdom_headers/pull/90
       (self.fetchpatch {
         url = "https://github.com/ros/urdfdom_headers/commit/90efa6072dc239f78d37288a49f24d8aee1aaad2.patch";
         hash = "sha256-3q3K+fiINvS9eUrkHS3cgnn8GuA0Nz+FvVBMpsRAcFM=";
