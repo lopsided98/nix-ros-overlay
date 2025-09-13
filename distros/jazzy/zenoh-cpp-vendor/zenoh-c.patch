@@ -1,0 +1,25 @@
+diff --git a/buildrs/opaque_types_generator.rs b/buildrs/opaque_types_generator.rs
+index c1d0bdd3..2d190518 100644
+--- a/buildrs/opaque_types_generator.rs
++++ b/buildrs/opaque_types_generator.rs
+@@ -14,7 +14,10 @@ pub fn generate_opaque_types() {
+     let data_in = std::fs::read_to_string(path_in).unwrap();
+ 
+     // Check for cargo-level errors (dependency resolution, manifest parsing, etc.)
+-    if data_in.contains("error: failed to") || data_in.contains("Caused by:") {
++    if data_in.contains("error: failed to")
++        || data_in.contains("error: no matching package named")
++        || data_in.contains("Caused by:")
++    {
+         panic!(
+             "Failed to generate opaque types due to cargo error:\n\nCommand executed:\n\n{command}\n\nCargo output:\n\n{data_in}"
+         );
+@@ -127,6 +130,8 @@ fn produce_opaque_types_data() -> (String, PathBuf) {
+         .arg("build")
+         .args(feature_args)
+         .args(linker_args)
++        .arg("--config")
++        .arg(std::env::var("NIX_ZENOH_OPAQUE_TYPES_CARGO_CONFIG").unwrap())
+         .arg("--target")
+         .arg(target)
+         .arg("--manifest-path")
