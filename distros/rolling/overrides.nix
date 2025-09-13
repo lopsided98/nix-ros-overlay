@@ -42,9 +42,9 @@ in {
     fetchgitArgs.hash = "sha256-gztnxui9Fe/FTieMjdvfJjWHjkImtlsHn6fM1FruyME=";
   };
 
-  gz-cmake-vendor = lib.patchGzAmentVendorGit rosSuper.gz-cmake-vendor { };
+  gz-cmake-vendor = lib.patchAmentVendorGit rosSuper.gz-cmake-vendor { };
 
-  gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor { }).overrideAttrs ({
+  gz-common-vendor = (lib.patchAmentVendorGit rosSuper.gz-common-vendor { }).overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
     # https://github.com/gazebo-release/gz_common_vendor/pull/2
@@ -53,7 +53,7 @@ in {
 
   gz-dartsim-vendor = lib.patchAmentVendorGit rosSuper.gz-dartsim-vendor { };
 
-  gz-fuel-tools-vendor = lib.patchGzAmentVendorGit rosSuper.gz-fuel-tools-vendor { };
+  gz-fuel-tools-vendor = lib.patchAmentVendorGit rosSuper.gz-fuel-tools-vendor { };
 
   gz-gui-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-gui-vendor { }).overrideAttrs ({
     postInstall ? "", ...
@@ -67,25 +67,25 @@ in {
 
   gz-launch-vendor = lib.patchGzAmentVendorGit rosSuper.gz-launch-vendor { };
 
-  gz-math-vendor = lib.patchGzAmentVendorGit rosSuper.gz-math-vendor { };
+  gz-math-vendor = lib.patchAmentVendorGit rosSuper.gz-math-vendor { };
 
-  gz-msgs-vendor = lib.patchGzAmentVendorGit rosSuper.gz-msgs-vendor { };
+  gz-msgs-vendor = lib.patchAmentVendorGit rosSuper.gz-msgs-vendor { };
 
   gz-ogre-next-vendor = (lib.patchAmentVendorGit rosSuper.gz-ogre-next-vendor { }).overrideAttrs({ ... }: {
     dontFixCmake = true;
   });
 
-  gz-physics-vendor = lib.patchGzAmentVendorGit rosSuper.gz-physics-vendor { };
+  gz-physics-vendor = lib.patchAmentVendorGit rosSuper.gz-physics-vendor { };
 
-  gz-plugin-vendor = lib.patchGzAmentVendorGit rosSuper.gz-plugin-vendor { };
+  gz-plugin-vendor = lib.patchAmentVendorGit rosSuper.gz-plugin-vendor { };
 
-  gz-rendering-vendor = lib.patchGzAmentVendorGit rosSuper.gz-rendering-vendor { };
+  gz-rendering-vendor = lib.patchAmentVendorGit rosSuper.gz-rendering-vendor { };
 
   gz-sensors-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sensors-vendor { };
 
   gz-sim-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sim-vendor { };
 
-  gz-tools-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-tools-vendor { }).overrideAttrs({
+  gz-tools-vendor = (lib.patchAmentVendorGit rosSuper.gz-tools-vendor { }).overrideAttrs({
     nativeBuildInputs ? [],
     propagatedNativeBuildInputs ? [],
     qtWrapperArgs ? [],
@@ -113,7 +113,7 @@ in {
     buildInputs = buildInputs ++ [ self.libsodium ];
   });
 
-  gz-utils-vendor = lib.patchGzAmentVendorGit rosSuper.gz-utils-vendor { };
+  gz-utils-vendor = lib.patchAmentVendorGit rosSuper.gz-utils-vendor { };
 
   iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
     patches ? [], ...
@@ -201,7 +201,7 @@ in {
     '';
   });
 
-  sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor { };
+  sdformat-vendor = lib.patchAmentVendorGit rosSuper.sdformat-vendor { };
 
   shared-queues-vendor = lib.patchVendorUrl rosSuper.shared-queues-vendor {
     url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";
