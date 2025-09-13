@@ -25,7 +25,7 @@ self: super: with self.lib; {
     colcon-zsh
   ];
 
-  gazebo_11 = self.libsForQt5.callPackage ./gazebo { };
+  gazebo_11 = self.libsForQt5.callPackage ./gazebo { protobuf = self.protobuf_29; };
   gazebo = self.gazebo_11;
 
   gz-cmake_2 = self.callPackage ./gazebo/gz-cmake/2.nix { };
@@ -56,13 +56,13 @@ self: super: with self.lib; {
     math6 = self.callPackage ./ignition/math { };
     math = self.ignition.math6;
 
-    msgs5 = self.callPackage ./ignition/msgs/5.nix { };
+    msgs5 = self.callPackage ./ignition/msgs/5.nix { protobuf = self.protobuf_29; };
     msgs8 = self.callPackage ./ignition/msgs { };
     msgs = self.ignition.msgs8;
 
     tools = self.callPackage ./ignition/tools { };
 
-    transport8 = self.callPackage ./ignition/transport/8.nix { };
+    transport8 = self.callPackage ./ignition/transport/8.nix { protobuf = self.protobuf_29; };
     transport11 = self.callPackage ./ignition/transport { };
     transport = self.ignition.transport11;
 
