@@ -1,7 +1,7 @@
 {
   "gz_utils_vendor": {
     "url": "https://github.com/gazebosim/gz-utils.git",
-    "rev": "gz-utils3_3.1.1",
-    "hash": "sha256-fYzysdB608jfMb/EbqiGD4hXmPxcaVTUrt9Wx0dBlto="
+    "rev": "gz-utils4_4.0.0-pre1",
+    "hash": "sha256-UZh4d+WngOWFJepHGD3JLWtf1hz8yWJ5EaQ/1iXlZc0="
   }
 }
