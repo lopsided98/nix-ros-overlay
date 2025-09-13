@@ -215,8 +215,8 @@ in {
       # Fix CMake relative install dir assumptions
       # https://github.com/ros/urdfdom/pull/142
       (self.fetchpatch {
-        url = "https://github.com/ros/urdfdom/commit/61a7e35cd5abece97259e76aed8504052b2f5b53.patch";
-        hash = "sha256-b3bEbbaSUDkwTEHJ8gVPEb+AR/zuWwLqiAW5g1T1dPU=";
+        url = "https://github.com/ros/urdfdom/commit/229c3ae867ba770dcade50b3ee520d81ff3b0413.patch";
+        hash = "sha256-cfPnSux7qmTDngzwPYIayYIvddhOXfmSsvgKwltFT5Q=";
       })
     ];
   });
@@ -228,8 +228,8 @@ in {
       # Fix CMake relative install dir assumptions
       # https://github.com/ros/urdfdom_headers/pull/66
       (self.fetchpatch {
-        url = "https://github.com/ros/urdfdom_headers/commit/6e0cea148c3a7123f8367cd48d5709a4490c32f1.patch";
-        hash = "sha256-LC2TACGma/k6+WE9fTkzY98SgJYKsVuj5O9v84Q5mQ4=";
+        url = "https://github.com/ros/urdfdom_headers/commit/90efa6072dc239f78d37288a49f24d8aee1aaad2.patch";
+        hash = "sha256-3q3K+fiINvS9eUrkHS3cgnn8GuA0Nz+FvVBMpsRAcFM=";
       })
     ];
   });
