@@ -84,7 +84,7 @@
     file ? "CMakeLists.txt",
     fetchgitArgs ? {},
     tarSourceArgs ? {}
-  }: pkg.overrideAttrs ({
+  }: pkg.overrideAttrs (finalAttrs: {
     cmakeFlags ? [],
     nativeBuildInputs ? [],
     passthru ? {},
@@ -102,12 +102,13 @@
     '';
     sourceInfos = builtins.fromJSON (builtins.readFile vendoredSourceJson);
     # ament_vendor doesn't allow patches for path inputs, so we have to pack it
-    # into a tar first. Additionally, vcstool only accepts tarballs with the
-    # version number as the root directory name.
-    vendor = sourceInfo: lib.tarSource tarSourceArgs (
-      self.fetchgit (sourceInfo // fetchgitArgs // {
-        name = sourceInfo.rev;
-      }));
+    # into a tar first.
+    vendorTar = src: lib.tarSource tarSourceArgs src;
+    vendorSrc = sourceInfo: self.fetchgit (sourceInfo // fetchgitArgs // {
+      # vcstool only accepts tarballs with the version number as the
+      # root directory name.
+      name = sourceInfo.rev;
+    });
   in {
 
     nativeBuildInputs = [
@@ -118,10 +119,11 @@
       # CMake ExternalProject patches are applied with git apply
       self.git
     ];
-    cmakeFlags = cmakeFlags ++ lib.optionals (pathExists vendoredSourceJson)
-      (
+    cmakeFlags =
+      cmakeFlags
+      ++ (
         # Tell ament_vendor_wrapper.cmake where to find tarballs with vendored sources
-        attrValues (mapAttrs (n: v: "-DAMENT_VENDOR_NIX_TAR_${n}=${vendor v}") sourceInfos)
+        attrValues (mapAttrs (n: v: "-DAMENT_VENDOR_NIX_TAR_${n}=${vendorTar v}") finalAttrs.passthru.amentVendorSrcs)
       );
     postPatch =
       if pathExists vendoredSourceJson then
@@ -131,6 +133,10 @@
         exit 1
       '';
     passthru = passthru // {
+      # Expose vendored sources for eventual overriding
+      amentVendorSrcs = lib.optionalAttrs (pathExists vendoredSourceJson)
+        (mapAttrs (n: v: vendorSrc v) sourceInfos);
+
       # Script to automatically update vendored-source.json by running
       # CMake with injected modified version of ament_cmake macro.
       updateAmentVendor = let
