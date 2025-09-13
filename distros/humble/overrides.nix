@@ -311,31 +311,54 @@ in with lib; {
     ];
   });
 
-  zenoh-cpp-vendor = (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor { }).overrideAttrs({
-    nativeBuildInputs ? [], postPatch ? "", ...
+  zenoh-cpp-vendor = (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {}).overrideAttrs(finalAttrs: {
+    nativeBuildInputs ? [], postPatch ? "", passthru ? {}, ...
   }: let
-      vendoredSourceJson = "${dirOf rosSuper.zenoh-cpp-vendor.meta.position}/vendored-source.json";
-      sourceInfos = builtins.fromJSON (builtins.readFile vendoredSourceJson);
-      zenoh-c-source = self.fetchFromGitHub {
-        owner = "eclipse-zenoh";
-        repo = "zenoh-c";
-        rev = sourceInfos.zenoh_c_vendor.rev;
-        hash = sourceInfos.zenoh_c_vendor.hash;
-      };
-    in {
+    outputHashes = {
+      "zenoh-1.5.1" = "sha256-EeigSU9l7LCnSkm4/jP0WcdO3Hw9m91zUh8jzVXYhKw=";
+    };
+    zenoh-c-source = finalAttrs.passthru.amentVendorSrcs.zenoh_c_vendor;
+  in {
     postPatch = postPatch + ''
-      ln -s ${zenoh-c-source.outPath}/Cargo.lock Cargo.lock
+      ln -s ${zenoh-c-source}/Cargo.lock Cargo.lock
     '';
     nativeBuildInputs = nativeBuildInputs ++ [
       self.rustPlatform.cargoSetupHook
-      self.cargo
       self.rustc
     ];
     cargoDeps = self.rustPlatform.importCargoLock {
-      lockFile = "${zenoh-c-source.outPath}/Cargo.lock";
-      outputHashes = {
-        "zenoh-1.4.0" = "sha256-eMrsoeToI8vsRLduRgSFh/yoGt/hHcCAqCGNE6ml9uw=";
-      };
+      lockFile = "${zenoh-c-source}/Cargo.lock";
+      inherit outputHashes;
     };
+
+    # Patch the build.rs script to be able to build internal
+    # opaque-types crate without network access.
+    passthru = lib.recursiveUpdate passthru {
+      amentVendorSrcs.zenoh_c_vendor = let
+        src = passthru.amentVendorSrcs.zenoh_c_vendor;
+      in
+        self.applyPatches {
+          inherit src;
+          name = src.rev;
+          patches = [ ./zenoh-cpp-vendor/zenoh-c.patch ];
+        };
+    };
+
+    # Prepare vendored dependencies for internal opaque-types crate.
+    # Execute in subshell to not change variables set by the normal
+    # cargoSetupPostUnpackHook.
+    preBuild = ''
+      (
+        mkdir nix-zenoh-opaque-types
+        cd nix-zenoh-opaque-types
+        cargoDeps=${self.rustPlatform.importCargoLock {
+          lockFile = "${zenoh-c-source}/build-resources/opaque-types/Cargo.lock";
+          inherit outputHashes;
+        }}
+        cargoSetupPostUnpackHook
+      )
+      # Export information for use by our patched build.rs script.
+      export NIX_ZENOH_OPAQUE_TYPES_CARGO_CONFIG=$PWD/nix-zenoh-opaque-types/.cargo/config.toml
+    '';
   });
 }
