@@ -204,14 +204,24 @@ rosSelf: rosSuper: with rosSelf.lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ self.ninja ];
   });
 
-  # Get rid of nlohmann_json vendoring
-  librealsense2 = rosSuper.librealsense2.overrideAttrs ({
+  librealsense2 = (patchExternalProjectGit rosSuper.librealsense2 {
+    file = "CMake/external_libcurl.cmake";
+    originalUrl = ''"https://github.com/curl/curl.git"'';
+    url = "https://github.com/curl/curl.git";
+    originalRev = ''"curl-8_8_0"'';
+    rev = "curl-8_8_0";
+    fetchgitArgs.hash = "sha256-MjB6k8mDJypyuh6BN2hxy2My7/DfImjw+5iI729snBg=";
+  }).overrideAttrs ({
     buildInputs ? [], postPatch ? "", ...
   }: {
     buildInputs = buildInputs ++ [ self.nlohmann_json ];
     postPatch = postPatch + ''
+      # Get rid of nlohmann_json vendoring
       substituteInPlace third-party/CMakeLists.txt \
         --replace-fail 'include(CMake/external_json.cmake)' ""
+      # Don't try to install to $HOME
+      substituteInPlace tools/realsense-viewer/CMakeLists.txt \
+        --replace-fail '$ENV{HOME}/Documents/librealsense2/presets' ''\'''${CMAKE_INSTALL_PREFIX}/share/librealsense2/presets'
     '';
   });
 
