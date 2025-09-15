@@ -81,7 +81,7 @@ in {
 
   gz-rendering-vendor = lib.patchAmentVendorGit rosSuper.gz-rendering-vendor { };
 
-  gz-sensors-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sensors-vendor { };
+  gz-sensors-vendor = lib.patchAmentVendorGit rosSuper.gz-sensors-vendor { };
 
   gz-sim-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sim-vendor { };
 
@@ -107,7 +107,7 @@ in {
     '';
   });
 
-  gz-transport-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-transport-vendor { }).overrideAttrs({
+  gz-transport-vendor = (lib.patchAmentVendorGit rosSuper.gz-transport-vendor { }).overrideAttrs({
     buildInputs ? [], ...
   }: {
     buildInputs = buildInputs ++ [ self.libsodium ];
