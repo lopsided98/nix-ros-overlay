@@ -235,19 +235,6 @@ rosSelf: rosSuper: with rosSelf.lib; {
     outputs = [ "out" "dev" ];
   });
 
-  rcutils = rosSuper.rcutils.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Fix linking to libatomic
-      # https://github.com/ros2/rcutils/pull/384
-      (self.fetchpatch {
-        url = "https://github.com/ros2/rcutils/commit/05e7336b2160739915be0e2c4a81710806fd2f9c.patch";
-        hash = "sha256-EiO1AJnhvOk81TzFMP4E8NhB+9ymef2oA7l26FZFb1M=";
-      })
-    ];
-  });
-
   rig-reconfigure = patchExternalProjectGit rosSuper.rig-reconfigure {
     url = "https://github.com/ocornut/imgui.git";
     rev = "v1.89.8-docking";
