@@ -42,6 +42,12 @@ in with lib; {
 
   gazebo = self.gazebo_11;
 
+  gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({
+    propagatedBuildInputs ? [ ], ...
+  }: {
+    propagatedBuildInputs = propagatedBuildInputs ++ [ self.qt5.qtbase ];
+  });
+
   google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
     url = "https://github.com/google/benchmark.git";
     rev = "c05843a9f622db08ad59804c190f98879b76beba";
