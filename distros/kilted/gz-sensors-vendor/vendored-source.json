@@ -1,0 +1,7 @@
+{
+  "gz_sensors_vendor": {
+    "url": "https://github.com/gazebosim/gz-sensors.git",
+    "rev": "gz-sensors9_9.2.0",
+    "hash": "sha256-Vxl3xdmh8ybRbjDxNGt8qgQOP9ctAcYAoVwWeytAglc="
+  }
+}
