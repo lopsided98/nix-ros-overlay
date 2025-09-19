@@ -8,6 +8,10 @@ self: super: {
 
  ackermann-msgs = self.callPackage ./ackermann-msgs {};
 
+ ackermann-nlmpc = self.callPackage ./ackermann-nlmpc {};
+
+ ackermann-nlmpc-msgs = self.callPackage ./ackermann-nlmpc-msgs {};
+
  ackermann-steering-controller = self.callPackage ./ackermann-steering-controller {};
 
  action-msgs = self.callPackage ./action-msgs {};
@@ -870,6 +874,36 @@ self: super: {
 
  grbl-ros = self.callPackage ./grbl-ros {};
 
+ grid-map = self.callPackage ./grid-map {};
+
+ grid-map-cmake-helpers = self.callPackage ./grid-map-cmake-helpers {};
+
+ grid-map-core = self.callPackage ./grid-map-core {};
+
+ grid-map-costmap-2d = self.callPackage ./grid-map-costmap-2d {};
+
+ grid-map-cv = self.callPackage ./grid-map-cv {};
+
+ grid-map-demos = self.callPackage ./grid-map-demos {};
+
+ grid-map-filters = self.callPackage ./grid-map-filters {};
+
+ grid-map-loader = self.callPackage ./grid-map-loader {};
+
+ grid-map-msgs = self.callPackage ./grid-map-msgs {};
+
+ grid-map-octomap = self.callPackage ./grid-map-octomap {};
+
+ grid-map-pcl = self.callPackage ./grid-map-pcl {};
+
+ grid-map-ros = self.callPackage ./grid-map-ros {};
+
+ grid-map-rviz-plugin = self.callPackage ./grid-map-rviz-plugin {};
+
+ grid-map-sdf = self.callPackage ./grid-map-sdf {};
+
+ grid-map-visualization = self.callPackage ./grid-map-visualization {};
+
  gscam = self.callPackage ./gscam {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
@@ -1561,6 +1595,8 @@ self: super: {
  nav-msgs = self.callPackage ./nav-msgs {};
 
  navigation2 = self.callPackage ./navigation2 {};
+
+ neo-nav2-bringup = self.callPackage ./neo-nav2-bringup {};
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 

@@ -8,6 +8,10 @@ self: super: {
 
  ackermann-msgs = self.callPackage ./ackermann-msgs {};
 
+ ackermann-nlmpc = self.callPackage ./ackermann-nlmpc {};
+
+ ackermann-nlmpc-msgs = self.callPackage ./ackermann-nlmpc-msgs {};
+
  ackermann-steering-controller = self.callPackage ./ackermann-steering-controller {};
 
  action-msgs = self.callPackage ./action-msgs {};
@@ -1483,6 +1487,32 @@ self: super: {
  odom-to-tf-ros2 = self.callPackage ./odom-to-tf-ros2 {};
 
  odri-master-board-sdk = self.callPackage ./odri-master-board-sdk {};
+
+ off-highway-can = self.callPackage ./off-highway-can {};
+
+ off-highway-general-purpose-radar = self.callPackage ./off-highway-general-purpose-radar {};
+
+ off-highway-general-purpose-radar-msgs = self.callPackage ./off-highway-general-purpose-radar-msgs {};
+
+ off-highway-premium-radar = self.callPackage ./off-highway-premium-radar {};
+
+ off-highway-premium-radar-msgs = self.callPackage ./off-highway-premium-radar-msgs {};
+
+ off-highway-premium-radar-sample = self.callPackage ./off-highway-premium-radar-sample {};
+
+ off-highway-premium-radar-sample-msgs = self.callPackage ./off-highway-premium-radar-sample-msgs {};
+
+ off-highway-radar = self.callPackage ./off-highway-radar {};
+
+ off-highway-radar-msgs = self.callPackage ./off-highway-radar-msgs {};
+
+ off-highway-sensor-drivers = self.callPackage ./off-highway-sensor-drivers {};
+
+ off-highway-sensor-drivers-examples = self.callPackage ./off-highway-sensor-drivers-examples {};
+
+ off-highway-uss = self.callPackage ./off-highway-uss {};
+
+ off-highway-uss-msgs = self.callPackage ./off-highway-uss-msgs {};
 
  om-gravity-compensation-controller = self.callPackage ./om-gravity-compensation-controller {};
 

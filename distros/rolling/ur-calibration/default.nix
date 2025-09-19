@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, rclcpp, ur-client-library, ur-robot-driver, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-rolling-ur-calibration";
-  version = "4.1.0-r1";
+  version = "4.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/rolling/ur_calibration/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "bac6a98afffe5dcf86d12860fdf197475faf2937766f704e16b467ecd1f10e1f";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/rolling/ur_calibration/4.2.0-1.tar.gz";
+    name = "4.2.0-1.tar.gz";
+    sha256 = "621a5a62a1971f250922d2da04b3fc8bd3a6fdb986f8cfa422f5c270d88aa117";
   };
 
   buildType = "ament_cmake";

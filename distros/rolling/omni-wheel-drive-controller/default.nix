@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-interface, controller-manager, eigen, generate-parameter-library, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-rolling-omni-wheel-drive-controller";
-  version = "5.6.1-r1";
+  version = "5.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/omni_wheel_drive_controller/5.6.1-1.tar.gz";
-    name = "5.6.1-1.tar.gz";
-    sha256 = "117403ab178848a583afbbe0095d7fedfeefcbd345890de4249f78da85208c9e";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/omni_wheel_drive_controller/5.7.0-1.tar.gz";
+    name = "5.7.0-1.tar.gz";
+    sha256 = "a021ec2d251e1fcda6d45824e16301d4d8ebe69f0ffbafa59851b53b7b263ba1";
   };
 
   buildType = "ament_cmake";
