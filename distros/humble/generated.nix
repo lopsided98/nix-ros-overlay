@@ -30,6 +30,8 @@ self: super: {
 
  adi-iio = self.callPackage ./adi-iio {};
 
+ adi-imu = self.callPackage ./adi-imu {};
+
  adi-tmcl = self.callPackage ./adi-tmcl {};
 
  admittance-controller = self.callPackage ./admittance-controller {};
@@ -1709,6 +1711,8 @@ self: super: {
  leo-description = self.callPackage ./leo-description {};
 
  leo-desktop = self.callPackage ./leo-desktop {};
+
+ leo-filters = self.callPackage ./leo-filters {};
 
  leo-fw = self.callPackage ./leo-fw {};
 

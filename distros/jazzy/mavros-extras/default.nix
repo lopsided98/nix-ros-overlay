@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-python, ament-lint-auto, ament-lint-common, angles, diagnostic-msgs, diagnostic-updater, eigen, eigen-stl-containers, eigen3-cmake-module, geographic-msgs, geographiclib, geometry-msgs, gtest, libmavconn, mavlink, mavros, mavros-msgs, message-filters, nav-msgs, pluginlib, rclcpp, rclcpp-components, rcpputils, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2-eigen, tf2-ros, trajectory-msgs, urdf, visualization-msgs, yaml-cpp, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-mavros-extras";
-  version = "2.11.0-r1";
+  version = "2.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavros-release/archive/release/jazzy/mavros_extras/2.11.0-1.tar.gz";
-    name = "2.11.0-1.tar.gz";
-    sha256 = "6a2c2400b7b719f4f8dd507881f3fcc1911517330727183d8c277abf31ac9ef9";
+    url = "https://github.com/ros2-gbp/mavros-release/archive/release/jazzy/mavros_extras/2.12.0-1.tar.gz";
+    name = "2.12.0-1.tar.gz";
+    sha256 = "0aeba59d1674af92d0398e7576c94ef08cc3c57adef75ee0e2544f7c26fb3a2b";
   };
 
   buildType = "ament_cmake";
