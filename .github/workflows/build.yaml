@@ -7,10 +7,6 @@ jobs:
       matrix:
         distro:
           - noetic
-          - humble
-          - jazzy
-          - kilted
-          - rolling
         system:
           - x86_64-linux
           - aarch64-linux
