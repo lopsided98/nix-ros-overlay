@@ -1,6 +1,6 @@
 { lib, buildPythonPackage, fetchPypi, catkin-pkg, colcon-cmake
 , colcon-core, colcon-pkg-config, colcon-python-setup-py, colcon-recursive-crawl
-, colcon-library-path, toml }:
+, colcon-library-path, toml, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-cargo";
@@ -10,6 +10,9 @@ buildPythonPackage rec {
     inherit pname version;
     hash = "sha256-FXp3Nso5NlvBqPA2Kv03mBNR8fwQELbDMU+mqmxTSWc=";
   };
+
+  pyproject = true;
+  build-system = [ setuptools ];
 
   propagatedBuildInputs = [
     catkin-pkg

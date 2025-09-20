@@ -1,6 +1,6 @@
 { lib, buildPythonPackage, fetchPypi, catkin-pkg, colcon-cmake, colcon-core
 , colcon-pkg-config, colcon-python-setup-py
-, colcon-recursive-crawl }:
+, colcon-recursive-crawl, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-ros";
@@ -10,6 +10,9 @@ buildPythonPackage rec {
     inherit pname version;
     hash = "sha256-eafon2+mNvfk/USoi3hg+x2pnVHwunvPC5tiShpXg2U=";
   };
+
+  pyproject = true;
+  build-system = [ setuptools ];
 
   propagatedBuildInputs = [
     catkin-pkg
