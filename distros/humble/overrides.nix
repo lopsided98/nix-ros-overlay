@@ -331,12 +331,13 @@ in with lib; {
   });
 
   zenoh-cpp-vendor = (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {}).overrideAttrs(finalAttrs: {
-    nativeBuildInputs ? [], postPatch ? "", passthru ? {}, ...
+    nativeBuildInputs ? [], postPatch ? "", passthru ? {}, cmakeFlags ? "", ...
   }: let
     outputHashes = {
       "zenoh-1.5.1" = "sha256-EeigSU9l7LCnSkm4/jP0WcdO3Hw9m91zUh8jzVXYhKw=";
     };
     zenoh-c-source = finalAttrs.passthru.amentVendorSrcs.zenoh_c_vendor;
+    inherit (self.stdenv) buildPlatform hostPlatform;
   in {
     postPatch = postPatch + ''
       ln -s ${zenoh-c-source}/Cargo.lock Cargo.lock
@@ -349,7 +350,9 @@ in with lib; {
       lockFile = "${zenoh-c-source}/Cargo.lock";
       inherit outputHashes;
     };
-
+    cmakeFlags = cmakeFlags ++
+      lib.optionals (buildPlatform != hostPlatform)
+        [ "-DZENOHC_CUSTOM_TARGET=${hostPlatform.config}" ];
     # Patch the build.rs script to be able to build internal
     # opaque-types crate without network access.
     passthru = lib.recursiveUpdate passthru {
