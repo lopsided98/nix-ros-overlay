@@ -235,6 +235,12 @@ in with lib; {
     ];
   });
 
+  ros2-ouster = rosSuper.ros2-ouster.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    buildInputs = buildInputs ++ [ self.jsoncpp self.libpcap ];
+  });
+
   rcutils = rosSuper.rcutils.overrideAttrs ({
     patches ? [], ...
   }: {
