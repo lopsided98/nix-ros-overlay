@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-rpyutils";
-  version = "0.2.1-r2";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rpyutils-release/archive/release/humble/rpyutils/0.2.1-2.tar.gz";
-    name = "0.2.1-2.tar.gz";
-    sha256 = "d35a40fddeb91bd9d436fffbf8081b71fec4a60934be2f05555519f62cccb81c";
+    url = "https://github.com/ros2-gbp/rpyutils-release/archive/release/humble/rpyutils/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "482199dbf2de60bfb040c1c411b6cb83d332616a52395cfe39375c75fe5ac70a";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-mypy, ament-pep257, ament-xmllint, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-rpyutils";
-  version = "0.6.2-r2";
+  version = "0.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rpyutils-release/archive/release/kilted/rpyutils/0.6.2-2.tar.gz";
-    name = "0.6.2-2.tar.gz";
-    sha256 = "7c28ca9c0c2a680a7ded5f9b95e26b6ba63ffe4e9a78fbcbdf3c0b71448621e2";
+    url = "https://github.com/ros2-gbp/rpyutils-release/archive/release/kilted/rpyutils/0.6.3-1.tar.gz";
+    name = "0.6.3-1.tar.gz";
+    sha256 = "3232f835bcadc1d091ffb9afdfcd0af6f2ec75e95fa1cd0e45c5fd837702b54c";
   };
 
   buildType = "ament_python";

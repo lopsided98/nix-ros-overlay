@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, gz-cmake-vendor, gz-tools-vendor, gz-utils-vendor }:
 buildRosPackage {
   pname = "ros-kilted-gz-plugin-vendor";
-  version = "0.2.1-r2";
+  version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_plugin_vendor-release/archive/release/kilted/gz_plugin_vendor/0.2.1-2.tar.gz";
-    name = "0.2.1-2.tar.gz";
-    sha256 = "377e3921fc25a6f6ffe6aae134360a05a5ed5c9a3d8344f113b5ea275d6c5a1e";
+    url = "https://github.com/ros2-gbp/gz_plugin_vendor-release/archive/release/kilted/gz_plugin_vendor/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
+    sha256 = "88ce2d69decaf082a393ed077c63db84b51c7563185458d8d654517dfc2c3d81";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package cmake ];
 
   meta = {
-    description = "Vendor package for: gz-plugin3 3.0.1
+    description = "Vendor package for: gz-plugin3 3.1.0
 
     Gazebo Plugin : Cross-platform C++ library for dynamically loading plugins.";
     license = with lib.licenses; [ asl20 ];

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, angles, eigen, geometry-msgs, nav-msgs, nav2-common, nav2-core, nav2-costmap-2d, nav2-util, nlohmann_json, ompl, pluginlib, rcl-interfaces, rclcpp, rclcpp-lifecycle, tf2, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-nav2-smac-planner";
-  version = "1.4.1-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/nav2_smac_planner/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "64dbda1eef16c888668040d544b262f1613f37a4d6b5e569f894e3833be93bd2";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/nav2_smac_planner/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "4706f3cd45bb8ca7b1169dab5d8bc9e0a47b8418f1f35ffe88af340ce13e18e1";
   };
 
   buildType = "ament_cmake";

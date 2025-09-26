@@ -30,6 +30,8 @@ self: super: {
 
  admittance-controller = self.callPackage ./admittance-controller {};
 
+ ads-vendor = self.callPackage ./ads-vendor {};
+
  ament-acceleration = self.callPackage ./ament-acceleration {};
 
  ament-black = self.callPackage ./ament-black {};
@@ -1536,8 +1538,6 @@ self: super: {
 
  mola-gnss-to-markers = self.callPackage ./mola-gnss-to-markers {};
 
- mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
-
  mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
 
  mola-input-kitti360-dataset = self.callPackage ./mola-input-kitti360-dataset {};
@@ -1567,12 +1567,6 @@ self: super: {
  mola-pose-list = self.callPackage ./mola-pose-list {};
 
  mola-relocalization = self.callPackage ./mola-relocalization {};
-
- mola-state-estimation = self.callPackage ./mola-state-estimation {};
-
- mola-state-estimation-simple = self.callPackage ./mola-state-estimation-simple {};
-
- mola-state-estimation-smoother = self.callPackage ./mola-state-estimation-smoother {};
 
  mola-test-datasets = self.callPackage ./mola-test-datasets {};
 
@@ -1828,6 +1822,8 @@ self: super: {
 
  nav2-rotation-shim-controller = self.callPackage ./nav2-rotation-shim-controller {};
 
+ nav2-route = self.callPackage ./nav2-route {};
+
  nav2-rviz-plugins = self.callPackage ./nav2-rviz-plugins {};
 
  nav2-simple-commander = self.callPackage ./nav2-simple-commander {};
@@ -1865,8 +1861,6 @@ self: super: {
  nicla-vision-ros2 = self.callPackage ./nicla-vision-ros2 {};
 
  nlohmann-json-schema-validator-vendor = self.callPackage ./nlohmann-json-schema-validator-vendor {};
-
- nmea-hardware-interface = self.callPackage ./nmea-hardware-interface {};
 
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
@@ -1913,6 +1907,32 @@ self: super: {
  odom-to-tf-ros2 = self.callPackage ./odom-to-tf-ros2 {};
 
  odri-master-board-sdk = self.callPackage ./odri-master-board-sdk {};
+
+ off-highway-can = self.callPackage ./off-highway-can {};
+
+ off-highway-general-purpose-radar = self.callPackage ./off-highway-general-purpose-radar {};
+
+ off-highway-general-purpose-radar-msgs = self.callPackage ./off-highway-general-purpose-radar-msgs {};
+
+ off-highway-premium-radar = self.callPackage ./off-highway-premium-radar {};
+
+ off-highway-premium-radar-msgs = self.callPackage ./off-highway-premium-radar-msgs {};
+
+ off-highway-premium-radar-sample = self.callPackage ./off-highway-premium-radar-sample {};
+
+ off-highway-premium-radar-sample-msgs = self.callPackage ./off-highway-premium-radar-sample-msgs {};
+
+ off-highway-radar = self.callPackage ./off-highway-radar {};
+
+ off-highway-radar-msgs = self.callPackage ./off-highway-radar-msgs {};
+
+ off-highway-sensor-drivers = self.callPackage ./off-highway-sensor-drivers {};
+
+ off-highway-sensor-drivers-examples = self.callPackage ./off-highway-sensor-drivers-examples {};
+
+ off-highway-uss = self.callPackage ./off-highway-uss {};
+
+ off-highway-uss-msgs = self.callPackage ./off-highway-uss-msgs {};
 
  om-gravity-compensation-controller = self.callPackage ./om-gravity-compensation-controller {};
 
@@ -2144,6 +2164,8 @@ self: super: {
 
  pybind11-vendor = self.callPackage ./pybind11-vendor {};
 
+ pymoveit2 = self.callPackage ./pymoveit2 {};
+
  python-cmake-module = self.callPackage ./python-cmake-module {};
 
  python-mrpt = self.callPackage ./python-mrpt {};
@@ -2279,6 +2301,14 @@ self: super: {
  rcss3d-nao = self.callPackage ./rcss3d-nao {};
 
  rcutils = self.callPackage ./rcutils {};
+
+ rdl = self.callPackage ./rdl {};
+
+ rdl-benchmark = self.callPackage ./rdl-benchmark {};
+
+ rdl-dynamics = self.callPackage ./rdl-dynamics {};
+
+ rdl-urdfreader = self.callPackage ./rdl-urdfreader {};
 
  realsense2-camera = self.callPackage ./realsense2-camera {};
 
@@ -3003,6 +3033,8 @@ self: super: {
  tango-icons-vendor = self.callPackage ./tango-icons-vendor {};
 
  tcb-span = self.callPackage ./tcb-span {};
+
+ tecgihan-driver = self.callPackage ./tecgihan-driver {};
 
  teleop-tools = self.callPackage ./teleop-tools {};
 

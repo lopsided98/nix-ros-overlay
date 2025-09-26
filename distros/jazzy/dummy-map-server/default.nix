@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-dummy-map-server";
-  version = "0.33.6-r1";
+  version = "0.33.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/dummy_map_server/0.33.6-1.tar.gz";
-    name = "0.33.6-1.tar.gz";
-    sha256 = "5f42d627478958f514817968f02e8a07fc451c94d5dafeb15f4bc26a1c6662bd";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/dummy_map_server/0.33.7-1.tar.gz";
+    name = "0.33.7-1.tar.gz";
+    sha256 = "282812b0b8c2a785bc7f6a36091b2f84913e351079d20219b96e9091ba33fdcb";
   };
 
   buildType = "ament_cmake";

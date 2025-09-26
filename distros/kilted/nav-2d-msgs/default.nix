@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-nav-2d-msgs";
-  version = "1.4.1-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/nav_2d_msgs/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "92bf43223c1deac3df90fa2330260b0732c5ea1b422bab68a3c1225720d75707";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/nav_2d_msgs/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "63f81d06b78a8a33b26279e5a9417760799555ac87d4e33993173c5673fa89d6";
   };
 
   buildType = "ament_cmake";

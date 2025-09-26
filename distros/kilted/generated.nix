@@ -28,6 +28,8 @@ self: super: {
 
  admittance-controller = self.callPackage ./admittance-controller {};
 
+ ads-vendor = self.callPackage ./ads-vendor {};
+
  ament-acceleration = self.callPackage ./ament-acceleration {};
 
  ament-black = self.callPackage ./ament-black {};
@@ -1280,8 +1282,6 @@ self: super: {
 
  mola-gnss-to-markers = self.callPackage ./mola-gnss-to-markers {};
 
- mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
-
  mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
 
  mola-input-kitti360-dataset = self.callPackage ./mola-input-kitti360-dataset {};
@@ -1311,12 +1311,6 @@ self: super: {
  mola-pose-list = self.callPackage ./mola-pose-list {};
 
  mola-relocalization = self.callPackage ./mola-relocalization {};
-
- mola-state-estimation = self.callPackage ./mola-state-estimation {};
-
- mola-state-estimation-simple = self.callPackage ./mola-state-estimation-simple {};
-
- mola-state-estimation-smoother = self.callPackage ./mola-state-estimation-smoother {};
 
  mola-test-datasets = self.callPackage ./mola-test-datasets {};
 
@@ -1603,8 +1597,6 @@ self: super: {
  network-bridge = self.callPackage ./network-bridge {};
 
  nlohmann-json-schema-validator-vendor = self.callPackage ./nlohmann-json-schema-validator-vendor {};
-
- nmea-hardware-interface = self.callPackage ./nmea-hardware-interface {};
 
  nmea-msgs = self.callPackage ./nmea-msgs {};
 

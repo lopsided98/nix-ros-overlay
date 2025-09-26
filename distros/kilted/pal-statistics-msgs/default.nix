@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-pal-statistics-msgs";
-  version = "2.6.3-r1";
+  version = "2.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pal_statistics-release/archive/release/kilted/pal_statistics_msgs/2.6.3-1.tar.gz";
-    name = "2.6.3-1.tar.gz";
-    sha256 = "c108a3694ec4c1cf0d83dc01dddc895503ef306e6a305f6ee00fa69f01c3c909";
+    url = "https://github.com/ros2-gbp/pal_statistics-release/archive/release/kilted/pal_statistics_msgs/2.7.0-1.tar.gz";
+    name = "2.7.0-1.tar.gz";
+    sha256 = "48d11d6b96f99aa951f0a7e56ef41fb77f10d3cb6a7276b426a0005c5b4a2bbe";
   };
 
   buildType = "ament_cmake";

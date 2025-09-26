@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nav-msgs, nav2-common, nav2-core, nav2-costmap-2d, nav2-util, pluginlib, rcl-interfaces, rclcpp, rclcpp-lifecycle, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-nav2-theta-star-planner";
-  version = "1.4.1-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/nav2_theta_star_planner/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "dcaa997029274f9522431d61c10273ee872b9f8c19beee124401bf1c3f357677";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/nav2_theta_star_planner/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "2c5ae222ad860ef4b29ad94dd32164b704d8a83f1c8f565104d7e7f17a889183";
   };
 
   buildType = "ament_cmake";

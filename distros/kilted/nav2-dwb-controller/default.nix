@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, costmap-queue, dwb-core, dwb-critics, dwb-msgs, dwb-plugins, nav-2d-msgs, nav-2d-utils, nav2-common }:
 buildRosPackage {
   pname = "ros-kilted-nav2-dwb-controller";
-  version = "1.4.1-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/nav2_dwb_controller/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "d04579449603bfba89a609c278bec60f4eb9a141a6e67039d316fd98787ce0d3";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/nav2_dwb_controller/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "73250c7e280e708914dcbbfb016c5d606614b65f16c88802d081e1bfe59e4b09";
   };
 
   buildType = "ament_cmake";

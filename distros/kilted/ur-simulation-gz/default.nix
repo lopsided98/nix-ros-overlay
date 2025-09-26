@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, gz-ros2-control, joint-state-publisher, launch, launch-ros, launch-testing-ament-cmake, launch-testing-ros, ros-gz-bridge, ros-gz-sim, rviz2, ur-controllers, ur-description, ur-moveit-config, urdf, urdfdom, xacro }:
 buildRosPackage {
   pname = "ros-kilted-ur-simulation-gz";
-  version = "2.3.0-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ur_simulation_gz-release/archive/release/kilted/ur_simulation_gz/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "87531c4ccf88d5c4f11fecec21d45544bd623723e29c6937c30c5d9ac44960e8";
+    url = "https://github.com/ros2-gbp/ur_simulation_gz-release/archive/release/kilted/ur_simulation_gz/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "d193b7a5127155c2eb66127ed3f780e56e6c19b109605c53b098ac6a512e38bb";
   };
 
   buildType = "ament_cmake";

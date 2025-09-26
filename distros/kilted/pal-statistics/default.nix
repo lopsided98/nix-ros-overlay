@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, boost, pal-statistics-msgs, rclcpp, rclcpp-lifecycle, rclpy }:
 buildRosPackage {
   pname = "ros-kilted-pal-statistics";
-  version = "2.6.3-r1";
+  version = "2.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pal_statistics-release/archive/release/kilted/pal_statistics/2.6.3-1.tar.gz";
-    name = "2.6.3-1.tar.gz";
-    sha256 = "ce046021ff10bceccfbd90dcc36e0801f00aa0e75bfad5979bd6766630953cb4";
+    url = "https://github.com/ros2-gbp/pal_statistics-release/archive/release/kilted/pal_statistics/2.7.0-1.tar.gz";
+    name = "2.7.0-1.tar.gz";
+    sha256 = "44b37c245841294051ec4a1f08320ba59c86357a61ce61463c9f59d780fcfa0a";
   };
 
   buildType = "ament_cmake";

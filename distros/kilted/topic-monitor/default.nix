@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, ament-pep257, ament-xmllint, launch, launch-ros, python3Packages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-topic-monitor";
-  version = "0.36.1-r1";
+  version = "0.36.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/topic_monitor/0.36.1-1.tar.gz";
-    name = "0.36.1-1.tar.gz";
-    sha256 = "272400c35302943104b7e1ed6a2ffcaf7719ca70abe28a7f6c1698fc25f1c80e";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/topic_monitor/0.36.2-1.tar.gz";
+    name = "0.36.2-1.tar.gz";
+    sha256 = "370b98741c6865585b9768235c3733136f2d07c275b678fdce838e860069a96c";
   };
 
   buildType = "ament_python";

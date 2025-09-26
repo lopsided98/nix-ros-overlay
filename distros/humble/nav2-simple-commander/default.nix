@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, lifecycle-msgs, nav2-msgs, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-humble-nav2-simple-commander";
-  version = "1.1.18-r1";
+  version = "1.1.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_simple_commander/1.1.18-1.tar.gz";
-    name = "1.1.18-1.tar.gz";
-    sha256 = "db0ca852246d9b01f027b6e270744a8ab6a078fa429817e850f50dfcecac271e";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_simple_commander/1.1.19-1.tar.gz";
+    name = "1.1.19-1.tar.gz";
+    sha256 = "10831388539c2699413880badaa470943041d38e82e446ce657e961214eaafe8";
   };
 
   buildType = "ament_python";

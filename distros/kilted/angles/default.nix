@@ -2,19 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-angles";
-  version = "1.16.0-r5";
+  version = "1.16.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/angles-release/archive/release/kilted/angles/1.16.0-5.tar.gz";
-    name = "1.16.0-5.tar.gz";
-    sha256 = "c3cbfafdb7ef9ebdb3846791bb69ffd8826daaed1db055e08b8be2618be679b1";
+    url = "https://github.com/ros2-gbp/angles-release/archive/release/kilted/angles/1.16.1-1.tar.gz";
+    name = "1.16.1-1.tar.gz";
+    sha256 = "e6ae63c398180ac88ea8d051252137de363eaeb0bae5d4ede242bda153b1a38a";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-python python3Packages.setuptools ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ];
   propagatedBuildInputs = [ ament-cmake ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python python3Packages.setuptools ];
 

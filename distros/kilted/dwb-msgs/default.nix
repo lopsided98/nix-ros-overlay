@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, nav-2d-msgs, nav-msgs, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-dwb-msgs";
-  version = "1.4.1-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/dwb_msgs/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "6e1cd5736a4f1d5686231fbda9206890146048dc0159e075cd4cb7bd3ae91951";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/dwb_msgs/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "8fb6650adddc6c9ce7890fd2e6434ae9b79a28706bbfd50409b6fea4d918e944";
   };
 
   buildType = "ament_cmake";

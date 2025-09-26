@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, ament-pep257, launch, launch-ros, python3Packages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-topic-monitor";
-  version = "0.20.5-r1";
+  version = "0.20.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/topic_monitor/0.20.5-1.tar.gz";
-    name = "0.20.5-1.tar.gz";
-    sha256 = "5ceea49c9b70277c3c2932c3a99cfcdcb325419a9d4285a61b12927acdd0ae8d";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/topic_monitor/0.20.6-1.tar.gz";
+    name = "0.20.6-1.tar.gz";
+    sha256 = "0667b50f034913bfa0a671ef2d5c7c8656255c5ca40a35e8bd8d8e8fec8cfc4e";
   };
 
   buildType = "ament_python";

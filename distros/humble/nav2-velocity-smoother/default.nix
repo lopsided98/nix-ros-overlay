@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nav2-common, nav2-util, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-humble-nav2-velocity-smoother";
-  version = "1.1.18-r1";
+  version = "1.1.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_velocity_smoother/1.1.18-1.tar.gz";
-    name = "1.1.18-1.tar.gz";
-    sha256 = "df18b0c29903f512e4e2e95c5000abb84fd3a2c762e4a880c78d159ac255e244";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_velocity_smoother/1.1.19-1.tar.gz";
+    name = "1.1.19-1.tar.gz";
+    sha256 = "702b4c2ac538d4c4717c49646a314ed10d348a5a1d89e34684b3344b150484c3";
   };
 
   buildType = "ament_cmake";

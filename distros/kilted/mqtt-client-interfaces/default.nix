@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-mqtt-client-interfaces";
-  version = "2.4.1-r1";
+  version = "2.4.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mqtt_client-release/archive/release/kilted/mqtt_client_interfaces/2.4.1-1.tar.gz";
-    name = "2.4.1-1.tar.gz";
-    sha256 = "df6f9747f4f2b0e57152678e4651ddd4ac96468f6e2f481b02f90bff987dc415";
+    url = "https://github.com/ros2-gbp/mqtt_client-release/archive/release/kilted/mqtt_client_interfaces/2.4.1-2.tar.gz";
+    name = "2.4.1-2.tar.gz";
+    sha256 = "5b1d2dcee65c7612e77c0dff42c595514ff3a67483ac540042f6f96f0ae05c16";
   };
 
   buildType = "ament_cmake";
