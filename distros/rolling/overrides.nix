@@ -175,20 +175,6 @@ in {
     fetchgitArgs.hash = "sha256-b02OFUx0BxUA6HN6IaacSg1t3RP4o7NND7X0U635W8U=";
   };
 
-  rcutils = rosSuper.rcutils.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = [ # override the patch from ros2-overlay.nix!
-      # Fix linking to libatomic
-      # https://github.com/ros2/rcutils/pull/384
-      (self.fetchpatch {
-        # Version #384 rebased to rolling
-        url = "https://github.com/ros2/rcutils/commit/acdcf805dfd8d3cf77f269ef280077d4226e6e4e.patch";
-        hash = "sha256-RWEgleC72d8qZKeLGQ2XKx6js83MgTvcb1PJ28shrsk=";
-      })
-    ];
-  });
-
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     tarSourceArgs.hook = let
       version = "1.79";
