@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, rclpy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-quality-of-service-demo-py";
-  version = "0.36.1-r1";
+  version = "0.36.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/quality_of_service_demo_py/0.36.1-1.tar.gz";
-    name = "0.36.1-1.tar.gz";
-    sha256 = "fe7ae3dcde24129c758681bc87ff631af007da3927997c4a8c464c2752621e6f";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/quality_of_service_demo_py/0.36.2-1.tar.gz";
+    name = "0.36.2-1.tar.gz";
+    sha256 = "2cb971d7cd1ec03670fdbab32cdec44e3276f922941beae5bca111ae08c26aa0";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, diff-drive-controller, joint-state-broadcaster, launch, launch-ros, launch-testing, nav2-common, nav2-minimal-tb3-sim, nav2-minimal-tb4-sim, navigation2, ros-gz-bridge, ros-gz-sim, slam-toolbox, xacro }:
 buildRosPackage {
   pname = "ros-kilted-nav2-bringup";
-  version = "1.4.1-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/nav2_bringup/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "d4439c8df50ea021839c38c9fdb12ac8db6f8890822d85864df6fbca291517c7";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/nav2_bringup/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "f983e037ed16588bd7522f93bc65828929796a07930e4cca7ea3bff976306488";
   };
 
   buildType = "ament_cmake";

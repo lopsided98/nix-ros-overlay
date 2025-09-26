@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-pal-statistics-msgs";
-  version = "2.6.4-r1";
+  version = "2.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pal_statistics-release/archive/release/jazzy/pal_statistics_msgs/2.6.4-1.tar.gz";
-    name = "2.6.4-1.tar.gz";
-    sha256 = "de699ad8e8547146edd8a6202de378ca12bcef0168791db0a4ff9e7b39fbe234";
+    url = "https://github.com/ros2-gbp/pal_statistics-release/archive/release/jazzy/pal_statistics_msgs/2.7.0-1.tar.gz";
+    name = "2.7.0-1.tar.gz";
+    sha256 = "6cd7b348b2469e0758675c6d75d0a451abc2e2700149e6179080c8b39d08d9b9";
   };
 
   buildType = "ament_cmake";

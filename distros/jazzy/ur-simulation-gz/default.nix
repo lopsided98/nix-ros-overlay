@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, gz-ros2-control, joint-state-publisher, launch, launch-ros, launch-testing-ament-cmake, launch-testing-ros, ros-gz-bridge, ros-gz-sim, rviz2, ur-controllers, ur-description, ur-moveit-config, urdf, urdfdom, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-ur-simulation-gz";
-  version = "2.3.0-r2";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ur_simulation_gz-release/archive/release/jazzy/ur_simulation_gz/2.3.0-2.tar.gz";
-    name = "2.3.0-2.tar.gz";
-    sha256 = "8157b928c4f8b482967da1f3d990e31a2a21a57189f729d4cc78071898839b50";
+    url = "https://github.com/ros2-gbp/ur_simulation_gz-release/archive/release/jazzy/ur_simulation_gz/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "f7e9ab0879de3285b213e519474ef8376ea1eebd4f6f42a0c9ca635d210025c0";
   };
 
   buildType = "ament_cmake";

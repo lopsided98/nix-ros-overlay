@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-amcl, nav2-behavior-tree, nav2-behaviors, nav2-bt-navigator, nav2-collision-monitor, nav2-common, nav2-constrained-smoother, nav2-controller, nav2-core, nav2-costmap-2d, nav2-dwb-controller, nav2-graceful-controller, nav2-lifecycle-manager, nav2-map-server, nav2-mppi-controller, nav2-msgs, nav2-navfn-planner, nav2-planner, nav2-regulated-pure-pursuit-controller, nav2-rotation-shim-controller, nav2-route, nav2-rviz-plugins, nav2-simple-commander, nav2-smac-planner, nav2-smoother, nav2-theta-star-planner, nav2-util, nav2-velocity-smoother, nav2-voxel-grid, nav2-waypoint-follower, opennav-docking, opennav-docking-bt, opennav-docking-core }:
 buildRosPackage {
   pname = "ros-kilted-navigation2";
-  version = "1.4.1-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/navigation2/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "41b46817b5dc2fbfd19177e49c91ea40c02d9dc6e8d2d0e2d0581c5396207d34";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/navigation2/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "b81f132f3aaee3599da1a5591268dbccd978e97a7b027ce79c495fa3d4198f04";
   };
 
   buildType = "ament_cmake";

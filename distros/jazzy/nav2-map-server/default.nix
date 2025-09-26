@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, graphicsmagick, launch, launch-ros, launch-testing, nav-msgs, nav2-common, nav2-msgs, nav2-util, rclcpp, rclcpp-lifecycle, std-msgs, tf2, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-map-server";
-  version = "1.3.8-r1";
+  version = "1.3.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_map_server/1.3.8-1.tar.gz";
-    name = "1.3.8-1.tar.gz";
-    sha256 = "5a19f202afe672dd311e16c179e7a16e1736e5e7ab623e5e757817fb00bc045b";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_map_server/1.3.9-1.tar.gz";
+    name = "1.3.9-1.tar.gz";
+    sha256 = "b3a66707fd0c8be1b867616bdf80153ae96b3524b05b4938020f08c89159e0de";
   };
 
   buildType = "ament_cmake";

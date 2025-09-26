@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, pendulum-msgs, rclcpp, rmw-implementation-cmake, ros2run, rttest, tlsf-cpp }:
 buildRosPackage {
   pname = "ros-kilted-pendulum-control";
-  version = "0.36.1-r1";
+  version = "0.36.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/pendulum_control/0.36.1-1.tar.gz";
-    name = "0.36.1-1.tar.gz";
-    sha256 = "d4960be1464b79d8a5c94e3276ba35323bc75690f89845b2e6685c50e72a8b7b";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/pendulum_control/0.36.2-1.tar.gz";
+    name = "0.36.2-1.tar.gz";
+    sha256 = "44cf857059f0ccf1f8ff86a5c0350630d43c9597772572e152ae74f050813d82";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, control-msgs, eigen, filters, generate-parameter-library, geometry-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools }:
 buildRosPackage {
   pname = "ros-humble-control-toolbox";
-  version = "3.6.1-r1";
+  version = "3.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/control_toolbox-release/archive/release/humble/control_toolbox/3.6.1-1.tar.gz";
-    name = "3.6.1-1.tar.gz";
-    sha256 = "1d8bd6fe084f2ab1435e11792fc079fe71660737182ec35533c4b27b04634f45";
+    url = "https://github.com/ros2-gbp/control_toolbox-release/archive/release/humble/control_toolbox/3.6.2-1.tar.gz";
+    name = "3.6.2-1.tar.gz";
+    sha256 = "5b484971368c3721320c723643e54d18d5490b8fa9a1c4a54af47b7e1703dff4";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, dynamixel-interfaces, dynamixel-sdk, hardware-interface, pluginlib, rclcpp, realtime-tools, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-dynamixel-hardware-interface";
-  version = "1.4.14-r1";
+  version = "1.4.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_hardware_interface-release/archive/release/humble/dynamixel_hardware_interface/1.4.14-1.tar.gz";
-    name = "1.4.14-1.tar.gz";
-    sha256 = "1497aa4655cfe36f31b9cfaa74bad267c24b5aaef8c1186ba15e488e4ef5b9eb";
+    url = "https://github.com/ros2-gbp/dynamixel_hardware_interface-release/archive/release/humble/dynamixel_hardware_interface/1.4.15-1.tar.gz";
+    name = "1.4.15-1.tar.gz";
+    sha256 = "e3645a9ea35d13110421a4eeba6ee5928352f833e6beeffc6f1aa298fc7d481c";
   };
 
   buildType = "ament_cmake";

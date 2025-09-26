@@ -526,6 +526,14 @@ self: super: {
 
  base2d-kinematics-msgs = self.callPackage ./base2d-kinematics-msgs {};
 
+ bcr-arm = self.callPackage ./bcr-arm {};
+
+ bcr-arm-description = self.callPackage ./bcr-arm-description {};
+
+ bcr-arm-moveit-config = self.callPackage ./bcr-arm-moveit-config {};
+
+ bcr-arm-ros2 = self.callPackage ./bcr-arm-ros2 {};
+
  bcr-bot = self.callPackage ./bcr-bot {};
 
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
@@ -1892,8 +1900,6 @@ self: super: {
 
  mola-gnss-to-markers = self.callPackage ./mola-gnss-to-markers {};
 
- mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
-
  mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
 
  mola-input-kitti360-dataset = self.callPackage ./mola-input-kitti360-dataset {};
@@ -1923,12 +1929,6 @@ self: super: {
  mola-pose-list = self.callPackage ./mola-pose-list {};
 
  mola-relocalization = self.callPackage ./mola-relocalization {};
-
- mola-state-estimation = self.callPackage ./mola-state-estimation {};
-
- mola-state-estimation-simple = self.callPackage ./mola-state-estimation-simple {};
-
- mola-state-estimation-smoother = self.callPackage ./mola-state-estimation-smoother {};
 
  mola-test-datasets = self.callPackage ./mola-test-datasets {};
 
@@ -2170,6 +2170,8 @@ self: super: {
 
  nav2-rotation-shim-controller = self.callPackage ./nav2-rotation-shim-controller {};
 
+ nav2-route = self.callPackage ./nav2-route {};
+
  nav2-rviz-plugins = self.callPackage ./nav2-rviz-plugins {};
 
  nav2-simple-commander = self.callPackage ./nav2-simple-commander {};
@@ -2213,8 +2215,6 @@ self: super: {
  nicla-vision-ros2 = self.callPackage ./nicla-vision-ros2 {};
 
  nlohmann-json-schema-validator-vendor = self.callPackage ./nlohmann-json-schema-validator-vendor {};
-
- nmea-hardware-interface = self.callPackage ./nmea-hardware-interface {};
 
  nmea-msgs = self.callPackage ./nmea-msgs {};
 
@@ -2345,6 +2345,10 @@ self: super: {
  osrf-testing-tools-cpp = self.callPackage ./osrf-testing-tools-cpp {};
 
  ouster-msgs = self.callPackage ./ouster-msgs {};
+
+ ouster-ros = self.callPackage ./ouster-ros {};
+
+ ouster-sensor-msgs = self.callPackage ./ouster-sensor-msgs {};
 
  ouxt-common = self.callPackage ./ouxt-common {};
 
@@ -2579,6 +2583,8 @@ self: super: {
  pybind11-vendor = self.callPackage ./pybind11-vendor {};
 
  pyhri = self.callPackage ./pyhri {};
+
+ pymoveit2 = self.callPackage ./pymoveit2 {};
 
  python-cmake-module = self.callPackage ./python-cmake-module {};
 
@@ -3467,6 +3473,8 @@ self: super: {
  tango-icons-vendor = self.callPackage ./tango-icons-vendor {};
 
  tcb-span = self.callPackage ./tcb-span {};
+
+ tecgihan-driver = self.callPackage ./tecgihan-driver {};
 
  teleop-tools = self.callPackage ./teleop-tools {};
 

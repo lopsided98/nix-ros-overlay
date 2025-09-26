@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, geographiclib, git, gps-msgs, launch-testing, launch-testing-ament-cmake, launch-testing-ros, nav-msgs, nmea-msgs, novatel-oem7-msgs, pluginlib, rclcpp, rclcpp-components, rclpy, rosbag2, rosidl-runtime-py, sensor-msgs, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-novatel-oem7-driver";
-  version = "24.1.0-r1";
+  version = "24.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/jazzy/novatel_oem7_driver/24.1.0-1.tar.gz";
-    name = "24.1.0-1.tar.gz";
-    sha256 = "7f5b6c58227e847ea37be785ec4159bab86ef64b60579c8d95eae80bfe1a4346";
+    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/jazzy/novatel_oem7_driver/24.2.0-1.tar.gz";
+    name = "24.2.0-1.tar.gz";
+    sha256 = "a10476faf1249c582dea70bd185955fb7ee0e7951c83a9b6ff5db51c73d4c373";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake git ];
+  buildInputs = [ ament-cmake boost git ];
   checkInputs = [ launch-testing launch-testing-ament-cmake launch-testing-ros rclpy rosbag2 rosidl-runtime-py ];
-  propagatedBuildInputs = [ boost geographiclib gps-msgs nav-msgs nmea-msgs novatel-oem7-msgs pluginlib rclcpp rclcpp-components sensor-msgs tf2-geometry-msgs ];
+  propagatedBuildInputs = [ geographiclib gps-msgs nav-msgs nmea-msgs novatel-oem7-msgs pluginlib rclcpp rclcpp-components sensor-msgs tf2-geometry-msgs ];
   nativeBuildInputs = [ ament-cmake git ];
 
   meta = {

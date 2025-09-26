@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-rpyutils";
-  version = "0.4.1-r3";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rpyutils-release/archive/release/jazzy/rpyutils/0.4.1-3.tar.gz";
-    name = "0.4.1-3.tar.gz";
-    sha256 = "1f291e9c13830ab9f11960b6fb1d2c72b6dbf830088fc1814e43f5fe47e65ad1";
+    url = "https://github.com/ros2-gbp/rpyutils-release/archive/release/jazzy/rpyutils/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
+    sha256 = "185d0d5fd73effe331f4354ce6e7698be8325f4f0a75e1aac65474e6423a9470";
   };
 
   buildType = "ament_python";

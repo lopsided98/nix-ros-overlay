@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, nav2-common, rclcpp-lifecycle, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-opennav-docking-core";
-  version = "1.4.1-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/opennav_docking_core/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "6b06bdef1e1dde5d0564c8e5fbbea7f295660a0e24a389a461b040508cd98150";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/opennav_docking_core/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "b6476f3518139409f9181c304e3bc2836145f0b74e025d4b00a65f3467445e68";
   };
 
   buildType = "ament_cmake";

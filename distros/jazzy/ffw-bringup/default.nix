@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, dynamixel-hardware-interface, ffw-description, gz-ros2-control, image-transport-plugins, rclpy, robot-state-publisher, ros-gz-bridge, ros-gz-image, ros-gz-sim, ros2-control, ros2-controllers, rviz2, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-ffw-bringup";
-  version = "1.1.11-r1";
+  version = "1.1.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_bringup/1.1.11-1.tar.gz";
-    name = "1.1.11-1.tar.gz";
-    sha256 = "b32eabdf956e0ad2f18d2016dbaf42542bc140c76a38e76f302872718cd29c10";
+    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_bringup/1.1.12-1.tar.gz";
+    name = "1.1.12-1.tar.gz";
+    sha256 = "2919baf95d58bf7e869155943be76a712d339cf70bdebef3496b575486f4f1a1";
   };
 
   buildType = "ament_python";

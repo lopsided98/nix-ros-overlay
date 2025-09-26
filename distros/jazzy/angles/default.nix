@@ -2,19 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-angles";
-  version = "1.16.0-r5";
+  version = "1.16.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/angles-release/archive/release/jazzy/angles/1.16.0-5.tar.gz";
-    name = "1.16.0-5.tar.gz";
-    sha256 = "ceca46e4e5a275e95b9d9ef05c4ccf2e33ab76350ba4c0db4e7805677cc76352";
+    url = "https://github.com/ros2-gbp/angles-release/archive/release/jazzy/angles/1.16.1-1.tar.gz";
+    name = "1.16.1-1.tar.gz";
+    sha256 = "b24f9df85187f4216930bcdd34db7ece07711dd0eb49a9c4d368130bbd71bed3";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-python python3Packages.setuptools ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ];
   propagatedBuildInputs = [ ament-cmake ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python python3Packages.setuptools ];
 

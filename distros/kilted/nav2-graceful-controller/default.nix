@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, geometry-msgs, nav-2d-utils, nav-msgs, nav2-common, nav2-controller, nav2-core, nav2-costmap-2d, nav2-util, pluginlib, rcl-interfaces, rclcpp, rclcpp-lifecycle, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-nav2-graceful-controller";
-  version = "1.4.1-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/nav2_graceful_controller/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "aa59634e85c4ee23088d7e54b95c2a9f09d875910e75be9bc3f4aca0cbb12e3c";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/kilted/nav2_graceful_controller/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "9680d3a2d88290b087b274c32b29ac3af3085f5d5c09c65ff426e1f12c838ffb";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ackermann-nlmpc-msgs";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ackmerann_nlmpc-release/archive/release/jazzy/ackermann_nlmpc_msgs/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "722b38ae5d92abd12a856b239dc36b4c88c3e70ba270a957f177c15bdfe1e786";
+    url = "https://github.com/ros2-gbp/ackmerann_nlmpc-release/archive/release/jazzy/ackermann_nlmpc_msgs/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "8a54b718cdd496ac1d9d523168dd09a2c4b5d3b584941a6cebbc6a5b13dbf492";
   };
 
   buildType = "ament_cmake";
