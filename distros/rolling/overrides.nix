@@ -266,9 +266,6 @@ in {
   zenoh-cpp-vendor = (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {}).overrideAttrs(finalAttrs: {
     nativeBuildInputs ? [], postPatch ? "", passthru ? {}, ...
   }: let
-    outputHashes = {
-      "zenoh-1.5.1" = "sha256-EeigSU9l7LCnSkm4/jP0WcdO3Hw9m91zUh8jzVXYhKw=";
-    };
     zenoh-c-source = finalAttrs.passthru.amentVendorSrcs.zenoh_c_vendor;
   in {
     postPatch = postPatch + ''
@@ -278,9 +275,9 @@ in {
       self.rustPlatform.cargoSetupHook
       self.rustc
     ];
-    cargoDeps = self.rustPlatform.importCargoLock {
-      lockFile = "${zenoh-c-source}/Cargo.lock";
-      inherit outputHashes;
+    cargoDeps = self.rustPlatform.fetchCargoVendor {
+      src = zenoh-c-source;
+      hash = "sha256-3WqKoKnIxSzB6XUjMGk5h3+9ZufCOaSKP+0/Hakb6/Q=";
     };
 
     # Patch the build.rs script to be able to build internal
@@ -303,9 +300,9 @@ in {
       (
         mkdir nix-zenoh-opaque-types
         cd nix-zenoh-opaque-types
-        cargoDeps=${self.rustPlatform.importCargoLock {
-          lockFile = "${zenoh-c-source}/build-resources/opaque-types/Cargo.lock";
-          inherit outputHashes;
+        cargoDeps=${self.rustPlatform.fetchCargoVendor {
+          src = "${zenoh-c-source}/build-resources/opaque-types";
+          hash = "sha256-x/yAlljDsHnWfxyzelr1W5F7bytq4iIQjMsJQbyCSD8=";
         }}
         cargoSetupPostUnpackHook
       )
