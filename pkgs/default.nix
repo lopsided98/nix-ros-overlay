@@ -160,6 +160,9 @@ self: super: with self.lib; {
 
   superflore = self.python3Packages.callPackage ./superflore { };
 
+  # Breezy fails to cross-compile and is probably not needed for ROS packages
+  vcstool = super.vcstool.override { breezy = null; };
+
   vtk = super.vtk.overrideAttrs ({
     cmakeFlags ? [], nativeBuildInputs ? [], ...
   }: {
