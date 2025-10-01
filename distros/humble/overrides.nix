@@ -133,6 +133,13 @@ in with lib; {
     fetchgitArgs.hash = "sha256-f7GZgOzUrkAfw1mqwlIKQQqDvkvIahGlHvq6AL+aAvA=";
   };
 
+  mecanum-drive-controller = rosSuper.mecanum-drive-controller.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # See also https://github.com/ros-controls/ros2_controllers/pull/1941
+    buildInputs = buildInputs ++ [ rosSelf.backward-ros ];
+  });
+
   moveit-kinematics = rosSuper.moveit-kinematics.overrideAttrs ({
     propagatedBuildInputs ? [], ...
   }: {
