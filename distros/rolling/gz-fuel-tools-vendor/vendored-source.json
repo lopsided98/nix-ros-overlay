@@ -1,7 +1,7 @@
 {
   "gz_fuel_tools_vendor": {
     "url": "https://github.com/gazebosim/gz-fuel-tools.git",
-    "rev": "gz-fuel-tools11_11.0.0-pre1",
-    "hash": "sha256-XQG8nRB/YkxOGeRaAh0wmb+bEhh1GrF6Vsc+G8dCPpk="
+    "rev": "gz-fuel-tools11_11.0.0",
+    "hash": "sha256-IFnaXBURpN5xTCxFjlcZk9n0sCsUnPBr3NUZrf7Xde0="
   }
 }
