@@ -1,7 +1,7 @@
 {
   "gz_rendering_vendor": {
     "url": "https://github.com/gazebosim/gz-rendering.git",
-    "rev": "gz-rendering10_10.0.0-pre2",
-    "hash": "sha256-DBqamhfkQHiCkLPs6I9jwunLebRkVeK1QcQ6LouoCzg="
+    "rev": "gz-rendering10_10.0.0",
+    "hash": "sha256-Y6kGr4GmDDiQsoO/C2adhWdYhhvuEil+WXKdq3hPqfo="
   }
 }
