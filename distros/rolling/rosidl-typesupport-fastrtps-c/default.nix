@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros-core, ament-index-python, ament-lint-auto, ament-lint-common, fastcdr, osrf-testing-tools-cpp, performance-test-fixture, python3, rcutils, rmw, rosidl-cli, rosidl-generator-c, rosidl-pycommon, rosidl-runtime-c, rosidl-runtime-cpp, rosidl-typesupport-fastrtps-cpp, rosidl-typesupport-interface }:
 buildRosPackage {
   pname = "ros-rolling-rosidl-typesupport-fastrtps-c";
-  version = "3.9.1-r1";
+  version = "3.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/rolling/rosidl_typesupport_fastrtps_c/3.9.1-1.tar.gz";
-    name = "3.9.1-1.tar.gz";
-    sha256 = "ced9d7c7849f991d5046cb4e11c58ed324b948e1d0fad48a1336428642f8402f";
+    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/rolling/rosidl_typesupport_fastrtps_c/3.9.2-1.tar.gz";
+    name = "3.9.2-1.tar.gz";
+    sha256 = "f67cbc4f07f5188a3a07bf2d2ffb3d15b2273eea394bcbc1a66d01f92c25ef1c";
   };
 
   buildType = "ament_cmake";

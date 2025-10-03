@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-trajectory-msgs";
-  version = "5.5.0-r2";
+  version = "5.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/trajectory_msgs/5.5.0-2.tar.gz";
-    name = "5.5.0-2.tar.gz";
-    sha256 = "ecfb95331a33b37d46c7663c13aa27385dc9b05dba1f424ba4b0637b045667d4";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/trajectory_msgs/5.5.1-1.tar.gz";
+    name = "5.5.1-1.tar.gz";
+    sha256 = "c2f604c3bab8812e50f3f7c50888534fc41e720c3c99498975428b30d8acf32b";
   };
 
   buildType = "ament_cmake";

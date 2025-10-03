@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, builtin-interfaces, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, sensor-msgs, urdf }:
 buildRosPackage {
   pname = "ros-kilted-joint-state-broadcaster";
-  version = "5.7.0-r1";
+  version = "5.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/joint_state_broadcaster/5.7.0-1.tar.gz";
-    name = "5.7.0-1.tar.gz";
-    sha256 = "465133745778ec6fcd55e7fbaa2fab65a7ce5a61aa7ac33a65f0056032ee1fb9";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/joint_state_broadcaster/5.8.0-1.tar.gz";
+    name = "5.8.0-1.tar.gz";
+    sha256 = "1ff9148bd1ae4f6f8f3994c616af35f6cc969b5678f0de02bff318f453efe99d";
   };
 
   buildType = "ament_cmake";

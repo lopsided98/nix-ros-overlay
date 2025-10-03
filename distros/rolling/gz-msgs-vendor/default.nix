@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, gz-cmake-vendor, gz-math-vendor, gz-tools-vendor, protobuf, python3, python3Packages, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-rolling-gz-msgs-vendor";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_msgs_vendor-release/archive/release/rolling/gz_msgs_vendor/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "3df0e75a257a6011b598a92de5e14e9092bb72c09fe629486c1d8db8d9da98b5";
+    url = "https://github.com/ros2-gbp/gz_msgs_vendor-release/archive/release/rolling/gz_msgs_vendor/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "be769243acc26280d42ac5e1e6fac4dc78b6dad381016f7bd1d1a8b88414ef6a";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, parameter-traits, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-pid-controller";
-  version = "2.50.0-r1";
+  version = "2.50.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/pid_controller/2.50.0-1.tar.gz";
-    name = "2.50.0-1.tar.gz";
-    sha256 = "802de74c647ba7264dfa6aba14966ad526d4e999f0b730c27febfe0910b9775a";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/pid_controller/2.50.1-1.tar.gz";
+    name = "2.50.1-1.tar.gz";
+    sha256 = "3561a68756c454b1c86b36882c7db80caabd98d383c0890c7447ed595ad9a164";
   };
 
   buildType = "ament_cmake";

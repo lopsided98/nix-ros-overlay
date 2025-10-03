@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-kilted-ros2-control-cmake";
-  version = "0.2.1-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control_cmake-release/archive/release/kilted/ros2_control_cmake/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "8ae543a6984f1d49cb74a34c706c74d266d9b3331c3ce20d09bbdc729d035cbd";
+    url = "https://github.com/ros2-gbp/ros2_control_cmake-release/archive/release/kilted/ros2_control_cmake/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "9a55e43b08cc37366628a73be3d66095ed3a73fee96f18d165dc82c44cc77e14";
   };
 
   buildType = "ament_cmake";

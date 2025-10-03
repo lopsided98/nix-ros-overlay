@@ -1202,6 +1202,8 @@ self: super: {
 
  mola-gnss-to-markers = self.callPackage ./mola-gnss-to-markers {};
 
+ mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
+
  mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
 
  mola-input-kitti360-dataset = self.callPackage ./mola-input-kitti360-dataset {};
@@ -1231,6 +1233,12 @@ self: super: {
  mola-pose-list = self.callPackage ./mola-pose-list {};
 
  mola-relocalization = self.callPackage ./mola-relocalization {};
+
+ mola-state-estimation = self.callPackage ./mola-state-estimation {};
+
+ mola-state-estimation-simple = self.callPackage ./mola-state-estimation-simple {};
+
+ mola-state-estimation-smoother = self.callPackage ./mola-state-estimation-smoother {};
 
  mola-test-datasets = self.callPackage ./mola-test-datasets {};
 
@@ -1815,6 +1823,8 @@ self: super: {
  resource-retriever = self.callPackage ./resource-retriever {};
 
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
+
+ rko-lio = self.callPackage ./rko-lio {};
 
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 
