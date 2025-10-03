@@ -1282,6 +1282,8 @@ self: super: {
 
  mola-gnss-to-markers = self.callPackage ./mola-gnss-to-markers {};
 
+ mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
+
  mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
 
  mola-input-kitti360-dataset = self.callPackage ./mola-input-kitti360-dataset {};
@@ -1311,6 +1313,12 @@ self: super: {
  mola-pose-list = self.callPackage ./mola-pose-list {};
 
  mola-relocalization = self.callPackage ./mola-relocalization {};
+
+ mola-state-estimation = self.callPackage ./mola-state-estimation {};
+
+ mola-state-estimation-simple = self.callPackage ./mola-state-estimation-simple {};
+
+ mola-state-estimation-smoother = self.callPackage ./mola-state-estimation-smoother {};
 
  mola-test-datasets = self.callPackage ./mola-test-datasets {};
 
@@ -1495,6 +1503,10 @@ self: super: {
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
  multires-image = self.callPackage ./multires-image {};
+
+ multisensor-calibration = self.callPackage ./multisensor-calibration {};
+
+ multisensor-calibration-interface = self.callPackage ./multisensor-calibration-interface {};
 
  mvsim = self.callPackage ./mvsim {};
 
@@ -2575,6 +2587,8 @@ self: super: {
  smach-msgs = self.callPackage ./smach-msgs {};
 
  smach-ros = self.callPackage ./smach-ros {};
+
+ small-gicp-vendor = self.callPackage ./small-gicp-vendor {};
 
  smclib = self.callPackage ./smclib {};
 

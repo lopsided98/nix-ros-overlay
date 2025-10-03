@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, eigen, rclcpp-lifecycle, ros2-control-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, backward-ros, eigen, rclcpp-lifecycle, ros2-control-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-kinematics-interface";
-  version = "1.5.0-r1";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/jazzy/kinematics_interface/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "4faeec43f7d067f1ffa6c8e8a757888db16abafee6e508ea01b703918b9470ca";
+    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/jazzy/kinematics_interface/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "74654e360715e06c2939f18c519515c98d3b0412954c67b03b0da3f8a5cece46";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros2-control-cmake ];
-  propagatedBuildInputs = [ eigen rclcpp-lifecycle ];
+  propagatedBuildInputs = [ backward-ros eigen rclcpp-lifecycle ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

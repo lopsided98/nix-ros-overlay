@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, controller-interface, controller-manager, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-gps-sensor-broadcaster";
-  version = "5.7.0-r1";
+  version = "5.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/gps_sensor_broadcaster/5.7.0-1.tar.gz";
-    name = "5.7.0-1.tar.gz";
-    sha256 = "7b434a858a8beccbde45abe9a9ba8513d104661a21987d609877a761cd37db84";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/gps_sensor_broadcaster/5.8.0-1.tar.gz";
+    name = "5.8.0-1.tar.gz";
+    sha256 = "63f937b5497a9d9ccc53ab30ed21b35f21281c4cd019d6ae7a0295e68944a72a";
   };
 
   buildType = "ament_cmake";

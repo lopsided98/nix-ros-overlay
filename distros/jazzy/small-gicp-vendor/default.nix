@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package }:
 buildRosPackage {
   pname = "ros-jazzy-small-gicp-vendor";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/multisensor_calibration-release/archive/release/jazzy/small_gicp_vendor/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "6ff742c649f1958b83f1a8635b87001e6040fb22dc737d9c17cd7f17624223ca";
+    url = "https://github.com/ros2-gbp/multisensor_calibration-release/archive/release/jazzy/small_gicp_vendor/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "536f7dd3af151643de8510c0cfa624adc199739419caf83b0803efc8e134d2a4";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, eigen, filters, fmt, generate-parameter-library, geometry-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools, ros2-control-cmake, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-control-toolbox";
-  version = "5.7.0-r1";
+  version = "5.8.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/control_toolbox-release/archive/release/rolling/control_toolbox/5.7.0-1.tar.gz";
-    name = "5.7.0-1.tar.gz";
-    sha256 = "a32e732ff65dffe307b092f838d941bc0e4806cea519e3cc4b87eb9727e25eaf";
+    url = "https://github.com/ros2-gbp/control_toolbox-release/archive/release/rolling/control_toolbox/5.8.0-2.tar.gz";
+    name = "5.8.0-2.tar.gz";
+    sha256 = "534c8efaf5cc85ae0cee7e1f052e3f7b4fb543253d538e9e4edc8187d7998816";
   };
 
   buildType = "ament_cmake";

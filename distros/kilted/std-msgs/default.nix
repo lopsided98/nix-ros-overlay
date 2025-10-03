@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-std-msgs";
-  version = "5.5.0-r2";
+  version = "5.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/std_msgs/5.5.0-2.tar.gz";
-    name = "5.5.0-2.tar.gz";
-    sha256 = "4d78fae09a0e5ef83a6c383062ecf81a2acf4ba564492f8cf1516415f4247e2f";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/std_msgs/5.5.1-1.tar.gz";
+    name = "5.5.1-1.tar.gz";
+    sha256 = "84a6849ae618c8dc7107e29cd124418f4223bab188a40abf18b9bc6f7c3c137e";
   };
 
   buildType = "ament_cmake";

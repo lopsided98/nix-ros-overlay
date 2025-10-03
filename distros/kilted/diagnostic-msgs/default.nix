@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-diagnostic-msgs";
-  version = "5.5.0-r2";
+  version = "5.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/diagnostic_msgs/5.5.0-2.tar.gz";
-    name = "5.5.0-2.tar.gz";
-    sha256 = "08a34ea299353df9f57954dbd4da420c2918805397c15759de9289cb6afa2926";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/diagnostic_msgs/5.5.1-1.tar.gz";
+    name = "5.5.1-1.tar.gz";
+    sha256 = "310176bef7500fdc94a8f3f047527d24c1601ef6af8950d21a8240125876a970";
   };
 
   buildType = "ament_cmake";

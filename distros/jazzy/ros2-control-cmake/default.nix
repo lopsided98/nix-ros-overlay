@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-ros2-control-cmake";
-  version = "0.2.1-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control_cmake-release/archive/release/jazzy/ros2_control_cmake/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "76eaef4652e310794e534ce5344dce5ebcc563be0883818db74321edf264501d";
+    url = "https://github.com/ros2-gbp/ros2_control_cmake-release/archive/release/jazzy/ros2_control_cmake/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "1a981eeb0dec7517404c6d615bd57fba87ea48c2571b6cb4ca8891dbc6a198b1";
   };
 
   buildType = "ament_cmake";
