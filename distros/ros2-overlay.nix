@@ -273,8 +273,8 @@ rosSelf: rosSuper: with rosSelf.lib; {
     # in our case it is an regular executable because it is wrapped.
     postPatch = postPatch + ''
       substituteInPlace launch/gz_sim.launch.py.in \
-        --replace-warn 'ruby $(which gz) sim' 'gz sim' \
-        --replace-warn 'ruby $(which ign) gazebo' 'ign gazebo'
+        --replace-fail "'ruby ' + get_executable_path('gz') + ' sim'" "'gz sim'" \
+        --replace-fail "'ruby ' + get_executable_path('ign') + ' gazebo'" "'ign gazebo'"
     '';
   });
 
