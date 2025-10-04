@@ -32,6 +32,8 @@ with rosPackages.jazzy;
           gz-tools-vendor
           gz-transport-vendor
           gz-utils-vendor
+
+          ros-gz
         ];
       })
     ];
