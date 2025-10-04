@@ -40,6 +40,35 @@ in with lib; {
     fetchgitArgs.hash = "sha256-nLBnxPbPKiLCFF2TJgD/eJKJJfzktVBW3SRW2m3WK/s=";
   };
 
+  foxglove-bridge = rosSuper.foxglove-bridge.overrideAttrs({
+    postPatch ? "", ...
+  }: {
+    postPatch = let
+      # SDK version from CMakeLists.txt. If the version doesn't match,
+      # cmake fails with "Hash mismatch" and we can fix it here.
+      FOXGLOVE_SDK_VERSION = "0.14.2";
+      systemToPlatform = {
+        "x86_64-linux" = "x86_64-unknown-linux-gnu";
+        "aarch64-linux" = "aarch64-unknown-linux-gnu";
+      };
+      systemToHash = {
+        "x86_64-linux" = "sha256-V0w84AbWEx1lGbQW8l7zfFsqByHvSciUKGx5paXgtPw=";
+        "aarch64-linux" = "sha256-9U4+CJJqiIKpvIAxz7JKBAviY48e9OhyNvo63tGrKiM=";
+      };
+      FOXGLOVE_SDK_PLATFORM = systemToPlatform.${self.system};
+      sdk = self.fetchurl {
+        url = "https://github.com/foxglove/foxglove-sdk/releases/download/sdk%2Fv${FOXGLOVE_SDK_VERSION}/foxglove-v${FOXGLOVE_SDK_VERSION}-cpp-${FOXGLOVE_SDK_PLATFORM}.zip";
+        hash = systemToHash.${self.system};
+      };
+    in
+      # Does their CMakeLists.txt support cross compilation?
+      postPatch + ''
+        substituteInPlace CMakeLists.txt --replace-fail \
+          'https://github.com/foxglove/foxglove-sdk/releases/download/sdk%2Fv''${FOXGLOVE_SDK_VERSION}/foxglove-v''${FOXGLOVE_SDK_VERSION}-cpp-''${FOXGLOVE_SDK_PLATFORM}.zip' \
+          ${sdk}
+      '';
+  });
+
   gazebo = self.gazebo_11;
 
   gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({
