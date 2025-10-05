@@ -2,9 +2,12 @@
 # to run this dev shell use:
 # NIXPKGS_ALLOW_INSECURE=1 nix develop --impure .\#example-ros2-gz
 
-{pkgs ? import ../. {}}:
+{
+  pkgs ? import ../. {},
+  rosDistro ? "jazzy",
+}:
 with pkgs;
-with rosPackages.jazzy;
+with rosPackages.${rosDistro};
   mkShell {
     nativeBuildInputs = [
       (buildEnv {
