@@ -15,6 +15,11 @@
         overlays = [ self.overlays.default ];
       };
       genAttrs' = xs: f: listToAttrs (map f xs); # TODO remove after we're at newer nixpkgs
+      exampleForDistro = exampleName: rosDistro:
+        nameValuePair "example-${exampleName}-${rosDistro}" (
+          import ./examples/${exampleName}.nix { inherit pkgs rosDistro; }
+        );
+      inherit (pkgs.rosPackages.lib) distroNames;
     in {
       legacyPackages = pkgs.rosPackages;
       packages.update-overlay = pkgs.callPackage ./maintainers/scripts/update-overlay.nix { };
@@ -30,12 +35,10 @@
         # Development environment for the custom GitHub action
         nix-ros-build-action = pkgs.callPackage ./.github/actions/nix-ros-build-action/shell.nix { };
       }
-        // (genAttrs' [ "jazzy" "kilted" "rolling" ] (
-          rosDistro:
-          nameValuePair "example-ros2-gz-${rosDistro}" (
-            import ./examples/ros2-gz.nix { inherit pkgs rosDistro; }
-          )
-        ));
+      // (genAttrs' [ "jazzy" "kilted" "rolling" ] (exampleForDistro "ros2-gz"))
+      // (genAttrs' distroNames (exampleForDistro "ros2-desktop"))
+      // (genAttrs' distroNames (exampleForDistro "ros2-desktop-full"))
+      ;
     }) // {
       overlays.default = import ./overlay.nix;
       nixosModules.default = ./modules;
