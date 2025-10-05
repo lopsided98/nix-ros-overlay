@@ -196,4 +196,7 @@
       sed -i '/find_package(Boost [^)]*/s/signals//g' CMakeLists.txt
     '' + postPatch;
   });
+
+  /** Names of ROS distributions present in this overlay. */
+  distroNames = builtins.attrNames (lib.filterAttrs (k: v: v ? overrideScope) self.rosPackages);
 }
