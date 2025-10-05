@@ -14,6 +14,7 @@
         inherit system;
         overlays = [ self.overlays.default ];
       };
+      genAttrs' = xs: f: listToAttrs (map f xs); # TODO remove after we're at newer nixpkgs
     in {
       legacyPackages = pkgs.rosPackages;
       packages.update-overlay = pkgs.callPackage ./maintainers/scripts/update-overlay.nix { };
@@ -21,12 +22,18 @@
       devShells = {
         example-turtlebot3-gazebo = import ./examples/turtlebot3-gazebo.nix { inherit pkgs; };
         example-ros2-basic = import ./examples/ros2-basic.nix { inherit pkgs; };
-        example-ros2-gz = import ./examples/ros2-gz.nix { inherit pkgs; };
+        example-ros2-gz = self.devShells.${system}.example-ros2-gz-jazzy;
         example-ros2-turtlebot4-gz = import ./examples/ros2-turtlebot4-gz.nix { inherit pkgs; };
 
         # Development environment for the custom GitHub action
         nix-ros-build-action = pkgs.callPackage ./.github/actions/nix-ros-build-action/shell.nix { };
-      };
+      }
+        // (genAttrs' [ "jazzy" "kilted" "rolling" ] (
+          rosDistro:
+          nameValuePair "example-ros2-gz-${rosDistro}" (
+            import ./examples/ros2-gz.nix { inherit pkgs rosDistro; }
+          )
+        ));
     }) // {
       overlays.default = import ./overlay.nix;
       nixosModules.default = ./modules;
