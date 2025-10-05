@@ -219,8 +219,14 @@ let
       dontWrapQtApps = false;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = postFixup + ''
-        wrapQtApp "$out/bin/rqt_graph"
         wrapQtApp "$out/lib/rqt_graph/rqt_graph"
+        if [[ -e "$out/bin/rqt_graph" ]]; then
+          wrapQtApp "$out/bin/rqt_graph"
+        else
+          # Needed for kilted and later
+          mkdir -p $out/bin
+          ln -s "$out/lib/rqt_graph/rqt_graph" "$out/bin/rqt_graph"
+        fi
       '';
     });
 
