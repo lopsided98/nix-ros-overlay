@@ -30,12 +30,35 @@ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 ```
 
+ROS 2 Jazzy Desktop environment:
+
+```sh
+nix-shell \
+  -I nix-ros-overlay=https://github.com/lopsided98/nix-ros-overlay/archive/master.tar.gz \
+  --option extra-substituters 'https://ros.cachix.org' \
+  --option trusted-public-keys 'cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= ros.cachix.org-1:dSyZxI8geDCJrwgvCOHDoAfOm5sV1wCPjBkKL+38Rvo=' \
+  '<nix-ros-overlay/examples/ros2-desktop.nix>' --argstr rosDistro jazzy
+# Run command-line talker/listener demo
+ros2 launch demo_nodes_cpp talker_listener_launch.xml
+```
+
+If you want to run graphical applications like `rviz2` on non-NixOS
+distribution, we recommend to use [nix-system-graphics][] or
+[nixGL][]. The latter is less convenient but doesn't need to change
+system-wide configuration.
+
+[nix-system-graphics]: https://github.com/soupglasses/nix-system-graphics
+[nixGL]: https://github.com/nix-community/nixGL
+
 ### Flakes
 
 With [Flakes enabled][flake], the equivalent of the above is:
 ```
 nix develop github:lopsided98/nix-ros-overlay#example-turtlebot3-gazebo
 # Then use roslaunch commands as above
+```
+```sh
+nix develop github:lopsided98/nix-ros-overlay#example-ros2-desktop-jazzy
 ```
 
 Using the overlay in your `flake.nix`-based project could look like this:
