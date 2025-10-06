@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, catkin-pkg, pyyaml, distro }:
+{ lib, buildPythonPackage, fetchPypi, catkin-pkg, pyyaml, distro, setuptools }:
 
 buildPythonPackage rec {
   pname = "rospkg";
@@ -8,6 +8,9 @@ buildPythonPackage rec {
     inherit pname version;
     hash = "sha256-/OdqdHd4bDcymBJiGY6iUPCX+I4NMynBDBEGm/QMpgQ=";
   };
+
+  pyproject = true;
+  build-system = [ setuptools ];
 
   propagatedBuildInputs = [ catkin-pkg pyyaml distro ];
 

@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, argcomplete }:
+{ lib, buildPythonPackage, fetchPypi, colcon-core, argcomplete, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-argcomplete";
@@ -8,6 +8,9 @@ buildPythonPackage rec {
     inherit pname version;
     hash = "sha256-PnCjK30WuBanxyGCvbIN+YX/wBZ47Jxn1EZZgUphmH0=";
   };
+
+  pyproject = true;
+  build-system = [ setuptools ];
 
   propagatedBuildInputs = [ colcon-core argcomplete ];
 

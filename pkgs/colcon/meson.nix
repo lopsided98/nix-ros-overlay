@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, colcon-library-path, meson }:
+{ lib, buildPythonPackage, fetchPypi, colcon-core, colcon-library-path, meson, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-meson";
@@ -8,6 +8,9 @@ buildPythonPackage rec {
     inherit pname version;
     hash = "sha256-DqjGKFOJLXPEmFjo8TyDwHCY8H1gi4vtWTyxEMflILI=";
   };
+
+  pyproject = true;
+  build-system = [ setuptools ];
 
   propagatedBuildInputs = [
     colcon-core
