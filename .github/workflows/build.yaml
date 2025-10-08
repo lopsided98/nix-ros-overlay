@@ -6,7 +6,6 @@ jobs:
     strategy:
       matrix:
         distro:
-          - noetic
           - humble
           - jazzy
           - kilted
