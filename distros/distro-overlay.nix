@@ -394,7 +394,6 @@ in self.lib.makeScopeWithSplicing
     (import (./. + "/${distro}/generated.nix"))
     overrides
   ]
-  ++ self.lib.optional (version == 1) (import ./ros1-overlay.nix self)
   ++ self.lib.optional (version == 2) (import ./ros2-overlay.nix self)
   ++ [
     (import (./. + "/${distro}/overrides.nix") self)

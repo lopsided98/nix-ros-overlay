@@ -25,9 +25,6 @@ self: super: with self.lib; {
     colcon-zsh
   ];
 
-  gazebo_11 = self.libsForQt5.callPackage ./gazebo { };
-  gazebo = self.gazebo_11;
-
   gz-cmake_2 = self.callPackage ./gazebo/gz-cmake/2.nix { };
   gz-cmake_3 = self.callPackage ./gazebo/gz-cmake/3.nix { };
 
@@ -40,29 +37,23 @@ self: super: with self.lib; {
   geographiclib = self.callPackage ./geographiclib { };
 
   ignition = {
-    cmake0 = self.callPackage ./ignition/cmake/0.nix { };
     cmake2 = self.callPackage ./ignition/cmake { };
     cmake = self.ignition.cmake2;
 
-    common3 = self.callPackage ./ignition/common/3.nix { };
     common4 = self.callPackage ./ignition/common { };
     common = self.ignition.common4;
 
-    fuel-tools4 = self.callPackage ./ignition/fuel-tools/4.nix { };
     fuel-tools7 = self.callPackage ./ignition/fuel-tools { };
     fuel-tools = self.ignition.fuel-tools7;
 
-    math4 = self.callPackage ./ignition/math/4.nix { };
     math6 = self.callPackage ./ignition/math { };
     math = self.ignition.math6;
 
-    msgs5 = self.callPackage ./ignition/msgs/5.nix { };
     msgs8 = self.callPackage ./ignition/msgs { };
     msgs = self.ignition.msgs8;
 
     tools = self.callPackage ./ignition/tools { };
 
-    transport8 = self.callPackage ./ignition/transport/8.nix { };
     transport11 = self.callPackage ./ignition/transport { };
     transport = self.ignition.transport11;
 
@@ -73,9 +64,6 @@ self: super: with self.lib; {
   ogre1_9 = self.callPackage ./ogre/1.9.nix { };
 
   openni2 = self.callPackage ./openni2 { };
-
-  opensplice_6_9 = self.callPackage ./opensplice { };
-  opensplice = self.opensplice_6_9;
 
   pythonPackagesExtensions = super.pythonPackagesExtensions ++ [
     (pyFinal: pyPrev: {
