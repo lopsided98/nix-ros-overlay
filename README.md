@@ -17,18 +17,7 @@ Want to use ROS, but don't want to run Ubuntu? This project uses the power of [N
 
 ## Examples
 
-Turtlebot 3 simulation in Gazebo:
-```sh
-nix-shell \
-  -I nix-ros-overlay=https://github.com/lopsided98/nix-ros-overlay/archive/master.tar.gz \
-  --option extra-substituters 'https://ros.cachix.org' \
-  --option extra-trusted-public-keys 'ros.cachix.org-1:dSyZxI8geDCJrwgvCOHDoAfOm5sV1wCPjBkKL+38Rvo=' \
-  '<nix-ros-overlay/examples/turtlebot3-gazebo.nix>'
-# If not on NixOS, nixGL (https://github.com/guibou/nixGL) is needed for OpenGL support
-roslaunch turtlebot3_gazebo turtlebot3_world.launch
-# Spawn a new nix-shell in a new terminal and then:
-roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
-```
+<!-- TODO Add Turtlebot 4 or other example with Gazebo simulation in Gazebo: -->
 
 ROS 2 Jazzy Desktop environment:
 
@@ -109,7 +98,7 @@ You can use the following command to use the above template easily:
 ## Current status
 
 What works:
-1. More than 1400 packages successfully built for ROS Noetic (for
+1. More than 1500 packages successfully built for ROS 2 Jazzy (for
    up-to-date numbers and other distros, look at our experimental
    [Hydra instance][] controlled by [@wentasah][])
 2. Fully functional ROS development environment using `nix-shell`
