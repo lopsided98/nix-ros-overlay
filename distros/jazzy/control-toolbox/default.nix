@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, eigen, filters, fmt, generate-parameter-library, geometry-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools, ros2-control-cmake, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-control-toolbox";
-  version = "4.8.0-r1";
+  version = "4.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/control_toolbox-release/archive/release/jazzy/control_toolbox/4.8.0-1.tar.gz";
-    name = "4.8.0-1.tar.gz";
-    sha256 = "a0d62f59ba74530f4ef02e1f179acafc52e9bf4e078180f6645de0b47d280909";
+    url = "https://github.com/ros2-gbp/control_toolbox-release/archive/release/jazzy/control_toolbox/4.8.1-1.tar.gz";
+    name = "4.8.1-1.tar.gz";
+    sha256 = "8fb60666b53318025a69dfdae2c05fddae5dc1e484be86e1dae4b5b8264ab435";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, bcr-arm-description, controller-manager, joint-state-publisher, joint-state-publisher-gui, moveit-configs-utils, moveit-kinematics, moveit-planners, moveit-ros-move-group, moveit-ros-visualization, moveit-setup-assistant, moveit-simple-controller-manager, robot-state-publisher, rviz-common, rviz-default-plugins, rviz2, tf2-ros, topic-based-ros2-control, xacro }:
 buildRosPackage {
   pname = "ros-humble-bcr-arm-moveit-config";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bcr_arm-release/archive/release/humble/bcr_arm_moveit_config/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "7aa0a3c78221673312bf67d1abea740edeaf9b81f1f731f9e98f4ba200ee2d17";
+    url = "https://github.com/ros2-gbp/bcr_arm-release/archive/release/humble/bcr_arm_moveit_config/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "b7a90547cc8dbe49f42fdf68bfbc08683c5caf130dcc2523ba2f3a9d00c165bc";
   };
 
   buildType = "ament_cmake";

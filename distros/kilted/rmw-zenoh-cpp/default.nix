@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, ament-lint-auto, ament-lint-common, fastcdr, nlohmann_json, rcpputils, rcutils, rmw, rmw-test-fixture, rosidl-typesupport-fastrtps-c, rosidl-typesupport-fastrtps-cpp, tracetools, zenoh-cpp-vendor }:
 buildRosPackage {
   pname = "ros-kilted-rmw-zenoh-cpp";
-  version = "0.6.4-r1";
+  version = "0.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_zenoh-release/archive/release/kilted/rmw_zenoh_cpp/0.6.4-1.tar.gz";
-    name = "0.6.4-1.tar.gz";
-    sha256 = "3a0ba7ac070f202ba5d588f6a206e58e12359fe4d02779eaadde0ea8672a35db";
+    url = "https://github.com/ros2-gbp/rmw_zenoh-release/archive/release/kilted/rmw_zenoh_cpp/0.6.5-1.tar.gz";
+    name = "0.6.5-1.tar.gz";
+    sha256 = "eb09a222ffaf40134c77cfddbc6c53defe9f200fc82fd512d9e6e94f6e2ee4e8";
   };
 
   buildType = "ament_cmake";

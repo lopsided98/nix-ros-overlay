@@ -1632,7 +1632,7 @@ self: super: {
 
  kuka-kr-moveit-config = self.callPackage ./kuka-kr-moveit-config {};
 
- kuka-kss-rsi-driver = self.callPackage ./kuka-kss-rsi-driver {};
+ kuka-kss-message-handler = self.callPackage ./kuka-kss-message-handler {};
 
  kuka-lbr-iisy-moveit-config = self.callPackage ./kuka-lbr-iisy-moveit-config {};
 
@@ -1649,6 +1649,8 @@ self: super: {
  kuka-resources = self.callPackage ./kuka-resources {};
 
  kuka-robot-descriptions = self.callPackage ./kuka-robot-descriptions {};
+
+ kuka-rsi-driver = self.callPackage ./kuka-rsi-driver {};
 
  kuka-rsi-simulator = self.callPackage ./kuka-rsi-simulator {};
 
@@ -2771,6 +2773,8 @@ self: super: {
  resource-retriever = self.callPackage ./resource-retriever {};
 
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
+
+ rko-lio = self.callPackage ./rko-lio {};
 
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 

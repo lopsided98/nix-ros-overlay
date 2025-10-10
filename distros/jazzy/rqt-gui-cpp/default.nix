@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pluginlib, qt-gui-cpp, qt5, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-rqt-gui-cpp";
-  version = "1.6.0-r2";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/jazzy/rqt_gui_cpp/1.6.0-2.tar.gz";
-    name = "1.6.0-2.tar.gz";
-    sha256 = "568582601cda977423648b744a1247996e98097790f8f6ee10666f2bf4e22a2d";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/jazzy/rqt_gui_cpp/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "cc26d3abb6c6bb7194e3881c05471e5423842089dfb4052cddc2b6f7074d0f90";
   };
 
   buildType = "ament_cmake";

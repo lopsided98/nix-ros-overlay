@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-humble-mola-imu-preintegration";
-  version = "1.11.0-r1";
+  version = "1.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_imu_preintegration-release/archive/release/humble/mola_imu_preintegration/1.11.0-1.tar.gz";
-    name = "1.11.0-1.tar.gz";
-    sha256 = "5c4f91fe37db5a4fa2eabad052a4c2b6f33825b7e61e37b9b0ce72ed3fe6dfe0";
+    url = "https://github.com/ros2-gbp/mola_imu_preintegration-release/archive/release/humble/mola_imu_preintegration/1.12.0-1.tar.gz";
+    name = "1.12.0-1.tar.gz";
+    sha256 = "0858652f113faeac8d143d2789ca58bfc1aa5e86ea7b2e8848634702c0ac44d1";
   };
 
   buildType = "cmake";
