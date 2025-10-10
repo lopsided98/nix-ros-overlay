@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rclcpp, rclpy, rcutils, rmw, std-msgs, tf2, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-interactive-markers";
-  version = "2.5.4-r2";
+  version = "2.5.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/interactive_markers-release/archive/release/jazzy/interactive_markers/2.5.4-2.tar.gz";
-    name = "2.5.4-2.tar.gz";
-    sha256 = "c240349d365510e71d892fd9ac0a4234e13bed03481635380e1d79c43c117135";
+    url = "https://github.com/ros2-gbp/interactive_markers-release/archive/release/jazzy/interactive_markers/2.5.5-1.tar.gz";
+    name = "2.5.5-1.tar.gz";
+    sha256 = "e8726b4f1e07389c8857c0fc161707f6670d2f5b86b4e51c928ecc26e1509cfb";
   };
 
   buildType = "ament_cmake";

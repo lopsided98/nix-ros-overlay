@@ -2030,6 +2030,8 @@ self: super: {
 
  ros2pkg = self.callPackage ./ros2pkg {};
 
+ ros2plugin = self.callPackage ./ros2plugin {};
+
  ros2run = self.callPackage ./ros2run {};
 
  ros2service = self.callPackage ./ros2service {};
@@ -2573,8 +2575,6 @@ self: super: {
  tlsf = self.callPackage ./tlsf {};
 
  tlsf-cpp = self.callPackage ./tlsf-cpp {};
-
- topic-based-ros2-control = self.callPackage ./topic-based-ros2-control {};
 
  topic-monitor = self.callPackage ./topic-monitor {};
 

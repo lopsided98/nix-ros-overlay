@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python3Packages, qt5 }:
 buildRosPackage {
   pname = "ros-rolling-python-qt-binding";
-  version = "2.4.0-r1";
+  version = "2.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/python_qt_binding-release/archive/release/rolling/python_qt_binding/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "d2443d592b0f9f786a31938d13b47003483eb9f11b8fba0be11306edabeb653e";
+    url = "https://github.com/ros2-gbp/python_qt_binding-release/archive/release/rolling/python_qt_binding/2.4.1-1.tar.gz";
+    name = "2.4.1-1.tar.gz";
+    sha256 = "62f9d2f6c1cc139236c204795449728d9123dc20d573f84f78e73362dfcd251f";
   };
 
   buildType = "ament_cmake";

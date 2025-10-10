@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, python3Packages, rclcpp, rclpy, sensor-msgs, sensor-msgs-py, tf2 }:
 buildRosPackage {
   pname = "ros-kilted-laser-geometry";
-  version = "2.10.1-r1";
+  version = "2.10.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/laser_geometry-release/archive/release/kilted/laser_geometry/2.10.1-1.tar.gz";
-    name = "2.10.1-1.tar.gz";
-    sha256 = "66d9b5bd8901f6d07c1f7bb01971260bbdb16475c31f1db452e1b5dd49111748";
+    url = "https://github.com/ros2-gbp/laser_geometry-release/archive/release/kilted/laser_geometry/2.10.2-1.tar.gz";
+    name = "2.10.2-1.tar.gz";
+    sha256 = "799a7df2f5db8f2a5907b9719c7203400d6e4e9e0e765a54ae2c67f1372351c0";
   };
 
   buildType = "ament_cmake";

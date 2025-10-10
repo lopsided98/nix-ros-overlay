@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, kuka-drivers-core, pluginlib }:
 buildRosPackage {
   pname = "ros-humble-kuka-event-broadcaster";
-  version = "0.9.2-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/kuka_event_broadcaster/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "053af4e4c7707cbf87152a1f9642e54d93b1d6b2b38d186824fc5abb83d69933";
+    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/kuka_event_broadcaster/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "9b7230335eb3485c5382823c47f76103f38668e447d6cdde7514866ac5d5b73c";
   };
 
   buildType = "ament_cmake";

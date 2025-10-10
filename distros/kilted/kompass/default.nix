@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, automatika-ros-sugar, kompass-interfaces, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-kompass";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kompass-release/archive/release/kilted/kompass/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "1e264593f0352b74b60690ad52b48dd6145dc93d9d712f7ef0ff0c53326104e5";
+    url = "https://github.com/ros2-gbp/kompass-release/archive/release/kilted/kompass/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "d370e6897d7883d85ad68259aec58436fc05c97d89bb6849f38106085d5ff9b6";
   };
 
   buildType = "ament_python";

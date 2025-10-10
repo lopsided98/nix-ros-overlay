@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages, rqt-gui, rqt-gui-cpp, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-kilted-rqt";
-  version = "1.9.0-r2";
+  version = "1.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/kilted/rqt/1.9.0-2.tar.gz";
-    name = "1.9.0-2.tar.gz";
-    sha256 = "cce9486ded169ecc850539d962a5469a8fc7bdab48b83b4707443073a6b395af";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/kilted/rqt/1.9.1-1.tar.gz";
+    name = "1.9.1-1.tar.gz";
+    sha256 = "bfe461efd5beb3b3422d5a6b0323119e34da4670d4b0471a4083123b9dd43cea";
   };
 
   buildType = "ament_python";
