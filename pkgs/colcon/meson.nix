@@ -7,7 +7,7 @@ buildPythonPackage rec {
   src = fetchPypi {
     inherit version;
     pname = "colcon_meson"; # https://github.com/colcon/colcon-meson/issues/19
-    hash = "sha256-DqjGKFOJLXPEmFjo8TyDwHCY8H1gi4vtWTyxEMflILI=";
+    hash = "sha256-MgrMpSth0R+9AdUVoQr8y1unciIClvBn42FhEAitrX8=";
   };
 
   propagatedBuildInputs = [
