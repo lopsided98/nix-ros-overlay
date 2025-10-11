@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python3Packages, qt5 }:
 buildRosPackage {
   pname = "ros-jazzy-python-qt-binding";
-  version = "2.2.1-r1";
+  version = "2.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/python_qt_binding-release/archive/release/jazzy/python_qt_binding/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "cba64ea3446fc54fab1c5fd9e9b99985526e74e6b0def9fb9ba913988b7f177d";
+    url = "https://github.com/ros2-gbp/python_qt_binding-release/archive/release/jazzy/python_qt_binding/2.2.2-1.tar.gz";
+    name = "2.2.2-1.tar.gz";
+    sha256 = "c9e6a087d72f8899778a645d929e7894cfb16fd847dc8af69d62ed0b2ba3d535";
   };
 
   buildType = "ament_cmake";

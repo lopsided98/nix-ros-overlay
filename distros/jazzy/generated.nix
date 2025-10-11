@@ -2334,6 +2334,8 @@ self: super: {
 
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
 
+ rko-lio = self.callPackage ./rko-lio {};
+
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 
  rmf-battery = self.callPackage ./rmf-battery {};
@@ -3109,8 +3111,6 @@ self: super: {
  tlsf = self.callPackage ./tlsf {};
 
  tlsf-cpp = self.callPackage ./tlsf-cpp {};
-
- topic-based-ros2-control = self.callPackage ./topic-based-ros2-control {};
 
  topic-monitor = self.callPackage ./topic-monitor {};
 

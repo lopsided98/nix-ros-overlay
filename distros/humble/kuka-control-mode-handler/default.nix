@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, kuka-drivers-core, pluginlib }:
 buildRosPackage {
   pname = "ros-humble-kuka-control-mode-handler";
-  version = "0.9.2-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/kuka_control_mode_handler/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "1fa9fba31739d53228f238ad3a652f8b80ed5332830fc67373e25bdb4492e1c1";
+    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/kuka_control_mode_handler/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "3ff26bd611844042214e3eb25d6587dcbb2bf1332e1cd9714ee8dff74670742e";
   };
 
   buildType = "ament_cmake";

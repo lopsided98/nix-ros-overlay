@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, launch, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-launch-xml";
-  version = "3.9.2-r1";
+  version = "3.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch-release/archive/release/rolling/launch_xml/3.9.2-1.tar.gz";
-    name = "3.9.2-1.tar.gz";
-    sha256 = "d50d103b7155847254feeb71f0014bdbbfc4f81a779ddb8a0b073bd69831b149";
+    url = "https://github.com/ros2-gbp/launch-release/archive/release/rolling/launch_xml/3.9.3-1.tar.gz";
+    name = "3.9.3-1.tar.gz";
+    sha256 = "778bd4aa55314709bd4dbba96937556d8db93d21bc18cd9bd976c85af232fe1d";
   };
 
   buildType = "ament_python";

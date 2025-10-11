@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, qt-dotgraph, qt-gui, qt-gui-app, qt-gui-cpp, qt-gui-py-common }:
 buildRosPackage {
   pname = "ros-kilted-qt-gui-core";
-  version = "2.9.1-r1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/kilted/qt_gui_core/2.9.1-1.tar.gz";
-    name = "2.9.1-1.tar.gz";
-    sha256 = "868d62b33f31fe31ccf4773933d0748bcb8897a24abc34bfd6ef46a3c2288965";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/kilted/qt_gui_core/2.9.2-1.tar.gz";
+    name = "2.9.2-1.tar.gz";
+    sha256 = "f8c176ef8be4aedfee94aec63dfa53dda519210e5e4df12f73da259e58763b79";
   };
 
   buildType = "ament_cmake";

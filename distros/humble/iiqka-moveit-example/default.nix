@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, kuka-iiqka-eac-driver, moveit, moveit-ros-planning-interface, moveit-visual-tools, ros2-controllers-test-nodes }:
 buildRosPackage {
   pname = "ros-humble-iiqka-moveit-example";
-  version = "0.9.2-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/iiqka_moveit_example/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "d25c7ed1667325ca433f0429cde4f2c371c1f39d0114d341c2aa617cc40f38fc";
+    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/iiqka_moveit_example/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "570ffeed39b6309f8b72816bf5dfbcd4ad7e464d83ddaf044657891dddc3acb4";
   };
 
   buildType = "ament_cmake";

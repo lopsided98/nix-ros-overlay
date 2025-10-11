@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-lint-auto, ament-lint-common, builtin-interfaces, rclcpp, rclcpp-lifecycle, rclpy, rcutils, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-message-filters";
-  version = "7.3.1-r1";
+  version = "7.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/rolling/message_filters/7.3.1-1.tar.gz";
-    name = "7.3.1-1.tar.gz";
-    sha256 = "327c62587ac8daad1bcdcec92b9b991df2c61752027d036aadeec30c0315f110";
+    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/rolling/message_filters/7.3.2-1.tar.gz";
+    name = "7.3.2-1.tar.gz";
+    sha256 = "a443799c3143c2372a6284d64a0a981563064ece8f19d42f8c060271b7b3fa93";
   };
 
   buildType = "ament_cmake";

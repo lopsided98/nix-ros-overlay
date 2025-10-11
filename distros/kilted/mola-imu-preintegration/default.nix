@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-kilted-mola-imu-preintegration";
-  version = "1.11.0-r1";
+  version = "1.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_imu_preintegration-release/archive/release/kilted/mola_imu_preintegration/1.11.0-1.tar.gz";
-    name = "1.11.0-1.tar.gz";
-    sha256 = "0155ce876e51c82f0eb6578206e209f4906c0cdd004521b6c0bfa75e1078a062";
+    url = "https://github.com/ros2-gbp/mola_imu_preintegration-release/archive/release/kilted/mola_imu_preintegration/1.12.0-1.tar.gz";
+    name = "1.12.0-1.tar.gz";
+    sha256 = "08540008d41e8966981f66d3a5e34a8bfbc5f5abef2322f8cfea8873c3ffe6a1";
   };
 
   buildType = "cmake";

@@ -225,6 +225,15 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
+  plotjuggler = rosSuper.plotjuggler.override {
+    lz4 = self.lz4.overrideAttrs ({
+      cmakeFlags ? [], ...
+    }: {
+      cmakeFlags = cmakeFlags ++ [ "-DBUILD_STATIC_LIBS=ON" ];
+    });
+    zstd = self.zstd.override { enableStatic = true; };
+  };
+
   popf = rosSuper.popf.overrideAttrs ({
     nativeBuildInputs ? [], postPatch ? "", ...
   }: {
@@ -290,7 +299,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     # propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.rosidl-generator-rs ];
   });
 
-  rosidl-generator-rs = rosSelf.callPackage ../pkgs/rosidl-generator-rs { };
+  rosidl-generator-rs = rosSuper.rosidl-generator-rs or (rosSelf.callPackage ../pkgs/rosidl-generator-rs { });
 
   rosx-introspection = rosSuper.rosx-introspection.overrideAttrs ({
     postPatch ? "", ...

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python-qt-binding, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-qt-dotgraph";
-  version = "2.9.1-r1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/kilted/qt_dotgraph/2.9.1-1.tar.gz";
-    name = "2.9.1-1.tar.gz";
-    sha256 = "5def118a39b00436553588ac258ee4894d85740d81ced315cdf3ec0d7eec5e3e";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/kilted/qt_dotgraph/2.9.2-1.tar.gz";
+    name = "2.9.2-1.tar.gz";
+    sha256 = "35215daa0e2da5fe69c4a07498b35590f65bf49af3747e44d65d595b89dbcf1b";
   };
 
   buildType = "ament_python";

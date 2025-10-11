@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, forward-command-controller, generate-parameter-library, kuka-drivers-core, pluginlib }:
 buildRosPackage {
   pname = "ros-humble-joint-group-impedance-controller";
-  version = "0.9.2-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/joint_group_impedance_controller/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "62f01078d62639608264efdc447bb019a9dc36d49349e42c07333d13ea32abef";
+    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/joint_group_impedance_controller/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "e4c7c77f67847a21472c895bf9b0d7a7de277c7296afa8486f5ee45d7ec49412";
   };
 
   buildType = "ament_cmake";

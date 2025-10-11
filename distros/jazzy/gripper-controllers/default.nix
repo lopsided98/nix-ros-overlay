@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-action, realtime-tools, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-jazzy-gripper-controllers";
-  version = "4.32.0-r1";
+  version = "4.33.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/gripper_controllers/4.32.0-1.tar.gz";
-    name = "4.32.0-1.tar.gz";
-    sha256 = "62cd72e9deb1d01898d69e4d592e34f5aa860ca9fe751f9d09dd6e642e3d1f9f";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/gripper_controllers/4.33.0-1.tar.gz";
+    name = "4.33.0-1.tar.gz";
+    sha256 = "a10a5476e931b56556325bc0a8704d5f0eb17ee42bb71634100197348a545bc3";
   };
 
   buildType = "ament_cmake";

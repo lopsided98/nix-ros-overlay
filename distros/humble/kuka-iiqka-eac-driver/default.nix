@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager-msgs, effort-controllers, hardware-interface, joint-group-impedance-controller, joint-state-broadcaster, joint-trajectory-controller, kuka-control-mode-handler, kuka-drivers-core, kuka-event-broadcaster, kuka-external-control-sdk, kuka-lbr-iisy-support, launch-testing-ament-cmake, pluginlib, ros2-control, ros2lifecycle, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-kuka-iiqka-eac-driver";
-  version = "0.9.2-r1";
+  version = "1.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/kuka_iiqka_eac_driver/0.9.2-1.tar.gz";
-    name = "0.9.2-1.tar.gz";
-    sha256 = "a660536dc4b0f28db65881cca2a6ce3e63fe77a84ee6787041edecbecf13d7e7";
+    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/kuka_iiqka_eac_driver/1.0.0-1.tar.gz";
+    name = "1.0.0-1.tar.gz";
+    sha256 = "c83bd716cbd67fa8eb5c7d541599aeba8744d6d6cb566917c8ddc90f9bdbd00c";
   };
 
   buildType = "ament_cmake";
