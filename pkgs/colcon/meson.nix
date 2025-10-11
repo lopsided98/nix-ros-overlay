@@ -2,10 +2,11 @@
 
 buildPythonPackage rec {
   pname = "colcon-meson";
-  version = "0.4.5";
+  version = "0.5.0";
 
   src = fetchPypi {
-    inherit pname version;
+    inherit version;
+    pname = "colcon_meson"; # https://github.com/colcon/colcon-meson/issues/19
     hash = "sha256-DqjGKFOJLXPEmFjo8TyDwHCY8H1gi4vtWTyxEMflILI=";
   };
 
