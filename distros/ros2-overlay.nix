@@ -225,6 +225,15 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
+  plotjuggler = rosSuper.plotjuggler.override {
+    lz4 = self.lz4.overrideAttrs ({
+      cmakeFlags ? [], ...
+    }: {
+      cmakeFlags = cmakeFlags ++ [ "-DBUILD_STATIC_LIBS=ON" ];
+    });
+    zstd = self.zstd.override { enableStatic = true; };
+  };
+
   popf = rosSuper.popf.overrideAttrs ({
     nativeBuildInputs ? [], postPatch ? "", ...
   }: {
