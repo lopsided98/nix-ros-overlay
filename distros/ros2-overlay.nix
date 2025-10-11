@@ -290,7 +290,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     # propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.rosidl-generator-rs ];
   });
 
-  rosidl-generator-rs = rosSelf.callPackage ../pkgs/rosidl-generator-rs { };
+  rosidl-generator-rs = rosSuper.rosidl-generator-rs or (rosSelf.callPackage ../pkgs/rosidl-generator-rs { });
 
   rosx-introspection = rosSuper.rosx-introspection.overrideAttrs ({
     postPatch ? "", ...
