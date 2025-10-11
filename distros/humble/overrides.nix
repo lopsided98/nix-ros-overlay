@@ -4,6 +4,15 @@ self:
 rosSelf: rosSuper: let
   inherit (rosSelf) lib;
 in with lib; {
+  # Many packages fail to compile with Boost 1.87
+  boost = rosSelf.boost186;
+
+  # Apply the same override as in distro-overlay.nix
+  boost186 = self.boost186.override {
+    python = rosSelf.python;
+    enablePython = true;
+  };
+
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
     patches ? [], ...
   }: {
