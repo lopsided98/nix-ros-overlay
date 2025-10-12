@@ -168,3 +168,14 @@ command line. For example, the following command updates just the
 ```
 nix run .#update-overlay -- --dry-run --output-repository-path . --tar-archive-dir .tar --no-branch --ros-distro jazzy
 ```
+
+**Q: Do you provide packages for ROS 1 or Gazebo Classic?**
+
+After End-of-Life of Gazebo Classic and ROS 1 in January resp. May
+2025, we removed them from the `master` and `develop` branches.
+However, you can still access them in the `ros1-25.05` branch, which
+is built against `nixos-25.05` branch of _nixpkgs_. We will accept PRs
+for this branch at least until the end of 2025. If you need some ROS 1
+package, which fails to compile, it might be worth looking whether
+[ROS-O](https://github.com/ros-o/ros-o) GitHub organization has some
+patches for it.
