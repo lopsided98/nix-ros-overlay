@@ -67,4 +67,7 @@ else stdenv.mkDerivation) (args // {
       wrapPythonProgramsIn "$libpkgdir" "$out $pythonPath"
     done
   '';
+
+  # Fix error: separateDebugInfo = true requires __structuredAttrs if {dis,}allowedRequisites or {dis,}allowedReferences is set
+  __structuredAttrs = separateDebugInfo;
 })
