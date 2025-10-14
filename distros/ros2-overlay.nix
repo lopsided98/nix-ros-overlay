@@ -225,6 +225,25 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
+
+  # Fix for loading the default plugins for the `move-group` executable.
+  #
+  # Essentially the executable tries to dynamically load the capabilites .so to
+  # allow users to hook into various functions, but this mechanism relies on
+  # specific linker flags that are absent in the Nix build. The actual solution
+  # is likely some upstream changes to moveit, but this is a practical solution
+  # until somebody can dig into it.
+  #
+  # See for more details: https://github.com/lopsided98/nix-ros-overlay/issues/264
+  moveit-ros-move-group = rosSuper.moveit-ros-move-group.overrideAttrs({
+    postFixup ? "", ...
+  }: {
+    postFixup = postFixup + ''
+      patchelf --add-needed libmoveit_move_group_default_capabilities.so $out/lib/moveit_ros_move_group/move_group
+      patchelf --add-needed libmoveit_move_group_default_capabilities.so $out/lib/moveit_ros_move_group/list_move_group_capabilities
+    '';
+  });
+
   plotjuggler = rosSuper.plotjuggler.override {
     lz4 = self.lz4.overrideAttrs ({
       cmakeFlags ? [], ...
