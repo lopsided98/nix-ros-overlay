@@ -59,11 +59,15 @@
         $0 ~ "GIT_REPOSITORY[[:blank:]]+" originalUrl \
           { print "URL \"" path "\""; foundUrl=1; next } \
           { print }
-        $0 ~ "GIT_TAG[[:blank:]]+" originalRev { print; foundRev=1 }
+        $0 ~ "GIT_TAG[[:blank:]]+" {
+          print
+          currentRev = gensub(/.*GIT_TAG[[:blank:]]+([^[:blank:]]*).*/, "\\1", 1)
+          if (currentRev == originalRev) foundRev = 1
+        }
         $0 ~ "set\\(" revVariable "[[:blank:]]+\"?" originalRev "\"?\\)" { print; foundRev=1 }
         END {
           if (!foundUrl) print "patchExternalProjectGit: did not find URL: " originalUrl > "/dev/stderr"
-          if (!foundRev) print "patchExternalProjectGit: did not find revision: " originalRev > "/dev/stderr"
+          if (!foundRev) print "patchExternalProjectGit: did not find revision: " originalRev " (found " currentRev ")" > "/dev/stderr"
           exit !(foundUrl && foundRev)
         }
       '';
