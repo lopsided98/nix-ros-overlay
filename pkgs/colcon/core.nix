@@ -39,6 +39,8 @@ let
     pyproject = true;
     build-system = [ setuptools ];
 
+    pythonRelaxDeps = true;
+
     propagatedBuildInputs = [
       distlib
       empy_3
