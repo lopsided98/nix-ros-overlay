@@ -120,9 +120,9 @@ in with lib; {
 
   lely-core-libraries = lib.patchExternalProjectGit rosSuper.lely-core-libraries {
     url = "https://gitlab.com/lely_industries/lely-core.git";
-    rev = "b63a0b6f79d3ea91dc221724b42dae49894449fc";
+    rev = "fb735b79cab5f0cdda45bc5087414d405ef8f3ab";
     fetchgitArgs = {
-      hash = "sha256-x9JCU2Ryssq424n90IzVOxixnvsoYTukyCOL3zNbwt4=";
+      hash = "sha256-TpEWho+lbhXGaZ24+86eVJttrxH2Kc9gZVOGWeR0LBE=";
       leaveDotGit = true;
     };
   };
