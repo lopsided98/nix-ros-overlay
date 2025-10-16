@@ -166,23 +166,31 @@ let
       '';
     });
 
-    python-qt-binding = (rosSuper.python-qt-binding.override {
-      python3Packages = rosSelf.python3Packages.overrideScope (pyFinal: pyPrev: {
-        pyqt5 = pyPrev.pyqt5.overrideAttrs ({
-          patches ? [], ...
-        }: {
-          patches = patches ++ [ (self.fetchpatch {
-            url = "https://aur.archlinux.org/cgit/aur.git/plain/restore-sip4-support.patch?h=python-pyqt5-sip4&id=6e712e6c588d550a1a6f83c1b37c2c9135aae6ba";
-            hash = "sha256-NfMe/EK1Uj88S82xZSm+A6js3PK9mlgsaci/kinlsy8=";
-          }) ];
-        });
-      });
-    }).overrideAttrs ({
-      propagatedBuildInputs ? [], ...
+    # Switch to Qt6 for python 3.13
+    python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
+      patches ? [], propagatedBuildInputs ? [], ...
     }: {
+      patches = patches ++ [ 
+        # ref. https://github.com/ros-visualization/python_qt_binding/pull/143
+        (self.fetchpatch { 
+          name = "support-qt6.patch"; 
+          url = "https://github.com/ros-visualization/python_qt_binding/commit/fa854d325ad4fa5f6e788d70b3ba9ccf9ee5c80f.patch";
+          hash = "sha256-P/xScO83zRL7qtqRzLiHkQtCpYdcxOaXwWj/83GhFpk=";
+        })
+        (self.fetchpatch { 
+          name = "make-linters-happy.patch"; 
+          url = "https://github.com/ros-visualization/python_qt_binding/commit/bd88c0d5d51add58e329c40bba20a7b04c3df063.patch";
+          hash = "sha256-1YuTIUGDmgFZtz/1LoRIkayH9M84H5rs8QqhW9SnNAQ=";
+        })
+        (self.fetchpatch { 
+          name = "fixes.patch"; 
+          url = "https://github.com/ros-visualization/python_qt_binding/commit/d710e1afb2ac0effed1e8d6ab90eee53354366bb.patch";
+          hash = "sha256-+ou08BZCIhRMDi9GMyAOLmdoGJNZaqLpA7nMszZOFgg=";
+        })
+      ];
       propagatedBuildInputs = propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
-        pyside2
-        sip4
+        pyside6
+        pyqt6-sip
       ]);
 
       dontWrapQtApps = true;
@@ -193,14 +201,6 @@ let
           rm -rf devel/lib
         }
         preFixupHooks+=(_pythonQtBindingPreFixupHook)
-      '';
-
-      postPatch = ''
-        sed -e "1 i\\import PyQt5" \
-            -e "s#sipconfig\._pkg_config\['default_mod_dir'\], 'PyQt5'#PyQt5.__path__[0]#" \
-            -e "s#with open(os.path.join(tmpdirname, 'QtCore', 'QtCoremod.sip'), 'w') as outfp:##" \
-            -e "s#outfp.write(output)##" \
-            -i cmake/sip_configure.py
       '';
     });
 
