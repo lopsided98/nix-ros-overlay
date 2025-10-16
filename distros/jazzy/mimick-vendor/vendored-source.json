@@ -1,0 +1,7 @@
+{
+  "mimick_vendor": {
+    "url": "https://github.com/ros2/Mimick.git",
+    "rev": "4dbd495e9f3d87a83c3201ef9d851e85f7133db7",
+    "hash": "sha256-4F3NiFxgwSOH1H5Njv0u78epF+jOzn7bUMcwuhRQznM="
+  }
+}
