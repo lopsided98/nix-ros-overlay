@@ -37,15 +37,27 @@ let
   mrptOverrides = rosSelf: rosSuper:
     let
       patchMrptExternalProjectGit = pkg:
-        with rosSuper.lib;
-        patchExternalProjectGit pkg {
-          url = "https://github.com/MRPT/mrpt.git";
-          originalRev = "\\\\\${MRPT_VERSION_TO_DOWNLOAD}";
+        let
+          inherit (rosSuper.lib) head splitString patchExternalProjectGit;
           # CMakeLists.txt sets MRPT_VERSION_TO_DOWNLOAD to the
-          # version from package.xml
+          # version from package.xml. Let's use version from Nix, which should be the same.
           rev = head (splitString "-" pkg.version); # Ignore ROS release such as "-r1".
+        in
+        (patchExternalProjectGit pkg {
+          url = "https://github.com/MRPT/mrpt.git";
+          originalRev = "\${MRPT_VERSION_TO_DOWNLOAD}";
+          inherit rev;
           fetchgitArgs.hash = "sha256-w9LxOtbXw01B2i4aqbhAIjjDwHzC+OvZbcZG/Pyn71Q=";
-        };
+        }).overrideAttrs ({ postPatch ? "", ... }: {
+          postPatch = postPatch + ''
+            src=$(awk '/^URL/ { print gensub(/"/, "", "g", $2) }' CMakeLists.txt)
+            read -r version < $src/version_prefix.txt
+            if [[ $version != "${rev}" ]]; then
+              echo "MRPT version mismatch: $version != "${rev}". Is fetchgitArgs.hash in patchMrptExternalProjectGit up to date?"
+              exit 1
+            fi
+          '';
+        });
     in rosSuper.lib.genAttrs [
       "mrpt-apps"
       "mrpt-libapps"
