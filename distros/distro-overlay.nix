@@ -361,6 +361,9 @@ let
       propagatedBuildInputs = propagatedBuildInputs ++ [ self.qt5.wrapQtAppsHook self.librealsense self.octomap ];
     });
 
+    # TODO: Remove once onetbb appears in rosdep and in the locked nixpkgs version.
+    tbb_2021_11 = self.tbb_2021_11 or self.tbb_2022;
+
     turtlesim = rosSuper.turtlesim.overrideAttrs ({
       nativeBuildInputs ? [], ...
     }: {
