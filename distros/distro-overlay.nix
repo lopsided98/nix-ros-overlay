@@ -47,7 +47,7 @@ let
           url = "https://github.com/MRPT/mrpt.git";
           originalRev = "\${MRPT_VERSION_TO_DOWNLOAD}";
           inherit rev;
-          fetchgitArgs.hash = "sha256-w9LxOtbXw01B2i4aqbhAIjjDwHzC+OvZbcZG/Pyn71Q=";
+          fetchgitArgs.hash = "sha256-274iBA2XqykUhyamoKCLsfknGydOW+aomLH+oIRqKWc=";
         }).overrideAttrs ({ postPatch ? "", ... }: {
           postPatch = postPatch + ''
             src=$(awk '/^URL/ { print gensub(/"/, "", "g", $2) }' CMakeLists.txt)
