@@ -188,6 +188,8 @@ in {
   };
 
   mimick-vendor = (lib.patchAmentVendorGit rosSuper.mimick-vendor { }).overrideAttrs({ ... }: {
+    # Remove once https://github.com/Snaipe/Mimick/commit/321fcc74c1828e73af72cd75460857e1a3a549b9
+    # propagates to a ROS release
     NIX_CFLAGS_COMPILE = toString [ "-Wno-error=cpp" ];
   });
 
