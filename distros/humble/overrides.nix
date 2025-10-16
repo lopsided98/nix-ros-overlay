@@ -174,6 +174,17 @@ in with lib; {
     buildInputs = buildInputs ++ [ rosSelf.backward-ros ];
   });
 
+  mimick-vendor = (patchExternalProjectGit rosSuper.mimick-vendor {
+    url = "https://github.com/ros2/Mimick.git";
+    rev = "de11f8377eb95f932a03707b583bf3d4ce5bd3e7";
+    revVariable = "mimick_version";
+    fetchgitArgs.hash = "sha256-adCxIl0F3QkgSimOhvuTyhmig1rFy/K9wxZ/+YCuxYo=";
+  }).overrideAttrs ({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=cpp" ];
+  });
+
   moveit-kinematics = rosSuper.moveit-kinematics.overrideAttrs ({
     propagatedBuildInputs ? [], ...
   }: {

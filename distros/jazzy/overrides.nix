@@ -187,6 +187,10 @@ in {
     hash = "sha256-JCTITBfe8WrEBhWX0rkqLdnHN6qXidUCj1Xz0fmPnac=";
   };
 
+  mimick-vendor = (lib.patchAmentVendorGit rosSuper.mimick-vendor { }).overrideAttrs({ ... }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=cpp" ];
+  });
+
   moveit-core = rosSuper.moveit-core.overrideAttrs ({
     postPatch ? "", ...
   }: {
