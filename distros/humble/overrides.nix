@@ -335,6 +335,13 @@ in with lib; {
     sha256 = "1255n51y1bjry97n4w60mgz6b9h14flfrxb01ihjf6pwvvfns8ag";
   };
 
+  # Needed for rqt build to succeed. tango-icons-theme will be installed by this package on macOS.
+  tango-icons-vendor = rosSuper.tango-icons-vendor.overrideAttrs ({
+    propagatedBuildInputs ? [], ...
+  }: {
+    propagatedBuildInputs = if self.stdenv.isDarwin then [] else propagatedBuildInputs;
+  });
+
   urdfdom = rosSuper.urdfdom.overrideAttrs ({
     patches ? [], ...
   }: {
