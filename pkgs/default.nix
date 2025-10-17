@@ -79,7 +79,7 @@ self: super: with self.lib; {
 
       colcon-cmake = pyFinal.callPackage ./colcon/cmake.nix { };
 
-      colcon-core = pyFinal.callPackage ./colcon/core.nix { };
+      colcon-core = pyFinal.callPackage ./colcon/core.nix { setuptools = pyFinal.setuptools_79; };
 
       colcon-defaults = pyFinal.callPackage ./colcon/defaults.nix { };
 
@@ -105,7 +105,7 @@ self: super: with self.lib; {
 
       colcon-pkg-config = pyFinal.callPackage ./colcon/pkg-config.nix { };
 
-      colcon-python-setup-py = pyFinal.callPackage ./colcon/python-setup-py.nix { };
+      colcon-python-setup-py = pyFinal.callPackage ./colcon/python-setup-py.nix { setuptools = pyFinal.setuptools_79; };
 
       colcon-recursive-crawl = pyFinal.callPackage ./colcon/recursive-crawl.nix { };
 
@@ -136,6 +136,18 @@ self: super: with self.lib; {
       rosinstall-generator = pyFinal.callPackage ./rosinstall-generator { };
 
       rospkg = pyFinal.callPackage ./rospkg { };
+
+      setuptools_79 = pyPrev.setuptools.overrideAttrs ({
+        pname, src, ...
+      }: rec {
+        version = "79.0.1";
+        src = self.fetchFromGitHub {
+          owner = "pypa";
+          repo = "setuptools";
+          tag = "v${version}";
+          hash = "sha256-6Gv8R0nlSSz0IL8kD6uPU9MeheGTF1OpdzU7BoApRtk=";
+        };
+      });
 
       vcstools = pyFinal.callPackage ./vcstools { };
     })
