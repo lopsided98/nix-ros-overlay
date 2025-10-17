@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: develop
-      - uses: cachix/install-nix-action@v22
+      - uses: cachix/install-nix-action@v31.8.1
       - uses: cachix/cachix-action@v12
         with:
           name: ros
