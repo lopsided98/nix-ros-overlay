@@ -2,7 +2,7 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cmake, eigen, tbb_2021_11 }:
+{ lib, buildRosPackage, fetchurl, boost, cmake, eigen, onetbb }:
 buildRosPackage {
   pname = "ros-jazzy-gtsam";
   version = "4.2.0-r4";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ boost eigen tbb_2021_11 ];
+  propagatedBuildInputs = [ boost eigen onetbb ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

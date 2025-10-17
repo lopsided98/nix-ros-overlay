@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cmake, doxygen, eigen, git, graphviz }:
 buildRosPackage {
   pname = "ros-rolling-eiquadprog";
-  version = "1.2.9-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/eiquadprog-release/archive/release/rolling/eiquadprog/1.2.9-1.tar.gz";
-    name = "1.2.9-1.tar.gz";
-    sha256 = "5374f218b421443c74780e77f069bb7615247814d847c7c9ec04b8a0f5ca92e6";
+    url = "https://github.com/ros2-gbp/eiquadprog-release/archive/release/rolling/eiquadprog/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "39b308c73ff632ab5cee5da7c6bcb2490365c122ef02e9676f60f97e9e555241";
   };
 
   buildType = "cmake";

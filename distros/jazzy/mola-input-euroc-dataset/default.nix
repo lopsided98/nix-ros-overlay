@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmath, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-jazzy-mola-input-euroc-dataset";
-  version = "1.9.0-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_input_euroc_dataset/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "0e4a4e15cdc70dd1b7a2dafef63078b8fefaba9840fa25616da7a28ae9f3e91f";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_input_euroc_dataset/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "ff3bb9767650c2eae6abee0700e4a3d468a54a39d9c48d9a42f82ad7108faa19";
   };
 
   buildType = "cmake";

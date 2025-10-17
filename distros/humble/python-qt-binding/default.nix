@@ -25,8 +25,8 @@ buildRosPackage {
     the GPL, LGPL and a commercial license.  PyQt is released under the GPL.
 
     Both the bindings and tools to build bindings are included from each
-    available provider.  For PySide, it is called &quot;Shiboken&quot;.  For PyQt,
-    this is called &quot;SIP&quot;.
+    available provider.  For PySide, it is called \"Shiboken\".  For PyQt,
+    this is called \"SIP\".
 
     Also provided is adapter code to make the user's Python code
     independent of which binding provider was actually used which makes

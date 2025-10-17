@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-kilted-etsi-its-mapem-ts-coding";
-  version = "3.3.0-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/kilted/etsi_its_mapem_ts_coding/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "6c50756f6491419d13ffa56a4b36b6447585b1b19ef92cf90fb0b04e5625fd57";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/kilted/etsi_its_mapem_ts_coding/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "a0de03af3b41a09261cde9239717943a19a333b746b9b2a7817c46ae7b286718";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, doxygen, eigen, git, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-eigenpy";
-  version = "3.11.0-r1";
+  version = "3.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/eigenpy-release/archive/release/kilted/eigenpy/3.11.0-1.tar.gz";
-    name = "3.11.0-1.tar.gz";
-    sha256 = "1b02ba8c356df8bfc49dfcc36bb78309413628503846f346dcde327425b6db78";
+    url = "https://github.com/ros2-gbp/eigenpy-release/archive/release/kilted/eigenpy/3.12.0-1.tar.gz";
+    name = "3.12.0-1.tar.gz";
+    sha256 = "51b50a70a64398eb254064557686574fa13b959e3de7df108993edc6c0cb8a95";
   };
 
   buildType = "cmake";

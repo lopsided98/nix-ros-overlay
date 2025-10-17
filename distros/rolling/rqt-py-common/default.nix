@@ -26,7 +26,7 @@ buildRosPackage {
     into this package as easy as possible.
 
     Functionality included in this package should cover generic ROS concepts and
-    should not introduce any special dependencies beside &quot;ros_base&quot;.";
+    should not introduce any special dependencies beside \"ros_base\".";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "Provides a &quot;batteries included&quot; experience to novice users.";
+    description = "Provides a \"batteries included\" experience to novice users.";
     license = with lib.licenses; [ asl20 ];
   };
 }

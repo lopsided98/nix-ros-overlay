@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, camera-calibration-parsers, rclcpp, rclcpp-lifecycle, rcpputils, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-camera-info-manager";
-  version = "6.1.2-r1";
+  version = "6.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/kilted/camera_info_manager/6.1.2-1.tar.gz";
-    name = "6.1.2-1.tar.gz";
-    sha256 = "a47418faeb69f7d648cbe1d6a61439837ae91c9300b4cc00f29e18a3828cb5b4";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/kilted/camera_info_manager/6.1.3-1.tar.gz";
+    name = "6.1.3-1.tar.gz";
+    sha256 = "263343f047f7371d273aa58ee887e604fdf76636814803466e19a0e1bf9db5cd";
   };
 
   buildType = "ament_cmake";

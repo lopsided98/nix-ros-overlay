@@ -2,21 +2,22 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, rcl-interfaces, rclcpp, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-rosgraph-monitor-msgs";
-  version = "0.1.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/graph_monitor-release/archive/release/jazzy/rosgraph_monitor_msgs/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "498b971f7cb27adcf0bd8b8d52210d33ea8038be3e685488a683bfef20ca5a11";
+    url = "https://github.com/ros2-gbp/graph_monitor-release/archive/release/jazzy/rosgraph_monitor_msgs/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "621fe1fddaed6b312cbede72314a318ed22c12e8aaf3a39778a7ac1290707b4e";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];
-  propagatedBuildInputs = [ builtin-interfaces rosidl-default-runtime ];
-  nativeBuildInputs = [ ament-cmake ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common rclcpp ];
+  propagatedBuildInputs = [ builtin-interfaces rcl-interfaces rosidl-default-runtime ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = "Interfaces for reporting observations about the ROS 2 communication graph";

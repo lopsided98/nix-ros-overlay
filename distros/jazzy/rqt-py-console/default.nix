@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, python-qt-binding, python3Packages, qt-gui, qt-gui-py-common, rclpy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-jazzy-rqt-py-console";
-  version = "1.2.2-r3";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_py_console-release/archive/release/jazzy/rqt_py_console/1.2.2-3.tar.gz";
-    name = "1.2.2-3.tar.gz";
-    sha256 = "c1e29bb4095fe4fb6b0213b629b7b39a4f914f6a267e1ef60cdfc2b1c32039c7";
+    url = "https://github.com/ros2-gbp/rqt_py_console-release/archive/release/jazzy/rqt_py_console/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
+    sha256 = "b53e65108cab99758d86f9956a426f63a333242ed2ddbda110e92337ddc010b0";
   };
 
   buildType = "ament_python";

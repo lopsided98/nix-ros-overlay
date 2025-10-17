@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-denm-coding, etsi-its-denm-msgs, etsi-its-primitives-conversion }:
 buildRosPackage {
   pname = "ros-kilted-etsi-its-denm-conversion";
-  version = "3.3.0-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/kilted/etsi_its_denm_conversion/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "ce4a7fca714edd867318c39ac104c9fc8a5a600f7782cbe383058e59ec844e7a";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/kilted/etsi_its_denm_conversion/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "4d41256aed4a46f869bc5aae7677e9dbd286206fcc6a57069614b9ce0c4dc2c6";
   };
 
   buildType = "ament_cmake";

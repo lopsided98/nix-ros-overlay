@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, grid-map-cmake-helpers }:
 buildRosPackage {
   pname = "ros-jazzy-grid-map-core";
-  version = "2.2.1-r1";
+  version = "2.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/grid_map-release/archive/release/jazzy/grid_map_core/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "44d418e4f3a2a841174ba43d44c90ed4ad017e5a70a0e9661ebd98bec3d478d0";
+    url = "https://github.com/ros2-gbp/grid_map-release/archive/release/jazzy/grid_map_core/2.2.2-2.tar.gz";
+    name = "2.2.2-2.tar.gz";
+    sha256 = "987e8c04703972fe2be141901df13e58ca082281ab8d1a07093d75206d585f16";
   };
 
   buildType = "ament_cmake";

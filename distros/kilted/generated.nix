@@ -266,6 +266,10 @@ self: super: {
 
  battery-state-rviz-overlay = self.callPackage ./battery-state-rviz-overlay {};
 
+ beckhoff-ads-bringup = self.callPackage ./beckhoff-ads-bringup {};
+
+ beckhoff-ads-hardware-interface = self.callPackage ./beckhoff-ads-hardware-interface {};
+
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
 
  bicycle-steering-controller = self.callPackage ./bicycle-steering-controller {};
@@ -628,6 +632,8 @@ self: super: {
 
  etsi-its-conversion = self.callPackage ./etsi-its-conversion {};
 
+ etsi-its-conversion-srvs = self.callPackage ./etsi-its-conversion-srvs {};
+
  etsi-its-cpm-ts-coding = self.callPackage ./etsi-its-cpm-ts-coding {};
 
  etsi-its-cpm-ts-conversion = self.callPackage ./etsi-its-cpm-ts-conversion {};
@@ -920,8 +926,6 @@ self: super: {
 
  gz-fuel-tools-vendor = self.callPackage ./gz-fuel-tools-vendor {};
 
- gz-gui-vendor = self.callPackage ./gz-gui-vendor {};
-
  gz-launch-vendor = self.callPackage ./gz-launch-vendor {};
 
  gz-math-vendor = self.callPackage ./gz-math-vendor {};
@@ -1046,6 +1050,8 @@ self: super: {
 
  joy-tester = self.callPackage ./joy-tester {};
 
+ jrl-cmakemodules = self.callPackage ./jrl-cmakemodules {};
+
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
@@ -1103,6 +1109,8 @@ self: super: {
  laser-segmentation = self.callPackage ./laser-segmentation {};
 
  launch = self.callPackage ./launch {};
+
+ launch-frontend-py = self.callPackage ./launch-frontend-py {};
 
  launch-param-builder = self.callPackage ./launch-param-builder {};
 
@@ -1290,6 +1298,8 @@ self: super: {
 
  mola-input-kitti-dataset = self.callPackage ./mola-input-kitti-dataset {};
 
+ mola-input-lidar-bin-dataset = self.callPackage ./mola-input-lidar-bin-dataset {};
+
  mola-input-mulran-dataset = self.callPackage ./mola-input-mulran-dataset {};
 
  mola-input-paris-luco-dataset = self.callPackage ./mola-input-paris-luco-dataset {};
@@ -1426,9 +1436,21 @@ self: super: {
 
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 
+ moveit-task-constructor-capabilities = self.callPackage ./moveit-task-constructor-capabilities {};
+
+ moveit-task-constructor-core = self.callPackage ./moveit-task-constructor-core {};
+
+ moveit-task-constructor-demo = self.callPackage ./moveit-task-constructor-demo {};
+
+ moveit-task-constructor-msgs = self.callPackage ./moveit-task-constructor-msgs {};
+
+ moveit-task-constructor-visualization = self.callPackage ./moveit-task-constructor-visualization {};
+
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
+
+ mp-units-vendor = self.callPackage ./mp-units-vendor {};
 
  mqtt-client = self.callPackage ./mqtt-client {};
 
@@ -1601,6 +1623,16 @@ self: super: {
  nav-msgs = self.callPackage ./nav-msgs {};
 
  navigation2 = self.callPackage ./navigation2 {};
+
+ navmap-core = self.callPackage ./navmap-core {};
+
+ navmap-examples = self.callPackage ./navmap-examples {};
+
+ navmap-ros = self.callPackage ./navmap-ros {};
+
+ navmap-ros-interfaces = self.callPackage ./navmap-ros-interfaces {};
+
+ navmap-rviz-plugin = self.callPackage ./navmap-rviz-plugin {};
 
  neo-nav2-bringup = self.callPackage ./neo-nav2-bringup {};
 
@@ -2160,6 +2192,8 @@ self: super: {
 
  ros2-controllers-test-nodes = self.callPackage ./ros2-controllers-test-nodes {};
 
+ ros2-fmt-logger = self.callPackage ./ros2-fmt-logger {};
+
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
 
  ros2-socketcan-msgs = self.callPackage ./ros2-socketcan-msgs {};
@@ -2203,6 +2237,8 @@ self: super: {
  ros2param = self.callPackage ./ros2param {};
 
  ros2pkg = self.callPackage ./ros2pkg {};
+
+ ros2plugin = self.callPackage ./ros2plugin {};
 
  ros2run = self.callPackage ./ros2run {};
 
@@ -2515,6 +2551,8 @@ self: super: {
  rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
+
+ rviz-marker-tools = self.callPackage ./rviz-marker-tools {};
 
  rviz-ogre-vendor = self.callPackage ./rviz-ogre-vendor {};
 
@@ -2999,6 +3037,8 @@ self: super: {
  wiimote-msgs = self.callPackage ./wiimote-msgs {};
 
  xacro = self.callPackage ./xacro {};
+
+ yaets = self.callPackage ./yaets {};
 
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
 

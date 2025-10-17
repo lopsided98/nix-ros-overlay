@@ -954,6 +954,8 @@ self: super: {
 
  joy-tester = self.callPackage ./joy-tester {};
 
+ jrl-cmakemodules = self.callPackage ./jrl-cmakemodules {};
+
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
@@ -1023,6 +1025,8 @@ self: super: {
  laser-segmentation = self.callPackage ./laser-segmentation {};
 
  launch = self.callPackage ./launch {};
+
+ launch-frontend-py = self.callPackage ./launch-frontend-py {};
 
  launch-param-builder = self.callPackage ./launch-param-builder {};
 
@@ -1210,6 +1214,8 @@ self: super: {
 
  mola-input-kitti-dataset = self.callPackage ./mola-input-kitti-dataset {};
 
+ mola-input-lidar-bin-dataset = self.callPackage ./mola-input-lidar-bin-dataset {};
+
  mola-input-mulran-dataset = self.callPackage ./mola-input-mulran-dataset {};
 
  mola-input-paris-luco-dataset = self.callPackage ./mola-input-paris-luco-dataset {};
@@ -1346,9 +1352,21 @@ self: super: {
 
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
 
+ moveit-task-constructor-capabilities = self.callPackage ./moveit-task-constructor-capabilities {};
+
+ moveit-task-constructor-core = self.callPackage ./moveit-task-constructor-core {};
+
+ moveit-task-constructor-demo = self.callPackage ./moveit-task-constructor-demo {};
+
+ moveit-task-constructor-msgs = self.callPackage ./moveit-task-constructor-msgs {};
+
+ moveit-task-constructor-visualization = self.callPackage ./moveit-task-constructor-visualization {};
+
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
+
+ mp-units-vendor = self.callPackage ./mp-units-vendor {};
 
  mqtt-client = self.callPackage ./mqtt-client {};
 
@@ -1986,6 +2004,8 @@ self: super: {
 
  ros2-controllers-test-nodes = self.callPackage ./ros2-controllers-test-nodes {};
 
+ ros2-fmt-logger = self.callPackage ./ros2-fmt-logger {};
+
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
 
  ros2-socketcan-msgs = self.callPackage ./ros2-socketcan-msgs {};
@@ -2345,6 +2365,8 @@ self: super: {
  rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
+
+ rviz-marker-tools = self.callPackage ./rviz-marker-tools {};
 
  rviz-ogre-vendor = self.callPackage ./rviz-ogre-vendor {};
 

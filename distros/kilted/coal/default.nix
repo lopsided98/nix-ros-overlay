@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, boost, cmake, doxygen, eigen, eigenpy, git, octomap, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-coal";
-  version = "3.0.1-r2";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/coal-release/archive/release/kilted/coal/3.0.1-2.tar.gz";
-    name = "3.0.1-2.tar.gz";
-    sha256 = "6bfb40a22326ebbf8f6fe90d920ab612a80de24bc10a193eaa19012e4c18e7bb";
+    url = "https://github.com/ros2-gbp/coal-release/archive/release/kilted/coal/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "c84c0f91d5004d29cd838223fc1a8379bc225db7042c875414540a0f8d7a218c";
   };
 
   buildType = "cmake";
