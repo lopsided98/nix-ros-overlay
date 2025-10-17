@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-primitives-conversion";
-  version = "3.3.0-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_primitives_conversion/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "7896a351c263eb1504909bdcf897c5fe7bae95a8b6cd91d1b71a009c36f8ddb1";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_primitives_conversion/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "07fbbfb4c650b4453a77a3426b8feace4c8a68b777fa1d5578c215bfd3c2435a";
   };
 
   buildType = "ament_cmake";

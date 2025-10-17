@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-cam-msgs, etsi-its-cpm-ts-msgs, etsi-its-denm-msgs, etsi-its-mapem-ts-msgs, etsi-its-msgs-utils, etsi-its-spatem-ts-msgs, pluginlib, python3Packages, qt5, rclcpp, ros-environment, rviz-common, rviz-default-plugins, rviz-ogre-vendor, rviz-rendering, rviz-satellite, rviz2, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-rviz-plugins";
-  version = "3.3.0-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_rviz_plugins/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "5154b461fc46f8665dc4900c2285c7ac371375ba1ee4ef231c0020a43ffac6c8";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_rviz_plugins/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "2c06d17c8bbae72e378ac714484e0a2fd5b58feb5e61270d722404687c88926d";
   };
 
   buildType = "ament_cmake";

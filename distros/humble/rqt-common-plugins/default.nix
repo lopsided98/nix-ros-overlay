@@ -21,7 +21,7 @@ buildRosPackage {
   meta = {
     description = "rqt_common_plugins metapackage provides ROS backend graphical tools suite that can be used on/off of robot runtime.<br/>
     <br/>
-    To run any rqt plugins, just type in a single command &quot;rqt&quot;, then select any plugins you want from the GUI that launches afterwards.<br/>
+    To run any rqt plugins, just type in a single command \"rqt\", then select any plugins you want from the GUI that launches afterwards.<br/>
     <br/>
     rqt consists of three following metapackages:<br/>
     <ul>

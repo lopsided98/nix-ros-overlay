@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosgraph-monitor-msgs, rosidl-runtime-cpp, rosidl-typesupport-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-rmw-stats-shim";
-  version = "0.1.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/graph_monitor-release/archive/release/jazzy/rmw_stats_shim/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "39998cba0fa5e855eec3e44e2142a8496d530d6f37085003aa214f1783026d96";
+    url = "https://github.com/ros2-gbp/graph_monitor-release/archive/release/jazzy/rmw_stats_shim/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "449a0e1b3bc86c249b768952b1dcb060b9c31a6f26c629fabcbb28d4be80af91";
   };
 
   buildType = "ament_cmake";

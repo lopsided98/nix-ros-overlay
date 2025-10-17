@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, depthai, depthai-bridge, depthai-descriptions, depthai-examples, depthai-filters, depthai-ros-driver, depthai-ros-msgs }:
 buildRosPackage {
   pname = "ros-kilted-depthai-ros";
-  version = "3.0.7-r1";
+  version = "3.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/kilted/depthai-ros/3.0.7-1.tar.gz";
-    name = "3.0.7-1.tar.gz";
-    sha256 = "2a949e720f66108691ef8f442c6ce6865f4c184dd7de5e9b5fb90771352f2332";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/kilted/depthai-ros/3.0.9-1.tar.gz";
+    name = "3.0.9-1.tar.gz";
+    sha256 = "c943d89ac8d9159a6740493c3af4b5a47dbfce509469fe11492912df691b7a32";
   };
 
   buildType = "ament_cmake";

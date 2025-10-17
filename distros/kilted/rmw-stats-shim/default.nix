@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosgraph-monitor-msgs, rosidl-runtime-cpp, rosidl-typesupport-cpp }:
 buildRosPackage {
   pname = "ros-kilted-rmw-stats-shim";
-  version = "0.1.2-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/graph_monitor-release/archive/release/kilted/rmw_stats_shim/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "672eb98d6ad03934095c6cb11c043394f146a409a860025802fdbadce66af3e5";
+    url = "https://github.com/ros2-gbp/graph_monitor-release/archive/release/kilted/rmw_stats_shim/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "7933290683de2bb64bed6b6e3327cf317037e875b53935a814cda71e746ff1e1";
   };
 
   buildType = "ament_cmake";

@@ -1040,6 +1040,8 @@ self: super: {
 
  etsi-its-conversion = self.callPackage ./etsi-its-conversion {};
 
+ etsi-its-conversion-srvs = self.callPackage ./etsi-its-conversion-srvs {};
+
  etsi-its-cpm-ts-coding = self.callPackage ./etsi-its-cpm-ts-coding {};
 
  etsi-its-cpm-ts-conversion = self.callPackage ./etsi-its-cpm-ts-conversion {};
@@ -1560,6 +1562,8 @@ self: super: {
 
  joy-tester = self.callPackage ./joy-tester {};
 
+ jrl-cmakemodules = self.callPackage ./jrl-cmakemodules {};
+
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
  kdl-inverse-dynamics-solver = self.callPackage ./kdl-inverse-dynamics-solver {};
@@ -1687,6 +1691,8 @@ self: super: {
  laser-segmentation = self.callPackage ./laser-segmentation {};
 
  launch = self.callPackage ./launch {};
+
+ launch-frontend-py = self.callPackage ./launch-frontend-py {};
 
  launch-pal = self.callPackage ./launch-pal {};
 
@@ -1910,6 +1916,8 @@ self: super: {
 
  mola-input-kitti-dataset = self.callPackage ./mola-input-kitti-dataset {};
 
+ mola-input-lidar-bin-dataset = self.callPackage ./mola-input-lidar-bin-dataset {};
+
  mola-input-mulran-dataset = self.callPackage ./mola-input-mulran-dataset {};
 
  mola-input-paris-luco-dataset = self.callPackage ./mola-input-paris-luco-dataset {};
@@ -2037,6 +2045,16 @@ self: super: {
  moveit-setup-srdf-plugins = self.callPackage ./moveit-setup-srdf-plugins {};
 
  moveit-simple-controller-manager = self.callPackage ./moveit-simple-controller-manager {};
+
+ moveit-task-constructor-capabilities = self.callPackage ./moveit-task-constructor-capabilities {};
+
+ moveit-task-constructor-core = self.callPackage ./moveit-task-constructor-core {};
+
+ moveit-task-constructor-demo = self.callPackage ./moveit-task-constructor-demo {};
+
+ moveit-task-constructor-msgs = self.callPackage ./moveit-task-constructor-msgs {};
+
+ moveit-task-constructor-visualization = self.callPackage ./moveit-task-constructor-visualization {};
 
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
@@ -2344,6 +2362,12 @@ self: super: {
 
  openvdb-vendor = self.callPackage ./openvdb-vendor {};
 
+ orbbec-camera = self.callPackage ./orbbec-camera {};
+
+ orbbec-camera-msgs = self.callPackage ./orbbec-camera-msgs {};
+
+ orbbec-description = self.callPackage ./orbbec-description {};
+
  orocos-kdl-vendor = self.callPackage ./orocos-kdl-vendor {};
 
  ortools-vendor = self.callPackage ./ortools-vendor {};
@@ -2389,6 +2413,16 @@ self: super: {
  pal-navigation-cfg-bringup = self.callPackage ./pal-navigation-cfg-bringup {};
 
  pal-navigation-cfg-params = self.callPackage ./pal-navigation-cfg-params {};
+
+ pal-pro-gripper = self.callPackage ./pal-pro-gripper {};
+
+ pal-pro-gripper-bringup = self.callPackage ./pal-pro-gripper-bringup {};
+
+ pal-pro-gripper-controller-configuration = self.callPackage ./pal-pro-gripper-controller-configuration {};
+
+ pal-pro-gripper-description = self.callPackage ./pal-pro-gripper-description {};
+
+ pal-pro-gripper-wrapper = self.callPackage ./pal-pro-gripper-wrapper {};
 
  pal-robotiq-controller-configuration = self.callPackage ./pal-robotiq-controller-configuration {};
 
@@ -2503,6 +2537,10 @@ self: super: {
  play-motion2 = self.callPackage ./play-motion2 {};
 
  play-motion2-msgs = self.callPackage ./play-motion2-msgs {};
+
+ play-motion-builder = self.callPackage ./play-motion-builder {};
+
+ play-motion-builder-msgs = self.callPackage ./play-motion-builder-msgs {};
 
  plotjuggler = self.callPackage ./plotjuggler {};
 
@@ -2888,6 +2926,12 @@ self: super: {
 
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
 
+ roadmap-explorer = self.callPackage ./roadmap-explorer {};
+
+ roadmap-explorer-msgs = self.callPackage ./roadmap-explorer-msgs {};
+
+ roadmap-explorer-rviz-plugins = self.callPackage ./roadmap-explorer-rviz-plugins {};
+
  robot-calibration = self.callPackage ./robot-calibration {};
 
  robot-calibration-msgs = self.callPackage ./robot-calibration-msgs {};
@@ -2923,6 +2967,8 @@ self: super: {
  ros2-controllers = self.callPackage ./ros2-controllers {};
 
  ros2-controllers-test-nodes = self.callPackage ./ros2-controllers-test-nodes {};
+
+ ros2-fmt-logger = self.callPackage ./ros2-fmt-logger {};
 
  ros2-ouster = self.callPackage ./ros2-ouster {};
 
@@ -2971,6 +3017,8 @@ self: super: {
  ros2param = self.callPackage ./ros2param {};
 
  ros2pkg = self.callPackage ./ros2pkg {};
+
+ ros2plugin = self.callPackage ./ros2plugin {};
 
  ros2run = self.callPackage ./ros2run {};
 
@@ -3158,6 +3206,8 @@ self: super: {
 
  rqt-msg = self.callPackage ./rqt-msg {};
 
+ rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
+
  rqt-plot = self.callPackage ./rqt-plot {};
 
  rqt-publisher = self.callPackage ./rqt-publisher {};
@@ -3243,6 +3293,8 @@ self: super: {
  rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
 
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
+
+ rviz-marker-tools = self.callPackage ./rviz-marker-tools {};
 
  rviz-ogre-vendor = self.callPackage ./rviz-ogre-vendor {};
 
@@ -3553,6 +3605,14 @@ self: super: {
  tiago-moveit-config = self.callPackage ./tiago-moveit-config {};
 
  tiago-navigation = self.callPackage ./tiago-navigation {};
+
+ tiago-pro-head-bringup = self.callPackage ./tiago-pro-head-bringup {};
+
+ tiago-pro-head-controller-configuration = self.callPackage ./tiago-pro-head-controller-configuration {};
+
+ tiago-pro-head-description = self.callPackage ./tiago-pro-head-description {};
+
+ tiago-pro-head-robot = self.callPackage ./tiago-pro-head-robot {};
 
  tiago-rgbd-sensors = self.callPackage ./tiago-rgbd-sensors {};
 

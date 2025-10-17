@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-humble-mola-traj-tools";
-  version = "1.9.0-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_traj_tools/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "e99ba770ac55cf541753aa34e53831878925f35dd545789140985300656abb1a";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_traj_tools/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "f68a75bfeb7df9e852a4c4712280f5566a94fa2cb305212590cb11ef7bd0ff35";
   };
 
   buildType = "cmake";

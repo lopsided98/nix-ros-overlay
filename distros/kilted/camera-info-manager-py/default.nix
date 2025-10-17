@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, python3Packages, rclpy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-camera-info-manager-py";
-  version = "6.1.2-r1";
+  version = "6.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/kilted/camera_info_manager_py/6.1.2-1.tar.gz";
-    name = "6.1.2-1.tar.gz";
-    sha256 = "8682e8350297e7ec673d1c0016958f66f05f69e6f95fe9a94f21a38a02eaa245";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/kilted/camera_info_manager_py/6.1.3-1.tar.gz";
+    name = "6.1.3-1.tar.gz";
+    sha256 = "f772338fc3e0138b47368277fe5124d53bc56bef5ecbbaf47abb4688a6ca24de";
   };
 
   buildType = "ament_python";

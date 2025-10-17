@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cmake, doxygen, eigen, git, graphviz }:
 buildRosPackage {
   pname = "ros-kilted-eiquadprog";
-  version = "1.2.9-r2";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/eiquadprog-release/archive/release/kilted/eiquadprog/1.2.9-2.tar.gz";
-    name = "1.2.9-2.tar.gz";
-    sha256 = "77cb249bc50854c5d9b3e482e45e27306abb2191f9317713f9b54642f36ccd18";
+    url = "https://github.com/ros2-gbp/eiquadprog-release/archive/release/kilted/eiquadprog/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "7f7783c8d31e79501bf9d279a7edda7eec6e6ea380ffb2e14a7e2b4e0aef8827";
   };
 
   buildType = "cmake";

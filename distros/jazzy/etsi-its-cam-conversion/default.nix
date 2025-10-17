@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-cam-coding, etsi-its-cam-msgs, etsi-its-primitives-conversion }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-cam-conversion";
-  version = "3.3.0-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_cam_conversion/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "9b81781ea8eb746453f2b1be8fd7e6a2826165ddcbe7c1db79740b664a20b9d6";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_cam_conversion/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "19e838c86397b7bd20c99cd059f5dfc89e29e6769a265334b0f463125c6d456e";
   };
 
   buildType = "ament_cmake";

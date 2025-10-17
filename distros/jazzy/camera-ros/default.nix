@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-mypy, ament-cmake-pep257, ament-cmake-pyflakes, ament-cmake-xmllint, ament-index-python, ament-lint-auto, camera-info-manager, clang, cv-bridge, image-view, libcamera, rclcpp, rclcpp-components, ros2launch, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-camera-ros";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/camera_ros-release/archive/release/jazzy/camera_ros/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "3ab23d37e44bcdfb52a3e39bfa78b23c5fa546ed408eaa9f82e6b73f5975354c";
+    url = "https://github.com/ros2-gbp/camera_ros-release/archive/release/jazzy/camera_ros/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "f88f2994d039d3a0e64bf5ac5d4a7fc8fe143e63d0e6fd18fc3753a02cbf75af";
   };
 
   buildType = "ament_cmake";

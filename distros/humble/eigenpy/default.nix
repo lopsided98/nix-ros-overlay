@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, doxygen, eigen, git, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-eigenpy";
-  version = "3.11.0-r1";
+  version = "3.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/eigenpy-release/archive/release/humble/eigenpy/3.11.0-1.tar.gz";
-    name = "3.11.0-1.tar.gz";
-    sha256 = "907d68e9741d5d68de9c34642806e1269d33ad5db19d30deb8e4399f0d685649";
+    url = "https://github.com/ros2-gbp/eigenpy-release/archive/release/humble/eigenpy/3.12.0-1.tar.gz";
+    name = "3.12.0-1.tar.gz";
+    sha256 = "8202b9de326e31a147bebcabf33b45f2e70db182c1cbb51e90c1f9f62545cb4c";
   };
 
   buildType = "cmake";

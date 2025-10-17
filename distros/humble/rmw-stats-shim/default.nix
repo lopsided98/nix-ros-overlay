@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosgraph-monitor-msgs, rosidl-runtime-cpp, rosidl-typesupport-cpp }:
 buildRosPackage {
   pname = "ros-humble-rmw-stats-shim";
-  version = "0.1.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/graph_monitor-release/archive/release/humble/rmw_stats_shim/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "f99b7039d2c7d0e370773ebc21c924720b2d0ee1b8e639179fa8602946083ea7";
+    url = "https://github.com/ros2-gbp/graph_monitor-release/archive/release/humble/rmw_stats_shim/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "e3c52bdba374998d56e57551980cd16de6c3bcceaf771cfd1b522c431419f094";
   };
 
   buildType = "ament_cmake";

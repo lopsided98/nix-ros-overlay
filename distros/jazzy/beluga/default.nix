@@ -2,7 +2,7 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, clang, cmake, eigen, gbenchmark, gmock, gtest, hdf5, range-v3, sophus, tbb_2021_11 }:
+{ lib, buildRosPackage, fetchurl, clang, cmake, eigen, gbenchmark, gmock, gtest, hdf5, onetbb, range-v3, sophus }:
 buildRosPackage {
   pname = "ros-jazzy-beluga";
   version = "2.0.2-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "cmake";
   buildInputs = [ cmake ];
   checkInputs = [ clang gbenchmark gmock gtest ];
-  propagatedBuildInputs = [ eigen hdf5 range-v3 sophus tbb_2021_11 ];
+  propagatedBuildInputs = [ eigen hdf5 onetbb range-v3 sophus ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

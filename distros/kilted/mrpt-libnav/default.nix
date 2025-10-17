@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, cv-bridge, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libmaps, octomap, opencv, openni2, pkg-config, python3Packages, rclcpp, ros-environment, rosbag2-storage, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-libnav";
-  version = "2.14.15-r1";
+  version = "2.14.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/kilted/mrpt_libnav/2.14.15-1.tar.gz";
-    name = "2.14.15-1.tar.gz";
-    sha256 = "000367371257c57c5a0a9f9aa7949e3c192296d8aab2af381d9110761133ede9";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/kilted/mrpt_libnav/2.14.16-1.tar.gz";
+    name = "2.14.16-1.tar.gz";
+    sha256 = "50ac0a3d8276fb68a46fed0f18cc835feca11dd8116ef3e7da107fe3aae8d088";
   };
 
   buildType = "cmake";

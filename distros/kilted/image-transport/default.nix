@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, message-filters, pluginlib, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-image-transport";
-  version = "6.1.2-r1";
+  version = "6.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/kilted/image_transport/6.1.2-1.tar.gz";
-    name = "6.1.2-1.tar.gz";
-    sha256 = "0dc7cc684d53b1e6ff0c3865eed477672934cb7b5223532385845a034157969c";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/kilted/image_transport/6.1.3-1.tar.gz";
+    name = "6.1.3-1.tar.gz";
+    sha256 = "cdb9d7682dbdd924452f3005c5bb0ad1e5df33385b3bb67f7e9a9c084e8b3f11";
   };
 
   buildType = "ament_cmake";

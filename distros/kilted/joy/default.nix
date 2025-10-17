@@ -21,7 +21,7 @@ buildRosPackage {
 
   meta = {
     description = "The joy package contains joy_node, a node that interfaces a generic joystick to ROS
-    2. This node publishes a &quot;Joy&quot; message, which contains the current state of each one of the
+    2. This node publishes a \"Joy\" message, which contains the current state of each one of the
     joystick's buttons and axes.";
     license = with lib.licenses; [ bsdOriginal ];
   };

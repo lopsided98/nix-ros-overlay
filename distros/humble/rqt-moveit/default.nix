@@ -26,7 +26,7 @@ buildRosPackage {
    <ul>
    <li>Node: /move_group</li>
    <li>Parameter: [/robot_description, /robot_description_semantic]</li>
-   <li>Topic: Following types are monitored. Published &quot;names&quot; are ignored.<br/>
+   <li>Topic: Following types are monitored. Published \"names\" are ignored.<br/>
        [sensor_msgs/PointCloud, sensor_msgs/PointCloud2,
         sensor_msgs/Image, sensor_msgs/CameraInfo]</li>
    </ul>

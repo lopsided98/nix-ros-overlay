@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, class-loader, rcpputils, rcutils, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-pluginlib";
-  version = "5.4.2-r2";
+  version = "5.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/jazzy/pluginlib/5.4.2-2.tar.gz";
-    name = "5.4.2-2.tar.gz";
-    sha256 = "7ee21b8443a8aac40dbeabd55a733b23245cfe515972e2d78f406c5aae364c12";
+    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/jazzy/pluginlib/5.4.3-1.tar.gz";
+    name = "5.4.3-1.tar.gz";
+    sha256 = "bcfe79b8270b2068d5d5683697852174161fd5cf9298edce89fbb024bbe8f845";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-cam-coding, etsi-its-cam-msgs, etsi-its-primitives-conversion }:
 buildRosPackage {
   pname = "ros-kilted-etsi-its-cam-conversion";
-  version = "3.3.0-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/kilted/etsi_its_cam_conversion/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "2124219175578fd9ee40fbf12e65ace1db698dc8d059eca4ab5710f960d078d2";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/kilted/etsi_its_cam_conversion/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "aa57777a10d98e7bd325333d741c0fcbf968d54af72a32e3dc456a81246ef2e1";
   };
 
   buildType = "ament_cmake";

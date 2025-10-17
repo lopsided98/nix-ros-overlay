@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-copyright, ament-flake8, ament-pep257, python3Packages, rclcpp, rclpy, yasmin, yasmin-msgs, yasmin-ros }:
 buildRosPackage {
   pname = "ros-jazzy-yasmin-viewer";
-  version = "3.4.0-r1";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/jazzy/yasmin_viewer/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "bda6ab68d8b74b9216897df6142356f6cb39ed9e10d0ac44f0bc4fe24bf873ca";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/jazzy/yasmin_viewer/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "867e82397eeeea585e9007c74e513356697aa0c47e7e1a2d01cabca6da11173d";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cmake, doxygen, eigenpy, eiquadprog, git, graphviz, pinocchio }:
 buildRosPackage {
   pname = "ros-kilted-tsid";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tsid-release/archive/release/kilted/tsid/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "575cfc44db739b0c616d0ff626b6a9dcbe8554a67fac72e56e009553cd5314ac";
+    url = "https://github.com/ros2-gbp/tsid-release/archive/release/kilted/tsid/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "a4bd92b88e3d2221d41ae4bfed0840f4101d12a3b52a86e5fabad849412b03c4";
   };
 
   buildType = "cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Efficient Task Space Inverse Dynamics (TSID) based on Pinocchio";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ "BSD-2-Clause" ];
   };
 }

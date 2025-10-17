@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-mapem-ts-coding, etsi-its-mapem-ts-msgs, etsi-its-primitives-conversion }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-mapem-ts-conversion";
-  version = "3.3.0-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_mapem_ts_conversion/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "f0dc3f91e8518fccd678d4b6c586ac3e8b3f1fba5d9b62cbd215a574171fd493";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_mapem_ts_conversion/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "578e3ff2d509862a8f0daa86d84cddfa1447fe89417b1241842d72483a5cf95e";
   };
 
   buildType = "ament_cmake";

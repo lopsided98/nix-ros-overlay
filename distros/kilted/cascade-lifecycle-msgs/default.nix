@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, lifecycle-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-cascade-lifecycle-msgs";
-  version = "2.0.2-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cascade_lifecycle-release/archive/release/kilted/cascade_lifecycle_msgs/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "4c28655d9bbd3ae58b32c574ea1370dca1371c3f3ac428a15a878262cbe6f859";
+    url = "https://github.com/ros2-gbp/cascade_lifecycle-release/archive/release/kilted/cascade_lifecycle_msgs/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "c8fe243f1a7b62a9fb885e2558d62551ad2a1c789a847bddf5cc5b4b974098a0";
   };
 
   buildType = "ament_cmake";

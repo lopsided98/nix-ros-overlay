@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-libhwdrivers, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-kilted-mola-input-video";
-  version = "1.9.0-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_input_video/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "0026fc4ec12e8e9bfb08d937698a06ffaf8000bc83adac91b0674d23d2dc361c";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_input_video/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "68592b439d20a55057846b1facd27a9541f99eed32982a53e227abb9722d843d";
   };
 
   buildType = "cmake";
