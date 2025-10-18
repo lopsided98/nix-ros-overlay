@@ -255,6 +255,32 @@ in {
     hash = "sha256-TyFt3d78GidhDGD17KgjAaZl/qvAcGJP8lmu4EOxpYg=";
   };
 
+  # Ensure that tinyxml-2 has the same major version as in
+  # behaviortree-cpp, which vendors it. Other packages like
+  # nav2-behavior-tree include tintinyxml-2 propagated via their
+  # dependencies from nixpkgs, which can lead to inconsistencies
+  # causing segfaults:
+  # https://github.com/lopsided98/nix-ros-overlay/issues/648
+  # https://github.com/BehaviorTree/BehaviorTree.CPP/issues/1014
+  tinyxml-2 = self.tinyxml-2.overrideAttrs ({
+    postPatch ? "", ...
+  }: let
+    version = "11.0.0";
+  in {
+    inherit version;
+    src = self.fetchFromGitHub {
+      owner = "leethomason";
+      repo = "tinyxml2";
+      tag = version;
+      hash = "sha256-rYVQSvxA0nxlZFHwGcOWkxcXZWEvTxR9P+d8E7CSm6U=";
+    };
+    preConfigure = ''
+      v1=$(tar xf ${rosSelf.behaviortree-cpp.src} --wildcards '*/tinyxml2.h' --to-stdout|grep TINYXML2_MAJOR_VERSION)
+      v2=$(grep TINYXML2_MAJOR_VERSION tinyxml2.h)
+      test "$v1" = "$v2" || { echo "tinyxml-2 version mismatch"; exit 1; }
+    '';
+  });
+
   urdfdom = rosSuper.urdfdom.overrideAttrs ({
     patches ? [], ...
   }: {
