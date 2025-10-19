@@ -4,6 +4,8 @@ self:
 rosSelf: rosSuper: let
   inherit (rosSelf) lib;
 in {
+  clips-vendor = lib.patchAmentVendorFile rosSuper.clips-vendor { };
+
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
     patches ? [], ...
   }: {
