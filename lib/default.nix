@@ -119,7 +119,6 @@
       file = n: v: "-DAMENT_VENDOR_NIX_FILE_${n}=${v}";
     };
   in {
-
     nativeBuildInputs = [
       # Prepend wrapped ament_vendor to be found by CMake before the
       # unwrapped one
@@ -144,7 +143,6 @@
     passthru = passthru // {
       # Expose vendored sources for eventual overriding
       amentVendorSrcs = lib.optionalAttrs (pathExists vendoredSourceJson)
-
         (mapAttrs (n: v: fetcher v) sourceInfos);
       # Script to automatically update vendored-source.json by running
       # CMake with injected modified version of ament_cmake macro.
