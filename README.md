@@ -43,11 +43,9 @@ system-wide configuration.
 
 With [Flakes enabled][flake], the equivalent of the above is:
 ```
-nix develop github:lopsided98/nix-ros-overlay#example-turtlebot3-gazebo
-# Then use roslaunch commands as above
-```
-```sh
-nix develop github:lopsided98/nix-ros-overlay#example-ros2-desktop-jazzy
+nix develop github:lopsided98/nix-ros-overlay/master#example-ros2-desktop-jazzy
+# Run command-line talker/listener demo
+ros2 launch demo_nodes_cpp talker_listener_launch.xml
 ```
 
 Using the overlay in your `flake.nix`-based project could look like this:
