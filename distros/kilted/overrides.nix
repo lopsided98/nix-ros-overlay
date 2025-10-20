@@ -71,6 +71,14 @@ in {
     fetchgitArgs.hash = "sha256-gztnxui9Fe/FTieMjdvfJjWHjkImtlsHn6fM1FruyME=";
   };
 
+  gtsam = rosSuper.gtsam.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    # https://github.com/borglab/gtsam/pull/2171
+    # boost is optional but enabled by default
+    nativeBuildInputs = nativeBuildInputs ++ [ self.boost ];
+  });
+
   gz-cmake-vendor = lib.patchGzAmentVendorGit rosSuper.gz-cmake-vendor { };
 
   gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor { }).overrideAttrs ({
