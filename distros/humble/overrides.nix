@@ -4,6 +4,17 @@ self:
 rosSelf: rosSuper: let
   inherit (rosSelf) lib;
 in with lib; {
+
+  behaviortree-cpp-v3 = rosSuper.behaviortree-cpp-v3.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Fix ...gtest-1.17.0-dev/include/gtest/internal/gtest-port.h:273:2: error: #error C++ versions less than C++17 are not supported.
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail 'set(CMAKE_CXX_STANDARD 14)' 'set(CMAKE_CXX_STANDARD 17)'
+    '';
+  });
+
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
     patches ? [], ...
   }: {
