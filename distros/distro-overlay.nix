@@ -170,20 +170,20 @@ let
     python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
       patches ? [], propagatedBuildInputs ? [], ...
     }: {
-      patches = patches ++ [ 
+      patches = patches ++ [
         # ref. https://github.com/ros-visualization/python_qt_binding/pull/143
-        (self.fetchpatch { 
-          name = "support-qt6.patch"; 
+        (self.fetchpatch {
+          name = "support-qt6.patch";
           url = "https://github.com/ros-visualization/python_qt_binding/commit/fa854d325ad4fa5f6e788d70b3ba9ccf9ee5c80f.patch";
           hash = "sha256-P/xScO83zRL7qtqRzLiHkQtCpYdcxOaXwWj/83GhFpk=";
         })
-        (self.fetchpatch { 
-          name = "make-linters-happy.patch"; 
+        (self.fetchpatch {
+          name = "make-linters-happy.patch";
           url = "https://github.com/ros-visualization/python_qt_binding/commit/bd88c0d5d51add58e329c40bba20a7b04c3df063.patch";
           hash = "sha256-1YuTIUGDmgFZtz/1LoRIkayH9M84H5rs8QqhW9SnNAQ=";
         })
-        (self.fetchpatch { 
-          name = "fixes.patch"; 
+        (self.fetchpatch {
+          name = "fixes.patch";
           url = "https://github.com/ros-visualization/python_qt_binding/commit/d710e1afb2ac0effed1e8d6ab90eee53354366bb.patch";
           hash = "sha256-+ou08BZCIhRMDi9GMyAOLmdoGJNZaqLpA7nMszZOFgg=";
         })
