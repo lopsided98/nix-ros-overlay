@@ -109,6 +109,8 @@ self: super: with self.lib; {
 
       colcon-recursive-crawl = pyFinal.callPackage ./colcon/recursive-crawl.nix { };
 
+      colcon-rerun = pyFinal.callPackage ./colcon/rerun.nix { };
+
       colcon-ros = pyFinal.callPackage ./colcon/ros.nix { };
 
       colcon-ros-cargo = pyFinal.callPackage ./colcon/ros-cargo.nix { };
