@@ -83,6 +83,8 @@ self: super: with self.lib; {
 
       catkin-tools = pyFinal.callPackage ./catkin-tools { };
 
+      colcon-alias = pyFinal.callPackage ./colcon/alias.nix { };
+
       colcon-argcomplete = pyFinal.callPackage ./colcon/argcomplete.nix { };
 
       colcon-bash = pyFinal.callPackage ./colcon/bash.nix { };
