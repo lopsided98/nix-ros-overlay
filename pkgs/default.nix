@@ -1,7 +1,7 @@
 self: super: with self.lib; {
   inherit (self.python3Packages) bloom;
 
-  cargo-ament-build = self.callPackage ./cargo-ament-build { };
+  cargo-ament-build = self.python3Packages.cargo-ament-build;
 
   colcon = with self.python3Packages; colcon-core.withExtensions [
     colcon-argcomplete
@@ -70,6 +70,8 @@ self: super: with self.lib; {
       bloom = pyFinal.callPackage ./bloom { };
 
       catkin-tools = pyFinal.callPackage ./catkin-tools { };
+
+      cargo-ament-build = pyFinal.callPackage ./cargo-ament-build { };
 
       colcon-alias = pyFinal.callPackage ./colcon/alias.nix { };
 
