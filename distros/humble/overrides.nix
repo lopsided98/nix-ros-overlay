@@ -270,16 +270,10 @@ in with lib; {
   });
 
   plotjuggler-ros = rosSuper.plotjuggler-ros.overrideAttrs ({
-    patches ? [], nativeBuildInputs ? [], ...
+    nativeBuildInputs ? [], ...
   }: {
-    patches = patches ++ [
-      # Fix detection of ROS 2 Humble
-      # https://github.com/PlotJuggler/plotjuggler-ros-plugins/pull/82
-      (self.fetchpatch {
-        url = "https://github.com/PlotJuggler/plotjuggler-ros-plugins/commit/fa0e6c1b277077f863905307abb0e3e1bb3da7d9.patch";
-        hash = "sha256-ojZ/ErZZkGIB89O0u2ocU6Gcdu/JhowUqkdsulcArHY=";
-      })
-    ];
+    # TODO: Remove after https://github.com/PlotJuggler/plotjuggler-ros-plugins/pull/107
+    # appears in a release
     nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.ros-environment ];
   });
 
