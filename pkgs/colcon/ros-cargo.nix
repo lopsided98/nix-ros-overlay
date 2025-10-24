@@ -1,5 +1,5 @@
 { lib, buildPythonPackage, fetchPypi, colcon-core, colcon-library-path
-, colcon-cargo, colcon-ros, setuptools }:
+, colcon-cargo, colcon-ros, setuptools, cargo-ament-build }:
 
 buildPythonPackage rec {
   pname = "colcon-ros-cargo";
@@ -19,6 +19,7 @@ buildPythonPackage rec {
     colcon-library-path
     colcon-cargo
     colcon-ros
+    cargo-ament-build
   ];
 
   # Requires unpackaged dependencies
