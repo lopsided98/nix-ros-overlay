@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps }:
 buildRosPackage {
   pname = "ros-jazzy-mola-input-paris-luco-dataset";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_input_paris_luco_dataset/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "e4b7eaab364db7ce4513b4c8f589a93c8d8692c96126109ec1327d7cd6f5e775";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_input_paris_luco_dataset/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "115c403b6d545b60d0d1fd54e52007f976143f4f0197c1253a3556c50fc12c89";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, python-cmake-module, python-qt-binding, qt-gui, qt5, rclpy, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-rqt-py-common";
-  version = "1.1.8-r1";
+  version = "1.1.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/humble/rqt_py_common/1.1.8-1.tar.gz";
-    name = "1.1.8-1.tar.gz";
-    sha256 = "63d2cda78d57983b4da261f33a7ef8e5826836db47d54996c157a25df9f9da20";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/humble/rqt_py_common/1.1.9-1.tar.gz";
+    name = "1.1.9-1.tar.gz";
+    sha256 = "954549b5be351d05f66d975ae33212c51817cea2e1def2c3f98e9f56f5e9609e";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, shape-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-zed-msgs";
-  version = "5.1.0-r1";
+  version = "5.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/zed-ros2-interfaces-release/archive/release/jazzy/zed_msgs/5.1.0-1.tar.gz";
-    name = "5.1.0-1.tar.gz";
-    sha256 = "c1d206d1db31372609f846bbe45e531736f7daa1271a6bb0fc27a95d5098cf3d";
+    url = "https://github.com/ros2-gbp/zed-ros2-interfaces-release/archive/release/jazzy/zed_msgs/5.1.1-1.tar.gz";
+    name = "5.1.1-1.tar.gz";
+    sha256 = "49530050a1c49034344a911490287e9f61a6a071e1ee89d4cac77fe076231dc2";
   };
 
   buildType = "ament_cmake";

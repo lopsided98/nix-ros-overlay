@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-copyright, ament-flake8, ament-pep257, python3Packages, rclcpp, rclcpp-action, rclpy, ros-environment, yasmin }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-copyright, ament-flake8, ament-pep257, example-interfaces, python3Packages, rclcpp, rclcpp-action, rclpy, ros-environment, std-msgs, yasmin }:
 buildRosPackage {
   pname = "ros-rolling-yasmin-ros";
-  version = "3.5.0-r1";
+  version = "3.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_ros/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "c34ddf170a0534fb9e145bfc5a54c0456b1e0f1ec29727087c152cb4af70c171";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_ros/3.5.1-1.tar.gz";
+    name = "3.5.1-1.tar.gz";
+    sha256 = "5167ab47d1e387ef25779d91ca7d88ea369aa5884bf7c1206d809669eb9c7942";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ros-environment ];
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.pytest python3Packages.pytestcov ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-copyright ament-flake8 ament-pep257 example-interfaces python3Packages.pytest python3Packages.pytestcov std-msgs ];
   propagatedBuildInputs = [ rclcpp rclcpp-action rclpy yasmin ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 

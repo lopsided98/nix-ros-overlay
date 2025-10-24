@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav2-common, nav2-costmap-2d, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-costmap-queue";
-  version = "1.3.9-r1";
+  version = "1.3.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/costmap_queue/1.3.9-1.tar.gz";
-    name = "1.3.9-1.tar.gz";
-    sha256 = "03e55cbab83abd8b0322e6b5b5f3c1ec85380ee423bd2f7d904508117837f88a";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/costmap_queue/1.3.10-1.tar.gz";
+    name = "1.3.10-1.tar.gz";
+    sha256 = "14e74bfc6efc8f0053100eae7c7883fc41b02642b525bb74a559283672961a42";
   };
 
   buildType = "ament_cmake";

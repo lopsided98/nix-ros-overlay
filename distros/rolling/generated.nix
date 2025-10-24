@@ -1024,19 +1024,11 @@ self: super: {
 
  laser-segmentation = self.callPackage ./laser-segmentation {};
 
- launch = self.callPackage ./launch {};
-
  launch-frontend-py = self.callPackage ./launch-frontend-py {};
 
  launch-param-builder = self.callPackage ./launch-param-builder {};
 
- launch-pytest = self.callPackage ./launch-pytest {};
-
- launch-ros = self.callPackage ./launch-ros {};
-
  launch-system-modes = self.callPackage ./launch-system-modes {};
-
- launch-testing = self.callPackage ./launch-testing {};
 
  launch-testing-ament-cmake = self.callPackage ./launch-testing-ament-cmake {};
 
@@ -1659,6 +1651,12 @@ self: super: {
  pilz-industrial-motion-planner-testutils = self.callPackage ./pilz-industrial-motion-planner-testutils {};
 
  pinocchio = self.callPackage ./pinocchio {};
+
+ play-motion2 = self.callPackage ./play-motion2 {};
+
+ play-motion2-cli = self.callPackage ./play-motion2-cli {};
+
+ play-motion2-msgs = self.callPackage ./play-motion2-msgs {};
 
  plotjuggler = self.callPackage ./plotjuggler {};
 

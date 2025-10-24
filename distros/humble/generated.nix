@@ -2536,6 +2536,8 @@ self: super: {
 
  play-motion2 = self.callPackage ./play-motion2 {};
 
+ play-motion2-cli = self.callPackage ./play-motion2-cli {};
+
  play-motion2-msgs = self.callPackage ./play-motion2-msgs {};
 
  play-motion-builder = self.callPackage ./play-motion-builder {};

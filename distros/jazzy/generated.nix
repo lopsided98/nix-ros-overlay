@@ -422,8 +422,6 @@ self: super: {
 
  clearpath-diagnostics = self.callPackage ./clearpath-diagnostics {};
 
- clearpath-generator-common = self.callPackage ./clearpath-generator-common {};
-
  clearpath-generator-gz = self.callPackage ./clearpath-generator-gz {};
 
  clearpath-gz = self.callPackage ./clearpath-gz {};
@@ -2149,6 +2147,12 @@ self: super: {
  plansys2-tests = self.callPackage ./plansys2-tests {};
 
  plansys2-tools = self.callPackage ./plansys2-tools {};
+
+ play-motion2 = self.callPackage ./play-motion2 {};
+
+ play-motion2-cli = self.callPackage ./play-motion2-cli {};
+
+ play-motion2-msgs = self.callPackage ./play-motion2-msgs {};
 
  plotjuggler = self.callPackage ./plotjuggler {};
 

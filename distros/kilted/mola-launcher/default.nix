@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-xmllint, ament-lint-auto, cmake, mola-kernel, mrpt-libbase, mrpt-libtclap, ros-environment }:
 buildRosPackage {
   pname = "ros-kilted-mola-launcher";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_launcher/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "c222efdbf9ada8670cb58534b9ed6a2483c4ac1d79e0698bc0719964fc45b22f";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_launcher/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "5abb24e01da032aaa390a4c8c72fc4816afe591645ecca72b7aa878e0f25d983";
   };
 
   buildType = "ament_cmake";

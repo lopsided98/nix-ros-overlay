@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, cmake, geometry-msgs, mola-common, mola-kernel, mola-msgs, mrpt-libmaps, mrpt-libros-bridge, mrpt-nav-interfaces, nav-msgs, rclcpp, ros-environment, sensor-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-kilted-mola-bridge-ros2";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_bridge_ros2/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "78ae036987ae4d87cc2d011e7a5e89805fa8970e6767c36ffecd0859c8f37afb";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_bridge_ros2/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "643567116fb62a4aaee1b0cd0c5a397901dce88e1bff66c2eb12d15dd756f75f";
   };
 
   buildType = "ament_cmake";

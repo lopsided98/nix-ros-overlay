@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tf2, tf2-bullet, tf2-eigen, tf2-eigen-kdl, tf2-geometry-msgs, tf2-kdl, tf2-msgs, tf2-py, tf2-ros, tf2-sensor-msgs, tf2-tools }:
 buildRosPackage {
   pname = "ros-kilted-geometry2";
-  version = "0.41.2-r1";
+  version = "0.41.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/geometry2/0.41.2-1.tar.gz";
-    name = "0.41.2-1.tar.gz";
-    sha256 = "f411a77b5dd754acd0a732b4ab0ca60a173acfda155518a305d756fab7f88496";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/geometry2/0.41.3-3.tar.gz";
+    name = "0.41.3-3.tar.gz";
+    sha256 = "ec2d289017390e63624f7c180dbaae2ab5f6c1a704cab40f0d896ceec184f38e";
   };
 
   buildType = "ament_cmake";

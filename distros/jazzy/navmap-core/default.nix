@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, gtest }:
 buildRosPackage {
   pname = "ros-jazzy-navmap-core";
-  version = "0.2.4-r2";
+  version = "0.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/jazzy/navmap_core/0.2.4-2.tar.gz";
-    name = "0.2.4-2.tar.gz";
-    sha256 = "37ef91bc0beea47708a6aa9e8ad5d468a38156153743290b089bde8298a0359f";
+    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/jazzy/navmap_core/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
+    sha256 = "725c1f4af321f1b9f0869bad8d33d64b0365a075af149ce9685d0efec95a3b57";
   };
 
   buildType = "ament_cmake";

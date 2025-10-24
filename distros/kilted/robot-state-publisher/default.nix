@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, kdl-parser, launch-ros, launch-testing-ament-cmake, orocos-kdl-vendor, rcl-interfaces, rclcpp, rclcpp-components, sensor-msgs, std-msgs, tf2-ros, urdf }:
 buildRosPackage {
   pname = "ros-kilted-robot-state-publisher";
-  version = "3.4.2-r2";
+  version = "3.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/kilted/robot_state_publisher/3.4.2-2.tar.gz";
-    name = "3.4.2-2.tar.gz";
-    sha256 = "80a733107792fc1d0d00411c1d36b33fb1a7812f57f86f14d1dde1d50cfad8be";
+    url = "https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/kilted/robot_state_publisher/3.4.3-1.tar.gz";
+    name = "3.4.3-1.tar.gz";
+    sha256 = "76f995ad337d8877a412eb495a29588571c6a26dc167c15071a8f5c1ddc2c552";
   };
 
   buildType = "ament_cmake";
