@@ -65,6 +65,18 @@ self: super: with self.lib; {
 
   openni2 = self.callPackage ./openni2 { };
 
+  # For rtabmap-conversions
+  pcl = (super.pcl.override { vtk = self.vtkWithQt6; }).overrideAttrs ({
+    propagatedBuildInputs ? [], propagatedNativeBuildInputs ? [], ...
+  }:{
+    propagatedNativeBuildInputs = propagatedNativeBuildInputs ++ [
+      self.qt6.wrapQtAppsHook
+    ];
+    propagatedBuildInputs = propagatedBuildInputs ++ [
+      self.qt6.qtbase
+    ];
+  });
+
   pythonPackagesExtensions = super.pythonPackagesExtensions ++ [
     (pyFinal: pyPrev: {
       bloom = pyFinal.callPackage ./bloom { };
@@ -166,10 +178,4 @@ self: super: with self.lib; {
 
   superflore = self.python3Packages.callPackage ./superflore { };
 
-  vtk = super.vtk.overrideAttrs ({
-    cmakeFlags ? [], nativeBuildInputs ? [], ...
-  }: {
-    cmakeFlags = cmakeFlags ++ ["-DVTK_MODULE_ENABLE_VTK_GUISupportQt:STRING=YES"];
-    nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook self.qt5.full ];
-  });
 }
