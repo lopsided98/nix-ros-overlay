@@ -250,13 +250,102 @@ in {
     '';
   };
 
-  rviz-rendering = rosSuper.rviz-rendering.overrideAttrs ({
-    postPatch ? "", ...
+  rviz2 = rosSuper.rviz2.overrideAttrs ({
+    cmakeFlags ? [], patches ? [], prePatch ? "", postPatch ? "", ...
   }: {
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        name = "support-both-qt5-and-qt6.patch";
+        url = "https://github.com/ros2/rviz/pull/1187/commits/9f77ffb4212c0b0625aa32e7124d4cf5085e996b.patch";
+        hash = "sha256-7jakWFkyzvv11nCVGLVp4K+FUasL57HQzS3/4H5FI9M=";
+        relative = "rviz2";
+      })
+    ];
+    cmakeFlags = cmakeFlags ++ [ "-DQT_VERSION_MAJOR=6" ];
+  });
+
+  rviz-common = rosSuper.rviz-common.overrideAttrs ({
+    prePatch ? "", cmakeFlags ? [], patches ? [], ...
+  }: {
+    prePatch = prePatch + ''
+      sed -i -e '/#include <QString>/d' \
+        src/rviz_common/properties/ros_topic_property.cpp \
+        src/rviz_common/add_display_dialog.cpp \
+        src/rviz_common/tool_manager.cpp
+    '';
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        name = "support-both-qt5-and-qt6.patch";
+        url = "https://github.com/ros2/rviz/pull/1187/commits/9f77ffb4212c0b0625aa32e7124d4cf5085e996b.patch";
+        hash = "sha256-GGc6zqW/HVKpqGPhpUfP4Yxj7ed+fFlPVVFQzNKbdaU=";
+        relative = "rviz_common";
+      })
+      (self.fetchpatch2 {
+        name = "replace-qregexp-with-qregularexpression-to-support-qt6.patch";
+        url = "https://github.com/ros2/rviz/pull/1592/commits/8a60f536b4f102ccb14bb20187a2240c5964fbb6.patch";
+        hash = "sha256-TwMZ+kAOyzZ0Qj31bA3VZ0nU7YhCT4AmSovBaam96A4=";
+        excludes = [
+          "include/rviz_common/properties/ros_service_property.hpp"
+          "src/rviz_common/properties/ros_service_property.cpp"
+        ];
+        relative = "rviz_common";
+      })
+    ];
+    cmakeFlags = cmakeFlags ++ [ "-DQT_VERSION_MAJOR=6" ];
+  });
+
+  rviz-default-plugins = rosSuper.rviz-default-plugins.overrideAttrs ({
+    cmakeFlags ? [], patches ? [], prePatch ? "", postPatch ? "", ...
+  }: {
+    prePatch = prePatch + ''
+      sed -i -e '/#include <QString>/d' \
+        src/rviz_default_plugins/displays/depth_cloud/depth_cloud_display.cpp
+
+      # TODO Remove after uncommenting "hunks" below.
+      sed -i -e '/$<INSTALL_INTERFACE:include\/''${PROJECT_NAME}>/ a/  ''${Qt5Widgets_INCLUDE_DIRS}' \
+        CMakeLists.txt
+    '';
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        name = "support-both-qt5-and-qt6.patch";
+        url = "https://github.com/ros2/rviz/pull/1187/commits/9f77ffb4212c0b0625aa32e7124d4cf5085e996b.patch";
+        hash = "sha256-Sb7eV5BI7TGqrl8D/zIQFEOLqyJCBBe/eqtpPp/7kWI=";
+        relative = "rviz_default_plugins";
+        # hunks = [ "1-2" "4-" ]; TODO Uncomment after moving to recent enough nixpkgs
+      })
+      (self.fetchpatch2 {
+        name = "fix-compile-with-qt6.patch";
+        url = "https://github.com/ros2/rviz/commit/d59672f9115aeeff02b57070915893a4f5363d4f.patch";
+        hash = "sha256-8D6Gaqsbw7Ay1b+wKObdZ1r6OoHAbCM0q0IaqTMYiTU=";
+        relative = "rviz_default_plugins";
+      })
+    ];
+    postPatch = postPatch + ''
+      substituteInPlace src/rviz_default_plugins/displays/depth_cloud/depth_cloud_display.cpp \
+        --replace-fail \
+      '  QRegExp color_filter("color|rgb|bgr|gray|mono");
+        color_filter.setCaseSensitivity(Qt::CaseInsensitive);' \
+        'QRegularExpression color_filter("color|rgb|bgr|gray|mono", QRegularExpression::CaseInsensitiveOption);'
+    '';
+    cmakeFlags = cmakeFlags ++ [ "-DQT_VERSION_MAJOR=6" ];
+  });
+
+  rviz-rendering = rosSuper.rviz-rendering.overrideAttrs ({
+    postPatch ? "", patches ? [], cmakeFlags ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        name = "support-both-qt5-and-qt6.patch";
+        url = "https://github.com/ros2/rviz/pull/1187/commits/9f77ffb4212c0b0625aa32e7124d4cf5085e996b.patch";
+        hash = "sha256-Rvq1oP8xy7Yx1/zt8QxLaahuiVR6ooKbBrCmqvzPtq4=";
+        relative = "rviz_rendering";
+      })
+    ];
     postPatch = postPatch + ''
       substituteInPlace src/rviz_rendering/render_system.cpp \
         --replace-fail /opt/rviz_ogre_vendor ""
     '';
+    cmakeFlags = cmakeFlags ++ [ "-DQT_VERSION_MAJOR=6" ];
   });
 
   sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor { };
