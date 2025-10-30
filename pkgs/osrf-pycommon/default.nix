@@ -1,25 +1,37 @@
-{ lib, buildPythonPackage, fetchPypi, setuptools }:
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  wheel,
+}:
 
 buildPythonPackage rec {
   pname = "osrf_pycommon";
-  version = "2.0.2";
-
+  version = "2.1.7";
   pyproject = true;
-  build-system = [ setuptools ];
 
-  src = fetchPypi {
-    inherit pname version;
-    hash = "sha256-kSMGaW5ZqtNGmOKfS4MjJwRjBjRJmcMfGQB/wouZrfA=";
+  src = fetchFromGitHub {
+    owner = "osrf";
+    repo = "osrf_pycommon";
+    rev = version;
+    hash = "sha256-gKYeCvcJDJkW2OYP7K3eyztuPSkzE8dHoTUh4sKvxcM=";
   };
 
-  # No tests in PyPi tarball
-  doCheck = false;
-  pythonImportsCheck = [ "osrf_pycommon" ];
+  build-system = [
+    setuptools
+    wheel
+  ];
 
-  meta = with lib; {
+  pythonImportsCheck = [
+    "osrf_pycommon"
+  ];
+
+  meta = {
     description = "Commonly needed Python modules, used by Python software developed at OSRF";
     homepage = "https://github.com/osrf/osrf_pycommon";
-    license = licenses.asl20;
-    maintainers = with maintainers; [ lopsided98 ];
+    changelog = "https://github.com/osrf/osrf_pycommon/blob/${src.rev}/CHANGELOG.rst";
+    license = lib.licenses.asl20;
+    maintainers = with lib.maintainers; [ wentasah ];
   };
 }
