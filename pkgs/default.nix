@@ -72,6 +72,11 @@ self: super: with self.lib; {
 
   ogre1_9 = self.callPackage ./ogre/1.9.nix { };
 
+  # For compatibility with recent rosdep, which corresponds to newer
+  # nixpkgs. Replace with what's in the develop branch (or remove
+  # completely) after the master branch is advanced.
+  onetbb = self.tbb_2021_11;
+
   openni2 = self.callPackage ./openni2 { };
 
   opensplice_6_9 = self.callPackage ./opensplice { };
