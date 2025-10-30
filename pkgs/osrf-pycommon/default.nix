@@ -1,8 +1,11 @@
-{ lib, buildPythonPackage, fetchPypi }:
+{ lib, buildPythonPackage, fetchPypi, setuptools }:
 
 buildPythonPackage rec {
   pname = "osrf_pycommon";
   version = "2.0.2";
+
+  pyproject = true;
+  build-system = [ setuptools ];
 
   src = fetchPypi {
     inherit pname version;
