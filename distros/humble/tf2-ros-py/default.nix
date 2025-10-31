@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, python3Packages, rclpy, sensor-msgs, std-msgs, tf2-msgs, tf2-py }:
 buildRosPackage {
   pname = "ros-humble-tf2-ros-py";
-  version = "0.25.16-r1";
+  version = "0.25.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2_ros_py/0.25.16-1.tar.gz";
-    name = "0.25.16-1.tar.gz";
-    sha256 = "172016c04007382334d941ccebf75d1d3f94ca8e0f52f0d2868fe056acf5487d";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2_ros_py/0.25.17-1.tar.gz";
+    name = "0.25.17-1.tar.gz";
+    sha256 = "64c73d57ee9fabf996612eda60ffc501995a75a9208c9bfdc06d9a1fcd14d3ef";
   };
 
   buildType = "ament_python";

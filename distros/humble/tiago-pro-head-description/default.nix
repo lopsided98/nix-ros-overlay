@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, launch-param-builder, launch-testing-ament-cmake, pal-urdf-utils, realsense2-description, robot-state-publisher, tiago-pro-head-controller-configuration, urdf-test, xacro }:
 buildRosPackage {
   pname = "ros-humble-tiago-pro-head-description";
-  version = "1.6.0-r1";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_pro_head_robot-release/archive/release/humble/tiago_pro_head_description/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "38405d10103c968791cce9a7c44969b08caa887b771b92a4c83035c8eeace868";
+    url = "https://github.com/pal-gbp/tiago_pro_head_robot-release/archive/release/humble/tiago_pro_head_description/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "a2e2e16df980befa08c88a5b0150071e4f8fdd85e52585cca64da2653ac0470b";
   };
 
   buildType = "ament_cmake";

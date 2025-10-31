@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, geometry-msgs, launch-ros, python3Packages, rclpy, sensor-msgs, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-kilted-examples-tf2-py";
-  version = "0.41.2-r1";
+  version = "0.41.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/examples_tf2_py/0.41.2-1.tar.gz";
-    name = "0.41.2-1.tar.gz";
-    sha256 = "7a8c60c6fd112ed8614f76aa96b8db7e69db84f880651dfd424649501572ee15";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/examples_tf2_py/0.41.3-3.tar.gz";
+    name = "0.41.3-3.tar.gz";
+    sha256 = "3cd6df086af1c46f1b7fbbea6248c5f5837bef52a98628980f5257a09f596370";
   };
 
   buildType = "ament_python";

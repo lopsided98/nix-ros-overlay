@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-examples-rclcpp-wait-set";
-  version = "0.15.4-r1";
+  version = "0.15.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/humble/examples_rclcpp_wait_set/0.15.4-1.tar.gz";
-    name = "0.15.4-1.tar.gz";
-    sha256 = "4b9cbe836f1c5b3efabd9236cf9baf81d7c643f922bdbf507d1c33cb868526aa";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/humble/examples_rclcpp_wait_set/0.15.5-1.tar.gz";
+    name = "0.15.5-1.tar.gz";
+    sha256 = "eb26279dd63697638ba37a250881bcaf5c447d3c9482813c922b3bf3f00f5f9b";
   };
 
   buildType = "ament_cmake";

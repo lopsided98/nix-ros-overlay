@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, python3, rcpputils, rcutils, rmw, rmw-implementation, rmw-implementation-cmake, rmw-test-fixture, rmw-zenoh-cpp, rpyutils }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, python3, rcpputils, rcutils, rmw, rmw-implementation, rmw-implementation-cmake, rmw-test-fixture, rmw-zenoh-cpp, rpyutils }:
 buildRosPackage {
   pname = "ros-kilted-rmw-test-fixture-implementation";
-  version = "0.14.3-r2";
+  version = "0.14.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/kilted/rmw_test_fixture_implementation/0.14.3-2.tar.gz";
-    name = "0.14.3-2.tar.gz";
-    sha256 = "eaf28c984f92d7ecf4de77e46ff4ed17244dfd0a621dd4000f309dab3d27de37";
+    url = "https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/kilted/rmw_test_fixture_implementation/0.14.5-1.tar.gz";
+    name = "0.14.5-1.tar.gz";
+    sha256 = "7e238528e90bd29147552e2715b5d3408bab0e79041c0d72df36da813912087c";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-ros-core python3 rmw-implementation rmw-implementation-cmake ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ rcpputils rcutils rmw rmw-test-fixture rmw-zenoh-cpp rpyutils ];
   nativeBuildInputs = [ ament-cmake ament-cmake-ros-core ];
 

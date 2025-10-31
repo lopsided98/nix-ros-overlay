@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-yaml, mrpt-libgui, mrpt-libmaps, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-kilted-mola-kernel";
-  version = "2.0.0-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_kernel/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "6c48998ddba6a9b12d4a20e3a611e377b8244072719ef1a6f4db01dd5d8f3876";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_kernel/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "79bea8ee9da179241337dcddb27b90f06bc7ca1c9da6df309958df4c224b3122";
   };
 
   buildType = "cmake";

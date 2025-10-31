@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, diagnostic-aggregator, diagnostic-msgs, diagnostic-updater, generate-parameter-library, launch-ros, launch-testing-ament-cmake, rclcpp, rclcpp-components, rmw-implementation, rmw-stats-shim, rosgraph-monitor-msgs }:
 buildRosPackage {
   pname = "ros-humble-rosgraph-monitor";
-  version = "0.2.2-r1";
+  version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/graph_monitor-release/archive/release/humble/rosgraph_monitor/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "7f6d46dd858533822ada480c73fe713e695f96fd8fb585023d6b3841b7d003eb";
+    url = "https://github.com/ros2-gbp/graph_monitor-release/archive/release/humble/rosgraph_monitor/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
+    sha256 = "dba4f7fd4f7bb3e6ddfd9a6f72841971cdaa5a1cc845384ffc2a5942ac8a577d";
   };
 
   buildType = "ament_cmake";

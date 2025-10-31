@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, diagnostic-aggregator, diagnostic-msgs, diagnostic-updater, generate-parameter-library, launch-ros, launch-testing-ament-cmake, rclcpp, rclcpp-components, rmw-implementation, rmw-stats-shim, rosgraph-monitor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rosgraph-monitor";
-  version = "0.2.2-r1";
+  version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/graph_monitor-release/archive/release/jazzy/rosgraph_monitor/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "15abeba7b977fc0994423f5ec6316aab6bc12dd7439cfdbcc8d51cedc1ed42f1";
+    url = "https://github.com/ros2-gbp/graph_monitor-release/archive/release/jazzy/rosgraph_monitor/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
+    sha256 = "1373e2a9d1e61a7ed1ce851bf99d1941a4df9b543cf585f7c6ca17f29de90391";
   };
 
   buildType = "ament_cmake";

@@ -1282,8 +1282,6 @@ self: super: {
 
  mola = self.callPackage ./mola {};
 
- mola-bridge-ros2 = self.callPackage ./mola-bridge-ros2 {};
-
  mola-common = self.callPackage ./mola-common {};
 
  mola-demos = self.callPackage ./mola-demos {};
@@ -1305,8 +1303,6 @@ self: super: {
  mola-input-paris-luco-dataset = self.callPackage ./mola-input-paris-luco-dataset {};
 
  mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
-
- mola-input-rosbag2 = self.callPackage ./mola-input-rosbag2 {};
 
  mola-input-video = self.callPackage ./mola-input-video {};
 
@@ -1480,17 +1476,11 @@ self: super: {
 
  mrpt-libposes = self.callPackage ./mrpt-libposes {};
 
- mrpt-libros-bridge = self.callPackage ./mrpt-libros-bridge {};
-
  mrpt-libslam = self.callPackage ./mrpt-libslam {};
 
  mrpt-libtclap = self.callPackage ./mrpt-libtclap {};
 
- mrpt-map-server = self.callPackage ./mrpt-map-server {};
-
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
-
- mrpt-msgs-bridge = self.callPackage ./mrpt-msgs-bridge {};
 
  mrpt-nav-interfaces = self.callPackage ./mrpt-nav-interfaces {};
 
@@ -1498,27 +1488,7 @@ self: super: {
 
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
- mrpt-pf-localization = self.callPackage ./mrpt-pf-localization {};
-
- mrpt-pointcloud-pipeline = self.callPackage ./mrpt-pointcloud-pipeline {};
-
- mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
-
- mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
-
- mrpt-sensor-bumblebee-stereo = self.callPackage ./mrpt-sensor-bumblebee-stereo {};
-
- mrpt-sensor-gnss-nmea = self.callPackage ./mrpt-sensor-gnss-nmea {};
-
- mrpt-sensor-gnss-novatel = self.callPackage ./mrpt-sensor-gnss-novatel {};
-
- mrpt-sensor-imu-taobotics = self.callPackage ./mrpt-sensor-imu-taobotics {};
-
- mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
-
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
-
- mrpt-tps-astar-planner = self.callPackage ./mrpt-tps-astar-planner {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
@@ -1529,8 +1499,6 @@ self: super: {
  multisensor-calibration = self.callPackage ./multisensor-calibration {};
 
  multisensor-calibration-interface = self.callPackage ./multisensor-calibration-interface {};
-
- mvsim = self.callPackage ./mvsim {};
 
  nao-button-sim = self.callPackage ./nao-button-sim {};
 
@@ -1842,6 +1810,16 @@ self: super: {
 
  plansys2-tools = self.callPackage ./plansys2-tools {};
 
+ play-motion2 = self.callPackage ./play-motion2 {};
+
+ play-motion2-cli = self.callPackage ./play-motion2-cli {};
+
+ play-motion2-msgs = self.callPackage ./play-motion2-msgs {};
+
+ play-motion-builder = self.callPackage ./play-motion-builder {};
+
+ play-motion-builder-msgs = self.callPackage ./play-motion-builder-msgs {};
+
  plotjuggler = self.callPackage ./plotjuggler {};
 
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
@@ -1875,8 +1853,6 @@ self: super: {
  popf = self.callPackage ./popf {};
 
  pose-broadcaster = self.callPackage ./pose-broadcaster {};
-
- pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
  position-controllers = self.callPackage ./position-controllers {};
 
@@ -2368,6 +2344,8 @@ self: super: {
 
  rosidl-generator-py = self.callPackage ./rosidl-generator-py {};
 
+ rosidl-generator-rs = self.callPackage ./rosidl-generator-rs {};
+
  rosidl-generator-type-description = self.callPackage ./rosidl-generator-type-description {};
 
  rosidl-parser = self.callPackage ./rosidl-parser {};
@@ -2465,6 +2443,8 @@ self: super: {
  rqt-moveit = self.callPackage ./rqt-moveit {};
 
  rqt-msg = self.callPackage ./rqt-msg {};
+
+ rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
 
  rqt-plot = self.callPackage ./rqt-plot {};
 
@@ -2567,6 +2547,8 @@ self: super: {
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
+
+ sbg-driver = self.callPackage ./sbg-driver {};
 
  sdformat-test-files = self.callPackage ./sdformat-test-files {};
 

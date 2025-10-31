@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen3-cmake-module, geometry-msgs, moveit-core, moveit-msgs, moveit-ros-planning, moveit-ros-planning-interface, qt5, rclcpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-open-manipulator-gui";
-  version = "4.0.8-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/kilted/open_manipulator_gui/4.0.8-1.tar.gz";
-    name = "4.0.8-1.tar.gz";
-    sha256 = "6e51996e4ecd6e3cd8c2d112c9cdd5708dcaf380ea84de0eb6afa910c7c73933";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/kilted/open_manipulator_gui/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "6fc6cc3084b54fbfa55e617fa1bae8e5cd442019924c91c3507744e6fefb4a10";
   };
 
   buildType = "ament_cmake";

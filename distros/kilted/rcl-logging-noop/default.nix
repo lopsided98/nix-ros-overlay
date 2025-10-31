@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, launch-testing, python3Packages, rcl-logging-interface, rcutils }:
 buildRosPackage {
   pname = "ros-kilted-rcl-logging-noop";
-  version = "3.2.2-r2";
+  version = "3.2.3-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/kilted/rcl_logging_noop/3.2.2-2.tar.gz";
-    name = "3.2.2-2.tar.gz";
-    sha256 = "1388097c7bd7cbaeaa28e60b84f99fc6d572fbd6eec96c6ec5281d29f0325602";
+    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/kilted/rcl_logging_noop/3.2.3-4.tar.gz";
+    name = "3.2.3-4.tar.gz";
+    sha256 = "fb266a858479766dc52df38b89f0c13a97f402c4d63deca8bbe58cb21358f7e2";
   };
 
   buildType = "ament_cmake";

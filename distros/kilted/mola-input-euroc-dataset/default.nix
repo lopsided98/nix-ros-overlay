@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmath, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-kilted-mola-input-euroc-dataset";
-  version = "2.0.0-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_input_euroc_dataset/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "82205d8cbdb7d48c2f849e761f695d81ad0e9ce50c815e2737e509e41ba99f09";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_input_euroc_dataset/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "e490adf595224cbc6ab2a659c123f415c9ddf2e975e7c96eeb50f0d1f35160ec";
   };
 
   buildType = "cmake";

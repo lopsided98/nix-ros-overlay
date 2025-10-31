@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-ublox-ubx-msgs";
-  version = "0.6.1-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/kilted/ublox_ubx_msgs/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "faa0d435e0f06ad4eea7dd015da2fc411b35280edb6d74ddcf1c8b1f053ecd86";
+    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/kilted/ublox_ubx_msgs/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "09ffa073708b0053305a7f5446d39ccc168297d4dcbb16adf5fdaba5dfa5799e";
   };
 
   buildType = "ament_cmake";

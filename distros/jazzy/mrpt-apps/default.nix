@@ -2,19 +2,19 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libapps, mrpt-libnav, openni2, pkg-config, python3Packages, ros-environment, tinyxml-2, udev, wxGTK32, xorg, zlib }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libapps, mrpt-libnav, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-apps";
-  version = "2.14.16-r1";
+  version = "2.15.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/jazzy/mrpt_apps/2.14.16-1.tar.gz";
-    name = "2.14.16-1.tar.gz";
-    sha256 = "ce45bd4cc18ad9199f0a234a84912280290d104ebe28ab6bed04e74982bcfd34";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/jazzy/mrpt_apps/2.15.1-2.tar.gz";
+    name = "2.15.1-2.tar.gz";
+    sha256 = "f5140772920aa99f3c38c1a1b544c7d4f550e7fd853f19253ff6aeff872909a5";
   };
 
   buildType = "cmake";
-  buildInputs = [ ament-cmake assimp cmake ffmpeg freeglut freenect glfw3 libGL libGLU libjpeg libpcap libusb1 openni2 pkg-config python3Packages.pip python3Packages.pybind11 ros-environment tinyxml-2 udev wxGTK32 xorg.libXrandr xorg.libXxf86vm zlib ];
+  buildInputs = [ ament-cmake assimp cmake ffmpeg freeglut freenect glfw3 libGL libGLU libjpeg libpcap libusb1 opencv opencv.cxxdev openni2 pkg-config python3Packages.pip python3Packages.pybind11 tinyxml-2 udev wxGTK32 xorg.libXrandr xorg.libXxf86vm zlib ];
   propagatedBuildInputs = [ mrpt-libapps mrpt-libnav ];
   nativeBuildInputs = [ cmake ];
 

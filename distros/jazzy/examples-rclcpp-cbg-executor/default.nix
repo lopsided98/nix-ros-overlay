@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-examples-rclcpp-cbg-executor";
-  version = "0.19.6-r1";
+  version = "0.19.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/jazzy/examples_rclcpp_cbg_executor/0.19.6-1.tar.gz";
-    name = "0.19.6-1.tar.gz";
-    sha256 = "9f37a693e5dc9f7e779e32cb782fe62d743da214f54c2ec1cf44dd3f8ad65857";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/jazzy/examples_rclcpp_cbg_executor/0.19.7-1.tar.gz";
+    name = "0.19.7-1.tar.gz";
+    sha256 = "6664624d95c0b8b9b08632c9196286c0ea0bcbba9abbfe84ab0bd81112c6f2bd";
   };
 
   buildType = "ament_cmake";

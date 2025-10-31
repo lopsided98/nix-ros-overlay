@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, dynamixel-hardware-interface, gz-ros2-control, open-manipulator-description, rclpy, robot-state-publisher, ros-gz-bridge, ros-gz-image, ros-gz-sim, ros2-control, ros2-controllers, rviz2, xacro }:
 buildRosPackage {
   pname = "ros-kilted-open-manipulator-bringup";
-  version = "4.0.8-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/kilted/open_manipulator_bringup/4.0.8-1.tar.gz";
-    name = "4.0.8-1.tar.gz";
-    sha256 = "fc27bfc0c9796a0b57cdb0278f1353af06f8760b2a3c0e420d5cfe4082836223";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/kilted/open_manipulator_bringup/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "4da5a39fa2e0cc0a8c988c88915dc3c122bd009246452a6b79c87628e0372934";
   };
 
   buildType = "ament_python";
