@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, launch, launch-xml, launch-yaml, osrf-pycommon, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-launch-testing";
-  version = "3.8.4-r1";
+  version = "3.8.5-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch-release/archive/release/kilted/launch_testing/3.8.4-1.tar.gz";
-    name = "3.8.4-1.tar.gz";
-    sha256 = "5a3c50200c3521b757cd608be71e959f47ba17a93fa5acee75f70f2cac895953";
+    url = "https://github.com/ros2-gbp/launch-release/archive/release/kilted/launch_testing/3.8.5-3.tar.gz";
+    name = "3.8.5-3.tar.gz";
+    sha256 = "230ed5eb7c0a25b6bb1268d4b9651d8e0a2be15264ef45bb8dd57b76e9804ed8";
   };
 
   buildType = "ament_python";

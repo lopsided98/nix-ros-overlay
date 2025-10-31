@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, geometry-msgs, mrpt-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-mrpt-nav-interfaces";
-  version = "2.2.3-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/humble/mrpt_nav_interfaces/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "3a751c45ef670e2b0d87761ebad4b391441e7f4c55384dde7edfdd648f0967f2";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/humble/mrpt_nav_interfaces/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "9649fb194285edffcbe6b8e0c2182aa292451aed2237ea58c09010c17a263914";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tf2, tf2-bullet, tf2-eigen, tf2-eigen-kdl, tf2-geometry-msgs, tf2-kdl, tf2-msgs, tf2-py, tf2-ros, tf2-sensor-msgs, tf2-tools }:
 buildRosPackage {
   pname = "ros-rolling-geometry2";
-  version = "0.45.0-r1";
+  version = "0.45.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/geometry2/0.45.0-1.tar.gz";
-    name = "0.45.0-1.tar.gz";
-    sha256 = "0d0bc3235174c6f260ab1906e6ba9317fab2ace8c466e3651e7a60b22b7ab449";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/geometry2/0.45.1-1.tar.gz";
+    name = "0.45.1-1.tar.gz";
+    sha256 = "58b937b7eede7b4a1b3916cd93546e8ac1e6cc28a303c9670567a86159962f92";
   };
 
   buildType = "ament_cmake";

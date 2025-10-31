@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, play-motion2, tiago-pro-head-controller-configuration, tiago-pro-head-description }:
 buildRosPackage {
   pname = "ros-humble-tiago-pro-head-bringup";
-  version = "1.6.0-r1";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_pro_head_robot-release/archive/release/humble/tiago_pro_head_bringup/1.6.0-1.tar.gz";
-    name = "1.6.0-1.tar.gz";
-    sha256 = "9fe0d6359c5dc473173415d105ad760a393a867e4fdfc3fb60511dece16104e1";
+    url = "https://github.com/pal-gbp/tiago_pro_head_robot-release/archive/release/humble/tiago_pro_head_bringup/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "96ff82d1ca3125e83ebad97aed6a7262a1effb33d287d6a4f126734b55b1c751";
   };
 
   buildType = "ament_cmake";

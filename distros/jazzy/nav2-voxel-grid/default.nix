@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav2-common, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-voxel-grid";
-  version = "1.3.9-r1";
+  version = "1.3.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_voxel_grid/1.3.9-1.tar.gz";
-    name = "1.3.9-1.tar.gz";
-    sha256 = "e5f1c9c064edfd04a5d1f1ca18e50dc70894d3515809072f37a9293a0928f723";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_voxel_grid/1.3.10-1.tar.gz";
+    name = "1.3.10-1.tar.gz";
+    sha256 = "6b5e3a0e16291b2773a7d725ca544f4618eccb3a98bcb16bec66dd1b8e24a4f3";
   };
 
   buildType = "ament_cmake";

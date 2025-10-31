@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-theta-star-planner";
-  version = "1.3.9-r1";
+  version = "1.3.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_theta_star_planner/1.3.9-1.tar.gz";
-    name = "1.3.9-1.tar.gz";
-    sha256 = "f06d4390e7fb84c40b618e2b99dcc90bbedc6773e98a967cf5d2819c01b084b0";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_theta_star_planner/1.3.10-1.tar.gz";
+    name = "1.3.10-1.tar.gz";
+    sha256 = "7d28126da6b6a8776b007da60aaa25caf36f645ef941dd140171f9fc314d75e7";
   };
 
   buildType = "ament_cmake";

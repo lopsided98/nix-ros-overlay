@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-sensor-msgs-py";
-  version = "5.9.0-r1";
+  version = "5.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/sensor_msgs_py/5.9.0-1.tar.gz";
-    name = "5.9.0-1.tar.gz";
-    sha256 = "f3c92bf4d2f8776eece3b329d81d625a9c38f8ec437b3c9b66e113654d1816bf";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/sensor_msgs_py/5.9.1-1.tar.gz";
+    name = "5.9.1-1.tar.gz";
+    sha256 = "356868506c21f785b677e96dc04bae76937c58b520a723d66e0f2f979f3f679f";
   };
 
   buildType = "ament_python";

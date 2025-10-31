@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, console-bridge, console-bridge-vendor, rcpputils }:
 buildRosPackage {
   pname = "ros-kilted-class-loader";
-  version = "2.8.0-r2";
+  version = "2.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/kilted/class_loader/2.8.0-2.tar.gz";
-    name = "2.8.0-2.tar.gz";
-    sha256 = "d206b471176cf8e4a20d5b4a6c302b230d13ccb730a870721383cf0049689518";
+    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/kilted/class_loader/2.8.1-1.tar.gz";
+    name = "2.8.1-1.tar.gz";
+    sha256 = "a5b5ce97a1eb17108fe2854727047e0ecf68801db887a2d52bb9e1f6d409ae1d";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, orocos-kdl-vendor, tf2 }:
 buildRosPackage {
   pname = "ros-kilted-tf2-eigen-kdl";
-  version = "0.41.2-r1";
+  version = "0.41.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_eigen_kdl/0.41.2-1.tar.gz";
-    name = "0.41.2-1.tar.gz";
-    sha256 = "008a425790ba37547e2179c76b8f4b20c75235e5a30507934e69c370a244a13e";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_eigen_kdl/0.41.3-3.tar.gz";
+    name = "0.41.3-3.tar.gz";
+    sha256 = "a28a4281f2861b6c76015d757692ca577a638c6721076d7e3b42bb9d875bca28";
   };
 
   buildType = "ament_cmake";

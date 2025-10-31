@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, mimick-vendor, osrf-testing-tools-cpp, rcl-interfaces, rcl-logging-interface, rcl-logging-spdlog, rcl-yaml-param-parser, rcpputils, rcutils, rmw, rmw-implementation, rmw-implementation-cmake, rosidl-runtime-c, test-msgs, tracetools }:
 buildRosPackage {
   pname = "ros-humble-rcl";
-  version = "5.3.10-r1";
+  version = "5.3.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/humble/rcl/5.3.10-1.tar.gz";
-    name = "5.3.10-1.tar.gz";
-    sha256 = "bbbe5405121256cd211fcb89f6f7ef407a49ea7126b286a48c864a63ed635bde";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/humble/rcl/5.3.11-1.tar.gz";
+    name = "5.3.11-1.tar.gz";
+    sha256 = "6da25b0e65024e88b74013b55dfc691adf72dff7f8899252fb1d484ecf0486af";
   };
 
   buildType = "ament_cmake";

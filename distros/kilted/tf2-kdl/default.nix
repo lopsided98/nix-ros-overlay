@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, builtin-interfaces, geometry-msgs, orocos-kdl-vendor, python-orocos-kdl-vendor, rclcpp, tf2, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-kilted-tf2-kdl";
-  version = "0.41.2-r1";
+  version = "0.41.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_kdl/0.41.2-1.tar.gz";
-    name = "0.41.2-1.tar.gz";
-    sha256 = "f9ac235ba0c5ab95e85056a2814f5abd45e659b33af930b0671eb4f7238af333";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_kdl/0.41.3-3.tar.gz";
+    name = "0.41.3-3.tar.gz";
+    sha256 = "74f08c143999ef680156d73538825329516cd2715a28aaed7a9f7f798f990cd9";
   };
 
   buildType = "ament_cmake";

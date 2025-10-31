@@ -686,6 +686,26 @@ self: super: {
 
  ffmpeg-image-transport-tools = self.callPackage ./ffmpeg-image-transport-tools {};
 
+ ffw = self.callPackage ./ffw {};
+
+ ffw-bringup = self.callPackage ./ffw-bringup {};
+
+ ffw-description = self.callPackage ./ffw-description {};
+
+ ffw-joint-trajectory-command-broadcaster = self.callPackage ./ffw-joint-trajectory-command-broadcaster {};
+
+ ffw-joystick-controller = self.callPackage ./ffw-joystick-controller {};
+
+ ffw-moveit-config = self.callPackage ./ffw-moveit-config {};
+
+ ffw-robot-manager = self.callPackage ./ffw-robot-manager {};
+
+ ffw-spring-actuator-controller = self.callPackage ./ffw-spring-actuator-controller {};
+
+ ffw-swerve-drive-controller = self.callPackage ./ffw-swerve-drive-controller {};
+
+ ffw-teleop = self.callPackage ./ffw-teleop {};
+
  fields2cover = self.callPackage ./fields2cover {};
 
  filters = self.callPackage ./filters {};
@@ -1024,19 +1044,11 @@ self: super: {
 
  laser-segmentation = self.callPackage ./laser-segmentation {};
 
- launch = self.callPackage ./launch {};
-
  launch-frontend-py = self.callPackage ./launch-frontend-py {};
 
  launch-param-builder = self.callPackage ./launch-param-builder {};
 
- launch-pytest = self.callPackage ./launch-pytest {};
-
- launch-ros = self.callPackage ./launch-ros {};
-
  launch-system-modes = self.callPackage ./launch-system-modes {};
-
- launch-testing = self.callPackage ./launch-testing {};
 
  launch-testing-ament-cmake = self.callPackage ./launch-testing-ament-cmake {};
 
@@ -1198,8 +1210,6 @@ self: super: {
 
  mola = self.callPackage ./mola {};
 
- mola-bridge-ros2 = self.callPackage ./mola-bridge-ros2 {};
-
  mola-common = self.callPackage ./mola-common {};
 
  mola-demos = self.callPackage ./mola-demos {};
@@ -1221,8 +1231,6 @@ self: super: {
  mola-input-paris-luco-dataset = self.callPackage ./mola-input-paris-luco-dataset {};
 
  mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
-
- mola-input-rosbag2 = self.callPackage ./mola-input-rosbag2 {};
 
  mola-input-video = self.callPackage ./mola-input-video {};
 
@@ -1396,17 +1404,11 @@ self: super: {
 
  mrpt-libposes = self.callPackage ./mrpt-libposes {};
 
- mrpt-libros-bridge = self.callPackage ./mrpt-libros-bridge {};
-
  mrpt-libslam = self.callPackage ./mrpt-libslam {};
 
  mrpt-libtclap = self.callPackage ./mrpt-libtclap {};
 
- mrpt-map-server = self.callPackage ./mrpt-map-server {};
-
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
-
- mrpt-msgs-bridge = self.callPackage ./mrpt-msgs-bridge {};
 
  mrpt-nav-interfaces = self.callPackage ./mrpt-nav-interfaces {};
 
@@ -1414,35 +1416,13 @@ self: super: {
 
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
- mrpt-pf-localization = self.callPackage ./mrpt-pf-localization {};
-
- mrpt-pointcloud-pipeline = self.callPackage ./mrpt-pointcloud-pipeline {};
-
- mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
-
- mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
-
- mrpt-sensor-bumblebee-stereo = self.callPackage ./mrpt-sensor-bumblebee-stereo {};
-
- mrpt-sensor-gnss-nmea = self.callPackage ./mrpt-sensor-gnss-nmea {};
-
- mrpt-sensor-gnss-novatel = self.callPackage ./mrpt-sensor-gnss-novatel {};
-
- mrpt-sensor-imu-taobotics = self.callPackage ./mrpt-sensor-imu-taobotics {};
-
- mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
-
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
-
- mrpt-tps-astar-planner = self.callPackage ./mrpt-tps-astar-planner {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
  multires-image = self.callPackage ./multires-image {};
-
- mvsim = self.callPackage ./mvsim {};
 
  nao-button-sim = self.callPackage ./nao-button-sim {};
 
@@ -1489,6 +1469,8 @@ self: super: {
  ntpd-driver = self.callPackage ./ntpd-driver {};
 
  ntrip-client = self.callPackage ./ntrip-client {};
+
+ ntrip-client-node = self.callPackage ./ntrip-client-node {};
 
  object-recognition-msgs = self.callPackage ./object-recognition-msgs {};
 
@@ -1660,6 +1642,16 @@ self: super: {
 
  pinocchio = self.callPackage ./pinocchio {};
 
+ play-motion2 = self.callPackage ./play-motion2 {};
+
+ play-motion2-cli = self.callPackage ./play-motion2-cli {};
+
+ play-motion2-msgs = self.callPackage ./play-motion2-msgs {};
+
+ play-motion-builder = self.callPackage ./play-motion-builder {};
+
+ play-motion-builder-msgs = self.callPackage ./play-motion-builder-msgs {};
+
  plotjuggler = self.callPackage ./plotjuggler {};
 
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
@@ -1691,8 +1683,6 @@ self: super: {
  polygon-utils = self.callPackage ./polygon-utils {};
 
  pose-broadcaster = self.callPackage ./pose-broadcaster {};
-
- pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
  position-controllers = self.callPackage ./position-controllers {};
 
@@ -2280,6 +2270,8 @@ self: super: {
 
  rqt-msg = self.callPackage ./rqt-msg {};
 
+ rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
+
  rqt-plot = self.callPackage ./rqt-plot {};
 
  rqt-publisher = self.callPackage ./rqt-publisher {};
@@ -2381,6 +2373,8 @@ self: super: {
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
+
+ sbg-driver = self.callPackage ./sbg-driver {};
 
  sdformat-test-files = self.callPackage ./sdformat-test-files {};
 

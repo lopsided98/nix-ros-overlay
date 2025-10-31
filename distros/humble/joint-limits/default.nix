@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, launch-ros, launch-testing-ament-cmake, rclcpp, rclcpp-lifecycle, urdf }:
 buildRosPackage {
   pname = "ros-humble-joint-limits";
-  version = "2.52.0-r1";
+  version = "2.52.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/joint_limits/2.52.0-1.tar.gz";
-    name = "2.52.0-1.tar.gz";
-    sha256 = "5523224d17ae3e6195bebe86314ee144908ce5960fc3f89ef1de841472057671";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/joint_limits/2.52.2-1.tar.gz";
+    name = "2.52.2-1.tar.gz";
+    sha256 = "5dde331bca0d15807c64db76e1be43d29be25db8f2e6a0396211cfcba1b53d17";
   };
 
   buildType = "ament_cmake";

@@ -1900,8 +1900,6 @@ self: super: {
 
  mola = self.callPackage ./mola {};
 
- mola-bridge-ros2 = self.callPackage ./mola-bridge-ros2 {};
-
  mola-common = self.callPackage ./mola-common {};
 
  mola-demos = self.callPackage ./mola-demos {};
@@ -1923,8 +1921,6 @@ self: super: {
  mola-input-paris-luco-dataset = self.callPackage ./mola-input-paris-luco-dataset {};
 
  mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
-
- mola-input-rosbag2 = self.callPackage ./mola-input-rosbag2 {};
 
  mola-input-video = self.callPackage ./mola-input-video {};
 
@@ -2088,17 +2084,11 @@ self: super: {
 
  mrpt-libposes = self.callPackage ./mrpt-libposes {};
 
- mrpt-libros-bridge = self.callPackage ./mrpt-libros-bridge {};
-
  mrpt-libslam = self.callPackage ./mrpt-libslam {};
 
  mrpt-libtclap = self.callPackage ./mrpt-libtclap {};
 
- mrpt-map-server = self.callPackage ./mrpt-map-server {};
-
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
-
- mrpt-msgs-bridge = self.callPackage ./mrpt-msgs-bridge {};
 
  mrpt-nav-interfaces = self.callPackage ./mrpt-nav-interfaces {};
 
@@ -2106,27 +2096,7 @@ self: super: {
 
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
- mrpt-pf-localization = self.callPackage ./mrpt-pf-localization {};
-
- mrpt-pointcloud-pipeline = self.callPackage ./mrpt-pointcloud-pipeline {};
-
- mrpt-rawlog = self.callPackage ./mrpt-rawlog {};
-
- mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
-
- mrpt-sensor-bumblebee-stereo = self.callPackage ./mrpt-sensor-bumblebee-stereo {};
-
- mrpt-sensor-gnss-nmea = self.callPackage ./mrpt-sensor-gnss-nmea {};
-
- mrpt-sensor-gnss-novatel = self.callPackage ./mrpt-sensor-gnss-novatel {};
-
- mrpt-sensor-imu-taobotics = self.callPackage ./mrpt-sensor-imu-taobotics {};
-
- mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
-
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
-
- mrpt-tps-astar-planner = self.callPackage ./mrpt-tps-astar-planner {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
@@ -2135,8 +2105,6 @@ self: super: {
  multiple-topic-monitor = self.callPackage ./multiple-topic-monitor {};
 
  multires-image = self.callPackage ./multires-image {};
-
- mvsim = self.callPackage ./mvsim {};
 
  nao-button-sim = self.callPackage ./nao-button-sim {};
 
@@ -2430,6 +2398,16 @@ self: super: {
 
  pal-robotiq-gripper = self.callPackage ./pal-robotiq-gripper {};
 
+ pal-sea-arm = self.callPackage ./pal-sea-arm {};
+
+ pal-sea-arm-bringup = self.callPackage ./pal-sea-arm-bringup {};
+
+ pal-sea-arm-controller-configuration = self.callPackage ./pal-sea-arm-controller-configuration {};
+
+ pal-sea-arm-description = self.callPackage ./pal-sea-arm-description {};
+
+ pal-sea-arm-moveit-config = self.callPackage ./pal-sea-arm-moveit-config {};
+
  pal-statistics = self.callPackage ./pal-statistics {};
 
  pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
@@ -2536,6 +2514,8 @@ self: super: {
 
  play-motion2 = self.callPackage ./play-motion2 {};
 
+ play-motion2-cli = self.callPackage ./play-motion2-cli {};
+
  play-motion2-msgs = self.callPackage ./play-motion2-msgs {};
 
  play-motion-builder = self.callPackage ./play-motion-builder {};
@@ -2593,8 +2573,6 @@ self: super: {
  popf = self.callPackage ./popf {};
 
  pose-broadcaster = self.callPackage ./pose-broadcaster {};
-
- pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
  position-controllers = self.callPackage ./position-controllers {};
 
@@ -3043,6 +3021,10 @@ self: super: {
  ros-environment = self.callPackage ./ros-environment {};
 
  ros-gz = self.callPackage ./ros-gz {};
+
+ ros-gz-bridge = self.callPackage ./ros-gz-bridge {};
+
+ ros-gz-image = self.callPackage ./ros-gz-image {};
 
  ros-gz-interfaces = self.callPackage ./ros-gz-interfaces {};
 
@@ -3606,13 +3588,33 @@ self: super: {
 
  tiago-navigation = self.callPackage ./tiago-navigation {};
 
+ tiago-pro-2dnav = self.callPackage ./tiago-pro-2dnav {};
+
+ tiago-pro-bringup = self.callPackage ./tiago-pro-bringup {};
+
+ tiago-pro-controller-configuration = self.callPackage ./tiago-pro-controller-configuration {};
+
+ tiago-pro-description = self.callPackage ./tiago-pro-description {};
+
  tiago-pro-head-bringup = self.callPackage ./tiago-pro-head-bringup {};
 
  tiago-pro-head-controller-configuration = self.callPackage ./tiago-pro-head-controller-configuration {};
 
  tiago-pro-head-description = self.callPackage ./tiago-pro-head-description {};
 
+ tiago-pro-head-gazebo = self.callPackage ./tiago-pro-head-gazebo {};
+
  tiago-pro-head-robot = self.callPackage ./tiago-pro-head-robot {};
+
+ tiago-pro-head-simulation = self.callPackage ./tiago-pro-head-simulation {};
+
+ tiago-pro-laser-sensors = self.callPackage ./tiago-pro-laser-sensors {};
+
+ tiago-pro-navigation = self.callPackage ./tiago-pro-navigation {};
+
+ tiago-pro-rgbd-sensors = self.callPackage ./tiago-pro-rgbd-sensors {};
+
+ tiago-pro-robot = self.callPackage ./tiago-pro-robot {};
 
  tiago-rgbd-sensors = self.callPackage ./tiago-rgbd-sensors {};
 
