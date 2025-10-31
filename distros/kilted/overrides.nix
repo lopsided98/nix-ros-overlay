@@ -166,6 +166,16 @@ in {
     ];
   });
 
+  # Fixes build error in autoware-lanelet2-extension:
+  # Imported target "lanelet2_maps::lanelet2_maps" includes non-existent path
+  #   "/nix/store/85v2zq13fh16v2zy6nyljz7f4caqvrab-ros-humble-lanelet2-maps-1.2.2-r1/include"
+  # https://github.com/fzi-forschungszentrum-informatik/Lanelet2/pull/406
+  lanelet2-maps = rosSuper.lanelet2-maps.overrideAttrs ({ postPatch ? "", ...}: {
+    postPatch = postPatch + ''
+      sed -i -e '/mrt_add_library/,+3 d' CMakeLists.txt
+    '';
+  });
+
   lely-core-libraries = lib.patchExternalProjectGit rosSuper.lely-core-libraries {
     url = "https://gitlab.com/lely_industries/lely-core.git";
     rev = "fb735b79cab5f0cdda45bc5087414d405ef8f3ab";
