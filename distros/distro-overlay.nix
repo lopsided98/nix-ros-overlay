@@ -48,7 +48,7 @@ let
           originalRev = "\${MRPT_VERSION_TO_DOWNLOAD}";
           inherit rev;
           fetchgitArgs.hash = "sha256-F4g2phk349aPMvz7G5Km68fjg4DiIvU+XPuJX89BhsI=";
-        }).overrideAttrs ({ postPatch ? "", ... }: {
+        }).overrideAttrs ({ postPatch ? "", buildInputs ? [], ... }: {
           postPatch = postPatch + ''
             src=$(awk '/^URL/ { print gensub(/"/, "", "g", $2) }' CMakeLists.txt)
             read -r version < $src/version_prefix.txt
@@ -57,6 +57,10 @@ let
               exit 1
             fi
           '';
+          # Work around problems reported in
+          # https://github.com/MRPT/mrpt/pull/1338 and
+          # https://github.com/MRPT/mrpt_ros/pull/5
+          buildInputs = buildInputs ++ [ rosSelf.octomap ];
         });
     in rosSuper.lib.genAttrs [
       "mrpt-apps"
