@@ -5,6 +5,12 @@ rosSelf: rosSuper: let
   inherit (rosSelf) lib;
 in with lib; {
 
+  autoware-utils-debug = rosSuper.autoware-utils-debug.overrideAttrs({
+    cmakeFlags ? [], ...
+  }: {
+    cmakeFlags = cmakeFlags ++ [ "-DCMAKE_CXX_FLAGS=-Wno-error=array-bounds" ];
+  });
+
   behaviortree-cpp-v3 = rosSuper.behaviortree-cpp-v3.overrideAttrs ({
     postPatch ? "", ...
   }: {
