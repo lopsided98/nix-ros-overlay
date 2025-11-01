@@ -60,7 +60,7 @@ let
           # Work around problems reported in
           # https://github.com/MRPT/mrpt/pull/1338 and
           # https://github.com/MRPT/mrpt_ros/pull/5
-          buildInputs = buildInputs ++ [ rosSelf.octomap ];
+          buildInputs = buildInputs ++ [ rosSelf.octomap or self.octomap ];
         });
     in rosSuper.lib.genAttrs [
       "mrpt-apps"
