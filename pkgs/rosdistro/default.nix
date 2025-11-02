@@ -2,11 +2,11 @@
 
 buildPythonPackage rec {
   pname = "rosdistro";
-  version = "0.9.1";
+  version = "1.0.1";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-RwOCS1hwS8oZBhMuO9PUK6cq9zhh7QPVoZJUeKcr+ys=";
+    hash = "sha256-J/iLS/CteekF6R2zdnS586JdEnrm5HuqvR4YBE1gwmw=";
   };
 
   pyproject = true;
