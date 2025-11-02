@@ -5,6 +5,7 @@
 , majorVersion ? "11"
 , version ? "11.4.1"
 , srcHash ? "sha256-wQ/ugKYopWgSaa6tqPrp8oQexPpnA6fa28L383OGNXM="
+, commitHash ? null
 , ... }:
 
 stdenv.mkDerivation rec {
@@ -15,7 +16,7 @@ stdenv.mkDerivation rec {
     name = "${rev}-source";
     owner = "gazebosim";
     repo = "gz-transport";
-    rev = "${pname}_${version}";
+    rev = if ! builtins.isNull commitHash then commitHash else "${pname}_${version}";
     hash = srcHash;
   };
 
