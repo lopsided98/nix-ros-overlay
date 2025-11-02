@@ -54,7 +54,11 @@ self: super: with self.lib; {
 
     tools = self.callPackage ./ignition/tools { };
 
-    transport11 = self.callPackage ./ignition/transport { };
+    transport11 = self.callPackage ./ignition/transport {
+      commitHash = "65ea51fccccf011b2a418dd68d4a24f7f7dddc82";
+      srcHash = "sha256-plCLjLrG4s7JbO9SDElWkHYypzkS5KtyLb8xm5zl/R0=";
+      version = "11.4.1git";
+    };
     transport = self.ignition.transport11;
 
     utils1 = self.callPackage ./ignition/utils { };
