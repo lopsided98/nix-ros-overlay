@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, pyyaml, setuptools, catkin-pkg, rospkg }:
+{ lib, buildPythonPackage, fetchPypi, pyyaml, setuptools, catkin-pkg, rospkg, distutils }:
 
 buildPythonPackage rec {
   pname = "rosdistro";
@@ -12,7 +12,9 @@ buildPythonPackage rec {
   pyproject = true;
   build-system = [ setuptools ];
 
-  propagatedBuildInputs = [ pyyaml setuptools catkin-pkg rospkg ];
+  propagatedBuildInputs = [ pyyaml setuptools catkin-pkg rospkg distutils ];
+
+  pythonImportsCheck = [ "rosdistro" ];
 
   meta = with lib; {
     description = "Tool to work with rosdistro files";
