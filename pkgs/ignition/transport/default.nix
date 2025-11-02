@@ -22,8 +22,8 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ cmake ];
   propagatedNativeBuildInputs = [ ignition-cmake ];
-  buildInputs = [ ignition-math sqlite libsodium ignition-utils ];
-  propagatedBuildInputs = [ protobuf cppzmq zeromq libuuid ignition-msgs ];
+  buildInputs = [ ignition-math sqlite libsodium ];
+  propagatedBuildInputs = [ protobuf cppzmq zeromq libuuid ignition-msgs ignition-utils ];
 
   meta = with lib; {
     homepage = "https://ignitionrobotics.org/libs/transport";
