@@ -12,14 +12,14 @@
 
 buildPythonPackage rec {
   pname = "bloom";
-  version = "0.12.0";
+  version = "0.13.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ros-infrastructure";
     repo = "bloom";
     rev = version;
-    hash = "sha256-kTep9kjS1xNyTfuKEtMts2pVGMOXzUqDyMUwEpcbRXo=";
+    hash = "sha256-sKtLAHCwdzSGCa/jTx6ItImyCJr7ssKQafDkb4ayB8k=";
   };
 
   build-system = [ setuptools ];
