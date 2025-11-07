@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-index-cpp, ament-lint-auto, ament-lint-common, backward-ros, control-msgs, controller-interface, controller-manager, controller-manager-msgs, hardware-interface, joint-state-broadcaster, joint-trajectory-controller, launch, launch-ros, launch-testing-ament-cmake, lifecycle-msgs, moveit-ros-planning-interface, play-motion2-msgs, pluginlib, rclcpp, rclcpp-action, rclcpp-components, rclcpp-lifecycle, realtime-tools, robot-state-publisher, sensor-msgs, std-msgs, trajectory-msgs, xacro }:
 buildRosPackage {
   pname = "ros-humble-play-motion2";
-  version = "1.8.0-r1";
+  version = "1.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/play_motion2-release/archive/release/humble/play_motion2/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "7fd8fe95e5afd157867fccaa3933c615cbd3b1068b76668b25b33b0278961579";
+    url = "https://github.com/pal-gbp/play_motion2-release/archive/release/humble/play_motion2/1.8.1-1.tar.gz";
+    name = "1.8.1-1.tar.gz";
+    sha256 = "127d1161a536a75b319209d3d264c9d269bbcf40b8f310cfc16a954d30a872d1";
   };
 
   buildType = "ament_cmake";

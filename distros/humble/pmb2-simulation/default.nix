@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, pmb2-gazebo }:
 buildRosPackage {
   pname = "ros-humble-pmb2-simulation";
-  version = "4.8.0-r1";
+  version = "4.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_simulation-release/archive/release/humble/pmb2_simulation/4.8.0-1.tar.gz";
-    name = "4.8.0-1.tar.gz";
-    sha256 = "22daf7deb57d259237f4620dfd3f516ab65483d124c96bd35cbee6d19fb77a2f";
+    url = "https://github.com/pal-gbp/pmb2_simulation-release/archive/release/humble/pmb2_simulation/4.9.1-1.tar.gz";
+    name = "4.9.1-1.tar.gz";
+    sha256 = "1a3093cd87f60b56478c0bf4f9a67a8f06c3ee49285a41a05f374177a2ba94ba";
   };
 
   buildType = "ament_cmake";

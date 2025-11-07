@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, image-transport, multisensor-calibration-interface, pcl-conversions, pcl-ros, qt5, rclcpp, rclcpp-components, rviz-common, sensor-msgs, small-gicp-vendor, std-msgs, tf2, tf2-ros, tinyxml-2, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-multisensor-calibration";
-  version = "2.0.4-r1";
+  version = "2.0.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/multisensor_calibration-release/archive/release/kilted/multisensor_calibration/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "71b446b1d92f49d80d9cbc9fc57472631c3708c5283b6f388cd9c051d1047bf5";
+    url = "https://github.com/ros2-gbp/multisensor_calibration-release/archive/release/kilted/multisensor_calibration/2.0.4-2.tar.gz";
+    name = "2.0.4-2.tar.gz";
+    sha256 = "9a8ef5c591a7e40aa8dbba66933559c2e60618546e3a288db4130eac92c3307e";
   };
 
   buildType = "ament_cmake";

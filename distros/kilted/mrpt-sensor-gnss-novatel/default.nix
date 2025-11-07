@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, mrpt-libhwdrivers, mrpt-libros-bridge, mrpt-msgs, mrpt-sensorlib, nav-msgs, rclcpp, rclcpp-components, ros-environment, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-sensor-gnss-novatel";
-  version = "0.2.3-r2";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/kilted/mrpt_sensor_gnss_novatel/0.2.3-2.tar.gz";
-    name = "0.2.3-2.tar.gz";
-    sha256 = "d87041e8c26edc93a91dc19f48be2892a2795cc09b08b54e57fb15ef1c6579b0";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/kilted/mrpt_sensor_gnss_novatel/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "d8c9b543af8561ff182e300c20440debed69e73e609b42c4ab9e7df72acf4088";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "ROS node for GNSS/IMU Novatel receivers with RTK precision using an NTRIP HTTP source (based on mrpt-hwdrivers)";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

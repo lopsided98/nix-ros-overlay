@@ -2,25 +2,25 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, cv-bridge, ffmpeg, freeglut, freenect, geometry-msgs, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libmaps, nav-msgs, octomap, opencv, openni2, pkg-config, python3Packages, rclcpp, ros-environment, rosbag2-storage, sensor-msgs, std-msgs, stereo-msgs, tf2, tinyxml-2, udev, wxGTK32, xorg, zlib }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cmake, cv-bridge, geometry-msgs, mrpt-libapps, nav-msgs, ros-environment, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-libros-bridge";
-  version = "2.14.16-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/rolling/mrpt_libros_bridge/2.14.16-1.tar.gz";
-    name = "2.14.16-1.tar.gz";
-    sha256 = "e7acc17837bc431f9b77899b6dc064d063ee3c18ef3e8ac5e57342d17b84616a";
+    url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/rolling/mrpt_libros_bridge/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "aea08641704a5f575f0d6d08ef877df2489ce57132cec94eaa64b4844212031a";
   };
 
   buildType = "cmake";
-  buildInputs = [ ament-cmake assimp cmake ffmpeg freeglut freenect glfw3 libGL libGLU libjpeg libpcap libusb1 octomap opencv opencv.cxxdev openni2 pkg-config python3Packages.pip python3Packages.pybind11 ros-environment rosbag2-storage tinyxml-2 udev wxGTK32 xorg.libXrandr xorg.libXxf86vm zlib ];
-  propagatedBuildInputs = [ cv-bridge geometry-msgs mrpt-libmaps nav-msgs rclcpp sensor-msgs std-msgs stereo-msgs tf2 ];
+  buildInputs = [ ament-cmake cmake cv-bridge geometry-msgs nav-msgs ros-environment sensor-msgs std-msgs stereo-msgs tf2 tf2-geometry-msgs ];
+  checkInputs = [ ament-cmake-gtest ];
+  propagatedBuildInputs = [ mrpt-libapps ];
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = "Mobile Robot Programming Toolkit (MRPT) libraries (ros2bridge C++ library).
-  This package contains: mrpt-ros2bridge";
+    description = "Mobile Robot Programming Toolkit (MRPT) ros2bridge C++ library";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

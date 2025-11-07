@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, backward-ros, fmt, rclcpp, rcutils }:
 buildRosPackage {
   pname = "ros-humble-ros2-fmt-logger";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_fmt_logger-release/archive/release/humble/ros2_fmt_logger/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "5cfe9434c8f44301d0324ea2ca933788e4e077c57561717f814a1f5758498cc9";
+    url = "https://github.com/ros2-gbp/ros2_fmt_logger-release/archive/release/humble/ros2_fmt_logger/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "cecaa488209cb5adb17bc4a41c837b53bfe6cbb0932a7403867f3de9ef5811ce";
   };
 
   buildType = "ament_cmake";

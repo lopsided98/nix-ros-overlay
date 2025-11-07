@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-smacc2-msgs";
-  version = "2.3.18-r1";
+  version = "2.3.20-r2";
 
   src = fetchurl {
-    url = "https://github.com/robosoft-ai/SMACC2-release/archive/release/humble/smacc2_msgs/2.3.18-1.tar.gz";
-    name = "2.3.18-1.tar.gz";
-    sha256 = "b817e5b81935c29714060282c7f05b516cca703c42085f64f5bb09307893334f";
+    url = "https://github.com/robosoft-ai/SMACC2-release/archive/release/humble/smacc2_msgs/2.3.20-2.tar.gz";
+    name = "2.3.20-2.tar.gz";
+    sha256 = "92a77d8d60a597f9450d20820436cd77a70181782b8f21f1ee100c5af442b4b1";
   };
 
   buildType = "ament_cmake";

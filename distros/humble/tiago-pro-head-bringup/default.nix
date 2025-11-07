@@ -2,21 +2,21 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, play-motion2, tiago-pro-head-controller-configuration, tiago-pro-head-description }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, play-motion2, play-motion2-cli, tiago-pro-head-controller-configuration, tiago-pro-head-description }:
 buildRosPackage {
   pname = "ros-humble-tiago-pro-head-bringup";
-  version = "1.6.1-r1";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_pro_head_robot-release/archive/release/humble/tiago_pro_head_bringup/1.6.1-1.tar.gz";
-    name = "1.6.1-1.tar.gz";
-    sha256 = "96ff82d1ca3125e83ebad97aed6a7262a1effb33d287d6a4f126734b55b1c751";
+    url = "https://github.com/pal-gbp/tiago_pro_head_robot-release/archive/release/humble/tiago_pro_head_bringup/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "dac1adca274497c679345ce4be8b82ad904e2dbfa4ee295188a4bdbe937a7b83";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ play-motion2 tiago-pro-head-controller-configuration tiago-pro-head-description ];
+  propagatedBuildInputs = [ play-motion2 play-motion2-cli tiago-pro-head-controller-configuration tiago-pro-head-description ];
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {

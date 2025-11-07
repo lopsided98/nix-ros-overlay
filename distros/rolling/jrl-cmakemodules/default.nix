@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, doxygen, pkg-config }:
 buildRosPackage {
   pname = "ros-rolling-jrl-cmakemodules";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/rolling/jrl_cmakemodules/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "259dbdfd871c6a756f3119e1b86aeed361830ab4fb588ae6035c16040546384a";
+    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/rolling/jrl_cmakemodules/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "38c9dbd4462c2cd7d7e4995e05589201db013a4127de1ff2d40a243dc473d47e";
   };
 
   buildType = "cmake";

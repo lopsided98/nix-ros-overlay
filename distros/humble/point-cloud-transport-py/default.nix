@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-python, ament-cmake-ros, pluginlib, point-cloud-transport, pybind11-vendor, python-cmake-module, rclcpp, rpyutils, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-point-cloud-transport-py";
-  version = "1.0.19-r1";
+  version = "1.0.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport-release/archive/release/humble/point_cloud_transport_py/1.0.19-1.tar.gz";
-    name = "1.0.19-1.tar.gz";
-    sha256 = "dc43c3672612eb687a7c3338d7114c1cd733832db92be1ab0dbbdb970fd8b324";
+    url = "https://github.com/ros2-gbp/point_cloud_transport-release/archive/release/humble/point_cloud_transport_py/1.0.20-1.tar.gz";
+    name = "1.0.20-1.tar.gz";
+    sha256 = "50aba9fdd5b7c713ad54cc93e034786b084cb29a7a67b808e84a1e1c7b8e3861";
   };
 
   buildType = "ament_cmake";

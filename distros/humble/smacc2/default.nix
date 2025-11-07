@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, lttng-ust, rcl, rclcpp, rclcpp-action, smacc2-msgs, tracetools, tracetools-launch, tracetools-trace }:
 buildRosPackage {
   pname = "ros-humble-smacc2";
-  version = "2.3.18-r1";
+  version = "2.3.20-r2";
 
   src = fetchurl {
-    url = "https://github.com/robosoft-ai/SMACC2-release/archive/release/humble/smacc2/2.3.18-1.tar.gz";
-    name = "2.3.18-1.tar.gz";
-    sha256 = "a6a67168f1359fe9aeb90c1d5b079e5263d0fd2e1243b4be21bae0176e0bd20f";
+    url = "https://github.com/robosoft-ai/SMACC2-release/archive/release/humble/smacc2/2.3.20-2.tar.gz";
+    name = "2.3.20-2.tar.gz";
+    sha256 = "0f2d5b53ab1ca572d0382aeae85caf5470e376867ecc310eb5b970113a358554";
   };
 
   buildType = "ament_cmake";

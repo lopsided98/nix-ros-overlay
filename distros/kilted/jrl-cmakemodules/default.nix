@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, doxygen, pkg-config }:
 buildRosPackage {
   pname = "ros-kilted-jrl-cmakemodules";
-  version = "1.1.0-r2";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/kilted/jrl_cmakemodules/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "b41322092abc55d7eec0d9ac0acca76b6548d183d4696d882d2aeb0e3857476d";
+    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/kilted/jrl_cmakemodules/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "15b90c1cc3ea43a2895981c96ae5a2fca8dc10e893bd0e67bee7dabaaaccac3e";
   };
 
   buildType = "cmake";

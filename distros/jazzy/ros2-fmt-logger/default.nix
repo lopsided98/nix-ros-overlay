@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, backward-ros, fmt, rclcpp, rcutils }:
 buildRosPackage {
   pname = "ros-jazzy-ros2-fmt-logger";
-  version = "1.0.0-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_fmt_logger-release/archive/release/jazzy/ros2_fmt_logger/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "93d820a710df179dadf66f54ab9986cb82b106f0eb740b2c5979c0d770be0a78";
+    url = "https://github.com/ros2-gbp/ros2_fmt_logger-release/archive/release/jazzy/ros2_fmt_logger/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "3338d3177bd4608fbae7d4fd0ffbc2d5b0bbd4e33850c03bf3866b62ece7c7cd";
   };
 
   buildType = "ament_cmake";

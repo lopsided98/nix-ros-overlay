@@ -1282,6 +1282,8 @@ self: super: {
 
  mola = self.callPackage ./mola {};
 
+ mola-bridge-ros2 = self.callPackage ./mola-bridge-ros2 {};
+
  mola-common = self.callPackage ./mola-common {};
 
  mola-demos = self.callPackage ./mola-demos {};
@@ -1303,6 +1305,8 @@ self: super: {
  mola-input-paris-luco-dataset = self.callPackage ./mola-input-paris-luco-dataset {};
 
  mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
+
+ mola-input-rosbag2 = self.callPackage ./mola-input-rosbag2 {};
 
  mola-input-video = self.callPackage ./mola-input-video {};
 
@@ -1476,11 +1480,17 @@ self: super: {
 
  mrpt-libposes = self.callPackage ./mrpt-libposes {};
 
+ mrpt-libros-bridge = self.callPackage ./mrpt-libros-bridge {};
+
  mrpt-libslam = self.callPackage ./mrpt-libslam {};
 
  mrpt-libtclap = self.callPackage ./mrpt-libtclap {};
 
+ mrpt-map-server = self.callPackage ./mrpt-map-server {};
+
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
+
+ mrpt-msgs-bridge = self.callPackage ./mrpt-msgs-bridge {};
 
  mrpt-nav-interfaces = self.callPackage ./mrpt-nav-interfaces {};
 
@@ -1488,7 +1498,25 @@ self: super: {
 
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
+ mrpt-pf-localization = self.callPackage ./mrpt-pf-localization {};
+
+ mrpt-pointcloud-pipeline = self.callPackage ./mrpt-pointcloud-pipeline {};
+
+ mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
+
+ mrpt-sensor-bumblebee-stereo = self.callPackage ./mrpt-sensor-bumblebee-stereo {};
+
+ mrpt-sensor-gnss-nmea = self.callPackage ./mrpt-sensor-gnss-nmea {};
+
+ mrpt-sensor-gnss-novatel = self.callPackage ./mrpt-sensor-gnss-novatel {};
+
+ mrpt-sensor-imu-taobotics = self.callPackage ./mrpt-sensor-imu-taobotics {};
+
+ mrpt-sensorlib = self.callPackage ./mrpt-sensorlib {};
+
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
+
+ mrpt-tps-astar-planner = self.callPackage ./mrpt-tps-astar-planner {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
@@ -1499,6 +1527,8 @@ self: super: {
  multisensor-calibration = self.callPackage ./multisensor-calibration {};
 
  multisensor-calibration-interface = self.callPackage ./multisensor-calibration-interface {};
+
+ mvsim = self.callPackage ./mvsim {};
 
  nao-button-sim = self.callPackage ./nao-button-sim {};
 
@@ -1525,6 +1555,8 @@ self: super: {
  nav2-bt-navigator = self.callPackage ./nav2-bt-navigator {};
 
  nav2-collision-monitor = self.callPackage ./nav2-collision-monitor {};
+
+ nav2-common = self.callPackage ./nav2-common {};
 
  nav2-constrained-smoother = self.callPackage ./nav2-constrained-smoother {};
 
@@ -1853,6 +1885,8 @@ self: super: {
  popf = self.callPackage ./popf {};
 
  pose-broadcaster = self.callPackage ./pose-broadcaster {};
+
+ pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
  position-controllers = self.callPackage ./position-controllers {};
 
@@ -2302,6 +2336,8 @@ self: super: {
 
  rosbag2-transport = self.callPackage ./rosbag2-transport {};
 
+ rosbag2rawlog = self.callPackage ./rosbag2rawlog {};
+
  rosbridge-library = self.callPackage ./rosbridge-library {};
 
  rosbridge-msgs = self.callPackage ./rosbridge-msgs {};
@@ -2475,6 +2511,8 @@ self: super: {
  rqt-topic = self.callPackage ./rqt-topic {};
 
  rsl = self.callPackage ./rsl {};
+
+ rslidar-msg = self.callPackage ./rslidar-msg {};
 
  rt-manipulators-cpp = self.callPackage ./rt-manipulators-cpp {};
 
