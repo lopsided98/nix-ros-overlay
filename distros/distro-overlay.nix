@@ -74,7 +74,6 @@ let
       "mrpt-libobs"
       "mrpt-libopengl"
       "mrpt-libposes"
-      "mrpt-libros-bridge"
       "mrpt-libslam"
       "mrpt-libtclap"
     ] (name: patchMrptExternalProjectGit rosSuper.${name});
