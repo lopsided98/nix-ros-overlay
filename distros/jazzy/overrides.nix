@@ -29,16 +29,18 @@ in {
     postPatch ? "", ...
   }: {
     postPatch = let
-      # SDK version from CMakeLists.txt. If the version doesn't match,
-      # cmake fails with "Hash mismatch" and we can fix it here.
-      FOXGLOVE_SDK_VERSION = "0.14.2";
+      # SDK version from
+      # https://github.com/foxglove/foxglove-sdk/blob/main/ros/src/foxglove_bridge/CMakeLists.txt.
+      # If the version doesn't match, cmake fails with "Hash mismatch"
+      # and we can fix it here.
+      FOXGLOVE_SDK_VERSION = "0.15.2";
       systemToPlatform = {
         "x86_64-linux" = "x86_64-unknown-linux-gnu";
         "aarch64-linux" = "aarch64-unknown-linux-gnu";
       };
       systemToHash = {
-        "x86_64-linux" = "sha256-V0w84AbWEx1lGbQW8l7zfFsqByHvSciUKGx5paXgtPw=";
-        "aarch64-linux" = "sha256-9U4+CJJqiIKpvIAxz7JKBAviY48e9OhyNvo63tGrKiM=";
+        "x86_64-linux" = "sha256-0H7JlOCwd2bmtoMjofO9QH3GU5EITzdrYWlWS22Yc/A=";
+        "aarch64-linux" = "sha256-fo6ULC1avQqPAdWniiGwtydARo9QDt6ZoKnJDaL92FE=";
       };
       FOXGLOVE_SDK_PLATFORM = systemToPlatform.${self.system};
       sdk = self.fetchurl {
