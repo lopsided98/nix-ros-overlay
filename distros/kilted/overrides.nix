@@ -225,6 +225,12 @@ in {
     '';
   });
 
+  nav2-costmap-2d = rosSuper.nav2-costmap-2d.overrideAttrs({
+    CXXFLAGS ? "", ...
+  }: {
+    CXXFLAGS = "${CXXFLAGS} -Wno-error=array-bounds";
+  });
+
   nlohmann-json-schema-validator-vendor = lib.patchExternalProjectGit rosSuper.nlohmann-json-schema-validator-vendor {
     url = "https://github.com/pboettch/json-schema-validator.git";
     rev = "5ef4f903af055550e06955973a193e17efded896";
