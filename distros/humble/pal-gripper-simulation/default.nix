@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, pal-gazebo-worlds, pal-gripper-controller-configuration, pal-gripper-description, pal-urdf-utils, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-humble-pal-gripper-simulation";
-  version = "3.5.0-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_gripper-release/archive/release/humble/pal_gripper_simulation/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "6972d4e5d17fd0ad6846c005bda2cc6796d7897843962b18f8addbf6c3979a1a";
+    url = "https://github.com/pal-gbp/pal_gripper-release/archive/release/humble/pal_gripper_simulation/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "68e13850ffeee6d46211371df11a6d8db51e9452369b6efdbb4aeb2658cc04aa";
   };
 
   buildType = "ament_cmake";

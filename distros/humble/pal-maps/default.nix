@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto }:
 buildRosPackage {
   pname = "ros-humble-pal-maps";
-  version = "0.0.5-r1";
+  version = "0.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_maps-release/archive/release/humble/pal_maps/0.0.5-1.tar.gz";
-    name = "0.0.5-1.tar.gz";
-    sha256 = "3bb7cdee3302f6cfc694b19fa8005eb7b37743654b79b2eaa8a806db437cec22";
+    url = "https://github.com/pal-gbp/pal_maps-release/archive/release/humble/pal_maps/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
+    sha256 = "df5cf5c35cb3ca9aada6d74a51fbfbe599a88a6d5125e24b19fccb978443e16b";
   };
 
   buildType = "ament_cmake";

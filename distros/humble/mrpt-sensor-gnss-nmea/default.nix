@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, mrpt-libhwdrivers, mrpt-libros-bridge, mrpt-msgs, mrpt-sensorlib, nav-msgs, nmea-msgs, rclcpp, rclcpp-components, ros-environment, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-mrpt-sensor-gnss-nmea";
-  version = "0.2.3-r1";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/humble/mrpt_sensor_gnss_nmea/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "d35a0de923ef6f643d7c3ff9d52f1bad64ab24bf0bb43af4a341ea2d8f434e83";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/humble/mrpt_sensor_gnss_nmea/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "4e8578dc81d2bcbdd46364f279451922af4db846d6e311082ad3315a207438eb";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "ROS node for GNSS receivers generating NMEA messages (based on mrpt-hwdrivers)";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

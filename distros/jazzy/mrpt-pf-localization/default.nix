@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, cmake, mola-relocalization, mp2p-icp, mrpt-libgui, mrpt-libros-bridge, mrpt-libslam, mrpt-msgs, mrpt-msgs-bridge, mrpt-tutorials, nav-msgs, pose-cov-ops, rclcpp, rclcpp-components, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-pf-localization";
-  version = "2.2.3-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/jazzy/mrpt_pf_localization/2.2.3-1.tar.gz";
-    name = "2.2.3-1.tar.gz";
-    sha256 = "af8eaf283e4ea83b8cc3b683b5e754737cbf06557361b729bfee7a2ce326dae4";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/jazzy/mrpt_pf_localization/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "2e8e3fbd1ec872472c7c92482ed0b779780cc7b72ab57a46f54791c8af19f7ce";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, mrpt-libhwdrivers, mrpt-libros-bridge, mrpt-msgs, mrpt-sensorlib, nav-msgs, rclcpp, rclcpp-components, ros-environment, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-sensor-imu-taobotics";
-  version = "0.2.3-r1";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/jazzy/mrpt_sensor_imu_taobotics/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "2364e38b5c00225ef6f3ab950f06c139afaf5426604604982e43a8356befa110";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/jazzy/mrpt_sensor_imu_taobotics/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "e47dd33ca1f5961f8f51bb1adcddae2b295493f4c3c7dee065615f52076aa802";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "ROS node for Taobotics USB IMUs (based on mrpt-hwdrivers)";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

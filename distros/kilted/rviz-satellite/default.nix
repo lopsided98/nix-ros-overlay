@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, proj, qt5, rclcpp, rcpputils, rviz-common, rviz-default-plugins, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-rviz-satellite";
-  version = "4.2.1-r1";
+  version = "4.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/rviz_satellite-release/archive/release/kilted/rviz_satellite/4.2.1-1.tar.gz";
-    name = "4.2.1-1.tar.gz";
-    sha256 = "9442edb34f406f703568ccdda74b56e9d0c3422adfe7d5d26c90c8a463bd7512";
+    url = "https://github.com/nobleo/rviz_satellite-release/archive/release/kilted/rviz_satellite/4.3.0-1.tar.gz";
+    name = "4.3.0-1.tar.gz";
+    sha256 = "5bd732a248450d43bd524ec2f71ee01fd1c5790ae4dade60c6fb07c73e43c03e";
   };
 
   buildType = "ament_cmake";

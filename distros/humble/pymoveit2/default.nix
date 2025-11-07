@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-python, control-msgs, geometry-msgs, moveit-msgs, rclpy, sensor-msgs, shape-msgs, std-srvs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-humble-pymoveit2";
-  version = "4.0.0-r1";
+  version = "4.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pymoveit2-release/archive/release/humble/pymoveit2/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "756492a1b6528ef4134dad7b5cfa1c0e7dbc2ccdfb9a81cc834204884e0a1b39";
+    url = "https://github.com/ros2-gbp/pymoveit2-release/archive/release/humble/pymoveit2/4.2.0-1.tar.gz";
+    name = "4.2.0-1.tar.gz";
+    sha256 = "7f0bdf9e49f37207ae531aca9b814001294144b9f3a65444d317b302a57e385c";
   };
 
   buildType = "ament_cmake";

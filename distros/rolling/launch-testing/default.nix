@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, launch, launch-xml, launch-yaml, osrf-pycommon, python3Packages }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, launch, launch-xml, launch-yaml, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-launch-testing";
-  version = "3.9.3-r1";
+  version = "3.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch-release/archive/release/rolling/launch_testing/3.9.3-1.tar.gz";
-    name = "3.9.3-1.tar.gz";
-    sha256 = "7e7a801249260779cebab9bad3b5004a0b9ba14c1090f67b2c2464c684dad7c8";
+    url = "https://github.com/ros2-gbp/launch-release/archive/release/rolling/launch_testing/3.9.4-1.tar.gz";
+    name = "3.9.4-1.tar.gz";
+    sha256 = "fd46ed6183a88ac19b991d4338ff91230e025cfe1564aff4ca136e74d44c3a29";
   };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint ];
-  propagatedBuildInputs = [ ament-index-python launch launch-xml launch-yaml osrf-pycommon python3Packages.pytest ];
+  propagatedBuildInputs = [ ament-index-python launch launch-xml launch-yaml python3Packages.osrf-pycommon python3Packages.pytest ];
 
   meta = {
     description = "A package to create tests which involve launch files and multiple processes.";
