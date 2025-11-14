@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-py-trees";
-  version = "2.3.0-r2";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees-release/archive/release/kilted/py_trees/2.3.0-2.tar.gz";
-    name = "2.3.0-2.tar.gz";
-    sha256 = "1123ea1677ae177a5edff3251006736e5af30f9a428b17deb43f59a07805f525";
+    url = "https://github.com/ros2-gbp/py_trees-release/archive/release/kilted/py_trees/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "75167fc253304bb6966fb55c73e0d6c606ea9af9a7ab34af1f8e69a802f4697e";
   };
 
   buildType = "ament_python";

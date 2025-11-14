@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-cmake, ros2-control-test-assets, std-srvs, tf2, tf2-geometry-msgs, tf2-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-steering-controllers-library";
-  version = "4.33.1-r1";
+  version = "4.34.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/steering_controllers_library/4.33.1-1.tar.gz";
-    name = "4.33.1-1.tar.gz";
-    sha256 = "c483c6d90f2a9738d6c5d7bb3c1de5ddc725eb24a7565d4229e3925d3077d81f";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/steering_controllers_library/4.34.0-1.tar.gz";
+    name = "4.34.0-1.tar.gz";
+    sha256 = "1f9deb7010908e2bb3559a16bbe8e3f108d081220052d382599e4c8bed075921";
   };
 
   buildType = "ament_cmake";

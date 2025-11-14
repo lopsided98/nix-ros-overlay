@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-cmake, ros2-control-test-assets, std-srvs, steering-controllers-library }:
 buildRosPackage {
   pname = "ros-jazzy-bicycle-steering-controller";
-  version = "4.33.1-r1";
+  version = "4.34.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/bicycle_steering_controller/4.33.1-1.tar.gz";
-    name = "4.33.1-1.tar.gz";
-    sha256 = "c185e430b412a4f085274a8db0c9a0d8da0dc9e4ed2349638b1fb39899179a60";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/bicycle_steering_controller/4.34.0-1.tar.gz";
+    name = "4.34.0-1.tar.gz";
+    sha256 = "c6ace53b2f8d8efc92129f77cfe72f709bf41b2c9f3af87ce0279152cd4c9b97";
   };
 
   buildType = "ament_cmake";

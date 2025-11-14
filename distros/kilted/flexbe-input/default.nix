@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, flexbe-core, flexbe-msgs, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-kilted-flexbe-input";
-  version = "3.0.3-r2";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/kilted/flexbe_input/3.0.3-2.tar.gz";
-    name = "3.0.3-2.tar.gz";
-    sha256 = "aab2064b206f1c0ec2240448dcc09316aeae159a73c3ff8b1fc4c62aa6475e5d";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/kilted/flexbe_input/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "f399de7ca1c02c40385a11706644aace7944df61677e2d5ca92fd28d3a4d2b36";
   };
 
   buildType = "ament_python";

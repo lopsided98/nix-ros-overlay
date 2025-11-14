@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, composition-interfaces, launch, lifecycle-msgs, osrf-pycommon, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-launch-ros";
-  version = "0.26.9-r1";
+  version = "0.26.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch_ros-release/archive/release/jazzy/launch_ros/0.26.9-1.tar.gz";
-    name = "0.26.9-1.tar.gz";
-    sha256 = "bf87b3b0557ea520e911650bbc40b162b3abac55ad755b68166bc8f028d11584";
+    url = "https://github.com/ros2-gbp/launch_ros-release/archive/release/jazzy/launch_ros/0.26.10-1.tar.gz";
+    name = "0.26.10-1.tar.gz";
+    sha256 = "2d5a2dc29edb0ed4d4b733cfd8cf9a75e9d1bc96174269626ea42cc126d12b93";
   };
 
   buildType = "ament_python";

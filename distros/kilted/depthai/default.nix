@@ -2,20 +2,20 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, curl, gfortran, libtar, libusb1, nlohmann_json, opencv, ros-environment, udev, unzip, zip }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, curl, fmt, gfortran, libtar, libusb1, nlohmann_json, opencv, ros-environment, spdlog, udev, unzip, zip }:
 buildRosPackage {
   pname = "ros-kilted-depthai";
-  version = "3.0.7-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-core-release/archive/release/kilted/depthai/3.0.7-1.tar.gz";
-    name = "3.0.7-1.tar.gz";
-    sha256 = "04d5b66d0b2cd9328e4d35a72ed19fac4b295569cb90139b4ddec3bf51afc2a4";
+    url = "https://github.com/luxonis/depthai-core-release/archive/release/kilted/depthai/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "6ab74477d1e50780a7ac4639b4543833e658bae82a1a644fa01a7a884064acd3";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment ];
-  propagatedBuildInputs = [ curl gfortran libtar libusb1 nlohmann_json opencv opencv.cxxdev udev unzip zip ];
+  propagatedBuildInputs = [ curl fmt gfortran libtar libusb1 nlohmann_json opencv opencv.cxxdev spdlog udev unzip zip ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

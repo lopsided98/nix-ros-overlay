@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, nmea-msgs, rclcpp, rosidl-default-generators, rosidl-default-runtime, rtcm-msgs, sensor-msgs, std-msgs, std-srvs, tf2-geometry-msgs, tf2-msgs, tf2-ros, urdf, xacro }:
 buildRosPackage {
   pname = "ros-humble-sbg-driver";
-  version = "3.3.0-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/SBG-Systems/sbg_ros2-release/archive/release/humble/sbg_driver/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "b98eb142d4d08eb65b3d7fc234de83af807001d34dd55f63c4297adf477118bf";
+    url = "https://github.com/SBG-Systems/sbg_ros2-release/archive/release/humble/sbg_driver/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "de44bb9377e622085d642d61cc9de8c7ab287c1253e86b69248ecbb0e0dbdee0";
   };
 
   buildType = "ament_cmake";

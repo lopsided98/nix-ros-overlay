@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-internal-debug-msgs, autoware-internal-msgs, autoware-internal-planning-msgs, autoware-lint-common, autoware-perception-msgs, autoware-planning-msgs, autoware-utils-debug, autoware-utils-diagnostics, autoware-utils-geometry, autoware-utils-logging, autoware-utils-math, autoware-utils-pcl, autoware-utils-rclcpp, autoware-utils-system, autoware-utils-tf, autoware-utils-uuid, autoware-utils-visualization }:
 buildRosPackage {
   pname = "ros-humble-autoware-utils";
-  version = "1.4.2-r1";
+  version = "1.4.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/humble/autoware_utils/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "4a2e7d568174924c1d25ec5538c8c1d35f7a5e751c12ddcd608421000ab6a692";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/humble/autoware_utils/1.4.2-2.tar.gz";
+    name = "1.4.2-2.tar.gz";
+    sha256 = "ac57d5b19d8878f13e91fc3b4b84cf36804ad786774ee69a7f838bbcc7c99a87";
   };
 
   buildType = "ament_cmake";

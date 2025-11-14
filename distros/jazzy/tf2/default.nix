@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-google-benchmark, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, builtin-interfaces, geometry-msgs, rcutils, rosidl-runtime-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-tf2";
-  version = "0.36.15-r1";
+  version = "0.36.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2/0.36.15-1.tar.gz";
-    name = "0.36.15-1.tar.gz";
-    sha256 = "34afc68099ce56b4a0ff84da7cbcc46af7d58609448b58bf5badb193fa6decca";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2/0.36.16-1.tar.gz";
+    name = "0.36.16-1.tar.gz";
+    sha256 = "877394286af6dd89b16054cc115c4005a9552fea8b507458cce0742756380f36";
   };
 
   buildType = "ament_cmake";

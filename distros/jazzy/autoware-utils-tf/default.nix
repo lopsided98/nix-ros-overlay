@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-utils-geometry, geometry-msgs, rclcpp, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-utils-tf";
-  version = "1.4.2-r1";
+  version = "1.4.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/jazzy/autoware_utils_tf/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "e9b99010c7cf1782fb033cf4e46debd396f783b2e37e8262b73d19cfe2ea8574";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/jazzy/autoware_utils_tf/1.4.2-2.tar.gz";
+    name = "1.4.2-2.tar.gz";
+    sha256 = "b129202e0d06ed77ba12c96ec574b17c225b4860093b46bdfe62c477bfa8f5c6";
   };
 
   buildType = "ament_cmake";
