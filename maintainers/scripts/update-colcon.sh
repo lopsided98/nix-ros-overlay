@@ -10,7 +10,7 @@ nix eval --json --impure --expr '
 let
   pkgs = (import ./. {});
   lib = pkgs.lib;
-  colconPkgs = lib.filterAttrs (n: v: builtins.substring 0 7 n == "colcon-") pkgs.python3Packages;
+  colconPkgs = lib.filterAttrs (n: v: builtins.substring 0 7 n == "colcon-" && lib.hasPrefix "'"$PWD"'" v.meta.position ) pkgs.python3Packages;
 in
    lib.attrNames colconPkgs' \
     | jq  --raw-output '.[]' \
