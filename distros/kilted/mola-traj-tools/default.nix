@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-kilted-mola-traj-tools";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_traj_tools/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "a521593f7ed73f2a6060bd75bd508f6a297345540d0e15f405160f3aa8e99300";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_traj_tools/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "7bcf0990ce36f4210d1cbf7fcc89d805cce598f4beab817a9b46033709f38a97";
   };
 
   buildType = "cmake";

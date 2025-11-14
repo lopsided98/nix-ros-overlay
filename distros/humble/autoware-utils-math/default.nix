@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common }:
 buildRosPackage {
   pname = "ros-humble-autoware-utils-math";
-  version = "1.4.2-r1";
+  version = "1.4.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/humble/autoware_utils_math/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "8bcdbb17b4b577d46fb754bdb769dd5145c769299163cb3ae345df6cb2708346";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/humble/autoware_utils_math/1.4.2-2.tar.gz";
+    name = "1.4.2-2.tar.gz";
+    sha256 = "c058f5e7ab8e72f3c70eb0b92e7b4e459622b1ae9155cae59e95a14e9139c771";
   };
 
   buildType = "ament_cmake";

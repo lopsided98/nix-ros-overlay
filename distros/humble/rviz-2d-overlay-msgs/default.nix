@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-rviz-2d-overlay-msgs";
-  version = "1.3.1-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz_2d_overlay_plugins-release/archive/release/humble/rviz_2d_overlay_msgs/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "54cd0b0e78fd8faceb70300adfe6a635d0a9006cd76a5522bd418622b152e63d";
+    url = "https://github.com/ros2-gbp/rviz_2d_overlay_plugins-release/archive/release/humble/rviz_2d_overlay_msgs/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "b61919965b551a954f4165fb33f8c3d3dd6935723891ec75e4baa24d096fd26a";
   };
 
   buildType = "ament_cmake";

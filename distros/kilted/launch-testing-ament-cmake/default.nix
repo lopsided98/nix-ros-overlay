@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-test, launch-testing }:
 buildRosPackage {
   pname = "ros-kilted-launch-testing-ament-cmake";
-  version = "3.8.5-r3";
+  version = "3.8.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch-release/archive/release/kilted/launch_testing_ament_cmake/3.8.5-3.tar.gz";
-    name = "3.8.5-3.tar.gz";
-    sha256 = "cc3a367274c96c304a032f6c73724699b1ceb030b7a7e159982092184b6a9505";
+    url = "https://github.com/ros2-gbp/launch-release/archive/release/kilted/launch_testing_ament_cmake/3.8.6-1.tar.gz";
+    name = "3.8.6-1.tar.gz";
+    sha256 = "8cb4af21406750c2d9cdbe191ee33a8c26b1b2b6002908328b3b437b4916f2d0";
   };
 
   buildType = "ament_cmake";

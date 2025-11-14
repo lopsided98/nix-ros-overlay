@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-utils-tf, pcl-conversions, pcl-ros }:
 buildRosPackage {
   pname = "ros-rolling-autoware-utils-pcl";
-  version = "1.4.2-r1";
+  version = "1.4.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/rolling/autoware_utils_pcl/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "81c6417fdfcafc5756ec31ec2e72976283b55839b9dc20d1b3a9a55a693ab11d";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/rolling/autoware_utils_pcl/1.4.2-2.tar.gz";
+    name = "1.4.2-2.tar.gz";
+    sha256 = "413dca03addacfed99e0d90ad5d4344da35bfe55e8612e0ea12aeaa8f3c7fe30";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, backward-ros, fmt, generate-parameter-library, launch-ros, launch-testing-ament-cmake, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-rolling-joint-limits";
-  version = "6.0.1-r1";
+  version = "6.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/joint_limits/6.0.1-1.tar.gz";
-    name = "6.0.1-1.tar.gz";
-    sha256 = "bf0a8b868428ecc746042c38ca401fbaebdb86be061419514ea0780c00feabe3";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/joint_limits/6.0.2-1.tar.gz";
+    name = "6.0.2-1.tar.gz";
+    sha256 = "9d788e516e9adf65cd30908ba44e34bb5f97cf0f35af5d214f4e55ae78b75b8d";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-autoware-internal-metric-msgs";
-  version = "1.12.0-r1";
+  version = "1.12.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_internal_msgs-release/archive/release/humble/autoware_internal_metric_msgs/1.12.0-1.tar.gz";
-    name = "1.12.0-1.tar.gz";
-    sha256 = "b468aa20c57ec39be46239b99614e3846795cb68a813606b90db6b13323999f2";
+    url = "https://github.com/ros2-gbp/autoware_internal_msgs-release/archive/release/humble/autoware_internal_metric_msgs/1.12.0-2.tar.gz";
+    name = "1.12.0-2.tar.gz";
+    sha256 = "f3c98c70b1ad88471b0c0e350535508d7e84cf44c85ec5d1dbcbe6425ad6f472";
   };
 
   buildType = "ament_cmake";

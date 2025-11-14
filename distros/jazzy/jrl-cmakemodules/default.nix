@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, doxygen, pkg-config }:
 buildRosPackage {
   pname = "ros-jazzy-jrl-cmakemodules";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/jazzy/jrl_cmakemodules/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "a21317aaa4a1200045ca50534aebd265b0b5cc6a4e0b3c136a0bfde3a93b054f";
+    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/jazzy/jrl_cmakemodules/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "399256dfb0e37d7ccd5a5e5a29ff6046f4e26ab04da4a0a0750ba11d4fad1170";
   };
 
   buildType = "cmake";

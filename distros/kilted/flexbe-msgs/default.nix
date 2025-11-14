@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-flexbe-msgs";
-  version = "3.0.3-r2";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/kilted/flexbe_msgs/3.0.3-2.tar.gz";
-    name = "3.0.3-2.tar.gz";
-    sha256 = "774ba621b6ad715915a9d85f2238bd71dd6abb349a69dd7a2a4f9b634556fefc";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/kilted/flexbe_msgs/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "862f92f5e62561f0c3f13a779b5040c680f7e941d63fbbf66e9431f9522338ef";
   };
 
   buildType = "ament_cmake";

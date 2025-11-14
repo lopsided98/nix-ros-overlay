@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-utils-math";
-  version = "1.4.2-r1";
+  version = "1.4.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/jazzy/autoware_utils_math/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "9b728e3f7cd889764a2f90f48a8ae4d3c7ee54ad4b1d44fa65af3b8e24c9a25c";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/jazzy/autoware_utils_math/1.4.2-2.tar.gz";
+    name = "1.4.2-2.tar.gz";
+    sha256 = "20721f79b08c24ad1768e7eab2007809acb021f03020fcf5210cc0a9d5d2767e";
   };
 
   buildType = "ament_cmake";

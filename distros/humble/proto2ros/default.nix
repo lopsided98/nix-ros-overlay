@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-mypy, ament-cmake-pytest, ament-cmake-python, builtin-interfaces, clang, protobuf, python3Packages, rclcpp, rclpy, rosidl-adapter, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-proto2ros";
-  version = "1.0.0-r3";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/bdaiinstitute/proto2ros-release/archive/release/humble/proto2ros/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "c9935ade33305a9c0ecec253ab0d2718da669eef0361db153b10bce0edace7f8";
+    url = "https://github.com/bdaiinstitute/proto2ros-release/archive/release/humble/proto2ros/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "46c3245be58336e60e4d89d8b1f0071e9e886b28dd4ec114749d9ebc34e37ac1";
   };
 
   buildType = "ament_cmake";

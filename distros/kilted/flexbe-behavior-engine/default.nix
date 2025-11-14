@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, flexbe-core, flexbe-input, flexbe-mirror, flexbe-msgs, flexbe-onboard, flexbe-states, flexbe-testing, flexbe-widget }:
 buildRosPackage {
   pname = "ros-kilted-flexbe-behavior-engine";
-  version = "3.0.3-r2";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/kilted/flexbe_behavior_engine/3.0.3-2.tar.gz";
-    name = "3.0.3-2.tar.gz";
-    sha256 = "5281be3ff731a338afbf55868acc82742f8892e1f37e85a5b7ca197eff0d8886";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/kilted/flexbe_behavior_engine/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "734d63b72f01dced001378889223dab601aaf4ae01a0ad758f6fc16fc91dded3";
   };
 
   buildType = "ament_cmake";

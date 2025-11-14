@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-copyright, ament-flake8, ament-pep257, flexbe-core, flexbe-mirror, flexbe-msgs, flexbe-onboard, launch-ros, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-flexbe-widget";
-  version = "3.0.3-r1";
+  version = "3.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/jazzy/flexbe_widget/3.0.3-1.tar.gz";
-    name = "3.0.3-1.tar.gz";
-    sha256 = "9f09c5f0f1bba4b324511ae67f311b7979ce030ca880f1ef163a511d87cc4741";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/jazzy/flexbe_widget/3.0.7-1.tar.gz";
+    name = "3.0.7-1.tar.gz";
+    sha256 = "bd8052dc2bca22de1544e031905d7da23b4eb2a559780f1946d04f1d932c6319";
   };
 
   buildType = "ament_cmake";

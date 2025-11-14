@@ -926,6 +926,8 @@ self: super: {
 
  gz-fuel-tools-vendor = self.callPackage ./gz-fuel-tools-vendor {};
 
+ gz-gui-vendor = self.callPackage ./gz-gui-vendor {};
+
  gz-launch-vendor = self.callPackage ./gz-launch-vendor {};
 
  gz-math-vendor = self.callPackage ./gz-math-vendor {};

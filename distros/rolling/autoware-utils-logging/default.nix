@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, logging-demo, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-autoware-utils-logging";
-  version = "1.4.2-r1";
+  version = "1.4.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/rolling/autoware_utils_logging/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "41460c22c43c0080885554a05ec37e741e100818ed12a997a88e793a181573ba";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/rolling/autoware_utils_logging/1.4.2-2.tar.gz";
+    name = "1.4.2-2.tar.gz";
+    sha256 = "71ea42bbf2a79c19283207e5904fe73a5b09bb3a025ff5831a5c7c26673878c4";
   };
 
   buildType = "ament_cmake";

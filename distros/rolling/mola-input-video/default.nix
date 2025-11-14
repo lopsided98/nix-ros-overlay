@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-libhwdrivers, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-rolling-mola-input-video";
-  version = "2.2.0-r1";
+  version = "2.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_input_video/2.2.0-1.tar.gz";
-    name = "2.2.0-1.tar.gz";
-    sha256 = "b7927c9441481a8702f9c8e90563fe533271f82ee74ed00a6715d78310666dbe";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_input_video/2.2.1-1.tar.gz";
+    name = "2.2.1-1.tar.gz";
+    sha256 = "d1d2239c1a66a9a3dd02640d0dab20e1d1f8133de916ce092f1f15f1042e9894";
   };
 
   buildType = "cmake";

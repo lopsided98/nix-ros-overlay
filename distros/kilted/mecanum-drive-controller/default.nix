@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-cmake, ros2-control-test-assets, std-srvs, tf2, tf2-geometry-msgs, tf2-msgs }:
 buildRosPackage {
   pname = "ros-kilted-mecanum-drive-controller";
-  version = "5.8.0-r1";
+  version = "5.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/mecanum_drive_controller/5.8.0-1.tar.gz";
-    name = "5.8.0-1.tar.gz";
-    sha256 = "dba361050ba38aceffefea3cea90a3782c01fc2cd592aeed4fdb809c17792f8f";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/mecanum_drive_controller/5.9.0-1.tar.gz";
+    name = "5.9.0-1.tar.gz";
+    sha256 = "605dc821657e29494e0596cd8032486165708753fec3f45c11e9b63cb2177a0e";
   };
 
   buildType = "ament_cmake";

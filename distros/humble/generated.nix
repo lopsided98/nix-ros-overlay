@@ -2360,6 +2360,12 @@ self: super: {
 
  openvdb-vendor = self.callPackage ./openvdb-vendor {};
 
+ orbbec-camera = self.callPackage ./orbbec-camera {};
+
+ orbbec-camera-msgs = self.callPackage ./orbbec-camera-msgs {};
+
+ orbbec-description = self.callPackage ./orbbec-description {};
+
  orocos-kdl-vendor = self.callPackage ./orocos-kdl-vendor {};
 
  ortools-vendor = self.callPackage ./ortools-vendor {};
