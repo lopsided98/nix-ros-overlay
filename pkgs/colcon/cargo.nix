@@ -4,11 +4,12 @@
 
 buildPythonPackage rec {
   pname = "colcon-cargo";
-  version = "0.1.3";
+  version = "0.2.0";
 
   src = fetchPypi {
-    inherit pname version;
-    hash = "sha256-FXp3Nso5NlvBqPA2Kv03mBNR8fwQELbDMU+mqmxTSWc=";
+    inherit version;
+    pname = "colcon_cargo";
+    hash = "sha256-E66G45eqB0056PrS3V4+QpfMvYHVe3E3vQgtFkb8eKA=";
   };
 
   pyproject = true;
