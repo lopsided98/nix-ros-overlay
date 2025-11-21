@@ -93,7 +93,8 @@
     fetcher,
     type, # "git" or "file"
     file ? "CMakeLists.txt",
-    tarSourceArgs ? {}
+    tarSourceArgs ? {},
+    patchesFor ? {},
   }: pkg.overrideAttrs (finalAttrs: {
     cmakeFlags ? [],
     nativeBuildInputs ? [],
@@ -117,6 +118,12 @@
     cmakeFlagsForType = {
       git = n: v: "-DAMENT_VENDOR_NIX_TAR_${n}=${vendorTar v}";
       file = n: v: "-DAMENT_VENDOR_NIX_FILE_${n}=${v}";
+    };
+    # Apply patches specified in patchesFor to the vendored source src.
+    applyPatchesFor = name: src: self.applyPatches {
+      inherit src;
+      name = src.rev;
+      patches = patchesFor.${name} or [];
     };
   in {
     nativeBuildInputs = [
@@ -143,7 +150,7 @@
     passthru = passthru // {
       # Expose vendored sources for eventual overriding
       amentVendorSrcs = lib.optionalAttrs (pathExists vendoredSourceJson)
-        (mapAttrs (n: v: fetcher v) sourceInfos);
+        (mapAttrs (n: v: applyPatchesFor n (fetcher v)) sourceInfos);
       # Script to automatically update vendored-source.json by running
       # CMake with injected modified version of ament_cmake macro.
       updateAmentVendor = let
@@ -201,10 +208,11 @@
   # addition to patching ament_vendor() calls, it patches other things
   # in CMakeLists.txt.
   patchGzAmentVendorGit = pkg: {
-    tarSourceArgs ? {}
+    tarSourceArgs ? {},
+    patchesFor ? {},
   }: let
     patchedPkg = lib.patchAmentVendorGit pkg {
-      inherit tarSourceArgs;
+      inherit tarSourceArgs patchesFor;
     };
   in patchedPkg.overrideAttrs ({
     pname, postPatch ? "", ...
