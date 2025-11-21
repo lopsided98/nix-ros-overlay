@@ -48,7 +48,7 @@ then
     # guaranteed not to fail due to dependencies between to-be-updated
     # packages.
     printf "\nFalling back to serial execution\n"
-    rush -j1 --verbose --continue --succ-cmd-file $ok_cmds -- \
+    rush -j1 --verbose --continue --succ-cmd-file $ok_cmds --propagate-exit-status=false -- \
          bash -c '$(nix-build -A rosPackages.{}.updateAmentVendor) 2>&1' <<<"$update_order"
 fi
 
