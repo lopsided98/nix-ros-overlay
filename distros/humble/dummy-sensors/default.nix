@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-dummy-sensors";
-  version = "0.20.6-r1";
+  version = "0.20.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/dummy_sensors/0.20.6-1.tar.gz";
-    name = "0.20.6-1.tar.gz";
-    sha256 = "a32b953ff39cbf6143b86e1f1562eaf594d9b7648e2892fc5fdc371ece65f6d6";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/dummy_sensors/0.20.7-1.tar.gz";
+    name = "0.20.7-1.tar.gz";
+    sha256 = "c6a442ec9823b659f375391e3a612228938750fb8615082f4130390dd4882e56";
   };
 
   buildType = "ament_cmake";

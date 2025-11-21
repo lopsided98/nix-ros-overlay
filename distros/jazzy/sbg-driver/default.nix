@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, nmea-msgs, rclcpp, rosidl-default-generators, rosidl-default-runtime, rtcm-msgs, sensor-msgs, std-msgs, std-srvs, tf2-geometry-msgs, tf2-msgs, tf2-ros, urdf, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-sbg-driver";
-  version = "3.3.1-r1";
+  version = "3.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SBG-Systems/sbg_ros2-release/archive/release/jazzy/sbg_driver/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "b49a6654a1a0341e39a6ee6495f119d3cf38eb48e94a65c6d018ba1cf7f92920";
+    url = "https://github.com/SBG-Systems/sbg_ros2-release/archive/release/jazzy/sbg_driver/3.3.2-1.tar.gz";
+    name = "3.3.2-1.tar.gz";
+    sha256 = "381269f89eca2ad78807ee3d9fb65d3e7ea587bf13c364b2256da0d00d0e1d5d";
   };
 
   buildType = "ament_cmake";

@@ -3530,6 +3530,8 @@ self: super: {
 
  sync-parameter-server = self.callPackage ./sync-parameter-server {};
 
+ synchros2 = self.callPackage ./synchros2 {};
+
  system-fingerprint = self.callPackage ./system-fingerprint {};
 
  system-modes = self.callPackage ./system-modes {};

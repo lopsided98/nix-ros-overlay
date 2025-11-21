@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-orbbec-camera-msgs";
-  version = "2.5.4-r2";
+  version = "2.5.5-r3";
 
   src = fetchurl {
-    url = "https://github.com/orbbec/orbbec_camera_v2-release/archive/release/jazzy/orbbec_camera_msgs/2.5.4-2.tar.gz";
-    name = "2.5.4-2.tar.gz";
-    sha256 = "9b2ed898f20b92391ffad37a3f8815fb4bf8f27ff0058aba5f0c8b1711892922";
+    url = "https://github.com/orbbec/orbbec_camera_v2-release/archive/release/jazzy/orbbec_camera_msgs/2.5.5-3.tar.gz";
+    name = "2.5.5-3.tar.gz";
+    sha256 = "eaddd55e6e9556e990ae3e9b4d7ff82e97fbbffe38697f0c346f7e4b712c6087";
   };
 
   buildType = "ament_cmake";

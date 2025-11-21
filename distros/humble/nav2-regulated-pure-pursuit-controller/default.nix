@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-humble-nav2-regulated-pure-pursuit-controller";
-  version = "1.1.19-r1";
+  version = "1.1.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_regulated_pure_pursuit_controller/1.1.19-1.tar.gz";
-    name = "1.1.19-1.tar.gz";
-    sha256 = "61d7cc0893fa909a31aca5265654a51df626a970ed760ff5e85ce58d2a2a090c";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_regulated_pure_pursuit_controller/1.1.20-1.tar.gz";
+    name = "1.1.20-1.tar.gz";
+    sha256 = "280989ff634fec7b04458492728475338d06c8f5256f021a24aca5512bedad75";
   };
 
   buildType = "ament_cmake";

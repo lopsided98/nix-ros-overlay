@@ -1282,6 +1282,8 @@ self: super: {
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
+ mocap4r2-msgs = self.callPackage ./mocap4r2-msgs {};
+
  mola = self.callPackage ./mola {};
 
  mola-bridge-ros2 = self.callPackage ./mola-bridge-ros2 {};
@@ -1717,6 +1719,8 @@ self: super: {
  opennav-docking-core = self.callPackage ./opennav-docking-core {};
 
  openni2-camera = self.callPackage ./openni2-camera {};
+
+ openvdb-vendor = self.callPackage ./openvdb-vendor {};
 
  orocos-kdl-vendor = self.callPackage ./orocos-kdl-vendor {};
 
@@ -2675,6 +2679,8 @@ self: super: {
  sophus = self.callPackage ./sophus {};
 
  spacenav = self.callPackage ./spacenav {};
+
+ spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
 

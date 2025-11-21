@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-ros, launch-testing, rclcpp, rclcpp-components, rcutils, rmw, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-quality-of-service-demo-cpp";
-  version = "0.36.2-r1";
+  version = "0.36.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/quality_of_service_demo_cpp/0.36.2-1.tar.gz";
-    name = "0.36.2-1.tar.gz";
-    sha256 = "0f49bec40a60f0c5b0b70c1eff3a35d7bbcfe29f91a6228b338a1f7404117cda";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/quality_of_service_demo_cpp/0.36.3-1.tar.gz";
+    name = "0.36.3-1.tar.gz";
+    sha256 = "86da13771f18623be618dc1f2ec4363e342b75cc72e1eedaa4656a6d315a8bde";
   };
 
   buildType = "ament_cmake";

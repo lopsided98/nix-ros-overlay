@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-autoware-adapi-version-msgs";
-  version = "1.9.0-r2";
+  version = "1.9.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_adapi_msgs-release/archive/release/humble/autoware_adapi_version_msgs/1.9.0-2.tar.gz";
-    name = "1.9.0-2.tar.gz";
-    sha256 = "368a3c1e56b3a675ea25fd1ae14b52cb08112288796e09dbc5380b97ab270471";
+    url = "https://github.com/ros2-gbp/autoware_adapi_msgs-release/archive/release/humble/autoware_adapi_version_msgs/1.9.1-2.tar.gz";
+    name = "1.9.1-2.tar.gz";
+    sha256 = "1bb7c7553206fb62e83d7640d06b233e2ac0aa8cdd624d34a1cabdcc1302c5ce";
   };
 
   buildType = "ament_cmake";

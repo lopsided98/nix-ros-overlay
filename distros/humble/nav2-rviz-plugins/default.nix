@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, nav-msgs, nav2-lifecycle-manager, nav2-msgs, nav2-util, pluginlib, qt5, rclcpp, rclcpp-lifecycle, resource-retriever, rviz-common, rviz-default-plugins, rviz-ogre-vendor, rviz-rendering, std-msgs, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-nav2-rviz-plugins";
-  version = "1.1.19-r1";
+  version = "1.1.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_rviz_plugins/1.1.19-1.tar.gz";
-    name = "1.1.19-1.tar.gz";
-    sha256 = "4e31e28867c4ab56a28ab52a9dbaa31366ba72f1b738daa46743e58810dfebee";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/humble/nav2_rviz_plugins/1.1.20-1.tar.gz";
+    name = "1.1.20-1.tar.gz";
+    sha256 = "7dee863211d20a90aabc9414de08d6a74e5ac3066b99c78a15e1a79ea4a035fe";
   };
 
   buildType = "ament_cmake";

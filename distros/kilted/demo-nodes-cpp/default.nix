@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, launch-xml, rcl, rcl-interfaces, rclcpp, rclcpp-components, rcpputils, rcutils, rmw, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-demo-nodes-cpp";
-  version = "0.36.2-r1";
+  version = "0.36.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/demo_nodes_cpp/0.36.2-1.tar.gz";
-    name = "0.36.2-1.tar.gz";
-    sha256 = "d43b619816c7663e2e6d9892659ee22c35f8437cc0c37d0fbf0d5dc4bb5bf86e";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/demo_nodes_cpp/0.36.3-1.tar.gz";
+    name = "0.36.3-1.tar.gz";
+    sha256 = "5a5b144a1810d28394e00f6bfaae24e933627d69106bc6179f4f3226208db658";
   };
 
   buildType = "ament_cmake";

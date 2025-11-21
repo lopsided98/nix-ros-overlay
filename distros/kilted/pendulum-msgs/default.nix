@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-pendulum-msgs";
-  version = "0.36.2-r1";
+  version = "0.36.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/pendulum_msgs/0.36.2-1.tar.gz";
-    name = "0.36.2-1.tar.gz";
-    sha256 = "4b7e50d9cf406e34741d13255cd68c7e69846d0bbcec45bea0994a085d13e98e";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/pendulum_msgs/0.36.3-1.tar.gz";
+    name = "0.36.3-1.tar.gz";
+    sha256 = "ff76202a414bc81a94473cf948f0914581b9da89f54415a3897ae38b583afa68";
   };
 
   buildType = "ament_cmake";

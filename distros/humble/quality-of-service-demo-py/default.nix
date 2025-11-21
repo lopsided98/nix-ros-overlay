@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-quality-of-service-demo-py";
-  version = "0.20.6-r1";
+  version = "0.20.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/quality_of_service_demo_py/0.20.6-1.tar.gz";
-    name = "0.20.6-1.tar.gz";
-    sha256 = "c11c82d7201774adfc27aff0be7020fa5612ff5edef480a9c69c59c200a90abd";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/quality_of_service_demo_py/0.20.7-1.tar.gz";
+    name = "0.20.7-1.tar.gz";
+    sha256 = "33a3c4b0f9ac392ad4a5bc7246433bfed5bf992aabd3f6b893bf74d01b24b558";
   };
 
   buildType = "ament_python";

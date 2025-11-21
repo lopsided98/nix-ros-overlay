@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, opencv, rclcpp, rclcpp-components, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-image-tools";
-  version = "0.36.2-r1";
+  version = "0.36.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/image_tools/0.36.2-1.tar.gz";
-    name = "0.36.2-1.tar.gz";
-    sha256 = "6014af385ce1d9a9cf9a6e4caee103458525c43d52d6a3931315645ba8fbd878";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/image_tools/0.36.3-1.tar.gz";
+    name = "0.36.3-1.tar.gz";
+    sha256 = "b623f90c45e4c09b13acf741e55ce627e2475736b6e83c9f75afaf5ba2e88a46";
   };
 
   buildType = "ament_cmake";
