@@ -114,17 +114,9 @@ in {
 
   gz-fuel-tools-vendor = lib.patchAmentVendorGit rosSuper.gz-fuel-tools-vendor { };
 
-  gz-gui-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-gui-vendor { }).overrideAttrs ({
-    postInstall ? "", ...
-  }: {
-    # "RPATH of binary libGrid3D.so contains a forbidden reference to
-    # /build/" (see https://github.com/gazebosim/gz-gui/issues/627).
-    postInstall = postInstall + ''
-      ${self.patchelf}/bin/patchelf --remove-rpath $out/lib64/gz-gui-9/plugins/libGrid3D.so
-    '';
-  });
+  gz-gui-vendor = lib.patchAmentVendorGit rosSuper.gz-gui-vendor { };
 
-  gz-launch-vendor = lib.patchGzAmentVendorGit rosSuper.gz-launch-vendor { };
+  gz-launch-vendor = lib.patchAmentVendorGit rosSuper.gz-launch-vendor { };
 
   gz-math-vendor = lib.patchAmentVendorGit rosSuper.gz-math-vendor { };
 
@@ -142,7 +134,7 @@ in {
 
   gz-sensors-vendor = lib.patchAmentVendorGit rosSuper.gz-sensors-vendor { };
 
-  gz-sim-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sim-vendor { };
+  gz-sim-vendor = lib.patchAmentVendorGit rosSuper.gz-sim-vendor { };
 
   gz-tools-vendor = (lib.patchAmentVendorGit rosSuper.gz-tools-vendor { }).overrideAttrs({
     nativeBuildInputs ? [],
@@ -150,11 +142,9 @@ in {
     qtWrapperArgs ? [],
     postFixup ? "", ...
   }: {
-    nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+    nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
     propagatedNativeBuildInputs = propagatedNativeBuildInputs ++ [
-      self.qt5.qtquickcontrols2
-      self.qt5.qtgraphicaleffects
-      self.pkg-config
+      self.qt6.qtbase
     ];
     qtWrapperArgs = qtWrapperArgs ++ [
       # Gazebo is currently broken on Wayland
