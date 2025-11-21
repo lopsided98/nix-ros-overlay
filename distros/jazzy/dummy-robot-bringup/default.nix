@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-python, ament-lint-auto, ament-lint-common, dummy-map-server, dummy-sensors, launch, launch-ros, robot-state-publisher }:
 buildRosPackage {
   pname = "ros-jazzy-dummy-robot-bringup";
-  version = "0.33.7-r1";
+  version = "0.33.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/dummy_robot_bringup/0.33.7-1.tar.gz";
-    name = "0.33.7-1.tar.gz";
-    sha256 = "5c3a1357567d3d0fe2015122f2e02881e5ec096bea4172bde0a55c64880a1e7b";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/dummy_robot_bringup/0.33.8-1.tar.gz";
+    name = "0.33.8-1.tar.gz";
+    sha256 = "b27a6bcbb06c7b9e8ef1a3ff351abbda28589c13969b9351d1b3d72a4cd9eb69";
   };
 
   buildType = "ament_cmake";

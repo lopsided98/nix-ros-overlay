@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, draco, pluginlib, point-cloud-interfaces, point-cloud-transport, rclcpp, rcpputils, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-draco-point-cloud-transport";
-  version = "4.0.2-r1";
+  version = "4.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/jazzy/draco_point_cloud_transport/4.0.2-1.tar.gz";
-    name = "4.0.2-1.tar.gz";
-    sha256 = "3f22c47c1a6f899e4763fbf446e6da3bf298fa23ebfcfcdb7606bd50079ddb3c";
+    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/jazzy/draco_point_cloud_transport/4.0.3-1.tar.gz";
+    name = "4.0.3-1.tar.gz";
+    sha256 = "bf60c7ff9ea5eb1407ae5b0c74f5b4096f067d5b71792ae7bda185866b54c9bb";
   };
 
   buildType = "ament_cmake";

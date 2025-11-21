@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, lifecycle, lifecycle-msgs, rclpy, ros-testing, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-lifecycle-py";
-  version = "0.36.2-r1";
+  version = "0.36.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/lifecycle_py/0.36.2-1.tar.gz";
-    name = "0.36.2-1.tar.gz";
-    sha256 = "13582e54526f4c3dd5538639da559856ff6735cf756741d91e1f6f7925f8ae5a";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/lifecycle_py/0.36.3-1.tar.gz";
+    name = "0.36.3-1.tar.gz";
+    sha256 = "8334359ccdc05bcc4e53d3f91bbcde88ce45e3552d820e5d5538f2297629e162";
   };
 
   buildType = "ament_python";

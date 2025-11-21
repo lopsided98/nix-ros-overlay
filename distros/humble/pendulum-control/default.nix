@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, pendulum-msgs, rclcpp, rmw-implementation-cmake, ros2run, rttest, tlsf-cpp }:
 buildRosPackage {
   pname = "ros-humble-pendulum-control";
-  version = "0.20.6-r1";
+  version = "0.20.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/pendulum_control/0.20.6-1.tar.gz";
-    name = "0.20.6-1.tar.gz";
-    sha256 = "ab09ccc9a93cd3ea91899c3b703533258a6c93aabdd24a3c7ff99de4fad4c595";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/pendulum_control/0.20.7-1.tar.gz";
+    name = "0.20.7-1.tar.gz";
+    sha256 = "70577b658272dff1812cc6c66fae2449fdbcbb3a183f9ec57ca6c1412ac91b9c";
   };
 
   buildType = "ament_cmake";

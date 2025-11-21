@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, lifecycle-msgs, rclcpp, rclcpp-lifecycle, ros-testing, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-lifecycle";
-  version = "0.36.2-r1";
+  version = "0.36.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/lifecycle/0.36.2-1.tar.gz";
-    name = "0.36.2-1.tar.gz";
-    sha256 = "d967eb3a08bd13a7bad16579adabd4325fafb2d478be5b8ad0670c64445283ef";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/lifecycle/0.36.3-1.tar.gz";
+    name = "0.36.3-1.tar.gz";
+    sha256 = "15d1a4017e63ba013a19e4e03b441059cc56e40a66d08f7c44b1774cf63d42c4";
   };
 
   buildType = "ament_cmake";

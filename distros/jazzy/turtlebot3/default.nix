@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, turtlebot3-bringup, turtlebot3-cartographer, turtlebot3-description, turtlebot3-example, turtlebot3-navigation2, turtlebot3-node, turtlebot3-teleop }:
 buildRosPackage {
   pname = "ros-jazzy-turtlebot3";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/jazzy/turtlebot3/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "b3c4f1752a9d52f0da7ca5e624b4ef55f65843f238266c6de951eb72edf85056";
+    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/jazzy/turtlebot3/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "0d5bdbf57fbd3154b0ce654a5e412fff87a6ce02c47146caa93977d02a9c0f0d";
   };
 
   buildType = "ament_cmake";

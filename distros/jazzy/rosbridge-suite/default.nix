@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosapi, rosbridge-library, rosbridge-server }:
 buildRosPackage {
   pname = "ros-jazzy-rosbridge-suite";
-  version = "2.4.0-r1";
+  version = "2.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/jazzy/rosbridge_suite/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "31ed3c9bcf6cd30fc59cf53e54210ec6203d0420fc8dbe6da670bb68e0d6f5c9";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/jazzy/rosbridge_suite/2.4.2-1.tar.gz";
+    name = "2.4.2-1.tar.gz";
+    sha256 = "d7291379063b97c9a275d49a239dbcc461e40bc6dabd8d8a7c9323f5829083a3";
   };
 
   buildType = "ament_cmake";

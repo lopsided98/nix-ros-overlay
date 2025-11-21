@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rosbridge-msgs";
-  version = "3.0.0-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/rolling/rosbridge_msgs/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "90e8d88aa34853db3d68e6c5ce6d9ae7255e3bfcd8dbebd8f1b3c983585c7937";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/rolling/rosbridge_msgs/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "702cc8d79981022a7c0bd988bbccbd938e0ec7e5fd1c42f4cb96db69f5314329";
   };
 
   buildType = "ament_cmake";

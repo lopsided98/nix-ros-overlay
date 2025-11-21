@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-components, rcutils, rmw-implementation-cmake, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-logging-demo";
-  version = "0.20.6-r1";
+  version = "0.20.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/logging_demo/0.20.6-1.tar.gz";
-    name = "0.20.6-1.tar.gz";
-    sha256 = "a346d5d3e0017a5e8ccd8da7810aec88b1850aef02daa86dae6e1af7113460d6";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/logging_demo/0.20.7-1.tar.gz";
+    name = "0.20.7-1.tar.gz";
+    sha256 = "ff980d9009fd55517b651c340444e0d8e5ee56d1eedc6f8c615790b3bd8d586d";
   };
 
   buildType = "ament_cmake";

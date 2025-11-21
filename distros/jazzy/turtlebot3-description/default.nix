@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, urdf, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-turtlebot3-description";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/jazzy/turtlebot3_description/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "5c446645ad72efe35217cd5b3aa42db7f96045f4759919fdfe6b83c73bdbb4aa";
+    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/jazzy/turtlebot3_description/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "a0832b951d17d95b2d1369242d05ab0417909cb9114b30d69a0fc73643c8b92e";
   };
 
   buildType = "ament_cmake";

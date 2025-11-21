@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rclcpp, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-mocap4r2-msgs";
-  version = "0.0.5-r1";
+  version = "0.0.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/MOCAP4ROS2-Project/mocap4r2_msgs-release/archive/release/humble/mocap4r2_msgs/0.0.5-1.tar.gz";
-    name = "0.0.5-1.tar.gz";
-    sha256 = "bb2ae7323d427e9ca57e3058e5775e974c41398eae26f753ec4efc590c6b8942";
+    url = "https://github.com/MOCAP4ROS2-Project/mocap4r2_msgs-release/archive/release/humble/mocap4r2_msgs/0.0.6-2.tar.gz";
+    name = "0.0.6-2.tar.gz";
+    sha256 = "dad98f723b18c6ad8b328c7280fdf60f23ac97a87b30903b2a7e0cace522e4db";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "mocap4r2_msgs";
+    description = "Interfaces for Mocap4ROS2 project";
     license = with lib.licenses; [ asl20 ];
   };
 }

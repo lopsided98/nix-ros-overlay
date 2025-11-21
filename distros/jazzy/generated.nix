@@ -1540,6 +1540,8 @@ self: super: {
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
+ mocap4r2-msgs = self.callPackage ./mocap4r2-msgs {};
+
  mocap-optitrack = self.callPackage ./mocap-optitrack {};
 
  mola = self.callPackage ./mola {};
@@ -3093,6 +3095,8 @@ self: super: {
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
  synapticon-ros2-control = self.callPackage ./synapticon-ros2-control {};
+
+ synchros2 = self.callPackage ./synchros2 {};
 
  system-fingerprint = self.callPackage ./system-fingerprint {};
 

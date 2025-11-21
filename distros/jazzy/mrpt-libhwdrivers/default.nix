@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libgui, mrpt-libmaps, mrpt-libslam, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-libhwdrivers";
-  version = "2.15.1-r2";
+  version = "2.15.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/jazzy/mrpt_libhwdrivers/2.15.1-2.tar.gz";
-    name = "2.15.1-2.tar.gz";
-    sha256 = "5644e4045cb4f263ef2f9eefa16c93fafacd5d756d49ee09eeb53bcb13fb106d";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/jazzy/mrpt_libhwdrivers/2.15.2-1.tar.gz";
+    name = "2.15.2-1.tar.gz";
+    sha256 = "fc85d4b05f48878e88c3eff0b0fb0eb215a4d9ab6cdbe569a1d7c339bc3571e2";
   };
 
   buildType = "cmake";

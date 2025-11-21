@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-rosbridge-test-msgs";
-  version = "3.0.0-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/kilted/rosbridge_test_msgs/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "febf84f8fc9e31633be1febba4fd1e28ee367ae2c81d98f5ffb6ddf6395bd44b";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/kilted/rosbridge_test_msgs/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "63f218ec6fee8fa54b16c84a44135bff964c25f66929f81cc9bdcc786200e8f8";
   };
 
   buildType = "ament_cmake";

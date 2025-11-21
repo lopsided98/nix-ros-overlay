@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-point-cloud-interfaces";
-  version = "1.0.12-r1";
+  version = "1.0.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/humble/point_cloud_interfaces/1.0.12-1.tar.gz";
-    name = "1.0.12-1.tar.gz";
-    sha256 = "d0b6613cb9a6be29e4e21168e32f46b2b4f48456b7fb3e68f8b83406e5486768";
+    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/humble/point_cloud_interfaces/1.0.13-1.tar.gz";
+    name = "1.0.13-1.tar.gz";
+    sha256 = "6e72e5b740263a2bbd3e74fc437bfe8aefd353251c5457cc7d86d4113c3084f6";
   };
 
   buildType = "ament_cmake";

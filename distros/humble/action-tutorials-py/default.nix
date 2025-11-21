@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-tutorials-interfaces, ament-lint-auto, ament-lint-common, rclpy }:
 buildRosPackage {
   pname = "ros-humble-action-tutorials-py";
-  version = "0.20.6-r1";
+  version = "0.20.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/action_tutorials_py/0.20.6-1.tar.gz";
-    name = "0.20.6-1.tar.gz";
-    sha256 = "c3e2b99873ba9da867eef8da377a0fbe3937c8fcebd3d183d875d28431c31d19";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/action_tutorials_py/0.20.7-1.tar.gz";
+    name = "0.20.7-1.tar.gz";
+    sha256 = "5931f9ad697dd424c478b3ce4d3f6d06d08673755d661fb9e1f309501cc7f10c";
   };
 
   buildType = "ament_python";

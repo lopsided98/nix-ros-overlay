@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, hls-lfcd-lds-driver, robot-state-publisher, rviz2, turtlebot3-description, turtlebot3-node }:
 buildRosPackage {
   pname = "ros-kilted-turtlebot3-bringup";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/kilted/turtlebot3_bringup/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "e40663c81e63d5e206293c547288eb54f2b69baf7eed42902cbb9526910c198b";
+    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/kilted/turtlebot3_bringup/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "c2a2d53d27ae20b90668dbd8c1061bfea2451218776ad1506305b5f7b5ba28f4";
   };
 
   buildType = "ament_cmake";

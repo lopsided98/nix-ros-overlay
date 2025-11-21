@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-flir-camera-msgs";
-  version = "3.0.3-r2";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flir_camera_driver-release/archive/release/kilted/flir_camera_msgs/3.0.3-2.tar.gz";
-    name = "3.0.3-2.tar.gz";
-    sha256 = "7a5b37302461f4a8dea6c006344e4abbb7340f2110d6f9d1af51119ac9a36b64";
+    url = "https://github.com/ros2-gbp/flir_camera_driver-release/archive/release/kilted/flir_camera_msgs/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "b32661c7868fa9f56cc7a86949f0cacff1cda548f7e5e877c17607e6527459c2";
   };
 
   buildType = "ament_cmake";

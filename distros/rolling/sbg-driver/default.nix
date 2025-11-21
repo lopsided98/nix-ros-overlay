@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, nmea-msgs, rclcpp, rosidl-default-generators, rosidl-default-runtime, rtcm-msgs, sensor-msgs, std-msgs, std-srvs, tf2-geometry-msgs, tf2-msgs, tf2-ros, urdf, xacro }:
 buildRosPackage {
   pname = "ros-rolling-sbg-driver";
-  version = "3.3.1-r1";
+  version = "3.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/SBG-Systems/sbg_ros2-release/archive/release/rolling/sbg_driver/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "724c6d2426fb2534eb11a40680241b8f1295fb28e282d987918aa8b4fd2f45b7";
+    url = "https://github.com/SBG-Systems/sbg_ros2-release/archive/release/rolling/sbg_driver/3.3.2-1.tar.gz";
+    name = "3.3.2-1.tar.gz";
+    sha256 = "bacde16f83e0e82305a7152b1c957959d4e4f129e2736f12068936dd6b97777a";
   };
 
   buildType = "ament_cmake";
