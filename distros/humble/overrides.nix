@@ -411,7 +411,11 @@ in with lib; {
     ];
   });
 
-  zenoh-cpp-vendor = (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {}).overrideAttrs(finalAttrs: {
+  zenoh-cpp-vendor = (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {
+    # Patch the build.rs script to be able to build internal
+    # opaque-types crate without network access.
+    patchesFor.zenoh_c_vendor = [ ./zenoh-cpp-vendor/zenoh-c.patch ];
+  }).overrideAttrs(finalAttrs: {
     nativeBuildInputs ? [], postPatch ? "", passthru ? {}, ...
   }: let
     outputHashes = {
@@ -429,19 +433,6 @@ in with lib; {
     cargoDeps = self.rustPlatform.importCargoLock {
       lockFile = "${zenoh-c-source}/Cargo.lock";
       inherit outputHashes;
-    };
-
-    # Patch the build.rs script to be able to build internal
-    # opaque-types crate without network access.
-    passthru = lib.recursiveUpdate passthru {
-      amentVendorSrcs.zenoh_c_vendor = let
-        src = passthru.amentVendorSrcs.zenoh_c_vendor;
-      in
-        self.applyPatches {
-          inherit src;
-          name = src.rev;
-          patches = [ ./zenoh-cpp-vendor/zenoh-c.patch ];
-        };
     };
 
     # Prepare vendored dependencies for internal opaque-types crate.
