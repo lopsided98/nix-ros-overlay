@@ -58,3 +58,8 @@ echo "$update_order"
 echo
 echo "Successful updates ($(wc -l <"$ok_cmds")):"
 cat "$ok_cmds"
+echo
+echo "Failed updates ($(($(wc -l <<<"$update_order") - $(wc -l <"$ok_cmds")))):"
+for i in $update_order; do
+    grep --quiet "$i" "$ok_cmds" || echo "$i failed"
+done
