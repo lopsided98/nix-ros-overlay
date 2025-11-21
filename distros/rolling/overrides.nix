@@ -70,6 +70,9 @@ in {
       '';
   });
 
+  freeimage = if lib.isDerivation self.freeimage then null else
+    builtins.abort "Remove this override as freeimage was removed from nixpkgs";
+
   gazebo = self.gazebo_11;
 
   geometric-shapes = rosSuper.geometric-shapes.overrideAttrs({
@@ -99,7 +102,22 @@ in {
 
   gz-cmake-vendor = lib.patchAmentVendorGit rosSuper.gz-cmake-vendor { };
 
-  gz-common-vendor = (lib.patchAmentVendorGit rosSuper.gz-common-vendor { }).overrideAttrs ({
+  gz-common-vendor = (lib.patchAmentVendorGit rosSuper.gz-common-vendor {
+    patchesFor.gz_common_vendor = [
+      # Patch needed for the #725 below to apply cleanly
+      (self.fetchpatch2 {
+        name = "fix-image-channeldata-for-16-bit-rgb-a-images";
+        url = "https://github.com/gazebosim/gz-common/commit/58c6eaa7bd9c048264f3e0b33a36a744cca8d18c.patch";
+        hash = "sha256-y2fQp6IdEykIgS/vMMN4rTctY0btBQy+vLI1mlaQKJc=";
+      })
+      # https://github.com/gazebosim/gz-common/pull/725
+      (self.fetchpatch2 {
+        name = "replace-freeimage-dependency-with-stb-rolling-version";
+        url = "https://github.com/wentasah/gz-common/commit/8d18342302b7586b5b34c3cd12f2ef26e148b6ab.patch";
+        hash = "sha256-rI9hqtbwYWhakIo1I8DEElbMZYkchG4lzUUt8lr8XnU=";
+      })
+    ];
+  }).overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
     # https://github.com/gazebo-release/gz_common_vendor/pull/2
