@@ -238,7 +238,15 @@ in {
     fetchgitArgs.hash = "sha256-b02OFUx0BxUA6HN6IaacSg1t3RP4o7NND7X0U635W8U=";
   };
 
-  openvdb-vendor = lib.patchAmentVendorGit rosSuper.openvdb-vendor {};
+  openvdb-vendor = (lib.patchAmentVendorGit rosSuper.openvdb-vendor {}).overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace openvdb_vendor-extras.cmake \
+        --replace-fail "\''${openvdb_vendor_DIR}/../../../opt/openvdb_vendor/lib/cmake/OpenVDB" \
+                       "$out/lib/cmake/OpenVDB"
+    '';
+  });
 
   rcutils = rosSuper.rcutils.overrideAttrs ({
     patches ? [], ...
