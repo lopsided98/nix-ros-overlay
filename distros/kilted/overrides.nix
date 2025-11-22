@@ -238,6 +238,8 @@ in {
     fetchgitArgs.hash = "sha256-b02OFUx0BxUA6HN6IaacSg1t3RP4o7NND7X0U635W8U=";
   };
 
+  openvdb-vendor = lib.patchAmentVendorGit rosSuper.openvdb-vendor {};
+
   rcutils = rosSuper.rcutils.overrideAttrs ({
     patches ? [], ...
   }: {
