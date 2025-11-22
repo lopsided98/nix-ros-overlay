@@ -287,7 +287,15 @@ in with lib; {
     ];
   });
 
-  openvdb-vendor = lib.patchAmentVendorGit rosSuper.openvdb-vendor {};
+  openvdb-vendor = (lib.patchAmentVendorGit rosSuper.openvdb-vendor {}).overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace openvdb_vendor-extras.cmake \
+        --replace-fail "\''${openvdb_vendor_DIR}/../../../opt/openvdb_vendor/lib/cmake/OpenVDB" \
+                       "$out/lib/cmake/OpenVDB"
+    '';
+  });
 
   plotjuggler-ros = rosSuper.plotjuggler-ros.overrideAttrs ({
     nativeBuildInputs ? [], ...
