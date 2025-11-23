@@ -25,6 +25,9 @@ inputs:
     description: Name of the Cachix cache to use
     required: true
     default: ros
+  pin-name:
+    description: Name of the Cachix pin to pin the results
+    required: false
 
 runs:
   using: node20
