@@ -216,10 +216,9 @@ type BuildResult = BuildSuccess | BuildCachedSuccess | BuildFailure | BuildCache
 async function build(drvPath: string, resultDir: string, cachixCache: string, cacheDir: string): Promise<BuildResult> {
   const cacheKey = "failed-" + path.basename(drvPath, ".drv");
 
-  core.info(`checking ${drvPath}...`)
   try {
     if (await nix.isDrvCached(drvPath)) {
-      core.debug(`found cached: ${drvPath}`)
+      core.info(`found cached: ${drvPath}`)
       return {
         status: 'cached_success',
         drvPath
@@ -343,10 +342,11 @@ async function run() {
     const dependencyFailures: DependencyFailureResult[] = []
     const errors: ErrorResult[] = []
 
-    core.info("installing nix-eval-jobs...");
+    core.startGroup("installing nix-eval-jobs...")
     execSync("nix-env --install --file default.nix -A nix-eval-jobs");
+    core.endGroup()
 
-    core.info(`evaluating packages in ${rootAttribute}...`);
+    core.startGroup(`evaluating packages in ${rootAttribute}...`)
     const evalResults = await instantiate(nixFile, rootAttribute, drvDir, system, evalJobs)
     const derivations: Map<string, Derivation> = new Map()
     for (const r of evalResults) {
@@ -361,6 +361,7 @@ async function run() {
         })
       }
     }
+    core.endGroup()
 
     // Create graph of references used to order the builds
     const buildGraph = new BuildGraph();
@@ -369,7 +370,7 @@ async function run() {
     }
     buildGraph.init()
 
-    core.info("building packages...")
+    core.startGroup("building packages...")
 
     const queue = new PQueue({ concurrency: buildJobs })
     do {
@@ -448,6 +449,7 @@ async function run() {
         }
       })
     } while (!buildGraph.empty())
+    core.endGroup()
 
     await queue.onIdle()
 

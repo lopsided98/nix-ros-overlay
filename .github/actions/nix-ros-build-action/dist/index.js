@@ -91358,10 +91358,9 @@ async function main_instantiate(nixFile, rootAttribute, drvDir, system, parallel
 }
 async function build(drvPath, resultDir, cachixCache, cacheDir) {
     const cacheKey = "failed-" + external_path_.basename(drvPath, ".drv");
-    core.info(`checking ${drvPath}...`);
     try {
         if (await isDrvCached(drvPath)) {
-            core.debug(`found cached: ${drvPath}`);
+            core.info(`found cached: ${drvPath}`);
             return {
                 status: 'cached_success',
                 drvPath
@@ -91446,9 +91445,10 @@ async function run() {
         const cachedFailures = [];
         const dependencyFailures = [];
         const errors = [];
-        core.info("installing nix-eval-jobs...");
+        core.startGroup("installing nix-eval-jobs...");
         (0,external_child_process_.execSync)("nix-env --install --file default.nix -A nix-eval-jobs");
-        core.info(`evaluating packages in ${rootAttribute}...`);
+        core.endGroup();
+        core.startGroup(`evaluating packages in ${rootAttribute}...`);
         const evalResults = await main_instantiate(nixFile, rootAttribute, drvDir, system, evalJobs);
         const derivations = new Map();
         for (const r of evalResults) {
@@ -91465,13 +91465,14 @@ async function run() {
                 });
             }
         }
+        core.endGroup();
         // Create graph of references used to order the builds
         const buildGraph = new BuildGraph();
         for (const [drvPath, drv] of derivations) {
             buildGraph.add(drvPath, drv.references, derivations);
         }
         buildGraph.init();
-        core.info("building packages...");
+        core.startGroup("building packages...");
         const queue = new PQueue({ concurrency: buildJobs });
         do {
             const node = await buildGraph.takeReady();
@@ -91541,6 +91542,7 @@ async function run() {
                 }
             });
         } while (!buildGraph.empty());
+        core.endGroup();
         await queue.onIdle();
         core.startGroup("Results");
         core.info(`Successes: ${successes.length}`);
