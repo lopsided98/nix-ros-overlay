@@ -91233,7 +91233,7 @@ class BuildGraph {
         this.ready_nodes = [];
         this.resolve_ready = null;
     }
-    add(drvPath, references) {
+    add(drvPath, references, rosDerivations) {
         let node = this.graph.get(drvPath);
         if (node === undefined) {
             node = {
@@ -91245,6 +91245,8 @@ class BuildGraph {
             this.graph.set(drvPath, node);
         }
         for (const reference of references) {
+            if (rosDerivations.get(reference) === undefined)
+                continue; // don't add sources and non-ROS packages
             let referenceNode = this.graph.get(reference);
             if (referenceNode === undefined) {
                 referenceNode = {
@@ -91466,7 +91468,7 @@ async function run() {
         // Create graph of references used to order the builds
         const buildGraph = new BuildGraph();
         for (const [drvPath, drv] of derivations) {
-            buildGraph.add(drvPath, drv.references);
+            buildGraph.add(drvPath, drv.references, derivations);
         }
         buildGraph.init();
         core.info("building packages...");

@@ -22,7 +22,7 @@ class BuildGraph {
   private ready_nodes: BuildGraphNode[] = []
   private resolve_ready: (null | ((value: BuildGraphNode | PromiseLike<BuildGraphNode>) => void)) = null
 
-  public add(drvPath: string, references: Iterable<string>) {
+  public add(drvPath: string, references: Iterable<string>, rosDerivations: Map<string, Derivation>) {
     let node = this.graph.get(drvPath)
     if (node === undefined) {
       node = {
@@ -35,6 +35,9 @@ class BuildGraph {
     }
 
     for (const reference of references) {
+      if (rosDerivations.get(reference) === undefined)
+        continue; // don't add sources and non-ROS packages
+
       let referenceNode = this.graph.get(reference)
       if (referenceNode === undefined) {
         referenceNode = {
@@ -362,7 +365,7 @@ async function run() {
     // Create graph of references used to order the builds
     const buildGraph = new BuildGraph();
     for (const [drvPath, drv] of derivations) {
-      buildGraph.add(drvPath, drv.references)
+      buildGraph.add(drvPath, drv.references, derivations)
     }
     buildGraph.init()
 
