@@ -8,6 +8,7 @@ import * as path from 'path'
 import * as cachix from './cachix.js'
 import * as nix from './nix.js'
 import { execSync } from 'child_process'
+import { writeFileSync } from 'fs';
 
 
 interface BuildGraphNode {
@@ -323,6 +324,7 @@ async function run() {
     const evalJobs = parseInt(core.getInput('eval-jobs', { required: true }))
     const buildJobs = parseInt(core.getInput('build-jobs', { required: true }))
     const cachixCache = core.getInput('cachix-cache', { required: true })
+    const pinName = core.getInput('pin-name') || undefined
 
     const buildDir = "build"
     const drvDir = path.join(buildDir, 'drvs')
@@ -452,6 +454,30 @@ async function run() {
     core.endGroup()
 
     await queue.onIdle()
+
+    if (pinName) {
+      core.startGroup(`Creating a link farm and pinning as ${pinName}`)
+      const successfulAttrs: string[] = [];
+      function successfulAttrsPush(attr: string) {
+        if (attr != "buildEnv")   // buildEnv is a function, not derivation
+          successfulAttrs.push(attr);
+      }
+      successes.forEach((element) => successfulAttrsPush(element.attr));
+      cachedSuccesses.forEach((element) => successfulAttrsPush(element.attr));
+
+      writeFileSync("linkFarm.nix", `
+        with import ./. { system = "${system}"; };
+        linkFarmFromDrvs "develop-kilted" (with ${rootAttribute}; [
+          ${successfulAttrs.join("\n")}
+        ])`)
+      execSync(`
+        linkFarm=$(nix-build --show-trace linkFarm.nix) &&
+        cachix push ${cachixCache} $linkFarm &&
+        cachix pin ${cachixCache} ${pinName} $linkFarm &&
+        nix-store --query --references $linkFarm | xargs du -shc | sort -h
+      `, { stdio: "inherit" });
+      core.endGroup()
+    }
 
     core.startGroup("Results")
     core.info(`Successes: ${successes.length}`)
