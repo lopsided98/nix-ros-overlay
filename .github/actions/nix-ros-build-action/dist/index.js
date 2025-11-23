@@ -91047,7 +91047,10 @@ function fixResponseChunkedTransferBadEnding(request, errorCallback) {
 	});
 }
 
+;// CONCATENATED MODULE: external "readline"
+const external_readline_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("readline");
 ;// CONCATENATED MODULE: ./lib/nix.js
+
 
 
 
@@ -91062,6 +91065,42 @@ async function listAttrs(file, parentAttr) {
         `with (import (./. + "/${file}") {}); builtins.attrNames (${parentAttr})`
     ]);
     return JSON.parse(stdout).map((a) => `${parentAttr}.${a}`);
+}
+async function* readLinesAsync(stream) {
+    const rl = external_readline_namespaceObject.createInterface({
+        input: stream,
+        crlfDelay: Infinity
+    });
+    for await (const line of rl) {
+        yield line;
+    }
+}
+async function evalJobs(file, parentAttr) {
+    const proc = external_child_process_.spawn('nix-eval-jobs', [
+        '--gc-roots-dir', 'gcroot', file, '--select', `pkgs: pkgs.${parentAttr}`
+    ], {
+        // Ignore stderr to prevent infinite blocking on full pipe
+        stdio: ['inherit', 'pipe', 'ignore']
+    });
+    const jobs = [];
+    // Read lines asynchronously, because the output can be bigger that
+    // max. stdout buffer size
+    for await (const line of readLinesAsync(proc.stdout)) {
+        if (line.trim()) {
+            try {
+                const parsed = JSON.parse(line);
+                jobs.push(parsed);
+            }
+            catch (error) {
+                console.error('Failed to parse:', line, error);
+            }
+        }
+    }
+    await new Promise((resolve, reject) => {
+        proc.on('close', () => resolve());
+        proc.on('error', reject);
+    });
+    return jobs;
 }
 function parseLines(lines) {
     return lines.split('\n')
@@ -91145,7 +91184,7 @@ async function instantiate(file, attribute, root, system) {
         return parseLines(drvPaths);
     }
     catch (e) {
-        external_assert_(e instanceof Object && "stderr" in e);
+        assert(e instanceof Object && "stderr" in e);
         throw e.stderr;
     }
 }
@@ -91178,6 +91217,7 @@ async function push(name, paths) {
 }
 
 ;// CONCATENATED MODULE: ./lib/main.js
+
 
 
 
@@ -91279,20 +91319,12 @@ class BuildGraph {
     }
 }
 async function main_instantiate(nixFile, rootAttribute, drvDir, system, parallelism = 4) {
-    const attrs = await listAttrs(nixFile, rootAttribute);
+    const jobs = await evalJobs(nixFile, rootAttribute);
     const queue = new PQueue({ concurrency: parallelism });
-    return await queue.addAll(attrs.map(attr => async () => {
+    return await queue.addAll(jobs.map(job => async () => {
+        const attr = job.attr;
         try {
-            core.debug(`evaluating: ${attr}`);
-            const drvPaths = await instantiate(nixFile, attr, external_path_.join(drvDir, attr), system);
-            if (drvPaths.length !== 1) {
-                return {
-                    attr,
-                    status: 'error',
-                    error: new Error(`evaluation produced ${drvPaths.length} derivations`)
-                };
-            }
-            const drvPath = await external_fs_.promises.realpath(drvPaths[0]);
+            const drvPath = await external_fs_.promises.realpath(job.drvPath);
             const references = new Set(await getReferences(drvPath));
             return {
                 status: 'success',
@@ -91304,7 +91336,7 @@ async function main_instantiate(nixFile, rootAttribute, drvDir, system, parallel
             };
         }
         catch (error) {
-            core.debug(`${attr} failed to evaluate`);
+            core.warning(`${job.attr} failed to evaluate`);
             if (typeof error === 'string') {
                 return {
                     attr,
@@ -91411,7 +91443,9 @@ async function run() {
         const cachedFailures = [];
         const dependencyFailures = [];
         const errors = [];
-        core.info("evaluating packages...");
+        core.info("installing nix-eval-jobs...");
+        (0,external_child_process_.execSync)("nix-env --install --file default.nix -A nix-eval-jobs");
+        core.info(`evaluating packages in ${rootAttribute}...`);
         const evalResults = await main_instantiate(nixFile, rootAttribute, drvDir, system, evalJobs);
         const derivations = new Map();
         for (const r of evalResults) {
