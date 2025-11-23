@@ -213,6 +213,7 @@ type BuildResult = BuildSuccess | BuildCachedSuccess | BuildFailure | BuildCache
 async function build(drvPath: string, resultDir: string, cachixCache: string, cacheDir: string): Promise<BuildResult> {
   const cacheKey = "failed-" + path.basename(drvPath, ".drv");
 
+  core.info(`checking ${drvPath}...`)
   try {
     if (await nix.isDrvCached(drvPath)) {
       core.debug(`found cached: ${drvPath}`)
@@ -242,7 +243,7 @@ async function build(drvPath: string, resultDir: string, cachixCache: string, ca
   }
 
   try {
-    core.debug(`building: ${drvPath}`)
+    core.info(`building: ${drvPath}`)
 
     const resultPath = path.join(resultDir, path.basename(drvPath, ".drv"))
     const outputs = await nix.realize(drvPath, resultPath)
