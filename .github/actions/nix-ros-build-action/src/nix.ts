@@ -3,6 +3,8 @@ import assert from 'assert'
 import * as childProcess from 'child_process'
 import fetch from 'node-fetch'
 import * as util from 'util'
+import readline from 'readline';
+import { Readable } from 'stream';
 
 // Don't use @actions/exec because we don't want these commands to be printed
 // to the log
@@ -17,6 +19,56 @@ export async function listAttrs(
     `with (import (./. + "/${file}") {}); builtins.attrNames (${parentAttr})`
   ])
   return JSON.parse(stdout).map((a: string) => `${parentAttr}.${a}`)
+}
+
+interface EvalJob {
+  attr: string,
+  drvPath: string,
+}
+
+async function* readLinesAsync(stream: Readable): AsyncGenerator<string> {
+  const rl = readline.createInterface({
+    input: stream,
+    crlfDelay: Infinity
+  });
+
+  for await (const line of rl) {
+    yield line;
+  }
+}
+
+export async function evalJobs(
+  file: string,
+  parentAttr: string
+): Promise<EvalJob[]> {
+  const proc = childProcess.spawn('nix-eval-jobs', [
+    '--gc-roots-dir', 'gcroot', file, '--select', `pkgs: pkgs.${parentAttr}`
+  ], {
+    // Ignore stderr to prevent infinite blocking on full pipe
+    stdio: ['inherit', 'pipe', 'ignore']
+  })
+
+  const jobs: EvalJob[] = [];
+
+  // Read lines asynchronously, because the output can be bigger that
+  // max. stdout buffer size
+  for await (const line of readLinesAsync(proc.stdout)) {
+    if (line.trim()) {
+      try {
+        const parsed = JSON.parse(line);
+        jobs.push(parsed);
+      } catch (error) {
+        console.error('Failed to parse:', line, error);
+      }
+    }
+  }
+
+  await new Promise<void>((resolve, reject) => {
+    proc.on('close', () => resolve());
+    proc.on('error', reject);
+  });
+
+  return jobs;
 }
 
 function parseLines(lines: string): string[] {

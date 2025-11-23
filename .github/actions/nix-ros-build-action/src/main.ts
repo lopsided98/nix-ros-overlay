@@ -7,6 +7,7 @@ import PQueue from 'p-queue'
 import * as path from 'path'
 import * as cachix from './cachix.js'
 import * as nix from './nix.js'
+import { execSync } from 'child_process'
 
 
 interface BuildGraphNode {
@@ -141,22 +142,14 @@ type EvalResult = EvalSuccess | EvalFailure | EvalError;
 
 
 async function instantiate(nixFile: string, rootAttribute: string, drvDir: string, system?: string, parallelism = 4): Promise<EvalResult[]> {
-  const attrs = await nix.listAttrs(nixFile, rootAttribute)
+  const jobs = await nix.evalJobs(nixFile, rootAttribute)
 
   const queue = new PQueue({ concurrency: parallelism })
 
-  return await queue.addAll(attrs.map(attr => async () => {
+  return await queue.addAll(jobs.map(job => async () => {
+    const attr = job.attr
     try {
-      core.debug(`evaluating: ${attr}`)
-      const drvPaths = await nix.instantiate(nixFile, attr, path.join(drvDir, attr), system)
-      if (drvPaths.length !== 1) {
-        return {
-          attr,
-          status: 'error' as const,
-          error: new Error(`evaluation produced ${drvPaths.length} derivations`)
-        }
-      }
-      const drvPath = await fs.promises.realpath(drvPaths[0])
+      const drvPath = await fs.promises.realpath(job.drvPath)
 
       const references = new Set(await nix.getReferences(drvPath));
 
@@ -169,7 +162,7 @@ async function instantiate(nixFile: string, rootAttribute: string, drvDir: strin
         }
       }
     } catch (error: unknown) {
-      core.debug(`${attr} failed to evaluate`)
+      core.warning(`${job.attr} failed to evaluate`)
       if (typeof error === 'string') {
         return {
           attr,
@@ -346,7 +339,10 @@ async function run() {
     const dependencyFailures: DependencyFailureResult[] = []
     const errors: ErrorResult[] = []
 
-    core.info("evaluating packages...");
+    core.info("installing nix-eval-jobs...");
+    execSync("nix-env --install --file default.nix -A nix-eval-jobs");
+
+    core.info(`evaluating packages in ${rootAttribute}...`);
     const evalResults = await instantiate(nixFile, rootAttribute, drvDir, system, evalJobs)
     const derivations: Map<string, Derivation> = new Map()
     for (const r of evalResults) {
