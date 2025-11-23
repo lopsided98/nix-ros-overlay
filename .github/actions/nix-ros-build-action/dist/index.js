@@ -91356,6 +91356,7 @@ async function main_instantiate(nixFile, rootAttribute, drvDir, system, parallel
 }
 async function build(drvPath, resultDir, cachixCache, cacheDir) {
     const cacheKey = "failed-" + external_path_.basename(drvPath, ".drv");
+    core.info(`checking ${drvPath}...`);
     try {
         if (await isDrvCached(drvPath)) {
             core.debug(`found cached: ${drvPath}`);
@@ -91385,7 +91386,7 @@ async function build(drvPath, resultDir, cachixCache, cacheDir) {
         core.warning(`failed to query failed build cache for ${drvPath}: ${e}`);
     }
     try {
-        core.debug(`building: ${drvPath}`);
+        core.info(`building: ${drvPath}`);
         const resultPath = external_path_.join(resultDir, external_path_.basename(drvPath, ".drv"));
         const outputs = await realize(drvPath, resultPath);
         await push(cachixCache, outputs);
