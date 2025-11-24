@@ -91557,7 +91557,7 @@ async function run() {
             cachedSuccesses.forEach((element) => successfulAttrsPush(element.attr));
             (0,external_fs_.writeFileSync)("linkFarm.nix", `
         with import ./. { system = "${system}"; };
-        linkFarmFromDrvs "develop-kilted" (with ${rootAttribute}; [
+        linkFarmFromDrvs "${pinName}" (with ${rootAttribute}; [
           ${successfulAttrs.join("\n")}
         ])`);
             (0,external_child_process_.execSync)(`

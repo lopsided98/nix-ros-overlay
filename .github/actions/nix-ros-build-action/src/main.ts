@@ -467,7 +467,7 @@ async function run() {
 
       writeFileSync("linkFarm.nix", `
         with import ./. { system = "${system}"; };
-        linkFarmFromDrvs "develop-kilted" (with ${rootAttribute}; [
+        linkFarmFromDrvs "${pinName}" (with ${rootAttribute}; [
           ${successfulAttrs.join("\n")}
         ])`)
       execSync(`
