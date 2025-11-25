@@ -91562,7 +91562,6 @@ async function run() {
         ])`);
             (0,external_child_process_.execSync)(`
         linkFarm=$(nix-build --show-trace linkFarm.nix) &&
-        cachix push ${cachixCache} $linkFarm &&
         cachix pin ${cachixCache} ${pinName} $linkFarm &&
         nix-store --query --references $linkFarm | xargs du -shc | sort -h
       `, { stdio: "inherit" });
