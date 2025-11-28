@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-navmap-ros-interfaces";
-  version = "0.2.3-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/kilted/navmap_ros_interfaces/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "14218fe7f8b4c7ddd9fde0eba029e284c408e09c7b7223885656f765d5053a87";
+    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/kilted/navmap_ros_interfaces/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "ad5c08533aee0015da008ed6c543cce280ad14a2371b1b2cd39fe989afc9b888";
   };
 
   buildType = "ament_cmake";

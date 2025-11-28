@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, geometry-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-tf2-eigen";
-  version = "0.45.2-r1";
+  version = "0.45.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_eigen/0.45.2-1.tar.gz";
-    name = "0.45.2-1.tar.gz";
-    sha256 = "8dc1d1156a3478cc0b4f5134711521dedb0dbb3352822644b9ed11682e01bb23";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_eigen/0.45.3-1.tar.gz";
+    name = "0.45.3-1.tar.gz";
+    sha256 = "4cbb286c1648696b582757fe2f4cd00ca2fffd6b337e7810f60b7944515aab04";
   };
 
   buildType = "ament_cmake";

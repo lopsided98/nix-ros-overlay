@@ -5,22 +5,22 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-copyright, ament-flake8, ament-pep257, python3Packages, rclcpp, rclpy, yasmin, yasmin-msgs, yasmin-ros }:
 buildRosPackage {
   pname = "ros-rolling-yasmin-viewer";
-  version = "3.5.1-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_viewer/3.5.1-1.tar.gz";
-    name = "3.5.1-1.tar.gz";
-    sha256 = "0824aa2650fe2136ae1e12184d895c7f5a5f1a63b6a5b2460b68b81c6d3ac648";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_viewer/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "b754b2d43e20b3d59a03bcbf1518cd3b60c244dd6a8a1af1ac203a3b570486b6";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.pytest ];
-  propagatedBuildInputs = [ python3Packages.expiringdict python3Packages.flask python3Packages.waitress rclcpp rclpy yasmin yasmin-msgs yasmin-ros ];
+  propagatedBuildInputs = [ python3Packages.expiringdict python3Packages.flask python3Packages.flask-socketio python3Packages.waitress rclcpp rclpy yasmin yasmin-msgs yasmin-ros ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
     description = "YASMIN viewer for FSM";
-    license = with lib.licenses; [ gpl3 ];
+    license = with lib.licenses; [ "GPL-3.0" ];
   };
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav-msgs, navmap-core, navmap-ros, navmap-ros-interfaces, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-navmap-examples";
-  version = "0.2.5-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/jazzy/navmap_examples/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "5c4f6226f7f845292e40a336d85271256311404796993f4f0a60690d669b95e5";
+    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/jazzy/navmap_examples/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "3ec07e4e3611997ee413037100e75530960fa9d523e9995117d4c124aae6755e";
   };
 
   buildType = "ament_cmake";

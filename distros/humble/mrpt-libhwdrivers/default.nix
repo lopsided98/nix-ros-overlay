@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libgui, mrpt-libmaps, mrpt-libslam, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-humble-mrpt-libhwdrivers";
-  version = "2.15.1-r2";
+  version = "2.15.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/humble/mrpt_libhwdrivers/2.15.1-2.tar.gz";
-    name = "2.15.1-2.tar.gz";
-    sha256 = "da31879cb5ce639e49573bc96d6678bcb3f06e8e2601b85e4fdbda9a7e577e26";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/humble/mrpt_libhwdrivers/2.15.2-1.tar.gz";
+    name = "2.15.2-1.tar.gz";
+    sha256 = "9117fad80e90d682418704dda70300e33b93ecb53bda9c101b68184fb8418f13";
   };
 
   buildType = "cmake";

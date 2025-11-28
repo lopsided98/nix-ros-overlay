@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-python, ament-index-python, launch, launch-ros, xacro }:
 buildRosPackage {
   pname = "ros-humble-simple-launch";
-  version = "1.11.0-r1";
+  version = "1.11.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/simple_launch-release/archive/release/humble/simple_launch/1.11.0-1.tar.gz";
-    name = "1.11.0-1.tar.gz";
-    sha256 = "b280ea2428f1398d5248b773890223a7a6d7c107fc8fcdb6f28191ba7706ffe5";
+    url = "https://github.com/ros2-gbp/simple_launch-release/archive/release/humble/simple_launch/1.11.1-1.tar.gz";
+    name = "1.11.1-1.tar.gz";
+    sha256 = "b9440d628fe580fcec069b365e13198d34eafdb9ca6122f9e5cdff002927c089";
   };
 
   buildType = "ament_cmake";

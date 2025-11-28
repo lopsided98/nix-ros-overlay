@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-foxglove-sdk-vendor";
-  version = "0.1.0-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/jlack1987/foxglove_sdk_vendor-release/archive/release/jazzy/foxglove_sdk_vendor/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "61ff396ecdd09e6b9edcd2b48ccbbebb590f858f53cbce5d664724000ce56b46";
+    url = "https://github.com/jlack1987/foxglove_sdk_vendor-release/archive/release/jazzy/foxglove_sdk_vendor/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "cf851a0eb97970a7e05912026243191cf360425ed48c7847e90bbab1af5205bf";
   };
 
   buildType = "ament_cmake";
