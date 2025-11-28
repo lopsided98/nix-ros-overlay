@@ -3000,6 +3000,10 @@ self: super: {
 
  slider-publisher = self.callPackage ./slider-publisher {};
 
+ smacc2 = self.callPackage ./smacc2 {};
+
+ smacc2-msgs = self.callPackage ./smacc2-msgs {};
+
  smach = self.callPackage ./smach {};
 
  smach-msgs = self.callPackage ./smach-msgs {};
@@ -3519,6 +3523,10 @@ self: super: {
  yasmin = self.callPackage ./yasmin {};
 
  yasmin-demos = self.callPackage ./yasmin-demos {};
+
+ yasmin-editor = self.callPackage ./yasmin-editor {};
+
+ yasmin-factory = self.callPackage ./yasmin-factory {};
 
  yasmin-msgs = self.callPackage ./yasmin-msgs {};
 

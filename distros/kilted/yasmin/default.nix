@@ -5,21 +5,21 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-copyright, ament-flake8, ament-pep257, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-yasmin";
-  version = "3.5.1-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin/3.5.1-1.tar.gz";
-    name = "3.5.1-1.tar.gz";
-    sha256 = "b2e4e5113ae8244ce41cdccc1f5d51fd12d325347b33934d71897e14f88aec06";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "3e696ee8672b26fe24dfe5540e8c5e65f7a99bbaea0ead7ff7915c101713ba7d";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-python ];
+  buildInputs = [ ament-cmake ament-cmake-python python3Packages.pybind11 ];
   checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-copyright ament-flake8 ament-pep257 python3Packages.pytest python3Packages.pytestcov ];
-  nativeBuildInputs = [ ament-cmake ament-cmake-python ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-python python3Packages.pybind11 ];
 
   meta = {
     description = "YASMIN (Yet Another State MachINe) main package";
-    license = with lib.licenses; [ gpl3 ];
+    license = with lib.licenses; [ "GPL-3.0" ];
   };
 }

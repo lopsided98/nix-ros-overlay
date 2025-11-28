@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros-core, fastcdr, fastdds, rcpputils, rcutils, rosidl-dynamic-typesupport }:
 buildRosPackage {
   pname = "ros-kilted-rosidl-dynamic-typesupport-fastrtps";
-  version = "0.4.1-r2";
+  version = "0.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_dynamic_typesupport_fastrtps-release/archive/release/kilted/rosidl_dynamic_typesupport_fastrtps/0.4.1-2.tar.gz";
-    name = "0.4.1-2.tar.gz";
-    sha256 = "ea2aaff65b1b2b94b535a886b6ce4dd4d3e81c4bbf6c286bb3f4e271ff2e50f0";
+    url = "https://github.com/ros2-gbp/rosidl_dynamic_typesupport_fastrtps-release/archive/release/kilted/rosidl_dynamic_typesupport_fastrtps/0.4.2-1.tar.gz";
+    name = "0.4.2-1.tar.gz";
+    sha256 = "babef40f45ce9af5d306f1b2cb576db4abec413d6172541622913c874cdd7dd8";
   };
 
   buildType = "ament_cmake";

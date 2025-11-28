@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, navmap-core, navmap-ros-interfaces, pcl-conversions, pcl-ros, rclcpp, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-navmap-ros";
-  version = "0.2.5-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/jazzy/navmap_ros/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "1b244ab65dbaba61a2c2161c14ae1f84f07e285490952a6c8b5e41eefa3e21a3";
+    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/jazzy/navmap_ros/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "50d881614a021dfc039bd2db840271889baaef5bed6ba21160d868b810e0e413";
   };
 
   buildType = "ament_cmake";

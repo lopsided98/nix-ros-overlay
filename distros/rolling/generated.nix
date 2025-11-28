@@ -2888,6 +2888,10 @@ self: super: {
 
  yasmin-demos = self.callPackage ./yasmin-demos {};
 
+ yasmin-editor = self.callPackage ./yasmin-editor {};
+
+ yasmin-factory = self.callPackage ./yasmin-factory {};
+
  yasmin-msgs = self.callPackage ./yasmin-msgs {};
 
  yasmin-ros = self.callPackage ./yasmin-ros {};

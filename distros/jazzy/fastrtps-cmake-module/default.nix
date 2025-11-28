@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-fastrtps-cmake-module";
-  version = "3.6.2-r1";
+  version = "3.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/jazzy/fastrtps_cmake_module/3.6.2-1.tar.gz";
-    name = "3.6.2-1.tar.gz";
-    sha256 = "e542caeb3dd048e895d53db1f998b151ff2231c909ac2ff39cd9e246f53d2bb1";
+    url = "https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/jazzy/fastrtps_cmake_module/3.6.3-1.tar.gz";
+    name = "3.6.3-1.tar.gz";
+    sha256 = "569b579f4dc368d59d3fad77726483136b6b73d0d06d9809d827bffd0aa3e6ad";
   };
 
   buildType = "ament_cmake";

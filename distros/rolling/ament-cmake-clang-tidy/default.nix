@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-clang-tidy, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test }:
 buildRosPackage {
   pname = "ros-rolling-ament-cmake-clang-tidy";
-  version = "0.20.2-r1";
+  version = "0.20.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_cmake_clang_tidy/0.20.2-1.tar.gz";
-    name = "0.20.2-1.tar.gz";
-    sha256 = "55b7960ce598e32255dbb2e7c73416c793e99e4a68d06207435349e26d85f075";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_cmake_clang_tidy/0.20.3-1.tar.gz";
+    name = "0.20.3-1.tar.gz";
+    sha256 = "c4b46a1f2e061078a4c1616d60cb4db645b51c31ae88e125de54e7681a5eff87";
   };
 
   buildType = "ament_cmake";

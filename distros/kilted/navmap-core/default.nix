@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, gtest }:
 buildRosPackage {
   pname = "ros-kilted-navmap-core";
-  version = "0.2.3-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/kilted/navmap_core/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "b9eae40a602067527c98bb3b1932b7c966d8c888be8b3ecba5f9607abb87ded4";
+    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/kilted/navmap_core/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "7765c5a86903652c8df1162481dd94dce74cafa14ccbdce20b5e2704fdbc156d";
   };
 
   buildType = "ament_cmake";
