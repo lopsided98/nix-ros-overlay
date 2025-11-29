@@ -232,18 +232,6 @@ in {
     fetchgitArgs.hash = "sha256-b02OFUx0BxUA6HN6IaacSg1t3RP4o7NND7X0U635W8U=";
   };
 
-  plotjuggler = rosSuper.plotjuggler.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Fix detection of system-provided liblz4 and zstd
-      (self.fetchpatch {
-        url = "https://github.com/facontidavide/PlotJuggler/pull/1200/commits/b41a4516d42a4806673a2199cacafc6fb1208ce0.patch";
-        hash = "sha256-XqwO+WO16vSStea1/rWwrz8Yp2eMZri42UNrnjEkLH8=";
-      })
-    ];
-  });
-
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     tarSourceArgs.hook = let
       version = "1.79";
