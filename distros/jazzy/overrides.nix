@@ -263,18 +263,6 @@ in {
     '';
   });
 
-  plotjuggler = rosSuper.plotjuggler.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Fix detection of system-provided liblz4 and zstd
-      (self.fetchpatch {
-        url = "https://github.com/facontidavide/PlotJuggler/pull/1200/commits/b41a4516d42a4806673a2199cacafc6fb1208ce0.patch";
-        hash = "sha256-XqwO+WO16vSStea1/rWwrz8Yp2eMZri42UNrnjEkLH8=";
-      })
-    ];
-  });
-
   rcutils = rosSuper.rcutils.overrideAttrs ({
     patches ? [], ...
   }: {
