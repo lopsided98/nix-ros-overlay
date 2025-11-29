@@ -297,6 +297,12 @@ in with lib; {
     '';
   });
 
+  plotjuggler = rosSuper.plotjuggler.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+  });
+
   plotjuggler-ros = rosSuper.plotjuggler-ros.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
