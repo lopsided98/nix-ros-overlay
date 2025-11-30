@@ -35,4 +35,12 @@ jobs:
         system: '${{ matrix.system }}'
         eval-jobs: 4
         build-jobs: 2
-        pin-name: ${{ (github.ref_name == 'master' || github.ref_name == 'develop') && format('{0}-{1}-{2}', github.ref_name , matrix.distro, matrix.system) || null }}
+    - name: "Pin built packages in the cache"
+      if: ${{ github.ref_name == 'master' || github.ref_name == 'develop' }}
+      run: |
+        cachixCache=ros
+        pinName=${{ format('{0}-{1}-{2}', github.ref_name , matrix.distro, matrix.system) }}
+        linkFarm=$(nix-build linkFarm.nix --argstr name "$pinName")
+        cachix push $cachixCache $linkFarm
+        cachix pin $cachixCache $pinName $linkFarm
+        nix-store --query --references $linkFarm | xargs du -shc | sort -h

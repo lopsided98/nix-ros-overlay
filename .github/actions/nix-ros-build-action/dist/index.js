@@ -91431,7 +91431,6 @@ async function run() {
         const evalJobs = parseInt(core.getInput('eval-jobs', { required: true }));
         const buildJobs = parseInt(core.getInput('build-jobs', { required: true }));
         const cachixCache = core.getInput('cachix-cache', { required: true });
-        const pinName = core.getInput('pin-name') || undefined;
         const buildDir = "build";
         const drvDir = external_path_.join(buildDir, 'drvs');
         const resultDir = external_path_.join(buildDir, 'results');
@@ -91546,28 +91545,20 @@ async function run() {
         } while (!buildGraph.empty());
         core.endGroup();
         await queue.onIdle();
-        if (pinName) {
-            core.startGroup(`Creating a link farm and pinning as ${pinName}`);
-            const successfulAttrs = [];
-            function successfulAttrsPush(attr) {
-                if (attr != "buildEnv") // buildEnv is a function, not derivation
-                    successfulAttrs.push(attr);
-            }
-            successes.forEach((element) => successfulAttrsPush(element.attr));
-            cachedSuccesses.forEach((element) => successfulAttrsPush(element.attr));
-            (0,external_fs_.writeFileSync)("linkFarm.nix", `
-        with import ./. { system = "${system}"; };
-        linkFarmFromDrvs "${pinName}" (with ${rootAttribute}; [
-          ${successfulAttrs.join("\n")}
-        ])`);
-            (0,external_child_process_.execSync)(`
-        linkFarm=$(nix-build --show-trace linkFarm.nix) &&
-        cachix push ${cachixCache} $linkFarm &&
-        cachix pin ${cachixCache} ${pinName} $linkFarm &&
-        nix-store --query --references $linkFarm | xargs du -shc | sort -h
-      `, { stdio: "inherit" });
-            core.endGroup();
+        core.info(`Creating linkFarm.nix from successful builds`);
+        const successfulAttrs = [];
+        function successfulAttrsPush(attr) {
+            if (attr != "buildEnv") // buildEnv is a function, not derivation
+                successfulAttrs.push(attr);
         }
+        successes.forEach((element) => successfulAttrsPush(element.attr));
+        cachedSuccesses.forEach((element) => successfulAttrsPush(element.attr));
+        (0,external_fs_.writeFileSync)("linkFarm.nix", `
+            { name }:
+            with import ./. { system = "${system}"; };
+            linkFarmFromDrvs name (with ${rootAttribute}; [
+              ${successfulAttrs.join("\n")}
+            ])`);
         core.startGroup("Results");
         core.info(`Successes: ${successes.length}`);
         core.info(`Cached: ${cachedSuccesses.length}`);
