@@ -134,7 +134,12 @@ in {
 
   gz-plugin-vendor = lib.patchAmentVendorGit rosSuper.gz-plugin-vendor { };
 
-  gz-rendering-vendor = lib.patchAmentVendorGit rosSuper.gz-rendering-vendor { };
+  gz-rendering-vendor = (lib.patchAmentVendorGit rosSuper.gz-rendering-vendor { }).overrideAttrs({
+    nativeBuildInputs ? [],
+    ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+  });
 
   gz-sensors-vendor = lib.patchAmentVendorGit rosSuper.gz-sensors-vendor { };
 
