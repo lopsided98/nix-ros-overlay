@@ -385,4 +385,29 @@ in {
       export NIX_ZENOH_OPAQUE_TYPES_CARGO_CONFIG=$PWD/nix-zenoh-opaque-types/.cargo/config.toml
     '';
   });
+
+  gz = rosSelf.buildEnv {
+    name = "gz";
+    paths = with rosSelf; [
+      gz-cmake-vendor
+      gz-common-vendor
+      gz-fuel-tools-vendor
+      gz-gui-vendor
+      gz-launch-vendor
+      gz-math-vendor
+      gz-msgs-vendor
+      gz-physics-vendor
+      gz-plugin-vendor
+      gz-rendering-vendor
+      gz-sensors-vendor
+      gz-sim-vendor
+      gz-tools-vendor
+      gz-transport-vendor
+      gz-utils-vendor
+      sdformat-vendor
+      gz-dartsim-vendor
+      gz-ogre-next-vendor
+      self.qt6.wrapQtAppsHook
+    ];
+  };
 }
