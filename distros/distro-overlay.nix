@@ -262,9 +262,10 @@ let
     });
 
     rqt-gui = rosSuper.rqt-gui.overrideAttrs ({
-      nativeBuildInputs ? [], postFixup ? "", ...
+      buildInputs ? [], nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
+      buildInputs = buildInputs ++ [ self.qt6.qtbase ];
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/bin/rqt"
