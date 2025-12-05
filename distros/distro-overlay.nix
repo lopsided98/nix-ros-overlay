@@ -190,10 +190,10 @@ let
           hash = "sha256-+ou08BZCIhRMDi9GMyAOLmdoGJNZaqLpA7nMszZOFgg=";
         })
       ];
-      propagatedBuildInputs = propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
+      propagatedBuildInputs = self.lib.lists.filter (p: p.name != "pyqt5") (propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
         pyside6
         pyqt6-sip
-      ]);
+      ]));
 
       dontWrapQtApps = true;
 
@@ -253,6 +253,12 @@ let
         wrapQtApp "$out/bin/rqt"
         wrapQtApp "$out/lib/rqt_gui/rqt_gui"
       '';
+    });
+
+    qt-gui= rosSuper.qt-gui.overrideAttrs ({
+      propagatedBuildInputs ? [], ...
+    }: {
+      propagatedBuildInputs = self.lib.lists.filter (p: p.name != "pyqt5") propagatedBuildInputs;
     });
 
     qt-gui-cpp = rosSuper.qt-gui-cpp.overrideAttrs (
