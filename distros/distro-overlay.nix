@@ -206,7 +206,7 @@ let
             "'pyside6' in basename" \
             "'PySide6' == os.path.basename(os.path.dirname(lib_name))"
       '';
-      propagatedBuildInputs = self.lib.lists.filter (p: p.name != "pyqt5") (propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
+      propagatedBuildInputs = self.lib.lists.filter (p: p.pname != "pyqt5") (propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
         pyside6
         pyqt6-sip
         shiboken6
@@ -273,10 +273,10 @@ let
       '';
     });
 
-    qt-gui= rosSuper.qt-gui.overrideAttrs ({
-      propagatedBuildInputs ? [], ...
+    qt-gui = rosSuper.qt-gui.overrideAttrs ({
+      buildInputs ? [], propagatedBuildInputs ? [], ...
     }: {
-      propagatedBuildInputs = self.lib.lists.filter (p: p.name != "pyqt5") propagatedBuildInputs;
+      buildInputs = self.lib.lists.filter (p: p.pname != "pyqt5") buildInputs;
     });
 
     qt-gui-cpp = rosSuper.qt-gui-cpp.overrideAttrs (
