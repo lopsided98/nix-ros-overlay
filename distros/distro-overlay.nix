@@ -193,6 +193,7 @@ let
       propagatedBuildInputs = self.lib.lists.filter (p: p.name != "pyqt5") (propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
         pyside6
         pyqt6-sip
+        shiboken6
       ]));
 
       dontWrapQtApps = true;
