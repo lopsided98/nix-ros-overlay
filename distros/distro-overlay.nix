@@ -170,7 +170,7 @@ let
 
     # Switch to Qt6 for python 3.13
     python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
-      patches ? [], propagatedBuildInputs ? [], ...
+      patches ? [], propagatedBuildInputs ? [], postPatch ? "", ...
     }: {
       patches = patches ++ [
         # ref. https://github.com/ros-visualization/python_qt_binding/pull/143
@@ -190,6 +190,22 @@ let
           hash = "sha256-+ou08BZCIhRMDi9GMyAOLmdoGJNZaqLpA7nMszZOFgg=";
         })
       ];
+      # PySide6 libs are eg. PySide6/QtGui.abi3.so.1, not libpyside6_QtGui.abi3.so
+      postPatch = postPatch + ''
+        substituteInPlace cmake/pyside_config.py \
+          --replace-fail \
+            "return glob if sys.platform == 'win32' else 'lib' + glob" \
+            "return glob" \
+          --replace-fail \
+            "return 'so.*'" \
+            "return 'so*'" \
+          --replace-fail \
+            "'shiboken' in basename" \
+            "'shiboken6' == os.path.basename(os.path.dirname(lib_name))" \
+          --replace-fail \
+            "'pyside6' in basename" \
+            "'PySide6' == os.path.basename(os.path.dirname(lib_name))"
+      '';
       propagatedBuildInputs = self.lib.lists.filter (p: p.name != "pyqt5") (propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
         pyside6
         pyqt6-sip
@@ -266,6 +282,7 @@ let
       {
         patches ? [ ],
         propagatedBuildInputs ? [ ],
+        nativeBuildInputs ? [ ],
         ...
       }:
       {
@@ -285,7 +302,13 @@ let
             stripLen = 1;
           })
         ];
-        propagatedBuildInputs = propagatedBuildInputs ++ [ rosSuper.tinyxml2-vendor ];
+        nativeBuildInputs = nativeBuildInputs ++ [ self.breakpointHook ];
+        propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.tinyxml2-vendor ]
+        ++ (with rosSelf.pythonPackages; [
+          pyside6
+          pyqt6-sip
+          shiboken6
+        ]);
       }
     );
 
