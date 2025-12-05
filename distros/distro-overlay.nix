@@ -289,9 +289,10 @@ let
     );
 
     rqt-image-view = rosSuper.rqt-image-view.overrideAttrs ({
-      nativeBuildInputs ? [], postFixup ? "", ...
+      buildInputs ? [], nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
+      buildInputs = super.lib.lists.filter (p: p.pname != "qtbase") buildInputs;
       nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_image_view/rqt_image_view"
