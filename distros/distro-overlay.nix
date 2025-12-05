@@ -424,6 +424,14 @@ let
       '';
     });
 
+    rviz-imu-plugin = rosSuper.rviz-imu-plugin.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      postPatch = postPatch + ''
+        substituteInPlace CMakeLists.txt --replace-fail "Qt5" "Qt6"
+      '';
+    });
+
     # Use rtabmap derivation from nixpkgs, but with the source from ROS.
     rtabmap = self.rtabmap.overrideAttrs ({
       propagatedBuildInputs ? [], ...
