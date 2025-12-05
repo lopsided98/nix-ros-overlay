@@ -103,7 +103,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/joint_state_publisher_gui/joint_state_publisher_gui"
       '';
@@ -120,7 +120,7 @@ let
       postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/mapviz/mapviz"
       '';
@@ -162,7 +162,7 @@ let
       nativeBuildInputs ? [], ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = ''
         wrapQtApp "$out/lib/plotjuggler/plotjuggler"
       '';
@@ -227,7 +227,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/bin/rqt_bag"
         wrapQtApp "$out/lib/rqt_bag/rqt_bag"
@@ -238,7 +238,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_console/rqt_console"
       '';
@@ -248,7 +248,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_graph/rqt_graph"
         if [[ -e "$out/bin/rqt_graph" ]]; then
@@ -265,7 +265,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/bin/rqt"
         wrapQtApp "$out/lib/rqt_gui/rqt_gui"
@@ -317,7 +317,7 @@ let
     }: {
       dontWrapQtApps = false;
       buildInputs = super.lib.lists.filter (p: p.pname != "qtbase") buildInputs;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_image_view/rqt_image_view"
       '';
@@ -327,7 +327,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_msg/rqt_msg"
       '';
@@ -337,7 +337,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_plot/rqt_plot"
       '';
@@ -347,7 +347,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_publisher/rqt_publisher"
       '';
@@ -357,7 +357,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_py_console/rqt_py_console"
       '';
@@ -367,7 +367,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_reconfigure/rqt_reconfigure"
       '';
@@ -377,7 +377,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_robot_monitor/rqt_robot_monitor"
       '';
@@ -387,7 +387,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_service_caller/rqt_service_caller"
       '';
@@ -397,7 +397,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_shell/rqt_shell"
       '';
@@ -407,7 +407,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_srv/rqt_srv"
       '';
@@ -417,7 +417,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_topic/rqt_topic"
       '';
@@ -445,7 +445,7 @@ let
       nativeBuildInputs ? [], ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = ''
         wrapQtApp "$out/lib/turtlesim/turtlesim_node"
       '';
