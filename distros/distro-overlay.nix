@@ -255,6 +255,33 @@ let
       '';
     });
 
+    qt-gui-cpp = rosSuper.qt-gui-cpp.overrideAttrs (
+      {
+        patches ? [ ],
+        propagatedBuildInputs ? [ ],
+        ...
+      }:
+      {
+        patches = patches ++ [
+          # ref. https://github.com/ros-visualization/qt_gui_core/pull/309, just to allow the other patch to apply
+          (self.fetchpatch {
+            url = "https://github.com/ros-visualization/qt_gui_core/commit/d07b80eac7657fe56b6581e94fa67b91056715a2.patch";
+            hash = "sha256-99nUTiYqUm6R+YmM0hfk3+C3uyzHqmW8b8xkb+oM6TY=";
+            stripLen = 1;
+            revert = true;
+          })
+          # Qt 5 -> 6
+          # ref. https://github.com/ros-visualization/qt_gui_core/pull/293
+          (self.fetchpatch {
+            url = "https://github.com/ros-visualization/qt_gui_core/commit/21941697c5584dc73968a8b50c51df2aef929562.patch";
+            hash = "sha256-4MO4X0AyK9X7UsVBxVosR9bx+62tZgXgJ3a6n2q5E1A=";
+            stripLen = 1;
+          })
+        ];
+        propagatedBuildInputs = propagatedBuildInputs ++ [ rosSuper.tinyxml2-vendor ];
+      }
+    );
+
     rqt-image-view = rosSuper.rqt-image-view.overrideAttrs ({
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
