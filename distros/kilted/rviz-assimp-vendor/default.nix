@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-vendor-package, ament-cmake-xmllint, ament-lint-auto, assimp }:
 buildRosPackage {
   pname = "ros-kilted-rviz-assimp-vendor";
-  version = "15.0.9-r1";
+  version = "15.0.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/kilted/rviz_assimp_vendor/15.0.9-1.tar.gz";
-    name = "15.0.9-1.tar.gz";
-    sha256 = "264378b167495dae0c87e7cb9aeec14c70ea47ea551e7ded3c1c17c97f88197f";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/kilted/rviz_assimp_vendor/15.0.10-1.tar.gz";
+    name = "15.0.10-1.tar.gz";
+    sha256 = "48b01da8c184b37508bcfd95b625d2d3c8986e5ca42bcc250496ff552511260e";
   };
 
   buildType = "ament_cmake";

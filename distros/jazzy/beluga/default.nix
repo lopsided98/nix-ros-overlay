@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, clang, cmake, eigen, gbenchmark, gmock, gtest, hdf5, onetbb, range-v3, sophus }:
 buildRosPackage {
   pname = "ros-jazzy-beluga";
-  version = "2.0.2-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/beluga-release/archive/release/jazzy/beluga/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "021bebc15169e87cdb83043b9ad3db7226c33ccfa63d85d60b39f546b59daabf";
+    url = "https://github.com/ros2-gbp/beluga-release/archive/release/jazzy/beluga/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "98edbe4fc0d184e41fc24d811fb1de4c97ed0116b8a54d055a1569a741b03972";
   };
 
   buildType = "cmake";

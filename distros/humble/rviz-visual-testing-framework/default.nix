@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, qt5, rcutils, rviz-common }:
 buildRosPackage {
   pname = "ros-humble-rviz-visual-testing-framework";
-  version = "11.2.23-r1";
+  version = "11.2.24-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/humble/rviz_visual_testing_framework/11.2.23-1.tar.gz";
-    name = "11.2.23-1.tar.gz";
-    sha256 = "2def727bdf6c73323501303b7eae5fb2bb462f92705f920ef52d1164bbe2b97b";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/humble/rviz_visual_testing_framework/11.2.24-1.tar.gz";
+    name = "11.2.24-1.tar.gz";
+    sha256 = "2188365c55e45869b62cf5772a12918ea90e224e49475eecf31e263a1de9648b";
   };
 
   buildType = "ament_cmake";

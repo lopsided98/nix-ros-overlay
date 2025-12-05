@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, backward-ros, fmt, generate-parameter-library, launch-ros, launch-testing-ament-cmake, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-jazzy-joint-limits";
-  version = "4.39.2-r1";
+  version = "4.40.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/joint_limits/4.39.2-1.tar.gz";
-    name = "4.39.2-1.tar.gz";
-    sha256 = "96f0f62c67449ce14bfee9808b5b7a4db150fac34891c0b8fb6712fae4cc3894";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/joint_limits/4.40.0-1.tar.gz";
+    name = "4.40.0-1.tar.gz";
+    sha256 = "7ddb1bb37d5b3168cb1a45b66f34b609bddf86bdabf8d30ede8bb0f529f6e5ab";
   };
 
   buildType = "ament_cmake";

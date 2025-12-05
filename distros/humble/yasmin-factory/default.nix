@@ -2,22 +2,22 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, class-loader, pluginlib, python3, python3Packages, rclcpp, tinyxml2-vendor, yasmin, yasmin-viewer }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, class-loader, pluginlib, python3, python3Packages, rclcpp, tinyxml2-vendor, yasmin, yasmin-viewer }:
 buildRosPackage {
   pname = "ros-humble-yasmin-factory";
-  version = "4.0.0-r1";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_factory/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "d4d89076be7ac7f211b28f896deca6c5be11f083d6bff16709deb505782c135e";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_factory/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "55bad53dfeaca26f35e489fd4d0f54d7923733f24d6db1aedc994a617f951020";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake class-loader pluginlib python3Packages.pybind11 ];
+  buildInputs = [ ament-cmake ament-cmake-python ];
   checkInputs = [ ament-cmake-gtest ament-cmake-pytest ];
-  propagatedBuildInputs = [ python3 python3Packages.lxml rclcpp tinyxml2-vendor yasmin yasmin-viewer ];
-  nativeBuildInputs = [ ament-cmake class-loader pluginlib python3Packages.pybind11 ];
+  propagatedBuildInputs = [ class-loader pluginlib python3 python3Packages.lxml python3Packages.pybind11 rclcpp tinyxml2-vendor yasmin yasmin-viewer ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
     description = "YASMIN factory to create FSMs from XML files";

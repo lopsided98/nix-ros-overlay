@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-interface, controller-manager, eigen, generate-parameter-library, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-kilted-omni-wheel-drive-controller";
-  version = "5.9.0-r1";
+  version = "5.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/omni_wheel_drive_controller/5.9.0-1.tar.gz";
-    name = "5.9.0-1.tar.gz";
-    sha256 = "b43f2efd9a149f7d7a5cb7cb7b64e5adb18118e94745b65fcc3c572d2200b8c9";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/omni_wheel_drive_controller/5.10.0-1.tar.gz";
+    name = "5.10.0-1.tar.gz";
+    sha256 = "bd793ed38643367b628bd477fc39ab059eb9a87b02c3bfd522d95cd0b5aa5d0b";
   };
 
   buildType = "ament_cmake";
