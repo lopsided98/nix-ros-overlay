@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, example-interfaces, geometry-msgs, rclcpp, rclcpp-action, rcpputils, ros-babel-fish-test-msgs, rosidl-runtime-cpp, rosidl-typesupport-cpp, rosidl-typesupport-introspection-cpp, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ros-babel-fish";
-  version = "2.25.11-r1";
+  version = "2.25.111-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_babel_fish-release/archive/release/jazzy/ros_babel_fish/2.25.11-1.tar.gz";
-    name = "2.25.11-1.tar.gz";
-    sha256 = "58dc7e95e70325f2a4ca512364014c38f4a3e982e0309422149c17203cfdc4c2";
+    url = "https://github.com/ros2-gbp/ros_babel_fish-release/archive/release/jazzy/ros_babel_fish/2.25.111-1.tar.gz";
+    name = "2.25.111-1.tar.gz";
+    sha256 = "f4b42550d149c6c138254716e3e1240d34721ac151090238f62bc61d2709bd5d";
   };
 
   buildType = "ament_cmake";

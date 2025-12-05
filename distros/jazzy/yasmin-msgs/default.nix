@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-jazzy-yasmin-msgs";
-  version = "4.0.0-r1";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/jazzy/yasmin_msgs/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "ad42003a378fdf4778ef5edc4e736d60dd92e7bbf1447a43c48c5308fab2223c";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/jazzy/yasmin_msgs/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "8c4fc1cd768acfc9a97941588322b9c04fb7d8b80a623f56ac1091be8cd07151";
   };
 
   buildType = "ament_cmake";

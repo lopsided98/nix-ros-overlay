@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-manager, forward-command-controller, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-rolling-effort-controllers";
-  version = "6.0.0-r1";
+  version = "6.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/effort_controllers/6.0.0-1.tar.gz";
-    name = "6.0.0-1.tar.gz";
-    sha256 = "54f3274d066c55da44a6f631e8d283cdd2a2ee9de33a10da5ea9686f9aba9f57";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/effort_controllers/6.1.0-1.tar.gz";
+    name = "6.1.0-1.tar.gz";
+    sha256 = "d52e41dcdd01499f5b34fb7ec2b6f2e23bde04792f730d6bf35b94d6cf8a8113";
   };
 
   buildType = "ament_cmake";

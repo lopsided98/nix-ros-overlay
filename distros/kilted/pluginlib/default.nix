@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, class-loader, rcpputils, rcutils, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-kilted-pluginlib";
-  version = "5.6.1-r1";
+  version = "5.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/kilted/pluginlib/5.6.1-1.tar.gz";
-    name = "5.6.1-1.tar.gz";
-    sha256 = "8fec449b7379734ff6a49ede53dc2b20ce1c78d9d730a83116b219cfc77c26b0";
+    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/kilted/pluginlib/5.6.2-1.tar.gz";
+    name = "5.6.2-1.tar.gz";
+    sha256 = "b4e808ef13b1ee5aead09af5911a6160c6c75b6c727684c5791792f98a64b143";
   };
 
   buildType = "ament_cmake";

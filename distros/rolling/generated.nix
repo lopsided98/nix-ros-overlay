@@ -380,6 +380,8 @@ self: super: {
 
  clips-vendor = self.callPackage ./clips-vendor {};
 
+ cm-topic-hardware-component = self.callPackage ./cm-topic-hardware-component {};
+
  cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
 
  coal = self.callPackage ./coal {};

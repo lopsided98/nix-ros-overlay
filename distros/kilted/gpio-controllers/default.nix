@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-kilted-gpio-controllers";
-  version = "5.9.0-r1";
+  version = "5.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/gpio_controllers/5.9.0-1.tar.gz";
-    name = "5.9.0-1.tar.gz";
-    sha256 = "189a390c90d69d8f751bd6cf1c3d24ed4af6aae3666d6c82f8e7609e0fdef84e";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/gpio_controllers/5.10.0-1.tar.gz";
+    name = "5.10.0-1.tar.gz";
+    sha256 = "25df2a55e276f6c5b4f5897825077510c2d675b59e30a9e357d7abe06413e8b5";
   };
 
   buildType = "ament_cmake";

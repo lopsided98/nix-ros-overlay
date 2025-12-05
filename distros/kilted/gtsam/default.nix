@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, onetbb }:
 buildRosPackage {
   pname = "ros-kilted-gtsam";
-  version = "4.3.0-r3";
+  version = "4.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gtsam-release/archive/release/kilted/gtsam/4.3.0-3.tar.gz";
-    name = "4.3.0-3.tar.gz";
-    sha256 = "fcf6033907ed5813c2ee1de3c3b43a770bd96ba1a3438ea9809374d296284f1a";
+    url = "https://github.com/ros2-gbp/gtsam-release/archive/release/kilted/gtsam/4.3.0-2.tar.gz";
+    name = "4.3.0-2.tar.gz";
+    sha256 = "fdce2fdc1e8be1078beea7ed904af18786f764d9c65bafd973f16c7a551f70be";
   };
 
   buildType = "cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "gtsam";
-    license = with lib.licenses; [ bsd3 bsd3 bsd3 mpl20 asl20 mpl20 ];
+    license = with lib.licenses; [ bsd3 bsd3 bsd3 mpl20 mit asl20 mpl20 ];
   };
 }

@@ -460,6 +460,8 @@ self: super: {
 
  cm-executors = self.callPackage ./cm-executors {};
 
+ cm-topic-hardware-component = self.callPackage ./cm-topic-hardware-component {};
+
  cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
 
  coal = self.callPackage ./coal {};
@@ -577,8 +579,6 @@ self: super: {
  data-tamer-cpp = self.callPackage ./data-tamer-cpp {};
 
  data-tamer-msgs = self.callPackage ./data-tamer-msgs {};
-
- data-tamer-tools = self.callPackage ./data-tamer-tools {};
 
  dataspeed-can = self.callPackage ./dataspeed-can {};
 
@@ -1011,8 +1011,6 @@ self: super: {
  foxglove-compressed-video-transport = self.callPackage ./foxglove-compressed-video-transport {};
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
-
- foxglove-sdk-vendor = self.callPackage ./foxglove-sdk-vendor {};
 
  frame-editor = self.callPackage ./frame-editor {};
 
@@ -2928,17 +2926,23 @@ self: super: {
 
  scenario-execution-coverage = self.callPackage ./scenario-execution-coverage {};
 
+ scenario-execution-dataops = self.callPackage ./scenario-execution-dataops {};
+
  scenario-execution-gazebo = self.callPackage ./scenario-execution-gazebo {};
 
  scenario-execution-interfaces = self.callPackage ./scenario-execution-interfaces {};
 
  scenario-execution-nav2 = self.callPackage ./scenario-execution-nav2 {};
 
+ scenario-execution-network = self.callPackage ./scenario-execution-network {};
+
  scenario-execution-os = self.callPackage ./scenario-execution-os {};
 
  scenario-execution-ros = self.callPackage ./scenario-execution-ros {};
 
  scenario-execution-rviz = self.callPackage ./scenario-execution-rviz {};
+
+ scenario-execution-sim = self.callPackage ./scenario-execution-sim {};
 
  scenario-execution-x11 = self.callPackage ./scenario-execution-x11 {};
 

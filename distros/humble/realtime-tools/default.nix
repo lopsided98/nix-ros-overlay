@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, boost, libcap, lifecycle-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, test-msgs }:
 buildRosPackage {
   pname = "ros-humble-realtime-tools";
-  version = "2.14.1-r1";
+  version = "2.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/humble/realtime_tools/2.14.1-1.tar.gz";
-    name = "2.14.1-1.tar.gz";
-    sha256 = "0125618e1901a96dfabdbe4c763c66a2f5e27467b707657bfd176663ec00e321";
+    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/humble/realtime_tools/2.15.0-1.tar.gz";
+    name = "2.15.0-1.tar.gz";
+    sha256 = "fcf1f8543ce90edb1771b55cbf3cc9c2c64c1f9a2779ee3e42fd3d4e6e37f91d";
   };
 
   buildType = "ament_cmake";

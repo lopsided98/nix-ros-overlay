@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, lifecycle-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-controller-manager-msgs";
-  version = "6.0.2-r1";
+  version = "6.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/controller_manager_msgs/6.0.2-1.tar.gz";
-    name = "6.0.2-1.tar.gz";
-    sha256 = "eed38fa5d847ea2329c95d0f6766e1b160246a53c12dfed5b888bf3acb8ef6ba";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/controller_manager_msgs/6.1.0-1.tar.gz";
+    name = "6.1.0-1.tar.gz";
+    sha256 = "791bc716f1c3e395cf556802746569a2f19fc4aa6231c59245a0bb336469134f";
   };
 
   buildType = "ament_cmake";

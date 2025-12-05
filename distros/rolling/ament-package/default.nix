@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-ament-package";
-  version = "0.18.1-r1";
+  version = "0.18.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_package-release/archive/release/rolling/ament_package/0.18.1-1.tar.gz";
-    name = "0.18.1-1.tar.gz";
-    sha256 = "528ea33281a3445f1d72b2eebda819f98c890116e3e7efe49fb8e7505490213f";
+    url = "https://github.com/ros2-gbp/ament_package-release/archive/release/rolling/ament_package/0.18.2-1.tar.gz";
+    name = "0.18.2-1.tar.gz";
+    sha256 = "c62f833ac4f4b0e13af6e45932023447281fff58de1042f08fdc36d44c79c09c";
   };
 
   buildType = "ament_python";
   checkInputs = [ python3Packages.flake8 python3Packages.pytest ];
-  propagatedBuildInputs = [ python3Packages.importlib-metadata python3Packages.importlib-resources python3Packages.setuptools ];
+  propagatedBuildInputs = [ python3Packages.setuptools ];
   nativeBuildInputs = [ python3Packages.setuptools ];
 
   meta = {

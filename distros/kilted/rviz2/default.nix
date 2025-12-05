@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, geometry-msgs, python3, python3Packages, qt5, rclcpp, rviz-common, rviz-default-plugins, rviz-ogre-vendor, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-rviz2";
-  version = "15.0.9-r1";
+  version = "15.0.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/kilted/rviz2/15.0.9-1.tar.gz";
-    name = "15.0.9-1.tar.gz";
-    sha256 = "d8c7ee0fce759c8485e7f6515bdd645eab7a4dc1080eb6d3c15bda9a1882c767";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/kilted/rviz2/15.0.10-1.tar.gz";
+    name = "15.0.10-1.tar.gz";
+    sha256 = "856c63790e20487d925fae93df788c23375aa7cac8160326be4586987eed9a0c";
   };
 
   buildType = "ament_cmake";

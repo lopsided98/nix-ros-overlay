@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-steering-controller, admittance-controller, ament-cmake, bicycle-steering-controller, chained-filter-controller, diff-drive-controller, effort-controllers, force-torque-sensor-broadcaster, forward-command-controller, gpio-controllers, gps-sensor-broadcaster, imu-sensor-broadcaster, joint-state-broadcaster, joint-trajectory-controller, mecanum-drive-controller, motion-primitives-controllers, omni-wheel-drive-controller, parallel-gripper-controller, pid-controller, pose-broadcaster, position-controllers, range-sensor-broadcaster, steering-controllers-library, tricycle-controller, tricycle-steering-controller, velocity-controllers }:
 buildRosPackage {
   pname = "ros-rolling-ros2-controllers";
-  version = "6.0.0-r1";
+  version = "6.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/ros2_controllers/6.0.0-1.tar.gz";
-    name = "6.0.0-1.tar.gz";
-    sha256 = "65dc6fe5c901b3a0e7e99e6b1df88531e65494ae17ae85bc23528b18cdec507b";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/ros2_controllers/6.1.0-1.tar.gz";
+    name = "6.1.0-1.tar.gz";
+    sha256 = "09ac38863551dfc6638e18f1b2c38505831bec3666aeea211cfe6b7e917ab8ff";
   };
 
   buildType = "ament_cmake";

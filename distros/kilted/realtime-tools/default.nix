@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, boost, libcap, lifecycle-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, ros2-control-cmake, test-msgs }:
 buildRosPackage {
   pname = "ros-kilted-realtime-tools";
-  version = "4.7.0-r1";
+  version = "4.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/kilted/realtime_tools/4.7.0-1.tar.gz";
-    name = "4.7.0-1.tar.gz";
-    sha256 = "ad820ce9885bb465f4e6880587a8bb820aecf2598e72b12ee210ea2c08df1fd1";
+    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/kilted/realtime_tools/4.7.1-1.tar.gz";
+    name = "4.7.1-1.tar.gz";
+    sha256 = "edab15a3c6f5c9e5edd268d9b3e1f0a2140c00c3c67bff4d7ce0fa96831258a7";
   };
 
   buildType = "ament_cmake";

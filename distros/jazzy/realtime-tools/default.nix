@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, boost, libcap, lifecycle-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, ros2-control-cmake, test-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-realtime-tools";
-  version = "3.10.0-r1";
+  version = "3.10.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/jazzy/realtime_tools/3.10.0-1.tar.gz";
-    name = "3.10.0-1.tar.gz";
-    sha256 = "ccaa1a029e2d1a508484bcb560983440249caf49b2f5e10fbd6a4d93e583e096";
+    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/jazzy/realtime_tools/3.10.1-1.tar.gz";
+    name = "3.10.1-1.tar.gz";
+    sha256 = "d03bb4f99562fd47a806a1655c07ea47cb28bcb10eb661a820da371fad422b31";
   };
 
   buildType = "ament_cmake";

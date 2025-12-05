@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages, rclpy, ros-environment, yasmin, yasmin-factory }:
 buildRosPackage {
   pname = "ros-rolling-yasmin-editor";
-  version = "4.0.0-r1";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_editor/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "0df78b509f0e02dd9ff5f3042617a2aa5a6a4d9fd9b7d40dd7b1cdf4e0498b18";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_editor/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "70eba621069cf6e07a763775a1bdc5ee60c72d34726ca1be6f1b6629199fdd4e";
   };
 
   buildType = "ament_cmake";

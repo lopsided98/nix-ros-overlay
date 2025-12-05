@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-test-assets, std-srvs, tf2, tf2-geometry-msgs, tf2-msgs }:
 buildRosPackage {
   pname = "ros-humble-mecanum-drive-controller";
-  version = "2.50.2-r1";
+  version = "2.51.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/mecanum_drive_controller/2.50.2-1.tar.gz";
-    name = "2.50.2-1.tar.gz";
-    sha256 = "cf881ac16bf008e73c3e770fab0bda6fee163faf241018db834dc7682b92fcee";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/mecanum_drive_controller/2.51.0-1.tar.gz";
+    name = "2.51.0-1.tar.gz";
+    sha256 = "6a5f483c6b48093a745f99e1f64cdde657085b7dccffb1e75fc65c3c96fab7d3";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake }:
 buildRosPackage {
   pname = "ros-kilted-ur-client-library";
-  version = "2.6.0-r1";
+  version = "2.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/kilted/ur_client_library/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "9fea8f4287e7813c61e0a47c89c68ab7ffd9e025d06465dab8798a6b0e3a5726";
+    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/kilted/ur_client_library/2.6.1-1.tar.gz";
+    name = "2.6.1-1.tar.gz";
+    sha256 = "517e5b1cfa47324543f0ac419b753f348dde51ce8cdccf60d2d98cc70d086f9e";
   };
 
   buildType = "cmake";

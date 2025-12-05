@@ -682,6 +682,10 @@ self: super: {
 
  clearpath-viz = self.callPackage ./clearpath-viz {};
 
+ cloudini-lib = self.callPackage ./cloudini-lib {};
+
+ cloudini-ros = self.callPackage ./cloudini-ros {};
+
  cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
 
  coal = self.callPackage ./coal {};
@@ -1419,6 +1423,8 @@ self: super: {
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
 
  hey5-description = self.callPackage ./hey5-description {};
+
+ hitch-estimation-apriltag-array = self.callPackage ./hitch-estimation-apriltag-array {};
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 

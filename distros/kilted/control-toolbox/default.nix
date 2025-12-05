@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, eigen, filters, fmt, generate-parameter-library, geometry-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools, ros2-control-cmake, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-control-toolbox";
-  version = "5.8.2-r1";
+  version = "5.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/control_toolbox-release/archive/release/kilted/control_toolbox/5.8.2-1.tar.gz";
-    name = "5.8.2-1.tar.gz";
-    sha256 = "56cea36d733d0c03c67eae27fb6dd69d1ae09fc56e977f4fed0b9ea4acaead76";
+    url = "https://github.com/ros2-gbp/control_toolbox-release/archive/release/kilted/control_toolbox/5.8.3-1.tar.gz";
+    name = "5.8.3-1.tar.gz";
+    sha256 = "bee52e9bc4a77c72dbf9678784b9277be6398524b2d780269188496017c7fbd8";
   };
 
   buildType = "ament_cmake";

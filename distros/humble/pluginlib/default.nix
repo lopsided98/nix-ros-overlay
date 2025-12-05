@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, class-loader, rcpputils, rcutils, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-humble-pluginlib";
-  version = "5.1.2-r1";
+  version = "5.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/humble/pluginlib/5.1.2-1.tar.gz";
-    name = "5.1.2-1.tar.gz";
-    sha256 = "f01330c9a0f1ff205746df6251a463ad10473596f7e63ed0e04e295eb2261242";
+    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/humble/pluginlib/5.1.3-1.tar.gz";
+    name = "5.1.3-1.tar.gz";
+    sha256 = "2c608558344713d34d8ade06d1c2e11ea82d68965263a22b42673f2993d00fd6";
   };
 
   buildType = "ament_cmake";

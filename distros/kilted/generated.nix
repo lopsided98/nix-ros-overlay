@@ -272,6 +272,12 @@ self: super: {
 
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
 
+ beluga = self.callPackage ./beluga {};
+
+ beluga-amcl = self.callPackage ./beluga-amcl {};
+
+ beluga-ros = self.callPackage ./beluga-ros {};
+
  bicycle-steering-controller = self.callPackage ./bicycle-steering-controller {};
 
  bno055 = self.callPackage ./bno055 {};
@@ -353,6 +359,8 @@ self: super: {
  clips-executive = self.callPackage ./clips-executive {};
 
  clips-vendor = self.callPackage ./clips-vendor {};
+
+ cm-topic-hardware-component = self.callPackage ./cm-topic-hardware-component {};
 
  cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, geometry-msgs, nav-msgs, nlohmann_json, onetbb, rclcpp, rclcpp-components, rosbag2-cpp, rosbag2-storage, sensor-msgs, sophus, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-rko-lio";
-  version = "0.1.6-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rko_lio-release/archive/release/humble/rko_lio/0.1.6-1.tar.gz";
-    name = "0.1.6-1.tar.gz";
-    sha256 = "9917b3ac4a951daa59a735002fdbd3004f692cf7369e3862d6b5e3ca7a6fec1a";
+    url = "https://github.com/ros2-gbp/rko_lio-release/archive/release/humble/rko_lio/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "7774a3417f89d72f69d4ef0620dbf32e1955aa8a0693b355e985c6c9be0109d5";
   };
 
   buildType = "ament_cmake";

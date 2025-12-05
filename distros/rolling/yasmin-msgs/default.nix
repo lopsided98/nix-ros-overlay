@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-rolling-yasmin-msgs";
-  version = "4.0.0-r1";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_msgs/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "71cb4563c045ada7d458f62bde63872fa664b6e04ad2c75e4980ffb71eec6cb5";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_msgs/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "ce5738479bebdf5e187c728c7bd8b1004bff6cd82a48e66e5f7abd840e11b226";
   };
 
   buildType = "ament_cmake";
