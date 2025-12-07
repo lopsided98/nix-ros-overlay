@@ -91141,8 +91141,8 @@ async function isDrvCachedOn(drvPath, cacheUrl) {
     return (await Promise.all(outputs.map(output => isValidBinaryCachePath(output, cacheUrl))))
         .every(valid => valid);
 }
-async function isDrvCached(drvPath) {
-    const outputs = await getOutputs(drvPath);
+async function isDrvCached(drvPath, excludeOutputs) {
+    const outputs = (await getOutputs(drvPath)).filter((output) => !excludeOutputs.test(output));
     const substituters = await getSubstituters();
     try {
         return await Promise.any(substituters.map(async (s) => {
@@ -91357,10 +91357,13 @@ async function main_instantiate(nixFile, rootAttribute, drvDir, system, parallel
         }
     }));
 }
+// Regular expression matching debug output of a derivation. We don't
+// want the debug output to pollute the binary cache and consume its limited capacity.
+const excludedOutput = new RegExp("-debug$");
 async function build(drvPath, resultDir, cachixCache, cacheDir) {
     const cacheKey = "failed-" + external_path_.basename(drvPath, ".drv");
     try {
-        if (await isDrvCached(drvPath)) {
+        if (await isDrvCached(drvPath, excludedOutput)) { // skip debug output
             core.info(`found cached: ${drvPath}`);
             return {
                 status: 'cached_success',
@@ -91391,7 +91394,7 @@ async function build(drvPath, resultDir, cachixCache, cacheDir) {
         core.info(`building: ${drvPath}`);
         const resultPath = external_path_.join(resultDir, external_path_.basename(drvPath, ".drv"));
         const outputs = await realize(drvPath, resultPath);
-        await push(cachixCache, outputs);
+        await push(cachixCache, outputs.filter((output) => !excludedOutput.test(output)));
         return {
             status: 'success',
             drvPath
@@ -91554,11 +91557,11 @@ async function run() {
         successes.forEach((element) => successfulAttrsPush(element.attr));
         cachedSuccesses.forEach((element) => successfulAttrsPush(element.attr));
         (0,external_fs_.writeFileSync)("linkFarm.nix", `
-            { name }:
-            with import ./. { system = "${system}"; };
-            linkFarmFromDrvs name (with ${rootAttribute}; [
-              ${successfulAttrs.join("\n")}
-            ])`);
+      { name }:
+      with import ./. { system = "${system}"; };
+      linkFarmFromDrvs name (with ${rootAttribute}; [
+        ${successfulAttrs.join("\n")}
+      ])`);
         core.startGroup("Results");
         core.info(`Successes: ${successes.length}`);
         core.info(`Cached: ${cachedSuccesses.length}`);

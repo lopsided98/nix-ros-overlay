@@ -214,11 +214,15 @@ interface BuildError {
 
 type BuildResult = BuildSuccess | BuildCachedSuccess | BuildFailure | BuildCachedFailure | BuildError;
 
+// Regular expression matching debug output of a derivation. We don't
+// want the debug output to pollute the binary cache and consume its limited capacity.
+const excludedOutput = new RegExp("-debug$")
+
 async function build(drvPath: string, resultDir: string, cachixCache: string, cacheDir: string): Promise<BuildResult> {
   const cacheKey = "failed-" + path.basename(drvPath, ".drv");
 
   try {
-    if (await nix.isDrvCached(drvPath)) {
+    if (await nix.isDrvCached(drvPath, excludedOutput)) { // skip debug output
       core.info(`found cached: ${drvPath}`)
       return {
         status: 'cached_success',
@@ -251,7 +255,7 @@ async function build(drvPath: string, resultDir: string, cachixCache: string, ca
     const resultPath = path.join(resultDir, path.basename(drvPath, ".drv"))
     const outputs = await nix.realize(drvPath, resultPath)
 
-    await cachix.push(cachixCache, outputs)
+    await cachix.push(cachixCache, outputs.filter((output) => !excludedOutput.test(output)))
 
     return {
       status: 'success',
