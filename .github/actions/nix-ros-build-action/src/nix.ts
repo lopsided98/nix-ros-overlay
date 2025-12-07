@@ -139,8 +139,9 @@ export async function isDrvCachedOn(
 
 export async function isDrvCached(
   drvPath: string,
+  excludeOutputs: RegExp,
 ): Promise<boolean> {
-  const outputs = await getOutputs(drvPath)
+  const outputs = (await getOutputs(drvPath)).filter((output) => !excludeOutputs.test(output))
   const substituters = await getSubstituters();
 
   try {
