@@ -4,6 +4,20 @@ self:
 rosSelf: rosSuper: let
   inherit (rosSelf) lib;
 in {
+  battery-state-broadcaster = rosSuper.battery-state-broadcaster.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = [
+      # Fix compile error with latest realtime_tools
+      # https://github.com/ipa320/ros_battery_monitoring/pull/12
+      (self.fetchpatch2 {
+        url = "https://github.com/ipa320/ros_battery_monitoring/commit/b9ee8af78e8154b95fc4b8202c53320466c4c69b.patch";
+        hash = "sha256-QXcJRw+ByI1p4D5GhWC7tELUu7RW2Yecn8ZqbhXTsVg=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   clips-vendor = lib.patchAmentVendorFile rosSuper.clips-vendor { };
 
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
