@@ -312,16 +312,7 @@ let
       }
     );
 
-    rqt-image-view = rosSuper.rqt-image-view.overrideAttrs ({
-      buildInputs ? [], nativeBuildInputs ? [], postFixup ? "", ...
-    }: {
-      dontWrapQtApps = false;
-      buildInputs = super.lib.lists.filter (p: p.pname != "qtbase") buildInputs;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
-      postFixup = postFixup + ''
-        wrapQtApp "$out/lib/rqt_image_view/rqt_image_view"
-      '';
-    });
+    rqt-image-view = self.hello;  # porting to Qt6 require some work, ignoring for now
 
     rqt-msg = rosSuper.rqt-msg.overrideAttrs ({
       nativeBuildInputs ? [], postFixup ? "", ...
