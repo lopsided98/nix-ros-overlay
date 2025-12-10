@@ -190,21 +190,20 @@ let
           hash = "sha256-+ou08BZCIhRMDi9GMyAOLmdoGJNZaqLpA7nMszZOFgg=";
         })
       ];
-      # PySide6 libs are eg. PySide6/QtGui.abi3.so.1, not libpyside6_QtGui.abi3.so
+      # avoid cmake/pyside_config.py and use the proper PySide6Config.cmake
       postPatch = postPatch + ''
-        substituteInPlace cmake/pyside_config.py \
+        substituteInPlace cmake/shiboken_helper.cmake \
+          --replace-fail "Shiboken2" "Shiboken6" \
+          --replace-fail "shiboken2" "shiboken6" \
+          --replace-fail "PySide2" "PySide6" \
+          --replace-fail "pyside2" "pyside6" \
+          --replace-fail "Shiboken6::shiboken6" "${rosSelf.pythonPackages.shiboken6}/bin/shiboken6" \
           --replace-fail \
-            "return glob if sys.platform == 'win32' else 'lib' + glob" \
-            "return glob" \
+            "/usr/local/lib/python3.12/dist-packages/PySide6/typesystems/" \
+            "${rosSelf.pythonPackages.pyside6}/share/PySide6/typesystems" \
           --replace-fail \
-            "return 'so.*'" \
-            "return 'so*'" \
-          --replace-fail \
-            "'shiboken' in basename" \
-            "'shiboken6' == os.path.basename(os.path.dirname(lib_name))" \
-          --replace-fail \
-            "'pyside6' in basename" \
-            "'PySide6' == os.path.basename(os.path.dirname(lib_name))"
+            "if($""{QT_VERSION_MAJOR} GREATER \"5\")" \
+            "if(FALSE)"
       '';
       propagatedBuildInputs = self.lib.lists.filter (p: p.pname != "pyqt5") (propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
         pyside6
