@@ -159,10 +159,11 @@ let
         pyqt5 = pyPrev.pyqt5.overrideAttrs ({
           patches ? [], ...
         }: {
-          patches = patches ++ [ (self.fetchpatch {
-            url = "https://aur.archlinux.org/cgit/aur.git/plain/restore-sip4-support.patch?h=python-pyqt5-sip4&id=6e712e6c588d550a1a6f83c1b37c2c9135aae6ba";
-            hash = "sha256-NfMe/EK1Uj88S82xZSm+A6js3PK9mlgsaci/kinlsy8=";
-          }) ];
+          patches = patches ++ [
+            # Vendored from AUR because direct download is blocked by Anubis (#763)
+            # https://aur.archlinux.org/cgit/aur.git/plain/restore-sip4-support.patch?h=python-pyqt5-sip4&id=6e712e6c588d550a1a6f83c1b37c2c9135aae6ba
+            ./restore-sip4-support.patch
+          ];
         });
       });
     }).overrideAttrs ({
