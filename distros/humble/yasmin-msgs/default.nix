@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-humble-yasmin-msgs";
-  version = "4.0.2-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_msgs/4.0.2-1.tar.gz";
-    name = "4.0.2-1.tar.gz";
-    sha256 = "1a4e7197e495679fd410c8e2fb9c4856eaea261a35c0629014cf2ca50943ef5d";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_msgs/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "8c575d8558dd09d90e5e317c923205b20cd23e9ce171d38cab271c81251abcdf";
   };
 
   buildType = "ament_cmake";

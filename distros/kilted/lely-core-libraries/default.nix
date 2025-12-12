@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, autoconf, automake, git, libtool, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-lely-core-libraries";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/kilted/lely_core_libraries/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "b7b56da077dce2faf1bdae101d5493c44c9099b635c788c22a0333a1cfdf6738";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/kilted/lely_core_libraries/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "19479ca0f3a7bfaa66135fa6bacd1b6841ea787465f4db32d0c4928ce753a972";
   };
 
   buildType = "ament_cmake";

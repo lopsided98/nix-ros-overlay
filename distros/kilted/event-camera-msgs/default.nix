@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-event-camera-msgs";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/event_camera_msgs-release/archive/release/kilted/event_camera_msgs/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "9eb89b1c813b71fc7e6f697d1a30bb5cdc6c398bf0540c50f1390e5ea9da75b9";
+    url = "https://github.com/ros2-gbp/event_camera_msgs-release/archive/release/kilted/event_camera_msgs/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "fda7ea397bc3da4eb08ad29c8c9efe31517fe5f730d8840df2a78976c2dea43d";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "messages for event based cameras";
-    license = with lib.licenses; [ "Apache-2" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

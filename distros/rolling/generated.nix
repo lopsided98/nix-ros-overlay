@@ -178,8 +178,6 @@ self: super: {
 
  apriltag-tools = self.callPackage ./apriltag-tools {};
 
- ardrone-sdk = self.callPackage ./ardrone-sdk {};
-
  ardrone-sumo = self.callPackage ./ardrone-sumo {};
 
  aruco = self.callPackage ./aruco {};
@@ -381,8 +379,6 @@ self: super: {
  clips-vendor = self.callPackage ./clips-vendor {};
 
  cm-topic-hardware-component = self.callPackage ./cm-topic-hardware-component {};
-
- cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
 
  coal = self.callPackage ./coal {};
 
@@ -628,6 +624,8 @@ self: super: {
 
  event-camera-renderer = self.callPackage ./event-camera-renderer {};
 
+ event-camera-tools = self.callPackage ./event-camera-tools {};
+
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-async-client = self.callPackage ./examples-rclcpp-async-client {};
@@ -708,6 +706,8 @@ self: super: {
 
  ffw-teleop = self.callPackage ./ffw-teleop {};
 
+ fibar-lib = self.callPackage ./fibar-lib {};
+
  fields2cover = self.callPackage ./fields2cover {};
 
  filters = self.callPackage ./filters {};
@@ -762,6 +762,8 @@ self: super: {
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
+ frequency-cam = self.callPackage ./frequency-cam {};
+
  fuse = self.callPackage ./fuse {};
 
  fuse-constraints = self.callPackage ./fuse-constraints {};
@@ -794,13 +796,7 @@ self: super: {
 
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
- generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
-
- generate-parameter-library-example-external = self.callPackage ./generate-parameter-library-example-external {};
-
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
-
- generate-parameter-module-example = self.callPackage ./generate-parameter-module-example {};
 
  geodesy = self.callPackage ./geodesy {};
 
@@ -1638,6 +1634,8 @@ self: super: {
 
  performance-test-fixture = self.callPackage ./performance-test-fixture {};
 
+ persist-parameter-server = self.callPackage ./persist-parameter-server {};
+
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
 
  phidgets-analog-inputs = self.callPackage ./phidgets-analog-inputs {};
@@ -1761,6 +1759,8 @@ self: super: {
  python-orocos-kdl-vendor = self.callPackage ./python-orocos-kdl-vendor {};
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
+
+ qml6-ros2-plugin = self.callPackage ./qml6-ros2-plugin {};
 
  qml-ros2-plugin = self.callPackage ./qml-ros2-plugin {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-clang-format, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-xmllint, event-camera-msgs, openeb-vendor, rclcpp, rclcpp-components, ros-environment, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-metavision-driver";
-  version = "2.0.1-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/metavision_driver-release/archive/release/humble/metavision_driver/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "192f0492aaabaf24cdf5a0ff2ce9a32f0b865748d8cc6da0a42744b06b617347";
+    url = "https://github.com/ros2-gbp/metavision_driver-release/archive/release/humble/metavision_driver/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "97eb662902caed0c8b7cef5a840f410d93637c9020f7c4786dfefbd9436e5040";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "ROS1 and ROS2 drivers for metavision based event cameras";
-    license = with lib.licenses; [ "Apache-2" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

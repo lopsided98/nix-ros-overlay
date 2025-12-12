@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-google-benchmark, ament-cmake-gtest, ament-index-cpp, angles, assimp, boost, bullet, common-interfaces, eigen, eigen-stl-containers, eigen3-cmake-module, fcl, generate-parameter-library, geometric-shapes, geometry-msgs, google-benchmark-vendor, kdl-parser, launch-testing-ament-cmake, moveit-common, moveit-msgs, moveit-resources-panda-moveit-config, moveit-resources-pr2-description, octomap, octomap-msgs, orocos-kdl-vendor, osqp-vendor, pkg-config, pluginlib, random-numbers, rcl-interfaces, rclcpp, rclpy, rsl, ruckig, sensor-msgs, shape-msgs, srdfdom, std-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-kdl, trajectory-msgs, urdf, urdfdom, urdfdom-headers, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-core";
-  version = "2.12.3-r1";
+  version = "2.12.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_core/2.12.3-1.tar.gz";
-    name = "2.12.3-1.tar.gz";
-    sha256 = "de8efb31a88adb92dd83c68844c7f74dcdc0ededdb5721d222cc503318671c3b";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_core/2.12.4-1.tar.gz";
+    name = "2.12.4-1.tar.gz";
+    sha256 = "5093ee6d52e7509c701e75f9b56dfe5b27fa17dc3a4057979a3402df68edba69";
   };
 
   buildType = "ament_cmake";

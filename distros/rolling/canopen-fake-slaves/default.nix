@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, lely-core-libraries, lifecycle-msgs, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-rolling-canopen-fake-slaves";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/rolling/canopen_fake_slaves/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "af06fed5631faf1d41898df2b70bdc4b10f1b391de4bba6a23a0c646470f8187";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/rolling/canopen_fake_slaves/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "a9178b5025ef86144fc0a607af2e3fec9c286a82852f5f0109bc2391b73668ab";
   };
 
   buildType = "ament_cmake";

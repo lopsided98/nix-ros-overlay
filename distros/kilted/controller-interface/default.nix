@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, fmt, geometry-msgs, hardware-interface, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-controller-interface";
-  version = "5.9.0-r1";
+  version = "5.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/controller_interface/5.9.0-1.tar.gz";
-    name = "5.9.0-1.tar.gz";
-    sha256 = "4d7357650bbcfbbcb5b6d7fe3aff7f9094ef61b4596fdea5d129e35218e4cc11";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/controller_interface/5.10.0-1.tar.gz";
+    name = "5.10.0-1.tar.gz";
+    sha256 = "dc7825c5b6924802046923b8db249e1de8af60c344744ff9c612e19d1dfbe2f7";
   };
 
   buildType = "ament_cmake";

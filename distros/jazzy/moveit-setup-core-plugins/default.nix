@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, moveit-ros-visualization, moveit-setup-framework, pluginlib, rclcpp, srdfdom, urdf }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-setup-core-plugins";
-  version = "2.12.3-r1";
+  version = "2.12.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_setup_core_plugins/2.12.3-1.tar.gz";
-    name = "2.12.3-1.tar.gz";
-    sha256 = "4cf37fa1ac6507f839f303ba180e06e9de8ea507c9608fc899449ec6ed0b005e";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_setup_core_plugins/2.12.4-1.tar.gz";
+    name = "2.12.4-1.tar.gz";
+    sha256 = "e6ccb9189389913cad14321b7b0ed254aa767f34c69189d180964a2d0bf495b8";
   };
 
   buildType = "ament_cmake";

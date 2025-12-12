@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-clang-format, ament-cmake-ros, ament-lint-auto, ament-lint-common, event-camera-codecs, event-camera-msgs, image-transport, rclcpp, rclcpp-components, ros-environment, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-event-camera-renderer";
-  version = "2.0.1-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/event_camera_renderer-release/archive/release/kilted/event_camera_renderer/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "4775981ab5675950028f02abc82520db5b0ce6c35350da1c356d1824015afc47";
+    url = "https://github.com/ros2-gbp/event_camera_renderer-release/archive/release/kilted/event_camera_renderer/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "7a1202f53c256e7603677155c70fcbda0fcd0bfeb4e88ed447fcdce6daef8ba7";
   };
 
   buildType = "ament_cmake";

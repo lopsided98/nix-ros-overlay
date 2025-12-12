@@ -2,20 +2,19 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-copyright, ament-flake8, ament-pep257, python3Packages, rclcpp, rclpy, yasmin, yasmin-msgs, yasmin-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages, rclcpp, rclpy, yasmin, yasmin-msgs, yasmin-ros }:
 buildRosPackage {
   pname = "ros-kilted-yasmin-viewer";
-  version = "4.0.2-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_viewer/4.0.2-1.tar.gz";
-    name = "4.0.2-1.tar.gz";
-    sha256 = "9391b67b3f7bf5f5d6293a3edb673594a60fd3deef24f54d4fe256f5f09990d4";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_viewer/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "d518346d2153812a4256b6df3226ba82d4128ab77e008301fcec613a9a324543";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.pytest ];
   propagatedBuildInputs = [ python3Packages.expiringdict python3Packages.flask python3Packages.flask-socketio python3Packages.waitress rclcpp rclpy yasmin yasmin-msgs yasmin-ros ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 

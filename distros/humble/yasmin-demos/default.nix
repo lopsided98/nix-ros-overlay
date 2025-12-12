@@ -2,20 +2,19 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-copyright, ament-flake8, ament-pep257, example-interfaces, nav-msgs, pluginlib, python3Packages, rclcpp, rclcpp-action, rclpy, ros-environment, yasmin, yasmin-factory, yasmin-ros, yasmin-viewer }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, example-interfaces, nav-msgs, pluginlib, rclcpp, rclcpp-action, rclpy, ros-environment, yasmin, yasmin-factory, yasmin-ros, yasmin-viewer }:
 buildRosPackage {
   pname = "ros-humble-yasmin-demos";
-  version = "4.0.2-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_demos/4.0.2-1.tar.gz";
-    name = "4.0.2-1.tar.gz";
-    sha256 = "4277bf45959eb37005c5fa9dd0f846f50e327491389394189c2f578ab66c54ac";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_demos/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "a077d7c6eb04935312f3adf21fbb70e070b432615a4edc322f496b11b440aeb1";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ros-environment ];
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.pytest ];
   propagatedBuildInputs = [ example-interfaces nav-msgs pluginlib rclcpp rclcpp-action rclpy yasmin yasmin-factory yasmin-ros yasmin-viewer ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 

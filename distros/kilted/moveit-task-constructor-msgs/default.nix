@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-msgs, rosidl-default-generators, rosidl-default-runtime, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-moveit-task-constructor-msgs";
-  version = "0.1.4-r1";
+  version = "0.1.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/kilted/moveit_task_constructor_msgs/0.1.4-1.tar.gz";
-    name = "0.1.4-1.tar.gz";
-    sha256 = "5ec8083722760618ade41c9942a7f86725990d5be1d2fce9a7e2d1a055356e8d";
+    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/kilted/moveit_task_constructor_msgs/0.1.4-2.tar.gz";
+    name = "0.1.4-2.tar.gz";
+    sha256 = "def1eed67bea817b1a7d27aa0531f1446ae02e4b70b98be62e165efe5d031013";
   };
 
   buildType = "ament_cmake";
