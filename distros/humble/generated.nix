@@ -212,6 +212,8 @@ self: super: {
 
  apriltag-tools = self.callPackage ./apriltag-tools {};
 
+ ardrone-sumo = self.callPackage ./ardrone-sumo {};
+
  aruco = self.callPackage ./aruco {};
 
  aruco-markers = self.callPackage ./aruco-markers {};
@@ -686,8 +688,6 @@ self: super: {
 
  cloudini-ros = self.callPackage ./cloudini-ros {};
 
- cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
-
  coal = self.callPackage ./coal {};
 
  cob-actions = self.callPackage ./cob-actions {};
@@ -1106,6 +1106,8 @@ self: super: {
 
  event-camera-renderer = self.callPackage ./event-camera-renderer {};
 
+ event-camera-tools = self.callPackage ./event-camera-tools {};
+
  ewellix-description = self.callPackage ./ewellix-description {};
 
  ewellix-interfaces = self.callPackage ./ewellix-interfaces {};
@@ -1185,6 +1187,8 @@ self: super: {
  ffmpeg-image-transport-msgs = self.callPackage ./ffmpeg-image-transport-msgs {};
 
  ffmpeg-image-transport-tools = self.callPackage ./ffmpeg-image-transport-tools {};
+
+ fibar-lib = self.callPackage ./fibar-lib {};
 
  fields2cover = self.callPackage ./fields2cover {};
 
@@ -1276,6 +1280,8 @@ self: super: {
 
  franka-semantic-components = self.callPackage ./franka-semantic-components {};
 
+ frequency-cam = self.callPackage ./frequency-cam {};
+
  fri-configuration-controller = self.callPackage ./fri-configuration-controller {};
 
  fri-state-broadcaster = self.callPackage ./fri-state-broadcaster {};
@@ -1324,13 +1330,7 @@ self: super: {
 
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
- generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
-
- generate-parameter-library-example-external = self.callPackage ./generate-parameter-library-example-external {};
-
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
-
- generate-parameter-module-example = self.callPackage ./generate-parameter-module-example {};
 
  geodesy = self.callPackage ./geodesy {};
 
@@ -2478,6 +2478,8 @@ self: super: {
 
  performance-test-fixture = self.callPackage ./performance-test-fixture {};
 
+ persist-parameter-server = self.callPackage ./persist-parameter-server {};
+
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
 
  phidgets-analog-inputs = self.callPackage ./phidgets-analog-inputs {};
@@ -2685,6 +2687,8 @@ self: super: {
  qb-softhand-industry-ros2-control = self.callPackage ./qb-softhand-industry-ros2-control {};
 
  qb-softhand-industry-srvs = self.callPackage ./qb-softhand-industry-srvs {};
+
+ qml6-ros2-plugin = self.callPackage ./qml6-ros2-plugin {};
 
  qml-ros2-plugin = self.callPackage ./qml-ros2-plugin {};
 

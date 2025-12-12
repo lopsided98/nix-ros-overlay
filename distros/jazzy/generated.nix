@@ -182,6 +182,8 @@ self: super: {
 
  apriltag-tools = self.callPackage ./apriltag-tools {};
 
+ ardrone-sumo = self.callPackage ./ardrone-sumo {};
+
  aruco = self.callPackage ./aruco {};
 
  aruco-markers = self.callPackage ./aruco-markers {};
@@ -303,6 +305,8 @@ self: super: {
  battery-state-broadcaster = self.callPackage ./battery-state-broadcaster {};
 
  battery-state-rviz-overlay = self.callPackage ./battery-state-rviz-overlay {};
+
+ bcr-bot = self.callPackage ./bcr-bot {};
 
  beckhoff-ads-bringup = self.callPackage ./beckhoff-ads-bringup {};
 
@@ -461,8 +465,6 @@ self: super: {
  cm-executors = self.callPackage ./cm-executors {};
 
  cm-topic-hardware-component = self.callPackage ./cm-topic-hardware-component {};
-
- cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
 
  coal = self.callPackage ./coal {};
 
@@ -702,6 +704,30 @@ self: super: {
 
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
+ easynav = self.callPackage ./easynav {};
+
+ easynav-common = self.callPackage ./easynav-common {};
+
+ easynav-controller = self.callPackage ./easynav-controller {};
+
+ easynav-core = self.callPackage ./easynav-core {};
+
+ easynav-interfaces = self.callPackage ./easynav-interfaces {};
+
+ easynav-localizer = self.callPackage ./easynav-localizer {};
+
+ easynav-maps-manager = self.callPackage ./easynav-maps-manager {};
+
+ easynav-planner = self.callPackage ./easynav-planner {};
+
+ easynav-sensors = self.callPackage ./easynav-sensors {};
+
+ easynav-support-py = self.callPackage ./easynav-support-py {};
+
+ easynav-system = self.callPackage ./easynav-system {};
+
+ easynav-tools = self.callPackage ./easynav-tools {};
+
  ecl-build = self.callPackage ./ecl-build {};
 
  ecl-command-line = self.callPackage ./ecl-command-line {};
@@ -864,6 +890,14 @@ self: super: {
 
  event-camera-renderer = self.callPackage ./event-camera-renderer {};
 
+ event-camera-tools = self.callPackage ./event-camera-tools {};
+
+ eventdispatch-python = self.callPackage ./eventdispatch-python {};
+
+ eventdispatch-ros2 = self.callPackage ./eventdispatch-ros2 {};
+
+ eventdispatch-ros2-interfaces = self.callPackage ./eventdispatch-ros2-interfaces {};
+
  ewellix-description = self.callPackage ./ewellix-description {};
 
  ewellix-interfaces = self.callPackage ./ewellix-interfaces {};
@@ -958,6 +992,8 @@ self: super: {
 
  ffw-teleop = self.callPackage ./ffw-teleop {};
 
+ fibar-lib = self.callPackage ./fibar-lib {};
+
  fields2cover = self.callPackage ./fields2cover {};
 
  filters = self.callPackage ./filters {};
@@ -1016,6 +1052,8 @@ self: super: {
 
  franka-inria-inverse-dynamics-solver = self.callPackage ./franka-inria-inverse-dynamics-solver {};
 
+ frequency-cam = self.callPackage ./frequency-cam {};
+
  fuse = self.callPackage ./fuse {};
 
  fuse-constraints = self.callPackage ./fuse-constraints {};
@@ -1056,13 +1094,7 @@ self: super: {
 
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
- generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
-
- generate-parameter-library-example-external = self.callPackage ./generate-parameter-library-example-external {};
-
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
-
- generate-parameter-module-example = self.callPackage ./generate-parameter-module-example {};
 
  geodesy = self.callPackage ./geodesy {};
 
@@ -1395,6 +1427,14 @@ self: super: {
  leo-description = self.callPackage ./leo-description {};
 
  leo-desktop = self.callPackage ./leo-desktop {};
+
+ leo-example-follow-aruco-marker = self.callPackage ./leo-example-follow-aruco-marker {};
+
+ leo-example-line-follower = self.callPackage ./leo-example-line-follower {};
+
+ leo-example-object-detection = self.callPackage ./leo-example-object-detection {};
+
+ leo-examples = self.callPackage ./leo-examples {};
 
  leo-filters = self.callPackage ./leo-filters {};
 
@@ -2072,6 +2112,8 @@ self: super: {
 
  performance-test-fixture = self.callPackage ./performance-test-fixture {};
 
+ persist-parameter-server = self.callPackage ./persist-parameter-server {};
+
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
 
  phidgets-analog-inputs = self.callPackage ./phidgets-analog-inputs {};
@@ -2234,6 +2276,8 @@ self: super: {
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
 
+ qml6-ros2-plugin = self.callPackage ./qml6-ros2-plugin {};
+
  qml-ros2-plugin = self.callPackage ./qml-ros2-plugin {};
 
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
@@ -2265,6 +2309,18 @@ self: super: {
  random-numbers = self.callPackage ./random-numbers {};
 
  range-sensor-broadcaster = self.callPackage ./range-sensor-broadcaster {};
+
+ raph = self.callPackage ./raph {};
+
+ raph-bringup = self.callPackage ./raph-bringup {};
+
+ raph-description = self.callPackage ./raph-description {};
+
+ raph-interfaces = self.callPackage ./raph-interfaces {};
+
+ raph-robot = self.callPackage ./raph-robot {};
+
+ raph-teleop = self.callPackage ./raph-teleop {};
 
  raspimouse = self.callPackage ./raspimouse {};
 

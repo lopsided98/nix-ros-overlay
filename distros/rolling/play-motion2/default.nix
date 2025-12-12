@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/play_motion2-release/archive/release/rolling/play_motion2/1.8.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/rolling/play_motion2/1.8.0-1.tar.gz";
     name = "1.8.0-1.tar.gz";
     sha256 = "fd1c5151bb795552309ec4a596435a514ec0b018a84acc4f96c4ce9c26af184e";
   };

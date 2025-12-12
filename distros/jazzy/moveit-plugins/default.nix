@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-simple-controller-manager }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-plugins";
-  version = "2.12.3-r1";
+  version = "2.12.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_plugins/2.12.3-1.tar.gz";
-    name = "2.12.3-1.tar.gz";
-    sha256 = "02ccd163c9a363e469f6091c6e3e0116f198b96dc77f60281e0fabd5dbb6fe98";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_plugins/2.12.4-1.tar.gz";
+    name = "2.12.4-1.tar.gz";
+    sha256 = "549aa96531312c16641ee29ad34a992959bed60532a1ef25cf3b468e248d5a1f";
   };
 
   buildType = "ament_cmake";

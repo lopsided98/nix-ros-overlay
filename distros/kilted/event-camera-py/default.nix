@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-clang-format, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-lint-auto, ament-lint-common, event-camera-codecs, event-camera-msgs, pybind11-vendor, python-cmake-module, python3Packages, rclpy, ros-environment, rosbag2-py, rosbag2-storage-default-plugins, rosbag2-storage-mcap, rosidl-runtime-py, rpyutils }:
 buildRosPackage {
   pname = "ros-kilted-event-camera-py";
-  version = "2.0.1-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/event_camera_py-release/archive/release/kilted/event_camera_py/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "9aa72dd9c600bba880d89dab9a916247e832dbbe690db681638006f6b364e621";
+    url = "https://github.com/ros2-gbp/event_camera_py-release/archive/release/kilted/event_camera_py/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "30488f3323200b9d79357842520c2bb49fd0a81cbd7e9c941673124aba3977b5";
   };
 
   buildType = "ament_cmake";

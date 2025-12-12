@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, geometry-msgs, message-filters, pluginlib, qt5, rclcpp, resource-retriever, rviz-ogre-vendor, rviz-rendering, sensor-msgs, std-msgs, std-srvs, tf2, tf2-ros, tinyxml2-vendor, urdf, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-rviz-common";
-  version = "14.1.17-r1";
+  version = "14.1.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/jazzy/rviz_common/14.1.17-1.tar.gz";
-    name = "14.1.17-1.tar.gz";
-    sha256 = "4e525e1668a1e42fd2171667c57a9b0db3e199d0825e3f000acbdb35cf0ded35";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/jazzy/rviz_common/14.1.18-1.tar.gz";
+    name = "14.1.18-1.tar.gz";
+    sha256 = "827bba53063568902e781575595f19080319fe124aa057729c578bd9e013f637";
   };
 
   buildType = "ament_cmake";

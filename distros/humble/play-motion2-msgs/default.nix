@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/play_motion2-release/archive/release/humble/play_motion2_msgs/1.8.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/humble/play_motion2_msgs/1.8.2-1.tar.gz";
     name = "1.8.2-1.tar.gz";
     sha256 = "e9d1205ca6a39dcc84f8caca2a118fb5017cc1949c66a6b02ab677d2e3e352e5";
   };

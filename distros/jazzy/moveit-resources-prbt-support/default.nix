@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-moveit-resources-prbt-support";
-  version = "2.12.3-r1";
+  version = "2.12.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_resources_prbt_support/2.12.3-1.tar.gz";
-    name = "2.12.3-1.tar.gz";
-    sha256 = "3589b6a6214fa126123b9a7377747a00823c30d98c69919b3c0a3dd0f7caaf85";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/jazzy/moveit_resources_prbt_support/2.12.4-1.tar.gz";
+    name = "2.12.4-1.tar.gz";
+    sha256 = "9b43af66f12e7be42fa8269f695726dc8665f324543de5d203273be15b1b6bee";
   };
 
   buildType = "ament_cmake";

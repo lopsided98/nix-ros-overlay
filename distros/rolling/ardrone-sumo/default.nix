@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ardrone-sdk, cv-bridge, opencv, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ardrone-sumo";
-  version = "1.1.0-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ardrone_ros-release/archive/release/rolling/ardrone_sumo/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "048fd5992bf52bcb259ed952768b336123b01027d7c04ac94b4b1e4418341706";
+    url = "https://github.com/ros2-gbp/ardrone_ros-release/archive/release/rolling/ardrone_sumo/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "51a315f4ebffa209b3363380af1adcbc903f03b488df79c787829034fcded1d4";
   };
 
   buildType = "ament_cmake";

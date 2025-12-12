@@ -362,8 +362,6 @@ self: super: {
 
  cm-topic-hardware-component = self.callPackage ./cm-topic-hardware-component {};
 
- cmake-generate-parameter-module-example = self.callPackage ./cmake-generate-parameter-module-example {};
-
  coal = self.callPackage ./coal {};
 
  cob-actions = self.callPackage ./cob-actions {};
@@ -540,6 +538,30 @@ self: super: {
 
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
+ easynav = self.callPackage ./easynav {};
+
+ easynav-common = self.callPackage ./easynav-common {};
+
+ easynav-controller = self.callPackage ./easynav-controller {};
+
+ easynav-core = self.callPackage ./easynav-core {};
+
+ easynav-interfaces = self.callPackage ./easynav-interfaces {};
+
+ easynav-localizer = self.callPackage ./easynav-localizer {};
+
+ easynav-maps-manager = self.callPackage ./easynav-maps-manager {};
+
+ easynav-planner = self.callPackage ./easynav-planner {};
+
+ easynav-sensors = self.callPackage ./easynav-sensors {};
+
+ easynav-support-py = self.callPackage ./easynav-support-py {};
+
+ easynav-system = self.callPackage ./easynav-system {};
+
+ easynav-tools = self.callPackage ./easynav-tools {};
+
  ecal = self.callPackage ./ecal {};
 
  ecl-build = self.callPackage ./ecl-build {};
@@ -702,6 +724,8 @@ self: super: {
 
  event-camera-renderer = self.callPackage ./event-camera-renderer {};
 
+ event-camera-tools = self.callPackage ./event-camera-tools {};
+
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-async-client = self.callPackage ./examples-rclcpp-async-client {};
@@ -762,6 +786,8 @@ self: super: {
 
  ffmpeg-image-transport-tools = self.callPackage ./ffmpeg-image-transport-tools {};
 
+ fibar-lib = self.callPackage ./fibar-lib {};
+
  fields2cover = self.callPackage ./fields2cover {};
 
  filters = self.callPackage ./filters {};
@@ -816,6 +842,8 @@ self: super: {
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
+ frequency-cam = self.callPackage ./frequency-cam {};
+
  fuse = self.callPackage ./fuse {};
 
  fuse-constraints = self.callPackage ./fuse-constraints {};
@@ -844,13 +872,7 @@ self: super: {
 
  generate-parameter-library = self.callPackage ./generate-parameter-library {};
 
- generate-parameter-library-example = self.callPackage ./generate-parameter-library-example {};
-
- generate-parameter-library-example-external = self.callPackage ./generate-parameter-library-example-external {};
-
  generate-parameter-library-py = self.callPackage ./generate-parameter-library-py {};
-
- generate-parameter-module-example = self.callPackage ./generate-parameter-module-example {};
 
  geodesy = self.callPackage ./geodesy {};
 
@@ -1776,6 +1798,8 @@ self: super: {
 
  performance-test-fixture = self.callPackage ./performance-test-fixture {};
 
+ persist-parameter-server = self.callPackage ./persist-parameter-server {};
+
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
 
  phidgets-analog-inputs = self.callPackage ./phidgets-analog-inputs {};
@@ -1933,6 +1957,8 @@ self: super: {
  python-orocos-kdl-vendor = self.callPackage ./python-orocos-kdl-vendor {};
 
  python-qt-binding = self.callPackage ./python-qt-binding {};
+
+ qml6-ros2-plugin = self.callPackage ./qml6-ros2-plugin {};
 
  qml-ros2-plugin = self.callPackage ./qml-ros2-plugin {};
 

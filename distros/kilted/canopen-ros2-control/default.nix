@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, canopen-402-driver, canopen-core, canopen-proxy-driver, hardware-interface, pluginlib, rclcpp, rclcpp-components, rclcpp-lifecycle, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-kilted-canopen-ros2-control";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/kilted/canopen_ros2_control/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "95637d0c572fdaf05c4e383ddfbbae95f89651ee5b463dd1437870e0b9a8e0bb";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/kilted/canopen_ros2_control/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "03f5a6912804eefd63bec3979b0aeae6e43f467340f914691569aba5ee37a9d7";
   };
 
   buildType = "ament_cmake";

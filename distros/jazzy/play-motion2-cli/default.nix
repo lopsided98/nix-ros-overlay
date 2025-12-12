@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/play_motion2-release/archive/release/jazzy/play_motion2_cli/1.8.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/jazzy/play_motion2_cli/1.8.0-1.tar.gz";
     name = "1.8.0-1.tar.gz";
     sha256 = "fcaab2030506068d2ccf95932280aa867a60261af6b1e01385a9b00cd4c4f3d1";
   };
