@@ -324,6 +324,12 @@ in with lib; {
     };
   });
 
+  qml6-ros2-plugin = rosSuper.qml6-ros2-plugin.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+  });
+
   ros2-ouster = rosSuper.ros2-ouster.overrideAttrs ({
     buildInputs ? [], ...
   }: {
