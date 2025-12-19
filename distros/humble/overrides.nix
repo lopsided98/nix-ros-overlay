@@ -336,19 +336,6 @@ in with lib; {
     buildInputs = buildInputs ++ [ self.jsoncpp self.libpcap ];
   });
 
-  rcutils = rosSuper.rcutils.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Fix linking to libatomic
-      # https://github.com/ros2/rcutils/pull/384
-      (self.fetchpatch {
-        url = "https://github.com/ros2/rcutils/commit/05e7336b2160739915be0e2c4a81710806fd2f9c.patch";
-        hash = "sha256-EiO1AJnhvOk81TzFMP4E8NhB+9ymef2oA7l26FZFb1M=";
-      })
-    ];
-  });
-
   rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
     postPatch ? "", ...
   }: let
