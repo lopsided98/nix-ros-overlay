@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, easynav-common, easynav-controller, easynav-core, easynav-interfaces, easynav-localizer, easynav-maps-manager, easynav-planner, easynav-sensors, easynav-support-py, easynav-system, easynav-tools }:
 buildRosPackage {
   pname = "ros-kilted-easynav";
-  version = "0.3.0-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "656064ecb41d55ffbb6accd0e98abd7202f431fdbfe64d592fd4851ce7b85626";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "27bae0002f9ad6ad4ab68f8fd93524638aed21dc1d741d3ac66c5f82d86f31c5";
   };
 
   buildType = "ament_cmake";

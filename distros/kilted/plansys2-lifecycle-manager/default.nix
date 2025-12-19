@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, lifecycle-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-kilted-plansys2-lifecycle-manager";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/kilted/plansys2_lifecycle_manager/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "b11c926e3b7c9e7a1d98c6b3f917a07cc561322cf3ca9c1195f694271c47a2d7";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/kilted/plansys2_lifecycle_manager/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "9d21441b2cf6bdb98728fa2ac66b78396fa31dfdf5b7e8f8d6c75cd1ce8e4621";
   };
 
   buildType = "ament_cmake";

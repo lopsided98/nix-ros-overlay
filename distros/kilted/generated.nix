@@ -1276,6 +1276,8 @@ self: super: {
 
  mavros = self.callPackage ./mavros {};
 
+ mavros-examples = self.callPackage ./mavros-examples {};
+
  mavros-extras = self.callPackage ./mavros-extras {};
 
  mavros-msgs = self.callPackage ./mavros-msgs {};
@@ -1555,6 +1557,8 @@ self: super: {
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ mujoco-vendor = self.callPackage ./mujoco-vendor {};
 
  multires-image = self.callPackage ./multires-image {};
 

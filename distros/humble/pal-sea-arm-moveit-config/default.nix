@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_sea_arm_moveit_config-release/archive/release/humble/pal_sea_arm_moveit_config/1.0.5-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pal_sea_arm_moveit_config-release/archive/release/humble/pal_sea_arm_moveit_config/1.0.5-1.tar.gz";
     name = "1.0.5-1.tar.gz";
     sha256 = "9d040eb2690675ba576d6c82ae5781595c997cd427df1eaf5deae043ec585f52";
   };

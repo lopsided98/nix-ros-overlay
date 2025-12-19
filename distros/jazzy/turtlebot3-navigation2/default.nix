@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-bringup }:
 buildRosPackage {
   pname = "ros-jazzy-turtlebot3-navigation2";
-  version = "2.3.4-r1";
+  version = "2.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/jazzy/turtlebot3_navigation2/2.3.4-1.tar.gz";
-    name = "2.3.4-1.tar.gz";
-    sha256 = "6a6d08cf5bbea805e88fadeb2dc66b1c785e7427a0c519cf07210608ded8e20d";
+    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/jazzy/turtlebot3_navigation2/2.3.6-1.tar.gz";
+    name = "2.3.6-1.tar.gz";
+    sha256 = "8c44a3cd5896c7592931c6939270fd4a538f15f309392170ff25d3b8f66475f1";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, lifecycle-msgs, pluginlib, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-jazzy-easynav-maps-manager";
-  version = "0.2.0-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/jazzy/easynav_maps_manager/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "b3ed8c5ba93d5ad89cb3ddb0385bb3b27faf70af8a4d6541ea9d2211a9ee3a18";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/jazzy/easynav_maps_manager/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "532806a0a601384d17f3c2a78fedff7ac96b35a133eef4179a0252d3e3ea227f";
   };
 
   buildType = "ament_cmake";

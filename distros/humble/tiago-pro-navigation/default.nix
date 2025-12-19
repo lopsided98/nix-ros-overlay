@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.13.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_pro_navigation-release/archive/release/humble/tiago_pro_navigation/2.13.3-1.tar.gz";
+    url = "https://github.com/ros2-gbp/tiago_pro_navigation-release/archive/release/humble/tiago_pro_navigation/2.13.3-1.tar.gz";
     name = "2.13.3-1.tar.gz";
     sha256 = "d6395bc7f65ca68e64fedb9077773b381ef928b7daffc071f1d5cf9dce6a12d8";
   };

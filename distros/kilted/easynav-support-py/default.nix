@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, builtin-interfaces, easynav-interfaces, geometry-msgs, python3Packages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-easynav-support-py";
-  version = "0.3.0-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_support_py/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "c9bfe8eec323c20fc67365f76f7aadb27209fc1e0b2b2d19b9f8c09f4c05a542";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_support_py/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "305de5192467dc59e0f03be288173488e65709605a6c0fd945670c4bbc2a0593";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-xmllint, ament-lint-auto, cmake, mola-kernel, mrpt-libbase, mrpt-libtclap, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-mola-launcher";
-  version = "2.2.1-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_launcher/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "4caf460c127bae4c4e18f1d0cc060dec3415c762ef5cfc5fe3b2bff37ab67cc5";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_launcher/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "30c03156718455fc62efa3e59cf315fb04dd53a51748c2b977faf9748fbe9b9e";
   };
 
   buildType = "ament_cmake";

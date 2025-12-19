@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, asio, console-bridge, mavlink, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-libmavconn";
-  version = "2.12.0-r1";
+  version = "2.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavros-release/archive/release/kilted/libmavconn/2.12.0-1.tar.gz";
-    name = "2.12.0-1.tar.gz";
-    sha256 = "b392a413a77424a1417bddcdd623b7e010f6ced9143cb96af6760b837647b917";
+    url = "https://github.com/ros2-gbp/mavros-release/archive/release/kilted/libmavconn/2.13.0-1.tar.gz";
+    name = "2.13.0-1.tar.gz";
+    sha256 = "d692aecbdd12f94e2d7a8ec1030d00dee8474215f8200df57a8afb87cc424d79";
   };
 
   buildType = "ament_cmake";

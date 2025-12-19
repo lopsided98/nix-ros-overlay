@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.12.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_pro_simulation-release/archive/release/humble/tiago_pro_gazebo/1.12.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/tiago_pro_simulation-release/archive/release/humble/tiago_pro_gazebo/1.12.2-1.tar.gz";
     name = "1.12.2-1.tar.gz";
     sha256 = "727550f2afb98273f50755d3d082414e8bd1cddcebdc28336d88e2fd341b5402";
   };

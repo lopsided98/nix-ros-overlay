@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, rclpy }:
 buildRosPackage {
   pname = "ros-kilted-turtlebot3-teleop";
-  version = "2.3.4-r1";
+  version = "2.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/kilted/turtlebot3_teleop/2.3.4-1.tar.gz";
-    name = "2.3.4-1.tar.gz";
-    sha256 = "02323c8884981144331cf8ac19d18f0a199f8b35c03a1474d1ef776b6ba232d5";
+    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/kilted/turtlebot3_teleop/2.3.6-1.tar.gz";
+    name = "2.3.6-1.tar.gz";
+    sha256 = "37b53e1e436fd682efb497d988e7b2123b3910ac42c97195785917411973f933";
   };
 
   buildType = "ament_python";

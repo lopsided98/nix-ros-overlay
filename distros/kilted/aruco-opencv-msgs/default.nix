@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-lint-auto, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-aruco-opencv-msgs";
-  version = "6.1.0-r1";
+  version = "6.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aruco_opencv-release/archive/release/kilted/aruco_opencv_msgs/6.1.0-1.tar.gz";
-    name = "6.1.0-1.tar.gz";
-    sha256 = "817e0d74045cec58eca4b238a7402fadf364188318b06b43c71ce769a811bbe1";
+    url = "https://github.com/ros2-gbp/aruco_opencv-release/archive/release/kilted/aruco_opencv_msgs/6.1.1-1.tar.gz";
+    name = "6.1.1-1.tar.gz";
+    sha256 = "6a479a449ee340395e090565c3d4d1edf60d6fef83f07e8ef5bb1210b8d1899d";
   };
 
   buildType = "ament_cmake";

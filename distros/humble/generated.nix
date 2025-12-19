@@ -1842,6 +1842,8 @@ self: super: {
 
  mavros = self.callPackage ./mavros {};
 
+ mavros-examples = self.callPackage ./mavros-examples {};
+
  mavros-extras = self.callPackage ./mavros-extras {};
 
  mavros-msgs = self.callPackage ./mavros-msgs {};
@@ -2136,6 +2138,8 @@ self: super: {
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
+ mujoco-vendor = self.callPackage ./mujoco-vendor {};
+
  multiple-topic-monitor = self.callPackage ./multiple-topic-monitor {};
 
  multires-image = self.callPackage ./multires-image {};
@@ -2315,6 +2319,8 @@ self: super: {
  off-highway-uss = self.callPackage ./off-highway-uss {};
 
  off-highway-uss-msgs = self.callPackage ./off-highway-uss-msgs {};
+
+ olive-interfaces = self.callPackage ./olive-interfaces {};
 
  omni-base-2dnav = self.callPackage ./omni-base-2dnav {};
 

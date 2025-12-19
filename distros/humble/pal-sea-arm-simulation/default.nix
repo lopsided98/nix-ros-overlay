@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_sea_arm_simulation-release/archive/release/humble/pal_sea_arm_simulation/1.0.4-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pal_sea_arm_simulation-release/archive/release/humble/pal_sea_arm_simulation/1.0.4-1.tar.gz";
     name = "1.0.4-1.tar.gz";
     sha256 = "cae0b2fdf6db77685a4018bf327c7693820558ec8ae1c5a4be79bfcd76ca867a";
   };

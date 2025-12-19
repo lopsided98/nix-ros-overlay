@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, plansys2-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-kilted-plansys2-pddl-parser";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/kilted/plansys2_pddl_parser/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "5aa1e75ca493809abcfe011d57b2b6c61688890f4b2dcc8fe2552f04efdfe10e";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/kilted/plansys2_pddl_parser/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "77817137578b82eb2696b0d8fdb82be63d90d48993f66a528f7c48daf301115a";
   };
 
   buildType = "ament_cmake";

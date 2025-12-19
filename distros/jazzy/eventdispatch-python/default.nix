@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-eventdispatch-python";
-  version = "0.2.25-r4";
+  version = "0.2.26-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_eventdispatch-release/archive/release/jazzy/eventdispatch_python/0.2.25-4.tar.gz";
-    name = "0.2.25-4.tar.gz";
-    sha256 = "6c4079a11ed8bfb5eb7d0be878866fdae7a8d3e71cd5d7e75ff7a2487a7c84bf";
+    url = "https://github.com/ros2-gbp/ros2_eventdispatch-release/archive/release/jazzy/eventdispatch_python/0.2.26-1.tar.gz";
+    name = "0.2.26-1.tar.gz";
+    sha256 = "ab688bf9d71998d7e956ca4634e3f54ae178ab715a0758f284fa37aa066accc9";
   };
 
   buildType = "ament_python";

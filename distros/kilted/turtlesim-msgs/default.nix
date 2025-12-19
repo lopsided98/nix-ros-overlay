@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-turtlesim-msgs";
-  version = "1.9.3-r1";
+  version = "1.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_tutorials-release/archive/release/kilted/turtlesim_msgs/1.9.3-1.tar.gz";
-    name = "1.9.3-1.tar.gz";
-    sha256 = "82d34badcf42e422c0e21e43cde74e610e86dd31a63ecffc43d31c75696203f8";
+    url = "https://github.com/ros2-gbp/ros_tutorials-release/archive/release/kilted/turtlesim_msgs/1.9.4-1.tar.gz";
+    name = "1.9.4-1.tar.gz";
+    sha256 = "f1b247dfc2ff53a0b5bf92dac685d1220cfc105de0e09308b654390fedb8eb1c";
   };
 
   buildType = "ament_cmake";

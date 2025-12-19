@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, pcl-conversions, rclcpp, rclcpp-lifecycle, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-easynav-sensors";
-  version = "0.3.0-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_sensors/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "a247d44fa167f89b8dd0c216048c246a9737b97fff7c5fe0daeab07c2547e099";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_sensors/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "1d32d0ca12eedd07a9d840f015f3473eda509d630d39347b34670f95f6cee963";
   };
 
   buildType = "ament_cmake";

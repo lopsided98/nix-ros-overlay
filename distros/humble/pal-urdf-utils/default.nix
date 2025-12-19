@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_urdf_utils-release/archive/release/humble/pal_urdf_utils/2.3.3-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pal_urdf_utils-release/archive/release/humble/pal_urdf_utils/2.3.3-1.tar.gz";
     name = "2.3.3-1.tar.gz";
     sha256 = "49d8f24c7894413630398044b10a3256f40bdf20503b1d8b1626aca93bc2e5a1";
   };

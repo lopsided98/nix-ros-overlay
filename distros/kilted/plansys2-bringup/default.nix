@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, plansys2-domain-expert, plansys2-executor, plansys2-lifecycle-manager, plansys2-planner, plansys2-problem-expert, rclcpp }:
 buildRosPackage {
   pname = "ros-kilted-plansys2-bringup";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/kilted/plansys2_bringup/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "d3e53530c3a6bad644defd9ba242057b14e19595c4165b090a782a2866ad61df";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/kilted/plansys2_bringup/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "c44f29780ea92fd83530e1e70143441385455ce57b1c1a41f99051392171a24a";
   };
 
   buildType = "ament_cmake";

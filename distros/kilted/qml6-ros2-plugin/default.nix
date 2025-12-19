@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, example-interfaces, image-transport, qt6, rclcpp, ros-babel-fish, ros-babel-fish-test-msgs, std-srvs, tf2-ros, yaml-cpp }:
 buildRosPackage {
   pname = "ros-kilted-qml6-ros2-plugin";
-  version = "2.25.121-r1";
+  version = "2.25.122-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qml6_ros2_plugin-release/archive/release/kilted/qml6_ros2_plugin/2.25.121-1.tar.gz";
-    name = "2.25.121-1.tar.gz";
-    sha256 = "09ab405edc40829db7e1ad2f1f1e37d9957c88d67cb3720abf2d8ec3ff403931";
+    url = "https://github.com/ros2-gbp/qml6_ros2_plugin-release/archive/release/kilted/qml6_ros2_plugin/2.25.122-1.tar.gz";
+    name = "2.25.122-1.tar.gz";
+    sha256 = "9ce6d52418c49ab8e8c31346f796063a094df32e1d318d79461e9241f277f783";
   };
 
   buildType = "ament_cmake";

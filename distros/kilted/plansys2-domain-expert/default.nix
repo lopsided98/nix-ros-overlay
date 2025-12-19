@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, lifecycle-msgs, plansys2-core, plansys2-msgs, plansys2-pddl-parser, plansys2-popf-plan-solver, rclcpp, rclcpp-lifecycle, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-plansys2-domain-expert";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/kilted/plansys2_domain_expert/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "911aacf05a229f1cf45f06fba0014a917d856c5b847613310820f558a2fb0721";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/kilted/plansys2_domain_expert/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "63535a3cd8bb704207e32c4b64913bb94ba7132b207a979eec6fe4366a1dacb6";
   };
 
   buildType = "ament_cmake";

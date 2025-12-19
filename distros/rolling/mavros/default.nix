@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, angles, console-bridge, diagnostic-msgs, diagnostic-updater, eigen, eigen-stl-containers, eigen3-cmake-module, geographic-msgs, geographiclib, geometry-msgs, gtest, libmavconn, mavlink, mavros-msgs, message-filters, nav-msgs, pluginlib, python3Packages, rclcpp, rclcpp-components, rclpy, rcpputils, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2-eigen, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-mavros";
-  version = "2.12.0-r1";
+  version = "2.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavros-release/archive/release/rolling/mavros/2.12.0-1.tar.gz";
-    name = "2.12.0-1.tar.gz";
-    sha256 = "ed518e594925dc16bda1d5dc5a90e263c7acb1478b1661cc57088bb0a3fd860b";
+    url = "https://github.com/ros2-gbp/mavros-release/archive/release/rolling/mavros/2.13.0-1.tar.gz";
+    name = "2.13.0-1.tar.gz";
+    sha256 = "dd6d36ae76fc32f1e5bbe98f2e21111e4a8ca88d1d21dc9f245c1908cfae53ef";
   };
 
   buildType = "ament_cmake";
