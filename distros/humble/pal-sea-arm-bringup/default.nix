@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.21.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_sea_arm-release/archive/release/humble/pal_sea_arm_bringup/1.21.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pal_sea_arm-release/archive/release/humble/pal_sea_arm_bringup/1.21.0-1.tar.gz";
     name = "1.21.0-1.tar.gz";
     sha256 = "7daf91cbd441222f58d8910501b9cc94162622e29242adced88b7d6191511d52";
   };

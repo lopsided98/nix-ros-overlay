@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, rmw-test-fixture-implementation }:
 buildRosPackage {
   pname = "ros-kilted-ament-cmake-ros";
-  version = "0.14.6-r1";
+  version = "0.14.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/kilted/ament_cmake_ros/0.14.6-1.tar.gz";
-    name = "0.14.6-1.tar.gz";
-    sha256 = "4b89d05e50874a53d29f464ac5b2e749120acea6408dffabec1a8c9122926ca8";
+    url = "https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/kilted/ament_cmake_ros/0.14.7-1.tar.gz";
+    name = "0.14.7-1.tar.gz";
+    sha256 = "84d0e3fffaa8b108118fde223225374d4a8bd9a98e020efb7977fd36c037726f";
   };
 
   buildType = "ament_cmake";

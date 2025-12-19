@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, openssl }:
 buildRosPackage {
   pname = "ros-rolling-live555-vendor";
-  version = "0.20250917.0-r1";
+  version = "0.20251106.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/live555_vendor-release/archive/release/rolling/live555_vendor/0.20250917.0-1.tar.gz";
-    name = "0.20250917.0-1.tar.gz";
-    sha256 = "9ba258ff6ef7d4426ec1a6f125864831145adbac8fd367dde733f5746c12dc91";
+    url = "https://github.com/ros2-gbp/live555_vendor-release/archive/release/rolling/live555_vendor/0.20251106.0-1.tar.gz";
+    name = "0.20251106.0-1.tar.gz";
+    sha256 = "9b1185c7942697343ba0207056c82decd285799d167ce129ad8fde3416a9265b";
   };
 
   buildType = "cmake";

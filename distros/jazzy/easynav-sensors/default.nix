@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, pcl-conversions, rclcpp, rclcpp-lifecycle, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-easynav-sensors";
-  version = "0.2.0-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/jazzy/easynav_sensors/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "9d3f8fe56b929a64c1a1340a4cfe6c73cdba3462ea0022e27cb6d93193475d46";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/jazzy/easynav_sensors/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "38a914811f1abe2ca03f96cbef06372a41dc6e383875c88321e24f23a6014c2d";
   };
 
   buildType = "ament_cmake";

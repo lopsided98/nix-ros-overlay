@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-index-python, depthai-descriptions, python3Packages, realsense2-description, robotiq-description, ur-description, urdf, xacro, zed-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-husarion-components-description";
-  version = "0.0.2-r2";
+  version = "0.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/husarion_components_description-release/archive/release/jazzy/husarion_components_description/0.0.2-2.tar.gz";
-    name = "0.0.2-2.tar.gz";
-    sha256 = "6ddbd49cec9d55a6013365f936edc78c8c888100792393e90abdd2e47aa1ac33";
+    url = "https://github.com/ros2-gbp/husarion_components_description-release/archive/release/jazzy/husarion_components_description/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
+    sha256 = "22293ae7f7ea340bb2f6a3c2079a41932992ee5d761e8c7736ac2f3e6adbb47e";
   };
 
   buildType = "ament_cmake";

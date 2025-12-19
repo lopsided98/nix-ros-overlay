@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, performance-test-fixture, rcutils, rosidl-typesupport-interface }:
 buildRosPackage {
   pname = "ros-kilted-rosidl-runtime-c";
-  version = "4.9.5-r1";
+  version = "4.9.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/kilted/rosidl_runtime_c/4.9.5-1.tar.gz";
-    name = "4.9.5-1.tar.gz";
-    sha256 = "90fd4b6328f75587e8955f23b1f42f1f443359e224da26577a804a62402124c2";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/kilted/rosidl_runtime_c/4.9.6-1.tar.gz";
+    name = "4.9.6-1.tar.gz";
+    sha256 = "0543e1ff3ae5cd206b42f29aba03e705bcf5887123da83f15986ff474b5d23d2";
   };
 
   buildType = "ament_cmake";

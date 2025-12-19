@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, nav-msgs, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-easynav-interfaces";
-  version = "0.3.0-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_interfaces/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "e9265882b52e660f845b367b9ae215b9cc1743be05a3d379f985fc7a7cac7daa";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_interfaces/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "4fe75c085483990d2c15ed525da76bd9be4bdfce0dba73e7155b3a28471a93a2";
   };
 
   buildType = "ament_cmake";

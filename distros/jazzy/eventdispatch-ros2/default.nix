@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, eventdispatch-python, eventdispatch-ros2-interfaces, rclcpp, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-eventdispatch-ros2";
-  version = "0.2.25-r4";
+  version = "0.2.26-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_eventdispatch-release/archive/release/jazzy/eventdispatch_ros2/0.2.25-4.tar.gz";
-    name = "0.2.25-4.tar.gz";
-    sha256 = "2bbe6b5954d4fa5e507e5c82fa6da3fc561eae2b27d0f08097a4bc3dd785381f";
+    url = "https://github.com/ros2-gbp/ros2_eventdispatch-release/archive/release/jazzy/eventdispatch_ros2/0.2.26-1.tar.gz";
+    name = "0.2.26-1.tar.gz";
+    sha256 = "f646a6f9637228b58fbaead78d9131cb32f37f6b9f94ca4fb80be293de73c326";
   };
 
   buildType = "ament_cmake";

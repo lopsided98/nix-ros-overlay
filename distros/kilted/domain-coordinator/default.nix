@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-domain-coordinator";
-  version = "0.14.6-r1";
+  version = "0.14.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/kilted/domain_coordinator/0.14.6-1.tar.gz";
-    name = "0.14.6-1.tar.gz";
-    sha256 = "1ef9c4be1c83cfe7e0297bf9766ab1f35f4a5f66d48479c5c4bfa83881d0fc32";
+    url = "https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/kilted/domain_coordinator/0.14.7-1.tar.gz";
+    name = "0.14.7-1.tar.gz";
+    sha256 = "883ac6a1ab4fa7cf320a02b89cfb057ab31b9e30c07b7b5691371ed10b39be34";
   };
 
   buildType = "ament_python";

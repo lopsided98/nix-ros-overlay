@@ -1350,6 +1350,12 @@ self: super: {
 
  kinematics-interface-pinocchio = self.callPackage ./kinematics-interface-pinocchio {};
 
+ kinova-gen3-6dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-6dof-robotiq-2f-85-moveit-config {};
+
+ kinova-gen3-7dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-7dof-robotiq-2f-85-moveit-config {};
+
+ kinova-gen3-lite-moveit-config = self.callPackage ./kinova-gen3-lite-moveit-config {};
+
  kitti-metrics-eval = self.callPackage ./kitti-metrics-eval {};
 
  kobuki-core = self.callPackage ./kobuki-core {};
@@ -1361,6 +1367,14 @@ self: super: {
  kompass = self.callPackage ./kompass {};
 
  kompass-interfaces = self.callPackage ./kompass-interfaces {};
+
+ kortex-api = self.callPackage ./kortex-api {};
+
+ kortex-bringup = self.callPackage ./kortex-bringup {};
+
+ kortex-description = self.callPackage ./kortex-description {};
+
+ kortex-driver = self.callPackage ./kortex-driver {};
 
  lanelet2 = self.callPackage ./lanelet2 {};
 
@@ -1541,6 +1555,8 @@ self: super: {
  mavlink = self.callPackage ./mavlink {};
 
  mavros = self.callPackage ./mavros {};
+
+ mavros-examples = self.callPackage ./mavros-examples {};
 
  mavros-extras = self.callPackage ./mavros-extras {};
 
@@ -1819,6 +1835,8 @@ self: super: {
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ mujoco-vendor = self.callPackage ./mujoco-vendor {};
 
  multires-image = self.callPackage ./multires-image {};
 

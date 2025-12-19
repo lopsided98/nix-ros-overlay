@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-kortex-api";
-  version = "0.2.2-r2";
+  version = "0.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/rolling/kortex_api/0.2.2-2.tar.gz";
-    name = "0.2.2-2.tar.gz";
-    sha256 = "d24452ed9b238a2a6ed0a3f675b0c4930e6f0057ccfcd1fa64aa22fd02b6de5a";
+    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/rolling/kortex_api/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
+    sha256 = "6f09a0d2a8ae4194e0fc063f33c643cddcf5d6d009a139713e491b6c120c020e";
   };
 
   buildType = "ament_cmake";
@@ -18,7 +18,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "kortex_api";
+    description = "KINOVA KORTEX™ API";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

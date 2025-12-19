@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, boost, camera-calibration-parsers, cv-bridge, image-transport, message-filters, rclcpp, rclcpp-components, sensor-msgs, std-srvs, stereo-msgs }:
 buildRosPackage {
   pname = "ros-humble-image-view";
-  version = "3.0.8-r1";
+  version = "3.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/image_view/3.0.8-1.tar.gz";
-    name = "3.0.8-1.tar.gz";
-    sha256 = "6c73b18dcc4cc8afd773a9d49e2653ab2faece71be4c7381c67e4b8bf106f3d4";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/humble/image_view/3.0.9-1.tar.gz";
+    name = "3.0.9-1.tar.gz";
+    sha256 = "948defd400e05c20712dbeb9dd586c89f50968c0a6ba6b9b1f50181e09d8eed8";
   };
 
   buildType = "ament_cmake";

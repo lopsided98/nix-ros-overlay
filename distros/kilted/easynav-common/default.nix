@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, nav-msgs, pcl-conversions, pcl-ros, rclcpp, rclcpp-lifecycle, sensor-msgs, tf2-geometry-msgs, tf2-ros, vision-msgs, yaets }:
 buildRosPackage {
   pname = "ros-kilted-easynav-common";
-  version = "0.3.0-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_common/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "a9f5bd07d6fdf131d60ef4757ceb0c5b08dcfa4110ebd1c139c6d642b29f2c3c";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_common/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "330f583d82e8b8253cf141fd8224e65169ba9e212ebf5865a5015209823e9f3f";
   };
 
   buildType = "ament_cmake";

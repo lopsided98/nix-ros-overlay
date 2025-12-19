@@ -998,6 +998,8 @@ self: super: {
 
  kinova-gen3-7dof-robotiq-2f-85-moveit-config = self.callPackage ./kinova-gen3-7dof-robotiq-2f-85-moveit-config {};
 
+ kinova-gen3-lite-moveit-config = self.callPackage ./kinova-gen3-lite-moveit-config {};
+
  kitti-metrics-eval = self.callPackage ./kitti-metrics-eval {};
 
  kobuki-core = self.callPackage ./kobuki-core {};
@@ -1011,6 +1013,8 @@ self: super: {
  kompass-interfaces = self.callPackage ./kompass-interfaces {};
 
  kortex-api = self.callPackage ./kortex-api {};
+
+ kortex-bringup = self.callPackage ./kortex-bringup {};
 
  kortex-description = self.callPackage ./kortex-description {};
 
@@ -1181,6 +1185,8 @@ self: super: {
  mavlink = self.callPackage ./mavlink {};
 
  mavros = self.callPackage ./mavros {};
+
+ mavros-examples = self.callPackage ./mavros-examples {};
 
  mavros-extras = self.callPackage ./mavros-extras {};
 
@@ -1459,6 +1465,8 @@ self: super: {
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ mujoco-vendor = self.callPackage ./mujoco-vendor {};
 
  multires-image = self.callPackage ./multires-image {};
 
@@ -2402,17 +2410,11 @@ self: super: {
 
  rviz-2d-overlay-plugins = self.callPackage ./rviz-2d-overlay-plugins {};
 
- rviz-common = self.callPackage ./rviz-common {};
-
- rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
-
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
 
  rviz-marker-tools = self.callPackage ./rviz-marker-tools {};
 
  rviz-ogre-vendor = self.callPackage ./rviz-ogre-vendor {};
-
- rviz-rendering = self.callPackage ./rviz-rendering {};
 
  rviz-rendering-tests = self.callPackage ./rviz-rendering-tests {};
 

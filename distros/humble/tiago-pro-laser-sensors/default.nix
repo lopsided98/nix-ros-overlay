@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.13.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_pro_navigation-release/archive/release/humble/tiago_pro_laser_sensors/2.13.3-1.tar.gz";
+    url = "https://github.com/ros2-gbp/tiago_pro_navigation-release/archive/release/humble/tiago_pro_laser_sensors/2.13.3-1.tar.gz";
     name = "2.13.3-1.tar.gz";
     sha256 = "818789e341f171da121be2f186ca01a01682c800f7ef5000cf1cea1d9af203cf";
   };

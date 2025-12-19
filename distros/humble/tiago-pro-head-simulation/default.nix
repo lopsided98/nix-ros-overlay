@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_pro_head_simulation-release/archive/release/humble/tiago_pro_head_simulation/1.0.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/tiago_pro_head_simulation-release/archive/release/humble/tiago_pro_head_simulation/1.0.2-1.tar.gz";
     name = "1.0.2-1.tar.gz";
     sha256 = "519dccb3e2e36c6c83b9683bdcf19f47746631ade8aa4efa0e2660ef600b59bd";
   };

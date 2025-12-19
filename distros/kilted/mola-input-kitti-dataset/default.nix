@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps }:
 buildRosPackage {
   pname = "ros-kilted-mola-input-kitti-dataset";
-  version = "2.2.1-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_input_kitti_dataset/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "40d77b90fb4c12aeca57f33e15fc463e0412f9c25f784a2878df3a2c3047fba6";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_input_kitti_dataset/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "f8c48c85e3d255cd77180ff8573b514073d420fa5533f99a1f20ba795affe289";
   };
 
   buildType = "cmake";

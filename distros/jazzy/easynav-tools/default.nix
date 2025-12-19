@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, easynav-interfaces, easynav-support-py, geometry-msgs, python3Packages, rclpy, ros2cli, rosidl-runtime-py }:
 buildRosPackage {
   pname = "ros-jazzy-easynav-tools";
-  version = "0.2.0-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/jazzy/easynav_tools/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "282de1f5d9b30554b18b100af7cc910a572066577fecdc57c274b865c5f4d9f7";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/jazzy/easynav_tools/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "7bf4433027161d03d270cdd6ba03067c95ffa7e5b4fc763b51d5e327c820da58";
   };
 
   buildType = "ament_python";

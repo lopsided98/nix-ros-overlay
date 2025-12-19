@@ -8,7 +8,7 @@ buildRosPackage {
   version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_pro_head_robot-release/archive/release/humble/tiago_pro_head_bringup/1.7.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/tiago_pro_head_robot-release/archive/release/humble/tiago_pro_head_bringup/1.7.0-1.tar.gz";
     name = "1.7.0-1.tar.gz";
     sha256 = "dac1adca274497c679345ce4be8b82ad904e2dbfa4ee295188a4bdbe937a7b83";
   };

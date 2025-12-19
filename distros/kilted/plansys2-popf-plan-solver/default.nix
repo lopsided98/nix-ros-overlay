@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, plansys2-core, pluginlib, popf, rclcpp, ros2run }:
 buildRosPackage {
   pname = "ros-kilted-plansys2-popf-plan-solver";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/kilted/plansys2_popf_plan_solver/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "6ca5550715a95415415837480dead2895ac253c3b2cb3e92a75ad882112ee863";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/kilted/plansys2_popf_plan_solver/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "7081c8e2923c28c46486e2e82ef7acd416a0773240537ffbff9bfb227840aecb";
   };
 
   buildType = "ament_cmake";

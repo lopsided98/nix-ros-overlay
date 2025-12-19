@@ -2,21 +2,21 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, launch-xml, launch-yaml, ros2action, ros2cli, ros2component, ros2doctor, ros2interface, ros2launch, ros2lifecycle, ros2multicast, ros2node, ros2param, ros2pkg, ros2run, ros2service, ros2topic, sros2 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, launch-xml, launch-yaml, ros2action, ros2cli, ros2component, ros2doctor, ros2interface, ros2launch, ros2lifecycle, ros2multicast, ros2node, ros2param, ros2pkg, ros2plugin, ros2run, ros2service, ros2topic, sros2 }:
 buildRosPackage {
   pname = "ros-jazzy-ros2cli-common-extensions";
-  version = "0.3.0-r3";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli_common_extensions-release/archive/release/jazzy/ros2cli_common_extensions/0.3.0-3.tar.gz";
-    name = "0.3.0-3.tar.gz";
-    sha256 = "bfbd3cd7a9442743ee4c86937a12abf3304bd272d4a00da66e8eecbdbeaf653f";
+    url = "https://github.com/ros2-gbp/ros2cli_common_extensions-release/archive/release/jazzy/ros2cli_common_extensions/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "9962769405afeb016693608ef3780458b5aeb98d96f613b6abdea6b63c981b69";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ launch-xml launch-yaml ros2action ros2cli ros2component ros2doctor ros2interface ros2launch ros2lifecycle ros2multicast ros2node ros2param ros2pkg ros2run ros2service ros2topic sros2 ];
+  propagatedBuildInputs = [ launch-xml launch-yaml ros2action ros2cli ros2component ros2doctor ros2interface ros2launch ros2lifecycle ros2multicast ros2node ros2param ros2pkg ros2plugin ros2run ros2service ros2topic sros2 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

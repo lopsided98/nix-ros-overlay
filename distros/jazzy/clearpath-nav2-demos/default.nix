@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, clearpath-config, nav2-bringup, slam-toolbox }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-nav2-demos";
-  version = "2.7.1-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_nav2_demos-release/archive/release/jazzy/clearpath_nav2_demos/2.7.1-1.tar.gz";
-    name = "2.7.1-1.tar.gz";
-    sha256 = "cbaab946e64cdcb5b17b670a917b10641223ef416ccaa06e67f4ecef17482e3b";
+    url = "https://github.com/clearpath-gbp/clearpath_nav2_demos-release/archive/release/jazzy/clearpath_nav2_demos/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "538e7da727fa5b459652e1858891bc0ede231cfa855708ae8a73b454f1016107";
   };
 
   buildType = "ament_cmake";

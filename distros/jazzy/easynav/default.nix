@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, easynav-common, easynav-controller, easynav-core, easynav-interfaces, easynav-localizer, easynav-maps-manager, easynav-planner, easynav-sensors, easynav-support-py, easynav-system, easynav-tools }:
 buildRosPackage {
   pname = "ros-jazzy-easynav";
-  version = "0.2.0-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/jazzy/easynav/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "ca36e03c66a5ed462f8f3e223aefd81a55afdbed2279afdacb07dff6ab2a7c36";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/jazzy/easynav/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "289b97e810015e70b560707dd9d4bd4e6631dcf494c8f4cb792eda8e1617c89f";
   };
 
   buildType = "ament_cmake";

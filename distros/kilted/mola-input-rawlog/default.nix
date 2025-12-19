@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-kilted-mola-input-rawlog";
-  version = "2.2.1-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_input_rawlog/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "ea6336f12fe291774f1c59c4307667446013766f4d05daf29efd25b196b73e63";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_input_rawlog/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "ef1ebd253a7773f7e7275b5a71c6e521bb167891e9ef61bf3ba7e93e4ed2e39f";
   };
 
   buildType = "cmake";
