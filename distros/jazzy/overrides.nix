@@ -253,6 +253,14 @@ in {
     ];
   });
 
+  # Fix other off-highway-* packages which need ros-environment
+  # https://github.com/bosch-engineering/off_highway_sensor_drivers/pull/24
+  off-highway-can = rosSuper.off-highway-can.overrideAttrs ({
+    propagatedNativeBuildInputs ? [], ...
+  }: {
+    propagatedNativeBuildInputs = propagatedNativeBuildInputs ++ [ rosSelf.ros-environment ];
+  });
+
   openvdb-vendor = (lib.patchAmentVendorGit rosSuper.openvdb-vendor {}).overrideAttrs ({
     postPatch ? "", ...
   }: {
