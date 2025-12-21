@@ -157,7 +157,7 @@ in {
       self.qt5.qtgraphicaleffects
       self.pkg-config
     ];
-    qtWrapperArgs = qtWrapperArgs ++ [
+    qtWrapperArgs = qtWrapperArgs ++ lib.optionals self.stdenv.isLinux [
       # Gazebo is currently broken on Wayland
       # https://gazebosim.org/docs/ionic/troubleshooting/#wayland-issues
       "--set-default QT_QPA_PLATFORM xcb"
