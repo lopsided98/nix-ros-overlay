@@ -5,13 +5,13 @@
 
 buildPythonPackage rec {
   pname = "superflore";
-  version = "0.3.3-unstable-2025-10-01";
+  version = "0.3.3-unstable-2025-11-15";
 
   src = fetchFromGitHub {
-    owner = "ros-infrastructure";
+    owner = "wentasah";
     repo = "superflore";
-    rev = "b10efe80de4abec269f8e4bd7e18d8bb737984bd";
-    hash = "sha256-WMUIBgzp6FH2j/pl8f5rBeaVceZmvue3fC2d1T7V43I=";
+    rev = "92bbab9db712127814a0e5b0f3d6132cf5d8117b";
+    hash = "sha256-jT4V5q4EuFWnx2yImVysPZiYdwKcJGvLHSdU/GRYVAg=";
   };
 
   pyproject = true;

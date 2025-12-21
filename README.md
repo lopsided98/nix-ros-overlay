@@ -123,24 +123,23 @@ trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDS
 
 ## Frequently Asked Questions
 
-**Q: Why are some packages missing?**
+**Q: Why do some some packages fail to evaluate due to `_unresolved_<dependency>` arguments?**
 
-A: All ROS packages published in the package index are potentially available in this overlay. If a package is missing, that probably means one of its system dependencies is not packaged. To determine the offending dependency, find the last "rosdistro sync" PR in this repository and search the missing dependencies list for your package's dependencies. In some cases, you may only need to add a mapping between the rosdep key and the nixpkgs attribute to the [rosdistro YAML files](https://github.com/lopsided98/rosdistro/tree/nixos-support/rosdep). If there is no Nix expression for the package, you should try to package it and submit it upstream to nixpkgs. In some cases it may be appropriate to add the package to this overlay instead, but this should be avoided if possible.
-
-**Q: Why do some packages fail to evaluate?**
-
-A: Some packages fail to evaluate with a error like the following:
+A: If the package fails to evaluate with error like the following:
 ```
-at: (69:16) in file: /nix/store/7cy8wbxh0jmsy00219hi9pkrqm9lsh5j-source/lib/customisation.nix
-
-    68|     let
-    69|       result = f origArgs;
-      |                ^
-    70|
-
-anonymous function at nix-ros-overlay/distros/<distro>/<package>/default.nix:5:1 called without required argument '<dependency>'
+error: evaluation aborted with the following error message:
+'lib.customisation.callPackageWith: Function called without required
+argument "_unresolved_<dependency>" at /.../nix-ros-overlay/distros/<distro>/<package>/default.nix:5'
 ```
-This means all the system dependencies of `<package>` were available, so its Nix expression was generated, but some of `<dependency>`'s system dependencies were missing. See the question above for what to do next.
+it means the package `<dependency>` is missing a `nixos` key in
+[rosdep YAML files][rosdep]. In some cases, it is sufficient to find a
+corresponding package in nixpkgs and submit a PR adding the rosdep
+entries. If there is no Nix expression for the package, you should try
+to package it and submit it upstream to nixpkgs. In some cases it may
+be appropriate to add the package to this overlay instead, but this
+should be avoided if possible.
+
+[rosdep]: https://github.com/ros/rosdistro/tree/master/rosdep
 
 **Q: Why do some packages fail to build?**
 
