@@ -105,15 +105,14 @@ What works:
 What still needs to be done:
 1. Upstream changes to nixpkgs and ROS tools
 2. Test on more Linux distributions
-3. aarch64 binary cache
-4. macOS support
+3. macOS support
 
 [Hydra instance]: https://hydra.iid.ciirc.cvut.cz/project/nix-ros-overlay
 [@wentasah]: https://github.com/wentasah
 
 ## Configure Binary Cache
 
-Prebuilt ROS packages are hosted on [Cachix](https://ros.cachix.org) and built using GitHub Actions on public infrastructure.
+Prebuilt ROS packages (for x86_64-linux and aarch64-linux) are hosted on [Cachix](https://ros.cachix.org) and built using GitHub Actions on public infrastructure.
 
 To use this binary cache, either run `cachix use ros` or manually set the following options in `nix.conf`:
 ```
