@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bluez, boost, cmake, dbus, gtest, libusb1, openssl, python3, python3Packages, zlib }:
 buildRosPackage {
   pname = "ros-kilted-robotraconteur";
-  version = "1.2.6-r1";
+  version = "1.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robotraconteur-release/archive/release/kilted/robotraconteur/1.2.6-1.tar.gz";
-    name = "1.2.6-1.tar.gz";
-    sha256 = "05a0290897d85b5651a1d9fe526690da836cab0cfcbc2c60b16fa7613c855c55";
+    url = "https://github.com/ros2-gbp/robotraconteur-release/archive/release/kilted/robotraconteur/1.2.7-1.tar.gz";
+    name = "1.2.7-1.tar.gz";
+    sha256 = "7e01ddd5aecc2ecc6f3455e77740a7b7a46dcf08332ea8642dda167729b1ac3f";
   };
 
   buildType = "cmake";

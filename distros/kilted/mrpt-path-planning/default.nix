@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-libgui, mrpt-libmaps, mrpt-libnav, mrpt-libtclap, mvsim }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-path-planning";
-  version = "0.2.3-r1";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_path_planning-release/archive/release/kilted/mrpt_path_planning/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "cb621776a34268e39d6f23f83692f51fbf96d3a9985207602268a900e65aeecd";
+    url = "https://github.com/ros2-gbp/mrpt_path_planning-release/archive/release/kilted/mrpt_path_planning/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "1ae1ccd3229855fa2912e41fa374d36f2813ea08e41f75f69f7238e9e7bf71c0";
   };
 
   buildType = "cmake";

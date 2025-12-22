@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bluez, boost, cmake, dbus, gtest, libusb1, openssl, python3, python3Packages, zlib }:
 buildRosPackage {
   pname = "ros-humble-robotraconteur";
-  version = "1.2.6-r1";
+  version = "1.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robotraconteur-release/archive/release/humble/robotraconteur/1.2.6-1.tar.gz";
-    name = "1.2.6-1.tar.gz";
-    sha256 = "2f540054d588bca2abeb4fd24954e60e5af628c4fb74ad50e81ca93e1a243c51";
+    url = "https://github.com/ros2-gbp/robotraconteur-release/archive/release/humble/robotraconteur/1.2.7-1.tar.gz";
+    name = "1.2.7-1.tar.gz";
+    sha256 = "b791ed92edfbf65f8096aaf461e59026a65b780094657dd76c4de9cec57c9220";
   };
 
   buildType = "cmake";

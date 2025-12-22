@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, eigen, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libbase, opencv, openni2, pkg-config, python3Packages, suitesparse, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-libtclap";
-  version = "2.15.2-r1";
+  version = "2.15.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/jazzy/mrpt_libtclap/2.15.2-1.tar.gz";
-    name = "2.15.2-1.tar.gz";
-    sha256 = "60b37083ae537e8d8e91e150386e01a33afd079580a72d9d52d592cd1f5655bd";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/jazzy/mrpt_libtclap/2.15.3-1.tar.gz";
+    name = "2.15.3-1.tar.gz";
+    sha256 = "b723e9ddc21586aae76040c474067f4b54c6d2eff34b91bf281843de73965927";
   };
 
   buildType = "cmake";

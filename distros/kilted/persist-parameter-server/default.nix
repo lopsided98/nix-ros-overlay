@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, boost, launch, launch-ros, rclcpp, rclcpp-components, rcutils, rmw, rmw-implementation-cmake, std-msgs, std-srvs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-kilted-persist-parameter-server";
-  version = "1.0.3-r2";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/persist_parameter_server-release/archive/release/kilted/persist_parameter_server/1.0.3-2.tar.gz";
-    name = "1.0.3-2.tar.gz";
-    sha256 = "eabd6fb3a98d568a23f73ab2511bb8c4e3b38ec05ab20a372e693eff708a88e9";
+    url = "https://github.com/ros2-gbp/persist_parameter_server-release/archive/release/kilted/persist_parameter_server/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "325ab6d949d08f30566fed9bdf489c13ef5180322318dae2ebdf7ceeb1bf0bcf";
   };
 
   buildType = "ament_cmake";

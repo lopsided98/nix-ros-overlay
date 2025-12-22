@@ -762,6 +762,8 @@ self: super: {
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
+ franka-inria-inverse-dynamics-solver = self.callPackage ./franka-inria-inverse-dynamics-solver {};
+
  frequency-cam = self.callPackage ./frequency-cam {};
 
  fuse = self.callPackage ./fuse {};
@@ -950,6 +952,8 @@ self: super: {
 
  intra-process-demo = self.callPackage ./intra-process-demo {};
 
+ inverse-dynamics-solver = self.callPackage ./inverse-dynamics-solver {};
+
  io-context = self.callPackage ./io-context {};
 
  irobot-create-msgs = self.callPackage ./irobot-create-msgs {};
@@ -979,6 +983,8 @@ self: super: {
  jrl-cmakemodules = self.callPackage ./jrl-cmakemodules {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
+
+ kdl-inverse-dynamics-solver = self.callPackage ./kdl-inverse-dynamics-solver {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
 
@@ -2773,6 +2779,8 @@ self: super: {
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
 
  ur = self.callPackage ./ur {};
+
+ ur10-inverse-dynamics-solver = self.callPackage ./ur10-inverse-dynamics-solver {};
 
  ur-calibration = self.callPackage ./ur-calibration {};
 
