@@ -383,4 +383,6 @@ in {
       export NIX_ZENOH_OPAQUE_TYPES_CARGO_CONFIG=$PWD/nix-zenoh-opaque-types/.cargo/config.toml
     '';
   });
+
+  zmqpp-vendor = lib.patchAmentVendorGit rosSuper.zmqpp-vendor { };
 }

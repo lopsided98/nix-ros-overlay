@@ -392,11 +392,4 @@ rosSelf: rosSuper: with rosSelf.lib; {
       test "$v1" = "$v2" || { echo "tinyxml-2 version mismatch"; exit 1; }
     '';
   });
-
-  zmqpp-vendor = patchExternalProjectGit rosSuper.zmqpp-vendor {
-    url = "https://github.com/zeromq/zmqpp.git";
-    originalRev = "master";
-    rev = "da73a138f290274cfd604b3f05a908956390a66e";
-    fetchgitArgs.hash = "sha256-UZyJpBEOf/Ys+i2tiBTjv4PlM5fHjjNLWuGhpgcmYyM=";
-  };
 }
