@@ -1,8 +1,8 @@
 
-# Copyright 2024 Open Source Robotics Foundation
+# Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, action-msgs, action-tutorials-interfaces, ament-cmake, ament-cmake-python, rclcpp, rclcpp-action, rclpy }:
+{ lib, buildRosPackage, fetchurl, _unresolved_action_tutorials_interfaces, action-msgs, ament-cmake, ament-cmake-python, rclcpp, rclcpp-action, rclpy }:
 buildRosPackage {
   pname = "ros-rolling-simple-actions";
   version = "0.4.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];
-  checkInputs = [ action-tutorials-interfaces ];
+  checkInputs = [ _unresolved_action_tutorials_interfaces ];
   propagatedBuildInputs = [ action-msgs rclcpp rclcpp-action rclpy ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 

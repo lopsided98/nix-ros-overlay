@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages, rclpy, ros-environment, yasmin, yasmin-factory }:
 buildRosPackage {
   pname = "ros-jazzy-yasmin-editor";
-  version = "4.1.0-r1";
+  version = "4.2.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/jazzy/yasmin_editor/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "08b2b25fd9a8d97e41e0eefc2e86beb4c739d3ec1d772223422bcc85cbd07a21";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/jazzy/yasmin_editor/4.2.1-2.tar.gz";
+    name = "4.2.1-2.tar.gz";
+    sha256 = "1727ba3d06e7c1dfc74f541f55ff9f010dd964af1054ada70bc86c3406b79a12";
   };
 
   buildType = "ament_cmake";
