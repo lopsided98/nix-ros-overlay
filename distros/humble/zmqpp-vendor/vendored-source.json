@@ -1,0 +1,7 @@
+{
+  "zmqpp_vendor": {
+    "url": "https://github.com/zeromq/zmqpp.git",
+    "rev": "da73a138f290274cfd604b3f05a908956390a66e",
+    "hash": "sha256-UZyJpBEOf/Ys+i2tiBTjv4PlM5fHjjNLWuGhpgcmYyM="
+  }
+}
