@@ -2,7 +2,7 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_nanobind-dev, cmake, doxygen, eigen, git, python3, python3Packages }:
+{ lib, buildRosPackage, fetchurl, cmake, doxygen, eigen, git, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-nanoeigenpy";
   version = "0.4.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen git ];
-  propagatedBuildInputs = [ _unresolved_nanobind-dev eigen python3 python3Packages.numpy python3Packages.scipy ];
+  propagatedBuildInputs = [ eigen python3 python3Packages.nanobind python3Packages.numpy python3Packages.scipy ];
   nativeBuildInputs = [ cmake ];
 
   meta = {
