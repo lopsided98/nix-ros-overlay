@@ -31,6 +31,14 @@ jobs:
         authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
         skipPush: true
+    # Add second cache after cachix-action to prevent cachix-action
+    # from overriding substituters.
+    - name: "Configure @wentasah's binary cache"
+      run: |
+        cat >> ~/.config/nix/nix.conf <<EOF
+        extra-substituters = https://attic.iid.ciirc.cvut.cz/ros?priority=42
+        extra-trusted-public-keys = ros:JR95vUYsShSqfA1VTYoFt1Nz6uXasm5QrcOsGry9f6Q=
+        EOF
     - uses: ./.github/actions/nix-ros-build-action
       with:
         root-attribute: 'rosPackages.${{ matrix.distro }}'
