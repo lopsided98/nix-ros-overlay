@@ -2,7 +2,7 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_libjson-c-dev, ament-cmake, avahi, ffmpeg, ncurses }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, avahi, ffmpeg, json-c, ncurses }:
 buildRosPackage {
   pname = "ros-humble-ardrone-sdk";
   version = "2.0.3-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ _unresolved_libjson-c-dev avahi ffmpeg ncurses ];
+  propagatedBuildInputs = [ avahi ffmpeg json-c ncurses ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

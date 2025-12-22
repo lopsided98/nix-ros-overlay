@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, autoware-common-msgs, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-autoware-internal-localization-msgs";
-  version = "1.12.0-r1";
+  version = "1.12.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_internal_msgs-release/archive/release/rolling/autoware_internal_localization_msgs/1.12.0-1.tar.gz";
-    name = "1.12.0-1.tar.gz";
-    sha256 = "c49cdb851f0872c8fd795ff025bd5cbad482027f73e56ce86abb249563867842";
+    url = "https://github.com/ros2-gbp/autoware_internal_msgs-release/archive/release/rolling/autoware_internal_localization_msgs/1.12.1-1.tar.gz";
+    name = "1.12.1-1.tar.gz";
+    sha256 = "c16be6b26dfed8236abe985f7ac30a21e81493822324541658d976556f3e7458";
   };
 
   buildType = "ament_cmake";
