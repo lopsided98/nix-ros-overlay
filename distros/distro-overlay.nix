@@ -103,7 +103,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/joint_state_publisher_gui/joint_state_publisher_gui"
       '';
@@ -120,7 +120,7 @@ let
       postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/mapviz/mapviz"
       '';
@@ -162,7 +162,7 @@ let
       nativeBuildInputs ? [], ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = ''
         wrapQtApp "$out/lib/plotjuggler/plotjuggler"
       '';
@@ -170,7 +170,7 @@ let
 
     # Switch to Qt6 for python 3.13
     python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
-      patches ? [], propagatedBuildInputs ? [], ...
+      patches ? [], propagatedBuildInputs ? [], postPatch ? "", ...
     }: {
       patches = patches ++ [
         # ref. https://github.com/ros-visualization/python_qt_binding/pull/143
@@ -190,10 +190,26 @@ let
           hash = "sha256-+ou08BZCIhRMDi9GMyAOLmdoGJNZaqLpA7nMszZOFgg=";
         })
       ];
-      propagatedBuildInputs = propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
+      # avoid cmake/pyside_config.py and use the proper PySide6Config.cmake
+      postPatch = postPatch + ''
+        substituteInPlace cmake/shiboken_helper.cmake \
+          --replace-fail "Shiboken2" "Shiboken6" \
+          --replace-fail "shiboken2" "shiboken6" \
+          --replace-fail "PySide2" "PySide6" \
+          --replace-fail "pyside2" "pyside6" \
+          --replace-fail "Shiboken6::shiboken6" "${rosSelf.pythonPackages.shiboken6}/bin/shiboken6" \
+          --replace-fail \
+            "/usr/local/lib/python3.12/dist-packages/PySide6/typesystems/" \
+            "${rosSelf.pythonPackages.pyside6}/share/PySide6/typesystems" \
+          --replace-fail \
+            "if($""{QT_VERSION_MAJOR} GREATER \"5\")" \
+            "if(FALSE)"
+      '';
+      propagatedBuildInputs = self.lib.lists.filter (p: p.pname != "pyqt5") (propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
         pyside6
         pyqt6-sip
-      ]);
+        shiboken6
+      ]));
 
       dontWrapQtApps = true;
 
@@ -210,7 +226,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/bin/rqt_bag"
         wrapQtApp "$out/lib/rqt_bag/rqt_bag"
@@ -221,7 +237,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_console/rqt_console"
       '';
@@ -231,7 +247,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_graph/rqt_graph"
         if [[ -e "$out/bin/rqt_graph" ]]; then
@@ -245,31 +261,64 @@ let
     });
 
     rqt-gui = rosSuper.rqt-gui.overrideAttrs ({
-      nativeBuildInputs ? [], postFixup ? "", ...
+      buildInputs ? [], nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      buildInputs = buildInputs ++ [ self.qt6.qtbase ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/bin/rqt"
         wrapQtApp "$out/lib/rqt_gui/rqt_gui"
       '';
     });
 
-    rqt-image-view = rosSuper.rqt-image-view.overrideAttrs ({
-      nativeBuildInputs ? [], postFixup ? "", ...
+    qt-gui = rosSuper.qt-gui.overrideAttrs ({
+      buildInputs ? [], propagatedBuildInputs ? [], ...
     }: {
-      dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = postFixup + ''
-        wrapQtApp "$out/lib/rqt_image_view/rqt_image_view"
-      '';
+      buildInputs = self.lib.lists.filter (p: p.pname != "pyqt5") buildInputs;
     });
+
+    qt-gui-cpp = rosSuper.qt-gui-cpp.overrideAttrs (
+      {
+        patches ? [ ],
+        propagatedBuildInputs ? [ ],
+        nativeBuildInputs ? [ ],
+        ...
+      }:
+      {
+        patches = patches ++ [
+          # ref. https://github.com/ros-visualization/qt_gui_core/pull/309, just to allow the other patch to apply
+          (self.fetchpatch {
+            url = "https://github.com/ros-visualization/qt_gui_core/commit/d07b80eac7657fe56b6581e94fa67b91056715a2.patch";
+            hash = "sha256-99nUTiYqUm6R+YmM0hfk3+C3uyzHqmW8b8xkb+oM6TY=";
+            stripLen = 1;
+            revert = true;
+          })
+          # Qt 5 -> 6
+          # ref. https://github.com/ros-visualization/qt_gui_core/pull/293
+          (self.fetchpatch {
+            url = "https://github.com/ros-visualization/qt_gui_core/commit/21941697c5584dc73968a8b50c51df2aef929562.patch";
+            hash = "sha256-4MO4X0AyK9X7UsVBxVosR9bx+62tZgXgJ3a6n2q5E1A=";
+            stripLen = 1;
+          })
+        ];
+        nativeBuildInputs = nativeBuildInputs ++ [ self.breakpointHook ];
+        propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.tinyxml2-vendor ]
+        ++ (with rosSelf.pythonPackages; [
+          pyside6
+          pyqt6-sip
+          shiboken6
+        ]);
+      }
+    );
+
+    rqt-image-view = self.hello;  # porting to Qt6 require some work, ignoring for now
 
     rqt-msg = rosSuper.rqt-msg.overrideAttrs ({
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_msg/rqt_msg"
       '';
@@ -279,7 +328,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_plot/rqt_plot"
       '';
@@ -289,7 +338,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_publisher/rqt_publisher"
       '';
@@ -299,7 +348,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_py_console/rqt_py_console"
       '';
@@ -309,7 +358,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_reconfigure/rqt_reconfigure"
       '';
@@ -319,7 +368,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_robot_monitor/rqt_robot_monitor"
       '';
@@ -329,7 +378,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_service_caller/rqt_service_caller"
       '';
@@ -339,7 +388,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_shell/rqt_shell"
       '';
@@ -349,7 +398,7 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_srv/rqt_srv"
       '';
@@ -359,9 +408,17 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/rqt_topic/rqt_topic"
+      '';
+    });
+
+    rviz-imu-plugin = rosSuper.rviz-imu-plugin.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      postPatch = postPatch + ''
+        substituteInPlace CMakeLists.txt --replace-fail "Qt5" "Qt6"
       '';
     });
 
@@ -387,7 +444,7 @@ let
       nativeBuildInputs ? [], ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
       postFixup = ''
         wrapQtApp "$out/lib/turtlesim/turtlesim_node"
       '';

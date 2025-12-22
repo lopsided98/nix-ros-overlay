@@ -4,6 +4,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
   # TODO: remove once https://github.com/ros/rosdistro/pull/43895 is merged
   python = rosSelf.python3;
   pythonPackages = rosSelf.python.pkgs;
+  qt5 = self.qt6;
 
   ament-cmake-core = rosSuper.ament-cmake-core.overrideAttrs ({
     propagatedBuildInputs ? [],
@@ -342,7 +343,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
     nativeBuildInputs ? [], qtWrapperArgs ? [], postFixup ? "", meta ? {}, ...
   }: {
     dontWrapQtApps = false;
-    nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+    nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
     qtWrapperArgs = qtWrapperArgs ++ [
       # Use X11 by default in RViz2.
       # https://github.com/ros-visualization/rviz/issues/1442
