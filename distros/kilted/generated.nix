@@ -778,6 +778,8 @@ self: super: {
 
  fastdds = self.callPackage ./fastdds {};
 
+ feetech-ros2-driver = self.callPackage ./feetech-ros2-driver {};
+
  ffmpeg-encoder-decoder = self.callPackage ./ffmpeg-encoder-decoder {};
 
  ffmpeg-image-transport = self.callPackage ./ffmpeg-image-transport {};
@@ -947,6 +949,8 @@ self: super: {
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  gtsam = self.callPackage ./gtsam {};
+
+ gurumdds-cmake-module = self.callPackage ./gurumdds-cmake-module {};
 
  gz-cmake-vendor = self.callPackage ./gz-cmake-vendor {};
 
@@ -1568,6 +1572,8 @@ self: super: {
 
  mvsim = self.callPackage ./mvsim {};
 
+ nanoeigenpy = self.callPackage ./nanoeigenpy {};
+
  nao-button-sim = self.callPackage ./nao-button-sim {};
 
  nao-command-msgs = self.callPackage ./nao-command-msgs {};
@@ -2076,6 +2082,8 @@ self: super: {
 
  realtime-tools = self.callPackage ./realtime-tools {};
 
+ replay-testing = self.callPackage ./replay-testing {};
+
  resource-retriever = self.callPackage ./resource-retriever {};
 
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
@@ -2206,6 +2214,8 @@ self: super: {
 
  rmw-fastrtps-shared-cpp = self.callPackage ./rmw-fastrtps-shared-cpp {};
 
+ rmw-gurumdds-cpp = self.callPackage ./rmw-gurumdds-cpp {};
+
  rmw-implementation = self.callPackage ./rmw-implementation {};
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
@@ -2255,6 +2265,8 @@ self: super: {
  ros2acceleration = self.callPackage ./ros2acceleration {};
 
  ros2action = self.callPackage ./ros2action {};
+
+ ros2ai = self.callPackage ./ros2ai {};
 
  ros2bag = self.callPackage ./ros2bag {};
 

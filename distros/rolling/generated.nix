@@ -178,6 +178,8 @@ self: super: {
 
  apriltag-tools = self.callPackage ./apriltag-tools {};
 
+ ardrone-sdk = self.callPackage ./ardrone-sdk {};
+
  ardrone-sumo = self.callPackage ./ardrone-sumo {};
 
  aruco = self.callPackage ./aruco {};
@@ -382,6 +384,8 @@ self: super: {
 
  coal = self.callPackage ./coal {};
 
+ cob-actions = self.callPackage ./cob-actions {};
+
  cob-msgs = self.callPackage ./cob-msgs {};
 
  cob-srvs = self.callPackage ./cob-srvs {};
@@ -497,6 +501,10 @@ self: super: {
  dolly = self.callPackage ./dolly {};
 
  dolly-follow = self.callPackage ./dolly-follow {};
+
+ dolly-gazebo = self.callPackage ./dolly-gazebo {};
+
+ dolly-ignition = self.callPackage ./dolly-ignition {};
 
  domain-bridge = self.callPackage ./domain-bridge {};
 
@@ -678,6 +686,8 @@ self: super: {
 
  fastdds = self.callPackage ./fastdds {};
 
+ feetech-ros2-driver = self.callPackage ./feetech-ros2-driver {};
+
  ffmpeg-encoder-decoder = self.callPackage ./ffmpeg-encoder-decoder {};
 
  ffmpeg-image-transport = self.callPackage ./ffmpeg-image-transport {};
@@ -843,6 +853,8 @@ self: super: {
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  gtsam = self.callPackage ./gtsam {};
+
+ gurumdds-cmake-module = self.callPackage ./gurumdds-cmake-module {};
 
  gz-cmake-vendor = self.callPackage ./gz-cmake-vendor {};
 
@@ -1478,6 +1490,8 @@ self: super: {
 
  mvsim = self.callPackage ./mvsim {};
 
+ nanoeigenpy = self.callPackage ./nanoeigenpy {};
+
  nao-button-sim = self.callPackage ./nao-button-sim {};
 
  nao-command-msgs = self.callPackage ./nao-command-msgs {};
@@ -1888,6 +1902,8 @@ self: super: {
 
  reductstore-agent = self.callPackage ./reductstore-agent {};
 
+ replay-testing = self.callPackage ./replay-testing {};
+
  resource-retriever = self.callPackage ./resource-retriever {};
 
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
@@ -1924,11 +1940,15 @@ self: super: {
 
  rmf-demos-tasks = self.callPackage ./rmf-demos-tasks {};
 
+ rmf-dev = self.callPackage ./rmf-dev {};
+
  rmf-dispenser-msgs = self.callPackage ./rmf-dispenser-msgs {};
 
  rmf-door-msgs = self.callPackage ./rmf-door-msgs {};
 
  rmf-fleet-adapter = self.callPackage ./rmf-fleet-adapter {};
+
+ rmf-fleet-adapter-python = self.callPackage ./rmf-fleet-adapter-python {};
 
  rmf-fleet-msgs = self.callPackage ./rmf-fleet-msgs {};
 
@@ -2014,6 +2034,8 @@ self: super: {
 
  rmw-fastrtps-shared-cpp = self.callPackage ./rmw-fastrtps-shared-cpp {};
 
+ rmw-gurumdds-cpp = self.callPackage ./rmw-gurumdds-cpp {};
+
  rmw-implementation = self.callPackage ./rmw-implementation {};
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
@@ -2063,6 +2085,8 @@ self: super: {
  ros2acceleration = self.callPackage ./ros2acceleration {};
 
  ros2action = self.callPackage ./ros2action {};
+
+ ros2ai = self.callPackage ./ros2ai {};
 
  ros2bag = self.callPackage ./ros2bag {};
 
@@ -2416,11 +2440,17 @@ self: super: {
 
  rviz-2d-overlay-plugins = self.callPackage ./rviz-2d-overlay-plugins {};
 
+ rviz-common = self.callPackage ./rviz-common {};
+
+ rviz-default-plugins = self.callPackage ./rviz-default-plugins {};
+
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
 
  rviz-marker-tools = self.callPackage ./rviz-marker-tools {};
 
  rviz-ogre-vendor = self.callPackage ./rviz-ogre-vendor {};
+
+ rviz-rendering = self.callPackage ./rviz-rendering {};
 
  rviz-rendering-tests = self.callPackage ./rviz-rendering-tests {};
 
@@ -2471,6 +2501,8 @@ self: super: {
  sick-safevisionary-interfaces = self.callPackage ./sick-safevisionary-interfaces {};
 
  sick-safevisionary-tests = self.callPackage ./sick-safevisionary-tests {};
+
+ simple-actions = self.callPackage ./simple-actions {};
 
  simple-grasping = self.callPackage ./simple-grasping {};
 

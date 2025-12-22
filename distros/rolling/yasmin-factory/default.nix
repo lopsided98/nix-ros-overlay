@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, class-loader, pluginlib, python3, python3Packages, rclcpp, tinyxml2-vendor, yasmin, yasmin-viewer }:
 buildRosPackage {
   pname = "ros-rolling-yasmin-factory";
-  version = "4.1.0-r1";
+  version = "4.2.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_factory/4.1.0-1.tar.gz";
-    name = "4.1.0-1.tar.gz";
-    sha256 = "94f0045a27c6f936add0d25c12bf95904209ad6dd18d65e5459dd640d0567b07";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_factory/4.2.1-2.tar.gz";
+    name = "4.2.1-2.tar.gz";
+    sha256 = "28ecd8099395cb6e41ddcadb536c1d2a14c031a3cfd607a93d5da3143840dac1";
   };
 
   buildType = "ament_cmake";

@@ -172,6 +172,8 @@ self: super: {
 
  andino-apps = self.callPackage ./andino-apps {};
 
+ andino-base = self.callPackage ./andino-base {};
+
  andino-bringup = self.callPackage ./andino-bringup {};
 
  andino-control = self.callPackage ./andino-control {};
@@ -179,6 +181,8 @@ self: super: {
  andino-description = self.callPackage ./andino-description {};
 
  andino-firmware = self.callPackage ./andino-firmware {};
+
+ andino-gz = self.callPackage ./andino-gz {};
 
  andino-gz-classic = self.callPackage ./andino-gz-classic {};
 
@@ -211,6 +215,8 @@ self: super: {
  apriltag-ros = self.callPackage ./apriltag-ros {};
 
  apriltag-tools = self.callPackage ./apriltag-tools {};
+
+ ardrone-sdk = self.callPackage ./ardrone-sdk {};
 
  ardrone-sumo = self.callPackage ./ardrone-sumo {};
 
@@ -279,6 +285,8 @@ self: super: {
  as2-platform-multirotor-simulator = self.callPackage ./as2-platform-multirotor-simulator {};
 
  as2-platform-tello = self.callPackage ./as2-platform-tello {};
+
+ as2-python-api = self.callPackage ./as2-python-api {};
 
  as2-realsense-interface = self.callPackage ./as2-realsense-interface {};
 
@@ -531,6 +539,8 @@ self: super: {
  bcr-arm = self.callPackage ./bcr-arm {};
 
  bcr-arm-description = self.callPackage ./bcr-arm-description {};
+
+ bcr-arm-gazebo = self.callPackage ./bcr-arm-gazebo {};
 
  bcr-arm-moveit-config = self.callPackage ./bcr-arm-moveit-config {};
 
@@ -1180,6 +1190,8 @@ self: super: {
 
  fastrtps-cmake-module = self.callPackage ./fastrtps-cmake-module {};
 
+ feetech-ros2-driver = self.callPackage ./feetech-ros2-driver {};
+
  ffmpeg-encoder-decoder = self.callPackage ./ffmpeg-encoder-decoder {};
 
  ffmpeg-image-transport = self.callPackage ./ffmpeg-image-transport {};
@@ -1269,6 +1281,8 @@ self: super: {
  franka-gripper = self.callPackage ./franka-gripper {};
 
  franka-hardware = self.callPackage ./franka-hardware {};
+
+ franka-ign-ros2-control = self.callPackage ./franka-ign-ros2-control {};
 
  franka-inria-inverse-dynamics-solver = self.callPackage ./franka-inria-inverse-dynamics-solver {};
 
@@ -1406,6 +1420,10 @@ self: super: {
 
  gtsam = self.callPackage ./gtsam {};
 
+ gurumdds-cmake-module = self.callPackage ./gurumdds-cmake-module {};
+
+ gz-ros2-control = self.callPackage ./gz-ros2-control {};
+
  gz-ros2-control-demos = self.callPackage ./gz-ros2-control-demos {};
 
  gz-ros2-control-tests = self.callPackage ./gz-ros2-control-tests {};
@@ -1535,6 +1553,8 @@ self: super: {
  irobot-create-gazebo-sim = self.callPackage ./irobot-create-gazebo-sim {};
 
  irobot-create-ignition-bringup = self.callPackage ./irobot-create-ignition-bringup {};
+
+ irobot-create-ignition-plugins = self.callPackage ./irobot-create-ignition-plugins {};
 
  irobot-create-ignition-sim = self.callPackage ./irobot-create-ignition-sim {};
 
@@ -1739,6 +1759,8 @@ self: super: {
  leo-fw = self.callPackage ./leo-fw {};
 
  leo-gz-bringup = self.callPackage ./leo-gz-bringup {};
+
+ leo-gz-plugins = self.callPackage ./leo-gz-plugins {};
 
  leo-gz-worlds = self.callPackage ./leo-gz-worlds {};
 
@@ -2146,6 +2168,10 @@ self: super: {
 
  mvsim = self.callPackage ./mvsim {};
 
+ namosim = self.callPackage ./namosim {};
+
+ nanoeigenpy = self.callPackage ./nanoeigenpy {};
+
  nao-button-sim = self.callPackage ./nao-button-sim {};
 
  nao-command-msgs = self.callPackage ./nao-command-msgs {};
@@ -2343,6 +2369,8 @@ self: super: {
  omni-base-simulation = self.callPackage ./omni-base-simulation {};
 
  ompl = self.callPackage ./ompl {};
+
+ open3d-conversions = self.callPackage ./open3d-conversions {};
 
  open-manipulator = self.callPackage ./open-manipulator {};
 
@@ -2610,6 +2638,8 @@ self: super: {
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
+ pointcloud-to-ply = self.callPackage ./pointcloud-to-ply {};
+
  polygon-demos = self.callPackage ./polygon-demos {};
 
  polygon-msgs = self.callPackage ./polygon-msgs {};
@@ -2838,6 +2868,8 @@ self: super: {
 
  realtime-tools = self.callPackage ./realtime-tools {};
 
+ replay-testing = self.callPackage ./replay-testing {};
+
  resource-retriever = self.callPackage ./resource-retriever {};
 
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
@@ -2850,9 +2882,13 @@ self: super: {
 
  rmf-building-map-msgs = self.callPackage ./rmf-building-map-msgs {};
 
+ rmf-building-map-tools = self.callPackage ./rmf-building-map-tools {};
+
  rmf-building-sim-common = self.callPackage ./rmf-building-sim-common {};
 
  rmf-building-sim-gz-classic-plugins = self.callPackage ./rmf-building-sim-gz-classic-plugins {};
+
+ rmf-building-sim-gz-plugins = self.callPackage ./rmf-building-sim-gz-plugins {};
 
  rmf-charger-msgs = self.callPackage ./rmf-charger-msgs {};
 
@@ -2879,6 +2915,8 @@ self: super: {
  rmf-robot-sim-common = self.callPackage ./rmf-robot-sim-common {};
 
  rmf-robot-sim-gz-classic-plugins = self.callPackage ./rmf-robot-sim-gz-classic-plugins {};
+
+ rmf-robot-sim-gz-plugins = self.callPackage ./rmf-robot-sim-gz-plugins {};
 
  rmf-scheduler-msgs = self.callPackage ./rmf-scheduler-msgs {};
 
@@ -2948,6 +2986,8 @@ self: super: {
 
  rmw-fastrtps-shared-cpp = self.callPackage ./rmw-fastrtps-shared-cpp {};
 
+ rmw-gurumdds-cpp = self.callPackage ./rmw-gurumdds-cpp {};
+
  rmw-implementation = self.callPackage ./rmw-implementation {};
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
@@ -3009,6 +3049,8 @@ self: super: {
  ros2acceleration = self.callPackage ./ros2acceleration {};
 
  ros2action = self.callPackage ./ros2action {};
+
+ ros2ai = self.callPackage ./ros2ai {};
 
  ros2bag = self.callPackage ./ros2bag {};
 
@@ -3079,6 +3121,10 @@ self: super: {
  ros-gz-image = self.callPackage ./ros-gz-image {};
 
  ros-gz-interfaces = self.callPackage ./ros-gz-interfaces {};
+
+ ros-gz-sim = self.callPackage ./ros-gz-sim {};
+
+ ros-gz-sim-demos = self.callPackage ./ros-gz-sim-demos {};
 
  ros-ign = self.callPackage ./ros-ign {};
 
@@ -3429,6 +3475,8 @@ self: super: {
  situational-graphs-datasets = self.callPackage ./situational-graphs-datasets {};
 
  situational-graphs-msgs = self.callPackage ./situational-graphs-msgs {};
+
+ situational-graphs-reasoning = self.callPackage ./situational-graphs-reasoning {};
 
  situational-graphs-reasoning-msgs = self.callPackage ./situational-graphs-reasoning-msgs {};
 
@@ -3831,6 +3879,8 @@ self: super: {
  turtlebot4-diagnostics = self.callPackage ./turtlebot4-diagnostics {};
 
  turtlebot4-ignition-bringup = self.callPackage ./turtlebot4-ignition-bringup {};
+
+ turtlebot4-ignition-gui-plugins = self.callPackage ./turtlebot4-ignition-gui-plugins {};
 
  turtlebot4-ignition-toolbox = self.callPackage ./turtlebot4-ignition-toolbox {};
 

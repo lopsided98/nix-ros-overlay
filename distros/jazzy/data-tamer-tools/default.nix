@@ -2,7 +2,7 @@
 # Copyright 2025 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-gtest, ament-cmake-lint-cmake, ament-index-cpp, ament-lint, backward-ros, data-tamer-cpp, data-tamer-msgs, foxglove-sdk-vendor, mcap-vendor, nlohmann_json, protobuf, rcl-interfaces, rclcpp, rclcpp-components, rosidl-default-generators }:
+{ lib, buildRosPackage, fetchurl, _unresolved_foxglove_sdk_vendor, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-gtest, ament-cmake-lint-cmake, ament-index-cpp, ament-lint, backward-ros, data-tamer-cpp, data-tamer-msgs, mcap-vendor, nlohmann_json, protobuf, rcl-interfaces, rclcpp, rclcpp-components, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-jazzy-data-tamer-tools";
   version = "0.2.1-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];
   checkInputs = [ ament-cmake-clang-format ament-cmake-cppcheck ament-cmake-gtest ament-cmake-lint-cmake ament-index-cpp ament-lint ];
-  propagatedBuildInputs = [ backward-ros data-tamer-cpp data-tamer-msgs foxglove-sdk-vendor mcap-vendor nlohmann_json protobuf rcl-interfaces rclcpp rclcpp-components ];
+  propagatedBuildInputs = [ _unresolved_foxglove_sdk_vendor backward-ros data-tamer-cpp data-tamer-msgs mcap-vendor nlohmann_json protobuf rcl-interfaces rclcpp rclcpp-components ];
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
