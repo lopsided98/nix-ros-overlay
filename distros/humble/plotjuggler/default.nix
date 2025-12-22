@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, binutils, boost, cppzmq, data-tamer-cpp, fmt, lua, lz4, nlohmann_json, protobuf, qt5, rclcpp, zstd }:
 buildRosPackage {
   pname = "ros-humble-plotjuggler";
-  version = "3.14.2-r1";
+  version = "3.14.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/plotjuggler-release/archive/release/humble/plotjuggler/3.14.2-1.tar.gz";
-    name = "3.14.2-1.tar.gz";
-    sha256 = "9607a9c234d97cb0538c0f3239d2f4284a8dca797c490d645089393ec4870ce9";
+    url = "https://github.com/ros2-gbp/plotjuggler-release/archive/release/humble/plotjuggler/3.14.4-1.tar.gz";
+    name = "3.14.4-1.tar.gz";
+    sha256 = "5982d6158cf203f3346a9ecf33e9e7956578c1d73849f44d80de98719100eb52";
   };
 
   buildType = "ament_cmake";

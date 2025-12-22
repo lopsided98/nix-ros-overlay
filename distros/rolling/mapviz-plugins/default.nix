@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, cv-bridge, geometry-msgs, gps-msgs, image-transport, map-msgs, mapviz, marti-common-msgs, marti-nav-msgs, marti-sensor-msgs, marti-visualization-msgs, nav-msgs, opencv, pluginlib, qt5, rclcpp, rclcpp-action, ros-environment, sensor-msgs, std-msgs, std-srvs, stereo-msgs, swri-image-util, swri-math-util, swri-route-util, swri-transform-util, tf2, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-mapviz-plugins";
-  version = "2.5.10-r1";
+  version = "2.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/rolling/mapviz_plugins/2.5.10-1.tar.gz";
-    name = "2.5.10-1.tar.gz";
-    sha256 = "737745f5322369df77b0e7d5355f0aba14ccd32f61a892d25e9a158ce663f014";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/rolling/mapviz_plugins/2.6.0-1.tar.gz";
+    name = "2.6.0-1.tar.gz";
+    sha256 = "453fbf1e9f07a06aec6fe84766fc9bed6070b33ea1037ca40bdea6990afca5b3";
   };
 
   buildType = "ament_cmake";

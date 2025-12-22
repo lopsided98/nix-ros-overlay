@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, binutils, boost, cppzmq, data-tamer-cpp, fmt, lua, lz4, nlohmann_json, protobuf, qt5, rclcpp, zstd }:
 buildRosPackage {
   pname = "ros-kilted-plotjuggler";
-  version = "3.14.2-r1";
+  version = "3.14.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/plotjuggler-release/archive/release/kilted/plotjuggler/3.14.2-1.tar.gz";
-    name = "3.14.2-1.tar.gz";
-    sha256 = "10784d8157a4e091dde906171dd071b5f83d5279aef21feda95cd6a85df4120b";
+    url = "https://github.com/ros2-gbp/plotjuggler-release/archive/release/kilted/plotjuggler/3.14.4-1.tar.gz";
+    name = "3.14.4-1.tar.gz";
+    sha256 = "d7712efa5e57c3aaa499c8f569f7a01cb3f169b77f9907cdee5175ad35a47cb6";
   };
 
   buildType = "ament_cmake";
