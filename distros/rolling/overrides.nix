@@ -70,6 +70,9 @@ in {
       '';
   });
 
+  freeimage = if lib.isDerivation self.freeimage then null else
+    builtins.abort "Remove this override as freeimage was removed from nixpkgs";
+
   gazebo = self.gazebo_11;
 
   geometric-shapes = rosSuper.geometric-shapes.overrideAttrs({
@@ -99,7 +102,22 @@ in {
 
   gz-cmake-vendor = lib.patchAmentVendorGit rosSuper.gz-cmake-vendor { };
 
-  gz-common-vendor = (lib.patchAmentVendorGit rosSuper.gz-common-vendor { }).overrideAttrs ({
+  gz-common-vendor = (lib.patchAmentVendorGit rosSuper.gz-common-vendor {
+    patchesFor.gz_common_vendor = [
+      # Patch needed for the #725 below to apply cleanly
+      (self.fetchpatch2 {
+        name = "fix-image-channeldata-for-16-bit-rgb-a-images";
+        url = "https://github.com/gazebosim/gz-common/commit/58c6eaa7bd9c048264f3e0b33a36a744cca8d18c.patch";
+        hash = "sha256-y2fQp6IdEykIgS/vMMN4rTctY0btBQy+vLI1mlaQKJc=";
+      })
+      # https://github.com/gazebosim/gz-common/pull/725
+      (self.fetchpatch2 {
+        name = "replace-freeimage-dependency-with-stb-rolling-version";
+        url = "https://github.com/wentasah/gz-common/commit/8d18342302b7586b5b34c3cd12f2ef26e148b6ab.patch";
+        hash = "sha256-rI9hqtbwYWhakIo1I8DEElbMZYkchG4lzUUt8lr8XnU=";
+      })
+    ];
+  }).overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
     # https://github.com/gazebo-release/gz_common_vendor/pull/2
@@ -110,17 +128,9 @@ in {
 
   gz-fuel-tools-vendor = lib.patchAmentVendorGit rosSuper.gz-fuel-tools-vendor { };
 
-  gz-gui-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-gui-vendor { }).overrideAttrs ({
-    postInstall ? "", ...
-  }: {
-    # "RPATH of binary libGrid3D.so contains a forbidden reference to
-    # /build/" (see https://github.com/gazebosim/gz-gui/issues/627).
-    postInstall = postInstall + ''
-      ${self.patchelf}/bin/patchelf --remove-rpath $out/lib64/gz-gui-9/plugins/libGrid3D.so
-    '';
-  });
+  gz-gui-vendor = lib.patchAmentVendorGit rosSuper.gz-gui-vendor { };
 
-  gz-launch-vendor = lib.patchGzAmentVendorGit rosSuper.gz-launch-vendor { };
+  gz-launch-vendor = lib.patchAmentVendorGit rosSuper.gz-launch-vendor { };
 
   gz-math-vendor = lib.patchAmentVendorGit rosSuper.gz-math-vendor { };
 
@@ -143,7 +153,7 @@ in {
 
   gz-sensors-vendor = lib.patchAmentVendorGit rosSuper.gz-sensors-vendor { };
 
-  gz-sim-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sim-vendor { };
+  gz-sim-vendor = lib.patchAmentVendorGit rosSuper.gz-sim-vendor { };
 
   gz-tools-vendor = (lib.patchAmentVendorGit rosSuper.gz-tools-vendor { }).overrideAttrs({
     nativeBuildInputs ? [],
@@ -151,11 +161,9 @@ in {
     qtWrapperArgs ? [],
     postFixup ? "", ...
   }: {
-    nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+    nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
     propagatedNativeBuildInputs = propagatedNativeBuildInputs ++ [
-      self.qt5.qtquickcontrols2
-      self.qt5.qtgraphicaleffects
-      self.pkg-config
+      self.qt6.qtbase
     ];
     qtWrapperArgs = qtWrapperArgs ++ [
       # Gazebo is currently broken on Wayland

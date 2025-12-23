@@ -5,7 +5,6 @@
 , libGLU
 , libGL
 , freetype
-, freeimage
 , zziplib
 , xorgproto
 , libXrandr
@@ -62,7 +61,6 @@ stdenv.mkDerivation rec {
     libGLU
     libGL
     freetype
-    freeimage
     zziplib
     xorgproto
     libXrandr
