@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-tl-expected";
-  version = "1.0.2-r2";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/humble/tl_expected/1.0.2-2.tar.gz";
-    name = "1.0.2-2.tar.gz";
-    sha256 = "c7ee1c7e16aea04c2da0c93bf41f9a2570f0d2ff987b2a25ea423f0d702821f7";
+    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/humble/tl_expected/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "9bf4e6922dc936811063abc591035ed376a65779465f3dfd7e254982e12893e2";
   };
 
   buildType = "ament_cmake";
@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = "C++11/14/17 std::expected with functional-style extensions";
-    license = with lib.licenses; [ "Creative-Commons-Zero-v1.0-Universal" ];
+    license = with lib.licenses; [ "CC0-1.0" ];
   };
 }

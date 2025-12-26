@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geographic-msgs, geometry-msgs, rcl-interfaces, rosidl-default-generators, rosidl-default-runtime, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-mavros-msgs";
-  version = "2.13.0-r1";
+  version = "2.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavros-release/archive/release/jazzy/mavros_msgs/2.13.0-1.tar.gz";
-    name = "2.13.0-1.tar.gz";
-    sha256 = "c5da55a5d0bcd3d8d4091337350b6a0139355e7be61109133ee3bad480824d91";
+    url = "https://github.com/ros2-gbp/mavros-release/archive/release/jazzy/mavros_msgs/2.14.0-1.tar.gz";
+    name = "2.14.0-1.tar.gz";
+    sha256 = "5b823dc09a725da3e08db5c537fa1d8359c6106d3548e5a5a8a2797c3176cabd";
   };
 
   buildType = "ament_cmake";

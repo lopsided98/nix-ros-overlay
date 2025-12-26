@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, eigen3-cmake-module, geometry-msgs, mavros, mavros-msgs, rclpy, sensor-msgs, std-msgs, std-srvs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-humble-mavros-examples";
-  version = "2.13.0-r1";
+  version = "2.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavros-release/archive/release/humble/mavros_examples/2.13.0-1.tar.gz";
-    name = "2.13.0-1.tar.gz";
-    sha256 = "a7345d5764e2848cdb193cd300f2b17c037041cd8b9ca8a926fae31f66429c3c";
+    url = "https://github.com/ros2-gbp/mavros-release/archive/release/humble/mavros_examples/2.14.0-1.tar.gz";
+    name = "2.14.0-1.tar.gz";
+    sha256 = "f7941b31432984e2bd863d5564020e9b3445058f15eacd2fc5192093881df5a5";
   };
 
   buildType = "ament_cmake";

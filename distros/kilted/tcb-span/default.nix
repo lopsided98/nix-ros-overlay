@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-kilted-tcb-span";
-  version = "1.0.2-r5";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/kilted/tcb_span/1.0.2-5.tar.gz";
-    name = "1.0.2-5.tar.gz";
-    sha256 = "4495f1e7438aa5d77c5f28e29d92e9f92bf9fec90f02728077de01f12926b448";
+    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/kilted/tcb_span/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "2e37ce3750b5380807d9b4ae43bb0debf6fbe2442417061ac3d3c14f2ae64c13";
   };
 
   buildType = "ament_cmake";

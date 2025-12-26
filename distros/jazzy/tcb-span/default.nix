@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-jazzy-tcb-span";
-  version = "1.0.2-r5";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/jazzy/tcb_span/1.0.2-5.tar.gz";
-    name = "1.0.2-5.tar.gz";
-    sha256 = "a8ad59841a27e25761f00a67a33ebf5dcd472d8258ccbe55b55dfcac6c4d9d66";
+    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/jazzy/tcb_span/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "4d080d32255175c8ea63baa51b46eabf15cb6eb146cf57b61d1f01d552eba5d3";
   };
 
   buildType = "ament_cmake";
