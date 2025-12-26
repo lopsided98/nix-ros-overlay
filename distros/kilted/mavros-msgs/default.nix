@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geographic-msgs, geometry-msgs, rcl-interfaces, rosidl-default-generators, rosidl-default-runtime, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-mavros-msgs";
-  version = "2.13.0-r1";
+  version = "2.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavros-release/archive/release/kilted/mavros_msgs/2.13.0-1.tar.gz";
-    name = "2.13.0-1.tar.gz";
-    sha256 = "13df9bda838dba5a741477492d3119011534a55b13e65f0cd350ea6cb9f7cda9";
+    url = "https://github.com/ros2-gbp/mavros-release/archive/release/kilted/mavros_msgs/2.14.0-1.tar.gz";
+    name = "2.14.0-1.tar.gz";
+    sha256 = "9d32e6b6a65a31c0cce7a8b1fc077c593dda12963d6e3409307b2b4d759e9082";
   };
 
   buildType = "ament_cmake";

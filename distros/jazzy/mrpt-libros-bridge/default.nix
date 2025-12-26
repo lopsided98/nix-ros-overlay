@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cmake, cv-bridge, geometry-msgs, mrpt-libmaps, mrpt-libobs, nav-msgs, ros-environment, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-libros-bridge";
-  version = "3.0.2-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/jazzy/mrpt_libros_bridge/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "de47bf6bd09d8563a80ff8aa088c1e711eefcf795f381bd94d8e40b2d57ab7f8";
+    url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/jazzy/mrpt_libros_bridge/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "079dd3e994e616fa2334f037ea6340a3ae9d09f3e99a76f80306bb8e8f008b24";
   };
 
   buildType = "cmake";
