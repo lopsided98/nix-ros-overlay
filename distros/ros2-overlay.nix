@@ -67,6 +67,19 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
+  behaviortree-cpp = rosSuper.behaviortree-cpp.overrideAttrs ({
+    cmakeFlags ? [], ...
+  }: {
+    # Don't use vendored tinyxml-2. Other packages like
+    # nav2-behavior-tree, can be linked against different tinyxml-2
+    # version propagated via their dependencies from nixpkgs. This can
+    # lead to inconsistencies causing segfaults:
+    # https://github.com/lopsided98/nix-ros-overlay/issues/648
+    # https://github.com/BehaviorTree/BehaviorTree.CPP/issues/1014
+    cmakeFlags = cmakeFlags ++ [ "-DUSE_VENDORED_TINYXML2=OFF" ];
+  });
+
+
   # Cartographer is unmaintained upstream:
   # https://github.com/cartographer-project/cartographer?tab=readme-ov-file#a-note-for-ros-users
   cartographer = rosSuper.cartographer.overrideAttrs ({
@@ -365,31 +378,5 @@ rosSelf: rosSuper: with rosSelf.lib; {
     meta = meta // {
       broken = true;
     };
-  });
-
-  # Ensure that tinyxml-2 has the same major version as in
-  # behaviortree-cpp, which vendors it. Other packages like
-  # nav2-behavior-tree include tintinyxml-2 propagated via their
-  # dependencies from nixpkgs, which can lead to inconsistencies
-  # causing segfaults:
-  # https://github.com/lopsided98/nix-ros-overlay/issues/648
-  # https://github.com/BehaviorTree/BehaviorTree.CPP/issues/1014
-  tinyxml-2 = self.tinyxml-2.overrideAttrs ({
-    postPatch ? "", ...
-  }: let
-    version = "10.0.0";
-  in {
-    inherit version;
-    src = self.fetchFromGitHub {
-      owner = "leethomason";
-      repo = "tinyxml2";
-      tag = version;
-      hash = "sha256-9xrpPFMxkAecg3hMHzzThuy0iDt970Iqhxs57Od+g2g=";
-    };
-    preConfigure = ''
-      v1=$(tar xf ${rosSelf.behaviortree-cpp.src} --wildcards '*/tinyxml2.h' --to-stdout|grep TINYXML2_MAJOR_VERSION)
-      v2=$(grep TINYXML2_MAJOR_VERSION tinyxml2.h)
-      test "$v1" = "$v2" || { echo "tinyxml-2 version mismatch"; exit 1; }
-    '';
   });
 }
