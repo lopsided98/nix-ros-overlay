@@ -273,7 +273,7 @@ in {
   }: {
     postPatch = postPatch + ''
       substituteInPlace src/rviz_rendering/render_system.cpp \
-        --replace-fail /opt/rviz_ogre_vendor ""
+        --replace-fail '/ "opt" / "rviz_ogre_vendor"' ""
     '';
   });
 
