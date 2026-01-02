@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-pose-list, mola-test-datasets, mp2p-icp, mrpt-libmaps, mrpt-libobs, mrpt-libslam }:
 buildRosPackage {
   pname = "ros-kilted-mola-relocalization";
-  version = "2.3.0-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_relocalization/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "64760c6f45d6bda2a2cd9098000cc5e74c9db6b2ae4c632628b9d3107cbab52b";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_relocalization/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "552756a2cd9c41c804e964b9b00e328bd24061d8447d5bec4a2d2a09a7f363f8";
   };
 
   buildType = "cmake";

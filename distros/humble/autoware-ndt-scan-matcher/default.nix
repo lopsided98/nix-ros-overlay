@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-cppcheck, ament-lint-auto, autoware-cmake, autoware-internal-debug-msgs, autoware-internal-localization-msgs, autoware-localization-util, autoware-map-msgs, autoware-utils-diagnostics, autoware-utils-logging, autoware-utils-pcl, autoware-utils-visualization, diagnostic-msgs, fmt, geometry-msgs, nav-msgs, pcl, pcl-conversions, rclcpp, rclcpp-components, ros-testing, sensor-msgs, std-srvs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:

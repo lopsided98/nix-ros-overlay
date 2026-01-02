@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libobs, octomap, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-libmaps";
-  version = "2.15.3-r1";
+  version = "2.15.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/jazzy/mrpt_libmaps/2.15.3-1.tar.gz";
-    name = "2.15.3-1.tar.gz";
-    sha256 = "c4424d0346e3d7d1f171d2a967edc97ee05d20816b205edbe70ded4aeb2ccfa4";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/jazzy/mrpt_libmaps/2.15.4-1.tar.gz";
+    name = "2.15.4-1.tar.gz";
+    sha256 = "18e65bf82d2cf0a96142b6f739ff71d7012a73f73a2831a6e9f878bdf1a8813d";
   };
 
   buildType = "cmake";

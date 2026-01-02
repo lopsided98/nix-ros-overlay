@@ -1,23 +1,23 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, cppzmq, rclcpp, ros-environment, sqlite }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, cppzmq, git, rclcpp, ros-environment, sqlite, tinyxml-2, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-kilted-behaviortree-cpp";
-  version = "4.7.0-r1";
+  version = "4.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/kilted/behaviortree_cpp/4.7.0-1.tar.gz";
-    name = "4.7.0-1.tar.gz";
-    sha256 = "83e45f2076940ddc71769fa00219323b3026226813b999a6339b2646c99f5547";
+    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/kilted/behaviortree_cpp/4.8.3-1.tar.gz";
+    name = "4.8.3-1.tar.gz";
+    sha256 = "1352eec92fa9bb772abd21ba8645ebe0a8e88cfcedb165f12ae4486a1084b538";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ros-environment ];
+  buildInputs = [ ament-cmake git ros-environment ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ ament-index-cpp cppzmq rclcpp sqlite ];
-  nativeBuildInputs = [ ament-cmake ];
+  propagatedBuildInputs = [ ament-index-cpp cppzmq rclcpp sqlite tinyxml-2 tinyxml2-vendor ];
+  nativeBuildInputs = [ ament-cmake git ];
 
   meta = {
     description = "This package provides the Behavior Trees core library.";

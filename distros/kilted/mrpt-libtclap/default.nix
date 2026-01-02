@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, assimp, cmake, eigen, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libbase, opencv, openni2, pkg-config, python3Packages, suitesparse, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-libtclap";
-  version = "2.15.3-r1";
+  version = "2.15.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/kilted/mrpt_libtclap/2.15.3-1.tar.gz";
-    name = "2.15.3-1.tar.gz";
-    sha256 = "24da869a97c86eeff9e20a52291efd577713d8b7c6020d38b96e6e1cbe50aabd";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/kilted/mrpt_libtclap/2.15.4-1.tar.gz";
+    name = "2.15.4-1.tar.gz";
+    sha256 = "edae60a5f338fad28f8ff293b50f9e8eae2d65d42f657491b674578dcd6c01f0";
   };
 
   buildType = "cmake";

@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages, rclcpp, rclpy, yasmin, yasmin-msgs, yasmin-ros }:
 buildRosPackage {
   pname = "ros-jazzy-yasmin-viewer";
-  version = "4.2.1-r2";
+  version = "4.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/jazzy/yasmin_viewer/4.2.1-2.tar.gz";
-    name = "4.2.1-2.tar.gz";
-    sha256 = "bee0ac40460e0d1c9cb807c9ebf25b14df8c262a2e12fd17cee2423a666223e5";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/jazzy/yasmin_viewer/4.2.2-1.tar.gz";
+    name = "4.2.2-1.tar.gz";
+    sha256 = "b5eaba4e44ef8f96336cf06c6d2f7cd57769a4c5b03b64f5bdd7b5e5a30a0fc0";
   };
 
   buildType = "ament_cmake";

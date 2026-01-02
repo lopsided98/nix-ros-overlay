@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, fmt, geometry-msgs, hardware-interface, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-controller-interface";
-  version = "6.2.0-r1";
+  version = "6.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/controller_interface/6.2.0-1.tar.gz";
-    name = "6.2.0-1.tar.gz";
-    sha256 = "500ce019e804fefc3052faf21f690e7d35cfa619c72902f7ec43a12249a4f765";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/controller_interface/6.3.1-1.tar.gz";
+    name = "6.3.1-1.tar.gz";
+    sha256 = "3ab569c59f3defeaf8cd69e8447b1f7dbeae50eecc835979c2724458f523c23e";
   };
 
   buildType = "ament_cmake";

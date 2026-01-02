@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, moveit-ros-move-group, nav2-bringup, nav2-bt-navigator, turtlebot3-manipulation-bringup, turtlebot3-manipulation-moveit-config, turtlebot3-manipulation-navigation2 }:

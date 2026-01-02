@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, example-interfaces, python3Packages, rclcpp, rclcpp-action, rclpy, ros-environment, std-msgs, yasmin }:
 buildRosPackage {
   pname = "ros-rolling-yasmin-ros";
-  version = "4.2.1-r2";
+  version = "4.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_ros/4.2.1-2.tar.gz";
-    name = "4.2.1-2.tar.gz";
-    sha256 = "50b6e0e57ef210d8214e1745eaae6f09918e4b83d432146df96f3ee43ce449cd";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_ros/4.2.2-1.tar.gz";
+    name = "4.2.2-1.tar.gz";
+    sha256 = "c806f90baf68c60eff7fa9c4f40144b00eb54cd9cb729c099f627b99b725169a";
   };
 
   buildType = "ament_cmake";

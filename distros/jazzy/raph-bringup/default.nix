@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, compressed-depth-image-transport, compressed-image-transport, depth-image-proc, depthai-ros-driver, image-transport, laser-filters, raph-description, raph-interfaces, rosapi, rosbridge-server, rplidar-ros, web-video-server }:

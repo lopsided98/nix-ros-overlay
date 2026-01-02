@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, cli11, cmake, cv-bridge, mrpt-libmaps, mrpt-libros-bridge, mrpt-msgs, nav-msgs, rosbag2-cpp, sensor-msgs, tf2-geometry-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-rosbag2rawlog";
-  version = "3.1.0-r1";
+  version = "3.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/rolling/rosbag2rawlog/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "5a09b5ed67057a7171946bc164091af1575d9f60c9c4b013657a666cb266fa7d";
+    url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/rolling/rosbag2rawlog/3.1.1-1.tar.gz";
+    name = "3.1.1-1.tar.gz";
+    sha256 = "24312cdf4d3a3aa55a1dcb6165a3a5df051ab6d808c5daa494e28451ece48859";
   };
 
   buildType = "ament_cmake";

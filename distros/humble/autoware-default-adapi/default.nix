@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-adapi-specs, autoware-adapi-v1-msgs, autoware-adapi-version-msgs, autoware-cmake, autoware-component-interface-specs, autoware-geography-utils, autoware-global-parameter-loader, autoware-lint-common, autoware-localization-msgs, autoware-motion-utils, autoware-planning-msgs, autoware-system-msgs, autoware-utils-rclcpp, autoware-vehicle-info-utils, autoware-vehicle-msgs, diagnostic-updater, geographic-msgs, launch-testing, launch-testing-ament-cmake, nav-msgs, python3Packages, rclcpp, rclcpp-components, shape-msgs, std-srvs }:

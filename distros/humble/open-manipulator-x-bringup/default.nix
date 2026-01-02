@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, gazebo-ros, gripper-controllers, open-manipulator-x-description, robot-state-publisher, ros2-control, ros2-controllers, rviz2, xacro }:

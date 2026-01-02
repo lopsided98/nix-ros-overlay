@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-pose-list, mola-test-datasets, mp2p-icp, mrpt-libmaps, mrpt-libobs, mrpt-libslam }:
 buildRosPackage {
   pname = "ros-humble-mola-relocalization";
-  version = "2.3.0-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_relocalization/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "aa0733de864cac074dea853a0f4f9bcbc0d1207877142cc72986326429066aaf";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_relocalization/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "1d2b8b3aed80023f82a3da0d89856461a85d55b818bf0b2646832214394197d2";
   };
 
   buildType = "cmake";

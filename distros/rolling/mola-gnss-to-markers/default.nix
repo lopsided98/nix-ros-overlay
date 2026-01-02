@@ -1,21 +1,21 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, mrpt-libobs, mrpt-nav-interfaces, rclcpp, std-msgs, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, mrpt-libobs, mrpt-nav-interfaces, rclcpp, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-mola-gnss-to-markers";
-  version = "0.1.1-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_gnss_to_markers-release/archive/release/rolling/mola_gnss_to_markers/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "49b8c3977de49bb96919c3093fe30f40b4655ea1947b75ce7e72cae442f57657";
+    url = "https://github.com/ros2-gbp/mola_gnss_to_markers-release/archive/release/rolling/mola_gnss_to_markers/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "7ddd41e72dc1472ac384b9460b6ad6f067325b06ddca8f754cf2e105aa941411";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-cmake-lint-cmake ament-cmake-xmllint ament-lint-auto ];
   propagatedBuildInputs = [ mrpt-libobs mrpt-nav-interfaces rclcpp std-msgs visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 

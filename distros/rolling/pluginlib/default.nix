@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, class-loader, rcpputils, rcutils, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-rolling-pluginlib";
-  version = "5.8.1-r1";
+  version = "5.8.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/rolling/pluginlib/5.8.1-1.tar.gz";
-    name = "5.8.1-1.tar.gz";
-    sha256 = "7cb281811b51a6fdecb925bd76c7358de8e83b802b2e703442240fd6d9d9fc85";
+    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/rolling/pluginlib/5.8.2-1.tar.gz";
+    name = "5.8.2-1.tar.gz";
+    sha256 = "ac81b138f7692e75cb7ac4f08be430772b636ca2b5746b6def8340c0549e3ee2";
   };
 
   buildType = "ament_cmake";

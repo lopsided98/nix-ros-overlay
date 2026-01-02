@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-adapi-v1-msgs, autoware-cmake, autoware-internal-planning-msgs, autoware-interpolation, autoware-lint-common, autoware-planning-msgs, autoware-utils-geometry, autoware-utils-math, autoware-utils-system, autoware-utils-visualization, autoware-vehicle-msgs, boost, builtin-interfaces, geometry-msgs, rclcpp, tf2, tf2-geometry-msgs, visualization-msgs }:

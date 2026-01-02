@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, geometry-msgs, launch-testing, launch-testing-ament-cmake, nav2-behavior-tree, nav2-costmap-2d, nav2-map-server, nav2-msgs, nav2-navfn-planner, nav2-theta-star-planner, nav2-util, nlohmann_json, pcl-ros, pluginlib, rclcpp, rclcpp-action, roadmap-explorer-msgs, ros-environment, rosidl-default-generators, sensor-msgs, tf2, tf2-ros, visualization-msgs }:

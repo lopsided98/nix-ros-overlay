@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-libgui, mrpt-libmaps, mrpt-libopengl }:
 buildRosPackage {
   pname = "ros-humble-mola-viz";
-  version = "2.3.0-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_viz/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "a2e609a346b041a86b3861da5762a06d6545719b90b940fc8c2c95ff9d991a7d";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_viz/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "12b2d722e55f9719fd8e8beff9b5a43aca85637eaba916bdbf7b8863d6397dcd";
   };
 
   buildType = "cmake";

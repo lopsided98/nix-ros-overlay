@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-rolling-leo-description";
-  version = "3.1.0-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/rolling/leo_description/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "7e822c3f34f76d450632840754a09fe6eb8d1534a67a1cba9b49eeff81ddcd25";
+    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/rolling/leo_description/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "1524cd4542bdc2ed6a84eba5e8faaa293544565736d94241adc5f17f909f6691";
   };
 
   buildType = "ament_cmake";

@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-index-cpp, ament-index-python, ament-lint-auto, ament-lint-common, libcurl-vendor, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-resource-retriever";
-  version = "3.7.0-r1";
+  version = "3.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/kilted/resource_retriever/3.7.0-1.tar.gz";
-    name = "3.7.0-1.tar.gz";
-    sha256 = "20b9d38e5d842e447ef2e286b7bd742db8180a52b72588b164ead7b4ad12f189";
+    url = "https://github.com/ros2-gbp/resource_retriever-release/archive/release/kilted/resource_retriever/3.7.1-1.tar.gz";
+    name = "3.7.1-1.tar.gz";
+    sha256 = "c9b1ba1cd0f65eef16ee63f02bdc7b1ba406c052e7bfcffe28aeb069dec53280";
   };
 
   buildType = "ament_cmake";

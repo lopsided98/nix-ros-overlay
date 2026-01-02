@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-index-python, diagnostic-aggregator, joy-linux, joy-teleop, play-motion2, play-motion2-cli, talos-controller-configuration, talos-description, twist-mux }:

@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-mola-demos";
-  version = "2.3.0-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_demos/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "b778937f320401cfdd44cb248c14328be61026a055d8efdce402fbbd7a503ffb";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_demos/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "4f14138c902c4132c20a95c1ec83a4eb604a536ff07b370972f2f9e2ee5cbbdc";
   };
 
   buildType = "ament_cmake";

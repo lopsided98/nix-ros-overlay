@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, fmt, geometry-msgs, hardware-interface, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-controller-interface";
-  version = "4.40.0-r1";
+  version = "4.42.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/controller_interface/4.40.0-1.tar.gz";
-    name = "4.40.0-1.tar.gz";
-    sha256 = "b76c4e48c13673018f9bf71c635a692043211c7c0c5ba38412d0846c07e7542b";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/controller_interface/4.42.1-1.tar.gz";
+    name = "4.42.1-1.tar.gz";
+    sha256 = "5893dedea28d445381316f20491acf9d6844e40f99b78d5c78bc6b5d6734a13f";
   };
 
   buildType = "ament_cmake";

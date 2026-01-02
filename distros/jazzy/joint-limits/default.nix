@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, backward-ros, fmt, generate-parameter-library, launch-ros, launch-testing-ament-cmake, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-jazzy-joint-limits";
-  version = "4.40.0-r1";
+  version = "4.42.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/joint_limits/4.40.0-1.tar.gz";
-    name = "4.40.0-1.tar.gz";
-    sha256 = "7ddb1bb37d5b3168cb1a45b66f34b609bddf86bdabf8d30ede8bb0f529f6e5ab";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/joint_limits/4.42.1-1.tar.gz";
+    name = "4.42.1-1.tar.gz";
+    sha256 = "213483b3fa32964d0cd01011c073c8d535bf49bdb5203db1651f2e540b0ac43e";
   };
 
   buildType = "ament_cmake";

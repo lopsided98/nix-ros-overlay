@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, open-manipulator-x-bringup, open-manipulator-x-description, open-manipulator-x-gui, open-manipulator-x-moveit-config, open-manipulator-x-playground, open-manipulator-x-teleop }:

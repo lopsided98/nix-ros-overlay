@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, cppzmq, git, rclcpp, ros-environment, sqlite, tinyxml-2, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-rolling-behaviortree-cpp";
-  version = "4.8.2-r1";
+  version = "4.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/rolling/behaviortree_cpp/4.8.2-1.tar.gz";
-    name = "4.8.2-1.tar.gz";
-    sha256 = "2fd3458c2167fbd002418da6d04d1cc17649c33974d7bc8443669b1c779b734d";
+    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/rolling/behaviortree_cpp/4.8.3-1.tar.gz";
+    name = "4.8.3-1.tar.gz";
+    sha256 = "2dc4f785495dc68c520c30dddddcee572c3a9b90a2ea4256472f5147c13dbdc4";
   };
 
   buildType = "ament_cmake";

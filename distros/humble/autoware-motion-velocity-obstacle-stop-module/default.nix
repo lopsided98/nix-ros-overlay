@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-internal-planning-msgs, autoware-lint-common, autoware-motion-utils, autoware-motion-velocity-planner, autoware-motion-velocity-planner-common, autoware-perception-msgs, autoware-planning-msgs, autoware-utils-debug, autoware-utils-geometry, autoware-utils-rclcpp, autoware-utils-system, autoware-utils-uuid, autoware-utils-visualization, autoware-vehicle-info-utils, boost, geometry-msgs, grid-map-core, pluginlib, rclcpp, tf2, visualization-msgs }:
