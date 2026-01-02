@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cmake, cv-bridge, geometry-msgs, mrpt-libmaps, mrpt-libobs, nav-msgs, ros-environment, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-libros-bridge";
-  version = "3.1.0-r1";
+  version = "3.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/jazzy/mrpt_libros_bridge/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "079dd3e994e616fa2334f037ea6340a3ae9d09f3e99a76f80306bb8e8f008b24";
+    url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/jazzy/mrpt_libros_bridge/3.1.1-1.tar.gz";
+    name = "3.1.1-1.tar.gz";
+    sha256 = "3d4850891e0638eb838060c3006706fbd3dfaff7b1d6e8dc94e16ff271615b54";
   };
 
   buildType = "cmake";

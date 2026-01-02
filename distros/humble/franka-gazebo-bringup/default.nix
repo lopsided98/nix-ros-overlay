@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, franka-description, franka-ign-ros2-control, joint-state-publisher-gui, ros-gz, ros2controlcli, sdformat-urdf }:

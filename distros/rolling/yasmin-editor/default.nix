@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages, rclpy, ros-environment, yasmin, yasmin-factory }:
 buildRosPackage {
   pname = "ros-rolling-yasmin-editor";
-  version = "4.2.1-r2";
+  version = "4.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_editor/4.2.1-2.tar.gz";
-    name = "4.2.1-2.tar.gz";
-    sha256 = "038292547f8beff40ed0e20f17bc39e57a09fbef1a33f39270464dca1f5d00a8";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_editor/4.2.2-1.tar.gz";
+    name = "4.2.2-1.tar.gz";
+    sha256 = "906a7f66aadb54e927c01d8e43b4cc09f673e34e0f057d61e1daa1b7550fd7b7";
   };
 
   buildType = "ament_cmake";

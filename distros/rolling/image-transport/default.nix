@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, message-filters, pluginlib, rclcpp, rclcpp-components, rclcpp-lifecycle, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-image-transport";
-  version = "6.4.3-r1";
+  version = "6.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/image_transport/6.4.3-1.tar.gz";
-    name = "6.4.3-1.tar.gz";
-    sha256 = "1e28c1efc0e4c8683875c15d690580acdfd255fb34fd2c3c26515ded4e43ad11";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/image_transport/6.4.4-1.tar.gz";
+    name = "6.4.4-1.tar.gz";
+    sha256 = "41ce921dca9fcee0cdadb6e96ea0cab0f027052d98f56a0d372ef9308545b08c";
   };
 
   buildType = "ament_cmake";

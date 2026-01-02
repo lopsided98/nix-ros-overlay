@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, _unresolved_libserial-dev, ament-cmake, fmt, hardware-interface, pkg-config, pluginlib, range-v3, rclcpp, spdlog, tl-expected }:
 buildRosPackage {
   pname = "ros-jazzy-feetech-ros2-driver";
-  version = "0.2.0-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/feetech_ros2_driver-release/archive/release/jazzy/feetech_ros2_driver/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "7dc1b26fa8c0eb16b13dabfd8cc86eae6b735708d091fff09bab4f0ce8e1fc80";
+    url = "https://github.com/ros2-gbp/feetech_ros2_driver-release/archive/release/jazzy/feetech_ros2_driver/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "d2a4d6bdc428a073f8cbd0ede8079186b1419b8ecb1333d5aa042b1f177c149c";
   };
 
   buildType = "ament_cmake";

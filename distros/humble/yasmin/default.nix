@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-yasmin";
-  version = "4.2.1-r2";
+  version = "4.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin/4.2.1-2.tar.gz";
-    name = "4.2.1-2.tar.gz";
-    sha256 = "5d99c26ee12132c9c9b15c456a149a6fe50740444bf7816d94d1c930bf2067b1";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin/4.2.2-1.tar.gz";
+    name = "4.2.2-1.tar.gz";
+    sha256 = "d7ce092db0c577dab931a044a3be14ae73b2c4e5df310ab9bcec0b5e9ec06e3f";
   };
 
   buildType = "ament_cmake";

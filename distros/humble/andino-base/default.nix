@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, _unresolved_libserial-dev, ament-cmake, ament-cmake-clang-format, controller-manager, gflags, hardware-interface, joint-state-broadcaster, pkg-config, pluginlib, rclcpp, rclcpp-lifecycle }:

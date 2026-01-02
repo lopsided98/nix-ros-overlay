@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, iiqka-moveit-example, kuka-controllers, kuka-driver-interfaces, kuka-drivers-core, kuka-iiqka-eac-driver, kuka-rsi-driver, kuka-rsi-simulator, kuka-sunrise-fri-driver }:

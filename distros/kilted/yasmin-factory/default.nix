@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, class-loader, pluginlib, python3, python3Packages, rclcpp, tinyxml2-vendor, yasmin, yasmin-viewer }:
 buildRosPackage {
   pname = "ros-kilted-yasmin-factory";
-  version = "4.2.1-r2";
+  version = "4.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_factory/4.2.1-2.tar.gz";
-    name = "4.2.1-2.tar.gz";
-    sha256 = "3219f63eb01577495489ab8cf33a099660e73b2c525703d8d1fa2fd197337d80";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_factory/4.2.2-1.tar.gz";
+    name = "4.2.2-1.tar.gz";
+    sha256 = "f7d3fd4fa23ed953a82852effeee60a648025ed8689e6ade7eebe28163d29cd5";
   };
 
   buildType = "ament_cmake";

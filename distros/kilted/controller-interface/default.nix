@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, fmt, geometry-msgs, hardware-interface, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-controller-interface";
-  version = "5.10.0-r1";
+  version = "5.11.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/controller_interface/5.10.0-1.tar.gz";
-    name = "5.10.0-1.tar.gz";
-    sha256 = "dc7825c5b6924802046923b8db249e1de8af60c344744ff9c612e19d1dfbe2f7";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/controller_interface/5.11.1-1.tar.gz";
+    name = "5.11.1-1.tar.gz";
+    sha256 = "8afdd9d2f899a0e7d734e7eb894a1d0b10e889145e7676a8ae8176875146b8f5";
   };
 
   buildType = "ament_cmake";

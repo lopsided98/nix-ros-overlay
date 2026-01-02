@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libmaps, onetbb, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-humble-mrpt-libslam";
-  version = "2.15.3-r1";
+  version = "2.15.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/humble/mrpt_libslam/2.15.3-1.tar.gz";
-    name = "2.15.3-1.tar.gz";
-    sha256 = "0f33f99e022a9bee606215e5e8754afba7cf6e107ac2290dfb22a6ea710491c0";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/humble/mrpt_libslam/2.15.4-1.tar.gz";
+    name = "2.15.4-1.tar.gz";
+    sha256 = "cf55b7f3594fb0c0e5e3219e9d8f18047853d08138b055f3fa8bdf45a33e4048";
   };
 
   buildType = "cmake";

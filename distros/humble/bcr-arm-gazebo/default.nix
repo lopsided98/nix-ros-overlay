@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, _unresolved_ignition-plugin, ament-cmake, ament-lint-auto, ament-lint-common, controller-manager, gripper-controllers, gz-ros2-control, python3Packages, rclcpp, ros-gz, ros-gz-bridge, ros-gz-image, ros-gz-sim, ros2-control, ros2-controllers, trajectory-msgs, xacro }:

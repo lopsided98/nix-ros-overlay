@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-kilted-yasmin-msgs";
-  version = "4.2.1-r2";
+  version = "4.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_msgs/4.2.1-2.tar.gz";
-    name = "4.2.1-2.tar.gz";
-    sha256 = "aa93fdf7bb6cdbb9c3363c437952c1abf89b649e122312f12e38b68183cf3e30";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_msgs/4.2.2-1.tar.gz";
+    name = "4.2.2-1.tar.gz";
+    sha256 = "0b6a7e0ae2b095dd5c4d265c0d0cdc7ec18239dfc5a0eb7bc4d4fad538356c50";
   };
 
   buildType = "ament_cmake";

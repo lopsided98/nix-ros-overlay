@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, assimp, cmake, eigen, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libbase, opencv, openni2, pkg-config, python3Packages, suitesparse, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-libtclap";
-  version = "2.15.3-r1";
+  version = "2.15.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/jazzy/mrpt_libtclap/2.15.3-1.tar.gz";
-    name = "2.15.3-1.tar.gz";
-    sha256 = "b723e9ddc21586aae76040c474067f4b54c6d2eff34b91bf281843de73965927";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/jazzy/mrpt_libtclap/2.15.4-1.tar.gz";
+    name = "2.15.4-1.tar.gz";
+    sha256 = "78a9a79fc3b4e88139ae628d1f2524073ed1a057887b96f9c38430863a1221d3";
   };
 
   buildType = "cmake";

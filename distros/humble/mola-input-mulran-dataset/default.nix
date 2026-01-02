@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-humble-mola-input-mulran-dataset";
-  version = "2.3.0-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_mulran_dataset/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "00183e5ce69745178a014afd0ced573d03eeb2dacee44cd3d37ec704e0f00ee4";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_mulran_dataset/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "d98d1d9510b9f04af0ad057df84d36e5265a0fbf756b44b58f6c4e3a2f3935b8";
   };
 
   buildType = "cmake";

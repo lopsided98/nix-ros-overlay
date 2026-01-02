@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, _unresolved_python3-pymap3d, action-msgs, ament-copyright, ament-flake8, ament-pep257, as2-motion-reference-handlers, as2-msgs, geographic-msgs, geometry-msgs, nav-msgs, python3Packages, rclpy, sensor-msgs, std-srvs }:

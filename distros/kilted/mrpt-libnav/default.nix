@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libmaps, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-libnav";
-  version = "2.15.3-r1";
+  version = "2.15.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/kilted/mrpt_libnav/2.15.3-1.tar.gz";
-    name = "2.15.3-1.tar.gz";
-    sha256 = "7cf0e35bcf1ad6111f48088e5458303eff227f6d99966ca3f799d75754c7f5e9";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/kilted/mrpt_libnav/2.15.4-1.tar.gz";
+    name = "2.15.4-1.tar.gz";
+    sha256 = "13c146912e518fc7fad111c104d5d02ea73f71ffba99a090f37f6c430301247d";
   };
 
   buildType = "cmake";

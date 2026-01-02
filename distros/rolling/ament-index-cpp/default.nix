@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-ament-index-cpp";
-  version = "1.12.1-r1";
+  version = "1.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/rolling/ament_index_cpp/1.12.1-1.tar.gz";
-    name = "1.12.1-1.tar.gz";
-    sha256 = "e6f1e761298eaa79440b85eb489b5af65516524275113d283dba5207de6a553f";
+    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/rolling/ament_index_cpp/1.13.0-1.tar.gz";
+    name = "1.13.0-1.tar.gz";
+    sha256 = "80d0905e286439176525894cee1e09d2da6e1f5c894c76cba5d3ae2dbcf1400d";
   };
 
   buildType = "ament_cmake";

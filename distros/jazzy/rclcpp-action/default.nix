@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, mimick-vendor, performance-test-fixture, rcl, rcl-action, rclcpp, rcpputils, rosidl-runtime-c, test-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rclcpp-action";
-  version = "28.1.14-r1";
+  version = "28.1.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/jazzy/rclcpp_action/28.1.14-1.tar.gz";
-    name = "28.1.14-1.tar.gz";
-    sha256 = "7cea6a3b5193bbe09a673f57dd8e2d90e73f21d055ebe69f0e89a77af3f2cbe2";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/jazzy/rclcpp_action/28.1.15-1.tar.gz";
+    name = "28.1.15-1.tar.gz";
+    sha256 = "ea9b30d4123f6a6a6dd6f2d5c9a30a22b88dd3b8c2199cb7390be0ae795d611b";
   };
 
   buildType = "ament_cmake";

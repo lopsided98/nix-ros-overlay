@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libbase }:
 buildRosPackage {
   pname = "ros-jazzy-mola-yaml";
-  version = "2.3.0-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_yaml/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "290a2428a6dd52678e2af75b5152357b8c6d7ab88a4d8ca843c359d5fcd31fd1";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_yaml/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "b0d395e51ec67e97f947866af2d02828c8014a9c55919816afba84589f80f9db";
   };
 
   buildType = "cmake";

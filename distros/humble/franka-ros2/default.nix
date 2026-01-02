@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, franka-bringup, franka-description, franka-example-controllers, franka-fr3-moveit-config, franka-gazebo-bringup, franka-gripper, franka-hardware, franka-ign-ros2-control, franka-msgs, libfranka }:

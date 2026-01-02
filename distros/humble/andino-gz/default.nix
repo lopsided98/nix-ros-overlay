@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, _unresolved_ignition-gazebo6, ament-cmake, andino-description, andino-slam, nav2-bringup, nav2-common, ros-gz-bridge, ros-gz-sim, ros2launch, rviz2, xacro }:

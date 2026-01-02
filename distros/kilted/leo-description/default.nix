@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-kilted-leo-description";
-  version = "3.1.0-r2";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/kilted/leo_description/3.1.0-2.tar.gz";
-    name = "3.1.0-2.tar.gz";
-    sha256 = "90155fe933eb5e7dad978e0be6158685cff9d98468bf3e850a56359e93b48c27";
+    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/kilted/leo_description/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "1bd129ab94871145867e647297c3f2577034b0d40863ec9cd1ae0adedc4821dc";
   };
 
   buildType = "ament_cmake";

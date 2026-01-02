@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, binutils, boost, cppzmq, data-tamer-cpp, fmt, lua, lz4, nlohmann_json, protobuf, qt5, rclcpp, zstd }:
 buildRosPackage {
   pname = "ros-kilted-plotjuggler";
-  version = "3.14.4-r1";
+  version = "3.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/plotjuggler-release/archive/release/kilted/plotjuggler/3.14.4-1.tar.gz";
-    name = "3.14.4-1.tar.gz";
-    sha256 = "d7712efa5e57c3aaa499c8f569f7a01cb3f169b77f9907cdee5175ad35a47cb6";
+    url = "https://github.com/ros2-gbp/plotjuggler-release/archive/release/kilted/plotjuggler/3.15.0-1.tar.gz";
+    name = "3.15.0-1.tar.gz";
+    sha256 = "3b79831c2ee0059ad15e2f95110576abee30a7d87d07c41ad8906826227edfc5";
   };
 
   buildType = "ament_cmake";

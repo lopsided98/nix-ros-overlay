@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, boost, cmake, cppzmq, mrpt-libgui, mrpt-libmaps, mrpt-libposes, mrpt-libros-bridge, mrpt-libtclap, nav-msgs, protobuf, python3, python3Packages, ros-environment, ros2launch, sensor-msgs, stereo-msgs, tf2, tf2-geometry-msgs, unzip, visualization-msgs, wget }:
 buildRosPackage {
   pname = "ros-humble-mvsim";
-  version = "0.14.2-r1";
+  version = "0.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/humble/mvsim/0.14.2-1.tar.gz";
-    name = "0.14.2-1.tar.gz";
-    sha256 = "64510d99590ba5a89ad8a77f16197815172474c5344e0b5bbca4dfa7e29a8f54";
+    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/humble/mvsim/0.15.0-1.tar.gz";
+    name = "0.15.0-1.tar.gz";
+    sha256 = "176b3985f745ac76e6843ee572c26d26a540247f92f70d67aa0b4e6382ee2b9c";
   };
 
   buildType = "ament_cmake";

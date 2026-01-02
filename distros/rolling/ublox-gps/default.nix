@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, asio, diagnostic-msgs, diagnostic-updater, geometry-msgs, nmea-msgs, rcl-interfaces, rclcpp, rclcpp-components, rtcm-msgs, sensor-msgs, std-msgs, tf2, ublox-msgs, ublox-serialization }:

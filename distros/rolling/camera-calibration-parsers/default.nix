@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rclcpp, sensor-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-rolling-camera-calibration-parsers";
-  version = "6.4.3-r1";
+  version = "6.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/camera_calibration_parsers/6.4.3-1.tar.gz";
-    name = "6.4.3-1.tar.gz";
-    sha256 = "b2e13169bfc73bf2125f1c68dc74b73a5775b80602243b1dc6aa7b21895f0197";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/camera_calibration_parsers/6.4.4-1.tar.gz";
+    name = "6.4.4-1.tar.gz";
+    sha256 = "3cb5395f1b741d12296b01363c52fb7e218d513c47b0b6cfe6dbf5d787accbb4";
   };
 
   buildType = "ament_cmake";

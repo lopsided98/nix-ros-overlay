@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, controller-interface, controller-manager, kuka-driver-interfaces, kuka-drivers-core, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-test-assets, std-msgs }:

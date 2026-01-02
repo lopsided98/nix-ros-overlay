@@ -1,5 +1,5 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-lint-common, can-utils, clearpath-config, clearpath-generator-common, clearpath-motor-msgs, clearpath-platform-msgs, diagnostic-msgs, geometry-msgs, nav-msgs, rclpy, sensor-msgs, simple-term-menu-vendor, std-msgs, stress, tf-transformations, tf2-geometry-msgs, tf2-msgs, wireless-msgs }:

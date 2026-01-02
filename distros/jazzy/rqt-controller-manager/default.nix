@@ -1,16 +1,16 @@
 
-# Copyright 2025 Open Source Robotics Foundation
+# Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
 { lib, buildRosPackage, fetchurl, controller-manager, controller-manager-msgs, rclpy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-jazzy-rqt-controller-manager";
-  version = "4.40.0-r1";
+  version = "4.42.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/rqt_controller_manager/4.40.0-1.tar.gz";
-    name = "4.40.0-1.tar.gz";
-    sha256 = "b6ae94c7f40711dc5dd6eda51fde65b5b2216dbca5c5b50dc47e75e8307a4c80";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/rqt_controller_manager/4.42.1-1.tar.gz";
+    name = "4.42.1-1.tar.gz";
+    sha256 = "e9ec1336062ca52260eb503609fc015a06026757d77b6ddb31cdef98d8358451";
   };
 
   buildType = "ament_python";
