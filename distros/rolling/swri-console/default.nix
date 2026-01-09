@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, qt5, rcl-interfaces, rclcpp, rmw, rosbag2-storage-mcap, rosbag2-transport, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-swri-console";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/swri_console-release/archive/release/rolling/swri_console/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "3f96fad389d31fd817dd91ddd2b1bf4a73a13dd4355acc1af6a7519d88b97fe9";
+    url = "https://github.com/ros2-gbp/swri_console-release/archive/release/rolling/swri_console/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "c39d5bdbe32d289c168f6b52ccbedd60dbd6a461332fe5606374212f8f2741f4";
   };
 
   buildType = "ament_cmake";

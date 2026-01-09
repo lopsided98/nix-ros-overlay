@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-toolbox, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-cmake, ros2-control-test-assets, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-diff-drive-controller";
-  version = "4.35.0-r1";
+  version = "4.36.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/diff_drive_controller/4.35.0-1.tar.gz";
-    name = "4.35.0-1.tar.gz";
-    sha256 = "d4d7873de4c8f1f90c80af65014ee277a5a933ed445424b0039ee397055e3ed3";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/diff_drive_controller/4.36.0-1.tar.gz";
+    name = "4.36.0-1.tar.gz";
+    sha256 = "3a5e7c4318eed5d5303daa35a50bad3a919dedfa1e5b3b64aa34f85fbeec834d";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nav-msgs, nav2-common, nav2-controller, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-vector-pursuit-controller";
-  version = "1.0.1-r1";
+  version = "1.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vector_pursuit_controller-release/archive/release/humble/vector_pursuit_controller/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "ef5580947c11f7a39975ee9ca7cbbbfe5b5e3939ddbb2ca723258abd2f2b5942";
+    url = "https://github.com/ros2-gbp/vector_pursuit_controller-release/archive/release/humble/vector_pursuit_controller/1.0.2-2.tar.gz";
+    name = "1.0.2-2.tar.gz";
+    sha256 = "c2106d0975b5392fac32db8b2a0368b1e9b93cd7889fd84ac4e152249f77ba3c";
   };
 
   buildType = "ament_cmake";

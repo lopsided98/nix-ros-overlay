@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-forward-command-controller";
-  version = "5.11.0-r1";
+  version = "5.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/forward_command_controller/5.11.0-1.tar.gz";
-    name = "5.11.0-1.tar.gz";
-    sha256 = "3f85d8a73ce50183181f07d1f38f41a4a3b1e8d5e2a3d78870ba28a421d79f83";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/forward_command_controller/5.12.0-1.tar.gz";
+    name = "5.12.0-1.tar.gz";
+    sha256 = "4cbac3120fdf677255884ec856f5ca14d532ed8cd3f83d83602ee1ccf1c70f87";
   };
 
   buildType = "ament_cmake";

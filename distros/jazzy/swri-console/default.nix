@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, qt5, rcl-interfaces, rclcpp, rosbag2-storage-mcap, rosbag2-transport, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-swri-console";
-  version = "2.0.7-r1";
+  version = "2.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/swri_console-release/archive/release/jazzy/swri_console/2.0.7-1.tar.gz";
-    name = "2.0.7-1.tar.gz";
-    sha256 = "f6232e7f61e9bdca37a890a05f33b91f2b4731a0b4ae36e1ca41d24c8ad799d4";
+    url = "https://github.com/ros2-gbp/swri_console-release/archive/release/jazzy/swri_console/2.0.8-1.tar.gz";
+    name = "2.0.8-1.tar.gz";
+    sha256 = "684c4f6aaa48ed75935e59055bb92c415d3e6fe24d4eaa42704e6d57c4ff064a";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, cv-bridge, geometry-msgs, image-transport, launch-ros, nav-msgs, pcl-conversions, pcl-msgs, rclcpp, rclcpp-components, rclcpp-lifecycle, ros-environment, ros2launch, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, vision-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-humble-inuros2";
-  version = "2.10.14-r14";
+  version = "2.10.14-r15";
 
   src = fetchurl {
-    url = "https://bitbucket.org/inuitive/inuros2-release/get/release/humble/inuros2/2.10.14-14.tar.gz";
-    name = "2.10.14-14.tar.gz";
-    sha256 = "d54f9856031ff0eacd583235fe558b286074dc68d404f9b41843f08f10b368d4";
+    url = "https://bitbucket.org/inuitive/inuros2-release/get/release/humble/inuros2/2.10.14-15.tar.gz";
+    name = "2.10.14-15.tar.gz";
+    sha256 = "d0dff00a7bac8973e5f47c2b2aef99bd81957bac0eae4bb2c7aceba4c24e2d16";
   };
 
   buildType = "ament_cmake";

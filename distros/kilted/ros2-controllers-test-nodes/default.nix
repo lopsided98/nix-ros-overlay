@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, launch-ros, launch-testing-ros, python3Packages, rclpy, sensor-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kilted-ros2-controllers-test-nodes";
-  version = "5.11.0-r1";
+  version = "5.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/ros2_controllers_test_nodes/5.11.0-1.tar.gz";
-    name = "5.11.0-1.tar.gz";
-    sha256 = "61dbb3a77a0deb0ca0da1a56027cdc7a70a55e2686b1a085fb47adaa612419b9";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/ros2_controllers_test_nodes/5.12.0-1.tar.gz";
+    name = "5.12.0-1.tar.gz";
+    sha256 = "783c835e92b359443bb68a803011b1f34809a495c742ff833ae6042d749b09c9";
   };
 
   buildType = "ament_python";

@@ -308,6 +308,16 @@ self: super: {
 
  battery-state-rviz-overlay = self.callPackage ./battery-state-rviz-overlay {};
 
+ bcr-arm = self.callPackage ./bcr-arm {};
+
+ bcr-arm-description = self.callPackage ./bcr-arm-description {};
+
+ bcr-arm-gazebo = self.callPackage ./bcr-arm-gazebo {};
+
+ bcr-arm-moveit-config = self.callPackage ./bcr-arm-moveit-config {};
+
+ bcr-arm-ros2 = self.callPackage ./bcr-arm-ros2 {};
+
  bcr-bot = self.callPackage ./bcr-bot {};
 
  beckhoff-ads-bringup = self.callPackage ./beckhoff-ads-bringup {};
@@ -1780,6 +1790,8 @@ self: super: {
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
 
+ mp-units-vendor = self.callPackage ./mp-units-vendor {};
+
  mqtt-client = self.callPackage ./mqtt-client {};
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
@@ -3158,6 +3170,8 @@ self: super: {
 
  sros2-cmake = self.callPackage ./sros2-cmake {};
 
+ state-interfaces-broadcaster = self.callPackage ./state-interfaces-broadcaster {};
+
  statistics-msgs = self.callPackage ./statistics-msgs {};
 
  std-msgs = self.callPackage ./std-msgs {};
@@ -3539,6 +3553,8 @@ self: super: {
  usb-cam = self.callPackage ./usb-cam {};
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
+
+ vector-pursuit-controller = self.callPackage ./vector-pursuit-controller {};
 
  velocity-controllers = self.callPackage ./velocity-controllers {};
 

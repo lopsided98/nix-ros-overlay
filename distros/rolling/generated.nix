@@ -2564,6 +2564,8 @@ self: super: {
 
  sros2-cmake = self.callPackage ./sros2-cmake {};
 
+ state-interfaces-broadcaster = self.callPackage ./state-interfaces-broadcaster {};
+
  statistics-msgs = self.callPackage ./statistics-msgs {};
 
  std-msgs = self.callPackage ./std-msgs {};
