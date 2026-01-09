@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-manager, forward-command-controller, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-humble-effort-controllers";
-  version = "2.51.0-r1";
+  version = "2.52.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/effort_controllers/2.51.0-1.tar.gz";
-    name = "2.51.0-1.tar.gz";
-    sha256 = "867e7d7b5031f66477354fd2c79a2a96854aece640a04870fc99cb2cb297f9eb";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/effort_controllers/2.52.0-1.tar.gz";
+    name = "2.52.0-1.tar.gz";
+    sha256 = "873be6ebcf40b96b7722b64cfced38fb21f7f974ea41c1e46576cbdf1189e1fc";
   };
 
   buildType = "ament_cmake";

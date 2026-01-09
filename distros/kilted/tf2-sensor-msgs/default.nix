@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, geometry-msgs, python3Packages, rclcpp, sensor-msgs, sensor-msgs-py, std-msgs, tf2, tf2-ros, tf2-ros-py }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, geometry-msgs, python3Packages, rclcpp, sensor-msgs, sensor-msgs-py, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-kilted-tf2-sensor-msgs";
-  version = "0.41.5-r1";
+  version = "0.41.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_sensor_msgs/0.41.5-1.tar.gz";
-    name = "0.41.5-1.tar.gz";
-    sha256 = "6b0e41527900820f22ee292ae06f07b6d34b3a39b0422c87212cb6ea1bff6570";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_sensor_msgs/0.41.6-1.tar.gz";
+    name = "0.41.6-1.tar.gz";
+    sha256 = "db2f0e36a42037fd1415d0a2ad843f9ea3ebb3bc419b4d65df3bccae71ade387";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common rclcpp ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common rclcpp tf2-geometry-msgs ];
   propagatedBuildInputs = [ eigen eigen3-cmake-module geometry-msgs python3Packages.numpy sensor-msgs sensor-msgs-py std-msgs tf2 tf2-ros tf2-ros-py ];
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];
 

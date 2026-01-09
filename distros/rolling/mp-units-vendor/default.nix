@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git, gsl }:
 buildRosPackage {
   pname = "ros-rolling-mp-units-vendor";
-  version = "2.4.0-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp_units_vendor-release/archive/release/rolling/mp_units_vendor/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "1bf45840385c7316e8e873f7f80bbd288ddfb697694dc35c2eb07f7c55a0946c";
+    url = "https://github.com/ros2-gbp/mp_units_vendor-release/archive/release/rolling/mp_units_vendor/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "82b40e1eb6c621bc33af075df48eca613afc08dede3126936429a664da6ff912";
   };
 
   buildType = "ament_cmake";

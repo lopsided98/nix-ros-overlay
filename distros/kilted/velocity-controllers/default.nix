@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-manager, forward-command-controller, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-kilted-velocity-controllers";
-  version = "5.11.0-r1";
+  version = "5.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/velocity_controllers/5.11.0-1.tar.gz";
-    name = "5.11.0-1.tar.gz";
-    sha256 = "e51ec3e4292376bce0c83645582f61d5002a5eaa57aa2c62fd26ea2e2448d9bd";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/velocity_controllers/5.12.0-1.tar.gz";
+    name = "5.12.0-1.tar.gz";
+    sha256 = "58fac430f74fd4ddf212d2f23e90b81c5c61095b6bc133f441254fcf8071f452";
   };
 
   buildType = "ament_cmake";

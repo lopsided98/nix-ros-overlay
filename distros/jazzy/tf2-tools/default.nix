@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, graphviz, python3Packages, rclpy, tf2-msgs, tf2-py, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-jazzy-tf2-tools";
-  version = "0.36.17-r1";
+  version = "0.36.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_tools/0.36.17-1.tar.gz";
-    name = "0.36.17-1.tar.gz";
-    sha256 = "996eacb01bbf88346bc3c5f3dd6f4240b02ecbaa82de795c20ae1c705b9c83a5";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_tools/0.36.18-1.tar.gz";
+    name = "0.36.18-1.tar.gz";
+    sha256 = "737feac8c9710a12b321a207dacd4b3888d776b9a52622d24b4eb43870510991";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-cmake, ros2-control-test-assets, std-srvs, steering-controllers-library }:
 buildRosPackage {
   pname = "ros-kilted-bicycle-steering-controller";
-  version = "5.11.0-r1";
+  version = "5.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/bicycle_steering_controller/5.11.0-1.tar.gz";
-    name = "5.11.0-1.tar.gz";
-    sha256 = "41c0aeadd9a41e3a74f7661248e07ffd894cbc5317b4656a58322c044f39254d";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/bicycle_steering_controller/5.12.0-1.tar.gz";
+    name = "5.12.0-1.tar.gz";
+    sha256 = "c3ccb2b3314bb3a1029c81dd7d0bae692bc9ce598a05d7b327409c4f8781bbd6";
   };
 
   buildType = "ament_cmake";

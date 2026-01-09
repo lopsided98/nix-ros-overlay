@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, rsl, tl-expected, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-kilted-joint-trajectory-controller";
-  version = "5.11.0-r1";
+  version = "5.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/joint_trajectory_controller/5.11.0-1.tar.gz";
-    name = "5.11.0-1.tar.gz";
-    sha256 = "be6bddcf4732dbf0c7d6cc1ea8536405643b820b263e17ca3101709763cfac64";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/joint_trajectory_controller/5.12.0-1.tar.gz";
+    name = "5.12.0-1.tar.gz";
+    sha256 = "9bac8085d7afdf00a2a84935feba610c42877d4d46dcd68c6aa1bb022d82dc22";
   };
 
   buildType = "ament_cmake";
