@@ -11,6 +11,18 @@ in with lib; {
     cmakeFlags = cmakeFlags ++ [ "-DCMAKE_CXX_FLAGS=-Wno-error=array-bounds" ];
   });
 
+  async-web-server-cpp = rosSuper.async-web-server-cpp.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = [
+      # Fix compile errors with Boost >= 1.87
+      (self.fetchpatch2 {
+        url = "https://github.com/fkie/async_web_server_cpp/pull/8/commits/0aa036c4c3908ef0d9ac85bf623a15906bccaefd.patch";
+        hash = "sha256-GXUYxWmNq2W7DCetmgHGD5/MFBWgDYFNIdUThwj8vt8=";
+      })
+    ];
+  });
+
   behaviortree-cpp-v3 = rosSuper.behaviortree-cpp-v3.overrideAttrs ({
     postPatch ? "", ...
   }: {
