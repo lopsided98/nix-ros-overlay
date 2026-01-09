@@ -225,6 +225,8 @@ in {
     '';
   });
 
+  mp-units-vendor = lib.patchAmentVendorGit rosSuper.mp-units-vendor {};
+
   nav2-costmap-2d = rosSuper.nav2-costmap-2d.overrideAttrs({
     CXXFLAGS ? "", ...
   }: {

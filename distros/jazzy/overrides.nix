@@ -229,6 +229,8 @@ in {
     '';
   });
 
+  mp-units-vendor = lib.patchAmentVendorGit rosSuper.mp-units-vendor {};
+
   nav2-behavior-tree = rosSuper.nav2-behavior-tree.overrideAttrs({
     ...
   }: {
