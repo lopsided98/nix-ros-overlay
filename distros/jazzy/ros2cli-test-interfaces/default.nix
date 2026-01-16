@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-ros2cli-test-interfaces";
-  version = "0.32.6-r1";
+  version = "0.32.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/jazzy/ros2cli_test_interfaces/0.32.6-1.tar.gz";
-    name = "0.32.6-1.tar.gz";
-    sha256 = "e3d7036b83a05a6190c03dec07a46c7cb726db79fb3908722922db40935d323c";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/jazzy/ros2cli_test_interfaces/0.32.7-1.tar.gz";
+    name = "0.32.7-1.tar.gz";
+    sha256 = "1e916d491e8f0fcf4ff7840653116c5aa7a0e7cd4d025e055a613a3f11fc4f99";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-kilted-ament-cmake-libraries";
-  version = "2.7.3-r2";
+  version = "2.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/kilted/ament_cmake_libraries/2.7.3-2.tar.gz";
-    name = "2.7.3-2.tar.gz";
-    sha256 = "cc95844b859838fc98b4fa8e7323d68a7af8938b51ee3b365b8108032e7f1974";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/kilted/ament_cmake_libraries/2.7.4-1.tar.gz";
+    name = "2.7.4-1.tar.gz";
+    sha256 = "5f41419ab049c7ceaf5bc59d9af47fbdad2db1ac045c79dddd3327476df05f0d";
   };
 
   buildType = "ament_cmake";

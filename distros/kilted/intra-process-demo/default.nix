@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, opencv, rclcpp, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-intra-process-demo";
-  version = "0.36.3-r1";
+  version = "0.36.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/intra_process_demo/0.36.3-1.tar.gz";
-    name = "0.36.3-1.tar.gz";
-    sha256 = "d2c8ec40ad6fc5baf0c6211148d268200a42dfce3c30b198c69664012991256b";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/intra_process_demo/0.36.4-1.tar.gz";
+    name = "0.36.4-1.tar.gz";
+    sha256 = "a2b4b297976d7d43bf9e186d4dc3045ad70469eff097365bd1449ba2b997669a";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libopengl, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-humble-mrpt-libgui";
-  version = "2.15.4-r1";
+  version = "2.15.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/humble/mrpt_libgui/2.15.4-1.tar.gz";
-    name = "2.15.4-1.tar.gz";
-    sha256 = "b7071f2c8ebdc232d810a50d221f5110a74e981181dfdc75bd31a6a5da34c44e";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/humble/mrpt_libgui/2.15.5-1.tar.gz";
+    name = "2.15.5-1.tar.gz";
+    sha256 = "6b6773caecb6617679f571ad1ab187356ec7fabed628af9be6a30c6f981a5d79";
   };
 
   buildType = "cmake";

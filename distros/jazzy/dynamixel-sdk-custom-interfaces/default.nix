@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-dynamixel-sdk-custom-interfaces";
-  version = "3.8.4-r1";
+  version = "4.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/jazzy/dynamixel_sdk_custom_interfaces/3.8.4-1.tar.gz";
-    name = "3.8.4-1.tar.gz";
-    sha256 = "8788f5d6c8312fa81f1db03eca5e8cfab71ce313391ff722de24d90b5d511dfa";
+    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/jazzy/dynamixel_sdk_custom_interfaces/4.0.3-1.tar.gz";
+    name = "4.0.3-1.tar.gz";
+    sha256 = "53c1eac37d664ff1938e56b6a3b09f9c1c0a9e51f84defb89b737d6a0bbbc921";
   };
 
   buildType = "ament_cmake";

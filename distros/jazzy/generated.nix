@@ -532,6 +532,14 @@ self: super: {
 
  crane-plus-moveit-config = self.callPackage ./crane-plus-moveit-config {};
 
+ cras-bag-tools = self.callPackage ./cras-bag-tools {};
+
+ cras-cpp-common = self.callPackage ./cras-cpp-common {};
+
+ cras-lint = self.callPackage ./cras-lint {};
+
+ cras-topic-tools = self.callPackage ./cras-topic-tools {};
+
  crazyflie = self.callPackage ./crazyflie {};
 
  crazyflie-examples = self.callPackage ./crazyflie-examples {};
@@ -978,6 +986,10 @@ self: super: {
 
  executive-smach = self.callPackage ./executive-smach {};
 
+ fadecandy-driver = self.callPackage ./fadecandy-driver {};
+
+ fadecandy-msgs = self.callPackage ./fadecandy-msgs {};
+
  fastcdr = self.callPackage ./fastcdr {};
 
  fastrtps = self.callPackage ./fastrtps {};
@@ -1069,6 +1081,8 @@ self: super: {
  foxglove-compressed-video-transport = self.callPackage ./foxglove-compressed-video-transport {};
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
+
+ foxglove-sdk-vendor = self.callPackage ./foxglove-sdk-vendor {};
 
  frame-editor = self.callPackage ./frame-editor {};
 
@@ -1245,6 +1259,8 @@ self: super: {
  heaphook = self.callPackage ./heaphook {};
 
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
+
+ hitch-estimation-apriltag-array = self.callPackage ./hitch-estimation-apriltag-array {};
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
@@ -1630,7 +1646,11 @@ self: super: {
 
  mola-demos = self.callPackage ./mola-demos {};
 
+ mola-georeferencing = self.callPackage ./mola-georeferencing {};
+
  mola-gnss-to-markers = self.callPackage ./mola-gnss-to-markers {};
+
+ mola-gtsam-factors = self.callPackage ./mola-gtsam-factors {};
 
  mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
 
@@ -2138,6 +2158,8 @@ self: super: {
 
  parallel-gripper-controller = self.callPackage ./parallel-gripper-controller {};
 
+ parameter-expression = self.callPackage ./parameter-expression {};
+
  parameter-traits = self.callPackage ./parameter-traits {};
 
  pcl-conversions = self.callPackage ./pcl-conversions {};
@@ -2269,6 +2291,8 @@ self: super: {
  point-cloud-transport-tutorial = self.callPackage ./point-cloud-transport-tutorial {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
+
+ pointcloud-to-ply = self.callPackage ./pointcloud-to-ply {};
 
  polygon-demos = self.callPackage ./polygon-demos {};
 
@@ -3653,6 +3677,8 @@ self: super: {
  zbar-ros = self.callPackage ./zbar-ros {};
 
  zbar-ros-interfaces = self.callPackage ./zbar-ros-interfaces {};
+
+ zed-description = self.callPackage ./zed-description {};
 
  zed-msgs = self.callPackage ./zed-msgs {};
 

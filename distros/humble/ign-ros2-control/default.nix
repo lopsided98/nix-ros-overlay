@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gz-ros2-control }:
 buildRosPackage {
   pname = "ros-humble-ign-ros2-control";
-  version = "0.7.17-r1";
+  version = "0.7.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/humble/ign_ros2_control/0.7.17-1.tar.gz";
-    name = "0.7.17-1.tar.gz";
-    sha256 = "dcff105b617b903d27c8b2101ca88d25a182171164c3fb3d302fce238f52190a";
+    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/humble/ign_ros2_control/0.7.18-1.tar.gz";
+    name = "0.7.18-1.tar.gz";
+    sha256 = "5bd7f9c7f34f64195dbea5d325e0d928e3d51cc13c0cdd61f8e3ff4daa4287de";
   };
 
   buildType = "ament_cmake";

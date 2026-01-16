@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-kilted-ros2lifecycle-test-fixtures";
-  version = "0.38.1-r1";
+  version = "0.38.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/kilted/ros2lifecycle_test_fixtures/0.38.1-1.tar.gz";
-    name = "0.38.1-1.tar.gz";
-    sha256 = "15a5d1e493cba05b9e442904899efd543ef41bbdb335d2a7f36cdb3430abdc72";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/kilted/ros2lifecycle_test_fixtures/0.38.2-1.tar.gz";
+    name = "0.38.2-1.tar.gz";
+    sha256 = "b2d9141b404d0095ddf35441653695b2e230b5af4880f8359c3fa5fa85a88b58";
   };
 
   buildType = "ament_cmake";
