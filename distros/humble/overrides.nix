@@ -181,8 +181,14 @@ in with lib; {
   });
 
   libfranka = rosSuper.libfranka.overrideAttrs ({
-    cmakeFlags ? [], ...
+    cmakeFlags ? [], postPatch ? "", ...
   }: {
+    # Don't require building from git repo. This is needed only for
+    # creation of .deb package.
+    postPatch = ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail 'set_version_from_git(PACKAGE_VERSION PACKAGE_TAG)' ""
+    '';
     # Uses custom flag to disable tests. Attempts to download GTest without
     # this.
     cmakeFlags = cmakeFlags ++ [ "-DBUILD_TESTS=OFF" ];
