@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, pluginlib, realtime-tools, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-battery-state-broadcaster";
-  version = "1.1.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_battery_monitoring-release/archive/release/kilted/battery_state_broadcaster/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "991085afd00145a6c6f909528b9c9a04ecc9ffb86a3f483a70ac83430885e680";
+    url = "https://github.com/ros2-gbp/ros_battery_monitoring-release/archive/release/kilted/battery_state_broadcaster/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "c2577f64cdc193079cf18067cb801f53ce630cec144534e3d7c3fa4198d62540";
   };
 
   buildType = "ament_cmake";

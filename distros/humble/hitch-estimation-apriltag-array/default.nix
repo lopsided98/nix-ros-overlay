@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, apriltag-ros, geometry-msgs, rclpy, sensor-msgs, tf-transformations, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-hitch-estimation-apriltag-array";
-  version = "0.0.1-r1";
+  version = "0.0.2-r3";
 
   src = fetchurl {
-    url = "https://github.com/li9i/hitch-estimation-apriltag-array-release/archive/release/humble/hitch_estimation_apriltag_array/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "1034fcca32617a6ce263302cf41cd20d76e3de0419a636a3ad72e5cb5557e5ad";
+    url = "https://github.com/li9i/hitch-estimation-apriltag-array-release/archive/release/humble/hitch_estimation_apriltag_array/0.0.2-3.tar.gz";
+    name = "0.0.2-3.tar.gz";
+    sha256 = "c90c20d9e5f0c6ab1cddc59849494ab2058f3fec4de442acfffc55ff689891ad";
   };
 
   buildType = "ament_python";

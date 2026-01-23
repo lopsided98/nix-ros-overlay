@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, joint-state-publisher, joint-state-publisher-gui, joint-trajectory-controller, kortex-description, moveit-configs-utils, moveit-kinematics, moveit-planners, moveit-ros-move-group, moveit-ros-visualization, moveit-ros-warehouse, moveit-setup-assistant, moveit-simple-controller-manager, picknik-reset-fault-controller, picknik-twist-controller, robot-state-publisher, rviz-common, rviz-default-plugins, rviz2, tf2-ros, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-kinova-gen3-7dof-robotiq-2f-85-moveit-config";
-  version = "0.2.4-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/jazzy/kinova_gen3_7dof_robotiq_2f_85_moveit_config/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "90f09c5b7e0ea6e23b5afd5e32a7ccef0128b2fb7b2f14725fcd694dca83f704";
+    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/jazzy/kinova_gen3_7dof_robotiq_2f_85_moveit_config/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "815233b35665e2674df44f694e09ab02129b87c93aaa3dd6f6dc6c3bf6080f76";
   };
 
   buildType = "ament_cmake";

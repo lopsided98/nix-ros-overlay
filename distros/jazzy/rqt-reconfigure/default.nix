@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-xmllint, python-qt-binding, python3Packages, qt-gui-py-common, rclpy, rqt-console, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-jazzy-rqt-reconfigure";
-  version = "1.6.2-r3";
+  version = "1.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_reconfigure-release/archive/release/jazzy/rqt_reconfigure/1.6.2-3.tar.gz";
-    name = "1.6.2-3.tar.gz";
-    sha256 = "c4c1b49c0d2f8d5f246272cee9967716d4f2377dfda5c6776cfa796314a972df";
+    url = "https://github.com/ros2-gbp/rqt_reconfigure-release/archive/release/jazzy/rqt_reconfigure/1.6.3-1.tar.gz";
+    name = "1.6.3-1.tar.gz";
+    sha256 = "b58f76596c4189f83d271e60bd24e3356fc976abc4069663782794816750b330";
   };
 
   buildType = "ament_python";

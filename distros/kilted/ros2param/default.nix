@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, launch, launch-ros, launch-testing, launch-testing-ros, python3Packages, rcl-interfaces, rclpy, ros2cli, ros2node, ros2service }:
 buildRosPackage {
   pname = "ros-kilted-ros2param";
-  version = "0.38.1-r1";
+  version = "0.38.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/kilted/ros2param/0.38.1-1.tar.gz";
-    name = "0.38.1-1.tar.gz";
-    sha256 = "775f81383cc2e88ae28a630f2f2794bf593f4043154d93e74f13a1f11d401d27";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/kilted/ros2param/0.38.2-1.tar.gz";
+    name = "0.38.2-1.tar.gz";
+    sha256 = "50c800a8932133e01f5c42806af5de877d431ad8adf1a270a6531996a2bacac1";
   };
 
   buildType = "ament_python";

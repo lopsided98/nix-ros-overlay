@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-google-benchmark, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, builtin-interfaces, geometry-msgs, rcutils, rosidl-runtime-cpp }:
 buildRosPackage {
   pname = "ros-rolling-tf2";
-  version = "0.45.5-r1";
+  version = "0.45.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2/0.45.5-1.tar.gz";
-    name = "0.45.5-1.tar.gz";
-    sha256 = "52b7a715b7f677d44a7c3ef061009aff2dc23b18d14990fca11bd6cc0495c58b";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2/0.45.6-1.tar.gz";
+    name = "0.45.6-1.tar.gz";
+    sha256 = "0052459662e6bd9ae43eceb5be654869f1c0b0aa4fe98fb156ee024330c292a3";
   };
 
   buildType = "ament_cmake";

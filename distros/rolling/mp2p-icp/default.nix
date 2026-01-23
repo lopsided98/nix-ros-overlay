@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-imu-preintegration, mrpt-libbase, mrpt-libgui, mrpt-libmaps, mrpt-libobs, mrpt-libposes, mrpt-libtclap, onetbb, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-mp2p-icp";
-  version = "2.2.1-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/rolling/mp2p_icp/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "3da6a7aafc173e5eb13860960d9b4e78515695e9b69e0431ee7de6a7a0f8d933";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/rolling/mp2p_icp/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "6cc837ccad4eceba362caab1fe34853333f9c455d671b8174b7aa797a2f191fc";
   };
 
   buildType = "cmake";

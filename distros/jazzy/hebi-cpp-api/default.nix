@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen }:
 buildRosPackage {
   pname = "ros-jazzy-hebi-cpp-api";
-  version = "3.15.0-r1";
+  version = "3.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hebi_cpp_api-release/archive/release/jazzy/hebi_cpp_api/3.15.0-1.tar.gz";
-    name = "3.15.0-1.tar.gz";
-    sha256 = "b34cf8ae404e46aa74913856cb4096cb05d1b66e748ef58b25eab7884d89d882";
+    url = "https://github.com/ros2-gbp/hebi_cpp_api-release/archive/release/jazzy/hebi_cpp_api/3.16.0-1.tar.gz";
+    name = "3.16.0-1.tar.gz";
+    sha256 = "e27b4a3bf07f1415a4294a58ccb0a2ddb1df79dbf2b59efe5a9d953bd25430c7";
   };
 
   buildType = "ament_cmake";

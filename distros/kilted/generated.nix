@@ -402,6 +402,14 @@ self: super: {
 
  costmap-queue = self.callPackage ./costmap-queue {};
 
+ cras-bag-tools = self.callPackage ./cras-bag-tools {};
+
+ cras-cpp-common = self.callPackage ./cras-cpp-common {};
+
+ cras-lint = self.callPackage ./cras-lint {};
+
+ cras-topic-tools = self.callPackage ./cras-topic-tools {};
+
  cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
@@ -725,6 +733,8 @@ self: super: {
  event-camera-renderer = self.callPackage ./event-camera-renderer {};
 
  event-camera-tools = self.callPackage ./event-camera-tools {};
+
+ event-image-reconstruction-fibar = self.callPackage ./event-image-reconstruction-fibar {};
 
  example-interfaces = self.callPackage ./example-interfaces {};
 
@@ -1328,7 +1338,11 @@ self: super: {
 
  mola-demos = self.callPackage ./mola-demos {};
 
+ mola-georeferencing = self.callPackage ./mola-georeferencing {};
+
  mola-gnss-to-markers = self.callPackage ./mola-gnss-to-markers {};
+
+ mola-gtsam-factors = self.callPackage ./mola-gtsam-factors {};
 
  mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
 

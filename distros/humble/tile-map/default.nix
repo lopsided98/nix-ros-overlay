@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, glew, jsoncpp, mapviz, pluginlib, qt5, rclcpp, swri-math-util, swri-transform-util, tf2, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-tile-map";
-  version = "2.6.0-r1";
+  version = "2.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/humble/tile_map/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "e6c7ba1b51cc1273fcd414de8a81fe9d90702b4b86781bb6789d88f175f28a79";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/humble/tile_map/2.6.1-1.tar.gz";
+    name = "2.6.1-1.tar.gz";
+    sha256 = "318af554864315b409d42418c10817b683dea77d6d8686c93d8ccf7c03093264";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-keyboard-handler";
-  version = "0.3.1-r2";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/keyboard_handler-release/archive/release/jazzy/keyboard_handler/0.3.1-2.tar.gz";
-    name = "0.3.1-2.tar.gz";
-    sha256 = "594e0b4791bef8dd94e8507ca645d3618834e860e61f7615b3e2ca7507628e94";
+    url = "https://github.com/ros2-gbp/keyboard_handler-release/archive/release/jazzy/keyboard_handler/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "b7977d93f39d4030640dde1a8890ceb1c9b3cda46a8ec32675bbe99c928883b1";
   };
 
   buildType = "ament_cmake";

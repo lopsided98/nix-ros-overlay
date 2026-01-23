@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, freeglut, freeimage, glew, gz-cmake-vendor, gz-common-vendor, gz-math-vendor, gz-ogre-next-vendor, gz-plugin-vendor, gz-utils-vendor, ogre1_9, util-linux, vulkan-loader, xorg }:
 buildRosPackage {
   pname = "ros-rolling-gz-rendering-vendor";
-  version = "0.4.2-r1";
+  version = "0.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_rendering_vendor-release/archive/release/rolling/gz_rendering_vendor/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "9c9771846a7af0804599141571c0c9e842f012720eb8df20d6a1544ce2dbf86f";
+    url = "https://github.com/ros2-gbp/gz_rendering_vendor-release/archive/release/rolling/gz_rendering_vendor/0.4.3-1.tar.gz";
+    name = "0.4.3-1.tar.gz";
+    sha256 = "960dbdf5237e82224743585c69494930cb2a3e6552dd22242132b4d11b473262";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package cmake ];
 
   meta = {
-    description = "Vendor package for: gz-rendering 10.0.0
+    description = "Vendor package for: gz-rendering 10.0.1
 
     Gazebo Rendering: Rendering library for robot applications";
     license = with lib.licenses; [ asl20 ];

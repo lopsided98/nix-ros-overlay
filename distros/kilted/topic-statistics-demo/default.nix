@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rcutils, sensor-msgs, statistics-msgs }:
 buildRosPackage {
   pname = "ros-kilted-topic-statistics-demo";
-  version = "0.36.3-r1";
+  version = "0.36.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/topic_statistics_demo/0.36.3-1.tar.gz";
-    name = "0.36.3-1.tar.gz";
-    sha256 = "0e81b8b2c7b01315fb2be0277cf83c8811751b8c621885fc78f038be248a4672";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/topic_statistics_demo/0.36.4-1.tar.gz";
+    name = "0.36.4-1.tar.gz";
+    sha256 = "44ed89cf0337ea10c2b099ab009f1f4ea8a9ffe39ef759dbe72a7e5a7664a2aa";
   };
 
   buildType = "ament_cmake";

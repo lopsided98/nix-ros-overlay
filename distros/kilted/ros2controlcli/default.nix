@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, controller-manager, controller-manager-msgs, python3Packages, rcl-interfaces, rclpy, ros2cli, ros2node, ros2param, rosidl-runtime-py }:
 buildRosPackage {
   pname = "ros-kilted-ros2controlcli";
-  version = "5.11.1-r1";
+  version = "5.11.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/ros2controlcli/5.11.1-1.tar.gz";
-    name = "5.11.1-1.tar.gz";
-    sha256 = "d6227b01dd6e7c2aedca7bd8b7d328d67d2f55c22df3487642d2b08888113c8c";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/ros2controlcli/5.11.3-1.tar.gz";
+    name = "5.11.3-1.tar.gz";
+    sha256 = "84fa195eebc38c9f3e363933c1b6bffacd806c7317fcb7f427b2bd50337b19bf";
   };
 
   buildType = "ament_python";

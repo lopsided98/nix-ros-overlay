@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen }:
 buildRosPackage {
   pname = "ros-kilted-hebi-cpp-api";
-  version = "3.15.0-r1";
+  version = "3.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hebi_cpp_api-release/archive/release/kilted/hebi_cpp_api/3.15.0-1.tar.gz";
-    name = "3.15.0-1.tar.gz";
-    sha256 = "e5ff642c7f83ff2f1de6e8b9ff37392a5e1e96fae4fcd3b9a72901ede7da781c";
+    url = "https://github.com/ros2-gbp/hebi_cpp_api-release/archive/release/kilted/hebi_cpp_api/3.16.0-1.tar.gz";
+    name = "3.16.0-1.tar.gz";
+    sha256 = "29f3192ab0a387f3d8a056fee69fda6e83d14f5cbb92f6b0f8604898aff97e4f";
   };
 
   buildType = "ament_cmake";

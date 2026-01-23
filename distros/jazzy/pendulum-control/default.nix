@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, pendulum-msgs, rclcpp, rmw-implementation-cmake, ros2run, rttest, tlsf-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-pendulum-control";
-  version = "0.33.8-r1";
+  version = "0.33.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/pendulum_control/0.33.8-1.tar.gz";
-    name = "0.33.8-1.tar.gz";
-    sha256 = "b24728d9ce1f39a4b53711a35beda317b5e05602162371f9342a60e9601073a5";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/pendulum_control/0.33.9-1.tar.gz";
+    name = "0.33.9-1.tar.gz";
+    sha256 = "bded63a4da77222b2ca3e25ff65425c8f9b65d800bc2e0a1e79d0dddf458be5e";
   };
 
   buildType = "ament_cmake";

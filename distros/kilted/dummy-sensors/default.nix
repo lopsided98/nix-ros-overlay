@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-dummy-sensors";
-  version = "0.36.3-r1";
+  version = "0.36.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/dummy_sensors/0.36.3-1.tar.gz";
-    name = "0.36.3-1.tar.gz";
-    sha256 = "fba185ed1c10a081eac58358b2596ad9a927cef4154f0bebc3012bbf3573d376";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/dummy_sensors/0.36.4-1.tar.gz";
+    name = "0.36.4-1.tar.gz";
+    sha256 = "023ed5eba08e533b5c0c4c3dd2c6023de8d09b6e97451657466597da236318c0";
   };
 
   buildType = "ament_cmake";

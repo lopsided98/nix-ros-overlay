@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, message-filters, pluginlib, rclcpp, rclcpp-components, rcpputils, rmw, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-point-cloud-transport";
-  version = "5.3.2-r1";
+  version = "5.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport-release/archive/release/rolling/point_cloud_transport/5.3.2-1.tar.gz";
-    name = "5.3.2-1.tar.gz";
-    sha256 = "c411376d8256537b8818f285dc4ace499d961cc60d8c44ea78557fc4073438d1";
+    url = "https://github.com/ros2-gbp/point_cloud_transport-release/archive/release/rolling/point_cloud_transport/5.3.3-1.tar.gz";
+    name = "5.3.3-1.tar.gz";
+    sha256 = "9bfe13093392038d3864cd4870d84145273b0b1723678557d91f08ce55f01735";
   };
 
   buildType = "ament_cmake";

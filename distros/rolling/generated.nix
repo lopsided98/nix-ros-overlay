@@ -420,6 +420,14 @@ self: super: {
 
  controller-manager-msgs = self.callPackage ./controller-manager-msgs {};
 
+ cras-bag-tools = self.callPackage ./cras-bag-tools {};
+
+ cras-cpp-common = self.callPackage ./cras-cpp-common {};
+
+ cras-lint = self.callPackage ./cras-lint {};
+
+ cras-topic-tools = self.callPackage ./cras-topic-tools {};
+
  cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
@@ -634,6 +642,8 @@ self: super: {
 
  event-camera-tools = self.callPackage ./event-camera-tools {};
 
+ event-image-reconstruction-fibar = self.callPackage ./event-image-reconstruction-fibar {};
+
  example-interfaces = self.callPackage ./example-interfaces {};
 
  examples-rclcpp-async-client = self.callPackage ./examples-rclcpp-async-client {};
@@ -771,6 +781,8 @@ self: super: {
  foxglove-compressed-video-transport = self.callPackage ./foxglove-compressed-video-transport {};
 
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
+
+ foxglove-sdk-vendor = self.callPackage ./foxglove-sdk-vendor {};
 
  franka-inria-inverse-dynamics-solver = self.callPackage ./franka-inria-inverse-dynamics-solver {};
 
@@ -1250,7 +1262,11 @@ self: super: {
 
  mola-demos = self.callPackage ./mola-demos {};
 
+ mola-georeferencing = self.callPackage ./mola-georeferencing {};
+
  mola-gnss-to-markers = self.callPackage ./mola-gnss-to-markers {};
+
+ mola-gtsam-factors = self.callPackage ./mola-gtsam-factors {};
 
  mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
 
@@ -2947,6 +2963,8 @@ self: super: {
  zbar-ros = self.callPackage ./zbar-ros {};
 
  zbar-ros-interfaces = self.callPackage ./zbar-ros-interfaces {};
+
+ zed-description = self.callPackage ./zed-description {};
 
  zed-msgs = self.callPackage ./zed-msgs {};
 
