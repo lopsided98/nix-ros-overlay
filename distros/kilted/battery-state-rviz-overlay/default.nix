@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, fmt, rclcpp, rviz-2d-overlay-msgs, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-battery-state-rviz-overlay";
-  version = "1.1.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_battery_monitoring-release/archive/release/kilted/battery_state_rviz_overlay/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "37f46ecc2e780992dfdcdf39bc46556a040140e960d6a65b1edfd8cc662c8e3d";
+    url = "https://github.com/ros2-gbp/ros_battery_monitoring-release/archive/release/kilted/battery_state_rviz_overlay/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "db157e9239cf653f5bf16451eb68e17ebf13d6dbeb917bcddf345ea71c3eb259";
   };
 
   buildType = "ament_cmake";

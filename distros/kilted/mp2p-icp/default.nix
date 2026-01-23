@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-imu-preintegration, mrpt-libbase, mrpt-libgui, mrpt-libmaps, mrpt-libobs, mrpt-libposes, mrpt-libtclap, onetbb, ros-environment }:
 buildRosPackage {
   pname = "ros-kilted-mp2p-icp";
-  version = "2.2.1-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/kilted/mp2p_icp/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "d6555095401295a57b7afcc5f9591cc138c4bfbc17227540900317e5ef6cf869";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/kilted/mp2p_icp/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "3a82dc1a94fd74f7261e06670467410981424cb58228e3cb790a31173244393d";
   };
 
   buildType = "cmake";

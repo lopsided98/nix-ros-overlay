@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, opencv, rclcpp, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-intra-process-demo";
-  version = "0.20.7-r1";
+  version = "0.20.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/intra_process_demo/0.20.7-1.tar.gz";
-    name = "0.20.7-1.tar.gz";
-    sha256 = "ff7ff89fee156b14731922fda21ae84bd58194baa5fd41b4910f5fec51001b97";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/intra_process_demo/0.20.8-1.tar.gz";
+    name = "0.20.8-1.tar.gz";
+    sha256 = "1237c5ca76e0922f320413c69db568efea51a9d2ee5f32e5a1cd8c07688e709d";
   };
 
   buildType = "ament_cmake";

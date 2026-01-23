@@ -1118,6 +1118,8 @@ self: super: {
 
  event-camera-tools = self.callPackage ./event-camera-tools {};
 
+ event-image-reconstruction-fibar = self.callPackage ./event-image-reconstruction-fibar {};
+
  ewellix-description = self.callPackage ./ewellix-description {};
 
  ewellix-interfaces = self.callPackage ./ewellix-interfaces {};
@@ -1936,7 +1938,11 @@ self: super: {
 
  mola-demos = self.callPackage ./mola-demos {};
 
+ mola-georeferencing = self.callPackage ./mola-georeferencing {};
+
  mola-gnss-to-markers = self.callPackage ./mola-gnss-to-markers {};
+
+ mola-gtsam-factors = self.callPackage ./mola-gtsam-factors {};
 
  mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
 
@@ -3218,6 +3224,8 @@ self: super: {
 
  rosidl-generator-py = self.callPackage ./rosidl-generator-py {};
 
+ rosidl-generator-rs = self.callPackage ./rosidl-generator-rs {};
+
  rosidl-parser = self.callPackage ./rosidl-parser {};
 
  rosidl-runtime-c = self.callPackage ./rosidl-runtime-c {};
@@ -3641,8 +3649,6 @@ self: super: {
  test-interface-files = self.callPackage ./test-interface-files {};
 
  test-msgs = self.callPackage ./test-msgs {};
-
- test-ros-gz-bridge = self.callPackage ./test-ros-gz-bridge {};
 
  tf2 = self.callPackage ./tf2 {};
 
@@ -4133,6 +4139,8 @@ self: super: {
  yasmin-viewer = self.callPackage ./yasmin-viewer {};
 
  zbar-ros = self.callPackage ./zbar-ros {};
+
+ zed-description = self.callPackage ./zed-description {};
 
  zed-msgs = self.callPackage ./zed-msgs {};
 

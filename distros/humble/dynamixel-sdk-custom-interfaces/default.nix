@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-dynamixel-sdk-custom-interfaces";
-  version = "3.8.4-r1";
+  version = "4.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/humble/dynamixel_sdk_custom_interfaces/3.8.4-1.tar.gz";
-    name = "3.8.4-1.tar.gz";
-    sha256 = "2c0f509acaf6fa9d46e1bb99b452f1e8262ef242eb7563918f2a0db176d1eaa0";
+    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/humble/dynamixel_sdk_custom_interfaces/4.0.3-1.tar.gz";
+    name = "4.0.3-1.tar.gz";
+    sha256 = "438a793b4aa9131315b4004a6273cda2f5929126a2e0207a9354787baebd6152";
   };
 
   buildType = "ament_cmake";

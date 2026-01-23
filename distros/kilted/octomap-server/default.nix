@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, geometry-msgs, message-filters, nav-msgs, octomap, octomap-msgs, octomap-ros, pcl, pcl-conversions, pcl-ros, rclcpp, rclcpp-components, sensor-msgs, std-msgs, std-srvs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-octomap-server";
-  version = "2.3.0-r2";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap_mapping-release/archive/release/kilted/octomap_server/2.3.0-2.tar.gz";
-    name = "2.3.0-2.tar.gz";
-    sha256 = "9fd36f67d2b0b7cdb64615bc9535d88a79aa481b694ced1ba597b425e16dcb9e";
+    url = "https://github.com/ros2-gbp/octomap_mapping-release/archive/release/kilted/octomap_server/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "3133923de4d40f21355f5667517b2428da4624e031670fb270ecc615decd1149";
   };
 
   buildType = "ament_cmake";

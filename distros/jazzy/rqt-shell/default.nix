@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python-qt-binding, python3Packages, qt-gui, qt-gui-py-common, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-jazzy-rqt-shell";
-  version = "1.2.2-r2";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_shell-release/archive/release/jazzy/rqt_shell/1.2.2-2.tar.gz";
-    name = "1.2.2-2.tar.gz";
-    sha256 = "b3958355365d89e77203f54d0f78562025f19058dedab6b6ffd08f1b3032041f";
+    url = "https://github.com/ros2-gbp/rqt_shell-release/archive/release/jazzy/rqt_shell/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
+    sha256 = "29a80817544394b481bf21199f4ca6c390366a0523962a1b3e958ce556af3bc2";
   };
 
   buildType = "ament_python";

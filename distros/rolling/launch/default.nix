@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-mypy, ament-pep257, ament-xmllint, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-launch";
-  version = "3.9.5-r1";
+  version = "3.9.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch-release/archive/release/rolling/launch/3.9.5-1.tar.gz";
-    name = "3.9.5-1.tar.gz";
-    sha256 = "e8c67fa533d5a8a7c4a6fccf755740376bba3f67747fda2da1b1855fc483f964";
+    url = "https://github.com/ros2-gbp/launch-release/archive/release/rolling/launch/3.9.6-1.tar.gz";
+    name = "3.9.6-1.tar.gz";
+    sha256 = "fbc08a9a9925fded59cb7334df4fd3bc3f4f3aaef37525cdcf0a389e191721d4";
   };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-mypy ament-pep257 ament-xmllint python3Packages.pytest python3Packages.pytest-timeout python3Packages.types-pyyaml ];
-  propagatedBuildInputs = [ ament-index-python python3Packages.importlib-metadata python3Packages.lark python3Packages.osrf-pycommon python3Packages.pyyaml python3Packages.typing-extensions ];
+  propagatedBuildInputs = [ ament-index-python python3Packages.lark python3Packages.osrf-pycommon python3Packages.pyyaml python3Packages.typing-extensions ];
 
   meta = {
     description = "The ROS launch tool.";

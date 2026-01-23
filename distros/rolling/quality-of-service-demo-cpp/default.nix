@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-ros, launch-testing, rclcpp, rclcpp-components, rcutils, rmw, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-quality-of-service-demo-cpp";
-  version = "0.37.4-r1";
+  version = "0.37.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/quality_of_service_demo_cpp/0.37.4-1.tar.gz";
-    name = "0.37.4-1.tar.gz";
-    sha256 = "9ec6c3bb7f59cc2752fb19f9c2652e4351e54045e858bdca4c4f1a0f827270c6";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/quality_of_service_demo_cpp/0.37.5-1.tar.gz";
+    name = "0.37.5-1.tar.gz";
+    sha256 = "a4260f9d1abff57cc53eaaa60f14a8344d936dafe1329a4c4aee98d00302f5e6";
   };
 
   buildType = "ament_cmake";

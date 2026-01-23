@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, python-qt-binding, python3Packages, qt-gui-py-common, rclpy, rosidl-runtime-py, rqt-gui, rqt-gui-py, rqt-py-common, std-msgs, test-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rqt-plot";
-  version = "1.4.4-r1";
+  version = "1.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/jazzy/rqt_plot/1.4.4-1.tar.gz";
-    name = "1.4.4-1.tar.gz";
-    sha256 = "db9c7dfbed9abebaa48e05077c819543de7d44e9ac3155b99d2cc69e4659d7dc";
+    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/jazzy/rqt_plot/1.4.5-1.tar.gz";
+    name = "1.4.5-1.tar.gz";
+    sha256 = "04fe574e7411331ab8534f2dbd1ce8bffbf1887d234d5be33cee9aaf46f9166c";
   };
 
   buildType = "ament_python";

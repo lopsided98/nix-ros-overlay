@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, rclcpp, rclcpp-action, rclcpp-components }:
 buildRosPackage {
   pname = "ros-kilted-action-tutorials-cpp";
-  version = "0.36.3-r1";
+  version = "0.36.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/action_tutorials_cpp/0.36.3-1.tar.gz";
-    name = "0.36.3-1.tar.gz";
-    sha256 = "ad5e0bb81bce17dfb7b46cced8e957c5e5fc5f2d5f0aa80ee89ba89b88af15c5";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/action_tutorials_cpp/0.36.4-1.tar.gz";
+    name = "0.36.4-1.tar.gz";
+    sha256 = "438f95fcb7547091bc536231de97118001d275314c8db565e7a444a99e30a585";
   };
 
   buildType = "ament_cmake";

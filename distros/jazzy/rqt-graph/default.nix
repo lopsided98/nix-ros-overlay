@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, python-qt-binding, python3Packages, qt-dotgraph, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-jazzy-rqt-graph";
-  version = "1.5.5-r1";
+  version = "1.5.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/jazzy/rqt_graph/1.5.5-1.tar.gz";
-    name = "1.5.5-1.tar.gz";
-    sha256 = "78db134290a4a4db557cc3a64f55890f4aacd96035eb91f67d4c6528d2252101";
+    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/jazzy/rqt_graph/1.5.6-1.tar.gz";
+    name = "1.5.6-1.tar.gz";
+    sha256 = "aae48a053470ed5a1bafee5530410b9f67896ebf1e36e4c339dbeb8bb881bc3d";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-examples-rclcpp-minimal-composition";
-  version = "0.21.3-r1";
+  version = "0.21.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/rolling/examples_rclcpp_minimal_composition/0.21.3-1.tar.gz";
-    name = "0.21.3-1.tar.gz";
-    sha256 = "8e875a3f801cf898d07f339b72dc04f2bbf155fccf23a8da4a22f63bce31a89c";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/rolling/examples_rclcpp_minimal_composition/0.21.4-1.tar.gz";
+    name = "0.21.4-1.tar.gz";
+    sha256 = "be09dcf6dbe62e2e21f3a5cf7e5a2e690d0e73cb64d91af24dd27f2df04f86a7";
   };
 
   buildType = "ament_cmake";

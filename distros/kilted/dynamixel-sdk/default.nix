@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python }:
 buildRosPackage {
   pname = "ros-kilted-dynamixel-sdk";
-  version = "3.8.3-r2";
+  version = "4.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/kilted/dynamixel_sdk/3.8.3-2.tar.gz";
-    name = "3.8.3-2.tar.gz";
-    sha256 = "72125ed406952198dac7e9244d941bfcc8798f379999d68a4763dd121619ada3";
+    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/kilted/dynamixel_sdk/4.0.3-1.tar.gz";
+    name = "4.0.3-1.tar.gz";
+    sha256 = "7b36700fe5f85c2822ae8b3a7e9a9047639fdf1d2c6353b2c35c06547f4833ee";
   };
 
   buildType = "ament_cmake";

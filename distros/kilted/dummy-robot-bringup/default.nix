@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-python, ament-lint-auto, ament-lint-common, dummy-map-server, dummy-sensors, launch, launch-ros, robot-state-publisher }:
 buildRosPackage {
   pname = "ros-kilted-dummy-robot-bringup";
-  version = "0.36.3-r1";
+  version = "0.36.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/dummy_robot_bringup/0.36.3-1.tar.gz";
-    name = "0.36.3-1.tar.gz";
-    sha256 = "ece4e28ca599d1a4ce746eac0f913838ae6588fb6da8a6ce91b8754c4899f6b8";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/dummy_robot_bringup/0.36.4-1.tar.gz";
+    name = "0.36.4-1.tar.gz";
+    sha256 = "65ca5f0ffb14434c30a2669321a36c54813b732e84826310416e76835b0548e3";
   };
 
   buildType = "ament_cmake";

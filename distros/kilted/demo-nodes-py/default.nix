@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, example-interfaces, python3Packages, rcl-interfaces, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-demo-nodes-py";
-  version = "0.36.3-r1";
+  version = "0.36.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/demo_nodes_py/0.36.3-1.tar.gz";
-    name = "0.36.3-1.tar.gz";
-    sha256 = "cd8bf7413099c92143716d6b61d680b8bbd8f4b5f1985c398687d1909d59099a";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/demo_nodes_py/0.36.4-1.tar.gz";
+    name = "0.36.4-1.tar.gz";
+    sha256 = "e3e6cfb06beb900767fe1cca042c2cb2c81271c625fe4ca83f85bb8326138ed4";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-kortex-api";
-  version = "0.2.4-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/jazzy/kortex_api/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "082c5aa04aa0432cc0a646fb79d833f1d640c068d0888774dec385be4e55e821";
+    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/jazzy/kortex_api/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "6a41d51635b31546fc0e1f471b1a79640fb9f7340cd0537b6b292bb84b98a117";
   };
 
   buildType = "ament_cmake";

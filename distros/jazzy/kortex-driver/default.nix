@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, hardware-interface, kortex-api, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-kortex-driver";
-  version = "0.2.4-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/jazzy/kortex_driver/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "5fa5be776736fc3b01b72cfc3d78ac0893199f849c636f16da7c4dbaa9e3211d";
+    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/jazzy/kortex_driver/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "41d49abc08bdae4234cb9c8c10711f8551ec01c5ad377205fbffe03bf0ce1b18";
   };
 
   buildType = "ament_cmake";

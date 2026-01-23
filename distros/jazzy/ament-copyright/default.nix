@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, ament-lint, ament-pep257, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-ament-copyright";
-  version = "0.17.3-r1";
+  version = "0.17.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/jazzy/ament_copyright/0.17.3-1.tar.gz";
-    name = "0.17.3-1.tar.gz";
-    sha256 = "846d14ab711642c3f5b61c5f6af62340e1dfc251403205fe0e7b4acddbec7d45";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/jazzy/ament_copyright/0.17.4-1.tar.gz";
+    name = "0.17.4-1.tar.gz";
+    sha256 = "a98549141a5d65e4a96220d861fb887253647d88438855404f2d7a4ae8ac7430";
   };
 
   buildType = "ament_python";

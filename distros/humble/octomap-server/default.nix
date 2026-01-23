@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, geometry-msgs, message-filters, nav-msgs, octomap, octomap-msgs, octomap-ros, pcl, pcl-conversions, pcl-ros, rclcpp, rclcpp-components, sensor-msgs, std-msgs, std-srvs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-octomap-server";
-  version = "2.3.0-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap_mapping-release/archive/release/humble/octomap_server/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "a26e5a9b54ce25e3c4f4afaa8077f9a7740e9bf82d437cb097abef2804fd4ec4";
+    url = "https://github.com/ros2-gbp/octomap_mapping-release/archive/release/humble/octomap_server/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "8f586973a7a7e51c2080b4b25eb2c4318f2b55a3f120ce708b9dd7561df0cd76";
   };
 
   buildType = "ament_cmake";

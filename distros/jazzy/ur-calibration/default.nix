@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, rclcpp, ur-client-library, ur-robot-driver, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-ur-calibration";
-  version = "3.6.0-r1";
+  version = "3.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/jazzy/ur_calibration/3.6.0-1.tar.gz";
-    name = "3.6.0-1.tar.gz";
-    sha256 = "7e074991f90dd88c9e41d0181104f441cade3b963fe2e5d20733b5a13c04bb9f";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/jazzy/ur_calibration/3.7.0-1.tar.gz";
+    name = "3.7.0-1.tar.gz";
+    sha256 = "1aa1bbf4c14168c3e5f3664ac7d8aa2bba8786ffef958103348307d67905c27b";
   };
 
   buildType = "ament_cmake";

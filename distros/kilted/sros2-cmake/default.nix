@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-test, ament-lint-auto, ament-lint-common, ros2cli, sros2 }:
 buildRosPackage {
   pname = "ros-kilted-sros2-cmake";
-  version = "0.15.2-r1";
+  version = "0.15.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sros2-release/archive/release/kilted/sros2_cmake/0.15.2-1.tar.gz";
-    name = "0.15.2-1.tar.gz";
-    sha256 = "66cb64d7f295f34eb442c77442e057b845cf5a97664faee3d1f4ed5517bf571d";
+    url = "https://github.com/ros2-gbp/sros2-release/archive/release/kilted/sros2_cmake/0.15.4-1.tar.gz";
+    name = "0.15.4-1.tar.gz";
+    sha256 = "38c9bee94b5a786b17e95875e84006084020746fbd1361bf1d54bf7ac68fb989";
   };
 
   buildType = "ament_cmake";

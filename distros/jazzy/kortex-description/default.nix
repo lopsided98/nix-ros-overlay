@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gz-ros2-control, joint-state-publisher, joint-state-publisher-gui, joint-trajectory-controller, parallel-gripper-controller, picknik-reset-fault-controller, picknik-twist-controller, robot-state-publisher, robotiq-description, rviz2 }:
 buildRosPackage {
   pname = "ros-jazzy-kortex-description";
-  version = "0.2.4-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/jazzy/kortex_description/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "40a6b2c6e4c694bc28e68d6950db058783dd802facef0ef6b13fe78ec8e73d6b";
+    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/jazzy/kortex_description/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "6c1334e3d8a2bf1a1a027878f71eaf549f6cdd54771a39ea7c9ef42e758deeed";
   };
 
   buildType = "ament_cmake";
