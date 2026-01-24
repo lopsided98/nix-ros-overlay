@@ -91485,6 +91485,7 @@ async function run() {
                 if (node.state === 'failed') {
                     const drv = derivations.get(node.drvPath);
                     if (drv === undefined) {
+                        num_done++;
                         return;
                     }
                     const failedDependencies = [];
@@ -91499,6 +91500,7 @@ async function run() {
                         drvPath: drv.drvPath,
                         failedDependencies
                     });
+                    num_done++;
                     return;
                 }
                 const progress = `[${(num_done / derivations.size * 100).toFixed(1)}%]`;
