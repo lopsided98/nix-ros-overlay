@@ -218,12 +218,12 @@ type BuildResult = BuildSuccess | BuildCachedSuccess | BuildFailure | BuildCache
 // want the debug output to pollute the binary cache and consume its limited capacity.
 const excludedOutput = new RegExp("-debug$")
 
-async function build(drvPath: string, resultDir: string, cachixCache: string, cacheDir: string): Promise<BuildResult> {
+async function build(drvPath: string, resultDir: string, cachixCache: string, cacheDir: string, progress: string): Promise<BuildResult> {
   const cacheKey = "failed-" + path.basename(drvPath, ".drv");
 
   try {
     if (await nix.isDrvCached(drvPath, excludedOutput)) { // skip debug output
-      core.info(`found cached: ${drvPath}`)
+      core.info(`${progress} found cached: ${drvPath}`)
       return {
         status: 'cached_success',
         drvPath
@@ -250,7 +250,7 @@ async function build(drvPath: string, resultDir: string, cachixCache: string, ca
   }
 
   try {
-    core.info(`building: ${drvPath}`)
+    core.info(`${progress} building: ${drvPath}`)
 
     const resultPath = path.join(resultDir, path.basename(drvPath, ".drv"))
     const outputs = await nix.realize(drvPath, resultPath)
@@ -375,9 +375,10 @@ async function run() {
     }
     buildGraph.init()
 
-    core.startGroup("building packages...")
+    core.startGroup(`building ${derivations.size} packages...`)
 
     const queue = new PQueue({ concurrency: buildJobs })
+    let num_done = 0
     do {
       const node = await buildGraph.takeReady()
 
@@ -406,7 +407,9 @@ async function run() {
           return;
         }
 
-        const r = await build(node.drvPath, resultDir, cachixCache, cacheDir)
+        const progress = `[${(num_done / derivations.size * 100).toFixed(1)}%]`
+        const r = await build(node.drvPath, resultDir, cachixCache, cacheDir, progress)
+        num_done++
 
         if (r.status === 'cached_success' || r.status === 'success') {
           buildGraph.succeeded(node)

@@ -91360,11 +91360,11 @@ async function main_instantiate(nixFile, rootAttribute, drvDir, system, parallel
 // Regular expression matching debug output of a derivation. We don't
 // want the debug output to pollute the binary cache and consume its limited capacity.
 const excludedOutput = new RegExp("-debug$");
-async function build(drvPath, resultDir, cachixCache, cacheDir) {
+async function build(drvPath, resultDir, cachixCache, cacheDir, progress) {
     const cacheKey = "failed-" + external_path_.basename(drvPath, ".drv");
     try {
         if (await isDrvCached(drvPath, excludedOutput)) { // skip debug output
-            core.info(`found cached: ${drvPath}`);
+            core.info(`${progress} found cached: ${drvPath}`);
             return {
                 status: 'cached_success',
                 drvPath
@@ -91391,7 +91391,7 @@ async function build(drvPath, resultDir, cachixCache, cacheDir) {
         core.warning(`failed to query failed build cache for ${drvPath}: ${e}`);
     }
     try {
-        core.info(`building: ${drvPath}`);
+        core.info(`${progress} building: ${drvPath}`);
         const resultPath = external_path_.join(resultDir, external_path_.basename(drvPath, ".drv"));
         const outputs = await realize(drvPath, resultPath);
         await push(cachixCache, outputs.filter((output) => !excludedOutput.test(output)));
@@ -91476,8 +91476,9 @@ async function run() {
             buildGraph.add(drvPath, drv.references, derivations);
         }
         buildGraph.init();
-        core.startGroup("building packages...");
+        core.startGroup(`building ${derivations.size} packages...`);
         const queue = new PQueue({ concurrency: buildJobs });
+        let num_done = 0;
         do {
             const node = await buildGraph.takeReady();
             queue.add(async () => {
@@ -91500,7 +91501,9 @@ async function run() {
                     });
                     return;
                 }
-                const r = await build(node.drvPath, resultDir, cachixCache, cacheDir);
+                const progress = `[${(num_done / derivations.size * 100).toFixed(1)}%]`;
+                const r = await build(node.drvPath, resultDir, cachixCache, cacheDir, progress);
+                num_done++;
                 if (r.status === 'cached_success' || r.status === 'success') {
                     buildGraph.succeeded(node);
                 }
