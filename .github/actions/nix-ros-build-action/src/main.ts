@@ -386,6 +386,7 @@ async function run() {
         if (node.state === 'failed') {
           const drv = derivations.get(node.drvPath)
           if (drv === undefined) {
+            num_done++
             return;
           }
 
@@ -404,6 +405,7 @@ async function run() {
             failedDependencies
           })
 
+          num_done++
           return;
         }
 
