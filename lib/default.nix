@@ -126,11 +126,7 @@
       patches = patchesFor.${name} or [];
     };
   in {
-    nativeBuildInputs = [
-      # Prepend wrapped ament_vendor to be found by CMake before the
-      # unwrapped one
-      rosSelf.ament-cmake-vendor-package-wrapped
-    ] ++ nativeBuildInputs ++ [
+    nativeBuildInputs = nativeBuildInputs ++ [
       # CMake ExternalProject patches are applied with git apply
       self.git
     ];
