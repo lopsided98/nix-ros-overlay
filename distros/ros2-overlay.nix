@@ -31,16 +31,10 @@ rosSelf: rosSuper: with rosSelf.lib; {
         --replace-fail '/opt/@PROJECT_NAME@' ""
       substituteInPlace cmake/templates/vendor_package_cmake_prefix.dsv.in \
         --replace-fail 'opt/@PROJECT_NAME@' ""
-    '';
-  });
-
-  # Version of ament-cmake-vendor-package for use in Nix build sandbox
-  # without network access. The unwrapped version is still useful in
-  # e.g. nix-shell.
-  ament-cmake-vendor-package-wrapped = rosSelf.ament-cmake-vendor-package.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
+    '' +
+    # Allow ament-cmake-vendor-package to work in Nix build sandbox
+    # without network access.
+    ''
       # Rename the macro so that we can wrap it with our wrapper
       substituteInPlace cmake/ament_vendor.cmake \
         --replace-fail 'macro(ament_vendor TARGET_NAME)' 'macro(ament_vendor_orig TARGET_NAME)'

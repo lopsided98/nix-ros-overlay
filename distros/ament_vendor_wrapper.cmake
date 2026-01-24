@@ -24,6 +24,9 @@
 #
 # The above variables are set in Nix functions
 # patchAmentVendor{Git,File}.
+#
+# If neither of the above variables is set, the macro behaves as the
+# original version.
 
 if(NOT ament_cmake_vendor_package_FIND_QUIETLY)
   message(STATUS "Using ament_vendor wrapped for Nix patching (${ament_cmake_vendor_package_DIR})")
@@ -101,6 +104,19 @@ macro(ament_vendor TARGET_NAME)
       cmake_language(CALL ament_vendor_orig ${TARGET_NAME}
         VCS_TYPE ${_ARG_VCS_TYPE}
         VCS_URL file://${AMENT_VENDOR_NIX_FILE_${TARGET_NAME}}
+        VCS_VERSION ${_ARG_VCS_VERSION}
+        ${_ARG_GLOBAL_HOOK}
+        SATISFIED ${_ARG_SATISFIED}
+        ${_ARG_SKIP_INSTALL}
+        SOURCE_SUBDIR ${_ARG_SOURCE_SUBDIR}
+        PATCHES ${_ARG_PATCHES}
+        CMAKE_ARGS ${_ARG_CMAKE_ARGS}
+      )
+    else()
+      # Not called via Nix, fall back to the original implementation/
+      cmake_language(CALL ament_vendor_orig ${TARGET_NAME}
+        VCS_TYPE ${_ARG_VCS_TYPE}
+        VCS_URL ${_ARG_VCS_URL}
         VCS_VERSION ${_ARG_VCS_VERSION}
         ${_ARG_GLOBAL_HOOK}
         SATISFIED ${_ARG_SATISFIED}
