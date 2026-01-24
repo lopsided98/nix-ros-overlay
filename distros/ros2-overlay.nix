@@ -118,6 +118,9 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
+  # Fails with ROS vendored tl-expected. Needs the one from nixpkgs.
+  cras-cpp-common = rosSuper.cras-cpp-common.override { tl-expected = self.tl-expected; };
+
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
     cmakeFlags ? [], ...
   }: {
