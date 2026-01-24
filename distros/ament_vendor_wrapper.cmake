@@ -1,8 +1,8 @@
 # CMake code that wraps ament_vendor macro for use with Nix. The
 # wrapped version of ament_vendor serves two purposes:
 #
-# 1) Capturing information about what needs to be prefetched from from
-# the Internet and stores it into vendored-source.json.
+# 1) Capturing information about what needs to be prefetched from
+# the Internet and storing it into vendored-source.json.
 #
 # 2) Modifying ament_vendor behavior to use the prefetched data
 # instead of downloading them (downloading is not possible in Nix
