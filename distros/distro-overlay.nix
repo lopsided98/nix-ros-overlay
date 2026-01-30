@@ -85,7 +85,7 @@ let
 
     # Some third-party packages are available in rodistro,
     # but have a better packaging in nixpkgs, so use it instead
-    inherit (self.python3Packages) eigenpy hpp-fcl pinocchio ;
+    inherit (self.python3Packages) eigenpy hpp-fcl pinocchio crocoddyl ;
 
     gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({ ... }:{
       setupHook = ./gazebo-ros-setup-hook.sh;
