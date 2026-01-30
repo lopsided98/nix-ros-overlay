@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-cmake-ros, fastcdr, fmt, nlohmann_json, rmw, rosidl-generator-c, rosidl-generator-cpp, rosidl-runtime-c, rosidl-runtime-cpp, rosidl-typesupport-interface, rosidlcpp-generator-core, rosidlcpp-parser }:
 buildRosPackage {
   pname = "ros-jazzy-rosidlcpp-typesupport-fastrtps-cpp";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidlcpp-release/archive/release/jazzy/rosidlcpp_typesupport_fastrtps_cpp/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "8a142ad54d3847be4c4df629351a5a7270af5965dce894962d23a1aaecbae5e7";
+    url = "https://github.com/ros2-gbp/rosidlcpp-release/archive/release/jazzy/rosidlcpp_typesupport_fastrtps_cpp/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "67ecd653d7fe18e75b157a52b799273866163d8b3f9be13f3704391d9252bfba";
   };
 
   buildType = "ament_cmake";

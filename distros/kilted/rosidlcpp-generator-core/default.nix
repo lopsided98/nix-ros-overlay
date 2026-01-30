@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, fmt, nlohmann_json, rosidlcpp-parser }:
 buildRosPackage {
   pname = "ros-kilted-rosidlcpp-generator-core";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidlcpp-release/archive/release/kilted/rosidlcpp_generator_core/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "0a9a2054f9582908a940fc6681ea95e64f9bbb988b67b96e48368b7a9be82f87";
+    url = "https://github.com/ros2-gbp/rosidlcpp-release/archive/release/kilted/rosidlcpp_generator_core/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "8b50a5f8595a65fb53e82597c6e8b06b6b4af170ce92b40eee418b3161130086";
   };
 
   buildType = "ament_cmake";

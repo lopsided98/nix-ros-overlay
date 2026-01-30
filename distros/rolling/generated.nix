@@ -398,6 +398,10 @@ self: super: {
 
  common-interfaces = self.callPackage ./common-interfaces {};
 
+ compass-conversions = self.callPackage ./compass-conversions {};
+
+ compass-interfaces = self.callPackage ./compass-interfaces {};
+
  composition = self.callPackage ./composition {};
 
  composition-interfaces = self.callPackage ./composition-interfaces {};
@@ -426,7 +430,11 @@ self: super: {
 
  cras-lint = self.callPackage ./cras-lint {};
 
+ cras-msgs = self.callPackage ./cras-msgs {};
+
  cras-topic-tools = self.callPackage ./cras-topic-tools {};
+
+ crocoddyl = self.callPackage ./crocoddyl {};
 
  cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
 
@@ -1180,6 +1188,12 @@ self: super: {
 
  magic-enum = self.callPackage ./magic-enum {};
 
+ magnetic-model = self.callPackage ./magnetic-model {};
+
+ magnetometer-compass = self.callPackage ./magnetometer-compass {};
+
+ magnetometer-pipeline = self.callPackage ./magnetometer-pipeline {};
+
  map-msgs = self.callPackage ./map-msgs {};
 
  mapviz = self.callPackage ./mapviz {};
@@ -1859,6 +1873,8 @@ self: super: {
  rcl-interfaces = self.callPackage ./rcl-interfaces {};
 
  rcl-lifecycle = self.callPackage ./rcl-lifecycle {};
+
+ rcl-logging-implementation = self.callPackage ./rcl-logging-implementation {};
 
  rcl-logging-interface = self.callPackage ./rcl-logging-interface {};
 
@@ -2623,6 +2639,8 @@ self: super: {
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
  synapticon-ros2-control = self.callPackage ./synapticon-ros2-control {};
+
+ sync-tooling-msgs = self.callPackage ./sync-tooling-msgs {};
 
  system-fingerprint = self.callPackage ./system-fingerprint {};
 

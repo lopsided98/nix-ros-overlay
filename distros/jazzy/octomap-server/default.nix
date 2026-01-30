@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, geometry-msgs, message-filters, nav-msgs, octomap, octomap-msgs, octomap-ros, pcl, pcl-conversions, pcl-ros, rclcpp, rclcpp-components, sensor-msgs, std-msgs, std-srvs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-octomap-server";
-  version = "2.3.0-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/octomap_mapping-release/archive/release/jazzy/octomap_server/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "bd5c232d124b4b2441194d8b7c5542521abb08ab67a20a7f566810911ebe3f04";
+    url = "https://github.com/ros2-gbp/octomap_mapping-release/archive/release/jazzy/octomap_server/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "2d8ff17a6b3362a0b69ef90ca8201b4e0934a48a02d93e8dc8a929c69376e880";
   };
 
   buildType = "ament_cmake";

@@ -496,6 +496,10 @@ self: super: {
 
  common-interfaces = self.callPackage ./common-interfaces {};
 
+ compass-conversions = self.callPackage ./compass-conversions {};
+
+ compass-interfaces = self.callPackage ./compass-interfaces {};
+
  composition = self.callPackage ./composition {};
 
  composition-interfaces = self.callPackage ./composition-interfaces {};
@@ -537,6 +541,8 @@ self: super: {
  cras-cpp-common = self.callPackage ./cras-cpp-common {};
 
  cras-lint = self.callPackage ./cras-lint {};
+
+ cras-msgs = self.callPackage ./cras-msgs {};
 
  cras-topic-tools = self.callPackage ./cras-topic-tools {};
 
@@ -920,6 +926,8 @@ self: super: {
 
  event-camera-tools = self.callPackage ./event-camera-tools {};
 
+ event-image-reconstruction-fibar = self.callPackage ./event-image-reconstruction-fibar {};
+
  eventdispatch-python = self.callPackage ./eventdispatch-python {};
 
  eventdispatch-ros2 = self.callPackage ./eventdispatch-ros2 {};
@@ -1017,6 +1025,8 @@ self: super: {
  ffw-joystick-controller = self.callPackage ./ffw-joystick-controller {};
 
  ffw-moveit-config = self.callPackage ./ffw-moveit-config {};
+
+ ffw-navigation = self.callPackage ./ffw-navigation {};
 
  ffw-robot-manager = self.callPackage ./ffw-robot-manager {};
 
@@ -1559,6 +1569,12 @@ self: super: {
  lusb = self.callPackage ./lusb {};
 
  magic-enum = self.callPackage ./magic-enum {};
+
+ magnetic-model = self.callPackage ./magnetic-model {};
+
+ magnetometer-compass = self.callPackage ./magnetometer-compass {};
+
+ magnetometer-pipeline = self.callPackage ./magnetometer-pipeline {};
 
  map-msgs = self.callPackage ./map-msgs {};
 
@@ -2844,6 +2860,8 @@ self: super: {
 
  rosidl-generator-py = self.callPackage ./rosidl-generator-py {};
 
+ rosidl-generator-rs = self.callPackage ./rosidl-generator-rs {};
+
  rosidl-generator-type-description = self.callPackage ./rosidl-generator-type-description {};
 
  rosidl-parser = self.callPackage ./rosidl-parser {};
@@ -3237,6 +3255,8 @@ self: super: {
  swri-transform-util = self.callPackage ./swri-transform-util {};
 
  synapticon-ros2-control = self.callPackage ./synapticon-ros2-control {};
+
+ sync-tooling-msgs = self.callPackage ./sync-tooling-msgs {};
 
  synchros2 = self.callPackage ./synchros2 {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, message-filters, pluginlib, rclcpp, rclcpp-components, rcpputils, rmw, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-point-cloud-transport";
-  version = "4.0.6-r1";
+  version = "4.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport-release/archive/release/jazzy/point_cloud_transport/4.0.6-1.tar.gz";
-    name = "4.0.6-1.tar.gz";
-    sha256 = "ebab028b81325a2fa726105f3cdede72c014d10a67defc48237b5aa327573112";
+    url = "https://github.com/ros2-gbp/point_cloud_transport-release/archive/release/jazzy/point_cloud_transport/4.0.7-1.tar.gz";
+    name = "4.0.7-1.tar.gz";
+    sha256 = "ac625ac7d6d2569c0758262d88d7c691c280eedaf9e0a9af6932cb83fa6cd6aa";
   };
 
   buildType = "ament_cmake";

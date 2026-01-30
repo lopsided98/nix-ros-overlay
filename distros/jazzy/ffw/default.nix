@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ffw-bringup, ffw-description, ffw-joint-trajectory-command-broadcaster, ffw-joystick-controller, ffw-moveit-config, ffw-robot-manager, ffw-spring-actuator-controller, ffw-swerve-drive-controller, ffw-teleop }:
 buildRosPackage {
   pname = "ros-jazzy-ffw";
-  version = "1.1.14-r1";
+  version = "1.1.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw/1.1.14-1.tar.gz";
-    name = "1.1.14-1.tar.gz";
-    sha256 = "d912b1f6404b90d55d24c6ad3d637da392562b3f91206591738fc2a1559d5ccf";
+    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw/1.1.16-1.tar.gz";
+    name = "1.1.16-1.tar.gz";
+    sha256 = "d4c43504933550c0e087e8e1900590a747495a465bdd4b237b4b32ff6346053d";
   };
 
   buildType = "ament_cmake";

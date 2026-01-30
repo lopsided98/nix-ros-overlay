@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-robot-calibration-msgs";
-  version = "0.10.0-r2";
+  version = "0.10.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robot_calibration-release/archive/release/kilted/robot_calibration_msgs/0.10.0-2.tar.gz";
-    name = "0.10.0-2.tar.gz";
-    sha256 = "c4d920e29d291538e04beb582c71e5709839d21f087ffcdb9acefff5e5fad08a";
+    url = "https://github.com/ros2-gbp/robot_calibration-release/archive/release/kilted/robot_calibration_msgs/0.10.1-1.tar.gz";
+    name = "0.10.1-1.tar.gz";
+    sha256 = "0ddf59a0ce1ce4b533551d1bff0f09a48925173b3f494b874baf72d6ab96719a";
   };
 
   buildType = "ament_cmake";
