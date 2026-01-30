@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, angles, geometry-msgs, nav-2d-utils, nav2-common, nav2-controller, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-graceful-controller";
-  version = "1.3.10-r1";
+  version = "1.3.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_graceful_controller/1.3.10-1.tar.gz";
-    name = "1.3.10-1.tar.gz";
-    sha256 = "b9cac55d9af9a8f8290df29c7861a755a17f6b42a470ac2907cdaeff56d50f5d";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_graceful_controller/1.3.11-1.tar.gz";
+    name = "1.3.11-1.tar.gz";
+    sha256 = "adbf49c5dec375ac50f48f56c3942f9e4e220746cdbca98da20fb7e255792764";
   };
 
   buildType = "ament_cmake";

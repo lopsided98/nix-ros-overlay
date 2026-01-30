@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, osrf-testing-tools-cpp, rcl, rcutils, rmw, rmw-implementation-cmake, rosidl-runtime-c, test-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rcl-action";
-  version = "9.2.8-r1";
+  version = "9.2.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/jazzy/rcl_action/9.2.8-1.tar.gz";
-    name = "9.2.8-1.tar.gz";
-    sha256 = "31b342343d46a833da5b49c53d5dde59607ff6f8c4b55d708042c6eac4959327";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/jazzy/rcl_action/9.2.9-1.tar.gz";
+    name = "9.2.9-1.tar.gz";
+    sha256 = "5e0a983a7c5e4e35ea5f7931e972d58e7d448f55b49c2a3e12df23806d6a9bd1";
   };
 
   buildType = "ament_cmake";

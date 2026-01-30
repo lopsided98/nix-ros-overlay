@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-core, ament-cmake-ros-core, fmt, nlohmann_json, rcutils, ros-environment, rosidl-cmake, rosidl-generator-type-description, rosidl-typesupport-interface, rosidlcpp-generator-core, rosidlcpp-parser }:
 buildRosPackage {
   pname = "ros-kilted-rosidlcpp-generator-c";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidlcpp-release/archive/release/kilted/rosidlcpp_generator_c/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "00411ff81a1a1753f716a3611add82478e89102915684127d9bbdef0f7022e61";
+    url = "https://github.com/ros2-gbp/rosidlcpp-release/archive/release/kilted/rosidlcpp_generator_c/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "5a773d7a6f1c739d5b861aa8c950d609a98f95820fe6188ee18a635cc51c5fad";
   };
 
   buildType = "ament_cmake";

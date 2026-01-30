@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cpplint, ament-cmake-gtest, eigen, geometry-msgs, grasping-msgs, moveit-msgs, pcl, pcl-conversions, pcl-ros, rclcpp, rclcpp-action, rclcpp-components, sensor-msgs, shape-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-simple-grasping";
-  version = "0.5.0-r2";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/simple_grasping-release/archive/release/kilted/simple_grasping/0.5.0-2.tar.gz";
-    name = "0.5.0-2.tar.gz";
-    sha256 = "4c7160217ea7576eca83f891c7c2251bd417ad772d33098c7463978585f46f26";
+    url = "https://github.com/ros2-gbp/simple_grasping-release/archive/release/kilted/simple_grasping/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "b7fe3790519f1b9702880605a7d42213d514113ee659c6e96795cdf55a532cfa";
   };
 
   buildType = "ament_cmake";

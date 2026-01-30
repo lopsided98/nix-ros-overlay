@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, rcl-logging-interface, rcutils }:
 buildRosPackage {
   pname = "ros-rolling-rcl-logging-noop";
-  version = "3.3.2-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/rolling/rcl_logging_noop/3.3.2-1.tar.gz";
-    name = "3.3.2-1.tar.gz";
-    sha256 = "d0e5f8824fb4e57bb571d1c2ab419c6d11536b2db6310e2501f56bf68b0a77aa";
+    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/rolling/rcl_logging_noop/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "95570bebc01d74ce544fe8f635a6bc0d3bee9ece4e701404f4a2fdaf8d36855c";
   };
 
   buildType = "ament_cmake";

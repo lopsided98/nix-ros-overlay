@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cmake }:
 buildRosPackage {
   pname = "ros-kilted-fastcdr";
-  version = "2.3.3-r1";
+  version = "2.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastcdr-release/archive/release/kilted/fastcdr/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "871d017fd4516d9564a3f4627e0b7b0c15d9fcda719d52ffc84d5b20dad75f0b";
+    url = "https://github.com/ros2-gbp/fastcdr-release/archive/release/kilted/fastcdr/2.3.5-1.tar.gz";
+    name = "2.3.5-1.tar.gz";
+    sha256 = "b987c1ac52bc04589caf088fee6e4649d59ad365021bdd91cab28cef7affd4a5";
   };
 
   buildType = "cmake";

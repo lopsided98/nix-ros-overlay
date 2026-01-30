@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, cras-cpp-common, cras-lint, cxxopts, rclcpp, rclcpp-components, std-msgs, topic-tools }:
 buildRosPackage {
   pname = "ros-jazzy-cras-topic-tools";
-  version = "3.0.0-r2";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cras_ros_utils-release/archive/release/jazzy/cras_topic_tools/3.0.0-2.tar.gz";
-    name = "3.0.0-2.tar.gz";
-    sha256 = "e5d9650eb3dbbc2d108c06d632d146f16304777df729053b28049b1dac260497";
+    url = "https://github.com/ros2-gbp/cras_ros_utils-release/archive/release/jazzy/cras_topic_tools/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "5357864880f8eca5cf0e9e315887c59148606b468384cd94966affd68051b85b";
   };
 
   buildType = "ament_cmake";

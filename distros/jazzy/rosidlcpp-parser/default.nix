@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, fmt, nlohmann_json }:
 buildRosPackage {
   pname = "ros-jazzy-rosidlcpp-parser";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidlcpp-release/archive/release/jazzy/rosidlcpp_parser/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "5fd84f8b0425909cadd1c6172b308d2749cf359950bcd0fb45b97a410fa79d6e";
+    url = "https://github.com/ros2-gbp/rosidlcpp-release/archive/release/jazzy/rosidlcpp_parser/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "79d94b6122b40bb5c8cacf665b3c05049aa3becc12e318804a73908defd2b7d9";
   };
 
   buildType = "ament_cmake";

@@ -378,6 +378,10 @@ self: super: {
 
  common-interfaces = self.callPackage ./common-interfaces {};
 
+ compass-conversions = self.callPackage ./compass-conversions {};
+
+ compass-interfaces = self.callPackage ./compass-interfaces {};
+
  composition = self.callPackage ./composition {};
 
  composition-interfaces = self.callPackage ./composition-interfaces {};
@@ -407,6 +411,8 @@ self: super: {
  cras-cpp-common = self.callPackage ./cras-cpp-common {};
 
  cras-lint = self.callPackage ./cras-lint {};
+
+ cras-msgs = self.callPackage ./cras-msgs {};
 
  cras-topic-tools = self.callPackage ./cras-topic-tools {};
 
@@ -1253,6 +1259,12 @@ self: super: {
  lttngpy = self.callPackage ./lttngpy {};
 
  magic-enum = self.callPackage ./magic-enum {};
+
+ magnetic-model = self.callPackage ./magnetic-model {};
+
+ magnetometer-compass = self.callPackage ./magnetometer-compass {};
+
+ magnetometer-pipeline = self.callPackage ./magnetometer-pipeline {};
 
  map-msgs = self.callPackage ./map-msgs {};
 

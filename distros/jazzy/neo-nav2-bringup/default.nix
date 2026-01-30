@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-common, navigation2, slam-toolbox }:
 buildRosPackage {
   pname = "ros-jazzy-neo-nav2-bringup";
-  version = "1.3.1-r1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/neo_nav2_bringup-release/archive/release/jazzy/neo_nav2_bringup/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "6a604b2e17c87bcdc076c9a34917ce85b9457b6099c71fe7035115893946f51d";
+    url = "https://github.com/ros2-gbp/neo_nav2_bringup-release/archive/release/jazzy/neo_nav2_bringup/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "2073f30691cdf67802498acf5ad04dfbb4a5ee39aa27eedc6c8c8648460622f6";
   };
 
   buildType = "ament_cmake";

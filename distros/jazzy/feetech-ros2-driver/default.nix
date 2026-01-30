@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, _unresolved_libserial-dev, ament-cmake, fmt, hardware-interface, pkg-config, pluginlib, range-v3, rclcpp, spdlog, tl-expected }:
 buildRosPackage {
   pname = "ros-jazzy-feetech-ros2-driver";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/feetech_ros2_driver-release/archive/release/jazzy/feetech_ros2_driver/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "d2a4d6bdc428a073f8cbd0ede8079186b1419b8ecb1333d5aa042b1f177c149c";
+    url = "https://github.com/ros2-gbp/feetech_ros2_driver-release/archive/release/jazzy/feetech_ros2_driver/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "198e6f224930ab061e74a26b9a14ae479a05e62c66223b0a14c3e7b6c47e5438";
   };
 
   buildType = "ament_cmake";

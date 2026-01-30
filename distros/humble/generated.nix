@@ -40,6 +40,16 @@ self: super: {
 
  affordance-primitives = self.callPackage ./affordance-primitives {};
 
+ agnocast-e2e-test = self.callPackage ./agnocast-e2e-test {};
+
+ agnocast-ioctl-wrapper = self.callPackage ./agnocast-ioctl-wrapper {};
+
+ agnocast-sample-application = self.callPackage ./agnocast-sample-application {};
+
+ agnocast-sample-interfaces = self.callPackage ./agnocast-sample-interfaces {};
+
+ agnocastlib = self.callPackage ./agnocastlib {};
+
  ament-acceleration = self.callPackage ./ament-acceleration {};
 
  ament-black = self.callPackage ./ament-black {};
@@ -3056,6 +3066,8 @@ self: super: {
 
  ros2action = self.callPackage ./ros2action {};
 
+ ros2agnocast = self.callPackage ./ros2agnocast {};
+
  ros2ai = self.callPackage ./ros2ai {};
 
  ros2bag = self.callPackage ./ros2bag {};
@@ -3601,6 +3613,8 @@ self: super: {
  synapticon-ros2-control = self.callPackage ./synapticon-ros2-control {};
 
  sync-parameter-server = self.callPackage ./sync-parameter-server {};
+
+ sync-tooling-msgs = self.callPackage ./sync-tooling-msgs {};
 
  synchros2 = self.callPackage ./synchros2 {};
 
