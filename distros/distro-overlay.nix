@@ -206,16 +206,6 @@ let
       '';
     });
 
-    # Some packages fail to build with Qt5 and the remaining packages
-    # then complain with "Error: detected mismatched Qt dependencies"
-    # when some of their dependencies are built with Qt5 and other
-    # with Qt6. Let's switch everything to Qt6.
-    #
-    # Note that while newer ROS distros (currently Rolling) introduce
-    # new qt6 rosdep keys, older distros are unlikely to be migrated
-    # to Qt6 so we have to pretend that qt6 is called qt5.
-    qt5 = self.qt6;
-
     rqt-bag = rosSuper.rqt-bag.overrideAttrs ({
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
@@ -403,7 +393,74 @@ let
         wrapQtApp "$out/lib/turtlesim/turtlesim_node"
       '';
     });
-  } // (mrptOverrides rosSelf rosSuper);
+  }
+  // (mrptOverrides rosSelf rosSuper)
+  # Some packages fail to build with Qt5 and the remaining packages
+  # then complain with "Error: detected mismatched Qt dependencies"
+  # when some of their dependencies are built with Qt5 and other
+  # with Qt6. Let's switch everything to Qt6.
+  #
+  # Note that while newer ROS distros (currently Rolling) introduce
+  # new qt6 rosdep keys, older distros are unlikely to be migrated
+  # to Qt6 so we have to pretend that qt6 is called qt5.
+  // self.lib.genAttrs
+    [
+      # "rviz-2d-overlay-plugins"
+      # "rviz-assimp-vendor"
+      "rviz-common"
+      "rviz-default-plugins"
+      # "rviz-imu-plugin"
+      # "rviz-marker-tools"
+      # "rviz-ogre-vendor"
+      "rviz-rendering"
+      "rviz-rendering-tests"
+      # "rviz-resource-interfaces"
+      # "rviz-satellite"
+      "rviz-visual-testing-framework"
+      # "rviz-visual-tools"
+      # "rviz2"
+    ] (
+      name: (rosSuper.${name}.override { qt5 = self.qt6; }).overrideAttrs
+        (
+          { cmakeFlags ? [], patches ? [], ... }:
+          {
+            patches = patches ++ [
+              (self.fetchpatch2 {
+                name = "support-both-qt5-and-qt6.patch";
+                url = "https://github.com/ros2/rviz/commit/433016130f62c5e34d9e14afddbe4908932ad6b0.patch";
+                hash = {
+                  "rviz-default-plugins" = "sha256-WMUQe/xhHiyvv2th0tg4nLBCljPR7b6pVBMN4lW4v1Y=";
+                  "rviz-common" = "sha256-0IMp2TH7H07gWMfMr+f9RmRkGN4eIXtbw4xA2tl1U9I=";
+                  "rviz-rendering" = "sha256-CkCAkI56FBqf/DoBH8DnKO/5kjBhMX/GMWRjLdUrgrE=";
+                }.${name};
+                relative = builtins.replaceStrings [ "-" ] [ "_" ] name;
+                # hunks = [ "1-2" "4-" ]; TODO Uncomment after moving to recent enough nixpkgs
+              })
+            ]
+            ++ (self.lib.optional (name == "rviz-default-plugins")
+              (self.fetchpatch2 {
+                name = "fix-compile-with-qt6.patch";
+                url = "https://github.com/ros2/rviz/commit/d59672f9115aeeff02b57070915893a4f5363d4f.patch";
+                hash = "sha256-8D6Gaqsbw7Ay1b+wKObdZ1r6OoHAbCM0q0IaqTMYiTU=";
+                relative = "rviz_default_plugins";
+              }))
+            ++ (self.lib.optional (name == "rviz-common")
+              (self.fetchpatch2 {
+                name = "replace-qregexp-with-qregularexpression-to-support-qt6.patch";
+                url = "https://github.com/ros2/rviz/pull/1592/commits/8a60f536b4f102ccb14bb20187a2240c5964fbb6.patch";
+                hash = "sha256-TwMZ+kAOyzZ0Qj31bA3VZ0nU7YhCT4AmSovBaam96A4=";
+                excludes = [
+                  "include/rviz_common/properties/ros_service_property.hpp"
+                  "src/rviz_common/properties/ros_service_property.cpp"
+                ];
+                relative = "rviz_common";
+              })
+            );
+            cmakeFlags = cmakeFlags ++ [ "-DQT_VERSION_MAJOR=6" ];
+          }
+        )
+    )
+  ;
 
   otherSplices = {
     selfBuildBuild = self.pkgsBuildBuild.rosPackages.${distro};
