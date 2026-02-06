@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-ros2-control-test-assets";
-  version = "2.53.0-r1";
+  version = "2.53.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/ros2_control_test_assets/2.53.0-1.tar.gz";
-    name = "2.53.0-1.tar.gz";
-    sha256 = "277c93f9c5e2c7b8e1405dffda9e251202f5b332e2a1a08910d5f3e25e49321e";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/ros2_control_test_assets/2.53.1-1.tar.gz";
+    name = "2.53.1-1.tar.gz";
+    sha256 = "17c04f01880ce003bd390a9df78ce0fb3247897232ee6ffbad20963034f5921b";
   };
 
   buildType = "ament_cmake";

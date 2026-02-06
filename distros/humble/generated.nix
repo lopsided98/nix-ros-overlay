@@ -2342,6 +2342,10 @@ self: super: {
 
  off-highway-general-purpose-radar-msgs = self.callPackage ./off-highway-general-purpose-radar-msgs {};
 
+ off-highway-mm7p10 = self.callPackage ./off-highway-mm7p10 {};
+
+ off-highway-mm7p10-msgs = self.callPackage ./off-highway-mm7p10-msgs {};
+
  off-highway-premium-radar = self.callPackage ./off-highway-premium-radar {};
 
  off-highway-premium-radar-msgs = self.callPackage ./off-highway-premium-radar-msgs {};
@@ -3693,6 +3697,8 @@ self: super: {
  tf2-web-republisher-interfaces = self.callPackage ./tf2-web-republisher-interfaces {};
 
  tf-transformations = self.callPackage ./tf-transformations {};
+
+ tf-tree-terminal = self.callPackage ./tf-tree-terminal {};
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
 

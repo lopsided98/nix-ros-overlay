@@ -202,6 +202,20 @@ self: super: {
 
  at-sonde-ros-driver = self.callPackage ./at-sonde-ros-driver {};
 
+ auto-apms-behavior-tree = self.callPackage ./auto-apms-behavior-tree {};
+
+ auto-apms-behavior-tree-core = self.callPackage ./auto-apms-behavior-tree-core {};
+
+ auto-apms-examples = self.callPackage ./auto-apms-examples {};
+
+ auto-apms-interfaces = self.callPackage ./auto-apms-interfaces {};
+
+ auto-apms-mission = self.callPackage ./auto-apms-mission {};
+
+ auto-apms-ros2behavior = self.callPackage ./auto-apms-ros2behavior {};
+
+ auto-apms-util = self.callPackage ./auto-apms-util {};
+
  automatika-embodied-agents = self.callPackage ./automatika-embodied-agents {};
 
  automatika-ros-sugar = self.callPackage ./automatika-ros-sugar {};
@@ -303,6 +317,8 @@ self: super: {
  bicycle-steering-controller = self.callPackage ./bicycle-steering-controller {};
 
  bno055 = self.callPackage ./bno055 {};
+
+ bob-llm = self.callPackage ./bob-llm {};
 
  bond = self.callPackage ./bond {};
 
@@ -1592,6 +1608,10 @@ self: super: {
 
  off-highway-general-purpose-radar-msgs = self.callPackage ./off-highway-general-purpose-radar-msgs {};
 
+ off-highway-mm7p10 = self.callPackage ./off-highway-mm7p10 {};
+
+ off-highway-mm7p10-msgs = self.callPackage ./off-highway-mm7p10-msgs {};
+
  off-highway-premium-radar = self.callPackage ./off-highway-premium-radar {};
 
  off-highway-premium-radar-msgs = self.callPackage ./off-highway-premium-radar-msgs {};
@@ -2701,6 +2721,8 @@ self: super: {
  tf2-web-republisher-interfaces = self.callPackage ./tf2-web-republisher-interfaces {};
 
  tf-transformations = self.callPackage ./tf-transformations {};
+
+ tf-tree-terminal = self.callPackage ./tf-tree-terminal {};
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
 

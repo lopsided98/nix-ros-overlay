@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, can-msgs, diagnostic-updater, rclcpp, ros2-socketcan-msgs }:
 buildRosPackage {
   pname = "ros-rolling-off-highway-can";
-  version = "1.1.0-r2";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/rolling/off_highway_can/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "07f636ceee4e7ba4ee69fd01a45040b6bd97eb1dea82dd3bf79654d5c2ce6f78";
+    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/rolling/off_highway_can/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "4bef4d73415a84c5fbe78097aa307d958a83d8875aa521635a615237ac825df9";
   };
 
   buildType = "ament_cmake";

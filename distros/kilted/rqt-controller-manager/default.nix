@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, controller-manager, controller-manager-msgs, rclpy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-kilted-rqt-controller-manager";
-  version = "5.11.3-r1";
+  version = "5.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/rqt_controller_manager/5.11.3-1.tar.gz";
-    name = "5.11.3-1.tar.gz";
-    sha256 = "f49b2232a4be97b90d759d75264d4047aaa0d7a9f23733ccc26395547d0a0063";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/rqt_controller_manager/5.12.0-1.tar.gz";
+    name = "5.12.0-1.tar.gz";
+    sha256 = "054c1199599430e732a6de0686a37b21d532f86d60aab8e1241f8de41fc5d757";
   };
 
   buildType = "ament_python";

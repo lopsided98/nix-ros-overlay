@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, ament-lint-auto, ament-lint-common, can-msgs, off-highway-can, off-highway-uss-msgs, pcl, pcl-conversions, pcl-ros, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-off-highway-uss";
-  version = "1.0.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/jazzy/off_highway_uss/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "9c5e269701ed281d5efa927bad6db700940f2a2313d0e51bbba9cfcd40ee128d";
+    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/jazzy/off_highway_uss/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "a64c27e3d4f7e51268df170b3bf1f6626d841a8be963492a58a727f937052d8e";
   };
 
   buildType = "ament_cmake";

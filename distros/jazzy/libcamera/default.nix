@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, git, libyaml, libyuv, meson, openssl, pkg-config, python3, python3Packages, udev }:
 buildRosPackage {
   pname = "ros-jazzy-libcamera";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libcamera-release/archive/release/jazzy/libcamera/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "4fd92b97d6c0400bec7c95543be1b3bac2a5cb9e8cc35853723df4aa524804c1";
+    url = "https://github.com/ros2-gbp/libcamera-release/archive/release/jazzy/libcamera/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "47ca2cf04b614a90f2d1f2dd2184ae7fd98cd6c84783c5b0308ed86f32a64116";
   };
 
   buildType = "meson";

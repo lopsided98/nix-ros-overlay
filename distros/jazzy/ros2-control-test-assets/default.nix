@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-ros2-control-test-assets";
-  version = "4.42.2-r1";
+  version = "4.43.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/ros2_control_test_assets/4.42.2-1.tar.gz";
-    name = "4.42.2-1.tar.gz";
-    sha256 = "5996808c19f9795e34a6ac9a16b2594e65b86f006786cbc91b42073fc721701c";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/ros2_control_test_assets/4.43.0-1.tar.gz";
+    name = "4.43.0-1.tar.gz";
+    sha256 = "ad0b9c7dca66259a787d49766d8d249d9de12ab96282b6733fbe74afab476084";
   };
 
   buildType = "ament_cmake";
