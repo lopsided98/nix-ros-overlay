@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-interface, controller-manager, filters, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-kilted-chained-filter-controller";
-  version = "5.12.0-r1";
+  version = "5.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/chained_filter_controller/5.12.0-1.tar.gz";
-    name = "5.12.0-1.tar.gz";
-    sha256 = "1ea59f4454912da32c99648edb38131edc36649ecbceed82644b604010aff750";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/chained_filter_controller/5.13.0-1.tar.gz";
+    name = "5.13.0-1.tar.gz";
+    sha256 = "ebd87f17df250b99cbbe50c4b1c0905733d8aeda674b6f8ff32b9b960499b754";
   };
 
   buildType = "ament_cmake";

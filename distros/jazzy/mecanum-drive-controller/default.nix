@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-cmake, ros2-control-test-assets, std-srvs, tf2, tf2-geometry-msgs, tf2-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-mecanum-drive-controller";
-  version = "4.36.0-r1";
+  version = "4.37.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/mecanum_drive_controller/4.36.0-1.tar.gz";
-    name = "4.36.0-1.tar.gz";
-    sha256 = "809a592d14732aa44ad1881d48491a8b8b5904d7d9c8a01a70c95610a57b7d1c";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/mecanum_drive_controller/4.37.0-1.tar.gz";
+    name = "4.37.0-1.tar.gz";
+    sha256 = "104cd2dba664a04bc9c65498a84b610ae0e4ae807b68ac22b34c7af49bace23a";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-off-highway-uss-msgs";
-  version = "1.0.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/jazzy/off_highway_uss_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "b66398c661056c00d9ed65bf02439c506762357cd29967e91f4647a18d597f49";
+    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/jazzy/off_highway_uss_msgs/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "c56113a9bb139f797e1e9f62212733a8204eed7a8eaf879652681a25b3a67120";
   };
 
   buildType = "ament_cmake";

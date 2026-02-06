@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, clearpath-bt-joy, controller-manager, diff-drive-controller, imu-filter-madgwick, interactive-marker-twist-server, joint-state-broadcaster, joint-trajectory-controller, joy-linux, mecanum-drive-controller, robot-localization, robot-state-publisher, teleop-twist-joy, twist-mux }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-control";
-  version = "2.8.4-r1";
+  version = "2.8.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_control/2.8.4-1.tar.gz";
-    name = "2.8.4-1.tar.gz";
-    sha256 = "82c21db5a508dde2703e39ecb89d6887682afa6d9743032cbbe6e790be5936a0";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_control/2.8.5-1.tar.gz";
+    name = "2.8.5-1.tar.gz";
+    sha256 = "b52f90ce5fc20d199447d001013b13cd8e2a2024cabe9f098c8405e9e4423d8d";
   };
 
   buildType = "ament_cmake";

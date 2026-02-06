@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-pid-controller";
-  version = "4.36.0-r1";
+  version = "4.37.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/pid_controller/4.36.0-1.tar.gz";
-    name = "4.36.0-1.tar.gz";
-    sha256 = "244e14f140777a69e55eb2f1a02aa7bd52ec5d42ef157adb8734fe23719a7303";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/pid_controller/4.37.0-1.tar.gz";
+    name = "4.37.0-1.tar.gz";
+    sha256 = "d4771cd842b0104e967036fc0e50467dbca464df35e2a6d066fd89c01d868c32";
   };
 
   buildType = "ament_cmake";

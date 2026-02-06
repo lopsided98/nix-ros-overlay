@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, lifecycle-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-controller-manager-msgs";
-  version = "5.11.3-r1";
+  version = "5.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/controller_manager_msgs/5.11.3-1.tar.gz";
-    name = "5.11.3-1.tar.gz";
-    sha256 = "46401af1868b9f457f84617610eb43aa0c6337c90b8255a39a1f189b3ddaae56";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/controller_manager_msgs/5.12.0-1.tar.gz";
+    name = "5.12.0-1.tar.gz";
+    sha256 = "07f1ed482ab84681c23baac0494a797929819e758cbdf94880fd0d362bbb476c";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-off-highway-uss-msgs";
-  version = "1.1.0-r2";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/rolling/off_highway_uss_msgs/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "d393b8738a15c5f4c32f7bd56642215b7b53c674ea1bde0e7b58107da1cd51c6";
+    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/rolling/off_highway_uss_msgs/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "6bfbb89cb569dd75b73d1fc2b9e9c4434ee7e605cacc446e5a35869173b6c8fb";
   };
 
   buildType = "ament_cmake";

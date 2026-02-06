@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-mypy, ament-cmake-pep257, ament-cmake-pyflakes, ament-cmake-xmllint, ament-index-python, ament-lint-auto, camera-info-manager, clang, cv-bridge, libcamera, rclcpp, rclcpp-components, ros2launch, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-camera-ros";
-  version = "0.5.2-r1";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/camera_ros-release/archive/release/humble/camera_ros/0.5.2-1.tar.gz";
-    name = "0.5.2-1.tar.gz";
-    sha256 = "f2406867112821b6bc9d8e7f3d457d7fe7db327e2d05fdb5bc095d81f7f1b2d9";
+    url = "https://github.com/ros2-gbp/camera_ros-release/archive/release/humble/camera_ros/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "e0c8db78d0b6b968dd9b2eab25c942439ace25e5b236e650cd5a0e3ed75877d3";
   };
 
   buildType = "ament_cmake";

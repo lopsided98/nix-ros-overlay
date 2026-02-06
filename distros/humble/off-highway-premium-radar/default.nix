@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, ament-lint-auto, ament-lint-common, asio, asio-cmake-module, diagnostic-updater, io-context, off-highway-premium-radar-msgs, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-off-highway-premium-radar";
-  version = "0.9.0-r1";
+  version = "0.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/humble/off_highway_premium_radar/0.9.0-1.tar.gz";
-    name = "0.9.0-1.tar.gz";
-    sha256 = "645c3bd37d40e7c0ac34c3a41f89133a3c88acacaa55658d5cd5fd074299e4d6";
+    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/humble/off_highway_premium_radar/0.11.0-1.tar.gz";
+    name = "0.11.0-1.tar.gz";
+    sha256 = "8f806e2f02e11e3dd3a61bd989ff742aad7bd893d87554e81d85c20f9a6b77bf";
   };
 
   buildType = "ament_cmake";

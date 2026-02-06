@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, std-srvs }:
 buildRosPackage {
   pname = "ros-kilted-pid-controller";
-  version = "5.12.0-r1";
+  version = "5.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/pid_controller/5.12.0-1.tar.gz";
-    name = "5.12.0-1.tar.gz";
-    sha256 = "7f2712e98e971be30f7966a377130b4bddff1db61588c930bdca9ff72446a23d";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/pid_controller/5.13.0-1.tar.gz";
+    name = "5.13.0-1.tar.gz";
+    sha256 = "5d8a9c919c93e25e885a377e789ea6f03e7cb90ded1b1e7212855f10d17f5afb";
   };
 
   buildType = "ament_cmake";

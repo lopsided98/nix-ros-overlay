@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-range-sensor-broadcaster";
-  version = "5.12.0-r1";
+  version = "5.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/range_sensor_broadcaster/5.12.0-1.tar.gz";
-    name = "5.12.0-1.tar.gz";
-    sha256 = "f06b8089164165b398843d50b76b452a880ceda2049abc0d13ed6c4403bd90ab";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/range_sensor_broadcaster/5.13.0-1.tar.gz";
+    name = "5.13.0-1.tar.gz";
+    sha256 = "578a353a8dce7b063320e98fb96dd5fc35449b4bd14e8af953876dc9dbfcdab3";
   };
 
   buildType = "ament_cmake";
