@@ -160,7 +160,7 @@
           export NIX_SSL_CERT_FILE="${self.cacert}/etc/ssl/certs/ca-bundle.crt"
           export PATH="${lib.makeBinPath (with self; [ nix-prefetch-git jq nix ])}:$PATH"
           # Ask CMake to generate vendored-source.json
-          export CMAKE_PREFIX_PATH=${rosSelf.ament-cmake-vendor-package-wrapped}
+          export CMAKE_PREFIX_PATH=${rosSelf.ament-cmake-vendor-package}
           cmakeFlags+='-DAMENT_VENDOR_NIX_PREFETCH=${type}'
           phases="''${prePhases[*]:-} unpackPhase patchPhase ''${preConfigurePhases[*]:-} configurePhase ''${preBuildPhases[*]:-}" \
             genericBuild
