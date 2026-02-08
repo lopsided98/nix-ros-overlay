@@ -365,6 +365,16 @@ let
       '';
     });
 
+    rqt-robot-steering = rosSuper.rqt-robot-steering.overrideAttrs ({
+      nativeBuildInputs ? [], postFixup ? "", ...
+    }: {
+      dontWrapQtApps = false;
+      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+      postFixup = postFixup + ''
+        wrapQtApp "$out/lib/rqt_robot_steering/rqt_robot_steering"
+      '';
+    });
+
     # Use rtabmap derivation from nixpkgs, but with the source from ROS.
     rtabmap = self.rtabmap.overrideAttrs ({
       propagatedBuildInputs ? [], ...
