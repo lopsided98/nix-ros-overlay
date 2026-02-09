@@ -38,7 +38,7 @@ jobs:
         eval-jobs: 4
         build-jobs: 2
     - name: "Pin built packages in the cache"
-      if: ${{ github.ref_name == 'master' || github.ref_name == 'develop' }}
+      if: ${{ github.ref_name == 'develop' && matrix.distro != 'rolling' }}
       run: |
         cachixCache=ros
         pinName=${{ format('{0}-{1}-{2}', github.ref_name , matrix.distro, matrix.system) }}
