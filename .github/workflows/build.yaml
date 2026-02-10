@@ -44,5 +44,5 @@ jobs:
         pinName=${{ format('{0}-{1}-{2}', github.ref_name , matrix.distro, matrix.system) }}
         linkFarm=$(nix-build linkFarm.nix --argstr name "$pinName")
         cachix push $cachixCache $linkFarm
-        cachix pin $cachixCache $pinName $linkFarm
+        cachix pin $cachixCache $pinName $linkFarm --keep-revisions 1
         nix-store --query --references $linkFarm | xargs du -shc | sort -h
