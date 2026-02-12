@@ -254,6 +254,15 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
+  ouster-ros = rosSuper.ouster-ros.overrideAttrs ({
+    postPatch ? "", ...
+    }: {
+    postPatch = postPatch + ''
+       substituteInPlace ouster-sdk/ouster_client/src/image_processing.cpp \
+         --replace-fail 'key_eigen.max(0.0).min(1.0)' 'key_eigen.max(static_cast<T>(0)).min(static_cast<T>(1))'
+    '';
+  });
+
   plotjuggler = rosSuper.plotjuggler.override {
     lz4 = self.lz4.overrideAttrs ({
       cmakeFlags ? [], ...
