@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-core-generators, rosidl-core-runtime }:
 buildRosPackage {
   pname = "ros-kilted-service-msgs";
-  version = "2.3.0-r2";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/kilted/service_msgs/2.3.0-2.tar.gz";
-    name = "2.3.0-2.tar.gz";
-    sha256 = "d4e3452fd254ea269fbb21eef2a98b5880e1652ebfed95205bb141b5048a097c";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/kilted/service_msgs/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "c32ca82eda6770c1b7a57109b6427eee4ebd21375879b752855d696fa3022a08";
   };
 
   buildType = "ament_cmake";

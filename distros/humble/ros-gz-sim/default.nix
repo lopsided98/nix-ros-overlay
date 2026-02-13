@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, _unresolved_ignition-gazebo6, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, gflags, ignition, pkg-config, rclcpp, ros2pkg, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros-gz-sim";
-  version = "0.244.21-r1";
+  version = "0.244.22-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/humble/ros_gz_sim/0.244.21-1.tar.gz";
-    name = "0.244.21-1.tar.gz";
-    sha256 = "a34bfb9c5ef4610e4e8314c9008253caa841c8856b76ec7b30e23778100f1cfd";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/humble/ros_gz_sim/0.244.22-1.tar.gz";
+    name = "0.244.22-1.tar.gz";
+    sha256 = "7a67f2b08a1c70280b6067703b70361b43c2d29c5ad06234fe4be96e6828a6b5";
   };
 
   buildType = "ament_cmake";

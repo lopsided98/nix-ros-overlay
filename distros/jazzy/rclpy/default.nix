@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-index-python, ament-lint-auto, ament-lint-common, builtin-interfaces, lifecycle-msgs, pybind11-vendor, python-cmake-module, python3Packages, rcl, rcl-action, rcl-interfaces, rcl-lifecycle, rcl-logging-interface, rcl-yaml-param-parser, rcpputils, rcutils, rmw, rmw-implementation, rmw-implementation-cmake, rosgraph-msgs, rosidl-generator-py, rosidl-runtime-c, rpyutils, test-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rclpy";
-  version = "7.1.9-r1";
+  version = "7.1.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclpy-release/archive/release/jazzy/rclpy/7.1.9-1.tar.gz";
-    name = "7.1.9-1.tar.gz";
-    sha256 = "459eda23b40ae0654ee4aa95e9390f03ecc26c8d8549052d8770db613269df3f";
+    url = "https://github.com/ros2-gbp/rclpy-release/archive/release/jazzy/rclpy/7.1.10-1.tar.gz";
+    name = "7.1.10-1.tar.gz";
+    sha256 = "f2119d40b85d711e1cd59101088cd1a40daa832a0344a0d55a93e4528136f856";
   };
 
   buildType = "ament_cmake";

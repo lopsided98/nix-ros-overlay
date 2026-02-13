@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-google-benchmark, ament-cmake-gtest, ament-index-cpp, angles, assimp, boost, bullet, common-interfaces, eigen, eigen-stl-containers, eigen3-cmake-module, fcl, generate-parameter-library, geometric-shapes, geometry-msgs, google-benchmark-vendor, kdl-parser, launch-testing-ament-cmake, moveit-common, moveit-msgs, moveit-resources-panda-moveit-config, moveit-resources-pr2-description, octomap, octomap-msgs, orocos-kdl-vendor, osqp-vendor, pkg-config, pluginlib, random-numbers, rcl-interfaces, rclcpp, rclpy, rsl, ruckig, sensor-msgs, shape-msgs, srdfdom, std-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-kdl, trajectory-msgs, urdf, urdfdom, urdfdom-headers, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-moveit-core";
-  version = "2.14.1-r1";
+  version = "2.14.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_core/2.14.1-1.tar.gz";
-    name = "2.14.1-1.tar.gz";
-    sha256 = "a0175d2d23b96a0a46e320fefb4f9b0303fb270304e22b769f3660df4b7d64df";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_core/2.14.3-1.tar.gz";
+    name = "2.14.3-1.tar.gz";
+    sha256 = "9b133a0358b48d3ea49b85e150703c30c1d32e6f47f46a73a47651a198203e5b";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-index-cpp, eigen, eigen3-cmake-module, fmt, generate-parameter-library, launch-testing-ament-cmake, message-filters, moveit-common, moveit-configs-utils, moveit-core, moveit-msgs, moveit-resources-panda-moveit-config, moveit-ros-occupancy-map-monitor, pluginlib, rclcpp, rclcpp-action, rclcpp-components, ros-testing, srdfdom, std-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-msgs, tf2-ros, urdf }:
 buildRosPackage {
   pname = "ros-kilted-moveit-ros-planning";
-  version = "2.14.1-r1";
+  version = "2.14.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_ros_planning/2.14.1-1.tar.gz";
-    name = "2.14.1-1.tar.gz";
-    sha256 = "6b7040a86d1f53734ec218f826f02ebc436e8430204487ad2523973512679046";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_ros_planning/2.14.3-1.tar.gz";
+    name = "2.14.3-1.tar.gz";
+    sha256 = "097da17a305cd5f96aec2b51d134e2a35b2977ca463c244c27d1860e864b9e8b";
   };
 
   buildType = "ament_cmake";

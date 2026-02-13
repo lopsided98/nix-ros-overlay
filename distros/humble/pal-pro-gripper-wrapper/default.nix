@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-python, ament-copyright, ament-flake8, ament-lint-auto, ament-lint-common, ament-pep257, python3Packages, rclpy, sensor-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-humble-pal-pro-gripper-wrapper";
-  version = "1.8.0-r1";
+  version = "1.11.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pal_pro_gripper-release/archive/release/humble/pal_pro_gripper_wrapper/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "9b5fe261b905b599688dd6f87497dbb2d97635772ad97f150976cd29978b37f4";
+    url = "https://github.com/ros2-gbp/pal_pro_gripper-release/archive/release/humble/pal_pro_gripper_wrapper/1.11.3-1.tar.gz";
+    name = "1.11.3-1.tar.gz";
+    sha256 = "218bfbb02d3c41a94776650435f9a134b65aab96feddd97732a4fecda4afbad7";
   };
 
   buildType = "ament_python";

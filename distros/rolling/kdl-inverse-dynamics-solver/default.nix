@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, inverse-dynamics-solver, kdl-parser, orocos-kdl, pluginlib, rclcpp, ros-testing, ur-description }:
 buildRosPackage {
   pname = "ros-rolling-kdl-inverse-dynamics-solver";
-  version = "6.0.1-r2";
+  version = "6.0.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/inverse_dynamics_solver-release/archive/release/rolling/kdl_inverse_dynamics_solver/6.0.1-2.tar.gz";
-    name = "6.0.1-2.tar.gz";
-    sha256 = "6ba9c1c9a8f0e1e107f38dcff3ff1b98903429c30c4593534dffd5b6b0245bc6";
+    url = "https://github.com/ros2-gbp/inverse_dynamics_solver-release/archive/release/rolling/kdl_inverse_dynamics_solver/6.0.1-3.tar.gz";
+    name = "6.0.1-3.tar.gz";
+    sha256 = "5506d0ab7052dc6b64cf24b3abb44e3ff0e27dc108951bafa77efab2a1c03805";
   };
 
   buildType = "ament_cmake";

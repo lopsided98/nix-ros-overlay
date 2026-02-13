@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, play-motion-builder-msgs, play-motion2, play-motion2-msgs, rclcpp, rclcpp-action, sensor-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-kilted-play-motion-builder";
-  version = "1.4.0-r1";
+  version = "1.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/play_motion_builder-release/archive/release/kilted/play_motion_builder/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "e942466aa69f550d42a6f446fec615f2ce18cb10e430a33b6ff2a5ba270cc0ab";
+    url = "https://github.com/ros2-gbp/play_motion_builder-release/archive/release/kilted/play_motion_builder/1.4.1-1.tar.gz";
+    name = "1.4.1-1.tar.gz";
+    sha256 = "ee584db14944d15ba10eb011b61b06e2fed7c5fbe11b57b60b8fef8206b59c9a";
   };
 
   buildType = "ament_cmake";

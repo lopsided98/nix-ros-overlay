@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, fmt, moveit-common, moveit-core, moveit-ros-planning, rclcpp, tf2-eigen, tf2-ros, warehouse-ros }:
 buildRosPackage {
   pname = "ros-kilted-moveit-ros-warehouse";
-  version = "2.14.1-r1";
+  version = "2.14.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_ros_warehouse/2.14.1-1.tar.gz";
-    name = "2.14.1-1.tar.gz";
-    sha256 = "67134b6eb6f8b4e88901e53822e2e229928cd89c0b8a00fcf0314069d85d1d2e";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_ros_warehouse/2.14.3-1.tar.gz";
+    name = "2.14.3-1.tar.gz";
+    sha256 = "e000f6e8381cbd0ccd9c1ebbb265cd97836655db3b1573772952d55c11b3be14";
   };
 
   buildType = "ament_cmake";

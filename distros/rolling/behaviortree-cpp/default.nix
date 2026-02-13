@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, cppzmq, git, rclcpp, ros-environment, sqlite, tinyxml-2, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-rolling-behaviortree-cpp";
-  version = "4.8.3-r1";
+  version = "4.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/rolling/behaviortree_cpp/4.8.3-1.tar.gz";
-    name = "4.8.3-1.tar.gz";
-    sha256 = "2dc4f785495dc68c520c30dddddcee572c3a9b90a2ea4256472f5147c13dbdc4";
+    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/rolling/behaviortree_cpp/4.9.0-1.tar.gz";
+    name = "4.9.0-1.tar.gz";
+    sha256 = "92d17a02ce929b2b9d2eff906b9cf0e14460b38f582477586e9c7675b53218fb";
   };
 
   buildType = "ament_cmake";

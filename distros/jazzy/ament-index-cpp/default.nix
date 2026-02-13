@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-ament-index-cpp";
-  version = "1.8.2-r1";
+  version = "1.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/jazzy/ament_index_cpp/1.8.2-1.tar.gz";
-    name = "1.8.2-1.tar.gz";
-    sha256 = "309bdc202b3e590067ccee744749df670ae77a11a5bb68b579c4fe91c844c10e";
+    url = "https://github.com/ros2-gbp/ament_index-release/archive/release/jazzy/ament_index_cpp/1.8.3-1.tar.gz";
+    name = "1.8.3-1.tar.gz";
+    sha256 = "fcfa40605ad7d23fa00074eb77fd3ba1c35233425333072fece6df350f0be677";
   };
 
   buildType = "ament_cmake";

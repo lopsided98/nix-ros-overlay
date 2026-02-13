@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, controller-manager, diff-drive-controller, force-torque-sensor-broadcaster, joint-state-broadcaster, joint-trajectory-controller, launch, launch-pal, omni-base-controller-configuration, pal-gripper-controller-configuration, pal-hey5-controller-configuration, pal-robotiq-controller-configuration, pmb2-controller-configuration, ros2controlcli }:
 buildRosPackage {
   pname = "ros-humble-tiago-controller-configuration";
-  version = "4.22.0-r1";
+  version = "4.24.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_robot-release/archive/release/humble/tiago_controller_configuration/4.22.0-1.tar.gz";
-    name = "4.22.0-1.tar.gz";
-    sha256 = "3fe99bff188950f70cd507b745b240a8279aa6b2c6a1e06c0847ffcc2d78a2d0";
+    url = "https://github.com/pal-gbp/tiago_robot-release/archive/release/humble/tiago_controller_configuration/4.24.1-1.tar.gz";
+    name = "4.24.1-1.tar.gz";
+    sha256 = "7fa719ce012cd7c37d3d5a8c1501ed7905161cfd10adf3ac02e666d8dd666c48";
   };
 
   buildType = "ament_cmake";

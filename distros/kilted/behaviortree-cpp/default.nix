@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, cppzmq, git, rclcpp, ros-environment, sqlite, tinyxml-2, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-kilted-behaviortree-cpp";
-  version = "4.8.3-r1";
+  version = "4.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/kilted/behaviortree_cpp/4.8.3-1.tar.gz";
-    name = "4.8.3-1.tar.gz";
-    sha256 = "1352eec92fa9bb772abd21ba8645ebe0a8e88cfcedb165f12ae4486a1084b538";
+    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/kilted/behaviortree_cpp/4.9.0-1.tar.gz";
+    name = "4.9.0-1.tar.gz";
+    sha256 = "9552577128be47a8eefa838437333198f5f8faf2b1b387d3ea61b55931906cb1";
   };
 
   buildType = "ament_cmake";

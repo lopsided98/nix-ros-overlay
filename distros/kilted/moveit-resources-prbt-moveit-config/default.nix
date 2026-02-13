@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher, moveit-resources-prbt-ikfast-manipulator-plugin, moveit-resources-prbt-support, moveit-ros-move-group, robot-state-publisher, rviz2, xacro }:
 buildRosPackage {
   pname = "ros-kilted-moveit-resources-prbt-moveit-config";
-  version = "2.14.1-r1";
+  version = "2.14.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_resources_prbt_moveit_config/2.14.1-1.tar.gz";
-    name = "2.14.1-1.tar.gz";
-    sha256 = "7c6e921b1c1221ff8701bb3a938bfda6519d1393cd71718546696c14070a7768";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_resources_prbt_moveit_config/2.14.3-1.tar.gz";
+    name = "2.14.3-1.tar.gz";
+    sha256 = "6ef8078091d54967a53be2897872dbef8998aec03aa748f2861cf62dc6872aff";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-index-python, ament-lint-auto, ament-lint-common, diagnostic-aggregator, launch-pal, pal-maps, ros2launch }:
 buildRosPackage {
   pname = "ros-humble-pmb2-2dnav";
-  version = "4.18.2-r1";
+  version = "4.21.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_2dnav/4.18.2-1.tar.gz";
-    name = "4.18.2-1.tar.gz";
-    sha256 = "5651f29f6fc287891ec7f11019041fdd856945a7df8a4041f09209d600df73f0";
+    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_2dnav/4.21.0-1.tar.gz";
+    name = "4.21.0-1.tar.gz";
+    sha256 = "eb521aec60721b0736df6bcc1e245fb86eb3e03be9c783146f4bee8cbcc2492d";
   };
 
   buildType = "ament_cmake";

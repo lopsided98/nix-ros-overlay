@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-index-python, ament-lint-auto, ament-lint-common, diagnostic-aggregator, geometry-msgs, joy-linux, joy-teleop, launch-pal, pmb2-controller-configuration, pmb2-description, robot-state-publisher, twist-mux, twist-mux-msgs }:
 buildRosPackage {
   pname = "ros-humble-pmb2-bringup";
-  version = "5.10.2-r1";
+  version = "5.11.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_robot-gbp/archive/release/humble/pmb2_bringup/5.10.2-1.tar.gz";
-    name = "5.10.2-1.tar.gz";
-    sha256 = "3415b99b50c6be3b81cba0235ceece2f915fd8bdd3944f921d03ac3ae8c3b3d6";
+    url = "https://github.com/pal-gbp/pmb2_robot-gbp/archive/release/humble/pmb2_bringup/5.11.2-1.tar.gz";
+    name = "5.11.2-1.tar.gz";
+    sha256 = "068765fc61a5ae962ee271ce9ccf0f3d15eb68aa25d90f7b77fba359a6083e47";
   };
 
   buildType = "ament_cmake";

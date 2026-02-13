@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, ament-pep257, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-tf-transformations";
-  version = "1.1.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tf_transformations_release/archive/release/humble/tf_transformations/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "a2126bb8aa5eae311071be1f83955306a30e949e471a5510f3b3f45e06e72cb8";
+    url = "https://github.com/ros2-gbp/tf_transformations_release/archive/release/humble/tf_transformations/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "123e04b7f19216c2b70d1fff00416cd731f661ff6106c409098b3dce6cb6d3e7";
   };
 
   buildType = "ament_python";

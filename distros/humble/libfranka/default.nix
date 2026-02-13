@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, fmt, pinocchio, poco, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-humble-libfranka";
-  version = "0.20.3-r1";
+  version = "0.20.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/frankaemika/libfranka-release/archive/release/humble/libfranka/0.20.3-1.tar.gz";
-    name = "0.20.3-1.tar.gz";
-    sha256 = "9eee4394948b3e2ea1b87d6efb2650ee4e0345ad4b013a533102b7f98dd33d30";
+    url = "https://github.com/frankaemika/libfranka-release/archive/release/humble/libfranka/0.20.4-1.tar.gz";
+    name = "0.20.4-1.tar.gz";
+    sha256 = "5612faa6708c1414f317d28ea3d892a1d4d8dee0d6a21d3817c489beeb4f5601";
   };
 
   buildType = "cmake";

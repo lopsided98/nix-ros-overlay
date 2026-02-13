@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-common, moveit-core, rclcpp, rsl, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kilted-chomp-motion-planner";
-  version = "2.14.1-r1";
+  version = "2.14.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/chomp_motion_planner/2.14.1-1.tar.gz";
-    name = "2.14.1-1.tar.gz";
-    sha256 = "6c6d4b78f4666a40408b87a185468975d5e0343a93487f4e4881e6d3b4ab1fd9";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/chomp_motion_planner/2.14.3-1.tar.gz";
+    name = "2.14.3-1.tar.gz";
+    sha256 = "44ef061de8e989d73d0e5007a4c80404ad1f1a57986532c372abbccbff4e3c55";
   };
 
   buildType = "ament_cmake";

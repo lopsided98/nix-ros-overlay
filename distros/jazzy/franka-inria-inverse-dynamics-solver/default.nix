@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, inverse-dynamics-solver, pluginlib }:
 buildRosPackage {
   pname = "ros-jazzy-franka-inria-inverse-dynamics-solver";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/inverse_dynamics_solver-release/archive/release/jazzy/franka_inria_inverse_dynamics_solver/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "b6964b4bd41509eff3fdad7fe63fb6d008f3acbb1868ee46591ed43ee73309c8";
+    url = "https://github.com/ros2-gbp/inverse_dynamics_solver-release/archive/release/jazzy/franka_inria_inverse_dynamics_solver/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "d3bb910a81ce41902312e871ffbc3db4cceb5b2d40c676130a13472bb1efe4bc";
   };
 
   buildType = "ament_cmake";

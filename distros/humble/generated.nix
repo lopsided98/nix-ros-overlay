@@ -572,6 +572,8 @@ self: super: {
 
  bno055 = self.callPackage ./bno055 {};
 
+ bob-llm = self.callPackage ./bob-llm {};
+
  bond = self.callPackage ./bond {};
 
  bond-core = self.callPackage ./bond-core {};
