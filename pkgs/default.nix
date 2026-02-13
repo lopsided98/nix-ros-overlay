@@ -179,4 +179,25 @@ self: super: with self.lib; {
 
   superflore = self.python3Packages.callPackage ./superflore { };
 
+  pclWithQt5 = self.pcl.override {
+    qt6 = self.qt5;
+    vtk = self.vtkWithQt5;
+  };
+
+  vtkWithQt5 = self.vtk.overrideAttrs ({
+    cmakeFlags ? [], nativeBuildInputs ? [], propagatedBuildInputs ? [], ...
+  }: {
+    cmakeFlags = cmakeFlags ++ [
+      "-DVTK_GROUP_ENABLE_Qt=YES"
+      "-DVTK_QT_VERSION=5"
+    ];
+    propagatedBuildInputs = propagatedBuildInputs ++ [
+      self.qt5.qtbase
+      self.qt5.qttools
+    ];
+    nativeBuildInputs = nativeBuildInputs ++ [
+      self.qt5.wrapQtAppsHook
+      self.ninja
+    ];
+  });
 }
