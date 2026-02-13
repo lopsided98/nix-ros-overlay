@@ -363,21 +363,6 @@ let
       '';
     });
 
-    # Use rtabmap derivation from nixpkgs, but with the source from ROS.
-    rtabmap = self.rtabmap.overrideAttrs ({
-      propagatedBuildInputs ? [], ...
-    }: {
-      inherit (rosSuper.rtabmap)
-        pname
-        version
-        src;
-      propagatedBuildInputs = propagatedBuildInputs ++ [
-        self.qt6.wrapQtAppsHook
-        self.librealsense
-        self.octomap
-      ];
-    });
-
     # TODO: Remove once onetbb appears in the locked nixpkgs version.
     onetbb = self.tbb_2022;
 

@@ -272,6 +272,22 @@ in {
   rosidlcpp-typesupport-fastrtps-c = rosSuper.rosidlcpp-typesupport-fastrtps-c.override { fmt = self.fmt_9; };
   rosidlcpp-typesupport-fastrtps-cpp = rosSuper.rosidlcpp-typesupport-fastrtps-cpp.override { fmt = self.fmt_9; };
 
+  # Use rtabmap derivation from nixpkgs, but with the source from ROS.
+  rtabmap = self.rtabmap.overrideAttrs ({
+    propagatedBuildInputs ? [], ...
+  }: {
+    inherit (rosSuper.rtabmap)
+      pname
+      version
+      src;
+    propagatedBuildInputs = propagatedBuildInputs ++ [
+      self.librealsense
+      self.octomap
+      self.qt6.qtbase
+      self.qt6.wrapQtAppsHook
+    ];
+  });
+
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     tarSourceArgs.hook = let
       version = "1.79";

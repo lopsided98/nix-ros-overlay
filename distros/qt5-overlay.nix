@@ -3,6 +3,25 @@ self:
 rosSelf: rosSuper: with rosSelf.lib; {
   # keep-sorted start block=yes
 
+  pcl = self.pclWithQt5;
+  # Use rtabmap derivation from nixpkgs, but with Qt5 and the version from ROS.
+  rtabmap = (self.rtabmap.override {
+    pcl = rosSelf.pcl;
+    qt6 = self.qt5;
+    vtkWithQt6 = rosSelf.vtk;
+  }).overrideAttrs ({
+    propagatedBuildInputs ? [], nativeBuildInputs ? [], buildInputs ? [], ...
+  }: {
+    inherit (rosSuper.rtabmap)
+      pname
+      version
+      src;
+    nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+    propagatedBuildInputs = propagatedBuildInputs ++ [
+      self.librealsense
+      self.octomap
+    ];
+  });
   # See also overrides in ros2-overlay.nix.
   rviz2 = rosSuper.rviz2.overrideAttrs ({
     nativeBuildInputs ? [], qtWrapperArgs ? [], ...
@@ -14,6 +33,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
       "--set-default QT_QPA_PLATFORM xcb"
     ];
   });
+  vtk = self.vtkWithQt5;
 
   # keep-sorted end
 }
