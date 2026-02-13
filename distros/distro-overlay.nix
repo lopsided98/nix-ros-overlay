@@ -183,7 +183,6 @@ let
       propagatedBuildInputs ? [], ...
     }: {
       propagatedBuildInputs = propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
-        pyside2
         sip4
       ]);
 
