@@ -298,6 +298,13 @@ in {
     '';
   });
 
+  # See also overrides in ros2-overlay.nix.
+  rviz2 = rosSuper.rviz2.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
+  });
+
   sdformat-vendor = lib.patchAmentVendorGit rosSuper.sdformat-vendor { };
 
   shared-queues-vendor = lib.patchVendorUrl rosSuper.shared-queues-vendor {
