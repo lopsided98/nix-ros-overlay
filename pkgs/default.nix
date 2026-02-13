@@ -69,18 +69,6 @@ self: super: with self.lib; {
 
   openni2 = self.callPackage ./openni2 { };
 
-  # For rtabmap-conversions
-  pcl = (super.pcl.override { vtk = self.vtkWithQt6; }).overrideAttrs ({
-    propagatedBuildInputs ? [], propagatedNativeBuildInputs ? [], ...
-  }:{
-    propagatedNativeBuildInputs = propagatedNativeBuildInputs ++ [
-      self.qt6.wrapQtAppsHook
-    ];
-    propagatedBuildInputs = propagatedBuildInputs ++ [
-      self.qt6.qtbase
-    ];
-  });
-
   pythonPackagesExtensions = super.pythonPackagesExtensions ++ [
     (pyFinal: pyPrev: {
       bloom = pyFinal.callPackage ./bloom { };
