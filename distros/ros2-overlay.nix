@@ -357,16 +357,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
+  # Common overrides for all distros. See also <distro>/overrides.nix.
   rviz2 = rosSuper.rviz2.overrideAttrs ({
-    nativeBuildInputs ? [], qtWrapperArgs ? [], postFixup ? "", meta ? {}, ...
+    postFixup ? "", meta ? {}, ...
   }: {
     dontWrapQtApps = false;
-    nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
-    qtWrapperArgs = qtWrapperArgs ++ [
-      # Use X11 by default in RViz2.
-      # https://github.com/ros-visualization/rviz/issues/1442
-      "--set-default QT_QPA_PLATFORM xcb"
-    ];
     postFixup = postFixup + ''
       wrapQtApp "$out/lib/rviz2/rviz2"
     '';
