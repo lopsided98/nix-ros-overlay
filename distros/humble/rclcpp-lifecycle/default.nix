@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, lifecycle-msgs, mimick-vendor, performance-test-fixture, rcl-lifecycle, rclcpp, rcpputils, rcutils, rmw, rosidl-typesupport-cpp, test-msgs }:
 buildRosPackage {
   pname = "ros-humble-rclcpp-lifecycle";
-  version = "16.0.17-r1";
+  version = "16.0.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/humble/rclcpp_lifecycle/16.0.17-1.tar.gz";
-    name = "16.0.17-1.tar.gz";
-    sha256 = "dac105322fd937b4b8e05e54734c80718d2f87193710703ef42073f85d3b0e36";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/humble/rclcpp_lifecycle/16.0.18-1.tar.gz";
+    name = "16.0.18-1.tar.gz";
+    sha256 = "dbaf65b98756f641df2d18f15a9cd5b8a00d6cdbec9ebad801aa5b8713386629";
   };
 
   buildType = "ament_cmake";

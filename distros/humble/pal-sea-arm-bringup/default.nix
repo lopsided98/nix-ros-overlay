@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, joint-state-broadcaster, joint-trajectory-controller, joy, joy-teleop, launch-pal, pal-sea-arm-controller-configuration, pal-sea-arm-description, play-motion2, play-motion2-cli }:
 buildRosPackage {
   pname = "ros-humble-pal-sea-arm-bringup";
-  version = "1.21.0-r1";
+  version = "1.23.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pal_sea_arm-release/archive/release/humble/pal_sea_arm_bringup/1.21.0-1.tar.gz";
-    name = "1.21.0-1.tar.gz";
-    sha256 = "7daf91cbd441222f58d8910501b9cc94162622e29242adced88b7d6191511d52";
+    url = "https://github.com/ros2-gbp/pal_sea_arm-release/archive/release/humble/pal_sea_arm_bringup/1.23.2-1.tar.gz";
+    name = "1.23.2-1.tar.gz";
+    sha256 = "672f2a6857d87f5f9bbfe67f2aca3a1844467061afbbab036443e18a8f330c0a";
   };
 
   buildType = "ament_cmake";

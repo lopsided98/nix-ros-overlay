@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-play-motion-builder-msgs";
-  version = "1.4.0-r1";
+  version = "1.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/play_motion_builder-release/archive/release/jazzy/play_motion_builder_msgs/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "24158c28e20666a6919b0dcfd4f910b50c6462fe475118d2399739693973d85a";
+    url = "https://github.com/ros2-gbp/play_motion_builder-release/archive/release/jazzy/play_motion_builder_msgs/1.4.1-1.tar.gz";
+    name = "1.4.1-1.tar.gz";
+    sha256 = "c4990a9a42e743acf1d4d2ff86d660b1b4b0e4c5f15cb5cd01e86548a4764b62";
   };
 
   buildType = "ament_cmake";

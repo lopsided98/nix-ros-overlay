@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, omni-base-2dnav }:
 buildRosPackage {
   pname = "ros-humble-tiago-pro-2dnav";
-  version = "2.13.3-r1";
+  version = "2.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tiago_pro_navigation-release/archive/release/humble/tiago_pro_2dnav/2.13.3-1.tar.gz";
-    name = "2.13.3-1.tar.gz";
-    sha256 = "fb39e7b1bc6a41f1979b5fb22d8443870a7b08e08fec4aef1187ff9710dd33f3";
+    url = "https://github.com/ros2-gbp/tiago_pro_navigation-release/archive/release/humble/tiago_pro_2dnav/2.14.0-1.tar.gz";
+    name = "2.14.0-1.tar.gz";
+    sha256 = "c3fd0f477839d134a9824376717428a18d04f7743e9ceca85cd621f866935dbe";
   };
 
   buildType = "ament_cmake";

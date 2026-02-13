@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, class-loader, play-motion-builder, play-motion-builder-msgs, play-motion2-msgs, pluginlib, qt5, rclcpp, rclcpp-action, rqt-gui, rqt-gui-cpp, sensor-msgs, urdf }:
 buildRosPackage {
   pname = "ros-jazzy-rqt-play-motion-builder";
-  version = "1.4.0-r1";
+  version = "1.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/play_motion_builder-release/archive/release/jazzy/rqt_play_motion_builder/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "f984b4c81c5926c7d22a82d812c7df339629de86f47c87538bb3211c9c63a35d";
+    url = "https://github.com/ros2-gbp/play_motion_builder-release/archive/release/jazzy/rqt_play_motion_builder/1.4.1-1.tar.gz";
+    name = "1.4.1-1.tar.gz";
+    sha256 = "275018add866119d6fba32be1ab967c8f2d1db5d81e4abaa86310f795f7d152c";
   };
 
   buildType = "ament_cmake";

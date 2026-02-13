@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tiago-gazebo }:
 buildRosPackage {
   pname = "ros-humble-tiago-simulation";
-  version = "4.8.0-r1";
+  version = "4.10.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_simulation-release/archive/release/humble/tiago_simulation/4.8.0-1.tar.gz";
-    name = "4.8.0-1.tar.gz";
-    sha256 = "18aba13d9baa00bce2ef9026d694a77427aed8fc1304dad5cbd91431ec42c4a5";
+    url = "https://github.com/pal-gbp/tiago_simulation-release/archive/release/humble/tiago_simulation/4.10.1-1.tar.gz";
+    name = "4.10.1-1.tar.gz";
+    sha256 = "9bda2186fc940f1adc97c04914fca9fbe859602dad9e4e401ab37fb1c8ce4bab";
   };
 
   buildType = "ament_cmake";

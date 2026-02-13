@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, moveit-configs-utils, moveit-ros-visualization, moveit-setup-framework, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-kilted-moveit-setup-app-plugins";
-  version = "2.14.1-r1";
+  version = "2.14.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_setup_app_plugins/2.14.1-1.tar.gz";
-    name = "2.14.1-1.tar.gz";
-    sha256 = "064a01d2987eb23b14c189acb08a26add80b61905d4aa032a33b71871d4e36a9";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_setup_app_plugins/2.14.3-1.tar.gz";
+    name = "2.14.3-1.tar.gz";
+    sha256 = "f1470add1fa8678c93dbf4264a32032cc90510c8f85f2fcc208688b49cf98d2d";
   };
 
   buildType = "ament_cmake";

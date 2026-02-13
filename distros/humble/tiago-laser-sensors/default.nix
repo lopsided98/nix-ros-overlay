@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, omni-base-laser-sensors, pmb2-laser-sensors }:
 buildRosPackage {
   pname = "ros-humble-tiago-laser-sensors";
-  version = "4.11.0-r1";
+  version = "4.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_navigation-release/archive/release/humble/tiago_laser_sensors/4.11.0-1.tar.gz";
-    name = "4.11.0-1.tar.gz";
-    sha256 = "777bce8e9ce145aa6926d739aaf5efbc6c389d48411023a884ff56a5290491eb";
+    url = "https://github.com/pal-gbp/tiago_navigation-release/archive/release/humble/tiago_laser_sensors/4.12.0-1.tar.gz";
+    name = "4.12.0-1.tar.gz";
+    sha256 = "cd5b668d6d0b1d2efa694177db71a21a5904eae2f1dd45a99621073fde879340";
   };
 
   buildType = "ament_cmake";

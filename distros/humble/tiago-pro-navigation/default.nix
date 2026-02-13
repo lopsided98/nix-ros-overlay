@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, tiago-pro-2dnav, tiago-pro-laser-sensors, tiago-pro-rgbd-sensors }:
 buildRosPackage {
   pname = "ros-humble-tiago-pro-navigation";
-  version = "2.13.3-r1";
+  version = "2.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tiago_pro_navigation-release/archive/release/humble/tiago_pro_navigation/2.13.3-1.tar.gz";
-    name = "2.13.3-1.tar.gz";
-    sha256 = "d6395bc7f65ca68e64fedb9077773b381ef928b7daffc071f1d5cf9dce6a12d8";
+    url = "https://github.com/ros2-gbp/tiago_pro_navigation-release/archive/release/humble/tiago_pro_navigation/2.14.0-1.tar.gz";
+    name = "2.14.0-1.tar.gz";
+    sha256 = "659e2e605a3f384eaa77c13205aae27c54e5010b1acb775a0a03664be2fde2a7";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, pluginlib, python, python3Packages, rclcpp, rosbag2-cpp, rosbag2-storage, rosbag2-storage-default-plugins, sensor-msgs, urdf }:
 buildRosPackage {
   pname = "ros-humble-inverse-dynamics-solver";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/inverse_dynamics_solver-release/archive/release/humble/inverse_dynamics_solver/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "6e0503fb6394aa541bc1f7344ce04e47d1c07f8c0cd67183b55c85037165b094";
+    url = "https://github.com/ros2-gbp/inverse_dynamics_solver-release/archive/release/humble/inverse_dynamics_solver/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "dc45ea0f692ca81bfd5a9c4ee1212dd2c0cd58e583d8730b874076cc83d4b006";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, image-transport, rclcpp, rclcpp-lifecycle, sensor-msgs, std-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-fkie-message-filters";
-  version = "3.2.1-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fkie_message_filters-release/archive/release/kilted/fkie_message_filters/3.2.1-1.tar.gz";
-    name = "3.2.1-1.tar.gz";
-    sha256 = "a715b12b1abc5cf485576c76a537734c7348995ad8c17733cb4b8a248ca7dfdd";
+    url = "https://github.com/ros2-gbp/fkie_message_filters-release/archive/release/kilted/fkie_message_filters/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "e3fbe7378159c249bab68fe8a0fea94c7d3ab94daeee55a0049a7fff638fbfdd";
   };
 
   buildType = "ament_cmake";

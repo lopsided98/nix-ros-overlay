@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, qt5, rcl-interfaces, rclcpp, rmw, rosbag2-storage-mcap, rosbag2-transport, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-swri-console";
-  version = "2.1.1-r1";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/swri_console-release/archive/release/kilted/swri_console/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "17912390ad313e1c0b6d5fad649a7e2efc90eb174fd069babadd4595613d482c";
+    url = "https://github.com/ros2-gbp/swri_console-release/archive/release/kilted/swri_console/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "44a4d1cad8fba1028b42deb3c18a1fe7f85a0d8019a5b1f3fca7c1af8f9f0e5b";
   };
 
   buildType = "ament_cmake";

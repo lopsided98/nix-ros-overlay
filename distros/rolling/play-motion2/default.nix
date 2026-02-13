@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-index-cpp, ament-lint-auto, ament-lint-common, backward-ros, control-msgs, controller-interface, controller-manager, controller-manager-msgs, hardware-interface, joint-state-broadcaster, joint-trajectory-controller, launch, launch-ros, launch-testing-ament-cmake, lifecycle-msgs, moveit-ros-planning-interface, play-motion2-msgs, pluginlib, rclcpp, rclcpp-action, rclcpp-components, rclcpp-lifecycle, realtime-tools, robot-state-publisher, sensor-msgs, std-msgs, trajectory-msgs, xacro }:
 buildRosPackage {
   pname = "ros-rolling-play-motion2";
-  version = "1.8.0-r1";
+  version = "1.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/rolling/play_motion2/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "fd1c5151bb795552309ec4a596435a514ec0b018a84acc4f96c4ce9c26af184e";
+    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/rolling/play_motion2/1.8.3-1.tar.gz";
+    name = "1.8.3-1.tar.gz";
+    sha256 = "61951bdc84a4b1aa01f7fb2a8c0431188d1ce357f1626fe1643c51e8cf5b25c1";
   };
 
   buildType = "ament_cmake";

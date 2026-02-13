@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, launch, launch-param-builder, launch-ros, srdfdom }:
 buildRosPackage {
   pname = "ros-kilted-moveit-configs-utils";
-  version = "2.14.1-r1";
+  version = "2.14.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_configs_utils/2.14.1-1.tar.gz";
-    name = "2.14.1-1.tar.gz";
-    sha256 = "6e53f91940cf09b549af1d275a57ab1022dda1af7e0d046b7b90776d07871e9b";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/kilted/moveit_configs_utils/2.14.3-1.tar.gz";
+    name = "2.14.3-1.tar.gz";
+    sha256 = "faed729fba9d72208940962f2fda73531c1a832c7b23ba384dfddf9b4dd60ca9";
   };
 
   buildType = "ament_python";

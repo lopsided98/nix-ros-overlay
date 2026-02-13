@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-core-generators, rosidl-core-runtime }:
 buildRosPackage {
   pname = "ros-kilted-builtin-interfaces";
-  version = "2.3.0-r2";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/kilted/builtin_interfaces/2.3.0-2.tar.gz";
-    name = "2.3.0-2.tar.gz";
-    sha256 = "c019bd6ce5f87e278bfd04973e5d6bc90efdbb37f20f09a6e22f5e5252a3ad63";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/kilted/builtin_interfaces/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "917c53afaf6e2452e205367e1d93682a89030897c1f661e749854281f73d03fe";
   };
 
   buildType = "ament_cmake";

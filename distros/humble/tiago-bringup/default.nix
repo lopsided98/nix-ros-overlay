@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-index-python, ament-lint-auto, ament-lint-common, diagnostic-aggregator, geometry-msgs, joy-linux, joy-teleop, launch-pal, play-motion2, play-motion2-cli, teleop-tools-msgs, tiago-controller-configuration, tiago-description, twist-mux, twist-mux-msgs }:
 buildRosPackage {
   pname = "ros-humble-tiago-bringup";
-  version = "4.22.0-r1";
+  version = "4.24.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_robot-release/archive/release/humble/tiago_bringup/4.22.0-1.tar.gz";
-    name = "4.22.0-1.tar.gz";
-    sha256 = "bab0649df2e5e7a6eed4e0d75b050d0b72c24310956d082848607b0fd36b35b5";
+    url = "https://github.com/pal-gbp/tiago_robot-release/archive/release/humble/tiago_bringup/4.24.1-1.tar.gz";
+    name = "4.24.1-1.tar.gz";
+    sha256 = "4d4f2bc5fc13c4b4374a28ae77b4e74b66a859cb9e6c803bc1b6c4b05ddde86b";
   };
 
   buildType = "ament_cmake";

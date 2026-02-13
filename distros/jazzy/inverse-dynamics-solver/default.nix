@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, pluginlib, python, python3Packages, rclcpp, rosbag2-cpp, rosbag2-storage, rosbag2-storage-default-plugins, sensor-msgs, urdf }:
 buildRosPackage {
   pname = "ros-jazzy-inverse-dynamics-solver";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/inverse_dynamics_solver-release/archive/release/jazzy/inverse_dynamics_solver/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "d2f8059e1a36ebce0cc1954975d818c88aed2c0ef3ad629eb5e5123e09a2ecfb";
+    url = "https://github.com/ros2-gbp/inverse_dynamics_solver-release/archive/release/jazzy/inverse_dynamics_solver/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "79b4d743a1e6636ad15e0ada092663322f333bed140606e11d26a634b94b35e7";
   };
 
   buildType = "ament_cmake";

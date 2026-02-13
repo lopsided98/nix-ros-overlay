@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-lint-auto, builtin-interfaces, python-cmake-module, rclcpp, rclcpp-lifecycle, rclpy, rcutils, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-message-filters";
-  version = "4.11.10-r1";
+  version = "4.11.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/jazzy/message_filters/4.11.10-1.tar.gz";
-    name = "4.11.10-1.tar.gz";
-    sha256 = "c1fd5d3d68dda7f1dcfc0c8e0ec5b31712fe21d37c62ccea15a3aabe13597db4";
+    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/jazzy/message_filters/4.11.11-1.tar.gz";
+    name = "4.11.11-1.tar.gz";
+    sha256 = "1747a3d8081c972ef6c9c0bd83340515ceac52f6bcbecbaf978acea366087634";
   };
 
   buildType = "ament_cmake";

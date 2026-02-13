@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-play-motion2-msgs";
-  version = "1.8.0-r1";
+  version = "1.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/kilted/play_motion2_msgs/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "094502a23f40c64c21671817880adb948c2eb1993868f48934fa369244f5cc87";
+    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/kilted/play_motion2_msgs/1.8.3-1.tar.gz";
+    name = "1.8.3-1.tar.gz";
+    sha256 = "095ab2bef1cb0a09f7383abdb9e8a7114b492d7b9b82d1ae529fdc8e4c11281f";
   };
 
   buildType = "ament_cmake";
