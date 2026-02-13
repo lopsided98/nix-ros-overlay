@@ -337,17 +337,19 @@ in with lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.ros-environment ];
   });
 
-  # Update from 1 to 2 for Qt6 patch because of python >= 3.13
   python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
-    ...
-  }: rec {
-    version = "2.4.1";
-    src = self.fetchFromGitHub {
-      owner = "ros-visualization";
-      repo = "python_qt_binding";
-      tag = version;
-      hash = "sha256-19YCjbOcFTjiZk7SaQFVtiQG/QAwzuLTVccNUdP2tA4=";
-    };
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch {
+        url = "https://github.com/ros-visualization/python_qt_binding/commit/e78372fd63eda527c9fad5fcdab8ca31eb3f36d2.patch";
+        hash = "sha256-8+58ggPUJmEQIS9C4RzT4PhK1pT9ms98nppn3ZA8AEo=";
+      })
+      (self.fetchpatch {
+        url = "https://github.com/ros-visualization/python_qt_binding/commit/ee4d43bcdb0c5c5d40f81dea3de6185298ab34a7.patch";
+        hash = "sha256-+n7wqQ9jDybwxVeUEjOQSQJh7nnU8JXv5DNCoK/5Sm4=";
+      })
+    ];
   });
 
   qml6-ros2-plugin = rosSuper.qml6-ros2-plugin.overrideAttrs ({
