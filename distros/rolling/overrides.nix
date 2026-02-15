@@ -265,6 +265,44 @@ in {
     fetchgitArgs.hash = "sha256-b02OFUx0BxUA6HN6IaacSg1t3RP4o7NND7X0U635W8U=";
   };
 
+  # Switch to Qt6
+  python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
+    patches ? [], propagatedBuildInputs ? [], ...
+  }: {
+    patches = patches ++ [
+      # ref. https://github.com/ros-visualization/python_qt_binding/pull/143
+      (self.fetchpatch {
+        name = "support-qt6.patch";
+        url = "https://github.com/ros-visualization/python_qt_binding/commit/fa854d325ad4fa5f6e788d70b3ba9ccf9ee5c80f.patch";
+        hash = "sha256-P/xScO83zRL7qtqRzLiHkQtCpYdcxOaXwWj/83GhFpk=";
+      })
+      (self.fetchpatch {
+        name = "make-linters-happy.patch";
+        url = "https://github.com/ros-visualization/python_qt_binding/commit/bd88c0d5d51add58e329c40bba20a7b04c3df063.patch";
+        hash = "sha256-1YuTIUGDmgFZtz/1LoRIkayH9M84H5rs8QqhW9SnNAQ=";
+      })
+      (self.fetchpatch {
+        name = "fixes.patch";
+        url = "https://github.com/ros-visualization/python_qt_binding/commit/d710e1afb2ac0effed1e8d6ab90eee53354366bb.patch";
+        hash = "sha256-+ou08BZCIhRMDi9GMyAOLmdoGJNZaqLpA7nMszZOFgg=";
+      })
+    ];
+    propagatedBuildInputs = propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
+      pyside6
+      pyqt6-sip
+    ]);
+
+    dontWrapQtApps = true;
+
+    setupHook = self.writeText "python-qt-binding-setup-hook" ''
+        _pythonQtBindingPreFixupHook() {
+          # Prevent /build RPATH references
+          rm -rf devel/lib
+        }
+        preFixupHooks+=(_pythonQtBindingPreFixupHook)
+      '';
+  });
+
   rosidlcpp-generator-core = rosSuper.rosidlcpp-generator-core.override { fmt = self.fmt_9; };
   rosidlcpp-generator-cpp = rosSuper.rosidlcpp-generator-cpp.override { fmt = self.fmt_9; };
   rosidlcpp-generator-py = rosSuper.rosidlcpp-generator-py.override { fmt = self.fmt_9; };
