@@ -272,6 +272,12 @@ in {
   rosidlcpp-typesupport-fastrtps-c = rosSuper.rosidlcpp-typesupport-fastrtps-c.override { fmt = self.fmt_9; };
   rosidlcpp-typesupport-fastrtps-cpp = rosSuper.rosidlcpp-typesupport-fastrtps-cpp.override { fmt = self.fmt_9; };
 
+  rqt-robot-monitor = rosSuper.rqt-robot-monitor.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
+  });
+
   # Use rtabmap derivation from nixpkgs, but with the source from ROS.
   rtabmap = self.rtabmap.overrideAttrs ({
     propagatedBuildInputs ? [], ...
