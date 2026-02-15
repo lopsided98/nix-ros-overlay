@@ -302,6 +302,16 @@ in {
     hash = "sha256-TyFt3d78GidhDGD17KgjAaZl/qvAcGJP8lmu4EOxpYg=";
   };
 
+  turtlesim = rosSuper.turtlesim.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    dontWrapQtApps = false;
+    nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+    postFixup = ''
+        wrapQtApp "$out/lib/turtlesim/turtlesim_node"
+      '';
+  });
+
   urdfdom = rosSuper.urdfdom.overrideAttrs ({
     patches ? [], ...
   }: {

@@ -393,6 +393,16 @@ in with lib; {
     sha256 = "1255n51y1bjry97n4w60mgz6b9h14flfrxb01ihjf6pwvvfns8ag";
   };
 
+  turtlesim = rosSuper.turtlesim.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    dontWrapQtApps = false;
+    nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+    postFixup = ''
+        wrapQtApp "$out/lib/turtlesim/turtlesim_node"
+      '';
+  });
+
   urdfdom = rosSuper.urdfdom.overrideAttrs ({
     patches ? [], ...
   }: {
