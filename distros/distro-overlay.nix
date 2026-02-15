@@ -365,16 +365,6 @@ let
 
     # TODO: Remove once onetbb appears in the locked nixpkgs version.
     onetbb = self.tbb_2022;
-
-    turtlesim = rosSuper.turtlesim.overrideAttrs ({
-      nativeBuildInputs ? [], ...
-    }: {
-      dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
-      postFixup = ''
-        wrapQtApp "$out/lib/turtlesim/turtlesim_node"
-      '';
-    });
   } // (mrptOverrides rosSelf rosSuper);
 
   otherSplices = {
