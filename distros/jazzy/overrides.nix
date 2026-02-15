@@ -100,7 +100,15 @@ in {
 
   gz-fuel-tools-vendor = lib.patchGzAmentVendorGit rosSuper.gz-fuel-tools-vendor { };
 
-  gz-gui-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-gui-vendor { }).overrideAttrs ({
+  gz-gui-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-gui-vendor {
+    patchesFor.gz_gui_vendor = [
+      # Fix compatibility with protobuf v30 (cpp 6.30.0)
+      (self.fetchpatch2 {
+        url = "https://github.com/gazebosim/gz-gui/commit/8db77b5d0bdc4e87dbc17383d4e15dd8e95a2ccc.patch";
+        hash = "sha256-5Pb3dPAcJJ8Esd5wmD0vhfJjfTQeZpBk9yMDbF1QLZc=";
+      })
+    ];
+  }).overrideAttrs ({
     postInstall ? "", ...
   }: {
     # "RPATH of binary libGrid3D.so contains a forbidden reference to
@@ -114,7 +122,15 @@ in {
 
   gz-math-vendor = lib.patchGzAmentVendorGit rosSuper.gz-math-vendor { };
 
-  gz-msgs-vendor = lib.patchGzAmentVendorGit rosSuper.gz-msgs-vendor { };
+  gz-msgs-vendor = lib.patchGzAmentVendorGit rosSuper.gz-msgs-vendor {
+    patchesFor.gz_msgs_vendor = [
+      # Fix compatibility with protobuf v30 (cpp 6.30.0)
+      (self.fetchpatch2 {
+        url = "https://github.com/gazebosim/gz-msgs/commit/ebdd05f6d51c990876085bcc9db9f79df59d375a.patch";
+        hash = "sha256-EkonVJ7Q3XJvXnqkhYWxNrknnEOFpNvjwcnyc1bQHDE=";
+      })
+    ];
+  };
 
   gz-ogre-next-vendor = (lib.patchAmentVendorGit rosSuper.gz-ogre-next-vendor { }).overrideAttrs({ ... }: {
     dontFixCmake = true;
