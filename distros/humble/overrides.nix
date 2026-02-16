@@ -476,6 +476,15 @@ in with lib; {
     ];
   });
 
+  webots-ros2-driver = rosSuper.webots-ros2-driver.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail 'find_package(Python 3.10 EXACT' 'find_package(Python 3.10'
+    '';
+  });
+
   zenoh-cpp-vendor = (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {
     # Patch the build.rs script to be able to build internal
     # opaque-types crate without network access.
