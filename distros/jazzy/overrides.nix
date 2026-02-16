@@ -255,6 +255,28 @@ in {
     NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
   });
 
+  nav2-mppi-controller = rosSuper.nav2-mppi-controller.override {
+    xtensor = (self.xtensor.override {
+      xtl = self.xtl.overrideAttrs (finalAttrs: previousAttrs: {
+        version = "0.7.7";
+        src = self.fetchFromGitHub {
+          owner = "xtensor-stack";
+          repo = "xtl";
+          rev = finalAttrs.version;
+          hash = "sha256-f8qYh8ibC/ToHsUv3OF1ujzt3fUe7kW9cNpGyLqsgqw=";
+        };
+      });
+    }).overrideAttrs (finalAttrs: previousAttrs: {
+      version = "0.25.0";
+      src = self.fetchFromGitHub {
+        owner = "xtensor-stack";
+        repo = "xtensor";
+        tag = finalAttrs.version;
+        hash = "sha256-hVfdtYcJ6mzqj0AUu6QF9aVKQGYKd45RngY6UN3yOH5=";
+      };
+    });
+  };
+
   nav2-rviz-plugins = rosSuper.nav2-rviz-plugins.overrideAttrs({
     patches ? [], ...
   }: {
