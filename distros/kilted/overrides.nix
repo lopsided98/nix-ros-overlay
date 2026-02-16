@@ -353,6 +353,15 @@ in {
     nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
   });
 
+  webots-ros2-driver = rosSuper.webots-ros2-driver.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt\
+        --replace-fail 'find_package(Python 3.12 EXACT' 'find_package(Python 3.12'
+    '';
+  });
+
   zenoh-cpp-vendor = (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {
     # Patch the build.rs script to be able to build internal
     # opaque-types crate without network access.
