@@ -180,6 +180,19 @@ in {
     ];
   });
 
+  lttngpy = rosSuper.lttngpy.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = [
+      # fix compile error
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/ros2_tracing/commit/e175cde407a2da7fab2a75890cdb9d0e626cc73b.patch";
+        hash = "sha256-X4d82I0OP+noDC48ft2LDbzbzKwF2D2nbqv2YpBiwl8=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   # Fixes build error in autoware-lanelet2-extension:
   # Imported target "lanelet2_maps::lanelet2_maps" includes non-existent path
   #   "/nix/store/85v2zq13fh16v2zy6nyljz7f4caqvrab-ros-humble-lanelet2-maps-1.2.2-r1/include"
