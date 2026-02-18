@@ -207,6 +207,11 @@ rosSelf: rosSuper: with rosSelf.lib; {
       self.octomap
     ];
   });
+  rtabmap-viz = rosSuper.rtabmap-viz.overrideAttrs ({
+    nativeBuildInputs ? [],  ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+  });
   # See also overrides in ros2-overlay.nix.
   rviz2 = rosSuper.rviz2.overrideAttrs ({
     nativeBuildInputs ? [], qtWrapperArgs ? [], ...
