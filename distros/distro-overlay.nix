@@ -159,6 +159,16 @@ let
 
     # TODO: Remove once onetbb appears in the locked nixpkgs version.
     onetbb = self.tbb_2022;
+
+    rtabmap-viz = rosSuper.rtabmap-viz.overrideAttrs ({
+      postFixup ? "", ...
+    }: {
+      dontWrapQtApps = false;
+      postFixup = postFixup + ''
+        wrapQtApp "$out/lib/rtabmap_viz/rtabmap_viz"
+      '';
+    });
+
   } // (mrptOverrides rosSelf rosSuper);
 
   otherSplices = {
