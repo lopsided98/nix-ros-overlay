@@ -21,10 +21,22 @@ with rosPackages.${rosDistro};
           gz-launch-vendor
         ];
       })
+    ] ++ lib.optionals (rosDistro == "rolling") [
+      # this is for the shellhook portion
+      qt6.wrapQtAppsHook
+      makeWrapper
     ];
     # Gazebo is currently broken on Wayland
     # https://gazebosim.org/docs/ionic/troubleshooting/#wayland-issues
     shellHook = ''
       unset QT_QPA_PLATFORM
+    '' + lib.optionalString (rosDistro == "rolling") ''
+      # Add Qt-related environment variables.
+      # https://discourse.nixos.org/t/python-qt-woes/11808/10
+      setQtEnvironment=$(mktemp)
+      random=$(openssl rand -base64 20 | sed "s/[^a-zA-Z0-9]//g")
+      makeWrapper "$(type -p sh)" "$setQtEnvironment" "''${qtWrapperArgs[@]}" --argv0 "$random"
+      sed "/$random/d" -i "$setQtEnvironment"
+      source "$setQtEnvironment"
     '';
   }
