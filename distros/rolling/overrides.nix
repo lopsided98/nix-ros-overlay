@@ -111,26 +111,25 @@ in {
 
   gz-cmake-vendor = lib.patchAmentVendorGit rosSuper.gz-cmake-vendor { };
 
-  gz-common-vendor = (lib.patchAmentVendorGit rosSuper.gz-common-vendor { }).overrideAttrs ({
-    nativeBuildInputs ? [], ...
-  }: {
-    # https://github.com/gazebo-release/gz_common_vendor/pull/2
-    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+  freeimage = null; # Get rid of freeimage
+  ogre1_9 = null; # We want Gazebo to use gz-gz-ogre-next-vendor
+
+  gz-common-vendor = (lib.patchAmentVendorGit rosSuper.gz-common-vendor {
+    patchesFor.gz_common_vendor = [
+      (self.fetchpatch2 {
+        # Replace FreeImage dependency with stb (#725)
+        url = "https://github.com/gazebosim/gz-common/commit/15de7e6dbea90f5b19a0e70ce4704183e17fb6b7.patch";
+        hash = "sha256-2UVZQmLnfgQt2kfDv618kMBnkLYwn3qQgVRF5QNd8oo=";
+        excludes = ["tutorials/install.md"];
+      })
+    ];
   });
 
   gz-dartsim-vendor = lib.patchAmentVendorGit rosSuper.gz-dartsim-vendor { };
 
   gz-fuel-tools-vendor = lib.patchAmentVendorGit rosSuper.gz-fuel-tools-vendor { };
 
-  gz-gui-vendor = (lib.patchAmentVendorGit rosSuper.gz-gui-vendor { }).overrideAttrs ({
-    postInstall ? "", ...
-  }: {
-    # "RPATH of binary libGrid3D.so contains a forbidden reference to
-    # /build/" (see https://github.com/gazebosim/gz-gui/issues/627).
-    postInstall = postInstall + ''
-      ${self.patchelf}/bin/patchelf --remove-rpath $out/lib64/gz-gui-9/plugins/libGrid3D.so
-    '';
-  });
+  gz-gui-vendor = lib.patchAmentVendorGit rosSuper.gz-gui-vendor { };
 
   gz-launch-vendor = lib.patchAmentVendorGit rosSuper.gz-launch-vendor { };
 
@@ -138,9 +137,33 @@ in {
 
   gz-msgs-vendor = lib.patchAmentVendorGit rosSuper.gz-msgs-vendor { };
 
-  gz-ogre-next-vendor = (lib.patchAmentVendorGit rosSuper.gz-ogre-next-vendor { }).overrideAttrs({ ... }: {
+  gz-ogre-next-vendor = (lib.patchAmentVendorGit rosSuper.gz-ogre-next-vendor {
+    patchesFor.gz_ogre_next_vendor = [
+      (self.fetchpatch2 {
+        # Add simple implementation for STBIImageCodec::magicNumberToFileExt()
+        url = "https://github.com/OGRECave/ogre-next/commit/98c9095c6e288fceb59ccb3504d9127d88eb1b51.patch";
+        hash = "sha256-n4TVB7j0CgUGm4NWGS2WoKeOqzon8VLOPjnDX3DMcZM=";
+      })
+      (self.fetchpatch2 {
+        # Fix loading of images in STBICodec
+        url = "https://github.com/OGRECave/ogre-next/commit/37d4876eb71c70b9eb3464e5b72c6e6d6be03232.patch";
+        hash = "sha256-U84MU2ORhEThJ/rqfSkOhyAEgDEHJiaVuWIyeKLpwZw=";
+      })
+      (self.fetchpatch2 {
+        # Handle row padding correctly for 1, 2 and 4-channel images in STBICodec
+        url = "https://github.com/OGRECave/ogre-next/commit/96a3bb016b2c9b4f9cca9df1a65d619220e21d78.patch";
+        hash = "sha256-gJjlpkp3qhthF+6TbGLuToGPvOngqZrgE5sBucbvL4g=";
+      })
+    ];
+  }).overrideAttrs(({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail 'CMAKE_ARGS' 'CMAKE_ARGS -DOGRE_CONFIG_ENABLE_STBI:BOOL=ON'
+    '';
     dontFixCmake = true;
-  });
+  }));
 
   gz-physics-vendor = lib.patchAmentVendorGit rosSuper.gz-physics-vendor { };
 
@@ -163,11 +186,10 @@ in {
     qtWrapperArgs ? [],
     postFixup ? "", ...
   }: {
-    nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
+    nativeBuildInputs = nativeBuildInputs ++ [ self.qt6.wrapQtAppsHook ];
     propagatedNativeBuildInputs = propagatedNativeBuildInputs ++ [
-      self.qt5.qtquickcontrols2
-      self.qt5.qtgraphicaleffects
-      self.pkg-config
+      self.qt6.qtbase
+      self.qt6.qtdeclarative
     ];
     qtWrapperArgs = qtWrapperArgs ++ [
       # Gazebo is currently broken on Wayland
