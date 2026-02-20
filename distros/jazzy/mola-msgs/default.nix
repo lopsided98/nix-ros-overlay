@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, mrpt-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-mola-msgs";
-  version = "2.4.0-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_msgs/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "ffbbc1f9b59a614b3785e6d6a51e6723759e4444023e38bb971eee5e7bb4b39c";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_msgs/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "8696212739c0a307e71e4d488c5cbee64206b3b25d5963057a933bf89bb40c19";
   };
 
   buildType = "ament_cmake";

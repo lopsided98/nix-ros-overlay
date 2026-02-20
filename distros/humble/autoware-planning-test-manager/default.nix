@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-component-interface-specs, autoware-lint-common, autoware-motion-utils, autoware-planning-msgs, autoware-test-utils, nav-msgs, rclcpp, tf2-msgs, tf2-ros, unique-identifier-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-humble-autoware-planning-test-manager";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_planning_test_manager/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "f099a0e1c38cf3a56763f817b6938d922a40ecc880e92345203d50fcb18c527d";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_planning_test_manager/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "8bec46fb91d92ce5e676a2a529ff9e0109f259f57123877116cbbf4d5b30636a";
   };
 
   buildType = "ament_cmake";

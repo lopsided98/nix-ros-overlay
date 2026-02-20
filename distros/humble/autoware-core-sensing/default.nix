@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-vehicle-velocity-converter }:
 buildRosPackage {
   pname = "ros-humble-autoware-core-sensing";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_core_sensing/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "9bec35f6e55542ec1aac5d794b8039082645732a994045e6da2cde53b11a9a89";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_core_sensing/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "9ffe369ceaa3805fabb439b6c77b9ab1bdfba4beee7bac638af4040f17974022";
   };
 
   buildType = "ament_cmake";

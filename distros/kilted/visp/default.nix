@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bzip2, cmake, doxygen, eigen, libjpeg, liblapack, libpng, libv4l, libxml2, opencv, xorg }:
 buildRosPackage {
   pname = "ros-kilted-visp";
-  version = "3.5.0-r4";
+  version = "3.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/visp-release/archive/release/kilted/visp/3.5.0-4.tar.gz";
-    name = "3.5.0-4.tar.gz";
-    sha256 = "8d3248500b252cd33356e0e3e385ac7b997ca5652454e6294a178604baff0c56";
+    url = "https://github.com/ros2-gbp/visp-release/archive/release/kilted/visp/3.7.0-2.tar.gz";
+    name = "3.7.0-2.tar.gz";
+    sha256 = "74c8399d2f77673153c856af5fd70868b601b7b461dd6fc191b9ae845e608473";
   };
 
   buildType = "cmake";

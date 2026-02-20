@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, diagnostic-msgs, geometry-msgs, nav-msgs, sensor-msgs, shape-msgs, std-msgs, std-srvs, stereo-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-common-interfaces";
-  version = "4.9.0-r1";
+  version = "4.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/common_interfaces/4.9.0-1.tar.gz";
-    name = "4.9.0-1.tar.gz";
-    sha256 = "790a1182309eda2175194b2dbd4e75fbcb772c1d9eb5a60373204991521b766a";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/common_interfaces/4.9.1-1.tar.gz";
+    name = "4.9.1-1.tar.gz";
+    sha256 = "9e7f5efe3abe79f1b64dde1d436eefe71073bdd9a11bdd138c6d7f59e2f59915";
   };
 
   buildType = "ament_cmake";

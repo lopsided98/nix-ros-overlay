@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-signal-processing, geometry-msgs, nav-msgs, rclcpp, rclcpp-components, tf2 }:
 buildRosPackage {
   pname = "ros-humble-autoware-twist2accel";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_twist2accel/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "d318d826bb50256d7eb6f1c4732b9b806fdb6b7a22e491bce2919e00e51e48ee";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_twist2accel/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "10e769926e31727e67aa0e0822e96949fadfef415c6adc881ddb1bb862fe6b3d";
   };
 
   buildType = "ament_cmake";

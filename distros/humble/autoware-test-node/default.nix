@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, autoware-cmake, autoware-node, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-humble-autoware-test-node";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_test_node/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "75f7397819ed2024d8dc2d67d4e0ab6df54746a5162f7e3fd1f94f7651492aea";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_test_node/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "f21e9b21e7fef7e1ce8ec03b1c9a9c7d6c1fe48e937be336266e5385313ae33a";
   };
 
   buildType = "ament_cmake";

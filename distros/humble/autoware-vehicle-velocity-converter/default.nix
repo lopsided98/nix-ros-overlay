@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-vehicle-msgs, geometry-msgs, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-humble-autoware-vehicle-velocity-converter";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_vehicle_velocity_converter/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "38aa15a0ab84934cee3e86f8804db351b62053c9171ec1c965298ceb70b72119";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_vehicle_velocity_converter/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "9e8ecd4e8514c8f96a75ddb78c7463266fc0ad44a317595f3ef4f09bb04a335f";
   };
 
   buildType = "ament_cmake";

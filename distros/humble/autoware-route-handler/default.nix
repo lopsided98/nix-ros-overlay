@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lanelet2-extension, autoware-lanelet2-utils, autoware-lint-common, autoware-map-msgs, autoware-planning-msgs, autoware-test-utils, autoware-utils-geometry, autoware-utils-math, geometry-msgs, rclcpp, rclcpp-components, tf2-ros, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-autoware-route-handler";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_route_handler/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "7aff4a4016c0197da36281fa1b557c4061777ae33e7fcbaf3332ee9f410e8a75";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_route_handler/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "0d9e292b006e3c51fb04649d92f159f0ec0f3288b1584255916f12ab22d60739";
   };
 
   buildType = "ament_cmake";

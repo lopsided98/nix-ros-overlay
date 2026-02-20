@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-internal-debug-msgs, autoware-lint-common, geometry-msgs, nav-msgs, rclcpp, rclcpp-components, tf2 }:
 buildRosPackage {
   pname = "ros-humble-autoware-stop-filter";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_stop_filter/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "207647f67d2b87553792cf507179457266d5ba702be401dd23c410ab0cdd91d3";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_stop_filter/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "ab04e30916684ccbe7866c1b05825ffc82a3dabd9087a12c9879f1a5d1bf0225";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, eigen, message-filters, pcl, pcl-msgs, rclcpp, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-pcl-conversions";
-  version = "2.7.3-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/kilted/pcl_conversions/2.7.3-1.tar.gz";
-    name = "2.7.3-1.tar.gz";
-    sha256 = "fa28b4fbe7779eed9b9bea4059787ff6d9014a15e9fc45a57d13be8ae95540a2";
+    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/kilted/pcl_conversions/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "0b326d84d8615c8c9bb3571f39404586632c7146fdf024ed967efc973592b9ce";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Provides conversions from PCL data types and ROS message types";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

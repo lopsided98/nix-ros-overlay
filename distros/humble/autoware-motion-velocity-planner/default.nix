@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-internal-debug-msgs, autoware-internal-planning-msgs, autoware-lint-common, autoware-map-msgs, autoware-motion-utils, autoware-motion-velocity-planner-common, autoware-perception-msgs, autoware-planning-factor-interface, autoware-planning-msgs, autoware-planning-test-manager, autoware-utils-debug, autoware-utils-geometry, autoware-utils-logging, autoware-utils-pcl, autoware-utils-rclcpp, autoware-utils-system, autoware-velocity-smoother, boost, eigen, eigen3-cmake-module, geometry-msgs, grid-map-core, pcl-conversions, pluginlib, rclcpp, rclcpp-components, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-motion-velocity-planner";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_motion_velocity_planner/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "676564529b5a0431485d0d85d65b9e4691ca9dc2257d7f8d344c8ccd992247bc";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_motion_velocity_planner/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "2154e4b1a66baf5170e708fdb9371e434281d323ad6badcfe9c6ea73457b4ca9";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-utils-geometry, eigen, geometry-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-interpolation";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_interpolation/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "e31ac28df3209eca798f646664135d21738f0913ee9e85f3a215600fed362d0f";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_interpolation/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "124a7a01ef3723e47d133baaf461b3dc7940fbc74a27c2806995d0c632ef6eba";
   };
 
   buildType = "ament_cmake";

@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-mypy, ament-pep257, python3Packages, rclpy, ros-testing, ros2cli, test-msgs }:
 buildRosPackage {
   pname = "ros-kilted-sros2";
-  version = "0.15.4-r1";
+  version = "0.15.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sros2-release/archive/release/kilted/sros2/0.15.4-1.tar.gz";
-    name = "0.15.4-1.tar.gz";
-    sha256 = "5c9e85d32d351e7f49b16b1a65d1b05909830ce4f5b77b90ad077c7a218fac00";
+    url = "https://github.com/ros2-gbp/sros2-release/archive/release/kilted/sros2/0.15.5-1.tar.gz";
+    name = "0.15.5-1.tar.gz";
+    sha256 = "d574e9bb51ea2888e00de7e234a6af060eceae8ce8319d8f7caa969ad1aa9d8c";
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-mypy ament-pep257 python3Packages.pytest ros-testing test-msgs ];
+  checkInputs = [ ament-copyright ament-flake8 ament-mypy ament-pep257 python3Packages.pytest python3Packages.pytest-timeout ros-testing test-msgs ];
   propagatedBuildInputs = [ ament-index-python python3Packages.argcomplete python3Packages.cryptography python3Packages.lxml rclpy ros2cli ];
 
   meta = {

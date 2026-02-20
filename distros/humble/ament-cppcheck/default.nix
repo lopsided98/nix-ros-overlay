@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cppcheck }:
 buildRosPackage {
   pname = "ros-humble-ament-cppcheck";
-  version = "0.12.14-r1";
+  version = "0.12.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_cppcheck/0.12.14-1.tar.gz";
-    name = "0.12.14-1.tar.gz";
-    sha256 = "1b936575677a2535a8bc7f311fd3adea4ed2677d7024690985464923147ad0b4";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_cppcheck/0.12.15-1.tar.gz";
+    name = "0.12.15-1.tar.gz";
+    sha256 = "da6f659a3eeaad3408ca4960baef759c501861c82297d2aa5526bdb63ada7b3d";
   };
 
   buildType = "ament_python";

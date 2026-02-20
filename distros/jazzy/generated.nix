@@ -1568,6 +1568,10 @@ self: super: {
 
  lifecycle-py = self.callPackage ./lifecycle-py {};
 
+ lightning-rrt = self.callPackage ./lightning-rrt {};
+
+ lightning-rrt-interfaces = self.callPackage ./lightning-rrt-interfaces {};
+
  linux-isolate-process = self.callPackage ./linux-isolate-process {};
 
  live555-vendor = self.callPackage ./live555-vendor {};

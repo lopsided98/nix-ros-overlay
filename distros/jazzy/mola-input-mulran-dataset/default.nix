@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-jazzy-mola-input-mulran-dataset";
-  version = "2.4.0-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_input_mulran_dataset/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "0d24c7a89cc6578dca4d80bea0ee59e26dc6e1319c14a0cd7127c7e0d0731573";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_input_mulran_dataset/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "226103191f1f57e299d7c5f07d4b8b39a4dafd53d2d313ca81d0a7b83e94af06";
   };
 
   buildType = "cmake";

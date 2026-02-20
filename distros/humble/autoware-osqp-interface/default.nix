@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, eigen, osqp-vendor, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-humble-autoware-osqp-interface";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_osqp_interface/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "0041207f2dae534bbf11744740d8175ead2d3b977d22aed63f8226345dba45bb";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_osqp_interface/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "53847cdfdbfba03f33eefefc436df0a520f31c5ba877fef7c16bda2d1f9a2862";
   };
 
   buildType = "ament_cmake";

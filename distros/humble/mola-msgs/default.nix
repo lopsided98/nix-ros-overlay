@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, mrpt-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-mola-msgs";
-  version = "2.4.0-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_msgs/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "c44cf6676a14575bab1fb3567c35aaaab56a8e55d4576e35c6cba446bc3f096c";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_msgs/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "9431489e020f5192f36ce046e25ba91290f1fb79130fccb55720fda02aa01890";
   };
 
   buildType = "ament_cmake";

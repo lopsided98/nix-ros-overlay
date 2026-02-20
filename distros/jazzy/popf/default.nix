@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, bison, cbc, clp, flex, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-popf";
-  version = "0.0.17-r1";
+  version = "0.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/popf-release/archive/release/jazzy/popf/0.0.17-1.tar.gz";
-    name = "0.0.17-1.tar.gz";
-    sha256 = "acaa5e22a2ca01cbafda367b28c1c106f3deeb5e7a615985aae6856194d4dd58";
+    url = "https://github.com/ros2-gbp/popf-release/archive/release/jazzy/popf/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
+    sha256 = "9f7e34588e454f5ce6e3396eda7b87a61980b4c400019fb32abcc3be73e8e7d9";
   };
 
   buildType = "ament_cmake";

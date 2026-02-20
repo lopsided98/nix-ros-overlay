@@ -334,6 +334,8 @@ self: super: {
 
  autoware-auto-msgs = self.callPackage ./autoware-auto-msgs {};
 
+ autoware-awsim-sensor-kit-description = self.callPackage ./autoware-awsim-sensor-kit-description {};
+
  autoware-behavior-velocity-planner = self.callPackage ./autoware-behavior-velocity-planner {};
 
  autoware-behavior-velocity-planner-common = self.callPackage ./autoware-behavior-velocity-planner-common {};
@@ -414,6 +416,8 @@ self: super: {
 
  autoware-localization-msgs = self.callPackage ./autoware-localization-msgs {};
 
+ autoware-localization-rviz-plugin = self.callPackage ./autoware-localization-rviz-plugin {};
+
  autoware-localization-util = self.callPackage ./autoware-localization-util {};
 
  autoware-map-height-fitter = self.callPackage ./autoware-map-height-fitter {};
@@ -425,6 +429,8 @@ self: super: {
  autoware-map-projection-loader = self.callPackage ./autoware-map-projection-loader {};
 
  autoware-marker-utils = self.callPackage ./autoware-marker-utils {};
+
+ autoware-mission-details-overlay-rviz-plugin = self.callPackage ./autoware-mission-details-overlay-rviz-plugin {};
 
  autoware-mission-planner = self.callPackage ./autoware-mission-planner {};
 
@@ -448,15 +454,21 @@ self: super: {
 
  autoware-osqp-interface = self.callPackage ./autoware-osqp-interface {};
 
+ autoware-overlay-rviz-plugin = self.callPackage ./autoware-overlay-rviz-plugin {};
+
  autoware-path-generator = self.callPackage ./autoware-path-generator {};
 
  autoware-perception-msgs = self.callPackage ./autoware-perception-msgs {};
 
  autoware-perception-objects-converter = self.callPackage ./autoware-perception-objects-converter {};
 
+ autoware-perception-rviz-plugin = self.callPackage ./autoware-perception-rviz-plugin {};
+
  autoware-planning-factor-interface = self.callPackage ./autoware-planning-factor-interface {};
 
  autoware-planning-msgs = self.callPackage ./autoware-planning-msgs {};
+
+ autoware-planning-rviz-plugin = self.callPackage ./autoware-planning-rviz-plugin {};
 
  autoware-planning-test-manager = self.callPackage ./autoware-planning-test-manager {};
 
@@ -468,9 +480,15 @@ self: super: {
 
  autoware-pyplot = self.callPackage ./autoware-pyplot {};
 
+ autoware-qos-utils = self.callPackage ./autoware-qos-utils {};
+
  autoware-qp-interface = self.callPackage ./autoware-qp-interface {};
 
  autoware-route-handler = self.callPackage ./autoware-route-handler {};
+
+ autoware-sample-sensor-kit-description = self.callPackage ./autoware-sample-sensor-kit-description {};
+
+ autoware-sample-vehicle-description = self.callPackage ./autoware-sample-vehicle-description {};
 
  autoware-sensing-msgs = self.callPackage ./autoware-sensing-msgs {};
 
@@ -479,6 +497,8 @@ self: super: {
  autoware-simple-pure-pursuit = self.callPackage ./autoware-simple-pure-pursuit {};
 
  autoware-stop-filter = self.callPackage ./autoware-stop-filter {};
+
+ autoware-string-stamped-rviz-plugin = self.callPackage ./autoware-string-stamped-rviz-plugin {};
 
  autoware-system-msgs = self.callPackage ./autoware-system-msgs {};
 

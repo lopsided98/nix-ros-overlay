@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, automatika-ros-sugar, kompass-interfaces, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-kompass";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kompass-release/archive/release/jazzy/kompass/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "f525a51a598d769094ccda5f600453a98fd0858c13010a22e15eb5801c4bd717";
+    url = "https://github.com/ros2-gbp/kompass-release/archive/release/jazzy/kompass/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "2f6d6ebc588a044e4b5c73bc6eba84568ac54fb3259c9fffa78c5d93cd8150b3";
   };
 
   buildType = "ament_python";

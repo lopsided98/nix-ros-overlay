@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-pose-list, mola-test-datasets, mp2p-icp, mrpt-libmaps, mrpt-libobs, mrpt-libslam }:
 buildRosPackage {
   pname = "ros-kilted-mola-relocalization";
-  version = "2.4.0-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_relocalization/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "552756a2cd9c41c804e964b9b00e328bd24061d8447d5bec4a2d2a09a7f363f8";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_relocalization/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "94a46cd8d8acf8c31b3d021803e91f4a208e89b39d439626683b49ccb25f9727";
   };
 
   buildType = "cmake";

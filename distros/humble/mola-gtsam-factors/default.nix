@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gtsam, mola-common, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-humble-mola-gtsam-factors";
-  version = "2.0.1-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/humble/mola_gtsam_factors/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "7364ce064bfc19dc35ae49ffac56e6f61e0eea5886f885d1a00d4a807a17a92b";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/humble/mola_gtsam_factors/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "0853e1a3cb7bb68ba1b37d48a0201d2bd41dece0f293d0bca5dc34d09a7983c9";
   };
 
   buildType = "cmake";
