@@ -275,6 +275,9 @@ in {
     '';
   });
 
+  # Fix "libfl.so.2: undefined reference to `yylex'"
+  popf = rosSuper.popf.override { flex = self.flex_2_5_35; };
+
   rosidlcpp-generator-core = rosSuper.rosidlcpp-generator-core.override { fmt = self.fmt_9; };
   rosidlcpp-generator-cpp = rosSuper.rosidlcpp-generator-cpp.override { fmt = self.fmt_9; };
   rosidlcpp-generator-py = rosSuper.rosidlcpp-generator-py.override { fmt = self.fmt_9; };
