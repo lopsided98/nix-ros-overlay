@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-vehicle-info-utils }:
 buildRosPackage {
   pname = "ros-humble-autoware-global-parameter-loader";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_global_parameter_loader/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "7785ee4ee3abc6f358b5254556c508423b2837ee86a7f1a83d7276253b4c663d";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_global_parameter_loader/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "70a723b7f93e07d4a03e1522ac61ab808ab82c762336f68b1c60b2362dba3010";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-cppcheck, ament-index-cpp, ament-lint-auto, autoware-cmake, diagnostic-msgs, geometry-msgs, rcl-yaml-param-parser, rclcpp, std-msgs, tf2, tf2-eigen, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-localization-util";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_localization_util/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "a923955a3140ac2535a7d840156b7e0cd6beea121cfc445ac3a25ef8a7e7e075";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_localization_util/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "a01185b5c987f9984276834b5b6047770f572f0be055cc4acfac456ddb2955ca";
   };
 
   buildType = "ament_cmake";

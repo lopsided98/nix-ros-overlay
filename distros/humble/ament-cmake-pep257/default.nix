@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-pep257 }:
 buildRosPackage {
   pname = "ros-humble-ament-cmake-pep257";
-  version = "0.12.14-r1";
+  version = "0.12.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_cmake_pep257/0.12.14-1.tar.gz";
-    name = "0.12.14-1.tar.gz";
-    sha256 = "a62f8fe8a5a41911aebbf0c98624bad3ca22d89d66fe77a6a433f0d46d28bbcc";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/humble/ament_cmake_pep257/0.12.15-1.tar.gz";
+    name = "0.12.15-1.tar.gz";
+    sha256 = "1cb923b951518e764de1c64a0642d04d70c5d92a268dbc24a7f5b030808d30cf";
   };
 
   buildType = "ament_cmake";

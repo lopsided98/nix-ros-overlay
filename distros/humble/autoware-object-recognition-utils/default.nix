@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-interpolation, autoware-lint-common, autoware-perception-msgs, autoware-utils-geometry, autoware-utils-math, boost, geometry-msgs, pcl-conversions, pcl-ros, rclcpp, sensor-msgs, std-msgs, tf2, tf2-eigen }:
 buildRosPackage {
   pname = "ros-humble-autoware-object-recognition-utils";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_object_recognition_utils/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "5355a240793636ede254eb49017365f473e34a44d6e2e76bb5655d1248b7748b";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_object_recognition_utils/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "560737393daf3b53d8236996f481e6d2cb2df081104db55daca133f853b1a71c";
   };
 
   buildType = "ament_cmake";

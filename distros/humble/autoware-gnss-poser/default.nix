@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-geography-utils, autoware-internal-debug-msgs, autoware-lint-common, autoware-map-msgs, autoware-sensing-msgs, boost, geographic-msgs, geographiclib, geometry-msgs, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-autoware-gnss-poser";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_gnss_poser/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "0a6309b458e8457a95987a52facc4f6bfda651fc104942ab855507298cb2b269";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_gnss_poser/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "507cb17d84051edaf7761a467bbf82eab97e724a81b637b98013656d3ede6bb9";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, geometry-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-tf2-eigen";
-  version = "0.25.18-r1";
+  version = "0.25.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2_eigen/0.25.18-1.tar.gz";
-    name = "0.25.18-1.tar.gz";
-    sha256 = "0c040a9034eceab455725099347a2d96d7dcdd04b3136547170dd33f7729bff9";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2_eigen/0.25.19-1.tar.gz";
+    name = "0.25.19-1.tar.gz";
+    sha256 = "aa4022c59f893b42280646d51c5dc1ba3e7e498336fd8800763bc491ce08f80e";
   };
 
   buildType = "ament_cmake";

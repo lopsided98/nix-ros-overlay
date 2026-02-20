@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, diagnostic-updater, geometry-msgs, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, rclcpp, std-msgs, twist-mux-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-twist-mux";
-  version = "4.4.0-r2";
+  version = "4.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/twist_mux-release/archive/release/kilted/twist_mux/4.4.0-2.tar.gz";
-    name = "4.4.0-2.tar.gz";
-    sha256 = "a8cb8121479a40c6c9b2dfc16e74d18ffe4839c5bc0db9af0e5b2de97274b64c";
+    url = "https://github.com/ros2-gbp/twist_mux-release/archive/release/kilted/twist_mux/4.5.0-1.tar.gz";
+    name = "4.5.0-1.tar.gz";
+    sha256 = "8515da4b4412e04bc989dfe9056d39f7ddd2368cdba92941318652753a0c06dc";
   };
 
   buildType = "ament_cmake";

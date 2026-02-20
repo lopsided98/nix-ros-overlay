@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, boost, geometry-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-autoware-signal-processing";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_signal_processing/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "2785e7070b0e0fab0bda24294678cbb530d6f08b3d3e50f77c05f895ec641159";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_signal_processing/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "394819afd0245a28817287b2012f2eb5a8253ed5cc41033e8f0e60d2afc5acf4";
   };
 
   buildType = "ament_cmake";

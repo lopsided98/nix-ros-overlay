@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-downsample-filters, autoware-ekf-localizer, autoware-lint-common, autoware-ndt-scan-matcher, autoware-pose-initializer, autoware-stop-filter, autoware-twist2accel }:
 buildRosPackage {
   pname = "ros-humble-autoware-core-localization";
-  version = "1.4.0-r1";
+  version = "1.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_core_localization/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "4908cdfb0681c79e71aadb8bf4f579fd36f000eb808820fbb1712c59175a7b0c";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_core_localization/1.7.0-2.tar.gz";
+    name = "1.7.0-2.tar.gz";
+    sha256 = "554216665cc0dd8a0e9cd14e2dc22b3c9419dafad3b323ebf6b63895664c5c3f";
   };
 
   buildType = "ament_cmake";

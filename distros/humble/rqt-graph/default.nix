@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, python-qt-binding, qt-dotgraph, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-humble-rqt-graph";
-  version = "1.3.1-r1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/humble/rqt_graph/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "f494b322fd821deff89cd59d96061358c9b1ac109a58ab64695baef5079d89ae";
+    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/humble/rqt_graph/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "ed9fb428956decacdf59b97a014ab6b0ec94df5506116a4af62b473e17c90800";
   };
 
   buildType = "ament_python";

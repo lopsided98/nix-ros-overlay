@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-libgui, mrpt-libmaps, mrpt-libopengl }:
 buildRosPackage {
   pname = "ros-humble-mola-viz";
-  version = "2.4.0-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_viz/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "12b2d722e55f9719fd8e8beff9b5a43aca85637eaba916bdbf7b8863d6397dcd";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_viz/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "7121066ab3f178c717d54783ccd8db7d810552c8212c6cbc630ae3324c2e4535";
   };
 
   buildType = "cmake";
