@@ -5,6 +5,23 @@ rosSelf: rosSuper: let
   inherit (rosSelf) lib;
 in with lib; {
 
+  autoware-trajectory = rosSuper.autoware-trajectory.overrideAttrs ({
+    buildInputs ? [], postPatch ? "", ...
+  }: {
+    # https://github.com/autowarefoundation/autoware_core/issues/855
+    buildInputs = buildInputs ++ [
+      rosSelf.autoware-motion-utils
+      rosSelf.autoware-pyplot
+      rosSelf.autoware-test-utils
+      rosSelf.pybind11-vendor
+    ];
+    # https://github.com/autowarefoundation/autoware_core/pull/853
+    postPatch = postPatch + ''
+      substituteInPlace include/autoware/trajectory/interpolator/detail/interpolator_common_interface.hpp \
+        --replace-fail '#include <vector>' "#include <vector>"$'\n'"#include <algorithm>"
+    '';
+  });
+
   autoware-utils-debug = rosSuper.autoware-utils-debug.overrideAttrs({
     cmakeFlags ? [], ...
   }: {
