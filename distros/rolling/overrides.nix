@@ -112,7 +112,6 @@ in {
   gz-cmake-vendor = lib.patchAmentVendorGit rosSuper.gz-cmake-vendor { };
 
   freeimage = null; # Get rid of freeimage
-  ogre1_9 = null; # We want Gazebo to use gz-gz-ogre-next-vendor
 
   gz-common-vendor = (lib.patchAmentVendorGit rosSuper.gz-common-vendor {
     patchesFor.gz_common_vendor = [

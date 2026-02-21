@@ -65,7 +65,8 @@ self: super: with self.lib; {
     utils = self.ignition.utils1;
   };
 
-  ogre1_9 = self.callPackage ./ogre/1.9.nix { };
+  # Needs unsecure freeimage. We want Gazebo to use gz-gz-ogre-next-vendor
+  ogre1_9 = null;
 
   openni2 = self.callPackage ./openni2 { };
 
