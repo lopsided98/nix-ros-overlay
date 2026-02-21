@@ -124,10 +124,6 @@ in {
 
   gz-msgs-vendor = lib.patchGzAmentVendorGit rosSuper.gz-msgs-vendor { };
 
-  gz-ogre-next-vendor = (lib.patchAmentVendorGit rosSuper.gz-ogre-next-vendor { }).overrideAttrs({ ... }: {
-    dontFixCmake = true;
-  });
-
   gz-physics-vendor = lib.patchGzAmentVendorGit rosSuper.gz-physics-vendor { };
 
   gz-plugin-vendor = lib.patchGzAmentVendorGit rosSuper.gz-plugin-vendor { };
