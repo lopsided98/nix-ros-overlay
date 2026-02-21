@@ -87,6 +87,8 @@ let
     # but have a better packaging in nixpkgs, so use it instead
     inherit (self.python3Packages) coal eigenpy hpp-fcl pinocchio crocoddyl ;
 
+    freeimage = null; # Get rid of freeimage
+
     gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({ ... }:{
       setupHook = ./gazebo-ros-setup-hook.sh;
     });
@@ -169,7 +171,37 @@ let
       '';
     });
 
-  } // (mrptOverrides rosSelf rosSuper);
+  } // (mrptOverrides rosSelf rosSuper)
+  // self.lib.optionalAttrs (rosSuper ? gz-ogre-next-vendor) {
+    gz-ogre-next-vendor = (rosSelf.lib.patchAmentVendorGit rosSuper.gz-ogre-next-vendor {
+      # https://github.com/OGRECave/ogre-next/pull/562
+      patchesFor.gz_ogre_next_vendor = [
+        (self.fetchpatch2 {
+          # Add simple implementation for STBIImageCodec::magicNumberToFileExt()
+          url = "https://github.com/OGRECave/ogre-next/commit/98c9095c6e288fceb59ccb3504d9127d88eb1b51.patch";
+          hash = "sha256-n4TVB7j0CgUGm4NWGS2WoKeOqzon8VLOPjnDX3DMcZM=";
+        })
+        (self.fetchpatch2 {
+          # Fix loading of images in STBICodec
+          url = "https://github.com/OGRECave/ogre-next/commit/37d4876eb71c70b9eb3464e5b72c6e6d6be03232.patch";
+          hash = "sha256-U84MU2ORhEThJ/rqfSkOhyAEgDEHJiaVuWIyeKLpwZw=";
+        })
+        (self.fetchpatch2 {
+          # Handle row padding correctly for 1, 2 and 4-channel images in STBICodec
+          url = "https://github.com/OGRECave/ogre-next/commit/96a3bb016b2c9b4f9cca9df1a65d619220e21d78.patch";
+          hash = "sha256-gJjlpkp3qhthF+6TbGLuToGPvOngqZrgE5sBucbvL4g=";
+        })
+      ];
+    }).overrideAttrs(({
+      postPatch ? "", ...
+    }: {
+      postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail 'CMAKE_ARGS' 'CMAKE_ARGS -DOGRE_CONFIG_ENABLE_STBI:BOOL=ON'
+    '';
+      dontFixCmake = true;
+    }));
+  };
 
   otherSplices = {
     selfBuildBuild = self.pkgsBuildBuild.rosPackages.${distro};
