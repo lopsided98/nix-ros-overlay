@@ -89,7 +89,15 @@ in {
 
   gz-cmake-vendor = lib.patchGzAmentVendorGit rosSuper.gz-cmake-vendor { };
 
-  gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor { }).overrideAttrs ({
+  gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor {
+    patchesFor.gz_common_vendor = [
+      (self.fetchpatch2 {
+        # Replace FreeImage dependency with stb (gazebosim#725 updated for Jazzy)
+        url = "https://github.com/wentasah/gz-common/commit/9fbe891b3a8f30ff11e8367b1aecea5b0ef7521e.patch";
+        hash = "sha256-TqGMvFLR81P3AJm+GK/Ot1i+EDGGE/E0HqLtpcKDZt4=";
+      })
+    ];
+  }).overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
     # https://github.com/gazebo-release/gz_common_vendor/pull/2
