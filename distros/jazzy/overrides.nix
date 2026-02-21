@@ -118,7 +118,15 @@ in {
     '';
   });
 
-  gz-launch-vendor = lib.patchGzAmentVendorGit rosSuper.gz-launch-vendor { };
+  gz-launch-vendor = lib.patchGzAmentVendorGit rosSuper.gz-launch-vendor {
+    patchesFor.gz_launch_vendor = [
+      # Fix compatibility with protobuf v30 (cpp 6.30.0)
+      (self.fetchpatch2 {
+        url = "https://github.com/gazebosim/gz-launch/commit/246d180753c758445b7f1c11b3ae3b1840a65ae4.patch";
+        hash = "sha256-ySv5YF9LacOW2owxoW9CvLYQ9LklYlD4LM39OqpgApQ=";
+      })
+    ];
+  };
 
   gz-math-vendor = lib.patchGzAmentVendorGit rosSuper.gz-math-vendor { };
 
