@@ -1,14 +1,13 @@
-{ lib, buildPythonApplication, buildPythonPackage, makeWrapper, fetchPypi
+{ lib, stdenv, buildPythonApplication, buildPythonPackage, makeWrapper, fetchPypi
 , python, distlib, empy_3, pytest, pytest-cov, pytest-repeat
 , pytest-rerunfailures, setuptools, pytestCheckHook, flake8, flake8-blind-except
 , flake8-docstrings, flake8-import-order, pep8-naming, pylint
 }:
 
 let
-  withExtensions = extensions: buildPythonApplication {
+  withExtensions = extensions: stdenv.mkDerivation {
     pname = "colcon";
     inherit (package) version;
-    format = "other";
 
     dontUnpack = true;
     dontBuild = true;
