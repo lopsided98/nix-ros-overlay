@@ -332,6 +332,14 @@ in {
   rosidlcpp-typesupport-fastrtps-c = rosSuper.rosidlcpp-typesupport-fastrtps-c.override { fmt = self.fmt_9; };
   rosidlcpp-typesupport-fastrtps-cpp = rosSuper.rosidlcpp-typesupport-fastrtps-cpp.override { fmt = self.fmt_9; };
 
+  # rqt is broken in rolling due to unfinished qt6 migration.
+  # TODO: Remove this once rqt works in rolling.
+  ros-gz-sim-demos = rosSuper.ros-gz-sim-demos.override {
+    rqt-image-view = null;
+    rqt-plot = null;
+    rqt-topic  = null;
+  };
+
   rqt-robot-monitor = rosSuper.rqt-robot-monitor.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
