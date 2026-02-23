@@ -97,11 +97,15 @@ in {
 
   gz-cmake-vendor = lib.patchGzAmentVendorGit rosSuper.gz-cmake-vendor { };
 
-  gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor { }).overrideAttrs ({
-    nativeBuildInputs ? [], ...
-  }: {
-    # https://github.com/gazebo-release/gz_common_vendor/pull/2
-    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+  gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor {
+    patchesFor.gz_common_vendor = [
+      (self.fetchpatch2 {
+        # Replace FreeImage dependency with stb (#725 updated for Kilted)
+        url = "https://github.com/gazebosim/gz-common/commit/7a6bb5bf196c2e3f515fda5c3982190641be36c9.patch";
+        hash = "sha256-h1wbOim4vuM0jV3DaH0LnJoy/TuvEwENRXF5GIw9B1M=";
+        excludes = ["tutorials/install.md"];
+      })
+    ];
   });
 
   gz-dartsim-vendor = lib.patchAmentVendorGit rosSuper.gz-dartsim-vendor { };
