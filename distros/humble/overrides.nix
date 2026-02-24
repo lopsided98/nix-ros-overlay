@@ -231,7 +231,14 @@ in with lib; {
   libyaml-vendor = patchExternalProjectGit rosSuper.libyaml-vendor {
     url = "https://github.com/yaml/libyaml.git";
     rev = "2c891fc7a770e8ba2fec34fc6b545c672beb37e6";
-    fetchgitArgs.hash = "sha256-S7PnooyfyAsIiRAlEPGYkgkVACGaBaCItuqOwrq2+qM=";
+    fetchgitArgs = {
+      hash = "sha256-bqJPibk65os0nEywPVq9BP4t9GIQAMUOLRjHshDy58U=";
+      postFetch = ''
+        substituteInPlace $out/CMakeLists.txt \
+          --replace-fail 'cmake_minimum_required(VERSION 3.0)' \
+                         'cmake_minimum_required(VERSION 3.5)'
+      '';
+    };
   };
 
   mcap-vendor = patchExternalProjectGit (patchVendorUrl rosSuper.mcap-vendor {
