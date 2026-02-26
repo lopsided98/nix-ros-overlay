@@ -1,0 +1,723 @@
+From ca56e5d54360f9e0e543658849235443c934ee2e Mon Sep 17 00:00:00 2001
+From: Michal Sojka <michal.sojka@cvut.cz>
+Date: Tue, 24 Feb 2026 19:55:56 +0100
+Subject: [PATCH 1/7] Replace io_service with io_context to be compatible with
+ boost >=1.70
+
+---
+ src/cpp/rtps/transport/TCPAcceptor.cpp        | 12 ++---
+ src/cpp/rtps/transport/TCPAcceptor.h          |  6 +--
+ src/cpp/rtps/transport/TCPAcceptorBasic.cpp   | 12 ++---
+ src/cpp/rtps/transport/TCPAcceptorBasic.h     |  8 +--
+ src/cpp/rtps/transport/TCPAcceptorSecure.cpp  | 10 ++--
+ src/cpp/rtps/transport/TCPAcceptorSecure.h    |  8 +--
+ .../transport/TCPChannelResourceBasic.cpp     |  4 +-
+ .../rtps/transport/TCPChannelResourceBasic.h  |  6 +--
+ .../transport/TCPChannelResourceSecure.cpp    |  4 +-
+ .../rtps/transport/TCPChannelResourceSecure.h | 10 ++--
+ .../rtps/transport/TCPTransportInterface.cpp  | 52 +++++++++----------
+ .../rtps/transport/TCPTransportInterface.h    |  8 +--
+ src/cpp/rtps/transport/UDPChannelResource.h   |  8 +--
+ .../rtps/transport/UDPTransportInterface.cpp  |  4 +-
+ .../rtps/transport/UDPTransportInterface.h    |  2 +-
+ src/cpp/rtps/transport/UDPv4Transport.cpp     |  2 +-
+ src/cpp/rtps/transport/UDPv6Transport.cpp     |  2 +-
+ src/cpp/utils/IPLocator.cpp                   |  2 +-
+ test/blackbox/common/UDPMessageSender.hpp     |  4 +-
+ test/unittest/transport/TCPv4Tests.cpp        | 20 +++----
+ test/unittest/transport/TCPv6Tests.cpp        |  6 +--
+ 21 files changed, 95 insertions(+), 95 deletions(-)
+
+diff --git a/src/cpp/rtps/transport/TCPAcceptor.cpp b/src/cpp/rtps/transport/TCPAcceptor.cpp
+index 5c6d31596..951b25648 100644
+--- a/src/cpp/rtps/transport/TCPAcceptor.cpp
++++ b/src/cpp/rtps/transport/TCPAcceptor.cpp
+@@ -24,25 +24,25 @@ namespace rtps {
+ using IPLocator = fastrtps::rtps::IPLocator;
+ 
+ TCPAcceptor::TCPAcceptor(
+-        asio::io_service& io_service,
++        asio::io_context& io_context,
+         TCPTransportInterface* parent,
+         const Locator& locator)
+-    : acceptor_(io_service, parent->generate_endpoint(IPLocator::getPhysicalPort(locator)))
++    : acceptor_(io_context, parent->generate_endpoint(IPLocator::getPhysicalPort(locator)))
+     , locator_(locator)
+-    , io_service_(&io_service)
++    , io_context_(&io_context)
+ {
+     locator_.port = acceptor_.local_endpoint().port();
+     endpoint_ = asio::ip::tcp::endpoint(parent->generate_protocol(), IPLocator::getPhysicalPort(locator_));
+ }
+ 
+ TCPAcceptor::TCPAcceptor(
+-        asio::io_service& io_service,
++        asio::io_context& io_context,
+         const std::string& interface,
+         const Locator& locator)
+-    : acceptor_(io_service, asio::ip::tcp::endpoint(asio::ip::address_v4::from_string(interface),
++    : acceptor_(io_context, asio::ip::tcp::endpoint(asio::ip::address_v4::from_string(interface),
+             IPLocator::getPhysicalPort(locator)))
+     , locator_(locator)
+-    , io_service_(&io_service)
++    , io_context_(&io_context)
+ {
+     locator_.port = acceptor_.local_endpoint().port();
+     endpoint_ = asio::ip::tcp::endpoint(asio::ip::address_v4::from_string(interface),
+diff --git a/src/cpp/rtps/transport/TCPAcceptor.h b/src/cpp/rtps/transport/TCPAcceptor.h
+index 8e6ae2e38..7657409ff 100644
+--- a/src/cpp/rtps/transport/TCPAcceptor.h
++++ b/src/cpp/rtps/transport/TCPAcceptor.h
+@@ -35,17 +35,17 @@ protected:
+     Locator locator_;
+     asio::ip::tcp::endpoint endpoint_;
+     std::vector<Locator> pending_out_locators_;
+-    asio::io_service* io_service_;
++    asio::io_context* io_context_;
+ 
+ public:
+ 
+     TCPAcceptor(
+-            asio::io_service& io_service,
++            asio::io_context& io_context,
+             TCPTransportInterface* parent,
+             const Locator& locator);
+ 
+     TCPAcceptor(
+-            asio::io_service& io_service,
++            asio::io_context& io_context,
+             const std::string& interface,
+             const Locator& locator);
+ 
+diff --git a/src/cpp/rtps/transport/TCPAcceptorBasic.cpp b/src/cpp/rtps/transport/TCPAcceptorBasic.cpp
+index dff8b3bbc..e48deef78 100644
+--- a/src/cpp/rtps/transport/TCPAcceptorBasic.cpp
++++ b/src/cpp/rtps/transport/TCPAcceptorBasic.cpp
+@@ -24,21 +24,21 @@ namespace rtps {
+ using IPLocator = fastrtps::rtps::IPLocator;
+ 
+ TCPAcceptorBasic::TCPAcceptorBasic(
+-        asio::io_service& io_service,
++        asio::io_context& io_context,
+         TCPTransportInterface* parent,
+         const Locator& locator)
+-    : TCPAcceptor(io_service, parent, locator)
+-    , socket_(*io_service_)
++    : TCPAcceptor(io_context, parent, locator)
++    , socket_(*io_context_)
+ {
+     endpoint_ = asio::ip::tcp::endpoint(parent->generate_protocol(), IPLocator::getPhysicalPort(locator_));
+ }
+ 
+ TCPAcceptorBasic::TCPAcceptorBasic(
+-        asio::io_service& io_service,
++        asio::io_context& io_context,
+         const std::string& interface,
+         const Locator& locator)
+-    : TCPAcceptor(io_service, interface, locator)
+-    , socket_(*io_service_)
++    : TCPAcceptor(io_context, interface, locator)
++    , socket_(*io_context_)
+ {
+     endpoint_ = asio::ip::tcp::endpoint(asio::ip::address_v4::from_string(interface),
+                     IPLocator::getPhysicalPort(locator_));
+diff --git a/src/cpp/rtps/transport/TCPAcceptorBasic.h b/src/cpp/rtps/transport/TCPAcceptorBasic.h
+index c997fdd8b..c806a27ef 100644
+--- a/src/cpp/rtps/transport/TCPAcceptorBasic.h
++++ b/src/cpp/rtps/transport/TCPAcceptorBasic.h
+@@ -31,23 +31,23 @@ public:
+ 
+     /**
+      * Constructor
+-     * @param io_service Reference to the ASIO service.
++     * @param io_context Reference to the ASIO service.
+      * @param parent Pointer to the transport that is going to manage the acceptor.
+      * @param locator Locator with the information about where to accept connections.
+      */
+     TCPAcceptorBasic(
+-            asio::io_service& io_service,
++            asio::io_context& io_context,
+             TCPTransportInterface* parent,
+             const Locator& locator);
+ 
+     /**
+      * Constructor
+-     * @param io_service Reference to the ASIO service.
++     * @param io_context Reference to the ASIO service.
+      * @param interface Network interface to bind the socket
+      * @param locator Locator with the information about where to accept connections.
+      */
+     TCPAcceptorBasic(
+-            asio::io_service& io_service,
++            asio::io_context& io_context,
+             const std::string& interface,
+             const Locator& locator);
+ 
+diff --git a/src/cpp/rtps/transport/TCPAcceptorSecure.cpp b/src/cpp/rtps/transport/TCPAcceptorSecure.cpp
+index e9b8fb8dc..9a30985dd 100644
+--- a/src/cpp/rtps/transport/TCPAcceptorSecure.cpp
++++ b/src/cpp/rtps/transport/TCPAcceptorSecure.cpp
+@@ -27,18 +27,18 @@ using Log = fastdds::dds::Log;
+ using namespace asio;
+ 
+ TCPAcceptorSecure::TCPAcceptorSecure(
+-        io_service& io_service,
++        io_context& io_context,
+         TCPTransportInterface* parent,
+         const Locator_t& locator)
+-    : TCPAcceptor(io_service, parent, locator)
++    : TCPAcceptor(io_context, parent, locator)
+ {
+ }
+ 
+ TCPAcceptorSecure::TCPAcceptorSecure(
+-        io_service& io_service,
++        io_context& io_context,
+         const std::string& interface,
+         const Locator_t& locator)
+-    : TCPAcceptor(io_service, interface, locator)
++    : TCPAcceptor(io_context, interface, locator)
+ {
+ }
+ 
+@@ -83,7 +83,7 @@ void TCPAcceptorSecure::accept(
+                 }
+             });
+ #else
+-        auto secure_socket = std::make_shared<asio::ssl::stream<asio::ip::tcp::socket>>(*io_service_, ssl_context);
++        auto secure_socket = std::make_shared<asio::ssl::stream<asio::ip::tcp::socket>>(*io_context_, ssl_context);
+ 
+         acceptor_.async_accept(secure_socket->lowest_layer(),
+                 [locator, parent, secure_socket](const std::error_code& error)
+diff --git a/src/cpp/rtps/transport/TCPAcceptorSecure.h b/src/cpp/rtps/transport/TCPAcceptorSecure.h
+index dc8d28d46..d79c50d08 100644
+--- a/src/cpp/rtps/transport/TCPAcceptorSecure.h
++++ b/src/cpp/rtps/transport/TCPAcceptorSecure.h
+@@ -34,23 +34,23 @@ public:
+ 
+     /**
+      * Constructor
+-     * @param io_service Reference to the ASIO service.
++     * @param io_context Reference to the ASIO service.
+      * @param parent Pointer to the transport that is going to manage the acceptor.
+      * @param locator Locator with the information about where to accept connections.
+      */
+     TCPAcceptorSecure(
+-            asio::io_service& io_service,
++            asio::io_context& io_context,
+             TCPTransportInterface* parent,
+             const Locator& locator);
+ 
+     /**
+      * Constructor
+-     * @param io_service Reference to the ASIO service.
++     * @param io_context Reference to the ASIO service.
+      * @param interface Network interface to bind the socket
+      * @param locator Locator with the information about where to accept connections.
+      */
+     TCPAcceptorSecure(
+-            asio::io_service& io_service,
++            asio::io_context& io_context,
+             const std::string& interface,
+             const Locator& locator);
+ 
+diff --git a/src/cpp/rtps/transport/TCPChannelResourceBasic.cpp b/src/cpp/rtps/transport/TCPChannelResourceBasic.cpp
+index 8d72d02e1..43b52eef2 100644
+--- a/src/cpp/rtps/transport/TCPChannelResourceBasic.cpp
++++ b/src/cpp/rtps/transport/TCPChannelResourceBasic.cpp
+@@ -33,7 +33,7 @@ using Log = fastdds::dds::Log;
+ 
+ TCPChannelResourceBasic::TCPChannelResourceBasic(
+         TCPTransportInterface* parent,
+-        asio::io_service& service,
++        asio::io_context& service,
+         const Locator& locator,
+         uint32_t maxMsgSize)
+     : TCPChannelResource(parent, locator, maxMsgSize)
+@@ -43,7 +43,7 @@ TCPChannelResourceBasic::TCPChannelResourceBasic(
+ 
+ TCPChannelResourceBasic::TCPChannelResourceBasic(
+         TCPTransportInterface* parent,
+-        asio::io_service& service,
++        asio::io_context& service,
+         std::shared_ptr<asio::ip::tcp::socket> socket,
+         uint32_t maxMsgSize)
+     : TCPChannelResource(parent, maxMsgSize)
+diff --git a/src/cpp/rtps/transport/TCPChannelResourceBasic.h b/src/cpp/rtps/transport/TCPChannelResourceBasic.h
+index 20928f0f4..120f066c4 100644
+--- a/src/cpp/rtps/transport/TCPChannelResourceBasic.h
++++ b/src/cpp/rtps/transport/TCPChannelResourceBasic.h
+@@ -25,7 +25,7 @@ namespace rtps {
+ 
+ class TCPChannelResourceBasic : public TCPChannelResource
+ {
+-    asio::io_service& service_;
++    asio::io_context& service_;
+ 
+     std::mutex send_mutex_;
+     std::shared_ptr<asio::ip::tcp::socket> socket_;
+@@ -35,14 +35,14 @@ public:
+     // Constructor called when trying to connect to a remote server
+     TCPChannelResourceBasic(
+             TCPTransportInterface* parent,
+-            asio::io_service& service,
++            asio::io_context& service,
+             const Locator& locator,
+             uint32_t maxMsgSize);
+ 
+     // Constructor called when local server accepted connection
+     TCPChannelResourceBasic(
+             TCPTransportInterface* parent,
+-            asio::io_service& service,
++            asio::io_context& service,
+             std::shared_ptr<asio::ip::tcp::socket> socket,
+             uint32_t maxMsgSize);
+ 
+diff --git a/src/cpp/rtps/transport/TCPChannelResourceSecure.cpp b/src/cpp/rtps/transport/TCPChannelResourceSecure.cpp
+index fd21de6c3..b7d825a29 100644
+--- a/src/cpp/rtps/transport/TCPChannelResourceSecure.cpp
++++ b/src/cpp/rtps/transport/TCPChannelResourceSecure.cpp
+@@ -33,7 +33,7 @@ using namespace asio;
+ 
+ TCPChannelResourceSecure::TCPChannelResourceSecure(
+         TCPTransportInterface* parent,
+-        asio::io_service& service,
++        asio::io_context& service,
+         asio::ssl::context& ssl_context,
+         const Locator_t& locator,
+         uint32_t maxMsgSize)
+@@ -47,7 +47,7 @@ TCPChannelResourceSecure::TCPChannelResourceSecure(
+ 
+ TCPChannelResourceSecure::TCPChannelResourceSecure(
+         TCPTransportInterface* parent,
+-        asio::io_service& service,
++        asio::io_context& service,
+         asio::ssl::context& ssl_context,
+         std::shared_ptr<asio::ssl::stream<asio::ip::tcp::socket>> socket,
+         uint32_t maxMsgSize)
+diff --git a/src/cpp/rtps/transport/TCPChannelResourceSecure.h b/src/cpp/rtps/transport/TCPChannelResourceSecure.h
+index 058699720..9fc4b1aea 100644
+--- a/src/cpp/rtps/transport/TCPChannelResourceSecure.h
++++ b/src/cpp/rtps/transport/TCPChannelResourceSecure.h
+@@ -33,7 +33,7 @@ public:
+     // Constructor called when trying to connect to a remote server (secure version)
+     TCPChannelResourceSecure(
+             TCPTransportInterface* parent,
+-            asio::io_service& service,
++            asio::io_context& service,
+             asio::ssl::context& ssl_context,
+             const Locator& locator,
+             uint32_t maxMsgSize);
+@@ -41,7 +41,7 @@ public:
+     // Constructor called when local server accepted connection (secure version)
+     TCPChannelResourceSecure(
+             TCPTransportInterface* parent,
+-            asio::io_service& service,
++            asio::io_context& service,
+             asio::ssl::context& ssl_context,
+             std::shared_ptr<asio::ssl::stream<asio::ip::tcp::socket>> socket,
+             uint32_t maxMsgSize);
+@@ -98,10 +98,10 @@ private:
+     TCPChannelResourceSecure& operator =(
+             const TCPChannelResource&) = delete;
+ 
+-    asio::io_service& service_;
++    asio::io_context& service_;
+     asio::ssl::context& ssl_context_;
+-    asio::io_service::strand strand_read_;
+-    asio::io_service::strand strand_write_;
++    asio::io_context::strand strand_read_;
++    asio::io_context::strand strand_write_;
+     std::shared_ptr<asio::ssl::stream<asio::ip::tcp::socket>> secure_socket_;
+ };
+ 
+diff --git a/src/cpp/rtps/transport/TCPTransportInterface.cpp b/src/cpp/rtps/transport/TCPTransportInterface.cpp
+index 55f8b2b79..6115b6a16 100644
+--- a/src/cpp/rtps/transport/TCPTransportInterface.cpp
++++ b/src/cpp/rtps/transport/TCPTransportInterface.cpp
+@@ -147,7 +147,7 @@ TCPTransportInterface::TCPTransportInterface(
+ #if TLS_FOUND
+     , ssl_context_(asio::ssl::context::sslv23)
+ #endif // if TLS_FOUND
+-    , keep_alive_event_(io_service_timers_)
++    , keep_alive_event_(io_context_timers_)
+ {
+ }
+ 
+@@ -161,11 +161,11 @@ void TCPTransportInterface::clean()
+     alive_.store(false);
+ 
+     keep_alive_event_.cancel();
+-    if (io_service_timers_thread_)
++    if (io_context_timers_thread_)
+     {
+-        io_service_timers_.stop();
+-        io_service_timers_thread_->join();
+-        io_service_timers_thread_ = nullptr;
++        io_context_timers_.stop();
++        io_context_timers_thread_->join();
++        io_context_timers_thread_ = nullptr;
+     }
+ 
+     {
+@@ -217,11 +217,11 @@ void TCPTransportInterface::clean()
+         initial_peer_local_locator_socket_.reset();
+     }
+ 
+-    if (io_service_thread_)
++    if (io_context_thread_)
+     {
+-        io_service_.stop();
+-        io_service_thread_->join();
+-        io_service_thread_ = nullptr;
++        io_context_.stop();
++        io_context_thread_->join();
++        io_context_thread_ = nullptr;
+     }
+ }
+ 
+@@ -309,7 +309,7 @@ uint16_t TCPTransportInterface::create_acceptor_socket(
+             if (configuration()->apply_security)
+             {
+                 std::shared_ptr<TCPAcceptorSecure> acceptor =
+-                        std::make_shared<TCPAcceptorSecure>(io_service_, this, locator);
++                        std::make_shared<TCPAcceptorSecure>(io_context_, this, locator);
+                 acceptors_[acceptor->locator()] = acceptor;
+                 acceptor->accept(this, ssl_context_);
+                 final_port = static_cast<uint16_t>(acceptor->locator().port);
+@@ -318,7 +318,7 @@ uint16_t TCPTransportInterface::create_acceptor_socket(
+ #endif // if TLS_FOUND
+             {
+                 std::shared_ptr<TCPAcceptorBasic> acceptor =
+-                        std::make_shared<TCPAcceptorBasic>(io_service_, this, locator);
++                        std::make_shared<TCPAcceptorBasic>(io_context_, this, locator);
+                 acceptors_[acceptor->locator()] = acceptor;
+                 acceptor->accept(this);
+                 final_port = static_cast<uint16_t>(acceptor->locator().port);
+@@ -342,7 +342,7 @@ uint16_t TCPTransportInterface::create_acceptor_socket(
+                 if (configuration()->apply_security)
+                 {
+                     std::shared_ptr<TCPAcceptorSecure> acceptor =
+-                            std::make_shared<TCPAcceptorSecure>(io_service_, sInterface, loc);
++                            std::make_shared<TCPAcceptorSecure>(io_context_, sInterface, loc);
+                     acceptors_[acceptor->locator()] = acceptor;
+                     acceptor->accept(this, ssl_context_);
+                     final_port = static_cast<uint16_t>(acceptor->locator().port);
+@@ -351,7 +351,7 @@ uint16_t TCPTransportInterface::create_acceptor_socket(
+ #endif // if TLS_FOUND
+                 {
+                     std::shared_ptr<TCPAcceptorBasic> acceptor =
+-                            std::make_shared<TCPAcceptorBasic>(io_service_, sInterface, loc);
++                            std::make_shared<TCPAcceptorBasic>(io_context_, sInterface, loc);
+                     acceptors_[acceptor->locator()] = acceptor;
+                     acceptor->accept(this);
+                     final_port = static_cast<uint16_t>(acceptor->locator().port);
+@@ -454,7 +454,7 @@ bool TCPTransportInterface::init(
+        This process ensures uniqueness in the server's channel resources mapping, which uses client locators as keys.
+        Although differing from the real client socket local port, provides a reliable mapping mechanism.
+      */
+-    initial_peer_local_locator_socket_ = std::unique_ptr<asio::ip::tcp::socket>(new asio::ip::tcp::socket(io_service_));
++    initial_peer_local_locator_socket_ = std::unique_ptr<asio::ip::tcp::socket>(new asio::ip::tcp::socket(io_context_));
+     initial_peer_local_locator_socket_->open(generate_protocol());
+ 
+     // Binding to port 0 delegates the port selection to the system.
+@@ -507,26 +507,26 @@ bool TCPTransportInterface::init(
+     auto ioServiceFunction = [&]()
+             {
+ #if ASIO_VERSION >= 101200
+-                asio::executor_work_guard<asio::io_service::executor_type> work(io_service_.get_executor());
++                asio::executor_work_guard<asio::io_context::executor_type> work(io_context_.get_executor());
+ #else
+-                io_service::work work(io_service_);
++                io_context::work work(io_context_);
+ #endif // if ASIO_VERSION >= 101200
+-                io_service_.run();
++                io_context_.run();
+             };
+-    io_service_thread_ = std::make_shared<std::thread>(ioServiceFunction);
++    io_context_thread_ = std::make_shared<std::thread>(ioServiceFunction);
+ 
+     if (0 < configuration()->keep_alive_frequency_ms)
+     {
+-        io_service_timers_thread_ = std::make_shared<std::thread>([&]()
++        io_context_timers_thread_ = std::make_shared<std::thread>([&]()
+                         {
+ 
+ #if ASIO_VERSION >= 101200
+-                            asio::executor_work_guard<asio::io_service::executor_type> work(io_service_timers_.
++                            asio::executor_work_guard<asio::io_context::executor_type> work(io_context_timers_.
+                                     get_executor());
+ #else
+-                            io_service::work work(io_service_timers_);
++                            io_context::work work(io_context_timers_);
+ #endif // if ASIO_VERSION >= 101200
+-                            io_service_timers_.run();
++                            io_context_timers_.run();
+                         });
+     }
+ 
+@@ -830,11 +830,11 @@ bool TCPTransportInterface::OpenOutputChannel(
+ #if TLS_FOUND
+                 (configuration()->apply_security) ?
+                 static_cast<TCPChannelResource*>(
+-                    new TCPChannelResourceSecure(this, io_service_, ssl_context_,
++                    new TCPChannelResourceSecure(this, io_context_, ssl_context_,
+                     physical_locator, configuration()->maxMessageSize)) :
+ #endif // if TLS_FOUND
+                 static_cast<TCPChannelResource*>(
+-                    new TCPChannelResourceBasic(this, io_service_, physical_locator,
++                    new TCPChannelResourceBasic(this, io_context_, physical_locator,
+                     configuration()->maxMessageSize))
+                 );
+ 
+@@ -1453,7 +1453,7 @@ void TCPTransportInterface::SocketAccepted(
+         {
+             // Always create a new channel, it might be replaced later in bind_socket()
+             std::shared_ptr<TCPChannelResource> channel(new TCPChannelResourceBasic(this,
+-                    io_service_, socket, configuration()->maxMessageSize));
++                    io_context_, socket, configuration()->maxMessageSize));
+ 
+             {
+                 std::unique_lock<std::mutex> unbound_lock(unbound_map_mutex_);
+@@ -1499,7 +1499,7 @@ void TCPTransportInterface::SecureSocketAccepted(
+         {
+             // Always create a new secure_channel, it might be replaced later in bind_socket()
+             std::shared_ptr<TCPChannelResource> secure_channel(new TCPChannelResourceSecure(this,
+-                    io_service_, ssl_context_, socket, configuration()->maxMessageSize));
++                    io_context_, ssl_context_, socket, configuration()->maxMessageSize));
+ 
+             {
+                 std::unique_lock<std::mutex> unbound_lock(unbound_map_mutex_);
+diff --git a/src/cpp/rtps/transport/TCPTransportInterface.h b/src/cpp/rtps/transport/TCPTransportInterface.h
+index 19bd8dbda..edb353406 100644
+--- a/src/cpp/rtps/transport/TCPTransportInterface.h
++++ b/src/cpp/rtps/transport/TCPTransportInterface.h
+@@ -74,8 +74,8 @@ class TCPTransportInterface : public TransportInterface
+ protected:
+ 
+     std::vector<fastrtps::rtps::IPFinder::info_IP> current_interfaces_;
+-    asio::io_service io_service_;
+-    asio::io_service io_service_timers_;
++    asio::io_context io_context_;
++    asio::io_context io_context_timers_;
+     std::unique_ptr<asio::ip::tcp::socket> initial_peer_local_locator_socket_;
+     uint16_t initial_peer_local_locator_port_;
+     /**
+@@ -95,8 +95,8 @@ protected:
+ #if TLS_FOUND
+     asio::ssl::context ssl_context_;
+ #endif // if TLS_FOUND
+-    std::shared_ptr<std::thread> io_service_thread_;
+-    std::shared_ptr<std::thread> io_service_timers_thread_;
++    std::shared_ptr<std::thread> io_context_thread_;
++    std::shared_ptr<std::thread> io_context_timers_thread_;
+     std::shared_ptr<RTCPMessageManager> rtcp_message_manager_;
+     std::mutex rtcp_message_manager_mutex_;
+     std::condition_variable rtcp_message_manager_cv_;
+diff --git a/src/cpp/rtps/transport/UDPChannelResource.h b/src/cpp/rtps/transport/UDPChannelResource.h
+index 146b164c3..e3a2aa6f9 100644
+--- a/src/cpp/rtps/transport/UDPChannelResource.h
++++ b/src/cpp/rtps/transport/UDPChannelResource.h
+@@ -51,9 +51,9 @@ inline eProsimaUDPSocket moveSocket(
+ }
+ 
+ inline eProsimaUDPSocket createUDPSocket(
+-        asio::io_service& io_service)
++        asio::io_context& io_context)
+ {
+-    return asio::ip::udp::socket(io_service);
++    return asio::ip::udp::socket(io_context);
+ }
+ 
+ inline eProsimaUDPSocket& getRefFromPtr(
+@@ -87,9 +87,9 @@ inline eProsimaUDPSocket moveSocket(
+ }
+ 
+ inline eProsimaUDPSocket createUDPSocket(
+-        asio::io_service& io_service)
++        asio::io_context& io_context)
+ {
+-    return std::make_shared<asio::ip::udp::socket>(io_service);
++    return std::make_shared<asio::ip::udp::socket>(io_context);
+ }
+ 
+ inline eProsimaUDPSocket getRefFromPtr(
+diff --git a/src/cpp/rtps/transport/UDPTransportInterface.cpp b/src/cpp/rtps/transport/UDPTransportInterface.cpp
+index f63f24f0f..67b6fa728 100644
+--- a/src/cpp/rtps/transport/UDPTransportInterface.cpp
++++ b/src/cpp/rtps/transport/UDPTransportInterface.cpp
+@@ -162,7 +162,7 @@ bool UDPTransportInterface::init(
+     get_ips(currentInterfaces);
+ 
+     asio::error_code ec;
+-    ip::udp::socket socket(io_service_);
++    ip::udp::socket socket(io_context_);
+     socket.open(generate_protocol(), ec);
+     if (!!ec)
+     {
+@@ -258,7 +258,7 @@ eProsimaUDPSocket UDPTransportInterface::OpenAndBindUnicastOutputSocket(
+         const ip::udp::endpoint& endpoint,
+         uint16_t& port)
+ {
+-    eProsimaUDPSocket socket = createUDPSocket(io_service_);
++    eProsimaUDPSocket socket = createUDPSocket(io_context_);
+     getSocketPtr(socket)->open(generate_protocol());
+     if (mSendBufferSize != 0)
+     {
+diff --git a/src/cpp/rtps/transport/UDPTransportInterface.h b/src/cpp/rtps/transport/UDPTransportInterface.h
+index 90d021b9f..29624d4b7 100644
+--- a/src/cpp/rtps/transport/UDPTransportInterface.h
++++ b/src/cpp/rtps/transport/UDPTransportInterface.h
+@@ -169,7 +169,7 @@ protected:
+     friend class UDPChannelResource;
+ 
+     // For UDPv6, the notion of channel corresponds to a port + direction tuple.
+-    asio::io_service io_service_;
++    asio::io_context io_context_;
+     std::vector<fastrtps::rtps::IPFinder::info_IP> currentInterfaces;
+ 
+     mutable std::recursive_mutex mInputMapMutex;
+diff --git a/src/cpp/rtps/transport/UDPv4Transport.cpp b/src/cpp/rtps/transport/UDPv4Transport.cpp
+index 63214acdf..d20fa6259 100644
+--- a/src/cpp/rtps/transport/UDPv4Transport.cpp
++++ b/src/cpp/rtps/transport/UDPv4Transport.cpp
+@@ -291,7 +291,7 @@ eProsimaUDPSocket UDPv4Transport::OpenAndBindInputSocket(
+         uint16_t port,
+         bool is_multicast)
+ {
+-    eProsimaUDPSocket socket = createUDPSocket(io_service_);
++    eProsimaUDPSocket socket = createUDPSocket(io_context_);
+     getSocketPtr(socket)->open(generate_protocol());
+     if (mReceiveBufferSize != 0)
+     {
+diff --git a/src/cpp/rtps/transport/UDPv6Transport.cpp b/src/cpp/rtps/transport/UDPv6Transport.cpp
+index 0815008af..2d663b374 100644
+--- a/src/cpp/rtps/transport/UDPv6Transport.cpp
++++ b/src/cpp/rtps/transport/UDPv6Transport.cpp
+@@ -295,7 +295,7 @@ eProsimaUDPSocket UDPv6Transport::OpenAndBindInputSocket(
+         uint16_t port,
+         bool is_multicast)
+ {
+-    eProsimaUDPSocket socket = createUDPSocket(io_service_);
++    eProsimaUDPSocket socket = createUDPSocket(io_context_);
+     getSocketPtr(socket)->open(generate_protocol());
+     if (mReceiveBufferSize != 0)
+     {
+diff --git a/src/cpp/utils/IPLocator.cpp b/src/cpp/utils/IPLocator.cpp
+index 6f84851e5..75b886d4e 100644
+--- a/src/cpp/utils/IPLocator.cpp
++++ b/src/cpp/utils/IPLocator.cpp
+@@ -1087,7 +1087,7 @@ std::pair<std::set<std::string>, std::set<std::string>> IPLocator::resolveNameDN
+     std::set<std::string> ipv6_results;
+ 
+     // Create an instance of io service
+-    asio::io_service ios;
++    asio::io_context ios;
+ 
+     //Create a query to make the DNS petition
+     asio::ip::tcp::resolver::query resolver_query(address_name, "", asio::ip::tcp::resolver::query::numeric_service);
+diff --git a/test/blackbox/common/UDPMessageSender.hpp b/test/blackbox/common/UDPMessageSender.hpp
+index 26c340c8d..f0f1d52cf 100644
+--- a/test/blackbox/common/UDPMessageSender.hpp
++++ b/test/blackbox/common/UDPMessageSender.hpp
+@@ -1,4 +1,4 @@
+-#include <asio/io_service.hpp>
++#include <asio/io_context.hpp>
+ #include <asio/ip/udp.hpp>
+ 
+ #include <fastdds/rtps/common/CDRMessage_t.h>
+@@ -9,7 +9,7 @@ using namespace eprosima::fastrtps::rtps;
+ 
+ struct UDPMessageSender
+ {
+-    asio::io_service service;
++    asio::io_context service;
+     asio::ip::udp::socket socket;
+ 
+     UDPMessageSender()
+diff --git a/test/unittest/transport/TCPv4Tests.cpp b/test/unittest/transport/TCPv4Tests.cpp
+index 2a2fceff4..e47963ded 100644
+--- a/test/unittest/transport/TCPv4Tests.cpp
++++ b/test/unittest/transport/TCPv4Tests.cpp
+@@ -1258,25 +1258,25 @@ TEST_F(TCPv4Tests, secure_non_blocking_send)
+     options |= asio::ssl::context::no_compression;
+     ssl_context.set_options(options);
+ 
+-    asio::io_service io_service;
++    asio::io_context io_context;
+     auto ioServiceFunction = [&]()
+             {
+ #if ASIO_VERSION >= 101200
+-                asio::executor_work_guard<asio::io_service::executor_type> work(io_service.get_executor());
++                asio::executor_work_guard<asio::io_context::executor_type> work(io_context.get_executor());
+ #else
+-                io_service::work work(io_service_);
++                io_context::work work(io_context_);
+ #endif // if ASIO_VERSION >= 101200
+-                io_service.run();
++                io_context.run();
+             };
+     std::thread ioServiceThread(ioServiceFunction);
+ 
+     // TCPChannelResourceSecure::connect() like connection
+-    asio::ip::tcp::resolver resolver(io_service);
++    asio::ip::tcp::resolver resolver(io_context);
+     auto endpoints = resolver.resolve(
+         IPLocator::ip_to_string(serverLoc),
+         std::to_string(IPLocator::getPhysicalPort(serverLoc)));
+ 
+-    auto secure_socket = std::make_shared<asio::ssl::stream<asio::ip::tcp::socket>>(io_service, ssl_context);
++    auto secure_socket = std::make_shared<asio::ssl::stream<asio::ip::tcp::socket>>(io_context, ssl_context);
+     asio::ssl::verify_mode vm = 0x00;
+     vm |= asio::ssl::verify_peer;
+     secure_socket->set_verify_mode(vm);
+@@ -1339,7 +1339,7 @@ TEST_F(TCPv4Tests, secure_non_blocking_send)
+     ASSERT_EQ(bytes_sent, 0u);
+ 
+     secure_socket->lowest_layer().close(ec);
+-    io_service.stop();
++    io_context.stop();
+     ioServiceThread.join();
+ }
+ #endif // ifndef _WIN32
+@@ -1806,13 +1806,13 @@ TEST_F(TCPv4Tests, non_blocking_send)
+     IPLocator::setLogicalPort(serverLoc, 7410);
+ 
+     // TCPChannelResourceBasic::connect() like connection
+-    asio::io_service io_service;
+-    asio::ip::tcp::resolver resolver(io_service);
++    asio::io_context io_context;
++    asio::ip::tcp::resolver resolver(io_context);
+     auto endpoints = resolver.resolve(
+         IPLocator::ip_to_string(serverLoc),
+         std::to_string(IPLocator::getPhysicalPort(serverLoc)));
+ 
+-    asio::ip::tcp::socket socket = asio::ip::tcp::socket (io_service);
++    asio::ip::tcp::socket socket = asio::ip::tcp::socket (io_context);
+     asio::async_connect(
+         socket,
+         endpoints,
+diff --git a/test/unittest/transport/TCPv6Tests.cpp b/test/unittest/transport/TCPv6Tests.cpp
+index be1a4f4b2..8f610d20a 100644
+--- a/test/unittest/transport/TCPv6Tests.cpp
++++ b/test/unittest/transport/TCPv6Tests.cpp
+@@ -343,13 +343,13 @@ TEST_F(TCPv6Tests, non_blocking_send)
+     IPLocator::setLogicalPort(serverLoc, 7610);
+ 
+     // TCPChannelResourceBasic::connect() like connection
+-    asio::io_service io_service;
+-    asio::ip::tcp::resolver resolver(io_service);
++    asio::io_context io_context;
++    asio::ip::tcp::resolver resolver(io_context);
+     auto endpoints = resolver.resolve(
+         IPLocator::ip_to_string(serverLoc),
+         std::to_string(IPLocator::getPhysicalPort(serverLoc)));
+ 
+-    asio::ip::tcp::socket socket = asio::ip::tcp::socket (io_service);
++    asio::ip::tcp::socket socket = asio::ip::tcp::socket (io_context);
+     asio::async_connect(
+         socket,
+         endpoints,
+-- 
+2.53.0
+

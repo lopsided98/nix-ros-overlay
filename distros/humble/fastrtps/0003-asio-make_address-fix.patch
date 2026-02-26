@@ -1,0 +1,360 @@
+From d75949c3cdfe4e05d1e6a2695358dbe8c57354a3 Mon Sep 17 00:00:00 2001
+From: Michal Sojka <michal.sojka@cvut.cz>
+Date: Tue, 24 Feb 2026 20:15:23 +0100
+Subject: [PATCH 3/7] asio make_address fix
+
+---
+ src/cpp/rtps/transport/TCPAcceptor.cpp        |  4 +--
+ src/cpp/rtps/transport/TCPAcceptorBasic.cpp   |  2 +-
+ src/cpp/rtps/transport/TCPv4Transport.cpp     |  8 +++---
+ src/cpp/rtps/transport/TCPv6Transport.cpp     |  6 ++---
+ src/cpp/rtps/transport/UDPv4Transport.cpp     | 26 +++++++++----------
+ src/cpp/rtps/transport/UDPv6Transport.cpp     | 16 ++++++------
+ .../rtps/transport/test_UDPv4Transport.cpp    |  2 +-
+ test/blackbox/common/UDPMessageSender.hpp     |  2 +-
+ test/unittest/transport/TCPv4Tests.cpp        |  4 +--
+ 9 files changed, 35 insertions(+), 35 deletions(-)
+
+diff --git a/src/cpp/rtps/transport/TCPAcceptor.cpp b/src/cpp/rtps/transport/TCPAcceptor.cpp
+index 951b25648..1ad95a283 100644
+--- a/src/cpp/rtps/transport/TCPAcceptor.cpp
++++ b/src/cpp/rtps/transport/TCPAcceptor.cpp
+@@ -39,13 +39,13 @@ TCPAcceptor::TCPAcceptor(
+         asio::io_context& io_context,
+         const std::string& interface,
+         const Locator& locator)
+-    : acceptor_(io_context, asio::ip::tcp::endpoint(asio::ip::address_v4::from_string(interface),
++    : acceptor_(io_context, asio::ip::tcp::endpoint(asio::ip::make_address_v4(interface),
+             IPLocator::getPhysicalPort(locator)))
+     , locator_(locator)
+     , io_context_(&io_context)
+ {
+     locator_.port = acceptor_.local_endpoint().port();
+-    endpoint_ = asio::ip::tcp::endpoint(asio::ip::address_v4::from_string(interface),
++    endpoint_ = asio::ip::tcp::endpoint(asio::ip::make_address_v4(interface),
+                     IPLocator::getPhysicalPort(locator_));
+ }
+ 
+diff --git a/src/cpp/rtps/transport/TCPAcceptorBasic.cpp b/src/cpp/rtps/transport/TCPAcceptorBasic.cpp
+index e48deef78..730e23ab8 100644
+--- a/src/cpp/rtps/transport/TCPAcceptorBasic.cpp
++++ b/src/cpp/rtps/transport/TCPAcceptorBasic.cpp
+@@ -40,7 +40,7 @@ TCPAcceptorBasic::TCPAcceptorBasic(
+     : TCPAcceptor(io_context, interface, locator)
+     , socket_(*io_context_)
+ {
+-    endpoint_ = asio::ip::tcp::endpoint(asio::ip::address_v4::from_string(interface),
++    endpoint_ = asio::ip::tcp::endpoint(asio::ip::make_address_v4(interface),
+                     IPLocator::getPhysicalPort(locator_));
+ }
+ 
+diff --git a/src/cpp/rtps/transport/TCPv4Transport.cpp b/src/cpp/rtps/transport/TCPv4Transport.cpp
+index 07779d638..84d3c0615 100644
+--- a/src/cpp/rtps/transport/TCPv4Transport.cpp
++++ b/src/cpp/rtps/transport/TCPv4Transport.cpp
+@@ -78,7 +78,7 @@ TCPv4Transport::TCPv4Transport(
+ {
+     for (const auto& interface : descriptor.interfaceWhiteList)
+     {
+-        interface_whitelist_.emplace_back(ip::address_v4::from_string(interface));
++        interface_whitelist_.emplace_back(ip::make_address_v4(interface));
+     }
+ 
+     for (uint16_t& port : configuration_.listening_ports)
+@@ -205,7 +205,7 @@ bool TCPv4Transport::is_interface_whitelist_empty() const
+ bool TCPv4Transport::is_interface_allowed(
+         const std::string& interface) const
+ {
+-    return is_interface_allowed(asio::ip::address_v4::from_string(interface));
++    return is_interface_allowed(asio::ip::make_address_v4(interface));
+ }
+ 
+ bool TCPv4Transport::is_interface_allowed(
+@@ -235,7 +235,7 @@ LocatorList TCPv4Transport::NormalizeLocator(
+         get_ipv4s(locNames);
+         for (const auto& infoIP : locNames)
+         {
+-            auto ip = asio::ip::address_v4::from_string(infoIP.name);
++            auto ip = asio::ip::make_address_v4(infoIP.name);
+             if (is_interface_allowed(ip))
+             {
+                 Locator newloc(locator);
+@@ -362,7 +362,7 @@ asio::ip::tcp TCPv4Transport::generate_protocol() const
+ bool TCPv4Transport::is_interface_allowed(
+         const Locator& loc) const
+ {
+-    asio::ip::address_v4 ip = asio::ip::address_v4::from_string(IPLocator::toIPv4string(loc));
++    asio::ip::address_v4 ip = asio::ip::make_address_v4(IPLocator::toIPv4string(loc));
+     return is_interface_allowed(ip);
+ }
+ 
+diff --git a/src/cpp/rtps/transport/TCPv6Transport.cpp b/src/cpp/rtps/transport/TCPv6Transport.cpp
+index 73edb2266..834888c68 100644
+--- a/src/cpp/rtps/transport/TCPv6Transport.cpp
++++ b/src/cpp/rtps/transport/TCPv6Transport.cpp
+@@ -82,7 +82,7 @@ TCPv6Transport::TCPv6Transport(
+ {
+     for (const auto& interface : descriptor.interfaceWhiteList)
+     {
+-        interface_whitelist_.emplace_back(ip::address_v6::from_string(interface));
++        interface_whitelist_.emplace_back(ip::make_address_v6(interface));
+     }
+ 
+     for (uint16_t& port : configuration_.listening_ports)
+@@ -208,7 +208,7 @@ bool TCPv6Transport::is_interface_whitelist_empty() const
+ bool TCPv6Transport::is_interface_allowed(
+         const std::string& interface) const
+ {
+-    return is_interface_allowed(asio::ip::address_v6::from_string(interface));
++    return is_interface_allowed(asio::ip::make_address_v6(interface));
+ }
+ 
+ bool TCPv6Transport::is_interface_allowed(
+@@ -323,7 +323,7 @@ asio::ip::tcp TCPv6Transport::generate_protocol() const
+ bool TCPv6Transport::is_interface_allowed(
+         const Locator& loc) const
+ {
+-    asio::ip::address_v6 ip = asio::ip::address_v6::from_string(IPLocator::toIPv6string(loc));
++    asio::ip::address_v6 ip = asio::ip::make_address_v6(IPLocator::toIPv6string(loc));
+     return is_interface_allowed(ip);
+ }
+ 
+diff --git a/src/cpp/rtps/transport/UDPv4Transport.cpp b/src/cpp/rtps/transport/UDPv4Transport.cpp
+index d20fa6259..f482f8cc5 100644
+--- a/src/cpp/rtps/transport/UDPv4Transport.cpp
++++ b/src/cpp/rtps/transport/UDPv4Transport.cpp
+@@ -112,14 +112,14 @@ UDPv4Transport::UDPv4Transport(
+         {
+             if (std::find(white_begin, white_end, infoIP.name) != white_end)
+             {
+-                interface_whitelist_.emplace_back(ip::address_v4::from_string(infoIP.name));
++                interface_whitelist_.emplace_back(ip::make_address_v4(infoIP.name));
+             }
+         }
+ 
+         if (interface_whitelist_.empty())
+         {
+             logError(TRANSPORT, "All whitelist interfaces were filtered out");
+-            interface_whitelist_.emplace_back(ip::address_v4::from_string("192.0.2.0"));
++            interface_whitelist_.emplace_back(ip::make_address_v4("192.0.2.0"));
+         }
+     }
+ }
+@@ -252,7 +252,7 @@ ip::udp::endpoint UDPv4Transport::generate_endpoint(
+         const std::string& sIp,
+         uint16_t port)
+ {
+-    return asio::ip::udp::endpoint(ip::address_v4::from_string(sIp), port);
++    return asio::ip::udp::endpoint(ip::make_address_v4(sIp), port);
+ }
+ 
+ ip::udp::endpoint UDPv4Transport::generate_endpoint(
+@@ -352,7 +352,7 @@ bool UDPv4Transport::OpenInputChannel(
+     if (IPLocator::isMulticast(locator) && IsInputChannelOpen(locator))
+     {
+         std::string locatorAddressStr = IPLocator::toIPv4string(locator);
+-        ip::address_v4 locatorAddress = ip::address_v4::from_string(locatorAddressStr);
++        ip::address_v4 locatorAddress = ip::make_address_v4(locatorAddressStr);
+ 
+ #ifndef _WIN32
+         if (!is_interface_whitelist_empty())
+@@ -411,7 +411,7 @@ bool UDPv4Transport::OpenInputChannel(
+                     get_ipv4s_unique_interfaces(locNames, true);
+                     for (const auto& infoIP : locNames)
+                     {
+-                        auto ip = asio::ip::address_v4::from_string(infoIP.name);
++                        auto ip = asio::ip::make_address_v4(infoIP.name);
+                         try
+                         {
+                             channelResource->socket()->set_option(ip::multicast::join_group(locatorAddress, ip));
+@@ -425,7 +425,7 @@ bool UDPv4Transport::OpenInputChannel(
+                 }
+                 else
+                 {
+-                    auto ip = asio::ip::address_v4::from_string(channelResource->interface());
++                    auto ip = asio::ip::make_address_v4(channelResource->interface());
+                     try
+                     {
+                         channelResource->socket()->set_option(ip::multicast::join_group(locatorAddress, ip));
+@@ -464,7 +464,7 @@ std::vector<std::string> UDPv4Transport::get_binding_interfaces_list()
+ bool UDPv4Transport::is_interface_allowed(
+         const std::string& interface) const
+ {
+-    return is_interface_allowed(asio::ip::address_v4::from_string(interface));
++    return is_interface_allowed(asio::ip::make_address_v4(interface));
+ }
+ 
+ bool UDPv4Transport::is_interface_allowed(
+@@ -513,7 +513,7 @@ LocatorList UDPv4Transport::NormalizeLocator(
+         get_ipv4s(locNames);
+         for (const auto& infoIP : locNames)
+         {
+-            auto ip = asio::ip::address_v4::from_string(infoIP.name);
++            auto ip = asio::ip::make_address_v4(infoIP.name);
+             if (is_interface_allowed(ip))
+             {
+                 Locator newloc(locator);
+@@ -573,7 +573,7 @@ void UDPv4Transport::SetSocketOutboundInterface(
+         eProsimaUDPSocket& socket,
+         const std::string& sIp)
+ {
+-    getSocketPtr(socket)->set_option(ip::multicast::outbound_interface(asio::ip::address_v4::from_string(sIp)));
++    getSocketPtr(socket)->set_option(ip::multicast::outbound_interface(asio::ip::make_address_v4(sIp)));
+ }
+ 
+ void UDPv4Transport::update_network_interfaces()
+@@ -589,11 +589,11 @@ void UDPv4Transport::update_network_interfaces()
+                 get_ipv4s_unique_interfaces(locNames, true);
+                 for (const auto& infoIP : locNames)
+                 {
+-                    auto ip = asio::ip::address_v4::from_string(infoIP.name);
++                    auto ip = asio::ip::make_address_v4(infoIP.name);
+                     try
+                     {
+                         channelResource->socket()->set_option(ip::multicast::join_group(
+-                                    ip::address_v4::from_string(DEFAULT_METATRAFFIC_MULTICAST_ADDRESS), ip));
++                                    ip::make_address_v4(DEFAULT_METATRAFFIC_MULTICAST_ADDRESS), ip));
+                     }
+                     catch (std::system_error& ex)
+                     {
+@@ -604,11 +604,11 @@ void UDPv4Transport::update_network_interfaces()
+             }
+             else
+             {
+-                auto ip = asio::ip::address_v4::from_string(channelResource->interface());
++                auto ip = asio::ip::make_address_v4(channelResource->interface());
+                 try
+                 {
+                     channelResource->socket()->set_option(ip::multicast::join_group(
+-                                ip::address_v4::from_string(DEFAULT_METATRAFFIC_MULTICAST_ADDRESS), ip));
++                                ip::make_address_v4(DEFAULT_METATRAFFIC_MULTICAST_ADDRESS), ip));
+                 }
+                 catch (std::system_error& ex)
+                 {
+diff --git a/src/cpp/rtps/transport/UDPv6Transport.cpp b/src/cpp/rtps/transport/UDPv6Transport.cpp
+index 2d663b374..8d49b2098 100644
+--- a/src/cpp/rtps/transport/UDPv6Transport.cpp
++++ b/src/cpp/rtps/transport/UDPv6Transport.cpp
+@@ -115,7 +115,7 @@ UDPv6Transport::UDPv6Transport(
+             {
+                 if (compare_ips(infoIP.name, whitelist_interface))
+                 {
+-                    interface_whitelist_.emplace_back(ip::address_v6::from_string(infoIP.name));
++                    interface_whitelist_.emplace_back(ip::make_address_v6(infoIP.name));
+                 }
+             }
+         }
+@@ -123,7 +123,7 @@ UDPv6Transport::UDPv6Transport(
+         if (interface_whitelist_.empty())
+         {
+             logError(TRANSPORT, "All whitelist interfaces were filtered out");
+-            interface_whitelist_.emplace_back(ip::address_v6::from_string("2001:db8::"));
++            interface_whitelist_.emplace_back(ip::make_address_v6("2001:db8::"));
+         }
+     }
+ }
+@@ -256,7 +256,7 @@ ip::udp::endpoint UDPv6Transport::generate_endpoint(
+         const std::string& sIp,
+         uint16_t port)
+ {
+-    return asio::ip::udp::endpoint(ip::address_v6::from_string(sIp), port);
++    return asio::ip::udp::endpoint(ip::make_address_v6(sIp), port);
+ }
+ 
+ ip::udp::endpoint UDPv6Transport::generate_endpoint(
+@@ -357,7 +357,7 @@ bool UDPv6Transport::OpenInputChannel(
+     if (IPLocator::isMulticast(locator) && IsInputChannelOpen(locator))
+     {
+         std::string locatorAddressStr = IPLocator::toIPv6string(locator);
+-        ip::address_v6 locatorAddress = ip::address_v6::from_string(locatorAddressStr);
++        ip::address_v6 locatorAddress = ip::make_address_v6(locatorAddressStr);
+ 
+ #ifndef _WIN32
+         if (!is_interface_whitelist_empty())
+@@ -416,7 +416,7 @@ bool UDPv6Transport::OpenInputChannel(
+                     get_ipv6s_unique_interfaces(locNames, true);
+                     for (const auto& infoIP : locNames)
+                     {
+-                        auto ip = asio::ip::address_v6::from_string(infoIP.name);
++                        auto ip = asio::ip::make_address_v6(infoIP.name);
+                         try
+                         {
+                             channelResource->socket()->set_option(ip::multicast::join_group(locatorAddress,
+@@ -431,7 +431,7 @@ bool UDPv6Transport::OpenInputChannel(
+                 }
+                 else
+                 {
+-                    auto ip = asio::ip::address_v6::from_string(channelResource->interface());
++                    auto ip = asio::ip::make_address_v6(channelResource->interface());
+                     try
+                     {
+                         channelResource->socket()->set_option(ip::multicast::join_group(locatorAddress, ip.scope_id()));
+@@ -474,7 +474,7 @@ bool UDPv6Transport::is_interface_allowed(
+         return true;
+     }
+ 
+-    if (asio::ip::address_v6::from_string(interface) == ip::address_v6::any())
++    if (asio::ip::make_address_v6(interface) == ip::address_v6::any())
+     {
+         return true;
+     }
+@@ -588,7 +588,7 @@ void UDPv6Transport::SetSocketOutboundInterface(
+     }
+ #endif // ifdef __APPLE__
+     getSocketPtr(socket)->set_option(ip::multicast::outbound_interface(
+-                asio::ip::address_v6::from_string(sIp).scope_id()));
++                asio::ip::make_address_v6(sIp).scope_id()));
+ }
+ 
+ bool UDPv6Transport::compare_ips(
+diff --git a/src/cpp/rtps/transport/test_UDPv4Transport.cpp b/src/cpp/rtps/transport/test_UDPv4Transport.cpp
+index 7e6b77e7c..3acea10d9 100644
+--- a/src/cpp/rtps/transport/test_UDPv4Transport.cpp
++++ b/src/cpp/rtps/transport/test_UDPv4Transport.cpp
+@@ -69,7 +69,7 @@ test_UDPv4Transport::test_UDPv4Transport(
+     UDPv4Transport::mReceiveBufferSize = descriptor.receiveBufferSize;
+     for (auto interf : descriptor.interfaceWhiteList)
+     {
+-        UDPv4Transport::interface_whitelist_.emplace_back(asio::ip::address_v4::from_string(interf));
++        UDPv4Transport::interface_whitelist_.emplace_back(asio::ip::make_address_v4(interf));
+     }
+     test_UDPv4Transport_DropLog.clear();
+     test_UDPv4Transport_DropLogLength = descriptor.dropLogLength;
+diff --git a/test/blackbox/common/UDPMessageSender.hpp b/test/blackbox/common/UDPMessageSender.hpp
+index f0f1d52cf..fff10bad3 100644
+--- a/test/blackbox/common/UDPMessageSender.hpp
++++ b/test/blackbox/common/UDPMessageSender.hpp
+@@ -25,7 +25,7 @@ struct UDPMessageSender
+     {
+         std::string addr = IPLocator::toIPv4string(destination);
+         unsigned short port = static_cast<unsigned short>(destination.port);
+-        auto remote = asio::ip::udp::endpoint(asio::ip::address::from_string(addr), port);
++        auto remote = asio::ip::udp::endpoint(asio::ip::make_address(addr), port);
+         asio::error_code ec;
+ 
+         socket.send_to(asio::buffer(msg.buffer, msg.length), remote, 0, ec);
+diff --git a/test/unittest/transport/TCPv4Tests.cpp b/test/unittest/transport/TCPv4Tests.cpp
+index e47963ded..15be03525 100644
+--- a/test/unittest/transport/TCPv4Tests.cpp
++++ b/test/unittest/transport/TCPv4Tests.cpp
+@@ -579,7 +579,7 @@ TEST_F(TCPv4Tests, check_TCPv4_interface_whitelist_initialization)
+     auto check_whitelist = transportUnderTest.get_interface_whitelist();
+     for (auto& ip : mock_interfaces)
+     {
+-        ASSERT_NE(std::find(check_whitelist.begin(), check_whitelist.end(), asio::ip::address_v4::from_string(
++        ASSERT_NE(std::find(check_whitelist.begin(), check_whitelist.end(), asio::ip::make_address_v4(
+                     ip)), check_whitelist.end());
+     }
+ 
+@@ -1594,7 +1594,7 @@ TEST_F(TCPv4Tests, receive_unordered_data)
+     asio::ip::tcp::socket sender(ctx);
+     asio::ip::tcp::endpoint destination;
+     destination.port(g_default_port);
+-    destination.address(asio::ip::address::from_string("127.0.0.1"));
++    destination.address(asio::ip::make_address("127.0.0.1"));
+     sender.connect(destination, ec);
+     ASSERT_TRUE(!ec) << ec;
+ 
+-- 
+2.53.0
+

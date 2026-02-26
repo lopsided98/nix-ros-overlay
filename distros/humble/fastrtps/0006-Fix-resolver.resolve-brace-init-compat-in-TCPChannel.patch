@@ -1,0 +1,34 @@
+From ddc75ca1deb08437d112f55b1b938a19fc38e037 Mon Sep 17 00:00:00 2001
+From: Michal Sojka <michal.sojka@cvut.cz>
+Date: Fri, 20 Mar 2026 21:23:59 +0100
+Subject: [PATCH 6/7] Fix resolver.resolve brace-init compat in
+ TCPChannelResourceSecure
+
+Replace resolver.resolve({host, port}) with resolver.resolve(host, port)
+to fix build with newer asio which removed the initializer list overload.
+
+Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
+---
+ src/cpp/rtps/transport/TCPChannelResourceSecure.cpp | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/cpp/rtps/transport/TCPChannelResourceSecure.cpp b/src/cpp/rtps/transport/TCPChannelResourceSecure.cpp
+index 6d141d3b2..15970891f 100644
+--- a/src/cpp/rtps/transport/TCPChannelResourceSecure.cpp
++++ b/src/cpp/rtps/transport/TCPChannelResourceSecure.cpp
+@@ -79,10 +79,10 @@ void TCPChannelResourceSecure::connect(
+         {
+             ip::tcp::resolver resolver(service_);
+ 
+-            auto endpoints = resolver.resolve({
++            auto endpoints = resolver.resolve(
+                             IPLocator::hasWan(locator_) ? IPLocator::toWanstring(locator_) : IPLocator::ip_to_string(
+                                 locator_),
+-                            std::to_string(IPLocator::getPhysicalPort(locator_))});
++                            std::to_string(IPLocator::getPhysicalPort(locator_)));
+ 
+             TCPTransportInterface* parent = parent_;
+             secure_socket_ = std::make_shared<asio::ssl::stream<asio::ip::tcp::socket>>(service_, ssl_context_);
+-- 
+2.53.0
+

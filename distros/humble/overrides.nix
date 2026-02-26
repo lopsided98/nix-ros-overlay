@@ -87,6 +87,20 @@ in with lib; {
     NIX_CFLAGS_COMPILE = toString [ "-Wno-error=maybe-uninitialized" ];
   });
 
+  fastrtps = rosSuper.fastrtps.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      ./fastrtps/0001-Replace-io_service-with-io_context-to-be-compatible-.patch
+      ./fastrtps/0002-Add-missing-include-cstdint.patch
+      ./fastrtps/0003-asio-make_address-fix.patch
+      ./fastrtps/0004-Fix-asio-compatibility-with-newer-asio-versions.patch
+      ./fastrtps/0005-Fix-asio-strand-post-compatibility-in-TCPChannelReso.patch
+      ./fastrtps/0006-Fix-resolver.resolve-brace-init-compat-in-TCPChannel.patch
+      ./fastrtps/0007-Fix-IPLocator-resolveNameDNS-for-newer-asio-resolver.patch
+    ];
+  });
+
   # This is a newer version than the build system tries to download, but this
   # version doesn't try to run host platform binaries on the build platform
   # and fixes "Allocator foonathan::memory::memory_pool received invalid size"
