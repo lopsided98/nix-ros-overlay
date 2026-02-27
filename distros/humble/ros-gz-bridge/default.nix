@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actuator-msgs, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, gps-msgs, ignition, launch-ros, launch-testing, launch-testing-ament-cmake, nav-msgs, pkg-config, rclcpp, rclcpp-components, ros-gz-interfaces, rosgraph-msgs, sensor-msgs, std-msgs, tf2-msgs, trajectory-msgs, vision-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-humble-ros-gz-bridge";
-  version = "0.244.22-r1";
+  version = "0.244.23-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/humble/ros_gz_bridge/0.244.22-1.tar.gz";
-    name = "0.244.22-1.tar.gz";
-    sha256 = "398e031bac407a5a844e511817d0bc05c3628262c9ed2078632d8564bc1fb75d";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/humble/ros_gz_bridge/0.244.23-1.tar.gz";
+    name = "0.244.23-1.tar.gz";
+    sha256 = "f0660d692c83bfd1aa820d54d7a646b594a0ffc534f1f31192b39f79250eff05";
   };
 
   buildType = "ament_cmake";

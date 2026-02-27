@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, diagnostic-msgs, geometry-msgs, nav-msgs, sensor-msgs, shape-msgs, std-msgs, std-srvs, stereo-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-common-interfaces";
-  version = "5.3.6-r1";
+  version = "5.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/jazzy/common_interfaces/5.3.6-1.tar.gz";
-    name = "5.3.6-1.tar.gz";
-    sha256 = "bce08a14bb4e0fd9dc55e6af9cc668696162e638360b29b00c5b6066c1f05fd2";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/jazzy/common_interfaces/5.3.7-1.tar.gz";
+    name = "5.3.7-1.tar.gz";
+    sha256 = "c1aaa87d2b397c6b5564f51e69a2b99c92ea93e6bc72f281c0561677b1376c17";
   };
 
   buildType = "ament_cmake";

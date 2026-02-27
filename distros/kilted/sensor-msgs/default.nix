@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-sensor-msgs";
-  version = "5.5.1-r1";
+  version = "5.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/sensor_msgs/5.5.1-1.tar.gz";
-    name = "5.5.1-1.tar.gz";
-    sha256 = "2e8528157b9aaa7ba934696deb6feca7e7213b1aaccfbe55cfc0533eb2f7effe";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/sensor_msgs/5.5.2-1.tar.gz";
+    name = "5.5.2-1.tar.gz";
+    sha256 = "b11aa79380ea90e163123af1cb53ab54c6ef3f63f6dfe72a9b9d110d9b887f1f";
   };
 
   buildType = "ament_cmake";

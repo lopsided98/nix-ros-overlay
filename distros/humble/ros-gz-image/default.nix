@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ignition, image-transport, pkg-config, rclcpp, ros-gz-bridge, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros-gz-image";
-  version = "0.244.22-r1";
+  version = "0.244.23-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/humble/ros_gz_image/0.244.22-1.tar.gz";
-    name = "0.244.22-1.tar.gz";
-    sha256 = "2fd509b5158449b2aed1b3387a3ca32cdfce4893c58c95188de635e29c696048";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/humble/ros_gz_image/0.244.23-1.tar.gz";
+    name = "0.244.23-1.tar.gz";
+    sha256 = "e4fc45925c8e1460844d9caa978553952dbfa032062d02417eccb29cc8d754ce";
   };
 
   buildType = "ament_cmake";

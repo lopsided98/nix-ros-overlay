@@ -816,6 +816,8 @@ self: super: {
 
  create-robot = self.callPackage ./create-robot {};
 
+ crx-kinematics = self.callPackage ./crx-kinematics {};
+
  cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
@@ -1454,6 +1456,8 @@ self: super: {
 
  gtsam = self.callPackage ./gtsam {};
 
+ gtsam2mrpt-serial = self.callPackage ./gtsam2mrpt-serial {};
+
  gurumdds-cmake-module = self.callPackage ./gurumdds-cmake-module {};
 
  gz-ros2-control = self.callPackage ./gz-ros2-control {};
@@ -1856,6 +1860,8 @@ self: super: {
 
  lusb = self.callPackage ./lusb {};
 
+ lvr2 = self.callPackage ./lvr2 {};
+
  magic-enum = self.callPackage ./magic-enum {};
 
  map-msgs = self.callPackage ./map-msgs {};
@@ -1903,6 +1909,20 @@ self: super: {
  mavros-extras = self.callPackage ./mavros-extras {};
 
  mavros-msgs = self.callPackage ./mavros-msgs {};
+
+ mbf-abstract-core = self.callPackage ./mbf-abstract-core {};
+
+ mbf-abstract-nav = self.callPackage ./mbf-abstract-nav {};
+
+ mbf-msgs = self.callPackage ./mbf-msgs {};
+
+ mbf-simple-core = self.callPackage ./mbf-simple-core {};
+
+ mbf-simple-nav = self.callPackage ./mbf-simple-nav {};
+
+ mbf-test-utility = self.callPackage ./mbf-test-utility {};
+
+ mbf-utility = self.callPackage ./mbf-utility {};
 
  mcap-vendor = self.callPackage ./mcap-vendor {};
 
@@ -2029,6 +2049,8 @@ self: super: {
  motion-capture-tracking-interfaces = self.callPackage ./motion-capture-tracking-interfaces {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
+
+ move-base-flex = self.callPackage ./move-base-flex {};
 
  moveit = self.callPackage ./moveit {};
 
@@ -2197,6 +2219,12 @@ self: super: {
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ mujoco-ros2-control = self.callPackage ./mujoco-ros2-control {};
+
+ mujoco-ros2-control-demos = self.callPackage ./mujoco-ros2-control-demos {};
+
+ mujoco-ros2-control-msgs = self.callPackage ./mujoco-ros2-control-msgs {};
 
  mujoco-vendor = self.callPackage ./mujoco-vendor {};
 
@@ -3423,6 +3451,8 @@ self: super: {
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
 
  rviz-marker-tools = self.callPackage ./rviz-marker-tools {};
+
+ rviz-mbf-plugins = self.callPackage ./rviz-mbf-plugins {};
 
  rviz-ogre-vendor = self.callPackage ./rviz-ogre-vendor {};
 

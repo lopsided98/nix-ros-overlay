@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, clearpath-platform-msgs, diagnostic-aggregator, diagnostic-updater, foxglove-bridge, rclcpp, ros2launch, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-diagnostics";
-  version = "2.9.1-r1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_diagnostics/2.9.1-1.tar.gz";
-    name = "2.9.1-1.tar.gz";
-    sha256 = "880585791b8904d4dad9eebb711da94fc86ab3a84c94e4fc87b2120227764b88";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_diagnostics/2.9.2-1.tar.gz";
+    name = "2.9.2-1.tar.gz";
+    sha256 = "f70098e712548db51f8fd8fd89b2914e40791d3e5945f8ae956698588fb39c39";
   };
 
   buildType = "ament_cmake";

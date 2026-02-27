@@ -2,20 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, fmt, generate-parameter-library-py, parameter-traits, rclcpp, rclcpp-lifecycle, rclpy, rsl, tcb-span, tl-expected }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, fmt, generate-parameter-library-py, parameter-traits, rclcpp, rclcpp-lifecycle, rclpy, rsl, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-jazzy-generate-parameter-library";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/jazzy/generate_parameter_library/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "7ddf8b25f55e6aef64922f1f7718706131fc7a5b5495edc204fa322f7857a544";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/jazzy/generate_parameter_library/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "1b3321fc1c7e5cbef17677737f45790036a326baf80eaff63c45d914f88ccacf";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ fmt generate-parameter-library-py parameter-traits rclcpp rclcpp-lifecycle rclpy rsl tcb-span tl-expected ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python generate-parameter-library-py ];
 

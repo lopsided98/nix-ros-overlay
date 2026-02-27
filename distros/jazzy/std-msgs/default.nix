@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-std-msgs";
-  version = "5.3.6-r1";
+  version = "5.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/jazzy/std_msgs/5.3.6-1.tar.gz";
-    name = "5.3.6-1.tar.gz";
-    sha256 = "76b47a6cb5d93e9620dfc5d4b4514b3f2d7123fb2c640dc667a2b30c1c5e7019";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/jazzy/std_msgs/5.3.7-1.tar.gz";
+    name = "5.3.7-1.tar.gz";
+    sha256 = "01fe874815561dab23478841e0a17a50655fce6454460b2631ef202a9c1ad3bb";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-cmake-xmllint, ament-lint-auto, freetype, glew, libGL, libGLU, xorg }:
 buildRosPackage {
   pname = "ros-kilted-rviz-ogre-vendor";
-  version = "15.0.11-r1";
+  version = "15.0.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/kilted/rviz_ogre_vendor/15.0.11-1.tar.gz";
-    name = "15.0.11-1.tar.gz";
-    sha256 = "ef1cd9ad0875c66c47333bd2d156bd85a55353539b02b7ff4d302054cb0231ec";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/kilted/rviz_ogre_vendor/15.0.12-1.tar.gz";
+    name = "15.0.12-1.tar.gz";
+    sha256 = "76780d1a00fa3570dcd2064772c049fc9a6da1920a8aed06b22f1debe1247a99";
   };
 
   buildType = "ament_cmake";

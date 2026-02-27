@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-clang-tidy, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, async-web-server-cpp, boost, cv-bridge, ffmpeg, image-transport, opencv, pkg-config, pluginlib, rclcpp, rclcpp-components, rmw, ros-environment, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-web-video-server";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/web_video_server-release/archive/release/rolling/web_video_server/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "9e3de98e110ea7d2b08be0f2d2502abe8cb8b03bdf7b7af14fae3316d6274cd3";
+    url = "https://github.com/ros2-gbp/web_video_server-release/archive/release/rolling/web_video_server/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "032629dcfa4aba14429a80c3208d532d6dc589e4c1abee34842257b45fcef455";
   };
 
   buildType = "ament_cmake";

@@ -396,6 +396,10 @@ self: super: {
 
  clips-vendor = self.callPackage ./clips-vendor {};
 
+ cloudini-lib = self.callPackage ./cloudini-lib {};
+
+ cloudini-ros = self.callPackage ./cloudini-ros {};
+
  cm-topic-hardware-component = self.callPackage ./cm-topic-hardware-component {};
 
  coal = self.callPackage ./coal {};
@@ -451,6 +455,8 @@ self: super: {
  cras-topic-tools = self.callPackage ./cras-topic-tools {};
 
  crocoddyl = self.callPackage ./crocoddyl {};
+
+ crx-kinematics = self.callPackage ./crx-kinematics {};
 
  cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
 
@@ -889,6 +895,8 @@ self: super: {
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  gtsam = self.callPackage ./gtsam {};
+
+ gtsam2mrpt-serial = self.callPackage ./gtsam2mrpt-serial {};
 
  gurumdds-cmake-module = self.callPackage ./gurumdds-cmake-module {};
 
@@ -1530,6 +1538,12 @@ self: super: {
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
+ mujoco-ros2-control = self.callPackage ./mujoco-ros2-control {};
+
+ mujoco-ros2-control-demos = self.callPackage ./mujoco-ros2-control-demos {};
+
+ mujoco-ros2-control-msgs = self.callPackage ./mujoco-ros2-control-msgs {};
+
  mujoco-vendor = self.callPackage ./mujoco-vendor {};
 
  multires-image = self.callPackage ./multires-image {};
@@ -1901,6 +1915,8 @@ self: super: {
  rcl-logging-noop = self.callPackage ./rcl-logging-noop {};
 
  rcl-logging-spdlog = self.callPackage ./rcl-logging-spdlog {};
+
+ rcl-logging-syslog = self.callPackage ./rcl-logging-syslog {};
 
  rcl-yaml-param-parser = self.callPackage ./rcl-yaml-param-parser {};
 

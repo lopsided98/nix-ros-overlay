@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gtsam, mola-common, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-rolling-mola-gtsam-factors";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/rolling/mola_gtsam_factors/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "011c586e5b2efdcaa029dcaf488dba4f5716e61e1b36315a7d32b7dff96ec8cb";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/rolling/mola_gtsam_factors/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "9d41842d1529b5faf90d27882b47c976b5b4377e3180878e34834e5b3d00da66";
   };
 
   buildType = "cmake";
