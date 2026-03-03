@@ -340,13 +340,21 @@ rosSelf: rosSuper: with rosSelf.lib; {
   rosidl-generator-rs = rosSuper.rosidl-generator-rs or (rosSelf.callPackage ../pkgs/rosidl-generator-rs { });
 
   rosx-introspection = rosSuper.rosx-introspection.overrideAttrs ({
-    postPatch ? "", ...
+    postPatch ? "", patches ? [], ...
   }: {
     # Don't download CPM, which is never needed because all
     # dependencies are provided by Nix.
     postPatch = postPatch + ''
       substituteInPlace CMakeLists.txt --replace-fail 'include(cmake/CPM.cmake)' ""
     '';
+    patches = patches ++ [
+      # https://github.com/facontidavide/rosx_introspection/pull/38
+      # Fix build errors on latest Rolling
+      (self.fetchpatch2 {
+        url = "https://github.com/facontidavide/rosx_introspection/commit/d00f999722a83c6136864ddb46abf331ebb89461.patch";
+        hash = "sha256-0LwOlwD6Ns6jiCB4QI0EBM5iu2lc7KfYmNWOwcyKDE0=";
+      })
+    ];
   });
 
   rqt-robot-monitor = rosSuper.rqt-robot-monitor.overrideAttrs ({
