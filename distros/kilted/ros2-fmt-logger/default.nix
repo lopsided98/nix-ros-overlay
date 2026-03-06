@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, backward-ros, fmt, rclcpp, rcutils }:
 buildRosPackage {
   pname = "ros-kilted-ros2-fmt-logger";
-  version = "1.0.2-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_fmt_logger-release/archive/release/kilted/ros2_fmt_logger/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "47c40d62932794e48ce5f60f6e9cbfb3e8615d3c8924ea4210820f9e78a16afe";
+    url = "https://github.com/ros2-gbp/ros2_fmt_logger-release/archive/release/kilted/ros2_fmt_logger/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "1c327c9b6a1f778cda5cc5c7a8b9917989a1e4b310aa685072f9768ca7f7d0a1";
   };
 
   buildType = "ament_cmake";

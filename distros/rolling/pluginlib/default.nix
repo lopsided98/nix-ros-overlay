@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, class-loader, rcpputils, rcutils, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-rolling-pluginlib";
-  version = "5.8.2-r1";
+  version = "5.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/rolling/pluginlib/5.8.2-1.tar.gz";
-    name = "5.8.2-1.tar.gz";
-    sha256 = "ac81b138f7692e75cb7ac4f08be430772b636ca2b5746b6def8340c0549e3ee2";
+    url = "https://github.com/ros2-gbp/pluginlib-release/archive/release/rolling/pluginlib/5.8.3-1.tar.gz";
+    name = "5.8.3-1.tar.gz";
+    sha256 = "cd2f3704835d9b1f404330228a939b1c9169b3373f537afe9039a73c63da523f";
   };
 
   buildType = "ament_cmake";

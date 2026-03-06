@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-xmllint }:
 buildRosPackage {
   pname = "ros-rolling-tensorrt-cmake-module";
-  version = "0.0.4-r2";
+  version = "0.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tensorrt_cmake_module-release/archive/release/rolling/tensorrt_cmake_module/0.0.4-2.tar.gz";
-    name = "0.0.4-2.tar.gz";
-    sha256 = "85fdf9bf8881e8127a2dac932def3fdc00b085b516dc186d1ca5abbfc77acbb5";
+    url = "https://github.com/ros2-gbp/tensorrt_cmake_module-release/archive/release/rolling/tensorrt_cmake_module/0.0.5-1.tar.gz";
+    name = "0.0.5-1.tar.gz";
+    sha256 = "31ddd57a88119351f39c04e00fc3adcf5aacacf6917cc8a118b00f3ddd370029";
   };
 
   buildType = "ament_cmake";

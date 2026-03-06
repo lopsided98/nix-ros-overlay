@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake-mypy, ament-cmake-python, ament-cmake-ros, builtin-interfaces, control-msgs, diagnostic-msgs, example-interfaces, geometry-msgs, nav-msgs, python3Packages, rcl-interfaces, rclpy, rosbridge-test-msgs, sensor-msgs, std-msgs, std-srvs, stereo-msgs, tf2-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-rosbridge-library";
-  version = "2.0.4-r1";
+  version = "2.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/humble/rosbridge_library/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "30a7ad9db921fc0d98a66324be391d6513c0f3aeae0f361dd0ffbec3b2abe474";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/humble/rosbridge_library/2.0.5-1.tar.gz";
+    name = "2.0.5-1.tar.gz";
+    sha256 = "d403956e608f2c63742766eb2e6d2455a7962d008fc7f34ed30a46e4994ff02d";
   };
 
   buildType = "ament_cmake";

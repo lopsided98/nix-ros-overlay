@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-sensor-msgs-py";
-  version = "5.5.1-r1";
+  version = "5.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/sensor_msgs_py/5.5.1-1.tar.gz";
-    name = "5.5.1-1.tar.gz";
-    sha256 = "52ddf613d266aaae15b5c15e85e0f536caea2c6d80f3a4ae5763bc08e5971aab";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/sensor_msgs_py/5.5.2-1.tar.gz";
+    name = "5.5.2-1.tar.gz";
+    sha256 = "1f8c50529d08ccc2bb0a76ea9996c38ddb5e49260fb2ef377be854c3b15e5e4d";
   };
 
   buildType = "ament_python";

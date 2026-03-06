@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git, glfw3, libxkbcommon, pkg-config, wayland, xorg }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git, patchelf, pkg-config }:
 buildRosPackage {
   pname = "ros-kilted-mujoco-vendor";
-  version = "0.0.6-r1";
+  version = "0.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_vendor-release/archive/release/kilted/mujoco_vendor/0.0.6-1.tar.gz";
-    name = "0.0.6-1.tar.gz";
-    sha256 = "7195c468e3c9b946f182c26b757b9c02d8e08c94a6198ba4a724e448de55b88c";
+    url = "https://github.com/ros2-gbp/mujoco_vendor-release/archive/release/kilted/mujoco_vendor/0.0.7-1.tar.gz";
+    name = "0.0.7-1.tar.gz";
+    sha256 = "e9393801026666f950469747ade2aba710dae25005c3ed24e3dc07d5d3f9f825";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-vendor-package git glfw3 libxkbcommon pkg-config wayland xorg.libX11 xorg.libXcursor xorg.libXi xorg.libXinerama xorg.libXrandr ];
-  nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package git ];
+  buildInputs = [ ament-cmake ament-cmake-vendor-package git patchelf pkg-config ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package git patchelf ];
 
   meta = {
     description = "Vendor package for MuJoCo simulator of version 3.4.0";

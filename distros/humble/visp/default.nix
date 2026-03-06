@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bzip2, cmake, doxygen, eigen, libjpeg, liblapack, libpng, libv4l, libxml2, opencv, xorg }:
+{ lib, buildRosPackage, fetchurl, bzip2, cmake, doxygen, eigen, gsl, libjpeg, liblapack, libpng, libv4l, libxml2, llvmPackages, nlohmann_json, openblas, opencv, xorg, zbar }:
 buildRosPackage {
   pname = "ros-humble-visp";
-  version = "3.5.0-r2";
+  version = "3.7.0-r7";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/visp-release/archive/release/humble/visp/3.5.0-2.tar.gz";
-    name = "3.5.0-2.tar.gz";
-    sha256 = "1f56f0c4737eedf78e935c759e5ebe8f877f52912445f1a670adcaf1395c90a2";
+    url = "https://github.com/ros2-gbp/visp-release/archive/release/humble/visp/3.7.0-7.tar.gz";
+    name = "3.7.0-7.tar.gz";
+    sha256 = "6dc5817fa4051501ddfbe0a6cb622fae06af73105f16a4a15aeac2c11f123b76";
   };
 
   buildType = "cmake";
-  buildInputs = [ bzip2 cmake doxygen ];
-  propagatedBuildInputs = [ eigen libjpeg liblapack libpng libv4l libxml2 opencv opencv.cxxdev xorg.libX11 ];
+  buildInputs = [ cmake doxygen ];
+  propagatedBuildInputs = [ bzip2 eigen gsl libjpeg liblapack libpng libv4l libxml2 llvmPackages.openmp nlohmann_json openblas opencv opencv.cxxdev xorg.libX11 zbar ];
   nativeBuildInputs = [ cmake ];
 
   meta = {
@@ -29,6 +29,6 @@ buildRosPackage {
 
     ViSP can be useful in robotics, computer vision, augmented reality
     and computer animation.";
-    license = with lib.licenses; [ "GPL-2.0-only" ];
+    license = with lib.licenses; [ "GPL-2.0-or-later" ];
   };
 }

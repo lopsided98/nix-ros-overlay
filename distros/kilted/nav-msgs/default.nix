@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-nav-msgs";
-  version = "5.5.1-r1";
+  version = "5.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/nav_msgs/5.5.1-1.tar.gz";
-    name = "5.5.1-1.tar.gz";
-    sha256 = "28f47b28d9efe3ee81328bb48f5fd886517f519150d06689eb9d56046c720518";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/nav_msgs/5.5.2-1.tar.gz";
+    name = "5.5.2-1.tar.gz";
+    sha256 = "43b369373559b0a507f53ecc616d4ca110b6719f6a5e2fa2550535074b44dfc9";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-clang-tidy, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, async-web-server-cpp, boost, cv-bridge, ffmpeg, image-transport, opencv, pkg-config, pluginlib, rclcpp, rclcpp-components, rmw, ros-environment, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-web-video-server";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/web_video_server-release/archive/release/kilted/web_video_server/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "93edd4a6683b02569c0ca0147e44a1197c5d737a4086bf84faa2ac70eae4e551";
+    url = "https://github.com/ros2-gbp/web_video_server-release/archive/release/kilted/web_video_server/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "43aac174b678b248c0774d82657af601f4181b486ace55ed108be3a8907ea189";
   };
 
   buildType = "ament_cmake";

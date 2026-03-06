@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ewellix-description, ewellix-interfaces, ewellix-moveit-config }:
 buildRosPackage {
   pname = "ros-jazzy-ewellix-lift-common";
-  version = "0.2.0-r1";
+  version = "0.2.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ewellix_lift_common-release/archive/release/jazzy/ewellix_lift_common/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "796eadc000f2e163c48439414cc4792b5a74fc8317d50d0db608f6907615a950";
+    url = "https://github.com/clearpath-gbp/ewellix_lift_common-release/archive/release/jazzy/ewellix_lift_common/0.2.1-2.tar.gz";
+    name = "0.2.1-2.tar.gz";
+    sha256 = "80bdfc08f9ff24b67da71853eee3217d8686d2e68c9c2d4bdc94f839783529ef";
   };
 
   buildType = "ament_cmake";

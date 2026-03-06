@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git }:
 buildRosPackage {
   pname = "ros-kilted-boost-sml-vendor";
-  version = "1.1.11-r2";
+  version = "1.1.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/boost_sml_vendor-release/archive/release/kilted/boost_sml_vendor/1.1.11-2.tar.gz";
-    name = "1.1.11-2.tar.gz";
-    sha256 = "614993daf5f83e986dbf6aac08dfaddc7569e4a3ac36d3223086ebcaacef6029";
+    url = "https://github.com/ros2-gbp/boost_sml_vendor-release/archive/release/kilted/boost_sml_vendor/1.1.13-1.tar.gz";
+    name = "1.1.13-1.tar.gz";
+    sha256 = "472fdca03ccb3bfe9c3372170e62fc4aecc3945766e7109f80e3ac7242cca66d";
   };
 
   buildType = "ament_cmake";

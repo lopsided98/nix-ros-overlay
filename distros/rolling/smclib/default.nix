@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-smclib";
-  version = "4.1.2-r1";
+  version = "4.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/rolling/smclib/4.1.2-1.tar.gz";
-    name = "4.1.2-1.tar.gz";
-    sha256 = "380f8c8a53fd796be13ce9f286abe0f37ac5b9c97dac3038824349de983c2f1c";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/rolling/smclib/4.1.3-1.tar.gz";
+    name = "4.1.3-1.tar.gz";
+    sha256 = "68299211d719c8a2755de072d7cf8102fe85a027dbb9530c9cb3c3ed702b1c28";
   };
 
   buildType = "ament_cmake";

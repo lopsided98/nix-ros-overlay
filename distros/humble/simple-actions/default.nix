@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, action-msgs, action-tutorials-interfaces, ament-cmake, ament-cmake-python, rclcpp, rclcpp-action, rclpy }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-gtest, ament-cmake-python, example-interfaces, rclcpp, rclcpp-action, rclpy }:
 buildRosPackage {
   pname = "ros-humble-simple-actions";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/simple_actions-release/archive/release/humble/simple_actions/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "0e53a827425e76abc2da12ab9f9347bd51b6983ed6724e4f6a03c2c005f61d8d";
+    url = "https://github.com/ros2-gbp/simple_actions-release/archive/release/humble/simple_actions/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "cff05aac3870b222e5e807efc71f915e06d6150f355b9b4161b0e1413f60e000";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];
-  checkInputs = [ action-tutorials-interfaces ];
+  checkInputs = [ ament-cmake-gtest example-interfaces ];
   propagatedBuildInputs = [ action-msgs rclcpp rclcpp-action rclpy ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 

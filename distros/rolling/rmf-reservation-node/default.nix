@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rmf-building-map-msgs, rmf-fleet-adapter, rmf-reservation-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rmf-reservation-node";
-  version = "2.11.1-r1";
+  version = "2.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/rolling/rmf_reservation_node/2.11.1-1.tar.gz";
-    name = "2.11.1-1.tar.gz";
-    sha256 = "209dfcdc001e48c25003adb1a093dd65fe0e5112df418905294cc7c5f6172247";
+    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/rolling/rmf_reservation_node/2.12.0-1.tar.gz";
+    name = "2.12.0-1.tar.gz";
+    sha256 = "a1a1447bae3c3b8dca4cac2502284e332ff392a465916ab8afdfc90eb32dccef";
   };
 
   buildType = "ament_cmake";

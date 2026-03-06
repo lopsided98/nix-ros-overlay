@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ros-gz-bridge, ros-gz-image, ros-gz-sim, ros-gz-sim-demos }:
 buildRosPackage {
   pname = "ros-kilted-ros-gz";
-  version = "2.1.14-r1";
+  version = "2.1.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/kilted/ros_gz/2.1.14-1.tar.gz";
-    name = "2.1.14-1.tar.gz";
-    sha256 = "73a25120285efa37dac1ecdf420f849fac14e8ffdd73070ca32480fe5dbd6570";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/kilted/ros_gz/2.1.15-1.tar.gz";
+    name = "2.1.15-1.tar.gz";
+    sha256 = "fb93675f177cc50f36f442539524adecb53af61492cb5aab675ac90d18132700";
   };
 
   buildType = "ament_cmake";

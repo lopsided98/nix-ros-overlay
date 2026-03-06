@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-jazzy-ament-cmake-python";
-  version = "2.5.5-r1";
+  version = "2.5.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/jazzy/ament_cmake_python/2.5.5-1.tar.gz";
-    name = "2.5.5-1.tar.gz";
-    sha256 = "088a43a08488bd329ca9774251480ea226fcd861aee589e1706e75f738a8f815";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/jazzy/ament_cmake_python/2.5.6-2.tar.gz";
+    name = "2.5.6-2.tar.gz";
+    sha256 = "81f9088e008bd9bc21eecb8e39f7cbc54740d01d576ec447a746142f3e676d3a";
   };
 
   buildType = "ament_cmake";

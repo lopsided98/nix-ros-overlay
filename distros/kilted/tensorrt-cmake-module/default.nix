@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-xmllint }:
 buildRosPackage {
   pname = "ros-kilted-tensorrt-cmake-module";
-  version = "0.0.4-r3";
+  version = "0.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tensorrt_cmake_module-release/archive/release/kilted/tensorrt_cmake_module/0.0.4-3.tar.gz";
-    name = "0.0.4-3.tar.gz";
-    sha256 = "c8f410f68ae5ab26e2e6803fa92ace155b3cf825b73d06706ff042d6c651dc85";
+    url = "https://github.com/ros2-gbp/tensorrt_cmake_module-release/archive/release/kilted/tensorrt_cmake_module/0.0.5-1.tar.gz";
+    name = "0.0.5-1.tar.gz";
+    sha256 = "e9e7ecda093ac32cbd698e2d353c24a54f479bd217f8839e4c23bd0ac46d5a05";
   };
 
   buildType = "ament_cmake";

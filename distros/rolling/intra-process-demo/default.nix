@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, opencv, rclcpp, rmw-implementation-cmake, sensor-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, opencv, rclcpp, rmw-implementation-cmake, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-intra-process-demo";
-  version = "0.37.5-r1";
+  version = "0.37.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/intra_process_demo/0.37.5-1.tar.gz";
-    name = "0.37.5-1.tar.gz";
-    sha256 = "afdba3c06b3e17dd4b1fc9880dbb5c244a1320a23d98bd6d0c98c6c8146790b2";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/intra_process_demo/0.37.6-1.tar.gz";
+    name = "0.37.6-1.tar.gz";
+    sha256 = "1c2acad618fc374d10332023268c705210f1b5eb0450993d1eebae326e035126";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake std-msgs ];
+  buildInputs = [ ament-cmake example-interfaces ];
   checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing launch-testing-ament-cmake launch-testing-ros rmw-implementation-cmake ];
   propagatedBuildInputs = [ opencv opencv.cxxdev rclcpp sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ];

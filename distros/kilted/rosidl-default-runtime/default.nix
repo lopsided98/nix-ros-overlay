@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-core-runtime, service-msgs }:
 buildRosPackage {
   pname = "ros-kilted-rosidl-default-runtime";
-  version = "1.7.1-r2";
+  version = "1.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_defaults-release/archive/release/kilted/rosidl_default_runtime/1.7.1-2.tar.gz";
-    name = "1.7.1-2.tar.gz";
-    sha256 = "772bb48739a9e5ee36b327e063d3aea5400a47bf0b6d0324adf546be8af8fae0";
+    url = "https://github.com/ros2-gbp/rosidl_defaults-release/archive/release/kilted/rosidl_default_runtime/1.7.2-1.tar.gz";
+    name = "1.7.2-1.tar.gz";
+    sha256 = "e59aa0c6644564f96e14f44d383ac2878f28d5870df59690627510561a15da28";
   };
 
   buildType = "ament_cmake";

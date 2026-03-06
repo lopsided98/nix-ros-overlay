@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, avahi, ffmpeg, json-c, ncurses }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, avahi, ffmpeg, json_c, ncurses }:
 buildRosPackage {
   pname = "ros-rolling-ardrone-sdk";
   version = "2.0.3-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ avahi ffmpeg json-c ncurses ];
+  propagatedBuildInputs = [ avahi ffmpeg json_c ncurses ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

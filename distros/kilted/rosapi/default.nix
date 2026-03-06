@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-mypy, ament-cmake-pytest, ament-cmake-python, builtin-interfaces, geometry-msgs, rcl-interfaces, rclpy, rmw-dds-common, ros2action, ros2interface, ros2node, ros2service, ros2topic, rosapi-msgs, rosbridge-library, rosidl-adapter, rosidl-runtime-py, sensor-msgs, shape-msgs }:
 buildRosPackage {
   pname = "ros-kilted-rosapi";
-  version = "3.0.2-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/kilted/rosapi/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "641b71f8de5639b000e6dab08f773d4f174267d84f48ca29692b0d976b0eeb80";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/kilted/rosapi/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "606a544256a504d495a22133246ccb044108c6b44e80f68c1c07ede6be5d2abb";
   };
 
   buildType = "ament_cmake";

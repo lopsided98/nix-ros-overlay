@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, ecl-build, geometry-msgs, launch-testing, launch-testing-ament-cmake, launch-testing-ros, nav-msgs, python3Packages, rcl-interfaces, rclcpp, rclcpp-components, ros2test }:
 buildRosPackage {
   pname = "ros-jazzy-kobuki-velocity-smoother";
-  version = "0.15.0-r4";
+  version = "0.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kobuki_velocity_smoother-release/archive/release/jazzy/kobuki_velocity_smoother/0.15.0-4.tar.gz";
-    name = "0.15.0-4.tar.gz";
-    sha256 = "3a18ebcac71fc5e25ea10b9e4013385749af8a3395080d6e6e1ca85fae2de1a9";
+    url = "https://github.com/ros2-gbp/kobuki_velocity_smoother-release/archive/release/jazzy/kobuki_velocity_smoother/0.15.1-1.tar.gz";
+    name = "0.15.1-1.tar.gz";
+    sha256 = "9ee86da3ec5d945209bae10c131e6305ca1a5098353eb62e0b5071f0d100b5b2";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rclcpp, sensor-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-rolling-camera-calibration-parsers";
-  version = "6.4.4-r1";
+  version = "6.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/camera_calibration_parsers/6.4.4-1.tar.gz";
-    name = "6.4.4-1.tar.gz";
-    sha256 = "3cb5395f1b741d12296b01363c52fb7e218d513c47b0b6cfe6dbf5d787accbb4";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/camera_calibration_parsers/6.4.5-1.tar.gz";
+    name = "6.4.5-1.tar.gz";
+    sha256 = "fab3911b9e18b1491cf2f320ca59cc659346ebe13d6f1b9c5d0974f998fb2caa";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "camera_calibration_parsers contains routines for reading and writing camera calibration parameters.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

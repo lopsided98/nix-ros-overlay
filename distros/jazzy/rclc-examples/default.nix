@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, example-interfaces, lifecycle-msgs, rcl, rclc, rclc-lifecycle, rclc-parameter, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rclc-examples";
-  version = "6.1.0-r3";
+  version = "6.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclc-release/archive/release/jazzy/rclc_examples/6.1.0-3.tar.gz";
-    name = "6.1.0-3.tar.gz";
-    sha256 = "c5d39cc8c698c3ee2abe761c5ecdf025fb5ec67486a479213485396d5e272d26";
+    url = "https://github.com/ros2-gbp/rclc-release/archive/release/jazzy/rclc_examples/6.1.2-1.tar.gz";
+    name = "6.1.2-1.tar.gz";
+    sha256 = "9803153ab5f7f1e76109fa818929650ad112af3cf89357cf763f2df04550f47e";
   };
 
   buildType = "ament_cmake";

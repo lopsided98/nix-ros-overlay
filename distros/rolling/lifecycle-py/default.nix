@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, lifecycle, lifecycle-msgs, rclpy, ros-testing, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, example-interfaces, lifecycle, lifecycle-msgs, rclpy, ros-testing }:
 buildRosPackage {
   pname = "ros-rolling-lifecycle-py";
-  version = "0.37.5-r1";
+  version = "0.37.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/lifecycle_py/0.37.5-1.tar.gz";
-    name = "0.37.5-1.tar.gz";
-    sha256 = "1c78709b9ec5996a36d5a84d01b464e0f30fd10f67d156156403c57c34a1d1bb";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/lifecycle_py/0.37.6-1.tar.gz";
+    name = "0.37.6-1.tar.gz";
+    sha256 = "b398a7ab38e6a6b84932a330c386421bf4d7f1b022858605e04fed30c45acdac";
   };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint lifecycle ros-testing ];
-  propagatedBuildInputs = [ lifecycle-msgs rclpy std-msgs ];
+  propagatedBuildInputs = [ example-interfaces lifecycle-msgs rclpy ];
 
   meta = {
     description = "Package containing demos for rclpy lifecycle implementation";
