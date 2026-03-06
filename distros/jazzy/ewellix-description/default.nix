@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-ewellix-description";
-  version = "0.2.0-r1";
+  version = "0.2.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ewellix_lift_common-release/archive/release/jazzy/ewellix_description/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "c184f486e11acf37dc93e5503e28639ada06afed0bdb98b6f3b6dafac558e936";
+    url = "https://github.com/clearpath-gbp/ewellix_lift_common-release/archive/release/jazzy/ewellix_description/0.2.1-2.tar.gz";
+    name = "0.2.1-2.tar.gz";
+    sha256 = "0460e8cf12afd084c6f9ccebcfd2e0785fd6afb0694c78599a4d7d4dc3135a7a";
   };
 
   buildType = "ament_cmake";

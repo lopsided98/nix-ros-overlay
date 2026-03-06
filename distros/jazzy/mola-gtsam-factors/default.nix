@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gtsam, mola-common, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-jazzy-mola-gtsam-factors";
-  version = "2.1.0-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/jazzy/mola_gtsam_factors/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "bfa553814c6403551cb0e351f2d357e357e17f46f73dd726839f345f87dc6760";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/jazzy/mola_gtsam_factors/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "5350c5fa2ef6fbf79c231066cf4753e2fcb68b3e31198a2860c1a7b8d9e1fffa";
   };
 
   buildType = "cmake";

@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, fmt, rclcpp, rsl, tcb-span, tl-expected }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, fmt, rclcpp, rsl, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-rolling-parameter-traits";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/rolling/parameter_traits/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "9e9cf296b76697f80240a2f7f69031dcab5158ae67956193fc6e520b0e76b20a";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/rolling/parameter_traits/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "4265431031cbce37342dcd1db7add1324f23fcdb9a28a2d322983e34c094c199";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-cmake-gtest ];
   propagatedBuildInputs = [ fmt rclcpp rsl tcb-span tl-expected ];
   nativeBuildInputs = [ ament-cmake ];
 

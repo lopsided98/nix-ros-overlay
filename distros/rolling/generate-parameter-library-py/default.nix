@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, python3, python3Packages }:
+{ lib, buildRosPackage, fetchurl, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-generate-parameter-library-py";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/rolling/generate_parameter_library_py/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "2861bf30247dbe5664f0479c8917622e688e1f75db1de2c6a7d6beb115708b3a";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/rolling/generate_parameter_library_py/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "35e64d9140e022db1f187dafb3aca06b3b8536f22116ce83d1dd808b155db0a6";
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright python3Packages.pytest ];
+  checkInputs = [ python3Packages.pytest ];
   propagatedBuildInputs = [ python3 python3Packages.jinja2 python3Packages.pyyaml python3Packages.typeguard ];
 
   meta = {

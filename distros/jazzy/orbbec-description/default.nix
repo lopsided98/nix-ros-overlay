@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-orbbec-description";
-  version = "2.6.3-r5";
+  version = "2.7.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/orbbec_camera_v2-release/archive/release/jazzy/orbbec_description/2.6.3-5.tar.gz";
-    name = "2.6.3-5.tar.gz";
-    sha256 = "986446644c42dd4df486d6711c482caa3f30a8deee56fefcd480534e6577f3df";
+    url = "https://github.com/orbbec/orbbec_camera_v2-release/archive/release/jazzy/orbbec_description/2.7.6-1.tar.gz";
+    name = "2.7.6-1.tar.gz";
+    sha256 = "64c13f5f8e4a4fc9a65f66795607f0a07c8de2429bd667e998b62c103335f35a";
   };
 
   buildType = "ament_cmake";

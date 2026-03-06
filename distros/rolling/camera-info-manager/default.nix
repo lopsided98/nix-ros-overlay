@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, camera-calibration-parsers, rclcpp, rclcpp-lifecycle, rcpputils, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-camera-info-manager";
-  version = "6.4.4-r1";
+  version = "6.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/camera_info_manager/6.4.4-1.tar.gz";
-    name = "6.4.4-1.tar.gz";
-    sha256 = "f64686b74493d320c021d0c20c9c7ac4c76298b051f5b02388c5881041c152bf";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/camera_info_manager/6.4.5-1.tar.gz";
+    name = "6.4.5-1.tar.gz";
+    sha256 = "69bee6b68facb373a8321f9478a49ff7ad7d312afdf5bbddaaca530ae622e1d9";
   };
 
   buildType = "ament_cmake";
@@ -24,6 +24,6 @@ buildRosPackage {
      information.  It provides CameraInfo, and handles SetCameraInfo
      service requests, saving and restoring the camera calibration
      data.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

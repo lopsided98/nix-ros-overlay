@@ -490,6 +490,10 @@ self: super: {
 
  clips-vendor = self.callPackage ./clips-vendor {};
 
+ cloudini-lib = self.callPackage ./cloudini-lib {};
+
+ cloudini-ros = self.callPackage ./cloudini-ros {};
+
  cm-executors = self.callPackage ./cm-executors {};
 
  cm-topic-hardware-component = self.callPackage ./cm-topic-hardware-component {};
@@ -581,6 +585,8 @@ self: super: {
  create3-republisher = self.callPackage ./create3-republisher {};
 
  create3-teleop = self.callPackage ./create3-teleop {};
+
+ crx-kinematics = self.callPackage ./crx-kinematics {};
 
  cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
 
@@ -1232,6 +1238,8 @@ self: super: {
 
  gtsam = self.callPackage ./gtsam {};
 
+ gtsam2mrpt-serial = self.callPackage ./gtsam2mrpt-serial {};
+
  gurumdds-cmake-module = self.callPackage ./gurumdds-cmake-module {};
 
  gz-cmake-vendor = self.callPackage ./gz-cmake-vendor {};
@@ -1289,6 +1297,12 @@ self: super: {
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
  hpp-fcl = self.callPackage ./hpp-fcl {};
+
+ hri = self.callPackage ./hri {};
+
+ hri-actions-msgs = self.callPackage ./hri-actions-msgs {};
+
+ hri-msgs = self.callPackage ./hri-msgs {};
 
  husarion-components-description = self.callPackage ./husarion-components-description {};
 
@@ -1474,6 +1488,8 @@ self: super: {
 
  launch-frontend-py = self.callPackage ./launch-frontend-py {};
 
+ launch-pal = self.callPackage ./launch-pal {};
+
  launch-param-builder = self.callPackage ./launch-param-builder {};
 
  launch-pytest = self.callPackage ./launch-pytest {};
@@ -1586,6 +1602,8 @@ self: super: {
 
  lusb = self.callPackage ./lusb {};
 
+ lvr2 = self.callPackage ./lvr2 {};
+
  magic-enum = self.callPackage ./magic-enum {};
 
  magnetic-model = self.callPackage ./magnetic-model {};
@@ -1635,6 +1653,20 @@ self: super: {
  mavros-extras = self.callPackage ./mavros-extras {};
 
  mavros-msgs = self.callPackage ./mavros-msgs {};
+
+ mbf-abstract-core = self.callPackage ./mbf-abstract-core {};
+
+ mbf-abstract-nav = self.callPackage ./mbf-abstract-nav {};
+
+ mbf-msgs = self.callPackage ./mbf-msgs {};
+
+ mbf-simple-core = self.callPackage ./mbf-simple-core {};
+
+ mbf-simple-nav = self.callPackage ./mbf-simple-nav {};
+
+ mbf-test-utility = self.callPackage ./mbf-test-utility {};
+
+ mbf-utility = self.callPackage ./mbf-utility {};
 
  mcap-vendor = self.callPackage ./mcap-vendor {};
 
@@ -1739,6 +1771,8 @@ self: super: {
  motion-capture-tracking-interfaces = self.callPackage ./motion-capture-tracking-interfaces {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
+
+ move-base-flex = self.callPackage ./move-base-flex {};
 
  moveit = self.callPackage ./moveit {};
 
@@ -1915,6 +1949,12 @@ self: super: {
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ mujoco-ros2-control = self.callPackage ./mujoco-ros2-control {};
+
+ mujoco-ros2-control-demos = self.callPackage ./mujoco-ros2-control-demos {};
+
+ mujoco-ros2-control-msgs = self.callPackage ./mujoco-ros2-control-msgs {};
 
  mujoco-vendor = self.callPackage ./mujoco-vendor {};
 
@@ -2373,6 +2413,8 @@ self: super: {
  pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
 
  pybind11-vendor = self.callPackage ./pybind11-vendor {};
+
+ pyhri = self.callPackage ./pyhri {};
 
  pymoveit2 = self.callPackage ./pymoveit2 {};
 
@@ -2840,6 +2882,26 @@ self: super: {
 
  rosbag2rawlog = self.callPackage ./rosbag2rawlog {};
 
+ rosbot = self.callPackage ./rosbot {};
+
+ rosbot-bringup = self.callPackage ./rosbot-bringup {};
+
+ rosbot-controller = self.callPackage ./rosbot-controller {};
+
+ rosbot-description = self.callPackage ./rosbot-description {};
+
+ rosbot-gazebo = self.callPackage ./rosbot-gazebo {};
+
+ rosbot-hardware-interfaces = self.callPackage ./rosbot-hardware-interfaces {};
+
+ rosbot-joy = self.callPackage ./rosbot-joy {};
+
+ rosbot-localization = self.callPackage ./rosbot-localization {};
+
+ rosbot-moveit = self.callPackage ./rosbot-moveit {};
+
+ rosbot-utils = self.callPackage ./rosbot-utils {};
+
  rosbridge-library = self.callPackage ./rosbridge-library {};
 
  rosbridge-msgs = self.callPackage ./rosbridge-msgs {};
@@ -3077,6 +3139,8 @@ self: super: {
  rviz-imu-plugin = self.callPackage ./rviz-imu-plugin {};
 
  rviz-marker-tools = self.callPackage ./rviz-marker-tools {};
+
+ rviz-mbf-plugins = self.callPackage ./rviz-mbf-plugins {};
 
  rviz-ogre-vendor = self.callPackage ./rviz-ogre-vendor {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, builtin-interfaces, example-interfaces, osrf-testing-tools-cpp, rcl, rcl-interfaces, rclc, rclcpp, rcutils, rosidl-runtime-c, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rclc-parameter";
-  version = "6.1.0-r3";
+  version = "6.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclc-release/archive/release/jazzy/rclc_parameter/6.1.0-3.tar.gz";
-    name = "6.1.0-3.tar.gz";
-    sha256 = "daae11c3843febc3b3b4105e59578ede6a2479a084dcfc4d8488e7e3e9b50a8e";
+    url = "https://github.com/ros2-gbp/rclc-release/archive/release/jazzy/rclc_parameter/6.1.2-1.tar.gz";
+    name = "6.1.2-1.tar.gz";
+    sha256 = "0c0417b34510879f3e05d3af3c36a5144adca610ed5cc9dcd455a9ec3bbd1c07";
   };
 
   buildType = "ament_cmake";

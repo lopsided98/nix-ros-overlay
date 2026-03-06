@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-include-directories, ament-cmake-libraries }:
 buildRosPackage {
   pname = "ros-kilted-ament-cmake-target-dependencies";
-  version = "2.7.4-r1";
+  version = "2.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/kilted/ament_cmake_target_dependencies/2.7.4-1.tar.gz";
-    name = "2.7.4-1.tar.gz";
-    sha256 = "cd407aa60bd11435784fda4a55ed47fd7960d47134037ac3f363aa3630f524dd";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/kilted/ament_cmake_target_dependencies/2.7.5-1.tar.gz";
+    name = "2.7.5-1.tar.gz";
+    sha256 = "374a7c0d39af24d296c515494d18b9116506b98202b18944e775bb1e919020db";
   };
 
   buildType = "ament_cmake";

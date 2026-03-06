@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, asio, cmake, fastcdr, foonathan-memory-vendor, openssl, python3, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-jazzy-fastrtps";
-  version = "2.14.5-r2";
+  version = "2.14.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastdds-release/archive/release/jazzy/fastrtps/2.14.5-2.tar.gz";
-    name = "2.14.5-2.tar.gz";
-    sha256 = "4127878c5ce44453b8a512dba496a374c976a2660162351d297ebc816967c6df";
+    url = "https://github.com/ros2-gbp/fastdds-release/archive/release/jazzy/fastrtps/2.14.6-1.tar.gz";
+    name = "2.14.6-1.tar.gz";
+    sha256 = "29e054fe58c6820464d3995c9109d30aa3ca298734f422229320aa55b5c7e191";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-rosbridge-msgs";
-  version = "2.4.2-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/jazzy/rosbridge_msgs/2.4.2-1.tar.gz";
-    name = "2.4.2-1.tar.gz";
-    sha256 = "d8cebbd1aa2c167cdf29a5e2987c245820bc6ede7aa1735292cfeb92a5a8e4bb";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/jazzy/rosbridge_msgs/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "6102e6e8730ea7dad4f57e5aaf5af75bbfd23d577a2cf97dab275564052a32f3";
   };
 
   buildType = "ament_cmake";

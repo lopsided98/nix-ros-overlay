@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-std-srvs";
-  version = "5.5.1-r1";
+  version = "5.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/std_srvs/5.5.1-1.tar.gz";
-    name = "5.5.1-1.tar.gz";
-    sha256 = "98d1f955baecfecc5c64763ab1d860e689620eaa502e6fc2194fec070086cbf3";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/std_srvs/5.5.2-1.tar.gz";
+    name = "5.5.2-1.tar.gz";
+    sha256 = "b4aa051f97945373696bd45ec65e59e26aa8364e7116e00181a87b37ef05780d";
   };
 
   buildType = "ament_cmake";

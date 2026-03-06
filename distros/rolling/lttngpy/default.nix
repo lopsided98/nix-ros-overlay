@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, lttng-tools, pkg-config, python3, python3Packages, rpyutils }:
 buildRosPackage {
   pname = "ros-rolling-lttngpy";
-  version = "8.9.0-r1";
+  version = "8.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/rolling/lttngpy/8.9.0-1.tar.gz";
-    name = "8.9.0-1.tar.gz";
-    sha256 = "69c057d093d2352239f7d1986075e4586a9b043f34f20c334b87421e276785bc";
+    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/rolling/lttngpy/8.10.0-1.tar.gz";
+    name = "8.10.0-1.tar.gz";
+    sha256 = "dc9d88beafcaf2f70078c5283434aabc20c8b129604f10079d86344b22ff51df";
   };
 
   buildType = "ament_cmake";

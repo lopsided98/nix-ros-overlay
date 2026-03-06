@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ewellix-interfaces, ewellix-moveit-config, gz-ros2-control, ros-gz, rviz2 }:
 buildRosPackage {
   pname = "ros-jazzy-ewellix-sim";
-  version = "0.2.0-r1";
+  version = "0.2.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ewellix_lift_common-release/archive/release/jazzy/ewellix_sim/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "168352821766880c7419a4e18f186fe82ea81d32740ab406a8c221b49d7ddeca";
+    url = "https://github.com/clearpath-gbp/ewellix_lift_common-release/archive/release/jazzy/ewellix_sim/0.2.1-2.tar.gz";
+    name = "0.2.1-2.tar.gz";
+    sha256 = "12d94ba81bf63bd2fce6b2f314dccdb1a74612fc731afa69b7e0cf4fc78193ba";
   };
 
   buildType = "ament_cmake";

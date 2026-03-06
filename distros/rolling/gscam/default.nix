@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, camera-calibration-parsers, camera-info-manager, class-loader, cv-bridge, gst_all_1, image-transport, rclcpp, rclcpp-components, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, camera-calibration-parsers, camera-info-manager, class-loader, gst_all_1, image-transport, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-gscam";
-  version = "2.0.2-r4";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gscam-release/archive/release/rolling/gscam/2.0.2-4.tar.gz";
-    name = "2.0.2-4.tar.gz";
-    sha256 = "811ebc18b133838cc6e658f4e9823f2c9c78c332f307fbdc27568cb70de239b6";
+    url = "https://github.com/ros2-gbp/gscam-release/archive/release/rolling/gscam/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "709f6109542aa75b721c2b029d8abc281577bf85019ad8e05fe877d846744425";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ camera-calibration-parsers camera-info-manager class-loader cv-bridge gst_all_1.gst-plugins-base gst_all_1.gstreamer image-transport rclcpp rclcpp-components sensor-msgs ];
+  propagatedBuildInputs = [ camera-calibration-parsers camera-info-manager class-loader gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gstreamer image-transport rclcpp rclcpp-components sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

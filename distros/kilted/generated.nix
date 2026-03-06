@@ -374,6 +374,10 @@ self: super: {
 
  clips-vendor = self.callPackage ./clips-vendor {};
 
+ cloudini-lib = self.callPackage ./cloudini-lib {};
+
+ cloudini-ros = self.callPackage ./cloudini-ros {};
+
  cm-topic-hardware-component = self.callPackage ./cm-topic-hardware-component {};
 
  coal = self.callPackage ./coal {};
@@ -429,6 +433,8 @@ self: super: {
  cras-msgs = self.callPackage ./cras-msgs {};
 
  cras-topic-tools = self.callPackage ./cras-topic-tools {};
+
+ crx-kinematics = self.callPackage ./crx-kinematics {};
 
  cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
 
@@ -979,6 +985,8 @@ self: super: {
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  gtsam = self.callPackage ./gtsam {};
+
+ gtsam2mrpt-serial = self.callPackage ./gtsam2mrpt-serial {};
 
  gurumdds-cmake-module = self.callPackage ./gurumdds-cmake-module {};
 
@@ -1601,6 +1609,12 @@ self: super: {
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ mujoco-ros2-control = self.callPackage ./mujoco-ros2-control {};
+
+ mujoco-ros2-control-demos = self.callPackage ./mujoco-ros2-control-demos {};
+
+ mujoco-ros2-control-msgs = self.callPackage ./mujoco-ros2-control-msgs {};
 
  mujoco-vendor = self.callPackage ./mujoco-vendor {};
 
@@ -2723,6 +2737,8 @@ self: super: {
  sick-safevisionary-tests = self.callPackage ./sick-safevisionary-tests {};
 
  sick-scan-xd = self.callPackage ./sick-scan-xd {};
+
+ simple-actions = self.callPackage ./simple-actions {};
 
  simple-grasping = self.callPackage ./simple-grasping {};
 

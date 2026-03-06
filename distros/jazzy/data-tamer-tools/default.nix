@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-gtest, ament-cmake-lint-cmake, ament-index-cpp, ament-lint, backward-ros, data-tamer-cpp, data-tamer-msgs, foxglove-sdk-vendor, mcap-vendor, nlohmann_json, protobuf, rcl-interfaces, rclcpp, rclcpp-components, rosidl-default-generators }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-gtest, ament-cmake-lint-cmake, ament-index-cpp, ament-lint, backward-ros, data-tamer-cpp, data-tamer-msgs, foxglove-sdk-vendor, geographic-msgs, mcap-vendor, nlohmann_json, protobuf, rcl-interfaces, rclcpp, rclcpp-components, rosidl-default-generators, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-data-tamer-tools";
-  version = "0.2.1-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/jlack1987/data_tamer_tools-release/archive/release/jazzy/data_tamer_tools/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "3fc793761c26e7d111ef12c1f20e58322bd657c2557a82409349ec068d745568";
+    url = "https://github.com/ros2-gbp/data_tamer_tools-release/archive/release/jazzy/data_tamer_tools/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "d3443cc60f508fa1483b2688fbd82a4bcc3dda2c5098abffff8e7145489f7236";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];
   checkInputs = [ ament-cmake-clang-format ament-cmake-cppcheck ament-cmake-gtest ament-cmake-lint-cmake ament-index-cpp ament-lint ];
-  propagatedBuildInputs = [ backward-ros data-tamer-cpp data-tamer-msgs foxglove-sdk-vendor mcap-vendor nlohmann_json protobuf rcl-interfaces rclcpp rclcpp-components ];
+  propagatedBuildInputs = [ backward-ros data-tamer-cpp data-tamer-msgs foxglove-sdk-vendor geographic-msgs mcap-vendor nlohmann_json protobuf rcl-interfaces rclcpp rclcpp-components sensor-msgs ];
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {

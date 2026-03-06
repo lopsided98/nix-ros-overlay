@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, python3Packages, rclpy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-camera-info-manager-py";
-  version = "6.4.4-r1";
+  version = "6.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/camera_info_manager_py/6.4.4-1.tar.gz";
-    name = "6.4.4-1.tar.gz";
-    sha256 = "f4e090f063e6ca879d5384dccdb415b9baa12a7081e733c4516db401254a6a6e";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/camera_info_manager_py/6.4.5-1.tar.gz";
+    name = "6.4.5-1.tar.gz";
+    sha256 = "3341bb0c0b1619c3516cb1eb863c5f1bbb5670047e41e7e8c22f3bf24bc96e06";
   };
 
   buildType = "ament_python";
@@ -22,6 +22,6 @@ buildRosPackage {
 
     This ROS package provides a CameraInfo interface for Python camera
     drivers similar to the C++ camera_info_manager package.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

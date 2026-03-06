@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-clang-tidy, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, async-web-server-cpp, boost, cv-bridge, ffmpeg, image-transport, opencv, pkg-config, pluginlib, rclcpp, rclcpp-components, rmw, ros-environment, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-web-video-server";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/web_video_server-release/archive/release/humble/web_video_server/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "673af3acbbe60efa149152ac2b02095d9c8ea7de1850d84d3232a59625a37acb";
+    url = "https://github.com/ros2-gbp/web_video_server-release/archive/release/humble/web_video_server/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "5914465de3d2c10305b379f8800fdc8535c7b0767ba209969f8de4b4877731db";
   };
 
   buildType = "ament_cmake";

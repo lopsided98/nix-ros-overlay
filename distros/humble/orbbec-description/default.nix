@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-humble-orbbec-description";
-  version = "2.6.3-r2";
+  version = "2.7.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/orbbec_camera_v2-release/archive/release/humble/orbbec_description/2.6.3-2.tar.gz";
-    name = "2.6.3-2.tar.gz";
-    sha256 = "0360ff5b8b41e65f2634ce78a70ace0135f92751748104960ebd8ef2f533b3ea";
+    url = "https://github.com/orbbec/orbbec_camera_v2-release/archive/release/humble/orbbec_description/2.7.6-1.tar.gz";
+    name = "2.7.6-1.tar.gz";
+    sha256 = "4b118b714f68277adda61d7f6feb2b00920f0cba8e3c22c44d1d630c108c08b5";
   };
 
   buildType = "ament_cmake";

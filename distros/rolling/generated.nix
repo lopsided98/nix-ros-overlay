@@ -396,6 +396,10 @@ self: super: {
 
  clips-vendor = self.callPackage ./clips-vendor {};
 
+ cloudini-lib = self.callPackage ./cloudini-lib {};
+
+ cloudini-ros = self.callPackage ./cloudini-ros {};
+
  cm-topic-hardware-component = self.callPackage ./cm-topic-hardware-component {};
 
  coal = self.callPackage ./coal {};
@@ -452,6 +456,8 @@ self: super: {
 
  crocoddyl = self.callPackage ./crocoddyl {};
 
+ crx-kinematics = self.callPackage ./crx-kinematics {};
+
  cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
@@ -493,6 +499,8 @@ self: super: {
  data-tamer-cpp = self.callPackage ./data-tamer-cpp {};
 
  data-tamer-msgs = self.callPackage ./data-tamer-msgs {};
+
+ data-tamer-tools = self.callPackage ./data-tamer-tools {};
 
  delphi-esr-msgs = self.callPackage ./delphi-esr-msgs {};
 
@@ -890,6 +898,8 @@ self: super: {
 
  gtsam = self.callPackage ./gtsam {};
 
+ gtsam2mrpt-serial = self.callPackage ./gtsam2mrpt-serial {};
+
  gurumdds-cmake-module = self.callPackage ./gurumdds-cmake-module {};
 
  gz-cmake-vendor = self.callPackage ./gz-cmake-vendor {};
@@ -945,6 +955,12 @@ self: super: {
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
  hpp-fcl = self.callPackage ./hpp-fcl {};
+
+ hri = self.callPackage ./hri {};
+
+ hri-actions-msgs = self.callPackage ./hri-actions-msgs {};
+
+ hri-msgs = self.callPackage ./hri-msgs {};
 
  ibeo-msgs = self.callPackage ./ibeo-msgs {};
 
@@ -1530,6 +1546,12 @@ self: super: {
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
+ mujoco-ros2-control = self.callPackage ./mujoco-ros2-control {};
+
+ mujoco-ros2-control-demos = self.callPackage ./mujoco-ros2-control-demos {};
+
+ mujoco-ros2-control-msgs = self.callPackage ./mujoco-ros2-control-msgs {};
+
  mujoco-vendor = self.callPackage ./mujoco-vendor {};
 
  multires-image = self.callPackage ./multires-image {};
@@ -1828,6 +1850,8 @@ self: super: {
 
  pybind11-vendor = self.callPackage ./pybind11-vendor {};
 
+ pyhri = self.callPackage ./pyhri {};
+
  pymoveit2 = self.callPackage ./pymoveit2 {};
 
  python-cmake-module = self.callPackage ./python-cmake-module {};
@@ -1901,6 +1925,8 @@ self: super: {
  rcl-logging-noop = self.callPackage ./rcl-logging-noop {};
 
  rcl-logging-spdlog = self.callPackage ./rcl-logging-spdlog {};
+
+ rcl-logging-syslog = self.callPackage ./rcl-logging-syslog {};
 
  rcl-yaml-param-parser = self.callPackage ./rcl-yaml-param-parser {};
 

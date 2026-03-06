@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gtsam, mola-common, mola-gtsam-factors, mola-yaml, mp2p-icp, mrpt-libmaps, mrpt-libtclap }:
 buildRosPackage {
   pname = "ros-jazzy-mola-georeferencing";
-  version = "2.1.0-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/jazzy/mola_georeferencing/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "c2bfdd07929b4c60e081ec26c00a6d3d671a609ba4bded5d8cdffef75b210959";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/jazzy/mola_georeferencing/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "66d34b3727750cc3748f053037995428b26f399e2b9dc536429d021c2ef624d9";
   };
 
   buildType = "cmake";

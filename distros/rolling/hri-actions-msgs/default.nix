@@ -1,0 +1,25 @@
+
+# Copyright 2026 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
+buildRosPackage {
+  pname = "ros-rolling-hri-actions-msgs";
+  version = "2.5.0-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros4hri/hri_actions_msgs-release/archive/release/rolling/hri_actions_msgs/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "66b255b6e560665a4e7cd48924b53c6db6c27c726740b8c1ac035d7d77a7ac31";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake rosidl-default-generators ];
+  propagatedBuildInputs = [ action-msgs builtin-interfaces geometry-msgs rosidl-default-runtime std-msgs ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
+
+  meta = {
+    description = "Action definitions useful for Human-Robot Interaction";
+    license = with lib.licenses; [ bsdOriginal ];
+  };
+}
