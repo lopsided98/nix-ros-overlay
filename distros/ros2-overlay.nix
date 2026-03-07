@@ -112,6 +112,18 @@ rosSelf: rosSuper: with rosSelf.lib; {
     '';
   });
 
+  cloudini-lib = (rosSuper.cloudini-lib.override {
+    lz4 = self.lz4.overrideAttrs ({
+      cmakeFlags ? [], ...
+    }: {
+      cmakeFlags = cmakeFlags ++ [
+        "-DBUILD_STATIC_LIBS=ON"
+        "-DBUILD_TESTING=ON"
+      ];
+    });
+    zstd = self.zstd.override { enableStatic = true; };
+  }).overrideAttrs { doCheck = true; };
+
   # Fails with ROS vendored tl-expected. Needs the one from nixpkgs.
   cras-cpp-common = rosSuper.cras-cpp-common.override { tl-expected = self.tl-expected; };
 
