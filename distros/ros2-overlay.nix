@@ -5,6 +5,13 @@ rosSelf: rosSuper: with rosSelf.lib; {
   python = rosSelf.python3;
   pythonPackages = rosSelf.python.pkgs;
 
+  ardrone-sdk = rosSuper.ardrone-sdk.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    # https://github.com/vtalpaert/ardrone-ros2/pull/2
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+  });
+
   ament-cmake-core = rosSuper.ament-cmake-core.overrideAttrs ({
     propagatedBuildInputs ? [],
     nativeBuildInputs ? [], ...
