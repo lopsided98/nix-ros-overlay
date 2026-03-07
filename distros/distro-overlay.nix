@@ -85,7 +85,7 @@ let
 
     # Some third-party packages are available in rodistro,
     # but have a better packaging in nixpkgs, so use it instead
-    inherit (self.python3Packages) coal eigenpy hpp-fcl pinocchio crocoddyl ;
+    inherit (self.python3Packages) coal eigenpy pinocchio crocoddyl ;
 
     freeimage = null; # Get rid of freeimage
 
@@ -100,6 +100,9 @@ let
       # Eigen version in dependent packages.
       cmakeFlags = cmakeFlags ++ [ "-DGTSAM_USE_SYSTEM_EIGEN=ON" ];
     });
+
+    # hpp-fcl was renamed to coal and we use the version from nixpkgs (see above)
+    hpp-fcl = rosSelf.coal;
 
     joint-state-publisher-gui = rosSuper.joint-state-publisher-gui.overrideAttrs ({
       nativeBuildInputs ? [], postFixup ? "", ...
