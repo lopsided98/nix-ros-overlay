@@ -1,5 +1,18 @@
 self:
-rosSelf: rosSuper: with rosSelf.lib; {
+rosSelf: rosSuper:
+let
+  rtabmapPostPatchAarch64 = {
+    postPatch ? "", ...
+  }: {
+    # Fix https://github.com/lopsided98/nix-ros-overlay/issues/815 by
+    # disabling the aarch64-specific code that searches in /opt.
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail 'if(CMAKE_SYSTEM_PROCESSOR STREQUAL "aarch64")' 'if(FALSE)'
+    '';
+  };
+in
+with rosSelf.lib; {
 
   # TODO: remove once https://github.com/ros/rosdistro/pull/43895 is merged
   python = rosSelf.python3;
@@ -374,6 +387,14 @@ rosSelf: rosSuper: with rosSelf.lib; {
       wrapQtApp "$out/lib/rqt_robot_monitor/rqt_robot_monitor"
     '';
   });
+
+  rtabmap-conversions = rosSuper.rtabmap-conversions.overrideAttrs rtabmapPostPatchAarch64;
+  rtabmap-msgs = rosSuper.rtabmap-msgs.overrideAttrs rtabmapPostPatchAarch64;
+  rtabmap-odom = rosSuper.rtabmap-odom.overrideAttrs rtabmapPostPatchAarch64;
+  rtabmap-rviz-plugins = rosSuper.rtabmap-rviz-plugins.overrideAttrs rtabmapPostPatchAarch64;
+  rtabmap-slam = rosSuper.rtabmap-slam.overrideAttrs rtabmapPostPatchAarch64;
+  rtabmap-sync = rosSuper.rtabmap-sync.overrideAttrs rtabmapPostPatchAarch64;
+  rtabmap-viz = rosSuper.rtabmap-viz.overrideAttrs rtabmapPostPatchAarch64;
 
   # Common overrides for all distros. See also <distro>/overrides.nix.
   rviz2 = rosSuper.rviz2.overrideAttrs ({
