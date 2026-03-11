@@ -120,6 +120,25 @@ substituters = https://cache.nixos.org https://ros.cachix.org
 trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= ros.cachix.org-1:dSyZxI8geDCJrwgvCOHDoAfOm5sV1wCPjBkKL+38Rvo=
 ```
 
+> [!WARNING]
+> Unfortunately, the capacity of the free [Cachix
+> cache](https://ros.cachix.org) is no longer sufficient, and packages
+> may be evicted after a short time or not be present at all. We are
+> [working on resolving the situation][cache-issue]. Until this is
+> resolved (no ETA yet), you can use the **experimental binary cache**
+> maintained by [@wentasah][] and populated by his [Hydra][Hydra
+> instance]. Note that 100% availability is not guaranteed, and
+> bandwidth may be limited, especially outside of Europe.
+>
+> To use the experimental binary cache, append the following to your `nix.conf`:
+>
+> ```
+> extra-substituters = https://attic.iid.ciirc.cvut.cz/ros
+> extra-trusted-public-keys = ros:JR95vUYsShSqfA1VTYoFt1Nz6uXasm5QrcOsGry9f6Q=
+> ```
+
+[cache-issue]: https://github.com/lopsided98/nix-ros-overlay/issues/754
+
 ## Frequently Asked Questions
 
 **Q: Why do some some packages fail to evaluate due to `_unresolved_<dependency>` arguments?**
