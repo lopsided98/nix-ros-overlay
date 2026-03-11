@@ -112,7 +112,7 @@ What still needs to be done:
 
 ## Configure Binary Cache
 
-Prebuilt ROS packages (for x86_64-linux and aarch64-linux) are hosted on [Cachix](https://ros.cachix.org) and built using GitHub Actions on public infrastructure.
+Prebuilt ROS packages (for x86_64-linux and aarch64-linux) are hosted on [Cachix](https://ros.cachix.org) and built [using GitHub Actions on public infrastructure](https://github.com/lopsided98/nix-ros-overlay/actions/workflows/build.yaml).
 
 To use this binary cache, either run `cachix use ros` or manually set the following options in `nix.conf`:
 ```
