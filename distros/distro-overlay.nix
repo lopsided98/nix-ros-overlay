@@ -59,10 +59,14 @@ let
               exit 1
             fi
           '';
-          # Work around problems reported in
-          # https://github.com/MRPT/mrpt/pull/1338 and
-          # https://github.com/MRPT/mrpt_ros/pull/5
-          buildInputs = buildInputs ++ [ rosSelf.octomap or self.octomap ];
+          buildInputs = buildInputs ++ [
+            # Work around problems reported in
+            # https://github.com/MRPT/mrpt/pull/1338 and
+            # https://github.com/MRPT/mrpt_ros/pull/5
+            rosSelf.octomap or self.octomap
+            # If libfyaml is not found, cmake tries to download it, which fails
+            self.libfyaml
+          ];
         });
     in rosSuper.lib.genAttrs [
       "mrpt-apps"
