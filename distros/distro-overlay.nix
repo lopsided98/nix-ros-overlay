@@ -178,6 +178,12 @@ let
       '';
     });
 
+    # We map ROS packages that depend on Ubuntu's libexpected-dev to
+    # depend on tl-expected-nixpkgs. We cannot use the name
+    # tl-expected because it is shadowed by tl-expected package from
+    # rosdistro.
+    tl-expected-nixpkgs = self.tl-expected;
+
   } // (mrptOverrides rosSelf rosSuper)
   // self.lib.optionalAttrs (rosSuper ? gz-ogre-next-vendor) {
     gz-ogre-next-vendor = (rosSelf.lib.patchAmentVendorGit rosSuper.gz-ogre-next-vendor {
