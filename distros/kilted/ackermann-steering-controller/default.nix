@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-cmake, ros2-control-test-assets, std-srvs, steering-controllers-library }:
 buildRosPackage {
   pname = "ros-kilted-ackermann-steering-controller";
-  version = "5.13.0-r1";
+  version = "5.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/ackermann_steering_controller/5.13.0-1.tar.gz";
-    name = "5.13.0-1.tar.gz";
-    sha256 = "30bbbd1fd202d77c35dce754a2bdf87f432f36bd9de2bdedaa3b84ac0b1b57bb";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/ackermann_steering_controller/5.13.1-1.tar.gz";
+    name = "5.13.1-1.tar.gz";
+    sha256 = "9c33e535805e0c78578843edf48ed0d1240b840bbe8f2ecb6ebf0dc7388a11ab";
   };
 
   buildType = "ament_cmake";

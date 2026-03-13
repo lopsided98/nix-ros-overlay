@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-jazzy-auto-apms-interfaces";
-  version = "1.4.2-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/jazzy/auto_apms_interfaces/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "e1edc30d9b8c910684fc0dbe43c229860c8841037192b9d14d874b33f7b25067";
+    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/jazzy/auto_apms_interfaces/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "f5ce4663b6ee7a93052942f7581328255a53c3d3e79c9e950b5b91536a83ded5";
   };
 
   buildType = "ament_cmake";

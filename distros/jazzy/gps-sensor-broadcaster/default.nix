@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, controller-interface, controller-manager, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-gps-sensor-broadcaster";
-  version = "4.37.0-r1";
+  version = "4.38.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/gps_sensor_broadcaster/4.37.0-1.tar.gz";
-    name = "4.37.0-1.tar.gz";
-    sha256 = "a7cb836ccf1e8b04fa048e2e80e76dcef66b49892847ae42ba957cba347d31c6";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/gps_sensor_broadcaster/4.38.0-1.tar.gz";
+    name = "4.38.0-1.tar.gz";
+    sha256 = "81b82df4d945d81aab707bb954cc107fc16cdebac6e46f059eccdf101f20f69d";
   };
 
   buildType = "ament_cmake";

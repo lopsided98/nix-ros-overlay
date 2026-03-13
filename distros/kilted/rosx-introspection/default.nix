@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, geometry-msgs, rapidjson, rclcpp, rosbag2-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-rosx-introspection";
-  version = "2.1.0-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosx_introspection-release/archive/release/kilted/rosx_introspection/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "85826c8c2ca4ab875911b6c4bf9d9ade1fc7b6ef234cd09739bfa247894d5b31";
+    url = "https://github.com/ros2-gbp/rosx_introspection-release/archive/release/kilted/rosx_introspection/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "ce6b4eb35825ae587e57455835a4dd93658df287c6044ec214675decebd8594c";
   };
 
   buildType = "ament_cmake";

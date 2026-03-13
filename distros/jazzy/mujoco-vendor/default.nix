@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git, patchelf, pkg-config }:
 buildRosPackage {
   pname = "ros-jazzy-mujoco-vendor";
-  version = "0.0.7-r1";
+  version = "0.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_vendor-release/archive/release/jazzy/mujoco_vendor/0.0.7-1.tar.gz";
-    name = "0.0.7-1.tar.gz";
-    sha256 = "f1f0c602eeedafa145c59e4c5f102038eda15c87194dee87016a97231b650ed0";
+    url = "https://github.com/ros2-gbp/mujoco_vendor-release/archive/release/jazzy/mujoco_vendor/0.0.8-1.tar.gz";
+    name = "0.0.8-1.tar.gz";
+    sha256 = "2b1e65ed4df00e481723575565d62c3ae52422d975d1bd075e2671589ba11910";
   };
 
   buildType = "ament_cmake";

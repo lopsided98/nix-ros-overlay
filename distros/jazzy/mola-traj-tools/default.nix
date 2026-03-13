@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-jazzy-mola-traj-tools";
-  version = "2.5.0-r1";
+  version = "2.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_traj_tools/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "26571e483338e456cf113c82d03310a12a66a6214d845bef72f7d0004546a2c4";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_traj_tools/2.6.0-1.tar.gz";
+    name = "2.6.0-1.tar.gz";
+    sha256 = "84ce3e9735d7b36584331c4614ad2c88ea9423bc42a20b8e9880c3a9e03a7656";
   };
 
   buildType = "cmake";

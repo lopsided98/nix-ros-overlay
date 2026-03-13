@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, launch, launch-ros, launch-testing, launch-testing-ros, play-motion2, python3Packages, rclpy, ros2cli }:
 buildRosPackage {
   pname = "ros-humble-play-motion2-cli";
-  version = "1.8.3-r1";
+  version = "1.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/humble/play_motion2_cli/1.8.3-1.tar.gz";
-    name = "1.8.3-1.tar.gz";
-    sha256 = "82ef1e9595381571ec6afdbdd44af948e156604778577ef86e86057373115d7f";
+    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/humble/play_motion2_cli/1.8.4-1.tar.gz";
+    name = "1.8.4-1.tar.gz";
+    sha256 = "e9b2c4356b415164d74f76422e1b010f630f555ecf3046a381fb3cd3b8dd0f75";
   };
 
   buildType = "ament_python";

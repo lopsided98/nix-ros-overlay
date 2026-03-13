@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-ros2cli-test-interfaces";
-  version = "0.38.2-r1";
+  version = "0.38.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/kilted/ros2cli_test_interfaces/0.38.2-1.tar.gz";
-    name = "0.38.2-1.tar.gz";
-    sha256 = "4bcae3a4c1362fdd88bfe577e230efaf2224071d9ef8d1c55b071519e2284e15";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/kilted/ros2cli_test_interfaces/0.38.3-2.tar.gz";
+    name = "0.38.3-2.tar.gz";
+    sha256 = "275a49794ed0c5fe2879cb91c22aa3c70b577f33678d184fbc387c0afaab83a5";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-gtest, ament-cmake-python, ament-index-cpp, ament-index-python, auto-apms-interfaces, generate-parameter-library, pluginlib, rclcpp, rclcpp-action, rcpputils, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-auto-apms-util";
-  version = "1.4.2-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/jazzy/auto_apms_util/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "bfc864c94a05fe1f759eb47a10a24de633e168d714ba85d1c56b1c6172d30626";
+    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/jazzy/auto_apms_util/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "2eb60811f7ec847f22193f0d35e9427ff0dc3c2cbf65c1e478ff78d76c568412";
   };
 
   buildType = "ament_cmake";

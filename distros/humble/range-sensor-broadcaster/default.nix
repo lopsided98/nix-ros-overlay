@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-range-sensor-broadcaster";
-  version = "2.52.0-r1";
+  version = "2.52.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/range_sensor_broadcaster/2.52.0-1.tar.gz";
-    name = "2.52.0-1.tar.gz";
-    sha256 = "8a59bab19f4bb8e39b403a3844a53d9a6e2f4e2eed70f1aaeba4bac40cf1545f";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/range_sensor_broadcaster/2.52.1-1.tar.gz";
+    name = "2.52.1-1.tar.gz";
+    sha256 = "0ca78c2d3b052a1675dd89a8c349d84646ed258c3fb5aef45e8f78b0f2f107e5";
   };
 
   buildType = "ament_cmake";

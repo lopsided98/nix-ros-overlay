@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, rclpy, urdfdom, xacro }:
 buildRosPackage {
   pname = "ros-humble-urdf-test";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/urdf_test-ros2-gbp/archive/release/humble/urdf_test/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "61f45e622928b64868a5c385767c2b6b91e6f15ce133c49e921ef4c998672d8a";
+    url = "https://github.com/pal-gbp/urdf_test-ros2-gbp/archive/release/humble/urdf_test/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "3f9ac2c0052ce06505ba6d2d56b88b977f45ae24ee050ae1bd0107bde0791568";
   };
 
   buildType = "ament_cmake";

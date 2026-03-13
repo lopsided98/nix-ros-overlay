@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen, embree, flann, freeglut, gdal, gsl, hdf5, libtiff, lz4, ocl-icd, onetbb, opencv, xorg, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-lvr2";
-  version = "25.2.1-r1";
+  version = "25.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/lvr2-release/archive/release/jazzy/lvr2/25.2.1-1.tar.gz";
-    name = "25.2.1-1.tar.gz";
-    sha256 = "777094284628d7a247ea7d80c4f721197db8703ea88f71b165ba779698af9fa9";
+    url = "https://github.com/ros2-gbp/lvr2-release/archive/release/jazzy/lvr2/25.2.2-1.tar.gz";
+    name = "25.2.2-1.tar.gz";
+    sha256 = "c89e2c2897f3eb7dd417018d59b11e48de2ea88b84654fc3304acbc509ac3317";
   };
 
   buildType = "cmake";

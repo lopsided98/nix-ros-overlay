@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-play-motion2-msgs";
-  version = "1.8.3-r1";
+  version = "1.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/rolling/play_motion2_msgs/1.8.3-1.tar.gz";
-    name = "1.8.3-1.tar.gz";
-    sha256 = "c9138e672fa1325e1eb7b00cf0b572f3e2b3319ddf2b5338ae72b68c0988e0cb";
+    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/rolling/play_motion2_msgs/1.8.4-1.tar.gz";
+    name = "1.8.4-1.tar.gz";
+    sha256 = "4958e8fd92aaaf493a254a12c86368fdd95f463556255a77723963955189fc40";
   };
 
   buildType = "ament_cmake";

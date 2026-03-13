@@ -676,6 +676,8 @@ self: super: {
 
  depthai-ros-msgs = self.callPackage ./depthai-ros-msgs {};
 
+ depthai-v3 = self.callPackage ./depthai-v3 {};
+
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
 
  derived-object-msgs = self.callPackage ./derived-object-msgs {};
@@ -1304,6 +1306,10 @@ self: super: {
 
  hri-msgs = self.callPackage ./hri-msgs {};
 
+ hri-rviz = self.callPackage ./hri-rviz {};
+
+ human-description = self.callPackage ./human-description {};
+
  husarion-components-description = self.callPackage ./husarion-components-description {};
 
  husarion-ugv-description = self.callPackage ./husarion-ugv-description {};
@@ -1698,6 +1704,8 @@ self: super: {
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
+ mobile-robot-simulator = self.callPackage ./mobile-robot-simulator {};
+
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
  mocap4r2-msgs = self.callPackage ./mocap4r2-msgs {};
@@ -1769,6 +1777,8 @@ self: super: {
  motion-capture-tracking = self.callPackage ./motion-capture-tracking {};
 
  motion-capture-tracking-interfaces = self.callPackage ./motion-capture-tracking-interfaces {};
+
+ motion-primitives-controllers = self.callPackage ./motion-primitives-controllers {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
 
@@ -2746,6 +2756,8 @@ self: super: {
 
  ros2-fmt-logger = self.callPackage ./ros2-fmt-logger {};
 
+ ros2-snapshot = self.callPackage ./ros2-snapshot {};
+
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
 
  ros2-socketcan-msgs = self.callPackage ./ros2-socketcan-msgs {};
@@ -3115,6 +3127,8 @@ self: super: {
  rtabmap-viz = self.callPackage ./rtabmap-viz {};
 
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
+
+ rtest = self.callPackage ./rtest {};
 
  rti-connext-dds-cmake-module = self.callPackage ./rti-connext-dds-cmake-module {};
 
@@ -3667,6 +3681,8 @@ self: super: {
  urdf-launch = self.callPackage ./urdf-launch {};
 
  urdf-parser-plugin = self.callPackage ./urdf-parser-plugin {};
+
+ urdf-test = self.callPackage ./urdf-test {};
 
  urdf-tutorial = self.callPackage ./urdf-tutorial {};
 

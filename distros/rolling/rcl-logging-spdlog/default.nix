@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, performance-test-fixture, rcl-logging-interface, rcpputils, rcutils, spdlog, spdlog-vendor }:
 buildRosPackage {
   pname = "ros-rolling-rcl-logging-spdlog";
-  version = "3.4.0-r1";
+  version = "3.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/rolling/rcl_logging_spdlog/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "7ccf5d3c655f14deb8e0cda48bd45fd74494512f1a3f40b7e3053e004d190430";
+    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/rolling/rcl_logging_spdlog/3.4.1-1.tar.gz";
+    name = "3.4.1-1.tar.gz";
+    sha256 = "2f0ee9e536a3fe59942db96c68dedd2cf8730c85b5099d47c2d6ab69d0abfe32";
   };
 
   buildType = "ament_cmake";

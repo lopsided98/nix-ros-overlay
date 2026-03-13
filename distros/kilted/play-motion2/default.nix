@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-index-cpp, ament-lint-auto, ament-lint-common, backward-ros, control-msgs, controller-interface, controller-manager, controller-manager-msgs, hardware-interface, joint-state-broadcaster, joint-trajectory-controller, launch, launch-ros, launch-testing-ament-cmake, lifecycle-msgs, moveit-ros-planning-interface, play-motion2-msgs, pluginlib, rclcpp, rclcpp-action, rclcpp-components, rclcpp-lifecycle, realtime-tools, robot-state-publisher, sensor-msgs, std-msgs, trajectory-msgs, xacro }:
 buildRosPackage {
   pname = "ros-kilted-play-motion2";
-  version = "1.8.3-r1";
+  version = "1.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/kilted/play_motion2/1.8.3-1.tar.gz";
-    name = "1.8.3-1.tar.gz";
-    sha256 = "cdfdea1df7b2486261eca9747bcbc8b9f36e6023bd2837e9f37f2b88894ba05a";
+    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/kilted/play_motion2/1.8.4-1.tar.gz";
+    name = "1.8.4-1.tar.gz";
+    sha256 = "d5bea0ed58f7874fecc03af8254612190e043fdb10b719eef41afe902095b58d";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-rolling-tcb-span";
-  version = "1.2.0-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/rolling/tcb_span/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "2d5ae26cd23005eb21b96b117a447b2e9bd21d585e9420401e6cf3a5c9cea007";
+    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/rolling/tcb_span/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "34639aa3118a8d7911d9b431327984bd41ec6c0680782a0d67ab48a4e96023ce";
   };
 
   buildType = "ament_cmake";

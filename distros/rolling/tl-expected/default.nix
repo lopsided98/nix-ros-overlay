@@ -2,19 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, tl-expected }:
 buildRosPackage {
   pname = "ros-rolling-tl-expected";
-  version = "1.2.0-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/rolling/tl_expected/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "a39191e8e9cd087467597348ca22b4870ff8f7019c9fef6bac866f2903a70374";
+    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/rolling/tl_expected/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "76c3e50605b1d1dd5e37144a02050337d299c0658b2c36e503fe792e0a8234ae";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
+  propagatedBuildInputs = [ tl-expected ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

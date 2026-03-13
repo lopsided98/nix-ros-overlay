@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git, patchelf, pkg-config }:
 buildRosPackage {
   pname = "ros-rolling-mujoco-vendor";
-  version = "0.0.7-r1";
+  version = "0.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_vendor-release/archive/release/rolling/mujoco_vendor/0.0.7-1.tar.gz";
-    name = "0.0.7-1.tar.gz";
-    sha256 = "69f6146d23ef68318dcbf6ba17939419162d10ae480b95766abfc719f0996a7d";
+    url = "https://github.com/ros2-gbp/mujoco_vendor-release/archive/release/rolling/mujoco_vendor/0.0.8-1.tar.gz";
+    name = "0.0.8-1.tar.gz";
+    sha256 = "4c84fc5f54b2bcd6d55105476cc2ed8f3b13494471fe5d7564f1ad615aa98934";
   };
 
   buildType = "ament_cmake";
