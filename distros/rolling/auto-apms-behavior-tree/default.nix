@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-python, ament-index-python, auto-apms-behavior-tree-core, auto-apms-interfaces, auto-apms-util, generate-parameter-library, geometry-msgs, rcl-interfaces, rclcpp, rclcpp-action, rclcpp-components, rclpy, ros2cli, ros2param, std-srvs, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-rolling-auto-apms-behavior-tree";
-  version = "1.4.2-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/rolling/auto_apms_behavior_tree/1.4.2-1.tar.gz";
-    name = "1.4.2-1.tar.gz";
-    sha256 = "854458580048280264a29e139e380cd2578e3a6518efdb0d43c0bcb26b22fbbe";
+    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/rolling/auto_apms_behavior_tree/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "1375d5fe91e80ded35faa909ddfd03683bd53d4b7e682e1227a788fe7c301bea";
   };
 
   buildType = "ament_cmake";

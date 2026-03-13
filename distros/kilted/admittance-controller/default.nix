@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, kinematics-interface, kinematics-interface-kdl, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, tf2, tf2-eigen, tf2-geometry-msgs, tf2-kdl, tf2-ros, tinyxml-2, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kilted-admittance-controller";
-  version = "5.13.0-r1";
+  version = "5.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/admittance_controller/5.13.0-1.tar.gz";
-    name = "5.13.0-1.tar.gz";
-    sha256 = "c91465225f2a38e0a4c2581f38530c243fdf06ac287cb3ca544b076e861048d2";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/admittance_controller/5.13.1-1.tar.gz";
+    name = "5.13.1-1.tar.gz";
+    sha256 = "2befbf7388285560672011767f71dec49cbcda5e1c966a099ed8bf30bde6f727";
   };
 
   buildType = "ament_cmake";

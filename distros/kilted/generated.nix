@@ -312,6 +312,10 @@ self: super: {
 
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
+ camera-aravis2 = self.callPackage ./camera-aravis2 {};
+
+ camera-aravis2-msgs = self.callPackage ./camera-aravis2-msgs {};
+
  camera-calibration = self.callPackage ./camera-calibration {};
 
  camera-calibration-parsers = self.callPackage ./camera-calibration-parsers {};
@@ -1360,6 +1364,8 @@ self: super: {
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
+ mobile-robot-simulator = self.callPackage ./mobile-robot-simulator {};
+
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
  mocap4r2-msgs = self.callPackage ./mocap4r2-msgs {};
@@ -2312,6 +2318,8 @@ self: super: {
 
  ros2-fmt-logger = self.callPackage ./ros2-fmt-logger {};
 
+ ros2-snapshot = self.callPackage ./ros2-snapshot {};
+
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
 
  ros2-socketcan-msgs = self.callPackage ./ros2-socketcan-msgs {};
@@ -2659,6 +2667,8 @@ self: super: {
  rtabmap-viz = self.callPackage ./rtabmap-viz {};
 
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
+
+ rtest = self.callPackage ./rtest {};
 
  rti-connext-dds-cmake-module = self.callPackage ./rti-connext-dds-cmake-module {};
 

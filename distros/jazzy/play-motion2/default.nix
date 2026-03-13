@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-index-cpp, ament-lint-auto, ament-lint-common, backward-ros, control-msgs, controller-interface, controller-manager, controller-manager-msgs, hardware-interface, joint-state-broadcaster, joint-trajectory-controller, launch, launch-ros, launch-testing-ament-cmake, lifecycle-msgs, moveit-ros-planning-interface, play-motion2-msgs, pluginlib, rclcpp, rclcpp-action, rclcpp-components, rclcpp-lifecycle, realtime-tools, robot-state-publisher, sensor-msgs, std-msgs, trajectory-msgs, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-play-motion2";
-  version = "1.8.3-r1";
+  version = "1.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/jazzy/play_motion2/1.8.3-1.tar.gz";
-    name = "1.8.3-1.tar.gz";
-    sha256 = "bd3aea6b1ca0897f8b718dbb007fa88bb34a1b4669283536143c02d20efc4dbc";
+    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/jazzy/play_motion2/1.8.4-1.tar.gz";
+    name = "1.8.4-1.tar.gz";
+    sha256 = "331032f345c6a39b910df9ff2e816524246df29dbd6e26468e8ca679ed76d6c9";
   };
 
   buildType = "ament_cmake";

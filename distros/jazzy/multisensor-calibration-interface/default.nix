@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-multisensor-calibration-interface";
-  version = "2.0.4-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/multisensor_calibration-release/archive/release/jazzy/multisensor_calibration_interface/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "0ca6b38f1be95b2c2cf59b5bfe5876d1b523ea9b8d55cafeb89b6b5370619d5b";
+    url = "https://github.com/ros2-gbp/multisensor_calibration-release/archive/release/jazzy/multisensor_calibration_interface/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "1ca36f061efa51b4ad9614d846c54d6f4b12578695bce138272dff1779f265f4";
   };
 
   buildType = "ament_cmake";

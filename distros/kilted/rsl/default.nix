@@ -5,15 +5,15 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, clang, doxygen, eigen, fmt, git, range-v3, rclcpp, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-kilted-rsl";
-  version = "1.2.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/RSL-release/archive/release/kilted/rsl/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "1690d3cb02540ca88ddf1c4fc7925e65d4e4eaa255384213b73bcac4643e116c";
+    url = "https://github.com/ros2-gbp/RSL-release/archive/release/kilted/rsl/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "6d981f2234511b3b03992ecae5430478fdd80a45ac7c60f6ae24e442d3317dc6";
   };
 
-  buildType = "catkin";
+  buildType = "cmake";
   buildInputs = [ doxygen ];
   checkInputs = [ ament-cmake-ros clang git range-v3 ];
   propagatedBuildInputs = [ eigen fmt rclcpp tcb-span tl-expected ];

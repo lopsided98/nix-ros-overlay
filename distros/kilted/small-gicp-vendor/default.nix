@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package }:
 buildRosPackage {
   pname = "ros-kilted-small-gicp-vendor";
-  version = "2.0.4-r2";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/multisensor_calibration-release/archive/release/kilted/small_gicp_vendor/2.0.4-2.tar.gz";
-    name = "2.0.4-2.tar.gz";
-    sha256 = "01aca37b930497de775d17f0e7cc4e2c9b021d354210c0d63566e80fc111358d";
+    url = "https://github.com/ros2-gbp/multisensor_calibration-release/archive/release/kilted/small_gicp_vendor/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "8ef7467af95890be6a6069c4aab2af61e9e35bc25a79fd96722933adaa0ef1db";
   };
 
   buildType = "ament_cmake";

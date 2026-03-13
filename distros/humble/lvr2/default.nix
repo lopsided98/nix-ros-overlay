@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen, embree, flann, freeglut, gdal, gsl, hdf5, libtiff, lz4, ocl-icd, onetbb, opencv, xorg, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-lvr2";
-  version = "25.2.1-r1";
+  version = "25.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/lvr2-release/archive/release/humble/lvr2/25.2.1-1.tar.gz";
-    name = "25.2.1-1.tar.gz";
-    sha256 = "b701c4b00457d59b6903c692450d40716877a4b8d2372b9a7c7aacbda89ab8e3";
+    url = "https://github.com/ros2-gbp/lvr2-release/archive/release/humble/lvr2/25.2.2-1.tar.gz";
+    name = "25.2.2-1.tar.gz";
+    sha256 = "602c26e68a7f8cd67a2346a3d93c4c20ac691d70bb51a5b698d844645e2dbb96";
   };
 
   buildType = "cmake";

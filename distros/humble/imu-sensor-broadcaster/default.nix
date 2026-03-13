@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-lint-auto, ament-lint-common, backward-ros, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-imu-sensor-broadcaster";
-  version = "2.52.0-r1";
+  version = "2.52.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/imu_sensor_broadcaster/2.52.0-1.tar.gz";
-    name = "2.52.0-1.tar.gz";
-    sha256 = "662dbcd419bfd1a1ac044836292910aa48f3883de5f241ad4cc233e49565d2b1";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/imu_sensor_broadcaster/2.52.1-1.tar.gz";
+    name = "2.52.1-1.tar.gz";
+    sha256 = "c17a8159f5144a56e61de3c494d86ad0ca5a52be6782629fbc016d5d3e125012";
   };
 
   buildType = "ament_cmake";

@@ -1124,6 +1124,8 @@ self: super: {
 
  launch-frontend-py = self.callPackage ./launch-frontend-py {};
 
+ launch-pal = self.callPackage ./launch-pal {};
+
  launch-param-builder = self.callPackage ./launch-param-builder {};
 
  launch-pytest = self.callPackage ./launch-pytest {};
@@ -2155,6 +2157,8 @@ self: super: {
  ros2-controllers-test-nodes = self.callPackage ./ros2-controllers-test-nodes {};
 
  ros2-fmt-logger = self.callPackage ./ros2-fmt-logger {};
+
+ ros2-snapshot = self.callPackage ./ros2-snapshot {};
 
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-interface, controller-manager, filters, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-jazzy-chained-filter-controller";
-  version = "4.37.0-r1";
+  version = "4.38.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/chained_filter_controller/4.37.0-1.tar.gz";
-    name = "4.37.0-1.tar.gz";
-    sha256 = "002a7b52a5db2828fdbcf852af2fbfa0653921f6763b9d055817b57cec146273";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/chained_filter_controller/4.38.0-1.tar.gz";
+    name = "4.38.0-1.tar.gz";
+    sha256 = "38da06c62677ed621fb478ff182bc5bff5bd52dba24a696637d4db8a6748da3a";
   };
 
   buildType = "ament_cmake";

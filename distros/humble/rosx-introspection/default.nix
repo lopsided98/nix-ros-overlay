@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, geometry-msgs, rapidjson, rclcpp, rosbag2-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-rosx-introspection";
-  version = "2.1.0-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosx_introspection-release/archive/release/humble/rosx_introspection/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "9d43dc2fb18afae23cb35db6e8aa1949545d1e96ddfa8d7ebc2c76792b44cb8a";
+    url = "https://github.com/ros2-gbp/rosx_introspection-release/archive/release/humble/rosx_introspection/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "ed8a26c7f34597d535417a5487ae4cc727a755e432387bf2c168d2ac14a8488a";
   };
 
   buildType = "ament_cmake";

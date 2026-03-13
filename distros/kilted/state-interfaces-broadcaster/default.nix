@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-kilted-state-interfaces-broadcaster";
-  version = "5.13.0-r1";
+  version = "5.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/state_interfaces_broadcaster/5.13.0-1.tar.gz";
-    name = "5.13.0-1.tar.gz";
-    sha256 = "0d6d5713d1791599247716815e47f574dc7df792888523d874ee1ceb4a8bb4c3";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/state_interfaces_broadcaster/5.13.1-1.tar.gz";
+    name = "5.13.1-1.tar.gz";
+    sha256 = "d547b049985ff1e781bde777b24165ef958df03b9f8c7fe7eeaf77ddcaca78c0";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, image-transport, multisensor-calibration-interface, pcl-conversions, pcl-ros, qt5, rclcpp, rclcpp-components, rviz-common, sensor-msgs, small-gicp-vendor, std-msgs, tf2, tf2-ros, tinyxml-2, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-multisensor-calibration";
-  version = "2.0.4-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/multisensor_calibration-release/archive/release/jazzy/multisensor_calibration/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "a7f26b61e3a95ff4cff04b2144a9840dc3e0029b6fd09b019c4c16333f824e1d";
+    url = "https://github.com/ros2-gbp/multisensor_calibration-release/archive/release/jazzy/multisensor_calibration/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "aea9786d752f891e8aef33a3574d2ed6cfd74a8075f9dc7aafbe150153d6a53c";
   };
 
   buildType = "ament_cmake";
