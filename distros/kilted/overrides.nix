@@ -16,6 +16,21 @@ in {
     ];
   });
 
+  camera-aravis2 = rosSuper.camera-aravis2.overrideAttrs ({
+    patches ? [], nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+    patches = patches ++ [
+      # cmake: Find aravis library with pkg-config if available
+      # https://github.com/FraunhoferIOSB/camera_aravis2/pull/63
+      (self.fetchpatch2 {
+        url = "https://github.com/FraunhoferIOSB/camera_aravis2/commit/fb2460536f51841452ff31458da428fa5c8e5804.patch";
+        hash = "sha256-1jkrN+u+IKbZROUP0d2Toe51U1v1jgqQZPZmUEOk4CQ=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   clips-vendor = lib.patchAmentVendorFile rosSuper.clips-vendor { };
 
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
