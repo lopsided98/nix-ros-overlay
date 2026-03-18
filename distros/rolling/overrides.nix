@@ -380,6 +380,12 @@ in {
     hash = "sha256-TyFt3d78GidhDGD17KgjAaZl/qvAcGJP8lmu4EOxpYg=";
   };
 
+  spacenav = rosSuper.spacenav.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.libx11 ];
+  });
+
   # Ensure that tinyxml-2 has the same major version as in
   # behaviortree-cpp, which vendors it. Other packages like
   # nav2-behavior-tree include tintinyxml-2 propagated via their

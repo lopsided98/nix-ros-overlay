@@ -394,6 +394,12 @@ in {
 
   sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor { };
 
+  spacenav = rosSuper.spacenav.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.libx11 ];
+  });
+
   turtlesim = rosSuper.turtlesim.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
