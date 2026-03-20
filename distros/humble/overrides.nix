@@ -5,6 +5,16 @@ rosSelf: rosSuper: let
   inherit (rosSelf) lib;
 in with lib; {
 
+  # TODO: Remove after https://github.com/autowarefoundation/agnocast/pull/1188
+  # appears in ROS release
+  agnocastlib = rosSuper.agnocastlib.overrideAttrs ({
+    propagatedBuildInputs ? [], ...
+  }: {
+    propagatedBuildInputs = propagatedBuildInputs ++ [
+      rosSelf.message-filters
+    ];
+  });
+
   autoware-trajectory = rosSuper.autoware-trajectory.overrideAttrs ({
     buildInputs ? [], postPatch ? "", ...
   }: {
