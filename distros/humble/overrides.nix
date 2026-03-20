@@ -502,6 +502,11 @@ in with lib; {
         url = "https://github.com/ros/urdfdom/commit/cbe6884d267779463bb444be851f6404e692cc0a.patch";
         hash = "sha256-1gTRKIGqiSRion76bGecSfFJSBskYUJguUIa6ePIiX4=";
       })
+      # fix: missing header
+      (self.fetchpatch2 {
+        url = "https://github.com/ros/urdfdom/commit/4768260074a90510571810d7439113960a304d44.patch";
+        hash = "sha256-bl49jkxvHMtNWPSnc0T3MHonAGSFVJhjhJc8ApaOdSo=";
+      })
     ];
   });
 
