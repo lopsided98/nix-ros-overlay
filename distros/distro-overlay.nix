@@ -184,6 +184,16 @@ let
     # rosdistro.
     tl-expected-nixpkgs = self.tl-expected;
 
+    ublox-dgnss-node = rosSuper.ublox-dgnss-node.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      # https://github.com/aussierobots/ublox_dgnss/pull/59
+      postPatch = postPatch + ''
+        substituteInPlace include/ublox_dgnss_node/ubx/utils.hpp \
+          --replace-fail "#include <vector>" "#include <vector>"$'\n'"#include <algorithm>"
+      '';
+    });
+
   } // (mrptOverrides rosSelf rosSuper)
   // self.lib.optionalAttrs (rosSuper ? gz-ogre-next-vendor) {
     gz-ogre-next-vendor = (rosSelf.lib.patchAmentVendorGit rosSuper.gz-ogre-next-vendor {
