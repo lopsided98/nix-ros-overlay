@@ -149,8 +149,12 @@ let
 
     osqp-vendor = pipe rosSuper.osqp-vendor [
       (pkg: pkg.overrideAttrs ({
-        preInstall ? "", ...
+        preInstall ? "", postPatch ? "", ...
       }: {
+        postPatch = postPatch + ''
+          sed -i -e '/UPDATE_COMMAND/ a\PATCH_COMMAND sed -i -e "/cmake_minimum_required/ s/3.2/3.5/" CMakeLists.txt lin_sys/direct/qdldl/qdldl_sources/CMakeLists.txt' \
+            CMakeLists.txt
+        '';
         # osqp installs into both lib/cmake/ and lib64/cmake/ which is
         # problematic because moveLib64 doesn't attempt to merge overlapping
         # directories but fails instead. Here we do the merge manually.
