@@ -144,11 +144,6 @@ with rosSelf.lib; {
     zstd = self.zstd.override { enableStatic = true; };
   }).overrideAttrs { doCheck = true; };
 
-  # Fails with ROS vendored tl-expected. Needs the one from nixpkgs.
-  # TODO: Remove after merging https://github.com/lopsided98/nix-ros-overlay/pull/820 and
-  # https://github.com/ros/rosdistro/pull/50246
-  cras-cpp-common = rosSuper.cras-cpp-common.override { tl-expected = self.tl-expected; };
-
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
     cmakeFlags ? [], ...
   }: {
@@ -381,10 +376,6 @@ with rosSelf.lib; {
       wrapQtApp "$out/lib/rqt_robot_monitor/rqt_robot_monitor"
     '';
   });
-
-  # TODO: Remove after merging https://github.com/lopsided98/nix-ros-overlay/pull/820 and
-  # https://github.com/ros/rosdistro/pull/50246
-  rsl = rosSuper.rsl.override { tl-expected = self.tl-expected; };
 
   rtabmap-conversions = rosSuper.rtabmap-conversions.overrideAttrs rtabmapPostPatchAarch64;
   rtabmap-msgs = rosSuper.rtabmap-msgs.overrideAttrs rtabmapPostPatchAarch64;

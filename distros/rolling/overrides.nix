@@ -406,10 +406,6 @@ in {
     '';
   });
 
-  # TODO: Remove after merging https://github.com/lopsided98/nix-ros-overlay/pull/820 and
-  # https://github.com/ros/rosdistro/pull/50246
-  tl-expected = rosSuper.tl-expected.override { tl-expected = self.tl-expected; };
-
   turtlesim = rosSuper.turtlesim.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
