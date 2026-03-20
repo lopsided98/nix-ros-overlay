@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gps-msgs, gpsd, pkg-config, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-gpsd-client";
-  version = "2.1.1-r1";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/humble/gpsd_client/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "9854509aa3ada7262a1c4eb8e000ea26d86ab2acfac2f0c16918e8cece0b80dd";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/humble/gpsd_client/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "9e9a2e2836f3a28ecb095319dfaa1ee85a0504d3c248904fb200f79a4e5a3fbc";
   };
 
   buildType = "ament_cmake";

@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-gtest, ament-cmake-lint-cmake, ament-index-cpp, ament-lint, backward-ros, data-tamer-cpp, data-tamer-msgs, foxglove-sdk-vendor, geographic-msgs, mcap-vendor, nlohmann_json, protobuf, rcl-interfaces, rclcpp, rclcpp-components, rosidl-default-generators, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-gtest, ament-cmake-lint-cmake, ament-index-cpp, ament-lint, backward-ros, data-tamer-cpp, data-tamer-msgs, foxglove-sdk-vendor, geographic-msgs, mcap-vendor, nlohmann_json, protobuf, rcl-interfaces, rclcpp, rclcpp-components, rclcpp-lifecycle, rosidl-default-generators, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-data-tamer-tools";
-  version = "0.3.1-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/data_tamer_tools-release/archive/release/rolling/data_tamer_tools/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "fbe3bca37f26e53705e82554fb40728186bd7514d6a61f1fbaa74bde73523c2b";
+    url = "https://github.com/ros2-gbp/data_tamer_tools-release/archive/release/rolling/data_tamer_tools/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "e0c3afe92e2a40f3a384595142fc937ac64627f099a3670fbe763e165863de57";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];
   checkInputs = [ ament-cmake-clang-format ament-cmake-cppcheck ament-cmake-gtest ament-cmake-lint-cmake ament-index-cpp ament-lint ];
-  propagatedBuildInputs = [ backward-ros data-tamer-cpp data-tamer-msgs foxglove-sdk-vendor geographic-msgs mcap-vendor nlohmann_json protobuf rcl-interfaces rclcpp rclcpp-components sensor-msgs ];
+  propagatedBuildInputs = [ backward-ros data-tamer-cpp data-tamer-msgs foxglove-sdk-vendor geographic-msgs mcap-vendor nlohmann_json protobuf rcl-interfaces rclcpp rclcpp-components rclcpp-lifecycle sensor-msgs ];
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {

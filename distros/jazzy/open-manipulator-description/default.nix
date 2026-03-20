@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher, joint-state-publisher-gui, robot-state-publisher, rviz2 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher, joint-state-publisher-gui, realsense2-description, robot-state-publisher, rviz2 }:
 buildRosPackage {
   pname = "ros-jazzy-open-manipulator-description";
-  version = "4.1.2-r1";
+  version = "4.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_description/4.1.2-1.tar.gz";
-    name = "4.1.2-1.tar.gz";
-    sha256 = "796c1507a85c734dd496e7b2284976b1bb4baade3648165ea15b38f875dd126e";
+    url = "https://github.com/ros2-gbp/open_manipulator-release/archive/release/jazzy/open_manipulator_description/4.1.3-1.tar.gz";
+    name = "4.1.3-1.tar.gz";
+    sha256 = "b47cb306a6511da689e718b3a0a0729e534a1926b42da7559df632ead70af75e";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ joint-state-publisher joint-state-publisher-gui robot-state-publisher rviz2 ];
+  propagatedBuildInputs = [ joint-state-publisher joint-state-publisher-gui realsense2-description robot-state-publisher rviz2 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

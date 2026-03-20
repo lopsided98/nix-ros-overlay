@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ffw-joystick-controller";
-  version = "1.1.16-r1";
+  version = "1.1.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_joystick_controller/1.1.16-1.tar.gz";
-    name = "1.1.16-1.tar.gz";
-    sha256 = "4cead5667de435b17318f91a497400435a9d3ef430548f0b7537522feda9412c";
+    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_joystick_controller/1.1.20-1.tar.gz";
+    name = "1.1.20-1.tar.gz";
+    sha256 = "8d2e632df06db6645377607dfb2d474019cec04529c73dfb302a096ba0a99800";
   };
 
   buildType = "ament_cmake";

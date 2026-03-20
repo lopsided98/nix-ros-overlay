@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-bond";
-  version = "4.1.2-r1";
+  version = "4.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bond/4.1.2-1.tar.gz";
-    name = "4.1.2-1.tar.gz";
-    sha256 = "a7a0ccbd21349fb38b44d4e0d22701bf2e4ac121753437f4ca58108378586292";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bond/4.2.0-1.tar.gz";
+    name = "4.2.0-1.tar.gz";
+    sha256 = "35ccc38fef2ea7a30c78b21023edf63bd948298f681faac1d6b74cf2aebb426c";
   };
 
   buildType = "ament_cmake";

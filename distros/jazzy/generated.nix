@@ -32,6 +32,22 @@ self: super: {
 
  ads-vendor = self.callPackage ./ads-vendor {};
 
+ agnocast-cie-config-msgs = self.callPackage ./agnocast-cie-config-msgs {};
+
+ agnocast-cie-thread-configurator = self.callPackage ./agnocast-cie-thread-configurator {};
+
+ agnocast-components = self.callPackage ./agnocast-components {};
+
+ agnocast-e2e-test = self.callPackage ./agnocast-e2e-test {};
+
+ agnocast-ioctl-wrapper = self.callPackage ./agnocast-ioctl-wrapper {};
+
+ agnocast-sample-application = self.callPackage ./agnocast-sample-application {};
+
+ agnocast-sample-interfaces = self.callPackage ./agnocast-sample-interfaces {};
+
+ agnocastlib = self.callPackage ./agnocastlib {};
+
  ament-acceleration = self.callPackage ./ament-acceleration {};
 
  ament-black = self.callPackage ./ament-black {};
@@ -666,15 +682,29 @@ self: super: {
 
  depthai-bridge = self.callPackage ./depthai-bridge {};
 
+ depthai-bridge-v3 = self.callPackage ./depthai-bridge-v3 {};
+
  depthai-descriptions = self.callPackage ./depthai-descriptions {};
+
+ depthai-descriptions-v3 = self.callPackage ./depthai-descriptions-v3 {};
 
  depthai-examples = self.callPackage ./depthai-examples {};
 
+ depthai-examples-v3 = self.callPackage ./depthai-examples-v3 {};
+
  depthai-filters = self.callPackage ./depthai-filters {};
+
+ depthai-filters-v3 = self.callPackage ./depthai-filters-v3 {};
 
  depthai-ros-driver = self.callPackage ./depthai-ros-driver {};
 
+ depthai-ros-driver-v3 = self.callPackage ./depthai-ros-driver-v3 {};
+
  depthai-ros-msgs = self.callPackage ./depthai-ros-msgs {};
+
+ depthai-ros-msgs-v3 = self.callPackage ./depthai-ros-msgs-v3 {};
+
+ depthai-ros-v3 = self.callPackage ./depthai-ros-v3 {};
 
  depthai-v3 = self.callPackage ./depthai-v3 {};
 
@@ -762,11 +792,25 @@ self: super: {
 
  easynav = self.callPackage ./easynav {};
 
+ easynav-bonxai-maps-manager = self.callPackage ./easynav-bonxai-maps-manager {};
+
  easynav-common = self.callPackage ./easynav-common {};
 
  easynav-controller = self.callPackage ./easynav-controller {};
 
  easynav-core = self.callPackage ./easynav-core {};
+
+ easynav-costmap-common = self.callPackage ./easynav-costmap-common {};
+
+ easynav-costmap-localizer = self.callPackage ./easynav-costmap-localizer {};
+
+ easynav-costmap-maps-manager = self.callPackage ./easynav-costmap-maps-manager {};
+
+ easynav-costmap-planner = self.callPackage ./easynav-costmap-planner {};
+
+ easynav-fusion-localizer = self.callPackage ./easynav-fusion-localizer {};
+
+ easynav-gps-localizer = self.callPackage ./easynav-gps-localizer {};
 
  easynav-interfaces = self.callPackage ./easynav-interfaces {};
 
@@ -774,15 +818,43 @@ self: super: {
 
  easynav-maps-manager = self.callPackage ./easynav-maps-manager {};
 
+ easynav-mpc-controller = self.callPackage ./easynav-mpc-controller {};
+
+ easynav-mppi-controller = self.callPackage ./easynav-mppi-controller {};
+
+ easynav-navmap-localizer = self.callPackage ./easynav-navmap-localizer {};
+
+ easynav-navmap-maps-manager = self.callPackage ./easynav-navmap-maps-manager {};
+
+ easynav-navmap-planner = self.callPackage ./easynav-navmap-planner {};
+
+ easynav-octomap-maps-manager = self.callPackage ./easynav-octomap-maps-manager {};
+
  easynav-planner = self.callPackage ./easynav-planner {};
 
+ easynav-routes-maps-manager = self.callPackage ./easynav-routes-maps-manager {};
+
  easynav-sensors = self.callPackage ./easynav-sensors {};
+
+ easynav-serest-controller = self.callPackage ./easynav-serest-controller {};
+
+ easynav-simple-common = self.callPackage ./easynav-simple-common {};
+
+ easynav-simple-controller = self.callPackage ./easynav-simple-controller {};
+
+ easynav-simple-localizer = self.callPackage ./easynav-simple-localizer {};
+
+ easynav-simple-maps-manager = self.callPackage ./easynav-simple-maps-manager {};
+
+ easynav-simple-planner = self.callPackage ./easynav-simple-planner {};
 
  easynav-support-py = self.callPackage ./easynav-support-py {};
 
  easynav-system = self.callPackage ./easynav-system {};
 
  easynav-tools = self.callPackage ./easynav-tools {};
+
+ easynav-vff-controller = self.callPackage ./easynav-vff-controller {};
 
  ecl-build = self.callPackage ./ecl-build {};
 
@@ -1428,6 +1500,8 @@ self: super: {
 
  keyboard-handler = self.callPackage ./keyboard-handler {};
 
+ kinematic-pose-msgs = self.callPackage ./kinematic-pose-msgs {};
+
  kinematics-interface = self.callPackage ./kinematics-interface {};
 
  kinematics-interface-kdl = self.callPackage ./kinematics-interface-kdl {};
@@ -1965,6 +2039,8 @@ self: super: {
  mujoco-ros2-control-demos = self.callPackage ./mujoco-ros2-control-demos {};
 
  mujoco-ros2-control-msgs = self.callPackage ./mujoco-ros2-control-msgs {};
+
+ mujoco-ros2-control-plugins = self.callPackage ./mujoco-ros2-control-plugins {};
 
  mujoco-vendor = self.callPackage ./mujoco-vendor {};
 
@@ -2756,6 +2832,20 @@ self: super: {
 
  ros2-fmt-logger = self.callPackage ./ros2-fmt-logger {};
 
+ ros2-medkit-diagnostic-bridge = self.callPackage ./ros2-medkit-diagnostic-bridge {};
+
+ ros2-medkit-fault-manager = self.callPackage ./ros2-medkit-fault-manager {};
+
+ ros2-medkit-fault-reporter = self.callPackage ./ros2-medkit-fault-reporter {};
+
+ ros2-medkit-gateway = self.callPackage ./ros2-medkit-gateway {};
+
+ ros2-medkit-integration-tests = self.callPackage ./ros2-medkit-integration-tests {};
+
+ ros2-medkit-msgs = self.callPackage ./ros2-medkit-msgs {};
+
+ ros2-medkit-serialization = self.callPackage ./ros2-medkit-serialization {};
+
  ros2-snapshot = self.callPackage ./ros2-snapshot {};
 
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
@@ -2765,6 +2855,8 @@ self: super: {
  ros2acceleration = self.callPackage ./ros2acceleration {};
 
  ros2action = self.callPackage ./ros2action {};
+
+ ros2agnocast = self.callPackage ./ros2agnocast {};
 
  ros2ai = self.callPackage ./ros2ai {};
 
@@ -3367,6 +3459,8 @@ self: super: {
  system-modes-examples = self.callPackage ./system-modes-examples {};
 
  system-modes-msgs = self.callPackage ./system-modes-msgs {};
+
+ system-webview = self.callPackage ./system-webview {};
 
  tango-icons-vendor = self.callPackage ./tango-icons-vendor {};
 

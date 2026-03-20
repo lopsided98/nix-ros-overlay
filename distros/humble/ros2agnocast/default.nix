@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, agnocast-ioctl-wrapper }:
 buildRosPackage {
   pname = "ros-humble-ros2agnocast";
-  version = "2.1.2-r1";
+  version = "2.3.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/ros2agnocast/2.1.2-1.tar.gz";
-    name = "2.1.2-1.tar.gz";
-    sha256 = "cee2489ed17766609f6a20bf6fa2a67c45fcbef56e2e5e25e8fcc72c2010b934";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/ros2agnocast/2.3.1-3.tar.gz";
+    name = "2.3.1-3.tar.gz";
+    sha256 = "e2181cf5b66d9335905d36a0d15b811f9bc7cebd964141152a3821abde77303f";
   };
 
   buildType = "ament_python";

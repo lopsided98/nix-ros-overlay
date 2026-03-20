@@ -578,11 +578,25 @@ self: super: {
 
  easynav = self.callPackage ./easynav {};
 
+ easynav-bonxai-maps-manager = self.callPackage ./easynav-bonxai-maps-manager {};
+
  easynav-common = self.callPackage ./easynav-common {};
 
  easynav-controller = self.callPackage ./easynav-controller {};
 
  easynav-core = self.callPackage ./easynav-core {};
+
+ easynav-costmap-common = self.callPackage ./easynav-costmap-common {};
+
+ easynav-costmap-localizer = self.callPackage ./easynav-costmap-localizer {};
+
+ easynav-costmap-maps-manager = self.callPackage ./easynav-costmap-maps-manager {};
+
+ easynav-costmap-planner = self.callPackage ./easynav-costmap-planner {};
+
+ easynav-fusion-localizer = self.callPackage ./easynav-fusion-localizer {};
+
+ easynav-gps-localizer = self.callPackage ./easynav-gps-localizer {};
 
  easynav-interfaces = self.callPackage ./easynav-interfaces {};
 
@@ -590,15 +604,43 @@ self: super: {
 
  easynav-maps-manager = self.callPackage ./easynav-maps-manager {};
 
+ easynav-mpc-controller = self.callPackage ./easynav-mpc-controller {};
+
+ easynav-mppi-controller = self.callPackage ./easynav-mppi-controller {};
+
+ easynav-navmap-localizer = self.callPackage ./easynav-navmap-localizer {};
+
+ easynav-navmap-maps-manager = self.callPackage ./easynav-navmap-maps-manager {};
+
+ easynav-navmap-planner = self.callPackage ./easynav-navmap-planner {};
+
+ easynav-octomap-maps-manager = self.callPackage ./easynav-octomap-maps-manager {};
+
  easynav-planner = self.callPackage ./easynav-planner {};
 
+ easynav-routes-maps-manager = self.callPackage ./easynav-routes-maps-manager {};
+
  easynav-sensors = self.callPackage ./easynav-sensors {};
+
+ easynav-serest-controller = self.callPackage ./easynav-serest-controller {};
+
+ easynav-simple-common = self.callPackage ./easynav-simple-common {};
+
+ easynav-simple-controller = self.callPackage ./easynav-simple-controller {};
+
+ easynav-simple-localizer = self.callPackage ./easynav-simple-localizer {};
+
+ easynav-simple-maps-manager = self.callPackage ./easynav-simple-maps-manager {};
+
+ easynav-simple-planner = self.callPackage ./easynav-simple-planner {};
 
  easynav-support-py = self.callPackage ./easynav-support-py {};
 
  easynav-system = self.callPackage ./easynav-system {};
 
  easynav-tools = self.callPackage ./easynav-tools {};
+
+ easynav-vff-controller = self.callPackage ./easynav-vff-controller {};
 
  ecal = self.callPackage ./ecal {};
 
@@ -1138,6 +1180,8 @@ self: super: {
 
  keyboard-handler = self.callPackage ./keyboard-handler {};
 
+ kinematic-pose-msgs = self.callPackage ./kinematic-pose-msgs {};
+
  kinematics-interface = self.callPackage ./kinematics-interface {};
 
  kinematics-interface-kdl = self.callPackage ./kinematics-interface-kdl {};
@@ -1622,6 +1666,8 @@ self: super: {
 
  mujoco-ros2-control-msgs = self.callPackage ./mujoco-ros2-control-msgs {};
 
+ mujoco-ros2-control-plugins = self.callPackage ./mujoco-ros2-control-plugins {};
+
  mujoco-vendor = self.callPackage ./mujoco-vendor {};
 
  multires-image = self.callPackage ./multires-image {};
@@ -1761,6 +1807,10 @@ self: super: {
  novatel-gps-driver = self.callPackage ./novatel-gps-driver {};
 
  novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
+
+ novatel-oem7-driver = self.callPackage ./novatel-oem7-driver {};
+
+ novatel-oem7-msgs = self.callPackage ./novatel-oem7-msgs {};
 
  ntpd-driver = self.callPackage ./ntpd-driver {};
 

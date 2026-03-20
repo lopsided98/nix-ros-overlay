@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, bond, pkg-config, rclcpp, rclcpp-lifecycle, smclib, util-linux }:
 buildRosPackage {
   pname = "ros-jazzy-bondcpp";
-  version = "4.1.2-r1";
+  version = "4.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bondcpp/4.1.2-1.tar.gz";
-    name = "4.1.2-1.tar.gz";
-    sha256 = "2d43990501dd4c8dd5a65dce657e1cf1a9070e0d2fa3dec5b68d7abe1e5dadfb";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bondcpp/4.2.0-1.tar.gz";
+    name = "4.2.0-1.tar.gz";
+    sha256 = "512d4ac4e07671ab77733e24cc092bbacf79cdbc7d766a75f0baa60991e55897";
   };
 
   buildType = "ament_cmake";

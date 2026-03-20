@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-agnocast-ioctl-wrapper";
-  version = "2.1.2-r1";
+  version = "2.3.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/agnocast_ioctl_wrapper/2.1.2-1.tar.gz";
-    name = "2.1.2-1.tar.gz";
-    sha256 = "0aad2248b92f43c3e4559963a029dee12ba705795c06baf95b8818c1f2e8368d";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/agnocast_ioctl_wrapper/2.3.1-3.tar.gz";
+    name = "2.3.1-3.tar.gz";
+    sha256 = "8814ee3dd85c591091855588e638d1eb75b227485d67fd5e4b5cb9d8ce63163e";
   };
 
   buildType = "ament_cmake";

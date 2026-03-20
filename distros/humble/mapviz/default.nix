@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, freeglut, geometry-msgs, glew, image-transport, mapviz-interfaces, opencv, pkg-config, pluginlib, qt5, rclcpp, ros-environment, rqt-gui, rqt-gui-cpp, std-srvs, swri-math-util, swri-transform-util, tf2, tf2-geometry-msgs, tf2-ros, xorg, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-mapviz";
-  version = "2.6.1-r1";
+  version = "2.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/humble/mapviz/2.6.1-1.tar.gz";
-    name = "2.6.1-1.tar.gz";
-    sha256 = "0a03e0fb162f9cdaeef02860a0c204cc0990b4e3039d6e6eb3f7c3eb845aad74";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/humble/mapviz/2.6.2-1.tar.gz";
+    name = "2.6.2-1.tar.gz";
+    sha256 = "76a55638e59f018bdaf6e4834f7eb8fbb42730500bb81f069e4dc106e80f4da3";
   };
 
   buildType = "ament_cmake";

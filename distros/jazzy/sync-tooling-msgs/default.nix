@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, protobuf }:
 buildRosPackage {
   pname = "ros-jazzy-sync-tooling-msgs";
-  version = "0.2.6-r1";
+  version = "0.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sync_tooling_msgs-release/archive/release/jazzy/sync_tooling_msgs/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "1a6f77328b0aef4dc981812123285b66c1e1fbef23f4c3d6a0c63cfa3b302589";
+    url = "https://github.com/ros2-gbp/sync_tooling_msgs-release/archive/release/jazzy/sync_tooling_msgs/0.2.7-1.tar.gz";
+    name = "0.2.7-1.tar.gz";
+    sha256 = "ffafefe6766b0fe77815bf36c86ee27e03b6ddb417e8855b58b8bf8d3b8ef118";
   };
 
   buildType = "ament_cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake protobuf ];
 
   meta = {
-    description = "Protobuf definitions for synchronization diagnostics";
+    description = "Protobuf definitions for SYNC.TOOLING";
     license = with lib.licenses; [ asl20 ];
   };
 }
