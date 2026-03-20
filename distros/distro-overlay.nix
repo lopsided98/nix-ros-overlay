@@ -147,6 +147,15 @@ let
       ROS_PYTHON_VERSION = if rosSelf.python.isPy3k then 3 else 2;
     });
 
+    mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      postPatch = postPatch + ''
+        substituteInPlace CMakeLists.txt \
+          --replace-fail 'cmake_minimum_required(VERSION 3.0.2)' 'cmake_minimum_required(VERSION 3.5)'
+      '';
+    });
+
     osqp-vendor = pipe rosSuper.osqp-vendor [
       (pkg: pkg.overrideAttrs ({
         preInstall ? "", postPatch ? "", ...
