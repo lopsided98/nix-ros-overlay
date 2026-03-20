@@ -515,6 +515,11 @@ in with lib; {
         url = "https://github.com/ros/urdfdom_headers/commit/c9c993147bbf18d5ec83bae684c5780281e529b4.patch";
         hash = "sha256-BnYPdcetYSim2O1R38N0d1tY0Id++AgKNic8+dlM6Vg=";
       })
+      # Update cmake_minimum_required
+      (self.fetchpatch2 {
+        url = "https://github.com/ros/urdfdom_headers/commit/aedc2f08310e74d00c5eadefd07461fa52890fbb.patch";
+        hash = "sha256-ieeHfnxSmyuBnT5376s1cbO+Qin4Ay8fUiTUIGXwo9c=";
+      })
     ];
   });
 
