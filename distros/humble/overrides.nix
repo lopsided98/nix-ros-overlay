@@ -361,7 +361,7 @@ in with lib; {
   });
 
   octomap = rosSuper.octomap.overrideAttrs ({
-    patches ? [], ...
+    patches ? [], postPatch ? "", ...
   }: {
     patches = patches ++ [
       # fix errors with recent compilers and C++17/20 standard
@@ -373,6 +373,11 @@ in with lib; {
         stripLen = 1;
       })
     ];
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail 'CMAKE_MINIMUM_REQUIRED(VERSION 3.0.2)' \
+                       'CMAKE_MINIMUM_REQUIRED(VERSION 3.5)'
+    '';
   });
 
   # Fix other off-highway-* packages which need ros-environment
