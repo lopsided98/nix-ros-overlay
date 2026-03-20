@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, joint-state-broadcaster, mujoco-ros2-control, mujoco-ros2-control-msgs, position-controllers, robot-state-publisher, rviz2, xacro }:
 buildRosPackage {
   pname = "ros-rolling-mujoco-ros2-control-demos";
-  version = "0.0.1-r1";
+  version = "0.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/rolling/mujoco_ros2_control_demos/0.0.1-1.tar.gz";
-    name = "0.0.1-1.tar.gz";
-    sha256 = "a0972a525d213f16192b2971566064f46b580fc3c203b81494f9341e30e400d5";
+    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/rolling/mujoco_ros2_control_demos/0.0.2-1.tar.gz";
+    name = "0.0.2-1.tar.gz";
+    sha256 = "2becf6fe956687228e30642a3ce1cd3e3dbb4a796da27bcc8e2afdde1aff4469";
   };
 
   buildType = "ament_cmake";

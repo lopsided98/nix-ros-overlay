@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, gps-msgs, nav-msgs, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-gps-tools";
-  version = "2.1.1-r1";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/jazzy/gps_tools/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "c1147e45f57da2f0bc20fe38eb93d3dbc04fe84799223661640eb732704725eb";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/jazzy/gps_tools/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "4452a2e4990e355960dd4be38eb4cdb99b55eb30fcc8cac19b6336c2d83c3ed0";
   };
 
   buildType = "ament_cmake";

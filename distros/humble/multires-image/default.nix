@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, mapviz, pluginlib, qt5, rclcpp, rclpy, swri-math-util, swri-transform-util, tf2 }:
 buildRosPackage {
   pname = "ros-humble-multires-image";
-  version = "2.6.1-r1";
+  version = "2.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/humble/multires_image/2.6.1-1.tar.gz";
-    name = "2.6.1-1.tar.gz";
-    sha256 = "af467cf7b762e61601dc9b1868b25b92a773ff1943d8c79a3692ebfc4e66ab10";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/humble/multires_image/2.6.2-1.tar.gz";
+    name = "2.6.2-1.tar.gz";
+    sha256 = "af0f20da5e6a5b690eb53fcc067f68c8d4cad1f9f525c7bee32eb33d2a8ea532";
   };
 
   buildType = "ament_cmake";

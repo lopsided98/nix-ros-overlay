@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, example-interfaces, image-transport, qt6, rclcpp, ros-babel-fish, ros-babel-fish-test-msgs, std-srvs, tf2-ros, yaml-cpp }:
 buildRosPackage {
   pname = "ros-rolling-qml6-ros2-plugin";
-  version = "3.26.30-r1";
+  version = "4.26.30-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qml6_ros2_plugin-release/archive/release/rolling/qml6_ros2_plugin/3.26.30-1.tar.gz";
-    name = "3.26.30-1.tar.gz";
-    sha256 = "35fb64f63bc5dae6bff30801a267c0a40674a529120f92588fa70537bcd2ebd7";
+    url = "https://github.com/ros2-gbp/qml6_ros2_plugin-release/archive/release/rolling/qml6_ros2_plugin/4.26.30-1.tar.gz";
+    name = "4.26.30-1.tar.gz";
+    sha256 = "1765c7802652ad0d7dadda0f3409e1efbc236b765e0deb92244f5e1cdb68670e";
   };
 
   buildType = "ament_cmake";

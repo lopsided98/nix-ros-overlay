@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-rolling-ublox-ubx-interfaces";
-  version = "0.7.0-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/rolling/ublox_ubx_interfaces/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "c7aecd82c2cd9c39e241e5b77066abc79dc9e55b4de0604e0e575fbd59feac80";
+    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/rolling/ublox_ubx_interfaces/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "ebb38b7f271dfe5279bc65d6c1171260e3a77e8f9f25bf7c4e2b6f53f47ac210";
   };
 
   buildType = "ament_cmake";

@@ -40,6 +40,12 @@ self: super: {
 
  affordance-primitives = self.callPackage ./affordance-primitives {};
 
+ agnocast-cie-config-msgs = self.callPackage ./agnocast-cie-config-msgs {};
+
+ agnocast-cie-thread-configurator = self.callPackage ./agnocast-cie-thread-configurator {};
+
+ agnocast-components = self.callPackage ./agnocast-components {};
+
  agnocast-e2e-test = self.callPackage ./agnocast-e2e-test {};
 
  agnocast-ioctl-wrapper = self.callPackage ./agnocast-ioctl-wrapper {};
@@ -896,15 +902,31 @@ self: super: {
 
  depthai-bridge = self.callPackage ./depthai-bridge {};
 
+ depthai-bridge-v3 = self.callPackage ./depthai-bridge-v3 {};
+
  depthai-descriptions = self.callPackage ./depthai-descriptions {};
+
+ depthai-descriptions-v3 = self.callPackage ./depthai-descriptions-v3 {};
 
  depthai-examples = self.callPackage ./depthai-examples {};
 
+ depthai-examples-v3 = self.callPackage ./depthai-examples-v3 {};
+
  depthai-filters = self.callPackage ./depthai-filters {};
+
+ depthai-filters-v3 = self.callPackage ./depthai-filters-v3 {};
 
  depthai-ros-driver = self.callPackage ./depthai-ros-driver {};
 
+ depthai-ros-driver-v3 = self.callPackage ./depthai-ros-driver-v3 {};
+
  depthai-ros-msgs = self.callPackage ./depthai-ros-msgs {};
+
+ depthai-ros-msgs-v3 = self.callPackage ./depthai-ros-msgs-v3 {};
+
+ depthai-ros-v3 = self.callPackage ./depthai-ros-v3 {};
+
+ depthai-v3 = self.callPackage ./depthai-v3 {};
 
  depthimage-to-laserscan = self.callPackage ./depthimage-to-laserscan {};
 
@@ -2225,6 +2247,8 @@ self: super: {
  mujoco-ros2-control-demos = self.callPackage ./mujoco-ros2-control-demos {};
 
  mujoco-ros2-control-msgs = self.callPackage ./mujoco-ros2-control-msgs {};
+
+ mujoco-ros2-control-plugins = self.callPackage ./mujoco-ros2-control-plugins {};
 
  mujoco-vendor = self.callPackage ./mujoco-vendor {};
 

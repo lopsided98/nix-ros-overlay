@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-gps-msgs";
-  version = "2.1.1-r1";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/jazzy/gps_msgs/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "861debdd5b942216ab60b8db1dce0114d941bbd2326b019053035ff173387cfe";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/jazzy/gps_msgs/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "1b712f442b984e03dd3e6adcaae055b7464506951c1a687cb124c65242a66963";
   };
 
   buildType = "ament_cmake";

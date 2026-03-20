@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, bond, bondcpp, smclib }:
 buildRosPackage {
   pname = "ros-kilted-bond-core";
-  version = "4.1.2-r2";
+  version = "4.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/kilted/bond_core/4.1.2-2.tar.gz";
-    name = "4.1.2-2.tar.gz";
-    sha256 = "2a0b6d5e7edf893c64860336c43b68f81375f4265b56a36c43b84989aadc7f16";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/kilted/bond_core/4.3.0-1.tar.gz";
+    name = "4.3.0-1.tar.gz";
+    sha256 = "13aeaa8b47a2e1b171f31b3b7f2a849afc4704a496d158dc4061a5fc485d9a27";
   };
 
   buildType = "ament_cmake";

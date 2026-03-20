@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-kilted-smclib";
-  version = "4.1.2-r2";
+  version = "4.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/kilted/smclib/4.1.2-2.tar.gz";
-    name = "4.1.2-2.tar.gz";
-    sha256 = "71750dec182e9861d17e048625d387074b6d54b30ddeb3e74c3cab7dbcf7264a";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/kilted/smclib/4.3.0-1.tar.gz";
+    name = "4.3.0-1.tar.gz";
+    sha256 = "ddb51046a04597d5a780df78292c443c8c25015b76c5480a763f5ebd01e78867";
   };
 
   buildType = "ament_cmake";

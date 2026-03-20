@@ -1554,6 +1554,8 @@ self: super: {
 
  mujoco-ros2-control-msgs = self.callPackage ./mujoco-ros2-control-msgs {};
 
+ mujoco-ros2-control-plugins = self.callPackage ./mujoco-ros2-control-plugins {};
+
  mujoco-vendor = self.callPackage ./mujoco-vendor {};
 
  multires-image = self.callPackage ./multires-image {};
@@ -2699,6 +2701,8 @@ self: super: {
  system-modes-examples = self.callPackage ./system-modes-examples {};
 
  system-modes-msgs = self.callPackage ./system-modes-msgs {};
+
+ system-webview = self.callPackage ./system-webview {};
 
  tango-icons-vendor = self.callPackage ./tango-icons-vendor {};
 

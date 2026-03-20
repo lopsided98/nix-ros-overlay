@@ -2,20 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, nav2-bringup, navigation2, rviz2, slam-toolbox }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, behaviortree-cpp, geometry-msgs, nav-msgs, nav2-bringup, nav2-simple-commander, navigation2, rclcpp, rviz2, slam-toolbox }:
 buildRosPackage {
   pname = "ros-jazzy-ffw-navigation";
-  version = "1.1.16-r1";
+  version = "1.1.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_navigation/1.1.16-1.tar.gz";
-    name = "1.1.16-1.tar.gz";
-    sha256 = "68196584a80e9675f84237b0c61b0f8caedb0cec1986277da0253f0814e21909";
+    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_navigation/1.1.20-1.tar.gz";
+    name = "1.1.20-1.tar.gz";
+    sha256 = "53a9a62b26b81295fae363efbd83f3d2f0a7c21ab80197d7dde510753caa84b3";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ nav2-bringup navigation2 rviz2 slam-toolbox ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ behaviortree-cpp geometry-msgs nav-msgs nav2-bringup nav2-simple-commander navigation2 rclcpp rviz2 slam-toolbox ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

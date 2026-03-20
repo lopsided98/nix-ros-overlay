@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher, joint-state-publisher-gui, robot-state-publisher, rviz2, urdf, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-ffw-description";
-  version = "1.1.16-r1";
+  version = "1.1.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_description/1.1.16-1.tar.gz";
-    name = "1.1.16-1.tar.gz";
-    sha256 = "5beefdd637ed4a52ef5a33e416cac4a6abe3e3b26c60a117756c7a03dc30c8a1";
+    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_description/1.1.20-1.tar.gz";
+    name = "1.1.20-1.tar.gz";
+    sha256 = "c48fee68efd8992175dfab23f172b02f25537ca26bd58c1a3f12e89332bf4c90";
   };
 
   buildType = "ament_cmake";

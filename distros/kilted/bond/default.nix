@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-bond";
-  version = "4.1.2-r2";
+  version = "4.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/kilted/bond/4.1.2-2.tar.gz";
-    name = "4.1.2-2.tar.gz";
-    sha256 = "1d95836f0b7f9ea6be13258b1636ff30add678ee25805de8b70e0fcb94e4cfcc";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/kilted/bond/4.3.0-1.tar.gz";
+    name = "4.3.0-1.tar.gz";
+    sha256 = "099a7ce85f524ebaa15459b9952d3ad5b19109cdaab0467081c1693a83cbbe9a";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, bond, python3Packages, rclpy, smclib }:
 buildRosPackage {
   pname = "ros-jazzy-bondpy";
-  version = "4.1.2-r1";
+  version = "4.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bondpy/4.1.2-1.tar.gz";
-    name = "4.1.2-1.tar.gz";
-    sha256 = "f44ab92df1dc8bb0712a971764a46ab33d85d34fbb677f22eb1d1ccaf2c8ddc2";
+    url = "https://github.com/ros2-gbp/bond_core-release/archive/release/jazzy/bondpy/4.2.0-1.tar.gz";
+    name = "4.2.0-1.tar.gz";
+    sha256 = "22e934b8ad31a22341edd61ca3e5dc6a8897f0af18a8eb5e6d823fcf0583f5e4";
   };
 
   buildType = "ament_python";

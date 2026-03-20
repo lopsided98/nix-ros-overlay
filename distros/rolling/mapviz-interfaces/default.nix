@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, builtin-interfaces, marti-common-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-mapviz-interfaces";
-  version = "2.6.1-r1";
+  version = "2.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/rolling/mapviz_interfaces/2.6.1-1.tar.gz";
-    name = "2.6.1-1.tar.gz";
-    sha256 = "9da7b4eb7f3aef7e84ecfa154e4c85025159c373ea634af654a0ae5be14c4c01";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/rolling/mapviz_interfaces/2.6.2-1.tar.gz";
+    name = "2.6.2-1.tar.gz";
+    sha256 = "81d0b798581639f1b3379b1461083d8530b28866ae3ba15f3dbf207bade58a1d";
   };
 
   buildType = "ament_cmake";
