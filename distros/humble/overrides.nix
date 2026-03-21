@@ -557,6 +557,26 @@ in with lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.ros-environment ];
   });
 
+  popf = (rosSuper.popf.override {
+    # Fix "libfl.so.2: undefined reference to `yylex'"
+    flex = self.flex_2_5_35;
+  }).overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # cmake: Fix link problem, merged upstream
+      (self.fetchpatch2 {
+        url = "https://github.com/fmrico/popf/commit/8eabc3b0c6e4f6e718f4ac3564230dccfcfee46b.patch";
+        hash = "sha256-4inVYUHGiDd677wicbRlMoBtZ5HJbJ61xSFQpBrtU7c=";
+      })
+      # cmake: fix missing includes, ref. https://github.com/fmrico/popf/pull/12
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/popf/commit/e8ba226f67e0513689d0efc84e9b4e8b55394bd4.patch";
+        hash = "sha256-Sw/rY4MsmoWIpC9VQzimM18mlvdGwb8Q6EmwY2rg0pw=";
+      })
+    ];
+  });
+
   python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
     patches ? [], ...
   }: {
