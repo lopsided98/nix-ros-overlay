@@ -223,7 +223,7 @@ in with lib; {
   });
 
   libcamera = rosSuper.libcamera.overrideAttrs ({
-    patches ? [], ...
+    patches ? [], postPatch ? "", ...
   }: {
     patches = patches ++ [
       # Fix build with Python 3.12
@@ -232,6 +232,19 @@ in with lib; {
         hash = "sha256-Q5tPOfbwO28Lg+bP/IINykTZC2ZL1jeWf6TGP7ZUAE8=";
       })
     ];
+    postPatch = postPatch + ''
+      substituteInPlace include/libcamera/base/file.h --replace-fail \
+        "#include <map>" \
+        "#include <cstdint>
+         #include <map>"
+      substituteInPlace include/libcamera/internal/yaml_parser.h --replace-fail \
+        "#include <iterator>" \
+        "#include <cstdint>
+         #include <iterator>"
+      substituteInPlace src/libcamera/media_device.cpp --replace-fail \
+        "lockf(fd_.get(), F_ULOCK, 0);" \
+        "std::ignore = lockf(fd_.get(), F_ULOCK, 0);"
+    '';
   });
 
   libfranka = rosSuper.libfranka.overrideAttrs ({
