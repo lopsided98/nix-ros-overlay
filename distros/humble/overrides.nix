@@ -200,6 +200,21 @@ in with lib; {
     nativeBuildInputs = nativeBuildInputs ++ [self.pkg-config];
   });
 
+  gtest-vendor = rosSuper.gtest-vendor.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Fix errors like:
+    # "...ros-humble-gtest-vendor-1.10.9006-r1/src/gtest_vendor/./src/gtest-death-test.cc:1385:26: error: 'uintptr_t' does not name a type"
+    # in packages cloudini-lib and pose-cov-ops.
+    postPatch = postPatch + ''
+      substituteInPlace src/gtest-death-test.cc --replace-fail \
+        "#include <utility>" \
+        "#include <cstdint>
+        #include <utility>"
+    '';
+  });
+
+
   gtsam = rosSuper.gtsam.overrideAttrs ({
     postPatch ? "", ...
   }: {
