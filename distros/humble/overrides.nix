@@ -729,7 +729,7 @@ in with lib; {
   });
 
   vrpn = rosSuper.vrpn.overrideAttrs ({
-    patches ? [], ...
+    patches ? [], postPatch ? "", ...
   }: {
     patches = patches ++ [
       # Fix compatibility with recent CMake versions
@@ -738,6 +738,17 @@ in with lib; {
         hash = "sha256-AEiTLXPYcFdZrE4KzvCkXH4GiSFmhCl14wkq+0MRWLo=";
       })
     ];
+    postPatch = postPatch + ''
+      substituteInPlace quat/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.6)" \
+        "cmake_minimum_required(VERSION 3.5)"
+      substituteInPlace cmake/FindOpenHaptics.cmake --replace-fail \
+        "cmake_minimum_required(VERSION 2.6.3)" \
+        "cmake_minimum_required(VERSION 3.5)"
+      substituteInPlace client_src/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.6)" \
+        "cmake_minimum_required(VERSION 3.5)"
+    '';
   });
 
   webots-ros2-driver = rosSuper.webots-ros2-driver.overrideAttrs ({
