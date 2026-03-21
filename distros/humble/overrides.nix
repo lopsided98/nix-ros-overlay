@@ -202,14 +202,25 @@ in with lib; {
     '';
   });
 
-  lely-core-libraries = lib.patchExternalProjectGit rosSuper.lely-core-libraries {
+  lely-core-libraries = (lib.patchExternalProjectGit rosSuper.lely-core-libraries {
     url = "https://gitlab.com/lely_industries/lely-core.git";
     rev = "fb735b79cab5f0cdda45bc5087414d405ef8f3ab";
     fetchgitArgs = {
       hash = "sha256-TpEWho+lbhXGaZ24+86eVJttrxH2Kc9gZVOGWeR0LBE=";
       leaveDotGit = true;
     };
-  };
+  }).overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # ref. https://gitlab.com/lely_industries/lely-core/-/merge_requests/143
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "CONFIGURE_COMMAND autoreconf -i <SOURCE_DIR>" \
+        "PATCH_COMMAND sed -i \"s|ATOMIC_VAR_INIT(0)|0|\" include/lely/util/spscring.h
+        && sed -i \"s|static const char tab.64. =|static const char tab[] =|\" src/util/print.c
+        CONFIGURE_COMMAND autoreconf -i <SOURCE_DIR>"
+    '';
+  });
 
   libcamera = rosSuper.libcamera.overrideAttrs ({
     patches ? [], ...
