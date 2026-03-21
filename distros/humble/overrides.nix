@@ -345,9 +345,15 @@ in with lib; {
     revVariable = "mimick_version";
     fetchgitArgs.hash = "sha256-adCxIl0F3QkgSimOhvuTyhmig1rFy/K9wxZ/+YCuxYo=";
   }).overrideAttrs ({
-    ...
+    postPatch ? "", ...
   }: {
     NIX_CFLAGS_COMPILE = toString [ "-Wno-error=cpp" ];
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "UPDATE_COMMAND \"\"" \
+        "UPDATE_COMMAND \"\"
+         PATCH_COMMAND sed -i \"s|cmake_minimum_required (VERSION 2.8.12)|cmake_minimum_required (VERSION 3.5)|\" CMakeLists.txt"
+    '';
   });
 
   moveit-kinematics = rosSuper.moveit-kinematics.overrideAttrs ({
