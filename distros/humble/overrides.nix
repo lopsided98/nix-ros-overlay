@@ -255,14 +255,25 @@ in with lib; {
     };
   };
 
-  mcap-vendor = patchExternalProjectGit (patchVendorUrl rosSuper.mcap-vendor {
+  mcap-vendor = (patchExternalProjectGit (patchVendorUrl rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v0.8.0.tar.gz";
     sha256 = "sha256-KDP3I0QwjqWGOfOzY6DPF2aVgK56tDX0PzsQTP9u9Ug=";
   }) {
     url = "https://github.com/lz4/lz4.git";
     rev = "d44371841a2f1728a3f36839fd4b7e872d0927d3";
     fetchgitArgs.hash = "sha256-f7GZgOzUrkAfw1mqwlIKQQqDvkvIahGlHvq6AL+aAvA=";
-  };
+  }).overrideAttrs ( {
+    postPatch ? "", ...
+  }: {
+    # ref. https://github.com/foxglove/mcap/pull/1371
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "URL_HASH SHA1=b44637791da2c9c1cec61a3ba6994f1ef63a228c # v0.8.0" \
+        "URL_HASH SHA1=b44637791da2c9c1cec61a3ba6994f1ef63a228c # v0.8.0
+        PATCH_COMMAND sed -i \"1i #include <cstdint>\" cpp/mcap/include/mcap/types.hpp"
+    '';
+  });
+
 
   mecanum-drive-controller = rosSuper.mecanum-drive-controller.overrideAttrs ({
     buildInputs ? [], ...
