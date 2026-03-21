@@ -508,6 +508,16 @@ in with lib; {
     '';
   });
 
+  pangolin = rosSuper.pangolin.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace components/pango_python/pybind11/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.4)" \
+        "cmake_minimum_required(VERSION 3.5)"
+    '';
+  });
+
   plotjuggler = rosSuper.plotjuggler.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
