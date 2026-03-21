@@ -242,6 +242,9 @@ in with lib; {
     postPatch = ''
       substituteInPlace CMakeLists.txt \
         --replace-fail 'set_version_from_git(PACKAGE_VERSION PACKAGE_TAG)' ""
+      substituteInPlace common/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.0.2)" \
+        "cmake_minimum_required(VERSION 3.5.0)"
     '';
     # Uses custom flag to disable tests. Attempts to download GTest without
     # this.
