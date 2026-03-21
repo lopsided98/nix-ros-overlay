@@ -624,6 +624,16 @@ in with lib; {
     '';
   });
 
+  sick-safevisionary-base = rosSuper.sick-safevisionary-base.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.0.2)" \
+        "cmake_minimum_required(VERSION 3.5)"
+    '';
+  });
+
   shared-queues-vendor = patchVendorUrl (patchVendorUrl rosSuper.shared-queues-vendor {
     url = "https://github.com/cameron314/concurrentqueue/archive/8f65a8734d77c3cc00d74c0532efca872931d3ce.zip";
     sha256 = "0cmsmgc87ndd9hiv187xkvjkn8fipn3hsijjc864h2lfcyigbxq1";
