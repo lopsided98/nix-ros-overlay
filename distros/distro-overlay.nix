@@ -228,7 +228,7 @@ let
         (self.fetchpatch2 {
           # Add simple implementation for STBIImageCodec::magicNumberToFileExt()
           url = "https://github.com/OGRECave/ogre-next/commit/98c9095c6e288fceb59ccb3504d9127d88eb1b51.patch";
-          hash = "sha256-n4TVB7j0CgUGm4NWGS2WoKeOqzon8VLOPjnDX3DMcZM=";
+          hash = "sha256-4fa+IbqtIL48nJ0frrrexCzQIauVNDtpoU+4216MTuA=";
         })
         (self.fetchpatch2 {
           # Fix loading of images in STBICodec
