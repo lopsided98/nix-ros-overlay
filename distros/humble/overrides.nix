@@ -315,6 +315,17 @@ in with lib; {
     propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.moveit-ros-planning ];
   });
 
+  mqtt-client = rosSuper.mqtt-client.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace include/mqtt_client/MqttClient.hpp --replace-fail \
+        "#include <fmt/format.h>" \
+        "#include <fmt/format.h>
+         #include <fmt/ranges.h>"
+    '';
+  });
+
   nav2-behaviors = rosSuper.nav2-behaviors.overrideAttrs({
     ...
   }: {
