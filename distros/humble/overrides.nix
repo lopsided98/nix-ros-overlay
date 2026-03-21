@@ -190,6 +190,16 @@ in with lib; {
     nativeBuildInputs = nativeBuildInputs ++ [self.pkg-config];
   });
 
+  gtsam = rosSuper.gtsam.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt gtsam/3rdparty/metis/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.0)" \
+        "cmake_minimum_required(VERSION 3.5)"
+    '';
+  });
+
   iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
     patches ? [], ...
   }: {
