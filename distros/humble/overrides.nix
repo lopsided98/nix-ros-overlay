@@ -340,6 +340,11 @@ in with lib; {
           rev = finalAttrs.version;
           hash = "sha256-f8qYh8ibC/ToHsUv3OF1ujzt3fUe7kW9cNpGyLqsgqw=";
         };
+        postPatch = (previousAttrs.postPatch or "") + ''
+          substituteInPlace test/CMakeLists.txt --replace-fail \
+            "cmake_minimum_required(VERSION 3.1)" \
+            "cmake_minimum_required(VERSION 3.5)"
+        '';
       });
     }).overrideAttrs (finalAttrs: previousAttrs: {
       version = "0.25.0";
