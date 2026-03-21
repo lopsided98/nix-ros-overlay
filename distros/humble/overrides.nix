@@ -87,6 +87,16 @@ in with lib; {
     NIX_CFLAGS_COMPILE = toString [ "-Wno-error=maybe-uninitialized" ];
   });
 
+  dynamic-edt-3d = rosSuper.dynamic-edt-3d.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "CMAKE_MINIMUM_REQUIRED(VERSION 3.0.2)" \
+        "CMAKE_MINIMUM_REQUIRED(VERSION 3.5)"
+    '';
+  });
+
   ecl-build = rosSuper.ecl-build.overrideAttrs ({
     postPatch ? "", ...
   }: {
