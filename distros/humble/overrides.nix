@@ -222,6 +222,16 @@ in with lib; {
     '';
   });
 
+  lsc-ros2-driver = rosSuper.lsc-ros2-driver.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # https://github.com/AutonicsLiDAR/lsc_ros2_driver/pull/3
+    patches = patches ++ [(self.fetchpatch2 {
+      url = "https://github.com/nim65s/lsc_ros2_driver/commit/6c2c5cf64fea0099358e610a7fff40db7c0922be.patch";
+      hash = "sha256-Xwlhjg1wjIiH1H3Roh0iV6HYLmWyGye/6CdvuSVWdSc=";
+    })];
+  });
+
   lely-core-libraries = (lib.patchExternalProjectGit rosSuper.lely-core-libraries {
     url = "https://gitlab.com/lely_industries/lely-core.git";
     rev = "fb735b79cab5f0cdda45bc5087414d405ef8f3ab";
