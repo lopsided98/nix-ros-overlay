@@ -397,6 +397,12 @@ in {
     ];
   });
 
+  nav2-collision-monitor = rosSuper.nav2-collision-monitor.overrideAttrs({
+    CXXFLAGS ? "", ...
+  }: {
+    CXXFLAGS = "${CXXFLAGS} -Wno-error=overloaded-virtual=";
+  });
+
   nav2-costmap-2d = rosSuper.nav2-costmap-2d.overrideAttrs({
     ...
   }: {
