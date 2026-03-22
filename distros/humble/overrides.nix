@@ -225,6 +225,16 @@ in with lib; {
     '';
   });
 
+  hey5-description = rosSuper.hey5-description.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.4.0)" \
+        "cmake_minimum_required(VERSION 3.5)"
+    '';
+  });
+
   iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
     patches ? [], ...
   }: {
