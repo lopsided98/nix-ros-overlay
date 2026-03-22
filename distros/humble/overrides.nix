@@ -589,6 +589,19 @@ in with lib; {
     '';
   });
 
+  rmf-traffic = rosSuper.rmf-traffic.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = [
+      # https://github.com/open-rmf/rmf_traffic/pull/131
+      (self.fetchpatch2 {
+        url = "https://github.com/open-rmf/rmf_traffic/commit/c20b8d71507880387185666c78d105557e5003a9.patch";
+        hash = "sha256-4Elg7oF6OQHd2trn3e+r73hghW9Qf90PrGjID7RsdEI=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   ros2-ouster = rosSuper.ros2-ouster.overrideAttrs ({
     buildInputs ? [], ...
   }: {
