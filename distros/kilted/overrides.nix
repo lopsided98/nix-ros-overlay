@@ -360,8 +360,21 @@ in {
     '';
   });
 
-  # Fix "libfl.so.2: undefined reference to `yylex'"
-  popf = rosSuper.popf.override { flex = self.flex_2_5_35; };
+  popf = (rosSuper.popf.override {
+    # Fix "libfl.so.2: undefined reference to `yylex'"
+    flex = self.flex_2_5_35;
+  }).overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # cmake: fix missing includes, ref. https://github.com/fmrico/popf/pull/12
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/popf/commit/e8ba226f67e0513689d0efc84e9b4e8b55394bd4.patch";
+        hash = "sha256-Sw/rY4MsmoWIpC9VQzimM18mlvdGwb8Q6EmwY2rg0pw=";
+      })
+    ];
+  });
+
 
   rmf-traffic = rosSuper.rmf-traffic.overrideAttrs ({
     patches ? [], ...
