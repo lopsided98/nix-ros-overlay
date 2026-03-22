@@ -370,6 +370,20 @@ in {
     '';
   });
 
+  moveit-setup-framework = rosSuper.moveit-setup-framework.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Add missing #include <fmt/ranges.h>
+      (self.fetchpatch2 {
+        url = "https://github.com/moveit/moveit2/commit/b3c23c989ff45c66ec692a71535330b42be09879.patch";
+        hash = "sha256-1rVN6kgBNHGG2EH1XCw49PPY1JzPud06l3LZAzp2XNU=";
+        includes = [ "src/urdf_config.cpp" ];
+        stripLen = 2;
+      })
+    ];
+  });
+
   mp-units-vendor = lib.patchAmentVendorGit rosSuper.mp-units-vendor {};
 
   nav2-behavior-tree = rosSuper.nav2-behavior-tree.overrideAttrs({
