@@ -403,7 +403,7 @@ in {
     NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" ];
   });
 
-  nav2-mppi-controller = rosSuper.nav2-mppi-controller.override {
+  nav2-mppi-controller = (rosSuper.nav2-mppi-controller.override {
     xtensor = (self.xtensor.override {
       xtl = self.xtl.overrideAttrs (finalAttrs: previousAttrs: {
         version = "0.7.7";
@@ -413,6 +413,11 @@ in {
           rev = finalAttrs.version;
           hash = "sha256-f8qYh8ibC/ToHsUv3OF1ujzt3fUe7kW9cNpGyLqsgqw=";
         };
+        postPatch = (previousAttrs.postPatch or "") + ''
+          substituteInPlace test/CMakeLists.txt --replace-fail \
+            "cmake_minimum_required(VERSION 3.1)" \
+            "cmake_minimum_required(VERSION 3.5)"
+        '';
       });
     }).overrideAttrs (finalAttrs: previousAttrs: {
       version = "0.25.0";
@@ -423,7 +428,11 @@ in {
         hash = "sha256-hVfdtYcJ6mzqj0AUu6QF9aVKQGYKd45RngY6UN3yOH5=";
       };
     });
-  };
+  }).overrideAttrs({
+    CXXFLAGS ? "", ...
+  }: {
+    CXXFLAGS = "${CXXFLAGS} -Wno-error=maybe-uninitialized";
+  });
 
   nav2-rviz-plugins = rosSuper.nav2-rviz-plugins.overrideAttrs({
     patches ? [], ...
