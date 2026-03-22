@@ -858,6 +858,11 @@ in with lib; {
         url = "https://github.com/ros-drivers/usb_cam/commit/1d1970b1a88fb1be3b961073748879900d2b1a70.patch";
         hash = "sha256-0iWl2DtqdjkyFy7lKa7aLxXjynm4ggNEQLxB45Mqf/Y=";
       })
+      # fix for newer ffmpeg, ref https://github.com/ros-drivers/usb_cam/pull/342, merged upstream
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-drivers/usb_cam/commit/9c7e4dad36f7ddc20c207aa2e4d1512a5188a60a.patch";
+        hash = "sha256-sSM7J35wKA8Z4GzXe5YL5Rw1I1jks4efTaCFDNqdKFQ=";
+      })
     ];
 
     nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
