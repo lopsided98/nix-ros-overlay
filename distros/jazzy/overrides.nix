@@ -174,6 +174,11 @@ in {
         url = "https://github.com/wentasah/gz-common/commit/9fbe891b3a8f30ff11e8367b1aecea5b0ef7521e.patch";
         hash = "sha256-TqGMvFLR81P3AJm+GK/Ot1i+EDGGE/E0HqLtpcKDZt4=";
       })
+      (self.fetchpatch2 {
+        # Added missing includes (#672)
+        url = "https://github.com/gazebosim/gz-common/commit/8f235cb2cb7ae9c2251c8ef155a2980ba4f0e764.patch";
+        hash = "sha256-0R0T/HTJzA6rx10psBz2+YycUnIDn2FaetinkprCQOE=";
+      })
     ];
   }).overrideAttrs ({
     nativeBuildInputs ? [], ...
