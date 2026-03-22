@@ -315,6 +315,17 @@ in {
 
   mp-units-vendor = lib.patchAmentVendorGit rosSuper.mp-units-vendor {};
 
+  mqtt-client = rosSuper.mqtt-client.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace include/mqtt_client/MqttClient.hpp --replace-fail \
+        "#include <fmt/format.h>" \
+        "#include <fmt/format.h>
+         #include <fmt/ranges.h>"
+    '';
+  });
+
   nav2-behavior-tree = rosSuper.nav2-behavior-tree.overrideAttrs({
     ...
   }: {
