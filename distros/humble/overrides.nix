@@ -685,6 +685,19 @@ in with lib; {
     ];
   });
 
+  robotont-driver = rosSuper.robotont-driver.overrideAttrs ({
+    postPatch ? "",
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for asio 1.36, ref. https://github.com/robotont/robotont_driver/pull/22
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/robotont_driver/commit/16910c7d40c5300829d0dc113189f8a0312e8638.patch";
+        hash = "sha256-M5ZcQexVU3N7zPZiybEFIP398BmWB5vpBm4kfJlq2jc=";
+      })
+    ];
+  });
+
   ros2-ouster = rosSuper.ros2-ouster.overrideAttrs ({
     buildInputs ? [], ...
   }: {
