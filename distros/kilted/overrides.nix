@@ -291,6 +291,16 @@ in {
 
   mp-units-vendor = lib.patchAmentVendorGit rosSuper.mp-units-vendor {};
 
+  nav2-behavior-tree = rosSuper.nav2-behavior-tree.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [
+      "-Wno-error=maybe-uninitialized"
+      "-Wno-error=free-nonheap-object"
+      "-Wno-error=null-dereference"
+    ];
+  });
+
   nav2-costmap-2d = rosSuper.nav2-costmap-2d.overrideAttrs({
     CXXFLAGS ? "", ...
   }: {
