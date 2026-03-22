@@ -237,6 +237,12 @@ let
           url = "https://github.com/OGRECave/ogre-next/commit/96a3bb016b2c9b4f9cca9df1a65d619220e21d78.patch";
           hash = "sha256-gJjlpkp3qhthF+6TbGLuToGPvOngqZrgE5sBucbvL4g=";
         })
+        (self.fetchpatch2 {
+          # Fix STLAllocator compatibility with GCC 15 and modern C++ standards
+          url = "https://github.com/wentasah/ogre-next/commit/45f449741b3283b43bec6572db8ad6d7af9b2efa.patch";
+          hash = "sha256-Jqc7TF9belxpGdUbli+jEeAUJ9x8VsX9JhRll1NU7Y8=";
+        })
+
       ];
     }).overrideAttrs(({
       postPatch ? "", ...
