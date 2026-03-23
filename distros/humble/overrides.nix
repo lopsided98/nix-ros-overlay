@@ -455,6 +455,23 @@ in with lib; {
     '';
   });
 
+  mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # fix FindTBB used in autoware-map-height-fitter
+    # ref. https://github.com/KIT-MRT/mrt_cmake_modules/pull/40
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        url = "https://github.com/KIT-MRT/mrt_cmake_modules/commit/e0b17b017affcf715514c9895008dfff654c2873.patch";
+        hash = "sha256-2UmmwV0OYWTYdOAQdrAlk5zmVGQn0LOVYh+IGONxrW4=";
+      })
+      (self.fetchpatch2 {
+        url = "https://github.com/KIT-MRT/mrt_cmake_modules/commit/56bb3808fd7883c1afb216bb9b974fb4d6f16ed0.patch";
+        hash = "sha256-p/TMEttj8dIdKAXvvw4P4BTyQKMKwz++CuyGAYdVqJ8=";
+      })
+    ];
+  });
+
   nav2-behaviors = rosSuper.nav2-behaviors.overrideAttrs({
     ...
   }: {
