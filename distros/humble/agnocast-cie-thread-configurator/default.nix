@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, agnocast-cie-config-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-agnocast-cie-thread-configurator";
-  version = "2.3.1-r3";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/agnocast_cie_thread_configurator/2.3.1-3.tar.gz";
-    name = "2.3.1-3.tar.gz";
-    sha256 = "f136426525738887fe1c0979b21010fb20852add6fd31c1b043c5e9bfe908b34";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/agnocast_cie_thread_configurator/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "b50852cb37099c4f317a4f8b860c47d52138b208c9f1bf32403e8ebcfae161f7";
   };
 
   buildType = "ament_cmake";

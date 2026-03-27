@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, builtin-interfaces, cv-bridge, diagnostic-updater, eigen, geometry-msgs, image-transport, launch-pytest, launch-ros, launch-testing, librealsense2, lifecycle-msgs, nav-msgs, python3Packages, rclcpp, rclcpp-components, rclcpp-lifecycle, realsense2-camera-msgs, ros-environment, ros2topic, sensor-msgs, sensor-msgs-py, std-msgs, std-srvs, tf2, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-rolling-realsense2-camera";
-  version = "4.56.4-r3";
+  version = "4.57.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/rolling/realsense2_camera/4.56.4-3.tar.gz";
-    name = "4.56.4-3.tar.gz";
-    sha256 = "0d60e90ff322f6b7cf4712e0b87f0bf6a8127a82df9d2fbec2a2af93ce4f56b4";
+    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/rolling/realsense2_camera/4.57.7-1.tar.gz";
+    name = "4.57.7-1.tar.gz";
+    sha256 = "405458e17e88da7e66880f6919f255963267a664f17cbe650c6af23aa467b9e8";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "RealSense camera package allowing access to Intel D400 3D cameras";
+    description = "RealSense camera package allowing access to RealSense D400 3D cameras";
     license = with lib.licenses; [ asl20 ];
   };
 }

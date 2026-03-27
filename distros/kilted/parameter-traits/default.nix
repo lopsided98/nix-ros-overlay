@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, fmt, rclcpp, rsl, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-kilted-parameter-traits";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/kilted/parameter_traits/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "678d0d741f999122c0b107836d49ac43d007db7cd87a34b97edc7753f1acd17c";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/kilted/parameter_traits/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "af624b3a50d742e8ef6288e5346c71d27d2eb0aa932e9f1be5eaed2b537dd319";
   };
 
   buildType = "ament_cmake";

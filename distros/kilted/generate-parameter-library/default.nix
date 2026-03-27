@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, fmt, generate-parameter-library-py, parameter-traits, rclcpp, rclcpp-lifecycle, rclpy, rsl, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-kilted-generate-parameter-library";
-  version = "0.7.0-r1";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/kilted/generate_parameter_library/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "62190eb493daebcdaea1043210585ac7697b588309d1e739b1867670ba4ce5b3";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/kilted/generate_parameter_library/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "0a67e9a3d15bbd58ba96031c7ce46374788931f5520cf7583d0f1ab3db29a3a3";
   };
 
   buildType = "ament_cmake";

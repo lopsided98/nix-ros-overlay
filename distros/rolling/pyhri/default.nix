@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros4hri/libhri-release/archive/release/rolling/pyhri/2.9.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/libhri-release/archive/release/rolling/pyhri/2.9.0-1.tar.gz";
     name = "2.9.0-1.tar.gz";
     sha256 = "3251edbff643fc6be40554d7f2473d6889f02ef4c7cb55ab8b48a2b932122832";
   };

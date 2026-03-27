@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros4hri/human_description-release/archive/release/jazzy/human_description/2.0.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/human_description-release/archive/release/jazzy/human_description/2.0.2-1.tar.gz";
     name = "2.0.2-1.tar.gz";
     sha256 = "b2154ca8356de95e88d0d718fe4f825f0d5a13e64315980556fd33cad9b97b06";
   };

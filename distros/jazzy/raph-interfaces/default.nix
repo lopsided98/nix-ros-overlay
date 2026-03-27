@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-raph-interfaces";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/raph_common-release/archive/release/jazzy/raph_interfaces/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "1c0a87f8a0b2318c30aad8df13536f595ea673b941103fc0ede3716b40b23a35";
+    url = "https://github.com/ros2-gbp/raph_common-release/archive/release/jazzy/raph_interfaces/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "b53fb3fdd990c1e3a45cf1e17f25fb5863b3c7eb6699a49cc6226c552817aa42";
   };
 
   buildType = "ament_cmake";

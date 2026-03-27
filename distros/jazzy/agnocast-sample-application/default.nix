@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, agnocast-components, agnocast-sample-interfaces, agnocastlib, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-jazzy-agnocast-sample-application";
-  version = "2.3.1-r1";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/agnocast_sample_application/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "0eefcb0cab951cf2b17e3026a6ab386486609bb344eac950ceddc453a4990d46";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/agnocast_sample_application/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "bc71488affa21a82d6f27a893cf67180fcd2ad1f1c316381c4cfe45f5e5e8b1b";
   };
 
   buildType = "ament_cmake";

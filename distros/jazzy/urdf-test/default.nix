@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/urdf_test-ros2-gbp/archive/release/jazzy/urdf_test/2.1.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/urdf_test-release/archive/release/jazzy/urdf_test/2.1.1-1.tar.gz";
     name = "2.1.1-1.tar.gz";
     sha256 = "36450a3351fc01d421f29bdb44a0b69ff780e558e8a3a2d4c819dd7831b439f1";
   };

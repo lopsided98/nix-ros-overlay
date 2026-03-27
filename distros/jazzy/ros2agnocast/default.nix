@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, agnocast-ioctl-wrapper }:
 buildRosPackage {
   pname = "ros-jazzy-ros2agnocast";
-  version = "2.3.1-r1";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/ros2agnocast/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "983e1859aa7e21ce3a6b110c6f60fac0cc08f2314e6bcb0729e399fe3d940149";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/ros2agnocast/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "d02b8c5ff1fd51103befb7cb29dc0e97ca9f42e3ea2527aaba8a28604b0505cb";
   };
 
   buildType = "ament_python";

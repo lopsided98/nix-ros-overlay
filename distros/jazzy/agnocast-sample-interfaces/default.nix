@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-agnocast-sample-interfaces";
-  version = "2.3.1-r1";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/agnocast_sample_interfaces/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "72f6cf59fc00e1379a59e9b83ea05250901ba199790746ce79ac4b02b361a579";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/agnocast_sample_interfaces/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "367212f9446803f01b99189cea4368c3d8b2e6f1f6b1f0b2c30e48880f5b248c";
   };
 
   buildType = "ament_cmake";

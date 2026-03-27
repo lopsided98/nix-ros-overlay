@@ -892,6 +892,10 @@ self: super: {
 
  grbl-ros = self.callPackage ./grbl-ros {};
 
+ greenwave-monitor = self.callPackage ./greenwave-monitor {};
+
+ greenwave-monitor-interfaces = self.callPackage ./greenwave-monitor-interfaces {};
+
  gscam = self.callPackage ./gscam {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
@@ -961,6 +965,8 @@ self: super: {
  hri-actions-msgs = self.callPackage ./hri-actions-msgs {};
 
  hri-msgs = self.callPackage ./hri-msgs {};
+
+ hri-rviz = self.callPackage ./hri-rviz {};
 
  ibeo-msgs = self.callPackage ./ibeo-msgs {};
 

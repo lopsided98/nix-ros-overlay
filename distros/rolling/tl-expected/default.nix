@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tl-expected-nixpkgs }:
 buildRosPackage {
   pname = "ros-rolling-tl-expected";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/rolling/tl_expected/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "76c3e50605b1d1dd5e37144a02050337d299c0658b2c36e503fe792e0a8234ae";
+    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/rolling/tl_expected/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "a97f16079bc4ff7c910018efbc1368394242bae8bd4d6ca58b6a571541b01307";
   };
 
   buildType = "ament_cmake";

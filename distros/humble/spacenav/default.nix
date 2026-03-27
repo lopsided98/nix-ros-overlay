@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, libspnav, rclcpp, rclcpp-components, sensor-msgs, spacenavd }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, libspnav, libx11, rclcpp, rclcpp-components, sensor-msgs, spacenavd }:
 buildRosPackage {
   pname = "ros-humble-spacenav";
   version = "3.3.0-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ geometry-msgs libspnav rclcpp rclcpp-components sensor-msgs spacenavd ];
+  propagatedBuildInputs = [ geometry-msgs libspnav libx11 rclcpp rclcpp-components sensor-msgs spacenavd ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

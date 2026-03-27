@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros4hri/libhri-release/archive/release/humble/hri/2.6.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/libhri-release/archive/release/humble/hri/2.6.1-1.tar.gz";
     name = "2.6.1-1.tar.gz";
     sha256 = "61200f4ee64286b2ae7398ac18d2cab2f997f9c021394dc68b8216fe55b565e8";
   };

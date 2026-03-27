@@ -996,6 +996,10 @@ self: super: {
 
  grbl-ros = self.callPackage ./grbl-ros {};
 
+ greenwave-monitor = self.callPackage ./greenwave-monitor {};
+
+ greenwave-monitor-interfaces = self.callPackage ./greenwave-monitor-interfaces {};
+
  grid-map = self.callPackage ./grid-map {};
 
  grid-map-cmake-helpers = self.callPackage ./grid-map-cmake-helpers {};

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, clearpath-manipulators-description, clearpath-mounts-description, clearpath-platform-description, clearpath-sensors-description }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-description";
-  version = "2.9.4-r1";
+  version = "2.9.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_description/2.9.4-1.tar.gz";
-    name = "2.9.4-1.tar.gz";
-    sha256 = "c90eab709f3f68518510ced31cfe1ac5c0c1f306746ed6d3038d909114bd7932";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_description/2.9.5-1.tar.gz";
+    name = "2.9.5-1.tar.gz";
+    sha256 = "c293db7e805835bd0d64ba00fa478cdd2ce47062623ad6ee231b868766cd46af";
   };
 
   buildType = "ament_cmake";

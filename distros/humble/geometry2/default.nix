@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tf2, tf2-bullet, tf2-eigen, tf2-eigen-kdl, tf2-geometry-msgs, tf2-kdl, tf2-msgs, tf2-py, tf2-ros, tf2-sensor-msgs, tf2-tools }:
 buildRosPackage {
   pname = "ros-humble-geometry2";
-  version = "0.25.19-r1";
+  version = "0.25.20-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/geometry2/0.25.19-1.tar.gz";
-    name = "0.25.19-1.tar.gz";
-    sha256 = "6308bcd37feb48dd6fb0f38b03eeb10962fb00c0741617cc18117520ef9c8c70";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/geometry2/0.25.20-2.tar.gz";
+    name = "0.25.20-2.tar.gz";
+    sha256 = "7b6893e87c4bb7f62ae22b24558abfd6d800e272e2f0e0c052a498ea8d0893b0";
   };
 
   buildType = "ament_cmake";
