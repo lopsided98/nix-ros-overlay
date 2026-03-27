@@ -303,6 +303,20 @@ in {
       '';
   });
 
+  rmw = rosSuper.rmw.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = [
+      # Add is_cft_supported field to rmw_subscription_t for content filtering support (#415)
+      # (without this, rcl-10.4.1 fails to build)
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/rmw/commit/403ee71b0a987b701a1e7b6c72f6820917151f69.diff";
+        hash = "sha256-SfWWSR1ipFI6J0/LWVsXAJkR6WqhMvM5jDIXTC5LsuY=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   rosidlcpp-generator-core = rosSuper.rosidlcpp-generator-core.override { fmt = self.fmt_9; };
   rosidlcpp-generator-cpp = rosSuper.rosidlcpp-generator-cpp.override { fmt = self.fmt_9; };
   rosidlcpp-generator-py = rosSuper.rosidlcpp-generator-py.override { fmt = self.fmt_9; };
