@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, git, glfw3, libGL, libGLU, libusb1, openssl, pkg-config, udev, xorg }:
 buildRosPackage {
   pname = "ros-rolling-librealsense2";
-  version = "2.56.4-r1";
+  version = "2.57.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/librealsense2-release/archive/release/rolling/librealsense2/2.56.4-1.tar.gz";
-    name = "2.56.4-1.tar.gz";
-    sha256 = "b09876b69e9baa231bb45d9ecb89d95caf86c9692fedf0a6f43dcb26b1864fbb";
+    url = "https://github.com/ros2-gbp/librealsense2-release/archive/release/rolling/librealsense2/2.57.7-1.tar.gz";
+    name = "2.57.7-1.tar.gz";
+    sha256 = "eda07182e0b37e92bfe2ee085c6a109c17580022077daac3d400e81920fd268a";
   };
 
   buildType = "cmake";

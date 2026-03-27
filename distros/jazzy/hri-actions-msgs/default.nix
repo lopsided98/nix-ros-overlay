@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros4hri/hri_actions_msgs-release/archive/release/jazzy/hri_actions_msgs/2.5.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/hri_actions_msgs-release/archive/release/jazzy/hri_actions_msgs/2.5.0-1.tar.gz";
     name = "2.5.0-1.tar.gz";
     sha256 = "60040193f2383c85b4b6f57d5b947c83c78fe5176e29e92804bb6930296ecbbe";
   };

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-agnocast-cie-config-msgs";
-  version = "2.3.1-r1";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/agnocast_cie_config_msgs/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "a93189ff9e0bbd1bd296da92b9ea1baa0da445123f6664531f5554eeffadfe55";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/agnocast_cie_config_msgs/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "a5a1a1b325dc89ec9d7e1ee0367191d505003d92b02ebea8df288dc98d2eac0a";
   };
 
   buildType = "ament_cmake";

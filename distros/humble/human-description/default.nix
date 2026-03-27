@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros4hri/human_description-release/archive/release/humble/human_description/2.0.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/human_description-release/archive/release/humble/human_description/2.0.2-1.tar.gz";
     name = "2.0.2-1.tar.gz";
     sha256 = "537aabd95297bcbe4079dc98e1ce18bf728ee2b7467398298ee4ea2559f19ac6";
   };

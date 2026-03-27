@@ -40,6 +40,8 @@ self: super: {
 
  affordance-primitives = self.callPackage ./affordance-primitives {};
 
+ agnocast = self.callPackage ./agnocast {};
+
  agnocast-cie-config-msgs = self.callPackage ./agnocast-cie-config-msgs {};
 
  agnocast-cie-thread-configurator = self.callPackage ./agnocast-cie-thread-configurator {};
@@ -1440,6 +1442,10 @@ self: super: {
 
  grbl-ros = self.callPackage ./grbl-ros {};
 
+ greenwave-monitor = self.callPackage ./greenwave-monitor {};
+
+ greenwave-monitor-interfaces = self.callPackage ./greenwave-monitor-interfaces {};
+
  grid-map = self.callPackage ./grid-map {};
 
  grid-map-cmake-helpers = self.callPackage ./grid-map-cmake-helpers {};
@@ -1659,6 +1665,8 @@ self: super: {
  key-teleop = self.callPackage ./key-teleop {};
 
  keyboard-handler = self.callPackage ./keyboard-handler {};
+
+ kinematic-pose-msgs = self.callPackage ./kinematic-pose-msgs {};
 
  kinematics-interface = self.callPackage ./kinematics-interface {};
 
@@ -3705,6 +3713,8 @@ self: super: {
  system-modes-examples = self.callPackage ./system-modes-examples {};
 
  system-modes-msgs = self.callPackage ./system-modes-msgs {};
+
+ system-webview = self.callPackage ./system-webview {};
 
  talos-bringup = self.callPackage ./talos-bringup {};
 

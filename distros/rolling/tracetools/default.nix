@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, lttng-tools, lttng-ust, pkg-config }:
 buildRosPackage {
   pname = "ros-rolling-tracetools";
-  version = "8.10.0-r1";
+  version = "8.10.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/rolling/tracetools/8.10.0-1.tar.gz";
-    name = "8.10.0-1.tar.gz";
-    sha256 = "e46f672d26da71c9f0d7d4ba0c6255d180881362b618c943c049f6b7f97a4484";
+    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/rolling/tracetools/8.10.1-1.tar.gz";
+    name = "8.10.1-1.tar.gz";
+    sha256 = "7e8ffac8b8ba38f928f2aa736249a73989a1e84d8b695224488d63879491d178";
   };
 
   buildType = "ament_cmake";

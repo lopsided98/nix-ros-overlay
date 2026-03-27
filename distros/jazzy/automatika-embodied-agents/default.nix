@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, automatika-ros-sugar, builtin-interfaces, python3Packages, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-automatika-embodied-agents";
-  version = "0.5.1-r1";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/automatika_embodied_agents-release/archive/release/jazzy/automatika_embodied_agents/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "7ed865ac9fcd1af37ec9ade29e765f4617a740c264c6f87b280321e1a485aa7c";
+    url = "https://github.com/ros2-gbp/automatika_embodied_agents-release/archive/release/jazzy/automatika_embodied_agents/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "5ab6de1ebacf9e5d4151d695e59d1cc56d5463aa18b8030ee8da218f8fa82674";
   };
 
   buildType = "ament_cmake";

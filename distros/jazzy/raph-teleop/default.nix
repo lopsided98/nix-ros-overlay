@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-msgs, ament-cmake, ament-cmake-copyright, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-python, ament-cmake-xmllint, joy-linux, rclpy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-raph-teleop";
-  version = "1.0.1-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/raph_common-release/archive/release/jazzy/raph_teleop/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "e448fb2e2a100f998390ca6de84353e4f02f0766d2fcc6d17676206ee3384dc8";
+    url = "https://github.com/ros2-gbp/raph_common-release/archive/release/jazzy/raph_teleop/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "f1fdf0031faef64e18ddbc815398671c9f7e01116c714e57afc8b8df76028a96";
   };
 
   buildType = "ament_cmake";

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros4hri/libhri-release/archive/release/rolling/hri/2.9.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/libhri-release/archive/release/rolling/hri/2.9.0-1.tar.gz";
     name = "2.9.0-1.tar.gz";
     sha256 = "13fa43780ddaac9892b0de305d1797a7488f21e409d0851f164cd0c13e715817";
   };

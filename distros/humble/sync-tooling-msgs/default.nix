@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, protobuf }:
 buildRosPackage {
   pname = "ros-humble-sync-tooling-msgs";
-  version = "0.2.6-r1";
+  version = "0.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sync_tooling_msgs-release/archive/release/humble/sync_tooling_msgs/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "ee38d0e39243aa9f00363dcba177a39d45515fa107538abd118561989e2d273d";
+    url = "https://github.com/ros2-gbp/sync_tooling_msgs-release/archive/release/humble/sync_tooling_msgs/0.2.7-1.tar.gz";
+    name = "0.2.7-1.tar.gz";
+    sha256 = "11e7354cd8c8b64fb21b5db13bc3c70c11e8891b61fb5f4c2330ba182428ef42";
   };
 
   buildType = "ament_cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake protobuf ];
 
   meta = {
-    description = "Protobuf definitions for synchronization diagnostics";
+    description = "Protobuf definitions for SYNC.TOOLING";
     license = with lib.licenses; [ asl20 ];
   };
 }

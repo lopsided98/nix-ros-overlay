@@ -32,6 +32,8 @@ self: super: {
 
  ads-vendor = self.callPackage ./ads-vendor {};
 
+ agnocast = self.callPackage ./agnocast {};
+
  agnocast-cie-config-msgs = self.callPackage ./agnocast-cie-config-msgs {};
 
  agnocast-cie-thread-configurator = self.callPackage ./agnocast-cie-thread-configurator {};
@@ -1273,6 +1275,10 @@ self: super: {
  grbl-msgs = self.callPackage ./grbl-msgs {};
 
  grbl-ros = self.callPackage ./grbl-ros {};
+
+ greenwave-monitor = self.callPackage ./greenwave-monitor {};
+
+ greenwave-monitor-interfaces = self.callPackage ./greenwave-monitor-interfaces {};
 
  grid-map = self.callPackage ./grid-map {};
 
@@ -2552,7 +2558,11 @@ self: super: {
 
  raph-description = self.callPackage ./raph-description {};
 
+ raph-fw = self.callPackage ./raph-fw {};
+
  raph-interfaces = self.callPackage ./raph-interfaces {};
+
+ raph-oak = self.callPackage ./raph-oak {};
 
  raph-robot = self.callPackage ./raph-robot {};
 
@@ -2832,6 +2842,10 @@ self: super: {
 
  ros2-fmt-logger = self.callPackage ./ros2-fmt-logger {};
 
+ ros2-medkit-beacon-common = self.callPackage ./ros2-medkit-beacon-common {};
+
+ ros2-medkit-cmake = self.callPackage ./ros2-medkit-cmake {};
+
  ros2-medkit-diagnostic-bridge = self.callPackage ./ros2-medkit-diagnostic-bridge {};
 
  ros2-medkit-fault-manager = self.callPackage ./ros2-medkit-fault-manager {};
@@ -2840,11 +2854,19 @@ self: super: {
 
  ros2-medkit-gateway = self.callPackage ./ros2-medkit-gateway {};
 
+ ros2-medkit-graph-provider = self.callPackage ./ros2-medkit-graph-provider {};
+
  ros2-medkit-integration-tests = self.callPackage ./ros2-medkit-integration-tests {};
+
+ ros2-medkit-linux-introspection = self.callPackage ./ros2-medkit-linux-introspection {};
 
  ros2-medkit-msgs = self.callPackage ./ros2-medkit-msgs {};
 
+ ros2-medkit-param-beacon = self.callPackage ./ros2-medkit-param-beacon {};
+
  ros2-medkit-serialization = self.callPackage ./ros2-medkit-serialization {};
+
+ ros2-medkit-topic-beacon = self.callPackage ./ros2-medkit-topic-beacon {};
 
  ros2-snapshot = self.callPackage ./ros2-snapshot {};
 
