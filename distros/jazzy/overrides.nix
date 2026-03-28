@@ -301,6 +301,19 @@ in {
     ];
   });
 
+  io-context = rosSuper.io-context.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for asio 1.36: https://github.com/ros-drivers/transport_drivers/pull/113
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/transport_drivers/commit/7be52848f624c82ea720416360d7a754fff65c33.patch";
+        hash = "sha256-frE2449PirPJMnln/mGW87JHXCJfb2wo+SBDunTPanc=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   # Fixes build error in autoware-lanelet2-extension:
   # Imported target "lanelet2_maps::lanelet2_maps" includes non-existent path
   #   "/nix/store/85v2zq13fh16v2zy6nyljz7f4caqvrab-ros-humble-lanelet2-maps-1.2.2-r1/include"
