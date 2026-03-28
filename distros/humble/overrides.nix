@@ -100,6 +100,17 @@ in with lib; {
     '';
   });
 
+  autoware-motion-velocity-obstacle-stop-module = rosSuper.autoware-motion-velocity-obstacle-stop-module.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # fix "visualization is required but vtk was not found" from PCLConfig.cmake when wrong order
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "find_package(autoware_cmake REQUIRED)" \
+        "find_package(PCL REQUIRED)
+        find_package(autoware_cmake REQUIRED)" \
+    '';
+  });
 
   autoware-pose-initializer = rosSuper.autoware-pose-initializer.overrideAttrs ({
     postPatch ? "", ...
