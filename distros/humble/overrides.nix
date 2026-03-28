@@ -578,6 +578,19 @@ in with lib; {
     propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.moveit-ros-planning ];
   });
 
+  moveit-task-constructor-capabilities = rosSuper.moveit-task-constructor-capabilities.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # ref. https://github.com/moveit/moveit_task_constructor/pull/712
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        url = "https://github.com/moveit/moveit_task_constructor/commit/ed99e6b8656867cbdfd52ca4e9e85c743e59edf1.patch";
+        hash = "sha256-WxTkG5bnpA+fDQ7EJufxxAQJ/UvN2uehPAPROezCCiQ=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   mqtt-client = rosSuper.mqtt-client.overrideAttrs ({
     postPatch ? "", ...
   }: {
