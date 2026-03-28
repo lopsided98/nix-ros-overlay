@@ -405,6 +405,16 @@ in with lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
   });
 
+  realsense2-camera-msgs = rosSuper.realsense2-camera-msgs.overrideAttrs ({
+    version, buildInputs ? [], ...
+  }: let
+    inherit (self.lib) throwIf versionAtLeast;
+  in {
+    buildInputs = buildInputs ++ (throwIf (versionAtLeast version "4.57.7-r4") "TODO: Remove realsense2-camera-msgs override"
+      [ rosSelf.action-msgs ])
+    ;
+  });
+
   ros2-ouster = rosSuper.ros2-ouster.overrideAttrs ({
     buildInputs ? [], ...
   }: {
