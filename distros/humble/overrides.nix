@@ -592,14 +592,16 @@ in with lib; {
   });
 
   mqtt-client = rosSuper.mqtt-client.overrideAttrs ({
-    postPatch ? "", ...
+    patches ? [], ...
   }: {
-    postPatch = postPatch + ''
-      substituteInPlace include/mqtt_client/MqttClient.hpp --replace-fail \
-        "#include <fmt/format.h>" \
-        "#include <fmt/format.h>
-         #include <fmt/ranges.h>"
-    '';
+    patches = patches ++ [
+      # ref. https://github.com/ika-rwth-aachen/mqtt_client/pull/93
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/mqtt_client/commit/fbbaf1ab684689019edc930c1528b33ec2319d8f.patch";
+        hash = "sha256-ESKIlHaESNxIZtAPpOcCpmClLiu8hydYEfBC8wwyoZI=";
+        stripLen = 1;
+      })
+    ];
   });
 
   mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
