@@ -15,6 +15,18 @@ in with lib; {
     ];
   });
 
+  autoware-map-height-fitter = rosSuper.autoware-map-height-fitter.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # fix "visualization is required but vtk was not found" from PCLConfig.cmake when wrong order
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "find_package(autoware_cmake REQUIRED)" \
+        "find_package(PCL REQUIRED)
+        find_package(autoware_cmake REQUIRED)" \
+    '';
+  });
+
   autoware-trajectory = rosSuper.autoware-trajectory.overrideAttrs ({
     buildInputs ? [], postPatch ? "", ...
   }: {
