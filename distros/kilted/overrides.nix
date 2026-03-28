@@ -83,6 +83,20 @@ in {
       '';
   });
 
+  fuse-core = rosSuper.fuse-core.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Don't fail with boost >= 1.86
+      # https://github.com/locusrobotics/fuse/pull/423
+      (self.fetchpatch2 {
+        url = "https://github.com/wentasah/fuse/commit/037b417d9db394b3d5154a800283c30d0ae30cee.patch";
+        hash = "sha256-j3ezP0QYP55mhj+F60Yv0Mv8M8Nu/AHmMoPn1lmI4Bg=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   gazebo = self.gazebo_11;
 
   geometric-shapes = rosSuper.geometric-shapes.overrideAttrs({
