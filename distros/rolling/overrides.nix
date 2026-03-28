@@ -479,6 +479,23 @@ in {
     ];
   });
 
+  usb-cam = rosSuper.usb-cam.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Remove undocumented pix_fmt (AV_PIX_FMT_XVMC) breaking the build
+      (self.fetchpatch {
+        url = "https://github.com/ros-drivers/usb_cam/commit/1d1970b1a88fb1be3b961073748879900d2b1a70.patch";
+        hash = "sha256-0iWl2DtqdjkyFy7lKa7aLxXjynm4ggNEQLxB45Mqf/Y=";
+      })
+      # Remove avcodec_close() removed in FFmpeg 8.0 (avcodec_free_context suffices)
+      (self.fetchpatch {
+        url = "https://github.com/ros-drivers/usb_cam/commit/41805f7eb50f31e16839bb302df1bb5c6f30cb50.patch";
+        hash = "sha256-UXjqIHCkplBo5MWmH+ZlcRyy0IJgr8Qdld9QMq03SPI=";
+      })
+    ];
+  });
+
   webots-ros2-driver = rosSuper.webots-ros2-driver.overrideAttrs ({
     postPatch ? "", ...
   }: {
