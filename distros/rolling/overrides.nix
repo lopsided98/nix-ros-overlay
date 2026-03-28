@@ -237,14 +237,27 @@ in {
     '';
   });
 
-  lely-core-libraries = lib.patchExternalProjectGit rosSuper.lely-core-libraries {
+  lely-core-libraries = (lib.patchExternalProjectGit rosSuper.lely-core-libraries {
     url = "https://gitlab.com/lely_industries/lely-core.git";
     rev = "fb735b79cab5f0cdda45bc5087414d405ef8f3ab";
     fetchgitArgs = {
       hash = "sha256-TpEWho+lbhXGaZ24+86eVJttrxH2Kc9gZVOGWeR0LBE=";
       leaveDotGit = true;
     };
-  };
+  }).overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # ref. https://gitlab.com/lely_industries/lely-core/-/merge_requests/143
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "CONFIGURE_COMMAND autoreconf -i <SOURCE_DIR>" \
+        "PATCH_COMMAND patch -p1 < ${self.fetchpatch2 {
+          url = "https://gitlab.com/lely_industries/lely-core/-/commit/6ed995fa86d828957b636a11470f150830d877ec.patch";
+          hash = "sha256-/kn+BMs9JHigmSXi6BrlHGmt06eF7mzJiKi26a7JQ3c=";
+        }}
+        CONFIGURE_COMMAND autoreconf -i <SOURCE_DIR>"
+    '';
+  });
 
   libphidget22 = lib.patchVendorUrl rosSuper.libphidget22 {
     url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.19.20240304.tar.gz";
