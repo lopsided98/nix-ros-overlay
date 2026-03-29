@@ -127,11 +127,14 @@ in {
   };
 
   gtsam = rosSuper.gtsam.overrideAttrs ({
-    nativeBuildInputs ? [], ...
+    nativeBuildInputs ? [], cmakeFlags ? [], ...
   }: {
     # https://github.com/borglab/gtsam/pull/2171
     # boost is optional but enabled by default
     nativeBuildInputs = nativeBuildInputs ++ [ self.boost ];
+    # GCC 15 enables -Woverloaded-virtual by default; DecisionTreeFactor hides
+    # base class operator* overloads and has no upstream fix yet
+    cmakeFlags = cmakeFlags ++ [ "-DCMAKE_CXX_FLAGS=-Wno-overloaded-virtual" ];
   });
 
   gz-cmake-vendor = lib.patchGzAmentVendorGit rosSuper.gz-cmake-vendor { };
