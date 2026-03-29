@@ -370,6 +370,32 @@ in {
   rosidlcpp-typesupport-fastrtps-c = rosSuper.rosidlcpp-typesupport-fastrtps-c.override { fmt = self.fmt_9; };
   rosidlcpp-typesupport-fastrtps-cpp = rosSuper.rosidlcpp-typesupport-fastrtps-cpp.override { fmt = self.fmt_9; };
 
+  rmf-task = rosSuper.rmf-task.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for GCC 15, ref. https://github.com/open-rmf/rmf_task/pull/133
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/rmf_task/commit/8aaacbe009022540cce1cd3ff3282413cf08a42c.patch";
+        hash = "sha256-9nXoYlfw6yuXP2TFelWl1/T6ho3G49n5vRoxC5qxQCA=";
+        stripLen = 1;
+      })
+    ];
+  });
+
+  rmf-traffic = rosSuper.rmf-traffic.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = [
+      # https://github.com/open-rmf/rmf_traffic/pull/131
+      (self.fetchpatch2 {
+        url = "https://github.com/open-rmf/rmf_traffic/commit/c20b8d71507880387185666c78d105557e5003a9.patch";
+        hash = "sha256-4Elg7oF6OQHd2trn3e+r73hghW9Qf90PrGjID7RsdEI=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   # rqt is broken in rolling due to unfinished qt6 migration.
   # TODO: Remove this once rqt works in rolling.
   ros-gz-sim-demos = rosSuper.ros-gz-sim-demos.override {

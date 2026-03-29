@@ -424,6 +424,18 @@ in {
     ];
   });
 
+  rmf-task = rosSuper.rmf-task.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for GCC 15, ref. https://github.com/open-rmf/rmf_task/pull/133
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/rmf_task/commit/8aaacbe009022540cce1cd3ff3282413cf08a42c.patch";
+        hash = "sha256-9nXoYlfw6yuXP2TFelWl1/T6ho3G49n5vRoxC5qxQCA=";
+        stripLen = 1;
+      })
+    ];
+  });
 
   rmf-traffic = rosSuper.rmf-traffic.overrideAttrs ({
     patches ? [], ...
