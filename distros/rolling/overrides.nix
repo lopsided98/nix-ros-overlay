@@ -273,10 +273,20 @@ in {
     '';
   });
 
-  mcap-vendor = lib.patchVendorUrl rosSuper.mcap-vendor {
+  mcap-vendor = (lib.patchVendorUrl rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.4.0.tar.gz";
     hash = "sha256-ZP8+URGfN//Pr53uy9mHp8tNTZA110o/03czlaRw/aE=";
-  };
+  }).overrideAttrs ( {
+    postPatch ? "", ...
+  }: {
+    # ref. https://github.com/foxglove/mcap/pull/1371
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "URL_HASH SHA1=354d894efb6a0c3968885c0e6d43224ff61fa762 # v1.4.0" \
+        "URL_HASH SHA1=354d894efb6a0c3968885c0e6d43224ff61fa762 # v1.4.0
+        PATCH_COMMAND sed -i \"1i #include <cstdint>\" cpp/mcap/include/mcap/types.hpp"
+    '';
+  });
 
   mimick-vendor = (lib.patchAmentVendorGit rosSuper.mimick-vendor { }).overrideAttrs({ ... }: {
     # Remove once https://github.com/Snaipe/Mimick/commit/321fcc74c1828e73af72cd75460857e1a3a549b9
