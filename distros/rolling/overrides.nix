@@ -466,6 +466,19 @@ in {
       '';
   });
 
+  ublox-gps = rosSuper.ublox-gps.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix for asio 1.36, ref https://github.com/KumarRobotics/ublox/pull/273
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/ublox/commit/da37a9628db91aaafbcbe8b247c28c0d5863159f.patch";
+        hash = "sha256-m7lsEHF/uS47zYrNBd5RSL62CmvmNcKXQiLM24R6LZA=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   urdfdom = rosSuper.urdfdom.overrideAttrs ({
     patches ? [], ...
   }: {
