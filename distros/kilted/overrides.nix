@@ -424,6 +424,17 @@ in {
     ];
   });
 
+  rc-genicam-api = rosSuper.rc-genicam-api.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # It's no longer needed to ignore "Error on non-existent target in get_target_property."
+    postPatch = postPatch + ''
+      substituteInPlace cmake/configure_link_libs.cmake --replace-fail \
+        "cmake_policy(SET CMP0045 OLD)" \
+        ""
+    '';
+  });
+
   rmf-task = rosSuper.rmf-task.overrideAttrs ({
     patches ? [], ...
   }: {

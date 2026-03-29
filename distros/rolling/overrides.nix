@@ -377,6 +377,17 @@ in {
       '';
   });
 
+  rc-genicam-api = rosSuper.rc-genicam-api.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # It's no longer needed to ignore "Error on non-existent target in get_target_property."
+    postPatch = postPatch + ''
+      substituteInPlace cmake/configure_link_libs.cmake --replace-fail \
+        "cmake_policy(SET CMP0045 OLD)" \
+        ""
+    '';
+  });
+
   rosidlcpp-generator-core = rosSuper.rosidlcpp-generator-core.override { fmt = self.fmt_9; };
   rosidlcpp-generator-cpp = rosSuper.rosidlcpp-generator-cpp.override { fmt = self.fmt_9; };
   rosidlcpp-generator-py = rosSuper.rosidlcpp-generator-py.override { fmt = self.fmt_9; };
