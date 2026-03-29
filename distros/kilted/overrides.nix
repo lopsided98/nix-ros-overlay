@@ -630,6 +630,13 @@ in {
     url = "https://github.com/zeromq/zmqpp.git";
     originalRev = "master";
     rev = "da73a138f290274cfd604b3f05a908956390a66e";
-    fetchgitArgs.hash = "sha256-UZyJpBEOf/Ys+i2tiBTjv4PlM5fHjjNLWuGhpgcmYyM=";
+    fetchgitArgs = {
+      hash = "sha256-VwZcSoUS/Dhw+dMRDP/neNUTNEUBd0kxjK8qGv/WJRQ=";
+      postFetch = ''
+        substituteInPlace $out/CMakeLists.txt --replace-fail \
+          "cmake_minimum_required(VERSION 2.8.12)" \
+          "cmake_minimum_required(VERSION 3.5)"
+      '';
+    };
   };
 }
