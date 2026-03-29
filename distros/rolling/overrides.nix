@@ -202,6 +202,20 @@ in {
 
   gz-utils-vendor = lib.patchAmentVendorGit rosSuper.gz-utils-vendor { };
 
+  hardware-interface = rosSuper.hardware-interface.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = [
+      # Fix build error with GCC 15 in joint_trajectory_controller
+      # https://github.com/ros-controls/ros2_control/pull/3174
+      (self.fetchpatch2 {
+        url = "https://github.com/wentasah/ros2_control/commit/4f8c27fc8b7e8ff855258318fe3e301f3ac52f99.patch";
+        hash = "sha256-TfhVA5aSkKOusCylfxne8/MEQcIqCZQU3LeiQ5SdN/A=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   io-context = rosSuper.io-context.overrideAttrs ({
     patches ? [], ...
   }: {
