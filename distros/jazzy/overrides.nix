@@ -121,6 +121,19 @@ in {
     ];
   });
 
+  ffw-robot-manager = rosSuper.ffw-robot-manager.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # ref. https://github.com/ROBOTIS-GIT/ai_worker/pull/88
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/ai_worker/commit/ff57978c1234454b41263165ce3b354f564fe33a.patch?full_index=1";
+        hash = "sha256-PTDVhT0rsvcRSZ+/TqUTAA2g2FvlWiUE9Pid5wXCYRo=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   fuse-core = rosSuper.fuse-core.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -421,7 +434,6 @@ in {
         "cmake_minimum_required(VERSION 3.10)"
     '';
   });
-
 
   moveit-core = rosSuper.moveit-core.overrideAttrs ({
     postPatch ? "", ...
