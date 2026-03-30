@@ -400,6 +400,29 @@ in {
     NIX_CFLAGS_COMPILE = toString [ "-Wno-error=cpp" ];
   });
 
+  motion-capture-tracking = rosSuper.motion-capture-tracking.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace deps/libmotioncapture/deps/pybind11/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.4)" \
+        "cmake_minimum_required(VERSION 3.10)"
+      substituteInPlace deps/libmotioncapture/deps/vrpn/client_src/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.6)" \
+        "cmake_minimum_required(VERSION 3.10)"
+      substituteInPlace deps/libmotioncapture/deps/vrpn/cmake/FindOpenHaptics.cmake --replace-fail \
+        "cmake_minimum_required(VERSION 2.6.3)" \
+        "cmake_minimum_required(VERSION 3.10)"
+      substituteInPlace deps/libmotioncapture/deps/vrpn/quat/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.6)" \
+        "cmake_minimum_required(VERSION 3.10)"
+      substituteInPlace deps/libmotioncapture/deps/vrpn/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.8.3)" \
+        "cmake_minimum_required(VERSION 3.10)"
+    '';
+  });
+
+
   moveit-core = rosSuper.moveit-core.overrideAttrs ({
     postPatch ? "", ...
   }: {
