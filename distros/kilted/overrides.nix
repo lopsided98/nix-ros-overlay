@@ -424,6 +424,16 @@ in {
     ];
   });
 
+  rcdiscover = rosSuper.rcdiscover.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required (VERSION 3.1)" \
+        "cmake_minimum_required (VERSION 3.10)"\
+    '';
+  });
+
   rc-genicam-api = rosSuper.rc-genicam-api.overrideAttrs ({
     postPatch ? "", ...
   }: {
