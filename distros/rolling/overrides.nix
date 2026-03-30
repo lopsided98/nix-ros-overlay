@@ -16,6 +16,22 @@ in {
     ];
   });
 
+  azure-iot-sdk-c = rosSuper.azure-iot-sdk-c.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required (VERSION 3.5)" \
+        "cmake_minimum_required (VERSION 3.10)"
+      substituteInPlace \
+        deps/azure-macro-utils-c/CMakeLists.txt \
+        deps/umock-c/CMakeLists.txt \
+        --replace-fail \
+        "cmake_minimum_required(VERSION 2.8.11)" \
+        "cmake_minimum_required(VERSION 3.10)"
+    '';
+  });
+
   battery-state-broadcaster = rosSuper.battery-state-broadcaster.overrideAttrs ({
     patches ? [], ...
   }: {
