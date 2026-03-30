@@ -756,6 +756,19 @@ in {
     ];
   });
 
+  udp-driver = rosSuper.udp-driver.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # fix for asio 1.36: https://github.com/ros-drivers/transport_drivers/pull/114
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/transport_drivers/commit/6a5a003a07850afda9681843978f1c5f46d04000.patch";
+        hash = "sha256-0j3Ps2RbkWcv9K+I6KW0fn2/4Nhsw8TIOoZAhAVixMk=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   urdfdom = rosSuper.urdfdom.overrideAttrs ({
     patches ? [], ...
   }: {
