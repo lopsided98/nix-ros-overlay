@@ -534,6 +534,18 @@ in {
 
   sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor { };
 
+  sick-scan-xd = rosSuper.sick-scan-xd.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for gcc15, ref https://github.com/SICKAG/sick_scan_xd/pull/557
+      (self.fetchpatch2 {
+        url = "https://github.com/SICKAG/sick_scan_xd/commit/f5ac360b4cfb319c981b022a9b817a5e86639d5c.patch";
+        hash = "sha256-zh3UDjy6k7LI3YOYr9F9jt8+4pkdgeOpUUqHcqme6Bs=";
+      })
+    ];
+  });
+
   shared-queues-vendor = lib.patchVendorUrl rosSuper.shared-queues-vendor {
     url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";
     hash = "sha256-TyFt3d78GidhDGD17KgjAaZl/qvAcGJP8lmu4EOxpYg=";
