@@ -348,12 +348,21 @@ in {
 
   mp-units-vendor = lib.patchAmentVendorGit rosSuper.mp-units-vendor {};
 
-  nlohmann-json-schema-validator-vendor = lib.patchExternalProjectGit rosSuper.nlohmann-json-schema-validator-vendor {
+  nlohmann-json-schema-validator-vendor = (lib.patchExternalProjectGit rosSuper.nlohmann-json-schema-validator-vendor {
     url = "https://github.com/pboettch/json-schema-validator.git";
     rev = "5ef4f903af055550e06955973a193e17efded896";
     revVariable = "nlohmann_json_schema_validator_version";
     fetchgitArgs.hash = "sha256-b02OFUx0BxUA6HN6IaacSg1t3RP4o7NND7X0U635W8U=";
-  };
+  }).overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "CMAKE_ARGS" \
+        "COMMAND sed -i \"s|cmake_minimum_required(VERSION 3.2)|cmake_minimum_required(VERSION 3.10)|\" CMakeLists.txt
+         CMAKE_ARGS"
+    '';
+  });
 
   # Switch to Qt6
   python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
