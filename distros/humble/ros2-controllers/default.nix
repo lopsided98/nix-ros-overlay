@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-steering-controller, admittance-controller, ament-cmake, bicycle-steering-controller, diff-drive-controller, effort-controllers, force-torque-sensor-broadcaster, forward-command-controller, gpio-controllers, gripper-controllers, imu-sensor-broadcaster, joint-state-broadcaster, joint-trajectory-controller, mecanum-drive-controller, pid-controller, pose-broadcaster, position-controllers, range-sensor-broadcaster, steering-controllers-library, tricycle-controller, tricycle-steering-controller, velocity-controllers }:
 buildRosPackage {
   pname = "ros-humble-ros2-controllers";
-  version = "2.52.1-r1";
+  version = "2.53.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/ros2_controllers/2.52.1-1.tar.gz";
-    name = "2.52.1-1.tar.gz";
-    sha256 = "9a902931abd1823364d04651c4202109e702909015f74fcea2a76a31f0e512ea";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/ros2_controllers/2.53.0-1.tar.gz";
+    name = "2.53.0-1.tar.gz";
+    sha256 = "a6ee5ceece259db97e0ca32f05007af81de26a37db3409c2d66a9436440fe96e";
   };
 
   buildType = "ament_cmake";

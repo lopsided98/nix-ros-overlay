@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, graphviz, python3Packages, rclpy, tf2-msgs, tf2-py, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-kilted-tf2-tools";
-  version = "0.41.6-r1";
+  version = "0.41.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_tools/0.41.6-1.tar.gz";
-    name = "0.41.6-1.tar.gz";
-    sha256 = "822a40521579996e85ad19e502820020359e188da729aaf0d062583bc41e853f";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_tools/0.41.7-1.tar.gz";
+    name = "0.41.7-1.tar.gz";
+    sha256 = "ff65e2dcf73f45cb108504a1a2ad1ca9f20b04e437643c6c7a9577243509c6df";
   };
 
   buildType = "ament_python";

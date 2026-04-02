@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, pkg-config, pluginlib, python-qt-binding, qt-gui, qt5, tinyxml2-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-qt-gui-cpp";
-  version = "2.7.5-r1";
+  version = "2.7.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/jazzy/qt_gui_cpp/2.7.5-1.tar.gz";
-    name = "2.7.5-1.tar.gz";
-    sha256 = "49ecbf2804f1e90f522f380f4bbec14525ba7a622aca99be58c1388831d66fcd";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/jazzy/qt_gui_cpp/2.7.6-1.tar.gz";
+    name = "2.7.6-1.tar.gz";
+    sha256 = "2d061ac67c809a7b6b51c373111e4428b28913645a447433682af137005b5644";
   };
 
   buildType = "ament_cmake";

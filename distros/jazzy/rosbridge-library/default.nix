@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake-mypy, ament-cmake-python, ament-cmake-ros, builtin-interfaces, control-msgs, diagnostic-msgs, example-interfaces, geometry-msgs, nav-msgs, python3Packages, rcl-interfaces, rclpy, rosbridge-test-msgs, sensor-msgs, std-msgs, std-srvs, stereo-msgs, tf2-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rosbridge-library";
-  version = "2.5.0-r1";
+  version = "2.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/jazzy/rosbridge_library/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "0b10079ebafbc9adaba15f471eac21739227626e6ec24721f97e4a28d72f6d7d";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/jazzy/rosbridge_library/2.6.0-1.tar.gz";
+    name = "2.6.0-1.tar.gz";
+    sha256 = "4128c99c62dc077c36fc893fdaa609af7348edecd8e56ceb4c1c1c6d90280713";
   };
 
   buildType = "ament_cmake";

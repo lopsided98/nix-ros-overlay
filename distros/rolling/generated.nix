@@ -968,6 +968,8 @@ self: super: {
 
  hri-rviz = self.callPackage ./hri-rviz {};
 
+ human-description = self.callPackage ./human-description {};
+
  ibeo-msgs = self.callPackage ./ibeo-msgs {};
 
  iceoryx-binding-c = self.callPackage ./iceoryx-binding-c {};
@@ -1215,6 +1217,10 @@ self: super: {
  lifecycle-msgs = self.callPackage ./lifecycle-msgs {};
 
  lifecycle-py = self.callPackage ./lifecycle-py {};
+
+ linear-feedback-controller = self.callPackage ./linear-feedback-controller {};
+
+ linear-feedback-controller-msgs = self.callPackage ./linear-feedback-controller-msgs {};
 
  linux-isolate-process = self.callPackage ./linux-isolate-process {};
 
@@ -2935,6 +2941,8 @@ self: super: {
  urdf-launch = self.callPackage ./urdf-launch {};
 
  urdf-parser-plugin = self.callPackage ./urdf-parser-plugin {};
+
+ urdf-test = self.callPackage ./urdf-test {};
 
  urdf-tutorial = self.callPackage ./urdf-tutorial {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, boost, launch, launch-ros, rclcpp, rclcpp-components, rcutils, rmw, rmw-implementation-cmake, std-msgs, std-srvs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-humble-persist-parameter-server";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/persist_parameter_server-release/archive/release/humble/persist_parameter_server/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "cbfd273725550cdecd8690794ece069b381882d9835accca33abf2816012e1ab";
+    url = "https://github.com/ros2-gbp/persist_parameter_server-release/archive/release/humble/persist_parameter_server/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "54cda3b4305a2f5e2af7b3a8f5cc1fac26b4da4269e7d2676aa590f28d931cf5";
   };
 
   buildType = "ament_cmake";

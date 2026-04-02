@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, eigen, filters, fmt, generate-parameter-library, geometry-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools, ros2-control-cmake, tf2, tf2-geometry-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, eigen, filters, fmt, generate-parameter-library, geometry-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools, ros2-control-cmake, rsl, tf2, tf2-geometry-msgs, tf2-ros, tl-expected-nixpkgs }:
 buildRosPackage {
   pname = "ros-jazzy-control-toolbox";
-  version = "4.9.0-r1";
+  version = "4.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/control_toolbox-release/archive/release/jazzy/control_toolbox/4.9.0-1.tar.gz";
-    name = "4.9.0-1.tar.gz";
-    sha256 = "8976de2ef43d30c78e0a0c64544bc1fb1e5c5d31bf26a2d57354ed88cfda90c0";
+    url = "https://github.com/ros2-gbp/control_toolbox-release/archive/release/jazzy/control_toolbox/4.10.0-1.tar.gz";
+    name = "4.10.0-1.tar.gz";
+    sha256 = "d9b5b0e16ed4247b119cd265a5682fc247972e43439cd7925e796375969d552d";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros2-control-cmake ];
   checkInputs = [ ament-cmake-gmock rclcpp-lifecycle ];
-  propagatedBuildInputs = [ backward-ros control-msgs eigen filters fmt generate-parameter-library geometry-msgs pluginlib rclcpp rcutils realtime-tools tf2 tf2-geometry-msgs tf2-ros ];
+  propagatedBuildInputs = [ backward-ros control-msgs eigen filters fmt generate-parameter-library geometry-msgs pluginlib rclcpp rcutils realtime-tools rsl tf2 tf2-geometry-msgs tf2-ros tl-expected-nixpkgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

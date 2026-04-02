@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, agnocast-cie-config-msgs, agnocast-cie-thread-configurator, agnocastlib, ament-cmake, class-loader, glog, launch-testing-ament-cmake, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-humble-agnocast-components";
-  version = "2.3.2-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/agnocast_components/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "2595df40fd76799a7184a3fb8ae19cb9933d25fcbb723c7f80ede792129c133a";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/agnocast_components/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "bae26928e887299479410d30a28c407864daf51fd9c94a8ae573ae047eaadbdb";
   };
 
   buildType = "ament_cmake";

@@ -536,6 +536,8 @@ self: super: {
 
  compass-interfaces = self.callPackage ./compass-interfaces {};
 
+ compass-msgs = self.callPackage ./compass-msgs {};
+
  composition = self.callPackage ./composition {};
 
  composition-interfaces = self.callPackage ./composition-interfaces {};
@@ -1221,6 +1223,12 @@ self: super: {
  fuse-variables = self.callPackage ./fuse-variables {};
 
  fuse-viz = self.callPackage ./fuse-viz {};
+
+ fusioncore-core = self.callPackage ./fusioncore-core {};
+
+ fusioncore-gazebo = self.callPackage ./fusioncore-gazebo {};
+
+ fusioncore-ros = self.callPackage ./fusioncore-ros {};
 
  game-controller-spl = self.callPackage ./game-controller-spl {};
 

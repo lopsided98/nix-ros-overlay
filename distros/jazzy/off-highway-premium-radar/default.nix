@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, ament-lint-auto, ament-lint-common, asio, asio-cmake-module, diagnostic-updater, io-context, off-highway-premium-radar-msgs, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-off-highway-premium-radar";
-  version = "1.2.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/jazzy/off_highway_premium_radar/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "4ce150fb28f8f6f38d7245ad342d9b1fbd4de870b62cced411d1307fef4a7fde";
+    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/jazzy/off_highway_premium_radar/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "4b99fc9c7571230593ff939e8b10cbd40bbd9d6e13da03fdba9a90202ea8e1f3";
   };
 
   buildType = "ament_cmake";

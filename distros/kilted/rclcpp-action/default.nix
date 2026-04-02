@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, mimick-vendor, performance-test-fixture, rcl, rcl-action, rclcpp, rcpputils, rosidl-runtime-c, test-msgs }:
 buildRosPackage {
   pname = "ros-kilted-rclcpp-action";
-  version = "29.5.7-r1";
+  version = "29.5.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/kilted/rclcpp_action/29.5.7-1.tar.gz";
-    name = "29.5.7-1.tar.gz";
-    sha256 = "ab337d2bf5bf76081758bf34349c5bcd55c20cf9a9ed9c90e92d55f2e0039800";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/kilted/rclcpp_action/29.5.8-1.tar.gz";
+    name = "29.5.8-1.tar.gz";
+    sha256 = "e819d620f89c25acc110ef9479d4c2f526505031decdcfaac0db6a4508e7d499";
   };
 
   buildType = "ament_cmake";

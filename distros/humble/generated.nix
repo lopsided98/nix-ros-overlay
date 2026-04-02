@@ -734,6 +734,8 @@ self: super: {
 
  clearpath-viz = self.callPackage ./clearpath-viz {};
 
+ clips-vendor = self.callPackage ./clips-vendor {};
+
  cloudini-lib = self.callPackage ./cloudini-lib {};
 
  cloudini-ros = self.callPackage ./cloudini-ros {};
@@ -3141,6 +3143,32 @@ self: super: {
  ros2-controllers-test-nodes = self.callPackage ./ros2-controllers-test-nodes {};
 
  ros2-fmt-logger = self.callPackage ./ros2-fmt-logger {};
+
+ ros2-medkit-beacon-common = self.callPackage ./ros2-medkit-beacon-common {};
+
+ ros2-medkit-cmake = self.callPackage ./ros2-medkit-cmake {};
+
+ ros2-medkit-diagnostic-bridge = self.callPackage ./ros2-medkit-diagnostic-bridge {};
+
+ ros2-medkit-fault-manager = self.callPackage ./ros2-medkit-fault-manager {};
+
+ ros2-medkit-fault-reporter = self.callPackage ./ros2-medkit-fault-reporter {};
+
+ ros2-medkit-gateway = self.callPackage ./ros2-medkit-gateway {};
+
+ ros2-medkit-graph-provider = self.callPackage ./ros2-medkit-graph-provider {};
+
+ ros2-medkit-integration-tests = self.callPackage ./ros2-medkit-integration-tests {};
+
+ ros2-medkit-linux-introspection = self.callPackage ./ros2-medkit-linux-introspection {};
+
+ ros2-medkit-msgs = self.callPackage ./ros2-medkit-msgs {};
+
+ ros2-medkit-param-beacon = self.callPackage ./ros2-medkit-param-beacon {};
+
+ ros2-medkit-serialization = self.callPackage ./ros2-medkit-serialization {};
+
+ ros2-medkit-topic-beacon = self.callPackage ./ros2-medkit-topic-beacon {};
 
  ros2-ouster = self.callPackage ./ros2-ouster {};
 

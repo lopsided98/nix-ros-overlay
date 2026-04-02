@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-xmllint, builtin-interfaces, geometry-msgs, python3Packages, rclpy, sensor-msgs, std-msgs, tf2-msgs, tf2-py }:
 buildRosPackage {
   pname = "ros-kilted-tf2-ros-py";
-  version = "0.41.6-r1";
+  version = "0.41.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_ros_py/0.41.6-1.tar.gz";
-    name = "0.41.6-1.tar.gz";
-    sha256 = "8007104c2c9927ca1ef430576a947a04a1ad5cfdeb1a6b4f7f67e9f519e2d24b";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_ros_py/0.41.7-1.tar.gz";
+    name = "0.41.7-1.tar.gz";
+    sha256 = "d00b4a72aab64d4f5131da6919b8fa4b43cdceb6053b8b9b13ba0d37367d63c5";
   };
 
   buildType = "ament_python";

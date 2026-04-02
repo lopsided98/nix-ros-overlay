@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-kilted-dummy-map-server";
-  version = "0.36.4-r1";
+  version = "0.36.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/dummy_map_server/0.36.4-1.tar.gz";
-    name = "0.36.4-1.tar.gz";
-    sha256 = "601bc02c3b1e1a1072db1e4f921f48256f5b798f697eb8655ddda1bcac082380";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/dummy_map_server/0.36.5-1.tar.gz";
+    name = "0.36.5-1.tar.gz";
+    sha256 = "6e35d8ff98927dbe5cd0d8c2c1433f1a2e3c4e0ef26bea6708cd2ad704c30b4c";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, gz-msgs-vendor, gz-transport-vendor, image-transport, pkg-config, rclcpp, ros-gz-bridge, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ros-gz-image";
-  version = "1.0.21-r1";
+  version = "1.0.22-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/jazzy/ros_gz_image/1.0.21-1.tar.gz";
-    name = "1.0.21-1.tar.gz";
-    sha256 = "56935670c79d32fd86f0bf532631e8ac3397faece459b549d56cec3b58aa16b6";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/jazzy/ros_gz_image/1.0.22-1.tar.gz";
+    name = "1.0.22-1.tar.gz";
+    sha256 = "13630d9fc1ca792d9e93c6d6d2aa10cabf2d6b23c496fecf308608e54d35b1fb";
   };
 
   buildType = "ament_cmake";

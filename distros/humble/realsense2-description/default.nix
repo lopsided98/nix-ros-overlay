@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, launch-ros, rclcpp, rclcpp-components, realsense2-camera-msgs, xacro }:
 buildRosPackage {
   pname = "ros-humble-realsense2-description";
-  version = "4.57.7-r1";
+  version = "4.57.7-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/humble/realsense2_description/4.57.7-1.tar.gz";
-    name = "4.57.7-1.tar.gz";
-    sha256 = "5a7283bb88e189af126b38cabab2f6ab18efb57cc5c1516c14a24b9341b5e409";
+    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/humble/realsense2_description/4.57.7-4.tar.gz";
+    name = "4.57.7-4.tar.gz";
+    sha256 = "bf3cbd160a1d1913275315bc03e720e0ff5c2ecab587f3e5f278ae087bbcad53";
   };
 
   buildType = "ament_cmake";

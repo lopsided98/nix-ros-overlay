@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gen-version-h, ament-cmake-gmock, ament-cmake-google-benchmark, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, builtin-interfaces, libstatistics-collector, mimick-vendor, performance-test-fixture, python3, rcl, rcl-interfaces, rcl-logging-interface, rcl-yaml-param-parser, rcpputils, rcutils, rmw, rmw-implementation-cmake, rosgraph-msgs, rosidl-default-generators, rosidl-dynamic-typesupport, rosidl-runtime-c, rosidl-runtime-cpp, rosidl-typesupport-c, rosidl-typesupport-cpp, statistics-msgs, test-msgs, tracetools }:
 buildRosPackage {
   pname = "ros-kilted-rclcpp";
-  version = "29.5.7-r1";
+  version = "29.5.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/kilted/rclcpp/29.5.7-1.tar.gz";
-    name = "29.5.7-1.tar.gz";
-    sha256 = "09c75ed146625ccbcc19c1faf7c2096782b068ef81964de42d888796429ac113";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/kilted/rclcpp/29.5.8-1.tar.gz";
+    name = "29.5.8-1.tar.gz";
+    sha256 = "b777ffd20de30bd2c3e0c2a2b6d6d66e07ee797cf2da662c94eadfec81a92e69";
   };
 
   buildType = "ament_cmake";
