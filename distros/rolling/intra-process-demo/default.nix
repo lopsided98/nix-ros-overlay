@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, opencv, rclcpp, rmw-implementation-cmake, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-intra-process-demo";
-  version = "0.37.6-r1";
+  version = "0.37.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/intra_process_demo/0.37.6-1.tar.gz";
-    name = "0.37.6-1.tar.gz";
-    sha256 = "1c2acad618fc374d10332023268c705210f1b5eb0450993d1eebae326e035126";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/intra_process_demo/0.37.7-1.tar.gz";
+    name = "0.37.7-1.tar.gz";
+    sha256 = "65beea8c8d8c1038ce2c02e22419d7c26b2eddcd76b2cca25699372b9d3905b3";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake example-interfaces ];
+  buildInputs = [ ament-cmake example-interfaces opencv.cxxdev ];
   checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common launch launch-testing launch-testing-ament-cmake launch-testing-ros rmw-implementation-cmake ];
-  propagatedBuildInputs = [ opencv opencv.cxxdev rclcpp sensor-msgs ];
+  propagatedBuildInputs = [ opencv rclcpp sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, agnocast-cie-config-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-agnocast-cie-thread-configurator";
-  version = "2.3.2-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/agnocast_cie_thread_configurator/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "8642595665710f7385dd7a5c67cb84fa784eb3bdf7b2178947abb2d6324cd289";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/agnocast_cie_thread_configurator/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "5830ff91c5022f64fa420847abfad9073c75c4f75438ebbeb813712ef3edc5d3";
   };
 
   buildType = "ament_cmake";

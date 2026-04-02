@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-lint-common, lifecycle, lifecycle-msgs, rclpy, ros-testing, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-lifecycle-py";
-  version = "0.33.9-r1";
+  version = "0.33.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/lifecycle_py/0.33.9-1.tar.gz";
-    name = "0.33.9-1.tar.gz";
-    sha256 = "62342b9c8310ee1b923b771763df9e5997e56794dec63d92135019b8248e1005";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/lifecycle_py/0.33.10-1.tar.gz";
+    name = "0.33.10-1.tar.gz";
+    sha256 = "658c68f12f928904985c612781f5e89b22b6d007c6238f66fa7c0b0e300726ce";
   };
 
   buildType = "ament_python";

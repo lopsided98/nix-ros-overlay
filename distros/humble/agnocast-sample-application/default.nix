@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, agnocast-components, agnocast-sample-interfaces, agnocastlib, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-humble-agnocast-sample-application";
-  version = "2.3.2-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/agnocast_sample_application/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "f0cd8d0856da3726a1e694d30a38b3acb16eb4b8cc1555c793af38f01051a7f2";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/agnocast_sample_application/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "acdada074309d8123730ff359a80f84a4bda5f8e2339751c588ee0d245e57d07";
   };
 
   buildType = "ament_cmake";

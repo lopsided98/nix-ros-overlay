@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-agnocast-sample-interfaces";
-  version = "2.3.2-r1";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/agnocast_sample_interfaces/2.3.2-1.tar.gz";
-    name = "2.3.2-1.tar.gz";
-    sha256 = "e33dfa448f546d764e9eae73adacab737944375b5df17580ca468df5660b9385";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/agnocast_sample_interfaces/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "7d4f6895e3e9e1a4925ba3cfa3055c4358a83a9c2cfde8092dfb548993f8ad7f";
   };
 
   buildType = "ament_cmake";

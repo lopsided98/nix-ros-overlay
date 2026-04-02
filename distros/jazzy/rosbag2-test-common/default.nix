@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, python-cmake-module, rclcpp, rcpputils, rcutils, test-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rosbag2-test-common";
-  version = "0.26.9-r1";
+  version = "0.26.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/rosbag2_test_common/0.26.9-1.tar.gz";
-    name = "0.26.9-1.tar.gz";
-    sha256 = "211c69d84504ebb8f5d8ae4bea10e24e363f30e9fa5452b7ddf2eb56854936fd";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/rosbag2_test_common/0.26.10-1.tar.gz";
+    name = "0.26.10-1.tar.gz";
+    sha256 = "2772fbeff278b90352b4aa93e4df4af21fa32936f3a892264b49b7270b9b1718";
   };
 
   buildType = "ament_cmake";

@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, message-filters, pluginlib, rclcpp, rclcpp-components, rclcpp-lifecycle, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, message-filters, pluginlib, rclcpp, rclcpp-components, rclcpp-lifecycle, sensor-msgs, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-rolling-image-transport";
-  version = "6.4.5-r1";
+  version = "6.4.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/image_transport/6.4.5-1.tar.gz";
-    name = "6.4.5-1.tar.gz";
-    sha256 = "20422d1f79eaa034844c8dbded47a2ce00156a3bc7c60fa2b59886f692e1860b";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/image_transport/6.4.7-1.tar.gz";
+    name = "6.4.7-1.tar.gz";
+    sha256 = "b6a21f7e87c635787ff6aefb3d03e4a5687a6ef27a244832ef4d73861b6967d8";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common rclcpp-lifecycle ];
-  propagatedBuildInputs = [ message-filters pluginlib rclcpp rclcpp-components sensor-msgs ];
+  propagatedBuildInputs = [ message-filters pluginlib rclcpp rclcpp-components sensor-msgs tinyxml-2 ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

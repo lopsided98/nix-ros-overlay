@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ros-gz-bridge, ros-gz-image, ros-gz-sim, ros-gz-sim-demos }:
 buildRosPackage {
   pname = "ros-jazzy-ros-gz";
-  version = "1.0.21-r1";
+  version = "1.0.22-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/jazzy/ros_gz/1.0.21-1.tar.gz";
-    name = "1.0.21-1.tar.gz";
-    sha256 = "78e9e51660b53038023c8a45a042e062b1d1ff9c18e909445b05e6be0e2342fc";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/jazzy/ros_gz/1.0.22-1.tar.gz";
+    name = "1.0.22-1.tar.gz";
+    sha256 = "6d09d50e03d68e479b32ca75e37fc55aefd6fa45381b6f4ffc5a1f4544b046a2";
   };
 
   buildType = "ament_cmake";

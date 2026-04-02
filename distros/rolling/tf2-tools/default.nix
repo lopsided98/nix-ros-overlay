@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, graphviz, python3Packages, rclpy, tf2-msgs, tf2-py, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-rolling-tf2-tools";
-  version = "0.45.6-r1";
+  version = "0.45.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_tools/0.45.6-1.tar.gz";
-    name = "0.45.6-1.tar.gz";
-    sha256 = "85c5350f255919b3a3e92e17a14737c53f706d6e7e9b18a9106a763f66509888";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2_tools/0.45.6-2.tar.gz";
+    name = "0.45.6-2.tar.gz";
+    sha256 = "06fa63009ed7e96a249cc43ebb93a0dba595684e75bacbef84f74a25cdb12708";
   };
 
   buildType = "ament_python";

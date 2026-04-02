@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, geometry-msgs, mrpt-libnav, mrpt-libros-bridge, mrpt-nav-interfaces, nav-msgs, rclcpp, rclcpp-components, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-reactivenav2d";
-  version = "2.3.0-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/kilted/mrpt_reactivenav2d/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "986a27f638ebf0e6b0f38409c4fc24705311343d8153a16dd83a2b7bee9ceb3e";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/kilted/mrpt_reactivenav2d/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "74d7dd1dc7ecc7d0c14d674339609ffb0e2077e030b985cf3e0f2236495d55b7";
   };
 
   buildType = "ament_cmake";

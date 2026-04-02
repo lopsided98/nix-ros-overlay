@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-components, rcutils, rmw-implementation-cmake, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-composition";
-  version = "0.33.9-r1";
+  version = "0.33.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/composition/0.33.9-1.tar.gz";
-    name = "0.33.9-1.tar.gz";
-    sha256 = "c4173c5978b592bb8e7598dc39cf67f552ee828e6ae2b95f9fa798f187782a51";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/composition/0.33.10-1.tar.gz";
+    name = "0.33.10-1.tar.gz";
+    sha256 = "462e13e3e0583ceece4f75fd9fb7162de24a1b4fce627dc3f43d1fd558d98aa9";
   };
 
   buildType = "ament_cmake";

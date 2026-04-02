@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, python3Packages, rqt-gui-py }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-rolling-slider-publisher";
-  version = "2.4.1-r1";
+  version = "2.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/slider_publisher-release/archive/release/rolling/slider_publisher/2.4.1-1.tar.gz";
-    name = "2.4.1-1.tar.gz";
-    sha256 = "5c852cf8e36f0aa433fb9ef70a6e2c478f5e735295983a4113541fdce25957d1";
+    url = "https://github.com/ros2-gbp/slider_publisher-release/archive/release/rolling/slider_publisher/2.4.3-1.tar.gz";
+    name = "2.4.3-1.tar.gz";
+    sha256 = "3d4d50425a86bb4c95b6e595fa98fa813be8e9c9f42df4e5dd44f960311c0ea3";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ python3Packages.numpy python3Packages.scipy rqt-gui-py ];
+  propagatedBuildInputs = [ rqt-gui-py ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,20 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, diagnostic-msgs, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, trajectory-msgs }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, diagnostic-msgs, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-control-msgs";
-  version = "6.8.0-r1";
+  version = "6.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/rolling/control_msgs/6.8.0-1.tar.gz";
-    name = "6.8.0-1.tar.gz";
-    sha256 = "8555c2a58ab81e0ae38dbb51776b8eabf9af390e654284b75910234bf365f958";
+    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/rolling/control_msgs/6.9.0-1.tar.gz";
+    name = "6.9.0-1.tar.gz";
+    sha256 = "fe4897956d68d43c45ca3046b8e7b74495347ff9c022624546485a72c9440337";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ action-msgs builtin-interfaces diagnostic-msgs geometry-msgs rosidl-default-runtime sensor-msgs std-msgs trajectory-msgs ];
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 

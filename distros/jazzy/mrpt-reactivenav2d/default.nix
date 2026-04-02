@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, geometry-msgs, mrpt-libnav, mrpt-libros-bridge, mrpt-nav-interfaces, nav-msgs, rclcpp, rclcpp-components, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-reactivenav2d";
-  version = "2.3.0-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/jazzy/mrpt_reactivenav2d/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "e3f5bcfb156952779620e6bdd725f52f812e6aa325a67ade0cb378bc0df9c22c";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/jazzy/mrpt_reactivenav2d/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "716b0333bfe7769c14a943a50c34a6e98e174dc5dcbd277391ce1cf932d93732";
   };
 
   buildType = "ament_cmake";

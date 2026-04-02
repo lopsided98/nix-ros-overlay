@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-libgui, mrpt-libmaps, mrpt-libnav, mrpt-libtclap, mvsim }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-path-planning";
-  version = "0.2.5-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_path_planning-release/archive/release/jazzy/mrpt_path_planning/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "66a2c0403f48433d1197cac1d98dda0d6572c1903c37a17e06756aa73506fe4e";
+    url = "https://github.com/ros2-gbp/mrpt_path_planning-release/archive/release/jazzy/mrpt_path_planning/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "d9f35cfbb8d8d1f7745e107fe332ccdf98a283a385be09d91a2a101168fa60f4";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-python, ament-index-python, launch, launch-ros, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-simple-launch";
-  version = "1.11.1-r1";
+  version = "1.11.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/simple_launch-release/archive/release/jazzy/simple_launch/1.11.1-1.tar.gz";
-    name = "1.11.1-1.tar.gz";
-    sha256 = "97b97ccebfcd6d157e88733c2cca7482e74db9b5b2b79902bbcf2e9f17a6122b";
+    url = "https://github.com/ros2-gbp/simple_launch-release/archive/release/jazzy/simple_launch/1.11.4-1.tar.gz";
+    name = "1.11.4-1.tar.gz";
+    sha256 = "60614755db7bc93326cddbba0c731feb82c06f30d7c36fc1b9242bfeb8dd07e0";
   };
 
   buildType = "ament_cmake";

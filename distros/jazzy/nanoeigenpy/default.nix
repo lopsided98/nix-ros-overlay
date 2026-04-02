@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, doxygen, eigen, git, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-nanoeigenpy";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nanoeigenpy-release/archive/release/jazzy/nanoeigenpy/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "d84cafac2c102eeac0fca610c0e0b7935ce09446f630d01d07ee10172d5a2d5e";
+    url = "https://github.com/ros2-gbp/nanoeigenpy-release/archive/release/jazzy/nanoeigenpy/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "f6261b4631bba54428bb5d7fd6b7a0da1b001e9dc0ad37fa7e3bffb3b92ac795";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, rosidl-typesupport-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-rosbag2-performance-benchmarking-msgs";
-  version = "0.26.9-r1";
+  version = "0.26.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/rosbag2_performance_benchmarking_msgs/0.26.9-1.tar.gz";
-    name = "0.26.9-1.tar.gz";
-    sha256 = "5d116ce41c3ca2f31e32795890dad630040ff14a3cd9d64f9408473c9e68ff19";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/rosbag2_performance_benchmarking_msgs/0.26.10-1.tar.gz";
+    name = "0.26.10-1.tar.gz";
+    sha256 = "26860a8547d490d52f0060f81a99c6756c523d595a76531b323341d05ec6de81";
   };
 
   buildType = "ament_cmake";

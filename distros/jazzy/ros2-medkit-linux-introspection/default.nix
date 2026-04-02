@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_libsystemd-dev, ament-cmake, ament-cmake-gtest, ament-lint-auto, httplib, nlohmann_json, openssl, ros2-medkit-cmake, ros2-medkit-gateway }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, httplib, nlohmann_json, openssl, ros2-medkit-cmake, ros2-medkit-gateway, systemd }:
 buildRosPackage {
   pname = "ros-jazzy-ros2-medkit-linux-introspection";
   version = "0.4.0-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros2-medkit-cmake ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ];
-  propagatedBuildInputs = [ _unresolved_libsystemd-dev httplib nlohmann_json openssl ros2-medkit-gateway ];
+  propagatedBuildInputs = [ httplib nlohmann_json openssl ros2-medkit-gateway systemd ];
   nativeBuildInputs = [ ament-cmake ros2-medkit-cmake ];
 
   meta = {

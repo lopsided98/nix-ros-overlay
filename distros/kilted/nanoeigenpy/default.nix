@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, doxygen, eigen, git, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-nanoeigenpy";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nanoeigenpy-release/archive/release/kilted/nanoeigenpy/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "5c5502da08a54031790e30b18864886fe99e9e576da28fd1c54bdfaa6e717f3c";
+    url = "https://github.com/ros2-gbp/nanoeigenpy-release/archive/release/kilted/nanoeigenpy/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "1793ca2124838b3a7676c23adde6e29d00fa8ea96b433e3316b81600488a1037";
   };
 
   buildType = "cmake";

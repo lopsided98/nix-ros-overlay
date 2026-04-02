@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, python3, rclpy, rpyutils, tf2 }:
 buildRosPackage {
   pname = "ros-kilted-tf2-py";
-  version = "0.41.6-r1";
+  version = "0.41.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_py/0.41.6-1.tar.gz";
-    name = "0.41.6-1.tar.gz";
-    sha256 = "64000ea3df01725c848c1107efe46a4f3fbb4bf8828a0e10c7c5bab367b0a3b4";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_py/0.41.7-1.tar.gz";
+    name = "0.41.7-1.tar.gz";
+    sha256 = "6346875f922caf296b0592235e9ef70283f445936c642c86e9ba6674096ded13";
   };
 
   buildType = "ament_cmake";

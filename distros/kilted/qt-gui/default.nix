@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages, qt5, tango-icons-vendor }:
 buildRosPackage {
   pname = "ros-kilted-qt-gui";
-  version = "2.9.2-r1";
+  version = "2.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/kilted/qt_gui/2.9.2-1.tar.gz";
-    name = "2.9.2-1.tar.gz";
-    sha256 = "157476550be8c2ccf8273e78326926b8661c770a39f60840cc2d19971ba8b2d4";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/kilted/qt_gui/2.9.3-1.tar.gz";
+    name = "2.9.3-1.tar.gz";
+    sha256 = "238b43574838c84780219409fda268bd81e2e645943ee1040fb8d69843bbb460";
   };
 
   buildType = "ament_cmake";
