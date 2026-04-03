@@ -56,6 +56,32 @@ in {
     ];
   });
 
+  event-camera-tools = rosSuper.event-camera-tools.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Remove unused include of rosbag2_cpp/typesupport_helpers.hpp
+      # https://github.com/ros-event-camera/event_camera_tools/pull/27
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-event-camera/event_camera_tools/commit/d6ed377c7af8c929f77f46204127e2e344a530bd.patch";
+        hash = "sha256-H1Iep7otW/sGTvfDZERmE8jXdbXrO2VjEoIW1mMF4Gg=";
+      })
+    ];
+  });
+
+  event-image-reconstruction-fibar = rosSuper.event-image-reconstruction-fibar.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Remove unused include of rosbag2_cpp/typesupport_helpers.hpp
+      # https://github.com/ros-event-camera/event_image_reconstruction_fibar/pull/6
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-event-camera/event_image_reconstruction_fibar/commit/7f296ace2dcde06a6384425af3f4e8e7ad8eacd4.patch";
+        hash = "sha256-oXciDL2uVR7RU2Sshfn6led/fsl8iz8DTy89yiYVvNQ=";
+      })
+    ];
+  });
+
   fuse-core = rosSuper.fuse-core.overrideAttrs ({
     patches ? [], ...
   }: {
