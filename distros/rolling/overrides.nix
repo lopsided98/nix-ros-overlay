@@ -465,6 +465,20 @@ in {
     '';
   });
 
+  yasmin-factory = rosSuper.yasmin-factory.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Add missing include
+      # https://github.com/uleroboticsgroup/yasmin/pull/92
+      (self.fetchpatch2 {
+        url = "https://github.com/wentasah/yasmin/commit/2445d87187c421b8eb3fc651e12cc28efaaf9867.patch";
+        hash = "sha256-ufHY20rQQ4IGGOzCPYRN9OVW78qUwKMrS2paM7k0CpM=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   zenoh-cpp-vendor = (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {
     # Patch the build.rs script to be able to build internal
     # opaque-types crate without network access.
