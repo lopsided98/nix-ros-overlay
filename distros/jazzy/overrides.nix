@@ -56,6 +56,19 @@ in {
     ];
   });
 
+  domain-bridge = rosSuper.domain-bridge.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Don't use rosbag2_cpp/typesupport_helpers.hpp for Jazzy and later
+      # https://github.com/ros2/domain_bridge/pull/89
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/domain_bridge/commit/4abe8a63ba82c816ccb46ec67bc89b05ff842604.patch";
+        hash = "sha256-R+v5SC/yKMsIPuuXVDrrJ/G6DfKHjUr/58dVBFiz+U4=";
+      })
+    ];
+  });
+
   event-camera-tools = rosSuper.event-camera-tools.overrideAttrs ({
     patches ? [], ...
   }: {
