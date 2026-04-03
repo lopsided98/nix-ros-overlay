@@ -60,6 +60,8 @@ in with lib; {
     '';
   });
 
+  clips-vendor = lib.patchAmentVendorFile rosSuper.clips-vendor { };
+
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
     patches ? [], ...
   }: {
