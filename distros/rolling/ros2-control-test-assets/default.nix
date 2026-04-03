@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-ros2-control-test-assets";
-  version = "6.4.0-r1";
+  version = "6.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/ros2_control_test_assets/6.4.0-1.tar.gz";
-    name = "6.4.0-1.tar.gz";
-    sha256 = "84257ed12539e1760625161ac307fa7f2aca45ed3409207a364a0d69ff570940";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/ros2_control_test_assets/6.5.0-1.tar.gz";
+    name = "6.5.0-1.tar.gz";
+    sha256 = "b31ace5d085a327eb40fbaa5d85b95dd392be9a4723e9839111e090bf7a2de1c";
   };
 
   buildType = "ament_cmake";

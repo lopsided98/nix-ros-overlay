@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, fmt, geometry-msgs, hardware-interface, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, sensor-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, fmt, geometry-msgs, hardware-interface, pal-statistics, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-controller-interface";
-  version = "6.4.0-r1";
+  version = "6.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/controller_interface/6.4.0-1.tar.gz";
-    name = "6.4.0-1.tar.gz";
-    sha256 = "010bb6ac08a562aab218882fcb3261c1be59defbba4f670922a23c658890f86a";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/controller_interface/6.5.0-1.tar.gz";
+    name = "6.5.0-1.tar.gz";
+    sha256 = "9cc6628f1fe6e56563abea39848df1820fccac338c9365129ecf1aa7d2322dc7";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-gen-version-h fmt ros2-control-cmake ];
+  buildInputs = [ ament-cmake ament-cmake-gen-version-h fmt pal-statistics ros2-control-cmake ];
   checkInputs = [ ament-cmake-gmock geometry-msgs sensor-msgs std-msgs ];
   propagatedBuildInputs = [ hardware-interface rclcpp-lifecycle realtime-tools ];
   nativeBuildInputs = [ ament-cmake ament-cmake-gen-version-h ];
