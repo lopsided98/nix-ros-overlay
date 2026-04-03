@@ -374,6 +374,31 @@ in {
     '';
   });
 
+  plotjuggler-ros = rosSuper.plotjuggler-ros.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # Apply a commit from https://github.com/PlotJuggler/plotjuggler-ros-plugins/pull/105
+    # (and a few commits before it to avoid conflicts).
+    patches = patches ++ [
+      # add formatting consistent with plotjuggler App
+      (self.fetchpatch2 {
+        url = "https://github.com/PlotJuggler/plotjuggler-ros-plugins/commit/3b9e06ce35b33792f738afc22397e8aecb9ad691.patch";
+        hash = "sha256-EEiDwji9Y8tAs0adKEgxsae6h9Qy23RzTAeRBHEQB7k=";
+      })
+      # new formatting rules
+      (self.fetchpatch2 {
+        url = "https://github.com/PlotJuggler/plotjuggler-ros-plugins/commit/d3575cbd2ba583f0d3c73973979154bfbba87dad.patch";
+        hash = "sha256-i1k3KpA1bubXlTlQgDyyBVol7ErDic/LUYIxt1wo+0E=";
+      })
+      # Replace rosbag2_cpp typesupport helpers with rclcpp typesupport helpers
+      # https://github.com/PlotJuggler/plotjuggler-ros-plugins/pull/105
+      (self.fetchpatch2 {
+        url = "https://github.com/PlotJuggler/plotjuggler-ros-plugins/commit/82b9d41908bc8258d16ba33736bd295b54d8654b.patch";
+        hash = "sha256-+haJAdjD3NYCKpkw+mW+kx0CskxknPoY0xx24vNaqV0=";
+      })
+    ];
+  });
+
   # Fix "libfl.so.2: undefined reference to `yylex'"
   popf = rosSuper.popf.override { flex = self.flex_2_5_35; };
 
