@@ -411,6 +411,19 @@ in with lib; {
     buildInputs = buildInputs ++ [ self.jsoncpp self.libpcap ];
   });
 
+  persist-parameter-server = rosSuper.persist-parameter-server.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Add ROS Humble compatibility for parameter callbacks
+      # https://github.com/fujitatomoya/ros2_persist_parameter_server/pull/91
+      (self.fetchpatch2 {
+        url = "https://github.com/wentasah/ros2_persist_parameter_server/commit/9ff4569fc1b6f5f8fa1f99b5520161865ec243c9.patch";
+        hash = "sha256-lSdu8MLNisnKIwO6h18dW+aikmzK1xd35oa9D/ZtOpY=";
+      })
+    ];
+  });
+
   rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
     postPatch ? "", ...
   }: let
