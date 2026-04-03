@@ -426,6 +426,12 @@ in with lib; {
     ];
   });
 
+  ros2-medkit-linux-introspection = rosSuper.ros2-medkit-linux-introspection.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+  });
+
   rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
     postPatch ? "", ...
   }: let
