@@ -16,6 +16,22 @@ in {
     ];
   });
 
+  azure-iot-sdk-c = rosSuper.azure-iot-sdk-c.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required (VERSION 3.5)" \
+        "cmake_minimum_required (VERSION 3.10)"
+      substituteInPlace \
+        deps/azure-macro-utils-c/CMakeLists.txt \
+        deps/umock-c/CMakeLists.txt \
+        --replace-fail \
+        "cmake_minimum_required(VERSION 2.8.11)" \
+        "cmake_minimum_required(VERSION 3.10)"
+    '';
+  });
+
   camera-aravis2 = rosSuper.camera-aravis2.overrideAttrs ({
     patches ? [], nativeBuildInputs ? [], ...
   }: {
@@ -44,6 +60,16 @@ in {
         hash = "sha256-F5zofoO0YbYfqLrb6s30un9k9+R8rQazLHw+uND1UxE=";
       })
     ];
+  });
+
+  ecl-build = rosSuper.ecl-build.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace cmake/cotire.cmake --replace-fail \
+        "cmake_minimum_required(VERSION 2.8.12)" \
+        "cmake_minimum_required(VERSION 3.5)"
+    '';
   });
 
   foonathan-memory-vendor = lib.patchExternalProjectGit rosSuper.foonathan-memory-vendor {
@@ -117,11 +143,14 @@ in {
   };
 
   gtsam = rosSuper.gtsam.overrideAttrs ({
-    nativeBuildInputs ? [], ...
+    nativeBuildInputs ? [], cmakeFlags ? [], ...
   }: {
     # https://github.com/borglab/gtsam/pull/2171
     # boost is optional but enabled by default
     nativeBuildInputs = nativeBuildInputs ++ [ self.boost ];
+    # GCC 15 enables -Woverloaded-virtual by default; DecisionTreeFactor hides
+    # base class operator* overloads and has no upstream fix yet
+    cmakeFlags = cmakeFlags ++ [ "-DCMAKE_CXX_FLAGS=-Wno-overloaded-virtual" ];
   });
 
   gz-cmake-vendor = lib.patchGzAmentVendorGit rosSuper.gz-cmake-vendor { };
@@ -209,6 +238,19 @@ in {
     ];
   });
 
+  io-context = rosSuper.io-context.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for asio 1.36: https://github.com/ros-drivers/transport_drivers/pull/113
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/transport_drivers/commit/7be52848f624c82ea720416360d7a754fff65c33.patch";
+        hash = "sha256-frE2449PirPJMnln/mGW87JHXCJfb2wo+SBDunTPanc=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   lttngpy = rosSuper.lttngpy.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -232,29 +274,74 @@ in {
     '';
   });
 
-  lely-core-libraries = lib.patchExternalProjectGit rosSuper.lely-core-libraries {
+  lely-core-libraries = (lib.patchExternalProjectGit rosSuper.lely-core-libraries {
     url = "https://gitlab.com/lely_industries/lely-core.git";
     rev = "fb735b79cab5f0cdda45bc5087414d405ef8f3ab";
     fetchgitArgs = {
       hash = "sha256-TpEWho+lbhXGaZ24+86eVJttrxH2Kc9gZVOGWeR0LBE=";
       leaveDotGit = true;
     };
-  };
+  }).overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # ref. https://gitlab.com/lely_industries/lely-core/-/merge_requests/143
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "CONFIGURE_COMMAND autoreconf -i <SOURCE_DIR>" \
+        "PATCH_COMMAND patch -p1 < ${self.fetchpatch2 {
+          url = "https://gitlab.com/lely_industries/lely-core/-/commit/6ed995fa86d828957b636a11470f150830d877ec.patch";
+          hash = "sha256-/kn+BMs9JHigmSXi6BrlHGmt06eF7mzJiKi26a7JQ3c=";
+        }}
+        CONFIGURE_COMMAND autoreconf -i <SOURCE_DIR>"
+    '';
+  });
 
   libphidget22 = lib.patchVendorUrl rosSuper.libphidget22 {
     url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.19.20240304.tar.gz";
     hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
   };
 
-  mcap-vendor = lib.patchVendorUrl rosSuper.mcap-vendor {
+  mcap-vendor = (lib.patchVendorUrl rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.4.0.tar.gz";
     hash = "sha256-ZP8+URGfN//Pr53uy9mHp8tNTZA110o/03czlaRw/aE=";
-  };
+  }).overrideAttrs ( {
+    postPatch ? "", ...
+  }: {
+    # ref. https://github.com/foxglove/mcap/pull/1371
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "URL_HASH SHA1=354d894efb6a0c3968885c0e6d43224ff61fa762 # v1.4.0" \
+        "URL_HASH SHA1=354d894efb6a0c3968885c0e6d43224ff61fa762 # v1.4.0
+        PATCH_COMMAND sed -i \"1i #include <cstdint>\" cpp/mcap/include/mcap/types.hpp"
+    '';
+  });
 
   mimick-vendor = (lib.patchAmentVendorGit rosSuper.mimick-vendor { }).overrideAttrs({ ... }: {
     # Remove once https://github.com/Snaipe/Mimick/commit/321fcc74c1828e73af72cd75460857e1a3a549b9
     # propagates to a ROS release
     NIX_CFLAGS_COMPILE = toString [ "-Wno-error=cpp" ];
+  });
+
+  motion-capture-tracking = rosSuper.motion-capture-tracking.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace deps/libmotioncapture/deps/pybind11/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.4)" \
+        "cmake_minimum_required(VERSION 3.10)"
+      substituteInPlace deps/libmotioncapture/deps/vrpn/client_src/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.6)" \
+        "cmake_minimum_required(VERSION 3.10)"
+      substituteInPlace deps/libmotioncapture/deps/vrpn/cmake/FindOpenHaptics.cmake --replace-fail \
+        "cmake_minimum_required(VERSION 2.6.3)" \
+        "cmake_minimum_required(VERSION 3.10)"
+      substituteInPlace deps/libmotioncapture/deps/vrpn/quat/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.6)" \
+        "cmake_minimum_required(VERSION 3.10)"
+      substituteInPlace deps/libmotioncapture/deps/vrpn/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.8.3)" \
+        "cmake_minimum_required(VERSION 3.10)"
+    '';
   });
 
   moveit-core = rosSuper.moveit-core.overrideAttrs ({
@@ -279,7 +366,48 @@ in {
     '';
   });
 
+  moveit-setup-framework = rosSuper.moveit-setup-framework.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Add missing #include <fmt/ranges.h>
+      (self.fetchpatch2 {
+        url = "https://github.com/moveit/moveit2/commit/b3c23c989ff45c66ec692a71535330b42be09879.patch";
+        hash = "sha256-1rVN6kgBNHGG2EH1XCw49PPY1JzPud06l3LZAzp2XNU=";
+        includes = [ "src/urdf_config.cpp" ];
+        stripLen = 2;
+      })
+    ];
+  });
+
   mp-units-vendor = lib.patchAmentVendorGit rosSuper.mp-units-vendor {};
+
+  mqtt-client = rosSuper.mqtt-client.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace include/mqtt_client/MqttClient.hpp --replace-fail \
+        "#include <fmt/format.h>" \
+        "#include <fmt/format.h>
+         #include <fmt/ranges.h>"
+    '';
+  });
+
+  nav2-behavior-tree = rosSuper.nav2-behavior-tree.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [
+      "-Wno-error=maybe-uninitialized"
+      "-Wno-error=free-nonheap-object"
+      "-Wno-error=null-dereference"
+    ];
+  });
+
+  nav2-collision-monitor = rosSuper.nav2-collision-monitor.overrideAttrs({
+    CXXFLAGS ? "", ...
+  }: {
+    CXXFLAGS = "${CXXFLAGS} -Wno-error=overloaded-virtual=";
+  });
 
   nav2-costmap-2d = rosSuper.nav2-costmap-2d.overrideAttrs({
     CXXFLAGS ? "", ...
@@ -287,12 +415,27 @@ in {
     CXXFLAGS = "${CXXFLAGS} -Wno-error=array-bounds";
   });
 
-  nlohmann-json-schema-validator-vendor = lib.patchExternalProjectGit rosSuper.nlohmann-json-schema-validator-vendor {
+  nav2-mppi-controller = rosSuper.nav2-mppi-controller.overrideAttrs({
+    CXXFLAGS ? "", ...
+  }: {
+    CXXFLAGS = "${CXXFLAGS} -Wno-error=null-dereference";
+  });
+
+  nlohmann-json-schema-validator-vendor = (lib.patchExternalProjectGit rosSuper.nlohmann-json-schema-validator-vendor {
     url = "https://github.com/pboettch/json-schema-validator.git";
     rev = "5ef4f903af055550e06955973a193e17efded896";
     revVariable = "nlohmann_json_schema_validator_version";
     fetchgitArgs.hash = "sha256-b02OFUx0BxUA6HN6IaacSg1t3RP4o7NND7X0U635W8U=";
-  };
+  }).overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        'PATCH_COMMAND patch -p1 < ''${CMAKE_CURRENT_LIST_DIR}/patch_cmakelist' \
+        'PATCH_COMMAND patch -p1 < ''${CMAKE_CURRENT_LIST_DIR}/patch_cmakelist
+        && sed -i -e "s|cmake_minimum_required(VERSION 3.2)|cmake_minimum_required(VERSION 3.5)|" CMakeLists.txt'
+    '';
+  });
 
   openvdb-vendor = (lib.patchAmentVendorGit rosSuper.openvdb-vendor {}).overrideAttrs ({
     postPatch ? "", ...
@@ -304,8 +447,67 @@ in {
     '';
   });
 
-  # Fix "libfl.so.2: undefined reference to `yylex'"
-  popf = rosSuper.popf.override { flex = self.flex_2_5_35; };
+  popf = (rosSuper.popf.override {
+    # Fix "libfl.so.2: undefined reference to `yylex'"
+    flex = self.flex_2_5_35;
+  }).overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # cmake: fix missing includes, ref. https://github.com/fmrico/popf/pull/12
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/popf/commit/e8ba226f67e0513689d0efc84e9b4e8b55394bd4.patch";
+        hash = "sha256-Sw/rY4MsmoWIpC9VQzimM18mlvdGwb8Q6EmwY2rg0pw=";
+      })
+    ];
+  });
+
+  rcdiscover = rosSuper.rcdiscover.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required (VERSION 3.1)" \
+        "cmake_minimum_required (VERSION 3.10)"\
+    '';
+  });
+
+  rc-genicam-api = rosSuper.rc-genicam-api.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # It's no longer needed to ignore "Error on non-existent target in get_target_property."
+    postPatch = postPatch + ''
+      substituteInPlace cmake/configure_link_libs.cmake --replace-fail \
+        "cmake_policy(SET CMP0045 OLD)" \
+        ""
+    '';
+  });
+
+  rmf-task = rosSuper.rmf-task.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for GCC 15, ref. https://github.com/open-rmf/rmf_task/pull/133
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/rmf_task/commit/8aaacbe009022540cce1cd3ff3282413cf08a42c.patch";
+        hash = "sha256-9nXoYlfw6yuXP2TFelWl1/T6ho3G49n5vRoxC5qxQCA=";
+        stripLen = 1;
+      })
+    ];
+  });
+
+  rmf-traffic = rosSuper.rmf-traffic.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = [
+      # https://github.com/open-rmf/rmf_traffic/pull/131
+      (self.fetchpatch2 {
+        url = "https://github.com/open-rmf/rmf_traffic/commit/c20b8d71507880387185666c78d105557e5003a9.patch";
+        hash = "sha256-4Elg7oF6OQHd2trn3e+r73hghW9Qf90PrGjID7RsdEI=";
+        stripLen = 1;
+      })
+    ];
+  });
 
   rosidlcpp-generator-core = rosSuper.rosidlcpp-generator-core.override { fmt = self.fmt_9; };
   rosidlcpp-generator-cpp = rosSuper.rosidlcpp-generator-cpp.override { fmt = self.fmt_9; };
@@ -313,6 +515,16 @@ in {
   rosidlcpp-generator-type-description = rosSuper.rosidlcpp-generator-type-description.override { fmt = self.fmt_9; };
   rosidlcpp-typesupport-fastrtps-c = rosSuper.rosidlcpp-typesupport-fastrtps-c.override { fmt = self.fmt_9; };
   rosidlcpp-typesupport-fastrtps-cpp = rosSuper.rosidlcpp-typesupport-fastrtps-cpp.override { fmt = self.fmt_9; };
+
+  rot-conv = rosSuper.rot-conv.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.3)" \
+        "cmake_minimum_required(VERSION 3.10)"\
+    '';
+  });
 
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     tarSourceArgs.hook = let
@@ -328,6 +540,8 @@ in {
     in ''
       substituteInPlace Components/Overlay/CMakeLists.txt \
         --replace-fail ${lib.escapeShellArg imgui.url} file://${lib.escapeShellArg imguiTar}
+      substituteInPlace CMakeLists.txt \
+        --replace-fail 'cmake_minimum_required(VERSION 3.3.0)' 'cmake_minimum_required(VERSION 3.5)'
     '';
   };
 
@@ -342,10 +556,32 @@ in {
 
   sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor { };
 
+  sick-scan-xd = rosSuper.sick-scan-xd.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for gcc15, ref https://github.com/SICKAG/sick_scan_xd/pull/557
+      (self.fetchpatch2 {
+        url = "https://github.com/SICKAG/sick_scan_xd/commit/f5ac360b4cfb319c981b022a9b817a5e86639d5c.patch";
+        hash = "sha256-zh3UDjy6k7LI3YOYr9F9jt8+4pkdgeOpUUqHcqme6Bs=";
+      })
+    ];
+  });
+
   shared-queues-vendor = lib.patchVendorUrl rosSuper.shared-queues-vendor {
     url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";
     hash = "sha256-TyFt3d78GidhDGD17KgjAaZl/qvAcGJP8lmu4EOxpYg=";
   };
+
+  sick-safevisionary-base = rosSuper.sick-safevisionary-base.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.0.2)" \
+        "cmake_minimum_required(VERSION 3.10)"\
+    '';
+  });
 
   turtlesim = rosSuper.turtlesim.overrideAttrs ({
     nativeBuildInputs ? [], ...
@@ -355,6 +591,32 @@ in {
     postFixup = ''
         wrapQtApp "$out/lib/turtlesim/turtlesim_node"
       '';
+  });
+
+  ublox-gps = rosSuper.ublox-gps.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix for asio 1.36, ref https://github.com/KumarRobotics/ublox/pull/273
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/ublox/commit/da37a9628db91aaafbcbe8b247c28c0d5863159f.patch";
+        hash = "sha256-m7lsEHF/uS47zYrNBd5RSL62CmvmNcKXQiLM24R6LZA=";
+        stripLen = 1;
+      })
+    ];
+  });
+
+  udp-driver = rosSuper.udp-driver.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # fix for asio 1.36: https://github.com/ros-drivers/transport_drivers/pull/114
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/transport_drivers/commit/6a5a003a07850afda9681843978f1c5f46d04000.patch";
+        hash = "sha256-0j3Ps2RbkWcv9K+I6KW0fn2/4Nhsw8TIOoZAhAVixMk=";
+        stripLen = 1;
+      })
+    ];
   });
 
   urdfdom = rosSuper.urdfdom.overrideAttrs ({
@@ -384,7 +646,6 @@ in {
   });
 
   usb-cam = rosSuper.usb-cam.overrideAttrs ({
-    nativeBuildInputs ? [],
     patches ? [], ...
   }: {
     patches = patches ++ [
@@ -393,9 +654,28 @@ in {
         url = "https://github.com/ros-drivers/usb_cam/commit/1d1970b1a88fb1be3b961073748879900d2b1a70.patch";
         hash = "sha256-0iWl2DtqdjkyFy7lKa7aLxXjynm4ggNEQLxB45Mqf/Y=";
       })
+      # Remove avcodec_close() removed in FFmpeg 8.0 (avcodec_free_context suffices)
+      (self.fetchpatch {
+        url = "https://github.com/ros-drivers/usb_cam/commit/41805f7eb50f31e16839bb302df1bb5c6f30cb50.patch";
+        hash = "sha256-UXjqIHCkplBo5MWmH+ZlcRyy0IJgr8Qdld9QMq03SPI=";
+      })
     ];
+  });
 
-    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+  vrpn = rosSuper.vrpn.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace quat/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.6)" \
+        "cmake_minimum_required(VERSION 3.5)"
+      substituteInPlace cmake/FindOpenHaptics.cmake --replace-fail \
+        "cmake_minimum_required(VERSION 2.6.3)" \
+        "cmake_minimum_required(VERSION 3.5)"
+      substituteInPlace client_src/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.6)" \
+        "cmake_minimum_required(VERSION 3.5)"
+    '';
   });
 
   webots-ros2-driver = rosSuper.webots-ros2-driver.overrideAttrs ({
@@ -449,10 +729,30 @@ in {
     '';
   });
 
+  zlib-point-cloud-transport = rosSuper.zlib-point-cloud-transport.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for gcc15, ref. https://github.com/ros-perception/point_cloud_transport_plugins/pull/75
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/point_cloud_transport_plugins/commit/222735dcafb71eef599e44c1cdd8b9b04276a239.patch";
+        hash = "sha256-zSjyyvHM+7Fl6wdy/abxDnTONCieFVRG4zH5jeHahGY=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   zmqpp-vendor = lib.patchExternalProjectGit rosSuper.zmqpp-vendor {
     url = "https://github.com/zeromq/zmqpp.git";
     originalRev = "master";
     rev = "da73a138f290274cfd604b3f05a908956390a66e";
-    fetchgitArgs.hash = "sha256-UZyJpBEOf/Ys+i2tiBTjv4PlM5fHjjNLWuGhpgcmYyM=";
+    fetchgitArgs = {
+      hash = "sha256-VwZcSoUS/Dhw+dMRDP/neNUTNEUBd0kxjK8qGv/WJRQ=";
+      postFetch = ''
+        substituteInPlace $out/CMakeLists.txt --replace-fail \
+          "cmake_minimum_required(VERSION 2.8.12)" \
+          "cmake_minimum_required(VERSION 3.5)"
+      '';
+    };
   };
 }

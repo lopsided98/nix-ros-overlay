@@ -1,0 +1,39 @@
+From 39974ac34698188e66d5d497306a4b836c9b7c83 Mon Sep 17 00:00:00 2001
+From: Michal Sojka <michal.sojka@cvut.cz>
+Date: Tue, 24 Feb 2026 20:03:10 +0100
+Subject: [PATCH 2/7] Add missing #include <cstdint>
+
+Similar to https://www.github.com/eProsima/Fast-DDS/pull/6263, which
+was not backported to 2.6.x.
+---
+ .../fastdds/topic/DDSSQLFilter/DDSFilterCompoundCondition.hpp    | 1 +
+ src/cpp/fastdds/topic/DDSSQLFilter/DDSFilterValue.hpp            | 1 +
+ 2 files changed, 2 insertions(+)
+
+diff --git a/src/cpp/fastdds/topic/DDSSQLFilter/DDSFilterCompoundCondition.hpp b/src/cpp/fastdds/topic/DDSSQLFilter/DDSFilterCompoundCondition.hpp
+index 2eb46e19a..20bc84dde 100644
+--- a/src/cpp/fastdds/topic/DDSSQLFilter/DDSFilterCompoundCondition.hpp
++++ b/src/cpp/fastdds/topic/DDSSQLFilter/DDSFilterCompoundCondition.hpp
+@@ -20,6 +20,7 @@
+ #define _FASTDDS_TOPIC_DDSSQLFILTER_DDSFILTERCOMPOUNDCONDITION_HPP_
+ 
+ #include <memory>
++#include <cstdint>
+ 
+ #include "DDSFilterCondition.hpp"
+ 
+diff --git a/src/cpp/fastdds/topic/DDSSQLFilter/DDSFilterValue.hpp b/src/cpp/fastdds/topic/DDSSQLFilter/DDSFilterValue.hpp
+index da75c7372..066f1c9fc 100644
+--- a/src/cpp/fastdds/topic/DDSSQLFilter/DDSFilterValue.hpp
++++ b/src/cpp/fastdds/topic/DDSSQLFilter/DDSFilterValue.hpp
+@@ -21,6 +21,7 @@
+ 
+ #include <memory>
+ #include <regex>
++#include <cstdint>
+ 
+ #include <fastrtps/utils/fixed_size_string.hpp>
+ 
+-- 
+2.53.0
+

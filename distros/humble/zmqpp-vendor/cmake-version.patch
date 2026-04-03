@@ -1,0 +1,11 @@
+--- a/CMakeLists.txt.orig	2026-03-22 15:41:44.484618708 +0100
++++ b/CMakeLists.txt	2026-03-22 15:41:53.591781032 +0100
+@@ -11,7 +11,7 @@
+ #
+ 
+ 
+-cmake_minimum_required(VERSION 2.8.12)
++cmake_minimum_required(VERSION 3.5)
+ enable_testing()
+ 
+ # prepare C++11

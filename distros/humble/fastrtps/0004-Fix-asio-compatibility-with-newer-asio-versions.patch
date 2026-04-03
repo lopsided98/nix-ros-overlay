@@ -1,0 +1,44 @@
+From 8c92b875200b8600946e99b2b622b9944147f653 Mon Sep 17 00:00:00 2001
+From: Michal Sojka <michal.sojka@cvut.cz>
+Date: Fri, 20 Mar 2026 21:19:11 +0100
+Subject: [PATCH 4/7] Fix asio compatibility with newer asio versions
+
+- Replace resolver.resolve({host, port}) with resolver.resolve(host, port)
+  (brace-enclosed initializer list overload removed in newer asio)
+- Replace service_.post(...) with asio::post(service_, ...)
+  (io_context::post removed in newer asio; use free function instead)
+
+Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
+---
+ src/cpp/rtps/transport/TCPChannelResourceBasic.cpp | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/cpp/rtps/transport/TCPChannelResourceBasic.cpp b/src/cpp/rtps/transport/TCPChannelResourceBasic.cpp
+index 43b52eef2..ba1c5eb00 100644
+--- a/src/cpp/rtps/transport/TCPChannelResourceBasic.cpp
++++ b/src/cpp/rtps/transport/TCPChannelResourceBasic.cpp
+@@ -68,10 +68,10 @@ void TCPChannelResourceBasic::connect(
+         {
+             ip::tcp::resolver resolver(service_);
+ 
+-            auto endpoints = resolver.resolve({
++            auto endpoints = resolver.resolve(
+                             IPLocator::hasWan(locator_) ? IPLocator::toWanstring(locator_) : IPLocator::ip_to_string(
+                                 locator_),
+-                            std::to_string(IPLocator::getPhysicalPort(locator_))});
++                            std::to_string(IPLocator::getPhysicalPort(locator_)));
+ 
+             socket_ = std::make_shared<asio::ip::tcp::socket>(service_);
+             std::weak_ptr<TCPChannelResource> channel_weak_ptr = myself;
+@@ -110,7 +110,7 @@ void TCPChannelResourceBasic::disconnect()
+         std::error_code ec;
+         socket->shutdown(asio::ip::tcp::socket::shutdown_both, ec);
+ 
+-        service_.post([&, socket]()
++        asio::post(service_, [&, socket]()
+                 {
+                     try
+                     {
+-- 
+2.53.0
+

@@ -1,0 +1,49 @@
+From d97c643727ffb8dd95f39839dca0d50263263d81 Mon Sep 17 00:00:00 2001
+From: Michal Sojka <michal.sojka@cvut.cz>
+Date: Fri, 20 Mar 2026 21:21:56 +0100
+Subject: [PATCH 5/7] Fix asio strand::post compatibility in
+ TCPChannelResourceSecure
+
+Replace service_.post(...), strand_read_.post(...), and
+strand_write_.post(...) with the asio::post(executor, handler) free
+function form, which is required in newer asio versions.
+
+Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
+---
+ src/cpp/rtps/transport/TCPChannelResourceSecure.cpp | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/cpp/rtps/transport/TCPChannelResourceSecure.cpp b/src/cpp/rtps/transport/TCPChannelResourceSecure.cpp
+index b7d825a29..6d141d3b2 100644
+--- a/src/cpp/rtps/transport/TCPChannelResourceSecure.cpp
++++ b/src/cpp/rtps/transport/TCPChannelResourceSecure.cpp
+@@ -142,7 +142,7 @@ void TCPChannelResourceSecure::disconnect()
+     {
+         auto socket = secure_socket_;
+ 
+-        service_.post([&, socket]()
++        asio::post(service_, [&, socket]()
+                 {
+                     std::error_code ec;
+                     socket->lowest_layer().close(ec);
+@@ -166,7 +166,7 @@ uint32_t TCPChannelResourceSecure::read(
+         auto bytes_future = read_bytes_promise.get_future();
+         auto socket = secure_socket_;
+ 
+-        strand_read_.post([&, socket]()
++        asio::post(strand_read_, [&, socket]()
+                 {
+                     if (socket->lowest_layer().is_open())
+                     {
+@@ -226,7 +226,7 @@ size_t TCPChannelResourceSecure::send(
+         auto bytes_future = write_bytes_promise.get_future();
+         auto socket = secure_socket_;
+ 
+-        strand_write_.post([&, socket]()
++        asio::post(strand_write_, [&, socket]()
+                 {
+                     if (socket->lowest_layer().is_open())
+                     {
+-- 
+2.53.0
+

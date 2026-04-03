@@ -1,0 +1,66 @@
+From 937bfc4568c33947dd0a05d347678ee83f944a5a Mon Sep 17 00:00:00 2001
+From: Michal Sojka <michal.sojka@cvut.cz>
+Date: Fri, 20 Mar 2026 21:26:25 +0100
+Subject: [PATCH 7/7] Fix IPLocator::resolveNameDNS for newer asio resolver API
+
+Replace deprecated resolver::query + iterator pattern with the modern
+resolver.resolve(host, service, ec) returning results_type, which is
+directly iterable with range-based for.
+
+Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
+---
+ src/cpp/utils/IPLocator.cpp | 17 ++++++-----------
+ 1 file changed, 6 insertions(+), 11 deletions(-)
+
+diff --git a/src/cpp/utils/IPLocator.cpp b/src/cpp/utils/IPLocator.cpp
+index 75b886d4e..be5a6efb3 100644
+--- a/src/cpp/utils/IPLocator.cpp
++++ b/src/cpp/utils/IPLocator.cpp
+@@ -1089,9 +1089,6 @@ std::pair<std::set<std::string>, std::set<std::string>> IPLocator::resolveNameDN
+     // Create an instance of io service
+     asio::io_context ios;
+ 
+-    //Create a query to make the DNS petition
+-    asio::ip::tcp::resolver::query resolver_query(address_name, "", asio::ip::tcp::resolver::query::numeric_service);
+-
+     // Create a resolver instance
+     asio::ip::tcp::resolver resolver(ios);
+ 
+@@ -1099,8 +1096,7 @@ std::pair<std::set<std::string>, std::set<std::string>> IPLocator::resolveNameDN
+     asio::error_code ec;
+ 
+     // Make the DNS petition
+-    asio::ip::tcp::resolver::iterator it =
+-            resolver.resolve(resolver_query, ec);
++    auto results = resolver.resolve(address_name, "", ec);
+ 
+     // Handling errors if any.
+     if (ec)
+@@ -1110,19 +1106,18 @@ std::pair<std::set<std::string>, std::set<std::string>> IPLocator::resolveNameDN
+         return std::make_pair(ipv4_results, ipv6_results);
+     }
+ 
+-    asio::ip::tcp::resolver::iterator end_it;
+-    for (; it != end_it; ++it)
++    for (const auto& entry : results)
+     {
+-        logInfo(IP_LOCATOR, "IP " << it->endpoint().address() << " found by DNS request to address " << address_name);
++        logInfo(IP_LOCATOR, "IP " << entry.endpoint().address() << " found by DNS request to address " << address_name);
+ 
+         // Check whether the ip get is v4 or v6
+-        if (it->endpoint().address().is_v4())
++        if (entry.endpoint().address().is_v4())
+         {
+-            ipv4_results.insert(it->endpoint().address().to_string());
++            ipv4_results.insert(entry.endpoint().address().to_string());
+         }
+         else
+         {
+-            ipv6_results.insert(it->endpoint().address().to_string());
++            ipv6_results.insert(entry.endpoint().address().to_string());
+         }
+     }
+ 
+-- 
+2.53.0
+

@@ -15,6 +15,140 @@ in with lib; {
     ];
   });
 
+  autoware-adapi-adaptors = rosSuper.autoware-adapi-adaptors.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # fix "visualization is required but vtk was not found" from PCLConfig.cmake when wrong order
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "find_package(autoware_cmake REQUIRED)" \
+        "find_package(PCL REQUIRED)
+        find_package(autoware_cmake REQUIRED)" \
+    '';
+  });
+
+  autoware-behavior-velocity-planner = rosSuper.autoware-behavior-velocity-planner.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # fix "visualization is required but vtk was not found" from PCLConfig.cmake when wrong order
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "find_package(autoware_cmake REQUIRED)" \
+        "find_package(PCL REQUIRED)
+        find_package(autoware_cmake REQUIRED)" \
+    '';
+  });
+
+  autoware-behavior-velocity-planner-common = rosSuper.autoware-behavior-velocity-planner-common.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # fix "visualization is required but vtk was not found" from PCLConfig.cmake when wrong order
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "find_package(autoware_cmake REQUIRED)" \
+        "find_package(PCL REQUIRED)
+        find_package(autoware_cmake REQUIRED)" \
+    '';
+  });
+
+  autoware-behavior-velocity-stop-line-module = rosSuper.autoware-behavior-velocity-stop-line-module.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # fix "visualization is required but vtk was not found" from PCLConfig.cmake when wrong order
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "find_package(autoware_cmake REQUIRED)" \
+        "find_package(PCL REQUIRED)
+        find_package(autoware_cmake REQUIRED)" \
+    '';
+  });
+
+
+  autoware-map-height-fitter = rosSuper.autoware-map-height-fitter.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # fix "visualization is required but vtk was not found" from PCLConfig.cmake when wrong order
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "find_package(autoware_cmake REQUIRED)" \
+        "find_package(PCL REQUIRED)
+        find_package(autoware_cmake REQUIRED)" \
+    '';
+  });
+
+  autoware-map-loader = rosSuper.autoware-map-loader.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # fix "visualization is required but vtk was not found" from PCLConfig.cmake when wrong order
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "find_package(autoware_cmake REQUIRED)" \
+        "find_package(PCL REQUIRED)
+        find_package(autoware_cmake REQUIRED)" \
+    '';
+  });
+
+  autoware-mission-planner = rosSuper.autoware-mission-planner.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        # https://github.com/autowarefoundation/autoware_core/pull/1000
+        url = "https://github.com/nim65s/autoware_core/commit/6839e4e99db8b0110d5d45c118a0f681b1734de2.patch";
+        hash = "sha256-qwPpMn/Jz2QgGG8C9JUAYKp3NXy43b9ZQD6+q8n51ks=";
+        stripLen = 2;
+      })
+    ];
+  });
+
+  autoware-motion-velocity-planner= rosSuper.autoware-motion-velocity-planner.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # fix "visualization is required but vtk was not found" from PCLConfig.cmake when wrong order
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "find_package(autoware_cmake REQUIRED)" \
+        "find_package(PCL REQUIRED)
+        find_package(autoware_cmake REQUIRED)" \
+    '';
+  });
+
+  autoware-motion-velocity-planner-common = rosSuper.autoware-motion-velocity-planner-common.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # fix "visualization is required but vtk was not found" from PCLConfig.cmake when wrong order
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "find_package(autoware_cmake REQUIRED)" \
+        "find_package(PCL REQUIRED)
+        find_package(autoware_cmake REQUIRED)" \
+    '';
+  });
+
+  autoware-motion-velocity-obstacle-stop-module = rosSuper.autoware-motion-velocity-obstacle-stop-module.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # fix "visualization is required but vtk was not found" from PCLConfig.cmake when wrong order
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "find_package(autoware_cmake REQUIRED)" \
+        "find_package(PCL REQUIRED)
+        find_package(autoware_cmake REQUIRED)" \
+    '';
+  });
+
+  autoware-pose-initializer = rosSuper.autoware-pose-initializer.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # fix "visualization is required but vtk was not found" from PCLConfig.cmake when wrong order
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "find_package(autoware_cmake REQUIRED)" \
+        "find_package(PCL REQUIRED)
+        find_package(autoware_cmake REQUIRED)" \
+    '';
+  });
+
   autoware-trajectory = rosSuper.autoware-trajectory.overrideAttrs ({
     buildInputs ? [], postPatch ? "", ...
   }: {
@@ -85,6 +219,40 @@ in with lib; {
     ...
   }: {
     NIX_CFLAGS_COMPILE = toString [ "-Wno-error=maybe-uninitialized" ];
+  });
+
+  dynamic-edt-3d = rosSuper.dynamic-edt-3d.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "CMAKE_MINIMUM_REQUIRED(VERSION 3.0.2)" \
+        "CMAKE_MINIMUM_REQUIRED(VERSION 3.5)"
+    '';
+  });
+
+  ecl-build = rosSuper.ecl-build.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace cmake/cotire.cmake --replace-fail \
+        "cmake_minimum_required(VERSION 2.8.12)" \
+        "cmake_minimum_required(VERSION 3.5)"
+    '';
+  });
+
+  fastrtps = rosSuper.fastrtps.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      ./fastrtps/0001-Replace-io_service-with-io_context-to-be-compatible-.patch
+      ./fastrtps/0002-Add-missing-include-cstdint.patch
+      ./fastrtps/0003-asio-make_address-fix.patch
+      ./fastrtps/0004-Fix-asio-compatibility-with-newer-asio-versions.patch
+      ./fastrtps/0005-Fix-asio-strand-post-compatibility-in-TCPChannelReso.patch
+      ./fastrtps/0006-Fix-resolver.resolve-brace-init-compat-in-TCPChannel.patch
+      ./fastrtps/0007-Fix-IPLocator-resolveNameDNS-for-newer-asio-resolver.patch
+    ];
   });
 
   # This is a newer version than the build system tries to download, but this
@@ -166,6 +334,41 @@ in with lib; {
     nativeBuildInputs = nativeBuildInputs ++ [self.pkg-config];
   });
 
+  gtest-vendor = rosSuper.gtest-vendor.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Fix errors like:
+    # "...ros-humble-gtest-vendor-1.10.9006-r1/src/gtest_vendor/./src/gtest-death-test.cc:1385:26: error: 'uintptr_t' does not name a type"
+    # in packages cloudini-lib and pose-cov-ops.
+    postPatch = postPatch + ''
+      substituteInPlace src/gtest-death-test.cc --replace-fail \
+        "#include <utility>" \
+        "#include <cstdint>
+        #include <utility>"
+    '';
+  });
+
+
+  gtsam = rosSuper.gtsam.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt gtsam/3rdparty/metis/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.0)" \
+        "cmake_minimum_required(VERSION 3.5)"
+    '';
+  });
+
+  hey5-description = rosSuper.hey5-description.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.4.0)" \
+        "cmake_minimum_required(VERSION 3.5)"
+    '';
+  });
+
   iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -173,6 +376,19 @@ in with lib; {
       (self.fetchpatch {
         url = "https://github.com/eclipse-iceoryx/iceoryx/commit/acc1e979a2d5ca30737efb077b00b42f1c4a8429.patch";
         hash = "sha256-npFHdb0a3JBA8T6vke54DA08C93aNc/7c6xrfMBo7zI=";
+        stripLen = 1;
+      })
+    ];
+  });
+
+  io-context = rosSuper.io-context.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for asio 1.36: https://github.com/ros-drivers/transport_drivers/pull/113
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/transport_drivers/commit/7be52848f624c82ea720416360d7a754fff65c33.patch";
+        hash = "sha256-frE2449PirPJMnln/mGW87JHXCJfb2wo+SBDunTPanc=";
         stripLen = 1;
       })
     ];
@@ -188,17 +404,38 @@ in with lib; {
     '';
   });
 
-  lely-core-libraries = lib.patchExternalProjectGit rosSuper.lely-core-libraries {
+  lsc-ros2-driver = rosSuper.lsc-ros2-driver.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # https://github.com/AutonicsLiDAR/lsc_ros2_driver/pull/3
+    patches = patches ++ [(self.fetchpatch2 {
+      url = "https://github.com/nim65s/lsc_ros2_driver/commit/6c2c5cf64fea0099358e610a7fff40db7c0922be.patch";
+      hash = "sha256-Xwlhjg1wjIiH1H3Roh0iV6HYLmWyGye/6CdvuSVWdSc=";
+    })];
+  });
+
+  lely-core-libraries = (lib.patchExternalProjectGit rosSuper.lely-core-libraries {
     url = "https://gitlab.com/lely_industries/lely-core.git";
     rev = "fb735b79cab5f0cdda45bc5087414d405ef8f3ab";
     fetchgitArgs = {
       hash = "sha256-TpEWho+lbhXGaZ24+86eVJttrxH2Kc9gZVOGWeR0LBE=";
       leaveDotGit = true;
     };
-  };
+  }).overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # ref. https://gitlab.com/lely_industries/lely-core/-/merge_requests/143
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "CONFIGURE_COMMAND autoreconf -i <SOURCE_DIR>" \
+        "PATCH_COMMAND sed -i \"s|ATOMIC_VAR_INIT(0)|0|\" include/lely/util/spscring.h
+        && sed -i \"s|static const char tab.64. =|static const char tab[] =|\" src/util/print.c
+        CONFIGURE_COMMAND autoreconf -i <SOURCE_DIR>"
+    '';
+  });
 
   libcamera = rosSuper.libcamera.overrideAttrs ({
-    patches ? [], ...
+    patches ? [], postPatch ? "", ...
   }: {
     patches = patches ++ [
       # Fix build with Python 3.12
@@ -207,6 +444,19 @@ in with lib; {
         hash = "sha256-Q5tPOfbwO28Lg+bP/IINykTZC2ZL1jeWf6TGP7ZUAE8=";
       })
     ];
+    postPatch = postPatch + ''
+      substituteInPlace include/libcamera/base/file.h --replace-fail \
+        "#include <map>" \
+        "#include <cstdint>
+         #include <map>"
+      substituteInPlace include/libcamera/internal/yaml_parser.h --replace-fail \
+        "#include <iterator>" \
+        "#include <cstdint>
+         #include <iterator>"
+      substituteInPlace src/libcamera/media_device.cpp --replace-fail \
+        "lockf(fd_.get(), F_ULOCK, 0);" \
+        "std::ignore = lockf(fd_.get(), F_ULOCK, 0);"
+    '';
   });
 
   libfranka = rosSuper.libfranka.overrideAttrs ({
@@ -217,10 +467,23 @@ in with lib; {
     postPatch = ''
       substituteInPlace CMakeLists.txt \
         --replace-fail 'set_version_from_git(PACKAGE_VERSION PACKAGE_TAG)' ""
+      substituteInPlace common/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.0.2)" \
+        "cmake_minimum_required(VERSION 3.5.0)"
     '';
     # Uses custom flag to disable tests. Attempts to download GTest without
     # this.
     cmakeFlags = cmakeFlags ++ [ "-DBUILD_TESTS=OFF" ];
+  });
+
+  libnabo = rosSuper.libnabo.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.6)" \
+        "cmake_minimum_required(VERSION 3.5)"
+    '';
   });
 
   libphidget22 = patchVendorUrl rosSuper.libphidget22 {
@@ -231,17 +494,35 @@ in with lib; {
   libyaml-vendor = patchExternalProjectGit rosSuper.libyaml-vendor {
     url = "https://github.com/yaml/libyaml.git";
     rev = "2c891fc7a770e8ba2fec34fc6b545c672beb37e6";
-    fetchgitArgs.hash = "sha256-S7PnooyfyAsIiRAlEPGYkgkVACGaBaCItuqOwrq2+qM=";
+    fetchgitArgs = {
+      hash = "sha256-bqJPibk65os0nEywPVq9BP4t9GIQAMUOLRjHshDy58U=";
+      postFetch = ''
+        substituteInPlace $out/CMakeLists.txt \
+          --replace-fail 'cmake_minimum_required(VERSION 3.0)' \
+                         'cmake_minimum_required(VERSION 3.5)'
+      '';
+    };
   };
 
-  mcap-vendor = patchExternalProjectGit (patchVendorUrl rosSuper.mcap-vendor {
+  mcap-vendor = (patchExternalProjectGit (patchVendorUrl rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v0.8.0.tar.gz";
     sha256 = "sha256-KDP3I0QwjqWGOfOzY6DPF2aVgK56tDX0PzsQTP9u9Ug=";
   }) {
     url = "https://github.com/lz4/lz4.git";
     rev = "d44371841a2f1728a3f36839fd4b7e872d0927d3";
     fetchgitArgs.hash = "sha256-f7GZgOzUrkAfw1mqwlIKQQqDvkvIahGlHvq6AL+aAvA=";
-  };
+  }).overrideAttrs ( {
+    postPatch ? "", ...
+  }: {
+    # ref. https://github.com/foxglove/mcap/pull/1371
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "URL_HASH SHA1=b44637791da2c9c1cec61a3ba6994f1ef63a228c # v0.8.0" \
+        "URL_HASH SHA1=b44637791da2c9c1cec61a3ba6994f1ef63a228c # v0.8.0
+        PATCH_COMMAND sed -i \"1i #include <cstdint>\" cpp/mcap/include/mcap/types.hpp"
+    '';
+  });
+
 
   mecanum-drive-controller = rosSuper.mecanum-drive-controller.overrideAttrs ({
     buildInputs ? [], ...
@@ -256,9 +537,37 @@ in with lib; {
     revVariable = "mimick_version";
     fetchgitArgs.hash = "sha256-adCxIl0F3QkgSimOhvuTyhmig1rFy/K9wxZ/+YCuxYo=";
   }).overrideAttrs ({
-    ...
+    postPatch ? "", ...
   }: {
     NIX_CFLAGS_COMPILE = toString [ "-Wno-error=cpp" ];
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "UPDATE_COMMAND \"\"" \
+        "UPDATE_COMMAND \"\"
+         PATCH_COMMAND sed -i \"s|cmake_minimum_required (VERSION 2.8.12)|cmake_minimum_required (VERSION 3.5)|\" CMakeLists.txt"
+    '';
+  });
+
+  motion-capture-tracking = rosSuper.motion-capture-tracking.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace deps/libmotioncapture/deps/vrpn/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.8.3)" \
+        "cmake_minimum_required(VERSION 3.5)"
+      substituteInPlace deps/libmotioncapture/deps/vrpn/quat/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.6)" \
+        "cmake_minimum_required(VERSION 3.5)"
+      substituteInPlace deps/libmotioncapture/deps/vrpn/cmake/FindOpenHaptics.cmake --replace-fail \
+        "cmake_minimum_required(VERSION 2.6.3)" \
+        "cmake_minimum_required(VERSION 3.5)"
+      substituteInPlace deps/libmotioncapture/deps/vrpn/client_src/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.6)" \
+        "cmake_minimum_required(VERSION 3.5)"
+      substituteInPlace deps/libmotioncapture/deps/pybind11/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.4)" \
+        "cmake_minimum_required(VERSION 3.5)"
+    '';
   });
 
   moveit-kinematics = rosSuper.moveit-kinematics.overrideAttrs ({
@@ -267,6 +576,49 @@ in with lib; {
     # Added upstream in 2.7.2
     # https://github.com/ros-planning/moveit2/pull/2109
     propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.moveit-ros-planning ];
+  });
+
+  moveit-task-constructor-capabilities = rosSuper.moveit-task-constructor-capabilities.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # ref. https://github.com/moveit/moveit_task_constructor/pull/712
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        url = "https://github.com/moveit/moveit_task_constructor/commit/ed99e6b8656867cbdfd52ca4e9e85c743e59edf1.patch";
+        hash = "sha256-WxTkG5bnpA+fDQ7EJufxxAQJ/UvN2uehPAPROezCCiQ=";
+        stripLen = 1;
+      })
+    ];
+  });
+
+  mqtt-client = rosSuper.mqtt-client.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # ref. https://github.com/ika-rwth-aachen/mqtt_client/pull/93
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/mqtt_client/commit/fbbaf1ab684689019edc930c1528b33ec2319d8f.patch";
+        hash = "sha256-ESKIlHaESNxIZtAPpOcCpmClLiu8hydYEfBC8wwyoZI=";
+        stripLen = 1;
+      })
+    ];
+  });
+
+  mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # fix FindTBB used in autoware-map-height-fitter
+    # ref. https://github.com/KIT-MRT/mrt_cmake_modules/pull/40
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        url = "https://github.com/KIT-MRT/mrt_cmake_modules/commit/e0b17b017affcf715514c9895008dfff654c2873.patch";
+        hash = "sha256-2UmmwV0OYWTYdOAQdrAlk5zmVGQn0LOVYh+IGONxrW4=";
+      })
+      (self.fetchpatch2 {
+        url = "https://github.com/KIT-MRT/mrt_cmake_modules/commit/56bb3808fd7883c1afb216bb9b974fb4d6f16ed0.patch";
+        hash = "sha256-p/TMEttj8dIdKAXvvw4P4BTyQKMKwz++CuyGAYdVqJ8=";
+      })
+    ];
   });
 
   nav2-behaviors = rosSuper.nav2-behaviors.overrideAttrs({
@@ -297,6 +649,11 @@ in with lib; {
           rev = finalAttrs.version;
           hash = "sha256-f8qYh8ibC/ToHsUv3OF1ujzt3fUe7kW9cNpGyLqsgqw=";
         };
+        postPatch = (previousAttrs.postPatch or "") + ''
+          substituteInPlace test/CMakeLists.txt --replace-fail \
+            "cmake_minimum_required(VERSION 3.1)" \
+            "cmake_minimum_required(VERSION 3.5)"
+        '';
       });
     }).overrideAttrs (finalAttrs: previousAttrs: {
       version = "0.25.0";
@@ -340,7 +697,7 @@ in with lib; {
   });
 
   octomap = rosSuper.octomap.overrideAttrs ({
-    patches ? [], ...
+    patches ? [], postPatch ? "", ...
   }: {
     patches = patches ++ [
       # fix errors with recent compilers and C++17/20 standard
@@ -352,6 +709,11 @@ in with lib; {
         stripLen = 1;
       })
     ];
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail 'CMAKE_MINIMUM_REQUIRED(VERSION 3.0.2)' \
+                       'CMAKE_MINIMUM_REQUIRED(VERSION 3.5)'
+    '';
   });
 
   # Fix other off-highway-* packages which need ros-environment
@@ -362,6 +724,33 @@ in with lib; {
     propagatedNativeBuildInputs = propagatedNativeBuildInputs ++ [ rosSelf.ros-environment ];
   });
 
+  off-highway-premium-radar = rosSuper.off-highway-premium-radar.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for asio 1.36, ref. https://github.com/bosch-engineering/off_highway_sensor_drivers/pull/33
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/off_highway_sensor_drivers/commit/61c88d4c1c844e2eb24eab30ea23cdd2dfd066b5.patch";
+        hash = "sha256-3Dx5Mg1HwSqi8wFQDmXxBHLovCzjdLacjKO7b1bCIKA=";
+        stripLen = 1;
+      })
+    ];
+  });
+
+  off-highway-premium-radar-sample = rosSuper.off-highway-premium-radar-sample.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for asio 1.36, ref. https://github.com/bosch-engineering/off_highway_sensor_drivers/pull/33
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/off_highway_sensor_drivers/commit/c2e2fba65f812284790687a0c4f9c5982bd6fd14.patch";
+        hash = "sha256-83SK6kU8HmQgpCXJKbYKb2FTzL6AVbKbKeyRRO9+22w=";
+        stripLen = 1;
+      })
+    ];
+  });
+
+
   openvdb-vendor = (lib.patchAmentVendorGit rosSuper.openvdb-vendor {}).overrideAttrs ({
     postPatch ? "", ...
   }: {
@@ -369,6 +758,26 @@ in with lib; {
       substituteInPlace openvdb_vendor-extras.cmake \
         --replace-fail "\''${openvdb_vendor_DIR}/../../../opt/openvdb_vendor/lib/cmake/OpenVDB" \
                        "$out/lib/cmake/OpenVDB"
+    '';
+  });
+
+  pal-gazebo-worlds = rosSuper.pal-gazebo-worlds.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.4.0)" \
+        "cmake_minimum_required(VERSION 3.5.0)"
+    '';
+  });
+
+  pangolin = rosSuper.pangolin.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace components/pango_python/pybind11/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.4)" \
+        "cmake_minimum_required(VERSION 3.5)"
     '';
   });
 
@@ -384,6 +793,26 @@ in with lib; {
     # TODO: Remove after https://github.com/PlotJuggler/plotjuggler-ros-plugins/pull/107
     # appears in a release
     nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.ros-environment ];
+  });
+
+  popf = (rosSuper.popf.override {
+    # Fix "libfl.so.2: undefined reference to `yylex'"
+    flex = self.flex_2_5_35;
+  }).overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # cmake: Fix link problem, merged upstream
+      (self.fetchpatch2 {
+        url = "https://github.com/fmrico/popf/commit/8eabc3b0c6e4f6e718f4ac3564230dccfcfee46b.patch";
+        hash = "sha256-4inVYUHGiDd677wicbRlMoBtZ5HJbJ61xSFQpBrtU7c=";
+      })
+      # cmake: fix missing includes, ref. https://github.com/fmrico/popf/pull/12
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/popf/commit/e8ba226f67e0513689d0efc84e9b4e8b55394bd4.patch";
+        hash = "sha256-Sw/rY4MsmoWIpC9VQzimM18mlvdGwb8Q6EmwY2rg0pw=";
+      })
+    ];
   });
 
   python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
@@ -405,6 +834,56 @@ in with lib; {
     nativeBuildInputs ? [], ...
   }: {
     nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+  });
+
+  rc-genicam-api = rosSuper.rc-genicam-api.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # It's no longer needed to ignore "Error on non-existent target in get_target_property."
+    postPatch = postPatch + ''
+      substituteInPlace cmake/configure_link_libs.cmake --replace-fail \
+        "cmake_policy(SET CMP0045 OLD)" \
+        ""
+    '';
+  });
+
+  rmf-task = rosSuper.rmf-task.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for GCC 15, ref. https://github.com/open-rmf/rmf_task/pull/133
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/rmf_task/commit/8aaacbe009022540cce1cd3ff3282413cf08a42c.patch";
+        hash = "sha256-9nXoYlfw6yuXP2TFelWl1/T6ho3G49n5vRoxC5qxQCA=";
+        stripLen = 1;
+      })
+    ];
+  });
+
+  rmf-traffic = rosSuper.rmf-traffic.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = [
+      # https://github.com/open-rmf/rmf_traffic/pull/131
+      (self.fetchpatch2 {
+        url = "https://github.com/open-rmf/rmf_traffic/commit/c20b8d71507880387185666c78d105557e5003a9.patch";
+        hash = "sha256-4Elg7oF6OQHd2trn3e+r73hghW9Qf90PrGjID7RsdEI=";
+        stripLen = 1;
+      })
+    ];
+  });
+
+  robotont-driver = rosSuper.robotont-driver.overrideAttrs ({
+    postPatch ? "",
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for asio 1.36, ref. https://github.com/robotont/robotont_driver/pull/22
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/robotont_driver/commit/16910c7d40c5300829d0dc113189f8a0312e8638.patch";
+        hash = "sha256-M5ZcQexVU3N7zPZiybEFIP398BmWB5vpBm4kfJlq2jc=";
+      })
+    ];
   });
 
   ros2-ouster = rosSuper.ros2-ouster.overrideAttrs ({
@@ -445,12 +924,48 @@ in with lib; {
     '';
   });
 
+  rot-conv = rosSuper.rot-conv.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.3)" \
+        "cmake_minimum_required(VERSION 3.5)"
+    '';
+  });
+
   rviz-ogre-vendor = (patchVendorUrl rosSuper.rviz-ogre-vendor {
     url = "https://github.com/OGRECave/ogre/archive/v1.12.1.zip";
     sha256 = "1iv6k0dwdzg5nnzw2mcgcl663q4f7p2kj7nhs8afnsikrzxxgsi4";
-  }).overrideAttrs ({ ... }: {
+  }).overrideAttrs ({ postPatch ? "", ... }: {
     # Prevent replacing $out/opt/.. with $out/var/empty/..
     dontFixCmake = true;
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail 'PATCH_COMMAND' 'PATCH_COMMAND'$'\n'"sed -i -e \"s|cmake_minimum_required(VERSION 3.3.0)|cmake_minimum_required(VERSION 3.5.0)|\" CMakeLists.txt &&"
+    '';
+  });
+
+  sick-safevisionary-base = rosSuper.sick-safevisionary-base.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.0.2)" \
+        "cmake_minimum_required(VERSION 3.5)"
+    '';
+  });
+
+  sick-scan-xd = rosSuper.sick-scan-xd.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for gcc15, ref https://github.com/SICKAG/sick_scan_xd/pull/557
+      (self.fetchpatch2 {
+        url = "https://github.com/SICKAG/sick_scan_xd/commit/f5ac360b4cfb319c981b022a9b817a5e86639d5c.patch";
+        hash = "sha256-zh3UDjy6k7LI3YOYr9F9jt8+4pkdgeOpUUqHcqme6Bs=";
+      })
+    ];
   });
 
   shared-queues-vendor = patchVendorUrl (patchVendorUrl rosSuper.shared-queues-vendor {
@@ -471,6 +986,32 @@ in with lib; {
       '';
   });
 
+  ublox-gps = rosSuper.ublox-gps.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix for asio 1.36, ref https://github.com/KumarRobotics/ublox/pull/273
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/ublox/commit/da37a9628db91aaafbcbe8b247c28c0d5863159f.patch";
+        hash = "sha256-m7lsEHF/uS47zYrNBd5RSL62CmvmNcKXQiLM24R6LZA=";
+        stripLen = 1;
+      })
+    ];
+  });
+
+  udp-driver = rosSuper.udp-driver.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # fix for asio 1.36: https://github.com/ros-drivers/transport_drivers/pull/114
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/transport_drivers/commit/6a5a003a07850afda9681843978f1c5f46d04000.patch";
+        hash = "sha256-0j3Ps2RbkWcv9K+I6KW0fn2/4Nhsw8TIOoZAhAVixMk=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   urdfdom = rosSuper.urdfdom.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -480,6 +1021,11 @@ in with lib; {
       (self.fetchpatch {
         url = "https://github.com/ros/urdfdom/commit/cbe6884d267779463bb444be851f6404e692cc0a.patch";
         hash = "sha256-1gTRKIGqiSRion76bGecSfFJSBskYUJguUIa6ePIiX4=";
+      })
+      # fix: missing header
+      (self.fetchpatch2 {
+        url = "https://github.com/ros/urdfdom/commit/4768260074a90510571810d7439113960a304d44.patch";
+        hash = "sha256-bl49jkxvHMtNWPSnc0T3MHonAGSFVJhjhJc8ApaOdSo=";
       })
     ];
   });
@@ -494,6 +1040,11 @@ in with lib; {
         url = "https://github.com/ros/urdfdom_headers/commit/c9c993147bbf18d5ec83bae684c5780281e529b4.patch";
         hash = "sha256-BnYPdcetYSim2O1R38N0d1tY0Id++AgKNic8+dlM6Vg=";
       })
+      # Update cmake_minimum_required
+      (self.fetchpatch2 {
+        url = "https://github.com/ros/urdfdom_headers/commit/aedc2f08310e74d00c5eadefd07461fa52890fbb.patch";
+        hash = "sha256-ieeHfnxSmyuBnT5376s1cbO+Qin4Ay8fUiTUIGXwo9c=";
+      })
     ];
   });
 
@@ -507,13 +1058,18 @@ in with lib; {
         url = "https://github.com/ros-drivers/usb_cam/commit/1d1970b1a88fb1be3b961073748879900d2b1a70.patch";
         hash = "sha256-0iWl2DtqdjkyFy7lKa7aLxXjynm4ggNEQLxB45Mqf/Y=";
       })
+      # fix for newer ffmpeg, ref https://github.com/ros-drivers/usb_cam/pull/342, merged upstream
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-drivers/usb_cam/commit/9c7e4dad36f7ddc20c207aa2e4d1512a5188a60a.patch";
+        hash = "sha256-sSM7J35wKA8Z4GzXe5YL5Rw1I1jks4efTaCFDNqdKFQ=";
+      })
     ];
 
     nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
   });
 
   vrpn = rosSuper.vrpn.overrideAttrs ({
-    patches ? [], ...
+    patches ? [], postPatch ? "", ...
   }: {
     patches = patches ++ [
       # Fix compatibility with recent CMake versions
@@ -522,6 +1078,17 @@ in with lib; {
         hash = "sha256-AEiTLXPYcFdZrE4KzvCkXH4GiSFmhCl14wkq+0MRWLo=";
       })
     ];
+    postPatch = postPatch + ''
+      substituteInPlace quat/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.6)" \
+        "cmake_minimum_required(VERSION 3.5)"
+      substituteInPlace cmake/FindOpenHaptics.cmake --replace-fail \
+        "cmake_minimum_required(VERSION 2.6.3)" \
+        "cmake_minimum_required(VERSION 3.5)"
+      substituteInPlace client_src/CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 2.6)" \
+        "cmake_minimum_required(VERSION 3.5)"
+    '';
   });
 
   webots-ros2-driver = rosSuper.webots-ros2-driver.overrideAttrs ({
@@ -575,5 +1142,20 @@ in with lib; {
     '';
   });
 
-  zmqpp-vendor = lib.patchAmentVendorGit rosSuper.zmqpp-vendor { };
+  zlib-point-cloud-transport = rosSuper.zlib-point-cloud-transport.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for gcc15, ref. https://github.com/ros-perception/point_cloud_transport_plugins/pull/75
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/point_cloud_transport_plugins/commit/222735dcafb71eef599e44c1cdd8b9b04276a239.patch";
+        hash = "sha256-zSjyyvHM+7Fl6wdy/abxDnTONCieFVRG4zH5jeHahGY=";
+        stripLen = 1;
+      })
+    ];
+  });
+
+  zmqpp-vendor = lib.patchAmentVendorGit rosSuper.zmqpp-vendor {
+    patchesFor.zmqpp_vendor = [ ./zmqpp-vendor/cmake-version.patch ];
+  };
 }

@@ -147,10 +147,23 @@ let
       ROS_PYTHON_VERSION = if rosSelf.python.isPy3k then 3 else 2;
     });
 
+    mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      postPatch = postPatch + ''
+        substituteInPlace CMakeLists.txt \
+          --replace-fail 'cmake_minimum_required(VERSION 3.0.2)' 'cmake_minimum_required(VERSION 3.5)'
+      '';
+    });
+
     osqp-vendor = pipe rosSuper.osqp-vendor [
       (pkg: pkg.overrideAttrs ({
-        preInstall ? "", ...
+        preInstall ? "", postPatch ? "", ...
       }: {
+        postPatch = postPatch + ''
+          sed -i -e '/UPDATE_COMMAND/ a\PATCH_COMMAND sed -i -e "/cmake_minimum_required/ s/3.2/3.5/" CMakeLists.txt lin_sys/direct/qdldl/qdldl_sources/CMakeLists.txt' \
+            CMakeLists.txt
+        '';
         # osqp installs into both lib/cmake/ and lib64/cmake/ which is
         # problematic because moveLib64 doesn't attempt to merge overlapping
         # directories but fails instead. Here we do the merge manually.
@@ -178,9 +191,6 @@ let
         wrapQtApp "$out/lib/plotjuggler/plotjuggler"
       '';
     });
-
-    # TODO: Remove once onetbb appears in the locked nixpkgs version.
-    onetbb = self.tbb_2022;
 
     rtabmap-viz = rosSuper.rtabmap-viz.overrideAttrs ({
       postFixup ? "", ...
@@ -215,7 +225,7 @@ let
         (self.fetchpatch2 {
           # Add simple implementation for STBIImageCodec::magicNumberToFileExt()
           url = "https://github.com/OGRECave/ogre-next/commit/98c9095c6e288fceb59ccb3504d9127d88eb1b51.patch";
-          hash = "sha256-n4TVB7j0CgUGm4NWGS2WoKeOqzon8VLOPjnDX3DMcZM=";
+          hash = "sha256-4fa+IbqtIL48nJ0frrrexCzQIauVNDtpoU+4216MTuA=";
         })
         (self.fetchpatch2 {
           # Fix loading of images in STBICodec
@@ -227,6 +237,12 @@ let
           url = "https://github.com/OGRECave/ogre-next/commit/96a3bb016b2c9b4f9cca9df1a65d619220e21d78.patch";
           hash = "sha256-gJjlpkp3qhthF+6TbGLuToGPvOngqZrgE5sBucbvL4g=";
         })
+        (self.fetchpatch2 {
+          # Fix STLAllocator compatibility with GCC 15 and modern C++ standards
+          url = "https://github.com/wentasah/ogre-next/commit/45f449741b3283b43bec6572db8ad6d7af9b2efa.patch";
+          hash = "sha256-Jqc7TF9belxpGdUbli+jEeAUJ9x8VsX9JhRll1NU7Y8=";
+        })
+
       ];
     }).overrideAttrs(({
       postPatch ? "", ...

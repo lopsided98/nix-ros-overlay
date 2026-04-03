@@ -120,11 +120,15 @@
       file = n: v: "-DAMENT_VENDOR_NIX_FILE_${n}=${v}";
     };
     # Apply patches specified in patchesFor to the vendored source src.
-    applyPatchesFor = name: src: self.applyPatches {
-      inherit src;
-      name = src.rev;
-      patches = patchesFor.${name} or [];
-    };
+    applyPatchesFor = name: src:
+      if patchesFor.${name} or [] == [] then
+        src
+      else
+        self.applyPatches {
+          inherit src;
+          name = src.rev;
+          patches = patchesFor.${name};
+        };
   in {
     nativeBuildInputs = nativeBuildInputs ++ [
       # CMake ExternalProject patches are applied with git apply
