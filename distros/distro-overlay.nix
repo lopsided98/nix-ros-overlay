@@ -242,7 +242,12 @@ let
           url = "https://github.com/wentasah/ogre-next/commit/45f449741b3283b43bec6572db8ad6d7af9b2efa.patch";
           hash = "sha256-Jqc7TF9belxpGdUbli+jEeAUJ9x8VsX9JhRll1NU7Y8=";
         })
-
+        (self.fetchpatch2 {
+          # Fix RGB channel swap in STBICodec RGB-to-RGBA conversion
+          # https://github.com/OGRECave/ogre-next/pull/567
+          url = "https://github.com/OGRECave/ogre-next/commit/960aabcda2f0ba5d2281d742506aab3e3e91b396.patch";
+          hash = "sha256-Z6YAqoM8H/hhyyXzA2vwQdvbfcQuHR861ee1FidpRus=";
+        })
       ];
     }).overrideAttrs(({
       postPatch ? "", ...
