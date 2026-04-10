@@ -1142,19 +1142,6 @@ in with lib; {
     '';
   });
 
-  zlib-point-cloud-transport = rosSuper.zlib-point-cloud-transport.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # fix for gcc15, ref. https://github.com/ros-perception/point_cloud_transport_plugins/pull/75
-      (self.fetchpatch2 {
-        url = "https://github.com/nim65s/point_cloud_transport_plugins/commit/222735dcafb71eef599e44c1cdd8b9b04276a239.patch";
-        hash = "sha256-zSjyyvHM+7Fl6wdy/abxDnTONCieFVRG4zH5jeHahGY=";
-        stripLen = 1;
-      })
-    ];
-  });
-
   zmqpp-vendor = lib.patchAmentVendorGit rosSuper.zmqpp-vendor {
     patchesFor.zmqpp_vendor = [ ./zmqpp-vendor/cmake-version.patch ];
   };
