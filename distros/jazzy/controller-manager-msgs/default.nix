@@ -2,20 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, lifecycle-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, lifecycle-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-controller-manager-msgs";
-  version = "4.43.0-r1";
+  version = "4.44.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/controller_manager_msgs/4.43.0-1.tar.gz";
-    name = "4.43.0-1.tar.gz";
-    sha256 = "1209648af8181a252cc9898cdfb5419ce93a86d4bb9da46029ee7edaad8b1734";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/controller_manager_msgs/4.44.0-1.tar.gz";
+    name = "4.44.0-1.tar.gz";
+    sha256 = "8f6038f05c26f68a34a8912e3e3da99b2ecb44464496018fcd814cec5e7d6a85";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];
-  checkInputs = [ ament-lint-common ];
   propagatedBuildInputs = [ builtin-interfaces lifecycle-msgs rosidl-default-runtime std-msgs ];
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, urdf }:
 buildRosPackage {
   pname = "ros-jazzy-ffw-spring-actuator-controller";
-  version = "1.1.20-r1";
+  version = "1.1.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_spring_actuator_controller/1.1.20-1.tar.gz";
-    name = "1.1.20-1.tar.gz";
-    sha256 = "7ca05c5c2427c980b4f7605b927bdc7c324ff8808a1b56c376e852c7afd1f0f0";
+    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_spring_actuator_controller/1.1.21-1.tar.gz";
+    name = "1.1.21-1.tar.gz";
+    sha256 = "611c5ed0621e1c65eb7a8dbfd4e421096eda120b83075ef237cc9438d645bb9b";
   };
 
   buildType = "ament_cmake";

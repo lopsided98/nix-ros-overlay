@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cmake, cv-bridge, geometry-msgs, gps-msgs, mrpt-libmaps, mrpt-libobs, nav-msgs, ros-environment, rosbag2-cpp, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-humble-mrpt-libros-bridge";
-  version = "3.5.0-r1";
+  version = "3.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/humble/mrpt_libros_bridge/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "24b4909d8d3e6704fea5e61d11844b2a195f75bef7b03e9f12834a9f6c64b0e6";
+    url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/humble/mrpt_libros_bridge/3.5.1-1.tar.gz";
+    name = "3.5.1-1.tar.gz";
+    sha256 = "26fc54ba91485e2d050b2af6237e4c31ada05fff12087230a38114ae1a470105";
   };
 
   buildType = "cmake";

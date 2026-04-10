@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-ament-package";
-  version = "0.17.2-r2";
+  version = "0.17.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_package-release/archive/release/kilted/ament_package/0.17.2-2.tar.gz";
-    name = "0.17.2-2.tar.gz";
-    sha256 = "b88c7f573fae8eb6c24abab407c992d80a29f8018759e4e6dcdb1f1b2f4aea92";
+    url = "https://github.com/ros2-gbp/ament_package-release/archive/release/kilted/ament_package/0.17.3-1.tar.gz";
+    name = "0.17.3-1.tar.gz";
+    sha256 = "473b506d618fdd411b2ad1a5a63d4724e99ccc304799e7252432a72db1b560e7";
   };
 
   buildType = "ament_python";
   checkInputs = [ python3Packages.flake8 python3Packages.pytest ];
-  propagatedBuildInputs = [ python3Packages.importlib-metadata python3Packages.importlib-resources python3Packages.setuptools ];
+  propagatedBuildInputs = [ python3Packages.setuptools ];
   nativeBuildInputs = [ python3Packages.setuptools ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python-qt-binding, python3Packages, qt-dotgraph, rclpy, rqt-graph, rqt-gui, rqt-gui-py, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-rqt-tf-tree";
-  version = "1.0.5-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_tf_tree-release/archive/release/jazzy/rqt_tf_tree/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "4ec77721121ca18f4346ca5875cb2f9e8b87efd6998ceff99f7b9ec1d9f8e207";
+    url = "https://github.com/ros2-gbp/rqt_tf_tree-release/archive/release/jazzy/rqt_tf_tree/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "b771f83d37e766d48173c6e44bcb216fd71a9da956e54185b0c8ac5b9a7a5534";
   };
 
   buildType = "ament_python";

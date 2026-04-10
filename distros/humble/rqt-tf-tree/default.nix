@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python-qt-binding, python3Packages, qt-dotgraph, rclpy, rqt-graph, rqt-gui, rqt-gui-py, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-rqt-tf-tree";
-  version = "1.0.5-r1";
+  version = "1.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_tf_tree-release/archive/release/humble/rqt_tf_tree/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "92e5d079a1fa325831c62a6be502118ff56184ff2a5c0d98171f536f7deea795";
+    url = "https://github.com/ros2-gbp/rqt_tf_tree-release/archive/release/humble/rqt_tf_tree/1.0.6-1.tar.gz";
+    name = "1.0.6-1.tar.gz";
+    sha256 = "a5915bddfccfc9173f8642171820c124c0eb03b5aadb9a54482db068ecabd8b8";
   };
 
   buildType = "ament_python";

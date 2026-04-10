@@ -2794,6 +2794,8 @@ self: super: {
 
  topic-tools-interfaces = self.callPackage ./topic-tools-interfaces {};
 
+ toppra = self.callPackage ./toppra {};
+
  trac-ik = self.callPackage ./trac-ik {};
 
  trac-ik-kinematics-plugin = self.callPackage ./trac-ik-kinematics-plugin {};

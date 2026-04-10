@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libbase }:
 buildRosPackage {
   pname = "ros-kilted-mola-yaml";
-  version = "2.6.0-r1";
+  version = "2.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_yaml/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "29f436cdde97c4769d221970f7051bb115dc26bf2a7d27492f781442502fb4bf";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_yaml/2.6.1-1.tar.gz";
+    name = "2.6.1-1.tar.gz";
+    sha256 = "d373d0b99e858025369560494baf5c60235c5af58c3117ab9a559990fd9353d0";
   };
 
   buildType = "cmake";

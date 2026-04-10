@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, rosidl-parser, std-msgs, std-srvs, test-msgs }:
 buildRosPackage {
   pname = "ros-kilted-rosidl-runtime-py";
-  version = "0.14.1-r2";
+  version = "0.14.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_runtime_py-release/archive/release/kilted/rosidl_runtime_py/0.14.1-2.tar.gz";
-    name = "0.14.1-2.tar.gz";
-    sha256 = "219e6b1d8d38494fd14d65a803d7a0ba3ca633e4da68e0325112005ba2323b03";
+    url = "https://github.com/ros2-gbp/rosidl_runtime_py-release/archive/release/kilted/rosidl_runtime_py/0.14.2-1.tar.gz";
+    name = "0.14.2-1.tar.gz";
+    sha256 = "d2b917b959e5926476b9bb0fd91885da6e85ab4bf1da0e7093111f3b9060612a";
   };
 
   buildType = "ament_python";

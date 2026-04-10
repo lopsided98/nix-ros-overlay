@@ -1924,6 +1924,8 @@ self: super: {
 
  persist-parameter-server = self.callPackage ./persist-parameter-server {};
 
+ pfs = self.callPackage ./pfs {};
+
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
 
  phidgets-analog-inputs = self.callPackage ./phidgets-analog-inputs {};
@@ -2999,6 +3001,8 @@ self: super: {
  topic-tools = self.callPackage ./topic-tools {};
 
  topic-tools-interfaces = self.callPackage ./topic-tools-interfaces {};
+
+ toppra = self.callPackage ./toppra {};
 
  trac-ik = self.callPackage ./trac-ik {};
 

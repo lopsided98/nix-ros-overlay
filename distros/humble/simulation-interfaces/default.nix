@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-simulation-interfaces";
-  version = "1.1.0-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/simulation_interfaces-release/archive/release/humble/simulation_interfaces/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "70956bd68ac39c7c2b78c31d4dcaff40f294085848b51725ffc3e928fe09cd18";
+    url = "https://github.com/ros2-gbp/simulation_interfaces-release/archive/release/humble/simulation_interfaces/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "b39f973e64be9c6659368214c615d289bf48d13e9ff244a93a3dd6870d9e5d37";
   };
 
   buildType = "ament_cmake";

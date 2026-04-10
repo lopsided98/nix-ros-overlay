@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, backward-ros, controller-manager, controller-manager-msgs, effort-controllers, force-torque-sensor-broadcaster, geometry-msgs, hardware-interface, joint-state-broadcaster, joint-state-publisher, joint-trajectory-controller, launch, launch-ros, launch-testing-ament-cmake, pluginlib, pose-broadcaster, position-controllers, rclcpp, rclcpp-lifecycle, rclpy, robot-state-publisher, ros2-controllers-test-nodes, ros2run, rviz2, socat, std-msgs, std-srvs, tf2-geometry-msgs, ur-client-library, ur-controllers, ur-dashboard-msgs, ur-description, ur-msgs, urdf, velocity-controllers, xacro }:
 buildRosPackage {
   pname = "ros-humble-ur-robot-driver";
-  version = "2.12.0-r1";
+  version = "2.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/humble/ur_robot_driver/2.12.0-1.tar.gz";
-    name = "2.12.0-1.tar.gz";
-    sha256 = "77bcaa0bfdaed80dc19f7c2bdfce4a3d16a1d3bc305eeabe104797f4e0d5b83b";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/humble/ur_robot_driver/2.13.0-1.tar.gz";
+    name = "2.13.0-1.tar.gz";
+    sha256 = "6479c8d28a9b4d8cbcb5719329a19ae949daadc8931e3e97adacb8dd36f7983d";
   };
 
   buildType = "ament_cmake";

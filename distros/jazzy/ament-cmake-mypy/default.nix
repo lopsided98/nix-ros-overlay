@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-mypy }:
 buildRosPackage {
   pname = "ros-jazzy-ament-cmake-mypy";
-  version = "0.17.4-r1";
+  version = "0.17.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/jazzy/ament_cmake_mypy/0.17.4-1.tar.gz";
-    name = "0.17.4-1.tar.gz";
-    sha256 = "02ba619041f05dc1f42c7f8cc8cef3ee7a9f92c31d839b44e4fadd0dfe2b19e0";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/jazzy/ament_cmake_mypy/0.17.5-1.tar.gz";
+    name = "0.17.5-1.tar.gz";
+    sha256 = "63bfd4e48ee8f5c1fc178fa865e44b78802225540296ccef3821cc513b794261";
   };
 
   buildType = "ament_cmake";

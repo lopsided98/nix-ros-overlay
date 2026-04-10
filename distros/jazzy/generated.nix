@@ -548,6 +548,10 @@ self: super: {
 
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
+ continental-msgs = self.callPackage ./continental-msgs {};
+
+ continental-srvs = self.callPackage ./continental-srvs {};
+
  control-box-rst = self.callPackage ./control-box-rst {};
 
  control-msgs = self.callPackage ./control-msgs {};
@@ -2174,6 +2178,58 @@ self: super: {
 
  navmap-rviz-plugin = self.callPackage ./navmap-rviz-plugin {};
 
+ nebula = self.callPackage ./nebula {};
+
+ nebula-continental = self.callPackage ./nebula-continental {};
+
+ nebula-continental-common = self.callPackage ./nebula-continental-common {};
+
+ nebula-continental-decoders = self.callPackage ./nebula-continental-decoders {};
+
+ nebula-continental-hw-interfaces = self.callPackage ./nebula-continental-hw-interfaces {};
+
+ nebula-core-common = self.callPackage ./nebula-core-common {};
+
+ nebula-core-decoders = self.callPackage ./nebula-core-decoders {};
+
+ nebula-core-hw-interfaces = self.callPackage ./nebula-core-hw-interfaces {};
+
+ nebula-core-ros = self.callPackage ./nebula-core-ros {};
+
+ nebula-hesai = self.callPackage ./nebula-hesai {};
+
+ nebula-hesai-common = self.callPackage ./nebula-hesai-common {};
+
+ nebula-hesai-decoders = self.callPackage ./nebula-hesai-decoders {};
+
+ nebula-hesai-hw-interfaces = self.callPackage ./nebula-hesai-hw-interfaces {};
+
+ nebula-msgs = self.callPackage ./nebula-msgs {};
+
+ nebula-robosense = self.callPackage ./nebula-robosense {};
+
+ nebula-robosense-common = self.callPackage ./nebula-robosense-common {};
+
+ nebula-robosense-decoders = self.callPackage ./nebula-robosense-decoders {};
+
+ nebula-robosense-hw-interfaces = self.callPackage ./nebula-robosense-hw-interfaces {};
+
+ nebula-sample = self.callPackage ./nebula-sample {};
+
+ nebula-sample-common = self.callPackage ./nebula-sample-common {};
+
+ nebula-sample-decoders = self.callPackage ./nebula-sample-decoders {};
+
+ nebula-sample-hw-interfaces = self.callPackage ./nebula-sample-hw-interfaces {};
+
+ nebula-velodyne = self.callPackage ./nebula-velodyne {};
+
+ nebula-velodyne-common = self.callPackage ./nebula-velodyne-common {};
+
+ nebula-velodyne-decoders = self.callPackage ./nebula-velodyne-decoders {};
+
+ nebula-velodyne-hw-interfaces = self.callPackage ./nebula-velodyne-hw-interfaces {};
+
  neo-nav2-bringup = self.callPackage ./neo-nav2-bringup {};
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
@@ -2332,6 +2388,8 @@ self: super: {
 
  pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
 
+ pandar-msgs = self.callPackage ./pandar-msgs {};
+
  pangolin = self.callPackage ./pangolin {};
 
  parallel-gripper-controller = self.callPackage ./parallel-gripper-controller {};
@@ -2359,6 +2417,8 @@ self: super: {
  performance-test-fixture = self.callPackage ./performance-test-fixture {};
 
  persist-parameter-server = self.callPackage ./persist-parameter-server {};
+
+ pfs = self.callPackage ./pfs {};
 
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
 
@@ -2819,6 +2879,8 @@ self: super: {
  rmw-stats-shim = self.callPackage ./rmw-stats-shim {};
 
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
+
+ robosense-msgs = self.callPackage ./robosense-msgs {};
 
  robot-calibration = self.callPackage ./robot-calibration {};
 
@@ -3571,6 +3633,8 @@ self: super: {
  topic-tools = self.callPackage ./topic-tools {};
 
  topic-tools-interfaces = self.callPackage ./topic-tools-interfaces {};
+
+ toppra = self.callPackage ./toppra {};
 
  trac-ik = self.callPackage ./trac-ik {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-simulation-interfaces";
-  version = "1.3.0-r1";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/simulation_interfaces-release/archive/release/kilted/simulation_interfaces/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "bc4880966effa1f11ccb328e5393abfb3a160d456401a254ae813cee77dfc950";
+    url = "https://github.com/ros2-gbp/simulation_interfaces-release/archive/release/kilted/simulation_interfaces/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "9c414d155fcb29cb0325218209cdc3252a66abcf62a0d31f509e8c8e0118fe05";
   };
 
   buildType = "ament_cmake";

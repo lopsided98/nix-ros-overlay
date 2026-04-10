@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-mypy }:
 buildRosPackage {
   pname = "ros-kilted-ament-cmake-mypy";
-  version = "0.19.2-r2";
+  version = "0.19.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/kilted/ament_cmake_mypy/0.19.2-2.tar.gz";
-    name = "0.19.2-2.tar.gz";
-    sha256 = "1979c2296ed755d0caa4943f3eb259c976ba4c8fda7d8814275dc1d017c3b97f";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/kilted/ament_cmake_mypy/0.19.3-2.tar.gz";
+    name = "0.19.3-2.tar.gz";
+    sha256 = "908b86abaf2ce3656b38267b180261e3f02eecda8a0a69110f2dab06aef34160";
   };
 
   buildType = "ament_cmake";
