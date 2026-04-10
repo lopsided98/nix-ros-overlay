@@ -91,19 +91,6 @@ let
     # but have a better packaging in nixpkgs, so use it instead
     inherit (self.python3Packages) coal eigenpy pinocchio crocoddyl ;
 
-    bag2-to-image = rosSuper.bag2-to-image.overrideAttrs ({
-      patches ? [], ...
-    }: {
-      patches = patches ++ [
-        # Fix compile error in Jazzy (and soon likely in later distros)
-        # https://github.com/wep21/bag2_to_image/pull/5
-        (self.fetchpatch2 {
-          url = "https://github.com/wep21/bag2_to_image/commit/cf606a0fadb9f5c283d4b1c16072cd8e53538554.patch";
-          hash = "sha256-qn2qAr9dR+jFDdCIO32XRqf9eh1S+BOmx38NtY4YepE=";
-        })
-      ];
-    });
-
     freeimage = null; # Get rid of freeimage
 
     gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({ ... }:{
