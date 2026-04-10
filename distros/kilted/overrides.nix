@@ -86,14 +86,14 @@ in {
       # https://github.com/foxglove/foxglove-sdk/blob/main/ros/src/foxglove_bridge/CMakeLists.txt.
       # If the version doesn't match, cmake fails with "Hash mismatch"
       # and we can fix it here.
-      FOXGLOVE_SDK_VERSION = "0.16.5";
+      FOXGLOVE_SDK_VERSION = "0.19.0";
       systemToPlatform = {
         "x86_64-linux" = "x86_64-unknown-linux-gnu";
         "aarch64-linux" = "aarch64-unknown-linux-gnu";
       };
       systemToHash = {
-        "x86_64-linux" = "sha256-jkln7HRGoGtaBMR7VLzUzs/yrYd24ALvOAPtSnB2hB0=";
-        "aarch64-linux" = "sha256-VMvFfGClUEc+CnX482DvtvokXrt/WC2176ZPHCl+VU8=";
+        "x86_64-linux" = "sha256-89L2qLqX/t6uE7l49eilHexIA+3f0jsZiikr+atmdf8=";
+        "aarch64-linux" = "sha256-exp5EfTN9JHqbThIavb3MKs8kNTlQHGoW7iHmUQk5Rs=";
       };
       FOXGLOVE_SDK_PLATFORM = systemToPlatform.${self.system};
       sdk = self.fetchurl {
