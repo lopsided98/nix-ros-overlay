@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-pep257 }:
 buildRosPackage {
   pname = "ros-kilted-ament-cmake-pep257";
-  version = "0.19.2-r2";
+  version = "0.19.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/kilted/ament_cmake_pep257/0.19.2-2.tar.gz";
-    name = "0.19.2-2.tar.gz";
-    sha256 = "2bd8dc7b820a26e126703adae1dc9c75355448fb6ea0adc99c24dfc40da11c19";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/kilted/ament_cmake_pep257/0.19.3-2.tar.gz";
+    name = "0.19.3-2.tar.gz";
+    sha256 = "fa40944a6d7f8dcc6344280b51a135b3c7699cf85925cd8cbbace4d5d288703b";
   };
 
   buildType = "ament_cmake";

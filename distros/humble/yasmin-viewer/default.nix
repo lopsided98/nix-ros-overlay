@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages, rclcpp, rclpy, yasmin, yasmin-msgs, yasmin-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-index-cpp, boost, rclcpp, rclpy, yasmin, yasmin-msgs, yasmin-ros }:
 buildRosPackage {
   pname = "ros-humble-yasmin-viewer";
-  version = "4.2.4-r1";
+  version = "5.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_viewer/4.2.4-1.tar.gz";
-    name = "4.2.4-1.tar.gz";
-    sha256 = "950c2669728f3bd246b9afaa4b8ab4ad68de8cbd70fecb63f3aa815f58d071db";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_viewer/5.0.0-1.tar.gz";
+    name = "5.0.0-1.tar.gz";
+    sha256 = "ded669d1ad502cb99592d5b3214d836e1054fef9feec43981783aadbfd4c2577";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];
-  propagatedBuildInputs = [ python3Packages.expiringdict python3Packages.flask python3Packages.flask-socketio python3Packages.waitress rclcpp rclpy yasmin yasmin-msgs yasmin-ros ];
+  propagatedBuildInputs = [ ament-index-cpp boost rclcpp rclpy yasmin yasmin-msgs yasmin-ros ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {

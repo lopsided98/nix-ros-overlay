@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, launch-ros, launch-testing, python3Packages, rclpy, rmw-test-fixture-implementation, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-launch-testing-ros";
-  version = "0.29.6-r1";
+  version = "0.29.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch_ros-release/archive/release/rolling/launch_testing_ros/0.29.6-1.tar.gz";
-    name = "0.29.6-1.tar.gz";
-    sha256 = "e5294857f61b99533df8793f54669908d9e5c9ebf258dffb7fe8fb19a4611e79";
+    url = "https://github.com/ros2-gbp/launch_ros-release/archive/release/rolling/launch_testing_ros/0.29.7-1.tar.gz";
+    name = "0.29.7-1.tar.gz";
+    sha256 = "5af7c62b534136511144202ddffa536b28e7baf9759a30ea5a501b3e7fe7963c";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catch2, cmake, eigen, glew, libGL, libGLU, libepoxy, libjpeg, libpng, libxkbcommon, python3, python3Packages, wayland }:
 buildRosPackage {
   pname = "ros-jazzy-pangolin";
-  version = "0.9.4-r1";
+  version = "0.9.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Pangolin-release/archive/release/jazzy/pangolin/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "6dee3f48c898db91308d55fcf5669397fc20fb3570da3f5a76120bbd7d756aaa";
+    url = "https://github.com/ros2-gbp/Pangolin-release/archive/release/jazzy/pangolin/0.9.5-1.tar.gz";
+    name = "0.9.5-1.tar.gz";
+    sha256 = "202de34075c91adfba07ec8612a1adbe3612d50de4f5ecb79186495ba99baf37";
   };
 
   buildType = "cmake";

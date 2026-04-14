@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-ament-lint";
-  version = "0.19.2-r2";
+  version = "0.19.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/kilted/ament_lint/0.19.2-2.tar.gz";
-    name = "0.19.2-2.tar.gz";
-    sha256 = "14db16a1488af1d5b0857f1bab14cd897168eab6e531c8c080ba642b49670dd7";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/kilted/ament_lint/0.19.3-2.tar.gz";
+    name = "0.19.3-2.tar.gz";
+    sha256 = "0db904c9ece06441c4ac23f8e29e1336e8f9782e08242abc77b57d1210d9b23a";
   };
 
   buildType = "ament_python";

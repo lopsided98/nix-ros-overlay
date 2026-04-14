@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-kilted-auto-apms-interfaces";
-  version = "1.5.0-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/kilted/auto_apms_interfaces/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "7ee5049199b5241174a5bad326fac65bc781f7778f36f7e4743d4c42b9dccd31";
+    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/kilted/auto_apms_interfaces/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "4a93506bc344d7cb88333f1056899f082e52504308da29f1915ba4773d024564";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps }:
 buildRosPackage {
   pname = "ros-rolling-mola-input-kitti360-dataset";
-  version = "2.6.0-r1";
+  version = "2.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_input_kitti360_dataset/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "113454f4df7dd78a0f4dcf8f68bbd031e49b3ab4bfd12a9b5c7364224a4447cf";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_input_kitti360_dataset/2.6.1-1.tar.gz";
+    name = "2.6.1-1.tar.gz";
+    sha256 = "cd537bf97dec4f8fb8be64d75cb96a33e7c7226fe9fbee3da22473ff23a75661";
   };
 
   buildType = "cmake";

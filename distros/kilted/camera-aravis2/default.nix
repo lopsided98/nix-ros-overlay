@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, aravis, camera-aravis2-msgs, camera-info-manager, cv-bridge, diagnostic-msgs, glib, image-transport, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-camera-aravis2";
-  version = "1.2.0-r1";
+  version = "1.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/camera_aravis2-release/archive/release/kilted/camera_aravis2/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "bd77354d4cacedfc76c712555c3225699cbd64c3ac67e94fee9e4d5fe392386c";
+    url = "https://github.com/ros2-gbp/camera_aravis2-release/archive/release/kilted/camera_aravis2/1.2.0-2.tar.gz";
+    name = "1.2.0-2.tar.gz";
+    sha256 = "fada8b5d1999c5e268344516fb316a2af65ba9f7176921f3623ca787027eec1c";
   };
 
   buildType = "ament_cmake";

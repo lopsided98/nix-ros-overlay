@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages, rclpy, ros-environment, yasmin, yasmin-factory }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages, rclpy, ros-environment, yasmin, yasmin-factory, yasmin-plugins-manager }:
 buildRosPackage {
   pname = "ros-kilted-yasmin-editor";
-  version = "4.2.4-r1";
+  version = "5.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_editor/4.2.4-1.tar.gz";
-    name = "4.2.4-1.tar.gz";
-    sha256 = "ae51cfe0dd72dde668600b4cf3a8c51d04e7e48093969c3710aef1a0e79fed25";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_editor/5.0.0-1.tar.gz";
+    name = "5.0.0-1.tar.gz";
+    sha256 = "33f0c0db3dbd6937ed543ad5236a5751b92baf9f83fa46809a66700344d3f55f";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ros-environment ];
-  propagatedBuildInputs = [ python3Packages.lxml python3Packages.pyqt5 python3Packages.tqdm rclpy yasmin yasmin-factory ];
+  propagatedBuildInputs = [ python3Packages.lxml python3Packages.pyqt5 python3Packages.tqdm rclpy yasmin yasmin-factory yasmin-plugins-manager ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {

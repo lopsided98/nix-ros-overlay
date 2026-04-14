@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, backward-ros, control-msgs, controller-manager, controller-manager-msgs, effort-controllers, force-torque-sensor-broadcaster, geometry-msgs, hardware-interface, joint-state-broadcaster, joint-state-publisher, joint-trajectory-controller, launch, launch-ros, launch-testing-ament-cmake, motion-primitives-controllers, pluginlib, pose-broadcaster, position-controllers, rclcpp, rclcpp-lifecycle, rclpy, robot-state-publisher, ros2-controllers-test-nodes, ros2run, rviz2, socat, std-msgs, std-srvs, tf2-geometry-msgs, ur-client-library, ur-controllers, ur-dashboard-msgs, ur-description, ur-msgs, urdf, velocity-controllers, xacro }:
 buildRosPackage {
   pname = "ros-kilted-ur-robot-driver";
-  version = "4.5.0-r1";
+  version = "4.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/kilted/ur_robot_driver/4.5.0-1.tar.gz";
-    name = "4.5.0-1.tar.gz";
-    sha256 = "b05c3c60fcefec969023f722304572cb5db23436d15b89be375c70deb5f2aaf0";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/kilted/ur_robot_driver/4.6.0-1.tar.gz";
+    name = "4.6.0-1.tar.gz";
+    sha256 = "dbe085eb66913e16cc4a055dbd43b8e065a83c60af00f21f0830eca461765fcd";
   };
 
   buildType = "ament_cmake";

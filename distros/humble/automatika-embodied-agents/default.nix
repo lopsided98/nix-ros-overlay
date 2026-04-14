@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, automatika-ros-sugar, builtin-interfaces, python3Packages, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-automatika-embodied-agents";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/automatika_embodied_agents-release/archive/release/humble/automatika_embodied_agents/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "6ec0047f08eb1aa6f86669f9d0c5b12f6cccc7bd3a68dd6dbbd0891d6ef95c4a";
+    url = "https://github.com/ros2-gbp/automatika_embodied_agents-release/archive/release/humble/automatika_embodied_agents/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "c443fd93d53b11d075f6b3744fe54d3654d9963b3ca7abb603d7113d4d212499";
   };
 
   buildType = "ament_cmake";

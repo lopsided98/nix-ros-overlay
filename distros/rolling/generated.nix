@@ -898,6 +898,8 @@ self: super: {
 
  gscam = self.callPackage ./gscam {};
 
+ gstreamer-ros-babel-fish = self.callPackage ./gstreamer-ros-babel-fish {};
+
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  gtsam = self.callPackage ./gtsam {};
@@ -2328,6 +2330,14 @@ self: super: {
 
  rosidl-adapter = self.callPackage ./rosidl-adapter {};
 
+ rosidl-buffer = self.callPackage ./rosidl-buffer {};
+
+ rosidl-buffer-backend = self.callPackage ./rosidl-buffer-backend {};
+
+ rosidl-buffer-backend-registry = self.callPackage ./rosidl-buffer-backend-registry {};
+
+ rosidl-buffer-py = self.callPackage ./rosidl-buffer-py {};
+
  rosidl-cli = self.callPackage ./rosidl-cli {};
 
  rosidl-cmake = self.callPackage ./rosidl-cmake {};
@@ -2794,6 +2804,8 @@ self: super: {
 
  topic-tools-interfaces = self.callPackage ./topic-tools-interfaces {};
 
+ toppra = self.callPackage ./toppra {};
+
  trac-ik = self.callPackage ./trac-ik {};
 
  trac-ik-kinematics-plugin = self.callPackage ./trac-ik-kinematics-plugin {};
@@ -3036,6 +3048,8 @@ self: super: {
 
  yasmin = self.callPackage ./yasmin {};
 
+ yasmin-cli = self.callPackage ./yasmin-cli {};
+
  yasmin-demos = self.callPackage ./yasmin-demos {};
 
  yasmin-editor = self.callPackage ./yasmin-editor {};
@@ -3043,6 +3057,10 @@ self: super: {
  yasmin-factory = self.callPackage ./yasmin-factory {};
 
  yasmin-msgs = self.callPackage ./yasmin-msgs {};
+
+ yasmin-pcl = self.callPackage ./yasmin-pcl {};
+
+ yasmin-plugins-manager = self.callPackage ./yasmin-plugins-manager {};
 
  yasmin-ros = self.callPackage ./yasmin-ros {};
 

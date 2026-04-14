@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-uncrustify }:
 buildRosPackage {
   pname = "ros-kilted-ament-cmake-uncrustify";
-  version = "0.19.2-r2";
+  version = "0.19.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/kilted/ament_cmake_uncrustify/0.19.2-2.tar.gz";
-    name = "0.19.2-2.tar.gz";
-    sha256 = "631c69442617ccd760c660cbbc6aaf26e15ce3b5fd0b70907164060b5b2cdffe";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/kilted/ament_cmake_uncrustify/0.19.3-2.tar.gz";
+    name = "0.19.3-2.tar.gz";
+    sha256 = "eaf619df4275fdf8b8fedc0cdfce4cc5823815a720b7e6216aa33a254d02dce8";
   };
 
   buildType = "ament_cmake";

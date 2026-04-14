@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-lint-auto, ament-lint-common, opencv, rclcpp, rclcpp-components, rosbag2-cpp, rosbag2-storage, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-bag2-to-image";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bag2_to_image-release/archive/release/humble/bag2_to_image/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "49394a857b402145a03cf4e1e9fc0a2e6edccc9857d0485acf337a0c057fbcca";
+    url = "https://github.com/ros2-gbp/bag2_to_image-release/archive/release/humble/bag2_to_image/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "9b41aa5c7a08d0d8ac6a273baa41405b84bb26c8d6dee27139821941d88c2ee9";
   };
 
   buildType = "ament_cmake";

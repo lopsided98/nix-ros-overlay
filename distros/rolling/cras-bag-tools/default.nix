@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-cmake-ros, builtin-interfaces, cras-lint, cv-bridge, python3Packages, rclpy, rosbag2-py, rosidl-runtime-py, sensor-msgs, tf2-msgs }:
 buildRosPackage {
   pname = "ros-rolling-cras-bag-tools";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cras_ros_utils-release/archive/release/rolling/cras_bag_tools/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "acb42b3b292fcb47b23dc9f54c38d174a30074e0b737cfc67fd15db51ef0434a";
+    url = "https://github.com/ros2-gbp/cras_ros_utils-release/archive/release/rolling/cras_bag_tools/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "eb7f355990e3ec7852909fbf2bc8548a1145193b75eecf2fec0e416ee0eba966";
   };
 
   buildType = "ament_cmake";

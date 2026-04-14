@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, pluginlib, point-cloud-interfaces, point-cloud-transport, rclcpp, zstd }:
 buildRosPackage {
   pname = "ros-kilted-zstd-point-cloud-transport";
-  version = "5.0.4-r1";
+  version = "5.0.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/kilted/zstd_point_cloud_transport/5.0.4-1.tar.gz";
-    name = "5.0.4-1.tar.gz";
-    sha256 = "564b3aea1de9d2fcee34839dddcba5e554a21a8725ea1179f149869ac7101d0c";
+    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/kilted/zstd_point_cloud_transport/5.0.5-2.tar.gz";
+    name = "5.0.5-2.tar.gz";
+    sha256 = "404647308608e7a9bfd2290eab2861ae07b7bbd86e3cc49aed449394f2fc646b";
   };
 
   buildType = "ament_cmake";

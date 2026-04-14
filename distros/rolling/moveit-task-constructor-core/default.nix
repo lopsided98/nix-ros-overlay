@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, fmt, geometry-msgs, launch-testing-ament-cmake, moveit-configs-utils, moveit-core, moveit-planners, moveit-resources-fanuc-moveit-config, moveit-ros-planning, moveit-ros-planning-interface, moveit-task-constructor-msgs, py-binding-tools, rclcpp, rviz-marker-tools, tf2-eigen, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, fmt, geometry-msgs, launch-testing-ament-cmake, moveit-configs-utils, moveit-core, moveit-planners, moveit-py, moveit-resources-fanuc-moveit-config, moveit-ros-planning, moveit-ros-planning-interface, moveit-task-constructor-msgs, py-binding-tools, rclcpp, rviz-marker-tools, tf2-eigen, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-moveit-task-constructor-core";
-  version = "0.1.4-r2";
+  version = "0.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/rolling/moveit_task_constructor_core/0.1.4-2.tar.gz";
-    name = "0.1.4-2.tar.gz";
-    sha256 = "aa44a17b5dcf4f3d26e8647e3f8a809a68ca2c5b305a5c2bfff6aaad9b779802";
+    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/rolling/moveit_task_constructor_core/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
+    sha256 = "56dbcab0abb44b4a14b9c8afa4c6b89827f99412440ed8e4ab61e273905b0471";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];
   checkInputs = [ ament-cmake-gmock ament-cmake-gtest ament-cmake-pytest launch-testing-ament-cmake moveit-configs-utils moveit-planners moveit-resources-fanuc-moveit-config ];
-  propagatedBuildInputs = [ fmt geometry-msgs moveit-core moveit-ros-planning moveit-ros-planning-interface moveit-task-constructor-msgs py-binding-tools rclcpp rviz-marker-tools tf2-eigen visualization-msgs ];
+  propagatedBuildInputs = [ fmt geometry-msgs moveit-core moveit-py moveit-ros-planning moveit-ros-planning-interface moveit-task-constructor-msgs py-binding-tools rclcpp rviz-marker-tools tf2-eigen visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {

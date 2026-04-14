@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-ros-core, ament-cmake-uncrustify, ament-cmake-xmllint, rcutils }:
 buildRosPackage {
   pname = "ros-rolling-rcpputils";
-  version = "2.14.3-r1";
+  version = "2.14.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcpputils-release/archive/release/rolling/rcpputils/2.14.3-1.tar.gz";
-    name = "2.14.3-1.tar.gz";
-    sha256 = "de217db76cbd02e5c1e91cfcf7fa8214d865c9fcc4e4cb22e643f420c5f8eea8";
+    url = "https://github.com/ros2-gbp/rcpputils-release/archive/release/rolling/rcpputils/2.14.4-1.tar.gz";
+    name = "2.14.4-1.tar.gz";
+    sha256 = "cace9415cb44a2560ece41079e902d0e8bf0638f429be23b6920146ba4482ed5";
   };
 
   buildType = "ament_cmake";

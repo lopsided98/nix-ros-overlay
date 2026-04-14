@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps }:
 buildRosPackage {
   pname = "ros-humble-mola-input-lidar-bin-dataset";
-  version = "2.6.0-r1";
+  version = "2.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_lidar_bin_dataset/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "243dcb4843d9dc66d6d95191e080a53397ecdc10c98669314fa5f83636c8c430";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_lidar_bin_dataset/2.6.1-1.tar.gz";
+    name = "2.6.1-1.tar.gz";
+    sha256 = "aa394a029cd30e1ac59cf0ddcbef1a2b3ecb716c3568fa97b1d5064c2498be13";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catch2, cmake, eigen, glew, libGL, libGLU, libepoxy, libjpeg, libpng, libxkbcommon, python3, python3Packages, wayland }:
 buildRosPackage {
   pname = "ros-rolling-pangolin";
-  version = "0.9.4-r1";
+  version = "0.9.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Pangolin-release/archive/release/rolling/pangolin/0.9.4-1.tar.gz";
-    name = "0.9.4-1.tar.gz";
-    sha256 = "07c6add8ef6c59423f370ddfc9ecbf02ba8518aa39755ecde490c7d8b2845448";
+    url = "https://github.com/ros2-gbp/Pangolin-release/archive/release/rolling/pangolin/0.9.5-1.tar.gz";
+    name = "0.9.5-1.tar.gz";
+    sha256 = "95c5131793129c79d5c2f75a27d86492bb985904c68e320660cbea24d495121f";
   };
 
   buildType = "cmake";

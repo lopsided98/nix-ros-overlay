@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-lint-auto, ament-lint-common, opencv, rclcpp, rclcpp-components, rosbag2-cpp, rosbag2-storage, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-bag2-to-image";
-  version = "0.1.0-r5";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bag2_to_image-release/archive/release/kilted/bag2_to_image/0.1.0-5.tar.gz";
-    name = "0.1.0-5.tar.gz";
-    sha256 = "4f0fea0b5633bd77422a9870e44afe212afb367840ebfcf36ad3bd523dab6aa2";
+    url = "https://github.com/ros2-gbp/bag2_to_image-release/archive/release/kilted/bag2_to_image/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "4e0b4fa6f569764c29a65b99c56630c00f24c8214d17b4dd6c87b012c6d86e3c";
   };
 
   buildType = "ament_cmake";
