@@ -674,6 +674,12 @@ in {
         url = "https://github.com/ros/urdfdom_headers/commit/90efa6072dc239f78d37288a49f24d8aee1aaad2.patch";
         hash = "sha256-3q3K+fiINvS9eUrkHS3cgnn8GuA0Nz+FvVBMpsRAcFM=";
       })
+      # Cleanup declaration of ModelInterface's SharedPtrs (#99)
+      # This fixes build failure in ros-rolling-sdformat-urdf-2.1.0-r1
+      (self.fetchpatch2 {
+        url = "https://github.com/ros/urdfdom_headers/commit/f5b665d218addb536458ff69a6adf6a4e7b716eb.patch";
+        hash = "sha256-r73yJtAP1Su/MQbu+kJX8T5GV1WO5wzSRb/V9R8Blu0=";
+      })
     ];
   });
 
