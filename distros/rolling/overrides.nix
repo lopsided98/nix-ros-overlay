@@ -661,6 +661,12 @@ in {
         url = "https://github.com/ros/urdfdom/commit/229c3ae867ba770dcade50b3ee520d81ff3b0413.patch";
         hash = "sha256-cfPnSux7qmTDngzwPYIayYIvddhOXfmSsvgKwltFT5Q=";
       })
+      # removed urdf_world/types.h deprecation (#251)
+      # This fixes build failure in gz-dartsim-vendor
+      (self.fetchpatch2 {
+        url = "https://github.com/ros/urdfdom/commit/3cd0cc726f8cb42e890974b1d6f5602a87ac3ee4.patch";
+        hash = "sha256-sCRShtKm4XHkrC2CeLoZiINoqjpUdVyGus/dYkJU5tI=";
+      })
     ];
   });
 
