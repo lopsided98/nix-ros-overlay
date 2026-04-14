@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages, qt5, tango-icons-vendor }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, python-qt-binding, python3Packages, tango-icons-vendor }:
 buildRosPackage {
   pname = "ros-rolling-qt-gui";
-  version = "2.10.3-r1";
+  version = "2.10.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui/2.10.3-1.tar.gz";
-    name = "2.10.3-1.tar.gz";
-    sha256 = "419795b1ecd6c40eb866a7ad6a60ec58f8c2eac179bc773cd8405e8965ec3020";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui/2.10.4-1.tar.gz";
+    name = "2.10.4-1.tar.gz";
+    sha256 = "38fc213501b790e0a7b5c40a064bdb09f90e09786c2f234b95a72fcdca302839";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake python3Packages.pyqt5 qt5.qtbase ];
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ ament-index-python python-qt-binding python3Packages.catkin-pkg tango-icons-vendor ];
   nativeBuildInputs = [ ament-cmake ];

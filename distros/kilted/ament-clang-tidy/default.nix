@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, clang, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-ament-clang-tidy";
-  version = "0.19.2-r2";
+  version = "0.19.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/kilted/ament_clang_tidy/0.19.2-2.tar.gz";
-    name = "0.19.2-2.tar.gz";
-    sha256 = "6462e277df8e205db3e6590765745dafb172f1fa7ae4b1eb19378853c0921fb2";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/kilted/ament_clang_tidy/0.19.3-2.tar.gz";
+    name = "0.19.3-2.tar.gz";
+    sha256 = "cc187be4ca3fccef6e7cd4e8f34336c19f3ae2353b79f3726c4e89370f344214";
   };
 
   buildType = "ament_python";

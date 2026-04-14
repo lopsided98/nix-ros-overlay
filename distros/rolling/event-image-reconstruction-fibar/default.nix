@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-black, ament-cmake-clang-format, ament-cmake-ros, ament-lint-auto, ament-lint-common, cv-bridge, event-camera-codecs, event-camera-msgs, fibar-lib, image-transport, opencv, rclcpp, rclcpp-components, rosbag2-cpp, rosbag2-transport, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-event-image-reconstruction-fibar";
-  version = "3.0.3-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/event_image_reconstruction_fibar-release/archive/release/rolling/event_image_reconstruction_fibar/3.0.3-1.tar.gz";
-    name = "3.0.3-1.tar.gz";
-    sha256 = "69f37a91719767517482acf938db3a0195e257537032655c01ef76f27eccb135";
+    url = "https://github.com/ros2-gbp/event_image_reconstruction_fibar-release/archive/release/rolling/event_image_reconstruction_fibar/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "7983897df76520ddd204c33c1d20426153ec8057a8fce21c3bdc6f5d880f9971";
   };
 
   buildType = "ament_cmake";

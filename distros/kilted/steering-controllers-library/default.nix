@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-cmake, ros2-control-test-assets, std-srvs, tf2, tf2-geometry-msgs, tf2-msgs }:
 buildRosPackage {
   pname = "ros-kilted-steering-controllers-library";
-  version = "5.13.1-r1";
+  version = "5.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/steering_controllers_library/5.13.1-1.tar.gz";
-    name = "5.13.1-1.tar.gz";
-    sha256 = "7854c784e5a71b7fc085a721365199f05ecee89b01943e0e7269cc44038e4a67";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/steering_controllers_library/5.14.0-1.tar.gz";
+    name = "5.14.0-1.tar.gz";
+    sha256 = "99061b8661c129cee3eacb4d57f5594a9ad0359ba349db5cc90bded7298b3709";
   };
 
   buildType = "ament_cmake";

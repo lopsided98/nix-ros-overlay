@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-gtest, ament-cmake-python, ament-index-cpp, ament-index-python, auto-apms-interfaces, generate-parameter-library, pluginlib, rclcpp, rclcpp-action, rcpputils, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-kilted-auto-apms-util";
-  version = "1.5.0-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/kilted/auto_apms_util/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "e027c5edd219fbb470f1f9087568877346addc9e2544b596664b04faccddcd95";
+    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/kilted/auto_apms_util/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "ba6196a78a6bcc437380ac69360f9fdf39610b96428dcede574d7d8242f39733";
   };
 
   buildType = "ament_cmake";

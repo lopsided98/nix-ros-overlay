@@ -1924,6 +1924,8 @@ self: super: {
 
  persist-parameter-server = self.callPackage ./persist-parameter-server {};
 
+ pfs = self.callPackage ./pfs {};
+
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
 
  phidgets-analog-inputs = self.callPackage ./phidgets-analog-inputs {};
@@ -3000,6 +3002,8 @@ self: super: {
 
  topic-tools-interfaces = self.callPackage ./topic-tools-interfaces {};
 
+ toppra = self.callPackage ./toppra {};
+
  trac-ik = self.callPackage ./trac-ik {};
 
  trac-ik-kinematics-plugin = self.callPackage ./trac-ik-kinematics-plugin {};
@@ -3246,6 +3250,8 @@ self: super: {
 
  yasmin = self.callPackage ./yasmin {};
 
+ yasmin-cli = self.callPackage ./yasmin-cli {};
+
  yasmin-demos = self.callPackage ./yasmin-demos {};
 
  yasmin-editor = self.callPackage ./yasmin-editor {};
@@ -3253,6 +3259,10 @@ self: super: {
  yasmin-factory = self.callPackage ./yasmin-factory {};
 
  yasmin-msgs = self.callPackage ./yasmin-msgs {};
+
+ yasmin-pcl = self.callPackage ./yasmin-pcl {};
+
+ yasmin-plugins-manager = self.callPackage ./yasmin-plugins-manager {};
 
  yasmin-ros = self.callPackage ./yasmin-ros {};
 

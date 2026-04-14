@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-mypy }:
 buildRosPackage {
   pname = "ros-rolling-ament-cmake-mypy";
-  version = "0.20.3-r1";
+  version = "0.20.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_cmake_mypy/0.20.3-1.tar.gz";
-    name = "0.20.3-1.tar.gz";
-    sha256 = "f074d24a8384491ffa638f0e0a91309ab7cb84efc36c34889602b610855d02d6";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_cmake_mypy/0.20.4-1.tar.gz";
+    name = "0.20.4-1.tar.gz";
+    sha256 = "e32551432eec1bf3327a455ae90f6f0aaff4b19d8a9ed25ee1ff317a7747208a";
   };
 
   buildType = "ament_cmake";

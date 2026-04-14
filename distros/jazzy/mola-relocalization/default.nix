@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-pose-list, mola-test-datasets, mp2p-icp, mrpt-libmaps, mrpt-libobs, mrpt-libslam }:
 buildRosPackage {
   pname = "ros-jazzy-mola-relocalization";
-  version = "2.6.0-r1";
+  version = "2.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_relocalization/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "39fba915f6becef1a6063c76e439361472ff288644976b63e7a56b200953ded9";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_relocalization/2.6.1-1.tar.gz";
+    name = "2.6.1-1.tar.gz";
+    sha256 = "eed5cbeaa861d1044c43b11a58241fe96db57437a4f5ac2cf0d49d88769c1d92";
   };
 
   buildType = "cmake";

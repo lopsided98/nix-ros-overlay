@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-simulation-interfaces";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/simulation_interfaces-release/archive/release/rolling/simulation_interfaces/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "95dda6fe57df75a11eb54042f0a0d103563064d56dafdad17ec8be7efeed9bcc";
+    url = "https://github.com/ros2-gbp/simulation_interfaces-release/archive/release/rolling/simulation_interfaces/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "ac8622bf80f0518d7fc68ce0df12ecf3e6937bf5b0d0fbd9950bb64d65cbd45e";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-msgs, ament-cmake, ament-cmake-gmock, backward-ros, builtin-interfaces, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-cmake, ros2-control-test-assets, std-srvs, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-tricycle-controller";
-  version = "4.38.0-r1";
+  version = "4.39.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/tricycle_controller/4.38.0-1.tar.gz";
-    name = "4.38.0-1.tar.gz";
-    sha256 = "39cc4f5e5ee6bfc9a545dce3a18bfd98f7306e6b4202f6bc8daed1603b83bff3";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/tricycle_controller/4.39.0-1.tar.gz";
+    name = "4.39.0-1.tar.gz";
+    sha256 = "4b468b4de31cf09a38b361d589a6cebf085e1d90b04214f986e371c459ea9a37";
   };
 
   buildType = "ament_cmake";

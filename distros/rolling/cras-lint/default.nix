@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-cras-lint";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cras_ros_utils-release/archive/release/rolling/cras_lint/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "be684ed2de20c90b5f31186edbc8839c0fb9a800c73185588fc53256a0d2167e";
+    url = "https://github.com/ros2-gbp/cras_ros_utils-release/archive/release/rolling/cras_lint/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "c6a6b6cb0c43398a10ebb0a9a68e7b679f33a74de95add3bbcba03b5e642e472";
   };
 
   buildType = "ament_cmake";

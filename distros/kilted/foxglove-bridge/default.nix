@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, asio, nlohmann_json, openssl, rclcpp, rclcpp-components, resource-retriever, ros-environment, rosgraph-msgs, rosx-introspection, std-msgs, std-srvs, websocketpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, asio, geometry-msgs, nlohmann_json, openssl, rclcpp, rclcpp-components, resource-retriever, ros-environment, rosgraph-msgs, rosx-introspection, sensor-msgs, std-msgs, std-srvs, websocketpp }:
 buildRosPackage {
   pname = "ros-kilted-foxglove-bridge";
-  version = "3.2.4-r1";
+  version = "3.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/foxglove_bridge-release/archive/release/kilted/foxglove_bridge/3.2.4-1.tar.gz";
-    name = "3.2.4-1.tar.gz";
-    sha256 = "a8747a210b137614d45b9b446783ebbe24790bb3e8ea79470b2e0b7e56738e85";
+    url = "https://github.com/ros2-gbp/foxglove_bridge-release/archive/release/kilted/foxglove_bridge/3.2.6-1.tar.gz";
+    name = "3.2.6-1.tar.gz";
+    sha256 = "fe03ee52f08a0e46f5377ff99e7016821367938dd2a2e110fbd34f8bd7cdde39";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake asio nlohmann_json ros-environment ];
+  buildInputs = [ ament-cmake asio geometry-msgs nlohmann_json ros-environment sensor-msgs ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto openssl std-msgs std-srvs websocketpp ];
   propagatedBuildInputs = [ ament-index-cpp rclcpp rclcpp-components resource-retriever rosgraph-msgs rosx-introspection std-msgs ];
   nativeBuildInputs = [ ament-cmake ];

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-yasmin";
-  version = "4.2.4-r1";
+  version = "5.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin/4.2.4-1.tar.gz";
-    name = "4.2.4-1.tar.gz";
-    sha256 = "64b5999e18093178dcd78568df47dd8934f1aa249d9620f692abcf7f360aa963";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin/5.0.0-1.tar.gz";
+    name = "5.0.0-1.tar.gz";
+    sha256 = "c40a45f16fd00ec4d50adf7df37073bf2f7f08095dd7b6764d6c20399a2262ba";
   };
 
   buildType = "ament_cmake";

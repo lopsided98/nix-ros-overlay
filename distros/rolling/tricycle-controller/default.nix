@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-msgs, ament-cmake, ament-cmake-gmock, backward-ros, builtin-interfaces, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-cmake, ros2-control-test-assets, std-srvs, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-rolling-tricycle-controller";
-  version = "6.4.0-r1";
+  version = "6.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/tricycle_controller/6.4.0-1.tar.gz";
-    name = "6.4.0-1.tar.gz";
-    sha256 = "469f54e374e68c3c0e04ab2882a596793b56f20e5213e6b3b95a33e3893c96f1";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/tricycle_controller/6.5.0-1.tar.gz";
+    name = "6.5.0-1.tar.gz";
+    sha256 = "b41b0bbde51a4f974823e9c6dfd99ff0b9d03c417e5dbd243fdf2bbef79e392a";
   };
 
   buildType = "ament_cmake";

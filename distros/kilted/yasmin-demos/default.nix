@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, example-interfaces, nav-msgs, pluginlib, rclcpp, rclcpp-action, rclpy, ros-environment, yasmin, yasmin-factory, yasmin-ros, yasmin-viewer }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-index-cpp, example-interfaces, geometry-msgs, nav-msgs, pluginlib, rclcpp, rclcpp-action, rclpy, ros-environment, yasmin, yasmin-factory, yasmin-ros, yasmin-viewer }:
 buildRosPackage {
   pname = "ros-kilted-yasmin-demos";
-  version = "4.2.4-r1";
+  version = "5.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_demos/4.2.4-1.tar.gz";
-    name = "4.2.4-1.tar.gz";
-    sha256 = "42a7dd2934ba3c627934969aca922b4ab1b67dd9f948764478b4be4a5ee9ca67";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_demos/5.0.0-1.tar.gz";
+    name = "5.0.0-1.tar.gz";
+    sha256 = "b352d61b6cacf54faf6c08c955547c99448fef085e820e20462e0d702fed7dcb";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ros-environment ];
-  propagatedBuildInputs = [ example-interfaces nav-msgs pluginlib rclcpp rclcpp-action rclpy yasmin yasmin-factory yasmin-ros yasmin-viewer ];
+  propagatedBuildInputs = [ ament-index-cpp example-interfaces geometry-msgs nav-msgs pluginlib rclcpp rclcpp-action rclpy yasmin yasmin-factory yasmin-ros yasmin-viewer ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-simulation-interfaces";
-  version = "1.2.0-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/simulation_interfaces-release/archive/release/jazzy/simulation_interfaces/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "69012b76ad19b2d8eaa9b4c640073a34e2fd4f62db756c9145acb342233f6315";
+    url = "https://github.com/ros2-gbp/simulation_interfaces-release/archive/release/jazzy/simulation_interfaces/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "1042e35320933d2380e2d4fdb29c78d423d2f17cd1ed98e23a2e7ba5f23c1da2";
   };
 
   buildType = "ament_cmake";

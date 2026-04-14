@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test }:
 buildRosPackage {
   pname = "ros-kilted-ament-lint-auto";
-  version = "0.19.2-r2";
+  version = "0.19.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/kilted/ament_lint_auto/0.19.2-2.tar.gz";
-    name = "0.19.2-2.tar.gz";
-    sha256 = "56e22b2c9a6b6cfeb98311decb0349f17204820a1553dae40ba51300f1267d50";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/kilted/ament_lint_auto/0.19.3-2.tar.gz";
+    name = "0.19.3-2.tar.gz";
+    sha256 = "7fcf2b7e67e88897a30f6e4e9668709ec9b7637d4c34d46ba83d5114952e4e79";
   };
 
   buildType = "ament_cmake";

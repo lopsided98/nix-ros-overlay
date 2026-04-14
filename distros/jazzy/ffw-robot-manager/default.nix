@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, controller-interface, dynamixel-hardware-interface, dynamixel-interfaces, generate-parameter-library, hardware-interface, pluginlib, rclcpp, ros2-control-cmake, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-ffw-robot-manager";
-  version = "1.1.20-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_robot_manager/1.1.20-1.tar.gz";
-    name = "1.1.20-1.tar.gz";
-    sha256 = "1aca94e6d12e74554e2ad41abbd55104857a1153576b3096af4dbe747564a667";
+    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/jazzy/ffw_robot_manager/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "6cef6282890c89d5a566fa357625f007a7884b6b1c3769040e5f33d195769dd1";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test }:
 buildRosPackage {
   pname = "ros-rolling-ament-lint-auto";
-  version = "0.20.3-r1";
+  version = "0.20.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_lint_auto/0.20.3-1.tar.gz";
-    name = "0.20.3-1.tar.gz";
-    sha256 = "f689a2c66a6e692458bd2c2a2408e9b780c78ac9b23ff1d4e90e5625dfebd07f";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_lint_auto/0.20.4-1.tar.gz";
+    name = "0.20.4-1.tar.gz";
+    sha256 = "8e9f3b37acd4a1b89b3f20c42bf2c9c7566e7e15332289215e4278801c71b7f7";
   };
 
   buildType = "ament_cmake";

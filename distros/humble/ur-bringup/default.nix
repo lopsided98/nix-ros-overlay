@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, controller-manager, force-torque-sensor-broadcaster, joint-state-broadcaster, joint-state-publisher, joint-trajectory-controller, launch, launch-ros, position-controllers, rclpy, robot-state-publisher, ros2-controllers-test-nodes, rviz2, ur-controllers, ur-description, urdf, velocity-controllers, xacro }:
 buildRosPackage {
   pname = "ros-humble-ur-bringup";
-  version = "2.12.0-r1";
+  version = "2.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/humble/ur_bringup/2.12.0-1.tar.gz";
-    name = "2.12.0-1.tar.gz";
-    sha256 = "584061789cc4a20abbabb90f496d09964b9a9768bf0ede015e8041d2837b0a6a";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/humble/ur_bringup/2.13.0-1.tar.gz";
+    name = "2.13.0-1.tar.gz";
+    sha256 = "2d21349366ec553e901b923bbbef9ed30b2656c9d8ae4608db996b77c47d6809";
   };
 
   buildType = "ament_cmake";
