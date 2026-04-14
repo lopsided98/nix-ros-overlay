@@ -478,6 +478,50 @@ in {
     ];
   });
 
+  rmw-cyclonedds-cpp = rosSuper.rmw-cyclonedds-cpp.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # We need the patch from #575, but for it to apply cleanly, we need also the preceding commits.
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/rmw_cyclonedds/commit/b4963be0c79f5d78ed475cc63ba4215587a85068.patch";
+        hash = "sha256-GHgnjBF7w7/sx8PWCpRkTYFKCeIJ1BqpvHFPtgv0M40=";
+        stripLen = 1;
+      })
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/rmw_cyclonedds/commit/5147e01a012103d9cd650faa83ca18257136a362.patch";
+        hash = "sha256-JxFECv9jTFLAGYe6gSpdRDXqOBw4WMn410f2NyDAuo8=";
+        stripLen = 1;
+      })
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/rmw_cyclonedds/commit/fd48d5854a2b6f9278258121334d9fb97c454e34.patch";
+        hash = "sha256-X21nN2hKl+wqeMkNLYg4FXrQ98plGCfJudXov8ls0P8=";
+        stripLen = 1;
+      })
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/rmw_cyclonedds/commit/e7f44399fbadb474f0136370c232ed7eaf5be581.patch";
+        hash = "sha256-CzN8UuaX3l58sGVTD7qlZEkLvyqREVmq6fm9uR6dJQE=";
+        stripLen = 1;
+      })
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/rmw_cyclonedds/commit/1cf18c066e5c9cc6c4069b68c4b242155d606d2f.patch";
+        hash = "sha256-g2R8/CYnDcTqQt3UwQ6V4M54JcMUjCgTDyMgvytWIng=";
+        stripLen = 1;
+      })
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/rmw_cyclonedds/commit/ceb2eca8edead7d98d30bcbab80099a92a4c5015.patch";
+        hash = "sha256-yQg21wgYW3HsLb3L4fRDJxcG97BYWquYSVouDXPS3vg=";
+        stripLen = 1;
+      })
+      # Key support (#575)
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/rmw_cyclonedds/commit/92f6d89676326e14e4fdd89bee047cdd8c0fbbd5.patch";
+        hash = "sha256-dbWT7NVL7JXAJGWS7nBof6at7KXBOQgFbonMLy/UmH8=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   # rqt is broken in rolling due to unfinished qt6 migration.
   # TODO: Remove this once rqt works in rolling.
   ros-gz-sim-demos = rosSuper.ros-gz-sim-demos.override {
