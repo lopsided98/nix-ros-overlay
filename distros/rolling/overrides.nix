@@ -294,15 +294,6 @@ in {
     hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
   };
 
-  mecanum-drive-controller = rosSuper.mecanum-drive-controller.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    # https://github.com/ros-controls/ros2_controllers/pull/2213
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail "std_srvs" ""
-    '';
-  });
-
   mcap-vendor = (lib.patchVendorUrl rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.4.0.tar.gz";
     hash = "sha256-ZP8+URGfN//Pr53uy9mHp8tNTZA110o/03czlaRw/aE=";
