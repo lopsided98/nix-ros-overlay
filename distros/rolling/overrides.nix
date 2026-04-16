@@ -386,6 +386,20 @@ in {
     '';
   });
 
+  pcl-conversions = rosSuper.pcl-conversions.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix compile errors in pcl-ros caused by rosidl_buffer introduction
+      # https://github.com/ros-perception/perception_pcl/pull/529
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-perception/perception_pcl/commit/bb5cc41a2491138005bb0f733b0f0e26b8055c50.patch";
+        hash = "sha256-eNkf9YGSlLfcZjCRRCMUM6riNmRKRNzNZkCKbBOqLFs=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   # Switch to Qt6
   python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
     patches ? [], propagatedBuildInputs ? [], ...
