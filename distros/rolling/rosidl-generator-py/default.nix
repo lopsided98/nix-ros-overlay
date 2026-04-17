@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-mypy, ament-cmake-pep257, ament-cmake-pytest, ament-cmake-uncrustify, ament-index-python, ament-lint-auto, ament-lint-common, python3Packages, rmw, rosidl-buffer-py, rosidl-cli, rosidl-cmake, rosidl-generator-c, rosidl-generator-cpp, rosidl-parser, rosidl-pycommon, rosidl-runtime-c, rosidl-typesupport-c, rosidl-typesupport-fastrtps-c, rosidl-typesupport-interface, rosidl-typesupport-introspection-c, rpyutils, test-interface-files }:
 buildRosPackage {
   pname = "ros-rolling-rosidl-generator-py";
-  version = "0.27.1-r1";
+  version = "0.27.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_python-release/archive/release/rolling/rosidl_generator_py/0.27.1-1.tar.gz";
-    name = "0.27.1-1.tar.gz";
-    sha256 = "1a805ab637894fbb4f17df1054b51344c55dff9a15ec69dea5bf70dcf38fa2f2";
+    url = "https://github.com/ros2-gbp/rosidl_python-release/archive/release/rolling/rosidl_generator_py/0.27.2-1.tar.gz";
+    name = "0.27.2-1.tar.gz";
+    sha256 = "7bf6671653afd65eebfe00be1c556b09a586380c1006265a427ee033c247f7e1";
   };
 
   buildType = "ament_cmake";

@@ -452,6 +452,8 @@ self: super: {
 
  classic-bags = self.callPackage ./classic-bags {};
 
+ clearpath-bms-broadcaster = self.callPackage ./clearpath-bms-broadcaster {};
+
  clearpath-bt-joy = self.callPackage ./clearpath-bt-joy {};
 
  clearpath-common = self.callPackage ./clearpath-common {};
@@ -1851,6 +1853,8 @@ self: super: {
  mola-pose-list = self.callPackage ./mola-pose-list {};
 
  mola-relocalization = self.callPackage ./mola-relocalization {};
+
+ mola-sm-loop-closure = self.callPackage ./mola-sm-loop-closure {};
 
  mola-state-estimation = self.callPackage ./mola-state-estimation {};
 

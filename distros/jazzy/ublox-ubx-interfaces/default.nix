@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-jazzy-ublox-ubx-interfaces";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/jazzy/ublox_ubx_interfaces/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "708aa30b234adfb815f1161ae97e7a5e40e4ceee0acbb2e48193e311a596ad77";
+    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/jazzy/ublox_ubx_interfaces/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "5232c574cadd6f8402bc87026c0dd657d4a207edb87a4e9a9faf44ac532f1ba8";
   };
 
   buildType = "ament_cmake";

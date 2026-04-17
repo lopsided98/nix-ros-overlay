@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-uncrustify, ament-index-cpp, ament-lint-auto, ament-lint-common, libusb1, pkg-config, rclcpp, rclcpp-components, rtcm-msgs, std-msgs, ublox-ubx-interfaces, ublox-ubx-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ublox-dgnss-node";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/jazzy/ublox_dgnss_node/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "e735ab74f0ca3be55d0ae0458b7f42df42f0cf815f7773c260d091336432d45d";
+    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/jazzy/ublox_dgnss_node/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "838bd7d11b30ecec3772c6f7b6b816b05f5a1264da659fa718e0bd83d31859d1";
   };
 
   buildType = "ament_cmake";

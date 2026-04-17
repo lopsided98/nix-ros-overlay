@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, opencv, rclcpp, rmw-implementation-cmake, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-intra-process-demo";
-  version = "0.37.7-r1";
+  version = "0.37.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/intra_process_demo/0.37.7-1.tar.gz";
-    name = "0.37.7-1.tar.gz";
-    sha256 = "65beea8c8d8c1038ce2c02e22419d7c26b2eddcd76b2cca25699372b9d3905b3";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/intra_process_demo/0.37.8-1.tar.gz";
+    name = "0.37.8-1.tar.gz";
+    sha256 = "251a3b8c9acc10099c33f4cec07ca02e0ee797e7d74681dc1f42712752014eb1";
   };
 
   buildType = "ament_cmake";

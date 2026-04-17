@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, controller-manager, gz-plugin-vendor, gz-sim-vendor, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-cmake, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-kilted-gz-ros2-control";
-  version = "2.0.14-r1";
+  version = "2.0.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/kilted/gz_ros2_control/2.0.14-1.tar.gz";
-    name = "2.0.14-1.tar.gz";
-    sha256 = "9a7bada6e41a3d5a33f5b759b8ad8a66c2891cf148196245efd916faf1a4a049";
+    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/kilted/gz_ros2_control/2.0.15-1.tar.gz";
+    name = "2.0.15-1.tar.gz";
+    sha256 = "4ee8c8d772e779a73930220c079a0451947636a2688199db506904b12d3dce21";
   };
 
   buildType = "ament_cmake";

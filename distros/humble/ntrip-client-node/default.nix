@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-uncrustify, ament-lint-auto, ament-lint-common, curl, pkg-config, rclcpp, rclcpp-components, rtcm-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-ntrip-client-node";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/humble/ntrip_client_node/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "f543b2897fe35c8343a805bca5eb5f3517545bce994a38d1e195a32a765c6fac";
+    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/humble/ntrip_client_node/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "243929b094ff69ffd00ae71f63172fd118b20d2a3b8aa1656a3327e14cbdfd96";
   };
 
   buildType = "ament_cmake";

@@ -2,19 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, eigen, python3, python3Packages }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, eigen, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-toppra";
-  version = "0.6.6-r1";
+  version = "0.6.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/toppra-release/archive/release/jazzy/toppra/0.6.6-1.tar.gz";
-    name = "0.6.6-1.tar.gz";
-    sha256 = "7e8ec9b64f059ec6b7f238bed61034c584cb1674d7f4cf4915460a11e9abae13";
+    url = "https://github.com/ros2-gbp/toppra-release/archive/release/jazzy/toppra/0.6.7-1.tar.gz";
+    name = "0.6.7-1.tar.gz";
+    sha256 = "afbe3ea6eec448bdd310bf4c2f0d6d3406e328c6970dc80d21e4edd135aad54c";
   };
 
   buildType = "catkin";
   buildInputs = [ ament-cmake ament-cmake-python python3 python3Packages.pybind11 ];
+  checkInputs = [ ament-cmake-gtest ];
   propagatedBuildInputs = [ eigen ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 

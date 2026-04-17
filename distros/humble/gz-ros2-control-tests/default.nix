@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, controller-manager, gz-ros2-control-demos, ign-ros2-control-demos, launch, launch-ros, launch-testing-ament-cmake, launch-testing-ros, python3Packages, rclpy, ros2launch, rosgraph-msgs }:
 buildRosPackage {
   pname = "ros-humble-gz-ros2-control-tests";
-  version = "0.7.18-r1";
+  version = "0.7.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/humble/gz_ros2_control_tests/0.7.18-1.tar.gz";
-    name = "0.7.18-1.tar.gz";
-    sha256 = "fd67af73ac958725556d29266ad1e8a8ae35f52baf3b4b0c7c188b4f0a046d9e";
+    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/humble/gz_ros2_control_tests/0.7.19-1.tar.gz";
+    name = "0.7.19-1.tar.gz";
+    sha256 = "d3b9a48cc647931fab5bf0f7960a550a735f88290615404d11ae41c2116c7591";
   };
 
   buildType = "ament_cmake";

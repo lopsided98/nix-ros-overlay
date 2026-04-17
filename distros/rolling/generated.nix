@@ -1198,8 +1198,6 @@ self: super: {
 
  libg2o = self.callPackage ./libg2o {};
 
- liblz4-vendor = self.callPackage ./liblz4-vendor {};
-
  libmavconn = self.callPackage ./libmavconn {};
 
  libnabo = self.callPackage ./libnabo {};
@@ -1233,6 +1231,8 @@ self: super: {
  logging-demo = self.callPackage ./logging-demo {};
 
  lttngpy = self.callPackage ./lttngpy {};
+
+ lz4-cmake-module = self.callPackage ./lz4-cmake-module {};
 
  magic-enum = self.callPackage ./magic-enum {};
 
@@ -1363,6 +1363,8 @@ self: super: {
  mola-pose-list = self.callPackage ./mola-pose-list {};
 
  mola-relocalization = self.callPackage ./mola-relocalization {};
+
+ mola-sm-loop-closure = self.callPackage ./mola-sm-loop-closure {};
 
  mola-state-estimation = self.callPackage ./mola-state-estimation {};
 
@@ -2002,6 +2004,12 @@ self: super: {
 
  resource-retriever = self.callPackage ./resource-retriever {};
 
+ resource-retriever-interfaces = self.callPackage ./resource-retriever-interfaces {};
+
+ resource-retriever-service = self.callPackage ./resource-retriever-service {};
+
+ resource-retriever-service-plugin = self.callPackage ./resource-retriever-service-plugin {};
+
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
 
  rko-lio = self.callPackage ./rko-lio {};
@@ -2560,8 +2568,6 @@ self: super: {
 
  rviz-rendering-tests = self.callPackage ./rviz-rendering-tests {};
 
- rviz-resource-interfaces = self.callPackage ./rviz-resource-interfaces {};
-
  rviz-satellite = self.callPackage ./rviz-satellite {};
 
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
@@ -2661,8 +2667,6 @@ self: super: {
  splsm-7 = self.callPackage ./splsm-7 {};
 
  splsm-7-conversion = self.callPackage ./splsm-7-conversion {};
-
- sqlite3-vendor = self.callPackage ./sqlite3-vendor {};
 
  srdfdom = self.callPackage ./srdfdom {};
 
@@ -3084,10 +3088,10 @@ self: super: {
 
  zmqpp-vendor = self.callPackage ./zmqpp-vendor {};
 
+ zstd-cmake-module = self.callPackage ./zstd-cmake-module {};
+
  zstd-image-transport = self.callPackage ./zstd-image-transport {};
 
  zstd-point-cloud-transport = self.callPackage ./zstd-point-cloud-transport {};
-
- zstd-vendor = self.callPackage ./zstd-vendor {};
 
 }
