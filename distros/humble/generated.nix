@@ -2066,6 +2066,8 @@ self: super: {
 
  mola-relocalization = self.callPackage ./mola-relocalization {};
 
+ mola-sm-loop-closure = self.callPackage ./mola-sm-loop-closure {};
+
  mola-state-estimation = self.callPackage ./mola-state-estimation {};
 
  mola-state-estimation-simple = self.callPackage ./mola-state-estimation-simple {};

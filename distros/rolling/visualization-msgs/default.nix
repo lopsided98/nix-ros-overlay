@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-visualization-msgs";
-  version = "5.9.1-r1";
+  version = "5.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/visualization_msgs/5.9.1-1.tar.gz";
-    name = "5.9.1-1.tar.gz";
-    sha256 = "69ce1cddc9632b31b6b966e7363873e564e6eaddbcc35376fcd03a5cad5527b8";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/visualization_msgs/5.9.2-1.tar.gz";
+    name = "5.9.2-1.tar.gz";
+    sha256 = "b9e2035dce66b2d576f8332db5142e1d01f083307cfbd4a5e6b292823cae0c48";
   };
 
   buildType = "ament_cmake";

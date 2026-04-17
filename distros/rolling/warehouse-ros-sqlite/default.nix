@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, class-loader, geometry-msgs, rclcpp, sqlite3-vendor, warehouse-ros }:
+{ lib, buildRosPackage, fetchurl, _unresolved_sqlite3_vendor, ament-cmake, ament-cmake-copyright, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, class-loader, geometry-msgs, rclcpp, warehouse-ros }:
 buildRosPackage {
   pname = "ros-rolling-warehouse-ros-sqlite";
   version = "1.0.6-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake boost ];
   checkInputs = [ ament-cmake-copyright ament-cmake-gtest ament-lint-auto ament-lint-common geometry-msgs ];
-  propagatedBuildInputs = [ class-loader rclcpp sqlite3-vendor warehouse-ros ];
+  propagatedBuildInputs = [ _unresolved_sqlite3_vendor class-loader rclcpp warehouse-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

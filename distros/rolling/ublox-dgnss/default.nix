@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ntrip-client-node, ublox-dgnss-node, ublox-nav-sat-fix-hp-node, ublox-ubx-interfaces, ublox-ubx-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ublox-dgnss";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/rolling/ublox_dgnss/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "5efaed9504a5a2646739b7f564bf6e3542855fe4e5b93e7200d6eba348414171";
+    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/rolling/ublox_dgnss/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "04fadadcac5f6bb4116e4c9a09f56195d2bab7adf112c9775f87757903e37207";
   };
 
   buildType = "ament_cmake";
