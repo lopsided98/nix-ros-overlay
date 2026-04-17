@@ -1,12 +1,12 @@
 {
   "zenoh_c_vendor": {
     "url": "https://github.com/eclipse-zenoh/zenoh-c.git",
-    "rev": "f376456ccf75ed837a21a186bdf5191cba50eb3b",
-    "hash": "sha256-r5OgKy4AfWSKlI6xQrqmb+ZW4V6nynkoMuVSWgNM/F4="
+    "rev": "05bd370343b5161ca9269649b9a914c9c2dc4170",
+    "hash": "sha256-HfQJMKE8G6NF5uzuhbaDGkM+wbNof+vZKA2C/QNS40M="
   },
   "zenoh_cpp_vendor": {
     "url": "https://github.com/eclipse-zenoh/zenoh-cpp",
-    "rev": "0cd54f291039a65b96921a5951a66aeef088e67c",
-    "hash": "sha256-Tjc6hhMX2eH4PH8FDx+nTWUej2WXVYR/0+M6KZXm8ZM="
+    "rev": "af381b420cc8837ac7da42c9984594ef8f110e90",
+    "hash": "sha256-OWWmQhdgea4FBT0p5NHyPh+4yIztO5sXlidetFxBQcc="
   }
 }
