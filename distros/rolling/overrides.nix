@@ -705,7 +705,7 @@ in {
     nativeBuildInputs ? [], postPatch ? "", passthru ? {}, ...
   }: let
     outputHashes = {
-      "zenoh-1.6.2" = "sha256-uHm75MxW7ifmYOB3EPVjsPDWKYmk9nk9BLAOt7tvDzo=";
+      "zenoh-1.8.0" = "sha256-W0mVplCanR1zAoG/rExjD0h01altk0gC9wWeu3DNOqI=";
     };
     zenoh-c-source = finalAttrs.passthru.amentVendorSrcs.zenoh_c_vendor;
   in {
