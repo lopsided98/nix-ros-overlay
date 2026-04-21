@@ -10,8 +10,8 @@ in {
     patches = [
       # Fix compile errors with Boost >= 1.87
       (self.fetchpatch2 {
-        url = "https://github.com/fkie/async_web_server_cpp/pull/8/commits/0aa036c4c3908ef0d9ac85bf623a15906bccaefd.patch";
-        hash = "sha256-GXUYxWmNq2W7DCetmgHGD5/MFBWgDYFNIdUThwj8vt8=";
+        url = "https://github.com/fkie/async_web_server_cpp/pull/8/commits/0aa036c4c3908ef0d9ac85bf623a15906bccaefd.patch?full_index=1";
+        hash = "sha256-uZym/R8c4e/Ypo8xGQwGdasuFixjbddX9hzQeNqXIDc=";
       })
     ];
   });
@@ -39,8 +39,8 @@ in {
       # Fix compile error caused by rosidl_buffer introduction
       # https://github.com/wep21/bag2_to_image/pull/8
       (self.fetchpatch2 {
-        url = "https://github.com/wep21/bag2_to_image/commit/1c6ff87fa27244db7f15597c9cd6ecad34479208.patch";
-        hash = "sha256-dCAy/FZvAAsmqZGxPZd0DKrLrMdbwGH7VLqoYKb/Cb0=";
+        url = "https://github.com/wep21/bag2_to_image/commit/1c6ff87fa27244db7f15597c9cd6ecad34479208.patch?full_index=1";
+        hash = "sha256-GFPd1MdWgjxnDBqwiO/GKIYLHkY3eGG297HKOAoZacw=";
       })
     ];
   });
@@ -52,8 +52,8 @@ in {
       # Fix compile error with latest realtime_tools
       # https://github.com/ipa320/ros_battery_monitoring/pull/12
       (self.fetchpatch2 {
-        url = "https://github.com/ipa320/ros_battery_monitoring/commit/b9ee8af78e8154b95fc4b8202c53320466c4c69b.patch";
-        hash = "sha256-QXcJRw+ByI1p4D5GhWC7tELUu7RW2Yecn8ZqbhXTsVg=";
+        url = "https://github.com/ipa320/ros_battery_monitoring/commit/b9ee8af78e8154b95fc4b8202c53320466c4c69b.patch?full_index=1";
+        hash = "sha256-6rYpWL4w2s/BoADZHFNQHFrYQO0pewsvs5ri1M3dTIc=";
         stripLen = 1;
       })
     ];
@@ -128,8 +128,8 @@ in {
       # Don't fail with boost >= 1.86
       # https://github.com/locusrobotics/fuse/pull/423
       (self.fetchpatch2 {
-        url = "https://github.com/wentasah/fuse/commit/037b417d9db394b3d5154a800283c30d0ae30cee.patch";
-        hash = "sha256-j3ezP0QYP55mhj+F60Yv0Mv8M8Nu/AHmMoPn1lmI4Bg=";
+        url = "https://github.com/wentasah/fuse/commit/037b417d9db394b3d5154a800283c30d0ae30cee.patch?full_index=1";
+        hash = "sha256-ShWKk5H/6eaViWfAOL0T+ynCps2FgsPWtAZDoUjvR50=";
         stripLen = 1;
       })
     ];
@@ -168,8 +168,8 @@ in {
     patchesFor.gz_common_vendor = [
       (self.fetchpatch2 {
         # Replace FreeImage dependency with stb (#725 updated for gz-common7)
-        url = "https://github.com/gazebosim/gz-common/commit/73af365810c97f19d3db4068678e3a07690a2fd7.patch";
-        hash = "sha256-tLGyEPkaQQboLCSMesF2Nmb0OXc6QBf52NGcs8KAqs8=";
+        url = "https://github.com/gazebosim/gz-common/commit/73af365810c97f19d3db4068678e3a07690a2fd7.patch?full_index=1";
+        hash = "sha256-0JoNlI5LcueF6WdQGhLt9wEGtEvT5rkrywzlWniJfz4=";
         excludes = ["tutorials/install.md"];
       })
     ];
@@ -238,8 +238,8 @@ in {
       # Fix build error with GCC 15 in joint_trajectory_controller
       # https://github.com/ros-controls/ros2_control/pull/3174
       (self.fetchpatch2 {
-        url = "https://github.com/wentasah/ros2_control/commit/4f8c27fc8b7e8ff855258318fe3e301f3ac52f99.patch";
-        hash = "sha256-TfhVA5aSkKOusCylfxne8/MEQcIqCZQU3LeiQ5SdN/A=";
+        url = "https://github.com/wentasah/ros2_control/commit/4f8c27fc8b7e8ff855258318fe3e301f3ac52f99.patch?full_index=1";
+        hash = "sha256-l+ouh9M2ZlPjLT5Q3xrLtPpTGAAcfS2AR0VCsOs2V4o=";
         stripLen = 1;
       })
     ];
@@ -251,8 +251,8 @@ in {
     patches = patches ++ [
       # fix for asio 1.36: https://github.com/ros-drivers/transport_drivers/pull/113
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/transport_drivers/commit/7be52848f624c82ea720416360d7a754fff65c33.patch";
-        hash = "sha256-frE2449PirPJMnln/mGW87JHXCJfb2wo+SBDunTPanc=";
+        url = "https://github.com/nim65s/transport_drivers/commit/7be52848f624c82ea720416360d7a754fff65c33.patch?full_index=1";
+        hash = "sha256-IYQTlSnJjUvnOp0RbN+1P7C/RclAjouyzmBT9LJpyN4=";
         stripLen = 1;
       })
     ];
@@ -262,9 +262,9 @@ in {
     patches ? [], ...
   }: {
     patches = patches ++ [
-      (self.fetchpatch {
-        url = "https://github.com/eclipse-iceoryx/iceoryx/commit/acc1e979a2d5ca30737efb077b00b42f1c4a8429.patch";
-        hash = "sha256-npFHdb0a3JBA8T6vke54DA08C93aNc/7c6xrfMBo7zI=";
+      (self.fetchpatch2 {
+        url = "https://github.com/eclipse-iceoryx/iceoryx/commit/acc1e979a2d5ca30737efb077b00b42f1c4a8429.patch?full_index=1";
+        hash = "sha256-M2ItntTMGqH6YkUNMEF0opJobyqgbZq62vBkyWxxol0=";
         stripLen = 1;
       })
     ];
@@ -387,8 +387,8 @@ in {
       # Fix compile errors in pcl-ros caused by rosidl_buffer introduction
       # https://github.com/ros-perception/perception_pcl/pull/529
       (self.fetchpatch2 {
-        url = "https://github.com/ros-perception/perception_pcl/commit/bb5cc41a2491138005bb0f733b0f0e26b8055c50.patch";
-        hash = "sha256-eNkf9YGSlLfcZjCRRCMUM6riNmRKRNzNZkCKbBOqLFs=";
+        url = "https://github.com/ros-perception/perception_pcl/commit/bb5cc41a2491138005bb0f733b0f0e26b8055c50.patch?full_index=1";
+        hash = "sha256-fCooAtkdesigd0jggYA7TYmc7LsK0rTL9eLAKAVVDOY=";
         stripLen = 1;
       })
     ];
@@ -400,20 +400,20 @@ in {
   }: {
     patches = patches ++ [
       # ref. https://github.com/ros-visualization/python_qt_binding/pull/143
-      (self.fetchpatch {
+      (self.fetchpatch2 {
         name = "support-qt6.patch";
-        url = "https://github.com/ros-visualization/python_qt_binding/commit/fa854d325ad4fa5f6e788d70b3ba9ccf9ee5c80f.patch";
-        hash = "sha256-P/xScO83zRL7qtqRzLiHkQtCpYdcxOaXwWj/83GhFpk=";
+        url = "https://github.com/ros-visualization/python_qt_binding/commit/fa854d325ad4fa5f6e788d70b3ba9ccf9ee5c80f.patch?full_index=1";
+        hash = "sha256-bszIhxh1ThuUdDDiKoHi7eQA/KGb41XmPjMaGpuf658=";
       })
-      (self.fetchpatch {
+      (self.fetchpatch2 {
         name = "make-linters-happy.patch";
-        url = "https://github.com/ros-visualization/python_qt_binding/commit/bd88c0d5d51add58e329c40bba20a7b04c3df063.patch";
-        hash = "sha256-1YuTIUGDmgFZtz/1LoRIkayH9M84H5rs8QqhW9SnNAQ=";
+        url = "https://github.com/ros-visualization/python_qt_binding/commit/bd88c0d5d51add58e329c40bba20a7b04c3df063.patch?full_index=1";
+        hash = "sha256-b3aoTkzxn+ngxJXt7mIaqA3oFkiDelxy/b+QuKaQXIo=";
       })
-      (self.fetchpatch {
+      (self.fetchpatch2 {
         name = "fixes.patch";
-        url = "https://github.com/ros-visualization/python_qt_binding/commit/d710e1afb2ac0effed1e8d6ab90eee53354366bb.patch";
-        hash = "sha256-+ou08BZCIhRMDi9GMyAOLmdoGJNZaqLpA7nMszZOFgg=";
+        url = "https://github.com/ros-visualization/python_qt_binding/commit/d710e1afb2ac0effed1e8d6ab90eee53354366bb.patch?full_index=1";
+        hash = "sha256-+QQzU6FXa+69QG8JaB/miBC1QxsvS9v0mPMJznPHl+c=";
       })
     ];
     propagatedBuildInputs = propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
@@ -466,8 +466,8 @@ in {
     patches = patches ++ [
       # fix for GCC 15, ref. https://github.com/open-rmf/rmf_task/pull/133
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/rmf_task/commit/8aaacbe009022540cce1cd3ff3282413cf08a42c.patch";
-        hash = "sha256-9nXoYlfw6yuXP2TFelWl1/T6ho3G49n5vRoxC5qxQCA=";
+        url = "https://github.com/nim65s/rmf_task/commit/8aaacbe009022540cce1cd3ff3282413cf08a42c.patch?full_index=1";
+        hash = "sha256-xpn2yWMRyXUPTf0OdCjGGkKcNLHO6jAnWz4NeXInI2I=";
         stripLen = 1;
       })
     ];
@@ -479,8 +479,8 @@ in {
     patches = [
       # https://github.com/open-rmf/rmf_traffic/pull/131
       (self.fetchpatch2 {
-        url = "https://github.com/open-rmf/rmf_traffic/commit/c20b8d71507880387185666c78d105557e5003a9.patch";
-        hash = "sha256-4Elg7oF6OQHd2trn3e+r73hghW9Qf90PrGjID7RsdEI=";
+        url = "https://github.com/open-rmf/rmf_traffic/commit/c20b8d71507880387185666c78d105557e5003a9.patch?full_index=1";
+        hash = "sha256-2f2jT9Be5f/Bzh5sLxXwmdD+fwtvdoDuBrejlns1GWg=";
         stripLen = 1;
       })
     ];
@@ -608,8 +608,8 @@ in {
     patches = patches ++ [
       # Fix for asio 1.36, ref https://github.com/KumarRobotics/ublox/pull/273
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/ublox/commit/da37a9628db91aaafbcbe8b247c28c0d5863159f.patch";
-        hash = "sha256-m7lsEHF/uS47zYrNBd5RSL62CmvmNcKXQiLM24R6LZA=";
+        url = "https://github.com/nim65s/ublox/commit/da37a9628db91aaafbcbe8b247c28c0d5863159f.patch?full_index=1";
+        hash = "sha256-S1h+tw9juDe10I/oITnTYkGFtybI7sMEO7BftKhHo1I=";
         stripLen = 1;
       })
     ];
@@ -621,9 +621,9 @@ in {
     patches = patches ++ [
       # Fix CMake relative install dir assumptions
       # https://github.com/ros/urdfdom/pull/224
-      (self.fetchpatch {
-        url = "https://github.com/ros/urdfdom/commit/229c3ae867ba770dcade50b3ee520d81ff3b0413.patch";
-        hash = "sha256-cfPnSux7qmTDngzwPYIayYIvddhOXfmSsvgKwltFT5Q=";
+      (self.fetchpatch2 {
+        url = "https://github.com/ros/urdfdom/commit/229c3ae867ba770dcade50b3ee520d81ff3b0413.patch?full_index=1";
+        hash = "sha256-yOkgsmFRVwkmV6XMKaiPkBUIqxhZ6kfGK5H+dieuMls=";
       })
     ];
   });
@@ -634,9 +634,9 @@ in {
     patches = patches ++ [
       # Fix CMake relative install dir assumptions
       # https://github.com/ros/urdfdom_headers/pull/90
-      (self.fetchpatch {
-        url = "https://github.com/ros/urdfdom_headers/commit/90efa6072dc239f78d37288a49f24d8aee1aaad2.patch";
-        hash = "sha256-3q3K+fiINvS9eUrkHS3cgnn8GuA0Nz+FvVBMpsRAcFM=";
+      (self.fetchpatch2 {
+        url = "https://github.com/ros/urdfdom_headers/commit/90efa6072dc239f78d37288a49f24d8aee1aaad2.patch?full_index=1";
+        hash = "sha256-XFudlWVAcj2m7PwW/1KakDsG7ArVSijCio+xfVrbfb8=";
       })
     ];
   });
@@ -646,14 +646,14 @@ in {
   }: {
     patches = patches ++ [
       # Remove undocumented pix_fmt (AV_PIX_FMT_XVMC) breaking the build
-      (self.fetchpatch {
-        url = "https://github.com/ros-drivers/usb_cam/commit/1d1970b1a88fb1be3b961073748879900d2b1a70.patch";
-        hash = "sha256-0iWl2DtqdjkyFy7lKa7aLxXjynm4ggNEQLxB45Mqf/Y=";
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-drivers/usb_cam/commit/1d1970b1a88fb1be3b961073748879900d2b1a70.patch?full_index=1";
+        hash = "sha256-W1ihgS2dHQT1SN2GyVkUdiId82ys6A1a2hwuk26ZXXk=";
       })
       # Remove avcodec_close() removed in FFmpeg 8.0 (avcodec_free_context suffices)
-      (self.fetchpatch {
-        url = "https://github.com/ros-drivers/usb_cam/commit/41805f7eb50f31e16839bb302df1bb5c6f30cb50.patch";
-        hash = "sha256-UXjqIHCkplBo5MWmH+ZlcRyy0IJgr8Qdld9QMq03SPI=";
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-drivers/usb_cam/commit/41805f7eb50f31e16839bb302df1bb5c6f30cb50.patch?full_index=1";
+        hash = "sha256-JVoZgReNfYsh30qMFbIM25AALyq1KTdEGh63u1/B2e4=";
       })
     ];
   });
@@ -690,8 +690,8 @@ in {
       # Add missing include
       # https://github.com/uleroboticsgroup/yasmin/pull/92
       (self.fetchpatch2 {
-        url = "https://github.com/wentasah/yasmin/commit/2445d87187c421b8eb3fc651e12cc28efaaf9867.patch";
-        hash = "sha256-ufHY20rQQ4IGGOzCPYRN9OVW78qUwKMrS2paM7k0CpM=";
+        url = "https://github.com/wentasah/yasmin/commit/2445d87187c421b8eb3fc651e12cc28efaaf9867.patch?full_index=1";
+        hash = "sha256-lJLzm2E/j2mXn4/3FAti6w7Abfk5pMUwtmc7qAkNf0Y=";
         stripLen = 1;
       })
     ];
