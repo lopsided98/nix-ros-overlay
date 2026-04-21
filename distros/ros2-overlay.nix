@@ -118,9 +118,9 @@ with rosSelf.lib; {
   }: {
     patches = patches ++ [
       # Fix compilation with glog >= 0.7.0 (https://github.com/ros2/cartographer_ros/pull/76)
-      (self.fetchpatch {
-        url = "https://github.com/ros2/cartographer_ros/commit/58cd253615606efbf0bf69d16a932d35aadef1f7.patch";
-        hash = "sha256-rmolyUYIWPT37kYITDW4cRO0XJNdIYs6AoUWgWVb8PU=";
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/cartographer_ros/commit/58cd253615606efbf0bf69d16a932d35aadef1f7.patch?full_index=1";
+        hash = "sha256-Qlo6V44AhbDYCSIxfDFr/puTNP3n2qICiM3HSZbr9zA=";
         stripLen = 1;
       })
     ];
@@ -203,9 +203,9 @@ with rosSelf.lib; {
     cmakeFlags ? [], ...
   }: {
     patches = patches ++ [
-      (self.fetchpatch {
-        url = "https://github.com/eclipse-iceoryx/iceoryx/commit/d4519632964794553791ef3f951ed47ca52ebbb6.patch";
-        hash = "sha256-f4kITUql8uFSptFmu7LZGChlfDG63b0gmsRyHp1NsWw=";
+      (self.fetchpatch2 {
+        url = "https://github.com/eclipse-iceoryx/iceoryx/commit/d4519632964794553791ef3f951ed47ca52ebbb6.patch?full_index=1";
+        hash = "sha256-4RPcmeZqdwc2uFW+j3DA5IqE2Jop6U/u4M7sdIeE+jg=";
         stripLen = 1;
       })
     ];
@@ -219,9 +219,9 @@ with rosSelf.lib; {
   }: {
     patches = patches ++ [
       # Fix compilation with Boost 1.87
-      (self.fetchpatch {
-        url = "https://github.com/fzi-forschungszentrum-informatik/Lanelet2/pull/399/commits/ab7d2f4dee299563c6313336c070ed99635aba3f.patch";
-        hash = "sha256-RKTjYPlnFY4JPGMa4YfyHUEY9X/Y1UpkNzB7AHmk4p0=";
+      (self.fetchpatch2 {
+        url = "https://github.com/fzi-forschungszentrum-informatik/Lanelet2/pull/399/commits/ab7d2f4dee299563c6313336c070ed99635aba3f.patch?full_index=1";
+        hash = "sha256-aFpKnQwd0FmyaDK2mHi5bWri8nKTWbgAt/PF7EpuYmE=";
         stripLen = 1;
       })
     ];

@@ -20,8 +20,8 @@ in {
     patches = [
       # Fix compile errors with Boost >= 1.87
       (self.fetchpatch2 {
-        url = "https://github.com/fkie/async_web_server_cpp/pull/8/commits/0aa036c4c3908ef0d9ac85bf623a15906bccaefd.patch";
-        hash = "sha256-GXUYxWmNq2W7DCetmgHGD5/MFBWgDYFNIdUThwj8vt8=";
+        url = "https://github.com/fkie/async_web_server_cpp/pull/8/commits/0aa036c4c3908ef0d9ac85bf623a15906bccaefd.patch?full_index=1";
+        hash = "sha256-uZym/R8c4e/Ypo8xGQwGdasuFixjbddX9hzQeNqXIDc=";
       })
     ];
   });
@@ -50,8 +50,8 @@ in {
       # cmake: Find aravis library with pkg-config if available
       # https://github.com/FraunhoferIOSB/camera_aravis2/pull/63
       (self.fetchpatch2 {
-        url = "https://github.com/FraunhoferIOSB/camera_aravis2/commit/fb2460536f51841452ff31458da428fa5c8e5804.patch";
-        hash = "sha256-1jkrN+u+IKbZROUP0d2Toe51U1v1jgqQZPZmUEOk4CQ=";
+        url = "https://github.com/FraunhoferIOSB/camera_aravis2/commit/fb2460536f51841452ff31458da428fa5c8e5804.patch?full_index=1";
+        hash = "sha256-6Jd6ul8Kr1QyllLrrU2p6DIon5ri/JqPrr1A6ZlwUA0=";
         stripLen = 1;
       })
     ];
@@ -65,9 +65,9 @@ in {
     patches = [
       # Fix paths in pkg-config file
       # https://github.com/eclipse-cyclonedds/cyclonedds/pull/1453
-      (self.fetchpatch {
-        url = "https://github.com/eclipse-cyclonedds/cyclonedds/commit/3ff967e32b8078d497a8b9c70735849c04eaebf6.patch";
-        hash = "sha256-F5zofoO0YbYfqLrb6s30un9k9+R8rQazLHw+uND1UxE=";
+      (self.fetchpatch2 {
+        url = "https://github.com/eclipse-cyclonedds/cyclonedds/commit/3ff967e32b8078d497a8b9c70735849c04eaebf6.patch?full_index=1";
+        hash = "sha256-j1NXVjtVfN+eIBK8S7Kx/70gJrkrirFi83ZFXBuHZfA=";
       })
     ];
   });
@@ -79,8 +79,8 @@ in {
       # Don't use rosbag2_cpp/typesupport_helpers.hpp for Jazzy and later
       # https://github.com/ros2/domain_bridge/pull/89
       (self.fetchpatch2 {
-        url = "https://github.com/ros2/domain_bridge/commit/4abe8a63ba82c816ccb46ec67bc89b05ff842604.patch";
-        hash = "sha256-R+v5SC/yKMsIPuuXVDrrJ/G6DfKHjUr/58dVBFiz+U4=";
+        url = "https://github.com/ros2/domain_bridge/commit/4abe8a63ba82c816ccb46ec67bc89b05ff842604.patch?full_index=1";
+        hash = "sha256-GVMGWs8e/sT3awBtyQWAzEkPiLJ05ot1+PSVEhj4hZk=";
       })
     ];
   });
@@ -102,8 +102,8 @@ in {
       # Remove unused include of rosbag2_cpp/typesupport_helpers.hpp
       # https://github.com/ros-event-camera/event_image_reconstruction_fibar/pull/6
       (self.fetchpatch2 {
-        url = "https://github.com/ros-event-camera/event_image_reconstruction_fibar/commit/7f296ace2dcde06a6384425af3f4e8e7ad8eacd4.patch";
-        hash = "sha256-oXciDL2uVR7RU2Sshfn6led/fsl8iz8DTy89yiYVvNQ=";
+        url = "https://github.com/ros-event-camera/event_image_reconstruction_fibar/commit/7f296ace2dcde06a6384425af3f4e8e7ad8eacd4.patch?full_index=1";
+        hash = "sha256-GPd19YyZP8PkpcK89alg0oPWat/eRCYep+75IiQxHl0=";
       })
     ];
   });
@@ -128,8 +128,8 @@ in {
       # Don't fail with boost >= 1.86
       # https://github.com/locusrobotics/fuse/pull/423
       (self.fetchpatch2 {
-        url = "https://github.com/wentasah/fuse/commit/037b417d9db394b3d5154a800283c30d0ae30cee.patch";
-        hash = "sha256-j3ezP0QYP55mhj+F60Yv0Mv8M8Nu/AHmMoPn1lmI4Bg=";
+        url = "https://github.com/wentasah/fuse/commit/037b417d9db394b3d5154a800283c30d0ae30cee.patch?full_index=1";
+        hash = "sha256-ShWKk5H/6eaViWfAOL0T+ynCps2FgsPWtAZDoUjvR50=";
         stripLen = 1;
       })
     ];
@@ -207,13 +207,13 @@ in {
     patchesFor.gz_common_vendor = [
       (self.fetchpatch2 {
         # Replace FreeImage dependency with stb (gazebosim#725 updated for Jazzy)
-        url = "https://github.com/wentasah/gz-common/commit/9fbe891b3a8f30ff11e8367b1aecea5b0ef7521e.patch";
-        hash = "sha256-TqGMvFLR81P3AJm+GK/Ot1i+EDGGE/E0HqLtpcKDZt4=";
+        url = "https://github.com/wentasah/gz-common/commit/9fbe891b3a8f30ff11e8367b1aecea5b0ef7521e.patch?full_index=1";
+        hash = "sha256-akHFbLY9RsYITWrw0/hTxDwXM1r5f9GqDLRAYHnhIf0=";
       })
       (self.fetchpatch2 {
         # Added missing includes (#672)
-        url = "https://github.com/gazebosim/gz-common/commit/8f235cb2cb7ae9c2251c8ef155a2980ba4f0e764.patch";
-        hash = "sha256-0R0T/HTJzA6rx10psBz2+YycUnIDn2FaetinkprCQOE=";
+        url = "https://github.com/gazebosim/gz-common/commit/8f235cb2cb7ae9c2251c8ef155a2980ba4f0e764.patch?full_index=1";
+        hash = "sha256-B95SFeGraKR7/2SxmAlP4U4UDGe/ZpbhkftjoRJyi8M=";
       })
     ];
   }).overrideAttrs ({
@@ -231,8 +231,8 @@ in {
     patchesFor.gz_gui_vendor = [
       # Fix compatibility with protobuf v30 (cpp 6.30.0)
       (self.fetchpatch2 {
-        url = "https://github.com/gazebosim/gz-gui/commit/8db77b5d0bdc4e87dbc17383d4e15dd8e95a2ccc.patch";
-        hash = "sha256-5Pb3dPAcJJ8Esd5wmD0vhfJjfTQeZpBk9yMDbF1QLZc=";
+        url = "https://github.com/gazebosim/gz-gui/commit/8db77b5d0bdc4e87dbc17383d4e15dd8e95a2ccc.patch?full_index=1";
+        hash = "sha256-MId7fumD01PSsAUtRw1sydLNQJLxakiPDcSwale8K20=";
       })
     ];
   }).overrideAttrs ({
@@ -249,8 +249,8 @@ in {
     patchesFor.gz_launch_vendor = [
       # Fix compatibility with protobuf v30 (cpp 6.30.0)
       (self.fetchpatch2 {
-        url = "https://github.com/gazebosim/gz-launch/commit/246d180753c758445b7f1c11b3ae3b1840a65ae4.patch";
-        hash = "sha256-ySv5YF9LacOW2owxoW9CvLYQ9LklYlD4LM39OqpgApQ=";
+        url = "https://github.com/gazebosim/gz-launch/commit/246d180753c758445b7f1c11b3ae3b1840a65ae4.patch?full_index=1";
+        hash = "sha256-7qrOotQjRtHMo6rn5Qqcyr4keYq25Z9TXe3yFQcnIBA=";
       })
     ];
   };
@@ -261,8 +261,8 @@ in {
     patchesFor.gz_msgs_vendor = [
       # Fix compatibility with protobuf v30 (cpp 6.30.0)
       (self.fetchpatch2 {
-        url = "https://github.com/gazebosim/gz-msgs/commit/ebdd05f6d51c990876085bcc9db9f79df59d375a.patch";
-        hash = "sha256-EkonVJ7Q3XJvXnqkhYWxNrknnEOFpNvjwcnyc1bQHDE=";
+        url = "https://github.com/gazebosim/gz-msgs/commit/ebdd05f6d51c990876085bcc9db9f79df59d375a.patch?full_index=1";
+        hash = "sha256-0uscwyYZafHfzooxcrrhtcfcxknpDTEcZ6Ie0WWySVw=";
       })
     ];
   };
@@ -275,8 +275,8 @@ in {
     patchesFor.gz_rendering_vendor = [
       (self.fetchpatch2 {
         # Added missing includes (#1128)
-        url = "https://github.com/gazebosim/gz-rendering/commit/b7973e14778baba95c94798b15391183d9261c16.patch";
-        hash = "sha256-MWw/jw+MzA4E9q3n5Kyc6ipiGUmrZEyx/QhB/oMkeKI=";
+        url = "https://github.com/gazebosim/gz-rendering/commit/b7973e14778baba95c94798b15391183d9261c16.patch?full_index=1";
+        hash = "sha256-oO5awcuPZ4PqDyo08zxq3mKQxJ4Y4MnywRbs7ZNk0KM=";
       })
     ];
   };
@@ -319,9 +319,9 @@ in {
     patches ? [], ...
   }: {
     patches = patches ++ [
-      (self.fetchpatch {
-        url = "https://github.com/eclipse-iceoryx/iceoryx/commit/acc1e979a2d5ca30737efb077b00b42f1c4a8429.patch";
-        hash = "sha256-npFHdb0a3JBA8T6vke54DA08C93aNc/7c6xrfMBo7zI=";
+      (self.fetchpatch2 {
+        url = "https://github.com/eclipse-iceoryx/iceoryx/commit/acc1e979a2d5ca30737efb077b00b42f1c4a8429.patch?full_index=1";
+        hash = "sha256-M2ItntTMGqH6YkUNMEF0opJobyqgbZq62vBkyWxxol0=";
         stripLen = 1;
       })
     ];
@@ -333,8 +333,8 @@ in {
     patches = patches ++ [
       # fix for asio 1.36: https://github.com/ros-drivers/transport_drivers/pull/113
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/transport_drivers/commit/7be52848f624c82ea720416360d7a754fff65c33.patch";
-        hash = "sha256-frE2449PirPJMnln/mGW87JHXCJfb2wo+SBDunTPanc=";
+        url = "https://github.com/nim65s/transport_drivers/commit/7be52848f624c82ea720416360d7a754fff65c33.patch?full_index=1";
+        hash = "sha256-IYQTlSnJjUvnOp0RbN+1P7C/RclAjouyzmBT9LJpyN4=";
         stripLen = 1;
       })
     ];
@@ -382,9 +382,9 @@ in {
   }: {
     patches = patches ++ [
       # Fix failing build due to deprecated boost::filesystem functions
-      (self.fetchpatch {
-        url = "https://github.com/norlab-ulaval/libpointmatcher/commit/74435b8f434ffd36aab1c7f309facbe2911403df.patch";
-        hash = "sha256-/JaEmFbJrthEpyC4sAHfdn43eHbcSZD78nqgy++OSGM=";
+      (self.fetchpatch2 {
+        url = "https://github.com/norlab-ulaval/libpointmatcher/commit/74435b8f434ffd36aab1c7f309facbe2911403df.patch?full_index=1";
+        hash = "sha256-U0I5UuJoNtKzNSKriWaiGHr79Y9QWe3Pf1y77YJvaK8=";
       })
     ];
   });
@@ -450,8 +450,8 @@ in {
     patches = patches ++ [
       # Add missing #include <fmt/ranges.h>
       (self.fetchpatch2 {
-        url = "https://github.com/moveit/moveit2/commit/b3c23c989ff45c66ec692a71535330b42be09879.patch";
-        hash = "sha256-1rVN6kgBNHGG2EH1XCw49PPY1JzPud06l3LZAzp2XNU=";
+        url = "https://github.com/moveit/moveit2/commit/b3c23c989ff45c66ec692a71535330b42be09879.patch?full_index=1";
+        hash = "sha256-lETKOTjyioqajQ5d5KEPMUUmdJ60l5fQBCz1sWEuTr8=";
         includes = [ "src/urdf_config.cpp" ];
         stripLen = 2;
       })
@@ -529,9 +529,9 @@ in {
     patches ? [], ...
   }: {
     patches = patches ++ [
-      (self.fetchpatch {
-        url = "https://github.com/ros-navigation/navigation2/commit/e6f500e5b7528737f4a883598293b62c72c83946.patch";
-        hash = "sha256-XFQjW9eb/CVF+wDgNTG+wyXoz1Hwa3qEU/cIXRcBY6Y=";
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-navigation/navigation2/commit/e6f500e5b7528737f4a883598293b62c72c83946.patch?full_index=1";
+        hash = "sha256-cAlbj3YaiRGv9KaDKyJcxgDu8DeWeXNqFOJMRBIvcJo=";
         stripLen = 1;
       })
     ];
@@ -551,8 +551,8 @@ in {
     patches = patches ++ [
       # fix for asio 1.36, ref. https://github.com/bosch-engineering/off_highway_sensor_drivers/pull/33
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/off_highway_sensor_drivers/commit/61c88d4c1c844e2eb24eab30ea23cdd2dfd066b5.patch";
-        hash = "sha256-3Dx5Mg1HwSqi8wFQDmXxBHLovCzjdLacjKO7b1bCIKA=";
+        url = "https://github.com/nim65s/off_highway_sensor_drivers/commit/61c88d4c1c844e2eb24eab30ea23cdd2dfd066b5.patch?full_index=1";
+        hash = "sha256-vGdu9MfPQrxg71tPxyFD2MKt0c92agQMGn04amwWY7Y=";
         stripLen = 1;
       })
     ];
@@ -564,8 +564,8 @@ in {
     patches = patches ++ [
       # fix for asio 1.36, ref. https://github.com/bosch-engineering/off_highway_sensor_drivers/pull/33
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/off_highway_sensor_drivers/commit/c2e2fba65f812284790687a0c4f9c5982bd6fd14.patch";
-        hash = "sha256-83SK6kU8HmQgpCXJKbYKb2FTzL6AVbKbKeyRRO9+22w=";
+        url = "https://github.com/nim65s/off_highway_sensor_drivers/commit/c2e2fba65f812284790687a0c4f9c5982bd6fd14.patch?full_index=1";
+        hash = "sha256-sevjNaBo/nnRCB/Pfa33l0mvjs3W8bmVMaqhyyQrYJU=";
         stripLen = 1;
       })
     ];
@@ -589,19 +589,19 @@ in {
     patches = patches ++ [
       # add formatting consistent with plotjuggler App
       (self.fetchpatch2 {
-        url = "https://github.com/PlotJuggler/plotjuggler-ros-plugins/commit/3b9e06ce35b33792f738afc22397e8aecb9ad691.patch";
-        hash = "sha256-EEiDwji9Y8tAs0adKEgxsae6h9Qy23RzTAeRBHEQB7k=";
+        url = "https://github.com/PlotJuggler/plotjuggler-ros-plugins/commit/3b9e06ce35b33792f738afc22397e8aecb9ad691.patch?full_index=1";
+        hash = "sha256-yBuHzNwI72BgH/TjVqFooL5neFFzNguh5IgeB4DYCYQ=";
       })
       # new formatting rules
       (self.fetchpatch2 {
-        url = "https://github.com/PlotJuggler/plotjuggler-ros-plugins/commit/d3575cbd2ba583f0d3c73973979154bfbba87dad.patch";
-        hash = "sha256-i1k3KpA1bubXlTlQgDyyBVol7ErDic/LUYIxt1wo+0E=";
+        url = "https://github.com/PlotJuggler/plotjuggler-ros-plugins/commit/d3575cbd2ba583f0d3c73973979154bfbba87dad.patch?full_index=1";
+        hash = "sha256-NXS+tYoHKjKG3jLEmsALfncuw52ERtZLkx0vA6UUCls=";
       })
       # Replace rosbag2_cpp typesupport helpers with rclcpp typesupport helpers
       # https://github.com/PlotJuggler/plotjuggler-ros-plugins/pull/105
       (self.fetchpatch2 {
-        url = "https://github.com/PlotJuggler/plotjuggler-ros-plugins/commit/82b9d41908bc8258d16ba33736bd295b54d8654b.patch";
-        hash = "sha256-+haJAdjD3NYCKpkw+mW+kx0CskxknPoY0xx24vNaqV0=";
+        url = "https://github.com/PlotJuggler/plotjuggler-ros-plugins/commit/82b9d41908bc8258d16ba33736bd295b54d8654b.patch?full_index=1";
+        hash = "sha256-oMHQTaGyFSRQi84jaCOyOi89cWdZ9lUJyaJ1umoLTRQ=";
       })
     ];
   });
@@ -616,8 +616,8 @@ in {
     patches = patches ++ [
       # cmake: fix missing includes, ref. https://github.com/fmrico/popf/pull/12
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/popf/commit/e8ba226f67e0513689d0efc84e9b4e8b55394bd4.patch";
-        hash = "sha256-Sw/rY4MsmoWIpC9VQzimM18mlvdGwb8Q6EmwY2rg0pw=";
+        url = "https://github.com/nim65s/popf/commit/e8ba226f67e0513689d0efc84e9b4e8b55394bd4.patch?full_index=1";
+        hash = "sha256-fHorf5CyGDIbx3WLb4XOfGVSXhOXjtBq9iVNLywCDQQ=";
       })
     ];
   });
@@ -666,8 +666,8 @@ in {
     patches = patches ++ [
       # fix for GCC 15, ref. https://github.com/open-rmf/rmf_task/pull/133
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/rmf_task/commit/8aaacbe009022540cce1cd3ff3282413cf08a42c.patch";
-        hash = "sha256-9nXoYlfw6yuXP2TFelWl1/T6ho3G49n5vRoxC5qxQCA=";
+        url = "https://github.com/nim65s/rmf_task/commit/8aaacbe009022540cce1cd3ff3282413cf08a42c.patch?full_index=1";
+        hash = "sha256-xpn2yWMRyXUPTf0OdCjGGkKcNLHO6jAnWz4NeXInI2I=";
         stripLen = 1;
       })
     ];
@@ -679,8 +679,8 @@ in {
     patches = [
       # https://github.com/open-rmf/rmf_traffic/pull/131
       (self.fetchpatch2 {
-        url = "https://github.com/open-rmf/rmf_traffic/commit/c20b8d71507880387185666c78d105557e5003a9.patch";
-        hash = "sha256-4Elg7oF6OQHd2trn3e+r73hghW9Qf90PrGjID7RsdEI=";
+        url = "https://github.com/open-rmf/rmf_traffic/commit/c20b8d71507880387185666c78d105557e5003a9.patch?full_index=1";
+        hash = "sha256-2f2jT9Be5f/Bzh5sLxXwmdD+fwtvdoDuBrejlns1GWg=";
         stripLen = 1;
       })
     ];
@@ -728,8 +728,8 @@ in {
     patches = patches ++ [
       # fix for gcc15, ref https://github.com/SICKAG/sick_scan_xd/pull/557
       (self.fetchpatch2 {
-        url = "https://github.com/SICKAG/sick_scan_xd/commit/f5ac360b4cfb319c981b022a9b817a5e86639d5c.patch";
-        hash = "sha256-zh3UDjy6k7LI3YOYr9F9jt8+4pkdgeOpUUqHcqme6Bs=";
+        url = "https://github.com/SICKAG/sick_scan_xd/commit/f5ac360b4cfb319c981b022a9b817a5e86639d5c.patch?full_index=1";
+        hash = "sha256-UJQZO0cStf7b3890BBrpHBxzgWnJXPOxmW6SKsuAsWw=";
       })
     ];
   });
@@ -760,8 +760,8 @@ in {
     patches = patches ++ [
       # Fix for asio 1.36, ref https://github.com/KumarRobotics/ublox/pull/273
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/ublox/commit/da37a9628db91aaafbcbe8b247c28c0d5863159f.patch";
-        hash = "sha256-m7lsEHF/uS47zYrNBd5RSL62CmvmNcKXQiLM24R6LZA=";
+        url = "https://github.com/nim65s/ublox/commit/da37a9628db91aaafbcbe8b247c28c0d5863159f.patch?full_index=1";
+        hash = "sha256-S1h+tw9juDe10I/oITnTYkGFtybI7sMEO7BftKhHo1I=";
         stripLen = 1;
       })
     ];
@@ -773,8 +773,8 @@ in {
     # fix for asio 1.36: https://github.com/ros-drivers/transport_drivers/pull/114
     patches = patches ++ [
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/transport_drivers/commit/6a5a003a07850afda9681843978f1c5f46d04000.patch";
-        hash = "sha256-0j3Ps2RbkWcv9K+I6KW0fn2/4Nhsw8TIOoZAhAVixMk=";
+        url = "https://github.com/nim65s/transport_drivers/commit/6a5a003a07850afda9681843978f1c5f46d04000.patch?full_index=1";
+        hash = "sha256-rOBbfYxqdrA0hQsl+dFKhyuEsLNXHIF1fj54sSf0FQY=";
         stripLen = 1;
       })
     ];
@@ -786,9 +786,9 @@ in {
     patches = patches ++ [
       # Fix CMake relative install dir assumptions
       # https://github.com/ros/urdfdom/pull/142
-      (self.fetchpatch {
-        url = "https://github.com/ros/urdfdom/commit/61a7e35cd5abece97259e76aed8504052b2f5b53.patch";
-        hash = "sha256-b3bEbbaSUDkwTEHJ8gVPEb+AR/zuWwLqiAW5g1T1dPU=";
+      (self.fetchpatch2 {
+        url = "https://github.com/ros/urdfdom/commit/61a7e35cd5abece97259e76aed8504052b2f5b53.patch?full_index=1";
+        hash = "sha256-VaAjqVAytynFy03qpHfTvqPPcI3jKmd2HGoAQp2CBYQ=";
       })
     ];
   });
@@ -799,9 +799,9 @@ in {
     patches = patches ++ [
       # Fix CMake relative install dir assumptions
       # https://github.com/ros/urdfdom_headers/pull/66
-      (self.fetchpatch {
-        url = "https://github.com/ros/urdfdom_headers/commit/fa89f2d4744839827f41579004537c966a097681.patch";
-        hash = "sha256-w6PPKCpbR4dGsudVEz+SO9ylXVayLPRAl3VvpMt4DHo=";
+      (self.fetchpatch2 {
+        url = "https://github.com/ros/urdfdom_headers/commit/fa89f2d4744839827f41579004537c966a097681.patch?full_index=1";
+        hash = "sha256-rwAlK2aeu4YYZ6B3K14l4FOt1A90vkblIv1k0zPtaSY=";
       })
     ];
   });
@@ -811,14 +811,14 @@ in {
   }: {
     patches = patches ++ [
       # Remove undocumented pix_fmt (AV_PIX_FMT_XVMC) breaking the build
-      (self.fetchpatch {
-        url = "https://github.com/ros-drivers/usb_cam/commit/1d1970b1a88fb1be3b961073748879900d2b1a70.patch";
-        hash = "sha256-0iWl2DtqdjkyFy7lKa7aLxXjynm4ggNEQLxB45Mqf/Y=";
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-drivers/usb_cam/commit/1d1970b1a88fb1be3b961073748879900d2b1a70.patch?full_index=1";
+        hash = "sha256-W1ihgS2dHQT1SN2GyVkUdiId82ys6A1a2hwuk26ZXXk=";
       })
       # Remove avcodec_close() removed in FFmpeg 8.0 (avcodec_free_context suffices)
-      (self.fetchpatch {
-        url = "https://github.com/ros-drivers/usb_cam/commit/41805f7eb50f31e16839bb302df1bb5c6f30cb50.patch";
-        hash = "sha256-UXjqIHCkplBo5MWmH+ZlcRyy0IJgr8Qdld9QMq03SPI=";
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-drivers/usb_cam/commit/41805f7eb50f31e16839bb302df1bb5c6f30cb50.patch?full_index=1";
+        hash = "sha256-JVoZgReNfYsh30qMFbIM25AALyq1KTdEGh63u1/B2e4=";
       })
     ];
   });

@@ -94,8 +94,8 @@ in with lib; {
     patches = patches ++ [
       (self.fetchpatch2 {
         # https://github.com/autowarefoundation/autoware_core/pull/1000
-        url = "https://github.com/nim65s/autoware_core/commit/6839e4e99db8b0110d5d45c118a0f681b1734de2.patch";
-        hash = "sha256-qwPpMn/Jz2QgGG8C9JUAYKp3NXy43b9ZQD6+q8n51ks=";
+        url = "https://github.com/nim65s/autoware_core/commit/6839e4e99db8b0110d5d45c118a0f681b1734de2.patch?full_index=1";
+        hash = "sha256-WncxH5T8EtSA8N2eTw+qMQkMu30beGGltnntv4twTWc=";
         stripLen = 2;
       })
     ];
@@ -178,8 +178,8 @@ in with lib; {
     patches = [
       # Fix compile errors with Boost >= 1.87
       (self.fetchpatch2 {
-        url = "https://github.com/fkie/async_web_server_cpp/pull/8/commits/0aa036c4c3908ef0d9ac85bf623a15906bccaefd.patch";
-        hash = "sha256-GXUYxWmNq2W7DCetmgHGD5/MFBWgDYFNIdUThwj8vt8=";
+        url = "https://github.com/fkie/async_web_server_cpp/pull/8/commits/0aa036c4c3908ef0d9ac85bf623a15906bccaefd.patch?full_index=1";
+        hash = "sha256-uZym/R8c4e/Ypo8xGQwGdasuFixjbddX9hzQeNqXIDc=";
       })
     ];
   });
@@ -202,9 +202,9 @@ in with lib; {
     patches = [
       # Fix paths in pkg-config file
       # https://github.com/eclipse-cyclonedds/cyclonedds/pull/1453
-      (self.fetchpatch {
-        url = "https://github.com/eclipse-cyclonedds/cyclonedds/commit/3ff967e32b8078d497a8b9c70735849c04eaebf6.patch";
-        hash = "sha256-F5zofoO0YbYfqLrb6s30un9k9+R8rQazLHw+uND1UxE=";
+      (self.fetchpatch2 {
+        url = "https://github.com/eclipse-cyclonedds/cyclonedds/commit/3ff967e32b8078d497a8b9c70735849c04eaebf6.patch?full_index=1";
+        hash = "sha256-j1NXVjtVfN+eIBK8S7Kx/70gJrkrirFi83ZFXBuHZfA=";
       })
     ];
   });
@@ -373,9 +373,9 @@ in with lib; {
     patches ? [], ...
   }: {
     patches = patches ++ [
-      (self.fetchpatch {
-        url = "https://github.com/eclipse-iceoryx/iceoryx/commit/acc1e979a2d5ca30737efb077b00b42f1c4a8429.patch";
-        hash = "sha256-npFHdb0a3JBA8T6vke54DA08C93aNc/7c6xrfMBo7zI=";
+      (self.fetchpatch2 {
+        url = "https://github.com/eclipse-iceoryx/iceoryx/commit/acc1e979a2d5ca30737efb077b00b42f1c4a8429.patch?full_index=1";
+        hash = "sha256-M2ItntTMGqH6YkUNMEF0opJobyqgbZq62vBkyWxxol0=";
         stripLen = 1;
       })
     ];
@@ -387,8 +387,8 @@ in with lib; {
     patches = patches ++ [
       # fix for asio 1.36: https://github.com/ros-drivers/transport_drivers/pull/113
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/transport_drivers/commit/7be52848f624c82ea720416360d7a754fff65c33.patch";
-        hash = "sha256-frE2449PirPJMnln/mGW87JHXCJfb2wo+SBDunTPanc=";
+        url = "https://github.com/nim65s/transport_drivers/commit/7be52848f624c82ea720416360d7a754fff65c33.patch?full_index=1";
+        hash = "sha256-IYQTlSnJjUvnOp0RbN+1P7C/RclAjouyzmBT9LJpyN4=";
         stripLen = 1;
       })
     ];
@@ -409,8 +409,8 @@ in with lib; {
   }: {
     # https://github.com/AutonicsLiDAR/lsc_ros2_driver/pull/3
     patches = patches ++ [(self.fetchpatch2 {
-      url = "https://github.com/nim65s/lsc_ros2_driver/commit/6c2c5cf64fea0099358e610a7fff40db7c0922be.patch";
-      hash = "sha256-Xwlhjg1wjIiH1H3Roh0iV6HYLmWyGye/6CdvuSVWdSc=";
+      url = "https://github.com/nim65s/lsc_ros2_driver/commit/6c2c5cf64fea0099358e610a7fff40db7c0922be.patch?full_index=1";
+      hash = "sha256-sCgXA4aZ6mTJmkTv41c8PjwsaiDC1/tlwyZJ6Cg5kEo=";
     })];
   });
 
@@ -439,9 +439,9 @@ in with lib; {
   }: {
     patches = patches ++ [
       # Fix build with Python 3.12
-      (self.fetchpatch {
-        url = "https://github.com/openembedded/meta-openembedded/raw/7d8115d5507bac6c018fbff8a7aa9bc513c2bc46/meta-multimedia/recipes-multimedia/libcamera/libcamera/0001-mojom-Drop-using-imp-module.patch";
-        hash = "sha256-Q5tPOfbwO28Lg+bP/IINykTZC2ZL1jeWf6TGP7ZUAE8=";
+      (self.fetchpatch2 {
+        url = "https://github.com/openembedded/meta-openembedded/raw/7d8115d5507bac6c018fbff8a7aa9bc513c2bc46/meta-multimedia/recipes-multimedia/libcamera/libcamera/0001-mojom-Drop-using-imp-module.patch?full_index=1";
+        hash = "sha256-EJqS8x17XI/s250G+H2Qz2sUEuSH9gKxYkFRoKV20iY=";
       })
     ];
     postPatch = postPatch + ''
@@ -584,8 +584,8 @@ in with lib; {
     # ref. https://github.com/moveit/moveit_task_constructor/pull/712
     patches = patches ++ [
       (self.fetchpatch2 {
-        url = "https://github.com/moveit/moveit_task_constructor/commit/ed99e6b8656867cbdfd52ca4e9e85c743e59edf1.patch";
-        hash = "sha256-WxTkG5bnpA+fDQ7EJufxxAQJ/UvN2uehPAPROezCCiQ=";
+        url = "https://github.com/moveit/moveit_task_constructor/commit/ed99e6b8656867cbdfd52ca4e9e85c743e59edf1.patch?full_index=1";
+        hash = "sha256-Iz2nkUzhrNxJCJfObgm90OZXnvR8R0xHmKhsAoiElQw=";
         stripLen = 1;
       })
     ];
@@ -597,8 +597,8 @@ in with lib; {
     patches = patches ++ [
       # ref. https://github.com/ika-rwth-aachen/mqtt_client/pull/93
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/mqtt_client/commit/fbbaf1ab684689019edc930c1528b33ec2319d8f.patch";
-        hash = "sha256-ESKIlHaESNxIZtAPpOcCpmClLiu8hydYEfBC8wwyoZI=";
+        url = "https://github.com/nim65s/mqtt_client/commit/fbbaf1ab684689019edc930c1528b33ec2319d8f.patch?full_index=1";
+        hash = "sha256-rNj5n1WkfRtkthzyjW4YI1+Z7U92Pu64lx1eNKgBrd0=";
         stripLen = 1;
       })
     ];
@@ -611,12 +611,12 @@ in with lib; {
     # ref. https://github.com/KIT-MRT/mrt_cmake_modules/pull/40
     patches = patches ++ [
       (self.fetchpatch2 {
-        url = "https://github.com/KIT-MRT/mrt_cmake_modules/commit/e0b17b017affcf715514c9895008dfff654c2873.patch";
-        hash = "sha256-2UmmwV0OYWTYdOAQdrAlk5zmVGQn0LOVYh+IGONxrW4=";
+        url = "https://github.com/KIT-MRT/mrt_cmake_modules/commit/e0b17b017affcf715514c9895008dfff654c2873.patch?full_index=1";
+        hash = "sha256-zy6TVF5P4r+g8kqbF53oqotom0Avpztp67whZ4DzF00=";
       })
       (self.fetchpatch2 {
-        url = "https://github.com/KIT-MRT/mrt_cmake_modules/commit/56bb3808fd7883c1afb216bb9b974fb4d6f16ed0.patch";
-        hash = "sha256-p/TMEttj8dIdKAXvvw4P4BTyQKMKwz++CuyGAYdVqJ8=";
+        url = "https://github.com/KIT-MRT/mrt_cmake_modules/commit/56bb3808fd7883c1afb216bb9b974fb4d6f16ed0.patch?full_index=1";
+        hash = "sha256-6BclHo/NEXPSnjjZ1TNF1cPdDCy3t4tjSP5oAgDQS50=";
       })
     ];
   });
@@ -701,9 +701,9 @@ in with lib; {
   }: {
     patches = patches ++ [
       # fix errors with recent compilers and C++17/20 standard
-      (self.fetchpatch {
-        url = "https://github.com/OctoMap/octomap/commit/8178b4f28c72a8c7b84ece25bda7a59df8d14eb8.patch";
-        hash = "sha256-vI3FEWJbAnDPNxG6s2pPX1UTorpokexOawY0AmDo8xY=";
+      (self.fetchpatch2 {
+        url = "https://github.com/OctoMap/octomap/commit/8178b4f28c72a8c7b84ece25bda7a59df8d14eb8.patch?full_index=1";
+        hash = "sha256-BT6WeDyKntIkx2+Z4WfW//+MhDWLs+47kubeDvQ8BFI=";
         # cmdinclude/octomap/OcTreeBase.h:46:21: error: template-id not allowed for constructor in C++20 [-Werror=template-id-cdtor]
         includes = [ "include/octomap/OcTreeBase.h*" ];
         stripLen = 1;
@@ -730,8 +730,8 @@ in with lib; {
     patches = patches ++ [
       # fix for asio 1.36, ref. https://github.com/bosch-engineering/off_highway_sensor_drivers/pull/33
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/off_highway_sensor_drivers/commit/61c88d4c1c844e2eb24eab30ea23cdd2dfd066b5.patch";
-        hash = "sha256-3Dx5Mg1HwSqi8wFQDmXxBHLovCzjdLacjKO7b1bCIKA=";
+        url = "https://github.com/nim65s/off_highway_sensor_drivers/commit/61c88d4c1c844e2eb24eab30ea23cdd2dfd066b5.patch?full_index=1";
+        hash = "sha256-vGdu9MfPQrxg71tPxyFD2MKt0c92agQMGn04amwWY7Y=";
         stripLen = 1;
       })
     ];
@@ -743,8 +743,8 @@ in with lib; {
     patches = patches ++ [
       # fix for asio 1.36, ref. https://github.com/bosch-engineering/off_highway_sensor_drivers/pull/33
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/off_highway_sensor_drivers/commit/c2e2fba65f812284790687a0c4f9c5982bd6fd14.patch";
-        hash = "sha256-83SK6kU8HmQgpCXJKbYKb2FTzL6AVbKbKeyRRO9+22w=";
+        url = "https://github.com/nim65s/off_highway_sensor_drivers/commit/c2e2fba65f812284790687a0c4f9c5982bd6fd14.patch?full_index=1";
+        hash = "sha256-sevjNaBo/nnRCB/Pfa33l0mvjs3W8bmVMaqhyyQrYJU=";
         stripLen = 1;
       })
     ];
@@ -804,13 +804,13 @@ in with lib; {
     patches = patches ++ [
       # cmake: Fix link problem, merged upstream
       (self.fetchpatch2 {
-        url = "https://github.com/fmrico/popf/commit/8eabc3b0c6e4f6e718f4ac3564230dccfcfee46b.patch";
-        hash = "sha256-4inVYUHGiDd677wicbRlMoBtZ5HJbJ61xSFQpBrtU7c=";
+        url = "https://github.com/fmrico/popf/commit/8eabc3b0c6e4f6e718f4ac3564230dccfcfee46b.patch?full_index=1";
+        hash = "sha256-xyjHkPnRRUdLAbgRYE2OmCB3+rzeM12Y+HxWz5SsxiA=";
       })
       # cmake: fix missing includes, ref. https://github.com/fmrico/popf/pull/12
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/popf/commit/e8ba226f67e0513689d0efc84e9b4e8b55394bd4.patch";
-        hash = "sha256-Sw/rY4MsmoWIpC9VQzimM18mlvdGwb8Q6EmwY2rg0pw=";
+        url = "https://github.com/nim65s/popf/commit/e8ba226f67e0513689d0efc84e9b4e8b55394bd4.patch?full_index=1";
+        hash = "sha256-fHorf5CyGDIbx3WLb4XOfGVSXhOXjtBq9iVNLywCDQQ=";
       })
     ];
   });
@@ -819,13 +819,13 @@ in with lib; {
     patches ? [], ...
   }: {
     patches = patches ++ [
-      (self.fetchpatch {
-        url = "https://github.com/ros-visualization/python_qt_binding/commit/e78372fd63eda527c9fad5fcdab8ca31eb3f36d2.patch";
-        hash = "sha256-8+58ggPUJmEQIS9C4RzT4PhK1pT9ms98nppn3ZA8AEo=";
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-visualization/python_qt_binding/commit/e78372fd63eda527c9fad5fcdab8ca31eb3f36d2.patch?full_index=1";
+        hash = "sha256-8injdFw4qKue+8JvT1kCrZHfxFYudXYlcQccVpropXM=";
       })
-      (self.fetchpatch {
-        url = "https://github.com/ros-visualization/python_qt_binding/commit/ee4d43bcdb0c5c5d40f81dea3de6185298ab34a7.patch";
-        hash = "sha256-+n7wqQ9jDybwxVeUEjOQSQJh7nnU8JXv5DNCoK/5Sm4=";
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-visualization/python_qt_binding/commit/ee4d43bcdb0c5c5d40f81dea3de6185298ab34a7.patch?full_index=1";
+        hash = "sha256-LgzWQ4Kvn25OAgaSIvCobLRzqCNzuDT/mZAXjyoXqTE=";
       })
     ];
   });
@@ -853,8 +853,8 @@ in with lib; {
     patches = patches ++ [
       # fix for GCC 15, ref. https://github.com/open-rmf/rmf_task/pull/133
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/rmf_task/commit/8aaacbe009022540cce1cd3ff3282413cf08a42c.patch";
-        hash = "sha256-9nXoYlfw6yuXP2TFelWl1/T6ho3G49n5vRoxC5qxQCA=";
+        url = "https://github.com/nim65s/rmf_task/commit/8aaacbe009022540cce1cd3ff3282413cf08a42c.patch?full_index=1";
+        hash = "sha256-xpn2yWMRyXUPTf0OdCjGGkKcNLHO6jAnWz4NeXInI2I=";
         stripLen = 1;
       })
     ];
@@ -866,8 +866,8 @@ in with lib; {
     patches = [
       # https://github.com/open-rmf/rmf_traffic/pull/131
       (self.fetchpatch2 {
-        url = "https://github.com/open-rmf/rmf_traffic/commit/c20b8d71507880387185666c78d105557e5003a9.patch";
-        hash = "sha256-4Elg7oF6OQHd2trn3e+r73hghW9Qf90PrGjID7RsdEI=";
+        url = "https://github.com/open-rmf/rmf_traffic/commit/c20b8d71507880387185666c78d105557e5003a9.patch?full_index=1";
+        hash = "sha256-2f2jT9Be5f/Bzh5sLxXwmdD+fwtvdoDuBrejlns1GWg=";
         stripLen = 1;
       })
     ];
@@ -880,8 +880,8 @@ in with lib; {
     patches = patches ++ [
       # fix for asio 1.36, ref. https://github.com/robotont/robotont_driver/pull/22
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/robotont_driver/commit/16910c7d40c5300829d0dc113189f8a0312e8638.patch";
-        hash = "sha256-M5ZcQexVU3N7zPZiybEFIP398BmWB5vpBm4kfJlq2jc=";
+        url = "https://github.com/nim65s/robotont_driver/commit/16910c7d40c5300829d0dc113189f8a0312e8638.patch?full_index=1";
+        hash = "sha256-J53fq0E3dJadXqPhQoGarquwSCISW0AQLLvxlrTigTI=";
       })
     ];
   });
@@ -899,8 +899,8 @@ in with lib; {
       # Add ROS Humble compatibility for parameter callbacks
       # https://github.com/fujitatomoya/ros2_persist_parameter_server/pull/91
       (self.fetchpatch2 {
-        url = "https://github.com/wentasah/ros2_persist_parameter_server/commit/9ff4569fc1b6f5f8fa1f99b5520161865ec243c9.patch";
-        hash = "sha256-lSdu8MLNisnKIwO6h18dW+aikmzK1xd35oa9D/ZtOpY=";
+        url = "https://github.com/wentasah/ros2_persist_parameter_server/commit/9ff4569fc1b6f5f8fa1f99b5520161865ec243c9.patch?full_index=1";
+        hash = "sha256-42dfVkYc0ELFbjtQAAd1Xehi2UbNGlUCxkyCz2KxpBQ=";
       })
     ];
   });
@@ -962,8 +962,8 @@ in with lib; {
     patches = patches ++ [
       # fix for gcc15, ref https://github.com/SICKAG/sick_scan_xd/pull/557
       (self.fetchpatch2 {
-        url = "https://github.com/SICKAG/sick_scan_xd/commit/f5ac360b4cfb319c981b022a9b817a5e86639d5c.patch";
-        hash = "sha256-zh3UDjy6k7LI3YOYr9F9jt8+4pkdgeOpUUqHcqme6Bs=";
+        url = "https://github.com/SICKAG/sick_scan_xd/commit/f5ac360b4cfb319c981b022a9b817a5e86639d5c.patch?full_index=1";
+        hash = "sha256-UJQZO0cStf7b3890BBrpHBxzgWnJXPOxmW6SKsuAsWw=";
       })
     ];
   });
@@ -992,8 +992,8 @@ in with lib; {
     patches = patches ++ [
       # Fix for asio 1.36, ref https://github.com/KumarRobotics/ublox/pull/273
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/ublox/commit/da37a9628db91aaafbcbe8b247c28c0d5863159f.patch";
-        hash = "sha256-m7lsEHF/uS47zYrNBd5RSL62CmvmNcKXQiLM24R6LZA=";
+        url = "https://github.com/nim65s/ublox/commit/da37a9628db91aaafbcbe8b247c28c0d5863159f.patch?full_index=1";
+        hash = "sha256-S1h+tw9juDe10I/oITnTYkGFtybI7sMEO7BftKhHo1I=";
         stripLen = 1;
       })
     ];
@@ -1005,8 +1005,8 @@ in with lib; {
     # fix for asio 1.36: https://github.com/ros-drivers/transport_drivers/pull/114
     patches = patches ++ [
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/transport_drivers/commit/6a5a003a07850afda9681843978f1c5f46d04000.patch";
-        hash = "sha256-0j3Ps2RbkWcv9K+I6KW0fn2/4Nhsw8TIOoZAhAVixMk=";
+        url = "https://github.com/nim65s/transport_drivers/commit/6a5a003a07850afda9681843978f1c5f46d04000.patch?full_index=1";
+        hash = "sha256-rOBbfYxqdrA0hQsl+dFKhyuEsLNXHIF1fj54sSf0FQY=";
         stripLen = 1;
       })
     ];
@@ -1018,14 +1018,14 @@ in with lib; {
     patches = patches ++ [
       # Fix CMake relative install dir assumptions
       # https://github.com/ros/urdfdom/pull/142
-      (self.fetchpatch {
-        url = "https://github.com/ros/urdfdom/commit/cbe6884d267779463bb444be851f6404e692cc0a.patch";
-        hash = "sha256-1gTRKIGqiSRion76bGecSfFJSBskYUJguUIa6ePIiX4=";
+      (self.fetchpatch2 {
+        url = "https://github.com/ros/urdfdom/commit/cbe6884d267779463bb444be851f6404e692cc0a.patch?full_index=1";
+        hash = "sha256-K1SaI7L2tajqxBthrhXjEknMJyNG7erspu5WGewXRGI=";
       })
       # fix: missing header
       (self.fetchpatch2 {
-        url = "https://github.com/ros/urdfdom/commit/4768260074a90510571810d7439113960a304d44.patch";
-        hash = "sha256-bl49jkxvHMtNWPSnc0T3MHonAGSFVJhjhJc8ApaOdSo=";
+        url = "https://github.com/ros/urdfdom/commit/4768260074a90510571810d7439113960a304d44.patch?full_index=1";
+        hash = "sha256-K13ALfH5OwvOX6qplRBe4IqfF4RrgukIYqb+UT7GCLU=";
       })
     ];
   });
@@ -1036,14 +1036,14 @@ in with lib; {
     patches = patches ++ [
       # Fix CMake relative install dir assumptions
       # https://github.com/ros/urdfdom_headers/pull/66
-      (self.fetchpatch {
-        url = "https://github.com/ros/urdfdom_headers/commit/c9c993147bbf18d5ec83bae684c5780281e529b4.patch";
-        hash = "sha256-BnYPdcetYSim2O1R38N0d1tY0Id++AgKNic8+dlM6Vg=";
+      (self.fetchpatch2 {
+        url = "https://github.com/ros/urdfdom_headers/commit/c9c993147bbf18d5ec83bae684c5780281e529b4.patch?full_index=1";
+        hash = "sha256-12jJEf+YKO25HbMdUmBbGi+CNkYxY0b7QXroWps24BA=";
       })
       # Update cmake_minimum_required
       (self.fetchpatch2 {
-        url = "https://github.com/ros/urdfdom_headers/commit/aedc2f08310e74d00c5eadefd07461fa52890fbb.patch";
-        hash = "sha256-ieeHfnxSmyuBnT5376s1cbO+Qin4Ay8fUiTUIGXwo9c=";
+        url = "https://github.com/ros/urdfdom_headers/commit/aedc2f08310e74d00c5eadefd07461fa52890fbb.patch?full_index=1";
+        hash = "sha256-6pShWs+FiZUwbNRC5Tys73mlW2FoPMd4D9pCN75unJc=";
       })
     ];
   });
@@ -1054,14 +1054,14 @@ in with lib; {
   }: {
     patches = patches ++ [
       # Remove undocumented pix_fmt (AV_PIX_FMT_XVMC) breaking the build
-      (self.fetchpatch {
-        url = "https://github.com/ros-drivers/usb_cam/commit/1d1970b1a88fb1be3b961073748879900d2b1a70.patch";
-        hash = "sha256-0iWl2DtqdjkyFy7lKa7aLxXjynm4ggNEQLxB45Mqf/Y=";
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-drivers/usb_cam/commit/1d1970b1a88fb1be3b961073748879900d2b1a70.patch?full_index=1";
+        hash = "sha256-W1ihgS2dHQT1SN2GyVkUdiId82ys6A1a2hwuk26ZXXk=";
       })
       # fix for newer ffmpeg, ref https://github.com/ros-drivers/usb_cam/pull/342, merged upstream
       (self.fetchpatch2 {
-        url = "https://github.com/ros-drivers/usb_cam/commit/9c7e4dad36f7ddc20c207aa2e4d1512a5188a60a.patch";
-        hash = "sha256-sSM7J35wKA8Z4GzXe5YL5Rw1I1jks4efTaCFDNqdKFQ=";
+        url = "https://github.com/ros-drivers/usb_cam/commit/9c7e4dad36f7ddc20c207aa2e4d1512a5188a60a.patch?full_index=1";
+        hash = "sha256-JVoZgReNfYsh30qMFbIM25AALyq1KTdEGh63u1/B2e4=";
       })
     ];
 
@@ -1073,9 +1073,9 @@ in with lib; {
   }: {
     patches = patches ++ [
       # Fix compatibility with recent CMake versions
-      (self.fetchpatch {
-        url = "https://github.com/vrpn/vrpn/commit/04d86b71de06cb6cb8d2cb7276fef27275d083d2.patch";
-        hash = "sha256-AEiTLXPYcFdZrE4KzvCkXH4GiSFmhCl14wkq+0MRWLo=";
+      (self.fetchpatch2 {
+        url = "https://github.com/vrpn/vrpn/commit/04d86b71de06cb6cb8d2cb7276fef27275d083d2.patch?full_index=1";
+        hash = "sha256-DgXKd6w1+2t4GC918YbkBpecnFeGRmMyuAzegLXZee4=";
       })
     ];
     postPatch = postPatch + ''
