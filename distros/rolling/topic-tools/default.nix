@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components, rclpy, ros2cli, ros2topic, rosidl-default-generators, rosidl-runtime-py, std-msgs, topic-tools-interfaces }:
 buildRosPackage {
   pname = "ros-rolling-topic-tools";
-  version = "1.4.3-r1";
+  version = "1.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/rolling/topic_tools/1.4.3-1.tar.gz";
-    name = "1.4.3-1.tar.gz";
-    sha256 = "7bff74403fb850e4c85f366e3fcc533c4e9a1b3513ae4faef1fae13695691bf4";
+    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/rolling/topic_tools/1.4.4-1.tar.gz";
+    name = "1.4.4-1.tar.gz";
+    sha256 = "82e6fca0ea388583cd71f943aaef9142ba18a886a999adbc28cbe2e1058dc2ea";
   };
 
   buildType = "ament_cmake";

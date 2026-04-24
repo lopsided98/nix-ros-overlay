@@ -1032,6 +1032,8 @@ self: super: {
 
  gscam = self.callPackage ./gscam {};
 
+ gstreamer-ros-babel-fish = self.callPackage ./gstreamer-ros-babel-fish {};
+
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
  gtsam = self.callPackage ./gtsam {};
@@ -2442,6 +2444,8 @@ self: super: {
 
  ros-babel-fish-test-msgs = self.callPackage ./ros-babel-fish-test-msgs {};
 
+ ros-babel-fish-tools = self.callPackage ./ros-babel-fish-tools {};
+
  ros-base = self.callPackage ./ros-base {};
 
  ros-core = self.callPackage ./ros-core {};
@@ -2617,6 +2621,14 @@ self: super: {
  rplidar-ros = self.callPackage ./rplidar-ros {};
 
  rpyutils = self.callPackage ./rpyutils {};
+
+ rqml = self.callPackage ./rqml {};
+
+ rqml-core = self.callPackage ./rqml-core {};
+
+ rqml-default-plugins = self.callPackage ./rqml-default-plugins {};
+
+ rqml-plugin-example = self.callPackage ./rqml-plugin-example {};
 
  rqt = self.callPackage ./rqt {};
 

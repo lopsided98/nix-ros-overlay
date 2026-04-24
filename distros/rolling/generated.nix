@@ -2248,6 +2248,8 @@ self: super: {
 
  ros-babel-fish-test-msgs = self.callPackage ./ros-babel-fish-test-msgs {};
 
+ ros-babel-fish-tools = self.callPackage ./ros-babel-fish-tools {};
+
  ros-base = self.callPackage ./ros-base {};
 
  ros-core = self.callPackage ./ros-core {};
@@ -2432,6 +2434,14 @@ self: super: {
 
  rpyutils = self.callPackage ./rpyutils {};
 
+ rqml = self.callPackage ./rqml {};
+
+ rqml-core = self.callPackage ./rqml-core {};
+
+ rqml-default-plugins = self.callPackage ./rqml-default-plugins {};
+
+ rqml-plugin-example = self.callPackage ./rqml-plugin-example {};
+
  rqt = self.callPackage ./rqt {};
 
  rqt-action = self.callPackage ./rqt-action {};
@@ -2539,6 +2549,8 @@ self: super: {
  rtabmap-viz = self.callPackage ./rtabmap-viz {};
 
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
+
+ rtest = self.callPackage ./rtest {};
 
  rti-connext-dds-cmake-module = self.callPackage ./rti-connext-dds-cmake-module {};
 

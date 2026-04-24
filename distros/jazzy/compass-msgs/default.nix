@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-compass-msgs";
-  version = "0.1.1-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/compass_msgs/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "562ced58f02d7bf9a3eeb817221042dce4d99e8b48092824ddfca77a17fbe01a";
+    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/compass_msgs/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "d82a882d12564b2b2d29f06f1841697090cd997347a84975ad9556bd53e62a37";
   };
 
   buildType = "ament_cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = "ROS 2 port of compass_msgs — messages related to compass and azimuth.
+    description = "ROS 2 port of compass_msgs: messages related to compass and azimuth.
     Message definition identical to ctu-vras/compass for compatibility.";
     license = with lib.licenses; [ bsdOriginal ];
   };

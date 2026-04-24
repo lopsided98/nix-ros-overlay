@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-tl-expected";
-  version = "1.2.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/jazzy/tl_expected/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "58d90458a2230ebfc8d19a95fd5f829da9967ecbfb3bd3c9258bb76f96efccaf";
+    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/jazzy/tl_expected/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "c2da2844af35ad1ea6020a3cb1437da48e8a0dbdbd78345242c4fb93a63a0172";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, beluga, beluga-ros, bondcpp, message-filters, rclcpp, rclcpp-components, rclcpp-lifecycle, std-srvs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-beluga-amcl";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/beluga-release/archive/release/jazzy/beluga_amcl/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "bf0a75128826c067b891c82ede8b3b48f6d95e416771a531030b16a39af2af2e";
+    url = "https://github.com/ros2-gbp/beluga-release/archive/release/jazzy/beluga_amcl/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "47c6a1f995c6d666f4fa2e6e98bdf3e304de9866bf88af9fe227c9cea28f4ff5";
   };
 
   buildType = "ament_cmake";

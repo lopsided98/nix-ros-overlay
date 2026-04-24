@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, builtin-interfaces, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, rcutils, realtime-tools, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-joint-state-broadcaster";
-  version = "2.53.0-r1";
+  version = "2.53.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/joint_state_broadcaster/2.53.0-1.tar.gz";
-    name = "2.53.0-1.tar.gz";
-    sha256 = "1900c7e80879734ea636238d48abd5ac17cb39fbbec157223a77b62df51f3a24";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/joint_state_broadcaster/2.53.1-1.tar.gz";
+    name = "2.53.1-1.tar.gz";
+    sha256 = "7fb765f473a01f897f27f2f7b470d14d7bc933c71c0fa2561580327ce7a3e8ba";
   };
 
   buildType = "ament_cmake";

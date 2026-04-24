@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, eigen, gz-cmake-vendor, gz-utils-vendor, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-gz-math-vendor";
-  version = "0.4.2-r1";
+  version = "0.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_math_vendor-release/archive/release/rolling/gz_math_vendor/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "7e531185225ffc28be4680458c79561e53f5ebedb3dc6e13b327bf34ec249410";
+    url = "https://github.com/ros2-gbp/gz_math_vendor-release/archive/release/rolling/gz_math_vendor/0.4.3-1.tar.gz";
+    name = "0.4.3-1.tar.gz";
+    sha256 = "474342c489e05f39f53d9d2ca119c3ec7826e6391f354200d549c4b7621ac855";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package cmake ];
 
   meta = {
-    description = "Vendor package for: gz-math 9.0.0
+    description = "Vendor package for: gz-math 9.1.0
 
     Gazebo Math : Math classes and functions for robot applications";
     license = with lib.licenses; [ asl20 ];

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-yaml, mrpt-libgui, mrpt-libmaps, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-jazzy-mola-kernel";
-  version = "2.6.1-r1";
+  version = "2.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_kernel/2.6.1-1.tar.gz";
-    name = "2.6.1-1.tar.gz";
-    sha256 = "bd6a726b1831ef95992d3e7b372028c8ad5a64507c1304e8064cac7cfbeda13e";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_kernel/2.7.0-1.tar.gz";
+    name = "2.7.0-1.tar.gz";
+    sha256 = "9d463738cd4eaf5cf557353ae088a916d49b8758e974af095c1f08bfcd76ec99";
   };
 
   buildType = "cmake";

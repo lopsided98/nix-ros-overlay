@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, compressed-depth-image-transport, compressed-image-transport, theora-image-transport, zstd-image-transport }:
 buildRosPackage {
   pname = "ros-jazzy-image-transport-plugins";
-  version = "4.0.6-r1";
+  version = "4.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/jazzy/image_transport_plugins/4.0.6-1.tar.gz";
-    name = "4.0.6-1.tar.gz";
-    sha256 = "f72ec18902d5867f362cba7487d74fde868b78a0615068b769ad4b2ee94313e0";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/jazzy/image_transport_plugins/4.0.7-1.tar.gz";
+    name = "4.0.7-1.tar.gz";
+    sha256 = "77225001ba016923504a97f349ccd3025cb441ee07f773a3d78116e837ec42ed";
   };
 
   buildType = "ament_cmake";

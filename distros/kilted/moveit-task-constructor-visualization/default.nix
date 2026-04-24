@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, fmt, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, libyaml-vendor, moveit-core, moveit-ros-visualization, moveit-task-constructor-core, moveit-task-constructor-msgs, qt5, rclcpp, rviz2 }:
 buildRosPackage {
   pname = "ros-kilted-moveit-task-constructor-visualization";
-  version = "0.1.4-r2";
+  version = "0.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/kilted/moveit_task_constructor_visualization/0.1.4-2.tar.gz";
-    name = "0.1.4-2.tar.gz";
-    sha256 = "08fa1ba813399ad320cc429065fe5391139df5c600bfb86ce959d8daafa3ef2f";
+    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/kilted/moveit_task_constructor_visualization/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
+    sha256 = "179fb089ce20e2062c596a9fd708b7c974df3a4a920ad874ec85fc94f9b94d64";
   };
 
   buildType = "ament_cmake";

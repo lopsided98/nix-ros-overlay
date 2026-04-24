@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, lz4, pcl, zstd }:
 buildRosPackage {
   pname = "ros-rolling-cloudini-lib";
-  version = "1.0.4-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/cloudini-release/archive/release/rolling/cloudini_lib/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "9af3d38293dda7122c355b49ec2e4a41a5cb8f63e5e70ebb3f4fe456818089bb";
+    url = "https://github.com/facontidavide/cloudini-release/archive/release/rolling/cloudini_lib/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "204f644e845267736e9f4db85a1aa3ce0ca96764c53289b3c1ee760d77a95138";
   };
 
   buildType = "ament_cmake";

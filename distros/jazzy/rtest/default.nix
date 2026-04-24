@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-clang-tidy, ament-cmake, ament-cmake-copyright, ament-cmake-ros, ament-lint-auto, ament-lint-common, boost, gmock-vendor, gtest, rcl, rcl-action, rclcpp, rclcpp-action, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-rtest";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rtest-release/archive/release/jazzy/rtest/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "d7a3d837d8ac48204c209cb3e56e9b4ef0163d9bbe2e1292f003d49a73e71417";
+    url = "https://github.com/ros2-gbp/rtest-release/archive/release/jazzy/rtest/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "4eab62d478eec2faf60fed7e91f6df98d8db6283e984d49e6a1529c14f0215ea";
   };
 
   buildType = "ament_cmake";

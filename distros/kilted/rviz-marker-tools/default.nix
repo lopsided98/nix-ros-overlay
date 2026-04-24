@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, eigen3-cmake-module, geometry-msgs, moveit-common, rclcpp, std-msgs, tf2-eigen, urdfdom-headers, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-rviz-marker-tools";
-  version = "0.1.4-r2";
+  version = "0.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/kilted/rviz_marker_tools/0.1.4-2.tar.gz";
-    name = "0.1.4-2.tar.gz";
-    sha256 = "2a42620b29364c677d428d816430b9059b62fac225f5faed77babdadab32e17b";
+    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/kilted/rviz_marker_tools/0.1.5-1.tar.gz";
+    name = "0.1.5-1.tar.gz";
+    sha256 = "5132644fef812603d99647661d8877844ac4ad46168cc363f764affaca8396b1";
   };
 
   buildType = "ament_cmake";
