@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, kinematics-interface, kinematics-interface-kdl, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, tf2, tf2-eigen, tf2-geometry-msgs, tf2-kdl, tf2-ros, tinyxml-2, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-humble-admittance-controller";
-  version = "2.53.0-r1";
+  version = "2.53.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/admittance_controller/2.53.0-1.tar.gz";
-    name = "2.53.0-1.tar.gz";
-    sha256 = "82f6790fc5a76d01f305e6ea2c56238f6652b0afa11bb4320b6f730a5cd82ef7";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/admittance_controller/2.53.1-1.tar.gz";
+    name = "2.53.1-1.tar.gz";
+    sha256 = "18cd97cab44c0773104264f66a7f9b125aeb613f2887dd73a1044a86b1148028";
   };
 
   buildType = "ament_cmake";

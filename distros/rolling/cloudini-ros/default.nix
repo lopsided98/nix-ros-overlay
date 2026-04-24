@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cloudini-lib, pcl-conversions, pluginlib, point-cloud-interfaces, point-cloud-transport, rclcpp, rclcpp-components, rosbag2-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-cloudini-ros";
-  version = "1.0.4-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/cloudini-release/archive/release/rolling/cloudini_ros/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "127cf3d124387e2ee62712e528b434261d9ee3383a3e17b431e16cbce9aa25f7";
+    url = "https://github.com/facontidavide/cloudini-release/archive/release/rolling/cloudini_ros/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "cee35a64856de7722ed24cef8e72f17c49ba6052750287353f0dd732f70e2628";
   };
 
   buildType = "ament_cmake";

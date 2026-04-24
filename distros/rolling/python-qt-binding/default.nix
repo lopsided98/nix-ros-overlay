@@ -2,20 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_python3-qt-bindings, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, qt6 }:
+{ lib, buildRosPackage, fetchurl, _unresolved_python3-qt-bindings, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python3 }:
 buildRosPackage {
   pname = "ros-rolling-python-qt-binding";
-  version = "2.5.0-r1";
+  version = "2.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/python_qt_binding-release/archive/release/rolling/python_qt_binding/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "a6657e7e59dfe321499dcac3dc915afd929e8c0e6197ce33e43034be8339e951";
+    url = "https://github.com/ros2-gbp/python_qt_binding-release/archive/release/rolling/python_qt_binding/2.5.2-1.tar.gz";
+    name = "2.5.2-1.tar.gz";
+    sha256 = "a74bf620f53f05764e2c9c02671294e6cee220a1a74aa3a45231adea79a09556";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ _unresolved_python3-qt-bindings ament-cmake qt6.qtbase ];
+  buildInputs = [ _unresolved_python3-qt-bindings ament-cmake ];
   checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ python3 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

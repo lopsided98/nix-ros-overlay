@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-clang-tidy, ament-cmake, ament-cmake-copyright, ament-cmake-ros, ament-lint-auto, ament-lint-common, boost, gmock-vendor, gtest, rcl, rcl-action, rclcpp, rclcpp-action, ros-environment }:
 buildRosPackage {
   pname = "ros-kilted-rtest";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rtest-release/archive/release/kilted/rtest/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "3deeb9b4ff2245001a2e3f3bcc722f2d8fea78d5f06cdabcf941822038c4f9f4";
+    url = "https://github.com/ros2-gbp/rtest-release/archive/release/kilted/rtest/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "be91173be79cf9185eee661a4b28685a1468b22ecb0dde7fcbfd876e4eecef64";
   };
 
   buildType = "ament_cmake";

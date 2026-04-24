@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-action, realtime-tools, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-rolling-parallel-gripper-controller";
-  version = "6.5.0-r1";
+  version = "6.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/parallel_gripper_controller/6.5.0-1.tar.gz";
-    name = "6.5.0-1.tar.gz";
-    sha256 = "f83fc158c1c9dd627a7ba73812eaa9fd706d80b69cae0ea26f1fdc39632e3e32";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/parallel_gripper_controller/6.6.0-1.tar.gz";
+    name = "6.6.0-1.tar.gz";
+    sha256 = "b892c50b45fbad3ff1fea6a604e1281dc2fa6cb159e05134fcb43e265c774031";
   };
 
   buildType = "ament_cmake";

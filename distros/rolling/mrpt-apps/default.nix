@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libapps, mrpt-libnav, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-apps";
-  version = "2.15.13-r1";
+  version = "2.15.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/rolling/mrpt_apps/2.15.13-1.tar.gz";
-    name = "2.15.13-1.tar.gz";
-    sha256 = "9f4753c87b0c70317139bcc64162fe77c87cfd65b1cf7d240be32e797c99483e";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/rolling/mrpt_apps/2.15.14-1.tar.gz";
+    name = "2.15.14-1.tar.gz";
+    sha256 = "8cdbefcfe3f877a0d5bcceb6f67ee952d47e04cce3b08c6028c79d0c923c8281";
   };
 
   buildType = "cmake";

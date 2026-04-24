@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, controller-manager, controller-manager-msgs, rclpy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-rolling-rqt-controller-manager";
-  version = "6.5.1-r1";
+  version = "6.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/rqt_controller_manager/6.5.1-1.tar.gz";
-    name = "6.5.1-1.tar.gz";
-    sha256 = "c3fee47c01e70a56ad1e874350f127d30a9c3d73a45f923b3c44759f110e64f8";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/rqt_controller_manager/6.7.0-1.tar.gz";
+    name = "6.7.0-1.tar.gz";
+    sha256 = "79ba9d5f2e4132ce5b9d1405bac20ba25ff0197b61f2db0ec93c0081f0690bb3";
   };
 
   buildType = "ament_python";

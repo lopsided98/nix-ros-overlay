@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, control-msgs, controller-manager, controller-manager-msgs, python3Packages, rcl-interfaces, rclpy, ros2cli, ros2node, ros2param, rosidl-runtime-py }:
 buildRosPackage {
   pname = "ros-rolling-ros2controlcli";
-  version = "6.5.1-r1";
+  version = "6.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/ros2controlcli/6.5.1-1.tar.gz";
-    name = "6.5.1-1.tar.gz";
-    sha256 = "8154b37567193df74c234188db8cd296ea5f23485c71653cc3d426386cd34c54";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/ros2controlcli/6.7.0-1.tar.gz";
+    name = "6.7.0-1.tar.gz";
+    sha256 = "d9415e23f0cfab28422447f050bb57cc383dbf6acf848eaba58bdecf7f1a4c39";
   };
 
   buildType = "ament_python";

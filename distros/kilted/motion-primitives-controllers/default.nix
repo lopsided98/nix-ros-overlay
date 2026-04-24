@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, std-srvs }:
 buildRosPackage {
   pname = "ros-kilted-motion-primitives-controllers";
-  version = "5.14.0-r1";
+  version = "5.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/motion_primitives_controllers/5.14.0-1.tar.gz";
-    name = "5.14.0-1.tar.gz";
-    sha256 = "74e6a94591075f62a2b985ada7ecfc703f35570936e40debce7a16de6136f3b1";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/motion_primitives_controllers/5.15.0-1.tar.gz";
+    name = "5.15.0-1.tar.gz";
+    sha256 = "22a73964ef8c34385391e0f1658112d7310f8cfeb4471f491c819613443da337";
   };
 
   buildType = "ament_cmake";

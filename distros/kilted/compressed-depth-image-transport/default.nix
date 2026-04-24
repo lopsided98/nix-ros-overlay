@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, cv-bridge, image-transport }:
 buildRosPackage {
   pname = "ros-kilted-compressed-depth-image-transport";
-  version = "5.1.1-r1";
+  version = "5.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/kilted/compressed_depth_image_transport/5.1.1-1.tar.gz";
-    name = "5.1.1-1.tar.gz";
-    sha256 = "e2770fca37cc62d3f61339574c2233284cf6e689214194535aba37167a87da40";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/kilted/compressed_depth_image_transport/5.1.2-1.tar.gz";
+    name = "5.1.2-1.tar.gz";
+    sha256 = "d82dc5c4305ce56c255b432c8b059e1d022e2d9da4af94994edbe3707a683398";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-jazzy-mola-imu-preintegration";
-  version = "1.15.0-r1";
+  version = "1.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_imu_preintegration-release/archive/release/jazzy/mola_imu_preintegration/1.15.0-1.tar.gz";
-    name = "1.15.0-1.tar.gz";
-    sha256 = "fd05b9ed053aeab3bd784f39e0b0dc7cd58a6cc14a170f0452decbe2dc01c945";
+    url = "https://github.com/ros2-gbp/mola_imu_preintegration-release/archive/release/jazzy/mola_imu_preintegration/1.16.0-1.tar.gz";
+    name = "1.16.0-1.tar.gz";
+    sha256 = "a9b49adb22691b69c6cfbda525337f21d940bf19de137fd28b1217e6896a2e0d";
   };
 
   buildType = "cmake";

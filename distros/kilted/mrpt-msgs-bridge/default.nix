@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, geometry-msgs, mrpt-libobs, mrpt-libros-bridge, mrpt-msgs, rclcpp, ros-environment, tf2 }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-msgs-bridge";
-  version = "2.3.1-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/kilted/mrpt_msgs_bridge/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "1c96063f18c7a1f69b43d0b17013988f9dfa24f829326ade28e00b02bcc68afe";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/kilted/mrpt_msgs_bridge/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "83e2a1bcd053d056383b2b9b2573deb7090b305c807b33fb7148c8b362fd2193";
   };
 
   buildType = "ament_cmake";

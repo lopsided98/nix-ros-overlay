@@ -1174,6 +1174,12 @@ self: super: {
 
  flir-camera-msgs = self.callPackage ./flir-camera-msgs {};
 
+ flir-ptu-description = self.callPackage ./flir-ptu-description {};
+
+ flir-ptu-driver = self.callPackage ./flir-ptu-driver {};
+
+ flir-ptu-viz = self.callPackage ./flir-ptu-viz {};
+
  fluent-rviz = self.callPackage ./fluent-rviz {};
 
  fmi-adapter = self.callPackage ./fmi-adapter {};
@@ -1231,6 +1237,8 @@ self: super: {
  fuse-viz = self.callPackage ./fuse-viz {};
 
  fusioncore-core = self.callPackage ./fusioncore-core {};
+
+ fusioncore-datasets = self.callPackage ./fusioncore-datasets {};
 
  fusioncore-gazebo = self.callPackage ./fusioncore-gazebo {};
 
@@ -1327,6 +1335,8 @@ self: super: {
  gripper-controllers = self.callPackage ./gripper-controllers {};
 
  gscam = self.callPackage ./gscam {};
+
+ gstreamer-ros-babel-fish = self.callPackage ./gstreamer-ros-babel-fish {};
 
  gtest-vendor = self.callPackage ./gtest-vendor {};
 
@@ -3010,6 +3020,8 @@ self: super: {
 
  ros-babel-fish-test-msgs = self.callPackage ./ros-babel-fish-test-msgs {};
 
+ ros-babel-fish-tools = self.callPackage ./ros-babel-fish-tools {};
+
  ros-base = self.callPackage ./ros-base {};
 
  ros-core = self.callPackage ./ros-core {};
@@ -3205,6 +3217,14 @@ self: super: {
  rplidar-ros = self.callPackage ./rplidar-ros {};
 
  rpyutils = self.callPackage ./rpyutils {};
+
+ rqml = self.callPackage ./rqml {};
+
+ rqml-core = self.callPackage ./rqml-core {};
+
+ rqml-default-plugins = self.callPackage ./rqml-default-plugins {};
+
+ rqml-plugin-example = self.callPackage ./rqml-plugin-example {};
 
  rqt = self.callPackage ./rqt {};
 

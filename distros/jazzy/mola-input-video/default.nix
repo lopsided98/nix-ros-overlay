@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-libhwdrivers, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-jazzy-mola-input-video";
-  version = "2.6.1-r1";
+  version = "2.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_input_video/2.6.1-1.tar.gz";
-    name = "2.6.1-1.tar.gz";
-    sha256 = "98a6cf38b5cb84a59fcf87652ac33e8a6cb42a5e282deea170ec905027abd566";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_input_video/2.7.0-1.tar.gz";
+    name = "2.7.0-1.tar.gz";
+    sha256 = "8d8a39ed0a74075a54d64deed45ed10edd466f4196fe8859b813b20ae8d4f212";
   };
 
   buildType = "cmake";

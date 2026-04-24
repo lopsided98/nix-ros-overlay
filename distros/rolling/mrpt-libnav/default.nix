@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libmaps, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-libnav";
-  version = "2.15.13-r1";
+  version = "2.15.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/rolling/mrpt_libnav/2.15.13-1.tar.gz";
-    name = "2.15.13-1.tar.gz";
-    sha256 = "b203aff0c737e27a94d88cef82eb45278d2ee1d824d0b94d4b525235b9eec41b";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/rolling/mrpt_libnav/2.15.14-1.tar.gz";
+    name = "2.15.14-1.tar.gz";
+    sha256 = "8462d2e5269ef5473dce224b55ceb3a68375db703eeb2752eb891af942c90fc6";
   };
 
   buildType = "cmake";

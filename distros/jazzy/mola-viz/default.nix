@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-libgui, mrpt-libmaps, mrpt-libopengl }:
 buildRosPackage {
   pname = "ros-jazzy-mola-viz";
-  version = "2.6.1-r1";
+  version = "2.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_viz/2.6.1-1.tar.gz";
-    name = "2.6.1-1.tar.gz";
-    sha256 = "ace1c0e216252fcf80f334c075fed7052112e6b90a72499022ea24078ae0b99d";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_viz/2.7.0-1.tar.gz";
+    name = "2.7.0-1.tar.gz";
+    sha256 = "0988eae8e07de5978d01b75d7500a548b88d8f02e2c5dd878c40c390612a0dd9";
   };
 
   buildType = "cmake";

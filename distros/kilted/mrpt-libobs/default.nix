@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libopengl, mrpt-libposes, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-libobs";
-  version = "2.15.13-r1";
+  version = "2.15.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/kilted/mrpt_libobs/2.15.13-1.tar.gz";
-    name = "2.15.13-1.tar.gz";
-    sha256 = "f64250a23bb6a8395e1cb97f1e9f0a7f154e2aa1e06f196aa45e97a4ad5d88f6";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/kilted/mrpt_libobs/2.15.14-1.tar.gz";
+    name = "2.15.14-1.tar.gz";
+    sha256 = "950669242c60f38cb1e37b8ede583aaf9a7ea37d49772d10882df03f4a78f1d9";
   };
 
   buildType = "cmake";
