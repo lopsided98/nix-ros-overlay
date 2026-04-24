@@ -48,7 +48,7 @@ let
           originalRev = "\${MRPT_VERSION_TO_DOWNLOAD}";
           inherit rev;
           fetchgitArgs.hash = {
-            "2.15.13" = "sha256-pSEE4hHVzwXkxlwX+0tDCRbKQVaaU9Wrw8sjp09KJJw=";
+            "2.15.14" = "sha256-WudCeaOJWNIK2NaD6JNal68kU+eOhnrd6XF3CLb3pg8=";
           }.${rev};
         }).overrideAttrs ({ postPatch ? "", buildInputs ? [], ... }: {
           postPatch = postPatch + ''
