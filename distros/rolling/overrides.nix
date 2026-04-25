@@ -32,19 +32,6 @@ in {
     '';
   });
 
-  bag2-to-image = rosSuper.bag2-to-image.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = [
-      # Fix compile error caused by rosidl_buffer introduction
-      # https://github.com/wep21/bag2_to_image/pull/8
-      (self.fetchpatch2 {
-        url = "https://github.com/wep21/bag2_to_image/commit/1c6ff87fa27244db7f15597c9cd6ecad34479208.patch?full_index=1";
-        hash = "sha256-GFPd1MdWgjxnDBqwiO/GKIYLHkY3eGG297HKOAoZacw=";
-      })
-    ];
-  });
-
   battery-state-broadcaster = rosSuper.battery-state-broadcaster.overrideAttrs ({
     patches ? [], ...
   }: {
