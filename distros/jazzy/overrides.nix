@@ -135,6 +135,13 @@ in {
     ];
   });
 
+  fusioncore-ros = rosSuper.fusioncore-ros.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # Nixpkgs contains newer proj than Ubuntu and it requires sqlite
+    buildInputs = buildInputs ++ [ self.sqlite ];
+  });
+
   foonathan-memory-vendor = lib.patchExternalProjectGit rosSuper.foonathan-memory-vendor {
     url = "https://github.com/foonathan/memory.git";
     rev = "v0.7-3";
