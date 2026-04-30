@@ -800,6 +800,36 @@ in with lib; {
     '';
   });
 
+  generate-parameter-library = rosSuper.generate-parameter-library.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # Needed to build autoware-path-generator-1.7.0-r2
+    patches = patches ++ [
+      # Use libexpected-dev instead of tl_expected (#322) (#333)
+      (self.fetchpatch2 {
+        url = "https://github.com/PickNikRobotics/generate_parameter_library/commit/1fdc466f84499c0cec05beccaa211ffcb2bb100b.patch?full_index=1";
+        hash = "sha256-RsvJmV9dymcZ3mFjjn/u1dgkqmT76E0UouSv4BB1hKE=";
+        relative = "generate_parameter_library";
+      })
+      # Silence deprecation warning for tl_expected (backport #350)
+      (self.fetchpatch2 {
+        url = "https://github.com/PickNikRobotics/generate_parameter_library/commit/0c6457dc682c69274f28994366fbc587d48259c5.patch?full_index=1";
+        hash = "sha256-l/dG9nly945ogdBRZpQ0F0nuzDcE1hjn0SKqmMn9HI4=";
+        relative = "generate_parameter_library";
+      })
+    ];
+  });
+
+  parameter-traits = rosSuper.parameter-traits.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Needed to build autoware-path-generator-1.7.0-r2
+    postPatch = postPatch + ''
+      substituteInPlace include/parameter_traits/parameter_traits.hpp \
+        --replace-fail 'tl_expected/expected.hpp' 'tl/expected.hpp'
+    '';
+  });
+
   plotjuggler = rosSuper.plotjuggler.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
