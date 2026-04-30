@@ -150,7 +150,7 @@ in with lib; {
   });
 
   autoware-trajectory = rosSuper.autoware-trajectory.overrideAttrs ({
-    buildInputs ? [], postPatch ? "", ...
+    buildInputs ? [], propagatedBuildInputs ? [], postPatch ? "", patches ? [], ...
   }: {
     # https://github.com/autowarefoundation/autoware_core/issues/855
     buildInputs = buildInputs ++ [
@@ -159,10 +159,29 @@ in with lib; {
       rosSelf.autoware-test-utils
       rosSelf.pybind11-vendor
     ];
+    propagatedBuildInputs = propagatedBuildInputs ++ [
+      self.tl-expected
+    ];
+    patches = patches ++ [
+      # Switch to libexpected-dev
+      # https://github.com/autowarefoundation/autoware_core/pull/1058
+      (self.fetchpatch2 {
+        url = "https://github.com/wentasah/autoware_core/commit/fd1243468c37f3c96031ede5717b0c0cc1a3ff11.patch?full_index=1";
+        hash = "sha256-o4GhZPWXGuUyzsBm8ddTWClQAMfQ6RVg9dWgBjiASp0=";
+        stripLen = 2;
+        excludes = [
+          "include/autoware/trajectory/temporal_trajectory.hpp"
+          "package.xml"
+        ];
+      })
+    ];
     # https://github.com/autowarefoundation/autoware_core/pull/853
     postPatch = postPatch + ''
       substituteInPlace include/autoware/trajectory/interpolator/detail/interpolator_common_interface.hpp \
         --replace-fail '#include <vector>' "#include <vector>"$'\n'"#include <algorithm>"
+      # This change is not needed in main branch, so it is not included in the patch above.
+      substituteInPlace include/autoware/trajectory/utils/pretty_build.hpp \
+        --replace-fail 'tl_expected/expected.hpp' 'tl/expected.hpp'
     '';
   });
 
