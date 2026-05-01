@@ -5,7 +5,8 @@ buildPythonPackage rec {
   version = "0.2.13";
 
   src = fetchPypi {
-    inherit pname version;
+    inherit version;
+    pname = "colcon_output";
     hash = "sha256-RNLTSevbYWiLQeANVl6hoZno/Fwsd68nnPqsdNwBwE0=";
   };
 
