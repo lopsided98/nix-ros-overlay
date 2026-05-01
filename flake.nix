@@ -36,7 +36,7 @@
         # Development environment for the custom GitHub action
         nix-ros-build-action = pkgs.callPackage ./.github/actions/nix-ros-build-action/shell.nix { };
       }
-      // (genAttrs' [ "jazzy" "kilted" "rolling" ] (exampleForDistro "ros2-gz"))
+      // (genAttrs' [ "jazzy" "kilted" "lyrical" "rolling" ] (exampleForDistro "ros2-gz"))
       // (genAttrs' distroNames (exampleForDistro "ros2-desktop"))
       // (genAttrs' distroNames (exampleForDistro "ros2-desktop-full"))
       ;

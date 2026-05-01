@@ -21,7 +21,7 @@ with rosPackages.${rosDistro};
           gz-launch-vendor
         ];
       })
-    ] ++ lib.optionals (rosDistro == "rolling") [
+    ] ++ lib.optionals (builtins.elem rosDistro [ "lyrical" "rolling" ]) [
       # this is for the shellhook portion
       qt6.wrapQtAppsHook
       makeWrapper
@@ -30,7 +30,7 @@ with rosPackages.${rosDistro};
     # https://gazebosim.org/docs/ionic/troubleshooting/#wayland-issues
     shellHook = ''
       unset QT_QPA_PLATFORM
-    '' + lib.optionalString (rosDistro == "rolling") ''
+    '' + lib.optionalString (builtins.elem rosDistro [ "lyrical" "rolling" ]) ''
       # Add Qt-related environment variables.
       # https://discourse.nixos.org/t/python-qt-woes/11808/10
       setQtEnvironment=$(mktemp)
