@@ -11,6 +11,7 @@ jobs:
           - humble
           - jazzy
           - kilted
+          - lyrical
           - rolling
         system:
           - x86_64-linux
