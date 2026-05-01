@@ -1,0 +1,26 @@
+
+# Copyright 2026 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-uncrustify, geometry-msgs, rclcpp, rclcpp-components, rmf-obstacle-msgs, rmf-utils, rmf-visualization-msgs, vision-msgs, visualization-msgs }:
+buildRosPackage {
+  pname = "ros-lyrical-rmf-visualization-obstacles";
+  version = "2.5.1-r3";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/lyrical/rmf_visualization_obstacles/2.5.1-3.tar.gz";
+    name = "2.5.1-3.tar.gz";
+    sha256 = "e2a9a40efe280884bea68460cb080f4833fb827779a2c0d855c17543249c22da";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
+  checkInputs = [ ament-cmake-uncrustify rmf-utils ];
+  propagatedBuildInputs = [ geometry-msgs rclcpp rclcpp-components rmf-obstacle-msgs rmf-visualization-msgs vision-msgs visualization-msgs ];
+  nativeBuildInputs = [ ament-cmake ];
+
+  meta = {
+    description = "A visualizer for obstacles in RMF";
+    license = with lib.licenses; [ asl20 ];
+  };
+}

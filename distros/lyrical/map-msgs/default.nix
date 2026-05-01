@@ -1,0 +1,26 @@
+
+# Copyright 2026 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, nav-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
+buildRosPackage {
+  pname = "ros-lyrical-map-msgs";
+  version = "2.6.1-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/navigation_msgs-release/archive/release/lyrical/map_msgs/2.6.1-1.tar.gz";
+    name = "2.6.1-1.tar.gz";
+    sha256 = "5517b24ce346542ada68d51fc771651f37741c6324b6fbd4aec8d9b2fa81a371";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake rosidl-default-generators ];
+  checkInputs = [ ament-lint-common ];
+  propagatedBuildInputs = [ nav-msgs rosidl-default-runtime sensor-msgs std-msgs ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
+
+  meta = {
+    description = "This package defines messages commonly used in mapping packages.";
+    license = with lib.licenses; [ bsdOriginal ];
+  };
+}

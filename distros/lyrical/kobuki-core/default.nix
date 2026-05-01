@@ -1,0 +1,25 @@
+
+# Copyright 2026 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-command-line, ecl-config, ecl-console, ecl-converters, ecl-devices, ecl-geometry, ecl-mobile-robot, ecl-sigslots, ecl-threads, ecl-time }:
+buildRosPackage {
+  pname = "ros-lyrical-kobuki-core";
+  version = "1.4.0-r5";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/kobuki_core-release/archive/release/lyrical/kobuki_core/1.4.0-5.tar.gz";
+    name = "1.4.0-5.tar.gz";
+    sha256 = "124e464e7f735777315a5dc1b82d83e7e7da5dcc9b6f52d47b4816e57976bd5e";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-ros ecl-build ];
+  propagatedBuildInputs = [ ecl-command-line ecl-config ecl-console ecl-converters ecl-devices ecl-geometry ecl-mobile-robot ecl-sigslots ecl-threads ecl-time ];
+  nativeBuildInputs = [ ament-cmake-ros ];
+
+  meta = {
+    description = "Pure C++ driver library for Kobuki.";
+    license = with lib.licenses; [ bsdOriginal ];
+  };
+}
