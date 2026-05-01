@@ -1,0 +1,7 @@
+{
+  "gz_plugin_vendor": {
+    "url": "https://github.com/gazebosim/gz-plugin.git",
+    "rev": "gz-plugin4_4.0.0",
+    "hash": "sha256-cHpRXLKm3BHJJibL5VdLMHyRYAD3gLP7ageyFY13tZE="
+  }
+}
