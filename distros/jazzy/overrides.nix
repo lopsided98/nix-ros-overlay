@@ -274,6 +274,46 @@ in {
     ];
   };
 
+  gz-ogre-next-vendor = (rosSelf.lib.patchAmentVendorGit rosSuper.gz-ogre-next-vendor {
+    # https://github.com/OGRECave/ogre-next/pull/562
+    patchesFor.gz_ogre_next_vendor = [
+      (self.fetchpatch2 {
+        # Add simple implementation for STBIImageCodec::magicNumberToFileExt()
+        url = "https://github.com/OGRECave/ogre-next/commit/98c9095c6e288fceb59ccb3504d9127d88eb1b51.patch?full_index=1";
+        hash = "sha256-Zw6pFjHbDezbO79SLD/yo9tblgph1PKH58PV7r1dcZM=";
+      })
+      (self.fetchpatch2 {
+        # Fix loading of images in STBICodec
+        url = "https://github.com/OGRECave/ogre-next/commit/37d4876eb71c70b9eb3464e5b72c6e6d6be03232.patch?full_index=1";
+        hash = "sha256-MgqoU9cw0vJcgI7hLuqlVRFdmOTwmQ93FBTgzDl69hg=";
+      })
+      (self.fetchpatch2 {
+        # Handle row padding correctly for 1, 2 and 4-channel images in STBICodec
+        url = "https://github.com/OGRECave/ogre-next/commit/96a3bb016b2c9b4f9cca9df1a65d619220e21d78.patch?full_index=1";
+        hash = "sha256-Mczkta9SUSKs6HpQ9L/59dLxaqfBEGcIqSI9qPUUH34=";
+      })
+      (self.fetchpatch2 {
+        # Fix STLAllocator compatibility with GCC 15 and modern C++ standards
+        url = "https://github.com/wentasah/ogre-next/commit/45f449741b3283b43bec6572db8ad6d7af9b2efa.patch?full_index=1";
+        hash = "sha256-Hs+seuQrQZY9G6H4NqV4QVevtDyBzd+qMyvxIK+buBI=";
+      })
+      (self.fetchpatch2 {
+        # Fix RGB channel swap in STBICodec RGB-to-RGBA conversion
+        # https://github.com/OGRECave/ogre-next/pull/567
+        url = "https://github.com/OGRECave/ogre-next/commit/960aabcda2f0ba5d2281d742506aab3e3e91b396.patch?full_index=1";
+        hash = "sha256-WU/91+H7z8bUzFc0XH2zGc3Yv7Th0beVxdRFy9JWpDo=";
+      })
+    ];
+  }).overrideAttrs(({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail 'CMAKE_ARGS' 'CMAKE_ARGS -DOGRE_CONFIG_ENABLE_STBI:BOOL=ON'
+    '';
+    dontFixCmake = true;
+  }));
+
   gz-physics-vendor = lib.patchGzAmentVendorGit rosSuper.gz-physics-vendor { };
 
   gz-plugin-vendor = lib.patchGzAmentVendorGit rosSuper.gz-plugin-vendor { };
