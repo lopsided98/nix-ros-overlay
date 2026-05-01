@@ -680,6 +680,20 @@ in {
     ];
   });
 
+  velodyne-pointcloud = rosSuper.velodyne-pointcloud.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # chore: tf2_ros to hpp headers
+      # https://github.com/ros-drivers/velodyne/pull/566
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-drivers/velodyne/commit/674314aaec007027b760a3b023c463d82b6cc083.patch?full_index=1";
+        hash = "sha256-Dd0iec7mYMmxaEqI46LAdVSfhrEV6SKMTA+R7sCdhd0=";
+        relative = "velodyne_pointcloud";
+      })
+    ];
+  });
+
   vrpn = rosSuper.vrpn.overrideAttrs ({
     postPatch ? "", ...
   }: {
