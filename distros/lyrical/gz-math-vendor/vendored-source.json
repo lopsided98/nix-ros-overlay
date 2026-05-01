@@ -1,0 +1,7 @@
+{
+  "gz_math_vendor": {
+    "url": "https://github.com/gazebosim/gz-math.git",
+    "rev": "gz-math9_9.1.0",
+    "hash": "sha256-Kc9g5D52+NVygYLpMf+4GFPPn2sTEfXBOC14iw39NlA="
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "gz_ogre_next_vendor": {
+    "url": "https://github.com/OGRECave/ogre-next.git",
+    "rev": "v2.3.3",
+    "hash": "sha256-elSj35LwsLzj1ssDPsk9NW/KSXfiOGYmw9hQSAWdpFM="
+  }
+}
