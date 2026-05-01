@@ -2,7 +2,7 @@
 
 buildPythonPackage rec {
   pname = "colcon-package-information";
-  version = "0.4.0";
+  version = "0.4.1";
 
   src = fetchPypi {
     inherit version;

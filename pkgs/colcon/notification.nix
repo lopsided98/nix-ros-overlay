@@ -2,7 +2,7 @@
 
 buildPythonPackage rec {
   pname = "colcon-notification";
-  version = "0.3.0";
+  version = "0.3.1";
 
   src = fetchPypi {
     inherit version;

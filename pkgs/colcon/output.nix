@@ -2,12 +2,12 @@
 
 buildPythonPackage rec {
   pname = "colcon-output";
-  version = "0.2.13";
+  version = "0.2.14";
 
   src = fetchPypi {
     inherit version;
     pname = "colcon_output";
-    hash = "sha256-RNLTSevbYWiLQeANVl6hoZno/Fwsd68nnPqsdNwBwE0=";
+    hash = "sha256-IetY7i/i33bhIbpI6wIsYFi/JMvW1mtDP709+w+YLEc=";
   };
 
   pyproject = true;
