@@ -5,7 +5,8 @@ buildPythonPackage rec {
   version = "0.3.0";
 
   src = fetchPypi {
-    inherit pname version;
+    inherit version;
+    pname = "colcon_notification";
     hash = "sha256-xFuJgHOo6YxFGDM7dYf56kmsG8Epp7xOE5AFkFcDH7g=";
   };
 
