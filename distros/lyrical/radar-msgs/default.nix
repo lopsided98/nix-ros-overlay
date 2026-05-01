@@ -1,0 +1,25 @@
+
+# Copyright 2026 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, std-msgs, unique-identifier-msgs }:
+buildRosPackage {
+  pname = "ros-lyrical-radar-msgs";
+  version = "0.2.2-r5";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/radar_msgs-release/archive/release/lyrical/radar_msgs/0.2.2-5.tar.gz";
+    name = "0.2.2-5.tar.gz";
+    sha256 = "8aa2280cd0694f30131d2a7fbb6d4015e88bada9d936684659af1d78da7497d8";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
+  propagatedBuildInputs = [ builtin-interfaces geometry-msgs rosidl-default-generators std-msgs unique-identifier-msgs ];
+  nativeBuildInputs = [ ament-cmake ];
+
+  meta = {
+    description = "Standard ROS messages for radars";
+    license = with lib.licenses; [ asl20 ];
+  };
+}

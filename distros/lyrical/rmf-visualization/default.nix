@@ -1,0 +1,25 @@
+
+# Copyright 2026 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, launch-xml, rmf-visualization-building-systems, rmf-visualization-fleet-states, rmf-visualization-floorplans, rmf-visualization-navgraphs, rmf-visualization-obstacles, rmf-visualization-rviz2-plugins, rmf-visualization-schedule }:
+buildRosPackage {
+  pname = "ros-lyrical-rmf-visualization";
+  version = "2.5.1-r3";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/lyrical/rmf_visualization/2.5.1-3.tar.gz";
+    name = "2.5.1-3.tar.gz";
+    sha256 = "09605d7eaadcab5c2363f9c4aae81df08bc7320cf0d4e221d911c0d9372678b2";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
+  propagatedBuildInputs = [ launch-xml rmf-visualization-building-systems rmf-visualization-fleet-states rmf-visualization-floorplans rmf-visualization-navgraphs rmf-visualization-obstacles rmf-visualization-rviz2-plugins rmf-visualization-schedule ];
+  nativeBuildInputs = [ ament-cmake ];
+
+  meta = {
+    description = "Package containing a single launch file to bringup various visualizations";
+    license = with lib.licenses; [ asl20 ];
+  };
+}

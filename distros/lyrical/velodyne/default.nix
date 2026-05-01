@@ -1,0 +1,25 @@
+
+# Copyright 2026 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, velodyne-driver, velodyne-laserscan, velodyne-msgs, velodyne-pointcloud }:
+buildRosPackage {
+  pname = "ros-lyrical-velodyne";
+  version = "2.5.1-r3";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/velodyne-release/archive/release/lyrical/velodyne/2.5.1-3.tar.gz";
+    name = "2.5.1-3.tar.gz";
+    sha256 = "2cb6fa37e59ff788791fe9597ffbbcebd5ffbc3d6c3ebaf547053985634c294b";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
+  propagatedBuildInputs = [ velodyne-driver velodyne-laserscan velodyne-msgs velodyne-pointcloud ];
+  nativeBuildInputs = [ ament-cmake ];
+
+  meta = {
+    description = "Basic ROS support for the Velodyne 3D LIDARs.";
+    license = with lib.licenses; [ bsdOriginal ];
+  };
+}

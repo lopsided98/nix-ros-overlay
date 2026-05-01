@@ -1,0 +1,26 @@
+
+# Copyright 2026 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, assimp, eigen, eigen3-cmake-module, qt6, resource-retriever, rviz-ogre-vendor }:
+buildRosPackage {
+  pname = "ros-lyrical-rviz-rendering";
+  version = "15.2.2-r3";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/lyrical/rviz_rendering/15.2.2-3.tar.gz";
+    name = "15.2.2-3.tar.gz";
+    sha256 = "8fcab18f2b4668fe933d5a1d8000c770bb0a6b71727d7a9cf5ea760b0405c0a1";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake-ros ];
+  checkInputs = [ ament-cmake-gmock ament-cmake-gtest ament-lint-auto ament-lint-common assimp ];
+  propagatedBuildInputs = [ ament-index-cpp assimp eigen eigen3-cmake-module qt6.qtbase qt6.qtsvg resource-retriever rviz-ogre-vendor ];
+  nativeBuildInputs = [ ament-cmake-ros eigen3-cmake-module ];
+
+  meta = {
+    description = "Library which provides the 3D rendering functionality in rviz.";
+    license = with lib.licenses; [ bsdOriginal ];
+  };
+}

@@ -1,0 +1,25 @@
+
+# Copyright 2026 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, mrpt-generic-sensor, mrpt-sensor-bumblebee-stereo, mrpt-sensor-gnss-nmea, mrpt-sensor-gnss-novatel, mrpt-sensor-imu-taobotics, mrpt-sensorlib }:
+buildRosPackage {
+  pname = "ros-lyrical-mrpt-sensors";
+  version = "0.2.4-r3";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/lyrical/mrpt_sensors/0.2.4-3.tar.gz";
+    name = "0.2.4-3.tar.gz";
+    sha256 = "9f4119e4d56e742f996270f1e4487215552c134a7c6ad61c85902a9af7e87dc0";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
+  propagatedBuildInputs = [ ament-lint-auto ament-lint-common mrpt-generic-sensor mrpt-sensor-bumblebee-stereo mrpt-sensor-gnss-nmea mrpt-sensor-gnss-novatel mrpt-sensor-imu-taobotics mrpt-sensorlib ];
+  nativeBuildInputs = [ ament-cmake ];
+
+  meta = {
+    description = "ROS nodes for various robotics sensors via mrpt-hwdrivers. Metapackage for all mrpt_sensor packages.";
+    license = with lib.licenses; [ bsd3 ];
+  };
+}
