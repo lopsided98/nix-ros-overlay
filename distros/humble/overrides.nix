@@ -321,6 +321,13 @@ in with lib; {
     ];
   });
 
+  fusioncore-ros = rosSuper.fusioncore-ros.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # Nixpkgs contains newer proj than Ubuntu and it requires sqlite
+    buildInputs = buildInputs ++ [ self.sqlite ];
+  });
+
   gazebo = self.gazebo_11;
 
   gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({
