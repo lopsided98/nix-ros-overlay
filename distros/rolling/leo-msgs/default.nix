@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-leo-msgs";
-  version = "3.2.0-r1";
+  version = "3.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/rolling/leo_msgs/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "ee8c27c85c411d461d22c25db0c923fc68df4788fa91ed7b10303fb2a0216fe9";
+    url = "https://github.com/ros2-gbp/leo_common-release/archive/release/rolling/leo_msgs/3.2.0-2.tar.gz";
+    name = "3.2.0-2.tar.gz";
+    sha256 = "aec78134816f78a473ddec55c643e3ef3ba5e6e20dacfb823272e34764a2a02b";
   };
 
   buildType = "ament_cmake";

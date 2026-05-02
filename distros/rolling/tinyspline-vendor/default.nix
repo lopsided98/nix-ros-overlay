@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-lint-auto, ament-lint-common, git }:
 buildRosPackage {
   pname = "ros-rolling-tinyspline-vendor";
-  version = "0.6.1-r1";
+  version = "0.6.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tinyspline_vendor-release/archive/release/rolling/tinyspline_vendor/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "5f27a0acd6306423e286fe657b63824030c2376cbd18d86b6f633d6e292089f9";
+    url = "https://github.com/ros2-gbp/tinyspline_vendor-release/archive/release/rolling/tinyspline_vendor/0.6.1-2.tar.gz";
+    name = "0.6.1-2.tar.gz";
+    sha256 = "371abf329cdccb5dd1a75c774f7ac919f6f7281ea34b193f0953fbd2d891b331";
   };
 
   buildType = "ament_cmake";

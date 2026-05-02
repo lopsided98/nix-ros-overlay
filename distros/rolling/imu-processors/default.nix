@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cpplint, geometry-msgs, nav-msgs, rclcpp, rclcpp-components, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-imu-processors";
-  version = "0.6.1-r1";
+  version = "0.6.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_pipeline-release/archive/release/rolling/imu_processors/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "d0eb90541411cbf1b903a34e1478bbf83973e35649d04ba78df4cfd3cd7967db";
+    url = "https://github.com/ros2-gbp/imu_pipeline-release/archive/release/rolling/imu_processors/0.6.1-2.tar.gz";
+    name = "0.6.1-2.tar.gz";
+    sha256 = "4638a60bfeb03518828eb176e8ace9a585f9d581fde2335781adf21f73c343c5";
   };
 
   buildType = "ament_cmake";

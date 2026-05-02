@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-clang-format, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-xmllint, camera-info-manager, event-camera-msgs, image-transport, libcaer-vendor, rclcpp, rclcpp-components, ros-environment, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-libcaer-driver";
-  version = "1.5.2-r1";
+  version = "1.5.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libcaer_driver-release/archive/release/humble/libcaer_driver/1.5.2-1.tar.gz";
-    name = "1.5.2-1.tar.gz";
-    sha256 = "75019a780afc864eabd5b3b31237e7b63ac0bcdcd82f21b2108ea2ccc610f29b";
+    url = "https://github.com/ros2-gbp/libcaer_driver-release/archive/release/humble/libcaer_driver/1.5.4-1.tar.gz";
+    name = "1.5.4-1.tar.gz";
+    sha256 = "c9505468695d422a3c698abda0e01e39cf7f7081bd1b805aeeadd8636f097ef3";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "ROS2 driver for event base sensors using libcaer";
-    license = with lib.licenses; [ "Apache-2" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

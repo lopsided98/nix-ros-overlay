@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rclpy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-turtlebot3-autorace-detect";
-  version = "1.2.2-r1";
+  version = "1.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_autorace-release/archive/release/rolling/turtlebot3_autorace_detect/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "415ae85ffb664f63f0a854162456024d01d95da3798acbaf383b13c21a974f29";
+    url = "https://github.com/ros2-gbp/turtlebot3_autorace-release/archive/release/rolling/turtlebot3_autorace_detect/1.2.2-2.tar.gz";
+    name = "1.2.2-2.tar.gz";
+    sha256 = "b8eb761304eb38286e727b5c3d58eb88c74062b7d3434d22f5d4e90070f1520b";
   };
 
   buildType = "ament_python";

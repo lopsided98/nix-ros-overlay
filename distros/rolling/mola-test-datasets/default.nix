@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-mola-test-datasets";
-  version = "0.4.2-r1";
+  version = "0.4.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_test_datasets-release/archive/release/rolling/mola_test_datasets/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "7c4b108a61ebc52f2a7402c38c400475b9f11d098f0e0d47992e65d3ce4f733e";
+    url = "https://github.com/ros2-gbp/mola_test_datasets-release/archive/release/rolling/mola_test_datasets/0.4.2-2.tar.gz";
+    name = "0.4.2-2.tar.gz";
+    sha256 = "3836caee9cb7760a2d8542c4d6bd46fcc25eb01ec82b7f0549e77e1ce26980d2";
   };
 
   buildType = "ament_cmake";

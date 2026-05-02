@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros-core, fastcdr, fastdds, rcpputils, rcutils, rosidl-dynamic-typesupport }:
 buildRosPackage {
   pname = "ros-rolling-rosidl-dynamic-typesupport-fastrtps";
-  version = "0.5.1-r1";
+  version = "0.5.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_dynamic_typesupport_fastrtps-release/archive/release/rolling/rosidl_dynamic_typesupport_fastrtps/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "fc0ba2fe2482036534765ad98653e52e328be10c3c3b22309ca2af4de8650d07";
+    url = "https://github.com/ros2-gbp/rosidl_dynamic_typesupport_fastrtps-release/archive/release/rolling/rosidl_dynamic_typesupport_fastrtps/0.5.1-2.tar.gz";
+    name = "0.5.1-2.tar.gz";
+    sha256 = "aaf6c16afc622f0653dbed200bd8b66ab170563d206bf3b6b30f6b0f5f554b19";
   };
 
   buildType = "ament_cmake";

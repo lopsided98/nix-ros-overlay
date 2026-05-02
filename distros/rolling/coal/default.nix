@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, boost, cmake, doxygen, eigen, eigenpy, git, octomap, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-coal";
-  version = "3.0.2-r1";
+  version = "3.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/coal-release/archive/release/rolling/coal/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "c686c939f5ddb081452eaa97735dfae34052c80e444191e5e9134a4f7ff2151b";
+    url = "https://github.com/ros2-gbp/coal-release/archive/release/rolling/coal/3.0.2-2.tar.gz";
+    name = "3.0.2-2.tar.gz";
+    sha256 = "343f6a6fc4429c5e65b6a3fc5a88491cee92ef92a3d9c4c40c62bf6ff08fcb5b";
   };
 
   buildType = "cmake";

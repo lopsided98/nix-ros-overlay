@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libmaps, onetbb, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-libslam";
-  version = "2.15.14-r1";
+  version = "2.15.14-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/rolling/mrpt_libslam/2.15.14-1.tar.gz";
-    name = "2.15.14-1.tar.gz";
-    sha256 = "85caf375325162d3ab1fc2cac2c49dab043969b8daa8dbb749246915b69bd0c9";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/rolling/mrpt_libslam/2.15.14-2.tar.gz";
+    name = "2.15.14-2.tar.gz";
+    sha256 = "3aae522c0298f2a980a367df6a9f366e9c505a574a5840a485aeb92b39e80edf";
   };
 
   buildType = "cmake";

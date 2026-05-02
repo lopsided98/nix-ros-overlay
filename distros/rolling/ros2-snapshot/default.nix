@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, demo-nodes-py, graphviz, python3Packages, rclpy, ros2cli, ros2component, ros2node, ros2param, ros2pkg, ros2service }:
 buildRosPackage {
   pname = "ros-rolling-ros2-snapshot";
-  version = "0.0.6-r2";
+  version = "0.0.6-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_snapshot-release/archive/release/rolling/ros2_snapshot/0.0.6-2.tar.gz";
-    name = "0.0.6-2.tar.gz";
-    sha256 = "9dc32d2f2531e876bd6ea859f2e5ee3ebff24e2ff130c291454fa110d60600c3";
+    url = "https://github.com/ros2-gbp/ros2_snapshot-release/archive/release/rolling/ros2_snapshot/0.0.6-3.tar.gz";
+    name = "0.0.6-3.tar.gz";
+    sha256 = "8f58d11c15777259c2cc2edc1ae70c777b3c56e2f791ed8acb2b81ccf52b9756";
   };
 
   buildType = "ament_python";

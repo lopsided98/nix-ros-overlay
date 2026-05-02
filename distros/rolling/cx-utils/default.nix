@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, clips-vendor, fmt, rclcpp, spdlog }:
 buildRosPackage {
   pname = "ros-rolling-cx-utils";
-  version = "0.1.3-r1";
+  version = "0.1.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/clips_executive-release/archive/release/rolling/cx_utils/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "f1d1f3da4a381157221b3fc269dab74c11beaad1f58595aaa1357fa521000ca2";
+    url = "https://github.com/ros2-gbp/clips_executive-release/archive/release/rolling/cx_utils/0.1.3-2.tar.gz";
+    name = "0.1.3-2.tar.gz";
+    sha256 = "d2daf290f02c7ccf969f554837b62d44724765f6a67260e1f26d967af1925f0c";
   };
 
   buildType = "ament_cmake";

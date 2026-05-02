@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-tuw-nav-msgs";
-  version = "0.2.6-r1";
+  version = "0.2.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tuw_msgs-release/archive/release/rolling/tuw_nav_msgs/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "d4846eca1ebc253c784fc2670b0ff1e9957e2560b30da325824c0090737d1fd8";
+    url = "https://github.com/ros2-gbp/tuw_msgs-release/archive/release/rolling/tuw_nav_msgs/0.2.6-2.tar.gz";
+    name = "0.2.6-2.tar.gz";
+    sha256 = "13852122121c32027275fed8602154c3e1b1cf416ba19fe8970edb363c0f2c68";
   };
 
   buildType = "ament_cmake";

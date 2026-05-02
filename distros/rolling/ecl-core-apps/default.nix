@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ecl-build, ecl-command-line, ecl-config, ecl-containers, ecl-converters, ecl-devices, ecl-errors, ecl-exceptions, ecl-formatters, ecl-geometry, ecl-ipc, ecl-license, ecl-linear-algebra, ecl-sigslots, ecl-streams, ecl-threads, ecl-time-lite, ecl-type-traits }:
 buildRosPackage {
   pname = "ros-rolling-ecl-core-apps";
-  version = "1.2.1-r4";
+  version = "1.2.1-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ecl_core-release/archive/release/rolling/ecl_core_apps/1.2.1-4.tar.gz";
-    name = "1.2.1-4.tar.gz";
-    sha256 = "424b3436e5189e179a817e5b4c88caff3a51839b6495418b14555329588e4b2a";
+    url = "https://github.com/ros2-gbp/ecl_core-release/archive/release/rolling/ecl_core_apps/1.2.1-5.tar.gz";
+    name = "1.2.1-5.tar.gz";
+    sha256 = "ee139e69f52d3f39e811ccd9cea90d03a8552a4ecf306c66860e8ce3345113c9";
   };
 
   buildType = "ament_cmake";

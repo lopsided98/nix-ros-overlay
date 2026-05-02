@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, launch, launch-ros, launch-testing-ament-cmake, sick-safevisionary-driver }:
 buildRosPackage {
   pname = "ros-rolling-sick-safevisionary-tests";
-  version = "1.0.3-r2";
+  version = "1.0.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sick_safevisionary_ros2-release/archive/release/rolling/sick_safevisionary_tests/1.0.3-2.tar.gz";
-    name = "1.0.3-2.tar.gz";
-    sha256 = "a7c445c9cce04d62d9cd1e6287f24f725a174c29da20c0dadcdaf0f10f47c0bf";
+    url = "https://github.com/ros2-gbp/sick_safevisionary_ros2-release/archive/release/rolling/sick_safevisionary_tests/1.0.3-3.tar.gz";
+    name = "1.0.3-3.tar.gz";
+    sha256 = "eb36908ff2c7bc22b1180d78a0a1a2d39cd28b7b0a07c3a63ffc3ff96a2dc1bb";
   };
 
   buildType = "catkin";

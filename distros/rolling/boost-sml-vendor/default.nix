@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git }:
 buildRosPackage {
   pname = "ros-rolling-boost-sml-vendor";
-  version = "1.1.13-r1";
+  version = "1.1.13-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/boost_sml_vendor-release/archive/release/rolling/boost_sml_vendor/1.1.13-1.tar.gz";
-    name = "1.1.13-1.tar.gz";
-    sha256 = "2d455a78e718525118c91e9f630bd1b9a4b00939290aee29ded412f92114a6a5";
+    url = "https://github.com/ros2-gbp/boost_sml_vendor-release/archive/release/rolling/boost_sml_vendor/1.1.13-2.tar.gz";
+    name = "1.1.13-2.tar.gz";
+    sha256 = "e4baca84cf57cbd8dae4abf444665706ad4b8c1811bb14e188de6d2361cd8b6c";
   };
 
   buildType = "ament_cmake";

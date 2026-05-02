@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-pendulum-msgs";
-  version = "0.37.8-r1";
+  version = "0.37.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/pendulum_msgs/0.37.8-1.tar.gz";
-    name = "0.37.8-1.tar.gz";
-    sha256 = "a3480d8082756c19d4adb8c3acee0613376cbfbc6b5a86b0755e8dac8559cfcd";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/pendulum_msgs/0.37.8-2.tar.gz";
+    name = "0.37.8-2.tar.gz";
+    sha256 = "86ac81a435beb14fb2b3759ffcd4d4b423478db5e27aee9855204cedfcd1bb31";
   };
 
   buildType = "ament_cmake";

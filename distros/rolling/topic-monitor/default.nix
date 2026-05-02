@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, ament-mypy, ament-pep257, ament-xmllint, example-interfaces, launch, launch-ros, python3Packages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-topic-monitor";
-  version = "0.37.8-r1";
+  version = "0.37.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/topic_monitor/0.37.8-1.tar.gz";
-    name = "0.37.8-1.tar.gz";
-    sha256 = "f6e5032d05c983a0141712447ef486fde673bd91ed060e4a65e45f8d8fa4fcc2";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/topic_monitor/0.37.8-2.tar.gz";
+    name = "0.37.8-2.tar.gz";
+    sha256 = "5e0e39aa9c46698a70df1559e32bb3c4e3e3cf236c745036ca1c41b359af0374";
   };
 
   buildType = "ament_python";

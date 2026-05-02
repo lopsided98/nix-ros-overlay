@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, grbl-msgs, python3Packages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-grbl-ros";
-  version = "0.0.16-r6";
+  version = "0.0.16-r7";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/grbl_ros-release/archive/release/rolling/grbl_ros/0.0.16-6.tar.gz";
-    name = "0.0.16-6.tar.gz";
-    sha256 = "03b1ea306d5228c9ad7cb5ccb8df385727b8909c87c3d2ed737124323e29d047";
+    url = "https://github.com/ros2-gbp/grbl_ros-release/archive/release/rolling/grbl_ros/0.0.16-7.tar.gz";
+    name = "0.0.16-7.tar.gz";
+    sha256 = "16999fb2f16decb6a6c5283c99ca4171b9515e9d06761bfc0e41badeb7578d79";
   };
 
   buildType = "ament_python";

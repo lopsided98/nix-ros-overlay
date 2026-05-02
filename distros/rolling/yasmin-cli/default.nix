@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, rclpy, ros2cli, yasmin, yasmin-factory, yasmin-plugins-manager }:
 buildRosPackage {
   pname = "ros-rolling-yasmin-cli";
-  version = "5.0.0-r1";
+  version = "5.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_cli/5.0.0-1.tar.gz";
-    name = "5.0.0-1.tar.gz";
-    sha256 = "ff1de148cffc1fe43666c457314cb719a98bbc9dc9da5b060818406a81ca12d7";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/rolling/yasmin_cli/5.0.0-2.tar.gz";
+    name = "5.0.0-2.tar.gz";
+    sha256 = "8f9fe19adcc3260c8bdd40728081440b721f3c9c262b8e8bf04458d6e88cedf2";
   };
 
   buildType = "ament_python";

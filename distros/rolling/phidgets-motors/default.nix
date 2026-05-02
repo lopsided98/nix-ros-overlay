@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, phidgets-msgs, rclcpp, rclcpp-components, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-phidgets-motors";
-  version = "2.4.0-r1";
+  version = "2.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_motors/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "577e74edd1f229e39c663491b1a005c0e2beac83a82bc83a2181fb3125ff6c34";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_motors/2.4.0-2.tar.gz";
+    name = "2.4.0-2.tar.gz";
+    sha256 = "5f9e970c09afdba11a09b8feb25c3de33603dd35e8b5b37151ff51b1379c61ee";
   };
 
   buildType = "ament_cmake";

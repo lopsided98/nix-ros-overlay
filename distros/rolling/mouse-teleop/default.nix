@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, geometry-msgs, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-rolling-mouse-teleop";
-  version = "2.0.0-r1";
+  version = "2.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/rolling/mouse_teleop/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "f791dd8b2ec2401d2e1d988d8d5931bb8708f57f7613d1ec6913faca293df316";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/rolling/mouse_teleop/2.0.0-2.tar.gz";
+    name = "2.0.0-2.tar.gz";
+    sha256 = "24627b3359c58bd9d4f00e7ed14ae915ea76a307811a33b05ced48a8cd68e661";
   };
 
   buildType = "ament_python";

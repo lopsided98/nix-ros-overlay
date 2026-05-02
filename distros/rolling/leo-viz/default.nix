@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, joint-state-publisher, joint-state-publisher-gui, leo-description, rviz2 }:
 buildRosPackage {
   pname = "ros-rolling-leo-viz";
-  version = "3.0.0-r2";
+  version = "3.0.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_desktop-release/archive/release/rolling/leo_viz/3.0.0-2.tar.gz";
-    name = "3.0.0-2.tar.gz";
-    sha256 = "69983444e9affeef2fd481a1d20c3e5ca0905e447abdf17441b153fe1182ebdd";
+    url = "https://github.com/ros2-gbp/leo_desktop-release/archive/release/rolling/leo_viz/3.0.0-3.tar.gz";
+    name = "3.0.0-3.tar.gz";
+    sha256 = "8e32b721f3063df83ffb9f0822368ebdc4225fbf822e64e9e5a61e14881d4cde";
   };
 
   buildType = "ament_cmake";

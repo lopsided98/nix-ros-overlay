@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, kitti-metrics-eval, mola-bridge-ros2, mola-demos, mola-input-euroc-dataset, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset, mola-input-rawlog, mola-input-rosbag2, mola-input-video, mola-kernel, mola-launcher, mola-metric-maps, mola-pose-list, mola-relocalization, mola-traj-tools, mola-viz, mola-yaml }:
 buildRosPackage {
   pname = "ros-jazzy-mola";
-  version = "2.7.0-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola/2.7.0-1.tar.gz";
-    name = "2.7.0-1.tar.gz";
-    sha256 = "565572c463b942f36dcf284bf4dd0f6881d1ad2d917d2573f0d166049b1d1952";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "188ba6a42ed9fae54435f1de2ae7d1c37001d7be3c5e4fda9edb8700dd826043";
   };
 
   buildType = "cmake";

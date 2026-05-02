@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, bond, bondcpp, clips-vendor, cx-msgs, cx-plugin, lifecycle-msgs, pluginlib, rclcpp, rclcpp-components, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-rolling-cx-clips-env-manager";
-  version = "0.1.3-r1";
+  version = "0.1.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/clips_executive-release/archive/release/rolling/cx_clips_env_manager/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "3e130fb0ca7af791843c59036fab20107b1d3bd06f374210238d70a83e464140";
+    url = "https://github.com/ros2-gbp/clips_executive-release/archive/release/rolling/cx_clips_env_manager/0.1.3-2.tar.gz";
+    name = "0.1.3-2.tar.gz";
+    sha256 = "f6478f58e7c28a5d48f8c916da85c4814d6562f0eac9fbbd9d4421277058fcb9";
   };
 
   buildType = "ament_cmake";

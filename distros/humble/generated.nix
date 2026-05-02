@@ -758,6 +758,8 @@ self: super: {
 
  common-interfaces = self.callPackage ./common-interfaces {};
 
+ compass-msgs = self.callPackage ./compass-msgs {};
+
  composition = self.callPackage ./composition {};
 
  composition-interfaces = self.callPackage ./composition-interfaces {};
@@ -1365,6 +1367,14 @@ self: super: {
  fri-configuration-controller = self.callPackage ./fri-configuration-controller {};
 
  fri-state-broadcaster = self.callPackage ./fri-state-broadcaster {};
+
+ fusioncore-core = self.callPackage ./fusioncore-core {};
+
+ fusioncore-datasets = self.callPackage ./fusioncore-datasets {};
+
+ fusioncore-gazebo = self.callPackage ./fusioncore-gazebo {};
+
+ fusioncore-ros = self.callPackage ./fusioncore-ros {};
 
  game-controller-spl = self.callPackage ./game-controller-spl {};
 

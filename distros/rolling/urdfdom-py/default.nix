@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-rolling-urdfdom-py";
-  version = "1.2.1-r2";
+  version = "1.2.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/urdfdom_py-release/archive/release/rolling/urdfdom_py/1.2.1-2.tar.gz";
-    name = "1.2.1-2.tar.gz";
-    sha256 = "53818eb42312f6acd1ec0c04fe1eb90a54bb9c3cf8dd81d5591c53f55f6db84d";
+    url = "https://github.com/ros2-gbp/urdfdom_py-release/archive/release/rolling/urdfdom_py/1.2.1-3.tar.gz";
+    name = "1.2.1-3.tar.gz";
+    sha256 = "66fa63642f9fdb8135b3518c044680419919845a0a30b49a277bb8b92a20c8a9";
   };
 
   buildType = "ament_python";

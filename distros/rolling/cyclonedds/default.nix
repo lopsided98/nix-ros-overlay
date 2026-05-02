@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, iceoryx-hoofs, iceoryx-posh, openssl }:
 buildRosPackage {
   pname = "ros-rolling-cyclonedds";
-  version = "11.0.1-r1";
+  version = "11.0.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cyclonedds-release/archive/release/rolling/cyclonedds/11.0.1-1.tar.gz";
-    name = "11.0.1-1.tar.gz";
-    sha256 = "6f672a36876450a94638e74dab6b4f3428af6bc9b614f543ed0d9a2a5800600a";
+    url = "https://github.com/ros2-gbp/cyclonedds-release/archive/release/rolling/cyclonedds/11.0.1-3.tar.gz";
+    name = "11.0.1-3.tar.gz";
+    sha256 = "a8ae16f7c7ba039277b42495e21e2b7fb301fc8228cc973fe4e512bdb8ba2c03";
   };
 
   buildType = "cmake";

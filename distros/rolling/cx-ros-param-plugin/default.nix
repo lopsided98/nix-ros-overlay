@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cx-plugin, cx-utils, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-cx-ros-param-plugin";
-  version = "0.1.3-r1";
+  version = "0.1.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/clips_executive-release/archive/release/rolling/cx_ros_param_plugin/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "5ccf8373b063c4a4de64d11dee7b6dd0778f539f310ce0bce86a4c1a09b54ece";
+    url = "https://github.com/ros2-gbp/clips_executive-release/archive/release/rolling/cx_ros_param_plugin/0.1.3-2.tar.gz";
+    name = "0.1.3-2.tar.gz";
+    sha256 = "6242b00d33cbbeb6fefd9f30a4a0676bf60fc2692cd46e1d90a0f8264f1269ed";
   };
 
   buildType = "ament_cmake";

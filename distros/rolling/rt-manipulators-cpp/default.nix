@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, dynamixel-sdk, eigen, eigen3-cmake-module, yaml-cpp, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-rolling-rt-manipulators-cpp";
-  version = "1.0.0-r3";
+  version = "1.0.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rt_manipulators_cpp-release/archive/release/rolling/rt_manipulators_cpp/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "4d3423b21a8aa6dfbea0070ce03f4d7b0f1263b50327df16e9804c685496d399";
+    url = "https://github.com/ros2-gbp/rt_manipulators_cpp-release/archive/release/rolling/rt_manipulators_cpp/1.0.0-4.tar.gz";
+    name = "1.0.0-4.tar.gz";
+    sha256 = "cfe0856fecb640702147c2a3f2ae3dd2f66d9d41d6f00170794073eb90ec6e3f";
   };
 
   buildType = "ament_cmake";

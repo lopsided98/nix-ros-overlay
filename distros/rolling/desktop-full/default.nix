@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, desktop, perception, ros-gz-sim-demos, simulation }:
 buildRosPackage {
   pname = "ros-rolling-desktop-full";
-  version = "0.13.0-r1";
+  version = "0.13.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/variants-release/archive/release/rolling/desktop_full/0.13.0-1.tar.gz";
-    name = "0.13.0-1.tar.gz";
-    sha256 = "48ca1b35696f79ad0c8d2b805852f5cb9c0679d33c1cb910ace3bd35cd00ab35";
+    url = "https://github.com/ros2-gbp/variants-release/archive/release/rolling/desktop_full/0.13.0-2.tar.gz";
+    name = "0.13.0-2.tar.gz";
+    sha256 = "f0bf13468725e7089c0f21920f9987513c2f5c19d1d702f59566c61b2adae0f5";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, builtin-interfaces, cv-bridge, diagnostic-updater, eigen, geometry-msgs, image-transport, launch-pytest, launch-ros, launch-testing, librealsense2, lifecycle-msgs, nav-msgs, python3Packages, rclcpp, rclcpp-components, rclcpp-lifecycle, realsense2-camera-msgs, ros-environment, ros2topic, sensor-msgs, sensor-msgs-py, std-msgs, std-srvs, tf2, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-rolling-realsense2-camera";
-  version = "4.57.7-r1";
+  version = "4.57.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/rolling/realsense2_camera/4.57.7-1.tar.gz";
-    name = "4.57.7-1.tar.gz";
-    sha256 = "405458e17e88da7e66880f6919f255963267a664f17cbe650c6af23aa467b9e8";
+    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/rolling/realsense2_camera/4.57.7-2.tar.gz";
+    name = "4.57.7-2.tar.gz";
+    sha256 = "56a8342825210674df3f8c19300b715b060bbcc82c122e4677255491c4d796dc";
   };
 
   buildType = "ament_cmake";

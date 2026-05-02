@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, py-trees-js, py-trees-ros-interfaces, python3Packages, qt5, rclpy, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-rolling-py-trees-ros-viewer";
-  version = "0.2.5-r1";
+  version = "0.2.5-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees_ros_viewer-release/archive/release/rolling/py_trees_ros_viewer/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "80a472e5e769658d767b9f15675c19225fa9360d48df550eb62fc85997e06a11";
+    url = "https://github.com/ros2-gbp/py_trees_ros_viewer-release/archive/release/rolling/py_trees_ros_viewer/0.2.5-3.tar.gz";
+    name = "0.2.5-3.tar.gz";
+    sha256 = "782ed939222c84118004a5ac1eeba40461e8d757cef6accdfe70ceaf1a54218b";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rmf-lift-msgs";
-  version = "4.0.0-r1";
+  version = "4.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_lift_msgs/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "32ef737710f33f36d65b4f5680cec38b3cfe968faa538bd5598d4b467e10a641";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_lift_msgs/4.0.0-2.tar.gz";
+    name = "4.0.0-2.tar.gz";
+    sha256 = "a9982ed96342751eabd37b35b1cfac45f31802450b04ab997dde60078fedf6c8";
   };
 
   buildType = "ament_cmake";

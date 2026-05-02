@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-greenwave-monitor-interfaces";
-  version = "1.0.0-r2";
+  version = "1.0.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/greenwave_monitor-release/archive/release/rolling/greenwave_monitor_interfaces/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "82741f06316499474af9a7f17944640841ca0e726c88f2ec9f7be1d5b62c2657";
+    url = "https://github.com/ros2-gbp/greenwave_monitor-release/archive/release/rolling/greenwave_monitor_interfaces/1.0.0-3.tar.gz";
+    name = "1.0.0-3.tar.gz";
+    sha256 = "bc2154c38dd389255d6c27e815ea661ccde8d664e94bf9d1ed668f23c512189a";
   };
 
   buildType = "ament_cmake";

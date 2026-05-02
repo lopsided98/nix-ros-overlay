@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bzip2, cmake, doxygen, eigen, gsl, libjpeg, liblapack, libpng, libv4l, libxml2, llvmPackages, nlohmann_json, openblas, opencv, xorg, zbar }:
 buildRosPackage {
   pname = "ros-rolling-visp";
-  version = "3.7.0-r4";
+  version = "3.7.0-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/visp-release/archive/release/rolling/visp/3.7.0-4.tar.gz";
-    name = "3.7.0-4.tar.gz";
-    sha256 = "6f5323145a307154531d239900785d3e3a44291e2e25b03efe8751a07e4da809";
+    url = "https://github.com/ros2-gbp/visp-release/archive/release/rolling/visp/3.7.0-5.tar.gz";
+    name = "3.7.0-5.tar.gz";
+    sha256 = "78ff38cdba82ae9de552373e4992c4d41307c3b07435fcf25a853c350a11f0b0";
   };
 
   buildType = "cmake";

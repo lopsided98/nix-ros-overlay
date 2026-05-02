@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-xmllint }:
 buildRosPackage {
   pname = "ros-rolling-cudnn-cmake-module";
-  version = "0.0.1-r5";
+  version = "0.0.1-r6";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cudnn_cmake_module-release/archive/release/rolling/cudnn_cmake_module/0.0.1-5.tar.gz";
-    name = "0.0.1-5.tar.gz";
-    sha256 = "0c550bff25b7d7ada6b8c88151b4eb80d216758070a82f9c83c49da2649fb308";
+    url = "https://github.com/ros2-gbp/cudnn_cmake_module-release/archive/release/rolling/cudnn_cmake_module/0.0.1-6.tar.gz";
+    name = "0.0.1-6.tar.gz";
+    sha256 = "3ce540a5dafaf0f6be7f2332e9b0ad8ba8bf133d4e52aef7f4cf3fb4001987ed";
   };
 
   buildType = "ament_cmake";

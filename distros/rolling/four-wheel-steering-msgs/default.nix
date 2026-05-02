@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-four-wheel-steering-msgs";
-  version = "2.0.1-r5";
+  version = "2.0.1-r6";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/four_wheel_steering_msgs-release/archive/release/rolling/four_wheel_steering_msgs/2.0.1-5.tar.gz";
-    name = "2.0.1-5.tar.gz";
-    sha256 = "8b87595ab160ef1e751ef9a29144d9e73b48943a7c176d0c467dec4e0fbb0be0";
+    url = "https://github.com/ros2-gbp/four_wheel_steering_msgs-release/archive/release/rolling/four_wheel_steering_msgs/2.0.1-6.tar.gz";
+    name = "2.0.1-6.tar.gz";
+    sha256 = "5b0d0208524d33397828d7ea148f4a6144b69e46f5b28928e162f4dc3887b56b";
   };
 
   buildType = "ament_cmake";

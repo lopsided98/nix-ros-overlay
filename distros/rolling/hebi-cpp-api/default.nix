@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen }:
 buildRosPackage {
   pname = "ros-rolling-hebi-cpp-api";
-  version = "3.16.0-r1";
+  version = "3.16.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hebi_cpp_api-release/archive/release/rolling/hebi_cpp_api/3.16.0-1.tar.gz";
-    name = "3.16.0-1.tar.gz";
-    sha256 = "eda734e1bf9489626e1389ef1f16eb7806bb2fd5a3fb9767f3a95fadb70b6796";
+    url = "https://github.com/ros2-gbp/hebi_cpp_api-release/archive/release/rolling/hebi_cpp_api/3.16.0-2.tar.gz";
+    name = "3.16.0-2.tar.gz";
+    sha256 = "44e30cb4deb15154dda12e22f65144ba61c9a154981aca6eb302dde55bdf8d87";
   };
 
   buildType = "ament_cmake";

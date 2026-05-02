@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, hri-msgs, magic-enum, opencv, rclcpp, rclcpp-lifecycle, sensor-msgs, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-hri";
-  version = "2.9.0-r1";
+  version = "2.9.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libhri-release/archive/release/rolling/hri/2.9.0-1.tar.gz";
-    name = "2.9.0-1.tar.gz";
-    sha256 = "13fa43780ddaac9892b0de305d1797a7488f21e409d0851f164cd0c13e715817";
+    url = "https://github.com/ros2-gbp/libhri-release/archive/release/rolling/hri/2.9.0-2.tar.gz";
+    name = "2.9.0-2.tar.gz";
+    sha256 = "2072c65250dfe2b31a2df72f4cb3e7d53755e1dc3e02b2c86f7fac86a23b1ac4";
   };
 
   buildType = "ament_cmake";

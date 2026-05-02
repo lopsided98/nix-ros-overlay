@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-cmake-xmllint, ament-lint-auto, assimp, boost, bullet, eigen, fcl, fmt, libccd, lz4, octomap, ode, tinyxml-2, urdfdom }:
 buildRosPackage {
   pname = "ros-rolling-gz-dartsim-vendor";
-  version = "0.1.3-r1";
+  version = "0.1.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_dartsim_vendor-release/archive/release/rolling/gz_dartsim_vendor/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "c8b93c59676cda0f26c091485249484c633d413d760440bef592cd4ec23ec581";
+    url = "https://github.com/ros2-gbp/gz_dartsim_vendor-release/archive/release/rolling/gz_dartsim_vendor/0.1.3-2.tar.gz";
+    name = "0.1.3-2.tar.gz";
+    sha256 = "25642ef648fa4a0968a819e690b1ccef40d6b22fdccbf478c19aeb3253269191";
   };
 
   buildType = "ament_cmake";

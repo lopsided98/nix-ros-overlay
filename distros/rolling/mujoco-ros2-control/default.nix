@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, backward-ros, control-toolbox, controller-manager, fmt, git, glfw3, hardware-interface, mujoco-ros2-control-msgs, mujoco-ros2-control-plugins, mujoco-vendor, nav-msgs, pluginlib, python3, python3Packages, rclcpp, rclcpp-lifecycle, ros2-control-cmake, sensor-msgs, transmission-interface }:
 buildRosPackage {
   pname = "ros-rolling-mujoco-ros2-control";
-  version = "0.0.2-r1";
+  version = "0.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/rolling/mujoco_ros2_control/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "58fbf22f692f6a68f37e5cfe8ca07970ce8c863c9d102dcfe8e0e555ead59ee7";
+    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/rolling/mujoco_ros2_control/0.0.2-2.tar.gz";
+    name = "0.0.2-2.tar.gz";
+    sha256 = "73b4bf224bb2095fdc612bcb8f8a82b8d9924c658aca28fb725d8deb0a632e97";
   };
 
   buildType = "ament_cmake";

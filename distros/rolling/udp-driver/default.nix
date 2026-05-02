@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, asio, asio-cmake-module, io-context, lifecycle-msgs, rclcpp, rclcpp-components, rclcpp-lifecycle, std-msgs, udp-msgs }:
 buildRosPackage {
   pname = "ros-rolling-udp-driver";
-  version = "1.2.0-r3";
+  version = "1.2.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/rolling/udp_driver/1.2.0-3.tar.gz";
-    name = "1.2.0-3.tar.gz";
-    sha256 = "77b16f1efdb28e19c946895f30d7060dea890fd1003a40cc66d35684f1a93afc";
+    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/rolling/udp_driver/1.2.0-4.tar.gz";
+    name = "1.2.0-4.tar.gz";
+    sha256 = "85b46ad6462feb576499ba548cd1570246838c8745dc7cec9eb128a91067e289";
   };
 
   buildType = "ament_cmake";

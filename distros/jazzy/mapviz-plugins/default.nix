@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, cv-bridge, geometry-msgs, gps-msgs, image-transport, map-msgs, mapviz, marti-common-msgs, marti-nav-msgs, marti-sensor-msgs, marti-visualization-msgs, nav-msgs, opencv, pluginlib, qt5, rclcpp, rclcpp-action, ros-environment, sensor-msgs, std-msgs, std-srvs, stereo-msgs, swri-image-util, swri-math-util, swri-route-util, swri-transform-util, tf2, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-mapviz-plugins";
-  version = "2.6.2-r1";
+  version = "2.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/jazzy/mapviz_plugins/2.6.2-1.tar.gz";
-    name = "2.6.2-1.tar.gz";
-    sha256 = "7bd1c37a6c72c4cac02445479a94149c7b9cb1b8a8f8f7f4b93231db99b1a3b4";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/jazzy/mapviz_plugins/2.6.3-1.tar.gz";
+    name = "2.6.3-1.tar.gz";
+    sha256 = "d43fa9c7b79fa05af92da14e411d3ac8fd5f23101d5e338a1d71276ed1a56bbd";
   };
 
   buildType = "ament_cmake";

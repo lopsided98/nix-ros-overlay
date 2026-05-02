@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ecl-build, ecl-converters, ecl-eigen, ecl-exceptions, ecl-formatters, ecl-license, ecl-math, sophus }:
 buildRosPackage {
   pname = "ros-rolling-ecl-linear-algebra";
-  version = "1.2.1-r4";
+  version = "1.2.1-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ecl_core-release/archive/release/rolling/ecl_linear_algebra/1.2.1-4.tar.gz";
-    name = "1.2.1-4.tar.gz";
-    sha256 = "2dbd8ba17dbb31959226aee65bcb467061b766069b1d8746fd5294d0383634d9";
+    url = "https://github.com/ros2-gbp/ecl_core-release/archive/release/rolling/ecl_linear_algebra/1.2.1-5.tar.gz";
+    name = "1.2.1-5.tar.gz";
+    sha256 = "f180cccf30d9248883f326f5aa8dbc27a23ce234b89c8225456b9175b91fc1e4";
   };
 
   buildType = "ament_cmake";

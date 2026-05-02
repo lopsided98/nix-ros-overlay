@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, class-loader, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-laser-proc";
-  version = "1.0.3-r1";
+  version = "1.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/laser_proc-release/archive/release/rolling/laser_proc/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "008da6e6e4cb787d62076444bba6391001d962d4e8ea62e4cd4b170ffa33808b";
+    url = "https://github.com/ros2-gbp/laser_proc-release/archive/release/rolling/laser_proc/1.0.3-2.tar.gz";
+    name = "1.0.3-2.tar.gz";
+    sha256 = "4cbe9118c3974b216a49ca00b2164547194cb18175771e02d78240b531db17e0";
   };
 
   buildType = "ament_cmake";

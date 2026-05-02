@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-mypy, ament-pep257, python3Packages, rclpy, ros-testing, ros2cli, test-msgs }:
 buildRosPackage {
   pname = "ros-rolling-sros2";
-  version = "0.16.4-r1";
+  version = "0.16.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sros2-release/archive/release/rolling/sros2/0.16.4-1.tar.gz";
-    name = "0.16.4-1.tar.gz";
-    sha256 = "2e9ae41a58c579b1fc5b41c24fbe1c1f220bc6c23c7e7296d14d1f0555801749";
+    url = "https://github.com/ros2-gbp/sros2-release/archive/release/rolling/sros2/0.16.4-2.tar.gz";
+    name = "0.16.4-2.tar.gz";
+    sha256 = "a4242869395ee56faa8b64e1898eb7de56b4223ef9b044b77e6ee143af279058";
   };
 
   buildType = "ament_python";

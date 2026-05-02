@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, launch-xml, rcl, rcl-interfaces, rclcpp, rclcpp-components, rcpputils, rcutils, rmw }:
 buildRosPackage {
   pname = "ros-rolling-demo-nodes-cpp";
-  version = "0.37.8-r1";
+  version = "0.37.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/demo_nodes_cpp/0.37.8-1.tar.gz";
-    name = "0.37.8-1.tar.gz";
-    sha256 = "ba4f19093e5599336205762a537d42a1b11a8e8517c3ff316ab4a1456baac2fc";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/demo_nodes_cpp/0.37.8-2.tar.gz";
+    name = "0.37.8-2.tar.gz";
+    sha256 = "e2108c8cd15d49b4ea16a3cd6e9b4fffe5ad23c54885d248eec44aed0d105ff6";
   };
 
   buildType = "ament_cmake";

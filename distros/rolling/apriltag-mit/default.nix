@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, clang, cmake, eigen, opencv }:
 buildRosPackage {
   pname = "ros-rolling-apriltag-mit";
-  version = "1.0.3-r1";
+  version = "1.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/apriltag_mit-release/archive/release/rolling/apriltag_mit/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "44595f58886501618069cb19c2215c4d96c5f04f3dfe7ff2d5c1a833e01c1d83";
+    url = "https://github.com/ros2-gbp/apriltag_mit-release/archive/release/rolling/apriltag_mit/1.0.3-2.tar.gz";
+    name = "1.0.3-2.tar.gz";
+    sha256 = "37d24104c629c96b212c8c7fea59362d54357e5384b1aee45105754c69800404";
   };
 
   buildType = "cmake";

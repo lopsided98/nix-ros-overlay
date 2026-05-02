@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, mola-common, mp2p-icp, mrpt-libmaps, onetbb, ros-environment }:
 buildRosPackage {
   pname = "ros-kilted-mola-metric-maps";
-  version = "2.7.0-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_metric_maps/2.7.0-1.tar.gz";
-    name = "2.7.0-1.tar.gz";
-    sha256 = "13805c3a415ad48bdbfe74b83dbc275a3d5d1049b0997f87408fe0914c40ee98";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_metric_maps/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "2f8f953755dd9f62ae664dee53ff669ad9526a91157a8e8f6859ef7aa9e97456";
   };
 
   buildType = "ament_cmake";

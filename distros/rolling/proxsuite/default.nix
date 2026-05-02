@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, doxygen, eigen, git, matio, python3Packages, simde }:
 buildRosPackage {
   pname = "ros-rolling-proxsuite";
-  version = "0.6.5-r1";
+  version = "0.6.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/proxsuite-release/archive/release/rolling/proxsuite/0.6.5-1.tar.gz";
-    name = "0.6.5-1.tar.gz";
-    sha256 = "34b1f3383ecb72a704c2158ff4f3e91f131666af49feb5b33e90b8d5fb69073a";
+    url = "https://github.com/ros2-gbp/proxsuite-release/archive/release/rolling/proxsuite/0.6.5-2.tar.gz";
+    name = "0.6.5-2.tar.gz";
+    sha256 = "30741ce6f15dd86946a2e58f1f5a9dac25fbfd7700a00f31525faf8c05cc4290";
   };
 
   buildType = "cmake";

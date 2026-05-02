@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, diagnostic-msgs, python-qt-binding, python3Packages, qt-gui, qt-gui-py-common, rclpy, rosidl-default-generators, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-rolling-rqt-robot-monitor";
-  version = "1.0.6-r1";
+  version = "1.0.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_robot_monitor-release/archive/release/rolling/rqt_robot_monitor/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "336657d27fce7a177f257212847bcb41e1a26079f9e73f8f571bc061c916f027";
+    url = "https://github.com/ros2-gbp/rqt_robot_monitor-release/archive/release/rolling/rqt_robot_monitor/1.0.6-2.tar.gz";
+    name = "1.0.6-2.tar.gz";
+    sha256 = "dfe12c16cc9b2b5db4e32e585020ab1729937b8431156bf816dc5e917e88ad04";
   };
 
   buildType = "ament_python";

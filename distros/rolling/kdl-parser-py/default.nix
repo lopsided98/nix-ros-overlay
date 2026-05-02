@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python-orocos-kdl-vendor, python3Packages, urdfdom-py }:
 buildRosPackage {
   pname = "ros-rolling-kdl-parser-py";
-  version = "3.0.0-r1";
+  version = "3.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kdl_parser_py-release/archive/release/rolling/kdl_parser_py/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "c58665d3b4ba3021250bd2c3c4b5e534ca395b41459f97379d8ac195540acfa7";
+    url = "https://github.com/ros2-gbp/kdl_parser_py-release/archive/release/rolling/kdl_parser_py/3.0.0-2.tar.gz";
+    name = "3.0.0-2.tar.gz";
+    sha256 = "7e986445a2602decd22a11682de74943ba443599b3dbaff82f2f6b2b323ea49f";
   };
 
   buildType = "ament_python";

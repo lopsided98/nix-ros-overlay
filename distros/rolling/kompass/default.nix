@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, automatika-ros-sugar, kompass-interfaces, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-kompass";
-  version = "0.4.1-r1";
+  version = "0.4.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kompass-release/archive/release/rolling/kompass/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "4bc5655e8d710c46bd23fd8e7185b0c64ebbb07de15488ec3e5df48372ec30ee";
+    url = "https://github.com/ros2-gbp/kompass-release/archive/release/rolling/kompass/0.4.1-2.tar.gz";
+    name = "0.4.1-2.tar.gz";
+    sha256 = "61d4195ef4207dcf5bc37901c886d41360a1402fd9a779f2e3f6c54e1eacf7ba";
   };
 
   buildType = "ament_python";

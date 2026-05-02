@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, libmodbus, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-at-sonde-ros-driver";
-  version = "1.0.0-r1";
+  version = "1.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/at_sonde_ros_driver-release/archive/release/rolling/at_sonde_ros_driver/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "d62c9bba5cc86ea13e7ecf7a9d0735604fc0ec43b1ba63b2f8bb42a571dbb646";
+    url = "https://github.com/ros2-gbp/at_sonde_ros_driver-release/archive/release/rolling/at_sonde_ros_driver/1.0.0-2.tar.gz";
+    name = "1.0.0-2.tar.gz";
+    sha256 = "70491a446244416db43dfa79617cace92fa2f696e2d1cafba7bd7005e8e0175d";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, boost, eigen, gtest, mrt-cmake-modules }:
 buildRosPackage {
   pname = "ros-rolling-lanelet2-core";
-  version = "1.2.1-r6";
+  version = "1.2.1-r7";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/rolling/lanelet2_core/1.2.1-6.tar.gz";
-    name = "1.2.1-6.tar.gz";
-    sha256 = "073568f570ddd870f00a7aee803bf44a32d207aa3b7336886c47ffd31a86cb0b";
+    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/rolling/lanelet2_core/1.2.1-7.tar.gz";
+    name = "1.2.1-7.tar.gz";
+    sha256 = "d8f8f8fba75777e32dda8acde1259341d477a5c524e456d82bfcc244a8cc51fa";
   };
 
   buildType = "ament_cmake";

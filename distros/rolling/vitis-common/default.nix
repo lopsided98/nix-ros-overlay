@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ament-vitis, ocl-icd, opencl-clhpp }:
 buildRosPackage {
   pname = "ros-rolling-vitis-common";
-  version = "0.4.2-r3";
+  version = "0.4.2-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vitis_common-release/archive/release/rolling/vitis_common/0.4.2-3.tar.gz";
-    name = "0.4.2-3.tar.gz";
-    sha256 = "9747d48c55d5467df1b10389862e152eec502ef72df247b1311610f54990d02d";
+    url = "https://github.com/ros2-gbp/vitis_common-release/archive/release/rolling/vitis_common/0.4.2-4.tar.gz";
+    name = "0.4.2-4.tar.gz";
+    sha256 = "7646d8874660921bffc05b7d324cc54405db25707b83017b3a378237e8e766e0";
   };
 
   buildType = "ament_cmake";

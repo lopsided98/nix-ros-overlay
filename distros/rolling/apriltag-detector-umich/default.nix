@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-clang-format, ament-cmake-ros, ament-lint-auto, ament-lint-common, apriltag, apriltag-detector, apriltag-msgs, opencv, pluginlib, rclcpp, ros-environment, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-apriltag-detector-umich";
-  version = "3.0.4-r1";
+  version = "3.0.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/apriltag_detector-release/archive/release/rolling/apriltag_detector_umich/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "956c7a826e8dcc4265c673f5552c17d5e90c604366e0c55ad54448698bf0a9cb";
+    url = "https://github.com/ros2-gbp/apriltag_detector-release/archive/release/rolling/apriltag_detector_umich/3.0.4-2.tar.gz";
+    name = "3.0.4-2.tar.gz";
+    sha256 = "d78939f7d0ab5aaae696165281a0f8a894af8ea17ef7d489d5410db38a7defe5";
   };
 
   buildType = "ament_cmake";

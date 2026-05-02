@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, rqt-image-overlay-layer, vision-msgs }:
 buildRosPackage {
   pname = "ros-rolling-vision-msgs-layers";
-  version = "0.2.0-r3";
+  version = "0.2.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_msgs_layers-release/archive/release/rolling/vision_msgs_layers/0.2.0-3.tar.gz";
-    name = "0.2.0-3.tar.gz";
-    sha256 = "6fb269cdaf8cb5b73e1dbb5cf92d504c918364ae55356d43b92b8e2da398272e";
+    url = "https://github.com/ros2-gbp/vision_msgs_layers-release/archive/release/rolling/vision_msgs_layers/0.2.0-4.tar.gz";
+    name = "0.2.0-4.tar.gz";
+    sha256 = "0f974ec9959d5019e56fc84a6e333ae24a07c680ee7cdcdf4342e851f7e93934";
   };
 
   buildType = "ament_cmake";

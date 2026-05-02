@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, git, rclcpp, rmw-implementation, ros-environment, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-performance-test";
-  version = "2.3.0-r1";
+  version = "2.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/performance_test-release/archive/release/rolling/performance_test/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "5c398b0324fce790a83b74f5d12608c6310acfe76de44e74c0a02ce9c0742487";
+    url = "https://github.com/ros2-gbp/performance_test-release/archive/release/rolling/performance_test/2.3.0-2.tar.gz";
+    name = "2.3.0-2.tar.gz";
+    sha256 = "71d1b3c8732847a146f8ec5b700fa3e66242a08bf0485941a71d1ce9fde1e7c4";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, urdf }:
 buildRosPackage {
   pname = "ros-rolling-ffw-spring-actuator-controller";
-  version = "1.1.14-r1";
+  version = "1.1.14-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/rolling/ffw_spring_actuator_controller/1.1.14-1.tar.gz";
-    name = "1.1.14-1.tar.gz";
-    sha256 = "9bafaaa045ef37668e14833f753c4a4b1a49d5162f5cf25921b2af72c5441b23";
+    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/rolling/ffw_spring_actuator_controller/1.1.14-2.tar.gz";
+    name = "1.1.14-2.tar.gz";
+    sha256 = "73a18502ccf6b396aba9456413bd8ecbf06d00c182891e2cced3195597794f78";
   };
 
   buildType = "ament_cmake";

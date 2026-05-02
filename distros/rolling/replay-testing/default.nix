@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, _unresolved_python3-junitparser, ament-cmake, ament-cmake-pytest, geometry-msgs, launch, python3Packages, rclpy, ros2bag, ros2run, ros2topic, rosbag2-py, rosbag2-storage-mcap }:
 buildRosPackage {
   pname = "ros-rolling-replay-testing";
-  version = "0.0.4-r1";
+  version = "0.0.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/replay_testing-release/archive/release/rolling/replay_testing/0.0.4-1.tar.gz";
-    name = "0.0.4-1.tar.gz";
-    sha256 = "4a08b318e08ebfc363943ed37a909ad56bd8b25401182a2f2bc2f20fae81c58d";
+    url = "https://github.com/ros2-gbp/replay_testing-release/archive/release/rolling/replay_testing/0.0.4-2.tar.gz";
+    name = "0.0.4-2.tar.gz";
+    sha256 = "e7f29f178c4192b7b278552fee6c54be54c644731d49d0dbcbfcf522278d9a98";
   };
 
   buildType = "ament_cmake";

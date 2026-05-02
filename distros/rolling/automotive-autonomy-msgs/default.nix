@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, automotive-navigation-msgs, automotive-platform-msgs, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-automotive-autonomy-msgs";
-  version = "3.0.4-r5";
+  version = "3.0.4-r6";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/automotive_autonomy_msgs-release/archive/release/rolling/automotive_autonomy_msgs/3.0.4-5.tar.gz";
-    name = "3.0.4-5.tar.gz";
-    sha256 = "115810dbc90dc2bda5fd419a21c14f54bb802dd2ce1c2df8701fc0754e3ca373";
+    url = "https://github.com/ros2-gbp/automotive_autonomy_msgs-release/archive/release/rolling/automotive_autonomy_msgs/3.0.4-6.tar.gz";
+    name = "3.0.4-6.tar.gz";
+    sha256 = "433870699e720fe0fe2625eb77a74afbea63bb2e33cde51fe0777b4017094b68";
   };
 
   buildType = "ament_cmake";

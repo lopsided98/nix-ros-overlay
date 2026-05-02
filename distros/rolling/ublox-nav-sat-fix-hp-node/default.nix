@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-uncrustify, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components, sensor-msgs, std-msgs, ublox-ubx-interfaces, ublox-ubx-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ublox-nav-sat-fix-hp-node";
-  version = "0.7.4-r1";
+  version = "0.7.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/rolling/ublox_nav_sat_fix_hp_node/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "9d6a87c63a82c27c8bb2837184519599514c46f0c5def18e4db36734149bb032";
+    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/rolling/ublox_nav_sat_fix_hp_node/0.7.4-2.tar.gz";
+    name = "0.7.4-2.tar.gz";
+    sha256 = "8cfad403fadbe4b39f19f9d67d497c298590333fd9e973d4d0260d988dbda841";
   };
 
   buildType = "ament_cmake";

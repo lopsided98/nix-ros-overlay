@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-dynamixel-workbench-msgs";
-  version = "2.1.0-r1";
+  version = "2.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_workbench_msgs-release/archive/release/rolling/dynamixel_workbench_msgs/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "8439330581cb42f8fb5d2728828253864806bf9d144d5c31dcf32cb75f9e9656";
+    url = "https://github.com/ros2-gbp/dynamixel_workbench_msgs-release/archive/release/rolling/dynamixel_workbench_msgs/2.1.0-2.tar.gz";
+    name = "2.1.0-2.tar.gz";
+    sha256 = "3ef57f27c5d0d4ca034fcb09ba0f74f2a9f15c8c7f40dd9f7c9485ed0c4a0f60";
   };
 
   buildType = "ament_cmake";

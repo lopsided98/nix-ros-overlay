@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, lifecycle-msgs, nav-msgs, raspimouse-msgs, rclcpp, rclcpp-components, rclcpp-lifecycle, std-msgs, std-srvs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-raspimouse";
-  version = "2.0.0-r1";
+  version = "2.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/raspimouse2-release/archive/release/rolling/raspimouse/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "d50e90f942980e85c825d6b23088880ea38b390a1d4cdaf1234f5355a6bfdb3a";
+    url = "https://github.com/ros2-gbp/raspimouse2-release/archive/release/rolling/raspimouse/2.0.0-2.tar.gz";
+    name = "2.0.0-2.tar.gz";
+    sha256 = "a940dd6b38f0f4b28e6f7ae711deb6796fd3ce14fab431ee93db40c0a77e0f32";
   };
 
   buildType = "ament_cmake";

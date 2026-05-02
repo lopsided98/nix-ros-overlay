@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-delphi-mrr-msgs";
-  version = "4.0.0-r3";
+  version = "4.0.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/astuff_sensor_msgs-release/archive/release/rolling/delphi_mrr_msgs/4.0.0-3.tar.gz";
-    name = "4.0.0-3.tar.gz";
-    sha256 = "6f29e7244378c0ff2f440687fe7941b2a642655ce0d73bc5760c1c90920dfaee";
+    url = "https://github.com/ros2-gbp/astuff_sensor_msgs-release/archive/release/rolling/delphi_mrr_msgs/4.0.0-4.tar.gz";
+    name = "4.0.0-4.tar.gz";
+    sha256 = "68a2e2ec2aaa2649b190aba6d7444d3060cab2c4340ffd229d600801c3670100";
   };
 
   buildType = "ament_cmake";

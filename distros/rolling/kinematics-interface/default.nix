@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, eigen, pluginlib, rclcpp-lifecycle, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-rolling-kinematics-interface";
-  version = "2.4.0-r2";
+  version = "2.4.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/rolling/kinematics_interface/2.4.0-2.tar.gz";
-    name = "2.4.0-2.tar.gz";
-    sha256 = "7b6e11a68ce753c8253b7f18f4f46da027f8a05b4d9b54c135b26bf48b29afde";
+    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/rolling/kinematics_interface/2.4.0-3.tar.gz";
+    name = "2.4.0-3.tar.gz";
+    sha256 = "02e842e565c1f808e25decf0ee4d3b89508732f8a3d3925efb016cb67f6e6bd4";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, angles, cras-cpp-common, cras-lint, geographiclib, geometry-msgs, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-magnetic-model";
-  version = "3.0.2-r1";
+  version = "3.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/compass-release/archive/release/rolling/magnetic_model/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "d2411b2f8b11f06f093ac54746dd9af42e45cd9187f38a23b83f99e523927388";
+    url = "https://github.com/ros2-gbp/compass-release/archive/release/rolling/magnetic_model/3.0.2-2.tar.gz";
+    name = "3.0.2-2.tar.gz";
+    sha256 = "65b9dd9ce63640957a40c556b0a22d7463497aaac88ab764dd9dae2430d7ace7";
   };
 
   buildType = "ament_cmake";

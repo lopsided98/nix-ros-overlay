@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-hls-lfcd-lds-driver";
-  version = "2.1.1-r1";
+  version = "2.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hls_lfcd_lds_driver-release/archive/release/rolling/hls_lfcd_lds_driver/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "fd5a44a0cf6587191204fbd5267c0b74f6ef0323f30a800d4d866dd9697a6317";
+    url = "https://github.com/ros2-gbp/hls_lfcd_lds_driver-release/archive/release/rolling/hls_lfcd_lds_driver/2.1.1-2.tar.gz";
+    name = "2.1.1-2.tar.gz";
+    sha256 = "622054ee7685dcc8a89a76bcb70d01b7f5183d7d26df13ace2767f41f3cbb409";
   };
 
   buildType = "ament_cmake";

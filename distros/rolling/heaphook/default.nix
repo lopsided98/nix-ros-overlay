@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, tlsf }:
 buildRosPackage {
   pname = "ros-rolling-heaphook";
-  version = "0.1.1-r2";
+  version = "0.1.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/heaphook-release/archive/release/rolling/heaphook/0.1.1-2.tar.gz";
-    name = "0.1.1-2.tar.gz";
-    sha256 = "79d2c863a761f59f2ec9b7febdfb988deb6c3e2dad626190046b5c4608fc9857";
+    url = "https://github.com/ros2-gbp/heaphook-release/archive/release/rolling/heaphook/0.1.1-3.tar.gz";
+    name = "0.1.1-3.tar.gz";
+    sha256 = "295c6361605d31fc7b28222ba01db9a4a5fac404734c23b89be61589e881a2c8";
   };
 
   buildType = "ament_cmake";

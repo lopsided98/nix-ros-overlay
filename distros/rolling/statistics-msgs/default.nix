@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-statistics-msgs";
-  version = "2.4.4-r1";
+  version = "2.4.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/statistics_msgs/2.4.4-1.tar.gz";
-    name = "2.4.4-1.tar.gz";
-    sha256 = "9215861a4799be6428d2f164ca58c184b30f4b6ad0c0a9b133e45986101831ee";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/statistics_msgs/2.4.4-2.tar.gz";
+    name = "2.4.4-2.tar.gz";
+    sha256 = "2bfb55fdb8f87c4dd7b49e6bc2612373404310a5a4d48abf7e94944c1cdf0ec6";
   };
 
   buildType = "ament_cmake";

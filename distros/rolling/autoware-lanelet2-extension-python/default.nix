@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, autoware-cmake, autoware-lanelet2-extension, boost, geometry-msgs, lanelet2-core, lanelet2-io, lanelet2-projection, lanelet2-python, lanelet2-routing, lanelet2-traffic-rules, lanelet2-validation, python-cmake-module, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-autoware-lanelet2-extension-python";
-  version = "0.7.2-r1";
+  version = "0.7.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_lanelet2_extension-release/archive/release/rolling/autoware_lanelet2_extension_python/0.7.2-1.tar.gz";
-    name = "0.7.2-1.tar.gz";
-    sha256 = "90a08099f1529d6d9ab5514eabecac05d8f220cb8bdff232d1d16134d41de522";
+    url = "https://github.com/ros2-gbp/autoware_lanelet2_extension-release/archive/release/rolling/autoware_lanelet2_extension_python/0.7.2-2.tar.gz";
+    name = "0.7.2-2.tar.gz";
+    sha256 = "61b0f14e01aa5daede59fae9f564ab9058c82367a0b21b67d0e0023aea36c447";
   };
 
   buildType = "ament_cmake";

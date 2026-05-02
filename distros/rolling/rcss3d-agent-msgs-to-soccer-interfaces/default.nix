@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rcss3d-agent-msgs, soccer-vision-3d-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rcss3d-agent-msgs-to-soccer-interfaces";
-  version = "0.4.1-r3";
+  version = "0.4.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcss3d_agent-release/archive/release/rolling/rcss3d_agent_msgs_to_soccer_interfaces/0.4.1-3.tar.gz";
-    name = "0.4.1-3.tar.gz";
-    sha256 = "de8a5bef6912009854dc6f25280ab9ebf4947c9d4eaabbcf827c7a37421c266b";
+    url = "https://github.com/ros2-gbp/rcss3d_agent-release/archive/release/rolling/rcss3d_agent_msgs_to_soccer_interfaces/0.4.1-4.tar.gz";
+    name = "0.4.1-4.tar.gz";
+    sha256 = "23313c7fbf4df109890c79a5eb7a0c9e8cca0b8585fa92cd95bf593572f0f397";
   };
 
   buildType = "ament_cmake";

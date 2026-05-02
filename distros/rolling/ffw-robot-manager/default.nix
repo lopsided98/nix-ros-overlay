@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, controller-interface, dynamixel-hardware-interface, dynamixel-interfaces, generate-parameter-library, hardware-interface, pluginlib, rclcpp, ros2-control-cmake, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-ffw-robot-manager";
-  version = "1.1.14-r1";
+  version = "1.1.14-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/rolling/ffw_robot_manager/1.1.14-1.tar.gz";
-    name = "1.1.14-1.tar.gz";
-    sha256 = "224c0fbcc6df9dc22e5778f2a0bb44075666fd60b802d2fbb2fae06614cece1a";
+    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/rolling/ffw_robot_manager/1.1.14-2.tar.gz";
+    name = "1.1.14-2.tar.gz";
+    sha256 = "0d0327368384910e39654a3d0c97cc9b595f30e5ead079bcf5c58fe3573c9c44";
   };
 
   buildType = "ament_cmake";

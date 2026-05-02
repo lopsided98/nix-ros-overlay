@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-marker-msgs";
-  version = "0.0.8-r1";
+  version = "0.0.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marker_msgs-release/archive/release/rolling/marker_msgs/0.0.8-1.tar.gz";
-    name = "0.0.8-1.tar.gz";
-    sha256 = "7b6ccee1be7afd8f1cdce7abc429d4a719969fd1604a95635690070acda4f916";
+    url = "https://github.com/ros2-gbp/marker_msgs-release/archive/release/rolling/marker_msgs/0.0.8-2.tar.gz";
+    name = "0.0.8-2.tar.gz";
+    sha256 = "2c9bd675dab1ce8430b741798e68abf14919063d9df2fafba18460ea424dd9d5";
   };
 
   buildType = "ament_cmake";

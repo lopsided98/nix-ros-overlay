@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-clang-format, ament-cmake-gmock, ament-cmake-gtest, ament-lint-auto, ament-lint-common, muparser, pkg-config, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-parameter-expression";
-  version = "0.0.2-r1";
+  version = "0.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/parameter_expression-release/archive/release/rolling/parameter_expression/0.0.2-1.tar.gz";
-    name = "0.0.2-1.tar.gz";
-    sha256 = "a95943d8d3738951c44a5e9b2b1bcb171819bed4eb3b79d1584b6c8f783c106d";
+    url = "https://github.com/ros2-gbp/parameter_expression-release/archive/release/rolling/parameter_expression/0.0.2-2.tar.gz";
+    name = "0.0.2-2.tar.gz";
+    sha256 = "4f80a8d478824404f8d48484b28fc8594554193a07b9dae22ea84cd5fbe658b5";
   };
 
   buildType = "ament_cmake";

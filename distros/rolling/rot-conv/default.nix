@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, eigen3-cmake-module }:
 buildRosPackage {
   pname = "ros-rolling-rot-conv";
-  version = "1.1.0-r3";
+  version = "1.1.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rot_conv_lib-release/archive/release/rolling/rot_conv/1.1.0-3.tar.gz";
-    name = "1.1.0-3.tar.gz";
-    sha256 = "fc8fc8d953695d041ad3b6e7cbbec2d43e9b5923b978878a2f34ad1b7f913e5d";
+    url = "https://github.com/ros2-gbp/rot_conv_lib-release/archive/release/rolling/rot_conv/1.1.0-4.tar.gz";
+    name = "1.1.0-4.tar.gz";
+    sha256 = "a9a43be54c7e416fd0bd21c7e46ca58fcd96d12610e4a4f1d99bb0b3173d8da1";
   };
 
   buildType = "ament_cmake";

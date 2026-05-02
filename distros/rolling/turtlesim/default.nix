@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, ament-lint-auto, ament-lint-common, geometry-msgs, qt6, rclcpp, rclcpp-action, std-msgs, std-srvs, turtlesim-msgs }:
 buildRosPackage {
   pname = "ros-rolling-turtlesim";
-  version = "1.10.7-r4";
+  version = "1.10.8-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_tutorials-release/archive/release/rolling/turtlesim/1.10.7-4.tar.gz";
-    name = "1.10.7-4.tar.gz";
-    sha256 = "d9c3a79368005fa6c5e8979888118ca759bcc36234d8b0e3ebef6586bad8ae82";
+    url = "https://github.com/ros2-gbp/ros_tutorials-release/archive/release/rolling/turtlesim/1.10.8-2.tar.gz";
+    name = "1.10.8-2.tar.gz";
+    sha256 = "74a54e8a1e49bc2a6255caa29c5a3a95e70dc0c2b46dce5cf0579184387f94dd";
   };
 
   buildType = "ament_cmake";

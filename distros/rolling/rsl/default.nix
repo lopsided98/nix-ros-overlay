@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, clang, doxygen, eigen, fmt, git, range-v3, rclcpp, tcb-span, tl-expected-nixpkgs }:
 buildRosPackage {
   pname = "ros-rolling-rsl";
-  version = "1.3.0-r1";
+  version = "1.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/RSL-release/archive/release/rolling/rsl/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "7b4cbc7b5f1dc88fcb45bc58e5082cc94b4265272e16379a6c92b925dbcea2aa";
+    url = "https://github.com/ros2-gbp/RSL-release/archive/release/rolling/rsl/1.3.0-2.tar.gz";
+    name = "1.3.0-2.tar.gz";
+    sha256 = "13035a34a78a3c887d452c235f64b4f9a858d240b3548bf9af94fdd2dfa08717";
   };
 
   buildType = "cmake";

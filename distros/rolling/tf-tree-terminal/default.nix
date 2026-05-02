@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, python3Packages, rclpy, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-tf-tree-terminal";
-  version = "2.0.0-r2";
+  version = "2.0.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tf_tree_terminal-release/archive/release/rolling/tf_tree_terminal/2.0.0-2.tar.gz";
-    name = "2.0.0-2.tar.gz";
-    sha256 = "131b9124228b228a77e03f1105ee5d87b1c4543165f464c4b0a0061202bb0d94";
+    url = "https://github.com/ros2-gbp/tf_tree_terminal-release/archive/release/rolling/tf_tree_terminal/2.0.0-3.tar.gz";
+    name = "2.0.0-3.tar.gz";
+    sha256 = "ce6b1cf60956f1328518291c9ee0ecdcd06357972a24ad327fe413e9ae1ef9ff";
   };
 
   buildType = "ament_python";

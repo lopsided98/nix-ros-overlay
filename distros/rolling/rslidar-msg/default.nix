@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rclcpp, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rslidar-msg";
-  version = "0.0.0-r1";
+  version = "0.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rslidar_msg-release/archive/release/rolling/rslidar_msg/0.0.0-1.tar.gz";
-    name = "0.0.0-1.tar.gz";
-    sha256 = "1a682df898894e12af4510a1544df25190d29833daa15239c4b2302073549e9f";
+    url = "https://github.com/ros2-gbp/rslidar_msg-release/archive/release/rolling/rslidar_msg/0.0.0-2.tar.gz";
+    name = "0.0.0-2.tar.gz";
+    sha256 = "e2e59b8bab16f62caed5fd0fe050fdad875d73be23bb4c2948e4d8e424bf8d88";
   };
 
   buildType = "ament_cmake";

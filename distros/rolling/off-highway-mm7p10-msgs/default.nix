@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-off-highway-mm7p10-msgs";
-  version = "1.3.0-r1";
+  version = "1.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/rolling/off_highway_mm7p10_msgs/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "14a6345541a8ba78542e9985e6788183e70068102f47b75765e07c203feb36f2";
+    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/rolling/off_highway_mm7p10_msgs/1.3.0-2.tar.gz";
+    name = "1.3.0-2.tar.gz";
+    sha256 = "ffd87e3d390f492ae0c7a57deec73732fe26eac8bbf2e0c85c71654b7280a6ad";
   };
 
   buildType = "ament_cmake";

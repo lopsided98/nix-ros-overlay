@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-grbl-msgs";
-  version = "0.0.2-r8";
+  version = "0.0.2-r9";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/grbl_msgs-release/archive/release/rolling/grbl_msgs/0.0.2-8.tar.gz";
-    name = "0.0.2-8.tar.gz";
-    sha256 = "d7c2ff124b6da99c121d6b477bbea34bda7d0660dd7c1ad28bc4d7ebdcae7186";
+    url = "https://github.com/ros2-gbp/grbl_msgs-release/archive/release/rolling/grbl_msgs/0.0.2-9.tar.gz";
+    name = "0.0.2-9.tar.gz";
+    sha256 = "6b8c0a48fc4ee81cdd1861625695cc2a17a4cfc2d25258899b0e0d1cc165439e";
   };
 
   buildType = "ament_cmake";

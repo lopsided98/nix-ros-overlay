@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, camera-calibration-parsers, camera-info-manager, class-loader, gst_all_1, image-transport, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-gscam";
-  version = "2.0.4-r1";
+  version = "2.0.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gscam-release/archive/release/rolling/gscam/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "709f6109542aa75b721c2b029d8abc281577bf85019ad8e05fe877d846744425";
+    url = "https://github.com/ros2-gbp/gscam-release/archive/release/rolling/gscam/2.0.4-2.tar.gz";
+    name = "2.0.4-2.tar.gz";
+    sha256 = "524346b751d682b2c9965bc5b36e20a3063d4825eb5553ad15a07625b31ca1c2";
   };
 
   buildType = "ament_cmake";

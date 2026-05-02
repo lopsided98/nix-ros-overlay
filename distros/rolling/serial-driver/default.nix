@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, asio, asio-cmake-module, io-context, rclcpp, rclcpp-components, rclcpp-lifecycle, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-serial-driver";
-  version = "1.2.0-r3";
+  version = "1.2.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/rolling/serial_driver/1.2.0-3.tar.gz";
-    name = "1.2.0-3.tar.gz";
-    sha256 = "7606901322953d9e4db103e5821a5cefd7720548a200b9f52ca58ca3624db0b4";
+    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/rolling/serial_driver/1.2.0-4.tar.gz";
+    name = "1.2.0-4.tar.gz";
+    sha256 = "02440f2e7eada2366021880e633975f201261afe6571618893e2e41bbdda861e";
   };
 
   buildType = "ament_cmake";

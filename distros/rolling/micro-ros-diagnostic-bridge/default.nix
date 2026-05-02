@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, diagnostic-msgs, micro-ros-diagnostic-msgs, osrf-testing-tools-cpp, rclcpp, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-micro-ros-diagnostic-bridge";
-  version = "0.3.0-r5";
+  version = "0.3.0-r6";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/micro_ros_diagnostics-release/archive/release/rolling/micro_ros_diagnostic_bridge/0.3.0-5.tar.gz";
-    name = "0.3.0-5.tar.gz";
-    sha256 = "1f93aa7ed48a23d05fa8e74c75137a28a49de75bd17fbfc54710d1da29c12a94";
+    url = "https://github.com/ros2-gbp/micro_ros_diagnostics-release/archive/release/rolling/micro_ros_diagnostic_bridge/0.3.0-6.tar.gz";
+    name = "0.3.0-6.tar.gz";
+    sha256 = "9626d5ac382d4e1cc39711c0aa5e0d9cfc4c8b4cb665d6d96f5bb5a2d7be1a28";
   };
 
   buildType = "ament_cmake";

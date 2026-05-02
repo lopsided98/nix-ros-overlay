@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, rclcpp, rclcpp-components, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-phidgets-spatial";
-  version = "2.4.0-r1";
+  version = "2.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_spatial/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "13bbbdb4a82ec61aef0cef03bd329ceb46da37b6d4666c12cd46f49eb1775efe";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_spatial/2.4.0-2.tar.gz";
+    name = "2.4.0-2.tar.gz";
+    sha256 = "aa32d6cc1dd69efb27f226627fbdb28921097176594991f1786afd6d13f37fba";
   };
 
   buildType = "ament_cmake";

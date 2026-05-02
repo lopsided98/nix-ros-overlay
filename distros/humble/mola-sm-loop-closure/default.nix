@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, cmake, gtsam, mola-common, mola-georeferencing, mola-gtsam-factors, mola-metric-maps, mola-pose-list, mola-relocalization, mola-test-datasets, mola-yaml, mp2p-icp, mrpt-libgui, mrpt-libmaps, mrpt-libtclap, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-mola-sm-loop-closure";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_sm_loop_closure-release/archive/release/humble/mola_sm_loop_closure/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "b74e03ba438c77f8bef8d32d0be9cf82857c5bba071e88e81a71b68a54d2fe0e";
+    url = "https://github.com/ros2-gbp/mola_sm_loop_closure-release/archive/release/humble/mola_sm_loop_closure/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "355c880e70abf43adcd76fbbf8b2882cc87b4af7adde99febb9d2e6d3a7ad3af";
   };
 
   buildType = "ament_cmake";

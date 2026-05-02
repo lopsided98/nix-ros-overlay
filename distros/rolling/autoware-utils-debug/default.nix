@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-internal-debug-msgs, autoware-internal-msgs, autoware-lint-common, autoware-utils-system, diagnostic-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-autoware-utils-debug";
-  version = "1.4.2-r2";
+  version = "1.4.2-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/rolling/autoware_utils_debug/1.4.2-2.tar.gz";
-    name = "1.4.2-2.tar.gz";
-    sha256 = "577652b95848a7746707a8df44bd42863544e917f555fca9eac6faee6a0c493e";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/rolling/autoware_utils_debug/1.4.2-3.tar.gz";
+    name = "1.4.2-3.tar.gz";
+    sha256 = "6d8e7c88f8bbfa81ad8e5154f656d5332fe35f5bcda656e2e2e80986d7cdd03f";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rcl-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rosgraph-monitor-msgs";
-  version = "0.2.3-r1";
+  version = "0.2.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/graph_monitor-release/archive/release/rolling/rosgraph_monitor_msgs/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "76e7c8b27a328be6fc04c336c18ad1502493fe673ccbd41f25c1d040e7f284bc";
+    url = "https://github.com/ros2-gbp/graph_monitor-release/archive/release/rolling/rosgraph_monitor_msgs/0.2.3-2.tar.gz";
+    name = "0.2.3-2.tar.gz";
+    sha256 = "438b7ed3f735686b2d1cd752808dda99b0c42cc085bb0c97a8275e54f53c886c";
   };
 
   buildType = "ament_cmake";

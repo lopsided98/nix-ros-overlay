@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, geometry-msgs, python3Packages, rclcpp, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-py-binding-tools";
-  version = "2.1.2-r2";
+  version = "2.1.2-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_binding_tools-release/archive/release/rolling/py_binding_tools/2.1.2-2.tar.gz";
-    name = "2.1.2-2.tar.gz";
-    sha256 = "a0e6adbbc910f5b6800e5a92f62d8d750e0cb1b10cf7164e56bdcb2bcd81f497";
+    url = "https://github.com/ros2-gbp/py_binding_tools-release/archive/release/rolling/py_binding_tools/2.1.2-3.tar.gz";
+    name = "2.1.2-3.tar.gz";
+    sha256 = "fffc648a344581fe4e29ffc1a0a475137e0547ea06c4e433932f5d6985699669";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, boost, ceres-solver, diagnostic-updater, eigen, fuse-constraints, fuse-core, fuse-graphs, fuse-models, fuse-msgs, fuse-variables, geometry-msgs, gtest-vendor, launch, launch-pytest, launch-ros, nav-msgs, pluginlib, rclcpp, rclcpp-components, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-fuse-optimizers";
-  version = "1.3.1-r1";
+  version = "1.3.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/rolling/fuse_optimizers/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "f474a31aa89528f5650bc58f32c15161c3a98af76280ad5e2e20e191f6fa2b00";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/rolling/fuse_optimizers/1.3.1-2.tar.gz";
+    name = "1.3.1-2.tar.gz";
+    sha256 = "f5aeba6cf0d729fee830f43e0316f8ac5473e10b8b3b9fe0d9171697bff5f1a3";
   };
 
   buildType = "ament_cmake";

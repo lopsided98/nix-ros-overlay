@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-irobot-create-msgs";
-  version = "2.1.0-r3";
+  version = "2.1.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/irobot_create_msgs-release/archive/release/rolling/irobot_create_msgs/2.1.0-3.tar.gz";
-    name = "2.1.0-3.tar.gz";
-    sha256 = "4ef9df8078a80ad46359ed4e86f9caf7d8296df9bebee791000a8b27f3b12cb4";
+    url = "https://github.com/ros2-gbp/irobot_create_msgs-release/archive/release/rolling/irobot_create_msgs/2.1.0-4.tar.gz";
+    name = "2.1.0-4.tar.gz";
+    sha256 = "79d522e7b97d097de1ae107e995071b71029f5a42d8d2dc849d8fe24d12dca90";
   };
 
   buildType = "ament_cmake";

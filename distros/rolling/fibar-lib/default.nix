@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, clang, cmake, gtest }:
 buildRosPackage {
   pname = "ros-rolling-fibar-lib";
-  version = "1.0.2-r1";
+  version = "1.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fibar_lib-release/archive/release/rolling/fibar_lib/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "2bd15c101f0336e5274a58c80600cf6cc21a875777694e52551020d9917078b7";
+    url = "https://github.com/ros2-gbp/fibar_lib-release/archive/release/rolling/fibar_lib/1.0.2-2.tar.gz";
+    name = "1.0.2-2.tar.gz";
+    sha256 = "0c6e8dc5f5e182f86fc585b80d41fd31633b5e929961834b18f495eeefe3ada7";
   };
 
   buildType = "cmake";

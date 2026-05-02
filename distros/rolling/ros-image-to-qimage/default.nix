@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, cv-bridge, python-qt-binding, qt5, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ros-image-to-qimage";
-  version = "0.4.1-r3";
+  version = "0.4.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_image_to_qimage-release/archive/release/rolling/ros_image_to_qimage/0.4.1-3.tar.gz";
-    name = "0.4.1-3.tar.gz";
-    sha256 = "1f87904e474d994832be7caa4c0cc969e6ef2d0e02bc0251b94cfbc951c2d959";
+    url = "https://github.com/ros2-gbp/ros_image_to_qimage-release/archive/release/rolling/ros_image_to_qimage/0.4.1-4.tar.gz";
+    name = "0.4.1-4.tar.gz";
+    sha256 = "5a603dd51797056bfbf043cd43e25d715c6b3628b4136de5b404d3c7e0e9616f";
   };
 
   buildType = "ament_cmake";

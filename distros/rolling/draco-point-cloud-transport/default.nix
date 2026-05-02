@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, draco, pluginlib, point-cloud-interfaces, point-cloud-transport, rclcpp, rcpputils, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-draco-point-cloud-transport";
-  version = "6.1.0-r1";
+  version = "6.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/rolling/draco_point_cloud_transport/6.1.0-1.tar.gz";
-    name = "6.1.0-1.tar.gz";
-    sha256 = "bae25ba8ba1fef60fd95507613eef38dbb65f25a7bd226e477d18e4bf0d38e24";
+    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/rolling/draco_point_cloud_transport/6.1.0-2.tar.gz";
+    name = "6.1.0-2.tar.gz";
+    sha256 = "c5319a1e11dbf7f05576a99dbf73edc0f623b3a3ec74e8f330e34a33f97360a6";
   };
 
   buildType = "ament_cmake";

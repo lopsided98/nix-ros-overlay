@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-lint-cmake }:
 buildRosPackage {
   pname = "ros-rolling-eigen3-cmake-module";
-  version = "0.5.1-r1";
+  version = "0.5.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/eigen3_cmake_module-release/archive/release/rolling/eigen3_cmake_module/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "40df31b1a7a6fa4723a5f08a8f781d57eef528c5ce4b720212d591b7a076a1f3";
+    url = "https://github.com/ros2-gbp/eigen3_cmake_module-release/archive/release/rolling/eigen3_cmake_module/0.5.1-2.tar.gz";
+    name = "0.5.1-2.tar.gz";
+    sha256 = "fc16f14c010b7a4e167635bfaf989729266d8dcf8741b0c1866f60c22b6f4ea7";
   };
 
   buildType = "ament_cmake";

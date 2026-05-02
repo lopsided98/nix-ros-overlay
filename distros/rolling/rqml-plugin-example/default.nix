@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, qml6-ros2-plugin, qt6, rqml-core }:
 buildRosPackage {
   pname = "ros-rolling-rqml-plugin-example";
-  version = "3.26.42-r1";
+  version = "3.26.42-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqml-release/archive/release/rolling/rqml_plugin_example/3.26.42-1.tar.gz";
-    name = "3.26.42-1.tar.gz";
-    sha256 = "db1eea65327297cc2d7c4172b38ee59ea166434a7f67f22cf825e9b26879b0b4";
+    url = "https://github.com/ros2-gbp/rqml-release/archive/release/rolling/rqml_plugin_example/3.26.42-2.tar.gz";
+    name = "3.26.42-2.tar.gz";
+    sha256 = "adbbf011c6f78907e781278e32a5d36fdc6496ca1c40051e698519363483b7b1";
   };
 
   buildType = "ament_cmake";

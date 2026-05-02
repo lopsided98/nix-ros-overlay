@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, hardware-interface, kortex-api, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-kortex-driver";
-  version = "0.2.5-r1";
+  version = "0.2.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/rolling/kortex_driver/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "46e4b06d25337dfb1064f2fe498cc6c2af0126f5c7e0320a2a2dac0778d2e872";
+    url = "https://github.com/ros2-gbp/ros2_kortex-release/archive/release/rolling/kortex_driver/0.2.5-2.tar.gz";
+    name = "0.2.5-2.tar.gz";
+    sha256 = "d582877b0c4e5a9978ff7a6b0aeb557b9aecd4ae7af49e43f7e0a55a8d64c919";
   };
 
   buildType = "ament_cmake";

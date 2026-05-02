@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, eigen }:
 buildRosPackage {
   pname = "ros-rolling-ecl-eigen";
-  version = "1.2.1-r4";
+  version = "1.2.1-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ecl_core-release/archive/release/rolling/ecl_eigen/1.2.1-4.tar.gz";
-    name = "1.2.1-4.tar.gz";
-    sha256 = "b36cbfcd334674391ce97309b5eec2fb1fac19d31ebf22dd94f713b0ce52ecc6";
+    url = "https://github.com/ros2-gbp/ecl_core-release/archive/release/rolling/ecl_eigen/1.2.1-5.tar.gz";
+    name = "1.2.1-5.tar.gz";
+    sha256 = "fe8e675bf0c574c53d56081577f28e3430a3beaa2bb20836ad2e5cf90907d264";
   };
 
   buildType = "ament_cmake";

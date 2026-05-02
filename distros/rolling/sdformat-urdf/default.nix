@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, pluginlib, rcutils, sdformat-test-files, sdformat-vendor, tinyxml-2, urdf, urdf-parser-plugin, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-rolling-sdformat-urdf";
-  version = "2.1.0-r1";
+  version = "2.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sdformat_urdf-release/archive/release/rolling/sdformat_urdf/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "bd5a43f8c7c73042d4a5b2fbad7a575dfdf865a71fafb3b02bd8d1688931d3ce";
+    url = "https://github.com/ros2-gbp/sdformat_urdf-release/archive/release/rolling/sdformat_urdf/2.1.0-2.tar.gz";
+    name = "2.1.0-2.tar.gz";
+    sha256 = "07031a60ad4927c3511b5e84c39c7351ce3a4e1059df474691520f0b84bcfd58";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, freeglut, geometry-msgs, glew, image-transport, mapviz-interfaces, opencv, pkg-config, pluginlib, qt5, rclcpp, ros-environment, rqt-gui, rqt-gui-cpp, std-srvs, swri-math-util, swri-transform-util, tf2, tf2-geometry-msgs, tf2-ros, xorg, yaml-cpp }:
 buildRosPackage {
   pname = "ros-rolling-mapviz";
-  version = "2.6.2-r1";
+  version = "2.6.2-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/rolling/mapviz/2.6.2-1.tar.gz";
-    name = "2.6.2-1.tar.gz";
-    sha256 = "aa3c097c4760abd767eb75dc1dd764fcd4752314c7958bfaa775835a9a5f3634";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/rolling/mapviz/2.6.2-3.tar.gz";
+    name = "2.6.2-3.tar.gz";
+    sha256 = "7a332943341e07c2e41edfbdc327c3f0ec0c2d98ef99b89eebaab5204f89fbb9";
   };
 
   buildType = "ament_cmake";

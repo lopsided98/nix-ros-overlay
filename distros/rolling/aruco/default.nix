@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, eigen }:
 buildRosPackage {
   pname = "ros-rolling-aruco";
-  version = "5.0.5-r1";
+  version = "5.0.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aruco_ros-release/archive/release/rolling/aruco/5.0.5-1.tar.gz";
-    name = "5.0.5-1.tar.gz";
-    sha256 = "560f7729ed5df74de5accc2b4881190e42b5aabe4149d966053a6c21860221c8";
+    url = "https://github.com/ros2-gbp/aruco_ros-release/archive/release/rolling/aruco/5.0.5-2.tar.gz";
+    name = "5.0.5-2.tar.gz";
+    sha256 = "b354e26ba96ec2f1252ef712c254ca6d7b3aff95cd03f22c4abafa7c000c0a18";
   };
 
   buildType = "ament_cmake";

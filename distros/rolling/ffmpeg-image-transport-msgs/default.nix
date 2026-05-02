@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ffmpeg-image-transport-msgs";
-  version = "1.0.2-r2";
+  version = "1.0.2-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ffmpeg_image_transport_msgs-release/archive/release/rolling/ffmpeg_image_transport_msgs/1.0.2-2.tar.gz";
-    name = "1.0.2-2.tar.gz";
-    sha256 = "2a4072683f7347638fa93f43d3c3fd3115824cb9f90ad49db62493dae71f3b04";
+    url = "https://github.com/ros2-gbp/ffmpeg_image_transport_msgs-release/archive/release/rolling/ffmpeg_image_transport_msgs/1.0.2-3.tar.gz";
+    name = "1.0.2-3.tar.gz";
+    sha256 = "32f221f39ea8949776bf659665a888c1313dd9417281743cf25e3a56a3a9dae3";
   };
 
   buildType = "ament_cmake";

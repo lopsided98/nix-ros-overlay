@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-uncrustify, ament-lint-auto, ament-lint-common, boost, builtin-interfaces, eigen, geometry-msgs, openssl, rclcpp, rclcpp-components, rmf-traffic, rmf-traffic-msgs, rmf-traffic-ros2, rmf-utils, rmf-visualization-msgs, rosidl-default-generators, visualization-msgs, websocketpp }:
 buildRosPackage {
   pname = "ros-rolling-rmf-visualization-schedule";
-  version = "2.5.1-r1";
+  version = "2.5.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/rolling/rmf_visualization_schedule/2.5.1-1.tar.gz";
-    name = "2.5.1-1.tar.gz";
-    sha256 = "21a765887171dd935a8e0f2d0779be1e99ff54bd99d75279067f65d6121ffb8b";
+    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/rolling/rmf_visualization_schedule/2.5.1-2.tar.gz";
+    name = "2.5.1-2.tar.gz";
+    sha256 = "b1904c1a42f38e9a7e260c36b39f25000f476de7202a98afc9666be799b9e166";
   };
 
   buildType = "ament_cmake";

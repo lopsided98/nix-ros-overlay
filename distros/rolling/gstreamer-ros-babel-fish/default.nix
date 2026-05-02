@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, gst_all_1, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-gstreamer-ros-babel-fish";
-  version = "1.26.40-r1";
+  version = "1.26.40-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gstreamer_ros_babel_fish-release/archive/release/rolling/gstreamer_ros_babel_fish/1.26.40-1.tar.gz";
-    name = "1.26.40-1.tar.gz";
-    sha256 = "d96053376c81c044ef5631f83ade53025cb1d13ce09784dfb5caa3763cf0b170";
+    url = "https://github.com/ros2-gbp/gstreamer_ros_babel_fish-release/archive/release/rolling/gstreamer_ros_babel_fish/1.26.40-2.tar.gz";
+    name = "1.26.40-2.tar.gz";
+    sha256 = "378f1f62fafd09b923cbfe0caba9175095a7da518bae143b182171132077d32b";
   };
 
   buildType = "ament_cmake";

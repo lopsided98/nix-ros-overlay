@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, launch, phidgets-api, phidgets-msgs, rclcpp, rclcpp-components, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-phidgets-stepper";
-  version = "2.4.0-r1";
+  version = "2.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_stepper/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "dc87def86929600de1f0c5d3cef165210a1e117036d7c89d3000524c040d69ca";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_stepper/2.4.0-2.tar.gz";
+    name = "2.4.0-2.tar.gz";
+    sha256 = "27fe328954b4296e5244c52f7b3686c573231fcb85ec9cf64a1568bec01923c8";
   };
 
   buildType = "ament_cmake";

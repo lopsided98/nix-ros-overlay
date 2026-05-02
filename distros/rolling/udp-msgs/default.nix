@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-udp-msgs";
-  version = "0.0.5-r1";
+  version = "0.0.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/udp_msgs-release/archive/release/rolling/udp_msgs/0.0.5-1.tar.gz";
-    name = "0.0.5-1.tar.gz";
-    sha256 = "29f62117c6c09e85ef81531aa073a805f40abb85b1ac62b08a6efab325461135";
+    url = "https://github.com/ros2-gbp/udp_msgs-release/archive/release/rolling/udp_msgs/0.0.5-2.tar.gz";
+    name = "0.0.5-2.tar.gz";
+    sha256 = "4a636cf9c1c56e1d6fd538b9d4138f3ab8d0550877de2c811a3af8e14b27cec0";
   };
 
   buildType = "ament_cmake";

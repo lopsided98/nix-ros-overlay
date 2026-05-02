@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, curl, diagnostic-msgs, rclcpp-components }:
 buildRosPackage {
   pname = "ros-rolling-diagnostic-remote-logging";
-  version = "4.4.6-r1";
+  version = "4.4.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/rolling/diagnostic_remote_logging/4.4.6-1.tar.gz";
-    name = "4.4.6-1.tar.gz";
-    sha256 = "5f493c6e7a9eaeeb436999777a84bdf8207ebd655005d3ad38333ddd3f0e6ae3";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/rolling/diagnostic_remote_logging/4.4.6-2.tar.gz";
+    name = "4.4.6-2.tar.gz";
+    sha256 = "34065cc339eb436f72fa0539efeb43b12b86f250d2bc0698a20cb241290a7bfb";
   };
 
   buildType = "ament_cmake";

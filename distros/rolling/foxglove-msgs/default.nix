@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, ros-environment, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-foxglove-msgs";
-  version = "3.2.6-r1";
+  version = "3.2.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/foxglove_bridge-release/archive/release/rolling/foxglove_msgs/3.2.6-1.tar.gz";
-    name = "3.2.6-1.tar.gz";
-    sha256 = "79a583217e149cdca09e4aec3496182c866fb92d2edccdd9bc4744285a703e5b";
+    url = "https://github.com/ros2-gbp/foxglove_bridge-release/archive/release/rolling/foxglove_msgs/3.2.6-2.tar.gz";
+    name = "3.2.6-2.tar.gz";
+    sha256 = "249d5c980f5921f51e918f3464f2e09eabf247a804ae31559e5d78e17d07f628";
   };
 
   buildType = "ament_cmake";

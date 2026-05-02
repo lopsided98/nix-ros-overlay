@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, diff-drive-controller, joint-state-broadcaster, launch, launch-ros, launch-testing, nav2-common, nav2-minimal-tb3-sim, nav2-minimal-tb4-sim, navigation2, ros-gz-bridge, ros-gz-sim, slam-toolbox, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-bringup";
-  version = "1.3.11-r1";
+  version = "1.3.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_bringup/1.3.11-1.tar.gz";
-    name = "1.3.11-1.tar.gz";
-    sha256 = "9e804899474c3e7e5c0142e80c91308e232b25774ca1f00bb1bf529af154b6c1";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_bringup/1.3.12-1.tar.gz";
+    name = "1.3.12-1.tar.gz";
+    sha256 = "e55a1b8be2cf6424ff8b1f0d1fe5ac303943ac9f23384eed1fa8fb565a413f1f";
   };
 
   buildType = "ament_cmake";
