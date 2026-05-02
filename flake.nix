@@ -4,9 +4,10 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    rosdistro = { url = "github:ros/rosdistro"; flake = false; };
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
+  outputs = { self, nixpkgs, flake-utils, rosdistro }:
     with nixpkgs.lib;
     with flake-utils.lib;
     eachSystem systems.flakeExposed (system: let
@@ -23,7 +24,9 @@
     in {
       legacyPackages = (intersectAttrs (self.overlays.default null pkgs) pkgs)
                        // pkgs.rosPackages; # for backward compatibility
-      packages.update-overlay = pkgs.callPackage ./maintainers/scripts/update-overlay.nix { };
+      packages.update-overlay = pkgs.callPackage ./maintainers/scripts/update-overlay.nix {
+        inherit rosdistro;
+      };
 
       devShells = {
         example-turtlebot3-gazebo = import ./examples/turtlebot3-gazebo.nix { inherit pkgs; };

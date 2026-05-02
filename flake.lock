@@ -37,7 +37,24 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "rosdistro": "rosdistro"
+      }
+    },
+    "rosdistro": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1777588030,
+        "narHash": "sha256-2rUTgWkEhSKOUxF8jNqVtt5OOUbONeRWpeVBK9O/XZU=",
+        "owner": "ros",
+        "repo": "rosdistro",
+        "rev": "cbeafda93a5adcc1168fec90474a08761b98b0ee",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ros",
+        "repo": "rosdistro",
+        "type": "github"
       }
     },
     "systems": {
