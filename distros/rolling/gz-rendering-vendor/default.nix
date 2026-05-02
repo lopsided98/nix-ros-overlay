@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, freeglut, freeimage, glew, gz-cmake-vendor, gz-common-vendor, gz-math-vendor, gz-ogre-next-vendor, gz-plugin-vendor, gz-utils-vendor, ogre1_9, util-linux, vulkan-loader, xorg }:
 buildRosPackage {
   pname = "ros-rolling-gz-rendering-vendor";
-  version = "0.4.3-r1";
+  version = "0.4.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_rendering_vendor-release/archive/release/rolling/gz_rendering_vendor/0.4.3-1.tar.gz";
-    name = "0.4.3-1.tar.gz";
-    sha256 = "960dbdf5237e82224743585c69494930cb2a3e6552dd22242132b4d11b473262";
+    url = "https://github.com/ros2-gbp/gz_rendering_vendor-release/archive/release/rolling/gz_rendering_vendor/0.4.3-2.tar.gz";
+    name = "0.4.3-2.tar.gz";
+    sha256 = "587059ede10bd94ccdabffcca42360d8752a700b60b70bfe199b6fe0136e163a";
   };
 
   buildType = "ament_cmake";

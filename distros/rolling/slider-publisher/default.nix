@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-rolling-slider-publisher";
-  version = "2.4.3-r1";
+  version = "2.4.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/slider_publisher-release/archive/release/rolling/slider_publisher/2.4.3-1.tar.gz";
-    name = "2.4.3-1.tar.gz";
-    sha256 = "3d4d50425a86bb4c95b6e595fa98fa813be8e9c9f42df4e5dd44f960311c0ea3";
+    url = "https://github.com/ros2-gbp/slider_publisher-release/archive/release/rolling/slider_publisher/2.4.3-2.tar.gz";
+    name = "2.4.3-2.tar.gz";
+    sha256 = "f86dd1f1b41d84376e6b12dd6533e57475e239cba34e0f7b47c1028a933ea4d4";
   };
 
   buildType = "ament_cmake";

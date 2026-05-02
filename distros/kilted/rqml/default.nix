@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rqml-core, rqml-default-plugins }:
 buildRosPackage {
   pname = "ros-kilted-rqml";
-  version = "3.26.41-r1";
+  version = "3.26.42-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqml-release/archive/release/kilted/rqml/3.26.41-1.tar.gz";
-    name = "3.26.41-1.tar.gz";
-    sha256 = "ffac9f6290ccaff94c41727e9c38b77cc73b123be6288d2b4105dffc7dbba7c7";
+    url = "https://github.com/ros2-gbp/rqml-release/archive/release/kilted/rqml/3.26.42-1.tar.gz";
+    name = "3.26.42-1.tar.gz";
+    sha256 = "07865191bb5e1669f5043a9bf1de99abbc19081789e529c6c0e6928313256dbe";
   };
 
   buildType = "ament_cmake";

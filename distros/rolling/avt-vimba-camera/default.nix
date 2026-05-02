@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, camera-info-manager, diagnostic-msgs, diagnostic-updater, image-proc, image-transport, message-filters, rclcpp, rclcpp-components, sensor-msgs, std-msgs, stereo-image-proc }:
 buildRosPackage {
   pname = "ros-rolling-avt-vimba-camera";
-  version = "2001.1.0-r5";
+  version = "2001.1.0-r6";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/avt_vimba_camera-release/archive/release/rolling/avt_vimba_camera/2001.1.0-5.tar.gz";
-    name = "2001.1.0-5.tar.gz";
-    sha256 = "bbcaeda89167f97e13c31bcc6b15908cb31aa9dfa311aff152bbbbe7091aedc8";
+    url = "https://github.com/ros2-gbp/avt_vimba_camera-release/archive/release/rolling/avt_vimba_camera/2001.1.0-6.tar.gz";
+    name = "2001.1.0-6.tar.gz";
+    sha256 = "4b62526930ecf183335e6b8923c2f75d3b761c0962d819e09e54ea6f20e24336";
   };
 
   buildType = "ament_cmake";

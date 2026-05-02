@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros, backward-ros, boost, builtin-interfaces, cras-lint, eigen, fmt, geometry-msgs, rcl, rclcpp, rclcpp-components, rcutils, rmw, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, tl-expected-nixpkgs }:
 buildRosPackage {
   pname = "ros-rolling-cras-cpp-common";
-  version = "3.0.2-r1";
+  version = "3.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cras_ros_utils-release/archive/release/rolling/cras_cpp_common/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "cc5e92099a004afadf1a7c567b254333ac8c66f4e1cd0f216c52128282536f88";
+    url = "https://github.com/ros2-gbp/cras_ros_utils-release/archive/release/rolling/cras_cpp_common/3.0.2-2.tar.gz";
+    name = "3.0.2-2.tar.gz";
+    sha256 = "44500b6bd3eb7ec4acf5ac4d2deef65a5707fdde7467eb129b0747df884e7b4c";
   };
 
   buildType = "ament_cmake";

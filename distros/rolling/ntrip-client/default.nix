@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, nmea-msgs, python3Packages, rclpy, rtcm-msgs, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ntrip-client";
-  version = "1.4.1-r1";
+  version = "1.4.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ntrip_client-release/archive/release/rolling/ntrip_client/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "1a36773fcc99cd0df3491cf04b3f13e2ad090cbd3181f58b97b3ad98153addcf";
+    url = "https://github.com/ros2-gbp/ntrip_client-release/archive/release/rolling/ntrip_client/1.4.1-2.tar.gz";
+    name = "1.4.1-2.tar.gz";
+    sha256 = "f43a06961d7abf3fc53e85f2e48f34e64b79603d9b61a7f10d1f4e3d6bab33c8";
   };
 
   buildType = "ament_python";

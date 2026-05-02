@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros, angles, compass-interfaces, cras-cpp-common, cras-lint, geographiclib, geometry-msgs, magnetic-model, message-filters, pluginlib, rclcpp, rclcpp-components, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-compass-conversions";
-  version = "3.0.2-r1";
+  version = "3.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/compass-release/archive/release/rolling/compass_conversions/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "c47aaef569094ad5e274087d332cf5092ea17673833354ec57cefd6d880cebdf";
+    url = "https://github.com/ros2-gbp/compass-release/archive/release/rolling/compass_conversions/3.0.2-2.tar.gz";
+    name = "3.0.2-2.tar.gz";
+    sha256 = "e9aec22d62263b78f7f0cc9a74ed738e11ca6c7b592af855a1549e1b76b9de0d";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-asio-cmake-module";
-  version = "1.2.0-r3";
+  version = "1.2.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/rolling/asio_cmake_module/1.2.0-3.tar.gz";
-    name = "1.2.0-3.tar.gz";
-    sha256 = "8bad7749da920f61360c7364f1fb6c2911c315c757988bf1bec409371454e768";
+    url = "https://github.com/ros2-gbp/transport_drivers-release/archive/release/rolling/asio_cmake_module/1.2.0-4.tar.gz";
+    name = "1.2.0-4.tar.gz";
+    sha256 = "100070d23e926d14d91ed9be40d44fba83f79d4f86de208c69926adaf7790b33";
   };
 
   buildType = "ament_cmake";

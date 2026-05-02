@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, turtlebot3-autorace-camera, turtlebot3-autorace-detect, turtlebot3-autorace-mission }:
 buildRosPackage {
   pname = "ros-rolling-turtlebot3-autorace";
-  version = "1.2.2-r1";
+  version = "1.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3_autorace-release/archive/release/rolling/turtlebot3_autorace/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "d5c60ce3bbc0a1838b0950f72271ca138a66a4e3170ee15e23b96b74dd36ff4a";
+    url = "https://github.com/ros2-gbp/turtlebot3_autorace-release/archive/release/rolling/turtlebot3_autorace/1.2.2-2.tar.gz";
+    name = "1.2.2-2.tar.gz";
+    sha256 = "757cde5fd0911766e5ffa1c42edf5ea281a3ce69750ad3342bdbfa3385d56e12";
   };
 
   buildType = "ament_cmake";

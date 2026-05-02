@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-python, ament-lint-auto, control-toolbox, controller-interface, eigen, fmt, generate-parameter-library, gmock-vendor, gtest-vendor, hardware-interface, jrl-cmakemodules, linear-feedback-controller-msgs, message-filters, nav-msgs, pal-statistics, parameter-traits, pinocchio, pluginlib, rcl, rclcpp, rclcpp-lifecycle, realtime-tools, rosidl-dynamic-typesupport, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-linear-feedback-controller";
-  version = "3.2.0-r1";
+  version = "3.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/linear-feedback-controller-release/archive/release/rolling/linear_feedback_controller/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "56910297990513ec0a5ee5bc9e5f059ce97e46b584495d9bc3943535854a367d";
+    url = "https://github.com/ros2-gbp/linear-feedback-controller-release/archive/release/rolling/linear_feedback_controller/3.2.0-2.tar.gz";
+    name = "3.2.0-2.tar.gz";
+    sha256 = "ce24c5c338f712669367b38425e70d5cbc71be1bd5420288e637b1897296c68e";
   };
 
   buildType = "ament_cmake";

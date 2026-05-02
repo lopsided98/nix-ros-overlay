@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, can-msgs, lifecycle-msgs, rclcpp, rclcpp-components, rclcpp-lifecycle, ros2-socketcan-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ros2-socketcan";
-  version = "1.3.0-r1";
+  version = "1.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_socketcan-release/archive/release/rolling/ros2_socketcan/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "6abd936298ed94ede25f0f9bf27b73ed2c31d58bc9bfe14aa0ca84f822b59581";
+    url = "https://github.com/ros2-gbp/ros2_socketcan-release/archive/release/rolling/ros2_socketcan/1.3.0-2.tar.gz";
+    name = "1.3.0-2.tar.gz";
+    sha256 = "76d6c4b43cb5ec3d459275b8443fff7fe73ed594c7def7957d587a1e03b85f0c";
   };
 
   buildType = "ament_cmake";

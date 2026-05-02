@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, game-controller-spl-interfaces, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-rolling-game-controller-spl";
-  version = "5.0.0-r2";
+  version = "5.0.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/rolling/game_controller_spl/5.0.0-2.tar.gz";
-    name = "5.0.0-2.tar.gz";
-    sha256 = "c1d00f267f5862d4723f543cd5207d5687032a752e1d35c65e2b198ee744f565";
+    url = "https://github.com/ros2-gbp/game_controller_spl-release/archive/release/rolling/game_controller_spl/5.0.0-3.tar.gz";
+    name = "5.0.0-3.tar.gz";
+    sha256 = "3e59303fc6ebd307818aa39f7a256c67bc6565d49cf8956f1465b97af1d834f4";
   };
 
   buildType = "ament_python";

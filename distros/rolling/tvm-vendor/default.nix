@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, git, libxml2, ocl-icd, openblas, opencl-clhpp, ros-environment, spirv-headers, spirv-tools, vulkan-loader }:
 buildRosPackage {
   pname = "ros-rolling-tvm-vendor";
-  version = "0.9.1-r3";
+  version = "0.9.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tvm_vendor-release/archive/release/rolling/tvm_vendor/0.9.1-3.tar.gz";
-    name = "0.9.1-3.tar.gz";
-    sha256 = "1e612afb43c2d0200ca96efd993ee28887ee05723ed72a4518af7b3d2cd77d9f";
+    url = "https://github.com/ros2-gbp/tvm_vendor-release/archive/release/rolling/tvm_vendor/0.9.1-4.tar.gz";
+    name = "0.9.1-4.tar.gz";
+    sha256 = "b9f030192941f3150c468df612403ec35ee4630687698c174813848e557f9371";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, rclpy, splsm-7-conversion }:
 buildRosPackage {
   pname = "ros-rolling-r2r-spl-7";
-  version = "3.0.1-r3";
+  version = "3.0.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/r2r_spl-release/archive/release/rolling/r2r_spl_7/3.0.1-3.tar.gz";
-    name = "3.0.1-3.tar.gz";
-    sha256 = "5d16b77a49b4f84c6ea73eb370e0063e9bb774ade89f71a760e40dbd70ca4b5d";
+    url = "https://github.com/ros2-gbp/r2r_spl-release/archive/release/rolling/r2r_spl_7/3.0.1-4.tar.gz";
+    name = "3.0.1-4.tar.gz";
+    sha256 = "cf0c00f51a47e89d075ad2e4191ee50f647fba404d6dc67f1a80c8bf81c20099";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, geometry-msgs, rclcpp, rclcpp-action, rclcpp-components, tf2, tf2-ros, tf2-web-republisher-interfaces }:
 buildRosPackage {
   pname = "ros-rolling-tf2-web-republisher";
-  version = "1.0.0-r1";
+  version = "1.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tf2_web_republisher-release/archive/release/rolling/tf2_web_republisher/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "12c47f7e9343fe1d756ded8ef4d41612215a8f004cdfb1de35aa51dee5555042";
+    url = "https://github.com/ros2-gbp/tf2_web_republisher-release/archive/release/rolling/tf2_web_republisher/1.0.0-2.tar.gz";
+    name = "1.0.0-2.tar.gz";
+    sha256 = "9ad66618f70db58dae4659e1a47a4af221ed103c513fc1989601c0003a561623";
   };
 
   buildType = "ament_cmake";

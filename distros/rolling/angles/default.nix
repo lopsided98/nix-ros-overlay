@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-angles";
-  version = "1.16.1-r1";
+  version = "1.16.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/angles-release/archive/release/rolling/angles/1.16.1-1.tar.gz";
-    name = "1.16.1-1.tar.gz";
-    sha256 = "d49d55efb83a16eab3b611081621d64a13ac052eae3837b4d621834e66ad3a8b";
+    url = "https://github.com/ros2-gbp/angles-release/archive/release/rolling/angles/1.16.1-2.tar.gz";
+    name = "1.16.1-2.tar.gz";
+    sha256 = "979e4d76bbb502ec095deac2a7f99a8c28db1d72a3d6798eb93af144932a1be2";
   };
 
   buildType = "ament_cmake";

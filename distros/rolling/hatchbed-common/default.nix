@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-hatchbed-common";
-  version = "0.1.5-r1";
+  version = "0.1.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hatchbed_common-release/archive/release/rolling/hatchbed_common/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "2082b38362be65762979c4ae13aa95fc2aed731773303f4259e71d4eb60ac480";
+    url = "https://github.com/ros2-gbp/hatchbed_common-release/archive/release/rolling/hatchbed_common/0.1.5-2.tar.gz";
+    name = "0.1.5-2.tar.gz";
+    sha256 = "ee29e3f54655b979f2cd7f6740614469f9087cf8ea3380d32fdfdb9eb3c79a1f";
   };
 
   buildType = "ament_cmake";

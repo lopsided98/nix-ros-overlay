@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, rclpy, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-reductstore-agent";
-  version = "0.2.0-r1";
+  version = "0.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/reductstore_agent-release/archive/release/rolling/reductstore_agent/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "133e4a2c44ef8682853beca153f196ffb97057d49b8ce1bfa9e1db2da537cf99";
+    url = "https://github.com/ros2-gbp/reductstore_agent-release/archive/release/rolling/reductstore_agent/0.2.0-2.tar.gz";
+    name = "0.2.0-2.tar.gz";
+    sha256 = "6be1f7a3997af2717941561a000e61bbd4ccd63c74fa92173667d9ab964616d1";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, eigen, moveit-core, pluginlib, tf2-eigen }:
 buildRosPackage {
   pname = "ros-rolling-crx-kinematics";
-  version = "1.0.0-r1";
+  version = "1.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/crx_kinematics-release/archive/release/rolling/crx_kinematics/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "ad988879af40c95db4a77789223ec28c6e185490fb168353c70248048764bb1e";
+    url = "https://github.com/ros2-gbp/crx_kinematics-release/archive/release/rolling/crx_kinematics/1.0.0-2.tar.gz";
+    name = "1.0.0-2.tar.gz";
+    sha256 = "8a6cd53978a34a7ddbc5b1d751f1e64556054aaa92b8826aa4b2d25c2f206469";
   };
 
   buildType = "ament_cmake";

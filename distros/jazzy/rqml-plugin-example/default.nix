@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, qml6-ros2-plugin, qt6, rqml-core }:
 buildRosPackage {
   pname = "ros-jazzy-rqml-plugin-example";
-  version = "3.26.41-r1";
+  version = "3.26.42-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqml-release/archive/release/jazzy/rqml_plugin_example/3.26.41-1.tar.gz";
-    name = "3.26.41-1.tar.gz";
-    sha256 = "c762964d9357753c2c63efa0406da83c84715d73f0589014acfaf3f26a71d529";
+    url = "https://github.com/ros2-gbp/rqml-release/archive/release/jazzy/rqml_plugin_example/3.26.42-1.tar.gz";
+    name = "3.26.42-1.tar.gz";
+    sha256 = "3783101b9643aa42cb90a602db2a10b9f756bd6b1cddc5b86f7818f536435b26";
   };
 
   buildType = "ament_cmake";

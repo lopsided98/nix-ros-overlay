@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, joint-state-publisher, joint-state-publisher-gui, moveit-configs-utils, moveit-kinematics, moveit-planners, moveit-ros-move-group, moveit-ros-visualization, moveit-setup-assistant, moveit-simple-controller-manager, robot-state-publisher, rviz-common, rviz-default-plugins, rviz2, tf2-ros, xacro }:
 buildRosPackage {
   pname = "ros-rolling-ffw-moveit-config";
-  version = "1.1.14-r1";
+  version = "1.1.14-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/rolling/ffw_moveit_config/1.1.14-1.tar.gz";
-    name = "1.1.14-1.tar.gz";
-    sha256 = "9b8fa539c4d237c1150cdb7d709c0de5fce8ad7a86213ee743894ebea46fb3c6";
+    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/rolling/ffw_moveit_config/1.1.14-2.tar.gz";
+    name = "1.1.14-2.tar.gz";
+    sha256 = "b6d6f667612ee2738dff7dbc14408ea45aebc7e7e8a5535b26121203a5e31dce";
   };
 
   buildType = "ament_cmake";

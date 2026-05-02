@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, curl, openssl, util-linux }:
 buildRosPackage {
   pname = "ros-rolling-azure-iot-sdk-c";
-  version = "1.14.0-r4";
+  version = "1.14.0-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/azure_iot_sdk_c-release/archive/release/rolling/azure_iot_sdk_c/1.14.0-4.tar.gz";
-    name = "1.14.0-4.tar.gz";
-    sha256 = "b456c00fc91533fbcb126692883a0ca84c0435675b4ce086757a35fec38b0518";
+    url = "https://github.com/ros2-gbp/azure_iot_sdk_c-release/archive/release/rolling/azure_iot_sdk_c/1.14.0-5.tar.gz";
+    name = "1.14.0-5.tar.gz";
+    sha256 = "d8441a637ada4522c2500a5b6be8bce4d35bece27661d59fd506c5ea3806f9d2";
   };
 
   buildType = "cmake";

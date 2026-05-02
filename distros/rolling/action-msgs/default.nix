@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-core-generators, rosidl-core-runtime, service-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-rolling-action-msgs";
-  version = "2.4.4-r1";
+  version = "2.4.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/action_msgs/2.4.4-1.tar.gz";
-    name = "2.4.4-1.tar.gz";
-    sha256 = "b6ad06548e404c61770db7319d0c531207ed0e2dec890457f488e47c09d0816f";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/action_msgs/2.4.4-2.tar.gz";
+    name = "2.4.4-2.tar.gz";
+    sha256 = "9ea57ea90dec4482364b6a5b6d300d42039b43797249af91c0f8a9282f18849d";
   };
 
   buildType = "ament_cmake";

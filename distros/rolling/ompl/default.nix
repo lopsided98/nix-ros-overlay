@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen, flann, pkg-config }:
 buildRosPackage {
   pname = "ros-rolling-ompl";
-  version = "1.7.0-r2";
+  version = "1.7.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ompl-release/archive/release/rolling/ompl/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "8e6bb3e35390c6f7d68bb98b1e54addfc3a89765c29bf8529f8993bad5e8541e";
+    url = "https://github.com/ros2-gbp/ompl-release/archive/release/rolling/ompl/1.7.0-3.tar.gz";
+    name = "1.7.0-3.tar.gz";
+    sha256 = "b8dabcb6e5ca2893e999e61ebb059f96f370e8e02f608d99e6e9e64eba44cac4";
   };
 
   buildType = "cmake";

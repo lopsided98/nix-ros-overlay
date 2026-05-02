@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, launch, launch-pal, launch-param-builder, launch-ros, launch-testing-ament-cmake, robot-state-publisher, urdf-test, xacro }:
 buildRosPackage {
   pname = "ros-rolling-human-description";
-  version = "2.0.2-r1";
+  version = "2.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/human_description-release/archive/release/rolling/human_description/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "470e42cb92ebe96abc77ad2c7b3ab922575fe24865c994b905d8a4136054dd2b";
+    url = "https://github.com/ros2-gbp/human_description-release/archive/release/rolling/human_description/2.0.2-2.tar.gz";
+    name = "2.0.2-2.tar.gz";
+    sha256 = "a2f59e74c79b47e5b6eb747a2c33f46a350499f45b877fe0e222aee833a20270";
   };
 
   buildType = "ament_cmake";

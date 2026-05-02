@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-rolling-urdfdom-headers";
-  version = "3.0.0-r1";
+  version = "3.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/urdfdom_headers-release/archive/release/rolling/urdfdom_headers/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "304d482df9a1f4e5de7123b77812d28df0fb85545851fe9724e98188201badc7";
+    url = "https://github.com/ros2-gbp/urdfdom_headers-release/archive/release/rolling/urdfdom_headers/3.0.0-2.tar.gz";
+    name = "3.0.0-2.tar.gz";
+    sha256 = "72b97a0d525ba9aab8943e2a62cf27389282b7b6d65f42f153f3243ee8bda265";
   };
 
   buildType = "cmake";

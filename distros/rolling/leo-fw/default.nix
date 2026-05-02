@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-black, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-mypy, ament-cmake-pep257, ament-cmake-python, ament-cmake-uncrustify, ament-cmake-xmllint, ament-index-python, ament-lint-auto, geometry-msgs, leo-msgs, nav-msgs, python3Packages, rcl-interfaces, rclcpp, rclcpp-components, rclpy, ros2cli, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-leo-fw";
-  version = "2.5.0-r1";
+  version = "2.5.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/rolling/leo_fw/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "94ddacf5922664ddaeb6422d0570afd0ad584b52ab1c422f88dc1a607b64df09";
+    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/rolling/leo_fw/2.5.0-2.tar.gz";
+    name = "2.5.0-2.tar.gz";
+    sha256 = "473bc184b77be3d62f87e0ad80a695846ffec8bb1c187eafc714b26e5e367bbd";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, geometry-msgs, python3Packages, rcl-interfaces, rclpy }:
 buildRosPackage {
   pname = "ros-rolling-teleop-twist-keyboard";
-  version = "2.4.1-r1";
+  version = "2.4.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_twist_keyboard-release/archive/release/rolling/teleop_twist_keyboard/2.4.1-1.tar.gz";
-    name = "2.4.1-1.tar.gz";
-    sha256 = "ac85d7ec007da1bb149b9e751afc0356e47fda79e0f021b89cbbd4d659fe671b";
+    url = "https://github.com/ros2-gbp/teleop_twist_keyboard-release/archive/release/rolling/teleop_twist_keyboard/2.4.1-2.tar.gz";
+    name = "2.4.1-2.tar.gz";
+    sha256 = "56ebe5883ca272f16931e8674368b4cdc59e6daf58726b777ba5c193670e019b";
   };
 
   buildType = "ament_python";

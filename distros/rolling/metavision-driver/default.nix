@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-clang-format, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-xmllint, event-camera-msgs, openeb-vendor, rclcpp, rclcpp-components, ros-environment, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-metavision-driver";
-  version = "3.0.0-r1";
+  version = "3.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/metavision_driver-release/archive/release/rolling/metavision_driver/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "136a82dc216f8866669cfd28e95e07154d5bd0cf6d1da6d738d9685d016547de";
+    url = "https://github.com/ros2-gbp/metavision_driver-release/archive/release/rolling/metavision_driver/3.0.0-2.tar.gz";
+    name = "3.0.0-2.tar.gz";
+    sha256 = "f4877e7874b58de38fa625bd7c4395ea7f7e83de8896d4a532f8403089ceb363";
   };
 
   buildType = "ament_cmake";

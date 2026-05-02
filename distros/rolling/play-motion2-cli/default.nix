@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, launch, launch-ros, launch-testing, launch-testing-ros, play-motion2, python3Packages, rclpy, ros2cli }:
 buildRosPackage {
   pname = "ros-rolling-play-motion2-cli";
-  version = "1.8.4-r1";
+  version = "1.8.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/rolling/play_motion2_cli/1.8.4-1.tar.gz";
-    name = "1.8.4-1.tar.gz";
-    sha256 = "96568be8a11ef4320a73906d3c4b21ed03bc7f1317d4bce6d0dc222eda2ed039";
+    url = "https://github.com/ros2-gbp/play_motion2-release/archive/release/rolling/play_motion2_cli/1.8.4-2.tar.gz";
+    name = "1.8.4-2.tar.gz";
+    sha256 = "c2ac6cfc490d5217cee91f3ac4f027ea58f11dbd57d9f0de945dc72bb1af3355";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, clips-vendor, cx-plugin, cx-utils, pluginlib, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-cx-executive-plugin";
-  version = "0.1.3-r1";
+  version = "0.1.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/clips_executive-release/archive/release/rolling/cx_executive_plugin/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "f09bdfe460a7a106f39f10760666c334a7ceb4741596f1054232b65e528447a7";
+    url = "https://github.com/ros2-gbp/clips_executive-release/archive/release/rolling/cx_executive_plugin/0.1.3-2.tar.gz";
+    name = "0.1.3-2.tar.gz";
+    sha256 = "e781da7628f18e4e754c693901427bb6b0701b74cfd4b24f6a414599a19b4f05";
   };
 
   buildType = "ament_cmake";

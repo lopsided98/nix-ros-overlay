@@ -26,8 +26,6 @@ self: super: {
 
  admittance-controller = self.callPackage ./admittance-controller {};
 
- ads-vendor = self.callPackage ./ads-vendor {};
-
  ament-acceleration = self.callPackage ./ament-acceleration {};
 
  ament-black = self.callPackage ./ament-black {};
@@ -184,10 +182,6 @@ self: super: {
 
  aruco = self.callPackage ./aruco {};
 
- aruco-markers = self.callPackage ./aruco-markers {};
-
- aruco-markers-msgs = self.callPackage ./aruco-markers-msgs {};
-
  aruco-msgs = self.callPackage ./aruco-msgs {};
 
  aruco-opencv = self.callPackage ./aruco-opencv {};
@@ -318,8 +312,6 @@ self: super: {
 
  bno055 = self.callPackage ./bno055 {};
 
- bob-llm = self.callPackage ./bob-llm {};
-
  bond = self.callPackage ./bond {};
 
  bond-core = self.callPackage ./bond-core {};
@@ -396,19 +388,9 @@ self: super: {
 
  clips-vendor = self.callPackage ./clips-vendor {};
 
- cloudini-lib = self.callPackage ./cloudini-lib {};
-
- cloudini-ros = self.callPackage ./cloudini-ros {};
-
  cm-topic-hardware-component = self.callPackage ./cm-topic-hardware-component {};
 
  coal = self.callPackage ./coal {};
-
- cob-actions = self.callPackage ./cob-actions {};
-
- cob-msgs = self.callPackage ./cob-msgs {};
-
- cob-srvs = self.callPackage ./cob-srvs {};
 
  coin-d4-driver = self.callPackage ./coin-d4-driver {};
 
@@ -538,16 +520,6 @@ self: super: {
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
- dolly = self.callPackage ./dolly {};
-
- dolly-follow = self.callPackage ./dolly-follow {};
-
- dolly-gazebo = self.callPackage ./dolly-gazebo {};
-
- dolly-ignition = self.callPackage ./dolly-ignition {};
-
- domain-bridge = self.callPackage ./domain-bridge {};
-
  domain-coordinator = self.callPackage ./domain-coordinator {};
 
  draco-point-cloud-transport = self.callPackage ./draco-point-cloud-transport {};
@@ -579,8 +551,6 @@ self: super: {
  dynamixel-workbench-msgs = self.callPackage ./dynamixel-workbench-msgs {};
 
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
-
- ecal = self.callPackage ./ecal {};
 
  ecl-build = self.callPackage ./ecl-build {};
 
@@ -764,8 +734,6 @@ self: super: {
 
  filters = self.callPackage ./filters {};
 
- find-object-2d = self.callPackage ./find-object-2d {};
-
  fkie-message-filters = self.callPackage ./fkie-message-filters {};
 
  flex-sync = self.callPackage ./flex-sync {};
@@ -794,12 +762,6 @@ self: super: {
 
  fluent-rviz = self.callPackage ./fluent-rviz {};
 
- fmi-adapter = self.callPackage ./fmi-adapter {};
-
- fmi-adapter-examples = self.callPackage ./fmi-adapter-examples {};
-
- fmilibrary-vendor = self.callPackage ./fmilibrary-vendor {};
-
  foonathan-memory-vendor = self.callPackage ./foonathan-memory-vendor {};
 
  force-torque-sensor-broadcaster = self.callPackage ./force-torque-sensor-broadcaster {};
@@ -815,8 +777,6 @@ self: super: {
  foxglove-msgs = self.callPackage ./foxglove-msgs {};
 
  foxglove-sdk-vendor = self.callPackage ./foxglove-sdk-vendor {};
-
- franka-inria-inverse-dynamics-solver = self.callPackage ./franka-inria-inverse-dynamics-solver {};
 
  frequency-cam = self.callPackage ./frequency-cam {};
 
@@ -906,8 +866,6 @@ self: super: {
 
  gtsam2mrpt-serial = self.callPackage ./gtsam2mrpt-serial {};
 
- gurumdds-cmake-module = self.callPackage ./gurumdds-cmake-module {};
-
  gz-cmake-vendor = self.callPackage ./gz-cmake-vendor {};
 
  gz-common-vendor = self.callPackage ./gz-common-vendor {};
@@ -959,8 +917,6 @@ self: super: {
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
 
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
-
- hpp-fcl = self.callPackage ./hpp-fcl {};
 
  hri = self.callPackage ./hri {};
 
@@ -1026,8 +982,6 @@ self: super: {
 
  intra-process-demo = self.callPackage ./intra-process-demo {};
 
- inverse-dynamics-solver = self.callPackage ./inverse-dynamics-solver {};
-
  io-context = self.callPackage ./io-context {};
 
  irobot-create-msgs = self.callPackage ./irobot-create-msgs {};
@@ -1057,8 +1011,6 @@ self: super: {
  jrl-cmakemodules = self.callPackage ./jrl-cmakemodules {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
-
- kdl-inverse-dynamics-solver = self.callPackage ./kdl-inverse-dynamics-solver {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
 
@@ -1200,11 +1152,7 @@ self: super: {
 
  libmavconn = self.callPackage ./libmavconn {};
 
- libnabo = self.callPackage ./libnabo {};
-
  libphidget22 = self.callPackage ./libphidget22 {};
-
- libpointmatcher = self.callPackage ./libpointmatcher {};
 
  librealsense2 = self.callPackage ./librealsense2 {};
 
@@ -2044,8 +1992,6 @@ self: super: {
 
  rmf-demos-tasks = self.callPackage ./rmf-demos-tasks {};
 
- rmf-dev = self.callPackage ./rmf-dev {};
-
  rmf-dispenser-msgs = self.callPackage ./rmf-dispenser-msgs {};
 
  rmf-door-msgs = self.callPackage ./rmf-door-msgs {};
@@ -2138,8 +2084,6 @@ self: super: {
 
  rmw-fastrtps-shared-cpp = self.callPackage ./rmw-fastrtps-shared-cpp {};
 
- rmw-gurumdds-cpp = self.callPackage ./rmw-gurumdds-cpp {};
-
  rmw-implementation = self.callPackage ./rmw-implementation {};
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
@@ -2191,8 +2135,6 @@ self: super: {
  ros2acceleration = self.callPackage ./ros2acceleration {};
 
  ros2action = self.callPackage ./ros2action {};
-
- ros2ai = self.callPackage ./ros2ai {};
 
  ros2bag = self.callPackage ./ros2bag {};
 
@@ -2522,32 +2464,6 @@ self: super: {
 
  rtabmap = self.callPackage ./rtabmap {};
 
- rtabmap-conversions = self.callPackage ./rtabmap-conversions {};
-
- rtabmap-demos = self.callPackage ./rtabmap-demos {};
-
- rtabmap-examples = self.callPackage ./rtabmap-examples {};
-
- rtabmap-launch = self.callPackage ./rtabmap-launch {};
-
- rtabmap-msgs = self.callPackage ./rtabmap-msgs {};
-
- rtabmap-odom = self.callPackage ./rtabmap-odom {};
-
- rtabmap-python = self.callPackage ./rtabmap-python {};
-
- rtabmap-ros = self.callPackage ./rtabmap-ros {};
-
- rtabmap-rviz-plugins = self.callPackage ./rtabmap-rviz-plugins {};
-
- rtabmap-slam = self.callPackage ./rtabmap-slam {};
-
- rtabmap-sync = self.callPackage ./rtabmap-sync {};
-
- rtabmap-util = self.callPackage ./rtabmap-util {};
-
- rtabmap-viz = self.callPackage ./rtabmap-viz {};
-
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
 
  rtest = self.callPackage ./rtest {};
@@ -2580,13 +2496,9 @@ self: super: {
 
  rviz-rendering-tests = self.callPackage ./rviz-rendering-tests {};
 
- rviz-satellite = self.callPackage ./rviz-satellite {};
-
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
-
- sbg-driver = self.callPackage ./sbg-driver {};
 
  sdformat-test-files = self.callPackage ./sdformat-test-files {};
 
@@ -2727,8 +2639,6 @@ self: super: {
  swri-serial-util = self.callPackage ./swri-serial-util {};
 
  swri-transform-util = self.callPackage ./swri-transform-util {};
-
- synapticon-ros2-control = self.callPackage ./synapticon-ros2-control {};
 
  sync-tooling-msgs = self.callPackage ./sync-tooling-msgs {};
 
@@ -2944,11 +2854,7 @@ self: super: {
 
  ur = self.callPackage ./ur {};
 
- ur10-inverse-dynamics-solver = self.callPackage ./ur10-inverse-dynamics-solver {};
-
  ur-calibration = self.callPackage ./ur-calibration {};
-
- ur-client-library = self.callPackage ./ur-client-library {};
 
  ur-controllers = self.callPackage ./ur-controllers {};
 

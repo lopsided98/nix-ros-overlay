@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, clips-vendor, cx-plugin, cx-utils, pluginlib }:
 buildRosPackage {
   pname = "ros-rolling-cx-ament-index-plugin";
-  version = "0.1.3-r1";
+  version = "0.1.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/clips_executive-release/archive/release/rolling/cx_ament_index_plugin/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "295cdb11b2f6e9979c7f2df8fc138be9f97664e6817d2c96fd4cb7baca1fa5f2";
+    url = "https://github.com/ros2-gbp/clips_executive-release/archive/release/rolling/cx_ament_index_plugin/0.1.3-2.tar.gz";
+    name = "0.1.3-2.tar.gz";
+    sha256 = "e0e85c2965b5b9de2218eb2e064e50797e77065ece89216acadb314b5ee93584";
   };
 
   buildType = "ament_cmake";

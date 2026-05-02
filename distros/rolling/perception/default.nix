@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, image-common, image-pipeline, image-transport-plugins, laser-filters, laser-geometry, perception-pcl, ros-base, vision-opencv }:
 buildRosPackage {
   pname = "ros-rolling-perception";
-  version = "0.13.0-r1";
+  version = "0.13.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/variants-release/archive/release/rolling/perception/0.13.0-1.tar.gz";
-    name = "0.13.0-1.tar.gz";
-    sha256 = "e6d26bf161ba2cdd961acd3c8661ae153841d7c403bc379ddcceec448f33a61b";
+    url = "https://github.com/ros2-gbp/variants-release/archive/release/rolling/perception/0.13.0-2.tar.gz";
+    name = "0.13.0-2.tar.gz";
+    sha256 = "0ec50b1fa053dcb4180673b0bf5c19a6058f696d2f15701932c2977422b184af";
   };
 
   buildType = "ament_cmake";

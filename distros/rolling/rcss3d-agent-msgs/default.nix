@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rcss3d-agent-msgs";
-  version = "0.4.1-r3";
+  version = "0.4.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcss3d_agent-release/archive/release/rolling/rcss3d_agent_msgs/0.4.1-3.tar.gz";
-    name = "0.4.1-3.tar.gz";
-    sha256 = "20d232962b5677f0d4675011fd148d30648c3cb62d92f75490984892e85bf286";
+    url = "https://github.com/ros2-gbp/rcss3d_agent-release/archive/release/rolling/rcss3d_agent_msgs/0.4.1-4.tar.gz";
+    name = "0.4.1-4.tar.gz";
+    sha256 = "28813f69c698a4813ea2e810e2eb2cafefa1a06a171dac6678755bd2e1fa0358";
   };
 
   buildType = "ament_cmake";

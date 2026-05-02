@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, controller-manager, diff-drive-controller, joint-state-broadcaster, laser-filters, robot-localization, robot-state-publisher, webots-ros2-control, webots-ros2-driver }:
 buildRosPackage {
   pname = "ros-rolling-webots-ros2-husarion";
-  version = "2025.0.1-r1";
+  version = "2025.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/rolling/webots_ros2_husarion/2025.0.1-1.tar.gz";
-    name = "2025.0.1-1.tar.gz";
-    sha256 = "1186eb1f1fa87a97ad685518d2bc58fa6bcf85185f23b6e0c70c9d6d28abf9f9";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/rolling/webots_ros2_husarion/2025.0.1-2.tar.gz";
+    name = "2025.0.1-2.tar.gz";
+    sha256 = "8957f344dd8de832cfd9a38571cc43be71197ed8082e2d18391679cc1f3d18f1";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-generate-parameter-library-py";
-  version = "0.8.0-r1";
+  version = "0.8.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/rolling/generate_parameter_library_py/0.8.0-1.tar.gz";
-    name = "0.8.0-1.tar.gz";
-    sha256 = "37c78bc6ffde586891f05399acdd95c6550b54d6bd23244f146c2907cf40ebf1";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/rolling/generate_parameter_library_py/0.8.0-2.tar.gz";
+    name = "0.8.0-2.tar.gz";
+    sha256 = "4f762339b249e5f471ed42c51f707fea3a4972476bfd44b21a8c9e7238a7f4a8";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, iceoryx-hoofs, iceoryx-posh }:
 buildRosPackage {
   pname = "ros-rolling-iceoryx-binding-c";
-  version = "2.0.5-r5";
+  version = "2.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/iceoryx-release/archive/release/rolling/iceoryx_binding_c/2.0.5-5.tar.gz";
-    name = "2.0.5-5.tar.gz";
-    sha256 = "fe5e5b0284eec1c021790bdc66eb096d1f30dc631c32a46048392dc228992d8f";
+    url = "https://github.com/ros2-gbp/iceoryx-release/archive/release/rolling/iceoryx_binding_c/2.0.6-1.tar.gz";
+    name = "2.0.6-1.tar.gz";
+    sha256 = "e6735b0298685c86e518d1b7ca4c509fba7408113b3bae0968371e644277dbb6";
   };
 
   buildType = "cmake";

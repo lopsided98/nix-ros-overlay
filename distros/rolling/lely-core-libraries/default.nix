@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, autoconf, automake, git, libtool, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-lely-core-libraries";
-  version = "0.3.2-r1";
+  version = "0.3.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/rolling/lely_core_libraries/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "4ee00d19b07c43c7c8cf23a10acfe32ccefcdce6e3854e0ba6ec2c00f247b434";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/rolling/lely_core_libraries/0.3.2-2.tar.gz";
+    name = "0.3.2-2.tar.gz";
+    sha256 = "7b28ddf6c1ff877d0dd2a8adbe52d8d0e4d7db99fac84ea47e5ba9167ccbea17";
   };
 
   buildType = "ament_cmake";

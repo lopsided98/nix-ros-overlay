@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gtsam, mola-common, mrpt-libbase, mrpt-libmath, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-rolling-gtsam2mrpt-serial";
-  version = "0.2.0-r1";
+  version = "0.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gtsam2mrpt_serial-release/archive/release/rolling/gtsam2mrpt_serial/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "2400b767c162d2a85e528f423666979a93088922ea34ec1d371fcc14c24d3b8f";
+    url = "https://github.com/ros2-gbp/gtsam2mrpt_serial-release/archive/release/rolling/gtsam2mrpt_serial/0.2.0-2.tar.gz";
+    name = "0.2.0-2.tar.gz";
+    sha256 = "4d45e61661aa530d0cb4cfc6f1cb8515dd472838b81f1ec7c7f6ef3b06877200";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-gtest, ament-cmake-pclint, ament-lint-auto, ament-lint-common, osrf-testing-tools-cpp }:
 buildRosPackage {
   pname = "ros-rolling-apex-test-tools";
-  version = "0.0.2-r8";
+  version = "0.0.2-r9";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/apex_test_tools-release/archive/release/rolling/apex_test_tools/0.0.2-8.tar.gz";
-    name = "0.0.2-8.tar.gz";
-    sha256 = "f173e2f842c01abc1ecbe667009876a5c9536cfc382baae4cf62b2c88dac6a06";
+    url = "https://github.com/ros2-gbp/apex_test_tools-release/archive/release/rolling/apex_test_tools/0.0.2-9.tar.gz";
+    name = "0.0.2-9.tar.gz";
+    sha256 = "b6bfcfb7b7c2b4433190f62aa53296a342ff993ce7c871c762c4d13b9a93f8a9";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, rclpy, soccer-vision-3d-msgs, soccer-vision-attribute-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-soccer-vision-3d-rviz-markers";
-  version = "1.0.0-r1";
+  version = "1.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/soccer_vision_3d_rviz_markers-release/archive/release/rolling/soccer_vision_3d_rviz_markers/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "472a74bb8007409890117d619923e210eb0a528ad498c4c2b0cdb1c021d2b279";
+    url = "https://github.com/ros2-gbp/soccer_vision_3d_rviz_markers-release/archive/release/rolling/soccer_vision_3d_rviz_markers/1.0.0-2.tar.gz";
+    name = "1.0.0-2.tar.gz";
+    sha256 = "240cc307e92bb9edf5e09ae01db20f3c14a453af88d8658931c7f83d78e57697";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, pluginlib, realtime-tools, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-battery-state-broadcaster";
-  version = "1.2.0-r1";
+  version = "1.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_battery_monitoring-release/archive/release/rolling/battery_state_broadcaster/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "292ce7743e4379fbf50f9a1ea7203b37f3e9b62f9320c91b041fd765dd512e7f";
+    url = "https://github.com/ros2-gbp/ros_battery_monitoring-release/archive/release/rolling/battery_state_broadcaster/1.2.0-2.tar.gz";
+    name = "1.2.0-2.tar.gz";
+    sha256 = "3f7d21e8c9e3136654604ec638c5014c2f3ac9780ab9b6ac829255eae7629a04";
   };
 
   buildType = "ament_cmake";

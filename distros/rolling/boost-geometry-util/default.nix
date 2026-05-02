@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-lint-auto, boost, geometry-msgs, ouxt-common, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-boost-geometry-util";
-  version = "0.0.1-r4";
+  version = "0.0.1-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/boost_geometry_util-release/archive/release/rolling/boost_geometry_util/0.0.1-4.tar.gz";
-    name = "0.0.1-4.tar.gz";
-    sha256 = "af81c86ff327599d7bdf138bdce400d1db07d670adccc35c72f6387aff30528b";
+    url = "https://github.com/ros2-gbp/boost_geometry_util-release/archive/release/rolling/boost_geometry_util/0.0.1-5.tar.gz";
+    name = "0.0.1-5.tar.gz";
+    sha256 = "a3852e9d5c5d2a020045df6bd4648b48006d133ec9358a568513a46f56ac2be0";
   };
 
   buildType = "ament_cmake";

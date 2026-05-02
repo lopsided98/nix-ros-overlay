@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-lint-auto, ament-lint-common, spdlog }:
 buildRosPackage {
   pname = "ros-rolling-spdlog-vendor";
-  version = "1.8.0-r1";
+  version = "1.8.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/spdlog_vendor-release/archive/release/rolling/spdlog_vendor/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "88d658d3b73f127c99d30e53ab70e5cde10912b9547dd8827b08740ad6813915";
+    url = "https://github.com/ros2-gbp/spdlog_vendor-release/archive/release/rolling/spdlog_vendor/1.8.0-2.tar.gz";
+    name = "1.8.0-2.tar.gz";
+    sha256 = "0e857c0e827e47c597198daa1ee3937dde3cec9af3fe4e0aa40b304998c2d033";
   };
 
   buildType = "ament_cmake";

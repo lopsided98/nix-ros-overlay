@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cmake, doxygen, eigenpy, eiquadprog, git, graphviz, pinocchio }:
 buildRosPackage {
   pname = "ros-rolling-tsid";
-  version = "1.9.0-r1";
+  version = "1.9.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tsid-release/archive/release/rolling/tsid/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "4a6477de990b719a7c1bf4b9d98702d862a6938e857abf7451c1ec81229f8fbe";
+    url = "https://github.com/ros2-gbp/tsid-release/archive/release/rolling/tsid/1.9.0-2.tar.gz";
+    name = "1.9.0-2.tar.gz";
+    sha256 = "548f1f0f8abc48e345f6c7c43d3f2b618abbfdda427113e93120c374d9652842";
   };
 
   buildType = "cmake";

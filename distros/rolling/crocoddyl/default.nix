@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cmake, doxygen, eigenpy, git, ipopt, jrl-cmakemodules, pinocchio, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-crocoddyl";
-  version = "3.2.0-r3";
+  version = "3.2.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/crocoddyl-release/archive/release/rolling/crocoddyl/3.2.0-3.tar.gz";
-    name = "3.2.0-3.tar.gz";
-    sha256 = "45f89f1e26efa79513b3c5b7b112bcca2f5f6b7220824b81814d395d02ac6e39";
+    url = "https://github.com/ros2-gbp/crocoddyl-release/archive/release/rolling/crocoddyl/3.2.0-4.tar.gz";
+    name = "3.2.0-4.tar.gz";
+    sha256 = "a783fabcc8bd9f8671043b695351f22e1487e4b46faa3cb12c485ada236037ae";
   };
 
   buildType = "cmake";

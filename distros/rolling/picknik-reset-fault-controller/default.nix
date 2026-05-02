@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, controller-interface, example-interfaces, geometry-msgs, rclcpp, realtime-tools }:
 buildRosPackage {
   pname = "ros-rolling-picknik-reset-fault-controller";
-  version = "0.0.4-r2";
+  version = "0.0.4-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/picknik_controllers-release/archive/release/rolling/picknik_reset_fault_controller/0.0.4-2.tar.gz";
-    name = "0.0.4-2.tar.gz";
-    sha256 = "4d0dc70b64f55a2d0323e85b90475783689323affc4b49f8bb2a3874826d2ea2";
+    url = "https://github.com/ros2-gbp/picknik_controllers-release/archive/release/rolling/picknik_reset_fault_controller/0.0.4-3.tar.gz";
+    name = "0.0.4-3.tar.gz";
+    sha256 = "8376050019aa8d6b7a5eff996129e5c68f5a64560dd77ac16d490fcf74eb2499";
   };
 
   buildType = "ament_cmake";

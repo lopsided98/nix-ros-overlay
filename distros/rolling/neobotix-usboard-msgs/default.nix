@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-neobotix-usboard-msgs";
-  version = "4.0.0-r3";
+  version = "4.0.0-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/astuff_sensor_msgs-release/archive/release/rolling/neobotix_usboard_msgs/4.0.0-3.tar.gz";
-    name = "4.0.0-3.tar.gz";
-    sha256 = "80d2886785bb30ab240b3d9c09464924d033eab350c5772a44710a7e6fd8c533";
+    url = "https://github.com/ros2-gbp/astuff_sensor_msgs-release/archive/release/rolling/neobotix_usboard_msgs/4.0.0-4.tar.gz";
+    name = "4.0.0-4.tar.gz";
+    sha256 = "678ff4dc3b03e1432443c0bc07876e51c5a2cb857169d4f58b259812ff8168db";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, avahi, ffmpeg, json_c, ncurses }:
 buildRosPackage {
   pname = "ros-rolling-ardrone-sdk";
-  version = "2.0.3-r1";
+  version = "2.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ardrone_ros-release/archive/release/rolling/ardrone_sdk/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "6d27a2bd09e9e8d09dc1273f30266024d8959ab5b1786c47b4d99d94430e7cc2";
+    url = "https://github.com/ros2-gbp/ardrone_ros-release/archive/release/rolling/ardrone_sdk/2.0.3-2.tar.gz";
+    name = "2.0.3-2.tar.gz";
+    sha256 = "0cc8775b737d61e024c12bb0b193733cf73898c4fd83fa017c0cf754cf836c11";
   };
 
   buildType = "ament_cmake";

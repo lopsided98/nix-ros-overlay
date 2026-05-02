@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rmf-scheduler-msgs";
-  version = "4.0.0-r1";
+  version = "4.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_scheduler_msgs/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "67206c8d4b55e4e03f4b9c922753c3460eded80e292293506c5f61d5bdca4ea1";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_scheduler_msgs/4.0.0-2.tar.gz";
+    name = "4.0.0-2.tar.gz";
+    sha256 = "9e7322389198a8d5f611cca9c60e770bcb5470f6bdec9a2d970aa094c6b79efe";
   };
 
   buildType = "ament_cmake";

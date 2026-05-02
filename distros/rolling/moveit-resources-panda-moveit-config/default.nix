@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, joint-state-publisher, joint-state-publisher-gui, moveit-resources-panda-description, position-controllers, robot-state-publisher, ros2cli-common-extensions, topic-tools, xacro }:
 buildRosPackage {
   pname = "ros-rolling-moveit-resources-panda-moveit-config";
-  version = "3.1.1-r1";
+  version = "3.1.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/rolling/moveit_resources_panda_moveit_config/3.1.1-1.tar.gz";
-    name = "3.1.1-1.tar.gz";
-    sha256 = "3b0212868d3310dba1aac61958c2607cca8d43eabc4564b28c5dece0658b38e9";
+    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/rolling/moveit_resources_panda_moveit_config/3.1.1-2.tar.gz";
+    name = "3.1.1-2.tar.gz";
+    sha256 = "bd43d22d9cb500e117fa8596eb82ea1bf9740da72903737df2b2111c07541513";
   };
 
   buildType = "ament_cmake";

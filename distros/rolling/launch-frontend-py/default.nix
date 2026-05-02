@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-mypy, ament-cmake-pytest, ament-cmake-python, ament-copyright, ament-lint-auto, ament-lint-common, launch }:
 buildRosPackage {
   pname = "ros-rolling-launch-frontend-py";
-  version = "0.1.0-r2";
+  version = "0.1.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch_frontend_py-release/archive/release/rolling/launch_frontend_py/0.1.0-2.tar.gz";
-    name = "0.1.0-2.tar.gz";
-    sha256 = "fec0cf01c731ed3a5eafe592e7cf636aabcc39c5dad153c35678ef8d8d5c0ab4";
+    url = "https://github.com/ros2-gbp/launch_frontend_py-release/archive/release/rolling/launch_frontend_py/0.1.0-3.tar.gz";
+    name = "0.1.0-3.tar.gz";
+    sha256 = "43a8a658a2cc3c8e8e681b747748e3162fb7fb671fdcc209e918d3d34f65c719";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-rolling-ruckig";
-  version = "0.9.2-r4";
+  version = "0.9.2-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ruckig-release/archive/release/rolling/ruckig/0.9.2-4.tar.gz";
-    name = "0.9.2-4.tar.gz";
-    sha256 = "c453c4bf7b3b749956c6874b5efdac9931980e87bdd08692d057c9a1209bf38f";
+    url = "https://github.com/ros2-gbp/ruckig-release/archive/release/rolling/ruckig/0.9.2-5.tar.gz";
+    name = "0.9.2-5.tar.gz";
+    sha256 = "442531139807d7dfbf399240f8a5b81f2b47dbd79bd929b5f32fe1edbb1c195b";
   };
 
   buildType = "cmake";

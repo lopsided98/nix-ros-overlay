@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, builtin-interfaces, control-msgs, controller-manager, joint-state-broadcaster, joint-trajectory-controller, python3Packages, rclpy, robot-state-publisher, rviz2, trajectory-msgs, webots-ros2-control, webots-ros2-driver, xacro }:
 buildRosPackage {
   pname = "ros-rolling-webots-ros2-universal-robot";
-  version = "2025.0.1-r1";
+  version = "2025.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/rolling/webots_ros2_universal_robot/2025.0.1-1.tar.gz";
-    name = "2025.0.1-1.tar.gz";
-    sha256 = "fe30e158637dfe428f7edb514a9aa3d83fb46dcc885e414e80cd011314aa1b17";
+    url = "https://github.com/ros2-gbp/webots_ros2-release/archive/release/rolling/webots_ros2_universal_robot/2025.0.1-2.tar.gz";
+    name = "2025.0.1-2.tar.gz";
+    sha256 = "2c324e693467841ddde70c7e98f098d78513210f6d90372e3a453924e65d607d";
   };
 
   buildType = "ament_python";

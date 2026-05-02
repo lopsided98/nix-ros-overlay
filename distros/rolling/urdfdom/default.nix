@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, console-bridge, console-bridge-vendor, python3, tinyxml-2, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-rolling-urdfdom";
-  version = "6.0.0-r1";
+  version = "6.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/urdfdom-release/archive/release/rolling/urdfdom/6.0.0-1.tar.gz";
-    name = "6.0.0-1.tar.gz";
-    sha256 = "a8fe3e6c0a505d0f0d08b423ab1f28436e34dd59ab81ffc7f86a36c9add80ce4";
+    url = "https://github.com/ros2-gbp/urdfdom-release/archive/release/rolling/urdfdom/6.0.0-2.tar.gz";
+    name = "6.0.0-2.tar.gz";
+    sha256 = "b31af2a2acc061b49e370809377c119c1722b94eeab090cbe1b95bcc8abd88b8";
   };
 
   buildType = "cmake";

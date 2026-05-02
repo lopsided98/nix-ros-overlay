@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, ament-index-cpp, cv-bridge, diagnostic-msgs, diagnostic-updater, geographic-msgs, geographiclib, geometry-msgs, geos, gps-msgs, launch-ros, launch-testing, launch-testing-ament-cmake, marti-nav-msgs, opencv, pkg-config, proj, python3Packages, rcl-interfaces, rclcpp, rclcpp-components, rclpy, sensor-msgs, swri-math-util, swri-roscpp, tf2, tf2-geometry-msgs, tf2-ros, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-rolling-swri-transform-util";
-  version = "3.8.7-r1";
+  version = "3.8.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_transform_util/3.8.7-1.tar.gz";
-    name = "3.8.7-1.tar.gz";
-    sha256 = "d9b723657ba053163777f14548b49f6d239ad4e8aa9114511572430312d46bf4";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_transform_util/3.8.7-2.tar.gz";
+    name = "3.8.7-2.tar.gz";
+    sha256 = "14c2ec0e519f54bdea5580a6abd6920954a06e85d158f6aa1c0a3f76e79812e0";
   };
 
   buildType = "ament_cmake";

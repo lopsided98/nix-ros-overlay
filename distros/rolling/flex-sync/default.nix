@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-clang-format, ament-cmake, ament-cmake-clang-format, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, rclcpp, rclcpp-components, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-flex-sync";
-  version = "2.0.1-r1";
+  version = "2.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flex_sync-release/archive/release/rolling/flex_sync/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "5337193a1ba8a3b11082e61298151cf36d5adc9211147f25fbdbb05f36111003";
+    url = "https://github.com/ros2-gbp/flex_sync-release/archive/release/rolling/flex_sync/2.0.1-2.tar.gz";
+    name = "2.0.1-2.tar.gz";
+    sha256 = "5e966f3cfb803bacc4532024560001dad36121b66761f8d4ce7071510e69d5fb";
   };
 
   buildType = "ament_cmake";

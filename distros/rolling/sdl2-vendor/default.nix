@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, SDL2, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-sdl2-vendor";
-  version = "3.3.0-r2";
+  version = "3.3.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/rolling/sdl2_vendor/3.3.0-2.tar.gz";
-    name = "3.3.0-2.tar.gz";
-    sha256 = "46418f4f0403bb228d4367fa7b3d6964dfae83fb5ee7f11d225880417b92fdf1";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/rolling/sdl2_vendor/3.3.0-3.tar.gz";
+    name = "3.3.0-3.tar.gz";
+    sha256 = "3803eb8f97cdc78596548a998faaaf542ab4fdd7fd7e5f32fa55e4d343f1d438";
   };
 
   buildType = "ament_cmake";

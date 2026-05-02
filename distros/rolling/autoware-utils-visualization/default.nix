@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, rclcpp, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-autoware-utils-visualization";
-  version = "1.4.2-r2";
+  version = "1.4.2-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/rolling/autoware_utils_visualization/1.4.2-2.tar.gz";
-    name = "1.4.2-2.tar.gz";
-    sha256 = "8023fd9a6d565f90cd3b5a7707a52cb5380d24f9b328463938bd32763b606197";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/rolling/autoware_utils_visualization/1.4.2-3.tar.gz";
+    name = "1.4.2-3.tar.gz";
+    sha256 = "e1526008d6aab1e286c544d3ddd24bd918238f164f4254ee35b5545a5173a9c4";
   };
 
   buildType = "ament_cmake";

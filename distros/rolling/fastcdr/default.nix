@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cmake }:
 buildRosPackage {
   pname = "ros-rolling-fastcdr";
-  version = "2.3.5-r1";
+  version = "2.3.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastcdr-release/archive/release/rolling/fastcdr/2.3.5-1.tar.gz";
-    name = "2.3.5-1.tar.gz";
-    sha256 = "224d80e404efb7d58def61edcc9707c8e386a035573022751c9915c40dffaf52";
+    url = "https://github.com/ros2-gbp/fastcdr-release/archive/release/rolling/fastcdr/2.3.5-2.tar.gz";
+    name = "2.3.5-2.tar.gz";
+    sha256 = "b01dedb21bce8e0fe2195bc56e6796c3d751ae04f553fc7f21ac66f699028200";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, ament-lint-auto, libGL, libGLU, nlohmann_json, qml6-ros2-plugin, qt6, ros-babel-fish-test-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-rolling-rqml-core";
-  version = "3.26.42-r1";
+  version = "3.26.42-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqml-release/archive/release/rolling/rqml_core/3.26.42-1.tar.gz";
-    name = "3.26.42-1.tar.gz";
-    sha256 = "d272f0502ce1738ed7fb15b9785689fe139e1a30c3b8cd7181123bba47e6eef8";
+    url = "https://github.com/ros2-gbp/rqml-release/archive/release/rolling/rqml_core/3.26.42-2.tar.gz";
+    name = "3.26.42-2.tar.gz";
+    sha256 = "d681b3279677d390313d22fa1ed1f7d7d54b019838e20d2aee601e3ea16a7294";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, cv-bridge, hri, hri-msgs, rclcpp, rcpputils, rviz-common, rviz-default-plugins, rviz-ogre-vendor, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-hri-rviz";
-  version = "2.3.0-r1";
+  version = "2.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hri_rviz-release/archive/release/rolling/hri_rviz/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "86f0579c86f9763a794153f7a0bc7fd37345a5ab047dbdb3ae236407301c3ff8";
+    url = "https://github.com/ros2-gbp/hri_rviz-release/archive/release/rolling/hri_rviz/2.3.0-2.tar.gz";
+    name = "2.3.0-2.tar.gz";
+    sha256 = "8f213a684cf743cb21fff8b4fee660e37b5e3406ec841dbdf0a03994f630df20";
   };
 
   buildType = "ament_cmake";

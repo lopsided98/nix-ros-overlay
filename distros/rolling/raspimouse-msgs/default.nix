@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-raspimouse-msgs";
-  version = "2.0.0-r1";
+  version = "2.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/raspimouse2-release/archive/release/rolling/raspimouse_msgs/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "95c32957d7a3d826a5173a8e842428c77efc50398f6c26344b40e9fea7b7e5b4";
+    url = "https://github.com/ros2-gbp/raspimouse2-release/archive/release/rolling/raspimouse_msgs/2.0.0-2.tar.gz";
+    name = "2.0.0-2.tar.gz";
+    sha256 = "8d67aeae2ec06b376e2b4157fda279f8ce5db288f8deaf5a86f9084af34115bb";
   };
 
   buildType = "ament_cmake";

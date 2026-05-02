@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-plotjuggler-msgs";
-  version = "0.2.3-r4";
+  version = "0.2.3-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/plotjuggler_msgs-release/archive/release/rolling/plotjuggler_msgs/0.2.3-4.tar.gz";
-    name = "0.2.3-4.tar.gz";
-    sha256 = "fe1e19624e4cca1fc6b971313368b3e1652a350c4b0bc6642a9af4936bf62776";
+    url = "https://github.com/ros2-gbp/plotjuggler_msgs-release/archive/release/rolling/plotjuggler_msgs/0.2.3-5.tar.gz";
+    name = "0.2.3-5.tar.gz";
+    sha256 = "3ed9681e5946f1e9ed90ac5b21a499658a2829074108b8a8277480ad3b72ed04";
   };
 
   buildType = "ament_cmake";

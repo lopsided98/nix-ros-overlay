@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, camera-calibration-parsers, rclcpp, rclcpp-lifecycle, rcpputils, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-camera-info-manager";
-  version = "6.4.7-r1";
+  version = "6.4.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/camera_info_manager/6.4.7-1.tar.gz";
-    name = "6.4.7-1.tar.gz";
-    sha256 = "2f9082eb4a1baef03b52020c5caa0482b6c28236a05e8fc541d4da195e5ffa6b";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/camera_info_manager/6.4.7-2.tar.gz";
+    name = "6.4.7-2.tar.gz";
+    sha256 = "78552aed6dcf45e219bde22e4efaf0660656abc3154e989e4c8a59fd4810fda8";
   };
 
   buildType = "ament_cmake";

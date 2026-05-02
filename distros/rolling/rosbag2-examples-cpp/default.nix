@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, rclcpp, rosbag2-compression, rosbag2-cpp, rosbag2-transport }:
 buildRosPackage {
   pname = "ros-rolling-rosbag2-examples-cpp";
-  version = "0.33.1-r1";
+  version = "0.33.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_examples_cpp/0.33.1-1.tar.gz";
-    name = "0.33.1-1.tar.gz";
-    sha256 = "e3710e7b159db645a591fd25c8a33ff03598c19be29b91f538baea7915876341";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_examples_cpp/0.33.1-2.tar.gz";
+    name = "0.33.1-2.tar.gz";
+    sha256 = "a9cc9de934408ba1481fe861c7d2696e8634a7be85206398680127f4676f9f27";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, nav-msgs, nav2-simple-commander, python3Packages, rclpy, tf-transformations, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-loopback-sim";
-  version = "1.3.11-r1";
+  version = "1.3.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_loopback_sim/1.3.11-1.tar.gz";
-    name = "1.3.11-1.tar.gz";
-    sha256 = "6db8c13590fe12e97f46916a7c93bb9e6477ca42c8ef87bced802fcb9d0741c3";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_loopback_sim/1.3.12-1.tar.gz";
+    name = "1.3.12-1.tar.gz";
+    sha256 = "f88b4b65e3ab4880eee941bb551e78ba081b521f27a56a47ac65f043a322d9a6";
   };
 
   buildType = "ament_python";

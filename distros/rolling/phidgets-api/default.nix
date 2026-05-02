@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, libphidget22 }:
 buildRosPackage {
   pname = "ros-rolling-phidgets-api";
-  version = "2.4.0-r1";
+  version = "2.4.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_api/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "1b5e4239e40d4828b481285d23711eb6033147eb823d3fa921cd495e5b7cd047";
+    url = "https://github.com/ros2-gbp/phidgets_drivers-release/archive/release/rolling/phidgets_api/2.4.0-2.tar.gz";
+    name = "2.4.0-2.tar.gz";
+    sha256 = "5ea5745c80f31ac21109bd67c5c901551b71d43c3cca2f64d71d9cd21c3b41f3";
   };
 
   buildType = "ament_cmake";

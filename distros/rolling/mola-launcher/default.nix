@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-xmllint, ament-lint-auto, cmake, mola-kernel, mrpt-libbase, mrpt-libtclap, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-mola-launcher";
-  version = "2.7.0-r1";
+  version = "2.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_launcher/2.7.0-1.tar.gz";
-    name = "2.7.0-1.tar.gz";
-    sha256 = "6e1029fd1f660d16e390af0bc0ef0abdfb30d1832f5975fc2de05680970d5765";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_launcher/2.7.0-2.tar.gz";
+    name = "2.7.0-2.tar.gz";
+    sha256 = "a642408921fcd8a27affadf256a701ebc468d6940dc4560df34cc3c58b4eba49";
   };
 
   buildType = "ament_cmake";

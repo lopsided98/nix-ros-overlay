@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, broll, pluginlib, rclcpp, rosbag2-cpp, rosbag2-storage, rosbag2-transport, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rosbag2-storage-broll";
-  version = "0.1.0-r1";
+  version = "0.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2_broll-release/archive/release/rolling/rosbag2_storage_broll/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "ed6d0071b27755a9e2f948d80ddbcf962efb68389dae2c24977a0835de8970b7";
+    url = "https://github.com/ros2-gbp/rosbag2_broll-release/archive/release/rolling/rosbag2_storage_broll/0.1.0-2.tar.gz";
+    name = "0.1.0-2.tar.gz";
+    sha256 = "621c35195e5bf693e1dbec638ce9d3e56941ce92b58e819d6bd190de3e6b3bda";
   };
 
   buildType = "ament_cmake";

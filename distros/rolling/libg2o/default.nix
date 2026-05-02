@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, libGL, libGLU, suitesparse }:
 buildRosPackage {
   pname = "ros-rolling-libg2o";
-  version = "2020.5.29-r5";
+  version = "2020.5.29-r6";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libg2o-release/archive/release/rolling/libg2o/2020.5.29-5.tar.gz";
-    name = "2020.5.29-5.tar.gz";
-    sha256 = "96aa1ede61ca201602f3ac476b82104bc9ce6a054744d5d1c39c8989cec5fa99";
+    url = "https://github.com/ros2-gbp/libg2o-release/archive/release/rolling/libg2o/2020.5.29-6.tar.gz";
+    name = "2020.5.29-6.tar.gz";
+    sha256 = "6e1d97bfe6f6316faf55f45d3a065d821c158b5213354fd378f2404dcff01e16";
   };
 
   buildType = "ament_cmake";

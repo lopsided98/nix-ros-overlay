@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ffw-joystick-controller";
-  version = "1.1.14-r1";
+  version = "1.1.14-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/rolling/ffw_joystick_controller/1.1.14-1.tar.gz";
-    name = "1.1.14-1.tar.gz";
-    sha256 = "96e707c38f11d8177a3b2ed3e27e8aa81ab40c0bc8fffa60073766e895ab6b78";
+    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/rolling/ffw_joystick_controller/1.1.14-2.tar.gz";
+    name = "1.1.14-2.tar.gz";
+    sha256 = "d95b8d153033506eeca2185b8db234372458d8fc70fc2c30ca416f41bafd4e09";
   };
 
   buildType = "ament_cmake";

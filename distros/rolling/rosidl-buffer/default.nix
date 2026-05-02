@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-rosidl-buffer";
-  version = "5.1.4-r2";
+  version = "5.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_buffer/5.1.4-2.tar.gz";
-    name = "5.1.4-2.tar.gz";
-    sha256 = "50282ddbbf0949a649a60ceefc644fe17c14297207b8d58920f635df199b91e0";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_buffer/5.2.0-2.tar.gz";
+    name = "5.2.0-2.tar.gz";
+    sha256 = "d42768144fa751f908fe42c01d92b1378f13ee416494438d96feb90fecf7b6df";
   };
 
   buildType = "ament_cmake";

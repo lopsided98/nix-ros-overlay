@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ackermann-nlmpc-msgs";
-  version = "1.0.3-r1";
+  version = "1.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ackmerann_nlmpc-release/archive/release/rolling/ackermann_nlmpc_msgs/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "23adb09ab6a8e7f44106847e770446f500a6739f2d63bd519200f27630f22138";
+    url = "https://github.com/ros2-gbp/ackmerann_nlmpc-release/archive/release/rolling/ackermann_nlmpc_msgs/1.0.3-2.tar.gz";
+    name = "1.0.3-2.tar.gz";
+    sha256 = "a77ccaff0e9a396937fea0b6de4333536aadc53f26118881216bb60fa9ec7f7a";
   };
 
   buildType = "ament_cmake";

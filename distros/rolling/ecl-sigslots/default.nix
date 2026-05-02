@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ecl-build, ecl-config, ecl-license, ecl-threads }:
 buildRosPackage {
   pname = "ros-rolling-ecl-sigslots";
-  version = "1.2.1-r4";
+  version = "1.2.1-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ecl_core-release/archive/release/rolling/ecl_sigslots/1.2.1-4.tar.gz";
-    name = "1.2.1-4.tar.gz";
-    sha256 = "3dd646b591e3d7aa7f2216a0c7c303122332ac5aaded9f155a50a85ba5075d83";
+    url = "https://github.com/ros2-gbp/ecl_core-release/archive/release/rolling/ecl_sigslots/1.2.1-5.tar.gz";
+    name = "1.2.1-5.tar.gz";
+    sha256 = "0907fc9fc649d3a84a643cfd8442be169467ced7e61827c378c0b0fb96a97d85";
   };
 
   buildType = "ament_cmake";

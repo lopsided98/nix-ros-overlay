@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-pep257, ament-cmake-uncrustify, ament-lint, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-smach-msgs";
-  version = "3.0.3-r2";
+  version = "3.0.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/executive_smach-release/archive/release/rolling/smach_msgs/3.0.3-2.tar.gz";
-    name = "3.0.3-2.tar.gz";
-    sha256 = "9e0b5599ee830756427f572f5f0267601ed9540e304e397639df865fdd27046d";
+    url = "https://github.com/ros2-gbp/executive_smach-release/archive/release/rolling/smach_msgs/3.0.3-3.tar.gz";
+    name = "3.0.3-3.tar.gz";
+    sha256 = "71d891c1f907e3eb577f47c501e4da2692b6b311ad1ab87eb143fa1ec49a0860";
   };
 
   buildType = "ament_cmake";

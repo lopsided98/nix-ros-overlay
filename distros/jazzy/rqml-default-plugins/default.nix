@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, control-msgs, controller-manager-msgs, geometry-msgs, moveit-msgs, pal-statistics-msgs, qml6-ros2-plugin, qt6, rcl-interfaces, ros-babel-fish-test-msgs, rqml-core, sensor-msgs, tf2-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rqml-default-plugins";
-  version = "3.26.41-r1";
+  version = "3.26.42-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqml-release/archive/release/jazzy/rqml_default_plugins/3.26.41-1.tar.gz";
-    name = "3.26.41-1.tar.gz";
-    sha256 = "a1b1d97d287227f9238bf3492677eba2e1e96a50eea7997fa99ebceafa77ea74";
+    url = "https://github.com/ros2-gbp/rqml-release/archive/release/jazzy/rqml_default_plugins/3.26.42-1.tar.gz";
+    name = "3.26.42-1.tar.gz";
+    sha256 = "e7ac35ea368516c64c4e52b43a348ec1ad1a172eae57ec9567a4935a11ea1241";
   };
 
   buildType = "ament_cmake";

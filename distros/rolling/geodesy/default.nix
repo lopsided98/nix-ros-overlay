@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, angles, geographic-msgs, geometry-msgs, python3Packages, sensor-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-rolling-geodesy";
-  version = "1.0.6-r1";
+  version = "1.0.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geographic_info-release/archive/release/rolling/geodesy/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "9dccfb0c5f595b86f0c2c695b597a8119538c8866a803b85c53ac9a5441025d1";
+    url = "https://github.com/ros2-gbp/geographic_info-release/archive/release/rolling/geodesy/1.0.6-2.tar.gz";
+    name = "1.0.6-2.tar.gz";
+    sha256 = "3f5890f3d64be315441b2300136d3cc7cb1733bf55e8c52d4cad0b92eda78c83";
   };
 
   buildType = "ament_cmake";

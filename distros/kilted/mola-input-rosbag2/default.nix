@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, cv-bridge, gps-msgs, mola-kernel, mrpt-libobs, mrpt-libros-bridge, rosbag2-cpp, sensor-msgs, tf2-geometry-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-mola-input-rosbag2";
-  version = "2.7.0-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_input_rosbag2/2.7.0-1.tar.gz";
-    name = "2.7.0-1.tar.gz";
-    sha256 = "bfa7ec1645f257036099f6be221805252e69f7f7edfea41104e214bc1aa443a8";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_input_rosbag2/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "a1b8ae977d94643f5e8d23118fb9fa411f63af7c0f195330b55a0865c6760f23";
   };
 
   buildType = "cmake";

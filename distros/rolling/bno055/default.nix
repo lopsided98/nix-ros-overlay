@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, example-interfaces, python3Packages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-bno055";
-  version = "0.5.0-r2";
+  version = "0.5.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/bno055-release/archive/release/rolling/bno055/0.5.0-2.tar.gz";
-    name = "0.5.0-2.tar.gz";
-    sha256 = "944290fb6a9c062f68018fedfcf28f6f10c8f854bccad3f80f47ac60ef0d3e40";
+    url = "https://github.com/ros2-gbp/bno055-release/archive/release/rolling/bno055/0.5.0-3.tar.gz";
+    name = "0.5.0-3.tar.gz";
+    sha256 = "239af9ee491d13c5ddaee536e1015b5936a6ca88ddfd27d2856e1f6e2fe04c81";
   };
 
   buildType = "ament_python";

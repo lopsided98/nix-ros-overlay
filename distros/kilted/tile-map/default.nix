@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, glew, jsoncpp, mapviz, pluginlib, qt5, rclcpp, swri-math-util, swri-transform-util, tf2, yaml-cpp }:
 buildRosPackage {
   pname = "ros-kilted-tile-map";
-  version = "2.6.2-r1";
+  version = "2.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/kilted/tile_map/2.6.2-1.tar.gz";
-    name = "2.6.2-1.tar.gz";
-    sha256 = "ef6f883bed06c6083f4385e7e527c7a96b47177a6a698654f9191c54394fbdab";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/kilted/tile_map/2.6.3-1.tar.gz";
+    name = "2.6.3-1.tar.gz";
+    sha256 = "6508d0deef17033984cf53fe48424983c5aa3bc33eb5aa2e8eba0ea41ff56914";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-rolling-ffw-teleop";
-  version = "1.1.14-r1";
+  version = "1.1.14-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/rolling/ffw_teleop/1.1.14-1.tar.gz";
-    name = "1.1.14-1.tar.gz";
-    sha256 = "6edf5d0be09fe6c56a4262c714a4b0b5f7eec7528ed5a9e877c7f9033a98951b";
+    url = "https://github.com/ros2-gbp/ai_worker-release/archive/release/rolling/ffw_teleop/1.1.14-2.tar.gz";
+    name = "1.1.14-2.tar.gz";
+    sha256 = "5124b0372caddd0bb6ec7f988f1f58e527fd95d0d9fe46fffb0e7677ff70f4be";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cpplint, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, gz-plugin-vendor, gz-sim-vendor }:
 buildRosPackage {
   pname = "ros-rolling-leo-gz-plugins";
-  version = "2.0.2-r1";
+  version = "2.0.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_simulator-release/archive/release/rolling/leo_gz_plugins/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "2458872cb11fed4c44945c3b77566c0d2733efc1860bcb990e6a8068a5b90d42";
+    url = "https://github.com/ros2-gbp/leo_simulator-release/archive/release/rolling/leo_gz_plugins/2.0.2-2.tar.gz";
+    name = "2.0.2-2.tar.gz";
+    sha256 = "c8654c6a469cba155764122136a6d4bfbb0c3006d297b1e3e5f943e3d55d2d7d";
   };
 
   buildType = "ament_cmake";

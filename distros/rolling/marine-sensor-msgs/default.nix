@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-marine-sensor-msgs";
-  version = "2.1.0-r1";
+  version = "2.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marine_msgs-release/archive/release/rolling/marine_sensor_msgs/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "050f2ca069345dfa04685a7e2bae7eff22a6624c230992777bbb9b90bf26708e";
+    url = "https://github.com/ros2-gbp/marine_msgs-release/archive/release/rolling/marine_sensor_msgs/2.1.0-2.tar.gz";
+    name = "2.1.0-2.tar.gz";
+    sha256 = "0d2963f0825c8ca2719da1088ab325daa729a3cf10bfd73f30cafc503d301fe2";
   };
 
   buildType = "ament_cmake";

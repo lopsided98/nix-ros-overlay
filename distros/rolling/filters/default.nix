@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-gtest, ament-cmake-uncrustify, ament-cmake-xmllint, boost, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-filters";
-  version = "2.2.2-r1";
+  version = "2.2.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/filters-release/archive/release/rolling/filters/2.2.2-1.tar.gz";
-    name = "2.2.2-1.tar.gz";
-    sha256 = "0a8b89a4d73681fa71c37ce6ba5749c08f062a94f55ee9637d8b2a434004c735";
+    url = "https://github.com/ros2-gbp/filters-release/archive/release/rolling/filters/2.2.2-2.tar.gz";
+    name = "2.2.2-2.tar.gz";
+    sha256 = "ff7037429e8b6a8ca7a520897bc54914903cc84e642775f0c7d8f48652e7b4cb";
   };
 
   buildType = "ament_cmake";

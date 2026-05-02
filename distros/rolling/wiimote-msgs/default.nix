@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-wiimote-msgs";
-  version = "3.3.0-r2";
+  version = "3.3.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/rolling/wiimote_msgs/3.3.0-2.tar.gz";
-    name = "3.3.0-2.tar.gz";
-    sha256 = "bb2948db393b8b32c4436a2700afd66f60e0b34e5c06f17f560a2398fbbcded7";
+    url = "https://github.com/ros2-gbp/joystick_drivers-release/archive/release/rolling/wiimote_msgs/3.3.0-3.tar.gz";
+    name = "3.3.0-3.tar.gz";
+    sha256 = "e6cb5885c66d589443517b0183c8af7fcee8a41c9aff03e530599215743b9aad";
   };
 
   buildType = "ament_cmake";

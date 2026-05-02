@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, smach, smach-msgs, smach-ros }:
 buildRosPackage {
   pname = "ros-rolling-executive-smach";
-  version = "3.0.3-r2";
+  version = "3.0.3-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/executive_smach-release/archive/release/rolling/executive_smach/3.0.3-2.tar.gz";
-    name = "3.0.3-2.tar.gz";
-    sha256 = "6190d3e15e52d523c5de3e3544791d92c8cd713cd2a4f086911aa3567e8f7b5e";
+    url = "https://github.com/ros2-gbp/executive_smach-release/archive/release/rolling/executive_smach/3.0.3-3.tar.gz";
+    name = "3.0.3-3.tar.gz";
+    sha256 = "e087bc0e86d32887f833582e4b231baf117a0e69624239a430936ff7469fbdfb";
   };
 
   buildType = "ament_cmake";

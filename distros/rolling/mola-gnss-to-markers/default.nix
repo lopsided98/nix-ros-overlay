@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, mrpt-libobs, mrpt-nav-interfaces, rclcpp, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-mola-gnss-to-markers";
-  version = "0.1.2-r1";
+  version = "0.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_gnss_to_markers-release/archive/release/rolling/mola_gnss_to_markers/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "7ddd41e72dc1472ac384b9460b6ad6f067325b06ddca8f754cf2e105aa941411";
+    url = "https://github.com/ros2-gbp/mola_gnss_to_markers-release/archive/release/rolling/mola_gnss_to_markers/0.1.2-2.tar.gz";
+    name = "0.1.2-2.tar.gz";
+    sha256 = "3b7c7fd61c2fccc13e38e3062a6a9aa5fe81b0ae2febeec38843899333dbac93";
   };
 
   buildType = "ament_cmake";

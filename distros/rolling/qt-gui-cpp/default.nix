@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, pkg-config, pluginlib, python-qt-binding, qt-gui, qt6, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-rolling-qt-gui-cpp";
-  version = "2.10.4-r1";
+  version = "2.10.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui_cpp/2.10.4-1.tar.gz";
-    name = "2.10.4-1.tar.gz";
-    sha256 = "a5aafa7dcb0d65d3fbe7ea3fba27cbb616d086fc6c323815f059799f82eb34f7";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui_cpp/2.10.7-2.tar.gz";
+    name = "2.10.7-2.tar.gz";
+    sha256 = "f5c30259529ec327b88d0f9cffcf1f1a29be0929145bd747409df1780e0f0bca";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake pkg-config python-qt-binding qt6.qtbase ];
+  buildInputs = [ ament-cmake pkg-config python-qt-binding ];
   checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ pluginlib qt-gui tinyxml-2 ];
+  propagatedBuildInputs = [ pluginlib qt-gui qt6.qtbase tinyxml-2 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

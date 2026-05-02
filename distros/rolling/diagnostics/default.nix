@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, diagnostic-aggregator, diagnostic-common-diagnostics, diagnostic-updater, self-test }:
 buildRosPackage {
   pname = "ros-rolling-diagnostics";
-  version = "4.4.6-r1";
+  version = "4.4.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/rolling/diagnostics/4.4.6-1.tar.gz";
-    name = "4.4.6-1.tar.gz";
-    sha256 = "5b668f7e193854e36bb1dfadb1e4716e125d6fa041c43607c9da3704fa000995";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/rolling/diagnostics/4.4.6-2.tar.gz";
+    name = "4.4.6-2.tar.gz";
+    sha256 = "83555e24ceef7201c740f4b617e896a2bde4aad024e60d9d1be147c92a7e7580";
   };
 
   buildType = "ament_cmake";

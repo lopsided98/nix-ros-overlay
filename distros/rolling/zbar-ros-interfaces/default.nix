@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, vision-msgs }:
 buildRosPackage {
   pname = "ros-rolling-zbar-ros-interfaces";
-  version = "0.7.0-r1";
+  version = "0.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/zbar_ros-release/archive/release/rolling/zbar_ros_interfaces/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "528153962db4f4eb1a9c181afa23f9a7be73970a33bebee059c5533e23c5ca31";
+    url = "https://github.com/ros2-gbp/zbar_ros-release/archive/release/rolling/zbar_ros_interfaces/0.7.0-2.tar.gz";
+    name = "0.7.0-2.tar.gz";
+    sha256 = "3740f0d24e9046e59d237ca32ff42fdda9f9dd7d28ce889e54abb2cdefeb979c";
   };
 
   buildType = "ament_cmake";

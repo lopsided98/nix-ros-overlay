@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, opencv, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-apriltag";
-  version = "3.4.5-r1";
+  version = "3.4.5-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/apriltag-release/archive/release/rolling/apriltag/3.4.5-1.tar.gz";
-    name = "3.4.5-1.tar.gz";
-    sha256 = "c12d9989095cfa92423c319697eb3b2de3788d1411d58d0cbb1f3a0695fc0150";
+    url = "https://github.com/ros2-gbp/apriltag-release/archive/release/rolling/apriltag/3.4.5-2.tar.gz";
+    name = "3.4.5-2.tar.gz";
+    sha256 = "a4990fa8029a30431c37c29f50679269ed0586402ec510f3b358790afb8392fd";
   };
 
   buildType = "cmake";

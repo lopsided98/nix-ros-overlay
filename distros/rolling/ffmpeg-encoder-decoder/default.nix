@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, cv-bridge, ffmpeg, ffmpeg-image-transport-msgs, opencv, pkg-config, rclcpp, ros-environment, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ffmpeg-encoder-decoder";
-  version = "3.0.1-r1";
+  version = "3.0.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ffmpeg_encoder_decoder-release/archive/release/rolling/ffmpeg_encoder_decoder/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "765c4dac0e0dff4eee9845b8efa3b406134b4053d80a8caa09cf23875a9ee4f8";
+    url = "https://github.com/ros2-gbp/ffmpeg_encoder_decoder-release/archive/release/rolling/ffmpeg_encoder_decoder/3.0.1-2.tar.gz";
+    name = "3.0.1-2.tar.gz";
+    sha256 = "5287c8bac3726df688276badbcd9e53667ccdfb137e4136aed8549032c9502cd";
   };
 
   buildType = "ament_cmake";

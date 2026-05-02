@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, launch, launch-ros, message-filters, rclcpp, tf2, tf2-geometry-msgs, tf2-ros, turtlesim-msgs }:
 buildRosPackage {
   pname = "ros-rolling-turtle-tf2-cpp";
-  version = "0.7.0-r1";
+  version = "0.7.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/rolling/turtle_tf2_cpp/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "870dd8c1a90fd2793f072a5b4ac0f0a1ecfed086bfc2b3654dfdb64edd5e5e3f";
+    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/rolling/turtle_tf2_cpp/0.7.0-2.tar.gz";
+    name = "0.7.0-2.tar.gz";
+    sha256 = "98d05d0f1c12d82dc8d42de759d44f424c6d066a3156063dbf5a62710d516567";
   };
 
   buildType = "ament_cmake";

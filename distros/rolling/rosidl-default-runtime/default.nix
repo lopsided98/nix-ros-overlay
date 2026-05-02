@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-core-runtime, service-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rosidl-default-runtime";
-  version = "1.8.1-r1";
+  version = "1.8.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_defaults-release/archive/release/rolling/rosidl_default_runtime/1.8.1-1.tar.gz";
-    name = "1.8.1-1.tar.gz";
-    sha256 = "339303daddfe7a586a01115187736c2c72b918293ef79bbc1e8cf9e44326b704";
+    url = "https://github.com/ros2-gbp/rosidl_defaults-release/archive/release/rolling/rosidl_default_runtime/1.8.1-2.tar.gz";
+    name = "1.8.1-2.tar.gz";
+    sha256 = "2e9a4ffc528b54347c78811b8adad6f4d80cb3e1a16994a9c5cefbb0e980d947";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher, joint-state-publisher-gui, launch-ros, robot-state-publisher, rviz-common, rviz-default-plugins, rviz2, xacro }:
 buildRosPackage {
   pname = "ros-rolling-urdf-launch";
-  version = "0.1.2-r1";
+  version = "0.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/urdf_launch-release/archive/release/rolling/urdf_launch/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "d5cd40695a25c66105f300004e307d38e95b868057dfddfb0393a602849dcd85";
+    url = "https://github.com/ros2-gbp/urdf_launch-release/archive/release/rolling/urdf_launch/0.1.2-2.tar.gz";
+    name = "0.1.2-2.tar.gz";
+    sha256 = "6f494a3789f4077850ee2ff1b360384985d022edf30390bb0cd000ca65b08ab3";
   };
 
   buildType = "ament_cmake";

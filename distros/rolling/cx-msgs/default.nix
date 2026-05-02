@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-rolling-cx-msgs";
-  version = "0.1.3-r1";
+  version = "0.1.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/clips_executive-release/archive/release/rolling/cx_msgs/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "5f0ccdb30ba9b0038d6f415df32c413b4bf6ca9a7fff32c87ea1d0bb079b4a5f";
+    url = "https://github.com/ros2-gbp/clips_executive-release/archive/release/rolling/cx_msgs/0.1.3-2.tar.gz";
+    name = "0.1.3-2.tar.gz";
+    sha256 = "a3d4068dd27b13d3b3669dcd26f1f179da57b92d4b66f2fce52e9f20affdf04f";
   };
 
   buildType = "ament_cmake";

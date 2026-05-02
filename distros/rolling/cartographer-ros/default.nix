@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, abseil-cpp, ament-cmake, builtin-interfaces, cartographer, cartographer-ros-msgs, eigen, geometry-msgs, gflags, glog, gtest, launch, nav-msgs, pcl, pcl-conversions, python3Packages, rclcpp, robot-state-publisher, ros-environment, rosbag2-cpp, rosbag2-storage, sensor-msgs, std-msgs, tf2, tf2-eigen, tf2-msgs, tf2-ros, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-cartographer-ros";
-  version = "2.0.9003-r1";
+  version = "2.0.9003-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cartographer_ros-release/archive/release/rolling/cartographer_ros/2.0.9003-1.tar.gz";
-    name = "2.0.9003-1.tar.gz";
-    sha256 = "7fe91dbc9c20e2908b7c6440c47c0c635f8f213172b92ca0b2ff78e287fb79fe";
+    url = "https://github.com/ros2-gbp/cartographer_ros-release/archive/release/rolling/cartographer_ros/2.0.9003-2.tar.gz";
+    name = "2.0.9003-2.tar.gz";
+    sha256 = "b31238055950e2b78694ddac98e73aee43f620aa2e9c033bf756fc1b2bd52f51";
   };
 
   buildType = "ament_cmake";

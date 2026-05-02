@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, flexbe-core, flexbe-input, flexbe-mirror, flexbe-msgs, flexbe-onboard, flexbe-states, flexbe-testing, flexbe-widget }:
 buildRosPackage {
   pname = "ros-rolling-flexbe-behavior-engine";
-  version = "4.0.3-r1";
+  version = "4.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/rolling/flexbe_behavior_engine/4.0.3-1.tar.gz";
-    name = "4.0.3-1.tar.gz";
-    sha256 = "a525469bd8bd80bb6ff90d2cb2ac46180759a04efe4e2acb69391dbc2b4bdec3";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/rolling/flexbe_behavior_engine/4.0.3-2.tar.gz";
+    name = "4.0.3-2.tar.gz";
+    sha256 = "72b49832330fbfd309d46b562c13df145fd5fe87d20348e0725d65ca8b145c1a";
   };
 
   buildType = "ament_cmake";
