@@ -15,6 +15,17 @@ jobs:
         with:
           name: ros
           signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
+      - name: Configure git
+        run: |
+          git config --local user.email "superflore@github.com"
+          git config --local user.name "Superflore"
+          git config credential.helper '!
+            f() {
+              echo "username=lopsided98"
+              echo "password=${SUPERFLORE_GITHUB_TOKEN}"
+            }; f'
+      - name: Update rosdistro
+        run: nix flake update rosdistro --commit-lock-file
       - name: Install Superflore
         run: |
           nix build .#update-overlay
@@ -33,13 +44,6 @@ jobs:
         env:
           GITHUB_RUNNER_TEMP: ${{ runner.temp }}
         run: |
-          git config --local user.email "superflore@github.com"
-          git config --local user.name "Superflore"
-          git config credential.helper '!
-            f() {
-              echo "username=lopsided98"
-              echo "password=${SUPERFLORE_GITHUB_TOKEN}"
-            }; f'
           nix run .#update-overlay
       - name: Remove untouched files from the cache
         run: "find ~/.ros/tar -atime +1 | xargs -r rm -v"

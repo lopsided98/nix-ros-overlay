@@ -167,10 +167,11 @@ There are thousands of ROS packages, so it is infeasible to make sure every pack
 
 The overlay is updated semi-automatically approximately every few
 weeks. If you want to try a more recent ROS version, you can update
-the whole overlay locally by running the following command from
+the whole overlay locally by running the following commands from
 repository root:
 
 ```
+nix flake update rosdistro
 nix run .#update-overlay
 ```
 
@@ -182,6 +183,13 @@ command line. For example, the following command updates just the
 
 ```
 nix run .#update-overlay -- --dry-run --output-repository-path . --tar-archive-dir .tar --no-branch --ros-distro jazzy
+```
+
+You can also regenerate the overlay from a custom version of the
+rosdistro repository:
+
+```sh
+nix run .#update-overlay --override-input rosdistro /path/to/local/rosdistro
 ```
 
 **Q: Do you provide packages for ROS 1 or Gazebo Classic?**
