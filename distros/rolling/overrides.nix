@@ -459,6 +459,31 @@ in {
       '';
   });
 
+  # This meta-package is referenced by the rosdep key python3-qt-bindings,
+  # which is used by packages such as rqt. These packages depend on Qt5 in
+  # older ROS distributions and Qt6 in Lyrical and newer releases.
+  #
+  # On Ubuntu (and similar distributions), python3-qt-bindings resolves to
+  # different system packages depending on the OS version. In Nix, however, we
+  # do not rely on multiple nixpkgs versions, so we define the rosdep key to
+  # always resolve to python-qt-bindings-deps, and we define this package
+  # differently for each ROS distribution to depend on the appropriate Qt
+  # version.
+  python-qt-bindings-deps = self.stdenv.mkDerivation {
+    name = "python-qt-bindings-deps";
+    dontUnpack = true;
+    dontBuild = true;
+    dontInstall = true;
+    propagatedBuildInputs = with rosSelf.pythonPackages; [
+      pyqt6-sip
+      pyside6
+      self.pkg-config
+      self.qt6.qtbase
+      self.qt6.qtdeclarative
+    ];
+    propagatedNativeBuildInputs = [ self.qt6.wrapQtAppsHook ];
+  };
+
   rcdiscover = rosSuper.rcdiscover.overrideAttrs ({
     postPatch ? "", ...
   }: {
@@ -779,4 +804,5 @@ in {
       '';
     };
   };
+
 }
