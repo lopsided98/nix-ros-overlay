@@ -49,6 +49,8 @@ let
           inherit rev;
           fetchgitArgs.hash = {
             "2.15.14" = "sha256-WudCeaOJWNIK2NaD6JNal68kU+eOhnrd6XF3CLb3pg8=";
+            "2.15.15" = "sha256-d+zSxvdRbsE2BpIED7kaMLu7Y+kWeOtbXtRhengwzv0=";
+            "2.15.16" = "sha256-BDeuGRHdCsbqjosIIPXa4AevPCFD3uNwqJc4r9pCo4o=";
           }.${rev};
         }).overrideAttrs ({ postPatch ? "", buildInputs ? [], ... }: {
           postPatch = postPatch + ''
