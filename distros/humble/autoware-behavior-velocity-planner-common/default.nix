@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-adapi-v1-msgs, autoware-cmake, autoware-internal-debug-msgs, autoware-internal-planning-msgs, autoware-interpolation, autoware-lanelet2-extension, autoware-lanelet2-utils, autoware-lint-common, autoware-map-msgs, autoware-motion-utils, autoware-objects-of-interest-marker-interface, autoware-perception-msgs, autoware-planning-factor-interface, autoware-planning-msgs, autoware-route-handler, autoware-test-utils, autoware-trajectory, autoware-utils-debug, autoware-utils-geometry, autoware-utils-rclcpp, autoware-utils-system, autoware-utils-visualization, autoware-vehicle-info-utils, autoware-velocity-smoother, diagnostic-msgs, eigen, eigen3-cmake-module, geometry-msgs, nav-msgs, pcl-conversions, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-behavior-velocity-planner-common";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_behavior_velocity_planner_common/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "de6a0c55dba585a328052708837f3fc085e0a78158c017e9b73c49553470c06f";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_behavior_velocity_planner_common/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "2e5149f595523d18eb0d6b0fa71587cbd4d82527f54a4c32163c4aff5e95ed29";
   };
 
   buildType = "ament_cmake";

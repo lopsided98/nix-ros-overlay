@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, eigen, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-toppra";
-  version = "0.6.7-r3";
+  version = "0.6.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/toppra-release/archive/release/lyrical/toppra/0.6.7-3.tar.gz";
-    name = "0.6.7-3.tar.gz";
-    sha256 = "3253f14d7a924f5716a4917ea19c8dda550ddadd28bc006fd706bc598fe1a530";
+    url = "https://github.com/ros2-gbp/toppra-release/archive/release/lyrical/toppra/0.6.8-1.tar.gz";
+    name = "0.6.8-1.tar.gz";
+    sha256 = "9d2d3a164c2a909c9ffffdf2d1543707a3af3979f88d831607417e07b063d2e4";
   };
 
   buildType = "catkin";

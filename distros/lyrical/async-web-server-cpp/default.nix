@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, boost, launch-testing, openssl, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-async-web-server-cpp";
-  version = "2.0.1-r3";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/async_web_server_cpp-release/archive/release/lyrical/async_web_server_cpp/2.0.1-3.tar.gz";
-    name = "2.0.1-3.tar.gz";
-    sha256 = "31f8ea58a60ce53e7ebfad88787651aa0ddad1610a32af1fc55b6e2a5ce507c3";
+    url = "https://github.com/ros2-gbp/async_web_server_cpp-release/archive/release/lyrical/async_web_server_cpp/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "5a19e1cd5583c68c126731f976cfc59542fe5477efd50aa692c103f87bf86bef";
   };
 
   buildType = "catkin";

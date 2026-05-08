@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-index-cpp, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-utils-geometry, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-autoware-vehicle-info-utils";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_vehicle_info_utils/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "c0c5683a8639d565f0f87f7b85337ae269f825f59c0888fe6a60895605d736fe";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_vehicle_info_utils/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "86e17a10607528aed5e3246bdb5a57fc5a8c7616dda6b68842ed5ebf25972b96";
   };
 
   buildType = "ament_cmake";

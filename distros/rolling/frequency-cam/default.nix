@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-clang-format, ament-cmake-ros, ament-lint-auto, ament-lint-common, cv-bridge, event-camera-codecs, event-camera-msgs, image-transport, rclcpp, rclcpp-components, rosbag2-cpp, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-frequency-cam";
-  version = "3.1.0-r2";
+  version = "3.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/frequency_cam-release/archive/release/rolling/frequency_cam/3.1.0-2.tar.gz";
-    name = "3.1.0-2.tar.gz";
-    sha256 = "f8984240f9966bc83e0ffa7244502ccdebb8de315a1f05e3d8e91c497e781198";
+    url = "https://github.com/ros2-gbp/frequency_cam-release/archive/release/rolling/frequency_cam/3.1.1-1.tar.gz";
+    name = "3.1.1-1.tar.gz";
+    sha256 = "bc9d10b138a7b0b4a28c3d995421e15157e999ff0d61cc05c379126e12fae89a";
   };
 
   buildType = "ament_cmake";

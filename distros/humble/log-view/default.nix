@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ncurses, rcl-interfaces, rclcpp, xclip }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ncurses, rcl-interfaces, rclcpp, xclip, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-humble-log-view";
-  version = "0.2.5-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/hatchbed/log_view-release/archive/release/humble/log_view/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "384287437b37b44ac41b2c0dc545c23f0b3d8cbbd6612abca274c25a3c42d0e5";
+    url = "https://github.com/hatchbed/log_view-release/archive/release/humble/log_view/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "89f2e5dc6bce37b9d54e4f3cf0c89b85a3a05f29805d932a72a0c84a13962c7e";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ncurses rcl-interfaces rclcpp xclip ];
+  propagatedBuildInputs = [ ncurses rcl-interfaces rclcpp xclip yaml-cpp-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
@@ -25,6 +25,6 @@ buildRosPackage {
 
     This is an alternative to rqt_console and swri_console that doesn't depend
     on qt and can be run directly in a terminal.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

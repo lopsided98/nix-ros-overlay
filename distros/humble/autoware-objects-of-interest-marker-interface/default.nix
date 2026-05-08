@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-perception-msgs, autoware-utils-geometry, autoware-utils-math, autoware-utils-visualization, geometry-msgs, rclcpp, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-objects-of-interest-marker-interface";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_objects_of_interest_marker_interface/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "34c59aa1597806ec75cff24c32d1331cfa8e69e908694fdcfee742624dfc20fb";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_objects_of_interest_marker_interface/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "34942dd14878b46d6bde98d13ab47566811b4ac0efe2b8af2236d267c0079b0f";
   };
 
   buildType = "ament_cmake";

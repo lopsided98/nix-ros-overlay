@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, eigen, geos, opencv, pkg-config, tf2 }:
 buildRosPackage {
   pname = "ros-kilted-swri-geometry-util";
-  version = "3.8.7-r1";
+  version = "3.8.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/kilted/swri_geometry_util/3.8.7-1.tar.gz";
-    name = "3.8.7-1.tar.gz";
-    sha256 = "4acad457c8fd2f7fb97717996ddf9ca38b7ccfdef8038e7e9d7ae5ce4b325bd7";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/kilted/swri_geometry_util/3.8.9-1.tar.gz";
+    name = "3.8.9-1.tar.gz";
+    sha256 = "92527e9331ba7c0e565f4ca50162ed9ce3ff68598f9c41676b980d99c0d79df5";
   };
 
   buildType = "ament_cmake";

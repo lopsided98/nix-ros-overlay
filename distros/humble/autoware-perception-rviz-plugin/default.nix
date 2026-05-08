@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, autoware-cmake, autoware-lanelet2-extension, autoware-lint-common, autoware-map-msgs, autoware-perception-msgs, boost, qt5, rviz-common, rviz-default-plugins, rviz2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-autoware-perception-rviz-plugin";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_rviz_plugins-release/archive/release/humble/autoware_perception_rviz_plugin/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "f1be0894b41fcb79a9bdbf9913492f4b8ef4e02ac84c6b0190afb1634ea19968";
+    url = "https://github.com/ros2-gbp/autoware_rviz_plugins-release/archive/release/humble/autoware_perception_rviz_plugin/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "33a822a7debf95ab4a8a60ed11daacaa9f2c5cd6b507d57f10d2d84eb1ef4e8c";
   };
 
   buildType = "ament_cmake";

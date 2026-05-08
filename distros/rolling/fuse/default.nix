@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, fuse-constraints, fuse-core, fuse-doc, fuse-graphs, fuse-models, fuse-msgs, fuse-optimizers, fuse-publishers, fuse-variables, fuse-viz, gtest-vendor }:
 buildRosPackage {
   pname = "ros-rolling-fuse";
-  version = "1.3.1-r2";
+  version = "1.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/rolling/fuse/1.3.1-2.tar.gz";
-    name = "1.3.1-2.tar.gz";
-    sha256 = "5b0c16897c81b10c1356203b35e85e33034a8d7205ef126b6ac7f09576082a3b";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/rolling/fuse/1.3.3-1.tar.gz";
+    name = "1.3.3-1.tar.gz";
+    sha256 = "d093a0ca5379d288e73426d65bbed651246c3699c022eda6f5cf70be7c82b475";
   };
 
   buildType = "ament_cmake";

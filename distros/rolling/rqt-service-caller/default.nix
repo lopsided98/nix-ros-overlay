@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, python-qt-binding, python3Packages, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-rolling-rqt-service-caller";
-  version = "1.5.2-r2";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_service_caller-release/archive/release/rolling/rqt_service_caller/1.5.2-2.tar.gz";
-    name = "1.5.2-2.tar.gz";
-    sha256 = "7f4148ce82ffe8c64924ae9b9672c6869b45bf83d5358f048eabccdc55b56789";
+    url = "https://github.com/ros2-gbp/rqt_service_caller-release/archive/release/rolling/rqt_service_caller/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "ae79502b277659583d1efc4da00fa1af031887292abb0fda164d62c2977cca46";
   };
 
   buildType = "ament_python";

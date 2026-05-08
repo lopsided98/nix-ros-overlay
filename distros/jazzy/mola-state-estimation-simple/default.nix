@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-imu-preintegration, mola-kernel, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-jazzy-mola-state-estimation-simple";
-  version = "2.3.0-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/jazzy/mola_state_estimation_simple/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "8ae0fa84e8077582a8bdf2814e6912f4426eddccc8b72105dda28febdf56f75a";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/jazzy/mola_state_estimation_simple/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "41e8a119d6243672bf648f90977ae15357011aa86042f4769ec7cbd261424139";
   };
 
   buildType = "cmake";

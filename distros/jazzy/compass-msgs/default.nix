@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-compass-msgs";
-  version = "0.2.0-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/compass_msgs/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "d82a882d12564b2b2d29f06f1841697090cd997347a84975ad9556bd53e62a37";
+    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/compass_msgs/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "f7f4834ba1293548ac1893ca42a50db85bf588545a58699516ba0f4d70b96bcb";
   };
 
   buildType = "ament_cmake";

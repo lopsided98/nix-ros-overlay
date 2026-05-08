@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, fastcdr, fastdds, osrf-testing-tools-cpp, rcpputils, rcutils, rmw, rmw-dds-common, rmw-security-common, rosidl-buffer-backend-registry, rosidl-dynamic-typesupport, rosidl-runtime-c, rosidl-typesupport-introspection-c, rosidl-typesupport-introspection-cpp, tracetools }:
 buildRosPackage {
   pname = "ros-rolling-rmw-fastrtps-shared-cpp";
-  version = "9.4.7-r2";
+  version = "9.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_fastrtps-release/archive/release/rolling/rmw_fastrtps_shared_cpp/9.4.7-2.tar.gz";
-    name = "9.4.7-2.tar.gz";
-    sha256 = "5a3110bb4fd4b96a7aa41d8eb758e0c3e4c9fb85e6554598ba24da76f61b6e3c";
+    url = "https://github.com/ros2-gbp/rmw_fastrtps-release/archive/release/rolling/rmw_fastrtps_shared_cpp/9.5.0-1.tar.gz";
+    name = "9.5.0-1.tar.gz";
+    sha256 = "e0fd01b386b7366ae6c95341168f4af9509fc19fbdd0ac876096b3fa546d72f5";
   };
 
   buildType = "ament_cmake";

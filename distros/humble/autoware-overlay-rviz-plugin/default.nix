@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-index-cpp, ament-lint-auto, autoware-internal-planning-msgs, autoware-lint-common, autoware-perception-msgs, autoware-vehicle-msgs, boost, rviz-2d-overlay-msgs, rviz-2d-overlay-plugins, rviz-common, rviz-ogre-vendor, rviz-rendering }:
 buildRosPackage {
   pname = "ros-humble-autoware-overlay-rviz-plugin";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_rviz_plugins-release/archive/release/humble/autoware_overlay_rviz_plugin/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "754b3a508da9458220d1473684dc1ac045247d99fceea75c2dc771ce2387d2f0";
+    url = "https://github.com/ros2-gbp/autoware_rviz_plugins-release/archive/release/humble/autoware_overlay_rviz_plugin/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "f709a550c326a37f9bd71fa34593bf80ac8e11242ac1af1464aba68496303414";
   };
 
   buildType = "ament_cmake";

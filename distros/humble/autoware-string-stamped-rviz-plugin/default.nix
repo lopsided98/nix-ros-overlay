@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-index-cpp, ament-lint-auto, autoware-cmake, autoware-internal-debug-msgs, autoware-lint-common, rviz-2d-overlay-msgs, rviz-2d-overlay-plugins, rviz-common, rviz-ogre-vendor, rviz-rendering }:
 buildRosPackage {
   pname = "ros-humble-autoware-string-stamped-rviz-plugin";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_rviz_plugins-release/archive/release/humble/autoware_string_stamped_rviz_plugin/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "97d9b88ac1cf7eae1578ecc99b1a3d8790d5136a923966fc53cc6fdbb19b0c5d";
+    url = "https://github.com/ros2-gbp/autoware_rviz_plugins-release/archive/release/humble/autoware_string_stamped_rviz_plugin/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "b995f06cb59f2fcf8894b591eaef39171a2ffb5b7c2a94917269b06dae76f371";
   };
 
   buildType = "ament_cmake";

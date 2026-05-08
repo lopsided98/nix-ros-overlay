@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-swri-dbw-interface";
-  version = "3.8.7-r2";
+  version = "3.8.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_dbw_interface/3.8.7-2.tar.gz";
-    name = "3.8.7-2.tar.gz";
-    sha256 = "e5abc01fa86aa4d60d537e2d98a76c3a4da0e4a4ea22a989e93f5fbd966d08c1";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_dbw_interface/3.8.9-1.tar.gz";
+    name = "3.8.9-1.tar.gz";
+    sha256 = "b513d38529ad944dfcc56eca86f9795c92b473088dfa29bfe63f5b05c0742982";
   };
 
   buildType = "ament_cmake";

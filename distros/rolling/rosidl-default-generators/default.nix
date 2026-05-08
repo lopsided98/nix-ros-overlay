@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-core, ament-lint-auto, ament-lint-common, rosidl-core-generators, service-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rosidl-default-generators";
-  version = "1.8.1-r2";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_defaults-release/archive/release/rolling/rosidl_default_generators/1.8.1-2.tar.gz";
-    name = "1.8.1-2.tar.gz";
-    sha256 = "48e2c602daa0112464d79ec261b926673b0dad55f3a7f5b6f0c6f549a9e90099";
+    url = "https://github.com/ros2-gbp/rosidl_defaults-release/archive/release/rolling/rosidl_default_generators/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "6765f62c8be8d711fad11080ee27eca4a82e0557e3ff0cb6d7b7be11b5934ce6";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-cppcheck, ament-cmake-export-dependencies, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-test, ament-cmake-xmllint, ament-lint-auto, autoware-cmake, autoware-lint-common, pcl-ros, point-cloud-msg-wrapper }:
 buildRosPackage {
   pname = "ros-humble-autoware-point-types";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_point_types/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "ae5821c4bdcb5feff6900d21b3288b4e0066c14a0efb5e25ae9efa378d675995";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_point_types/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "3a59f07cbd9eeca0925f2c00991cad644a22213cc345e4eded68ff34581cded4";
   };
 
   buildType = "ament_cmake";

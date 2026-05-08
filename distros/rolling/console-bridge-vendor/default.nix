@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-lint-auto, ament-lint-common, console-bridge, performance-test-fixture }:
 buildRosPackage {
   pname = "ros-rolling-console-bridge-vendor";
-  version = "1.9.1-r2";
+  version = "1.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/console_bridge_vendor-release/archive/release/rolling/console_bridge_vendor/1.9.1-2.tar.gz";
-    name = "1.9.1-2.tar.gz";
-    sha256 = "d319f53777f0daa757c428d28c6e988e76edfc853bdde152c2c46b3aef5f42f7";
+    url = "https://github.com/ros2-gbp/console_bridge_vendor-release/archive/release/rolling/console_bridge_vendor/1.10.0-1.tar.gz";
+    name = "1.10.0-1.tar.gz";
+    sha256 = "62d6e9716b13e372fb725a2ba8e343dbe60c51103d6ba31502bdfb0cd9fb2140";
   };
 
   buildType = "ament_cmake";

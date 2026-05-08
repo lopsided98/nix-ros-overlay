@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, mola-state-estimation-simple, mola-state-estimation-smoother }:
 buildRosPackage {
   pname = "ros-humble-mola-state-estimation";
-  version = "2.3.0-r1";
+  version = "2.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/humble/mola_state_estimation/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "3c9118c1b4bcbcbec99c91fc7809a68405040f706910cc0e2bb770b9fe27471b";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/humble/mola_state_estimation/2.3.1-1.tar.gz";
+    name = "2.3.1-1.tar.gz";
+    sha256 = "d944d518db961510121ceb60c8a5cf33a0c4b761765b8406edd4e0f07fc01df3";
   };
 
   buildType = "ament_cmake";

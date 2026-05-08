@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libbase, mrpt-libmath, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-libposes";
-  version = "2.15.14-r3";
+  version = "2.15.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/lyrical/mrpt_libposes/2.15.14-3.tar.gz";
-    name = "2.15.14-3.tar.gz";
-    sha256 = "7c7561c8584e521f9911fa5f1242ab448ea59012fa20ad0bad0f34871381c14e";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/lyrical/mrpt_libposes/2.15.16-1.tar.gz";
+    name = "2.15.16-1.tar.gz";
+    sha256 = "f165bae89444afc270b9ef9a8274e3fe573c707519811ec7ae67781dce2d11ce";
   };
 
   buildType = "cmake";

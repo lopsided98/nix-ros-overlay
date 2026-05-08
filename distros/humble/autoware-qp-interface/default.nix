@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, eigen, osqp-vendor, proxsuite, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-humble-autoware-qp-interface";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_qp_interface/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "cde6770a9976df59d53f4ea1f3a76f470bb1c7f29555de9ee61bfbf643a30358";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_qp_interface/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "df90962f28c7ffc06e3bdc53fc2182676c842efe0d9d6113b37fadc2e8b69215";
   };
 
   buildType = "ament_cmake";

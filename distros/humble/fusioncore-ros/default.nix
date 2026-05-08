@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, compass-msgs, diagnostic-msgs, eigen3-cmake-module, fusioncore-core, geographic-msgs, geometry-msgs, nav-msgs, proj, rclcpp, rclcpp-lifecycle, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-fusioncore-ros";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/manankharwar/fusioncore-release/archive/release/humble/fusioncore_ros/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "3b6572febd6ccd145972652cfa7492489a0d6f1abf7473f487475303bdb8e6cf";
+    url = "https://github.com/manankharwar/fusioncore-release/archive/release/humble/fusioncore_ros/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "08328d1a9c46a3cbabcee4431e2edb4dae61a1f452773d548d3e6316834e6fda";
   };
 
   buildType = "ament_cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
-    description = "ROS 2 UKF sensor fusion for GPS, IMU and wheel encoders. 22-state filter with ECEF-native GPS handling, automatic IMU bias estimation, adaptive noise covariance, and chi-squared outlier rejection on every sensor. Drop-in robot_localization alternative. Native ROS 2 Jazzy, benchmarked on 6 NCLT public dataset sequences.";
+    description = "ROS 2 UKF sensor fusion for GPS, IMU and wheel encoders. 22-state filter with ECEF-native GPS handling, automatic IMU bias estimation, adaptive noise covariance, and chi-squared outlier rejection on every sensor. Drop-in robot_localization alternative. Native ROS 2 Jazzy and Humble, benchmarked on 6 NCLT public dataset sequences.";
     license = with lib.licenses; [ asl20 ];
   };
 }

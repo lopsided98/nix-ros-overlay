@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-core-api, autoware-core-control, autoware-core-localization, autoware-core-map, autoware-core-perception, autoware-core-planning, autoware-core-sensing, autoware-core-vehicle, autoware-global-parameter-loader, autoware-lint-common, rviz2 }:
 buildRosPackage {
   pname = "ros-humble-autoware-core";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_core/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "d3de6b24568a9a75f90f1d2406a6a4aaa4c791321b1eb8d6a715a53d5f100fc8";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_core/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "7b2729999eaff38d99fa57e7a5f69be979ba7851f3e060cb0c69db371c1ae894";
   };
 
   buildType = "ament_cmake";

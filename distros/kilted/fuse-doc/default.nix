@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, gtest-vendor }:
 buildRosPackage {
   pname = "ros-kilted-fuse-doc";
-  version = "1.2.4-r1";
+  version = "1.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/kilted/fuse_doc/1.2.4-1.tar.gz";
-    name = "1.2.4-1.tar.gz";
-    sha256 = "b65e463c6e50800285eae05fc24e8d9624f7d13e2dae1c4f78e1d6e1008c25db";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/kilted/fuse_doc/1.2.6-1.tar.gz";
+    name = "1.2.6-1.tar.gz";
+    sha256 = "6702c8a423035f404182f58fd767af99f299657c72606c9a9487a8cdc205858c";
   };
 
   buildType = "ament_cmake";

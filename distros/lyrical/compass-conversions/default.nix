@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros, angles, compass-interfaces, cras-cpp-common, cras-lint, geographiclib, geometry-msgs, magnetic-model, message-filters, pluginlib, rclcpp, rclcpp-components, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-compass-conversions";
-  version = "3.0.2-r3";
+  version = "3.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/compass-release/archive/release/lyrical/compass_conversions/3.0.2-3.tar.gz";
-    name = "3.0.2-3.tar.gz";
-    sha256 = "cc6b2cba6912260ffca31bf2a830c90e888e5f61965a9f522d7055a65253f38d";
+    url = "https://github.com/ros2-gbp/compass-release/archive/release/lyrical/compass_conversions/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
+    sha256 = "12bd004e56068a14f6d5ad3b33e3555ee3e17e1caef60a05d74c0bb536380cfc";
   };
 
   buildType = "ament_cmake";

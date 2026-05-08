@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, lz4 }:
 buildRosPackage {
   pname = "ros-rolling-lz4-cmake-module";
-  version = "0.33.1-r2";
+  version = "0.34.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/lz4_cmake_module/0.33.1-2.tar.gz";
-    name = "0.33.1-2.tar.gz";
-    sha256 = "42620b9242314c5f09070690e8cfc644bbf33ba473672b72e83637eec3fc5e62";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/lz4_cmake_module/0.34.0-1.tar.gz";
+    name = "0.34.0-1.tar.gz";
+    sha256 = "5d25dc4e86b451df37d9df277569061c7fc2da91a26882c2127393102fed25c5";
   };
 
   buildType = "ament_cmake";

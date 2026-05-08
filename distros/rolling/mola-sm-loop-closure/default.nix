@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, cmake, gtsam, mola-common, mola-georeferencing, mola-gtsam-factors, mola-metric-maps, mola-pose-list, mola-relocalization, mola-test-datasets, mola-yaml, mp2p-icp, mrpt-libgui, mrpt-libmaps, mrpt-libtclap, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-mola-sm-loop-closure";
-  version = "1.0.0-r2";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_sm_loop_closure-release/archive/release/rolling/mola_sm_loop_closure/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "2cc8b048062263c0994d0cf29e19d65a8ae479ccc8eda3eae5e363e17333d8d2";
+    url = "https://github.com/ros2-gbp/mola_sm_loop_closure-release/archive/release/rolling/mola_sm_loop_closure/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "ef89a54d040b423798253000c2def45269f24653360a6fda1ad394f4f92e95e6";
   };
 
   buildType = "ament_cmake";

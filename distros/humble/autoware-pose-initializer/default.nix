@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-cmake-gmock, ament-lint-auto, autoware-adapi-v1-msgs, autoware-cmake, autoware-component-interface-specs, autoware-lint-common, autoware-map-height-fitter, autoware-motion-utils, autoware-qos-utils, autoware-utils-diagnostics, autoware-utils-logging, geometry-msgs, rclcpp, rclcpp-components, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-autoware-pose-initializer";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_pose_initializer/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "749785f6bb0020efecf0ae79a68295afb1264c8fee30ba504c39b105fe80e1e9";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_pose_initializer/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "1c60e364ce4d7cd6db233c288662f13598506a841e4939cb5bf048d595496db7";
   };
 
   buildType = "ament_cmake";

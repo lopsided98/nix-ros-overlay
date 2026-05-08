@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ceres-solver, eigen, fuse-core, fuse-graphs, fuse-variables, gbenchmark, geometry-msgs, gtest-vendor, pluginlib, rclcpp, suitesparse }:
 buildRosPackage {
   pname = "ros-rolling-fuse-constraints";
-  version = "1.3.1-r2";
+  version = "1.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/rolling/fuse_constraints/1.3.1-2.tar.gz";
-    name = "1.3.1-2.tar.gz";
-    sha256 = "88db97560a0490793b7864c76a5115e3d029429fef0ab3c76eee8ef129df6dc2";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/rolling/fuse_constraints/1.3.3-1.tar.gz";
+    name = "1.3.3-1.tar.gz";
+    sha256 = "7dd2d5edd70f9d55e017c69a75a09d3dfd63518f17780aa67147ea7b68868078";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, flir-ptu-description, flir-ptu-driver, interactive-markers, joint-state-publisher, joint-state-publisher-gui, rclpy, robot-state-publisher, rviz2, sensor-msgs, visualization-msgs, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-flir-ptu-viz";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-drivers-gbp/flir_ptu-release/archive/release/jazzy/flir_ptu_viz/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "97d65309fcd6f30ab8706c072f3ff263c471fb88374ee73225fa6c2d1c8ed78e";
+    url = "https://github.com/ros-drivers-gbp/flir_ptu-release/archive/release/jazzy/flir_ptu_viz/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "a0daafbbfa0618118aa08c352043323bb39e1eee6e48ee669c6f2e0e0ea1ea0e";
   };
 
   buildType = "ament_cmake";

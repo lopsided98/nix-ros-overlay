@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-lint-common, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-autoware-cmake";
-  version = "1.1.0-r2";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_cmake-release/archive/release/rolling/autoware_cmake/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "9b723825219fe343f49c04b01fefc084d13df03e0c198b0714ba5a31814c374a";
+    url = "https://github.com/ros2-gbp/autoware_cmake-release/archive/release/rolling/autoware_cmake/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "2f8965f90afc133b01c067dbc8ad300e1e0755740b1a2272de0fdf551ba8b78c";
   };
 
   buildType = "ament_cmake";

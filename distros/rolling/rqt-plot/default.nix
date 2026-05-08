@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, python-qt-binding, python3Packages, qt-gui-py-common, qt6, rclpy, rosidl-parser, rosidl-runtime-py, rqt-gui, rqt-gui-py, rqt-py-common, std-msgs, test-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rqt-plot";
-  version = "1.7.5-r2";
+  version = "2.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/rolling/rqt_plot/1.7.5-2.tar.gz";
-    name = "1.7.5-2.tar.gz";
-    sha256 = "21773f2da7799917cd807ac516314b38e90421f87cbd3029b1075883d840882c";
+    url = "https://github.com/ros2-gbp/rqt_plot-release/archive/release/rolling/rqt_plot/2.0.0-2.tar.gz";
+    name = "2.0.0-2.tar.gz";
+    sha256 = "6301fc1bb32336a72668903ea71472ee082c68409a43979d674021c41ecce520";
   };
 
   buildType = "ament_python";

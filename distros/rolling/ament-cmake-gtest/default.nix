@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test, gtest }:
 buildRosPackage {
   pname = "ros-rolling-ament-cmake-gtest";
-  version = "2.8.7-r2";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/rolling/ament_cmake_gtest/2.8.7-2.tar.gz";
-    name = "2.8.7-2.tar.gz";
-    sha256 = "62d7e66ad77df05a7243509621adf2e3143544206f7f21e91f7a449aa91fb496";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/rolling/ament_cmake_gtest/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "3a944591ece9c9ee4fbefc856f0a87fb20489c6da6b4fef1b67cda0058e8aa1b";
   };
 
   buildType = "ament_cmake";

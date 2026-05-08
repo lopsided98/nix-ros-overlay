@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, example-interfaces, geometry-msgs, launch, message-filters, python3Packages, rclpy, std-msgs, std-srvs, tf2-msgs, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-humble-synchros2";
-  version = "1.0.4-r1";
+  version = "1.0.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/bdaiinstitute/synchros2-release/archive/release/humble/synchros2/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "945b7cd0beed95358dc56318ab4fd1c93ba58ff8b29308ea1a48347be031aa72";
+    url = "https://github.com/rai-opensource/synchros2-release/archive/release/humble/synchros2/1.0.4-2.tar.gz";
+    name = "1.0.4-2.tar.gz";
+    sha256 = "c71ead25c290f006f34dc68b8c4b518e00fae7ab230d0b59b1a299d296768c92";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-mypy, ament-pep257, ament-xmllint, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-rosidl-cli";
-  version = "5.2.0-r2";
+  version = "5.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_cli/5.2.0-2.tar.gz";
-    name = "5.2.0-2.tar.gz";
-    sha256 = "38f32fb2047fbd9a04a39d345aab7191bea2a842740e6b1d8e92a41178b946d7";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_cli/5.3.0-1.tar.gz";
+    name = "5.3.0-1.tar.gz";
+    sha256 = "f61d6571eead155487813b361f7b3bb490419468695c2735795dcf23016a3827";
   };
 
   buildType = "ament_python";

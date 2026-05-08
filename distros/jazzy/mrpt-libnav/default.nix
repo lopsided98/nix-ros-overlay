@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libmaps, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-libnav";
-  version = "2.15.14-r1";
+  version = "2.15.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/jazzy/mrpt_libnav/2.15.14-1.tar.gz";
-    name = "2.15.14-1.tar.gz";
-    sha256 = "2f801f763c5419f65c1c2f2e7f53dea84475691225a8eba0f99e4b838de87419";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/jazzy/mrpt_libnav/2.15.15-1.tar.gz";
+    name = "2.15.15-1.tar.gz";
+    sha256 = "c2b4705c0488206360d65f443d599fadc569d0b24a4fef3b14af5c7c3386904e";
   };
 
   buildType = "cmake";

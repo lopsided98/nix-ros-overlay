@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-rolling-mola-input-rawlog";
-  version = "2.7.0-r2";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_input_rawlog/2.7.0-2.tar.gz";
-    name = "2.7.0-2.tar.gz";
-    sha256 = "b6bb48852e0c922ea8015f61c95d653e916007d21d033426e9ea483b1bd613fb";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_input_rawlog/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "3c321c12d01726295ec8679e9b0178f5fbea991dcad3c01dad3928c1e138eb1e";
   };
 
   buildType = "cmake";
