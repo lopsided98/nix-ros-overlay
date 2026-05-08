@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, autoware-cmake, autoware-lanelet2-extension, autoware-lanelet2-utils, autoware-lint-common, autoware-map-loader, autoware-map-msgs, launch-testing-ament-cmake, rclcpp, rclcpp-components, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-lanelet2-map-visualizer";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_lanelet2_map_visualizer/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "30229397419f1ef2a1b034d5dcf8a8398392a6532cc66221a24ec68ca27b5450";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_lanelet2_map_visualizer/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "e4e13af31dbac3a94a8c9c22eef9e036c5441b48d2fd95c778baf56faf505267";
   };
 
   buildType = "ament_cmake";

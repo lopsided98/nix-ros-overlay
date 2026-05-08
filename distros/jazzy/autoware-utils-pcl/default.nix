@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-utils-tf, pcl-conversions, pcl-ros }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-utils-pcl";
-  version = "1.4.2-r2";
+  version = "1.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/jazzy/autoware_utils_pcl/1.4.2-2.tar.gz";
-    name = "1.4.2-2.tar.gz";
-    sha256 = "e9b3e5efb4d9889b3e111a24c5946f8ca981442a4c44fba3965253162efdf64c";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/jazzy/autoware_utils_pcl/1.7.2-1.tar.gz";
+    name = "1.7.2-1.tar.gz";
+    sha256 = "5b4506f96588b9a2a7fe313661843f16157a8984df6d4b34942fab437855fc10";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, kitti-metrics-eval, mola-bridge-ros2, mola-demos, mola-input-euroc-dataset, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset, mola-input-rawlog, mola-input-rosbag2, mola-input-video, mola-kernel, mola-launcher, mola-metric-maps, mola-pose-list, mola-relocalization, mola-traj-tools, mola-viz, mola-yaml }:
 buildRosPackage {
   pname = "ros-rolling-mola";
-  version = "2.7.0-r2";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola/2.7.0-2.tar.gz";
-    name = "2.7.0-2.tar.gz";
-    sha256 = "fa3b2c796f15767eb5db05ae0be2e2e89cded1613a2ebf8ecda11f00d402863e";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "af7b9496c01ee2fd53b9a7567e14f4f0ab5e1de2be07c36ff688e988ebb20742";
   };
 
   buildType = "cmake";

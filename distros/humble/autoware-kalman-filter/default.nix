@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-cppcheck, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, eigen, eigen3-cmake-module }:
 buildRosPackage {
   pname = "ros-humble-autoware-kalman-filter";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_kalman_filter/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "d1f2909b3ddefe58b69f26e5cb30a01c76e6493e3056d90e8d2edd65b0897994";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_kalman_filter/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "29f3438bedac2e64f736cd19798452ccae88eaec6571f211b0b86e7d83d50e3e";
   };
 
   buildType = "ament_cmake";

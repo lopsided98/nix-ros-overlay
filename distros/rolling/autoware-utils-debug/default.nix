@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-internal-debug-msgs, autoware-internal-msgs, autoware-lint-common, autoware-utils-system, diagnostic-msgs, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-internal-debug-msgs, autoware-internal-msgs, autoware-lint-common, autoware-utils-system, diagnostic-msgs, fmt, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-autoware-utils-debug";
-  version = "1.4.2-r3";
+  version = "1.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/rolling/autoware_utils_debug/1.4.2-3.tar.gz";
-    name = "1.4.2-3.tar.gz";
-    sha256 = "6d8e7c88f8bbfa81ad8e5154f656d5332fe35f5bcda656e2e2e80986d7cdd03f";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/rolling/autoware_utils_debug/1.7.2-1.tar.gz";
+    name = "1.7.2-1.tar.gz";
+    sha256 = "2a996649a72fad1513a33d928e8cf2ee096f88ce112946e356e95f7b0ea538c7";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto autoware-cmake ];
   checkInputs = [ ament-cmake-ros ament-lint-auto autoware-lint-common ];
-  propagatedBuildInputs = [ autoware-internal-debug-msgs autoware-internal-msgs autoware-utils-system diagnostic-msgs rclcpp ];
+  propagatedBuildInputs = [ autoware-internal-debug-msgs autoware-internal-msgs autoware-utils-system diagnostic-msgs fmt rclcpp ];
   nativeBuildInputs = [ ament-cmake-auto autoware-cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, geographic-msgs, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-map-msgs";
-  version = "1.11.0-r1";
+  version = "1.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/humble/autoware_map_msgs/1.11.0-1.tar.gz";
-    name = "1.11.0-1.tar.gz";
-    sha256 = "cb8413f519b2fc3ad5b786112d38e298f52f76b5dbdd518bb8caa768fe7d7dcf";
+    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/humble/autoware_map_msgs/1.12.0-1.tar.gz";
+    name = "1.12.0-1.tar.gz";
+    sha256 = "d52e873e853297d9dc16b317e48b571c7a4162dc1830c92d530f11a894a288d8";
   };
 
   buildType = "ament_cmake";

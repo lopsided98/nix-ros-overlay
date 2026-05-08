@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, geographic-msgs, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-map-msgs";
-  version = "1.11.0-r1";
+  version = "1.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/jazzy/autoware_map_msgs/1.11.0-1.tar.gz";
-    name = "1.11.0-1.tar.gz";
-    sha256 = "4f7d63da6fb6f972ca113a4cfd3c072f1fcc9e22909adc23a6fdf8622d065abd";
+    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/jazzy/autoware_map_msgs/1.12.0-1.tar.gz";
+    name = "1.12.0-1.tar.gz";
+    sha256 = "62b228b43b51a91c029562917bd0a360e07a25b9daae95e298f1bee376ff9764";
   };
 
   buildType = "ament_cmake";

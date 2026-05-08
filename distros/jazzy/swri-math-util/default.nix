@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-swri-math-util";
-  version = "3.8.7-r1";
+  version = "3.8.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_math_util/3.8.7-1.tar.gz";
-    name = "3.8.7-1.tar.gz";
-    sha256 = "c2be2b03824361e1b44f3230008c1e6d2b7921b02a9427df2268b5a648be5237";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_math_util/3.8.9-1.tar.gz";
+    name = "3.8.9-1.tar.gz";
+    sha256 = "8d90307ad00e137bc330f983f315c2df6c43b330178e1e285d1004f940cf23d4";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lanelet2-extension, autoware-lint-common, autoware-map-msgs, geographic-msgs, geographiclib, geometry-msgs, lanelet2-io }:
 buildRosPackage {
   pname = "ros-humble-autoware-geography-utils";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_geography_utils/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "c831304578ea8650e50df6372655d5bbea5fb7a1aab6cad2c75e15a03fbf0b14";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_geography_utils/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "e27493f1b69885cc40ac810e6ba09ad5f50d2b5b09c71f620616c22080f70fc9";
   };
 
   buildType = "ament_cmake";

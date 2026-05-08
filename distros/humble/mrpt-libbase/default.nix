@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, eigen, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, onetbb, opencv, openni2, pkg-config, python3Packages, suitesparse, tinyxml-2, udev, wxGTK32, xorg, zlib, zstd }:
 buildRosPackage {
   pname = "ros-humble-mrpt-libbase";
-  version = "2.15.14-r1";
+  version = "2.15.15-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/humble/mrpt_libbase/2.15.14-1.tar.gz";
-    name = "2.15.14-1.tar.gz";
-    sha256 = "92dd07b5fb82448d774e0f99bc4817a2c3183b8cb6d43368fc579c5432cb4f8d";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/humble/mrpt_libbase/2.15.15-1.tar.gz";
+    name = "2.15.15-1.tar.gz";
+    sha256 = "7ae43797cb2963dc3557dca8ea110289c69e51642972495f35a6ba50c7b35944";
   };
 
   buildType = "cmake";

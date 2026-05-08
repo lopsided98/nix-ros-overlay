@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-clang-tidy, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, async-web-server-cpp, boost, cv-bridge, ffmpeg, image-transport, opencv, pkg-config, pluginlib, rclcpp, rclcpp-components, rmw, ros-environment, sensor-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-web-video-server";
-  version = "3.1.0-r3";
+  version = "3.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/web_video_server-release/archive/release/lyrical/web_video_server/3.1.0-3.tar.gz";
-    name = "3.1.0-3.tar.gz";
-    sha256 = "788a1da73ecefb515e087b2ab0ecd9b11cf5d353df2883358652c0264a97bc3d";
+    url = "https://github.com/ros2-gbp/web_video_server-release/archive/release/lyrical/web_video_server/3.1.1-1.tar.gz";
+    name = "3.1.1-1.tar.gz";
+    sha256 = "e103486faad970af9735c7eac61e63dc3426fe2efa9dd9030785a046d44626f1";
   };
 
   buildType = "ament_cmake";

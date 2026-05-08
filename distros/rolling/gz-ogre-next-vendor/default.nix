@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, SDL2, ament-cmake, ament-cmake-vendor-package, ament-cmake-xmllint, ament-lint-auto, boost, freeimage, freetype, glslang, gz-cmake-vendor, libGL, libGLU, onetbb, poco, rapidjson, shaderc, tinyxml-2, vulkan-loader, xorg, zziplib }:
 buildRosPackage {
   pname = "ros-rolling-gz-ogre-next-vendor";
-  version = "0.2.0-r2";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_ogre_next_vendor-release/archive/release/rolling/gz_ogre_next_vendor/0.2.0-2.tar.gz";
-    name = "0.2.0-2.tar.gz";
-    sha256 = "b959c479cb49c954f90be09f4f5c7a2c7ff3a1b6854cbde1fae62652dffb75dd";
+    url = "https://github.com/ros2-gbp/gz_ogre_next_vendor-release/archive/release/rolling/gz_ogre_next_vendor/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "0dab2861ade86a9665fceb03097fdfcac8d22bc2728132a1942e84e320b0f0a1";
   };
 
   buildType = "ament_cmake";

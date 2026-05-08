@@ -1,0 +1,26 @@
+
+# Copyright 2026 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-lint-auto, ament-lint-common, diagnostic-updater, rclcpp, robot-state-publisher, sensor-msgs, std-msgs }:
+buildRosPackage {
+  pname = "ros-humble-flir-ptu-driver";
+  version = "1.0.2-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros-drivers-gbp/flir_ptu-release/archive/release/humble/flir_ptu_driver/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "0771d71fef693db6c1677af800b3ef9b4aeac16b03f51ebf6a91ad4b3f77ac32";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
+  checkInputs = [ ament-cmake-clang-format ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ diagnostic-updater rclcpp robot-state-publisher sensor-msgs std-msgs ];
+  nativeBuildInputs = [ ament-cmake ];
+
+  meta = {
+    description = "ROS 2 driver for FLIR pan-tilt units with serial and TCP/Ethernet support.";
+    license = with lib.licenses; [ "GPL-2.0-or-later" ];
+  };
+}

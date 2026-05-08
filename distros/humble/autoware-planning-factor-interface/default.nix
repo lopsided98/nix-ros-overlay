@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-internal-planning-msgs, autoware-lint-common, autoware-motion-utils, autoware-planning-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-autoware-planning-factor-interface";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_planning_factor_interface/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "798da915167d9276a45848390c63b70afa55a9aff65f771140d70bdf77a37795";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_planning_factor_interface/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "ae388feea461c318afef6bfc87414a5dff599154156a86f5959c84052b502777";
   };
 
   buildType = "ament_cmake";

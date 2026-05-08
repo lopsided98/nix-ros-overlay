@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-compass-msgs";
-  version = "0.2.1-r1";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/manankharwar/fusioncore-release/archive/release/humble/compass_msgs/0.2.1-1.tar.gz";
-    name = "0.2.1-1.tar.gz";
-    sha256 = "c42a8822149815f94aa030d633d84b1576a67e83f8c9a2a2833f8f371ef3e5e3";
+    url = "https://github.com/manankharwar/fusioncore-release/archive/release/humble/compass_msgs/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "26b83972816f363b855df60927d01ef5f0ca0e430fcc95536684e69090a7d372";
   };
 
   buildType = "ament_cmake";

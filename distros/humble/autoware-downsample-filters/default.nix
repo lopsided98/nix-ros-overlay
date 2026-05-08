@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-point-types, autoware-utils-debug, autoware-utils-system, autoware-utils-tf, pcl-conversions, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-downsample-filters";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_downsample_filters/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "7537f8f8d80fbb548af62c2685eb24a3c71b3b997facb260703e3399c75e2679";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_downsample_filters/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "c110dbb23020086dea4642a0cb1872c2f4bf5e63b2137fd4861011180a64a198";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-autoware-adapi-version-msgs";
-  version = "1.9.0-r2";
+  version = "1.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_adapi_msgs-release/archive/release/rolling/autoware_adapi_version_msgs/1.9.0-2.tar.gz";
-    name = "1.9.0-2.tar.gz";
-    sha256 = "44088e08ceb76e292e00251f349b638e85cfd3f42b2383c8df7f111e42546962";
+    url = "https://github.com/ros2-gbp/autoware_adapi_msgs-release/archive/release/rolling/autoware_adapi_version_msgs/1.9.1-1.tar.gz";
+    name = "1.9.1-1.tar.gz";
+    sha256 = "522d046ac985de7d8fbb0a0107cfa4e5d5ec56adaab63426afa37eab697f3dda";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-python, ament-cmake-ros, cras-cpp-common, cras-lint, eigen, message-filters, pluginlib, python3Packages, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-msgs, std-srvs, tf2-eigen }:
 buildRosPackage {
   pname = "ros-lyrical-magnetometer-pipeline";
-  version = "3.0.2-r3";
+  version = "3.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/compass-release/archive/release/lyrical/magnetometer_pipeline/3.0.2-3.tar.gz";
-    name = "3.0.2-3.tar.gz";
-    sha256 = "f966bcc737c9095fd7425d21897d0c41626ca47ba80c42b8ecfd1c8c26ad8c30";
+    url = "https://github.com/ros2-gbp/compass-release/archive/release/lyrical/magnetometer_pipeline/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
+    sha256 = "68c40de4dd048bf286885a3587ca8bf4c146fabc734b511cf99b273a73a1b2a0";
   };
 
   buildType = "ament_cmake";

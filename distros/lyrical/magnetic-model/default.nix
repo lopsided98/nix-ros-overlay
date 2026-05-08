@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, angles, cras-cpp-common, cras-lint, geographiclib, geometry-msgs, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-magnetic-model";
-  version = "3.0.2-r3";
+  version = "3.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/compass-release/archive/release/lyrical/magnetic_model/3.0.2-3.tar.gz";
-    name = "3.0.2-3.tar.gz";
-    sha256 = "3981f1076d42e479de4edce499cebf25ae78d48db6345047bba5ba830e3dcfbf";
+    url = "https://github.com/ros2-gbp/compass-release/archive/release/lyrical/magnetic_model/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
+    sha256 = "b37fc571dca771aa66d0ef41f924f725bd99a92058c8d02033520caecbd5e364";
   };
 
   buildType = "ament_cmake";

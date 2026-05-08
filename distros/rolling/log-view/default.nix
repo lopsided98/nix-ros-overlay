@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ncurses, rcl-interfaces, rclcpp, xclip }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ncurses, rcl-interfaces, rclcpp, xclip, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-rolling-log-view";
-  version = "0.3.0-r2";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/log_view-release/archive/release/rolling/log_view/0.3.0-2.tar.gz";
-    name = "0.3.0-2.tar.gz";
-    sha256 = "06094aa884c7523d9b6861b3972591bc1b20d7054f72031e328e882126cbf8bf";
+    url = "https://github.com/ros2-gbp/log_view-release/archive/release/rolling/log_view/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "680ce50fa2c611e55eddcfcb6a267bb460a47b59069d66d808286b156c5ae804";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ncurses rcl-interfaces rclcpp xclip ];
+  propagatedBuildInputs = [ ncurses rcl-interfaces rclcpp xclip yaml-cpp-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

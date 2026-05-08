@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, diagnostic-msgs, diagnostic-updater, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-autoware-utils-diagnostics";
-  version = "1.5.0-r2";
+  version = "1.7.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/humble/autoware_utils_diagnostics/1.5.0-2.tar.gz";
-    name = "1.5.0-2.tar.gz";
-    sha256 = "ab87edb394478ac8b80136a3a9d0382bb8523db48c14c84aefb1eaf38e2c17ab";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/humble/autoware_utils_diagnostics/1.7.2-2.tar.gz";
+    name = "1.7.2-2.tar.gz";
+    sha256 = "8d3087c73e129eea6f1c6fa91030de7fa6e3b06922480f253788a3cdc935e657";
   };
 
   buildType = "ament_cmake";

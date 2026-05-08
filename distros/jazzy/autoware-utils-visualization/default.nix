@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, rclcpp, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-utils-visualization";
-  version = "1.4.2-r2";
+  version = "1.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/jazzy/autoware_utils_visualization/1.4.2-2.tar.gz";
-    name = "1.4.2-2.tar.gz";
-    sha256 = "5c3097f7253c167c73f4b8d95bedbe15a4ec75a81febded0c837ecd410296aaa";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/jazzy/autoware_utils_visualization/1.7.2-1.tar.gz";
+    name = "1.7.2-1.tar.gz";
+    sha256 = "e0a26beba22524bbe6058db9a843cb65b482d5923eaa506cb2aaf74c45662cca";
   };
 
   buildType = "ament_cmake";

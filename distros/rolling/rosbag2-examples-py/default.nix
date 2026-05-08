@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, example-interfaces, python3Packages, rclpy, rosbag2-compression, rosbag2-py, rosidl-runtime-py, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rosbag2-examples-py";
-  version = "0.33.1-r2";
+  version = "0.34.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_examples_py/0.33.1-2.tar.gz";
-    name = "0.33.1-2.tar.gz";
-    sha256 = "91b24db48fd28c4b0930157b95bf657955aeaee09eff79a15c0591fc0e16db9c";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_examples_py/0.34.0-1.tar.gz";
+    name = "0.34.0-1.tar.gz";
+    sha256 = "5540561a6cddb34a67c7e0b7a5fc43240c601b86b28e80eb1c73fd1cd6b35d6f";
   };
 
   buildType = "ament_python";

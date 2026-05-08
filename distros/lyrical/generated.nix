@@ -1674,8 +1674,6 @@ self: super: {
 
  parameter-expression = self.callPackage ./parameter-expression {};
 
- parameter-traits = self.callPackage ./parameter-traits {};
-
  pcl-conversions = self.callPackage ./pcl-conversions {};
 
  pcl-msgs = self.callPackage ./pcl-msgs {};
@@ -2843,6 +2841,8 @@ self: super: {
  ur = self.callPackage ./ur {};
 
  ur-calibration = self.callPackage ./ur-calibration {};
+
+ ur-client-library = self.callPackage ./ur-client-library {};
 
  ur-controllers = self.callPackage ./ur-controllers {};
 

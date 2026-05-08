@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, autoware-sample-sensor-kit-description, velodyne-description, xacro }:
 buildRosPackage {
   pname = "ros-humble-autoware-awsim-sensor-kit-description";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_awsim_sensor_kit_description/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "87850a918b876c481d2ae8c04dc0d1f2e0933974de52be318a78b01e399b8107";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_awsim_sensor_kit_description/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "59b00778c9ae7aaf68af3a4356abc0c3dc4218050ec4737b9e5d5c29f9dc2e62";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, rclcpp, rcutils, sensor-msgs, statistics-msgs }:
 buildRosPackage {
   pname = "ros-rolling-topic-statistics-demo";
-  version = "0.37.8-r2";
+  version = "0.38.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/topic_statistics_demo/0.37.8-2.tar.gz";
-    name = "0.37.8-2.tar.gz";
-    sha256 = "9b7a84af12cb791957f824b13540ed463cf9f0dd04ba96fd19544fc966da46db";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/topic_statistics_demo/0.38.0-1.tar.gz";
+    name = "0.38.0-1.tar.gz";
+    sha256 = "268364e7eb6e9fe637624d9f489bd2d12c49dce1be1b8e0a7d2d7d98064ebdc4";
   };
 
   buildType = "ament_cmake";

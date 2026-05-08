@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, cv-bridge, depthai-ros-msgs-v3, image-transport, message-filters, opencv, rclcpp, rclcpp-components, sensor-msgs, vision-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-depthai-filters-v3";
-  version = "3.1.1-r2";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-v3-release/archive/release/jazzy/depthai_filters_v3/3.1.1-2.tar.gz";
-    name = "3.1.1-2.tar.gz";
-    sha256 = "d700885efe86e511c11fa21397dafe24934db1e82b2e2cff6fae8b004a778242";
+    url = "https://github.com/luxonis/depthai-ros-v3-release/archive/release/jazzy/depthai_filters_v3/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "e03358d3e166d7f22e69427ae69100b719e7cd00b2f37f41af04fb577883536a";
   };
 
   buildType = "ament_cmake";

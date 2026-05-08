@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-internal-debug-msgs, autoware-lint-common, autoware-vehicle-info-utils, geometry-msgs, qt5, rclcpp, rviz-common, rviz-default-plugins, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-autoware-localization-rviz-plugin";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_rviz_plugins-release/archive/release/humble/autoware_localization_rviz_plugin/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "8ea34fc279a37c8c3e6e5289a986affb81fa037653835c4d901e12f8af8d1bfe";
+    url = "https://github.com/ros2-gbp/autoware_rviz_plugins-release/archive/release/humble/autoware_localization_rviz_plugin/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "96e507d9ed1e7447a8e024cdffe69a91156e96805a9b2d0e6d77a2d579dc47f3";
   };
 
   buildType = "ament_cmake";

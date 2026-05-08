@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-motion-utils, autoware-planning-msgs, autoware-utils-geometry, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-humble-autoware-planning-topic-converter";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_planning_topic_converter/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "ab8f326ead5de1a35fb6568ff0c6434e1485ecc8e79913b3d673b3472b745761";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_planning_topic_converter/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "b635ea7a7b517fa4ddca1452373d05c058162d8244c02bc6847a258268efc4ca";
   };
 
   buildType = "ament_cmake";

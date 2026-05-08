@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, mrpt-libopengl, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, xorg, zlib }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-libgui";
-  version = "2.15.14-r3";
+  version = "2.15.16-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/lyrical/mrpt_libgui/2.15.14-3.tar.gz";
-    name = "2.15.14-3.tar.gz";
-    sha256 = "c074a79b091c22a49f73aa0981758dc1aa94776792edb962e2c97cf466dec02b";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/lyrical/mrpt_libgui/2.15.16-1.tar.gz";
+    name = "2.15.16-1.tar.gz";
+    sha256 = "9b57aa390cdd94201b05be2686cd5e18d8c26d3e4b04a74f18b08f3f4da41d57";
   };
 
   buildType = "cmake";

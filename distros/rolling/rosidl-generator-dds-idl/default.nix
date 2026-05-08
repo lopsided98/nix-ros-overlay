@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-index-python, ament-lint-auto, ament-lint-common, rosidl-cli, rosidl-pycommon }:
 buildRosPackage {
   pname = "ros-rolling-rosidl-generator-dds-idl";
-  version = "0.13.0-r2";
+  version = "0.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_dds-release/archive/release/rolling/rosidl_generator_dds_idl/0.13.0-2.tar.gz";
-    name = "0.13.0-2.tar.gz";
-    sha256 = "d951be9738460efaba8225caa031a7dce2ecd8d07dd8bd4a89200885ca52fd70";
+    url = "https://github.com/ros2-gbp/rosidl_dds-release/archive/release/rolling/rosidl_generator_dds_idl/0.14.0-1.tar.gz";
+    name = "0.14.0-1.tar.gz";
+    sha256 = "254fc822e304dbc02ac772393b8be15cfd11e4609fe56bae9db18e1da0dba38d";
   };
 
   buildType = "ament_cmake";

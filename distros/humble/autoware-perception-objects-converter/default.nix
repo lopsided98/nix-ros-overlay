@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-perception-msgs, boost, geometry-msgs, rclcpp, rclcpp-components, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-perception-objects-converter";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_perception_objects_converter/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "f89925009525de770172c9dccce2d901246f407a95d4ccd80fe4cefa09bd0542";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_perception_objects_converter/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "abeb29cc0c8e937ccc3a20c8118f6393aaac3d583c196157d50a68cdb36e6882";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gmock, ament-cmake-gtest, ament-lint-auto, autoware-cmake, autoware-component-interface-specs, autoware-lanelet2-extension, autoware-lint-common, autoware-map-msgs, launch-testing-ament-cmake, rclcpp, rclcpp-components, ros-testing, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-autoware-map-projection-loader";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_map_projection_loader/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "d29ce436f56eaab5f7043c02425e55db8bdf9ece093352185b002da92097c079";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_map_projection_loader/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "8e53cf38e21aa9600fec7acb5c68a7750b0eb69ef7e372a19f33c7fab3af0d01";
   };
 
   buildType = "ament_cmake";

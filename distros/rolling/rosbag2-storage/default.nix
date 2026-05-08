@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-lint-auto, ament-lint-common, pluginlib, rclcpp, rcutils, rmw, rosbag2-test-common, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-rolling-rosbag2-storage";
-  version = "0.33.1-r2";
+  version = "0.34.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_storage/0.33.1-2.tar.gz";
-    name = "0.33.1-2.tar.gz";
-    sha256 = "a9a27dcef6f77421cae5be3b9b5fdd09d50bbd3aeace6707f957f7e525478991";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/rolling/rosbag2_storage/0.34.0-1.tar.gz";
+    name = "0.34.0-1.tar.gz";
+    sha256 = "130ba82bb589f2e598868c60f9a90e44c17f1da95cec0337a12614c676de8b9a";
   };
 
   buildType = "ament_cmake";

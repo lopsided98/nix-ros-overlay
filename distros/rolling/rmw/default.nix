@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-ros-core, ament-cmake-version, ament-lint-auto, ament-lint-common, osrf-testing-tools-cpp, rcutils, rosidl-dynamic-typesupport, rosidl-runtime-c }:
 buildRosPackage {
   pname = "ros-rolling-rmw";
-  version = "7.10.1-r4";
+  version = "7.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw-release/archive/release/rolling/rmw/7.10.1-4.tar.gz";
-    name = "7.10.1-4.tar.gz";
-    sha256 = "d01c1043981de3401c332320ff8c49efb4f6c204ccf35170200a633defa3f106";
+    url = "https://github.com/ros2-gbp/rmw-release/archive/release/rolling/rmw/7.11.0-1.tar.gz";
+    name = "7.11.0-1.tar.gz";
+    sha256 = "d7103038b7bbe30e43ca272612164b87916afa722e15cf968559f0197ab4890f";
   };
 
   buildType = "ament_cmake";

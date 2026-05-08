@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-simple-pure-pursuit }:
 buildRosPackage {
   pname = "ros-humble-autoware-core-control";
-  version = "1.7.0-r2";
+  version = "1.8.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_core_control/1.7.0-2.tar.gz";
-    name = "1.7.0-2.tar.gz";
-    sha256 = "d274efa704c0e9bff088fd5acee6f501edb8ef0fd5cd58e5ad98e0d8c7660231";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_core_control/1.8.0-3.tar.gz";
+    name = "1.8.0-3.tar.gz";
+    sha256 = "5aef8f6703c85c49493dc3169cbe53e3c5495079a4ef3a7f00e0fa5e7504360d";
   };
 
   buildType = "ament_cmake";

@@ -340,6 +340,8 @@ self: super: {
 
  autoware-adapi-version-msgs = self.callPackage ./autoware-adapi-version-msgs {};
 
+ autoware-agnocast-wrapper = self.callPackage ./autoware-agnocast-wrapper {};
+
  autoware-auto-msgs = self.callPackage ./autoware-auto-msgs {};
 
  autoware-awsim-sensor-kit-description = self.callPackage ./autoware-awsim-sensor-kit-description {};
@@ -504,6 +506,8 @@ self: super: {
 
  autoware-simple-pure-pursuit = self.callPackage ./autoware-simple-pure-pursuit {};
 
+ autoware-simulation-msgs = self.callPackage ./autoware-simulation-msgs {};
+
  autoware-stop-filter = self.callPackage ./autoware-stop-filter {};
 
  autoware-string-stamped-rviz-plugin = self.callPackage ./autoware-string-stamped-rviz-plugin {};
@@ -515,6 +519,8 @@ self: super: {
  autoware-test-utils = self.callPackage ./autoware-test-utils {};
 
  autoware-testing = self.callPackage ./autoware-testing {};
+
+ autoware-topic-text-overlay-rviz-plugin = self.callPackage ./autoware-topic-text-overlay-rviz-plugin {};
 
  autoware-trajectory = self.callPackage ./autoware-trajectory {};
 
@@ -1301,6 +1307,12 @@ self: super: {
  flir-camera-description = self.callPackage ./flir-camera-description {};
 
  flir-camera-msgs = self.callPackage ./flir-camera-msgs {};
+
+ flir-ptu-description = self.callPackage ./flir-ptu-description {};
+
+ flir-ptu-driver = self.callPackage ./flir-ptu-driver {};
+
+ flir-ptu-viz = self.callPackage ./flir-ptu-viz {};
 
  fluent-rviz = self.callPackage ./fluent-rviz {};
 
