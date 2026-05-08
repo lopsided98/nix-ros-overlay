@@ -6,7 +6,7 @@
   },
   "zenoh_cpp_vendor": {
     "url": "https://github.com/eclipse-zenoh/zenoh-cpp",
-    "rev": "af381b420cc8837ac7da42c9984594ef8f110e90",
-    "hash": "sha256-OWWmQhdgea4FBT0p5NHyPh+4yIztO5sXlidetFxBQcc="
+    "rev": "481b71bf974f684ea75afb4243b0313646d545f9",
+    "hash": "sha256-L6ZqRL5ACxJY3ShQj8m8nio6Yx87Orlm2UlbL7JZgDc="
   }
 }
