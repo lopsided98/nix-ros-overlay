@@ -145,6 +145,19 @@ in {
     '';
   });
 
+  autoware-ndt-scan-matcher = rosSuper.autoware-ndt-scan-matcher.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # fix "fatal error: pcl/filters/boost.h: No such file or directory"
+    # pcl/filters/boost.h was removed in newer PCL versions
+    postPatch = postPatch + ''
+      substituteInPlace \
+        include/autoware/ndt_scan_matcher/ndt_omp/multi_voxel_grid_covariance_omp.h \
+        src/ndt_omp/multi_voxel_grid_covariance_omp_impl.hpp \
+        --replace-fail "#include <pcl/filters/boost.h>" ""
+    '';
+  });
+
   autoware-pose-initializer = rosSuper.autoware-pose-initializer.overrideAttrs ({
     postPatch ? "", ...
   }: {
