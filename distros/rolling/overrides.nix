@@ -4,18 +4,6 @@ self:
 rosSelf: rosSuper: let
   inherit (rosSelf) lib;
 in {
-  async-web-server-cpp = rosSuper.async-web-server-cpp.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = [
-      # Fix compile errors with Boost >= 1.87
-      (self.fetchpatch2 {
-        url = "https://github.com/fkie/async_web_server_cpp/pull/8/commits/0aa036c4c3908ef0d9ac85bf623a15906bccaefd.patch?full_index=1";
-        hash = "sha256-uZym/R8c4e/Ypo8xGQwGdasuFixjbddX9hzQeNqXIDc=";
-      })
-    ];
-  });
-
   azure-iot-sdk-c = rosSuper.azure-iot-sdk-c.overrideAttrs ({
     postPatch ? "", ...
   }: {
