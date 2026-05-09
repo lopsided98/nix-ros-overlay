@@ -167,11 +167,6 @@ in {
         hash = "sha256-Mczkta9SUSKs6HpQ9L/59dLxaqfBEGcIqSI9qPUUH34=";
       })
       (self.fetchpatch2 {
-        # Fix STLAllocator compatibility with GCC 15 and modern C++ standards
-        url = "https://github.com/wentasah/ogre-next/commit/45f449741b3283b43bec6572db8ad6d7af9b2efa.patch?full_index=1";
-        hash = "sha256-Hs+seuQrQZY9G6H4NqV4QVevtDyBzd+qMyvxIK+buBI=";
-      })
-      (self.fetchpatch2 {
         # Fix RGB channel swap in STBICodec RGB-to-RGBA conversion
         # https://github.com/OGRECave/ogre-next/pull/567
         url = "https://github.com/OGRECave/ogre-next/commit/960aabcda2f0ba5d2281d742506aab3e3e91b396.patch?full_index=1";
