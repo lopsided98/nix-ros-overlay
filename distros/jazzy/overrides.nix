@@ -74,6 +74,16 @@ in {
     '';
   });
 
+  autoware-downsample-filters = rosSuper.autoware-downsample-filters.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # fix "fatal error: pcl/io/io.h: No such file or directory"
+    # https://github.com/autowarefoundation/autoware_core/pull/1069
+    postPatch = postPatch + ''
+      substituteInPlace src/voxel_grid_downsample_filter/voxel_grid_downsample_filter_node.cpp --replace-fail \
+        "#include <pcl/io/io.h>" "#include <pcl/common/io.h>"
+    '';
+  });
 
   autoware-map-height-fitter = rosSuper.autoware-map-height-fitter.overrideAttrs ({
     postPatch ? "", ...
