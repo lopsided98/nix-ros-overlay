@@ -88,19 +88,6 @@ in with lib; {
     '';
   });
 
-  autoware-mission-planner = rosSuper.autoware-mission-planner.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      (self.fetchpatch2 {
-        # https://github.com/autowarefoundation/autoware_core/pull/1000
-        url = "https://github.com/nim65s/autoware_core/commit/6839e4e99db8b0110d5d45c118a0f681b1734de2.patch?full_index=1";
-        hash = "sha256-WncxH5T8EtSA8N2eTw+qMQkMu30beGGltnntv4twTWc=";
-        stripLen = 2;
-      })
-    ];
-  });
-
   autoware-motion-velocity-planner= rosSuper.autoware-motion-velocity-planner.overrideAttrs ({
     postPatch ? "", ...
   }: {
