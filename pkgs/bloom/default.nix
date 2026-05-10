@@ -3,7 +3,6 @@
   catkin-pkg,
   empy_3,
   fetchFromGitHub,
-  fetchpatch2,
   lib,
   rosdep,
   rosdistro,
@@ -22,15 +21,6 @@ buildPythonPackage rec {
     rev = version;
     hash = "sha256-gQNk3HbSSsN8yet330x438+HIZBrS48z55kWt6ASBeI=";
   };
-
-  patches = [
-    (fetchpatch2 {
-      # ref. https://github.com/ros-infrastructure/bloom/pull/705
-      name = "debian-architecture-independant.patch";
-      url = "https://github.com/ros-infrastructure/bloom/commit/9e2de64bf1aa286087c70ddad658b0d57339d1fd.patch?full_index=1";
-      hash = "sha256-j9aAX60ydkXPGJasmiRd/h7h9AsEZ/pdqdDfJFSvKcI=";
-    })
-  ];
 
   build-system = [ setuptools ];
 
