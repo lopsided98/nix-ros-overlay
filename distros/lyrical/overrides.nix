@@ -404,44 +404,6 @@ in {
     ];
   });
 
-  # Switch to Qt6
-  python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
-    patches ? [], propagatedBuildInputs ? [], ...
-  }: {
-    patches = patches ++ [
-      # ref. https://github.com/ros-visualization/python_qt_binding/pull/143
-      (self.fetchpatch2 {
-        name = "support-qt6.patch";
-        url = "https://github.com/ros-visualization/python_qt_binding/commit/fa854d325ad4fa5f6e788d70b3ba9ccf9ee5c80f.patch?full_index=1";
-        hash = "sha256-bszIhxh1ThuUdDDiKoHi7eQA/KGb41XmPjMaGpuf658=";
-      })
-      (self.fetchpatch2 {
-        name = "make-linters-happy.patch";
-        url = "https://github.com/ros-visualization/python_qt_binding/commit/bd88c0d5d51add58e329c40bba20a7b04c3df063.patch?full_index=1";
-        hash = "sha256-b3aoTkzxn+ngxJXt7mIaqA3oFkiDelxy/b+QuKaQXIo=";
-      })
-      (self.fetchpatch2 {
-        name = "fixes.patch";
-        url = "https://github.com/ros-visualization/python_qt_binding/commit/d710e1afb2ac0effed1e8d6ab90eee53354366bb.patch?full_index=1";
-        hash = "sha256-+QQzU6FXa+69QG8JaB/miBC1QxsvS9v0mPMJznPHl+c=";
-      })
-    ];
-    propagatedBuildInputs = propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
-      pyside6
-      pyqt6-sip
-    ]);
-
-    dontWrapQtApps = true;
-
-    setupHook = self.writeText "python-qt-binding-setup-hook" ''
-        _pythonQtBindingPreFixupHook() {
-          # Prevent /build RPATH references
-          rm -rf devel/lib
-        }
-        preFixupHooks+=(_pythonQtBindingPreFixupHook)
-      '';
-  });
-
   # This meta-package is referenced by the rosdep key python3-qt-bindings,
   # which is used by packages such as rqt. These packages depend on Qt5 in
   # older ROS distributions and Qt6 in Lyrical and newer releases.
