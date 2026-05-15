@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps }:
 buildRosPackage {
   pname = "ros-lyrical-mola-input-paris-luco-dataset";
-  version = "2.7.0-r3";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_input_paris_luco_dataset/2.7.0-3.tar.gz";
-    name = "2.7.0-3.tar.gz";
-    sha256 = "df10b086d5624fb8761ddb8cb27106bf115eda3493c448cc741af3caa8361b27";
+    url = "https://github.com/ros2-gbp/mola_academic_datasets-release/archive/release/lyrical/mola_input_paris_luco_dataset/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "865d50920ea85c677e65788a510fe91c092ae56e167e18f4e25a00dfb9c1ba2c";
   };
 
   buildType = "cmake";

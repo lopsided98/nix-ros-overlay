@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, fusioncore-ros, nav-msgs, rclpy, robot-state-publisher, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-fusioncore-gazebo";
-  version = "0.2.2-r1";
+  version = "0.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/manankharwar/fusioncore-release/archive/release/humble/fusioncore_gazebo/0.2.2-1.tar.gz";
-    name = "0.2.2-1.tar.gz";
-    sha256 = "74f3bde43a6dfb37aaa845eb5d1fdc6d6dc35c9f7ece9002e3a731c82ead2bbb";
+    url = "https://github.com/manankharwar/fusioncore-release/archive/release/humble/fusioncore_gazebo/0.2.3-1.tar.gz";
+    name = "0.2.3-1.tar.gz";
+    sha256 = "62222563dbba9e5a63f6a26a85ee671cc36ceda02dea9c9146f101a9c6da9073";
   };
 
   buildType = "ament_cmake";

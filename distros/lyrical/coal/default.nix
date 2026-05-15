@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, boost, cmake, doxygen, eigen, eigenpy, git, octomap, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-coal";
-  version = "3.0.2-r3";
+  version = "3.0.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/coal-release/archive/release/lyrical/coal/3.0.2-3.tar.gz";
-    name = "3.0.2-3.tar.gz";
-    sha256 = "7431ca81cfd7621f6804c7299fc7d022fbdb7c869201df4401ee473639ca42ca";
+    url = "https://github.com/ros2-gbp/coal-release/archive/release/lyrical/coal/3.0.3-2.tar.gz";
+    name = "3.0.3-2.tar.gz";
+    sha256 = "ad2bde9cf60721b25b867f56ae148eb0e205b4b7e71a440c11006ad685e525a6";
   };
 
   buildType = "cmake";

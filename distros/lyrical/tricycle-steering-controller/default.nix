@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-cmake, ros2-control-test-assets, std-srvs, steering-controllers-library }:
 buildRosPackage {
   pname = "ros-lyrical-tricycle-steering-controller";
-  version = "6.6.0-r3";
+  version = "6.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/tricycle_steering_controller/6.6.0-3.tar.gz";
-    name = "6.6.0-3.tar.gz";
-    sha256 = "942dbec136663d4fb72b0299e51300f7b1049ccf2ce8fe8e47a8fbc3b1f6aec9";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/tricycle_steering_controller/6.7.0-1.tar.gz";
+    name = "6.7.0-1.tar.gz";
+    sha256 = "b5c81858a5f21a509e26389404eeb7c8b2c6cc55ec6bcbe74a96b6b47dbaf2e8";
   };
 
   buildType = "ament_cmake";

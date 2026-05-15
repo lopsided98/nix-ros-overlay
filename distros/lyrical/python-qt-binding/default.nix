@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_python3-qt-bindings, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python3 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python-qt-bindings-deps, python3 }:
 buildRosPackage {
   pname = "ros-lyrical-python-qt-binding";
   version = "2.5.4-r3";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ _unresolved_python3-qt-bindings python3 ];
+  propagatedBuildInputs = [ python-qt-bindings-deps python3 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

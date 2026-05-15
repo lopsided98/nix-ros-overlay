@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_python3-qt-bindings, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, python-qt-binding, python3Packages, qt-dotgraph, rclpy, rqt-gui, rqt-gui-py }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, python-qt-binding, python-qt-bindings-deps, python3Packages, qt-dotgraph, rclpy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-rolling-rqt-graph";
-  version = "1.8.2-r2";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/rolling/rqt_graph/1.8.2-2.tar.gz";
-    name = "1.8.2-2.tar.gz";
-    sha256 = "3504cd568c35784b96b2160e2564c550075c551046c20207c5598c88c216d618";
+    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/rolling/rqt_graph/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "814906f64d68a3b9f4b63ad88aae138215ee341bb6d3354c0ee3d50636b1e6f9";
   };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint python3Packages.pytest ];
-  propagatedBuildInputs = [ _unresolved_python3-qt-bindings ament-index-python python-qt-binding qt-dotgraph rclpy rqt-gui rqt-gui-py ];
+  propagatedBuildInputs = [ ament-index-python python-qt-binding python-qt-bindings-deps qt-dotgraph rclpy rqt-gui rqt-gui-py ];
 
   meta = {
     description = "rqt_graph provides a GUI plugin for visualizing the ROS

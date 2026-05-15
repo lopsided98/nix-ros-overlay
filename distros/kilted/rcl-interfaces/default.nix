@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-rcl-interfaces";
-  version = "2.3.1-r1";
+  version = "2.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/kilted/rcl_interfaces/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "da916697a75e5714e41a86c012eb4f892edc5550257e6166cc8f3c772cd3b3f2";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/kilted/rcl_interfaces/2.3.2-1.tar.gz";
+    name = "2.3.2-1.tar.gz";
+    sha256 = "1261ae7a7d58890f6aa62e1dd9c333178f67c6d9c21a34de04a0b15acc6c3578";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, cmake, mvsim, teleop-twist-keyboard }:
 buildRosPackage {
   pname = "ros-humble-mrpt-tutorials";
-  version = "2.4.0-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/humble/mrpt_tutorials/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "d6922f363be11db9020bebb869242dc885ccd03e8bc4b25e8f98b4e3547c26b5";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/humble/mrpt_tutorials/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "e0a4af634afd61ccc85c070215f9e9ecffe5a7ada45fa9e576dbe0bc3b6d3ad8";
   };
 
   buildType = "ament_cmake";

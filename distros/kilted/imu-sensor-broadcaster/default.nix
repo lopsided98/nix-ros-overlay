@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, eigen, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, sensor-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-kilted-imu-sensor-broadcaster";
-  version = "5.15.0-r1";
+  version = "5.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/imu_sensor_broadcaster/5.15.0-1.tar.gz";
-    name = "5.15.0-1.tar.gz";
-    sha256 = "ee90770e31b57d4a58c751fd3f3dfb6a0738e0422952574438dcacff06a65d97";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/imu_sensor_broadcaster/5.15.1-1.tar.gz";
+    name = "5.15.1-1.tar.gz";
+    sha256 = "5c3f72eb7d5fd0a3d73b0a501b3e400b4203d4575c1f20e896ff78568543fc06";
   };
 
   buildType = "ament_cmake";

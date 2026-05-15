@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, joint-state-broadcaster, mujoco-ros2-control, mujoco-ros2-control-msgs, position-controllers, robot-state-publisher, rviz2, xacro }:
+{ lib, buildRosPackage, fetchurl, _unresolved_position_controllers, ament-cmake, controller-manager, joint-state-broadcaster, mujoco-ros2-control, mujoco-ros2-control-msgs, robot-state-publisher, rviz2, xacro }:
 buildRosPackage {
   pname = "ros-rolling-mujoco-ros2-control-demos";
   version = "0.0.2-r2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ controller-manager joint-state-broadcaster mujoco-ros2-control mujoco-ros2-control-msgs position-controllers robot-state-publisher rviz2 xacro ];
+  propagatedBuildInputs = [ _unresolved_position_controllers controller-manager joint-state-broadcaster mujoco-ros2-control mujoco-ros2-control-msgs robot-state-publisher rviz2 xacro ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

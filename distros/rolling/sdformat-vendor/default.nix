@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, gz-cmake-vendor, gz-math-vendor, gz-tools-vendor, gz-utils-vendor, libxml2, python3Packages, tinyxml-2, urdfdom }:
 buildRosPackage {
   pname = "ros-rolling-sdformat-vendor";
-  version = "0.3.3-r2";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sdformat_vendor-release/archive/release/rolling/sdformat_vendor/0.3.3-2.tar.gz";
-    name = "0.3.3-2.tar.gz";
-    sha256 = "2f796dbd662a5d5724bf98a088d85546ff3d9386f7c526850e9aef56754e4a23";
+    url = "https://github.com/ros2-gbp/sdformat_vendor-release/archive/release/rolling/sdformat_vendor/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "5c67e06d92426744c20436ca62fea3c9a576ca612f1a1637805b0c796bb17fc6";
   };
 
   buildType = "ament_cmake";

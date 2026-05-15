@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-jazzy-pfs";
-  version = "0.13.1-r1";
+  version = "0.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pfs-release/archive/release/jazzy/pfs/0.13.1-1.tar.gz";
-    name = "0.13.1-1.tar.gz";
-    sha256 = "cbf90ed1bcf08304d1ead8939b7bffed015b1c8854a1897cf8f8f2abb961a3ee";
+    url = "https://github.com/ros2-gbp/pfs-release/archive/release/jazzy/pfs/0.15.0-1.tar.gz";
+    name = "0.15.0-1.tar.gz";
+    sha256 = "0778cbe17b31018f43f00783377a50376006667b8dde802881f5ae6ac773e32e";
   };
 
   buildType = "cmake";

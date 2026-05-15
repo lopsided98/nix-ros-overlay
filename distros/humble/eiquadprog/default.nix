@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cmake, doxygen, eigen, git, graphviz, jrl-cmakemodules }:
 buildRosPackage {
   pname = "ros-humble-eiquadprog";
-  version = "1.3.1-r1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/eiquadprog-release/archive/release/humble/eiquadprog/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "b9957d210641ab52847737581ff33b033680675911cf20090917392c9b445427";
+    url = "https://github.com/ros2-gbp/eiquadprog-release/archive/release/humble/eiquadprog/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "e31f54c1b991830d237277929a318d54c51cb009fa243dad758ffef624145d56";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libbase }:
 buildRosPackage {
   pname = "ros-lyrical-mola-yaml";
-  version = "2.7.0-r3";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_yaml/2.7.0-3.tar.gz";
-    name = "2.7.0-3.tar.gz";
-    sha256 = "9cdf2061ccc0bf155ed9770fe3ec60c1455b1780596bd42d85564cb9f470006a";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_yaml/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "fe526bfb09c289bb09f67f5dda18605748c8011d8aa09a636f8580ce5f3e057a";
   };
 
   buildType = "cmake";

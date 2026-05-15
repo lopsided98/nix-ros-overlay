@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, bzip2, cmake, doxygen, eigen, gsl, libjpeg, liblapack, libpng, libv4l, libxml2, llvmPackages, nlohmann_json, openblas, opencv, xorg, zbar }:
+{ lib, buildRosPackage, fetchurl, bzip2, cmake, doxygen, eigen, gsl, libjpeg, liblapack, libpng, libv4l, libx11, libxml2, llvmPackages, nlohmann_json, openblas, opencv, zbar }:
 buildRosPackage {
   pname = "ros-rolling-visp";
   version = "3.7.0-r5";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen ];
-  propagatedBuildInputs = [ bzip2 eigen gsl libjpeg liblapack libpng libv4l libxml2 llvmPackages.openmp nlohmann_json openblas opencv opencv.cxxdev xorg.libX11 zbar ];
+  propagatedBuildInputs = [ bzip2 eigen gsl libjpeg liblapack libpng libv4l libx11 libxml2 llvmPackages.openmp nlohmann_json openblas opencv opencv.cxxdev zbar ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

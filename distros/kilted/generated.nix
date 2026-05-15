@@ -1326,6 +1326,8 @@ self: super: {
 
  lifecycle-py = self.callPackage ./lifecycle-py {};
 
+ linear-feedback-controller-msgs = self.callPackage ./linear-feedback-controller-msgs {};
+
  linux-isolate-process = self.callPackage ./linux-isolate-process {};
 
  log-view = self.callPackage ./log-view {};

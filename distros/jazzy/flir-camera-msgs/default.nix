@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-flir-camera-msgs";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flir_camera_driver-release/archive/release/jazzy/flir_camera_msgs/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "90d23e9bb0c5574cad518aa726ed728650150c81dd5934e4cf3f06192d4c0d73";
+    url = "https://github.com/ros2-gbp/flir_camera_driver-release/archive/release/jazzy/flir_camera_msgs/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "05b93d3323b79cde6d7055632deba91fd10c0fc7e4716f601985c39e742e6497";
   };
 
   buildType = "ament_cmake";

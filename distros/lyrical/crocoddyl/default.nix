@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_pinocchio, ament-cmake, boost, cmake, doxygen, eigenpy, git, ipopt, jrl-cmakemodules, python3, python3Packages }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, boost, cmake, doxygen, eigenpy, git, ipopt, jrl-cmakemodules, pinocchio, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-crocoddyl";
   version = "3.2.0-r5";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ cmake doxygen git jrl-cmakemodules ];
-  propagatedBuildInputs = [ _unresolved_pinocchio ament-cmake boost eigenpy ipopt python3 python3Packages.numpy ];
+  propagatedBuildInputs = [ ament-cmake boost eigenpy ipopt pinocchio python3 python3Packages.numpy ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

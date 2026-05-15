@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps }:
 buildRosPackage {
   pname = "ros-lyrical-mola-input-kitti360-dataset";
-  version = "2.7.0-r3";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_input_kitti360_dataset/2.7.0-3.tar.gz";
-    name = "2.7.0-3.tar.gz";
-    sha256 = "455272326b84bd6f8b9b4144e7ed9bae407ac94dde88fdde036d0ea2bf5ead31";
+    url = "https://github.com/ros2-gbp/mola_academic_datasets-release/archive/release/lyrical/mola_input_kitti360_dataset/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "d34e1a273551df36612b5d1e63706e5f643a208dcf96da56e81ec214d929134b";
   };
 
   buildType = "cmake";

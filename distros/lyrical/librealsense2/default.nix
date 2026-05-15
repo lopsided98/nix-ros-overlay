@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, git, glfw3, libGL, libGLU, libusb1, openssl, pkg-config, udev, xorg }:
+{ lib, buildRosPackage, fetchurl, cmake, git, glfw3, libGL, libGLU, libusb1, libx11, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-lyrical-librealsense2";
   version = "2.57.7-r7";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ cmake git libusb1 openssl pkg-config udev ];
-  propagatedBuildInputs = [ glfw3 libGL libGLU xorg.libX11 ];
+  propagatedBuildInputs = [ glfw3 libGL libGLU libx11 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

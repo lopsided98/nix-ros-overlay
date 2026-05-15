@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ur-calibration, ur-controllers, ur-dashboard-msgs, ur-moveit-config, ur-robot-driver }:
 buildRosPackage {
   pname = "ros-rolling-ur";
-  version = "5.0.0-r2";
+  version = "6.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/rolling/ur/5.0.0-2.tar.gz";
-    name = "5.0.0-2.tar.gz";
-    sha256 = "ed97b285d5faf5481b3d911af5ae7cdb95a4b5dd4469bccf97d9c4037d4bc08c";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/rolling/ur/6.0.0-1.tar.gz";
+    name = "6.0.0-1.tar.gz";
+    sha256 = "7c930425855df14e4dc45629b2b954bf628fe9a75e870733392207b129c8fc0e";
   };
 
   buildType = "ament_cmake";

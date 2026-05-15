@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-swri-math-util";
-  version = "3.8.7-r1";
+  version = "3.8.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_math_util/3.8.7-1.tar.gz";
-    name = "3.8.7-1.tar.gz";
-    sha256 = "78023e82a930fdb9692217ed63be435baf3d89b1dfe0cff005337d6cd1b36339";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_math_util/3.8.9-1.tar.gz";
+    name = "3.8.9-1.tar.gz";
+    sha256 = "8ae0e3804d09d2e0b1bb91872d7e8bf3196ada73f58044d0f92319248acae55b";
   };
 
   buildType = "ament_cmake";

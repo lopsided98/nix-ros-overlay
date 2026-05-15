@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, rsl, tl-expected-nixpkgs, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-lyrical-joint-trajectory-controller";
-  version = "6.6.0-r3";
+  version = "6.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/joint_trajectory_controller/6.6.0-3.tar.gz";
-    name = "6.6.0-3.tar.gz";
-    sha256 = "07306aa695a18b134976156f562ca2fa4ab439cadbe9d887db2abb06c0c4de41";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/joint_trajectory_controller/6.7.0-1.tar.gz";
+    name = "6.7.0-1.tar.gz";
+    sha256 = "7c7d2cb379e1b4670fb2d10de1a00bb536aee64a0a1dff989410f252d37121d2";
   };
 
   buildType = "ament_cmake";

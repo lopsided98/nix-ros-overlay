@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, gz-cmake-vendor, gz-common-vendor, gz-math-vendor, gz-msgs-vendor, gz-rendering-vendor, gz-tools-vendor, gz-transport-vendor, sdformat-vendor, xorg }:
 buildRosPackage {
   pname = "ros-rolling-gz-sensors-vendor";
-  version = "0.3.2-r2";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_sensors_vendor-release/archive/release/rolling/gz_sensors_vendor/0.3.2-2.tar.gz";
-    name = "0.3.2-2.tar.gz";
-    sha256 = "54ceed5fa1c4df5bcbde1b4fdfbff1f506e9fa666cf334f20890c80c96231144";
+    url = "https://github.com/ros2-gbp/gz_sensors_vendor-release/archive/release/rolling/gz_sensors_vendor/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "62adfc5058b44fc8ad3dae037661d35e4eb206f0333589340bce27a5e4886e3f";
   };
 
   buildType = "ament_cmake";

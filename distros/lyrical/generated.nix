@@ -296,8 +296,6 @@ self: super: {
 
  aws-sdk-cpp-vendor = self.callPackage ./aws-sdk-cpp-vendor {};
 
- azure-iot-sdk-c = self.callPackage ./azure-iot-sdk-c {};
-
  backward-ros = self.callPackage ./backward-ros {};
 
  bag2-to-image = self.callPackage ./bag2-to-image {};
@@ -623,8 +621,6 @@ self: super: {
  ecl-type-traits = self.callPackage ./ecl-type-traits {};
 
  ecl-utilities = self.callPackage ./ecl-utilities {};
-
- effort-controllers = self.callPackage ./effort-controllers {};
 
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
@@ -1260,6 +1256,8 @@ self: super: {
 
  mola = self.callPackage ./mola {};
 
+ mola-academic-datasets = self.callPackage ./mola-academic-datasets {};
+
  mola-bridge-ros2 = self.callPackage ./mola-bridge-ros2 {};
 
  mola-common = self.callPackage ./mola-common {};
@@ -1319,6 +1317,8 @@ self: super: {
  mola-traj-tools = self.callPackage ./mola-traj-tools {};
 
  mola-viz = self.callPackage ./mola-viz {};
+
+ mola-viz-imgui = self.callPackage ./mola-viz-imgui {};
 
  mola-yaml = self.callPackage ./mola-yaml {};
 
@@ -1740,6 +1740,8 @@ self: super: {
 
  pilz-industrial-motion-planner-testutils = self.callPackage ./pilz-industrial-motion-planner-testutils {};
 
+ pinocchio = self.callPackage ./pinocchio {};
+
  play-motion2 = self.callPackage ./play-motion2 {};
 
  play-motion2-cli = self.callPackage ./play-motion2-cli {};
@@ -1783,8 +1785,6 @@ self: super: {
  pose-broadcaster = self.callPackage ./pose-broadcaster {};
 
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
-
- position-controllers = self.callPackage ./position-controllers {};
 
  protobuf-comm = self.callPackage ./protobuf-comm {};
 
@@ -2883,8 +2883,6 @@ self: super: {
  usb-cam = self.callPackage ./usb-cam {};
 
  v4l2-camera = self.callPackage ./v4l2-camera {};
-
- velocity-controllers = self.callPackage ./velocity-controllers {};
 
  velodyne = self.callPackage ./velodyne {};
 

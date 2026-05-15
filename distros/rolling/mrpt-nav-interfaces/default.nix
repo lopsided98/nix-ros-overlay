@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, geometry-msgs, mrpt-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-nav-interfaces";
-  version = "2.4.0-r2";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/rolling/mrpt_nav_interfaces/2.4.0-2.tar.gz";
-    name = "2.4.0-2.tar.gz";
-    sha256 = "5fd44c1ddb79049b0f26f9aeb71fc0256674620bdd9805445141b9d782034b40";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/rolling/mrpt_nav_interfaces/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "9922376ffea43b12d03b02dfcd0b8ba049d3b3dd8894beb7967274fcb6bdbf6f";
   };
 
   buildType = "ament_cmake";

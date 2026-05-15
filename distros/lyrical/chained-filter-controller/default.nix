@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-interface, controller-manager, filters, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-lyrical-chained-filter-controller";
-  version = "6.6.0-r3";
+  version = "6.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/chained_filter_controller/6.6.0-3.tar.gz";
-    name = "6.6.0-3.tar.gz";
-    sha256 = "bb62a024f028ab96b5f46a1a5ad3eb92138cfeb86977a0a669861c5edc053ff0";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/chained_filter_controller/6.7.0-1.tar.gz";
+    name = "6.7.0-1.tar.gz";
+    sha256 = "9cf91f1d387e296e317e9a0cc6e502cb2cb169ac840414c9de1c9b889a7497ac";
   };
 
   buildType = "ament_cmake";

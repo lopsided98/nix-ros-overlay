@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, mola-state-estimation-simple, mola-state-estimation-smoother }:
 buildRosPackage {
   pname = "ros-jazzy-mola-state-estimation";
-  version = "2.3.1-r1";
+  version = "2.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/jazzy/mola_state_estimation/2.3.1-1.tar.gz";
-    name = "2.3.1-1.tar.gz";
-    sha256 = "9a90cc9a6041a931bbae8e0f14cc0ba1787e805fce1708a5dc32baf705a1e8ef";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/jazzy/mola_state_estimation/2.4.0-1.tar.gz";
+    name = "2.4.0-1.tar.gz";
+    sha256 = "d6a5f80db799e4e4cdebb7e82b46f5e191d913dcf52131eaea7a97d1b8728071";
   };
 
   buildType = "ament_cmake";

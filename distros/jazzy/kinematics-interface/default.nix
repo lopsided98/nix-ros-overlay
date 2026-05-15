@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, eigen, pluginlib, rclcpp-lifecycle, ros2-control-cmake, ros2-control-test-assets }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, eigen, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-jazzy-kinematics-interface";
-  version = "1.7.0-r1";
+  version = "1.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/jazzy/kinematics_interface/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "20e8dc0b44fefa19bb6952ad40800db57dbb801a5f714b26bf6925a590b8ed29";
+    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/jazzy/kinematics_interface/1.7.1-1.tar.gz";
+    name = "1.7.1-1.tar.gz";
+    sha256 = "e8ac5d3e38960dd2967f3ec108bea031ba3a2930b7a727c2a3f490a4559cc253";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros2-control-cmake ];
   checkInputs = [ ament-cmake-gmock pluginlib ros2-control-test-assets ];
-  propagatedBuildInputs = [ backward-ros eigen rclcpp-lifecycle ];
+  propagatedBuildInputs = [ backward-ros eigen rclcpp rclcpp-lifecycle ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

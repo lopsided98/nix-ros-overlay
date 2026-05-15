@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, joint-state-publisher, joint-state-publisher-gui, moveit-resources-panda-description, position-controllers, robot-state-publisher, ros2cli-common-extensions, topic-tools, xacro }:
+{ lib, buildRosPackage, fetchurl, _unresolved_position_controllers, ament-cmake, controller-manager, joint-state-publisher, joint-state-publisher-gui, moveit-resources-panda-description, robot-state-publisher, ros2cli-common-extensions, topic-tools, xacro }:
 buildRosPackage {
   pname = "ros-lyrical-moveit-resources-panda-moveit-config";
   version = "3.1.1-r3";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ controller-manager joint-state-publisher joint-state-publisher-gui moveit-resources-panda-description position-controllers robot-state-publisher ros2cli-common-extensions topic-tools xacro ];
+  propagatedBuildInputs = [ _unresolved_position_controllers controller-manager joint-state-publisher joint-state-publisher-gui moveit-resources-panda-description robot-state-publisher ros2cli-common-extensions topic-tools xacro ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

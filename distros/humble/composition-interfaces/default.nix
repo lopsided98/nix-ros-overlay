@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rcl-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-composition-interfaces";
-  version = "1.2.2-r1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/humble/composition_interfaces/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "34e95bf6e870ef27c816e28753449d1ac57e3e0d99b21fd8f20c9769f1b2aa49";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/humble/composition_interfaces/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
+    sha256 = "04a7a3b86f2a9a5546df97e058a963536e2b3c66971aedc49a796a49b8d355f2";
   };
 
   buildType = "ament_cmake";

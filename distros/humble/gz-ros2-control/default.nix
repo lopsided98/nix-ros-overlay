@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, _unresolved_ignition-gazebo6, _unresolved_ignition-plugin, ament-cmake, ament-index-cpp, ament-lint-auto, ament-lint-common, controller-manager, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-humble-gz-ros2-control";
-  version = "0.7.19-r1";
+  version = "0.7.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/humble/gz_ros2_control/0.7.19-1.tar.gz";
-    name = "0.7.19-1.tar.gz";
-    sha256 = "91032e7ceb0dc6ce39400107dd3afa207d829a0ff270aa9bf1f277c6bb95fe40";
+    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/humble/gz_ros2_control/0.7.20-1.tar.gz";
+    name = "0.7.20-1.tar.gz";
+    sha256 = "419d65d8a2da3df0715de393d2a1eef4d0458bbd8c5f8e064b34286d69ae585a";
   };
 
   buildType = "ament_cmake";

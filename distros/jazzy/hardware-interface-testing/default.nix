@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, fmt, hardware-interface, lifecycle-msgs, pluginlib, rclcpp-lifecycle, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-jazzy-hardware-interface-testing";
-  version = "4.45.1-r1";
+  version = "4.45.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/hardware_interface_testing/4.45.1-1.tar.gz";
-    name = "4.45.1-1.tar.gz";
-    sha256 = "dbca21bc9d0d8d2a8e93f1334e2b357b4013f8ce8ee744501f7c1acb6164e246";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/hardware_interface_testing/4.45.2-1.tar.gz";
+    name = "4.45.2-1.tar.gz";
+    sha256 = "8011005d15cb544b9d78fc84a86610bf2242fb5de86f467625b3f74d02fb47bf";
   };
 
   buildType = "ament_cmake";

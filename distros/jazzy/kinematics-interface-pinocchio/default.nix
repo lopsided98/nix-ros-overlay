@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, eigen, eigen3-cmake-module, kinematics-interface, pinocchio, pluginlib, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-jazzy-kinematics-interface-pinocchio";
-  version = "1.7.0-r1";
+  version = "1.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/jazzy/kinematics_interface_pinocchio/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "93ea913e83ef02736d396faa51de17ec06bcf1955bc5a21a8be7494cebecf3bc";
+    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/jazzy/kinematics_interface_pinocchio/1.7.1-1.tar.gz";
+    name = "1.7.1-1.tar.gz";
+    sha256 = "df236b2bfa1b203287520c92e3052cd0ce2f8701f4b5332dc9cdace5d1326428";
   };
 
   buildType = "ament_cmake";

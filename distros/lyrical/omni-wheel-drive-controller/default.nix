@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, controller-interface, controller-manager, eigen, generate-parameter-library, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-omni-wheel-drive-controller";
-  version = "6.6.0-r3";
+  version = "6.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/omni_wheel_drive_controller/6.6.0-3.tar.gz";
-    name = "6.6.0-3.tar.gz";
-    sha256 = "3aac3e1d3db31970963c539e03e6c8e36de87d38dd76bc7ccdd57f5554c1061f";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/omni_wheel_drive_controller/6.7.0-1.tar.gz";
+    name = "6.7.0-1.tar.gz";
+    sha256 = "b79e3b49161b020433ce53cbe50ae6ae0499225daf9bb80ce22679fcb13bbcbc";
   };
 
   buildType = "ament_cmake";

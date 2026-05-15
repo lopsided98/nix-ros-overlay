@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, geometry-msgs, image-transport, opencv, rcl-interfaces, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-image-rotate";
-  version = "6.0.11-r1";
+  version = "6.0.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/kilted/image_rotate/6.0.11-1.tar.gz";
-    name = "6.0.11-1.tar.gz";
-    sha256 = "499a0d901926eec5b96a31d56a8f759ec2bf968c40386b63bb96f6c91907be22";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/kilted/image_rotate/6.0.12-1.tar.gz";
+    name = "6.0.12-1.tar.gz";
+    sha256 = "796bcf6d82fc718c720a5f7e2104213fb449f932b7af84fd9e047f091d49d41a";
   };
 
   buildType = "ament_cmake";

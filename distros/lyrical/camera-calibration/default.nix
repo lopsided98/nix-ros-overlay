@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, cv-bridge, image-geometry, message-filters, python3Packages, rclpy, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-lyrical-camera-calibration";
-  version = "7.1.3-r3";
+  version = "7.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/lyrical/camera_calibration/7.1.3-3.tar.gz";
-    name = "7.1.3-3.tar.gz";
-    sha256 = "80afda19d8491e38a143c7ee4b632f5e6d29f074175e6922d740453face35f1f";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/lyrical/camera_calibration/7.1.6-1.tar.gz";
+    name = "7.1.6-1.tar.gz";
+    sha256 = "3da919094212968c99ade56a8aee13d311deae58d58d260f396d48143cbf8231";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cmake, doxygen, eigen, git, graphviz, jrl-cmakemodules }:
 buildRosPackage {
   pname = "ros-lyrical-eiquadprog";
-  version = "1.3.1-r3";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/eiquadprog-release/archive/release/lyrical/eiquadprog/1.3.1-3.tar.gz";
-    name = "1.3.1-3.tar.gz";
-    sha256 = "ddc3b45cacbca594589a1a82e7fffce6e89b6fbcc52b99c8712b4f2ffbd18b6c";
+    url = "https://github.com/ros2-gbp/eiquadprog-release/archive/release/lyrical/eiquadprog/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "69780ef13b2ebc45ffbce0490c8a7ff61433db0e3cc05b2c5ca7df7aab199d59";
   };
 
   buildType = "cmake";

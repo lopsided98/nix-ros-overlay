@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, tf2-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-pose-broadcaster";
-  version = "6.6.0-r3";
+  version = "6.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/pose_broadcaster/6.6.0-3.tar.gz";
-    name = "6.6.0-3.tar.gz";
-    sha256 = "72f15e323a17c2086eb9639b4ae7d86bf99ed2ff67a5667d87fcbf3a7df15f6b";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/pose_broadcaster/6.7.0-1.tar.gz";
+    name = "6.7.0-1.tar.gz";
+    sha256 = "33f8bbb5ae2272400f7a77eb2024db714887aa0126dfa16eb51462909f6b3c2d";
   };
 
   buildType = "ament_cmake";

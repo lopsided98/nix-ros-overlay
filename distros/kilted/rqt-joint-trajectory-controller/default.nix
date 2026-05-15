@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, control-msgs, controller-manager-msgs, python-qt-binding, python3Packages, qt-gui, rclpy, rqt-gui, rqt-gui-py, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kilted-rqt-joint-trajectory-controller";
-  version = "5.15.0-r1";
+  version = "5.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/rqt_joint_trajectory_controller/5.15.0-1.tar.gz";
-    name = "5.15.0-1.tar.gz";
-    sha256 = "51cba9134ab66c73465528a2ed768360ef3647f29027bc871c5af6d7b6dbad8a";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/rqt_joint_trajectory_controller/5.15.1-1.tar.gz";
+    name = "5.15.1-1.tar.gz";
+    sha256 = "18be0b6deda77e86b928116ddc8c58ddf138f22e2df9da7bb788e5bf74f1b3d0";
   };
 
   buildType = "ament_python";

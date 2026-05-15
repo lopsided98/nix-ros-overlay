@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libmath, mrpt-libposes, mrpt-libtclap }:
 buildRosPackage {
   pname = "ros-jazzy-kitti-metrics-eval";
-  version = "2.8.0-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/kitti_metrics_eval/2.8.0-1.tar.gz";
-    name = "2.8.0-1.tar.gz";
-    sha256 = "028e88b1381b9e379efd201b4b3c138701d051bde283843554b5ca2229751d5c";
+    url = "https://github.com/ros2-gbp/mola_academic_datasets-release/archive/release/jazzy/kitti_metrics_eval/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "629ed32b55407d9d8b9b562476e7e8f4cf79bbffe988fda842811bf09f72bf85";
   };
 
   buildType = "cmake";

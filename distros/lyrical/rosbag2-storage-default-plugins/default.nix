@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosbag2-storage-mcap, rosbag2-storage-sqlite3 }:
 buildRosPackage {
   pname = "ros-lyrical-rosbag2-storage-default-plugins";
-  version = "0.33.2-r1";
+  version = "0.33.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/lyrical/rosbag2_storage_default_plugins/0.33.2-1.tar.gz";
-    name = "0.33.2-1.tar.gz";
-    sha256 = "7136ea77316b85cb312bb8c5c52734e334009e731afde7497dfba38a6a7d4aa4";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/lyrical/rosbag2_storage_default_plugins/0.33.3-1.tar.gz";
+    name = "0.33.3-1.tar.gz";
+    sha256 = "54137517c95e9d7516d06d80bdd63e7995ad4191a4f5ca522161f375108553fb";
   };
 
   buildType = "ament_cmake";

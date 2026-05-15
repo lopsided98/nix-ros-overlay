@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, boost, cmake, doxygen, eigenpy, eiquadprog, git, graphviz, pinocchio }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, boost, cmake, doxygen, eigenpy, eiquadprog, git, graphviz, jrl-cmakemodules, pinocchio }:
 buildRosPackage {
   pname = "ros-kilted-tsid";
-  version = "1.9.0-r1";
+  version = "1.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tsid-release/archive/release/kilted/tsid/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "a4bd92b88e3d2221d41ae4bfed0840f4101d12a3b52a86e5fabad849412b03c4";
+    url = "https://github.com/ros2-gbp/tsid-release/archive/release/kilted/tsid/1.10.0-1.tar.gz";
+    name = "1.10.0-1.tar.gz";
+    sha256 = "eacb30497cf180f95f6ff35add72d35c3636e98856c47b3da06d266c6031adfa";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake doxygen git ];
+  buildInputs = [ cmake doxygen git jrl-cmakemodules ];
   propagatedBuildInputs = [ ament-cmake boost eigenpy eiquadprog graphviz pinocchio ];
   nativeBuildInputs = [ cmake ];
 

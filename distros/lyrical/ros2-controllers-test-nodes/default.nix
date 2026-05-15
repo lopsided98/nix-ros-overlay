@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, launch-ros, launch-testing-ros, python3Packages, rclpy, sensor-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-ros2-controllers-test-nodes";
-  version = "6.6.0-r3";
+  version = "6.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/ros2_controllers_test_nodes/6.6.0-3.tar.gz";
-    name = "6.6.0-3.tar.gz";
-    sha256 = "801e94cf917478cc4e809ca85bb9f75ebedc3a8db9ef5d5c7d9d264e3867cc3a";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/ros2_controllers_test_nodes/6.7.0-1.tar.gz";
+    name = "6.7.0-1.tar.gz";
+    sha256 = "d8d970d47eb098a77f459d5fdc9602db6dc7033b5026d210a560a8538d1d8ccf";
   };
 
   buildType = "ament_python";

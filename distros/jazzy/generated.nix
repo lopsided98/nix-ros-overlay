@@ -1840,6 +1840,8 @@ self: super: {
 
  lightning-rrt-interfaces = self.callPackage ./lightning-rrt-interfaces {};
 
+ linear-feedback-controller-msgs = self.callPackage ./linear-feedback-controller-msgs {};
+
  linux-isolate-process = self.callPackage ./linux-isolate-process {};
 
  live555-vendor = self.callPackage ./live555-vendor {};
@@ -1960,6 +1962,8 @@ self: super: {
 
  mola = self.callPackage ./mola {};
 
+ mola-academic-datasets = self.callPackage ./mola-academic-datasets {};
+
  mola-bridge-ros2 = self.callPackage ./mola-bridge-ros2 {};
 
  mola-common = self.callPackage ./mola-common {};
@@ -2019,6 +2023,8 @@ self: super: {
  mola-traj-tools = self.callPackage ./mola-traj-tools {};
 
  mola-viz = self.callPackage ./mola-viz {};
+
+ mola-viz-imgui = self.callPackage ./mola-viz-imgui {};
 
  mola-yaml = self.callPackage ./mola-yaml {};
 
@@ -3823,6 +3829,16 @@ self: super: {
  tracetools-test = self.callPackage ./tracetools-test {};
 
  tracetools-trace = self.callPackage ./tracetools-trace {};
+
+ trackdlo-bringup = self.callPackage ./trackdlo-bringup {};
+
+ trackdlo-core = self.callPackage ./trackdlo-core {};
+
+ trackdlo-msgs = self.callPackage ./trackdlo-msgs {};
+
+ trackdlo-segmentation = self.callPackage ./trackdlo-segmentation {};
+
+ trackdlo-utils = self.callPackage ./trackdlo-utils {};
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 
