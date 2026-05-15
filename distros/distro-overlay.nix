@@ -48,9 +48,8 @@ let
           originalRev = "\${MRPT_VERSION_TO_DOWNLOAD}";
           inherit rev;
           fetchgitArgs.hash = {
-            "2.15.14" = "sha256-WudCeaOJWNIK2NaD6JNal68kU+eOhnrd6XF3CLb3pg8=";
-            "2.15.15" = "sha256-d+zSxvdRbsE2BpIED7kaMLu7Y+kWeOtbXtRhengwzv0=";
-            "2.15.16" = "sha256-BDeuGRHdCsbqjosIIPXa4AevPCFD3uNwqJc4r9pCo4o=";
+            "2.15.17" = "sha256-XgTkkrbnbioakTUII/8DW4dDpL/hoQIJV8gR6MtLDkk=";
+            "2.15.18" = "sha256-d7pb9kIzFIWtNBakBvrcoPRgsmxnhHs4I3Q4DTFE+l4=";
           }.${rev};
         }).overrideAttrs ({ postPatch ? "", buildInputs ? [], ... }: {
           postPatch = postPatch + ''
