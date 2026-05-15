@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, libGL, libGLU, libcxx, xorg }:
+{ lib, buildRosPackage, fetchurl, cmake, libGL, libGLU, libcxx, libx11 }:
 buildRosPackage {
   pname = "ros-lyrical-open3d-vendor";
   version = "0.19.0-r3";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ libGL libGLU libcxx xorg.libX11 ];
+  propagatedBuildInputs = [ libGL libGLU libcxx libx11 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

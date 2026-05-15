@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, image-transport, rclcpp, rclcpp-lifecycle, sensor-msgs, std-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-fkie-message-filters";
-  version = "3.3.0-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fkie_message_filters-release/archive/release/humble/fkie_message_filters/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "fe0b4c5e6e85b5fb3fee796dba45da6c8366e9ea3a08cc07743bb13a4b597cde";
+    url = "https://github.com/ros2-gbp/fkie_message_filters-release/archive/release/humble/fkie_message_filters/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "6a51ea0791a2ad6b7fbf2461ba9876a730d6db881daf761799d52c52fee7e0f2";
   };
 
   buildType = "ament_cmake";

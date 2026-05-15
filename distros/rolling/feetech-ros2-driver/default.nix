@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_libserial-dev, ament-cmake, fmt, hardware-interface, pkg-config, pluginlib, range-v3, rclcpp, spdlog, tl-expected }:
+{ lib, buildRosPackage, fetchurl, _unresolved_libserial-dev, _unresolved_tl_expected, ament-cmake, fmt, hardware-interface, pkg-config, pluginlib, range-v3, rclcpp, spdlog }:
 buildRosPackage {
   pname = "ros-rolling-feetech-ros2-driver";
   version = "0.2.1-r2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ _unresolved_libserial-dev fmt hardware-interface pkg-config pluginlib range-v3 rclcpp spdlog tl-expected ];
+  propagatedBuildInputs = [ _unresolved_libserial-dev _unresolved_tl_expected fmt hardware-interface pkg-config pluginlib range-v3 rclcpp spdlog ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmath, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-lyrical-mola-input-euroc-dataset";
-  version = "2.7.0-r3";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_input_euroc_dataset/2.7.0-3.tar.gz";
-    name = "2.7.0-3.tar.gz";
-    sha256 = "273ea838f97055e9d928b673caef93d9ae2fc44efc0582b6d140cae847b2a222";
+    url = "https://github.com/ros2-gbp/mola_academic_datasets-release/archive/release/lyrical/mola_input_euroc_dataset/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "61ba71cb78fb72896362fb990d3dd870a1bc67fdbb8db2c3ef6d1e4326ce26d2";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-sick-safetyscanners2-interfaces";
-  version = "1.0.0-r2";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/SICKAG/sick_safetyscanners2_interfaces-release/archive/release/humble/sick_safetyscanners2_interfaces/1.0.0-2.tar.gz";
-    name = "1.0.0-2.tar.gz";
-    sha256 = "1fb6b3dd93f0e5dd909963e75c254915785554b6b0cdd8f2f54e9801ad373fcb";
+    url = "https://github.com/SICKAG/sick_safetyscanners2_interfaces-release/archive/release/humble/sick_safetyscanners2_interfaces/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "6e3f7425618c8dec3c0960b71d81f3c0eaf55bc2624f4785114f91df464345be";
   };
 
   buildType = "ament_cmake";

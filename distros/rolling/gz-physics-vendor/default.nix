@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, bullet, cmake, eigen, gbenchmark, gz-cmake-vendor, gz-common-vendor, gz-dartsim-vendor, gz-math-vendor, gz-plugin-vendor, gz-utils-vendor, sdformat-vendor }:
 buildRosPackage {
   pname = "ros-rolling-gz-physics-vendor";
-  version = "0.4.3-r2";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_physics_vendor-release/archive/release/rolling/gz_physics_vendor/0.4.3-2.tar.gz";
-    name = "0.4.3-2.tar.gz";
-    sha256 = "a8f7f8689dda6c0c82a1833c85901d38e19462dbb7a824d7c89bac8fd9a905e8";
+    url = "https://github.com/ros2-gbp/gz_physics_vendor-release/archive/release/rolling/gz_physics_vendor/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "d6440c5cc6b399d37c474021234ae10172206649019c4058ed08023edffa509c";
   };
 
   buildType = "ament_cmake";

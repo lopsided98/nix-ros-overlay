@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cmake, eigen, embree, flann, freeglut, gdal, gsl, hdf5, libtiff, lz4, ocl-icd, onetbb, opencv, xorg, yaml-cpp }:
+{ lib, buildRosPackage, fetchurl, boost, cmake, eigen, embree, flann, freeglut, gdal, gsl, hdf5, libtiff, libxi, libxmu, lz4, ocl-icd, onetbb, opencv, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-lvr2";
   version = "25.2.2-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ boost eigen embree flann freeglut gdal gsl hdf5 libtiff lz4 ocl-icd onetbb opencv opencv.cxxdev xorg.libXi xorg.libXmu yaml-cpp ];
+  propagatedBuildInputs = [ boost eigen embree flann freeglut gdal gsl hdf5 libtiff libxi libxmu lz4 ocl-icd onetbb opencv opencv.cxxdev yaml-cpp ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

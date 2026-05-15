@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, geometry-msgs, image-transport, opencv, rcl-interfaces, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-image-rotate";
-  version = "7.1.3-r3";
+  version = "7.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/lyrical/image_rotate/7.1.3-3.tar.gz";
-    name = "7.1.3-3.tar.gz";
-    sha256 = "70d72d554e9206c7476c96c704bff9700ef23cfbe48e088f3cba26970b0252aa";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/lyrical/image_rotate/7.1.6-1.tar.gz";
+    name = "7.1.6-1.tar.gz";
+    sha256 = "80fe3d6a83742484da3d71d3448b062363358db6a7c7fad20139404909ce0caa";
   };
 
   buildType = "ament_cmake";

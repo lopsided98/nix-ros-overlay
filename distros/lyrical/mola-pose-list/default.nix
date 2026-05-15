@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libmaps, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-lyrical-mola-pose-list";
-  version = "2.7.0-r3";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_pose_list/2.7.0-3.tar.gz";
-    name = "2.7.0-3.tar.gz";
-    sha256 = "327039d11fa647c73ef1f05a44b3bfaa465c97227db42e8ed9a176d4888a5713";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_pose_list/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "b411f336db5ee817a2271fd6c64827b4044a513cd0a328382eac0dc01f5a322e";
   };
 
   buildType = "cmake";

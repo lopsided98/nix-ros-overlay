@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, cv-bridge, image-geometry, message-filters, python3Packages, rclpy, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-camera-calibration";
-  version = "7.1.3-r2";
+  version = "8.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/camera_calibration/7.1.3-2.tar.gz";
-    name = "7.1.3-2.tar.gz";
-    sha256 = "7487226005a20dcb0f9e9cad0b4a7b960a2ec2f29a20db3a66745d8a999e428a";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/camera_calibration/8.0.0-1.tar.gz";
+    name = "8.0.0-1.tar.gz";
+    sha256 = "8aa0f547e3262147e852010d794b5693ba7c0a68f12ca92ab6afa03b639e6283";
   };
 
   buildType = "ament_python";

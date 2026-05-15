@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, ament-lint-auto, ament-lint-common, gz-ros2-control-demos, launch, launch-ros }:
 buildRosPackage {
   pname = "ros-humble-ign-ros2-control-demos";
-  version = "0.7.19-r1";
+  version = "0.7.20-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/humble/ign_ros2_control_demos/0.7.19-1.tar.gz";
-    name = "0.7.19-1.tar.gz";
-    sha256 = "137d7635a67b137d6e0e172823830fba533638887becc11d517f799f400dd43e";
+    url = "https://github.com/ros2-gbp/ign_ros2_control-release/archive/release/humble/ign_ros2_control_demos/0.7.20-1.tar.gz";
+    name = "0.7.20-1.tar.gz";
+    sha256 = "65d23075327befb39a0e57ed5685a358f6aac4a86265b14e79df0875a86bede2";
   };
 
   buildType = "ament_cmake";

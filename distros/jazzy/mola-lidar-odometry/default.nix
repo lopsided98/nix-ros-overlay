@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, cmake, mola-common, mola-imu-preintegration, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset, mola-input-rawlog, mola-input-rosbag2, mola-kernel, mola-launcher, mola-metric-maps, mola-pose-list, mola-state-estimation-simple, mola-test-datasets, mola-viz, mp2p-icp, mrpt-libmaps, mrpt-libtclap, ros-environment, rosbag2-storage-mcap }:
 buildRosPackage {
   pname = "ros-jazzy-mola-lidar-odometry";
-  version = "2.1.0-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_lidar_odometry-release/archive/release/jazzy/mola_lidar_odometry/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "656f50846a9a5cf6bcbb507583a58df18ee6458ac57b6d953fa5c0aea4cf20a9";
+    url = "https://github.com/ros2-gbp/mola_lidar_odometry-release/archive/release/jazzy/mola_lidar_odometry/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "3b6b6069e631976621e7618961f26d9ecac83c2d447c960a3c9507d330d102c7";
   };
 
   buildType = "ament_cmake";

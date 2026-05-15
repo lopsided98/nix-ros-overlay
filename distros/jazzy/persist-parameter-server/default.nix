@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, boost, launch, launch-ros, rclcpp, rclcpp-components, rcutils, rmw, rmw-implementation-cmake, std-msgs, std-srvs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-persist-parameter-server";
-  version = "1.0.5-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/persist_parameter_server-release/archive/release/jazzy/persist_parameter_server/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "260fb1715bac89d8e639069441c623abba04ad07577dda12ba1d745faa5715ce";
+    url = "https://github.com/ros2-gbp/persist_parameter_server-release/archive/release/jazzy/persist_parameter_server/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "f37fc25bdc4323b30e23f0f4af09e94ee1493a76b94e88da53a9743348003e5d";
   };
 
   buildType = "ament_cmake";

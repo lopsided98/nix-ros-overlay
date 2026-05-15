@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, hardware-interface, pal-statistics-msgs, rclcpp, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-jazzy-cm-topic-hardware-component";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/topic_based_hardware-release/archive/release/jazzy/cm_topic_hardware_component/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "a78acea7c18847e0830e5bf5510761ac300ea49c7257253cc726339c9dc800b6";
+    url = "https://github.com/ros2-gbp/topic_based_hardware-release/archive/release/jazzy/cm_topic_hardware_component/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "e396205ecefda9b7c1d6933bd41eb3f621a6bf0f0e81b6fbff3a324fbb3a25d3";
   };
 
   buildType = "ament_cmake";

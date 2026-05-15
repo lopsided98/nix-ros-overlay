@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-test, ament-lint-auto, ament-lint-common, ros2cli, sros2 }:
 buildRosPackage {
   pname = "ros-lyrical-sros2-cmake";
-  version = "0.16.5-r1";
+  version = "0.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sros2-release/archive/release/lyrical/sros2_cmake/0.16.5-1.tar.gz";
-    name = "0.16.5-1.tar.gz";
-    sha256 = "e85d8805f08eade80690ae37bdd5bcea2969b3b8676ae03b9c06a8a9c98674d4";
+    url = "https://github.com/ros2-gbp/sros2-release/archive/release/lyrical/sros2_cmake/0.16.6-1.tar.gz";
+    name = "0.16.6-1.tar.gz";
+    sha256 = "57e766bd3ceff1ec0ccd33be5a1d0ddae9ad1914dfd191769e8690594b1fd099";
   };
 
   buildType = "ament_cmake";

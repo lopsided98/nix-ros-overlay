@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, camera-calibration, depth-image-proc, image-proc, image-publisher, image-rotate, image-view, stereo-image-proc }:
 buildRosPackage {
   pname = "ros-kilted-image-pipeline";
-  version = "6.0.11-r1";
+  version = "6.0.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/kilted/image_pipeline/6.0.11-1.tar.gz";
-    name = "6.0.11-1.tar.gz";
-    sha256 = "19b21527d0d9f81d2182e8f94f7b4837b3938f947b7df7100226921db9401251";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/kilted/image_pipeline/6.0.12-1.tar.gz";
+    name = "6.0.12-1.tar.gz";
+    sha256 = "54956bb900b2d11896e7ff8bc3b9e1cb147bd99feef3fa524fe90545937d2c4c";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-lyrical-mola-common";
-  version = "0.5.3-r1";
+  version = "0.6.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_common-release/archive/release/lyrical/mola_common/0.5.3-1.tar.gz";
-    name = "0.5.3-1.tar.gz";
-    sha256 = "8e3434a80a2ade74fa8b1ac597b6356b1acd964f3857bb53a7d856e27c99d69a";
+    url = "https://github.com/ros2-gbp/mola_common-release/archive/release/lyrical/mola_common/0.6.0-2.tar.gz";
+    name = "0.6.0-2.tar.gz";
+    sha256 = "f29ecf7295db9d5d2a76a873773aa79f0978575ad424beefa5319c3a04fec270";
   };
 
   buildType = "ament_cmake";

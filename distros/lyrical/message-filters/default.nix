@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-lint-auto, ament-lint-common, builtin-interfaces, rclcpp, rclcpp-lifecycle, rclpy, rcutils, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-message-filters";
-  version = "7.3.9-r1";
+  version = "7.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/lyrical/message_filters/7.3.9-1.tar.gz";
-    name = "7.3.9-1.tar.gz";
-    sha256 = "3fbc12651d069b5c728f67a474173aacf42a6bef3cdcfb8ca3bd9b76174f6de5";
+    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/lyrical/message_filters/7.4.0-1.tar.gz";
+    name = "7.4.0-1.tar.gz";
+    sha256 = "0b286d06db4aee178d1fb380ba38909c1a595cb60c512c73ccd9e81fc1d1b363";
   };
 
   buildType = "ament_cmake";

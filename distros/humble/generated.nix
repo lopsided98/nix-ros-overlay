@@ -1708,8 +1708,6 @@ self: super: {
 
  kinova-gen3-lite-moveit-config = self.callPackage ./kinova-gen3-lite-moveit-config {};
 
- kitti-metrics-eval = self.callPackage ./kitti-metrics-eval {};
-
  kobuki-core = self.callPackage ./kobuki-core {};
 
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
@@ -1908,6 +1906,8 @@ self: super: {
 
  lifecycle-py = self.callPackage ./lifecycle-py {};
 
+ linear-feedback-controller-msgs = self.callPackage ./linear-feedback-controller-msgs {};
+
  lms1xx = self.callPackage ./lms1xx {};
 
  log-view = self.callPackage ./log-view {};
@@ -2056,17 +2056,7 @@ self: super: {
 
  mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
 
- mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
-
- mola-input-kitti360-dataset = self.callPackage ./mola-input-kitti360-dataset {};
-
- mola-input-kitti-dataset = self.callPackage ./mola-input-kitti-dataset {};
-
  mola-input-lidar-bin-dataset = self.callPackage ./mola-input-lidar-bin-dataset {};
-
- mola-input-mulran-dataset = self.callPackage ./mola-input-mulran-dataset {};
-
- mola-input-paris-luco-dataset = self.callPackage ./mola-input-paris-luco-dataset {};
 
  mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
 
@@ -2101,6 +2091,8 @@ self: super: {
  mola-traj-tools = self.callPackage ./mola-traj-tools {};
 
  mola-viz = self.callPackage ./mola-viz {};
+
+ mola-viz-imgui = self.callPackage ./mola-viz-imgui {};
 
  mola-yaml = self.callPackage ./mola-yaml {};
 
@@ -3997,6 +3989,16 @@ self: super: {
  tracetools-test = self.callPackage ./tracetools-test {};
 
  tracetools-trace = self.callPackage ./tracetools-trace {};
+
+ trackdlo-bringup = self.callPackage ./trackdlo-bringup {};
+
+ trackdlo-core = self.callPackage ./trackdlo-core {};
+
+ trackdlo-msgs = self.callPackage ./trackdlo-msgs {};
+
+ trackdlo-segmentation = self.callPackage ./trackdlo-segmentation {};
+
+ trackdlo-utils = self.callPackage ./trackdlo-utils {};
 
  trajectory-msgs = self.callPackage ./trajectory-msgs {};
 

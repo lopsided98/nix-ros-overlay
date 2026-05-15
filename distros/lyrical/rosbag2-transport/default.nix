@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, composition-interfaces, keyboard-handler, rclcpp, rclcpp-action, rclcpp-components, rcpputils, rcutils, rmw, rmw-implementation-cmake, rosbag2-compression, rosbag2-compression-zstd, rosbag2-cpp, rosbag2-interfaces, rosbag2-storage, rosbag2-storage-default-plugins, rosbag2-test-common, test-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-rosbag2-transport";
-  version = "0.33.2-r1";
+  version = "0.33.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/lyrical/rosbag2_transport/0.33.2-1.tar.gz";
-    name = "0.33.2-1.tar.gz";
-    sha256 = "2a74d6a388b33f5f91893ded0e8fa20a425200ee3f62c76a3188ad92aca6a403";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/lyrical/rosbag2_transport/0.33.3-1.tar.gz";
+    name = "0.33.3-1.tar.gz";
+    sha256 = "e143dbd53966e1daf6a35c061d4001886eefec9733630eccb1df318a5545ca14";
   };
 
   buildType = "ament_cmake";

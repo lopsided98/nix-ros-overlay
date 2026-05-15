@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages, rqt-gui, rqt-gui-cpp, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-lyrical-rqt";
-  version = "1.10.4-r3";
+  version = "1.10.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/lyrical/rqt/1.10.4-3.tar.gz";
-    name = "1.10.4-3.tar.gz";
-    sha256 = "bed38d991689c0d6fefd725532a5f4368aa5845392b8cea9131084912afa16a5";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/lyrical/rqt/1.10.5-1.tar.gz";
+    name = "1.10.5-1.tar.gz";
+    sha256 = "1f239d9a0746c0a5acb149501f292c8eb8fe0e698083fd1d7ac7d63f1350720e";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-lyrical-gpio-controllers";
-  version = "6.6.0-r3";
+  version = "6.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/gpio_controllers/6.6.0-3.tar.gz";
-    name = "6.6.0-3.tar.gz";
-    sha256 = "525b4668ea920d929870bfb25a05359ce8bcc94dd1fd05238ae4f3145c600ee5";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/gpio_controllers/6.7.0-1.tar.gz";
+    name = "6.7.0-1.tar.gz";
+    sha256 = "764df5c3eee8e319c365bd6fe7476bfe452228f83ed77f923a992fc71ce2f0a2";
   };
 
   buildType = "ament_cmake";

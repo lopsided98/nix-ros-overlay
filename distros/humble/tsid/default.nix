@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, boost, cmake, doxygen, eigenpy, eiquadprog, git, graphviz, pinocchio }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, boost, cmake, doxygen, eigenpy, eiquadprog, git, graphviz, jrl-cmakemodules, pinocchio }:
 buildRosPackage {
   pname = "ros-humble-tsid";
-  version = "1.9.0-r1";
+  version = "1.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tsid-release/archive/release/humble/tsid/1.9.0-1.tar.gz";
-    name = "1.9.0-1.tar.gz";
-    sha256 = "eea25d0f794c37f459605ae7d637b014345906839aa88a9a69aecb674225ee26";
+    url = "https://github.com/ros2-gbp/tsid-release/archive/release/humble/tsid/1.10.0-1.tar.gz";
+    name = "1.10.0-1.tar.gz";
+    sha256 = "0910ab96770cdf1888481c2b16a20d816c9b716712cbd0667ac10d458288230f";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake doxygen git ];
+  buildInputs = [ cmake doxygen git jrl-cmakemodules ];
   propagatedBuildInputs = [ ament-cmake boost eigenpy eiquadprog graphviz pinocchio ];
   nativeBuildInputs = [ cmake ];
 

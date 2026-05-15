@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-kilted-pfs";
-  version = "0.13.1-r1";
+  version = "0.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pfs-release/archive/release/kilted/pfs/0.13.1-1.tar.gz";
-    name = "0.13.1-1.tar.gz";
-    sha256 = "5af04527e297c83104070d7b833ba4e29e7731f2f335a09c989908bba086aafe";
+    url = "https://github.com/ros2-gbp/pfs-release/archive/release/kilted/pfs/0.15.0-1.tar.gz";
+    name = "0.15.0-1.tar.gz";
+    sha256 = "607cff3b7a548deddc9036a9481200f3fa6c9b6e2565efa4a001fc9f823e9f8c";
   };
 
   buildType = "cmake";

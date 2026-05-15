@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, cmake, mola-relocalization, mp2p-icp, mrpt-libgui, mrpt-libros-bridge, mrpt-libslam, mrpt-msgs, mrpt-msgs-bridge, mrpt-tutorials, nav-msgs, pose-cov-ops, rclcpp, rclcpp-components, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-pf-localization";
-  version = "2.4.0-r3";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/lyrical/mrpt_pf_localization/2.4.0-3.tar.gz";
-    name = "2.4.0-3.tar.gz";
-    sha256 = "84418f66169625e806ed17b917ed4b0b4c14cfa1a34daba492fa333b0eccdd5a";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/lyrical/mrpt_pf_localization/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "394ef8c324b84e77bc77e5c1f65568462bad5502c322fb20f2918d531cf44a48";
   };
 
   buildType = "ament_cmake";
