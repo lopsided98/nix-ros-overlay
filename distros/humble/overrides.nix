@@ -902,19 +902,6 @@ in with lib; {
     buildInputs = buildInputs ++ [ self.jsoncpp self.libpcap ];
   });
 
-  persist-parameter-server = rosSuper.persist-parameter-server.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Add ROS Humble compatibility for parameter callbacks
-      # https://github.com/fujitatomoya/ros2_persist_parameter_server/pull/91
-      (self.fetchpatch2 {
-        url = "https://github.com/wentasah/ros2_persist_parameter_server/commit/9ff4569fc1b6f5f8fa1f99b5520161865ec243c9.patch?full_index=1";
-        hash = "sha256-42dfVkYc0ELFbjtQAAd1Xehi2UbNGlUCxkyCz2KxpBQ=";
-      })
-    ];
-  });
-
   ros2-medkit-linux-introspection = rosSuper.ros2-medkit-linux-introspection.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
