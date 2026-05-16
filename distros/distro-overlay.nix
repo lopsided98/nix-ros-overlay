@@ -231,6 +231,7 @@ in self.lib.makeScopeWithSplicing
   ]
   ++ self.lib.optional (version == 2) (import ./ros2-overlay.nix self)
   ++ self.lib.optional (builtins.elem distro ["humble" "jazzy" "kilted"]) (import ./qt5-overlay.nix self)
+  ++ self.lib.optional (builtins.elem distro ["lyrical" "rolling"]) (import ./qt6-overlay.nix self)
   ++ [
     (import (./. + "/${distro}/overrides.nix") self)
   ]) rosSelf {})
