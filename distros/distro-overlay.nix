@@ -113,7 +113,6 @@ let
       nativeBuildInputs ? [], postFixup ? "", ...
     }: {
       dontWrapQtApps = false;
-      nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
       postFixup = postFixup + ''
         wrapQtApp "$out/lib/joint_state_publisher_gui/joint_state_publisher_gui"
       '';
