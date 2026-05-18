@@ -716,7 +716,11 @@ in {
   zenoh-cpp-vendor = (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {
     # Patch the build.rs script to be able to build internal
     # opaque-types crate without network access.
-    patchesFor.zenoh_c_vendor = [ ./zenoh-cpp-vendor/zenoh-c.patch ];
+    patchesFor.zenoh_c_vendor = [
+      ./zenoh-cpp-vendor/zenoh-c.patch
+      ./zenoh-cpp-vendor/static-init-104.patch
+      ./zenoh-cpp-vendor/opaque-types-static-init-104.patch
+    ];
   }).overrideAttrs(finalAttrs: {
     nativeBuildInputs ? [], postPatch ? "", passthru ? {}, ...
   }: let
