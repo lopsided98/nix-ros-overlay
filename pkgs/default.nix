@@ -65,6 +65,19 @@ self: super: with self.lib; {
     utils = self.ignition.utils1;
   };
 
+  libfyaml = super.libfyaml.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # backport "Fix C11 atomics detection and buggy macros for C++ compatibility"
+      # https://github.com/NixOS/nixpkgs/pull/517279
+      (self.fetchpatch {
+        url = "https://github.com/pantoniou/libfyaml/commit/1026d76850909dc9b1c5f95b8cd94e865a313fd5.diff";
+        hash = "sha256-0YfOqdqHdELFMqr52TDAC3BNFLkcuxvuJY5b9yZ7NFk=";
+      })
+    ];
+  });
+
   # Needs unsecure freeimage. We want Gazebo to use gz-gz-ogre-next-vendor
   ogre1_9 = null;
 
