@@ -90,7 +90,7 @@ let
 
     # Some third-party packages are available in rodistro,
     # but have a better packaging in nixpkgs, so use it instead
-    inherit (self.python3Packages) coal eigenpy pinocchio crocoddyl ;
+    inherit (self.python3Packages) coal eigenpy pinocchio crocoddyl tsid;
 
     freeimage = null; # Get rid of freeimage
 
