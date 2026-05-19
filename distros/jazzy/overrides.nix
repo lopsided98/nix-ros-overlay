@@ -329,8 +329,22 @@ in {
   };
 
   gtsam = rosSuper.gtsam.overrideAttrs ({
-    postPatch ? "", ...
+    patches ? [], postPatch ? "", ...
   }: {
+    patches = [
+      # https://github.com/borglab/gtsam/pull/2232 merged upstream
+      (self.fetchpatch2 {
+        name = "allow-next-patch.patch";
+        url = "https://github.com/borglab/gtsam/commit/7b96d1e32525dbb123653058e1aab4e82270a782.patch?full_index=1";
+        hash = "sha256-WFyKG3tJ1XoZsIMPbE2VkR+hHdChjw1IHSSXlOR7OZ8=";
+        includes = [ "cmake/HandleBoost.cmake" ];
+      })
+      (self.fetchpatch2 {
+        name = "drop-boost-system.patch";
+        url = "https://github.com/borglab/gtsam/commit/a0592a6b5ab161194da1b162caaedda78ef3f2bf.patch?full_index=1";
+        hash = "sha256-S9YI8/MVthAuuBl3DRR8JCTxTw5Hi+hVz41T95APDu4=";
+      })
+    ];
     postPatch = postPatch + ''
       substituteInPlace CMakeLists.txt gtsam/3rdparty/metis/CMakeLists.txt --replace-fail \
         "cmake_minimum_required(VERSION 3.0)" \
