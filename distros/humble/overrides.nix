@@ -1143,6 +1143,16 @@ in with lib; {
     sha256 = "1255n51y1bjry97n4w60mgz6b9h14flfrxb01ihjf6pwvvfns8ag";
   };
 
+  slam-toolbox = rosSuper.slam-toolbox.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/SteveMacenski/slam_toolbox/pull/854
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt lib/karto_sdk/CMakeLists.txt \
+        --replace-fail " system" ""
+    '';
+  });
+
   turtlesim = rosSuper.turtlesim.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
