@@ -432,6 +432,15 @@ in {
     '';
   });
 
+  moveit-ros-move-group = rosSuper.moveit-ros-move-group.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/moveit/moveit2/pull/3727
+    postPatch = postPatch + ''
+      substituteInPlace ConfigExtras.cmake --replace-fail " system" ""
+    '';
+  });
+
   moveit-ros-occupancy-map-monitor = rosSuper.moveit-ros-occupancy-map-monitor.overrideAttrs ({
     postPatch ? "", ...
   }: {
