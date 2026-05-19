@@ -667,6 +667,17 @@ in {
     '';
   });
 
+  moveit-ros-control-interface = rosSuper.moveit-ros-control-interface.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/moveit/moveit2/pull/3727
+    postPatch = postPatch + ''
+      substituteInPlace ConfigExtras.cmake --replace-fail \
+        "Boost REQUIRED COMPONENTS system thread" \
+        "Boost REQUIRED COMPONENTS thread"
+    '';
+  });
+
   moveit-ros-occupancy-map-monitor = rosSuper.moveit-ros-occupancy-map-monitor.overrideAttrs ({
     postPatch ? "", ...
   }: {
