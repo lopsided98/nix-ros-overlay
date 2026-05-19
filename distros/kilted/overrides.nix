@@ -484,6 +484,18 @@ in {
     '';
   });
 
+  ompl = rosSuper.ompl.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # https://github.com/ompl/ompl/pull/1306 merged
+      (self.fetchpatch2 {
+        url = "https://github.com/ompl/ompl/commit/44eaf82b6e9829d15317884f9b78ab24618c5f6f.patch?full_index=1";
+        hash = "sha256-SSC0Uk3ddHwRdv81cY7DRJS9uekYgr2Zv13Yk0bWl2M=";
+      })
+    ];
+  });
+
   openvdb-vendor = (lib.patchAmentVendorGit rosSuper.openvdb-vendor {}).overrideAttrs ({
     postPatch ? "", ...
   }: {
