@@ -403,6 +403,15 @@ in {
     '';
   });
 
+  moveit-kinematics = rosSuper.moveit-kinematics.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/moveit/moveit2/pull/3727
+    postPatch = postPatch + ''
+      substituteInPlace ConfigExtras.cmake --replace-fail "system" ""
+    '';
+  });
+
   moveit-ros-control-interface = rosSuper.moveit-ros-control-interface.overrideAttrs ({
     postPatch ? "", ...
   }: {
