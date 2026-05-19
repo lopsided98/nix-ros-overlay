@@ -723,6 +723,16 @@ in with lib; {
     ];
   });
 
+  moveit-visual-tools = rosSuper.moveit-visual-tools.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/moveit/moveit_visual_tools/pull/154
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail " system" ""
+    '';
+  });
+
+
   mqtt-client = rosSuper.mqtt-client.overrideAttrs ({
     patches ? [], ...
   }: {
