@@ -429,6 +429,17 @@ in with lib; {
     '';
   });
 
+  ld08-driver = rosSuper.ld08-driver.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/ROBOTIS-GIT/ld08_driver/pull/36
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail "Boost::system" "Boost::boost" \
+        --replace-fail "REQUIRED system" "REQUIRED"
+    '';
+  });
+
   lsc-ros2-driver = rosSuper.lsc-ros2-driver.overrideAttrs ({
     patches ? [], ...
   }: {
