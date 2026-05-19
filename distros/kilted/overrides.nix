@@ -392,11 +392,14 @@ in {
   moveit-core = rosSuper.moveit-core.overrideAttrs ({
     postPatch ? "", ...
   }: {
-    # Remove workaround for Ubuntu-specific dependency hell issue
     postPatch = postPatch + ''
+      # Remove workaround for Ubuntu-specific dependency hell issue
       substituteInPlace CMakeLists.txt --replace-fail \
         'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
         'find_package(octomap REQUIRED)'
+
+      # https://github.com/moveit/moveit2/pull/3727
+      substituteInPlace ConfigExtras.cmake --replace-fail "  system" ""
     '';
   });
 
