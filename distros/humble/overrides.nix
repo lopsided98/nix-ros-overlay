@@ -692,6 +692,15 @@ in with lib; {
     '';
   });
 
+  moveit-ros-visualization = rosSuper.moveit-ros-visualization.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/moveit/moveit2/pull/3727
+    postPatch = postPatch + ''
+      substituteInPlace ConfigExtras.cmake --replace-fail " system" ""
+    '';
+  });
+
   moveit-ros-warehouse = rosSuper.moveit-ros-warehouse.overrideAttrs ({
     postPatch ? "", ...
   }: {
