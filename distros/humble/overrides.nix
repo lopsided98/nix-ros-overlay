@@ -634,11 +634,15 @@ in with lib; {
   });
 
   moveit-kinematics = rosSuper.moveit-kinematics.overrideAttrs ({
-    propagatedBuildInputs ? [], ...
+    postPatch ? "", propagatedBuildInputs ? [], ...
   }: {
     # Added upstream in 2.7.2
     # https://github.com/ros-planning/moveit2/pull/2109
     propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.moveit-ros-planning ];
+    # https://github.com/moveit/moveit2/pull/3727
+    postPatch = postPatch + ''
+      substituteInPlace ConfigExtras.cmake --replace-fail "system" ""
+    '';
   });
 
   moveit-ros-control-interface = rosSuper.moveit-ros-control-interface.overrideAttrs ({
