@@ -1267,6 +1267,17 @@ in with lib; {
     '';
   });
 
+  web-video-server = rosSuper.web-video-server.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/RobotWebTools/web_video_server/pull/200
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail "REQUIRED COMPONENTS system" "REQUIRED" \
+        --replace-fail "Boost::system" ""
+    '';
+  });
+
   webots-ros2-driver = rosSuper.webots-ros2-driver.overrideAttrs ({
     postPatch ? "", ...
   }: {
