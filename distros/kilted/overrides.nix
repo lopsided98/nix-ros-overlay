@@ -414,6 +414,15 @@ in {
     '';
   });
 
+  moveit-ros-planning = rosSuper.moveit-ros-planning.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/moveit/moveit2/pull/3727
+    postPatch = postPatch + ''
+      substituteInPlace ConfigExtras.cmake --replace-fail " system" ""
+    '';
+  });
+
   moveit-setup-framework = rosSuper.moveit-setup-framework.overrideAttrs ({
     patches ? [], ...
   }: {
