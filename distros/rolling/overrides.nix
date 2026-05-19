@@ -34,6 +34,17 @@ in {
     ];
   });
 
+  canopen-core = rosSuper.canopen-core.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/ros-industrial/ros2_canopen/pull/399
+    postPatch = ''
+      substituteInPlace ConfigExtras.cmake --replace-fail \
+        "find_package(Boost REQUIRED system thread)" \
+        "find_package(Boost REQUIRED thread)"
+    '';
+  });
+
   clips-vendor = lib.patchAmentVendorFile rosSuper.clips-vendor { };
 
   ecl-build = rosSuper.ecl-build.overrideAttrs ({
