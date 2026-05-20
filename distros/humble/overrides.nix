@@ -631,6 +631,25 @@ in with lib; {
       substituteInPlace deps/libmotioncapture/deps/pybind11/CMakeLists.txt --replace-fail \
         "cmake_minimum_required(VERSION 3.4)" \
         "cmake_minimum_required(VERSION 3.5)"
+
+      # https://github.com/IMRCLab/libmotioncapture/pull/33
+      substituteInPlace deps/libmotioncapture/CMakeLists.txt \
+        --replace-fail "Boost 1.5 COMPONENTS system REQUIRED" "Boost REQUIRED" \
+        --replace-fail "Boost::system" "Boost::boost"
+
+      # https://github.com/whoenig/vicon-datastream-sdk/pull/7
+      substituteInPlace deps/libmotioncapture/deps/vicon-datastream-sdk/CMakeLists.txt \
+        --replace-fail \
+          "Boost 1.5 COMPONENTS system thread chrono REQUIRED" \
+          "Boost 1.5 COMPONENTS thread chrono REQUIRED" \
+        --replace-fail "Boost::system" "Boost::boost"
+
+      # https://github.com/whoenig/NatNetSDKCrossplatform/pull/8
+      substituteInPlace deps/libmotioncapture/deps/NatNetSDKCrossplatform/CMakeLists.txt \
+        --replace-fail \
+          "Boost 1.5 REQUIRED COMPONENTS system thread" \
+          "Boost 1.5 REQUIRED COMPONENTS thread" \
+        --replace-fail "Boost::system" "Boost::boost"
     '';
   });
 
