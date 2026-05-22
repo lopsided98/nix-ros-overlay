@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, agnocast-cie-config-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, yaml-cpp }:
+{ lib, buildRosPackage, fetchurl, agnocast-cie-config-msgs, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, rclcpp, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-agnocast-cie-thread-configurator";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/agnocast_cie_thread_configurator/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "5830ff91c5022f64fa420847abfad9073c75c4f75438ebbeb813712ef3edc5d3";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/agnocast_cie_thread_configurator/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "4dc220bfa5cb201ed0e73e938f81e1100e89068cdf280e26a4f451aea0dacebe";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ agnocast-cie-config-msgs rclcpp yaml-cpp ];
   nativeBuildInputs = [ ament-cmake ];
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, agnocast-cie-config-msgs, agnocast-cie-thread-configurator, agnocast-components, agnocast-ioctl-wrapper, agnocast-sample-application, agnocast-sample-interfaces, agnocastlib, ament-cmake, ros2agnocast }:
 buildRosPackage {
   pname = "ros-jazzy-agnocast";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/agnocast/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "cb76fc22409473a49dec9538eeec409d4243ca473b3eb0de07b5fc3179e744b4";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/agnocast/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "ad1ebcccd485e690bc06ecc8f21fa8b8aaf3c4ccdfd769f73fe031f039f8a06f";
   };
 
   buildType = "ament_cmake";

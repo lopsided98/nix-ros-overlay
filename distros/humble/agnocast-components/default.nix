@@ -2,20 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, agnocast-cie-config-msgs, agnocast-cie-thread-configurator, agnocastlib, ament-cmake, class-loader, glog, launch-testing-ament-cmake, rclcpp, rclcpp-components }:
+{ lib, buildRosPackage, fetchurl, agnocast-cie-config-msgs, agnocast-cie-thread-configurator, agnocastlib, ament-cmake, class-loader, glog, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-humble-agnocast-components";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/agnocast_components/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "bae26928e887299479410d30a28c407864daf51fd9c94a8ae573ae047eaadbdb";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/agnocast_components/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "f786efa6eba62ccbf6794b7844305b70d3a60969c2d2380a9bc4dff6f182b4bc";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ launch-testing-ament-cmake ];
   propagatedBuildInputs = [ agnocast-cie-config-msgs agnocast-cie-thread-configurator agnocastlib class-loader glog rclcpp rclcpp-components ];
   nativeBuildInputs = [ ament-cmake ];
 

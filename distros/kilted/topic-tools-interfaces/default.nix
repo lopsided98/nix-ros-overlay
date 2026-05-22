@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-topic-tools-interfaces";
-  version = "1.4.2-r2";
+  version = "1.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/kilted/topic_tools_interfaces/1.4.2-2.tar.gz";
-    name = "1.4.2-2.tar.gz";
-    sha256 = "43d14f2513b3f6a0b2507bdddbcc73cbefc3ab320e67557c905dd0fcf26a9808";
+    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/kilted/topic_tools_interfaces/1.4.5-1.tar.gz";
+    name = "1.4.5-1.tar.gz";
+    sha256 = "e777f375e4a2bb4c7f186a000fcbe1c407cb2d5d4eb2df4968ca6208402970c1";
   };
 
   buildType = "ament_cmake";

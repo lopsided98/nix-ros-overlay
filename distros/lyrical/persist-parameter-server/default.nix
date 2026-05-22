@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, boost, launch, launch-ros, rclcpp, rclcpp-components, rcutils, rmw, rmw-implementation-cmake, std-msgs, std-srvs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-lyrical-persist-parameter-server";
-  version = "1.0.5-r3";
+  version = "4.0.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/persist_parameter_server-release/archive/release/lyrical/persist_parameter_server/1.0.5-3.tar.gz";
-    name = "1.0.5-3.tar.gz";
-    sha256 = "ece31fcd2e6e03888abf7687fecca8646077a410deb2a50fb8593bd8a4a63908";
+    url = "https://github.com/ros2-gbp/persist_parameter_server-release/archive/release/lyrical/persist_parameter_server/4.0.0-2.tar.gz";
+    name = "4.0.0-2.tar.gz";
+    sha256 = "d088bec905bfec5a98e8e4d20bffee49f7161139690e3c8013bfa3e6097750af";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ncurses, rcl-interfaces, rclcpp, xclip, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-log-view";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/log_view-release/archive/release/jazzy/log_view/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "3aeb0e3650f07e349b27a0b9c069fcce3837372457862f3bcaeb83c3bb545742";
+    url = "https://github.com/ros2-gbp/log_view-release/archive/release/jazzy/log_view/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "104f5379404b1572ea8cf97cc320dfabe2000804ecbc7178bb6666d7bccad0a4";
   };
 
   buildType = "ament_cmake";

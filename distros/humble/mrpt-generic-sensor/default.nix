@@ -2,20 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, mrpt-msgs, mrpt-sensorlib, rclcpp, rclcpp-components, ros-environment, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, mrpt-msgs, mrpt-sensorlib, rclcpp, rclcpp-components, ros-environment, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-mrpt-generic-sensor";
-  version = "0.2.4-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/humble/mrpt_generic_sensor/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "0cbc98b4f998d06ac5a0f60b209f313a62f48e2b48a77fe1ef2849b59e99e82e";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/humble/mrpt_generic_sensor/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "d34490f0233b87574202798fca2c9913381cd435f76cec1210971611626bc4b7";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment ];
-  propagatedBuildInputs = [ ament-lint-auto ament-lint-common mrpt-msgs mrpt-sensorlib rclcpp rclcpp-components sensor-msgs tf2 tf2-geometry-msgs tf2-ros ];
+  checkInputs = [ ament-cmake-xmllint ament-lint-auto ];
+  propagatedBuildInputs = [ mrpt-msgs mrpt-sensorlib rclcpp rclcpp-components sensor-msgs tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

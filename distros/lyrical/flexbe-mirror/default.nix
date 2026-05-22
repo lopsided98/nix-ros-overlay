@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, flexbe-core, flexbe-msgs, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-lyrical-flexbe-mirror";
-  version = "4.0.3-r3";
+  version = "4.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/lyrical/flexbe_mirror/4.0.3-3.tar.gz";
-    name = "4.0.3-3.tar.gz";
-    sha256 = "41e952a0182e545bac44db693e7dec555b8ffafbd06ff1c1b06885fcfa8b2f3a";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/lyrical/flexbe_mirror/4.1.4-1.tar.gz";
+    name = "4.1.4-1.tar.gz";
+    sha256 = "ed4acb039c5823dcbb7cc1946112e2ec8e335fa11b8ffb5c71fcffe5d829cb09";
   };
 
   buildType = "ament_python";

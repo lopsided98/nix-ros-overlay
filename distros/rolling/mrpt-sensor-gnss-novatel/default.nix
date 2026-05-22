@@ -2,20 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, mrpt-libhwdrivers, mrpt-libros-bridge, mrpt-msgs, mrpt-sensorlib, nav-msgs, rclcpp, rclcpp-components, ros-environment, sensor-msgs, std-msgs, stereo-msgs, tf2, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, mrpt-libhwdrivers, mrpt-libros-bridge, mrpt-msgs, mrpt-sensorlib, novatel-oem6-msgs, rclcpp-components, ros-environment, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-sensor-gnss-novatel";
-  version = "0.2.4-r2";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/rolling/mrpt_sensor_gnss_novatel/0.2.4-2.tar.gz";
-    name = "0.2.4-2.tar.gz";
-    sha256 = "68188111fb3b885b09530417c542a2b4c294a81f402cbc55e3643693ad16e94c";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/rolling/mrpt_sensor_gnss_novatel/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "323d23afd5a34597a2cc18ce0b6e75d9214ef4354cc0ec1372437fcd691ac30b";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment ];
-  propagatedBuildInputs = [ ament-lint-auto ament-lint-common cv-bridge geometry-msgs mrpt-libhwdrivers mrpt-libros-bridge mrpt-msgs mrpt-sensorlib nav-msgs rclcpp rclcpp-components sensor-msgs std-msgs stereo-msgs tf2 tf2-ros ];
+  checkInputs = [ ament-cmake-xmllint ament-lint-auto ];
+  propagatedBuildInputs = [ mrpt-libhwdrivers mrpt-libros-bridge mrpt-msgs mrpt-sensorlib novatel-oem6-msgs rclcpp-components tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ncurses, rcl-interfaces, rclcpp, xclip, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-humble-log-view";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/hatchbed/log_view-release/archive/release/humble/log_view/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "89f2e5dc6bce37b9d54e4f3cf0c89b85a3a05f29805d932a72a0c84a13962c7e";
+    url = "https://github.com/hatchbed/log_view-release/archive/release/humble/log_view/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "1ac96bf8fa982f89aaa80c4c5009dc265e283dea52c5459ed05063d7aefd8c40";
   };
 
   buildType = "ament_cmake";

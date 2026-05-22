@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, builtin-interfaces, python-qt-binding, python3Packages, rclpy, rosbag2-py, rosidl-runtime-py, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-lyrical-rqt-bag";
-  version = "2.2.2-r3";
+  version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_bag-release/archive/release/lyrical/rqt_bag/2.2.2-3.tar.gz";
-    name = "2.2.2-3.tar.gz";
-    sha256 = "251fd83aa9f7dd118e94d349ab34b23044ee2952d64cefb2c1cff2c571f938fb";
+    url = "https://github.com/ros2-gbp/rqt_bag-release/archive/release/lyrical/rqt_bag/2.2.3-1.tar.gz";
+    name = "2.2.3-1.tar.gz";
+    sha256 = "468b365e3deba5155d120e8bb1616f819756e5e9b735767cc30cc6e580f8e1bf";
   };
 
   buildType = "ament_python";

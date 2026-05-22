@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-cmake-python, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components, rclpy, ros2cli, rosidl-default-generators, rosidl-runtime-py, std-msgs, topic-tools-interfaces }:
 buildRosPackage {
   pname = "ros-humble-topic-tools";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/humble/topic_tools/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "6b262f27054b6d627f765627eccef88fcfbf25c1dbbd9a56eb26b61f2530e151";
+    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/humble/topic_tools/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "a16332a307c3dbc81212a0ffc44c3c07a546422d21a6b32783a32ed67528152d";
   };
 
   buildType = "ament_cmake";

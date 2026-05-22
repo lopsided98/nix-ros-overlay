@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-flexbe-msgs";
-  version = "4.0.3-r3";
+  version = "4.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/lyrical/flexbe_msgs/4.0.3-3.tar.gz";
-    name = "4.0.3-3.tar.gz";
-    sha256 = "9756edbed233fdce9208aee676ba16ae8ade5e6236c8bfee7609fad4dac70631";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/lyrical/flexbe_msgs/4.1.4-1.tar.gz";
+    name = "4.1.4-1.tar.gz";
+    sha256 = "9b2069ef7dcea49253fa33ffa3fab388c47d4ad4296dbddfc8d6101904954f96";
   };
 
   buildType = "ament_cmake";

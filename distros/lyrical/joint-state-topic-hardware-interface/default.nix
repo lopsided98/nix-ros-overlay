@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-ros, angles, control-msgs, controller-manager, forward-command-controller, hardware-interface, joint-state-broadcaster, joint-trajectory-controller, launch, launch-ros, launch-testing, launch-testing-ament-cmake, rclcpp, rclpy, robot-state-publisher, ros2-control-cmake, ros2-control-test-assets, sensor-msgs, topic-tools, xacro }:
 buildRosPackage {
   pname = "ros-lyrical-joint-state-topic-hardware-interface";
-  version = "1.0.0-r3";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/topic_based_hardware-release/archive/release/lyrical/joint_state_topic_hardware_interface/1.0.0-3.tar.gz";
-    name = "1.0.0-3.tar.gz";
-    sha256 = "a33a4d1fa1ef0f2152e395ab1eaec8cd2b651c2b1d0c5a2a1c1bb66052bd07e6";
+    url = "https://github.com/ros2-gbp/topic_based_hardware-release/archive/release/lyrical/joint_state_topic_hardware_interface/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "1c37d809f8191bb41b945e95af6f616dde1f21345842c6db574a2074653fa2cb";
   };
 
   buildType = "ament_cmake";

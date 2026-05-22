@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, gtest-vendor }:
 buildRosPackage {
   pname = "ros-lyrical-fuse-doc";
-  version = "1.3.1-r3";
+  version = "1.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/lyrical/fuse_doc/1.3.1-3.tar.gz";
-    name = "1.3.1-3.tar.gz";
-    sha256 = "cba469d4a967e1353a7133101f4d2318c846151e8b6260dc53bbca1cb0a4ebf5";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/lyrical/fuse_doc/1.3.3-1.tar.gz";
+    name = "1.3.3-1.tar.gz";
+    sha256 = "700e94889b12cb0f0412ca0737d410961233f8df1ad1871070637aea989f500c";
   };
 
   buildType = "ament_cmake";

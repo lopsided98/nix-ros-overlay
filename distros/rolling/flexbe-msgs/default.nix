@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-flexbe-msgs";
-  version = "4.0.3-r2";
+  version = "4.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/rolling/flexbe_msgs/4.0.3-2.tar.gz";
-    name = "4.0.3-2.tar.gz";
-    sha256 = "8a69a7eb545e60405200411bc2731b706e4c08684990c64226ac35a2057cc942";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/rolling/flexbe_msgs/4.1.4-1.tar.gz";
+    name = "4.1.4-1.tar.gz";
+    sha256 = "ac8852e84ab01352352147fc9e030599caa6ec79a7bdac2b70ac4b59b236aba8";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-agnocast-ioctl-wrapper";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/agnocast_ioctl_wrapper/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "84506d4bf7b4359f1b210c0b0e3899ba2d4f3799df52de6ee6b6ec232bd5c338";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/jazzy/agnocast_ioctl_wrapper/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "1913258526d54f068eb0e68004047f64b11833761eb9f9e5c9c01e988588b81d";
   };
 
   buildType = "ament_cmake";

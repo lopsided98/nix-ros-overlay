@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, flexbe-core, flexbe-msgs, flexbe-testing, geometry-msgs, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-lyrical-flexbe-states";
-  version = "4.0.3-r3";
+  version = "4.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/lyrical/flexbe_states/4.0.3-3.tar.gz";
-    name = "4.0.3-3.tar.gz";
-    sha256 = "f2340fa27b5c7fc6c4873ca7167df712221d00ffa13722369b074f4f999ed1bb";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/lyrical/flexbe_states/4.1.4-1.tar.gz";
+    name = "4.1.4-1.tar.gz";
+    sha256 = "26e67687ada0109174fee76acb3e9049a382efe6e9a1c3085e97cf5613a3c8d6";
   };
 
   buildType = "ament_python";

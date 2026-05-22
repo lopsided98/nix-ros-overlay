@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, backward-ros, camera-info-manager, cv-bridge, depth-image-proc, depthai, depthai-bridge, depthai-descriptions, depthai-ros-msgs, foxglove-msgs, image-transport, nav-msgs, opencv, rclcpp, robot-state-publisher, ros-environment, rviz-imu-plugin, sensor-msgs, std-msgs, stereo-msgs, vision-msgs, xacro }:
 buildRosPackage {
   pname = "ros-kilted-depthai-examples";
-  version = "3.2.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/kilted/depthai_examples/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "7a38d8fefbc39cb7ea916dc8801d502855c1d2e902485389b197cec8ea235be2";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/kilted/depthai_examples/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "4c5e13b0797a29570702d202b564d30b2a4ef78a01286493ec93a68c59074af8";
   };
 
   buildType = "ament_cmake";
