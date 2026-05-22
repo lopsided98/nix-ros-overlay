@@ -15,7 +15,6 @@
         inherit system;
         overlays = [ self.overlays.default ];
       };
-      genAttrs' = xs: f: listToAttrs (map f xs); # TODO remove after we're at newer nixpkgs
       exampleForDistro = exampleName: rosDistro:
         nameValuePair "example-${exampleName}-${rosDistro}" (
           import ./examples/${exampleName}.nix { inherit pkgs rosDistro; }
