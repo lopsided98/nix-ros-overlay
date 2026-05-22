@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, backward-ros, camera-info-manager, cv-bridge, depth-image-proc, depthai-bridge-v3, depthai-descriptions-v3, depthai-ros-msgs-v3, depthai-v3, foxglove-msgs, image-transport, nav-msgs, opencv, rclcpp, robot-state-publisher, ros-environment, rviz-imu-plugin, sensor-msgs, std-msgs, stereo-msgs, vision-msgs, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-depthai-examples-v3";
-  version = "3.2.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-v3-release/archive/release/jazzy/depthai_examples_v3/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "86c5295c9776af09103367d3c81912580224333e11448e2af9f5deaded07b19f";
+    url = "https://github.com/luxonis/depthai-ros-v3-release/archive/release/jazzy/depthai_examples_v3/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "b96ed05cb7348a77895ea6c928d76042210174779fedd4d816cc0304d0fcb66f";
   };
 
   buildType = "ament_cmake";

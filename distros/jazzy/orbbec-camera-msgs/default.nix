@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.7.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/orbbec/orbbec_camera_v2-release/archive/release/jazzy/orbbec_camera_msgs/2.7.6-1.tar.gz";
+    url = "https://github.com/ros2-gbp/orbbec_camera_v2-release/archive/release/jazzy/orbbec_camera_msgs/2.7.6-1.tar.gz";
     name = "2.7.6-1.tar.gz";
     sha256 = "8bc411a8b5ad355d702b9f1859677bec41aba09d7d27a5942cf32d1806a60d17";
   };

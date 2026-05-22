@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ceres-solver, eigen, fuse-core, fuse-graphs, fuse-variables, gbenchmark, geometry-msgs, gtest-vendor, pluginlib, rclcpp, suitesparse }:
 buildRosPackage {
   pname = "ros-lyrical-fuse-constraints";
-  version = "1.3.1-r3";
+  version = "1.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/lyrical/fuse_constraints/1.3.1-3.tar.gz";
-    name = "1.3.1-3.tar.gz";
-    sha256 = "eb8014956df59134206166559c67d2425380e12fd232488f140e6696619e95db";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/lyrical/fuse_constraints/1.3.3-1.tar.gz";
+    name = "1.3.3-1.tar.gz";
+    sha256 = "31b87f8dc069602d3cb8e3342320584673442f7bc2a5f6937f738e2d086acc68";
   };
 
   buildType = "ament_cmake";

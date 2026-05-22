@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, launch-testing-ament-cmake, libtorch-vendor, rclcpp, rclcpp-components, rcutils, rmw, rosidl-buffer, std-msgs, tensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-torch-conversions";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_buffer_backends-release/archive/release/rolling/torch_conversions/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "41891b696c55b84b845419c58d1f6a8a922ffcec8bc9f59c0521651faf0911f7";
+    url = "https://github.com/ros2-gbp/rosidl_buffer_backends-release/archive/release/rolling/torch_conversions/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "3d6a24c7771aa14d9c55995f97a5f85d5c1ae32ddfbf6aebe91c20670f7a16b4";
   };
 
   buildType = "ament_cmake";

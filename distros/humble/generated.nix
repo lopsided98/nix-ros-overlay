@@ -838,6 +838,8 @@ self: super: {
 
  create-robot = self.callPackage ./create-robot {};
 
+ crocoddyl = self.callPackage ./crocoddyl {};
+
  crx-kinematics = self.callPackage ./crx-kinematics {};
 
  cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
@@ -1708,6 +1710,8 @@ self: super: {
 
  kinova-gen3-lite-moveit-config = self.callPackage ./kinova-gen3-lite-moveit-config {};
 
+ kitti-metrics-eval = self.callPackage ./kitti-metrics-eval {};
+
  kobuki-core = self.callPackage ./kobuki-core {};
 
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
@@ -2042,6 +2046,8 @@ self: super: {
 
  mola = self.callPackage ./mola {};
 
+ mola-academic-datasets = self.callPackage ./mola-academic-datasets {};
+
  mola-bridge-ros2 = self.callPackage ./mola-bridge-ros2 {};
 
  mola-common = self.callPackage ./mola-common {};
@@ -2056,7 +2062,19 @@ self: super: {
 
  mola-imu-preintegration = self.callPackage ./mola-imu-preintegration {};
 
+ mola-input-euroc-dataset = self.callPackage ./mola-input-euroc-dataset {};
+
+ mola-input-kitti360-dataset = self.callPackage ./mola-input-kitti360-dataset {};
+
+ mola-input-kitti-dataset = self.callPackage ./mola-input-kitti-dataset {};
+
  mola-input-lidar-bin-dataset = self.callPackage ./mola-input-lidar-bin-dataset {};
+
+ mola-input-mulran-dataset = self.callPackage ./mola-input-mulran-dataset {};
+
+ mola-input-ouster = self.callPackage ./mola-input-ouster {};
+
+ mola-input-paris-luco-dataset = self.callPackage ./mola-input-paris-luco-dataset {};
 
  mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
 
@@ -2463,6 +2481,8 @@ self: super: {
  novatel-gps-driver = self.callPackage ./novatel-gps-driver {};
 
  novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
+
+ novatel-oem6-msgs = self.callPackage ./novatel-oem6-msgs {};
 
  novatel-oem7-driver = self.callPackage ./novatel-oem7-driver {};
 

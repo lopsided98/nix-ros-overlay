@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros-core, ament-index-python, fmt, nlohmann_json, ros-environment, rosidl-cli, rosidl-cmake, rosidl-generator-c, rosidl-parser, rosidl-pycommon, rosidl-runtime-c, rosidl-typesupport-interface, rosidlcpp-generator-core, rosidlcpp-parser }:
 buildRosPackage {
   pname = "ros-rolling-rosidlcpp-typesupport-introspection-c";
-  version = "0.5.0-r2";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidlcpp-release/archive/release/rolling/rosidlcpp_typesupport_introspection_c/0.5.0-2.tar.gz";
-    name = "0.5.0-2.tar.gz";
-    sha256 = "90a0e621fa041e92cc99a7f61d393cc76ff772cf5b0e8f7df059eb2cb9ee8573";
+    url = "https://github.com/ros2-gbp/rosidlcpp-release/archive/release/rolling/rosidlcpp_typesupport_introspection_c/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "5f0d6979ff7d335dfa64630ddae367c40df3f316c88812f230d517f8f7f04fcc";
   };
 
   buildType = "ament_cmake";

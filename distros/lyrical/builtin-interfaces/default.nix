@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-core-generators, rosidl-core-runtime }:
 buildRosPackage {
   pname = "ros-lyrical-builtin-interfaces";
-  version = "2.4.4-r3";
+  version = "2.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/lyrical/builtin_interfaces/2.4.4-3.tar.gz";
-    name = "2.4.4-3.tar.gz";
-    sha256 = "194c04afaf4142abdad330cad56c7d4e3fc522c6a059b8fa0686a1e8a9f89bbc";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/lyrical/builtin_interfaces/2.4.5-1.tar.gz";
+    name = "2.4.5-1.tar.gz";
+    sha256 = "61ac3dff250aec653ef35a54807236fe988df94d18cf656042e5c3475c689bb5";
   };
 
   buildType = "ament_cmake";

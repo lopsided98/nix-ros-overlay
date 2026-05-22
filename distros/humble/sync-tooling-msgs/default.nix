@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, protobuf }:
 buildRosPackage {
   pname = "ros-humble-sync-tooling-msgs";
-  version = "0.2.7-r1";
+  version = "0.2.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sync_tooling_msgs-release/archive/release/humble/sync_tooling_msgs/0.2.7-1.tar.gz";
-    name = "0.2.7-1.tar.gz";
-    sha256 = "11e7354cd8c8b64fb21b5db13bc3c70c11e8891b61fb5f4c2330ba182428ef42";
+    url = "https://github.com/ros2-gbp/sync_tooling_msgs-release/archive/release/humble/sync_tooling_msgs/0.2.9-1.tar.gz";
+    name = "0.2.9-1.tar.gz";
+    sha256 = "dbd265944c01f628d30ab9d0fc4678b47aea8372ae7b5f18bc63136a20376977";
   };
 
   buildType = "ament_cmake";

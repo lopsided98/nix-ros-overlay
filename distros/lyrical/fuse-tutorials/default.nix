@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, ament-lint-auto, ament-lint-common, fuse-constraints, fuse-core, fuse-models, fuse-optimizers, fuse-publishers, fuse-variables, gtest-vendor, nav-msgs, rclcpp, rviz2, sensor-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-fuse-tutorials";
-  version = "1.3.1-r3";
+  version = "1.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/lyrical/fuse_tutorials/1.3.1-3.tar.gz";
-    name = "1.3.1-3.tar.gz";
-    sha256 = "00f506137ba6e10fbf2a456f45663db30043defc5c8b78edb244a1d31c5534b8";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/lyrical/fuse_tutorials/1.3.3-1.tar.gz";
+    name = "1.3.3-1.tar.gz";
+    sha256 = "beef551a26b6c576fafcb6132c149cd7bdba1523d27cacfe8d1e2dbdb186de89";
   };
 
   buildType = "ament_cmake";

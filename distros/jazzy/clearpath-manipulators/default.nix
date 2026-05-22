@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, clearpath-manipulators-description, gripper-controllers, moveit-configs-utils, moveit-kinematics, moveit-planners, moveit-planners-chomp, moveit-ros-move-group, moveit-ros-warehouse, moveit-setup-srdf-plugins, moveit-simple-controller-manager, position-controllers, tf2-ros, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-manipulators";
-  version = "2.9.6-r1";
+  version = "2.9.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_manipulators/2.9.6-1.tar.gz";
-    name = "2.9.6-1.tar.gz";
-    sha256 = "9147a84dc2f0f040d590755efd1d8c6792caa449e9078a53034a4ba2f148c4e1";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_manipulators/2.9.7-1.tar.gz";
+    name = "2.9.7-1.tar.gz";
+    sha256 = "7332dbddc8ce631e09038a8a8fff703029d08ef6d11d3ce887ce9b001a8ddca9";
   };
 
   buildType = "ament_cmake";

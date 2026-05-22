@@ -438,6 +438,12 @@ self: super: {
 
  crx-kinematics = self.callPackage ./crx-kinematics {};
 
+ cuda-buffer = self.callPackage ./cuda-buffer {};
+
+ cuda-buffer-backend = self.callPackage ./cuda-buffer-backend {};
+
+ cuda-buffer-backend-msgs = self.callPackage ./cuda-buffer-backend-msgs {};
+
  cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
 
  cv-bridge = self.callPackage ./cv-bridge {};
@@ -1153,6 +1159,8 @@ self: super: {
  librealsense2 = self.callPackage ./librealsense2 {};
 
  libstatistics-collector = self.callPackage ./libstatistics-collector {};
+
+ libtorch-vendor = self.callPackage ./libtorch-vendor {};
 
  libyaml-vendor = self.callPackage ./libyaml-vendor {};
 
@@ -2086,6 +2094,8 @@ self: super: {
 
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
 
+ robot-arm-demo = self.callPackage ./robot-arm-demo {};
+
  robot-calibration = self.callPackage ./robot-calibration {};
 
  robot-calibration-msgs = self.callPackage ./robot-calibration-msgs {};
@@ -2652,6 +2662,8 @@ self: super: {
 
  teleop-twist-keyboard = self.callPackage ./teleop-twist-keyboard {};
 
+ tensor-msgs = self.callPackage ./tensor-msgs {};
+
  tensorrt-cmake-module = self.callPackage ./tensorrt-cmake-module {};
 
  test-apex-test-tools = self.callPackage ./test-apex-test-tools {};
@@ -2702,8 +2714,6 @@ self: super: {
 
  tinyxml-vendor = self.callPackage ./tinyxml-vendor {};
 
- tl-expected = self.callPackage ./tl-expected {};
-
  tlsf = self.callPackage ./tlsf {};
 
  tlsf-cpp = self.callPackage ./tlsf-cpp {};
@@ -2717,6 +2727,8 @@ self: super: {
  topic-tools-interfaces = self.callPackage ./topic-tools-interfaces {};
 
  toppra = self.callPackage ./toppra {};
+
+ torch-conversions = self.callPackage ./torch-conversions {};
 
  trac-ik = self.callPackage ./trac-ik {};
 

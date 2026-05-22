@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-kilted-depthai-descriptions";
-  version = "3.2.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/kilted/depthai_descriptions/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "803c164f24e6990c5bfafa1f4ab2c06037e7cf1bbe1e023d0d0c805095af2bea";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/kilted/depthai_descriptions/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "f343204edc52a9cc3180289b8f416c3f735c8ac8da44be6275253eddf2ce0651";
   };
 
   buildType = "ament_cmake";

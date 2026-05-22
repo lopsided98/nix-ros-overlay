@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-lyrical-tcb-span";
-  version = "2.0.2-r3";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/lyrical/tcb_span/2.0.2-3.tar.gz";
-    name = "2.0.2-3.tar.gz";
-    sha256 = "b01425bb3efea6b1b5136871418e0f3168999eb7d935c5b38dcd6593976d5c0d";
+    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/lyrical/tcb_span/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "0468cb21fcb0192757f96818ec7cb57b72373dd601b79fdda74f58a2d85c7f88";
   };
 
   buildType = "ament_cmake";

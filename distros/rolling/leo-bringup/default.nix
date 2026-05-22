@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-black, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-index-python, ament-lint-auto, geometry-msgs, image-proc, launch, launch-ros, leo-description, leo-filters, leo-fw, leo-msgs, python3Packages, robot-state-publisher, rosapi, rosbridge-server, sensor-msgs, web-video-server, xacro }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-black, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-index-python, ament-lint-auto, geometry-msgs, image-proc, launch, launch-ros, leo-description, leo-filters, leo-fw, leo-msgs, python3Packages, rclpy, robot-state-publisher, rosapi, rosbridge-server, sensor-msgs, tf-transformations, web-video-server, xacro }:
 buildRosPackage {
   pname = "ros-rolling-leo-bringup";
-  version = "2.5.0-r2";
+  version = "2.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/rolling/leo_bringup/2.5.0-2.tar.gz";
-    name = "2.5.0-2.tar.gz";
-    sha256 = "51fd69cacac1b998ad0598e9d448fafbbb4a6a37a0eccbfde34e74cbacb4967e";
+    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/rolling/leo_bringup/2.6.1-1.tar.gz";
+    name = "2.6.1-1.tar.gz";
+    sha256 = "617bcee5b9b8bf5ba07b27aeeab38bdd9cf174f0aa1cff667676edacafcdfdf2";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-black ament-cmake-lint-cmake ament-cmake-xmllint ament-lint-auto ];
-  propagatedBuildInputs = [ ament-index-python geometry-msgs image-proc launch launch-ros leo-description leo-filters leo-fw leo-msgs python3Packages.smbus2 robot-state-publisher rosapi rosbridge-server sensor-msgs web-video-server xacro ];
+  propagatedBuildInputs = [ ament-index-python geometry-msgs image-proc launch launch-ros leo-description leo-filters leo-fw leo-msgs python3Packages.smbus2 rclpy robot-state-publisher rosapi rosbridge-server sensor-msgs tf-transformations web-video-server xacro ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
