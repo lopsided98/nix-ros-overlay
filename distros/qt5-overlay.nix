@@ -22,7 +22,7 @@ rosSelf: rosSuper: with rosSelf.lib; {
   python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
     propagatedBuildInputs ? [], ...
   }: {
-    propagatedBuildInputs = propagatedBuildInputs ++ (with rosSelf.pythonPackages; [
+    propagatedBuildInputs = propagatedBuildInputs ++ (with rosSelf.python3Packages; [
       sip4
     ]);
    dontWrapQtApps = true;

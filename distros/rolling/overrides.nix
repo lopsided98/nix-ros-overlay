@@ -534,7 +534,7 @@ in {
     dontUnpack = true;
     dontBuild = true;
     dontInstall = true;
-    propagatedBuildInputs = with rosSelf.pythonPackages; [
+    propagatedBuildInputs = with rosSelf.python3Packages; [
       pyqt-builder
       pyqt6
       pyqt6-sip

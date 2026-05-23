@@ -16,7 +16,7 @@
 # mkShell, it is often desirable for packages in the local ROS workspace to
 # take precedence over Nix-built packages. This can be achieved by setting
 # underlay to true.
-{ lib, stdenv, buildPackages, writeText, buildEnv, makeWrapper, python, ros-environment }:
+{ lib, stdenv, buildPackages, writeText, buildEnv, makeWrapper, python3, ros-environment }:
 { paths ? [], wrapPrograms ? true, underlay ? false, postBuild ? "", passthru ? { }, ... }@args:
 
 with lib;
@@ -85,14 +85,14 @@ let
           makeWrapper "$file" "$link" \
             --${xfix} PATH : "$out/bin" \
             --${xfix} LD_LIBRARY_PATH : "$out/lib" \
-            --${xfix} PYTHONPATH : "$out/${python.sitePackages}" \
+            --${xfix} PYTHONPATH : "$out/${python3.sitePackages}" \
             --${xfix} CMAKE_PREFIX_PATH : "$out" \
             --${xfix} AMENT_PREFIX_PATH : "$out" \
             --${xfix} ROS_PACKAGE_PATH : "$out/share" \
             --${xfix} GZ_CONFIG_PATH : "$out/share/gz" \
             --set ROS_DISTRO '${ros-environment.rosDistro}' \
             --set ROS_VERSION '${toString ros-environment.rosVersion}' \
-            --set ROS_PYTHON_VERSION '${lib.versions.major python.version}' \
+            --set ROS_PYTHON_VERSION '${lib.versions.major python3.version}' \
             ''${rosWrapperArgs[@]}
         done
       fi
