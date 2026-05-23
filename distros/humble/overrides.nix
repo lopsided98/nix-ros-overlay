@@ -939,13 +939,13 @@ in with lib; {
   rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
     postPatch ? "", ...
   }: let
-    python = rosSelf.python;
+    python3 = rosSelf.python3;
   in {
     # Fix finding NumPy headers
     postPatch = postPatch + ''
       substituteInPlace cmake/rosidl_generator_py_generate_interfaces.cmake \
        --replace-fail '"import numpy"' "" \
-       --replace-fail 'numpy.get_include()' "'${python.pkgs.numpy}/${python.sitePackages}/numpy/_core/include'"
+       --replace-fail 'numpy.get_include()' "'${python3.pkgs.numpy}/${python3.sitePackages}/numpy/_core/include'"
     '';
   });
 
