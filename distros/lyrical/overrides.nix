@@ -473,14 +473,6 @@ in {
     ];
   });
 
-  # rqt is broken in rolling due to unfinished qt6 migration.
-  # TODO: Remove this once rqt works in rolling.
-  ros-gz-sim-demos = rosSuper.ros-gz-sim-demos.override {
-    rqt-image-view = null;
-    rqt-plot = null;
-    rqt-topic  = null;
-  };
-
   rqt-robot-monitor = rosSuper.rqt-robot-monitor.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
