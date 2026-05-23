@@ -260,7 +260,7 @@ in with lib; {
   };
 
   foxglove-bridge = rosSuper.foxglove-bridge.overrideAttrs({
-    postPatch ? "", cmakeFlags ? [], ...
+    postPatch ? "", ...
   }: {
     postPatch = let
       # SDK version from
@@ -288,11 +288,6 @@ in with lib; {
           'https://github.com/foxglove/foxglove-sdk/releases/download/sdk%2Fv''${FOXGLOVE_SDK_VERSION}/foxglove-v''${FOXGLOVE_SDK_VERSION}-cpp-''${FOXGLOVE_SDK_PLATFORM}.zip' \
           ${sdk}
       '';
-    cmakeFlags = cmakeFlags ++  [
-      # Prevent: stl_algobase.h:452:30: error: 'void* __builtin_memmove(void*, const void*, long unsigned int)' forming offset 8 is out of the bounds [0, 8] [-Werror=array-bounds=]
-      # TODO: Remove this after we move to newer libstdc++
-      "-DCMAKE_CXX_FLAGS=-Wno-error=array-bounds"
-    ];
   });
 
   fusioncore-ros = rosSuper.fusioncore-ros.overrideAttrs ({
