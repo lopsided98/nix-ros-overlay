@@ -14,10 +14,6 @@ let
 in
 with rosSelf.lib; {
 
-  # TODO: remove once https://github.com/ros/rosdistro/pull/43895 is merged
-  python = rosSelf.python3;
-  pythonPackages = rosSelf.python.pkgs;
-
   ardrone-sdk = rosSuper.ardrone-sdk.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
@@ -302,12 +298,12 @@ with rosSelf.lib; {
   });
 
   python-cmake-module = rosSuper.python-cmake-module.overrideAttrs ({ ... }: let
-    python = rosSelf.python;
+    python3 = rosSelf.python3;
     libExt = self.stdenv.hostPlatform.extensions.sharedLibrary;
   in {
-    pythonExecutable = python.pythonOnBuildForHost.interpreter;
-    pythonLibrary = "${python}/lib/lib${python.libPrefix}${libExt}";
-    pythonIncludeDir = "${python}/include/${python.libPrefix}";
+    pythonExecutable = python3.pythonOnBuildForHost.interpreter;
+    pythonLibrary = "${python3}/lib/lib${python3.libPrefix}${libExt}";
+    pythonIncludeDir = "${python3}/include/${python3.libPrefix}";
     setupHook = ./python-cmake-module-setup-hook.sh;
     outputs = [ "out" "dev" ];
   });
