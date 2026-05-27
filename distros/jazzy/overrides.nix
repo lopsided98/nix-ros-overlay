@@ -1086,6 +1086,16 @@ in {
     '';
   });
 
+  slam-toolbox = rosSuper.slam-toolbox.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/SteveMacenski/slam_toolbox/pull/854
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt lib/karto_sdk/CMakeLists.txt \
+        --replace-fail " system" ""
+    '';
+  });
+
   turtlesim = rosSuper.turtlesim.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
