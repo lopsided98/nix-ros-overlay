@@ -740,6 +740,15 @@ in {
     '';
   });
 
+  warehouse-ros-sqlite = rosSuper.warehouse-ros-sqlite.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/moveit/warehouse_ros_sqlite/pull/61
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail " system" ""
+    '';
+  });
+
   webots-ros2-driver = rosSuper.webots-ros2-driver.overrideAttrs ({
     postPatch ? "", ...
   }: {
