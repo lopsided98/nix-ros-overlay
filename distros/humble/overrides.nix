@@ -187,6 +187,15 @@ in with lib; {
     '';
   });
 
+  bosch-locator-bridge = rosSuper.bosch-locator-bridge.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/boschglobal/rokit_ros_bridge/pull/80
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail "REQUIRED COMPONENTS system" "REQUIRED" 
+    '';
+  });
+
   canopen-core = rosSuper.canopen-core.overrideAttrs ({
     postPatch ? "", ...
   }: {
