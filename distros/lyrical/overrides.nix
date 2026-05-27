@@ -108,7 +108,7 @@ in {
   });
 
   fuse-core = rosSuper.fuse-core.overrideAttrs ({
-    patches ? [], ...
+    patches ? [], postPatch ? "", ...
   }: {
     patches = patches ++ [
       # Don't fail with boost >= 1.86
@@ -119,6 +119,19 @@ in {
         stripLen = 1;
       })
     ];
+
+    # https://github.com/locusrobotics/fuse/pull/424
+    postPatch = postPatch + ''
+      substituteInPlace \
+        include/fuse_core/graph.hpp \
+        include/fuse_core/message_buffer.hpp \
+        include/fuse_core/transaction.hpp \
+        include/fuse_core/timestamp_manager.hpp \
+          --replace-fail \
+            "#include <boost/range/any_range.hpp>" \
+            "#include <boost/type_traits/add_const.hpp>
+             #include <boost/range/any_range.hpp>"
+    '';
   });
 
   gazebo = self.gazebo_11;
