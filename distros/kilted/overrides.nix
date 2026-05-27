@@ -686,6 +686,17 @@ in {
     '';
   });
 
+  rtabmap = rosSuper.rtabmap.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/introlab/rtabmap/commit/739628aef9cd765025dd2a0b99c8540abe65e808
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "filesystem system" \
+        "filesystem"
+    '';
+  });
+
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     tarSourceArgs.hook = let
       version = "1.79";
