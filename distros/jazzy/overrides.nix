@@ -1122,6 +1122,15 @@ in {
     '';
   });
 
+  turtlebot3-panorama = rosSuper.turtlebot3-panorama.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/ROBOTIS-GIT/turtlebot3_applications/pull/79
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail "COMPONENTS system" ""
+    '';
+  });
+
   turtlesim = rosSuper.turtlesim.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
