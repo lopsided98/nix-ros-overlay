@@ -591,7 +591,7 @@ in {
   };
 
   libpointmatcher = rosSuper.libpointmatcher.overrideAttrs ({
-    patches ? [], ...
+    patches ? [], postPatch ? "", ...
   }: {
     patches = patches ++ [
       # Fix failing build due to deprecated boost::filesystem functions
@@ -600,6 +600,10 @@ in {
         hash = "sha256-U0I5UuJoNtKzNSKriWaiGHr79Y9QWe3Pf1y77YJvaK8=";
       })
     ];
+    # https://github.com/norlab-ulaval/libpointmatcher/pull/614
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail "system program_options" "program_options"
+    '';
   });
 
   mcap-vendor = lib.patchVendorUrl rosSuper.mcap-vendor {
