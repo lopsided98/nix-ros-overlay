@@ -1158,6 +1158,16 @@ in {
     '';
   });
 
+  spatio-temporal-voxel-layer = rosSuper.spatio-temporal-voxel-layer.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # boost removed in https://github.com/SteveMacenski/spatio_temporal_voxel_layer/pull/356
+    # but that does not apply cleanly
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail "COMPONENTS system thread" "COMPONENTS thread"
+    '';
+  });
+
   turtlebot3-panorama = rosSuper.turtlebot3-panorama.overrideAttrs ({
     postPatch ? "", ...
   }: {
