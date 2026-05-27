@@ -169,6 +169,10 @@ in {
         excludes = ["tutorials/install.md"];
       })
     ];
+  }).overrideAttrs({
+    buildInputs ? [], ...
+  }: {
+    buildInputs = buildInputs ++ [ self.zlib ];
   });
 
   gz-dartsim-vendor = lib.patchAmentVendorGit rosSuper.gz-dartsim-vendor { };
