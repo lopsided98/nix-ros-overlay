@@ -22,8 +22,6 @@ self: super: {
 
  actuator-msgs = self.callPackage ./actuator-msgs {};
 
- adaptive-component = self.callPackage ./adaptive-component {};
-
  admittance-controller = self.callPackage ./admittance-controller {};
 
  ament-acceleration = self.callPackage ./ament-acceleration {};
@@ -394,8 +392,6 @@ self: super: {
 
  coin-d4-driver = self.callPackage ./coin-d4-driver {};
 
- color-names = self.callPackage ./color-names {};
-
  color-util = self.callPackage ./color-util {};
 
  common-interfaces = self.callPackage ./common-interfaces {};
@@ -539,8 +535,6 @@ self: super: {
  dummy-robot-bringup = self.callPackage ./dummy-robot-bringup {};
 
  dummy-sensors = self.callPackage ./dummy-sensors {};
-
- dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
 
  dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
 
@@ -980,8 +974,6 @@ self: super: {
 
  imu-transformer = self.callPackage ./imu-transformer {};
 
- interactive-marker-twist-server = self.callPackage ./interactive-marker-twist-server {};
-
  interactive-markers = self.callPackage ./interactive-markers {};
 
  intra-process-demo = self.callPackage ./intra-process-demo {};
@@ -1246,8 +1238,6 @@ self: super: {
 
  message-filters = self.callPackage ./message-filters {};
 
- message-tf-frame-transformer = self.callPackage ./message-tf-frame-transformer {};
-
  metavision-driver = self.callPackage ./metavision-driver {};
 
  micro-ros-diagnostic-bridge = self.callPackage ./micro-ros-diagnostic-bridge {};
@@ -1297,6 +1287,8 @@ self: super: {
  mola-input-lidar-bin-dataset = self.callPackage ./mola-input-lidar-bin-dataset {};
 
  mola-input-mulran-dataset = self.callPackage ./mola-input-mulran-dataset {};
+
+ mola-input-ouster = self.callPackage ./mola-input-ouster {};
 
  mola-input-paris-luco-dataset = self.callPackage ./mola-input-paris-luco-dataset {};
 
@@ -1580,6 +1572,8 @@ self: super: {
 
  novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
 
+ novatel-oem6-msgs = self.callPackage ./novatel-oem6-msgs {};
+
  ntpd-driver = self.callPackage ./ntpd-driver {};
 
  ntrip-client = self.callPackage ./ntrip-client {};
@@ -1749,10 +1743,6 @@ self: super: {
  pick-ik = self.callPackage ./pick-ik {};
 
  picknik-ament-copyright = self.callPackage ./picknik-ament-copyright {};
-
- picknik-reset-fault-controller = self.callPackage ./picknik-reset-fault-controller {};
-
- picknik-twist-controller = self.callPackage ./picknik-twist-controller {};
 
  pid-controller = self.callPackage ./pid-controller {};
 
@@ -2220,8 +2210,6 @@ self: super: {
 
  ros-gz-sim-demos = self.callPackage ./ros-gz-sim-demos {};
 
- ros-image-to-qimage = self.callPackage ./ros-image-to-qimage {};
-
  ros-industrial-cmake-boilerplate = self.callPackage ./ros-industrial-cmake-boilerplate {};
 
  ros-testing = self.callPackage ./ros-testing {};
@@ -2380,10 +2368,6 @@ self: super: {
 
  rosx-introspection = self.callPackage ./rosx-introspection {};
 
- rot-conv = self.callPackage ./rot-conv {};
-
- rplidar-ros = self.callPackage ./rplidar-ros {};
-
  rpyutils = self.callPackage ./rpyutils {};
 
  rqml = self.callPackage ./rqml {};
@@ -2466,12 +2450,6 @@ self: super: {
 
  rslidar-msg = self.callPackage ./rslidar-msg {};
 
- rt-manipulators-cpp = self.callPackage ./rt-manipulators-cpp {};
-
- rt-manipulators-examples = self.callPackage ./rt-manipulators-examples {};
-
- rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
-
  rtabmap = self.callPackage ./rtabmap {};
 
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
@@ -2507,8 +2485,6 @@ self: super: {
  rviz-rendering-tests = self.callPackage ./rviz-rendering-tests {};
 
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
-
- rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
  sdformat-test-files = self.callPackage ./sdformat-test-files {};
 
@@ -2921,8 +2897,6 @@ self: super: {
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
 
  vision-msgs = self.callPackage ./vision-msgs {};
-
- vision-msgs-layers = self.callPackage ./vision-msgs-layers {};
 
  vision-msgs-rviz-plugins = self.callPackage ./vision-msgs-rviz-plugins {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, ament-copyright, ament-flake8, ament-index-python, ament-pep257, flexbe-core, flexbe-msgs, launch-ros, launch-testing, python3Packages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-flexbe-testing";
-  version = "4.1.3-r1";
+  version = "4.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/kilted/flexbe_testing/4.1.3-1.tar.gz";
-    name = "4.1.3-1.tar.gz";
-    sha256 = "e6833ecbd7d45573fa2e779a016765f382d327a9d786a388250a3fb382d222f6";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/kilted/flexbe_testing/4.1.4-1.tar.gz";
+    name = "4.1.4-1.tar.gz";
+    sha256 = "37f1e97a04a7f84753b8b666a93e8655c2423606804fea4b53e4da4206b4cfb6";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-agnocast-cie-config-msgs";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/agnocast_cie_config_msgs/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "3ff054587a45521affafff68842834991e6ceeb8bb813433e816ab5a56f5e108";
+    url = "https://github.com/ros2-gbp/agnocast-release/archive/release/humble/agnocast_cie_config_msgs/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "0c74dd15f8603fc5a48edda7208bd29936e95e97b570337dfc3633217e4fa6a7";
   };
 
   buildType = "ament_cmake";

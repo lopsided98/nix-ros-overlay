@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, graph-msgs, moveit-common, moveit-core, moveit-ros-planning, rclcpp, rviz-visual-tools, std-msgs, tf2-eigen, tf2-ros, trajectory-msgs, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, _unresolved_rviz_visual_tools, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, graph-msgs, moveit-common, moveit-core, moveit-ros-planning, rclcpp, std-msgs, tf2-eigen, tf2-ros, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-moveit-visual-tools";
   version = "4.1.2-r2";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ geometry-msgs graph-msgs moveit-common moveit-core moveit-ros-planning rclcpp rviz-visual-tools std-msgs tf2-eigen tf2-ros trajectory-msgs visualization-msgs ];
+  propagatedBuildInputs = [ _unresolved_rviz_visual_tools geometry-msgs graph-msgs moveit-common moveit-core moveit-ros-planning rclcpp std-msgs tf2-eigen tf2-ros trajectory-msgs visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

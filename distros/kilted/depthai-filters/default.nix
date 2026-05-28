@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, cv-bridge, depthai-ros-msgs, image-transport, message-filters, opencv, rclcpp, rclcpp-components, sensor-msgs, vision-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-depthai-filters";
-  version = "3.2.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-ros-release/archive/release/kilted/depthai_filters/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "29b7ea736c3b192a883eaf5f3e7b62e3cd3676d6720c332dc7e3b360f29e2b3b";
+    url = "https://github.com/luxonis/depthai-ros-release/archive/release/kilted/depthai_filters/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "8911468120d12521067039560865249d580b48d770e36d4e20b36f3f1d547413";
   };
 
   buildType = "ament_cmake";

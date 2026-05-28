@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, compressed-depth-image-transport, compressed-image-transport, theora-image-transport, zstd-image-transport }:
 buildRosPackage {
   pname = "ros-lyrical-image-transport-plugins";
-  version = "6.2.4-r3";
+  version = "6.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/lyrical/image_transport_plugins/6.2.4-3.tar.gz";
-    name = "6.2.4-3.tar.gz";
-    sha256 = "6fa3f555a2075c37f94406b5e0a9655a274497bd1821546fea784ffa51eb45ac";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/lyrical/image_transport_plugins/6.2.5-1.tar.gz";
+    name = "6.2.5-1.tar.gz";
+    sha256 = "a10d382334d5fb99427e296c2c772847322bc26abf1067398dc9825a27e617a6";
   };
 
   buildType = "ament_cmake";

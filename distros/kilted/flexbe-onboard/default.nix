@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, flexbe-core, flexbe-msgs, flexbe-states, launch-ros, launch-testing, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-kilted-flexbe-onboard";
-  version = "4.1.3-r1";
+  version = "4.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/kilted/flexbe_onboard/4.1.3-1.tar.gz";
-    name = "4.1.3-1.tar.gz";
-    sha256 = "1ff0f585825f26e9c405a257a155974813ed5e562856e877d058e74424555f73";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/kilted/flexbe_onboard/4.1.4-1.tar.gz";
+    name = "4.1.4-1.tar.gz";
+    sha256 = "0588ed964d54f84a614129abcfd970d8b8e9faf07da4f1b725f1cc55207eeacb";
   };
 
   buildType = "ament_python";

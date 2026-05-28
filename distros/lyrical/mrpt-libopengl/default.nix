@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, libxrandr, libxxf86vm, mrpt-libbase, mrpt-libposes, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, zlib }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-libopengl";
-  version = "2.15.17-r2";
+  version = "2.15.18-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/lyrical/mrpt_libopengl/2.15.17-2.tar.gz";
-    name = "2.15.17-2.tar.gz";
-    sha256 = "297d00a90160143164881541a351c8afcd3c4e24355d1973527c1e50f96ecfb3";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/lyrical/mrpt_libopengl/2.15.18-1.tar.gz";
+    name = "2.15.18-1.tar.gz";
+    sha256 = "f4497b6fa323153179fcd1826f6e1db4dc76e08413d95eee0e0498271a9ccea9";
   };
 
   buildType = "cmake";

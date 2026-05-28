@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ncurses, rcl-interfaces, rclcpp, xclip, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-rolling-log-view";
-  version = "0.3.2-r1";
+  version = "0.3.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/log_view-release/archive/release/rolling/log_view/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "680ce50fa2c611e55eddcfcb6a267bb460a47b59069d66d808286b156c5ae804";
+    url = "https://github.com/ros2-gbp/log_view-release/archive/release/rolling/log_view/0.3.3-2.tar.gz";
+    name = "0.3.3-2.tar.gz";
+    sha256 = "58ade36ba2364d9b1b185bc2306fb3d89790ff7d8f704e068edd932c7e67d35c";
   };
 
   buildType = "ament_cmake";

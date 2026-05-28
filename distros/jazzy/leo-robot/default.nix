@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, leo, leo-bringup, leo-filters, leo-fw }:
 buildRosPackage {
   pname = "ros-jazzy-leo-robot";
-  version = "2.5.1-r1";
+  version = "2.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/jazzy/leo_robot/2.5.1-1.tar.gz";
-    name = "2.5.1-1.tar.gz";
-    sha256 = "624254b8827bfd0cc00e50700dcda07401cb623e81612bb8d766246702968f6d";
+    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/jazzy/leo_robot/2.6.1-1.tar.gz";
+    name = "2.6.1-1.tar.gz";
+    sha256 = "186b99ad42d05c6b5ee1fb7c6e6044b27ab8d8cd07ff3ae506b009a578fb22ff";
   };
 
   buildType = "ament_cmake";

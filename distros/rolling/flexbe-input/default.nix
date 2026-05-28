@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, flexbe-core, flexbe-msgs, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-rolling-flexbe-input";
-  version = "4.0.3-r2";
+  version = "4.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/rolling/flexbe_input/4.0.3-2.tar.gz";
-    name = "4.0.3-2.tar.gz";
-    sha256 = "0c98ad4dcc511149ddbc072293612cac5d645cbc6e5c0bc5f8f011dd0d041c8d";
+    url = "https://github.com/ros2-gbp/flexbe_behavior_engine-release/archive/release/rolling/flexbe_input/4.1.4-1.tar.gz";
+    name = "4.1.4-1.tar.gz";
+    sha256 = "ea2c52eae5c778e6feeb16e95d07f11ebbce8d3c602960bf0636aa0579724f67";
   };
 
   buildType = "ament_python";

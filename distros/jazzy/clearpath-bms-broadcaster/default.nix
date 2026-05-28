@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-cmake, ros2-control-test-assets, rosidl-default-runtime, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-bms-broadcaster";
-  version = "2.9.6-r1";
+  version = "2.9.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_bms_broadcaster/2.9.6-1.tar.gz";
-    name = "2.9.6-1.tar.gz";
-    sha256 = "570f689ead6e9ff9bd0e4adc5c53fc4983af5c500cc21d0bb698d6ce8a4f1ad8";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_bms_broadcaster/2.9.7-1.tar.gz";
+    name = "2.9.7-1.tar.gz";
+    sha256 = "8f6e4acc588942af7b32c93b4bddb2482993331a70010819a3c9c17422e06fa2";
   };
 
   buildType = "ament_cmake";

@@ -754,6 +754,8 @@ self: super: {
 
  create3-teleop = self.callPackage ./create3-teleop {};
 
+ crocoddyl = self.callPackage ./crocoddyl {};
+
  crx-kinematics = self.callPackage ./crx-kinematics {};
 
  cudnn-cmake-module = self.callPackage ./cudnn-cmake-module {};
@@ -1988,6 +1990,8 @@ self: super: {
 
  mola-input-mulran-dataset = self.callPackage ./mola-input-mulran-dataset {};
 
+ mola-input-ouster = self.callPackage ./mola-input-ouster {};
+
  mola-input-paris-luco-dataset = self.callPackage ./mola-input-paris-luco-dataset {};
 
  mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
@@ -2417,6 +2421,8 @@ self: super: {
  novatel-gps-driver = self.callPackage ./novatel-gps-driver {};
 
  novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
+
+ novatel-oem6-msgs = self.callPackage ./novatel-oem6-msgs {};
 
  novatel-oem7-driver = self.callPackage ./novatel-oem7-driver {};
 

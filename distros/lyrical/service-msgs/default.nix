@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-core-generators, rosidl-core-runtime }:
 buildRosPackage {
   pname = "ros-lyrical-service-msgs";
-  version = "2.4.4-r3";
+  version = "2.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/lyrical/service_msgs/2.4.4-3.tar.gz";
-    name = "2.4.4-3.tar.gz";
-    sha256 = "3d36da0f7dd425f09cc4630ad788e7e7e127880d3149f6f1cb02676c9f4ef3e8";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/lyrical/service_msgs/2.4.5-1.tar.gz";
+    name = "2.4.5-1.tar.gz";
+    sha256 = "3aaf85fdd6e5280ff3470a0178a624ef467795358a103536580c91586cea6f41";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-components, rclpy, ros2cli, rosidl-default-generators, rosidl-runtime-py, std-msgs, topic-tools-interfaces }:
 buildRosPackage {
   pname = "ros-jazzy-topic-tools";
-  version = "1.3.3-r1";
+  version = "1.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/jazzy/topic_tools/1.3.3-1.tar.gz";
-    name = "1.3.3-1.tar.gz";
-    sha256 = "9b2616f1093bfd2e0965f7783b95ecf90d09f4b2de8635bcbeea83a1b88d1cc8";
+    url = "https://github.com/ros2-gbp/topic_tools-release/archive/release/jazzy/topic_tools/1.3.4-1.tar.gz";
+    name = "1.3.4-1.tar.gz";
+    sha256 = "c2d80cf026e8058e08dce1606697462a7042a0a0765f36f6e24821c3d759d6bb";
   };
 
   buildType = "ament_cmake";
