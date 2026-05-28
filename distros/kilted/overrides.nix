@@ -58,6 +58,17 @@ in {
     '';
   });
 
+  cartographer = rosSuper.cartographer.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Fix "ld.bfd: libcartographer.a(tsdf_2d.cc.o): undefined reference to symbol '_ZN4absl12lts_2026010712log_internal17MakeCheckOpStringImmEEPKcT_T0_S4_'"
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "absl::utility" \
+        "absl::utility absl::log_internal_check_op"
+    '';
+  });
+
   clips-vendor = lib.patchAmentVendorFile rosSuper.clips-vendor { };
 
   cyclonedds = rosSuper.cyclonedds.overrideAttrs ({
