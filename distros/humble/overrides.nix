@@ -187,6 +187,22 @@ in with lib; {
     '';
   });
 
+  boost-plugin-loader = rosSuper.boost-plugin-loader.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # In Boost >= 1.88, boost::dll::import_symbol returns
+    # std::shared_ptr instead of boost::shared_ptr. Use auto to stay
+    # compatible with both. Upstream handles this in
+    # https://github.com/tesseract-robotics/boost_plugin_loader/pull/29,
+    # but it cannot be easily applied to old humble version.
+    postPatch = postPatch + ''
+      substituteInPlace include/boost_plugin_loader/plugin_loader.hpp \
+        --replace-fail \
+          'boost::shared_ptr<ClassBase> plugin = boost::dll::import_symbol<ClassBase>(lib, symbol_name);' \
+          'auto plugin = boost::dll::import_symbol<ClassBase>(lib, symbol_name);'
+    '';
+  });
+
   bosch-locator-bridge = rosSuper.bosch-locator-bridge.overrideAttrs ({
     postPatch ? "", ...
   }: {
