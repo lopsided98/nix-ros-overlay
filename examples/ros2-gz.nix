@@ -23,6 +23,7 @@ with rosPackages.${rosDistro};
       })
     ] ++ lib.optionals (builtins.elem rosDistro [ "lyrical" "rolling" ]) [
       # this is for the shellhook portion
+      qt6.qtbase
       qt6.wrapQtAppsHook
       makeWrapper
     ];

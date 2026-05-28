@@ -34,6 +34,28 @@ in {
     ];
   });
 
+  canopen-core = rosSuper.canopen-core.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/ros-industrial/ros2_canopen/pull/399
+    postPatch = ''
+      substituteInPlace ConfigExtras.cmake --replace-fail \
+        "find_package(Boost REQUIRED system thread)" \
+        "find_package(Boost REQUIRED thread)"
+    '';
+  });
+
+  cartographer = rosSuper.cartographer.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Fix "ld.bfd: libcartographer.a(tsdf_2d.cc.o): undefined reference to symbol '_ZN4absl12lts_2026010712log_internal17MakeCheckOpStringImmEEPKcT_T0_S4_'"
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "absl::utility" \
+        "absl::utility absl::log_internal_check_op"
+    '';
+  });
+
   clips-vendor = lib.patchAmentVendorFile rosSuper.clips-vendor { };
 
   ecl-build = rosSuper.ecl-build.overrideAttrs ({
@@ -134,6 +156,10 @@ in {
         excludes = ["tutorials/install.md"];
       })
     ];
+  }).overrideAttrs({
+    buildInputs ? [], ...
+  }: {
+    buildInputs = buildInputs ++ [ self.zlib ];
   });
 
   gz-dartsim-vendor = lib.patchAmentVendorGit rosSuper.gz-dartsim-vendor { };
@@ -276,6 +302,17 @@ in {
     '';
   });
 
+  ld08-driver = rosSuper.ld08-driver.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/ROBOTIS-GIT/ld08_driver/pull/36
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail "Boost::system" "Boost::boost" \
+        --replace-fail "REQUIRED system" "REQUIRED"
+    '';
+  });
+
   lely-core-libraries = (lib.patchExternalProjectGit rosSuper.lely-core-libraries {
     url = "https://gitlab.com/lely_industries/lely-core.git";
     rev = "fb735b79cab5f0cdda45bc5087414d405ef8f3ab";
@@ -360,6 +397,19 @@ in {
 
   mp-units-vendor = lib.patchAmentVendorGit rosSuper.mp-units-vendor {};
 
+  mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # drop boost system
+      # ref. https://github.com/KIT-MRT/mrt_cmake_modules/pull/41
+      (self.fetchpatch2 {
+        url = "https://github.com/KIT-MRT/mrt_cmake_modules/commit/332c1d733336c6ed5c8c2c8e21146e75d8c7f565.patch?full_index=1";
+        hash = "sha256-oNmIPw7SaDGFQyBPUyMzg8mgSc49MyjuBMya0Odmqfs=";
+      })
+    ];
+  });
+
   nlohmann-json-schema-validator-vendor = (lib.patchExternalProjectGit rosSuper.nlohmann-json-schema-validator-vendor {
     url = "https://github.com/pboettch/json-schema-validator.git";
     rev = "5ef4f903af055550e06955973a193e17efded896";
@@ -374,6 +424,18 @@ in {
         "COMMAND sed -i \"s|cmake_minimum_required(VERSION 3.2)|cmake_minimum_required(VERSION 3.10)|\" CMakeLists.txt
          CMAKE_ARGS"
     '';
+  });
+
+  ompl = rosSuper.ompl.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # https://github.com/ompl/ompl/pull/1306 merged
+      (self.fetchpatch2 {
+        url = "https://github.com/ompl/ompl/commit/44eaf82b6e9829d15317884f9b78ab24618c5f6f.patch?full_index=1";
+        hash = "sha256-SSC0Uk3ddHwRdv81cY7DRJS9uekYgr2Zv13Yk0bWl2M=";
+      })
+    ];
   });
 
   pcl-conversions = rosSuper.pcl-conversions.overrideAttrs ({
@@ -649,6 +711,15 @@ in {
       substituteInPlace client_src/CMakeLists.txt --replace-fail \
         "cmake_minimum_required(VERSION 2.6)" \
         "cmake_minimum_required(VERSION 3.5)"
+    '';
+  });
+
+  warehouse-ros-sqlite = rosSuper.warehouse-ros-sqlite.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/moveit/warehouse_ros_sqlite/pull/61
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail " system" ""
     '';
   });
 

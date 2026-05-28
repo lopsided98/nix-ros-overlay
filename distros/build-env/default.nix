@@ -86,20 +86,8 @@ let
         '';
       };
     };
-  })).overrideAttrs ({ buildCommand, passAsFile ? [], ...}: {
-    # Hack to allow buildEnv to use propagatedBuildInputs
-    buildCommand = null;
-    oldBuildCommand = buildCommand;
-    passAsFile = (if passAsFile == null then [] else passAsFile) ++ [ "oldBuildCommand" ];
-
-    propagatedBuildInputs = propagatedPaths.otherPackages;
-
-    buildPhase = ''
-      runHook preBuild
-      . "$oldBuildCommandPath"
-      runHook postBuild
-    '';
-    phases = [ "buildPhase" "fixupPhase" ];
+  })).overrideAttrs ({ propagatedBuildInputs ? [], ... }: {
+    propagatedBuildInputs = propagatedBuildInputs ++ propagatedPaths.otherPackages;
 
     # Disable redundant fixup operations.
     # The fixupPhase is needed for shell hooks and input propagation, but other

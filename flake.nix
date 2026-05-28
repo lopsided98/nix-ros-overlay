@@ -28,7 +28,6 @@
       };
 
       devShells = {
-        example-turtlebot3-gazebo = import ./examples/turtlebot3-gazebo.nix { inherit pkgs; };
         example-ros2-basic = import ./examples/ros2-basic.nix { inherit pkgs; };
         example-ros2-desktop = import ./examples/ros2-desktop.nix { inherit pkgs; };
         example-ros2-desktop-full = import ./examples/ros2-desktop-full.nix { inherit pkgs; };
