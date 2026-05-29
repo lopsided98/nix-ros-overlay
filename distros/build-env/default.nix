@@ -65,6 +65,10 @@ let
       dontGzipMan = true;
       dontPatchShebangs = true;
       dontMoveLib64 = true;
+
+      # nixpkgs's buildEnv disables substitutes, which can lead to
+      # unnecessarily long build times for development environments.
+      allowSubstitutes = true;
     };
 
     postBuild = postBuild + ''
