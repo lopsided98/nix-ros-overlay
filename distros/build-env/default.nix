@@ -43,7 +43,20 @@ let
     # nix-shell -p does.
     paths = propagatedPaths.rosPackages;
 
-    nativeBuildInputs = optional wrapPrograms makeWrapper;
+    derivationArgs = {
+      nativeBuildInputs = optional wrapPrograms makeWrapper;
+      propagatedBuildInputs = propagatedPaths.otherPackages;
+
+      # Disable redundant fixup operations.
+      # The fixupPhase is needed for shell hooks and input propagation, but other
+      # things like RPATH shrinking and shebang patching are not needed, as the
+      # original packages should have already been fixed up.
+      dontPatchELF = true;
+      noAuditTmpdir = true;
+      dontGzipMan = true;
+      dontPatchShebangs = true;
+      dontMoveLib64 = true;
+    };
 
     postBuild = postBuild + ''
       "${buildPackages.perl}/bin/perl" "${./setup-hook-builder.pl}"
@@ -86,17 +99,5 @@ let
         '';
       };
     };
-  })).overrideAttrs ({ propagatedBuildInputs ? [], ... }: {
-    propagatedBuildInputs = propagatedBuildInputs ++ propagatedPaths.otherPackages;
-
-    # Disable redundant fixup operations.
-    # The fixupPhase is needed for shell hooks and input propagation, but other
-    # things like RPATH shrinking and shebang patching are not needed, as the
-    # original packages should have already been fixed up.
-    dontPatchELF = true;
-    noAuditTmpdir = true;
-    dontGzipMan = true;
-    dontPatchShebangs = true;
-    dontMoveLib64 = true;
-  });
+  }));
 in env
