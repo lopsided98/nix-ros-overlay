@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, builtin-interfaces, cv-bridge, diagnostic-updater, eigen, geometry-msgs, image-transport, launch-pytest, launch-ros, launch-testing, librealsense2, lifecycle-msgs, nav-msgs, python3Packages, rclcpp, rclcpp-components, rclcpp-lifecycle, realsense2-camera-msgs, ros-environment, ros2topic, sensor-msgs, sensor-msgs-py, std-msgs, std-srvs, tf2, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-kilted-realsense2-camera";
-  version = "4.57.7-r1";
+  version = "4.58.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/kilted/realsense2_camera/4.57.7-1.tar.gz";
-    name = "4.57.7-1.tar.gz";
-    sha256 = "fc5c63a0ab609a6db112035617df99bd89f18f625636398167178c14f373d61d";
+    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/kilted/realsense2_camera/4.58.1-1.tar.gz";
+    name = "4.58.1-1.tar.gz";
+    sha256 = "0651b41b953d1dd93fbc43fe83002dd4863986d772bfabff2119504c47227755";
   };
 
   buildType = "ament_cmake";

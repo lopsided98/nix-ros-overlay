@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_nvidia-cuda, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, cuda-buffer-backend-msgs, rcutils, rmw, rosidl-buffer }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, cuda-buffer-backend-msgs, cudaPackages, rcutils, rmw, rosidl-buffer }:
 buildRosPackage {
   pname = "ros-rolling-cuda-buffer";
   version = "0.1.1-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ _unresolved_nvidia-cuda cuda-buffer-backend-msgs rcutils rmw rosidl-buffer ];
+  propagatedBuildInputs = [ cuda-buffer-backend-msgs cudaPackages.cudatoolkit rcutils rmw rosidl-buffer ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

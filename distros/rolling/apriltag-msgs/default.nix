@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-apriltag-msgs";
-  version = "2.0.1-r5";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/apriltag_msgs-release/archive/release/rolling/apriltag_msgs/2.0.1-5.tar.gz";
-    name = "2.0.1-5.tar.gz";
-    sha256 = "b3091f895f991ad7abc18f859686f81d0817bcdb62d43670048ddd095da1d0c3";
+    url = "https://github.com/ros2-gbp/apriltag_msgs-release/archive/release/rolling/apriltag_msgs/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "be239f674140602e8a529e0ff4beef45f0065e195cc3fdc86b2aaa33377e3fb6";
   };
 
   buildType = "ament_cmake";

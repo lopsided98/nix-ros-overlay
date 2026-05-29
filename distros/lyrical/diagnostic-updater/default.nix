@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-lint-auto, ament-lint-common, diagnostic-msgs, launch, launch-testing, launch-testing-ros, python3Packages, rclcpp, rclcpp-lifecycle, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-diagnostic-updater";
-  version = "4.4.6-r3";
+  version = "4.4.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/lyrical/diagnostic_updater/4.4.6-3.tar.gz";
-    name = "4.4.6-3.tar.gz";
-    sha256 = "73178ffa5faa00623f682d04fce4d22cf46aa2824e73f7443af8b8960816513d";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/lyrical/diagnostic_updater/4.4.7-1.tar.gz";
+    name = "4.4.7-1.tar.gz";
+    sha256 = "37210c0ecab5b5012fd2da20afdf5a64485208bc1c89911363499002b1e3a37f";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ament-cmake-ros ];
 
   meta = {
-    description = "diagnostic_updater contains tools for easily updating diagnostics. it is commonly used in device drivers to keep track of the status of output topics, device status, etc.";
+    description = "Update and publish diagnostic information.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

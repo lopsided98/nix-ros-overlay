@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-rosapi-msgs";
-  version = "2.0.6-r1";
+  version = "2.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/humble/rosapi_msgs/2.0.6-1.tar.gz";
-    name = "2.0.6-1.tar.gz";
-    sha256 = "e1712a97eccca687bee229614a646013a5eb1b06b873f53864f2b8aa451b3143";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/humble/rosapi_msgs/2.0.7-1.tar.gz";
+    name = "2.0.7-1.tar.gz";
+    sha256 = "a5fae2d7d8035338e4ed4062027ccfb954d32fcebdb9e802208ff6dcdbe07be9";
   };
 
   buildType = "ament_cmake";

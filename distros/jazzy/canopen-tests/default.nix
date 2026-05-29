@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, canopen-402-driver, canopen-core, canopen-fake-slaves, canopen-proxy-driver, canopen-ros2-controllers, controller-manager, forward-command-controller, joint-state-broadcaster, joint-trajectory-controller, lely-core-libraries, robot-state-publisher, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-canopen-tests";
-  version = "0.3.2-r1";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/jazzy/canopen_tests/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "6929c47239ebdd6460ad7d2a78160919ec169d40d1d9f23132ab84711253c0cf";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/jazzy/canopen_tests/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "1c6de65afceeeda6257e3401b4e1c358b63a84fb8835483858024b764611b2d8";
   };
 
   buildType = "ament_cmake";

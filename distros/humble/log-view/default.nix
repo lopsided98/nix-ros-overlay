@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ncurses, rcl-interfaces, rclcpp, xclip, yaml-cpp-vendor }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ncurses, rcl-interfaces, rclcpp, rosbag2-cpp, rosgraph-msgs, xclip, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-humble-log-view";
-  version = "0.3.3-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/hatchbed/log_view-release/archive/release/humble/log_view/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "1ac96bf8fa982f89aaa80c4c5009dc265e283dea52c5459ed05063d7aefd8c40";
+    url = "https://github.com/hatchbed/log_view-release/archive/release/humble/log_view/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "b14670a61233774c7a870be5f37a993abf9dd507bc015d247ed9808e32a023af";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ncurses rcl-interfaces rclcpp xclip yaml-cpp-vendor ];
+  propagatedBuildInputs = [ ncurses rcl-interfaces rclcpp rosbag2-cpp rosgraph-msgs xclip yaml-cpp-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

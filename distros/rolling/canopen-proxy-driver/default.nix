@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, canopen-base-driver, canopen-core, canopen-interfaces, rclcpp, rclcpp-components, rclcpp-lifecycle, std-msgs, std-srvs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, canopen-base-driver, canopen-core, canopen-interfaces, rclcpp, rclcpp-components, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-rolling-canopen-proxy-driver";
-  version = "0.3.2-r2";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/rolling/canopen_proxy_driver/0.3.2-2.tar.gz";
-    name = "0.3.2-2.tar.gz";
-    sha256 = "eff6f67506a5de8cde16eec4512701d471c737c14d672a441f558498dc969616";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/rolling/canopen_proxy_driver/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "9ec553f21ba2807f953c810a99e38226250a66002331e9bb165b8d665c16f1d2";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];
   checkInputs = [ ament-lint-auto ];
-  propagatedBuildInputs = [ canopen-base-driver canopen-core canopen-interfaces rclcpp rclcpp-components rclcpp-lifecycle std-msgs std-srvs ];
+  propagatedBuildInputs = [ canopen-base-driver canopen-core canopen-interfaces rclcpp rclcpp-components rclcpp-lifecycle ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

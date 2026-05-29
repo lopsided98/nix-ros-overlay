@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, curl, diagnostic-msgs, rclcpp-components }:
 buildRosPackage {
   pname = "ros-humble-diagnostic-remote-logging";
-  version = "4.0.6-r1";
+  version = "4.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/humble/diagnostic_remote_logging/4.0.6-1.tar.gz";
-    name = "4.0.6-1.tar.gz";
-    sha256 = "24d5446ad36ff31eddc3235f08a3fc5b87e698951550e0be6e15d035345b9c13";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/humble/diagnostic_remote_logging/4.0.7-1.tar.gz";
+    name = "4.0.7-1.tar.gz";
+    sha256 = "46010ac5bf630746a3e25bb4fdbb4d5a307b6861f93691167d9e179ee84d5290";
   };
 
   buildType = "ament_cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "diagnostic_remote_logging";
+    description = "Tools for remotely logging diagnostics data.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

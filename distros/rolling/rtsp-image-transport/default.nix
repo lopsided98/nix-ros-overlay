@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, ffmpeg, image-transport, live555-vendor, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-rtsp-image-transport";
-  version = "2.0.1-r2";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rtsp_image_transport-release/archive/release/rolling/rtsp_image_transport/2.0.1-2.tar.gz";
-    name = "2.0.1-2.tar.gz";
-    sha256 = "6ccb95d9409e0370a8cf6df0220b0e7f4873dc25197a66dac37a3be908c17743";
+    url = "https://github.com/ros2-gbp/rtsp_image_transport-release/archive/release/rolling/rtsp_image_transport/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "f04910c36b11e40ee057bf2aa3e0d4a45a2426b0efe32f5a95666c7089a7a9ee";
   };
 
   buildType = "ament_cmake";

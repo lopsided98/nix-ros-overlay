@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-lint-auto, ament-lint-common, diagnostic-msgs, launch, launch-testing, launch-testing-ros, python3Packages, rclcpp, rclcpp-lifecycle, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-diagnostic-updater";
-  version = "4.3.6-r1";
+  version = "4.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/kilted/diagnostic_updater/4.3.6-1.tar.gz";
-    name = "4.3.6-1.tar.gz";
-    sha256 = "c933ede8ace6d9b8ba21d9c74cd241f8c2ff65a0df9619355049a5e8b20d5d3f";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/kilted/diagnostic_updater/4.3.7-1.tar.gz";
+    name = "4.3.7-1.tar.gz";
+    sha256 = "5e4a9db9c7713480b5a03c80cad7532b46566e2b9016effef5f1ebc8d9d27d62";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ament-cmake-ros ];
 
   meta = {
-    description = "diagnostic_updater contains tools for easily updating diagnostics. it is commonly used in device drivers to keep track of the status of output topics, device status, etc.";
+    description = "Update and publish diagnostic information.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

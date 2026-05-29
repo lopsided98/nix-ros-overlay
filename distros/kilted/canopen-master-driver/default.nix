@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, canopen-core, canopen-interfaces, lely-core-libraries, rclcpp, rclcpp-components, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-kilted-canopen-master-driver";
-  version = "0.3.2-r1";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/kilted/canopen_master_driver/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "15c72ea53b7f50392f7ca1c035cfc1b4bc786c37e72e0aed1b93e2602bde2251";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/kilted/canopen_master_driver/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "ed6afb912aa1efb46dc50a4f7042696996d5c3113013149caa3a763ead7bdb8a";
   };
 
   buildType = "ament_cmake";

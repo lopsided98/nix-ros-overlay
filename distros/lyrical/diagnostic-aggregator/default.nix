@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, diagnostic-msgs, launch-pytest, launch-testing-ament-cmake, launch-testing-ros, pluginlib, rcl-interfaces, rclcpp, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-diagnostic-aggregator";
-  version = "4.4.6-r3";
+  version = "4.4.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/lyrical/diagnostic_aggregator/4.4.6-3.tar.gz";
-    name = "4.4.6-3.tar.gz";
-    sha256 = "a313c09332ea512bf044674619975820d65ffbbc65f9e67dca9816e962173ed8";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/lyrical/diagnostic_aggregator/4.4.7-1.tar.gz";
+    name = "4.4.7-1.tar.gz";
+    sha256 = "576d3bb0cfc71f02b1622e93940d732628dc4a56955be731a85a3e8ebff42ea0";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = "diagnostic_aggregator";
+    description = "Aggregates diagnostic information from multiple sources.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

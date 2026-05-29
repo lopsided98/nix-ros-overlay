@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-canopen-interfaces";
-  version = "0.3.2-r1";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/jazzy/canopen_interfaces/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "6cdfa99e9063ca77b709183c8d0e888196040c55d215f92c465e4ac10a562c64";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/jazzy/canopen_interfaces/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "0a759e769f5e06e59b882a4ce8731b7b8740c60e06341077289d7c4205ebb613";
   };
 
   buildType = "ament_cmake";

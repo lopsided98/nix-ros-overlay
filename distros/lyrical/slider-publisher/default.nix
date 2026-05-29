@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-lyrical-slider-publisher";
-  version = "2.4.3-r3";
+  version = "2.5.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/slider_publisher-release/archive/release/lyrical/slider_publisher/2.4.3-3.tar.gz";
-    name = "2.4.3-3.tar.gz";
-    sha256 = "27c114ff6714cff1bf2dba03c6cd62482767999bc7fd6315db243c48649e392c";
+    url = "https://github.com/ros2-gbp/slider_publisher-release/archive/release/lyrical/slider_publisher/2.5.0-2.tar.gz";
+    name = "2.5.0-2.tar.gz";
+    sha256 = "f9b93dfc9eff2ac1c3e83d7952edf1801f670d29bd9f28873ae1a0e6b1b28c35";
   };
 
   buildType = "ament_cmake";

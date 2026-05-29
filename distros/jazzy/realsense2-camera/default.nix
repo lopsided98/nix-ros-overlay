@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, builtin-interfaces, cv-bridge, diagnostic-updater, eigen, geometry-msgs, image-transport, launch-pytest, launch-ros, launch-testing, librealsense2, lifecycle-msgs, nav-msgs, python3Packages, rclcpp, rclcpp-components, rclcpp-lifecycle, realsense2-camera-msgs, ros-environment, ros2topic, sensor-msgs, sensor-msgs-py, std-msgs, std-srvs, tf2, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-jazzy-realsense2-camera";
-  version = "4.57.7-r1";
+  version = "4.58.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/jazzy/realsense2_camera/4.57.7-1.tar.gz";
-    name = "4.57.7-1.tar.gz";
-    sha256 = "3741027e5a9635b99c05dd10b93839db4657bb370074ea9e572910921374b8ad";
+    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/jazzy/realsense2_camera/4.58.1-1.tar.gz";
+    name = "4.58.1-1.tar.gz";
+    sha256 = "12a1cbb2387ebe807b5d160ba006b09aaca31fdd21f658b755e1c7f54c003535";
   };
 
   buildType = "ament_cmake";
