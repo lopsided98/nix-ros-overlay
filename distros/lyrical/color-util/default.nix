@@ -2,22 +2,22 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-color-util";
-  version = "1.1.0-r3";
+  version = "1.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/color_util-release/archive/release/lyrical/color_util/1.1.0-3.tar.gz";
-    name = "1.1.0-3.tar.gz";
-    sha256 = "c481824e3fb1cb7084dba688bef7d05035320d17a7fec6263f7539ec1ca3afbe";
+    url = "https://github.com/ros2-gbp/color_util-release/archive/release/lyrical/color_util/1.2.0-2.tar.gz";
+    name = "1.2.0-2.tar.gz";
+    sha256 = "9b3719f9c59cfeb7d51fe9a592b47a1590cae918e5f19f2361df39f5bf897741";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ];
+  buildInputs = [ ament-cmake ament-cmake-python ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ];
   propagatedBuildInputs = [ std-msgs ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
     description = "An almost dependency-less library for converting between color spaces";

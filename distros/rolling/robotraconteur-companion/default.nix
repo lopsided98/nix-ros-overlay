@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen, gtest, opencv, robotraconteur, yaml-cpp }:
 buildRosPackage {
   pname = "ros-rolling-robotraconteur-companion";
-  version = "0.4.2-r3";
+  version = "0.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robotraconteur_companion-release/archive/release/rolling/robotraconteur_companion/0.4.2-3.tar.gz";
-    name = "0.4.2-3.tar.gz";
-    sha256 = "ce611624e2da4f472c8158b97377a1cb94842f01083a74416b09baecfaa82c41";
+    url = "https://github.com/ros2-gbp/robotraconteur_companion-release/archive/release/rolling/robotraconteur_companion/0.4.3-1.tar.gz";
+    name = "0.4.3-1.tar.gz";
+    sha256 = "81ac0efc089da75f6c8fdcd23c506385ce09d16ef54940b660bfe7f3c4e357b4";
   };
 
   buildType = "cmake";

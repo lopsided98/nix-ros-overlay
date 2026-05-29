@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosapi, rosbridge-library, rosbridge-server }:
 buildRosPackage {
   pname = "ros-kilted-rosbridge-suite";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/kilted/rosbridge_suite/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "3efe8b85d7eb34b6a58b48305b1390702b852dc0145c3a995b589a7989e6bedb";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/kilted/rosbridge_suite/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "0cfe3eb7c38fd4049a9ae2bca56e2d24167b20c2ad01718d9311c9171e183d75";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosapi, rosbridge-library, rosbridge-server }:
 buildRosPackage {
   pname = "ros-lyrical-rosbridge-suite";
-  version = "4.1.0-r3";
+  version = "4.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/lyrical/rosbridge_suite/4.1.0-3.tar.gz";
-    name = "4.1.0-3.tar.gz";
-    sha256 = "419192ff2fb4928b1f5650e0d38a247f3bb745fedff2628ec8670ba9ca1a1d05";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/lyrical/rosbridge_suite/4.2.0-1.tar.gz";
+    name = "4.2.0-1.tar.gz";
+    sha256 = "dac87a78ee958062741668f8a946678476e2578990c1280ae99dc04480079800";
   };
 
   buildType = "ament_cmake";

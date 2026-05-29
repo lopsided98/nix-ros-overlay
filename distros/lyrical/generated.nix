@@ -1290,6 +1290,8 @@ self: super: {
 
  mola-input-mulran-dataset = self.callPackage ./mola-input-mulran-dataset {};
 
+ mola-input-ouster = self.callPackage ./mola-input-ouster {};
+
  mola-input-paris-luco-dataset = self.callPackage ./mola-input-paris-luco-dataset {};
 
  mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
@@ -1570,6 +1572,8 @@ self: super: {
 
  novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
 
+ novatel-oem6-msgs = self.callPackage ./novatel-oem6-msgs {};
+
  ntpd-driver = self.callPackage ./ntpd-driver {};
 
  ntrip-client = self.callPackage ./ntrip-client {};
@@ -1811,6 +1815,8 @@ self: super: {
  py-trees-ros-tutorials = self.callPackage ./py-trees-ros-tutorials {};
 
  py-trees-ros-viewer = self.callPackage ./py-trees-ros-viewer {};
+
+ pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
 
  pybind11-vendor = self.callPackage ./pybind11-vendor {};
 

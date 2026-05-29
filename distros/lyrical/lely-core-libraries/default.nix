@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, autoconf, automake, git, libtool, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-lely-core-libraries";
-  version = "0.3.2-r3";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/lyrical/lely_core_libraries/0.3.2-3.tar.gz";
-    name = "0.3.2-3.tar.gz";
-    sha256 = "83e4ccc9c452129a0a857f993d07748a47a5e53eb21b5097e4abe7526204182b";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/lyrical/lely_core_libraries/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "0a99e8e1c6f8e0d01bf9537d4d0db2e5adec15c3685e03cc254be7bce59075d3";
   };
 
   buildType = "ament_cmake";

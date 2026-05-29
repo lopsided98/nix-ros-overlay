@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bluez, boost, cmake, dbus, gtest, libusb1, openssl, python3, python3Packages, zlib }:
 buildRosPackage {
   pname = "ros-rolling-robotraconteur";
-  version = "1.2.7-r3";
+  version = "1.2.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robotraconteur-release/archive/release/rolling/robotraconteur/1.2.7-3.tar.gz";
-    name = "1.2.7-3.tar.gz";
-    sha256 = "71c6a90810a41deaba858dbf903c4edca2118e76efd9e41796ac128cbca919a1";
+    url = "https://github.com/ros2-gbp/robotraconteur-release/archive/release/rolling/robotraconteur/1.2.8-1.tar.gz";
+    name = "1.2.8-1.tar.gz";
+    sha256 = "1b97ae814c3dfad7530d0942954f1592d57f800d14c889432bdf882ea35dbabb";
   };
 
   buildType = "cmake";

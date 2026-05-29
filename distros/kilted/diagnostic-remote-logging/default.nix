@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, curl, diagnostic-msgs, rclcpp-components }:
 buildRosPackage {
   pname = "ros-kilted-diagnostic-remote-logging";
-  version = "4.3.6-r1";
+  version = "4.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/kilted/diagnostic_remote_logging/4.3.6-1.tar.gz";
-    name = "4.3.6-1.tar.gz";
-    sha256 = "7046344094841a82dd4fe5e6bc834594dc319d9c632dfc15597c32cf61404ef3";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/kilted/diagnostic_remote_logging/4.3.7-1.tar.gz";
+    name = "4.3.7-1.tar.gz";
+    sha256 = "6fc2f9806701dde81c6becf5ba0ab09975011de700169ff81c332cc760e72136";
   };
 
   buildType = "ament_cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "diagnostic_remote_logging";
+    description = "Tools for remotely logging diagnostics data.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

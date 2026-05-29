@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-python, ament-cmake-ros, pluginlib, point-cloud-transport, pybind11-vendor, python3, rclcpp, rpyutils, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-point-cloud-transport-py";
-  version = "5.1.6-r1";
+  version = "5.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport-release/archive/release/kilted/point_cloud_transport_py/5.1.6-1.tar.gz";
-    name = "5.1.6-1.tar.gz";
-    sha256 = "6b1375409fe77d599aa3dc7d11956c459f755c91b7cc9409dbd3f195f0612bb5";
+    url = "https://github.com/ros2-gbp/point_cloud_transport-release/archive/release/kilted/point_cloud_transport_py/5.1.7-1.tar.gz";
+    name = "5.1.7-1.tar.gz";
+    sha256 = "d7379e8f0b6a40c92d03342d95330f2a86b16c2c827f73939890fe2af4c29678";
   };
 
   buildType = "ament_cmake";

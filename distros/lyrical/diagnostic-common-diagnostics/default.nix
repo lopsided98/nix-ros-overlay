@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-pytest, ament-cmake-python, ament-cmake-xmllint, ament-lint-auto, diagnostic-updater, launch-testing-ament-cmake, lm_sensors, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-lyrical-diagnostic-common-diagnostics";
-  version = "4.4.6-r3";
+  version = "4.4.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/lyrical/diagnostic_common_diagnostics/4.4.6-3.tar.gz";
-    name = "4.4.6-3.tar.gz";
-    sha256 = "72a85ca4b75f4e4bc4a626c225768be5a9539f9f6f01344473744f5e61e3c988";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/lyrical/diagnostic_common_diagnostics/4.4.7-1.tar.gz";
+    name = "4.4.7-1.tar.gz";
+    sha256 = "a02a728b45d27ad08e8556b95824b0cfa2a68f82e1fcb8ee8059b91f164b25e9";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
-    description = "diagnostic_common_diagnostics";
+    description = "Common diagnostic functions for e.g. HD or CPU usage.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

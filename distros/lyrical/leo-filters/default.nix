@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-lint-cmake, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, generate-parameter-library, geometry-msgs, nav-msgs, rclcpp, rclcpp-components, sensor-msgs, std-srvs, tf2, tf2-ros, yaml-cpp }:
 buildRosPackage {
   pname = "ros-lyrical-leo-filters";
-  version = "2.5.0-r3";
+  version = "2.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/lyrical/leo_filters/2.5.0-3.tar.gz";
-    name = "2.5.0-3.tar.gz";
-    sha256 = "ceeb38eca96db65611b4716662ed819c910c2b55f0752a9689db065c1bbc228f";
+    url = "https://github.com/ros2-gbp/leo_robot-release/archive/release/lyrical/leo_filters/2.6.1-1.tar.gz";
+    name = "2.6.1-1.tar.gz";
+    sha256 = "2d025435c7afbc2d23c088b562a363d7ba872bfeaefd707d301cdfb02649ae74";
   };
 
   buildType = "ament_cmake";

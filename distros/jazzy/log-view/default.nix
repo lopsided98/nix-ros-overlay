@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ncurses, rcl-interfaces, rclcpp, xclip, yaml-cpp-vendor }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ncurses, rcl-interfaces, rclcpp, rosgraph-msgs, xclip, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-log-view";
-  version = "0.3.3-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/log_view-release/archive/release/jazzy/log_view/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "104f5379404b1572ea8cf97cc320dfabe2000804ecbc7178bb6666d7bccad0a4";
+    url = "https://github.com/ros2-gbp/log_view-release/archive/release/jazzy/log_view/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "ca0ba15c2b952ba500fcfdc2d71f316b26f2abd9db98ca308a1281d6a8d876af";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ncurses rcl-interfaces rclcpp xclip yaml-cpp-vendor ];
+  propagatedBuildInputs = [ ncurses rcl-interfaces rclcpp rosgraph-msgs xclip yaml-cpp-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

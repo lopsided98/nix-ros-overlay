@@ -2,22 +2,22 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_catkin, _unresolved_gps_common, _unresolved_nodelet, _unresolved_rosbag, _unresolved_roscpp, _unresolved_rostest, boost, nav-msgs, nmea-msgs, novatel-oem7-msgs, sensor-msgs, tf2-geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, geographiclib, git, gps-msgs, launch-testing, launch-testing-ament-cmake, launch-testing-ros, nav-msgs, nmea-msgs, novatel-oem7-msgs, pluginlib, rclcpp, rclcpp-components, rclpy, rosbag2, rosidl-runtime-py, sensor-msgs, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-kilted-novatel-oem7-driver";
-  version = "4.3.0-r2";
+  version = "28.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/kilted/novatel_oem7_driver/4.3.0-2.tar.gz";
-    name = "4.3.0-2.tar.gz";
-    sha256 = "f15ee537f8b36ef976c7c34e24c5b46d00b844893e8b30618f8487e3299f2df3";
+    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/kilted/novatel_oem7_driver/28.0.0-1.tar.gz";
+    name = "28.0.0-1.tar.gz";
+    sha256 = "4a844b45ad704b1d64b74f8ca57e68bedc6e33b5d5a3c18eedf8a789d3306ff6";
   };
 
-  buildType = "catkin";
-  buildInputs = [ _unresolved_catkin ];
-  checkInputs = [ _unresolved_rosbag _unresolved_rostest ];
-  propagatedBuildInputs = [ _unresolved_gps_common _unresolved_nodelet _unresolved_roscpp boost nav-msgs nmea-msgs novatel-oem7-msgs sensor-msgs tf2-geometry-msgs ];
-  nativeBuildInputs = [ _unresolved_catkin ];
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake git ];
+  checkInputs = [ launch-testing launch-testing-ament-cmake launch-testing-ros rclpy rosbag2 rosidl-runtime-py ];
+  propagatedBuildInputs = [ geographiclib gps-msgs nav-msgs nmea-msgs novatel-oem7-msgs pluginlib rclcpp rclcpp-components sensor-msgs tf2-geometry-msgs ];
+  nativeBuildInputs = [ ament-cmake git ];
 
   meta = {
     description = "NovAtel Oem7 ROS Driver";

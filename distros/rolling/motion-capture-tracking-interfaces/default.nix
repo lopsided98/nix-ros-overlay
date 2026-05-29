@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-motion-capture-tracking-interfaces";
-  version = "1.0.6-r2";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/motion_capture_tracking-release/archive/release/rolling/motion_capture_tracking_interfaces/1.0.6-2.tar.gz";
-    name = "1.0.6-2.tar.gz";
-    sha256 = "2c0f05cc46822706c1c3daef3b0e89de4adcfc43d8f47fd4f100eab9ca3d4b99";
+    url = "https://github.com/ros2-gbp/motion_capture_tracking-release/archive/release/rolling/motion_capture_tracking_interfaces/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "a9aaebcd9753586654e414d8ee848aef6318d873fe1b68ab578f8699c062bf0d";
   };
 
   buildType = "ament_cmake";

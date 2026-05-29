@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_catkin, _unresolved_message_generation, _unresolved_message_runtime, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-novatel-oem7-msgs";
-  version = "4.3.0-r2";
+  version = "28.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/kilted/novatel_oem7_msgs/4.3.0-2.tar.gz";
-    name = "4.3.0-2.tar.gz";
-    sha256 = "59612f8767e47f5111f7c0c466c99a8d9f64a3b67d28b4a95fd3b7351fed7fd5";
+    url = "https://github.com/novatel-gbp/novatel_oem7_driver-release/archive/release/kilted/novatel_oem7_msgs/28.0.0-1.tar.gz";
+    name = "28.0.0-1.tar.gz";
+    sha256 = "5f8f7d2844c15c7b591ae8fb2bafb3483e5f26a5aaf211542e33ed0605c5fc98";
   };
 
-  buildType = "catkin";
-  buildInputs = [ _unresolved_catkin _unresolved_message_generation ];
-  propagatedBuildInputs = [ _unresolved_message_runtime std-msgs ];
-  nativeBuildInputs = [ _unresolved_catkin ];
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake rosidl-default-generators ];
+  propagatedBuildInputs = [ rosidl-default-runtime std-msgs ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = "Messages for NovAtel Oem7 family of receivers.";

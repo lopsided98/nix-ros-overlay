@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-rosbridge-test-msgs";
-  version = "4.1.0-r3";
+  version = "4.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/lyrical/rosbridge_test_msgs/4.1.0-3.tar.gz";
-    name = "4.1.0-3.tar.gz";
-    sha256 = "b97bc10d4d6bbbfff139e9d2a12ab552cda8707e15c12a7245d7bbc183214aa2";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/lyrical/rosbridge_test_msgs/4.2.0-1.tar.gz";
+    name = "4.2.0-1.tar.gz";
+    sha256 = "1df0a3d04ff07ba484715cb2f6270264669458ed44f1897df8cb782396800217";
   };
 
   buildType = "ament_cmake";

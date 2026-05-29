@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, ffmpeg, image-transport, live555-vendor, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-rtsp-image-transport";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rtsp_image_transport-release/archive/release/jazzy/rtsp_image_transport/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "3dd26b383fc4295e8b0ba715d36a691f2e556d672a02b4acd076cae746be2ad9";
+    url = "https://github.com/ros2-gbp/rtsp_image_transport-release/archive/release/jazzy/rtsp_image_transport/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "ba4eda917a014fbc54b35c8a172c119610eadda7fe8fc9e2ba0e10d7d635b951";
   };
 
   buildType = "ament_cmake";

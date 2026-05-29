@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, boost, canopen-core, canopen-interfaces, diagnostic-updater, lely-core-libraries, rclcpp, rclcpp-components, rclcpp-lifecycle, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-lyrical-canopen-base-driver";
-  version = "0.3.2-r3";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/lyrical/canopen_base_driver/0.3.2-3.tar.gz";
-    name = "0.3.2-3.tar.gz";
-    sha256 = "6ce9ef13576daa1742dcebaa55b5ae731f676df1883c6a08955b741d7fbe9ce9";
+    url = "https://github.com/ros2-gbp/ros2_canopen-release/archive/release/lyrical/canopen_base_driver/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "73bb7d08fdecf14df13684c05e94580894e5847ec615a621fb508daefc5425ea";
   };
 
   buildType = "ament_cmake";

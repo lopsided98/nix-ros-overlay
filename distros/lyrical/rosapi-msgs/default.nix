@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-lyrical-rosapi-msgs";
-  version = "4.1.0-r3";
+  version = "4.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/lyrical/rosapi_msgs/4.1.0-3.tar.gz";
-    name = "4.1.0-3.tar.gz";
-    sha256 = "4d9a0f6a66e108fe6928d13cdf6b8ca65a793ff86ad28acf4f8d0201bd34dfd6";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/lyrical/rosapi_msgs/4.2.0-1.tar.gz";
+    name = "4.2.0-1.tar.gz";
+    sha256 = "174ce2a53c17d27d54a9cc47317b967d1df0c0fafafa79087dc971cf5b500ab6";
   };
 
   buildType = "ament_cmake";

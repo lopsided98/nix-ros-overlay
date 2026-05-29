@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, camera-calibration-parsers, camera-info-manager, image-transport }:
 buildRosPackage {
   pname = "ros-kilted-image-common";
-  version = "6.1.3-r1";
+  version = "6.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/kilted/image_common/6.1.3-1.tar.gz";
-    name = "6.1.3-1.tar.gz";
-    sha256 = "cf883e9490174e44144b912d4373720756023ece904282bfe34f41da485eda53";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/kilted/image_common/6.1.4-1.tar.gz";
+    name = "6.1.4-1.tar.gz";
+    sha256 = "0755e5166259e5f9f239468e1a6d1ee8358aef400c270286bbf0c8028c7a38dc";
   };
 
   buildType = "ament_cmake";

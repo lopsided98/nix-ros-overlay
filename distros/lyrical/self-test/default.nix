@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, diagnostic-msgs, diagnostic-updater, rclcpp, ros-environment }:
 buildRosPackage {
   pname = "ros-lyrical-self-test";
-  version = "4.4.6-r3";
+  version = "4.4.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/lyrical/self_test/4.4.6-3.tar.gz";
-    name = "4.4.6-3.tar.gz";
-    sha256 = "a89f0aae2a7b3d7c8bb52c22441777a4adf705f69424cd994937347e74d1670e";
+    url = "https://github.com/ros2-gbp/diagnostics-release/archive/release/lyrical/self_test/4.4.7-1.tar.gz";
+    name = "4.4.7-1.tar.gz";
+    sha256 = "760f3fa7ce28c43b5e0991fc3e14b7c7ca3a7630e6c8ad7b39703985cb4d8f1c";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "self_test";
+    description = "Self-test tools for diagnostics.";
     license = with lib.licenses; [ bsd3 ];
   };
 }

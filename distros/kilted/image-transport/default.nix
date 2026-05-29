@@ -2,22 +2,22 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, message-filters, pluginlib, rclcpp, rclcpp-components, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, message-filters, pluginlib, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-image-transport";
-  version = "6.1.3-r1";
+  version = "6.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/kilted/image_transport/6.1.3-1.tar.gz";
-    name = "6.1.3-1.tar.gz";
-    sha256 = "cdb9d7682dbdd924452f3005c5bb0ad1e5df33385b3bb67f7e9a9c084e8b3f11";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/kilted/image_transport/6.1.4-1.tar.gz";
+    name = "6.1.4-1.tar.gz";
+    sha256 = "9b5508ef0809d25bc15cf5eb8065de8ae12e08309280688e117b4f5fb1722697";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-ros ];
+  buildInputs = [ ament-cmake-gen-version-h ament-cmake-ros ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ message-filters pluginlib rclcpp rclcpp-components sensor-msgs ];
-  nativeBuildInputs = [ ament-cmake-ros ];
+  nativeBuildInputs = [ ament-cmake-gen-version-h ament-cmake-ros ];
 
   meta = {
     description = "image_transport should always be used to subscribe to and publish images. It provides transparent
