@@ -261,6 +261,14 @@ with rosSelf.lib; {
       # Don't try to install to $HOME
       substituteInPlace tools/realsense-viewer/CMakeLists.txt \
         --replace-fail '$ENV{HOME}/Documents/librealsense2/presets' ''\'''${CMAKE_INSTALL_PREFIX}/share/librealsense2/presets'
+      substituteInPlace CMake/external_fastcdr.cmake \
+        --replace-fail ''\'''${CMAKE_BINARY_DIR}/third-party/fastcdr' '${fetchTarball {
+          url = "https://github.com/eProsima/Fast-CDR/archive/refs/tags/v1.0.25.tar.gz";
+          sha256 = "sha256:14v85zj5b5fnswhkpps09jk68w6miad8zbhlp625d2kj0yfw4cyp";
+        }}'
+      # If the command below fails, update the above command!
+      substituteInPlace CMake/external_fastcdr.cmake \
+        --replace-fail '--branch v1.0.25' 'see the comment'
     '';
   });
 
