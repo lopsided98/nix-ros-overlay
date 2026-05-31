@@ -311,6 +311,27 @@ in {
     };
   });
 
+  librealsense2 = (lib.patchExternalProjectGit rosSuper.librealsense2 {
+    file = "CMake/external_libcurl.cmake";
+    originalUrl = ''"https://github.com/curl/curl.git"'';
+    url = "https://github.com/curl/curl.git";
+    originalRev = ''"curl-8_8_0"'';
+    rev = "curl-8_8_0";
+    fetchgitArgs.hash = "sha256-MjB6k8mDJypyuh6BN2hxy2My7/DfImjw+5iI729snBg=";
+  }).overrideAttrs ({
+    buildInputs ? [], postPatch ? "", ...
+  }: {
+    buildInputs = buildInputs ++ [ self.nlohmann_json ];
+    postPatch = postPatch + ''
+      # Get rid of nlohmann_json vendoring
+      substituteInPlace third-party/CMakeLists.txt \
+        --replace-fail 'include(CMake/external_json.cmake)' ""
+      # Don't try to install to $HOME
+      substituteInPlace tools/realsense-viewer/CMakeLists.txt \
+        --replace-fail '$ENV{HOME}/Documents/librealsense2/presets' ''\'''${CMAKE_INSTALL_PREFIX}/share/librealsense2/presets'
+    '';
+  });
+
   libphidget22 = lib.patchVendorUrl rosSuper.libphidget22 {
     url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.19.20240304.tar.gz";
     hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
