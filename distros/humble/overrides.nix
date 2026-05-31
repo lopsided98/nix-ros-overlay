@@ -1162,6 +1162,19 @@ in with lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
   });
 
+  rosgraph-monitor = rosSuper.rosgraph-monitor.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # https://github.com/ros-tooling/graph-monitor/pull/51
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-tooling/graph-monitor/commit/c01089650d008fbe140e90ba14bfd3d5c143b24b.patch?full_index=1";
+        hash = "sha256-UJ8k/3Y+FqjQg4rR8Dt0Q8+JsMQN9Hyht1mob5N3m4M=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({
     postPatch ? "", ...
   }: let
