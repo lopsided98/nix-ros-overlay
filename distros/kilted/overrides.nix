@@ -682,6 +682,18 @@ in {
     ];
   });
 
+  pybind11-json-vendor = lib.patchAmentVendorGit rosSuper.pybind11-json-vendor {
+    patchesFor.pybind11_json_vendor = [
+      (self.writeText "cmakelist.patch" ''
+        --- a/CMakeLists.txt
+        +++ b/CMakeLists.txt
+        @@ -1,1 +1,1 @@
+        -cmake_minimum_required(VERSION 3.4.3)
+        +cmake_minimum_required(VERSION 3.10)
+      '')
+    ];
+  };
+
   rcdiscover = rosSuper.rcdiscover.overrideAttrs ({
     postPatch ? "", ...
   }: {
