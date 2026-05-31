@@ -243,52 +243,6 @@ with rosSelf.lib; {
     nativeBuildInputs = nativeBuildInputs ++ [ self.ninja ];
   });
 
-  librealsense2 = (pipe rosSuper.librealsense2 [
-    (pkg: patchExternalProjectGit pkg {
-      file = "CMake/external_libcurl.cmake";
-      originalUrl = ''"https://github.com/curl/curl.git"'';
-      url = "https://github.com/curl/curl.git";
-      originalRev = ''"curl-8_8_0"'';
-      rev = "curl-8_8_0";
-      fetchgitArgs.hash = "sha256-MjB6k8mDJypyuh6BN2hxy2My7/DfImjw+5iI729snBg=";
-    })
-    (pkg: patchVendorUrl pkg {
-      file = "CMake/external_sqlite3.cmake";
-      url = "https://sqlite.org/2025/sqlite-amalgamation-3490100.zip";
-      hash = "sha256-bOvR2EA/xYww6Tk5skbz5uWNB2WlzVBUbxbAD9gF0sM=";
-    })
-    (pkg: patchExternalProjectGit pkg {
-      file = "CMake/external_yaml_cpp.cmake";
-      url = "https://github.com/jbeder/yaml-cpp.git";
-      rev = "yaml-cpp-0.7.0";
-      fetchgitArgs.hash = "sha256-2tFWccifn0c2lU/U1WNg2FHrBohjx8CXMllPJCevaNk=";
-    })
-  ]).overrideAttrs ({
-    buildInputs ? [], postPatch ? "", ...
-  }: {
-    buildInputs = buildInputs ++ [ self.nlohmann_json ];
-    postPatch = postPatch + ''
-      # Get rid of nlohmann_json vendoring
-      substituteInPlace third-party/CMakeLists.txt \
-        --replace-fail 'include(CMake/external_json.cmake)' ""
-      # Don't try to install to $HOME
-      substituteInPlace tools/realsense-viewer/CMakeLists.txt \
-        --replace-fail '$ENV{HOME}/Documents/librealsense2/presets' ''\'''${CMAKE_INSTALL_PREFIX}/share/librealsense2/presets'
-      substituteInPlace CMake/external_fastcdr.cmake \
-        --replace-fail ''\'''${CMAKE_BINARY_DIR}/third-party/fastcdr' '${fetchTarball {
-          url = "https://github.com/eProsima/Fast-CDR/archive/refs/tags/v1.0.25.tar.gz";
-          sha256 = "sha256:14v85zj5b5fnswhkpps09jk68w6miad8zbhlp625d2kj0yfw4cyp";
-        }}'
-      # If the command below fails, update the above command!
-      substituteInPlace CMake/external_fastcdr.cmake \
-        --replace-fail '--branch v1.0.25' 'see the comment'
-      # https://github.com/realsenseai/librealsense/issues/15120#issuecomment-4586244495
-      substituteInPlace third-party/realsense-file/CMakeLists.txt \
-        --replace-fail '$<$<COMPILE_LANGUAGE:C>:-include stdint.h>' ""
-    '';
-  });
-
-
   # Fix for loading the default plugins for the `move-group` executable.
   #
   # Essentially the executable tries to dynamically load the capabilites .so to
