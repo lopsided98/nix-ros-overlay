@@ -1079,6 +1079,20 @@ in with lib; {
     ];
   });
 
+  pybind11-json-vendor = (patchExternalProjectGit rosSuper.pybind11-json-vendor {
+    url = "https://github.com/pybind/pybind11_json.git";
+    originalRev = "\${pybind11_json_version}";
+    rev = "0fbbe3bbb27bd07a5ec7d71cbb1f17eaf4d37702";
+    fetchgitArgs.hash = "sha256-GQldzT1YU6I1s1RFfzNIJNaIY/LsrsTevoaUoz1SK+Y=";
+  }).overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        'UPDATE_COMMAND ""' 'UPDATE_COMMAND ""'$'\n'"PATCH_COMMAND sed -i -e \"s|cmake_minimum_required(VERSION 3.4.3)|cmake_minimum_required(VERSION 3.10)|\" CMakeLists.txt"
+    '';
+  });
+
   python-qt-binding = rosSuper.python-qt-binding.overrideAttrs ({
     patches ? [], ...
   }: {
