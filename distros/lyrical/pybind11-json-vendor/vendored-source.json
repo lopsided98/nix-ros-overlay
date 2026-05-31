@@ -1,0 +1,7 @@
+{
+  "pybind11_json_vendor": {
+    "url": "https://github.com/pybind/pybind11_json.git",
+    "rev": "0.2.15",
+    "hash": "sha256-e9mBvSg8mIuYO1x2yJhejY3iP0TPIiQXwzxy5asf9tk="
+  }
+}
