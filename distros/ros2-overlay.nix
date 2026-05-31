@@ -282,6 +282,9 @@ with rosSelf.lib; {
       # If the command below fails, update the above command!
       substituteInPlace CMake/external_fastcdr.cmake \
         --replace-fail '--branch v1.0.25' 'see the comment'
+      # https://github.com/realsenseai/librealsense/issues/15120#issuecomment-4586244495
+      substituteInPlace third-party/realsense-file/CMakeLists.txt \
+        --replace-fail '$<$<COMPILE_LANGUAGE:C>:-include stdint.h>' ""
     '';
   });
 
