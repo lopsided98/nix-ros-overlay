@@ -125,13 +125,18 @@ let
     });
 
     mavlink = rosSuper.mavlink.overrideAttrs ({
-      postPatch ? "", ...
+      postPatch ? "", buildInputs ? [], ...
     }: {
       postPatch = postPatch + ''
         substituteInPlace CMakeLists.txt --replace-fail /usr/bin/env '${self.buildPackages.coreutils}/bin/env'
         patchShebangs pymavlink/tools/mavgen.py
       '';
       ROS_PYTHON_VERSION = if rosSelf.python.isPy3k then 3 else 2;
+      # Fix eval failure. The future module is broken with Python
+      # 3.13+, but mavlink does not need it despite declaring it as
+      # dependency.
+      # See https://github.com/lopsided98/nix-ros-overlay/pull/877#issuecomment-4729142031
+      buildInputs = builtins.filter (p: p.pname != "future") buildInputs;
     });
 
     mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
