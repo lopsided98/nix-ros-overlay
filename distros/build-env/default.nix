@@ -112,5 +112,19 @@ let
         '';
       };
     };
-  }));
+  })).overrideAttrs ({ buildCommand, ...}: {
+    # Hack to execute buildPhase and fixupPhase instead of just
+    # buildCommand provided by nixpkgs buildEnv. We need fixupPhase
+    # for shell hooks to set ROS env. variables and for input
+    # propagation.
+    buildCommand = null;
+    oldBuildCommand = buildCommand;
+    buildPhase = ''
+      . $NIX_ATTRS_SH_FILE
+      runHook preBuild
+      eval "$oldBuildCommand"
+      runHook postBuild
+    '';
+    phases = [ "buildPhase" "fixupPhase" ];
+  });
 in env
