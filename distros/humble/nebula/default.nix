@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nebula-continental, nebula-hesai, nebula-robosense, nebula-velodyne }:
 buildRosPackage {
   pname = "ros-humble-nebula";
-  version = "1.0.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "1fe02393714cbf0a98464576a74842afca5613d86b3a73ea75f6b7e438f774b2";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "1f2d3d2d9148ca2074ce20c78d54895106d5c347c8d42f0ee30b6f2f7a93c892";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, gps-msgs, nav-msgs, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-gps-tools";
-  version = "2.1.2-r3";
+  version = "2.1.2-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/lyrical/gps_tools/2.1.2-3.tar.gz";
-    name = "2.1.2-3.tar.gz";
-    sha256 = "2d7b24e80557a9217b14bcffe9595d4baa2a686c61b8adda9a7e16edb43abb2e";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/lyrical/gps_tools/2.1.2-4.tar.gz";
+    name = "2.1.2-4.tar.gz";
+    sha256 = "0868a5d933c8e5c00f8667e580a50876d756ad5fb6f1e94082404eb53a89692f";
   };
 
   buildType = "ament_cmake";

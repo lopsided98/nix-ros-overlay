@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-vendor-package, ament-lint-auto, ament-lint-common, libyaml, performance-test-fixture, pkg-config }:
 buildRosPackage {
   pname = "ros-jazzy-libyaml-vendor";
-  version = "1.6.3-r2";
+  version = "1.6.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/libyaml_vendor-release/archive/release/jazzy/libyaml_vendor/1.6.3-2.tar.gz";
-    name = "1.6.3-2.tar.gz";
-    sha256 = "39f0b4e188f64d98e5911530792200c10e6f6fb03dc0707d4b77a67c3984800a";
+    url = "https://github.com/ros2-gbp/libyaml_vendor-release/archive/release/jazzy/libyaml_vendor/1.6.4-2.tar.gz";
+    name = "1.6.4-2.tar.gz";
+    sha256 = "2f99d6b24d015e2501bd15a952a6e32f6b4bdae72b3befbd861f671733eb4e65";
   };
 
   buildType = "ament_cmake";

@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cmake }:
+{ lib, buildRosPackage, fetchurl, cmake, gtest }:
 buildRosPackage {
   pname = "ros-lyrical-fastcdr";
-  version = "2.3.5-r3";
+  version = "2.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastcdr-release/archive/release/lyrical/fastcdr/2.3.5-3.tar.gz";
-    name = "2.3.5-3.tar.gz";
-    sha256 = "22fe20e8b25dc38f7d5574a1df39590d79f48472f5f4149f2fa04ed1a9625841";
+    url = "https://github.com/ros2-gbp/fastcdr-release/archive/release/lyrical/fastcdr/2.3.6-1.tar.gz";
+    name = "2.3.6-1.tar.gz";
+    sha256 = "c5891a5df3c00e92b8788db46263e3bcabd2949cd87200bed9033a3dcf2ea357";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  checkInputs = [ ament-cmake ament-cmake-gtest ];
+  checkInputs = [ gtest ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

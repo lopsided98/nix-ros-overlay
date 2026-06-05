@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, boost, diagnostic-msgs, diagnostic-updater, gps-msgs, libpcap, nav-msgs, novatel-gps-msgs, rclcpp, rclcpp-components, sensor-msgs, std-msgs, swri-math-util, swri-roscpp, swri-serial-util, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-kilted-novatel-gps-driver";
-  version = "4.2.0-r5";
+  version = "4.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/novatel_gps_driver-release/archive/release/kilted/novatel_gps_driver/4.2.0-5.tar.gz";
-    name = "4.2.0-5.tar.gz";
-    sha256 = "ca5ef3cfd845162ff0ca8f363078998086879eafa5fb48bd7be1f56c497ac958";
+    url = "https://github.com/ros2-gbp/novatel_gps_driver-release/archive/release/kilted/novatel_gps_driver/4.3.0-1.tar.gz";
+    name = "4.3.0-1.tar.gz";
+    sha256 = "9142e8fd6931e5f687c29425902ab210f6eec15feda06a4b64af1ca7acff0f51";
   };
 
   buildType = "ament_cmake";

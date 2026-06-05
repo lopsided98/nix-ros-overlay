@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-jazzy-rcdiscover";
-  version = "1.1.7-r2";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcdiscover-release/archive/release/jazzy/rcdiscover/1.1.7-2.tar.gz";
-    name = "1.1.7-2.tar.gz";
-    sha256 = "9100a08246bb764f3ae0464274976cdf828da1460bda58948040200ee83724e9";
+    url = "https://github.com/ros2-gbp/rcdiscover-release/archive/release/jazzy/rcdiscover/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "63b677a39da9fb2f95bfe0df2a1c5366e0f98e99970d3f8181a2df4b750da858";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-lyrical-rcdiscover";
-  version = "1.1.7-r3";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcdiscover-release/archive/release/lyrical/rcdiscover/1.1.7-3.tar.gz";
-    name = "1.1.7-3.tar.gz";
-    sha256 = "8d4e77e9f7c1e90e9cbeaf62d1156aa8d197d5b06cd1aa9b2657249bd8e5348e";
+    url = "https://github.com/ros2-gbp/rcdiscover-release/archive/release/lyrical/rcdiscover/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "d2cc0fcced975272f84eae1270c1231b52ca08dc9ee6221cd619bc0f1c1c10bb";
   };
 
   buildType = "cmake";

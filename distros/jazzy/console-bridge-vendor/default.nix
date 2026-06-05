@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-lint-auto, ament-lint-common, console-bridge, performance-test-fixture }:
 buildRosPackage {
   pname = "ros-jazzy-console-bridge-vendor";
-  version = "1.7.1-r3";
+  version = "1.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/console_bridge_vendor-release/archive/release/jazzy/console_bridge_vendor/1.7.1-3.tar.gz";
-    name = "1.7.1-3.tar.gz";
-    sha256 = "3331c618cf351f15480d2090374647b5b842a4e42b6e565d080c5caa35b3987b";
+    url = "https://github.com/ros2-gbp/console_bridge_vendor-release/archive/release/jazzy/console_bridge_vendor/1.7.2-1.tar.gz";
+    name = "1.7.2-1.tar.gz";
+    sha256 = "45819ea2807982fc81b22fa0cb85ba05860c2c814e9477bf4ee95a8f7e7b405b";
   };
 
   buildType = "ament_cmake";

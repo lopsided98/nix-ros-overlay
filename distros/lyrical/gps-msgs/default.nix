@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-gps-msgs";
-  version = "2.1.2-r3";
+  version = "2.1.2-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/lyrical/gps_msgs/2.1.2-3.tar.gz";
-    name = "2.1.2-3.tar.gz";
-    sha256 = "24ae49e3dbfd29d417edc5e2438f2d716af96ae1707bc84b7e17ec2708d3353a";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/lyrical/gps_msgs/2.1.2-4.tar.gz";
+    name = "2.1.2-4.tar.gz";
+    sha256 = "ed51b31ca52bad4d8f8bac1b178d1ec2200cbfbe573d6fc455bd24af026bd7e8";
   };
 
   buildType = "ament_cmake";

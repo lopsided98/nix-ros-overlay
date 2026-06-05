@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-lyrical-swri-dbw-interface";
-  version = "3.8.7-r3";
+  version = "3.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/lyrical/swri_dbw_interface/3.8.7-3.tar.gz";
-    name = "3.8.7-3.tar.gz";
-    sha256 = "cd44e97c9e723790889dd39236b7cb76c828e5776ba782fd27fb2c5f853408bd";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/lyrical/swri_dbw_interface/3.9.0-1.tar.gz";
+    name = "3.9.0-1.tar.gz";
+    sha256 = "e54ce73c410728007e6021180d7c3583c8beba9ea4b84f074f29018932074ecd";
   };
 
   buildType = "ament_cmake";

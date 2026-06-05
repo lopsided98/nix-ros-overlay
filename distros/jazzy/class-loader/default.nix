@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, console-bridge, console-bridge-vendor, rcpputils }:
 buildRosPackage {
   pname = "ros-jazzy-class-loader";
-  version = "2.7.0-r3";
+  version = "2.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/jazzy/class_loader/2.7.0-3.tar.gz";
-    name = "2.7.0-3.tar.gz";
-    sha256 = "87166eb87b5c9b1dd52b53108a70153ac0b3301141fc7b01ebf1641ce8dc6d43";
+    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/jazzy/class_loader/2.7.1-1.tar.gz";
+    name = "2.7.1-1.tar.gz";
+    sha256 = "1f4f508fc7497ff7f0676983508e7b15658bc9906149be54540353b58b8cb249";
   };
 
   buildType = "ament_cmake";

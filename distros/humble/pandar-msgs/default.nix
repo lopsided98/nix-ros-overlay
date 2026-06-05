@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-pandar-msgs";
-  version = "1.0.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/pandar_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "1f200959b9abe2246a7e80373c9ca1f41904d9b18b6f1802c2472ffdb05a3d1d";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/pandar_msgs/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "2e1b862c6d7e2870b7e740c2d402dc408f253b4b2bb7f048456fdaf5c57daa41";
   };
 
   buildType = "ament_cmake";

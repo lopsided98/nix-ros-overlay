@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, kdl-parser, launch-ros, launch-testing-ament-cmake, orocos-kdl-vendor, rcl-interfaces, rclcpp, rclcpp-components, sensor-msgs, std-msgs, tf2-ros, urdf }:
 buildRosPackage {
   pname = "ros-jazzy-robot-state-publisher";
-  version = "3.3.3-r3";
+  version = "3.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/jazzy/robot_state_publisher/3.3.3-3.tar.gz";
-    name = "3.3.3-3.tar.gz";
-    sha256 = "7d511eafdc1731691676e1740212a70f6050d1c3993ac16748741e3691fd180b";
+    url = "https://github.com/ros2-gbp/robot_state_publisher-release/archive/release/jazzy/robot_state_publisher/3.3.4-1.tar.gz";
+    name = "3.3.4-1.tar.gz";
+    sha256 = "e1092215ce536705f201e4a0b70f0de4f4684ed2270d5e2ee1afa1e3222d86dc";
   };
 
   buildType = "ament_cmake";

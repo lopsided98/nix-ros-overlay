@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-lint-auto, autoware-cmake, boost, eigen, libpng, nebula-core-common, pngpp, ros-environment, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-nebula-core-decoders";
-  version = "1.0.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_core_decoders/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "c3eeb37786ac950e01bdf064747df672323626e1f47ecd845e07afd2b86273a5";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_core_decoders/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "db7dcce7f78330505a9b00bac6b2336dc2b8182f185258444058fa7650b16e03";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, mapviz, pluginlib, qt5, rclcpp, rclpy, swri-math-util, swri-transform-util, tf2 }:
 buildRosPackage {
   pname = "ros-jazzy-multires-image";
-  version = "2.6.4-r1";
+  version = "2.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/jazzy/multires_image/2.6.4-1.tar.gz";
-    name = "2.6.4-1.tar.gz";
-    sha256 = "d380be0ead98e354080e1a8101f429f614cd13fc78c9fd1d81505e610cb2f2b9";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/jazzy/multires_image/2.6.5-1.tar.gz";
+    name = "2.6.5-1.tar.gz";
+    sha256 = "243f0de5d2a16d4895d1707558f11b15b25b0faa1b7bfb2d620c154e9293ce5f";
   };
 
   buildType = "ament_cmake";

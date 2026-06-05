@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bzip2, cmake, doxygen, eigen, gsl, libjpeg, liblapack, libpng, libv4l, libx11, libxml2, llvmPackages, nlohmann_json, openblas, opencv, zbar }:
 buildRosPackage {
   pname = "ros-humble-visp";
-  version = "3.7.0-r7";
+  version = "3.7.0-r8";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/visp-release/archive/release/humble/visp/3.7.0-7.tar.gz";
-    name = "3.7.0-7.tar.gz";
-    sha256 = "6dc5817fa4051501ddfbe0a6cb622fae06af73105f16a4a15aeac2c11f123b76";
+    url = "https://github.com/ros2-gbp/visp-release/archive/release/humble/visp/3.7.0-8.tar.gz";
+    name = "3.7.0-8.tar.gz";
+    sha256 = "310a214606f97accba97b4aeb92b1b4870fe1134cd60414f8084f132ca765045";
   };
 
   buildType = "cmake";

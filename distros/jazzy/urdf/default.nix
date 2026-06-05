@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-google-benchmark, ament-cmake-ros, ament-lint-auto, ament-lint-common, pluginlib, tinyxml2-vendor, urdf-parser-plugin, urdfdom, urdfdom-headers }:
 buildRosPackage {
   pname = "ros-jazzy-urdf";
-  version = "2.10.0-r3";
+  version = "2.10.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/urdf-release/archive/release/jazzy/urdf/2.10.0-3.tar.gz";
-    name = "2.10.0-3.tar.gz";
-    sha256 = "0cd0fb2d61b11905257bc73467f162afce38316f907708460b9c063e1750c972";
+    url = "https://github.com/ros2-gbp/urdf-release/archive/release/jazzy/urdf/2.10.1-2.tar.gz";
+    name = "2.10.1-2.tar.gz";
+    sha256 = "3f8761fecfd4be6cd153580cd1d6631dee2e4df2066e8034feb22eba9bc8c1da";
   };
 
   buildType = "ament_cmake";

@@ -2100,6 +2100,20 @@ self: super: {
 
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
 
+ roboplan = self.callPackage ./roboplan {};
+
+ roboplan-example-models = self.callPackage ./roboplan-example-models {};
+
+ roboplan-examples = self.callPackage ./roboplan-examples {};
+
+ roboplan-oink = self.callPackage ./roboplan-oink {};
+
+ roboplan-rrt = self.callPackage ./roboplan-rrt {};
+
+ roboplan-simple-ik = self.callPackage ./roboplan-simple-ik {};
+
+ roboplan-toppra = self.callPackage ./roboplan-toppra {};
+
  robot-arm-demo = self.callPackage ./robot-arm-demo {};
 
  robot-calibration = self.callPackage ./robot-calibration {};

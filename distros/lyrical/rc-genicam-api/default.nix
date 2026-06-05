@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, libpng, libusb1, ncurses }:
 buildRosPackage {
   pname = "ros-lyrical-rc-genicam-api";
-  version = "2.8.1-r3";
+  version = "2.8.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_genicam_api-release/archive/release/lyrical/rc_genicam_api/2.8.1-3.tar.gz";
-    name = "2.8.1-3.tar.gz";
-    sha256 = "725473e3080dea7b9e7407b25efd45987fc4fd2ba2c066f65c7e367cfb6ccf16";
+    url = "https://github.com/ros2-gbp/rc_genicam_api-release/archive/release/lyrical/rc_genicam_api/2.8.6-1.tar.gz";
+    name = "2.8.6-1.tar.gz";
+    sha256 = "8893fced64c8e4ce80aef7adf2101da4228c4641d4fe425c5489f5995480ea61";
   };
 
   buildType = "cmake";

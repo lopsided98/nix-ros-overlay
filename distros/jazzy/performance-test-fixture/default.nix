@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-export-dependencies, ament-cmake-export-targets, ament-cmake-google-benchmark, ament-cmake-test, ament-lint-auto, ament-lint-common, google-benchmark-vendor, osrf-testing-tools-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-performance-test-fixture";
-  version = "0.2.1-r2";
+  version = "0.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/performance_test_fixture-release/archive/release/jazzy/performance_test_fixture/0.2.1-2.tar.gz";
-    name = "0.2.1-2.tar.gz";
-    sha256 = "11712323a634d344a1d4010b4508126b4dc5f2936dc393932a0436b0becf23bb";
+    url = "https://github.com/ros2-gbp/performance_test_fixture-release/archive/release/jazzy/performance_test_fixture/0.2.2-1.tar.gz";
+    name = "0.2.2-1.tar.gz";
+    sha256 = "5c016692c293522a5374b8578302f194f4b099e43f49aef68831a23fae3b6840";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, ament-pep257, launch, launch-ros, python3Packages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-topic-monitor";
-  version = "0.33.10-r1";
+  version = "0.33.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/topic_monitor/0.33.10-1.tar.gz";
-    name = "0.33.10-1.tar.gz";
-    sha256 = "2c0eb7910d97acf6de91f0cf62c81fa3e84882504818a9c169851ccb00ff03cd";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/topic_monitor/0.33.11-1.tar.gz";
+    name = "0.33.11-1.tar.gz";
+    sha256 = "32069d1f2f01225a5cc3bb991dcaf7fb2fb0391d447533b36e35f33864310683";
   };
 
   buildType = "ament_python";

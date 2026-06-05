@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, ament-index-cpp, cv-bridge, diagnostic-msgs, diagnostic-updater, geographic-msgs, geographiclib, geometry-msgs, geos, gps-msgs, launch-ros, launch-testing, launch-testing-ament-cmake, marti-nav-msgs, opencv, pkg-config, proj, python3Packages, rcl-interfaces, rclcpp, rclcpp-components, rclpy, sensor-msgs, swri-math-util, swri-roscpp, tf2, tf2-geometry-msgs, tf2-ros, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-lyrical-swri-transform-util";
-  version = "3.8.7-r3";
+  version = "3.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/lyrical/swri_transform_util/3.8.7-3.tar.gz";
-    name = "3.8.7-3.tar.gz";
-    sha256 = "00495e0a766eee63e4a0e91154961c669d9455e7fdbbdb0fc8d4779d07b2601f";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/lyrical/swri_transform_util/3.9.0-1.tar.gz";
+    name = "3.9.0-1.tar.gz";
+    sha256 = "37dd76b3b930e5f72e46cc575ff04ee7b8000aa3cc37e58014eb8ad0f5d460df";
   };
 
   buildType = "ament_cmake";

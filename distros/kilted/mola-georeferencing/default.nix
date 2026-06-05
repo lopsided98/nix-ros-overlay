@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gtsam, mola-common, mola-gtsam-factors, mola-yaml, mp2p-icp, mrpt-libmaps, mrpt-libtclap }:
 buildRosPackage {
   pname = "ros-kilted-mola-georeferencing";
-  version = "2.3.0-r1";
+  version = "2.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/kilted/mola_georeferencing/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "179e07801631b97609def16af16a0c12095873738774a7cbf9589615c72d64aa";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/kilted/mola_georeferencing/2.4.2-1.tar.gz";
+    name = "2.4.2-1.tar.gz";
+    sha256 = "0ab1a7cebfa83d32606e30d65f5e86a34dbd634664e9ac0526b2d7e6c98afa2c";
   };
 
   buildType = "cmake";

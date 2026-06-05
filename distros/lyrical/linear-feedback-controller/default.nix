@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_parameter_traits, ament-cmake-auto, ament-cmake-python, ament-lint-auto, control-toolbox, controller-interface, eigen, fmt, generate-parameter-library, gmock-vendor, gtest-vendor, hardware-interface, jrl-cmakemodules, linear-feedback-controller-msgs, message-filters, nav-msgs, pal-statistics, pinocchio, pluginlib, rcl, rclcpp, rclcpp-lifecycle, realtime-tools, rosidl-dynamic-typesupport, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-python, ament-lint-auto, control-toolbox, controller-interface, eigen, fmt, generate-parameter-library, gmock-vendor, gtest-vendor, hardware-interface, jrl-cmakemodules, linear-feedback-controller-msgs, message-filters, nav-msgs, pal-statistics, pinocchio, pluginlib, rcl, rclcpp, rclcpp-lifecycle, realtime-tools, rosidl-dynamic-typesupport, sensor-msgs, tl-expected-nixpkgs }:
 buildRosPackage {
   pname = "ros-lyrical-linear-feedback-controller";
-  version = "3.2.0-r3";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/linear-feedback-controller-release/archive/release/lyrical/linear_feedback_controller/3.2.0-3.tar.gz";
-    name = "3.2.0-3.tar.gz";
-    sha256 = "ce79a5789f11e346b0809386a13a8176877a0b51a4a1ce0aba0b181c85bad94c";
+    url = "https://github.com/ros2-gbp/linear-feedback-controller-release/archive/release/lyrical/linear_feedback_controller/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "0416fdc4e9deaa63a1090681397d26748b14757d6e82eb235d5ad786e0a5fc05";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ _unresolved_parameter_traits ament-cmake-auto ament-cmake-python fmt jrl-cmakemodules ];
+  buildInputs = [ ament-cmake-auto ament-cmake-python fmt jrl-cmakemodules tl-expected-nixpkgs ];
   checkInputs = [ ament-lint-auto gmock-vendor gtest-vendor ];
   propagatedBuildInputs = [ control-toolbox controller-interface eigen generate-parameter-library hardware-interface linear-feedback-controller-msgs message-filters nav-msgs pal-statistics pinocchio pluginlib rcl rclcpp rclcpp-lifecycle realtime-tools rosidl-dynamic-typesupport sensor-msgs ];
   nativeBuildInputs = [ ament-cmake-auto ament-cmake-python ];

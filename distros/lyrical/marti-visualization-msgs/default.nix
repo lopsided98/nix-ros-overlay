@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-marti-visualization-msgs";
-  version = "1.6.1-r3";
+  version = "1.6.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/lyrical/marti_visualization_msgs/1.6.1-3.tar.gz";
-    name = "1.6.1-3.tar.gz";
-    sha256 = "171bb7b0ddb1233e60bb313512b06d668428996eb81f26a07f2f0d09e5f5a7cf";
+    url = "https://github.com/ros2-gbp/marti_messages-release/archive/release/lyrical/marti_visualization_msgs/1.6.1-4.tar.gz";
+    name = "1.6.1-4.tar.gz";
+    sha256 = "2571eb48424d2382002663f45004526d4463d2fcc0956bb52e5db360e5e75178";
   };
 
   buildType = "ament_cmake";

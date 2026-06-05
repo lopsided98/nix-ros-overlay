@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, builtin-interfaces, marti-common-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-mapviz-interfaces";
-  version = "2.6.4-r1";
+  version = "2.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/kilted/mapviz_interfaces/2.6.4-1.tar.gz";
-    name = "2.6.4-1.tar.gz";
-    sha256 = "4133762bc72b2ab3ef45bb5710db751c849fa5b141e359ed5cca28e1fc970a10";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/kilted/mapviz_interfaces/2.6.5-1.tar.gz";
+    name = "2.6.5-1.tar.gz";
+    sha256 = "aed67ce4d4e9230926e4fcaa71eed67a6a76b01d4ea776f4c80501de813996fc";
   };
 
   buildType = "ament_cmake";

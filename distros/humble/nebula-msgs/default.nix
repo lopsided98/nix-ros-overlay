@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-nebula-msgs";
-  version = "1.0.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "7f872ef4077b7a03b3a86332bf1767bea6f5fc36ce832bb6a47c363685084e80";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_msgs/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "c8b6d5cb2ac4128437624b1b3a2a0985895df4d63cef484433606c9b72720d46";
   };
 
   buildType = "ament_cmake";
