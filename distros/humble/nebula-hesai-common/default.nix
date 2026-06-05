@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, nebula-core-common, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-nebula-hesai-common";
-  version = "1.0.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_hesai_common/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "704efecf7a0330709ba116e3ba2200db36c2fc6e413961552ee9d75eb68bdb89";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_hesai_common/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "b84579fbf0144164b14c05b1a66c9752439197814c5ed47e6de350ed0d24abc5";
   };
 
   buildType = "ament_cmake";

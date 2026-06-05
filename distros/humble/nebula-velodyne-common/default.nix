@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, nebula-core-common, ros-environment, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-nebula-velodyne-common";
-  version = "1.0.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_velodyne_common/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "4bcf583bcd51c62e53ce5faf801bc075d121ad49c82f5bc888d670680917dde1";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_velodyne_common/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "2083e2b839456b411fa635d7b64da62a2cfcb8ee26b22bf604820aca44968e91";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-lint-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-eigen3-cmake-module";
-  version = "0.3.0-r3";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/eigen3_cmake_module-release/archive/release/jazzy/eigen3_cmake_module/0.3.0-3.tar.gz";
-    name = "0.3.0-3.tar.gz";
-    sha256 = "244f4369b354e3acd1f31bd1ad3a99d0f1f3bfe3e3f338bc01fd89b31701920b";
+    url = "https://github.com/ros2-gbp/eigen3_cmake_module-release/archive/release/jazzy/eigen3_cmake_module/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "b8cb77a5024edf07e5a6c2831873372f49de3ef3bf806696765709fd6f469cf2";
   };
 
   buildType = "ament_cmake";

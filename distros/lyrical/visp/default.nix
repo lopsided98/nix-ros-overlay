@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, bzip2, cmake, doxygen, eigen, gsl, libjpeg, liblapack, libpng, libv4l, libx11, libxml2, llvmPackages, nlohmann_json, openblas, opencv, zbar }:
 buildRosPackage {
   pname = "ros-lyrical-visp";
-  version = "3.7.0-r6";
+  version = "3.7.0-r8";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/visp-release/archive/release/lyrical/visp/3.7.0-6.tar.gz";
-    name = "3.7.0-6.tar.gz";
-    sha256 = "650005c87ec13024be813950d7430737944204786eda27b775ffe1efe0cd2036";
+    url = "https://github.com/ros2-gbp/visp-release/archive/release/lyrical/visp/3.7.0-8.tar.gz";
+    name = "3.7.0-8.tar.gz";
+    sha256 = "72f459d6528230167253bcc091b91dac4f7a3c4da1b80046b9631dff88e53217";
   };
 
   buildType = "cmake";

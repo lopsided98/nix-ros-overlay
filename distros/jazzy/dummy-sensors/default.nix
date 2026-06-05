@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-dummy-sensors";
-  version = "0.33.10-r1";
+  version = "0.33.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/dummy_sensors/0.33.10-1.tar.gz";
-    name = "0.33.10-1.tar.gz";
-    sha256 = "f45cd11921d5db5f6dd1e5e6a07a7a2de75007f6eb8bf48970521c8b27d768a1";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/dummy_sensors/0.33.11-1.tar.gz";
+    name = "0.33.11-1.tar.gz";
+    sha256 = "f355c531177b5b087d522d9d7ba9b49884568b9ba79daea6bce654bb5e10d843";
   };
 
   buildType = "ament_cmake";

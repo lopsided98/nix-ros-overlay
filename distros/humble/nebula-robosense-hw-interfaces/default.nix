@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, nebula-core-common, nebula-core-hw-interfaces, nebula-msgs, nebula-robosense-common, robosense-msgs }:
 buildRosPackage {
   pname = "ros-humble-nebula-robosense-hw-interfaces";
-  version = "1.0.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_robosense_hw_interfaces/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "b3baa431c36f343230bb23e576d891e90b13e2fe7fdeb4c37a616342560c5558";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_robosense_hw_interfaces/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "114eaf74aa287258cefb5cd107fd41e7f9c3c0c34ddb1fb686abbc1e1c4a1806";
   };
 
   buildType = "ament_cmake";

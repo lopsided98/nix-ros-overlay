@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, diagnostic-msgs, diagnostic-updater, gtest, marti-common-msgs, nav-msgs, rclcpp, ros-environment, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kilted-swri-roscpp";
-  version = "3.8.9-r1";
+  version = "3.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/kilted/swri_roscpp/3.8.9-1.tar.gz";
-    name = "3.8.9-1.tar.gz";
-    sha256 = "34d51d112e81132f582035122a053f24be59db492b82b7c5d74395943ec86c7a";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/kilted/swri_roscpp/3.9.0-1.tar.gz";
+    name = "3.9.0-1.tar.gz";
+    sha256 = "8e6d53384a86977865f7350755e9ba343f95760b5e20fbad5e006c091d3c5371";
   };
 
   buildType = "ament_cmake";

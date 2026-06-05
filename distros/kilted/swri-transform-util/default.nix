@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, ament-index-cpp, cv-bridge, diagnostic-msgs, diagnostic-updater, geographic-msgs, geographiclib, geometry-msgs, geos, gps-msgs, launch-ros, launch-testing, launch-testing-ament-cmake, marti-nav-msgs, opencv, pkg-config, proj, python3Packages, rcl-interfaces, rclcpp, rclcpp-components, rclpy, sensor-msgs, swri-math-util, swri-roscpp, tf2, tf2-geometry-msgs, tf2-ros, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-kilted-swri-transform-util";
-  version = "3.8.9-r1";
+  version = "3.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/kilted/swri_transform_util/3.8.9-1.tar.gz";
-    name = "3.8.9-1.tar.gz";
-    sha256 = "50850e3938da224f6828d5f74ba3ce5b97a4a51f43d9fcf6471a61dd5ce49ac7";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/kilted/swri_transform_util/3.9.0-1.tar.gz";
+    name = "3.9.0-1.tar.gz";
+    sha256 = "ab5fcde89c3fb8d3799987ec2c40b4ebdbba8746f715b8384c399b6c66928e44";
   };
 
   buildType = "ament_cmake";

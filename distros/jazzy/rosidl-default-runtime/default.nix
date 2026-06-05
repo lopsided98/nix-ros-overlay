@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-core-runtime, service-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rosidl-default-runtime";
-  version = "1.6.0-r3";
+  version = "1.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_defaults-release/archive/release/jazzy/rosidl_default_runtime/1.6.0-3.tar.gz";
-    name = "1.6.0-3.tar.gz";
-    sha256 = "4d35c258c2c758572695d7a6f2d453f13645ea43674b8b8f24be1511a2407c05";
+    url = "https://github.com/ros2-gbp/rosidl_defaults-release/archive/release/jazzy/rosidl_default_runtime/1.6.1-1.tar.gz";
+    name = "1.6.1-1.tar.gz";
+    sha256 = "435fb0cf9fb8912e39bc4808b0ea5a53a060e968e9c1060d92d7ec4636b0fb68";
   };
 
   buildType = "ament_cmake";

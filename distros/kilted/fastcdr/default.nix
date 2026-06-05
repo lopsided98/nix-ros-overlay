@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cmake }:
+{ lib, buildRosPackage, fetchurl, cmake, gtest }:
 buildRosPackage {
   pname = "ros-kilted-fastcdr";
-  version = "2.3.5-r1";
+  version = "2.3.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastcdr-release/archive/release/kilted/fastcdr/2.3.5-1.tar.gz";
-    name = "2.3.5-1.tar.gz";
-    sha256 = "b987c1ac52bc04589caf088fee6e4649d59ad365021bdd91cab28cef7affd4a5";
+    url = "https://github.com/ros2-gbp/fastcdr-release/archive/release/kilted/fastcdr/2.3.6-1.tar.gz";
+    name = "2.3.6-1.tar.gz";
+    sha256 = "5947dc643136a676a6326c4e370e46e99c89ba45b7bc15b086496e3f39775a82";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  checkInputs = [ ament-cmake ament-cmake-gtest ];
+  checkInputs = [ gtest ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

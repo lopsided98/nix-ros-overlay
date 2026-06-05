@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-lint-auto, ament-lint-common, spdlog }:
 buildRosPackage {
   pname = "ros-jazzy-spdlog-vendor";
-  version = "1.6.1-r1";
+  version = "1.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/spdlog_vendor-release/archive/release/jazzy/spdlog_vendor/1.6.1-1.tar.gz";
-    name = "1.6.1-1.tar.gz";
-    sha256 = "3bafbdfe315b9d3128e46af997bac1a8369994327950f60f487ac1fd75d102cf";
+    url = "https://github.com/ros2-gbp/spdlog_vendor-release/archive/release/jazzy/spdlog_vendor/1.6.2-1.tar.gz";
+    name = "1.6.2-1.tar.gz";
+    sha256 = "4f88fee8ca69728531c0b74ffab451ba193fc2b97ad208700862dd4461d2c3e6";
   };
 
   buildType = "ament_cmake";

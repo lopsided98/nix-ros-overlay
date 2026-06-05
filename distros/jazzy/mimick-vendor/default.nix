@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-mimick-vendor";
-  version = "0.6.2-r1";
+  version = "0.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mimick_vendor-release/archive/release/jazzy/mimick_vendor/0.6.2-1.tar.gz";
-    name = "0.6.2-1.tar.gz";
-    sha256 = "5f6b3fe333ee7113c9c103cbfa7d5a87961a57197de635fe25c235b73cc8853f";
+    url = "https://github.com/ros2-gbp/mimick_vendor-release/archive/release/jazzy/mimick_vendor/0.6.3-1.tar.gz";
+    name = "0.6.3-1.tar.gz";
+    sha256 = "e1d94b919577986fcf982aebfa3eac303e8cc98f4edb7228d3c2659e577a94d7";
   };
 
   buildType = "ament_cmake";

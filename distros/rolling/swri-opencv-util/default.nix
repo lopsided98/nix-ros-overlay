@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, opencv, swri-math-util }:
 buildRosPackage {
   pname = "ros-rolling-swri-opencv-util";
-  version = "3.8.9-r1";
+  version = "3.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_opencv_util/3.8.9-1.tar.gz";
-    name = "3.8.9-1.tar.gz";
-    sha256 = "33fbee3ea9f9ee199c4ca5e2782e1b45b8dc53916342e5aa043f594da8152fbc";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_opencv_util/3.9.0-1.tar.gz";
+    name = "3.9.0-1.tar.gz";
+    sha256 = "ee91cb67667491041265a8a447827c834dd761c27dfbac3494b3ea17ca86284c";
   };
 
   buildType = "ament_cmake";

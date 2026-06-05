@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, nebula-core-common, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-nebula-robosense-common";
-  version = "1.0.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_robosense_common/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "638a1b39bc54d6f11fb6af72f3484a894d7b61d736fcd1af97cc863e5802d2bb";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_robosense_common/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "c4e1f49c1f6121291765b9de36f723a35ab4f91b5d42ff17dee6eef5e931bd4a";
   };
 
   buildType = "ament_cmake";

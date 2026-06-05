@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, example-interfaces, python3Packages, rcl-interfaces, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-demo-nodes-py";
-  version = "0.33.10-r1";
+  version = "0.33.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/demo_nodes_py/0.33.10-1.tar.gz";
-    name = "0.33.10-1.tar.gz";
-    sha256 = "ec3845dd7476a246ec1dedb89939d7d83aede15313c84ee2b41d811b6873ad1a";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/jazzy/demo_nodes_py/0.33.11-1.tar.gz";
+    name = "0.33.11-1.tar.gz";
+    sha256 = "7fa3b67c7610592f0c83542363aac2927335a6bb87bae0bb7c1782abeb383413";
   };
 
   buildType = "ament_python";

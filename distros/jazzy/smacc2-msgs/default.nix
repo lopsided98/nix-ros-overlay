@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-smacc2-msgs";
-  version = "3.0.1-r1";
+  version = "3.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/robosoft-ai/SMACC2-release/archive/release/jazzy/smacc2_msgs/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "a23e1ba2b581b4b7da62224c5c667733da1025b76c9988feb2b3aabba6037cd8";
+    url = "https://github.com/robosoft-ai/SMACC2-release/archive/release/jazzy/smacc2_msgs/3.1.0-2.tar.gz";
+    name = "3.1.0-2.tar.gz";
+    sha256 = "7a53fa671064f0fdabe8b02ab2ef9f41cce102bf0d46c776f705da053588969b";
   };
 
   buildType = "ament_cmake";

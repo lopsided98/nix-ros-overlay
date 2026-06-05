@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-tlsf";
-  version = "0.9.0-r3";
+  version = "0.9.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tlsf-release/archive/release/jazzy/tlsf/0.9.0-3.tar.gz";
-    name = "0.9.0-3.tar.gz";
-    sha256 = "a066aeacd935a3adbebf3b5b346190d7d310008e2752feefdc3d461e6bc97d37";
+    url = "https://github.com/ros2-gbp/tlsf-release/archive/release/jazzy/tlsf/0.9.1-2.tar.gz";
+    name = "0.9.1-2.tar.gz";
+    sha256 = "cf851acad5b8fe0e80d40df4ecd3a70b13c8c5816c1e165203bee7638d803aff";
   };
 
   buildType = "ament_cmake";
