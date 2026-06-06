@@ -741,6 +741,13 @@ in {
     ];
   });
 
+  roboplan-oink = rosSuper.roboplan-oink.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # Prevent cmake from fetching osqp-eigen via git
+    buildInputs = buildInputs ++ [ self.osqp-eigen ];
+  });
+
   rosidlcpp-generator-core = rosSuper.rosidlcpp-generator-core.override { fmt = self.fmt_9; };
   rosidlcpp-generator-cpp = rosSuper.rosidlcpp-generator-cpp.override { fmt = self.fmt_9; };
   rosidlcpp-generator-py = rosSuper.rosidlcpp-generator-py.override { fmt = self.fmt_9; };
