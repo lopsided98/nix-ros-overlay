@@ -500,6 +500,13 @@ in {
     propagatedNativeBuildInputs = [ self.qt6.wrapQtAppsHook ];
   };
 
+  roboplan-examples = rosSuper.roboplan-examples.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # Prevent cmake from fetching osqp-eigen via git
+    buildInputs = buildInputs ++ [ self.osqp-eigen ];
+  });
+
   roboplan-oink = rosSuper.roboplan-oink.overrideAttrs ({
     buildInputs ? [], ...
   }: {

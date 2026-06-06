@@ -477,6 +477,19 @@ in {
     propagatedNativeBuildInputs = [ self.qt6.wrapQtAppsHook ];
   };
 
+  roboplan-examples = rosSuper.roboplan-examples.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # Prevent cmake from fetching osqp-eigen via git
+    buildInputs = buildInputs ++ [ self.osqp-eigen rosSelf.toppra ];
+  });
+
+  roboplan-toppra = rosSuper.roboplan-toppra.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    buildInputs = buildInputs ++ [ rosSelf.toppra ];
+  });
+
   roboplan-oink = (rosSuper.roboplan-oink.override {
     # https://github.com/tier4/osqp_vendor/issues/26
     osqp-vendor = null;
