@@ -741,7 +741,10 @@ in {
     ];
   });
 
-  roboplan-oink = rosSuper.roboplan-oink.overrideAttrs ({
+  roboplan-oink = (rosSuper.roboplan-oink.override {
+    # https://github.com/tier4/osqp_vendor/issues/26
+    osqp-vendor = null;
+  }).overrideAttrs ({
     buildInputs ? [], ...
   }: {
     # Prevent cmake from fetching osqp-eigen via git
