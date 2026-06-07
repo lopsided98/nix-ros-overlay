@@ -9,6 +9,62 @@ Want to use ROS, but don't want to run Ubuntu? This project uses the power of [N
 > [!IMPORTANT]
 > The `master` branch is tested and updated when most packages are working. Development occurs on the `develop` branch, and it is expected that this branch will sometimes have many packages that fail to build. Please do not file issues about bugs that only occur in the `develop` branch.
 
+## Current status
+
+| Distro  | master                                           | develop                                            | develop + nixos-unstable                             |
+|:--------|:-------------------------------------------------|:---------------------------------------------------|:-----------------------------------------------------|
+| Humble  | [![humble-master-badge][]][humble-master-link]   | [![humble-develop-badge][]][humble-develop-link]   | [![humble-unstable-badge][]][humble-unstable-link]   |
+| Jazzy   | [![jazzy-master-badge][]][jazzy-master-link]     | [![jazzy-develop-badge][]][jazzy-develop-link]     | [![jazzy-unstable-badge][]][jazzy-unstable-link]     |
+| Kilted  | [![kilted-master-badge][]][kilted-master-link]   | [![kilted-develop-badge][]][kilted-develop-link]   | [![kilted-unstable-badge][]][kilted-unstable-link]   |
+| Lyrical | [![lyrical-master-badge][]][lyrical-master-link] | [![lyrical-develop-badge][]][lyrical-develop-link] | [![lyrical-unstable-badge][]][lyrical-unstable-link] |
+| Rolling | [![rolling-master-badge][]][rolling-master-link] | [![rolling-develop-badge][]][rolling-develop-link] | [![rolling-unstable-badge][]][rolling-unstable-link] |
+|         | ![nixpkgs-master-badge][]                        | ![nixpkgs-develop-badge][]                         |                                                      |
+
+[humble-master-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fmaster-humble-x86_64%2Fshield
+[humble-master-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/master-humble-x86_64
+[jazzy-master-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fmaster-jazzy-x86_64%2Fshield
+[jazzy-master-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/master-jazzy-x86_64
+[kilted-master-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fmaster-kilted-x86_64%2Fshield
+[kilted-master-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/master-kilted-x86_64
+[lyrical-master-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fmaster-lyrical-x86_64%2Fshield
+[lyrical-master-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/master-lyrical-x86_64
+[rolling-master-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fmaster-rolling-x86_64%2Fshield
+[rolling-master-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/master-rolling-x86_64
+
+[humble-develop-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fdevelop-humble-x86_64%2Fshield
+[humble-develop-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/develop-humble-x86_64
+[jazzy-develop-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fdevelop-jazzy-x86_64%2Fshield
+[jazzy-develop-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/develop-jazzy-x86_64
+[kilted-develop-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fdevelop-kilted-x86_64%2Fshield
+[kilted-develop-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/develop-kilted-x86_64
+[lyrical-develop-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fdevelop-lyrical-x86_64%2Fshield
+[lyrical-develop-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/develop-lyrical-x86_64
+[rolling-develop-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fdevelop-rolling-x86_64%2Fshield
+[rolling-develop-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/develop-rolling-x86_64
+
+[humble-unstable-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Funstable-humble-x86_64%2Fshield
+[humble-unstable-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/unstable-humble-x86_64
+[jazzy-unstable-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Funstable-jazzy-x86_64%2Fshield
+[jazzy-unstable-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/unstable-jazzy-x86_64
+[kilted-unstable-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Funstable-kilted-x86_64%2Fshield
+[kilted-unstable-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/unstable-kilted-x86_64
+[lyrical-unstable-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Funstable-lyrical-x86_64%2Fshield
+[lyrical-unstable-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/unstable-lyrical-x86_64
+[rolling-unstable-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Funstable-rolling-x86_64%2Fshield
+[rolling-unstable-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/unstable-rolling-x86_64
+
+[nixpkgs-master-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fnix-ros-overlay.iid.ciirc.cvut.cz%2Fbadge%2Fnixpkgs-date-master.json
+[nixpkgs-develop-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fnix-ros-overlay.iid.ciirc.cvut.cz%2Fbadge%2Fnixpkgs-date-develop.json
+
+What works:
+1. Most of the packages build successfully (see the table above)
+2. Fully functional ROS development environment using `nix-shell`
+3. Automated generation of Nix package definitions using standard ROS tools ([superflore](https://github.com/lopsided98/superflore))
+
+What still needs to be done:
+1. Updating ROS packages to recent nixpkgs and upstreaming that
+2. macOS support
+
 ## Setup
 
 1. Install Nix: https://nixos.org/nix/download.html
@@ -93,62 +149,6 @@ You can use the following command to use the above template easily:
     nix flake init --template github:lopsided98/nix-ros-overlay
 
 [flake]: https://wiki.nixos.org/wiki/Flakes
-
-## Current status
-
-| Distro  | master                                           | develop                                            | develop + nixos-unstable                             |
-|:--------|:-------------------------------------------------|:---------------------------------------------------|:-----------------------------------------------------|
-| Humble  | [![humble-master-badge][]][humble-master-link]   | [![humble-develop-badge][]][humble-develop-link]   | [![humble-unstable-badge][]][humble-unstable-link]   |
-| Jazzy   | [![jazzy-master-badge][]][jazzy-master-link]     | [![jazzy-develop-badge][]][jazzy-develop-link]     | [![jazzy-unstable-badge][]][jazzy-unstable-link]     |
-| Kilted  | [![kilted-master-badge][]][kilted-master-link]   | [![kilted-develop-badge][]][kilted-develop-link]   | [![kilted-unstable-badge][]][kilted-unstable-link]   |
-| Lyrical | [![lyrical-master-badge][]][lyrical-master-link] | [![lyrical-develop-badge][]][lyrical-develop-link] | [![lyrical-unstable-badge][]][lyrical-unstable-link] |
-| Rolling | [![rolling-master-badge][]][rolling-master-link] | [![rolling-develop-badge][]][rolling-develop-link] | [![rolling-unstable-badge][]][rolling-unstable-link] |
-|         | ![nixpkgs-master-badge][]                        | ![nixpkgs-develop-badge][]                         |                                                      |
-
-[humble-master-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fmaster-humble-x86_64%2Fshield
-[humble-master-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/master-humble-x86_64
-[jazzy-master-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fmaster-jazzy-x86_64%2Fshield
-[jazzy-master-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/master-jazzy-x86_64
-[kilted-master-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fmaster-kilted-x86_64%2Fshield
-[kilted-master-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/master-kilted-x86_64
-[lyrical-master-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fmaster-lyrical-x86_64%2Fshield
-[lyrical-master-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/master-lyrical-x86_64
-[rolling-master-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fmaster-rolling-x86_64%2Fshield
-[rolling-master-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/master-rolling-x86_64
-
-[humble-develop-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fdevelop-humble-x86_64%2Fshield
-[humble-develop-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/develop-humble-x86_64
-[jazzy-develop-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fdevelop-jazzy-x86_64%2Fshield
-[jazzy-develop-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/develop-jazzy-x86_64
-[kilted-develop-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fdevelop-kilted-x86_64%2Fshield
-[kilted-develop-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/develop-kilted-x86_64
-[lyrical-develop-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fdevelop-lyrical-x86_64%2Fshield
-[lyrical-develop-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/develop-lyrical-x86_64
-[rolling-develop-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Fdevelop-rolling-x86_64%2Fshield
-[rolling-develop-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/develop-rolling-x86_64
-
-[humble-unstable-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Funstable-humble-x86_64%2Fshield
-[humble-unstable-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/unstable-humble-x86_64
-[jazzy-unstable-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Funstable-jazzy-x86_64%2Fshield
-[jazzy-unstable-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/unstable-jazzy-x86_64
-[kilted-unstable-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Funstable-kilted-x86_64%2Fshield
-[kilted-unstable-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/unstable-kilted-x86_64
-[lyrical-unstable-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Funstable-lyrical-x86_64%2Fshield
-[lyrical-unstable-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/unstable-lyrical-x86_64
-[rolling-unstable-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fhydra.iid.ciirc.cvut.cz%2Fjobset%2Fnix-ros-overlay%2Funstable-rolling-x86_64%2Fshield
-[rolling-unstable-link]: https://hydra.iid.ciirc.cvut.cz/jobset/nix-ros-overlay/unstable-rolling-x86_64
-
-[nixpkgs-master-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fnix-ros-overlay.iid.ciirc.cvut.cz%2Fbadge%2Fnixpkgs-date-master.json
-[nixpkgs-develop-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fnix-ros-overlay.iid.ciirc.cvut.cz%2Fbadge%2Fnixpkgs-date-develop.json
-
-What works:
-1. Most of the packages build successfully (see the table above)
-2. Fully functional ROS development environment using `nix-shell`
-3. Automated generation of Nix package definitions using standard ROS tools ([superflore](https://github.com/lopsided98/superflore))
-
-What still needs to be done:
-1. Updating ROS packages to recent nixpkgs and upstreaming that
-2. macOS support
 
 ## Configure Binary Cache
 
