@@ -142,19 +142,13 @@ You can use the following command to use the above template easily:
 [nixpkgs-develop-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fnix-ros-overlay.iid.ciirc.cvut.cz%2Fbadge%2Fnixpkgs-date-develop.json
 
 What works:
-1. More than 1500 packages successfully built for ROS 2 Jazzy (for
-   up-to-date numbers and other distros, look at our experimental
-   [Hydra instance][] controlled by [@wentasah][])
+1. Most of the packages build successfully (see the table above)
 2. Fully functional ROS development environment using `nix-shell`
 3. Automated generation of Nix package definitions using standard ROS tools ([superflore](https://github.com/lopsided98/superflore))
 
 What still needs to be done:
-1. Upstream changes to nixpkgs and ROS tools
-2. Test on more Linux distributions
-3. macOS support
-
-[Hydra instance]: https://hydra.iid.ciirc.cvut.cz/project/nix-ros-overlay
-[@wentasah]: https://github.com/wentasah
+1. Updating ROS packages to recent nixpkgs and upstreaming that
+2. macOS support
 
 ## Configure Binary Cache
 
@@ -184,6 +178,7 @@ trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDS
 > ```
 
 [cache-issue]: https://github.com/lopsided98/nix-ros-overlay/issues/754
+[@wentasah]: https://github.com/wentasah
 
 ## Frequently Asked Questions
 
