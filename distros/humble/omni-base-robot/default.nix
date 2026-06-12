@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/omni_base_robot-release/archive/release/humble/omni_base_robot/2.15.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/omni_base_robot-release/archive/release/humble/omni_base_robot/2.15.1-1.tar.gz";
     name = "2.15.1-1.tar.gz";
     sha256 = "11c602e78bd96cca04ca4ca03c7cf5e5a9d04f42a6165f2a4caad063612d9c68";
   };

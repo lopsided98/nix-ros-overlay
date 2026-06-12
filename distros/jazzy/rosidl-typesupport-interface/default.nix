@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-rosidl-typesupport-interface";
-  version = "4.6.8-r1";
+  version = "4.6.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/jazzy/rosidl_typesupport_interface/4.6.8-1.tar.gz";
-    name = "4.6.8-1.tar.gz";
-    sha256 = "f703cb11008ff1db483622fca562859a01ccd9c71af80f3cd1908cb59d98ae8e";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/jazzy/rosidl_typesupport_interface/4.6.9-1.tar.gz";
+    name = "4.6.9-1.tar.gz";
+    sha256 = "3549ab24edd5841f236ddf326dc3ab4e0b7065f678eda09dc1365b200a6985a9";
   };
 
   buildType = "ament_cmake";

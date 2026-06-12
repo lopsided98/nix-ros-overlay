@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/talos_moveit_config-release/archive/release/humble/talos_moveit_config/2.0.4-1.tar.gz";
+    url = "https://github.com/ros2-gbp/talos_moveit_config-release/archive/release/humble/talos_moveit_config/2.0.4-1.tar.gz";
     name = "2.0.4-1.tar.gz";
     sha256 = "18b0fb6fd0d223da419bbf4c9ca654396c41ad440f89f172dfd827afbac0e9c6";
   };

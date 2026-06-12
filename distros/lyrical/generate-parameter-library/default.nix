@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, fmt, generate-parameter-library-py, rclcpp, rclcpp-lifecycle, rclpy, rsl, tcb-span, tl-expected-nixpkgs }:
 buildRosPackage {
   pname = "ros-lyrical-generate-parameter-library";
-  version = "1.1.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/lyrical/generate_parameter_library/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "1ed91d540f684130a2532a970b10afbb04ea4b0082a9808fa3779b9a4b035f63";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/lyrical/generate_parameter_library/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "205b14512064854357a3efe5d5460f92c4cae9dc51fb1641d62dcfa604b65ef6";
   };
 
   buildType = "ament_cmake";

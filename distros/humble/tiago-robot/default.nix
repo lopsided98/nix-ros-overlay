@@ -8,7 +8,7 @@ buildRosPackage {
   version = "4.24.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_robot-release/archive/release/humble/tiago_robot/4.24.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/tiago_robot-release/archive/release/humble/tiago_robot/4.24.1-1.tar.gz";
     name = "4.24.1-1.tar.gz";
     sha256 = "4786e7e298bc2fef9b3659b92d89376facddaa2a7df16d092782663462ebd646";
   };

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "4.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_gazebo_worlds-ros2-release/archive/release/humble/pal_gazebo_worlds/4.14.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pal_gazebo_worlds-release/archive/release/humble/pal_gazebo_worlds/4.14.0-1.tar.gz";
     name = "4.14.0-1.tar.gz";
     sha256 = "793995909ccd88f0fd39ff37d1fd99677546979cc660f45d1140d2eed30b2320";
   };

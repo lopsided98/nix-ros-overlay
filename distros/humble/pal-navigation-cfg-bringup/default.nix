@@ -8,7 +8,7 @@ buildRosPackage {
   version = "3.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_navigation_cfg_public-release/archive/release/humble/pal_navigation_cfg_bringup/3.0.6-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pal_navigation_cfg_public-release/archive/release/humble/pal_navigation_cfg_bringup/3.0.6-1.tar.gz";
     name = "3.0.6-1.tar.gz";
     sha256 = "73e72a705143ed51a8b26724e8f7f6174373cdcf52226d012b469b97d128737c";
   };

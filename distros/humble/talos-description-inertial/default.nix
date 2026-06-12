@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.10.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/talos_robot-release/archive/release/humble/talos_description_inertial/2.10.3-1.tar.gz";
+    url = "https://github.com/ros2-gbp/talos_robot-release/archive/release/humble/talos_description_inertial/2.10.3-1.tar.gz";
     name = "2.10.3-1.tar.gz";
     sha256 = "d8386d06b8fc9c2787cf78e35b4544150cb01766506414fa3cb8aef5cea401c5";
   };

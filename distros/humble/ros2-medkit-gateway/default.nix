@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-clang-format, ament-cmake-clang-tidy, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, example-interfaces, httplib, nlohmann_json, openssl, rcl-interfaces, rclcpp, rclcpp-action, ros2-medkit-cmake, ros2-medkit-msgs, ros2-medkit-serialization, rosidl-parser, rosidl-runtime-py, rosidl-typesupport-cpp, rosidl-typesupport-introspection-cpp, sensor-msgs, sqlite, std-msgs, std-srvs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-humble-ros2-medkit-gateway";
-  version = "0.4.0-r1";
+  version = "0.5.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_gateway/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "c1fa272f9790acf5b8e4a347883b325a4ab89334ab34dc374a2c1bcd57362712";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_gateway/0.5.0-2.tar.gz";
+    name = "0.5.0-2.tar.gz";
+    sha256 = "f95a34a7f40fe7e685d10344033afd9ae1a574762a9ba4a4913c04e11d567704";
   };
 
   buildType = "ament_cmake";

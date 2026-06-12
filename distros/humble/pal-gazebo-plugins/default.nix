@@ -8,7 +8,7 @@ buildRosPackage {
   version = "4.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_gazebo_plugins-release/archive/release/humble/pal_gazebo_plugins/4.1.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pal_gazebo_plugins-release/archive/release/humble/pal_gazebo_plugins/4.1.1-1.tar.gz";
     name = "4.1.1-1.tar.gz";
     sha256 = "d9edf38dc2530cadebae019a468bb429edc21f9bfeef8ba6a04a4d90c1b96bf6";
   };

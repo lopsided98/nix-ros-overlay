@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, cuda-buffer-backend-msgs, cudaPackages, rcutils, rmw, rosidl-buffer }:
 buildRosPackage {
   pname = "ros-lyrical-cuda-buffer";
-  version = "0.1.1-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_buffer_backends-release/archive/release/lyrical/cuda_buffer/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "53ff6ea45f8166b2c3f2385da29cd0c9f2fcb8e1efc8d33ce07c0dec7637e772";
+    url = "https://github.com/ros2-gbp/rosidl_buffer_backends-release/archive/release/lyrical/cuda_buffer/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "cb1c3b8b08febf16676710e9969c2b59202bc302f6b92592c6d5c4cf4dd5e82e";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rmw-connextdds-common }:
 buildRosPackage {
   pname = "ros-lyrical-rmw-connextdds";
-  version = "1.2.7-r1";
+  version = "1.2.7-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_connextdds-release/archive/release/lyrical/rmw_connextdds/1.2.7-1.tar.gz";
-    name = "1.2.7-1.tar.gz";
-    sha256 = "1716807aedcd99bfbbfb90ce1383d6b8af0bd11476ec157c59f2b99ae8d6fb11";
+    url = "https://github.com/ros2-gbp/rmw_connextdds-release/archive/release/lyrical/rmw_connextdds/1.2.7-2.tar.gz";
+    name = "1.2.7-2.tar.gz";
+    sha256 = "22ac87f11f43d98c0318ea9c8b8e4b990fa91d05ebbbdc51c3abd956ffa32cd1";
   };
 
   buildType = "ament_cmake";

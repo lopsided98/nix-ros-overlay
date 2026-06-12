@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-index-python, diagnostic-msgs, example-interfaces, launch-ros, launch-testing, launch-testing-ament-cmake, python3Packages, rcl-interfaces, rclcpp, rclcpp-action, ros2-medkit-cmake, ros2-medkit-fault-manager, ros2-medkit-gateway, ros2-medkit-graph-provider, ros2-medkit-linux-introspection, ros2-medkit-msgs, ros2-medkit-param-beacon, ros2-medkit-topic-beacon, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-ros2-medkit-integration-tests";
-  version = "0.4.0-r1";
+  version = "0.5.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_integration_tests/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "ce6dae2978f36345e32447543ddc83281708b12b7981f130d2197fc94307f163";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_integration_tests/0.5.0-2.tar.gz";
+    name = "0.5.0-2.tar.gz";
+    sha256 = "2f34d651e2514e15097d55ecd01d30aa4886fb8efe98c5a2769a64757adc1040";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ros2-medkit-cmake ];
-  checkInputs = [ ament-index-python launch-ros launch-testing launch-testing-ament-cmake python3Packages.requests ros2-medkit-fault-manager ros2-medkit-gateway ros2-medkit-graph-provider ros2-medkit-linux-introspection ros2-medkit-param-beacon ros2-medkit-topic-beacon ];
+  checkInputs = [ ament-index-python launch-ros launch-testing launch-testing-ament-cmake python3Packages.jsonschema python3Packages.requests ros2-medkit-fault-manager ros2-medkit-gateway ros2-medkit-graph-provider ros2-medkit-linux-introspection ros2-medkit-param-beacon ros2-medkit-topic-beacon ];
   propagatedBuildInputs = [ diagnostic-msgs example-interfaces rcl-interfaces rclcpp rclcpp-action ros2-medkit-msgs sensor-msgs std-msgs std-srvs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ros2-medkit-cmake ];
 

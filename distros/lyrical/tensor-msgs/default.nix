@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-lyrical-tensor-msgs";
-  version = "0.1.1-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_buffer_backends-release/archive/release/lyrical/tensor_msgs/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "d94e08eb97808693d0d9bb5c684f947cedde3615e22a88f02d73e4446e97b436";
+    url = "https://github.com/ros2-gbp/rosidl_buffer_backends-release/archive/release/lyrical/tensor_msgs/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "a552261da8bc5728432ce12ca57c48adfc4bcc8af3486de440108acfa966ba92";
   };
 
   buildType = "ament_cmake";

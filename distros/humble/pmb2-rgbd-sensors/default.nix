@@ -8,7 +8,7 @@ buildRosPackage {
   version = "4.21.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_rgbd_sensors/4.21.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pmb2_navigation-release/archive/release/humble/pmb2_rgbd_sensors/4.21.0-1.tar.gz";
     name = "4.21.0-1.tar.gz";
     sha256 = "7bf7367538499ca8d66c5f5e59910d8b7f22eb4eb3dc8213634fa8e975b86f70";
   };

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.11.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/omni_base_simulation-release/archive/release/humble/omni_base_gazebo/2.11.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/omni_base_simulation-release/archive/release/humble/omni_base_gazebo/2.11.1-1.tar.gz";
     name = "2.11.1-1.tar.gz";
     sha256 = "b8bc8235dde51e19c3b3607aa3c64b8b513b37ae8418c37d0d5ecc23f5a5157d";
   };
