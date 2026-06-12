@@ -29,7 +29,7 @@ let
     python3Packages = rosSelf.python3.pkgs;
 
     boost = self.boost.override {
-      python = rosSelf.python;
+      python = rosSelf.python3;
       enablePython = true;
     };
   };
