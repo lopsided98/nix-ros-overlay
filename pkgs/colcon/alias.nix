@@ -1,7 +1,7 @@
 {
   lib,
   buildPythonPackage,
-  fetchPypi,
+  fetchFromGitHub,
   setuptools,
   wheel,
   colcon-core,
@@ -28,9 +28,11 @@ buildPythonPackage rec {
   version = "0.1.1";
   pyproject = true;
 
-  src = fetchPypi {
-    inherit pname version;
-    hash = "sha256-DlUoQ4BgeO7YX2spAj+1SOJweDfYpIyQ+9aal+d9TQM=";
+  src = fetchFromGitHub {
+    owner = "colcon";
+    repo = pname;
+    tag = version;
+    hash = "sha256-CUoNzXMNbmueChGeE5mq9jUqFNgD7Q8u7kCQdfTlP/k=";
   };
 
   build-system = [

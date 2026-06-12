@@ -1,13 +1,15 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, colcon-library-path
+{ lib, buildPythonPackage, fetchFromGitHub, colcon-core, colcon-library-path
 , colcon-test-result, cmake, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-cmake";
   version = "0.2.29";
 
-  src = fetchPypi {
-    inherit pname version;
-    hash = "sha256-8cChTiUw07c4+NBlnCfVnioKA9/vYB5hNpu1CD6/H2k=";
+  src = fetchFromGitHub {
+    owner = "colcon";
+    repo = pname;
+    tag = version;
+    hash = "sha256-v91UREVifYnwbMcM819B5CsXl8FbAH61Ydzu0vXBPX8=";
   };
 
   pyproject = true;

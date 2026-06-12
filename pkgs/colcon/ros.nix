@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, catkin-pkg, colcon-cmake, colcon-core
+{ lib, buildPythonPackage, fetchFromGitHub, catkin-pkg, colcon-cmake, colcon-core
 , colcon-pkg-config, colcon-python-setup-py
 , colcon-recursive-crawl, setuptools }:
 
@@ -6,9 +6,11 @@ buildPythonPackage rec {
   pname = "colcon-ros";
   version = "0.5.0";
 
-  src = fetchPypi {
-    inherit pname version;
-    hash = "sha256-eafon2+mNvfk/USoi3hg+x2pnVHwunvPC5tiShpXg2U=";
+  src = fetchFromGitHub {
+    owner = "colcon";
+    repo = pname;
+    tag = version;
+    hash = "sha256-BsGCgFGxOIAGTP4A8bulakMoeUj+Ki6sPIpTQ4L7LSo=";
   };
 
   pyproject = true;

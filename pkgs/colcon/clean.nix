@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, scantree, setuptools }:
+{ lib, buildPythonPackage, fetchFromGitHub, colcon-core, scantree, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-clean";
@@ -7,9 +7,11 @@ buildPythonPackage rec {
   pyproject = true;
   build-system = [ setuptools ];
 
-  src = fetchPypi {
-    inherit pname version;
-    hash = "sha256-8rvyck24SxIhhP9AKiR7h1jY9pLJ8yulOAH2nabc61Q=";
+  src = fetchFromGitHub {
+    owner = "colcon";
+    repo = pname;
+    tag = version;
+    hash = "sha256-7lleFIYhA0s9zG4g2A95bnS8sutPykV8EF2ndSt2KsE=";
   };
 
   # Fix for https://github.com/colcon/colcon-clean/pull/46 is

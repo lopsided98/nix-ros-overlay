@@ -1,12 +1,14 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, argcomplete, setuptools }:
+{ lib, buildPythonPackage, fetchFromGitHub, colcon-core, argcomplete, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-argcomplete";
   version = "0.3.3";
 
-  src = fetchPypi {
-    inherit pname version;
-    hash = "sha256-PnCjK30WuBanxyGCvbIN+YX/wBZ47Jxn1EZZgUphmH0=";
+  src = fetchFromGitHub {
+    owner = "colcon";
+    repo = pname;
+    tag = version;
+    hash = "sha256-A6ia9OVZa+DwChVwCmkjvDtUloiFQyqtmhlaApbD7iI=";
   };
 
   pyproject = true;

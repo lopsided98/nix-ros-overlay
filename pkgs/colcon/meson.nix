@@ -1,13 +1,14 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, colcon-library-path, meson, setuptools }:
+{ lib, buildPythonPackage, fetchFromGitHub, colcon-core, colcon-library-path, meson, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-meson";
   version = "0.5.0";
 
-  src = fetchPypi {
-    inherit version;
-    pname = "colcon_meson"; # https://github.com/colcon/colcon-meson/issues/19
-    hash = "sha256-MgrMpSth0R+9AdUVoQr8y1unciIClvBn42FhEAitrX8=";
+  src = fetchFromGitHub {
+    owner = "colcon";
+    repo = pname;
+    tag = version;
+    hash = "sha256-VLCyKmPceY99cKMH/Ctotskl26Q3t7/qA4XOS7QBnBg=";
   };
 
   pyproject = true;
