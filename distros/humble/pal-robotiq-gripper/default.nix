@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_robotiq_gripper-release/archive/release/humble/pal_robotiq_gripper/2.2.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pal_robotiq_gripper-release/archive/release/humble/pal_robotiq_gripper/2.2.0-1.tar.gz";
     name = "2.2.0-1.tar.gz";
     sha256 = "375b6c4bd92ef0be10cc221475ec9602a00c89b042b8774e6fdb8ea24f17d37a";
   };

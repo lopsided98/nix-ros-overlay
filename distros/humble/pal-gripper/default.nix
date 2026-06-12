@@ -8,7 +8,7 @@ buildRosPackage {
   version = "3.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pal_gripper-release/archive/release/humble/pal_gripper/3.6.5-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pal_gripper-release/archive/release/humble/pal_gripper/3.6.5-1.tar.gz";
     name = "3.6.5-1.tar.gz";
     sha256 = "e7006b8a1a2e0cd59d7e3ae107a7dd133fdc8e09ddbe8e4ee23b448690af24f8";
   };

@@ -26,6 +26,8 @@ self: super: {
 
  admittance-controller = self.callPackage ./admittance-controller {};
 
+ agni-tf-tools = self.callPackage ./agni-tf-tools {};
+
  ament-acceleration = self.callPackage ./ament-acceleration {};
 
  ament-black = self.callPackage ./ament-black {};
@@ -195,6 +197,14 @@ self: super: {
  async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
 
  at-sonde-ros-driver = self.callPackage ./at-sonde-ros-driver {};
+
+ audio-capture = self.callPackage ./audio-capture {};
+
+ audio-common = self.callPackage ./audio-common {};
+
+ audio-common-msgs = self.callPackage ./audio-common-msgs {};
+
+ audio-play = self.callPackage ./audio-play {};
 
  auto-apms-behavior-tree = self.callPackage ./auto-apms-behavior-tree {};
 
@@ -434,6 +444,18 @@ self: super: {
 
  cras-topic-tools = self.callPackage ./cras-topic-tools {};
 
+ crazyflie = self.callPackage ./crazyflie {};
+
+ crazyflie-examples = self.callPackage ./crazyflie-examples {};
+
+ crazyflie-interfaces = self.callPackage ./crazyflie-interfaces {};
+
+ crazyflie-py = self.callPackage ./crazyflie-py {};
+
+ crazyflie-server-py = self.callPackage ./crazyflie-server-py {};
+
+ crazyflie-sim = self.callPackage ./crazyflie-sim {};
+
  crocoddyl = self.callPackage ./crocoddyl {};
 
  crx-kinematics = self.callPackage ./crx-kinematics {};
@@ -487,6 +509,16 @@ self: super: {
  data-tamer-msgs = self.callPackage ./data-tamer-msgs {};
 
  data-tamer-tools = self.callPackage ./data-tamer-tools {};
+
+ dataspeed-can = self.callPackage ./dataspeed-can {};
+
+ dataspeed-can-msg-filters = self.callPackage ./dataspeed-can-msg-filters {};
+
+ dataspeed-can-msgs = self.callPackage ./dataspeed-can-msgs {};
+
+ dataspeed-can-tools = self.callPackage ./dataspeed-can-tools {};
+
+ dataspeed-can-usb = self.callPackage ./dataspeed-can-usb {};
 
  delphi-esr-msgs = self.callPackage ./delphi-esr-msgs {};
 
@@ -1184,6 +1216,8 @@ self: super: {
 
  lttngpy = self.callPackage ./lttngpy {};
 
+ lusb = self.callPackage ./lusb {};
+
  lz4-cmake-module = self.callPackage ./lz4-cmake-module {};
 
  magic-enum = self.callPackage ./magic-enum {};
@@ -1295,6 +1329,8 @@ self: super: {
  mola-input-paris-luco-dataset = self.callPackage ./mola-input-paris-luco-dataset {};
 
  mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
+
+ mola-input-rosbag1 = self.callPackage ./mola-input-rosbag1 {};
 
  mola-input-rosbag2 = self.callPackage ./mola-input-rosbag2 {};
 
@@ -1529,6 +1565,8 @@ self: super: {
  mvsim = self.callPackage ./mvsim {};
 
  nanoeigenpy = self.callPackage ./nanoeigenpy {};
+
+ nanoflann = self.callPackage ./nanoflann {};
 
  nao-button-sim = self.callPackage ./nao-button-sim {};
 
@@ -2144,6 +2182,34 @@ self: super: {
 
  ros2-fmt-logger = self.callPackage ./ros2-fmt-logger {};
 
+ ros2-medkit-beacon-common = self.callPackage ./ros2-medkit-beacon-common {};
+
+ ros2-medkit-cmake = self.callPackage ./ros2-medkit-cmake {};
+
+ ros2-medkit-diagnostic-bridge = self.callPackage ./ros2-medkit-diagnostic-bridge {};
+
+ ros2-medkit-fault-manager = self.callPackage ./ros2-medkit-fault-manager {};
+
+ ros2-medkit-fault-reporter = self.callPackage ./ros2-medkit-fault-reporter {};
+
+ ros2-medkit-gateway = self.callPackage ./ros2-medkit-gateway {};
+
+ ros2-medkit-graph-provider = self.callPackage ./ros2-medkit-graph-provider {};
+
+ ros2-medkit-integration-tests = self.callPackage ./ros2-medkit-integration-tests {};
+
+ ros2-medkit-linux-introspection = self.callPackage ./ros2-medkit-linux-introspection {};
+
+ ros2-medkit-msgs = self.callPackage ./ros2-medkit-msgs {};
+
+ ros2-medkit-param-beacon = self.callPackage ./ros2-medkit-param-beacon {};
+
+ ros2-medkit-serialization = self.callPackage ./ros2-medkit-serialization {};
+
+ ros2-medkit-sovd-service-interface = self.callPackage ./ros2-medkit-sovd-service-interface {};
+
+ ros2-medkit-topic-beacon = self.callPackage ./ros2-medkit-topic-beacon {};
+
  ros2-snapshot = self.callPackage ./ros2-snapshot {};
 
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
@@ -2598,6 +2664,10 @@ self: super: {
 
  sophus = self.callPackage ./sophus {};
 
+ sound-play = self.callPackage ./sound-play {};
+
+ sound-play-msgs = self.callPackage ./sound-play-msgs {};
+
  spacenav = self.callPackage ./spacenav {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
@@ -2925,6 +2995,8 @@ self: super: {
  velodyne-msgs = self.callPackage ./velodyne-msgs {};
 
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
+
+ video-to-image-msg-publisher = self.callPackage ./video-to-image-msg-publisher {};
 
  vision-msgs = self.callPackage ./vision-msgs {};
 

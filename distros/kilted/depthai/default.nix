@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, curl, fmt, gfortran, libtar, libusb1, nlohmann_json, opencv, ros-environment, spdlog, udev, unzip, zip }:
 buildRosPackage {
   pname = "ros-kilted-depthai";
-  version = "3.6.1-r2";
+  version = "3.7.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-core-release/archive/release/kilted/depthai/3.6.1-2.tar.gz";
-    name = "3.6.1-2.tar.gz";
-    sha256 = "5d455901f77d022fb841039d7b7c0cd22504c2289721976f0681d8d28679669b";
+    url = "https://github.com/luxonis/depthai-core-release/archive/release/kilted/depthai/3.7.1-3.tar.gz";
+    name = "3.7.1-3.tar.gz";
+    sha256 = "b24cf842426d7c9a0919d075ae214ffeca66e18a9e61e0b03550bb5dff893fc3";
   };
 
   buildType = "ament_cmake";

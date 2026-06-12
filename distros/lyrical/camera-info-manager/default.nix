@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, camera-calibration-parsers, rclcpp, rclcpp-lifecycle, rcpputils, sensor-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-camera-info-manager";
-  version = "6.4.9-r1";
+  version = "6.4.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/lyrical/camera_info_manager/6.4.9-1.tar.gz";
-    name = "6.4.9-1.tar.gz";
-    sha256 = "a34664d4e31cb62ebbeec37692e5dff486b41cf12fe51fdc61d088053d1cfb7f";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/lyrical/camera_info_manager/6.4.10-1.tar.gz";
+    name = "6.4.10-1.tar.gz";
+    sha256 = "486a23941a847758dbc98e77328695cab6f5df33a281e890609e16a1bd9ed9f5";
   };
 
   buildType = "ament_cmake";

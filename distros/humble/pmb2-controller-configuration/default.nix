@@ -8,7 +8,7 @@ buildRosPackage {
   version = "5.11.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_robot-gbp/archive/release/humble/pmb2_controller_configuration/5.11.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pmb2_robot-release/archive/release/humble/pmb2_controller_configuration/5.11.2-1.tar.gz";
     name = "5.11.2-1.tar.gz";
     sha256 = "b3c2b86012c57108b28f393ae01511d91b3548e3c1931ce35dfdbbcc4e6232d5";
   };

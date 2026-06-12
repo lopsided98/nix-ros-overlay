@@ -8,7 +8,7 @@ buildRosPackage {
   version = "4.11.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_simulation-release/archive/release/humble/pmb2_gazebo/4.11.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pmb2_simulation-release/archive/release/humble/pmb2_gazebo/4.11.1-1.tar.gz";
     name = "4.11.1-1.tar.gz";
     sha256 = "277ec96e4c2edb7b7ff4fd09e2860013de574b052f4edf6a533193aa8da2d954";
   };

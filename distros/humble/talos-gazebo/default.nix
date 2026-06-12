@@ -8,7 +8,7 @@ buildRosPackage {
   version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/talos_simulation-release/archive/release/humble/talos_gazebo/2.0.3-1.tar.gz";
+    url = "https://github.com/ros2-gbp/talos_simulation-release/archive/release/humble/talos_gazebo/2.0.3-1.tar.gz";
     name = "2.0.3-1.tar.gz";
     sha256 = "5f62ee1fcea3d5ff3243b70a4effc59a1a10fa91fa29daa4d2f03a0752cf4010";
   };

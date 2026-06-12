@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-nav-msgs";
-  version = "5.3.7-r1";
+  version = "5.3.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/jazzy/nav_msgs/5.3.7-1.tar.gz";
-    name = "5.3.7-1.tar.gz";
-    sha256 = "e9241a52c4b2812e23536d163556aac55677215c4cf7be0a2a37f256481260f5";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/jazzy/nav_msgs/5.3.8-1.tar.gz";
+    name = "5.3.8-1.tar.gz";
+    sha256 = "612889d4c4b15349b3cfabba3bc61da9d50ba77db12c50f801a999de35fc417c";
   };
 
   buildType = "ament_cmake";

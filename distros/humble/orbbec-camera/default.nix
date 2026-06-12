@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, ament-lint-auto, ament-lint-common, backward-ros, builtin-interfaces, camera-info-manager, cv-bridge, diagnostic-msgs, diagnostic-updater, gflags, glog, image-publisher, image-transport, libGL, libGLU, nlohmann_json, openssl, orbbec-camera-msgs, rclcpp, rclcpp-components, sensor-msgs, statistics-msgs, std-msgs, std-srvs, tf2, tf2-msgs, tf2-ros, tf2-sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-orbbec-camera";
-  version = "2.7.6-r1";
+  version = "2.8.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/orbbec_camera_v2-release/archive/release/humble/orbbec_camera/2.7.6-1.tar.gz";
-    name = "2.7.6-1.tar.gz";
-    sha256 = "ae61263e574aa2c150b673d2711238fe88d9e990244efc25239031509ebe3c9e";
+    url = "https://github.com/ros2-gbp/orbbec_camera_v2-release/archive/release/humble/orbbec_camera/2.8.6-1.tar.gz";
+    name = "2.8.6-1.tar.gz";
+    sha256 = "25fac44731c0faac3b2e7cea6a118e3d0154fdab4c615a3d519b4697570a3aae";
   };
 
   buildType = "ament_cmake";

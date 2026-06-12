@@ -8,7 +8,7 @@ buildRosPackage {
   version = "4.11.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_simulation-release/archive/release/humble/pmb2_simulation/4.11.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pmb2_simulation-release/archive/release/humble/pmb2_simulation/4.11.1-1.tar.gz";
     name = "4.11.1-1.tar.gz";
     sha256 = "7c1e02261caefcc397467ebc8fcb4161e0c3b33564801e1558a956583b450ac0";
   };

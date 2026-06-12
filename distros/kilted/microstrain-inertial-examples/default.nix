@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, microstrain-inertial-driver, rviz-imu-plugin, rviz2, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-microstrain-inertial-examples";
-  version = "4.8.0-r1";
+  version = "4.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/kilted/microstrain_inertial_examples/4.8.0-1.tar.gz";
-    name = "4.8.0-1.tar.gz";
-    sha256 = "1d06a0a3eb2ee7d4066e460885628eeb8af7c416ff0fbac7a4ce62550beb97fa";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/kilted/microstrain_inertial_examples/4.9.0-1.tar.gz";
+    name = "4.9.0-1.tar.gz";
+    sha256 = "015f088bf4d375b89bd66bdc78ba152a0d7eb7a01fdc5193ea821ea637be0896";
   };
 
   buildType = "ament_cmake";

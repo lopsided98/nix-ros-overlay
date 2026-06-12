@@ -8,7 +8,7 @@ buildRosPackage {
   version = "5.11.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_robot-gbp/archive/release/humble/pmb2_description/5.11.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pmb2_robot-release/archive/release/humble/pmb2_description/5.11.2-1.tar.gz";
     name = "5.11.2-1.tar.gz";
     sha256 = "3f34e000c74962f3cf4af49d00364594326b8099d7db1da7b2c704c8f8cffc99";
   };

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-ament-black";
-  version = "0.2.6-r3";
+  version = "0.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_black-release/archive/release/lyrical/ament_black/0.2.6-3.tar.gz";
-    name = "0.2.6-3.tar.gz";
-    sha256 = "4090066c7214c983e2ed202d87fe4508641bfe8fb4dd3126bdd21a8e5ab60406";
+    url = "https://github.com/ros2-gbp/ament_black-release/archive/release/lyrical/ament_black/0.2.7-1.tar.gz";
+    name = "0.2.7-1.tar.gz";
+    sha256 = "051b984526f2745445668d1ccbb82549b19439a1d4d37f7310db48e33d8c26c4";
   };
 
   buildType = "ament_python";

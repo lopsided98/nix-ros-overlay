@@ -8,7 +8,7 @@ buildRosPackage {
   version = "3.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_moveit_config-release/archive/release/humble/tiago_moveit_config/3.1.2-1.tar.gz";
+    url = "https://github.com/ros2-gbp/tiago_moveit_config-release/archive/release/humble/tiago_moveit_config/3.1.2-1.tar.gz";
     name = "3.1.2-1.tar.gz";
     sha256 = "9e681ab6e59a8a1edb16fe4c5e29463cdfcc18eae842d769a8336f602ffcb72f";
   };

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-generate-parameter-library-py";
-  version = "0.7.3-r1";
+  version = "0.7.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/kilted/generate_parameter_library_py/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "b8c62442fe0e9258d828830f9e1d07b2cdefa72d729027ef62ca68493c0dbca8";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/kilted/generate_parameter_library_py/0.7.4-1.tar.gz";
+    name = "0.7.4-1.tar.gz";
+    sha256 = "10bac64229cfcc4cd011a107dd2c2646211eb2ad6bb0b6ea9697f78ca4f3f058";
   };
 
   buildType = "ament_python";

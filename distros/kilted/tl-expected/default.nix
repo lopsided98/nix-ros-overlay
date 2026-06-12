@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-kilted-tl-expected";
-  version = "1.3.1-r1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/kilted/tl_expected/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "7229b674ba5ad8defe79a5ddc8382db142ad12c90f0f2c88ebae1f3314bf77db";
+    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/kilted/tl_expected/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "d67dcc9fd8ffc45f2e2f233974bb041a5fe6a87b7a577ab52a3247b077b02436";
   };
 
   buildType = "ament_cmake";

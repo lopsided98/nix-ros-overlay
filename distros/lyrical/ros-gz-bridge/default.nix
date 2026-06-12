@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actuator-msgs, ament-cmake, ament-cmake-gtest, ament-cmake-python, ament-lint-auto, ament-lint-common, geometry-msgs, gps-msgs, gz-msgs-vendor, gz-transport-vendor, launch, launch-ros, launch-testing, launch-testing-ament-cmake, marine-acoustic-msgs, nav-msgs, pkg-config, rclcpp, rclcpp-components, ros-gz-interfaces, rosgraph-msgs, rosidl-pycommon, sensor-msgs, std-msgs, tf2-msgs, trajectory-msgs, vision-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-lyrical-ros-gz-bridge";
-  version = "3.0.8-r3";
+  version = "3.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/lyrical/ros_gz_bridge/3.0.8-3.tar.gz";
-    name = "3.0.8-3.tar.gz";
-    sha256 = "ea6f3e34e76d677fcba60951739eba4b0b27f63f112b50ad048dd895ba69267e";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/lyrical/ros_gz_bridge/3.0.9-1.tar.gz";
+    name = "3.0.9-1.tar.gz";
+    sha256 = "11f2aafd679695b1a6065ca1781b920214e2a88049d3197f91ddcd1d13bb3738";
   };
 
   buildType = "ament_cmake";

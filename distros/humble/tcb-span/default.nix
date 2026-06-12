@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest }:
 buildRosPackage {
   pname = "ros-humble-tcb-span";
-  version = "1.3.1-r1";
+  version = "1.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/humble/tcb_span/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "60e2ef202656429ba5f8684ed91b36106514d58865c223e107b792cc53fe6caf";
+    url = "https://github.com/ros2-gbp/cpp_polyfills-release/archive/release/humble/tcb_span/1.3.2-1.tar.gz";
+    name = "1.3.2-1.tar.gz";
+    sha256 = "23cd9f050b54eedda072bf2899575f1b4592dbe918079115ff80a52857a8539a";
   };
 
   buildType = "ament_cmake";

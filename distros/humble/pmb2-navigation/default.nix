@@ -8,7 +8,7 @@ buildRosPackage {
   version = "4.21.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/pmb2_navigation-gbp/archive/release/humble/pmb2_navigation/4.21.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/pmb2_navigation-release/archive/release/humble/pmb2_navigation/4.21.0-1.tar.gz";
     name = "4.21.0-1.tar.gz";
     sha256 = "7144a6890c2bdfda1cc76e8df9efadb41117382be64e4486b82b74b243f788df";
   };

@@ -8,7 +8,7 @@ buildRosPackage {
   version = "4.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/pal-gbp/tiago_navigation-release/archive/release/humble/tiago_rgbd_sensors/4.12.0-1.tar.gz";
+    url = "https://github.com/ros2-gbp/tiago_navigation-release/archive/release/humble/tiago_rgbd_sensors/4.12.0-1.tar.gz";
     name = "4.12.0-1.tar.gz";
     sha256 = "49630d48734c6d1c53aa57763147a7d8228ff1927aa957d927c5fce6efabc111";
   };

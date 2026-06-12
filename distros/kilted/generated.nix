@@ -196,6 +196,14 @@ self: super: {
 
  async-web-server-cpp = self.callPackage ./async-web-server-cpp {};
 
+ audio-capture = self.callPackage ./audio-capture {};
+
+ audio-common = self.callPackage ./audio-common {};
+
+ audio-common-msgs = self.callPackage ./audio-common-msgs {};
+
+ audio-play = self.callPackage ./audio-play {};
+
  auto-apms-behavior-tree = self.callPackage ./auto-apms-behavior-tree {};
 
  auto-apms-behavior-tree-core = self.callPackage ./auto-apms-behavior-tree-core {};
@@ -1326,6 +1334,8 @@ self: super: {
 
  lifecycle-py = self.callPackage ./lifecycle-py {};
 
+ linear-feedback-controller = self.callPackage ./linear-feedback-controller {};
+
  linear-feedback-controller-msgs = self.callPackage ./linear-feedback-controller-msgs {};
 
  linux-isolate-process = self.callPackage ./linux-isolate-process {};
@@ -1443,6 +1453,8 @@ self: super: {
  mola-input-ouster = self.callPackage ./mola-input-ouster {};
 
  mola-input-rawlog = self.callPackage ./mola-input-rawlog {};
+
+ mola-input-rosbag1 = self.callPackage ./mola-input-rosbag1 {};
 
  mola-input-rosbag2 = self.callPackage ./mola-input-rosbag2 {};
 
@@ -1683,6 +1695,8 @@ self: super: {
  mvsim = self.callPackage ./mvsim {};
 
  nanoeigenpy = self.callPackage ./nanoeigenpy {};
+
+ nanoflann = self.callPackage ./nanoflann {};
 
  nao-button-sim = self.callPackage ./nao-button-sim {};
 
@@ -2530,6 +2544,8 @@ self: super: {
 
  rosbag2rawlog = self.callPackage ./rosbag2rawlog {};
 
+ rosbag-timing-inspector = self.callPackage ./rosbag-timing-inspector {};
+
  rosbridge-library = self.callPackage ./rosbridge-library {};
 
  rosbridge-msgs = self.callPackage ./rosbridge-msgs {};
@@ -2876,6 +2892,10 @@ self: super: {
 
  sophus = self.callPackage ./sophus {};
 
+ sound-play = self.callPackage ./sound-play {};
+
+ sound-play-msgs = self.callPackage ./sound-play-msgs {};
+
  spacenav = self.callPackage ./spacenav {};
 
  spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
@@ -3211,6 +3231,8 @@ self: super: {
  velodyne-msgs = self.callPackage ./velodyne-msgs {};
 
  velodyne-pointcloud = self.callPackage ./velodyne-pointcloud {};
+
+ video-to-image-msg-publisher = self.callPackage ./video-to-image-msg-publisher {};
 
  vision-msgs = self.callPackage ./vision-msgs {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-cmake-xmllint, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-libtorch-vendor";
-  version = "0.1.1-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_buffer_backends-release/archive/release/rolling/libtorch_vendor/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "ccc56928fed6cfa585d70a2417a5003f364e757e23d5be75e99384a3053de637";
+    url = "https://github.com/ros2-gbp/rosidl_buffer_backends-release/archive/release/rolling/libtorch_vendor/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "368ba3d17d28dbf55fe11ddc5dc696a3b13a5b62fbe6998d6543005e18eddb5a";
   };
 
   buildType = "ament_cmake";
