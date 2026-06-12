@@ -1,12 +1,14 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, setuptools }:
+{ lib, buildPythonPackage, fetchFromGitHub, colcon-core, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-recursive-crawl";
   version = "0.2.3";
 
-  src = fetchPypi {
-    inherit pname version;
-    sha256 = "sha256-/KX2GSFNIDBtqvAS+ROZ1NO2BTZLEh5d+AOZQyxVxgM=";
+  src = fetchFromGitHub {
+    owner = "colcon";
+    repo = pname;
+    tag = version;
+    hash = "sha256-zmmEelMjsIbXy5LchZMtr2+x+Ne2c2PhexLjbkZJmm8=";
   };
 
   pyproject = true;

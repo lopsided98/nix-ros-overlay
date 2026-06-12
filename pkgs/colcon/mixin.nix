@@ -1,12 +1,14 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, pyyaml, setuptools }:
+{ lib, buildPythonPackage, fetchFromGitHub, colcon-core, pyyaml, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-mixin";
   version = "0.2.3";
 
-  src = fetchPypi {
-    inherit pname version;
-    sha256 = "sha256-4MNJz3sHCWEohm7BD6UI41QA2yCP7LvrhqVKsaHUnuk=";
+  src = fetchFromGitHub {
+    owner = "colcon";
+    repo = pname;
+    tag = version;
+    hash = "sha256-XQpRDBTtrFOOlCRXKVImUtwrwirO0ELWifUpfQuyrrY=";
   };
 
   pyproject = true;

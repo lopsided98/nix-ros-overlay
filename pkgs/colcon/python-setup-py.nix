@@ -1,12 +1,14 @@
-{ lib, buildPythonPackage, fetchPypi, colcon-core, setuptools }:
+{ lib, buildPythonPackage, fetchFromGitHub, colcon-core, setuptools }:
 
 buildPythonPackage rec {
   pname = "colcon-python-setup-py";
   version = "0.2.9";
 
-  src = fetchPypi {
-    inherit pname version;
-    hash = "sha256-TYurLgW6M04p7uNxX73kkCgTQu2OAA4lITDlxRkVODo=";
+  src = fetchFromGitHub {
+    owner = "colcon";
+    repo = pname;
+    tag = version;
+    hash = "sha256-N+OL0rSoWwZZioMV9JRvrQHdahE3fY7kKjfflUiRVL8=";
   };
 
   pyproject = true;

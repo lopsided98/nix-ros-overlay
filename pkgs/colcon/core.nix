@@ -1,4 +1,4 @@
-{ lib, stdenv, buildPythonApplication, buildPythonPackage, makeWrapper, fetchPypi
+{ lib, stdenv, buildPythonApplication, buildPythonPackage, makeWrapper, fetchFromGitHub
 , python, distlib, empy_3, pytest, pytest-cov, pytest-repeat
 , pytest-rerunfailures, setuptools, pytestCheckHook, flake8, flake8-blind-except
 , flake8-docstrings, flake8-import-order, pep8-naming, pylint
@@ -30,9 +30,11 @@ let
     pname = "colcon-core";
     version = "0.20.1";
 
-    src = fetchPypi {
-      inherit pname version;
-      hash = "sha256-YHgIs1x50woOH2/BfxJf9WUf0EjPVuKtMPczo5TooW0=";
+    src = fetchFromGitHub {
+      owner = "colcon";
+      repo = pname;
+      tag = version;
+      hash = "sha256-FV/G2FcnBgr7mUY/Jr+bVAdEfhHL9qAnpc92hpTfy7Y=";
     };
 
     pyproject = true;
