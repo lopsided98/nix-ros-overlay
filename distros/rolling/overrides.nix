@@ -394,6 +394,27 @@ in {
 
   mp-units-vendor = lib.patchAmentVendorGit rosSuper.mp-units-vendor {};
 
+  mqtt-client = rosSuper.mqtt-client.overrideAttrs ({
+    patches ? [], postPatch ? "", ...
+  }: {
+    patches = patches ++ [
+      # ref. https://github.com/ika-rwth-aachen/mqtt_client/pull/94
+      (self.fetchpatch2 {
+        name ="drop-ament_target_dependencies.patch";
+        url = "https://github.com/ika-rwth-aachen/mqtt_client/commit/a96e396cfbdd393a90b7577ee278731522e8395c.patch?full_index=1";
+        hash = "sha256-i1DqD4g72eepXvzXT+q4gqADXu619XBCSfdmhAAQ5qw=";
+        stripLen = 1;
+      })
+    ];
+    # ref. https://github.com/ika-rwth-aachen/mqtt_client/pull/93
+    postPatch = postPatch + ''
+      substituteInPlace include/mqtt_client/MqttClient.hpp --replace-fail \
+        "#include <fmt/format.h>" \
+        "#include <fmt/format.h>
+         #include <fmt/ranges.h>"
+    '';
+  });
+
   mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
     patches ? [], ...
   }: {
