@@ -341,6 +341,16 @@ in with lib; {
     propagatedBuildInputs = propagatedBuildInputs ++ [ self.qt5.qtbase ];
   });
 
+  geometric-shapes = rosSuper.geometric-shapes.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/moveit/geometric_shapes/issues/270
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "random_numbers::random_numbers" "\''${random_numbers_LIBRARIES}"
+    '';
+  });
+
   google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
     url = "https://github.com/google/benchmark.git";
     rev = "c05843a9f622db08ad59804c190f98879b76beba";
