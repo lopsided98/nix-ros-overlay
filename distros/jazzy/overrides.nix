@@ -329,6 +329,16 @@ in {
 
   gazebo = self.gazebo_11;
 
+  geometric-shapes = rosSuper.geometric-shapes.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/moveit/geometric_shapes/issues/270
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "random_numbers::random_numbers" "\''${random_numbers_LIBRARIES}"
+    '';
+  });
+
   google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
     url = "https://github.com/google/benchmark.git";
     rev = "344117638c8ff7e239044fd0fa7085839fc03021";
