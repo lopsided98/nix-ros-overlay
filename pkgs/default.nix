@@ -25,6 +25,11 @@ self: super: with self.lib; {
     colcon-zsh
   ];
 
+  # Festival is not available in nixpkgs, but packages in audio_common
+  # (which depend on festoval) are useful even without it. This
+  # placeholder allows building these packages.
+  festival-stub = null;
+
   gz-cmake_2 = self.callPackage ./gazebo/gz-cmake/2.nix { };
   gz-cmake_3 = self.callPackage ./gazebo/gz-cmake/3.nix { };
 
