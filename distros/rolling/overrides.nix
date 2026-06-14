@@ -434,6 +434,13 @@ in {
     buildInputs = buildInputs ++ [ self.zlib ];
   });
 
+  mrpt-opengl = rosSuper.mrpt-opengl.overrideAttrs ({
+    propagatedBuildInputs ? [], ...
+  }: {
+    # TODO: Remove after https://github.com/MRPT/mrpt/pull/1368 is merged and released
+    propagatedBuildInputs = propagatedBuildInputs ++ [ self.libGL ];
+  });
+
   mrpt-viz = rosSuper.mrpt-viz.overrideAttrs ({
     buildInputs ? [], nativeBuildInputs ? [], ...
   }: {
