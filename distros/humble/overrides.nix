@@ -859,6 +859,14 @@ in with lib; {
     buildInputs = buildInputs ++ [ self.libfyaml ];
   });
 
+  mrpt-gui = rosSuper.mrpt-gui.overrideAttrs ({
+    buildInputs ? [], nativeBuildInputs ? [], ...
+  }: {
+    # Add dependencies for vendored nanogui
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+    buildInputs = buildInputs ++ [ self.wayland-scanner ];
+  });
+
   mrpt-io = rosSuper.mrpt-io.overrideAttrs ({
     buildInputs ? [], ...
   }: {
