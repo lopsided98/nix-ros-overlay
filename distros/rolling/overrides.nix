@@ -412,6 +412,13 @@ in {
     buildInputs = buildInputs ++ [ self.libfyaml ];
   });
 
+  mrpt-maps = rosSuper.mrpt-maps.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # Don't use vendored octomap
+    buildInputs = buildInputs ++ [ self.octomap ];
+  });
+
   mrpt-io = rosSuper.mrpt-io.overrideAttrs ({
     buildInputs ? [], ...
   }: {

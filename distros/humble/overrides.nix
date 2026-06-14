@@ -866,6 +866,13 @@ in with lib; {
     buildInputs = buildInputs ++ [ self.zlib ];
   });
 
+  mrpt-maps = rosSuper.mrpt-maps.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # Don't use vendored octomap
+    buildInputs = buildInputs ++ [ self.octomap ];
+  });
+
   mrpt-viz = rosSuper.mrpt-viz.overrideAttrs ({
     buildInputs ? [], nativeBuildInputs ? [], ...
   }: {
