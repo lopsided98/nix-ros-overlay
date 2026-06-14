@@ -412,6 +412,13 @@ in {
     buildInputs = buildInputs ++ [ self.libfyaml ];
   });
 
+  mrpt-io = rosSuper.mrpt-io.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # Don't use built-in zlib
+    buildInputs = buildInputs ++ [ self.zlib ];
+  });
+
   mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
     patches ? [], ...
   }: {
