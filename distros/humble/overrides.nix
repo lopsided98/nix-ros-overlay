@@ -866,6 +866,14 @@ in with lib; {
     buildInputs = buildInputs ++ [ self.zlib ];
   });
 
+  mrpt-viz = rosSuper.mrpt-viz.overrideAttrs ({
+    buildInputs ? [], nativeBuildInputs ? [], ...
+  }: {
+    # Don't use vendored assimp
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+    buildInputs = buildInputs ++ [ self.assimp ];
+  });
+
   mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
     patches ? [], ...
   }: {
