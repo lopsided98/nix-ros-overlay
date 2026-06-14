@@ -851,6 +851,14 @@ in with lib; {
     ];
   });
 
+  mrpt-containers = rosSuper.mrpt-containers.overrideAttrs ({
+    buildInputs ? [], nativeBuildInputs ? [], ...
+  }: {
+    # Don't use vendored libfyaml
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+    buildInputs = buildInputs ++ [ self.libfyaml ];
+  });
+
   mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
     patches ? [], ...
   }: {
