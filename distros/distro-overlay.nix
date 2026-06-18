@@ -139,6 +139,34 @@ let
       buildInputs = builtins.filter (p: p.pname != "future") buildInputs;
     });
 
+    libmavconn = rosSuper.libmavconn.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      # Migrate deprecated ASIO API calls for io_context, work guards, and resolvers
+      postPatch = postPatch + ''
+        substituteInPlace src/tcp.cpp src/udp.cpp src/serial.cpp include/mavconn/serial.hpp include/mavconn/udp.hpp include/mavconn/tcp.hpp \
+          --replace-fail 'io_service' 'io_context'
+
+        substituteInPlace src/tcp.cpp src/udp.cpp \
+          --replace-fail 'new io_context::work(io_context)' 'new asio::executor_work_guard<asio::io_context::executor_type>(asio::make_work_guard(io_context))' \
+          --replace-fail 'resolver.resolve(query, ec)' 'resolver.resolve(host, "", ec)'
+
+        substituteInPlace src/tcp.cpp \
+          --replace-fail 'GET_IO_SERVICE(socket).post(' 'asio::post(GET_IO_SERVICE(socket), ' \
+          --replace-fail 'tcp::resolver::query query(host, "");' ""
+
+        substituteInPlace src/udp.cpp \
+          --replace-fail 'udp::resolver::query query(host, "");' ""
+
+        substituteInPlace src/serial.cpp src/tcp.cpp src/udp.cpp \
+          --replace-fail 'io_context.reset()' 'io_context.restart()' \
+          --replace-fail 'io_context.post(' 'asio::post(io_context, '
+
+        substituteInPlace include/mavconn/udp.hpp include/mavconn/tcp.hpp \
+          --replace-fail 'std::unique_ptr<asio::io_context::work>' 'std::unique_ptr<asio::executor_work_guard<asio::io_context::executor_type>>'
+      '';
+    });
+
     mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
       postPatch ? "", ...
     }: {
