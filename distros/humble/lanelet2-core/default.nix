@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, boost, eigen, gtest, mrt-cmake-modules }:
 buildRosPackage {
   pname = "ros-humble-lanelet2-core";
-  version = "1.2.2-r1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/humble/lanelet2_core/1.2.2-1.tar.gz";
-    name = "1.2.2-1.tar.gz";
-    sha256 = "0b38e261c93f027a6e02456895ac10a49bb9495cd6af4342f163bbc2289c4dfd";
+    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/humble/lanelet2_core/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
+    sha256 = "269d1b85d5dcbf16413c2efd7d0bb32af369efd08a8e2974f19780aecd1829d0";
   };
 
   buildType = "ament_cmake";

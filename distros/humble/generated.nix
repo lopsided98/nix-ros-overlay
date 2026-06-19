@@ -1206,6 +1206,12 @@ self: super: {
 
  event-image-reconstruction-fibar = self.callPackage ./event-image-reconstruction-fibar {};
 
+ eventdispatch-python = self.callPackage ./eventdispatch-python {};
+
+ eventdispatch-ros2 = self.callPackage ./eventdispatch-ros2 {};
+
+ eventdispatch-ros2-interfaces = self.callPackage ./eventdispatch-ros2-interfaces {};
+
  ewellix-description = self.callPackage ./ewellix-description {};
 
  ewellix-interfaces = self.callPackage ./ewellix-interfaces {};
@@ -2893,6 +2899,8 @@ self: super: {
  plotjuggler-ros = self.callPackage ./plotjuggler-ros {};
 
  pluginlib = self.callPackage ./pluginlib {};
+
+ ply-utils = self.callPackage ./ply-utils {};
 
  pmb2-2dnav = self.callPackage ./pmb2-2dnav {};
 

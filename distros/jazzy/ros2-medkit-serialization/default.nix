@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-clang-tidy, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nlohmann_json, rclcpp, rcpputils, rcutils, ros2-medkit-cmake, rosidl-runtime-c, rosidl-runtime-cpp, rosidl-typesupport-introspection-c, rosidl-typesupport-introspection-cpp, sensor-msgs, std-msgs, std-srvs, test-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-ros2-medkit-serialization";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/jazzy/ros2_medkit_serialization/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "a109b84f5df024ff4b28c94ecec441ae1c6a1ef41b0880ed74caea1d9114d8a8";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/jazzy/ros2_medkit_serialization/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "7a4e0209def757c038e78b11c8a8b86c35bc4e8145d2d35566e945077c3cff61";
   };
 
   buildType = "ament_cmake";

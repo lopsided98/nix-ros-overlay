@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, gtest, lanelet2-core, lanelet2-io, lanelet2-maps, lanelet2-projection, lanelet2-routing, lanelet2-traffic-rules, mrt-cmake-modules }:
 buildRosPackage {
   pname = "ros-jazzy-lanelet2-validation";
-  version = "1.2.1-r1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/jazzy/lanelet2_validation/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "04974cf5817b82bdea628aff8e9d5999345c51a0abb8081a8b2416cbab199e5e";
+    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/jazzy/lanelet2_validation/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
+    sha256 = "7d9fd584b28ca642cb1a16555d33ed08ea9f5350b314c8c9fe187a98eefb9682";
   };
 
   buildType = "ament_cmake";

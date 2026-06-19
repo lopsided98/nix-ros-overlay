@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, launch-xml, python3Packages, rclpy, rmf-fleet-adapter-python, rmf-fleet-msgs, rmf-task-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-rmf-demos-fleet-adapter";
-  version = "2.8.2-r4";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/lyrical/rmf_demos_fleet_adapter/2.8.2-4.tar.gz";
-    name = "2.8.2-4.tar.gz";
-    sha256 = "ab67e0a2ae3d70d905e782b8e826cc498282191de40cbc791ff334da3abd3ff4";
+    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/lyrical/rmf_demos_fleet_adapter/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "1a37aab0197ba91b2e980fe1fc19d53d0b5bb61daf3cbb4e0741494b6988d38d";
   };
 
   buildType = "ament_python";

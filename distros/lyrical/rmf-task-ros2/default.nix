@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-catch2, ament-cmake-uncrustify, backward-ros, eigen, nlohmann-json-schema-validator-vendor, nlohmann_json, rclcpp, rmf-api-msgs, rmf-task-msgs, rmf-traffic, rmf-traffic-ros2, rmf-utils, rmf-websocket, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-rmf-task-ros2";
-  version = "2.12.0-r3";
+  version = "2.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/lyrical/rmf_task_ros2/2.12.0-3.tar.gz";
-    name = "2.12.0-3.tar.gz";
-    sha256 = "b44325aa776fcdc8fcdf290b12b67bc602eb9abd0050d14885af8f76e0cad74f";
+    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/lyrical/rmf_task_ros2/2.13.0-1.tar.gz";
+    name = "2.13.0-1.tar.gz";
+    sha256 = "80cc8e7404b591cbf40c22f63107536133f4e420f4bce7c92a16034bd42cdc47";
   };
 
   buildType = "ament_cmake";

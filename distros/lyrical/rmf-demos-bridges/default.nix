@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages, rmf-building-map-tools, rmf-fleet-msgs, rmf-site-map-msgs, rmf-traffic-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-rmf-demos-bridges";
-  version = "2.8.2-r4";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/lyrical/rmf_demos_bridges/2.8.2-4.tar.gz";
-    name = "2.8.2-4.tar.gz";
-    sha256 = "6cb6f880cf7049a368d00c6902006beca91c6451a35814df9ee12495bdba6688";
+    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/lyrical/rmf_demos_bridges/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "98a5ee0b755bce7a2e7f67340b8014c6d41ec2c87f0f79fc4c3fb1933960dd05";
   };
 
   buildType = "ament_python";

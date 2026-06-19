@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-lint-auto, ament-lint-cmake, boost }:
 buildRosPackage {
   pname = "ros-kilted-random-numbers";
-  version = "2.0.4-r1";
+  version = "2.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/random_numbers-release/archive/release/kilted/random_numbers/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "747daac7f7e9b590b1353205ad183ef3902a64636b222a31dabaa4d5d6acffb6";
+    url = "https://github.com/ros2-gbp/random_numbers-release/archive/release/kilted/random_numbers/2.0.5-1.tar.gz";
+    name = "2.0.5-1.tar.gz";
+    sha256 = "386bd9dd1ce0cae856ad28cc685e86021966e608cb2f0979e5f43bb45871802c";
   };
 
   buildType = "ament_cmake";

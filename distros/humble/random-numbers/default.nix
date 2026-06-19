@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-cmake, boost }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-lint-auto, ament-lint-cmake, boost }:
 buildRosPackage {
   pname = "ros-humble-random-numbers";
-  version = "2.0.1-r3";
+  version = "2.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/random_numbers-release/archive/release/humble/random_numbers/2.0.1-3.tar.gz";
-    name = "2.0.1-3.tar.gz";
-    sha256 = "d70d1e9b655a20572f167d69b7b49295827896ca1927ebaeba6acbb538f181a2";
+    url = "https://github.com/ros2-gbp/random_numbers-release/archive/release/humble/random_numbers/2.0.5-1.tar.gz";
+    name = "2.0.5-1.tar.gz";
+    sha256 = "9e68e363c8e33c2405d34f41c234abab4f8a994917cda50c27898d15f066473d";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-lint-auto ament-lint-cmake ];
+  checkInputs = [ ament-cmake-copyright ament-lint-auto ament-lint-cmake ];
   propagatedBuildInputs = [ boost ];
   nativeBuildInputs = [ ament-cmake ];
 

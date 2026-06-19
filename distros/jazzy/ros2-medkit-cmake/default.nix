@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-ros2-medkit-cmake";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/jazzy/ros2_medkit_cmake/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "bfd7f71dd28e3fc833e7e0ab83076b26200a9dc07af31561bb0070623df43aeb";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/jazzy/ros2_medkit_cmake/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "efc19dd347a83a3b30e5d2aba56e1fd438ff1588d0b4858787d460d4906116a5";
   };
 
   buildType = "ament_cmake";

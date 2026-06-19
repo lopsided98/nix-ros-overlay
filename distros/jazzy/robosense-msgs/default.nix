@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-robosense-msgs";
-  version = "1.0.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/robosense_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "5389ce69103b1326325c294d7397a01365cc4edd2aeaefd204adb6099c24a105";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/robosense_msgs/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "6f19a9254331e6e5fed9e41eaa10f0bf52d924c6be624b1d82f912ccfba62626";
   };
 
   buildType = "ament_cmake";

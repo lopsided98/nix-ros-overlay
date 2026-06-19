@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, diagnostic-msgs, diagnostic-updater, nebula-core-common, nebula-core-ros, nebula-msgs, nebula-sample-common, nebula-sample-decoders, nebula-sample-hw-interfaces, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-nebula-sample";
-  version = "1.0.0-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_sample/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "3e1df02cba7888e841f9e91a0d390d553e5e177ba137c8d9e62c3cecf6ecc6a2";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_sample/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "f43c12d36aa4cbfefeecb1866a960d88add7743569e4095751125da33cd1ee43";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-swri-dbw-interface";
-  version = "3.8.9-r1";
+  version = "3.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_dbw_interface/3.8.9-1.tar.gz";
-    name = "3.8.9-1.tar.gz";
-    sha256 = "625c4c10f3845c2775ed07ded1b2033a4cd3a6a3cfd1269bfea9171875fe6696";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_dbw_interface/3.9.0-1.tar.gz";
+    name = "3.9.0-1.tar.gz";
+    sha256 = "46c990b731a466b947494756167b61caa234c0d6a3ce443bd2ff2e4c60acb9a4";
   };
 
   buildType = "ament_cmake";

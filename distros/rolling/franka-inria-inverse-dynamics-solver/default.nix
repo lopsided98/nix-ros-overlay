@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, inverse-dynamics-solver, pluginlib }:
 buildRosPackage {
   pname = "ros-rolling-franka-inria-inverse-dynamics-solver";
-  version = "6.0.1-r3";
+  version = "6.0.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/inverse_dynamics_solver-release/archive/release/rolling/franka_inria_inverse_dynamics_solver/6.0.1-3.tar.gz";
-    name = "6.0.1-3.tar.gz";
-    sha256 = "e154b4d9a5f47040e31cfcedbd8a37a83e19b69ef8d9b90335530437aea35776";
+    url = "https://github.com/ros2-gbp/inverse_dynamics_solver-release/archive/release/rolling/franka_inria_inverse_dynamics_solver/6.0.1-4.tar.gz";
+    name = "6.0.1-4.tar.gz";
+    sha256 = "e78a7cabe50e15154d3650ee78f01684dcb5702e2d234715f87b8145c8537412";
   };
 
   buildType = "ament_cmake";

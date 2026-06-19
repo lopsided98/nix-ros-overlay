@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-lint-auto, ament-lint-cmake, boost }:
 buildRosPackage {
   pname = "ros-lyrical-random-numbers";
-  version = "2.0.4-r3";
+  version = "2.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/random_numbers-release/archive/release/lyrical/random_numbers/2.0.4-3.tar.gz";
-    name = "2.0.4-3.tar.gz";
-    sha256 = "5e1ea1ca0a37fe3e23a81aa3b70746536d795d083267a8ca732a990adbc38f69";
+    url = "https://github.com/ros2-gbp/random_numbers-release/archive/release/lyrical/random_numbers/2.0.5-1.tar.gz";
+    name = "2.0.5-1.tar.gz";
+    sha256 = "d2a3ceb324d867b1f362969e38d22a2737628c63f99613e0fc0a3072b21eaabc";
   };
 
   buildType = "ament_cmake";

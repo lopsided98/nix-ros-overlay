@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-comms, mrpt-maps, mrpt-viz }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-hwdrivers";
-  version = "3.0.2-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_hwdrivers/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "acf28b5bef5d3fbe7a8a3143808862522a1de65bfefe0b9aca73327f5d0987f9";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_hwdrivers/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "9abcb642a1b114088ff8e5be62207ea39cd653997130b805133b98245f277e2e";
   };
 
   buildType = "cmake";

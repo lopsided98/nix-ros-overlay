@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, python-qt-binding, python3Packages, qt-dotgraph, rclpy, rqt-graph, rqt-gui, rqt-gui-py, tf2-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-flake8, ament-pep257, python-qt-binding, python3Packages, qt-dotgraph, rclpy, rqt-graph, rqt-gui, rqt-gui-py, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-rqt-tf-tree";
-  version = "1.0.6-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_tf_tree-release/archive/release/jazzy/rqt_tf_tree/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "b771f83d37e766d48173c6e44bcb216fd71a9da956e54185b0c8ac5b9a7a5534";
+    url = "https://github.com/ros2-gbp/rqt_tf_tree-release/archive/release/jazzy/rqt_tf_tree/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "974cb6ffc10e318c5f12df3e357afd11ffe3997dcf64fb6de2bdc3aa48510dab";
   };
 
   buildType = "ament_python";
-  checkInputs = [ python3Packages.mock python3Packages.pytest ];
+  checkInputs = [ ament-flake8 ament-pep257 python3Packages.mock python3Packages.pytest ];
   propagatedBuildInputs = [ python-qt-binding qt-dotgraph rclpy rqt-graph rqt-gui rqt-gui-py tf2-msgs tf2-ros ];
 
   meta = {

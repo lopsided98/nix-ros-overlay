@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-lyrical-rmf-demos-assets";
-  version = "2.8.2-r4";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/lyrical/rmf_demos_assets/2.8.2-4.tar.gz";
-    name = "2.8.2-4.tar.gz";
-    sha256 = "e6623b7984f64d7e3543c2ae0c30ea5f21f2daea4e098184849a682160e35600";
+    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/lyrical/rmf_demos_assets/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "a3307b8eafb8b38a6eb8706365f3062430274ba32993ccd9a921a138b10fc89c";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-ffmpeg-image-transport-msgs";
-  version = "1.0.2-r3";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ffmpeg_image_transport_msgs-release/archive/release/kilted/ffmpeg_image_transport_msgs/1.0.2-3.tar.gz";
-    name = "1.0.2-3.tar.gz";
-    sha256 = "6c6ca55d0db6897a423937e9784c32968d0c52d3298bc3d7ecf01ab75a7573ba";
+    url = "https://github.com/ros2-gbp/ffmpeg_image_transport_msgs-release/archive/release/kilted/ffmpeg_image_transport_msgs/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "13f1d82e2db9acf00e5abc6c2832e2360c67f13ef1421cc2b432f78a5a64be1f";
   };
 
   buildType = "ament_cmake";
