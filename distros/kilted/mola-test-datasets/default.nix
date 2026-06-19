@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-kilted-mola-test-datasets";
-  version = "0.4.2-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_test_datasets-release/archive/release/kilted/mola_test_datasets/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "0d28e57c6f4b877f6500828ee393a7ce3e778db5c259e00419dd7b0819a6f121";
+    url = "https://github.com/ros2-gbp/mola_test_datasets-release/archive/release/kilted/mola_test_datasets/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "a3e9cab2ccb1706acc05237acf773f09eb7ddc09b043a32ad8d2ba7420a2d2c1";
   };
 
   buildType = "ament_cmake";

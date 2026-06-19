@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-gui, mrpt-libapps-cli, wxGTK32 }:
 buildRosPackage {
   pname = "ros-humble-mrpt-libapps-gui";
-  version = "3.0.2-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_libapps_gui/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "0d09af0b7c125001cac56e557f3d7fb85b487b83de9f03b4af34e8f9da31bf24";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_libapps_gui/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "244e2e2da0f1f6f6d634f54bd697b4b7f1d7f15cdd944d8a4126518ea77138bc";
   };
 
   buildType = "cmake";

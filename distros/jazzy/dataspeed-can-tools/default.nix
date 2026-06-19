@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, can-msgs, dataspeed-can-msgs, rclcpp, rosbag2-cpp, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-dataspeed-can-tools";
-  version = "2.0.6-r1";
+  version = "2.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/jazzy/dataspeed_can_tools/2.0.6-1.tar.gz";
-    name = "2.0.6-1.tar.gz";
-    sha256 = "6dfbe4679e2fbcb32797ade10a75d5d541e2cf92f315f0214814923effaa678c";
+    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/jazzy/dataspeed_can_tools/2.0.7-1.tar.gz";
+    name = "2.0.7-1.tar.gz";
+    sha256 = "343071f340ff8e85f9ec12576fad7ce41241c1579676e367f738b56e892d7d19";
   };
 
   buildType = "ament_cmake";

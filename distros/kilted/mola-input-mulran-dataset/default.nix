@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-kilted-mola-input-mulran-dataset";
-  version = "2.8.0-r1";
+  version = "3.0.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_input_mulran_dataset/2.8.0-1.tar.gz";
-    name = "2.8.0-1.tar.gz";
-    sha256 = "998adb53c1022e380c78ef3cdfb1ff4f2cc01b3bff1708328fcbca5325f4171f";
+    url = "https://github.com/ros2-gbp/mola_academic_datasets-release/archive/release/kilted/mola_input_mulran_dataset/3.0.0-3.tar.gz";
+    name = "3.0.0-3.tar.gz";
+    sha256 = "8ae7ce542496dd9bbe4573894445e77bc39c73995adc65924c4a6dd78122873a";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, lanelet2-core, mrt-cmake-modules }:
 buildRosPackage {
   pname = "ros-jazzy-lanelet2-maps";
-  version = "1.2.1-r1";
+  version = "1.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/jazzy/lanelet2_maps/1.2.1-1.tar.gz";
-    name = "1.2.1-1.tar.gz";
-    sha256 = "95d5b2745537fa0d9d4ee3a7c0c08366878669e9f5354984bd8c0dc2aad92a59";
+    url = "https://github.com/ros2-gbp/lanelet2-release/archive/release/jazzy/lanelet2_maps/1.2.3-1.tar.gz";
+    name = "1.2.3-1.tar.gz";
+    sha256 = "1ca0560586b39be68906b2a53ae58465faa2a1558b31fd5dc3a0d975ec65de43";
   };
 
   buildType = "ament_cmake";

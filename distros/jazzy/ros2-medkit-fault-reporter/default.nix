@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-clang-tidy, ament-cmake-gtest, ament-lint-auto, ament-lint-common, launch-testing-ament-cmake, launch-testing-ros, rclcpp, ros2-medkit-cmake, ros2-medkit-fault-manager, ros2-medkit-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ros2-medkit-fault-reporter";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/jazzy/ros2_medkit_fault_reporter/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "11e4d57082426418111bfcae9e48832ddfeef9600ae7c9d4295d2d4118dd1615";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/jazzy/ros2_medkit_fault_reporter/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "715bf669654ac666003aca61b2f6fe07cb06ee3d1cb176b7576a4bb5344b6ee4";
   };
 
   buildType = "ament_cmake";

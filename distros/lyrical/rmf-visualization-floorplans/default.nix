@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, geometry-msgs, nav-msgs, opencv, rclcpp, rclcpp-components, rmf-building-map-msgs, rmf-utils, rmf-visualization-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-rmf-visualization-floorplans";
-  version = "2.5.1-r3";
+  version = "2.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/lyrical/rmf_visualization_floorplans/2.5.1-3.tar.gz";
-    name = "2.5.1-3.tar.gz";
-    sha256 = "a153a9889bea027902a6c0daed10431e685ef9d09d01bb562c5557453c3d8716";
+    url = "https://github.com/ros2-gbp/rmf_visualization-release/archive/release/lyrical/rmf_visualization_floorplans/2.6.0-1.tar.gz";
+    name = "2.6.0-1.tar.gz";
+    sha256 = "6f3d0790f472325a4c3c99c12f3a02fdbae558a971b3216549a433dc1ac27430";
   };
 
   buildType = "ament_cmake";

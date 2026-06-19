@@ -560,6 +560,14 @@ self: super: {
 
  draco-point-cloud-transport = self.callPackage ./draco-point-cloud-transport {};
 
+ ds-dbw = self.callPackage ./ds-dbw {};
+
+ ds-dbw-can = self.callPackage ./ds-dbw-can {};
+
+ ds-dbw-joystick-demo = self.callPackage ./ds-dbw-joystick-demo {};
+
+ ds-dbw-msgs = self.callPackage ./ds-dbw-msgs {};
+
  dual-arm-panda-moveit-config = self.callPackage ./dual-arm-panda-moveit-config {};
 
  dual-laser-merger = self.callPackage ./dual-laser-merger {};
@@ -1488,9 +1496,51 @@ self: super: {
 
  mrpt-apps = self.callPackage ./mrpt-apps {};
 
+ mrpt-apps-cli = self.callPackage ./mrpt-apps-cli {};
+
+ mrpt-apps-gui = self.callPackage ./mrpt-apps-gui {};
+
+ mrpt-bayes = self.callPackage ./mrpt-bayes {};
+
+ mrpt-common = self.callPackage ./mrpt-common {};
+
+ mrpt-comms = self.callPackage ./mrpt-comms {};
+
+ mrpt-config = self.callPackage ./mrpt-config {};
+
+ mrpt-containers = self.callPackage ./mrpt-containers {};
+
+ mrpt-core = self.callPackage ./mrpt-core {};
+
+ mrpt-data = self.callPackage ./mrpt-data {};
+
+ mrpt-examples-cpp = self.callPackage ./mrpt-examples-cpp {};
+
+ mrpt-expr = self.callPackage ./mrpt-expr {};
+
  mrpt-generic-sensor = self.callPackage ./mrpt-generic-sensor {};
 
+ mrpt-graphs = self.callPackage ./mrpt-graphs {};
+
+ mrpt-graphslam = self.callPackage ./mrpt-graphslam {};
+
+ mrpt-gui = self.callPackage ./mrpt-gui {};
+
+ mrpt-hwdrivers = self.callPackage ./mrpt-hwdrivers {};
+
+ mrpt-img = self.callPackage ./mrpt-img {};
+
+ mrpt-imgui = self.callPackage ./mrpt-imgui {};
+
+ mrpt-io = self.callPackage ./mrpt-io {};
+
+ mrpt-kinematics = self.callPackage ./mrpt-kinematics {};
+
  mrpt-libapps = self.callPackage ./mrpt-libapps {};
+
+ mrpt-libapps-cli = self.callPackage ./mrpt-libapps-cli {};
+
+ mrpt-libapps-gui = self.callPackage ./mrpt-libapps-gui {};
 
  mrpt-libbase = self.callPackage ./mrpt-libbase {};
 
@@ -1518,13 +1568,23 @@ self: super: {
 
  mrpt-map-server = self.callPackage ./mrpt-map-server {};
 
+ mrpt-maps = self.callPackage ./mrpt-maps {};
+
+ mrpt-math = self.callPackage ./mrpt-math {};
+
  mrpt-msgs = self.callPackage ./mrpt-msgs {};
 
  mrpt-msgs-bridge = self.callPackage ./mrpt-msgs-bridge {};
 
+ mrpt-nav = self.callPackage ./mrpt-nav {};
+
  mrpt-nav-interfaces = self.callPackage ./mrpt-nav-interfaces {};
 
  mrpt-navigation = self.callPackage ./mrpt-navigation {};
+
+ mrpt-obs = self.callPackage ./mrpt-obs {};
+
+ mrpt-opengl = self.callPackage ./mrpt-opengl {};
 
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
@@ -1532,7 +1592,13 @@ self: super: {
 
  mrpt-pointcloud-pipeline = self.callPackage ./mrpt-pointcloud-pipeline {};
 
+ mrpt-poses = self.callPackage ./mrpt-poses {};
+
+ mrpt-random = self.callPackage ./mrpt-random {};
+
  mrpt-reactivenav2d = self.callPackage ./mrpt-reactivenav2d {};
+
+ mrpt-rtti = self.callPackage ./mrpt-rtti {};
 
  mrpt-sensor-bumblebee-stereo = self.callPackage ./mrpt-sensor-bumblebee-stereo {};
 
@@ -1546,9 +1612,23 @@ self: super: {
 
  mrpt-sensors = self.callPackage ./mrpt-sensors {};
 
+ mrpt-serialization = self.callPackage ./mrpt-serialization {};
+
+ mrpt-slam = self.callPackage ./mrpt-slam {};
+
+ mrpt-system = self.callPackage ./mrpt-system {};
+
+ mrpt-tfest = self.callPackage ./mrpt-tfest {};
+
+ mrpt-topography = self.callPackage ./mrpt-topography {};
+
  mrpt-tps-astar-planner = self.callPackage ./mrpt-tps-astar-planner {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
+
+ mrpt-typemeta = self.callPackage ./mrpt-typemeta {};
+
+ mrpt-viz = self.callPackage ./mrpt-viz {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
@@ -1743,6 +1823,8 @@ self: super: {
  performance-test-fixture = self.callPackage ./performance-test-fixture {};
 
  persist-parameter-server = self.callPackage ./persist-parameter-server {};
+
+ pfs = self.callPackage ./pfs {};
 
  phidgets-accelerometer = self.callPackage ./phidgets-accelerometer {};
 

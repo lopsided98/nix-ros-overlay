@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, cmake, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-mola-test-datasets";
-  version = "0.4.2-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_test_datasets-release/archive/release/humble/mola_test_datasets/0.4.2-1.tar.gz";
-    name = "0.4.2-1.tar.gz";
-    sha256 = "de7f071fc8314b0527d3a759f0c8b1a9186c8c1aed70980440560ce7cd679405";
+    url = "https://github.com/ros2-gbp/mola_test_datasets-release/archive/release/humble/mola_test_datasets/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "8097ff5bc3bf38760457b874f848ad094544d9b6558a06ec8b4f8d23c6874f8b";
   };
 
   buildType = "ament_cmake";

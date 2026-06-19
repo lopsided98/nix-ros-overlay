@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-kinematics, mrpt-maps, mrpt-viz }:
 buildRosPackage {
   pname = "ros-humble-mrpt-nav";
-  version = "3.0.2-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_nav/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "6d36d7b32bdad58cd73004f6a87cd605da3f4f5116bfa8a19962677b2b414456";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_nav/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "f6c16ab5ca0f70cf37a82ad45240af82a6e2eeeef94bad3d82f08134624272bd";
   };
 
   buildType = "cmake";

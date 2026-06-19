@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rmf-building-map-tools, ros2run }:
 buildRosPackage {
   pname = "ros-lyrical-rmf-demos-maps";
-  version = "2.8.2-r4";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/lyrical/rmf_demos_maps/2.8.2-4.tar.gz";
-    name = "2.8.2-4.tar.gz";
-    sha256 = "f85de55acc2be5ec4e4129f883c54db2c36809cf686c2d14bd509e2f17d9b5a2";
+    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/lyrical/rmf_demos_maps/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "36ab5fbc406b5ea6c8e6df3e5430a7c4c5c7d4a9105f884294567369c7197669";
   };
 
   buildType = "ament_cmake";

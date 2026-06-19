@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, draco-point-cloud-transport, point-cloud-interfaces, zlib-point-cloud-transport, zstd-point-cloud-transport }:
 buildRosPackage {
   pname = "ros-lyrical-point-cloud-transport-plugins";
-  version = "6.1.0-r3";
+  version = "6.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/lyrical/point_cloud_transport_plugins/6.1.0-3.tar.gz";
-    name = "6.1.0-3.tar.gz";
-    sha256 = "02e85e51b57b4145f54eb9dd7057b2e747c82aa84e5df1ff0ffd5521873db70f";
+    url = "https://github.com/ros2-gbp/point_cloud_transport_plugins-release/archive/release/lyrical/point_cloud_transport_plugins/6.2.0-1.tar.gz";
+    name = "6.2.0-1.tar.gz";
+    sha256 = "9a67b5a857e912a553fe8c51ab7e0769b843073b9c2d134d98d669880d10c7e5";
   };
 
   buildType = "ament_cmake";

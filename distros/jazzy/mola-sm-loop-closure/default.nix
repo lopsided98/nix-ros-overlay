@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, cmake, flann, gtsam, lz4, mola-common, mola-georeferencing, mola-gtsam-factors, mola-metric-maps, mola-pose-list, mola-relocalization, mola-test-datasets, mola-yaml, mp2p-icp, mrpt-libgui, mrpt-libmaps, mrpt-libtclap, onetbb, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-mola-sm-loop-closure";
-  version = "1.2.0-r1";
+  version = "1.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_sm_loop_closure-release/archive/release/jazzy/mola_sm_loop_closure/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "1bb3ee41c2d1e06845815302a060dac0536d577c739a79e039e74b97bfba1dfd";
+    url = "https://github.com/ros2-gbp/mola_sm_loop_closure-release/archive/release/jazzy/mola_sm_loop_closure/1.2.2-1.tar.gz";
+    name = "1.2.2-1.tar.gz";
+    sha256 = "465c4951ded18ee3376b8f3c1ae3a2c85dd9c69a67b3f7225a6ed7e17cc4ef57";
   };
 
   buildType = "ament_cmake";

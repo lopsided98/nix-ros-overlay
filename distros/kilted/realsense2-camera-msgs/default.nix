@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-realsense2-camera-msgs";
-  version = "4.58.1-r1";
+  version = "4.58.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/kilted/realsense2_camera_msgs/4.58.1-1.tar.gz";
-    name = "4.58.1-1.tar.gz";
-    sha256 = "03f3e3c217b8f00fb063d8831804640c2298ab013bd6479a261afb7e5281e7fb";
+    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/kilted/realsense2_camera_msgs/4.58.2-1.tar.gz";
+    name = "4.58.2-1.tar.gz";
+    sha256 = "99e79cb5df449b508485ea49b3a4f6c4edda92ed813545a4b8b4a07e17b8a470";
   };
 
   buildType = "ament_cmake";

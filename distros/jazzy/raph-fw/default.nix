@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-lint-cmake, ament-index-python, ament-lint-auto, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-raph-fw";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/raph_robot-release/archive/release/jazzy/raph_fw/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "1b6a19f3ec1bbde41efc3a31590aef82cf20a309939ad54cf4261903726c924e";
+    url = "https://github.com/ros2-gbp/raph_robot-release/archive/release/jazzy/raph_fw/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "c141b3df531fb154f1ffad34dccba9fb3578684513236c4b1edb2074e1e68553";
   };
 
   buildType = "ament_cmake";

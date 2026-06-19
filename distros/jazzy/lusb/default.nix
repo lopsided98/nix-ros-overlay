@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libusb1, pkg-config }:
 buildRosPackage {
   pname = "ros-jazzy-lusb";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/lusb-release/archive/release/jazzy/lusb/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "db1c9cc40f41bd67c3f4b6e2eadbdcaf0744a723adc7ea3be34c4fd61052da0d";
+    url = "https://github.com/DataspeedInc-release/lusb-release/archive/release/jazzy/lusb/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "3b1ec79363c488459f6aa2973d94a8d9d729f3dbd7f1af8894bb784dc0715af7";
   };
 
   buildType = "ament_cmake";

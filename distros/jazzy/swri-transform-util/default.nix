@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, ament-index-cpp, cv-bridge, diagnostic-msgs, diagnostic-updater, geographic-msgs, geographiclib, geometry-msgs, geos, gps-msgs, launch-ros, launch-testing, launch-testing-ament-cmake, marti-nav-msgs, opencv, pkg-config, proj, python3Packages, rcl-interfaces, rclcpp, rclcpp-components, rclpy, sensor-msgs, swri-math-util, swri-roscpp, tf2, tf2-geometry-msgs, tf2-ros, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-swri-transform-util";
-  version = "3.8.9-r1";
+  version = "3.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_transform_util/3.8.9-1.tar.gz";
-    name = "3.8.9-1.tar.gz";
-    sha256 = "6f57dc33b8845ddd4c5324278ef56b33593ca0b0e25d6eb7892306c74db6cd49";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_transform_util/3.9.0-1.tar.gz";
+    name = "3.9.0-1.tar.gz";
+    sha256 = "c8c9e53d6eedc1c251e888b92a23051a6a8491c4f338f4ecdad0238756f73e7f";
   };
 
   buildType = "ament_cmake";
