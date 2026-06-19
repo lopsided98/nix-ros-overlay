@@ -1,7 +1,7 @@
 {
   "gz_sim_vendor": {
     "url": "https://github.com/gazebosim/gz-sim.git",
-    "rev": "gz-sim8_8.11.0",
-    "hash": "sha256-gn7UymNuR3Ih9d/xetXKa0LKuIu/MeKX7KsNCU16nto="
+    "rev": "gz-sim8_8.14.0",
+    "hash": "sha256-M3ioGAe1bHUqPGlNgBr5snuKqRJ32jdDvngulF0FdgM="
   }
 }
