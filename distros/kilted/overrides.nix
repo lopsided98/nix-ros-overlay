@@ -330,6 +330,19 @@ in {
     ];
   });
 
+  lanelet2-core = rosSuper.lanelet2-core.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix compilation with Boost 1.87
+      (self.fetchpatch2 {
+        url = "https://github.com/fzi-forschungszentrum-informatik/Lanelet2/pull/399/commits/ab7d2f4dee299563c6313336c070ed99635aba3f.patch?full_index=1";
+        hash = "sha256-aFpKnQwd0FmyaDK2mHi5bWri8nKTWbgAt/PF7EpuYmE=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   # Fixes build error in autoware-lanelet2-extension:
   # Imported target "lanelet2_maps::lanelet2_maps" includes non-existent path
   #   "/nix/store/85v2zq13fh16v2zy6nyljz7f4caqvrab-ros-humble-lanelet2-maps-1.2.2-r1/include"
