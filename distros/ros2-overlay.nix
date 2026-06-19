@@ -214,19 +214,6 @@ with rosSelf.lib; {
     cmakeFlags = cmakeFlags ++ [ "-DDOWNLOAD_TOML_LIB=OFF" ];
   });
 
-  lanelet2-core = rosSuper.lanelet2-core.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Fix compilation with Boost 1.87
-      (self.fetchpatch2 {
-        url = "https://github.com/fzi-forschungszentrum-informatik/Lanelet2/pull/399/commits/ab7d2f4dee299563c6313336c070ed99635aba3f.patch?full_index=1";
-        hash = "sha256-aFpKnQwd0FmyaDK2mHi5bWri8nKTWbgAt/PF7EpuYmE=";
-        stripLen = 1;
-      })
-    ];
-  });
-
   libcamera = rosSuper.libcamera.overrideAttrs ({
     postPatch ? "",
     nativeBuildInputs ? [], ...
