@@ -424,6 +424,44 @@ in {
     '';
   });
 
+  mrpt-containers = rosSuper.mrpt-containers.overrideAttrs ({
+    buildInputs ? [], nativeBuildInputs ? [], ...
+  }: {
+    # Don't use vendored libfyaml
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+    buildInputs = buildInputs ++ [ self.libfyaml ];
+  });
+
+  mrpt-gui = rosSuper.mrpt-gui.overrideAttrs ({
+    buildInputs ? [], nativeBuildInputs ? [], ...
+  }: {
+    # Add dependencies for vendored nanogui
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+    buildInputs = buildInputs ++ [ self.wayland-scanner ];
+  });
+
+  mrpt-io = rosSuper.mrpt-io.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # Don't use built-in zlib
+    buildInputs = buildInputs ++ [ self.zlib ];
+  });
+
+  mrpt-maps = rosSuper.mrpt-maps.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # Don't use vendored octomap
+    buildInputs = buildInputs ++ [ self.octomap ];
+  });
+
+  mrpt-viz = rosSuper.mrpt-viz.overrideAttrs ({
+    buildInputs ? [], nativeBuildInputs ? [], ...
+  }: {
+    # Don't use vendored assimp
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+    buildInputs = buildInputs ++ [ self.assimp ];
+  });
+
   mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
     patches ? [], ...
   }: {
