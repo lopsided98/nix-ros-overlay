@@ -3,13 +3,13 @@
 
 buildPythonPackage rec {
   pname = "colcon-cmake";
-  version = "0.2.29";
+  version = "0.2.30";
 
   src = fetchFromGitHub {
     owner = "colcon";
     repo = pname;
     tag = version;
-    hash = "sha256-v91UREVifYnwbMcM819B5CsXl8FbAH61Ydzu0vXBPX8=";
+    hash = "sha256-yBTXLxIFWFCPAsn9hDeUCNRpCLw3Dj7WzvTx3pjHi0g=";
   };
 
   pyproject = true;
