@@ -647,11 +647,10 @@ in {
 
   mola-sm-loop-closure = (lib.patchExternalProjectGit (lib.patchExternalProjectGit rosSuper.mola-sm-loop-closure {
     file = "third_party/robin/cmake/DownloadExternal.cmake";
-    url = "https://github.com/jingnanshi/pmc.git";
-    originalRev = "master";
-    rev = "a2dfd612a501bca83c47206255dbbff619481f97";
+    url = "https://github.com/MIT-SPARK/pmc.git";
+    rev = "4bbd40ababd8e925c4e1845c509173afe766b443";
     fetchgitArgs = {
-      hash = "sha256-JOAI4SSS/cgpLbsvUEG/v1+d2Q3RSjs0+717O7/it+M=";
+      hash = "sha256-KZZu66von80tufVeemBuhV10Roda2XZ/DRPrdtziInM=";
       # pmc uses -Wno-format, which conflicts with nixpkgs hardening's
       # -Wformat-security (requires -Wformat to be active)
       postFetch = ''
@@ -665,13 +664,6 @@ in {
     originalRev = "main";
     rev = "1c449ae953ce2a440b0d16c5ed1181d2754860ab";
     fetchgitArgs.hash = "sha256-rd7Qb85xyrqm3GWwIUns56jIo62kBTRmXf2UfuUXNR0=";
-  }).overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-      substituteInPlace third_party/robin/cmake/DownloadProject.CMakeLists.cmake.in \
-       --replace-fail "cmake_minimum_required(VERSION 2.8.2)" "cmake_minimum_required(VERSION 3.10)"
-    '';
   });
 
   motion-capture-tracking = rosSuper.motion-capture-tracking.overrideAttrs ({
