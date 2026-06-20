@@ -582,19 +582,6 @@ in {
   rosidlcpp-typesupport-fastrtps-c = rosSuper.rosidlcpp-typesupport-fastrtps-c.override { fmt = self.fmt_9; };
   rosidlcpp-typesupport-fastrtps-cpp = rosSuper.rosidlcpp-typesupport-fastrtps-cpp.override { fmt = self.fmt_9; };
 
-  rmf-task = rosSuper.rmf-task.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # fix for GCC 15, ref. https://github.com/open-rmf/rmf_task/pull/133
-      (self.fetchpatch2 {
-        url = "https://github.com/nim65s/rmf_task/commit/8aaacbe009022540cce1cd3ff3282413cf08a42c.patch?full_index=1";
-        hash = "sha256-xpn2yWMRyXUPTf0OdCjGGkKcNLHO6jAnWz4NeXInI2I=";
-        stripLen = 1;
-      })
-    ];
-  });
-
   rqt-robot-monitor = rosSuper.rqt-robot-monitor.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
