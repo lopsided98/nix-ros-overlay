@@ -407,8 +407,8 @@ in {
     patchesFor.gz_launch_vendor = [
       # Fix compatibility with protobuf v30 (cpp 6.30.0)
       (self.fetchpatch2 {
-        url = "https://github.com/gazebosim/gz-launch/commit/246d180753c758445b7f1c11b3ae3b1840a65ae4.patch?full_index=1";
-        hash = "sha256-7qrOotQjRtHMo6rn5Qqcyr4keYq25Z9TXe3yFQcnIBA=";
+        url = "https://github.com/gazebosim/gz-launch/commit/d7f31ba187c370f6798fd92fe09726140e568cdf.patch?full_index=1";
+        hash = "sha256-arAh7sj/+cLtKASUs8JFuffHhNpwgMzNdrflvvGVGG8=";
       })
     ];
   };
