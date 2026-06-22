@@ -561,6 +561,15 @@ in {
     propagatedNativeBuildInputs = [ self.qt6.wrapQtAppsHook ];
   };
 
+  rmf-task-sequence = rosSuper.rmf-task-sequence.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        nlohmann_json_schema_validator::validator nlohmann_json_schema_validator
+    '';
+  });
+
   roboplan-examples = rosSuper.roboplan-examples.overrideAttrs ({
     buildInputs ? [], ...
   }: {
