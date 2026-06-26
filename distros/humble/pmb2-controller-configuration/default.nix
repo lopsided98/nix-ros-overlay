@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, controller-manager, diff-drive-controller, joint-state-broadcaster, launch, launch-pal, ros2controlcli }:
 buildRosPackage {
   pname = "ros-humble-pmb2-controller-configuration";
-  version = "5.11.2-r1";
+  version = "5.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pmb2_robot-release/archive/release/humble/pmb2_controller_configuration/5.11.2-1.tar.gz";
-    name = "5.11.2-1.tar.gz";
-    sha256 = "b3c2b86012c57108b28f393ae01511d91b3548e3c1931ce35dfdbbcc4e6232d5";
+    url = "https://github.com/ros2-gbp/pmb2_robot-release/archive/release/humble/pmb2_controller_configuration/5.12.0-1.tar.gz";
+    name = "5.12.0-1.tar.gz";
+    sha256 = "751f362dd9855be1780782bce99455a838fda83f61a8758eb66eb97afcc26548";
   };
 
   buildType = "ament_cmake";

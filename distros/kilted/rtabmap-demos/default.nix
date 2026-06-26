@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-bringup, rtabmap-odom, rtabmap-rviz-plugins, rtabmap-slam, rtabmap-util, rtabmap-viz }:
 buildRosPackage {
   pname = "ros-kilted-rtabmap-demos";
-  version = "0.22.1-r1";
+  version = "0.23.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/kilted/rtabmap_demos/0.22.1-1.tar.gz";
-    name = "0.22.1-1.tar.gz";
-    sha256 = "af2e74efa672bfa27af754956a62fce5cd3370448b850472fcce64b79c56b626";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/kilted/rtabmap_demos/0.23.7-1.tar.gz";
+    name = "0.23.7-1.tar.gz";
+    sha256 = "8b62e4c4a21e24662bb689473bd99c6d94c8debaeeeb2135043bbb3fce3f3a54";
   };
 
   buildType = "ament_cmake";

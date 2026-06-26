@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, xacro }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, realsense2-description, xacro }:
 buildRosPackage {
   pname = "ros-humble-pal-urdf-utils";
-  version = "2.3.3-r1";
+  version = "2.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pal_urdf_utils-release/archive/release/humble/pal_urdf_utils/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "49d8f24c7894413630398044b10a3256f40bdf20503b1d8b1626aca93bc2e5a1";
+    url = "https://github.com/ros2-gbp/pal_urdf_utils-release/archive/release/humble/pal_urdf_utils/2.9.1-1.tar.gz";
+    name = "2.9.1-1.tar.gz";
+    sha256 = "af57c6cb0ad8409b9fd0a9753639ac3e2531961502c3a1311e2345b77031a70b";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ xacro ];
+  propagatedBuildInputs = [ realsense2-description xacro ];
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {

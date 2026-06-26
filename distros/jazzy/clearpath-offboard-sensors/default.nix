@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, image-transport, image-transport-plugins, velodyne-pointcloud }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-offboard-sensors";
-  version = "2.7.0-r2";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_desktop-release/archive/release/jazzy/clearpath_offboard_sensors/2.7.0-2.tar.gz";
-    name = "2.7.0-2.tar.gz";
-    sha256 = "498552bb31aac44e4229ce64f23d3a8671ea37de85c9fb3e910e45bf85a1068a";
+    url = "https://github.com/clearpath-gbp/clearpath_desktop-release/archive/release/jazzy/clearpath_offboard_sensors/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "25ac88ddfc090ed591851675b45c3022d14f6e03d9abdcb89db4c26aea6babed";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, ros-environment, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kilted-rtabmap-msgs";
-  version = "0.22.1-r1";
+  version = "0.23.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/kilted/rtabmap_msgs/0.22.1-1.tar.gz";
-    name = "0.22.1-1.tar.gz";
-    sha256 = "8cab13047a24b74d3c3b4d1f1e0f5c08fe0b7ad16ba7fbff43e10274c69976e7";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/kilted/rtabmap_msgs/0.23.7-1.tar.gz";
+    name = "0.23.7-1.tar.gz";
+    sha256 = "73fdbf7d94bfd91f350231b3b7ebd7b31c3075cf5e7c3a3921cb3beb2530b73b";
   };
 
   buildType = "ament_cmake";

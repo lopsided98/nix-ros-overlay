@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, rclcpp, rosgraph-msgs, sensor-msgs, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-mobile-robot-simulator";
-  version = "2.0.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/mobile_robot_simulator-release/archive/release/jazzy/mobile_robot_simulator/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "b0e77721646bd4bed7438a4c54c981c8b62fbc9c87ef0943c4434cfe65b13741";
+    url = "https://github.com/nobleo/mobile_robot_simulator-release/archive/release/jazzy/mobile_robot_simulator/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "7e58665e209f071915a529a2fc926bd9baef39466689c57ee75e870cb026041b";
   };
 
   buildType = "ament_cmake";

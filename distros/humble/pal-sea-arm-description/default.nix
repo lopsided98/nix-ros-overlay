@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, joint-state-publisher-gui, launch, launch-pal, launch-param-builder, launch-ros, launch-testing-ament-cmake, pal-pro-gripper-description, pal-sea-arm-controller-configuration, pal-urdf-utils, robot-state-publisher, urdf-test, xacro }:
 buildRosPackage {
   pname = "ros-humble-pal-sea-arm-description";
-  version = "1.23.2-r1";
+  version = "2.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pal_sea_arm-release/archive/release/humble/pal_sea_arm_description/1.23.2-1.tar.gz";
-    name = "1.23.2-1.tar.gz";
-    sha256 = "2cefcefa10f97d7da98539ce484d39010d6a880d20a3ceb9ffb556a3767f3c54";
+    url = "https://github.com/ros2-gbp/pal_sea_arm-release/archive/release/humble/pal_sea_arm_description/2.6.0-1.tar.gz";
+    name = "2.6.0-1.tar.gz";
+    sha256 = "313a2317d77ae83c82d6b4a019c1ffa0dd3c3fbe6620c15718402937329acdca";
   };
 
   buildType = "ament_cmake";

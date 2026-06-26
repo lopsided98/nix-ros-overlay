@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-kilted-ublox-ubx-interfaces";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/kilted/ublox_ubx_interfaces/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "b29042b6717bef4b598ffca3c3efa212e4a7836dff6e0f16a3d484840e942c06";
+    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/kilted/ublox_ubx_interfaces/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "2ef277a04c76812c5a351eafe01c40b2e6e60bdb1a8f3c3172f51b51675f1980";
   };
 
   buildType = "ament_cmake";

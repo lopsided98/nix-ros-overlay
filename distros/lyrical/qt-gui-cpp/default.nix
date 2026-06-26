@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, pkg-config, pluginlib, python-qt-binding, qt-gui, qt6, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-lyrical-qt-gui-cpp";
-  version = "2.11.0-r1";
+  version = "2.11.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/lyrical/qt_gui_cpp/2.11.0-1.tar.gz";
-    name = "2.11.0-1.tar.gz";
-    sha256 = "2d7a5adec0ddae610bf94645320b82bdd3831746a7e79772d62c97cd976650f4";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/lyrical/qt_gui_cpp/2.11.1-1.tar.gz";
+    name = "2.11.1-1.tar.gz";
+    sha256 = "a33157bb2b5d3ef3c6d2cdf6c58081fc3311defe79850cbed187871a72c5f676";
   };
 
   buildType = "ament_cmake";

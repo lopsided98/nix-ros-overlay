@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-cppcheck, ament-cmake-export-dependencies, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-xmllint }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-lint-common";
-  version = "1.2.0-r2";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_cmake-release/archive/release/jazzy/autoware_lint_common/1.2.0-2.tar.gz";
-    name = "1.2.0-2.tar.gz";
-    sha256 = "e01f7fd33722504de3a475bc932d58e12a18301995877edf1c5dd025cd14aa95";
+    url = "https://github.com/ros2-gbp/autoware_cmake-release/archive/release/jazzy/autoware_lint_common/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "da23bee2e89ddb87742a7d97026456b29b51a493308523db7a8cf20bea09780a";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, asio, geometry-msgs, nlohmann_json, rcl-interfaces, rclcpp, rclcpp-components, rcpputils, rcutils, resource-retriever, ros-environment, rosgraph-msgs, rosidl-typesupport-introspection-cpp, rosx-introspection, sensor-msgs, std-msgs, std-srvs, websocketpp }:
 buildRosPackage {
   pname = "ros-kilted-foxglove-bridge";
-  version = "3.4.1-r1";
+  version = "3.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/foxglove_bridge-release/archive/release/kilted/foxglove_bridge/3.4.1-1.tar.gz";
-    name = "3.4.1-1.tar.gz";
-    sha256 = "2c2c9ebfedeae7932b7d83a9884224a11bb8450f174a40eafe2b0419e4d9c294";
+    url = "https://github.com/ros2-gbp/foxglove_bridge-release/archive/release/kilted/foxglove_bridge/3.4.2-1.tar.gz";
+    name = "3.4.2-1.tar.gz";
+    sha256 = "cb8c96eb1cc80a3e24c45d0937815227df9a5aad53e73649844ffa9184900f4d";
   };
 
   buildType = "ament_cmake";

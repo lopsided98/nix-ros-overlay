@@ -1802,7 +1802,13 @@ self: super: {
 
  nao-lola-sensor-msgs = self.callPackage ./nao-lola-sensor-msgs {};
 
+ nao-meshes = self.callPackage ./nao-meshes {};
+
  nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
+
+ naoqi-bridge-msgs = self.callPackage ./naoqi-bridge-msgs {};
+
+ naoqi-libqi = self.callPackage ./naoqi-libqi {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};
 
@@ -1956,6 +1962,8 @@ self: super: {
 
  ompl = self.callPackage ./ompl {};
 
+ onnxruntime-vendor = self.callPackage ./onnxruntime-vendor {};
+
  open-manipulator = self.callPackage ./open-manipulator {};
 
  open-manipulator-bringup = self.callPackage ./open-manipulator-bringup {};
@@ -2021,6 +2029,8 @@ self: super: {
  pendulum-control = self.callPackage ./pendulum-control {};
 
  pendulum-msgs = self.callPackage ./pendulum-msgs {};
+
+ pepper-meshes = self.callPackage ./pepper-meshes {};
 
  perception = self.callPackage ./perception {};
 
@@ -2831,6 +2841,8 @@ self: super: {
  rtabmap = self.callPackage ./rtabmap {};
 
  rtabmap-conversions = self.callPackage ./rtabmap-conversions {};
+
+ rtabmap-costmap-plugins = self.callPackage ./rtabmap-costmap-plugins {};
 
  rtabmap-demos = self.callPackage ./rtabmap-demos {};
 

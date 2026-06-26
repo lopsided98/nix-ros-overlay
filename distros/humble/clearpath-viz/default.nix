@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, clearpath-platform-description, joint-state-publisher-gui, rqt-robot-monitor, rviz2 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, clearpath-description, joint-state-publisher-gui, nav2-rviz-plugins, rqt-robot-monitor, rviz2 }:
 buildRosPackage {
   pname = "ros-humble-clearpath-viz";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_desktop-release/archive/release/humble/clearpath_viz/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "cd4fe57142eb16e903c4d65d93b36f482a24e652d1ec64b1cdb0b2567067fdee";
+    url = "https://github.com/clearpath-gbp/clearpath_desktop-release/archive/release/humble/clearpath_viz/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "88e8dcb9e266a60ac7c99277dcb13352ee9e9fbcb682730b23c988c38614b2b0";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ clearpath-platform-description joint-state-publisher-gui rqt-robot-monitor rviz2 ];
+  propagatedBuildInputs = [ clearpath-description joint-state-publisher-gui nav2-rviz-plugins rqt-robot-monitor rviz2 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

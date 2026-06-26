@@ -820,6 +820,8 @@ self: super: {
 
  foxglove-sdk-vendor = self.callPackage ./foxglove-sdk-vendor {};
 
+ franka-inria-inverse-dynamics-solver = self.callPackage ./franka-inria-inverse-dynamics-solver {};
+
  frequency-cam = self.callPackage ./frequency-cam {};
 
  fuse = self.callPackage ./fuse {};
@@ -958,6 +960,8 @@ self: super: {
 
  hebi-cpp-api = self.callPackage ./hebi-cpp-api {};
 
+ hitch-estimation-apriltag-array = self.callPackage ./hitch-estimation-apriltag-array {};
+
  hls-lfcd-lds-driver = self.callPackage ./hls-lfcd-lds-driver {};
 
  hri = self.callPackage ./hri {};
@@ -1024,6 +1028,8 @@ self: super: {
 
  intra-process-demo = self.callPackage ./intra-process-demo {};
 
+ inverse-dynamics-solver = self.callPackage ./inverse-dynamics-solver {};
+
  io-context = self.callPackage ./io-context {};
 
  irobot-create-msgs = self.callPackage ./irobot-create-msgs {};
@@ -1053,6 +1059,8 @@ self: super: {
  jrl-cmakemodules = self.callPackage ./jrl-cmakemodules {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
+
+ kdl-inverse-dynamics-solver = self.callPackage ./kdl-inverse-dynamics-solver {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
 
@@ -1301,6 +1309,8 @@ self: super: {
  microstrain-inertial-rqt = self.callPackage ./microstrain-inertial-rqt {};
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
+
+ mobile-robot-simulator = self.callPackage ./mobile-robot-simulator {};
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
@@ -1753,6 +1763,8 @@ self: super: {
  omni-wheel-drive-controller = self.callPackage ./omni-wheel-drive-controller {};
 
  ompl = self.callPackage ./ompl {};
+
+ onnxruntime-vendor = self.callPackage ./onnxruntime-vendor {};
 
  open3d-vendor = self.callPackage ./open3d-vendor {};
 
@@ -2264,6 +2276,8 @@ self: super: {
 
  ros2-fmt-logger = self.callPackage ./ros2-fmt-logger {};
 
+ ros2-medkit-action-status-bridge = self.callPackage ./ros2-medkit-action-status-bridge {};
+
  ros2-medkit-beacon-common = self.callPackage ./ros2-medkit-beacon-common {};
 
  ros2-medkit-cmake = self.callPackage ./ros2-medkit-cmake {};
@@ -2281,6 +2295,8 @@ self: super: {
  ros2-medkit-integration-tests = self.callPackage ./ros2-medkit-integration-tests {};
 
  ros2-medkit-linux-introspection = self.callPackage ./ros2-medkit-linux-introspection {};
+
+ ros2-medkit-log-bridge = self.callPackage ./ros2-medkit-log-bridge {};
 
  ros2-medkit-msgs = self.callPackage ./ros2-medkit-msgs {};
 
@@ -2429,6 +2445,8 @@ self: super: {
  rosbag2-transport = self.callPackage ./rosbag2-transport {};
 
  rosbag2rawlog = self.callPackage ./rosbag2rawlog {};
+
+ rosbag-timing-inspector = self.callPackage ./rosbag-timing-inspector {};
 
  rosbridge-library = self.callPackage ./rosbridge-library {};
 
@@ -2629,6 +2647,32 @@ self: super: {
  rt-usb-9axisimu-driver = self.callPackage ./rt-usb-9axisimu-driver {};
 
  rtabmap = self.callPackage ./rtabmap {};
+
+ rtabmap-conversions = self.callPackage ./rtabmap-conversions {};
+
+ rtabmap-demos = self.callPackage ./rtabmap-demos {};
+
+ rtabmap-examples = self.callPackage ./rtabmap-examples {};
+
+ rtabmap-launch = self.callPackage ./rtabmap-launch {};
+
+ rtabmap-msgs = self.callPackage ./rtabmap-msgs {};
+
+ rtabmap-odom = self.callPackage ./rtabmap-odom {};
+
+ rtabmap-python = self.callPackage ./rtabmap-python {};
+
+ rtabmap-ros = self.callPackage ./rtabmap-ros {};
+
+ rtabmap-rviz-plugins = self.callPackage ./rtabmap-rviz-plugins {};
+
+ rtabmap-slam = self.callPackage ./rtabmap-slam {};
+
+ rtabmap-sync = self.callPackage ./rtabmap-sync {};
+
+ rtabmap-util = self.callPackage ./rtabmap-util {};
+
+ rtabmap-viz = self.callPackage ./rtabmap-viz {};
 
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
 
@@ -3023,6 +3067,8 @@ self: super: {
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
 
  ur = self.callPackage ./ur {};
+
+ ur10-inverse-dynamics-solver = self.callPackage ./ur10-inverse-dynamics-solver {};
 
  ur-calibration = self.callPackage ./ur-calibration {};
 

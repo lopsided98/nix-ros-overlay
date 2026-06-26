@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, unzip }:
 buildRosPackage {
   pname = "ros-lyrical-clips-vendor";
-  version = "6.4.3-r3";
+  version = "6.4.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/clips_vendor-release/archive/release/lyrical/clips_vendor/6.4.3-3.tar.gz";
-    name = "6.4.3-3.tar.gz";
-    sha256 = "288a5dbed62d25bbf0db95c6f6562b6854c6e4850e359f1421399a4c7ea3a450";
+    url = "https://github.com/ros2-gbp/clips_vendor-release/archive/release/lyrical/clips_vendor/6.4.4-1.tar.gz";
+    name = "6.4.4-1.tar.gz";
+    sha256 = "1d2791619f8ba1f1824158d5c30164df5932b7d683603dd0e0dadd6826870192";
   };
 
   buildType = "ament_cmake";

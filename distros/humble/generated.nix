@@ -638,6 +638,8 @@ self: super: {
 
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
+ callback-isolated-executor = self.callPackage ./callback-isolated-executor {};
+
  camera-aravis2 = self.callPackage ./camera-aravis2 {};
 
  camera-aravis2-msgs = self.callPackage ./camera-aravis2-msgs {};
@@ -697,6 +699,12 @@ self: super: {
  catch-ros2 = self.callPackage ./catch-ros2 {};
 
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
+
+ cie-config-msgs = self.callPackage ./cie-config-msgs {};
+
+ cie-sample-application = self.callPackage ./cie-sample-application {};
+
+ cie-thread-configurator = self.callPackage ./cie-thread-configurator {};
 
  class-loader = self.callPackage ./class-loader {};
 
@@ -1408,6 +1416,8 @@ self: super: {
 
  fusioncore-ros = self.callPackage ./fusioncore-ros {};
 
+ fusioncore-ublox = self.callPackage ./fusioncore-ublox {};
+
  game-controller-spl = self.callPackage ./game-controller-spl {};
 
  game-controller-spl-interfaces = self.callPackage ./game-controller-spl-interfaces {};
@@ -2040,6 +2050,8 @@ self: super: {
 
  mimick-vendor = self.callPackage ./mimick-vendor {};
 
+ mobile-robot-simulator = self.callPackage ./mobile-robot-simulator {};
+
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
  mocap4r2-control = self.callPackage ./mocap4r2-control {};
@@ -2662,6 +2674,8 @@ self: super: {
 
  ompl = self.callPackage ./ompl {};
 
+ onnxruntime-vendor = self.callPackage ./onnxruntime-vendor {};
+
  open3d-conversions = self.callPackage ./open3d-conversions {};
 
  open-manipulator = self.callPackage ./open-manipulator {};
@@ -2752,6 +2766,8 @@ self: super: {
 
  pal-pro-gripper-description = self.callPackage ./pal-pro-gripper-description {};
 
+ pal-pro-gripper-simulation = self.callPackage ./pal-pro-gripper-simulation {};
+
  pal-pro-gripper-wrapper = self.callPackage ./pal-pro-gripper-wrapper {};
 
  pal-robotiq-controller-configuration = self.callPackage ./pal-robotiq-controller-configuration {};
@@ -2771,6 +2787,8 @@ self: super: {
  pal-sea-arm-gazebo = self.callPackage ./pal-sea-arm-gazebo {};
 
  pal-sea-arm-moveit-config = self.callPackage ./pal-sea-arm-moveit-config {};
+
+ pal-sea-arm-mujoco = self.callPackage ./pal-sea-arm-mujoco {};
 
  pal-sea-arm-simulation = self.callPackage ./pal-sea-arm-simulation {};
 
@@ -2953,6 +2971,8 @@ self: super: {
  position-controllers = self.callPackage ./position-controllers {};
 
  proto2ros = self.callPackage ./proto2ros {};
+
+ protobuf-comm = self.callPackage ./protobuf-comm {};
 
  proxsuite = self.callPackage ./proxsuite {};
 
@@ -3338,6 +3358,8 @@ self: super: {
 
  ros2-fmt-logger = self.callPackage ./ros2-fmt-logger {};
 
+ ros2-medkit-action-status-bridge = self.callPackage ./ros2-medkit-action-status-bridge {};
+
  ros2-medkit-beacon-common = self.callPackage ./ros2-medkit-beacon-common {};
 
  ros2-medkit-cmake = self.callPackage ./ros2-medkit-cmake {};
@@ -3355,6 +3377,8 @@ self: super: {
  ros2-medkit-integration-tests = self.callPackage ./ros2-medkit-integration-tests {};
 
  ros2-medkit-linux-introspection = self.callPackage ./ros2-medkit-linux-introspection {};
+
+ ros2-medkit-log-bridge = self.callPackage ./ros2-medkit-log-bridge {};
 
  ros2-medkit-msgs = self.callPackage ./ros2-medkit-msgs {};
 
@@ -3661,6 +3685,8 @@ self: super: {
  rtabmap = self.callPackage ./rtabmap {};
 
  rtabmap-conversions = self.callPackage ./rtabmap-conversions {};
+
+ rtabmap-costmap-plugins = self.callPackage ./rtabmap-costmap-plugins {};
 
  rtabmap-demos = self.callPackage ./rtabmap-demos {};
 
@@ -4061,6 +4087,8 @@ self: super: {
  tiago-pro-laser-sensors = self.callPackage ./tiago-pro-laser-sensors {};
 
  tiago-pro-moveit-config = self.callPackage ./tiago-pro-moveit-config {};
+
+ tiago-pro-mujoco = self.callPackage ./tiago-pro-mujoco {};
 
  tiago-pro-navigation = self.callPackage ./tiago-pro-navigation {};
 

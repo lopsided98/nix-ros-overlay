@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-index-python, ament-lint-auto, ament-lint-common, diagnostic-updater }:
 buildRosPackage {
   pname = "ros-humble-omni-base-rgbd-sensors";
-  version = "2.22.0-r1";
+  version = "2.22.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/omni_base_navigation-release/archive/release/humble/omni_base_rgbd_sensors/2.22.0-1.tar.gz";
-    name = "2.22.0-1.tar.gz";
-    sha256 = "7f3634246fbb2815b089558bdbda3df2845a166d459aeb57086850e740091b37";
+    url = "https://github.com/ros2-gbp/omni_base_navigation-release/archive/release/humble/omni_base_rgbd_sensors/2.22.1-1.tar.gz";
+    name = "2.22.1-1.tar.gz";
+    sha256 = "5cb5fd6234b28b27316f8c7bd01e68317461c2469b48252437542e4dcbd93208";
   };
 
   buildType = "ament_cmake";

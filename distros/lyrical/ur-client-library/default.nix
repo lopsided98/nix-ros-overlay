@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake }:
 buildRosPackage {
   pname = "ros-lyrical-ur-client-library";
-  version = "2.12.0-r1";
+  version = "2.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/lyrical/ur_client_library/2.12.0-1.tar.gz";
-    name = "2.12.0-1.tar.gz";
-    sha256 = "66d012c11ecd4d394923b4390457babb74e6572405b721a5f7d1f224737770cd";
+    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/lyrical/ur_client_library/2.13.0-1.tar.gz";
+    name = "2.13.0-1.tar.gz";
+    sha256 = "f5ca9bbd946c19b04d45fd0c14c76a49d0d0978ad3a6e54c5ab84ebdc3c8b12a";
   };
 
   buildType = "cmake";

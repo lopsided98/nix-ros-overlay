@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, glfw3, libGL, libGLU, rosbag2-cpp, rosbag2-storage }:
 buildRosPackage {
   pname = "ros-kilted-rosbag-timing-inspector";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag_timing_inspector-release/archive/release/kilted/rosbag_timing_inspector/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "df5e4e11fd5a3005f62f55f7f139deb034b5cdfcef38fc18e9702e981c0b3fd9";
+    url = "https://github.com/ros2-gbp/rosbag_timing_inspector-release/archive/release/kilted/rosbag_timing_inspector/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "3afd896f1d3beb1dc09314a2f13c4261653f6152747f2b9e603fa58fa12cc418";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python-qt-binding, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-qt-dotgraph";
-  version = "2.11.0-r1";
+  version = "2.11.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/lyrical/qt_dotgraph/2.11.0-1.tar.gz";
-    name = "2.11.0-1.tar.gz";
-    sha256 = "63b45837281259fd7c3a7f731a56ec40544e9d86457d4d6353834ac7ada3a1b4";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/lyrical/qt_dotgraph/2.11.1-1.tar.gz";
+    name = "2.11.1-1.tar.gz";
+    sha256 = "e6ba81251596fa7bd4ad562138c02171a47592d44f3ac52db90327b9a8e87252";
   };
 
   buildType = "ament_python";

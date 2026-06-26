@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, boost, openssl }:
 buildRosPackage {
   pname = "ros-humble-naoqi-libqi";
-  version = "3.0.2-r1";
+  version = "3.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros-naoqi/libqi-release/archive/release/humble/naoqi_libqi/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "0d3e8e26b36fa564c0459c630b1ea3c14921fbbfe6304919748fd0f472400a16";
+    url = "https://github.com/ros-naoqi/libqi-release/archive/release/humble/naoqi_libqi/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
+    sha256 = "ae98ca8d97c6c228612838ca4248453264d425c8576b23b007313a9b26cd1315";
   };
 
   buildType = "ament_cmake";

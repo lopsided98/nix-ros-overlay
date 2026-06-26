@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-uncrustify, ament-lint-auto, ament-lint-common, curl, pkg-config, rclcpp, rclcpp-components, rtcm-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-ntrip-client-node";
-  version = "0.7.4-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/kilted/ntrip_client_node/0.7.4-1.tar.gz";
-    name = "0.7.4-1.tar.gz";
-    sha256 = "9af7d6fe92cd4c0b2b0ccaaf9b7eea82a34d875072ba29be3583fa5c5b0d9934";
+    url = "https://github.com/ros2-gbp/ublox_dgnss-release/archive/release/kilted/ntrip_client_node/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "e22a55afe08ce7952810f6c3fd1f60864fa61743c20e1024cebb1e51adcb32ed";
   };
 
   buildType = "ament_cmake";
