@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-gtest, ament-lint-auto, ament-lint-common, diagnostic-msgs, nlohmann_json, rclcpp, ros2-medkit-cmake, ros2-medkit-gateway, ros2-medkit-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-ros2-medkit-graph-provider";
-  version = "0.5.0-r3";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/lyrical/ros2_medkit_graph_provider/0.5.0-3.tar.gz";
-    name = "0.5.0-3.tar.gz";
-    sha256 = "a3ce6fc1973ee57417d998b8676dd45b42ee507600603ebd4e87af5db86483af";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/lyrical/ros2_medkit_graph_provider/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "cff8db855c4fef976fdad3cae276c9ac807d27075a18764928d34548d02d7b5e";
   };
 
   buildType = "ament_cmake";

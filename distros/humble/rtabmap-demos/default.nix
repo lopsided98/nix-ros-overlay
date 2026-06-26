@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-bringup, rtabmap-odom, rtabmap-rviz-plugins, rtabmap-slam, rtabmap-util, rtabmap-viz }:
 buildRosPackage {
   pname = "ros-humble-rtabmap-demos";
-  version = "0.22.1-r1";
+  version = "0.23.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_demos/0.22.1-1.tar.gz";
-    name = "0.22.1-1.tar.gz";
-    sha256 = "3b06eca7e43eebac201baf55553d04d9177e26e575aba532a4985d82bca29cb9";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_demos/0.23.7-1.tar.gz";
+    name = "0.23.7-1.tar.gz";
+    sha256 = "3ec1f5206036f9dceb38a2bf7cf0afeffad102ab0a0429d4144e57c2c428cbb6";
   };
 
   buildType = "ament_cmake";

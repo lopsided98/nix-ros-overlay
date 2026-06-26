@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, openssl, protobuf, spdlog }:
 buildRosPackage {
   pname = "ros-lyrical-protobuf-comm";
-  version = "0.9.3-r3";
+  version = "0.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/protobuf_comm-release/archive/release/lyrical/protobuf_comm/0.9.3-3.tar.gz";
-    name = "0.9.3-3.tar.gz";
-    sha256 = "ab9c3c81651c50c473dbad7278a24964d4379fae86dc1aa305b9af3d97061459";
+    url = "https://github.com/ros2-gbp/protobuf_comm-release/archive/release/lyrical/protobuf_comm/0.9.4-1.tar.gz";
+    name = "0.9.4-1.tar.gz";
+    sha256 = "524936abef4c55969a81cee1ad1929c8b6afdc9b8fbcb7ff7c21d1736bce3381";
   };
 
   buildType = "cmake";

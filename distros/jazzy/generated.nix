@@ -486,10 +486,6 @@ self: super: {
 
  azure-iot-sdk-c = self.callPackage ./azure-iot-sdk-c {};
 
- backward-global-planner = self.callPackage ./backward-global-planner {};
-
- backward-local-planner = self.callPackage ./backward-local-planner {};
-
  backward-ros = self.callPackage ./backward-ros {};
 
  bag2-to-image = self.callPackage ./bag2-to-image {};
@@ -543,6 +539,8 @@ self: super: {
  broll = self.callPackage ./broll {};
 
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
+
+ callback-isolated-executor = self.callPackage ./callback-isolated-executor {};
 
  camera-aravis2 = self.callPackage ./camera-aravis2 {};
 
@@ -606,29 +604,11 @@ self: super: {
 
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
 
- cl-foundation-pose = self.callPackage ./cl-foundation-pose {};
+ cie-config-msgs = self.callPackage ./cie-config-msgs {};
 
- cl-gcalcli = self.callPackage ./cl-gcalcli {};
+ cie-sample-application = self.callPackage ./cie-sample-application {};
 
- cl-generic-sensor = self.callPackage ./cl-generic-sensor {};
-
- cl-http = self.callPackage ./cl-http {};
-
- cl-keyboard = self.callPackage ./cl-keyboard {};
-
- cl-lifecycle-node = self.callPackage ./cl-lifecycle-node {};
-
- cl-mission-tracker = self.callPackage ./cl-mission-tracker {};
-
- cl-modbus-tcp-relay = self.callPackage ./cl-modbus-tcp-relay {};
-
- cl-moveit2z = self.callPackage ./cl-moveit2z {};
-
- cl-nav2z = self.callPackage ./cl-nav2z {};
-
- cl-px4-mr = self.callPackage ./cl-px4-mr {};
-
- cl-ros2-timer = self.callPackage ./cl-ros2-timer {};
+ cie-thread-configurator = self.callPackage ./cie-thread-configurator {};
 
  class-loader = self.callPackage ./class-loader {};
 
@@ -1126,10 +1106,6 @@ self: super: {
 
  effort-controllers = self.callPackage ./effort-controllers {};
 
- eg-conditional-generator = self.callPackage ./eg-conditional-generator {};
-
- eg-random-generator = self.callPackage ./eg-random-generator {};
-
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
@@ -1384,10 +1360,6 @@ self: super: {
 
  forward-command-controller = self.callPackage ./forward-command-controller {};
 
- forward-global-planner = self.callPackage ./forward-global-planner {};
-
- forward-local-planner = self.callPackage ./forward-local-planner {};
-
  four-wheel-steering-msgs = self.callPackage ./four-wheel-steering-msgs {};
 
  foxglove-bridge = self.callPackage ./foxglove-bridge {};
@@ -1437,6 +1409,8 @@ self: super: {
  fusioncore-gazebo = self.callPackage ./fusioncore-gazebo {};
 
  fusioncore-ros = self.callPackage ./fusioncore-ros {};
+
+ fusioncore-ublox = self.callPackage ./fusioncore-ublox {};
 
  game-controller-spl = self.callPackage ./game-controller-spl {};
 
@@ -1607,6 +1581,8 @@ self: super: {
  human-description = self.callPackage ./human-description {};
 
  husarion-components-description = self.callPackage ./husarion-components-description {};
+
+ husarion-gz-worlds = self.callPackage ./husarion-gz-worlds {};
 
  husarion-mecanum-drive-controller = self.callPackage ./husarion-mecanum-drive-controller {};
 
@@ -2382,9 +2358,15 @@ self: super: {
 
  nao-lola-sensor-msgs = self.callPackage ./nao-lola-sensor-msgs {};
 
+ nao-meshes = self.callPackage ./nao-meshes {};
+
  nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
 
+ naoqi-bridge-msgs = self.callPackage ./naoqi-bridge-msgs {};
+
  naoqi-libqi = self.callPackage ./naoqi-libqi {};
+
+ naoqi-libqicore = self.callPackage ./naoqi-libqicore {};
 
  nav2-amcl = self.callPackage ./nav2-amcl {};
 
@@ -2457,8 +2439,6 @@ self: super: {
  nav2-voxel-grid = self.callPackage ./nav2-voxel-grid {};
 
  nav2-waypoint-follower = self.callPackage ./nav2-waypoint-follower {};
-
- nav2z-planners-common = self.callPackage ./nav2z-planners-common {};
 
  nav-2d-msgs = self.callPackage ./nav-2d-msgs {};
 
@@ -2628,6 +2608,8 @@ self: super: {
 
  ompl = self.callPackage ./ompl {};
 
+ onnxruntime-vendor = self.callPackage ./onnxruntime-vendor {};
+
  open-manipulator = self.callPackage ./open-manipulator {};
 
  open-manipulator-bringup = self.callPackage ./open-manipulator-bringup {};
@@ -2709,6 +2691,8 @@ self: super: {
  pendulum-control = self.callPackage ./pendulum-control {};
 
  pendulum-msgs = self.callPackage ./pendulum-msgs {};
+
+ pepper-meshes = self.callPackage ./pepper-meshes {};
 
  perception = self.callPackage ./perception {};
 
@@ -2859,8 +2843,6 @@ self: super: {
  proxsuite = self.callPackage ./proxsuite {};
 
  ptz-action-server-msgs = self.callPackage ./ptz-action-server-msgs {};
-
- pure-spinning-local-planner = self.callPackage ./pure-spinning-local-planner {};
 
  py-binding-tools = self.callPackage ./py-binding-tools {};
 
@@ -3232,6 +3214,8 @@ self: super: {
 
  ros2-fmt-logger = self.callPackage ./ros2-fmt-logger {};
 
+ ros2-medkit-action-status-bridge = self.callPackage ./ros2-medkit-action-status-bridge {};
+
  ros2-medkit-beacon-common = self.callPackage ./ros2-medkit-beacon-common {};
 
  ros2-medkit-cmake = self.callPackage ./ros2-medkit-cmake {};
@@ -3249,6 +3233,8 @@ self: super: {
  ros2-medkit-integration-tests = self.callPackage ./ros2-medkit-integration-tests {};
 
  ros2-medkit-linux-introspection = self.callPackage ./ros2-medkit-linux-introspection {};
+
+ ros2-medkit-log-bridge = self.callPackage ./ros2-medkit-log-bridge {};
 
  ros2-medkit-msgs = self.callPackage ./ros2-medkit-msgs {};
 
@@ -3419,6 +3405,8 @@ self: super: {
  rosbot-joy = self.callPackage ./rosbot-joy {};
 
  rosbot-localization = self.callPackage ./rosbot-localization {};
+
+ rosbot-mavlink-bridge = self.callPackage ./rosbot-mavlink-bridge {};
 
  rosbot-moveit = self.callPackage ./rosbot-moveit {};
 
@@ -3620,6 +3608,8 @@ self: super: {
 
  rtabmap-conversions = self.callPackage ./rtabmap-conversions {};
 
+ rtabmap-costmap-plugins = self.callPackage ./rtabmap-costmap-plugins {};
+
  rtabmap-demos = self.callPackage ./rtabmap-demos {};
 
  rtabmap-examples = self.callPackage ./rtabmap-examples {};
@@ -3774,56 +3764,6 @@ self: super: {
 
  slider-publisher = self.callPackage ./slider-publisher {};
 
- sm-advanced-recovery-1 = self.callPackage ./sm-advanced-recovery-1 {};
-
- sm-atomic = self.callPackage ./sm-atomic {};
-
- sm-atomic-http = self.callPackage ./sm-atomic-http {};
-
- sm-atomic-lifecycle = self.callPackage ./sm-atomic-lifecycle {};
-
- sm-atomic-mode-states = self.callPackage ./sm-atomic-mode-states {};
-
- sm-atomic-performance-trace-1 = self.callPackage ./sm-atomic-performance-trace-1 {};
-
- sm-atomic-subscribers-performance-test = self.callPackage ./sm-atomic-subscribers-performance-test {};
-
- sm-branching = self.callPackage ./sm-branching {};
-
- sm-cl-gcalcli-test-1 = self.callPackage ./sm-cl-gcalcli-test-1 {};
-
- sm-cl-keyboard-unit-test-1 = self.callPackage ./sm-cl-keyboard-unit-test-1 {};
-
- sm-cl-px4-mr-test-1 = self.callPackage ./sm-cl-px4-mr-test-1 {};
-
- sm-cl-px4-mr-test-2 = self.callPackage ./sm-cl-px4-mr-test-2 {};
-
- sm-cl-ros2-timer-unit-test-1 = self.callPackage ./sm-cl-ros2-timer-unit-test-1 {};
-
- sm-coretest-transition-speed-1 = self.callPackage ./sm-coretest-transition-speed-1 {};
-
- sm-data-sharing-1 = self.callPackage ./sm-data-sharing-1 {};
-
- sm-data-sharing-2 = self.callPackage ./sm-data-sharing-2 {};
-
- sm-modbus-tcp-relay-test-1 = self.callPackage ./sm-modbus-tcp-relay-test-1 {};
-
- sm-multi-stage-1 = self.callPackage ./sm-multi-stage-1 {};
-
- sm-multithread-test-1 = self.callPackage ./sm-multithread-test-1 {};
-
- sm-nav2-gazebo-test-1 = self.callPackage ./sm-nav2-gazebo-test-1 {};
-
- sm-pack-ml = self.callPackage ./sm-pack-ml {};
-
- sm-panda-cl-moveit2z-cb-inventory = self.callPackage ./sm-panda-cl-moveit2z-cb-inventory {};
-
- sm-panda-cl-moveit2z-cb-inventory-isaacsim = self.callPackage ./sm-panda-cl-moveit2z-cb-inventory-isaacsim {};
-
- sm-simple-action-client = self.callPackage ./sm-simple-action-client {};
-
- sm-three-some = self.callPackage ./sm-three-some {};
-
  smacc2 = self.callPackage ./smacc2 {};
 
  smacc2-msgs = self.callPackage ./smacc2-msgs {};
@@ -3879,12 +3819,6 @@ self: super: {
  splsm-7-conversion = self.callPackage ./splsm-7-conversion {};
 
  sqlite3-vendor = self.callPackage ./sqlite3-vendor {};
-
- sr-all-events-go = self.callPackage ./sr-all-events-go {};
-
- sr-conditional = self.callPackage ./sr-conditional {};
-
- sr-event-countdown = self.callPackage ./sr-event-countdown {};
 
  srdfdom = self.callPackage ./srdfdom {};
 
@@ -4249,8 +4183,6 @@ self: super: {
  udp-msgs = self.callPackage ./udp-msgs {};
 
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
-
- undo-path-global-planner = self.callPackage ./undo-path-global-planner {};
 
  unique-identifier-msgs = self.callPackage ./unique-identifier-msgs {};
 

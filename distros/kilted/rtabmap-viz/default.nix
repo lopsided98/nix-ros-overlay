@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, cv-bridge, geometry-msgs, nav-msgs, rclcpp, ros-environment, rtabmap-msgs, rtabmap-sync, std-msgs, std-srvs, tf2 }:
 buildRosPackage {
   pname = "ros-kilted-rtabmap-viz";
-  version = "0.22.1-r1";
+  version = "0.23.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/kilted/rtabmap_viz/0.22.1-1.tar.gz";
-    name = "0.22.1-1.tar.gz";
-    sha256 = "8049c9c0f699ee7701cf66c9266bfaeb57a5cc892cfe6faeeed99357f2bef8a2";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/kilted/rtabmap_viz/0.23.7-1.tar.gz";
+    name = "0.23.7-1.tar.gz";
+    sha256 = "59154f5cc2cd4513f7fe25331a90921141572df4ee73fb7d059d23ca8c2394e3";
   };
 
   buildType = "ament_cmake";

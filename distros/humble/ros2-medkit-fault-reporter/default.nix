@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-clang-tidy, ament-cmake-gtest, ament-lint-auto, ament-lint-common, launch-testing-ament-cmake, launch-testing-ros, rclcpp, ros2-medkit-cmake, ros2-medkit-fault-manager, ros2-medkit-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros2-medkit-fault-reporter";
-  version = "0.5.0-r2";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_fault_reporter/0.5.0-2.tar.gz";
-    name = "0.5.0-2.tar.gz";
-    sha256 = "a530517b9d5f2b01b69c234a2802db7cbae9f5eaa2478041da52e316446007c2";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_fault_reporter/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "b2dab469d1327e34a445ae5658d97818bb3e73e9a3eaa0089aab43d44229a87f";
   };
 
   buildType = "ament_cmake";

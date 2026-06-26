@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-lint-auto, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-aruco-opencv-msgs";
-  version = "6.1.2-r2";
+  version = "7.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aruco_opencv-release/archive/release/rolling/aruco_opencv_msgs/6.1.2-2.tar.gz";
-    name = "6.1.2-2.tar.gz";
-    sha256 = "098d581868f883678207e02423e9c423f21650280f994c4c16a75fd629513f3a";
+    url = "https://github.com/ros2-gbp/aruco_opencv-release/archive/release/rolling/aruco_opencv_msgs/7.0.0-1.tar.gz";
+    name = "7.0.0-1.tar.gz";
+    sha256 = "d5221b5bf31a54ec1798b3b8b717e8017ecdd27d78521a0d80856360040ae629";
   };
 
   buildType = "ament_cmake";

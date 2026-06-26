@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, joint-state-broadcaster, joint-trajectory-controller, joy, joy-teleop, launch-pal, pal-sea-arm-controller-configuration, pal-sea-arm-description, play-motion2, play-motion2-cli }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, joint-state-broadcaster, joint-trajectory-controller, joy, joy-teleop, launch-pal, pal-sea-arm-controller-configuration, pal-sea-arm-description, play-motion2, play-motion2-cli, play-motion2-msgs }:
 buildRosPackage {
   pname = "ros-humble-pal-sea-arm-bringup";
-  version = "1.23.2-r1";
+  version = "2.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pal_sea_arm-release/archive/release/humble/pal_sea_arm_bringup/1.23.2-1.tar.gz";
-    name = "1.23.2-1.tar.gz";
-    sha256 = "672f2a6857d87f5f9bbfe67f2aca3a1844467061afbbab036443e18a8f330c0a";
+    url = "https://github.com/ros2-gbp/pal_sea_arm-release/archive/release/humble/pal_sea_arm_bringup/2.6.0-1.tar.gz";
+    name = "2.6.0-1.tar.gz";
+    sha256 = "03b1f5bd78dcc8fecd40445f438fe96211d2f0484e330700dc3e88f81139df6e";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ joint-state-broadcaster joint-trajectory-controller joy joy-teleop launch-pal pal-sea-arm-controller-configuration pal-sea-arm-description play-motion2 play-motion2-cli ];
+  propagatedBuildInputs = [ joint-state-broadcaster joint-trajectory-controller joy joy-teleop launch-pal pal-sea-arm-controller-configuration pal-sea-arm-description play-motion2 play-motion2-cli play-motion2-msgs ];
   nativeBuildInputs = [ ament-cmake-auto ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, nlohmann_json, pkg-config, ros2-medkit-cmake, ros2-medkit-gateway, systemd }:
 buildRosPackage {
   pname = "ros-humble-ros2-medkit-linux-introspection";
-  version = "0.5.0-r2";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_linux_introspection/0.5.0-2.tar.gz";
-    name = "0.5.0-2.tar.gz";
-    sha256 = "589f9175f372a7bf5b61eec9250fdb886ca8518ec4e3945d76448be8748196b9";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_linux_introspection/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "e410b6e2a45b225d3bf8b4d5123831769a9ff73aa84f9f1c5f50b4deb5d5ee4c";
   };
 
   buildType = "ament_cmake";

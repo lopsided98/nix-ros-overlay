@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, diagnostic-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-ros2-medkit-msgs";
-  version = "0.5.0-r2";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_msgs/0.5.0-2.tar.gz";
-    name = "0.5.0-2.tar.gz";
-    sha256 = "07542235f245ea6af0707195772193b72c4275720100b7c843554cf34ccd4f1b";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_msgs/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "ffef4d901bdee18487738738496fe12bad4d21041ad69ee84137051ae8826a22";
   };
 
   buildType = "ament_cmake";

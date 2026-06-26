@@ -2,24 +2,24 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, fusioncore-ros, nav-msgs, rclpy, robot-state-publisher, sensor-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, fusioncore-ros, geometry-msgs, nav-msgs, rclpy, robot-localization, robot-state-publisher, ros-gz-bridge, ros-gz-sim, rviz2, sensor-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-fusioncore-gazebo";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/fusioncore_gazebo/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "1ecfb02b613d97cb323fcd406f69581920824d2d3739acf5092d6a99b7ac8c71";
+    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/fusioncore_gazebo/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "643fc3b2c63a90d73e187b2df83696c2d5a5dc0118f7952023c2f120f6f46d58";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ fusioncore-ros nav-msgs rclpy robot-state-publisher sensor-msgs tf2-ros ];
+  propagatedBuildInputs = [ fusioncore-ros geometry-msgs nav-msgs rclpy robot-localization robot-state-publisher ros-gz-bridge ros-gz-sim rviz2 sensor-msgs tf2-ros visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "Gazebo simulation world for FusionCore integration testing";
+    description = "Gazebo simulation world for FusionCore integration testing and demo recording";
     license = with lib.licenses; [ asl20 ];
   };
 }

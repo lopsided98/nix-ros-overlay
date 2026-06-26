@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, fmt, generate-parameter-library, moveit-core, moveit-resources-panda-moveit-config, pluginlib, range-v3, rclcpp, rsl, tf2-geometry-msgs, tf2-kdl, tl-expected }:
 buildRosPackage {
   pname = "ros-kilted-pick-ik";
-  version = "1.1.1-r2";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pick_ik-release/archive/release/kilted/pick_ik/1.1.1-2.tar.gz";
-    name = "1.1.1-2.tar.gz";
-    sha256 = "bce44793d6f7044e37b3a3462710a18ba267c8f0373176797fa0248d2025aac4";
+    url = "https://github.com/ros2-gbp/pick_ik-release/archive/release/kilted/pick_ik/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "cbaf8820c077c19cf3159ff850f44ae3ec8584c2fd69e522b403ce98b3cc066b";
   };
 
   buildType = "ament_cmake";

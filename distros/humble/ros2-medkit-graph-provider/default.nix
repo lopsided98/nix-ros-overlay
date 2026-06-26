@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-gtest, ament-lint-auto, ament-lint-common, diagnostic-msgs, nlohmann_json, rclcpp, ros2-medkit-cmake, ros2-medkit-gateway, ros2-medkit-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros2-medkit-graph-provider";
-  version = "0.5.0-r2";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_graph_provider/0.5.0-2.tar.gz";
-    name = "0.5.0-2.tar.gz";
-    sha256 = "dcf126846ef8b714b8878572508a432f7d11db94a31e1346c573cd39d0a64bc3";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_graph_provider/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "bca983fe67b5c15aa2d3938b63206da492c6e29597196c82a991513f6b5c9199";
   };
 
   buildType = "ament_cmake";

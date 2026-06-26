@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-clang-tidy, ament-cmake-gtest, ament-lint-auto, ament-lint-common, launch-testing-ament-cmake, launch-testing-ros, nlohmann_json, rclcpp, ros2-medkit-cmake, ros2-medkit-msgs, ros2-medkit-serialization, rosbag2-cpp, rosbag2-storage, rosbag2-storage-mcap, sensor-msgs, sqlite, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-clang-tidy, ament-cmake-gtest, ament-index-python, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing-ament-cmake, launch-testing-ros, nlohmann_json, rclcpp, ros2-medkit-cmake, ros2-medkit-msgs, ros2-medkit-serialization, rosbag2-cpp, rosbag2-py, rosbag2-storage, rosbag2-storage-mcap, sensor-msgs, sqlite, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-ros2-medkit-fault-manager";
-  version = "0.5.0-r3";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/lyrical/ros2_medkit_fault_manager/0.5.0-3.tar.gz";
-    name = "0.5.0-3.tar.gz";
-    sha256 = "866501e960f7b92ea60fed43ed772b1f869bcd41699634289b9aa27b5329b3d8";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/lyrical/ros2_medkit_fault_manager/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "0160b010c7bb98f7e535da5ccd22e1cf4ddd80c11be130a6c9548aabafcb3faa";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros2-medkit-cmake ];
-  checkInputs = [ ament-cmake-clang-format ament-cmake-clang-tidy ament-cmake-gtest ament-lint-auto ament-lint-common launch-testing-ament-cmake launch-testing-ros sensor-msgs std-msgs ];
-  propagatedBuildInputs = [ nlohmann_json rclcpp ros2-medkit-msgs ros2-medkit-serialization rosbag2-cpp rosbag2-storage rosbag2-storage-mcap sqlite ];
+  checkInputs = [ ament-cmake-clang-format ament-cmake-clang-tidy ament-cmake-gtest ament-lint-auto ament-lint-common launch-ros launch-testing-ament-cmake launch-testing-ros rosbag2-py rosbag2-storage-mcap sensor-msgs std-msgs ];
+  propagatedBuildInputs = [ ament-index-python launch launch-ros nlohmann_json rclcpp ros2-medkit-msgs ros2-medkit-serialization rosbag2-cpp rosbag2-storage sqlite ];
   nativeBuildInputs = [ ament-cmake ros2-medkit-cmake ];
 
   meta = {

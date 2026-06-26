@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, openssl, protobuf, spdlog }:
 buildRosPackage {
   pname = "ros-jazzy-protobuf-comm";
-  version = "0.9.3-r1";
+  version = "0.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/protobuf_comm-release/archive/release/jazzy/protobuf_comm/0.9.3-1.tar.gz";
-    name = "0.9.3-1.tar.gz";
-    sha256 = "4c247cf8725a276e7067ea05cf7790752b1a8b85ba0057280c26d8be26b8585c";
+    url = "https://github.com/ros2-gbp/protobuf_comm-release/archive/release/jazzy/protobuf_comm/0.9.4-1.tar.gz";
+    name = "0.9.4-1.tar.gz";
+    sha256 = "f9ca4fd13424a2cafaff2d8519e716ede42794a7e122f6c18054b2b7a3796f17";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, fusioncore-ros, geometry-msgs, nav-msgs, rclpy, robot-localization, rosgraph-msgs, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-fusioncore-datasets";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/manankharwar/fusioncore-release/archive/release/humble/fusioncore_datasets/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "8a30b22d51d5c47bcaafd6759b14bb6c44a8158fce76d2a6c744b02e4c4b9571";
+    url = "https://github.com/manankharwar/fusioncore-release/archive/release/humble/fusioncore_datasets/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "2e09b0444c9a1f5e7db326ea50f2281df1bcb7d229655ad75639f5ff9ac85527";
   };
 
   buildType = "ament_cmake";

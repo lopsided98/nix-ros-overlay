@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, clearpath-config-live, clearpath-offboard-sensors, clearpath-platform-msgs, clearpath-viz }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-desktop";
-  version = "2.7.0-r2";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_desktop-release/archive/release/jazzy/clearpath_desktop/2.7.0-2.tar.gz";
-    name = "2.7.0-2.tar.gz";
-    sha256 = "ba4cbf41bdd6f3efb47fde3c9dde8ed262ad6b4fe5bb1fc916c3f00e9a169b4d";
+    url = "https://github.com/clearpath-gbp/clearpath_desktop-release/archive/release/jazzy/clearpath_desktop/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "dd3f57b1bfc4cb3ed9372c0ccd939d364a271399f512fdba97e301bad126300d";
   };
 
   buildType = "ament_cmake";

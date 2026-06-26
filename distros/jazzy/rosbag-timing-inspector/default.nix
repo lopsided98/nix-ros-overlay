@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, glfw3, libGL, libGLU, rosbag2-cpp, rosbag2-storage }:
 buildRosPackage {
   pname = "ros-jazzy-rosbag-timing-inspector";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag_timing_inspector-release/archive/release/jazzy/rosbag_timing_inspector/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "eb0232ff6c8a06f1871af490a0e171910de6b794b46258f537c161d56071d272";
+    url = "https://github.com/ros2-gbp/rosbag_timing_inspector-release/archive/release/jazzy/rosbag_timing_inspector/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "db51490591ac7508e44b73395cbf7db569ab152e50bf23837568c154bab5637d";
   };
 
   buildType = "ament_cmake";

@@ -1746,6 +1746,8 @@ self: super: {
 
  ompl = self.callPackage ./ompl {};
 
+ onnxruntime-vendor = self.callPackage ./onnxruntime-vendor {};
+
  open3d-vendor = self.callPackage ./open3d-vendor {};
 
  open-manipulator = self.callPackage ./open-manipulator {};

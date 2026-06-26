@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-lyrical-ros2-medkit-cmake";
-  version = "0.5.0-r3";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/lyrical/ros2_medkit_cmake/0.5.0-3.tar.gz";
-    name = "0.5.0-3.tar.gz";
-    sha256 = "4bb1348375f7f39c89f2a5d5c35bd8e9b16ac9ea601ad1414afa0e977b3af7ce";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/lyrical/ros2_medkit_cmake/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "816ff614853d2da57810999c997225217c0d530d723f635a107407ee2b4e9fdd";
   };
 
   buildType = "ament_cmake";

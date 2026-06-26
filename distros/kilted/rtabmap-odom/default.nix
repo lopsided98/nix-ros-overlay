@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, cv-bridge, image-geometry, laser-geometry, message-filters, nav-msgs, pcl-conversions, pcl-ros, pluginlib, rclcpp, rclcpp-components, ros-environment, rtabmap-conversions, rtabmap-msgs, rtabmap-sync, rtabmap-util, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-rtabmap-odom";
-  version = "0.22.1-r1";
+  version = "0.23.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/kilted/rtabmap_odom/0.22.1-1.tar.gz";
-    name = "0.22.1-1.tar.gz";
-    sha256 = "35e0397c45df65a39f46143dca2d2648b2ecd03d9ab7406c084845fc5f236d38";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/kilted/rtabmap_odom/0.23.7-1.tar.gz";
+    name = "0.23.7-1.tar.gz";
+    sha256 = "d1129d7e257993063c5baaad1ed47f2c360936fb81423734dad36ecc38ef924c";
   };
 
   buildType = "ament_cmake";
