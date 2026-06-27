@@ -181,6 +181,21 @@ let
       ];
     });
 
+    mujoco-ros2-control = (patchExternalProjectGit rosSuper.mujoco-ros2-control {
+      url = "https://github.com/lvandeve/lodepng.git";
+      originalRev = "\${MUJOCO_DEP_VERSION_lodepng}";
+      rev = self.mujoco.pin.lodepng.rev;
+      fetchgitArgs.hash = "sha256-vnw52G0lY68471dzH7NXc++bTbLRsITSxGYXOTicA5w=";
+    }).overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      postPatch = postPatch + ''
+        substituteInPlace CMakeLists.txt --replace-fail \
+            'set(MUJOCO_ROOT "''${MUJOCO_PREFIX}")' \
+            'set(MUJOCO_ROOT "${self.mujoco}")'
+      '';
+    });
+
     mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
       postPatch ? "", ...
     }: {
