@@ -176,6 +176,13 @@ let
       '';
     });
 
+    onnxruntime-vendor = rosSuper.onnxruntime-vendor.overrideAttrs ({
+      cmakeFlags ? [], propagatedBuildInputs ? [], ...
+    }: {
+      cmakeFlags = cmakeFlags ++ [ "-DAMENT_VENDOR_POLICY=NEVER_VENDOR" ];
+      propagatedBuildInputs = propagatedBuildInputs ++ [ self.onnxruntime ];
+    });
+
     osqp-vendor = pipe rosSuper.osqp-vendor [
       (pkg: pkg.overrideAttrs ({
         preInstall ? "", postPatch ? "", ...
