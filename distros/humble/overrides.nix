@@ -124,8 +124,16 @@ in with lib; {
   });
 
   autoware-ndt-scan-matcher = rosSuper.autoware-ndt-scan-matcher.overrideAttrs ({
-    postPatch ? "", ...
+    patches ? [], postPatch ? "", ...
   }: {
+    patches = patches ++ [
+      # fix(ndt_scan_matcher): explicitly include omp.h (#1166)
+      (self.fetchpatch2 {
+        url = "https://github.com/autowarefoundation/autoware_core/commit/801be9de40889d564ce3164a4b4f4eecd76b826f.patch?full_index=1";
+        hash = "sha256-zYuYJwXOym2RQbjuzrKOoMuMm85qYy6hXglqopT1CTE=";
+        stripLen = 2;
+      })
+    ];
     # fix "fatal error: pcl/filters/boost.h: No such file or directory"
     # pcl/filters/boost.h was removed in newer PCL versions
     postPatch = postPatch + ''
