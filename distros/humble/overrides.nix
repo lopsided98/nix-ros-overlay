@@ -144,6 +144,22 @@ in with lib; {
     '';
   });
 
+  autoware-perception-rviz-plugin = rosSuper.autoware-perception-rviz-plugin.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # Define the tinyxml2::tinyxml2 imported target before autoware_package()
+    # transitively pulls in tinyxml2_vendor. Its tinyxml2_vendor-extras.cmake
+    # otherwise tries to reconstruct the target from the empty TINYXML2_LIBRARY
+    # variable (tinyxml-2 in nixpkgs ships a CMake config providing the target
+    # instead) and aborts with "Unable to extract the library file path".
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "autoware_package()" \
+        "find_package(tinyxml2 REQUIRED)
+      autoware_package()"
+    '';
+  });
+
   autoware-pose-initializer = rosSuper.autoware-pose-initializer.overrideAttrs ({
     postPatch ? "", ...
   }: {
