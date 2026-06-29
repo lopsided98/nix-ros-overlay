@@ -1,6 +1,9 @@
 self: super: with self.lib; {
   inherit (self.python3Packages) bloom;
 
+  # TODO: Remove after https://github.com/ros/rosdistro/pull/52350 is merged.
+  _unresolved_qtbase5-private-dev = self.qt5.qtbase;
+
   cargo-ament-build = self.python3Packages.cargo-ament-build;
 
   colcon = with self.python3Packages; colcon-core.withExtensions [
