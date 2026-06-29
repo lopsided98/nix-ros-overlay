@@ -219,4 +219,13 @@ self: super: with self.lib; {
       self.ninja
     ];
   });
+  # TODO: Remove after https://github.com/NixOS/nixpkgs/pull/536748 is
+  # merged and available in this overlay.
+  vtkWithQt6 = super.vtkWithQt6.overrideAttrs ({
+    propagatedBuildInputs ? [], ...
+  }: {
+    propagatedBuildInputs = propagatedBuildInputs ++ [
+      self.qt6.qttools
+    ];
+  });
 }
