@@ -199,6 +199,9 @@ self: super: with self.lib; {
     qt6 = self.qt5;
     vtk = self.vtkWithQt5;
   };
+  pclWithQt6 = self.pcl.override {
+    vtk = self.vtkWithQt6;
+  };
 
   vtkWithQt5 = self.vtk.overrideAttrs ({
     cmakeFlags ? [], nativeBuildInputs ? [], propagatedBuildInputs ? [], ...

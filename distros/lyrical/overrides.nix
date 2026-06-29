@@ -504,6 +504,19 @@ in {
     '';
   });
 
+  # Make the PCL derivation compatible with the rtabmap package. The
+  # nixpkgs rtabmap derivation (see below) builds against PCL with
+  # Qt6-enabled VTK (pcl.override { vtk = vtkWithQt6; }). As a result,
+  # its exported rtabmap::core target references the VTK::GUISupportQt
+  # target. Downstream packages that call find_package(RTABMap) must
+  # use the same PCL configuration; otherwise, the VTK::GUISupportQt
+  # target will be undefined, causing CMake to fail. To ensure all ROS
+  # packages resolve the PCL dependency consistently to a single
+  # version, override the PCL package from nixpkgs with a different
+  # version (see ../../pkgs/default.nix). For older ROS distributions,
+  # a similar override is used, but with Qt5 instead of Qt6.
+  pcl = self.pclWithQt6;
+
   pcl-conversions = rosSuper.pcl-conversions.overrideAttrs ({
     patches ? [], ...
   }: {
