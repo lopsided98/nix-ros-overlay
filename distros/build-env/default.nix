@@ -17,8 +17,14 @@
 # take precedence over Nix-built packages. This can be achieved by setting
 # underlay to true.
 { lib, stdenv, buildPackages, writeText, buildEnv, makeWrapper, python, ros-environment }:
-{ paths ? [], wrapPrograms ? true, underlay ? false, postBuild ? "", passthru ? { }, ... }@args:
-
+lib.extendMkDerivation {
+  constructDrv = buildEnv;
+  excludeDrvArgNames = [
+    "underlay"
+    "wrapPrograms"
+  ];
+  extendDrvArgs =
+    finalAttrs: { paths ? [], wrapPrograms ? true, underlay ? false, postBuild ? "", passthru ? { }, ... }@args:
 with lib;
 assert assertMsg (underlay -> wrapPrograms)
   "Setting underlay without wrapPrograms has no effect.";
@@ -42,7 +48,8 @@ let
 
   xfix = if underlay then "suffix" else "prefix";
 
-  env = (buildEnv ((removeAttrs args [ "underlay" "wrapPrograms" ]) // {
+in
+  {
     name = "ros-env";
     # Only add ROS packages to environment. The rest are propagated like normal.
     # ROS packages propagate a huge number of dependencies, which are added all
@@ -112,7 +119,8 @@ let
         '';
       };
     };
-  })).overrideAttrs ({ buildCommand, ...}: {
+  };
+  transformDrv = drv: drv.overrideAttrs ({ buildCommand, ...}: {
     # Hack to execute buildPhase and fixupPhase instead of just
     # buildCommand provided by nixpkgs buildEnv. We need fixupPhase
     # for shell hooks to set ROS env. variables and for input
@@ -127,4 +135,4 @@ let
     '';
     phases = [ "buildPhase" "fixupPhase" ];
   });
-in env
+}
