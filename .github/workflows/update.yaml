@@ -39,7 +39,7 @@ jobs:
           path: |
             ~/.ros/tar
       - name: Mark all cached files as untouched
-        run: "touch --date=@0 ~/.ros/tar/*"
+        run: "find ~/.ros/tar/ -type f -print0 | xargs -0 touch --date=@0"
       - name: Update overlay
         env:
           GITHUB_RUNNER_TEMP: ${{ runner.temp }}
