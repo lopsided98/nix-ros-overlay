@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, crazyflie-interfaces, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-lyrical-crazyflie-py";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/crazyswarm2-release/archive/release/lyrical/crazyflie_py/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "fc63a40653898e3dcee90c79642402fd80ee531ac1d5da5601b3c3125099db49";
+    url = "https://github.com/ros2-gbp/crazyswarm2-release/archive/release/lyrical/crazyflie_py/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "5acbb3a4dd5df63bf3de23368f3a3faa93ed905efc242fc2d3fb1bfb0931eaa2";
   };
 
   buildType = "ament_python";

@@ -710,6 +710,8 @@ self: super: {
 
  compressed-image-transport = self.callPackage ./compressed-image-transport {};
 
+ connection-inspector = self.callPackage ./connection-inspector {};
+
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
  continental-msgs = self.callPackage ./continental-msgs {};
@@ -753,6 +755,8 @@ self: super: {
  cras-topic-tools = self.callPackage ./cras-topic-tools {};
 
  crazyflie = self.callPackage ./crazyflie {};
+
+ crazyflie-description = self.callPackage ./crazyflie-description {};
 
  crazyflie-examples = self.callPackage ./crazyflie-examples {};
 
@@ -1896,6 +1900,8 @@ self: super: {
 
  magnetic-model = self.callPackage ./magnetic-model {};
 
+ magnetometer-broadcaster = self.callPackage ./magnetometer-broadcaster {};
+
  magnetometer-compass = self.callPackage ./magnetometer-compass {};
 
  magnetometer-pipeline = self.callPackage ./magnetometer-pipeline {};
@@ -2815,6 +2821,8 @@ self: super: {
  point-cloud-transport-py = self.callPackage ./point-cloud-transport-py {};
 
  point-cloud-transport-tutorial = self.callPackage ./point-cloud-transport-tutorial {};
+
+ pointcloud-conversions = self.callPackage ./pointcloud-conversions {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
@@ -4229,6 +4237,8 @@ self: super: {
  urg-node = self.callPackage ./urg-node {};
 
  urg-node-msgs = self.callPackage ./urg-node-msgs {};
+
+ urinterfaces = self.callPackage ./urinterfaces {};
 
  usb-cam = self.callPackage ./usb-cam {};
 

@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-core, mrpt-typemeta, python3, python3Packages }:
+{ lib, buildRosPackage, fetchurl, cmake, libfyaml, mrpt-common, mrpt-core, mrpt-typemeta, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-containers";
-  version = "3.0.4-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_containers/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "f0223855c4d81febf2cf4a350a072f51bdaf36a2da81e7e279ee22c2ebd85672";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_containers/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "fca7d6fd46296a714db17e4404ddabddcd4dcf53e28dd29d0ab3a1f218602d7f";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake python3 python3Packages.pybind11 ];
+  buildInputs = [ cmake libfyaml python3 python3Packages.pybind11 ];
   propagatedBuildInputs = [ mrpt-common mrpt-core mrpt-typemeta ];
   nativeBuildInputs = [ cmake ];
 

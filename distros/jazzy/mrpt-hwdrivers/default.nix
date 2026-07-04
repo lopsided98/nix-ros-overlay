@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mrpt-comms, mrpt-maps, mrpt-viz }:
+{ lib, buildRosPackage, fetchurl, cmake, ffmpeg, libdc1394, libpcap, libusb1, mrpt-comms, mrpt-maps, mrpt-viz, openni2 }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-hwdrivers";
-  version = "3.0.4-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_hwdrivers/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "56bc3ac0f8dd1a67d51787ef36a19bc7c0245c8e6f3fe600f99d349f72fc42b7";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_hwdrivers/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "91dba9b0e1969e0456724ce469facfde2685818ff8e9bddc446e382899ca8a55";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ];
+  buildInputs = [ cmake ffmpeg libdc1394 libpcap libusb1 openni2 ];
   propagatedBuildInputs = [ mrpt-comms mrpt-maps mrpt-viz ];
   nativeBuildInputs = [ cmake ];
 

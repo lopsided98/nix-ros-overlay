@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-maps, mrpt-topography, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-slam";
-  version = "3.0.4-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_slam/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "099c3c7bdfd4f2d8e09668559769864bc66c5b38b71fb756b4c417d68f415d3a";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_slam/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "f4334e37874096bae75cd4fb99f78d0655a7e7772686945b68337ef9088d876d";
   };
 
   buildType = "cmake";

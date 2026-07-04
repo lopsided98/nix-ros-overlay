@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, glfw3, mrpt-common, mrpt-data, mrpt-graphslam, mrpt-gui, mrpt-imgui, mrpt-libapps-cli, mrpt-libapps-gui, mrpt-nav }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-examples-cpp";
-  version = "3.0.4-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_examples_cpp/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "750843ae6c4e0270110928016a4ef76ea72a7db504bd06016bcfc6d14cb88826";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_examples_cpp/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "08d7532a5af11189255fc52646fa16a3ce72241a37e28cf81491fd51f347f1f7";
   };
 
   buildType = "cmake";

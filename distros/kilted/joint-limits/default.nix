@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, backward-ros, fmt, generate-parameter-library, launch-ros, launch-testing-ament-cmake, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-kilted-joint-limits";
-  version = "5.14.2-r1";
+  version = "5.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/joint_limits/5.14.2-1.tar.gz";
-    name = "5.14.2-1.tar.gz";
-    sha256 = "1b3f55c751d71ac7a89f304cc4b8f792cc026bec32c528f5077e1f853e48fba7";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/joint_limits/5.15.0-1.tar.gz";
+    name = "5.15.0-1.tar.gz";
+    sha256 = "3ce21cdf863a04c93ee23793f0fab042b8e5ce695fd9635a4d363c8bde7d2354";
   };
 
   buildType = "ament_cmake";

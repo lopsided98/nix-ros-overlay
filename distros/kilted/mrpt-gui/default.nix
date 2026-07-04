@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, glfw3, libGL, libGLU, libxrandr, libxxf86vm, mrpt-opengl, python3, python3Packages, qt5, wxGTK32 }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-gui";
-  version = "3.0.4-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_gui/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "62fd6610fda2f7a6e7a3222e9405d2e05efcf34ad9d467c240eb4bfe7d0c8670";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_gui/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "9833791826dfb20e316775f8d79811007cc4272e4b0469bf3d37b8670c80e466";
   };
 
   buildType = "cmake";

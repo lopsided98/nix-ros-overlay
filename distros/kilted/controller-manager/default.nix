@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, ament-cmake-pytest, ament-cmake-python, backward-ros, controller-interface, controller-manager-msgs, diagnostic-updater, example-interfaces, fmt, generate-parameter-library, hardware-interface, hardware-interface-testing, launch, launch-ros, launch-testing, launch-testing-ros, libstatistics-collector, lifecycle-msgs, pluginlib, python3Packages, rcl-interfaces, rclcpp, rclpy, realtime-tools, robot-state-publisher, ros2-control-cmake, ros2-control-test-assets, ros2param, ros2pkg, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-controller-manager";
-  version = "5.14.2-r1";
+  version = "5.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/controller_manager/5.14.2-1.tar.gz";
-    name = "5.14.2-1.tar.gz";
-    sha256 = "b4984f3766246e60d236cb676d9e2ea3e0f7d58822b1c2f29cea1704098b6fad";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/controller_manager/5.15.0-1.tar.gz";
+    name = "5.15.0-1.tar.gz";
+    sha256 = "fe70f69a0bd53941135300131f333ddc3e0a6baa0ec87de5cbdbf0f8210279b1";
   };
 
   buildType = "ament_cmake";

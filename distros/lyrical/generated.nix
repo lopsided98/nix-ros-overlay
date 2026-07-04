@@ -446,6 +446,8 @@ self: super: {
 
  crazyflie = self.callPackage ./crazyflie {};
 
+ crazyflie-description = self.callPackage ./crazyflie-description {};
+
  crazyflie-examples = self.callPackage ./crazyflie-examples {};
 
  crazyflie-interfaces = self.callPackage ./crazyflie-interfaces {};
@@ -910,6 +912,8 @@ self: super: {
 
  gtsam2mrpt-serial = self.callPackage ./gtsam2mrpt-serial {};
 
+ gurumdds-cmake-module = self.callPackage ./gurumdds-cmake-module {};
+
  gz-cmake-vendor = self.callPackage ./gz-cmake-vendor {};
 
  gz-common-vendor = self.callPackage ./gz-common-vendor {};
@@ -1239,6 +1243,8 @@ self: super: {
  magic-enum = self.callPackage ./magic-enum {};
 
  magnetic-model = self.callPackage ./magnetic-model {};
+
+ magnetometer-broadcaster = self.callPackage ./magnetometer-broadcaster {};
 
  magnetometer-compass = self.callPackage ./magnetometer-compass {};
 
@@ -1916,6 +1922,8 @@ self: super: {
 
  point-cloud-transport-tutorial = self.callPackage ./point-cloud-transport-tutorial {};
 
+ pointcloud-conversions = self.callPackage ./pointcloud-conversions {};
+
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
  polygon-demos = self.callPackage ./polygon-demos {};
@@ -2217,6 +2225,8 @@ self: super: {
  rmw-fastrtps-dynamic-cpp = self.callPackage ./rmw-fastrtps-dynamic-cpp {};
 
  rmw-fastrtps-shared-cpp = self.callPackage ./rmw-fastrtps-shared-cpp {};
+
+ rmw-gurumdds-cpp = self.callPackage ./rmw-gurumdds-cpp {};
 
  rmw-implementation = self.callPackage ./rmw-implementation {};
 

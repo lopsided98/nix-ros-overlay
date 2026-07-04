@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, diff-drive-controller, hardware-interface, imu-sensor-broadcaster, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rosbot-hardware-interfaces";
-  version = "0.18.6-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbot_ros-release/archive/release/jazzy/rosbot_hardware_interfaces/0.18.6-1.tar.gz";
-    name = "0.18.6-1.tar.gz";
-    sha256 = "66f268195193d9dd1a34d3eb8b5fa39cc99632c4c34a5d2ea1a13c48606612e0";
+    url = "https://github.com/ros2-gbp/rosbot_ros-release/archive/release/jazzy/rosbot_hardware_interfaces/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "35ce902ea050f2b46bc8add1ffa272387c3c77fb15329b11ba164ce87838d298";
   };
 
   buildType = "ament_cmake";

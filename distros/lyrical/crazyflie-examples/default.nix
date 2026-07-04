@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, ament-copyright, ament-flake8, ament-pep257, crazyflie-py, geometry-msgs, nav-msgs, python3Packages, rclpy, sensor-msgs, tf-transformations, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-crazyflie-examples";
-  version = "1.0.4-r1";
+  version = "1.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/crazyswarm2-release/archive/release/lyrical/crazyflie_examples/1.0.4-1.tar.gz";
-    name = "1.0.4-1.tar.gz";
-    sha256 = "b5ac63464bc2c2645dba2e66a1a16e496de760464f32c174eb105e168d881b1a";
+    url = "https://github.com/ros2-gbp/crazyswarm2-release/archive/release/lyrical/crazyflie_examples/1.0.5-1.tar.gz";
+    name = "1.0.5-1.tar.gz";
+    sha256 = "17c752debe27555802e9fa1d9e2b20a0d9694f744e8da8133f8ad67360d29738";
   };
 
   buildType = "ament_cmake";

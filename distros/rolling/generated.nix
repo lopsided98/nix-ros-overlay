@@ -444,6 +444,8 @@ self: super: {
 
  crazyflie = self.callPackage ./crazyflie {};
 
+ crazyflie-description = self.callPackage ./crazyflie-description {};
+
  crazyflie-examples = self.callPackage ./crazyflie-examples {};
 
  crazyflie-interfaces = self.callPackage ./crazyflie-interfaces {};
@@ -1217,6 +1219,8 @@ self: super: {
  magic-enum = self.callPackage ./magic-enum {};
 
  magnetic-model = self.callPackage ./magnetic-model {};
+
+ magnetometer-broadcaster = self.callPackage ./magnetometer-broadcaster {};
 
  magnetometer-compass = self.callPackage ./magnetometer-compass {};
 

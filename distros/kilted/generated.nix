@@ -1358,6 +1358,8 @@ self: super: {
 
  magnetic-model = self.callPackage ./magnetic-model {};
 
+ magnetometer-broadcaster = self.callPackage ./magnetometer-broadcaster {};
+
  magnetometer-compass = self.callPackage ./magnetometer-compass {};
 
  magnetometer-pipeline = self.callPackage ./magnetometer-pipeline {};

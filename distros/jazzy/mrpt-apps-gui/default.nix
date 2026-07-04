@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-common, mrpt-graphslam, mrpt-kinematics, mrpt-libapps-gui, mrpt-nav }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-apps-gui";
-  version = "3.0.4-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_apps_gui/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "5c6b9550e829c95f8773c5d118b60d2045dc5ba412eaa57b88204c4340c8944c";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_apps_gui/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "8f2a3173813e48cc420a964d30de87986950b230378e13673ac6436247b91351";
   };
 
   buildType = "cmake";

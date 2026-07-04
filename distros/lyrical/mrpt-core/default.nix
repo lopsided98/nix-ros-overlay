@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-core";
-  version = "3.0.4-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_core/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "d180b13fa68b5b04a974503deaae58599eef45eacbd379cb8b1b674f069c0609";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_core/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "c03eeaadd50c34fb695b4d2966af6b1404704d080f555fce87634ead350b4b24";
   };
 
   buildType = "cmake";

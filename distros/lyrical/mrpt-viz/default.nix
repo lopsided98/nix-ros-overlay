@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, eigen, mrpt-common, mrpt-img, mrpt-poses, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-viz";
-  version = "3.0.4-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_viz/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "e61f3fa328299c09297f3f7c8217d5bcb57272c93bf1f36431eea5480ba17599";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_viz/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "db565b8dc215d1d8d5cee253fad3fcdf5371423067a7aafb465a3134db4c2763";
   };
 
   buildType = "cmake";

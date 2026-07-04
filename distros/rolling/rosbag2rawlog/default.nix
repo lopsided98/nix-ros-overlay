@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/rolling/rosbag2rawlog/3.5.3-1.tar.gz";
     name = "3.5.3-1.tar.gz";
-    sha256 = "d89382e75c73265d73a465eedebc554a471ca773bace278faf24cc03a0edbbf6";
+    sha256 = "85d676a81466eed905ca21dd58cdef69abdeb2f0b48d3b4aa2a1c5eb369320cd";
   };
 
   buildType = "ament_cmake";

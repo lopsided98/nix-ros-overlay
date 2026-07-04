@@ -792,6 +792,8 @@ self: super: {
 
  compressed-image-transport = self.callPackage ./compressed-image-transport {};
 
+ connection-inspector = self.callPackage ./connection-inspector {};
+
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
  continental-msgs = self.callPackage ./continental-msgs {};
@@ -825,6 +827,8 @@ self: super: {
  crane-plus-moveit-config = self.callPackage ./crane-plus-moveit-config {};
 
  crazyflie = self.callPackage ./crazyflie {};
+
+ crazyflie-description = self.callPackage ./crazyflie-description {};
 
  crazyflie-examples = self.callPackage ./crazyflie-examples {};
 

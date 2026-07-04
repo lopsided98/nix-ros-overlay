@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, compressed-depth-image-transport, compressed-image-transport, theora-image-transport, zstd-image-transport }:
 buildRosPackage {
   pname = "ros-rolling-image-transport-plugins";
-  version = "7.0.0-r1";
+  version = "7.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/rolling/image_transport_plugins/7.0.0-1.tar.gz";
-    name = "7.0.0-1.tar.gz";
-    sha256 = "a61bb764dd1c311e6caea679c435e16f039a6110927d2707bb9a9abde1f2418c";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/rolling/image_transport_plugins/7.0.1-1.tar.gz";
+    name = "7.0.1-1.tar.gz";
+    sha256 = "45157492485a6d82efafd4398e21e0fbe2098de67c4a43320ddfa1c33e2ca6c2";
   };
 
   buildType = "ament_cmake";

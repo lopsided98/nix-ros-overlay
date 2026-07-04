@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros, angles, builtin-interfaces, compass-conversions, compass-interfaces, cras-cpp-common, cras-lint, eigen, geometry-msgs, magnetometer-pipeline, message-filters, pluginlib, rclcpp, rclcpp-components, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-magnetometer-compass";
-  version = "3.0.3-r1";
+  version = "3.0.4-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/compass-release/archive/release/rolling/magnetometer_compass/3.0.3-1.tar.gz";
-    name = "3.0.3-1.tar.gz";
-    sha256 = "673378a3036b78471644a3ad03a965d18d68c8df98b4a7511aa8ae6dd35631ce";
+    url = "https://github.com/ros2-gbp/compass-release/archive/release/rolling/magnetometer_compass/3.0.4-2.tar.gz";
+    name = "3.0.4-2.tar.gz";
+    sha256 = "6fd81819bb684145c1f6e138e1464888a3accb173d4401bd6cd5a51da35b6fc9";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, glfw3, libGL, libGLU, libxrandr, libxxf86vm, mrpt-opengl, python3, python3Packages, qt5, wxGTK32 }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-gui";
-  version = "3.0.4-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_gui/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "f072aad43495f16634507309e554caa34fae054f655ef64ad66c4827bc0c2603";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_gui/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "1dec68e91282eedbd642b2d57d1c3ae9726a3a83646452df0f2e9343cacffd1a";
   };
 
   buildType = "cmake";
