@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-cpm-ts-coding, etsi-its-cpm-ts-msgs, etsi-its-primitives-conversion }:
 buildRosPackage {
   pname = "ros-kilted-etsi-its-cpm-ts-conversion";
-  version = "3.4.0-r1";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/kilted/etsi_its_cpm_ts_conversion/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "5889759f1f79e04dfa297055a52edfab8aad7a1a89bf40808093982046719297";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/kilted/etsi_its_cpm_ts_conversion/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "36343fe13462cb87dd899d65c4e1428cdf1a5c93d282f50706ea37fb4ec8159a";
   };
 
   buildType = "ament_cmake";

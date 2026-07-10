@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages, roboplan }:
 buildRosPackage {
   pname = "ros-lyrical-roboplan-simple-ik";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/lyrical/roboplan_simple_ik/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "2950068e5b22ae223a2e78f97593d9a3a5319c312e53d0b011eb56d09cd7a99a";
+    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/lyrical/roboplan_simple_ik/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "613d0252d9064e02faaf285aabe05fe2a6d5774accd0c3873ec21cec080c3e61";
   };
 
   buildType = "ament_cmake";

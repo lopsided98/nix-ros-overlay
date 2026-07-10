@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, mbf-msgs, pluginlib, qt5, rclcpp, rclcpp-action, rviz-common }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, mbf-msgs, pluginlib, qt6, rclcpp, rclcpp-action, rviz-common }:
 buildRosPackage {
   pname = "ros-jazzy-rviz-mbf-plugins";
-  version = "1.0.5-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/jazzy/rviz_mbf_plugins/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "cc4bbac8c640f765c66a540b3fc39ada6f86b16b847c75ba834f9b91f4ecdbc0";
+    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/jazzy/rviz_mbf_plugins/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "16766a18e3a2589a33dac75b3b3b0e87e2ab60242bc3e590092523a4d5a97f53";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ geometry-msgs mbf-msgs pluginlib qt5.qtbase rclcpp rclcpp-action rviz-common ];
+  propagatedBuildInputs = [ geometry-msgs mbf-msgs pluginlib qt6.qtbase rclcpp rclcpp-action rviz-common ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

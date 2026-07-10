@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-gui, mrpt-slam }:
 buildRosPackage {
   pname = "ros-humble-mrpt-graphslam";
-  version = "3.0.4-r1";
+  version = "3.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_graphslam/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "4d9e6ccc5120847f982acef908fb73af8f1ceb68bbd74285fcc70dda17b38b4e";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_graphslam/3.1.2-1.tar.gz";
+    name = "3.1.2-1.tar.gz";
+    sha256 = "5cbf7d5d058e8aa27e7589c2cbfb9953371efb6debda311bb820c91420d0bb5d";
   };
 
   buildType = "cmake";

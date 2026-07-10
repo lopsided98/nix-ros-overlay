@@ -444,6 +444,8 @@ self: super: {
 
  crazyflie = self.callPackage ./crazyflie {};
 
+ crazyflie-description = self.callPackage ./crazyflie-description {};
+
  crazyflie-examples = self.callPackage ./crazyflie-examples {};
 
  crazyflie-interfaces = self.callPackage ./crazyflie-interfaces {};
@@ -1218,6 +1220,8 @@ self: super: {
 
  magnetic-model = self.callPackage ./magnetic-model {};
 
+ magnetometer-broadcaster = self.callPackage ./magnetometer-broadcaster {};
+
  magnetometer-compass = self.callPackage ./magnetometer-compass {};
 
  magnetometer-pipeline = self.callPackage ./magnetometer-pipeline {};
@@ -1271,6 +1275,8 @@ self: super: {
  menge-vendor = self.callPackage ./menge-vendor {};
 
  message-filters = self.callPackage ./message-filters {};
+
+ message-tf-frame-transformer = self.callPackage ./message-tf-frame-transformer {};
 
  metavision-driver = self.callPackage ./metavision-driver {};
 
@@ -1477,6 +1483,10 @@ self: super: {
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
+
+ mp2p-icp-core = self.callPackage ./mp2p-icp-core {};
+
+ mp2p-icp-viz = self.callPackage ./mp2p-icp-viz {};
 
  mp-units-vendor = self.callPackage ./mp-units-vendor {};
 
@@ -2210,6 +2220,8 @@ self: super: {
 
  roboplan = self.callPackage ./roboplan {};
 
+ roboplan-cartesian-planning = self.callPackage ./roboplan-cartesian-planning {};
+
  roboplan-example-models = self.callPackage ./roboplan-example-models {};
 
  roboplan-examples = self.callPackage ./roboplan-examples {};
@@ -2611,6 +2623,8 @@ self: super: {
  rviz-rendering = self.callPackage ./rviz-rendering {};
 
  rviz-rendering-tests = self.callPackage ./rviz-rendering-tests {};
+
+ rviz-satellite = self.callPackage ./rviz-satellite {};
 
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 

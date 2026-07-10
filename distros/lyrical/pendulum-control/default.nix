@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, pendulum-msgs, rclcpp, rmw-implementation-cmake, ros2run, rttest, tlsf-cpp }:
 buildRosPackage {
   pname = "ros-lyrical-pendulum-control";
-  version = "0.37.8-r3";
+  version = "0.37.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/lyrical/pendulum_control/0.37.8-3.tar.gz";
-    name = "0.37.8-3.tar.gz";
-    sha256 = "8bb0fdeabc43c9e0d7a5f1eebde1583c7c95883419238ba42cd9dd70a8e54472";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/lyrical/pendulum_control/0.37.9-1.tar.gz";
+    name = "0.37.9-1.tar.gz";
+    sha256 = "b660be9d486764dd4092a96d88ed7732371ee96b36aeee55c6c26428b2314a9e";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-coding, etsi-its-conversion, etsi-its-msgs, etsi-its-msgs-utils }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-messages";
-  version = "3.4.0-r1";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_messages/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "4a9e1bae157d3c28e86fb96069bba954822c23fd065ef474b492fb6edf7612c0";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_messages/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "cbcb641a1d9efeb3ec6855411518bf7112ab0a0a3a235b48b20e6d338dd5440e";
   };
 
   buildType = "ament_cmake";

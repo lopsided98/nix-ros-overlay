@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rclcpp, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-message-tf-frame-transformer";
-  version = "1.1.3-r1";
+  version = "1.1.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/message_tf_frame_transformer-release/archive/release/humble/message_tf_frame_transformer/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "fdad5212bc7be0f50f4f609db3107a134c48e1ec881316148cdfb6a16a363272";
+    url = "https://github.com/ros2-gbp/message_tf_frame_transformer-release/archive/release/humble/message_tf_frame_transformer/1.1.3-2.tar.gz";
+    name = "1.1.3-2.tar.gz";
+    sha256 = "0fa3a03693961970e8ade838ab77f5c680b0c9fede0816bba512a0b0ef54f4b3";
   };
 
   buildType = "ament_cmake";

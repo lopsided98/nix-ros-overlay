@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-core, mrpt-typemeta, python3, python3Packages }:
+{ lib, buildRosPackage, fetchurl, cmake, libfyaml, mrpt-common, mrpt-core, mrpt-typemeta, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-containers";
-  version = "3.0.4-r1";
+  version = "3.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_containers/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "0b8655d57a8c194c744b5dadce7a86b454458b451233a9b80309b92a002f857b";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_containers/3.1.2-1.tar.gz";
+    name = "3.1.2-1.tar.gz";
+    sha256 = "63630ef2d12a7be12e84bcd0c8afb18a6b0ce2ece2cb6a7a311aca543dc78366";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake python3 python3Packages.pybind11 ];
+  buildInputs = [ cmake libfyaml python3 python3Packages.pybind11 ];
   propagatedBuildInputs = [ mrpt-common mrpt-core mrpt-typemeta ];
   nativeBuildInputs = [ cmake ];
 

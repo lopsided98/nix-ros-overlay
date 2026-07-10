@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-xmllint, python-qt-binding, python3Packages, rclpy, ros2topic, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-lyrical-rqt-topic";
-  version = "2.1.1-r1";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_topic-release/archive/release/lyrical/rqt_topic/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "699bd8441b6f63cfc21447a372f37104fcf962279f64141ff0aef440aa9dc28f";
+    url = "https://github.com/ros2-gbp/rqt_topic-release/archive/release/lyrical/rqt_topic/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "3e860849b1f15aafd2d07a5f9ead626e17833e7821eac80bd39c7cc61af854da";
   };
 
   buildType = "ament_python";

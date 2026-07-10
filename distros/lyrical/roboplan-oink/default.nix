@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-python, gtest, python3Packages, roboplan, roboplan-example-models }:
 buildRosPackage {
   pname = "ros-lyrical-roboplan-oink";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/lyrical/roboplan_oink/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "82703bf9f3048f5e1073250f48128733305a450d469786b15ca03715359d29c0";
+    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/lyrical/roboplan_oink/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "b8a5895ed101c5f3c403e2350f8f42a46295003a5808e7519c37c7d4310cba2c";
   };
 
   buildType = "ament_cmake";

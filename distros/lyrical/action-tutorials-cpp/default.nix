@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, rclcpp, rclcpp-action, rclcpp-components }:
 buildRosPackage {
   pname = "ros-lyrical-action-tutorials-cpp";
-  version = "0.37.8-r3";
+  version = "0.37.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/lyrical/action_tutorials_cpp/0.37.8-3.tar.gz";
-    name = "0.37.8-3.tar.gz";
-    sha256 = "0de6d95250cf97aa5f17decfea5fccf0121779f7ce3371317b0f9d87f1a3c8e6";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/lyrical/action_tutorials_cpp/0.37.9-1.tar.gz";
+    name = "0.37.9-1.tar.gz";
+    sha256 = "a455623359d02f818bfaa347c4b4d08a46c8979a6f76c528a455f80a04555193";
   };
 
   buildType = "ament_cmake";

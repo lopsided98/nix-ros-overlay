@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, mbf-abstract-core, mbf-utility, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-mbf-simple-core";
-  version = "1.0.5-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/jazzy/mbf_simple_core/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "0cdb195a8bdd336dcfc75275eabf3b7f9bdc11f178bd921a9e3fd82ab219c58c";
+    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/jazzy/mbf_simple_core/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "cd735f54fe06a2dd6c3c555974732c19a487aeead539327b4117d443bc713896";
   };
 
   buildType = "ament_cmake";

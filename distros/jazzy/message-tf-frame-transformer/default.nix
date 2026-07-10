@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rclcpp, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-message-tf-frame-transformer";
-  version = "1.1.3-r1";
+  version = "1.1.3-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/message_tf_frame_transformer-release/archive/release/jazzy/message_tf_frame_transformer/1.1.3-1.tar.gz";
-    name = "1.1.3-1.tar.gz";
-    sha256 = "66c87aca50dc27ff44e0f99e241bfb661f33f63b729da06c7d7504436beaf301";
+    url = "https://github.com/ros2-gbp/message_tf_frame_transformer-release/archive/release/jazzy/message_tf_frame_transformer/1.1.3-2.tar.gz";
+    name = "1.1.3-2.tar.gz";
+    sha256 = "5dfa1d1509613766fe276eaa472816443daac08e81bf526507f78bd4068b3210";
   };
 
   buildType = "ament_cmake";

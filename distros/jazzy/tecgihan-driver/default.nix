@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, python3Packages, rclpy, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-tecgihan-driver";
-  version = "0.1.2-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/tecgihan/tecgihan_driver-release/archive/release/jazzy/tecgihan_driver/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "713eb1f90b49c3ef0197fb6ea843f5fb5b7cca7dfbe9c68099742962045c171d";
+    url = "https://github.com/tecgihan/tecgihan_driver-release/archive/release/jazzy/tecgihan_driver/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "c055faac902539f2a9796143447aee85474b89a98403abdc34f136a2c1d22b4f";
   };
 
   buildType = "ament_python";

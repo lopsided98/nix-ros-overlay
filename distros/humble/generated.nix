@@ -792,6 +792,8 @@ self: super: {
 
  compressed-image-transport = self.callPackage ./compressed-image-transport {};
 
+ connection-inspector = self.callPackage ./connection-inspector {};
+
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
  continental-msgs = self.callPackage ./continental-msgs {};
@@ -825,6 +827,8 @@ self: super: {
  crane-plus-moveit-config = self.callPackage ./crane-plus-moveit-config {};
 
  crazyflie = self.callPackage ./crazyflie {};
+
+ crazyflie-description = self.callPackage ./crazyflie-description {};
 
  crazyflie-examples = self.callPackage ./crazyflie-examples {};
 
@@ -1167,6 +1171,12 @@ self: super: {
  etsi-its-denm-ts-conversion = self.callPackage ./etsi-its-denm-ts-conversion {};
 
  etsi-its-denm-ts-msgs = self.callPackage ./etsi-its-denm-ts-msgs {};
+
+ etsi-its-ivim-ts-coding = self.callPackage ./etsi-its-ivim-ts-coding {};
+
+ etsi-its-ivim-ts-conversion = self.callPackage ./etsi-its-ivim-ts-conversion {};
+
+ etsi-its-ivim-ts-msgs = self.callPackage ./etsi-its-ivim-ts-msgs {};
 
  etsi-its-mapem-ts-coding = self.callPackage ./etsi-its-mapem-ts-coding {};
 
@@ -2254,6 +2264,10 @@ self: super: {
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
 
+ mp2p-icp-core = self.callPackage ./mp2p-icp-core {};
+
+ mp2p-icp-viz = self.callPackage ./mp2p-icp-viz {};
+
  mqtt-client = self.callPackage ./mqtt-client {};
 
  mqtt-client-interfaces = self.callPackage ./mqtt-client-interfaces {};
@@ -2918,8 +2932,6 @@ self: super: {
 
  pluginlib = self.callPackage ./pluginlib {};
 
- ply-utils = self.callPackage ./ply-utils {};
-
  pmb2-2dnav = self.callPackage ./pmb2-2dnav {};
 
  pmb2-bringup = self.callPackage ./pmb2-bringup {};
@@ -2949,6 +2961,8 @@ self: super: {
  point-cloud-transport-plugins = self.callPackage ./point-cloud-transport-plugins {};
 
  point-cloud-transport-py = self.callPackage ./point-cloud-transport-py {};
+
+ pointcloud-conversions = self.callPackage ./pointcloud-conversions {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 

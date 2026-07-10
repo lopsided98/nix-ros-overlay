@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-motion-capture-tracking-interfaces";
-  version = "1.0.6-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/motion_capture_tracking-release/archive/release/jazzy/motion_capture_tracking_interfaces/1.0.6-1.tar.gz";
-    name = "1.0.6-1.tar.gz";
-    sha256 = "7ef3f20f60b92e0460025453189b9ffedbe000981514bc6b0b93f8f2fc03b059";
+    url = "https://github.com/ros2-gbp/motion_capture_tracking-release/archive/release/jazzy/motion_capture_tracking_interfaces/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "6049fc03d5f2d12de2fadf6fadd6de160c59586bc83119f5549af52d80dba331";
   };
 
   buildType = "ament_cmake";

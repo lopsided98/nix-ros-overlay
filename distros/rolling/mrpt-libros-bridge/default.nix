@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/rolling/mrpt_libros_bridge/3.5.3-1.tar.gz";
     name = "3.5.3-1.tar.gz";
-    sha256 = "4372d494f91b5f74a229d7344f2fc85aaccb08a71af9c75232318db838f9434d";
+    sha256 = "143c6d1d7ac86d53375c5ab09a7746cb48a7e2a6220a6bd75ee0d8d55de4328e";
   };
 
   buildType = "cmake";

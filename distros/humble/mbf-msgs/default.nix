@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, geometry-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-mbf-msgs";
-  version = "1.0.5-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/humble/mbf_msgs/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "fcda50e3863ef4917427f1223428f05ce6ca385acffb236724b5453763eecfb5";
+    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/humble/mbf_msgs/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "bafce89397bffa9ccd6f372b52f678d72460d62c09ccce88d1e7be4594597511";
   };
 
   buildType = "ament_cmake";

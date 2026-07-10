@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-kilted-etsi-its-spatem-ts-coding";
-  version = "3.4.0-r1";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/kilted/etsi_its_spatem_ts_coding/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "53ec6f003c47e1956812b6750c670ee663d10b2c47d5a254e24f00bd640697fe";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/kilted/etsi_its_spatem_ts_coding/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "a251df5e852239673e96a81aaf4d2c1278f5c0f514a997d8ee21de3757782fb7";
   };
 
   buildType = "ament_cmake";

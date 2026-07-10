@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-cam-ts-coding, etsi-its-cam-ts-msgs, etsi-its-primitives-conversion }:
 buildRosPackage {
   pname = "ros-humble-etsi-its-cam-ts-conversion";
-  version = "3.4.0-r1";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_cam_ts_conversion/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "0598ed046a59d9b83793c47586024c0423b4c81adf7a77f2660e193f5f5b5485";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/humble/etsi_its_cam_ts_conversion/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "049230930c1c9545fbaf8993f270265027a95b86b5c6ce3976d7fb35ea842fee";
   };
 
   buildType = "ament_cmake";
