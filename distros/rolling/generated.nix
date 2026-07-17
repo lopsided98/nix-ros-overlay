@@ -444,6 +444,8 @@ self: super: {
 
  crazyflie = self.callPackage ./crazyflie {};
 
+ crazyflie-description = self.callPackage ./crazyflie-description {};
+
  crazyflie-examples = self.callPackage ./crazyflie-examples {};
 
  crazyflie-interfaces = self.callPackage ./crazyflie-interfaces {};
@@ -1218,6 +1220,8 @@ self: super: {
 
  magnetic-model = self.callPackage ./magnetic-model {};
 
+ magnetometer-broadcaster = self.callPackage ./magnetometer-broadcaster {};
+
  magnetometer-compass = self.callPackage ./magnetometer-compass {};
 
  magnetometer-pipeline = self.callPackage ./magnetometer-pipeline {};
@@ -1271,6 +1275,8 @@ self: super: {
  menge-vendor = self.callPackage ./menge-vendor {};
 
  message-filters = self.callPackage ./message-filters {};
+
+ message-tf-frame-transformer = self.callPackage ./message-tf-frame-transformer {};
 
  metavision-driver = self.callPackage ./metavision-driver {};
 
@@ -1478,6 +1484,10 @@ self: super: {
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
 
+ mp2p-icp-core = self.callPackage ./mp2p-icp-core {};
+
+ mp2p-icp-viz = self.callPackage ./mp2p-icp-viz {};
+
  mp-units-vendor = self.callPackage ./mp-units-vendor {};
 
  mqtt-client = self.callPackage ./mqtt-client {};
@@ -1661,6 +1671,8 @@ self: super: {
  nav2-minimal-tb4-sim = self.callPackage ./nav2-minimal-tb4-sim {};
 
  nav-msgs = self.callPackage ./nav-msgs {};
+
+ ndcurves = self.callPackage ./ndcurves {};
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
@@ -2202,6 +2214,8 @@ self: super: {
 
  rmw-stats-shim = self.callPackage ./rmw-stats-shim {};
 
+ rmw-swiftdds-cpp = self.callPackage ./rmw-swiftdds-cpp {};
+
  rmw-test-fixture = self.callPackage ./rmw-test-fixture {};
 
  rmw-test-fixture-implementation = self.callPackage ./rmw-test-fixture-implementation {};
@@ -2209,6 +2223,8 @@ self: super: {
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
 
  roboplan = self.callPackage ./roboplan {};
+
+ roboplan-cartesian-planning = self.callPackage ./roboplan-cartesian-planning {};
 
  roboplan-example-models = self.callPackage ./roboplan-example-models {};
 
@@ -2611,6 +2627,8 @@ self: super: {
  rviz-rendering = self.callPackage ./rviz-rendering {};
 
  rviz-rendering-tests = self.callPackage ./rviz-rendering-tests {};
+
+ rviz-satellite = self.callPackage ./rviz-satellite {};
 
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 

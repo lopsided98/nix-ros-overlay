@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, fusioncore-ros, geometry-msgs, nav-msgs, rclpy, robot-localization, rosgraph-msgs, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-fusioncore-datasets";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/fusioncore_datasets/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "4911f652b487a082d449ff768b71d829deef11c9203e2e2c537a467a9b8adf19";
+    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/fusioncore_datasets/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "2ee4cff641cd3446c3551e2d04198d6b8f957eb0d6ba3b82e2c2af37bb8021be";
   };
 
   buildType = "ament_cmake";

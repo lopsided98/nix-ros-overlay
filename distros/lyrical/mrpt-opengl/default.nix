@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, libGL, libGLU, mrpt-img, mrpt-poses, mrpt-viz }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-opengl";
-  version = "3.0.4-r1";
+  version = "3.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_opengl/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "c7219b4e02f74c3e025583b2906dfdfdbee8f3c72291bc582570a3f2a179d0dc";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_opengl/3.1.2-2.tar.gz";
+    name = "3.1.2-2.tar.gz";
+    sha256 = "ffa38db1052d3d92f0877731504924d2b15dd5829ddf96a6f5a90c597b03e0de";
   };
 
   buildType = "cmake";

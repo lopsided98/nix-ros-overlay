@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, camera-info-manager, cv-bridge, image-transport, rcl-interfaces, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-kilted-image-publisher";
-  version = "6.0.12-r1";
+  version = "6.0.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/kilted/image_publisher/6.0.12-1.tar.gz";
-    name = "6.0.12-1.tar.gz";
-    sha256 = "8bd558dc2484bd92e07ea4c6c31899799eba6c57bffe9bc531d1fc7a4857990e";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/kilted/image_publisher/6.0.13-1.tar.gz";
+    name = "6.0.13-1.tar.gz";
+    sha256 = "fe8e5d575b5067bacab140affef835ad4cc2f62ad5766ec75295e5f80ca29fef";
   };
 
   buildType = "ament_cmake";

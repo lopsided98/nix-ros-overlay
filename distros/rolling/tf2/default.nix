@@ -2,22 +2,22 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-google-benchmark, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, builtin-interfaces, geometry-msgs, rcutils, rosidl-runtime-cpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-google-benchmark, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-ros-core, ament-cmake-uncrustify, ament-cmake-xmllint, builtin-interfaces, geometry-msgs, rcutils, rosidl-runtime-cpp }:
 buildRosPackage {
   pname = "ros-rolling-tf2";
-  version = "0.46.0-r1";
+  version = "0.46.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2/0.46.0-1.tar.gz";
-    name = "0.46.0-1.tar.gz";
-    sha256 = "b18ad1e185d0852226d6bcad0e6f93c0be60d81b5ea399fd4e40d5548b3d8ef1";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/rolling/tf2/0.46.2-1.tar.gz";
+    name = "0.46.2-1.tar.gz";
+    sha256 = "a076e9eb2815e472e39ee82884d314346a326d4cd4da0b2b368cdaadfcb21bea";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-ros ];
+  buildInputs = [ ament-cmake ament-cmake-ros ament-cmake-ros-core ];
   checkInputs = [ ament-cmake-copyright ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-google-benchmark ament-cmake-gtest ament-cmake-lint-cmake ament-cmake-uncrustify ament-cmake-xmllint ];
   propagatedBuildInputs = [ builtin-interfaces geometry-msgs rcutils rosidl-runtime-cpp ];
-  nativeBuildInputs = [ ament-cmake ament-cmake-ros ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-ros ament-cmake-ros-core ];
 
   meta = {
     description = "tf2 is the second generation of the transform library, which lets

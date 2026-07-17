@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, python-qt-binding, python-qt-bindings-deps, python3Packages, qt-dotgraph, rclpy, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-lyrical-rqt-graph";
-  version = "1.8.4-r1";
+  version = "1.8.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/lyrical/rqt_graph/1.8.4-1.tar.gz";
-    name = "1.8.4-1.tar.gz";
-    sha256 = "a66a53a8cedfedb63679354b46a5a4a0ad7b10be67db33385137efd309cd704b";
+    url = "https://github.com/ros2-gbp/rqt_graph-release/archive/release/lyrical/rqt_graph/1.8.5-1.tar.gz";
+    name = "1.8.5-1.tar.gz";
+    sha256 = "ec84341a079b5dd843ecc44e7d5fabda3055c3bd1bbb7593f291a37a12adbd3e";
   };
 
   buildType = "ament_python";

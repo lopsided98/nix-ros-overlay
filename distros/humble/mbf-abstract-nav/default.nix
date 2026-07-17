@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, geometry-msgs, mbf-abstract-core, mbf-msgs, mbf-utility, nav-msgs, rclcpp, rclcpp-action, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-mbf-abstract-nav";
-  version = "1.0.5-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/humble/mbf_abstract_nav/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "285f23c5c9fb5e5698294819b17faf05e87fb832b96a6766f9dcc0bad6df3967";
+    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/humble/mbf_abstract_nav/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "e03be213dbe5deb37eed9c129c65098a2bbc9023144d6fecd8dc0f5de5f794c5";
   };
 
   buildType = "ament_cmake";

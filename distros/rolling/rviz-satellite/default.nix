@@ -8,9 +8,9 @@ buildRosPackage {
   version = "4.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/nobleo/rviz_satellite-release/archive/release/rolling/rviz_satellite/4.3.1-1.tar.gz";
+    url = "https://github.com/ros2-gbp/rviz_satellite-release/archive/release/rolling/rviz_satellite/4.3.1-1.tar.gz";
     name = "4.3.1-1.tar.gz";
-    sha256 = "b21a50c2d4fe921d7f3c4e8a072f84693e183e5a6f8bd78cc16913935a41f7cf";
+    sha256 = "5fb94366ed7d30745cd512a21821d0c19aba886f102c7d05295a2bce6b56a8a0";
   };
 
   buildType = "ament_cmake";

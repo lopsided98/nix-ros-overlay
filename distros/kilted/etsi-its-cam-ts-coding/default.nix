@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-kilted-etsi-its-cam-ts-coding";
-  version = "3.4.0-r1";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/kilted/etsi_its_cam_ts_coding/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "1be1b07be1730f598886f35ff4f726c06defc8a27bda76b2ea2a11f1bb5274a3";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/kilted/etsi_its_cam_ts_coding/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "a631197c8184f5405fe6660ad487986d28fc9b4251d746431767d55a140e437a";
   };
 
   buildType = "ament_cmake";

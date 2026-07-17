@@ -2,20 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-roboplan-example-models";
-  version = "0.4.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/kilted/roboplan_example_models/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "b950d3b994aba5615efbcdde818ab6d04a3e7e286b8bedb22538fe8aa91413f7";
+    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/kilted/roboplan_example_models/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "d880303d3d54de03e69c95bfa5d93f9baf53214323b5bf8abdb57525a4379198";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-python ];
-  propagatedBuildInputs = [ python3Packages.nanobind ];
+  buildInputs = [ ament-cmake ament-cmake-python python3 python3Packages.nanobind ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {

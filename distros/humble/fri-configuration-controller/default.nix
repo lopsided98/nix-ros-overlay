@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, kuka-driver-interfaces, kuka-drivers-core, pluginlib }:
 buildRosPackage {
   pname = "ros-humble-fri-configuration-controller";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/fri_configuration_controller/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "de76f2a8e601a99f72b31e8c4027e8c140e715e6c5e20f547098683ea59a233d";
+    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/fri_configuration_controller/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "086e5815f7316afbf4e179fec9a691fcb84aee5727afdbf8fea97f0f3c333ab0";
   };
 
   buildType = "ament_cmake";

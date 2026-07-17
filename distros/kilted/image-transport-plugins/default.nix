@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, compressed-depth-image-transport, compressed-image-transport, theora-image-transport, zstd-image-transport }:
 buildRosPackage {
   pname = "ros-kilted-image-transport-plugins";
-  version = "5.1.2-r1";
+  version = "5.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/kilted/image_transport_plugins/5.1.2-1.tar.gz";
-    name = "5.1.2-1.tar.gz";
-    sha256 = "f81ec12e95b2ca037f4a80b0295f5625c4f1646af57a62908033f3f24beabe5c";
+    url = "https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/kilted/image_transport_plugins/5.1.3-1.tar.gz";
+    name = "5.1.3-1.tar.gz";
+    sha256 = "7ffa37d57e0d9196eb94f4213546c656bf0a8589ed78d26490130a037864d020";
   };
 
   buildType = "ament_cmake";

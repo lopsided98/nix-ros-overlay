@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, camera-info-manager, cv-bridge, image-transport, rcl-interfaces, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-lyrical-image-publisher";
-  version = "7.1.6-r1";
+  version = "7.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/lyrical/image_publisher/7.1.6-1.tar.gz";
-    name = "7.1.6-1.tar.gz";
-    sha256 = "ac8e07164004414122eae9d50703b8cc71872994d6fa1017c5788318d16397bf";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/lyrical/image_publisher/7.1.7-1.tar.gz";
+    name = "7.1.7-1.tar.gz";
+    sha256 = "e5b36d73a9dcd4cc095ca32271bb94bbbe8de5f1384b3d8585e1121b8b95a784";
   };
 
   buildType = "ament_cmake";

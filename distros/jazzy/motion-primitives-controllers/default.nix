@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-motion-primitives-controllers";
-  version = "4.40.1-r1";
+  version = "4.41.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/motion_primitives_controllers/4.40.1-1.tar.gz";
-    name = "4.40.1-1.tar.gz";
-    sha256 = "16035dc378ec1a04ad306d4a445798f59eb253ff71f4cce094c4e7be01a1afb0";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/motion_primitives_controllers/4.41.0-1.tar.gz";
+    name = "4.41.0-1.tar.gz";
+    sha256 = "4a74f48e42250d464ba2fcafcfd77e522e3b2d56078b0ee456974388421a8617";
   };
 
   buildType = "ament_cmake";

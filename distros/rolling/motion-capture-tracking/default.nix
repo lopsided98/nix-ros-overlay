@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, motion-capture-tracking-interfaces, pcl, rclcpp, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-motion-capture-tracking";
-  version = "1.0.8-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/motion_capture_tracking-release/archive/release/rolling/motion_capture_tracking/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "d36b91ca954783c3e9ea8cc81c92a4f77f933f5e3aae6c276c442eff4a102057";
+    url = "https://github.com/ros2-gbp/motion_capture_tracking-release/archive/release/rolling/motion_capture_tracking/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "c190e5d3cc294511a3de8854acbfdb5781969ebb04d46125a11552b2c5b483e3";
   };
 
   buildType = "ament_cmake";

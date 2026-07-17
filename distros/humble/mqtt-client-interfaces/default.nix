@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-mqtt-client-interfaces";
-  version = "2.4.1-r2";
+  version = "2.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mqtt_client-release/archive/release/humble/mqtt_client_interfaces/2.4.1-2.tar.gz";
-    name = "2.4.1-2.tar.gz";
-    sha256 = "afdd6c31af604c239df28640f967a4c9229360de7122dd4b34855de55a0423cd";
+    url = "https://github.com/ros2-gbp/mqtt_client-release/archive/release/humble/mqtt_client_interfaces/2.4.2-1.tar.gz";
+    name = "2.4.2-1.tar.gz";
+    sha256 = "3f831ba4e7af23541e96f7c29ced1971c14cd77fb708a3646b5e205c10a3385d";
   };
 
   buildType = "ament_cmake";

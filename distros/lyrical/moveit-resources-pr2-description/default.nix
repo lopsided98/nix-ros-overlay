@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-lyrical-moveit-resources-pr2-description";
-  version = "3.1.1-r3";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/lyrical/moveit_resources_pr2_description/3.1.1-3.tar.gz";
-    name = "3.1.1-3.tar.gz";
-    sha256 = "f36473ced612a6bdabef3bbb232446328fb7fe6f8464881a7a5d85dcb428eff8";
+    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/lyrical/moveit_resources_pr2_description/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "67f7671d6d13bd5221fe263e04ccdd9b2c5e6dca76da7fd07b04a01433c30062";
   };
 
   buildType = "ament_cmake";

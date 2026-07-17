@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-mcm-uulm-coding";
-  version = "3.4.0-r1";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_mcm_uulm_coding/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "e42e3906ea3f52258acfed491614828dca438c11d99da96eb3924d21d721f9d1";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_mcm_uulm_coding/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "c51fe7e3620b36b351468185f2af3d1ff85f84c8d93fabfb112bb77eb8570eec";
   };
 
   buildType = "ament_cmake";

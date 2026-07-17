@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-trajectory-msgs";
-  version = "4.9.1-r1";
+  version = "4.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/trajectory_msgs/4.9.1-1.tar.gz";
-    name = "4.9.1-1.tar.gz";
-    sha256 = "e04c30fff4c6e11a8139a8ec73f7dbb69455a29a160d31323bb3f08fe6a87538";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/trajectory_msgs/4.9.2-1.tar.gz";
+    name = "4.9.2-1.tar.gz";
+    sha256 = "a51b43833d5c1699728338714cca4a051ae166f40bac515d1279a5b4efddaef2";
   };
 
   buildType = "ament_cmake";

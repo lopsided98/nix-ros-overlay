@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-lint-common, diagnostic-updater, rclcpp, wireless-msgs, wirelesstools }:
 buildRosPackage {
   pname = "ros-jazzy-wireless-watcher";
-  version = "1.1.5-r1";
+  version = "1.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/jazzy/wireless_watcher/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "24d6e81a3e34243a40a4bb300ea770a9aa7697d195c71211e8982d5ab655d0d1";
+    url = "https://github.com/clearpath-gbp/wireless-release/archive/release/jazzy/wireless_watcher/1.1.6-1.tar.gz";
+    name = "1.1.6-1.tar.gz";
+    sha256 = "0ff0a237b3aafa6708d0055eb8fd85e020812576a473a2dcb146164d2267c491";
   };
 
   buildType = "ament_cmake";

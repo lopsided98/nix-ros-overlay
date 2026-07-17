@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, ament-index-python, ament-xmllint, python-qt-binding, python3Packages, rclpy, rosidl-runtime-py, rqt-console, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-kilted-rqt-msg";
-  version = "1.6.1-r1";
+  version = "1.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_msg-release/archive/release/kilted/rqt_msg/1.6.1-1.tar.gz";
-    name = "1.6.1-1.tar.gz";
-    sha256 = "88afaf72aae6478f4f34a153b8d04e85949aba5d63fd1becc40f731d1fd74124";
+    url = "https://github.com/ros2-gbp/rqt_msg-release/archive/release/kilted/rqt_msg/1.6.2-1.tar.gz";
+    name = "1.6.2-1.tar.gz";
+    sha256 = "6c37bda3a26638ff5b7aecbbfe4d3143918160e0f18911ac888d2d5ef332f238";
   };
 
   buildType = "ament_python";

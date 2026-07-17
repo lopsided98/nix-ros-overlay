@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-index-cpp, example-interfaces, geometry-msgs, nav-msgs, pluginlib, rclcpp, rclcpp-action, rclpy, ros-environment, yasmin, yasmin-factory, yasmin-ros, yasmin-viewer }:
 buildRosPackage {
   pname = "ros-kilted-yasmin-demos";
-  version = "5.0.0-r1";
+  version = "6.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_demos/5.0.0-1.tar.gz";
-    name = "5.0.0-1.tar.gz";
-    sha256 = "b352d61b6cacf54faf6c08c955547c99448fef085e820e20462e0d702fed7dcb";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_demos/6.0.0-1.tar.gz";
+    name = "6.0.0-1.tar.gz";
+    sha256 = "e3e0d5e1a97b9f7b69e97d95af9f1b54c58979cf207e6ab4ad6c64ab946385b7";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Demos of YASMIN (Yet Another State MachINe)";
-    license = with lib.licenses; [ "GPL-3.0" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, clang, cmake, coal, doxygen, eigen, eigenpy, git, jrl-cmakemodules, python3, python3Packages, ros-environment, urdfdom }:
 buildRosPackage {
   pname = "ros-jazzy-pinocchio";
-  version = "4.0.0-r2";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pinocchio-release/archive/release/jazzy/pinocchio/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "7dfb24a3c6402f5695b65fbbcdd3c3831ea27b29b70b06b6c56e7faed09486f2";
+    url = "https://github.com/ros2-gbp/pinocchio-release/archive/release/jazzy/pinocchio/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "bd38cc27c6de568348bf1a1c55764fd3b207329652331de0da58e379b0b4b44f";
   };
 
   buildType = "cmake";

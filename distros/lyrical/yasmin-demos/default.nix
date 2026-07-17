@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-index-cpp, example-interfaces, geometry-msgs, nav-msgs, pluginlib, rclcpp, rclcpp-action, rclpy, ros-environment, yasmin, yasmin-factory, yasmin-ros, yasmin-viewer }:
 buildRosPackage {
   pname = "ros-lyrical-yasmin-demos";
-  version = "5.0.0-r3";
+  version = "6.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/lyrical/yasmin_demos/5.0.0-3.tar.gz";
-    name = "5.0.0-3.tar.gz";
-    sha256 = "47fa1a44936b21394dce5e6946cf7ad44454cba087b47849da16bc0e2c1521bd";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/lyrical/yasmin_demos/6.0.0-1.tar.gz";
+    name = "6.0.0-1.tar.gz";
+    sha256 = "f8df5f98c2004f5942bf306c8fc3987fe855dac34b5b0ea53b4d90d8d4b96386";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Demos of YASMIN (Yet Another State MachINe)";
-    license = with lib.licenses; [ "GPL-3.0" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-gui, mrpt-slam }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-graphslam";
-  version = "3.0.4-r1";
+  version = "3.1.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_graphslam/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "c76a4b91b301592b6403c33352d06724dc2c1e7aafd417074c5e1f2e758b0cfa";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_graphslam/3.1.2-2.tar.gz";
+    name = "3.1.2-2.tar.gz";
+    sha256 = "82651f45860f8a86aebf7642715f075318e8cca04f3fb6d1056d142f67f1e0f5";
   };
 
   buildType = "cmake";

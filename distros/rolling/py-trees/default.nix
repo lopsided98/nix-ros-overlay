@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-py-trees";
-  version = "2.4.0-r3";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees-release/archive/release/rolling/py_trees/2.4.0-3.tar.gz";
-    name = "2.4.0-3.tar.gz";
-    sha256 = "41bac46372f5f124d56fe7d8f4c4c98e36697adc46090c0790b7a7bdeaec302a";
+    url = "https://github.com/ros2-gbp/py_trees-release/archive/release/rolling/py_trees/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "7ca3057b6742a5406daa254b8e33f98f29ffc471805261aa1012945c8d3cc0d3";
   };
 
   buildType = "ament_python";
@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = "Pythonic implementation of behaviour trees.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

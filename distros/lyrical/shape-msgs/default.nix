@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-lyrical-shape-msgs";
-  version = "5.9.2-r3";
+  version = "5.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/lyrical/shape_msgs/5.9.2-3.tar.gz";
-    name = "5.9.2-3.tar.gz";
-    sha256 = "ac9b89e56f3d63dccaef144557cdf930279c5433224e975566ba7ffd31cb0bcc";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/lyrical/shape_msgs/5.9.3-1.tar.gz";
+    name = "5.9.3-1.tar.gz";
+    sha256 = "bc3d547a9e5cff5ffa7758ad5a301b3daf0b796a67060d5e59ebe64e88235bb3";
   };
 
   buildType = "ament_cmake";

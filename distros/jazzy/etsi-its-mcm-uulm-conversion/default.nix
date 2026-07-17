@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, etsi-its-mcm-uulm-coding, etsi-its-mcm-uulm-msgs, etsi-its-primitives-conversion }:
 buildRosPackage {
   pname = "ros-jazzy-etsi-its-mcm-uulm-conversion";
-  version = "3.4.0-r1";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_mcm_uulm_conversion/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "70dc3bf6a8c2e16e445bb863151dec2532ba10635d2131f52f46d38c04c94e60";
+    url = "https://github.com/ros2-gbp/etsi_its_messages-release/archive/release/jazzy/etsi_its_mcm_uulm_conversion/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "3b617a1d313f6929e22f3c01f977053b05ba63e4e7e43bb3c1ec04d6c6acce4e";
   };
 
   buildType = "ament_cmake";

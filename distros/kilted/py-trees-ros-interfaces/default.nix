@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, diagnostic-msgs, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-kilted-py-trees-ros-interfaces";
-  version = "2.1.1-r2";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees_ros_interfaces-release/archive/release/kilted/py_trees_ros_interfaces/2.1.1-2.tar.gz";
-    name = "2.1.1-2.tar.gz";
-    sha256 = "1b9b45fee3074d095a651a3f1c297661be63683d4451c54ba770fcc9a5a6c074";
+    url = "https://github.com/ros2-gbp/py_trees_ros_interfaces-release/archive/release/kilted/py_trees_ros_interfaces/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "2b131eb4fb79774d3c20443ba73390f7a815432776d5c8d63ad24ca9bcd67ccb";
   };
 
   buildType = "ament_cmake";

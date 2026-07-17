@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-py-trees";
-  version = "2.4.0-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees-release/archive/release/jazzy/py_trees/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "c0247d49e41044d45b9ebe0c80ceb0bdd323e665c190b6e19f69ea512d40b490";
+    url = "https://github.com/ros2-gbp/py_trees-release/archive/release/jazzy/py_trees/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "e614e8d58311f4bb2d48c9d730b16638d8b06de43d72334da2716917b281d289";
   };
 
   buildType = "ament_python";
@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = "Pythonic implementation of behaviour trees.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

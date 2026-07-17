@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-python, gtest, osqp-vendor, python3Packages, roboplan, roboplan-example-models }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-python, gtest, osqp-vendor, python3, python3Packages, roboplan, roboplan-example-models }:
 buildRosPackage {
   pname = "ros-rolling-roboplan-oink";
-  version = "0.4.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/rolling/roboplan_oink/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "c2b93369334a32e2d71c95115a0f00d4b8c760244babf66e0d926e9472abc164";
+    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/rolling/roboplan_oink/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "61f6f701ae6ef69b4d4c11196487fbd42118efd679d6a529b13022528e10fd9a";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-python ];
+  buildInputs = [ ament-cmake ament-cmake-python python3 python3Packages.nanobind ];
   checkInputs = [ ament-cmake-gmock gtest roboplan-example-models ];
-  propagatedBuildInputs = [ osqp-vendor python3Packages.nanobind roboplan ];
+  propagatedBuildInputs = [ osqp-vendor roboplan ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {

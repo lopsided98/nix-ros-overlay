@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-sensor-msgs-py";
-  version = "5.9.2-r3";
+  version = "5.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/lyrical/sensor_msgs_py/5.9.2-3.tar.gz";
-    name = "5.9.2-3.tar.gz";
-    sha256 = "59298b5f3336abf2cc5486939266910a0e46519a61f93fbf2e3d0d27d2dfe142";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/lyrical/sensor_msgs_py/5.9.3-1.tar.gz";
+    name = "5.9.3-1.tar.gz";
+    sha256 = "62c143fce1f3bcd6a47bd36bd361d4c0834f36e0897648a384d58a9b08b5fda9";
   };
 
   buildType = "ament_python";

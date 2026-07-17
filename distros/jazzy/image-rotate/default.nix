@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, geometry-msgs, image-transport, opencv, rcl-interfaces, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-image-rotate";
-  version = "5.0.12-r1";
+  version = "5.0.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/image_rotate/5.0.12-1.tar.gz";
-    name = "5.0.12-1.tar.gz";
-    sha256 = "1ff1b7cf873ff95ae748d8af0f9298f53728ce8fbe3ca66a17f354f4af358c0c";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/image_rotate/5.0.13-1.tar.gz";
+    name = "5.0.13-1.tar.gz";
+    sha256 = "fa6491b7270cb00e598067ba2b620b344aac06f7c9f3a5f0895921c2503d3307";
   };
 
   buildType = "ament_cmake";

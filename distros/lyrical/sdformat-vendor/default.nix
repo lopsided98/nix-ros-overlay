@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, gz-cmake-vendor, gz-math-vendor, gz-tools-vendor, gz-utils-vendor, libxml2, python3Packages, tinyxml-2, urdfdom }:
 buildRosPackage {
   pname = "ros-lyrical-sdformat-vendor";
-  version = "0.3.3-r3";
+  version = "0.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sdformat_vendor-release/archive/release/lyrical/sdformat_vendor/0.3.3-3.tar.gz";
-    name = "0.3.3-3.tar.gz";
-    sha256 = "0dd81d974dbefd1ffcdeea4e8e43c29827333882e97549243e0a6bc7e7a06af9";
+    url = "https://github.com/ros2-gbp/sdformat_vendor-release/archive/release/lyrical/sdformat_vendor/0.3.4-1.tar.gz";
+    name = "0.3.4-1.tar.gz";
+    sha256 = "7d20173789690a03df102b96bc1b2deb6186c1094351b94f5c34a089f321c7a9";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package cmake ];
 
   meta = {
-    description = "Vendor package for: sdformat 16.0.1
+    description = "Vendor package for: sdformat 16.1.0
 
     SDFormat is an XML file format that describes environments, objects, and robots
 in a manner suitable for robotic applications";

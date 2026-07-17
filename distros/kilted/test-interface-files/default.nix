@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core }:
 buildRosPackage {
   pname = "ros-kilted-test-interface-files";
-  version = "0.13.0-r2";
+  version = "0.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/test_interface_files-release/archive/release/kilted/test_interface_files/0.13.0-2.tar.gz";
-    name = "0.13.0-2.tar.gz";
-    sha256 = "f972c2fda8b43bcc4ed3d36f06bcc55aba3e1ab48db00cd7c91c5b3251e63781";
+    url = "https://github.com/ros2-gbp/test_interface_files-release/archive/release/kilted/test_interface_files/0.13.1-1.tar.gz";
+    name = "0.13.1-1.tar.gz";
+    sha256 = "d0aa295f62b1c7d74c3b4bf20a11832e02462c2f76301da7bdd7738c839a90dc";
   };
 
   buildType = "ament_cmake";

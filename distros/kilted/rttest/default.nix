@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-kilted-rttest";
-  version = "0.18.3-r1";
+  version = "0.18.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realtime_support-release/archive/release/kilted/rttest/0.18.3-1.tar.gz";
-    name = "0.18.3-1.tar.gz";
-    sha256 = "c6f18706310a022f10d394e73afcaa254e146bff0a5e6db87084b2c6f32c656a";
+    url = "https://github.com/ros2-gbp/realtime_support-release/archive/release/kilted/rttest/0.18.4-1.tar.gz";
+    name = "0.18.4-1.tar.gz";
+    sha256 = "a64389fe55acc932b51a36560766abb1707bd6c3abb7e3dfe663f49f26a07595";
   };
 
   buildType = "ament_cmake";

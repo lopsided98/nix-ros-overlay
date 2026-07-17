@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-index-cpp, class-loader, pluginlib, python3, python3Packages, rclcpp, tinyxml2-vendor, yasmin, yasmin-viewer }:
 buildRosPackage {
   pname = "ros-lyrical-yasmin-factory";
-  version = "5.0.0-r3";
+  version = "6.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/lyrical/yasmin_factory/5.0.0-3.tar.gz";
-    name = "5.0.0-3.tar.gz";
-    sha256 = "cf7a66d61e3f37f409c1b37706a38a91b63ac6057688a387d390762bf2e00fc9";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/lyrical/yasmin_factory/6.0.0-1.tar.gz";
+    name = "6.0.0-1.tar.gz";
+    sha256 = "d2fd51d4f12ac7ca438f9424ce5a050f6bb8053f11bfa649a0955e8d0b9cad57";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "YASMIN factory to create FSMs from XML files";
-    license = with lib.licenses; [ "GPL-3.0" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

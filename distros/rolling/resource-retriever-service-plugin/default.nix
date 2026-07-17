@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, rclcpp, resource-retriever, resource-retriever-interfaces }:
 buildRosPackage {
   pname = "ros-rolling-resource-retriever-service-plugin";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever_service-release/archive/release/rolling/resource_retriever_service_plugin/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "d7051a96d6ec0d41f2e18e52b2f8841ec40301d328957b11a77dfa7204d4b038";
+    url = "https://github.com/ros2-gbp/resource_retriever_service-release/archive/release/rolling/resource_retriever_service_plugin/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "736ab689bdef87709bb842113783e4cf6606a8ad6c79e02cfa0a65953de8d995";
   };
 
   buildType = "ament_cmake";

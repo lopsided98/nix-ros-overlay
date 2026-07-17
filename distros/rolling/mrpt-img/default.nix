@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, glfw3, mrpt-common, mrpt-config, mrpt-io, mrpt-math, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-img";
-  version = "3.0.4-r1";
+  version = "3.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_img/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "edaa05e909b0f660a4ffff13b5726bea029e67ac8d7207ab27876b8f6692dc9f";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_img/3.1.2-1.tar.gz";
+    name = "3.1.2-1.tar.gz";
+    sha256 = "33fb020cd40b8bcddc4401ea97bc0548c2ae56ea43e5ff2b719b1194ee58d88b";
   };
 
   buildType = "cmake";

@@ -602,6 +602,10 @@ self: super: {
 
  chained-filter-controller = self.callPackage ./chained-filter-controller {};
 
+ cheese = self.callPackage ./cheese {};
+
+ cheese-interfaces = self.callPackage ./cheese-interfaces {};
+
  chomp-motion-planner = self.callPackage ./chomp-motion-planner {};
 
  cie-config-msgs = self.callPackage ./cie-config-msgs {};
@@ -710,6 +714,8 @@ self: super: {
 
  compressed-image-transport = self.callPackage ./compressed-image-transport {};
 
+ connection-inspector = self.callPackage ./connection-inspector {};
+
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
  continental-msgs = self.callPackage ./continental-msgs {};
@@ -753,6 +759,8 @@ self: super: {
  cras-topic-tools = self.callPackage ./cras-topic-tools {};
 
  crazyflie = self.callPackage ./crazyflie {};
+
+ crazyflie-description = self.callPackage ./crazyflie-description {};
 
  crazyflie-examples = self.callPackage ./crazyflie-examples {};
 
@@ -1152,6 +1160,12 @@ self: super: {
 
  etsi-its-denm-ts-msgs = self.callPackage ./etsi-its-denm-ts-msgs {};
 
+ etsi-its-ivim-ts-coding = self.callPackage ./etsi-its-ivim-ts-coding {};
+
+ etsi-its-ivim-ts-conversion = self.callPackage ./etsi-its-ivim-ts-conversion {};
+
+ etsi-its-ivim-ts-msgs = self.callPackage ./etsi-its-ivim-ts-msgs {};
+
  etsi-its-mapem-ts-coding = self.callPackage ./etsi-its-mapem-ts-coding {};
 
  etsi-its-mapem-ts-conversion = self.callPackage ./etsi-its-mapem-ts-conversion {};
@@ -1375,6 +1389,10 @@ self: super: {
  franka-inria-inverse-dynamics-solver = self.callPackage ./franka-inria-inverse-dynamics-solver {};
 
  frequency-cam = self.callPackage ./frequency-cam {};
+
+ fri-configuration-controller = self.callPackage ./fri-configuration-controller {};
+
+ fri-state-broadcaster = self.callPackage ./fri-state-broadcaster {};
 
  fuse = self.callPackage ./fuse {};
 
@@ -1670,6 +1688,8 @@ self: super: {
 
  jacro = self.callPackage ./jacro {};
 
+ joint-group-impedance-controller = self.callPackage ./joint-group-impedance-controller {};
+
  joint-limits = self.callPackage ./joint-limits {};
 
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
@@ -1735,6 +1755,62 @@ self: super: {
  kortex-description = self.callPackage ./kortex-description {};
 
  kortex-driver = self.callPackage ./kortex-driver {};
+
+ kuka-agilus-support = self.callPackage ./kuka-agilus-support {};
+
+ kuka-control-mode-handler = self.callPackage ./kuka-control-mode-handler {};
+
+ kuka-controllers = self.callPackage ./kuka-controllers {};
+
+ kuka-cybertech-support = self.callPackage ./kuka-cybertech-support {};
+
+ kuka-driver-interfaces = self.callPackage ./kuka-driver-interfaces {};
+
+ kuka-drivers = self.callPackage ./kuka-drivers {};
+
+ kuka-drivers-core = self.callPackage ./kuka-drivers-core {};
+
+ kuka-event-broadcaster = self.callPackage ./kuka-event-broadcaster {};
+
+ kuka-external-control-sdk = self.callPackage ./kuka-external-control-sdk {};
+
+ kuka-external-control-sdk-examples = self.callPackage ./kuka-external-control-sdk-examples {};
+
+ kuka-fortec-support = self.callPackage ./kuka-fortec-support {};
+
+ kuka-gazebo = self.callPackage ./kuka-gazebo {};
+
+ kuka-iiqka-eac-driver = self.callPackage ./kuka-iiqka-eac-driver {};
+
+ kuka-iontec-support = self.callPackage ./kuka-iontec-support {};
+
+ kuka-kl-support = self.callPackage ./kuka-kl-support {};
+
+ kuka-kr-moveit-config = self.callPackage ./kuka-kr-moveit-config {};
+
+ kuka-kss-message-handler = self.callPackage ./kuka-kss-message-handler {};
+
+ kuka-lbr-iisy-moveit-config = self.callPackage ./kuka-lbr-iisy-moveit-config {};
+
+ kuka-lbr-iisy-support = self.callPackage ./kuka-lbr-iisy-support {};
+
+ kuka-lbr-iiwa-moveit-config = self.callPackage ./kuka-lbr-iiwa-moveit-config {};
+
+ kuka-lbr-iiwa-support = self.callPackage ./kuka-lbr-iiwa-support {};
+
+ kuka-mock-hardware-interface = self.callPackage ./kuka-mock-hardware-interface {};
+
+ kuka-quantec-support = self.callPackage ./kuka-quantec-support {};
+
+ kuka-resources = self.callPackage ./kuka-resources {};
+
+ kuka-robot-descriptions = self.callPackage ./kuka-robot-descriptions {};
+
+ kuka-rsi-driver = self.callPackage ./kuka-rsi-driver {};
+
+ kuka-rsi-simulator = self.callPackage ./kuka-rsi-simulator {};
+
+ kuka-sunrise-fri-driver = self.callPackage ./kuka-sunrise-fri-driver {};
 
  lanelet2 = self.callPackage ./lanelet2 {};
 
@@ -1834,6 +1910,8 @@ self: super: {
 
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
+ libbno055-linux = self.callPackage ./libbno055-linux {};
+
  libcaer-driver = self.callPackage ./libcaer-driver {};
 
  libcaer-vendor = self.callPackage ./libcaer-vendor {};
@@ -1896,11 +1974,25 @@ self: super: {
 
  magnetic-model = self.callPackage ./magnetic-model {};
 
+ magnetometer-broadcaster = self.callPackage ./magnetometer-broadcaster {};
+
  magnetometer-compass = self.callPackage ./magnetometer-compass {};
 
  magnetometer-pipeline = self.callPackage ./magnetometer-pipeline {};
 
  map-msgs = self.callPackage ./map-msgs {};
+
+ mapoi = self.callPackage ./mapoi {};
+
+ mapoi-interfaces = self.callPackage ./mapoi-interfaces {};
+
+ mapoi-rviz-plugins = self.callPackage ./mapoi-rviz-plugins {};
+
+ mapoi-server = self.callPackage ./mapoi-server {};
+
+ mapoi-turtlebot3-example = self.callPackage ./mapoi-turtlebot3-example {};
+
+ mapoi-webui = self.callPackage ./mapoi-webui {};
 
  mapviz = self.callPackage ./mapviz {};
 
@@ -2179,6 +2271,10 @@ self: super: {
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
+
+ mp2p-icp-core = self.callPackage ./mp2p-icp-core {};
+
+ mp2p-icp-viz = self.callPackage ./mp2p-icp-viz {};
 
  mp-units-vendor = self.callPackage ./mp-units-vendor {};
 
@@ -2802,8 +2898,6 @@ self: super: {
 
  pluginlib = self.callPackage ./pluginlib {};
 
- ply-utils = self.callPackage ./ply-utils {};
-
  point-cloud-interfaces = self.callPackage ./point-cloud-interfaces {};
 
  point-cloud-msg-wrapper = self.callPackage ./point-cloud-msg-wrapper {};
@@ -2815,6 +2909,8 @@ self: super: {
  point-cloud-transport-py = self.callPackage ./point-cloud-transport-py {};
 
  point-cloud-transport-tutorial = self.callPackage ./point-cloud-transport-tutorial {};
+
+ pointcloud-conversions = self.callPackage ./pointcloud-conversions {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
@@ -3170,6 +3266,8 @@ self: super: {
 
  roboplan = self.callPackage ./roboplan {};
 
+ roboplan-cartesian-planning = self.callPackage ./roboplan-cartesian-planning {};
+
  roboplan-example-models = self.callPackage ./roboplan-example-models {};
 
  roboplan-examples = self.callPackage ./roboplan-examples {};
@@ -3213,6 +3311,8 @@ self: super: {
  ros2-controllers-test-nodes = self.callPackage ./ros2-controllers-test-nodes {};
 
  ros2-fmt-logger = self.callPackage ./ros2-fmt-logger {};
+
+ ros2-helper = self.callPackage ./ros2-helper {};
 
  ros2-medkit-action-status-bridge = self.callPackage ./ros2-medkit-action-status-bridge {};
 
@@ -4229,6 +4329,8 @@ self: super: {
  urg-node = self.callPackage ./urg-node {};
 
  urg-node-msgs = self.callPackage ./urg-node-msgs {};
+
+ urinterfaces = self.callPackage ./urinterfaces {};
 
  usb-cam = self.callPackage ./usb-cam {};
 

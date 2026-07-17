@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, SDL2, _unresolved_nvidia-cuda-dev, ament-cmake, ament-lint-auto, ament-lint-common, glew, libGL, libGLU, libtorch-vendor, libx11, rclcpp, rclcpp-components, tensor-msgs, torch-conversions }:
+{ lib, buildRosPackage, fetchurl, SDL2, ament-cmake, ament-lint-auto, ament-lint-common, cudaPackages, glew, libGL, libGLU, libtorch-vendor, libx11, rclcpp, rclcpp-components, tensor-msgs, torch-conversions }:
 buildRosPackage {
   pname = "ros-lyrical-robot-arm-demo";
   version = "0.1.0-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ SDL2 _unresolved_nvidia-cuda-dev glew libGL libGLU libtorch-vendor libx11 rclcpp rclcpp-components tensor-msgs torch-conversions ];
+  propagatedBuildInputs = [ SDL2 cudaPackages.cudatoolkit glew libGL libGLU libtorch-vendor libx11 rclcpp rclcpp-components tensor-msgs torch-conversions ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

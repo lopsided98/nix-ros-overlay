@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, actionlib-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, diagnostic-msgs, geometry-msgs, nav-msgs, sensor-msgs, shape-msgs, std-msgs, std-srvs, stereo-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-common-interfaces";
-  version = "5.5.2-r1";
+  version = "5.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/common_interfaces/5.5.2-1.tar.gz";
-    name = "5.5.2-1.tar.gz";
-    sha256 = "786e61df295918e3e2e4d2e5a1f19ca16c5fd502610fcb2f9e1f56e474fcc538";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/common_interfaces/5.5.3-1.tar.gz";
+    name = "5.5.3-1.tar.gz";
+    sha256 = "0020ac100b6ad7aeda55fefc6965e2384525cf15fa1f39576248c14ccae56abc";
   };
 
   buildType = "ament_cmake";

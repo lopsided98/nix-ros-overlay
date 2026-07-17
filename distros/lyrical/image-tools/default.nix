@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, opencv, rclcpp, rclcpp-components, rmw-implementation-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-image-tools";
-  version = "0.37.8-r3";
+  version = "0.37.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/lyrical/image_tools/0.37.8-3.tar.gz";
-    name = "0.37.8-3.tar.gz";
-    sha256 = "a878387cc859bb8b8086217c8e928045d9cc7dcf09beee88cad23dad871d2e29";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/lyrical/image_tools/0.37.9-1.tar.gz";
+    name = "0.37.9-1.tar.gz";
+    sha256 = "fd6cfe910cef39c5768bc275dc262a05ae4e6c9e9e6578c96d81614cc3cacacd";
   };
 
   buildType = "ament_cmake";

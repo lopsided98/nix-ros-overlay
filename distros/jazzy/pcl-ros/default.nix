@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, eigen, geometry-msgs, launch, launch-ros, launch-testing, launch-testing-ros, pcl, pcl-conversions, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-pcl-ros";
-  version = "2.6.4-r1";
+  version = "2.6.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/jazzy/pcl_ros/2.6.4-1.tar.gz";
-    name = "2.6.4-1.tar.gz";
-    sha256 = "01f272e78eadcb7c2efaa6823b5cd2a74dcb49a2459301c1d3bf170958195980";
+    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/jazzy/pcl_ros/2.6.5-1.tar.gz";
+    name = "2.6.5-1.tar.gz";
+    sha256 = "153d6b547343992289ac3209ea0723577bd72a2dab2a68841e4dbdde7f60e9f0";
   };
 
   buildType = "ament_cmake";

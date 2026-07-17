@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake, kuka-external-control-sdk }:
 buildRosPackage {
   pname = "ros-humble-kuka-external-control-sdk-examples";
-  version = "1.4.1-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_external_control_sdk-release/archive/release/humble/kuka_external_control_sdk_examples/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "c812e6f7a2769ba0e6a0b466c9c881aec00aa8a894de2dacc22931cb458d82f9";
+    url = "https://github.com/ros2-gbp/kuka_external_control_sdk-release/archive/release/humble/kuka_external_control_sdk_examples/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "6006e5c420aca5eae95603665b509cb3bb200227349435314819e6495a08ee04";
   };
 
   buildType = "ament_cmake";

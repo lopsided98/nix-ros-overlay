@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-py-trees";
-  version = "2.4.0-r1";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees-release/archive/release/kilted/py_trees/2.4.0-1.tar.gz";
-    name = "2.4.0-1.tar.gz";
-    sha256 = "75167fc253304bb6966fb55c73e0d6c606ea9af9a7ab34af1f8e69a802f4697e";
+    url = "https://github.com/ros2-gbp/py_trees-release/archive/release/kilted/py_trees/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "8df5e4e459eb78d6e1e043f8580f6fc6254cf10aa9712797b11dfbaf72847b4e";
   };
 
   buildType = "ament_python";
@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = "Pythonic implementation of behaviour trees.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

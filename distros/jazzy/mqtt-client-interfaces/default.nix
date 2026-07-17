@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-mqtt-client-interfaces";
-  version = "2.4.1-r2";
+  version = "2.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mqtt_client-release/archive/release/jazzy/mqtt_client_interfaces/2.4.1-2.tar.gz";
-    name = "2.4.1-2.tar.gz";
-    sha256 = "929f32363f52f9da208d64340dc5d68729b52776a52245529096ce6c58ad50ba";
+    url = "https://github.com/ros2-gbp/mqtt_client-release/archive/release/jazzy/mqtt_client_interfaces/2.4.2-1.tar.gz";
+    name = "2.4.2-1.tar.gz";
+    sha256 = "a0c4821679e789c1c6b415a7ad359356408563fd496f0e8ba52a1daf7ae1e9c9";
   };
 
   buildType = "ament_cmake";

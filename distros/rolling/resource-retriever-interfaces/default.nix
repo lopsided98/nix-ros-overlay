@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-resource-retriever-interfaces";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/resource_retriever_service-release/archive/release/rolling/resource_retriever_interfaces/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "5d0bb97ce05698c1aab2c5d7a54e5bf5635bfeee6aeaff307416b15f76afcc65";
+    url = "https://github.com/ros2-gbp/resource_retriever_service-release/archive/release/rolling/resource_retriever_interfaces/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "fe2299348145434485d2964cee6cd0b9d13198cc503817a79a76c6fdd72e9d90";
   };
 
   buildType = "ament_cmake";

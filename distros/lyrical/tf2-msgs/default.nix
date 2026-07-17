@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-lyrical-tf2-msgs";
-  version = "0.45.7-r3";
+  version = "0.45.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/lyrical/tf2_msgs/0.45.7-3.tar.gz";
-    name = "0.45.7-3.tar.gz";
-    sha256 = "aa5acede644b25ae7638d62c783003deeb34f1fc759edc6e0539d6017fba8c28";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/lyrical/tf2_msgs/0.45.8-1.tar.gz";
+    name = "0.45.8-1.tar.gz";
+    sha256 = "4061ba1df848af46d78c16207ee83db545e5da0d5c0ddf76b240ad2413c826ed";
   };
 
   buildType = "ament_cmake";

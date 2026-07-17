@@ -792,6 +792,8 @@ self: super: {
 
  compressed-image-transport = self.callPackage ./compressed-image-transport {};
 
+ connection-inspector = self.callPackage ./connection-inspector {};
+
  console-bridge-vendor = self.callPackage ./console-bridge-vendor {};
 
  continental-msgs = self.callPackage ./continental-msgs {};
@@ -825,6 +827,8 @@ self: super: {
  crane-plus-moveit-config = self.callPackage ./crane-plus-moveit-config {};
 
  crazyflie = self.callPackage ./crazyflie {};
+
+ crazyflie-description = self.callPackage ./crazyflie-description {};
 
  crazyflie-examples = self.callPackage ./crazyflie-examples {};
 
@@ -1167,6 +1171,12 @@ self: super: {
  etsi-its-denm-ts-conversion = self.callPackage ./etsi-its-denm-ts-conversion {};
 
  etsi-its-denm-ts-msgs = self.callPackage ./etsi-its-denm-ts-msgs {};
+
+ etsi-its-ivim-ts-coding = self.callPackage ./etsi-its-ivim-ts-coding {};
+
+ etsi-its-ivim-ts-conversion = self.callPackage ./etsi-its-ivim-ts-conversion {};
+
+ etsi-its-ivim-ts-msgs = self.callPackage ./etsi-its-ivim-ts-msgs {};
 
  etsi-its-mapem-ts-coding = self.callPackage ./etsi-its-mapem-ts-coding {};
 
@@ -1612,8 +1622,6 @@ self: super: {
 
  ignition-math6-vendor = self.callPackage ./ignition-math6-vendor {};
 
- iiqka-moveit-example = self.callPackage ./iiqka-moveit-example {};
-
  image-common = self.callPackage ./image-common {};
 
  image-geometry = self.callPackage ./image-geometry {};
@@ -1786,6 +1794,8 @@ self: super: {
 
  kuka-iontec-support = self.callPackage ./kuka-iontec-support {};
 
+ kuka-kl-support = self.callPackage ./kuka-kl-support {};
+
  kuka-kr-moveit-config = self.callPackage ./kuka-kr-moveit-config {};
 
  kuka-kss-message-handler = self.callPackage ./kuka-kss-message-handler {};
@@ -1902,6 +1912,8 @@ self: super: {
 
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
+ libbno055-linux = self.callPackage ./libbno055-linux {};
+
  libcaer-driver = self.callPackage ./libcaer-driver {};
 
  libcaer-vendor = self.callPackage ./libcaer-vendor {};
@@ -1957,6 +1969,18 @@ self: super: {
  magic-enum = self.callPackage ./magic-enum {};
 
  map-msgs = self.callPackage ./map-msgs {};
+
+ mapoi = self.callPackage ./mapoi {};
+
+ mapoi-interfaces = self.callPackage ./mapoi-interfaces {};
+
+ mapoi-rviz-plugins = self.callPackage ./mapoi-rviz-plugins {};
+
+ mapoi-server = self.callPackage ./mapoi-server {};
+
+ mapoi-turtlebot3-example = self.callPackage ./mapoi-turtlebot3-example {};
+
+ mapoi-webui = self.callPackage ./mapoi-webui {};
 
  mapviz = self.callPackage ./mapviz {};
 
@@ -2253,6 +2277,10 @@ self: super: {
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
+
+ mp2p-icp-core = self.callPackage ./mp2p-icp-core {};
+
+ mp2p-icp-viz = self.callPackage ./mp2p-icp-viz {};
 
  mqtt-client = self.callPackage ./mqtt-client {};
 
@@ -2918,8 +2946,6 @@ self: super: {
 
  pluginlib = self.callPackage ./pluginlib {};
 
- ply-utils = self.callPackage ./ply-utils {};
-
  pmb2-2dnav = self.callPackage ./pmb2-2dnav {};
 
  pmb2-bringup = self.callPackage ./pmb2-bringup {};
@@ -2949,6 +2975,8 @@ self: super: {
  point-cloud-transport-plugins = self.callPackage ./point-cloud-transport-plugins {};
 
  point-cloud-transport-py = self.callPackage ./point-cloud-transport-py {};
+
+ pointcloud-conversions = self.callPackage ./pointcloud-conversions {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 

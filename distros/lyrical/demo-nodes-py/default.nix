@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, example-interfaces, python3Packages, rcl-interfaces, rclpy }:
 buildRosPackage {
   pname = "ros-lyrical-demo-nodes-py";
-  version = "0.37.8-r3";
+  version = "0.37.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/lyrical/demo_nodes_py/0.37.8-3.tar.gz";
-    name = "0.37.8-3.tar.gz";
-    sha256 = "336f2ac8ceb7a42905c9c8f33f39e57f4c4e6ed38c2ef2821a2d9e33d145c6b0";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/lyrical/demo_nodes_py/0.37.9-1.tar.gz";
+    name = "0.37.9-1.tar.gz";
+    sha256 = "048e1c7d81181ace5f51b00e7fc970976169e4e4d68d2c1cdb08284645129447";
   };
 
   buildType = "ament_python";

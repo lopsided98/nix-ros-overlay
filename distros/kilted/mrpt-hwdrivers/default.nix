@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mrpt-comms, mrpt-maps, mrpt-viz }:
+{ lib, buildRosPackage, fetchurl, cmake, ffmpeg, libdc1394, libpcap, libusb1, mrpt-comms, mrpt-maps, mrpt-viz, openni2 }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-hwdrivers";
-  version = "3.0.4-r1";
+  version = "3.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_hwdrivers/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "01dd9ab3e55efa377d3cd942e2ec6720df3a0845eaf0de36e8fd0f185bf38403";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_hwdrivers/3.1.2-1.tar.gz";
+    name = "3.1.2-1.tar.gz";
+    sha256 = "0919a58413e0183c67a9e2fdd05bf9f5ebb4cfbdb02b263cecd4922c7e5e0775";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ];
+  buildInputs = [ cmake ffmpeg libdc1394 libpcap libusb1 openni2 ];
   propagatedBuildInputs = [ mrpt-comms mrpt-maps mrpt-viz ];
   nativeBuildInputs = [ cmake ];
 
