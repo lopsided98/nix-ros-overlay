@@ -431,6 +431,10 @@ in {
     '';
   });
 
+  mapviz = rosSuper.mapviz.override { qt6 = self.qt5; };
+
+  mapviz-plugins = rosSuper.mapviz.override { qt6 = self.qt5; };
+
   mcap-vendor = (lib.patchVendorUrl rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.4.0.tar.gz";
     hash = "sha256-ZP8+URGfN//Pr53uy9mHp8tNTZA110o/03czlaRw/aE=";
