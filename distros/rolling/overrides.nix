@@ -294,6 +294,27 @@ in {
     '';
   });
 
+  laser-filters = rosSuper.laser-filters.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # tf2_ros::CreateTimerROS constructor changed to take NodeInterfaces bundle
+      # instead of separate NodeBaseInterface + NodeTimersInterface shared_ptrs
+      (self.writeText "fix-create-timer-ros.patch" ''
+        --- a/src/scan_to_cloud_filter_chain.cpp
+        +++ b/src/scan_to_cloud_filter_chain.cpp
+        @@ -84,8 +84,7 @@ ScanToCloudFilterChain::ScanToCloudFilterChain(
+           filter_.setTolerance(std::chrono::duration<double>(tf_tolerance_));
+
+           auto timer_interface = std::make_shared<tf2_ros::CreateTimerROS>(
+        -    this->get_node_base_interface(),
+        -    this->get_node_timers_interface());
+        +    *this);
+           buffer_.setCreateTimerInterface(timer_interface);
+      '')
+    ];
+  });
+
   ld08-driver = rosSuper.ld08-driver.overrideAttrs ({
     postPatch ? "", ...
   }: {
