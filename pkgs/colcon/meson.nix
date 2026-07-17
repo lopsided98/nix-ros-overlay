@@ -2,13 +2,13 @@
 
 buildPythonPackage rec {
   pname = "colcon-meson";
-  version = "0.5.0";
+  version = "0.6.1";
 
   src = fetchFromGitHub {
     owner = "colcon";
     repo = pname;
     tag = version;
-    hash = "sha256-VLCyKmPceY99cKMH/Ctotskl26Q3t7/qA4XOS7QBnBg=";
+    hash = "sha256-Gs0Y6hXs5kBjKsXnARNXyWD6yw3aAJ5WhRZcBl7e/pA=";
   };
 
   pyproject = true;
