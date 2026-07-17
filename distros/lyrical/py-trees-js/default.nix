@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, python3Packages, qt5 }:
 buildRosPackage {
   pname = "ros-lyrical-py-trees-js";
-  version = "0.6.6-r4";
+  version = "0.6.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees_js-release/archive/release/lyrical/py_trees_js/0.6.6-4.tar.gz";
-    name = "0.6.6-4.tar.gz";
-    sha256 = "0e05a0b9d67cf1110ef866c3b320f97be50f84229e5c7ac90db299c4f0404d7f";
+    url = "https://github.com/ros2-gbp/py_trees_js-release/archive/release/lyrical/py_trees_js/0.6.7-1.tar.gz";
+    name = "0.6.7-1.tar.gz";
+    sha256 = "d41efed59df1fc487081fe2ecd4adb7efa27f0179dfc0f21d9fac9bd5553edb8";
   };
 
   buildType = "ament_python";
-  buildInputs = [ python3Packages.setuptools qt5.qttools.dev ];
-  propagatedBuildInputs = [ python3Packages.pyqt5 python3Packages.pyqtwebengine ];
+  buildInputs = [ python3Packages.pyqt5 python3Packages.setuptools qt5.qttools.dev ];
+  propagatedBuildInputs = [ python3Packages.pyqtwebengine ];
 
   meta = {
     description = "Javascript library for visualising behaviour trees.";

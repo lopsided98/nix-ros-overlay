@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, protobuf }:
 buildRosPackage {
   pname = "ros-rolling-sync-tooling-msgs";
-  version = "0.2.10-r1";
+  version = "0.2.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sync_tooling_msgs-release/archive/release/rolling/sync_tooling_msgs/0.2.10-1.tar.gz";
-    name = "0.2.10-1.tar.gz";
-    sha256 = "c3a55f66afab01808108c4d1bd80be8477795e4db43ba69097a8e469269b7b75";
+    url = "https://github.com/ros2-gbp/sync_tooling_msgs-release/archive/release/rolling/sync_tooling_msgs/0.2.11-1.tar.gz";
+    name = "0.2.11-1.tar.gz";
+    sha256 = "bc516c36e49271bc997e45bb5eb5ce5f631413147cf6956a8453203cc0e8a40b";
   };
 
   buildType = "ament_cmake";

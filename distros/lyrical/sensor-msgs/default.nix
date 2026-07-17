@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-sensor-msgs";
-  version = "5.9.2-r3";
+  version = "5.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/lyrical/sensor_msgs/5.9.2-3.tar.gz";
-    name = "5.9.2-3.tar.gz";
-    sha256 = "af7ac28d64837ab434b0dc219bba3fd5d63a62d4a6bb2ff0739c64a858f0b34c";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/lyrical/sensor_msgs/5.9.3-1.tar.gz";
+    name = "5.9.3-1.tar.gz";
+    sha256 = "ef9f68b775d21bd6612e12683c790504dda9993a4c19b3468e2b08b2996a9d3e";
   };
 
   buildType = "ament_cmake";

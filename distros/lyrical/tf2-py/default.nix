@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, python3, rclpy, rpyutils, tf2 }:
 buildRosPackage {
   pname = "ros-lyrical-tf2-py";
-  version = "0.45.7-r3";
+  version = "0.45.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/lyrical/tf2_py/0.45.7-3.tar.gz";
-    name = "0.45.7-3.tar.gz";
-    sha256 = "154f0f810fcd21e2ade7a3590a7a4dcf3aab23178212239498ca75298ade7108";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/lyrical/tf2_py/0.45.8-1.tar.gz";
+    name = "0.45.8-1.tar.gz";
+    sha256 = "8f53d9ca98b12d52721f2cd34414f4e79d3ae96fca635edfc3647f36776793c4";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher, joint-state-publisher-gui, moveit-resources-panda-description, robot-state-publisher, topic-tools, xacro }:
 buildRosPackage {
   pname = "ros-lyrical-dual-arm-panda-moveit-config";
-  version = "3.1.1-r3";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/lyrical/dual_arm_panda_moveit_config/3.1.1-3.tar.gz";
-    name = "3.1.1-3.tar.gz";
-    sha256 = "bf84c1bc34229d5fdf08a37fe44d7f99e45d3d7c88971ae8a6ea008a83268da5";
+    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/lyrical/dual_arm_panda_moveit_config/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "37a7f4ee90dbc773e59d913dfddc8a0a3f1709e8266e0b640046f676dd8db9f4";
   };
 
   buildType = "ament_cmake";

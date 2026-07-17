@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-pytest, ament-lint-auto, ament-lint-common, cv-bridge, image-geometry, image-proc, image-transport, launch, launch-ros, launch-testing, launch-testing-ament-cmake, message-filters, python-cmake-module, python3Packages, rclcpp, rclcpp-components, rclpy, ros-testing, sensor-msgs, stereo-msgs }:
 buildRosPackage {
   pname = "ros-kilted-stereo-image-proc";
-  version = "6.0.12-r1";
+  version = "6.0.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/kilted/stereo_image_proc/6.0.12-1.tar.gz";
-    name = "6.0.12-1.tar.gz";
-    sha256 = "57a66f97ba3543e03d633edf4e3db0b68467efa59529df8989993d6f8d1b6a1b";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/kilted/stereo_image_proc/6.0.13-1.tar.gz";
+    name = "6.0.13-1.tar.gz";
+    sha256 = "df644eff2dc8bbf1c8355c83a9dfc54dbe3ab1c28f923258ebf463daf257d0e9";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, lifecycle-msgs, rclcpp, rclcpp-lifecycle, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-humble-kuka-drivers-core";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/kuka_drivers_core/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "6e66d488cf8145828f0c1d9217c3477ef280bb423516931a562fc73561b74080";
+    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/kuka_drivers_core/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "4e3e8f7a555efba780468b3820b947086e84bb2b071e6f66d7f99dcbb4b0d176";
   };
 
   buildType = "ament_cmake";

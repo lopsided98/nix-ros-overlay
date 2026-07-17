@@ -10,7 +10,7 @@ buildRosPackage {
   src = fetchurl {
     url = "https://github.com/robosoft-ai/SMACC2-release/archive/release/jazzy/smacc2_msgs/3.1.0-2.tar.gz";
     name = "3.1.0-2.tar.gz";
-    sha256 = "7a53fa671064f0fdabe8b02ab2ef9f41cce102bf0d46c776f705da053588969b";
+    sha256 = "0ccfc046d539fdb9ccb36eb0a660df12a531abd50fc3b964ae5446b1d66bec2c";
   };
 
   buildType = "ament_cmake";

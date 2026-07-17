@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-actionlib-msgs";
-  version = "5.5.2-r1";
+  version = "5.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/actionlib_msgs/5.5.2-1.tar.gz";
-    name = "5.5.2-1.tar.gz";
-    sha256 = "47dbc720aec18807e2796401c5c9dcc98b7844370acebf5310129964dadd67e1";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/actionlib_msgs/5.5.3-1.tar.gz";
+    name = "5.5.3-1.tar.gz";
+    sha256 = "5749464f3313d600f83081507e92ecf5b8ae2b0e6ada1e894bfcb477877c0608";
   };
 
   buildType = "ament_cmake";

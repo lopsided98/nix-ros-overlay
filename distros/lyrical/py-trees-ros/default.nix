@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, py-trees, py-trees-ros-interfaces, python3Packages, rcl-interfaces, rclpy, ros2topic, sensor-msgs, std-msgs, std-srvs, tf2-ros-py, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-py-trees-ros";
-  version = "2.4.0-r4";
+  version = "2.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees_ros-release/archive/release/lyrical/py_trees_ros/2.4.0-4.tar.gz";
-    name = "2.4.0-4.tar.gz";
-    sha256 = "4538f1b8b1812070e4428bdd19a5cc528c3d12128a47a977088ee0f23974e144";
+    url = "https://github.com/ros2-gbp/py_trees_ros-release/archive/release/lyrical/py_trees_ros/2.5.0-1.tar.gz";
+    name = "2.5.0-1.tar.gz";
+    sha256 = "269905432b5448e3c81d2cecc8d6005b314523c58c4961d28046f456e03c7324";
   };
 
   buildType = "ament_python";
@@ -19,7 +19,7 @@ buildRosPackage {
   propagatedBuildInputs = [ geometry-msgs py-trees py-trees-ros-interfaces rcl-interfaces rclpy ros2topic sensor-msgs std-msgs std-srvs tf2-ros-py unique-identifier-msgs ];
 
   meta = {
-    description = "ROS2 extensions and behaviours for py_trees.";
+    description = "ROS 2 extensions and behaviours for py_trees.";
     license = with lib.licenses; [ bsdOriginal ];
   };
 }

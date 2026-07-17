@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-sensor-msgs-py";
-  version = "4.9.1-r1";
+  version = "4.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/sensor_msgs_py/4.9.1-1.tar.gz";
-    name = "4.9.1-1.tar.gz";
-    sha256 = "ce986f4f659472f7e410ed28e8ec8f2da4e1ce54f3e5dfd0ac76393c5d53cd82";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/humble/sensor_msgs_py/4.9.2-1.tar.gz";
+    name = "4.9.2-1.tar.gz";
+    sha256 = "26f601025d229cd2dd2e1bd071d7c8f4c48fb757c44c25d26ba556bc3b5a5ab0";
   };
 
   buildType = "ament_python";

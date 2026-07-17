@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, pkg-config }:
 buildRosPackage {
   pname = "ros-kilted-tracetools-image-pipeline";
-  version = "6.0.12-r1";
+  version = "6.0.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/kilted/tracetools_image_pipeline/6.0.12-1.tar.gz";
-    name = "6.0.12-1.tar.gz";
-    sha256 = "6e4d8b2e4ad04f8c427093da5d1560e21ba817d6d8857828be5f567402b58591";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/kilted/tracetools_image_pipeline/6.0.13-1.tar.gz";
+    name = "6.0.13-1.tar.gz";
+    sha256 = "5cdc36d307fd8c305db325a0f90294729553b85cd24c408ecc60690b0c29c659";
   };
 
   buildType = "ament_cmake";

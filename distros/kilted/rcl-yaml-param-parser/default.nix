@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, libyaml, libyaml-vendor, mimick-vendor, osrf-testing-tools-cpp, performance-test-fixture, rcutils, rmw }:
 buildRosPackage {
   pname = "ros-kilted-rcl-yaml-param-parser";
-  version = "10.1.4-r1";
+  version = "10.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/kilted/rcl_yaml_param_parser/10.1.4-1.tar.gz";
-    name = "10.1.4-1.tar.gz";
-    sha256 = "3dd28b0eacfaf8d1e0b78947e719718138243fca696b8f7fd0ca57d9f0c5a0b0";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/kilted/rcl_yaml_param_parser/10.1.5-1.tar.gz";
+    name = "10.1.5-1.tar.gz";
+    sha256 = "6fb395509adb76388d41defb849cb4e6fb6882c7b633a9726b5c90fb6c5e14cb";
   };
 
   buildType = "ament_cmake";

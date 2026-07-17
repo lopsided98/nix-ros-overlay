@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_position_controllers, ament-cmake, controller-manager, joint-state-publisher, moveit-resources-fanuc-description, robot-state-publisher, ros2cli-common-extensions, tf2-ros, xacro }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, joint-state-publisher, moveit-resources-fanuc-description, robot-state-publisher, ros2cli-common-extensions, tf2-ros, xacro }:
 buildRosPackage {
   pname = "ros-rolling-moveit-resources-fanuc-moveit-config";
-  version = "3.1.1-r2";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/rolling/moveit_resources_fanuc_moveit_config/3.1.1-2.tar.gz";
-    name = "3.1.1-2.tar.gz";
-    sha256 = "fd207f34701a86409bfe7d4f73d6677718ddefb159083e202f3ee71fa50eed79";
+    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/rolling/moveit_resources_fanuc_moveit_config/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "dac07894b6eb37a13d2a6505a3eedf5eb3a969373d8e2f88632b5281315b5e5f";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ _unresolved_position_controllers controller-manager joint-state-publisher moveit-resources-fanuc-description robot-state-publisher ros2cli-common-extensions tf2-ros xacro ];
+  propagatedBuildInputs = [ controller-manager joint-state-publisher moveit-resources-fanuc-description robot-state-publisher ros2cli-common-extensions tf2-ros xacro ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

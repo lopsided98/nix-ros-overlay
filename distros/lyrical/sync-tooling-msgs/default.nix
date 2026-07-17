@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, protobuf }:
 buildRosPackage {
   pname = "ros-lyrical-sync-tooling-msgs";
-  version = "0.2.10-r1";
+  version = "0.2.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sync_tooling_msgs-release/archive/release/lyrical/sync_tooling_msgs/0.2.10-1.tar.gz";
-    name = "0.2.10-1.tar.gz";
-    sha256 = "32018d3814cd849b07c4501e82f20b2d85b0b3ad20fa32c47cfc9063976c692e";
+    url = "https://github.com/ros2-gbp/sync_tooling_msgs-release/archive/release/lyrical/sync_tooling_msgs/0.2.11-1.tar.gz";
+    name = "0.2.11-1.tar.gz";
+    sha256 = "eb4d53a9330438efa27549608d82418b356b8b9808b1ec5a7f617cdaab51b98c";
   };
 
   buildType = "ament_cmake";

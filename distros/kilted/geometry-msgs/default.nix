@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-geometry-msgs";
-  version = "5.5.2-r1";
+  version = "5.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/geometry_msgs/5.5.2-1.tar.gz";
-    name = "5.5.2-1.tar.gz";
-    sha256 = "3b3c802503a02ebba7a07cb6d8537d09b2c01cb2bde61708d50b6b8bb400eadf";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/kilted/geometry_msgs/5.5.3-1.tar.gz";
+    name = "5.5.3-1.tar.gz";
+    sha256 = "df9946cd0f9a39218743913a23a051b9d111355c3fe070ac21f2dba8c8e18df3";
   };
 
   buildType = "ament_cmake";

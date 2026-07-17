@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nav-msgs, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-fusioncore-ublox";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/fusioncore_ublox/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "5b785e9758df2758aed78c128f3926227c40d35619ccdab7f247650811ed1fc1";
+    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/fusioncore_ublox/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "287fba9b51307d04f9e444f32f40832ac4a875714a42ee318d66424fc9a84fa5";
   };
 
   buildType = "ament_cmake";

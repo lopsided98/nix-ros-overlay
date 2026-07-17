@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, geometry-msgs, image-transport, opencv, rcl-interfaces, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-image-rotate";
-  version = "8.0.0-r1";
+  version = "8.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/image_rotate/8.0.0-1.tar.gz";
-    name = "8.0.0-1.tar.gz";
-    sha256 = "ba48c03d59eb586dde85c480c855f4d1a1a8aee0c6c77de6594dc9a6fd4c8fab";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/image_rotate/8.0.1-1.tar.gz";
+    name = "8.0.1-1.tar.gz";
+    sha256 = "7161d6bbf0f1c3bf1e44fb6e210f405dcabb7dc4e91c78abf7a111cee5cc8fc9";
   };
 
   buildType = "ament_cmake";

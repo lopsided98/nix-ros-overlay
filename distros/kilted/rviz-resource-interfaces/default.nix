@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-rviz-resource-interfaces";
-  version = "15.0.13-r1";
+  version = "15.0.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz-release/archive/release/kilted/rviz_resource_interfaces/15.0.13-1.tar.gz";
-    name = "15.0.13-1.tar.gz";
-    sha256 = "083178c3e59885f2cf5839cfe15fa6e5bfb5ea98c182ea806807705e52e5facb";
+    url = "https://github.com/ros2-gbp/rviz-release/archive/release/kilted/rviz_resource_interfaces/15.0.14-1.tar.gz";
+    name = "15.0.14-1.tar.gz";
+    sha256 = "6ec14624e4880485c9d6c790bb670b8c51796deaaef1dec9a6aee7dd688c9977";
   };
 
   buildType = "ament_cmake";

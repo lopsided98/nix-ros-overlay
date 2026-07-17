@@ -2,22 +2,22 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, console-bridge, console-bridge-vendor, rcpputils }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, console-bridge, console-bridge-vendor, rcpputils }:
 buildRosPackage {
   pname = "ros-rolling-class-loader";
-  version = "3.0.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/rolling/class_loader/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "975d0e16dc8f0be5514002ac20c2ab3a1e58eb51b327b7f2f2c916c166d5b8e7";
+    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/rolling/class_loader/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "c91781d38b1de5b93f44043f4b0eefca71b2cba1e944a1ed613de313aaf87569";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
+  buildInputs = [ ament-cmake ament-cmake-ros-core ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ console-bridge console-bridge-vendor rcpputils ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-ros-core ];
 
   meta = {
     description = "The class_loader package is a ROS-independent package for loading plugins during runtime and the foundation of the higher level ROS \"pluginlib\" library.

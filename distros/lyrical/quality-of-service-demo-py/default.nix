@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, example-interfaces, python3Packages, rclpy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-quality-of-service-demo-py";
-  version = "0.37.8-r3";
+  version = "0.37.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/lyrical/quality_of_service_demo_py/0.37.8-3.tar.gz";
-    name = "0.37.8-3.tar.gz";
-    sha256 = "3872c32bf48bc074244a34d7fc8b5f1102ddfcbb35898bbcf1731452e44f4ce7";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/lyrical/quality_of_service_demo_py/0.37.9-1.tar.gz";
+    name = "0.37.9-1.tar.gz";
+    sha256 = "e21e7dd7fe01d8005b0d1dec8c008b73de658a87f2e880f98690eb36de2b2b98";
   };
 
   buildType = "ament_python";

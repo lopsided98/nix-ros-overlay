@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cli11, cmake, mrpt-hwdrivers, mrpt-slam, mrpt-topography }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-libapps-cli";
-  version = "3.0.4-r1";
+  version = "3.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_libapps_cli/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "4b699c7db8dc3ecc33f9a18fcd4792a1682a3e930aa91eb8fe1f1c4383cd575f";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_libapps_cli/3.1.2-1.tar.gz";
+    name = "3.1.2-1.tar.gz";
+    sha256 = "dca67fc6f0e3c9ac78c4ea207ece0d12cbddc0c2b8de2c83a1a9ee215de2d132";
   };
 
   buildType = "cmake";

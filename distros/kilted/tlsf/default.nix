@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-kilted-tlsf";
-  version = "0.10.1-r2";
+  version = "0.10.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tlsf-release/archive/release/kilted/tlsf/0.10.1-2.tar.gz";
-    name = "0.10.1-2.tar.gz";
-    sha256 = "42f0e1601119d5c8347c84962fe6800c5551507c99be2914614eea1048dfe07e";
+    url = "https://github.com/ros2-gbp/tlsf-release/archive/release/kilted/tlsf/0.10.2-1.tar.gz";
+    name = "0.10.2-1.tar.gz";
+    sha256 = "ccc4cf2ea0ac57035f650803b72756804fc97b7522f04db2031bf2e5f5cc5854";
   };
 
   buildType = "ament_cmake";

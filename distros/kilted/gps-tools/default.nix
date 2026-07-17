@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, gps-msgs, nav-msgs, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-gps-tools";
-  version = "2.1.2-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/kilted/gps_tools/2.1.2-1.tar.gz";
-    name = "2.1.2-1.tar.gz";
-    sha256 = "e234962e1122ade4e8016cf9922ad7f52ae2f27a48069e202c0d849923850a11";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/kilted/gps_tools/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "826748df85a5ce42af2cce33a449998114811d2408c3ea4042fc828205bcc1d5";
   };
 
   buildType = "ament_cmake";

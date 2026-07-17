@@ -772,6 +772,12 @@ self: super: {
 
  etsi-its-denm-ts-msgs = self.callPackage ./etsi-its-denm-ts-msgs {};
 
+ etsi-its-ivim-ts-coding = self.callPackage ./etsi-its-ivim-ts-coding {};
+
+ etsi-its-ivim-ts-conversion = self.callPackage ./etsi-its-ivim-ts-conversion {};
+
+ etsi-its-ivim-ts-msgs = self.callPackage ./etsi-its-ivim-ts-msgs {};
+
  etsi-its-mapem-ts-coding = self.callPackage ./etsi-its-mapem-ts-coding {};
 
  etsi-its-mapem-ts-conversion = self.callPackage ./etsi-its-mapem-ts-conversion {};
@@ -1358,6 +1364,8 @@ self: super: {
 
  magnetic-model = self.callPackage ./magnetic-model {};
 
+ magnetometer-broadcaster = self.callPackage ./magnetometer-broadcaster {};
+
  magnetometer-compass = self.callPackage ./magnetometer-compass {};
 
  magnetometer-pipeline = self.callPackage ./magnetometer-pipeline {};
@@ -1623,6 +1631,10 @@ self: super: {
  moveit-visual-tools = self.callPackage ./moveit-visual-tools {};
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
+
+ mp2p-icp-core = self.callPackage ./mp2p-icp-core {};
+
+ mp2p-icp-viz = self.callPackage ./mp2p-icp-viz {};
 
  mp-units-vendor = self.callPackage ./mp-units-vendor {};
 
@@ -2465,6 +2477,8 @@ self: super: {
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
 
  roboplan = self.callPackage ./roboplan {};
+
+ roboplan-cartesian-planning = self.callPackage ./roboplan-cartesian-planning {};
 
  roboplan-example-models = self.callPackage ./roboplan-example-models {};
 

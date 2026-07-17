@@ -2,19 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, doxygen, pkg-config }:
+{ lib, buildRosPackage, fetchurl, boost, catch2, cmake, doxygen, eigen, git, matio, pkg-config, python3Packages, simde }:
 buildRosPackage {
   pname = "ros-humble-jrl-cmakemodules";
-  version = "1.1.2-r1";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/humble/jrl_cmakemodules/1.1.2-1.tar.gz";
-    name = "1.1.2-1.tar.gz";
-    sha256 = "4ba1dcefbc3313fa10e2fbec045ab4c78ea6aacf90faa88686d3d540be5bd02b";
+    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/humble/jrl_cmakemodules/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "28e9764714799d1138c10fa916f58f8161d8bdc06b9635aa27f9397d6ebeb92e";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
+  checkInputs = [ boost catch2 eigen git matio python3Packages.nanobind python3Packages.numpy python3Packages.pytest python3Packages.typing-extensions simde ];
   propagatedBuildInputs = [ doxygen pkg-config ];
   nativeBuildInputs = [ cmake ];
 

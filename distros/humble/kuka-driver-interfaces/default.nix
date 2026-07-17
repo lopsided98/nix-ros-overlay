@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-kuka-driver-interfaces";
-  version = "1.0.0-r1";
+  version = "1.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/kuka_driver_interfaces/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "eba5d248d23abfbfe0728c52d7f10b7be0fd094250940c0970aa806b42ae4fd1";
+    url = "https://github.com/ros2-gbp/kuka_drivers-release/archive/release/humble/kuka_driver_interfaces/1.1.0-1.tar.gz";
+    name = "1.1.0-1.tar.gz";
+    sha256 = "c0a2ae97e4a119b9896e80b74ef91fb424d60f618a75eea2944fe5df8ab77f1a";
   };
 
   buildType = "ament_cmake";

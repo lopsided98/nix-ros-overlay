@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-interface, controller-manager, filters, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-rolling-chained-filter-controller";
-  version = "6.7.0-r1";
+  version = "6.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/chained_filter_controller/6.7.0-1.tar.gz";
-    name = "6.7.0-1.tar.gz";
-    sha256 = "a3422be30a57146d4f1cdd67017a1b4d39ab06af86d63c79ea816ab770dd08de";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/chained_filter_controller/6.8.0-1.tar.gz";
+    name = "6.8.0-1.tar.gz";
+    sha256 = "b1a16e47fb56365990a6eb4dfee7595572fa1a55e1506ad3f290744377de0e81";
   };
 
   buildType = "ament_cmake";

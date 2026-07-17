@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-opengl }:
 buildRosPackage {
   pname = "ros-humble-mrpt-imgui";
-  version = "3.0.4-r1";
+  version = "3.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_imgui/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "e794239cecacd84efb5bf5ce5b3bd0765b185d0d2e6dc093f524a57c08acd089";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_imgui/3.1.2-1.tar.gz";
+    name = "3.1.2-1.tar.gz";
+    sha256 = "bc6f28aa210da151d8bba09dd000774883698401eedbc8e7ce01b4564ee07c79";
   };
 
   buildType = "cmake";

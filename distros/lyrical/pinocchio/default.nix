@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, clang, cmake, coal, doxygen, eigen, eigenpy, git, jrl-cmakemodules, python3, python3Packages, ros-environment, urdfdom }:
 buildRosPackage {
   pname = "ros-lyrical-pinocchio";
-  version = "4.0.0-r2";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pinocchio-release/archive/release/lyrical/pinocchio/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "bf55705a1eab310aa2573189cadbe2c92484c9f6549bb6e56552372885794021";
+    url = "https://github.com/ros2-gbp/pinocchio-release/archive/release/lyrical/pinocchio/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "42d38bd558382edefeb82f0878120e220e0fd96f91fe29dc94ac0b7cf7077cb6";
   };
 
   buildType = "cmake";

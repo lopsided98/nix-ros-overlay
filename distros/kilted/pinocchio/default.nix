@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, clang, cmake, coal, doxygen, eigen, eigenpy, git, jrl-cmakemodules, python3, python3Packages, ros-environment, urdfdom }:
 buildRosPackage {
   pname = "ros-kilted-pinocchio";
-  version = "4.0.0-r2";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pinocchio-release/archive/release/kilted/pinocchio/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "00c8191a3147bec474df0ef1b52d98be8710f9fe74f774a14b367a7ed4880767";
+    url = "https://github.com/ros2-gbp/pinocchio-release/archive/release/kilted/pinocchio/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "d9ef74ee44f8c06f882807d0fbf409d90c7af8f98ca7967158fbcc009846934e";
   };
 
   buildType = "cmake";

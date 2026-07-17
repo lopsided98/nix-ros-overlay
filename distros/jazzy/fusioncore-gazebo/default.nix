@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, fusioncore-ros, geometry-msgs, nav-msgs, rclpy, robot-localization, robot-state-publisher, ros-gz-bridge, ros-gz-sim, rviz2, sensor-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-fusioncore-gazebo";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/fusioncore_gazebo/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "643fc3b2c63a90d73e187b2df83696c2d5a5dc0118f7952023c2f120f6f46d58";
+    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/fusioncore_gazebo/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "fdb3402053cd3803ea2ce57bb0e935ec2c1b1569f0fc178e464f52f595396ef5";
   };
 
   buildType = "ament_cmake";

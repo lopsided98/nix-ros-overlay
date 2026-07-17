@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-gui, mrpt-slam }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-graphslam";
-  version = "3.0.4-r1";
+  version = "3.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_graphslam/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "7cc3d8a00b76f27ec1f06b1f817a94f4762a8ec3e8cf331d4ed28d2f82d1b6da";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_graphslam/3.1.2-1.tar.gz";
+    name = "3.1.2-1.tar.gz";
+    sha256 = "b1b384d495644c7447e3b96035fefb556b0f914e7f99a8d58f9651b72e1fd839";
   };
 
   buildType = "cmake";

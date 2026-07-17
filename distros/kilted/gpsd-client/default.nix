@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gps-msgs, gpsd, pkg-config, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-gpsd-client";
-  version = "2.1.2-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/kilted/gpsd_client/2.1.2-1.tar.gz";
-    name = "2.1.2-1.tar.gz";
-    sha256 = "9a29f542fdafa4c747514b4ffdd97f301cdecbb27a457f66bf4b0aa36975847a";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/kilted/gpsd_client/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "636b91468ffabbbd93d89af4b6886a9d9852c4bd4ed8c4e291960e8f7f71ec1e";
   };
 
   buildType = "ament_cmake";

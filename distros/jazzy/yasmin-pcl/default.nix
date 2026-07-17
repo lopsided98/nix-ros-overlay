@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, pcl, pcl-conversions, pluginlib, sensor-msgs, yasmin }:
 buildRosPackage {
   pname = "ros-jazzy-yasmin-pcl";
-  version = "5.0.0-r2";
+  version = "6.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/jazzy/yasmin_pcl/5.0.0-2.tar.gz";
-    name = "5.0.0-2.tar.gz";
-    sha256 = "f02d3adca91393bc4588772a4d4ba8e210155448a80bb0ee4626b233b9c3ab01";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/jazzy/yasmin_pcl/6.0.0-1.tar.gz";
+    name = "6.0.0-1.tar.gz";
+    sha256 = "8567e1986923e6b742e1f656a2508fe7aec99bf070defeadb2f7336006d9dea1";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "PCL-based reusable YASMIN states for PointCloud2 conversion, file I/O, and filtering.";
-    license = with lib.licenses; [ "GPL-3.0" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

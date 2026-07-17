@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, image-geometry, image-proc, image-transport, message-filters, opencv, rclcpp, rclcpp-components, sensor-msgs, stereo-msgs, tf2, tf2-eigen, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-depth-image-proc";
-  version = "6.0.12-r1";
+  version = "6.0.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/kilted/depth_image_proc/6.0.12-1.tar.gz";
-    name = "6.0.12-1.tar.gz";
-    sha256 = "97c75b157f116e7950eac60351930fed4970357229535380aedead6ca3ddc58a";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/kilted/depth_image_proc/6.0.13-1.tar.gz";
+    name = "6.0.13-1.tar.gz";
+    sha256 = "2d8e6f9cd523fc7488f737e58fc2c6def2202d1b491fa87894e2f36e6b9b492f";
   };
 
   buildType = "ament_cmake";

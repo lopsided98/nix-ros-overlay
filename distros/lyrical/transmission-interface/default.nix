@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, fmt, hardware-interface, pluginlib, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-lyrical-transmission-interface";
-  version = "6.7.1-r1";
+  version = "6.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/lyrical/transmission_interface/6.7.1-1.tar.gz";
-    name = "6.7.1-1.tar.gz";
-    sha256 = "8ef11222ca20354d200d9e4d0be5e9cef69bf05aac8c099687ea99e2e541f59a";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/lyrical/transmission_interface/6.8.0-1.tar.gz";
+    name = "6.8.0-1.tar.gz";
+    sha256 = "da9fe33bb8af5d4013166d8601855bcafd459a41b0663a995a5278b4876fba93";
   };
 
   buildType = "ament_cmake";

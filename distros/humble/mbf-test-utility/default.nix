@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, mbf-msgs, nav-msgs, rclcpp, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-mbf-test-utility";
-  version = "1.0.5-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/humble/mbf_test_utility/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "b72800ebc40fad4137c42e4fd1fcd5edbc3223c881358cedc3ea8cac31f82d40";
+    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/humble/mbf_test_utility/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "5889855e9e2f3345552a32c29e1885b187154e21e41c3e68783d74297dbe79ad";
   };
 
   buildType = "ament_cmake";

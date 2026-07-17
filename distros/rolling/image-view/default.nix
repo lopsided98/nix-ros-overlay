@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, camera-calibration-parsers, cv-bridge, image-transport, message-filters, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-srvs, stereo-msgs }:
 buildRosPackage {
   pname = "ros-rolling-image-view";
-  version = "8.0.0-r1";
+  version = "8.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/image_view/8.0.0-1.tar.gz";
-    name = "8.0.0-1.tar.gz";
-    sha256 = "f6b0a06c66c8da98ce27c23b5d496871a6a9895ea502e2796d2bb2317db56013";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/rolling/image_view/8.0.1-1.tar.gz";
+    name = "8.0.1-1.tar.gz";
+    sha256 = "eaabcb92511097f3c2ded3cc33eebc92b9d30c7dad6a168b260d68d08c42d6ff";
   };
 
   buildType = "ament_cmake";

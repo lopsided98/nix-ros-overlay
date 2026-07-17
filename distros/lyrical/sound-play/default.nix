@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_festival, action-msgs, ament-cmake, ament-cmake-python, ament-index-python, boost, gst_all_1, launch-xml, python3Packages, rclpy, sound-play-msgs }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-python, ament-index-python, boost, festival-stub, gst_all_1, launch-xml, python3Packages, rclpy, sound-play-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-sound-play";
   version = "0.4.0-r2";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python boost python3Packages.setuptools ];
-  propagatedBuildInputs = [ _unresolved_festival action-msgs ament-index-python gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gst-plugins-ugly gst_all_1.gstreamer launch-xml python3Packages.pygobject3 rclpy sound-play-msgs ];
+  propagatedBuildInputs = [ action-msgs ament-index-python festival-stub gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gst-plugins-ugly gst_all_1.gstreamer launch-xml python3Packages.pygobject3 rclpy sound-play-msgs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python python3Packages.setuptools ];
 
   meta = {

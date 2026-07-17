@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nav-msgs, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-fusioncore-ublox";
-  version = "0.3.1-r1";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/manankharwar/fusioncore-release/archive/release/humble/fusioncore_ublox/0.3.1-1.tar.gz";
-    name = "0.3.1-1.tar.gz";
-    sha256 = "e3277aecd09dd9bd81bfbb35d810836bc2aa16d5503fa1e073fc68817d6a776d";
+    url = "https://github.com/manankharwar/fusioncore-release/archive/release/humble/fusioncore_ublox/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "c4088f566c766d3ea6bc397bb9ea4110e72208cad980dbb8ebe3a07c533bf8bb";
   };
 
   buildType = "ament_cmake";

@@ -446,6 +446,8 @@ self: super: {
 
  crazyflie = self.callPackage ./crazyflie {};
 
+ crazyflie-description = self.callPackage ./crazyflie-description {};
+
  crazyflie-examples = self.callPackage ./crazyflie-examples {};
 
  crazyflie-interfaces = self.callPackage ./crazyflie-interfaces {};
@@ -910,6 +912,8 @@ self: super: {
 
  gtsam2mrpt-serial = self.callPackage ./gtsam2mrpt-serial {};
 
+ gurumdds-cmake-module = self.callPackage ./gurumdds-cmake-module {};
+
  gz-cmake-vendor = self.callPackage ./gz-cmake-vendor {};
 
  gz-common-vendor = self.callPackage ./gz-common-vendor {};
@@ -1240,11 +1244,19 @@ self: super: {
 
  magnetic-model = self.callPackage ./magnetic-model {};
 
+ magnetometer-broadcaster = self.callPackage ./magnetometer-broadcaster {};
+
  magnetometer-compass = self.callPackage ./magnetometer-compass {};
 
  magnetometer-pipeline = self.callPackage ./magnetometer-pipeline {};
 
  map-msgs = self.callPackage ./map-msgs {};
+
+ mapviz = self.callPackage ./mapviz {};
+
+ mapviz-interfaces = self.callPackage ./mapviz-interfaces {};
+
+ mapviz-plugins = self.callPackage ./mapviz-plugins {};
 
  marine-acoustic-msgs = self.callPackage ./marine-acoustic-msgs {};
 
@@ -1498,6 +1510,10 @@ self: super: {
 
  mp2p-icp = self.callPackage ./mp2p-icp {};
 
+ mp2p-icp-core = self.callPackage ./mp2p-icp-core {};
+
+ mp2p-icp-viz = self.callPackage ./mp2p-icp-viz {};
+
  mp-units-vendor = self.callPackage ./mp-units-vendor {};
 
  mqtt-client = self.callPackage ./mqtt-client {};
@@ -1651,6 +1667,8 @@ self: super: {
  mujoco-ros2-control-plugins = self.callPackage ./mujoco-ros2-control-plugins {};
 
  mujoco-vendor = self.callPackage ./mujoco-vendor {};
+
+ multires-image = self.callPackage ./multires-image {};
 
  mvsim = self.callPackage ./mvsim {};
 
@@ -1915,6 +1933,8 @@ self: super: {
  point-cloud-transport-py = self.callPackage ./point-cloud-transport-py {};
 
  point-cloud-transport-tutorial = self.callPackage ./point-cloud-transport-tutorial {};
+
+ pointcloud-conversions = self.callPackage ./pointcloud-conversions {};
 
  pointcloud-to-laserscan = self.callPackage ./pointcloud-to-laserscan {};
 
@@ -2218,6 +2238,8 @@ self: super: {
 
  rmw-fastrtps-shared-cpp = self.callPackage ./rmw-fastrtps-shared-cpp {};
 
+ rmw-gurumdds-cpp = self.callPackage ./rmw-gurumdds-cpp {};
+
  rmw-implementation = self.callPackage ./rmw-implementation {};
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
@@ -2233,6 +2255,8 @@ self: super: {
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
 
  roboplan = self.callPackage ./roboplan {};
+
+ roboplan-cartesian-planning = self.callPackage ./roboplan-cartesian-planning {};
 
  roboplan-example-models = self.callPackage ./roboplan-example-models {};
 
@@ -2706,6 +2730,8 @@ self: super: {
 
  rviz-rendering-tests = self.callPackage ./rviz-rendering-tests {};
 
+ rviz-satellite = self.callPackage ./rviz-satellite {};
+
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
@@ -2923,6 +2949,8 @@ self: super: {
  tf-tree-terminal = self.callPackage ./tf-tree-terminal {};
 
  theora-image-transport = self.callPackage ./theora-image-transport {};
+
+ tile-map = self.callPackage ./tile-map {};
 
  tinyspline-vendor = self.callPackage ./tinyspline-vendor {};
 
@@ -3181,6 +3209,10 @@ self: super: {
  wiimote = self.callPackage ./wiimote {};
 
  wiimote-msgs = self.callPackage ./wiimote-msgs {};
+
+ wireless-msgs = self.callPackage ./wireless-msgs {};
+
+ wireless-watcher = self.callPackage ./wireless-watcher {};
 
  xacro = self.callPackage ./xacro {};
 

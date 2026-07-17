@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, image-geometry, image-proc, image-transport, message-filters, opencv, rclcpp, rclcpp-components, sensor-msgs, stereo-msgs, tf2, tf2-eigen, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-depth-image-proc";
-  version = "5.0.12-r1";
+  version = "5.0.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/depth_image_proc/5.0.12-1.tar.gz";
-    name = "5.0.12-1.tar.gz";
-    sha256 = "83d8295af7098ae5f10668e7235024f0da095423252b8a72c6f2b9862303e92d";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/jazzy/depth_image_proc/5.0.13-1.tar.gz";
+    name = "5.0.13-1.tar.gz";
+    sha256 = "2fb8f85a3b8473eddb53da4738ecff4aa84c0bae110410f7eeb25e19be08ecb6";
   };
 
   buildType = "ament_cmake";

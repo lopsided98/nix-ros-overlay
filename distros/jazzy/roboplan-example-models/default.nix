@@ -2,20 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3Packages }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-roboplan-example-models";
-  version = "0.4.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/jazzy/roboplan_example_models/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "86843ec1089fddf38cb8190541d815327f85e66709d6a32e747b33cf4226a628";
+    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/jazzy/roboplan_example_models/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "10efff762949a1f414ac34946af082810e52a67608c63d2807fd36dce862dedd";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-python ];
-  propagatedBuildInputs = [ python3Packages.nanobind ];
+  buildInputs = [ ament-cmake ament-cmake-python python3 python3Packages.nanobind ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {

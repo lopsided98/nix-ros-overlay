@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, class-loader, cv-bridge, image-geometry, image-proc, image-transport, message-filters, opencv, rclcpp, rclcpp-components, sensor-msgs, stereo-msgs, tf2, tf2-eigen, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-depth-image-proc";
-  version = "7.1.6-r1";
+  version = "7.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/lyrical/depth_image_proc/7.1.6-1.tar.gz";
-    name = "7.1.6-1.tar.gz";
-    sha256 = "63eb5445a7a11d0b9688db34162dd868998e346044b54a920980d01181c706f8";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/lyrical/depth_image_proc/7.1.7-1.tar.gz";
+    name = "7.1.7-1.tar.gz";
+    sha256 = "7caff5df49ef4bf288360ebd47806d49deee3691844416417573e0eebeb00c09";
   };
 
   buildType = "ament_cmake";

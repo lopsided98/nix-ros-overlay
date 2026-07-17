@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, camera-calibration-parsers, cv-bridge, image-transport, message-filters, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-srvs, stereo-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-image-view";
-  version = "7.1.6-r1";
+  version = "7.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/lyrical/image_view/7.1.6-1.tar.gz";
-    name = "7.1.6-1.tar.gz";
-    sha256 = "91f037ba79b55c9f17036c5143681d0065fc262a963e4dd350947f49fc5d11bc";
+    url = "https://github.com/ros2-gbp/image_pipeline-release/archive/release/lyrical/image_view/7.1.7-1.tar.gz";
+    name = "7.1.7-1.tar.gz";
+    sha256 = "75bb285b0ddc77e0f5c26a4488ffc7cc0b981c70add53cf2fc2823b275a8178f";
   };
 
   buildType = "ament_cmake";
