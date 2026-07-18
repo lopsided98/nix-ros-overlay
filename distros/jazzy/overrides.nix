@@ -905,6 +905,8 @@ in {
     ];
   });
 
+  multires-image = rosSuper.multires-image.override { qt6 = self.qt5; };
+
   nav2-behavior-tree = rosSuper.nav2-behavior-tree.overrideAttrs({
     ...
   }: {
@@ -1222,6 +1224,8 @@ in {
       substituteInPlace CMakeLists.txt --replace-fail "COMPONENTS system thread" "COMPONENTS thread"
     '';
   });
+
+  tile-map = rosSuper.tile-map.override { qt6 = self.qt5; };
 
   turtlebot3-panorama = rosSuper.turtlebot3-panorama.overrideAttrs ({
     postPatch ? "", ...
