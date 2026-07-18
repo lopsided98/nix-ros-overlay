@@ -1117,6 +1117,8 @@ in {
     '';
   });
 
+  rviz-mbf-plugins = rosSuper.rviz-mbf-plugins.override { qt6 = self.qt5; };
+
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     tarSourceArgs.hook = let
       version = "1.79";
