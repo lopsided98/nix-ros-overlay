@@ -678,6 +678,17 @@ in {
     fetchgitArgs.hash = "sha256-rd7Qb85xyrqm3GWwIUns56jIo62kBTRmXf2UfuUXNR0=";
   });
 
+  mola-lidar-odometry = rosSuper.mola-lidar-odometry.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        url = "https://github.com/MOLAorg/mola_lidar_odometry/commit/1c03f28c1ebca4d2278af4f376ead4659da0689d.patch?full_index=1";
+        hash = "sha256-YqSqLS+ewjv/S5QMVGR/HIFbN+7BIfdYo+spFTEtAws=";
+      })
+    ];
+  });
+
   moveit-core = rosSuper.moveit-core.overrideAttrs ({
     postPatch ? "", ...
   }: {
