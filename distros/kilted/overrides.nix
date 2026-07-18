@@ -817,27 +817,20 @@ in {
     ];
   });
 
-  roboplan-examples = rosSuper.roboplan-examples.overrideAttrs ({
-    buildInputs ? [], ...
-  }: {
-    # Prevent cmake from fetching osqp-eigen via git
-    buildInputs = buildInputs ++ [ self.osqp-eigen rosSelf.toppra ];
-  });
-
   roboplan-toppra = rosSuper.roboplan-toppra.overrideAttrs ({
-    buildInputs ? [], ...
+    propagatedBuildInputs ? [], ...
   }: {
-    buildInputs = buildInputs ++ [ rosSelf.toppra ];
+    propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.toppra ];
   });
 
   roboplan-oink = (rosSuper.roboplan-oink.override {
     # https://github.com/tier4/osqp_vendor/issues/26
     osqp-vendor = null;
   }).overrideAttrs ({
-    buildInputs ? [], ...
+    propagatedBuildInputs ? [], ...
   }: {
     # Prevent cmake from fetching osqp-eigen via git
-    buildInputs = buildInputs ++ [ self.osqp-eigen ];
+    propagatedBuildInputs = propagatedBuildInputs ++ [ self.osqp-eigen ];
   });
 
   rosidlcpp-generator-core = rosSuper.rosidlcpp-generator-core.override { fmt = self.fmt_9; };
