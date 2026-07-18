@@ -843,20 +843,6 @@ in with lib; {
     '';
   });
 
-
-  mqtt-client = rosSuper.mqtt-client.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # ref. https://github.com/ika-rwth-aachen/mqtt_client/pull/93
-      (self.fetchpatch2 {
-        url = "https://github.com/nim65s/mqtt_client/commit/fbbaf1ab684689019edc930c1528b33ec2319d8f.patch?full_index=1";
-        hash = "sha256-rNj5n1WkfRtkthzyjW4YI1+Z7U92Pu64lx1eNKgBrd0=";
-        stripLen = 1;
-      })
-    ];
-  });
-
   mrpt-containers = rosSuper.mrpt-containers.overrideAttrs ({
     buildInputs ? [], nativeBuildInputs ? [], ...
   }: {
