@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, compass-msgs, diagnostic-msgs, eigen3-cmake-module, fusioncore-core, geographic-msgs, geometry-msgs, gps-msgs, lifecycle-msgs, nav-msgs, proj, rclcpp, rclcpp-lifecycle, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-fusioncore-ros";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/manankharwar/fusioncore-release/archive/release/humble/fusioncore_ros/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "27b1c72810ec2322c29041d87551aae1e3657aea91a6a91eb31e5f68bb14c72c";
+    url = "https://github.com/manankharwar/fusioncore-release/archive/release/humble/fusioncore_ros/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "3167b2c0360502824510d5bbecc17806bd960f8044a607d09637110222012f01";
   };
 
   buildType = "ament_cmake";

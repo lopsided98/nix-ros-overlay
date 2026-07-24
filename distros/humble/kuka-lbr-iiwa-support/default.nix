@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher-gui, kuka-resources, launch-ros, launch-testing-ament-cmake, robot-state-publisher, rviz2, urdf, xacro }:
 buildRosPackage {
   pname = "ros-humble-kuka-lbr-iiwa-support";
-  version = "1.1.0-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/humble/kuka_lbr_iiwa_support/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "27256851d4decb362c038719875553236d57c97de7d946679d9288f4180cb0c6";
+    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/humble/kuka_lbr_iiwa_support/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "ec95a431a18b21cb1f0373c6981ef104c03cb3945b74943f05eb59650ab0da53";
   };
 
   buildType = "ament_cmake";

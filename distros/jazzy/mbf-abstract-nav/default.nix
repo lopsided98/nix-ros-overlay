@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, geometry-msgs, mbf-abstract-core, mbf-msgs, mbf-utility, nav-msgs, rclcpp, rclcpp-action, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-mbf-abstract-nav";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/jazzy/mbf_abstract_nav/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "b018cad1824c553f6a5b0584759c3855f5dbba51835d98cb8df249d8c6e35ff5";
+    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/jazzy/mbf_abstract_nav/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "10adc8660b9ae7b260c6e7566effca8d9ee8328e008fe1898b2374c882951edf";
   };
 
   buildType = "ament_cmake";

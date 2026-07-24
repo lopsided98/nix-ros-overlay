@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cras-cpp-common, cras-lint, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-compass-interfaces";
-  version = "3.0.4-r2";
+  version = "3.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/compass-release/archive/release/rolling/compass_interfaces/3.0.4-2.tar.gz";
-    name = "3.0.4-2.tar.gz";
-    sha256 = "09896b8f9a05f7b558a45121b8079dd4f292f1f581082c4572fbe386a24e27a0";
+    url = "https://github.com/ros2-gbp/compass-release/archive/release/rolling/compass_interfaces/3.0.6-1.tar.gz";
+    name = "3.0.6-1.tar.gz";
+    sha256 = "94ab86dbc68a5facd2013cf06b3ffd9b27808df8f5bad044e6c787c30d47e715";
   };
 
   buildType = "ament_cmake";

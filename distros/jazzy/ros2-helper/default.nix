@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_chafa, ament-cmake, ament-cmake-python, python3, rclcpp, ros2cli, ros2node, ros2service, ros2topic, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, chafa, python3, rclcpp, ros2cli, ros2node, ros2service, ros2topic, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ros2-helper";
   version = "0.1.3-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];
-  propagatedBuildInputs = [ _unresolved_chafa python3 rclcpp ros2cli ros2node ros2service ros2topic sensor-msgs ];
+  propagatedBuildInputs = [ chafa python3 rclcpp ros2cli ros2node ros2service ros2topic sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {

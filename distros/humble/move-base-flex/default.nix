@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, mbf-abstract-core, mbf-abstract-nav, mbf-msgs, mbf-simple-nav, mbf-utility }:
 buildRosPackage {
   pname = "ros-humble-move-base-flex";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/humble/move_base_flex/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "913d53b26beb279ee73e35c64e4cdb4df44b3a74f592f6bcb53927d206749e43";
+    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/humble/move_base_flex/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "0e1de7654973d68a0dd233a78b1f04ca76d7ca721273cae3cdaa13d778a13b92";
   };
 
   buildType = "ament_cmake";

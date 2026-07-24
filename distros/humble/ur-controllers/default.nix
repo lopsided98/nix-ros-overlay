@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, angles, control-msgs, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, joint-trajectory-controller, lifecycle-msgs, pluginlib, rclcpp-lifecycle, rcutils, realtime-tools, ros2-control-test-assets, std-msgs, std-srvs, tf2-geometry-msgs, tf2-ros, trajectory-msgs, ur-dashboard-msgs, ur-msgs }:
 buildRosPackage {
   pname = "ros-humble-ur-controllers";
-  version = "2.13.2-r1";
+  version = "2.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/humble/ur_controllers/2.13.2-1.tar.gz";
-    name = "2.13.2-1.tar.gz";
-    sha256 = "6b72b90a4e0c7e6421cb2222ea600edeed00843050389238311e5fe9043a47be";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/humble/ur_controllers/2.14.0-1.tar.gz";
+    name = "2.14.0-1.tar.gz";
+    sha256 = "eb16a405bcb5a0f5321f1245a207535d48fcccf9778ae1f319fbb4c54fffc2f5";
   };
 
   buildType = "ament_cmake";

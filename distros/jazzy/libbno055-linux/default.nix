@@ -2,25 +2,25 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, cmake, diagnostic-msgs, rclcpp, rclcpp-lifecycle, sensor-msgs, std-srvs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, diagnostic-msgs, geometry-msgs, lifecycle-msgs, rclcpp, rclcpp-components, rclcpp-lifecycle, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-libbno055-linux";
-  version = "1.4.1-r1";
+  version = "1.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/lazytatzv/libbno055_linux-release/archive/release/jazzy/libbno055_linux/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "eca1040de46ff810e53a5d458ae21fb62dece3001c1c0fbc5f65f7728be9d5bf";
+    url = "https://github.com/lazytatzv/libbno055_linux-release/archive/release/jazzy/libbno055_linux/1.7.1-1.tar.gz";
+    name = "1.7.1-1.tar.gz";
+    sha256 = "f655d780e8ca3d9f06f046df31cdb89883af12ca63960ee7ff2dc59413a5e874";
   };
 
-  buildType = "cmake";
-  buildInputs = [ cmake ];
-  checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ diagnostic-msgs rclcpp rclcpp-lifecycle sensor-msgs std-srvs ];
-  nativeBuildInputs = [ cmake ];
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ diagnostic-msgs geometry-msgs lifecycle-msgs rclcpp rclcpp-components rclcpp-lifecycle sensor-msgs std-srvs ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "C++17 BNO055 library and ROS 2 nodes for Linux.";
+    description = "C++17 driver and ROS 2 nodes for the Bosch BNO055 9-axis IMU on Linux, with Python, C, and Rust bindings.";
     license = with lib.licenses; [ mit ];
   };
 }

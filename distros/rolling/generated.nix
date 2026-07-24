@@ -2354,6 +2354,8 @@ self: super: {
 
  ros-industrial-cmake-boilerplate = self.callPackage ./ros-industrial-cmake-boilerplate {};
 
+ ros-snapd-interfaces = self.callPackage ./ros-snapd-interfaces {};
+
  ros-testing = self.callPackage ./ros-testing {};
 
  ros-workspace = self.callPackage ./ros-workspace {};
@@ -2511,6 +2513,8 @@ self: super: {
  rosidlcpp-typesupport-introspection-cpp = self.callPackage ./rosidlcpp-typesupport-introspection-cpp {};
 
  rosx-introspection = self.callPackage ./rosx-introspection {};
+
+ rplidar-driver = self.callPackage ./rplidar-driver {};
 
  rpyutils = self.callPackage ./rpyutils {};
 

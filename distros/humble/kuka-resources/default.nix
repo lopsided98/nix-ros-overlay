@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, urdf, xacro }:
 buildRosPackage {
   pname = "ros-humble-kuka-resources";
-  version = "1.1.0-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/humble/kuka_resources/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "47983b6ca6a16c6828739ef7771a0c916dd8a831620ce1fa8e4202598d7c8bb8";
+    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/humble/kuka_resources/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "04e17f3b1f7b33c8656c97383c1a41708654e1bdb42a44f60a80521671b2b038";
   };
 
   buildType = "ament_cmake";

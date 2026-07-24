@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher-gui, kuka-resources, launch-ros, launch-testing-ament-cmake, robot-state-publisher, rviz2, urdf, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-kuka-agilus-support";
-  version = "2.0.0-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/jazzy/kuka_agilus_support/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "e2703da050cf0464d407d7ff3f153423576125df34975b56057bd0a16a3d6836";
+    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/jazzy/kuka_agilus_support/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "2a1d3ab3a29994029e5b99cf7aa358c86d24eb49134f142e1d4ee270ec00aae1";
   };
 
   buildType = "ament_cmake";

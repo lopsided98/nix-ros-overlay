@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, ament-lint-auto, ament-lint-common, fastcdr, rcpputils, rcutils, rmw, rosidl-typesupport-fastrtps-c, rosidl-typesupport-fastrtps-cpp, tracetools, zenoh-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-rmw-zenoh-cpp";
-  version = "0.2.9-r1";
+  version = "0.2.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_zenoh-release/archive/release/jazzy/rmw_zenoh_cpp/0.2.9-1.tar.gz";
-    name = "0.2.9-1.tar.gz";
-    sha256 = "2e573ad0107cf60f25d7c37c46b2e3d9d8820be290411086ecb241c6aec842f7";
+    url = "https://github.com/ros2-gbp/rmw_zenoh-release/archive/release/jazzy/rmw_zenoh_cpp/0.2.10-1.tar.gz";
+    name = "0.2.10-1.tar.gz";
+    sha256 = "f59b9c9a88be8a476893484cc0562fc5a76d8b41a87b84014421088855987a87";
   };
 
   buildType = "ament_cmake";

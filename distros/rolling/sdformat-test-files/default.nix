@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-rolling-sdformat-test-files";
-  version = "2.1.0-r2";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sdformat_urdf-release/archive/release/rolling/sdformat_test_files/2.1.0-2.tar.gz";
-    name = "2.1.0-2.tar.gz";
-    sha256 = "55397d488a145447ea106e0c4fc297142bcad55eea89750cf5c5224d90d4f9cc";
+    url = "https://github.com/ros2-gbp/sdformat_urdf-release/archive/release/rolling/sdformat_test_files/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "c7beb4815e06320bb11a79e6043ea40c793b0cd60b045b1a9b3f3cd50687b6f8";
   };
 
   buildType = "cmake";

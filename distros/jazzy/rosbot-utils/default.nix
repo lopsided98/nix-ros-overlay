@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, alsa-utils, ament-cmake, ament-cmake-pytest, ament-cmake-python, generate-parameter-library, launch, launch-pytest, launch-ros, launch-testing, python3Packages, pythonPackages, rclcpp, rclpy, sensor-msgs, std-srvs, stm32flash, usbutils }:
+{ lib, buildRosPackage, fetchurl, alsa-utils, ament-cmake, ament-cmake-pytest, ament-cmake-python, generate-parameter-library, launch, launch-pytest, launch-ros, launch-testing, python3Packages, rclcpp, rclpy, sensor-msgs, std-srvs, stm32flash, usbutils }:
 buildRosPackage {
   pname = "ros-jazzy-rosbot-utils";
   version = "1.1.1-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];
   checkInputs = [ ament-cmake-pytest launch launch-pytest launch-ros launch-testing python3Packages.pytest python3Packages.pyyaml rclpy ];
-  propagatedBuildInputs = [ alsa-utils generate-parameter-library launch-ros python3Packages.argcomplete python3Packages.libgpiod python3Packages.pyftdi python3Packages.pyserial python3Packages.sh pythonPackages.pyudev rclcpp sensor-msgs std-srvs stm32flash usbutils ];
+  propagatedBuildInputs = [ alsa-utils generate-parameter-library launch-ros python3Packages.argcomplete python3Packages.libgpiod python3Packages.pyftdi python3Packages.pyserial python3Packages.pyudev python3Packages.sh rclcpp sensor-msgs std-srvs stm32flash usbutils ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {

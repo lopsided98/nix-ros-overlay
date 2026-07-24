@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-gps-msgs";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/kilted/gps_msgs/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "ada48465fda73e957fed85021d5c5eb56cd394226bb51202ff39af616ce64495";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/kilted/gps_msgs/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "93824d4eeafc84d87b80dcee89e7d14c7fa0cde0d61126d2fffbd3eb3f4b7396";
   };
 
   buildType = "ament_cmake";

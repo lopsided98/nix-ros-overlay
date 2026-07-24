@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-scan-2d-merger";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ali-pahlevani/2D_Scan_Merger_ROS2-release/archive/release/jazzy/scan_2d_merger/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "4b50b595a1b9f5e64c438702019e77d5f3a4c146696b32ffd861f12a9664f0d7";
+    url = "https://github.com/ali-pahlevani/2D_Scan_Merger_ROS2-release/archive/release/jazzy/scan_2d_merger/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "430af6c19419af7ac0b52d6c5fccf89c6198c5f53f495f0213d3d5a35be37d12";
   };
 
   buildType = "ament_cmake";

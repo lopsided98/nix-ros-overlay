@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher-gui, kuka-resources, launch-ros, launch-testing-ament-cmake, robot-state-publisher, rviz2, urdf, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-kuka-fortec-support";
-  version = "2.0.0-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/jazzy/kuka_fortec_support/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "5a176f07b0d67027a57ed138ff86f9e161732a8e3779dfb51c5814e795e214a0";
+    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/jazzy/kuka_fortec_support/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "37e774c2b364c633f4b3ef7739fd9e92de2ac15fd8c1ef8cac63f96b7a447f33";
   };
 
   buildType = "ament_cmake";

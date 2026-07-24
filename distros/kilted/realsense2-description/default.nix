@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, launch-ros, rclcpp, rclcpp-components, realsense2-camera-msgs, xacro }:
 buildRosPackage {
   pname = "ros-kilted-realsense2-description";
-  version = "4.58.2-r1";
+  version = "4.58.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/kilted/realsense2_description/4.58.2-1.tar.gz";
-    name = "4.58.2-1.tar.gz";
-    sha256 = "7cfba2d2e83e1522b0787012fd58581ec38eb8c9500b8be3a1b83fb402f2218b";
+    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/kilted/realsense2_description/4.58.3-1.tar.gz";
+    name = "4.58.3-1.tar.gz";
+    sha256 = "146b61fb54b806f954994453d7785202ba9da8e31ee2bda282c6f0fafae0ce05";
   };
 
   buildType = "ament_cmake";

@@ -1196,6 +1196,8 @@ self: super: {
 
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
+ libbno055-linux = self.callPackage ./libbno055-linux {};
+
  libcaer-driver = self.callPackage ./libcaer-driver {};
 
  libcaer-vendor = self.callPackage ./libcaer-vendor {};
@@ -1291,6 +1293,20 @@ self: super: {
  mavros-extras = self.callPackage ./mavros-extras {};
 
  mavros-msgs = self.callPackage ./mavros-msgs {};
+
+ mbf-abstract-core = self.callPackage ./mbf-abstract-core {};
+
+ mbf-abstract-nav = self.callPackage ./mbf-abstract-nav {};
+
+ mbf-msgs = self.callPackage ./mbf-msgs {};
+
+ mbf-simple-core = self.callPackage ./mbf-simple-core {};
+
+ mbf-simple-nav = self.callPackage ./mbf-simple-nav {};
+
+ mbf-test-utility = self.callPackage ./mbf-test-utility {};
+
+ mbf-utility = self.callPackage ./mbf-utility {};
 
  mcap-vendor = self.callPackage ./mcap-vendor {};
 
@@ -1405,6 +1421,8 @@ self: super: {
  motion-primitives-controllers = self.callPackage ./motion-primitives-controllers {};
 
  mouse-teleop = self.callPackage ./mouse-teleop {};
+
+ move-base-flex = self.callPackage ./move-base-flex {};
 
  moveit = self.callPackage ./moveit {};
 
@@ -1697,6 +1715,8 @@ self: super: {
  nav2-minimal-tb4-sim = self.callPackage ./nav2-minimal-tb4-sim {};
 
  nav-msgs = self.callPackage ./nav-msgs {};
+
+ ndcurves = self.callPackage ./ndcurves {};
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
 
@@ -2420,6 +2440,8 @@ self: super: {
 
  ros-industrial-cmake-boilerplate = self.callPackage ./ros-industrial-cmake-boilerplate {};
 
+ ros-snapd-interfaces = self.callPackage ./ros-snapd-interfaces {};
+
  ros-testing = self.callPackage ./ros-testing {};
 
  ros-workspace = self.callPackage ./ros-workspace {};
@@ -2580,6 +2602,8 @@ self: super: {
 
  rot-conv = self.callPackage ./rot-conv {};
 
+ rplidar-driver = self.callPackage ./rplidar-driver {};
+
  rplidar-ros = self.callPackage ./rplidar-ros {};
 
  rpyutils = self.callPackage ./rpyutils {};
@@ -2724,6 +2748,8 @@ self: super: {
 
  rviz-marker-tools = self.callPackage ./rviz-marker-tools {};
 
+ rviz-mbf-plugins = self.callPackage ./rviz-mbf-plugins {};
+
  rviz-ogre-vendor = self.callPackage ./rviz-ogre-vendor {};
 
  rviz-rendering = self.callPackage ./rviz-rendering {};
@@ -2735,6 +2761,8 @@ self: super: {
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
+
+ sbg-driver = self.callPackage ./sbg-driver {};
 
  sdformat-test-files = self.callPackage ./sdformat-test-files {};
 
@@ -2783,6 +2811,8 @@ self: super: {
  simulation = self.callPackage ./simulation {};
 
  simulation-interfaces = self.callPackage ./simulation-interfaces {};
+
+ slam-toolbox = self.callPackage ./slam-toolbox {};
 
  slg-msgs = self.callPackage ./slg-msgs {};
 

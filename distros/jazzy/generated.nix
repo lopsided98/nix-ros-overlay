@@ -694,6 +694,8 @@ self: super: {
 
  coin-d4-driver = self.callPackage ./coin-d4-driver {};
 
+ colcon-rclgd = self.callPackage ./colcon-rclgd {};
+
  color-names = self.callPackage ./color-names {};
 
  color-util = self.callPackage ./color-util {};
@@ -2554,6 +2556,8 @@ self: super: {
 
  navmap-rviz-plugin = self.callPackage ./navmap-rviz-plugin {};
 
+ ndcurves = self.callPackage ./ndcurves {};
+
  nebula = self.callPackage ./nebula {};
 
  nebula-continental = self.callPackage ./nebula-continental {};
@@ -3096,6 +3100,10 @@ self: super: {
 
  rclcpp-lifecycle = self.callPackage ./rclcpp-lifecycle {};
 
+ rclgd = self.callPackage ./rclgd {};
+
+ rclgd-cli = self.callPackage ./rclgd-cli {};
+
  rclpy = self.callPackage ./rclpy {};
 
  rclpy-message-converter = self.callPackage ./rclpy-message-converter {};
@@ -3438,6 +3446,8 @@ self: super: {
 
  ros-industrial-cmake-boilerplate = self.callPackage ./ros-industrial-cmake-boilerplate {};
 
+ ros-snapd-interfaces = self.callPackage ./ros-snapd-interfaces {};
+
  ros-testing = self.callPackage ./ros-testing {};
 
  ros-workspace = self.callPackage ./ros-workspace {};
@@ -3612,6 +3622,8 @@ self: super: {
 
  rot-conv = self.callPackage ./rot-conv {};
 
+ rplidar-driver = self.callPackage ./rplidar-driver {};
+
  rplidar-ros = self.callPackage ./rplidar-ros {};
 
  rpyutils = self.callPackage ./rpyutils {};
@@ -3779,6 +3791,8 @@ self: super: {
  sbg-driver = self.callPackage ./sbg-driver {};
 
  scan-2d-merger = self.callPackage ./scan-2d-merger {};
+
+ scan-detection-fusion = self.callPackage ./scan-detection-fusion {};
 
  scenario-execution = self.callPackage ./scenario-execution {};
 

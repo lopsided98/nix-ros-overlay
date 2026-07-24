@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, urdf, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-kuka-kl-support";
-  version = "2.0.0-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/jazzy/kuka_kl_support/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "4e2229bac86e1ff34531c815ae659871a47734a84eba693bc2de73f9d1676987";
+    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/jazzy/kuka_kl_support/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "f3664ddbb396498619bb6a7e87928bea957ffd3a94dfba7509a95c5657dedd41";
   };
 
   buildType = "ament_cmake";

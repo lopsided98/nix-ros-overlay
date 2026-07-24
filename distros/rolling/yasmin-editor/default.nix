@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_python3-pyqt6, ament-cmake, ament-cmake-pytest, ament-cmake-python, python3Packages, rclpy, ros-environment, yasmin, yasmin-factory, yasmin-plugins-manager }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, python3Packages, rclpy, ros-environment, yasmin, yasmin-factory, yasmin-plugins-manager }:
 buildRosPackage {
   pname = "ros-rolling-yasmin-editor";
   version = "6.0.0-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ros-environment ];
   checkInputs = [ ament-cmake-pytest ];
-  propagatedBuildInputs = [ _unresolved_python3-pyqt6 python3Packages.tqdm rclpy yasmin yasmin-factory yasmin-plugins-manager ];
+  propagatedBuildInputs = [ python3Packages.pyqt6 python3Packages.tqdm rclpy yasmin yasmin-factory yasmin-plugins-manager ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {

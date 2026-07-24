@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-xmllint, ament-lint-auto, cmake, mola-kernel, mrpt-libbase, mrpt-libtclap, ros-environment }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-xmllint, ament-lint-auto, cli11, cmake, mola-kernel, mrpt-libbase, ros-environment }:
 buildRosPackage {
   pname = "ros-lyrical-mola-launcher";
-  version = "2.9.0-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_launcher/2.9.0-1.tar.gz";
-    name = "2.9.0-1.tar.gz";
-    sha256 = "721b5d961b0eb7623c8f3a9fa431783853500b29a264ad3790889a920e7297eb";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_launcher/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "3e3e743e1bc31692c5ebd6364c467e879bc59991fa1dbc716a4c841faa38e2cd";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-gtest cmake ros-environment ];
   checkInputs = [ ament-cmake-pep257 ament-cmake-xmllint ament-lint-auto ];
-  propagatedBuildInputs = [ mola-kernel mrpt-libbase mrpt-libtclap ];
+  propagatedBuildInputs = [ cli11 mola-kernel mrpt-libbase ];
   nativeBuildInputs = [ ament-cmake ament-cmake-gtest cmake ];
 
   meta = {

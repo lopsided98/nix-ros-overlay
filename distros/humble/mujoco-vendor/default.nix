@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git, patchelf, pkg-config }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git, glfw3, patchelf, pkg-config }:
 buildRosPackage {
   pname = "ros-humble-mujoco-vendor";
-  version = "0.0.8-r2";
+  version = "0.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_vendor-release/archive/release/humble/mujoco_vendor/0.0.8-2.tar.gz";
-    name = "0.0.8-2.tar.gz";
-    sha256 = "ac1eed553f0f60bb8f8bffb5bc328a1a1d85b1c39a30767deb478ead9b7587f0";
+    url = "https://github.com/ros2-gbp/mujoco_vendor-release/archive/release/humble/mujoco_vendor/0.0.9-1.tar.gz";
+    name = "0.0.9-1.tar.gz";
+    sha256 = "18aaf093d1d456cebc394c241600f52538b97d49236943dfbdfae51e6459c825";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-vendor-package git patchelf pkg-config ];
+  buildInputs = [ ament-cmake ament-cmake-vendor-package git glfw3 patchelf pkg-config ];
   nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package git patchelf ];
 
   meta = {

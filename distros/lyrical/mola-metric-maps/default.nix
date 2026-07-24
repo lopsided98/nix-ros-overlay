@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cmake, mola-common, mola-kernel, mp2p-icp, mrpt-libmaps, onetbb, ros-environment }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cli11, cmake, mola-common, mola-kernel, mp2p-icp, mrpt-libmaps, onetbb, ros-environment }:
 buildRosPackage {
   pname = "ros-lyrical-mola-metric-maps";
-  version = "2.9.0-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_metric_maps/2.9.0-1.tar.gz";
-    name = "2.9.0-1.tar.gz";
-    sha256 = "a86ab282448b74b7d168fd1349e97b5fc1ce003c923d8caa2a91ae4e56b7b4ec";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_metric_maps/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "5805a5bb472b96c1764a6c7d74854c03263a7e8caa882d9e34954bd3f52a5dd6";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-gtest ament-cmake-xmllint cmake ros-environment ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ mola-common mola-kernel mp2p-icp mrpt-libmaps onetbb ];
+  propagatedBuildInputs = [ cli11 mola-common mola-kernel mp2p-icp mrpt-libmaps onetbb ];
   nativeBuildInputs = [ ament-cmake ament-cmake-gtest cmake ];
 
   meta = {

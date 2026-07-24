@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, mbf-msgs, pluginlib, qt5, rclcpp, rclcpp-action, rviz-common }:
 buildRosPackage {
   pname = "ros-humble-rviz-mbf-plugins";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/humble/rviz_mbf_plugins/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "9e863dcf6281e2b917617bedd2b551bd98d1f720053ce17d12347cf94dc83c34";
+    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/humble/rviz_mbf_plugins/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "f687a21427dd0d8590b6d0c1b0d749ff8f438f537afa9473551244fa045467cf";
   };
 
   buildType = "ament_cmake";

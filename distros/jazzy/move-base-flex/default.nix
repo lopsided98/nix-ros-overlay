@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, mbf-abstract-core, mbf-abstract-nav, mbf-msgs, mbf-simple-nav, mbf-utility }:
 buildRosPackage {
   pname = "ros-jazzy-move-base-flex";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/jazzy/move_base_flex/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "2557a7d7af0b93aa9b1fe6535abea77646c01131571880a0951412cf42ada093";
+    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/jazzy/move_base_flex/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "888fe328e8fbca9b9bf2cf4a030563f2ed17935f704d7ee5fed94bede49dc928";
   };
 
   buildType = "ament_cmake";

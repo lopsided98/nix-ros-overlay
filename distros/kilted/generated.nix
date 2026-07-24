@@ -1316,6 +1316,8 @@ self: super: {
 
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
+ libbno055-linux = self.callPackage ./libbno055-linux {};
+
  libcaer-driver = self.callPackage ./libcaer-driver {};
 
  libcaer-vendor = self.callPackage ./libcaer-vendor {};
@@ -1911,6 +1913,8 @@ self: super: {
  navmap-ros-interfaces = self.callPackage ./navmap-ros-interfaces {};
 
  navmap-rviz-plugin = self.callPackage ./navmap-rviz-plugin {};
+
+ ndcurves = self.callPackage ./ndcurves {};
 
  neo-nav2-bringup = self.callPackage ./neo-nav2-bringup {};
 
@@ -2609,6 +2613,8 @@ self: super: {
  ros-image-to-qimage = self.callPackage ./ros-image-to-qimage {};
 
  ros-industrial-cmake-boilerplate = self.callPackage ./ros-industrial-cmake-boilerplate {};
+
+ ros-snapd-interfaces = self.callPackage ./ros-snapd-interfaces {};
 
  ros-testing = self.callPackage ./ros-testing {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-lyrical-sdformat-test-files";
-  version = "2.1.0-r3";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sdformat_urdf-release/archive/release/lyrical/sdformat_test_files/2.1.0-3.tar.gz";
-    name = "2.1.0-3.tar.gz";
-    sha256 = "f6f02dc8ccf6f5d6d755374e1f99147b0376dd45c53fe983a3a6a1b253c764c1";
+    url = "https://github.com/ros2-gbp/sdformat_urdf-release/archive/release/lyrical/sdformat_test_files/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "a0b2f22cb0b0a1a95bd16b8091a11ff3524cbf6b1ee6d398f1ef24e84776de2a";
   };
 
   buildType = "cmake";

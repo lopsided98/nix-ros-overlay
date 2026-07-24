@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, mbf-abstract-core, mbf-utility, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-mbf-simple-core";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/humble/mbf_simple_core/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "81ab044bb3e6f8c1479bdc11185b3e2f513355b4bacf7208a12de87d0fca44b2";
+    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/humble/mbf_simple_core/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "58e0b8badb1d79a40caa7752d262c8588c5a90ddaf9caf055cfaf50de5f1f548";
   };
 
   buildType = "ament_cmake";

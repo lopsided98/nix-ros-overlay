@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, bullet, cmake, eigen, gbenchmark, gz-cmake-vendor, gz-common-vendor, gz-dartsim-vendor, gz-math-vendor, gz-plugin-vendor, gz-utils-vendor, sdformat-vendor }:
 buildRosPackage {
   pname = "ros-rolling-gz-physics-vendor";
-  version = "0.5.1-r1";
+  version = "0.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_physics_vendor-release/archive/release/rolling/gz_physics_vendor/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "120c8eb009bbed0987740a94368dce1f37647281ed1373bfc505536eae362cd3";
+    url = "https://github.com/ros2-gbp/gz_physics_vendor-release/archive/release/rolling/gz_physics_vendor/0.5.2-1.tar.gz";
+    name = "0.5.2-1.tar.gz";
+    sha256 = "cdd527d8ff6ca60a6968cfdfa06a0f8f96c7fa411ee11bd7c65990491fc46699";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package cmake ];
 
   meta = {
-    description = "Vendor package for: gz-physics 9.3.0
+    description = "Vendor package for: gz-physics 9.4.0
 
     Gazebo Physics : Physics classes and functions for robot applications";
     license = with lib.licenses; [ asl20 ];

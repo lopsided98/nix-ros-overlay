@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, cppzmq, git, rclcpp, ros-environment, sqlite, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-lyrical-behaviortree-cpp";
-  version = "4.9.1-r1";
+  version = "4.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/lyrical/behaviortree_cpp/4.9.1-1.tar.gz";
-    name = "4.9.1-1.tar.gz";
-    sha256 = "51a322002d778a3d8f647105075ce9c620b9df0cf726a787ea80b0244680dee6";
+    url = "https://github.com/ros2-gbp/behaviortree_cpp_v4-release/archive/release/lyrical/behaviortree_cpp/4.10.0-1.tar.gz";
+    name = "4.10.0-1.tar.gz";
+    sha256 = "643d39fa65fc4c0593ccba6e1f886dae98bd4e0823290da1acd479a1a161f0f3";
   };
 
   buildType = "ament_cmake";
