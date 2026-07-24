@@ -126,16 +126,7 @@ in {
 
   gz-cmake-vendor = lib.patchAmentVendorGit rosSuper.gz-cmake-vendor { };
 
-  gz-common-vendor = (lib.patchAmentVendorGit rosSuper.gz-common-vendor {
-    patchesFor.gz_common_vendor = [
-      (self.fetchpatch2 {
-        # Replace FreeImage dependency with stb (#725 updated for gz-common7)
-        url = "https://github.com/gazebosim/gz-common/commit/73af365810c97f19d3db4068678e3a07690a2fd7.patch?full_index=1";
-        hash = "sha256-0JoNlI5LcueF6WdQGhLt9wEGtEvT5rkrywzlWniJfz4=";
-        excludes = ["tutorials/install.md"];
-      })
-    ];
-  }).overrideAttrs({
+  gz-common-vendor = (lib.patchAmentVendorGit rosSuper.gz-common-vendor { }).overrideAttrs({
     buildInputs ? [], ...
   }: {
     buildInputs = buildInputs ++ [ self.zlib ];
