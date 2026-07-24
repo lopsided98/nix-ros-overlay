@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gps-msgs, gps-tools, gpsd-client }:
 buildRosPackage {
   pname = "ros-lyrical-gps-umd";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/lyrical/gps_umd/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "3db60d9512aae107b60b02feabf7e0f7178b3d6a63cd8ac096fe39bce4e65603";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/lyrical/gps_umd/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "e66d2a6a75b0632be7a886ea7f09435957d5d2366cc992ef57a0be385c5e14cd";
   };
 
   buildType = "ament_cmake";

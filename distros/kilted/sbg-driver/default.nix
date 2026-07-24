@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, nmea-msgs, rclcpp, rosidl-default-generators, rosidl-default-runtime, rtcm-msgs, sensor-msgs, std-msgs, std-srvs, tf2-geometry-msgs, tf2-msgs, tf2-ros, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kilted-sbg-driver";
-  version = "3.3.2-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/SBG-Systems/sbg_ros2-release/archive/release/kilted/sbg_driver/3.3.2-1.tar.gz";
-    name = "3.3.2-1.tar.gz";
-    sha256 = "f0042a21ccf7be0db3eee3c646bf28de1f338f592d1a1f967e9943a08137ce64";
+    url = "https://github.com/SBG-Systems/sbg_ros2-release/archive/release/kilted/sbg_driver/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "551dbe99e320853290ab787f84165c488e0f46e9bddfbc58539ded6c3f06e627";
   };
 
   buildType = "ament_cmake";

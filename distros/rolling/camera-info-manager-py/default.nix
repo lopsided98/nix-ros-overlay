@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, python3Packages, rclpy, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-mypy, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, python3Packages, rclpy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-camera-info-manager-py";
-  version = "7.0.2-r1";
+  version = "7.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/camera_info_manager_py/7.0.2-1.tar.gz";
-    name = "7.0.2-1.tar.gz";
-    sha256 = "27a49840b7faedd42c419849779c6437368d0a72c586c18f8e017483393a81b4";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/camera_info_manager_py/7.0.3-1.tar.gz";
+    name = "7.0.3-1.tar.gz";
+    sha256 = "bab2a6e1ebd59b7684cc641d9019de15e75e77f022fa2def6632d8046894ae0d";
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-copyright ament-flake8 ament-pep257 ament-xmllint python3Packages.pytest ];
+  checkInputs = [ ament-cmake-mypy ament-copyright ament-flake8 ament-pep257 ament-xmllint python3Packages.pytest ];
   propagatedBuildInputs = [ ament-index-python python3Packages.pyyaml rclpy sensor-msgs ];
 
   meta = {

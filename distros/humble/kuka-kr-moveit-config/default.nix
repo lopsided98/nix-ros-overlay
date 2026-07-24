@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, kuka-resources, moveit, moveit-planners, robot-state-publisher, rviz2, urdf, xacro }:
 buildRosPackage {
   pname = "ros-humble-kuka-kr-moveit-config";
-  version = "1.1.0-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/humble/kuka_kr_moveit_config/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "10ea5e3d9e0edd56891877bfd6e122c6421cf56ce35cbb86208db8b6bd1c29cf";
+    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/humble/kuka_kr_moveit_config/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "b970016247c1bff5d3796a4932919de28e08a9cc0bd6e70a3383287a7f56ea17";
   };
 
   buildType = "ament_cmake";

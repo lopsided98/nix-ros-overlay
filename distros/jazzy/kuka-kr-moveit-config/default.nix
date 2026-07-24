@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, kuka-resources, moveit, moveit-planners, robot-state-publisher, rviz2, urdf, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-kuka-kr-moveit-config";
-  version = "2.0.0-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/jazzy/kuka_kr_moveit_config/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "439b7b8979224abccbe68a9ca6af2e5f3b0802c17fee3179dcabb3ce6c31c40a";
+    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/jazzy/kuka_kr_moveit_config/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "3c942c9a438039b1212c956f4d1426202e40d0cb93677845ccd5002e9e5e8dfe";
   };
 
   buildType = "ament_cmake";

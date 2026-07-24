@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher-gui, kuka-resources, launch-ros, launch-testing-ament-cmake, robot-state-publisher, rviz2, urdf, xacro }:
 buildRosPackage {
   pname = "ros-humble-kuka-agilus-support";
-  version = "1.1.0-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/humble/kuka_agilus_support/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "5064ada631461c824ab2c64cb8dc40077c9ef9eb977fb769276089bb31c807a9";
+    url = "https://github.com/ros2-gbp/kuka_robot_descriptions-release/archive/release/humble/kuka_agilus_support/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "8f3c761cd6dfbfe4321a3a3835901b84856a658aa5670a3b55e634453b6bb601";
   };
 
   buildType = "ament_cmake";

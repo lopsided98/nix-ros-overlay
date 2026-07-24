@@ -2536,6 +2536,8 @@ self: super: {
 
  navigation2 = self.callPackage ./navigation2 {};
 
+ ndcurves = self.callPackage ./ndcurves {};
+
  ndt-omp = self.callPackage ./ndt-omp {};
 
  nebula = self.callPackage ./nebula {};
@@ -3522,6 +3524,8 @@ self: super: {
 
  ros-industrial-cmake-boilerplate = self.callPackage ./ros-industrial-cmake-boilerplate {};
 
+ ros-snapd-interfaces = self.callPackage ./ros-snapd-interfaces {};
+
  ros-testing = self.callPackage ./ros-testing {};
 
  ros-workspace = self.callPackage ./ros-workspace {};
@@ -3627,6 +3631,8 @@ self: super: {
  rosx-introspection = self.callPackage ./rosx-introspection {};
 
  rot-conv = self.callPackage ./rot-conv {};
+
+ rplidar-driver = self.callPackage ./rplidar-driver {};
 
  rplidar-ros = self.callPackage ./rplidar-ros {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, cargo, clang, git }:
 buildRosPackage {
   pname = "ros-kilted-zenoh-cpp-vendor";
-  version = "0.6.6-r1";
+  version = "0.6.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_zenoh-release/archive/release/kilted/zenoh_cpp_vendor/0.6.6-1.tar.gz";
-    name = "0.6.6-1.tar.gz";
-    sha256 = "c6e222231d72889c6bf0a5b78dd6a93981ecb58e4a80f4782631d15530163d70";
+    url = "https://github.com/ros2-gbp/rmw_zenoh-release/archive/release/kilted/zenoh_cpp_vendor/0.6.7-1.tar.gz";
+    name = "0.6.7-1.tar.gz";
+    sha256 = "b1e1f8468d10e99ff3ee12173339d9cdf9d609e1d03edf8ace0111d178e8e064";
   };
 
   buildType = "ament_cmake";

@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-lint-auto, ament-lint-common, nlohmann_json, rcpputils, rcutils, rmw, rmw-dds-common, tinyxml2-vendor, zenoh-cpp-vendor }:
+{ lib, buildRosPackage, fetchurl, ament-lint-auto, ament-lint-common, nlohmann_json, rcpputils, rcutils, rmw-dds-common, tinyxml2-vendor, zenoh-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-zenoh-security-tools";
-  version = "0.2.9-r1";
+  version = "0.2.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_zenoh-release/archive/release/jazzy/zenoh_security_tools/0.2.9-1.tar.gz";
-    name = "0.2.9-1.tar.gz";
-    sha256 = "f65bda8f8b129a51e33146ac7e98e81e9b88a2cfc819a4f604a610f5e8e23a74";
+    url = "https://github.com/ros2-gbp/rmw_zenoh-release/archive/release/jazzy/zenoh_security_tools/0.2.10-1.tar.gz";
+    name = "0.2.10-1.tar.gz";
+    sha256 = "4086cbf2e4928086dc45ac3d6074b3a3ce83a0a4f3b9f635e125fecde18d1e30";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ nlohmann_json ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ rcpputils rcutils rmw rmw-dds-common tinyxml2-vendor zenoh-cpp-vendor ];
+  propagatedBuildInputs = [ rcpputils rcutils rmw-dds-common tinyxml2-vendor zenoh-cpp-vendor ];
 
   meta = {
     description = "This package generates config files to enforce security with Zenoh";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, geometry-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-mbf-msgs";
-  version = "1.2.0-r1";
+  version = "1.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/jazzy/mbf_msgs/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "44d5c4299be81e54b756e0c03d1a06b692bc1f818c1e2646c4d1c7c32c1e814d";
+    url = "https://github.com/ros2-gbp/move_base_flex-release/archive/release/jazzy/mbf_msgs/1.2.1-1.tar.gz";
+    name = "1.2.1-1.tar.gz";
+    sha256 = "9192188a907bc9a4e2eb5f91b10ad856a34f0cbb3440410e86187cd5d9abf98f";
   };
 
   buildType = "ament_cmake";

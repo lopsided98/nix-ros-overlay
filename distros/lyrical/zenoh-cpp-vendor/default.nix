@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, cargo, clang, git }:
 buildRosPackage {
   pname = "ros-lyrical-zenoh-cpp-vendor";
-  version = "0.10.4-r1";
+  version = "0.10.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_zenoh-release/archive/release/lyrical/zenoh_cpp_vendor/0.10.4-1.tar.gz";
-    name = "0.10.4-1.tar.gz";
-    sha256 = "7bbe0f8b45238968810975abb01ca6577e586876a5b40e324dd51c99ec4d3672";
+    url = "https://github.com/ros2-gbp/rmw_zenoh-release/archive/release/lyrical/zenoh_cpp_vendor/0.10.5-1.tar.gz";
+    name = "0.10.5-1.tar.gz";
+    sha256 = "072384b4014f5d2e83446d907932fe37670ec3a3345c4e773fa9aaa4dfef1971";
   };
 
   buildType = "ament_cmake";

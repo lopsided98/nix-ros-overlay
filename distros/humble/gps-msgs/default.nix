@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-gps-msgs";
-  version = "2.3.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/humble/gps_msgs/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "51538fea59210301312a816d6442ebe4a603f9c611f5056c76996987315b8047";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/humble/gps_msgs/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "32b4938dfadbe0fd078ffbb76b2ed17dc319f4c0be9e0d50940c7e0f25ee86e5";
   };
 
   buildType = "ament_cmake";

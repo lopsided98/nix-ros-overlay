@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps }:
 buildRosPackage {
   pname = "ros-jazzy-mola-input-lidar-bin-dataset";
-  version = "2.9.0-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_input_lidar_bin_dataset/2.9.0-1.tar.gz";
-    name = "2.9.0-1.tar.gz";
-    sha256 = "17cd298523530655816f04cea3d89e5b53540e63ed4dce3145ea594d26f23669";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_input_lidar_bin_dataset/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "6ac2651b814413aa11f0ec99ef5cf7fe074223a922aee0387dfe0b1461c96872";
   };
 
   buildType = "cmake";

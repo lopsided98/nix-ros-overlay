@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, mrpt-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-mola-msgs";
-  version = "2.9.0-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_msgs/2.9.0-1.tar.gz";
-    name = "2.9.0-1.tar.gz";
-    sha256 = "acd0b837f536a638b53f05c6df8c6e073d85923676a67f1892c12ec74e473185";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_msgs/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "0448dcc6f30f7a9bfb5af415feb4581cc66ba79b53a9d99dbf7e7d703ffb635b";
   };
 
   buildType = "ament_cmake";

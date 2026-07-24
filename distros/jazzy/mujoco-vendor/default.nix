@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git, patchelf, pkg-config }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git, glfw3, patchelf, pkg-config }:
 buildRosPackage {
   pname = "ros-jazzy-mujoco-vendor";
-  version = "0.0.8-r2";
+  version = "0.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_vendor-release/archive/release/jazzy/mujoco_vendor/0.0.8-2.tar.gz";
-    name = "0.0.8-2.tar.gz";
-    sha256 = "bcc29889c54a3dfd842893a59ee88bbd7e896ff09bf9e52e201820d8fe34b05b";
+    url = "https://github.com/ros2-gbp/mujoco_vendor-release/archive/release/jazzy/mujoco_vendor/0.0.9-1.tar.gz";
+    name = "0.0.9-1.tar.gz";
+    sha256 = "70929de6ce99ef33823a6c4454d5b852e5458768faec5602c383fe85dc44c8ad";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-vendor-package git patchelf pkg-config ];
+  buildInputs = [ ament-cmake ament-cmake-vendor-package git glfw3 patchelf pkg-config ];
   nativeBuildInputs = [ ament-cmake ament-cmake-vendor-package git patchelf ];
 
   meta = {

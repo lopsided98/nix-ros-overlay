@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-xmllint, ament-lint-auto, cmake, mola-kernel, mrpt-libbase, mrpt-libtclap, ros-environment }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-xmllint, ament-lint-auto, cli11, cmake, mola-kernel, mrpt-libbase, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-mola-launcher";
-  version = "2.9.0-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_launcher/2.9.0-1.tar.gz";
-    name = "2.9.0-1.tar.gz";
-    sha256 = "46cc4f818aef41d2e5d9dbdb291d5113d8671e8ae382923654746bca64776cb8";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_launcher/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "0b1ac3fffa3f4b08cbe2f187fbbf89c19e294186aaab522775e6915772db2725";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-gtest cmake ros-environment ];
   checkInputs = [ ament-cmake-pep257 ament-cmake-xmllint ament-lint-auto ];
-  propagatedBuildInputs = [ mola-kernel mrpt-libbase mrpt-libtclap ];
+  propagatedBuildInputs = [ cli11 mola-kernel mrpt-libbase ];
   nativeBuildInputs = [ ament-cmake ament-cmake-gtest cmake ];
 
   meta = {

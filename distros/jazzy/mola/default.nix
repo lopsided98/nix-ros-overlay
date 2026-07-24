@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-bridge-ros2, mola-demos, mola-input-rawlog, mola-input-rosbag2, mola-input-video, mola-kernel, mola-launcher, mola-metric-maps, mola-pose-list, mola-relocalization, mola-traj-tools, mola-viz, mola-yaml }:
 buildRosPackage {
   pname = "ros-jazzy-mola";
-  version = "2.9.0-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola/2.9.0-1.tar.gz";
-    name = "2.9.0-1.tar.gz";
-    sha256 = "6eea22c425e1ac63acf18d233d40ac50efc87c945dcb843f7a1e875831dc9ed3";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "15a2a5c4203ffdc34d320b90231d0fd4d72c83903e8fed0aecd6f98ab8f62d4b";
   };
 
   buildType = "cmake";
