@@ -1328,14 +1328,12 @@ in {
     # opaque-types crate without network access.
     patchesFor.zenoh_c_vendor = [
       ./zenoh-cpp-vendor/zenoh-c.patch
-      ./zenoh-cpp-vendor/static-init-104.patch
-      ./zenoh-cpp-vendor/opaque-types-static-init-104.patch
     ];
   }).overrideAttrs(finalAttrs: {
     nativeBuildInputs ? [], postPatch ? "", passthru ? {}, ...
   }: let
     outputHashes = {
-      "zenoh-1.6.2" = "sha256-uHm75MxW7ifmYOB3EPVjsPDWKYmk9nk9BLAOt7tvDzo=";
+      "zenoh-1.8.0" = "sha256-W0mVplCanR1zAoG/rExjD0h01altk0gC9wWeu3DNOqI=";
     };
     zenoh-c-source = finalAttrs.passthru.amentVendorSrcs.zenoh_c_vendor;
   in {
