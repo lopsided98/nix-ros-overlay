@@ -171,13 +171,6 @@ let
     }: {
       cmakeFlags = cmakeFlags ++ [ "-DAMENT_VENDOR_POLICY=NEVER_VENDOR" ];
       propagatedBuildInputs = propagatedBuildInputs ++ [ self.mujoco ];
-      patches = patches ++ [
-        # Add support for the AMENT_VENDOR_POLICY variable to support unvendoring (#9)
-        (self.fetchpatch2 {
-          url = "https://github.com/pal-robotics/mujoco_vendor/commit/5585496493479578449de92616b4a36ac28fa1a9.patch?full_index=1";
-          hash = "sha256-cAtJmf4Q5ML9CcYUjeZEC+B6tvQn27fL4JJHBQ5XWxo=";
-        })
-      ];
     });
 
     mujoco-ros2-control = (patchExternalProjectGit rosSuper.mujoco-ros2-control {
